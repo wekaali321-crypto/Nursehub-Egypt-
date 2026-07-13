@@ -16,7 +16,7 @@ import { TEMPLATES } from "./editorTemplates";
 const EMOJIS = ["😀","👍","❤️","⭐","✅","❌","⚠️","💡","🩺","💊","🏥","🧠","🫀","🩸","🌡️","💉","🧬","📋","📊","🔬","👨‍⚕️","👩‍⚕️","🚑","➕","➖","❗","❓","🔥","📌","🎯"];
 const SPECIAL_CHARS = ["→","←","↑","↓","°","±","×","÷","≈","≤","≥","≠","∞","µ","α","β","γ","Δ","Σ","√","℃","℉","™","©","®","§","•","–","—","«","»"];
 
-const exec = (cmd: string, val?: string) => document.execCommand(cmd, false, val);
+let savedRangeGlobal: Range | null = null; const saveSelection = () => {   const sel = window.getSelection();   if (sel && sel.rangeCount > 0) savedRangeGlobal = sel.getRangeAt(0).cloneRange(); }; const exec = (cmd: string, val?: string) => {   const sel = window.getSelection();   if (savedRangeGlobal && sel) { sel.removeAllRanges(); sel.addRange(savedRangeGlobal); }   document.execCommand(cmd, false, val); };
 
 function ToolBtn({ onClick, children, title, active }: { onClick: () => void; children: React.ReactNode; title: string; active?: boolean }) {
   return (
@@ -29,6 +29,11 @@ function ToolBtn({ onClick, children, title, active }: { onClick: () => void; ch
 const Sep = () => <div className="mx-0.5 h-5 w-px bg-slate-200 dark:bg-slate-700" />;
 
 export default function Editor() {
+  const [savedRangeGlobal, setSavedRangeGlobal] = useState<Range | null>(null);
+  const saveSelection = () => {
+    const sel = window.getSelection();
+    if (sel && sel.rangeCount > 0) setSavedRangeGlobal(sel.getRangeAt(0).cloneRange());
+  };
   const { articles, setData, logActivity, saveVersion, versions, pushNotification } = useStore();
   const { notify } = useToast();
   const nav = useNavigate();
