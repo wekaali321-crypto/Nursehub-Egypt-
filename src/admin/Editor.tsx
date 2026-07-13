@@ -432,7 +432,7 @@ export default function Editor() {
           <input ref={camInput} type="file" accept="image/*" capture="environment" className="hidden" onChange={onPickImage} />
           <input ref={vidInput} type="file" accept="video/*" capture="environment" className="hidden" onChange={onPickVideo} />
 
-          <div ref={ref} contentEditable suppressContentEditableWarning onInput={() => { refreshStats(); scheduleAutoSave(); }}
+          <div ref={ref} contentEditable suppressContentEditableWarningonMouseUp={saveSelection} onKeyUp={saveSelection} onTouchEnd={saveSelection} onInput={() => { refreshStats(); scheduleAutoSave(); }}
             style={{ fontSize: `${zoom}%` }}
             className="prose-content min-h-[460px] p-5 text-slate-700 outline-none transition-all dark:text-slate-200" />
 
