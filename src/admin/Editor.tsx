@@ -462,6 +462,13 @@ export default function Editor() {
                   <div className="grid grid-cols-6 gap-2">
                     {TEXT_COLORS.map((c) => <button key={c} title={c} onMouseDown={(e) => { e.preventDefault(); setColor(c); setSwatchOpen(null); }} className="h-9 w-9 rounded-lg border-2 border-slate-200 dark:border-slate-600" style={{ background: c }} />)}
                   </div>
+                  <div className="mt-3 flex items-center gap-2 border-t border-slate-100 pt-3 dark:border-slate-700">
+                    <label className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border-2 border-dashed border-slate-300 text-base dark:border-slate-600">
+                      🎨
+                      <input type="color" defaultValue="#000000" onChange={(e) => { setColor(e.target.value); }} className="absolute inset-0 h-full w-full cursor-pointer opacity-0" />
+                    </label>
+                    <span className="text-xs text-slate-500 dark:text-slate-400">اختر لوناً يدوياً (كل الألوان)</span>
+                  </div>
                 </div>
               )}
             </div>
@@ -475,6 +482,13 @@ export default function Editor() {
                   </div>
                   <div className="grid grid-cols-6 gap-2">
                     {BG_COLORS.map((c) => <button key={c} title={c} onMouseDown={(e) => { e.preventDefault(); setBg(c); setSwatchOpen(null); }} className="h-9 w-9 rounded-lg border-2 border-slate-200 dark:border-slate-600" style={{ background: c === "transparent" ? "#fff" : c }} />)}
+                  </div>
+                  <div className="mt-3 flex items-center gap-2 border-t border-slate-100 pt-3 dark:border-slate-700">
+                    <label className="relative flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg border-2 border-dashed border-slate-300 text-base dark:border-slate-600">
+                      🖍️
+                      <input type="color" defaultValue="#ffff00" onChange={(e) => { setBg(e.target.value); }} className="absolute inset-0 h-full w-full cursor-pointer opacity-0" />
+                    </label>
+                    <span className="text-xs text-slate-500 dark:text-slate-400">اختر لوناً يدوياً (كل الألوان)</span>
                   </div>
                 </div>
               )}
