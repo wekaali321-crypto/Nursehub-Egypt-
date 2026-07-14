@@ -135,6 +135,7 @@ export default function Editor() {
   const [picker, setPicker] = useState<null | { mode: "insert" | "cover" }>(null);
   const [blockMenu, setBlockMenu] = useState(false);
   const [blockSearch, setBlockSearch] = useState("");
+  const [swatchOpen, setSwatchOpen] = useState<null | "text" | "bg">(null);
   const [stats, setStats] = useState({ words: 0, chars: 0, mins: 0 });
   const [tab, setTab] = useState<"editor" | "seo" | "ai" | "history" | "en">("editor");
   const [autoSaved, setAutoSaved] = useState<string>("");
@@ -448,18 +449,23 @@ export default function Editor() {
             <ToolBtn title="تحته خط" active={editor?.isActive("underline")} onClick={() => editor?.chain().focus().toggleUnderline().run()}><u>U</u></ToolBtn>
             <ToolBtn title="يتوسطه خط" active={editor?.isActive("strike")} onClick={() => editor?.chain().focus().toggleStrike().run()}><s>S</s></ToolBtn>
             <Sep />
-            {/* Text color — also colors heading text, since headings contain the same text nodes */}
-            <div className="group relative">
-              <ToolBtn title="لون النص (يعمل أيضاً على العناوين)" onClick={() => {}}>🎨</ToolBtn>
-              <div className="absolute right-0 top-9 z-20 hidden grid-cols-4 gap-1 rounded-lg border border-slate-200 bg-white p-2 shadow-xl group-hover:grid dark:border-slate-700 dark:bg-slate-800">
-                {TEXT_COLORS.map((c) => <button key={c} onMouseDown={(e) => { e.preventDefault(); setColor(c); }} className="h-5 w-5 rounded border border-slate-300" style={{ background: c }} />)}
-              </div>
+            {/* Text color — also colors heading text, since headings contain the same text nodes.
+                Tap-toggled (not hover) so it works on touch/mobile too. */}
+            <div className="relative">
+              <ToolBtn title="لون النص (يعمل أيضاً على العناوين)" active={swatchOpen === "text"} onClick={() => setSwatchOpen(swatchOpen === "text" ? null : "text")}>🎨</ToolBtn>
+              {swatchOpen === "text" && (
+                <div className="absolute right-0 top-9 z-30 grid grid-cols-4 gap-1 rounded-lg border border-slate-200 bg-white p-2 shadow-2xl dark:border-slate-700 dark:bg-slate-800">
+                  {TEXT_COLORS.map((c) => <button key={c} onMouseDown={(e) => { e.preventDefault(); setColor(c); setSwatchOpen(null); }} className="h-6 w-6 rounded border border-slate-300" style={{ background: c }} />)}
+                </div>
+              )}
             </div>
-            <div className="group relative">
-              <ToolBtn title="لون الخلفية" onClick={() => {}}>🖍️</ToolBtn>
-              <div className="absolute right-0 top-9 z-20 hidden grid-cols-4 gap-1 rounded-lg border border-slate-200 bg-white p-2 shadow-xl group-hover:grid dark:border-slate-700 dark:bg-slate-800">
-                {BG_COLORS.map((c) => <button key={c} onMouseDown={(e) => { e.preventDefault(); setBg(c); }} className="h-5 w-5 rounded border border-slate-300" style={{ background: c === "transparent" ? "#fff" : c }} />)}
-              </div>
+            <div className="relative">
+              <ToolBtn title="لون الخلفية" active={swatchOpen === "bg"} onClick={() => setSwatchOpen(swatchOpen === "bg" ? null : "bg")}>🖍️</ToolBtn>
+              {swatchOpen === "bg" && (
+                <div className="absolute right-0 top-9 z-30 grid grid-cols-4 gap-1 rounded-lg border border-slate-200 bg-white p-2 shadow-2xl dark:border-slate-700 dark:bg-slate-800">
+                  {BG_COLORS.map((c) => <button key={c} onMouseDown={(e) => { e.preventDefault(); setBg(c); setSwatchOpen(null); }} className="h-6 w-6 rounded border border-slate-300" style={{ background: c === "transparent" ? "#fff" : c }} />)}
+                </div>
+              )}
             </div>
             <Sep />
             <ToolBtn title="محاذاة يمين" active={editor?.isActive({ textAlign: "right" })} onClick={() => editor?.chain().focus().setTextAlign("right").run()}>⬅</ToolBtn>
