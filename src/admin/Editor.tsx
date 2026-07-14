@@ -1,5 +1,24 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { useEditor, EditorContent } from "@tiptap/react";
+import { Extension } from "@tiptap/core";
+import StarterKit from "@tiptap/starter-kit";
+import Underline from "@tiptap/extension-underline";
+import TextAlign from "@tiptap/extension-text-align";
+import TextStyle from "@tiptap/extension-text-style";
+import Color from "@tiptap/extension-color";
+import Highlight from "@tiptap/extension-highlight";
+import FontFamily from "@tiptap/extension-font-family";
+import Link from "@tiptap/extension-link";
+import TiptapImage from "@tiptap/extension-image";
+import Subscript from "@tiptap/extension-subscript";
+import Superscript from "@tiptap/extension-superscript";
+import Table from "@tiptap/extension-table";
+import TableRow from "@tiptap/extension-table-row";
+import TableCell from "@tiptap/extension-table-cell";
+import TableHeader from "@tiptap/extension-table-header";
+import CharacterCount from "@tiptap/extension-character-count";
+import Placeholder from "@tiptap/extension-placeholder";
 import { useStore, slugify, readingTime } from "../lib/store";
 import { useToast } from "../components/Toast";
 import { compressToWebP } from "../lib/image";
@@ -15,8 +34,69 @@ import { TEMPLATES } from "./editorTemplates";
 
 const EMOJIS = ["😀","👍","❤️","⭐","✅","❌","⚠️","💡","🩺","💊","🏥","🧠","🫀","🩸","🌡️","💉","🧬","📋","📊","🔬","👨‍⚕️","👩‍⚕️","🚑","➕","➖","❗","❓","🔥","📌","🎯"];
 const SPECIAL_CHARS = ["→","←","↑","↓","°","±","×","÷","≈","≤","≥","≠","∞","µ","α","β","γ","Δ","Σ","√","℃","℉","™","©","®","§","•","–","—","«","»"];
+const DEFAULT_CONTENT = "<h2>عنوان فرعي</h2><p>ابدأ الكتابة هنا...</p>";
 
-let savedRangeGlobal: Range | null = null; const saveSelection = () => {   const sel = window.getSelection();   if (sel && sel.rangeCount > 0) savedRangeGlobal = sel.getRangeAt(0).cloneRange(); }; const exec = (cmd: string, val?: string) => {   const sel = window.getSelection();   if (savedRangeGlobal && sel) { sel.removeAllRanges(); sel.addRange(savedRangeGlobal); }   document.execCommand(cmd, false, val); };
+// Legacy execCommand-style fontSize values (1-7) mapped to real CSS sizes,
+// used if editorBlocks.FONT_SIZES still ships the old numeric scale.
+const LEGACY_SIZE_PX: Record<string, string> = { "1": "10px", "2": "13px", "3": "16px", "4": "18px", "5": "24px", "6": "32px", "7": "48px" };
+const toCssSize = (v: string) => (/px|em|rem|%/.test(v) ? v : (LEGACY_SIZE_PX[v] ?? v));
+
+// --- Custom Tiptap extensions (not published as separate packages) ---
+
+/** Adds a `fontSize` attribute to the textStyle mark, rendered as inline CSS. */
+const FontSize = Extension.create({
+  name: "fontSize",
+  addOptions() { return { types: ["textStyle"] }; },
+  addGlobalAttributes() {
+    return [{
+      types: this.options.types,
+      attributes: {
+        fontSize: {
+          default: null,
+          parseHTML: (element: HTMLElement) => element.style.fontSize || null,
+          renderHTML: (attributes: { fontSize?: string | null }) => {
+            if (!attributes.fontSize) return {};
+            return { style: `font-size: ${attributes.fontSize}` };
+          },
+        },
+      },
+    }];
+  },
+  addCommands() {
+    return {
+      setFontSize: (fontSize: string) => ({ chain }: any) => chain().setMark("textStyle", { fontSize }).run(),
+      unsetFontSize: () => ({ chain }: any) => chain().setMark("textStyle", { fontSize: null }).removeEmptyTextStyle().run(),
+    } as any;
+  },
+});
+
+/** Adds a `lineHeight` attribute to paragraphs & headings, rendered as inline CSS. */
+const LineHeight = Extension.create({
+  name: "lineHeight",
+  addOptions() { return { types: ["paragraph", "heading"] }; },
+  addGlobalAttributes() {
+    return [{
+      types: this.options.types,
+      attributes: {
+        lineHeight: {
+          default: null,
+          parseHTML: (element: HTMLElement) => element.style.lineHeight || null,
+          renderHTML: (attributes: { lineHeight?: string | null }) => {
+            if (!attributes.lineHeight) return {};
+            return { style: `line-height: ${attributes.lineHeight}` };
+          },
+        },
+      },
+    }];
+  },
+  addCommands() {
+    return {
+      setLineHeight: (lineHeight: string) => ({ commands }: any) => {
+        return this.options.types.every((t: string) => commands.updateAttributes(t, { lineHeight }));
+      },
+    } as any;
+  },
+});
 
 function ToolBtn({ onClick, children, title, active }: { onClick: () => void; children: React.ReactNode; title: string; active?: boolean }) {
   return (
@@ -29,18 +109,12 @@ function ToolBtn({ onClick, children, title, active }: { onClick: () => void; ch
 const Sep = () => <div className="mx-0.5 h-5 w-px bg-slate-200 dark:bg-slate-700" />;
 
 export default function Editor() {
-  const [savedRangeGlobal, setSavedRangeGlobal] = useState<Range | null>(null);
-  const saveSelection = () => {
-    const sel = window.getSelection();
-    if (sel && sel.rangeCount > 0) setSavedRangeGlobal(sel.getRangeAt(0).cloneRange());
-  };
   const { articles, setData, logActivity, saveVersion, versions, pushNotification } = useStore();
   const { notify } = useToast();
   const nav = useNavigate();
   const [params] = useSearchParams();
   const editId = params.get("id");
   const editing = articles.find((a) => a.id === editId);
-  const ref = useRef<HTMLDivElement>(null);
 
   const [title, setTitle] = useState(editing?.title ?? "");
   const [slug, setSlug] = useState(editing?.slug ?? "");
@@ -74,41 +148,83 @@ export default function Editor() {
   const [replaceText, setReplaceText] = useState("");
   const [emojiOpen, setEmojiOpen] = useState<null | "emoji" | "chars">(null);
   const [tplOpen, setTplOpen] = useState(false);
+  const [, forceTick] = useState(0); // re-render toolbar so active-state buttons stay in sync with selection
   const draftId = editId ?? "new";
+
+  // Refs used to break the circular dependency between the editor instance
+  // (created once) and callbacks that are (re)created after it.
+  const refreshStatsRef = useRef<() => void>(() => {});
+  const scheduleAutoSaveRef = useRef<() => void>(() => {});
+
+  const editor = useEditor({
+    extensions: [
+      StarterKit,
+      Underline,
+      TextAlign.configure({ types: ["heading", "paragraph"] }),
+      TextStyle,
+      Color.configure({ types: ["textStyle"] }),
+      FontSize,
+      LineHeight,
+      FontFamily.configure({ types: ["textStyle"] }),
+      Highlight.configure({ multicolor: true }),
+      Link.configure({ openOnClick: false, autolink: true }),
+      TiptapImage.configure({ inline: false }),
+      Subscript,
+      Superscript,
+      Table.configure({ resizable: true }),
+      TableRow,
+      TableHeader,
+      TableCell,
+      CharacterCount,
+      Placeholder.configure({ placeholder: "ابدأ الكتابة هنا..." }),
+    ],
+    content: editing?.content ?? DEFAULT_CONTENT,
+    editorProps: {
+      attributes: {
+        class: "prose-content min-h-[460px] p-5 text-slate-700 outline-none transition-all dark:text-slate-200 focus:outline-none",
+      },
+    },
+    onUpdate: () => { refreshStatsRef.current(); scheduleAutoSaveRef.current(); },
+    onSelectionUpdate: () => forceTick((n) => n + 1),
+  });
 
   const collectDraft = useCallback((): EditorDraft => ({
     id: draftId, title, slug, category, excerpt, cover, tags, author, status,
-    metaTitle, metaDescription, content: ref.current?.innerHTML ?? "",
+    metaTitle, metaDescription, content: editor?.getHTML() ?? "",
     savedAt: Date.now(), synced: false, scrollY: window.scrollY,
-  }), [draftId, title, slug, category, excerpt, cover, tags, author, status, metaTitle, metaDescription]);
+  }), [draftId, title, slug, category, excerpt, cover, tags, author, status, metaTitle, metaDescription, editor]);
 
-  const insertHTML = (h: string) => { ref.current?.focus(); exec("insertHTML", h); refreshStats(); scheduleAutoSaveRef.current?.(); };
-  const scheduleAutoSaveRef = useRef<(() => void) | undefined>(undefined);
+  const insertHTML = (h: string) => {
+    editor?.chain().focus().insertContent(h).run();
+    refreshStatsRef.current();
+    scheduleAutoSaveRef.current();
+  };
 
   const runReplace = (all: boolean) => {
-    if (!ref.current || !findText) return;
+    if (!editor || !findText) return;
     const safe = findText.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const re = new RegExp(safe, all ? "g" : "");
-    ref.current.innerHTML = ref.current.innerHTML.replace(re, replaceText);
-    refreshStats();
+    const html = editor.getHTML().replace(re, replaceText);
+    editor.commands.setContent(html, { emitUpdate: true });
+    refreshStatsRef.current();
     notify(all ? "تم استبدال جميع النتائج" : "تم الاستبدال", "success");
   };
 
   const applyTemplate = (html: string) => {
-    if (ref.current) {
-      const cur = ref.current.innerHTML.replace(/<[^>]+>/g, "").trim();
-      if (cur.length > 30 && !confirm("سيتم استبدال المحتوى الحالي بالقالب. متابعة؟")) return;
-      ref.current.innerHTML = html;
-      refreshStats(); setTplOpen(false); notify("تم تطبيق القالب", "success");
-    }
+    if (!editor) return;
+    const cur = editor.getText().trim();
+    if (cur.length > 30 && !confirm("سيتم استبدال المحتوى الحالي بالقالب. متابعة؟")) return;
+    editor.commands.setContent(html, { emitUpdate: true });
+    refreshStatsRef.current(); setTplOpen(false); notify("تم تطبيق القالب", "success");
   };
 
   const refreshStats = useCallback(() => {
-    const html = ref.current?.innerHTML ?? "";
+    const html = editor?.getHTML() ?? "";
     const plain = html.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
     const words = plain ? plain.split(/\s+/).length : 0;
     setStats({ words, chars: plain.length, mins: readingTime(html) });
-  }, []);
+  }, [editor]);
+  refreshStatsRef.current = refreshStats;
 
   const insertMedia = (item: MediaItem) => {
     if (picker?.mode === "cover") { setCover(item.url); setPicker(null); notify("تم تعيين صورة الغلاف"); return; }
@@ -120,18 +236,17 @@ export default function Editor() {
     notify("تم الإدراج من المكتبة", "success");
   };
 
-  // On mount: load existing content, and offer to recover an unsaved local draft.
+  // On mount: stats for the initial content, and offer to recover an unsaved local draft.
   const [recovery, setRecovery] = useState<EditorDraft | null>(null);
   useEffect(() => {
-    if (ref.current) ref.current.innerHTML = editing?.content ?? "<h2>عنوان فرعي</h2><p>ابدأ الكتابة هنا...</p>";
-    refreshStats();
+    refreshStatsRef.current();
     const d = loadDraft(draftId);
     // Show recovery prompt only if there is a meaningful unsynced draft
     if (d && !d.synced && (d.title?.trim() || (d.content && d.content.replace(/<[^>]+>/g, "").trim().length > 20))) {
       setRecovery(d);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [editor]);
 
   useEffect(() => { if (autoSlug) setSlug(slugify(title)); }, [title, autoSlug]);
 
@@ -139,10 +254,10 @@ export default function Editor() {
     setTitle(d.title); setSlug(d.slug); setCategory(d.category as Category); setExcerpt(d.excerpt);
     setCover(d.cover); setTags(d.tags); setAuthor(d.author); setStatus(d.status as Article["status"]);
     setMetaTitle(d.metaTitle); setMetaDescription(d.metaDescription); setAutoSlug(false);
-    if (ref.current) ref.current.innerHTML = d.content;
-    refreshStats(); setRecovery(null);
+    editor?.commands.setContent(d.content, { emitUpdate: true });
+    refreshStatsRef.current(); setRecovery(null);
     // Restore scroll & focus position exactly where the user stopped.
-    setTimeout(() => { if (typeof d.scrollY === "number") window.scrollTo({ top: d.scrollY }); ref.current?.focus(); }, 60);
+    setTimeout(() => { if (typeof d.scrollY === "number") window.scrollTo({ top: d.scrollY }); editor?.commands.focus(); }, 60);
     notify("تم استرجاع المسودة المحفوظة", "success");
   };
 
@@ -168,14 +283,14 @@ export default function Editor() {
   // Periodic version snapshots (every 2 min) — like Google Docs history.
   useEffect(() => {
     const t = setInterval(() => {
-      if (title.trim() && ref.current) saveVersion(draftId, title, ref.current.innerHTML, author);
+      if (title.trim() && editor) saveVersion(draftId, title, editor.getHTML(), author);
     }, 120000);
     return () => clearInterval(t);
-  }, [title, draftId, author, saveVersion]);
+  }, [title, draftId, author, saveVersion, editor]);
 
   // Save immediately before the page unloads / tab closes.
   useEffect(() => {
-    const handler = () => { if (title.trim() || (ref.current?.innerHTML.replace(/<[^>]+>/g, "").trim().length ?? 0) > 20) saveDraft(collectDraft()); };
+    const handler = () => { if (title.trim() || (editor?.getText().trim().length ?? 0) > 20) saveDraft(collectDraft()); };
     window.addEventListener("beforeunload", handler);
     document.addEventListener("visibilitychange", handler);
     const online = () => setSaveStatus("saved");
@@ -188,7 +303,10 @@ export default function Editor() {
       window.removeEventListener("online", online);
       window.removeEventListener("offline", offline);
     };
-  }, [collectDraft, title]);
+  }, [collectDraft, title, editor]);
+
+  // Clean up the editor instance on unmount.
+  useEffect(() => () => editor?.destroy(), [editor]);
 
   // Media upload inputs
   const imgInput = useRef<HTMLInputElement>(null);
@@ -215,27 +333,47 @@ export default function Editor() {
     insertHTML(`<div style="aspect-ratio:16/9;margin:1rem 0"><iframe src="${embed}" style="width:100%;height:100%;border-radius:8px" allowfullscreen loading="lazy"></iframe></div><p></p>`);
   };
 
-  const setColor = (c: string) => exec("foreColor", c);
-  const setBg = (c: string) => exec("hiliteColor", c);
+  // Text / background color now apply through Tiptap's Color + Highlight
+  // extensions, which work on any selection — including text inside
+  // headings, so coloring a heading works exactly like coloring a paragraph.
+  const setColor = (c: string) => editor?.chain().focus().setColor(c).run();
+  const setBg = (c: string) => {
+    if (c === "transparent") editor?.chain().focus().unsetHighlight().run();
+    else editor?.chain().focus().toggleHighlight({ color: c }).run();
+  };
+  const setLink = () => {
+    const u = prompt("الرابط:");
+    if (!u) return;
+    editor?.chain().focus().extendMarkRange("link").setLink({ href: u }).run();
+  };
+  const setHeading = (v: string) => {
+    if (v === "p") editor?.chain().focus().setParagraph().run();
+    else editor?.chain().focus().toggleHeading({ level: Number(v.replace("h", "")) as 1 | 2 | 3 | 4 | 5 | 6 }).run();
+  };
+  const setFontSizeValue = (v: string) => (editor?.chain().focus() as any).setFontSize(toCssSize(v)).run();
+  const setFontFamilyValue = (v: string) => editor?.chain().focus().setFontFamily(v).run();
+  const setLineHeightValue = (v: string) => { if (v) (editor?.chain().focus() as any).setLineHeight(v).run(); };
+  const insertTable = () => editor?.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run();
 
   // AI helpers
   const [aiTitles, setAiTitles] = useState<string[]>([]);
   const runAI = (action: string) => {
-    const html = ref.current?.innerHTML ?? "";
+    const html = editor?.getHTML() ?? "";
     if (action === "titles") setAiTitles(aiTitleSuggestions(title));
     else if (action === "meta") { setMetaDescription(aiMetaDescription(title, html)); notify("تم توليد الوصف"); }
     else if (action === "keywords") { setTags(aiKeywords(title, html).join(", ")); notify("تم اقتراح الكلمات المفتاحية"); }
     else if (action === "summary") { setExcerpt(aiSummarize(html)); notify("تم تلخيص المقال"); }
     else if (action === "improve") {
-      const sel = window.getSelection?.()?.toString();
-      if (sel) { exec("insertText", aiImproveText(sel)); notify("تم تحسين النص المحدد"); }
+      const { from, to } = editor?.state.selection ?? { from: 0, to: 0 };
+      const sel = editor?.state.doc.textBetween(from, to, " ") ?? "";
+      if (sel) { editor?.chain().focus().insertContent(aiImproveText(sel)).run(); notify("تم تحسين النص المحدد"); }
       else notify("حدد نصاً أولاً لتحسينه", "info");
     }
   };
 
   const save = (forceStatus?: string) => {
     if (!title.trim()) { notify("الرجاء إدخال عنوان المقال", "error"); return; }
-    const content = ref.current?.innerHTML ?? "";
+    const content = editor?.getHTML() ?? "";
     if (editing) saveVersion(editing.id, editing.title, editing.content, author); // snapshot previous
     const finalStatus = (forceStatus ?? status) as Article["status"];
     const article: Article = {
@@ -259,14 +397,15 @@ export default function Editor() {
   };
 
   const restoreVersion = (content: string) => {
-    if (ref.current) { ref.current.innerHTML = content; refreshStats(); notify("تم استعادة النسخة"); setTab("editor"); }
+    editor?.commands.setContent(content, { emitUpdate: true });
+    refreshStatsRef.current(); notify("تم استعادة النسخة"); setTab("editor");
   };
 
   const input = "w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800";
   const cats = Object.keys(CATEGORY_LABELS) as Category[];
   const myVersions = versions.filter((v) => v.articleId === (editId ?? "draft")).slice(0, 15);
-  const seo = seoScore({ title, metaTitle, metaDescription, content: ref.current?.innerHTML ?? "", keywords: tags, cover });
-  const read = readabilityScore(ref.current?.innerHTML ?? "");
+  const seo = seoScore({ title, metaTitle, metaDescription, content: editor?.getHTML() ?? "", keywords: tags, cover });
+  const read = readabilityScore(editor?.getHTML() ?? "");
   const scoreColor = (s: number) => (s >= 80 ? "text-emerald-500" : s >= 50 ? "text-amber-500" : "text-rose-500");
 
   return (
@@ -292,26 +431,26 @@ export default function Editor() {
         <div className="rounded-xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
           {/* Toolbar */}
           <div className="sticky top-0 z-10 flex flex-wrap items-center gap-0.5 rounded-t-xl border-b border-slate-200 bg-white/95 p-2 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
-            <select onChange={(e) => exec("formatBlock", e.target.value)} className="h-8 rounded-md border border-slate-200 px-1 text-xs dark:border-slate-700 dark:bg-slate-800" title="نوع الفقرة">
+            <select onChange={(e) => setHeading(e.target.value)} className="h-8 rounded-md border border-slate-200 px-1 text-xs dark:border-slate-700 dark:bg-slate-800" title="نوع الفقرة">
               <option value="p">فقرة</option>
               <option value="h1">H1</option><option value="h2">H2</option><option value="h3">H3</option>
               <option value="h4">H4</option><option value="h5">H5</option><option value="h6">H6</option>
             </select>
-            <select onChange={(e) => exec("fontSize", e.target.value)} className="h-8 rounded-md border border-slate-200 px-1 text-xs dark:border-slate-700 dark:bg-slate-800" title="حجم الخط">
+            <select onChange={(e) => setFontSizeValue(e.target.value)} className="h-8 rounded-md border border-slate-200 px-1 text-xs dark:border-slate-700 dark:bg-slate-800" title="حجم الخط">
               {FONT_SIZES.map((f) => <option key={f.value} value={f.value}>{f.label}</option>)}
             </select>
-            <select onChange={(e) => exec("fontName", e.target.value)} className="h-8 rounded-md border border-slate-200 px-1 text-xs dark:border-slate-700 dark:bg-slate-800" title="نوع الخط">
+            <select onChange={(e) => setFontFamilyValue(e.target.value)} className="h-8 rounded-md border border-slate-200 px-1 text-xs dark:border-slate-700 dark:bg-slate-800" title="نوع الخط">
               {FONT_FAMILIES.map((f) => <option key={f} value={f}>{f}</option>)}
             </select>
             <Sep />
-            <ToolBtn title="عريض" onClick={() => exec("bold")}><b>B</b></ToolBtn>
-            <ToolBtn title="مائل" onClick={() => exec("italic")}><i>I</i></ToolBtn>
-            <ToolBtn title="تحته خط" onClick={() => exec("underline")}><u>U</u></ToolBtn>
-            <ToolBtn title="يتوسطه خط" onClick={() => exec("strikeThrough")}><s>S</s></ToolBtn>
+            <ToolBtn title="عريض" active={editor?.isActive("bold")} onClick={() => editor?.chain().focus().toggleBold().run()}><b>B</b></ToolBtn>
+            <ToolBtn title="مائل" active={editor?.isActive("italic")} onClick={() => editor?.chain().focus().toggleItalic().run()}><i>I</i></ToolBtn>
+            <ToolBtn title="تحته خط" active={editor?.isActive("underline")} onClick={() => editor?.chain().focus().toggleUnderline().run()}><u>U</u></ToolBtn>
+            <ToolBtn title="يتوسطه خط" active={editor?.isActive("strike")} onClick={() => editor?.chain().focus().toggleStrike().run()}><s>S</s></ToolBtn>
             <Sep />
-            {/* Text color */}
+            {/* Text color — also colors heading text, since headings contain the same text nodes */}
             <div className="group relative">
-              <ToolBtn title="لون النص" onClick={() => {}}>🎨</ToolBtn>
+              <ToolBtn title="لون النص (يعمل أيضاً على العناوين)" onClick={() => {}}>🎨</ToolBtn>
               <div className="absolute right-0 top-9 z-20 hidden grid-cols-4 gap-1 rounded-lg border border-slate-200 bg-white p-2 shadow-xl group-hover:grid dark:border-slate-700 dark:bg-slate-800">
                 {TEXT_COLORS.map((c) => <button key={c} onMouseDown={(e) => { e.preventDefault(); setColor(c); }} className="h-5 w-5 rounded border border-slate-300" style={{ background: c }} />)}
               </div>
@@ -323,12 +462,12 @@ export default function Editor() {
               </div>
             </div>
             <Sep />
-            <ToolBtn title="محاذاة يمين" onClick={() => exec("justifyRight")}>⬅</ToolBtn>
-            <ToolBtn title="توسيط" onClick={() => exec("justifyCenter")}>↔</ToolBtn>
-            <ToolBtn title="محاذاة يسار" onClick={() => exec("justifyLeft")}>➡</ToolBtn>
+            <ToolBtn title="محاذاة يمين" active={editor?.isActive({ textAlign: "right" })} onClick={() => editor?.chain().focus().setTextAlign("right").run()}>⬅</ToolBtn>
+            <ToolBtn title="توسيط" active={editor?.isActive({ textAlign: "center" })} onClick={() => editor?.chain().focus().setTextAlign("center").run()}>↔</ToolBtn>
+            <ToolBtn title="محاذاة يسار" active={editor?.isActive({ textAlign: "left" })} onClick={() => editor?.chain().focus().setTextAlign("left").run()}>➡</ToolBtn>
             <Sep />
-            <ToolBtn title="قائمة نقطية" onClick={() => exec("insertUnorderedList")}>•</ToolBtn>
-            <ToolBtn title="قائمة رقمية" onClick={() => exec("insertOrderedList")}>1.</ToolBtn>
+            <ToolBtn title="قائمة نقطية" active={editor?.isActive("bulletList")} onClick={() => editor?.chain().focus().toggleBulletList().run()}>•</ToolBtn>
+            <ToolBtn title="قائمة رقمية" active={editor?.isActive("orderedList")} onClick={() => editor?.chain().focus().toggleOrderedList().run()}>1.</ToolBtn>
             <ToolBtn title="قائمة مهام" onClick={() => insertHTML(`<ul style="list-style:none;padding-right:0"><li>☐ مهمة</li></ul>`)}>☑</ToolBtn>
             <Sep />
             <ToolBtn title="مكتبة الوسائط" onClick={() => setPicker({ mode: "insert" })}>📚</ToolBtn>
@@ -337,7 +476,8 @@ export default function Editor() {
             <ToolBtn title="رفع فيديو" onClick={() => vidInput.current?.click()}>🎥</ToolBtn>
             <ToolBtn title="YouTube" onClick={() => addEmbed("youtube")}>▶️</ToolBtn>
             <ToolBtn title="Vimeo" onClick={() => addEmbed("vimeo")}>🎞️</ToolBtn>
-            <ToolBtn title="رابط" onClick={() => { const u = prompt("الرابط:"); if (u) exec("createLink", u); }}>🔗</ToolBtn>
+            <ToolBtn title="رابط" active={editor?.isActive("link")} onClick={setLink}>🔗</ToolBtn>
+            <ToolBtn title="جدول" onClick={insertTable}>▦</ToolBtn>
             <Sep />
             <div className="relative">
               <ToolBtn title="إدراج كتلة" onClick={() => setBlockMenu((b) => !b)} active={blockMenu}>➕ كتلة</ToolBtn>
@@ -371,15 +511,15 @@ export default function Editor() {
               )}
             </div>
             <Sep />
-            <ToolBtn title="تراجع" onClick={() => exec("undo")}>↶</ToolBtn>
-            <ToolBtn title="إعادة" onClick={() => exec("redo")}>↷</ToolBtn>
-            <ToolBtn title="مسح التنسيق" onClick={() => exec("removeFormat")}>🧹</ToolBtn>
+            <ToolBtn title="تراجع" onClick={() => editor?.chain().focus().undo().run()}>↶</ToolBtn>
+            <ToolBtn title="إعادة" onClick={() => editor?.chain().focus().redo().run()}>↷</ToolBtn>
+            <ToolBtn title="مسح التنسيق" onClick={() => editor?.chain().focus().unsetAllMarks().clearNodes().run()}>🧹</ToolBtn>
             <Sep />
-            <ToolBtn title="أس علوي" onClick={() => exec("superscript")}>x²</ToolBtn>
-            <ToolBtn title="أس سفلي" onClick={() => exec("subscript")}>x₂</ToolBtn>
-            <ToolBtn title="زيادة إزاحة" onClick={() => exec("indent")}>⇥</ToolBtn>
-            <ToolBtn title="تقليل إزاحة" onClick={() => exec("outdent")}>⇤</ToolBtn>
-            <select onChange={(e) => { document.execCommand("styleWithCSS", false, "true"); const el = document.getSelection?.()?.anchorNode?.parentElement; if (el) el.style.lineHeight = e.target.value; }} className="h-8 rounded-md border border-slate-200 px-1 text-xs dark:border-slate-700 dark:bg-slate-800" title="ارتفاع السطر">
+            <ToolBtn title="أس علوي" active={editor?.isActive("superscript")} onClick={() => editor?.chain().focus().toggleSuperscript().run()}>x²</ToolBtn>
+            <ToolBtn title="أس سفلي" active={editor?.isActive("subscript")} onClick={() => editor?.chain().focus().toggleSubscript().run()}>x₂</ToolBtn>
+            <ToolBtn title="زيادة إزاحة" onClick={() => editor?.chain().focus().sinkListItem("listItem").run()}>⇥</ToolBtn>
+            <ToolBtn title="تقليل إزاحة" onClick={() => editor?.chain().focus().liftListItem("listItem").run()}>⇤</ToolBtn>
+            <select onChange={(e) => setLineHeightValue(e.target.value)} className="h-8 rounded-md border border-slate-200 px-1 text-xs dark:border-slate-700 dark:bg-slate-800" title="ارتفاع السطر">
               <option value="">تباعد</option><option value="1.2">1.2</option><option value="1.5">1.5</option><option value="1.8">1.8</option><option value="2">2.0</option><option value="2.5">2.5</option>
             </select>
             <ToolBtn title="معادلة LaTeX" onClick={() => { const eq = prompt("أدخل المعادلة (LaTeX أو نص):"); if (eq) insertHTML(`<span class="nh-latex" style="font-style:italic;background:#f1f5f9;padding:2px 8px;border-radius:4px">${eq}</span>&nbsp;`); }}>∑</ToolBtn>
@@ -437,9 +577,9 @@ export default function Editor() {
           <input ref={camInput} type="file" accept="image/*" capture="environment" className="hidden" onChange={onPickImage} />
           <input ref={vidInput} type="file" accept="video/*" capture="environment" className="hidden" onChange={onPickVideo} />
 
-          <div ref={ref} contentEditable suppressContentEditableWarning onMouseUp={saveSelection} onKeyUp={saveSelection} onTouchEnd={saveSelection} onInput={() => { refreshStats(); scheduleAutoSave(); }}
-            style={{ fontSize: `${zoom}%` }}
-            className="prose-content min-h-[460px] p-5 text-slate-700 outline-none transition-all dark:text-slate-200" />
+          <div style={{ fontSize: `${zoom}%` }}>
+            <EditorContent editor={editor} />
+          </div>
 
           {/* Status bar */}
           <div className="flex flex-wrap items-center justify-between gap-2 border-t border-slate-200 px-4 py-2 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400">
@@ -530,7 +670,7 @@ export default function Editor() {
             <div><label className="mb-1 block text-xs font-semibold text-slate-500" dir="ltr">English Title</label><input dir="ltr" value={titleEn} onChange={(e) => setTitleEn(e.target.value)} className={input} placeholder="Article title in English" /></div>
             <div><label className="mb-1 block text-xs font-semibold text-slate-500" dir="ltr">English Excerpt</label><textarea dir="ltr" value={excerptEn} onChange={(e) => setExcerptEn(e.target.value)} rows={3} className={input} placeholder="Short summary..." /></div>
             <div><label className="mb-1 block text-xs font-semibold text-slate-500" dir="ltr">English Content (HTML)</label><textarea dir="ltr" value={contentEn} onChange={(e) => setContentEn(e.target.value)} rows={12} className={`${input} font-mono text-xs`} placeholder="<h2>Heading</h2><p>English body...</p>" /></div>
-            <button onClick={() => { if (ref.current) { setContentEn(ref.current.innerHTML); notify("تم نسخ المحتوى العربي كنقطة بداية للترجمة", "info"); } }} className="w-full rounded-lg bg-slate-100 py-2 text-xs font-bold dark:bg-slate-800 dark:text-white">نسخ المحتوى العربي كبداية</button>
+            <button onClick={() => { if (editor) { setContentEn(editor.getHTML()); notify("تم نسخ المحتوى العربي كنقطة بداية للترجمة", "info"); } }} className="w-full rounded-lg bg-slate-100 py-2 text-xs font-bold dark:bg-slate-800 dark:text-white">نسخ المحتوى العربي كبداية</button>
           </div>
         )}
 
