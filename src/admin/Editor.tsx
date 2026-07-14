@@ -454,16 +454,28 @@ export default function Editor() {
             <div className="relative">
               <ToolBtn title="لون النص (يعمل أيضاً على العناوين)" active={swatchOpen === "text"} onClick={() => setSwatchOpen(swatchOpen === "text" ? null : "text")}>🎨</ToolBtn>
               {swatchOpen === "text" && (
-                <div className="absolute right-0 top-9 z-30 grid grid-cols-4 gap-1 rounded-lg border border-slate-200 bg-white p-2 shadow-2xl dark:border-slate-700 dark:bg-slate-800">
-                  {TEXT_COLORS.map((c) => <button key={c} onMouseDown={(e) => { e.preventDefault(); setColor(c); setSwatchOpen(null); }} className="h-6 w-6 rounded border border-slate-300" style={{ background: c }} />)}
+                <div className="absolute right-0 top-9 z-30 w-64 rounded-xl border border-slate-200 bg-white p-3 shadow-2xl dark:border-slate-700 dark:bg-slate-800">
+                  <div className="mb-2 flex items-center justify-between">
+                    <span className="text-xs font-bold text-slate-500 dark:text-slate-300">لون النص</span>
+                    <button onMouseDown={(e) => { e.preventDefault(); setSwatchOpen(null); }} className="text-xs text-slate-400">✕</button>
+                  </div>
+                  <div className="grid grid-cols-6 gap-2">
+                    {TEXT_COLORS.map((c) => <button key={c} title={c} onMouseDown={(e) => { e.preventDefault(); setColor(c); setSwatchOpen(null); }} className="h-9 w-9 rounded-lg border-2 border-slate-200 dark:border-slate-600" style={{ background: c }} />)}
+                  </div>
                 </div>
               )}
             </div>
             <div className="relative">
               <ToolBtn title="لون الخلفية" active={swatchOpen === "bg"} onClick={() => setSwatchOpen(swatchOpen === "bg" ? null : "bg")}>🖍️</ToolBtn>
               {swatchOpen === "bg" && (
-                <div className="absolute right-0 top-9 z-30 grid grid-cols-4 gap-1 rounded-lg border border-slate-200 bg-white p-2 shadow-2xl dark:border-slate-700 dark:bg-slate-800">
-                  {BG_COLORS.map((c) => <button key={c} onMouseDown={(e) => { e.preventDefault(); setBg(c); setSwatchOpen(null); }} className="h-6 w-6 rounded border border-slate-300" style={{ background: c === "transparent" ? "#fff" : c }} />)}
+                <div className="absolute right-0 top-9 z-30 w-64 rounded-xl border border-slate-200 bg-white p-3 shadow-2xl dark:border-slate-700 dark:bg-slate-800">
+                  <div className="mb-2 flex items-center justify-between">
+                    <span className="text-xs font-bold text-slate-500 dark:text-slate-300">لون الخلفية</span>
+                    <button onMouseDown={(e) => { e.preventDefault(); setSwatchOpen(null); }} className="text-xs text-slate-400">✕</button>
+                  </div>
+                  <div className="grid grid-cols-6 gap-2">
+                    {BG_COLORS.map((c) => <button key={c} title={c} onMouseDown={(e) => { e.preventDefault(); setBg(c); setSwatchOpen(null); }} className="h-9 w-9 rounded-lg border-2 border-slate-200 dark:border-slate-600" style={{ background: c === "transparent" ? "#fff" : c }} />)}
+                  </div>
                 </div>
               )}
             </div>
