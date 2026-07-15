@@ -10,6 +10,17 @@ import type { Order } from "../lib/types";
 
 const inp = "w-full rounded-lg border border-slate-200 px-3 py-2.5 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800";
 
+// Manual payment details — no payment gateway / API required. The customer
+// transfers to these directly and sends a screenshot on WhatsApp to confirm.
+const MANUAL_VODAFONE_CASH = "01013489017";
+const MANUAL_INSTAPAY = "wekaali321@instapay";
+const MANUAL_WHATSAPP = "201095652098"; // international format, no + or leading 0
+
+const copyText = async (text: string, label: string, notify: (m: string, t?: "success" | "error" | "info") => void) => {
+  try { await navigator.clipboard.writeText(text); notify(`تم نسخ ${label}`, "success"); }
+  catch { notify("تعذر النسخ، انسخه يدوياً", "error"); }
+};
+
 export default function CheckoutPage() {
   const { items, subtotal, setQty, remove, clear, count } = useCart();
   const { gateways, coupons, commerce, recordOrder, pushNotification, logActivity } = useStore();
@@ -53,8 +64,8 @@ export default function CheckoutPage() {
       items: items.map((i) => ({ productId: i.productId, title: i.title, price: i.price, qty: i.qty })),
       subtotal, discount, tax, total,
       couponCode: applied?.code,
-      gateway: gateways.find((g) => g.id === gateway)?.name ?? gateway,
-      paymentStatus: "pending", // real completion happens via the gateway webhook
+      gateway: gateway === "manual" ? "تحويل يدوي (فودافون كاش / InstaPay)" : (gateways.find((g) => g.id === gateway)?.name ?? gateway),
+      paymentStatus: "pending", // manual transfers are confirmed by an admin after checking WhatsApp; gateway ones via webhook
       transactionId: "TXN-" + Math.random().toString(36).slice(2, 10).toUpperCase(),
       date: now.toISOString().slice(0, 16).replace("T", " "),
     };
@@ -72,6 +83,13 @@ export default function CheckoutPage() {
         <h1 className="mt-3 text-2xl font-black dark:text-white">تم استلام طلبك</h1>
         <p className="mt-2 text-slate-500 dark:text-slate-400">رقم الفاتورة: <b>{placed.invoiceNo}</b></p>
         <p className="mt-1 rounded-xl bg-amber-50 p-3 text-sm text-amber-600 dark:bg-amber-500/10">الدفع قيد المعالجة عبر {placed.gateway}. سيتم تأكيد الطلب وتفعيل روابط التحميل الآمنة بعد نجاح الدفع.</p>
+        {gateway === "manual" && (
+          <div className="mt-4 rounded-xl border-2 border-emerald-200 bg-emerald-50 p-4 text-right dark:border-emerald-500/30 dark:bg-emerald-500/10">
+            <p className="text-sm font-bold text-emerald-700 dark:text-emerald-400">خطوة أخيرة: أكّد التحويل</p>
+            <p className="mt-1 text-xs text-slate-600 dark:text-slate-300">حوّل مبلغ <b>{placed.total} {cur}</b> على فودافون كاش <b dir="ltr">{MANUAL_VODAFONE_CASH}</b> أو InstaPay <b dir="ltr">{MANUAL_INSTAPAY}</b>، ثم ابعت سكرين شوت التحويل مع رقم فاتورتك <b>{placed.invoiceNo}</b> على واتساب.</p>
+            <a href={`https://wa.me/${MANUAL_WHATSAPP}?text=${encodeURIComponent(`مرحباً، أرفقت إيصال تحويل الطلب رقم ${placed.invoiceNo}`)}`} target="_blank" rel="noreferrer" className="mt-3 inline-block rounded-full bg-emerald-500 px-6 py-2 text-sm font-bold text-white">📲 إرسال الإيصال على واتساب</a>
+          </div>
+        )}
         <div className="mt-5 flex justify-center gap-2">
           <button onClick={() => printInvoice(placed, cur)} className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white">🖨️ تحميل الفاتورة</button>
           <Link to="/store" className="rounded-full border border-slate-200 px-6 py-2 font-bold dark:border-slate-700 dark:text-white">المتجر</Link>
@@ -109,18 +127,33 @@ export default function CheckoutPage() {
 
           <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
             <h3 className="mb-3 font-bold dark:text-white">وسيلة الدفع</h3>
-            {activeGateways.length === 0 ? (
-              <div className="rounded-xl bg-amber-50 p-3 text-sm text-amber-600 dark:bg-amber-500/10">
-                لا توجد وسيلة دفع مفعّلة حالياً. يقوم المدير بتفعيل بوابات الدفع من لوحة التحكم.
+            <div className="grid gap-2 sm:grid-cols-2">
+              <label className={`flex cursor-pointer items-center gap-2 rounded-xl border-2 p-3 text-sm font-semibold ${gateway === "manual" ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-500/10" : "border-slate-200 dark:border-slate-700"}`}>
+                <input type="radio" name="gw" checked={gateway === "manual"} onChange={() => setGateway("manual")} /> 📲 فودافون كاش / InstaPay
+              </label>
+              {activeGateways.map((g) => (
+                <label key={g.id} className={`flex cursor-pointer items-center gap-2 rounded-xl border-2 p-3 text-sm font-semibold ${gateway === g.id ? "border-sky-500 bg-sky-50 dark:bg-sky-500/10" : "border-slate-200 dark:border-slate-700"}`}>
+                  <input type="radio" name="gw" checked={gateway === g.id} onChange={() => setGateway(g.id)} /> {g.name}
+                </label>
+              ))}
+            </div>
+
+            {gateway === "manual" && (
+              <div className="mt-3 space-y-2 rounded-xl border border-emerald-200 bg-emerald-50 p-4 dark:border-emerald-500/30 dark:bg-emerald-500/10">
+                <p className="text-xs text-slate-600 dark:text-slate-300">حوّل قيمة الطلب ({total} {cur}) على أي من الرقمين، وبعد إتمام الطلب ابعت سكرين شوت التحويل على واتساب لتأكيده:</p>
+                <div className="flex items-center justify-between rounded-lg bg-white p-2 dark:bg-slate-800">
+                  <span className="text-sm font-bold dark:text-white">فودافون كاش: <span dir="ltr">{MANUAL_VODAFONE_CASH}</span></span>
+                  <button type="button" onClick={() => copyText(MANUAL_VODAFONE_CASH, "الرقم", notify)} className="rounded-lg bg-emerald-500 px-3 py-1 text-xs font-bold text-white">نسخ</button>
+                </div>
+                <div className="flex items-center justify-between rounded-lg bg-white p-2 dark:bg-slate-800">
+                  <span className="text-sm font-bold dark:text-white">InstaPay: <span dir="ltr">{MANUAL_INSTAPAY}</span></span>
+                  <button type="button" onClick={() => copyText(MANUAL_INSTAPAY, "عنوان InstaPay", notify)} className="rounded-lg bg-emerald-500 px-3 py-1 text-xs font-bold text-white">نسخ</button>
+                </div>
               </div>
-            ) : (
-              <div className="grid gap-2 sm:grid-cols-2">
-                {activeGateways.map((g) => (
-                  <label key={g.id} className={`flex cursor-pointer items-center gap-2 rounded-xl border-2 p-3 text-sm font-semibold ${gateway === g.id ? "border-sky-500 bg-sky-50 dark:bg-sky-500/10" : "border-slate-200 dark:border-slate-700"}`}>
-                    <input type="radio" name="gw" checked={gateway === g.id} onChange={() => setGateway(g.id)} /> {g.name}
-                  </label>
-                ))}
-              </div>
+            )}
+
+            {activeGateways.length === 0 && gateway !== "manual" && (
+              <p className="mt-2 text-xs text-slate-400">وسائل الدفع الإلكترونية (بطاقات، بوابات API) غير مفعّلة حالياً — استخدم التحويل اليدوي بالأعلى.</p>
             )}
           </div>
 
@@ -128,7 +161,7 @@ export default function CheckoutPage() {
             <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} /> أوافق على <Link to="/terms" className="text-sky-500 underline">شروط الاستخدام</Link>
           </label>
 
-          <button disabled={activeGateways.length === 0} className="w-full rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 py-3 font-bold text-white disabled:opacity-50">إتمام الدفع ({total} {cur})</button>
+          <button className="w-full rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 py-3 font-bold text-white disabled:opacity-50">إتمام الدفع ({total} {cur})</button>
         </form>
 
         {/* Order summary */}
