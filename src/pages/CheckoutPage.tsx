@@ -71,7 +71,7 @@ export default function CheckoutPage() {
     };
     recordOrder(order);
     logActivity("طلب جديد", order.invoiceNo);
-    pushNotification("revenue", `طلب جديد: ${order.invoiceNo} (${order.total} ${cur})`);
+    pushNotification("revenue", `طلب جديد: ${order.invoiceNo} (${order.total} ${cur})`, `/admin/orders?inv=${encodeURIComponent(order.invoiceNo)}`);
     clear();
     setPlaced(order);
   };
