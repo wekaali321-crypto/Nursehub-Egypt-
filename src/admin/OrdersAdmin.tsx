@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { useToast } from "../components/Toast";
 import { printInvoice } from "../lib/invoice";
@@ -17,6 +18,17 @@ export function OrdersAdmin() {
   const { orders, commerce, setData, logActivity } = useStore();
   const { notify } = useToast();
   const [filter, setFilter] = useState("all");
+  const [params] = useSearchParams();
+  const highlightInv = params.get("inv");
+  const rowRef = useRef<HTMLTableRowElement | null>(null);
+
+  useEffect(() => {
+    if (highlightInv) setFilter("all"); // make sure the linked order isn't hidden by a status filter
+  }, [highlightInv]);
+
+  useEffect(() => {
+    if (highlightInv && rowRef.current) rowRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [highlightInv, orders]);
 
   const setStatus = (id: string, paymentStatus: Order["paymentStatus"]) => {
     setData((d) => ({ ...d, orders: d.orders.map((o) => (o.id === id ? { ...o, paymentStatus } : o)) }));
@@ -56,7 +68,7 @@ export function OrdersAdmin() {
             </thead>
             <tbody>
               {list.map((o) => (
-                <tr key={o.id} className="border-b border-slate-100 dark:border-slate-800">
+                <tr key={o.id} ref={o.invoiceNo === highlightInv ? rowRef : undefined} className={`border-b border-slate-100 dark:border-slate-800 ${o.invoiceNo === highlightInv ? "bg-sky-50 ring-2 ring-inset ring-sky-400 dark:bg-sky-500/10" : ""}`}>
                   <td className="p-3 font-mono text-xs dark:text-white">{o.invoiceNo}</td>
                   <td className="p-3"><div className="font-semibold dark:text-white">{o.customerName}</div><div className="text-xs text-slate-400">{o.email}</div></td>
                   <td className="p-3 font-bold text-emerald-500">{o.total} {commerce.currency}</td>
