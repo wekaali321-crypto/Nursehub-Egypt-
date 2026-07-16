@@ -245,6 +245,7 @@ export interface AppNotification {
   message: string;
   date: string;
   read: boolean;
+  link?: string; // optional destination route — clicking the notification navigates here
 }
 
 export interface Question {
