@@ -23,6 +23,7 @@ import { useStore, slugify, readingTime } from "../lib/store";
 import { useToast } from "../components/Toast";
 import { compressToWebP } from "../lib/image";
 import { saveDraft, loadDraft, clearDraft, type EditorDraft } from "../lib/draft";
+import { supabase } from "../lib/supabase";
 import MediaPicker from "./MediaPicker";
 import { CATEGORY_LABELS, type Article, type Category, type MediaItem } from "../lib/types";
 import {
@@ -392,6 +393,19 @@ export default function Editor() {
     setData((d) => ({ ...d, articles: editing ? d.articles.map((a) => (a.id === editing.id ? article : a)) : [article, ...d.articles] }));
     logActivity(editing ? "تعديل مقال" : "نشر مقال", article.title);
     if (finalStatus === "published") pushNotification("system", `تم نشر مقال: ${article.title}`);
+    // Notify subscribed visitors — only on the transition into "published", not on every later edit.
+    const isNewlyPublished = finalStatus === "published" && editing?.status !== "published";
+    if (isNewlyPublished && supabase) {
+      supabase.functions.invoke("send-push", {
+        body: {
+          title: "📰 مقال جديد",
+          body: article.title,
+          link: `/article/${article.slug}`,
+          tag: article.id,
+          role: "visitor",
+        },
+      }).catch(() => {}); // best-effort — never block saving on this
+    }
     clearDraft(draftId); // committed to store — remove local auto-draft
     notify("تم الحفظ بنجاح!", "success");
     nav("/admin/articles");
