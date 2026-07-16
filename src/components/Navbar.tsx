@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTheme } from "../lib/theme";
 import { useStore } from "../lib/store";
@@ -8,6 +8,7 @@ import Logo from "./Logo";
 import { useI18n, type TKey } from "../lib/i18n";
 import { useFavorites } from "../lib/favorites";
 import { useFeatures } from "../admin/cms/useFeatures";
+import { enablePushNotifications, hasActivePushSubscription, isPushSupported } from "../lib/push";
 
 // Map known menu paths to i18n keys so nav is fully translatable.
 const PATH_LABELS: Record<string, TKey> = {
@@ -48,6 +49,20 @@ export default function Navbar() {
   const [query, setQuery] = useState("");
   const loc = useLocation();
   const nav = useNavigate();
+  const [pushOn, setPushOn] = useState(false);
+  const [pushBusy, setPushBusy] = useState(false);
+
+  useEffect(() => {
+    hasActivePushSubscription().then(setPushOn);
+  }, []);
+
+  const handleSubscribe = async () => {
+    setPushBusy(true);
+    const res = await enablePushNotifications("visitor");
+    setPushBusy(false);
+    if (res.ok) setPushOn(true);
+    else alert(res.reason ?? "تعذّر تفعيل الإشعارات");
+  };
 
   const doSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -103,6 +118,21 @@ export default function Navbar() {
             ❤️
             {favCount > 0 && <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-500 px-1 text-[10px] font-bold text-white">{favCount}</span>}
           </Link>
+
+          {isPushSupported() && !pushOn && (
+            <button
+              onClick={handleSubscribe}
+              disabled={pushBusy}
+              aria-label="تفعيل الإشعارات"
+              title="فعّل الإشعارات — استقبل تنبيه بمقالات وكتب جديدة"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 disabled:opacity-50 dark:border-slate-700 dark:hover:bg-slate-800"
+            >
+              🔕
+            </button>
+          )}
+          {pushOn && (
+            <span title="الإشعارات مفعّلة" className="flex h-10 w-10 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-lg dark:border-emerald-500/30 dark:bg-emerald-500/10">🔔</span>
+          )}
 
           <button
             onClick={toggle}
