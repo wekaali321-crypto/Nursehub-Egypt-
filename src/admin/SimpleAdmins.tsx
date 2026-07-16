@@ -1,153 +1,188 @@
-import { useState } from "react";
+limport { useState } from "react";
+import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
-import type { Comment, Product, User } from "../lib/types";
-import { ROLE_LABELS, ROLE_COLORS, ROLE_PERMISSIONS, PERMISSION_LABELS, type Role, type Permission } from "../lib/roles";
+import { useToast } from "../components/Toast";
+import { CATEGORY_LABELS } from "../lib/types";
 import { supabase } from "../lib/supabase";
 
-export function CommentsAdmin() {
-  const { comments, articles, setData } = useStore();
-  const setStatus = (id: string, status: Comment["status"]) => setData((d) => ({ ...d, comments: d.comments.map((c) => (c.id === id ? { ...c, status } : c)) }));
-  const del = (id: string) => setData((d) => ({ ...d, comments: d.comments.filter((c) => c.id !== id) }));
-  const title = (aid: string) => articles.find((a) => a.id === aid)?.title ?? "—";
+const card = "rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900";
+
+/* ---------------- Trash ---------------- */
+export function TrashAdmin() {
+  const { trash, restoreFromTrash, purgeTrash, emptyTrash } = useStore();
+  const { notify } = useToast();
+  const typeLabels: Record<string, string> = { article: "📝 مقال", media: "🖼️ ملف", user: "👤 مستخدم" };
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <p className="text-slate-500 dark:text-slate-400">العناصر المحذوفة: <span className="font-bold text-sky-500">{trash.length}</span></p>
+        {trash.length > 0 && <button onClick={() => { if (confirm("حذف كل العناصر نهائياً؟")) { emptyTrash(); notify("تم تفريغ السلة"); } }} className="rounded-lg bg-red-500 px-4 py-2 text-sm font-bold text-white">تفريغ السلة</button>}
+      </div>
+      {trash.length === 0 ? (
+        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+          <div className="text-5xl">🗑️</div><p className="mt-3">سلة المحذوفات فارغة</p>
+        </div>
+      ) : (
+        <div className="space-y-2">
+          {trash.map((t) => (
+            <div key={t.id} className={`flex items-center justify-between ${card} py-3`}>
+              <div><span className="font-bold dark:text-white">{typeLabels[t.type]} — {t.label}</span><div className="text-xs text-slate-400">حُذف في {t.deletedAt}</div></div>
+              <div className="flex gap-1">
+                <button onClick={() => { restoreFromTrash(t.id); notify("تمت الاستعادة"); }} className="rounded-lg bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-600 dark:bg-emerald-500/10">استعادة</button>
+                <button onClick={() => { if (confirm("حذف نهائي؟")) { purgeTrash(t.id); notify("تم الحذف نهائياً"); } }} className="rounded-lg bg-red-100 px-3 py-1 text-xs font-bold text-red-600 dark:bg-red-500/10">حذف نهائي</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/* ---------------- Version History (global list) ---------------- */
+export function VersionsAdmin() {
+  const { versions, articles, setData } = useStore();
+  const { notify } = useToast();
+  const [compare, setCompare] = useState<{ a: string; b: string } | null>(null);
+
+  const articleTitle = (id: string) => articles.find((a) => a.id === id)?.title ?? (id === "draft" ? "مسودة جديدة" : "—");
+
+  const restore = (articleId: string, content: string, title: string) => {
+    const exists = articles.find((a) => a.id === articleId);
+    if (!exists) { notify("المقال الأصلي غير موجود", "error"); return; }
+    setData((d) => ({ ...d, articles: d.articles.map((a) => (a.id === articleId ? { ...a, content, title } : a)) }));
+    notify("تم استعادة النسخة إلى المقال");
+  };
 
   return (
     <div className="space-y-3">
-      {comments.length === 0 && <div className="rounded-2xl border border-dashed border-slate-300 py-12 text-center text-slate-400 dark:border-slate-700">لا توجد تعليقات</div>}
-      {comments.map((c) => (
-        <div key={c.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-          <div className="flex items-start justify-between gap-3">
-            <div className="flex-1">
-              <div className="flex items-center gap-2"><span className="font-bold dark:text-white">{c.name}</span><span className={`rounded-full px-2 py-0.5 text-xs font-bold ${c.status === "approved" ? "bg-emerald-100 text-emerald-600 dark:bg-emerald-500/10" : "bg-amber-100 text-amber-600 dark:bg-amber-500/10"}`}>{c.status === "approved" ? "معتمد" : "معلق"}</span></div>
-              <div className="text-xs text-slate-400">على: {title(c.articleId)} • {c.date}</div>
-              <p className="mt-2 text-slate-600 dark:text-slate-300">{c.text}</p>
-            </div>
-            <div className="flex shrink-0 flex-col gap-1">
-              {c.status === "pending" && <button onClick={() => setStatus(c.id, "approved")} className="rounded-lg bg-emerald-500 px-3 py-1 text-xs font-bold text-white">موافقة</button>}
-              {c.status === "approved" && <button onClick={() => setStatus(c.id, "pending")} className="rounded-lg bg-amber-500 px-3 py-1 text-xs font-bold text-white">إخفاء</button>}
-              <button onClick={() => del(c.id)} className="rounded-lg bg-red-100 px-3 py-1 text-xs font-bold text-red-600 dark:bg-red-500/10">حذف</button>
+      <p className="text-slate-500 dark:text-slate-400">إجمالي النسخ المحفوظة: <span className="font-bold text-sky-500">{versions.length}</span></p>
+      {versions.length === 0 && <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700"><div className="text-5xl">🕘</div><p className="mt-3">لا توجد نسخ محفوظة بعد</p></div>}
+      {versions.map((v) => (
+        <div key={v.id} className={`${card} py-3`}>
+          <div className="flex items-center justify-between">
+            <div><span className="font-bold dark:text-white">{v.title}</span><div className="text-xs text-slate-400">{articleTitle(v.articleId)} • {v.savedAt} • {v.author}</div></div>
+            <div className="flex gap-1">
+              <button onClick={() => setCompare(compare?.a === v.id ? null : { a: v.id, b: v.content })} className="rounded-lg bg-slate-100 px-3 py-1 text-xs font-bold dark:bg-slate-800 dark:text-white">معاينة</button>
+              <button onClick={() => restore(v.articleId, v.content, v.title)} className="rounded-lg bg-sky-100 px-3 py-1 text-xs font-bold text-sky-600 dark:bg-sky-500/10">استعادة</button>
             </div>
           </div>
+          {compare?.a === v.id && <div className="prose-content mt-3 max-h-64 overflow-y-auto rounded-lg border border-slate-200 p-3 text-sm dark:border-slate-700" dangerouslySetInnerHTML={{ __html: compare.b }} />}
         </div>
       ))}
     </div>
   );
 }
 
-const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
+/* ---------------- Maintenance Mode ---------------- */
+export function MaintenanceAdmin() {
+  const { settings, setData, logActivity } = useStore();
+  const { notify } = useToast();
+  const [msg, setMsg] = useState(settings.maintenanceMessage ?? "الموقع تحت الصيانة حالياً، سنعود قريباً 🛠️");
+  const [until, setUntil] = useState(settings.maintenanceUntil ?? "");
 
-export function ProductsAdmin() {
-  const { products, setData } = useStore();
-  const [form, setForm] = useState<Partial<Product>>({ type: "pdf", price: 0 });
-  const add = () => {
-    if (!form.title) return alert("أدخل اسم المنتج");
-    const p: Product = { id: "p" + Date.now(), title: form.title!, type: form.type as Product["type"], price: Number(form.price) || 0, oldPrice: form.oldPrice ? Number(form.oldPrice) : undefined, cover: form.cover || "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80", description: form.description || "", sales: 0 };
-    setData((d) => ({ ...d, products: [p, ...d.products] }));
-    // Notify subscribed visitors that a new product/book is available.
-    if (supabase) {
-      supabase.functions.invoke("send-push", {
-        body: {
-          title: "📚 جديد في المتجر",
-          body: p.title,
-          link: `/product/${p.id}`,
-          tag: p.id,
-          role: "visitor",
-        },
-      }).catch(() => {}); // best-effort — never block saving on this
-    }
-    setForm({ type: "pdf", price: 0 });
+  const toggle = (on: boolean) => {
+    setData((d) => ({ ...d, settings: { ...d.settings, maintenanceMode: on, maintenanceMessage: msg, maintenanceUntil: until } }));
+    logActivity(on ? "تفعيل وضع الصيانة" : "إيقاف وضع الصيانة", "الموقع");
+    notify(on ? "تم تفعيل وضع الصيانة" : "تم إيقاف وضع الصيانة");
   };
-  const del = (id: string) => setData((d) => ({ ...d, products: d.products.filter((p) => p.id !== id) }));
+  const saveCfg = () => { setData((d) => ({ ...d, settings: { ...d.settings, maintenanceMessage: msg, maintenanceUntil: until } })); notify("تم الحفظ"); };
 
+  const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
   return (
-    <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
-      <div className="space-y-3">
-        {products.map((p) => (
-          <div key={p.id} className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
-            <img src={p.cover} alt="" className="h-16 w-16 rounded-lg object-cover" />
-            <div className="flex-1"><div className="font-bold dark:text-white">{p.title}</div><div className="text-sm text-emerald-500">{p.price} ج.م • {p.sales} مبيعة</div></div>
-            <button onClick={() => del(p.id)} className="rounded-lg bg-red-100 px-3 py-1.5 text-sm font-bold text-red-600 dark:bg-red-500/10">حذف</button>
+    <div className="max-w-2xl space-y-4">
+      <div className={`flex items-center justify-between ${card}`}>
+        <div>
+          <h3 className="font-bold dark:text-white">🛠️ وضع الصيانة</h3>
+          <p className="text-sm text-slate-500">عند التفعيل يرى الزوار صفحة صيانة. يبقى للمشرفين وصول كامل للوحة التحكم.</p>
+        </div>
+        <label className="relative inline-flex cursor-pointer items-center">
+          <input type="checkbox" checked={!!settings.maintenanceMode} onChange={(e) => toggle(e.target.checked)} className="peer sr-only" />
+          <div className="h-7 w-12 rounded-full bg-slate-300 after:absolute after:right-0.5 after:top-0.5 after:h-6 after:w-6 after:rounded-full after:bg-white after:transition-all peer-checked:bg-emerald-500 peer-checked:after:-translate-x-5 dark:bg-slate-600" />
+        </label>
+      </div>
+      <div className={`space-y-3 ${card}`}>
+        <div><label className="mb-1 block text-xs font-semibold text-slate-500">رسالة الصيانة</label><textarea value={msg} onChange={(e) => setMsg(e.target.value)} rows={3} className={inp} /></div>
+        <div><label className="mb-1 block text-xs font-semibold text-slate-500">العودة المتوقعة (عداد تنازلي)</label><input type="datetime-local" value={until} onChange={(e) => setUntil(e.target.value)} className={inp} /></div>
+        <button onClick={saveCfg} className="rounded-lg bg-sky-500 px-6 py-2 font-bold text-white">حفظ الإعدادات</button>
+      </div>
+      {settings.maintenanceMode && <div className="rounded-xl bg-amber-50 p-3 text-center text-sm font-bold text-amber-600 dark:bg-amber-500/10">⚠️ وضع الصيانة مفعّل حالياً — الزوار يرون صفحة الصيانة.</div>}
+    </div>
+  );
+}
+
+/* ---------------- Manual broadcast to visitors ---------------- */
+function BroadcastToVisitors() {
+  const { notify } = useToast();
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+  const [link, setLink] = useState("/");
+  const [sending, setSending] = useState(false);
+
+  const send = async () => {
+    if (!title.trim() || !body.trim()) return notify("اكتب العنوان والنص", "error");
+    if (!supabase) return notify("قاعدة البيانات غير متصلة", "error");
+    setSending(true);
+    const { data, error } = await supabase.functions.invoke("send-push", {
+      body: { title, body, link: link || "/", tag: "broadcast-" + Date.now(), role: "visitor" },
+    });
+    setSending(false);
+    if (error) return notify("فشل الإرسال: " + error.message, "error");
+    notify(`تم الإرسال إلى ${data?.sent ?? 0} من أصل ${data?.total ?? 0} جهاز مشترك`, "success");
+    setTitle(""); setBody("");
+  };
+
+  const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
+  return (
+    <div className={`${card} space-y-3 p-4`}>
+      <h3 className="font-bold dark:text-white">📣 ابعت إشعار/عرض لكل الزوار المشتركين</h3>
+      <p className="text-xs text-slate-500 dark:text-slate-400">بيوصل كإشعار حقيقي على شاشة الموبايل حتى لو الزائر مش فاتح الموقع.</p>
+      <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="العنوان (مثال: 🎉 عرض خاص اليوم فقط)" className={inp} />
+      <textarea value={body} onChange={(e) => setBody(e.target.value)} placeholder="نص الإشعار" rows={2} className={inp} />
+      <input value={link} onChange={(e) => setLink(e.target.value)} placeholder="رابط يفتح عند الضغط (مثال: /store)" className={inp} />
+      <button onClick={send} disabled={sending} className="w-full rounded-lg bg-gradient-to-l from-sky-500 to-emerald-500 py-2 font-bold text-white disabled:opacity-50">{sending ? "جارٍ الإرسال..." : "إرسال الآن لكل الزوار"}</button>
+    </div>
+  );
+}
+
+/* ---------------- Notifications page ---------------- */
+export function NotificationsAdmin() {
+  const { notifications, markAllRead, markRead, clearNotifications } = useStore();
+  const icons: Record<string, string> = { comment: "💬", user: "👤", system: "⚙️", backup: "💾", revenue: "💰", error: "⚠️" };
+  return (
+    <div className="space-y-3">
+      <BroadcastToVisitors />
+      <div className="flex items-center justify-between">
+        <p className="text-slate-500 dark:text-slate-400">الإشعارات: <span className="font-bold text-sky-500">{notifications.length}</span></p>
+        <div className="flex gap-2">
+          <button onClick={markAllRead} className="rounded-lg bg-sky-100 px-4 py-2 text-sm font-bold text-sky-600 dark:bg-sky-500/10">تعليم الكل كمقروء</button>
+          <button onClick={clearNotifications} className="rounded-lg bg-red-100 px-4 py-2 text-sm font-bold text-red-600 dark:bg-red-500/10">مسح الكل</button>
+        </div>
+      </div>
+      {notifications.length === 0 && <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700"><div className="text-5xl">🔔</div><p className="mt-3">لا توجد إشعارات</p></div>}
+      {notifications.map((n) => {
+        const row = (
+          <>
+            <span className="text-2xl">{icons[n.type]}</span>
+            <div className="flex-1"><div className="font-semibold dark:text-white">{n.message}</div><div className="text-xs text-slate-400">{n.date}</div></div>
+            {!n.read && <span className="h-2.5 w-2.5 rounded-full bg-sky-500" />}
+            {n.link && <span className="text-slate-300 dark:text-slate-600">‹</span>}
+          </>
+        );
+        return n.link ? (
+          <Link key={n.id} to={n.link} onClick={() => markRead(n.id)} className={`flex items-center gap-3 ${card} py-3 transition hover:border-sky-300 ${!n.read ? "border-r-4 border-r-sky-500" : ""}`}>
+            {row}
+          </Link>
+        ) : (
+          <div key={n.id} onClick={() => markRead(n.id)} className={`flex cursor-pointer items-center gap-3 ${card} py-3 ${!n.read ? "border-r-4 border-r-sky-500" : ""}`}>
+            {row}
           </div>
-        ))}
-      </div>
-      <div className="space-y-3 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-        <h3 className="font-bold dark:text-white">➕ منتج جديد</h3>
-        <input placeholder="اسم المنتج" value={form.title ?? ""} onChange={(e) => setForm({ ...form, title: e.target.value })} className={inp} />
-        <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value as Product["type"] })} className={inp}><option value="pdf">ملف PDF</option><option value="course">كورس</option><option value="subscription">اشتراك</option></select>
-        <input type="number" placeholder="السعر" value={form.price ?? ""} onChange={(e) => setForm({ ...form, price: Number(e.target.value) })} className={inp} />
-        <input type="number" placeholder="السعر القديم (اختياري)" value={form.oldPrice ?? ""} onChange={(e) => setForm({ ...form, oldPrice: Number(e.target.value) })} className={inp} />
-        <input placeholder="رابط الصورة" value={form.cover ?? ""} onChange={(e) => setForm({ ...form, cover: e.target.value })} className={inp} />
-        <textarea placeholder="الوصف" value={form.description ?? ""} onChange={(e) => setForm({ ...form, description: e.target.value })} rows={2} className={inp} />
-        <button onClick={add} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">إضافة المنتج</button>
-      </div>
+        );
+      })}
     </div>
   );
 }
 
-const ALL_ROLES: Role[] = ["superadmin", "admin", "editor", "author", "viewer"];
-const ALL_PERMS: Permission[] = ["manage_settings", "manage_users", "manage_monetization", "publish", "edit_any", "edit_own", "delete", "comment_moderate", "view"];
-
-export function UsersAdmin() {
-  const { users, setData, logActivity } = useStore();
-  const [form, setForm] = useState<Partial<User>>({ role: "author" });
-  const add = () => {
-    if (!form.name || !form.email) return alert("أكمل البيانات");
-    setData((d) => ({ ...d, users: [...d.users, { id: "u" + Date.now(), name: form.name!, email: form.email!, role: form.role as User["role"] }] }));
-    logActivity("إضافة مستخدم", form.name!);
-    setForm({ role: "author" });
-  };
-  const del = (id: string) => setData((d) => ({ ...d, users: d.users.filter((u) => u.id !== id) }));
-  const changeRole = (id: string, role: Role) => setData((d) => ({ ...d, users: d.users.map((u) => (u.id === id ? { ...u, role } : u)) }));
-
-  return (
-    <div className="space-y-6">
-      <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
-        <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
-          <table className="w-full text-right text-sm">
-            <thead className="border-b border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-800/50"><tr><th className="p-3">الاسم</th><th className="p-3">البريد</th><th className="p-3">الصلاحية</th><th className="p-3"></th></tr></thead>
-            <tbody>
-              {users.map((u) => (
-                <tr key={u.id} className="border-b border-slate-100 dark:border-slate-800">
-                  <td className="p-3 font-semibold dark:text-white">{u.name}</td>
-                  <td className="p-3 text-slate-500">{u.email}</td>
-                  <td className="p-3">
-                    <select value={u.role} onChange={(e) => changeRole(u.id, e.target.value as Role)} className={`rounded-full border-0 px-2 py-1 text-xs font-bold ${ROLE_COLORS[u.role as Role]}`}>
-                      {ALL_ROLES.map((r) => <option key={r} value={r}>{ROLE_LABELS[r]}</option>)}
-                    </select>
-                  </td>
-                  <td className="p-3">{u.role !== "superadmin" && <button onClick={() => del(u.id)} className="rounded-lg bg-red-100 px-3 py-1 text-xs font-bold text-red-600 dark:bg-red-500/10">حذف</button>}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <div className="space-y-3 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-          <h3 className="font-bold dark:text-white">➕ مستخدم جديد</h3>
-          <input placeholder="الاسم" value={form.name ?? ""} onChange={(e) => setForm({ ...form, name: e.target.value })} className={inp} />
-          <input placeholder="البريد الإلكتروني" value={form.email ?? ""} onChange={(e) => setForm({ ...form, email: e.target.value })} className={inp} />
-          <select value={form.role} onChange={(e) => setForm({ ...form, role: e.target.value as User["role"] })} className={inp}>
-            {ALL_ROLES.map((r) => <option key={r} value={r}>{ROLE_LABELS[r]}</option>)}
-          </select>
-          <button onClick={add} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">إضافة</button>
-        </div>
-      </div>
-
-      {/* Permissions matrix */}
-      <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-        <h3 className="mb-3 font-bold dark:text-white">🔐 مصفوفة الصلاحيات</h3>
-        <table className="w-full text-right text-xs">
-          <thead><tr><th className="p-2">الصلاحية</th>{ALL_ROLES.map((r) => <th key={r} className="p-2 text-center">{ROLE_LABELS[r].split(" ")[0]}</th>)}</tr></thead>
-          <tbody>
-            {ALL_PERMS.map((perm) => (
-              <tr key={perm} className="border-t border-slate-100 dark:border-slate-800">
-                <td className="p-2 font-semibold dark:text-white">{PERMISSION_LABELS[perm]}</td>
-                {ALL_ROLES.map((r) => (
-                  <td key={r} className="p-2 text-center">{ROLE_PERMISSIONS[r].includes(perm) ? <span className="text-emerald-500">✔</span> : <span className="text-slate-300 dark:text-slate-600">—</span>}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
+// Re-export for convenience used in dashboard activity
+export { CATEGORY_LABELS };
