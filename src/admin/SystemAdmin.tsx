@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { useToast } from "../components/Toast";
 import { CATEGORY_LABELS } from "../lib/types";
+import { supabase } from "../lib/supabase";
 
 const card = "rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900";
 
@@ -111,12 +112,47 @@ export function MaintenanceAdmin() {
   );
 }
 
+/* ---------------- Manual broadcast to visitors ---------------- */
+function BroadcastToVisitors() {
+  const { notify } = useToast();
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+  const [link, setLink] = useState("/");
+  const [sending, setSending] = useState(false);
+
+  const send = async () => {
+    if (!title.trim() || !body.trim()) return notify("اكتب العنوان والنص", "error");
+    if (!supabase) return notify("قاعدة البيانات غير متصلة", "error");
+    setSending(true);
+    const { data, error } = await supabase.functions.invoke("send-push", {
+      body: { title, body, link: link || "/", tag: "broadcast-" + Date.now(), role: "visitor" },
+    });
+    setSending(false);
+    if (error) return notify("فشل الإرسال: " + error.message, "error");
+    notify(`تم الإرسال إلى ${data?.sent ?? 0} من أصل ${data?.total ?? 0} جهاز مشترك`, "success");
+    setTitle(""); setBody("");
+  };
+
+  const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
+  return (
+    <div className={`${card} space-y-3 p-4`}>
+      <h3 className="font-bold dark:text-white">📣 ابعت إشعار/عرض لكل الزوار المشتركين</h3>
+      <p className="text-xs text-slate-500 dark:text-slate-400">بيوصل كإشعار حقيقي على شاشة الموبايل حتى لو الزائر مش فاتح الموقع.</p>
+      <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="العنوان (مثال: 🎉 عرض خاص اليوم فقط)" className={inp} />
+      <textarea value={body} onChange={(e) => setBody(e.target.value)} placeholder="نص الإشعار" rows={2} className={inp} />
+      <input value={link} onChange={(e) => setLink(e.target.value)} placeholder="رابط يفتح عند الضغط (مثال: /store)" className={inp} />
+      <button onClick={send} disabled={sending} className="w-full rounded-lg bg-gradient-to-l from-sky-500 to-emerald-500 py-2 font-bold text-white disabled:opacity-50">{sending ? "جارٍ الإرسال..." : "إرسال الآن لكل الزوار"}</button>
+    </div>
+  );
+}
+
 /* ---------------- Notifications page ---------------- */
 export function NotificationsAdmin() {
   const { notifications, markAllRead, markRead, clearNotifications } = useStore();
   const icons: Record<string, string> = { comment: "💬", user: "👤", system: "⚙️", backup: "💾", revenue: "💰", error: "⚠️" };
   return (
     <div className="space-y-3">
+      <BroadcastToVisitors />
       <div className="flex items-center justify-between">
         <p className="text-slate-500 dark:text-slate-400">الإشعارات: <span className="font-bold text-sky-500">{notifications.length}</span></p>
         <div className="flex gap-2">
