@@ -234,8 +234,9 @@ interface StoreCtx extends DataShape {
   loading: boolean;
   seedRemote: () => Promise<void>;
   reload: () => Promise<void>;
-  pushNotification: (type: AppNotification["type"], message: string) => void;
+  pushNotification: (type: AppNotification["type"], message: string, link?: string) => void;
   markAllRead: () => void;
+  markRead: (id: string) => void;
   clearNotifications: () => void;
   saveVersion: (articleId: string, title: string, content: string, author?: string) => void;
   moveToTrash: (type: TrashEntry["type"], record: { id: string }, label: string) => void;
@@ -371,16 +372,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     await reload();
   };
 
-  const pushNotification = (type: AppNotification["type"], message: string) =>
+  const pushNotification = (type: AppNotification["type"], message: string, link?: string) =>
     setDataState((prev) => ({
       ...prev,
       notifications: [
-        { id: "n" + Date.now() + Math.random(), type, message, date: new Date().toISOString().slice(0, 16).replace("T", " "), read: false },
+        { id: "n" + Date.now() + Math.random(), type, message, date: new Date().toISOString().slice(0, 16).replace("T", " "), read: false, link },
         ...prev.notifications,
       ].slice(0, 100),
     }));
 
   const markAllRead = () => setDataState((prev) => ({ ...prev, notifications: prev.notifications.map((n) => ({ ...n, read: true })) }));
+  const markRead = (id: string) => setDataState((prev) => ({ ...prev, notifications: prev.notifications.map((n) => (n.id === id ? { ...n, read: true } : n)) }));
   const clearNotifications = () => setDataState((prev) => ({ ...prev, notifications: [] }));
 
   const saveVersion = (articleId: string, title: string, content: string, author = "المدير العام") =>
@@ -459,6 +461,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         reload,
         pushNotification,
         markAllRead,
+        markRead,
         clearNotifications,
         saveVersion,
         moveToTrash,
