@@ -92,16 +92,20 @@ self.addEventListener("push", (event) => {
       icon: "/icon-512.png",
       badge: "/icon-512.png",
       tag: data.id || "default",
+      data: { link: data.link || "/" },
     })
   );
 });
 
 self.addEventListener("notificationclick", (event) => {
   event.notification.close();
+  const link = event.notification.data?.link || "/";
   event.waitUntil(
     self.clients.matchAll({ type: "window" }).then((clients) => {
-      if (clients.length > 0) return clients[0].focus();
-      return self.clients.openWindow("/");
+      for (const client of clients) {
+        if ("focus" in client) { client.focus(); if ("navigate" in client) client.navigate(link); return; }
+      }
+      return self.clients.openWindow(link);
     })
   );
 });
