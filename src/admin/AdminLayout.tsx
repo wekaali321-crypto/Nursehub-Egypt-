@@ -1,8 +1,9 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useAuth, useTheme } from "../lib/theme";
 import { useStore } from "../lib/store";
 import Logo from "../components/Logo";
+import { enablePushNotifications, getPushPermission, hasActivePushSubscription, isPushSupported } from "../lib/push";
 
 type NavItem = { p: string; l: string; i: string } | { section: string };
 
@@ -62,6 +63,20 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
   const loc = useLocation();
   const [open, setOpen] = useState(false);
   const unread = notifications.filter((n) => !n.read).length;
+  const [pushOn, setPushOn] = useState(false);
+  const [pushBusy, setPushBusy] = useState(false);
+
+  useEffect(() => {
+    hasActivePushSubscription().then(setPushOn);
+  }, []);
+
+  const handleEnablePush = async () => {
+    setPushBusy(true);
+    const res = await enablePushNotifications("admin");
+    setPushBusy(false);
+    if (res.ok) setPushOn(true);
+    else alert(res.reason ?? "تعذّر تفعيل الإشعارات");
+  };
 
   return (
     <div className="flex min-h-screen bg-slate-100 dark:bg-slate-950">
@@ -94,6 +109,12 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           <button onClick={() => setOpen(true)} className="rounded-lg border border-slate-200 px-3 py-1.5 lg:hidden dark:border-slate-700">☰</button>
           <h1 className="font-bold dark:text-white">{(nav.find((n) => "p" in n && n.p === loc.pathname) as { l: string } | undefined)?.l ?? "لوحة التحكم"}</h1>
           <div className="flex items-center gap-2">
+            {isPushSupported() && !pushOn && (
+              <button onClick={handleEnablePush} disabled={pushBusy} className="hidden rounded-full bg-emerald-500 px-3 py-1.5 text-xs font-bold text-white disabled:opacity-50 sm:block" title="استقبل إشعار على الجهاز حتى لو الموقع مقفول">
+                {pushBusy ? "جارٍ التفعيل..." : "🔔 فعّل إشعارات الجهاز"}
+              </button>
+            )}
+            {pushOn && <span className="hidden rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-600 dark:bg-emerald-500/10 sm:block">✅ الإشعارات مفعّلة</span>}
             <Link to="/admin/notifications" className="relative flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 dark:border-slate-700" title="الإشعارات">
               🔔
               {unread > 0 && <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-500 px-1 text-[10px] font-bold text-white">{unread}</span>}
