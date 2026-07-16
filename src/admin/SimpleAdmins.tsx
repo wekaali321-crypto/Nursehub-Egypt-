@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useStore } from "../lib/store";
 import type { Comment, Product, User } from "../lib/types";
 import { ROLE_LABELS, ROLE_COLORS, ROLE_PERMISSIONS, PERMISSION_LABELS, type Role, type Permission } from "../lib/roles";
+import { supabase } from "../lib/supabase";
 
 export function CommentsAdmin() {
   const { comments, articles, setData } = useStore();
@@ -41,6 +42,18 @@ export function ProductsAdmin() {
     if (!form.title) return alert("أدخل اسم المنتج");
     const p: Product = { id: "p" + Date.now(), title: form.title!, type: form.type as Product["type"], price: Number(form.price) || 0, oldPrice: form.oldPrice ? Number(form.oldPrice) : undefined, cover: form.cover || "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80", description: form.description || "", sales: 0 };
     setData((d) => ({ ...d, products: [p, ...d.products] }));
+    // Notify subscribed visitors that a new product/book is available.
+    if (supabase) {
+      supabase.functions.invoke("send-push", {
+        body: {
+          title: "📚 جديد في المتجر",
+          body: p.title,
+          link: `/product/${p.id}`,
+          tag: p.id,
+          role: "visitor",
+        },
+      }).catch(() => {}); // best-effort — never block saving on this
+    }
     setForm({ type: "pdf", price: 0 });
   };
   const del = (id: string) => setData((d) => ({ ...d, products: d.products.filter((p) => p.id !== id) }));
