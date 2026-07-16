@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { useToast } from "../components/Toast";
 import { CATEGORY_LABELS } from "../lib/types";
@@ -112,7 +113,7 @@ export function MaintenanceAdmin() {
 
 /* ---------------- Notifications page ---------------- */
 export function NotificationsAdmin() {
-  const { notifications, markAllRead, clearNotifications } = useStore();
+  const { notifications, markAllRead, markRead, clearNotifications } = useStore();
   const icons: Record<string, string> = { comment: "💬", user: "👤", system: "⚙️", backup: "💾", revenue: "💰", error: "⚠️" };
   return (
     <div className="space-y-3">
@@ -124,13 +125,25 @@ export function NotificationsAdmin() {
         </div>
       </div>
       {notifications.length === 0 && <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700"><div className="text-5xl">🔔</div><p className="mt-3">لا توجد إشعارات</p></div>}
-      {notifications.map((n) => (
-        <div key={n.id} className={`flex items-center gap-3 ${card} py-3 ${!n.read ? "border-r-4 border-r-sky-500" : ""}`}>
-          <span className="text-2xl">{icons[n.type]}</span>
-          <div className="flex-1"><div className="font-semibold dark:text-white">{n.message}</div><div className="text-xs text-slate-400">{n.date}</div></div>
-          {!n.read && <span className="h-2.5 w-2.5 rounded-full bg-sky-500" />}
-        </div>
-      ))}
+      {notifications.map((n) => {
+        const row = (
+          <>
+            <span className="text-2xl">{icons[n.type]}</span>
+            <div className="flex-1"><div className="font-semibold dark:text-white">{n.message}</div><div className="text-xs text-slate-400">{n.date}</div></div>
+            {!n.read && <span className="h-2.5 w-2.5 rounded-full bg-sky-500" />}
+            {n.link && <span className="text-slate-300 dark:text-slate-600">‹</span>}
+          </>
+        );
+        return n.link ? (
+          <Link key={n.id} to={n.link} onClick={() => markRead(n.id)} className={`flex items-center gap-3 ${card} py-3 transition hover:border-sky-300 ${!n.read ? "border-r-4 border-r-sky-500" : ""}`}>
+            {row}
+          </Link>
+        ) : (
+          <div key={n.id} onClick={() => markRead(n.id)} className={`flex cursor-pointer items-center gap-3 ${card} py-3 ${!n.read ? "border-r-4 border-r-sky-500" : ""}`}>
+            {row}
+          </div>
+        );
+      })}
     </div>
   );
 }
