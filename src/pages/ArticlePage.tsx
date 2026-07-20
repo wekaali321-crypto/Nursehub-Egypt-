@@ -14,6 +14,7 @@ import TableOfContents, { type TocItem } from "../components/TableOfContents";
 import AuthorCard from "../components/AuthorCard";
 import ArticleNav from "../components/ArticleNav";
 import ArticleAI from "../components/ArticleAI";
+import ArticleContent from "../components/ArticleContent";
 import ShareBar from "../components/ShareBar";
 import { startArticleView, endArticleView, trackScrollDepth, tickActiveReadingTime, logArticleEvent } from "../lib/analytics";
 
