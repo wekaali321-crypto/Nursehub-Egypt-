@@ -249,7 +249,7 @@ export default function ArticlePage() {
               {lang === "en" ? t("common.comingSoon") : t("common.comingSoonAr")}
             </div>
           )}
-          <div className="prose-content reading-measure max-w-none text-slate-700 dark:text-slate-300" dangerouslySetInnerHTML={{ __html: displayContentWithIds }} />
+          <ArticleContent html={displayContentWithIds} slug={article.slug} className="prose-content reading-measure max-w-none text-slate-700 dark:text-slate-300" />
 
           {/* Medical disclaimer for trust & safety */}
           <div className="mt-8 flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-700 dark:border-amber-900 dark:bg-amber-500/5 dark:text-amber-400">
