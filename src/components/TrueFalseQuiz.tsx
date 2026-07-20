@@ -1,58 +1,128 @@
-import { useState } from "react";
-import { getTF, type TFItem } from "../data/quizzes";
+// src/components/TrueFalseQuiz.tsx
+import { useEffect, useState } from "react";
+import { supabase, isSupabaseConfigured } from "../lib/supabase";
 
-function TFItemBox({ item, index }: { item: TFItem; index: number }) {
-  const [revealed, setRevealed] = useState(false);
-  const [picked, setPicked] = useState<boolean | null>(null);
+type Question = {
+  id: string;
+  question: string;
+  correct_answer: string; // "صح" | "خطأ"
+  explanation: string | null;
+  order_index: number;
+};
 
-  const choose = (val: boolean) => {
-    if (revealed) return;
-    setPicked(val);
-    setRevealed(true);
-  };
+type Props = {
+  slug: string;
+};
 
-  const isCorrect = picked === item.correct;
+const OPTIONS = ["صح", "خطأ"];
 
-  const btnClass = (val: boolean) => {
-    const base = "flex-1 py-3 rounded-xl font-bold border-2 transition-all flex items-center justify-center gap-2";
-    if (!revealed) return `${base} border-slate-200 dark:border-slate-700 hover:border-teal-400 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800`;
-    if (val === item.correct) return `${base} border-green-500 bg-green-500 text-white`;
-    if (val === picked) return `${base} border-red-500 bg-red-500 text-white`;
-    return `${base} border-slate-200 dark:border-slate-700 opacity-50 text-slate-500`;
-  };
+export default function TrueFalseQuiz({ slug }: Props) {
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      if (!isSupabaseConfigured() || !supabase) {
+        setLoading(false);
+        return;
+      }
+      const { data: article } = await supabase
+        .from("articles")
+        .select("id")
+        .eq("slug", slug)
+        .maybeSingle();
+
+      if (!article) {
+        if (!cancelled) setLoading(false);
+        return;
+      }
+
+      const { data, error } = await supabase
+        .from("quiz_questions")
+        .select("*")
+        .eq("article_id", article.id)
+        .eq("type", "true_false")
+        .order("order_index", { ascending: true });
+
+      if (!cancelled) {
+        if (!error && data) setQuestions(data as Question[]);
+        setLoading(false);
+      }
+    }
+    load();
+    return () => {
+      cancelled = true;
+    };
+  }, [slug]);
+
+  function select(qId: string, option: string) {
+    if (answers[qId] !== undefined) return;
+    setAnswers((prev) => ({ ...prev, [qId]: option }));
+  }
+
+  if (loading) {
+    return <p className="my-6 text-center text-sm text-slate-400">جارِ تحميل الأسئلة...</p>;
+  }
+  if (questions.length === 0) return null;
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-200 dark:border-slate-800 mb-4">
-      <p className="font-semibold text-slate-800 dark:text-slate-100 mb-4 leading-relaxed">
-        <span className="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-teal-500 text-white text-sm ml-2">{index + 1}</span>
-        {item.s}
+    <div dir="rtl" className="my-8 not-prose">
+      <h3 className="mb-1 text-xl font-black dark:text-white">✅ صح أم خطأ</h3>
+      <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">
+        اختر إجابتك — الحل يظهر فورًا بعد الاختيار.
       </p>
-      <div className="flex gap-3">
-        <button onClick={() => choose(true)} disabled={revealed} className={btnClass(true)}>✅ صح</button>
-        <button onClick={() => choose(false)} disabled={revealed} className={btnClass(false)}>❌ غلط</button>
-      </div>
-      {revealed && (
-        <div className={`mt-4 p-4 rounded-xl border-r-4 ${isCorrect ? "bg-green-50 dark:bg-green-900/20 border-green-500" : "bg-red-50 dark:bg-red-900/20 border-red-500"}`}>
-          <p className="font-bold mb-1 text-slate-800 dark:text-slate-100">{isCorrect ? "🎉 إجابة صحيحة!" : "⚠️ إجابة خاطئة"}</p>
-          <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed"><span className="font-bold">الإجابة الصحيحة: </span>{item.correct ? "صح ✅" : "غلط ❌"}</p>
-          <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mt-2"><span className="font-bold">💡 التفسير: </span>{item.explain}</p>
-          <button onClick={() => { setRevealed(false); setPicked(null); }} className="mt-3 text-sm text-teal-600 dark:text-teal-400 hover:underline font-semibold">↻ إعادة المحاولة</button>
-        </div>
-      )}
-    </div>
-  );
-}
 
-export default function TrueFalseQuiz({ slug }: { slug: string }) {
-  const items = getTF(slug);
-  if (items.length === 0) return null;
-  return (
-    <div className="my-8">
-      <div className="mb-4 p-4 bg-teal-50 dark:bg-teal-900/20 rounded-xl border border-teal-200 dark:border-teal-800">
-        <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-1">✅ صح أم خطأ</h3>
-        <p className="text-sm text-slate-600 dark:text-slate-400">اضغط <b>«صح»</b> أو <b>«غلط»</b> — سيظهر لك التفسير فور اختيارك.</p>
+      <div className="space-y-4">
+        {questions.map((q, i) => {
+          const selected = answers[q.id];
+          const answered = selected !== undefined;
+          return (
+            <div
+              key={q.id}
+              className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900"
+            >
+              <p className="mb-3 font-bold dark:text-white">
+                {i + 1}. {q.question}
+              </p>
+              <div className="flex gap-3">
+                {OPTIONS.map((opt) => {
+                  const isCorrect = opt === q.correct_answer;
+                  const isSelected = opt === selected;
+                  let cls =
+                    "border-slate-200 bg-slate-50 hover:bg-sky-50 dark:border-slate-700 dark:bg-slate-800";
+                  if (answered && isSelected && isCorrect)
+                    cls = "border-emerald-400 bg-emerald-50 dark:bg-emerald-500/10";
+                  else if (answered && isSelected && !isCorrect)
+                    cls = "border-rose-400 bg-rose-50 dark:bg-rose-500/10";
+                  else if (answered && isCorrect)
+                    cls = "border-emerald-400 bg-emerald-50 dark:bg-emerald-500/10";
+
+                  return (
+                    <button
+                      key={opt}
+                      type="button"
+                      onClick={() => select(q.id, opt)}
+                      disabled={answered}
+                      className={`flex-1 rounded-lg border px-4 py-2 text-center text-sm font-bold transition dark:text-white ${cls} ${
+                        answered ? "cursor-default" : "cursor-pointer"
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  );
+                })}
+              </div>
+              {answered && q.explanation && (
+                <p className="mt-3 rounded-lg bg-sky-50 p-2 text-xs font-semibold text-sky-700 dark:bg-sky-500/10 dark:text-sky-400">
+                  💡 {q.explanation}
+                </p>
+              )}
+            </div>
+          );
+        })}
       </div>
-      {items.map((item, i) => <TFItemBox key={i} item={item} index={i} />)}
     </div>
   );
 }
