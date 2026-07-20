@@ -2,14 +2,13 @@
 import { Fragment } from "react";
 import MCQQuiz from "./MCQQuiz";
 import TrueFalseQuiz from "./TrueFalseQuiz";
-
+import VitalCalculators from "./VitalCalculators";
 type Props = {
   html: string;
   slug: string;
   className?: string;
 };
-
-const PLACEHOLDER_REGEX = /\[\[(MCQ_QUIZ|TF_QUIZ)(?::([a-z0-9-]+))?\]\]/gi;
+const PLACEHOLDER_REGEX = /\[\[(MCQ_QUIZ|TF_QUIZ|VITAL_CALCULATORS)(?::([a-z0-9-]+))?\]\]/gi;
 
 export default function ArticleContent({ html, slug, className = "" }: Props) {
   const parts: Array<{ type: "html" | "mcq" | "tf"; value: string }> = [];
@@ -26,7 +25,7 @@ export default function ArticleContent({ html, slug, className = "" }: Props) {
     const overrideSlug = match[2] || slug;
 
     parts.push({
-      type: type === "MCQ_QUIZ" ? "mcq" : "tf",
+      type: type === "MCQ_QUIZ" ? "mcq" : type === "TF_QUIZ" ? "tf" : "calc",
       value: overrideSlug,
     });
 
