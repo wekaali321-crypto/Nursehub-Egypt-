@@ -1,17 +1,24 @@
 // src/components/ArticleContent.tsx
-import { Fragment } from "react";
 import MCQQuiz from "./MCQQuiz";
 import TrueFalseQuiz from "./TrueFalseQuiz";
 import VitalCalculators from "./VitalCalculators";
+
 type Props = {
   html: string;
   slug: string;
   className?: string;
 };
+
+type Part =
+  | { type: "html"; value: string }
+  | { type: "mcq"; value: string }
+  | { type: "tf"; value: string }
+  | { type: "calc"; value: string };
+
 const PLACEHOLDER_REGEX = /\[\[(MCQ_QUIZ|TF_QUIZ|VITAL_CALCULATORS)(?::([a-z0-9-]+))?\]\]/gi;
 
 export default function ArticleContent({ html, slug, className = "" }: Props) {
-  const parts: Array<{ type: "html" | "mcq" | "tf"; value: string }> = [];
+  const parts: Part[] = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
 
@@ -24,10 +31,14 @@ export default function ArticleContent({ html, slug, className = "" }: Props) {
     const type = match[1].toUpperCase();
     const overrideSlug = match[2] || slug;
 
-    parts.push({
-      type: type === "MCQ_QUIZ" ? "mcq" : type === "TF_QUIZ" ? "tf" : "calc",
-      value: overrideSlug,
-    });
+    // ✅ الإصلاح: 3 حالات صريحة بدل شرط ثنائي كان بيحوّل VITAL_CALCULATORS لصح/خطأ
+    if (type === "MCQ_QUIZ") {
+      parts.push({ type: "mcq", value: overrideSlug });
+    } else if (type === "TF_QUIZ") {
+      parts.push({ type: "tf", value: overrideSlug });
+    } else {
+      parts.push({ type: "calc", value: overrideSlug });
+    }
 
     lastIndex = match.index + match[0].length;
   }
@@ -36,7 +47,7 @@ export default function ArticleContent({ html, slug, className = "" }: Props) {
     parts.push({ type: "html", value: html.slice(lastIndex) });
   }
 
-  // لو مفيش placeholders، نرجع HTML عادي
+  // لو مفيش placeholders، نرجع HTML عادي بدون أي معالجة إضافية
   if (parts.length === 1 && parts[0].type === "html") {
     return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />;
   }
@@ -45,17 +56,16 @@ export default function ArticleContent({ html, slug, className = "" }: Props) {
     <div className={className}>
       {parts.map((part, index) => {
         if (part.type === "html") {
-          return (
-            <div
-              key={index}
-              dangerouslySetInnerHTML={{ __html: part.value }}
-            />
-          );
+          return <div key={index} dangerouslySetInnerHTML={{ __html: part.value }} />;
         }
         if (part.type === "mcq") {
           return <MCQQuiz key={index} slug={part.value} />;
         }
-        return <TrueFalseQuiz key={index} slug={part.value} />;
+        if (part.type === "tf") {
+          return <TrueFalseQuiz key={index} slug={part.value} />;
+        }
+        // part.type === "calc"
+        return <VitalCalculators key={index} />;
       })}
     </div>
   );
