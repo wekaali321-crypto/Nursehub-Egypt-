@@ -1,372 +1,72 @@
-@import "tailwindcss";
+// src/components/ArticleContent.tsx
+import MCQQuiz from "./MCQQuiz";
+import TrueFalseQuiz from "./TrueFalseQuiz";
+import VitalCalculators from "./VitalCalculators";
 
-@custom-variant dark (&:where(.dark, .dark *));
+type Props = {
+  html: string;
+  slug: string;
+  className?: string;
+};
 
-:root {
-  /* Design tokens — single source of truth */
-  --brand: #0284c7;
-  --brand-2: #14b8a6;
-  --brand-green: #10b981;
-  --radius-card: 1rem;
-  --radius-pill: 9999px;
-  --ring: 0 0 0 3px rgba(2, 132, 199, 0.35);
-}
+type Part =
+  | { type: "html"; value: string }
+  | { type: "mcq"; value: string }
+  | { type: "tf"; value: string }
+  | { type: "calc"; value: string };
 
-/* Accessibility: skip-to-content link */
-.skip-link {
-  position: fixed;
-  top: -60px;
-  right: 1rem;
-  z-index: 200;
-  background: var(--brand);
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0 0 0.75rem 0.75rem;
-  font-weight: 700;
-  transition: top 0.2s ease;
-}
-.skip-link:focus {
-  top: 0;
-}
+const PLACEHOLDER_REGEX = /\[\[(MCQ_QUIZ|TF_QUIZ|VITAL_CALCULATORS)(?::([a-z0-9-]+))?\]\]/gi;
 
-/* Visible keyboard focus for accessibility (WCAG) */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-[tabindex]:focus-visible {
-  outline: none;
-  box-shadow: var(--ring);
-  border-radius: 0.4rem;
-}
+export default function ArticleContent({ html, slug, className = "" }: Props) {
+  const parts: Part[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
 
-/* Shimmer placeholder for images/skeletons */
-.nh-shimmer {
-  background: linear-gradient(100deg, #e2e8f0 30%, #f1f5f9 50%, #e2e8f0 70%);
-  background-size: 200% 100%;
-  animation: nh-shimmer 1.4s ease-in-out infinite;
-}
-.dark .nh-shimmer {
-  background: linear-gradient(100deg, #1e293b 30%, #334155 50%, #1e293b 70%);
-  background-size: 200% 100%;
-}
-@keyframes nh-shimmer {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
-}
+  const regex = new RegExp(PLACEHOLDER_REGEX);
+  while ((match = regex.exec(html)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push({ type: "html", value: html.slice(lastIndex, match.index) });
+    }
 
-/* Scroll-reveal (progressive entrance) */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: opacity, transform;
-}
-.reveal.reveal-in {
-  opacity: 1;
-  transform: none;
-}
+    const type = match[1].toUpperCase();
+    const overrideSlug = match[2] || slug;
 
-/* Respect reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-  .reveal { opacity: 1; transform: none; }
-}
+    // ✅ الإصلاح: 3 حالات صريحة بدل شرط ثنائي كان بيحوّل VITAL_CALCULATORS لصح/خطأ
+    if (type === "MCQ_QUIZ") {
+      parts.push({ type: "mcq", value: overrideSlug });
+    } else if (type === "TF_QUIZ") {
+      parts.push({ type: "tf", value: overrideSlug });
+    } else {
+      parts.push({ type: "calc", value: overrideSlug });
+    }
 
-/* Optimal reading measure for article body */
-.reading-measure { max-width: 72ch; }
-
-* {
-  font-family: "Cairo", "Tajawal", system-ui, sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background-color: #f8fafc;
-  color: #0f172a;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.dark body {
-  background-color: #0b1220;
-  color: #e2e8f0;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 9999px;
-}
-.dark ::-webkit-scrollbar-thumb {
-  background: #334155;
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.animate-fade-in-up {
-  animation: fadeInUp 0.5s ease forwards;
-}
-
-@keyframes pulseSlow {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 0.9; }
-}
-.animate-pulse-slow {
-  animation: pulseSlow 4s ease-in-out infinite;
-}
-
-.prose-content h2 { font-size: 1.6rem; font-weight: 800; margin: 1.4rem 0 0.8rem; }
-.prose-content h3 { font-size: 1.3rem; font-weight: 700; margin: 1.2rem 0 0.6rem; }
-.prose-content p { margin: 0.8rem 0; line-height: 2; }
-.prose-content ul { list-style: disc; padding-right: 1.5rem; margin: 0.8rem 0; }
-.prose-content ol { list-style: decimal; padding-right: 1.5rem; margin: 0.8rem 0; }
-.prose-content li { margin: 0.3rem 0; }
-
-/* ============================================================
-   Tables — لون طبي موحّد يتجاوز أي inline style قديم مخزّن في
-   محتوى المقالات (background/color على tr) ويضمن تناسق تلقائي
-   مع الوضع الليلي/النهاري لأي مقال حالي أو مستقبلي.
-   ============================================================ */
-.prose-content table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 1.2rem 0;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  border: 1px solid #e2e8f0;
-}
-.dark .prose-content table { border-color: #334155; }
-
-.prose-content th,
-.prose-content td {
-  border-bottom: 1px solid #e2e8f0;
-  border-left: 1px solid #e2e8f0;
-  padding: 0.65rem 0.8rem;
-  text-align: right;
-}
-.prose-content td:last-child,
-.prose-content th:last-child { border-left: none; }
-.dark .prose-content th,
-.dark .prose-content td { border-color: #334155; }
-
-/* أول صف (الهيدر) — لون طبي ثابت أزرق فاتح بالنهار، أزرق غامق مريح بالليل.
-   نستهدف thead tr وأيضاً أول tr في الجدول احتياطاً لو الجدول اتبنى بدون thead،
-   ونلغي أي inline background/color قديم بـ !important. */
-.prose-content thead tr,
-.prose-content tr:first-child {
-  background: #0284c7 !important;
-  color: #ffffff !important;
-}
-.dark .prose-content thead tr,
-.dark .prose-content tr:first-child {
-  background: #075985 !important;
-  color: #e0f2fe !important;
-}
-.prose-content th {
-  background: transparent !important; /* يورّث لون tr بدل ما يغطّيه */
-  color: inherit !important;
-  font-weight: 700;
-  border-bottom-color: transparent;
-}
-
-/* Zebra striping لباقي الصفوف — مريح للعين ومتناسق مع الوضعين */
-.prose-content tbody tr:nth-child(even) { background: #f8fafc; }
-.dark .prose-content tbody tr:nth-child(even) { background: rgba(255,255,255,0.03); }
-.prose-content tbody tr:first-child { background: transparent; } /* لا نكرر لون الهيدر على صف بيانات */
-
-.prose-content blockquote { border-right: 4px solid #0ea5e9; padding: 0.5rem 1rem; background: #f0f9ff; margin: 1rem 0; border-radius: 0.5rem; }
-.dark .prose-content blockquote { background: #0c2536; }
-
-/* ============================================================
-   صناديق الكود / Decision Trees (<pre>) — لون طبي مريح (Sky)
-   بدل الكحلي/الأسود الحاد، ثابت وواضح في الوضعين، ويتجاوز أي
-   inline style قديم مخزّن في المحتوى.
-   ============================================================ */
-.prose-content pre {
-  background: #f0f9ff !important;
-  color: #0c4a6e !important;
-  border: 1px solid #bae6fd;
-  padding: 1rem;
-  border-radius: 0.6rem;
-  overflow-x: auto;
-  direction: ltr;
-  text-align: left;
-  margin: 1rem 0;
-  font-size: 0.85rem;
-  line-height: 1.7;
-}
-.dark .prose-content pre {
-  background: #0c1e2e !important;
-  color: #bae6fd !important;
-  border-color: #164e63;
-}
-.prose-content pre code {
-  background: transparent !important;
-  color: inherit !important;
-  padding: 0;
-}
-
-.prose-content code {
-  background: #e0f2fe;
-  color: #0369a1;
-  padding: 0.1rem 0.4rem;
-  border-radius: 0.3rem;
-  direction: ltr;
-}
-.dark .prose-content code { background: #0c2536; color: #7dd3fc; }
-
-.prose-content img { max-width: 100%; border-radius: 0.6rem; margin: 1rem 0; }
-.prose-content h4 { font-size: 1.15rem; font-weight: 700; margin: 1rem 0 0.5rem; }
-.prose-content h5 { font-size: 1.05rem; font-weight: 700; margin: 0.9rem 0 0.4rem; }
-.prose-content h6 { font-size: 0.95rem; font-weight: 700; margin: 0.8rem 0 0.4rem; color: #64748b; }
-.prose-content video { max-width: 100%; border-radius: 0.6rem; margin: 1rem 0; }
-
-/* Advanced editor blocks */
-.nh-box { border-radius: 0.75rem; padding: 1rem 1.2rem; margin: 1rem 0; border-right: 4px solid; }
-.nh-info { background: #eff6ff; border-color: #3b82f6; color: #1e40af; }
-.nh-warning { background: #fffbeb; border-color: #f59e0b; color: #92400e; }
-.nh-success { background: #ecfdf5; border-color: #10b981; color: #065f46; }
-.nh-error { background: #fef2f2; border-color: #ef4444; color: #991b1b; }
-.nh-callout { background: #f5f3ff; border-color: #8b5cf6; color: #5b21b6; }
-.dark .nh-info { background: rgba(59,130,246,.12); color: #93c5fd; }
-.dark .nh-warning { background: rgba(245,158,11,.12); color: #fcd34d; }
-.dark .nh-success { background: rgba(16,185,129,.12); color: #6ee7b7; }
-.dark .nh-error { background: rgba(239,68,68,.12); color: #fca5a5; }
-.dark .nh-callout { background: rgba(139,92,246,.12); color: #c4b5fd; }
-
-.nh-btn-block { display: inline-block; background: linear-gradient(to left, #0ea5e9, #10b981); color: #fff !important; padding: 0.6rem 1.5rem; border-radius: 9999px; font-weight: 700; text-decoration: none; margin: 0.5rem 0; }
-.nh-divider { border: none; border-top: 2px dashed #cbd5e1; margin: 1.5rem 0; }
-.dark .nh-divider { border-color: #334155; }
-
-.nh-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
-@media (max-width: 640px){ .nh-columns { grid-template-columns: 1fr; } }
-.nh-card { border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1rem; background: #fff; }
-.dark .nh-card { border-color: #334155; background: #0f172a; }
-
-.nh-accordion { border: 1px solid #e2e8f0; border-radius: 0.6rem; margin: 0.5rem 0; overflow: hidden; }
-.dark .nh-accordion { border-color: #334155; }
-.nh-accordion > summary { cursor: pointer; padding: 0.75rem 1rem; font-weight: 700; background: #f8fafc; }
-.dark .nh-accordion > summary { background: #1e293b; }
-.nh-accordion > div { padding: 0.75rem 1rem; }
-
-.nh-steps { counter-reset: step; margin: 1rem 0; }
-.nh-step { position: relative; padding: 0.4rem 2.4rem 1rem; border-right: 2px solid #0ea5e9; }
-.nh-step::before { counter-increment: step; content: counter(step); position: absolute; right: -16px; top: 0; width: 30px; height: 30px; background: #0ea5e9; color: #fff; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-weight: 700; }
-
-.nh-timeline { margin: 1rem 0; }
-.nh-tl-item { position: relative; padding: 0 0 1.2rem 0; padding-right: 1.6rem; border-right: 2px solid #10b981; }
-.nh-tl-item::before { content: ""; position: absolute; right: -7px; top: 4px; width: 12px; height: 12px; background: #10b981; border-radius: 9999px; }
-
-/* Medical / nursing specialized blocks */
-.nh-clinical { background: #eef2ff; border-right: 4px solid #6366f1; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-tip { background: #f0fdf4; border-right: 4px solid #22c55e; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-pearl { background: #fff7ed; border-right: 4px solid #fb923c; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-drug { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-drug h4 { color: #0369a1; margin: 0 0 .5rem; }
-.nh-procedure { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-important { background: #fef2f2; border-right: 4px solid #ef4444; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-quickfacts { background: #ecfeff; border: 1px dashed #06b6d4; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-case { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-case h4 { color: #334155; margin: 0 0 .5rem; }
-.nh-scenario { background: linear-gradient(135deg,#eff6ff,#ecfeff); border: 1px solid #bae6fd; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-def { background: #fefce8; border-bottom: 2px solid #eab308; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
-.dark .nh-clinical { background: rgba(99,102,241,.12); }
-.dark .nh-tip { background: rgba(34,197,94,.12); }
-.dark .nh-pearl { background: rgba(251,146,60,.12); }
-.dark .nh-drug, .dark .nh-scenario { background: rgba(2,132,199,.12); border-color: #164e63; }
-.dark .nh-procedure { background: rgba(139,92,246,.12); border-color: #4c1d95; }
-.dark .nh-important { background: rgba(239,68,68,.12); }
-.dark .nh-quickfacts { background: rgba(6,182,212,.12); }
-.dark .nh-case { background: #0f172a; border-color: #334155; }
-.dark .nh-def { background: rgba(234,179,8,.15); }
-
-.nh-checklist { list-style: none; padding-right: 0; margin: 1rem 0; }
-.nh-checklist li { padding: .35rem 0; }
-.nh-three-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1rem 0; }
-@media (max-width: 640px){ .nh-three-cols { grid-template-columns: 1fr; } }
-.nh-gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: .5rem; margin: 1rem 0; }
-.nh-gallery img { width: 100%; height: 120px; object-fit: cover; border-radius: .5rem; margin: 0; }
-.nh-mcq { background: #fff; border: 1px solid #e2e8f0; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.dark .nh-mcq { background: #0f172a; border-color: #334155; }
-.nh-mcq ol { margin: .5rem 0; }
-.nh-flashcard { background: linear-gradient(135deg,#0ea5e9,#14b8a6); color: #fff; border-radius: .75rem; padding: 1.2rem; margin: 1rem 0; text-align: center; }
-.nh-flashcard summary { cursor: pointer; font-weight: 700; list-style: none; }
-
-/* ============================================================
-   Professional Article Engine — reading experience refinements
-   ============================================================ */
-
-/* Anchor jumps land below the sticky navbar instead of being hidden under it */
-.prose-content h2, .prose-content h3, .prose-content h4,
-.prose-content h5, .prose-content h6 {
-  scroll-margin-top: 6rem;
-}
-
-/* Premium handbook typography: comfortable measure, generous leading */
-.prose-content {
-  font-size: 1.0625rem;
-  letter-spacing: 0.1px;
-}
-.prose-content > p:first-of-type {
-  font-size: 1.15rem;
-  color: inherit;
-}
-.prose-content a {
-  color: #0ea5e9;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  border-radius: 2px;
-}
-.prose-content a:focus-visible {
-  outline: none;
-  box-shadow: var(--ring);
-}
-.dark .prose-content a { color: #38bdf8; }
-
-/* Keyboard focus for interactive accordions/details blocks */
-.nh-accordion > summary:focus-visible,
-.nh-flashcard summary:focus-visible {
-  outline: none;
-  box-shadow: var(--ring);
-}
-
-/* Print styles — clean, branded, ink-friendly article printout */
-@media print {
-  .print\:hidden { display: none !important; }
-  body { background: #fff !important; color: #000 !important; }
-  .prose-content { font-size: 12pt; line-height: 1.6; color: #000; }
-  .prose-content a { color: #000; text-decoration: underline; }
-  .prose-content thead tr,
-  .prose-content tr:first-child {
-    background: #e2e8f0 !important;
-    color: #000 !important;
+    lastIndex = match.index + match[0].length;
   }
-  .prose-content pre {
-    background: #fff !important;
-    color: #000 !important;
-    border: 1px solid #94a3b8 !important;
+
+  if (lastIndex < html.length) {
+    parts.push({ type: "html", value: html.slice(lastIndex) });
   }
-  .nh-box, .nh-drug, .nh-procedure, .nh-clinical, .nh-tip, .nh-pearl,
-  .nh-important, .nh-quickfacts, .nh-case, .nh-scenario, .nh-mcq, .nh-card {
-    border: 1px solid #94a3b8 !important;
-    background: #fff !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    break-inside: avoid;
+
+  // لو مفيش placeholders، نرجع HTML عادي بدون أي معالجة إضافية
+  if (parts.length === 1 && parts[0].type === "html") {
+    return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />;
   }
-  img, table, .nh-box, .nh-card { break-inside: avoid; }
+
+  return (
+    <div className={className}>
+      {parts.map((part, index) => {
+        if (part.type === "html") {
+          return <div key={index} dangerouslySetInnerHTML={{ __html: part.value }} />;
+        }
+        if (part.type === "mcq") {
+          return <MCQQuiz key={index} slug={part.value} />;
+        }
+        if (part.type === "tf") {
+          return <TrueFalseQuiz key={index} slug={part.value} />;
+        }
+        // part.type === "calc"
+        return <VitalCalculators key={index} />;
+      })}
+    </div>
+  );
 }
