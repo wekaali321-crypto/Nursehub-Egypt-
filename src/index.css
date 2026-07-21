@@ -134,16 +134,101 @@ body {
 .prose-content ul { list-style: disc; padding-right: 1.5rem; margin: 0.8rem 0; }
 .prose-content ol { list-style: decimal; padding-right: 1.5rem; margin: 0.8rem 0; }
 .prose-content li { margin: 0.3rem 0; }
-.prose-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-.prose-content th, .prose-content td { border: 1px solid #cbd5e1; padding: 0.6rem; text-align: right; }
-.dark .prose-content th, .dark .prose-content td { border-color: #334155; }
-.prose-content th { background: #f1f5f9; font-weight: 700; }
-.dark .prose-content th { background: #1e293b; }
+
+/* ============================================================
+   Tables — لون طبي موحّد يتجاوز أي inline style قديم مخزّن في
+   محتوى المقالات (background/color على tr) ويضمن تناسق تلقائي
+   مع الوضع الليلي/النهاري لأي مقال حالي أو مستقبلي.
+   ============================================================ */
+.prose-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.2rem 0;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+.dark .prose-content table { border-color: #334155; }
+
+.prose-content th,
+.prose-content td {
+  border-bottom: 1px solid #e2e8f0;
+  border-left: 1px solid #e2e8f0;
+  padding: 0.65rem 0.8rem;
+  text-align: right;
+}
+.prose-content td:last-child,
+.prose-content th:last-child { border-left: none; }
+.dark .prose-content th,
+.dark .prose-content td { border-color: #334155; }
+
+/* أول صف (الهيدر) — لون طبي ثابت أزرق فاتح بالنهار، أزرق غامق مريح بالليل.
+   نستهدف thead tr وأيضاً أول tr في الجدول احتياطاً لو الجدول اتبنى بدون thead،
+   ونلغي أي inline background/color قديم بـ !important. */
+.prose-content thead tr,
+.prose-content tr:first-child {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+}
+.dark .prose-content thead tr,
+.dark .prose-content tr:first-child {
+  background: #075985 !important;
+  color: #e0f2fe !important;
+}
+.prose-content th {
+  background: transparent !important; /* يورّث لون tr بدل ما يغطّيه */
+  color: inherit !important;
+  font-weight: 700;
+  border-bottom-color: transparent;
+}
+
+/* Zebra striping لباقي الصفوف — مريح للعين ومتناسق مع الوضعين */
+.prose-content tbody tr:nth-child(even) { background: #f8fafc; }
+.dark .prose-content tbody tr:nth-child(even) { background: rgba(255,255,255,0.03); }
+.prose-content tbody tr:first-child { background: transparent; } /* لا نكرر لون الهيدر على صف بيانات */
+
 .prose-content blockquote { border-right: 4px solid #0ea5e9; padding: 0.5rem 1rem; background: #f0f9ff; margin: 1rem 0; border-radius: 0.5rem; }
 .dark .prose-content blockquote { background: #0c2536; }
-.prose-content pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: 0.6rem; overflow-x: auto; direction: ltr; text-align: left; margin: 1rem 0; }
-.prose-content code { background: #e2e8f0; padding: 0.1rem 0.4rem; border-radius: 0.3rem; direction: ltr; }
-.dark .prose-content code { background: #1e293b; }
+
+/* ============================================================
+   صناديق الكود / Decision Trees (<pre>) — لون طبي مريح (Sky)
+   بدل الكحلي/الأسود الحاد، ثابت وواضح في الوضعين، ويتجاوز أي
+   inline style قديم مخزّن في المحتوى.
+   ============================================================ */
+.prose-content pre {
+  background: #f0f9ff !important;
+  color: #0c4a6e !important;
+  border: 1px solid #bae6fd;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  overflow-x: auto;
+  direction: ltr;
+  text-align: left;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+.dark .prose-content pre {
+  background: #0c1e2e !important;
+  color: #bae6fd !important;
+  border-color: #164e63;
+}
+.prose-content pre code {
+  background: transparent !important;
+  color: inherit !important;
+  padding: 0;
+}
+
+.prose-content code {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.3rem;
+  direction: ltr;
+}
+.dark .prose-content code { background: #0c2536; color: #7dd3fc; }
+
 .prose-content img { max-width: 100%; border-radius: 0.6rem; margin: 1rem 0; }
 .prose-content h4 { font-size: 1.15rem; font-weight: 700; margin: 1rem 0 0.5rem; }
 .prose-content h5 { font-size: 1.05rem; font-weight: 700; margin: 0.9rem 0 0.4rem; }
@@ -252,10 +337,6 @@ body {
 }
 .dark .prose-content a { color: #38bdf8; }
 
-/* Zebra striping for dense medical tables */
-.prose-content tbody tr:nth-child(even) { background: #f8fafc; }
-.dark .prose-content tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
-
 /* Keyboard focus for interactive accordions/details blocks */
 .nh-accordion > summary:focus-visible,
 .nh-flashcard summary:focus-visible {
@@ -269,6 +350,16 @@ body {
   body { background: #fff !important; color: #000 !important; }
   .prose-content { font-size: 12pt; line-height: 1.6; color: #000; }
   .prose-content a { color: #000; text-decoration: underline; }
+  .prose-content thead tr,
+  .prose-content tr:first-child {
+    background: #e2e8f0 !important;
+    color: #000 !important;
+  }
+  .prose-content pre {
+    background: #fff !important;
+    color: #000 !important;
+    border: 1px solid #94a3b8 !important;
+  }
   .nh-box, .nh-drug, .nh-procedure, .nh-clinical, .nh-tip, .nh-pearl,
   .nh-important, .nh-quickfacts, .nh-case, .nh-scenario, .nh-mcq, .nh-card {
     border: 1px solid #94a3b8 !important;
