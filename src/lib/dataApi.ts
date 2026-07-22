@@ -27,6 +27,8 @@ const fromArticle = (r: any) => ({
   views: r.views ?? 0, featured: r.featured, videoUrl: r.video_url,
   attachments: r.attachments ?? [], metaTitle: r.meta_title, metaDescription: r.meta_description,
   rating: r.rating, ratingCount: r.rating_count,
+  // Bilingual fields — required for the per-article AR/EN reading toggle.
+  titleEn: r.title_en, excerptEn: r.excerpt_en, contentEn: r.content_en,
 });
 const toArticle = (a: any) => ({
   id: a.id, title: a.title, slug: a.slug, category: a.category, excerpt: a.excerpt,
@@ -35,6 +37,8 @@ const toArticle = (a: any) => ({
   featured: a.featured ?? false, video_url: a.videoUrl ?? null, attachments: a.attachments ?? [],
   meta_title: a.metaTitle ?? null, meta_description: a.metaDescription ?? null,
   rating: a.rating ?? 0, rating_count: a.ratingCount ?? 0,
+  // Bilingual fields — must round-trip on save or the CMS editor would silently wipe them.
+  title_en: a.titleEn ?? null, excerpt_en: a.excerptEn ?? null, content_en: a.contentEn ?? null,
 });
 
 const fromComment = (r: any) => ({ id: r.id, articleId: r.article_id, name: r.name, text: r.text, date: r.created_at?.slice(0, 10) ?? "", status: r.status });
