@@ -5,21 +5,27 @@ import { supabase, isSupabaseConfigured } from "../lib/supabase";
 type Question = {
   id: string;
   question: string;
-  correct_answer: string; // "صح" | "خطأ"
+  correct_answer: string; // "صح"/"خطأ" for ar, "True"/"False" for en
   explanation: string | null;
   order_index: number;
 };
 
 type Props = {
   slug: string;
+  lang?: "ar" | "en";
 };
 
-const OPTIONS = ["صح", "خطأ"];
+const TEXT = {
+  ar: { title: "✅ صح أم خطأ", sub: "اختر إجابتك — الحل يظهر فورًا بعد الاختيار.", loading: "جارِ تحميل الأسئلة...", options: ["صح", "خطأ"] },
+  en: { title: "✅ True or False", sub: "Pick your answer — the solution appears right after you choose.", loading: "Loading questions...", options: ["True", "False"] },
+};
 
-export default function TrueFalseQuiz({ slug }: Props) {
+export default function TrueFalseQuiz({ slug, lang = "ar" }: Props) {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
+  const t = TEXT[lang];
+  const dir = lang === "ar" ? "rtl" : "ltr";
 
   useEffect(() => {
     let cancelled = false;
@@ -44,6 +50,7 @@ export default function TrueFalseQuiz({ slug }: Props) {
         .select("*")
         .eq("article_id", article.id)
         .eq("type", "true_false")
+        .eq("lang", lang)
         .order("order_index", { ascending: true });
 
       if (!cancelled) {
@@ -55,7 +62,7 @@ export default function TrueFalseQuiz({ slug }: Props) {
     return () => {
       cancelled = true;
     };
-  }, [slug]);
+  }, [slug, lang]);
 
   function select(qId: string, option: string) {
     if (answers[qId] !== undefined) return;
@@ -63,16 +70,14 @@ export default function TrueFalseQuiz({ slug }: Props) {
   }
 
   if (loading) {
-    return <p className="my-6 text-center text-sm text-slate-400">جارِ تحميل الأسئلة...</p>;
+    return <p className="my-6 text-center text-sm text-slate-400">{t.loading}</p>;
   }
   if (questions.length === 0) return null;
 
   return (
-    <div dir="rtl" className="my-8 not-prose">
-      <h3 className="mb-1 text-xl font-black dark:text-white">✅ صح أم خطأ</h3>
-      <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">
-        اختر إجابتك — الحل يظهر فورًا بعد الاختيار.
-      </p>
+    <div dir={dir} className="my-8 not-prose">
+      <h3 className="mb-1 text-xl font-black dark:text-white">{t.title}</h3>
+      <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">{t.sub}</p>
 
       <div className="space-y-4">
         {questions.map((q, i) => {
@@ -87,7 +92,7 @@ export default function TrueFalseQuiz({ slug }: Props) {
                 {i + 1}. {q.question}
               </p>
               <div className="flex gap-3">
-                {OPTIONS.map((opt) => {
+                {t.options.map((opt) => {
                   const isCorrect = opt === q.correct_answer;
                   const isSelected = opt === selected;
                   let cls =
