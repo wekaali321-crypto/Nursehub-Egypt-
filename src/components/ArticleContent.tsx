@@ -7,6 +7,7 @@ import VitalCalculators from "./VitalCalculators";
 type Props = {
   html: string;
   slug: string;
+  lang?: "ar" | "en";
   className?: string;
 };
 
@@ -28,7 +29,7 @@ function typeFor(tag: string): PartType {
   }
 }
 
-export default function ArticleContent({ html, slug, className = "" }: Props) {
+export default function ArticleContent({ html, slug, lang = "ar", className = "" }: Props) {
   const parts: Array<{ type: PartType; value: string }> = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
@@ -61,11 +62,11 @@ export default function ArticleContent({ html, slug, className = "" }: Props) {
           case "html":
             return <div key={index} dangerouslySetInnerHTML={{ __html: part.value }} />;
           case "mcq":
-            return <MCQQuiz key={index} slug={part.value} />;
+            return <MCQQuiz key={index} slug={part.value} lang={lang} />;
           case "tf":
-            return <TrueFalseQuiz key={index} slug={part.value} />;
+            return <TrueFalseQuiz key={index} slug={part.value} lang={lang} />;
           case "fb":
-            return <FillBlankQuiz key={index} slug={part.value} />;
+            return <FillBlankQuiz key={index} slug={part.value} lang={lang} />;
           case "calc":
             return <VitalCalculators key={index} />;
           default:
