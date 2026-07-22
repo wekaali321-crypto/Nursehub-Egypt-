@@ -55,6 +55,12 @@ export default function ArticlePage() {
   const scrollTimer = useRef<number | undefined>(undefined);
   const tickTimer = useRef<number | undefined>(undefined);
 
+  // Per-article reading language — independent of the site-wide UI language.
+  // Lets a reader flip just this article between Arabic/English via the
+  // button next to the title, without switching the whole site's interface.
+  const [docLang, setDocLang] = useState<"ar" | "en">(lang === "en" ? "en" : "ar");
+  const hasEnglish = !!(article?.titleEn && article?.contentEn);
+
   // ---- View count + real Supabase analytics (reading time, scroll depth) ----
   useEffect(() => {
     if (!article) return;
@@ -80,11 +86,12 @@ export default function ArticlePage() {
   const contentWithIds = useMemo(() => (article ? injectIds(article.content) : ""), [article]);
   const mins = useMemo(() => (article ? readingTime(article.content) : 0), [article]);
 
-  // Bilingual display: use English fields in EN mode, fall back with a notice.
-  const dispTitle = article ? bilingual(article.title, article.titleEn, lang) : { text: "", missing: false };
-  const dispContent = article ? bilingual(article.content, article.contentEn, lang) : { text: "", missing: false };
-  const displayContentWithIds = article && lang === "en" && article.contentEn ? injectIds(article.contentEn) : contentWithIds;
-  const activeToc = article && lang === "en" && article.contentEn ? buildToc(article.contentEn) : toc;
+  // Bilingual display: use English fields when the reader picked English for
+  // this article (docLang), independent from the overall site UI language.
+  const dispTitle = article ? bilingual(article.title, article.titleEn, docLang) : { text: "", missing: false };
+  const dispContent = article ? bilingual(article.content, article.contentEn, docLang) : { text: "", missing: false };
+  const displayContentWithIds = article && docLang === "en" && article.contentEn ? injectIds(article.contentEn) : contentWithIds;
+  const activeToc = article && docLang === "en" && article.contentEn ? buildToc(article.contentEn) : toc;
 
   // Auto-derived structured data — never fabricated, only extracted from real content.
   const faqSchema = article ? extractFaqSchema(displayContentWithIds) : null;
@@ -206,7 +213,18 @@ export default function ArticlePage() {
             </button>
           </div>
 
-          <h1 className="mt-3 text-3xl font-black leading-tight text-slate-900 dark:text-white md:text-4xl">{dispTitle.text}</h1>
+          <div className="mt-3 flex items-start justify-between gap-3">
+            <h1 className="text-3xl font-black leading-tight text-slate-900 dark:text-white md:text-4xl">{dispTitle.text}</h1>
+            {hasEnglish && (
+              <button
+                onClick={() => setDocLang((d) => (d === "ar" ? "en" : "ar"))}
+                title={docLang === "ar" ? "Read this article in English" : "اقرأ هذا المقال بالعربي"}
+                className="mt-1 flex shrink-0 items-center gap-1 rounded-full border border-sky-300 bg-sky-50 px-3 py-1.5 text-xs font-bold text-sky-600 transition hover:bg-sky-100 dark:border-sky-800 dark:bg-sky-500/10 dark:text-sky-400 print:hidden"
+              >
+                {docLang === "ar" ? "🇬🇧 EN" : "🇪🇬 AR"}
+              </button>
+            )}
+          </div>
 
           <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
             <span>✍️ {article.author}</span>
@@ -220,7 +238,7 @@ export default function ArticlePage() {
           {/* Medical trust badge */}
           <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-xs font-bold text-emerald-700 dark:border-emerald-900 dark:bg-emerald-500/10 dark:text-emerald-400">
             <Icon name="verified" size={16} />
-            {lang === "ar"
+            {docLang === "ar"
               ? `روجع طبياً بواسطة فريق ${settings.siteName} · آخر تحديث ${article.updatedDate || article.publishDate}`
               : `Medically reviewed by ${settings.siteName} team · Updated ${article.updatedDate || article.publishDate}`}
           </div>
@@ -246,15 +264,15 @@ export default function ArticlePage() {
 
           {dispContent.missing && (
             <div className="mb-4 rounded-xl bg-amber-50 p-3 text-center text-sm font-semibold text-amber-600 dark:bg-amber-500/10">
-              {lang === "en" ? t("common.comingSoon") : t("common.comingSoonAr")}
+              {docLang === "en" ? t("common.comingSoon") : t("common.comingSoonAr")}
             </div>
           )}
-          <ArticleContent html={displayContentWithIds} slug={article.slug} className="prose-content reading-measure max-w-none text-slate-700 dark:text-slate-300" />
+          <ArticleContent html={displayContentWithIds} slug={article.slug} lang={docLang} className="prose-content reading-measure max-w-none text-slate-700 dark:text-slate-300" />
 
           {/* Medical disclaimer for trust & safety */}
           <div className="mt-8 flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-700 dark:border-amber-900 dark:bg-amber-500/5 dark:text-amber-400">
             <span className="text-xl" aria-hidden="true">⚕️</span>
-            <p>{lang === "ar"
+            <p>{docLang === "ar"
               ? "إخلاء مسؤولية طبي: هذا المحتوى لأغراض تعليمية فقط ولا يُغني عن استشارة الطبيب أو المختص. راجع دائماً البروتوكولات المعتمدة في مؤسستك."
               : "Medical disclaimer: This content is for educational purposes only and is not a substitute for professional medical advice. Always follow your institution's approved protocols."}</p>
           </div>
