@@ -1,6 +1,7 @@
 // src/components/ArticleContent.tsx
 import MCQQuiz from "./MCQQuiz";
 import TrueFalseQuiz from "./TrueFalseQuiz";
+import FillBlankQuiz from "./FillBlankQuiz";
 import VitalCalculators from "./VitalCalculators";
 
 type Props = {
@@ -9,16 +10,26 @@ type Props = {
   className?: string;
 };
 
-type Part =
-  | { type: "html"; value: string }
-  | { type: "mcq"; value: string }
-  | { type: "tf"; value: string }
-  | { type: "calc"; value: string };
+type PartType = "html" | "mcq" | "tf" | "fb" | "calc";
 
-const PLACEHOLDER_REGEX = /\[\[(MCQ_QUIZ|TF_QUIZ|VITAL_CALCULATORS)(?::([a-z0-9-]+))?\]\]/gi;
+const PLACEHOLDER_REGEX =
+  /\[\[(MCQ_QUIZ|TF_QUIZ|FB_QUIZ|VITAL_CALCULATORS)(?::([a-z0-9-]+))?\]\]/gi;
+
+function typeFor(tag: string): PartType {
+  switch (tag.toUpperCase()) {
+    case "MCQ_QUIZ":
+      return "mcq";
+    case "TF_QUIZ":
+      return "tf";
+    case "FB_QUIZ":
+      return "fb";
+    default:
+      return "calc";
+  }
+}
 
 export default function ArticleContent({ html, slug, className = "" }: Props) {
-  const parts: Part[] = [];
+  const parts: Array<{ type: PartType; value: string }> = [];
   let lastIndex = 0;
   let match: RegExpExecArray | null;
 
@@ -28,17 +39,8 @@ export default function ArticleContent({ html, slug, className = "" }: Props) {
       parts.push({ type: "html", value: html.slice(lastIndex, match.index) });
     }
 
-    const type = match[1].toUpperCase();
     const overrideSlug = match[2] || slug;
-
-    // ✅ الإصلاح: 3 حالات صريحة بدل شرط ثنائي كان بيحوّل VITAL_CALCULATORS لصح/خطأ
-    if (type === "MCQ_QUIZ") {
-      parts.push({ type: "mcq", value: overrideSlug });
-    } else if (type === "TF_QUIZ") {
-      parts.push({ type: "tf", value: overrideSlug });
-    } else {
-      parts.push({ type: "calc", value: overrideSlug });
-    }
+    parts.push({ type: typeFor(match[1]), value: overrideSlug });
 
     lastIndex = match.index + match[0].length;
   }
@@ -47,7 +49,7 @@ export default function ArticleContent({ html, slug, className = "" }: Props) {
     parts.push({ type: "html", value: html.slice(lastIndex) });
   }
 
-  // لو مفيش placeholders، نرجع HTML عادي بدون أي معالجة إضافية
+  // لو مفيش placeholders، نرجع HTML عادي
   if (parts.length === 1 && parts[0].type === "html") {
     return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />;
   }
@@ -55,17 +57,20 @@ export default function ArticleContent({ html, slug, className = "" }: Props) {
   return (
     <div className={className}>
       {parts.map((part, index) => {
-        if (part.type === "html") {
-          return <div key={index} dangerouslySetInnerHTML={{ __html: part.value }} />;
+        switch (part.type) {
+          case "html":
+            return <div key={index} dangerouslySetInnerHTML={{ __html: part.value }} />;
+          case "mcq":
+            return <MCQQuiz key={index} slug={part.value} />;
+          case "tf":
+            return <TrueFalseQuiz key={index} slug={part.value} />;
+          case "fb":
+            return <FillBlankQuiz key={index} slug={part.value} />;
+          case "calc":
+            return <VitalCalculators key={index} />;
+          default:
+            return null;
         }
-        if (part.type === "mcq") {
-          return <MCQQuiz key={index} slug={part.value} />;
-        }
-        if (part.type === "tf") {
-          return <TrueFalseQuiz key={index} slug={part.value} />;
-        }
-        // part.type === "calc"
-        return <VitalCalculators key={index} />;
       })}
     </div>
   );
