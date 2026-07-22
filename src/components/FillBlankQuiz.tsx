@@ -4,19 +4,27 @@ import { supabase, isSupabaseConfigured } from "../lib/supabase";
 
 type Question = {
   id: string;
-  question: string; // contains "_______" as the blank marker
+  question: string;
   correct_answer: string;
   order_index: number;
 };
 
 type Props = {
   slug: string;
+  lang?: "ar" | "en";
 };
 
-export default function FillBlankQuiz({ slug }: Props) {
+const TEXT = {
+  ar: { title: "📝 أكمل الفراغ", sub: "حاول تتذكر الإجابة، وبعدين اضغط لإظهار الحل.", loading: "جارِ تحميل الأسئلة...", reveal: "إظهار الإجابة" },
+  en: { title: "📝 Fill in the Blank", sub: "Try to recall the answer, then tap to reveal it.", loading: "Loading questions...", reveal: "Show Answer" },
+};
+
+export default function FillBlankQuiz({ slug, lang = "ar" }: Props) {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [revealed, setRevealed] = useState<Record<string, boolean>>({});
   const [loading, setLoading] = useState(true);
+  const t = TEXT[lang];
+  const dir = lang === "ar" ? "rtl" : "ltr";
 
   useEffect(() => {
     let cancelled = false;
@@ -41,6 +49,7 @@ export default function FillBlankQuiz({ slug }: Props) {
         .select("*")
         .eq("article_id", article.id)
         .eq("type", "fill_blank")
+        .eq("lang", lang)
         .order("order_index", { ascending: true });
 
       if (!cancelled) {
@@ -52,19 +61,17 @@ export default function FillBlankQuiz({ slug }: Props) {
     return () => {
       cancelled = true;
     };
-  }, [slug]);
+  }, [slug, lang]);
 
   if (loading) {
-    return <p className="my-6 text-center text-sm text-slate-400">جارِ تحميل الأسئلة...</p>;
+    return <p className="my-6 text-center text-sm text-slate-400">{t.loading}</p>;
   }
   if (questions.length === 0) return null;
 
   return (
-    <div dir="rtl" className="my-8 not-prose">
-      <h3 className="mb-1 text-xl font-black dark:text-white">📝 أكمل الفراغ</h3>
-      <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">
-        اضغط على "إظهار الإجابة" بعد ما تحاول تتذكرها بنفسك.
-      </p>
+    <div dir={dir} className="my-8 not-prose">
+      <h3 className="mb-1 text-xl font-black dark:text-white">{t.title}</h3>
+      <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">{t.sub}</p>
       <div className="space-y-3">
         {questions.map((q, i) => {
           const isRevealed = revealed[q.id];
@@ -86,7 +93,7 @@ export default function FillBlankQuiz({ slug }: Props) {
                   onClick={() => setRevealed((prev) => ({ ...prev, [q.id]: true }))}
                   className="mt-2 rounded-full bg-sky-500 px-4 py-1.5 text-xs font-bold text-white hover:bg-sky-600"
                 >
-                  إظهار الإجابة
+                  {t.reveal}
                 </button>
               )}
             </div>
