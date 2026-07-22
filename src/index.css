@@ -163,16 +163,15 @@ body {
 .dark .prose-content th,
 .dark .prose-content td { border-color: #334155; }
 
-/* أول صف (الهيدر) — لون طبي ثابت أزرق فاتح بالنهار، أزرق غامق مريح بالليل.
-   نستهدف thead tr وأيضاً أول tr في الجدول احتياطاً لو الجدول اتبنى بدون thead،
-   ونلغي أي inline background/color قديم بـ !important. */
-.prose-content thead tr,
-.prose-content tr:first-child {
+/* أول صف (الهيدر) فقط — بيستهدف أول tr داخل أول عنصر ابن مباشر
+   للجدول (سواء thead أو tbody لو الجدول اتبنى من غيره)، مش كل
+   "أول ابن" في كل عنصر أب لوحده. ده بيمنع تلوين أول صفين مع بعض
+   في الجداول اللي فيها thead و tbody كعنصرين منفصلين. */
+.prose-content table > :is(thead, tbody):first-child > tr:first-child {
   background: #0284c7 !important;
   color: #ffffff !important;
 }
-.dark .prose-content thead tr,
-.dark .prose-content tr:first-child {
+.dark .prose-content table > :is(thead, tbody):first-child > tr:first-child {
   background: #075985 !important;
   color: #e0f2fe !important;
 }
@@ -350,8 +349,7 @@ body {
   body { background: #fff !important; color: #000 !important; }
   .prose-content { font-size: 12pt; line-height: 1.6; color: #000; }
   .prose-content a { color: #000; text-decoration: underline; }
-  .prose-content thead tr,
-  .prose-content tr:first-child {
+  .prose-content table > :is(thead, tbody):first-child > tr:first-child {
     background: #e2e8f0 !important;
     color: #000 !important;
   }
