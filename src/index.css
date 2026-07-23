@@ -131,8 +131,11 @@ body {
 .prose-content h2 { font-size: 1.6rem; font-weight: 800; margin: 1.4rem 0 0.8rem; }
 .prose-content h3 { font-size: 1.3rem; font-weight: 700; margin: 1.2rem 0 0.6rem; }
 .prose-content p { margin: 0.8rem 0; line-height: 2; }
-.prose-content ul { list-style: disc; padding-right: 1.5rem; margin: 0.8rem 0; }
-.prose-content ol { list-style: decimal; padding-right: 1.5rem; margin: 0.8rem 0; }
+/* padding-inline-start (not padding-right): follows the article's own dir
+   (rtl/ltr) set on the ArticleContent wrapper, so bullets/numbers sit on the
+   correct side for both Arabic and English content. */
+.prose-content ul { list-style: disc; padding-inline-start: 1.5rem; margin: 0.8rem 0; }
+.prose-content ol { list-style: decimal; padding-inline-start: 1.5rem; margin: 0.8rem 0; }
 .prose-content li { margin: 0.3rem 0; }
 
 /* ============================================================
@@ -151,15 +154,18 @@ body {
 }
 .dark .prose-content table { border-color: #334155; }
 
+/* border-inline-start / text-align:start (not border-left / text-align:right):
+   these follow the article's dir so table columns and text read correctly
+   in both Arabic (rtl) and English (ltr) versions of the same article. */
 .prose-content th,
 .prose-content td {
   border-bottom: 1px solid #e2e8f0;
-  border-left: 1px solid #e2e8f0;
+  border-inline-start: 1px solid #e2e8f0;
   padding: 0.65rem 0.8rem;
-  text-align: right;
+  text-align: start;
 }
 .prose-content td:last-child,
-.prose-content th:last-child { border-left: none; }
+.prose-content th:last-child { border-inline-start: none; }
 .dark .prose-content th,
 .dark .prose-content td { border-color: #334155; }
 
@@ -187,13 +193,14 @@ body {
 .dark .prose-content tbody tr:nth-child(even) { background: rgba(255,255,255,0.03); }
 .prose-content tbody tr:first-child { background: transparent; } /* لا نكرر لون الهيدر على صف بيانات */
 
-.prose-content blockquote { border-right: 4px solid #0ea5e9; padding: 0.5rem 1rem; background: #f0f9ff; margin: 1rem 0; border-radius: 0.5rem; }
+.prose-content blockquote { border-inline-start: 4px solid #0ea5e9; padding: 0.5rem 1rem; background: #f0f9ff; margin: 1rem 0; border-radius: 0.5rem; }
 .dark .prose-content blockquote { background: #0c2536; }
 
 /* ============================================================
    صناديق الكود / Decision Trees (<pre>) — لون طبي مريح (Sky)
    بدل الكحلي/الأسود الحاد، ثابت وواضح في الوضعين، ويتجاوز أي
-   inline style قديم مخزّن في المحتوى.
+   inline style قديم مخزّن في المحتوى. تفضل LTR دايمًا (كود/أرقام)
+   حتى جوه المقال العربي — ده سلوك مقصود.
    ============================================================ */
 .prose-content pre {
   background: #f0f9ff !important;
@@ -234,8 +241,9 @@ body {
 .prose-content h6 { font-size: 0.95rem; font-weight: 700; margin: 0.8rem 0 0.4rem; color: #64748b; }
 .prose-content video { max-width: 100%; border-radius: 0.6rem; margin: 1rem 0; }
 
-/* Advanced editor blocks */
-.nh-box { border-radius: 0.75rem; padding: 1rem 1.2rem; margin: 1rem 0; border-right: 4px solid; }
+/* Advanced editor blocks — border-inline-start so the accent stripe sits on
+   the correct side (right in Arabic, left in English) automatically. */
+.nh-box { border-radius: 0.75rem; padding: 1rem 1.2rem; margin: 1rem 0; border-inline-start: 4px solid; }
 .nh-info { background: #eff6ff; border-color: #3b82f6; color: #1e40af; }
 .nh-warning { background: #fffbeb; border-color: #f59e0b; color: #92400e; }
 .nh-success { background: #ecfdf5; border-color: #10b981; color: #065f46; }
@@ -263,21 +271,21 @@ body {
 .nh-accordion > div { padding: 0.75rem 1rem; }
 
 .nh-steps { counter-reset: step; margin: 1rem 0; }
-.nh-step { position: relative; padding: 0.4rem 2.4rem 1rem; border-right: 2px solid #0ea5e9; }
-.nh-step::before { counter-increment: step; content: counter(step); position: absolute; right: -16px; top: 0; width: 30px; height: 30px; background: #0ea5e9; color: #fff; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.nh-step { position: relative; padding: 0.4rem 2.4rem 1rem; border-inline-start: 2px solid #0ea5e9; }
+.nh-step::before { counter-increment: step; content: counter(step); position: absolute; inset-inline-start: -16px; top: 0; width: 30px; height: 30px; background: #0ea5e9; color: #fff; border-radius: 9999px; display: flex; align-items: center; justify-content: center; font-weight: 700; }
 
 .nh-timeline { margin: 1rem 0; }
-.nh-tl-item { position: relative; padding: 0 0 1.2rem 0; padding-right: 1.6rem; border-right: 2px solid #10b981; }
-.nh-tl-item::before { content: ""; position: absolute; right: -7px; top: 4px; width: 12px; height: 12px; background: #10b981; border-radius: 9999px; }
+.nh-tl-item { position: relative; padding: 0 0 1.2rem 0; padding-inline-start: 1.6rem; border-inline-start: 2px solid #10b981; }
+.nh-tl-item::before { content: ""; position: absolute; inset-inline-start: -7px; top: 4px; width: 12px; height: 12px; background: #10b981; border-radius: 9999px; }
 
 /* Medical / nursing specialized blocks */
-.nh-clinical { background: #eef2ff; border-right: 4px solid #6366f1; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-tip { background: #f0fdf4; border-right: 4px solid #22c55e; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-pearl { background: #fff7ed; border-right: 4px solid #fb923c; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
+.nh-clinical { background: #eef2ff; border-inline-start: 4px solid #6366f1; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
+.nh-tip { background: #f0fdf4; border-inline-start: 4px solid #22c55e; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
+.nh-pearl { background: #fff7ed; border-inline-start: 4px solid #fb923c; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
 .nh-drug { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
 .nh-drug h4 { color: #0369a1; margin: 0 0 .5rem; }
 .nh-procedure { background: #faf5ff; border: 1px solid #e9d5ff; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
-.nh-important { background: #fef2f2; border-right: 4px solid #ef4444; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
+.nh-important { background: #fef2f2; border-inline-start: 4px solid #ef4444; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
 .nh-quickfacts { background: #ecfeff; border: 1px dashed #06b6d4; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
 .nh-case { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: .75rem; padding: 1rem 1.2rem; margin: 1rem 0; }
 .nh-case h4 { color: #334155; margin: 0 0 .5rem; }
@@ -293,7 +301,7 @@ body {
 .dark .nh-case { background: #0f172a; border-color: #334155; }
 .dark .nh-def { background: rgba(234,179,8,.15); }
 
-.nh-checklist { list-style: none; padding-right: 0; margin: 1rem 0; }
+.nh-checklist { list-style: none; padding-inline-start: 0; margin: 1rem 0; }
 .nh-checklist li { padding: .35rem 0; }
 .nh-three-cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1rem 0; }
 @media (max-width: 640px){ .nh-three-cols { grid-template-columns: 1fr; } }
