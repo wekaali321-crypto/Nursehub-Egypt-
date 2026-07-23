@@ -1,5 +1,4 @@
 import { useToast } from "./Toast";
-import { printBrandedDocument } from "../lib/brand";
 import { logArticleEvent } from "../lib/analytics";
 import { useI18n } from "../lib/i18n";
 
@@ -45,22 +44,10 @@ const CopyLinkIcon = () => (
   </svg>
 );
 
-const PrintIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M6 9V3h12v6" /><rect x="6" y="13" width="12" height="8" />
-    <path d="M6 17H4a1 1 0 0 1-1-1v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a1 1 0 0 1-1 1h-2" />
-  </svg>
-);
-
-const PdfIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
-    <path d="M14 2v6h6" />
-    <path d="M9 17h1.5a1.5 1.5 0 0 0 0-3H9v5M13 14v5h1a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2h-1ZM18 14h-1.5v5M16.5 16.5H18" />
-  </svg>
-);
-
-/** Share, copy-link, print, and PDF-export actions — each tracked for real analytics. */
+/** Share and copy-link actions — each tracked for real analytics.
+ *  Print and free PDF export were intentionally removed: the branded PDF
+ *  is now a paid product sold from the store, and a free print/export
+ *  button would undercut that. */
 export default function ShareBar({
   title, articleId, slug, contentHtml,
 }: {
@@ -109,16 +96,6 @@ export default function ShareBar({
     notify(lang === "ar" ? "تم نسخ الرابط" : "Link copied", "success");
   };
 
-  const doPrint = () => {
-    logArticleEvent("print", { contentId: articleId, slug });
-    window.print();
-  };
-
-  const exportPdf = () => {
-    logArticleEvent("pdf_export", { contentId: articleId, slug });
-    printBrandedDocument(title, `<h2>${title}</h2>${contentHtml}`);
-  };
-
   const canNativeShare = typeof navigator !== "undefined" && !!(navigator as any).share;
   const btnCls = "flex h-10 w-10 items-center justify-center rounded-full bg-white shadow transition-transform hover:scale-110 dark:bg-slate-700 dark:text-slate-200";
 
@@ -142,12 +119,6 @@ export default function ShareBar({
       ))}
       <button onClick={copyLink} title={lang === "ar" ? "نسخ الرابط" : "Copy link"} className={btnCls}>
         <CopyLinkIcon />
-      </button>
-      <button onClick={doPrint} title={lang === "ar" ? "طباعة" : "Print"} className={btnCls}>
-        <PrintIcon />
-      </button>
-      <button onClick={exportPdf} title={lang === "ar" ? "تصدير PDF" : "Export PDF"} className={btnCls}>
-        <PdfIcon />
       </button>
     </div>
   );
