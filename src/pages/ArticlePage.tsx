@@ -60,11 +60,9 @@ export default function ArticlePage() {
   const scrollTimer = useRef<number | undefined>(undefined);
   const tickTimer = useRef<number | undefined>(undefined);
 
-  // Per-article reading language — independent of the site-wide UI language.
   const [docLang, setDocLang] = useState<"ar" | "en">(lang === "en" ? "en" : "ar");
   const hasEnglish = !!(article?.titleEn && article?.contentEn);
 
-  // ---- View count + real Supabase analytics (reading time, scroll depth) ----
   useEffect(() => {
     if (!article) return;
     window.scrollTo(0, 0);
@@ -82,14 +80,12 @@ export default function ArticlePage() {
       window.clearInterval(tickTimer.current);
       endArticleView();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slug]);
 
   const toc = useMemo(() => (article ? buildToc(article.content) : []), [article]);
   const contentWithIds = useMemo(() => (article ? injectIds(article.content) : ""), [article]);
   const mins = useMemo(() => (article ? readingTime(article.content) : 0), [article]);
 
-  // Bilingual display: use English fields when the reader picked English for this article.
   const dispTitle = article ? bilingual(article.title, article.titleEn, docLang) : { text: "", missing: false };
   const dispContent = article ? bilingual(article.content, article.contentEn, docLang) : { text: "", missing: false };
   const displayContentWithIds = article && docLang === "en" && article.contentEn ? injectIds(article.contentEn) : contentWithIds;
@@ -267,9 +263,7 @@ export default function ArticlePage() {
           )}
           <ArticleContent html={displayContentWithIds} slug={article.slug} lang={docLang} className="prose-content reading-measure max-w-none text-slate-700 dark:text-slate-300" />
 
-          {/* ============================================================
-              🟢 قسم تحميل PDF المباشر (جديد)
-              ============================================================ */}
+          {/* قسم تحميل PDF */}
           <div className="mt-8 rounded-2xl border-2 border-sky-200 bg-gradient-to-br from-sky-50 to-blue-50 p-6 dark:border-sky-800 dark:from-sky-950/30 dark:to-blue-950/20">
             <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-right">
               <div className="text-5xl" aria-hidden="true">📄</div>
@@ -311,7 +305,6 @@ export default function ArticlePage() {
             />
           )}
 
-          {/* Medical disclaimer for trust & safety */}
           <div className="mt-8 flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-700 dark:border-amber-900 dark:bg-amber-500/5 dark:text-amber-400">
             <span className="text-xl" aria-hidden="true">⚕️</span>
             <p>{docLang === "ar"
@@ -319,7 +312,6 @@ export default function ArticlePage() {
               : "Medical disclaimer: This content is for educational purposes only and is not a substitute for professional medical advice. Always follow your institution's approved protocols."}</p>
           </div>
 
-          {/* AI Assistant — answers from THIS article first */}
           <div className="mt-6">
             <ArticleAI articleHtml={dispContent.text} articleTitle={dispTitle.text} />
           </div>
