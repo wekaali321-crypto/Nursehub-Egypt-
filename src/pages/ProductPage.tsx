@@ -5,7 +5,6 @@ import { useCart } from "../lib/cart";
 import { useToast } from "../components/Toast";
 import { Breadcrumbs } from "../components/common";
 import { useSEO, breadcrumbSchema } from "../lib/seo";
-import PdfViewer from "../components/PdfViewer";
 
 const typeLabels: Record<string, string> = { pdf: "ملف PDF", course: "كورس", subscription: "اشتراك" };
 
@@ -15,7 +14,6 @@ export default function ProductPage() {
   const { add } = useCart();
   const { notify } = useToast();
   const nav = useNavigate();
-  const [preview, setPreview] = useState(false);
   const [activeImg, setActiveImg] = useState(0);
 
   const product = products.find((p) => p.id === id || p.slug === id);
@@ -54,7 +52,6 @@ export default function ProductPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
-      {preview && <PdfViewer url={product.previewPdf ?? "#"} title={`معاينة: ${product.title}`} onClose={() => setPreview(false)} />}
       <Breadcrumbs items={[{ label: "المتجر", path: "/store" }, { label: product.title }]} />
 
       <div className="grid gap-8 lg:grid-cols-2">
@@ -94,7 +91,6 @@ export default function ProductPage() {
           <div className="mt-6 flex flex-wrap gap-3">
             <button onClick={() => { addToCart(); nav("/checkout"); }} className="rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-8 py-3 font-bold text-white">شراء الآن</button>
             <button onClick={addToCart} className="rounded-full border border-sky-500 px-6 py-3 font-bold text-sky-500">🛒 أضف للسلة</button>
-            {product.type === "pdf" && <button onClick={() => setPreview(true)} className="rounded-full border border-slate-200 px-6 py-3 font-bold dark:border-slate-700 dark:text-white">👁️ معاينة</button>}
           </div>
 
           <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-800/50">
