@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+  المسار الصحيح: public/buy/vital-signs.html
+  الرابط بعد النشر: https://nursehub-egypt.vercel.app/buy/vital-signs.html
+  ملحوظة: لازم تحط قيمة SUPABASE_ANON_KEY تحت (مش سر، ممكن تتحط في كود
+  الموقع براحتك) — تلاقيها في Supabase → Settings → API → "anon public"
+-->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اشترِ نسخة PDF — العلامات الحيوية | NurseHub Egypt</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<style>
+  body{font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;color:#1e293b}
+  .price-box{background:#f0fdfa;border:1px solid #5eead4;border-radius:12px;padding:20px;text-align:center;margin:16px 0}
+  .old-price{color:#94a3b8;text-decoration:line-through;margin-left:8px}
+  .new-price{font-size:28px;font-weight:800;color:#0f766e}
+  .steps{background:#fefce8;border:1px solid #fde68a;border-radius:12px;padding:16px;margin:16px 0}
+  input,select{width:100%;box-sizing:border-box;padding:12px;margin-bottom:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px}
+  button{width:100%;padding:16px;background:#0d9488;color:#fff;border:none;border-radius:12px;font-size:17px;font-weight:700}
+  button:disabled{opacity:0.6}
+</style>
+</head>
+<body>
+
+  <h1>العلامات الحيوية — نسخة PDF احترافية</h1>
+
+  <div class="price-box">
+    <span class="old-price">50 جنيه</span>
+    <span class="new-price">30 جنيه</span>
+  </div>
+
+  <div class="steps">
+    <b>طريقة الدفع:</b>
+    <ol>
+      <li>حوّل 30 جنيه فودافون كاش أو InstaPay (هتلاقي الرقم في رسالة الواتساب).</li>
+      <li>اضغط الزرار تحت وابعت صورة إثبات التحويل.</li>
+      <li>هيتم إرسال ملف الـ PDF لك خلال وقت قصير.</li>
+    </ol>
+  </div>
+
+  <input id="name" placeholder="اسمك" />
+  <input id="phone" placeholder="رقم موبايلك" />
+  <select id="method">
+    <option value="vodafone_cash">فودافون كاش</option>
+    <option value="instapay">InstaPay</option>
+  </select>
+
+  <button id="buyBtn" onclick="handleBuy()">📲 اشترِ الآن عبر واتساب</button>
+
+<script>
+  // ==== غيّر القيم دي بمعلوماتك ====
+  const SUPABASE_URL = 'https://vpgzbjbcbrbexpzoxrup.supabase.co';
+  const SUPABASE_ANON_KEY = 'PASTE_YOUR_ANON_KEY_HERE';
+  const WHATSAPP_NUMBER = '201095652098';
+  const PRODUCT_ID = 'pdf-vital-signs';
+  const PRODUCT_TITLE = 'العلامات الحيوية — نسخة PDF احترافية (عربي/إنجليزي)';
+  const PRICE = 30;
+  // ==================================
+
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  async function handleBuy() {
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const method = document.getElementById('method').value;
+    const btn = document.getElementById('buyBtn');
+
+    if (!name || !phone) {
+      alert('اكتب اسمك ورقم موبايلك الأول');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'جاري التجهيز...';
+
+    const { data, error } = await supabase
+      .from('orders')
+      .insert({
+        product_id: PRODUCT_ID,
+        customer_name: name,
+        phone: phone,
+        payment_method: method,
+        amount: PRICE,
+      })
+      .select('id')
+      .single();
+
+    if (error || !data) {
+      alert('حصل خطأ، حاول تاني');
+      btn.disabled = false;
+      btn.textContent = '📲 اشترِ الآن عبر واتساب';
+      return;
+    }
+
+    const orderShortId = data.id.slice(0, 8);
+    const payLabel = method === 'vodafone_cash' ? 'فودافون كاش' : 'InstaPay';
+    const message = encodeURIComponent(
+      `مرحبًا، عايز أشتري "${PRODUCT_TITLE}" بسعر ${PRICE} جنيه.\n` +
+      `الاسم: ${name}\n` +
+      `طريقة الدفع: ${payLabel}\n` +
+      `رقم الطلب: ${orderShortId}\n` +
+      `هرفق صورة إثبات التحويل دلوقتي.`
+    );
+
+    window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+  }
+</script>
+
+</body>
+</html>
