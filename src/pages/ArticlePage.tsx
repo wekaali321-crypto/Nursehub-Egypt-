@@ -16,11 +16,7 @@ import ArticleNav from "../components/ArticleNav";
 import ArticleAI from "../components/ArticleAI";
 import ArticleContent from "../components/ArticleContent";
 import ShareBar from "../components/ShareBar";
-import PdfViewer from "../components/PdfViewer";
 import { startArticleView, endArticleView, trackScrollDepth, tickActiveReadingTime, logArticleEvent } from "../lib/analytics";
-
-// رابط PDF الثابت
-const PDF_URL = "https://vpgzbjbcbrbexpzoxrup.supabase.co/storage/v1/object/sign/pdf-store/vital%20signs%20.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yMWUzODQ5MS04YzE5LTRmZjgtYjE3Yi01NzQ0ZDYwZDE4YzciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGYtc3RvcmUvdml0YWwgc2lnbnMgLnBkZiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODUxNzY5MjIsImV4cCI6MTgxNjcxMjkyMn0.nRglNCWrg4wJuAarqI7--u5RZP1PlauskAJ1Qd5v4g4";
 
 function buildToc(html: string): TocItem[] {
   const matches = [...html.matchAll(/<h([2-6])[^>]*>(.*?)<\/h[2-6]>/g)];
@@ -56,7 +52,6 @@ export default function ArticlePage() {
   const { isFav, toggleFav } = useFavorites();
   const [name, setName] = useState("");
   const [text, setText] = useState("");
-  const [showPdf, setShowPdf] = useState(false);
   const scrollTimer = useRef<number | undefined>(undefined);
   const tickTimer = useRef<number | undefined>(undefined);
 
@@ -263,47 +258,26 @@ export default function ArticlePage() {
           )}
           <ArticleContent html={displayContentWithIds} slug={article.slug} lang={docLang} className="prose-content reading-measure max-w-none text-slate-700 dark:text-slate-300" />
 
-          {/* قسم تحميل PDF */}
-          <div className="mt-8 rounded-2xl border-2 border-sky-200 bg-gradient-to-br from-sky-50 to-blue-50 p-6 dark:border-sky-800 dark:from-sky-950/30 dark:to-blue-950/20">
-            <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-right">
-              <div className="text-5xl" aria-hidden="true">📄</div>
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-sky-700 dark:text-sky-400">
-                  {docLang === "ar" ? "📥 نسخة PDF احترافية (عربي/إنجليزي)" : "📥 Professional PDF Version (Arabic/English)"}
-                </h3>
-                <p className="text-sm text-sky-600 dark:text-sky-300">
-                  {docLang === "ar"
-                    ? "نسخة مصممة خصيصاً لهذا المقال — بسعر تعريفي 30 ج.م بدلاً من 50 (لفترة محدودة)"
-                    : "Specially designed version of this article — introductory price 30 EGP instead of 50 (limited time)"}
-                </p>
-                <div className="mt-3 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
-                  <button
-                    onClick={() => setShowPdf(true)}
-                    className="rounded-full bg-blue-500 px-5 py-2 font-bold text-white transition hover:bg-blue-600"
-                  >
-                    👁️ {docLang === "ar" ? "معاينة" : "Preview"}
-                  </button>
-                  <a
-                    href={PDF_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white transition hover:bg-sky-600"
-                  >
-                    🛒 {docLang === "ar" ? "اشتري الآن — 30 ج.م" : "Buy Now — 30 EGP"}
-                  </a>
-                </div>
-              </div>
-            </div>
+          {/* ============================================================
+              🟢 رابط المتجر الرقمي (بدلاً من المعاينة والتحميل المباشر)
+              ============================================================ */}
+          <div className="mt-8 rounded-2xl bg-gradient-to-br from-teal-500 to-sky-500 p-6 text-center text-white">
+            <div className="text-5xl" aria-hidden="true">📄</div>
+            <h3 className="mt-2 text-xl font-bold">
+              {docLang === "ar" ? "📥 حمل نسخة PDF احترافية" : "📥 Download Professional PDF"}
+            </h3>
+            <p className="mt-2 text-sm text-white/80">
+              {docLang === "ar"
+                ? "نسخة مصممة خصيصاً لهذا المقال — بسعر تعريفي 30 ج.م بدلاً من 50 (لفترة محدودة)"
+                : "Specially designed version of this article — introductory price 30 EGP instead of 50 (limited time)"}
+            </p>
+            <Link
+              to="/store"
+              className="mt-4 inline-block rounded-full bg-white px-8 py-3 font-bold text-sky-600 transition hover:scale-105"
+            >
+              🛒 {docLang === "ar" ? "اشتري الآن من المتجر الرقمي" : "Buy Now from Digital Store"}
+            </Link>
           </div>
-
-          {/* نافذة معاينة PDF */}
-          {showPdf && (
-            <PdfViewer
-              url={PDF_URL}
-              title={dispTitle.text}
-              onClose={() => setShowPdf(false)}
-            />
-          )}
 
           <div className="mt-8 flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-700 dark:border-amber-900 dark:bg-amber-500/5 dark:text-amber-400">
             <span className="text-xl" aria-hidden="true">⚕️</span>
