@@ -16,7 +16,11 @@ import ArticleNav from "../components/ArticleNav";
 import ArticleAI from "../components/ArticleAI";
 import ArticleContent from "../components/ArticleContent";
 import ShareBar from "../components/ShareBar";
+import PdfViewer from "../components/PdfViewer";
 import { startArticleView, endArticleView, trackScrollDepth, tickActiveReadingTime, logArticleEvent } from "../lib/analytics";
+
+// رابط PDF الثابت
+const PDF_URL = "https://vpgzbjbcbrbexpzoxrup.supabase.co/storage/v1/object/sign/pdf-store/vital%20signs%20.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yMWUzODQ5MS04YzE5LTRmZjgtYjE3Yi01NzQ0ZDYwZDE4YzciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGYtc3RvcmUvdml0YWwgc2lnbnMgLnBkZiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODUxNzY5MjIsImV4cCI6MTgxNjcxMjkyMn0.nRglNCWrg4wJuAarqI7--u5RZP1PlauskAJ1Qd5v4g4";
 
 function buildToc(html: string): TocItem[] {
   const matches = [...html.matchAll(/<h([2-6])[^>]*>(.*?)<\/h[2-6]>/g)];
@@ -52,12 +56,11 @@ export default function ArticlePage() {
   const { isFav, toggleFav } = useFavorites();
   const [name, setName] = useState("");
   const [text, setText] = useState("");
+  const [showPdf, setShowPdf] = useState(false);
   const scrollTimer = useRef<number | undefined>(undefined);
   const tickTimer = useRef<number | undefined>(undefined);
 
   // Per-article reading language — independent of the site-wide UI language.
-  // Lets a reader flip just this article between Arabic/English via the
-  // button next to the title, without switching the whole site's interface.
   const [docLang, setDocLang] = useState<"ar" | "en">(lang === "en" ? "en" : "ar");
   const hasEnglish = !!(article?.titleEn && article?.contentEn);
 
@@ -86,18 +89,15 @@ export default function ArticlePage() {
   const contentWithIds = useMemo(() => (article ? injectIds(article.content) : ""), [article]);
   const mins = useMemo(() => (article ? readingTime(article.content) : 0), [article]);
 
-  // Bilingual display: use English fields when the reader picked English for
-  // this article (docLang), independent from the overall site UI language.
+  // Bilingual display: use English fields when the reader picked English for this article.
   const dispTitle = article ? bilingual(article.title, article.titleEn, docLang) : { text: "", missing: false };
   const dispContent = article ? bilingual(article.content, article.contentEn, docLang) : { text: "", missing: false };
   const displayContentWithIds = article && docLang === "en" && article.contentEn ? injectIds(article.contentEn) : contentWithIds;
   const activeToc = article && docLang === "en" && article.contentEn ? buildToc(article.contentEn) : toc;
 
-  // Auto-derived structured data — never fabricated, only extracted from real content.
   const faqSchema = article ? extractFaqSchema(displayContentWithIds) : null;
   const howToSchema = article ? extractHowToSchema(displayContentWithIds, dispTitle.text) : null;
 
-  // Previous/next within the same category, ordered by publish date.
   const { prevArticle, nextArticle } = useMemo(() => {
     if (!article) return { prevArticle: undefined, nextArticle: undefined };
     const sameCategory = articles
@@ -235,7 +235,6 @@ export default function ArticlePage() {
             {article.ratingCount ? <span>⭐ {article.rating?.toFixed(1)}</span> : null}
           </div>
 
-          {/* Medical trust badge */}
           <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-xs font-bold text-emerald-700 dark:border-emerald-900 dark:bg-emerald-500/10 dark:text-emerald-400">
             <Icon name="verified" size={16} />
             {docLang === "ar"
@@ -255,7 +254,6 @@ export default function ArticlePage() {
             </div>
           )}
 
-          {/* Mobile: table of contents inline before the body */}
           {activeToc.length > 0 && (
             <div className="mb-6 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900 lg:hidden">
               <TableOfContents items={activeToc} />
@@ -268,6 +266,50 @@ export default function ArticlePage() {
             </div>
           )}
           <ArticleContent html={displayContentWithIds} slug={article.slug} lang={docLang} className="prose-content reading-measure max-w-none text-slate-700 dark:text-slate-300" />
+
+          {/* ============================================================
+              🟢 قسم تحميل PDF المباشر (جديد)
+              ============================================================ */}
+          <div className="mt-8 rounded-2xl border-2 border-sky-200 bg-gradient-to-br from-sky-50 to-blue-50 p-6 dark:border-sky-800 dark:from-sky-950/30 dark:to-blue-950/20">
+            <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-right">
+              <div className="text-5xl" aria-hidden="true">📄</div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-sky-700 dark:text-sky-400">
+                  {docLang === "ar" ? "📥 نسخة PDF احترافية (عربي/إنجليزي)" : "📥 Professional PDF Version (Arabic/English)"}
+                </h3>
+                <p className="text-sm text-sky-600 dark:text-sky-300">
+                  {docLang === "ar"
+                    ? "نسخة مصممة خصيصاً لهذا المقال — بسعر تعريفي 30 ج.م بدلاً من 50 (لفترة محدودة)"
+                    : "Specially designed version of this article — introductory price 30 EGP instead of 50 (limited time)"}
+                </p>
+                <div className="mt-3 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
+                  <button
+                    onClick={() => setShowPdf(true)}
+                    className="rounded-full bg-blue-500 px-5 py-2 font-bold text-white transition hover:bg-blue-600"
+                  >
+                    👁️ {docLang === "ar" ? "معاينة" : "Preview"}
+                  </button>
+                  <a
+                    href={PDF_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white transition hover:bg-sky-600"
+                  >
+                    🛒 {docLang === "ar" ? "اشتري الآن — 30 ج.م" : "Buy Now — 30 EGP"}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* نافذة معاينة PDF */}
+          {showPdf && (
+            <PdfViewer
+              url={PDF_URL}
+              title={dispTitle.text}
+              onClose={() => setShowPdf(false)}
+            />
+          )}
 
           {/* Medical disclaimer for trust & safety */}
           <div className="mt-8 flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-700 dark:border-amber-900 dark:bg-amber-500/5 dark:text-amber-400">
@@ -309,13 +351,11 @@ export default function ArticlePage() {
             </div>
           </div>
 
-          {/* Author card */}
           <div className="mt-8">
             <h3 className="mb-2 text-sm font-bold text-slate-400">{t("article.author")}</h3>
             <AuthorCard name={article.author} />
           </div>
 
-          {/* Prev / Next navigation within category */}
           <ArticleNav prev={prevArticle} next={nextArticle} />
 
           <section className="mt-10 print:hidden">
@@ -346,7 +386,6 @@ export default function ArticlePage() {
             </div>
           )}
 
-          {/* Category quick navigation */}
           <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
             <h3 className="mb-2 font-bold dark:text-white">{t("article.categories")}</h3>
             <div className="flex flex-wrap gap-1.5">
