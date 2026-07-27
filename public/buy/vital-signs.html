@@ -75,26 +75,27 @@
     btn.disabled = true;
     btn.textContent = 'جاري التجهيز...';
 
-    const { data, error } = await supabase
-      .from('orders')
-      .insert({
-        product_id: PRODUCT_ID,
-        customer_name: name,
-        phone: phone,
-        payment_method: method,
-        amount: PRICE,
-      })
-      .select('id')
-      .single();
+    // بنولّد رقم الطلب من المتصفح نفسه، عشان ملناش محتاجين "نقرا" الطلب
+    // تاني بعد الحفظ (وده ممنوع عمدًا عشان خصوصية أرقام العملاء)
+    const orderId = crypto.randomUUID();
 
-    if (error || !data) {
-      alert('حصل خطأ، حاول تاني');
+    const { error } = await supabase.from('orders').insert({
+      id: orderId,
+      product_id: PRODUCT_ID,
+      customer_name: name,
+      phone: phone,
+      payment_method: method,
+      amount: PRICE,
+    });
+
+    if (error) {
+      alert('حصل خطأ: ' + error.message);
       btn.disabled = false;
       btn.textContent = '📲 اشترِ الآن عبر واتساب';
       return;
     }
 
-    const orderShortId = data.id.slice(0, 8);
+    const orderShortId = orderId.slice(0, 8);
     const payLabel = method === 'vodafone_cash' ? 'فودافون كاش' : 'InstaPay';
     const message = encodeURIComponent(
       `مرحبًا، عايز أشتري "${PRODUCT_TITLE}" بسعر ${PRICE} جنيه.\n` +
@@ -107,6 +108,3 @@
     window.location.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
   }
 </script>
-
-</body>
-</html>
