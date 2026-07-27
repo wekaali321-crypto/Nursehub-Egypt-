@@ -1,10 +1,9 @@
 // ============================================================
-// المسار الصحيح: api/admin-login.js
-// رابط الاستدعاء: https://موقعك/api/admin-login  (POST)
+// المسار الصحيح: api/admin-login.js  (استبدل الملف القديم بالكامل)
 // ============================================================
-const { createToken } = require('./_lib/adminAuth');
+import { createToken } from './_lib/adminAuth.js';
 
-module.exports = (req, res) => {
+export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -17,4 +16,4 @@ module.exports = (req, res) => {
 
   const token = createToken();
   res.status(200).json({ token });
-};
+}
