@@ -1,3 +1,5 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/((?!buy|admin-panel|api).*)", "destination": "/index.html" }
+  ]
 }
