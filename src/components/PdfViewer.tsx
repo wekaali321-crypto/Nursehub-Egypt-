@@ -1,14 +1,25 @@
-/** In-site PDF preview modal. Falls back gracefully when no real URL exists. */
 export default function PdfViewer({ url, title, onClose }: { url: string; title: string; onClose: () => void }) {
   const valid = url && url !== "#" && (url.startsWith("http") || url.startsWith("blob:") || url.endsWith(".pdf"));
+  
   return (
     <div className="fixed inset-0 z-[95] flex items-center justify-center bg-black/70 p-4" onClick={onClose}>
       <div className="flex max-h-[92vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl bg-white dark:bg-slate-900" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between border-b border-slate-200 p-3 dark:border-slate-800">
           <h3 className="truncate font-bold dark:text-white">📄 {title}</h3>
           <div className="flex gap-2">
-            {valid && <a href={url} target="_blank" rel="noreferrer" className="rounded-lg bg-sky-500 px-3 py-1 text-sm font-bold text-white">فتح</a>}
-            <button onClick={onClose} className="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800 dark:text-white">✕</button>
+            {valid && (
+              <>
+                <a href={url} target="_blank" rel="noreferrer" className="rounded-lg bg-sky-500 px-3 py-1 text-sm font-bold text-white hover:bg-sky-600 transition">
+                  📥 تحميل
+                </a>
+                <a href={url} target="_blank" rel="noreferrer" className="rounded-lg bg-emerald-500 px-3 py-1 text-sm font-bold text-white hover:bg-emerald-600 transition">
+                  👁️ فتح
+                </a>
+              </>
+            )}
+            <button onClick={onClose} className="rounded-full bg-slate-100 px-3 py-1 dark:bg-slate-800 dark:text-white hover:bg-slate-200 transition">
+              ✕
+            </button>
           </div>
         </div>
         {valid ? (
