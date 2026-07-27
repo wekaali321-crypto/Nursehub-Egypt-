@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+  المسار الصحيح: public/admin-panel/index.html
+  الرابط بعد النشر: https://nursehub-egypt.vercel.app/admin-panel/index.html
+-->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة تحكم الطلبات — NurseHub Egypt</title>
+<style>
+  body{font-family:sans-serif;max-width:700px;margin:0 auto;padding:20px;color:#1e293b;background:#f8fafc}
+  #loginBox{max-width:320px;margin:80px auto}
+  input{width:100%;box-sizing:border-box;padding:12px;margin-bottom:10px;border:1px solid #cbd5e1;border-radius:8px;font-size:15px}
+  button{padding:10px 16px;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:14px}
+  .primary{background:#0d9488;color:#fff;width:100%;padding:14px}
+  .card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px;margin-bottom:10px}
+  .badge{font-size:11px;padding:3px 10px;border-radius:20px;font-weight:700}
+  .pending{background:#fef9c3;color:#854d0e}
+  .paid{background:#dcfce7;color:#166534}
+  .delivered{background:#dbeafe;color:#1e40af}
+  .cancelled{background:#fee2e2;color:#991b1b}
+  .actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+  .btn-green{background:#16a34a;color:#fff}
+  .btn-teal{background:#0d9488;color:#fff}
+  .btn-blue{background:#2563eb;color:#fff}
+  .btn-red{background:#fee2e2;color:#991b1b}
+  .linkbox{background:#f1f5f9;padding:8px;border-radius:8px;font-size:11px;word-break:break-all;margin-top:8px}
+  #error{color:#dc2626;font-size:14px}
+</style>
+</head>
+<body>
+
+<div id="loginBox">
+  <h2>دخول لوحة التحكم</h2>
+  <input id="password" type="password" placeholder="كلمة السر" />
+  <button class="primary" onclick="login()">دخول</button>
+  <p id="error"></p>
+</div>
+
+<div id="ordersBox" style="display:none">
+  <h2>الطلبات</h2>
+  <div id="ordersList"></div>
+</div>
+
+<script>
+  const API_BASE = ''; // فاضي يعني نفس الدومين
+
+  async function login() {
+    const password = document.getElementById('password').value;
+    const res = await fetch(`${API_BASE}/api/admin-login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password }),
+    });
+    const data = await res.json();
+
+    if (!res.ok) {
+      document.getElementById('error').textContent = data.error || 'خطأ';
+      return;
+    }
+
+    localStorage.setItem('nh_admin_token', data.token);
+    showOrders();
+  }
+
+  function statusLabel(s) {
+    return { pending: 'بانتظار الدفع', paid: 'اتدفع ✅', delivered: 'اترسل 📩', cancelled: 'ملغي' }[s] || s;
+  }
+
+  async function showOrders() {
+    document.getElementById('loginBox').style.display = 'none';
+    document.getElementById('ordersBox').style.display = 'block';
+
+    const token = localStorage.getItem('nh_admin_token');
+    const res = await fetch(`${API_BASE}/api/admin-orders`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    if (!res.ok) {
+      localStorage.removeItem('nh_admin_token');
+      document.getElementById('ordersBox').style.display = 'none';
+      document.getElementById('loginBox').style.display = 'block';
+      return;
+    }
+
+    const { orders } = await res.json();
+    const list = document.getElementById('ordersList');
+    list.innerHTML = '';
+
+    if (orders.length === 0) {
+      list.innerHTML = '<p>مفيش طلبات لسه</p>';
+      return;
+    }
+
+    orders.forEach((order) => {
+      const div = document.createElement('div');
+      div.className = 'card';
+      div.innerHTML = `
+        <div style="display:flex;justify-content:space-between">
+          <div>
+            <b>${order.products?.title || ''}</b><br>
+            <small>${order.customer_name} — ${order.phone} — ${order.amount} جنيه</small><br>
+            <small style="color:#94a3b8">${new Date(order.created_at).toLocaleString('ar-EG')}</small>
+          </div>
+          <span class="badge ${order.status}">${statusLabel(order.status)}</span>
+        </div>
+        <div class="actions" id="actions-${order.id}"></div>
+        <div id="link-${order.id}"></div>
+      `;
+      list.appendChild(div);
+      renderActions(order);
+    });
+  }
+
+  function renderActions(order) {
+    const box = document.getElementById(`actions-${order.id}`);
+    box.innerHTML = '';
+
+    if (order.status === 'pending') {
+      box.appendChild(makeBtn('تأكيد استلام الدفع', 'btn-green', () => updateStatus(order.id, 'paid')));
+    }
+    if (order.status === 'paid') {
+      box.appendChild(makeBtn('ولّد رابط تحميل', 'btn-teal', () => genLink(order)));
+      box.appendChild(makeBtn('تم الإرسال', 'btn-blue', () => updateStatus(order.id, 'delivered')));
+    }
+    if (order.status !== 'cancelled' && order.status !== 'delivered') {
+      box.appendChild(makeBtn('إلغاء', 'btn-red', () => updateStatus(order.id, 'cancelled')));
+    }
+  }
+
+  function makeBtn(text, cls, onClick) {
+    const b = document.createElement('button');
+    b.textContent = text;
+    b.className = cls;
+    b.onclick = onClick;
+    return b;
+  }
+
+  async function apiPost(body) {
+    const token = localStorage.getItem('nh_admin_token');
+    const res = await fetch(`${API_BASE}/api/admin-orders`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+      body: JSON.stringify(body),
+    });
+    return res.json();
+  }
+
+  async function updateStatus(orderId, status) {
+    await apiPost({ action: 'updateStatus', orderId, status });
+    showOrders();
+  }
+
+  async function genLink(order) {
+    if (!order.products?.file_url) {
+      alert('لسه معملتش رفع للملف — حط مساره في عمود file_url في جدول products الأول');
+      return;
+    }
+    const data = await apiPost({ action: 'getDownloadLink', filePath: order.products.file_url });
+    const box = document.getElementById(`link-${order.id}`);
+    box.innerHTML = `<div class="linkbox">${data.url}<br><small>(صالح ساعة واحدة — انسخه وابعته على واتساب)</small></div>`;
+  }
+
+  // لو فيه توكن محفوظ قبل كده، ادخل على طول
+  if (localStorage.getItem('nh_admin_token')) {
+    showOrders();
+  }
+</script>
+
+</body>
+</html>
