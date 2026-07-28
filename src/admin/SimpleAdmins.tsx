@@ -3,6 +3,8 @@ import { useStore } from "../lib/store";
 import type { Comment, Product, User } from "../lib/types";
 import { ROLE_LABELS, ROLE_COLORS, ROLE_PERMISSIONS, PERMISSION_LABELS, type Role, type Permission } from "../lib/roles";
 import { supabase } from "../lib/supabase";
+import MediaPicker from "./MediaPicker";
+import type { MediaItem } from "../lib/types";
 
 export function CommentsAdmin() {
   const { comments, articles, setData } = useStore();
@@ -35,12 +37,28 @@ export function CommentsAdmin() {
 
 const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
 
+// أيقونات نوع الملف المرفوع (مطابقة لأنواع MediaItem)
+const fileIcons: Record<string, string> = { image: "🖼️", video: "🎬", pdf: "📄", doc: "📝", ppt: "📊", excel: "📈" };
+
 export function ProductsAdmin() {
   const { products, setData } = useStore();
   const [form, setForm] = useState<Partial<Product>>({ type: "pdf", price: 0 });
+  // أي بيكر مفتوح دلوقتي: صورة الغلاف ولا الملف نفسه
+  const [pickerOpen, setPickerOpen] = useState<"cover" | "file" | null>(null);
+
   const add = () => {
     if (!form.title) return alert("أدخل اسم المنتج");
-    const p: Product = { id: "p" + Date.now(), title: form.title!, type: form.type as Product["type"], price: Number(form.price) || 0, oldPrice: form.oldPrice ? Number(form.oldPrice) : undefined, cover: form.cover || "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80", description: form.description || "", sales: 0 };
+    const p: Product = {
+      id: "p" + Date.now(),
+      title: form.title!,
+      type: form.type as Product["type"],
+      price: Number(form.price) || 0,
+      oldPrice: form.oldPrice ? Number(form.oldPrice) : undefined,
+      cover: form.cover || "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80",
+      description: form.description || "",
+      sales: 0,
+      fileUrl: form.fileUrl,
+    };
     setData((d) => ({ ...d, products: [p, ...d.products] }));
     // Notify subscribed visitors that a new product/book is available.
     if (supabase) {
@@ -58,24 +76,62 @@ export function ProductsAdmin() {
   };
   const del = (id: string) => setData((d) => ({ ...d, products: d.products.filter((p) => p.id !== id) }));
 
+  const handlePick = (item: MediaItem) => {
+    if (pickerOpen === "cover") setForm((f) => ({ ...f, cover: item.url }));
+    if (pickerOpen === "file") setForm((f) => ({ ...f, fileUrl: item.url }));
+    setPickerOpen(null);
+  };
+
   return (
     <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
+      {pickerOpen && (
+        <MediaPicker
+          onPick={handlePick}
+          onClose={() => setPickerOpen(null)}
+          accept={pickerOpen === "cover" ? ["image"] : ["pdf", "doc", "video", "ppt", "excel"]}
+        />
+      )}
+
       <div className="space-y-3">
         {products.map((p) => (
           <div key={p.id} className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
             <img src={p.cover} alt="" className="h-16 w-16 rounded-lg object-cover" />
-            <div className="flex-1"><div className="font-bold dark:text-white">{p.title}</div><div className="text-sm text-emerald-500">{p.price} ج.م • {p.sales} مبيعة</div></div>
+            <div className="flex-1">
+              <div className="font-bold dark:text-white">{p.title}</div>
+              <div className="text-sm text-emerald-500">{p.price} ج.م • {p.sales} مبيعة</div>
+              <div className="text-xs text-slate-400">{p.fileUrl ? "✅ الملف مرفوع" : "⚠️ لسه معملتش رفع للملف"}</div>
+            </div>
             <button onClick={() => del(p.id)} className="rounded-lg bg-red-100 px-3 py-1.5 text-sm font-bold text-red-600 dark:bg-red-500/10">حذف</button>
           </div>
         ))}
       </div>
+
       <div className="space-y-3 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
         <h3 className="font-bold dark:text-white">➕ منتج جديد</h3>
         <input placeholder="اسم المنتج" value={form.title ?? ""} onChange={(e) => setForm({ ...form, title: e.target.value })} className={inp} />
         <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value as Product["type"] })} className={inp}><option value="pdf">ملف PDF</option><option value="course">كورس</option><option value="subscription">اشتراك</option></select>
         <input type="number" placeholder="السعر" value={form.price ?? ""} onChange={(e) => setForm({ ...form, price: Number(e.target.value) })} className={inp} />
         <input type="number" placeholder="السعر القديم (اختياري)" value={form.oldPrice ?? ""} onChange={(e) => setForm({ ...form, oldPrice: Number(e.target.value) })} className={inp} />
-        <input placeholder="رابط الصورة" value={form.cover ?? ""} onChange={(e) => setForm({ ...form, cover: e.target.value })} className={inp} />
+
+        {/* رفع صورة الغلاف */}
+        <div>
+          <label className="mb-1 block text-xs font-semibold text-slate-500 dark:text-slate-400">صورة الغلاف</label>
+          <button type="button" onClick={() => setPickerOpen("cover")} className="flex w-full items-center gap-2 rounded-lg border border-dashed border-sky-300 bg-sky-50 px-3 py-2 text-sm font-bold text-sky-600 dark:border-sky-700 dark:bg-sky-500/5">
+            {form.cover ? <img src={form.cover} alt="" className="h-8 w-8 rounded object-cover" /> : <span>🖼️</span>}
+            {form.cover ? "تغيير الصورة" : "اختر أو ارفع صورة"}
+          </button>
+        </div>
+
+        {/* رفع ملف المنتج نفسه (PDF/مستند/فيديو) */}
+        <div>
+          <label className="mb-1 block text-xs font-semibold text-slate-500 dark:text-slate-400">ملف المنتج (PDF / مستند / فيديو)</label>
+          <button type="button" onClick={() => setPickerOpen("file")} className="flex w-full items-center gap-2 rounded-lg border border-dashed border-emerald-300 bg-emerald-50 px-3 py-2 text-sm font-bold text-emerald-600 dark:border-emerald-700 dark:bg-emerald-500/5">
+            <span>{form.fileUrl ? "✅" : "📤"}</span>
+            {form.fileUrl ? "تغيير الملف" : "اختر أو ارفع الملف"}
+          </button>
+          {form.fileUrl && <p className="mt-1 truncate text-[11px] text-slate-400">{form.fileUrl}</p>}
+        </div>
+
         <textarea placeholder="الوصف" value={form.description ?? ""} onChange={(e) => setForm({ ...form, description: e.target.value })} rows={2} className={inp} />
         <button onClick={add} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">إضافة المنتج</button>
       </div>
