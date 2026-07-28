@@ -150,6 +150,7 @@ export interface Product {
   fullContent?: string; // long description (HTML)
   author?: string;
   pages?: number;
+  fileUrl?: string; // the actual deliverable file (PDF/doc/video) sent to buyers after payment
 }
 
 export interface User {
