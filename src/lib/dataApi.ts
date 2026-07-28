@@ -50,8 +50,10 @@ const toMedia = (m: any) => ({ id: m.id, name: m.name, type: m.type, url: m.url,
 const fromDrug = (r: any) => ({ id: r.id, name: r.name, genericName: r.generic_name, drugClass: r.drug_class, category: r.category, dose: r.dose, indications: r.indications, sideEffects: r.side_effects, nursingConsiderations: r.nursing_considerations, contraindications: r.contraindications, storage: r.storage, references: r.references, slug: r.slug });
 const toDrug = (d: any) => ({ id: d.id, name: d.name, generic_name: d.genericName, drug_class: d.drugClass, category: d.category, dose: d.dose, indications: d.indications, side_effects: d.sideEffects, nursing_considerations: d.nursingConsiderations, contraindications: d.contraindications ?? "", storage: d.storage ?? "", references: d.references ?? "", slug: d.slug });
 
-const fromProduct = (r: any) => ({ id: r.id, title: r.title, type: r.type, price: r.price, oldPrice: r.old_price, cover: r.cover, description: r.description, sales: r.sales ?? 0 });
-const toProduct = (p: any) => ({ id: p.id, title: p.title, type: p.type, price: p.price, old_price: p.oldPrice ?? null, cover: p.cover, description: p.description, sales: p.sales ?? 0 });
+// Product now also carries fileUrl <-> file_url: the actual deliverable
+// (PDF/doc/video) sent to buyers after payment, uploaded via the Media Library.
+const fromProduct = (r: any) => ({ id: r.id, title: r.title, type: r.type, price: r.price, oldPrice: r.old_price, cover: r.cover, description: r.description, sales: r.sales ?? 0, fileUrl: r.file_url });
+const toProduct = (p: any) => ({ id: p.id, title: p.title, type: p.type, price: p.price, old_price: p.oldPrice ?? null, cover: p.cover, description: p.description, sales: p.sales ?? 0, file_url: p.fileUrl ?? null });
 
 const fromUser = (r: any) => ({ id: r.id, name: r.name, email: r.email, role: r.role });
 const toUser = (u: any) => ({ id: u.id, name: u.name, email: u.email, role: u.role });
