@@ -57,6 +57,7 @@ const StudentDashboard = lazy(() => import("./pages/StudentDashboard"));
 const CheckoutPage = lazy(() => import("./pages/CheckoutPage"));
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 const FavoritesPage = lazy(() => import("./pages/FavoritesPage"));
+const OrderStatusPage = lazy(() => import("./pages/OrderStatusPage"));
 import { LoginPage, RegisterPage, ForgotPage } from "./pages/AuthPages";
 
 function Loader() {
@@ -145,6 +146,7 @@ export default function App() {
                   <Route path="/tools" element={<Public><ToolsPage /></Public>} />
                   <Route path="/store" element={<Public><StorePage /></Public>} />
                   <Route path="/checkout" element={<Public><CheckoutPage /></Public>} />
+                  <Route path="/order/:invoiceNo" element={<Public><OrderStatusPage /></Public>} />
                   <Route path="/product/:id" element={<Public><ProductPage /></Public>} />
                   <Route path="/favorites" element={<Public><FavoritesPage /></Public>} />
                   <Route path="/dashboard" element={<Public><StudentDashboard /></Public>} />
