@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { authenticate, startSession, endSession, hasValidSession, adminExists, setupAvailable } from "./auth";
+import { supabase, isSupabaseEnabled } from "./supabase";
 
 type Theme = "light" | "dark";
 const Ctx = createContext<{ theme: Theme; toggle: () => void } | null>(null);
@@ -66,6 +67,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
     const ok = await authenticate(email, password);
     if (ok) {
+      // Establish a REAL Supabase Auth session so the database's Row Level
+      // Security policies (which now require auth.role() = 'authenticated')
+      // allow this browser to save changes. Without this step, every write
+      // from the admin panel would be silently rejected by Supabase and
+      // disappear again after a refresh.
+      if (isSupabaseEnabled && supabase) {
+        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        if (error) {
+          return {
+            ok: false,
+            error: "كلمة المرور المحلية صحيحة لكن فشل تسجيل الدخول على Supabase — تأكد إن نفس الإيميل وكلمة المرور مضبوطين كحساب Supabase Auth حقيقي.",
+          };
+        }
+      }
       writeAttempts({ count: 0, until: 0 });
       startSession();
       setLoggedIn(true);
@@ -77,7 +92,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return { ok: false, error: locked ? "تم قفل الدخول مؤقتاً بسبب المحاولات المتكررة." : "بيانات الدخول غير صحيحة." };
   };
 
-  const logout = () => { endSession(); setLoggedIn(false); };
+  const logout = () => {
+    endSession();
+    if (isSupabaseEnabled && supabase) supabase.auth.signOut().catch(() => {});
+    setLoggedIn(false);
+  };
 
   return <AuthCtx.Provider value={{ loggedIn, login, logout, needsSetup, refresh }}>{children}</AuthCtx.Provider>;
 }
