@@ -7,6 +7,13 @@ import Newsletter from "../components/Newsletter";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 
+/**
+ * جرّب الاتنين وشوف الأحسن: غيّر القيمة دي بس وارفع نسخة جديدة.
+ *  - "illustration": صورة/رسمة كبيرة توصف الموقع بدل كروت التصنيفات.
+ *  - "stats":        شريط أرقام وإحصائيات بدل كروت التصنيفات.
+ */
+const CATEGORIES_DISPLAY: "illustration" | "stats" = "illustration";
+
 /** A single dynamic home category card — links internally or to an external URL. */
 function CategoryCardLink({ card }: { card: HomeCategory }) {
   const external = /^https?:\/\//i.test(card.link);
@@ -47,6 +54,67 @@ function HeroSearch() {
       />
       <button className="rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-5 py-2.5 font-bold text-white sm:px-7">{t("common.search")}</button>
     </form>
+  );
+}
+
+/** الخيار (١): صورة/رسمة كبيرة توصف الموقع بدل كروت التصنيفات. */
+function CategoriesAsIllustration({ meta }: { meta: { title: string; subtitle: string } }) {
+  return (
+    <section className="bg-slate-100 py-10 dark:bg-slate-900/50 md:py-12">
+      <div className="mx-auto max-w-7xl px-4">
+        <SectionTitle title={meta.title} subtitle={meta.subtitle} />
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-bl from-sky-600 via-sky-500 to-emerald-500 shadow-xl">
+          <div className="absolute -left-16 top-0 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
+          <div className="absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-emerald-300/20 blur-3xl" />
+          <div className="relative grid items-center gap-6 p-6 sm:p-10 md:grid-cols-2 md:p-14">
+            <div className="text-center md:text-right">
+              <h3 className="text-2xl font-black text-white sm:text-3xl">منصتك الشاملة لتعليم التمريض</h3>
+              <p className="mt-3 text-sm text-sky-50 sm:text-base">
+                كتب، مقالات، دليل أدوية، مهارات عملية، وأدوات حسابية طبية — كل اللي محتاجه طالب أو ممرض التمريض في مكان واحد.
+              </p>
+              <Link to="/category/articles" className="mt-5 inline-block rounded-full bg-white px-6 py-2.5 text-sm font-bold text-sky-600 shadow-lg transition-transform hover:scale-105 sm:text-base">
+                ابدأ الاستكشاف
+              </Link>
+            </div>
+            {/* غيّر الرابط ده بصورة/رسمة من مكتبة الوسائط عندك (Media Library) */}
+            <img
+              src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=900&q=80"
+              alt="NurseHub Egypt"
+              loading="lazy"
+              className="mx-auto h-56 w-full max-w-md rounded-2xl object-cover shadow-2xl sm:h-72"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/** الخيار (٢): شريط أرقام وإحصائيات بدل كروت التصنيفات. */
+function CategoriesAsStats({
+  meta,
+  stats,
+}: {
+  meta: { title: string; subtitle: string };
+  stats: { n: number; l: string; i: string }[];
+}) {
+  return (
+    <section className="bg-slate-100 py-10 dark:bg-slate-900/50 md:py-12">
+      <div className="mx-auto max-w-7xl px-4">
+        <SectionTitle title={meta.title} subtitle={meta.subtitle} />
+        <div className="overflow-hidden rounded-3xl bg-gradient-to-bl from-sky-600 via-sky-500 to-emerald-500 p-6 shadow-xl sm:p-10">
+          <div className="grid grid-cols-2 gap-4 text-center text-white sm:gap-6 md:grid-cols-3 lg:grid-cols-6">
+            {stats.map((s) => (
+              <div key={s.l}>
+                <div className="text-3xl sm:text-4xl">{s.i}</div>
+                <div className="mt-1 text-2xl font-black sm:text-3xl">{s.n.toLocaleString("ar-EG")}</div>
+                <div className="text-xs text-sky-50 sm:text-sm">{s.l}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -129,18 +197,23 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">{featured.map((a) => <ArticleCard key={a.id} a={a} />)}</div>
       </section>
     ) : <div key="featured" />,
-    categories: visibleCards.length > 0 ? (
-      <section key="categories" className="bg-slate-100 py-10 dark:bg-slate-900/50 md:py-12">
-        <div className="mx-auto max-w-7xl px-4">
-          <SectionTitle {...meta("categories", "home.categories", "home.categoriesSub")} />
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-6">
-            {visibleCards.map((card) => (
-              <CategoryCardLink key={card.id} card={card} />
-            ))}
+    categories:
+      CATEGORIES_DISPLAY === "illustration" ? (
+        <div key="categories"><CategoriesAsIllustration meta={meta("categories", "home.categories", "home.categoriesSub")} /></div>
+      ) : CATEGORIES_DISPLAY === "stats" ? (
+        <div key="categories"><CategoriesAsStats meta={meta("categories", "home.categories", "home.categoriesSub")} stats={stats} /></div>
+      ) : visibleCards.length > 0 ? (
+        <section key="categories" className="bg-slate-100 py-10 dark:bg-slate-900/50 md:py-12">
+          <div className="mx-auto max-w-7xl px-4">
+            <SectionTitle {...meta("categories", "home.categories", "home.categoriesSub")} />
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-6">
+              {visibleCards.map((card) => (
+                <CategoryCardLink key={card.id} card={card} />
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    ) : <div key="categories" />,
+        </section>
+      ) : <div key="categories" />,
     latest: (
       <section key="latest" className="mx-auto max-w-7xl px-4 py-6">
         <AdSlot label="إعلان (728x90) - أعلى المقالات" />
