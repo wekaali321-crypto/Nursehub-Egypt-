@@ -58,7 +58,7 @@ export default function CheckoutPage() {
 
     const now = new Date();
     const order: Order = {
-      id: "ord" + Date.now(),
+      id: crypto.randomUUID(),
       invoiceNo: "INV-" + now.getFullYear() + "-" + String(Date.now()).slice(-6),
       customerName: form.name, email: form.email, phone: form.phone,
       items: items.map((i) => ({ productId: i.productId, title: i.title, price: i.price, qty: i.qty })),
@@ -72,6 +72,10 @@ export default function CheckoutPage() {
     recordOrder(order);
     logActivity("طلب جديد", order.invoiceNo);
     pushNotification("revenue", `طلب جديد: ${order.invoiceNo} (${order.total} ${cur})`, `/admin/orders?inv=${encodeURIComponent(order.invoiceNo)}`);
+    // Note: the real push notification to the admin's device is sent
+    // server-side by a database trigger on `orders` (fires on INSERT and
+    // calls the send-push Edge Function directly) — more reliable than a
+    // client-side call, since it fires even if this tab closes immediately.
     clear();
     setPlaced(order);
   };
@@ -90,7 +94,9 @@ export default function CheckoutPage() {
             <a href={`https://wa.me/${MANUAL_WHATSAPP}?text=${encodeURIComponent(`مرحباً، أرفقت إيصال تحويل الطلب رقم ${placed.invoiceNo}`)}`} target="_blank" rel="noreferrer" className="mt-3 inline-block rounded-full bg-emerald-500 px-6 py-2 text-sm font-bold text-white">📲 إرسال الإيصال على واتساب</a>
           </div>
         )}
-        <div className="mt-5 flex justify-center gap-2">
+        <p className="mt-4 text-xs text-slate-400">احتفظ بالرابط ده — هيظهر فيه زرار تحميل الملف تلقائياً فور تأكيد الدفع، حتى لو قفلت الصفحة دي:</p>
+        <div className="mt-5 flex flex-wrap justify-center gap-2">
+          <Link to={`/order/${placed.invoiceNo}`} className="rounded-full bg-emerald-500 px-6 py-2 font-bold text-white">🔗 صفحة تتبع الطلب والتحميل</Link>
           <button onClick={() => printInvoice(placed, cur)} className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white">🖨️ تحميل الفاتورة</button>
           <Link to="/store" className="rounded-full border border-slate-200 px-6 py-2 font-bold dark:border-slate-700 dark:text-white">المتجر</Link>
         </div>
