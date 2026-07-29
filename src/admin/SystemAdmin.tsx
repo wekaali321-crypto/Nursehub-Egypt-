@@ -135,8 +135,11 @@ function EnableAdminPush() {
 
   if (subscribed) {
     return (
-      <div className={`${card} p-4 text-sm font-bold text-emerald-600`}>
-        🔔 الإشعارات مفعّلة على هذا الجهاز — هتوصلك حتى لو الموقع أو المتصفح مقفول.
+      <div className={`${card} space-y-2 p-4`}>
+        <p className="text-sm font-bold text-emerald-600">🔔 الإشعارات مفعّلة على هذا الجهاز — هتوصلك حتى لو الموقع أو المتصفح مقفول.</p>
+        <button onClick={enable} disabled={busy} className="rounded-full border border-slate-200 px-4 py-1.5 text-xs font-bold text-slate-500 disabled:opacity-50 dark:border-slate-700 dark:text-slate-400">
+          {busy ? "جارٍ التأكد..." : "إعادة المزامنة (لو الإشعارات مش وصلتك)"}
+        </button>
       </div>
     );
   }
