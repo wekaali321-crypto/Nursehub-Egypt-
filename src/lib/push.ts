@@ -1,37 +1,45 @@
-import { supabase, isSupabaseConfigured } from "./supabase";
+import { supabase } from "./supabase";
 
-// Must match the VAPID_PUBLIC_KEY used by the send-push Edge Function.
-const VAPID_PUBLIC_KEY = "BP72d1He96SllU7JOtwJQRDOeuqxH-9FxVUUVrPR4bdxz4os5yQDYG8gCfo7x8tPZiVjjZW7Et_ip4xkEJtQk-o";
+// Public VAPID key — safe to expose in the client bundle by design (this is
+// only the "public" half of the keypair; the private half stays server-side
+// inside the send-push Edge Function).
+export const VAPID_PUBLIC_KEY =
+  "BFmnRQ4pF0ZO1kka4q2wPsSF7oXLz8WxpVB0tc-VzzEhecKKMnVnKnh1wlXP5dbRrrrQpoYC5VTIXJUKkmPUuA4";
 
-function urlBase64ToUint8Array(base64String: string): Uint8Array {
+function urlBase64ToUint8Array(base64String: string) {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
   const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
-  const raw = atob(base64);
-  return Uint8Array.from([...raw].map((c) => c.charCodeAt(0)));
+  const rawData = atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+  for (let i = 0; i < rawData.length; i++) outputArray[i] = rawData.charCodeAt(i);
+  return outputArray;
 }
 
-export function isPushSupported(): boolean {
-  return "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
-}
+export type PushRole = "admin" | "visitor";
 
-export function getPushPermission(): NotificationPermission | "unsupported" {
-  if (!isPushSupported()) return "unsupported";
-  return Notification.permission;
+/** Registers /sw.js if it isn't already, and waits until it's active. Safe to call repeatedly. */
+async function ensureServiceWorker(): Promise<ServiceWorkerRegistration> {
+  if (!("serviceWorker" in navigator)) throw new Error("المتصفح لا يدعم الإشعارات");
+  let reg = await navigator.serviceWorker.getRegistration();
+  if (!reg) reg = await navigator.serviceWorker.register("/sw.js");
+  return navigator.serviceWorker.ready;
 }
 
 /**
- * Requests notification permission, subscribes this device to Web Push,
- * and stores the subscription in Supabase so the send-push Edge Function
- * can reach it later — even if this tab/app is fully closed.
+ * Asks for notification permission, subscribes this device to Web Push, and
+ * saves the subscription in Supabase. After this resolves, the device will
+ * receive real push notifications even with the site/browser fully closed
+ * (as long as the OS/browser is running and connected to the internet).
  */
-export async function enablePushNotifications(role: "admin" | "visitor" = "visitor"): Promise<{ ok: boolean; reason?: string }> {
-  if (!isPushSupported()) return { ok: false, reason: "المتصفح ده مش بيدعم الإشعارات" };
-  if (!isSupabaseConfigured() || !supabase) return { ok: false, reason: "قاعدة البيانات غير متصلة" };
+export async function enablePushNotifications(role: PushRole = "visitor") {
+  if (!("PushManager" in window)) throw new Error("المتصفح لا يدعم الإشعارات");
+  if (!supabase) throw new Error("قاعدة البيانات غير متصلة");
+
+  const reg = await ensureServiceWorker();
 
   const permission = await Notification.requestPermission();
-  if (permission !== "granted") return { ok: false, reason: "تم رفض إذن الإشعارات" };
+  if (permission !== "granted") throw new Error("لم يتم منح إذن الإشعارات");
 
-  const reg = await navigator.serviceWorker.ready;
   let sub = await reg.pushManager.getSubscription();
   if (!sub) {
     sub = await reg.pushManager.subscribe({
@@ -40,26 +48,39 @@ export async function enablePushNotifications(role: "admin" | "visitor" = "visit
     });
   }
 
-  const json = sub.toJSON();
+  const json = sub.toJSON() as any;
   const { error } = await supabase.from("push_subscriptions").upsert(
     {
-      endpoint: json.endpoint!,
-      p256dh: json.keys!.p256dh!,
-      auth: json.keys!.auth!,
+      endpoint: json.endpoint,
+      p256dh: json.keys?.p256dh,
+      auth: json.keys?.auth,
       user_agent: navigator.userAgent,
       role,
     },
     { onConflict: "endpoint" }
   );
-  if (error) return { ok: false, reason: error.message };
-
-  return { ok: true };
+  if (error) throw error;
 }
 
 /** True if this device already has an active push subscription. */
-export async function hasActivePushSubscription(): Promise<boolean> {
-  if (!isPushSupported()) return false;
+export async function hasPushSubscription(): Promise<boolean> {
+  if (!("serviceWorker" in navigator)) return false;
   const reg = await navigator.serviceWorker.getRegistration();
-  const sub = await reg?.pushManager.getSubscription();
+  if (!reg) return false;
+  const sub = await reg.pushManager.getSubscription();
   return !!sub;
+}
+
+/**
+ * Fires a push notification via the send-push Edge Function. Never throws —
+ * failures are logged and swallowed so a notification hiccup can never break
+ * the calling flow (e.g. checkout).
+ */
+export async function triggerPush(opts: { title: string; body: string; link?: string; tag?: string; role?: PushRole }) {
+  if (!supabase) return;
+  try {
+    await supabase.functions.invoke("send-push", { body: opts });
+  } catch (e) {
+    console.error("triggerPush failed:", e);
+  }
 }
