@@ -67,6 +67,44 @@ const fromAff = (r: any) => ({ id: r.id, name: r.name, url: r.url, network: r.ne
 const fromRedirect = (r: any) => ({ id: r.id, from: r.from, to: r.to, type: r.type });
 const fromActivity = (r: any) => ({ id: r.id, action: r.action, target: r.target, user: r.user, date: r.created_at?.slice(0, 16).replace("T", " ") ?? "" });
 
+// Orders — the `orders` table also still has a couple of legacy columns
+// (product_id, payment_method, transaction_ref, amount, gateway_name) from an
+// earlier schema version; we read/write the newer columns that match the
+// current `Order` type and simply leave the legacy ones alone.
+export const fromOrder = (r: any) => ({
+  id: r.id,
+  invoiceNo: r.invoice_no,
+  customerName: r.customer_name,
+  email: r.email,
+  phone: r.phone,
+  items: r.items ?? [],
+  subtotal: r.subtotal ?? 0,
+  discount: r.discount ?? 0,
+  tax: r.tax ?? 0,
+  total: r.total ?? 0,
+  couponCode: r.coupon_code ?? undefined,
+  gateway: r.gateway ?? r.gateway_name ?? "",
+  paymentStatus: r.status,
+  transactionId: r.transaction_id ?? undefined,
+  date: r.created_at ? r.created_at.slice(0, 16).replace("T", " ") : "",
+});
+export const toOrder = (o: any) => ({
+  id: o.id,
+  invoice_no: o.invoiceNo,
+  customer_name: o.customerName,
+  email: o.email,
+  phone: o.phone,
+  items: o.items,
+  subtotal: o.subtotal,
+  discount: o.discount,
+  tax: o.tax,
+  total: o.total,
+  coupon_code: o.couponCode ?? null,
+  gateway: o.gateway,
+  status: o.paymentStatus,
+  transaction_id: o.transactionId ?? null,
+});
+
 /* ---------- Load everything from Supabase ---------- */
 export async function loadAllFromSupabase(): Promise<Partial<DataShape>> {
   if (!isSupabaseEnabled || !supabase) throw new Error("Supabase not configured");
@@ -74,12 +112,12 @@ export async function loadAllFromSupabase(): Promise<Partial<DataShape>> {
   const q = (t: string) => supabase!.from(t).select("*");
   const [
     articles, comments, media, products, users, pages, categories, tags,
-    subscribers, ads, affiliates, redirects, activity, drugs, settings,
+    subscribers, ads, affiliates, redirects, activity, drugs, settings, orders,
   ] = await Promise.all([
     q(TABLES.articles), q(TABLES.comments), q(TABLES.media), q(TABLES.products),
     q(TABLES.users), q(TABLES.pages), q(TABLES.categories), q(TABLES.tags),
     q(TABLES.subscribers), q(TABLES.ads), q(TABLES.affiliates), q(TABLES.redirects),
-    q(TABLES.activity), q(TABLES.drugs), q(TABLES.settings),
+    q(TABLES.activity), q(TABLES.drugs), q(TABLES.settings), q(TABLES.orders),
   ]);
 
   const s = settings.data?.[0];
@@ -98,6 +136,7 @@ export async function loadAllFromSupabase(): Promise<Partial<DataShape>> {
     redirects: (redirects.data ?? []).map(fromRedirect),
     activity: (activity.data ?? []).map(fromActivity),
     drugs: (drugs.data ?? []).map(fromDrug),
+    orders: (orders.data ?? []).map(fromOrder),
     settings: s
       ? { siteName: s.site_name, tagline: s.tagline, metaDescription: s.meta_description, adsenseEnabled: s.adsense_enabled, adsenseClient: s.adsense_client }
       : undefined,
@@ -122,6 +161,7 @@ const UPSERT: Partial<Record<Entity, { table: string; to: (x: any) => any }>> = 
   affiliates: { table: TABLES.affiliates, to: (a: any) => ({ id: a.id, name: a.name, url: a.url, network: a.network, commission: a.commission, clicks: a.clicks }) },
   redirects: { table: TABLES.redirects, to: (r: any) => ({ id: r.id, from: r.from, to: r.to, type: r.type }) },
   activity: { table: TABLES.activity, to: (a: any) => ({ id: a.id, action: a.action, target: a.target, user: a.user }) },
+  orders: { table: TABLES.orders, to: toOrder },
 };
 
 /** Persist a single entity collection diff to Supabase (upsert + delete). */
