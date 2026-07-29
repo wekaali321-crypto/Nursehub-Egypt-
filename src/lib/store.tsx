@@ -257,7 +257,7 @@ const Ctx = createContext<StoreCtx | null>(null);
 const SYNCED: (keyof DataShape)[] = [
   "articles", "comments", "media", "products", "users", "drugs",
   "subscribers", "pages", "categories", "tags", "ads", "affiliates",
-  "redirects", "activity",
+  "redirects", "activity", "orders",
 ];
 
 export function StoreProvider({ children }: { children: ReactNode }) {
