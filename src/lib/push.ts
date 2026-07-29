@@ -71,6 +71,9 @@ export async function hasPushSubscription(): Promise<boolean> {
   return !!sub;
 }
 
+// Alias — some components (e.g. Navbar.tsx) import this under a different name.
+export const hasActivePushSubscription = hasPushSubscription;
+
 /**
  * Fires a push notification via the send-push Edge Function. Never throws —
  * failures are logged and swallowed so a notification hiccup can never break
