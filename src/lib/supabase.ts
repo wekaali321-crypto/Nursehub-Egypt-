@@ -178,6 +178,7 @@ export const TABLES = {
   ratings: "ratings",
   drugs: "drugs",
   settings: "site_settings",
+  orders: "orders",
 } as const;
 
 /**
