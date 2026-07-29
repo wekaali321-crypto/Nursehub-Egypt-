@@ -43,8 +43,30 @@ const fileIcons: Record<string, string> = { image: "🖼️", video: "🎬", pdf
 export function ProductsAdmin() {
   const { products, setData } = useStore();
   const [form, setForm] = useState<Partial<Product>>({ type: "pdf", price: 0 });
+  // لو فيه id هنا يبقى إحنا في وضع "تعديل"، لو null يبقى وضع "إضافة"
+  const [editingId, setEditingId] = useState<string | null>(null);
   // أي بيكر مفتوح دلوقتي: صورة الغلاف ولا الملف نفسه
   const [pickerOpen, setPickerOpen] = useState<"cover" | "file" | null>(null);
+
+  const resetForm = () => {
+    setForm({ type: "pdf", price: 0 });
+    setEditingId(null);
+  };
+
+  const startEdit = (p: Product) => {
+    setEditingId(p.id);
+    setForm({
+      title: p.title,
+      type: p.type,
+      price: p.price,
+      oldPrice: p.oldPrice,
+      cover: p.cover,
+      description: p.description,
+      fileUrl: p.fileUrl,
+    });
+    // تمرير لمكان الفورم مفيد على الموبايل
+    document.getElementById("product-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   const add = () => {
     if (!form.title) return alert("أدخل اسم المنتج");
@@ -72,9 +94,36 @@ export function ProductsAdmin() {
         },
       }).catch(() => {}); // best-effort — never block saving on this
     }
-    setForm({ type: "pdf", price: 0 });
+    resetForm();
   };
-  const del = (id: string) => setData((d) => ({ ...d, products: d.products.filter((p) => p.id !== id) }));
+
+  const saveEdit = () => {
+    if (!form.title) return alert("أدخل اسم المنتج");
+    if (!editingId) return;
+    setData((d) => ({
+      ...d,
+      products: d.products.map((p) =>
+        p.id === editingId
+          ? {
+              ...p,
+              title: form.title!,
+              type: form.type as Product["type"],
+              price: Number(form.price) || 0,
+              oldPrice: form.oldPrice ? Number(form.oldPrice) : undefined,
+              cover: form.cover || p.cover,
+              description: form.description ?? p.description,
+              fileUrl: form.fileUrl ?? p.fileUrl,
+            }
+          : p
+      ),
+    }));
+    resetForm();
+  };
+
+  const del = (id: string) => {
+    setData((d) => ({ ...d, products: d.products.filter((p) => p.id !== id) }));
+    if (editingId === id) resetForm();
+  };
 
   const handlePick = (item: MediaItem) => {
     if (pickerOpen === "cover") setForm((f) => ({ ...f, cover: item.url }));
@@ -94,20 +143,26 @@ export function ProductsAdmin() {
 
       <div className="space-y-3">
         {products.map((p) => (
-          <div key={p.id} className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
+          <div key={p.id} className={`flex items-center gap-4 rounded-2xl border p-3 dark:bg-slate-900 ${editingId === p.id ? "border-sky-400 bg-sky-50 dark:border-sky-600" : "border-slate-200 bg-white dark:border-slate-800"}`}>
             <img src={p.cover} alt="" className="h-16 w-16 rounded-lg object-cover" />
             <div className="flex-1">
               <div className="font-bold dark:text-white">{p.title}</div>
               <div className="text-sm text-emerald-500">{p.price} ج.م • {p.sales} مبيعة</div>
               <div className="text-xs text-slate-400">{p.fileUrl ? "✅ الملف مرفوع" : "⚠️ لسه معملتش رفع للملف"}</div>
             </div>
-            <button onClick={() => del(p.id)} className="rounded-lg bg-red-100 px-3 py-1.5 text-sm font-bold text-red-600 dark:bg-red-500/10">حذف</button>
+            <div className="flex shrink-0 flex-col gap-1">
+              <button onClick={() => startEdit(p)} className="rounded-lg bg-sky-100 px-3 py-1.5 text-sm font-bold text-sky-600 dark:bg-sky-500/10">تعديل</button>
+              <button onClick={() => del(p.id)} className="rounded-lg bg-red-100 px-3 py-1.5 text-sm font-bold text-red-600 dark:bg-red-500/10">حذف</button>
+            </div>
           </div>
         ))}
       </div>
 
-      <div className="space-y-3 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-        <h3 className="font-bold dark:text-white">➕ منتج جديد</h3>
+      <div id="product-form" className="space-y-3 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+        <div className="flex items-center justify-between">
+          <h3 className="font-bold dark:text-white">{editingId ? "✏️ تعديل المنتج" : "➕ منتج جديد"}</h3>
+          {editingId && <button onClick={resetForm} className="text-xs font-bold text-slate-400 hover:text-slate-600">إلغاء</button>}
+        </div>
         <input placeholder="اسم المنتج" value={form.title ?? ""} onChange={(e) => setForm({ ...form, title: e.target.value })} className={inp} />
         <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value as Product["type"] })} className={inp}><option value="pdf">ملف PDF</option><option value="course">كورس</option><option value="subscription">اشتراك</option></select>
         <input type="number" placeholder="السعر" value={form.price ?? ""} onChange={(e) => setForm({ ...form, price: Number(e.target.value) })} className={inp} />
@@ -133,7 +188,11 @@ export function ProductsAdmin() {
         </div>
 
         <textarea placeholder="الوصف" value={form.description ?? ""} onChange={(e) => setForm({ ...form, description: e.target.value })} rows={2} className={inp} />
-        <button onClick={add} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">إضافة المنتج</button>
+        {editingId ? (
+          <button onClick={saveEdit} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">حفظ التعديلات</button>
+        ) : (
+          <button onClick={add} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">إضافة المنتج</button>
+        )}
       </div>
     </div>
   );
