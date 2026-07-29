@@ -17,9 +17,13 @@ function urlBase64ToUint8Array(base64String: string) {
 
 export type PushRole = "admin" | "visitor";
 
+/** True if this browser supports Web Push at all (feature-detection, not permission/subscription state). */
+export function isPushSupported(): boolean {
+  return "serviceWorker" in navigator && "PushManager" in window && "Notification" in window;
+}
+
 /** Registers /sw.js if it isn't already, and waits until it's active. Safe to call repeatedly. */
 async function ensureServiceWorker(): Promise<ServiceWorkerRegistration> {
-  if (!("serviceWorker" in navigator)) throw new Error("المتصفح لا يدعم الإشعارات");
   let reg = await navigator.serviceWorker.getRegistration();
   if (!reg) reg = await navigator.serviceWorker.register("/sw.js");
   return navigator.serviceWorker.ready;
@@ -27,39 +31,46 @@ async function ensureServiceWorker(): Promise<ServiceWorkerRegistration> {
 
 /**
  * Asks for notification permission, subscribes this device to Web Push, and
- * saves the subscription in Supabase. After this resolves, the device will
- * receive real push notifications even with the site/browser fully closed
- * (as long as the OS/browser is running and connected to the internet).
+ * saves the subscription in Supabase. After a successful { ok: true }, the
+ * device will receive real push notifications even with the site/browser
+ * fully closed (as long as the OS/browser is running and connected to the
+ * internet). Never throws — failures come back as { ok: false, reason }.
  */
-export async function enablePushNotifications(role: PushRole = "visitor") {
-  if (!("PushManager" in window)) throw new Error("المتصفح لا يدعم الإشعارات");
-  if (!supabase) throw new Error("قاعدة البيانات غير متصلة");
+export async function enablePushNotifications(role: PushRole = "visitor"): Promise<{ ok: boolean; reason?: string }> {
+  if (!isPushSupported()) return { ok: false, reason: "المتصفح لا يدعم الإشعارات" };
+  if (!supabase) return { ok: false, reason: "قاعدة البيانات غير متصلة" };
 
-  const reg = await ensureServiceWorker();
+  try {
+    const reg = await ensureServiceWorker();
 
-  const permission = await Notification.requestPermission();
-  if (permission !== "granted") throw new Error("لم يتم منح إذن الإشعارات");
+    const permission = await Notification.requestPermission();
+    if (permission !== "granted") return { ok: false, reason: "لم يتم منح إذن الإشعارات" };
 
-  let sub = await reg.pushManager.getSubscription();
-  if (!sub) {
-    sub = await reg.pushManager.subscribe({
-      userVisibleOnly: true,
-      applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
-    });
+    let sub = await reg.pushManager.getSubscription();
+    if (!sub) {
+      sub = await reg.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
+      });
+    }
+
+    const json = sub.toJSON() as any;
+    const { error } = await supabase.from("push_subscriptions").upsert(
+      {
+        endpoint: json.endpoint,
+        p256dh: json.keys?.p256dh,
+        auth: json.keys?.auth,
+        user_agent: navigator.userAgent,
+        role,
+      },
+      { onConflict: "endpoint" }
+    );
+    if (error) return { ok: false, reason: error.message };
+
+    return { ok: true };
+  } catch (e: any) {
+    return { ok: false, reason: e?.message ?? "حدث خطأ غير متوقع" };
   }
-
-  const json = sub.toJSON() as any;
-  const { error } = await supabase.from("push_subscriptions").upsert(
-    {
-      endpoint: json.endpoint,
-      p256dh: json.keys?.p256dh,
-      auth: json.keys?.auth,
-      user_agent: navigator.userAgent,
-      role,
-    },
-    { onConflict: "endpoint" }
-  );
-  if (error) throw error;
 }
 
 /** True if this device already has an active push subscription. */
