@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { useToast } from "../components/Toast";
 import { CATEGORY_LABELS } from "../lib/types";
 import { supabase } from "../lib/supabase";
+import { enablePushNotifications, hasPushSubscription } from "../lib/push";
 
 const card = "rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900";
 
@@ -112,6 +113,48 @@ export function MaintenanceAdmin() {
   );
 }
 
+/* ---------------- Enable real push notifications on THIS admin device ---------------- */
+function EnableAdminPush() {
+  const { notify } = useToast();
+  const [subscribed, setSubscribed] = useState<boolean | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  useEffect(() => { hasPushSubscription().then(setSubscribed); }, []);
+
+  const enable = async () => {
+    setBusy(true);
+    const res = await enablePushNotifications("admin");
+    setBusy(false);
+    if (res.ok) {
+      setSubscribed(true);
+      notify("تم تفعيل إشعارات الطلبات على هذا الجهاز", "success");
+    } else {
+      notify(res.reason || "تعذر التفعيل", "error");
+    }
+  };
+
+  if (subscribed) {
+    return (
+      <div className={`${card} p-4 text-sm font-bold text-emerald-600`}>
+        🔔 الإشعارات مفعّلة على هذا الجهاز — هتوصلك حتى لو الموقع أو المتصفح مقفول.
+      </div>
+    );
+  }
+
+  return (
+    <div className={`${card} space-y-2 p-4`}>
+      <h3 className="font-bold dark:text-white">🔔 فعّل إشعارات الطلبات الجديدة</h3>
+      <p className="text-xs text-slate-500 dark:text-slate-400">
+        فعّلها من هنا عشان توصلك إشعارات فورية بكل طلب جديد على شاشة الموبايل، حتى لو التاب أو المتصفح مقفول — المهم إن الجهاز يكون متصل بالنت.
+        فعّلها على كل جهاز/متصفح بتتابع منه الطلبات.
+      </p>
+      <button onClick={enable} disabled={busy} className="rounded-full bg-sky-500 px-5 py-2 text-sm font-bold text-white disabled:opacity-50">
+        {busy ? "جارٍ التفعيل..." : "تفعيل الآن"}
+      </button>
+    </div>
+  );
+}
+
 /* ---------------- Manual broadcast to visitors ---------------- */
 function BroadcastToVisitors() {
   const { notify } = useToast();
@@ -152,6 +195,7 @@ export function NotificationsAdmin() {
   const icons: Record<string, string> = { comment: "💬", user: "👤", system: "⚙️", backup: "💾", revenue: "💰", error: "⚠️" };
   return (
     <div className="space-y-3">
+      <EnableAdminPush />
       <BroadcastToVisitors />
       <div className="flex items-center justify-between">
         <p className="text-slate-500 dark:text-slate-400">الإشعارات: <span className="font-bold text-sky-500">{notifications.length}</span></p>
