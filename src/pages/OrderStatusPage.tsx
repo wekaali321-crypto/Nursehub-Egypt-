@@ -105,7 +105,7 @@ export default function OrderStatusPage() {
                 <span className="text-sm font-semibold dark:text-white">{item.title}</span>
                 {product?.fileUrl ? (
                   <a
-                    href={product.fileUrl} target="_blank" rel="noreferrer" download
+                    href={`${product.fileUrl}${product.fileUrl.includes("?") ? "&" : "?"}download=`}
                     onClick={() => trackDownload()}
                     className="shrink-0 rounded-full bg-sky-500 px-4 py-1.5 text-xs font-bold text-white"
                   >
