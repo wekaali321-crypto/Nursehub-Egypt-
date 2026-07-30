@@ -1,6 +1,7 @@
 import { lazy, Suspense, type ReactNode } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider, AuthProvider, useAuth } from "./lib/theme";
+import { UserAuthProvider } from "./lib/userAuth";
 import { I18nProvider } from "./lib/i18n";
 import { CartProvider } from "./lib/cart";
 import { FavoritesProvider } from "./lib/favorites";
@@ -129,6 +130,7 @@ export default function App() {
           <ToastProvider>
             <CartProvider>
             <FavoritesProvider>
+            <UserAuthProvider>
             <AuthProvider>
               <BrowserRouter>
                 <Routes>
@@ -204,6 +206,7 @@ export default function App() {
                 </Routes>
               </BrowserRouter>
             </AuthProvider>
+            </UserAuthProvider>
             </FavoritesProvider>
             </CartProvider>
           </ToastProvider>
