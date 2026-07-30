@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTheme } from "../lib/theme";
 import { useStore } from "../lib/store";
+import { useUserAuth } from "../lib/userAuth";
 import { cn } from "../utils/cn";
 import SmartSearch from "./SmartSearch";
 import Logo from "./Logo";
@@ -32,6 +33,99 @@ const PATH_FEATURE: Record<string, keyof import("../lib/types").FeatureToggles> 
   "/category/books": "store",
   "/category/careplans": "carePlans",
 };
+
+function UserMenu() {
+  const { user, loggedIn, loading, logout } = useUserAuth();
+  const { lang } = useI18n();
+  const isRTL = lang === "ar";
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const nav = useNavigate();
+
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, []);
+
+  if (loading) {
+    return <div className="h-10 w-10 animate-pulse rounded-full bg-slate-200 dark:bg-slate-700" />;
+  }
+
+  if (!loggedIn || !user) {
+    return (
+      <Link
+        to="/login"
+        className="flex h-10 items-center justify-center gap-1.5 rounded-full border border-slate-200 px-4 text-sm font-bold text-slate-600 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+      >
+        {isRTL ? "دخول" : "Login"}
+      </Link>
+    );
+  }
+
+  const meta = (user.user_metadata as any) || {};
+  const displayName = meta.full_name || meta.name || user.email?.split("@")[0] || "User";
+  const avatarUrl: string | undefined = meta.avatar_url || meta.picture;
+  const initial = displayName.trim().charAt(0).toUpperCase() || "U";
+
+  const doLogout = async () => {
+    await logout();
+    setOpen(false);
+    nav("/");
+  };
+
+  return (
+    <div className="relative" ref={ref}>
+      <button
+        onClick={() => setOpen((o) => !o)}
+        aria-label="Account menu"
+        className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-slate-200 dark:border-slate-700"
+      >
+        {avatarUrl ? (
+          <img src={avatarUrl} alt={displayName} className="h-full w-full object-cover" referrerPolicy="no-referrer" />
+        ) : (
+          <span className="flex h-full w-full items-center justify-center bg-gradient-to-br from-sky-500 to-emerald-500 font-bold text-white">{initial}</span>
+        )}
+      </button>
+
+      {open && (
+        <div
+          className={cn(
+            "absolute top-12 z-50 w-52 overflow-hidden rounded-2xl border border-slate-200 bg-white py-1 shadow-lg dark:border-slate-800 dark:bg-slate-900",
+            isRTL ? "left-0" : "right-0"
+          )}
+        >
+          <div className="border-b border-slate-100 px-4 py-3 dark:border-slate-800">
+            <div className="truncate font-bold text-slate-800 dark:text-white">{displayName}</div>
+            <div className="truncate text-xs text-slate-400">{user.email}</div>
+          </div>
+          <Link
+            to="/dashboard"
+            onClick={() => setOpen(false)}
+            className="block px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800"
+          >
+            👤 {isRTL ? "حسابي" : "My Account"}
+          </Link>
+          <Link
+            to="/favorites"
+            onClick={() => setOpen(false)}
+            className="block px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800"
+          >
+            ❤️ {isRTL ? "المفضلة" : "Favorites"}
+          </Link>
+          <button
+            onClick={doLogout}
+            className="block w-full px-4 py-2.5 text-start text-sm font-semibold text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-500/10"
+          >
+            🚪 {isRTL ? "تسجيل الخروج" : "Log out"}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Navbar() {
   const { theme, toggle } = useTheme();
@@ -141,6 +235,8 @@ export default function Navbar() {
           >
             {theme === "dark" ? "☀️" : "🌙"}
           </button>
+
+          <UserMenu />
 
           <Link
             to="/admin"
