@@ -7,6 +7,8 @@ import { useSEO, breadcrumbSchema, extractFaqSchema, extractHowToSchema } from "
 import { useI18n, bilingual } from "../lib/i18n";
 import { useToast } from "../components/Toast";
 import { useFavorites } from "../lib/favorites";
+import { useUserAuth } from "../lib/userAuth";
+import { supabase, isSupabaseConfigured } from "../lib/supabase";
 import ReadingProgress from "../components/ReadingProgress";
 import Icon from "../components/Icon";
 import OptimizedImage from "../components/OptimizedImage";
@@ -50,6 +52,7 @@ export default function ArticlePage() {
   const article = articles.find((a) => a.slug === slug);
   const { lang, t } = useI18n();
   const { isFav, toggleFav } = useFavorites();
+  const { user, loggedIn } = useUserAuth();
   const [name, setName] = useState("");
   const [text, setText] = useState("");
   const scrollTimer = useRef<number | undefined>(undefined);
@@ -57,6 +60,10 @@ export default function ArticlePage() {
 
   const [docLang, setDocLang] = useState<"ar" | "en">(lang === "en" ? "en" : "ar");
   const hasEnglish = !!(article?.titleEn && article?.contentEn);
+
+  // --- Real Supabase bookmark state (used only when logged in) ---
+  const [dbBookmarked, setDbBookmarked] = useState(false);
+  const [bookmarkBusy, setBookmarkBusy] = useState(false);
 
   useEffect(() => {
     if (!article) return;
@@ -76,6 +83,38 @@ export default function ArticlePage() {
       endArticleView();
     };
   }, [slug]);
+
+  // Load bookmark status + log reading_history when a logged-in user opens an article
+  useEffect(() => {
+    if (!article || !loggedIn || !user || !isSupabaseConfigured() || !supabase) {
+      setDbBookmarked(false);
+      return;
+    }
+
+    let cancelled = false;
+
+    (async () => {
+      const { data } = await supabase
+        .from("bookmarks")
+        .select("id")
+        .eq("user_id", user.id)
+        .eq("article_id", article.id)
+        .maybeSingle();
+      if (!cancelled) setDbBookmarked(!!data);
+    })();
+
+    // Log reading history (fire and forget)
+    supabase
+      .from("reading_history")
+      .insert({ user_id: user.id, article_id: article.id })
+      .then(({ error }) => {
+        if (error) console.error("[reading_history] insert failed:", error.message);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [article?.id, loggedIn, user?.id]);
 
   const toc = useMemo(() => (article ? buildToc(article.content) : []), [article]);
   const contentWithIds = useMemo(() => (article ? injectIds(article.content) : ""), [article]);
@@ -148,6 +187,9 @@ export default function ArticlePage() {
   const ytEmbed = article.videoUrl?.replace("watch?v=", "embed/").replace("youtu.be/", "youtube.com/embed/");
   const cats = Object.keys(CATEGORY_LABELS) as Category[];
 
+  // Bookmark state: real DB when logged in, local favorites when a guest
+  const bookmarked = loggedIn ? dbBookmarked : isFav(article.id);
+
   const rate = (value: number) => {
     setData((d) => ({
       ...d,
@@ -174,7 +216,27 @@ export default function ArticlePage() {
     notify("تم إرسال تعليقك وسيظهر بعد الموافقة.", "info");
   };
 
-  const doBookmark = () => {
+  const doBookmark = async () => {
+    // Logged-in users: persist to Supabase
+    if (loggedIn && user) {
+      if (!isSupabaseConfigured() || !supabase) return;
+      if (bookmarkBusy) return;
+      setBookmarkBusy(true);
+      if (dbBookmarked) {
+        const { error } = await supabase.from("bookmarks").delete().eq("user_id", user.id).eq("article_id", article.id);
+        if (!error) { setDbBookmarked(false); notify("أُزيل من المفضلة", "success"); }
+        else notify("تعذّر الإزالة، حاول مرة أخرى", "info");
+      } else {
+        const { error } = await supabase.from("bookmarks").insert({ user_id: user.id, article_id: article.id });
+        if (!error) { setDbBookmarked(true); notify("أُضيف إلى المفضلة", "success"); }
+        else notify("تعذّر الإضافة، حاول مرة أخرى", "info");
+      }
+      setBookmarkBusy(false);
+      logArticleEvent("bookmark", { contentId: article.id, slug: article.slug, label: dbBookmarked ? "remove" : "add" });
+      return;
+    }
+
+    // Guests: keep the existing local-only behavior
     toggleFav(article.id);
     const nowFav = !isFav(article.id);
     logArticleEvent("bookmark", { contentId: article.id, slug: article.slug, label: nowFav ? "add" : "remove" });
@@ -197,10 +259,11 @@ export default function ArticlePage() {
             <span className="rounded-full bg-sky-50 px-3 py-1 text-sm font-bold text-sky-600 dark:bg-sky-500/10">{CATEGORY_LABELS[article.category]}</span>
             <button
               onClick={doBookmark}
-              aria-pressed={isFav(article.id)}
-              className={`flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-bold transition print:hidden ${isFav(article.id) ? "border-rose-400 bg-rose-50 text-rose-500 dark:bg-rose-500/10" : "border-slate-200 text-slate-500 hover:border-rose-300 dark:border-slate-700"}`}
+              disabled={bookmarkBusy}
+              aria-pressed={bookmarked}
+              className={`flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-bold transition print:hidden disabled:opacity-60 ${bookmarked ? "border-rose-400 bg-rose-50 text-rose-500 dark:bg-rose-500/10" : "border-slate-200 text-slate-500 hover:border-rose-300 dark:border-slate-700"}`}
             >
-              {isFav(article.id) ? "❤️" : "🤍"} {isFav(article.id) ? t("article.bookmarked") : t("article.bookmark")}
+              {bookmarked ? "❤️" : "🤍"} {bookmarked ? t("article.bookmarked") : t("article.bookmark")}
             </button>
           </div>
 
