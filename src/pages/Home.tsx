@@ -50,29 +50,20 @@ function HeroSearch() {
   );
 }
 
-/** بديل قسم "الإحصائيات" اللي كان تحت الهيرو مباشرة: صورة/رسمة توصف الموقع بدل الأرقام. */
+/** بديل قسم "الإحصائيات" اللي كان تحت الهيرو مباشرة: إنفوجرافيك بعرض الصفحة بالكامل بدل الأرقام. */
 function StatsAsIllustration() {
   return (
-    <section className="mx-auto -mt-8 max-w-6xl px-4 relative z-10">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-bl from-sky-600 via-sky-500 to-emerald-500 shadow-2xl">
-        <div className="absolute -left-16 top-0 h-56 w-56 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute -right-16 bottom-0 h-56 w-56 rounded-full bg-emerald-300/20 blur-3xl" />
-        <div className="relative grid items-center gap-6 p-6 sm:p-10 md:grid-cols-2 md:p-14">
-          <div className="text-center md:text-right">
-            <h3 className="text-2xl font-black text-white sm:text-3xl">منصتك الشاملة لتعليم التمريض</h3>
-            <p className="mt-3 text-sm text-sky-50 sm:text-base">
-              كتب، مقالات، دليل أدوية، مهارات عملية، وأدوات حسابية طبية — كل اللي محتاجه طالب أو ممرض التمريض في مكان واحد.
-            </p>
-          </div>
-          {/* غيّر الرابط ده بصورة/رسمة من مكتبة الوسائط عندك (Media Library) */}
-          <img
-            src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=900&q=80"
-            alt="NurseHub Egypt"
-            loading="lazy"
-            className="mx-auto h-56 w-full max-w-md rounded-2xl object-cover shadow-2xl sm:h-72"
-          />
-        </div>
-      </div>
+    <section className="w-full">
+      {/*
+        الصورة لازم تكون مرفوعة في مجلد public/ في الريبو (مثلاً public/nursing-infographic.png)
+        عشان تشتغل بالمسار ده. لو رفعتها باسم مختلف، غيّر src بس.
+      */}
+      <img
+        src="/file_00000000d5ec81f4b78e37f6e9c7d7ac.png"
+        alt="كيان التمريض في عالم المستشفى — NurseHub Egypt"
+        loading="lazy"
+        className="block w-full"
+      />
     </section>
   );
 }
