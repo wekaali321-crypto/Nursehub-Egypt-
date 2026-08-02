@@ -331,8 +331,8 @@ export default function ArticlePage() {
             </h3>
             <p className="mt-2 text-sm text-white/80">
               {docLang === "ar"
-                ? "نسخة مصممة خصيصاً لهذا المقال — بسعر تعريفي 30 ج.م بدلاً من 50 (لفترة محدودة)"
-                : "Specially designed version of this article — introductory price 30 EGP instead of 50 (limited time)"}
+                ? "نسخة PDF احترافية مصممة خصيصاً لهذا المقال — بسعر 50 ج.م"
+                : "Professional PDF version specially designed for this article — 50 EGP"}
             </p>
             <Link
               to="/store"
