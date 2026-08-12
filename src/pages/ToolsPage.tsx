@@ -124,6 +124,155 @@ function PediatricDose() {
   );
 }
 
+const doseUnits = [
+  { key: "mcg/kg/min", label: "mcg/kg/min" },
+  { key: "mcg/kg/hr", label: "mcg/kg/hr" },
+  { key: "mcg/min", label: "mcg/min" },
+  { key: "mg/hr", label: "mg/hr" },
+];
+const commonDrugs = ["نورأدرينالين", "أدرينالين", "دوبامين", "دوبوتامين", "بريسيدكس", "نيتروجليسرين"];
+
+function DoseRateCalculator() {
+  const [mode, setMode] = useState<"doseToRate" | "rateToDose">("doseToRate");
+  const [drug, setDrug] = useState("");
+  const [doseUnit, setDoseUnit] = useState("mcg/kg/min");
+  const [weight, setWeight] = useState("");
+  const [bagAmount, setBagAmount] = useState("");
+  const [bagUnit, setBagUnit] = useState<"mg" | "mcg">("mg");
+  const [volume, setVolume] = useState("");
+  const [doseInput, setDoseInput] = useState("");
+  const [rateInput, setRateInput] = useState("");
+
+  const concMcgPerMl =
+    bagAmount && volume
+      ? (bagUnit === "mg" ? Number(bagAmount) * 1000 : Number(bagAmount)) / Number(volume)
+      : 0;
+
+  let result: number | null = null;
+  if (concMcgPerMl > 0) {
+    if (mode === "doseToRate" && doseInput) {
+      const d = Number(doseInput);
+      if (doseUnit === "mcg/kg/min") result = weight ? (d * Number(weight) * 60) / concMcgPerMl : null;
+      else if (doseUnit === "mcg/kg/hr") result = weight ? (d * Number(weight)) / concMcgPerMl : null;
+      else if (doseUnit === "mcg/min") result = (d * 60) / concMcgPerMl;
+      else if (doseUnit === "mg/hr") result = (d * 1000) / concMcgPerMl;
+    } else if (mode === "rateToDose" && rateInput) {
+      const r = Number(rateInput);
+      if (doseUnit === "mcg/kg/min") result = weight ? (r * concMcgPerMl) / (Number(weight) * 60) : null;
+      else if (doseUnit === "mcg/kg/hr") result = weight ? (r * concMcgPerMl) / Number(weight) : null;
+      else if (doseUnit === "mcg/min") result = (r * concMcgPerMl) / 60;
+      else if (doseUnit === "mg/hr") result = (r * concMcgPerMl) / 1000;
+    }
+  }
+
+  const needsWeight = doseUnit === "mcg/kg/min" || doseUnit === "mcg/kg/hr";
+
+  return (
+    <Card title="مفسّر الجرعات (Dose ↔ Rate)" icon="🧮">
+      <div className="mb-3 rounded-xl bg-amber-50 p-3 text-xs text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">
+        للغرض التعليمي والمرجعي فقط، وليس بديلاً عن اتخاذ قرار علاجي أو تحديد جرعة أو إعداد للمضخة. اتبع أوامر الطبيب وبروتوكول المنشأة دائمًا.
+      </div>
+
+      <div className="mb-3 flex flex-wrap gap-2">
+        {commonDrugs.map((d) => (
+          <button
+            key={d}
+            type="button"
+            onClick={() => setDrug(d)}
+            className={`rounded-full border px-3 py-1 text-xs font-semibold ${
+              drug === d
+                ? "border-sky-400 bg-sky-500 text-white"
+                : "border-slate-200 text-slate-600 dark:border-slate-700 dark:text-slate-300"
+            }`}
+          >
+            {d}
+          </button>
+        ))}
+      </div>
+
+      <div className="mb-3 grid grid-cols-2 gap-3">
+        <button
+          type="button"
+          onClick={() => setMode("doseToRate")}
+          className={`rounded-lg px-3 py-2 text-sm font-bold ${mode === "doseToRate" ? "bg-sky-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
+        >
+          جرعة → معدل
+        </button>
+        <button
+          type="button"
+          onClick={() => setMode("rateToDose")}
+          className={`rounded-lg px-3 py-2 text-sm font-bold ${mode === "rateToDose" ? "bg-sky-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
+        >
+          معدل → جرعة
+        </button>
+      </div>
+
+      <div className="mb-3">
+        <label className={lbl}>وحدة الجرعة</label>
+        <select className={inp} value={doseUnit} onChange={(e) => setDoseUnit(e.target.value)}>
+          {doseUnits.map((u) => (
+            <option key={u.key} value={u.key}>{u.label}</option>
+          ))}
+        </select>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3">
+        {needsWeight && (
+          <div>
+            <label className={lbl}>وزن المريض (كجم)</label>
+            <input className={inp} type="number" value={weight} onChange={(e) => setWeight(e.target.value)} />
+          </div>
+        )}
+        <div>
+          <label className={lbl}>حجم المحلول الكلي (مل)</label>
+          <input className={inp} type="number" value={volume} onChange={(e) => setVolume(e.target.value)} />
+        </div>
+      </div>
+
+      <div className="mt-3 grid grid-cols-3 gap-3">
+        <div className="col-span-2">
+          <label className={lbl}>كمية الدواء في الكيس</label>
+          <input className={inp} type="number" value={bagAmount} onChange={(e) => setBagAmount(e.target.value)} placeholder="مثال: 8" />
+        </div>
+        <div>
+          <label className={lbl}>الوحدة</label>
+          <select className={inp} value={bagUnit} onChange={(e) => setBagUnit(e.target.value as "mg" | "mcg")}>
+            <option value="mg">mg</option>
+            <option value="mcg">mcg</option>
+          </select>
+        </div>
+      </div>
+
+      {mode === "doseToRate" ? (
+        <div className="mt-3">
+          <label className={lbl}>الجرعة المطلوبة ({doseUnit})</label>
+          <input className={inp} type="number" value={doseInput} onChange={(e) => setDoseInput(e.target.value)} />
+        </div>
+      ) : (
+        <div className="mt-3">
+          <label className={lbl}>معدل التسريب (مل/ساعة)</label>
+          <input className={inp} type="number" value={rateInput} onChange={(e) => setRateInput(e.target.value)} />
+        </div>
+      )}
+
+      {concMcgPerMl > 0 && (
+        <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">تركيز المحلول: {concMcgPerMl.toFixed(2)} mcg/mL</div>
+      )}
+
+      {result !== null && !Number.isNaN(result) && (
+        <div className={res}>
+          {mode === "doseToRate"
+            ? `معدل التسريب = ${result.toFixed(2)} مل/ساعة`
+            : `الجرعة = ${result.toFixed(3)} ${doseUnit}`}
+        </div>
+      )}
+      {needsWeight && !weight && (doseInput || rateInput) && (
+        <div className="mt-2 text-xs text-rose-500">أدخل وزن المريض لإتمام الحساب مع هذه الوحدة.</div>
+      )}
+    </Card>
+  );
+}
+
 const aiKB: { keys: string[]; answer: string }[] = [
   { keys: ["bmi", "كتلة", "وزن"], answer: "مؤشر كتلة الجسم يحسب بقسمة الوزن (كجم) على مربع الطول (متر). القيمة الطبيعية بين 18.5 و 24.9." },
   { keys: ["جرعة", "دواء", "dose"], answer: "تُحسب جرعة الدواء عادةً بضرب الجرعة الموصوفة (مجم/كجم) في وزن المريض. تأكد دائماً من مراجعة الطبيب." },
@@ -171,7 +320,7 @@ export default function ToolsPage() {
         <p className="mt-2 text-slate-500 dark:text-slate-400">{t("tools.sub")}</p>
       </div>
       <div className="grid gap-6 lg:grid-cols-2">
-        <BMI /><IVDrip /><Dosage /><FluidBalance /><Pregnancy /><GCS /><PediatricDose />
+        <BMI /><IVDrip /><Dosage /><FluidBalance /><Pregnancy /><GCS /><PediatricDose /><DoseRateCalculator />
         <div className="lg:col-span-2"><AIAssistant /></div>
       </div>
     </div>
