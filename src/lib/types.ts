@@ -11,6 +11,7 @@ export interface Article {
   title: string;
   slug: string;
   category: Category;
+  subcategory?: string; // Links to Taxonomy.id in `categories` — real clickable folder within a Category
   excerpt: string;
   content: string; // HTML
   cover: string;

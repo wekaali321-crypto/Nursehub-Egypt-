@@ -21,7 +21,9 @@ import {
 
 /* ---------- Row <-> App mappers ---------- */
 const fromArticle = (r: any) => ({
-  id: r.id, title: r.title, slug: r.slug, category: r.category, excerpt: r.excerpt,
+  id: r.id, title: r.title, slug: r.slug, category: r.category,
+  subcategory: r.subcategory ?? undefined, // real sub-folder within `category`, links to Taxonomy.id
+  excerpt: r.excerpt,
   content: r.content, cover: r.cover, tags: r.tags ?? [], author: r.author,
   status: r.status, publishDate: r.publish_date, updatedDate: r.updated_date,
   views: r.views ?? 0, featured: r.featured, videoUrl: r.video_url,
@@ -31,7 +33,9 @@ const fromArticle = (r: any) => ({
   titleEn: r.title_en, excerptEn: r.excerpt_en, contentEn: r.content_en,
 });
 const toArticle = (a: any) => ({
-  id: a.id, title: a.title, slug: a.slug, category: a.category, excerpt: a.excerpt,
+  id: a.id, title: a.title, slug: a.slug, category: a.category,
+  subcategory: a.subcategory ?? null,
+  excerpt: a.excerpt,
   content: a.content, cover: a.cover, tags: a.tags, author: a.author, status: a.status,
   publish_date: a.publishDate, updated_date: a.updatedDate ?? a.publishDate, views: a.views ?? 0,
   featured: a.featured ?? false, video_url: a.videoUrl ?? null, attachments: a.attachments ?? [],
