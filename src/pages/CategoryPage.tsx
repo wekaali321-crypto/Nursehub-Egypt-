@@ -30,20 +30,30 @@ export default function CategoryPage() {
 
   const activeSub = sub ? categories.find((c) => c.slug === sub) : undefined;
 
+  // Top level: only show articles that are NOT tucked into a sub-category
+  // folder — otherwise they'd appear twice (once loose, once inside their
+  // folder), which makes the section look cluttered/duplicated.
+  // Inside a folder (activeSub set): show only that folder's articles.
   let list = articles.filter((a) => a.category === category && a.status === "published");
-  if (activeSub) list = list.filter((a) => a.subcategory === activeSub.id);
+  if (activeSub) {
+    list = list.filter((a) => a.subcategory === activeSub.id);
+  } else {
+    list = list.filter((a) => !a.subcategory);
+  }
   if (tag) list = list.filter((a) => a.tags.includes(tag));
   list = [...list].sort((a, b) =>
     sort === "popular" ? b.views - a.views : b.publishDate.localeCompare(a.publishDate)
   );
 
-  const tags = Array.from(
-    new Set(
-      articles
-        .filter((a) => a.category === category && (!activeSub || a.subcategory === activeSub.id))
-        .flatMap((a) => a.tags)
-    )
-  );
+  const tags = Array.from(new Set(list.flatMap((a) => a.tags)));
+
+  // At the top level, only render the tag bar / grid section when there's
+  // something uncategorized to show, or when there are no folders at all
+  // (fresh section with nothing organized yet) — otherwise the page would
+  // show an empty "no data" box right under the folder cards for no reason.
+  const showFlatSection = Boolean(activeSub) || list.length > 0 || subcats.length === 0;
+
+  const totalInSection = articles.filter((a) => a.category === category && a.status === "published").length;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
@@ -58,12 +68,12 @@ export default function CategoryPage() {
       <div className="mb-6 rounded-3xl bg-gradient-to-l from-sky-500 to-emerald-500 p-8 text-white">
         <div className="text-5xl">{activeSub ? "📁" : CATEGORY_ICONS[category]}</div>
         <h1 className="mt-2 text-3xl font-black">{activeSub ? activeSub.name : catLabel}</h1>
-        <p className="mt-1 text-sky-50">{list.length} {t("common.item")}</p>
+        <p className="mt-1 text-sky-50">{(activeSub ? list.length : totalInSection)} {t("common.item")}</p>
       </div>
 
       {/* Real sub-category folders — shown only at the top level of the section,
           before the user has drilled into one. Clicking a folder navigates to
-          /category/:cat/:sub and filters the list below by that sub-category. */}
+          /category/:cat/:sub and shows only that folder's articles. */}
       {!activeSub && subcats.length > 0 && (
         <div className="mb-8">
           <h2 className="mb-3 text-lg font-bold text-slate-800 dark:text-white">التصنيفات الفرعية</h2>
@@ -92,23 +102,27 @@ export default function CategoryPage() {
         </div>
       )}
 
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-        <div className="flex flex-wrap gap-2">
-          <button onClick={() => setTag("")} className={`rounded-full px-3 py-1.5 text-sm font-semibold ${!tag ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{t("cat.all")}</button>
-          {tags.map((tg) => (
-            <button key={tg} onClick={() => setTag(tg)} className={`rounded-full px-3 py-1.5 text-sm font-semibold ${tag === tg ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>#{tg}</button>
-          ))}
-        </div>
-        <select value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800">
-          <option value="latest">{t("cat.sortLatest")}</option>
-          <option value="popular">{t("cat.sortPopular")}</option>
-        </select>
-      </div>
+      {showFlatSection && (
+        <>
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+            <div className="flex flex-wrap gap-2">
+              <button onClick={() => setTag("")} className={`rounded-full px-3 py-1.5 text-sm font-semibold ${!tag ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{t("cat.all")}</button>
+              {tags.map((tg) => (
+                <button key={tg} onClick={() => setTag(tg)} className={`rounded-full px-3 py-1.5 text-sm font-semibold ${tag === tg ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>#{tg}</button>
+              ))}
+            </div>
+            <select value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800">
+              <option value="latest">{t("cat.sortLatest")}</option>
+              <option value="popular">{t("cat.sortPopular")}</option>
+            </select>
+          </div>
 
-      {list.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">{t("common.noData")}</div>
-      ) : (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">{list.map((a) => <ArticleCard key={a.id} a={a} />)}</div>
+          {list.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">{t("common.noData")}</div>
+          ) : (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">{list.map((a) => <ArticleCard key={a.id} a={a} />)}</div>
+          )}
+        </>
       )}
 
       <div className="mt-10"><AdSlot label="إعلان أسفل القسم" /></div>
