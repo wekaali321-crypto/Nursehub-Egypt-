@@ -50,36 +50,119 @@ export function PagesAdmin() {
 }
 
 /* --------- Categories & Tags (reusable taxonomy) --------- */
+/**
+ * Full CRUD (Add / Edit / Delete) for both real sub-categories ("أساسيات
+ * التمريض" etc.) and tags. Categories created here appear as real, clickable
+ * folder cards inside their parent section on the public site (see
+ * `CategoryPage.tsx`), once an article's `subcategory` field is set to point
+ * at one of these (done from the article editor).
+ */
 function TaxonomyAdmin({ kind }: { kind: "categories" | "tags" }) {
   const store = useStore();
   const { setData, logActivity } = store;
   const { notify } = useToast();
   const items = store[kind] as Taxonomy[];
   const [name, setName] = useState("");
+  const [editingId, setEditingId] = useState<string | null>(null);
   const label = kind === "categories" ? "تصنيف" : "وسم";
 
-  const add = () => {
-    if (!name.trim()) return;
-    const t: Taxonomy = { id: kind[0] + Date.now(), name, slug: slugify(name) };
-    setData((d) => ({ ...d, [kind]: [...(d[kind] as Taxonomy[]), t] }));
-    logActivity(`إضافة ${label}`, name);
-    setName(""); notify(`تم إضافة ${label}`);
+  const startEdit = (t: Taxonomy) => {
+    setEditingId(t.id);
+    setName(t.name);
   };
-  const del = (id: string) => setData((d) => ({ ...d, [kind]: (d[kind] as Taxonomy[]).filter((x) => x.id !== id) }));
+
+  const cancelEdit = () => {
+    setEditingId(null);
+    setName("");
+  };
+
+  const save = () => {
+    if (!name.trim()) return;
+
+    if (editingId) {
+      // --- Edit existing ---
+      setData((d) => ({
+        ...d,
+        [kind]: (d[kind] as Taxonomy[]).map((x) =>
+          x.id === editingId ? { ...x, name: name.trim(), slug: slugify(name) } : x
+        ),
+      }));
+      logActivity(`تعديل ${label}`, name);
+      notify(`تم تعديل ${label}`);
+    } else {
+      // --- Add new ---
+      const t: Taxonomy = { id: kind[0] + Date.now(), name: name.trim(), slug: slugify(name) };
+      setData((d) => ({ ...d, [kind]: [...(d[kind] as Taxonomy[]), t] }));
+      logActivity(`إضافة ${label}`, name);
+      notify(`تم إضافة ${label}`);
+    }
+
+    setName("");
+    setEditingId(null);
+  };
+
+  const del = (id: string) => {
+    if (kind === "categories") {
+      const inUse = (store.articles ?? []).some((a) => a.subcategory === id);
+      if (inUse && !confirm("هذا التصنيف مستخدم في مقالات حالياً. حذفه سيزيل الربط من هذه المقالات (لن تُحذف المقالات نفسها). متابعة؟")) {
+        return;
+      }
+    }
+    if (editingId === id) cancelEdit();
+    setData((d) => ({ ...d, [kind]: (d[kind] as Taxonomy[]).filter((x) => x.id !== id) }));
+    logActivity(`حذف ${label}`, id);
+    notify(`تم حذف ${label}`);
+  };
 
   return (
     <div className="max-w-2xl space-y-4">
       <div className="flex gap-2">
-        <input value={name} onChange={(e) => setName(e.target.value)} placeholder={`اسم ${label} جديد`} className={inp} />
-        <button onClick={add} className="rounded-lg bg-sky-500 px-6 font-bold text-white">إضافة</button>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && save()}
+          placeholder={editingId ? `تعديل اسم ${label}` : `اسم ${label} جديد`}
+          className={inp}
+        />
+        <button onClick={save} className="shrink-0 rounded-lg bg-sky-500 px-6 font-bold text-white">
+          {editingId ? "💾 حفظ" : "➕ إضافة"}
+        </button>
+        {editingId && (
+          <button onClick={cancelEdit} className="shrink-0 rounded-lg border border-slate-200 px-4 text-sm font-bold dark:border-slate-700 dark:text-white">
+            إلغاء
+          </button>
+        )}
       </div>
+
+      {kind === "categories" && (
+        <p className="rounded-lg bg-sky-50 p-2 text-xs text-sky-600 dark:bg-sky-500/10">
+          💡 كل تصنيف هنا يظهر كفولدر حقيقي قابل للضغط داخل قسم "المقالات" على الموقع.
+          لربط مقال بتصنيف، افتح المقال من محرر المقالات واختر "التصنيف الفرعي".
+        </p>
+      )}
+
       <div className="flex flex-wrap gap-2">
-        {items.map((t) => (
-          <span key={t.id} className="flex items-center gap-2 rounded-full bg-slate-100 py-1.5 pr-3 pl-2 dark:bg-slate-800">
-            <span className="text-sm font-semibold dark:text-white">{t.name}</span>
-            <button onClick={() => del(t.id)} className="flex h-5 w-5 items-center justify-center rounded-full bg-red-100 text-xs text-red-600 dark:bg-red-500/10">✕</button>
-          </span>
-        ))}
+        {items.map((t) => {
+          const count = kind === "categories" ? (store.articles ?? []).filter((a) => a.subcategory === t.id).length : undefined;
+          return (
+            <span
+              key={t.id}
+              className={`flex items-center gap-2 rounded-full py-1.5 pr-3 pl-2 ${editingId === t.id ? "bg-sky-100 dark:bg-sky-500/20" : "bg-slate-100 dark:bg-slate-800"}`}
+            >
+              <span className="text-sm font-semibold dark:text-white">
+                {t.name}
+                {typeof count === "number" && <span className="ms-1 text-xs font-normal text-slate-400">({count})</span>}
+              </span>
+              <button onClick={() => startEdit(t)} title="تعديل" className="flex h-5 w-5 items-center justify-center rounded-full bg-sky-100 text-xs text-sky-600 dark:bg-sky-500/10">
+                ✎
+              </button>
+              <button onClick={() => del(t.id)} title="حذف" className="flex h-5 w-5 items-center justify-center rounded-full bg-red-100 text-xs text-red-600 dark:bg-red-500/10">
+                ✕
+              </button>
+            </span>
+          );
+        })}
+        {items.length === 0 && <p className="text-sm text-slate-400">لا توجد عناصر بعد.</p>}
       </div>
     </div>
   );

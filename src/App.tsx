@@ -136,6 +136,9 @@ export default function App() {
                 <Routes>
                   <Route path="/" element={<Public><Home /></Public>} />
                   <Route path="/category/:cat" element={<Public><CategoryPage /></Public>} />
+                  {/* Real sub-category "folder" pages, e.g. /category/articles/nursing-fundamentals.
+                      Same component — CategoryPage reads the extra `:sub` param to filter. */}
+                  <Route path="/category/:cat/:sub" element={<Public><CategoryPage /></Public>} />
                   <Route path="/article/:slug" element={<Public><ArticlePage /></Public>} />
                   <Route path="/drugs" element={<Public><DrugsPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />

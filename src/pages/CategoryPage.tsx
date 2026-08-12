@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { CATEGORY_ICONS, type Category } from "../lib/types";
 import { ArticleCard, Breadcrumbs, AdSlot } from "../components/common";
@@ -11,30 +11,86 @@ const CAT_KEY: Record<Category, TKey> = {
 };
 
 export default function CategoryPage() {
-  const { cat } = useParams<{ cat: Category }>();
-  const { articles } = useStore();
+  // `sub` is the real sub-category folder slug (from the `categories` taxonomy),
+  // e.g. /category/articles/nursing-fundamentals
+  const { cat, sub } = useParams<{ cat: Category; sub?: string }>();
+  const { articles, categories } = useStore();
   const { t } = useI18n();
   const [sort, setSort] = useState("latest");
   const [tag, setTag] = useState("");
 
   const category = (cat ?? "articles") as Category;
   const catLabel = t(CAT_KEY[category]);
+
+  // Real, clickable sub-category folders — only ones that actually contain
+  // at least one published article in this section are shown.
+  const subcats = categories.filter((c) =>
+    articles.some((a) => a.category === category && a.status === "published" && a.subcategory === c.id)
+  );
+
+  const activeSub = sub ? categories.find((c) => c.slug === sub) : undefined;
+
   let list = articles.filter((a) => a.category === category && a.status === "published");
+  if (activeSub) list = list.filter((a) => a.subcategory === activeSub.id);
   if (tag) list = list.filter((a) => a.tags.includes(tag));
   list = [...list].sort((a, b) =>
     sort === "popular" ? b.views - a.views : b.publishDate.localeCompare(a.publishDate)
   );
 
-  const tags = Array.from(new Set(articles.filter((a) => a.category === category).flatMap((a) => a.tags)));
+  const tags = Array.from(
+    new Set(
+      articles
+        .filter((a) => a.category === category && (!activeSub || a.subcategory === activeSub.id))
+        .flatMap((a) => a.tags)
+    )
+  );
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
-      <Breadcrumbs items={[{ label: catLabel }]} />
+      <Breadcrumbs
+        items={
+          activeSub
+            ? [{ label: catLabel, path: `/category/${category}` }, { label: activeSub.name }]
+            : [{ label: catLabel }]
+        }
+      />
+
       <div className="mb-6 rounded-3xl bg-gradient-to-l from-sky-500 to-emerald-500 p-8 text-white">
-        <div className="text-5xl">{CATEGORY_ICONS[category]}</div>
-        <h1 className="mt-2 text-3xl font-black">{catLabel}</h1>
+        <div className="text-5xl">{activeSub ? "📁" : CATEGORY_ICONS[category]}</div>
+        <h1 className="mt-2 text-3xl font-black">{activeSub ? activeSub.name : catLabel}</h1>
         <p className="mt-1 text-sky-50">{list.length} {t("common.item")}</p>
       </div>
+
+      {/* Real sub-category folders — shown only at the top level of the section,
+          before the user has drilled into one. Clicking a folder navigates to
+          /category/:cat/:sub and filters the list below by that sub-category. */}
+      {!activeSub && subcats.length > 0 && (
+        <div className="mb-8">
+          <h2 className="mb-3 text-lg font-bold text-slate-800 dark:text-white">التصنيفات الفرعية</h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {subcats.map((c) => {
+              const count = articles.filter(
+                (a) => a.category === category && a.status === "published" && a.subcategory === c.id
+              ).length;
+              return (
+                <Link
+                  key={c.id}
+                  to={`/category/${category}/${c.slug}`}
+                  className="group flex items-center justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+                >
+                  <div>
+                    <div className="font-bold text-slate-800 group-hover:text-sky-600 dark:text-white">
+                      📁 {c.name}
+                    </div>
+                    <div className="text-xs text-slate-400">{count} {t("common.item")}</div>
+                  </div>
+                  <span className="text-slate-300 group-hover:text-sky-500" aria-hidden="true">←</span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap gap-2">
