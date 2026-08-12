@@ -142,7 +142,27 @@ type ABGCaseKey =
   | "fully_comp_resp_alkalosis"
   | "ph_normal_mild";
 
-type ABGResult = { key: ABGCaseKey; color: string } | null;
+type ABGCategory =
+  | "normal"
+  | "respiratory_acidosis"
+  | "metabolic_acidosis"
+  | "mixed_acidosis"
+  | "respiratory_alkalosis"
+  | "metabolic_alkalosis"
+  | "mixed_alkalosis"
+  | "unclear";
+
+type Direction = "up" | "down" | "normal";
+
+type ABGResult =
+  | {
+      key: ABGCaseKey;
+      color: string;
+      category: ABGCategory;
+      severity: "طبيعي" | "خفيفة" | "متوسطة" | "شديدة";
+      directions: { ph: Direction; paco2: Direction; hco3: Direction };
+    }
+  | null;
 
 const ABG_LIBRARY: Record<ABGCaseKey, { primaryEn: string; compEn: string; ar: string }> = {
   normal: {
@@ -227,6 +247,135 @@ const ABG_LIBRARY: Record<ABGCaseKey, { primaryEn: string; compEn: string; ar: s
   },
 };
 
+const CATEGORY_MAP: Record<ABGCaseKey, ABGCategory> = {
+  normal: "normal",
+  resp_acidosis_uncomp: "respiratory_acidosis",
+  resp_acidosis_partial: "respiratory_acidosis",
+  fully_comp_resp_acidosis: "respiratory_acidosis",
+  metabolic_acidosis_uncomp: "metabolic_acidosis",
+  metabolic_acidosis_partial: "metabolic_acidosis",
+  mixed_acidosis: "mixed_acidosis",
+  unclear_acidosis: "unclear",
+  resp_alkalosis_uncomp: "respiratory_alkalosis",
+  resp_alkalosis_partial: "respiratory_alkalosis",
+  fully_comp_resp_alkalosis: "respiratory_alkalosis",
+  metabolic_alkalosis_uncomp: "metabolic_alkalosis",
+  metabolic_alkalosis_partial: "metabolic_alkalosis",
+  mixed_alkalosis: "mixed_alkalosis",
+  unclear_alkalosis: "unclear",
+  ph_normal_mild: "normal",
+};
+
+const CAUSES: Partial<Record<ABGCategory, string[]>> = {
+  respiratory_acidosis: [
+    "تفاقم الانسداد الرئوي المزمن (COPD)",
+    "نقص التهوية (Hypoventilation)",
+    "انسداد المجرى الهوائي",
+    "جرعة زائدة من المهدئات أو الأفيونات",
+    "أمراض عصبية عضلية (Guillain-Barré، الوهن العضلي)",
+    "إصابة الصدر (Flail chest)",
+    "عطل في إعدادات جهاز التنفس الصناعي",
+  ],
+  metabolic_acidosis: [
+    "الحماض الكيتوني السكري (DKA)",
+    "الفشل الكلوي",
+    "الحماض اللبني (تسمم الدم / نقص التروية)",
+    "إسهال شديد",
+    "تسمم بالميثانول أو إيثيلين جلايكول",
+    "حماض الجوع (Starvation ketoacidosis)",
+  ],
+  respiratory_alkalosis: [
+    "القلق أو نوبات الهلع",
+    "الألم الحاد",
+    "نقص الأكسجين (Hypoxemia)",
+    "الحمل",
+    "الإنتان (المرحلة المبكرة)",
+    "فرط تهوية عبر جهاز التنفس الصناعي",
+    "الحمى",
+  ],
+  metabolic_alkalosis: [
+    "قيء شديد أو مستمر / شفط أنفي معدي",
+    "استخدام مدرات البول",
+    "نقص البوتاسيوم",
+    "تناول زائد لمضادات الحموضة أو البيكربونات",
+    "فرط الألدوستيرون",
+  ],
+};
+
+const NURSING: Partial<Record<ABGCategory, string[]>> = {
+  respiratory_acidosis: [
+    "قيّم جهد التنفس",
+    "راقب تشبّع الأكسجين",
+    "راقب مستوى الوعي",
+    "تأكد من سلامة المجرى الهوائي",
+    "استعد لاحتمال دعم التهوية",
+    "أبلغ الطبيب عند التدهور",
+  ],
+  metabolic_acidosis: [
+    "راقب سكر الدم والكيتونات إذا كان DKA محتمل",
+    "راقب اتزان السوائل وكمية البول",
+    "راقب مستوى البوتاسيوم عن قرب (خصوصاً مع الإنسولين)",
+    "راقب مستوى الوعي",
+    "استعد لسوائل وريدية / إنسولين حسب الأوامر الطبية",
+    "راقب العلامات الحيوية عن قرب",
+  ],
+  respiratory_alkalosis: [
+    "قيّم القلق أو الألم وتعامل معه",
+    "راقب تشبّع الأكسجين",
+    "ساعد المريض على تهدئة التنفس إذا كان فرط تهوية",
+    "راقب علامات نقص الكالسيوم (تنميل، تشنج)",
+    "راجع إعدادات جهاز التنفس الصناعي إن وجد",
+  ],
+  metabolic_alkalosis: [
+    "راقب مستوى البوتاسيوم وعوّضه حسب الأوامر",
+    "راقب اتزان السوائل والكهارل",
+    "راقب علامات ضعف العضلات أو اضطراب النظم",
+    "راجع الأدوية (مدرات البول، مضادات الحموضة)",
+    "راقب المدخول والمخرج بدقة",
+  ],
+};
+
+const MEDICAL: Partial<Record<ABGCategory, string[]>> = {
+  respiratory_acidosis: [
+    "قيّم سبب نقص التهوية",
+    "فكّر في إعادة تحليل الغازات",
+    "راجع صورة الصدر إن لزم",
+    "قيّم الحاجة للتهوية غير الباضعة",
+  ],
+  metabolic_acidosis: [
+    "احسب فجوة الأنيونات (Anion Gap)",
+    "حدد السبب الكامن وعالجه",
+    "فكّر في فحص السموم إذا اقتضى الأمر",
+    "راقب اتجاه اللاكتات",
+  ],
+  respiratory_alkalosis: [
+    "حدد سبب فرط التهوية وعالجه",
+    "قيّم وجود نقص أكسجين كامن",
+    "فكّر في تقييم الألم أو القلق",
+    "راجع إعدادات جهاز التنفس الصناعي",
+  ],
+  metabolic_alkalosis: [
+    "حدد السبب الكامن وصححه",
+    "راجع استخدام مدرات البول أو مضادات الحموضة",
+    "راقب الكهارل (بوتاسيوم، كلوريد)",
+    "فكّر في تعويض الكلوريد إذا لزم",
+  ],
+};
+
+function mergedList(table: Partial<Record<ABGCategory, string[]>>, category: ABGCategory): string[] {
+  if (category === "mixed_acidosis") return [...(table.respiratory_acidosis ?? []), ...(table.metabolic_acidosis ?? [])];
+  if (category === "mixed_alkalosis") return [...(table.respiratory_alkalosis ?? []), ...(table.metabolic_alkalosis ?? [])];
+  return table[category] ?? [];
+}
+
+function severityOf(pH: number): "طبيعي" | "خفيفة" | "متوسطة" | "شديدة" {
+  if (pH >= 7.35 && pH <= 7.45) return "طبيعي";
+  const dev = pH < 7.35 ? 7.35 - pH : pH - 7.45;
+  if (dev < 0.05) return "خفيفة";
+  if (dev < 0.15) return "متوسطة";
+  return "شديدة";
+}
+
 function interpretABG(pH: number, paco2: number, hco3: number): ABGResult {
   if (!pH || !paco2 || !hco3) return null;
 
@@ -240,28 +389,41 @@ function interpretABG(pH: number, paco2: number, hco3: number): ABGResult {
   const hco3High = hco3 > 26;
   const hco3Low = hco3 < 22;
 
-  if (phNormal && !co2High && !co2Low && !hco3High && !hco3Low) {
-    return { key: "normal", color: "emerald" };
-  }
+  const directions: { ph: Direction; paco2: Direction; hco3: Direction } = {
+    ph: phLow ? "down" : phHigh ? "up" : "normal",
+    paco2: co2High ? "up" : co2Low ? "down" : "normal",
+    hco3: hco3High ? "up" : hco3Low ? "down" : "normal",
+  };
+  const severity = severityOf(pH);
+
+  const finish = (key: ABGCaseKey, color: string): ABGResult => ({
+    key,
+    color,
+    category: CATEGORY_MAP[key],
+    severity,
+    directions,
+  });
+
+  if (phNormal && !co2High && !co2Low && !hco3High && !hco3Low) return finish("normal", "emerald");
 
   if (phLow) {
-    if (co2High && hco3Low) return { key: "mixed_acidosis", color: "rose" };
-    if (co2High) return { key: hco3High ? "resp_acidosis_partial" : "resp_acidosis_uncomp", color: "rose" };
-    if (hco3Low) return { key: co2Low ? "metabolic_acidosis_partial" : "metabolic_acidosis_uncomp", color: "rose" };
-    return { key: "unclear_acidosis", color: "rose" };
+    if (co2High && hco3Low) return finish("mixed_acidosis", "rose");
+    if (co2High) return finish(hco3High ? "resp_acidosis_partial" : "resp_acidosis_uncomp", "rose");
+    if (hco3Low) return finish(co2Low ? "metabolic_acidosis_partial" : "metabolic_acidosis_uncomp", "rose");
+    return finish("unclear_acidosis", "rose");
   }
 
   if (phHigh) {
-    if (co2Low && hco3High) return { key: "mixed_alkalosis", color: "amber" };
-    if (co2Low) return { key: hco3Low ? "resp_alkalosis_partial" : "resp_alkalosis_uncomp", color: "amber" };
-    if (hco3High) return { key: co2High ? "metabolic_alkalosis_partial" : "metabolic_alkalosis_uncomp", color: "amber" };
-    return { key: "unclear_alkalosis", color: "amber" };
+    if (co2Low && hco3High) return finish("mixed_alkalosis", "amber");
+    if (co2Low) return finish(hco3Low ? "resp_alkalosis_partial" : "resp_alkalosis_uncomp", "amber");
+    if (hco3High) return finish(co2High ? "metabolic_alkalosis_partial" : "metabolic_alkalosis_uncomp", "amber");
+    return finish("unclear_alkalosis", "amber");
   }
 
   // pH normal but CO2/HCO3 abnormal
-  if (co2High && hco3High) return { key: "fully_comp_resp_acidosis", color: "violet" };
-  if (co2Low && hco3Low) return { key: "fully_comp_resp_alkalosis", color: "violet" };
-  return { key: "ph_normal_mild", color: "violet" };
+  if (co2High && hco3High) return finish("fully_comp_resp_acidosis", "violet");
+  if (co2Low && hco3Low) return finish("fully_comp_resp_alkalosis", "violet");
+  return finish("ph_normal_mild", "violet");
 }
 
 function ABGInterpreter() {
@@ -340,15 +502,64 @@ function ABGInterpreter() {
       </button>
 
       {result && (
-        <div className={`mt-4 rounded-xl p-4 ${colorClasses[result.color]}`}>
-          <div className="text-lg font-black" dir="ltr">{ABG_LIBRARY[result.key].primaryEn}</div>
-          <div className="mt-1 text-sm font-semibold" dir="ltr">{ABG_LIBRARY[result.key].compEn}</div>
-          <div className="mt-3 border-t border-current/20 pt-3 text-sm leading-relaxed">{ABG_LIBRARY[result.key].ar}</div>
-          <div className="mt-2 text-xs opacity-70">
+        <div className="mt-4 space-y-3">
+          <div className={`rounded-xl p-4 ${colorClasses[result.color]}`}>
+            <div className="text-lg font-black" dir="ltr">{ABG_LIBRARY[result.key].primaryEn}</div>
+            <div className="mt-1 text-sm font-semibold" dir="ltr">{ABG_LIBRARY[result.key].compEn}</div>
+            <div className="mt-3 border-t border-current/20 pt-3 text-sm leading-relaxed">{ABG_LIBRARY[result.key].ar}</div>
+            <div className="mt-3 grid grid-cols-3 gap-2 border-t border-current/20 pt-3 text-center">
+              {(["hco3", "paco2", "ph"] as const).map((k) => (
+                <div key={k}>
+                  <div className="text-xs font-bold uppercase opacity-70">{k === "ph" ? "pH" : k === "paco2" ? "PaCO2" : "HCO3"}</div>
+                  <div className="text-xl">{result.directions[k] === "up" ? "↑" : result.directions[k] === "down" ? "↓" : "→"}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            <div className="rounded-xl border border-slate-200 p-3 text-center dark:border-slate-700">
+              <div className={lbl}>الشدة</div>
+              <div className="font-bold dark:text-white">{result.severity}</div>
+            </div>
+            <div className="rounded-xl border border-slate-200 p-3 text-center dark:border-slate-700">
+              <div className={lbl}>التعويض</div>
+              <div className="font-bold dark:text-white" dir="ltr">{ABG_LIBRARY[result.key].compEn}</div>
+            </div>
+          </div>
+
+          {mergedList(CAUSES, result.category).length > 0 && (
+            <div className="rounded-xl border border-slate-200 p-4 dark:border-slate-700">
+              <div className="mb-2 font-bold dark:text-white">🔍 الأسباب المحتملة</div>
+              <ul className="list-inside list-disc space-y-1 text-sm text-slate-600 dark:text-slate-300">
+                {mergedList(CAUSES, result.category).map((c) => <li key={c}>{c}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {mergedList(NURSING, result.category).length > 0 && (
+            <div className="rounded-xl border border-emerald-200 bg-emerald-50/50 p-4 dark:border-emerald-800 dark:bg-emerald-500/5">
+              <div className="mb-2 font-bold text-emerald-700 dark:text-emerald-300">💚 توجيهات تمريضية</div>
+              <ul className="space-y-1 text-sm text-slate-700 dark:text-slate-300">
+                {mergedList(NURSING, result.category).map((c) => <li key={c}>✔ {c}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {mergedList(MEDICAL, result.category).length > 0 && (
+            <div className="rounded-xl border border-slate-200 p-4 dark:border-slate-700">
+              <div className="mb-2 font-bold dark:text-white">🩺 توجيهات طبية عامة</div>
+              <ul className="list-inside list-disc space-y-1 text-sm text-slate-600 dark:text-slate-300">
+                {mergedList(MEDICAL, result.category).map((c) => <li key={c}>{c}</li>)}
+              </ul>
+            </div>
+          )}
+
+          <div className="text-xs opacity-70">
             للغرض التعليمي فقط، بناءً على القيم الأساسية — يعتمد على السياق السريري الكامل للمريض ولا يغني عن تقييم الطبيب.
           </div>
           {(sao2 || pao2 || lactate) && (
-            <div className="mt-2 border-t border-current/20 pt-2 text-xs opacity-80" dir="ltr">
+            <div className="text-xs opacity-80" dir="ltr">
               {sao2 && <>SaO2: {sao2}% </>}
               {pao2 && <>· PaO2: {pao2} </>}
               {lactate && <>· Lactate: {lactate}</>}
