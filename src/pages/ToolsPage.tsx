@@ -124,6 +124,242 @@ function PediatricDose() {
   );
 }
 
+type ABGCaseKey =
+  | "normal"
+  | "resp_acidosis_uncomp"
+  | "resp_acidosis_partial"
+  | "metabolic_acidosis_uncomp"
+  | "metabolic_acidosis_partial"
+  | "mixed_acidosis"
+  | "unclear_acidosis"
+  | "resp_alkalosis_uncomp"
+  | "resp_alkalosis_partial"
+  | "metabolic_alkalosis_uncomp"
+  | "metabolic_alkalosis_partial"
+  | "mixed_alkalosis"
+  | "unclear_alkalosis"
+  | "fully_comp_resp_acidosis"
+  | "fully_comp_resp_alkalosis"
+  | "ph_normal_mild";
+
+type ABGResult = { key: ABGCaseKey; color: string } | null;
+
+const ABG_LIBRARY: Record<ABGCaseKey, { primaryEn: string; compEn: string; ar: string }> = {
+  normal: {
+    primaryEn: "Normal acid-base balance",
+    compEn: "No disturbance",
+    ar: "كل القيم ضمن المعدل الطبيعي. لا يوجد اضطراب في التوازن الحمضي القاعدي.",
+  },
+  resp_acidosis_uncomp: {
+    primaryEn: "Respiratory Acidosis",
+    compEn: "Uncompensated",
+    ar: "PaCO2 مرتفع وHCO3 لسه طبيعي، يعني الرئة مش بتتخلص من ثاني أكسيد الكربون بكفاءة (زي في حالات كبت التنفس أو انسداد مجرى الهواء)، والكلى لسه محتاجة وقت (أيام) عشان تعوّض عن طريق رفع HCO3.",
+  },
+  resp_acidosis_partial: {
+    primaryEn: "Respiratory Acidosis",
+    compEn: "Partially compensated (kidneys retaining HCO3)",
+    ar: "PaCO2 مرتفع وHCO3 بدأ يرتفع هو كمان، ده معناه إن الكلى بدأت تعوّض عن طريق الاحتفاظ بالبيكربونات، لكن الـpH لسه مش رجع للطبيعي بالكامل.",
+  },
+  metabolic_acidosis_uncomp: {
+    primaryEn: "Metabolic Acidosis",
+    compEn: "Uncompensated",
+    ar: "HCO3 منخفض وPaCO2 لسه طبيعي، يعني في زيادة أحماض أو فقدان بيكربونات (زي DKA أو الفشل الكلوي أو الإسهال)، والرئة لسه محتاجة تبدأ تعوّض عن طريق زيادة معدل التنفس.",
+  },
+  metabolic_acidosis_partial: {
+    primaryEn: "Metabolic Acidosis",
+    compEn: "Partially compensated (respiratory drive lowering PaCO2)",
+    ar: "HCO3 منخفض وPaCO2 بدأ ينخفض هو كمان، ده معناه إن المريض بدأ يتنفس بسرعة (hyperventilation) عشان يقلل ثاني أكسيد الكربون ويعوّض عن الحماض الاستقلابي، لكن الـpH لسه مش رجع للطبيعي بالكامل.",
+  },
+  mixed_acidosis: {
+    primaryEn: "Mixed Respiratory + Metabolic Acidosis",
+    compEn: "Two primary disorders — not simple compensation",
+    ar: "PaCO2 مرتفع وHCO3 منخفض في نفس الوقت. ده مش تعويض — ده اضطرابين أساسيين مع بعض (مثلاً توقف قلب أو فشل تنفسي شديد مصحوب بحماض استقلابي). محتاج تقييم سريري شامل فورًا.",
+  },
+  unclear_acidosis: {
+    primaryEn: "Acidosis — cause unclear from core values alone",
+    compEn: "Needs further data (anion gap, lactate, clinical context)",
+    ar: "الـpH منخفض لكن PaCO2 وHCO3 مش واضح إنهم السبب المباشر من القيم المدخلة. محتاج قيم إضافية زي فجوة الأنيونات (anion gap) أو اللاكتات لتحديد السبب بدقة.",
+  },
+  resp_alkalosis_uncomp: {
+    primaryEn: "Respiratory Alkalosis",
+    compEn: "Uncompensated",
+    ar: "PaCO2 منخفض وHCO3 لسه طبيعي، يعني المريض بيتنفس بسرعة زيادة عن اللازم (زي القلق أو الألم أو نقص الأكسجين)، والكلى لسه محتاجة وقت عشان تعوّض عن طريق طرح البيكربونات.",
+  },
+  resp_alkalosis_partial: {
+    primaryEn: "Respiratory Alkalosis",
+    compEn: "Partially compensated (kidneys excreting HCO3)",
+    ar: "PaCO2 منخفض وHCO3 بدأ ينخفض هو كمان، ده معناه إن الكلى بدأت تعوّض عن طريق طرح البيكربونات، لكن الـpH لسه مش رجع للطبيعي بالكامل.",
+  },
+  metabolic_alkalosis_uncomp: {
+    primaryEn: "Metabolic Alkalosis",
+    compEn: "Uncompensated",
+    ar: "HCO3 مرتفع وPaCO2 لسه طبيعي، يعني في فقدان أحماض أو زيادة قواعد (زي القيء الشديد أو مدرات البول أو نقص البوتاسيوم)، والرئة لسه محتاجة تبدأ تعوّض عن طريق إبطاء التنفس.",
+  },
+  metabolic_alkalosis_partial: {
+    primaryEn: "Metabolic Alkalosis",
+    compEn: "Partially compensated (respiratory drive raising PaCO2)",
+    ar: "HCO3 مرتفع وPaCO2 بدأ يرتفع هو كمان، ده معناه إن الجسم بدأ يبطّئ التنفس عشان يحتفظ بثاني أكسيد الكربون ويعوّض عن القلاء الاستقلابي، لكن الـpH لسه مش رجع للطبيعي بالكامل.",
+  },
+  mixed_alkalosis: {
+    primaryEn: "Mixed Respiratory + Metabolic Alkalosis",
+    compEn: "Two primary disorders — not simple compensation",
+    ar: "PaCO2 منخفض وHCO3 مرتفع في نفس الوقت. ده مش تعويض — ده اضطرابين أساسيين مع بعض (مثلاً فرط تنفس مصحوب بقيء شديد). محتاج تقييم سريري شامل فورًا.",
+  },
+  unclear_alkalosis: {
+    primaryEn: "Alkalosis — cause unclear from core values alone",
+    compEn: "Needs further data (clinical context)",
+    ar: "الـpH مرتفع لكن PaCO2 وHCO3 مش واضح إنهم السبب المباشر من القيم المدخلة. راجع السياق السريري الكامل للمريض.",
+  },
+  fully_comp_resp_acidosis: {
+    primaryEn: "Fully Compensated Respiratory Acidosis (or compensated Metabolic Alkalosis)",
+    compEn: "pH normal, PaCO2 high, HCO3 high",
+    ar: "الـpH رجع طبيعي، لكن PaCO2 وHCO3 لسه مرتفعين مع بعض. ده معناه إن الجسم عوّض بالكامل — الأرجح إنه حماض تنفسي مزمن (زي مريض COPD مستقر) والكلى عوّضت بالكامل برفع البيكربونات على مدار أيام.",
+  },
+  fully_comp_resp_alkalosis: {
+    primaryEn: "Fully Compensated Respiratory Alkalosis (or compensated Metabolic Acidosis)",
+    compEn: "pH normal, PaCO2 low, HCO3 low",
+    ar: "الـpH رجع طبيعي، لكن PaCO2 وHCO3 لسه منخفضين مع بعض. ده معناه إن الجسم عوّض بالكامل — يحتاج مراجعة الاتجاه العام والتاريخ المرضي لتحديد هل الأصل تنفسي أو استقلابي.",
+  },
+  ph_normal_mild: {
+    primaryEn: "pH normal with a mild isolated abnormality",
+    compEn: "Monitor trend",
+    ar: "الـpH طبيعي لكن في قيمة واحدة بس (إما PaCO2 أو HCO3) طالعة خارج المعدل الطبيعي. راقب الاتجاه العام للقيم بمرور الوقت وربطها بحالة المريض السريرية.",
+  },
+};
+
+function interpretABG(pH: number, paco2: number, hco3: number): ABGResult {
+  if (!pH || !paco2 || !hco3) return null;
+
+  const phLow = pH < 7.35;
+  const phHigh = pH > 7.45;
+  const phNormal = !phLow && !phHigh;
+
+  const co2High = paco2 > 45;
+  const co2Low = paco2 < 35;
+
+  const hco3High = hco3 > 26;
+  const hco3Low = hco3 < 22;
+
+  if (phNormal && !co2High && !co2Low && !hco3High && !hco3Low) {
+    return { key: "normal", color: "emerald" };
+  }
+
+  if (phLow) {
+    if (co2High && hco3Low) return { key: "mixed_acidosis", color: "rose" };
+    if (co2High) return { key: hco3High ? "resp_acidosis_partial" : "resp_acidosis_uncomp", color: "rose" };
+    if (hco3Low) return { key: co2Low ? "metabolic_acidosis_partial" : "metabolic_acidosis_uncomp", color: "rose" };
+    return { key: "unclear_acidosis", color: "rose" };
+  }
+
+  if (phHigh) {
+    if (co2Low && hco3High) return { key: "mixed_alkalosis", color: "amber" };
+    if (co2Low) return { key: hco3Low ? "resp_alkalosis_partial" : "resp_alkalosis_uncomp", color: "amber" };
+    if (hco3High) return { key: co2High ? "metabolic_alkalosis_partial" : "metabolic_alkalosis_uncomp", color: "amber" };
+    return { key: "unclear_alkalosis", color: "amber" };
+  }
+
+  // pH normal but CO2/HCO3 abnormal
+  if (co2High && hco3High) return { key: "fully_comp_resp_acidosis", color: "violet" };
+  if (co2Low && hco3Low) return { key: "fully_comp_resp_alkalosis", color: "violet" };
+  return { key: "ph_normal_mild", color: "violet" };
+}
+
+function ABGInterpreter() {
+  const [pH, setPH] = useState("");
+  const [paco2, setPaco2] = useState("");
+  const [hco3, setHco3] = useState("");
+  const [sao2, setSao2] = useState("");
+  const [pao2, setPao2] = useState("");
+  const [lactate, setLactate] = useState("");
+  const [showOptional, setShowOptional] = useState(false);
+  const [result, setResult] = useState<ABGResult>(null);
+
+  const run = () => {
+    setResult(interpretABG(Number(pH), Number(paco2), Number(hco3)));
+  };
+
+  const colorClasses: Record<string, string> = {
+    emerald: "bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300",
+    rose: "bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-300",
+    amber: "bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300",
+    violet: "bg-violet-50 text-violet-700 dark:bg-violet-500/10 dark:text-violet-300",
+    sky: "bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300",
+  };
+
+  return (
+    <Card title="مفسّر غازات الدم (ABG)" icon="🫁">
+      <div className="mb-4 rounded-xl bg-amber-50 p-3 text-xs text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">
+        أداة تعليمية للمساعدة فقط وليست تشخيصاً طبياً. يجب تفسير النتيجة ضمن السياق السريري للمريض ولا تغني عن تقييم الطبيب.
+      </div>
+
+      <div className="mb-3 grid grid-cols-2 gap-3">
+        <div>
+          <label className={lbl}>PaCO2</label>
+          <input className={inp} type="number" step="0.1" value={paco2} onChange={(e) => setPaco2(e.target.value)} placeholder="40" />
+        </div>
+        <div>
+          <label className={lbl}>pH</label>
+          <input className={inp} type="number" step="0.01" value={pH} onChange={(e) => setPH(e.target.value)} placeholder="7.40" />
+        </div>
+      </div>
+      <div className="mb-3">
+        <label className={lbl}>HCO3</label>
+        <input className={inp} type="number" step="0.1" value={hco3} onChange={(e) => setHco3(e.target.value)} placeholder="24" />
+      </div>
+
+      <button type="button" onClick={() => setShowOptional((s) => !s)} className="mb-3 text-sm font-bold text-sky-600 dark:text-sky-400">
+        {showOptional ? "− إخفاء القيم الاختيارية" : "+ قيم اختيارية"}
+      </button>
+
+      {showOptional && (
+        <div className="mb-3 space-y-3">
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className={lbl}>% SaO2</label>
+              <input className={inp} type="number" value={sao2} onChange={(e) => setSao2(e.target.value)} placeholder="—" />
+            </div>
+            <div>
+              <label className={lbl}>PaO2</label>
+              <input className={inp} type="number" value={pao2} onChange={(e) => setPao2(e.target.value)} placeholder="—" />
+            </div>
+          </div>
+          <div>
+            <label className={lbl}>Lactate</label>
+            <input className={inp} type="number" value={lactate} onChange={(e) => setLactate(e.target.value)} placeholder="—" />
+          </div>
+        </div>
+      )}
+
+      <button
+        type="button"
+        onClick={run}
+        disabled={!pH || !paco2 || !hco3}
+        className="w-full rounded-xl bg-sky-600 py-3 font-bold text-white disabled:opacity-40"
+      >
+        🔬 تفسير غازات الدم
+      </button>
+
+      {result && (
+        <div className={`mt-4 rounded-xl p-4 ${colorClasses[result.color]}`}>
+          <div className="text-lg font-black" dir="ltr">{ABG_LIBRARY[result.key].primaryEn}</div>
+          <div className="mt-1 text-sm font-semibold" dir="ltr">{ABG_LIBRARY[result.key].compEn}</div>
+          <div className="mt-3 border-t border-current/20 pt-3 text-sm leading-relaxed">{ABG_LIBRARY[result.key].ar}</div>
+          <div className="mt-2 text-xs opacity-70">
+            للغرض التعليمي فقط، بناءً على القيم الأساسية — يعتمد على السياق السريري الكامل للمريض ولا يغني عن تقييم الطبيب.
+          </div>
+          {(sao2 || pao2 || lactate) && (
+            <div className="mt-2 border-t border-current/20 pt-2 text-xs opacity-80" dir="ltr">
+              {sao2 && <>SaO2: {sao2}% </>}
+              {pao2 && <>· PaO2: {pao2} </>}
+              {lactate && <>· Lactate: {lactate}</>}
+            </div>
+          )}
+        </div>
+      )}
+    </Card>
+  );
+}
+
 const doseUnits = [
   { key: "mcg/kg/min", label: "mcg/kg/min" },
   { key: "mcg/kg/hr", label: "mcg/kg/hr" },
@@ -320,7 +556,7 @@ export default function ToolsPage() {
         <p className="mt-2 text-slate-500 dark:text-slate-400">{t("tools.sub")}</p>
       </div>
       <div className="grid gap-6 lg:grid-cols-2">
-        <BMI /><IVDrip /><Dosage /><FluidBalance /><Pregnancy /><GCS /><PediatricDose /><DoseRateCalculator />
+        <BMI /><IVDrip /><Dosage /><FluidBalance /><Pregnancy /><GCS /><PediatricDose /><DoseRateCalculator /><ABGInterpreter />
         <div className="lg:col-span-2"><AIAssistant /></div>
       </div>
     </div>
