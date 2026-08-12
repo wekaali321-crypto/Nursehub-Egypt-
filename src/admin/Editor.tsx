@@ -110,7 +110,7 @@ function ToolBtn({ onClick, children, title, active }: { onClick: () => void; ch
 const Sep = () => <div className="mx-0.5 h-5 w-px bg-slate-200 dark:bg-slate-700" />;
 
 export default function Editor() {
-  const { articles, setData, logActivity, saveVersion, versions, pushNotification } = useStore();
+  const { articles, setData, logActivity, saveVersion, versions, pushNotification, categories } = useStore();
   const { notify } = useToast();
   const nav = useNavigate();
   const [params] = useSearchParams();
@@ -120,6 +120,7 @@ export default function Editor() {
   const [title, setTitle] = useState(editing?.title ?? "");
   const [slug, setSlug] = useState(editing?.slug ?? "");
   const [category, setCategory] = useState<Category>(editing?.category ?? "articles");
+  const [subcategory, setSubcategory] = useState(editing?.subcategory ?? "");
   const [excerpt, setExcerpt] = useState(editing?.excerpt ?? "");
   const [cover, setCover] = useState(editing?.cover ?? "");
   const [tags, setTags] = useState(editing?.tags.join(", ") ?? "");
@@ -380,7 +381,9 @@ export default function Editor() {
     const finalStatus = (forceStatus ?? status) as Article["status"];
     const article: Article = {
       id: editing?.id ?? "a" + Date.now(),
-      title, slug: slug || slugify(title), category, excerpt: excerpt || title,
+      title, slug: slug || slugify(title), category,
+      subcategory: subcategory || undefined,
+      excerpt: excerpt || title,
       content, cover: cover || "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
       tags: tags.split(",").map((t) => t.trim()).filter(Boolean),
       author, status: finalStatus, publishDate,
@@ -668,6 +671,14 @@ export default function Editor() {
             <div className="space-y-3 rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
               <h3 className="font-bold dark:text-white">📋 التفاصيل</h3>
               <div><label className="mb-1 block text-xs font-semibold text-slate-500">القسم</label><select value={category} onChange={(e) => setCategory(e.target.value as Category)} className={input}>{cats.map((c) => <option key={c} value={c}>{CATEGORY_LABELS[c]}</option>)}</select></div>
+              <div>
+                <label className="mb-1 block text-xs font-semibold text-slate-500">التصنيف الفرعي (اختياري)</label>
+                <select value={subcategory} onChange={(e) => setSubcategory(e.target.value)} className={input}>
+                  <option value="">بدون تصنيف فرعي</option>
+                  {categories.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+                </select>
+                <p className="mt-1 text-[11px] text-slate-400">يظهر كفولدر قابل للضغط داخل صفحة القسم. أضف/عدّل التصنيفات من «التصنيفات» في القائمة الجانبية.</p>
+              </div>
               <div><label className="mb-1 block text-xs font-semibold text-slate-500">الرابط (Slug)</label><input value={slug} onChange={(e) => { setSlug(e.target.value); setAutoSlug(false); }} className={input} /></div>
               <div><label className="mb-1 block text-xs font-semibold text-slate-500">الكاتب</label><input value={author} onChange={(e) => setAuthor(e.target.value)} className={input} /></div>
               <div><label className="mb-1 block text-xs font-semibold text-slate-500">الوسوم</label><input value={tags} onChange={(e) => setTags(e.target.value)} className={input} /></div>
