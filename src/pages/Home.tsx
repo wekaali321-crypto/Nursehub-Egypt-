@@ -77,11 +77,15 @@ export default function Home() {
       ? { title: homeSectionMeta[key]?.title || t(arKey as never), subtitle: homeSectionMeta[key]?.subtitle || t(enKey as never) }
       : { title: t(arKey as never), subtitle: t(enKey as never) };
   const published = articles.filter((a) => a.status === "published");
-  const featured = published.filter((a) => a.featured).slice(0, 3);
-  const latest = [...published].sort((a, b) => b.publishDate.localeCompare(a.publishDate)).slice(0, 6);
-  const popular = [...published].sort((a, b) => b.views - a.views).slice(0, 4);
+  // "أحدث المقالات": مقال واحد بس — آخر مقال نُشر على المنصة (الأحدث حسب تاريخ النشر).
+  const latest = [...published].sort((a, b) => b.publishDate.localeCompare(a.publishDate)).slice(0, 1);
+  // "أكثر المقالات قراءة": مقال واحد بس — الأعلى مشاهدات.
+  const popular = [...published].sort((a, b) => b.views - a.views).slice(0, 1);
   const pdfArticles = published.filter((a) => a.category === "books" || a.attachments?.some((x) => x.type === "pdf")).slice(0, 4);
   const visibleCards = [...homeCategories].filter((c) => c.visible).sort((a, b) => a.order - b.order);
+  // "المتجر" على الرئيسية: أحدث منتج اتضاف بس. المنتجات الجديدة بتتحط أول المصفوفة
+  // وقت الإضافة (زي باقي كيانات لوحة التحكم)، فأول عنصر = الأحدث.
+  const latestProduct = products.slice(0, 1);
 
   useSEO({
     title: `${settings.siteName} | ${settings.tagline}`,
@@ -120,12 +124,8 @@ export default function Home() {
     search: <div key="search" />,
     // القسم اللي كان عبارة عن أرقام/إحصائيات تحت الهيرو مباشرة — استبدلناه بصورة/تصميم بدل الأرقام.
     stats: <div key="stats"><StatsAsIllustration /></div>,
-    featured: featured.length > 0 ? (
-      <section key="featured" className="mx-auto max-w-7xl px-4 py-10 md:py-12">
-        <SectionTitle {...meta("featured", "home.featured", "home.featuredSub")} />
-        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">{featured.map((a) => <ArticleCard key={a.id} a={a} />)}</div>
-      </section>
-    ) : <div key="featured" />,
+    // "محتوى مميز" — أُزيل بالكامل من الصفحة الرئيسية بناءً على الطلب.
+    featured: <div key="featured" />,
     // "استكشف الأقسام" — رجّعناها لشكلها الأصلي (كروت التنقل بين الأقسام).
     categories: visibleCards.length > 0 ? (
       <section key="categories" className="bg-slate-100 py-10 dark:bg-slate-900/50 md:py-12">
@@ -200,7 +200,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4">
           <SectionTitle {...meta("store", "home.store", "home.storeSub")} link={{ label: t("home.visitStore"), to: "/store" }} />
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {products.map((p) => (
+            {latestProduct.map((p) => (
               <Link key={p.id} to="/store" className="overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
                 <img src={p.cover} alt={p.title} loading="lazy" className="h-40 w-full object-cover" />
                 <div className="p-4">
