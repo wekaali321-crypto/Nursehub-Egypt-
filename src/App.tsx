@@ -20,6 +20,7 @@ const CategoryPage = lazy(() => import("./pages/CategoryPage"));
 const ArticlePage = lazy(() => import("./pages/ArticlePage"));
 const SearchPage = lazy(() => import("./pages/SearchPage"));
 const ToolsPage = lazy(() => import("./pages/ToolsPage"));
+const ECGPage = lazy(() => import("./pages/ECGPage"));
 const StorePage = lazy(() => import("./pages/StorePage"));
 const MonetizationPage = lazy(() => import("./pages/MonetizationPage"));
 const DrugsPage = lazy(() => import("./pages/DrugsPage"));
@@ -149,6 +150,7 @@ export default function App() {
                   <Route path="/forgot" element={<Public><ForgotPage /></Public>} />
                   <Route path="/search" element={<Public><SearchPage /></Public>} />
                   <Route path="/tools" element={<Public><ToolsPage /></Public>} />
+                  <Route path="/ecg" element={<Public><ECGPage /></Public>} />
                   <Route path="/store" element={<Public><StorePage /></Public>} />
                   <Route path="/checkout" element={<Public><CheckoutPage /></Public>} />
                   <Route path="/order/:invoiceNo" element={<Public><OrderStatusPage /></Public>} />
