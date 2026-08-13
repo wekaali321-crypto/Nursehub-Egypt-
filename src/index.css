@@ -376,3 +376,28 @@ body {
   }
   img, table, .nh-box, .nh-card { break-inside: avoid; }
 }
+
+/* ECG live-monitor animation */
+@keyframes ecg-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-800px); }
+}
+.ecg-trace-group {
+  animation: ecg-scroll linear infinite;
+}
+@keyframes ecg-pulse {
+  0%, 100% { r: 4; opacity: 1; }
+  50% { r: 6; opacity: 0.55; }
+}
+.ecg-cursor-dot {
+  animation: ecg-pulse 1s ease-in-out infinite;
+}
+.ecg-glow-line {
+  filter: drop-shadow(0 0 3px currentColor) drop-shadow(0 0 6px currentColor);
+}
+.ecg-monitor-bg {
+  background-color: #020617;
+  background-image:
+    repeating-linear-gradient(to right, rgba(148,163,184,0.10) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(to bottom, rgba(148,163,184,0.10) 0 1px, transparent 1px 20px);
+}
