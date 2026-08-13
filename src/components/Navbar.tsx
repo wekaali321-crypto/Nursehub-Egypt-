@@ -22,6 +22,7 @@ const PATH_LABELS: Record<string, TKey> = {
   "/category/books": "nav.books",
   "/quizzes": "nav.quizzes",
   "/tools": "nav.tools",
+  "/ecg": "nav.ecg",
   "/store": "nav.store",
 };
 
