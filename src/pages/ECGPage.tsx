@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
@@ -636,7 +636,15 @@ function buildWavePath(kind: WaveKind): string {
   }
 
   if (pts.length === 0) return `M0,${base} L${W},${base}`;
-  return "M" + pts.map(([x, y]) => `${x},${y}`).join(" L");
+  // Sort strictly by x (guards against any out-of-order pushes, e.g. interleaved P/QRS
+  // sequences) and rescale so the pattern spans exactly 0..W. This guarantees the
+  // looped duplicate copy (drawn at translateX(800)) lines up perfectly with no seam,
+  // which was the cause of the overlapping/glitchy look.
+  pts.sort((a, b) => a[0] - b[0]);
+  const lastX = pts[pts.length - 1][0];
+  const scale = lastX > 0 ? W / lastX : 1;
+  const scaled = pts.map(([x, y]) => [x * scale, y] as [number, number]);
+  return "M" + scaled.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(" L");
 }
 
 function ECGWave({ kind, colorClass }: { kind: WaveKind; colorClass: string }) {
@@ -660,9 +668,95 @@ const waveColor: Record<Category, string> = {
   normal: "text-emerald-400",
 };
 
+// ---- Synthesized heart-sound audio (no external audio files needed) ----
+const NO_PULSE_IDS = new Set(["pea", "vf-coarse", "vf-fine", "asystole"]);
+
+function parseApproxBpm(rate: string): number {
+  const nums = rate.match(/\d+(\.\d+)?/g);
+  if (!nums || nums.length === 0) return 80;
+  const values = nums.map(Number);
+  const avg = values.reduce((a, b) => a + b, 0) / values.length;
+  return Math.min(220, Math.max(30, avg));
+}
+
+let sharedAudioCtx: AudioContext | null = null;
+function getAudioCtx(): AudioContext {
+  if (!sharedAudioCtx) {
+    const Ctx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+    sharedAudioCtx = new Ctx();
+  }
+  if (sharedAudioCtx.state === "suspended") sharedAudioCtx.resume();
+  return sharedAudioCtx;
+}
+
+function beep(ctx: AudioContext, time: number, freq: number, duration: number, gainPeak: number) {
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.type = "sine";
+  osc.frequency.setValueAtTime(freq, time);
+  gain.gain.setValueAtTime(0.0001, time);
+  gain.gain.exponentialRampToValueAtTime(gainPeak, time + 0.015);
+  gain.gain.exponentialRampToValueAtTime(0.0001, time + duration);
+  osc.connect(gain).connect(ctx.destination);
+  osc.start(time);
+  osc.stop(time + duration + 0.03);
+}
+
+// S1 ("lub", lower + longer) then S2 ("dub", higher + shorter) within one cardiac cycle
+function scheduleLubDub(ctx: AudioContext, startTime: number, bpm: number) {
+  const cycle = 60 / bpm;
+  beep(ctx, startTime, 90, 0.11, 0.35);
+  beep(ctx, startTime + cycle * 0.32, 130, 0.08, 0.25);
+}
+
+function scheduleAlarmBeep(ctx: AudioContext, time: number) {
+  beep(ctx, time, 880, 0.12, 0.3);
+}
+
 function ECGCard({ p }: { p: ECGPattern }) {
   const [open, setOpen] = useState(false);
+  const [playing, setPlaying] = useState(false);
+  const schedulerRef = useRef<number | null>(null);
+  const noPulse = NO_PULSE_IDS.has(p.id);
   const hasDetails = (p.causes && p.causes.length > 0) || (p.treatment && p.treatment.length > 0);
+
+  useEffect(() => {
+    return () => {
+      if (schedulerRef.current) window.clearInterval(schedulerRef.current);
+    };
+  }, []);
+
+  function stopSound() {
+    if (schedulerRef.current) {
+      window.clearInterval(schedulerRef.current);
+      schedulerRef.current = null;
+    }
+    setPlaying(false);
+  }
+
+  function toggleSound() {
+    if (playing) {
+      stopSound();
+      return;
+    }
+    const ctx = getAudioCtx();
+    if (noPulse) {
+      // brief monitor alarm burst — illustrates that this rhythm has NO real perfusing pulse
+      const now = ctx.currentTime + 0.05;
+      for (let i = 0; i < 4; i++) scheduleAlarmBeep(ctx, now + i * 0.3);
+      setPlaying(true);
+      window.setTimeout(() => setPlaying(false), 1400);
+      return;
+    }
+    const bpm = parseApproxBpm(p.rate);
+    const cycleMs = (60 / bpm) * 1000;
+    scheduleLubDub(ctx, ctx.currentTime + 0.05, bpm);
+    schedulerRef.current = window.setInterval(() => {
+      scheduleLubDub(ctx, ctx.currentTime + 0.02, bpm);
+    }, cycleMs);
+    setPlaying(true);
+  }
+
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
       <div className="mb-2 flex items-center justify-between">
@@ -687,12 +781,23 @@ function ECGCard({ p }: { p: ECGPattern }) {
       <div className="mt-3 flex flex-wrap items-center gap-2">
         {p.needsCPR && <span className="rounded-full bg-rose-50 px-2.5 py-1 text-xs font-bold text-rose-600 dark:bg-rose-500/10 dark:text-rose-300">🫀 CPR</span>}
         {p.shockable && <span className="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-600 dark:bg-amber-500/10 dark:text-amber-300">⚡ Shock</span>}
+        <button
+          type="button"
+          onClick={toggleSound}
+          className={`rounded-full px-2.5 py-1 text-xs font-bold ${playing ? "bg-emerald-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
+        >
+          {noPulse ? (playing ? "🔔 صوت المونيتور..." : "🔔 صوت المونيتور") : playing ? "⏸ إيقاف الصوت" : "🔈 سماع النبض"}
+        </button>
         {hasDetails && (
           <button type="button" onClick={() => setOpen((s) => !s)} className="mr-auto text-xs font-bold text-sky-600 dark:text-sky-400">
             {open ? "− إخفاء الأسباب والعلاج" : "+ الأسباب والعلاج"}
           </button>
         )}
       </div>
+
+      {noPulse && playing && (
+        <div className="mt-2 text-xs font-semibold text-rose-500">🔇 ده صوت إنذار المونيتور بس — الإيقاع ده معندوش نبض حقيقي يتسمع بالسماعة.</div>
+      )}
 
       {open && (
         <div className="mt-3 space-y-3 border-t border-slate-100 pt-3 dark:border-slate-800">
