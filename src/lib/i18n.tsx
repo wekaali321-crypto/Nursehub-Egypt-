@@ -33,6 +33,7 @@ const dict = {
   "nav.books": { ar: "الكتب", en: "Books" },
   "nav.quizzes": { ar: "الاختبارات", en: "Quizzes" },
   "nav.tools": { ar: "الأدوات", en: "Tools" },
+  "nav.ecg": { ar: "مكتبة ECG", en: "ECG Library" },
   "nav.store": { ar: "المتجر", en: "Store" },
   "nav.admin": { ar: "لوحة التحكم", en: "Dashboard" },
   "nav.login": { ar: "تسجيل الدخول", en: "Login" },
