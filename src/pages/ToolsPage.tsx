@@ -2,11 +2,30 @@ import { useState } from "react";
 import { Breadcrumbs } from "../components/common";
 import { useI18n } from "../lib/i18n";
 
-function Card({ title, icon, children }: { title: string; icon: string; children: React.ReactNode }) {
+/**
+ * Accordion-style card: only the tool's title/icon show by default; tapping
+ * the header expands the tool's inputs/results and collapses again on a
+ * second tap. Each card manages its own open state independently, so the
+ * user can have as many or as few tools expanded at once as they like —
+ * this keeps the page short and scannable instead of showing all 9 tools
+ * fully expanded at once.
+ */
+function Card({ title, icon, children, defaultOpen = false }: { title: string; icon: string; children: React.ReactNode; defaultOpen?: boolean }) {
+  const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-      <h3 className="mb-4 flex items-center gap-2 text-lg font-bold dark:text-white"><span className="text-2xl">{icon}</span>{title}</h3>
-      {children}
+    <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm dark:border-slate-800 dark:bg-slate-900">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-2 p-5 text-right"
+      >
+        <span className="flex items-center gap-2 text-lg font-bold dark:text-white">
+          <span className="text-2xl" aria-hidden="true">{icon}</span>{title}
+        </span>
+        <span className={`shrink-0 text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true">▼</span>
+      </button>
+      {open && <div className="px-5 pb-5">{children}</div>}
     </div>
   );
 }
@@ -766,7 +785,7 @@ export default function ToolsPage() {
         <h1 className="text-3xl font-black dark:text-white">{t("tools.title")}</h1>
         <p className="mt-2 text-slate-500 dark:text-slate-400">{t("tools.sub")}</p>
       </div>
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-2">
         <BMI /><IVDrip /><Dosage /><FluidBalance /><Pregnancy /><GCS /><PediatricDose /><DoseRateCalculator /><ABGInterpreter />
         <div className="lg:col-span-2"><AIAssistant /></div>
       </div>
