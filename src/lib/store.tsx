@@ -114,6 +114,7 @@ const defaultMenu = [
   { label: "الكتب", path: "/category/books" },
   { label: "الاختبارات", path: "/quizzes" },
   { label: "الأدوات", path: "/tools" },
+  { label: "مكتبة ECG", path: "/ecg" },
   { label: "المتجر", path: "/store" },
 ];
 
