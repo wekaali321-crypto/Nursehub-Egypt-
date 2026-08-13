@@ -185,6 +185,18 @@ const defaults: DataShape = {
 // keep client-side for now (can be moved to a `site_config` table later).
 const UI_KEY = "nursehub_ui_config_v1";
 
+// Merge helper: keeps everything the visitor's browser already has saved,
+// but auto-appends any brand-new default entries (matched by a unique key)
+// that shipped in the code after their last visit. This means adding a new
+// menu link or homepage section in code shows up for returning visitors
+// without requiring them to clear their browser cache.
+function mergeNewDefaults<T extends Record<string, unknown>>(stored: T[] | undefined, fallback: T[], key: keyof T): T[] {
+  if (!stored) return fallback;
+  const existingKeys = new Set(stored.map((item) => item[key]));
+  const missing = fallback.filter((item) => !existingKeys.has(item[key]));
+  return missing.length > 0 ? [...stored, ...missing] : stored;
+}
+
 function loadPreview(): DataShape {
   // PREVIEW MODE ONLY — used when Supabase env vars are absent.
   try {
@@ -203,7 +215,7 @@ function loadUiConfig(): { homeSections: string[]; menu: { label: string; path: 
       const p = JSON.parse(raw);
       return {
         homeSections: p.homeSections ?? defaultHome,
-        menu: p.menu ?? defaultMenu,
+        menu: mergeNewDefaults(p.menu, defaultMenu, "path"),
         trash: p.trash ?? [],
         versions: p.versions ?? [],
         notifications: p.notifications ?? [],
@@ -211,7 +223,7 @@ function loadUiConfig(): { homeSections: string[]; menu: { label: string; path: 
         attempts: p.attempts ?? [],
         customTypes: p.customTypes ?? seedCustomTypes,
         customEntries: p.customEntries ?? [],
-        homeCategories: p.homeCategories ?? seedHomeCategories,
+        homeCategories: mergeNewDefaults(p.homeCategories, seedHomeCategories, "link"),
         homeSectionMeta: { ...defaultSectionMeta, ...(p.homeSectionMeta ?? {}) },
         dailyViews: p.dailyViews ?? {},
         downloads: p.downloads ?? 0,
