@@ -29,6 +29,7 @@ export const seedHomeCategories: HomeCategory[] = [
   { id: "hc4", title: "المهارات", icon: "🩺", description: "مهارات سريرية عملية", color: "from-amber-500 to-orange-500", order: 3, visible: true, link: "/category/skills", demo: true },
   { id: "hc5", title: "خطط الرعاية", icon: "📋", description: "خطط رعاية تمريضية", color: "from-rose-500 to-pink-500", order: 4, visible: true, link: "/category/careplans", demo: true },
   { id: "hc6", title: "الكتب وPDF", icon: "📖", description: "كتب وملفات قابلة للتحميل", color: "from-cyan-500 to-sky-500", order: 5, visible: true, link: "/category/books", demo: true },
+  { id: "hc7", title: "مكتبة ECG", icon: "🫀", description: "39 نمط تخطيط قلب مصنّف حسب الخطورة", color: "from-rose-600 to-slate-800", order: 6, visible: true, link: "/ecg", demo: false },
 ];
 
 // All seed content here is DEMO data (demo:true) so it can be deleted with one click.
