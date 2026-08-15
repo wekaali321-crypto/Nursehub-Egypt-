@@ -644,7 +644,35 @@ function buildWavePath(kind: WaveKind): string {
   const lastX = pts[pts.length - 1][0];
   const scale = lastX > 0 ? W / lastX : 1;
   const scaled = pts.map(([x, y]) => [x * scale, y] as [number, number]);
-  return "M" + scaled.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(" L");
+
+  // Sawtooth (atrial flutter) must keep its sharp angular "teeth" — that jagged
+  // shape is the whole diagnostic point — so it stays as straight segments.
+  if (kind === "sawtooth") {
+    return "M" + scaled.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(" L");
+  }
+  return catmullRomPath(scaled);
+}
+
+// Draws a smooth curve that passes exactly through every point (Catmull-Rom → cubic
+// Bezier). This rounds P/T-wave humps into proper curves instead of angular zigzags,
+// while still hitting the exact QRS peak coordinates so spikes stay sharp and accurate.
+function catmullRomPath(pts: [number, number][]): string {
+  if (pts.length < 3) {
+    return "M" + pts.map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join(" L");
+  }
+  let d = `M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+  for (let i = 0; i < pts.length - 1; i++) {
+    const p0 = pts[i - 1] ?? pts[i];
+    const p1 = pts[i];
+    const p2 = pts[i + 1];
+    const p3 = pts[i + 2] ?? p2;
+    const cp1x = p1[0] + (p2[0] - p0[0]) / 6;
+    const cp1y = p1[1] + (p2[1] - p0[1]) / 6;
+    const cp2x = p2[0] - (p3[0] - p1[0]) / 6;
+    const cp2y = p2[1] - (p3[1] - p1[1]) / 6;
+    d += ` C${cp1x.toFixed(1)},${cp1y.toFixed(1)} ${cp2x.toFixed(1)},${cp2y.toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+  }
+  return d;
 }
 
 function ECGWave({ kind, colorClass }: { kind: WaveKind; colorClass: string }) {
