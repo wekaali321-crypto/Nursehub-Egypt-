@@ -675,16 +675,95 @@ function catmullRomPath(pts: [number, number][]): string {
   return d;
 }
 
-function ECGWave({ kind, colorClass }: { kind: WaveKind; colorClass: string }) {
-  const d = useMemo(() => buildWavePath(kind), [kind]);
+// A landmark/annotation bracket drawn over (row: "top") or under (row: "bottom") a
+// portion of the wave, positioned as a percentage of the pattern's width (0-100).
+// Used to point out *why* a rhythm looks the way it does (e.g. breathing-linked rate
+// changes in Sinus Arrhythmia), the way printed ECG reference figures do.
+type WaveAnnotation = { label: string; x1: number; x2: number; row: "top" | "bottom" };
+
+// Keyed by pattern id (not wave shape) since the explanation is specific to that
+// clinical pattern. Add more entries here to enable the pause+label behavior for
+// other patterns — patterns with no entry keep scrolling continuously as before.
+const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
+  "sinus-arrhythmia": [
+    { label: "الفترة بين النبضات مش ثابتة", x1: 14, x2: 83, row: "top" },
+    { label: "زفير — المعدل بيقل", x1: 0, x2: 47, row: "bottom" },
+    { label: "شهيق — المعدل بيزيد", x1: 53, x2: 100, row: "bottom" },
+  ],
+};
+
+function AnnotationBracket({ a }: { a: WaveAnnotation }) {
+  const width = a.x2 - a.x1;
   return (
-    <svg viewBox="0 0 800 100" preserveAspectRatio="none" className={`h-20 w-full ${colorClass}`}>
-      <g className="ecg-trace-group" style={{ animationDuration: "3.5s" }}>
-        <path d={d} fill="none" stroke="currentColor" strokeWidth={2.5} vectorEffect="non-scaling-stroke" strokeLinejoin="round" strokeLinecap="round" className="ecg-glow-line" />
-        <path d={d} fill="none" stroke="currentColor" strokeWidth={2.5} vectorEffect="non-scaling-stroke" strokeLinejoin="round" strokeLinecap="round" className="ecg-glow-line" transform="translate(800,0)" />
-      </g>
-      <circle cx="792" cy="50" r="4" fill="currentColor" className="ecg-cursor-dot" />
-    </svg>
+    <div className="absolute top-0 flex flex-col items-center" style={{ left: `${a.x1}%`, width: `${width}%` }}>
+      {a.row === "top" ? (
+        <>
+          <span className="whitespace-nowrap text-[9px] font-bold leading-tight text-slate-500 dark:text-slate-300">{a.label}</span>
+          <span className="mt-0.5 h-1.5 w-full rounded-b border-b-2 border-l-2 border-r-2 border-slate-400 dark:border-slate-500" />
+        </>
+      ) : (
+        <>
+          <span className="h-1.5 w-full rounded-t border-l-2 border-r-2 border-t-2 border-slate-400 dark:border-slate-500" />
+          <span className="mt-0.5 whitespace-nowrap text-[9px] font-bold leading-tight text-slate-500 dark:text-slate-300">{a.label}</span>
+        </>
+      )}
+    </div>
+  );
+}
+
+function ECGWave({ kind, colorClass, annotations }: { kind: WaveKind; colorClass: string; annotations?: WaveAnnotation[] }) {
+  const d = useMemo(() => buildWavePath(kind), [kind]);
+  const groupRef = useRef<SVGGElement | null>(null);
+  const iterationRef = useRef(0);
+  const pauseTimeoutRef = useRef<number | null>(null);
+  const [paused, setPaused] = useState(false);
+  const hasAnnotations = !!annotations && annotations.length > 0;
+
+  // Every 2nd full loop of the scrolling animation, pause it and reveal the
+  // landmark labels for a few seconds so a reader can actually read them, then
+  // resume scrolling. Patterns with no annotations are left running as before.
+  useEffect(() => {
+    if (!hasAnnotations) return;
+    const el = groupRef.current;
+    if (!el) return;
+    const onIteration = () => {
+      iterationRef.current += 1;
+      if (iterationRef.current % 2 === 0) {
+        setPaused(true);
+        pauseTimeoutRef.current = window.setTimeout(() => setPaused(false), 3200);
+      }
+    };
+    el.addEventListener("animationiteration", onIteration);
+    return () => {
+      el.removeEventListener("animationiteration", onIteration);
+      if (pauseTimeoutRef.current) window.clearTimeout(pauseTimeoutRef.current);
+    };
+  }, [hasAnnotations]);
+
+  return (
+    <div className="relative">
+      {hasAnnotations && (
+        <div className="relative h-5 transition-opacity duration-300" style={{ opacity: paused ? 1 : 0 }}>
+          {annotations!.filter((a) => a.row === "top").map((a, idx) => <AnnotationBracket key={idx} a={a} />)}
+        </div>
+      )}
+      <svg viewBox="0 0 800 100" preserveAspectRatio="none" className={`h-20 w-full ${colorClass}`}>
+        <g
+          ref={groupRef}
+          className="ecg-trace-group"
+          style={{ animationDuration: "3.5s", animationPlayState: paused ? "paused" : "running" }}
+        >
+          <path d={d} fill="none" stroke="currentColor" strokeWidth={2.5} vectorEffect="non-scaling-stroke" strokeLinejoin="round" strokeLinecap="round" className="ecg-glow-line" />
+          <path d={d} fill="none" stroke="currentColor" strokeWidth={2.5} vectorEffect="non-scaling-stroke" strokeLinejoin="round" strokeLinecap="round" className="ecg-glow-line" transform="translate(800,0)" />
+        </g>
+        {!paused && <circle cx="792" cy="50" r="4" fill="currentColor" className="ecg-cursor-dot" />}
+      </svg>
+      {hasAnnotations && (
+        <div className="relative h-5 transition-opacity duration-300" style={{ opacity: paused ? 1 : 0 }}>
+          {annotations!.filter((a) => a.row === "bottom").map((a, idx) => <AnnotationBracket key={idx} a={a} />)}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -795,7 +874,7 @@ function ECGCard({ p }: { p: ECGPattern }) {
       <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">{p.nameAr}</p>
 
       <div className="my-3 rounded-lg ecg-monitor-bg p-2">
-        <ECGWave kind={p.wave} colorClass={waveColor[p.category]} />
+        <ECGWave kind={p.wave} colorClass={waveColor[p.category]} annotations={PATTERN_ANNOTATIONS[p.id]} />
       </div>
 
       <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">{p.desc}</p>
