@@ -715,10 +715,12 @@ type WaveAnnotation =
   | { kind: "arrow"; label?: string; x: number; row: "top" | "bottom" };
 
 // Shared by both AFib patterns (afib-rvr / afib-controlled) since they render the
-// same "narrow-irregular" wave shape. x values are the exact scaled R-peak positions
-// for that wave's fixed width sequence (see buildWavePath, case "narrow-irregular"),
-// measured from the user's reference figure — arrows on the first 9 peaks (matching
-// that figure), the remaining repeat-cycle beats left unmarked like it too.
+// same "narrow-irregular" wave shape. Top-row x values are the exact scaled R-peak
+// positions; bottom-row x values are the exact scaled S-wave-notch positions — both
+// read directly off the wave's own point math (buildWavePath, case "narrow-irregular"),
+// not approximated, so they always land exactly where they should regardless of any
+// future tweak to the QRS shape. Arrows on the first 9 beats (matching the user's
+// reference figure), the remaining repeat-cycle beats left unmarked like it too.
 const AFIB_ANNOTATIONS: WaveAnnotation[] = [
   { kind: "arrow", x: 2.16, row: "top" },
   { kind: "arrow", x: 11.06, row: "top" },
@@ -729,7 +731,15 @@ const AFIB_ANNOTATIONS: WaveAnnotation[] = [
   { kind: "arrow", x: 50.93, row: "top" },
   { kind: "arrow", x: 57.62, row: "top" },
   { kind: "arrow", x: 63.91, row: "top" },
-  { kind: "bracket", label: "بدون موجة P — والمسافة بين النبضات مش ثابتة", x1: 3, x2: 97, row: "bottom" },
+  { kind: "arrow", label: "بدون موجة P", x: 2.34, row: "bottom" },
+  { kind: "arrow", x: 11.21, row: "bottom" },
+  { kind: "arrow", x: 18.3, row: "bottom" },
+  { kind: "arrow", x: 25.53, row: "bottom" },
+  { kind: "arrow", x: 35.14, row: "bottom" },
+  { kind: "arrow", x: 43.3, row: "bottom" },
+  { kind: "arrow", x: 51.07, row: "bottom" },
+  { kind: "arrow", x: 57.74, row: "bottom" },
+  { kind: "arrow", x: 64.06, row: "bottom" },
 ];
 
 // Keyed by pattern id (not wave shape) since the explanation is specific to that
