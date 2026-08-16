@@ -302,18 +302,22 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "narrow-irregular": {
-      // irregularly-irregular narrow QRS complexes with no P wave (AFib / MAT-shared shape),
-      // plus a small chaotic baseline wobble between beats standing in for fibrillatory f-waves
+      // irregularly-irregular narrow QRS complexes with no P wave (AFib / MAT-shared shape).
+      // Widths are a fixed, hand-picked sequence (not the pr() hash, which produces
+      // near-uniform spacing for small sequential seeds) so the irregularity is clearly
+      // visible — and so the AFib arrow annotations below can reference these same
+      // numbers and land exactly on the peaks every time.
+      const widths = [58, 74, 52, 68, 60, 78, 48, 66, 58, 72, 54, 68];
       let x = 0;
       let i = 0;
       while (x < W) {
-        const width = 30 + pr(i) * 35;
+        const width = widths[i % widths.length];
         push(x, base + (pr(i + 50) - 0.5) * 6);
         push(x + width * 0.4, base - 30);
         push(x + width * 0.55, base + 8);
-        push(x + width * 0.68, base + (pr(i + 70) - 0.5) * 7);
-        push(x + width * 0.8, base + (pr(i + 80) - 0.5) * 7);
-        push(x + width * 0.92, base + (pr(i + 90) - 0.5) * 7);
+        push(x + width * 0.68, base + (pr(i + 70) - 0.5) * 9);
+        push(x + width * 0.8, base + (pr(i + 80) - 0.5) * 9);
+        push(x + width * 0.92, base + (pr(i + 90) - 0.5) * 9);
         push(x + width, base + (pr(i + 60) - 0.5) * 6);
         x += width;
         i++;
@@ -709,17 +713,23 @@ type WaveAnnotation =
   | { kind: "arrow"; label?: string; x: number; row: "top" | "bottom" };
 
 // Shared by both AFib patterns (afib-rvr / afib-controlled) since they render the
-// same "narrow-irregular" wave shape and randomized R-peak spacing.
+// same "narrow-irregular" wave shape. x values are the exact scaled R-peak positions
+// for that wave's fixed width sequence (see buildWavePath, case "narrow-irregular"),
+// so the arrows always land precisely on the peaks — not an approximation.
 const AFIB_ANNOTATIONS: WaveAnnotation[] = [
-  { kind: "arrow", x: 1.4, row: "top" },
-  { kind: "arrow", x: 12.6, row: "top" },
-  { kind: "arrow", x: 23, row: "top" },
-  { kind: "arrow", x: 34.1, row: "top" },
-  { kind: "arrow", x: 44.2, row: "top" },
-  { kind: "arrow", x: 56.1, row: "top" },
-  { kind: "arrow", x: 69.6, row: "top" },
-  { kind: "arrow", x: 82.8, row: "top" },
-  { kind: "arrow", x: 95.5, row: "top" },
+  { kind: "arrow", x: 2.85, row: "top" },
+  { kind: "arrow", x: 10.76, row: "top" },
+  { kind: "arrow", x: 18.77, row: "top" },
+  { kind: "arrow", x: 25.95, row: "top" },
+  { kind: "arrow", x: 33.91, row: "top" },
+  { kind: "arrow", x: 42.16, row: "top" },
+  { kind: "arrow", x: 50.27, row: "top" },
+  { kind: "arrow", x: 57.05, row: "top" },
+  { kind: "arrow", x: 64.77, row: "top" },
+  { kind: "arrow", x: 72.58, row: "top" },
+  { kind: "arrow", x: 80.54, row: "top" },
+  { kind: "arrow", x: 87.86, row: "top" },
+  { kind: "arrow", x: 95.72, row: "top" },
   { kind: "bracket", label: "بدون موجة P — والمسافة بين النبضات مش ثابتة", x1: 3, x2: 97, row: "bottom" },
 ];
 
@@ -813,14 +823,17 @@ function ECGWave({ kind, colorClass, annotations }: { kind: WaveKind; colorClass
         </div>
       )}
       <svg viewBox="0 0 800 100" preserveAspectRatio="none" className={`h-20 w-full ${colorClass}`}>
-        <g
-          ref={groupRef}
-          className="ecg-trace-group"
-          style={{ animationDuration: "3.5s", animationPlayState: paused ? "paused" : "running" }}
-        >
+        <g ref={groupRef} className="ecg-trace-group" style={{ animationDuration: "3.5s", opacity: paused ? 0 : 1 }}>
           <path d={d} fill="none" stroke="currentColor" strokeWidth={2.5} vectorEffect="non-scaling-stroke" strokeLinejoin="round" strokeLinecap="round" className="ecg-glow-line" />
           <path d={d} fill="none" stroke="currentColor" strokeWidth={2.5} vectorEffect="non-scaling-stroke" strokeLinejoin="round" strokeLinecap="round" className="ecg-glow-line" transform="translate(800,0)" />
         </g>
+        {/* Static, exactly-aligned single frame shown only while paused — the live
+            animation above is hidden (not stopped) here rather than having its CSS
+            animation paused mid-scroll, which used to freeze on a drifted offset and
+            throw off every annotation position relative to the actual peaks. */}
+        {paused && (
+          <path d={d} fill="none" stroke="currentColor" strokeWidth={2.5} vectorEffect="non-scaling-stroke" strokeLinejoin="round" strokeLinecap="round" className="ecg-glow-line" />
+        )}
         {!paused && <circle cx="792" cy="50" r="4" fill="currentColor" className="ecg-cursor-dot" />}
       </svg>
       {hasAnnotations && (
