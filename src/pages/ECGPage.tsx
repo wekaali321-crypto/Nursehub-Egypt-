@@ -303,22 +303,19 @@ function buildWavePath(kind: WaveKind): string {
     }
     case "narrow-irregular": {
       // irregularly-irregular narrow QRS complexes with no P wave (AFib / MAT-shared shape).
-      // Widths are a fixed, hand-picked sequence (not the pr() hash, which produces
-      // near-uniform spacing for small sequential seeds) so the irregularity is clearly
-      // visible — and so the AFib arrow annotations below can reference these same
-      // numbers and land exactly on the peaks every time.
-      const widths = [58, 74, 52, 68, 60, 78, 48, 66, 58, 72, 54, 68];
+      // Widths below are measured directly from the user's reference figure (relative
+      // gaps between its QRS peaks), so this rhythm's spacing — and the AFib arrow
+      // annotations, computed from these same numbers — match that reference closely.
+      const widths = [79, 62, 53, 85, 69, 68, 58, 51, 60, 64];
       let x = 0;
       let i = 0;
       while (x < W) {
         const width = widths[i % widths.length];
-        push(x, base + (pr(i + 50) - 0.5) * 6);
+        push(x, base);
         push(x + width * 0.4, base - 30);
         push(x + width * 0.55, base + 8);
-        push(x + width * 0.68, base + (pr(i + 70) - 0.5) * 9);
-        push(x + width * 0.8, base + (pr(i + 80) - 0.5) * 9);
-        push(x + width * 0.92, base + (pr(i + 90) - 0.5) * 9);
-        push(x + width, base + (pr(i + 60) - 0.5) * 6);
+        push(x + width * 0.75, base - 6);
+        push(x + width, base);
         x += width;
         i++;
       }
@@ -715,21 +712,18 @@ type WaveAnnotation =
 // Shared by both AFib patterns (afib-rvr / afib-controlled) since they render the
 // same "narrow-irregular" wave shape. x values are the exact scaled R-peak positions
 // for that wave's fixed width sequence (see buildWavePath, case "narrow-irregular"),
-// so the arrows always land precisely on the peaks — not an approximation.
+// measured from the user's reference figure — arrows on the first 9 peaks (matching
+// that figure), the remaining repeat-cycle beats left unmarked like it too.
 const AFIB_ANNOTATIONS: WaveAnnotation[] = [
-  { kind: "arrow", x: 2.85, row: "top" },
-  { kind: "arrow", x: 10.76, row: "top" },
-  { kind: "arrow", x: 18.77, row: "top" },
-  { kind: "arrow", x: 25.95, row: "top" },
-  { kind: "arrow", x: 33.91, row: "top" },
-  { kind: "arrow", x: 42.16, row: "top" },
-  { kind: "arrow", x: 50.27, row: "top" },
-  { kind: "arrow", x: 57.05, row: "top" },
-  { kind: "arrow", x: 64.77, row: "top" },
-  { kind: "arrow", x: 72.58, row: "top" },
-  { kind: "arrow", x: 80.54, row: "top" },
-  { kind: "arrow", x: 87.86, row: "top" },
-  { kind: "arrow", x: 95.72, row: "top" },
+  { kind: "arrow", x: 3.75, row: "top" },
+  { kind: "arrow", x: 12.31, row: "top" },
+  { kind: "arrow", x: 19.24, row: "top" },
+  { kind: "arrow", x: 27.05, row: "top" },
+  { kind: "arrow", x: 36.37, row: "top" },
+  { kind: "arrow", x: 44.51, row: "top" },
+  { kind: "arrow", x: 52.1, row: "top" },
+  { kind: "arrow", x: 58.65, row: "top" },
+  { kind: "arrow", x: 65.12, row: "top" },
   { kind: "bracket", label: "بدون موجة P — والمسافة بين النبضات مش ثابتة", x1: 3, x2: 97, row: "bottom" },
 ];
 
