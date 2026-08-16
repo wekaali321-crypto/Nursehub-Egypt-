@@ -304,19 +304,22 @@ function buildWavePath(kind: WaveKind): string {
     case "narrow-irregular": {
       // irregularly-irregular narrow QRS complexes with no P wave (AFib / MAT-shared shape).
       // Widths measured directly from the user's reference figure (relative gaps between
-      // its QRS peaks). Deliberately just 3 points per beat (baseline, sharp R peak, small
-      // S dip) — an extra mid-baseline "hump" point was tried here before, but its modest
-      // height got amplified by the Catmull-Rom curve's overshoot on sparse/uneven point
-      // spacing into a false second peak, making every beat look doubled. Kept minimal
-      // and flat between beats instead, matching the reference's plain baseline.
+      // its QRS peaks). The QRS itself reuses the exact same tightly-clustered point
+      // pattern as the sinus-beat QRS below (fractions 0.19-0.27) instead of a sparser
+      // 3-point version tried earlier — that sparser version gave Catmull-Rom too little
+      // to work with and rounded the spike into a smooth sine wave with no real peak.
+      // Close point spacing is what forces the curve into a sharp spike.
       const widths = [79, 62, 53, 85, 69, 68, 58, 51, 60, 64];
       let x = 0;
       let i = 0;
       while (x < W) {
         const width = widths[i % widths.length];
         push(x, base + (pr(i + 50) - 0.5) * 3);
-        push(x + width * 0.42, base - 32);
-        push(x + width * 0.6, base + 6);
+        push(x + width * 0.19, base);
+        push(x + width * 0.21, base + 3);
+        push(x + width * 0.23, base - 32);
+        push(x + width * 0.25, base + 14);
+        push(x + width * 0.27, base);
         x += width;
         i++;
       }
@@ -717,15 +720,15 @@ type WaveAnnotation =
 // measured from the user's reference figure — arrows on the first 9 peaks (matching
 // that figure), the remaining repeat-cycle beats left unmarked like it too.
 const AFIB_ANNOTATIONS: WaveAnnotation[] = [
-  { kind: "arrow", x: 3.94, row: "top" },
-  { kind: "arrow", x: 12.46, row: "top" },
-  { kind: "arrow", x: 19.37, row: "top" },
-  { kind: "arrow", x: 27.25, row: "top" },
-  { kind: "arrow", x: 36.53, row: "top" },
-  { kind: "arrow", x: 44.67, row: "top" },
-  { kind: "arrow", x: 52.24, row: "top" },
-  { kind: "arrow", x: 58.77, row: "top" },
-  { kind: "arrow", x: 65.27, row: "top" },
+  { kind: "arrow", x: 2.16, row: "top" },
+  { kind: "arrow", x: 11.06, row: "top" },
+  { kind: "arrow", x: 18.17, row: "top" },
+  { kind: "arrow", x: 25.33, row: "top" },
+  { kind: "arrow", x: 34.98, row: "top" },
+  { kind: "arrow", x: 43.14, row: "top" },
+  { kind: "arrow", x: 50.93, row: "top" },
+  { kind: "arrow", x: 57.62, row: "top" },
+  { kind: "arrow", x: 63.91, row: "top" },
   { kind: "bracket", label: "بدون موجة P — والمسافة بين النبضات مش ثابتة", x1: 3, x2: 97, row: "bottom" },
 ];
 
