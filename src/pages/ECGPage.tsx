@@ -304,11 +304,12 @@ function buildWavePath(kind: WaveKind): string {
     case "narrow-irregular": {
       // irregularly-irregular narrow QRS complexes with no P wave (AFib / MAT-shared shape).
       // Widths measured directly from the user's reference figure (relative gaps between
-      // its QRS peaks). The QRS itself reuses the exact same tightly-clustered point
-      // pattern as the sinus-beat QRS below (fractions 0.19-0.27) instead of a sparser
-      // 3-point version tried earlier — that sparser version gave Catmull-Rom too little
-      // to work with and rounded the spike into a smooth sine wave with no real peak.
-      // Close point spacing is what forces the curve into a sharp spike.
+      // its QRS peaks). The QRS reuses the same tightly-clustered point pattern as the
+      // sinus-beat QRS below (fractions 0.19-0.27) — close point spacing is what forces
+      // a sharp spike. Between beats, several small closely-spaced points (not one lone
+      // wide-spaced bump like an earlier attempt, which overshot into a false 2nd peak)
+      // trace fine fibrillatory "teeth" in the baseline — small amplitude, tight spacing,
+      // so the curve stays jagged/textured instead of ballooning into another spike.
       const widths = [79, 62, 53, 85, 69, 68, 58, 51, 60, 64];
       let x = 0;
       let i = 0;
@@ -320,6 +321,11 @@ function buildWavePath(kind: WaveKind): string {
         push(x + width * 0.23, base - 32);
         push(x + width * 0.25, base + 14);
         push(x + width * 0.27, base);
+        push(x + width * 0.4, base + (pr(i + 70) - 0.5) * 6);
+        push(x + width * 0.5, base + (pr(i + 80) - 0.5) * 6);
+        push(x + width * 0.62, base + (pr(i + 90) - 0.5) * 6);
+        push(x + width * 0.75, base + (pr(i + 95) - 0.5) * 6);
+        push(x + width * 0.88, base + (pr(i + 99) - 0.5) * 6);
         x += width;
         i++;
       }
@@ -714,32 +720,13 @@ type WaveAnnotation =
   | { kind: "bracket"; label: string; x1: number; x2: number; row: "top" | "bottom" }
   | { kind: "arrow"; label?: string; x: number; row: "top" | "bottom" };
 
-// Shared by both AFib patterns (afib-rvr / afib-controlled) since they render the
-// same "narrow-irregular" wave shape. Top-row x values are the exact scaled R-peak
-// positions; bottom-row x values are the exact scaled S-wave-notch positions — both
-// read directly off the wave's own point math (buildWavePath, case "narrow-irregular"),
-// not approximated, so they always land exactly where they should regardless of any
-// future tweak to the QRS shape. Arrows on the first 9 beats (matching the user's
-// reference figure), the remaining repeat-cycle beats left unmarked like it too.
+// Shared by both AFib patterns (afib-rvr / afib-controlled). Just a few simple
+// arrows pointing at the flat/jagged baseline between beats — where a P wave would
+// normally sit but doesn't — rather than one arrow per beat, which was cluttered.
 const AFIB_ANNOTATIONS: WaveAnnotation[] = [
-  { kind: "arrow", x: 2.16, row: "top" },
-  { kind: "arrow", x: 11.06, row: "top" },
-  { kind: "arrow", x: 18.17, row: "top" },
-  { kind: "arrow", x: 25.33, row: "top" },
-  { kind: "arrow", x: 34.98, row: "top" },
-  { kind: "arrow", x: 43.14, row: "top" },
-  { kind: "arrow", x: 50.93, row: "top" },
-  { kind: "arrow", x: 57.62, row: "top" },
-  { kind: "arrow", x: 63.91, row: "top" },
-  { kind: "arrow", label: "بدون موجة P", x: 2.34, row: "bottom" },
-  { kind: "arrow", x: 11.21, row: "bottom" },
-  { kind: "arrow", x: 18.3, row: "bottom" },
-  { kind: "arrow", x: 25.53, row: "bottom" },
-  { kind: "arrow", x: 35.14, row: "bottom" },
-  { kind: "arrow", x: 43.3, row: "bottom" },
-  { kind: "arrow", x: 51.07, row: "bottom" },
-  { kind: "arrow", x: 57.74, row: "bottom" },
-  { kind: "arrow", x: 64.06, row: "bottom" },
+  { kind: "arrow", label: "بدون موجة P", x: 20, row: "top" },
+  { kind: "arrow", x: 50, row: "top" },
+  { kind: "arrow", x: 80, row: "top" },
 ];
 
 // Keyed by pattern id (not wave shape) since the explanation is specific to that
