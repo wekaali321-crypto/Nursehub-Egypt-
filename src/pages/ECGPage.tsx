@@ -302,6 +302,8 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "narrow-irregular": {
+      // irregularly-irregular narrow QRS complexes with no P wave (AFib / MAT-shared shape),
+      // plus a small chaotic baseline wobble between beats standing in for fibrillatory f-waves
       let x = 0;
       let i = 0;
       while (x < W) {
@@ -309,6 +311,9 @@ function buildWavePath(kind: WaveKind): string {
         push(x, base + (pr(i + 50) - 0.5) * 6);
         push(x + width * 0.4, base - 30);
         push(x + width * 0.55, base + 8);
+        push(x + width * 0.68, base + (pr(i + 70) - 0.5) * 7);
+        push(x + width * 0.8, base + (pr(i + 80) - 0.5) * 7);
+        push(x + width * 0.92, base + (pr(i + 90) - 0.5) * 7);
         push(x + width, base + (pr(i + 60) - 0.5) * 6);
         x += width;
         i++;
@@ -703,6 +708,21 @@ type WaveAnnotation =
   | { kind: "bracket"; label: string; x1: number; x2: number; row: "top" | "bottom" }
   | { kind: "arrow"; label?: string; x: number; row: "top" | "bottom" };
 
+// Shared by both AFib patterns (afib-rvr / afib-controlled) since they render the
+// same "narrow-irregular" wave shape and randomized R-peak spacing.
+const AFIB_ANNOTATIONS: WaveAnnotation[] = [
+  { kind: "arrow", x: 1.4, row: "top" },
+  { kind: "arrow", x: 12.6, row: "top" },
+  { kind: "arrow", x: 23, row: "top" },
+  { kind: "arrow", x: 34.1, row: "top" },
+  { kind: "arrow", x: 44.2, row: "top" },
+  { kind: "arrow", x: 56.1, row: "top" },
+  { kind: "arrow", x: 69.6, row: "top" },
+  { kind: "arrow", x: 82.8, row: "top" },
+  { kind: "arrow", x: 95.5, row: "top" },
+  { kind: "bracket", label: "بدون موجة P — والمسافة بين النبضات مش ثابتة", x1: 3, x2: 97, row: "bottom" },
+];
+
 // Keyed by pattern id (not wave shape) since the explanation is specific to that
 // clinical pattern. Add more entries here to enable the pause+label behavior for
 // other patterns — patterns with no entry keep scrolling continuously as before.
@@ -716,6 +736,8 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", label: "موجة P مختلفة الشكل", x: 33, row: "top" },
     { kind: "arrow", label: "موجة P مختلفة الشكل", x: 77, row: "top" },
   ],
+  "afib-rvr": AFIB_ANNOTATIONS,
+  "afib-controlled": AFIB_ANNOTATIONS,
 };
 
 function AnnotationMark({ a }: { a: WaveAnnotation }) {
