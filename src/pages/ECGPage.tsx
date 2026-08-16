@@ -508,13 +508,32 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "pac": {
-      // normal sinus beats with one early, slightly different beat every cycle group
+      // normal sinus beats with one early beat every cycle group. The early beat fires
+      // from a different (ectopic) atrial focus, so its P wave has a different — here
+      // notched/bifid — shape rather than the smooth single hump of a sinus P wave,
+      // on top of the short, irregular R-R interval.
       const width = 130;
+      const pacBeat = (start: number, w: number) => {
+        push(start, base);
+        push(start + w * 0.04, base - 2);
+        push(start + w * 0.07, base - 11);
+        push(start + w * 0.095, base - 4);
+        push(start + w * 0.12, base - 7);
+        push(start + w * 0.16, base);
+        push(start + w * 0.19, base);
+        push(start + w * 0.21, base + 3);
+        push(start + w * 0.23, base - 32);
+        push(start + w * 0.25, base + 14);
+        push(start + w * 0.27, base);
+        push(start + w * 0.45, base - 9);
+        push(start + w * 0.55, base);
+        push(start + w, base);
+      };
       let i = 0;
       for (let x = 0; x < W; ) {
         if (i % 3 === 2) {
           const early = width * 0.7;
-          sinusBeat(x, early);
+          pacBeat(x, early);
           x += early;
         } else {
           sinusBeat(x, width);
@@ -675,24 +694,48 @@ function catmullRomPath(pts: [number, number][]): string {
   return d;
 }
 
-// A landmark/annotation bracket drawn over (row: "top") or under (row: "bottom") a
-// portion of the wave, positioned as a percentage of the pattern's width (0-100).
-// Used to point out *why* a rhythm looks the way it does (e.g. breathing-linked rate
-// changes in Sinus Arrhythmia), the way printed ECG reference figures do.
-type WaveAnnotation = { label: string; x1: number; x2: number; row: "top" | "bottom" };
+// A landmark/annotation drawn over (row: "top") or under (row: "bottom") the wave,
+// positioned as a percentage of the pattern's width (0-100). Two kinds:
+// "bracket" spans a range (x1-x2) with a label, e.g. explaining a stretch of beats.
+// "arrow" points at a single spot (x) with a short label, e.g. flagging one abnormal
+// beat feature against its normal neighbors — the way printed ECG figures do.
+type WaveAnnotation =
+  | { kind: "bracket"; label: string; x1: number; x2: number; row: "top" | "bottom" }
+  | { kind: "arrow"; label?: string; x: number; row: "top" | "bottom" };
 
 // Keyed by pattern id (not wave shape) since the explanation is specific to that
 // clinical pattern. Add more entries here to enable the pause+label behavior for
 // other patterns — patterns with no entry keep scrolling continuously as before.
 const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
   "sinus-arrhythmia": [
-    { label: "الفترة بين النبضات مش ثابتة", x1: 14, x2: 83, row: "top" },
-    { label: "زفير — المعدل بيقل", x1: 0, x2: 47, row: "bottom" },
-    { label: "شهيق — المعدل بيزيد", x1: 53, x2: 100, row: "bottom" },
+    { kind: "bracket", label: "الفترة بين النبضات مش ثابتة", x1: 14, x2: 83, row: "top" },
+    { kind: "bracket", label: "زفير — المعدل بيقل", x1: 0, x2: 47, row: "bottom" },
+    { kind: "bracket", label: "شهيق — المعدل بيزيد", x1: 53, x2: 100, row: "bottom" },
+  ],
+  "pac": [
+    { kind: "arrow", label: "موجة P مختلفة الشكل", x: 33, row: "top" },
+    { kind: "arrow", label: "موجة P مختلفة الشكل", x: 77, row: "top" },
   ],
 };
 
-function AnnotationBracket({ a }: { a: WaveAnnotation }) {
+function AnnotationMark({ a }: { a: WaveAnnotation }) {
+  if (a.kind === "arrow") {
+    return (
+      <div className="absolute top-0 flex flex-col items-center" style={{ left: `${a.x}%`, transform: "translateX(-50%)" }}>
+        {a.row === "top" ? (
+          <>
+            {a.label && <span className="whitespace-nowrap text-[9px] font-bold leading-tight text-red-500">{a.label}</span>}
+            <span className="text-sm leading-none text-red-500">↓</span>
+          </>
+        ) : (
+          <>
+            <span className="text-sm leading-none text-red-500">↑</span>
+            {a.label && <span className="whitespace-nowrap text-[9px] font-bold leading-tight text-red-500">{a.label}</span>}
+          </>
+        )}
+      </div>
+    );
+  }
   const width = a.x2 - a.x1;
   return (
     <div className="absolute top-0 flex flex-col items-center" style={{ left: `${a.x1}%`, width: `${width}%` }}>
@@ -744,7 +787,7 @@ function ECGWave({ kind, colorClass, annotations }: { kind: WaveKind; colorClass
     <div className="relative">
       {hasAnnotations && (
         <div className="relative h-5 transition-opacity duration-300" style={{ opacity: paused ? 1 : 0 }}>
-          {annotations!.filter((a) => a.row === "top").map((a, idx) => <AnnotationBracket key={idx} a={a} />)}
+          {annotations!.filter((a) => a.row === "top").map((a, idx) => <AnnotationMark key={idx} a={a} />)}
         </div>
       )}
       <svg viewBox="0 0 800 100" preserveAspectRatio="none" className={`h-20 w-full ${colorClass}`}>
@@ -760,7 +803,7 @@ function ECGWave({ kind, colorClass, annotations }: { kind: WaveKind; colorClass
       </svg>
       {hasAnnotations && (
         <div className="relative h-5 transition-opacity duration-300" style={{ opacity: paused ? 1 : 0 }}>
-          {annotations!.filter((a) => a.row === "bottom").map((a, idx) => <AnnotationBracket key={idx} a={a} />)}
+          {annotations!.filter((a) => a.row === "bottom").map((a, idx) => <AnnotationMark key={idx} a={a} />)}
         </div>
       )}
     </div>
