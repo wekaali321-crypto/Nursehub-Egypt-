@@ -381,11 +381,22 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "pvc": {
-      const width = 130;
+      // Early, wide PVC with a true compensatory pause: the beat right before the PVC
+      // fires early (shortened gap) and the PVC's own beat is widened (delayed next
+      // beat), so the interval from the normal beat before the PVC to the normal beat
+      // after it equals exactly 2x the regular RR — matching the reference figure's
+      // "2 x RR" brace, not just a vaguely-larger gap after a compressed shape.
+      const RR = 130;
+      const early = 40;
+      let x = 0;
       let i = 0;
-      for (let x = 0; x < W; x += width) {
-        if (i % 3 === 2) wideBeat(x, width * 0.7);
+      while (x < W) {
+        const isPVC = i % 3 === 2;
+        const isBeforePVC = i % 3 === 1;
+        const width = isPVC ? RR + early : isBeforePVC ? RR - early : RR;
+        if (isPVC) wideBeat(x, width, 1);
         else sinusBeat(x, width);
+        x += width;
         i++;
       }
       break;
@@ -815,6 +826,11 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", label: "P مقلوبة", x: 18, row: "bottom" },
     { kind: "arrow", x: 38, row: "bottom" },
     { kind: "arrow", x: 58, row: "bottom" },
+  ],
+  "pvcs": [
+    { kind: "arrow", label: "PVC مبكرة", x: 26.98, row: "top" },
+    { kind: "arrow", x: 69.84, row: "top" },
+    { kind: "bracket", label: "2×RR", x1: 16.56, x2: 46.14, row: "bottom" },
   ],
 };
 
