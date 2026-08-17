@@ -720,13 +720,18 @@ type WaveAnnotation =
   | { kind: "bracket"; label: string; x1: number; x2: number; row: "top" | "bottom" }
   | { kind: "arrow"; label?: string; x: number; row: "top" | "bottom" };
 
-// Shared by both AFib patterns (afib-rvr / afib-controlled). Just a few simple
+// Shared by both AFib patterns (afib-rvr / afib-controlled). Top: a few simple
 // arrows pointing at the flat/jagged baseline between beats — where a P wave would
-// normally sit but doesn't — rather than one arrow per beat, which was cluttered.
+// normally sit but doesn't. Bottom: two adjacent brackets contrasting one narrow and
+// one wide R-R interval back to back (beats 2→3 vs 3→4 in the width sequence — 53 vs
+// 85 — read directly off the wave's own widths array), to make the irregular spacing
+// concrete rather than just saying "irregular" in words.
 const AFIB_ANNOTATIONS: WaveAnnotation[] = [
   { kind: "arrow", label: "بدون موجة P", x: 20, row: "top" },
   { kind: "arrow", x: 50, row: "top" },
   { kind: "arrow", x: 80, row: "top" },
+  { kind: "bracket", label: "ضيقة", x1: 18.17, x2: 25.33, row: "bottom" },
+  { kind: "bracket", label: "واسعة", x1: 25.33, x2: 34.98, row: "bottom" },
 ];
 
 // Keyed by pattern id (not wave shape) since the explanation is specific to that
