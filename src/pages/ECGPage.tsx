@@ -487,7 +487,9 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "junctional": {
-      // narrow regular QRS at a slow rate; P wave absent or inverted (small dip right after QRS)
+      // narrow regular QRS at a slow rate; T wave after it, then a clear inverted
+      // (downward V) P wave right before the next QRS — not a single subtle point
+      // right after the QRS, which got smoothed away to almost nothing before.
       const width = 170;
       for (let x = 0; x < W; x += width) {
         push(x, base);
@@ -495,10 +497,11 @@ function buildWavePath(kind: WaveKind): string {
         push(x + width * 0.08, base - 34);
         push(x + width * 0.11, base + 12);
         push(x + width * 0.14, base);
-        push(x + width * 0.18, base + 6);
-        push(x + width * 0.22, base);
-        push(x + width * 0.35, base - 8);
-        push(x + width * 0.45, base);
+        push(x + width * 0.3, base - 8);
+        push(x + width * 0.4, base);
+        push(x + width * 0.85, base);
+        push(x + width * 0.9, base + 16);
+        push(x + width * 0.94, base);
         push(x + width, base);
       }
       break;
@@ -807,6 +810,11 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "bracket", label: "PR", x1: 0.83, x2: 4.15, row: "bottom" },
     { kind: "bracket", label: "PR", x1: 13.28, x2: 19.5, row: "bottom" },
     { kind: "bracket", label: "PR", x1: 25.73, x2: 34.85, row: "bottom" },
+  ],
+  "junctional": [
+    { kind: "arrow", label: "P مقلوبة", x: 18, row: "bottom" },
+    { kind: "arrow", x: 38, row: "bottom" },
+    { kind: "arrow", x: 58, row: "bottom" },
   ],
 };
 
