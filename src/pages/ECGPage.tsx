@@ -15,6 +15,7 @@ type WaveKind =
   | "narrow-irregular"
   | "sawtooth"
   | "sinus-normal"
+  | "block1"
   | "sinus-fast"
   | "sinus-slow"
   | "block2"
@@ -112,7 +113,7 @@ const PATTERNS: ECGPattern[] = [
   // مراقبة
   { id: "afib-controlled", nameAr: "رجفان أذيني بمعدل متحكم", nameEn: "Atrial Fibrillation, Rate-Controlled", category: "watch", desc: "نفس عدم الانتظام لكن بمعدل ضمن الطبيعي — راقب فقط.", needsCPR: false, shockable: false, rate: "60-100", wave: "narrow-irregular",
     causes: ["نفس أسباب AFib RVR لكن معدل مضبوط بالعلاج"], treatment: ["استمرار متابعة معدل النظم والأدوية الحالية"], memoryTrick: "No P wave لكن المعدل طبيعي" },
-  { id: "block1", nameAr: "الإحصار من الدرجة الأولى", nameEn: "1st-Degree AV Block", category: "watch", desc: "فترة PR مطوّلة فقط (>0.20 ثانية)، كل موجة P متبوعة بـQRS.", needsCPR: false, shockable: false, rate: "60-100", wave: "sinus-normal",
+  { id: "block1", nameAr: "الإحصار من الدرجة الأولى", nameEn: "1st-Degree AV Block", category: "watch", desc: "فترة PR مطوّلة فقط (>0.20 ثانية)، كل موجة P متبوعة بـQRS.", needsCPR: false, shockable: false, rate: "60-100", wave: "block1",
     causes: ["زيادة توتر العصب المبهم", "أدوية (حاصرات بيتا، حاصرات قنوات الكالسيوم)", "تليّف بسيط في العقدة الأذينية البطينية"],
     treatment: ["غالبًا لا يحتاج علاج — راقب فقط", "راجع الأدوية المسببة إذا كانت هي السبب"],
     memoryTrick: "PR interval طويل وثابت فقط — لا إسقاط للـQRS" },
@@ -344,6 +345,28 @@ function buildWavePath(kind: WaveKind): string {
     case "sinus-normal": {
       const width = 130;
       for (let x = 0; x < W; x += width) sinusBeat(x, width);
+      break;
+    }
+    case "block1": {
+      // Same P wave as a normal sinus beat, but the flat segment between the P wave
+      // and the QRS is stretched out much longer — a prolonged PR interval (>0.20s),
+      // which is the one thing that actually defines this rhythm and was previously
+      // missing entirely (this pattern used to just reuse the plain sinus-normal wave).
+      const width = 130;
+      for (let x = 0; x < W; x += width) {
+        push(x, base);
+        push(x + width * 0.06, base - 6);
+        push(x + width * 0.11, base - 9);
+        push(x + width * 0.15, base);
+        push(x + width * 0.34, base);
+        push(x + width * 0.36, base + 3);
+        push(x + width * 0.38, base - 32);
+        push(x + width * 0.4, base + 14);
+        push(x + width * 0.42, base);
+        push(x + width * 0.6, base - 9);
+        push(x + width * 0.7, base);
+        push(x + width, base);
+      }
       break;
     }
     case "sinus-fast": {
@@ -749,6 +772,11 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
   ],
   "afib-rvr": AFIB_ANNOTATIONS,
   "afib-controlled": AFIB_ANNOTATIONS,
+  "block1": [
+    { kind: "arrow", label: "فترة PR مطوّلة", x: 17.79, row: "top" },
+    { kind: "arrow", x: 46.36, row: "top" },
+    { kind: "arrow", x: 74.93, row: "top" },
+  ],
 };
 
 function AnnotationMark({ a }: { a: WaveAnnotation }) {
