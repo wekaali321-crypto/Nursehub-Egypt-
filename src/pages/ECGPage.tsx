@@ -419,12 +419,15 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "wenckebach": {
-      // PR (P-to-QRS gap) progressively lengthens over 4 beats, then a P wave with no QRS, repeat
-      const cycle = 260;
+      // PR (P-to-QRS gap) progressively lengthens over 3 beats, then a P wave with no
+      // QRS (dropped beat), then repeat. Cycle widened and the PR step exaggerated
+      // versus a first pass at this shape so each PR segment is wide enough on screen
+      // to carry a readable bracket annotation (see PATTERN_ANNOTATIONS.wenckebach).
+      const cycle = 600;
       for (let c = 0; c < W; c += cycle) {
         for (let n = 0; n < 4; n++) {
           const start = c + n * (cycle / 4);
-          const prGap = 6 + n * 8;
+          const prGap = 40 + n * 35;
           push(start, base);
           push(start + 6, base - 6);
           push(start + 10, base);
@@ -776,6 +779,11 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", label: "فترة PR مطوّلة", x: 17.79, row: "top" },
     { kind: "arrow", x: 46.36, row: "top" },
     { kind: "arrow", x: 74.93, row: "top" },
+  ],
+  "wenckebach": [
+    { kind: "bracket", label: "PR", x1: 0.83, x2: 4.15, row: "bottom" },
+    { kind: "bracket", label: "PR", x1: 13.28, x2: 19.5, row: "bottom" },
+    { kind: "bracket", label: "PR", x1: 25.73, x2: 34.85, row: "bottom" },
   ],
 };
 
