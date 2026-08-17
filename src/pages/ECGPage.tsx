@@ -23,6 +23,7 @@ type WaveKind =
   | "pvc"
   | "wenckebach"
   | "bbb-notch"
+  | "lbbb-wide"
   | "junctional"
   | "stemi"
   | "ischemia"
@@ -125,7 +126,7 @@ const PATTERNS: ECGPattern[] = [
     causes: ["الانصمام الرئوي", "أمراض الرئة المزمنة", "أمراض القلب الخلقية", "قد يكون موجودًا طبيعيًا عند بعض الأشخاص"],
     treatment: ["غالبًا لا يحتاج علاج طارئ بمفرده", "قيّم السبب الكامن (خصوصًا لو ظهر حديثًا)"],
     memoryTrick: "شكل M أو أذنين أرنب في V1" },
-  { id: "lbbb", nameAr: "إحصار الحزمة اليسرى (LBBB)", nameEn: "Left Bundle Branch Block", category: "watch", desc: "تأخر توصيل الحزمة اليسرى — QRS عريض، قد يخفي علامات احتشاء أخرى على ECG.", needsCPR: false, shockable: false, rate: "60-100", wave: "bbb-notch",
+  { id: "lbbb", nameAr: "إحصار الحزمة اليسرى (LBBB)", nameEn: "Left Bundle Branch Block", category: "watch", desc: "تأخر توصيل الحزمة اليسرى — QRS عريض، قد يخفي علامات احتشاء أخرى على ECG.", needsCPR: false, shockable: false, rate: "60-100", wave: "lbbb-wide",
     causes: ["أمراض القلب الإقفارية", "ارتفاع ضغط الدم المزمن", "اعتلال عضلة القلب"],
     treatment: ["إذا ظهر حديثًا مع أعراض صدرية عامله كاحتشاء حتى يثبت العكس", "قيّم وظيفة القلب (إيكو)"],
     memoryTrick: "LBBB جديد + ألم صدر = عامله زي الاحتشاء" },
@@ -445,7 +446,8 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "bbb-notch": {
-      // wide QRS with an RSR' (M-shaped / rabbit-ears) notch
+      // RBBB: wide QRS with an rsR' notch (small r, deep S, taller second R') — the
+      // "rabbit ears" / M shape in V1, matching the reference figure's RBBB column.
       const width = 130;
       for (let x = 0; x < W; x += width) {
         push(x, base);
@@ -459,6 +461,27 @@ function buildWavePath(kind: WaveKind): string {
         push(x + width * 0.4, base);
         push(x + width * 0.55, base - 9);
         push(x + width * 0.65, base);
+        push(x + width, base);
+      }
+      break;
+    }
+    case "lbbb-wide": {
+      // LBBB: minimal/absent initial r, then a deep S with a small double-dip notch
+      // (the "W" at the bottom), followed by one broad discordant hump — matching the
+      // reference figure's LBBB column (deep S, r wave <30ms or absent) instead of
+      // sharing RBBB's rabbit-ears shape.
+      const width = 150;
+      for (let x = 0; x < W; x += width) {
+        push(x, base);
+        push(x + width * 0.05, base + 2);
+        push(x + width * 0.1, base + 32);
+        push(x + width * 0.14, base + 22);
+        push(x + width * 0.18, base + 34);
+        push(x + width * 0.26, base + 8);
+        push(x + width * 0.34, base - 8);
+        push(x + width * 0.48, base - 20);
+        push(x + width * 0.62, base - 8);
+        push(x + width * 0.78, base);
         push(x + width, base);
       }
       break;
