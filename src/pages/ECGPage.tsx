@@ -556,19 +556,22 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "wpw": {
-      // short PR interval and a slurred upstroke (delta wave) into a wide QRS
-      const width = 130;
+      // short PR interval and a slurred upstroke (delta wave) into a wide QRS. The
+      // slur is spread across several gradually-rising points (a visible ramp) before
+      // a sharp, tightly-clustered peak — a short, closely-spaced slur reads as just
+      // a slightly rounded onset once curve-smoothed, not a distinct gradual ramp.
+      const width = 150;
       for (let x = 0; x < W; x += width) {
         push(x, base);
         push(x + width * 0.06, base - 6);
         push(x + width * 0.11, base);
-        push(x + width * 0.14, base);
-        push(x + width * 0.17, base - 4);
-        push(x + width * 0.21, base - 14);
-        push(x + width * 0.24, base + 3);
-        push(x + width * 0.26, base - 36);
-        push(x + width * 0.29, base + 16);
-        push(x + width * 0.33, base);
+        push(x + width * 0.13, base);
+        push(x + width * 0.16, base - 3);
+        push(x + width * 0.2, base - 8);
+        push(x + width * 0.24, base - 14);
+        push(x + width * 0.27, base - 36);
+        push(x + width * 0.29, base + 14);
+        push(x + width * 0.31, base);
         push(x + width * 0.45, base - 9);
         push(x + width * 0.55, base);
         push(x + width, base);
@@ -831,6 +834,11 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", label: "PVC مبكرة", x: 26.98, row: "top" },
     { kind: "arrow", x: 69.84, row: "top" },
     { kind: "bracket", label: "2×RR", x1: 16.56, x2: 46.14, row: "bottom" },
+  ],
+  "wpw": [
+    { kind: "arrow", label: "موجة دلتا", x: 20, row: "top" },
+    { kind: "arrow", x: 53.33, row: "top" },
+    { kind: "arrow", x: 86.67, row: "top" },
   ],
 };
 
