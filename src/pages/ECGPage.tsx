@@ -850,6 +850,13 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", x: 86.67, row: "top" },
   ],
   "svt": [{ kind: "bracket", label: "معدل > 150 — بدون موجة P واضحة", x1: 3, x2: 97, row: "bottom" }],
+  "block2-2": [
+    { kind: "arrow", label: "PR ثابت", x: 1.89, row: "top" },
+    { kind: "arrow", x: 13.0, row: "top" },
+    { kind: "arrow", x: 35.22, row: "top" },
+    { kind: "arrow", label: "QRS ساقطة", x: 24.44, row: "bottom" },
+    { kind: "arrow", x: 57.78, row: "bottom" },
+  ],
 };
 
 function AnnotationMark({ a }: { a: WaveAnnotation }) {
