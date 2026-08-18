@@ -345,15 +345,13 @@ function buildWavePath(kind: WaveKind): string {
     }
     case "sawtooth": {
       // Regular sawtooth atrial "F waves" at a fast atrial rate, continuing
-      // uninterrupted — but with a 2:1 conduction ratio, every 2nd F wave also
-      // breaks through into a sharp QRS spike (a conducted ventricular beat), while
-      // the ones in between stay small/unconducted. Previously this was a uniform
-      // sawtooth with no QRS at all, which didn't match the "2:1 conduction" the
-      // card's own text already claimed.
+      // uninterrupted — with a 3:1 conduction ratio (2 unconducted F waves between
+      // each QRS), matching the user's reference figure. Every 3rd F wave breaks
+      // through into a sharp QRS spike (a conducted ventricular beat).
       const width = 40;
       let i = 0;
       for (let x = 0; x < W; x += width) {
-        if (i % 2 === 1) {
+        if (i % 3 === 2) {
           push(x, base + 12);
           push(x + width * 0.35, base + 4);
           push(x + width * 0.45, base);
@@ -877,9 +875,10 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
   ],
   "aflutter": [
     { kind: "arrow", label: "موجة رفرفة (F wave)", x: 3.5, row: "bottom" },
+    { kind: "arrow", x: 8.5, row: "bottom" },
+    { kind: "arrow", x: 18.5, row: "bottom" },
     { kind: "arrow", x: 23.5, row: "bottom" },
-    { kind: "arrow", x: 33.5, row: "bottom" },
-    { kind: "arrow", label: "QRS موصّل", x: 7.75, row: "top" },
+    { kind: "arrow", label: "QRS موصّل", x: 12.75, row: "top" },
   ],
 };
 
