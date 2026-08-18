@@ -344,25 +344,25 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "sawtooth": {
-      // Regular sawtooth atrial "F waves" at a fast atrial rate, continuing
-      // uninterrupted — with a 3:1 conduction ratio (2 unconducted F waves between
-      // each QRS), matching the user's reference figure. Every 3rd F wave breaks
-      // through into a sharp QRS spike (a conducted ventricular beat).
-      const width = 40;
+      // Small, smooth, single-rounded-hump F waves (not sharp triangular teeth —
+      // the reference figure's F waves are gentle undulations, not spikes) at a fast
+      // atrial rate, with a 3:1 conduction ratio: 2 unconducted F waves, then 1 that
+      // breaks through into a sharp, tightly-clustered QRS spike, repeating.
+      const toothWidth = 45;
       let i = 0;
-      for (let x = 0; x < W; x += width) {
+      for (let x = 0; x < W; x += toothWidth) {
         if (i % 3 === 2) {
-          push(x, base + 12);
-          push(x + width * 0.35, base + 4);
-          push(x + width * 0.45, base);
-          push(x + width * 0.55, base - 36);
-          push(x + width * 0.65, base + 14);
-          push(x + width * 0.75, base);
-          push(x + width, base + 12);
+          push(x, base);
+          push(x + toothWidth * 0.35, base + 3);
+          push(x + toothWidth * 0.45, base);
+          push(x + toothWidth * 0.55, base - 36);
+          push(x + toothWidth * 0.65, base + 14);
+          push(x + toothWidth * 0.75, base);
+          push(x + toothWidth, base);
         } else {
-          push(x, base + 12);
-          push(x + width * 0.7, base - 14);
-          push(x + width, base + 12);
+          push(x, base);
+          push(x + toothWidth * 0.5, base - 8);
+          push(x + toothWidth, base);
         }
         i++;
       }
@@ -874,11 +874,11 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", x: 57.78, row: "bottom" },
   ],
   "aflutter": [
-    { kind: "arrow", label: "موجة رفرفة (F wave)", x: 3.5, row: "bottom" },
-    { kind: "arrow", x: 8.5, row: "bottom" },
-    { kind: "arrow", x: 18.5, row: "bottom" },
-    { kind: "arrow", x: 23.5, row: "bottom" },
-    { kind: "arrow", label: "QRS موصّل", x: 12.75, row: "top" },
+    { kind: "arrow", label: "موجة رفرفة (F wave)", x: 2.78, row: "bottom" },
+    { kind: "arrow", x: 8.33, row: "bottom" },
+    { kind: "arrow", x: 19.44, row: "bottom" },
+    { kind: "arrow", x: 25, row: "bottom" },
+    { kind: "arrow", label: "QRS موصّل", x: 14.17, row: "top" },
   ],
 };
 
