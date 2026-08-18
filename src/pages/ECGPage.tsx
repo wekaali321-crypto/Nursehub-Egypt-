@@ -346,12 +346,12 @@ function buildWavePath(kind: WaveKind): string {
     case "sawtooth": {
       // Small, smooth, single-rounded-hump F waves (not sharp triangular teeth —
       // the reference figure's F waves are gentle undulations, not spikes) at a fast
-      // atrial rate, with a 3:1 conduction ratio: 2 unconducted F waves, then 1 that
+      // atrial rate, with a 4:1 conduction ratio: 3 unconducted F waves, then 1 that
       // breaks through into a sharp, tightly-clustered QRS spike, repeating.
       const toothWidth = 45;
       let i = 0;
       for (let x = 0; x < W; x += toothWidth) {
-        if (i % 3 === 2) {
+        if (i % 4 === 3) {
           push(x, base);
           push(x + toothWidth * 0.35, base + 3);
           push(x + toothWidth * 0.45, base);
@@ -876,9 +876,8 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
   "aflutter": [
     { kind: "arrow", label: "موجة رفرفة (F wave)", x: 2.78, row: "bottom" },
     { kind: "arrow", x: 8.33, row: "bottom" },
-    { kind: "arrow", x: 19.44, row: "bottom" },
-    { kind: "arrow", x: 25, row: "bottom" },
-    { kind: "arrow", label: "QRS موصّل", x: 14.17, row: "top" },
+    { kind: "arrow", x: 13.89, row: "bottom" },
+    { kind: "arrow", label: "QRS موصّل", x: 19.72, row: "top" },
   ],
 };
 
