@@ -294,11 +294,20 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "narrow-fast": {
-      const width = 32;
+      // Very fast narrow-QRS tachycardia. Previously each beat was just baseline→peak→
+      // dip→baseline with zero gap before the next beat started, so the whole thing
+      // rendered as a continuous sawtooth/triangle-wave with no distinguishable
+      // between-beat feature — not what real SVT looks like. Added a small rounded
+      // T-hump between beats (matching the reference figure), and tightened the point
+      // spacing on both sides of the peak so it stays sharp despite the wider beat.
+      const width = 46;
       for (let x = 0; x < W; x += width) {
         push(x, base);
-        push(x + width * 0.4, base - 34);
-        push(x + width * 0.55, base + 10);
+        push(x + width * 0.18, base);
+        push(x + width * 0.24, base - 34);
+        push(x + width * 0.3, base + 10);
+        push(x + width * 0.5, base - 6);
+        push(x + width * 0.75, base);
         push(x + width, base);
       }
       break;
@@ -840,6 +849,7 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", x: 53.33, row: "top" },
     { kind: "arrow", x: 86.67, row: "top" },
   ],
+  "svt": [{ kind: "bracket", label: "معدل > 150 — بدون موجة P واضحة", x1: 3, x2: 97, row: "bottom" }],
 };
 
 function AnnotationMark({ a }: { a: WaveAnnotation }) {
