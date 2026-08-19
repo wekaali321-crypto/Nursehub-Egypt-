@@ -26,6 +26,7 @@ type WaveKind =
   | "lbbb-wide"
   | "junctional"
   | "stemi"
+  | "pericarditis"
   | "ischemia"
   | "wpw"
   | "sinus-arrhythmia"
@@ -34,6 +35,7 @@ type WaveKind =
   | "shortqt"
   | "longqt"
   | "hypokalemia"
+  | "mat"
   | "hyperkalemia"
   | "pe-pattern";
 
@@ -177,11 +179,11 @@ const PATTERNS: ECGPattern[] = [
     causes: ["خلل خلقي في قنوات البوتاسيوم (وراثي غالبًا)", "فرط كالسيوم الدم أحيانًا"],
     treatment: ["إحالة لطبيب قلب متخصص بالنظم", "قد يحتاج مزيل رجفان مزروع (ICD) في الحالات عالية الخطورة"],
     memoryTrick: "QT قصير جدًا = خطر VF نادر لكن خطير" },
-  { id: "mat", nameAr: "تسرع الأذيني متعدد البؤر (MAT)", nameEn: "Multifocal Atrial Tachycardia", category: "urgent", desc: "3 أشكال مختلفة على الأقل لموجة P في نفس الشريط — غالبًا مرتبط بأمراض الرئة المزمنة (COPD).", needsCPR: false, shockable: false, rate: "100-180", wave: "narrow-irregular",
+  { id: "mat", nameAr: "تسرع الأذيني متعدد البؤر (MAT)", nameEn: "Multifocal Atrial Tachycardia", category: "urgent", desc: "3 أشكال مختلفة على الأقل لموجة P في نفس الشريط — غالبًا مرتبط بأمراض الرئة المزمنة (COPD).", needsCPR: false, shockable: false, rate: "100-180", wave: "mat",
     causes: ["تفاقم مرض الانسداد الرئوي المزمن (COPD)", "نقص الأكسجين", "اختلال كهارل"],
     treatment: ["عالج المرض الرئوي الكامن ونقص الأكسجين أولًا", "حاصرات قنوات الكالسيوم قد تُستخدم", "تجنب الديجوكسين عادة"],
     memoryTrick: "3 أشكال مختلفة لموجة P على الأقل" },
-  { id: "pericarditis", nameAr: "نمط ECG في التهاب التامور", nameEn: "Pericarditis ECG Pattern", category: "urgent", desc: "ارتفاع ST منتشر بشكل سرج (Saddle-shaped) مع انخفاض PR — يختلف عن احتشاء واحد بمنطقة محددة.", needsCPR: false, shockable: false, rate: "متغير", wave: "stemi",
+  { id: "pericarditis", nameAr: "نمط ECG في التهاب التامور", nameEn: "Pericarditis ECG Pattern", category: "urgent", desc: "ارتفاع ST منتشر بشكل سرج (Saddle-shaped) مع انخفاض PR — يختلف عن احتشاء واحد بمنطقة محددة.", needsCPR: false, shockable: false, rate: "متغير", wave: "pericarditis",
     causes: ["عدوى فيروسية", "ما بعد احتشاء عضلة القلب (متلازمة درسلر)", "أمراض المناعة الذاتية", "الفشل الكلوي"],
     treatment: ["مضادات الالتهاب اللاستيرويدية (NSAIDs)", "كولشيسين", "راقب علامات الاندحاس القلبي (Tamponade)"],
     memoryTrick: "ارتفاع ST منتشر في كل الـLeads تقريبًا، مش منطقة واحدة بس" },
@@ -561,6 +563,69 @@ function buildWavePath(kind: WaveKind): string {
       }
       break;
     }
+    case "pericarditis": {
+      // Diffuse, saddle-shaped ST elevation plus PR-segment depression — the two
+      // features that actually distinguish this from a focal STEMI, which this
+      // pattern used to silently reuse (plain "stemi" wave, no PR depression, no
+      // saddle shape at all).
+      const width = 150;
+      for (let x = 0; x < W; x += width) {
+        push(x, base);
+        push(x + width * 0.06, base - 6);
+        push(x + width * 0.11, base);
+        push(x + width * 0.15, base + 4);
+        push(x + width * 0.19, base + 4);
+        push(x + width * 0.21, base + 6);
+        push(x + width * 0.23, base - 34);
+        push(x + width * 0.25, base + 14);
+        push(x + width * 0.27, base - 14);
+        push(x + width * 0.34, base - 18);
+        push(x + width * 0.4, base - 12);
+        push(x + width * 0.48, base - 18);
+        push(x + width * 0.6, base - 10);
+        push(x + width * 0.72, base);
+        push(x + width, base);
+      }
+      break;
+    }
+    case "mat": {
+      // Narrow-QRS tachycardia where the P wave's shape changes beat to beat — at
+      // least 3 different morphologies from different atrial pacemaker sites, this
+      // pattern's one defining feature. There was previously no case for "mat" at
+      // all in this switch, so it silently fell back to a flat line (see the
+      // pts.length === 0 fallback below).
+      const width = 95;
+      let i = 0;
+      for (let x = 0; x < W; x += width) {
+        push(x, base);
+        if (i % 3 === 0) {
+          // small rounded P
+          push(x + width * 0.06, base - 7);
+          push(x + width * 0.11, base);
+        } else if (i % 3 === 1) {
+          // taller, peaked P
+          push(x + width * 0.05, base - 3);
+          push(x + width * 0.08, base - 13);
+          push(x + width * 0.11, base);
+        } else {
+          // small notched/bifid P
+          push(x + width * 0.05, base - 2);
+          push(x + width * 0.075, base - 6);
+          push(x + width * 0.1, base - 2);
+          push(x + width * 0.12, base);
+        }
+        push(x + width * 0.19, base);
+        push(x + width * 0.21, base + 3);
+        push(x + width * 0.23, base - 32);
+        push(x + width * 0.25, base + 14);
+        push(x + width * 0.27, base);
+        push(x + width * 0.45, base - 8);
+        push(x + width * 0.55, base);
+        push(x + width, base);
+        i++;
+      }
+      break;
+    }
     case "ischemia": {
       // sinus beats with a depressed ST segment before the T wave
       const width = 150;
@@ -706,7 +771,10 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "hypokalemia": {
-      // flattened T wave followed by a small extra U wave bump
+      // ST depression, then a broad flattened T wave, then a distinct separate U
+      // wave bump after it — previously there was no ST depression at all and the
+      // T/U bumps were both tiny and similar, not reading as two distinct features
+      // like the reference figure (ST depression → flat T → U wave).
       const width = 150;
       for (let x = 0; x < W; x += width) {
         push(x, base);
@@ -716,11 +784,12 @@ function buildWavePath(kind: WaveKind): string {
         push(x + width * 0.21, base + 3);
         push(x + width * 0.23, base - 32);
         push(x + width * 0.25, base + 14);
-        push(x + width * 0.27, base);
-        push(x + width * 0.40, base - 3);
-        push(x + width * 0.50, base);
-        push(x + width * 0.58, base - 5);
-        push(x + width * 0.66, base);
+        push(x + width * 0.28, base + 7);
+        push(x + width * 0.38, base + 7);
+        push(x + width * 0.55, base - 8);
+        push(x + width * 0.7, base);
+        push(x + width * 0.8, base - 5);
+        push(x + width * 0.9, base);
         push(x + width, base);
       }
       break;
@@ -878,6 +947,26 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", x: 8.33, row: "bottom" },
     { kind: "arrow", x: 13.89, row: "bottom" },
     { kind: "arrow", label: "QRS موصّل", x: 19.72, row: "top" },
+  ],
+  "ischemia": [
+    { kind: "arrow", label: "انخفاض ST", x: 5.67, row: "bottom" },
+    { kind: "arrow", x: 22.33, row: "bottom" },
+    { kind: "arrow", x: 39, row: "bottom" },
+  ],
+  "mat": [
+    { kind: "arrow", label: "أشكال P مختلفة", x: 0.67, row: "top" },
+    { kind: "arrow", x: 12, row: "top" },
+    { kind: "arrow", x: 23.06, row: "top" },
+  ],
+  "pericarditis": [
+    { kind: "arrow", label: "PR منخفض", x: 2.8, row: "bottom" },
+    { kind: "arrow", label: "ST مرتفع (سرجي)", x: 4.5, row: "top" },
+  ],
+  "hypokalemia-ecg": [
+    { kind: "arrow", label: "انخفاض ST", x: 5.5, row: "top" },
+    { kind: "arrow", label: "تسطح T", x: 9.17, row: "top" },
+    { kind: "arrow", label: "موجة U", x: 13.33, row: "top" },
+    { kind: "bracket", label: "QT مطوّلة", x1: 4.67, x2: 15, row: "bottom" },
   ],
 };
 
