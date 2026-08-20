@@ -872,13 +872,16 @@ function catmullRomPath(pts: [number, number][]): string {
 }
 
 // A landmark/annotation drawn over (row: "top") or under (row: "bottom") the wave,
-// positioned as a percentage of the pattern's width (0-100). Two kinds:
+// positioned as a percentage of the pattern's width (0-100). Three kinds:
 // "bracket" spans a range (x1-x2) with a label, e.g. explaining a stretch of beats.
 // "arrow" points at a single spot (x) with a short label, e.g. flagging one abnormal
 // beat feature against its normal neighbors — the way printed ECG figures do.
+// "tag" is a plain small label with no arrow/bracket glyph — for basic beat-anatomy
+// teaching (naming the P wave, QRS, T wave) rather than flagging a clinical finding.
 type WaveAnnotation =
   | { kind: "bracket"; label: string; x1: number; x2: number; row: "top" | "bottom" }
-  | { kind: "arrow"; label?: string; x: number; row: "top" | "bottom" };
+  | { kind: "arrow"; label?: string; x: number; row: "top" | "bottom" }
+  | { kind: "tag"; label: string; x: number; row: "top" | "bottom" };
 
 // Shared by both AFib patterns (afib-rvr / afib-controlled). Top: a few simple
 // arrows pointing at the flat/jagged baseline between beats — where a P wave would
@@ -906,6 +909,9 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
   "pac": [
     { kind: "arrow", label: "موجة P مختلفة الشكل", x: 33, row: "top" },
     { kind: "arrow", label: "موجة P مختلفة الشكل", x: 77, row: "top" },
+    { kind: "tag", label: "P", x: 1.57, row: "bottom" },
+    { kind: "tag", label: "QRS", x: 3.29, row: "bottom" },
+    { kind: "tag", label: "T", x: 6.43, row: "bottom" },
   ],
   "afib-rvr": AFIB_ANNOTATIONS,
   "afib-controlled": AFIB_ANNOTATIONS,
@@ -913,6 +919,8 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", label: "فترة PR مطوّلة", x: 17.79, row: "top" },
     { kind: "arrow", x: 46.36, row: "top" },
     { kind: "arrow", x: 74.93, row: "top" },
+    { kind: "tag", label: "QRS", x: 5.43, row: "bottom" },
+    { kind: "tag", label: "T", x: 8.57, row: "bottom" },
   ],
   "wenckebach": [
     { kind: "bracket", label: "PR", x1: 0.83, x2: 4.15, row: "bottom" },
@@ -923,6 +931,8 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", label: "P مقلوبة", x: 18, row: "bottom" },
     { kind: "arrow", x: 38, row: "bottom" },
     { kind: "arrow", x: 58, row: "bottom" },
+    { kind: "tag", label: "QRS", x: 1.6, row: "top" },
+    { kind: "tag", label: "T", x: 6, row: "top" },
   ],
   "pvcs": [
     { kind: "arrow", label: "PVC مبكرة", x: 26.98, row: "top" },
@@ -933,6 +943,9 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", label: "موجة دلتا", x: 20, row: "top" },
     { kind: "arrow", x: 53.33, row: "top" },
     { kind: "arrow", x: 86.67, row: "top" },
+    { kind: "tag", label: "P", x: 1, row: "bottom" },
+    { kind: "tag", label: "QRS", x: 4.5, row: "bottom" },
+    { kind: "tag", label: "T", x: 7.5, row: "bottom" },
   ],
   "svt": [{ kind: "bracket", label: "معدل > 150 — بدون موجة P واضحة", x1: 3, x2: 97, row: "bottom" }],
   "block2-2": [
@@ -952,6 +965,17 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", label: "انخفاض ST", x: 5.67, row: "bottom" },
     { kind: "arrow", x: 22.33, row: "bottom" },
     { kind: "arrow", x: 39, row: "bottom" },
+    { kind: "tag", label: "P", x: 1, row: "top" },
+    { kind: "tag", label: "QRS", x: 3.83, row: "top" },
+    { kind: "tag", label: "T", x: 9.17, row: "top" },
+  ],
+  "nstemi": [
+    { kind: "arrow", label: "انخفاض ST", x: 5.67, row: "bottom" },
+    { kind: "arrow", x: 22.33, row: "bottom" },
+    { kind: "arrow", x: 39, row: "bottom" },
+    { kind: "tag", label: "P", x: 1, row: "top" },
+    { kind: "tag", label: "QRS", x: 3.83, row: "top" },
+    { kind: "tag", label: "T", x: 9.17, row: "top" },
   ],
   "mat": [
     { kind: "arrow", label: "أشكال P مختلفة", x: 0.67, row: "top" },
@@ -967,6 +991,79 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "arrow", label: "تسطح T", x: 9.17, row: "top" },
     { kind: "arrow", label: "موجة U", x: 13.33, row: "top" },
     { kind: "bracket", label: "QT مطوّلة", x1: 4.67, x2: 15, row: "bottom" },
+  ],
+  "longqt": [
+    { kind: "arrow", label: "T متأخرة وعريضة", x: 13.6, row: "top" },
+    { kind: "bracket", label: "QT مطوّلة", x1: 4.4, x2: 16, row: "bottom" },
+  ],
+  "hypocalcemia-ecg": [{ kind: "bracket", label: "ST مطوّلة — QT مطوّلة", x1: 4.4, x2: 16, row: "bottom" }],
+  // First batch of plain beat-anatomy labels (P wave / QRS / T wave), for readers who
+  // don't yet know what each part of a beat is called — separate from the clinical
+  // arrows/brackets elsewhere, which flag what's *different* about a given rhythm.
+  // Starting with the plain sinus-rhythm patterns since they're the reference point
+  // every other pattern gets compared against; more patterns to follow the same way.
+  "nsr": [
+    { kind: "tag", label: "P", x: 1.57, row: "top" },
+    { kind: "tag", label: "QRS", x: 3.29, row: "top" },
+    { kind: "tag", label: "T", x: 6.43, row: "top" },
+  ],
+  "sinus-tach": [
+    { kind: "tag", label: "P", x: 1.1, row: "top" },
+    { kind: "tag", label: "QRS", x: 2.3, row: "top" },
+    { kind: "tag", label: "T", x: 4.5, row: "top" },
+  ],
+  "sinus-brady": [
+    { kind: "tag", label: "P", x: 2.75, row: "top" },
+    { kind: "tag", label: "QRS", x: 5.75, row: "top" },
+    { kind: "tag", label: "T", x: 11.25, row: "top" },
+  ],
+  "rbbb": [
+    { kind: "tag", label: "P", x: 0.86, row: "bottom" },
+    { kind: "tag", label: "QRS", x: 3.14, row: "bottom" },
+    { kind: "tag", label: "T", x: 7.86, row: "bottom" },
+  ],
+  "lbbb": [
+    { kind: "tag", label: "QRS", x: 1.67, row: "bottom" },
+    { kind: "tag", label: "T", x: 8, row: "bottom" },
+  ],
+  "shortqt": [
+    { kind: "tag", label: "P", x: 0.86, row: "top" },
+    { kind: "tag", label: "QRS", x: 3.29, row: "top" },
+    { kind: "tag", label: "T", x: 4.57, row: "top" },
+  ],
+  "hyperkalemia-ecg": [
+    { kind: "tag", label: "P", x: 1, row: "top" },
+    { kind: "tag", label: "QRS", x: 3.83, row: "top" },
+    { kind: "tag", label: "T", x: 6, row: "top" },
+  ],
+  "pe-ecg": [
+    { kind: "tag", label: "P", x: 0.86, row: "top" },
+    { kind: "tag", label: "QRS", x: 3.14, row: "top" },
+    { kind: "tag", label: "T", x: 6.43, row: "top" },
+  ],
+  "stemi": [
+    { kind: "tag", label: "P", x: 1, row: "top" },
+    { kind: "tag", label: "QRS", x: 3.83, row: "top" },
+    { kind: "tag", label: "ST", x: 4.5, row: "top" },
+    { kind: "tag", label: "T", x: 9.17, row: "top" },
+  ],
+  "mi-lateral": [
+    { kind: "tag", label: "P", x: 1, row: "top" },
+    { kind: "tag", label: "QRS", x: 3.83, row: "top" },
+    { kind: "tag", label: "ST", x: 4.5, row: "top" },
+    { kind: "tag", label: "T", x: 9.17, row: "top" },
+  ],
+  "mi-anterior": [
+    { kind: "tag", label: "P", x: 1, row: "top" },
+    { kind: "tag", label: "QRS", x: 3.83, row: "top" },
+    { kind: "tag", label: "ST", x: 4.5, row: "top" },
+    { kind: "tag", label: "T", x: 9.17, row: "top" },
+  ],
+  "mi-inferior": [
+    { kind: "tag", label: "P", x: 1, row: "top" },
+    { kind: "tag", label: "QRS", x: 3.83, row: "top" },
+    { kind: "tag", label: "ST", x: 4.5, row: "top" },
+    { kind: "tag", label: "T", x: 9.17, row: "top" },
   ],
 };
 
@@ -985,6 +1082,13 @@ function AnnotationMark({ a }: { a: WaveAnnotation }) {
             {a.label && <span className="whitespace-nowrap text-[9px] font-bold leading-tight text-red-500">{a.label}</span>}
           </>
         )}
+      </div>
+    );
+  }
+  if (a.kind === "tag") {
+    return (
+      <div className="absolute top-0 flex flex-col items-center" style={{ left: `${a.x}%`, transform: "translateX(-50%)" }}>
+        <span className="whitespace-nowrap rounded bg-slate-700/70 px-1 text-[9px] font-semibold leading-tight text-slate-200">{a.label}</span>
       </div>
     );
   }
