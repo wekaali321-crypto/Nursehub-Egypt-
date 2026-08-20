@@ -3,6 +3,7 @@ import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
+import { useFavorites } from "../lib/favorites";
 
 type Category = "lethal" | "critical" | "urgent" | "watch" | "normal";
 type WaveKind =
@@ -1248,6 +1249,8 @@ function ECGCard({ p }: { p: ECGPattern }) {
   const schedulerRef = useRef<number | null>(null);
   const noPulse = NO_PULSE_IDS.has(p.id);
   const hasDetails = (p.causes && p.causes.length > 0) || (p.treatment && p.treatment.length > 0);
+  const { isFav, toggleFav } = useFavorites();
+  const saved = isFav(p.id);
 
   useEffect(() => {
     return () => {
@@ -1290,7 +1293,17 @@ function ECGCard({ p }: { p: ECGPattern }) {
     <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
       <div className="mb-2 flex items-center justify-between">
         <span className={`rounded-full px-3 py-1 text-xs font-bold ${CATEGORY_META[p.category].badge}`}>{CATEGORY_META[p.category].label}</span>
-        <span className="text-xs font-bold text-slate-400" dir="ltr">{p.rate} bpm</span>
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-bold text-slate-400" dir="ltr">{p.rate} bpm</span>
+          <button
+            type="button"
+            onClick={() => toggleFav(p.id)}
+            aria-label={saved ? "إلغاء الحفظ" : "حفظ النمط"}
+            className={`text-base leading-none ${saved ? "text-amber-500" : "text-slate-300 hover:text-slate-400 dark:text-slate-600"}`}
+          >
+            {saved ? "🔖" : "📑"}
+          </button>
+        </div>
       </div>
       <h3 className="text-lg font-bold text-slate-900 dark:text-white" dir="ltr">{p.nameEn}</h3>
       <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">{p.nameAr}</p>
@@ -1352,11 +1365,148 @@ function ECGCard({ p }: { p: ECGPattern }) {
   );
 }
 
+// Pairs of patterns students commonly mix up, shown side by side with the one-line
+// distinction that actually separates them — the same idea as fixing the 3 MI
+// patterns (which were told apart by a label, not a shape difference), applied
+// proactively to the classic confusable pairs.
+const COMPARISON_PAIRS: { aId: string; bId: string; note: string }[] = [
+  { aId: "wenckebach", bId: "block2-2", note: "فينكباخ: PR بيطول تدريجيًا قبل السقوط. موبيتز 2: PR ثابت طول الوقت والسقوط يجي فجأة." },
+  { aId: "svt", bId: "sinus-tach", note: "تسرع الجيوب بيبان تدريجيًا وموجة P موجودة. SVT بييجي/بيروح فجأة (on/off) وموجة P غالبًا مختفية." },
+  { aId: "vt-mono", bId: "torsades", note: "VT أحادي الشكل: كل الضربات شكلها واحد. Torsades: محور QRS بيدور ويتغير حواليه — ومرتبط بإطالة QT." },
+  { aId: "afib-rvr", bId: "aflutter", note: "AFib: بدون أي نمط منتظم للموجات الأذينية أو مسافات QRS. Flutter: موجات F منتظمة بشكل سن منشار بنسبة توصيل ثابتة غالبًا." },
+  { aId: "rbbb", bId: "lbbb", note: "RBBB: شكل rsR' (أذنين أرنب/M) في V1. LBBB: S عميقة وموجة r ضعيفة أو غائبة، مع قبة واسعة واحدة — وممكن تخفي علامات احتشاء." },
+];
+
+function ComparisonPairCard({ aId, bId, note }: { aId: string; bId: string; note: string }) {
+  const a = PATTERNS.find((p) => p.id === aId);
+  const b = PATTERNS.find((p) => p.id === bId);
+  if (!a || !b) return null;
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+      <div className="grid gap-3 sm:grid-cols-2">
+        {[a, b].map((p) => (
+          <div key={p.id}>
+            <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${CATEGORY_META[p.category].badge}`}>{CATEGORY_META[p.category].label}</span>
+            <h4 className="mt-1 text-sm font-bold text-slate-900 dark:text-white" dir="ltr">{p.nameEn}</h4>
+            <p className="text-xs text-slate-500 dark:text-slate-400">{p.nameAr}</p>
+            <div className="my-2 rounded-lg ecg-monitor-bg p-1.5">
+              <ECGWave kind={p.wave} colorClass={waveColor[p.category]} />
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="mt-2 rounded-lg bg-sky-50 px-3 py-2 text-xs font-semibold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">🔑 {note}</div>
+    </div>
+  );
+}
+
+function ComparisonSection() {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="mb-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+      <button type="button" onClick={() => setOpen((s) => !s)} className="flex w-full items-center justify-between px-4 py-3 text-right">
+        <span className="font-bold text-slate-800 dark:text-slate-100">⚖️ أنماط بتتلخبط في بعض — قارنها جنب بعض</span>
+        <span className="text-slate-400">{open ? "−" : "+"}</span>
+      </button>
+      {open && (
+        <div className="space-y-3 border-t border-slate-100 p-4 dark:border-slate-800">
+          {COMPARISON_PAIRS.map((pair) => (
+            <ComparisonPairCard key={pair.aId + pair.bId} {...pair} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function shuffle<T>(arr: T[]): T[] {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function pickQuestion(): { correct: ECGPattern; options: ECGPattern[] } {
+  const correct = PATTERNS[Math.floor(Math.random() * PATTERNS.length)];
+  const others = shuffle(PATTERNS.filter((p) => p.id !== correct.id)).slice(0, 3);
+  return { correct, options: shuffle([correct, ...others]) };
+}
+
+function QuizMode() {
+  const [question, setQuestion] = useState(() => pickQuestion());
+  const [picked, setPicked] = useState<string | null>(null);
+  const [score, setScore] = useState({ correct: 0, total: 0 });
+
+  function pick(id: string) {
+    if (picked) return;
+    setPicked(id);
+    setScore((s) => ({ correct: s.correct + (id === question.correct.id ? 1 : 0), total: s.total + 1 }));
+  }
+
+  function next() {
+    setQuestion(pickQuestion());
+    setPicked(null);
+  }
+
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+      <div className="mb-3 flex items-center justify-between">
+        <span className="text-sm font-bold text-slate-500 dark:text-slate-400">النتيجة: {score.correct} من {score.total}</span>
+        <button type="button" onClick={() => setScore({ correct: 0, total: 0 })} className="text-xs font-bold text-sky-600 dark:text-sky-400">↺ إعادة البدء</button>
+      </div>
+
+      <p className="mb-2 text-center text-sm font-semibold text-slate-600 dark:text-slate-300">إيه اسم النمط ده؟</p>
+      <div className="rounded-lg ecg-monitor-bg p-2">
+        <ECGWave kind={question.correct.wave} colorClass={waveColor[question.correct.category]} />
+      </div>
+
+      <div className="mt-4 grid gap-2 sm:grid-cols-2">
+        {question.options.map((opt) => {
+          const isCorrect = opt.id === question.correct.id;
+          const isPicked = opt.id === picked;
+          let style = "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700";
+          if (picked) {
+            if (isCorrect) style = "bg-emerald-500 text-white";
+            else if (isPicked) style = "bg-rose-500 text-white";
+            else style = "bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500";
+          }
+          return (
+            <button key={opt.id} type="button" disabled={!!picked} onClick={() => pick(opt.id)} className={`rounded-xl px-3 py-2.5 text-right text-sm font-bold ${style}`}>
+              <div dir="ltr">{opt.nameEn}</div>
+              <div className="text-xs font-semibold opacity-80">{opt.nameAr}</div>
+            </button>
+          );
+        })}
+      </div>
+
+      {picked && (
+        <div className="mt-4 space-y-2 border-t border-slate-100 pt-3 dark:border-slate-800">
+          <div className={`text-sm font-bold ${picked === question.correct.id ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"}`}>
+            {picked === question.correct.id ? "✅ إجابة صح!" : "❌ إجابة غلط"}
+          </div>
+          <p className="text-xs text-slate-600 dark:text-slate-300">{question.correct.desc}</p>
+          {question.correct.memoryTrick && (
+            <div className="rounded-lg bg-amber-50 px-3 py-2 text-xs font-semibold text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">💡 {question.correct.memoryTrick}</div>
+          )}
+          <button type="button" onClick={next} className="w-full rounded-xl bg-slate-800 py-2.5 text-sm font-bold text-white dark:bg-white dark:text-slate-900">
+            التالي →
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function ECGPage() {
   const { settings } = useStore();
   const { t } = useI18n();
   const [q, setQ] = useState("");
   const [cat, setCat] = useState<Category | "">("");
+  const [mode, setMode] = useState<"library" | "quiz">("library");
+  const [savedOnly, setSavedOnly] = useState(false);
+  const { favorites } = useFavorites();
 
   useSEO({
     title: `مكتبة ECG | ${settings.siteName}`,
@@ -1368,9 +1518,10 @@ export default function ECGPage() {
     return PATTERNS.filter((p) => {
       const m = (p.nameAr + p.nameEn + p.desc).toLowerCase().includes(q.toLowerCase());
       const c = !cat || p.category === cat;
-      return m && c;
+      const s = !savedOnly || favorites.includes(p.id);
+      return m && c && s;
     });
-  }, [q, cat]);
+  }, [q, cat, savedOnly, favorites]);
 
   const counts = useMemo(() => {
     const cprCount = PATTERNS.filter((p) => p.needsCPR).length;
@@ -1382,14 +1533,31 @@ export default function ECGPage() {
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: "مكتبة ECG" }]} />
       <div className="mb-6 rounded-3xl bg-gradient-to-l from-rose-600 to-slate-800 p-6 text-white sm:p-8">
-        <div className="text-4xl sm:text-5xl">🫀</div>
-        <h1 className="mt-2 text-2xl font-black sm:text-3xl">مكتبة ECG</h1>
-        <p className="mt-1 text-rose-50">{counts.total} نمط مصنّف حسب الخطورة — للمساعدة التعليمية فقط</p>
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <div className="text-4xl sm:text-5xl">🫀</div>
+            <h1 className="mt-2 text-2xl font-black sm:text-3xl">مكتبة ECG</h1>
+            <p className="mt-1 text-rose-50">{counts.total} نمط مصنّف حسب الخطورة — للمساعدة التعليمية فقط</p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setMode((m) => (m === "quiz" ? "library" : "quiz"))}
+            className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold ${mode === "quiz" ? "bg-white text-rose-700" : "bg-white/15 text-white hover:bg-white/25"}`}
+          >
+            {mode === "quiz" ? "📚 رجوع للمكتبة" : "🎯 اختبر نفسك"}
+          </button>
+        </div>
       </div>
 
+      {mode === "quiz" ? (
+        <QuizMode />
+      ) : (
+        <>
       <div className="mb-4 rounded-xl bg-amber-50 p-3 text-xs text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">
         هذه المكتبة تعليمية ومرجعية فقط، والأشكال تخطيطية مبسّطة وليست تسجيلات حقيقية. لا تُستخدم بديلاً عن تفسير ECG الفعلي للمريض أو تقييم الطبيب.
       </div>
+
+      <ComparisonSection />
 
       <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_auto]">
         <div className="relative">
@@ -1409,14 +1577,26 @@ export default function ECGPage() {
             {CATEGORY_META[c].label}
           </button>
         ))}
+        <button
+          onClick={() => setSavedOnly((s) => !s)}
+          className={`mr-auto rounded-full px-3 py-1.5 text-sm font-bold ${savedOnly ? "bg-amber-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
+        >
+          🔖 المحفوظة {favorites.length > 0 ? `(${favorites.length})` : ""}
+        </button>
       </div>
 
       <div className="mb-6"><AdSlot label="إعلان مكتبة ECG" /></div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {list.map((p) => <ECGCard key={p.id} p={p} />)}
-        {list.length === 0 && <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">لا توجد نتائج مطابقة.</div>}
+        {list.length === 0 && (
+          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+            {savedOnly ? "لسه معملتش حفظ لأي نمط." : "لا توجد نتائج مطابقة."}
+          </div>
+        )}
       </div>
+        </>
+      )}
     </div>
   );
 }
