@@ -1047,24 +1047,44 @@ const PATTERN_ANNOTATIONS: Partial<Record<string, WaveAnnotation[]>> = {
     { kind: "tag", label: "ST", x: 4.5, row: "top" },
     { kind: "tag", label: "T", x: 9.17, row: "top" },
   ],
+  // The 3 MI-location patterns intentionally share the exact same waveform shape —
+  // a single generic lead strip can't actually show WHICH leads have ST elevation,
+  // and that's the real thing that tells them apart clinically, not the QRS/ST/T
+  // shape itself. So instead of faking a shape difference, each gets a bracket over
+  // its ST elevation naming the specific leads involved (matching each pattern's own
+  // desc text) — that becomes the visible differentiator.
   "mi-lateral": [
     { kind: "tag", label: "P", x: 1, row: "top" },
     { kind: "tag", label: "QRS", x: 3.83, row: "top" },
-    { kind: "tag", label: "ST", x: 4.5, row: "top" },
     { kind: "tag", label: "T", x: 9.17, row: "top" },
+    { kind: "bracket", label: "ST مرتفع في I, aVL, V5-V6", x1: 4.5, x2: 7, row: "bottom" },
   ],
   "mi-anterior": [
     { kind: "tag", label: "P", x: 1, row: "top" },
     { kind: "tag", label: "QRS", x: 3.83, row: "top" },
-    { kind: "tag", label: "ST", x: 4.5, row: "top" },
     { kind: "tag", label: "T", x: 9.17, row: "top" },
+    { kind: "bracket", label: "ST مرتفع في V1-V4", x1: 4.5, x2: 7, row: "bottom" },
   ],
   "mi-inferior": [
     { kind: "tag", label: "P", x: 1, row: "top" },
     { kind: "tag", label: "QRS", x: 3.83, row: "top" },
-    { kind: "tag", label: "ST", x: 4.5, row: "top" },
     { kind: "tag", label: "T", x: 9.17, row: "top" },
+    { kind: "bracket", label: "ST مرتفع في II, III, aVF", x1: 4.5, x2: 7, row: "bottom" },
   ],
+  "paced": [
+    { kind: "tag", label: "Pacer Spike", x: 0.24, row: "top" },
+    { kind: "tag", label: "QRS", x: 2.33, row: "top" },
+    { kind: "tag", label: "T", x: 8.33, row: "top" },
+  ],
+  // Critical/malignant rhythms: no normal P-QRS-T to label, so instead of generic
+  // anatomy tags these get a single explanatory bracket/arrow naming the one thing
+  // that actually defines the rhythm on the strip.
+  "asystole": [{ kind: "bracket", label: "خط مستقيم — لا يوجد نشاط كهربائي للقلب", x1: 3, x2: 97, row: "top" }],
+  "vf-coarse": [{ kind: "bracket", label: "نشاط كهربائي فوضوي — لا QRS منظم خالص", x1: 3, x2: 97, row: "top" }],
+  "vf-fine": [{ kind: "bracket", label: "رجفان بسعة منخفضة — سهل يتلخبط بخط مسطح", x1: 3, x2: 97, row: "top" }],
+  "vt-mono": [{ kind: "arrow", label: "QRS عريض ومنتظم — بدون موجة P", x: 8, row: "top" }],
+  "torsades": [{ kind: "bracket", label: "محور QRS بيدور حول خط الأساس", x1: 0, x2: 45, row: "top" }],
+  "pea": [{ kind: "bracket", label: "نظم منظم على الشاشة — لكن من غير نبض فعلي", x1: 3, x2: 97, row: "top" }],
 };
 
 function AnnotationMark({ a }: { a: WaveAnnotation }) {
