@@ -55,6 +55,14 @@ type ECGPattern = {
   causes?: string[];
   treatment?: string[];
   memoryTrick?: string;
+  // Richer detail-view fields (Smart Nurse–style tabs: خوارزمية/أسباب/أدوية/ميزات/إجراءات)
+  algorithm?: string[];
+  medications?: string[];
+  features?: string[];
+  ecgCriteria?: { p: string; pr: string; qrs: string; rhythm: string };
+  symptoms?: string[];
+  immediateActions?: string[];
+  hAndT?: { h: string[]; t: string[] };
 };
 
 const CATEGORY_META: Record<Category, { label: string; color: string; badge: string }> = {
@@ -70,33 +78,86 @@ const PATTERNS: ECGPattern[] = [
   { id: "pea", nameAr: "النشاط الكهربائي بلا نبض (PEA)", nameEn: "Pulseless Electrical Activity", category: "lethal", desc: "إيقاع منظم على الشاشة لكن بدون نبض فعلي — عالج السبب فورًا.", needsCPR: true, shockable: false, rate: "متغير", wave: "sinus-slow",
     causes: ["نقص حجم الدم الشديد", "نقص الأكسجين", "استرواح الصدر الضاغط", "الانصمام الرئوي", "اضطراب شديد في الكهارل"],
     treatment: ["CPR فوري", "علاج السبب الكامن (H's & T's)", "أدرينالين حسب البروتوكول"],
-    memoryTrick: "شاشة منظمة... لكن لا نبض حقيقي" },
+    memoryTrick: "شاشة منظمة... لكن لا نبض حقيقي",
+    algorithm: ["تأكد من غياب النبض رغم وجود نظم على الشاشة", "ابدأ CPR فورًا", "دوّر خلال H's & T's بحثًا عن سبب قابل للعلاج", "أدرينالين كل 3-5 دقائق", "لا صدمة كهربائية — الإيقاع غير قابل للصدمة"],
+    medications: ["أدرينالين 1mg IV/IO كل 3-5 دقائق"],
+    features: ["نظم منظم على الشاشة", "غياب تام للنبض الفعلي", "قد يشبه أي إيقاع منظم آخر"],
+    ecgCriteria: { p: "متغيرة حسب الإيقاع الأساسي", pr: "متغير", qrs: "متغير (ضيق أو عريض)", rhythm: "منظم غالبًا لكن بدون نبض" },
+    symptoms: ["فقدان الوعي", "غياب النبض عند الجس", "توقف تنفسي"],
+    immediateActions: ["ابدأ CPR فورًا", "ابحث عن H's & T's وعالج السبب", "أدرينالين حسب البروتوكول", "لا تصدم كهربائيًا"],
+    hAndT: { h: ["نقص الأكسجين", "نقص الحجم", "حماضة H+", "اختلال بوتاسيوم", "انخفاض الحرارة"], t: ["استرواح توتري", "دكاك القلب", "سموم", "خثرة رئوية", "خثرة إكليلية"] },
+  },
   { id: "vf-coarse", nameAr: "الرجفان البطيني (خشن)", nameEn: "Coarse Ventricular Fibrillation", category: "lethal", desc: "نشاط كهربائي فوضوي بلا نتاج قلبي — صدمة كهربائية فورية.", needsCPR: true, shockable: true, rate: "—", wave: "chaotic-coarse",
     causes: ["تسرع بطيني غير معالَج", "احتشاء عضلة القلب", "اختلال شديد في الكهارل", "أدوية مسببة لاضطراب النظم"],
     treatment: ["صدفة كهربائية فورية (لا تزامن)", "أوقف CPR فقط لحظة الصدمة", "أدوية: ليدوكايين، أميودارون، بروكاييناميد (LAP)"],
-    memoryTrick: "Fib is flopping - خط متعرج فوضوي" },
+    memoryTrick: "Fib is flopping - خط متعرج فوضوي",
+    algorithm: ["تحقق من غياب النبض", "CPR فوري", "صدمة كهربائية غير متزامنة فورًا", "أدرينالين بعد الصدمة الثانية", "أميودارون أو ليدوكايين لو استمر"],
+    medications: ["أدرينالين 1mg IV/IO", "أميودارون 300mg IV (جرعة أولى)", "ليدوكايين كبديل"],
+    features: ["خط متعرج فوضوي عالي السعة", "لا QRS منظم", "لا نبض إطلاقًا"],
+    ecgCriteria: { p: "غير موجودة", pr: "غير قابل للقياس", qrs: "غير موجود / فوضوي", rhythm: "فوضوي تمامًا" },
+    symptoms: ["فقدان وعي فوري", "غياب النبض", "توقف تنفسي"],
+    immediateActions: ["CPR + صدمة كهربائية فورية", "أدرينالين بعد الصدمة الثانية", "أميودارون أو ليدوكايين لو استمر بعد 3 صدمات"],
+    hAndT: { h: ["نقص الأكسجين", "نقص الحجم", "حماضة H+", "اختلال بوتاسيوم", "انخفاض الحرارة"], t: ["استرواح توتري", "دكاك القلب", "سموم", "خثرة رئوية", "خثرة إكليلية"] },
+  },
   { id: "asystole", nameAr: "الإيقاع المسطح (توقف القلب)", nameEn: "Asystole", category: "lethal", desc: "خط مستوٍ — توقف قلبي كامل غير قابل للصدمة.", needsCPR: true, shockable: false, rate: "0", wave: "flat",
     causes: ["توقف قلبي تام", "نقص أكسجين شديد", "اختلال كهارل شديد", "توقف تنفسي طويل بدون تدخل"],
     treatment: ["CPR مستمر", "أدرينالين + أتروبين حسب البروتوكول", "لا صدمة كهربائية إطلاقًا"],
-    memoryTrick: "Assist Fully! المريض على خط مسطح" },
+    memoryTrick: "Assist Fully! المريض على خط مسطح",
+    algorithm: ["تأكد بخط مسطح في أكتر من اتجاه (Protocol of Confirm)", "CPR مستمر", "أدرينالين كل 3-5 دقائق", "دوّر H's & T's", "لا صدمة كهربائية"],
+    medications: ["أدرينالين 1mg IV/IO كل 3-5 دقائق"],
+    features: ["خط مستقيم تمامًا", "لا نشاط كهربائي للقلب", "غير قابل للصدمة"],
+    ecgCriteria: { p: "غير موجودة", pr: "غير موجود", qrs: "غير موجود", rhythm: "لا يوجد" },
+    symptoms: ["فقدان وعي كامل", "غياب النبض والتنفس"],
+    immediateActions: ["تأكد من التوصيلات أولًا (Protocol of Confirm)", "CPR مستمر بدون توقف", "أدرينالين حسب البروتوكول", "لا تصدم كهربائيًا إطلاقًا"],
+    hAndT: { h: ["نقص الأكسجين", "نقص الحجم", "حماضة H+", "اختلال بوتاسيوم", "انخفاض الحرارة"], t: ["استرواح توتري", "دكاك القلب", "سموم", "خثرة رئوية", "خثرة إكليلية"] },
+  },
 
   // حرج
   { id: "torsades", nameAr: "تواء الأطراف (Torsades de Pointes)", nameEn: "Torsades de Pointes", category: "critical", desc: "شكل خاص من VT متعدد الأشكال مرتبط بإطالة QT — يُعالج بشكل مختلف عن VT العادي.", needsCPR: true, shockable: true, rate: "200-250", wave: "wide-twisting",
     causes: ["احتشاء عضلة القلب", "نقص الأكسجين", "نقص المغنيسيوم الشديد", "إطالة QT (خلقية أو دوائية)"],
     treatment: ["كبريتات المغنيسيوم وريديًا (العلاج الأساسي)", "صدمة كهربائية لو غير مستقر", "أوقف أي دواء يطيل QT"],
-    memoryTrick: "Tornado Pointes — دوامة ملتفة حول الخط" },
+    memoryTrick: "Tornado Pointes — دوامة ملتفة حول الخط",
+    algorithm: ["قيّم الاستقرار الدموي", "لو غير مستقر: صدمة كهربائية", "كبريتات المغنيسيوم وريديًا فورًا", "أوقف أي دواء يطيل QT", "صحح البوتاسيوم والمغنيسيوم"],
+    medications: ["كبريتات المغنيسيوم 1-2g IV (العلاج الأساسي)", "تصحيح بوتاسيوم/مغنيسيوم"],
+    features: ["QRS متعدد الأشكال يدور حول خط الأساس", "مرتبط بإطالة QT سابقة", "قد يتحول لرجفان بطيني"],
+    ecgCriteria: { p: "غير مرئية غالبًا", pr: "غير قابل للقياس", qrs: "عريض جدًا ومتغير الشكل والاتجاه", rhythm: "سريع وغير منتظم الشكل" },
+    symptoms: ["دوخة أو إغماء", "خفقان شديد", "قد يتطور لتوقف قلبي"],
+    immediateActions: ["كبريتات المغنيسيوم وريديًا فورًا", "صدمة كهربائية لو غير مستقر", "أوقف أي دواء يطيل QT"],
+  },
   { id: "vt-mono", nameAr: "تسرع القلب البطيني (أحادي الشكل)", nameEn: "Monomorphic Ventricular Tachycardia", category: "critical", desc: "تسرع واسع القالب ومنتظم — قد يكون مميتًا إن لم يُعالج.", needsCPR: true, shockable: true, rate: "100-250", wave: "wide-regular",
     causes: ["احتشاء عضلة القلب", "نقص الأكسجين", "نقص البوتاسيوم أو المغنيسيوم"],
     treatment: ["بدون نبض: صدمة كهربائية فورية + CPR", "بنبض غير مستقر: تقويم نظم متزامن (Cardioversion)", "بنبض مستقر: أدوية مضادة لاضطراب النظم"],
-    memoryTrick: "V Tach Tombstone pattern — شكل شاهد القبر" },
+    memoryTrick: "V Tach Tombstone pattern — شكل شاهد القبر",
+    algorithm: ["قيّم النبض", "بدون نبض: عامله زي VF (صدمة + CPR)", "بنبض وغير مستقر: تقويم نظم متزامن", "بنبض ومستقر: أدوية مضادة لاضطراب النظم"],
+    medications: ["أميودارون 150mg IV (حالة مستقرة)", "أدرينالين لو بدون نبض"],
+    features: ["QRS عريض ومنتظم", "كل الضربات نفس الشكل (أحادي الشكل)", "معدل سريع 100-250"],
+    ecgCriteria: { p: "غالبًا غير مرئية (مدفونة في QRS)", pr: "غير قابل للقياس", qrs: "> 0.12 ثانية بشكل ثابت", rhythm: "منتظم" },
+    symptoms: ["خفقان", "دوخة", "قد يفقد الوعي أو ينخفض الضغط"],
+    immediateActions: ["قيّم النبض فورًا", "بدون نبض = صدمة + CPR", "بنبض غير مستقر = تقويم نظم متزامن", "بنبض مستقر = أميودارون"],
+  },
   { id: "vf-fine", nameAr: "الرجفان البطيني (ناعم)", nameEn: "Fine Ventricular Fibrillation", category: "critical", desc: "رجفان بطيني بسعة منخفضة — قد يُشتبه بخطأ بالإيقاع المسطح.", needsCPR: true, shockable: true, rate: "—", wave: "chaotic-fine",
     causes: ["رجفان بطيني خشن لم يُعالج وتراجعت طاقته", "نقص أكسجين مطوّل", "احتشاء واسع"],
     treatment: ["تأكد أنه ليس إيقاعًا مسطحًا (تحقق من التوصيلات أولاً)", "صدمة كهربائية فورية إذا تأكد التشخيص", "CPR مستمر"],
-    memoryTrick: "شبيه بالمسطح لكنه ليس كذلك — تحقق دائمًا من التوصيلات" },
+    memoryTrick: "شبيه بالمسطح لكنه ليس كذلك — تحقق دائمًا من التوصيلات",
+    algorithm: ["تحقق من التوصيلات (استبعد الخط المسطح)", "CPR فوري", "صدمة كهربائية إذا تأكد التشخيص", "أدرينالين وأميودارون حسب البروتوكول"],
+    medications: ["أدرينالين 1mg IV/IO", "أميودارون 300mg IV"],
+    features: ["سعة منخفضة جدًا", "قد يُشتبه به كخط مسطح", "لا نبض حقيقي"],
+    ecgCriteria: { p: "غير موجودة", pr: "غير قابل للقياس", qrs: "غير موجود / فوضوي منخفض السعة", rhythm: "فوضوي" },
+    symptoms: ["فقدان وعي فوري", "غياب النبض"],
+    immediateActions: ["تأكد من التوصيلات أولًا", "CPR فوري", "صدمة كهربائية بعد التأكيد"],
+    hAndT: { h: ["نقص الأكسجين", "نقص الحجم", "حماضة H+", "اختلال بوتاسيوم", "انخفاض الحرارة"], t: ["استرواح توتري", "دكاك القلب", "سموم", "خثرة رئوية", "خثرة إكليلية"] },
+  },
   { id: "block3", nameAr: "الإحصار الأذيني البطيني الكامل (الدرجة الثالثة)", nameEn: "Complete (3rd-Degree) Heart Block", category: "critical", desc: "انفصال تام بين نشاط الأذين والبطين — كل منهما بمعدله الخاص.", needsCPR: false, shockable: false, rate: "متغير (تفكك أذيني بطيني)", wave: "block3",
     causes: ["احتشاء عضلة القلب (خصوصًا السفلي)", "تليّف نظام التوصيل مع التقدم بالعمر", "تسمم دوائي (ديجوكسين، حاصرات بيتا)"],
     treatment: ["استعد لناظمة قلب مؤقتة/دائمة", "أتروبين قد لا يكون فعالًا في هذا المستوى", "راقب علامات نقص التروية"],
-    memoryTrick: "P وQRS كل واحد ماشي لوحده — لا علاقة بينهما" },
+    memoryTrick: "P وQRS كل واحد ماشي لوحده — لا علاقة بينهما",
+    algorithm: ["راقب علامات عدم الاستقرار (هبوط ضغط، ألم صدر، تغير وعي)", "أتروبين كخطوة أولى (قد لا يفلح في هذا المستوى)", "استعد لناظمة قلب مؤقتة عبر الجلد أو الوريد", "عالج السبب الكامن"],
+    medications: ["أتروبين 0.5mg IV (غالبًا غير فعال في هذا المستوى)", "دوبامين أو أدرينالين كبديل لدعم المعدل"],
+    features: ["انفصال تام بين موجات P وQRS", "معدل الأذين أسرع من معدل البطين", "لا علاقة زمنية ثابتة بينهما"],
+    ecgCriteria: { p: "منتظمة لكن مستقلة عن QRS", pr: "متغير تمامًا بلا نمط", qrs: "ضيق أو عريض حسب مصدر الإيقاع الهارب", rhythm: "P منتظم وQRS منتظم، لكن كل منهما لوحده" },
+    symptoms: ["دوخة شديدة", "إغماء", "ضيق تنفس", "ألم صدر"],
+    immediateActions: ["استعد لناظمة قلب فورًا", "أتروبين كمحاولة أولى", "راقب علامات نقص التروية والاستقرار الدموي"],
+  },
 
   // عاجل
   { id: "svt", nameAr: "تسرع فوق البطيني (SVT)", nameEn: "Supraventricular Tachycardia", category: "urgent", desc: "تسرع ضيق القالب ومنتظم بمعدل مرتفع جدًا، غالبًا بدون موجة P واضحة.", needsCPR: false, shockable: false, rate: "150-250", wave: "narrow-fast",
@@ -162,7 +223,14 @@ const PATTERNS: ECGPattern[] = [
   { id: "stemi", nameAr: "احتشاء بارتفاع ST (STEMI)", nameEn: "ST-Elevation Myocardial Infarction", category: "critical", desc: "ارتفاع في قطعة ST فوق الخط الأساسي — انسداد كامل في شريان تاجي، حالة طارئة قصوى.", needsCPR: false, shockable: false, rate: "متغير", wave: "stemi",
     causes: ["انسداد كامل مفاجئ لشريان تاجي"],
     treatment: ["تفعيل بروتوكول المختبر القسطري فورًا (Door-to-balloon)", "أكسجين، أسبرين، نيتروجليسرين، مسكن حسب البروتوكول", "ECG متكرر ومراقبة قريبة"],
-    memoryTrick: "ST مرتفع = عضلة قلب بتموت الآن" },
+    memoryTrick: "ST مرتفع = عضلة قلب بتموت الآن",
+    algorithm: ["ECG خلال 10 دقائق من الوصول", "فعّل بروتوكول المختبر القسطري (Door-to-Balloon أقل من 90 دقيقة)", "أكسجين لو التشبع أقل من 90%", "أسبرين + نيتروجليسرين + مسكن حسب البروتوكول (MONA)"],
+    medications: ["أسبرين 325mg مضغ", "نيتروجليسرين تحت اللسان", "مورفين للألم", "أكسجين حسب الحاجة"],
+    features: ["ارتفاع ST أكثر من 1mm في اتجاهين متجاورين على الأقل", "قد يصاحبه تغير متبادل (Reciprocal changes)", "تطور موجة Q لاحقًا"],
+    ecgCriteria: { p: "طبيعية غالبًا", pr: "طبيعي", qrs: "طبيعي (قد يتسع لاحقًا)", rhythm: "منتظم غالبًا" },
+    symptoms: ["ألم صدر ضاغط مستمر", "تعرق وغثيان", "ضيق تنفس", "ألم منتشر للذراع أو الفك"],
+    immediateActions: ["فعّل بروتوكول القسطرة فورًا (Door-to-Balloon)", "MONA حسب البروتوكول", "ECG ومراقبة متكررة"],
+  },
   { id: "ischemia", nameAr: "نقص تروية عضلة القلب (انخفاض ST)", nameEn: "Myocardial Ischemia (ST Depression)", category: "urgent", desc: "انخفاض في قطعة ST — نقص تروية دون انسداد كامل بعد؛ فرّق بينه وبين الذبحة الصدرية بالإنزيمات والتوقيت.", needsCPR: false, shockable: false, rate: "متغير", wave: "ischemia",
     causes: ["ذبحة صدرية غير مستقرة", "نقص تروية تحت الشغاف", "زيادة الحمل على القلب مع مرض تاجي كامن"],
     treatment: ["أكسجين، نيترات، مراقبة إنزيمات القلب", "ECG متسلسل لمتابعة التطور نحو احتشاء"],
@@ -205,27 +273,69 @@ const PATTERNS: ECGPattern[] = [
   { id: "hyperkalemia-ecg", nameAr: "تغيرات ECG في فرط بوتاسيوم الدم", nameEn: "Hyperkalemia ECG Changes", category: "critical", desc: "موجات T مدببة وضيقة (Peaked/Tented) — إذا لم تُعالَج تتطور لتوقف قلبي.", needsCPR: false, shockable: false, rate: "متغير", wave: "hyperkalemia",
     causes: ["الفشل الكلوي", "تحلل عضلي أو خلوي شديد", "بعض الأدوية (مثبطات ACE، مدرات موفرة للبوتاسيوم)"],
     treatment: ["كالسيوم جلوكونات وريدي لحماية القلب فورًا", "إنسولين + جلوكوز، وسالبوتامول لخفض البوتاسيوم داخل الخلايا", "قد يحتاج غسيل كلوي عاجل"],
-    memoryTrick: "T مدببة وضيقة = بوتاسيوم عالي حتى يثبت العكس" },
+    memoryTrick: "T مدببة وضيقة = بوتاسيوم عالي حتى يثبت العكس",
+    algorithm: ["قيّم شدة الأعراض ودرجة الارتفاع", "كالسيوم جلوكونات فورًا لحماية عضلة القلب", "إنسولين + جلوكوز وسالبوتامول لنقل البوتاسيوم داخل الخلايا", "علاج نهائي بغسيل كلوي أو مدرات لو لزم"],
+    medications: ["كالسيوم جلوكونات 10% IV (حماية القلب فورًا)", "إنسولين سريع + جلوكوز 50%", "سالبوتامول استنشاق", "كايكسالات أو غسيل كلوي (إزالة نهائية)"],
+    features: ["موجات T مدببة وضيقة (Tented)", "تسطح موجة P مع الارتفاع الشديد", "اتساع QRS تدريجيًا مع الارتفاع الشديد"],
+    ecgCriteria: { p: "تتسطح أو تختفي مع الارتفاع الشديد", pr: "يطول تدريجيًا", qrs: "يتسع تدريجيًا مع الارتفاع الشديد", rhythm: "قد يتحول لموجة جيبية ثم توقف قلبي" },
+    symptoms: ["ضعف عضلي أو خدر", "خفقان", "قد يصل لتوقف قلبي مفاجئ"],
+    immediateActions: ["كالسيوم جلوكونات فورًا لحماية القلب", "إنسولين+جلوكوز وسالبوتامول لخفض البوتاسيوم", "استعد لغسيل كلوي عاجل"],
+  },
   { id: "nstemi", nameAr: "احتشاء بدون ارتفاع ST / ذبحة غير مستقرة", nameEn: "NSTEMI / Unstable Angina", category: "critical", desc: "انخفاض ST أو انقلاب موجة T بدون ارتفاع ST — فرّق بينهما بإنزيمات القلب والتوقيت.", needsCPR: false, shockable: false, rate: "متغير", wave: "ischemia",
     causes: ["انسداد جزئي أو مؤقت لشريان تاجي"],
     treatment: ["أسبرين، مضادات تخثر حسب البروتوكول", "إنزيمات قلب متسلسلة لتفريق NSTEMI عن الذبحة", "تنظير قسطري حسب تصنيف الخطورة"],
-    memoryTrick: "بدون ارتفاع ST — لازم إنزيمات القلب تفرّق الحالة" },
+    memoryTrick: "بدون ارتفاع ST — لازم إنزيمات القلب تفرّق الحالة",
+    algorithm: ["ECG متسلسل + إنزيمات قلب متسلسلة", "أسبرين ومضادات تخثر حسب البروتوكول", "صنّف الخطورة (TIMI/GRACE) لتحديد توقيت القسطرة"],
+    medications: ["أسبرين 325mg", "مضادات تخثر (هيبارين)", "نيتروجليسرين للألم"],
+    features: ["انخفاض ST أو انقلاب T بدون ارتفاع ST", "إنزيمات القلب مرتفعة (يفرّقه عن الذبحة غير المستقرة)"],
+    ecgCriteria: { p: "طبيعية غالبًا", pr: "طبيعي", qrs: "طبيعي", rhythm: "منتظم غالبًا" },
+    symptoms: ["ألم صدر", "ضيق تنفس", "تعرق"],
+    immediateActions: ["أسبرين ومضادات تخثر فورًا", "إنزيمات قلب متسلسلة", "تنظير قسطري حسب تصنيف الخطورة"],
+  },
   { id: "mi-lateral", nameAr: "احتشاء عضلة القلب الحاد الجانبي", nameEn: "Acute Lateral Wall MI (STEMI)", category: "critical", desc: "ارتفاع ST في I، aVL، V5، V6 — منطقة الشريان الظرفي (LCx) أو القطري.", needsCPR: false, shockable: false, rate: "متغير", wave: "stemi",
     causes: ["انسداد الشريان الظرفي الأيسر (LCx) أو فرع قطري"],
     treatment: ["تفعيل بروتوكول القسطرة القلبية فورًا", "أكسجين، أسبرين، نيتروجليسرين حسب البروتوكول"],
-    memoryTrick: "ارتفاع ST في I وaVL وV5-V6 = جانبي" },
+    memoryTrick: "ارتفاع ST في I وaVL وV5-V6 = جانبي",
+    algorithm: ["ECG بـ12 اتجاه لتأكيد التوزيع", "فعّل بروتوكول القسطرة فورًا", "MONA حسب البروتوكول"],
+    medications: ["أسبرين", "نيتروجليسرين", "مسكن", "أكسجين حسب الحاجة"],
+    features: ["ارتفاع ST في I وaVL وV5-V6", "قد يصاحبه تغير متبادل سفلي"],
+    ecgCriteria: { p: "طبيعية", pr: "طبيعي", qrs: "طبيعي غالبًا", rhythm: "منتظم" },
+    symptoms: ["ألم صدر", "تعرق", "ضيق تنفس"],
+    immediateActions: ["فعّل بروتوكول القسطرة فورًا", "MONA حسب البروتوكول"],
+  },
   { id: "mi-anterior", nameAr: "احتشاء عضلة القلب الحاد الأمامي", nameEn: "Acute Anterior Wall MI (STEMI)", category: "critical", desc: "ارتفاع ST في V1-V4 — منطقة الشريان الأمامي النازل (LAD)، الأكثر خطورة لأنه يغذي جزءًا كبيرًا من البطين الأيسر.", needsCPR: false, shockable: false, rate: "متغير", wave: "stemi",
     causes: ["انسداد الشريان الأمامي النازل الأيسر (LAD)"],
     treatment: ["تفعيل بروتوكول القسطرة فورًا (الأولوية القصوى)", "راقب علامات قصور القلب الحاد وصدمة قلبية"],
-    memoryTrick: "V1-V4 = أمامي = LAD = الأخطر" },
+    memoryTrick: "V1-V4 = أمامي = LAD = الأخطر",
+    algorithm: ["ECG فوري بـ12 اتجاه", "فعّل بروتوكول القسطرة كأولوية قصوى", "راقب علامات قصور القلب الحاد والصدمة القلبية"],
+    medications: ["أسبرين", "نيتروجليسرين بحذر (راقب الضغط)", "مسكن", "أكسجين"],
+    features: ["ارتفاع ST في V1-V4", "أخطر أنواع الاحتشاء لاتساع منطقة العضلة المتأثرة"],
+    ecgCriteria: { p: "طبيعية", pr: "طبيعي", qrs: "طبيعي (قد يتسع لاحقًا)", rhythm: "منتظم" },
+    symptoms: ["ألم صدر شديد", "ضيق تنفس", "علامات صدمة قلبية محتملة"],
+    immediateActions: ["فعّل بروتوكول القسطرة فورًا (أولوية قصوى)", "راقب قصور القلب والصدمة القلبية"],
+  },
   { id: "mi-inferior", nameAr: "احتشاء عضلة القلب الحاد السفلي", nameEn: "Acute Inferior Wall MI (STEMI)", category: "critical", desc: "ارتفاع ST في II، III، aVF — منطقة الشريان التاجي الأيمن غالبًا؛ راقب بطء القلب والإحصار.", needsCPR: false, shockable: false, rate: "متغير", wave: "stemi",
     causes: ["انسداد الشريان التاجي الأيمن (RCA) غالبًا"],
     treatment: ["تفعيل بروتوكول القسطرة فورًا", "تجنب النيترات لو فيه احتشاء بالبطين الأيمن (قد يهبط الضغط بشدة)", "راقب بطء القلب أو إحصار AV"],
-    memoryTrick: "II وIII وaVF = سفلي = راقب بطء القلب" },
+    memoryTrick: "II وIII وaVF = سفلي = راقب بطء القلب",
+    algorithm: ["ECG فوري", "تجنب النيترات لو فيه اشتباه احتشاء بطين أيمن", "راقب بطء القلب والإحصار AV", "فعّل بروتوكول القسطرة"],
+    medications: ["أسبرين", "تجنب النيترات إذا هبط الضغط أو اشتبه احتشاء بطين أيمن", "أتروبين لو بطء قلب مصاحب"],
+    features: ["ارتفاع ST في II وIII وaVF", "قد يصاحبه بطء قلب أو إحصار AV"],
+    ecgCriteria: { p: "طبيعية", pr: "قد يطول لو فيه إحصار مصاحب", qrs: "طبيعي غالبًا", rhythm: "قد يكون بطيء لو فيه إحصار" },
+    symptoms: ["ألم صدر", "غثيان وقيء أكثر من الاحتشاءات الأخرى", "دوخة لو فيه بطء قلب"],
+    immediateActions: ["فعّل بروتوكول القسطرة فورًا", "تجنب النيترات لو احتشاء بطين أيمن محتمل", "راقب بطء القلب والإحصار"],
+  },
   { id: "pe-ecg", nameAr: "نمط ECG في الانسداد الرئوي", nameEn: "Pulmonary Embolism ECG Pattern (S1Q3T3)", category: "critical", desc: "نمط S1Q3T3 (موجة S في I، موجة Q في III، T مقلوبة في III) + تسرع جيبي — غير نوعي لكن مشير.", needsCPR: false, shockable: false, rate: "متغير (غالبًا تسرع جيبي)", wave: "pe-pattern",
     causes: ["انصمام رئوي حاد يسبب إجهادًا مفاجئًا على البطين الأيمن"],
     treatment: ["أكسجين ودعم تنفسي", "مضادات تخثر عاجلة أو حل الجلطة حسب الشدة", "تصوير مقطعي للشريان الرئوي للتأكيد"],
-    memoryTrick: "S1Q3T3 — غير نوعي لكنه مشير للانصمام الرئوي" },
+    memoryTrick: "S1Q3T3 — غير نوعي لكنه مشير للانصمام الرئوي",
+    algorithm: ["قيّم الاستقرار التنفسي والدموي", "أكسجين ودعم تنفسي", "تصوير مقطعي للشريان الرئوي للتأكيد", "مضادات تخثر أو حل الجلطة حسب الشدة"],
+    medications: ["مضادات تخثر (هيبارين)", "حالّ للجلطة في الحالات الشديدة (عدم استقرار دموي)"],
+    features: ["نمط S1Q3T3 (غير نوعي لكن مشير)", "تسرع جيبي هو الأكثر شيوعًا فعليًا", "قد يظهر إحصار حزمة يمنى جديد"],
+    ecgCriteria: { p: "طبيعية غالبًا", pr: "طبيعي", qrs: "طبيعي أو إحصار حزمة يمنى جديد", rhythm: "غالبًا تسرع جيبي" },
+    symptoms: ["ضيق تنفس مفاجئ", "ألم صدر جنبي", "تسرع قلب", "قد يصاحبه هبوط ضغط مفاجئ"],
+    immediateActions: ["أكسجين ودعم تنفسي فورًا", "تصوير مقطعي للتأكيد", "مضادات تخثر أو حل الجلطة حسب الشدة"],
+  },
 ];
 
 function pr(seed: number) {
@@ -1245,12 +1355,176 @@ function scheduleAlarmBeep(ctx: AudioContext, time: number) {
   beep(ctx, time, 880, 0.12, 0.3);
 }
 
+type DetailTab = "algo" | "causes" | "meds" | "features" | "actions";
+const DETAIL_TABS: { id: DetailTab; label: string; icon: string }[] = [
+  { id: "algo", label: "خوارزمية", icon: "🧭" },
+  { id: "causes", label: "أسباب", icon: "📋" },
+  { id: "meds", label: "أدوية", icon: "💊" },
+  { id: "features", label: "ميزات", icon: "🔬" },
+  { id: "actions", label: "إجراءات", icon: "⚡" },
+];
+
+function EmptyTab({ icon, title, subtitle }: { icon: string; title: string; subtitle?: string }) {
+  return (
+    <div className="py-8 text-center">
+      <div className="text-4xl">{icon}</div>
+      <p className="mt-2 text-sm font-bold text-slate-500 dark:text-slate-400">{title}</p>
+      {subtitle && <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">{subtitle}</p>}
+    </div>
+  );
+}
+
+function ECGDetailTabs({ p }: { p: ECGPattern }) {
+  const [tab, setTab] = useState<DetailTab>(p.algorithm?.length ? "algo" : "causes");
+  const actions = p.immediateActions?.length ? p.immediateActions : p.treatment?.length ? p.treatment : null;
+
+  return (
+    <div className="mt-3 border-t border-slate-100 pt-3 dark:border-slate-800">
+      {p.ecgCriteria && (
+        <div className="mb-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+          <div className="rounded-lg bg-slate-50 p-2 text-center dark:bg-slate-800/60">
+            <div className="text-[10px] font-bold text-slate-400">QRS</div>
+            <div className="text-xs font-bold text-slate-700 dark:text-slate-200">{p.ecgCriteria.qrs}</div>
+          </div>
+          <div className="rounded-lg bg-slate-50 p-2 text-center dark:bg-slate-800/60">
+            <div className="text-[10px] font-bold text-slate-400">PR</div>
+            <div className="text-xs font-bold text-slate-700 dark:text-slate-200">{p.ecgCriteria.pr}</div>
+          </div>
+          <div className="rounded-lg bg-slate-50 p-2 text-center dark:bg-slate-800/60">
+            <div className="text-[10px] font-bold text-slate-400">الانتظام</div>
+            <div className="text-xs font-bold text-slate-700 dark:text-slate-200">{p.ecgCriteria.rhythm}</div>
+          </div>
+          <div className="rounded-lg bg-slate-50 p-2 text-center dark:bg-slate-800/60">
+            <div className="text-[10px] font-bold text-slate-400">المعدل</div>
+            <div className="text-xs font-bold text-slate-700 dark:text-slate-200" dir="ltr">{p.rate} bpm</div>
+          </div>
+        </div>
+      )}
+
+      <div className="mb-3 flex flex-wrap gap-1.5 border-b border-slate-100 pb-2 dark:border-slate-800">
+        {DETAIL_TABS.map((dt) => (
+          <button
+            key={dt.id}
+            type="button"
+            onClick={() => setTab(dt.id)}
+            className={`rounded-full px-2.5 py-1 text-xs font-bold ${tab === dt.id ? "bg-slate-800 text-white dark:bg-white dark:text-slate-900" : "bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400"}`}
+          >
+            {dt.icon} {dt.label}
+          </button>
+        ))}
+      </div>
+
+      {tab === "algo" &&
+        (p.algorithm?.length ? (
+          <ol className="list-inside list-decimal space-y-1 text-xs text-slate-600 dark:text-slate-300">
+            {p.algorithm.map((s, i) => <li key={i}>{s}</li>)}
+          </ol>
+        ) : (
+          <EmptyTab icon="🧭" title="لا تتوفر خوارزمية لهذا الإيقاع" subtitle="الخوارزميات متاحة للإيقاعات التي تتطلب تدخلًا فوريًا" />
+        ))}
+
+      {tab === "causes" &&
+        (p.causes?.length ? (
+          <div className="space-y-3">
+            <ul className="list-inside list-disc space-y-1 text-xs text-slate-600 dark:text-slate-300">
+              {p.causes.map((c) => <li key={c}>{c}</li>)}
+            </ul>
+            {p.hAndT && (
+              <div className="rounded-lg bg-sky-50 p-3 dark:bg-sky-500/10">
+                <div className="mb-2 text-xs font-bold text-sky-700 dark:text-sky-300">5Hs & 5Ts</div>
+                <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-slate-600 dark:text-slate-300">
+                  {p.hAndT.h.map((h, i) => (
+                    <div key={"h" + i} className="flex items-center gap-1.5">
+                      <span className="rounded-full bg-sky-600 px-1.5 text-[10px] font-bold text-white">H{i + 1}</span>
+                      {h}
+                    </div>
+                  ))}
+                  {p.hAndT.t.map((t, i) => (
+                    <div key={"t" + i} className="flex items-center gap-1.5">
+                      <span className="rounded-full bg-indigo-600 px-1.5 text-[10px] font-bold text-white">T{i + 1}</span>
+                      {t}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <EmptyTab icon="📋" title="لا توجد أسباب محددة" />
+        ))}
+
+      {tab === "meds" &&
+        (p.medications?.length ? (
+          <ul className="list-inside list-disc space-y-1 text-xs text-slate-600 dark:text-slate-300">
+            {p.medications.map((m) => <li key={m}>{m}</li>)}
+          </ul>
+        ) : (
+          <EmptyTab icon="💊" title="لا توجد أدوية محددة" />
+        ))}
+
+      {tab === "features" &&
+        (p.features?.length || p.ecgCriteria || p.symptoms?.length ? (
+          <div className="space-y-3">
+            {!!p.features?.length && (
+              <ul className="list-inside list-disc space-y-1 text-xs text-slate-600 dark:text-slate-300">
+                {p.features.map((f) => <li key={f}>{f}</li>)}
+              </ul>
+            )}
+            {p.ecgCriteria && (
+              <div className="rounded-lg bg-slate-50 p-3 text-xs dark:bg-slate-800/60">
+                <div className="mb-2 font-bold text-slate-500 dark:text-slate-400">معايير ECG</div>
+                <div className="space-y-1.5">
+                  <div className="flex justify-between"><span className="text-slate-400">موجة P</span><span className="font-semibold text-slate-700 dark:text-slate-200">{p.ecgCriteria.p}</span></div>
+                  <div className="flex justify-between"><span className="text-slate-400">PR</span><span className="font-semibold text-slate-700 dark:text-slate-200">{p.ecgCriteria.pr}</span></div>
+                  <div className="flex justify-between"><span className="text-slate-400">QRS</span><span className="font-semibold text-slate-700 dark:text-slate-200">{p.ecgCriteria.qrs}</span></div>
+                  <div className="flex justify-between"><span className="text-slate-400">الانتظام</span><span className="font-semibold text-slate-700 dark:text-slate-200">{p.ecgCriteria.rhythm}</span></div>
+                </div>
+              </div>
+            )}
+            {!!p.symptoms?.length && (
+              <div className="rounded-lg bg-amber-50 p-3 dark:bg-amber-500/10">
+                <div className="mb-1 text-xs font-bold text-amber-700 dark:text-amber-300">⚠️ الأعراض</div>
+                <ul className="list-inside list-disc space-y-0.5 text-xs text-amber-800 dark:text-amber-200">
+                  {p.symptoms.map((s) => <li key={s}>{s}</li>)}
+                </ul>
+              </div>
+            )}
+          </div>
+        ) : (
+          <EmptyTab icon="🔬" title="لا توجد ميزات إضافية مسجّلة" />
+        ))}
+
+      {tab === "actions" &&
+        (actions ? (
+          <div className="space-y-2">
+            {actions.map((a, i) => (
+              <div key={i} className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-300">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-[10px] font-bold text-white">{i + 1}</span>
+                {a}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="space-y-2 text-xs text-slate-600 dark:text-slate-300">
+            <div className="flex items-center gap-2"><span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-[10px] font-bold text-white">1</span>لا تدخل مطلوب</div>
+            <div className="flex items-center gap-2"><span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-[10px] font-bold text-white">2</span>استمر في المراقبة الروتينية</div>
+          </div>
+        ))}
+    </div>
+  );
+}
+
 function ECGCard({ p }: { p: ECGPattern }) {
   const [open, setOpen] = useState(false);
   const [playing, setPlaying] = useState(false);
   const schedulerRef = useRef<number | null>(null);
   const noPulse = NO_PULSE_IDS.has(p.id);
-  const hasDetails = (p.causes && p.causes.length > 0) || (p.treatment && p.treatment.length > 0);
+  const hasDetails = !!(
+    (p.causes && p.causes.length) || (p.treatment && p.treatment.length) ||
+    (p.algorithm && p.algorithm.length) || (p.medications && p.medications.length) ||
+    (p.features && p.features.length) || p.ecgCriteria ||
+    (p.symptoms && p.symptoms.length) || (p.immediateActions && p.immediateActions.length)
+  );
   const { isFav, toggleFav } = useFavorites();
   const saved = isFav(p.id);
 
@@ -1334,7 +1608,7 @@ function ECGCard({ p }: { p: ECGPattern }) {
         </button>
         {hasDetails && (
           <button type="button" onClick={() => setOpen((s) => !s)} className="mr-auto text-xs font-bold text-sky-600 dark:text-sky-400">
-            {open ? "− إخفاء الأسباب والعلاج" : "+ الأسباب والعلاج"}
+            {open ? "− إخفاء التفاصيل" : "+ تفاصيل أكتر"}
           </button>
         )}
       </div>
@@ -1343,26 +1617,7 @@ function ECGCard({ p }: { p: ECGPattern }) {
         <div className="mt-2 text-xs font-semibold text-rose-500">🔇 ده صوت إنذار المونيتور بس — الإيقاع ده معندوش نبض حقيقي يتسمع بالسماعة.</div>
       )}
 
-      {open && (
-        <div className="mt-3 space-y-3 border-t border-slate-100 pt-3 dark:border-slate-800">
-          {p.causes && p.causes.length > 0 && (
-            <div>
-              <div className="mb-1 text-xs font-bold text-slate-500 dark:text-slate-400">🔍 الأسباب</div>
-              <ul className="list-inside list-disc space-y-0.5 text-xs text-slate-600 dark:text-slate-300">
-                {p.causes.map((c) => <li key={c}>{c}</li>)}
-              </ul>
-            </div>
-          )}
-          {p.treatment && p.treatment.length > 0 && (
-            <div>
-              <div className="mb-1 text-xs font-bold text-emerald-600 dark:text-emerald-400">💚 العلاج</div>
-              <ul className="list-inside list-disc space-y-0.5 text-xs text-slate-600 dark:text-slate-300">
-                {p.treatment.map((c) => <li key={c}>{c}</li>)}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
+      {open && <ECGDetailTabs p={p} />}
     </div>
   );
 }
@@ -1635,76 +1890,4 @@ export default function ECGPage() {
             <div className="text-4xl sm:text-5xl">🫀</div>
             <h1 className="mt-2 text-2xl font-black sm:text-3xl">مكتبة ECG</h1>
             <p className="mt-1 text-rose-50">{counts.total} نمط مصنّف حسب الخطورة — للمساعدة التعليمية فقط</p>
-          </div>
-          <div className="flex shrink-0 flex-col items-stretch gap-2">
-            <button
-              type="button"
-              onClick={() => setMode((m) => (m === "quiz" ? "library" : "quiz"))}
-              className={`rounded-full px-4 py-2 text-sm font-bold ${mode === "quiz" ? "bg-white text-rose-700" : "bg-white/15 text-white hover:bg-white/25"}`}
-            >
-              {mode === "quiz" ? "📚 رجوع للمكتبة" : "🎯 اختبر نفسك"}
-            </button>
-            {summaryProduct ? (
-              <button type="button" onClick={buySummary} className="rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-slate-900 hover:bg-amber-300">
-                📄 حمّل ورقة المراجعة — {summaryProduct.price} ج.م
-              </button>
-            ) : (
-              <span className="rounded-full bg-white/10 px-4 py-2 text-center text-xs font-bold text-white/70" title='أضف منتج بـ id="ecg-summary-pdf" من لوحة التحكم مع رفع ملف PDF وتحديد السعر'>
-                📄 ورقة المراجعة — لسه محتاجة تتضاف من لوحة التحكم
-              </span>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {mode === "quiz" ? (
-        <QuizMode />
-      ) : (
-        <>
-      <div className="mb-4 rounded-xl bg-amber-50 p-3 text-xs text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">
-        هذه المكتبة تعليمية ومرجعية فقط، والأشكال تخطيطية مبسّطة وليست تسجيلات حقيقية. لا تُستخدم بديلاً عن تفسير ECG الفعلي للمريض أو تقييم الطبيب.
-      </div>
-
-      <ComparisonSection />
-
-      <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_auto]">
-        <div className="relative">
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t("common.search") + "..."} className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" />
-          <span className="absolute right-3 top-3 text-slate-400">🔍</span>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <span className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-500 dark:bg-slate-800 dark:text-slate-300">CPR {counts.cprCount}</span>
-          <span className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-500 dark:bg-slate-800 dark:text-slate-300">قابل للصدمة {counts.shockCount}</span>
-        </div>
-      </div>
-
-      <div className="mb-6 flex flex-wrap gap-2">
-        <button onClick={() => setCat("")} className={`rounded-full px-3 py-1.5 text-sm font-bold ${!cat ? "bg-slate-800 text-white dark:bg-white dark:text-slate-900" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}>الكل</button>
-        {(Object.keys(CATEGORY_META) as Category[]).map((c) => (
-          <button key={c} onClick={() => setCat(c)} className={`rounded-full px-3 py-1.5 text-sm font-bold ${cat === c ? CATEGORY_META[c].badge : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}>
-            {CATEGORY_META[c].label}
-          </button>
-        ))}
-        <button
-          onClick={() => setSavedOnly((s) => !s)}
-          className={`mr-auto rounded-full px-3 py-1.5 text-sm font-bold ${savedOnly ? "bg-amber-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
-        >
-          🔖 المحفوظة {favorites.length > 0 ? `(${favorites.length})` : ""}
-        </button>
-      </div>
-
-      <div className="mb-6"><AdSlot label="إعلان مكتبة ECG" /></div>
-
-      <div className="grid gap-4 sm:grid-cols-2">
-        {list.map((p) => <ECGCard key={p.id} p={p} />)}
-        {list.length === 0 && (
-          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
-            {savedOnly ? "لسه معملتش حفظ لأي نمط." : "لا توجد نتائج مطابقة."}
-          </div>
-        )}
-      </div>
-        </>
-      )}
-    </div>
-  );
-}
+       
