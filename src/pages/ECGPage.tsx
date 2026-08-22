@@ -1577,7 +1577,7 @@ function QuizMode() {
 }
 
 export default function ECGPage() {
-  const { settings } = useStore();
+  const { settings, products } = useStore();
   const { t } = useI18n();
   const [q, setQ] = useState("");
   const [cat, setCat] = useState<Category | "">("");
@@ -1587,11 +1587,19 @@ export default function ECGPage() {
   const { add: addToCart } = useCart();
   const nav = useNavigate();
 
+  // The post-payment download button (OrderStatusPage) looks up
+  // products.find(p => p.id === item.productId) and only shows "تحميل" if that
+  // product has a fileUrl — a cart line with a made-up productId that isn't a
+  // real product in the catalog will always show "الملف غير متاح بعد" instead.
+  // So this looks up the REAL admin-managed product (create it once in the admin
+  // panel with id "ecg-summary-pdf", the summary PDF uploaded as its file, and a
+  // price) and uses its real id/title/price/cover for the cart line — falls back
+  // to matching by title if the id ever differs.
+  const summaryProduct = products.find((p) => p.id === "ecg-summary-pdf" || (p.title.includes("مراجعة") && p.title.includes("ECG")));
+
   function buySummary() {
-    // Adds a plain cart line (not tied to the admin's managed product catalog —
-    // CartLine only needs productId/title/price/qty) then sends the user straight
-    // to the site's existing checkout flow, exactly like buying any other product.
-    addToCart({ productId: "ecg-summary-pdf", title: "ورقة مراجعة مكتبة ECG (PDF)", price: 50, qty: 1 });
+    if (!summaryProduct) return;
+    addToCart({ productId: summaryProduct.id, title: summaryProduct.title, price: summaryProduct.price, qty: 1, cover: summaryProduct.cover });
     nav("/checkout");
   }
 
@@ -1634,9 +1642,15 @@ export default function ECGPage() {
             >
               {mode === "quiz" ? "📚 رجوع للمكتبة" : "🎯 اختبر نفسك"}
             </button>
-            <button type="button" onClick={buySummary} className="rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-slate-900 hover:bg-amber-300">
-              📄 حمّل ورقة المراجعة — 50 ج.م
-            </button>
+            {summaryProduct ? (
+              <button type="button" onClick={buySummary} className="rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-slate-900 hover:bg-amber-300">
+                📄 حمّل ورقة المراجعة — {summaryProduct.price} ج.م
+              </button>
+            ) : (
+              <span className="rounded-full bg-white/10 px-4 py-2 text-center text-xs font-bold text-white/70" title='أضف منتج بـ id="ecg-summary-pdf" من لوحة التحكم مع رفع ملف PDF وتحديد السعر'>
+                📄 ورقة المراجعة — لسه محتاجة تتضاف من لوحة التحكم
+              </span>
+            )}
           </div>
         </div>
       </div>
