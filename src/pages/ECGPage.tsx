@@ -1890,4 +1890,76 @@ export default function ECGPage() {
             <div className="text-4xl sm:text-5xl">🫀</div>
             <h1 className="mt-2 text-2xl font-black sm:text-3xl">مكتبة ECG</h1>
             <p className="mt-1 text-rose-50">{counts.total} نمط مصنّف حسب الخطورة — للمساعدة التعليمية فقط</p>
-       
+          </div>
+          <div className="flex shrink-0 flex-col items-stretch gap-2">
+            <button
+              type="button"
+              onClick={() => setMode((m) => (m === "quiz" ? "library" : "quiz"))}
+              className={`rounded-full px-4 py-2 text-sm font-bold ${mode === "quiz" ? "bg-white text-rose-700" : "bg-white/15 text-white hover:bg-white/25"}`}
+            >
+              {mode === "quiz" ? "📚 رجوع للمكتبة" : "🎯 اختبر نفسك"}
+            </button>
+            {summaryProduct ? (
+              <button type="button" onClick={buySummary} className="rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-slate-900 hover:bg-amber-300">
+                📄 حمّل ورقة المراجعة — {summaryProduct.price} ج.م
+              </button>
+            ) : (
+              <span className="rounded-full bg-white/10 px-4 py-2 text-center text-xs font-bold text-white/70" title='أضف منتج بـ id="ecg-summary-pdf" من لوحة التحكم مع رفع ملف PDF وتحديد السعر'>
+                📄 ورقة المراجعة — لسه محتاجة تتضاف من لوحة التحكم
+              </span>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {mode === "quiz" ? (
+        <QuizMode />
+      ) : (
+        <>
+      <div className="mb-4 rounded-xl bg-amber-50 p-3 text-xs text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">
+        هذه المكتبة تعليمية ومرجعية فقط، والأشكال تخطيطية مبسّطة وليست تسجيلات حقيقية. لا تُستخدم بديلاً عن تفسير ECG الفعلي للمريض أو تقييم الطبيب.
+      </div>
+
+      <ComparisonSection />
+
+      <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_auto]">
+        <div className="relative">
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t("common.search") + "..."} className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" />
+          <span className="absolute right-3 top-3 text-slate-400">🔍</span>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <span className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-500 dark:bg-slate-800 dark:text-slate-300">CPR {counts.cprCount}</span>
+          <span className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-500 dark:bg-slate-800 dark:text-slate-300">قابل للصدمة {counts.shockCount}</span>
+        </div>
+      </div>
+
+      <div className="mb-6 flex flex-wrap gap-2">
+        <button onClick={() => setCat("")} className={`rounded-full px-3 py-1.5 text-sm font-bold ${!cat ? "bg-slate-800 text-white dark:bg-white dark:text-slate-900" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}>الكل</button>
+        {(Object.keys(CATEGORY_META) as Category[]).map((c) => (
+          <button key={c} onClick={() => setCat(c)} className={`rounded-full px-3 py-1.5 text-sm font-bold ${cat === c ? CATEGORY_META[c].badge : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}>
+            {CATEGORY_META[c].label}
+          </button>
+        ))}
+        <button
+          onClick={() => setSavedOnly((s) => !s)}
+          className={`mr-auto rounded-full px-3 py-1.5 text-sm font-bold ${savedOnly ? "bg-amber-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
+        >
+          🔖 المحفوظة {favorites.length > 0 ? `(${favorites.length})` : ""}
+        </button>
+      </div>
+
+      <div className="mb-6"><AdSlot label="إعلان مكتبة ECG" /></div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        {list.map((p) => <ECGCard key={p.id} p={p} />)}
+        {list.length === 0 && (
+          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+            {savedOnly ? "لسه معملتش حفظ لأي نمط." : "لا توجد نتائج مطابقة."}
+          </div>
+        )}
+      </div>
+        </>
+      )}
+    </div>
+  );
+}
