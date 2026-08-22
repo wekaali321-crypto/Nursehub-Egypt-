@@ -1,9 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { useFavorites } from "../lib/favorites";
+import { useCart } from "../lib/cart";
 
 type Category = "lethal" | "critical" | "urgent" | "watch" | "normal";
 type WaveKind =
@@ -1428,72 +1430,147 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-function pickQuestion(): { correct: ECGPattern; options: ECGPattern[] } {
-  const correct = PATTERNS[Math.floor(Math.random() * PATTERNS.length)];
+const MISTAKES_KEY = "nursehub_ecg_mistakes_v1";
+function loadMistakes(): string[] {
+  try {
+    return JSON.parse(localStorage.getItem(MISTAKES_KEY) || "[]");
+  } catch {
+    return [];
+  }
+}
+
+const SPEED_SECONDS = 8;
+type QuizType = "normal" | "speed" | "mistakes";
+
+function pickQuestion(pool: ECGPattern[]): { correct: ECGPattern; options: ECGPattern[] } {
+  const source = pool.length > 0 ? pool : PATTERNS;
+  const correct = source[Math.floor(Math.random() * source.length)];
   const others = shuffle(PATTERNS.filter((p) => p.id !== correct.id)).slice(0, 3);
   return { correct, options: shuffle([correct, ...others]) };
 }
 
 function QuizMode() {
-  const [question, setQuestion] = useState(() => pickQuestion());
+  const [quizType, setQuizType] = useState<QuizType>("normal");
+  const [mistakes, setMistakes] = useState<string[]>(() => loadMistakes());
+  useEffect(() => {
+    localStorage.setItem(MISTAKES_KEY, JSON.stringify(mistakes));
+  }, [mistakes]);
+
+  const poolFor = (t: QuizType) => (t === "mistakes" ? PATTERNS.filter((p) => mistakes.includes(p.id)) : PATTERNS);
+
+  const [question, setQuestion] = useState(() => pickQuestion(poolFor("normal")));
   const [picked, setPicked] = useState<string | null>(null);
   const [score, setScore] = useState({ correct: 0, total: 0 });
+  const [timeLeft, setTimeLeft] = useState(SPEED_SECONDS);
 
   function pick(id: string) {
     if (picked) return;
-    setPicked(id);
-    setScore((s) => ({ correct: s.correct + (id === question.correct.id ? 1 : 0), total: s.total + 1 }));
+    const correctId = question.correct.id;
+    const wasCorrect = id === correctId;
+    setPicked(id || "__timeout__");
+    setScore((s) => ({ correct: s.correct + (wasCorrect ? 1 : 0), total: s.total + 1 }));
+    setMistakes((prev) => (wasCorrect ? prev.filter((x) => x !== correctId) : prev.includes(correctId) ? prev : [...prev, correctId]));
   }
 
   function next() {
-    setQuestion(pickQuestion());
+    setQuestion(pickQuestion(poolFor(quizType)));
     setPicked(null);
   }
 
+  function switchType(t: QuizType) {
+    setQuizType(t);
+    setQuestion(pickQuestion(poolFor(t)));
+    setPicked(null);
+    setScore({ correct: 0, total: 0 });
+  }
+
+  // Speed-drill countdown: resets on each new question, ticks down every second,
+  // and auto-submits a (wrong) answer if time runs out before the user picks.
+  useEffect(() => {
+    setTimeLeft(SPEED_SECONDS);
+  }, [question]);
+  useEffect(() => {
+    if (quizType !== "speed" || picked) return;
+    if (timeLeft <= 0) {
+      pick("");
+      return;
+    }
+    const id = window.setTimeout(() => setTimeLeft((t) => t - 1), 1000);
+    return () => window.clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timeLeft, quizType, picked]);
+
+  const mistakesEmpty = quizType === "mistakes" && mistakes.length === 0;
+  const typePill = (t: QuizType, label: string) => (
+    <button
+      type="button"
+      onClick={() => switchType(t)}
+      className={`rounded-full px-3 py-1.5 text-xs font-bold ${quizType === t ? "bg-slate-800 text-white dark:bg-white dark:text-slate-900" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
+    >
+      {label}
+    </button>
+  );
+
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
-      <div className="mb-3 flex items-center justify-between">
-        <span className="text-sm font-bold text-slate-500 dark:text-slate-400">النتيجة: {score.correct} من {score.total}</span>
-        <button type="button" onClick={() => setScore({ correct: 0, total: 0 })} className="text-xs font-bold text-sky-600 dark:text-sky-400">↺ إعادة البدء</button>
-      </div>
-
-      <p className="mb-2 text-center text-sm font-semibold text-slate-600 dark:text-slate-300">إيه اسم النمط ده؟</p>
-      <div className="rounded-lg ecg-monitor-bg p-2">
-        <ECGWave kind={question.correct.wave} colorClass={waveColor[question.correct.category]} />
-      </div>
-
-      <div className="mt-4 grid gap-2 sm:grid-cols-2">
-        {question.options.map((opt) => {
-          const isCorrect = opt.id === question.correct.id;
-          const isPicked = opt.id === picked;
-          let style = "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700";
-          if (picked) {
-            if (isCorrect) style = "bg-emerald-500 text-white";
-            else if (isPicked) style = "bg-rose-500 text-white";
-            else style = "bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500";
-          }
-          return (
-            <button key={opt.id} type="button" disabled={!!picked} onClick={() => pick(opt.id)} className={`rounded-xl px-3 py-2.5 text-right text-sm font-bold ${style}`}>
-              <div dir="ltr">{opt.nameEn}</div>
-              <div className="text-xs font-semibold opacity-80">{opt.nameAr}</div>
-            </button>
-          );
-        })}
-      </div>
-
-      {picked && (
-        <div className="mt-4 space-y-2 border-t border-slate-100 pt-3 dark:border-slate-800">
-          <div className={`text-sm font-bold ${picked === question.correct.id ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"}`}>
-            {picked === question.correct.id ? "✅ إجابة صح!" : "❌ إجابة غلط"}
-          </div>
-          <p className="text-xs text-slate-600 dark:text-slate-300">{question.correct.desc}</p>
-          {question.correct.memoryTrick && (
-            <div className="rounded-lg bg-amber-50 px-3 py-2 text-xs font-semibold text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">💡 {question.correct.memoryTrick}</div>
-          )}
-          <button type="button" onClick={next} className="w-full rounded-xl bg-slate-800 py-2.5 text-sm font-bold text-white dark:bg-white dark:text-slate-900">
-            التالي →
-          </button>
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+        <div className="flex flex-wrap gap-1.5">
+          {typePill("normal", "عادي")}
+          {typePill("speed", "⏱️ سريع")}
+          {typePill("mistakes", `🔁 أخطائي${mistakes.length > 0 ? ` (${mistakes.length})` : ""}`)}
         </div>
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-bold text-slate-500 dark:text-slate-400">النتيجة: {score.correct} من {score.total}</span>
+          <button type="button" onClick={() => setScore({ correct: 0, total: 0 })} className="text-xs font-bold text-sky-600 dark:text-sky-400">↺</button>
+        </div>
+      </div>
+
+      {mistakesEmpty ? (
+        <div className="py-10 text-center text-sm text-slate-400">مفيش أخطاء متسجلة لسه 🎉 جاوب على شوية أسئلة في الوضع العادي الأول.</div>
+      ) : (
+        <>
+          {quizType === "speed" && !picked && (
+            <div className={`mb-2 text-center text-sm font-black ${timeLeft <= 3 ? "text-rose-500" : "text-slate-500 dark:text-slate-400"}`}>⏱️ {timeLeft}</div>
+          )}
+          <p className="mb-2 text-center text-sm font-semibold text-slate-600 dark:text-slate-300">إيه اسم النمط ده؟</p>
+          <div className="rounded-lg ecg-monitor-bg p-2">
+            <ECGWave kind={question.correct.wave} colorClass={waveColor[question.correct.category]} />
+          </div>
+
+          <div className="mt-4 grid gap-2 sm:grid-cols-2">
+            {question.options.map((opt) => {
+              const isCorrect = opt.id === question.correct.id;
+              const isPicked = opt.id === picked;
+              let style = "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700";
+              if (picked) {
+                if (isCorrect) style = "bg-emerald-500 text-white";
+                else if (isPicked) style = "bg-rose-500 text-white";
+                else style = "bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500";
+              }
+              return (
+                <button key={opt.id} type="button" disabled={!!picked} onClick={() => pick(opt.id)} className={`rounded-xl px-3 py-2.5 text-right text-sm font-bold ${style}`}>
+                  <div dir="ltr">{opt.nameEn}</div>
+                  <div className="text-xs font-semibold opacity-80">{opt.nameAr}</div>
+                </button>
+              );
+            })}
+          </div>
+
+          {picked && (
+            <div className="mt-4 space-y-2 border-t border-slate-100 pt-3 dark:border-slate-800">
+              <div className={`text-sm font-bold ${picked === question.correct.id ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"}`}>
+                {picked === "__timeout__" ? "⏱️ خلص الوقت!" : picked === question.correct.id ? "✅ إجابة صح!" : "❌ إجابة غلط"}
+              </div>
+              <p className="text-xs text-slate-600 dark:text-slate-300">{question.correct.desc}</p>
+              {question.correct.memoryTrick && (
+                <div className="rounded-lg bg-amber-50 px-3 py-2 text-xs font-semibold text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">💡 {question.correct.memoryTrick}</div>
+              )}
+              <button type="button" onClick={next} className="w-full rounded-xl bg-slate-800 py-2.5 text-sm font-bold text-white dark:bg-white dark:text-slate-900">
+                التالي →
+              </button>
+            </div>
+          )}
+        </>
       )}
     </div>
   );
@@ -1507,6 +1584,16 @@ export default function ECGPage() {
   const [mode, setMode] = useState<"library" | "quiz">("library");
   const [savedOnly, setSavedOnly] = useState(false);
   const { favorites } = useFavorites();
+  const { add: addToCart } = useCart();
+  const nav = useNavigate();
+
+  function buySummary() {
+    // Adds a plain cart line (not tied to the admin's managed product catalog —
+    // CartLine only needs productId/title/price/qty) then sends the user straight
+    // to the site's existing checkout flow, exactly like buying any other product.
+    addToCart({ productId: "ecg-summary-pdf", title: "ورقة مراجعة مكتبة ECG (PDF)", price: 50, qty: 1 });
+    nav("/checkout");
+  }
 
   useSEO({
     title: `مكتبة ECG | ${settings.siteName}`,
@@ -1539,13 +1626,18 @@ export default function ECGPage() {
             <h1 className="mt-2 text-2xl font-black sm:text-3xl">مكتبة ECG</h1>
             <p className="mt-1 text-rose-50">{counts.total} نمط مصنّف حسب الخطورة — للمساعدة التعليمية فقط</p>
           </div>
-          <button
-            type="button"
-            onClick={() => setMode((m) => (m === "quiz" ? "library" : "quiz"))}
-            className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold ${mode === "quiz" ? "bg-white text-rose-700" : "bg-white/15 text-white hover:bg-white/25"}`}
-          >
-            {mode === "quiz" ? "📚 رجوع للمكتبة" : "🎯 اختبر نفسك"}
-          </button>
+          <div className="flex shrink-0 flex-col items-stretch gap-2">
+            <button
+              type="button"
+              onClick={() => setMode((m) => (m === "quiz" ? "library" : "quiz"))}
+              className={`rounded-full px-4 py-2 text-sm font-bold ${mode === "quiz" ? "bg-white text-rose-700" : "bg-white/15 text-white hover:bg-white/25"}`}
+            >
+              {mode === "quiz" ? "📚 رجوع للمكتبة" : "🎯 اختبر نفسك"}
+            </button>
+            <button type="button" onClick={buySummary} className="rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-slate-900 hover:bg-amber-300">
+              📄 حمّل ورقة المراجعة — 50 ج.م
+            </button>
+          </div>
         </div>
       </div>
 
