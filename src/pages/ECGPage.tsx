@@ -1595,7 +1595,9 @@ export default function ECGPage() {
   // panel with id "ecg-summary-pdf", the summary PDF uploaded as its file, and a
   // price) and uses its real id/title/price/cover for the cart line — falls back
   // to matching by title if the id ever differs.
-  const summaryProduct = products.find((p) => p.id === "ecg-summary-pdf" || (p.title.includes("مراجعة") && p.title.includes("ECG")));
+  const summaryProduct = products.find(
+    (p) => p.id === "ecg-summary-pdf" || (p.title.includes("مراجعة") && p.title.includes("ECG")) || p.fileUrl?.includes("ECG")
+  );
 
   function buySummary() {
     if (!summaryProduct) return;
