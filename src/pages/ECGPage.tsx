@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../lib/store";
+import ECGLearn from "./ECGLearn";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
@@ -2011,7 +2012,7 @@ export default function ECGPage() {
   const { t } = useI18n();
   const [q, setQ] = useState("");
   const [cat, setCat] = useState<Category | "">("");
-  const [mode, setMode] = useState<"library" | "quiz">("library");
+  const [mode, setMode] = useState<"library" | "quiz" | "learn">("library");
   const [savedOnly, setSavedOnly] = useState(false);
   const { favorites } = useFavorites();
   const { add: addToCart } = useCart();
@@ -2069,6 +2070,13 @@ export default function ECGPage() {
           <div className="flex shrink-0 flex-col items-stretch gap-2">
             <button
               type="button"
+              onClick={() => setMode((m) => (m === "learn" ? "library" : "learn"))}
+              className={`rounded-full px-4 py-2 text-sm font-bold ${mode === "learn" ? "bg-white text-rose-700" : "bg-white/15 text-white hover:bg-white/25"}`}
+            >
+              {mode === "learn" ? "📚 رجوع للمكتبة" : "🎓 تعلّم قراءة الرسم"}
+            </button>
+            <button
+              type="button"
               onClick={() => setMode((m) => (m === "quiz" ? "library" : "quiz"))}
               className={`rounded-full px-4 py-2 text-sm font-bold ${mode === "quiz" ? "bg-white text-rose-700" : "bg-white/15 text-white hover:bg-white/25"}`}
             >
@@ -2089,6 +2097,8 @@ export default function ECGPage() {
 
       {mode === "quiz" ? (
         <QuizMode />
+      ) : mode === "learn" ? (
+        <ECGLearn />
       ) : (
         <>
       <div className="mb-4 rounded-xl bg-amber-50 p-3 text-xs text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">
