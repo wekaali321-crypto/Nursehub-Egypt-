@@ -20,6 +20,7 @@ const nav: NavItem[] = [
   { p: "/admin/categories", l: "التصنيفات", i: "📂" },
   { p: "/admin/tags", l: "الوسوم", i: "🏷️" },
   { p: "/admin/media", l: "مكتبة الوسائط", i: "🖼️" },
+  { p: "/admin/ecg-learn", l: "مكتبة ECG (تعلّم القراءة)", i: "🫀" },
   { section: "التفاعل" },
   { p: "/admin/comments", l: "التعليقات", i: "💬" },
   { p: "/admin/subscribers", l: "النشرة البريدية", i: "📧" },
