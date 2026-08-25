@@ -7,12 +7,14 @@ import OptimizedImage from "./OptimizedImage";
 
 const CAT_KEY: Record<Category, TKey> = {
   articles: "nav.articles", summaries: "nav.summaries", drugs: "nav.drugs",
-  skills: "nav.skills", careplans: "nav.careplans", books: "nav.books",
+  skills: "nav.skills", "infection-control": "nav.infectionControl",
+  careplans: "nav.careplans", books: "nav.books",
 };
 
 export const CAT_ICON: Record<Category, IconName> = {
   articles: "article", summaries: "summary", drugs: "drug",
-  skills: "skill", careplans: "careplan", books: "book",
+  skills: "skill", "infection-control": "shield",
+  careplans: "careplan", books: "book",
 };
 
 export function AdSlot({ label = "مساحة إعلانية", height = "h-28" }: { label?: string; height?: string }) {
