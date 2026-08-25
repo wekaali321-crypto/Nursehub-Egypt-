@@ -64,7 +64,7 @@ export default function Dashboard() {
   const topArticles = [...articles].filter((a) => a.views > 0).sort((a, b) => b.views - a.views).slice(0, 5);
 
   const CAT_KEYS = ["articles", "summaries", "drugs", "skills", "careplans", "books"] as const;
-  const CAT_LABELS: Record<string, string> = { articles: "مقالات", summaries: "ملخصات", drugs: "أدوية", skills: "مهارات", careplans: "خطط", books: "كتب" };
+  const CAT_LABELS: Record<string, string> = { articles: "مقالات", summaries: "ملخصات", drugs: "أدوية", skills: "مهارات", "infection-control": "مكافحة العدوى", careplans: "خطط", books: "كتب" };
   const categoryDist = CAT_KEYS.map((c, i) => ({
     label: CAT_LABELS[c],
     value: articles.filter((a) => a.category === c).length,
