@@ -7,7 +7,8 @@ import { useI18n, type TKey } from "../lib/i18n";
 
 const CAT_KEY: Record<Category, TKey> = {
   articles: "nav.articles", summaries: "nav.summaries", drugs: "nav.drugs",
-  skills: "nav.skills", careplans: "nav.careplans", books: "nav.books",
+  skills: "nav.skills", "infection-control": "nav.infectionControl",
+  careplans: "nav.careplans", books: "nav.books",
 };
 
 export default function CategoryPage() {
