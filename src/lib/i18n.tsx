@@ -29,6 +29,7 @@ const dict = {
   "nav.summaries": { ar: "الملخصات", en: "Summaries" },
   "nav.drugs": { ar: "الأدوية", en: "Drugs" },
   "nav.skills": { ar: "المهارات", en: "Skills" },
+  "nav.infectionControl": { ar: "مكافحة العدوى", en: "Infection Control" },
   "nav.careplans": { ar: "خطط الرعاية", en: "Care Plans" },
   "nav.books": { ar: "الكتب", en: "Books" },
   "nav.quizzes": { ar: "الاختبارات", en: "Quizzes" },
