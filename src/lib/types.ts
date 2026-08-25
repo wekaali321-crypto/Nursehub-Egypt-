@@ -3,6 +3,7 @@ export type Category =
   | "summaries"
   | "drugs"
   | "skills"
+  | "infection-control"
   | "careplans"
   | "books";
 
@@ -372,6 +373,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   summaries: "الملخصات",
   drugs: "الأدوية",
   skills: "المهارات",
+  "infection-control": "مكافحة العدوى",
   careplans: "خطط الرعاية",
   books: "الكتب وملفات PDF",
 };
@@ -381,6 +383,7 @@ export const CATEGORY_ICONS: Record<Category, string> = {
   summaries: "📚",
   drugs: "💊",
   skills: "🩺",
+  "infection-control": "🦠",
   careplans: "📋",
   books: "📖",
 };
