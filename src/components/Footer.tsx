@@ -6,7 +6,8 @@ import { useI18n, type TKey } from "../lib/i18n";
 
 const CAT_KEYS: Record<Category, TKey> = {
   articles: "nav.articles", summaries: "nav.summaries", drugs: "nav.drugs",
-  skills: "nav.skills", careplans: "nav.careplans", books: "nav.books",
+  skills: "nav.skills", "infection-control": "nav.infectionControl",
+  careplans: "nav.careplans", books: "nav.books",
 };
 
 /* Real brand SVG marks (inline, currentColor) — same approach used in
