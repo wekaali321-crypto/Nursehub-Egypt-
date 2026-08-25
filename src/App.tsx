@@ -36,6 +36,7 @@ import ArticlesAdmin from "./admin/ArticlesAdmin";
 import Editor from "./admin/Editor";
 import MediaAdmin from "./admin/MediaAdmin";
 import ECGLearnAdmin from "./admin/ECGLearnAdmin";
+import ECGPatternsAdmin from "./admin/ECGPatternsAdmin";
 import { CommentsAdmin, ProductsAdmin, UsersAdmin } from "./admin/SimpleAdmins";
 import { HomeBuilder, MenuAdmin, SEOAdmin, BackupAdmin } from "./admin/Builders";
 import { PagesAdmin, CategoriesAdmin, TagsAdmin, SubscribersAdmin, RedirectsAdmin, ActivityAdmin } from "./admin/AdminExtras";
@@ -183,6 +184,7 @@ export default function App() {
                   <Route path="/admin/tags" element={<Admin><TagsAdmin /></Admin>} />
                   <Route path="/admin/media" element={<Admin><MediaAdmin /></Admin>} />
                   <Route path="/admin/ecg-learn" element={<Admin><ECGLearnAdmin /></Admin>} />
+                  <Route path="/admin/ecg-patterns" element={<Admin><ECGPatternsAdmin /></Admin>} />
                   <Route path="/admin/comments" element={<Admin><CommentsAdmin /></Admin>} />
                   <Route path="/admin/subscribers" element={<Admin><SubscribersAdmin /></Admin>} />
                   <Route path="/admin/emails" element={<Admin><EmailTemplatesAdmin /></Admin>} />
