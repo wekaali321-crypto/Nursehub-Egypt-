@@ -110,6 +110,7 @@ const defaultMenu = [
   { label: "الملخصات", path: "/category/summaries" },
   { label: "الأدوية", path: "/drugs" },
   { label: "المهارات", path: "/category/skills" },
+  { label: "مكافحة العدوى", path: "/category/infection-control" },
   { label: "خطط الرعاية", path: "/category/careplans" },
   { label: "الكتب", path: "/category/books" },
   { label: "الاختبارات", path: "/quizzes" },
@@ -139,8 +140,6 @@ const defaultHome = [
   "popular",
   "pdfs",
   "quizzes",
-  "tools",
-  "store",
   "newsletter",
 ];
 
