@@ -665,8 +665,29 @@ function buildWavePath(kind: WaveKind): string {
       break;
     }
     case "wide-regular": {
-      const width = 65;
-      for (let x = 0; x < W; x += width) wideBeat(x, width);
+      // Monomorphic VT: صورة مرجعية طلبها المستخدم — أقواس متصلة ومتطابقة
+      // تمامًا بدون أي خط أساس مسطح بينها: قمة مقوّسة ناعمة (نقط متباعدة)
+      // وقاع حاد على شكل V (نقط متلاصقة قريبة من بعض)، بنفس الارتفاع
+      // والعرض في كل دورة — ده الشكل الكلاسيكي لـMonomorphic VT
+      // (uniform QRS complexes) بخلاف الشكل العريض غير المنتظم القديم.
+      const width = 62;
+      const peakAmp = 46; // ارتفاع القمة لفوق
+      const troughAmp = 40; // عمق القاع تحت
+      let x = 0;
+      while (x < W) {
+        // قاع حاد (V) — نقط متلاصقة عشان تفضل زاويّة حادة بعد التنعيم
+        push(x, base + troughAmp);
+        push(x + width * 0.05, base + troughAmp * 0.45);
+        // صعود وقمة مقوّسة ناعمة — نقط متباعدة عشان تدي انحناءة واسعة
+        push(x + width * 0.18, base - peakAmp * 0.55);
+        push(x + width * 0.32, base - peakAmp);
+        push(x + width * 0.50, base - peakAmp * 0.98);
+        push(x + width * 0.68, base - peakAmp * 0.5);
+        // نزول لقاع حاد تاني
+        push(x + width * 0.90, base + troughAmp * 0.45);
+        push(x + width * 0.97, base + troughAmp);
+        x += width;
+      }
       break;
     }
     case "wide-twisting": {
