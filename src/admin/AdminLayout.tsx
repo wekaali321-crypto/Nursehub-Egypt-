@@ -15,6 +15,7 @@ const nav: NavItem[] = [
   { p: "/admin/import-wizard", l: "معالج الاستيراد الذكي", i: "🪄" },
   { p: "/admin/recovery", l: "مركز الاسترجاع", i: "🛟" },
   { p: "/admin/drugs", l: "إدارة الأدوية", i: "💊" },
+  { p: "/admin/drug-interactions", l: "تفاعلات الأدوية", i: "🔄" },
   { p: "/admin/quizzes", l: "الاختبارات (MCQ)", i: "📝" },
   { p: "/admin/pages", l: "الصفحات", i: "📄" },
   { p: "/admin/categories", l: "التصنيفات", i: "📂" },
