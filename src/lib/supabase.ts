@@ -177,6 +177,7 @@ export const TABLES = {
   activity: "activity_log",
   ratings: "ratings",
   drugs: "drugs",
+  drugInteractions: "drug_interactions",
   settings: "site_settings",
   orders: "orders",
 } as const;
