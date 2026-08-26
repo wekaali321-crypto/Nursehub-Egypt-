@@ -51,8 +51,12 @@ const toComment = (c: any) => ({ id: c.id, article_id: c.articleId, name: c.name
 const fromMedia = (r: any) => ({ id: r.id, name: r.name, type: r.type, url: r.url, size: r.size, date: r.created_at?.slice(0, 10) ?? "", folder: r.folder });
 const toMedia = (m: any) => ({ id: m.id, name: m.name, type: m.type, url: m.url, size: m.size, folder: m.folder ?? "f-root" });
 
-const fromDrug = (r: any) => ({ id: r.id, name: r.name, genericName: r.generic_name, drugClass: r.drug_class, category: r.category, dose: r.dose, indications: r.indications, sideEffects: r.side_effects, nursingConsiderations: r.nursing_considerations, contraindications: r.contraindications, storage: r.storage, references: r.references, slug: r.slug });
-const toDrug = (d: any) => ({ id: d.id, name: d.name, generic_name: d.genericName, drug_class: d.drugClass, category: d.category, dose: d.dose, indications: d.indications, side_effects: d.sideEffects, nursing_considerations: d.nursingConsiderations, contraindications: d.contraindications ?? "", storage: d.storage ?? "", references: d.references ?? "", slug: d.slug });
+const fromDrug = (r: any) => ({ id: r.id, name: r.name, genericName: r.generic_name, drugClass: r.drug_class, category: r.category, dose: r.dose, indications: r.indications, sideEffects: r.side_effects, nursingConsiderations: r.nursing_considerations, contraindications: r.contraindications, storage: r.storage, references: r.references, slug: r.slug, isHighAlert: r.is_high_alert ?? false, highAlertWarnings: r.high_alert_warnings ?? "" });
+const toDrug = (d: any) => ({ id: d.id, name: d.name, generic_name: d.genericName, drug_class: d.drugClass, category: d.category, dose: d.dose, indications: d.indications, side_effects: d.sideEffects, nursing_considerations: d.nursingConsiderations, contraindications: d.contraindications ?? "", storage: d.storage ?? "", references: d.references ?? "", slug: d.slug, is_high_alert: d.isHighAlert ?? false, high_alert_warnings: d.highAlertWarnings ?? "" });
+
+// تفاعلات الأدوية مع بعض (drug-drug interactions)
+const fromInteraction = (r: any) => ({ id: r.id, drugAId: r.drug_a_id, drugBId: r.drug_b_id, severity: r.severity, description: r.description, management: r.management ?? "" });
+const toInteraction = (i: any) => ({ id: i.id, drug_a_id: i.drugAId, drug_b_id: i.drugBId, severity: i.severity, description: i.description, management: i.management ?? "" });
 
 // Product now also carries fileUrl <-> file_url: the actual deliverable
 // (PDF/doc/video) sent to buyers after payment, uploaded via the Media Library.
@@ -116,12 +120,12 @@ export async function loadAllFromSupabase(): Promise<Partial<DataShape>> {
   const q = (t: string) => supabase!.from(t).select("*");
   const [
     articles, comments, media, products, users, pages, categories, tags,
-    subscribers, ads, affiliates, redirects, activity, drugs, settings, orders,
+    subscribers, ads, affiliates, redirects, activity, drugs, drugInteractions, settings, orders,
   ] = await Promise.all([
     q(TABLES.articles), q(TABLES.comments), q(TABLES.media), q(TABLES.products),
     q(TABLES.users), q(TABLES.pages), q(TABLES.categories), q(TABLES.tags),
     q(TABLES.subscribers), q(TABLES.ads), q(TABLES.affiliates), q(TABLES.redirects),
-    q(TABLES.activity), q(TABLES.drugs), q(TABLES.settings), q(TABLES.orders),
+    q(TABLES.activity), q(TABLES.drugs), q(TABLES.drugInteractions), q(TABLES.settings), q(TABLES.orders),
   ]);
 
   const s = settings.data?.[0];
@@ -140,6 +144,7 @@ export async function loadAllFromSupabase(): Promise<Partial<DataShape>> {
     redirects: (redirects.data ?? []).map(fromRedirect),
     activity: (activity.data ?? []).map(fromActivity),
     drugs: (drugs.data ?? []).map(fromDrug),
+    drugInteractions: (drugInteractions.data ?? []).map(fromInteraction),
     orders: (orders.data ?? []).map(fromOrder),
     settings: s
       ? { siteName: s.site_name, tagline: s.tagline, metaDescription: s.meta_description, adsenseEnabled: s.adsense_enabled, adsenseClient: s.adsense_client }
@@ -157,6 +162,7 @@ const UPSERT: Partial<Record<Entity, { table: string; to: (x: any) => any }>> = 
   products: { table: TABLES.products, to: toProduct },
   users: { table: TABLES.users, to: toUser },
   drugs: { table: TABLES.drugs, to: toDrug },
+  drugInteractions: { table: TABLES.drugInteractions, to: toInteraction },
   subscribers: { table: TABLES.subscribers, to: toSub },
   pages: { table: TABLES.pages, to: (p: any) => ({ id: p.id, title: p.title, slug: p.slug, content: p.content, status: p.status }) },
   categories: { table: TABLES.categories, to: (t: any) => ({ id: t.id, name: t.name, slug: t.slug }) },
@@ -211,6 +217,7 @@ export async function seedSupabase() {
   await supabase.from(TABLES.products).upsert(seedProducts.map(toProduct));
   await supabase.from(TABLES.users).upsert(seedUsers.map(toUser));
   await supabase.from(TABLES.drugs).upsert(seedDrugs.map(toDrug));
+  await supabase.from(TABLES.drugInteractions).upsert(seedDrugInteractions.map(toInteraction));
   await supabase.from(TABLES.pages).upsert(seedPages.map((p) => ({ id: p.id, title: p.title, slug: p.slug, content: p.content, status: p.status })));
   await supabase.from(TABLES.categories).upsert(seedCategories.map((t) => ({ id: t.id, name: t.name, slug: t.slug })));
   await supabase.from(TABLES.tags).upsert(seedTags.map((t) => ({ id: t.id, name: t.name, slug: t.slug })));
