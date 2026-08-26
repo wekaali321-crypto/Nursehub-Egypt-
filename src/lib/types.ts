@@ -73,6 +73,17 @@ export interface Drug {
   storage?: string;
   references?: string;
   slug: string;
+  isHighAlert?: boolean;
+  highAlertWarnings?: string;
+}
+
+export interface DrugInteraction {
+  id: string;
+  drugAId: string;
+  drugBId: string;
+  severity: "severe" | "moderate" | "minor";
+  description: string;
+  management?: string;
 }
 
 export interface Page {
