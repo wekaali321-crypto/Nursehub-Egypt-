@@ -1,97 +1,109 @@
-import { Link, useParams } from "react-router-dom";
+import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
-import { useSEO, breadcrumbSchema } from "../lib/seo";
+import { useSEO } from "../lib/seo";
+import { useI18n } from "../lib/i18n";
 
-export default function DrugPage() {
-  const { slug } = useParams();
-  const { drugs } = useStore();
-  const drug = drugs.find((d) => d.slug === slug);
+export default function DrugsPage() {
+  const { drugs, settings } = useStore();
+  const { t } = useI18n();
+  const [q, setQ] = useState("");
+  const [cat, setCat] = useState("");
+  const [letter, setLetter] = useState("");
+  const [sort, setSort] = useState("alpha");
+  const [highAlertOnly, setHighAlertOnly] = useState(false);
 
   useSEO({
-    title: drug ? `${drug.name} (${drug.genericName}) | دليل الأدوية` : "الدواء غير موجود",
-    description: drug ? `${drug.name}: ${drug.indications}` : "",
-    keywords: drug ? `${drug.name}, ${drug.genericName}, ${drug.drugClass}, جرعة, تمريض` : "",
-    type: "article",
-    jsonLd: drug
-      ? [
-          {
-            "@context": "https://schema.org",
-            "@type": "Drug",
-            name: drug.name,
-            activeIngredient: drug.genericName,
-            drugClass: drug.drugClass,
-            description: drug.indications,
-          },
-          breadcrumbSchema([
-            { name: "الرئيسية", url: window.location.origin },
-            { name: "الأدوية", url: `${window.location.origin}/drugs` },
-            { name: drug.name, url: window.location.href },
-          ]),
-        ]
-      : undefined,
+    title: `دليل الأدوية | ${settings.siteName}`,
+    description: "دليل أدوية احترافي للممرضين: البحث، التصفية، الترتيب الأبجدي، الجرعات والاعتبارات التمريضية.",
+    keywords: "أدوية, دليل أدوية, جرعات, تمريض, دواء",
   });
 
-  if (!drug) {
-    return (
-      <div className="mx-auto max-w-3xl px-4 py-20 text-center">
-        <div className="text-6xl">🔍</div>
-        <h1 className="mt-4 text-2xl font-bold dark:text-white">الدواء غير موجود</h1>
-        <Link to="/drugs" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">العودة لدليل الأدوية</Link>
-      </div>
-    );
-  }
+  const categories = useMemo(() => Array.from(new Set(drugs.map((d) => d.category))), [drugs]);
+  const letters = useMemo(() => Array.from(new Set(drugs.map((d) => d.name[0].toUpperCase()))).sort(), [drugs]);
 
-  const related = drugs.filter((d) => d.category === drug.category && d.id !== drug.id).slice(0, 4);
-
-  const blocks = [
-    { t: "الجرعة", i: "💉", v: drug.dose, c: "border-sky-200 bg-sky-50 dark:border-sky-900 dark:bg-sky-500/5" },
-    { t: "دواعي الاستعمال", i: "✅", v: drug.indications, c: "border-emerald-200 bg-emerald-50 dark:border-emerald-900 dark:bg-emerald-500/5" },
-    { t: "الآثار الجانبية", i: "⚠️", v: drug.sideEffects, c: "border-amber-200 bg-amber-50 dark:border-amber-900 dark:bg-amber-500/5" },
-    { t: "الاعتبارات التمريضية", i: "🩺", v: drug.nursingConsiderations, c: "border-violet-200 bg-violet-50 dark:border-violet-900 dark:bg-violet-500/5" },
-    ...(drug.contraindications ? [{ t: "موانع الاستعمال", i: "🚫", v: drug.contraindications, c: "border-rose-200 bg-rose-50 dark:border-rose-900 dark:bg-rose-500/5" }] : []),
-    ...(drug.storage ? [{ t: "التخزين", i: "🧊", v: drug.storage, c: "border-cyan-200 bg-cyan-50 dark:border-cyan-900 dark:bg-cyan-500/5" }] : []),
-    ...(drug.references ? [{ t: "المراجع", i: "📚", v: drug.references, c: "border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-800/40" }] : []),
-  ];
+  let list = drugs.filter((d) => {
+    const m = (d.name + d.genericName + d.drugClass).toLowerCase().includes(q.toLowerCase());
+    const c = !cat || d.category === cat;
+    const l = !letter || d.name.toUpperCase().startsWith(letter);
+    const h = !highAlertOnly || d.isHighAlert;
+    return m && c && l && h;
+  });
+  list = [...list].sort((a, b) => (sort === "alpha" ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name)));
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-8">
-      <Breadcrumbs items={[{ label: "الأدوية", path: "/drugs" }, { label: drug.name }]} />
-
-      <div className="rounded-3xl bg-gradient-to-l from-sky-600 to-emerald-500 p-6 text-white sm:p-8">
-        <span className="rounded-full bg-white/20 px-3 py-1 text-sm font-bold">{drug.category}</span>
-        <h1 className="mt-3 text-3xl font-black sm:text-4xl">{drug.name}</h1>
-        <p className="mt-1 text-lg text-sky-50">{drug.genericName} • {drug.drugClass}</p>
+    <div className="mx-auto max-w-7xl px-4 py-8">
+      <Breadcrumbs items={[{ label: t("drugs.title") }]} />
+      <div className="mb-6 rounded-3xl bg-gradient-to-l from-sky-500 to-emerald-500 p-6 text-white sm:p-8">
+        <div className="text-4xl sm:text-5xl">💊</div>
+        <h1 className="mt-2 text-2xl font-black sm:text-3xl">{t("drugs.title")}</h1>
+        <p className="mt-1 text-sky-50">{drugs.length} دواء مع الجرعات والاعتبارات التمريضية</p>
       </div>
 
-      <div className="my-6"><AdSlot label="إعلان صفحة الدواء" /></div>
-
-      <div className="grid gap-4 sm:grid-cols-2">
-        {blocks.map((b) => (
-          <div key={b.t} className={`rounded-2xl border p-5 ${b.c}`}>
-            <h3 className="mb-2 flex items-center gap-2 font-bold dark:text-white"><span className="text-xl">{b.i}</span>{b.t}</h3>
-            <p className="leading-relaxed text-slate-700 dark:text-slate-300">{b.v}</p>
+      <div className="mb-6 grid gap-3 sm:grid-cols-2">
+        <Link to="/drugs/interactions" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-sky-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+          <span className="text-3xl">🔄</span>
+          <div>
+            <h3 className="font-bold text-slate-900 dark:text-white">فحص تفاعلات الأدوية</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400">اختاري دوائين واعرفي هل بينهم تفاعل معروف</p>
           </div>
+        </Link>
+        <button
+          onClick={() => setHighAlertOnly((v) => !v)}
+          className={`flex items-center gap-3 rounded-2xl border p-4 text-right transition hover:-translate-y-0.5 hover:shadow-lg ${highAlertOnly ? "border-rose-400 bg-rose-50 dark:bg-rose-500/10" : "border-slate-200 bg-white hover:border-rose-400 dark:border-slate-800 dark:bg-slate-900"}`}
+        >
+          <span className="text-3xl">⚠️</span>
+          <div>
+            <h3 className="font-bold text-rose-600">الأدوية عالية الخطورة</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400">{highAlertOnly ? "بيتم عرضها الآن — اضغطي للإلغاء" : "اعرضي فقط الأدوية اللي محتاجة احتياطات خاصة"}</p>
+          </div>
+        </button>
+      </div>
+
+      <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_auto_auto]">
+        <div className="relative">
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t("common.search") + "..."} className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" />
+          <span className="absolute right-3 top-3 text-slate-400">🔍</span>
+        </div>
+        <select value={cat} onChange={(e) => setCat(e.target.value)} className="rounded-lg border border-slate-200 px-3 py-2.5 dark:border-slate-700 dark:bg-slate-800">
+          <option value="">{t("drugs.allCats")}</option>
+          {categories.map((c) => <option key={c} value={c}>{c}</option>)}
+        </select>
+        <select value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-lg border border-slate-200 px-3 py-2.5 dark:border-slate-700 dark:bg-slate-800">
+          <option value="alpha">أ - ي (تصاعدي)</option>
+          <option value="alphaDesc">ي - أ (تنازلي)</option>
+        </select>
+      </div>
+
+      <div className="mb-6 flex flex-wrap gap-1">
+        <button onClick={() => setLetter("")} className={`rounded-lg px-2.5 py-1 text-sm font-bold ${!letter ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>الكل</button>
+        {letters.map((l) => (
+          <button key={l} onClick={() => setLetter(l)} className={`rounded-lg px-2.5 py-1 text-sm font-bold ${letter === l ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{l}</button>
         ))}
       </div>
 
-      <div className="mt-8 rounded-2xl border border-slate-200 bg-amber-50 p-4 text-sm text-amber-700 dark:border-slate-800 dark:bg-amber-500/5 dark:text-amber-400">
-        ⚠️ هذه المعلومات لأغراض تعليمية فقط ولا تغني عن استشارة الطبيب أو الصيدلي المختص.
-      </div>
+      <div className="mb-6"><AdSlot label="إعلان دليل الأدوية" /></div>
 
-      {related.length > 0 && (
-        <section className="mt-10">
-          <h2 className="mb-4 text-xl font-bold dark:text-white">أدوية مشابهة في نفس الفئة</h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {related.map((d) => (
-              <Link key={d.id} to={`/drug/${d.slug}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
-                <div className="font-bold dark:text-white">{d.name}</div>
-                <div className="text-sm text-slate-400">{d.genericName}</div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {list.map((d) => (
+          <Link key={d.id} to={`/drug/${d.slug}`} className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+            <div className="flex items-center justify-between">
+              <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-600 dark:bg-emerald-500/10">{d.category}</span>
+              <span className="text-2xl">💊</span>
+            </div>
+            {d.isHighAlert && (
+              <span className="mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-rose-50 px-2.5 py-1 text-xs font-bold text-rose-600 dark:bg-rose-500/10">
+                ⚠️ عالي الخطورة
+              </span>
+            )}
+            <h3 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-sky-600 dark:text-white">{d.name}</h3>
+            <p className="text-sm text-slate-400">{d.genericName}</p>
+            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{d.drugClass}</p>
+          </Link>
+        ))}
+        {list.length === 0 && <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">لا توجد نتائج مطابقة.</div>}
+      </div>
     </div>
   );
 }
