@@ -15,6 +15,7 @@ import type {
   User,
   SiteSettings,
   Drug,
+  DrugInteraction,
   Page,
   Taxonomy,
   Subscriber,
@@ -44,6 +45,7 @@ import {
 } from "./seed";
 import {
   seedDrugs,
+  seedDrugInteractions,
   seedPages,
   seedCategories,
   seedTags,
@@ -70,6 +72,7 @@ export interface DataShape {
   homeSections: string[];
   menu: { label: string; path: string }[];
   drugs: Drug[];
+  drugInteractions: DrugInteraction[];
   pages: Page[];
   categories: Taxonomy[];
   tags: Taxonomy[];
@@ -154,6 +157,7 @@ const defaults: DataShape = {
   homeSections: defaultHome,
   menu: defaultMenu,
   drugs: seedDrugs,
+  drugInteractions: seedDrugInteractions,
   pages: seedPages,
   categories: seedCategories,
   tags: seedTags,
@@ -268,6 +272,7 @@ const Ctx = createContext<StoreCtx | null>(null);
 // Entities that are persisted to Supabase row-by-row in production.
 const SYNCED: (keyof DataShape)[] = [
   "articles", "comments", "media", "products", "users", "drugs",
+  "drugInteractions",
   "subscribers", "pages", "categories", "tags", "ads", "affiliates",
   "redirects", "activity", "orders",
 ];
@@ -497,6 +502,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 function emptyCollections(): Partial<DataShape> {
   return {
     articles: [], comments: [], media: [], products: [], users: [], drugs: [],
+    drugInteractions: [],
     pages: [], categories: [], tags: [], subscribers: [], ads: [], affiliates: [],
     redirects: [], activity: [], trash: [], versions: [], notifications: [],
     quizzes: seedQuizzes, attempts: [], customTypes: seedCustomTypes, customEntries: [],
