@@ -1,5 +1,6 @@
 import type {
   Drug,
+  DrugInteraction,
   Page,
   Taxonomy,
   Subscriber,
@@ -33,6 +34,8 @@ export const seedDrugs: Drug[] = [
     sideEffects: "نزيف، نقص الصفائح الدموية (HIT).",
     nursingConsiderations: "مراقبة aPTT وعلامات النزيف، توفر الترياق (Protamine sulfate).",
     slug: "heparin",
+    isHighAlert: true,
+    highAlertWarnings: "دواء عالي الخطورة (High-Alert Medication): هامش الأمان الدوائي ضيق جدًا — أي خطأ في الجرعة أو معدل التسريب قد يسبب نزيفًا مميتًا. يتطلب تحققًا مزدوجًا (Independent Double-Check) من ممرضتين قبل الإعطاء، ضبط دقيق بمضخة تسريب معايرة، مراجعة aPTT/مستوى الصفائح بانتظام، ومعرفة مكان وجرعة الترياق (Protamine sulfate) مقدمًا في حالة الجرعة الزائدة.",
   },
   {
     id: "d3",
@@ -81,6 +84,69 @@ export const seedDrugs: Drug[] = [
     sideEffects: "رعشة، تسارع القلب، صداع.",
     nursingConsiderations: "مراقبة معدل القلب، تعليم المريض الاستخدام الصحيح للبخاخ.",
     slug: "salbutamol",
+  },
+  {
+    id: "d7",
+    name: "Insulin (Regular)",
+    genericName: "Insulin Human",
+    drugClass: "هرمون خافض سكر",
+    category: "أدوية السكري",
+    dose: "حسب بروتوكول الجرعة المتغيرة (Sliding Scale) أو حسب الطبيب — يُعطى بوحدات (Units) فقط.",
+    indications: "علاج السكري من النوع الأول والثاني، وحالات ارتفاع السكر الحاد.",
+    sideEffects: "هبوط السكر الحاد (Hypoglycemia)، نقص البوتاسيوم.",
+    nursingConsiderations: "قياس السكر قبل كل جرعة، التأكد من نوع الأنسولين والتركيز، عدم الخلط بين وحدات الأنسولين ومل.",
+    slug: "insulin-regular",
+    isHighAlert: true,
+    highAlertWarnings: "دواء عالي الخطورة: الخلط بين أنواع الأنسولين المختلفة أو بين وحدة (Unit) ومل هو من أشهر أخطاء الأدوية المميتة عالميًا. يتطلب تحققًا مزدوجًا قبل الإعطاء، استخدام سرنجة أنسولين مخصصة فقط (أبدًا سرنجة إنسولين U-100 مع أنسولين مركّز)، وقياس السكر قبل وبعد الجرعة لمتابعة هبوط السكر.",
+  },
+  {
+    id: "d8",
+    name: "Potassium Chloride (IV)",
+    genericName: "Potassium Chloride",
+    drugClass: "إلكتروليت",
+    category: "أدوية القلب والدم",
+    dose: "يجب تخفيفه دائمًا قبل الإعطاء الوريدي — لا يُعطى أبدًا بشكل مباشر (IV push).",
+    indications: "علاج نقص البوتاسيوم في الدم (Hypokalemia).",
+    sideEffects: "اضطراب نظم القلب، إيقاف القلب إذا أُعطي مركّزًا أو بسرعة.",
+    nursingConsiderations: "التأكد من التخفيف الكامل ومعدل التسريب ببطء عبر مضخة، عدم إعطائه Push أبدًا، مراقبة رسم القلب أثناء التسريب.",
+    slug: "potassium-chloride-iv",
+    isHighAlert: true,
+    highAlertWarnings: "دواء عالي الخطورة قاتل إذا أُعطي بشكل مركّز أو دفعة واحدة (IV push) — يسبب توقف القلب فورًا. يُمنع تخزينه جاهزًا في وحدات الرعاية العادية بدون بروتوكول صارم، ويجب تخفيفه دائمًا واستخدام مضخة تسريب معايرة مع تحقق مزدوج من التركيز والمعدل قبل الإعطاء.",
+  },
+];
+
+export const seedDrugInteractions: DrugInteraction[] = [
+  {
+    id: "di1",
+    drugAId: "d2", // Heparin
+    drugBId: "d3", // Furosemide
+    severity: "moderate",
+    description: "قد يزيد الفوروسيميد من تأثير الهيبارين المضاد للتخثر (تنافس على الارتباط ببروتينات البلازما)، مما يرفع خطر النزيف.",
+    management: "مراقبة علامات النزيف وقيمة aPTT بانتظام عند إعطاء الدوائين معًا.",
+  },
+  {
+    id: "di2",
+    drugAId: "d3", // Furosemide
+    drugBId: "d4", // Metformin
+    severity: "moderate",
+    description: "الفوروسيميد قد يرفع من مستوى الميتفورمين في الدم بسبب التأثير على إفرازه الكلوي، مما يزيد خطر الحماض اللبني عند ضعف وظائف الكلى.",
+    management: "مراقبة وظائف الكلى وعلامات الحماض اللبني (غثيان، تعب، تنفس سريع).",
+  },
+  {
+    id: "di3",
+    drugAId: "d1", // Paracetamol
+    drugBId: "d2", // Heparin
+    severity: "minor",
+    description: "الاستخدام المنتظم للباراسيتامول بجرعات عالية لفترة طويلة قد يعزز تأثير الهيبارين المضاد للتخثر بشكل طفيف.",
+    management: "غير مهم في الجرعات القصيرة والعرضية؛ يُراعى فقط عند الاستخدام المزمن.",
+  },
+  {
+    id: "di4",
+    drugAId: "d3", // Furosemide
+    drugBId: "d6", // Salbutamol
+    severity: "moderate",
+    description: "كلا الدوائين قد يسببان نقص بوتاسيوم الدم، والجمع بينهما يزيد من هذا الخطر بشكل تراكمي.",
+    management: "مراقبة مستوى البوتاسيوم في الدم ورسم القلب عند الاستخدام المشترك.",
   },
 ];
 
