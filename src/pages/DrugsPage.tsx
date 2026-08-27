@@ -59,6 +59,20 @@ export default function DrugsPage() {
             <p className="text-sm text-slate-500 dark:text-slate-400">{highAlertOnly ? "بيتم عرضها الآن — اضغطي للإلغاء" : "اعرضي فقط الأدوية اللي محتاجة احتياطات خاصة"}</p>
           </div>
         </button>
+        <Link to="/drugs/antidotes" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-emerald-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+          <span className="text-3xl">🧪</span>
+          <div>
+            <h3 className="font-bold text-slate-900 dark:text-white">الترياقات الطبية</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400">دليل حالات التسمم الشائعة والترياق المناسب لكل حالة</p>
+          </div>
+        </Link>
+        <Link to="/drugs/classifications" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-violet-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+          <span className="text-3xl">🧬</span>
+          <div>
+            <h3 className="font-bold text-slate-900 dark:text-white">الأصناف الدوائية</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400">الأصناف الرئيسية للأدوية مع الوصف والأمثلة</p>
+          </div>
+        </Link>
       </div>
 
       <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_auto_auto]">
