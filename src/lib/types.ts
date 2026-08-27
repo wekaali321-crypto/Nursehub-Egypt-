@@ -86,6 +86,20 @@ export interface DrugInteraction {
   management?: string;
 }
 
+export interface DrugAntidote {
+  id: string;
+  toxin: string;
+  antidotes: string;
+  notes?: string;
+}
+
+export interface DrugClassification {
+  id: string;
+  name: string;
+  description: string;
+  examples: string;
+}
+
 export interface Page {
   id: string;
   title: string;
