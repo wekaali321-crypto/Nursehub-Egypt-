@@ -16,6 +16,8 @@ import type {
   SiteSettings,
   Drug,
   DrugInteraction,
+  DrugAntidote,
+  DrugClassification,
   Page,
   Taxonomy,
   Subscriber,
@@ -46,6 +48,8 @@ import {
 import {
   seedDrugs,
   seedDrugInteractions,
+  seedDrugAntidotes,
+  seedDrugClassifications,
   seedPages,
   seedCategories,
   seedTags,
@@ -73,6 +77,8 @@ export interface DataShape {
   menu: { label: string; path: string }[];
   drugs: Drug[];
   drugInteractions: DrugInteraction[];
+  drugAntidotes: DrugAntidote[];
+  drugClassifications: DrugClassification[];
   pages: Page[];
   categories: Taxonomy[];
   tags: Taxonomy[];
@@ -158,6 +164,8 @@ const defaults: DataShape = {
   menu: defaultMenu,
   drugs: seedDrugs,
   drugInteractions: seedDrugInteractions,
+  drugAntidotes: seedDrugAntidotes,
+  drugClassifications: seedDrugClassifications,
   pages: seedPages,
   categories: seedCategories,
   tags: seedTags,
@@ -273,6 +281,7 @@ const Ctx = createContext<StoreCtx | null>(null);
 const SYNCED: (keyof DataShape)[] = [
   "articles", "comments", "media", "products", "users", "drugs",
   "drugInteractions",
+  "drugAntidotes", "drugClassifications",
   "subscribers", "pages", "categories", "tags", "ads", "affiliates",
   "redirects", "activity", "orders",
 ];
@@ -503,6 +512,7 @@ function emptyCollections(): Partial<DataShape> {
   return {
     articles: [], comments: [], media: [], products: [], users: [], drugs: [],
     drugInteractions: [],
+    drugAntidotes: [], drugClassifications: [],
     pages: [], categories: [], tags: [], subscribers: [], ads: [], affiliates: [],
     redirects: [], activity: [], trash: [], versions: [], notifications: [],
     quizzes: seedQuizzes, attempts: [], customTypes: seedCustomTypes, customEntries: [],
