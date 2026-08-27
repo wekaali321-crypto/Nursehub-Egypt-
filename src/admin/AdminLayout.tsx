@@ -16,6 +16,8 @@ const nav: NavItem[] = [
   { p: "/admin/recovery", l: "مركز الاسترجاع", i: "🛟" },
   { p: "/admin/drugs", l: "إدارة الأدوية", i: "💊" },
   { p: "/admin/drug-interactions", l: "تفاعلات الأدوية", i: "🔄" },
+  { p: "/admin/drug-antidotes", l: "الترياقات الطبية", i: "🧪" },
+  { p: "/admin/drug-classifications", l: "الأصناف الدوائية", i: "🧬" },
   { p: "/admin/quizzes", l: "الاختبارات (MCQ)", i: "📝" },
   { p: "/admin/pages", l: "الصفحات", i: "📄" },
   { p: "/admin/categories", l: "التصنيفات", i: "📂" },
