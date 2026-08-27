@@ -1,6 +1,8 @@
 import type {
   Drug,
   DrugInteraction,
+  DrugAntidote,
+  DrugClassification,
   Page,
   Taxonomy,
   Subscriber,
@@ -148,6 +150,47 @@ export const seedDrugInteractions: DrugInteraction[] = [
     description: "كلا الدوائين قد يسببان نقص بوتاسيوم الدم، والجمع بينهما يزيد من هذا الخطر بشكل تراكمي.",
     management: "مراقبة مستوى البوتاسيوم في الدم ورسم القلب عند الاستخدام المشترك.",
   },
+];
+
+export const seedDrugAntidotes: DrugAntidote[] = [
+  { id: "at1", toxin: "Acetaminophen (Paracetamol)", antidotes: "N-acetylcysteine (NAC)", notes: "أفضل النتائج عند الإعطاء خلال 8-10 ساعات من التسمم." },
+  { id: "at2", toxin: "Acetylsalicylic Acid (Aspirin)", antidotes: "Sodium bicarbonate, Activated charcoal", notes: "بيكربونات الصوديوم لقلونة البول وتسريع الإخراج." },
+  { id: "at3", toxin: "Opioids (Morphine, Heroin, Fentanyl)", antidotes: "Naloxone", notes: "قد يحتاج جرعات متكررة لقصر مدة تأثيره عن بعض المواد الأفيونية." },
+  { id: "at4", toxin: "Benzodiazepines (Diazepam, Lorazepam)", antidotes: "Flumazenil", notes: "يُستخدم بحذر مع مرضى الإدمان المزمن لخطر التشنجات." },
+  { id: "at5", toxin: "Anticoagulants (Heparin)", antidotes: "Protamine sulfate", notes: "" },
+  { id: "at6", toxin: "Anticoagulants (Warfarin)", antidotes: "Vitamin K, Fresh Frozen Plasma", notes: "FFP للنزيف الحاد الشديد، فيتامين K لعكس التأثير تدريجيًا." },
+  { id: "at7", toxin: "Beta Blockers / Calcium Channel Blockers", antidotes: "Glucagon, Calcium gluconate (لحاصرات الكالسيوم)", notes: "" },
+  { id: "at8", toxin: "Digoxin", antidotes: "Digoxin Immune Fab (Digibind)", notes: "يُستخدم في حالات التسمم الشديد بالديجوكسين." },
+  { id: "at9", toxin: "Anticholinesterase Agents (Organophosphates)", antidotes: "Atropine, Pralidoxime (2-PAM)", notes: "الأتروبين للأعراض المسكارينية، براليدوكسيم لإعادة تنشيط الإنزيم." },
+  { id: "at10", toxin: "Antihistamines / Anticholinergic Toxicity", antidotes: "Physostigmine", notes: "" },
+  { id: "at11", toxin: "Antipsychotics (EPS من الفينوثيازينات)", antidotes: "Benztropine, Diphenhydramine", notes: "" },
+  { id: "at12", toxin: "Barbiturates", antidotes: "Activated charcoal, Sodium bicarbonate", notes: "قلونة البول تسرّع إخراج الفينوباربيتال تحديدًا." },
+  { id: "at13", toxin: "Iron", antidotes: "Deferoxamine", notes: "" },
+  { id: "at14", toxin: "Methotrexate", antidotes: "Leucovorin (Folinic acid)", notes: "" },
+  { id: "at15", toxin: "Insulin (هبوط السكر الحاد)", antidotes: "Glucose (Dextrose 50%), Glucagon", notes: "" },
+  { id: "at16", toxin: "Magnesium Sulfate (جرعة زائدة)", antidotes: "Calcium gluconate", notes: "مراقبة منعكس الرضفة ومعدل التنفس." },
+  { id: "at17", toxin: "Lead Poisoning", antidotes: "EDTA (Calcium disodium edetate), Dimercaprol (BAL)", notes: "" },
+  { id: "at18", toxin: "Cyanide", antidotes: "Hydroxocobalamin, Sodium thiosulfate", notes: "" },
+  { id: "at19", toxin: "Ethylene Glycol / Methanol", antidotes: "Fomepizole, Ethanol", notes: "" },
+  { id: "at20", toxin: "Amphetamines", antidotes: "Benzodiazepines, Haloperidol", notes: "علاج داعم للأعراض العصبية والنفسية أساسًا." },
+];
+
+export const seedDrugClassifications: DrugClassification[] = [
+  { id: "cl1", name: "المسكنات (Analgesics)", description: "أدوية لتخفيف الألم بدرجاته المختلفة، تشمل المسكنات الأفيونية ومضادات الالتهاب غير الستيرويدية وخافضات الحرارة.", examples: "Morphine, Ibuprofen, Paracetamol" },
+  { id: "cl2", name: "المضادات الحيوية (Antibiotics)", description: "تُستخدم لعلاج العدوى البكتيرية، وتنقسم لعدة عائلات حسب آلية عملها وطيف تأثيرها.", examples: "Penicillins, Cephalosporins, Macrolides, Fluoroquinolones" },
+  { id: "cl3", name: "مضادات الاكتئاب (Antidepressants)", description: "تُستخدم لعلاج الاكتئاب واضطرابات المزاج، وتشمل عدة فئات حسب آلية التأثير على النواقل العصبية.", examples: "SSRIs, TCAs, SNRIs" },
+  { id: "cl4", name: "مضادات الذهان (Antipsychotics)", description: "تُستخدم لعلاج الاضطرابات الذهانية مثل الفصام، وتنقسم إلى نمطية (الجيل الأول) وغير نمطية (الجيل الثاني).", examples: "Haloperidol, Risperidone, Olanzapine" },
+  { id: "cl5", name: "مضادات التخثر (Anticoagulants)", description: "تمنع تكوّن الجلطات الدموية وتقلل خطر السكتة الدماغية والجلطات الوريدية العميقة.", examples: "Heparin, Warfarin" },
+  { id: "cl6", name: "مضادات اضطراب النظم (Antiarrhythmics)", description: "تُستخدم لعلاج اضطرابات نظم القلب غير المنتظمة، وتُصنّف إلى أربع فئات رئيسية (Class I-IV).", examples: "Amiodarone, Lidocaine, Procainamide" },
+  { id: "cl7", name: "خافضات ضغط الدم (Antihypertensives)", description: "تُستخدم للسيطرة على ارتفاع ضغط الدم، وتضم عدة فئات بآليات مختلفة.", examples: "ACE Inhibitors, Beta Blockers, Calcium Channel Blockers, Diuretics" },
+  { id: "cl8", name: "مدرات البول (Diuretics)", description: "تزيد من إخراج الماء والصوديوم عبر البول، وتُستخدم في الوذمة وفشل القلب وارتفاع الضغط.", examples: "Furosemide (Loop), Hydrochlorothiazide (Thiazide), Spironolactone (Potassium-sparing)" },
+  { id: "cl9", name: "موسّعات الشعب الهوائية (Bronchodilators)", description: "تُستخدم لتوسيع الشعب الهوائية في الربو والانسداد الرئوي المزمن.", examples: "Salbutamol (Beta-2 agonist), Ipratropium (Anticholinergic)" },
+  { id: "cl10", name: "مضادات الهيستامين (Antihistamines)", description: "تُستخدم لعلاج الحساسية عن طريق حصار مستقبلات الهيستامين H1.", examples: "Diphenhydramine, Cetirizine, Loratadine" },
+  { id: "cl11", name: "الكورتيكوستيرويدات (Corticosteroids)", description: "أدوية مضادة للالتهاب وكابتة للمناعة، تُستخدم في حالات كثيرة من الحساسية للأمراض المناعية.", examples: "Prednisolone, Dexamethasone, Hydrocortisone" },
+  { id: "cl12", name: "خافضات السكر (Hypoglycemics)", description: "تُستخدم للسيطرة على سكر الدم في مرضى السكري، وتشمل الأنسولين والأدوية الفموية.", examples: "Insulin, Metformin (Biguanide), Glimepiride (Sulfonylurea)" },
+  { id: "cl13", name: "مضادات الاختلاج (Anticonvulsants)", description: "تُستخدم للسيطرة على نوبات الصرع ومنع تكرارها.", examples: "Phenytoin, Valproic acid, Carbamazepine" },
+  { id: "cl14", name: "المهدئات ومضادات القلق (Sedative-Hypnotics/Anxiolytics)", description: "تُستخدم لعلاج القلق واضطرابات النوم عن طريق تثبيط الجهاز العصبي المركزي.", examples: "Diazepam, Lorazepam (Benzodiazepines), Phenobarbital (Barbiturates)" },
+  { id: "cl15", name: "مضادات القيء (Antiemetics)", description: "تُستخدم للسيطرة على الغثيان والقيء الناتج عن أسباب متعددة كالعلاج الكيميائي أو دوار الحركة.", examples: "Ondansetron, Metoclopramide" },
 ];
 
 export const seedPages: Page[] = [
