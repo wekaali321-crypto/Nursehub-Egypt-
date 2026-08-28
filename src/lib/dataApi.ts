@@ -5,6 +5,7 @@ import {
 } from "./seed";
 import {
   seedDrugs, seedDrugInteractions, seedDrugAntidotes, seedDrugClassifications,
+  seedDrugSuffixes, seedCardiacMedGroups, seedPharmMnemonics,
   seedPages, seedCategories, seedTags, seedSubscribers,
   seedAds, seedAffiliates, seedRedirects, seedActivity,
 } from "./seed2";
@@ -66,6 +67,18 @@ const toAntidote = (a: any) => ({ id: a.id, toxin: a.toxin, antidotes: a.antidot
 // الأصناف الدوائية العامة
 const fromClassification = (r: any) => ({ id: r.id, name: r.name, description: r.description, examples: r.examples ?? "" });
 const toClassification = (c: any) => ({ id: c.id, name: c.name, description: c.description, examples: c.examples ?? "" });
+
+const fromSuffix = (r: any) => ({ id: r.id, suffix: r.suffix, className: r.class_name, examples: r.examples ?? "" });
+const toSuffix = (s: any) => ({ id: s.id, suffix: s.suffix, class_name: s.className, examples: s.examples ?? "" });
+
+const fromCardiacGroup = (r: any) => ({ id: r.id, name: r.name, examples: r.examples ?? "" });
+const toCardiacGroup = (c: any) => ({ id: c.id, name: c.name, examples: c.examples ?? "" });
+
+const fromMnemonic = (r: any) => ({ id: r.id, title: r.title, code: r.code ?? "", lines: r.lines ?? "" });
+const toMnemonic = (m: any) => ({ id: m.id, title: m.title, code: m.code ?? "", lines: m.lines ?? "" });
+
+const fromFact = (r: any) => ({ id: r.id, number: r.number, content: r.content, source: r.source ?? "" });
+const toFact = (f: any) => ({ id: f.id, number: f.number, content: f.content, source: f.source ?? "" });
 
 // Product now also carries fileUrl <-> file_url: the actual deliverable
 // (PDF/doc/video) sent to buyers after payment, uploaded via the Media Library.
@@ -129,12 +142,14 @@ export async function loadAllFromSupabase(): Promise<Partial<DataShape>> {
   const q = (t: string) => supabase!.from(t).select("*");
   const [
     articles, comments, media, products, users, pages, categories, tags,
-    subscribers, ads, affiliates, redirects, activity, drugs, drugInteractions, drugAntidotes, drugClassifications, settings, orders,
+    subscribers, ads, affiliates, redirects, activity, drugs, drugInteractions, drugAntidotes, drugClassifications,
+    drugSuffixes, cardiacMedGroups, pharmMnemonics, pharmacyFacts, settings, orders,
   ] = await Promise.all([
     q(TABLES.articles), q(TABLES.comments), q(TABLES.media), q(TABLES.products),
     q(TABLES.users), q(TABLES.pages), q(TABLES.categories), q(TABLES.tags),
     q(TABLES.subscribers), q(TABLES.ads), q(TABLES.affiliates), q(TABLES.redirects),
-    q(TABLES.activity), q(TABLES.drugs), q(TABLES.drugInteractions), q(TABLES.drugAntidotes), q(TABLES.drugClassifications), q(TABLES.settings), q(TABLES.orders),
+    q(TABLES.activity), q(TABLES.drugs), q(TABLES.drugInteractions), q(TABLES.drugAntidotes), q(TABLES.drugClassifications),
+    q(TABLES.drugSuffixes), q(TABLES.cardiacMedGroups), q(TABLES.pharmMnemonics), q(TABLES.pharmacyFacts), q(TABLES.settings), q(TABLES.orders),
   ]);
 
   const s = settings.data?.[0];
@@ -156,6 +171,10 @@ export async function loadAllFromSupabase(): Promise<Partial<DataShape>> {
     drugInteractions: (drugInteractions.data ?? []).map(fromInteraction),
     drugAntidotes: (drugAntidotes.data ?? []).map(fromAntidote),
     drugClassifications: (drugClassifications.data ?? []).map(fromClassification),
+    drugSuffixes: (drugSuffixes.data ?? []).map(fromSuffix),
+    cardiacMedGroups: (cardiacMedGroups.data ?? []).map(fromCardiacGroup),
+    pharmMnemonics: (pharmMnemonics.data ?? []).map(fromMnemonic),
+    pharmacyFacts: (pharmacyFacts.data ?? []).map(fromFact),
     orders: (orders.data ?? []).map(fromOrder),
     settings: s
       ? { siteName: s.site_name, tagline: s.tagline, metaDescription: s.meta_description, adsenseEnabled: s.adsense_enabled, adsenseClient: s.adsense_client }
@@ -176,6 +195,10 @@ const UPSERT: Partial<Record<Entity, { table: string; to: (x: any) => any }>> = 
   drugInteractions: { table: TABLES.drugInteractions, to: toInteraction },
   drugAntidotes: { table: TABLES.drugAntidotes, to: toAntidote },
   drugClassifications: { table: TABLES.drugClassifications, to: toClassification },
+  drugSuffixes: { table: TABLES.drugSuffixes, to: toSuffix },
+  cardiacMedGroups: { table: TABLES.cardiacMedGroups, to: toCardiacGroup },
+  pharmMnemonics: { table: TABLES.pharmMnemonics, to: toMnemonic },
+  pharmacyFacts: { table: TABLES.pharmacyFacts, to: toFact },
   subscribers: { table: TABLES.subscribers, to: toSub },
   pages: { table: TABLES.pages, to: (p: any) => ({ id: p.id, title: p.title, slug: p.slug, content: p.content, status: p.status }) },
   categories: { table: TABLES.categories, to: (t: any) => ({ id: t.id, name: t.name, slug: t.slug }) },
@@ -233,6 +256,9 @@ export async function seedSupabase() {
   await supabase.from(TABLES.drugInteractions).upsert(seedDrugInteractions.map(toInteraction));
   await supabase.from(TABLES.drugAntidotes).upsert(seedDrugAntidotes.map(toAntidote));
   await supabase.from(TABLES.drugClassifications).upsert(seedDrugClassifications.map(toClassification));
+  await supabase.from(TABLES.drugSuffixes).upsert(seedDrugSuffixes.map(toSuffix));
+  await supabase.from(TABLES.cardiacMedGroups).upsert(seedCardiacMedGroups.map(toCardiacGroup));
+  await supabase.from(TABLES.pharmMnemonics).upsert(seedPharmMnemonics.map(toMnemonic));
   await supabase.from(TABLES.pages).upsert(seedPages.map((p) => ({ id: p.id, title: p.title, slug: p.slug, content: p.content, status: p.status })));
   await supabase.from(TABLES.categories).upsert(seedCategories.map((t) => ({ id: t.id, name: t.name, slug: t.slug })));
   await supabase.from(TABLES.tags).upsert(seedTags.map((t) => ({ id: t.id, name: t.name, slug: t.slug })));
