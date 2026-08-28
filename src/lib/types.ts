@@ -100,6 +100,33 @@ export interface DrugClassification {
   examples: string;
 }
 
+export interface DrugSuffix {
+  id: string;
+  suffix: string;
+  className: string;
+  examples: string;
+}
+
+export interface CardiacMedGroup {
+  id: string;
+  name: string;
+  examples: string;
+}
+
+export interface PharmMnemonic {
+  id: string;
+  title: string;
+  code: string;
+  lines: string; // كل بند في سطر منفصل
+}
+
+export interface PharmacyFact {
+  id: string;
+  number: number;
+  content: string;
+  source?: string;
+}
+
 export interface Page {
   id: string;
   title: string;
