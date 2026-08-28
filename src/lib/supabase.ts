@@ -180,6 +180,10 @@ export const TABLES = {
   drugInteractions: "drug_interactions",
   drugAntidotes: "drug_antidotes",
   drugClassifications: "drug_classifications",
+  drugSuffixes: "drug_suffixes",
+  cardiacMedGroups: "cardiac_med_groups",
+  pharmMnemonics: "pharm_mnemonics",
+  pharmacyFacts: "pharmacy_facts",
   settings: "site_settings",
   orders: "orders",
 } as const;
