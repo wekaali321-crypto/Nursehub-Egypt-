@@ -3,6 +3,9 @@ import type {
   DrugInteraction,
   DrugAntidote,
   DrugClassification,
+  DrugSuffix,
+  CardiacMedGroup,
+  PharmMnemonic,
   Page,
   Taxonomy,
   Subscriber,
@@ -115,6 +118,23 @@ export const seedDrugs: Drug[] = [
     isHighAlert: true,
     highAlertWarnings: "دواء عالي الخطورة قاتل إذا أُعطي بشكل مركّز أو دفعة واحدة (IV push) — يسبب توقف القلب فورًا. يُمنع تخزينه جاهزًا في وحدات الرعاية العادية بدون بروتوكول صارم، ويجب تخفيفه دائمًا واستخدام مضخة تسريب معايرة مع تحقق مزدوج من التركيز والمعدل قبل الإعطاء.",
   },
+  { id: "d9", name: "Digoxin", genericName: "Digoxin", drugClass: "مقوي عضلة قلبية (Cardiotonic)", category: "أدوية القلب والدم", dose: "0.125-0.25 مجم يوميًا (المستوى العلاجي 0.8-2 ng/mL)", indications: "فشل القلب الاحتقاني، الرجفان الأذيني.", sideEffects: "غثيان، عدم انتظام ضربات القلب، اضطرابات بصرية (رؤية صفراء/خضراء) عند التسمم.", nursingConsiderations: "قياس معدل القلب قبل الإعطاء (لا يُعطى إذا كان أقل من 60)، مراقبة مستوى البوتاسيوم والديجوكسين في الدم.", slug: "digoxin", isHighAlert: true, highAlertWarnings: "دواء عالي الخطورة: هامش الأمان ضيق جدًا بين الجرعة العلاجية والسامة. يتطلب قياس معدل القلب قبل كل جرعة، مراقبة مستوى الدواء في الدم والبوتاسيوم، ومعرفة علامات التسمم (غثيان، اضطراب الرؤية، بطء شديد بالقلب) والترياق (Digoxin Immune Fab)." },
+  { id: "d10", name: "Warfarin", genericName: "Warfarin Sodium", drugClass: "مضاد تخثر فموي", category: "أدوية القلب والدم", dose: "حسب قيمة INR المستهدفة (عادة 2-3)", indications: "الوقاية من الجلطات في الرجفان الأذيني والصمامات الصناعية.", sideEffects: "نزيف، كدمات سهلة.", nursingConsiderations: "مراقبة INR بانتظام، تثبيت كمية فيتامين K في الغذاء، توفر الترياق (فيتامين K).", slug: "warfarin", isHighAlert: true, highAlertWarnings: "دواء عالي الخطورة: هامش أمان ضيق ويتأثر بكثير من الأدوية والأطعمة. يتطلب متابعة دورية لـINR وتثقيف المريض حول علامات النزيف وتجنب التغيير المفاجئ في تناول فيتامين K." },
+  { id: "d11", name: "Amiodarone", genericName: "Amiodarone HCl", drugClass: "مضاد اضطراب نظم (Class III)", category: "أدوية القلب والدم", dose: "حسب البروتوكول — تحميل ثم جرعة صيانة", indications: "اضطرابات نظم القلب البطينية والأذينية الخطيرة.", sideEffects: "تسمم رئوي وكبدي على المدى الطويل، اضطراب الغدة الدرقية.", nursingConsiderations: "مراقبة رسم القلب أثناء الإعطاء الوريدي، متابعة وظائف الكبد والرئة والغدة الدرقية دوريًا.", slug: "amiodarone" },
+  { id: "d12", name: "Atenolol", genericName: "Atenolol", drugClass: "حاصر بيتا (Beta Blocker)", category: "أدوية القلب والدم", dose: "25-100 مجم يوميًا", indications: "ارتفاع ضغط الدم، الذبحة الصدرية.", sideEffects: "بطء القلب، تعب، برودة الأطراف.", nursingConsiderations: "قياس معدل القلب والضغط قبل الإعطاء، عدم إيقافه فجأة.", slug: "atenolol" },
+  { id: "d13", name: "Enalapril", genericName: "Enalapril Maleate", drugClass: "مثبط إنزيم محول أنجيوتنسين (ACE Inhibitor)", category: "أدوية القلب والدم", dose: "5-40 مجم يوميًا", indications: "ارتفاع ضغط الدم، فشل القلب.", sideEffects: "سعال جاف، ارتفاع بوتاسيوم الدم، هبوط ضغط.", nursingConsiderations: "مراقبة وظائف الكلى والبوتاسيوم، تحذير من الحمل.", slug: "enalapril" },
+  { id: "d14", name: "Amlodipine", genericName: "Amlodipine Besylate", drugClass: "حاصر قنوات كالسيوم (Calcium Channel Blocker)", category: "أدوية القلب والدم", dose: "5-10 مجم يوميًا", indications: "ارتفاع ضغط الدم، الذبحة الصدرية.", sideEffects: "وذمة الأطراف، صداع، احمرار الوجه.", nursingConsiderations: "مراقبة ضغط الدم والوذمة الطرفية.", slug: "amlodipine" },
+  { id: "d15", name: "Atorvastatin", genericName: "Atorvastatin Calcium", drugClass: "خافض كوليسترول (Statin)", category: "أدوية القلب والدم", dose: "10-80 مجم مساءً", indications: "ارتفاع الكوليسترول والوقاية من أمراض القلب.", sideEffects: "آلام عضلية، ارتفاع إنزيمات الكبد.", nursingConsiderations: "متابعة وظائف الكبد والأعراض العضلية دوريًا.", slug: "atorvastatin" },
+  { id: "d16", name: "Omeprazole", genericName: "Omeprazole", drugClass: "مثبط مضخة بروتون (PPI)", category: "أدوية الجهاز الهضمي", dose: "20-40 مجم يوميًا قبل الأكل", indications: "قرحة المعدة، الارتجاع المريئي.", sideEffects: "صداع، اضطرابات هضمية، نقص فيتامين B12 عند الاستخدام الطويل.", nursingConsiderations: "يُعطى قبل الأكل بـ30-60 دقيقة، مراقبة الاستخدام المزمن.", slug: "omeprazole" },
+  { id: "d17", name: "Ranitidine", genericName: "Ranitidine HCl", drugClass: "حاصر مستقبلات H2", category: "أدوية الجهاز الهضمي", dose: "150 مجم مرتين يوميًا", indications: "قرحة المعدة، الحموضة الزائدة.", sideEffects: "صداع، دوخة.", nursingConsiderations: "يُعطى قبل الوجبات، مراقبة التداخل مع أدوية أخرى.", slug: "ranitidine" },
+  { id: "d18", name: "Metoclopramide", genericName: "Metoclopramide", drugClass: "مضاد قيء (Antiemetic)", category: "أدوية الجهاز الهضمي", dose: "10 مجم قبل الوجبات وقبل النوم", indications: "الغثيان والقيء، بطء إفراغ المعدة.", sideEffects: "أعراض خارج هرمية (EPS)، نعاس.", nursingConsiderations: "مراقبة الأعراض العصبية خصوصًا مع الاستخدام الطويل أو عند كبار السن.", slug: "metoclopramide" },
+  { id: "d19", name: "Ceftriaxone", genericName: "Ceftriaxone Sodium", drugClass: "مضاد حيوي (Cephalosporin)", category: "المضادات الحيوية", dose: "1-2 جم يوميًا وريديًا أو عضليًا", indications: "العدوى البكتيرية الشديدة (تنفسية، بولية، سحائية).", sideEffects: "طفح جلدي، اضطرابات هضمية، حساسية.", nursingConsiderations: "السؤال عن حساسية البنسلين/السيفالوسبورينات، عدم الخلط مع محاليل الكالسيوم.", slug: "ceftriaxone" },
+  { id: "d20", name: "Azithromycin", genericName: "Azithromycin", drugClass: "مضاد حيوي (Macrolide)", category: "المضادات الحيوية", dose: "500 مجم يوم أول ثم 250 مجم لـ4 أيام", indications: "عدوى الجهاز التنفسي والجلد.", sideEffects: "اضطرابات هضمية، إطالة QT نادرًا.", nursingConsiderations: "يُعطى بمعزل عن مضادات الحموضة بساعتين.", slug: "azithromycin" },
+  { id: "d21", name: "Ciprofloxacin", genericName: "Ciprofloxacin", drugClass: "مضاد حيوي (Fluoroquinolone)", category: "المضادات الحيوية", dose: "500-750 مجم كل 12 ساعة", indications: "عدوى المسالك البولية والجهاز الهضمي.", sideEffects: "التهاب الأوتار، اضطرابات هضمية، حساسية للشمس.", nursingConsiderations: "تجنب منتجات الألبان ومضادات الحموضة وقت الجرعة، تحذير من التهاب الأوتار.", slug: "ciprofloxacin" },
+  { id: "d22", name: "Prednisolone", genericName: "Prednisolone", drugClass: "كورتيكوستيرويد", category: "أدوية المناعة والالتهاب", dose: "5-60 مجم يوميًا حسب الحالة", indications: "الحالات الالتهابية والمناعية، الربو الشديد.", sideEffects: "ارتفاع السكر، هشاشة العظام، ضعف المناعة، احتباس الماء.", nursingConsiderations: "عدم الإيقاف المفاجئ (يحتاج تدريج)، مراقبة السكر والوزن وعلامات العدوى.", slug: "prednisolone" },
+  { id: "d23", name: "Diazepam", genericName: "Diazepam", drugClass: "مهدئ (Benzodiazepine)", category: "أدوية الجهاز العصبي", dose: "2-10 مجم حسب الحالة", indications: "القلق، التشنجات، انسحاب الكحول.", sideEffects: "نعاس، تثبيط تنفسي عند الجرعات العالية، إدمان.", nursingConsiderations: "مراقبة التنفس ومستوى الوعي، توفر الترياق (Flumazenil).", slug: "diazepam" },
+  { id: "d24", name: "Phenytoin", genericName: "Phenytoin Sodium", drugClass: "مضاد اختلاج (Anticonvulsant)", category: "أدوية الجهاز العصبي", dose: "حسب المستوى الدوائي المطلوب في الدم", indications: "الصرع والتشنجات.", sideEffects: "دوخة، تضخم اللثة، طفح جلدي.", nursingConsiderations: "مراقبة المستوى الدوائي في الدم، العناية بصحة الفم.", slug: "phenytoin" },
+  { id: "d25", name: "Ondansetron", genericName: "Ondansetron HCl", drugClass: "مضاد قيء (5-HT3 antagonist)", category: "أدوية الجهاز الهضمي", dose: "4-8 مجم حسب الحاجة", indications: "الغثيان والقيء الناتج عن العلاج الكيميائي أو الجراحة.", sideEffects: "صداع، إمساك، إطالة QT نادرًا.", nursingConsiderations: "مراقبة رسم القلب مع الجرعات الوريدية العالية أو عوامل الخطر.", slug: "ondansetron" },
 ];
 
 export const seedDrugInteractions: DrugInteraction[] = [
@@ -191,6 +211,47 @@ export const seedDrugClassifications: DrugClassification[] = [
   { id: "cl13", name: "مضادات الاختلاج (Anticonvulsants)", description: "تُستخدم للسيطرة على نوبات الصرع ومنع تكرارها.", examples: "Phenytoin, Valproic acid, Carbamazepine" },
   { id: "cl14", name: "المهدئات ومضادات القلق (Sedative-Hypnotics/Anxiolytics)", description: "تُستخدم لعلاج القلق واضطرابات النوم عن طريق تثبيط الجهاز العصبي المركزي.", examples: "Diazepam, Lorazepam (Benzodiazepines), Phenobarbital (Barbiturates)" },
   { id: "cl15", name: "مضادات القيء (Antiemetics)", description: "تُستخدم للسيطرة على الغثيان والقيء الناتج عن أسباب متعددة كالعلاج الكيميائي أو دوار الحركة.", examples: "Ondansetron, Metoclopramide" },
+];
+
+export const seedDrugSuffixes: DrugSuffix[] = [
+  { id: "sf1", suffix: "-caine", className: "مخدرات موضعية (Local Anesthetics)", examples: "Lidocaine, Procaine, Novocaine" },
+  { id: "sf2", suffix: "-cillin", className: "مضادات حيوية بنسلينية (Penicillins)", examples: "Amoxicillin, Penicillin, Ampicillin" },
+  { id: "sf3", suffix: "-dine", className: "مضادات حموضة (H2 Blockers)", examples: "Cimetidine, Ranitidine, Famotidine" },
+  { id: "sf4", suffix: "-done", className: "مسكنات أفيونية (Opioid Analgesics)", examples: "Oxycodone, Methadone" },
+  { id: "sf5", suffix: "-ide", className: "مدرات بول (Diuretics)", examples: "Furosemide, Hydrochlorothiazide" },
+  { id: "sf6", suffix: "-pam / -lam", className: "مضادات قلق (Benzodiazepines)", examples: "Diazepam, Lorazepam, Alprazolam" },
+  { id: "sf7", suffix: "-olol", className: "حاصرات بيتا (Beta Blockers)", examples: "Atenolol, Propranolol, Metoprolol" },
+  { id: "sf8", suffix: "-pril", className: "مثبطات الإنزيم المحول للأنجيوتنسين (ACE Inhibitors)", examples: "Captopril, Enalapril, Lisinopril" },
+  { id: "sf9", suffix: "-sartan", className: "حاصرات مستقبلات الأنجيوتنسين (ARBs)", examples: "Losartan, Valsartan" },
+  { id: "sf10", suffix: "-dipine", className: "حاصرات قنوات الكالسيوم (Calcium Channel Blockers)", examples: "Amlodipine, Nifedipine, Felodipine" },
+  { id: "sf11", suffix: "-statin", className: "خافضات الكوليسترول (Statins)", examples: "Atorvastatin, Simvastatin" },
+  { id: "sf12", suffix: "-mycin / -micin", className: "مضادات حيوية أمينوغليكوزيدية/ماكروليدية", examples: "Gentamicin, Erythromycin, Azithromycin" },
+  { id: "sf13", suffix: "-cycline", className: "مضادات حيوية تتراسيكلينية (Tetracyclines)", examples: "Doxycycline, Tetracycline" },
+  { id: "sf14", suffix: "-floxacin", className: "مضادات حيوية كينولونية (Fluoroquinolones)", examples: "Ciprofloxacin, Levofloxacin" },
+  { id: "sf15", suffix: "-azole", className: "مضادات فطريات (Antifungals)", examples: "Fluconazole, Ketoconazole, Metronidazole" },
+  { id: "sf16", suffix: "-prazole", className: "مثبطات مضخة البروتون (Proton Pump Inhibitors)", examples: "Omeprazole, Esomeprazole" },
+  { id: "sf17", suffix: "-tidine", className: "مضادات حموضة (H2 Blockers)", examples: "Ranitidine, Nizatidine" },
+  { id: "sf18", suffix: "-vir", className: "مضادات فيروسات (Antivirals)", examples: "Acyclovir, Oseltamivir" },
+  { id: "sf19", suffix: "-triptan", className: "علاج الصداع النصفي (Antimigraine)", examples: "Sumatriptan, Zolmitriptan" },
+  { id: "sf20", suffix: "-zosin", className: "حاصرات ألفا (Alpha Blockers)", examples: "Prazosin, Doxazosin, Terazosin" },
+];
+
+export const seedCardiacMedGroups: CardiacMedGroup[] = [
+  { id: "cm1", name: "مثبطات الإنزيم المحول للأنجيوتنسين (ACE Inhibitors)", examples: "Captopril (Capoten), Enalapril (Renitec), Fosinopril (Monopril)" },
+  { id: "cm2", name: "حاصرات بيتا (Beta Blockers)", examples: "Atenolol (Tenormin), Bisoprolol (Concor), Propranolol (Inderal)" },
+  { id: "cm3", name: "حاصرات قنوات الكالسيوم (Calcium Channel Blockers)", examples: "Verapamil (Isoptin), Diltiazem (Tildium), Amlodipine (Norvasc)" },
+  { id: "cm4", name: "حاصرات قنوات البوتاسيوم (Potassium Channel Blockers)", examples: "Amiodarone, Propafenone, Procainamide" },
+  { id: "cm5", name: "الأدوية المقوية للقلب (Cardiotonic Drugs)", examples: "Adenosine, Digoxin (0.8-2 ng/mL), Digitoxin (14-26 ng/mL)" },
+  { id: "cm6", name: "الأدوية المذيبة للجلطات (Thrombolytics)", examples: "Alteplase, Streptokinase" },
+  { id: "cm7", name: "مدرات البول (Diuretics)", examples: "Furosemide (Lasix), Hydrochlorothiazide, Spironolactone" },
+];
+
+export const seedPharmMnemonics: PharmMnemonic[] = [
+  { id: "mn1", title: "أعراض تسمم الليدوكايين", code: "SAMS", lines: "S: كلام غير واضح (Slurred speech)\nA: تغيّر في الوعي (Altered CNS)\nM: رعشة عضلية (Muscle twitching)\nS: تشنجات (Seizures)" },
+  { id: "mn2", title: "دواعي استخدام الثيازيدات (مدرات البول الفموية)", code: "CHIC", lines: "C: فشل القلب الاحتقاني (Congestive Heart Failure)\nH: ارتفاع ضغط الدم (Hypertension)\nI: البوال التفهي (Diabetes Insipidus)\nC: حصوات الكالسيوم (Calcium calculi)" },
+  { id: "mn3", title: "الآثار الجانبية للمورفين", code: "MORPHINE", lines: "M: تضيّق الحدقة | فقدان الوعي (Myosis | Out of it)\nR: تثبيط تنفسي (Respiratory depression)\nP: التهاب رئوي | هبوط ضغط (Pneumonia | Hypotension)\nI: قلة تكرار البول | غثيان (Infrequency | Nausea)\nE: قيء (Emesis)" },
+  { id: "mn4", title: "أدوية اضطراب النظم البطيني", code: "PALS", lines: "P: بروكيناميد (Procainamide)\nA: أميودارون (Amiodarone)\nL: ليدوكايين (Lidocaine)\nS: سوتالول (Sotalol)" },
+  { id: "mn5", title: "الآثار الجانبية للكورتيزون", code: "6S", lines: "S: ارتفاع السكر (Sugar - Hyperglycemia)\nS: هشاشة العظام (Soggy bones - Osteoporosis)\nS: ضعف المناعة (Sick - Decreased immunity)\nS: اكتئاب (Sad - Depression)\nS: احتباس الماء والملح (Salt - Water retention)\nS: نقص الرغبة الجنسية (Sex - Decreased libido)" },
 ];
 
 export const seedPages: Page[] = [
