@@ -18,7 +18,6 @@ export default function DrugsHubPage() {
     drugAntidotes,
     drugClassifications,
     drugSuffixes,
-    cardiacMedGroups,
     pharmMnemonics,
     pharmacyFacts,
     drugInteractions,
@@ -93,14 +92,6 @@ export default function DrugsHubPage() {
       desc: "كل حالة تسمم والترياق المناسب",
       count: `${drugAntidotes.length}`,
       gradient: "from-emerald-600 to-green-500",
-    },
-    {
-      to: "/drugs/cardiac",
-      icon: "❤️",
-      title: "أدوية القلب",
-      desc: "مجمّعة حسب الفئة الدوائية",
-      count: `${cardiacMedGroups.length}`,
-      gradient: "from-red-600 to-orange-500",
     },
     {
       to: "/drugs/mnemonics",
