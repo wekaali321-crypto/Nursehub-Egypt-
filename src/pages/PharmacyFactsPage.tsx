@@ -17,7 +17,7 @@ export function PharmacyFactsHome() {
 
   useSEO({
     title: `مكتبة المعلومات الصيدلانية | ${settings.siteName}`,
-    description: "مكتبة 500 معلومة صيدلانية وطبية عملية، مقسّمة على 5 فصول، من مرجع علم الأدوية التطبيقي.",
+    description: "مكتبة معلومات صيدلانية وطبية عملية، مقسّمة على 5 فصول.",
     keywords: "معلومات صيدلانية, pharmacy facts, تمريض",
   });
 
@@ -31,9 +31,9 @@ export function PharmacyFactsHome() {
 
       <div className="mb-8 rounded-3xl bg-gradient-to-l from-teal-700 via-emerald-600 to-teal-500 p-6 text-white shadow-lg sm:p-10">
         <div className="text-5xl sm:text-6xl">📚</div>
-        <h1 className="mt-3 text-2xl font-black sm:text-4xl">مكتبة 500 معلومة صيدلانية</h1>
+        <h1 className="mt-3 text-2xl font-black sm:text-4xl">المعلومات الصيدلانية</h1>
         <p className="mt-2 max-w-xl text-teal-50">
-          مجموعة معلومات وأسئلة وأجوبة صيدلانية عملية، من كتاب "علم الأدوية التطبيقي"، مقسّمة على 5 فصول — كل فصل فيه 100 معلومة.
+          مجموعة معلومات وأسئلة وأجوبة صيدلانية عملية، مقسّمة على 5 فصول — كل فصل فيه 100 معلومة.
         </p>
         <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-bold backdrop-blur">
           ✅ {total} معلومة متاحة من أصل 500
@@ -119,10 +119,12 @@ export default function PharmacyFactsChapterPage() {
 
       <div className="space-y-3">
         {filtered.map((f) => (
-          <div key={f.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-            <span className="mb-2 inline-block rounded-full bg-teal-500 px-3 py-1 text-xs font-bold text-white">معلومة {f.number}</span>
-            <p className="whitespace-pre-line text-sm leading-relaxed text-slate-700 dark:text-slate-300">{f.content}</p>
-            {f.source && <p className="mt-2 text-xs text-slate-400">المصدر: {f.source}</p>}
+          <div key={f.id} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-teal-300 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+            <div className="mb-3 flex items-center gap-2">
+              <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-emerald-500 text-xs font-black text-white shadow">{f.number}</span>
+              <span className="h-px flex-1 bg-slate-100 dark:bg-slate-800" />
+            </div>
+            <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{f.content}</p>
           </div>
         ))}
         {filtered.length === 0 && (
