@@ -21,6 +21,7 @@ export function DrugsAdmin() {
       contraindications: form.contraindications || "", storage: form.storage || "", references: form.references || "",
       slug: form.slug || slugify(form.name!),
       isHighAlert: form.isHighAlert || false, highAlertWarnings: form.highAlertWarnings || "",
+      imageUrl: form.imageUrl || "", showImage: form.showImage || false,
     };
     setData((s) => ({ ...s, drugs: form.id ? s.drugs.map((x) => (x.id === form.id ? d : x)) : [d, ...s.drugs] }));
     logActivity(form.id ? "تعديل دواء" : "إضافة دواء", d.name);
@@ -63,6 +64,35 @@ export function DrugsAdmin() {
         <textarea placeholder="موانع الاستعمال (Contraindications)" rows={2} value={form.contraindications ?? ""} onChange={(e) => setForm({ ...form, contraindications: e.target.value })} className={inp} />
         <input placeholder="طريقة التخزين (Storage)" value={form.storage ?? ""} onChange={(e) => setForm({ ...form, storage: e.target.value })} className={inp} />
         <input placeholder="المراجع (References)" value={form.references ?? ""} onChange={(e) => setForm({ ...form, references: e.target.value })} className={inp} />
+        <div className="rounded-lg border border-sky-200 bg-sky-50 p-3 dark:border-sky-900 dark:bg-sky-500/10">
+          <label className="flex items-center gap-2 text-sm font-bold text-sky-700 dark:text-sky-400">
+            <input type="checkbox" checked={form.showImage ?? false} onChange={(e) => setForm({ ...form, showImage: e.target.checked })} />
+            🖼️ إظهار صورة الدواء
+          </label>
+          {form.showImage && (
+            <div className="mt-2 space-y-2">
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  if (!file) return;
+                  if (file.size > 1.5 * 1024 * 1024) { notify("الصورة كبيرة — اختاري صورة أقل من 1.5 ميجا", "error"); return; }
+                  const reader = new FileReader();
+                  reader.onload = () => setForm((f) => ({ ...f, imageUrl: String(reader.result) }));
+                  reader.readAsDataURL(file);
+                }}
+                className={inp}
+              />
+              {form.imageUrl && (
+                <div className="relative">
+                  <img src={form.imageUrl} alt="معاينة" className="max-h-40 w-full rounded-lg object-contain" />
+                  <button onClick={() => setForm({ ...form, imageUrl: "" })} className="mt-1 w-full rounded-lg bg-red-100 py-1 text-xs font-bold text-red-600 dark:bg-red-500/10">حذف الصورة</button>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
         <label className="flex items-center gap-2 rounded-lg border border-rose-200 bg-rose-50 px-3 py-2 text-sm font-bold text-rose-700 dark:border-rose-900 dark:bg-rose-500/10 dark:text-rose-400">
           <input type="checkbox" checked={form.isHighAlert ?? false} onChange={(e) => setForm({ ...form, isHighAlert: e.target.checked })} />
           ⚠️ دواء عالي الخطورة (High-Alert)
