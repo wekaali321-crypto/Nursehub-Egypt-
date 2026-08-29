@@ -75,6 +75,8 @@ export interface Drug {
   slug: string;
   isHighAlert?: boolean;
   highAlertWarnings?: string;
+  imageUrl?: string;
+  showImage?: boolean;
 }
 
 export interface DrugInteraction {
