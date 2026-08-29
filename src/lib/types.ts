@@ -125,6 +125,7 @@ export interface PharmacyFact {
   number: number;
   content: string;
   source?: string;
+  chapter: number;
 }
 
 export interface Page {
