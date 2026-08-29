@@ -184,6 +184,7 @@ export const TABLES = {
   cardiacMedGroups: "cardiac_med_groups",
   pharmMnemonics: "pharm_mnemonics",
   pharmacyFacts: "pharmacy_facts",
+  otcConditions: "otc_conditions",
   settings: "site_settings",
   orders: "orders",
 } as const;
