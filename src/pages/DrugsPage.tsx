@@ -1,21 +1,27 @@
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 
-export default function DrugsPage() {
+export default function DrugsListPage() {
   const { drugs, settings } = useStore();
   const { t } = useI18n();
   const [q, setQ] = useState("");
   const [cat, setCat] = useState("");
   const [letter, setLetter] = useState("");
   const [sort, setSort] = useState("alpha");
-  const [highAlertOnly, setHighAlertOnly] = useState(false);
+  const [params, setParams] = useSearchParams();
+  const highAlertOnly = params.get("high") === "1";
+  const toggleHighAlert = () => {
+    const next = new URLSearchParams(params);
+    if (highAlertOnly) next.delete("high"); else next.set("high", "1");
+    setParams(next);
+  };
 
   useSEO({
-    title: `دليل الأدوية | ${settings.siteName}`,
+    title: `كل الأدوية | ${settings.siteName}`,
     description: "دليل أدوية احترافي للممرضين: البحث، التصفية، الترتيب الأبجدي، الجرعات والاعتبارات التمريضية.",
     keywords: "أدوية, دليل أدوية, جرعات, تمريض, دواء",
   });
@@ -34,80 +40,11 @@ export default function DrugsPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
-      <Breadcrumbs items={[{ label: t("drugs.title") }]} />
+      <Breadcrumbs items={[{ label: t("drugs.title"), path: "/drugs" }, { label: "كل الأدوية" }]} />
       <div className="mb-6 rounded-3xl bg-gradient-to-l from-sky-500 to-emerald-500 p-6 text-white sm:p-8">
         <div className="text-4xl sm:text-5xl">💊</div>
-        <h1 className="mt-2 text-2xl font-black sm:text-3xl">{t("drugs.title")}</h1>
+        <h1 className="mt-2 text-2xl font-black sm:text-3xl">كل الأدوية</h1>
         <p className="mt-1 text-sky-50">{drugs.length} دواء مع الجرعات والاعتبارات التمريضية</p>
-      </div>
-
-      <div className="mb-6 grid gap-3 sm:grid-cols-2">
-        <Link to="/drugs/interactions" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-sky-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
-          <span className="text-3xl">🔄</span>
-          <div>
-            <h3 className="font-bold text-slate-900 dark:text-white">فحص تفاعلات الأدوية</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">اختاري دوائين واعرفي هل بينهم تفاعل معروف</p>
-          </div>
-        </Link>
-        <button
-          onClick={() => setHighAlertOnly((v) => !v)}
-          className={`flex items-center gap-3 rounded-2xl border p-4 text-right transition hover:-translate-y-0.5 hover:shadow-lg ${highAlertOnly ? "border-rose-400 bg-rose-50 dark:bg-rose-500/10" : "border-slate-200 bg-white hover:border-rose-400 dark:border-slate-800 dark:bg-slate-900"}`}
-        >
-          <span className="text-3xl">⚠️</span>
-          <div>
-            <h3 className="font-bold text-rose-600">الأدوية عالية الخطورة</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">{highAlertOnly ? "بيتم عرضها الآن — اضغطي للإلغاء" : "اعرضي فقط الأدوية اللي محتاجة احتياطات خاصة"}</p>
-          </div>
-        </button>
-        <Link to="/drugs/antidotes" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-emerald-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
-          <span className="text-3xl">🧪</span>
-          <div>
-            <h3 className="font-bold text-slate-900 dark:text-white">الترياقات الطبية</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">دليل حالات التسمم الشائعة والترياق المناسب لكل حالة</p>
-          </div>
-        </Link>
-        <Link to="/drugs/classifications" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-violet-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
-          <span className="text-3xl">🧬</span>
-          <div>
-            <h3 className="font-bold text-slate-900 dark:text-white">الأصناف الدوائية</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">الأصناف الرئيسية للأدوية مع الوصف والأمثلة</p>
-          </div>
-        </Link>
-        <Link to="/drugs/suffixes" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-cyan-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
-          <span className="text-3xl">🔤</span>
-          <div>
-            <h3 className="font-bold text-slate-900 dark:text-white">لاحقات أسماء الأدوية</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">اعرفي فئة الدواء من آخر اسمه</p>
-          </div>
-        </Link>
-        <Link to="/drugs/cardiac" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-red-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
-          <span className="text-3xl">❤️</span>
-          <div>
-            <h3 className="font-bold text-slate-900 dark:text-white">أدوية القلب حسب الفئة</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">مجمعة حسب الفئة الدوائية بالأسماء التجارية</p>
-          </div>
-        </Link>
-        <Link to="/drugs/mnemonics" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-indigo-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
-          <span className="text-3xl">🧠</span>
-          <div>
-            <h3 className="font-bold text-slate-900 dark:text-white">مذكرات فارماكولوجي</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">طرق سريعة لحفظ معلومات الأدوية</p>
-          </div>
-        </Link>
-        <Link to="/nursing-guide" className="flex items-center gap-3 rounded-2xl border border-sky-300 bg-sky-50 p-4 transition hover:-translate-y-0.5 hover:shadow-lg dark:border-sky-900 dark:bg-sky-500/10 sm:col-span-2">
-          <span className="text-3xl">📘</span>
-          <div>
-            <h3 className="font-bold text-sky-700 dark:text-sky-400">دليل التمريض الشامل</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">كل الأدوات دي مجمعة في صفحة واحدة</p>
-          </div>
-        </Link>
-        <Link to="/drugs/facts" className="flex items-center gap-3 rounded-2xl border border-teal-300 bg-teal-50 p-4 transition hover:-translate-y-0.5 hover:shadow-lg dark:border-teal-900 dark:bg-teal-500/10 sm:col-span-2">
-          <span className="text-3xl">📖</span>
-          <div>
-            <h3 className="font-bold text-teal-700 dark:text-teal-400">معلومات صيدلانية وطبية</h3>
-            <p className="text-sm text-slate-500 dark:text-slate-400">مشروع مستمر — هيوصل لـ500 معلومة تباعًا</p>
-          </div>
-        </Link>
       </div>
 
       <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_auto_auto]">
@@ -131,6 +68,13 @@ export default function DrugsPage() {
           <button key={l} onClick={() => setLetter(l)} className={`rounded-lg px-2.5 py-1 text-sm font-bold ${letter === l ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{l}</button>
         ))}
       </div>
+
+      <button
+        onClick={toggleHighAlert}
+        className={`mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold transition ${highAlertOnly ? "bg-rose-500 text-white shadow" : "bg-rose-50 text-rose-600 hover:bg-rose-100 dark:bg-rose-500/10"}`}
+      >
+        ⚠️ {highAlertOnly ? "بعرض الأدوية عالية الخطورة فقط — اضغط للإلغاء" : "اعرض الأدوية عالية الخطورة فقط"}
+      </button>
 
       <div className="mb-6"><AdSlot label="إعلان دليل الأدوية" /></div>
 
