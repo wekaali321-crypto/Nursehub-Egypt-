@@ -48,15 +48,9 @@ export default function DrugInteractionsPage() {
 
       <div className="mb-6"><AdSlot label="إعلان فحص التفاعلات" /></div>
 
-      <div className="grid gap-3 sm:grid-cols-2">
-        <select value={aId} onChange={(e) => setAId(e.target.value)} className="rounded-lg border border-slate-200 px-3 py-2.5 dark:border-slate-700 dark:bg-slate-800">
-          <option value="">الدواء الأول...</option>
-          {sorted.map((d) => <option key={d.id} value={d.id}>{d.name} ({d.genericName})</option>)}
-        </select>
-        <select value={bId} onChange={(e) => setBId(e.target.value)} className="rounded-lg border border-slate-200 px-3 py-2.5 dark:border-slate-700 dark:bg-slate-800">
-          <option value="">الدواء الثاني...</option>
-          {sorted.map((d) => <option key={d.id} value={d.id}>{d.name} ({d.genericName})</option>)}
-        </select>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <DrugPicker label="الدواء الأول" value={aId} onChange={setAId} drugs={sorted} />
+        <DrugPicker label="الدواء الثاني" value={bId} onChange={setBId} drugs={sorted} />
       </div>
 
       <div className="mt-6">
@@ -102,6 +96,71 @@ export default function DrugInteractionsPage() {
       <div className="mt-4 text-center">
         <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">← العودة لدليل الأدوية</Link>
       </div>
+    </div>
+  );
+}
+
+function DrugPicker({
+  label,
+  value,
+  onChange,
+  drugs,
+}: {
+  label: string;
+  value: string;
+  onChange: (id: string) => void;
+  drugs: { id: string; name: string; genericName: string }[];
+}) {
+  const [q, setQ] = useState("");
+  const picked = drugs.find((d) => d.id === value);
+  const matches = q.trim()
+    ? drugs.filter((d) => (d.name + " " + d.genericName).toLowerCase().includes(q.trim().toLowerCase())).slice(0, 40)
+    : [];
+
+  return (
+    <div className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+      <div className="mb-2 text-sm font-black text-slate-500 dark:text-slate-400">{label}</div>
+
+      {picked ? (
+        <div className="flex items-center justify-between gap-2 rounded-xl bg-sky-50 p-3 dark:bg-sky-500/10">
+          <div className="min-w-0">
+            <div className="truncate font-bold text-slate-900 dark:text-white">{picked.name}</div>
+            <div className="truncate text-xs text-slate-500 dark:text-slate-400">{picked.genericName}</div>
+          </div>
+          <button
+            onClick={() => { onChange(""); setQ(""); }}
+            className="shrink-0 rounded-lg bg-white px-3 py-1 text-xs font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300"
+          >
+            تغيير
+          </button>
+        </div>
+      ) : (
+        <>
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            placeholder="اكتبي اسم الدواء..."
+            className="w-full min-w-0 rounded-xl border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800"
+          />
+          {matches.length > 0 && (
+            <div className="mt-2 max-h-56 overflow-y-auto rounded-xl border border-slate-100 dark:border-slate-800">
+              {matches.map((d) => (
+                <button
+                  key={d.id}
+                  onClick={() => { onChange(d.id); setQ(""); }}
+                  className="block w-full min-w-0 border-b border-slate-100 p-2.5 text-right last:border-0 hover:bg-sky-50 dark:border-slate-800 dark:hover:bg-sky-500/10"
+                >
+                  <span className="block truncate text-sm font-bold text-slate-800 dark:text-white">{d.name}</span>
+                  <span className="block truncate text-xs text-slate-400">{d.genericName}</span>
+                </button>
+              ))}
+            </div>
+          )}
+          {q.trim() && matches.length === 0 && (
+            <p className="mt-2 text-xs text-slate-400">مفيش دواء بالاسم ده.</p>
+          )}
+        </>
+      )}
     </div>
   );
 }
