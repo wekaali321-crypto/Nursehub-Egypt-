@@ -22,6 +22,7 @@ import type {
   CardiacMedGroup,
   PharmMnemonic,
   PharmacyFact,
+  OTCCondition,
   Page,
   Taxonomy,
   Subscriber,
@@ -67,6 +68,7 @@ import {
   seedActivity,
 } from "./seed2";
 import { seedQuizzes, seedCustomTypes, seedHomeCategories, seedGateways, seedCoupons, defaultCommerce } from "./seed3";
+import { seedOTCConditions } from "./seedOTC";
 import { isSupabaseEnabled } from "./supabase";
 import { loadAllFromSupabase, syncEntity, syncSettings, seedSupabase } from "./dataApi";
 
@@ -90,6 +92,7 @@ export interface DataShape {
   cardiacMedGroups: CardiacMedGroup[];
   pharmMnemonics: PharmMnemonic[];
   pharmacyFacts: PharmacyFact[];
+  otcConditions: OTCCondition[];
   pages: Page[];
   categories: Taxonomy[];
   tags: Taxonomy[];
@@ -181,6 +184,7 @@ const defaults: DataShape = {
   cardiacMedGroups: seedCardiacMedGroups,
   pharmMnemonics: seedPharmMnemonics,
   pharmacyFacts: [],
+  otcConditions: seedOTCConditions,
   pages: seedPages,
   categories: seedCategories,
   tags: seedTags,
@@ -298,7 +302,7 @@ const SYNCED: (keyof DataShape)[] = [
   "drugInteractions",
   "drugAntidotes", "drugClassifications",
   "drugSuffixes", "cardiacMedGroups", "pharmMnemonics",
-  "pharmacyFacts",
+  "pharmacyFacts", "otcConditions",
   "subscribers", "pages", "categories", "tags", "ads", "affiliates",
   "redirects", "activity", "orders",
 ];
@@ -532,6 +536,7 @@ function emptyCollections(): Partial<DataShape> {
     drugAntidotes: [], drugClassifications: [],
     drugSuffixes: [], cardiacMedGroups: [], pharmMnemonics: [],
     pharmacyFacts: [],
+    otcConditions: [],
     pages: [], categories: [], tags: [], subscribers: [], ads: [], affiliates: [],
     redirects: [], activity: [], trash: [], versions: [], notifications: [],
     quizzes: seedQuizzes, attempts: [], customTypes: seedCustomTypes, customEntries: [],
