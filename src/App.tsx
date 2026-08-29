@@ -23,7 +23,8 @@ const ToolsPage = lazy(() => import("./pages/ToolsPage"));
 const ECGPage = lazy(() => import("./pages/ECGPage"));
 const StorePage = lazy(() => import("./pages/StorePage"));
 const MonetizationPage = lazy(() => import("./pages/MonetizationPage"));
-const DrugsPage = lazy(() => import("./pages/DrugsPage"));
+const DrugsHubPage = lazy(() => import("./pages/DrugsHubPage"));
+const DrugsListPage = lazy(() => import("./pages/DrugsPage"));
 const DrugPage = lazy(() => import("./pages/DrugPage"));
 const DrugInteractionsPage = lazy(() => import("./pages/DrugInteractionsPage"));
 const DrugAntidotesPage = lazy(() => import("./pages/DrugAntidotesPage"));
@@ -33,7 +34,6 @@ const CardiacMedsPage = lazy(() => import("./pages/CardiacMedsPage"));
 const PharmMnemonicsPage = lazy(() => import("./pages/PharmMnemonicsPage"));
 const PharmacyFactsPage = lazy(() => import("./pages/PharmacyFactsPage"));
 const PharmacyFactsHome = lazy(() => import("./pages/PharmacyFactsPage").then((m) => ({ default: m.PharmacyFactsHome })));
-const NursingGuidePage = lazy(() => import("./pages/NursingGuidePage"));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 
@@ -152,7 +152,8 @@ export default function App() {
                       Same component — CategoryPage reads the extra `:sub` param to filter. */}
                   <Route path="/category/:cat/:sub" element={<Public><CategoryPage /></Public>} />
                   <Route path="/article/:slug" element={<Public><ArticlePage /></Public>} />
-                  <Route path="/drugs" element={<Public><DrugsPage /></Public>} />
+                  <Route path="/drugs" element={<Public><DrugsHubPage /></Public>} />
+                  <Route path="/drugs/all" element={<Public><DrugsListPage /></Public>} />
                   <Route path="/drugs/interactions" element={<Public><DrugInteractionsPage /></Public>} />
                   <Route path="/drugs/antidotes" element={<Public><DrugAntidotesPage /></Public>} />
                   <Route path="/drugs/classifications" element={<Public><DrugClassificationsPage /></Public>} />
@@ -161,7 +162,6 @@ export default function App() {
                   <Route path="/drugs/mnemonics" element={<Public><PharmMnemonicsPage /></Public>} />
                   <Route path="/drugs/facts" element={<Public><PharmacyFactsHome /></Public>} />
                   <Route path="/drugs/facts/:chapter" element={<Public><PharmacyFactsPage /></Public>} />
-                  <Route path="/nursing-guide" element={<Public><NursingGuidePage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
                   <Route path="/quiz/:id" element={<Public><QuizPlayer /></Public>} />
