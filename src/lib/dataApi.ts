@@ -9,6 +9,7 @@ import {
   seedPages, seedCategories, seedTags, seedSubscribers,
   seedAds, seedAffiliates, seedRedirects, seedActivity,
 } from "./seed2";
+import { seedOTCConditions } from "./seedOTC";
 
 /**
  * Production data-access layer.
@@ -80,6 +81,10 @@ const toMnemonic = (m: any) => ({ id: m.id, title: m.title, code: m.code ?? "", 
 const fromFact = (r: any) => ({ id: r.id, number: r.number, content: r.content, source: r.source ?? "", chapter: r.chapter ?? 1 });
 const toFact = (f: any) => ({ id: f.id, number: f.number, content: f.content, source: f.source ?? "", chapter: f.chapter ?? 1 });
 
+// حالات شائعة وعلاجها (OTC)
+const fromOTC = (r: any) => ({ id: r.id, orderNum: r.order_num ?? 0, nameAr: r.name_ar, nameEn: r.name_en, icon: r.icon ?? "🩺", category: r.category, summary: r.summary, symptoms: r.symptoms, keyQuestions: r.key_questions, redFlags: r.red_flags ?? "", treatment: r.treatment, patientAdvice: r.patient_advice ?? "" });
+const toOTC = (o: any) => ({ id: o.id, order_num: o.orderNum ?? 0, name_ar: o.nameAr, name_en: o.nameEn, icon: o.icon ?? "🩺", category: o.category, summary: o.summary, symptoms: o.symptoms, key_questions: o.keyQuestions, red_flags: o.redFlags ?? "", treatment: o.treatment, patient_advice: o.patientAdvice ?? "" });
+
 // Product now also carries fileUrl <-> file_url: the actual deliverable
 // (PDF/doc/video) sent to buyers after payment, uploaded via the Media Library.
 const fromProduct = (r: any) => ({ id: r.id, title: r.title, type: r.type, price: r.price, oldPrice: r.old_price, cover: r.cover, description: r.description, sales: r.sales ?? 0, fileUrl: r.file_url });
@@ -143,13 +148,13 @@ export async function loadAllFromSupabase(): Promise<Partial<DataShape>> {
   const [
     articles, comments, media, products, users, pages, categories, tags,
     subscribers, ads, affiliates, redirects, activity, drugs, drugInteractions, drugAntidotes, drugClassifications,
-    drugSuffixes, cardiacMedGroups, pharmMnemonics, pharmacyFacts, settings, orders,
+    drugSuffixes, cardiacMedGroups, pharmMnemonics, pharmacyFacts, otcConditions, settings, orders,
   ] = await Promise.all([
     q(TABLES.articles), q(TABLES.comments), q(TABLES.media), q(TABLES.products),
     q(TABLES.users), q(TABLES.pages), q(TABLES.categories), q(TABLES.tags),
     q(TABLES.subscribers), q(TABLES.ads), q(TABLES.affiliates), q(TABLES.redirects),
     q(TABLES.activity), q(TABLES.drugs), q(TABLES.drugInteractions), q(TABLES.drugAntidotes), q(TABLES.drugClassifications),
-    q(TABLES.drugSuffixes), q(TABLES.cardiacMedGroups), q(TABLES.pharmMnemonics), q(TABLES.pharmacyFacts), q(TABLES.settings), q(TABLES.orders),
+    q(TABLES.drugSuffixes), q(TABLES.cardiacMedGroups), q(TABLES.pharmMnemonics), q(TABLES.pharmacyFacts), q(TABLES.otcConditions), q(TABLES.settings), q(TABLES.orders),
   ]);
 
   const s = settings.data?.[0];
@@ -175,6 +180,7 @@ export async function loadAllFromSupabase(): Promise<Partial<DataShape>> {
     cardiacMedGroups: (cardiacMedGroups.data ?? []).map(fromCardiacGroup),
     pharmMnemonics: (pharmMnemonics.data ?? []).map(fromMnemonic),
     pharmacyFacts: (pharmacyFacts.data ?? []).map(fromFact),
+    otcConditions: (otcConditions.data ?? []).map(fromOTC),
     orders: (orders.data ?? []).map(fromOrder),
     settings: s
       ? { siteName: s.site_name, tagline: s.tagline, metaDescription: s.meta_description, adsenseEnabled: s.adsense_enabled, adsenseClient: s.adsense_client }
@@ -199,6 +205,7 @@ const UPSERT: Partial<Record<Entity, { table: string; to: (x: any) => any }>> = 
   cardiacMedGroups: { table: TABLES.cardiacMedGroups, to: toCardiacGroup },
   pharmMnemonics: { table: TABLES.pharmMnemonics, to: toMnemonic },
   pharmacyFacts: { table: TABLES.pharmacyFacts, to: toFact },
+  otcConditions: { table: TABLES.otcConditions, to: toOTC },
   subscribers: { table: TABLES.subscribers, to: toSub },
   pages: { table: TABLES.pages, to: (p: any) => ({ id: p.id, title: p.title, slug: p.slug, content: p.content, status: p.status }) },
   categories: { table: TABLES.categories, to: (t: any) => ({ id: t.id, name: t.name, slug: t.slug }) },
@@ -259,6 +266,7 @@ export async function seedSupabase() {
   await supabase.from(TABLES.drugSuffixes).upsert(seedDrugSuffixes.map(toSuffix));
   await supabase.from(TABLES.cardiacMedGroups).upsert(seedCardiacMedGroups.map(toCardiacGroup));
   await supabase.from(TABLES.pharmMnemonics).upsert(seedPharmMnemonics.map(toMnemonic));
+  await supabase.from(TABLES.otcConditions).upsert(seedOTCConditions.map(toOTC));
   await supabase.from(TABLES.pages).upsert(seedPages.map((p) => ({ id: p.id, title: p.title, slug: p.slug, content: p.content, status: p.status })));
   await supabase.from(TABLES.categories).upsert(seedCategories.map((t) => ({ id: t.id, name: t.name, slug: t.slug })));
   await supabase.from(TABLES.tags).upsert(seedTags.map((t) => ({ id: t.id, name: t.name, slug: t.slug })));
