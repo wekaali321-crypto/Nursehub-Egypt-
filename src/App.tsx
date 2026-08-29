@@ -34,6 +34,8 @@ const CardiacMedsPage = lazy(() => import("./pages/CardiacMedsPage"));
 const PharmMnemonicsPage = lazy(() => import("./pages/PharmMnemonicsPage"));
 const PharmacyFactsPage = lazy(() => import("./pages/PharmacyFactsPage"));
 const PharmacyFactsHome = lazy(() => import("./pages/PharmacyFactsPage").then((m) => ({ default: m.PharmacyFactsHome })));
+const OTCConditionPage = lazy(() => import("./pages/OTCGuidePage"));
+const OTCGuideHome = lazy(() => import("./pages/OTCGuidePage").then((m) => ({ default: m.OTCGuideHome })));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 
@@ -50,6 +52,7 @@ import { CommentsAdmin, ProductsAdmin, UsersAdmin } from "./admin/SimpleAdmins";
 import { HomeBuilder, MenuAdmin, SEOAdmin, BackupAdmin } from "./admin/Builders";
 import { PagesAdmin, CategoriesAdmin, TagsAdmin, SubscribersAdmin, RedirectsAdmin, ActivityAdmin } from "./admin/AdminExtras";
 import { DrugsAdmin, DrugInteractionsAdmin, DrugAntidotesAdmin, DrugClassificationsAdmin, DrugSuffixesAdmin, CardiacMedGroupsAdmin, PharmMnemonicsAdmin, PharmacyFactsAdmin } from "./admin/DrugsAdmin";
+import OTCAdmin from "./admin/OTCAdmin";
 import { EarningsAdmin, AdsManager, AffiliateManager, PaymentsAdmin } from "./admin/Monetization";
 import { AnalyticsAdmin } from "./admin/Analytics";
 import { TrashAdmin, VersionsAdmin, MaintenanceAdmin, NotificationsAdmin } from "./admin/SystemAdmin";
@@ -162,6 +165,8 @@ export default function App() {
                   <Route path="/drugs/mnemonics" element={<Public><PharmMnemonicsPage /></Public>} />
                   <Route path="/drugs/facts" element={<Public><PharmacyFactsHome /></Public>} />
                   <Route path="/drugs/facts/:chapter" element={<Public><PharmacyFactsPage /></Public>} />
+                  <Route path="/drugs/otc-guide" element={<Public><OTCGuideHome /></Public>} />
+                  <Route path="/drugs/otc-guide/:id" element={<Public><OTCConditionPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
                   <Route path="/quiz/:id" element={<Public><QuizPlayer /></Public>} />
@@ -203,6 +208,7 @@ export default function App() {
                   <Route path="/admin/cardiac-meds" element={<Admin><CardiacMedGroupsAdmin /></Admin>} />
                   <Route path="/admin/pharm-mnemonics" element={<Admin><PharmMnemonicsAdmin /></Admin>} />
                   <Route path="/admin/pharmacy-facts" element={<Admin><PharmacyFactsAdmin /></Admin>} />
+                  <Route path="/admin/otc" element={<Admin><OTCAdmin /></Admin>} />
                   <Route path="/admin/quizzes" element={<Admin><QuizAdmin /></Admin>} />
                   <Route path="/admin/pages" element={<Admin><PagesAdmin /></Admin>} />
                   <Route path="/admin/categories" element={<Admin><CategoriesAdmin /></Admin>} />
