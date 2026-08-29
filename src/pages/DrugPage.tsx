@@ -51,10 +51,10 @@ export default function DrugPage() {
   const related = drugs.filter((d) => d.category === drug.category && d.id !== drug.id).slice(0, 4);
 
   const blocks = [
-    ...(drug.dose ? [{ t: "الجرعة", i: "💉", v: drug.dose, c: "border-sky-200 bg-sky-50 dark:border-sky-900 dark:bg-sky-500/5" }] : []),
-    ...(drug.indications ? [{ t: "دواعي الاستعمال", i: "✅", v: drug.indications, c: "border-emerald-200 bg-emerald-50 dark:border-emerald-900 dark:bg-emerald-500/5" }] : []),
-    ...(drug.sideEffects ? [{ t: "الآثار الجانبية", i: "⚠️", v: drug.sideEffects, c: "border-amber-200 bg-amber-50 dark:border-amber-900 dark:bg-amber-500/5" }] : []),
-    ...(drug.nursingConsiderations ? [{ t: "الاعتبارات التمريضية", i: "🩺", v: drug.nursingConsiderations, c: "border-violet-200 bg-violet-50 dark:border-violet-900 dark:bg-violet-500/5" }] : []),
+    { t: "الجرعة", i: "💉", v: drug.dose, c: "border-sky-200 bg-sky-50 dark:border-sky-900 dark:bg-sky-500/5" },
+    { t: "دواعي الاستعمال", i: "✅", v: drug.indications, c: "border-emerald-200 bg-emerald-50 dark:border-emerald-900 dark:bg-emerald-500/5" },
+    { t: "الآثار الجانبية", i: "⚠️", v: drug.sideEffects, c: "border-amber-200 bg-amber-50 dark:border-amber-900 dark:bg-amber-500/5" },
+    { t: "الاعتبارات التمريضية", i: "🩺", v: drug.nursingConsiderations, c: "border-violet-200 bg-violet-50 dark:border-violet-900 dark:bg-violet-500/5" },
     ...(drug.contraindications ? [{ t: "موانع الاستعمال", i: "🚫", v: drug.contraindications, c: "border-rose-200 bg-rose-50 dark:border-rose-900 dark:bg-rose-500/5" }] : []),
     ...(drug.storage ? [{ t: "التخزين", i: "🧊", v: drug.storage, c: "border-cyan-200 bg-cyan-50 dark:border-cyan-900 dark:bg-cyan-500/5" }] : []),
     ...(drug.references ? [{ t: "المراجع", i: "📚", v: drug.references, c: "border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-800/40" }] : []),
