@@ -130,6 +130,21 @@ export interface PharmacyFact {
   chapter: number;
 }
 
+export interface OTCCondition {
+  id: string;
+  orderNum: number;
+  nameAr: string;
+  nameEn: string;
+  icon: string;
+  category: string;
+  summary: string;
+  symptoms: string;
+  keyQuestions: string;
+  redFlags: string;
+  treatment: string;
+  patientAdvice: string;
+}
+
 export interface Page {
   id: string;
   title: string;
