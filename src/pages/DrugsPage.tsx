@@ -73,6 +73,41 @@ export default function DrugsPage() {
             <p className="text-sm text-slate-500 dark:text-slate-400">الأصناف الرئيسية للأدوية مع الوصف والأمثلة</p>
           </div>
         </Link>
+        <Link to="/drugs/suffixes" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-cyan-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+          <span className="text-3xl">🔤</span>
+          <div>
+            <h3 className="font-bold text-slate-900 dark:text-white">لاحقات أسماء الأدوية</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400">اعرفي فئة الدواء من آخر اسمه</p>
+          </div>
+        </Link>
+        <Link to="/drugs/cardiac" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-red-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+          <span className="text-3xl">❤️</span>
+          <div>
+            <h3 className="font-bold text-slate-900 dark:text-white">أدوية القلب حسب الفئة</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400">مجمعة حسب الفئة الدوائية بالأسماء التجارية</p>
+          </div>
+        </Link>
+        <Link to="/drugs/mnemonics" className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-indigo-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+          <span className="text-3xl">🧠</span>
+          <div>
+            <h3 className="font-bold text-slate-900 dark:text-white">مذكرات فارماكولوجي</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400">طرق سريعة لحفظ معلومات الأدوية</p>
+          </div>
+        </Link>
+        <Link to="/nursing-guide" className="flex items-center gap-3 rounded-2xl border border-sky-300 bg-sky-50 p-4 transition hover:-translate-y-0.5 hover:shadow-lg dark:border-sky-900 dark:bg-sky-500/10 sm:col-span-2">
+          <span className="text-3xl">📘</span>
+          <div>
+            <h3 className="font-bold text-sky-700 dark:text-sky-400">دليل التمريض الشامل</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400">كل الأدوات دي مجمعة في صفحة واحدة</p>
+          </div>
+        </Link>
+        <Link to="/drugs/facts" className="flex items-center gap-3 rounded-2xl border border-teal-300 bg-teal-50 p-4 transition hover:-translate-y-0.5 hover:shadow-lg dark:border-teal-900 dark:bg-teal-500/10 sm:col-span-2">
+          <span className="text-3xl">📖</span>
+          <div>
+            <h3 className="font-bold text-teal-700 dark:text-teal-400">معلومات صيدلانية وطبية</h3>
+            <p className="text-sm text-slate-500 dark:text-slate-400">مشروع مستمر — هيوصل لـ500 معلومة تباعًا</p>
+          </div>
+        </Link>
       </div>
 
       <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_auto_auto]">
