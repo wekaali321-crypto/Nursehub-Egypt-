@@ -21,6 +21,7 @@ export default function DrugsHubPage() {
     pharmMnemonics,
     pharmacyFacts,
     drugInteractions,
+    otcConditions,
     settings,
   } = useStore();
 
@@ -65,6 +66,14 @@ export default function DrugsHubPage() {
       desc: "احتياطات إجبارية قبل الإعطاء",
       count: `${highAlertCount} دواء`,
       gradient: "from-rose-600 to-red-500",
+    },
+    {
+      to: "/drugs/otc-guide",
+      icon: "🩺",
+      title: "حالات شائعة وعلاجها",
+      desc: "الأعراض، الأسئلة المهمة، والعلاج",
+      count: `${otcConditions.length} حالة`,
+      gradient: "from-teal-600 to-green-500",
     },
   ];
 
@@ -142,6 +151,7 @@ export default function DrugsHubPage() {
           <div className="mt-5 flex flex-wrap gap-2 text-sm font-bold">
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">💊 {drugs.length} دواء</span>
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">📚 {pharmacyFacts.length} معلومة</span>
+            <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">🩺 {otcConditions.length} حالة شائعة</span>
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">⚠️ {highAlertCount} عالي الخطورة</span>
           </div>
         </div>
