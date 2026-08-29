@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useStore, slugify } from "../lib/store";
 import { useToast } from "../components/Toast";
-import type { Drug, DrugInteraction, DrugAntidote, DrugClassification } from "../lib/types";
+import type { Drug, DrugInteraction, DrugAntidote, DrugClassification, DrugSuffix, CardiacMedGroup, PharmMnemonic } from "../lib/types";
 
 const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
 
@@ -222,6 +222,191 @@ export function DrugClassificationsAdmin() {
         <input placeholder="اسم الصنف" value={form.name ?? ""} onChange={(e) => setForm({ ...form, name: e.target.value })} className={inp} />
         <textarea placeholder="الوصف" rows={3} value={form.description ?? ""} onChange={(e) => setForm({ ...form, description: e.target.value })} className={inp} />
         <input placeholder="أمثلة (مفصولة بفاصلة)" value={form.examples ?? ""} onChange={(e) => setForm({ ...form, examples: e.target.value })} className={inp} />
+        <button onClick={save} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">حفظ</button>
+        {form.id && <button onClick={() => setForm({})} className="w-full rounded-lg border border-slate-200 py-2 text-sm font-bold dark:border-slate-700">إلغاء</button>}
+      </div>
+    </div>
+  );
+}
+
+export function DrugSuffixesAdmin() {
+  const { drugSuffixes, setData, logActivity } = useStore();
+  const { notify } = useToast();
+  const [form, setForm] = useState<Partial<DrugSuffix>>({});
+
+  const save = () => {
+    if (!form.suffix || !form.className) return notify("أدخلي اللاحقة والفئة", "error");
+    const s: DrugSuffix = { id: form.id || "sf" + Date.now(), suffix: form.suffix!, className: form.className!, examples: form.examples || "" };
+    setData((st) => ({ ...st, drugSuffixes: form.id ? st.drugSuffixes.map((x) => (x.id === form.id ? s : x)) : [s, ...st.drugSuffixes] }));
+    logActivity(form.id ? "تعديل لاحقة دواء" : "إضافة لاحقة دواء", s.suffix);
+    setForm({}); notify("تم الحفظ");
+  };
+  const del = (id: string) => { setData((st) => ({ ...st, drugSuffixes: st.drugSuffixes.filter((x) => x.id !== id) })); notify("تم الحذف"); };
+
+  return (
+    <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
+      <div className="space-y-3">
+        {drugSuffixes.map((s) => (
+          <div key={s.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+            <div className="flex items-center justify-between">
+              <div className="font-bold dark:text-white">🔤 {s.suffix} — {s.className}</div>
+              <div className="flex gap-1">
+                <button onClick={() => setForm(s)} className="rounded-lg bg-sky-100 px-3 py-1 text-xs font-bold text-sky-600 dark:bg-sky-500/10">تعديل</button>
+                <button onClick={() => del(s.id)} className="rounded-lg bg-red-100 px-3 py-1 text-xs font-bold text-red-600 dark:bg-red-500/10">حذف</button>
+              </div>
+            </div>
+            <div className="mt-1 text-sm text-slate-500 dark:text-slate-400">{s.examples}</div>
+          </div>
+        ))}
+      </div>
+      <div className="space-y-2 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+        <h3 className="font-bold dark:text-white">{form.id ? "✏️ تعديل لاحقة" : "➕ لاحقة جديدة"}</h3>
+        <input placeholder="اللاحقة (مثال: -caine)" value={form.suffix ?? ""} onChange={(e) => setForm({ ...form, suffix: e.target.value })} className={inp} />
+        <input placeholder="الفئة الدوائية" value={form.className ?? ""} onChange={(e) => setForm({ ...form, className: e.target.value })} className={inp} />
+        <input placeholder="أمثلة (مفصولة بفاصلة)" value={form.examples ?? ""} onChange={(e) => setForm({ ...form, examples: e.target.value })} className={inp} />
+        <button onClick={save} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">حفظ</button>
+        {form.id && <button onClick={() => setForm({})} className="w-full rounded-lg border border-slate-200 py-2 text-sm font-bold dark:border-slate-700">إلغاء</button>}
+      </div>
+    </div>
+  );
+}
+
+export function CardiacMedGroupsAdmin() {
+  const { cardiacMedGroups, setData, logActivity } = useStore();
+  const { notify } = useToast();
+  const [form, setForm] = useState<Partial<CardiacMedGroup>>({});
+
+  const save = () => {
+    if (!form.name) return notify("أدخلي اسم الفئة", "error");
+    const g: CardiacMedGroup = { id: form.id || "cm" + Date.now(), name: form.name!, examples: form.examples || "" };
+    setData((st) => ({ ...st, cardiacMedGroups: form.id ? st.cardiacMedGroups.map((x) => (x.id === form.id ? g : x)) : [g, ...st.cardiacMedGroups] }));
+    logActivity(form.id ? "تعديل فئة أدوية قلب" : "إضافة فئة أدوية قلب", g.name);
+    setForm({}); notify("تم الحفظ");
+  };
+  const del = (id: string) => { setData((st) => ({ ...st, cardiacMedGroups: st.cardiacMedGroups.filter((x) => x.id !== id) })); notify("تم الحذف"); };
+
+  return (
+    <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
+      <div className="space-y-3">
+        {cardiacMedGroups.map((g) => (
+          <div key={g.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+            <div className="flex items-center justify-between">
+              <div className="font-bold dark:text-white">❤️ {g.name}</div>
+              <div className="flex gap-1">
+                <button onClick={() => setForm(g)} className="rounded-lg bg-sky-100 px-3 py-1 text-xs font-bold text-sky-600 dark:bg-sky-500/10">تعديل</button>
+                <button onClick={() => del(g.id)} className="rounded-lg bg-red-100 px-3 py-1 text-xs font-bold text-red-600 dark:bg-red-500/10">حذف</button>
+              </div>
+            </div>
+            <div className="mt-1 text-sm text-slate-500 dark:text-slate-400">{g.examples}</div>
+          </div>
+        ))}
+      </div>
+      <div className="space-y-2 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+        <h3 className="font-bold dark:text-white">{form.id ? "✏️ تعديل فئة" : "➕ فئة جديدة"}</h3>
+        <input placeholder="اسم الفئة" value={form.name ?? ""} onChange={(e) => setForm({ ...form, name: e.target.value })} className={inp} />
+        <textarea placeholder="الأدوية (مفصولة بفاصلة)" rows={3} value={form.examples ?? ""} onChange={(e) => setForm({ ...form, examples: e.target.value })} className={inp} />
+        <button onClick={save} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">حفظ</button>
+        {form.id && <button onClick={() => setForm({})} className="w-full rounded-lg border border-slate-200 py-2 text-sm font-bold dark:border-slate-700">إلغاء</button>}
+      </div>
+    </div>
+  );
+}
+
+export function PharmMnemonicsAdmin() {
+  const { pharmMnemonics, setData, logActivity } = useStore();
+  const { notify } = useToast();
+  const [form, setForm] = useState<Partial<PharmMnemonic>>({});
+
+  const save = () => {
+    if (!form.title || !form.lines) return notify("أدخلي العنوان والبنود", "error");
+    const m: PharmMnemonic = { id: form.id || "mn" + Date.now(), title: form.title!, code: form.code || "", lines: form.lines! };
+    setData((st) => ({ ...st, pharmMnemonics: form.id ? st.pharmMnemonics.map((x) => (x.id === form.id ? m : x)) : [m, ...st.pharmMnemonics] }));
+    logActivity(form.id ? "تعديل مذكرة" : "إضافة مذكرة", m.title);
+    setForm({}); notify("تم الحفظ");
+  };
+  const del = (id: string) => { setData((st) => ({ ...st, pharmMnemonics: st.pharmMnemonics.filter((x) => x.id !== id) })); notify("تم الحذف"); };
+
+  return (
+    <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
+      <div className="space-y-3">
+        {pharmMnemonics.map((m) => (
+          <div key={m.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+            <div className="flex items-center justify-between">
+              <div className="font-bold dark:text-white">🧠 {m.title} {m.code && `"${m.code}"`}</div>
+              <div className="flex gap-1">
+                <button onClick={() => setForm(m)} className="rounded-lg bg-sky-100 px-3 py-1 text-xs font-bold text-sky-600 dark:bg-sky-500/10">تعديل</button>
+                <button onClick={() => del(m.id)} className="rounded-lg bg-red-100 px-3 py-1 text-xs font-bold text-red-600 dark:bg-red-500/10">حذف</button>
+              </div>
+            </div>
+            <div className="mt-1 whitespace-pre-line text-sm text-slate-500 dark:text-slate-400">{m.lines}</div>
+          </div>
+        ))}
+      </div>
+      <div className="space-y-2 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+        <h3 className="font-bold dark:text-white">{form.id ? "✏️ تعديل مذكرة" : "➕ مذكرة جديدة"}</h3>
+        <input placeholder="العنوان" value={form.title ?? ""} onChange={(e) => setForm({ ...form, title: e.target.value })} className={inp} />
+        <input placeholder="كود المذكرة (مثال: SAMS)" value={form.code ?? ""} onChange={(e) => setForm({ ...form, code: e.target.value })} className={inp} />
+        <textarea placeholder="البنود — كل بند في سطر" rows={5} value={form.lines ?? ""} onChange={(e) => setForm({ ...form, lines: e.target.value })} className={inp} />
+        <button onClick={save} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">حفظ</button>
+        {form.id && <button onClick={() => setForm({})} className="w-full rounded-lg border border-slate-200 py-2 text-sm font-bold dark:border-slate-700">إلغاء</button>}
+      </div>
+    </div>
+  );
+}
+
+export function PharmacyFactsAdmin() {
+  const { pharmacyFacts, setData, logActivity } = useStore();
+  const { notify } = useToast();
+  const [form, setForm] = useState<Partial<import("../lib/types").PharmacyFact>>({});
+
+  const save = () => {
+    if (!form.number || !form.content) return notify("أدخلي الرقم والمحتوى", "error");
+    const chapter = form.chapter || (form.number <= 100 ? 1 : form.number <= 200 ? 2 : form.number <= 300 ? 3 : form.number <= 400 ? 4 : 5);
+    const f = { id: form.id || "fact" + Date.now(), number: Number(form.number), content: form.content!, source: form.source || "", chapter };
+    setData((st) => ({ ...st, pharmacyFacts: form.id ? st.pharmacyFacts.map((x) => (x.id === form.id ? f : x)) : [f, ...st.pharmacyFacts] }));
+    logActivity(form.id ? "تعديل معلومة صيدلانية" : "إضافة معلومة صيدلانية", "رقم " + f.number);
+    setForm({}); notify("تم الحفظ");
+  };
+  const del = (id: string) => { setData((st) => ({ ...st, pharmacyFacts: st.pharmacyFacts.filter((x) => x.id !== id) })); notify("تم الحذف"); };
+
+  return (
+    <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
+      <div className="space-y-3">
+        {[1, 2, 3, 4, 5].map((ch) => {
+          const chFacts = pharmacyFacts.filter((f) => f.chapter === ch).sort((a, b) => a.number - b.number);
+          if (chFacts.length === 0) return null;
+          return (
+            <div key={ch}>
+              <h3 className="mb-2 mt-4 font-bold text-slate-500 dark:text-slate-400">📁 الفصل {ch} ({chFacts.length})</h3>
+              {chFacts.map((f) => (
+                <div key={f.id} className="mb-2 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+                  <div className="flex items-center justify-between">
+                    <div className="font-bold dark:text-white">📖 معلومة {f.number}</div>
+                    <div className="flex gap-1">
+                      <button onClick={() => setForm(f)} className="rounded-lg bg-sky-100 px-3 py-1 text-xs font-bold text-sky-600 dark:bg-sky-500/10">تعديل</button>
+                      <button onClick={() => del(f.id)} className="rounded-lg bg-red-100 px-3 py-1 text-xs font-bold text-red-600 dark:bg-red-500/10">حذف</button>
+                    </div>
+                  </div>
+                  <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{f.content}</div>
+                </div>
+              ))}
+            </div>
+          );
+        })}
+      </div>
+      <div className="space-y-2 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+        <h3 className="font-bold dark:text-white">{form.id ? "✏️ تعديل معلومة" : "➕ معلومة جديدة"}</h3>
+        <input type="number" placeholder="الرقم" value={form.number ?? ""} onChange={(e) => setForm({ ...form, number: Number(e.target.value) })} className={inp} />
+        <select value={form.chapter ?? ""} onChange={(e) => setForm({ ...form, chapter: Number(e.target.value) })} className={inp}>
+          <option value="">الفصل (تلقائي حسب الرقم لو فاضي)</option>
+          <option value="1">الفصل 1</option>
+          <option value="2">الفصل 2</option>
+          <option value="3">الفصل 3</option>
+          <option value="4">الفصل 4</option>
+          <option value="5">الفصل 5</option>
+        </select>
+        <textarea placeholder="المحتوى" rows={6} value={form.content ?? ""} onChange={(e) => setForm({ ...form, content: e.target.value })} className={inp} />
+        <input placeholder="المصدر (اختياري)" value={form.source ?? ""} onChange={(e) => setForm({ ...form, source: e.target.value })} className={inp} />
         <button onClick={save} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">حفظ</button>
         {form.id && <button onClick={() => setForm({})} className="w-full rounded-lg border border-slate-200 py-2 text-sm font-bold dark:border-slate-700">إلغاء</button>}
       </div>
