@@ -77,8 +77,8 @@ const toCardiacGroup = (c: any) => ({ id: c.id, name: c.name, examples: c.exampl
 const fromMnemonic = (r: any) => ({ id: r.id, title: r.title, code: r.code ?? "", lines: r.lines ?? "" });
 const toMnemonic = (m: any) => ({ id: m.id, title: m.title, code: m.code ?? "", lines: m.lines ?? "" });
 
-const fromFact = (r: any) => ({ id: r.id, number: r.number, content: r.content, source: r.source ?? "" });
-const toFact = (f: any) => ({ id: f.id, number: f.number, content: f.content, source: f.source ?? "" });
+const fromFact = (r: any) => ({ id: r.id, number: r.number, content: r.content, source: r.source ?? "", chapter: r.chapter ?? 1 });
+const toFact = (f: any) => ({ id: f.id, number: f.number, content: f.content, source: f.source ?? "", chapter: f.chapter ?? 1 });
 
 // Product now also carries fileUrl <-> file_url: the actual deliverable
 // (PDF/doc/video) sent to buyers after payment, uploaded via the Media Library.
