@@ -9,7 +9,7 @@ const TYPE_META: Record<string, { label: string; icon: string; classes: string }
   fact: { label: "معلومة", icon: "📌", classes: "border-sky-200 bg-sky-50 dark:border-sky-900/50 dark:bg-sky-950/30" },
   qa: { label: "سؤال وجواب", icon: "💬", classes: "border-violet-200 bg-violet-50 dark:border-violet-900/50 dark:bg-violet-950/30" },
   alert: { label: "تنبيه صيدلاني", icon: "⚠️", classes: "border-red-200 bg-red-50 dark:border-red-900/50 dark:bg-red-950/30" },
-  trivia: { label: "هل تعلم؟", icon: "💡", classes: "border-amber-200 bg-amber-50 dark:border-amber-900/50 dark:bg-amber-950/30" },
+  trivia: { label: "هل تعلم؟", icon: "💡", classes: "border-yellow-200 bg-yellow-50 dark:border-yellow-900/50 dark:bg-yellow-950/30" },
   note: { label: "ملاحظة", icon: "📝", classes: "border-emerald-200 bg-emerald-50 dark:border-emerald-900/50 dark:bg-emerald-950/30" },
 };
 
@@ -45,9 +45,9 @@ export function AppliedPharmHome() {
   const [loading, setLoading] = useState(true);
 
   useSEO({
-    title: `علم الأدوية التطبيقي | ${settings.siteName}`,
+    title: `بنك الصيدلية التعليمي | ${settings.siteName}`,
     description: "ملخصات دوائية حسب الموضوع، وخطط علاجية كاملة لأشهر الحالات المرضية.",
-    keywords: "علم الأدوية التطبيقي, صيدلة سريرية, تمريض",
+    keywords: "بنك الصيدلية التعليمي, صيدلة سريرية, تمريض",
   });
 
   useEffect(() => {
@@ -71,14 +71,14 @@ export function AppliedPharmHome() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">
-      <Breadcrumbs items={[{ label: "الأدوية", path: "/drugs" }, { label: "علم الأدوية التطبيقي" }]} />
+      <Breadcrumbs items={[{ label: "الأدوية", path: "/drugs" }, { label: "بنك الصيدلية التعليمي" }]} />
 
       <div className="relative mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-indigo-700 via-violet-600 to-purple-500 p-6 text-white shadow-lg sm:p-10">
         <span className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-white/10" />
         <span className="pointer-events-none absolute -bottom-16 -right-10 h-56 w-56 rounded-full bg-white/5" />
         <div className="relative">
           <div className="text-5xl sm:text-6xl">🧠</div>
-          <h1 className="mt-3 text-2xl font-black sm:text-4xl">علم الأدوية التطبيقي</h1>
+          <h1 className="mt-3 text-2xl font-black sm:text-4xl">بنك الصيدلية التعليمي</h1>
           <p className="mt-2 max-w-2xl text-violet-50">
             ملخصات دوائية عملية حسب الموضوع — معلومات، أسئلة وأجوبة، وتنبيهات صيدلانية — بالإضافة إلى
             خطط علاجية كاملة خطوة بخطوة لأشهر الحالات المرضية.
@@ -86,7 +86,7 @@ export function AppliedPharmHome() {
         </div>
       </div>
 
-      <div className="mb-6"><AdSlot label="إعلان علم الأدوية التطبيقي" /></div>
+      <div className="mb-6"><AdSlot label="إعلان بنك الصيدلية التعليمي" /></div>
 
       {loading && <div className="py-10 text-center text-slate-400">جارٍ التحميل...</div>}
 
@@ -126,7 +126,7 @@ export function AppliedPharmHome() {
               <Link
                 key={p.id}
                 to={`/drugs/applied-pharm/plan/${p.id}`}
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-rose-600 to-orange-500 p-5 text-white shadow-md transition hover:-translate-y-1 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-500 p-5 text-white shadow-md transition hover:-translate-y-1 hover:shadow-xl"
               >
                 <span className="text-3xl">🩺</span>
                 <h3 className="mt-3 font-black leading-tight">{p.disease_name}</h3>
@@ -155,7 +155,7 @@ export function AppliedPharmTopicPage() {
   const [q, setQ] = useState("");
 
   useSEO({
-    title: `${decodedTopic} | علم الأدوية التطبيقي | ${settings.siteName}`,
+    title: `${decodedTopic} | بنك الصيدلية التعليمي | ${settings.siteName}`,
     description: `ملخصات دوائية عن ${decodedTopic}.`,
     keywords: `${decodedTopic}, صيدلة سريرية`,
   });
@@ -178,7 +178,7 @@ export function AppliedPharmTopicPage() {
       <Breadcrumbs
         items={[
           { label: "الأدوية", path: "/drugs" },
-          { label: "علم الأدوية التطبيقي", path: "/drugs/applied-pharm" },
+          { label: "بنك الصيدلية التعليمي", path: "/drugs/applied-pharm" },
           { label: decodedTopic },
         ]}
       />
@@ -258,12 +258,12 @@ export default function AppliedPharmPlanPage() {
       <Breadcrumbs
         items={[
           { label: "الأدوية", path: "/drugs" },
-          { label: "علم الأدوية التطبيقي", path: "/drugs/applied-pharm" },
+          { label: "بنك الصيدلية التعليمي", path: "/drugs/applied-pharm" },
           { label: plan.disease_name || "" },
         ]}
       />
 
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-rose-700 via-orange-600 to-amber-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl bg-gradient-to-l from-blue-700 via-indigo-600 to-violet-500 p-6 text-white sm:p-8">
         <div className="text-4xl sm:text-5xl">🩺</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">الخطة العلاجية الكاملة</h1>
         <p className="mt-1 text-white/90">{plan.disease_name}</p>
@@ -273,9 +273,9 @@ export default function AppliedPharmPlanPage() {
 
       <div className="space-y-4">
         {lines.map((l, idx) => (
-          <div key={idx} className="rounded-2xl border border-orange-200 bg-orange-50 p-5 shadow-sm dark:border-orange-900/40 dark:bg-orange-950/20">
+          <div key={idx} className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 shadow-sm dark:border-indigo-900/40 dark:bg-indigo-950/20">
             <div className="mb-2 flex items-center gap-2">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-rose-500 text-xs font-black text-white shadow">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-blue-500 text-xs font-black text-white shadow">
                 {l.line_no}
               </span>
               <h3 className="font-black text-slate-800 dark:text-white">{l.title}</h3>
