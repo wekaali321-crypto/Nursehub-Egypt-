@@ -6,16 +6,16 @@ import { useSEO } from "../lib/seo";
 import type { OTCCondition } from "../lib/types";
 
 const CATEGORY_GRADIENT: Record<string, string> = {
-  "تنفسي": "from-sky-600 to-cyan-500",
-  "هضمي": "from-amber-600 to-orange-500",
-  "جلدية": "from-pink-600 to-rose-500",
+  "تنفسي": "from-sky-600 to-blue-500",
+  "هضمي": "from-teal-600 to-emerald-500",
+  "جلدية": "from-cyan-600 to-sky-500",
   "عظام ومفاصل": "from-slate-600 to-slate-800",
-  "فم وأسنان": "from-teal-600 to-cyan-600",
+  "فم وأسنان": "from-blue-600 to-indigo-500",
   "مسالك بولية": "from-indigo-600 to-violet-500",
-  "نسائية": "from-fuchsia-600 to-pink-500",
+  "نسائية": "from-violet-600 to-purple-500",
   "أخرى": "from-emerald-600 to-green-500",
 };
-const DEFAULT_GRADIENT = "from-emerald-700 to-teal-500";
+const DEFAULT_GRADIENT = "from-teal-700 to-emerald-500";
 
 export function OTCGuideHome() {
   const { otcConditions, settings } = useStore();
@@ -149,13 +149,13 @@ function Section({
   icon: string;
   title: string;
   children: string;
-  tone?: "default" | "red" | "amber";
+  tone?: "default" | "red" | "info";
 }) {
   if (!children || children === "—") return null;
   const tones: Record<string, string> = {
     default: "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900",
     red: "border-red-200 bg-red-50 dark:border-red-900/50 dark:bg-red-950/30",
-    amber: "border-amber-200 bg-amber-50 dark:border-amber-900/50 dark:bg-amber-950/30",
+    info: "border-sky-200 bg-sky-50 dark:border-sky-900/50 dark:bg-sky-950/30",
   };
   return (
     <div className={`rounded-2xl border p-5 shadow-sm ${tones[tone]}`}>
@@ -223,7 +223,7 @@ export default function OTCConditionPage() {
       <div className="space-y-4">
         <Section icon="📝" title="الملخص">{condition.summary}</Section>
         <Section icon="🩺" title="الأعراض">{condition.symptoms}</Section>
-        <Section icon="❓" title="الأسئلة المهمة قبل الصرف" tone="amber">{condition.keyQuestions}</Section>
+        <Section icon="❓" title="الأسئلة المهمة قبل الصرف" tone="info">{condition.keyQuestions}</Section>
         <Section icon="🚨" title="علامات الخطر — تحويل فوري للطبيب" tone="red">{condition.redFlags}</Section>
         <Section icon="💊" title="العلاج">{condition.treatment}</Section>
         <Section icon="💡" title="نصائح للمريض">{condition.patientAdvice}</Section>
