@@ -34,9 +34,17 @@ export default function DrugsHubPage() {
   });
 
   const highAlertCount = drugs.filter((d) => d.isHighAlert).length;
+  const DOSAGE_TOPIC =
+    "نظام الجرعات الدوائية وحساب جرعة الطفل (Dosage Regimen & Pediatric Dose Calculation)";
   const [appliedPharmCount, setAppliedPharmCount] = useState(0);
+  const [dosageCount, setDosageCount] = useState(0);
   useEffect(() => {
-    fetchAppliedPharmItems().then((items) => setAppliedPharmCount(items.length)).catch(() => {});
+    fetchAppliedPharmItems()
+      .then((items) => {
+        setAppliedPharmCount(items.length);
+        setDosageCount(items.filter((i: any) => i.topic === DOSAGE_TOPIC).length);
+      })
+      .catch(() => {});
   }, []);
 
   const main: Tile[] = [
@@ -79,6 +87,14 @@ export default function DrugsHubPage() {
       desc: "500 معلومة صيدلانية + ملخصات حسب الموضوع + خطط علاجية كاملة",
       count: `${appliedPharmCount} عنصر`,
       gradient: "from-indigo-600 to-violet-500",
+    },
+    {
+      to: `/drugs/applied-pharm/topic/${encodeURIComponent(DOSAGE_TOPIC)}`,
+      icon: "🧮",
+      title: "حساب جرعة الطفل",
+      desc: "نظام الجرعات الدوائية ومعادلات حساب جرعة الطفل من جرعة البالغ",
+      count: `${dosageCount} عنصر`,
+      gradient: "from-cyan-600 to-blue-500",
     },
   ];
 
