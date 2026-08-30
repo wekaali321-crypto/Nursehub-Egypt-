@@ -1,4 +1,16 @@
 -- ============================================================
+-- ⚠️ DEPRECATED — FOR HISTORICAL REFERENCE ONLY. DO NOT RUN.
+-- Superseded by production_schema.sql, which is the schema
+-- actually applied in production.
+--
+-- This file's RLS policies grant ANY authenticated user full
+-- read/write/delete on ALL orders, articles, and comments
+-- (not just their own) — e.g. "authenticated full orders" below.
+-- Applying this schema to a live database would reintroduce a
+-- real data-exposure vulnerability. Use production_schema.sql.
+-- ============================================================
+
+-- ============================================================
 -- NurseHub Egypt — Supabase Complete Schema (Enterprise)
 -- ============================================================
 
