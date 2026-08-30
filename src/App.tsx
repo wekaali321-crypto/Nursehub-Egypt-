@@ -1,5 +1,5 @@
 import { lazy, Suspense, type ReactNode } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider, AuthProvider, useAuth } from "./lib/theme";
 import { UserAuthProvider } from "./lib/userAuth";
 import { I18nProvider } from "./lib/i18n";
@@ -36,6 +36,9 @@ const PharmacyFactsPage = lazy(() => import("./pages/PharmacyFactsPage"));
 const PharmacyFactsHome = lazy(() => import("./pages/PharmacyFactsPage").then((m) => ({ default: m.PharmacyFactsHome })));
 const OTCConditionPage = lazy(() => import("./pages/OTCGuidePage"));
 const OTCGuideHome = lazy(() => import("./pages/OTCGuidePage").then((m) => ({ default: m.OTCGuideHome })));
+const AppliedPharmPlanPage = lazy(() => import("./pages/AppliedPharmPage"));
+const AppliedPharmHome = lazy(() => import("./pages/AppliedPharmPage").then((m) => ({ default: m.AppliedPharmHome })));
+const AppliedPharmTopicPage = lazy(() => import("./pages/AppliedPharmPage").then((m) => ({ default: m.AppliedPharmTopicPage })));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 
@@ -53,6 +56,7 @@ import { HomeBuilder, MenuAdmin, SEOAdmin, BackupAdmin } from "./admin/Builders"
 import { PagesAdmin, CategoriesAdmin, TagsAdmin, SubscribersAdmin, RedirectsAdmin, ActivityAdmin } from "./admin/AdminExtras";
 import { DrugsAdmin, DrugInteractionsAdmin, DrugAntidotesAdmin, DrugClassificationsAdmin, DrugSuffixesAdmin, CardiacMedGroupsAdmin, PharmMnemonicsAdmin, PharmacyFactsAdmin } from "./admin/DrugsAdmin";
 import OTCAdmin from "./admin/OTCAdmin";
+import AppliedPharmAdmin from "./admin/AppliedPharmAdmin";
 import { EarningsAdmin, AdsManager, AffiliateManager, PaymentsAdmin } from "./admin/Monetization";
 import { AnalyticsAdmin } from "./admin/Analytics";
 import { TrashAdmin, VersionsAdmin, MaintenanceAdmin, NotificationsAdmin } from "./admin/SystemAdmin";
@@ -163,10 +167,13 @@ export default function App() {
                   <Route path="/drugs/suffixes" element={<Public><DrugSuffixesPage /></Public>} />
                   <Route path="/drugs/cardiac" element={<Public><CardiacMedsPage /></Public>} />
                   <Route path="/drugs/mnemonics" element={<Public><PharmMnemonicsPage /></Public>} />
-                  <Route path="/drugs/facts" element={<Public><PharmacyFactsHome /></Public>} />
-                  <Route path="/drugs/facts/:chapter" element={<Public><PharmacyFactsPage /></Public>} />
+                  <Route path="/drugs/facts" element={<Navigate to="/drugs/applied-pharm" replace />} />
+                  <Route path="/drugs/facts/:chapter" element={<Navigate to="/drugs/applied-pharm" replace />} />
                   <Route path="/drugs/otc-guide" element={<Public><OTCGuideHome /></Public>} />
                   <Route path="/drugs/otc-guide/:id" element={<Public><OTCConditionPage /></Public>} />
+                  <Route path="/drugs/applied-pharm" element={<Public><AppliedPharmHome /></Public>} />
+                  <Route path="/drugs/applied-pharm/topic/:topic" element={<Public><AppliedPharmTopicPage /></Public>} />
+                  <Route path="/drugs/applied-pharm/plan/:id" element={<Public><AppliedPharmPlanPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
                   <Route path="/quiz/:id" element={<Public><QuizPlayer /></Public>} />
@@ -207,8 +214,9 @@ export default function App() {
                   <Route path="/admin/drug-suffixes" element={<Admin><DrugSuffixesAdmin /></Admin>} />
                   <Route path="/admin/cardiac-meds" element={<Admin><CardiacMedGroupsAdmin /></Admin>} />
                   <Route path="/admin/pharm-mnemonics" element={<Admin><PharmMnemonicsAdmin /></Admin>} />
-                  <Route path="/admin/pharmacy-facts" element={<Admin><PharmacyFactsAdmin /></Admin>} />
+                  <Route path="/admin/pharmacy-facts" element={<Navigate to="/admin/applied-pharm" replace />} />
                   <Route path="/admin/otc" element={<Admin><OTCAdmin /></Admin>} />
+                  <Route path="/admin/applied-pharm" element={<Admin><AppliedPharmAdmin /></Admin>} />
                   <Route path="/admin/quizzes" element={<Admin><QuizAdmin /></Admin>} />
                   <Route path="/admin/pages" element={<Admin><PagesAdmin /></Admin>} />
                   <Route path="/admin/categories" element={<Admin><CategoriesAdmin /></Admin>} />
