@@ -83,7 +83,7 @@ export default function AppliedPharmAdmin() {
       <div className="space-y-3">
         <div className="flex flex-wrap gap-2">
           <button onClick={() => startNew(1)} className="rounded-lg bg-violet-600 px-3 py-2 text-xs font-bold text-white">+ عنصر جزء 1 (موضوع)</button>
-          <button onClick={() => startNew(2)} className="rounded-lg bg-rose-600 px-3 py-2 text-xs font-bold text-white">+ خطة علاجية (جزء 2)</button>
+          <button onClick={() => startNew(2)} className="rounded-lg bg-indigo-600 px-3 py-2 text-xs font-bold text-white">+ خطة علاجية (جزء 2)</button>
           <select value={partFilter} onChange={(e) => setPartFilter(Number(e.target.value) as 0 | 1 | 2)} className={inp + " w-auto"}>
             <option value={0}>الكل</option>
             <option value={1}>الجزء 1</option>
