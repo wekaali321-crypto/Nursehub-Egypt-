@@ -75,7 +75,7 @@ export default function DrugsHubPage() {
     {
       to: "/drugs/applied-pharm",
       icon: "🧠",
-      title: "علم الأدوية التطبيقي",
+      title: "بنك الصيدلية التعليمي",
       desc: "500 معلومة صيدلانية + ملخصات حسب الموضوع + خطط علاجية كاملة",
       count: `${appliedPharmCount} عنصر`,
       gradient: "from-indigo-600 to-violet-500",
