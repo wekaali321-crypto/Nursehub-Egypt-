@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
+import { fetchAppliedPharmItems } from "../lib/appliedPharmApi";
 
 type Tile = {
   to: string;
@@ -19,7 +21,6 @@ export default function DrugsHubPage() {
     drugClassifications,
     drugSuffixes,
     pharmMnemonics,
-    pharmacyFacts,
     drugInteractions,
     otcConditions,
     settings,
@@ -33,6 +34,10 @@ export default function DrugsHubPage() {
   });
 
   const highAlertCount = drugs.filter((d) => d.isHighAlert).length;
+  const [appliedPharmCount, setAppliedPharmCount] = useState(0);
+  useEffect(() => {
+    fetchAppliedPharmItems().then((items) => setAppliedPharmCount(items.length)).catch(() => {});
+  }, []);
 
   const main: Tile[] = [
     {
@@ -42,14 +47,6 @@ export default function DrugsHubPage() {
       desc: "بحث وتصفية حسب الصنف والحرف",
       count: `${drugs.length} دواء`,
       gradient: "from-sky-600 to-cyan-500",
-    },
-    {
-      to: "/drugs/facts",
-      icon: "📚",
-      title: "المعلومات الصيدلانية",
-      desc: "مكتبة مقسّمة على 5 فصول",
-      count: `${pharmacyFacts.length} معلومة`,
-      gradient: "from-teal-600 to-emerald-500",
     },
     {
       to: "/drugs/interactions",
@@ -74,6 +71,14 @@ export default function DrugsHubPage() {
       desc: "الأعراض، الأسئلة المهمة، والعلاج",
       count: `${otcConditions.length} حالة`,
       gradient: "from-teal-600 to-green-500",
+    },
+    {
+      to: "/drugs/applied-pharm",
+      icon: "🧠",
+      title: "علم الأدوية التطبيقي",
+      desc: "500 معلومة صيدلانية + ملخصات حسب الموضوع + خطط علاجية كاملة",
+      count: `${appliedPharmCount} عنصر`,
+      gradient: "from-indigo-600 to-violet-500",
     },
   ];
 
@@ -150,7 +155,7 @@ export default function DrugsHubPage() {
           </p>
           <div className="mt-5 flex flex-wrap gap-2 text-sm font-bold">
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">💊 {drugs.length} دواء</span>
-            <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">📚 {pharmacyFacts.length} معلومة</span>
+            <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">🧠 {appliedPharmCount} معلومة تطبيقية</span>
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">🩺 {otcConditions.length} حالة شائعة</span>
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">⚠️ {highAlertCount} عالي الخطورة</span>
           </div>
