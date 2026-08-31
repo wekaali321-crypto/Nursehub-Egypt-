@@ -21,6 +21,7 @@ export function DrugsAdmin() {
       contraindications: form.contraindications || "", storage: form.storage || "", references: form.references || "",
       slug: form.slug || slugify(form.name!),
       isHighAlert: form.isHighAlert || false, highAlertWarnings: form.highAlertWarnings || "",
+      highAlertType: form.highAlertType || [],
       imageUrl: form.imageUrl || "", showImage: form.showImage || false,
     };
     setData((s) => ({ ...s, drugs: form.id ? s.drugs.map((x) => (x.id === form.id ? d : x)) : [d, ...s.drugs] }));

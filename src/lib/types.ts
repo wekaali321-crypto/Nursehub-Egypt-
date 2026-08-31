@@ -75,6 +75,7 @@ export interface Drug {
   slug: string;
   isHighAlert?: boolean;
   highAlertWarnings?: string;
+  highAlertType?: string[];
   imageUrl?: string;
   showImage?: boolean;
 }
