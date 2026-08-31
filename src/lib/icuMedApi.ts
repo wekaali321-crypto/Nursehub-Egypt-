@@ -18,6 +18,8 @@ export interface ICUMedication {
   is_high_alert: boolean;
   high_alert_type: string[] | null;
   nursing_considerations: string | null;
+  show_image: boolean;
+  image_url: string | null;
 }
 
 export async function fetchICUMedications(): Promise<ICUMedication[]> {

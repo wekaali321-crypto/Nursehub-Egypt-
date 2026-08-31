@@ -25,6 +25,8 @@ const EMPTY: ICUMedication = {
   is_high_alert: false,
   high_alert_type: [],
   nursing_considerations: "",
+  show_image: false,
+  image_url: "",
 };
 
 const inp = "border border-slate-200 rounded-lg p-2 dark:border-slate-700 dark:bg-slate-800 dark:text-white";
@@ -129,6 +131,37 @@ export default function ICUMedicationsAdmin() {
           <input placeholder="اسم الدواء (عربي + إنجليزي)" value={editing.drug_name}
             onChange={(e) => setEditing({ ...editing, drug_name: e.target.value })}
             className={`${inp} w-full`} />
+
+          <div className="rounded-lg border border-sky-200 bg-sky-50 p-3 dark:border-sky-900 dark:bg-sky-500/10">
+            <label className="flex items-center gap-2 text-sm font-bold text-sky-700 dark:text-sky-400">
+              <input type="checkbox" checked={editing.show_image ?? false}
+                onChange={(e) => setEditing({ ...editing, show_image: e.target.checked })} />
+              🖼️ إظهار صورة الدواء
+            </label>
+            {editing.show_image && (
+              <div className="mt-2 space-y-2">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    if (!file) return;
+                    if (file.size > 1.5 * 1024 * 1024) { alert("الصورة كبيرة — اختاري صورة أقل من 1.5 ميجا"); return; }
+                    const reader = new FileReader();
+                    reader.onload = () => setEditing((f) => f && { ...f, image_url: String(reader.result) });
+                    reader.readAsDataURL(file);
+                  }}
+                  className={`${inp} w-full`}
+                />
+                {editing.image_url && (
+                  <div className="relative">
+                    <img src={editing.image_url} alt="معاينة" className="max-h-40 w-full rounded-lg object-contain" />
+                    <button onClick={() => setEditing({ ...editing, image_url: "" })} className="mt-1 w-full rounded-lg bg-red-100 py-1 text-xs font-bold text-red-600 dark:bg-red-500/10">حذف الصورة</button>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
 
           <div className="grid sm:grid-cols-2 gap-3">
             <input placeholder="التركيز" value={editing.concentration || ""}
