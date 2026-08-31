@@ -10,7 +10,7 @@ const SIMILARITY_LABELS: Record<string, string> = {
 function TallMan({ a, b }: { a: string | null; b: string | null }) {
   if (!a && !b) return null;
   return (
-    <div className="mt-2 text-xs bg-purple-50 border border-purple-100 rounded-lg p-2 font-mono text-purple-800 dark:bg-purple-500/10 dark:border-purple-500/20 dark:text-purple-300">
+    <div className="mt-2 text-xs bg-green-50 border border-green-100 rounded-lg p-2 font-mono text-green-800 dark:bg-green-500/10 dark:border-green-500/20 dark:text-green-300">
       {a && <div>{a}</div>}
       {b && <div>{b}</div>}
     </div>
@@ -29,7 +29,7 @@ export default function LasaPage() {
 
   return (
     <div dir="rtl" className="max-w-3xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-purple-600 to-indigo-700 text-white p-6 mb-8">
+      <div className="rounded-2xl bg-gradient-to-l from-green-600 to-emerald-700 text-white p-6 mb-8">
         <h1 className="text-2xl font-bold mb-1">أدوية متشابهة الاسم (LASA)</h1>
         <p className="opacity-90 text-sm">
           أزواج أدوية اسمها متشابه كتابيًا أو نطقيًا وهي سبب رئيسي لأخطاء الدواء عالميًا — الحل المعياري هو
@@ -43,7 +43,7 @@ export default function LasaPage() {
           <div key={p.id} className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 dark:bg-slate-900 dark:border-slate-800">
             <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
               <div className="font-bold text-lg text-slate-800 dark:text-white">{p.drug_a} ↔ {p.drug_b}</div>
-              <span className="text-xs bg-purple-50 text-purple-700 border border-purple-200 rounded-full px-2.5 py-1 dark:bg-purple-500/10 dark:text-purple-300 dark:border-purple-500/20">
+              <span className="text-xs bg-green-50 text-green-700 border border-green-200 rounded-full px-2.5 py-1 dark:bg-green-500/10 dark:text-green-300 dark:border-green-500/20">
                 {SIMILARITY_LABELS[p.similarity_type]}
               </span>
             </div>
