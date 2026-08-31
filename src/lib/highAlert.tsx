@@ -11,8 +11,8 @@ export const HIGH_ALERT_LABELS: Record<HighAlertType, string> = {
 // ألوان تنبيه أمان حقيقية (مسموحة بالاستثناء عن الباليتة الزخرفية المعتادة)
 export const HIGH_ALERT_COLORS: Record<HighAlertType, string> = {
   general: "bg-red-50 text-red-700 border border-red-200",
-  concentrated_electrolyte: "bg-orange-50 text-orange-800 border border-orange-200",
-  lasa: "bg-purple-50 text-purple-700 border border-purple-200",
+  concentrated_electrolyte: "bg-blue-50 text-blue-700 border border-blue-200",
+  lasa: "bg-green-50 text-green-700 border border-green-200",
 };
 
 /** Parses the raw DB value and drops any tag outside the known IPSG enum (e.g. a typo entered via direct SQL). */

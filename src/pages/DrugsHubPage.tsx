@@ -120,7 +120,7 @@ export default function DrugsHubPage() {
       title: "أدوية متشابهة الاسم (LASA)",
       desc: "أزواج أدوية سبب رئيسي لأخطاء الدواء — احذري الخلط بينها",
       count: `${lasaCount} زوج`,
-      gradient: "from-purple-600 to-indigo-700",
+      gradient: "from-green-600 to-emerald-700",
     },
   ];
 
