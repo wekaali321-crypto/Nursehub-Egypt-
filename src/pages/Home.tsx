@@ -91,30 +91,39 @@ export default function Home() {
       <section key="hero" className="relative overflow-hidden bg-gradient-to-bl from-sky-600 via-sky-500 to-emerald-500 py-10 text-white sm:py-16 md:py-20">
         <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-white/10 blur-3xl animate-pulse-slow" />
         <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-6 px-4 lg:grid-cols-2 lg:gap-10">
-          <div className="text-center lg:text-start">
+        <div className="relative mx-auto max-w-7xl px-4">
+          <div className="text-center">
             <span className="mb-3 inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold backdrop-blur sm:text-sm">{t("home.badge")}</span>
-            <h1 className="mx-auto max-w-3xl text-3xl font-black leading-tight sm:text-4xl md:text-6xl lg:mx-0">{settings.siteName}</h1>
-            <p className="mx-auto mt-3 max-w-2xl text-sm text-sky-50 sm:text-lg md:text-xl lg:mx-0">{lang === "ar" ? settings.tagline : t("brand.tagline")} — {t("home.heroDesc")}</p>
+            <h1 className="mx-auto max-w-3xl text-3xl font-black leading-tight sm:text-4xl md:text-6xl">{settings.siteName}</h1>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-sky-50 sm:text-lg md:text-xl">{lang === "ar" ? settings.tagline : t("brand.tagline")} — {t("home.heroDesc")}</p>
             <HeroSearch />
-            <div className="mt-5 flex flex-wrap justify-center gap-2 sm:gap-3 lg:justify-start">
+            <div className="mt-5 flex flex-wrap justify-center gap-2 sm:gap-3">
               <Link to="/category/articles" className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-sky-600 shadow-lg transition-transform hover:scale-105 sm:px-7 sm:py-3 sm:text-base">{t("home.browse")}</Link>
               <Link to="/drugs" className="rounded-full border-2 border-white/60 px-5 py-2.5 text-sm font-bold text-white hover:bg-white/10 sm:px-7 sm:py-3 sm:text-base">{t("home.drugGuide")}</Link>
             </div>
-            <ul className="mx-auto mt-6 flex max-w-md flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-bold text-sky-50 sm:text-sm lg:mx-0 lg:justify-start">
+            <ul className="mx-auto mt-6 flex max-w-md flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-bold text-sky-50 sm:text-sm">
               <li className="flex items-center gap-1.5">💙 {t("home.mascotPoint1")}</li>
               <li className="flex items-center gap-1.5">📘 {t("home.mascotPoint2")}</li>
               <li className="flex items-center gap-1.5">🎯 {t("home.mascotPoint3")}</li>
             </ul>
           </div>
-          <div className="flex justify-center">
-            <img
-              src="/male-nurse-mascot.webp"
-              alt={t("home.mascotAlt")}
-              width={320}
-              height={465}
-              className="w-48 drop-shadow-2xl sm:w-64 lg:w-80"
-            />
+          <div className="mt-10 grid items-center gap-6 lg:grid-cols-3 lg:gap-8">
+            <div className="text-center">
+              <h2 className="text-xl font-black leading-tight sm:text-2xl">{t("home.mascotTitle")}</h2>
+            </div>
+            <div className="flex flex-col items-center">
+              <img
+                src="/male-nurse-mascot.webp"
+                alt={t("home.mascotAlt")}
+                width={320}
+                height={465}
+                className="w-48 drop-shadow-2xl sm:w-64 lg:w-72"
+              />
+              <span className="mt-2 text-xs font-bold text-sky-50/90 sm:text-sm">{t("home.mascotCredit")}</span>
+            </div>
+            <div className="text-center">
+              <p className="mx-auto max-w-md text-sm text-sky-50 sm:text-base">{t("home.mascotDesc")}</p>
+            </div>
           </div>
         </div>
       </section>
