@@ -4,6 +4,7 @@ import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { fetchAppliedPharmItems } from "../lib/appliedPharmApi";
+import { fetchICUMedications } from "../lib/icuMedApi";
 
 type Tile = {
   to: string;
@@ -38,12 +39,16 @@ export default function DrugsHubPage() {
     "نظام الجرعات الدوائية وحساب جرعة الطفل (Dosage Regimen & Pediatric Dose Calculation)";
   const [appliedPharmCount, setAppliedPharmCount] = useState(0);
   const [dosageCount, setDosageCount] = useState(0);
+  const [icuMedCount, setIcuMedCount] = useState(0);
   useEffect(() => {
     fetchAppliedPharmItems()
       .then((items) => {
         setAppliedPharmCount(items.length);
         setDosageCount(items.filter((i: any) => i.topic === DOSAGE_TOPIC).length);
       })
+      .catch(() => {});
+    fetchICUMedications()
+      .then((items) => setIcuMedCount(items.length))
       .catch(() => {});
   }, []);
 
@@ -95,6 +100,14 @@ export default function DrugsHubPage() {
       desc: "نظام الجرعات الدوائية ومعادلات حساب جرعة الطفل من جرعة البالغ",
       count: `${dosageCount} عنصر`,
       gradient: "from-cyan-600 to-blue-500",
+    },
+    {
+      to: "/drugs/icu-medications",
+      icon: "🏥",
+      title: "أدوية العناية المركزة",
+      desc: "الثلاجة، المخدرة، مقويات القلب، الكهارل المركزة، وحساب الجرعات",
+      count: `${icuMedCount} دواء`,
+      gradient: "from-blue-700 to-cyan-500",
     },
   ];
 
