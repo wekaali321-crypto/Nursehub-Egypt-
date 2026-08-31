@@ -72,6 +72,9 @@ const dict = {
   "home.mascotPoint2": { ar: "معرفة علمية وخبرة عملية", en: "Scientific knowledge & hands-on skill" },
   "home.mascotPoint3": { ar: "التزام مهني ومسؤولية دائمة", en: "Professional commitment & accountability" },
   "home.mascotAlt": { ar: "ممرض NurseHub Egypt", en: "NurseHub Egypt nurse" },
+  "home.mascotTitle": { ar: "كيان التمريض في عالم المستشفى", en: "The Heart of Nursing in the Hospital World" },
+  "home.mascotDesc": { ar: "من الطوارئ للعناية المركزة، الممرض هو حلقة الوصل بين المريض والفريق الصحي. نرافقك بمحتوى علمي موثوق في كل خطوة من رحلتك المهنية.", en: "From the ER to the ICU, the nurse is the vital link between patient and care team. We walk with you through every step of your professional journey with reliable, evidence-based content." },
+  "home.mascotCredit": { ar: "RN. Ali Ashour", en: "RN. Ali Ashour" },
 
   // Newsletter
   "news.title": { ar: "اشترك في النشرة البريدية", en: "Subscribe to our Newsletter" },
