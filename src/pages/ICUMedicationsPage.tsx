@@ -118,6 +118,12 @@ export default function ICUMedicationDetail() {
         )}
       </div>
 
+      {item.show_image && item.image_url && (
+        <div className="mb-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
+          <img src={item.image_url} alt={item.drug_name} className="mx-auto max-h-80 w-auto rounded-2xl object-contain" />
+        </div>
+      )}
+
       <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 dark:bg-slate-900 dark:border-slate-800">
         <InfoBlock title="الاستعمالات" content={item.uses} />
         <InfoBlock title="موانع الاستخدام" content={item.contraindications} />
