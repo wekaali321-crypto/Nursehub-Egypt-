@@ -50,6 +50,8 @@ export default function DrugPage() {
   }
 
   const related = drugs.filter((d) => d.category === drug.category && d.id !== drug.id).slice(0, 4);
+  const highAlertTypes = parseHighAlertTypes(drug.highAlertType);
+  const showHighAlert = drug.isHighAlert || highAlertTypes.length > 0;
 
   const blocks = [
     { t: "الجرعة", i: "💉", v: drug.dose, c: "border-sky-200 bg-sky-50 dark:border-sky-900 dark:bg-sky-500/5" },
@@ -68,9 +70,9 @@ export default function DrugPage() {
       <div className="rounded-3xl bg-gradient-to-l from-sky-600 to-emerald-500 p-6 text-white sm:p-8">
         <div className="flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-white/20 px-3 py-1 text-sm font-bold">{drug.category}</span>
-          {drug.isHighAlert && (
-            parseHighAlertTypes(drug.highAlertType).length > 0 ? (
-              <HighAlertBadges types={drug.highAlertType} />
+          {showHighAlert && (
+            highAlertTypes.length > 0 ? (
+              <HighAlertBadges types={highAlertTypes} />
             ) : (
               <span className="rounded-full bg-rose-500 px-3 py-1 text-sm font-bold">⚠️ دواء عالي الخطورة</span>
             )
