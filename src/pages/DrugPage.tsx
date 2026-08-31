@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO, breadcrumbSchema } from "../lib/seo";
+import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
 
 export default function DrugPage() {
   const { slug } = useParams();
@@ -68,7 +69,11 @@ export default function DrugPage() {
         <div className="flex flex-wrap items-center gap-2">
           <span className="rounded-full bg-white/20 px-3 py-1 text-sm font-bold">{drug.category}</span>
           {drug.isHighAlert && (
-            <span className="rounded-full bg-rose-500 px-3 py-1 text-sm font-bold">⚠️ دواء عالي الخطورة</span>
+            parseHighAlertTypes(drug.highAlertType).length > 0 ? (
+              <HighAlertBadges types={drug.highAlertType} />
+            ) : (
+              <span className="rounded-full bg-rose-500 px-3 py-1 text-sm font-bold">⚠️ دواء عالي الخطورة</span>
+            )
           )}
         </div>
         <h1 className="mt-3 text-3xl font-black sm:text-4xl">{drug.name}</h1>

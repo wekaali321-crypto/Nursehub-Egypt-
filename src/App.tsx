@@ -41,6 +41,7 @@ const AppliedPharmHome = lazy(() => import("./pages/AppliedPharmPage").then((m) 
 const AppliedPharmTopicPage = lazy(() => import("./pages/AppliedPharmPage").then((m) => ({ default: m.AppliedPharmTopicPage })));
 const ICUMedicationDetail = lazy(() => import("./pages/ICUMedicationsPage"));
 const ICUMedicationsHome = lazy(() => import("./pages/ICUMedicationsPage").then((m) => ({ default: m.ICUMedicationsHome })));
+const LasaPage = lazy(() => import("./pages/LasaPage"));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 
@@ -179,6 +180,7 @@ export default function App() {
                   <Route path="/drugs/applied-pharm/plan/:id" element={<Public><AppliedPharmPlanPage /></Public>} />
                   <Route path="/drugs/icu-medications" element={<Public><ICUMedicationsHome /></Public>} />
                   <Route path="/drugs/icu-medications/:id" element={<Public><ICUMedicationDetail /></Public>} />
+                  <Route path="/drugs/lasa" element={<Public><LasaPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
                   <Route path="/quiz/:id" element={<Public><QuizPlayer /></Public>} />

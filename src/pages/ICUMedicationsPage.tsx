@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { fetchICUMedications, ICU_CATEGORY_ORDER, type ICUMedication } from "../lib/icuMedApi";
+import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "أدوية الثلاجة": "from-cyan-500 to-blue-600",
@@ -106,7 +107,11 @@ export default function ICUMedicationDetail() {
         {item.concentration && <p className="opacity-90 text-sm">{item.concentration}</p>}
         {item.drug_class && <p className="opacity-80 text-xs mt-1">{item.drug_class}</p>}
         {item.is_high_alert && (
-          <span className="inline-block mt-3 text-xs bg-white/20 rounded-full px-3 py-1">⚠ دواء عالي الخطورة — يتطلب حذرًا إضافيًا</span>
+          parseHighAlertTypes(item.high_alert_type).length > 0 ? (
+            <div className="mt-3"><HighAlertBadges types={item.high_alert_type} /></div>
+          ) : (
+            <span className="inline-block mt-3 text-xs bg-white/20 rounded-full px-3 py-1">⚠ دواء عالي الخطورة — يتطلب حذرًا إضافيًا</span>
+          )
         )}
       </div>
 

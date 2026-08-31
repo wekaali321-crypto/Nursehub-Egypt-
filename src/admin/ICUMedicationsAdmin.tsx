@@ -23,6 +23,7 @@ const EMPTY: ICUMedication = {
   dose_calculation: {},
   storage_notes: "",
   is_high_alert: false,
+  high_alert_type: [],
   nursing_considerations: "",
 };
 

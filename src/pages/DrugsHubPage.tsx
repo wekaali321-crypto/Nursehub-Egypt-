@@ -5,6 +5,7 @@ import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { fetchAppliedPharmItems } from "../lib/appliedPharmApi";
 import { fetchICUMedications } from "../lib/icuMedApi";
+import { fetchLasaPairs } from "../lib/lasaApi";
 
 type Tile = {
   to: string;
@@ -40,6 +41,7 @@ export default function DrugsHubPage() {
   const [appliedPharmCount, setAppliedPharmCount] = useState(0);
   const [dosageCount, setDosageCount] = useState(0);
   const [icuMedCount, setIcuMedCount] = useState(0);
+  const [lasaCount, setLasaCount] = useState(0);
   useEffect(() => {
     fetchAppliedPharmItems()
       .then((items) => {
@@ -49,6 +51,9 @@ export default function DrugsHubPage() {
       .catch(() => {});
     fetchICUMedications()
       .then((items) => setIcuMedCount(items.length))
+      .catch(() => {});
+    fetchLasaPairs()
+      .then((items) => setLasaCount(items.length))
       .catch(() => {});
   }, []);
 
@@ -108,6 +113,14 @@ export default function DrugsHubPage() {
       desc: "الثلاجة، المخدرة، مقويات القلب، الكهارل المركزة، وحساب الجرعات",
       count: `${icuMedCount} دواء`,
       gradient: "from-blue-700 to-cyan-500",
+    },
+    {
+      to: "/drugs/lasa",
+      icon: "🔤",
+      title: "أدوية متشابهة الاسم (LASA)",
+      desc: "أزواج أدوية سبب رئيسي لأخطاء الدواء — احذري الخلط بينها",
+      count: `${lasaCount} زوج`,
+      gradient: "from-purple-600 to-indigo-700",
     },
   ];
 

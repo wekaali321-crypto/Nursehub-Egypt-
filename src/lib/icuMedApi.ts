@@ -16,6 +16,7 @@ export interface ICUMedication {
   dose_calculation: Record<string, string> | null;
   storage_notes: string | null;
   is_high_alert: boolean;
+  high_alert_type: string[] | null;
   nursing_considerations: string | null;
 }
 
