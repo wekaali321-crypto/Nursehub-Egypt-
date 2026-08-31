@@ -50,49 +50,6 @@ function HeroSearch() {
   );
 }
 
-/** بديل قسم "الإحصائيات" اللي كان تحت الهيرو مباشرة: كارت نضيف بشخصية الممرض بدل الإنفوجرافيك المزدحم. */
-function StatsAsIllustration() {
-  const { t } = useI18n();
-  return (
-    <section className="bg-white py-10 dark:bg-slate-950 sm:py-14">
-      <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 md:grid-cols-2 md:gap-12">
-        <div className="order-2 text-center md:order-1 md:text-start">
-          <h2 className="text-2xl font-black text-slate-800 dark:text-white sm:text-3xl">{t("home.mascotTitle")}</h2>
-          <p className="mx-auto mt-3 max-w-md text-slate-500 dark:text-slate-400 sm:text-lg md:mx-0">{t("home.mascotDesc")}</p>
-          <ul className="mx-auto mt-5 max-w-md space-y-2.5 text-sm font-bold text-slate-700 dark:text-slate-200 sm:text-base md:mx-0">
-            <li className="flex items-center gap-2.5">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sky-100 text-base text-sky-600 dark:bg-sky-900/40">💙</span>
-              {t("home.mascotPoint1")}
-            </li>
-            <li className="flex items-center gap-2.5">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-base text-emerald-600 dark:bg-emerald-900/40">📘</span>
-              {t("home.mascotPoint2")}
-            </li>
-            <li className="flex items-center gap-2.5">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-100 text-base text-amber-600 dark:bg-amber-900/40">🎯</span>
-              {t("home.mascotPoint3")}
-            </li>
-          </ul>
-          <Link
-            to="/category/articles"
-            className="mt-6 inline-block rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-6 py-3 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 sm:text-base"
-          >
-            {t("home.browse")}
-          </Link>
-        </div>
-        <div className="order-1 flex justify-center md:order-2">
-          <img
-            src="/male-nurse-mascot.png"
-            alt={t("home.mascotAlt")}
-            loading="lazy"
-            className="w-full max-w-[220px] drop-shadow-2xl sm:max-w-xs"
-          />
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export default function Home() {
   const { articles, products, homeSections, settings, drugs, media, subscribers, quizzes, homeCategories, homeSectionMeta } = useStore();
   const { t, lang } = useI18n();
@@ -134,21 +91,37 @@ export default function Home() {
       <section key="hero" className="relative overflow-hidden bg-gradient-to-bl from-sky-600 via-sky-500 to-emerald-500 py-10 text-white sm:py-16 md:py-20">
         <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-white/10 blur-3xl animate-pulse-slow" />
         <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl animate-pulse-slow" />
-        <div className="relative mx-auto max-w-7xl px-4 text-center">
-          <span className="mb-3 inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold backdrop-blur sm:text-sm">{t("home.badge")}</span>
-          <h1 className="mx-auto max-w-3xl text-3xl font-black leading-tight sm:text-4xl md:text-6xl">{settings.siteName}</h1>
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-sky-50 sm:text-lg md:text-xl">{lang === "ar" ? settings.tagline : t("brand.tagline")} — {t("home.heroDesc")}</p>
-          <HeroSearch />
-          <div className="mt-5 flex flex-wrap justify-center gap-2 sm:gap-3">
-            <Link to="/category/articles" className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-sky-600 shadow-lg transition-transform hover:scale-105 sm:px-7 sm:py-3 sm:text-base">{t("home.browse")}</Link>
-            <Link to="/drugs" className="rounded-full border-2 border-white/60 px-5 py-2.5 text-sm font-bold text-white hover:bg-white/10 sm:px-7 sm:py-3 sm:text-base">{t("home.drugGuide")}</Link>
+        <div className="relative mx-auto grid max-w-7xl items-center gap-6 px-4 lg:grid-cols-2 lg:gap-10">
+          <div className="text-center lg:text-start">
+            <span className="mb-3 inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold backdrop-blur sm:text-sm">{t("home.badge")}</span>
+            <h1 className="mx-auto max-w-3xl text-3xl font-black leading-tight sm:text-4xl md:text-6xl lg:mx-0">{settings.siteName}</h1>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-sky-50 sm:text-lg md:text-xl lg:mx-0">{lang === "ar" ? settings.tagline : t("brand.tagline")} — {t("home.heroDesc")}</p>
+            <HeroSearch />
+            <div className="mt-5 flex flex-wrap justify-center gap-2 sm:gap-3 lg:justify-start">
+              <Link to="/category/articles" className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-sky-600 shadow-lg transition-transform hover:scale-105 sm:px-7 sm:py-3 sm:text-base">{t("home.browse")}</Link>
+              <Link to="/drugs" className="rounded-full border-2 border-white/60 px-5 py-2.5 text-sm font-bold text-white hover:bg-white/10 sm:px-7 sm:py-3 sm:text-base">{t("home.drugGuide")}</Link>
+            </div>
+            <ul className="mx-auto mt-6 flex max-w-md flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-bold text-sky-50 sm:text-sm lg:mx-0 lg:justify-start">
+              <li className="flex items-center gap-1.5">💙 {t("home.mascotPoint1")}</li>
+              <li className="flex items-center gap-1.5">📘 {t("home.mascotPoint2")}</li>
+              <li className="flex items-center gap-1.5">🎯 {t("home.mascotPoint3")}</li>
+            </ul>
+          </div>
+          <div className="flex justify-center">
+            <img
+              src="/male-nurse-mascot.webp"
+              alt={t("home.mascotAlt")}
+              width={320}
+              height={465}
+              className="w-48 drop-shadow-2xl sm:w-64 lg:w-80"
+            />
           </div>
         </div>
       </section>
     ),
     search: <div key="search" />,
-    // القسم اللي كان عبارة عن أرقام/إحصائيات تحت الهيرو مباشرة — استبدلناه بصورة/تصميم بدل الأرقام.
-    stats: <div key="stats"><StatsAsIllustration /></div>,
+    // "إحصائيات": اتنقلت شخصية الممرض جوه الهيرو نفسه بدل قسم منفصل تحته.
+    stats: <div key="stats" />,
     // "محتوى مميز" — أُزيل بالكامل من الصفحة الرئيسية بناءً على الطلب.
     featured: <div key="featured" />,
     // "استكشف الأقسام" — رجّعناها لشكلها الأصلي (كروت التنقل بين الأقسام).
