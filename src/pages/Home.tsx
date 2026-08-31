@@ -97,10 +97,6 @@ export default function Home() {
             <h1 className="mx-auto max-w-3xl text-3xl font-black leading-tight sm:text-4xl md:text-6xl">{settings.siteName}</h1>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-sky-50 sm:text-lg md:text-xl">{lang === "ar" ? settings.tagline : t("brand.tagline")} — {t("home.heroDesc")}</p>
             <HeroSearch />
-            <div className="mt-5 flex flex-wrap justify-center gap-2 sm:gap-3">
-              <Link to="/category/articles" className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-sky-600 shadow-lg transition-transform hover:scale-105 sm:px-7 sm:py-3 sm:text-base">{t("home.browse")}</Link>
-              <Link to="/drugs" className="rounded-full border-2 border-white/60 px-5 py-2.5 text-sm font-bold text-white hover:bg-white/10 sm:px-7 sm:py-3 sm:text-base">{t("home.drugGuide")}</Link>
-            </div>
             <ul className="mx-auto mt-6 flex max-w-md flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-bold text-sky-50 sm:text-sm">
               <li className="flex items-center gap-1.5">💙 {t("home.mascotPoint1")}</li>
               <li className="flex items-center gap-1.5">📘 {t("home.mascotPoint2")}</li>
