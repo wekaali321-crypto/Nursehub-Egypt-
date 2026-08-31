@@ -50,20 +50,45 @@ function HeroSearch() {
   );
 }
 
-/** بديل قسم "الإحصائيات" اللي كان تحت الهيرو مباشرة: إنفوجرافيك بعرض الصفحة بالكامل بدل الأرقام. */
+/** بديل قسم "الإحصائيات" اللي كان تحت الهيرو مباشرة: كارت نضيف بشخصية الممرض بدل الإنفوجرافيك المزدحم. */
 function StatsAsIllustration() {
+  const { t } = useI18n();
   return (
-    <section className="w-full">
-      {/*
-        الصورة لازم تكون مرفوعة في مجلد public/ في الريبو (مثلاً public/nursing-infographic.png)
-        عشان تشتغل بالمسار ده. لو رفعتها باسم مختلف، غيّر src بس.
-      */}
-      <img
-        src="/file_00000000d5ec81f4b78e37f6e9c7d7ac.png"
-        alt="كيان التمريض في عالم المستشفى — NurseHub Egypt"
-        loading="lazy"
-        className="block w-full"
-      />
+    <section className="bg-white py-10 dark:bg-slate-950 sm:py-14">
+      <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 md:grid-cols-2 md:gap-12">
+        <div className="order-2 text-center md:order-1 md:text-start">
+          <h2 className="text-2xl font-black text-slate-800 dark:text-white sm:text-3xl">{t("home.mascotTitle")}</h2>
+          <p className="mx-auto mt-3 max-w-md text-slate-500 dark:text-slate-400 sm:text-lg md:mx-0">{t("home.mascotDesc")}</p>
+          <ul className="mx-auto mt-5 max-w-md space-y-2.5 text-sm font-bold text-slate-700 dark:text-slate-200 sm:text-base md:mx-0">
+            <li className="flex items-center gap-2.5">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-sky-100 text-base text-sky-600 dark:bg-sky-900/40">💙</span>
+              {t("home.mascotPoint1")}
+            </li>
+            <li className="flex items-center gap-2.5">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-base text-emerald-600 dark:bg-emerald-900/40">📘</span>
+              {t("home.mascotPoint2")}
+            </li>
+            <li className="flex items-center gap-2.5">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-100 text-base text-amber-600 dark:bg-amber-900/40">🎯</span>
+              {t("home.mascotPoint3")}
+            </li>
+          </ul>
+          <Link
+            to="/category/articles"
+            className="mt-6 inline-block rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-6 py-3 text-sm font-bold text-white shadow-lg transition-transform hover:scale-105 sm:text-base"
+          >
+            {t("home.browse")}
+          </Link>
+        </div>
+        <div className="order-1 flex justify-center md:order-2">
+          <img
+            src="/male-nurse-mascot.png"
+            alt={t("home.mascotAlt")}
+            loading="lazy"
+            className="w-full max-w-[220px] drop-shadow-2xl sm:max-w-xs"
+          />
+        </div>
+      </div>
     </section>
   );
 }
