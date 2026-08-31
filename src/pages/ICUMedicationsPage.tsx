@@ -98,6 +98,9 @@ export default function ICUMedicationDetail() {
   if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">جارِ التحميل...</div>;
   if (!item) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">لم يتم العثور على الدواء.</div>;
 
+  const highAlertTypes = parseHighAlertTypes(item.high_alert_type);
+  const showHighAlert = item.is_high_alert || highAlertTypes.length > 0;
+
   return (
     <div dir="rtl" className="max-w-3xl mx-auto px-4 py-8">
       <Link to="/drugs/icu-medications" className="text-blue-600 text-sm mb-4 inline-block">→ العودة لأدوية العناية المركزة</Link>
@@ -106,9 +109,9 @@ export default function ICUMedicationDetail() {
         <h1 className="text-xl font-bold mb-1">{item.drug_name}</h1>
         {item.concentration && <p className="opacity-90 text-sm">{item.concentration}</p>}
         {item.drug_class && <p className="opacity-80 text-xs mt-1">{item.drug_class}</p>}
-        {item.is_high_alert && (
-          parseHighAlertTypes(item.high_alert_type).length > 0 ? (
-            <div className="mt-3"><HighAlertBadges types={item.high_alert_type} /></div>
+        {showHighAlert && (
+          highAlertTypes.length > 0 ? (
+            <div className="mt-3"><HighAlertBadges types={highAlertTypes} /></div>
           ) : (
             <span className="inline-block mt-3 text-xs bg-white/20 rounded-full px-3 py-1">⚠ دواء عالي الخطورة — يتطلب حذرًا إضافيًا</span>
           )
