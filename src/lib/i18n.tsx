@@ -68,8 +68,6 @@ const dict = {
   "home.stat.subscriber": { ar: "مشترك", en: "Subscribers" },
   "home.stat.tool": { ar: "أداة طبية", en: "Tools" },
   "home.stat.drug": { ar: "دواء", en: "Drugs" },
-  "home.mascotTitle": { ar: "كيان التمريض في عالم المستشفى", en: "The Heart of Nursing in the Hospital World" },
-  "home.mascotDesc": { ar: "من الطوارئ للعناية المركزة، الممرض هو حلقة الوصل بين المريض والفريق الصحي. نرافقك بمحتوى علمي موثوق في كل خطوة من رحلتك المهنية.", en: "From the ER to the ICU, the nurse is the vital link between patient and care team. We walk with you through every step of your professional journey with reliable, evidence-based content." },
   "home.mascotPoint1": { ar: "رعاية بقلب واهتمام حقيقي", en: "Care with real compassion" },
   "home.mascotPoint2": { ar: "معرفة علمية وخبرة عملية", en: "Scientific knowledge & hands-on skill" },
   "home.mascotPoint3": { ar: "التزام مهني ومسؤولية دائمة", en: "Professional commitment & accountability" },
