@@ -24,6 +24,7 @@ const nav: NavItem[] = [
   { p: "/admin/otc", l: "حالات شائعة وعلاجها", i: "🩺" },
   { p: "/admin/applied-pharm", l: "بنك الصيدلية التعليمي (500 معلومة + ملخصات + خطط)", i: "🧠" },
   { p: "/admin/icu-medications", l: "أدوية العناية المركزة (33 دواء)", i: "🏥" },
+  { p: "/admin/prescriptions", l: "روشتات صيدلية (181 روشتة)", i: "℞" },
   { p: "/admin/quizzes", l: "الاختبارات (MCQ)", i: "📝" },
   { p: "/admin/pages", l: "الصفحات", i: "📄" },
   { p: "/admin/categories", l: "التصنيفات", i: "📂" },
