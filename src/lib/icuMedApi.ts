@@ -56,5 +56,7 @@ export const ICU_CATEGORY_ORDER = [
   "الأدوية المخدرة",
   "مقويات التقلص العضلي (Inotropes)",
   "الكهارل المركزة (Concentrated Electrolytes)",
+  "الترياقات وحالات الطوارئ الخاصة (Antidotes & Special Emergencies)",
+  "المضادات الحيوية والمناعية الحرجة (Critical Antibiotics & Immunoglobulins)",
   "أدوية أخرى في العناية المركزة",
 ];

@@ -8,6 +8,8 @@ const CATEGORY_COLORS: Record<string, string> = {
   "الأدوية المخدرة": "from-indigo-500 to-violet-600",
   "مقويات التقلص العضلي (Inotropes)": "from-emerald-500 to-teal-600",
   "الكهارل المركزة (Concentrated Electrolytes)": "from-slate-500 to-slate-700",
+  "الترياقات وحالات الطوارئ الخاصة (Antidotes & Special Emergencies)": "from-rose-500 to-pink-600",
+  "المضادات الحيوية والمناعية الحرجة (Critical Antibiotics & Immunoglobulins)": "from-lime-600 to-green-700",
   "أدوية أخرى في العناية المركزة": "from-sky-500 to-blue-600",
 };
 
