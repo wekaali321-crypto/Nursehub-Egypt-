@@ -26,6 +26,7 @@ const nav: NavItem[] = [
   { p: "/admin/icu-medications", l: "أدوية العناية المركزة (33 دواء)", i: "🏥" },
   { p: "/admin/er-medications", l: "أدوية قسم الطوارئ (25 دواء)", i: "🚑" },
   { p: "/admin/peds-medications", l: "أدوية قسم الأطفال (24 حالة)", i: "🧒" },
+  { p: "/admin/high-alert-ref", l: "الأدوية عالية التنبيه (ISMP)", i: "⚠️" },
   { p: "/admin/prescriptions", l: "روشتات صيدلية (181 روشتة)", i: "℞" },
   { p: "/admin/quizzes", l: "الاختبارات (MCQ)", i: "📝" },
   { p: "/admin/pages", l: "الصفحات", i: "📄" },
