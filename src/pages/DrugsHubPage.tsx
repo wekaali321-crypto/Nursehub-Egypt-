@@ -39,7 +39,6 @@ export default function DrugsHubPage() {
     keywords: "أدوية, دليل أدوية, جرعات, تمريض, ترياقات, تفاعلات دوائية",
   });
 
-  const highAlertCount = drugs.filter((d) => d.isHighAlert).length;
   const DOSAGE_TOPIC =
     "نظام الجرعات الدوائية وحساب جرعة الطفل (Dosage Regimen & Pediatric Dose Calculation)";
   const [appliedPharmCount, setAppliedPharmCount] = useState(0);
@@ -95,14 +94,6 @@ export default function DrugsHubPage() {
       gradient: "from-violet-600 to-purple-500",
     },
     {
-      to: "/drugs/all?high=1",
-      icon: "⚠️",
-      title: "الأدوية عالية الخطورة",
-      desc: "احتياطات إجبارية قبل الإعطاء",
-      count: `${highAlertCount} دواء`,
-      gradient: "from-rose-600 to-red-500",
-    },
-    {
       to: "/drugs/otc-guide",
       icon: "🩺",
       title: "حالات شائعة وعلاجها",
@@ -145,10 +136,10 @@ export default function DrugsHubPage() {
     {
       to: "/drugs/high-alert-ref",
       icon: "⚠️",
-      title: "الأدوية عالية التنبيه (ISMP)",
-      desc: "مرجع شامل مصنّف حسب الفئة الدوائية مع استراتيجية الأمان لكل فئة",
+      title: "الأدوية عالية الخطورة",
+      desc: "مرجع ISMP الشامل مصنّف حسب الفئة الدوائية مع استراتيجية الأمان لكل فئة",
       count: `${highAlertRefDrugCount} دواء`,
-      gradient: "from-red-600 to-orange-600",
+      gradient: "from-rose-600 to-red-500",
     },
     {
       to: "/drugs/peds-medications",
@@ -251,7 +242,7 @@ export default function DrugsHubPage() {
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">💊 {drugs.length} دواء</span>
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">🧠 {appliedPharmCount} معلومة تطبيقية</span>
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">🩺 {otcConditions.length} حالة شائعة</span>
-            <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">⚠️ {highAlertCount} عالي الخطورة</span>
+            <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">⚠️ {highAlertRefDrugCount} عالي الخطورة</span>
           </div>
         </div>
       </div>
