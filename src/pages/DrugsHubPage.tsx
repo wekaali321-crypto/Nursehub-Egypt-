@@ -6,6 +6,7 @@ import { useSEO } from "../lib/seo";
 import { fetchAppliedPharmItems } from "../lib/appliedPharmApi";
 import { fetchICUMedications } from "../lib/icuMedApi";
 import { fetchERMedications } from "../lib/erMedApi";
+import { fetchPedsMedications } from "../lib/pedsMedApi";
 import { fetchLasaPairs } from "../lib/lasaApi";
 import { fetchRxPrescriptions } from "../lib/rxApi";
 
@@ -44,6 +45,7 @@ export default function DrugsHubPage() {
   const [dosageCount, setDosageCount] = useState(0);
   const [icuMedCount, setIcuMedCount] = useState(0);
   const [erMedCount, setErMedCount] = useState(0);
+  const [pedsMedCount, setPedsMedCount] = useState(0);
   const [lasaCount, setLasaCount] = useState(0);
   const [rxCount, setRxCount] = useState(0);
   useEffect(() => {
@@ -58,6 +60,9 @@ export default function DrugsHubPage() {
       .catch(() => {});
     fetchERMedications()
       .then((items) => setErMedCount(items.length))
+      .catch(() => {});
+    fetchPedsMedications()
+      .then((items) => setPedsMedCount(items.length))
       .catch(() => {});
     fetchLasaPairs()
       .then((items) => setLasaCount(items.length))
@@ -131,6 +136,14 @@ export default function DrugsHubPage() {
       desc: "المسكنات، المخدرات، مقويات القلب، الطوارئ السكرية، وحساب الجرعات",
       count: `${erMedCount} دواء`,
       gradient: "from-red-600 to-rose-700",
+    },
+    {
+      to: "/drugs/peds-medications",
+      icon: "🧒",
+      title: "أدوية قسم الأطفال",
+      desc: "بروتوكولات علاج الحالات الشائعة عند الأطفال حسب التخصص وحساب الجرعات",
+      count: `${pedsMedCount} حالة`,
+      gradient: "from-teal-600 to-cyan-700",
     },
     {
       to: "/drugs/lasa",
