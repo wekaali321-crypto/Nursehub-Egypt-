@@ -27,65 +27,6 @@ function ProgressBar({ done, total, colorClass = "bg-teal-600" }: { done: number
   );
 }
 
-export function ClinicalProtocolsHome() {
-  const [protocols, setProtocols] = useState<ClinicalProtocol[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [progressMap, setProgressMap] = useState<Record<string, Record<string, boolean>>>({});
-
-  useEffect(() => {
-    fetchClinicalProtocols()
-      .then((d) => {
-        setProtocols(d);
-        const pm: Record<string, Record<string, boolean>> = {};
-        d.forEach((p) => { pm[p.id] = loadProtocolProgress(p.id); });
-        setProgressMap(pm);
-      })
-      .catch(() => setProtocols([]))
-      .finally(() => setLoading(false));
-  }, []);
-
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">جارِ التحميل...</div>;
-
-  return (
-    <div dir="rtl" className="max-w-4xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-teal-600 to-cyan-700 text-white p-6 mb-8">
-        <h1 className="text-2xl font-bold mb-1">قوائم تحقق البروتوكولات الإكلينيكية</h1>
-        <p className="opacity-90 text-sm">
-          بروتوكولات تفاعلية خطوة بخطوة وفق المصادر العالمية — علّم على كل خطوة تنفّذها وتقدّمك يُحفظ تلقائيًا.
-        </p>
-      </div>
-
-      {protocols.length === 0 && (
-        <div className="text-center text-slate-500 dark:text-slate-400 py-10">لا توجد بروتوكولات متاحة حالياً.</div>
-      )}
-
-      <div className="grid sm:grid-cols-2 gap-4">
-        {protocols.map((p) => {
-          const total = totalItemCount(p);
-          const done = Object.values(progressMap[p.id] || {}).filter(Boolean).length;
-          return (
-            <Link
-              key={p.id}
-              to={`/drugs/protocols/${p.id}`}
-              className="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-teal-400 dark:hover:border-teal-600 hover:shadow-sm transition p-5 block"
-            >
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-2xl">{p.icon}</span>
-                <div>
-                  <div className="font-bold text-slate-800 dark:text-white">{p.name_ar}</div>
-                  {p.name_en && <div className="text-xs text-slate-500 dark:text-slate-400">{p.name_en}</div>}
-                </div>
-              </div>
-              {p.summary && <p className="text-sm text-slate-600 dark:text-slate-400 mb-3 leading-relaxed">{p.summary}</p>}
-              <ProgressBar done={done} total={total} />
-            </Link>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
 export default function ClinicalProtocolDetail() {
   const { id } = useParams();
   const [protocol, setProtocol] = useState<ClinicalProtocol | null>(null);
@@ -130,7 +71,7 @@ export default function ClinicalProtocolDetail() {
 
   return (
     <div dir="rtl" className="max-w-3xl mx-auto px-4 py-8">
-      <Link to="/drugs/protocols" className="text-teal-700 dark:text-teal-400 text-sm mb-4 inline-block">→ العودة لكل البروتوكولات</Link>
+      <Link to="/category/skills" className="text-teal-700 dark:text-teal-400 text-sm mb-4 inline-block">→ العودة للمهارات</Link>
 
       {/* رأس البروتوكول */}
       <div className="rounded-2xl bg-gradient-to-l from-teal-600 to-cyan-700 text-white p-6 mb-4">

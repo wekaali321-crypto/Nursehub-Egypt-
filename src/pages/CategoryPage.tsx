@@ -11,6 +11,23 @@ const CAT_KEY: Record<Category, TKey> = {
   careplans: "nav.careplans", books: "nav.books",
 };
 
+// قوائم تحقق البروتوكولات الإكلينيكية التفاعلية — كل بروتوكول عنصر مستقل بذاته،
+// مثبّت أعلى قسم المهارات لأنه مهارة إكلينيكية تفاعلية وليس مقالاً عاديًا.
+const SKILL_PROTOCOL_LINKS = [
+  {
+    to: "/drugs/protocols/proto_dka",
+    icon: "🩸",
+    title: "بروتوكول الحُماض الكيتوني السكري (DKA)",
+    desc: "قائمة تحقق تفاعلية خطوة بخطوة وفق مبادئ JBDS/ADA — علّم على كل خطوة وتقدّمك يُحفظ تلقائيًا",
+  },
+  {
+    to: "/drugs/protocols/proto_cabg",
+    icon: "🫀",
+    title: "بروتوكول جراحة المجازة التاجية (CABG)",
+    desc: "قائمة تحقق تفاعلية خطوة بخطوة وفق مبادئ ERAS Cardiac Surgery Society",
+  },
+];
+
 export default function CategoryPage() {
   // `sub` is the real sub-category folder slug (from the `categories` taxonomy),
   // e.g. /category/articles/nursing-fundamentals
@@ -71,6 +88,26 @@ export default function CategoryPage() {
         <h1 className="mt-2 text-3xl font-black">{activeSub ? activeSub.name : catLabel}</h1>
         <p className="mt-1 text-sky-50">{(activeSub ? list.length : totalInSection)} {t("common.item")}</p>
       </div>
+
+      {!activeSub && category === "skills" && (
+        <div className="mb-8">
+          <h2 className="mb-3 text-lg font-bold text-slate-800 dark:text-white">قوائم تحقق تفاعلية</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {SKILL_PROTOCOL_LINKS.map((s) => (
+              <Link
+                key={s.to}
+                to={s.to}
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-600 to-cyan-700 p-5 text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+              >
+                <div className="text-3xl mb-2">{s.icon}</div>
+                <div className="font-bold">{s.title}</div>
+                <p className="mt-1 text-sm text-white/85">{s.desc}</p>
+                <span className="mt-3 inline-block text-sm font-bold text-white/90 group-hover:underline">افتح ←</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Real sub-category folders — shown only at the top level of the section,
           before the user has drilled into one. Clicking a folder navigates to
