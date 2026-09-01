@@ -13,6 +13,7 @@ function DisclaimerBanner() {
 export function RxPrescriptionsHome() {
   const [items, setItems] = useState<RxPrescription[]>([]);
   const [loading, setLoading] = useState(true);
+  const [q, setQ] = useState("");
 
   useEffect(() => {
     fetchRxPrescriptions().then(setItems).catch(() => setItems([])).finally(() => setLoading(false));
@@ -20,15 +21,25 @@ export function RxPrescriptionsHome() {
 
   if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">جارِ التحميل...</div>;
 
+  const query = q.trim().toLowerCase();
+  const filtered = !query
+    ? items
+    : items.filter((r) =>
+        r.condition_ar.toLowerCase().includes(query) ||
+        (r.condition_en || "").toLowerCase().includes(query) ||
+        r.category.toLowerCase().includes(query) ||
+        r.items.some((it) => it.drug_name.toLowerCase().includes(query))
+      );
+
   const grouped = RX_CATEGORY_ORDER.map((cat) => ({
     category: cat,
-    rx: items.filter((i) => i.category === cat),
+    rx: filtered.filter((i) => i.category === cat),
   })).filter((g) => g.rx.length > 0);
 
   // أي فئة موجودة في البيانات ومش في الترتيب المعرّف، تتضاف في الآخر بدل ما تختفي
   const knownCats = new Set(RX_CATEGORY_ORDER);
-  const extra = Array.from(new Set(items.filter((i) => !knownCats.has(i.category)).map((i) => i.category)))
-    .map((cat) => ({ category: cat, rx: items.filter((i) => i.category === cat) }));
+  const extra = Array.from(new Set(filtered.filter((i) => !knownCats.has(i.category)).map((i) => i.category)))
+    .map((cat) => ({ category: cat, rx: filtered.filter((i) => i.category === cat) }));
 
   const allGroups = [...grouped, ...extra];
 
@@ -40,7 +51,21 @@ export function RxPrescriptionsHome() {
         <p className="mt-2 text-sm bg-white/10 rounded-lg inline-block px-3 py-1">{items.length} روشتة</p>
       </div>
 
+      <div className="relative mb-6">
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="ابحث عن حالة أو دواء أو قسم..."
+          className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-emerald-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+        />
+        <span className="absolute right-3 top-3 text-slate-400">🔍</span>
+      </div>
+
       <DisclaimerBanner />
+
+      {allGroups.length === 0 && (
+        <div className="text-center text-slate-500 dark:text-slate-400 py-10">لا توجد روشتات مطابقة لبحثك.</div>
+      )}
 
       {allGroups.map((g) => (
         <div key={g.category} className="mb-8">
