@@ -23,7 +23,7 @@ const nav: NavItem[] = [
   { p: "/admin/pharm-mnemonics", l: "مذكرات فارماكولوجي", i: "🧠" },
   { p: "/admin/otc", l: "حالات شائعة وعلاجها", i: "🩺" },
   { p: "/admin/applied-pharm", l: "بنك الصيدلية التعليمي (500 معلومة + ملخصات + خطط)", i: "🧠" },
-  { p: "/admin/icu-medications", l: "أدوية العناية المركزة (33 دواء)", i: "🏥" },
+  { p: "/admin/icu-medications", l: "أدوية العناية المركزة (62 دواء)", i: "🏥" },
   { p: "/admin/er-medications", l: "أدوية قسم الطوارئ (25 دواء)", i: "🚑" },
   { p: "/admin/peds-medications", l: "أدوية قسم الأطفال (24 حالة)", i: "🧒" },
   { p: "/admin/high-alert-ref", l: "الأدوية عالية التنبيه (ISMP)", i: "⚠️" },
