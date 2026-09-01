@@ -6,6 +6,7 @@ import { useSEO } from "../lib/seo";
 import { fetchAppliedPharmItems } from "../lib/appliedPharmApi";
 import { fetchICUMedications } from "../lib/icuMedApi";
 import { fetchLasaPairs } from "../lib/lasaApi";
+import { fetchRxPrescriptions } from "../lib/rxApi";
 
 type Tile = {
   to: string;
@@ -42,6 +43,7 @@ export default function DrugsHubPage() {
   const [dosageCount, setDosageCount] = useState(0);
   const [icuMedCount, setIcuMedCount] = useState(0);
   const [lasaCount, setLasaCount] = useState(0);
+  const [rxCount, setRxCount] = useState(0);
   useEffect(() => {
     fetchAppliedPharmItems()
       .then((items) => {
@@ -54,6 +56,9 @@ export default function DrugsHubPage() {
       .catch(() => {});
     fetchLasaPairs()
       .then((items) => setLasaCount(items.length))
+      .catch(() => {});
+    fetchRxPrescriptions()
+      .then((items) => setRxCount(items.length))
       .catch(() => {});
   }, []);
 
@@ -121,6 +126,14 @@ export default function DrugsHubPage() {
       desc: "أزواج أدوية سبب رئيسي لأخطاء الدواء — احذري الخلط بينها",
       count: `${lasaCount} زوج`,
       gradient: "from-green-600 to-emerald-700",
+    },
+    {
+      to: "/drugs/prescriptions",
+      icon: "℞",
+      title: "روشتات صيدلية",
+      desc: "أشهر الروشتات الطبية حسب الحالة — بشكل الروشتة الحقيقية",
+      count: `${rxCount} روشتة`,
+      gradient: "from-emerald-600 to-teal-700",
     },
   ];
 
