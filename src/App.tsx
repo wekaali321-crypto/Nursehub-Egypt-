@@ -50,7 +50,6 @@ const LasaPage = lazy(() => import("./pages/LasaPage"));
 const RxPrescriptionDetail = lazy(() => import("./pages/RxPrescriptionsPage"));
 const RxPrescriptionsHome = lazy(() => import("./pages/RxPrescriptionsPage").then((m) => ({ default: m.RxPrescriptionsHome })));
 const ClinicalProtocolDetail = lazy(() => import("./pages/ClinicalProtocolsPage"));
-const ClinicalProtocolsHome = lazy(() => import("./pages/ClinicalProtocolsPage").then((m) => ({ default: m.ClinicalProtocolsHome })));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 
@@ -202,7 +201,6 @@ export default function App() {
                   <Route path="/drugs/lasa" element={<Public><LasaPage /></Public>} />
                   <Route path="/drugs/prescriptions" element={<Public><RxPrescriptionsHome /></Public>} />
                   <Route path="/drugs/prescriptions/:id" element={<Public><RxPrescriptionDetail /></Public>} />
-                  <Route path="/drugs/protocols" element={<Public><ClinicalProtocolsHome /></Public>} />
                   <Route path="/drugs/protocols/:id" element={<Public><ClinicalProtocolDetail /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
