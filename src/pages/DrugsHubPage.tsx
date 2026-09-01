@@ -5,6 +5,7 @@ import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { fetchAppliedPharmItems } from "../lib/appliedPharmApi";
 import { fetchICUMedications } from "../lib/icuMedApi";
+import { fetchERMedications } from "../lib/erMedApi";
 import { fetchLasaPairs } from "../lib/lasaApi";
 import { fetchRxPrescriptions } from "../lib/rxApi";
 
@@ -42,6 +43,7 @@ export default function DrugsHubPage() {
   const [appliedPharmCount, setAppliedPharmCount] = useState(0);
   const [dosageCount, setDosageCount] = useState(0);
   const [icuMedCount, setIcuMedCount] = useState(0);
+  const [erMedCount, setErMedCount] = useState(0);
   const [lasaCount, setLasaCount] = useState(0);
   const [rxCount, setRxCount] = useState(0);
   useEffect(() => {
@@ -53,6 +55,9 @@ export default function DrugsHubPage() {
       .catch(() => {});
     fetchICUMedications()
       .then((items) => setIcuMedCount(items.length))
+      .catch(() => {});
+    fetchERMedications()
+      .then((items) => setErMedCount(items.length))
       .catch(() => {});
     fetchLasaPairs()
       .then((items) => setLasaCount(items.length))
@@ -118,6 +123,14 @@ export default function DrugsHubPage() {
       desc: "الثلاجة، المخدرة، مقويات القلب، الكهارل المركزة، وحساب الجرعات",
       count: `${icuMedCount} دواء`,
       gradient: "from-blue-700 to-cyan-500",
+    },
+    {
+      to: "/drugs/er-medications",
+      icon: "🚑",
+      title: "أدوية قسم الطوارئ",
+      desc: "المسكنات، المخدرات، مقويات القلب، الطوارئ السكرية، وحساب الجرعات",
+      count: `${erMedCount} دواء`,
+      gradient: "from-red-600 to-rose-700",
     },
     {
       to: "/drugs/lasa",
