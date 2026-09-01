@@ -28,6 +28,7 @@ const nav: NavItem[] = [
   { p: "/admin/peds-medications", l: "أدوية قسم الأطفال (24 حالة)", i: "🧒" },
   { p: "/admin/high-alert-ref", l: "الأدوية عالية التنبيه (ISMP)", i: "⚠️" },
   { p: "/admin/prescriptions", l: "روشتات صيدلية (181 روشتة)", i: "℞" },
+  { p: "/admin/protocols", l: "بروتوكولات إكلينيكية (قوائم تحقق)", i: "📋" },
   { p: "/admin/quizzes", l: "الاختبارات (MCQ)", i: "📝" },
   { p: "/admin/pages", l: "الصفحات", i: "📄" },
   { p: "/admin/categories", l: "التصنيفات", i: "📂" },

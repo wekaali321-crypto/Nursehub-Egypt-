@@ -132,6 +132,7 @@ const defaultMenu = [
   { label: "المقالات", path: "/category/articles" },
   { label: "الملخصات", path: "/category/summaries" },
   { label: "الأدوية", path: "/drugs" },
+  { label: "البروتوكولات الإكلينيكية", path: "/drugs/protocols" },
   { label: "المهارات", path: "/category/skills" },
   { label: "مكافحة العدوى", path: "/category/infection-control" },
   { label: "خطط الرعاية", path: "/category/careplans" },
