@@ -10,6 +10,7 @@ import { fetchPedsMedications } from "../lib/pedsMedApi";
 import { fetchHighAlertRef } from "../lib/highAlertRefApi";
 import { fetchLasaPairs } from "../lib/lasaApi";
 import { fetchRxPrescriptions } from "../lib/rxApi";
+import { fetchClinicalProtocols } from "../lib/clinicalProtocolsApi";
 
 type Tile = {
   to: string;
@@ -49,6 +50,7 @@ export default function DrugsHubPage() {
   const [highAlertRefDrugCount, setHighAlertRefDrugCount] = useState(0);
   const [lasaCount, setLasaCount] = useState(0);
   const [rxCount, setRxCount] = useState(0);
+  const [protocolsCount, setProtocolsCount] = useState(0);
   useEffect(() => {
     fetchAppliedPharmItems()
       .then((items) => {
@@ -73,6 +75,9 @@ export default function DrugsHubPage() {
       .catch(() => {});
     fetchRxPrescriptions()
       .then((items) => setRxCount(items.length))
+      .catch(() => {});
+    fetchClinicalProtocols()
+      .then((items) => setProtocolsCount(items.length))
       .catch(() => {});
   }, []);
 
@@ -164,6 +169,14 @@ export default function DrugsHubPage() {
       desc: "أشهر الروشتات الطبية حسب الحالة — بشكل الروشتة الحقيقية",
       count: `${rxCount} روشتة`,
       gradient: "from-emerald-600 to-teal-700",
+    },
+    {
+      to: "/drugs/protocols",
+      icon: "📋",
+      title: "قوائم تحقق البروتوكولات الإكلينيكية",
+      desc: "بروتوكولات تفاعلية خطوة بخطوة (CABG وDKA) مع حفظ تقدّمك تلقائيًا",
+      count: `${protocolsCount} بروتوكول`,
+      gradient: "from-teal-600 to-cyan-700",
     },
   ];
 
