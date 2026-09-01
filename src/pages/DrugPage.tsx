@@ -3,6 +3,7 @@ import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO, breadcrumbSchema } from "../lib/seo";
 import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
+import CrossRefBox from "../components/CrossRefBox";
 
 export default function DrugPage() {
   const { slug } = useParams();
@@ -81,6 +82,8 @@ export default function DrugPage() {
         <h1 className="mt-3 text-3xl font-black sm:text-4xl">{drug.name}</h1>
         <p className="mt-1 text-lg text-sky-50">{drug.genericName} • {drug.drugClass}</p>
       </div>
+
+      <CrossRefBox table="drugs" id={drug.id} />
 
       {drug.showImage && drug.imageUrl && (
         <div className="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">

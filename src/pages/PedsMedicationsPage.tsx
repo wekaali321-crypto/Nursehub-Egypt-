@@ -42,6 +42,7 @@ function CalcBlock({ dose }: { dose: Record<string, string> | null }) {
 export function PedsMedicationsHome() {
   const [items, setItems] = useState<PedsMedication[]>([]);
   const [loading, setLoading] = useState(true);
+  const [q, setQ] = useState("");
 
   useEffect(() => {
     fetchPedsMedications().then(setItems).catch(() => setItems([])).finally(() => setLoading(false));
@@ -49,18 +50,41 @@ export function PedsMedicationsHome() {
 
   if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">جارِ التحميل...</div>;
 
+  const query = q.trim().toLowerCase();
+  const filtered = !query
+    ? items
+    : items.filter(
+        (i) =>
+          i.drug_name.toLowerCase().includes(query) ||
+          (i.drug_class || "").toLowerCase().includes(query)
+      );
+
   const grouped = PEDS_CATEGORY_ORDER.map((cat) => ({
     category: cat,
-    drugs: items.filter((i) => i.category === cat),
+    drugs: filtered.filter((i) => i.category === cat),
   })).filter((g) => g.drugs.length > 0);
 
   return (
     <div dir="rtl" className="max-w-5xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-teal-600 to-cyan-700 text-white p-6 mb-8">
+      <div className="rounded-2xl bg-gradient-to-l from-teal-600 to-cyan-700 text-white p-6 mb-6">
         <h1 className="text-2xl font-bold mb-1">أدوية قسم الأطفال</h1>
         <p className="opacity-90 text-sm">دليل شامل لبروتوكولات علاج أشهر الحالات المرضية عند الأطفال: الاستعمالات، الجرعات، وطرق الإعطاء حسب التخصص.</p>
         <p className="mt-2 text-sm bg-white/10 rounded-lg inline-block px-3 py-1">{items.length} حالة</p>
       </div>
+
+      <div className="relative mb-8">
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="ابحث عن حالة أو دواء أو تخصص..."
+          className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+        />
+        <span className="absolute right-3 top-3 text-slate-400">🔍</span>
+      </div>
+
+      {grouped.length === 0 && (
+        <div className="text-center text-slate-500 dark:text-slate-400 py-10">لا توجد نتائج مطابقة لبحثك.</div>
+      )}
 
       {grouped.map((g) => (
         <div key={g.category} className="mb-8">
