@@ -45,6 +45,7 @@ const ERMedicationDetail = lazy(() => import("./pages/ERMedicationsPage"));
 const ERMedicationsHome = lazy(() => import("./pages/ERMedicationsPage").then((m) => ({ default: m.ERMedicationsHome })));
 const PedsMedicationDetail = lazy(() => import("./pages/PedsMedicationsPage"));
 const PedsMedicationsHome = lazy(() => import("./pages/PedsMedicationsPage").then((m) => ({ default: m.PedsMedicationsHome })));
+const HighAlertRefPage = lazy(() => import("./pages/HighAlertRefPage"));
 const LasaPage = lazy(() => import("./pages/LasaPage"));
 const RxPrescriptionDetail = lazy(() => import("./pages/RxPrescriptionsPage"));
 const RxPrescriptionsHome = lazy(() => import("./pages/RxPrescriptionsPage").then((m) => ({ default: m.RxPrescriptionsHome })));
@@ -69,6 +70,7 @@ import AppliedPharmAdmin from "./admin/AppliedPharmAdmin";
 import ICUMedicationsAdmin from "./admin/ICUMedicationsAdmin";
 import ERMedicationsAdmin from "./admin/ERMedicationsAdmin";
 import PedsMedicationsAdmin from "./admin/PedsMedicationsAdmin";
+import HighAlertRefAdmin from "./admin/HighAlertRefAdmin";
 import RxPrescriptionsAdmin from "./admin/RxPrescriptionsAdmin";
 import { EarningsAdmin, AdsManager, AffiliateManager, PaymentsAdmin } from "./admin/Monetization";
 import { AnalyticsAdmin } from "./admin/Analytics";
@@ -193,6 +195,7 @@ export default function App() {
                   <Route path="/drugs/er-medications/:id" element={<Public><ERMedicationDetail /></Public>} />
                   <Route path="/drugs/peds-medications" element={<Public><PedsMedicationsHome /></Public>} />
                   <Route path="/drugs/peds-medications/:id" element={<Public><PedsMedicationDetail /></Public>} />
+                  <Route path="/drugs/high-alert-ref" element={<Public><HighAlertRefPage /></Public>} />
                   <Route path="/drugs/lasa" element={<Public><LasaPage /></Public>} />
                   <Route path="/drugs/prescriptions" element={<Public><RxPrescriptionsHome /></Public>} />
                   <Route path="/drugs/prescriptions/:id" element={<Public><RxPrescriptionDetail /></Public>} />
@@ -242,6 +245,7 @@ export default function App() {
                   <Route path="/admin/icu-medications" element={<Admin><ICUMedicationsAdmin /></Admin>} />
                   <Route path="/admin/er-medications" element={<Admin><ERMedicationsAdmin /></Admin>} />
                   <Route path="/admin/peds-medications" element={<Admin><PedsMedicationsAdmin /></Admin>} />
+                  <Route path="/admin/high-alert-ref" element={<Admin><HighAlertRefAdmin /></Admin>} />
                   <Route path="/admin/prescriptions" element={<Admin><RxPrescriptionsAdmin /></Admin>} />
                   <Route path="/admin/quizzes" element={<Admin><QuizAdmin /></Admin>} />
                   <Route path="/admin/pages" element={<Admin><PagesAdmin /></Admin>} />

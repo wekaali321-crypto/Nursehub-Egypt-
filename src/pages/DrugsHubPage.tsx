@@ -7,6 +7,7 @@ import { fetchAppliedPharmItems } from "../lib/appliedPharmApi";
 import { fetchICUMedications } from "../lib/icuMedApi";
 import { fetchERMedications } from "../lib/erMedApi";
 import { fetchPedsMedications } from "../lib/pedsMedApi";
+import { fetchHighAlertRef } from "../lib/highAlertRefApi";
 import { fetchLasaPairs } from "../lib/lasaApi";
 import { fetchRxPrescriptions } from "../lib/rxApi";
 
@@ -46,6 +47,7 @@ export default function DrugsHubPage() {
   const [icuMedCount, setIcuMedCount] = useState(0);
   const [erMedCount, setErMedCount] = useState(0);
   const [pedsMedCount, setPedsMedCount] = useState(0);
+  const [highAlertRefDrugCount, setHighAlertRefDrugCount] = useState(0);
   const [lasaCount, setLasaCount] = useState(0);
   const [rxCount, setRxCount] = useState(0);
   useEffect(() => {
@@ -63,6 +65,9 @@ export default function DrugsHubPage() {
       .catch(() => {});
     fetchPedsMedications()
       .then((items) => setPedsMedCount(items.length))
+      .catch(() => {});
+    fetchHighAlertRef()
+      .then((cats) => setHighAlertRefDrugCount(cats.reduce((sum, c) => sum + c.drugs.length, 0)))
       .catch(() => {});
     fetchLasaPairs()
       .then((items) => setLasaCount(items.length))
@@ -136,6 +141,14 @@ export default function DrugsHubPage() {
       desc: "المسكنات، المخدرات، مقويات القلب، الطوارئ السكرية، وحساب الجرعات",
       count: `${erMedCount} دواء`,
       gradient: "from-red-600 to-rose-700",
+    },
+    {
+      to: "/drugs/high-alert-ref",
+      icon: "⚠️",
+      title: "الأدوية عالية التنبيه (ISMP)",
+      desc: "مرجع شامل مصنّف حسب الفئة الدوائية مع استراتيجية الأمان لكل فئة",
+      count: `${highAlertRefDrugCount} دواء`,
+      gradient: "from-red-600 to-orange-600",
     },
     {
       to: "/drugs/peds-medications",
