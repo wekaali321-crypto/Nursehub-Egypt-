@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { fetchICUMedications, ICU_CATEGORY_ORDER, type ICUMedication } from "../lib/icuMedApi";
 import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
+import CrossRefBox from "../components/CrossRefBox";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "أدوية الثلاجة": "from-cyan-500 to-blue-600",
@@ -40,6 +41,7 @@ function CalcBlock({ dose }: { dose: Record<string, string> | null }) {
 export function ICUMedicationsHome() {
   const [items, setItems] = useState<ICUMedication[]>([]);
   const [loading, setLoading] = useState(true);
+  const [q, setQ] = useState("");
 
   useEffect(() => {
     fetchICUMedications().then(setItems).catch(() => setItems([])).finally(() => setLoading(false));
@@ -47,18 +49,42 @@ export function ICUMedicationsHome() {
 
   if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">جارِ التحميل...</div>;
 
+  const query = q.trim().toLowerCase();
+  const filtered = !query
+    ? items
+    : items.filter(
+        (i) =>
+          i.drug_name.toLowerCase().includes(query) ||
+          (i.drug_class || "").toLowerCase().includes(query) ||
+          (i.concentration || "").toLowerCase().includes(query)
+      );
+
   const grouped = ICU_CATEGORY_ORDER.map((cat) => ({
     category: cat,
-    drugs: items.filter((i) => i.category === cat),
+    drugs: filtered.filter((i) => i.category === cat),
   })).filter((g) => g.drugs.length > 0);
 
   return (
     <div dir="rtl" className="max-w-5xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-cyan-600 to-blue-700 text-white p-6 mb-8">
+      <div className="rounded-2xl bg-gradient-to-l from-cyan-600 to-blue-700 text-white p-6 mb-6">
         <h1 className="text-2xl font-bold mb-1">أدوية العناية المركزة</h1>
         <p className="opacity-90 text-sm">دليل شامل لأدوية وحدة العناية المركزة: التركيز، الاستعمالات، موانع الاستخدام، طريقة التحضير، وحساب الجرعات.</p>
         <p className="mt-2 text-sm bg-white/10 rounded-lg inline-block px-3 py-1">{items.length} دواء</p>
       </div>
+
+      <div className="relative mb-8">
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="ابحث عن دواء أو فئة..."
+          className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-blue-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+        />
+        <span className="absolute right-3 top-3 text-slate-400">🔍</span>
+      </div>
+
+      {grouped.length === 0 && (
+        <div className="text-center text-slate-500 dark:text-slate-400 py-10">لا توجد أدوية مطابقة لبحثك.</div>
+      )}
 
       {grouped.map((g) => (
         <div key={g.category} className="mb-8">
@@ -120,13 +146,15 @@ export default function ICUMedicationDetail() {
         )}
       </div>
 
+      <CrossRefBox table="icu_medications" id={item.id} />
+
       {item.show_image && item.image_url && (
-        <div className="mb-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
+        <div className="mb-6 mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
           <img src={item.image_url} alt={item.drug_name} className="mx-auto max-h-80 w-auto rounded-2xl object-contain" />
         </div>
       )}
 
-      <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 dark:bg-slate-900 dark:border-slate-800">
+      <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 mt-6 dark:bg-slate-900 dark:border-slate-800">
         <InfoBlock title="الاستعمالات" content={item.uses} />
         <InfoBlock title="موانع الاستخدام" content={item.contraindications} />
         <InfoBlock title="الأعراض الجانبية" content={item.side_effects} />
