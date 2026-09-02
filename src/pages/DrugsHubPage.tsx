@@ -8,11 +8,7 @@ import { fetchICUMedications } from "../lib/icuMedApi";
 import { fetchERMedications } from "../lib/erMedApi";
 import { fetchPedsMedications } from "../lib/pedsMedApi";
 import { fetchHighAlertRef } from "../lib/highAlertRefApi";
-import { fetchLasaPairs } from "../lib/lasaApi";
 import { fetchRxPrescriptions } from "../lib/rxApi";
-import { fetchOrganDoseAdjustments } from "../lib/organDoseApi";
-import { fetchPregnancyLactationSafety } from "../lib/pregnancyLactationApi";
-import { fetchIVCompatibility } from "../lib/ivCompatibilityApi";
 import GlobalDrugSearchBar from "../components/GlobalDrugSearchBar";
 
 type Tile = {
@@ -51,11 +47,7 @@ export default function DrugsHubPage() {
   const [erMedCount, setErMedCount] = useState(0);
   const [pedsMedCount, setPedsMedCount] = useState(0);
   const [highAlertRefDrugCount, setHighAlertRefDrugCount] = useState(0);
-  const [lasaCount, setLasaCount] = useState(0);
   const [rxCount, setRxCount] = useState(0);
-  const [organDoseCount, setOrganDoseCount] = useState(0);
-  const [pregnancyCount, setPregnancyCount] = useState(0);
-  const [ivCount, setIvCount] = useState(0);
   useEffect(() => {
     fetchAppliedPharmItems()
       .then((items) => {
@@ -75,20 +67,8 @@ export default function DrugsHubPage() {
     fetchHighAlertRef()
       .then((cats) => setHighAlertRefDrugCount(cats.reduce((sum, c) => sum + c.drugs.length, 0)))
       .catch(() => {});
-    fetchLasaPairs()
-      .then((items) => setLasaCount(items.length))
-      .catch(() => {});
     fetchRxPrescriptions()
       .then((items) => setRxCount(items.length))
-      .catch(() => {});
-    fetchOrganDoseAdjustments()
-      .then((items) => setOrganDoseCount(items.length))
-      .catch(() => {});
-    fetchPregnancyLactationSafety()
-      .then((items) => setPregnancyCount(items.length))
-      .catch(() => {});
-    fetchIVCompatibility()
-      .then((items) => setIvCount(items.length))
       .catch(() => {});
   }, []);
 
@@ -157,14 +137,6 @@ export default function DrugsHubPage() {
       gradient: "from-red-600 to-rose-700",
     },
     {
-      to: "/drugs/high-alert-ref",
-      icon: "⚠️",
-      title: "الأدوية عالية الخطورة",
-      desc: "مرجع ISMP الشامل مصنّف حسب الفئة الدوائية مع استراتيجية الأمان لكل فئة",
-      count: `${highAlertRefDrugCount} دواء`,
-      gradient: "from-rose-600 to-red-500",
-    },
-    {
       to: "/drugs/peds-medications",
       icon: "🧒",
       title: "أدوية قسم الأطفال",
@@ -173,44 +145,12 @@ export default function DrugsHubPage() {
       gradient: "from-teal-600 to-cyan-700",
     },
     {
-      to: "/drugs/lasa",
-      icon: "🔤",
-      title: "أدوية متشابهة الاسم (LASA)",
-      desc: "أزواج أدوية سبب رئيسي لأخطاء الدواء — احذري الخلط بينها",
-      count: `${lasaCount} زوج`,
-      gradient: "from-green-600 to-emerald-700",
-    },
-    {
       to: "/drugs/prescriptions",
       icon: "℞",
       title: "روشتات صيدلية",
       desc: "أشهر الروشتات الطبية حسب الحالة — بشكل الروشتة الحقيقية",
       count: `${rxCount} روشتة`,
       gradient: "from-emerald-600 to-teal-700",
-    },
-    {
-      to: "/drugs/organ-dose",
-      icon: "🫘",
-      title: "تعديل الجرعات الكلوية/الكبدية",
-      desc: "إرشادات عملية لتعديل الجرعات عند القصور الكلوي أو الكبدي",
-      count: `${organDoseCount} دواء`,
-      gradient: "from-amber-600 to-orange-700",
-    },
-    {
-      to: "/drugs/pregnancy-lactation",
-      icon: "🤰",
-      title: "أمان الحمل والرضاعة",
-      desc: "تصنيف الأدوية الأكثر شيوعًا حسب أمانها أثناء الحمل والرضاعة",
-      count: `${pregnancyCount} دواء`,
-      gradient: "from-pink-600 to-fuchsia-700",
-    },
-    {
-      to: "/drugs/iv-compatibility",
-      icon: "🧫",
-      title: "توافق الأدوية الوريدية (IV)",
-      desc: "أشهر أزواج أدوية العناية المركزة والطوارئ عند التسريب المشترك — متوافقة أم لا",
-      count: `${ivCount} زوج`,
-      gradient: "from-indigo-600 to-blue-700",
     },
   ];
 
