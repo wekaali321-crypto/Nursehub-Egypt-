@@ -95,7 +95,9 @@ export function HomeCategoriesAdmin() {
 
         <div className={`space-y-3 ${card}`}>
           <div><label className="mb-1 block text-xs font-semibold text-slate-500">العنوان</label><input value={editing.title} onChange={(e) => setEditing({ ...editing, title: e.target.value })} className={inp} /></div>
+          <div><label className="mb-1 block text-xs font-semibold text-slate-500">العنوان بالإنجليزي</label><input value={editing.titleEn ?? ""} onChange={(e) => setEditing({ ...editing, titleEn: e.target.value })} className={inp} dir="ltr" /></div>
           <div><label className="mb-1 block text-xs font-semibold text-slate-500">الوصف</label><input value={editing.description} onChange={(e) => setEditing({ ...editing, description: e.target.value })} className={inp} /></div>
+          <div><label className="mb-1 block text-xs font-semibold text-slate-500">الوصف بالإنجليزي</label><input value={editing.descriptionEn ?? ""} onChange={(e) => setEditing({ ...editing, descriptionEn: e.target.value })} className={inp} dir="ltr" /></div>
 
           <div>
             <label className="mb-1 block text-xs font-semibold text-slate-500">الأيقونة</label>

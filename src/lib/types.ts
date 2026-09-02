@@ -474,9 +474,11 @@ export interface CommerceSettings {
 export interface HomeCategory {
   id: string;
   title: string;
+  titleEn?: string;
   icon: string;          // emoji or short text
   image?: string;        // optional cover image URL (from media library)
   description: string;
+  descriptionEn?: string;
   color: string;         // tailwind gradient key, e.g. "from-sky-500 to-blue-500"
   order: number;         // display order
   visible: boolean;      // show / hide

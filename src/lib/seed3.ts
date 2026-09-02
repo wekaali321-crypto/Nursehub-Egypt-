@@ -23,16 +23,16 @@ export const defaultCommerce: CommerceSettings = { currency: "EGP", taxPercent: 
 
 // Default homepage category cards (editable & deletable from the admin panel).
 export const seedHomeCategories: HomeCategory[] = [
-  { id: "hc1", title: "المقالات", icon: "📝", description: "مقالات تعليمية في التمريض", color: "from-sky-500 to-blue-500", order: 0, visible: true, link: "/category/articles", demo: true },
-  { id: "hc2", title: "الملخصات", icon: "📚", description: "ملخصات مركّزة للمواد", color: "from-emerald-500 to-teal-500", order: 1, visible: true, link: "/category/summaries", demo: true },
-  { id: "hc3", title: "الأدوية", icon: "💊", description: "دليل الأدوية والجرعات", color: "from-violet-500 to-purple-500", order: 2, visible: true, link: "/drugs", demo: true },
-  { id: "hc4", title: "المهارات", icon: "🩺", description: "مهارات سريرية عملية", color: "from-amber-500 to-orange-500", order: 3, visible: true, link: "/category/skills", demo: true },
-  { id: "hc5", title: "خطط الرعاية", icon: "📋", description: "خطط رعاية تمريضية", color: "from-rose-500 to-pink-500", order: 4, visible: true, link: "/category/careplans", demo: true },
-  { id: "hc6", title: "الكتب وPDF", icon: "📖", description: "كتب وملفات قابلة للتحميل", color: "from-cyan-500 to-sky-500", order: 5, visible: true, link: "/category/books", demo: true },
-  { id: "hc7", title: "مكتبة ECG", icon: "🫀", description: "45 نمط تخطيط قلب مصنّف حسب الخطورة", color: "from-rose-600 to-slate-800", order: 6, visible: true, link: "/ecg", demo: false },
-  { id: "hc8", title: "مكافحة العدوى", icon: "🦠", description: "نظافة اليدين والوقاية من العدوى", color: "from-red-500 to-orange-500", order: 7, visible: true, link: "/category/infection-control", demo: false },
-  { id: "hc9", title: "الأدوات", icon: "🧮", description: "حاسبات طبية تساعدك في عملك", color: "from-indigo-500 to-purple-500", order: 8, visible: true, link: "/tools", demo: false },
-  { id: "hc10", title: "المتجر", icon: "🛍️", description: "كتب وكورسات واشتراكات مميزة", color: "from-emerald-500 to-teal-500", order: 9, visible: true, link: "/store", demo: false },
+  { id: "hc1", title: "المقالات", titleEn: "Articles", icon: "📝", description: "مقالات تعليمية في التمريض", descriptionEn: "Educational nursing articles", color: "from-sky-500 to-blue-500", order: 0, visible: true, link: "/category/articles", demo: true },
+  { id: "hc2", title: "الملخصات", titleEn: "Summaries", icon: "📚", description: "ملخصات مركّزة للمواد", descriptionEn: "Focused subject summaries", color: "from-emerald-500 to-teal-500", order: 1, visible: true, link: "/category/summaries", demo: true },
+  { id: "hc3", title: "الأدوية", titleEn: "Drugs", icon: "💊", description: "دليل الأدوية والجرعات", descriptionEn: "Drug guide & dosages", color: "from-violet-500 to-purple-500", order: 2, visible: true, link: "/drugs", demo: true },
+  { id: "hc4", title: "المهارات", titleEn: "Skills", icon: "🩺", description: "مهارات سريرية عملية", descriptionEn: "Practical clinical skills", color: "from-amber-500 to-orange-500", order: 3, visible: true, link: "/category/skills", demo: true },
+  { id: "hc5", title: "خطط الرعاية", titleEn: "Care Plans", icon: "📋", description: "خطط رعاية تمريضية", descriptionEn: "Nursing care plans", color: "from-rose-500 to-pink-500", order: 4, visible: true, link: "/category/careplans", demo: true },
+  { id: "hc6", title: "الكتب وPDF", titleEn: "Books & PDFs", icon: "📖", description: "كتب وملفات قابلة للتحميل", descriptionEn: "Downloadable books & files", color: "from-cyan-500 to-sky-500", order: 5, visible: true, link: "/category/books", demo: true },
+  { id: "hc7", title: "مكتبة ECG", titleEn: "ECG Library", icon: "🫀", description: "45 نمط تخطيط قلب مصنّف حسب الخطورة", descriptionEn: "45 ECG patterns classified by severity", color: "from-rose-600 to-slate-800", order: 6, visible: true, link: "/ecg", demo: false },
+  { id: "hc8", title: "مكافحة العدوى", titleEn: "Infection Control", icon: "🦠", description: "نظافة اليدين والوقاية من العدوى", descriptionEn: "Hand hygiene & infection prevention", color: "from-red-500 to-orange-500", order: 7, visible: true, link: "/category/infection-control", demo: false },
+  { id: "hc9", title: "الأدوات", titleEn: "Tools", icon: "🧮", description: "حاسبات طبية تساعدك في عملك", descriptionEn: "Medical calculators for your work", color: "from-indigo-500 to-purple-500", order: 8, visible: true, link: "/tools", demo: false },
+  { id: "hc10", title: "المتجر", titleEn: "Store", icon: "🛍️", description: "كتب وكورسات واشتراكات مميزة", descriptionEn: "Books, courses & premium subscriptions", color: "from-emerald-500 to-teal-500", order: 9, visible: true, link: "/store", demo: false },
 ];
 
 // All seed content here is DEMO data (demo:true) so it can be deleted with one click.

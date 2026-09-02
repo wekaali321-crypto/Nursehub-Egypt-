@@ -22,18 +22,21 @@ const TOOL_PREVIEWS = [
 
 /** A single dynamic home category card — links internally or to an external URL. */
 function CategoryCardLink({ card }: { card: HomeCategory }) {
+  const { lang } = useI18n();
   const external = /^https?:\/\//i.test(card.link);
+  const title = bilingual(card.title, card.titleEn, lang).text;
+  const description = bilingual(card.description, card.descriptionEn, lang).text;
   const inner = (
     <>
       {card.image ? (
         <div className="mx-auto mb-2 h-14 w-14 overflow-hidden rounded-xl">
-          <img src={card.image} alt={card.title} loading="lazy" className="h-full w-full object-cover" />
+          <img src={card.image} alt={title} loading="lazy" className="h-full w-full object-cover" />
         </div>
       ) : (
         <div className={`mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${card.color} text-2xl text-white transition-transform group-hover:scale-110 sm:h-14 sm:w-14 sm:text-3xl`}>{card.icon}</div>
       )}
-      <div className="text-xs font-bold dark:text-white sm:text-sm">{card.title}</div>
-      {card.description && <div className="mt-0.5 line-clamp-1 text-[11px] text-slate-400">{card.description}</div>}
+      <div className="text-xs font-bold dark:text-white sm:text-sm">{title}</div>
+      {description && <div className="mt-0.5 line-clamp-1 text-[11px] text-slate-400">{description}</div>}
     </>
   );
   const cls = "group rounded-2xl border border-slate-200 bg-white p-4 text-center transition-all hover:-translate-y-1 hover:border-sky-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900 sm:p-5";
