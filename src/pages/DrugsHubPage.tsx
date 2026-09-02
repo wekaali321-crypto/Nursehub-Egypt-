@@ -13,6 +13,7 @@ import { fetchRxPrescriptions } from "../lib/rxApi";
 import { fetchOrganDoseAdjustments } from "../lib/organDoseApi";
 import { fetchPregnancyLactationSafety } from "../lib/pregnancyLactationApi";
 import { fetchIVCompatibility } from "../lib/ivCompatibilityApi";
+import GlobalDrugSearchBar from "../components/GlobalDrugSearchBar";
 
 type Tile = {
   to: string;
@@ -289,6 +290,9 @@ export default function DrugsHubPage() {
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">🧠 {appliedPharmCount} معلومة تطبيقية</span>
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">🩺 {otcConditions.length} حالة شائعة</span>
             <span className="rounded-full bg-white/15 px-4 py-1.5 backdrop-blur">⚠️ {highAlertRefDrugCount} عالي الخطورة</span>
+          </div>
+          <div className="mt-6 max-w-xl">
+            <GlobalDrugSearchBar />
           </div>
         </div>
       </div>

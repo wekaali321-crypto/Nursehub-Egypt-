@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { fetchHighAlertRef, type HighAlertRefCategory } from "../lib/highAlertRefApi";
 
 function CategoryCard({
@@ -60,9 +61,10 @@ function CategoryCard({
 }
 
 export default function HighAlertRefPage() {
+  const [searchParams] = useSearchParams();
   const [items, setItems] = useState<HighAlertRefCategory[]>([]);
   const [loading, setLoading] = useState(true);
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState(searchParams.get("q") || "");
   const [openIds, setOpenIds] = useState<Set<string>>(new Set());
 
   useEffect(() => {
