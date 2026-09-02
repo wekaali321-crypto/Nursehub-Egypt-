@@ -149,6 +149,8 @@ const dict = {
   "drug.severityMild": { ar: "بسيط", en: "Mild" },
   "drug.checkOtherInteraction": { ar: "فحص تفاعل مع دواء آخر ←", en: "Check interaction with another drug →" },
   "drug.similarInCategory": { ar: "أدوية مشابهة في نفس الفئة", en: "Similar Drugs in This Category" },
+  "a11y.skipToContent": { ar: "تخطّي إلى المحتوى", en: "Skip to content" },
+  "a11y.backToTop": { ar: "العودة للأعلى", en: "Back to top" },
   "drug.additionalSafetyInfo": { ar: "⚠ معلومات أمان إضافية لهذا الدواء:", en: "⚠ Additional safety information for this drug:" },
   "drug.highAlertGeneral": { ar: "⚠ عالي الخطورة", en: "⚠ High Alert" },
   "drug.highAlertElectrolyte": { ar: "☢ شوارد مركّزة", en: "☢ Concentrated Electrolyte" },

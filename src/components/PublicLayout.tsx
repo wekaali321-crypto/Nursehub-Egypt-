@@ -2,8 +2,10 @@ import { useEffect, useState, type ReactNode } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import InstallPrompt from "./InstallPrompt";
+import { useI18n } from "../lib/i18n";
 
 function BackToTop() {
+  const { t } = useI18n();
   const [show, setShow] = useState(false);
   useEffect(() => {
     const fn = () => setShow(window.scrollY > 400);
@@ -14,7 +16,7 @@ function BackToTop() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      aria-label="العودة للأعلى"
+      aria-label={t("a11y.backToTop")}
       className="fixed bottom-6 left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-emerald-500 text-xl text-white shadow-lg hover:scale-110 transition-transform print:hidden"
     >
       ↑
@@ -23,9 +25,10 @@ function BackToTop() {
 }
 
 export default function PublicLayout({ children }: { children: ReactNode }) {
+  const { t } = useI18n();
   return (
     <div className="flex min-h-screen flex-col">
-      <a href="#main-content" className="skip-link">تخطّي إلى المحتوى</a>
+      <a href="#main-content" className="skip-link">{t("a11y.skipToContent")}</a>
       <Navbar />
       <main id="main-content" className="flex-1">{children}</main>
       <Footer />

@@ -10,7 +10,7 @@ function Wrap({ titleAr, titleEn, children }: { titleAr: string; titleEn: string
   const title = bilingual(titleAr, titleEn, lang).text;
   return (
     <div className="mx-auto max-w-4xl px-4 py-8">
-      <Breadcrumbs items={[{ label: titleAr }]} />
+      <Breadcrumbs items={[{ label: title }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
       <h1 className="mb-6 text-3xl font-black dark:text-white">{title}</h1>
       <div className="prose-content text-slate-700 dark:text-slate-300">{children}</div>
