@@ -15,6 +15,15 @@ export interface OrganDoseAdjustment {
   contraindicated: string | null;
   monitoring_note: string | null;
   key_point: string | null;
+  drug_name_en?: string | null;
+  drug_class_en?: string | null;
+  normal_dose_note_en?: string | null;
+  mild_adjustment_en?: string | null;
+  moderate_adjustment_en?: string | null;
+  severe_adjustment_en?: string | null;
+  contraindicated_en?: string | null;
+  monitoring_note_en?: string | null;
+  key_point_en?: string | null;
 }
 
 export async function fetchOrganDoseAdjustments(): Promise<OrganDoseAdjustment[]> {

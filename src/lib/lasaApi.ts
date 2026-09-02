@@ -9,6 +9,7 @@ export interface LasaPair {
   tall_man_b: string | null;
   notes: string | null;
   order_num: number;
+  notes_en?: string | null;
 }
 
 export async function fetchLasaPairs(): Promise<LasaPair[]> {

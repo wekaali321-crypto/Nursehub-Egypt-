@@ -5,11 +5,31 @@ import {
   type OrganDoseAdjustment,
   type OrganAdjustmentType,
 } from "../lib/organDoseApi";
+import { useI18n, bilingual } from "../lib/i18n";
+import InlineLangToggle from "../components/InlineLangToggle";
 
-const TABS: { key: OrganAdjustmentType; label: string; icon: string }[] = [
-  { key: "renal", label: "الفشل الكلوي", icon: "🫘" },
-  { key: "hepatic", label: "الفشل الكبدي", icon: "🫀" },
+const TABS: { key: OrganAdjustmentType; label: { ar: string; en: string }; icon: string }[] = [
+  { key: "renal", label: { ar: "الفشل الكلوي", en: "Renal Failure" }, icon: "🫘" },
+  { key: "hepatic", label: { ar: "الفشل الكبدي", en: "Hepatic Failure" }, icon: "🫀" },
 ];
+
+const LABELS = {
+  loading: { ar: "جارِ التحميل...", en: "Loading..." },
+  title: { ar: "تعديل الجرعات حسب وظائف الكلى والكبد", en: "Dose Adjustment by Renal & Hepatic Function" },
+  subtitle: {
+    ar: "إرشادات عملية لتعديل جرعات الأدوية الأكثر شيوعًا عند مرضى القصور الكلوي أو الكبدي — مرجع تعليمي، راجعي دائمًا بروتوكول مؤسستك وأوامر الطبيب.",
+    en: "Practical guidance for adjusting doses of the most common medications in renal or hepatic impairment - an educational reference; always follow your institution's protocol and the physician's orders.",
+  },
+  searchPlaceholder: { ar: "ابحث عن دواء أو فئة دوائية...", en: "Search by drug or drug class..." },
+  noResults: { ar: "لا توجد أدوية مطابقة لبحثك.", en: "No matching drugs found." },
+  normalDose: { ar: "الجرعة الاعتيادية", en: "Normal Dose" },
+  mild: { ar: "القصور الخفيف", en: "Mild Impairment" },
+  moderate: { ar: "القصور المتوسط", en: "Moderate Impairment" },
+  severe: { ar: "القصور الشديد", en: "Severe Impairment" },
+  contraindicated: { ar: "🚫 يُمنع", en: "🚫 Contraindicated" },
+  monitoring: { ar: "📊 المراقبة", en: "📊 Monitoring" },
+  keyPoint: { ar: "💡 نقطة مهمة", en: "💡 Key Point" },
+};
 
 function Row({ label, value, tone }: { label: string; value: string | null; tone?: "danger" | "info" }) {
   if (!value) return null;
@@ -27,29 +47,43 @@ function Row({ label, value, tone }: { label: string; value: string | null; tone
   );
 }
 
-function DrugCard({ item, open, onToggle }: { item: OrganDoseAdjustment; open: boolean; onToggle: () => void }) {
+function DrugCard({
+  item,
+  open,
+  onToggle,
+  lang,
+}: {
+  item: OrganDoseAdjustment;
+  open: boolean;
+  onToggle: () => void;
+  lang: "ar" | "en";
+}) {
   return (
     <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden dark:bg-slate-900 dark:border-slate-800">
       <button onClick={onToggle} className="w-full flex items-center justify-between gap-3 p-4 text-right">
         <span className="text-slate-400 dark:text-slate-500">{open ? "▲" : "▼"}</span>
         <div className="flex-1">
-          <div className="font-bold text-slate-800 dark:text-white">{item.drug_name}</div>
-          {item.drug_class && <div className="text-xs text-slate-400 dark:text-slate-500">{item.drug_class}</div>}
+          <div className="font-bold text-slate-800 dark:text-white">{bilingual(item.drug_name, item.drug_name_en, lang).text}</div>
+          {item.drug_class && (
+            <div className="text-xs text-slate-400 dark:text-slate-500">{bilingual(item.drug_class, item.drug_class_en, lang).text}</div>
+          )}
         </div>
       </button>
 
       {open && (
         <div className="px-4 pb-4 space-y-2">
-          <Row label="الجرعة الاعتيادية" value={item.normal_dose_note} />
-          <Row label="القصور الخفيف" value={item.mild_adjustment} />
-          <Row label="القصور المتوسط" value={item.moderate_adjustment} />
-          <Row label="القصور الشديد" value={item.severe_adjustment} />
-          <Row label="🚫 يُمنع" value={item.contraindicated} tone="danger" />
-          <Row label="📊 المراقبة" value={item.monitoring_note} tone="info" />
+          <Row label={LABELS.normalDose[lang]} value={bilingual(item.normal_dose_note, item.normal_dose_note_en, lang).text} />
+          <Row label={LABELS.mild[lang]} value={bilingual(item.mild_adjustment, item.mild_adjustment_en, lang).text} />
+          <Row label={LABELS.moderate[lang]} value={bilingual(item.moderate_adjustment, item.moderate_adjustment_en, lang).text} />
+          <Row label={LABELS.severe[lang]} value={bilingual(item.severe_adjustment, item.severe_adjustment_en, lang).text} />
+          <Row label={LABELS.contraindicated[lang]} value={bilingual(item.contraindicated, item.contraindicated_en, lang).text} tone="danger" />
+          <Row label={LABELS.monitoring[lang]} value={bilingual(item.monitoring_note, item.monitoring_note_en, lang).text} tone="info" />
           {item.key_point && (
             <div className="rounded-xl bg-amber-50 border border-amber-200 p-3 dark:bg-amber-500/10 dark:border-amber-500/20">
-              <div className="text-xs font-bold text-amber-800 dark:text-amber-400 mb-1">💡 نقطة مهمة</div>
-              <div className="text-sm text-amber-900 dark:text-amber-300 leading-relaxed">{item.key_point}</div>
+              <div className="text-xs font-bold text-amber-800 dark:text-amber-400 mb-1">{LABELS.keyPoint[lang]}</div>
+              <div className="text-sm text-amber-900 dark:text-amber-300 leading-relaxed">
+                {bilingual(item.key_point, item.key_point_en, lang).text}
+              </div>
             </div>
           )}
         </div>
@@ -59,6 +93,7 @@ function DrugCard({ item, open, onToggle }: { item: OrganDoseAdjustment; open: b
 }
 
 export default function OrganDoseAdjustmentsPage() {
+  const { lang } = useI18n();
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<OrganDoseAdjustment[]>([]);
   const [loading, setLoading] = useState(true);
@@ -79,6 +114,7 @@ export default function OrganDoseAdjustmentsPage() {
     return byTab.filter(
       (i) =>
         i.drug_name.toLowerCase().includes(query) ||
+        (i.drug_name_en || "").toLowerCase().includes(query) ||
         (i.drug_class || "").toLowerCase().includes(query)
     );
   }, [byTab, query]);
@@ -92,18 +128,19 @@ export default function OrganDoseAdjustmentsPage() {
     });
   }
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">جارِ التحميل...</div>;
+  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
 
   return (
-    <div dir="rtl" className="max-w-3xl mx-auto px-4 py-8">
+    <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 py-8">
       <div className="rounded-2xl bg-gradient-to-l from-amber-600 to-orange-700 text-white p-6 mb-4">
-        <div className="flex items-center gap-2 mb-1">
-          <span className="text-2xl">🫘</span>
-          <h1 className="text-xl font-bold">تعديل الجرعات حسب وظائف الكلى والكبد</h1>
+        <div className="flex items-start justify-between gap-2 mb-1">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">🫘</span>
+            <h1 className="text-xl font-bold">{LABELS.title[lang]}</h1>
+          </div>
+          <InlineLangToggle light />
         </div>
-        <p className="opacity-90 text-xs">
-          إرشادات عملية لتعديل جرعات الأدوية الأكثر شيوعًا عند مرضى القصور الكلوي أو الكبدي — مرجع تعليمي، راجعي دائمًا بروتوكول مؤسستك وأوامر الطبيب.
-        </p>
+        <p className="opacity-90 text-xs">{LABELS.subtitle[lang]}</p>
       </div>
 
       <div className="flex gap-2 mb-4">
@@ -117,7 +154,7 @@ export default function OrganDoseAdjustmentsPage() {
                 : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"
             }`}
           >
-            {t.icon} {t.label}
+            {t.icon} {t.label[lang]}
           </button>
         ))}
       </div>
@@ -126,19 +163,19 @@ export default function OrganDoseAdjustmentsPage() {
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="ابحث عن دواء أو فئة دوائية..."
+          placeholder={LABELS.searchPlaceholder[lang]}
           className="w-full rounded-xl border border-slate-200 bg-white py-3 pr-11 pl-3 outline-none focus:border-amber-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
         />
         <span className="absolute right-4 top-3.5 text-slate-400">🔍</span>
       </div>
 
       {filtered.length === 0 && (
-        <div className="text-center text-slate-500 dark:text-slate-400 py-10">لا توجد أدوية مطابقة لبحثك.</div>
+        <div className="text-center text-slate-500 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
       )}
 
       <div className="space-y-3">
         {filtered.map((item) => (
-          <DrugCard key={item.id} item={item} open={query ? true : openIds.has(item.id)} onToggle={() => toggle(item.id)} />
+          <DrugCard key={item.id} item={item} open={query ? true : openIds.has(item.id)} onToggle={() => toggle(item.id)} lang={lang} />
         ))}
       </div>
     </div>

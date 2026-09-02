@@ -11,6 +11,10 @@ export interface IVCompatibilityPair {
   reason: string | null;
   nursing_action: string | null;
   source: string | null;
+  drug_a_en?: string | null;
+  drug_b_en?: string | null;
+  reason_en?: string | null;
+  nursing_action_en?: string | null;
 }
 
 export async function fetchIVCompatibility(): Promise<IVCompatibilityPair[]> {

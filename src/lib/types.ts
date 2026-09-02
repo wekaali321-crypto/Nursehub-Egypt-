@@ -99,6 +99,8 @@ export interface DrugInteraction {
   severity: "severe" | "moderate" | "minor";
   description: string;
   management?: string;
+  descriptionEn?: string;
+  managementEn?: string;
 }
 
 export interface DrugAntidote {
@@ -106,6 +108,9 @@ export interface DrugAntidote {
   toxin: string;
   antidotes: string;
   notes?: string;
+  toxinEn?: string;
+  antidotesEn?: string;
+  notesEn?: string;
 }
 
 export interface DrugClassification {
@@ -113,6 +118,9 @@ export interface DrugClassification {
   name: string;
   description: string;
   examples: string;
+  nameEn?: string;
+  descriptionEn?: string;
+  examplesEn?: string;
 }
 
 export interface DrugSuffix {
@@ -120,12 +128,16 @@ export interface DrugSuffix {
   suffix: string;
   className: string;
   examples: string;
+  classNameEn?: string;
+  examplesEn?: string;
 }
 
 export interface CardiacMedGroup {
   id: string;
   name: string;
   examples: string;
+  nameEn?: string;
+  examplesEn?: string;
 }
 
 export interface PharmMnemonic {
@@ -156,6 +168,13 @@ export interface OTCCondition {
   redFlags: string;
   treatment: string;
   patientAdvice: string;
+  categoryEn?: string;
+  summaryEn?: string;
+  symptomsEn?: string;
+  keyQuestionsEn?: string;
+  redFlagsEn?: string;
+  treatmentEn?: string;
+  patientAdviceEn?: string;
 }
 
 export interface Page {
