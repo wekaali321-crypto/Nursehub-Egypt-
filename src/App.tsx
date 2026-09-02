@@ -47,6 +47,9 @@ const PedsMedicationDetail = lazy(() => import("./pages/PedsMedicationsPage"));
 const PedsMedicationsHome = lazy(() => import("./pages/PedsMedicationsPage").then((m) => ({ default: m.PedsMedicationsHome })));
 const HighAlertRefPage = lazy(() => import("./pages/HighAlertRefPage"));
 const LasaPage = lazy(() => import("./pages/LasaPage"));
+const OrganDoseAdjustmentsPage = lazy(() => import("./pages/OrganDoseAdjustmentsPage"));
+const PregnancyLactationPage = lazy(() => import("./pages/PregnancyLactationPage"));
+const DrugSafetyCenterPage = lazy(() => import("./pages/DrugSafetyCenterPage"));
 const RxPrescriptionDetail = lazy(() => import("./pages/RxPrescriptionsPage"));
 const RxPrescriptionsHome = lazy(() => import("./pages/RxPrescriptionsPage").then((m) => ({ default: m.RxPrescriptionsHome })));
 const ClinicalProtocolDetail = lazy(() => import("./pages/ClinicalProtocolsPage"));
@@ -74,6 +77,8 @@ import PedsMedicationsAdmin from "./admin/PedsMedicationsAdmin";
 import HighAlertRefAdmin from "./admin/HighAlertRefAdmin";
 import RxPrescriptionsAdmin from "./admin/RxPrescriptionsAdmin";
 import ClinicalProtocolsAdmin from "./admin/ClinicalProtocolsAdmin";
+import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
+import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
 import { EarningsAdmin, AdsManager, AffiliateManager, PaymentsAdmin } from "./admin/Monetization";
 import { AnalyticsAdmin } from "./admin/Analytics";
 import { TrashAdmin, VersionsAdmin, MaintenanceAdmin, NotificationsAdmin } from "./admin/SystemAdmin";
@@ -199,6 +204,9 @@ export default function App() {
                   <Route path="/drugs/peds-medications/:id" element={<Public><PedsMedicationDetail /></Public>} />
                   <Route path="/drugs/high-alert-ref" element={<Public><HighAlertRefPage /></Public>} />
                   <Route path="/drugs/lasa" element={<Public><LasaPage /></Public>} />
+                  <Route path="/drugs/organ-dose" element={<Public><OrganDoseAdjustmentsPage /></Public>} />
+                  <Route path="/drugs/pregnancy-lactation" element={<Public><PregnancyLactationPage /></Public>} />
+                  <Route path="/drugs/safety-center" element={<Public><DrugSafetyCenterPage /></Public>} />
                   <Route path="/drugs/prescriptions" element={<Public><RxPrescriptionsHome /></Public>} />
                   <Route path="/drugs/prescriptions/:id" element={<Public><RxPrescriptionDetail /></Public>} />
                   <Route path="/drugs/protocols/:id" element={<Public><ClinicalProtocolDetail /></Public>} />
@@ -251,6 +259,8 @@ export default function App() {
                   <Route path="/admin/high-alert-ref" element={<Admin><HighAlertRefAdmin /></Admin>} />
                   <Route path="/admin/prescriptions" element={<Admin><RxPrescriptionsAdmin /></Admin>} />
                   <Route path="/admin/protocols" element={<Admin><ClinicalProtocolsAdmin /></Admin>} />
+                  <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
+                  <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />
                   <Route path="/admin/quizzes" element={<Admin><QuizAdmin /></Admin>} />
                   <Route path="/admin/pages" element={<Admin><PagesAdmin /></Admin>} />
                   <Route path="/admin/categories" element={<Admin><CategoriesAdmin /></Admin>} />
