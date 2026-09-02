@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { fetchERMedications, ER_CATEGORY_ORDER, type ERMedication } from "../lib/erMedApi";
 import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
 import CrossRefBox from "../components/CrossRefBox";
+import SafetyLinksBox from "../components/SafetyLinksBox";
 import PrintButton from "../components/PrintButton";
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -153,6 +154,7 @@ export default function ERMedicationDetail() {
       </div>
 
       <div className="print:hidden"><CrossRefBox table="er_medications" id={item.id} /></div>
+      <div className="print:hidden"><SafetyLinksBox table="er_medications" id={item.id} /></div>
 
       {item.show_image && item.image_url && (
         <div className="mb-6 mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">

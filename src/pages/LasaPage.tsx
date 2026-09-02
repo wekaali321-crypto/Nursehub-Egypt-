@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { fetchLasaPairs, type LasaPair } from "../lib/lasaApi";
 
 const SIMILARITY_LABELS: Record<string, string> = {
@@ -18,12 +19,22 @@ function TallMan({ a, b }: { a: string | null; b: string | null }) {
 }
 
 export default function LasaPage() {
+  const [searchParams] = useSearchParams();
   const [pairs, setPairs] = useState<LasaPair[]>([]);
   const [loading, setLoading] = useState(true);
+  const [q, setQ] = useState(searchParams.get("q") || "");
 
   useEffect(() => {
     fetchLasaPairs().then(setPairs).catch(() => setPairs([])).finally(() => setLoading(false));
   }, []);
+
+  const query = q.trim().toLowerCase();
+  const filtered = useMemo(() => {
+    if (!query) return pairs;
+    return pairs.filter(
+      (p) => p.drug_a.toLowerCase().includes(query) || p.drug_b.toLowerCase().includes(query)
+    );
+  }, [pairs, query]);
 
   if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">جارِ التحميل...</div>;
 
@@ -38,8 +49,22 @@ export default function LasaPage() {
         </p>
       </div>
 
+      <div className="relative mb-6">
+        <input
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          placeholder="ابحث عن اسم دواء..."
+          className="w-full rounded-xl border border-slate-200 bg-white py-3 pr-11 pl-3 outline-none focus:border-green-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+        />
+        <span className="absolute right-4 top-3.5 text-slate-400">🔍</span>
+      </div>
+
+      {filtered.length === 0 && (
+        <div className="text-center text-slate-500 dark:text-slate-400 py-10">لا توجد نتائج مطابقة لبحثك.</div>
+      )}
+
       <div className="space-y-4">
-        {pairs.map((p) => (
+        {filtered.map((p) => (
           <div key={p.id} className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 dark:bg-slate-900 dark:border-slate-800">
             <div className="flex items-center justify-between flex-wrap gap-2 mb-1">
               <div className="font-bold text-lg text-slate-800 dark:text-white">{p.drug_a} ↔ {p.drug_b}</div>

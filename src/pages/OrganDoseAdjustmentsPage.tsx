@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   fetchOrganDoseAdjustments,
   type OrganDoseAdjustment,
@@ -58,10 +59,13 @@ function DrugCard({ item, open, onToggle }: { item: OrganDoseAdjustment; open: b
 }
 
 export default function OrganDoseAdjustmentsPage() {
+  const [searchParams] = useSearchParams();
   const [items, setItems] = useState<OrganDoseAdjustment[]>([]);
   const [loading, setLoading] = useState(true);
-  const [tab, setTab] = useState<OrganAdjustmentType>("renal");
-  const [q, setQ] = useState("");
+  const [tab, setTab] = useState<OrganAdjustmentType>(
+    searchParams.get("tab") === "hepatic" ? "hepatic" : "renal"
+  );
+  const [q, setQ] = useState(searchParams.get("q") || "");
   const [openIds, setOpenIds] = useState<Set<string>>(new Set());
 
   useEffect(() => {

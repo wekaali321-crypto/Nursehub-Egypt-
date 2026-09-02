@@ -4,6 +4,7 @@ import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO, breadcrumbSchema } from "../lib/seo";
 import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
 import CrossRefBox from "../components/CrossRefBox";
+import SafetyLinksBox from "../components/SafetyLinksBox";
 import PrintButton from "../components/PrintButton";
 
 export default function DrugPage() {
@@ -86,6 +87,7 @@ export default function DrugPage() {
       </div>
 
       <div className="print:hidden"><CrossRefBox table="drugs" id={drug.id} /></div>
+      <div className="print:hidden"><SafetyLinksBox table="drugs" id={drug.id} /></div>
 
       {drug.showImage && drug.imageUrl && (
         <div className="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
