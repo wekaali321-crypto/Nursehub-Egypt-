@@ -153,7 +153,8 @@ function Public({ children }: { children: ReactNode }) {
 }
 
 function Admin({ children }: { children: ReactNode }) {
-  const { loggedIn } = useAuth();
+  const { loggedIn, checking } = useAuth();
+  if (checking) return <Loader />;
   if (!loggedIn) return <Login />;
   return (
     <AdminLayout>

@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { useToast } from "../components/Toast";
 import { printInvoice } from "../lib/invoice";
+import { fromOrder } from "../lib/dataApi";
 import type { Order } from "../lib/types";
 
 const card = "rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900";
@@ -15,12 +16,37 @@ const statusStyle: Record<string, string> = {
 const statusLabel: Record<string, string> = { paid: "مدفوع", pending: "قيد الانتظار", failed: "فشل", refunded: "مسترجع" };
 
 export function OrdersAdmin() {
-  const { orders, commerce, setData, logActivity } = useStore();
+  const { commerce, logActivity } = useStore();
   const { notify } = useToast();
+  const [orders, setOrders] = useState<Order[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState("");
   const [filter, setFilter] = useState("all");
   const [params] = useSearchParams();
   const highlightInv = params.get("inv");
   const rowRef = useRef<HTMLTableRowElement | null>(null);
+
+  // Orders contain customer PII and payment data, so they're deliberately
+  // NOT readable/writable through the public Supabase client (there's no
+  // RLS policy granting an admin-wide read or any update at all) — this
+  // panel talks to the /api/admin-orders serverless function instead,
+  // which uses the service-role key behind its own session check.
+  const load = useCallback(async () => {
+    setLoading(true);
+    setLoadError("");
+    try {
+      const res = await fetch("/api/admin-orders", { credentials: "include" });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || `HTTP ${res.status}`);
+      setOrders((json.orders || []).map(fromOrder));
+    } catch (e: any) {
+      setLoadError(e?.message || "تعذّر تحميل الطلبات");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => { load(); }, [load]);
 
   useEffect(() => {
     if (highlightInv) setFilter("all"); // make sure the linked order isn't hidden by a status filter
@@ -30,11 +56,34 @@ export function OrdersAdmin() {
     if (highlightInv && rowRef.current) rowRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
   }, [highlightInv, orders]);
 
-  const setStatus = (id: string, paymentStatus: Order["paymentStatus"]) => {
-    setData((d) => ({ ...d, orders: d.orders.map((o) => (o.id === id ? { ...o, paymentStatus } : o)) }));
-    logActivity("تحديث حالة طلب", id);
-    notify("تم تحديث حالة الطلب");
+  const setStatus = async (id: string, paymentStatus: Order["paymentStatus"]) => {
+    try {
+      const res = await fetch("/api/admin-orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ action: "updateStatus", orderId: id, status: paymentStatus }),
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || `HTTP ${res.status}`);
+      setOrders((prev) => prev.map((o) => (o.id === id ? { ...o, paymentStatus } : o)));
+      logActivity("تحديث حالة طلب", id);
+      notify("تم تحديث حالة الطلب");
+    } catch (e: any) {
+      notify(e?.message || "تعذّر تحديث حالة الطلب", "error");
+    }
   };
+
+  if (loading) return <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">جارٍ تحميل الطلبات...</div>;
+  if (loadError) {
+    return (
+      <div className="rounded-2xl border border-dashed border-rose-300 py-16 text-center text-rose-500 dark:border-rose-800">
+        <div className="text-4xl">⚠️</div>
+        <p className="mt-2">{loadError}</p>
+        <button onClick={load} className="mt-3 rounded-lg bg-sky-500 px-4 py-1.5 text-sm font-bold text-white">إعادة المحاولة</button>
+      </div>
+    );
+  }
 
   const list = filter === "all" ? orders : orders.filter((o) => o.paymentStatus === filter);
   const revenue = orders.filter((o) => o.paymentStatus === "paid").reduce((s, o) => s + o.total, 0);
