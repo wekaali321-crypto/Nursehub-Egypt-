@@ -94,7 +94,7 @@ const fromUser = (r: any) => ({ id: r.id, name: r.name, email: r.email, role: r.
 const toUser = (u: any) => ({ id: u.id, name: u.name, email: u.email, role: u.role });
 
 const fromPage = (r: any) => ({ id: r.id, title: r.title, slug: r.slug, content: r.content, status: r.status });
-const fromTax = (r: any) => ({ id: r.id, name: r.name, slug: r.slug });
+const fromTax = (r: any) => ({ id: r.id, name: r.name, slug: r.slug, nameEn: r.name_en });
 const fromSub = (r: any) => ({ id: r.id, email: r.email, date: r.created_at?.slice(0, 10) ?? "", status: r.status });
 const toSub = (s: any) => ({ id: s.id, email: s.email, status: s.status });
 const fromAd = (r: any) => ({ id: r.id, name: r.name, placement: r.placement, type: r.type, code: r.code, active: r.active });
@@ -208,8 +208,8 @@ const UPSERT: Partial<Record<Entity, { table: string; to: (x: any) => any }>> = 
   otcConditions: { table: TABLES.otcConditions, to: toOTC },
   subscribers: { table: TABLES.subscribers, to: toSub },
   pages: { table: TABLES.pages, to: (p: any) => ({ id: p.id, title: p.title, slug: p.slug, content: p.content, status: p.status }) },
-  categories: { table: TABLES.categories, to: (t: any) => ({ id: t.id, name: t.name, slug: t.slug }) },
-  tags: { table: TABLES.tags, to: (t: any) => ({ id: t.id, name: t.name, slug: t.slug }) },
+  categories: { table: TABLES.categories, to: (t: any) => ({ id: t.id, name: t.name, slug: t.slug, name_en: t.nameEn ?? null }) },
+  tags: { table: TABLES.tags, to: (t: any) => ({ id: t.id, name: t.name, slug: t.slug, name_en: t.nameEn ?? null }) },
   ads: { table: TABLES.ads, to: (a: any) => ({ id: a.id, name: a.name, placement: a.placement, type: a.type, code: a.code, active: a.active }) },
   affiliates: { table: TABLES.affiliates, to: (a: any) => ({ id: a.id, name: a.name, url: a.url, network: a.network, commission: a.commission, clicks: a.clicks }) },
   redirects: { table: TABLES.redirects, to: (r: any) => ({ id: r.id, from: r.from, to: r.to, type: r.type }) },
