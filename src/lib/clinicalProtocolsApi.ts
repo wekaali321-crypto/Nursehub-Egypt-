@@ -26,6 +26,11 @@ export interface ClinicalProtocol {
   red_flags: string[] | null;
   key_values: Record<string, string> | null;
   phases: ProtocolPhase[];
+  summary_en?: string | null;
+  guideline_source_en?: string | null;
+  red_flags_en?: string[] | null;
+  key_values_en?: Record<string, string> | null;
+  phases_en?: ProtocolPhase[] | null;
 }
 
 export async function fetchClinicalProtocols(): Promise<ClinicalProtocol[]> {
