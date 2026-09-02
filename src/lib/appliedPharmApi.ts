@@ -19,6 +19,13 @@ export interface AppliedPharmItem {
   answer: string | null;
   disease_name: string | null;
   treatment_lines: TreatmentLine[] | null;
+  topic_en?: string | null;
+  title_en?: string | null;
+  content_en?: string | null;
+  question_en?: string | null;
+  answer_en?: string | null;
+  disease_name_en?: string | null;
+  treatment_lines_en?: TreatmentLine[] | null;
 }
 
 export async function fetchAppliedPharmItems(part?: 1 | 2): Promise<AppliedPharmItem[]> {

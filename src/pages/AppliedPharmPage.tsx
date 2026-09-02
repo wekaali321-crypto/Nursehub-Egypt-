@@ -4,36 +4,72 @@ import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { fetchAppliedPharmItems, type AppliedPharmItem } from "../lib/appliedPharmApi";
 import { useStore } from "../lib/store";
+import { useI18n, bilingual } from "../lib/i18n";
+import InlineLangToggle from "../components/InlineLangToggle";
 
-const TYPE_META: Record<string, { label: string; icon: string; classes: string }> = {
-  fact: { label: "معلومة", icon: "📌", classes: "border-sky-200 bg-sky-50 dark:border-sky-900/50 dark:bg-sky-950/30" },
-  qa: { label: "سؤال وجواب", icon: "💬", classes: "border-violet-200 bg-violet-50 dark:border-violet-900/50 dark:bg-violet-950/30" },
-  alert: { label: "تنبيه صيدلاني", icon: "⚠️", classes: "border-red-200 bg-red-50 dark:border-red-900/50 dark:bg-red-950/30" },
-  trivia: { label: "هل تعلم؟", icon: "💡", classes: "border-yellow-200 bg-yellow-50 dark:border-yellow-900/50 dark:bg-yellow-950/30" },
-  note: { label: "ملاحظة", icon: "📝", classes: "border-emerald-200 bg-emerald-50 dark:border-emerald-900/50 dark:bg-emerald-950/30" },
+const LABELS = {
+  drugsCrumb: { ar: "الأدوية", en: "Drugs" },
+  bankCrumb: { ar: "بنك الصيدلية التعليمي", en: "Applied Pharmacy Bank" },
+  heroTitle: { ar: "بنك الصيدلية التعليمي", en: "Applied Pharmacy Bank" },
+  heroDesc: {
+    ar: "ملخصات دوائية عملية حسب الموضوع — معلومات، أسئلة وأجوبة، وتنبيهات صيدلانية — بالإضافة إلى خطط علاجية كاملة خطوة بخطوة لأشهر الحالات المرضية.",
+    en: "Practical drug summaries by topic - facts, Q&A, and pharmacist alerts - plus complete step-by-step treatment plans for the most common conditions.",
+  },
+  adBank: { ar: "إعلان بنك الصيدلية التعليمي", en: "Applied pharmacy bank ad" },
+  loading: { ar: "جارٍ التحميل...", en: "Loading..." },
+  topicsHeading: { ar: "📚 ملخصات حسب الموضوع", en: "📚 Summaries by Topic" },
+  noTopics: { ar: "لسه معملتش رفع محتوى — قريبًا.", en: "No content uploaded yet - coming soon." },
+  open: { ar: "افتح ←", en: "Open ←" },
+  plansHeading: { ar: "🩺 خطط علاجية كاملة", en: "🩺 Complete Treatment Plans" },
+  noPlans: { ar: "لسه معملتش رفع خطط علاجية — قريبًا.", en: "No treatment plans uploaded yet - coming soon." },
+  showPlan: { ar: "عرض الخطة ←", en: "View plan ←" },
+  backToDrugs: { ar: "← العودة لدليل الأدوية", en: "← Back to the drugs guide" },
+  itemCount: { ar: "عنصر", en: "items" },
+  adTopic: { ar: "إعلان الموضوع", en: "Topic ad" },
+  searchTopic: { ar: "ابحث في هذا الموضوع...", en: "Search this topic..." },
+  noResults: { ar: "مفيش نتائج.", en: "No results." },
+  allTopics: { ar: "← كل المواضيع", en: "← All topics" },
+  drugsGuide: { ar: "دليل الأدوية ←", en: "Drugs guide ←" },
+  fullPlan: { ar: "الخطة العلاجية الكاملة", en: "Complete Treatment Plan" },
+  planNotFound: { ar: "الخطة دي مش موجودة.", en: "This plan was not found." },
+  backToList: { ar: "الرجوع للقائمة", en: "Back to the list" },
+  adPlan: { ar: "إعلان الخطة العلاجية", en: "Treatment plan ad" },
+  allPlans: { ar: "← كل الخطط العلاجية", en: "← All treatment plans" },
 };
 
-function ItemCard({ item }: { item: AppliedPharmItem }) {
+const TYPE_META: Record<string, { label: { ar: string; en: string }; icon: string; classes: string }> = {
+  fact: { label: { ar: "معلومة", en: "Fact" }, icon: "📌", classes: "border-sky-200 bg-sky-50 dark:border-sky-900/50 dark:bg-sky-950/30" },
+  qa: { label: { ar: "سؤال وجواب", en: "Q&A" }, icon: "💬", classes: "border-violet-200 bg-violet-50 dark:border-violet-900/50 dark:bg-violet-950/30" },
+  alert: { label: { ar: "تنبيه صيدلاني", en: "Pharmacist Alert" }, icon: "⚠️", classes: "border-red-200 bg-red-50 dark:border-red-900/50 dark:bg-red-950/30" },
+  trivia: { label: { ar: "هل تعلم؟", en: "Did You Know?" }, icon: "💡", classes: "border-yellow-200 bg-yellow-50 dark:border-yellow-900/50 dark:bg-yellow-950/30" },
+  note: { label: { ar: "ملاحظة", en: "Note" }, icon: "📝", classes: "border-emerald-200 bg-emerald-50 dark:border-emerald-900/50 dark:bg-emerald-950/30" },
+};
+
+function ItemCard({ item, lang }: { item: AppliedPharmItem; lang: "ar" | "en" }) {
   const meta = TYPE_META[item.item_type] || TYPE_META.fact;
+  const title = bilingual(item.title, item.title_en, lang).text;
+  const content = bilingual(item.content, item.content_en, lang).text;
+  const question = bilingual(item.question, item.question_en, lang).text;
+  const answer = bilingual(item.answer, item.answer_en, lang).text;
   return (
     <div className={`rounded-2xl border p-5 shadow-sm ${meta.classes}`}>
       <div className="mb-2 flex items-center gap-2">
         <span className="flex h-7 items-center gap-1 rounded-full bg-white/70 px-3 text-xs font-bold text-slate-600 shadow-sm dark:bg-slate-900/50 dark:text-slate-300">
           <span>{meta.icon}</span>
-          <span>{meta.label}</span>
+          <span>{meta.label[lang]}</span>
         </span>
-        {item.title && <span className="text-xs font-bold text-slate-500 dark:text-slate-400">{item.title}</span>}
+        {title && <span className="text-xs font-bold text-slate-500 dark:text-slate-400">{title}</span>}
       </div>
 
       {item.item_type === "qa" ? (
         <div className="space-y-2">
-          <p className="font-bold text-slate-800 dark:text-white">؟ {item.question}</p>
+          <p className="font-bold text-slate-800 dark:text-white">؟ {question}</p>
           <p className="whitespace-pre-line rounded-xl bg-white/60 p-3 text-[15px] leading-8 text-slate-700 dark:bg-slate-900/40 dark:text-slate-300">
-            {item.answer}
+            {answer}
           </p>
         </div>
       ) : (
-        <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{item.content}</p>
+        <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{content}</p>
       )}
     </div>
   );
@@ -41,6 +77,7 @@ function ItemCard({ item }: { item: AppliedPharmItem }) {
 
 export function AppliedPharmHome() {
   const { settings } = useStore();
+  const { lang } = useI18n();
   const [items, setItems] = useState<AppliedPharmItem[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -55,10 +92,11 @@ export function AppliedPharmHome() {
   }, []);
 
   const part1Topics = useMemo(() => {
-    const map = new Map<string, { icon: string; count: number }>();
+    const map = new Map<string, { icon: string; count: number; topicEn?: string | null }>();
     items.filter((i) => i.part === 1).forEach((i) => {
-      const cur = map.get(i.topic) || { icon: i.topic_icon || "💊", count: 0 };
+      const cur = map.get(i.topic) || { icon: i.topic_icon || "💊", count: 0, topicEn: i.topic_en };
       cur.count++;
+      if (!cur.topicEn && i.topic_en) cur.topicEn = i.topic_en;
       map.set(i.topic, cur);
     });
     return Array.from(map.entries()).map(([topic, v]) => ({ topic, ...v }));
@@ -71,31 +109,31 @@ export function AppliedPharmHome() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">
-      <Breadcrumbs items={[{ label: "الأدوية", path: "/drugs" }, { label: "بنك الصيدلية التعليمي" }]} />
+      <Breadcrumbs items={[{ label: LABELS.drugsCrumb[lang], path: "/drugs" }, { label: LABELS.bankCrumb[lang] }]} />
 
       <div className="relative mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-indigo-700 via-violet-600 to-purple-500 p-6 text-white shadow-lg sm:p-10">
         <span className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-white/10" />
         <span className="pointer-events-none absolute -bottom-16 -right-10 h-56 w-56 rounded-full bg-white/5" />
         <div className="relative">
-          <div className="text-5xl sm:text-6xl">🧠</div>
-          <h1 className="mt-3 text-2xl font-black sm:text-4xl">بنك الصيدلية التعليمي</h1>
-          <p className="mt-2 max-w-2xl text-violet-50">
-            ملخصات دوائية عملية حسب الموضوع — معلومات، أسئلة وأجوبة، وتنبيهات صيدلانية — بالإضافة إلى
-            خطط علاجية كاملة خطوة بخطوة لأشهر الحالات المرضية.
-          </p>
+          <div className="flex items-start justify-between gap-2">
+            <div className="text-5xl sm:text-6xl">🧠</div>
+            <InlineLangToggle light />
+          </div>
+          <h1 className="mt-3 text-2xl font-black sm:text-4xl">{LABELS.heroTitle[lang]}</h1>
+          <p className="mt-2 max-w-2xl text-violet-50">{LABELS.heroDesc[lang]}</p>
         </div>
       </div>
 
-      <div className="mb-6"><AdSlot label="إعلان بنك الصيدلية التعليمي" /></div>
+      <div className="mb-6"><AdSlot label={LABELS.adBank[lang]} /></div>
 
-      {loading && <div className="py-10 text-center text-slate-400">جارٍ التحميل...</div>}
+      {loading && <div className="py-10 text-center text-slate-400">{LABELS.loading[lang]}</div>}
 
       {!loading && (
         <>
-          <h2 className="mb-3 text-lg font-black text-slate-800 dark:text-white">📚 ملخصات حسب الموضوع</h2>
+          <h2 className="mb-3 text-lg font-black text-slate-800 dark:text-white">{LABELS.topicsHeading[lang]}</h2>
           {part1Topics.length === 0 && (
             <div className="mb-8 rounded-2xl border border-dashed border-slate-300 py-8 text-center text-slate-400 dark:border-slate-700">
-              لسه معملتش رفع محتوى — قريبًا.
+              {LABELS.noTopics[lang]}
             </div>
           )}
           <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -109,16 +147,16 @@ export function AppliedPharmHome() {
                   <span className="text-3xl">{t.icon}</span>
                   <span className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold backdrop-blur">{t.count}</span>
                 </div>
-                <h3 className="mt-3 font-black leading-tight">{t.topic}</h3>
-                <span className="mt-2 inline-block text-sm font-bold text-white/90 group-hover:underline">افتح ←</span>
+                <h3 className="mt-3 font-black leading-tight">{bilingual(t.topic, t.topicEn, lang).text}</h3>
+                <span className="mt-2 inline-block text-sm font-bold text-white/90 group-hover:underline">{LABELS.open[lang]}</span>
               </Link>
             ))}
           </div>
 
-          <h2 className="mb-3 text-lg font-black text-slate-800 dark:text-white">🩺 خطط علاجية كاملة</h2>
+          <h2 className="mb-3 text-lg font-black text-slate-800 dark:text-white">{LABELS.plansHeading[lang]}</h2>
           {part2Plans.length === 0 && (
             <div className="rounded-2xl border border-dashed border-slate-300 py-8 text-center text-slate-400 dark:border-slate-700">
-              لسه معملتش رفع خطط علاجية — قريبًا.
+              {LABELS.noPlans[lang]}
             </div>
           )}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -129,9 +167,9 @@ export function AppliedPharmHome() {
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-500 p-5 text-white shadow-md transition hover:-translate-y-1 hover:shadow-xl"
               >
                 <span className="text-3xl">🩺</span>
-                <h3 className="mt-3 font-black leading-tight">{p.disease_name}</h3>
+                <h3 className="mt-3 font-black leading-tight">{bilingual(p.disease_name, p.disease_name_en, lang).text}</h3>
                 <span className="mt-2 inline-block text-sm font-bold text-white/90 group-hover:underline">
-                  عرض الخطة ←
+                  {LABELS.showPlan[lang]}
                 </span>
               </Link>
             ))}
@@ -140,7 +178,7 @@ export function AppliedPharmHome() {
       )}
 
       <div className="mt-8 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">← العودة لدليل الأدوية</Link>
+        <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">{LABELS.backToDrugs[lang]}</Link>
       </div>
     </div>
   );
@@ -149,6 +187,7 @@ export function AppliedPharmHome() {
 export function AppliedPharmTopicPage() {
   const { topic } = useParams();
   const { settings } = useStore();
+  const { lang } = useI18n();
   const decodedTopic = decodeURIComponent(topic || "");
   const [items, setItems] = useState<AppliedPharmItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -173,46 +212,52 @@ export function AppliedPharmTopicPage() {
     [items, decodedTopic, q]
   );
 
+  const topicEn = topicItems.find((i) => i.topic_en)?.topic_en;
+  const topicTitle = bilingual(decodedTopic, topicEn, lang).text;
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-8">
       <Breadcrumbs
         items={[
-          { label: "الأدوية", path: "/drugs" },
-          { label: "بنك الصيدلية التعليمي", path: "/drugs/applied-pharm" },
-          { label: decodedTopic },
+          { label: LABELS.drugsCrumb[lang], path: "/drugs" },
+          { label: LABELS.bankCrumb[lang], path: "/drugs/applied-pharm" },
+          { label: topicTitle },
         ]}
       />
 
       <div className="mb-6 rounded-3xl bg-gradient-to-l from-indigo-700 via-violet-600 to-purple-500 p-6 text-white sm:p-8">
-        <h1 className="text-2xl font-black sm:text-3xl">{decodedTopic}</h1>
-        <p className="mt-1 text-white/85">{topicItems.length} عنصر</p>
+        <div className="flex items-start justify-between gap-2">
+          <h1 className="text-2xl font-black sm:text-3xl">{topicTitle}</h1>
+          <InlineLangToggle light />
+        </div>
+        <p className="mt-1 text-white/85">{topicItems.length} {LABELS.itemCount[lang]}</p>
       </div>
 
-      <div className="mb-6"><AdSlot label="إعلان الموضوع" /></div>
+      <div className="mb-6"><AdSlot label={LABELS.adTopic[lang]} /></div>
 
       <input
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        placeholder="ابحث في هذا الموضوع..."
+        placeholder={LABELS.searchTopic[lang]}
         className="mb-5 w-full rounded-full border border-slate-200 px-5 py-3 dark:border-slate-700 dark:bg-slate-800"
       />
 
-      {loading && <div className="py-10 text-center text-slate-400">جارٍ التحميل...</div>}
+      {loading && <div className="py-10 text-center text-slate-400">{LABELS.loading[lang]}</div>}
 
       <div className="space-y-3">
         {topicItems.map((item) => (
-          <ItemCard key={item.id} item={item} />
+          <ItemCard key={item.id} item={item} lang={lang} />
         ))}
         {!loading && topicItems.length === 0 && (
           <div className="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-400 dark:border-slate-700">
-            مفيش نتائج.
+            {LABELS.noResults[lang]}
           </div>
         )}
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/applied-pharm" className="text-sky-600 hover:underline">← كل المواضيع</Link>
-        <Link to="/drugs" className="text-sky-600 hover:underline">دليل الأدوية ←</Link>
+        <Link to="/drugs/applied-pharm" className="text-sky-600 hover:underline">{LABELS.allTopics[lang]}</Link>
+        <Link to="/drugs" className="text-sky-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
       </div>
     </div>
   );
@@ -221,6 +266,7 @@ export function AppliedPharmTopicPage() {
 export default function AppliedPharmPlanPage() {
   const { id } = useParams();
   const { settings } = useStore();
+  const { lang } = useI18n();
   const [items, setItems] = useState<AppliedPharmItem[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -237,39 +283,44 @@ export default function AppliedPharmPlanPage() {
   });
 
   if (loading) {
-    return <div className="mx-auto max-w-3xl px-4 py-16 text-center text-slate-400">جارٍ التحميل...</div>;
+    return <div className="mx-auto max-w-3xl px-4 py-16 text-center text-slate-400">{LABELS.loading[lang]}</div>;
   }
 
   if (!plan) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-16 text-center">
-        <p className="mb-4 text-slate-400">الخطة دي مش موجودة.</p>
+        <p className="mb-4 text-slate-400">{LABELS.planNotFound[lang]}</p>
         <Link to="/drugs/applied-pharm" className="font-bold text-emerald-600 hover:underline">
-          الرجوع للقائمة
+          {LABELS.backToList[lang]}
         </Link>
       </div>
     );
   }
 
-  const lines = plan.treatment_lines || [];
+  const diseaseName = bilingual(plan.disease_name, plan.disease_name_en, lang).text;
+  const lines = (lang === "en" && plan.treatment_lines_en && plan.treatment_lines_en.length > 0 ? plan.treatment_lines_en : plan.treatment_lines) || [];
+  const planContent = bilingual(plan.content, plan.content_en, lang).text;
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8">
       <Breadcrumbs
         items={[
-          { label: "الأدوية", path: "/drugs" },
-          { label: "بنك الصيدلية التعليمي", path: "/drugs/applied-pharm" },
-          { label: plan.disease_name || "" },
+          { label: LABELS.drugsCrumb[lang], path: "/drugs" },
+          { label: LABELS.bankCrumb[lang], path: "/drugs/applied-pharm" },
+          { label: diseaseName || "" },
         ]}
       />
 
       <div className="mb-6 rounded-3xl bg-gradient-to-l from-blue-700 via-indigo-600 to-violet-500 p-6 text-white sm:p-8">
-        <div className="text-4xl sm:text-5xl">🩺</div>
-        <h1 className="mt-2 text-2xl font-black sm:text-3xl">الخطة العلاجية الكاملة</h1>
-        <p className="mt-1 text-white/90">{plan.disease_name}</p>
+        <div className="flex items-start justify-between gap-2">
+          <div className="text-4xl sm:text-5xl">🩺</div>
+          <InlineLangToggle light />
+        </div>
+        <h1 className="mt-2 text-2xl font-black sm:text-3xl">{LABELS.fullPlan[lang]}</h1>
+        <p className="mt-1 text-white/90">{diseaseName}</p>
       </div>
 
-      <div className="mb-6"><AdSlot label="إعلان الخطة العلاجية" /></div>
+      <div className="mb-6"><AdSlot label={LABELS.adPlan[lang]} /></div>
 
       <div className="space-y-4">
         {lines.map((l, idx) => (
@@ -283,16 +334,16 @@ export default function AppliedPharmPlanPage() {
             <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{l.content}</p>
           </div>
         ))}
-        {lines.length === 0 && plan.content && (
+        {lines.length === 0 && planContent && (
           <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
-            <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{plan.content}</p>
+            <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{planContent}</p>
           </div>
         )}
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/applied-pharm" className="text-sky-600 hover:underline">← كل الخطط العلاجية</Link>
-        <Link to="/drugs" className="text-sky-600 hover:underline">دليل الأدوية ←</Link>
+        <Link to="/drugs/applied-pharm" className="text-sky-600 hover:underline">{LABELS.allPlans[lang]}</Link>
+        <Link to="/drugs" className="text-sky-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
       </div>
     </div>
   );
