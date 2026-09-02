@@ -185,7 +185,7 @@ export function useI18n() {
  * Pick the right value from a bilingual pair, falling back gracefully.
  * Returns { text, fallback } so callers can show a "coming soon" note.
  */
-export function bilingual(ar: string | undefined, en: string | undefined, lang: Lang): { text: string; missing: boolean } {
+export function bilingual(ar: string | null | undefined, en: string | null | undefined, lang: Lang): { text: string; missing: boolean } {
   if (lang === "en") {
     if (en && en.trim()) return { text: en, missing: false };
     return { text: ar ?? "", missing: true };
