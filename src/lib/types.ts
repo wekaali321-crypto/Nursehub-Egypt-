@@ -180,8 +180,10 @@ export interface OTCCondition {
 export interface Page {
   id: string;
   title: string;
+  titleEn?: string;
   slug: string;
   content: string;
+  contentEn?: string;
   status: "published" | "draft";
 }
 
