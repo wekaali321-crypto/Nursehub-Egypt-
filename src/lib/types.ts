@@ -190,6 +190,7 @@ export interface Taxonomy {
   name: string;
   slug: string;
   count?: number;
+  nameEn?: string;
 }
 
 export interface Subscriber {

@@ -3,7 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { CATEGORY_ICONS, type Category } from "../lib/types";
 import { ArticleCard, Breadcrumbs, AdSlot } from "../components/common";
-import { useI18n, type TKey } from "../lib/i18n";
+import { useI18n, bilingual, type TKey } from "../lib/i18n";
+import InlineLangToggle from "../components/InlineLangToggle";
 
 const CAT_KEY: Record<Category, TKey> = {
   articles: "nav.articles", summaries: "nav.summaries", drugs: "nav.drugs",
@@ -18,13 +19,17 @@ const SKILL_PROTOCOL_LINKS = [
     to: "/drugs/protocols/proto_dka",
     icon: "🩸",
     title: "بروتوكول الحُماض الكيتوني السكري (DKA)",
+    titleEn: "Diabetic Ketoacidosis (DKA) Protocol",
     desc: "قائمة تحقق تفاعلية خطوة بخطوة وفق مبادئ JBDS/ADA — علّم على كل خطوة وتقدّمك يُحفظ تلقائيًا",
+    descEn: "An interactive step-by-step checklist based on JBDS/ADA guidelines — check off each step and your progress is saved automatically",
   },
   {
     to: "/drugs/protocols/proto_cabg",
     icon: "🫀",
     title: "بروتوكول جراحة المجازة التاجية (CABG)",
+    titleEn: "Coronary Artery Bypass Graft (CABG) Surgery Protocol",
     desc: "قائمة تحقق تفاعلية خطوة بخطوة وفق مبادئ ERAS Cardiac Surgery Society",
+    descEn: "An interactive step-by-step checklist based on ERAS Cardiac Surgery Society guidelines",
   },
 ];
 
@@ -33,7 +38,7 @@ export default function CategoryPage() {
   // e.g. /category/articles/nursing-fundamentals
   const { cat, sub } = useParams<{ cat: Category; sub?: string }>();
   const { articles, categories } = useStore();
-  const { t } = useI18n();
+  const { lang, t } = useI18n();
   const [sort, setSort] = useState("latest");
   const [tag, setTag] = useState("");
 
@@ -47,6 +52,7 @@ export default function CategoryPage() {
   );
 
   const activeSub = sub ? categories.find((c) => c.slug === sub) : undefined;
+  const activeSubName = activeSub ? bilingual(activeSub.name, activeSub.nameEn, lang).text : undefined;
 
   // Top level: only show articles that are NOT tucked into a sub-category
   // folder — otherwise they'd appear twice (once loose, once inside their
@@ -78,20 +84,21 @@ export default function CategoryPage() {
       <Breadcrumbs
         items={
           activeSub
-            ? [{ label: catLabel, path: `/category/${category}` }, { label: activeSub.name }]
+            ? [{ label: catLabel, path: `/category/${category}` }, { label: activeSubName! }]
             : [{ label: catLabel }]
         }
       />
+      <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
 
       <div className="mb-6 rounded-3xl bg-gradient-to-l from-sky-500 to-emerald-500 p-8 text-white">
         <div className="text-5xl">{activeSub ? "📁" : CATEGORY_ICONS[category]}</div>
-        <h1 className="mt-2 text-3xl font-black">{activeSub ? activeSub.name : catLabel}</h1>
+        <h1 className="mt-2 text-3xl font-black">{activeSub ? activeSubName : catLabel}</h1>
         <p className="mt-1 text-sky-50">{(activeSub ? list.length : totalInSection)} {t("common.item")}</p>
       </div>
 
       {!activeSub && category === "skills" && (
         <div className="mb-8">
-          <h2 className="mb-3 text-lg font-bold text-slate-800 dark:text-white">قوائم تحقق تفاعلية</h2>
+          <h2 className="mb-3 text-lg font-bold text-slate-800 dark:text-white">{t("cat.protocolChecklists")}</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             {SKILL_PROTOCOL_LINKS.map((s) => (
               <Link
@@ -100,9 +107,9 @@ export default function CategoryPage() {
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-600 to-cyan-700 p-5 text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
               >
                 <div className="text-3xl mb-2">{s.icon}</div>
-                <div className="font-bold">{s.title}</div>
-                <p className="mt-1 text-sm text-white/85">{s.desc}</p>
-                <span className="mt-3 inline-block text-sm font-bold text-white/90 group-hover:underline">افتح ←</span>
+                <div className="font-bold">{bilingual(s.title, s.titleEn, lang).text}</div>
+                <p className="mt-1 text-sm text-white/85">{bilingual(s.desc, s.descEn, lang).text}</p>
+                <span className="mt-3 inline-block text-sm font-bold text-white/90 group-hover:underline">{t("cat.open")}</span>
               </Link>
             ))}
           </div>
@@ -114,7 +121,7 @@ export default function CategoryPage() {
           /category/:cat/:sub and shows only that folder's articles. */}
       {!activeSub && subcats.length > 0 && (
         <div className="mb-8">
-          <h2 className="mb-3 text-lg font-bold text-slate-800 dark:text-white">التصنيفات الفرعية</h2>
+          <h2 className="mb-3 text-lg font-bold text-slate-800 dark:text-white">{t("cat.subcategories")}</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {subcats.map((c) => {
               const count = articles.filter(
@@ -128,7 +135,7 @@ export default function CategoryPage() {
                 >
                   <div>
                     <div className="font-bold text-slate-800 group-hover:text-sky-600 dark:text-white">
-                      📁 {c.name}
+                      📁 {bilingual(c.name, c.nameEn, lang).text}
                     </div>
                     <div className="text-xs text-slate-400">{count} {t("common.item")}</div>
                   </div>
