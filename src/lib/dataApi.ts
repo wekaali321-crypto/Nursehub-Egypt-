@@ -87,8 +87,8 @@ const toOTC = (o: any) => ({ id: o.id, order_num: o.orderNum ?? 0, name_ar: o.na
 
 // Product now also carries fileUrl <-> file_url: the actual deliverable
 // (PDF/doc/video) sent to buyers after payment, uploaded via the Media Library.
-const fromProduct = (r: any) => ({ id: r.id, title: r.title, type: r.type, price: r.price, oldPrice: r.old_price, cover: r.cover, description: r.description, sales: r.sales ?? 0, fileUrl: r.file_url });
-const toProduct = (p: any) => ({ id: p.id, title: p.title, type: p.type, price: p.price, old_price: p.oldPrice ?? null, cover: p.cover, description: p.description, sales: p.sales ?? 0, file_url: p.fileUrl ?? null });
+const fromProduct = (r: any) => ({ id: r.id, title: r.title, titleEn: r.title_en ?? "", type: r.type, price: r.price, oldPrice: r.old_price, cover: r.cover, description: r.description, descriptionEn: r.description_en ?? "", sales: r.sales ?? 0, fileUrl: r.file_url });
+const toProduct = (p: any) => ({ id: p.id, title: p.title, title_en: p.titleEn ?? null, type: p.type, price: p.price, old_price: p.oldPrice ?? null, cover: p.cover, description: p.description, description_en: p.descriptionEn ?? null, sales: p.sales ?? 0, file_url: p.fileUrl ?? null });
 
 const fromUser = (r: any) => ({ id: r.id, name: r.name, email: r.email, role: r.role });
 const toUser = (u: any) => ({ id: u.id, name: u.name, email: u.email, role: u.role });
