@@ -255,8 +255,8 @@ export const seedPharmMnemonics: PharmMnemonic[] = [
 ];
 
 export const seedPages: Page[] = [
-  { id: "pg1", title: "من نحن", slug: "about", content: "<p>صفحة من نحن.</p>", status: "published" },
-  { id: "pg2", title: "سياسة الخصوصية", slug: "privacy", content: "<p>سياسة الخصوصية.</p>", status: "published" },
+  { id: "pg1", title: "من نحن", titleEn: "About Us", slug: "about", content: "<p>صفحة من نحن.</p>", contentEn: "<p>About us page.</p>", status: "published" },
+  { id: "pg2", title: "سياسة الخصوصية", titleEn: "Privacy Policy", slug: "privacy", content: "<p>سياسة الخصوصية.</p>", contentEn: "<p>Privacy policy.</p>", status: "published" },
 ];
 
 export const seedCategories: Taxonomy[] = [

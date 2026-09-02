@@ -14,7 +14,7 @@ export function PagesAdmin() {
 
   const save = () => {
     if (!form.title) return notify("أدخل عنوان الصفحة", "error");
-    const p: Page = { id: form.id || "pg" + Date.now(), title: form.title!, slug: form.slug || slugify(form.title!), content: form.content || "", status: (form.status as Page["status"]) || "published" };
+    const p: Page = { id: form.id || "pg" + Date.now(), title: form.title!, titleEn: form.titleEn || undefined, slug: form.slug || slugify(form.title!), content: form.content || "", contentEn: form.contentEn || undefined, status: (form.status as Page["status"]) || "published" };
     setData((d) => ({ ...d, pages: form.id ? d.pages.map((x) => (x.id === form.id ? p : x)) : [p, ...d.pages] }));
     logActivity(form.id ? "تعديل صفحة" : "إنشاء صفحة", p.title);
     setForm({ status: "published" });
@@ -39,8 +39,10 @@ export function PagesAdmin() {
       <div className={`space-y-3 ${card}`}>
         <h3 className="font-bold dark:text-white">{form.id ? "✏️ تعديل صفحة" : "➕ صفحة جديدة"}</h3>
         <input placeholder="عنوان الصفحة" value={form.title ?? ""} onChange={(e) => setForm({ ...form, title: e.target.value })} className={inp} />
+        <input placeholder="عنوان الصفحة بالإنجليزي" value={form.titleEn ?? ""} onChange={(e) => setForm({ ...form, titleEn: e.target.value })} className={inp} dir="ltr" />
         <input placeholder="الرابط (slug)" value={form.slug ?? ""} onChange={(e) => setForm({ ...form, slug: e.target.value })} className={inp} />
         <textarea placeholder="محتوى الصفحة (HTML)" rows={6} value={form.content ?? ""} onChange={(e) => setForm({ ...form, content: e.target.value })} className={inp} />
+        <textarea placeholder="محتوى الصفحة بالإنجليزي (HTML)" rows={6} value={form.contentEn ?? ""} onChange={(e) => setForm({ ...form, contentEn: e.target.value })} className={inp} dir="ltr" />
         <select value={form.status} onChange={(e) => setForm({ ...form, status: e.target.value as Page["status"] })} className={inp}><option value="published">منشورة</option><option value="draft">مسودة</option></select>
         <button onClick={save} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">حفظ</button>
         {form.id && <button onClick={() => setForm({ status: "published" })} className="w-full rounded-lg border border-slate-200 py-2 text-sm font-bold dark:border-slate-700">إلغاء</button>}
