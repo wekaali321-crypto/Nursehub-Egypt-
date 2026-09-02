@@ -57,11 +57,13 @@ export function ProductsAdmin() {
     setEditingId(p.id);
     setForm({
       title: p.title,
+      titleEn: p.titleEn,
       type: p.type,
       price: p.price,
       oldPrice: p.oldPrice,
       cover: p.cover,
       description: p.description,
+      descriptionEn: p.descriptionEn,
       fileUrl: p.fileUrl,
     });
     // تمرير لمكان الفورم مفيد على الموبايل
@@ -73,11 +75,13 @@ export function ProductsAdmin() {
     const p: Product = {
       id: "p" + Date.now(),
       title: form.title!,
+      titleEn: form.titleEn || undefined,
       type: form.type as Product["type"],
       price: Number(form.price) || 0,
       oldPrice: form.oldPrice ? Number(form.oldPrice) : undefined,
       cover: form.cover || "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&q=80",
       description: form.description || "",
+      descriptionEn: form.descriptionEn || undefined,
       sales: 0,
       fileUrl: form.fileUrl,
     };
@@ -107,11 +111,13 @@ export function ProductsAdmin() {
           ? {
               ...p,
               title: form.title!,
+              titleEn: form.titleEn ?? p.titleEn,
               type: form.type as Product["type"],
               price: Number(form.price) || 0,
               oldPrice: form.oldPrice ? Number(form.oldPrice) : undefined,
               cover: form.cover || p.cover,
               description: form.description ?? p.description,
+              descriptionEn: form.descriptionEn ?? p.descriptionEn,
               fileUrl: form.fileUrl ?? p.fileUrl,
             }
           : p
@@ -164,6 +170,7 @@ export function ProductsAdmin() {
           {editingId && <button onClick={resetForm} className="text-xs font-bold text-slate-400 hover:text-slate-600">إلغاء</button>}
         </div>
         <input placeholder="اسم المنتج" value={form.title ?? ""} onChange={(e) => setForm({ ...form, title: e.target.value })} className={inp} />
+        <input placeholder="اسم المنتج بالإنجليزي" value={form.titleEn ?? ""} onChange={(e) => setForm({ ...form, titleEn: e.target.value })} className={inp} dir="ltr" />
         <select value={form.type} onChange={(e) => setForm({ ...form, type: e.target.value as Product["type"] })} className={inp}><option value="pdf">ملف PDF</option><option value="course">كورس</option><option value="subscription">اشتراك</option></select>
         <input type="number" placeholder="السعر" value={form.price ?? ""} onChange={(e) => setForm({ ...form, price: Number(e.target.value) })} className={inp} />
         <input type="number" placeholder="السعر القديم (اختياري)" value={form.oldPrice ?? ""} onChange={(e) => setForm({ ...form, oldPrice: Number(e.target.value) })} className={inp} />
@@ -188,6 +195,7 @@ export function ProductsAdmin() {
         </div>
 
         <textarea placeholder="الوصف" value={form.description ?? ""} onChange={(e) => setForm({ ...form, description: e.target.value })} rows={2} className={inp} />
+        <textarea placeholder="الوصف بالإنجليزي" value={form.descriptionEn ?? ""} onChange={(e) => setForm({ ...form, descriptionEn: e.target.value })} rows={2} className={inp} dir="ltr" />
         {editingId ? (
           <button onClick={saveEdit} className="w-full rounded-lg bg-sky-500 py-2 font-bold text-white">حفظ التعديلات</button>
         ) : (

@@ -243,11 +243,13 @@ export interface Rating {
 export interface Product {
   id: string;
   title: string;
+  titleEn?: string;
   type: "pdf" | "course" | "subscription";
   price: number;
   oldPrice?: number;
   cover: string;
   description: string;
+  descriptionEn?: string;
   sales: number;
   slug?: string;
   gallery?: string[];
