@@ -58,22 +58,22 @@ const fromDrug = (r: any) => ({ id: r.id, name: r.name, genericName: r.generic_n
 const toDrug = (d: any) => ({ id: d.id, name: d.name, generic_name: d.genericName, drug_class: d.drugClass, category: d.category, dose: d.dose, indications: d.indications, side_effects: d.sideEffects, nursing_considerations: d.nursingConsiderations, contraindications: d.contraindications ?? "", storage: d.storage ?? "", references: d.references ?? "", slug: d.slug, is_high_alert: d.isHighAlert ?? false, high_alert_warnings: d.highAlertWarnings ?? "", high_alert_type: d.highAlertType ?? [], image_url: d.imageUrl ?? "", show_image: d.showImage ?? false, name_en: d.nameEn ?? null, generic_name_en: d.genericNameEn ?? null, drug_class_en: d.drugClassEn ?? null, category_en: d.categoryEn ?? null, dose_en: d.doseEn ?? null, indications_en: d.indicationsEn ?? null, side_effects_en: d.sideEffectsEn ?? null, nursing_considerations_en: d.nursingConsiderationsEn ?? null, contraindications_en: d.contraindicationsEn ?? null, storage_en: d.storageEn ?? null, references_en: d.referencesEn ?? null, high_alert_warnings_en: d.highAlertWarningsEn ?? null });
 
 // تفاعلات الأدوية مع بعض (drug-drug interactions)
-const fromInteraction = (r: any) => ({ id: r.id, drugAId: r.drug_a_id, drugBId: r.drug_b_id, severity: r.severity, description: r.description, management: r.management ?? "" });
-const toInteraction = (i: any) => ({ id: i.id, drug_a_id: i.drugAId, drug_b_id: i.drugBId, severity: i.severity, description: i.description, management: i.management ?? "" });
+const fromInteraction = (r: any) => ({ id: r.id, drugAId: r.drug_a_id, drugBId: r.drug_b_id, severity: r.severity, description: r.description, management: r.management ?? "", descriptionEn: r.description_en ?? "", managementEn: r.management_en ?? "" });
+const toInteraction = (i: any) => ({ id: i.id, drug_a_id: i.drugAId, drug_b_id: i.drugBId, severity: i.severity, description: i.description, management: i.management ?? "", description_en: i.descriptionEn ?? null, management_en: i.managementEn ?? null });
 
 // الترياقات الطبية (toxin -> antidote)
-const fromAntidote = (r: any) => ({ id: r.id, toxin: r.toxin, antidotes: r.antidotes, notes: r.notes ?? "" });
-const toAntidote = (a: any) => ({ id: a.id, toxin: a.toxin, antidotes: a.antidotes, notes: a.notes ?? "" });
+const fromAntidote = (r: any) => ({ id: r.id, toxin: r.toxin, antidotes: r.antidotes, notes: r.notes ?? "", toxinEn: r.toxin_en ?? "", antidotesEn: r.antidotes_en ?? "", notesEn: r.notes_en ?? "" });
+const toAntidote = (a: any) => ({ id: a.id, toxin: a.toxin, antidotes: a.antidotes, notes: a.notes ?? "", toxin_en: a.toxinEn ?? null, antidotes_en: a.antidotesEn ?? null, notes_en: a.notesEn ?? null });
 
 // الأصناف الدوائية العامة
-const fromClassification = (r: any) => ({ id: r.id, name: r.name, description: r.description, examples: r.examples ?? "" });
-const toClassification = (c: any) => ({ id: c.id, name: c.name, description: c.description, examples: c.examples ?? "" });
+const fromClassification = (r: any) => ({ id: r.id, name: r.name, description: r.description, examples: r.examples ?? "", nameEn: r.name_en ?? "", descriptionEn: r.description_en ?? "", examplesEn: r.examples_en ?? "" });
+const toClassification = (c: any) => ({ id: c.id, name: c.name, description: c.description, examples: c.examples ?? "", name_en: c.nameEn ?? null, description_en: c.descriptionEn ?? null, examples_en: c.examplesEn ?? null });
 
-const fromSuffix = (r: any) => ({ id: r.id, suffix: r.suffix, className: r.class_name, examples: r.examples ?? "" });
-const toSuffix = (s: any) => ({ id: s.id, suffix: s.suffix, class_name: s.className, examples: s.examples ?? "" });
+const fromSuffix = (r: any) => ({ id: r.id, suffix: r.suffix, className: r.class_name, examples: r.examples ?? "", classNameEn: r.class_name_en ?? "", examplesEn: r.examples_en ?? "" });
+const toSuffix = (s: any) => ({ id: s.id, suffix: s.suffix, class_name: s.className, examples: s.examples ?? "", class_name_en: s.classNameEn ?? null, examples_en: s.examplesEn ?? null });
 
-const fromCardiacGroup = (r: any) => ({ id: r.id, name: r.name, examples: r.examples ?? "" });
-const toCardiacGroup = (c: any) => ({ id: c.id, name: c.name, examples: c.examples ?? "" });
+const fromCardiacGroup = (r: any) => ({ id: r.id, name: r.name, examples: r.examples ?? "", nameEn: r.name_en ?? "", examplesEn: r.examples_en ?? "" });
+const toCardiacGroup = (c: any) => ({ id: c.id, name: c.name, examples: c.examples ?? "", name_en: c.nameEn ?? null, examples_en: c.examplesEn ?? null });
 
 const fromMnemonic = (r: any) => ({ id: r.id, title: r.title, code: r.code ?? "", lines: r.lines ?? "" });
 const toMnemonic = (m: any) => ({ id: m.id, title: m.title, code: m.code ?? "", lines: m.lines ?? "" });

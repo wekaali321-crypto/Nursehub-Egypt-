@@ -9,6 +9,8 @@ export interface HighAlertRefCategory {
   drugs: string[];
   safety_strategy: string | null;
   source: string | null;
+  drugs_en?: string[] | null;
+  safety_strategy_en?: string | null;
 }
 
 export async function fetchHighAlertRef(): Promise<HighAlertRefCategory[]> {
