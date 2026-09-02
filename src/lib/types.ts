@@ -359,6 +359,9 @@ export interface Question {
   options: string[];
   correct: number; // index
   explanation?: string;
+  textEn?: string;
+  optionsEn?: string[];
+  explanationEn?: string;
 }
 
 export interface Quiz {
@@ -372,6 +375,9 @@ export interface Quiz {
   questions: Question[];
   status: "published" | "draft";
   demo?: boolean;
+  titleEn?: string;
+  descriptionEn?: string;
+  categoryEn?: string;
 }
 
 export interface QuizAttempt {
