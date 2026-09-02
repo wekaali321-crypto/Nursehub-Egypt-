@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { fetchERMedications, ER_CATEGORY_ORDER, type ERMedication } from "../lib/erMedApi";
 import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
 import CrossRefBox from "../components/CrossRefBox";
+import PrintButton from "../components/PrintButton";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "المسكنات ومضادات الالتهاب والتشنج (Analgesics & Antispasmodics)": "from-orange-500 to-amber-600",
@@ -133,7 +134,10 @@ export default function ERMedicationDetail() {
 
   return (
     <div dir="rtl" className="max-w-3xl mx-auto px-4 py-8">
-      <Link to="/drugs/er-medications" className="text-red-600 text-sm mb-4 inline-block">→ العودة لأدوية الطوارئ</Link>
+      <div className="flex items-center justify-between mb-4 print:hidden">
+        <Link to="/drugs/er-medications" className="text-red-600 text-sm inline-block">→ العودة لأدوية الطوارئ</Link>
+        <PrintButton label="طباعة بطاقة الدواء" />
+      </div>
 
       <div className="rounded-2xl bg-gradient-to-l from-red-600 to-rose-700 text-white p-6 mb-6">
         <h1 className="text-xl font-bold mb-1">{item.drug_name}</h1>
@@ -148,7 +152,7 @@ export default function ERMedicationDetail() {
         )}
       </div>
 
-      <CrossRefBox table="er_medications" id={item.id} />
+      <div className="print:hidden"><CrossRefBox table="er_medications" id={item.id} /></div>
 
       {item.show_image && item.image_url && (
         <div className="mb-6 mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">

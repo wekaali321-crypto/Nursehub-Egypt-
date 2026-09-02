@@ -4,6 +4,7 @@ import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO, breadcrumbSchema } from "../lib/seo";
 import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
 import CrossRefBox from "../components/CrossRefBox";
+import PrintButton from "../components/PrintButton";
 
 export default function DrugPage() {
   const { slug } = useParams();
@@ -66,7 +67,8 @@ export default function DrugPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">
-      <Breadcrumbs items={[{ label: "الأدوية", path: "/drugs" }, { label: drug.name }]} />
+      <div className="print:hidden"><Breadcrumbs items={[{ label: "الأدوية", path: "/drugs" }, { label: drug.name }]} /></div>
+      <div className="mb-3 flex justify-end print:hidden"><PrintButton label="طباعة بطاقة الدواء" /></div>
 
       <div className="rounded-3xl bg-gradient-to-l from-sky-600 to-emerald-500 p-6 text-white sm:p-8">
         <div className="flex flex-wrap items-center gap-2">
@@ -83,7 +85,7 @@ export default function DrugPage() {
         <p className="mt-1 text-lg text-sky-50">{drug.genericName} • {drug.drugClass}</p>
       </div>
 
-      <CrossRefBox table="drugs" id={drug.id} />
+      <div className="print:hidden"><CrossRefBox table="drugs" id={drug.id} /></div>
 
       {drug.showImage && drug.imageUrl && (
         <div className="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
@@ -100,7 +102,7 @@ export default function DrugPage() {
         </div>
       )}
 
-      <div className="my-6"><AdSlot label="إعلان صفحة الدواء" /></div>
+      <div className="my-6 print:hidden"><AdSlot label="إعلان صفحة الدواء" /></div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {blocks.map((b) => (
@@ -144,7 +146,7 @@ export default function DrugPage() {
       )}
 
       {related.length > 0 && (
-        <section className="mt-10">
+        <section className="mt-10 print:hidden">
           <h2 className="mb-4 text-xl font-bold dark:text-white">أدوية مشابهة في نفس الفئة</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {related.map((d) => (
