@@ -11,6 +11,13 @@ export interface PregnancyLactationSafety {
   lactation_safety: string | null;
   lactation_notes: string | null;
   key_point: string | null;
+  drug_name_en?: string | null;
+  drug_class_en?: string | null;
+  category_en?: string | null;
+  pregnancy_notes_en?: string | null;
+  lactation_safety_en?: string | null;
+  lactation_notes_en?: string | null;
+  key_point_en?: string | null;
 }
 
 export async function fetchPregnancyLactationSafety(): Promise<PregnancyLactationSafety[]> {
