@@ -10,6 +10,8 @@ import { fetchPedsMedications } from "../lib/pedsMedApi";
 import { fetchHighAlertRef } from "../lib/highAlertRefApi";
 import { fetchLasaPairs } from "../lib/lasaApi";
 import { fetchRxPrescriptions } from "../lib/rxApi";
+import { fetchOrganDoseAdjustments } from "../lib/organDoseApi";
+import { fetchPregnancyLactationSafety } from "../lib/pregnancyLactationApi";
 
 type Tile = {
   to: string;
@@ -49,6 +51,8 @@ export default function DrugsHubPage() {
   const [highAlertRefDrugCount, setHighAlertRefDrugCount] = useState(0);
   const [lasaCount, setLasaCount] = useState(0);
   const [rxCount, setRxCount] = useState(0);
+  const [organDoseCount, setOrganDoseCount] = useState(0);
+  const [pregnancyCount, setPregnancyCount] = useState(0);
   useEffect(() => {
     fetchAppliedPharmItems()
       .then((items) => {
@@ -74,9 +78,22 @@ export default function DrugsHubPage() {
     fetchRxPrescriptions()
       .then((items) => setRxCount(items.length))
       .catch(() => {});
+    fetchOrganDoseAdjustments()
+      .then((items) => setOrganDoseCount(items.length))
+      .catch(() => {});
+    fetchPregnancyLactationSafety()
+      .then((items) => setPregnancyCount(items.length))
+      .catch(() => {});
   }, []);
 
   const main: Tile[] = [
+    {
+      to: "/drugs/safety-center",
+      icon: "🛡️",
+      title: "مركز أمان الأدوية",
+      desc: "كل ما يخص السلامة الدوائية في مكان واحد: عالية الخطورة، LASA، الترياقات، التفاعلات، وتعديل الجرعات",
+      gradient: "from-slate-700 to-slate-500",
+    },
     {
       to: "/drugs/all",
       icon: "💊",
@@ -164,6 +181,22 @@ export default function DrugsHubPage() {
       desc: "أشهر الروشتات الطبية حسب الحالة — بشكل الروشتة الحقيقية",
       count: `${rxCount} روشتة`,
       gradient: "from-emerald-600 to-teal-700",
+    },
+    {
+      to: "/drugs/organ-dose",
+      icon: "🫘",
+      title: "تعديل الجرعات الكلوية/الكبدية",
+      desc: "إرشادات عملية لتعديل الجرعات عند القصور الكلوي أو الكبدي",
+      count: `${organDoseCount} دواء`,
+      gradient: "from-amber-600 to-orange-700",
+    },
+    {
+      to: "/drugs/pregnancy-lactation",
+      icon: "🤰",
+      title: "أمان الحمل والرضاعة",
+      desc: "تصنيف الأدوية الأكثر شيوعًا حسب أمانها أثناء الحمل والرضاعة",
+      count: `${pregnancyCount} دواء`,
+      gradient: "from-pink-600 to-fuchsia-700",
     },
   ];
 
