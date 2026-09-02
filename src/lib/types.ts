@@ -78,6 +78,18 @@ export interface Drug {
   highAlertType?: string[];
   imageUrl?: string;
   showImage?: boolean;
+  nameEn?: string;
+  genericNameEn?: string;
+  drugClassEn?: string;
+  categoryEn?: string;
+  doseEn?: string;
+  indicationsEn?: string;
+  sideEffectsEn?: string;
+  nursingConsiderationsEn?: string;
+  contraindicationsEn?: string;
+  storageEn?: string;
+  referencesEn?: string;
+  highAlertWarningsEn?: string;
 }
 
 export interface DrugInteraction {

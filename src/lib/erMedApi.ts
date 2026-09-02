@@ -20,6 +20,18 @@ export interface ERMedication {
   nursing_considerations: string | null;
   show_image: boolean;
   image_url: string | null;
+  category_en?: string | null;
+  subcategory_en?: string | null;
+  drug_name_en?: string | null;
+  drug_class_en?: string | null;
+  uses_en?: string | null;
+  contraindications_en?: string | null;
+  side_effects_en?: string | null;
+  warnings_en?: string | null;
+  storage_notes_en?: string | null;
+  nursing_considerations_en?: string | null;
+  preparation_en?: { steps?: string[] } | null;
+  dose_calculation_en?: Record<string, string> | null;
 }
 
 export async function fetchERMedications(): Promise<ERMedication[]> {
