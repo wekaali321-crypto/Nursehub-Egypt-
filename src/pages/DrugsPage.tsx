@@ -3,7 +3,8 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
-import { useI18n } from "../lib/i18n";
+import { useI18n, bilingual } from "../lib/i18n";
+import InlineLangToggle from "../components/InlineLangToggle";
 
 const CAT_ICONS: Record<string, string> = {
   "أدوية القلب والدم": "❤️",
@@ -24,7 +25,7 @@ const CAT_ICONS: Record<string, string> = {
 
 export default function DrugsListPage() {
   const { drugs, settings } = useStore();
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const [q, setQ] = useState("");
   const [cat, setCat] = useState("");
   const [letter, setLetter] = useState("");
@@ -38,12 +39,17 @@ export default function DrugsListPage() {
   };
 
   useSEO({
-    title: `كل الأدوية | ${settings.siteName}`,
-    description: "دليل أدوية احترافي للممرضين: البحث، التصفية، الترتيب الأبجدي، الجرعات والاعتبارات التمريضية.",
+    title: `${t("drugs.allDrugs")} | ${settings.siteName}`,
+    description: t("drugs.seoDesc"),
     keywords: "أدوية, دليل أدوية, جرعات, تمريض, دواء",
   });
 
   const categories = useMemo(() => Array.from(new Set(drugs.map((d) => d.category))), [drugs]);
+  const catEnMap = useMemo(() => {
+    const m = new Map<string, string>();
+    drugs.forEach((d) => { if (d.category && d.categoryEn && !m.has(d.category)) m.set(d.category, d.categoryEn); });
+    return m;
+  }, [drugs]);
   const letters = useMemo(() => Array.from(new Set(drugs.map((d) => d.name[0].toUpperCase()))).sort(), [drugs]);
 
   let list = drugs.filter((d) => {
@@ -57,27 +63,29 @@ export default function DrugsListPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
-      <Breadcrumbs items={[{ label: t("drugs.title"), path: "/drugs" }, { label: "كل الأدوية" }]} />
+      <Breadcrumbs items={[{ label: t("drugs.title"), path: "/drugs" }, { label: t("drugs.allDrugs") }]} />
+      <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
       <div className="mb-6 rounded-3xl bg-gradient-to-l from-sky-500 to-emerald-500 p-6 text-white sm:p-8">
         <div className="text-4xl sm:text-5xl">💊</div>
-        <h1 className="mt-2 text-2xl font-black sm:text-3xl">كل الأدوية</h1>
-        <p className="mt-1 text-sky-50">{drugs.length} دواء مع الجرعات والاعتبارات التمريضية</p>
+        <h1 className="mt-2 text-2xl font-black sm:text-3xl">{t("drugs.allDrugs")}</h1>
+        <p className="mt-1 text-sky-50">{drugs.length} {t("drugs.subtitle")}</p>
       </div>
 
       <div className="mb-6">
-        <h2 className="mb-3 text-sm font-black text-slate-500 dark:text-slate-400">تصفّح حسب الفئة</h2>
+        <h2 className="mb-3 text-sm font-black text-slate-500 dark:text-slate-400">{t("drugs.browseByCategory")}</h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           <button
             onClick={() => setCat("")}
             className={`rounded-2xl border p-4 text-right transition hover:-translate-y-0.5 hover:shadow-md ${!cat ? "border-sky-400 bg-sky-50 dark:bg-sky-500/10" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"}`}
           >
             <div className="text-2xl">🗂️</div>
-            <div className="mt-2 text-sm font-bold text-slate-800 dark:text-white">كل الفئات</div>
-            <div className="text-xs text-slate-400">{drugs.length} دواء</div>
+            <div className="mt-2 text-sm font-bold text-slate-800 dark:text-white">{t("drugs.allCats")}</div>
+            <div className="text-xs text-slate-400">{drugs.length} {t("drugs.count")}</div>
           </button>
           {categories.map((c) => {
             const n = drugs.filter((d) => d.category === c).length;
             const icon = CAT_ICONS[c] || "💊";
+            const label = bilingual(c, catEnMap.get(c), lang).text;
             return (
               <button
                 key={c}
@@ -85,8 +93,8 @@ export default function DrugsListPage() {
                 className={`rounded-2xl border p-4 text-right transition hover:-translate-y-0.5 hover:shadow-md ${cat === c ? "border-sky-400 bg-sky-50 dark:bg-sky-500/10" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"}`}
               >
                 <div className="text-2xl">{icon}</div>
-                <div className="mt-2 text-sm font-bold leading-snug text-slate-800 dark:text-white">{c}</div>
-                <div className="text-xs text-slate-400">{n} دواء</div>
+                <div className="mt-2 text-sm font-bold leading-snug text-slate-800 dark:text-white">{label}</div>
+                <div className="text-xs text-slate-400">{n} {t("drugs.count")}</div>
               </button>
             );
           })}
@@ -99,13 +107,13 @@ export default function DrugsListPage() {
           <span className="absolute right-3 top-3 text-slate-400">🔍</span>
         </div>
         <select value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-lg border border-slate-200 px-3 py-2.5 dark:border-slate-700 dark:bg-slate-800">
-          <option value="alpha">أ - ي (تصاعدي)</option>
-          <option value="alphaDesc">ي - أ (تنازلي)</option>
+          <option value="alpha">{t("drugs.sortAZ")}</option>
+          <option value="alphaDesc">{t("drugs.sortZA")}</option>
         </select>
       </div>
 
       <div className="mb-6 flex flex-wrap gap-1">
-        <button onClick={() => setLetter("")} className={`rounded-lg px-2.5 py-1 text-sm font-bold ${!letter ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>الكل</button>
+        <button onClick={() => setLetter("")} className={`rounded-lg px-2.5 py-1 text-sm font-bold ${!letter ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{t("cat.all")}</button>
         {letters.map((l) => (
           <button key={l} onClick={() => setLetter(l)} className={`rounded-lg px-2.5 py-1 text-sm font-bold ${letter === l ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{l}</button>
         ))}
@@ -115,29 +123,35 @@ export default function DrugsListPage() {
         onClick={toggleHighAlert}
         className={`mb-6 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold transition ${highAlertOnly ? "bg-rose-500 text-white shadow" : "bg-rose-50 text-rose-600 hover:bg-rose-100 dark:bg-rose-500/10"}`}
       >
-        ⚠️ {highAlertOnly ? "بعرض الأدوية عالية الخطورة فقط — اضغط للإلغاء" : "اعرض الأدوية عالية الخطورة فقط"}
+        ⚠️ {highAlertOnly ? t("drugs.highAlertOnlyActive") : t("drugs.highAlertOnly")}
       </button>
 
-      <div className="mb-6"><AdSlot label="إعلان دليل الأدوية" /></div>
+      <div className="mb-6"><AdSlot label={t("drugs.adLabel")} /></div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {list.map((d) => (
-          <Link key={d.id} to={`/drug/${d.slug}`} className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
-            <div className="flex items-center justify-between">
-              <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-600 dark:bg-emerald-500/10">{d.category}</span>
-              <span className="text-2xl">💊</span>
-            </div>
-            {d.isHighAlert && (
-              <span className="mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-rose-50 px-2.5 py-1 text-xs font-bold text-rose-600 dark:bg-rose-500/10">
-                ⚠️ عالي الخطورة
-              </span>
-            )}
-            <h3 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-sky-600 dark:text-white">{d.name}</h3>
-            <p className="text-sm text-slate-400">{d.genericName}</p>
-            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{d.drugClass}</p>
-          </Link>
-        ))}
-        {list.length === 0 && <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">لا توجد نتائج مطابقة.</div>}
+        {list.map((d) => {
+          const name = bilingual(d.name, d.nameEn, lang).text;
+          const genericName = bilingual(d.genericName, d.genericNameEn, lang).text;
+          const drugClass = bilingual(d.drugClass, d.drugClassEn, lang).text;
+          const category = bilingual(d.category, d.categoryEn, lang).text;
+          return (
+            <Link key={d.id} to={`/drug/${d.slug}`} className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-sky-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+              <div className="flex items-center justify-between">
+                <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-600 dark:bg-emerald-500/10">{category}</span>
+                <span className="text-2xl">💊</span>
+              </div>
+              {d.isHighAlert && (
+                <span className="mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-rose-50 px-2.5 py-1 text-xs font-bold text-rose-600 dark:bg-rose-500/10">
+                  ⚠️ {t("drugs.highAlertBadge")}
+                </span>
+              )}
+              <h3 className="mt-3 text-lg font-bold text-slate-900 group-hover:text-sky-600 dark:text-white">{name}</h3>
+              <p className="text-sm text-slate-400">{genericName}</p>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{drugClass}</p>
+            </Link>
+          );
+        })}
+        {list.length === 0 && <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">{t("common.noResults")}</div>}
       </div>
     </div>
   );

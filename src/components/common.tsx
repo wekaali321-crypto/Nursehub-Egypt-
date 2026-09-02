@@ -5,7 +5,7 @@ import { useI18n, bilingual, type TKey } from "../lib/i18n";
 import Icon, { type IconName } from "./Icon";
 import OptimizedImage from "./OptimizedImage";
 
-const CAT_KEY: Record<Category, TKey> = {
+export const CAT_KEY: Record<Category, TKey> = {
   articles: "nav.articles", summaries: "nav.summaries", drugs: "nav.drugs",
   skills: "nav.skills", "infection-control": "nav.infectionControl",
   careplans: "nav.careplans", books: "nav.books",

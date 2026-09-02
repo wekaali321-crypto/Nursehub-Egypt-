@@ -143,14 +143,17 @@ export interface CardiacMedGroup {
 export interface PharmMnemonic {
   id: string;
   title: string;
+  titleEn?: string;
   code: string;
   lines: string; // كل بند في سطر منفصل
+  linesEn?: string;
 }
 
 export interface PharmacyFact {
   id: string;
   number: number;
   content: string;
+  contentEn?: string;
   source?: string;
   chapter: number;
 }

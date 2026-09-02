@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { findSafetyLinks, type DrugSourceTable } from "../lib/drugSafetyLinks";
+import { useI18n } from "../lib/i18n";
 
 const ICONS: Record<string, string> = {
   renal: "🫘",
@@ -9,11 +10,12 @@ const ICONS: Record<string, string> = {
 };
 
 export default function SafetyLinksBox({ table, id }: { table: DrugSourceTable; id: string }) {
+  const { t } = useI18n();
   const links = findSafetyLinks(table, id);
   if (!links.length) return null;
   return (
     <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm dark:border-amber-500/20 dark:bg-amber-500/10">
-      <div className="mb-2 font-bold text-amber-800 dark:text-amber-400">⚠ معلومات أمان إضافية لهذا الدواء:</div>
+      <div className="mb-2 font-bold text-amber-800 dark:text-amber-400">{t("drug.additionalSafetyInfo")}</div>
       <div className="flex flex-wrap gap-2">
         {links.map((l, i) => (
           <Link
