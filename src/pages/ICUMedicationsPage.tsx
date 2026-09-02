@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { fetchICUMedications, ICU_CATEGORY_ORDER, type ICUMedication } from "../lib/icuMedApi";
 import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
 import CrossRefBox from "../components/CrossRefBox";
+import PrintButton from "../components/PrintButton";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "أدوية الثلاجة": "from-cyan-500 to-blue-600",
@@ -131,7 +132,10 @@ export default function ICUMedicationDetail() {
 
   return (
     <div dir="rtl" className="max-w-3xl mx-auto px-4 py-8">
-      <Link to="/drugs/icu-medications" className="text-blue-600 text-sm mb-4 inline-block">→ العودة لأدوية العناية المركزة</Link>
+      <div className="flex items-center justify-between mb-4 print:hidden">
+        <Link to="/drugs/icu-medications" className="text-blue-600 text-sm inline-block">→ العودة لأدوية العناية المركزة</Link>
+        <PrintButton label="طباعة بطاقة الدواء" />
+      </div>
 
       <div className="rounded-2xl bg-gradient-to-l from-cyan-600 to-blue-700 text-white p-6 mb-6">
         <h1 className="text-xl font-bold mb-1">{item.drug_name}</h1>
@@ -146,7 +150,7 @@ export default function ICUMedicationDetail() {
         )}
       </div>
 
-      <CrossRefBox table="icu_medications" id={item.id} />
+      <div className="print:hidden"><CrossRefBox table="icu_medications" id={item.id} /></div>
 
       {item.show_image && item.image_url && (
         <div className="mb-6 mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">

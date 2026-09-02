@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { fetchPedsMedications, PEDS_CATEGORY_ORDER, type PedsMedication } from "../lib/pedsMedApi";
 import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
+import PrintButton from "../components/PrintButton";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "الجهاز التنفسي (Respiratory)": "from-sky-500 to-cyan-600",
@@ -131,7 +132,10 @@ export default function PedsMedicationDetail() {
 
   return (
     <div dir="rtl" className="max-w-3xl mx-auto px-4 py-8">
-      <Link to="/drugs/peds-medications" className="text-teal-600 text-sm mb-4 inline-block">→ العودة لأدوية الأطفال</Link>
+      <div className="flex items-center justify-between mb-4 print:hidden">
+        <Link to="/drugs/peds-medications" className="text-teal-600 text-sm inline-block">→ العودة لأدوية الأطفال</Link>
+        <PrintButton label="طباعة بطاقة الدواء" />
+      </div>
 
       <div className="rounded-2xl bg-gradient-to-l from-teal-600 to-cyan-700 text-white p-6 mb-6">
         <h1 className="text-xl font-bold mb-1">{item.drug_name}</h1>

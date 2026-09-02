@@ -12,6 +12,7 @@ import { fetchLasaPairs } from "../lib/lasaApi";
 import { fetchRxPrescriptions } from "../lib/rxApi";
 import { fetchOrganDoseAdjustments } from "../lib/organDoseApi";
 import { fetchPregnancyLactationSafety } from "../lib/pregnancyLactationApi";
+import { fetchIVCompatibility } from "../lib/ivCompatibilityApi";
 
 type Tile = {
   to: string;
@@ -53,6 +54,7 @@ export default function DrugsHubPage() {
   const [rxCount, setRxCount] = useState(0);
   const [organDoseCount, setOrganDoseCount] = useState(0);
   const [pregnancyCount, setPregnancyCount] = useState(0);
+  const [ivCount, setIvCount] = useState(0);
   useEffect(() => {
     fetchAppliedPharmItems()
       .then((items) => {
@@ -83,6 +85,9 @@ export default function DrugsHubPage() {
       .catch(() => {});
     fetchPregnancyLactationSafety()
       .then((items) => setPregnancyCount(items.length))
+      .catch(() => {});
+    fetchIVCompatibility()
+      .then((items) => setIvCount(items.length))
       .catch(() => {});
   }, []);
 
@@ -197,6 +202,14 @@ export default function DrugsHubPage() {
       desc: "تصنيف الأدوية الأكثر شيوعًا حسب أمانها أثناء الحمل والرضاعة",
       count: `${pregnancyCount} دواء`,
       gradient: "from-pink-600 to-fuchsia-700",
+    },
+    {
+      to: "/drugs/iv-compatibility",
+      icon: "🧫",
+      title: "توافق الأدوية الوريدية (IV)",
+      desc: "أشهر أزواج أدوية العناية المركزة والطوارئ عند التسريب المشترك — متوافقة أم لا",
+      count: `${ivCount} زوج`,
+      gradient: "from-indigo-600 to-blue-700",
     },
   ];
 

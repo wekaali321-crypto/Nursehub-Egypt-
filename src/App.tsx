@@ -50,6 +50,7 @@ const LasaPage = lazy(() => import("./pages/LasaPage"));
 const OrganDoseAdjustmentsPage = lazy(() => import("./pages/OrganDoseAdjustmentsPage"));
 const PregnancyLactationPage = lazy(() => import("./pages/PregnancyLactationPage"));
 const DrugSafetyCenterPage = lazy(() => import("./pages/DrugSafetyCenterPage"));
+const IVCompatibilityPage = lazy(() => import("./pages/IVCompatibilityPage"));
 const RxPrescriptionDetail = lazy(() => import("./pages/RxPrescriptionsPage"));
 const RxPrescriptionsHome = lazy(() => import("./pages/RxPrescriptionsPage").then((m) => ({ default: m.RxPrescriptionsHome })));
 const ClinicalProtocolDetail = lazy(() => import("./pages/ClinicalProtocolsPage"));
@@ -79,6 +80,7 @@ import RxPrescriptionsAdmin from "./admin/RxPrescriptionsAdmin";
 import ClinicalProtocolsAdmin from "./admin/ClinicalProtocolsAdmin";
 import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
 import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
+import IVCompatibilityAdmin from "./admin/IVCompatibilityAdmin";
 import { EarningsAdmin, AdsManager, AffiliateManager, PaymentsAdmin } from "./admin/Monetization";
 import { AnalyticsAdmin } from "./admin/Analytics";
 import { TrashAdmin, VersionsAdmin, MaintenanceAdmin, NotificationsAdmin } from "./admin/SystemAdmin";
@@ -207,6 +209,7 @@ export default function App() {
                   <Route path="/drugs/organ-dose" element={<Public><OrganDoseAdjustmentsPage /></Public>} />
                   <Route path="/drugs/pregnancy-lactation" element={<Public><PregnancyLactationPage /></Public>} />
                   <Route path="/drugs/safety-center" element={<Public><DrugSafetyCenterPage /></Public>} />
+                  <Route path="/drugs/iv-compatibility" element={<Public><IVCompatibilityPage /></Public>} />
                   <Route path="/drugs/prescriptions" element={<Public><RxPrescriptionsHome /></Public>} />
                   <Route path="/drugs/prescriptions/:id" element={<Public><RxPrescriptionDetail /></Public>} />
                   <Route path="/drugs/protocols/:id" element={<Public><ClinicalProtocolDetail /></Public>} />
@@ -261,6 +264,7 @@ export default function App() {
                   <Route path="/admin/protocols" element={<Admin><ClinicalProtocolsAdmin /></Admin>} />
                   <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
                   <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />
+                  <Route path="/admin/iv-compatibility" element={<Admin><IVCompatibilityAdmin /></Admin>} />
                   <Route path="/admin/quizzes" element={<Admin><QuizAdmin /></Admin>} />
                   <Route path="/admin/pages" element={<Admin><PagesAdmin /></Admin>} />
                   <Route path="/admin/categories" element={<Admin><CategoriesAdmin /></Admin>} />
