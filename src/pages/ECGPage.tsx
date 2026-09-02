@@ -2751,7 +2751,7 @@ export default function ECGPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
-      <Breadcrumbs items={[{ label: "مكتبة ECG" }]} />
+      <Breadcrumbs items={[{ label: t("nav.ecg") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle light /></div>
       <div className="mb-6 rounded-3xl bg-gradient-to-l from-rose-600 to-slate-800 p-6 text-white sm:p-8">
         <div className="flex items-start justify-between gap-3">

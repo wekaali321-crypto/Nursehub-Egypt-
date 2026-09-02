@@ -122,7 +122,7 @@ export default function QuizPlayer() {
   if (!started) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-10">
-        <Breadcrumbs items={[{ label: "الاختبارات", path: "/quizzes" }, { label: title }]} />
+        <Breadcrumbs items={[{ label: t("nav.quizzes"), path: "/quizzes" }, { label: title }]} />
         <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
         <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center dark:border-slate-800 dark:bg-slate-900">
           <div className="text-5xl">📝</div>
