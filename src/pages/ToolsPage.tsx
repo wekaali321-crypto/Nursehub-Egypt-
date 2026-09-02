@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Breadcrumbs } from "../components/common";
 import { useI18n } from "../lib/i18n";
+import InlineLangToggle from "../components/InlineLangToggle";
 
 /**
  * Accordion-style card: only the tool's title/icon show by default; tapping
@@ -34,14 +35,18 @@ const lbl = "mb-1 block text-sm font-semibold text-slate-600 dark:text-slate-300
 const res = "mt-4 rounded-xl bg-sky-50 p-4 text-center font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300";
 
 function BMI() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
   const [w, setW] = useState(""); const [h, setH] = useState("");
   const bmi = w && h ? Number(w) / ((Number(h) / 100) ** 2) : 0;
-  const cat = bmi < 18.5 ? "نقص في الوزن" : bmi < 25 ? "وزن طبيعي" : bmi < 30 ? "زيادة في الوزن" : "سمنة";
+  const cat = isEn
+    ? (bmi < 18.5 ? "Underweight" : bmi < 25 ? "Normal weight" : bmi < 30 ? "Overweight" : "Obese")
+    : (bmi < 18.5 ? "نقص في الوزن" : bmi < 25 ? "وزن طبيعي" : bmi < 30 ? "زيادة في الوزن" : "سمنة");
   return (
-    <Card title="حاسبة مؤشر كتلة الجسم (BMI)" icon="⚖️">
+    <Card title={isEn ? "BMI Calculator" : "حاسبة مؤشر كتلة الجسم (BMI)"} icon="⚖️">
       <div className="grid grid-cols-2 gap-3">
-        <div><label className={lbl}>الوزن (كجم)</label><input className={inp} value={w} onChange={(e) => setW(e.target.value)} type="number" /></div>
-        <div><label className={lbl}>الطول (سم)</label><input className={inp} value={h} onChange={(e) => setH(e.target.value)} type="number" /></div>
+        <div><label className={lbl}>{isEn ? "Weight (kg)" : "الوزن (كجم)"}</label><input className={inp} value={w} onChange={(e) => setW(e.target.value)} type="number" /></div>
+        <div><label className={lbl}>{isEn ? "Height (cm)" : "الطول (سم)"}</label><input className={inp} value={h} onChange={(e) => setH(e.target.value)} type="number" /></div>
       </div>
       {bmi > 0 && <div className={res}>BMI = {bmi.toFixed(1)} — {cat}</div>}
     </Card>
@@ -49,51 +54,59 @@ function BMI() {
 }
 
 function IVDrip() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
   const [vol, setVol] = useState(""); const [time, setTime] = useState(""); const [factor, setFactor] = useState("20");
   const rate = vol && time ? (Number(vol) * Number(factor)) / (Number(time) * 60) : 0;
   return (
-    <Card title="حاسبة معدل التنقيط الوريدي (IV Drip Rate)" icon="💧">
+    <Card title={isEn ? "IV Drip Rate Calculator" : "حاسبة معدل التنقيط الوريدي (IV Drip Rate)"} icon="💧">
       <div className="grid grid-cols-3 gap-3">
-        <div><label className={lbl}>الحجم (مل)</label><input className={inp} value={vol} onChange={(e) => setVol(e.target.value)} type="number" /></div>
-        <div><label className={lbl}>الوقت (ساعة)</label><input className={inp} value={time} onChange={(e) => setTime(e.target.value)} type="number" /></div>
-        <div><label className={lbl}>عامل التنقيط</label><input className={inp} value={factor} onChange={(e) => setFactor(e.target.value)} type="number" /></div>
+        <div><label className={lbl}>{isEn ? "Volume (mL)" : "الحجم (مل)"}</label><input className={inp} value={vol} onChange={(e) => setVol(e.target.value)} type="number" /></div>
+        <div><label className={lbl}>{isEn ? "Time (hours)" : "الوقت (ساعة)"}</label><input className={inp} value={time} onChange={(e) => setTime(e.target.value)} type="number" /></div>
+        <div><label className={lbl}>{isEn ? "Drop factor" : "عامل التنقيط"}</label><input className={inp} value={factor} onChange={(e) => setFactor(e.target.value)} type="number" /></div>
       </div>
-      {rate > 0 && <div className={res}>المعدل = {rate.toFixed(0)} نقطة/دقيقة</div>}
+      {rate > 0 && <div className={res}>{isEn ? `Rate = ${rate.toFixed(0)} drops/min` : `المعدل = ${rate.toFixed(0)} نقطة/دقيقة`}</div>}
     </Card>
   );
 }
 
 function Dosage() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
   const [dose, setDose] = useState(""); const [weight, setWeight] = useState(""); const [conc, setConc] = useState("");
   const total = dose && weight ? Number(dose) * Number(weight) : 0;
   const vol = total && conc ? total / Number(conc) : 0;
   return (
-    <Card title="حاسبة جرعات الأدوية" icon="💊">
+    <Card title={isEn ? "Medication Dosage Calculator" : "حاسبة جرعات الأدوية"} icon="💊">
       <div className="grid grid-cols-3 gap-3">
-        <div><label className={lbl}>الجرعة (مجم/كجم)</label><input className={inp} value={dose} onChange={(e) => setDose(e.target.value)} type="number" /></div>
-        <div><label className={lbl}>وزن المريض (كجم)</label><input className={inp} value={weight} onChange={(e) => setWeight(e.target.value)} type="number" /></div>
-        <div><label className={lbl}>التركيز (مجم/مل)</label><input className={inp} value={conc} onChange={(e) => setConc(e.target.value)} type="number" /></div>
+        <div><label className={lbl}>{isEn ? "Dose (mg/kg)" : "الجرعة (مجم/كجم)"}</label><input className={inp} value={dose} onChange={(e) => setDose(e.target.value)} type="number" /></div>
+        <div><label className={lbl}>{isEn ? "Patient weight (kg)" : "وزن المريض (كجم)"}</label><input className={inp} value={weight} onChange={(e) => setWeight(e.target.value)} type="number" /></div>
+        <div><label className={lbl}>{isEn ? "Concentration (mg/mL)" : "التركيز (مجم/مل)"}</label><input className={inp} value={conc} onChange={(e) => setConc(e.target.value)} type="number" /></div>
       </div>
-      {total > 0 && <div className={res}>الجرعة الكلية = {total.toFixed(1)} مجم {vol > 0 && `(${vol.toFixed(1)} مل)`}</div>}
+      {total > 0 && <div className={res}>{isEn ? `Total dose = ${total.toFixed(1)} mg ${vol > 0 ? `(${vol.toFixed(1)} mL)` : ""}` : `الجرعة الكلية = ${total.toFixed(1)} مجم ${vol > 0 ? `(${vol.toFixed(1)} مل)` : ""}`}</div>}
     </Card>
   );
 }
 
 function FluidBalance() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
   const [intake, setIntake] = useState(""); const [output, setOutput] = useState("");
   const bal = intake && output ? Number(intake) - Number(output) : null;
   return (
-    <Card title="حاسبة اتزان السوائل (Fluid Balance)" icon="🧪">
+    <Card title={isEn ? "Fluid Balance Calculator" : "حاسبة اتزان السوائل (Fluid Balance)"} icon="🧪">
       <div className="grid grid-cols-2 gap-3">
-        <div><label className={lbl}>المدخلات (مل)</label><input className={inp} value={intake} onChange={(e) => setIntake(e.target.value)} type="number" /></div>
-        <div><label className={lbl}>المخرجات (مل)</label><input className={inp} value={output} onChange={(e) => setOutput(e.target.value)} type="number" /></div>
+        <div><label className={lbl}>{isEn ? "Intake (mL)" : "المدخلات (مل)"}</label><input className={inp} value={intake} onChange={(e) => setIntake(e.target.value)} type="number" /></div>
+        <div><label className={lbl}>{isEn ? "Output (mL)" : "المخرجات (مل)"}</label><input className={inp} value={output} onChange={(e) => setOutput(e.target.value)} type="number" /></div>
       </div>
-      {bal !== null && <div className={res}>الاتزان = {bal} مل ({bal >= 0 ? "موجب ➕" : "سالب ➖"})</div>}
+      {bal !== null && <div className={res}>{isEn ? `Balance = ${bal} mL (${bal >= 0 ? "Positive ➕" : "Negative ➖"})` : `الاتزان = ${bal} مل (${bal >= 0 ? "موجب ➕" : "سالب ➖"})`}</div>}
     </Card>
   );
 }
 
 function Pregnancy() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
   const [lmp, setLmp] = useState("");
   let edd = ""; let weeks = "";
   if (lmp) {
@@ -103,42 +116,48 @@ function Pregnancy() {
     weeks = Math.max(0, Math.floor((Date.now() - d.getTime()) / (7 * 86400000))).toString();
   }
   return (
-    <Card title="حاسبة الحمل (Pregnancy Calculator)" icon="🤰">
-      <label className={lbl}>أول يوم لآخر دورة شهرية (LMP)</label>
+    <Card title={isEn ? "Pregnancy Calculator" : "حاسبة الحمل (Pregnancy Calculator)"} icon="🤰">
+      <label className={lbl}>{isEn ? "First day of last menstrual period (LMP)" : "أول يوم لآخر دورة شهرية (LMP)"}</label>
       <input className={inp} type="date" value={lmp} onChange={(e) => setLmp(e.target.value)} />
-      {edd && <div className={res}>موعد الولادة المتوقع: {edd}<br />عمر الحمل الحالي: {weeks} أسبوع</div>}
+      {edd && <div className={res}>{isEn ? <>Estimated due date: {edd}<br />Current gestational age: {weeks} weeks</> : <>موعد الولادة المتوقع: {edd}<br />عمر الحمل الحالي: {weeks} أسبوع</>}</div>}
     </Card>
   );
 }
 
 function GCS() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
   const [eye, setEye] = useState(4); const [verbal, setVerbal] = useState(5); const [motor, setMotor] = useState(6);
   const total = eye + verbal + motor;
-  const level = total >= 13 ? "إصابة خفيفة" : total >= 9 ? "إصابة متوسطة" : "إصابة شديدة";
+  const level = isEn
+    ? (total >= 13 ? "Mild injury" : total >= 9 ? "Moderate injury" : "Severe injury")
+    : (total >= 13 ? "إصابة خفيفة" : total >= 9 ? "إصابة متوسطة" : "إصابة شديدة");
   const sel = "w-full rounded-lg border border-slate-200 px-2 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
   return (
-    <Card title="مقياس غلاسكو للوعي (GCS)" icon="🧠">
+    <Card title={isEn ? "Glasgow Coma Scale (GCS)" : "مقياس غلاسكو للوعي (GCS)"} icon="🧠">
       <div className="grid grid-cols-3 gap-3">
-        <div><label className={lbl}>فتح العين (E)</label><select className={sel} value={eye} onChange={(e) => setEye(+e.target.value)}>{[4,3,2,1].map((n) => <option key={n} value={n}>{n}</option>)}</select></div>
-        <div><label className={lbl}>الاستجابة اللفظية (V)</label><select className={sel} value={verbal} onChange={(e) => setVerbal(+e.target.value)}>{[5,4,3,2,1].map((n) => <option key={n} value={n}>{n}</option>)}</select></div>
-        <div><label className={lbl}>الاستجابة الحركية (M)</label><select className={sel} value={motor} onChange={(e) => setMotor(+e.target.value)}>{[6,5,4,3,2,1].map((n) => <option key={n} value={n}>{n}</option>)}</select></div>
+        <div><label className={lbl}>{isEn ? "Eye Opening (E)" : "فتح العين (E)"}</label><select className={sel} value={eye} onChange={(e) => setEye(+e.target.value)}>{[4,3,2,1].map((n) => <option key={n} value={n}>{n}</option>)}</select></div>
+        <div><label className={lbl}>{isEn ? "Verbal Response (V)" : "الاستجابة اللفظية (V)"}</label><select className={sel} value={verbal} onChange={(e) => setVerbal(+e.target.value)}>{[5,4,3,2,1].map((n) => <option key={n} value={n}>{n}</option>)}</select></div>
+        <div><label className={lbl}>{isEn ? "Motor Response (M)" : "الاستجابة الحركية (M)"}</label><select className={sel} value={motor} onChange={(e) => setMotor(+e.target.value)}>{[6,5,4,3,2,1].map((n) => <option key={n} value={n}>{n}</option>)}</select></div>
       </div>
-      <div className={res}>المجموع = {total}/15 — {level}</div>
+      <div className={res}>{isEn ? `Total = ${total}/15 — ${level}` : `المجموع = ${total}/15 — ${level}`}</div>
     </Card>
   );
 }
 
 function PediatricDose() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
   const [adult, setAdult] = useState(""); const [weight, setWeight] = useState("");
   // Clark's rule: child dose = adult dose × (weight in kg / 70)
   const dose = adult && weight ? (Number(adult) * Number(weight)) / 70 : 0;
   return (
-    <Card title="حاسبة جرعة الأطفال (Pediatric Dose)" icon="👶">
+    <Card title={isEn ? "Pediatric Dose Calculator" : "حاسبة جرعة الأطفال (Pediatric Dose)"} icon="👶">
       <div className="grid grid-cols-2 gap-3">
-        <div><label className={lbl}>جرعة البالغ (مجم)</label><input className={inp} type="number" value={adult} onChange={(e) => setAdult(e.target.value)} /></div>
-        <div><label className={lbl}>وزن الطفل (كجم)</label><input className={inp} type="number" value={weight} onChange={(e) => setWeight(e.target.value)} /></div>
+        <div><label className={lbl}>{isEn ? "Adult dose (mg)" : "جرعة البالغ (مجم)"}</label><input className={inp} type="number" value={adult} onChange={(e) => setAdult(e.target.value)} /></div>
+        <div><label className={lbl}>{isEn ? "Child weight (kg)" : "وزن الطفل (كجم)"}</label><input className={inp} type="number" value={weight} onChange={(e) => setWeight(e.target.value)} /></div>
       </div>
-      {dose > 0 && <div className={res}>جرعة الطفل ≈ {dose.toFixed(1)} مجم<br /><span className="text-xs font-normal">(قاعدة كلارك التقريبية)</span></div>}
+      {dose > 0 && <div className={res}>{isEn ? <>Child dose ≈ {dose.toFixed(1)} mg<br /><span className="text-xs font-normal">(Clark's rule approximation)</span></> : <>جرعة الطفل ≈ {dose.toFixed(1)} مجم<br /><span className="text-xs font-normal">(قاعدة كلارك التقريبية)</span></>}</div>}
     </Card>
   );
 }
@@ -172,97 +191,121 @@ type ABGCategory =
   | "unclear";
 
 type Direction = "up" | "down" | "normal";
+type Severity = "normal" | "mild" | "moderate" | "severe";
 
 type ABGResult =
   | {
       key: ABGCaseKey;
       color: string;
       category: ABGCategory;
-      severity: "طبيعي" | "خفيفة" | "متوسطة" | "شديدة";
+      severity: Severity;
       directions: { ph: Direction; paco2: Direction; hco3: Direction };
     }
   | null;
 
-const ABG_LIBRARY: Record<ABGCaseKey, { primaryEn: string; compEn: string; ar: string }> = {
+const SEVERITY_LABEL: Record<Severity, { ar: string; en: string }> = {
+  normal: { ar: "طبيعي", en: "Normal" },
+  mild: { ar: "خفيفة", en: "Mild" },
+  moderate: { ar: "متوسطة", en: "Moderate" },
+  severe: { ar: "شديدة", en: "Severe" },
+};
+
+const ABG_LIBRARY: Record<ABGCaseKey, { primaryEn: string; compEn: string; ar: string; en: string }> = {
   normal: {
     primaryEn: "Normal acid-base balance",
     compEn: "No disturbance",
     ar: "كل القيم ضمن المعدل الطبيعي. لا يوجد اضطراب في التوازن الحمضي القاعدي.",
+    en: "All values are within the normal range. There is no acid-base balance disturbance.",
   },
   resp_acidosis_uncomp: {
     primaryEn: "Respiratory Acidosis",
     compEn: "Uncompensated",
     ar: "PaCO2 مرتفع وHCO3 لسه طبيعي، يعني الرئة مش بتتخلص من ثاني أكسيد الكربون بكفاءة (زي في حالات كبت التنفس أو انسداد مجرى الهواء)، والكلى لسه محتاجة وقت (أيام) عشان تعوّض عن طريق رفع HCO3.",
+    en: "PaCO2 is high and HCO3 is still normal, meaning the lungs are not clearing carbon dioxide efficiently (as in respiratory depression or airway obstruction), and the kidneys still need time (days) to compensate by raising HCO3.",
   },
   resp_acidosis_partial: {
     primaryEn: "Respiratory Acidosis",
     compEn: "Partially compensated (kidneys retaining HCO3)",
     ar: "PaCO2 مرتفع وHCO3 بدأ يرتفع هو كمان، ده معناه إن الكلى بدأت تعوّض عن طريق الاحتفاظ بالبيكربونات، لكن الـpH لسه مش رجع للطبيعي بالكامل.",
+    en: "PaCO2 is high and HCO3 has also started to rise, meaning the kidneys have started compensating by retaining bicarbonate, but the pH has not yet returned fully to normal.",
   },
   metabolic_acidosis_uncomp: {
     primaryEn: "Metabolic Acidosis",
     compEn: "Uncompensated",
     ar: "HCO3 منخفض وPaCO2 لسه طبيعي، يعني في زيادة أحماض أو فقدان بيكربونات (زي DKA أو الفشل الكلوي أو الإسهال)، والرئة لسه محتاجة تبدأ تعوّض عن طريق زيادة معدل التنفس.",
+    en: "HCO3 is low and PaCO2 is still normal, meaning there is an excess of acids or a loss of bicarbonate (as in DKA, renal failure, or diarrhea), and the lungs still need to start compensating by increasing the respiratory rate.",
   },
   metabolic_acidosis_partial: {
     primaryEn: "Metabolic Acidosis",
     compEn: "Partially compensated (respiratory drive lowering PaCO2)",
     ar: "HCO3 منخفض وPaCO2 بدأ ينخفض هو كمان، ده معناه إن المريض بدأ يتنفس بسرعة (hyperventilation) عشان يقلل ثاني أكسيد الكربون ويعوّض عن الحماض الاستقلابي، لكن الـpH لسه مش رجع للطبيعي بالكامل.",
+    en: "HCO3 is low and PaCO2 has also started to drop, meaning the patient has started breathing rapidly (hyperventilation) to reduce carbon dioxide and compensate for the metabolic acidosis, but the pH has not yet returned fully to normal.",
   },
   mixed_acidosis: {
     primaryEn: "Mixed Respiratory + Metabolic Acidosis",
     compEn: "Two primary disorders — not simple compensation",
     ar: "PaCO2 مرتفع وHCO3 منخفض في نفس الوقت. ده مش تعويض — ده اضطرابين أساسيين مع بعض (مثلاً توقف قلب أو فشل تنفسي شديد مصحوب بحماض استقلابي). محتاج تقييم سريري شامل فورًا.",
+    en: "PaCO2 is high and HCO3 is low at the same time. This is not compensation — these are two primary disorders occurring together (for example, cardiac arrest or severe respiratory failure accompanied by metabolic acidosis). Requires an immediate comprehensive clinical assessment.",
   },
   unclear_acidosis: {
     primaryEn: "Acidosis — cause unclear from core values alone",
     compEn: "Needs further data (anion gap, lactate, clinical context)",
     ar: "الـpH منخفض لكن PaCO2 وHCO3 مش واضح إنهم السبب المباشر من القيم المدخلة. محتاج قيم إضافية زي فجوة الأنيونات (anion gap) أو اللاكتات لتحديد السبب بدقة.",
+    en: "The pH is low, but it is not clear from the entered values that PaCO2 and HCO3 are the direct cause. Additional values such as the anion gap or lactate are needed to determine the cause precisely.",
   },
   resp_alkalosis_uncomp: {
     primaryEn: "Respiratory Alkalosis",
     compEn: "Uncompensated",
     ar: "PaCO2 منخفض وHCO3 لسه طبيعي، يعني المريض بيتنفس بسرعة زيادة عن اللازم (زي القلق أو الألم أو نقص الأكسجين)، والكلى لسه محتاجة وقت عشان تعوّض عن طريق طرح البيكربونات.",
+    en: "PaCO2 is low and HCO3 is still normal, meaning the patient is breathing faster than necessary (as in anxiety, pain, or hypoxemia), and the kidneys still need time to compensate by excreting bicarbonate.",
   },
   resp_alkalosis_partial: {
     primaryEn: "Respiratory Alkalosis",
     compEn: "Partially compensated (kidneys excreting HCO3)",
     ar: "PaCO2 منخفض وHCO3 بدأ ينخفض هو كمان، ده معناه إن الكلى بدأت تعوّض عن طريق طرح البيكربونات، لكن الـpH لسه مش رجع للطبيعي بالكامل.",
+    en: "PaCO2 is low and HCO3 has also started to drop, meaning the kidneys have started compensating by excreting bicarbonate, but the pH has not yet returned fully to normal.",
   },
   metabolic_alkalosis_uncomp: {
     primaryEn: "Metabolic Alkalosis",
     compEn: "Uncompensated",
     ar: "HCO3 مرتفع وPaCO2 لسه طبيعي، يعني في فقدان أحماض أو زيادة قواعد (زي القيء الشديد أو مدرات البول أو نقص البوتاسيوم)، والرئة لسه محتاجة تبدأ تعوّض عن طريق إبطاء التنفس.",
+    en: "HCO3 is high and PaCO2 is still normal, meaning there is a loss of acids or an excess of base (as in severe vomiting, diuretics, or hypokalemia), and the lungs still need to start compensating by slowing breathing.",
   },
   metabolic_alkalosis_partial: {
     primaryEn: "Metabolic Alkalosis",
     compEn: "Partially compensated (respiratory drive raising PaCO2)",
     ar: "HCO3 مرتفع وPaCO2 بدأ يرتفع هو كمان، ده معناه إن الجسم بدأ يبطّئ التنفس عشان يحتفظ بثاني أكسيد الكربون ويعوّض عن القلاء الاستقلابي، لكن الـpH لسه مش رجع للطبيعي بالكامل.",
+    en: "HCO3 is high and PaCO2 has also started to rise, meaning the body has started slowing breathing to retain carbon dioxide and compensate for the metabolic alkalosis, but the pH has not yet returned fully to normal.",
   },
   mixed_alkalosis: {
     primaryEn: "Mixed Respiratory + Metabolic Alkalosis",
     compEn: "Two primary disorders — not simple compensation",
     ar: "PaCO2 منخفض وHCO3 مرتفع في نفس الوقت. ده مش تعويض — ده اضطرابين أساسيين مع بعض (مثلاً فرط تنفس مصحوب بقيء شديد). محتاج تقييم سريري شامل فورًا.",
+    en: "PaCO2 is low and HCO3 is high at the same time. This is not compensation — these are two primary disorders occurring together (for example, hyperventilation accompanied by severe vomiting). Requires an immediate comprehensive clinical assessment.",
   },
   unclear_alkalosis: {
     primaryEn: "Alkalosis — cause unclear from core values alone",
     compEn: "Needs further data (clinical context)",
     ar: "الـpH مرتفع لكن PaCO2 وHCO3 مش واضح إنهم السبب المباشر من القيم المدخلة. راجع السياق السريري الكامل للمريض.",
+    en: "The pH is high, but it is not clear from the entered values that PaCO2 and HCO3 are the direct cause. Review the patient's full clinical context.",
   },
   fully_comp_resp_acidosis: {
     primaryEn: "Fully Compensated Respiratory Acidosis (or compensated Metabolic Alkalosis)",
     compEn: "pH normal, PaCO2 high, HCO3 high",
     ar: "الـpH رجع طبيعي، لكن PaCO2 وHCO3 لسه مرتفعين مع بعض. ده معناه إن الجسم عوّض بالكامل — الأرجح إنه حماض تنفسي مزمن (زي مريض COPD مستقر) والكلى عوّضت بالكامل برفع البيكربونات على مدار أيام.",
+    en: "The pH has returned to normal, but PaCO2 and HCO3 are both still high. This means the body has fully compensated — most likely chronic respiratory acidosis (as in a stable COPD patient) with the kidneys having fully compensated by raising bicarbonate over days.",
   },
   fully_comp_resp_alkalosis: {
     primaryEn: "Fully Compensated Respiratory Alkalosis (or compensated Metabolic Acidosis)",
     compEn: "pH normal, PaCO2 low, HCO3 low",
     ar: "الـpH رجع طبيعي، لكن PaCO2 وHCO3 لسه منخفضين مع بعض. ده معناه إن الجسم عوّض بالكامل — يحتاج مراجعة الاتجاه العام والتاريخ المرضي لتحديد هل الأصل تنفسي أو استقلابي.",
+    en: "The pH has returned to normal, but PaCO2 and HCO3 are both still low. This means the body has fully compensated — the overall trend and medical history need to be reviewed to determine whether the primary disorder is respiratory or metabolic.",
   },
   ph_normal_mild: {
     primaryEn: "pH normal with a mild isolated abnormality",
     compEn: "Monitor trend",
     ar: "الـpH طبيعي لكن في قيمة واحدة بس (إما PaCO2 أو HCO3) طالعة خارج المعدل الطبيعي. راقب الاتجاه العام للقيم بمرور الوقت وربطها بحالة المريض السريرية.",
+    en: "The pH is normal, but only one value (either PaCO2 or HCO3) is outside the normal range. Monitor the overall trend of the values over time and correlate them with the patient's clinical status.",
   },
 };
 
@@ -285,114 +328,114 @@ const CATEGORY_MAP: Record<ABGCaseKey, ABGCategory> = {
   ph_normal_mild: "normal",
 };
 
-const CAUSES: Partial<Record<ABGCategory, string[]>> = {
+const CAUSES: Partial<Record<ABGCategory, { ar: string; en: string }[]>> = {
   respiratory_acidosis: [
-    "تفاقم الانسداد الرئوي المزمن (COPD)",
-    "نقص التهوية (Hypoventilation)",
-    "انسداد المجرى الهوائي",
-    "جرعة زائدة من المهدئات أو الأفيونات",
-    "أمراض عصبية عضلية (Guillain-Barré، الوهن العضلي)",
-    "إصابة الصدر (Flail chest)",
-    "عطل في إعدادات جهاز التنفس الصناعي",
+    { ar: "تفاقم الانسداد الرئوي المزمن (COPD)", en: "COPD exacerbation" },
+    { ar: "نقص التهوية (Hypoventilation)", en: "Hypoventilation" },
+    { ar: "انسداد المجرى الهوائي", en: "Airway obstruction" },
+    { ar: "جرعة زائدة من المهدئات أو الأفيونات", en: "Sedative or opioid overdose" },
+    { ar: "أمراض عصبية عضلية (Guillain-Barré، الوهن العضلي)", en: "Neuromuscular disease (Guillain-Barré, myasthenia gravis)" },
+    { ar: "إصابة الصدر (Flail chest)", en: "Chest trauma (flail chest)" },
+    { ar: "عطل في إعدادات جهاز التنفس الصناعي", en: "Ventilator setting malfunction" },
   ],
   metabolic_acidosis: [
-    "الحماض الكيتوني السكري (DKA)",
-    "الفشل الكلوي",
-    "الحماض اللبني (تسمم الدم / نقص التروية)",
-    "إسهال شديد",
-    "تسمم بالميثانول أو إيثيلين جلايكول",
-    "حماض الجوع (Starvation ketoacidosis)",
+    { ar: "الحماض الكيتوني السكري (DKA)", en: "Diabetic ketoacidosis (DKA)" },
+    { ar: "الفشل الكلوي", en: "Renal failure" },
+    { ar: "الحماض اللبني (تسمم الدم / نقص التروية)", en: "Lactic acidosis (sepsis / hypoperfusion)" },
+    { ar: "إسهال شديد", en: "Severe diarrhea" },
+    { ar: "تسمم بالميثانول أو إيثيلين جلايكول", en: "Methanol or ethylene glycol poisoning" },
+    { ar: "حماض الجوع (Starvation ketoacidosis)", en: "Starvation ketoacidosis" },
   ],
   respiratory_alkalosis: [
-    "القلق أو نوبات الهلع",
-    "الألم الحاد",
-    "نقص الأكسجين (Hypoxemia)",
-    "الحمل",
-    "الإنتان (المرحلة المبكرة)",
-    "فرط تهوية عبر جهاز التنفس الصناعي",
-    "الحمى",
+    { ar: "القلق أو نوبات الهلع", en: "Anxiety or panic attacks" },
+    { ar: "الألم الحاد", en: "Acute pain" },
+    { ar: "نقص الأكسجين (Hypoxemia)", en: "Hypoxemia" },
+    { ar: "الحمل", en: "Pregnancy" },
+    { ar: "الإنتان (المرحلة المبكرة)", en: "Sepsis (early stage)" },
+    { ar: "فرط تهوية عبر جهاز التنفس الصناعي", en: "Ventilator-induced hyperventilation" },
+    { ar: "الحمى", en: "Fever" },
   ],
   metabolic_alkalosis: [
-    "قيء شديد أو مستمر / شفط أنفي معدي",
-    "استخدام مدرات البول",
-    "نقص البوتاسيوم",
-    "تناول زائد لمضادات الحموضة أو البيكربونات",
-    "فرط الألدوستيرون",
+    { ar: "قيء شديد أو مستمر / شفط أنفي معدي", en: "Severe or persistent vomiting / nasogastric suction" },
+    { ar: "استخدام مدرات البول", en: "Diuretic use" },
+    { ar: "نقص البوتاسيوم", en: "Hypokalemia" },
+    { ar: "تناول زائد لمضادات الحموضة أو البيكربونات", en: "Excessive antacid or bicarbonate intake" },
+    { ar: "فرط الألدوستيرون", en: "Hyperaldosteronism" },
   ],
 };
 
-const NURSING: Partial<Record<ABGCategory, string[]>> = {
+const NURSING: Partial<Record<ABGCategory, { ar: string; en: string }[]>> = {
   respiratory_acidosis: [
-    "قيّم جهد التنفس",
-    "راقب تشبّع الأكسجين",
-    "راقب مستوى الوعي",
-    "تأكد من سلامة المجرى الهوائي",
-    "استعد لاحتمال دعم التهوية",
-    "أبلغ الطبيب عند التدهور",
+    { ar: "قيّم جهد التنفس", en: "Assess work of breathing" },
+    { ar: "راقب تشبّع الأكسجين", en: "Monitor oxygen saturation" },
+    { ar: "راقب مستوى الوعي", en: "Monitor level of consciousness" },
+    { ar: "تأكد من سلامة المجرى الهوائي", en: "Ensure airway patency" },
+    { ar: "استعد لاحتمال دعم التهوية", en: "Prepare for possible ventilatory support" },
+    { ar: "أبلغ الطبيب عند التدهور", en: "Notify the physician of any deterioration" },
   ],
   metabolic_acidosis: [
-    "راقب سكر الدم والكيتونات إذا كان DKA محتمل",
-    "راقب اتزان السوائل وكمية البول",
-    "راقب مستوى البوتاسيوم عن قرب (خصوصاً مع الإنسولين)",
-    "راقب مستوى الوعي",
-    "استعد لسوائل وريدية / إنسولين حسب الأوامر الطبية",
-    "راقب العلامات الحيوية عن قرب",
+    { ar: "راقب سكر الدم والكيتونات إذا كان DKA محتمل", en: "Monitor blood glucose and ketones if DKA is suspected" },
+    { ar: "راقب اتزان السوائل وكمية البول", en: "Monitor fluid balance and urine output" },
+    { ar: "راقب مستوى البوتاسيوم عن قرب (خصوصاً مع الإنسولين)", en: "Monitor potassium level closely (especially with insulin)" },
+    { ar: "راقب مستوى الوعي", en: "Monitor level of consciousness" },
+    { ar: "استعد لسوائل وريدية / إنسولين حسب الأوامر الطبية", en: "Prepare for IV fluids / insulin per medical orders" },
+    { ar: "راقب العلامات الحيوية عن قرب", en: "Monitor vital signs closely" },
   ],
   respiratory_alkalosis: [
-    "قيّم القلق أو الألم وتعامل معه",
-    "راقب تشبّع الأكسجين",
-    "ساعد المريض على تهدئة التنفس إذا كان فرط تهوية",
-    "راقب علامات نقص الكالسيوم (تنميل، تشنج)",
-    "راجع إعدادات جهاز التنفس الصناعي إن وجد",
+    { ar: "قيّم القلق أو الألم وتعامل معه", en: "Assess and address anxiety or pain" },
+    { ar: "راقب تشبّع الأكسجين", en: "Monitor oxygen saturation" },
+    { ar: "ساعد المريض على تهدئة التنفس إذا كان فرط تهوية", en: "Help the patient slow their breathing if hyperventilating" },
+    { ar: "راقب علامات نقص الكالسيوم (تنميل، تشنج)", en: "Monitor for signs of hypocalcemia (tingling, tetany)" },
+    { ar: "راجع إعدادات جهاز التنفس الصناعي إن وجد", en: "Review ventilator settings if applicable" },
   ],
   metabolic_alkalosis: [
-    "راقب مستوى البوتاسيوم وعوّضه حسب الأوامر",
-    "راقب اتزان السوائل والكهارل",
-    "راقب علامات ضعف العضلات أو اضطراب النظم",
-    "راجع الأدوية (مدرات البول، مضادات الحموضة)",
-    "راقب المدخول والمخرج بدقة",
+    { ar: "راقب مستوى البوتاسيوم وعوّضه حسب الأوامر", en: "Monitor potassium level and replace per orders" },
+    { ar: "راقب اتزان السوائل والكهارل", en: "Monitor fluid and electrolyte balance" },
+    { ar: "راقب علامات ضعف العضلات أو اضطراب النظم", en: "Monitor for signs of muscle weakness or arrhythmia" },
+    { ar: "راجع الأدوية (مدرات البول، مضادات الحموضة)", en: "Review medications (diuretics, antacids)" },
+    { ar: "راقب المدخول والمخرج بدقة", en: "Monitor intake and output accurately" },
   ],
 };
 
-const MEDICAL: Partial<Record<ABGCategory, string[]>> = {
+const MEDICAL: Partial<Record<ABGCategory, { ar: string; en: string }[]>> = {
   respiratory_acidosis: [
-    "قيّم سبب نقص التهوية",
-    "فكّر في إعادة تحليل الغازات",
-    "راجع صورة الصدر إن لزم",
-    "قيّم الحاجة للتهوية غير الباضعة",
+    { ar: "قيّم سبب نقص التهوية", en: "Evaluate the cause of hypoventilation" },
+    { ar: "فكّر في إعادة تحليل الغازات", en: "Consider repeating blood gas analysis" },
+    { ar: "راجع صورة الصدر إن لزم", en: "Review chest X-ray if needed" },
+    { ar: "قيّم الحاجة للتهوية غير الباضعة", en: "Evaluate the need for non-invasive ventilation" },
   ],
   metabolic_acidosis: [
-    "احسب فجوة الأنيونات (Anion Gap)",
-    "حدد السبب الكامن وعالجه",
-    "فكّر في فحص السموم إذا اقتضى الأمر",
-    "راقب اتجاه اللاكتات",
+    { ar: "احسب فجوة الأنيونات (Anion Gap)", en: "Calculate the anion gap" },
+    { ar: "حدد السبب الكامن وعالجه", en: "Identify and treat the underlying cause" },
+    { ar: "فكّر في فحص السموم إذا اقتضى الأمر", en: "Consider a toxicology screen if indicated" },
+    { ar: "راقب اتجاه اللاكتات", en: "Monitor the lactate trend" },
   ],
   respiratory_alkalosis: [
-    "حدد سبب فرط التهوية وعالجه",
-    "قيّم وجود نقص أكسجين كامن",
-    "فكّر في تقييم الألم أو القلق",
-    "راجع إعدادات جهاز التنفس الصناعي",
+    { ar: "حدد سبب فرط التهوية وعالجه", en: "Identify and treat the cause of hyperventilation" },
+    { ar: "قيّم وجود نقص أكسجين كامن", en: "Evaluate for underlying hypoxemia" },
+    { ar: "فكّر في تقييم الألم أو القلق", en: "Consider assessing pain or anxiety" },
+    { ar: "راجع إعدادات جهاز التنفس الصناعي", en: "Review ventilator settings" },
   ],
   metabolic_alkalosis: [
-    "حدد السبب الكامن وصححه",
-    "راجع استخدام مدرات البول أو مضادات الحموضة",
-    "راقب الكهارل (بوتاسيوم، كلوريد)",
-    "فكّر في تعويض الكلوريد إذا لزم",
+    { ar: "حدد السبب الكامن وصححه", en: "Identify and correct the underlying cause" },
+    { ar: "راجع استخدام مدرات البول أو مضادات الحموضة", en: "Review diuretic or antacid use" },
+    { ar: "راقب الكهارل (بوتاسيوم، كلوريد)", en: "Monitor electrolytes (potassium, chloride)" },
+    { ar: "فكّر في تعويض الكلوريد إذا لزم", en: "Consider chloride replacement if needed" },
   ],
 };
 
-function mergedList(table: Partial<Record<ABGCategory, string[]>>, category: ABGCategory): string[] {
+function mergedList<T>(table: Partial<Record<ABGCategory, T[]>>, category: ABGCategory): T[] {
   if (category === "mixed_acidosis") return [...(table.respiratory_acidosis ?? []), ...(table.metabolic_acidosis ?? [])];
   if (category === "mixed_alkalosis") return [...(table.respiratory_alkalosis ?? []), ...(table.metabolic_alkalosis ?? [])];
   return table[category] ?? [];
 }
 
-function severityOf(pH: number): "طبيعي" | "خفيفة" | "متوسطة" | "شديدة" {
-  if (pH >= 7.35 && pH <= 7.45) return "طبيعي";
+function severityOf(pH: number): Severity {
+  if (pH >= 7.35 && pH <= 7.45) return "normal";
   const dev = pH < 7.35 ? 7.35 - pH : pH - 7.45;
-  if (dev < 0.05) return "خفيفة";
-  if (dev < 0.15) return "متوسطة";
-  return "شديدة";
+  if (dev < 0.05) return "mild";
+  if (dev < 0.15) return "moderate";
+  return "severe";
 }
 
 function interpretABG(pH: number, paco2: number, hco3: number): ABGResult {
@@ -446,6 +489,8 @@ function interpretABG(pH: number, paco2: number, hco3: number): ABGResult {
 }
 
 function ABGInterpreter() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
   const [pH, setPH] = useState("");
   const [paco2, setPaco2] = useState("");
   const [hco3, setHco3] = useState("");
@@ -468,9 +513,11 @@ function ABGInterpreter() {
   };
 
   return (
-    <Card title="مفسّر غازات الدم (ABG)" icon="🫁">
+    <Card title={isEn ? "ABG Interpreter" : "مفسّر غازات الدم (ABG)"} icon="🫁">
       <div className="mb-4 rounded-xl bg-amber-50 p-3 text-xs text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">
-        أداة تعليمية للمساعدة فقط وليست تشخيصاً طبياً. يجب تفسير النتيجة ضمن السياق السريري للمريض ولا تغني عن تقييم الطبيب.
+        {isEn
+          ? "An educational aid only, not a medical diagnosis. The result must be interpreted within the patient's clinical context and does not replace a physician's assessment."
+          : "أداة تعليمية للمساعدة فقط وليست تشخيصاً طبياً. يجب تفسير النتيجة ضمن السياق السريري للمريض ولا تغني عن تقييم الطبيب."}
       </div>
 
       <div className="mb-3 grid grid-cols-2 gap-3">
@@ -489,7 +536,7 @@ function ABGInterpreter() {
       </div>
 
       <button type="button" onClick={() => setShowOptional((s) => !s)} className="mb-3 text-sm font-bold text-sky-600 dark:text-sky-400">
-        {showOptional ? "− إخفاء القيم الاختيارية" : "+ قيم اختيارية"}
+        {isEn ? (showOptional ? "− Hide optional values" : "+ Optional values") : (showOptional ? "− إخفاء القيم الاختيارية" : "+ قيم اختيارية")}
       </button>
 
       {showOptional && (
@@ -517,7 +564,7 @@ function ABGInterpreter() {
         disabled={!pH || !paco2 || !hco3}
         className="w-full rounded-xl bg-sky-600 py-3 font-bold text-white disabled:opacity-40"
       >
-        🔬 تفسير غازات الدم
+        {isEn ? "🔬 Interpret ABG" : "🔬 تفسير غازات الدم"}
       </button>
 
       {result && (
@@ -525,7 +572,7 @@ function ABGInterpreter() {
           <div className={`rounded-xl p-4 ${colorClasses[result.color]}`}>
             <div className="text-lg font-black" dir="ltr">{ABG_LIBRARY[result.key].primaryEn}</div>
             <div className="mt-1 text-sm font-semibold" dir="ltr">{ABG_LIBRARY[result.key].compEn}</div>
-            <div className="mt-3 border-t border-current/20 pt-3 text-sm leading-relaxed">{ABG_LIBRARY[result.key].ar}</div>
+            <div className="mt-3 border-t border-current/20 pt-3 text-sm leading-relaxed">{isEn ? ABG_LIBRARY[result.key].en : ABG_LIBRARY[result.key].ar}</div>
             <div className="mt-3 grid grid-cols-3 gap-2 border-t border-current/20 pt-3 text-center">
               {(["hco3", "paco2", "ph"] as const).map((k) => (
                 <div key={k}>
@@ -538,44 +585,46 @@ function ABGInterpreter() {
 
           <div className="grid grid-cols-2 gap-3">
             <div className="rounded-xl border border-slate-200 p-3 text-center dark:border-slate-700">
-              <div className={lbl}>الشدة</div>
-              <div className="font-bold dark:text-white">{result.severity}</div>
+              <div className={lbl}>{isEn ? "Severity" : "الشدة"}</div>
+              <div className="font-bold dark:text-white">{SEVERITY_LABEL[result.severity][lang]}</div>
             </div>
             <div className="rounded-xl border border-slate-200 p-3 text-center dark:border-slate-700">
-              <div className={lbl}>التعويض</div>
+              <div className={lbl}>{isEn ? "Compensation" : "التعويض"}</div>
               <div className="font-bold dark:text-white" dir="ltr">{ABG_LIBRARY[result.key].compEn}</div>
             </div>
           </div>
 
           {mergedList(CAUSES, result.category).length > 0 && (
             <div className="rounded-xl border border-slate-200 p-4 dark:border-slate-700">
-              <div className="mb-2 font-bold dark:text-white">🔍 الأسباب المحتملة</div>
+              <div className="mb-2 font-bold dark:text-white">{isEn ? "🔍 Possible Causes" : "🔍 الأسباب المحتملة"}</div>
               <ul className="list-inside list-disc space-y-1 text-sm text-slate-600 dark:text-slate-300">
-                {mergedList(CAUSES, result.category).map((c) => <li key={c}>{c}</li>)}
+                {mergedList(CAUSES, result.category).map((c) => <li key={c.ar}>{isEn ? c.en : c.ar}</li>)}
               </ul>
             </div>
           )}
 
           {mergedList(NURSING, result.category).length > 0 && (
             <div className="rounded-xl border border-emerald-200 bg-emerald-50/50 p-4 dark:border-emerald-800 dark:bg-emerald-500/5">
-              <div className="mb-2 font-bold text-emerald-700 dark:text-emerald-300">💚 توجيهات تمريضية</div>
+              <div className="mb-2 font-bold text-emerald-700 dark:text-emerald-300">{isEn ? "💚 Nursing Guidance" : "💚 توجيهات تمريضية"}</div>
               <ul className="space-y-1 text-sm text-slate-700 dark:text-slate-300">
-                {mergedList(NURSING, result.category).map((c) => <li key={c}>✔ {c}</li>)}
+                {mergedList(NURSING, result.category).map((c) => <li key={c.ar}>✔ {isEn ? c.en : c.ar}</li>)}
               </ul>
             </div>
           )}
 
           {mergedList(MEDICAL, result.category).length > 0 && (
             <div className="rounded-xl border border-slate-200 p-4 dark:border-slate-700">
-              <div className="mb-2 font-bold dark:text-white">🩺 توجيهات طبية عامة</div>
+              <div className="mb-2 font-bold dark:text-white">{isEn ? "🩺 General Medical Guidance" : "🩺 توجيهات طبية عامة"}</div>
               <ul className="list-inside list-disc space-y-1 text-sm text-slate-600 dark:text-slate-300">
-                {mergedList(MEDICAL, result.category).map((c) => <li key={c}>{c}</li>)}
+                {mergedList(MEDICAL, result.category).map((c) => <li key={c.ar}>{isEn ? c.en : c.ar}</li>)}
               </ul>
             </div>
           )}
 
           <div className="text-xs opacity-70">
-            للغرض التعليمي فقط، بناءً على القيم الأساسية — يعتمد على السياق السريري الكامل للمريض ولا يغني عن تقييم الطبيب.
+            {isEn
+              ? "For educational purposes only, based on the core values — depends on the patient's full clinical context and does not replace a physician's assessment."
+              : "للغرض التعليمي فقط، بناءً على القيم الأساسية — يعتمد على السياق السريري الكامل للمريض ولا يغني عن تقييم الطبيب."}
           </div>
           {(sao2 || pao2 || lactate) && (
             <div className="text-xs opacity-80" dir="ltr">
@@ -596,9 +645,18 @@ const doseUnits = [
   { key: "mcg/min", label: "mcg/min" },
   { key: "mg/hr", label: "mg/hr" },
 ];
-const commonDrugs = ["نورأدرينالين", "أدرينالين", "دوبامين", "دوبوتامين", "بريسيدكس", "نيتروجليسرين"];
+const commonDrugs: { ar: string; en: string }[] = [
+  { ar: "نورأدرينالين", en: "Norepinephrine" },
+  { ar: "أدرينالين", en: "Epinephrine" },
+  { ar: "دوبامين", en: "Dopamine" },
+  { ar: "دوبوتامين", en: "Dobutamine" },
+  { ar: "بريسيدكس", en: "Precedex" },
+  { ar: "نيتروجليسرين", en: "Nitroglycerin" },
+];
 
 function DoseRateCalculator() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
   const [mode, setMode] = useState<"doseToRate" | "rateToDose">("doseToRate");
   const [drug, setDrug] = useState("");
   const [doseUnit, setDoseUnit] = useState("mcg/kg/min");
@@ -634,24 +692,26 @@ function DoseRateCalculator() {
   const needsWeight = doseUnit === "mcg/kg/min" || doseUnit === "mcg/kg/hr";
 
   return (
-    <Card title="مفسّر الجرعات (Dose ↔ Rate)" icon="🧮">
+    <Card title={isEn ? "Dose ↔ Rate Calculator" : "مفسّر الجرعات (Dose ↔ Rate)"} icon="🧮">
       <div className="mb-3 rounded-xl bg-amber-50 p-3 text-xs text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">
-        للغرض التعليمي والمرجعي فقط، وليس بديلاً عن اتخاذ قرار علاجي أو تحديد جرعة أو إعداد للمضخة. اتبع أوامر الطبيب وبروتوكول المنشأة دائمًا.
+        {isEn
+          ? "For educational and reference purposes only, and not a substitute for a treatment decision, dose determination, or pump setup. Always follow physician orders and facility protocol."
+          : "للغرض التعليمي والمرجعي فقط، وليس بديلاً عن اتخاذ قرار علاجي أو تحديد جرعة أو إعداد للمضخة. اتبع أوامر الطبيب وبروتوكول المنشأة دائمًا."}
       </div>
 
       <div className="mb-3 flex flex-wrap gap-2">
         {commonDrugs.map((d) => (
           <button
-            key={d}
+            key={d.ar}
             type="button"
-            onClick={() => setDrug(d)}
+            onClick={() => setDrug(d.ar)}
             className={`rounded-full border px-3 py-1 text-xs font-semibold ${
-              drug === d
+              drug === d.ar
                 ? "border-sky-400 bg-sky-500 text-white"
                 : "border-slate-200 text-slate-600 dark:border-slate-700 dark:text-slate-300"
             }`}
           >
-            {d}
+            {isEn ? d.en : d.ar}
           </button>
         ))}
       </div>
@@ -662,19 +722,19 @@ function DoseRateCalculator() {
           onClick={() => setMode("doseToRate")}
           className={`rounded-lg px-3 py-2 text-sm font-bold ${mode === "doseToRate" ? "bg-sky-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
         >
-          جرعة → معدل
+          {isEn ? "Dose → Rate" : "جرعة → معدل"}
         </button>
         <button
           type="button"
           onClick={() => setMode("rateToDose")}
           className={`rounded-lg px-3 py-2 text-sm font-bold ${mode === "rateToDose" ? "bg-sky-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
         >
-          معدل → جرعة
+          {isEn ? "Rate → Dose" : "معدل → جرعة"}
         </button>
       </div>
 
       <div className="mb-3">
-        <label className={lbl}>وحدة الجرعة</label>
+        <label className={lbl}>{isEn ? "Dose unit" : "وحدة الجرعة"}</label>
         <select className={inp} value={doseUnit} onChange={(e) => setDoseUnit(e.target.value)}>
           {doseUnits.map((u) => (
             <option key={u.key} value={u.key}>{u.label}</option>
@@ -685,23 +745,23 @@ function DoseRateCalculator() {
       <div className="grid grid-cols-2 gap-3">
         {needsWeight && (
           <div>
-            <label className={lbl}>وزن المريض (كجم)</label>
+            <label className={lbl}>{isEn ? "Patient weight (kg)" : "وزن المريض (كجم)"}</label>
             <input className={inp} type="number" value={weight} onChange={(e) => setWeight(e.target.value)} />
           </div>
         )}
         <div>
-          <label className={lbl}>حجم المحلول الكلي (مل)</label>
+          <label className={lbl}>{isEn ? "Total solution volume (mL)" : "حجم المحلول الكلي (مل)"}</label>
           <input className={inp} type="number" value={volume} onChange={(e) => setVolume(e.target.value)} />
         </div>
       </div>
 
       <div className="mt-3 grid grid-cols-3 gap-3">
         <div className="col-span-2">
-          <label className={lbl}>كمية الدواء في الكيس</label>
-          <input className={inp} type="number" value={bagAmount} onChange={(e) => setBagAmount(e.target.value)} placeholder="مثال: 8" />
+          <label className={lbl}>{isEn ? "Amount of drug in bag" : "كمية الدواء في الكيس"}</label>
+          <input className={inp} type="number" value={bagAmount} onChange={(e) => setBagAmount(e.target.value)} placeholder={isEn ? "e.g. 8" : "مثال: 8"} />
         </div>
         <div>
-          <label className={lbl}>الوحدة</label>
+          <label className={lbl}>{isEn ? "Unit" : "الوحدة"}</label>
           <select className={inp} value={bagUnit} onChange={(e) => setBagUnit(e.target.value as "mg" | "mcg")}>
             <option value="mg">mg</option>
             <option value="mcg">mcg</option>
@@ -711,66 +771,89 @@ function DoseRateCalculator() {
 
       {mode === "doseToRate" ? (
         <div className="mt-3">
-          <label className={lbl}>الجرعة المطلوبة ({doseUnit})</label>
+          <label className={lbl}>{isEn ? `Required dose (${doseUnit})` : `الجرعة المطلوبة (${doseUnit})`}</label>
           <input className={inp} type="number" value={doseInput} onChange={(e) => setDoseInput(e.target.value)} />
         </div>
       ) : (
         <div className="mt-3">
-          <label className={lbl}>معدل التسريب (مل/ساعة)</label>
+          <label className={lbl}>{isEn ? "Infusion rate (mL/hour)" : "معدل التسريب (مل/ساعة)"}</label>
           <input className={inp} type="number" value={rateInput} onChange={(e) => setRateInput(e.target.value)} />
         </div>
       )}
 
       {concMcgPerMl > 0 && (
-        <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">تركيز المحلول: {concMcgPerMl.toFixed(2)} mcg/mL</div>
+        <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">{isEn ? `Solution concentration: ${concMcgPerMl.toFixed(2)} mcg/mL` : `تركيز المحلول: ${concMcgPerMl.toFixed(2)} mcg/mL`}</div>
       )}
 
       {result !== null && !Number.isNaN(result) && (
         <div className={res}>
           {mode === "doseToRate"
-            ? `معدل التسريب = ${result.toFixed(2)} مل/ساعة`
-            : `الجرعة = ${result.toFixed(3)} ${doseUnit}`}
+            ? (isEn ? `Infusion rate = ${result.toFixed(2)} mL/hour` : `معدل التسريب = ${result.toFixed(2)} مل/ساعة`)
+            : (isEn ? `Dose = ${result.toFixed(3)} ${doseUnit}` : `الجرعة = ${result.toFixed(3)} ${doseUnit}`)}
         </div>
       )}
       {needsWeight && !weight && (doseInput || rateInput) && (
-        <div className="mt-2 text-xs text-rose-500">أدخل وزن المريض لإتمام الحساب مع هذه الوحدة.</div>
+        <div className="mt-2 text-xs text-rose-500">{isEn ? "Enter the patient's weight to complete the calculation with this unit." : "أدخل وزن المريض لإتمام الحساب مع هذه الوحدة."}</div>
       )}
     </Card>
   );
 }
 
-const aiKB: { keys: string[]; answer: string }[] = [
-  { keys: ["bmi", "كتلة", "وزن"], answer: "مؤشر كتلة الجسم يحسب بقسمة الوزن (كجم) على مربع الطول (متر). القيمة الطبيعية بين 18.5 و 24.9." },
-  { keys: ["جرعة", "دواء", "dose"], answer: "تُحسب جرعة الدواء عادةً بضرب الجرعة الموصوفة (مجم/كجم) في وزن المريض. تأكد دائماً من مراجعة الطبيب." },
-  { keys: ["جرح", "wound", "ضماد"], answer: "للعناية بالجرح: اغسل يديك، ارتدِ قفازات معقمة، نظّف الجرح بمحلول ملحي، ثم ضع الضمادة المناسبة." },
-  { keys: ["ضغط", "blood pressure", "bp"], answer: "ضغط الدم الطبيعي حوالي 120/80 ملم زئبق. ارتفاعه فوق 140/90 يعد ارتفاعاً في ضغط الدم." },
-  { keys: ["سكر", "diabetes", "glucose"], answer: "مستوى السكر الطبيعي صائم بين 70-100 مجم/ديسيلتر. راقب علامات نقص أو ارتفاع السكر لدى المريض." },
+const aiKB: { keys: string[]; answerAr: string; answerEn: string }[] = [
+  {
+    keys: ["bmi", "كتلة", "وزن", "weight"],
+    answerAr: "مؤشر كتلة الجسم يحسب بقسمة الوزن (كجم) على مربع الطول (متر). القيمة الطبيعية بين 18.5 و 24.9.",
+    answerEn: "Body mass index is calculated by dividing weight (kg) by height squared (meters). The normal range is between 18.5 and 24.9.",
+  },
+  {
+    keys: ["جرعة", "دواء", "dose", "medication"],
+    answerAr: "تُحسب جرعة الدواء عادةً بضرب الجرعة الموصوفة (مجم/كجم) في وزن المريض. تأكد دائماً من مراجعة الطبيب.",
+    answerEn: "Medication dose is usually calculated by multiplying the prescribed dose (mg/kg) by the patient's weight. Always confirm with a physician.",
+  },
+  {
+    keys: ["جرح", "wound", "ضماد", "dressing"],
+    answerAr: "للعناية بالجرح: اغسل يديك، ارتدِ قفازات معقمة، نظّف الجرح بمحلول ملحي، ثم ضع الضمادة المناسبة.",
+    answerEn: "For wound care: wash your hands, wear sterile gloves, clean the wound with saline, then apply the appropriate dressing.",
+  },
+  {
+    keys: ["ضغط", "blood pressure", "bp"],
+    answerAr: "ضغط الدم الطبيعي حوالي 120/80 ملم زئبق. ارتفاعه فوق 140/90 يعد ارتفاعاً في ضغط الدم.",
+    answerEn: "Normal blood pressure is around 120/80 mmHg. Above 140/90 is considered high blood pressure.",
+  },
+  {
+    keys: ["سكر", "diabetes", "glucose"],
+    answerAr: "مستوى السكر الطبيعي صائم بين 70-100 مجم/ديسيلتر. راقب علامات نقص أو ارتفاع السكر لدى المريض.",
+    answerEn: "Normal fasting blood glucose is between 70-100 mg/dL. Monitor the patient for signs of hypo- or hyperglycemia.",
+  },
 ];
 
 function AIAssistant() {
-  const [msgs, setMsgs] = useState<{ role: "user" | "bot"; text: string }[]>([
-    { role: "bot", text: "مرحباً! أنا مساعدك الذكي للتمريض. اسألني عن BMI، الجرعات، العناية بالجروح، ضغط الدم، السكري وغيرها." },
-  ]);
+  const { lang } = useI18n();
+  const isEn = lang === "en";
+  const [msgs, setMsgs] = useState<{ role: "user" | "bot"; text: string }[]>([]);
   const [input, setInput] = useState("");
+  const greeting = isEn ? "Hello! I'm your nursing AI assistant. Ask me about BMI, dosing, wound care, blood pressure, diabetes, and more." : "مرحباً! أنا مساعدك الذكي للتمريض. اسألني عن BMI، الجرعات، العناية بالجروح، ضغط الدم، السكري وغيرها.";
   const send = (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim()) return;
     const q = input.toLowerCase();
     const found = aiKB.find((k) => k.keys.some((key) => q.includes(key)));
-    const answer = found ? found.answer : "هذا سؤال جيد! للحصول على إجابة دقيقة، راجع المقالات في قسم المهارات والأدوية أو استشر مختصاً.";
+    const fallback = isEn ? "That's a good question! For an accurate answer, check the articles in the Skills and Drugs sections, or consult a specialist." : "هذا سؤال جيد! للحصول على إجابة دقيقة، راجع المقالات في قسم المهارات والأدوية أو استشر مختصاً.";
+    const answer = found ? (isEn ? found.answerEn : found.answerAr) : fallback;
     setMsgs((m) => [...m, { role: "user", text: input }, { role: "bot", text: answer }]);
     setInput("");
   };
   return (
-    <Card title="المساعد الذكي للتمريض 🤖" icon="✨">
+    <Card title={isEn ? "Nursing AI Assistant 🤖" : "المساعد الذكي للتمريض 🤖"} icon="✨">
       <div className="mb-3 h-64 space-y-2 overflow-y-auto rounded-xl bg-slate-50 p-3 dark:bg-slate-800/50">
+        <div className="ml-auto max-w-[85%] rounded-2xl bg-white px-3 py-2 text-sm dark:bg-slate-700 dark:text-white">{greeting}</div>
         {msgs.map((m, i) => (
           <div key={i} className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm ${m.role === "user" ? "mr-auto bg-sky-500 text-white" : "ml-auto bg-white dark:bg-slate-700 dark:text-white"}`}>{m.text}</div>
         ))}
       </div>
       <form onSubmit={send} className="flex gap-2">
-        <input value={input} onChange={(e) => setInput(e.target.value)} placeholder="اكتب سؤالك..." className={inp} />
-        <button className="rounded-lg bg-emerald-500 px-5 font-bold text-white">إرسال</button>
+        <input value={input} onChange={(e) => setInput(e.target.value)} placeholder={isEn ? "Type your question..." : "اكتب سؤالك..."} className={inp} />
+        <button className="rounded-lg bg-emerald-500 px-5 font-bold text-white">{isEn ? "Send" : "إرسال"}</button>
       </form>
     </Card>
   );
@@ -781,6 +864,7 @@ export default function ToolsPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("nav.tools") }]} />
+      <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-black dark:text-white">{t("tools.title")}</h1>
         <p className="mt-2 text-slate-500 dark:text-slate-400">{t("tools.sub")}</p>
