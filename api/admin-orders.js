@@ -2,7 +2,7 @@
 // المسار الصحيح: api/admin-orders.js  (استبدل الملف القديم بالكامل)
 // ============================================================
 import { createClient } from '@supabase/supabase-js';
-import { verifyToken, getBearerToken } from './_lib/adminAuth.js';
+import { verifyToken, getSessionCookie } from './_lib/adminAuth.js';
 
 const supabaseAdmin = createClient(
   process.env.SUPABASE_URL,
@@ -10,7 +10,7 @@ const supabaseAdmin = createClient(
 );
 
 export default async function handler(req, res) {
-  const token = getBearerToken(req);
+  const token = getSessionCookie(req);
   if (!verifyToken(token)) {
     return res.status(401).json({ error: 'محتاج تسجيل دخول' });
   }
@@ -30,6 +30,10 @@ export default async function handler(req, res) {
 
     if (action === 'updateStatus') {
       const { orderId, status } = req.body;
+      const allowedStatuses = ['pending', 'paid', 'failed', 'refunded'];
+      if (typeof orderId !== 'string' || !orderId || !allowedStatuses.includes(status)) {
+        return res.status(400).json({ error: 'orderId/status غير صالحين' });
+      }
       const update = { status };
       if (status === 'paid') update.confirmed_at = new Date().toISOString();
 
@@ -40,6 +44,9 @@ export default async function handler(req, res) {
 
     if (action === 'getDownloadLink') {
       const { filePath } = req.body;
+      if (typeof filePath !== 'string' || !filePath || filePath.includes('..')) {
+        return res.status(400).json({ error: 'filePath غير صالح' });
+      }
       const { data, error } = await supabaseAdmin.storage
         .from('pdf-store')
         .createSignedUrl(filePath, 60 * 60);
