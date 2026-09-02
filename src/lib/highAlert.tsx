@@ -1,11 +1,12 @@
 // شير واحد للتصنيف الثلاثي حسب IPSG — يُستخدم في drugs و icu_medications معًا
+import { useI18n, type TKey } from "./i18n";
 
 export type HighAlertType = "general" | "concentrated_electrolyte" | "lasa";
 
-export const HIGH_ALERT_LABELS: Record<HighAlertType, string> = {
-  general: "⚠ عالي الخطورة",
-  concentrated_electrolyte: "☢ شوارد مركّزة",
-  lasa: "🔤 اسم متشابه (LASA)",
+export const HIGH_ALERT_LABEL_KEYS: Record<HighAlertType, TKey> = {
+  general: "drug.highAlertGeneral",
+  concentrated_electrolyte: "drug.highAlertElectrolyte",
+  lasa: "drug.highAlertLasa",
 };
 
 // ألوان تنبيه أمان حقيقية (مسموحة بالاستثناء عن الباليتة الزخرفية المعتادة)
@@ -29,7 +30,7 @@ export function parseHighAlertTypes(raw: unknown): HighAlertType[] {
       list = [];
     }
   }
-  return list.filter((t): t is HighAlertType => typeof t === "string" && t in HIGH_ALERT_LABELS);
+  return list.filter((t): t is HighAlertType => typeof t === "string" && t in HIGH_ALERT_LABEL_KEYS);
 }
 
 /** True when a drug should carry a high-alert warning: either the legacy flag or any IPSG classification tag. */
@@ -38,13 +39,14 @@ export function isHighAlertEffective(isHighAlert: boolean | undefined, types: un
 }
 
 export function HighAlertBadges({ types }: { types: unknown }) {
+  const { t } = useI18n();
   const list = parseHighAlertTypes(types);
   if (!list.length) return null;
   return (
     <div className="flex flex-wrap gap-1.5">
-      {list.map((t) => (
-        <span key={t} className={`text-xs rounded-full px-2.5 py-1 font-semibold ${HIGH_ALERT_COLORS[t]}`}>
-          {HIGH_ALERT_LABELS[t]}
+      {list.map((ht) => (
+        <span key={ht} className={`text-xs rounded-full px-2.5 py-1 font-semibold ${HIGH_ALERT_COLORS[ht]}`}>
+          {t(HIGH_ALERT_LABEL_KEYS[ht])}
         </span>
       ))}
     </div>

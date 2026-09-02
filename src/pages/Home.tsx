@@ -5,22 +5,38 @@ import type { HomeCategory } from "../lib/types";
 import { AdSlot, ArticleCard, SectionTitle } from "../components/common";
 import Newsletter from "../components/Newsletter";
 import { useSEO } from "../lib/seo";
-import { useI18n } from "../lib/i18n";
+import { useI18n, bilingual } from "../lib/i18n";
+
+const DIFFICULTY_LABEL: Record<string, { ar: string; en: string }> = {
+  "سهل": { ar: "سهل", en: "Easy" },
+  "متوسط": { ar: "متوسط", en: "Medium" },
+  "صعب": { ar: "صعب", en: "Hard" },
+};
+
+const TOOL_PREVIEWS = [
+  { i: "⚖️", t: "حاسبة BMI", tEn: "BMI Calculator", d: "مؤشر كتلة الجسم", dEn: "Body Mass Index" },
+  { i: "💧", t: "معدل التنقيط الوريدي", tEn: "IV Drip Rate", d: "معدل التنقيط الوريدي", dEn: "IV infusion rate" },
+  { i: "🧠", t: "مقياس غلاسكو", tEn: "GCS", d: "مقياس غلاسكو للوعي", dEn: "Glasgow Coma Scale" },
+  { i: "🤰", t: "حاسبة الحمل", tEn: "Pregnancy Calculator", d: "موعد الولادة المتوقع", dEn: "Estimated due date" },
+];
 
 /** A single dynamic home category card — links internally or to an external URL. */
 function CategoryCardLink({ card }: { card: HomeCategory }) {
+  const { lang } = useI18n();
   const external = /^https?:\/\//i.test(card.link);
+  const title = bilingual(card.title, card.titleEn, lang).text;
+  const description = bilingual(card.description, card.descriptionEn, lang).text;
   const inner = (
     <>
       {card.image ? (
         <div className="mx-auto mb-2 h-14 w-14 overflow-hidden rounded-xl">
-          <img src={card.image} alt={card.title} loading="lazy" className="h-full w-full object-cover" />
+          <img src={card.image} alt={title} loading="lazy" className="h-full w-full object-cover" />
         </div>
       ) : (
         <div className={`mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${card.color} text-2xl text-white transition-transform group-hover:scale-110 sm:h-14 sm:w-14 sm:text-3xl`}>{card.icon}</div>
       )}
-      <div className="text-xs font-bold dark:text-white sm:text-sm">{card.title}</div>
-      {card.description && <div className="mt-0.5 line-clamp-1 text-[11px] text-slate-400">{card.description}</div>}
+      <div className="text-xs font-bold dark:text-white sm:text-sm">{title}</div>
+      {description && <div className="mt-0.5 line-clamp-1 text-[11px] text-slate-400">{description}</div>}
     </>
   );
   const cls = "group rounded-2xl border border-slate-200 bg-white p-4 text-center transition-all hover:-translate-y-1 hover:border-sky-400 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900 sm:p-5";
@@ -169,13 +185,18 @@ export default function Home() {
       <section key="quizzes" className="mx-auto max-w-7xl px-4 py-10 md:py-12">
         <SectionTitle {...meta("quizzes", "home.quizzes", "home.quizzesSub")} link={{ label: t("nav.quizzes"), to: "/quizzes" }} />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {quizzes.filter((q) => q.status === "published").slice(0, 3).map((q) => (
-            <Link key={q.id} to={`/quiz/${q.id}`} className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-emerald-50 p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
-              <div className="flex items-center justify-between"><span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-600 dark:bg-sky-500/10">{q.category}</span><span className="text-2xl">📝</span></div>
-              <h3 className="mt-2 font-bold dark:text-white">{q.title}</h3>
-              <div className="mt-1 text-xs text-slate-400">{q.questions.length} سؤال · {q.difficulty}</div>
-            </Link>
-          ))}
+          {quizzes.filter((q) => q.status === "published").slice(0, 3).map((q) => {
+            const qTitle = bilingual(q.title, q.titleEn, lang).text;
+            const qCategory = bilingual(q.category, q.categoryEn, lang).text;
+            const qDifficulty = DIFFICULTY_LABEL[q.difficulty]?.[lang] ?? q.difficulty;
+            return (
+              <Link key={q.id} to={`/quiz/${q.id}`} className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-emerald-50 p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
+                <div className="flex items-center justify-between"><span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-600 dark:bg-sky-500/10">{qCategory}</span><span className="text-2xl">📝</span></div>
+                <h3 className="mt-2 font-bold dark:text-white">{qTitle}</h3>
+                <div className="mt-1 text-xs text-slate-400">{q.questions.length} {t("quiz.numQuestions")} · {qDifficulty}</div>
+              </Link>
+            );
+          })}
         </div>
       </section>
     ),
@@ -183,16 +204,11 @@ export default function Home() {
       <section key="tools" className="mx-auto max-w-7xl px-4 py-10 md:py-12">
         <SectionTitle {...meta("tools", "home.tools", "home.toolsSub")} link={{ label: t("nav.tools"), to: "/tools" }} />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            { i: "⚖️", t: "حاسبة BMI", d: "مؤشر كتلة الجسم" },
-            { i: "💧", t: "IV Drip Rate", d: "معدل التنقيط الوريدي" },
-            { i: "🧠", t: "GCS", d: "مقياس غلاسكو للوعي" },
-            { i: "🤰", t: "حاسبة الحمل", d: "موعد الولادة المتوقع" },
-          ].map((t) => (
-            <Link key={t.t} to="/tools" className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-sky-50 p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
-              <div className="text-3xl">{t.i}</div>
-              <div className="mt-2 font-bold dark:text-white">{t.t}</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400">{t.d}</div>
+          {TOOL_PREVIEWS.map((tool) => (
+            <Link key={tool.t} to="/tools" className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-sky-50 p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
+              <div className="text-3xl">{tool.i}</div>
+              <div className="mt-2 font-bold dark:text-white">{lang === "en" ? tool.tEn : tool.t}</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400">{lang === "en" ? tool.dEn : tool.d}</div>
             </Link>
           ))}
         </div>
@@ -203,18 +219,22 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4">
           <SectionTitle {...meta("store", "home.store", "home.storeSub")} link={{ label: t("home.visitStore"), to: "/store" }} />
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {latestProduct.map((p) => (
-              <Link key={p.id} to="/store" className="overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
-                <img src={p.cover} alt={p.title} loading="lazy" className="h-40 w-full object-cover" />
-                <div className="p-4">
-                  <h3 className="font-bold dark:text-white">{p.title}</h3>
-                  <div className="mt-2 flex items-center gap-2">
-                    <span className="text-xl font-black text-emerald-500">{p.price} ج.م</span>
-                    {p.oldPrice && <span className="text-sm text-slate-400 line-through">{p.oldPrice}</span>}
+            {latestProduct.map((p) => {
+              const pTitle = bilingual(p.title, p.titleEn, lang).text;
+              const cur = lang === "en" ? "EGP" : "ج.م";
+              return (
+                <Link key={p.id} to="/store" className="overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
+                  <img src={p.cover} alt={pTitle} loading="lazy" className="h-40 w-full object-cover" />
+                  <div className="p-4">
+                    <h3 className="font-bold dark:text-white">{pTitle}</h3>
+                    <div className="mt-2 flex items-center gap-2">
+                      <span className="text-xl font-black text-emerald-500">{p.price} {cur}</span>
+                      {p.oldPrice && <span className="text-sm text-slate-400 line-through">{p.oldPrice}</span>}
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

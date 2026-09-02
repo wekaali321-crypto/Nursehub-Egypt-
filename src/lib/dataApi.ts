@@ -75,11 +75,11 @@ const toSuffix = (s: any) => ({ id: s.id, suffix: s.suffix, class_name: s.classN
 const fromCardiacGroup = (r: any) => ({ id: r.id, name: r.name, examples: r.examples ?? "", nameEn: r.name_en ?? "", examplesEn: r.examples_en ?? "" });
 const toCardiacGroup = (c: any) => ({ id: c.id, name: c.name, examples: c.examples ?? "", name_en: c.nameEn ?? null, examples_en: c.examplesEn ?? null });
 
-const fromMnemonic = (r: any) => ({ id: r.id, title: r.title, code: r.code ?? "", lines: r.lines ?? "" });
-const toMnemonic = (m: any) => ({ id: m.id, title: m.title, code: m.code ?? "", lines: m.lines ?? "" });
+const fromMnemonic = (r: any) => ({ id: r.id, title: r.title, titleEn: r.title_en ?? "", code: r.code ?? "", lines: r.lines ?? "", linesEn: r.lines_en ?? "" });
+const toMnemonic = (m: any) => ({ id: m.id, title: m.title, title_en: m.titleEn ?? null, code: m.code ?? "", lines: m.lines ?? "", lines_en: m.linesEn ?? null });
 
-const fromFact = (r: any) => ({ id: r.id, number: r.number, content: r.content, source: r.source ?? "", chapter: r.chapter ?? 1 });
-const toFact = (f: any) => ({ id: f.id, number: f.number, content: f.content, source: f.source ?? "", chapter: f.chapter ?? 1 });
+const fromFact = (r: any) => ({ id: r.id, number: r.number, content: r.content, contentEn: r.content_en ?? "", source: r.source ?? "", chapter: r.chapter ?? 1 });
+const toFact = (f: any) => ({ id: f.id, number: f.number, content: f.content, content_en: f.contentEn ?? null, source: f.source ?? "", chapter: f.chapter ?? 1 });
 
 // حالات شائعة وعلاجها (OTC)
 const fromOTC = (r: any) => ({ id: r.id, orderNum: r.order_num ?? 0, nameAr: r.name_ar, nameEn: r.name_en, icon: r.icon ?? "🩺", category: r.category, summary: r.summary, symptoms: r.symptoms, keyQuestions: r.key_questions, redFlags: r.red_flags ?? "", treatment: r.treatment, patientAdvice: r.patient_advice ?? "", categoryEn: r.category_en ?? "", summaryEn: r.summary_en ?? "", symptomsEn: r.symptoms_en ?? "", keyQuestionsEn: r.key_questions_en ?? "", redFlagsEn: r.red_flags_en ?? "", treatmentEn: r.treatment_en ?? "", patientAdviceEn: r.patient_advice_en ?? "" });

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useStore, readingTime } from "../lib/store";
 import { CATEGORY_LABELS, type Category } from "../lib/types";
-import { ArticleCard, Breadcrumbs, AdSlot, CAT_ICON } from "../components/common";
+import { ArticleCard, Breadcrumbs, AdSlot, CAT_ICON, CAT_KEY } from "../components/common";
 import { useSEO, breadcrumbSchema, extractFaqSchema, extractHowToSchema } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import { useToast } from "../components/Toast";
@@ -163,7 +163,7 @@ export default function ArticlePage() {
           },
           breadcrumbSchema([
             { name: "الرئيسية", url: window.location.origin },
-            { name: CATEGORY_LABELS[article.category], url: `${window.location.origin}/category/${article.category}` },
+            { name: t(CAT_KEY[article.category]), url: `${window.location.origin}/category/${article.category}` },
             { name: article.title, url: window.location.href },
           ]),
           ...(faqSchema ? [faqSchema] : []),
@@ -251,12 +251,12 @@ export default function ArticlePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
       <ReadingProgress />
-      <Breadcrumbs items={[{ label: CATEGORY_LABELS[article.category], path: `/category/${article.category}` }, { label: dispTitle.text }]} />
+      <Breadcrumbs items={[{ label: t(CAT_KEY[article.category]), path: `/category/${article.category}` }, { label: dispTitle.text }]} />
 
       <div className="grid gap-8 lg:grid-cols-[1fr_280px]">
         <article>
           <div className="flex items-center justify-between gap-3">
-            <span className="rounded-full bg-sky-50 px-3 py-1 text-sm font-bold text-sky-600 dark:bg-sky-500/10">{CATEGORY_LABELS[article.category]}</span>
+            <span className="rounded-full bg-sky-50 px-3 py-1 text-sm font-bold text-sky-600 dark:bg-sky-500/10">{t(CAT_KEY[article.category])}</span>
             <button
               onClick={doBookmark}
               disabled={bookmarkBusy}
@@ -300,7 +300,7 @@ export default function ArticlePage() {
             <OptimizedImage src={article.cover} alt={dispTitle.text} width={1000} ratio="16/9" />
           </div>
 
-          <div className="my-6 print:hidden"><AdSlot label="إعلان داخل المقال" /></div>
+          <div className="my-6 print:hidden"><AdSlot label={t("article.adInline")} /></div>
 
           {ytEmbed && (
             <div className="my-6 aspect-video w-full overflow-hidden rounded-2xl print:hidden">
@@ -396,14 +396,14 @@ export default function ArticlePage() {
                   <p className="mt-2 text-slate-600 dark:text-slate-300">{c.text}</p>
                 </div>
               ))}
-              {articleComments.length === 0 && <p className="text-slate-400">كن أول من يعلق على هذا المقال.</p>}
+              {articleComments.length === 0 && <p className="text-slate-400">{t("article.beFirstComment")}</p>}
             </div>
             <form onSubmit={submitComment} className="mt-5 space-y-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/50">
-              <label htmlFor="comment-name" className="sr-only">اسمك</label>
-              <input id="comment-name" value={name} onChange={(e) => setName(e.target.value)} placeholder="اسمك" className="w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-900" />
-              <label htmlFor="comment-text" className="sr-only">تعليقك</label>
-              <textarea id="comment-text" value={text} onChange={(e) => setText(e.target.value)} placeholder="اكتب تعليقك..." rows={3} className="w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-900" />
-              <button className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white">إرسال التعليق</button>
+              <label htmlFor="comment-name" className="sr-only">{t("article.yourName")}</label>
+              <input id="comment-name" value={name} onChange={(e) => setName(e.target.value)} placeholder={t("article.yourName")} className="w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-900" />
+              <label htmlFor="comment-text" className="sr-only">{t("article.yourComment")}</label>
+              <textarea id="comment-text" value={text} onChange={(e) => setText(e.target.value)} placeholder={t("article.writeComment")} rows={3} className="w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-900" />
+              <button className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("article.submitComment")}</button>
             </form>
           </section>
         </article>
@@ -424,13 +424,13 @@ export default function ArticlePage() {
                   to={`/category/${c}`}
                   className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold transition ${c === article.category ? "bg-sky-500 text-white" : "bg-slate-100 text-slate-600 hover:bg-sky-100 hover:text-sky-600 dark:bg-slate-800 dark:text-slate-300"}`}
                 >
-                  <Icon name={CAT_ICON[c]} size={12} /> {CATEGORY_LABELS[c]}
+                  <Icon name={CAT_ICON[c]} size={12} /> {t(CAT_KEY[c])}
                 </Link>
               ))}
             </div>
           </div>
 
-          <AdSlot label="إعلان جانبي (300x250)" height="h-64" />
+          <AdSlot label={t("article.adSidebar")} height="h-64" />
           <div className="rounded-2xl bg-gradient-to-br from-emerald-500 to-sky-500 p-5 text-white">
             <div className="text-2xl" aria-hidden="true">🎓</div>
             <h3 className="mt-2 font-bold">{settings.siteName} Premium</h3>

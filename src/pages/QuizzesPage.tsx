@@ -26,7 +26,7 @@ export default function QuizzesPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
-      <Breadcrumbs items={[{ label: "الاختبارات" }]} />
+      <Breadcrumbs items={[{ label: t("nav.quizzes") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
       <div className="mb-6 rounded-3xl bg-gradient-to-l from-sky-500 to-emerald-500 p-6 text-white sm:p-8">
         <div className="text-4xl sm:text-5xl">📝</div>

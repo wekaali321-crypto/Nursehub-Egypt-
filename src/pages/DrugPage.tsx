@@ -22,7 +22,7 @@ const BLOCK_LABELS = {
 export default function DrugPage() {
   const { slug } = useParams();
   const { drugs, drugInteractions } = useStore();
-  const { lang } = useI18n();
+  const { lang, t } = useI18n();
   const drug = drugs.find((d) => d.slug === slug);
   const interactions = drug
     ? drugInteractions
@@ -32,7 +32,7 @@ export default function DrugPage() {
     : [];
 
   useSEO({
-    title: drug ? `${drug.name} (${drug.genericName}) | دليل الأدوية` : "الدواء غير موجود",
+    title: drug ? `${drug.name} (${drug.genericName}) | ${t("drugs.title")}` : t("drug.notFound"),
     description: drug ? `${drug.name}: ${drug.indications}` : "",
     keywords: drug ? `${drug.name}, ${drug.genericName}, ${drug.drugClass}, جرعة, تمريض` : "",
     type: "article",
@@ -47,8 +47,8 @@ export default function DrugPage() {
             description: drug.indications,
           },
           breadcrumbSchema([
-            { name: "الرئيسية", url: window.location.origin },
-            { name: "الأدوية", url: `${window.location.origin}/drugs` },
+            { name: lang === "en" ? "Home" : "الرئيسية", url: window.location.origin },
+            { name: t("drugs.title"), url: `${window.location.origin}/drugs` },
             { name: drug.name, url: window.location.href },
           ]),
         ]
@@ -59,8 +59,8 @@ export default function DrugPage() {
     return (
       <div className="mx-auto max-w-3xl px-4 py-20 text-center">
         <div className="text-6xl">🔍</div>
-        <h1 className="mt-4 text-2xl font-bold dark:text-white">الدواء غير موجود</h1>
-        <Link to="/drugs" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">العودة لدليل الأدوية</Link>
+        <h1 className="mt-4 text-2xl font-bold dark:text-white">{t("drug.notFound")}</h1>
+        <Link to="/drugs" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("drug.backToGuide")}</Link>
       </div>
     );
   }
@@ -86,10 +86,10 @@ export default function DrugPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8">
-      <div className="print:hidden"><Breadcrumbs items={[{ label: "الأدوية", path: "/drugs" }, { label: name }]} /></div>
+      <div className="print:hidden"><Breadcrumbs items={[{ label: t("drugs.title"), path: "/drugs" }, { label: name }]} /></div>
       <div className="mb-3 flex items-center justify-end gap-2 print:hidden">
         <InlineLangToggle />
-        <PrintButton label="طباعة بطاقة الدواء" />
+        <PrintButton label={t("drug.printCard")} />
       </div>
 
       <div className="rounded-3xl bg-gradient-to-l from-sky-600 to-emerald-500 p-6 text-white sm:p-8">
@@ -99,7 +99,7 @@ export default function DrugPage() {
             highAlertTypes.length > 0 ? (
               <HighAlertBadges types={highAlertTypes} />
             ) : (
-              <span className="rounded-full bg-rose-500 px-3 py-1 text-sm font-bold">⚠️ دواء عالي الخطورة</span>
+              <span className="rounded-full bg-rose-500 px-3 py-1 text-sm font-bold">{t("drug.highAlertBadge")}</span>
             )
           )}
         </div>
@@ -119,13 +119,13 @@ export default function DrugPage() {
       {drug.isHighAlert && drug.highAlertWarnings && (
         <div className="mt-6 rounded-2xl border-2 border-rose-300 bg-rose-50 p-5 dark:border-rose-900 dark:bg-rose-500/10">
           <h3 className="mb-2 flex items-center gap-2 font-bold text-rose-700 dark:text-rose-400">
-            <span className="text-xl">⚠️</span> تحذيرات دواء عالي الخطورة
+            <span className="text-xl">⚠️</span> {t("drug.highAlertWarningsHeading")}
           </h3>
           <p className="leading-relaxed text-rose-800 dark:text-rose-300">{bilingual(drug.highAlertWarnings, drug.highAlertWarningsEn, lang).text}</p>
         </div>
       )}
 
-      <div className="my-6 print:hidden"><AdSlot label="إعلان صفحة الدواء" /></div>
+      <div className="my-6 print:hidden"><AdSlot label={t("drug.adLabel")} /></div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {blocks.map((b) => (
@@ -137,12 +137,12 @@ export default function DrugPage() {
       </div>
 
       <div className="mt-8 rounded-2xl border border-slate-200 bg-amber-50 p-4 text-sm text-amber-700 dark:border-slate-800 dark:bg-amber-500/5 dark:text-amber-400">
-        ⚠️ هذه المعلومات لأغراض تعليمية فقط ولا تغني عن استشارة الطبيب أو الصيدلي المختص.
+        ⚠️ {t("drug.disclaimer")}
       </div>
 
       {interactions.length > 0 && (
         <section className="mt-10">
-          <h2 className="mb-4 text-xl font-bold dark:text-white">🔄 تفاعلات دوائية معروفة</h2>
+          <h2 className="mb-4 text-xl font-bold dark:text-white">{t("drug.knownInteractions")}</h2>
           <div className="grid gap-3">
             {interactions.map((i) => {
               const sevStyle =
@@ -151,26 +151,28 @@ export default function DrugPage() {
                   : i.severity === "moderate"
                   ? "border-amber-300 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-500/10 dark:text-amber-400"
                   : "border-slate-200 bg-slate-50 text-slate-600 dark:border-slate-800 dark:bg-slate-800/40 dark:text-slate-300";
-              const sevLabel = i.severity === "severe" ? "خطير" : i.severity === "moderate" ? "متوسط" : "بسيط";
+              const sevLabel = i.severity === "severe" ? t("drug.severitySevere") : i.severity === "moderate" ? t("drug.severityModerate") : t("drug.severityMild");
+              const desc = bilingual(i.description, i.descriptionEn, lang).text;
+              const management = bilingual(i.management, i.managementEn, lang).text;
               return (
                 <div key={i.id} className={`rounded-2xl border p-4 ${sevStyle}`}>
                   <div className="mb-1 flex items-center justify-between">
-                    <span className="font-bold">مع {bilingual(i.other!.name, i.other!.nameEn, lang).text}</span>
+                    <span className="font-bold">{t("drug.with")} {bilingual(i.other!.name, i.other!.nameEn, lang).text}</span>
                     <span className="rounded-full bg-white/60 px-2 py-0.5 text-xs font-bold dark:bg-black/20">{sevLabel}</span>
                   </div>
-                  <p className="text-sm leading-relaxed">{i.description}</p>
-                  {i.management && <p className="mt-1 text-sm font-bold">💡 {i.management}</p>}
+                  <p className="text-sm leading-relaxed">{desc}</p>
+                  {management && <p className="mt-1 text-sm font-bold">💡 {management}</p>}
                 </div>
               );
             })}
           </div>
-          <Link to="/drugs/interactions" className="mt-3 inline-block text-sm font-bold text-sky-600 hover:underline">فحص تفاعل مع دواء آخر ←</Link>
+          <Link to="/drugs/interactions" className="mt-3 inline-block text-sm font-bold text-sky-600 hover:underline">{t("drug.checkOtherInteraction")}</Link>
         </section>
       )}
 
       {related.length > 0 && (
         <section className="mt-10 print:hidden">
-          <h2 className="mb-4 text-xl font-bold dark:text-white">أدوية مشابهة في نفس الفئة</h2>
+          <h2 className="mb-4 text-xl font-bold dark:text-white">{t("drug.similarInCategory")}</h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {related.map((d) => (
               <Link key={d.id} to={`/drug/${d.slug}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">

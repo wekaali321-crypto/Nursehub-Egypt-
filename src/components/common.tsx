@@ -5,7 +5,7 @@ import { useI18n, bilingual, type TKey } from "../lib/i18n";
 import Icon, { type IconName } from "./Icon";
 import OptimizedImage from "./OptimizedImage";
 
-const CAT_KEY: Record<Category, TKey> = {
+export const CAT_KEY: Record<Category, TKey> = {
   articles: "nav.articles", summaries: "nav.summaries", drugs: "nav.drugs",
   skills: "nav.skills", "infection-control": "nav.infectionControl",
   careplans: "nav.careplans", books: "nav.books",
@@ -31,10 +31,11 @@ export function AdSlot({ label = "مساحة إعلانية", height = "h-28" }:
 }
 
 export function Breadcrumbs({ items }: { items: { label: string; path?: string }[] }) {
+  const { t } = useI18n();
   return (
     <nav aria-label="Breadcrumb" className="mb-4 flex flex-wrap items-center gap-1 text-sm text-slate-500 dark:text-slate-400">
       <ol className="flex flex-wrap items-center gap-1">
-        <li><Link to="/" className="hover:text-sky-500" aria-label="الرئيسية">الرئيسية</Link></li>
+        <li><Link to="/" className="hover:text-sky-500" aria-label={t("nav.home")}>{t("nav.home")}</Link></li>
         {items.map((it, i) => (
           <li key={i} className="flex items-center gap-1">
             <span className="text-slate-300" aria-hidden="true">/</span>
