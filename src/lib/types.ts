@@ -168,6 +168,13 @@ export interface OTCCondition {
   redFlags: string;
   treatment: string;
   patientAdvice: string;
+  categoryEn?: string;
+  summaryEn?: string;
+  symptomsEn?: string;
+  keyQuestionsEn?: string;
+  redFlagsEn?: string;
+  treatmentEn?: string;
+  patientAdviceEn?: string;
 }
 
 export interface Page {
