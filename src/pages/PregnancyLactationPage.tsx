@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   fetchPregnancyLactationSafety,
   type PregnancyLactationSafety,
@@ -80,9 +81,10 @@ function DrugCard({ item, open, onToggle }: { item: PregnancyLactationSafety; op
 }
 
 export default function PregnancyLactationPage() {
+  const [searchParams] = useSearchParams();
   const [items, setItems] = useState<PregnancyLactationSafety[]>([]);
   const [loading, setLoading] = useState(true);
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState(searchParams.get("q") || "");
   const [openIds, setOpenIds] = useState<Set<string>>(new Set());
 
   useEffect(() => {

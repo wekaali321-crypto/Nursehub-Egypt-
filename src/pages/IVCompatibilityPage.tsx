@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { fetchIVCompatibility, type IVCompatibilityPair, type IVCompatibilityStatus } from "../lib/ivCompatibilityApi";
 
 const STATUS_META: Record<IVCompatibilityStatus, { label: string; icon: string; tone: string }> = {
@@ -42,9 +43,10 @@ function PairCard({ item }: { item: IVCompatibilityPair }) {
 }
 
 export default function IVCompatibilityPage() {
+  const [searchParams] = useSearchParams();
   const [items, setItems] = useState<IVCompatibilityPair[]>([]);
   const [loading, setLoading] = useState(true);
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState(searchParams.get("q") || "");
 
   useEffect(() => {
     fetchIVCompatibility().then(setItems).catch(() => setItems([])).finally(() => setLoading(false));
