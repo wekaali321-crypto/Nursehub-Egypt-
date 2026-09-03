@@ -48,7 +48,16 @@ async function recentFailures(ip) {
 
 async function recordAttempt(ip, success) {
   if (!supabaseAdmin) return;
-  await supabaseAdmin.from('admin_login_attempts').insert({ ip, success }).select().maybeSingle().catch(() => {});
+  // Best-effort: a logging failure here must never crash/block login itself.
+  // (Previously chained .select().maybeSingle().catch(...) after the insert,
+  // which threw synchronously — TypeError: ...maybeSingle(...).catch is not
+  // a function — before the insert ever ran, crashing every single call to
+  // this endpoint with a 500. There is no need to select the row back.)
+  try {
+    await supabaseAdmin.from('admin_login_attempts').insert({ ip, success });
+  } catch (e) {
+    console.error('admin-login: failed to record attempt', e);
+  }
 }
 
 export default async function handler(req, res) {
