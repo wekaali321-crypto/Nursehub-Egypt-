@@ -6,6 +6,8 @@ import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useToast } from "../components/Toast";
 import { printInvoice } from "../lib/invoice";
+import { supabase, isSupabaseEnabled } from "../lib/supabase";
+import { toOrder } from "../lib/dataApi";
 import type { Order } from "../lib/types";
 import { useI18n } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
@@ -37,6 +39,7 @@ export default function CheckoutPage() {
   const [gateway, setGateway] = useState("");
   const [agree, setAgree] = useState(false);
   const [placed, setPlaced] = useState<Order | null>(null);
+  const [placing, setPlacing] = useState(false);
 
   const activeGateways = gateways.filter((g) => g.enabled && g.connected);
   const discount = applied?.discount ?? 0;
@@ -54,11 +57,12 @@ export default function CheckoutPage() {
     notify(t("checkout.couponApplied"), "success");
   };
 
-  const placeOrder = (e: React.FormEvent) => {
+  const placeOrder = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email) return notify(t("checkout.fillYourData"), "error");
     if (!gateway) return notify(t("checkout.choosePaymentMethod"), "error");
     if (!agree) return notify(t("checkout.mustAgreeTerms"), "error");
+    if (placing) return;
 
     const now = new Date();
     const order: Order = {
@@ -73,6 +77,24 @@ export default function CheckoutPage() {
       transactionId: "TXN-" + Math.random().toString(36).slice(2, 10).toUpperCase(),
       date: now.toISOString().slice(0, 16).replace("T", " "),
     };
+
+    // The success screen ("تم استلام طلبك") must never appear for an order
+    // that wasn't actually saved — so this insert is awaited and checked
+    // for an error before doing anything else. It intentionally does NOT
+    // chain .select() to read the row back: the customer's browser has no
+    // SELECT access to `orders` (guest checkout uses the anon key, and RLS
+    // only grants admins/owners read access), and a plain .insert() call
+    // needs only INSERT privilege to confirm the write succeeded.
+    if (isSupabaseEnabled && supabase) {
+      setPlacing(true);
+      const { error } = await supabase.from("orders").insert(toOrder(order));
+      setPlacing(false);
+      if (error) {
+        notify(t("checkout.orderFailed"), "error");
+        return;
+      }
+    }
+
     recordOrder(order);
     logActivity("طلب جديد", order.invoiceNo);
     pushNotification("revenue", `طلب جديد: ${order.invoiceNo} (${order.total} ${cur})`, `/admin/orders?inv=${encodeURIComponent(order.invoiceNo)}`);
@@ -187,7 +209,7 @@ export default function CheckoutPage() {
             <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} /> {t("checkout.agreeTo")} <Link to="/terms" className="text-sky-500 underline">{t("footer.terms")}</Link>
           </label>
 
-          <button className="w-full rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 py-3 font-bold text-white disabled:opacity-50">{t("checkout.completePayment")} ({total} {cur})</button>
+          <button disabled={placing} className="w-full rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 py-3 font-bold text-white disabled:opacity-50">{placing ? t("checkout.placingOrder") : `${t("checkout.completePayment")} (${total} ${cur})`}</button>
         </form>
 
         {/* Order summary */}

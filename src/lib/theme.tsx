@@ -102,18 +102,27 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!error && data.session && isAllowedAdminEmail(data.session.user?.email)) {
       writeAttempts({ count: 0, until: 0 });
       setLoggedIn(true);
-      // Best-effort: also establish the separate httpOnly-cookie session
-      // used by privileged server endpoints (e.g. /api/admin-orders, which
-      // needs the Supabase service-role key and so cannot rely on RLS).
-      // If ADMIN_PASSWORD isn't configured or doesn't match, the admin can
-      // still use the rest of the dashboard — only those specific
-      // endpoints stay unavailable, with their own clear error.
-      fetch("/api/admin-login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ password }),
-      }).catch(() => {});
+      // Also establish the separate httpOnly-cookie session used by
+      // privileged server endpoints (e.g. /api/admin-orders, which needs
+      // the Supabase service-role key and so cannot rely on RLS). This is
+      // awaited — not fire-and-forget — so that a slow network can never
+      // race an immediate navigation into /admin/orders and leave that
+      // cookie session missing. If ADMIN_PASSWORD isn't configured or
+      // doesn't match, the admin can still use the rest of the dashboard —
+      // only those specific endpoints stay unavailable (they fail with
+      // their own clear 401, which the orders page now recovers from by
+      // prompting a fresh login instead of a dead-end error).
+      try {
+        await fetch("/api/admin-login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
+          body: JSON.stringify({ password }),
+        });
+      } catch {
+        // network error establishing the orders-API session — non-fatal,
+        // same reasoning as above.
+      }
       return { ok: true };
     }
 

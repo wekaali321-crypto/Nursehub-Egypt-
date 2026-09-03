@@ -1,22 +1,33 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { supabase } from "../lib/supabase";
-import { fromOrder } from "../lib/dataApi";
 import { useStore } from "../lib/store";
 import { useSEO } from "../lib/seo";
-import type { Order } from "../lib/types";
+import type { Order, OrderItem } from "../lib/types";
 import { useI18n } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
 
 const MANUAL_WHATSAPP = "201095652098"; // international format, no + or leading 0
+const POLL_MS = 20000;
+
+// The tracking page only ever needs these three fields, and the secure
+// lookup endpoint below only ever returns these three fields — customers
+// have no read access to the `orders` table itself (it holds other
+// people's PII/payment data), by design.
+interface TrackedOrder {
+  invoiceNo: string;
+  paymentStatus: Order["paymentStatus"];
+  items: OrderItem[];
+}
 
 // Public order-tracking page. Lives at /order/:invoiceNo and can be revisited
-// at any time (bookmarked, sent on WhatsApp, etc). It reads the order LIVE
-// from Supabase — not from local app state — so it reflects whatever the
-// admin has confirmed, even from a completely different device. While the
-// page is open it also listens for live updates via Supabase Realtime, so if
-// the admin confirms payment while the customer has this page open, the
-// download button appears without a refresh.
+// at any time (bookmarked, sent on WhatsApp, etc). It looks the order up
+// through /api/order-lookup — a narrow, rate-limited server endpoint —
+// rather than querying `orders` directly: guest customers have no Supabase
+// Auth session, so a direct client-side query would need a broad anon-read
+// RLS policy on `orders`, which would let anyone list every customer's
+// order. While the page is open it polls periodically so a payment the
+// admin confirms while the customer has this tab open still appears
+// without a manual refresh.
 export default function OrderStatusPage() {
   const { invoiceNo } = useParams<{ invoiceNo: string }>();
   const { products, trackDownload } = useStore();
@@ -31,34 +42,33 @@ export default function OrderStatusPage() {
     refunded: { label: t("order.status.refunded"), color: "text-slate-600 bg-slate-100 dark:bg-slate-800" },
   };
 
-  const [order, setOrder] = useState<Order | null | undefined>(undefined); // undefined = still loading
+  const [order, setOrder] = useState<TrackedOrder | null | undefined>(undefined); // undefined = still loading
 
   useEffect(() => {
-    if (!invoiceNo || !supabase) return;
+    if (!invoiceNo) return;
 
     let cancelled = false;
     const load = async () => {
-      const { data } = await supabase!
-        .from("orders")
-        .select("*")
-        .eq("invoice_no", invoiceNo)
-        .maybeSingle();
-      if (!cancelled) setOrder(data ? fromOrder(data) : null);
+      try {
+        const res = await fetch("/api/order-lookup", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ invoiceNo }),
+        });
+        if (cancelled) return;
+        if (!res.ok) { setOrder(null); return; }
+        const json = await res.json();
+        setOrder({ invoiceNo: json.invoiceNo, paymentStatus: json.paymentStatus, items: json.items ?? [] });
+      } catch {
+        if (!cancelled) setOrder(null);
+      }
     };
     load();
-
-    const channel = supabase
-      .channel(`order-${invoiceNo}`)
-      .on(
-        "postgres_changes",
-        { event: "UPDATE", schema: "public", table: "orders", filter: `invoice_no=eq.${invoiceNo}` },
-        (payload) => setOrder(fromOrder(payload.new))
-      )
-      .subscribe();
+    const interval = setInterval(load, POLL_MS);
 
     return () => {
       cancelled = true;
-      supabase?.removeChannel(channel);
+      clearInterval(interval);
     };
   }, [invoiceNo]);
 

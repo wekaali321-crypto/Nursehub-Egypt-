@@ -319,6 +319,8 @@ const dict = {
   "checkout.fillYourData": { ar: "أكمل بياناتك", en: "Please complete your details" },
   "checkout.choosePaymentMethod": { ar: "اختر وسيلة الدفع", en: "Choose a payment method" },
   "checkout.mustAgreeTerms": { ar: "يجب الموافقة على الشروط", en: "You must agree to the terms" },
+  "checkout.orderFailed": { ar: "تعذّر إتمام الطلب، برجاء المحاولة مرة أخرى", en: "Couldn't complete the order, please try again" },
+  "checkout.placingOrder": { ar: "جارٍ إتمام الطلب...", en: "Placing order..." },
   "checkout.invalidCoupon": { ar: "كود الخصم غير صالح", en: "Invalid discount code" },
   "checkout.couponExpired": { ar: "انتهت صلاحية الكوبون", en: "This coupon has expired" },
   "checkout.couponApplied": { ar: "تم تطبيق الخصم", en: "Discount applied" },
