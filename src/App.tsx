@@ -54,6 +54,8 @@ const IVCompatibilityPage = lazy(() => import("./pages/IVCompatibilityPage"));
 const RxPrescriptionDetail = lazy(() => import("./pages/RxPrescriptionsPage"));
 const RxPrescriptionsHome = lazy(() => import("./pages/RxPrescriptionsPage").then((m) => ({ default: m.RxPrescriptionsHome })));
 const ClinicalProtocolDetail = lazy(() => import("./pages/ClinicalProtocolsPage"));
+const ICUNursingTopicPage = lazy(() => import("./pages/ICUNursingPage"));
+const ICUNursingHome = lazy(() => import("./pages/ICUNursingPage").then((m) => ({ default: m.ICUNursingHome })));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 
@@ -78,6 +80,7 @@ import PedsMedicationsAdmin from "./admin/PedsMedicationsAdmin";
 import HighAlertRefAdmin from "./admin/HighAlertRefAdmin";
 import RxPrescriptionsAdmin from "./admin/RxPrescriptionsAdmin";
 import ClinicalProtocolsAdmin from "./admin/ClinicalProtocolsAdmin";
+import ICUNursingAdmin from "./admin/ICUNursingAdmin";
 import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
 import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
 import IVCompatibilityAdmin from "./admin/IVCompatibilityAdmin";
@@ -214,6 +217,8 @@ export default function App() {
                   <Route path="/drugs/prescriptions" element={<Public><RxPrescriptionsHome /></Public>} />
                   <Route path="/drugs/prescriptions/:id" element={<Public><RxPrescriptionDetail /></Public>} />
                   <Route path="/drugs/protocols/:id" element={<Public><ClinicalProtocolDetail /></Public>} />
+                  <Route path="/icu-nursing" element={<Public><ICUNursingHome /></Public>} />
+                  <Route path="/icu-nursing/:id" element={<Public><ICUNursingTopicPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
                   <Route path="/quiz/:id" element={<Public><QuizPlayer /></Public>} />
@@ -263,6 +268,7 @@ export default function App() {
                   <Route path="/admin/high-alert-ref" element={<Admin><HighAlertRefAdmin /></Admin>} />
                   <Route path="/admin/prescriptions" element={<Admin><RxPrescriptionsAdmin /></Admin>} />
                   <Route path="/admin/protocols" element={<Admin><ClinicalProtocolsAdmin /></Admin>} />
+                  <Route path="/admin/icu-nursing" element={<Admin><ICUNursingAdmin /></Admin>} />
                   <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
                   <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />
                   <Route path="/admin/iv-compatibility" element={<Admin><IVCompatibilityAdmin /></Admin>} />

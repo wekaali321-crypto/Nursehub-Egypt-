@@ -29,6 +29,7 @@ const nav: NavItem[] = [
   { p: "/admin/high-alert-ref", l: "الأدوية عالية التنبيه (ISMP)", i: "⚠️" },
   { p: "/admin/prescriptions", l: "روشتات صيدلية (181 روشتة)", i: "℞" },
   { p: "/admin/protocols", l: "بروتوكولات إكلينيكية (قوائم تحقق)", i: "📋" },
+  { p: "/admin/icu-nursing", l: "قسم تمريض العناية المركزة", i: "🏥" },
   { p: "/admin/organ-dose", l: "تعديل الجرعات الكلوية/الكبدية", i: "🫘" },
   { p: "/admin/pregnancy-lactation", l: "أمان الحمل والرضاعة", i: "🤰" },
   { p: "/admin/iv-compatibility", l: "توافق الأدوية الوريدية (IV)", i: "🧫" },
