@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useStore } from "../lib/store";
+import { useAuth } from "../lib/theme";
 import { useToast } from "../components/Toast";
 import { printInvoice } from "../lib/invoice";
 import { fromOrder } from "../lib/dataApi";
@@ -17,6 +18,7 @@ const statusLabel: Record<string, string> = { paid: "مدفوع", pending: "قي
 
 export function OrdersAdmin() {
   const { commerce, logActivity } = useStore();
+  const { logout } = useAuth();
   const { notify } = useToast();
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
@@ -30,12 +32,26 @@ export function OrdersAdmin() {
   // NOT readable/writable through the public Supabase client (there's no
   // RLS policy granting an admin-wide read or any update at all) — this
   // panel talks to the /api/admin-orders serverless function instead,
-  // which uses the service-role key behind its own session check.
+  // which uses its own signed session cookie (separate from the Supabase
+  // Auth session that gates access to /admin) behind the service-role key.
+  //
+  // A 401 here specifically means THAT cookie session is missing/expired
+  // (e.g. it outlived its lifetime while the longer-lived Supabase Auth
+  // session is still valid) — no amount of retrying the same request can
+  // ever succeed in that state. The correct, secure recovery is to fully
+  // sign the admin out (clearing both sessions) so the real login screen
+  // reappears and re-establishes them together; any other error (network,
+  // 5xx) keeps the normal retry-button flow below.
   const load = useCallback(async () => {
     setLoading(true);
     setLoadError("");
     try {
       const res = await fetch("/api/admin-orders", { credentials: "include" });
+      if (res.status === 401) {
+        notify("انتهت صلاحية جلسة الطلبات، برجاء تسجيل الدخول مرة أخرى", "error");
+        logout();
+        return;
+      }
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || `HTTP ${res.status}`);
       setOrders((json.orders || []).map(fromOrder));
@@ -44,7 +60,7 @@ export function OrdersAdmin() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [logout, notify]);
 
   useEffect(() => { load(); }, [load]);
 
@@ -64,6 +80,11 @@ export function OrdersAdmin() {
         credentials: "include",
         body: JSON.stringify({ action: "updateStatus", orderId: id, status: paymentStatus }),
       });
+      if (res.status === 401) {
+        notify("انتهت صلاحية جلسة الطلبات، برجاء تسجيل الدخول مرة أخرى", "error");
+        logout();
+        return;
+      }
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || `HTTP ${res.status}`);
       setOrders((prev) => prev.map((o) => (o.id === id ? { ...o, paymentStatus } : o)));

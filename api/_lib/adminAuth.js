@@ -12,7 +12,12 @@
 import crypto from 'crypto';
 
 const COOKIE_NAME = 'admin_session';
-const SESSION_MS = 24 * 60 * 60 * 1000; // 24h
+// Kept close to Supabase Auth's own default session lifetime so this
+// cookie doesn't silently expire while the admin still appears logged in
+// (which is exactly what previously made the Orders page's 401 look like
+// a dead end — the page now also recovers gracefully from that case, see
+// OrdersAdmin.tsx, but a longer-lived cookie makes it rare in practice).
+const SESSION_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 
 export function createToken() {
   const expiry = Date.now() + SESSION_MS;
