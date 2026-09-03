@@ -139,6 +139,7 @@ const defaultMenu = [
   { label: "الاختبارات", path: "/quizzes" },
   { label: "الأدوات", path: "/tools" },
   { label: "مكتبة ECG", path: "/ecg" },
+  { label: "العناية المركزة", path: "/icu-nursing" },
   { label: "المتجر", path: "/store" },
 ];
 
