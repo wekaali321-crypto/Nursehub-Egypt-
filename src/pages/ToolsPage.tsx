@@ -33,6 +33,32 @@ function Card({ title, icon, children, defaultOpen = false }: { title: string; i
 const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800";
 const lbl = "mb-1 block text-sm font-semibold text-slate-600 dark:text-slate-300";
 const res = "mt-4 rounded-xl bg-sky-50 p-4 text-center font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300";
+const selCls = "w-full rounded-lg border border-slate-200 px-2 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
+
+const riskColors = {
+  emerald: "bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300",
+  amber: "bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300",
+  orange: "bg-orange-50 text-orange-700 dark:bg-orange-500/10 dark:text-orange-300",
+  rose: "bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-300",
+} as const;
+function RiskResult({ color, children }: { color: keyof typeof riskColors; children: React.ReactNode }) {
+  return <div className={`mt-4 rounded-xl p-4 text-center font-bold ${riskColors[color]}`}>{children}</div>;
+}
+
+/** A labeled <select> scored by option INDEX (not point value), since several
+ * clinical scales (e.g. NEWS2) legitimately assign the same point value to
+ * more than one option — using the point value itself as the <select>'s
+ * value would make a controlled select ambiguous between those options. */
+function ScoreField({ label, options, index, onChange }: { label: string; options: { pts: number; text: string }[]; index: number; onChange: (i: number) => void }) {
+  return (
+    <div>
+      <label className={lbl}>{label}</label>
+      <select className={selCls} value={index} onChange={(e) => onChange(+e.target.value)}>
+        {options.map((o, i) => <option key={i} value={i}>{o.text} ({o.pts})</option>)}
+      </select>
+    </div>
+  );
+}
 
 function BMI() {
   const { lang } = useI18n();
@@ -158,6 +184,180 @@ function PediatricDose() {
         <div><label className={lbl}>{isEn ? "Child weight (kg)" : "وزن الطفل (كجم)"}</label><input className={inp} type="number" value={weight} onChange={(e) => setWeight(e.target.value)} /></div>
       </div>
       {dose > 0 && <div className={res}>{isEn ? <>Child dose ≈ {dose.toFixed(1)} mg<br /><span className="text-xs font-normal">(Clark's rule approximation)</span></> : <>جرعة الطفل ≈ {dose.toFixed(1)} مجم<br /><span className="text-xs font-normal">(قاعدة كلارك التقريبية)</span></>}</div>}
+    </Card>
+  );
+}
+
+function Norton() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
+  const fields = {
+    physical: isEn ? [{ pts: 4, text: "Good" }, { pts: 3, text: "Fair" }, { pts: 2, text: "Poor" }, { pts: 1, text: "Very poor" }] : [{ pts: 4, text: "جيدة" }, { pts: 3, text: "متوسطة" }, { pts: 2, text: "ضعيفة" }, { pts: 1, text: "سيئة جدًا" }],
+    mental: isEn ? [{ pts: 4, text: "Alert" }, { pts: 3, text: "Apathetic" }, { pts: 2, text: "Confused" }, { pts: 1, text: "Stuporous/Comatose" }] : [{ pts: 4, text: "واعٍ" }, { pts: 3, text: "لا مبالٍ" }, { pts: 2, text: "مشوش" }, { pts: 1, text: "غائب عن الوعي" }],
+    activity: isEn ? [{ pts: 4, text: "Ambulatory" }, { pts: 3, text: "Walks with help" }, { pts: 2, text: "Chairbound" }, { pts: 1, text: "Bedridden" }] : [{ pts: 4, text: "يمشي بحرية" }, { pts: 3, text: "يمشي بمساعدة" }, { pts: 2, text: "ملازم للكرسي" }, { pts: 1, text: "ملازم للسرير" }],
+    mobility: isEn ? [{ pts: 4, text: "Full" }, { pts: 3, text: "Slightly limited" }, { pts: 2, text: "Very limited" }, { pts: 1, text: "Immobile" }] : [{ pts: 4, text: "كاملة" }, { pts: 3, text: "محدودة قليلاً" }, { pts: 2, text: "محدودة جدًا" }, { pts: 1, text: "عديمة الحركة" }],
+    incontinence: isEn ? [{ pts: 4, text: "None" }, { pts: 3, text: "Occasional" }, { pts: 2, text: "Urinary or fecal" }, { pts: 1, text: "Urinary and fecal" }] : [{ pts: 4, text: "لا يوجد" }, { pts: 3, text: "عرضي" }, { pts: 2, text: "بولي أو برازي" }, { pts: 1, text: "بولي وبرازي" }],
+  };
+  const [idx, setIdx] = useState({ physical: 0, mental: 0, activity: 0, mobility: 0, incontinence: 0 });
+  const total = (Object.keys(fields) as (keyof typeof fields)[]).reduce((sum, k) => sum + fields[k][idx[k]].pts, 0);
+  const color = total >= 18 ? "emerald" : total >= 15 ? "amber" : total >= 10 ? "orange" : "rose";
+  const label = isEn
+    ? (total >= 18 ? "Minimal or no risk of PU" : total >= 15 ? "Low risk of PU" : total >= 10 ? "Medium risk of PU" : "High risk of PU")
+    : (total >= 18 ? "خطر ضئيل أو منعدم للإصابة بتقرحات الفراش" : total >= 15 ? "خطر منخفض للإصابة بتقرحات الفراش" : total >= 10 ? "خطر متوسط للإصابة بتقرحات الفراش" : "خطر مرتفع للإصابة بتقرحات الفراش");
+  return (
+    <Card title={isEn ? "Norton Scale" : "مقياس نورتون (Norton Scale)"} icon="🛏️">
+      <p className="mb-3 text-xs text-slate-400">{isEn ? "Evaluates the risk of developing pressure ulcers (PU) using 5 parameters." : "يقيّم خطر الإصابة بتقرحات الفراش باستخدام 5 معايير."}</p>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <ScoreField label={isEn ? "General Physical Condition" : "الحالة الجسدية العامة"} options={fields.physical} index={idx.physical} onChange={(i) => setIdx((s) => ({ ...s, physical: i }))} />
+        <ScoreField label={isEn ? "Mental State" : "الحالة الذهنية"} options={fields.mental} index={idx.mental} onChange={(i) => setIdx((s) => ({ ...s, mental: i }))} />
+        <ScoreField label={isEn ? "Activity" : "النشاط"} options={fields.activity} index={idx.activity} onChange={(i) => setIdx((s) => ({ ...s, activity: i }))} />
+        <ScoreField label={isEn ? "Mobility" : "الحركة"} options={fields.mobility} index={idx.mobility} onChange={(i) => setIdx((s) => ({ ...s, mobility: i }))} />
+        <ScoreField label={isEn ? "Incontinence" : "سلس البول/البراز"} options={fields.incontinence} index={idx.incontinence} onChange={(i) => setIdx((s) => ({ ...s, incontinence: i }))} />
+      </div>
+      <RiskResult color={color}>{isEn ? `Total = ${total}/20 — ${label}` : `المجموع = ${total}/20 — ${label}`}</RiskResult>
+    </Card>
+  );
+}
+
+function Braden() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
+  const fields4 = {
+    sensory: isEn ? [{ pts: 4, text: "No impairment" }, { pts: 3, text: "Slightly limited" }, { pts: 2, text: "Very limited" }, { pts: 1, text: "Completely limited" }] : [{ pts: 4, text: "لا يوجد ضعف" }, { pts: 3, text: "محدود قليلاً" }, { pts: 2, text: "محدود جدًا" }, { pts: 1, text: "محدود تمامًا" }],
+    moisture: isEn ? [{ pts: 4, text: "Rarely moist" }, { pts: 3, text: "Occasionally moist" }, { pts: 2, text: "Often moist" }, { pts: 1, text: "Constantly moist" }] : [{ pts: 4, text: "رطوبة نادرة" }, { pts: 3, text: "رطوبة أحيانًا" }, { pts: 2, text: "رطوبة غالبًا" }, { pts: 1, text: "رطوبة دائمة" }],
+    activity: isEn ? [{ pts: 4, text: "Walks frequently" }, { pts: 3, text: "Walks occasionally" }, { pts: 2, text: "Chairfast" }, { pts: 1, text: "Bedfast" }] : [{ pts: 4, text: "يمشي كثيرًا" }, { pts: 3, text: "يمشي أحيانًا" }, { pts: 2, text: "ملازم للكرسي" }, { pts: 1, text: "ملازم للسرير" }],
+    mobility: isEn ? [{ pts: 4, text: "No limitation" }, { pts: 3, text: "Slightly limited" }, { pts: 2, text: "Very limited" }, { pts: 1, text: "Completely immobile" }] : [{ pts: 4, text: "بلا قيود" }, { pts: 3, text: "محدودة قليلاً" }, { pts: 2, text: "محدودة جدًا" }, { pts: 1, text: "عديمة الحركة تمامًا" }],
+    nutrition: isEn ? [{ pts: 4, text: "Excellent" }, { pts: 3, text: "Adequate" }, { pts: 2, text: "Probably inadequate" }, { pts: 1, text: "Very poor" }] : [{ pts: 4, text: "ممتازة" }, { pts: 3, text: "كافية" }, { pts: 2, text: "غير كافية على الأرجح" }, { pts: 1, text: "سيئة جدًا" }],
+  };
+  const friction = isEn ? [{ pts: 3, text: "No apparent problem" }, { pts: 2, text: "Potential problem" }, { pts: 1, text: "Problem" }] : [{ pts: 3, text: "لا توجد مشكلة ظاهرة" }, { pts: 2, text: "مشكلة محتملة" }, { pts: 1, text: "مشكلة" }];
+  const [idx, setIdx] = useState({ sensory: 0, moisture: 0, activity: 0, mobility: 0, nutrition: 0, friction: 0 });
+  const total = (Object.keys(fields4) as (keyof typeof fields4)[]).reduce((sum, k) => sum + fields4[k][idx[k]].pts, 0) + friction[idx.friction].pts;
+  const color = total >= 19 ? "emerald" : total >= 15 ? "amber" : total >= 13 ? "orange" : "rose";
+  const label = isEn
+    ? (total >= 19 ? "No risk of PU" : total >= 15 ? "Mild risk of PU" : total >= 13 ? "Moderate risk of PU" : total >= 10 ? "High risk of PU" : "Very high risk of PU")
+    : (total >= 19 ? "لا يوجد خطر للإصابة بتقرحات الفراش" : total >= 15 ? "خطر خفيف للإصابة بتقرحات الفراش" : total >= 13 ? "خطر متوسط للإصابة بتقرحات الفراش" : total >= 10 ? "خطر مرتفع للإصابة بتقرحات الفراش" : "خطر مرتفع جدًا للإصابة بتقرحات الفراش");
+  return (
+    <Card title={isEn ? "Braden Scale" : "مقياس برادن (Braden Scale)"} icon="🩹">
+      <p className="mb-3 text-xs text-slate-400">{isEn ? "Evaluates pressure ulcer risk considering 6 subscales. More specific than Norton and widely used in hospitals." : "يقيّم خطر تقرحات الفراش بناءً على 6 معايير فرعية. أكثر دقة من مقياس نورتون وشائع الاستخدام في المستشفيات."}</p>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <ScoreField label={isEn ? "Sensory Perception" : "الإدراك الحسي"} options={fields4.sensory} index={idx.sensory} onChange={(i) => setIdx((s) => ({ ...s, sensory: i }))} />
+        <ScoreField label={isEn ? "Moisture Exposure" : "التعرض للرطوبة"} options={fields4.moisture} index={idx.moisture} onChange={(i) => setIdx((s) => ({ ...s, moisture: i }))} />
+        <ScoreField label={isEn ? "Activity" : "النشاط"} options={fields4.activity} index={idx.activity} onChange={(i) => setIdx((s) => ({ ...s, activity: i }))} />
+        <ScoreField label={isEn ? "Mobility" : "الحركة"} options={fields4.mobility} index={idx.mobility} onChange={(i) => setIdx((s) => ({ ...s, mobility: i }))} />
+        <ScoreField label={isEn ? "Nutrition" : "التغذية"} options={fields4.nutrition} index={idx.nutrition} onChange={(i) => setIdx((s) => ({ ...s, nutrition: i }))} />
+        <ScoreField label={isEn ? "Friction and Shear" : "الاحتكاك والانزلاق"} options={friction} index={idx.friction} onChange={(i) => setIdx((s) => ({ ...s, friction: i }))} />
+      </div>
+      <RiskResult color={color}>{isEn ? `Total Score = ${total}/23 — ${label}` : `المجموع = ${total}/23 — ${label}`}</RiskResult>
+    </Card>
+  );
+}
+
+function Barthel() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
+  const fields = {
+    feeding: isEn ? [{ pts: 10, text: "Independent" }, { pts: 5, text: "Needs help" }, { pts: 0, text: "Unable" }] : [{ pts: 10, text: "مستقل" }, { pts: 5, text: "يحتاج مساعدة" }, { pts: 0, text: "غير قادر" }],
+    bathing: isEn ? [{ pts: 5, text: "Independent" }, { pts: 0, text: "Dependent" }] : [{ pts: 5, text: "مستقل" }, { pts: 0, text: "معتمد على الغير" }],
+    grooming: isEn ? [{ pts: 5, text: "Independent" }, { pts: 0, text: "Needs help" }] : [{ pts: 5, text: "مستقل" }, { pts: 0, text: "يحتاج مساعدة" }],
+    dressing: isEn ? [{ pts: 10, text: "Independent" }, { pts: 5, text: "Needs help" }, { pts: 0, text: "Dependent" }] : [{ pts: 10, text: "مستقل" }, { pts: 5, text: "يحتاج مساعدة" }, { pts: 0, text: "معتمد على الغير" }],
+    bowels: isEn ? [{ pts: 10, text: "Continent" }, { pts: 5, text: "Occasional accident" }, { pts: 0, text: "Incontinent" }] : [{ pts: 10, text: "متحكم" }, { pts: 5, text: "حادث عرضي" }, { pts: 0, text: "سلس" }],
+    bladder: isEn ? [{ pts: 10, text: "Continent" }, { pts: 5, text: "Occasional accident" }, { pts: 0, text: "Incontinent" }] : [{ pts: 10, text: "متحكم" }, { pts: 5, text: "حادث عرضي" }, { pts: 0, text: "سلس" }],
+    toilet: isEn ? [{ pts: 10, text: "Independent" }, { pts: 5, text: "Needs some help" }, { pts: 0, text: "Dependent" }] : [{ pts: 10, text: "مستقل" }, { pts: 5, text: "يحتاج بعض المساعدة" }, { pts: 0, text: "معتمد على الغير" }],
+    transfers: isEn ? [{ pts: 15, text: "Independent" }, { pts: 10, text: "Minor help" }, { pts: 5, text: "Major help" }, { pts: 0, text: "Unable" }] : [{ pts: 15, text: "مستقل" }, { pts: 10, text: "مساعدة بسيطة" }, { pts: 5, text: "مساعدة كبيرة" }, { pts: 0, text: "غير قادر" }],
+    mobility: isEn ? [{ pts: 15, text: "Independent" }, { pts: 10, text: "Walks with help" }, { pts: 5, text: "Independent in wheelchair" }, { pts: 0, text: "Immobile" }] : [{ pts: 15, text: "مستقل" }, { pts: 10, text: "يمشي بمساعدة" }, { pts: 5, text: "مستقل على كرسي متحرك" }, { pts: 0, text: "عديم الحركة" }],
+    stairs: isEn ? [{ pts: 10, text: "Independent" }, { pts: 5, text: "Needs help" }, { pts: 0, text: "Unable" }] : [{ pts: 10, text: "مستقل" }, { pts: 5, text: "يحتاج مساعدة" }, { pts: 0, text: "غير قادر" }],
+  };
+  const [idx, setIdx] = useState({ feeding: 0, bathing: 0, grooming: 0, dressing: 0, bowels: 0, bladder: 0, toilet: 0, transfers: 0, mobility: 0, stairs: 0 });
+  const total = (Object.keys(fields) as (keyof typeof fields)[]).reduce((sum, k) => sum + fields[k][idx[k]].pts, 0);
+  const color = total === 100 ? "emerald" : total >= 91 ? "emerald" : total >= 61 ? "amber" : total >= 21 ? "orange" : "rose";
+  const label = isEn
+    ? (total === 100 ? "Total independence" : total >= 91 ? "Slight dependency" : total >= 61 ? "Moderate dependency" : total >= 21 ? "Severe dependency" : "Total dependency")
+    : (total === 100 ? "استقلالية كاملة" : total >= 91 ? "اعتماد بسيط" : total >= 61 ? "اعتماد متوسط" : total >= 21 ? "اعتماد شديد" : "اعتماد كامل");
+  const labels: Record<keyof typeof fields, string> = {
+    feeding: isEn ? "Feeding" : "الإطعام",
+    bathing: isEn ? "Bathing" : "الاستحمام",
+    grooming: isEn ? "Grooming" : "العناية الشخصية",
+    dressing: isEn ? "Dressing" : "ارتداء الملابس",
+    bowels: isEn ? "Bowel control" : "التحكم في الإخراج",
+    bladder: isEn ? "Bladder control" : "التحكم في التبول",
+    toilet: isEn ? "Toilet use" : "استخدام الحمام",
+    transfers: isEn ? "Transfers (bed ↔ chair)" : "الانتقال (سرير ↔ كرسي)",
+    mobility: isEn ? "Mobility" : "التنقل",
+    stairs: isEn ? "Stairs" : "صعود السلالم",
+  };
+  return (
+    <Card title={isEn ? "Barthel Index" : "مؤشر بارثيل (Barthel Index)"} icon="🚶">
+      <p className="mb-3 text-xs text-slate-400">{isEn ? "Measures functional independence in 10 activities of daily living (0-100)." : "يقيس مدى استقلالية المريض في 10 أنشطة يومية أساسية (0-100)."}</p>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {(Object.keys(fields) as (keyof typeof fields)[]).map((k) => (
+          <ScoreField key={k} label={labels[k]} options={fields[k]} index={idx[k]} onChange={(i) => setIdx((s) => ({ ...s, [k]: i }))} />
+        ))}
+      </div>
+      <RiskResult color={color}>{isEn ? `Total Score = ${total}/100 — ${label}` : `المجموع = ${total}/100 — ${label}`}</RiskResult>
+    </Card>
+  );
+}
+
+function VAS() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
+  const [pain, setPain] = useState(0);
+  const color = pain === 0 ? "emerald" : pain <= 3 ? "amber" : pain <= 6 ? "orange" : "rose";
+  const label = isEn
+    ? (pain === 0 ? "No pain" : pain <= 3 ? "Mild pain" : pain <= 6 ? "Moderate pain" : "Severe pain")
+    : (pain === 0 ? "لا يوجد ألم" : pain <= 3 ? "ألم خفيف" : pain <= 6 ? "ألم متوسط" : "ألم شديد");
+  return (
+    <Card title={isEn ? "Visual Analog Scale (VAS)" : "المقياس البصري التناظري للألم (VAS)"} icon="😣">
+      <p className="mb-3 text-xs text-slate-400">{isEn ? "Rate the patient's pain from 0 (no pain) to 10 (worst possible pain)." : "قيّم شدة ألم المريض من 0 (لا يوجد ألم) إلى 10 (أسوأ ألم ممكن)."}</p>
+      <input type="range" min={0} max={10} step={1} value={pain} onChange={(e) => setPain(+e.target.value)} className="w-full accent-sky-500" />
+      <div className="mt-1 flex justify-between text-[11px] text-slate-400">{Array.from({ length: 11 }, (_, i) => <span key={i}>{i}</span>)}</div>
+      <RiskResult color={color}>{isEn ? `Pain = ${pain}/10 — ${label}` : `الألم = ${pain}/10 — ${label}`}</RiskResult>
+    </Card>
+  );
+}
+
+function News2() {
+  const { lang } = useI18n();
+  const isEn = lang === "en";
+  const fields = {
+    rr: isEn
+      ? [{ pts: 3, text: "≤8" }, { pts: 1, text: "9-11" }, { pts: 0, text: "12-20" }, { pts: 2, text: "21-24" }, { pts: 3, text: "≥25" }]
+      : [{ pts: 3, text: "≤8" }, { pts: 1, text: "9-11" }, { pts: 0, text: "12-20" }, { pts: 2, text: "21-24" }, { pts: 3, text: "≥25" }],
+    spo2: [{ pts: 3, text: "≤91" }, { pts: 2, text: "92-93" }, { pts: 1, text: "94-95" }, { pts: 0, text: "≥96" }],
+    o2: isEn ? [{ pts: 0, text: "Room air" }, { pts: 2, text: "With supplemental O₂" }] : [{ pts: 0, text: "هواء الغرفة" }, { pts: 2, text: "بأكسجين إضافي" }],
+    temp: [{ pts: 3, text: "≤35.0" }, { pts: 1, text: "35.1-36.0" }, { pts: 0, text: "36.1-38.0" }, { pts: 1, text: "38.1-39.0" }, { pts: 2, text: "≥39.1" }],
+    sbp: [{ pts: 3, text: "≤90" }, { pts: 2, text: "91-100" }, { pts: 1, text: "101-110" }, { pts: 0, text: "111-219" }, { pts: 3, text: "≥220" }],
+    hr: [{ pts: 3, text: "≤40" }, { pts: 1, text: "41-50" }, { pts: 0, text: "51-90" }, { pts: 1, text: "91-110" }, { pts: 2, text: "111-130" }, { pts: 3, text: "≥131" }],
+    avpu: isEn
+      ? [{ pts: 0, text: "Alert" }, { pts: 3, text: "New confusion" }, { pts: 3, text: "Responds to voice" }, { pts: 3, text: "Responds to pain" }, { pts: 3, text: "Unresponsive" }]
+      : [{ pts: 0, text: "واعٍ" }, { pts: 3, text: "تشوش جديد" }, { pts: 3, text: "يستجيب للصوت" }, { pts: 3, text: "يستجيب للألم" }, { pts: 3, text: "لا يستجيب" }],
+  };
+  const [idx, setIdx] = useState({ rr: 2, spo2: 3, o2: 0, temp: 2, sbp: 3, hr: 2, avpu: 0 });
+  const total = (Object.keys(fields) as (keyof typeof fields)[]).reduce((sum, k) => sum + fields[k][idx[k]].pts, 0);
+  const color = total === 0 ? "emerald" : total <= 4 ? "amber" : total <= 6 ? "orange" : "rose";
+  const label = isEn
+    ? (total === 0 ? "LOW risk - Routine monitoring" : total <= 4 ? "LOW risk - Nursing assessment" : total <= 6 ? "MEDIUM risk - Urgent response" : "HIGH risk - EMERGENCY response")
+    : (total === 0 ? "خطر منخفض - مراقبة روتينية" : total <= 4 ? "خطر منخفض - تقييم تمريضي" : total <= 6 ? "خطر متوسط - استجابة عاجلة" : "خطر مرتفع - استجابة طوارئ");
+  return (
+    <Card title={isEn ? "NEWS2 (National Early Warning Score)" : "نيوز 2 (نظام الإنذار المبكر الوطني)"} icon="🚨">
+      <p className="mb-3 text-xs text-slate-400">{isEn ? "Early warning system that evaluates the risk of clinical deterioration. Considers vital signs and level of consciousness to activate medical response." : "نظام إنذار مبكر يقيّم خطر تدهور حالة المريض إكلينيكيًا، بناءً على العلامات الحيوية ومستوى الوعي، لتفعيل الاستجابة الطبية المناسبة."}</p>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <ScoreField label={isEn ? "Respiratory Rate (breaths/min)" : "معدل التنفس (نفس/دقيقة)"} options={fields.rr} index={idx.rr} onChange={(i) => setIdx((s) => ({ ...s, rr: i }))} />
+        <ScoreField label={isEn ? "O₂ Saturation (%)" : "تشبع الأكسجين (%)"} options={fields.spo2} index={idx.spo2} onChange={(i) => setIdx((s) => ({ ...s, spo2: i }))} />
+        <ScoreField label={isEn ? "Supplemental Oxygen" : "الأكسجين الإضافي"} options={fields.o2} index={idx.o2} onChange={(i) => setIdx((s) => ({ ...s, o2: i }))} />
+        <ScoreField label={isEn ? "Temperature (°C)" : "درجة الحرارة (°م)"} options={fields.temp} index={idx.temp} onChange={(i) => setIdx((s) => ({ ...s, temp: i }))} />
+        <ScoreField label={isEn ? "Systolic Blood Pressure (mmHg)" : "ضغط الدم الانقباضي (مم زئبق)"} options={fields.sbp} index={idx.sbp} onChange={(i) => setIdx((s) => ({ ...s, sbp: i }))} />
+        <ScoreField label={isEn ? "Heart Rate (bpm)" : "معدل النبض (نبضة/دقيقة)"} options={fields.hr} index={idx.hr} onChange={(i) => setIdx((s) => ({ ...s, hr: i }))} />
+        <ScoreField label={isEn ? "Level of Consciousness (ACVPU)" : "مستوى الوعي (ACVPU)"} options={fields.avpu} index={idx.avpu} onChange={(i) => setIdx((s) => ({ ...s, avpu: i }))} />
+      </div>
+      <RiskResult color={color}>{isEn ? `NEWS2 Score = ${total}/20 — ${label}` : `مجموع NEWS2 = ${total}/20 — ${label}`}</RiskResult>
+      <div className="mt-3 space-y-1 rounded-lg bg-slate-50 p-3 text-xs dark:bg-slate-800/50">
+        <div className="font-bold text-slate-500 dark:text-slate-400">{isEn ? "Suggested Clinical Response" : "الاستجابة السريرية المقترحة"}</div>
+        <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />{isEn ? "0: Routine monitoring" : "0: مراقبة روتينية"}</div>
+        <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-amber-500" />{isEn ? "1-4: Nursing assessment" : "1-4: تقييم تمريضي"}</div>
+        <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-orange-500" />{isEn ? "5-6: Urgent response" : "5-6: استجابة عاجلة"}</div>
+        <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-rose-500" />{isEn ? "≥7: EMERGENCY response" : "≥7: استجابة طوارئ"}</div>
+      </div>
     </Card>
   );
 }
@@ -871,6 +1071,7 @@ export default function ToolsPage() {
       </div>
       <div className="grid gap-4 lg:grid-cols-2">
         <BMI /><IVDrip /><Dosage /><FluidBalance /><Pregnancy /><GCS /><PediatricDose /><DoseRateCalculator /><ABGInterpreter />
+        <Norton /><Braden /><Barthel /><VAS /><News2 />
         <div className="lg:col-span-2"><AIAssistant /></div>
       </div>
     </div>
