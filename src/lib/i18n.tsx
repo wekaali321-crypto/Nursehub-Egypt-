@@ -178,6 +178,9 @@ const dict = {
   "search.articlesHeading": { ar: "📚 المقالات والكتب", en: "📚 Articles & Books" },
   "search.viewAllResultsFor": { ar: "عرض كل النتائج عن", en: "View all results for" },
   "search.drugBadge": { ar: "دواء", en: "Drug" },
+  "search.protocolBadge": { ar: "بروتوكول إكلينيكي", en: "Clinical Protocol" },
+  "search.icuHeading": { ar: "العناية المركزة", en: "ICU Nursing" },
+  "search.protocolsHeading": { ar: "البروتوكولات الإكلينيكية", en: "Clinical Protocols" },
 
   // Quiz
   "quiz.start": { ar: "ابدأ الاختبار", en: "Start Quiz" },

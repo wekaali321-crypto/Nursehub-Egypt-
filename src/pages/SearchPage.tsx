@@ -6,6 +6,7 @@ import { ArticleCard, Breadcrumbs, CAT_KEY } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import { logSearch } from "../lib/analytics";
+import { useExtraSearchIndex } from "../lib/searchIndex";
 
 type Tab = "all" | "content" | "drugs";
 
@@ -13,6 +14,7 @@ export default function SearchPage() {
   const [params, setParams] = useSearchParams();
   const q = params.get("q") ?? "";
   const { articles, drugs } = useStore();
+  const { icuTopics, protocols } = useExtraSearchIndex();
   const { t, lang } = useI18n();
   const [query, setQuery] = useState(q);
   const [catFilter, setCatFilter] = useState<string>("");
@@ -36,10 +38,12 @@ export default function SearchPage() {
   if (tagFilter) articleResults = articleResults.filter((a) => a.tags.includes(tagFilter));
 
   const drugResults = q ? drugs.filter((d) => (d.name + d.genericName + d.drugClass + d.indications).toLowerCase().includes(lower)) : [];
+  const icuResults = q ? icuTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
+  const protocolResults = q ? protocols.filter((p) => [p.name_ar, p.name_en, p.summary].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
 
   const showContent = tab === "all" || tab === "content";
   const showDrugs = tab === "all" || tab === "drugs";
-  const total = (showContent ? articleResults.length : 0) + (showDrugs ? drugResults.length : 0);
+  const total = (showContent ? articleResults.length + icuResults.length + protocolResults.length : 0) + (showDrugs ? drugResults.length : 0);
 
   // Popular tags among currently visible results, for one-click refinement.
   const popularTags = useMemo(() => {
@@ -110,6 +114,39 @@ export default function SearchPage() {
                     <Link key={d.id} to={`/drug/${d.slug}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">💊 {name}</div>
                       <div className="text-sm text-slate-400">{genericName} • {category}</div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+          {showContent && icuResults.length > 0 && (
+            <div>
+              <h2 className="mb-3 text-lg font-bold dark:text-white">{t("search.icuHeading")} ({icuResults.length})</h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {icuResults.map((topic) => {
+                  const title = bilingual(topic.title_ar, topic.title_en, lang).text;
+                  const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
+                  return (
+                    <Link key={topic.id} to={`/icu-nursing/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                      <div className="font-bold dark:text-white">{topic.icon || "🏥"} {title}</div>
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+          {showContent && protocolResults.length > 0 && (
+            <div>
+              <h2 className="mb-3 text-lg font-bold dark:text-white">{t("search.protocolsHeading")} ({protocolResults.length})</h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {protocolResults.map((p) => {
+                  const title = bilingual(p.name_ar, p.name_en, lang).text;
+                  return (
+                    <Link key={p.id} to={`/drugs/protocols/${p.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                      <div className="font-bold dark:text-white">{p.icon || "📋"} {title}</div>
+                      {p.summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{bilingual(p.summary, p.summary_en, lang).text}</div>}
                     </Link>
                   );
                 })}

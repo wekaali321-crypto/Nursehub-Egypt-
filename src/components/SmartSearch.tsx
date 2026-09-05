@@ -4,6 +4,7 @@ import { useStore } from "../lib/store";
 import { CAT_KEY } from "./common";
 import { useI18n, bilingual } from "../lib/i18n";
 import { logSearch } from "../lib/analytics";
+import { useExtraSearchIndex } from "../lib/searchIndex";
 
 interface Suggestion {
   label: string;
@@ -14,6 +15,7 @@ interface Suggestion {
 
 export default function SmartSearch({ onNavigate }: { onNavigate?: () => void }) {
   const { articles, drugs } = useStore();
+  const { icuTopics, protocols } = useExtraSearchIndex();
   const { t, lang } = useI18n();
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
@@ -35,7 +37,15 @@ export default function SmartSearch({ onNavigate }: { onNavigate?: () => void })
       .filter((d) => (d.name + d.genericName + d.drugClass + d.indications).toLowerCase().includes(lower))
       .slice(0, 3)
       .map((d) => ({ label: bilingual(d.name, d.nameEn, lang).text, sub: `${t("search.drugBadge")} • ${bilingual(d.category, d.categoryEn, lang).text}`, to: `/drug/${d.slug}`, icon: "💊" }));
-    const results = [...fromDrugs, ...fromArticles].slice(0, 7);
+    const fromIcu: Suggestion[] = icuTopics
+      .filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower))
+      .slice(0, 3)
+      .map((topic) => ({ label: bilingual(topic.title_ar, topic.title_en, lang).text, sub: t("search.icuHeading"), to: `/icu-nursing/${topic.id}`, icon: topic.icon || "🏥" }));
+    const fromProtocols: Suggestion[] = protocols
+      .filter((p) => [p.name_ar, p.name_en, p.summary].filter(Boolean).join(" ").toLowerCase().includes(lower))
+      .slice(0, 2)
+      .map((p) => ({ label: bilingual(p.name_ar, p.name_en, lang).text, sub: t("search.protocolBadge"), to: `/drugs/protocols/${p.id}`, icon: p.icon || "📋" }));
+    const results = [...fromDrugs, ...fromIcu, ...fromProtocols, ...fromArticles].slice(0, 8);
 
     // Log real search analytics once per distinct query (debounced by ref, not per keystroke render).
     if (q.trim().length >= 3 && searchLogged.current !== lower) {
