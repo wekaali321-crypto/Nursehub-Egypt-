@@ -27,6 +27,7 @@ const nav: NavItem[] = [
   { p: "/admin/er-medications", l: "أدوية قسم الطوارئ (25 دواء)", i: "🚑" },
   { p: "/admin/peds-medications", l: "أدوية قسم الأطفال (24 حالة)", i: "🧒" },
   { p: "/admin/high-alert-ref", l: "الأدوية عالية التنبيه (ISMP)", i: "⚠️" },
+  { p: "/admin/lasa", l: "أزواج الأدوية المتشابهة (LASA)", i: "🔀" },
   { p: "/admin/prescriptions", l: "روشتات صيدلية (181 روشتة)", i: "℞" },
   { p: "/admin/protocols", l: "بروتوكولات إكلينيكية (قوائم تحقق)", i: "📋" },
   { p: "/admin/icu-nursing", l: "قسم تمريض العناية المركزة", i: "🏥" },
