@@ -58,6 +58,8 @@ const ICUNursingTopicPage = lazy(() => import("./pages/ICUNursingPage"));
 const ICUNursingHome = lazy(() => import("./pages/ICUNursingPage").then((m) => ({ default: m.ICUNursingHome })));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
+const QuizAnalyticsPage = lazy(() => import("./pages/QuizAnalyticsPage"));
+const QuizReviewPage = lazy(() => import("./pages/QuizReviewPage"));
 
 // Static + admin (named exports) — imported normally, still split out as needed
 import { About, Contact, FAQ, Privacy, Terms } from "./pages/StaticPages";
@@ -222,7 +224,10 @@ export default function App() {
                   <Route path="/icu-nursing/:id" element={<Public><ICUNursingTopicPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
+                  <Route path="/quizzes/analytics" element={<Public><QuizAnalyticsPage /></Public>} />
+                  <Route path="/quizzes/review" element={<Public><QuizReviewPage /></Public>} />
                   <Route path="/quiz/:id" element={<Public><QuizPlayer /></Public>} />
+                  <Route path="/quiz-mode/:mode" element={<Public><QuizPlayer /></Public>} />
                   <Route path="/login" element={<Public><LoginPage /></Public>} />
                   <Route path="/register" element={<Public><RegisterPage /></Public>} />
                   <Route path="/forgot" element={<Public><ForgotPage /></Public>} />
