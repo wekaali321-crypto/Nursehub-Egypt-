@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useStore } from "../lib/store";
 import { useI18n, bilingual } from "../lib/i18n";
-import { buildCalendar, computeStreak, pickQuestionOfDay, studiedDates } from "../lib/quizStats";
+import { buildMonthCalendar, computeStreak, pickQuestionOfDay, studiedDates } from "../lib/quizStats";
 import type { QuestionLogEntry } from "../lib/types";
 
 const DOW_AR = ["أحد", "إثنين", "ثلاثاء", "أربعاء", "خميس", "جمعة", "سبت"];
@@ -12,11 +12,29 @@ export default function QuizStreak() {
   const { lang, t } = useI18n();
   const [chosen, setChosen] = useState<number | null>(null);
 
-  const today = new Date().toISOString().slice(0, 10);
+  const now = new Date();
+  const today = now.toISOString().slice(0, 10);
+  const [viewYear, setViewYear] = useState(now.getFullYear());
+  const [viewMonth, setViewMonth] = useState(now.getMonth());
+  const isCurrentMonth = viewYear === now.getFullYear() && viewMonth === now.getMonth();
+  const monthLabel = new Date(viewYear, viewMonth, 1).toLocaleDateString(lang === "ar" ? "ar-EG" : "en-US", { month: "long", year: "numeric" });
+
   const days = useMemo(() => studiedDates(attempts, questionLog), [attempts, questionLog]);
   const streak = useMemo(() => computeStreak(days), [days]);
-  const calendar = useMemo(() => buildCalendar(days, 14), [days]);
+  const calendar = useMemo(() => buildMonthCalendar(days, viewYear, viewMonth), [days, viewYear, viewMonth]);
   const qotd = useMemo(() => pickQuestionOfDay(quizzes, today), [quizzes, today]);
+
+  const goPrevMonth = () => {
+    const d = new Date(viewYear, viewMonth - 1, 1);
+    setViewYear(d.getFullYear());
+    setViewMonth(d.getMonth());
+  };
+  const goNextMonth = () => {
+    if (isCurrentMonth) return;
+    const d = new Date(viewYear, viewMonth + 1, 1);
+    setViewYear(d.getFullYear());
+    setViewMonth(d.getMonth());
+  };
 
   const answeredToday = useMemo(
     () => questionLog.find((e) => e.quizId === "qotd" && e.date.slice(0, 10) === today),
@@ -69,22 +87,30 @@ export default function QuizStreak() {
             </span>
           )}
         </div>
-        <div className="mt-4 grid grid-cols-7 gap-1.5 text-center">
-          {calendar.slice(0, 7).map((d) => {
-            const dow = new Date(d.date).getDay();
-            return <div key={"h" + d.date} className="text-[10px] font-bold text-slate-400">{lang === "ar" ? DOW_AR[dow][0] : DOW_EN[dow]}</div>;
-          })}
-          {calendar.map((d) => (
+        <div className="mt-4 flex items-center justify-between">
+          <button type="button" onClick={goPrevMonth} aria-label={t("quiz.streakPrevMonth")} className="rounded-full p-1.5 text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">◀</button>
+          <span className="text-sm font-bold dark:text-white">{monthLabel}</span>
+          <button type="button" onClick={goNextMonth} disabled={isCurrentMonth} aria-label={t("quiz.streakNextMonth")} className="rounded-full p-1.5 text-slate-400 hover:bg-slate-100 disabled:opacity-30 dark:hover:bg-slate-800">▶</button>
+        </div>
+        <div className="mt-3 grid grid-cols-7 gap-1.5 text-center">
+          {(lang === "ar" ? DOW_AR : DOW_EN).map((d, i) => (
+            <div key={i} className="text-[10px] font-bold text-slate-400">{lang === "ar" ? d[0] : d}</div>
+          ))}
+          {calendar.map((d, i) => (
             <div
-              key={d.date}
+              key={d.date || "blank" + i}
               title={d.date}
               className={`mx-auto flex h-7 w-7 items-center justify-center rounded-full text-[11px] font-bold ${
-                d.studied
+                !d.dayOfMonth
+                  ? ""
+                  : d.studied
                   ? "bg-slate-800 text-white dark:bg-sky-500"
+                  : d.isFuture
+                  ? "text-slate-300 dark:text-slate-700"
                   : "bg-slate-100 text-slate-400 dark:bg-slate-800"
               } ${d.isToday ? "ring-2 ring-sky-400 ring-offset-1 dark:ring-offset-slate-900" : ""}`}
             >
-              {d.dayOfMonth}
+              {d.dayOfMonth ?? ""}
             </div>
           ))}
         </div>

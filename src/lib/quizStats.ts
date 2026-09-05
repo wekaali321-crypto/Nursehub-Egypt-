@@ -30,24 +30,29 @@ export function computeStreak(days: Set<string>): number {
   return streak;
 }
 
-export interface CalendarDay {
-  date: string;
-  dayOfMonth: number;
+export interface CalendarCell {
+  date: string; // "" for the leading blank cells before day 1
+  dayOfMonth: number | null;
   studied: boolean;
   isToday: boolean;
+  isFuture: boolean;
 }
 
-/** Last `count` days (oldest first) with a studied flag, for a streak calendar grid. */
-export function buildCalendar(days: Set<string>, count = 14): CalendarDay[] {
-  const out: CalendarDay[] = [];
+/** A real Sun-Sat month grid for `year`/`month` (0-indexed month, JS Date
+ * convention), padded with blank leading cells so day 1 lands in its actual
+ * weekday column — unlike a rolling "last N days" strip, this never silently
+ * crosses a month boundary mid-row. */
+export function buildMonthCalendar(days: Set<string>, year: number, month: number): CalendarCell[] {
   const todayStr = new Date().toISOString().slice(0, 10);
-  for (let i = count - 1; i >= 0; i--) {
-    const d = new Date();
-    d.setDate(d.getDate() - i);
-    const iso = d.toISOString().slice(0, 10);
-    out.push({ date: iso, dayOfMonth: d.getDate(), studied: days.has(iso), isToday: iso === todayStr });
+  const firstWeekday = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const cells: CalendarCell[] = [];
+  for (let i = 0; i < firstWeekday; i++) cells.push({ date: "", dayOfMonth: null, studied: false, isToday: false, isFuture: false });
+  for (let d = 1; d <= daysInMonth; d++) {
+    const iso = `${year}-${String(month + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+    cells.push({ date: iso, dayOfMonth: d, studied: days.has(iso), isToday: iso === todayStr, isFuture: iso > todayStr });
   }
-  return out;
+  return cells;
 }
 
 export interface CategoryStat {
