@@ -78,6 +78,7 @@ import ICUMedicationsAdmin from "./admin/ICUMedicationsAdmin";
 import ERMedicationsAdmin from "./admin/ERMedicationsAdmin";
 import PedsMedicationsAdmin from "./admin/PedsMedicationsAdmin";
 import HighAlertRefAdmin from "./admin/HighAlertRefAdmin";
+import LasaAdmin from "./admin/LasaAdmin";
 import RxPrescriptionsAdmin from "./admin/RxPrescriptionsAdmin";
 import ClinicalProtocolsAdmin from "./admin/ClinicalProtocolsAdmin";
 import ICUNursingAdmin from "./admin/ICUNursingAdmin";
@@ -266,6 +267,7 @@ export default function App() {
                   <Route path="/admin/er-medications" element={<Admin><ERMedicationsAdmin /></Admin>} />
                   <Route path="/admin/peds-medications" element={<Admin><PedsMedicationsAdmin /></Admin>} />
                   <Route path="/admin/high-alert-ref" element={<Admin><HighAlertRefAdmin /></Admin>} />
+                  <Route path="/admin/lasa" element={<Admin><LasaAdmin /></Admin>} />
                   <Route path="/admin/prescriptions" element={<Admin><RxPrescriptionsAdmin /></Admin>} />
                   <Route path="/admin/protocols" element={<Admin><ClinicalProtocolsAdmin /></Admin>} />
                   <Route path="/admin/icu-nursing" element={<Admin><ICUNursingAdmin /></Admin>} />
