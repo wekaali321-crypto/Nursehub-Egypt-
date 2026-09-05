@@ -33,29 +33,62 @@ function Card({ title, icon, children, defaultOpen = false }: { title: string; i
 const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800";
 const lbl = "mb-1 block text-sm font-semibold text-slate-600 dark:text-slate-300";
 const res = "mt-4 rounded-xl bg-sky-50 p-4 text-center font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300";
-const selCls = "w-full rounded-lg border border-slate-200 px-2 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
 
-const riskColors = {
-  emerald: "bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300",
-  amber: "bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300",
-  orange: "bg-orange-50 text-orange-700 dark:bg-orange-500/10 dark:text-orange-300",
-  rose: "bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-300",
+const cardBg = {
+  emerald: "bg-gradient-to-br from-emerald-500 to-emerald-600",
+  amber: "bg-gradient-to-br from-amber-500 to-amber-600",
+  orange: "bg-gradient-to-br from-orange-500 to-orange-600",
+  rose: "bg-gradient-to-br from-rose-500 to-rose-600",
 } as const;
-function RiskResult({ color, children }: { color: keyof typeof riskColors; children: React.ReactNode }) {
-  return <div className={`mt-4 rounded-xl p-4 text-center font-bold ${riskColors[color]}`}>{children}</div>;
+
+/** The big colored result card shown at the bottom of a scored calculator:
+ * a large "score/max" figure over a risk-tier gradient, with the risk label
+ * as a pill underneath (and an optional breakdown line, e.g. GCS's E/V/M). */
+function ScoreResult({ color, title, score, max, label, extra }: { color: keyof typeof cardBg; title: string; score: number; max: number; label: string; extra?: string }) {
+  return (
+    <div className={`mt-4 rounded-2xl p-6 text-center text-white shadow-lg ${cardBg[color]}`}>
+      <div className="text-xs font-bold uppercase tracking-wide opacity-90">{title}</div>
+      <div className="mt-1 text-4xl font-black">{score}<span className="text-lg font-bold opacity-80">/{max}</span></div>
+      {extra && <div className="mt-1 text-xs opacity-80">{extra}</div>}
+      <div className="mt-3 inline-block rounded-full bg-white/20 px-4 py-1.5 text-sm font-bold">{label}</div>
+    </div>
+  );
 }
 
-/** A labeled <select> scored by option INDEX (not point value), since several
- * clinical scales (e.g. NEWS2) legitimately assign the same point value to
- * more than one option — using the point value itself as the <select>'s
- * value would make a controlled select ambiguous between those options. */
+/** A group of tappable option "pills" scored by option INDEX (not point
+ * value), since several clinical scales (e.g. NEWS2) legitimately assign the
+ * same point value to more than one option. Selecting a pill highlights it
+ * and shows its point value in a small badge, matching a typical native
+ * clinical-scale app's look. */
 function ScoreField({ label, options, index, onChange }: { label: string; options: { pts: number; text: string }[]; index: number; onChange: (i: number) => void }) {
   return (
     <div>
       <label className={lbl}>{label}</label>
-      <select className={selCls} value={index} onChange={(e) => onChange(+e.target.value)}>
-        {options.map((o, i) => <option key={i} value={i}>{o.text} ({o.pts})</option>)}
-      </select>
+      <div className="space-y-1.5">
+        {options.map((o, i) => {
+          const sel = i === index;
+          return (
+            <button
+              key={i}
+              type="button"
+              onClick={() => onChange(i)}
+              className={`flex w-full items-center justify-between gap-3 rounded-xl border-2 px-3 py-2.5 text-start text-sm transition ${
+                sel
+                  ? "border-sky-500 bg-sky-50 font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300"
+                  : "border-slate-200 text-slate-600 hover:border-sky-300 dark:border-slate-700 dark:text-slate-300"
+              }`}
+            >
+              <span className="flex items-center gap-2">
+                <span className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 ${sel ? "border-sky-500" : "border-slate-300 dark:border-slate-600"}`}>
+                  {sel && <span className="h-2 w-2 rounded-full bg-sky-500" />}
+                </span>
+                {o.text}
+              </span>
+              <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${sel ? "bg-sky-500 text-white" : "bg-slate-200 text-slate-500 dark:bg-slate-700"}`}>{o.pts}</span>
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -153,20 +186,40 @@ function Pregnancy() {
 function GCS() {
   const { lang } = useI18n();
   const isEn = lang === "en";
-  const [eye, setEye] = useState(4); const [verbal, setVerbal] = useState(5); const [motor, setMotor] = useState(6);
-  const total = eye + verbal + motor;
+  const fields = {
+    eye: isEn
+      ? [{ pts: 4, text: "Spontaneous" }, { pts: 3, text: "To verbal stimulus" }, { pts: 2, text: "To pain" }, { pts: 1, text: "No response" }]
+      : [{ pts: 4, text: "عفوي" }, { pts: 3, text: "استجابة للصوت" }, { pts: 2, text: "استجابة للألم" }, { pts: 1, text: "لا استجابة" }],
+    verbal: isEn
+      ? [{ pts: 5, text: "Oriented" }, { pts: 4, text: "Confused" }, { pts: 3, text: "Inappropriate words" }, { pts: 2, text: "Incomprehensible sounds" }, { pts: 1, text: "No response" }]
+      : [{ pts: 5, text: "موجه" }, { pts: 4, text: "مرتبك" }, { pts: 3, text: "كلمات غير مناسبة" }, { pts: 2, text: "أصوات غير مفهومة" }, { pts: 1, text: "لا استجابة" }],
+    motor: isEn
+      ? [{ pts: 6, text: "Obeys commands" }, { pts: 5, text: "Localizes pain" }, { pts: 4, text: "Withdraws from pain" }, { pts: 3, text: "Abnormal flexion (decorticate)" }, { pts: 2, text: "Abnormal extension (decerebrate)" }, { pts: 1, text: "No response" }]
+      : [{ pts: 6, text: "يستجيب للأوامر" }, { pts: 5, text: "يحدد مكان الألم" }, { pts: 4, text: "ينسحب من الألم" }, { pts: 3, text: "انثناء غير طبيعي (decorticate)" }, { pts: 2, text: "بسط غير طبيعي (decerebrate)" }, { pts: 1, text: "لا استجابة" }],
+  };
+  const [idx, setIdx] = useState({ eye: 0, verbal: 0, motor: 0 });
+  const eyePts = fields.eye[idx.eye].pts, verbalPts = fields.verbal[idx.verbal].pts, motorPts = fields.motor[idx.motor].pts;
+  const total = eyePts + verbalPts + motorPts;
+  const color = total >= 13 ? "emerald" : total >= 9 ? "amber" : "rose";
   const level = isEn
-    ? (total >= 13 ? "Mild injury" : total >= 9 ? "Moderate injury" : "Severe injury")
-    : (total >= 13 ? "إصابة خفيفة" : total >= 9 ? "إصابة متوسطة" : "إصابة شديدة");
-  const sel = "w-full rounded-lg border border-slate-200 px-2 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
+    ? (total >= 13 ? "Mild traumatic brain injury" : total >= 9 ? "Moderate traumatic brain injury" : "Severe traumatic brain injury")
+    : (total >= 13 ? "إصابة دماغية خفيفة" : total >= 9 ? "إصابة دماغية متوسطة" : "إصابة دماغية شديدة");
   return (
     <Card title={isEn ? "Glasgow Coma Scale (GCS)" : "مقياس غلاسكو للوعي (GCS)"} icon="🧠">
-      <div className="grid grid-cols-3 gap-3">
-        <div><label className={lbl}>{isEn ? "Eye Opening (E)" : "فتح العين (E)"}</label><select className={sel} value={eye} onChange={(e) => setEye(+e.target.value)}>{[4,3,2,1].map((n) => <option key={n} value={n}>{n}</option>)}</select></div>
-        <div><label className={lbl}>{isEn ? "Verbal Response (V)" : "الاستجابة اللفظية (V)"}</label><select className={sel} value={verbal} onChange={(e) => setVerbal(+e.target.value)}>{[5,4,3,2,1].map((n) => <option key={n} value={n}>{n}</option>)}</select></div>
-        <div><label className={lbl}>{isEn ? "Motor Response (M)" : "الاستجابة الحركية (M)"}</label><select className={sel} value={motor} onChange={(e) => setMotor(+e.target.value)}>{[6,5,4,3,2,1].map((n) => <option key={n} value={n}>{n}</option>)}</select></div>
+      <p className="mb-3 text-xs text-slate-400">{isEn ? "Evaluates the level of consciousness in patients with brain injury. Assesses three parameters: eye opening, verbal response, and motor response." : "يقيّم مستوى الوعي لدى مرضى إصابات الدماغ، من خلال 3 معايير: فتح العين، الاستجابة اللفظية، والاستجابة الحركية."}</p>
+      <div className="grid gap-3 sm:grid-cols-3">
+        <ScoreField label={isEn ? "Eye Opening" : "فتح العين"} options={fields.eye} index={idx.eye} onChange={(i) => setIdx((s) => ({ ...s, eye: i }))} />
+        <ScoreField label={isEn ? "Verbal Response" : "الاستجابة اللفظية"} options={fields.verbal} index={idx.verbal} onChange={(i) => setIdx((s) => ({ ...s, verbal: i }))} />
+        <ScoreField label={isEn ? "Motor Response" : "الاستجابة الحركية"} options={fields.motor} index={idx.motor} onChange={(i) => setIdx((s) => ({ ...s, motor: i }))} />
       </div>
-      <div className={res}>{isEn ? `Total = ${total}/15 — ${level}` : `المجموع = ${total}/15 — ${level}`}</div>
+      <ScoreResult
+        color={color}
+        title={isEn ? "Total Score" : "المجموع الكلي"}
+        score={total}
+        max={15}
+        label={level}
+        extra={`E: ${eyePts} | V: ${verbalPts} | M: ${motorPts}`}
+      />
     </Card>
   );
 }
@@ -214,7 +267,7 @@ function Norton() {
         <ScoreField label={isEn ? "Mobility" : "الحركة"} options={fields.mobility} index={idx.mobility} onChange={(i) => setIdx((s) => ({ ...s, mobility: i }))} />
         <ScoreField label={isEn ? "Incontinence" : "سلس البول/البراز"} options={fields.incontinence} index={idx.incontinence} onChange={(i) => setIdx((s) => ({ ...s, incontinence: i }))} />
       </div>
-      <RiskResult color={color}>{isEn ? `Total = ${total}/20 — ${label}` : `المجموع = ${total}/20 — ${label}`}</RiskResult>
+      <ScoreResult color={color} title={isEn ? "Total Score" : "المجموع الكلي"} score={total} max={20} label={label} />
     </Card>
   );
 }
@@ -247,7 +300,7 @@ function Braden() {
         <ScoreField label={isEn ? "Nutrition" : "التغذية"} options={fields4.nutrition} index={idx.nutrition} onChange={(i) => setIdx((s) => ({ ...s, nutrition: i }))} />
         <ScoreField label={isEn ? "Friction and Shear" : "الاحتكاك والانزلاق"} options={friction} index={idx.friction} onChange={(i) => setIdx((s) => ({ ...s, friction: i }))} />
       </div>
-      <RiskResult color={color}>{isEn ? `Total Score = ${total}/23 — ${label}` : `المجموع = ${total}/23 — ${label}`}</RiskResult>
+      <ScoreResult color={color} title={isEn ? "Total Score" : "المجموع الكلي"} score={total} max={23} label={label} />
     </Card>
   );
 }
@@ -293,7 +346,7 @@ function Barthel() {
           <ScoreField key={k} label={labels[k]} options={fields[k]} index={idx[k]} onChange={(i) => setIdx((s) => ({ ...s, [k]: i }))} />
         ))}
       </div>
-      <RiskResult color={color}>{isEn ? `Total Score = ${total}/100 — ${label}` : `المجموع = ${total}/100 — ${label}`}</RiskResult>
+      <ScoreResult color={color} title={isEn ? "Total Score" : "المجموع الكلي"} score={total} max={100} label={label} />
     </Card>
   );
 }
@@ -311,7 +364,7 @@ function VAS() {
       <p className="mb-3 text-xs text-slate-400">{isEn ? "Rate the patient's pain from 0 (no pain) to 10 (worst possible pain)." : "قيّم شدة ألم المريض من 0 (لا يوجد ألم) إلى 10 (أسوأ ألم ممكن)."}</p>
       <input type="range" min={0} max={10} step={1} value={pain} onChange={(e) => setPain(+e.target.value)} className="w-full accent-sky-500" />
       <div className="mt-1 flex justify-between text-[11px] text-slate-400">{Array.from({ length: 11 }, (_, i) => <span key={i}>{i}</span>)}</div>
-      <RiskResult color={color}>{isEn ? `Pain = ${pain}/10 — ${label}` : `الألم = ${pain}/10 — ${label}`}</RiskResult>
+      <ScoreResult color={color} title={isEn ? "Pain Level" : "مستوى الألم"} score={pain} max={10} label={label} />
     </Card>
   );
 }
@@ -350,7 +403,7 @@ function News2() {
         <ScoreField label={isEn ? "Heart Rate (bpm)" : "معدل النبض (نبضة/دقيقة)"} options={fields.hr} index={idx.hr} onChange={(i) => setIdx((s) => ({ ...s, hr: i }))} />
         <ScoreField label={isEn ? "Level of Consciousness (ACVPU)" : "مستوى الوعي (ACVPU)"} options={fields.avpu} index={idx.avpu} onChange={(i) => setIdx((s) => ({ ...s, avpu: i }))} />
       </div>
-      <RiskResult color={color}>{isEn ? `NEWS2 Score = ${total}/20 — ${label}` : `مجموع NEWS2 = ${total}/20 — ${label}`}</RiskResult>
+      <ScoreResult color={color} title="NEWS2 Score" score={total} max={20} label={label} />
       <div className="mt-3 space-y-1 rounded-lg bg-slate-50 p-3 text-xs dark:bg-slate-800/50">
         <div className="font-bold text-slate-500 dark:text-slate-400">{isEn ? "Suggested Clinical Response" : "الاستجابة السريرية المقترحة"}</div>
         <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />{isEn ? "0: Routine monitoring" : "0: مراقبة روتينية"}</div>
