@@ -227,6 +227,8 @@ const dict = {
   "quiz.streakTitle": { ar: "المتابعة اليومية", en: "Study Streak" },
   "quiz.streakDays": { ar: "يوم متتالي", en: "day streak" },
   "quiz.streakEmpty": { ar: "ذاكر يوميًا عشان تبدأ سلسلة أيامك.", en: "Study daily to start your streak." },
+  "quiz.streakPrevMonth": { ar: "الشهر السابق", en: "Previous month" },
+  "quiz.streakNextMonth": { ar: "الشهر التالي", en: "Next month" },
   "quiz.qotdTitle": { ar: "سؤال اليوم", en: "Question of the Day" },
   "quiz.qotdCorrect": { ar: "إجابة صحيحة! 🎉", en: "Correct! 🎉" },
   "quiz.qotdIncorrect": { ar: "إجابة غير صحيحة", en: "Not quite" },
