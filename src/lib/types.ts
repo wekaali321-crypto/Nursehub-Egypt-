@@ -386,6 +386,11 @@ export interface Quiz {
   titleEn?: string;
   descriptionEn?: string;
   categoryEn?: string;
+  // Only set on synthetic "quiz mode" quizzes built at runtime (Quick 10, Mock
+  // Exam, ...) whose questions are pulled from several source quizzes/categories.
+  // Maps a question id to its original category, since `category` above only
+  // describes a single, real, admin-authored quiz.
+  questionCategoryMap?: Record<string, { ar: string; en?: string }>;
 }
 
 export interface QuizAttempt {
@@ -397,6 +402,27 @@ export interface QuizAttempt {
   total: number;
   passed: boolean;
   date: string;
+}
+
+// One answered question, logged for the streak/analytics/review-bank features.
+export interface QuestionLogEntry {
+  id: string;
+  quizId: string;
+  quizTitle: string;
+  category: string;
+  categoryEn?: string;
+  questionId: string;
+  questionText: string;
+  questionTextEn?: string;
+  options: string[];
+  optionsEn?: string[];
+  correctIndex: number;
+  chosenIndex?: number; // undefined = skipped
+  isCorrect: boolean;
+  explanation?: string;
+  explanationEn?: string;
+  flagged: boolean;
+  date: string; // "YYYY-MM-DD HH:mm"
 }
 
 // Dynamic custom content types (create new sections without code)

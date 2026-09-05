@@ -222,6 +222,41 @@ const dict = {
   "quiz.certPassedQuiz": { ar: "قد اجتاز بنجاح اختبار", en: "has successfully passed the quiz" },
   "quiz.result": { ar: "النتيجة", en: "Score" },
   "quiz.date": { ar: "التاريخ", en: "Date" },
+
+  // Quiz — streak & Question of the Day
+  "quiz.streakTitle": { ar: "المتابعة اليومية", en: "Study Streak" },
+  "quiz.streakDays": { ar: "يوم متتالي", en: "day streak" },
+  "quiz.streakEmpty": { ar: "ذاكر يوميًا عشان تبدأ سلسلة أيامك.", en: "Study daily to start your streak." },
+  "quiz.qotdTitle": { ar: "سؤال اليوم", en: "Question of the Day" },
+  "quiz.qotdCorrect": { ar: "إجابة صحيحة! 🎉", en: "Correct! 🎉" },
+  "quiz.qotdIncorrect": { ar: "إجابة غير صحيحة", en: "Not quite" },
+
+  // Quiz — modes
+  "quiz.modesTitle": { ar: "أوضاع الاختبار", en: "Quiz Modes" },
+  "quiz.modesSubtitle": { ar: "نوّع طريقة مذاكرتك", en: "Vary how you study" },
+  "quiz.modeNotReady": { ar: "لا توجد أسئلة كافية لهذا الوضع بعد", en: "Not enough questions for this mode yet" },
+
+  // Quiz — analytics
+  "quiz.analyticsTitle": { ar: "تحليل الأداء", en: "Performance Analytics" },
+  "quiz.analyticsSubtitle": { ar: "تابع تقدمك في المذاكرة رقميًا", en: "Track your study progress with data" },
+  "quiz.analyticsNoData": { ar: "ذاكر أول اختبار عشان تظهر إحصائياتك هنا.", en: "Take your first quiz to see your stats here." },
+  "quiz.analyticsQuizzes": { ar: "اختبارات", en: "Quizzes" },
+  "quiz.analyticsQuestions": { ar: "أسئلة", en: "Questions" },
+  "quiz.analyticsStudyTime": { ar: "وقت المذاكرة", en: "Study Time" },
+  "quiz.analyticsLearningCurve": { ar: "منحنى التعلّم", en: "Learning Curve" },
+  "quiz.analyticsLearningCurveSub": { ar: "نتيجتك في آخر الاختبارات", en: "Your score across recent quizzes" },
+  "quiz.analyticsBreakdown": { ar: "الأداء حسب الموضوع", en: "Performance by Category" },
+
+  // Quiz — review bank
+  "quiz.reviewTitle": { ar: "مراجعة الأسئلة", en: "Review Questions" },
+  "quiz.reviewSubtitle": { ar: "كل الأسئلة اللي جاوبت عليها في مكان واحد", en: "All your answered questions in one place" },
+  "quiz.reviewEmpty": { ar: "لسه ما جاوبتش على أي سؤال.", en: "You haven't answered any questions yet." },
+  "quiz.reviewAll": { ar: "الكل", en: "All" },
+  "quiz.reviewFlagged": { ar: "مُعلَّمة", en: "Flagged" },
+  "quiz.reviewIncorrect": { ar: "غلط", en: "Incorrect" },
+  "quiz.reviewCorrect": { ar: "صح", en: "Correct" },
+  "quiz.reviewSearchPlaceholder": { ar: "ابحث في الأسئلة...", en: "Search questions..." },
+  "quiz.reviewFlag": { ar: "علّم السؤال", en: "Flag question" },
   "difficulty.easy": { ar: "سهل", en: "Easy" },
   "difficulty.medium": { ar: "متوسط", en: "Medium" },
   "difficulty.hard": { ar: "صعب", en: "Hard" },

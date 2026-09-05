@@ -5,6 +5,8 @@ import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import QuizStreak from "../components/QuizStreak";
+import { MODE_META, QUIZ_MODE_ORDER } from "../lib/quizStats";
 
 const DIFFICULTY_LABEL: Record<string, { ar: string; en: string }> = {
   "سهل": { ar: "سهل", en: "Easy" },
@@ -32,6 +34,34 @@ export default function QuizzesPage() {
         <div className="text-4xl sm:text-5xl">📝</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{t("quiz.pageTitle")}</h1>
         <p className="mt-1 text-sky-50">{t("quiz.pageDesc")}</p>
+      </div>
+
+      <QuizStreak />
+
+      {/* Quiz modes */}
+      <div className="mb-6">
+        <div className="mb-3 flex items-center justify-between">
+          <div>
+            <h2 className="text-lg font-bold dark:text-white">{t("quiz.modesTitle")}</h2>
+            <p className="text-xs text-slate-500 dark:text-slate-400">{t("quiz.modesSubtitle")}</p>
+          </div>
+          <div className="flex gap-2 text-xs font-bold">
+            <Link to="/quizzes/review" className="rounded-full bg-slate-100 px-3 py-1.5 dark:bg-slate-800 dark:text-white">🗂️ {t("quiz.reviewTitle")}</Link>
+            <Link to="/quizzes/analytics" className="rounded-full bg-slate-100 px-3 py-1.5 dark:bg-slate-800 dark:text-white">📊 {t("quiz.analyticsTitle")}</Link>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          {QUIZ_MODE_ORDER.map((mode) => {
+            const meta = MODE_META[mode];
+            const title = bilingual(meta.title, meta.titleEn, lang).text;
+            return (
+              <Link key={mode} to={`/quiz-mode/${mode}`} className="flex flex-col items-center gap-2 rounded-2xl border border-slate-200 bg-white p-4 text-center transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                <span className="text-2xl">{meta.icon}</span>
+                <span className="text-xs font-bold dark:text-white">{title}</span>
+              </Link>
+            );
+          })}
+        </div>
       </div>
 
       <div className="mb-6 flex flex-wrap gap-2">

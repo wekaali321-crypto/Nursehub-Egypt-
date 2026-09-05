@@ -33,6 +33,8 @@ export const seedHomeCategories: HomeCategory[] = [
   { id: "hc8", title: "مكافحة العدوى", titleEn: "Infection Control", icon: "🦠", description: "نظافة اليدين والوقاية من العدوى", descriptionEn: "Hand hygiene & infection prevention", color: "from-red-500 to-orange-500", order: 7, visible: true, link: "/category/infection-control", demo: false },
   { id: "hc9", title: "الأدوات", titleEn: "Tools", icon: "🧮", description: "حاسبات طبية تساعدك في عملك", descriptionEn: "Medical calculators for your work", color: "from-indigo-500 to-purple-500", order: 8, visible: true, link: "/tools", demo: false },
   { id: "hc10", title: "المتجر", titleEn: "Store", icon: "🛍️", description: "كتب وكورسات واشتراكات مميزة", descriptionEn: "Books, courses & premium subscriptions", color: "from-emerald-500 to-teal-500", order: 9, visible: true, link: "/store", demo: false },
+  { id: "hc11", title: "الاختبارات", titleEn: "Quizzes", icon: "📝", description: "اختبارات NCLEX تفاعلية لقياس مستواك", descriptionEn: "Interactive NCLEX-style quizzes to test your level", color: "from-fuchsia-500 to-pink-500", order: 10, visible: true, link: "/quizzes", demo: false },
+  { id: "hc12", title: "العناية المركزة", titleEn: "ICU Nursing", icon: "🏥", description: "دليل شامل لتمريض العناية المركزة وبروتوكولاتها", descriptionEn: "A comprehensive guide to ICU nursing and its protocols", color: "from-red-600 to-rose-700", order: 11, visible: true, link: "/icu-nursing", demo: false },
 ];
 
 // All seed content here is DEMO data (demo:true) so it can be deleted with one click.

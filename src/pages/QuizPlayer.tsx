@@ -7,6 +7,8 @@ import { useToast } from "../components/Toast";
 import { logoMarkSVG, creditFooterHTML, BRAND_NAME } from "../lib/brand";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { buildModeQuiz, computeAnalytics, type QuizMode } from "../lib/quizStats";
+import type { QuestionLogEntry } from "../lib/types";
 
 const DIFFICULTY_LABEL: Record<string, { ar: string; en: string }> = {
   "سهل": { ar: "سهل", en: "Easy" },
@@ -15,11 +17,20 @@ const DIFFICULTY_LABEL: Record<string, { ar: string; en: string }> = {
 };
 
 export default function QuizPlayer() {
-  const { id } = useParams();
-  const { quizzes, recordAttempt, settings } = useStore();
+  const { id, mode } = useParams<{ id?: string; mode?: string }>();
+  const { quizzes, attempts, questionLog, recordAttempt, logQuestions, settings } = useStore();
   const { notify } = useToast();
   const { lang, t } = useI18n();
-  const quiz = quizzes.find((q) => q.id === id);
+
+  // Snapshot the accuracy breakdown once on mount so a "weakest subject" quiz
+  // mode doesn't rebuild itself (with a different question set) mid-session
+  // once this attempt gets recorded and the breakdown changes.
+  const [initialBreakdown] = useState(() => computeAnalytics(attempts, questionLog).categoryBreakdown);
+  const virtualQuiz = useMemo(
+    () => (mode ? buildModeQuiz(mode as QuizMode, quizzes, initialBreakdown) : null),
+    [mode, quizzes, initialBreakdown]
+  );
+  const quiz = mode ? virtualQuiz : quizzes.find((q) => q.id === id);
 
   const [started, setStarted] = useState(false);
   const [current, setCurrent] = useState(0);
@@ -55,7 +66,7 @@ export default function QuizPlayer() {
     return (
       <div className="mx-auto max-w-3xl px-4 py-20 text-center">
         <div className="text-6xl">🔍</div>
-        <h1 className="mt-4 text-2xl font-bold dark:text-white">{t("quiz.notFound")}</h1>
+        <h1 className="mt-4 text-2xl font-bold dark:text-white">{mode ? t("quiz.modeNotReady") : t("quiz.notFound")}</h1>
         <Link to="/quizzes" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("quiz.allQuizzes")}</Link>
       </div>
     );
@@ -68,11 +79,36 @@ export default function QuizPlayer() {
 
   function finish() {
     setFinished(true);
+    const date = new Date().toISOString().slice(0, 16).replace("T", " ");
     recordAttempt({
       id: "at" + Date.now(), quizId: quiz!.id, quizTitle: quiz!.title,
       score: result.score, correct: result.correct, total: result.total,
-      passed: result.passed, date: new Date().toISOString().slice(0, 16).replace("T", " "),
+      passed: result.passed, date,
     });
+    const entries: QuestionLogEntry[] = quiz!.questions.map((qq, i) => {
+      const cat = quiz!.questionCategoryMap?.[qq.id];
+      const chosen = answers[qq.id];
+      return {
+        id: `ql${Date.now()}_${i}`,
+        quizId: quiz!.id,
+        quizTitle: quiz!.title,
+        category: cat?.ar ?? quiz!.category,
+        categoryEn: cat?.en ?? quiz!.categoryEn,
+        questionId: qq.id,
+        questionText: qq.text,
+        questionTextEn: qq.textEn,
+        options: qq.options,
+        optionsEn: qq.optionsEn,
+        correctIndex: qq.correct,
+        chosenIndex: chosen,
+        isCorrect: chosen === qq.correct,
+        explanation: qq.explanation,
+        explanationEn: qq.explanationEn,
+        flagged: false,
+        date,
+      };
+    });
+    logQuestions(entries);
     notify(result.passed ? "أحسنت! لقد نجحت 🎉" : "لم تجتز الاختبار، حاول مجدداً", result.passed ? "success" : "info");
   }
 

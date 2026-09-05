@@ -35,6 +35,7 @@ import type {
   AppNotification,
   Quiz,
   QuizAttempt,
+  QuestionLogEntry,
   CustomType,
   CustomEntry,
   HomeCategory,
@@ -106,6 +107,7 @@ export interface DataShape {
   notifications: AppNotification[];
   quizzes: Quiz[];
   attempts: QuizAttempt[];
+  questionLog: QuestionLogEntry[];
   customTypes: CustomType[];
   customEntries: CustomEntry[];
   homeCategories: HomeCategory[];
@@ -199,6 +201,7 @@ const defaults: DataShape = {
   notifications: [],
   quizzes: seedQuizzes,
   attempts: [],
+  questionLog: [],
   customTypes: seedCustomTypes,
   customEntries: [],
   homeCategories: seedHomeCategories,
@@ -239,7 +242,7 @@ function loadPreview(): DataShape {
   return defaults;
 }
 
-function loadUiConfig(): { homeSections: string[]; menu: { label: string; path: string }[]; trash: TrashEntry[]; versions: ArticleVersion[]; notifications: AppNotification[]; quizzes: Quiz[]; attempts: QuizAttempt[]; customTypes: CustomType[]; customEntries: CustomEntry[]; homeCategories: HomeCategory[]; homeSectionMeta: Record<string, { title: string; subtitle: string }>; dailyViews: Record<string, number>; downloads: number; gateways: PaymentGateway[]; coupons: Coupon[]; orders: Order[]; commerce: CommerceSettings } {
+function loadUiConfig(): { homeSections: string[]; menu: { label: string; path: string }[]; trash: TrashEntry[]; versions: ArticleVersion[]; notifications: AppNotification[]; quizzes: Quiz[]; attempts: QuizAttempt[]; questionLog: QuestionLogEntry[]; customTypes: CustomType[]; customEntries: CustomEntry[]; homeCategories: HomeCategory[]; homeSectionMeta: Record<string, { title: string; subtitle: string }>; dailyViews: Record<string, number>; downloads: number; gateways: PaymentGateway[]; coupons: Coupon[]; orders: Order[]; commerce: CommerceSettings } {
   try {
     const raw = localStorage.getItem(UI_KEY);
     if (raw) {
@@ -252,6 +255,7 @@ function loadUiConfig(): { homeSections: string[]; menu: { label: string; path: 
         notifications: p.notifications ?? [],
         quizzes: p.quizzes ?? seedQuizzes,
         attempts: p.attempts ?? [],
+        questionLog: p.questionLog ?? [],
         customTypes: p.customTypes ?? seedCustomTypes,
         customEntries: p.customEntries ?? [],
         homeCategories: mergeNewDefaults(p.homeCategories, seedHomeCategories, "link"),
@@ -265,7 +269,7 @@ function loadUiConfig(): { homeSections: string[]; menu: { label: string; path: 
       };
     }
   } catch { /* ignore */ }
-  return { homeSections: defaultHome, menu: defaultMenu, trash: [], versions: [], notifications: [], quizzes: seedQuizzes, attempts: [], customTypes: seedCustomTypes, customEntries: [], homeCategories: seedHomeCategories, homeSectionMeta: defaultSectionMeta, dailyViews: {}, downloads: 0, gateways: seedGateways, coupons: seedCoupons, orders: [], commerce: defaultCommerce };
+  return { homeSections: defaultHome, menu: defaultMenu, trash: [], versions: [], notifications: [], quizzes: seedQuizzes, attempts: [], questionLog: [], customTypes: seedCustomTypes, customEntries: [], homeCategories: seedHomeCategories, homeSectionMeta: defaultSectionMeta, dailyViews: {}, downloads: 0, gateways: seedGateways, coupons: seedCoupons, orders: [], commerce: defaultCommerce };
 }
 
 interface StoreCtx extends DataShape {
@@ -288,6 +292,8 @@ interface StoreCtx extends DataShape {
   purgeTrash: (trashId: string) => void;
   emptyTrash: () => void;
   recordAttempt: (a: QuizAttempt) => void;
+  logQuestions: (entries: QuestionLogEntry[]) => void;
+  toggleQuestionFlag: (id: string) => void;
   deleteDemoData: () => void;
   hasDemoData: boolean;
   trackView: () => void;
@@ -353,6 +359,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       notifications: data.notifications.slice(0, 100),
       quizzes: data.quizzes,
       attempts: data.attempts.slice(0, 200),
+      questionLog: data.questionLog.slice(0, 1000),
       customTypes: data.customTypes,
       customEntries: data.customEntries,
       homeCategories: data.homeCategories,
@@ -471,6 +478,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const recordAttempt = (a: QuizAttempt) =>
     setDataState((prev) => ({ ...prev, attempts: [a, ...prev.attempts].slice(0, 200) }));
 
+  const logQuestions = (entries: QuestionLogEntry[]) =>
+    setDataState((prev) => ({ ...prev, questionLog: [...entries, ...prev.questionLog].slice(0, 1000) }));
+
+  const toggleQuestionFlag = (id: string) =>
+    setDataState((prev) => ({
+      ...prev,
+      questionLog: prev.questionLog.map((e) => (e.id === id ? { ...e, flagged: !e.flagged } : e)),
+    }));
+
   const trackView = () => {
     const today = new Date().toISOString().slice(0, 10);
     setDataState((prev) => ({ ...prev, dailyViews: { ...prev.dailyViews, [today]: (prev.dailyViews[today] || 0) + 1 } }));
@@ -517,6 +533,8 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         purgeTrash,
         emptyTrash,
         recordAttempt,
+        logQuestions,
+        toggleQuestionFlag,
         deleteDemoData,
         hasDemoData,
         trackView,
@@ -540,7 +558,7 @@ function emptyCollections(): Partial<DataShape> {
     otcConditions: [],
     pages: [], categories: [], tags: [], subscribers: [], ads: [], affiliates: [],
     redirects: [], activity: [], trash: [], versions: [], notifications: [],
-    quizzes: seedQuizzes, attempts: [], customTypes: seedCustomTypes, customEntries: [],
+    quizzes: seedQuizzes, attempts: [], questionLog: [], customTypes: seedCustomTypes, customEntries: [],
     homeCategories: seedHomeCategories, homeSectionMeta: defaultSectionMeta, dailyViews: {}, downloads: 0,
     gateways: seedGateways, coupons: seedCoupons, orders: [], commerce: defaultCommerce,
   };
