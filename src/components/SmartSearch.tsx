@@ -13,7 +13,7 @@ interface Suggestion {
   icon: string;
 }
 
-export default function SmartSearch({ onNavigate }: { onNavigate?: () => void }) {
+export default function SmartSearch({ onNavigate, variant = "compact" }: { onNavigate?: () => void; variant?: "compact" | "hero" }) {
   const { articles, drugs } = useStore();
   const { icuTopics, protocols } = useExtraSearchIndex();
   const { t, lang } = useI18n();
@@ -53,7 +53,7 @@ export default function SmartSearch({ onNavigate }: { onNavigate?: () => void })
       logSearch(q.trim(), results.length, "instant", lang);
     }
     return results;
-  }, [q, articles, drugs, lang]);
+  }, [q, articles, drugs, icuTopics, protocols, lang]);
 
   const go = (to: string) => {
     setQ(""); setOpen(false); onNavigate?.();
@@ -66,30 +66,39 @@ export default function SmartSearch({ onNavigate }: { onNavigate?: () => void })
     else if (q.trim()) go(`/search?q=${encodeURIComponent(q)}`);
   };
 
+  const isHero = variant === "hero";
+  const inputProps = {
+    value: q,
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => { setQ(e.target.value); setOpen(true); setActive(0); },
+    onFocus: () => setOpen(true),
+    onBlur: () => { blurTimer.current = window.setTimeout(() => setOpen(false), 150); },
+    onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === "ArrowDown") setActive((a) => Math.min(a + 1, suggestions.length - 1));
+      if (e.key === "ArrowUp") setActive((a) => Math.max(a - 1, 0));
+    },
+  };
+
   return (
-    <div className="relative w-full">
-      <form onSubmit={submit}>
-        <div className="relative">
-          <input
-            value={q}
-            onChange={(e) => { setQ(e.target.value); setOpen(true); setActive(0); }}
-            onFocus={() => setOpen(true)}
-            onBlur={() => { blurTimer.current = window.setTimeout(() => setOpen(false), 150); }}
-            onKeyDown={(e) => {
-              if (e.key === "ArrowDown") setActive((a) => Math.min(a + 1, suggestions.length - 1));
-              if (e.key === "ArrowUp") setActive((a) => Math.max(a - 1, 0));
-            }}
-            placeholder={t("common.search") + "..."}
-            className="w-full rounded-full border border-slate-200 bg-slate-50 py-2 pr-9 pl-3 text-sm outline-none transition-all focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800"
-          />
-          <span className="absolute right-3 top-2.5 text-slate-400">🔍</span>
-        </div>
-      </form>
+    <div className={isHero ? "relative mx-auto mt-6 max-w-xl" : "relative w-full"}>
+      {isHero ? (
+        <form onSubmit={submit} className="flex items-center gap-2 rounded-full bg-white p-1.5 shadow-2xl shadow-sky-900/20">
+          <span className="pr-3 text-xl text-slate-400">🔍</span>
+          <input {...inputProps} placeholder={t("common.searchPlaceholder")} className="flex-1 bg-transparent text-slate-800 outline-none placeholder:text-slate-400" />
+          <button className="rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-5 py-2.5 font-bold text-white sm:px-7">{t("common.search")}</button>
+        </form>
+      ) : (
+        <form onSubmit={submit}>
+          <div className="relative">
+            <input {...inputProps} placeholder={t("common.search") + "..."} className="w-full rounded-full border border-slate-200 bg-slate-50 py-2 pr-9 pl-3 text-sm outline-none transition-all focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" />
+            <span className="absolute right-3 top-2.5 text-slate-400">🔍</span>
+          </div>
+        </form>
+      )}
 
       {open && suggestions.length > 0 && (
         <div
           onMouseDown={() => window.clearTimeout(blurTimer.current)}
-          className="absolute right-0 z-50 mt-2 w-72 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900"
+          className={`absolute z-50 mt-2 overflow-hidden rounded-2xl border border-slate-200 bg-white text-right shadow-2xl dark:border-slate-700 dark:bg-slate-900 ${isHero ? "inset-x-0" : "right-0 w-72"}`}
         >
           {suggestions.map((s, i) => (
             <button

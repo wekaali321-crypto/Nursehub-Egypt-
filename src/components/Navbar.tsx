@@ -195,7 +195,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <div className="hidden w-52 md:block"><SmartSearch /></div>
+          {loc.pathname !== "/" && <div className="hidden w-52 md:block"><SmartSearch /></div>}
 
           <button
             onClick={() => setLang(lang === "ar" ? "en" : "ar")}
