@@ -224,7 +224,7 @@ const UI_KEY = "nursehub_ui_config_v1";
 // that shipped in the code after their last visit. This means adding a new
 // menu link or homepage section in code shows up for returning visitors
 // without requiring them to clear their browser cache.
-function mergeNewDefaults<T extends Record<string, unknown>>(stored: T[] | undefined, fallback: T[], key: keyof T): T[] {
+function mergeNewDefaults<T, K extends keyof T>(stored: T[] | undefined, fallback: T[], key: K): T[] {
   if (!stored) return fallback;
   const existingKeys = new Set(stored.map((item) => item[key]));
   const missing = fallback.filter((item) => !existingKeys.has(item[key]));
@@ -253,7 +253,7 @@ function loadUiConfig(): { homeSections: string[]; menu: { label: string; path: 
         trash: p.trash ?? [],
         versions: p.versions ?? [],
         notifications: p.notifications ?? [],
-        quizzes: p.quizzes ?? seedQuizzes,
+        quizzes: mergeNewDefaults(p.quizzes, seedQuizzes, "id"),
         attempts: p.attempts ?? [],
         questionLog: p.questionLog ?? [],
         customTypes: p.customTypes ?? seedCustomTypes,
