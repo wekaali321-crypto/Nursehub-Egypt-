@@ -56,6 +56,7 @@ const RxPrescriptionsHome = lazy(() => import("./pages/RxPrescriptionsPage").the
 const ClinicalProtocolDetail = lazy(() => import("./pages/ClinicalProtocolsPage"));
 const ICUNursingTopicPage = lazy(() => import("./pages/ICUNursingPage"));
 const ICUNursingHome = lazy(() => import("./pages/ICUNursingPage").then((m) => ({ default: m.ICUNursingHome })));
+const ICUPrintAllPage = lazy(() => import("./pages/ICUNursingPage").then((m) => ({ default: m.ICUPrintAllPage })));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 const QuizAnalyticsPage = lazy(() => import("./pages/QuizAnalyticsPage"));
@@ -221,6 +222,7 @@ export default function App() {
                   <Route path="/drugs/prescriptions/:id" element={<Public><RxPrescriptionDetail /></Public>} />
                   <Route path="/drugs/protocols/:id" element={<Public><ClinicalProtocolDetail /></Public>} />
                   <Route path="/icu-nursing" element={<Public><ICUNursingHome /></Public>} />
+                  <Route path="/icu-nursing/print-all" element={<Public><ICUPrintAllPage /></Public>} />
                   <Route path="/icu-nursing/:id" element={<Public><ICUNursingTopicPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
