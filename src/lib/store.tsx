@@ -142,6 +142,7 @@ const defaultMenu = [
   { label: "الأدوات", path: "/tools" },
   { label: "مكتبة ECG", path: "/ecg" },
   { label: "العناية المركزة", path: "/icu-nursing" },
+  { label: "الغسيل الكلوي", path: "/dialysis" },
   { label: "المتجر", path: "/store" },
 ];
 

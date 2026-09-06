@@ -1,25 +1,28 @@
 import { useEffect, useState } from "react";
 import { fetchIcuTopics, type IcuTopic } from "./icuTopicsApi";
+import { fetchDialysisTopics, type DialysisTopic } from "./dialysisTopicsApi";
 import { fetchClinicalProtocols, type ClinicalProtocol } from "./clinicalProtocolsApi";
 import { fetchLasaPairs, type LasaPair } from "./lasaApi";
 
 interface ExtraSearchIndex {
   icuTopics: IcuTopic[];
+  dialysisTopics: DialysisTopic[];
   protocols: ClinicalProtocol[];
   lasaPairs: LasaPair[];
 }
 
-const empty: ExtraSearchIndex = { icuTopics: [], protocols: [], lasaPairs: [] };
+const empty: ExtraSearchIndex = { icuTopics: [], dialysisTopics: [], protocols: [], lasaPairs: [] };
 let cache: ExtraSearchIndex | null = null;
 let inFlight: Promise<ExtraSearchIndex> | null = null;
 
 async function loadIndex(): Promise<ExtraSearchIndex> {
-  const [icuTopics, protocols, lasaPairs] = await Promise.all([
+  const [icuTopics, dialysisTopics, protocols, lasaPairs] = await Promise.all([
     fetchIcuTopics().catch(() => []),
+    fetchDialysisTopics().catch(() => []),
     fetchClinicalProtocols().catch(() => []),
     fetchLasaPairs().catch(() => []),
   ]);
-  return { icuTopics, protocols, lasaPairs };
+  return { icuTopics, dialysisTopics, protocols, lasaPairs };
 }
 
 /** ICU nursing topics, clinical protocols & LASA drug pairs live in their own
