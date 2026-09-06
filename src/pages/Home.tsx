@@ -1,9 +1,10 @@
-import { useState, type ReactElement } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { type ReactElement } from "react";
+import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import type { HomeCategory } from "../lib/types";
 import { AdSlot, ArticleCard, SectionTitle } from "../components/common";
 import Newsletter from "../components/Newsletter";
+import SmartSearch from "../components/SmartSearch";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 
@@ -43,27 +44,6 @@ function CategoryCardLink({ card }: { card: HomeCategory }) {
   return external
     ? <a href={card.link} target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a>
     : <Link to={card.link} className={cls}>{inner}</Link>;
-}
-
-function HeroSearch() {
-  const [q, setQ] = useState("");
-  const nav = useNavigate();
-  const { t } = useI18n();
-  return (
-    <form
-      onSubmit={(e) => { e.preventDefault(); if (q.trim()) nav(`/search?q=${encodeURIComponent(q)}`); }}
-      className="mx-auto mt-6 flex max-w-xl items-center gap-2 rounded-full bg-white p-1.5 shadow-2xl shadow-sky-900/20"
-    >
-      <span className="pr-3 text-xl text-slate-400">🔍</span>
-      <input
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        placeholder={t("common.searchPlaceholder")}
-        className="flex-1 bg-transparent text-slate-800 outline-none placeholder:text-slate-400"
-      />
-      <button className="rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-5 py-2.5 font-bold text-white sm:px-7">{t("common.search")}</button>
-    </form>
-  );
 }
 
 export default function Home() {
@@ -112,7 +92,7 @@ export default function Home() {
             <span className="mb-3 inline-block rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold backdrop-blur sm:text-sm">{t("home.badge")}</span>
             <h1 className="mx-auto max-w-3xl text-3xl font-black leading-tight sm:text-4xl md:text-6xl">{settings.siteName}</h1>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-sky-50 sm:text-lg md:text-xl">{lang === "ar" ? settings.tagline : t("brand.tagline")} — {t("home.heroDesc")}</p>
-            <HeroSearch />
+            <SmartSearch variant="hero" />
             <ul className="mx-auto mt-6 flex max-w-md flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-bold text-sky-50 sm:text-sm">
               <li className="flex items-center gap-1.5">💙 {t("home.mascotPoint1")}</li>
               <li className="flex items-center gap-1.5">📘 {t("home.mascotPoint2")}</li>

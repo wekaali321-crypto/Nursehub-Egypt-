@@ -25,6 +25,7 @@ const PATH_LABELS: Record<string, TKey> = {
   "/tools": "nav.tools",
   "/ecg": "nav.ecg",
   "/icu-nursing": "nav.icuNursing",
+  "/dialysis": "nav.dialysis",
   "/store": "nav.store",
 };
 
@@ -195,7 +196,7 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <div className="hidden w-52 md:block"><SmartSearch /></div>
+          {loc.pathname !== "/" && <div className="hidden w-52 md:block"><SmartSearch /></div>}
 
           <button
             onClick={() => setLang(lang === "ar" ? "en" : "ar")}

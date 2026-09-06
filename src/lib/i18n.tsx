@@ -36,6 +36,7 @@ const dict = {
   "nav.tools": { ar: "الأدوات", en: "Tools" },
   "nav.ecg": { ar: "مكتبة ECG", en: "ECG Library" },
   "nav.icuNursing": { ar: "العناية المركزة", en: "ICU Nursing" },
+  "nav.dialysis": { ar: "الغسيل الكلوي", en: "Dialysis" },
   "nav.store": { ar: "المتجر", en: "Store" },
   "nav.admin": { ar: "لوحة التحكم", en: "Dashboard" },
   "nav.login": { ar: "تسجيل الدخول", en: "Login" },
@@ -178,6 +179,10 @@ const dict = {
   "search.articlesHeading": { ar: "📚 المقالات والكتب", en: "📚 Articles & Books" },
   "search.viewAllResultsFor": { ar: "عرض كل النتائج عن", en: "View all results for" },
   "search.drugBadge": { ar: "دواء", en: "Drug" },
+  "search.protocolBadge": { ar: "بروتوكول إكلينيكي", en: "Clinical Protocol" },
+  "search.icuHeading": { ar: "العناية المركزة", en: "ICU Nursing" },
+  "search.dialysisHeading": { ar: "الغسيل الكلوي", en: "Dialysis" },
+  "search.protocolsHeading": { ar: "البروتوكولات الإكلينيكية", en: "Clinical Protocols" },
 
   // Quiz
   "quiz.start": { ar: "ابدأ الاختبار", en: "Start Quiz" },
@@ -380,6 +385,22 @@ const dict = {
   "order.status.paid": { ar: "مدفوع ✅", en: "Paid ✅" },
   "order.status.failed": { ar: "فشل", en: "Failed" },
   "order.status.refunded": { ar: "مسترجع", en: "Refunded" },
+
+  // ICU Nursing — pay-to-print
+  "icuPrint.sectionTitle": { ar: "🖨️ اطبع محتوى العناية المركزة", en: "🖨️ Print ICU Nursing Content" },
+  "icuPrint.sectionDesc": { ar: "اختار الأقسام اللي عايز نسخة قابلة للطباعة منها (10 جنيه للقسم)، أو اطبع القسم كله دفعة واحدة بسعر مخفّض.", en: "Pick the topics you want a print-ready copy of (10 EGP each), or print the entire section at once for a discounted price." },
+  "icuPrint.selectMode": { ar: "اختيار أقسام للطباعة", en: "Select topics to print" },
+  "icuPrint.cancelSelect": { ar: "إلغاء الاختيار", en: "Cancel selection" },
+  "icuPrint.selectedCount": { ar: "قسم مُختار", en: "topics selected" },
+  "icuPrint.addSelectedToCart": { ar: "إضافة للسلة والدفع", en: "Add to cart & checkout" },
+  "icuPrint.printAllBanner": { ar: "أو اطبع كل الـ42 موضوعًا دفعة واحدة", en: "Or print all 42 topics at once" },
+  "icuPrint.printAllBtn": { ar: "🖨️ اطبع الكل — 70 جنيه", en: "🖨️ Print All — 70 EGP" },
+  "icuPrint.perTopicBtn": { ar: "🖨️ اطبع هذا القسم — 10 جنيه", en: "🖨️ Print this topic — 10 EGP" },
+  "icuPrint.printNow": { ar: "🖨️ اطبع الآن", en: "🖨️ Print Now" },
+  "icuPrint.unlockedNote": { ar: "تم تأكيد دفعك — زر الطباعة جاهز.", en: "Your payment is confirmed — the print button is ready." },
+  "icuPrint.noneSelected": { ar: "اختار قسم واحد على الأقل", en: "Select at least one topic" },
+  "order.printSection": { ar: "🖨️ اطبع القسم", en: "🖨️ Print Section" },
+  "order.printAllSections": { ar: "🖨️ اطبع كل الأقسام", en: "🖨️ Print All Sections" },
 
   // Invoice
   "invoice.taxInvoice": { ar: "فاتورة ضريبية", en: "Tax Invoice" },

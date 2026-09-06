@@ -115,11 +115,21 @@ export default function OrderStatusPage() {
         <div className="mt-5 space-y-2 text-right">
           <p className="text-sm font-bold text-emerald-600">{t("order.filesReady")}</p>
           {order.items.map((item) => {
+            const isPrintAll = item.productId === "icu-print-all";
+            const isPrintTopic = item.productId.startsWith("icu-print-") && !isPrintAll;
             const product = products.find((p) => p.id === item.productId);
             return (
               <div key={item.productId} className="flex items-center justify-between gap-3 rounded-xl border border-slate-200 p-3 dark:border-slate-700">
                 <span className="text-sm font-semibold dark:text-white">{item.title}</span>
-                {product?.fileUrl ? (
+                {isPrintAll ? (
+                  <a href="/icu-nursing/print-all?unlocked=1" target="_blank" rel="noreferrer" className="shrink-0 rounded-full bg-emerald-500 px-4 py-1.5 text-xs font-bold text-white">
+                    {t("order.printAllSections")}
+                  </a>
+                ) : isPrintTopic ? (
+                  <a href={`/icu-nursing/${item.productId.replace("icu-print-", "")}?unlocked=1`} target="_blank" rel="noreferrer" className="shrink-0 rounded-full bg-emerald-500 px-4 py-1.5 text-xs font-bold text-white">
+                    {t("order.printSection")}
+                  </a>
+                ) : product?.fileUrl ? (
                   <a
                     href={`${product.fileUrl}${product.fileUrl.includes("?") ? "&" : "?"}download=`}
                     onClick={() => trackDownload()}
