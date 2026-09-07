@@ -36,6 +36,7 @@ export const seedHomeCategories: HomeCategory[] = [
   { id: "hc11", title: "الاختبارات", titleEn: "Quizzes", icon: "📝", description: "اختبارات NCLEX تفاعلية لقياس مستواك", descriptionEn: "Interactive NCLEX-style quizzes to test your level", color: "from-fuchsia-500 to-pink-500", order: 10, visible: true, link: "/quizzes", demo: false },
   { id: "hc12", title: "العناية المركزة", titleEn: "ICU Nursing", icon: "🏥", description: "دليل شامل لتمريض العناية المركزة وبروتوكولاتها", descriptionEn: "A comprehensive guide to ICU nursing and its protocols", color: "from-red-600 to-rose-700", order: 11, visible: true, link: "/icu-nursing", demo: false },
   { id: "hc13", title: "الغسيل الكلوي", titleEn: "Dialysis", icon: "💧", description: "دليل شامل لتمريض الغسيل الكلوي وأجهزته وبروتوكولاته", descriptionEn: "A comprehensive guide to hemodialysis nursing, machines, and protocols", color: "from-sky-600 to-cyan-600", order: 12, visible: true, link: "/dialysis", demo: false },
+  { id: "hc14", title: "الحضانة (NICU)", titleEn: "NICU", icon: "👶", description: "دليل شامل لتمريض العناية المركزة لحديثي الولادة وأجهزتها وحساباتها", descriptionEn: "A comprehensive guide to neonatal intensive care nursing, equipment, and calculations", color: "from-amber-600 to-pink-500", order: 13, visible: true, link: "/nicu", demo: false },
 ];
 
 // All seed content here is DEMO data (demo:true) so it can be deleted with one click.

@@ -37,6 +37,7 @@ const dict = {
   "nav.ecg": { ar: "مكتبة ECG", en: "ECG Library" },
   "nav.icuNursing": { ar: "العناية المركزة", en: "ICU Nursing" },
   "nav.dialysis": { ar: "الغسيل الكلوي", en: "Dialysis" },
+  "nav.nicu": { ar: "الحضانة (NICU)", en: "NICU" },
   "nav.store": { ar: "المتجر", en: "Store" },
   "nav.admin": { ar: "لوحة التحكم", en: "Dashboard" },
   "nav.login": { ar: "تسجيل الدخول", en: "Login" },
@@ -182,6 +183,7 @@ const dict = {
   "search.protocolBadge": { ar: "بروتوكول إكلينيكي", en: "Clinical Protocol" },
   "search.icuHeading": { ar: "العناية المركزة", en: "ICU Nursing" },
   "search.dialysisHeading": { ar: "الغسيل الكلوي", en: "Dialysis" },
+  "search.nicuHeading": { ar: "الحضانة (NICU)", en: "NICU" },
   "search.protocolsHeading": { ar: "البروتوكولات الإكلينيكية", en: "Clinical Protocols" },
 
   // Quiz
