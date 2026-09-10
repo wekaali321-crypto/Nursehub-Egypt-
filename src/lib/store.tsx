@@ -144,6 +144,7 @@ const defaultMenu = [
   { label: "العناية المركزة", path: "/icu-nursing" },
   { label: "الغسيل الكلوي", path: "/dialysis" },
   { label: "الحضانة (NICU)", path: "/nicu" },
+  { label: "الفارماكولوجي", path: "/pharmacology" },
   { label: "المتجر", path: "/store" },
 ];
 
