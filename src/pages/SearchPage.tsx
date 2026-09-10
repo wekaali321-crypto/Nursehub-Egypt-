@@ -14,7 +14,7 @@ export default function SearchPage() {
   const [params, setParams] = useSearchParams();
   const q = params.get("q") ?? "";
   const { articles, drugs } = useStore();
-  const { icuTopics, dialysisTopics, nicuTopics, protocols } = useExtraSearchIndex();
+  const { icuTopics, dialysisTopics, nicuTopics, pharmacologyTopics, protocols } = useExtraSearchIndex();
   const { t, lang } = useI18n();
   const [query, setQuery] = useState(q);
   const [catFilter, setCatFilter] = useState<string>("");
@@ -41,11 +41,12 @@ export default function SearchPage() {
   const icuResults = q ? icuTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const dialysisResults = q ? dialysisTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const nicuResults = q ? nicuTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
+  const pharmacologyResults = q ? pharmacologyTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const protocolResults = q ? protocols.filter((p) => [p.name_ar, p.name_en, p.summary].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
 
   const showContent = tab === "all" || tab === "content";
   const showDrugs = tab === "all" || tab === "drugs";
-  const total = (showContent ? articleResults.length + icuResults.length + dialysisResults.length + nicuResults.length + protocolResults.length : 0) + (showDrugs ? drugResults.length : 0);
+  const total = (showContent ? articleResults.length + icuResults.length + dialysisResults.length + nicuResults.length + pharmacologyResults.length + protocolResults.length : 0) + (showDrugs ? drugResults.length : 0);
 
   // Popular tags among currently visible results, for one-click refinement.
   const popularTags = useMemo(() => {
@@ -166,6 +167,23 @@ export default function SearchPage() {
                   return (
                     <Link key={topic.id} to={`/nicu/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "👶"} {title}</div>
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+          {showContent && pharmacologyResults.length > 0 && (
+            <div>
+              <h2 className="mb-3 text-lg font-bold dark:text-white">{t("search.pharmacologyHeading")} ({pharmacologyResults.length})</h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {pharmacologyResults.map((topic) => {
+                  const title = bilingual(topic.title_ar, topic.title_en, lang).text;
+                  const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
+                  return (
+                    <Link key={topic.id} to={`/pharmacology/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                      <div className="font-bold dark:text-white">{topic.icon || "🧪"} {title}</div>
                       {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
                     </Link>
                   );

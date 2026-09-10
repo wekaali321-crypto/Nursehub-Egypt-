@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchIcuTopics, type IcuTopic } from "./icuTopicsApi";
 import { fetchDialysisTopics, type DialysisTopic } from "./dialysisTopicsApi";
 import { fetchNicuTopics, type NicuTopic } from "./nicuTopicsApi";
+import { fetchPharmacologyTopics, type PharmacologyTopic } from "./pharmacologyTopicsApi";
 import { fetchClinicalProtocols, type ClinicalProtocol } from "./clinicalProtocolsApi";
 import { fetchLasaPairs, type LasaPair } from "./lasaApi";
 
@@ -9,23 +10,25 @@ interface ExtraSearchIndex {
   icuTopics: IcuTopic[];
   dialysisTopics: DialysisTopic[];
   nicuTopics: NicuTopic[];
+  pharmacologyTopics: PharmacologyTopic[];
   protocols: ClinicalProtocol[];
   lasaPairs: LasaPair[];
 }
 
-const empty: ExtraSearchIndex = { icuTopics: [], dialysisTopics: [], nicuTopics: [], protocols: [], lasaPairs: [] };
+const empty: ExtraSearchIndex = { icuTopics: [], dialysisTopics: [], nicuTopics: [], pharmacologyTopics: [], protocols: [], lasaPairs: [] };
 let cache: ExtraSearchIndex | null = null;
 let inFlight: Promise<ExtraSearchIndex> | null = null;
 
 async function loadIndex(): Promise<ExtraSearchIndex> {
-  const [icuTopics, dialysisTopics, nicuTopics, protocols, lasaPairs] = await Promise.all([
+  const [icuTopics, dialysisTopics, nicuTopics, pharmacologyTopics, protocols, lasaPairs] = await Promise.all([
     fetchIcuTopics().catch(() => []),
     fetchDialysisTopics().catch(() => []),
     fetchNicuTopics().catch(() => []),
+    fetchPharmacologyTopics().catch(() => []),
     fetchClinicalProtocols().catch(() => []),
     fetchLasaPairs().catch(() => []),
   ]);
-  return { icuTopics, dialysisTopics, nicuTopics, protocols, lasaPairs };
+  return { icuTopics, dialysisTopics, nicuTopics, pharmacologyTopics, protocols, lasaPairs };
 }
 
 /** ICU nursing topics, clinical protocols & LASA drug pairs live in their own

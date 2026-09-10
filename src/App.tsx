@@ -61,6 +61,8 @@ const DialysisTopicPage = lazy(() => import("./pages/DialysisPage"));
 const DialysisHome = lazy(() => import("./pages/DialysisPage").then((m) => ({ default: m.DialysisHome })));
 const NicuTopicPage = lazy(() => import("./pages/NICUPage"));
 const NicuHome = lazy(() => import("./pages/NICUPage").then((m) => ({ default: m.NicuHome })));
+const PharmacologyTopicPage = lazy(() => import("./pages/PharmacologyPage"));
+const PharmacologyHome = lazy(() => import("./pages/PharmacologyPage").then((m) => ({ default: m.PharmacologyHome })));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 const QuizAnalyticsPage = lazy(() => import("./pages/QuizAnalyticsPage"));
@@ -91,6 +93,7 @@ import ClinicalProtocolsAdmin from "./admin/ClinicalProtocolsAdmin";
 import ICUNursingAdmin from "./admin/ICUNursingAdmin";
 import DialysisAdmin from "./admin/DialysisAdmin";
 import NICUAdmin from "./admin/NICUAdmin";
+import PharmacologyAdmin from "./admin/PharmacologyAdmin";
 import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
 import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
 import IVCompatibilityAdmin from "./admin/IVCompatibilityAdmin";
@@ -234,6 +237,8 @@ export default function App() {
                   <Route path="/dialysis/:id" element={<Public><DialysisTopicPage /></Public>} />
                   <Route path="/nicu" element={<Public><NicuHome /></Public>} />
                   <Route path="/nicu/:id" element={<Public><NicuTopicPage /></Public>} />
+                  <Route path="/pharmacology" element={<Public><PharmacologyHome /></Public>} />
+                  <Route path="/pharmacology/:id" element={<Public><PharmacologyTopicPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
                   <Route path="/quizzes/analytics" element={<Public><QuizAnalyticsPage /></Public>} />
@@ -290,6 +295,7 @@ export default function App() {
                   <Route path="/admin/icu-nursing" element={<Admin><ICUNursingAdmin /></Admin>} />
                   <Route path="/admin/dialysis" element={<Admin><DialysisAdmin /></Admin>} />
                   <Route path="/admin/nicu" element={<Admin><NICUAdmin /></Admin>} />
+                  <Route path="/admin/pharmacology" element={<Admin><PharmacologyAdmin /></Admin>} />
                   <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
                   <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />
                   <Route path="/admin/iv-compatibility" element={<Admin><IVCompatibilityAdmin /></Admin>} />
