@@ -33,6 +33,7 @@ const nav: NavItem[] = [
   { p: "/admin/dialysis", l: "قسم تمريض الغسيل الكلوي", i: "💧" },
   { p: "/admin/nicu", l: "قسم الحضانة (NICU)", i: "👶" },
   { p: "/admin/pharmacology", l: "قسم الفارماكولوجي (Pharmacology)", i: "🧪" },
+  { p: "/admin/terminology", l: "قسم المصطلحات الطبية (Terminology)", i: "🔤" },
   { p: "/admin/organ-dose", l: "تعديل الجرعات الكلوية/الكبدية", i: "🫘" },
   { p: "/admin/pregnancy-lactation", l: "أمان الحمل والرضاعة", i: "🤰" },
   { p: "/admin/iv-compatibility", l: "توافق الأدوية الوريدية (IV)", i: "🧫" },
