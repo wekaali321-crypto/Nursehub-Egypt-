@@ -145,6 +145,7 @@ const defaultMenu = [
   { label: "الغسيل الكلوي", path: "/dialysis" },
   { label: "الحضانة (NICU)", path: "/nicu" },
   { label: "الفارماكولوجي", path: "/pharmacology" },
+  { label: "المصطلحات الطبية", path: "/terminology" },
   { label: "المتجر", path: "/store" },
 ];
 

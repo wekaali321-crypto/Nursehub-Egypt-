@@ -31,7 +31,6 @@ const DrugAntidotesPage = lazy(() => import("./pages/DrugAntidotesPage"));
 const DrugClassificationsPage = lazy(() => import("./pages/DrugClassificationsPage"));
 const DrugSuffixesPage = lazy(() => import("./pages/DrugSuffixesPage"));
 const CardiacMedsPage = lazy(() => import("./pages/CardiacMedsPage"));
-const PharmMnemonicsPage = lazy(() => import("./pages/PharmMnemonicsPage"));
 const PharmacyFactsPage = lazy(() => import("./pages/PharmacyFactsPage"));
 const PharmacyFactsHome = lazy(() => import("./pages/PharmacyFactsPage").then((m) => ({ default: m.PharmacyFactsHome })));
 const OTCConditionPage = lazy(() => import("./pages/OTCGuidePage"));
@@ -63,6 +62,8 @@ const NicuTopicPage = lazy(() => import("./pages/NICUPage"));
 const NicuHome = lazy(() => import("./pages/NICUPage").then((m) => ({ default: m.NicuHome })));
 const PharmacologyTopicPage = lazy(() => import("./pages/PharmacologyPage"));
 const PharmacologyHome = lazy(() => import("./pages/PharmacologyPage").then((m) => ({ default: m.PharmacologyHome })));
+const TerminologyTopicPage = lazy(() => import("./pages/TerminologyPage"));
+const TerminologyHome = lazy(() => import("./pages/TerminologyPage").then((m) => ({ default: m.TerminologyHome })));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 const QuizAnalyticsPage = lazy(() => import("./pages/QuizAnalyticsPage"));
@@ -80,7 +81,7 @@ import ECGPatternsAdmin from "./admin/ECGPatternsAdmin";
 import { CommentsAdmin, ProductsAdmin, UsersAdmin } from "./admin/SimpleAdmins";
 import { HomeBuilder, MenuAdmin, SEOAdmin, BackupAdmin } from "./admin/Builders";
 import { PagesAdmin, CategoriesAdmin, TagsAdmin, SubscribersAdmin, RedirectsAdmin, ActivityAdmin } from "./admin/AdminExtras";
-import { DrugsAdmin, DrugInteractionsAdmin, DrugAntidotesAdmin, DrugClassificationsAdmin, DrugSuffixesAdmin, CardiacMedGroupsAdmin, PharmMnemonicsAdmin, PharmacyFactsAdmin } from "./admin/DrugsAdmin";
+import { DrugsAdmin, DrugInteractionsAdmin, DrugAntidotesAdmin, DrugClassificationsAdmin, DrugSuffixesAdmin, CardiacMedGroupsAdmin, PharmacyFactsAdmin } from "./admin/DrugsAdmin";
 import OTCAdmin from "./admin/OTCAdmin";
 import AppliedPharmAdmin from "./admin/AppliedPharmAdmin";
 import ICUMedicationsAdmin from "./admin/ICUMedicationsAdmin";
@@ -94,6 +95,7 @@ import ICUNursingAdmin from "./admin/ICUNursingAdmin";
 import DialysisAdmin from "./admin/DialysisAdmin";
 import NICUAdmin from "./admin/NICUAdmin";
 import PharmacologyAdmin from "./admin/PharmacologyAdmin";
+import TerminologyAdmin from "./admin/TerminologyAdmin";
 import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
 import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
 import IVCompatibilityAdmin from "./admin/IVCompatibilityAdmin";
@@ -207,7 +209,7 @@ export default function App() {
                   <Route path="/drugs/classifications" element={<Public><DrugClassificationsPage /></Public>} />
                   <Route path="/drugs/suffixes" element={<Public><DrugSuffixesPage /></Public>} />
                   <Route path="/drugs/cardiac" element={<Public><CardiacMedsPage /></Public>} />
-                  <Route path="/drugs/mnemonics" element={<Public><PharmMnemonicsPage /></Public>} />
+                  <Route path="/drugs/mnemonics" element={<Navigate to="/pharmacology/pharm-mnemonics-memory-aids" replace />} />
                   <Route path="/drugs/facts" element={<Navigate to="/drugs/applied-pharm" replace />} />
                   <Route path="/drugs/facts/:chapter" element={<Navigate to="/drugs/applied-pharm" replace />} />
                   <Route path="/drugs/otc-guide" element={<Public><OTCGuideHome /></Public>} />
@@ -239,6 +241,8 @@ export default function App() {
                   <Route path="/nicu/:id" element={<Public><NicuTopicPage /></Public>} />
                   <Route path="/pharmacology" element={<Public><PharmacologyHome /></Public>} />
                   <Route path="/pharmacology/:id" element={<Public><PharmacologyTopicPage /></Public>} />
+                  <Route path="/terminology" element={<Public><TerminologyHome /></Public>} />
+                  <Route path="/terminology/:id" element={<Public><TerminologyTopicPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
                   <Route path="/quizzes/analytics" element={<Public><QuizAnalyticsPage /></Public>} />
@@ -281,7 +285,7 @@ export default function App() {
                   <Route path="/admin/drug-classifications" element={<Admin><DrugClassificationsAdmin /></Admin>} />
                   <Route path="/admin/drug-suffixes" element={<Admin><DrugSuffixesAdmin /></Admin>} />
                   <Route path="/admin/cardiac-meds" element={<Admin><CardiacMedGroupsAdmin /></Admin>} />
-                  <Route path="/admin/pharm-mnemonics" element={<Admin><PharmMnemonicsAdmin /></Admin>} />
+                  <Route path="/admin/pharm-mnemonics" element={<Navigate to="/admin/pharmacology" replace />} />
                   <Route path="/admin/pharmacy-facts" element={<Navigate to="/admin/applied-pharm" replace />} />
                   <Route path="/admin/otc" element={<Admin><OTCAdmin /></Admin>} />
                   <Route path="/admin/applied-pharm" element={<Admin><AppliedPharmAdmin /></Admin>} />
@@ -296,6 +300,7 @@ export default function App() {
                   <Route path="/admin/dialysis" element={<Admin><DialysisAdmin /></Admin>} />
                   <Route path="/admin/nicu" element={<Admin><NICUAdmin /></Admin>} />
                   <Route path="/admin/pharmacology" element={<Admin><PharmacologyAdmin /></Admin>} />
+                  <Route path="/admin/terminology" element={<Admin><TerminologyAdmin /></Admin>} />
                   <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
                   <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />
                   <Route path="/admin/iv-compatibility" element={<Admin><IVCompatibilityAdmin /></Admin>} />
