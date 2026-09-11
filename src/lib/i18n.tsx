@@ -40,6 +40,7 @@ const dict = {
   "nav.nicu": { ar: "الحضانة (NICU)", en: "NICU" },
   "nav.pharmacology": { ar: "الفارماكولوجي", en: "Pharmacology" },
   "nav.terminology": { ar: "المصطلحات الطبية", en: "Medical Terminology" },
+  "nav.firstAid": { ar: "الإسعافات الأولية", en: "First Aid" },
   "nav.store": { ar: "المتجر", en: "Store" },
   "nav.admin": { ar: "لوحة التحكم", en: "Dashboard" },
   "nav.login": { ar: "تسجيل الدخول", en: "Login" },
@@ -188,6 +189,7 @@ const dict = {
   "search.nicuHeading": { ar: "الحضانة (NICU)", en: "NICU" },
   "search.pharmacologyHeading": { ar: "الفارماكولوجي", en: "Pharmacology" },
   "search.terminologyHeading": { ar: "المصطلحات الطبية", en: "Medical Terminology" },
+  "search.firstAidHeading": { ar: "الإسعافات الأولية", en: "First Aid" },
   "search.protocolsHeading": { ar: "البروتوكولات الإكلينيكية", en: "Clinical Protocols" },
 
   // Quiz
