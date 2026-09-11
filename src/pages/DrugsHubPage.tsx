@@ -48,7 +48,6 @@ export default function DrugsHubPage() {
     drugAntidotes,
     drugClassifications,
     drugSuffixes,
-    pharmMnemonics,
     drugInteractions,
     otcConditions,
     settings,
@@ -223,11 +222,10 @@ export default function DrugsHubPage() {
       gradient: "from-emerald-600 to-green-500",
     },
     {
-      to: "/drugs/mnemonics",
+      to: "/pharmacology/pharm-mnemonics-memory-aids",
       icon: "🧠",
       title: { ar: "مذكرات فارماكولوجي", en: "Pharmacology Mnemonics" },
-      desc: { ar: "طرق سريعة للحفظ", en: "Quick memorization techniques" },
-      count: { ar: `${pharmMnemonics.length}`, en: `${pharmMnemonics.length}` },
+      desc: { ar: "انتقلت إلى قسم الفارماكولوجي — طرق سريعة للحفظ", en: "Moved to the Pharmacology section — quick memorization techniques" },
       gradient: "from-amber-600 to-yellow-500",
     },
   ];

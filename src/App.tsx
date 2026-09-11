@@ -31,7 +31,6 @@ const DrugAntidotesPage = lazy(() => import("./pages/DrugAntidotesPage"));
 const DrugClassificationsPage = lazy(() => import("./pages/DrugClassificationsPage"));
 const DrugSuffixesPage = lazy(() => import("./pages/DrugSuffixesPage"));
 const CardiacMedsPage = lazy(() => import("./pages/CardiacMedsPage"));
-const PharmMnemonicsPage = lazy(() => import("./pages/PharmMnemonicsPage"));
 const PharmacyFactsPage = lazy(() => import("./pages/PharmacyFactsPage"));
 const PharmacyFactsHome = lazy(() => import("./pages/PharmacyFactsPage").then((m) => ({ default: m.PharmacyFactsHome })));
 const OTCConditionPage = lazy(() => import("./pages/OTCGuidePage"));
@@ -80,7 +79,7 @@ import ECGPatternsAdmin from "./admin/ECGPatternsAdmin";
 import { CommentsAdmin, ProductsAdmin, UsersAdmin } from "./admin/SimpleAdmins";
 import { HomeBuilder, MenuAdmin, SEOAdmin, BackupAdmin } from "./admin/Builders";
 import { PagesAdmin, CategoriesAdmin, TagsAdmin, SubscribersAdmin, RedirectsAdmin, ActivityAdmin } from "./admin/AdminExtras";
-import { DrugsAdmin, DrugInteractionsAdmin, DrugAntidotesAdmin, DrugClassificationsAdmin, DrugSuffixesAdmin, CardiacMedGroupsAdmin, PharmMnemonicsAdmin, PharmacyFactsAdmin } from "./admin/DrugsAdmin";
+import { DrugsAdmin, DrugInteractionsAdmin, DrugAntidotesAdmin, DrugClassificationsAdmin, DrugSuffixesAdmin, CardiacMedGroupsAdmin, PharmacyFactsAdmin } from "./admin/DrugsAdmin";
 import OTCAdmin from "./admin/OTCAdmin";
 import AppliedPharmAdmin from "./admin/AppliedPharmAdmin";
 import ICUMedicationsAdmin from "./admin/ICUMedicationsAdmin";
@@ -207,7 +206,7 @@ export default function App() {
                   <Route path="/drugs/classifications" element={<Public><DrugClassificationsPage /></Public>} />
                   <Route path="/drugs/suffixes" element={<Public><DrugSuffixesPage /></Public>} />
                   <Route path="/drugs/cardiac" element={<Public><CardiacMedsPage /></Public>} />
-                  <Route path="/drugs/mnemonics" element={<Public><PharmMnemonicsPage /></Public>} />
+                  <Route path="/drugs/mnemonics" element={<Navigate to="/pharmacology/pharm-mnemonics-memory-aids" replace />} />
                   <Route path="/drugs/facts" element={<Navigate to="/drugs/applied-pharm" replace />} />
                   <Route path="/drugs/facts/:chapter" element={<Navigate to="/drugs/applied-pharm" replace />} />
                   <Route path="/drugs/otc-guide" element={<Public><OTCGuideHome /></Public>} />
@@ -281,7 +280,7 @@ export default function App() {
                   <Route path="/admin/drug-classifications" element={<Admin><DrugClassificationsAdmin /></Admin>} />
                   <Route path="/admin/drug-suffixes" element={<Admin><DrugSuffixesAdmin /></Admin>} />
                   <Route path="/admin/cardiac-meds" element={<Admin><CardiacMedGroupsAdmin /></Admin>} />
-                  <Route path="/admin/pharm-mnemonics" element={<Admin><PharmMnemonicsAdmin /></Admin>} />
+                  <Route path="/admin/pharm-mnemonics" element={<Navigate to="/admin/pharmacology" replace />} />
                   <Route path="/admin/pharmacy-facts" element={<Navigate to="/admin/applied-pharm" replace />} />
                   <Route path="/admin/otc" element={<Admin><OTCAdmin /></Admin>} />
                   <Route path="/admin/applied-pharm" element={<Admin><AppliedPharmAdmin /></Admin>} />

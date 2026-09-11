@@ -20,7 +20,6 @@ const nav: NavItem[] = [
   { p: "/admin/drug-classifications", l: "الأصناف الدوائية", i: "🧬" },
   { p: "/admin/drug-suffixes", l: "لاحقات الأدوية", i: "🔤" },
   { p: "/admin/cardiac-meds", l: "أدوية القلب", i: "❤️" },
-  { p: "/admin/pharm-mnemonics", l: "مذكرات فارماكولوجي", i: "🧠" },
   { p: "/admin/otc", l: "حالات شائعة وعلاجها", i: "🩺" },
   { p: "/admin/applied-pharm", l: "بنك الصيدلية التعليمي (500 معلومة + ملخصات + خطط)", i: "🧠" },
   { p: "/admin/icu-medications", l: "أدوية العناية المركزة (62 دواء)", i: "🏥" },
