@@ -245,6 +245,8 @@ const dict = {
   "quiz.qotdTitle": { ar: "سؤال اليوم", en: "Question of the Day" },
   "quiz.qotdCorrect": { ar: "إجابة صحيحة! 🎉", en: "Correct! 🎉" },
   "quiz.qotdIncorrect": { ar: "إجابة غير صحيحة", en: "Not quite" },
+  "terminology.quizWidgetTitle": { ar: "اختبر معلوماتك في المصطلحات", en: "Test Your Terminology Knowledge" },
+  "terminology.quizAnother": { ar: "سؤال آخر", en: "Another question" },
 
   // Quiz — modes
   "quiz.modesTitle": { ar: "أوضاع الاختبار", en: "Quiz Modes" },

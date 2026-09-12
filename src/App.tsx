@@ -99,6 +99,7 @@ import NICUAdmin from "./admin/NICUAdmin";
 import PharmacologyAdmin from "./admin/PharmacologyAdmin";
 import TerminologyAdmin from "./admin/TerminologyAdmin";
 import FirstAidAdmin from "./admin/FirstAidAdmin";
+import TerminologyQuizAdmin from "./admin/TerminologyQuizAdmin";
 import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
 import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
 import IVCompatibilityAdmin from "./admin/IVCompatibilityAdmin";
@@ -307,6 +308,7 @@ export default function App() {
                   <Route path="/admin/pharmacology" element={<Admin><PharmacologyAdmin /></Admin>} />
                   <Route path="/admin/terminology" element={<Admin><TerminologyAdmin /></Admin>} />
                   <Route path="/admin/first-aid" element={<Admin><FirstAidAdmin /></Admin>} />
+                  <Route path="/admin/terminology-quiz" element={<Admin><TerminologyQuizAdmin /></Admin>} />
                   <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
                   <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />
                   <Route path="/admin/iv-compatibility" element={<Admin><IVCompatibilityAdmin /></Admin>} />

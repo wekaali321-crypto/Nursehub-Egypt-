@@ -4,6 +4,7 @@ import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchTerminologyTopics, type TerminologyTopic } from "../lib/terminologyTopicsApi";
+import TerminologyQuizWidget from "../components/TerminologyQuizWidget";
 
 const card = "rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900";
 
@@ -35,6 +36,8 @@ export function TerminologyHome() {
             : "مرجع شامل ومنظّم لعلم المصطلحات الطبية: قواعد بناء الكلمة الطبية، البادئات، اللواحق، جذور أعضاء وأجهزة الجسم، مسارد مصطلحات كل جهاز، مصطلحات الأشعة والفحوصات، ومفردات المستشفى العملية."}
         </p>
       </div>
+
+      <TerminologyQuizWidget />
 
       {categories.length > 1 && (
         <div className="mb-5 flex flex-wrap gap-2">

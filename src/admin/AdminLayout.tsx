@@ -35,6 +35,7 @@ const nav: NavItem[] = [
   { p: "/admin/pharmacology", l: "قسم الفارماكولوجي (Pharmacology)", i: "🧪" },
   { p: "/admin/terminology", l: "قسم المصطلحات الطبية (Terminology)", i: "🔤" },
   { p: "/admin/first-aid", l: "قسم الإسعافات الأولية (First Aid)", i: "🩹" },
+  { p: "/admin/terminology-quiz", l: "أسئلة اختبار المصطلحات", i: "🧩" },
   { p: "/admin/organ-dose", l: "تعديل الجرعات الكلوية/الكبدية", i: "🫘" },
   { p: "/admin/pregnancy-lactation", l: "أمان الحمل والرضاعة", i: "🤰" },
   { p: "/admin/iv-compatibility", l: "توافق الأدوية الوريدية (IV)", i: "🧫" },
