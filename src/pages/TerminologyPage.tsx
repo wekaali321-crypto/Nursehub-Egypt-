@@ -4,6 +4,7 @@ import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchTerminologyTopics, type TerminologyTopic } from "../lib/terminologyTopicsApi";
+import TerminologyQuizWidget from "../components/TerminologyQuizWidget";
 
 const card = "rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900";
 
@@ -35,6 +36,8 @@ export function TerminologyHome() {
             : "مرجع شامل ومنظّم لعلم المصطلحات الطبية: قواعد بناء الكلمة الطبية، البادئات، اللواحق، جذور أعضاء وأجهزة الجسم، مسارد مصطلحات كل جهاز، مصطلحات الأشعة والفحوصات، ومفردات المستشفى العملية."}
         </p>
       </div>
+
+      <TerminologyQuizWidget />
 
       {categories.length > 1 && (
         <div className="mb-5 flex flex-wrap gap-2">
@@ -137,13 +140,8 @@ export default function TerminologyTopicPage() {
           return (
             <section key={s.id || i} className={`${card} p-5`}>
               <h2 className="mb-3 text-lg font-black text-violet-600">{heading}</h2>
-              {s.image_url ? (
+              {s.image_url && (
                 <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
-              ) : (
-                <div className="mb-4 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-200 py-8 text-slate-300 dark:border-slate-700 dark:text-slate-600">
-                  <span className="text-3xl">🖼️</span>
-                  <span className="mt-1 text-xs">{isEn ? "Illustration coming soon" : "صورة توضيحية — قيد الإضافة"}</span>
-                </div>
               )}
               <div className="whitespace-pre-line text-sm leading-7 text-slate-700 dark:text-slate-300">{body}</div>
             </section>

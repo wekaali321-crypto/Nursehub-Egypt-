@@ -137,13 +137,8 @@ export default function NicuTopicPage() {
           return (
             <section key={s.id || i} className={`${card} p-5`}>
               <h2 className="mb-3 text-lg font-black text-amber-600">{heading}</h2>
-              {s.image_url ? (
+              {s.image_url && (
                 <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
-              ) : (
-                <div className="mb-4 flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-slate-200 py-8 text-slate-300 dark:border-slate-700 dark:text-slate-600">
-                  <span className="text-3xl">🖼️</span>
-                  <span className="mt-1 text-xs">{isEn ? "Illustration coming soon" : "صورة توضيحية — قيد الإضافة"}</span>
-                </div>
               )}
               <div className="whitespace-pre-line text-sm leading-7 text-slate-700 dark:text-slate-300">{body}</div>
             </section>

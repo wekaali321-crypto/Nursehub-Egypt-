@@ -3,20 +3,20 @@ import { Link, useParams } from "react-router-dom";
 import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchPharmacologyTopics, type PharmacologyTopic } from "../lib/pharmacologyTopicsApi";
+import { fetchFirstAidTopics, type FirstAidTopic } from "../lib/firstAidTopicsApi";
 
 const card = "rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900";
 
-export function PharmacologyHome() {
+export function FirstAidHome() {
   const { t, lang } = useI18n();
   const isEn = lang === "en";
-  useSEO({ title: `${t("nav.pharmacology")} | NurseHub Egypt` });
+  useSEO({ title: `${t("nav.firstAid")} | NurseHub Egypt` });
 
-  const [topics, setTopics] = useState<PharmacologyTopic[] | null>(null);
+  const [topics, setTopics] = useState<FirstAidTopic[] | null>(null);
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetchPharmacologyTopics().then(setTopics).catch(() => setTopics([]));
+    fetchFirstAidTopics().then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
@@ -24,15 +24,15 @@ export function PharmacologyHome() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
-      <Breadcrumbs items={[{ label: t("nav.pharmacology") }]} />
+      <Breadcrumbs items={[{ label: t("nav.firstAid") }]} />
 
-      <div className="mb-6 overflow-hidden rounded-3xl bg-gradient-to-l from-emerald-600 via-teal-500 to-cyan-500 p-8 text-white shadow-lg">
-        <div className="text-5xl">🧪</div>
-        <h1 className="mt-3 text-3xl font-black">{t("nav.pharmacology")}</h1>
+      <div className="mb-6 overflow-hidden rounded-3xl bg-gradient-to-l from-rose-600 via-red-500 to-orange-500 p-8 text-white shadow-lg">
+        <div className="text-5xl">🩹</div>
+        <h1 className="mt-3 text-3xl font-black">{t("nav.firstAid")}</h1>
         <p className="mt-2 max-w-2xl text-white/90">
           {isEn
-            ? "A complete, structured reference for nursing pharmacology: general principles, dosage calculations, antibiotics, autonomic drugs, cardiovascular and respiratory medications, GIT drugs, anticoagulants, and clinical case scenarios."
-            : "مرجع شامل ومنظّم لعلم الأدوية التمريضي: المبادئ العامة، حسابات الجرعات، المضادات الحيوية، أدوية الجهاز العصبي الذاتي، أدوية القلب والجهاز التنفسي، أدوية الجهاز الهضمي، مضادات التخثر، وحالات سريرية تطبيقية."}
+            ? "A complete, structured first-aid reference: primary assessment and CPR, bleeding and wound care, fractures and burns, poisoning and bites, heat/cold and cardiac emergencies, and how to build and use a first-aid kit."
+            : "مرجع شامل ومنظّم للإسعافات الأولية: التقييم الأولي والإنعاش القلبي الرئوي، النزيف والعناية بالجروح، الكسور والحروق، التسمم واللدغات، الطوارئ الحرارية والقلبية، وكيفية إعداد حقيبة الإسعافات الأولية واستخدامها."}
         </p>
       </div>
 
@@ -40,7 +40,7 @@ export function PharmacologyHome() {
         <div className="mb-5 flex flex-wrap gap-2">
           <button
             onClick={() => setCategory("all")}
-            className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === "all" ? "bg-emerald-600 text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
+            className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === "all" ? "bg-rose-600 text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
           >
             {isEn ? "All" : "الكل"}
           </button>
@@ -48,7 +48,7 @@ export function PharmacologyHome() {
             <button
               key={c}
               onClick={() => setCategory(c)}
-              className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === c ? "bg-emerald-600 text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
+              className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === c ? "bg-rose-600 text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
             >
               {c}
             </button>
@@ -68,18 +68,18 @@ export function PharmacologyHome() {
           {list.map((tp) => (
             <Link
               key={tp.id}
-              to={`/pharmacology/${tp.id}`}
+              to={`/first-aid/${tp.id}`}
               className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
             >
-              <div className="text-3xl">{tp.icon || "🧪"}</div>
-              <h3 className="mt-2 font-black text-slate-800 group-hover:text-emerald-600 dark:text-white">
+              <div className="text-3xl">{tp.icon || "🩹"}</div>
+              <h3 className="mt-2 font-black text-slate-800 group-hover:text-rose-600 dark:text-white">
                 {isEn && tp.title_en ? tp.title_en : tp.title_ar}
               </h3>
-              {tp.category && <span className="mt-1 inline-block rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-bold text-emerald-600 dark:bg-emerald-500/10">{tp.category}</span>}
+              {tp.category && <span className="mt-1 inline-block rounded-full bg-rose-50 px-2 py-0.5 text-[11px] font-bold text-rose-600 dark:bg-rose-500/10">{tp.category}</span>}
               {(isEn ? tp.summary_en : tp.summary_ar) && (
                 <p className="mt-2 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{isEn ? tp.summary_en : tp.summary_ar}</p>
               )}
-              <div className="mt-3 text-xs font-bold text-emerald-600">{tp.sections.length} {isEn ? "sections" : "أقسام"} ←</div>
+              <div className="mt-3 text-xs font-bold text-rose-600">{tp.sections.length} {isEn ? "sections" : "أقسام"} ←</div>
             </Link>
           ))}
         </div>
@@ -88,21 +88,21 @@ export function PharmacologyHome() {
   );
 }
 
-export default function PharmacologyTopicPage() {
+export default function FirstAidTopicPage() {
   const { id } = useParams<{ id: string }>();
   const { t, lang } = useI18n();
   const isEn = lang === "en";
-  const [topic, setTopic] = useState<PharmacologyTopic | null | undefined>(undefined);
+  const [topic, setTopic] = useState<FirstAidTopic | null | undefined>(undefined);
 
   useEffect(() => {
     let cancelled = false;
-    fetchPharmacologyTopics().then((all) => {
+    fetchFirstAidTopics().then((all) => {
       if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);
 
-  useSEO({ title: `${topic ? (isEn && topic.title_en ? topic.title_en : topic.title_ar) : ""} | ${t("nav.pharmacology")} | NurseHub Egypt` });
+  useSEO({ title: `${topic ? (isEn && topic.title_en ? topic.title_en : topic.title_ar) : ""} | ${t("nav.firstAid")} | NurseHub Egypt` });
 
   if (topic === undefined) {
     return <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-400">{t("common.loading")}</div>;
@@ -112,7 +112,7 @@ export default function PharmacologyTopicPage() {
       <div className="mx-auto max-w-lg px-4 py-16 text-center">
         <div className="text-6xl">❓</div>
         <h1 className="mt-3 text-2xl font-black dark:text-white">{isEn ? "Topic not found" : "الموضوع غير موجود"}</h1>
-        <Link to="/pharmacology" className="mt-4 inline-block rounded-full bg-emerald-600 px-6 py-2 font-bold text-white">{t("nav.pharmacology")}</Link>
+        <Link to="/first-aid" className="mt-4 inline-block rounded-full bg-rose-600 px-6 py-2 font-bold text-white">{t("nav.firstAid")}</Link>
       </div>
     );
   }
@@ -122,10 +122,10 @@ export default function PharmacologyTopicPage() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8">
-      <Breadcrumbs items={[{ label: t("nav.pharmacology"), path: "/pharmacology" }, { label: title }]} />
+      <Breadcrumbs items={[{ label: t("nav.firstAid"), path: "/first-aid" }, { label: title }]} />
 
       <div className="mb-6 text-center">
-        <div className="text-5xl">{topic.icon || "🧪"}</div>
+        <div className="text-5xl">{topic.icon || "🩹"}</div>
         <h1 className="mt-3 text-3xl font-black dark:text-white">{title}</h1>
         {summary && <p className="mt-2 text-slate-500 dark:text-slate-400">{summary}</p>}
       </div>
@@ -136,7 +136,7 @@ export default function PharmacologyTopicPage() {
           const body = isEn && s.body_en ? s.body_en : s.body_ar;
           return (
             <section key={s.id || i} className={`${card} p-5`}>
-              <h2 className="mb-3 text-lg font-black text-emerald-600">{heading}</h2>
+              <h2 className="mb-3 text-lg font-black text-rose-600">{heading}</h2>
               {s.image_url && (
                 <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
               )}
@@ -156,8 +156,8 @@ export default function PharmacologyTopicPage() {
       )}
 
       <div className="mt-6 flex justify-center">
-        <Link to="/pharmacology" className="rounded-full border border-slate-200 px-6 py-2 font-bold dark:border-slate-700 dark:text-white">
-          {isEn ? "← Back to Pharmacology" : "← رجوع لقسم الفارماكولوجي"}
+        <Link to="/first-aid" className="rounded-full border border-slate-200 px-6 py-2 font-bold dark:border-slate-700 dark:text-white">
+          {isEn ? "← Back to First Aid" : "← رجوع للإسعافات الأولية"}
         </Link>
       </div>
     </div>
