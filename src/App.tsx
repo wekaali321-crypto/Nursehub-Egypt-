@@ -66,6 +66,8 @@ const TerminologyTopicPage = lazy(() => import("./pages/TerminologyPage"));
 const TerminologyHome = lazy(() => import("./pages/TerminologyPage").then((m) => ({ default: m.TerminologyHome })));
 const FirstAidTopicPage = lazy(() => import("./pages/FirstAidPage"));
 const FirstAidHome = lazy(() => import("./pages/FirstAidPage").then((m) => ({ default: m.FirstAidHome })));
+const ERReceptionTopicPage = lazy(() => import("./pages/ERReceptionPage"));
+const ERReceptionHome = lazy(() => import("./pages/ERReceptionPage").then((m) => ({ default: m.ERReceptionHome })));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 const QuizAnalyticsPage = lazy(() => import("./pages/QuizAnalyticsPage"));
@@ -99,6 +101,7 @@ import NICUAdmin from "./admin/NICUAdmin";
 import PharmacologyAdmin from "./admin/PharmacologyAdmin";
 import TerminologyAdmin from "./admin/TerminologyAdmin";
 import FirstAidAdmin from "./admin/FirstAidAdmin";
+import ERReceptionAdmin from "./admin/ERReceptionAdmin";
 import TerminologyQuizAdmin from "./admin/TerminologyQuizAdmin";
 import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
 import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
@@ -249,6 +252,8 @@ export default function App() {
                   <Route path="/terminology/:id" element={<Public><TerminologyTopicPage /></Public>} />
                   <Route path="/first-aid" element={<Public><FirstAidHome /></Public>} />
                   <Route path="/first-aid/:id" element={<Public><FirstAidTopicPage /></Public>} />
+                  <Route path="/er-reception" element={<Public><ERReceptionHome /></Public>} />
+                  <Route path="/er-reception/:id" element={<Public><ERReceptionTopicPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
                   <Route path="/quizzes/analytics" element={<Public><QuizAnalyticsPage /></Public>} />
@@ -308,6 +313,7 @@ export default function App() {
                   <Route path="/admin/pharmacology" element={<Admin><PharmacologyAdmin /></Admin>} />
                   <Route path="/admin/terminology" element={<Admin><TerminologyAdmin /></Admin>} />
                   <Route path="/admin/first-aid" element={<Admin><FirstAidAdmin /></Admin>} />
+                  <Route path="/admin/er-reception" element={<Admin><ERReceptionAdmin /></Admin>} />
                   <Route path="/admin/terminology-quiz" element={<Admin><TerminologyQuizAdmin /></Admin>} />
                   <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
                   <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />

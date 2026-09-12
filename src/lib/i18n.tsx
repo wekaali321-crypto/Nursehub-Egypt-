@@ -41,6 +41,7 @@ const dict = {
   "nav.pharmacology": { ar: "الفارماكولوجي", en: "Pharmacology" },
   "nav.terminology": { ar: "المصطلحات الطبية", en: "Medical Terminology" },
   "nav.firstAid": { ar: "الإسعافات الأولية", en: "First Aid" },
+  "nav.erReception": { ar: "الاستقبال والطوارئ", en: "Reception & Emergency" },
   "nav.store": { ar: "المتجر", en: "Store" },
   "nav.admin": { ar: "لوحة التحكم", en: "Dashboard" },
   "nav.login": { ar: "تسجيل الدخول", en: "Login" },
@@ -190,6 +191,7 @@ const dict = {
   "search.pharmacologyHeading": { ar: "الفارماكولوجي", en: "Pharmacology" },
   "search.terminologyHeading": { ar: "المصطلحات الطبية", en: "Medical Terminology" },
   "search.firstAidHeading": { ar: "الإسعافات الأولية", en: "First Aid" },
+  "search.erReceptionHeading": { ar: "الاستقبال والطوارئ", en: "Reception & Emergency" },
   "search.protocolsHeading": { ar: "البروتوكولات الإكلينيكية", en: "Clinical Protocols" },
 
   // Quiz

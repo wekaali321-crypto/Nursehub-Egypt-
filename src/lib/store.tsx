@@ -147,6 +147,7 @@ const defaultMenu = [
   { label: "الفارماكولوجي", path: "/pharmacology" },
   { label: "المصطلحات الطبية", path: "/terminology" },
   { label: "الإسعافات الأولية", path: "/first-aid" },
+  { label: "الاستقبال والطوارئ", path: "/er-reception" },
   { label: "المتجر", path: "/store" },
 ];
 
