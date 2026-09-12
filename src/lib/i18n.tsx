@@ -42,6 +42,7 @@ const dict = {
   "nav.terminology": { ar: "المصطلحات الطبية", en: "Medical Terminology" },
   "nav.firstAid": { ar: "الإسعافات الأولية", en: "First Aid" },
   "nav.erReception": { ar: "الاستقبال والطوارئ", en: "Reception & Emergency" },
+  "nav.pediatrics": { ar: "قسم الأطفال", en: "Pediatrics" },
   "nav.store": { ar: "المتجر", en: "Store" },
   "nav.admin": { ar: "لوحة التحكم", en: "Dashboard" },
   "nav.login": { ar: "تسجيل الدخول", en: "Login" },
@@ -192,6 +193,7 @@ const dict = {
   "search.terminologyHeading": { ar: "المصطلحات الطبية", en: "Medical Terminology" },
   "search.firstAidHeading": { ar: "الإسعافات الأولية", en: "First Aid" },
   "search.erReceptionHeading": { ar: "الاستقبال والطوارئ", en: "Reception & Emergency" },
+  "search.pediatricsHeading": { ar: "قسم الأطفال", en: "Pediatrics" },
   "search.protocolsHeading": { ar: "البروتوكولات الإكلينيكية", en: "Clinical Protocols" },
 
   // Quiz
@@ -249,6 +251,8 @@ const dict = {
   "quiz.qotdIncorrect": { ar: "إجابة غير صحيحة", en: "Not quite" },
   "terminology.quizWidgetTitle": { ar: "اختبر معلوماتك في المصطلحات", en: "Test Your Terminology Knowledge" },
   "terminology.quizAnother": { ar: "سؤال آخر", en: "Another question" },
+  "pediatrics.quizWidgetTitle": { ar: "اختبر معلوماتك في تمريض الأطفال", en: "Test Your Pediatric Nursing Knowledge" },
+  "pediatrics.quizAnother": { ar: "سؤال آخر", en: "Another question" },
 
   // Quiz — modes
   "quiz.modesTitle": { ar: "أوضاع الاختبار", en: "Quiz Modes" },
