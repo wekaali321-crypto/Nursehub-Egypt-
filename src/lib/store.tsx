@@ -150,6 +150,7 @@ const defaultMenu = [
   { label: "الاستقبال والطوارئ", path: "/er-reception" },
   { label: "قسم الأطفال", path: "/pediatrics" },
   { label: "قسم التشريح", path: "/anatomy" },
+  { label: "أسس التمريض", path: "/fundamentals" },
   { label: "المتجر", path: "/store" },
 ];
 
