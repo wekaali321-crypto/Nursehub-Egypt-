@@ -1,10 +1,10 @@
 // NurseHub Egypt PWA Service Worker
-const CACHE_NAME = "nursehub-v2";
+const CACHE_NAME = "nursehub-v3";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
   "/manifest.webmanifest",
-  "/favicon.svg",
+  "/favicon.png",
 ];
 
 // Install event — cache static assets
@@ -49,7 +49,7 @@ self.addEventListener("fetch", (event) => {
   // Static assets: cache-first
   if (
     request.url.includes("manifest.webmanifest") ||
-    request.url.includes("favicon.svg") ||
+    request.url.includes("favicon.png") ||
     request.url.includes("icon-")
   ) {
     event.respondWith(
