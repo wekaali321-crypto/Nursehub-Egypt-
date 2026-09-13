@@ -152,6 +152,7 @@ const defaultMenu = [
   { label: "قسم التشريح", path: "/anatomy" },
   { label: "أسس التمريض", path: "/fundamentals" },
   { label: "قسم العمليات", path: "/operating-room" },
+  { label: "قسم النساء والتوليد", path: "/obgyn" },
   { label: "المتجر", path: "/store" },
 ];
 

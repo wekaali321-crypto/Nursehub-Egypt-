@@ -46,6 +46,7 @@ const dict = {
   "nav.anatomy": { ar: "قسم التشريح", en: "Anatomy" },
   "nav.fundamentals": { ar: "أسس التمريض", en: "Fundamentals of Nursing" },
   "nav.operatingRoom": { ar: "قسم العمليات", en: "Operating Room Nursing" },
+  "nav.obgyn": { ar: "قسم النساء والتوليد", en: "Obstetrics & Gynecology" },
   "nav.store": { ar: "المتجر", en: "Store" },
   "nav.admin": { ar: "لوحة التحكم", en: "Dashboard" },
   "nav.login": { ar: "تسجيل الدخول", en: "Login" },
@@ -200,6 +201,7 @@ const dict = {
   "search.anatomyHeading": { ar: "قسم التشريح", en: "Anatomy" },
   "search.fundamentalsHeading": { ar: "أسس التمريض", en: "Fundamentals of Nursing" },
   "search.operatingRoomHeading": { ar: "قسم العمليات", en: "Operating Room Nursing" },
+  "search.obgynHeading": { ar: "قسم النساء والتوليد", en: "Obstetrics & Gynecology" },
   "search.protocolsHeading": { ar: "البروتوكولات الإكلينيكية", en: "Clinical Protocols" },
 
   // Quiz

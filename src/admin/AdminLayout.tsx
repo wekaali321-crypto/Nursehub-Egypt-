@@ -41,6 +41,7 @@ const nav: NavItem[] = [
   { p: "/admin/anatomy", l: "قسم التشريح (Anatomy)", i: "🦴" },
   { p: "/admin/fundamentals", l: "أسس التمريض (Fundamentals)", i: "🛏️" },
   { p: "/admin/operating-room", l: "قسم العمليات (Operating Room)", i: "🔪" },
+  { p: "/admin/obgyn", l: "قسم النساء والتوليد (Obstetrics & Gynecology)", i: "🤰" },
   { p: "/admin/terminology-quiz", l: "أسئلة اختبار المصطلحات", i: "🧩" },
   { p: "/admin/organ-dose", l: "تعديل الجرعات الكلوية/الكبدية", i: "🫘" },
   { p: "/admin/pregnancy-lactation", l: "أمان الحمل والرضاعة", i: "🤰" },
