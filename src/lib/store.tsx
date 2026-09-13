@@ -148,6 +148,7 @@ const defaultMenu = [
   { label: "المصطلحات الطبية", path: "/terminology" },
   { label: "الإسعافات الأولية", path: "/first-aid" },
   { label: "الاستقبال والطوارئ", path: "/er-reception" },
+  { label: "قسم الأطفال", path: "/pediatrics" },
   { label: "المتجر", path: "/store" },
 ];
 

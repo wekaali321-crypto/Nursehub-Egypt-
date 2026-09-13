@@ -36,6 +36,8 @@ const nav: NavItem[] = [
   { p: "/admin/terminology", l: "قسم المصطلحات الطبية (Terminology)", i: "🔤" },
   { p: "/admin/first-aid", l: "قسم الإسعافات الأولية (First Aid)", i: "🩹" },
   { p: "/admin/er-reception", l: "قسم الاستقبال والطوارئ", i: "🚨" },
+  { p: "/admin/pediatrics", l: "قسم الأطفال (Pediatrics)", i: "🍼" },
+  { p: "/admin/pediatrics-quiz", l: "أسئلة اختبار الأطفال", i: "🧩" },
   { p: "/admin/terminology-quiz", l: "أسئلة اختبار المصطلحات", i: "🧩" },
   { p: "/admin/organ-dose", l: "تعديل الجرعات الكلوية/الكبدية", i: "🫘" },
   { p: "/admin/pregnancy-lactation", l: "أمان الحمل والرضاعة", i: "🤰" },

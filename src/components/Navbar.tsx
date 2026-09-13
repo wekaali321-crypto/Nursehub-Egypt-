@@ -31,6 +31,7 @@ const PATH_LABELS: Record<string, TKey> = {
   "/terminology": "nav.terminology",
   "/first-aid": "nav.firstAid",
   "/er-reception": "nav.erReception",
+  "/pediatrics": "nav.pediatrics",
   "/store": "nav.store",
 };
 

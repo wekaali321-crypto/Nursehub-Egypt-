@@ -14,7 +14,7 @@ export default function SearchPage() {
   const [params, setParams] = useSearchParams();
   const q = params.get("q") ?? "";
   const { articles, drugs } = useStore();
-  const { icuTopics, dialysisTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, protocols } = useExtraSearchIndex();
+  const { icuTopics, dialysisTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, protocols } = useExtraSearchIndex();
   const { t, lang } = useI18n();
   const [query, setQuery] = useState(q);
   const [catFilter, setCatFilter] = useState<string>("");
@@ -45,11 +45,12 @@ export default function SearchPage() {
   const terminologyResults = q ? terminologyTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const firstAidResults = q ? firstAidTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const erReceptionResults = q ? erReceptionTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
+  const pediatricsResults = q ? pediatricTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const protocolResults = q ? protocols.filter((p) => [p.name_ar, p.name_en, p.summary].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
 
   const showContent = tab === "all" || tab === "content";
   const showDrugs = tab === "all" || tab === "drugs";
-  const total = (showContent ? articleResults.length + icuResults.length + dialysisResults.length + nicuResults.length + pharmacologyResults.length + terminologyResults.length + firstAidResults.length + erReceptionResults.length + protocolResults.length : 0) + (showDrugs ? drugResults.length : 0);
+  const total = (showContent ? articleResults.length + icuResults.length + dialysisResults.length + nicuResults.length + pharmacologyResults.length + terminologyResults.length + firstAidResults.length + erReceptionResults.length + pediatricsResults.length + protocolResults.length : 0) + (showDrugs ? drugResults.length : 0);
 
   // Popular tags among currently visible results, for one-click refinement.
   const popularTags = useMemo(() => {
@@ -238,6 +239,23 @@ export default function SearchPage() {
                   return (
                     <Link key={topic.id} to={`/er-reception/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🚨"} {title}</div>
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+          {showContent && pediatricsResults.length > 0 && (
+            <div>
+              <h2 className="mb-3 text-lg font-bold dark:text-white">{t("search.pediatricsHeading")} ({pediatricsResults.length})</h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {pediatricsResults.map((topic) => {
+                  const title = bilingual(topic.title_ar, topic.title_en, lang).text;
+                  const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
+                  return (
+                    <Link key={topic.id} to={`/pediatrics/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                      <div className="font-bold dark:text-white">{topic.icon || "🍼"} {title}</div>
                       {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
                     </Link>
                   );
