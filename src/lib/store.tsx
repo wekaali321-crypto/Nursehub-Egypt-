@@ -149,6 +149,7 @@ const defaultMenu = [
   { label: "الإسعافات الأولية", path: "/first-aid" },
   { label: "الاستقبال والطوارئ", path: "/er-reception" },
   { label: "قسم الأطفال", path: "/pediatrics" },
+  { label: "قسم التشريح", path: "/anatomy" },
   { label: "المتجر", path: "/store" },
 ];
 

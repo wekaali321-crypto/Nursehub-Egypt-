@@ -38,6 +38,7 @@ const nav: NavItem[] = [
   { p: "/admin/er-reception", l: "قسم الاستقبال والطوارئ", i: "🚨" },
   { p: "/admin/pediatrics", l: "قسم الأطفال (Pediatrics)", i: "🍼" },
   { p: "/admin/pediatrics-quiz", l: "أسئلة اختبار الأطفال", i: "🧩" },
+  { p: "/admin/anatomy", l: "قسم التشريح (Anatomy)", i: "🦴" },
   { p: "/admin/terminology-quiz", l: "أسئلة اختبار المصطلحات", i: "🧩" },
   { p: "/admin/organ-dose", l: "تعديل الجرعات الكلوية/الكبدية", i: "🫘" },
   { p: "/admin/pregnancy-lactation", l: "أمان الحمل والرضاعة", i: "🤰" },
