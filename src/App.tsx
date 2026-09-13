@@ -70,6 +70,8 @@ const ERReceptionTopicPage = lazy(() => import("./pages/ERReceptionPage"));
 const ERReceptionHome = lazy(() => import("./pages/ERReceptionPage").then((m) => ({ default: m.ERReceptionHome })));
 const PediatricsTopicPage = lazy(() => import("./pages/PediatricsPage"));
 const PediatricsHome = lazy(() => import("./pages/PediatricsPage").then((m) => ({ default: m.PediatricsHome })));
+const AnatomyTopicPage = lazy(() => import("./pages/AnatomyPage"));
+const AnatomyHome = lazy(() => import("./pages/AnatomyPage").then((m) => ({ default: m.AnatomyHome })));
 const QuizzesPage = lazy(() => import("./pages/QuizzesPage"));
 const QuizPlayer = lazy(() => import("./pages/QuizPlayer"));
 const QuizAnalyticsPage = lazy(() => import("./pages/QuizAnalyticsPage"));
@@ -106,6 +108,7 @@ import FirstAidAdmin from "./admin/FirstAidAdmin";
 import ERReceptionAdmin from "./admin/ERReceptionAdmin";
 import PediatricsAdmin from "./admin/PediatricsAdmin";
 import PediatricsQuizAdmin from "./admin/PediatricsQuizAdmin";
+import AnatomyAdmin from "./admin/AnatomyAdmin";
 import TerminologyQuizAdmin from "./admin/TerminologyQuizAdmin";
 import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
 import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
@@ -260,6 +263,8 @@ export default function App() {
                   <Route path="/er-reception/:id" element={<Public><ERReceptionTopicPage /></Public>} />
                   <Route path="/pediatrics" element={<Public><PediatricsHome /></Public>} />
                   <Route path="/pediatrics/:id" element={<Public><PediatricsTopicPage /></Public>} />
+                  <Route path="/anatomy" element={<Public><AnatomyHome /></Public>} />
+                  <Route path="/anatomy/:id" element={<Public><AnatomyTopicPage /></Public>} />
                   <Route path="/drug/:slug" element={<Public><DrugPage /></Public>} />
                   <Route path="/quizzes" element={<Public><QuizzesPage /></Public>} />
                   <Route path="/quizzes/analytics" element={<Public><QuizAnalyticsPage /></Public>} />
@@ -322,6 +327,7 @@ export default function App() {
                   <Route path="/admin/er-reception" element={<Admin><ERReceptionAdmin /></Admin>} />
                   <Route path="/admin/pediatrics" element={<Admin><PediatricsAdmin /></Admin>} />
                   <Route path="/admin/pediatrics-quiz" element={<Admin><PediatricsQuizAdmin /></Admin>} />
+                  <Route path="/admin/anatomy" element={<Admin><AnatomyAdmin /></Admin>} />
                   <Route path="/admin/terminology-quiz" element={<Admin><TerminologyQuizAdmin /></Admin>} />
                   <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
                   <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />
