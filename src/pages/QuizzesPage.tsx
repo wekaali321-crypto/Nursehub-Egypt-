@@ -36,6 +36,18 @@ export default function QuizzesPage() {
         <p className="mt-1 text-sky-50">{t("quiz.pageDesc")}</p>
       </div>
 
+      <Link
+        to="/tests/licensure"
+        className="mb-6 flex items-center gap-4 rounded-2xl border border-indigo-100 bg-gradient-to-l from-sky-700 to-indigo-600 p-5 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-indigo-900"
+      >
+        <div className="text-4xl">📜</div>
+        <div className="flex-1">
+          <h2 className="text-lg font-bold">اختبارات مزاولة المهنة</h2>
+          <p className="text-sm text-sky-50">Professional Licensure Exams — بنك أسئلة شامل مع شرح تفصيلي ثنائي اللغة لكل سؤال</p>
+        </div>
+        <span className="text-2xl">←</span>
+      </Link>
+
       <QuizStreak />
 
       {/* Quiz modes */}
