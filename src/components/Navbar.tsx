@@ -36,6 +36,7 @@ const PATH_LABELS: Record<string, TKey> = {
   "/fundamentals": "nav.fundamentals",
   "/operating-room": "nav.operatingRoom",
   "/obgyn": "nav.obgyn",
+  "/tests/licensure": "nav.licensureExams",
   "/store": "nav.store",
 };
 
