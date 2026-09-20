@@ -47,6 +47,7 @@ const dict = {
   "nav.fundamentals": { ar: "أسس التمريض", en: "Fundamentals of Nursing" },
   "nav.operatingRoom": { ar: "قسم العمليات", en: "Operating Room Nursing" },
   "nav.obgyn": { ar: "قسم النساء والتوليد", en: "Obstetrics & Gynecology" },
+  "nav.licensureExams": { ar: "اختبارات مزاولة المهنة", en: "Professional Licensure Exams" },
   "nav.store": { ar: "المتجر", en: "Store" },
   "nav.admin": { ar: "لوحة التحكم", en: "Dashboard" },
   "nav.login": { ar: "تسجيل الدخول", en: "Login" },

@@ -153,6 +153,7 @@ const defaultMenu = [
   { label: "أسس التمريض", path: "/fundamentals" },
   { label: "قسم العمليات", path: "/operating-room" },
   { label: "قسم النساء والتوليد", path: "/obgyn" },
+  { label: "اختبارات مزاولة المهنة", path: "/tests/licensure" },
   { label: "المتجر", path: "/store" },
 ];
 
