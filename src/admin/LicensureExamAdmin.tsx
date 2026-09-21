@@ -281,7 +281,14 @@ function emptyQuestion(examId: string): ExamQuestion {
     exam_id: examId,
     order_num: 1,
     question_en: '',
+    question_ar: '',
     choices: [
+      { letter: 'A', text: '' },
+      { letter: 'B', text: '' },
+      { letter: 'C', text: '' },
+      { letter: 'D', text: '' },
+    ],
+    choices_ar: [
       { letter: 'A', text: '' },
       { letter: 'B', text: '' },
       { letter: 'C', text: '' },
@@ -326,14 +333,31 @@ export function ExamQuestionsAdmin() {
     setForm({ ...form, choices: next });
   }
 
+  function updateChoiceAr(idx: number, text: string) {
+    const letter = form.choices[idx]?.letter ?? '';
+    const next = [...(form.choices_ar ?? [])];
+    next[idx] = { letter, text };
+    setForm({ ...form, choices_ar: next });
+  }
+
   function addChoice() {
     const nextLetter = LETTERS[form.choices.length] ?? String(form.choices.length + 1);
-    setForm({ ...form, choices: [...form.choices, { letter: nextLetter, text: '' }] });
+    setForm({
+      ...form,
+      choices: [...form.choices, { letter: nextLetter, text: '' }],
+      choices_ar: [...(form.choices_ar ?? []), { letter: nextLetter, text: '' }],
+    });
   }
 
   function removeChoice(idx: number) {
     const next = form.choices.filter((_, i) => i !== idx);
-    setForm({ ...form, choices: next });
+    const nextAr = (form.choices_ar ?? []).filter((_, i) => i !== idx);
+    setForm({ ...form, choices: next, choices_ar: nextAr });
+  }
+
+  function editQuestion(q: ExamQuestion) {
+    const choicesAr = q.choices.map((c, i) => q.choices_ar?.[i] ?? { letter: c.letter, text: '' });
+    setForm({ ...q, question_ar: q.question_ar ?? '', choices_ar: choicesAr });
   }
 
   async function handleSave() {
@@ -375,9 +399,10 @@ export function ExamQuestionsAdmin() {
               <TextField label="الترتيب (order_num)" value={String(form.order_num)} onChange={(v) => setForm({ ...form, order_num: Number(v) || 0 })} />
             </div>
             <TextAreaField label="نص السؤال (question_en)" value={form.question_en} onChange={(v) => setForm({ ...form, question_en: v })} />
+            <TextAreaField label="ترجمة السؤال بالعربي (question_ar)" value={form.question_ar ?? ''} onChange={(v) => setForm({ ...form, question_ar: v })} />
 
             <div className="mb-3">
-              <span className="block text-xs text-slate-500 mb-2">الاختيارات (Choices)</span>
+              <span className="block text-xs text-slate-500 mb-2">الاختيارات (Choices) — إنجليزي وترجمتها بالعربي</span>
               {form.choices.map((choice, idx) => (
                 <div key={idx} className="flex items-center gap-2 mb-2">
                   <input
@@ -389,7 +414,13 @@ export function ExamQuestionsAdmin() {
                     className="flex-1 rounded-lg border border-slate-200 p-2 text-sm"
                     value={choice.text}
                     onChange={(e) => updateChoice(idx, { text: e.target.value })}
-                    placeholder="نص الاختيار"
+                    placeholder="نص الاختيار (English)"
+                  />
+                  <input
+                    className="flex-1 rounded-lg border border-slate-200 p-2 text-sm"
+                    value={form.choices_ar?.[idx]?.text ?? ''}
+                    onChange={(e) => updateChoiceAr(idx, e.target.value)}
+                    placeholder="الترجمة بالعربي"
                   />
                   <button onClick={() => removeChoice(idx)} className="text-xs text-red-600 px-2">
                     حذف
@@ -435,7 +466,7 @@ export function ExamQuestionsAdmin() {
                     <span className="font-medium">{q.question_en.slice(0, 80)}...</span>
                   </div>
                   <div className="flex gap-2 shrink-0">
-                    <button onClick={() => setForm(q)} className="text-xs text-sky-700 underline">
+                    <button onClick={() => editQuestion(q)} className="text-xs text-sky-700 underline">
                       تعديل
                     </button>
                     <button onClick={() => handleDelete(q.id)} className="text-xs text-red-600 underline">

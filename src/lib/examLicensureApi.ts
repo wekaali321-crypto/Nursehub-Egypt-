@@ -34,7 +34,9 @@ export interface ExamQuestion {
   exam_id: string;
   order_num: number;
   question_en: string;
+  question_ar?: string | null;
   choices: ExamChoice[];
+  choices_ar?: ExamChoice[] | null;
   correct_letter: string;
   rationale_ar: string;
   rationale_en: string;

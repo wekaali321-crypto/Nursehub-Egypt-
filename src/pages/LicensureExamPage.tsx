@@ -183,6 +183,7 @@ export default function LicensureExamStudy() {
   const [selected, setSelected] = useState<string | null>(null);
   const [answeredCorrectly, setAnsweredCorrectly] = useState<string[]>([]);
   const [answeredWrong, setAnsweredWrong] = useState<string[]>([]);
+  const [showArabic, setShowArabic] = useState(false);
 
   useEffect(() => {
     if (!examId) return;
@@ -208,6 +209,14 @@ export default function LicensureExamStudy() {
   const q = questions[index];
   const isAnswered = selected !== null;
   const isCorrect = selected === q.correct_letter;
+
+  const arabicChoiceByLetter = new Map((q.choices_ar ?? []).map((c) => [c.letter, c.text]));
+  const displayedQuestion = showArabic && q.question_ar ? q.question_ar : q.question_en;
+  const displayedChoices = q.choices.map((c) => ({
+    letter: c.letter,
+    text: showArabic ? arabicChoiceByLetter.get(c.letter) || c.text : c.text,
+  }));
+  const hasArabicTranslation = Boolean(q.question_ar);
 
   function persist(nextIndex: number, correct: string[], wrong: string[]) {
     if (!examId) return;
@@ -237,6 +246,7 @@ export default function LicensureExamStudy() {
     const clamped = Math.max(0, Math.min(next, questions.length - 1));
     setIndex(clamped);
     setSelected(null);
+    setShowArabic(false);
     persist(clamped, answeredCorrectly, answeredWrong);
   }
 
@@ -267,9 +277,21 @@ export default function LicensureExamStudy() {
       </div>
 
       {/* Progress bar */}
-      <div className="mb-1 flex justify-between text-xs text-slate-400">
-        <span>
+      <div className="mb-1 flex justify-between items-center text-xs text-slate-400">
+        <span className="flex items-center gap-2">
           سؤال {index + 1} من {questions.length}
+          {hasArabicTranslation && (
+            <button
+              onClick={() => setShowArabic((v) => !v)}
+              className={`rounded-full px-2.5 py-1 text-[11px] font-bold transition ${
+                showArabic
+                  ? 'bg-sky-600 text-white'
+                  : 'bg-sky-50 text-sky-700 hover:bg-sky-100'
+              }`}
+            >
+              🌐 {showArabic ? 'English' : 'ترجمة'}
+            </button>
+          )}
         </span>
         <span>
           صحيح: {answeredCorrectly.length} · خطأ: {answeredWrong.length} · تم حل {answeredCount}
@@ -283,11 +305,11 @@ export default function LicensureExamStudy() {
       </div>
 
       {/* Question card */}
-      <div className="rounded-2xl border border-slate-100 bg-white shadow-sm p-5 mb-4">
-        <div className="text-slate-800 font-medium mb-4 leading-relaxed">{q.question_en}</div>
+      <div className="rounded-2xl border border-slate-100 bg-white shadow-sm p-5 mb-4" dir={showArabic ? 'rtl' : 'ltr'}>
+        <div className="text-slate-800 font-medium mb-4 leading-relaxed">{displayedQuestion}</div>
 
         <div className="space-y-2">
-          {q.choices.map((choice) => {
+          {displayedChoices.map((choice) => {
             const isThisSelected = selected === choice.letter;
             const isThisCorrect = choice.letter === q.correct_letter;
 
