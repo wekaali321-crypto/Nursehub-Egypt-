@@ -270,7 +270,12 @@ function loadUiConfig(): { homeSections: string[]; menu: { label: string; path: 
         questionLog: p.questionLog ?? [],
         customTypes: p.customTypes ?? seedCustomTypes,
         customEntries: p.customEntries ?? [],
-        homeCategories: mergeNewDefaults(p.homeCategories, seedHomeCategories, "link"),
+        // "اختبارات مزاولة المهنة" now lives only inside "قسم الاختبارات" (/quizzes), not as its
+        // own home tile — filter it out even for returning visitors whose browser already cached
+        // it before this change, since mergeNewDefaults only appends, never removes stale entries.
+        homeCategories: mergeNewDefaults(p.homeCategories, seedHomeCategories, "link").filter(
+          (h) => h.link !== "/tests/licensure"
+        ),
         homeSectionMeta: { ...defaultSectionMeta, ...(p.homeSectionMeta ?? {}) },
         dailyViews: p.dailyViews ?? {},
         downloads: p.downloads ?? 0,

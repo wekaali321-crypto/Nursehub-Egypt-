@@ -31,7 +31,7 @@ import {
 
 function LoadingBlock() {
   return (
-    <div className="flex items-center justify-center py-20 text-slate-500">
+    <div className="flex items-center justify-center py-20 text-slate-500 dark:text-slate-400">
       <span className="animate-pulse">جاري التحميل... (Loading...)</span>
     </div>
   );
@@ -41,12 +41,19 @@ function BackLink({ to, label }: { to: string; label: string }) {
   return (
     <Link
       to={to}
-      className="inline-flex items-center gap-1 text-sm text-sky-700 hover:text-sky-900 mb-4"
+      className="inline-flex items-center gap-1 text-sm text-sky-700 hover:text-sky-900 dark:text-sky-400 dark:hover:text-sky-300 mb-4"
     >
       ← {label}
     </Link>
   );
 }
+
+// Sub-folder categories are nested inside another category's page (via a folder-style
+// card) rather than appearing as their own top-level tile on the hub. Keyed by the
+// PARENT category id they should appear under.
+const NESTED_CATEGORY_PARENTS: Record<string, string> = {
+  "nursing-practice-exams": "licensure-exams",
+};
 
 // ---------------------------------------------------------------------------
 // 1) Hub — لائحة أقسام الاختبارات (exam_categories)
@@ -67,30 +74,35 @@ export function LicensureExamsHome() {
   if (loading) return <LoadingBlock />;
   if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
 
+  // Categories nested under another category (see NESTED_CATEGORY_PARENTS) are not
+  // shown as their own top-level hub tile — they're reached via a folder card inside
+  // their parent category's page instead.
+  const topLevelCategories = categories.filter((cat) => !NESTED_CATEGORY_PARENTS[cat.id]);
+
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6" dir="rtl">
-      <h1 className="text-2xl font-bold text-slate-800 mb-1">قسم الاختبارات</h1>
-      <p className="text-slate-500 mb-6">Tests Section</p>
+      <h1 className="text-2xl font-bold text-slate-800 dark:text-white mb-1">قسم الاختبارات</h1>
+      <p className="text-slate-500 dark:text-slate-400 mb-6">Tests Section</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {categories.map((cat) => (
+        {topLevelCategories.map((cat) => (
           <Link
             key={cat.id}
             to={`/tests/licensure/${cat.id}`}
-            className="rounded-2xl border border-sky-100 bg-gradient-to-br from-sky-50 to-teal-50 hover:from-sky-100 hover:to-teal-100 transition-colors p-5 shadow-sm flex items-center gap-4"
+            className="rounded-2xl border border-sky-100 dark:border-sky-900 bg-gradient-to-br from-sky-50 to-teal-50 hover:from-sky-100 hover:to-teal-100 dark:from-slate-800 dark:to-slate-800 dark:hover:from-slate-700 dark:hover:to-slate-700 transition-colors p-5 shadow-sm flex items-center gap-4"
           >
             <div className="text-4xl">{cat.icon}</div>
             <div>
-              <div className="font-semibold text-slate-800">{cat.name_ar}</div>
-              <div className="text-sm text-slate-500">{cat.name_en}</div>
+              <div className="font-semibold text-slate-800 dark:text-white">{cat.name_ar}</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400">{cat.name_en}</div>
               {cat.description_ar && (
-                <div className="text-xs text-slate-400 mt-1">{cat.description_ar}</div>
+                <div className="text-xs text-slate-400 dark:text-slate-500 mt-1">{cat.description_ar}</div>
               )}
             </div>
           </Link>
         ))}
-        {categories.length === 0 && (
-          <div className="text-slate-400 col-span-2 text-center py-10">
+        {topLevelCategories.length === 0 && (
+          <div className="text-slate-400 dark:text-slate-500 col-span-2 text-center py-10">
             لا توجد اختبارات بعد (No exams yet)
           </div>
         )}
@@ -107,6 +119,7 @@ export function LicensureExamCategory() {
   const { categoryId } = useParams<{ categoryId: string }>();
   const [category, setCategory] = useState<ExamCategory | null>(null);
   const [exams, setExams] = useState<Exam[]>([]);
+  const [childCategories, setChildCategories] = useState<ExamCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -116,6 +129,9 @@ export function LicensureExamCategory() {
       .then(([cats, exs]) => {
         setCategory(cats.find((c) => c.id === categoryId) ?? null);
         setExams(exs);
+        setChildCategories(
+          cats.filter((c) => NESTED_CATEGORY_PARENTS[c.id] === categoryId)
+        );
       })
       .catch((e) => setError(String(e?.message ?? e)))
       .finally(() => setLoading(false));
@@ -127,12 +143,28 @@ export function LicensureExamCategory() {
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6" dir="rtl">
       <BackLink to="/tests/licensure" label="الاختبارات" />
-      <h1 className="text-2xl font-bold text-slate-800 mb-1">
+      <h1 className="text-2xl font-bold text-slate-800 dark:text-white mb-1">
         {category?.name_ar ?? 'الامتحانات'}
       </h1>
-      <p className="text-slate-500 mb-6">{category?.name_en}</p>
+      <p className="text-slate-500 dark:text-slate-400 mb-6">{category?.name_en}</p>
 
       <div className="grid grid-cols-1 gap-4">
+        {childCategories.map((child) => (
+          <Link
+            key={child.id}
+            to={`/tests/licensure/${child.id}`}
+            className="rounded-2xl border border-teal-100 dark:border-teal-900 bg-gradient-to-br from-teal-50 to-emerald-50 hover:from-teal-100 hover:to-emerald-100 dark:from-slate-800 dark:to-slate-800 dark:hover:from-slate-700 dark:hover:to-slate-700 transition-colors p-5 shadow-sm flex items-center gap-4"
+          >
+            <div className="text-4xl">{child.icon}</div>
+            <div>
+              <div className="font-semibold text-slate-800 dark:text-white">{child.name_ar}</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400">{child.name_en}</div>
+              {child.description_ar && (
+                <div className="text-xs text-slate-400 dark:text-slate-500 mt-1">{child.description_ar}</div>
+              )}
+            </div>
+          </Link>
+        ))}
         {exams.map((exam) => {
           const progress = loadExamProgress(exam.id);
           const answered = progress.answeredCorrectly.length + progress.answeredWrong.length;
@@ -143,14 +175,14 @@ export function LicensureExamCategory() {
             <Link
               key={exam.id}
               to={`/tests/licensure/${categoryId}/${exam.id}`}
-              className="rounded-2xl border border-cyan-100 bg-white hover:bg-cyan-50 transition-colors p-5 shadow-sm"
+              className="rounded-2xl border border-cyan-100 dark:border-slate-800 bg-white hover:bg-cyan-50 dark:bg-slate-900 dark:hover:bg-slate-800 transition-colors p-5 shadow-sm"
             >
-              <div className="font-semibold text-slate-800">{exam.title_ar}</div>
-              <div className="text-sm text-slate-500 mb-3">{exam.title_en}</div>
-              <div className="text-xs text-slate-400 mb-1">
+              <div className="font-semibold text-slate-800 dark:text-white">{exam.title_ar}</div>
+              <div className="text-sm text-slate-500 dark:text-slate-400 mb-3">{exam.title_en}</div>
+              <div className="text-xs text-slate-400 dark:text-slate-500 mb-1">
                 {exam.question_count} سؤال (questions){answered > 0 && ` — تم حل ${answered}`}
               </div>
-              <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+              <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-gradient-to-l from-teal-400 to-sky-400"
                   style={{ width: `${pct}%` }}
@@ -159,8 +191,8 @@ export function LicensureExamCategory() {
             </Link>
           );
         })}
-        {exams.length === 0 && (
-          <div className="text-slate-400 text-center py-10">لا توجد امتحانات بعد</div>
+        {exams.length === 0 && childCategories.length === 0 && (
+          <div className="text-slate-400 dark:text-slate-500 text-center py-10">لا توجد امتحانات بعد</div>
         )}
       </div>
     </div>
@@ -203,7 +235,7 @@ export default function LicensureExamStudy() {
   if (loading) return <LoadingBlock />;
   if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
   if (!exam || questions.length === 0) {
-    return <div className="p-6 text-slate-500">لا توجد أسئلة في هذا الامتحان بعد</div>;
+    return <div className="p-6 text-slate-500 dark:text-slate-400">لا توجد أسئلة في هذا الامتحان بعد</div>;
   }
 
   const q = questions[index];
@@ -267,17 +299,17 @@ export default function LicensureExamStudy() {
       <BackLink to={`/tests/licensure/${categoryId ?? ''}`} label={exam.title_ar} />
 
       <div className="flex items-center justify-between mb-2">
-        <h1 className="text-lg font-bold text-slate-800">{exam.title_ar}</h1>
+        <h1 className="text-lg font-bold text-slate-800 dark:text-white">{exam.title_ar}</h1>
         <button
           onClick={handleReset}
-          className="text-xs text-slate-400 hover:text-slate-600 underline"
+          className="text-xs text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 underline"
         >
           إعادة تعيين التقدم (Reset progress)
         </button>
       </div>
 
       {/* Progress bar */}
-      <div className="mb-1 flex justify-between items-center text-xs text-slate-400">
+      <div className="mb-1 flex justify-between items-center text-xs text-slate-400 dark:text-slate-500">
         <span className="flex items-center gap-2">
           سؤال {index + 1} من {questions.length}
           {hasArabicTranslation && (
@@ -286,7 +318,7 @@ export default function LicensureExamStudy() {
               className={`rounded-full px-2.5 py-1 text-[11px] font-bold transition ${
                 showArabic
                   ? 'bg-sky-600 text-white'
-                  : 'bg-sky-50 text-sky-700 hover:bg-sky-100'
+                  : 'bg-sky-50 text-sky-700 hover:bg-sky-100 dark:bg-slate-800 dark:text-sky-300 dark:hover:bg-slate-700'
               }`}
             >
               🌐 {showArabic ? 'English' : 'ترجمة'}
@@ -297,7 +329,7 @@ export default function LicensureExamStudy() {
           صحيح: {answeredCorrectly.length} · خطأ: {answeredWrong.length} · تم حل {answeredCount}
         </span>
       </div>
-      <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden mb-6">
+      <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mb-6">
         <div
           className="h-full bg-gradient-to-l from-sky-400 to-indigo-400"
           style={{ width: `${progressPct}%` }}
@@ -305,21 +337,21 @@ export default function LicensureExamStudy() {
       </div>
 
       {/* Question card */}
-      <div className="rounded-2xl border border-slate-100 bg-white shadow-sm p-5 mb-4" dir={showArabic ? 'rtl' : 'ltr'}>
-        <div className="text-slate-800 font-medium mb-4 leading-relaxed">{displayedQuestion}</div>
+      <div className="rounded-2xl border border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm p-5 mb-4" dir={showArabic ? 'rtl' : 'ltr'}>
+        <div className="text-slate-800 dark:text-white font-medium mb-4 leading-relaxed">{displayedQuestion}</div>
 
         <div className="space-y-2">
           {displayedChoices.map((choice) => {
             const isThisSelected = selected === choice.letter;
             const isThisCorrect = choice.letter === q.correct_letter;
 
-            let stateClasses = 'border-slate-200 hover:border-sky-300 hover:bg-sky-50';
+            let stateClasses = 'border-slate-200 hover:border-sky-300 hover:bg-sky-50 dark:border-slate-700 dark:hover:border-sky-700 dark:hover:bg-slate-800';
             if (isAnswered && isThisCorrect) {
-              stateClasses = 'border-emerald-400 bg-emerald-50';
+              stateClasses = 'border-emerald-400 bg-emerald-50 dark:border-emerald-700 dark:bg-emerald-950/40';
             } else if (isAnswered && isThisSelected && !isThisCorrect) {
-              stateClasses = 'border-red-300 bg-red-50';
+              stateClasses = 'border-red-300 bg-red-50 dark:border-red-800 dark:bg-red-950/40';
             } else if (isAnswered) {
-              stateClasses = 'border-slate-100 opacity-60';
+              stateClasses = 'border-slate-100 dark:border-slate-800 opacity-60';
             }
 
             return (
@@ -329,8 +361,8 @@ export default function LicensureExamStudy() {
                 disabled={isAnswered}
                 className={`w-full text-right rtl:text-right rounded-xl border p-3 transition-colors flex gap-3 items-start ${stateClasses}`}
               >
-                <span className="font-semibold text-slate-500">{choice.letter}.</span>
-                <span className="text-slate-700">{choice.text}</span>
+                <span className="font-semibold text-slate-500 dark:text-slate-400">{choice.letter}.</span>
+                <span className="text-slate-700 dark:text-slate-200">{choice.text}</span>
               </button>
             );
           })}
@@ -339,14 +371,16 @@ export default function LicensureExamStudy() {
         {isAnswered && (
           <div
             className={`mt-4 rounded-xl p-4 text-sm leading-relaxed ${
-              isCorrect ? 'bg-emerald-50 border border-emerald-200' : 'bg-red-50 border border-red-200'
+              isCorrect
+                ? 'bg-emerald-50 border border-emerald-200 dark:bg-emerald-950/40 dark:border-emerald-800'
+                : 'bg-red-50 border border-red-200 dark:bg-red-950/40 dark:border-red-800'
             }`}
           >
-            <div className={`font-semibold mb-2 ${isCorrect ? 'text-emerald-700' : 'text-red-700'}`}>
+            <div className={`font-semibold mb-2 ${isCorrect ? 'text-emerald-700 dark:text-emerald-400' : 'text-red-700 dark:text-red-400'}`}>
               {isCorrect ? '✅ إجابة صحيحة (Correct)' : `❌ إجابة خاطئة — الصحيح هو (${q.correct_letter})`}
             </div>
-            <div className="text-slate-700 mb-2">{q.rationale_ar}</div>
-            <div className="text-slate-500 text-xs border-t border-slate-200 pt-2">
+            <div className="text-slate-700 dark:text-slate-200 mb-2">{q.rationale_ar}</div>
+            <div className="text-slate-500 dark:text-slate-400 text-xs border-t border-slate-200 dark:border-slate-700 pt-2">
               {q.rationale_en}
             </div>
           </div>
@@ -358,7 +392,7 @@ export default function LicensureExamStudy() {
         <button
           onClick={() => goTo(index - 1)}
           disabled={index === 0}
-          className="px-4 py-2 rounded-lg border border-slate-200 text-slate-600 disabled:opacity-30 hover:bg-slate-50"
+          className="px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 disabled:opacity-30 hover:bg-slate-50 dark:hover:bg-slate-800"
         >
           → السابق (Previous)
         </button>
