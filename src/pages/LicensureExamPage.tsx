@@ -48,10 +48,10 @@ function BackLink({ to, label }: { to: string; label: string }) {
   );
 }
 
-// Sub-folder categories are nested inside another category's page (via a folder-style
-// card) rather than appearing as their own top-level tile on the hub. Keyed by the
-// PARENT category id they should appear under.
-const NESTED_CATEGORY_PARENTS: Record<string, string> = {};
+// Categories reached via their own direct link card elsewhere in the app (e.g. the
+// "اختبارات تدريبية - أساسيات التمريض" card on the main Tests page, /quizzes) are hidden
+// from this hub's tile grid so they aren't listed twice.
+const HIDDEN_FROM_HUB = new Set(["nursing-practice-exams"]);
 
 // ---------------------------------------------------------------------------
 // 1) Hub — لائحة أقسام الاختبارات (exam_categories)
@@ -72,10 +72,7 @@ export function LicensureExamsHome() {
   if (loading) return <LoadingBlock />;
   if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
 
-  // Categories nested under another category (see NESTED_CATEGORY_PARENTS) are not
-  // shown as their own top-level hub tile — they're reached via a folder card inside
-  // their parent category's page instead.
-  const topLevelCategories = categories.filter((cat) => !NESTED_CATEGORY_PARENTS[cat.id]);
+  const topLevelCategories = categories.filter((cat) => !HIDDEN_FROM_HUB.has(cat.id));
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6" dir="rtl">
@@ -117,7 +114,6 @@ export function LicensureExamCategory() {
   const { categoryId } = useParams<{ categoryId: string }>();
   const [category, setCategory] = useState<ExamCategory | null>(null);
   const [exams, setExams] = useState<Exam[]>([]);
-  const [childCategories, setChildCategories] = useState<ExamCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -127,9 +123,6 @@ export function LicensureExamCategory() {
       .then(([cats, exs]) => {
         setCategory(cats.find((c) => c.id === categoryId) ?? null);
         setExams(exs);
-        setChildCategories(
-          cats.filter((c) => NESTED_CATEGORY_PARENTS[c.id] === categoryId)
-        );
       })
       .catch((e) => setError(String(e?.message ?? e)))
       .finally(() => setLoading(false));
@@ -147,22 +140,6 @@ export function LicensureExamCategory() {
       <p className="text-slate-500 dark:text-slate-400 mb-6">{category?.name_en}</p>
 
       <div className="grid grid-cols-1 gap-4">
-        {childCategories.map((child) => (
-          <Link
-            key={child.id}
-            to={`/tests/licensure/${child.id}`}
-            className="rounded-2xl border border-teal-100 dark:border-teal-900 bg-gradient-to-br from-teal-50 to-emerald-50 hover:from-teal-100 hover:to-emerald-100 dark:from-slate-800 dark:to-slate-800 dark:hover:from-slate-700 dark:hover:to-slate-700 transition-colors p-5 shadow-sm flex items-center gap-4"
-          >
-            <div className="text-4xl">{child.icon}</div>
-            <div>
-              <div className="font-semibold text-slate-800 dark:text-white">{child.name_ar}</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400">{child.name_en}</div>
-              {child.description_ar && (
-                <div className="text-xs text-slate-400 dark:text-slate-500 mt-1">{child.description_ar}</div>
-              )}
-            </div>
-          </Link>
-        ))}
         {exams.map((exam) => {
           const progress = loadExamProgress(exam.id);
           const answered = progress.answeredCorrectly.length + progress.answeredWrong.length;
@@ -189,7 +166,7 @@ export function LicensureExamCategory() {
             </Link>
           );
         })}
-        {exams.length === 0 && childCategories.length === 0 && (
+        {exams.length === 0 && (
           <div className="text-slate-400 dark:text-slate-500 text-center py-10">لا توجد امتحانات بعد</div>
         )}
       </div>

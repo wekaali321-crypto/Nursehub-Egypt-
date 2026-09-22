@@ -48,6 +48,18 @@ export default function QuizzesPage() {
         <span className="text-2xl">←</span>
       </Link>
 
+      <Link
+        to="/tests/licensure/nursing-practice-exams"
+        className="mb-6 flex items-center gap-4 rounded-2xl border border-teal-100 bg-gradient-to-l from-teal-600 to-emerald-500 p-5 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-teal-900"
+      >
+        <div className="text-4xl">📝</div>
+        <div className="flex-1">
+          <h2 className="text-lg font-bold">اختبارات تدريبية - أساسيات التمريض</h2>
+          <p className="text-sm text-teal-50">Practice Question Banks — Fundamentals of Nursing — مجموعة اختبارات تدريبية إضافية مع شرح تفصيلي لكل سؤال</p>
+        </div>
+        <span className="text-2xl">←</span>
+      </Link>
+
       <QuizStreak />
 
       {/* Quiz modes */}
