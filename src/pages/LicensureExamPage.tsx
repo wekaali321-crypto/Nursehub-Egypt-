@@ -51,9 +51,7 @@ function BackLink({ to, label }: { to: string; label: string }) {
 // Sub-folder categories are nested inside another category's page (via a folder-style
 // card) rather than appearing as their own top-level tile on the hub. Keyed by the
 // PARENT category id they should appear under.
-const NESTED_CATEGORY_PARENTS: Record<string, string> = {
-  "nursing-practice-exams": "licensure-exams",
-};
+const NESTED_CATEGORY_PARENTS: Record<string, string> = {};
 
 // ---------------------------------------------------------------------------
 // 1) Hub — لائحة أقسام الاختبارات (exam_categories)
