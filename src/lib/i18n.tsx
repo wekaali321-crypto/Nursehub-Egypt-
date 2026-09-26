@@ -48,6 +48,7 @@ const dict = {
   "nav.operatingRoom": { ar: "قسم العمليات", en: "Operating Room Nursing" },
   "nav.obgyn": { ar: "قسم النساء والتوليد", en: "Obstetrics & Gynecology" },
   "nav.licensureExams": { ar: "اختبارات مزاولة المهنة", en: "Professional Licensure Exams" },
+  "nav.interviewQuestions": { ar: "أسئلة المقابلات الشخصية", en: "Interview Questions" },
   "nav.store": { ar: "المتجر", en: "Store" },
   "nav.admin": { ar: "لوحة التحكم", en: "Dashboard" },
   "nav.login": { ar: "تسجيل الدخول", en: "Login" },
