@@ -143,6 +143,7 @@ const defaultMenu = [
   { label: "مكتبة ECG", path: "/ecg" },
   { label: "العناية المركزة", path: "/icu-nursing" },
   { label: "الغسيل الكلوي", path: "/dialysis" },
+  { label: "الأشعة", path: "/radiology" },
   { label: "الحضانة (NICU)", path: "/nicu" },
   { label: "الفارماكولوجي", path: "/pharmacology" },
   { label: "المصطلحات الطبية", path: "/terminology" },

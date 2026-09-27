@@ -31,6 +31,7 @@ const nav: NavItem[] = [
   { p: "/admin/protocols", l: "بروتوكولات إكلينيكية (قوائم تحقق)", i: "📋" },
   { p: "/admin/icu-nursing", l: "قسم تمريض العناية المركزة", i: "🏥" },
   { p: "/admin/dialysis", l: "قسم تمريض الغسيل الكلوي", i: "💧" },
+  { p: "/admin/radiology", l: "قسم الأشعة (Radiology)", i: "🩻" },
   { p: "/admin/nicu", l: "قسم الحضانة (NICU)", i: "👶" },
   { p: "/admin/pharmacology", l: "قسم الفارماكولوجي (Pharmacology)", i: "🧪" },
   { p: "/admin/terminology", l: "قسم المصطلحات الطبية (Terminology)", i: "🔤" },
