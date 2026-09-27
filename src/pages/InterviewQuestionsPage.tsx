@@ -14,8 +14,18 @@ import { useSEO } from '../lib/seo';
 import { useI18n, bilingual } from '../lib/i18n';
 import InlineLangToggle from '../components/InlineLangToggle';
 
+const LABELS = {
+  breadcrumb: { ar: 'أسئلة المقابلات الشخصية', en: 'Interview Questions' },
+  heroTitle: { ar: 'أسئلة المقابلات الشخصية للتمريض', en: 'Nursing Job Interview Questions' },
+  searchPlaceholder: { ar: '🔍 ابحث في الأسئلة والإجابات...', en: '🔍 Search questions and answers...' },
+  all: { ar: 'الكل', en: 'All' },
+  noResults: { ar: 'لا توجد نتائج', en: 'No results found' },
+  learnMorePrefix: { ar: 'لمعرفة المزيد عن', en: 'Learn more about' },
+  learnMoreSuffix: { ar: 'اضغط هنا', en: 'click here' },
+};
+
 export default function InterviewQuestionsPage() {
-  const { lang, t } = useI18n();
+  const { lang } = useI18n();
   const [categories, setCategories] = useState<InterviewCategory[]>([]);
   const [questions, setQuestions] = useState<InterviewQuestion[]>([]);
   const [loading, setLoading] = useState(true);
@@ -61,14 +71,18 @@ export default function InterviewQuestionsPage() {
   if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-8" dir="rtl">
-      <Breadcrumbs items={[{ label: 'أسئلة المقابلات الشخصية' }]} />
+    <div className="mx-auto max-w-5xl px-4 py-8" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+      <Breadcrumbs items={[{ label: LABELS.breadcrumb[lang] }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
 
       <div className="mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">🎙️</div>
-        <h1 className="mt-2 text-2xl font-black sm:text-3xl">أسئلة المقابلات الشخصية للتمريض</h1>
-        <p className="mt-1 text-indigo-50">Nursing Job Interview Questions — {questions.length} سؤال وجواب حقيقي من مقابلات المستشفيات، مُجمّعة ومترجمة لمساعدتك تتقبل في شغلك القادم.</p>
+        <h1 className="mt-2 text-2xl font-black sm:text-3xl">{LABELS.heroTitle[lang]}</h1>
+        <p className="mt-1 text-indigo-50">
+          {lang === 'ar'
+            ? `${questions.length} سؤال وجواب حقيقي من مقابلات المستشفيات، مُجمّعة ومترجمة لمساعدتك تتقبل في شغلك القادم.`
+            : `${questions.length} real Q&A from hospital interviews, compiled and translated to help you land your next nursing job.`}
+        </p>
       </div>
 
       {/* Search */}
@@ -77,7 +91,7 @@ export default function InterviewQuestionsPage() {
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="🔍 ابحث في الأسئلة والإجابات..."
+          placeholder={LABELS.searchPlaceholder[lang]}
           className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm outline-none focus:border-indigo-400 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
         />
       </div>
@@ -92,7 +106,7 @@ export default function InterviewQuestionsPage() {
               : 'bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700'
           }`}
         >
-          الكل ({questions.length})
+          {LABELS.all[lang]} ({questions.length})
         </button>
         {categories.map((c) => {
           const count = questions.filter((q) => q.category_id === c.id).length;
@@ -143,11 +157,8 @@ export default function InterviewQuestionsPage() {
                     to={q.related_path}
                     className="mt-3 inline-flex items-center gap-1 rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-4 py-1.5 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md"
                   >
-                    لمعرفة المزيد عن {relatedLabel} اضغط هنا ←
+                    {LABELS.learnMorePrefix[lang]} {relatedLabel} {LABELS.learnMoreSuffix[lang]} ←
                   </Link>
-                )}
-                {q.source_credit && (
-                  <div className="mt-3 text-[11px] text-slate-400 dark:text-slate-500">{q.source_credit}</div>
                 )}
               </div>
             </details>
@@ -155,7 +166,7 @@ export default function InterviewQuestionsPage() {
         })}
         {filtered.length === 0 && (
           <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
-            {t('quiz.noQuizzesInCategory') ?? 'لا توجد نتائج'}
+            {LABELS.noResults[lang]}
           </div>
         )}
       </div>
