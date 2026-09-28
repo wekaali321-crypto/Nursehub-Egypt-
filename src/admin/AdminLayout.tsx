@@ -32,6 +32,8 @@ const nav: NavItem[] = [
   { p: "/admin/icu-nursing", l: "قسم تمريض العناية المركزة", i: "🏥" },
   { p: "/admin/dialysis", l: "قسم تمريض الغسيل الكلوي", i: "💧" },
   { p: "/admin/radiology", l: "قسم الأشعة (Radiology)", i: "🩻" },
+  { p: "/admin/travel-categories", l: "أقسام أسئلة السفر للخارج", i: "✈️" },
+  { p: "/admin/travel-questions", l: "أسئلة السفر للخارج", i: "🌍" },
   { p: "/admin/nicu", l: "قسم الحضانة (NICU)", i: "👶" },
   { p: "/admin/pharmacology", l: "قسم الفارماكولوجي (Pharmacology)", i: "🧪" },
   { p: "/admin/terminology", l: "قسم المصطلحات الطبية (Terminology)", i: "🔤" },

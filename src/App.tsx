@@ -88,6 +88,7 @@ const LicensureExamsHome = lazy(() => import("./pages/LicensureExamPage").then((
 const LicensureExamCategory = lazy(() => import("./pages/LicensureExamPage").then((m) => ({ default: m.LicensureExamCategory })));
 const LicensureExamStudy = lazy(() => import("./pages/LicensureExamPage"));
 const InterviewQuestionsPage = lazy(() => import("./pages/InterviewQuestionsPage"));
+const TravelQuestionsPage = lazy(() => import("./pages/TravelQuestionsPage"));
 
 // Static + admin (named exports) — imported normally, still split out as needed
 import { About, Contact, FAQ, Privacy, Terms } from "./pages/StaticPages";
@@ -127,6 +128,7 @@ import OperatingRoomAdmin from "./admin/OperatingRoomAdmin";
 import ObgynAdmin from "./admin/ObgynAdmin";
 import { ExamCategoriesAdmin, ExamsAdmin, ExamQuestionsAdmin } from "./admin/LicensureExamAdmin";
 import { InterviewCategoriesAdmin, InterviewQuestionsAdmin } from "./admin/InterviewQuestionsAdmin";
+import { TravelCategoriesAdmin, TravelQuestionsAdmin } from "./admin/TravelQuestionsAdmin";
 import TerminologyQuizAdmin from "./admin/TerminologyQuizAdmin";
 import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
 import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
@@ -301,6 +303,7 @@ export default function App() {
                   <Route path="/tests/licensure/:categoryId" element={<Public><LicensureExamCategory /></Public>} />
                   <Route path="/tests/licensure/:categoryId/:examId" element={<Public><LicensureExamStudy /></Public>} />
                   <Route path="/interview-questions" element={<Public><InterviewQuestionsPage /></Public>} />
+                  <Route path="/travel-questions" element={<Public><TravelQuestionsPage /></Public>} />
                   <Route path="/login" element={<Public><LoginPage /></Public>} />
                   <Route path="/register" element={<Public><RegisterPage /></Public>} />
                   <Route path="/forgot" element={<Public><ForgotPage /></Public>} />
@@ -367,6 +370,8 @@ export default function App() {
                   <Route path="/admin/exam-questions" element={<Admin><ExamQuestionsAdmin /></Admin>} />
                   <Route path="/admin/interview-categories" element={<Admin><InterviewCategoriesAdmin /></Admin>} />
                   <Route path="/admin/interview-questions" element={<Admin><InterviewQuestionsAdmin /></Admin>} />
+                  <Route path="/admin/travel-categories" element={<Admin><TravelCategoriesAdmin /></Admin>} />
+                  <Route path="/admin/travel-questions" element={<Admin><TravelQuestionsAdmin /></Admin>} />
                   <Route path="/admin/terminology-quiz" element={<Admin><TerminologyQuizAdmin /></Admin>} />
                   <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
                   <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />

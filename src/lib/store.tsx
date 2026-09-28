@@ -155,6 +155,7 @@ const defaultMenu = [
   { label: "قسم العمليات", path: "/operating-room" },
   { label: "قسم النساء والتوليد", path: "/obgyn" },
   { label: "اختبارات مزاولة المهنة", path: "/tests/licensure" },
+  { label: "أسئلة السفر للخارج", path: "/travel-questions" },
   { label: "المتجر", path: "/store" },
 ];
 
