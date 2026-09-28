@@ -96,7 +96,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
     const fromTravel: Suggestion[] = travelQuestions
       .filter((tq) => [tq.question_ar, tq.question_en].filter(Boolean).join(" ").toLowerCase().includes(lower))
       .slice(0, 3)
-      .map((tq) => ({ label: bilingual(tq.question_ar, tq.question_en, lang).text, sub: t("search.travelQuestionsHeading"), to: `/travel-questions?q=${encodeURIComponent(tq.question_ar)}`, icon: "✈️" }));
+      .map((tq) => ({ label: bilingual(tq.question_ar ?? tq.question_en, tq.question_en, lang).text, sub: t("search.travelQuestionsHeading"), to: `/travel-questions/${tq.category_id}`, icon: "✈️" }));
     const results = [...fromDrugs, ...fromIcu, ...fromDialysis, ...fromRadiology, ...fromNicu, ...fromPharmacology, ...fromTerminology, ...fromFirstAid, ...fromERReception, ...fromPediatrics, ...fromAnatomy, ...fromFundamentals, ...fromOperatingRoom, ...fromObgyn, ...fromProtocols, ...fromTravel, ...fromArticles].slice(0, 8);
 
     // Log real search analytics once per distinct query (debounced by ref, not per keystroke render).

@@ -189,9 +189,9 @@ export default function SearchPage() {
               <h2 className="mb-3 text-lg font-bold dark:text-white">{t("search.travelQuestionsHeading")} ({travelResults.length})</h2>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {travelResults.slice(0, 12).map((tq) => {
-                  const question = bilingual(tq.question_ar, tq.question_en, lang).text;
+                  const question = bilingual(tq.question_ar ?? tq.question_en, tq.question_en, lang).text;
                   return (
-                    <Link key={tq.id} to={`/travel-questions?q=${encodeURIComponent(tq.question_ar)}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-blue-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={tq.id} to={`/travel-questions/${tq.category_id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-blue-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">✈️ {question}</div>
                     </Link>
                   );

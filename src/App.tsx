@@ -88,7 +88,8 @@ const LicensureExamsHome = lazy(() => import("./pages/LicensureExamPage").then((
 const LicensureExamCategory = lazy(() => import("./pages/LicensureExamPage").then((m) => ({ default: m.LicensureExamCategory })));
 const LicensureExamStudy = lazy(() => import("./pages/LicensureExamPage"));
 const InterviewQuestionsPage = lazy(() => import("./pages/InterviewQuestionsPage"));
-const TravelQuestionsPage = lazy(() => import("./pages/TravelQuestionsPage"));
+const TravelQuestionsHome = lazy(() => import("./pages/TravelQuestionsPage").then((m) => ({ default: m.TravelQuestionsHome })));
+const TravelQuestionsStudy = lazy(() => import("./pages/TravelQuestionsPage"));
 
 // Static + admin (named exports) — imported normally, still split out as needed
 import { About, Contact, FAQ, Privacy, Terms } from "./pages/StaticPages";
@@ -303,7 +304,8 @@ export default function App() {
                   <Route path="/tests/licensure/:categoryId" element={<Public><LicensureExamCategory /></Public>} />
                   <Route path="/tests/licensure/:categoryId/:examId" element={<Public><LicensureExamStudy /></Public>} />
                   <Route path="/interview-questions" element={<Public><InterviewQuestionsPage /></Public>} />
-                  <Route path="/travel-questions" element={<Public><TravelQuestionsPage /></Public>} />
+                  <Route path="/travel-questions" element={<Public><TravelQuestionsHome /></Public>} />
+                  <Route path="/travel-questions/:categoryId" element={<Public><TravelQuestionsStudy /></Public>} />
                   <Route path="/login" element={<Public><LoginPage /></Public>} />
                   <Route path="/register" element={<Public><RegisterPage /></Public>} />
                   <Route path="/forgot" element={<Public><ForgotPage /></Public>} />
