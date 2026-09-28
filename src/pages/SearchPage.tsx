@@ -14,7 +14,7 @@ export default function SearchPage() {
   const [params, setParams] = useSearchParams();
   const q = params.get("q") ?? "";
   const { articles, drugs } = useStore();
-  const { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols } = useExtraSearchIndex();
+  const { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions } = useExtraSearchIndex();
   const { t, lang } = useI18n();
   const [query, setQuery] = useState(q);
   const [catFilter, setCatFilter] = useState<string>("");
@@ -42,6 +42,7 @@ export default function SearchPage() {
   const dialysisResults = q ? dialysisTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const radiologyResults = q ? radiologyTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const nicuResults = q ? nicuTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
+  const travelResults = q ? travelQuestions.filter((tq) => [tq.question_ar, tq.question_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const pharmacologyResults = q ? pharmacologyTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const terminologyResults = q ? terminologyTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
   const firstAidResults = q ? firstAidTopics.filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower)) : [];
@@ -55,7 +56,7 @@ export default function SearchPage() {
 
   const showContent = tab === "all" || tab === "content";
   const showDrugs = tab === "all" || tab === "drugs";
-  const total = (showContent ? articleResults.length + icuResults.length + dialysisResults.length + radiologyResults.length + nicuResults.length + pharmacologyResults.length + terminologyResults.length + firstAidResults.length + erReceptionResults.length + pediatricsResults.length + anatomyResults.length + fundamentalsResults.length + operatingRoomResults.length + obgynResults.length + protocolResults.length : 0) + (showDrugs ? drugResults.length : 0);
+  const total = (showContent ? articleResults.length + icuResults.length + dialysisResults.length + radiologyResults.length + nicuResults.length + pharmacologyResults.length + terminologyResults.length + firstAidResults.length + erReceptionResults.length + pediatricsResults.length + anatomyResults.length + fundamentalsResults.length + operatingRoomResults.length + obgynResults.length + protocolResults.length + travelResults.length : 0) + (showDrugs ? drugResults.length : 0);
 
   // Popular tags among currently visible results, for one-click refinement.
   const popularTags = useMemo(() => {
@@ -177,6 +178,21 @@ export default function SearchPage() {
                     <Link key={topic.id} to={`/radiology/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-indigo-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🩻"} {title}</div>
                       {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+          {showContent && travelResults.length > 0 && (
+            <div>
+              <h2 className="mb-3 text-lg font-bold dark:text-white">{t("search.travelQuestionsHeading")} ({travelResults.length})</h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {travelResults.slice(0, 12).map((tq) => {
+                  const question = bilingual(tq.question_ar, tq.question_en, lang).text;
+                  return (
+                    <Link key={tq.id} to={`/travel-questions?q=${encodeURIComponent(tq.question_ar)}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-blue-400 dark:border-slate-800 dark:bg-slate-900">
+                      <div className="font-bold dark:text-white">✈️ {question}</div>
                     </Link>
                   );
                 })}
