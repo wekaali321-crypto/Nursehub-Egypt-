@@ -10,6 +10,19 @@ export interface TravelCategory {
   name_ar: string;
   name_en: string | null;
   icon: string;
+  type?: 'quiz' | 'review';
+  highlight?: boolean;
+}
+
+export interface TravelReviewSection {
+  id: string;
+  category_id: string;
+  order_num: number;
+  title_ar: string;
+  title_en: string | null;
+  icon: string;
+  content_ar: string;
+  content_en: string | null;
 }
 
 export interface TravelChoice {
@@ -51,6 +64,29 @@ export async function upsertTravelCategory(cat: TravelCategory): Promise<void> {
 export async function deleteTravelCategory(id: string): Promise<void> {
   if (!supabase) throw new Error('Supabase client not initialized');
   const { error } = await supabase.from('travel_categories').delete().eq('id', id);
+  if (error) throw error;
+}
+
+// ---------- Review sections (for category.type === 'review') ----------
+
+export async function fetchTravelReviewSections(categoryId?: string): Promise<TravelReviewSection[]> {
+  if (!supabase) return [];
+  let query = supabase.from('travel_review_sections').select('*').order('order_num', { ascending: true });
+  if (categoryId) query = query.eq('category_id', categoryId);
+  const { data, error } = await query;
+  if (error) throw error;
+  return (data ?? []) as TravelReviewSection[];
+}
+
+export async function upsertTravelReviewSection(s: TravelReviewSection): Promise<void> {
+  if (!supabase) throw new Error('Supabase client not initialized');
+  const { error } = await supabase.from('travel_review_sections').upsert(s);
+  if (error) throw error;
+}
+
+export async function deleteTravelReviewSection(id: string): Promise<void> {
+  if (!supabase) throw new Error('Supabase client not initialized');
+  const { error } = await supabase.from('travel_review_sections').delete().eq('id', id);
   if (error) throw error;
 }
 
