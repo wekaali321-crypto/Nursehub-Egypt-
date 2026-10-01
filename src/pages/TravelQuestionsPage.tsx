@@ -13,13 +13,16 @@ import { useParams, Link } from 'react-router-dom';
 import {
   fetchTravelCategories,
   fetchTravelQuestions,
+  fetchTravelReviewSections,
   loadTravelProgress,
   saveTravelProgress,
   resetTravelProgress,
   type TravelCategory,
   type TravelQuestion,
+  type TravelReviewSection,
 } from '../lib/travelQuestionsApi';
 import { Breadcrumbs } from '../components/common';
+import ArticleContent from '../components/ArticleContent';
 import { useSEO } from '../lib/seo';
 
 function LoadingBlock() {
@@ -61,6 +64,8 @@ export function TravelQuestionsHome() {
   if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
 
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
+  const reviewCats = categories.filter((c) => c.type === 'review');
+  const quizCats = categories.filter((c) => c.type !== 'review');
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8" dir="rtl">
@@ -74,8 +79,27 @@ export function TravelQuestionsHome() {
         </p>
       </div>
 
+      {/* Highlighted review folders (e.g. "مراجعة سريعة NCLEX/بروميتريك") — distinct from quiz tiles */}
+      {reviewCats.map((cat) => (
+        <Link
+          key={cat.id}
+          to={`/travel-questions/${cat.id}`}
+          className="mb-8 flex items-center gap-4 overflow-hidden rounded-2xl border-2 border-amber-300 bg-gradient-to-l from-amber-50 to-orange-50 p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-amber-500/40 dark:from-amber-500/10 dark:to-orange-500/10"
+        >
+          <div className="text-4xl">{cat.icon}</div>
+          <div className="flex-1">
+            <div className="flex items-center gap-2">
+              <span className="font-black text-amber-900 dark:text-amber-300">{cat.name_ar}</span>
+              <span className="rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-white">جديد ⭐</span>
+            </div>
+            {cat.name_en && <div className="text-sm text-amber-700/80 dark:text-amber-400/70">{cat.name_en}</div>}
+          </div>
+          <div className="text-amber-600 dark:text-amber-400">←</div>
+        </Link>
+      ))}
+
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        {categories.map((cat) => {
+        {quizCats.map((cat) => {
           const progress = loadTravelProgress(cat.id);
           const answered = progress.answeredCorrectly.length + progress.answeredWrong.length;
           const total_q = counts[cat.id] ?? 0;
@@ -113,13 +137,150 @@ export function TravelQuestionsHome() {
 }
 
 // ---------------------------------------------------------------------------
-// 2) Study screen — سؤال بسؤال مع الشرح (default export)
+// 2b) Review folder view — صفحة مرجعية (مقالات) بدل الاختبار التفاعلي
+//     Used when category.type === 'review' (e.g. "مراجعة سريعة NCLEX/بروميتريك")
+// ---------------------------------------------------------------------------
+
+function TravelReviewView({ category }: { category: TravelCategory }) {
+  const [sections, setSections] = useState<TravelReviewSection[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [showArabic, setShowArabic] = useState(true);
+
+  useSEO({ title: `${category.name_ar} | أسئلة السفر للخارج | NurseHub Egypt` });
+
+  useEffect(() => {
+    fetchTravelReviewSections(category.id)
+      .then((s) => {
+        setSections(s);
+        setActiveId(s[0]?.id ?? null);
+      })
+      .catch((e) => setError(String(e?.message ?? e)))
+      .finally(() => setLoading(false));
+  }, [category.id]);
+
+  if (loading) return <LoadingBlock />;
+  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+
+  const active = sections.find((s) => s.id === activeId) ?? sections[0];
+
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-8" dir="rtl">
+      <Breadcrumbs items={[{ label: 'أسئلة السفر للخارج', path: '/travel-questions' }, { label: category.name_ar }]} />
+
+      <div className="mb-6 mt-4 overflow-hidden rounded-3xl bg-gradient-to-l from-amber-500 via-orange-500 to-rose-500 p-6 text-white shadow-lg sm:p-8">
+        <div className="text-4xl sm:text-5xl">{category.icon}</div>
+        <h1 className="mt-2 text-2xl font-black sm:text-3xl">{category.name_ar}</h1>
+        {category.name_en && <p className="mt-1 text-amber-50">{category.name_en}</p>}
+        <p className="mt-2 text-sm text-amber-50/90">{sections.length} قسم مراجعة سريعة — جداول وملخصات جاهزة للحفظ قبل الامتحان</p>
+      </div>
+
+      {sections.length === 0 ? (
+        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+          المحتوى قيد الإضافة قريبًا
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[260px_1fr]">
+          {/* Sidebar: section list (sticky on desktop, horizontal scroll on mobile) */}
+          <nav className="lg:sticky lg:top-24 lg:self-start">
+            <div className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible lg:pb-0">
+              {sections.map((s) => (
+                <button
+                  key={s.id}
+                  onClick={() => setActiveId(s.id)}
+                  className={`flex shrink-0 items-center gap-2 rounded-xl border px-3 py-2.5 text-start text-sm font-semibold transition lg:shrink lg:w-full ${
+                    active?.id === s.id
+                      ? 'border-orange-400 bg-orange-50 text-orange-800 dark:border-orange-500/50 dark:bg-orange-500/10 dark:text-orange-300'
+                      : 'border-slate-200 text-slate-600 hover:bg-slate-50 dark:border-slate-800 dark:text-slate-300 dark:hover:bg-slate-800'
+                  }`}
+                >
+                  <span className="text-lg">{s.icon}</span>
+                  <span className="whitespace-nowrap lg:whitespace-normal">{s.title_ar}</span>
+                </button>
+              ))}
+            </div>
+          </nav>
+
+          {/* Content */}
+          {active && (
+            <article className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-8">
+              <div className="mb-4 flex items-center justify-between gap-3">
+                <h2 className="flex items-center gap-2 text-xl font-black text-slate-800 dark:text-white">
+                  <span className="text-2xl">{active.icon}</span> {active.title_ar}
+                </h2>
+                {active.content_en && (
+                  <button
+                    onClick={() => setShowArabic((v) => !v)}
+                    className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold transition ${
+                      showArabic
+                        ? 'bg-orange-600 text-white'
+                        : 'bg-orange-50 text-orange-700 hover:bg-orange-100 dark:bg-slate-800 dark:text-orange-300'
+                    }`}
+                  >
+                    🌐 {showArabic ? 'English' : 'ترجمة'}
+                  </button>
+                )}
+              </div>
+              <ArticleContent
+                html={(showArabic ? active.content_ar : active.content_en) || active.content_ar}
+                slug={active.id}
+                lang={showArabic ? 'ar' : 'en'}
+                className="prose-content reading-measure max-w-none text-slate-700 dark:text-slate-300"
+              />
+            </article>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// 3) Route wrapper — يقرر يعرض شاشة الاختبار ولا شاشة المراجعة حسب category.type
 // ---------------------------------------------------------------------------
 
 export default function TravelQuestionsStudy() {
   const { categoryId } = useParams<{ categoryId: string }>();
-
   const [category, setCategory] = useState<TravelCategory | null>(null);
+  const [catLoading, setCatLoading] = useState(true);
+  const [catError, setCatError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!categoryId) return;
+    fetchTravelCategories()
+      .then((cats) => setCategory(cats.find((c) => c.id === categoryId) ?? null))
+      .catch((e) => setCatError(String(e?.message ?? e)))
+      .finally(() => setCatLoading(false));
+  }, [categoryId]);
+
+  if (catLoading) return <LoadingBlock />;
+  if (catError) return <div className="p-6 text-red-600">خطأ: {catError}</div>;
+  if (!category) {
+    return (
+      <div className="mx-auto max-w-lg px-4 py-16 text-center">
+        <div className="text-6xl">❓</div>
+        <p className="mt-3 text-slate-500 dark:text-slate-400">القسم غير موجود</p>
+        <Link to="/travel-questions" className="mt-4 inline-block rounded-full bg-blue-600 px-6 py-2 font-bold text-white">
+          أسئلة السفر للخارج
+        </Link>
+      </div>
+    );
+  }
+
+  if (category.type === 'review') {
+    return <TravelReviewView category={category} />;
+  }
+
+  return <TravelQuestionsQuiz category={category} />;
+}
+
+// ---------------------------------------------------------------------------
+// 4) Quiz screen — سؤال بسؤال مع الشرح (category.type !== 'review')
+// ---------------------------------------------------------------------------
+
+function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
+  const categoryId = category.id;
   const [questions, setQuestions] = useState<TravelQuestion[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -130,13 +291,11 @@ export default function TravelQuestionsStudy() {
   const [answeredWrong, setAnsweredWrong] = useState<string[]>([]);
   const [showArabic, setShowArabic] = useState(true);
 
-  useSEO({ title: `${category?.name_ar ?? ''} | أسئلة السفر للخارج | NurseHub Egypt` });
+  useSEO({ title: `${category.name_ar} | أسئلة السفر للخارج | NurseHub Egypt` });
 
   useEffect(() => {
-    if (!categoryId) return;
-    Promise.all([fetchTravelCategories(), fetchTravelQuestions(categoryId)])
-      .then(([cats, qs]) => {
-        setCategory(cats.find((c) => c.id === categoryId) ?? null);
+    fetchTravelQuestions(categoryId)
+      .then((qs) => {
         setQuestions(qs);
         const progress = loadTravelProgress(categoryId);
         setIndex(Math.min(progress.currentIndex, Math.max(qs.length - 1, 0)));
@@ -149,7 +308,7 @@ export default function TravelQuestionsStudy() {
 
   if (loading) return <LoadingBlock />;
   if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
-  if (!category || questions.length === 0) {
+  if (questions.length === 0) {
     return (
       <div className="mx-auto max-w-lg px-4 py-16 text-center">
         <div className="text-6xl">❓</div>
