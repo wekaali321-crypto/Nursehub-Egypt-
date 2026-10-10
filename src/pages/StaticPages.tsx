@@ -63,7 +63,7 @@ export function Contact() {
   const { settings } = useStore();
   const { lang } = useI18n();
   const isEn = lang === "en";
-  const email = settings.contactEmail || "info@nursehub.eg";
+  const email = settings.contactEmail || "wekaali321@gmail.com";
   const details: [string, string, string][] = [["📧", isEn ? "Email" : "البريد", email]];
   if (settings.contactPhone) details.push(["📞", isEn ? "Phone" : "الهاتف", settings.contactPhone]);
   details.push(["📍", isEn ? "Address" : "العنوان", settings.contactAddress || (isEn ? "Egypt" : "مصر")]);
