@@ -59,14 +59,25 @@ export function About() {
 
 export function Contact() {
   const [sent, setSent] = useState(false);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const { settings } = useStore();
   const { lang } = useI18n();
   const isEn = lang === "en";
-  const details: [string, string, string][] = isEn
-    ? [["📧", "Email", "info@nursehub.eg"], ["📞", "Phone", "+20 100 000 0000"], ["📍", "Address", "Cairo, Egypt"], ["🕐", "Hours", "Daily 9am - 9pm"]]
-    : [["📧", "البريد", "info@nursehub.eg"], ["📞", "الهاتف", "+20 100 000 0000"], ["📍", "العنوان", "القاهرة، مصر"], ["🕐", "الدوام", "يومياً 9ص - 9م"]];
+  const email = settings.contactEmail || "info@nursehub.eg";
+  const details: [string, string, string][] = [["📧", isEn ? "Email" : "البريد", email]];
+  if (settings.contactPhone) details.push(["📞", isEn ? "Phone" : "الهاتف", settings.contactPhone]);
+  details.push(["📍", isEn ? "Address" : "العنوان", settings.contactAddress || (isEn ? "Egypt" : "مصر")]);
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`NurseHub Egypt - ${form.name}`);
+    const body = encodeURIComponent(`${form.message}\n\n${form.name} <${form.email}>`);
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+    setSent(true);
+  };
+  const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-800";
   return (
     <Wrap titleAr="اتصل بنا" titleEn="Contact Us">
-      <p>{isEn ? "We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible." : "نسعد بتواصلك معنا! املأ النموذج التالي وسنرد عليك في أقرب وقت."}</p>
+      <p>{isEn ? "We'd love to hear from you! Fill out the form below, or email us directly, and we'll get back to you as soon as possible." : "نسعد بتواصلك معنا! املأ النموذج التالي أو راسلنا مباشرة على البريد وسنرد عليك في أقرب وقت."}</p>
       <div className="grid gap-6 not-prose md:grid-cols-2">
         <div className="space-y-3">
           {details.map(([i, t, v]) => (
@@ -74,12 +85,12 @@ export function Contact() {
           ))}
         </div>
         {sent ? (
-          <div className="flex items-center justify-center rounded-2xl bg-emerald-50 p-8 text-center font-bold text-emerald-600 dark:bg-emerald-500/10">{isEn ? "✅ Your message was sent successfully!" : "✅ تم إرسال رسالتك بنجاح!"}</div>
+          <div className="flex items-center justify-center rounded-2xl bg-emerald-50 p-8 text-center font-bold text-emerald-600 dark:bg-emerald-500/10">{isEn ? "✅ Your email app opened with the message. Press send there to deliver it." : "✅ تم فتح تطبيق البريد برسالتك، اضغط إرسال هناك لإتمام الإرسال."}</div>
         ) : (
-          <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} className="space-y-3 rounded-2xl border border-slate-200 p-5 dark:border-slate-800">
-            <input required placeholder={isEn ? "Name" : "الاسم"} className="w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-800" />
-            <input required type="email" placeholder={isEn ? "Email" : "البريد الإلكتروني"} className="w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-800" />
-            <textarea required placeholder={isEn ? "Your message" : "رسالتك"} rows={4} className="w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-800" />
+          <form onSubmit={submit} className="space-y-3 rounded-2xl border border-slate-200 p-5 dark:border-slate-800">
+            <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder={isEn ? "Name" : "الاسم"} className={inp} />
+            <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder={isEn ? "Email" : "البريد الإلكتروني"} className={inp} />
+            <textarea required value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder={isEn ? "Your message" : "رسالتك"} rows={4} className={inp} />
             <button className="w-full rounded-full bg-sky-500 py-2.5 font-bold text-white">{isEn ? "Send" : "إرسال"}</button>
           </form>
         )}
@@ -152,6 +163,13 @@ export function Privacy() {
           <ul><li>Improving content and services</li><li>Sending updates and offers</li><li>Analyzing site performance</li></ul>
           <h2>Cookies</h2>
           <p>We use cookies to improve the browsing experience and display relevant ads.</p>
+          <h2>Advertising (Google AdSense)</h2>
+          <p>We use Google AdSense to display ads. Third-party vendors, including Google, use cookies to serve ads based on your previous visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our site and/or other sites on the Internet.</p>
+          <p>You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>. You can also opt out of third-party vendors' use of cookies for personalized advertising at <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer">aboutads.info</a>. To learn how Google uses data, see <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses data from sites that use its services</a>.</p>
+          <h2>Third-Party Services</h2>
+          <p>We use Supabase to store site data and Vercel for hosting. These providers process technical data (such as IP address) as needed to operate the service.</p>
+          <h2>Your Rights</h2>
+          <p>You may request access to or deletion of your personal data at any time through the Contact Us page.</p>
           <h2>Data Security</h2>
           <p>We apply advanced security measures to protect your data from unauthorized access.</p>
         </>
@@ -164,6 +182,13 @@ export function Privacy() {
           <ul><li>تحسين المحتوى والخدمات</li><li>إرسال التحديثات والعروض</li><li>تحليل أداء الموقع</li></ul>
           <h2>ملفات تعريف الارتباط (Cookies)</h2>
           <p>نستخدم الكوكيز لتحسين تجربة التصفح وعرض إعلانات مناسبة.</p>
+          <h2>الإعلانات (Google AdSense)</h2>
+          <p>نستخدم خدمة Google AdSense لعرض الإعلانات. تستخدم أطراف ثالثة، ومنها Google، ملفات تعريف الارتباط لعرض إعلانات بناءً على زياراتك السابقة لموقعنا ولمواقع أخرى. ويتيح استخدام Google لكوكيز الإعلانات لها ولشركائها عرض إعلانات لك بناءً على زيارتك لموقعنا و/أو مواقع أخرى على الإنترنت.</p>
+          <p>يمكنك إلغاء الاشتراك في الإعلانات المخصصة من خلال <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">إعدادات إعلانات Google</a>، كما يمكنك إلغاء استخدام الأطراف الثالثة للكوكيز في الإعلانات المخصصة عبر <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer">aboutads.info</a>. ولمعرفة كيف تستخدم Google البيانات راجع <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">كيف تستخدم Google البيانات من المواقع التي تستخدم خدماتها</a>.</p>
+          <h2>خدمات الأطراف الثالثة</h2>
+          <p>نستخدم Supabase لتخزين بيانات الموقع وVercel للاستضافة، وتعالج هذه الخدمات بيانات تقنية (مثل عنوان IP) بالقدر اللازم لتشغيل الخدمة.</p>
+          <h2>حقوقك</h2>
+          <p>يمكنك في أي وقت طلب الاطلاع على بياناتك الشخصية أو حذفها عبر صفحة اتصل بنا.</p>
           <h2>أمان البيانات</h2>
           <p>نطبق إجراءات أمنية متقدمة لحماية بياناتك من الوصول غير المصرح به.</p>
         </>
