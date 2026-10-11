@@ -92,13 +92,46 @@ export async function deleteTravelReviewSection(id: string): Promise<void> {
 
 // ---------- Questions ----------
 
-export async function fetchTravelQuestions(categoryId?: string): Promise<TravelQuestion[]> {
+// PostgREST caps a single response (1000 rows by default), so large tables must be read in pages.
+const PAGE_SIZE = 1000;
+
+async function fetchAllPages<T>(columns: string, categoryId?: string): Promise<T[]> {
   if (!supabase) return [];
-  let query = supabase.from('travel_questions').select('*').order('order_num', { ascending: true });
-  if (categoryId) query = query.eq('category_id', categoryId);
-  const { data, error } = await query;
-  if (error) throw error;
-  return (data ?? []) as TravelQuestion[];
+  const out: T[] = [];
+  for (let from = 0; ; from += PAGE_SIZE) {
+    let query = supabase
+      .from('travel_questions')
+      .select(columns)
+      .order('order_num', { ascending: true })
+      .order('id', { ascending: true })
+      .range(from, from + PAGE_SIZE - 1);
+    if (categoryId) query = query.eq('category_id', categoryId);
+    const { data, error } = await query;
+    if (error) throw error;
+    const rows = (data ?? []) as unknown as T[];
+    out.push(...rows);
+    if (rows.length < PAGE_SIZE) break;
+  }
+  return out;
+}
+
+export async function fetchTravelQuestions(categoryId?: string): Promise<TravelQuestion[]> {
+  return fetchAllPages<TravelQuestion>('*', categoryId);
+}
+
+export type TravelQuestionLite = Pick<TravelQuestion, 'id' | 'category_id' | 'question_en' | 'question_ar'>;
+
+/** Light version for global search (no choices/rationale). */
+export async function fetchTravelQuestionsLite(): Promise<TravelQuestionLite[]> {
+  return fetchAllPages<TravelQuestionLite>('id,category_id,question_en,question_ar');
+}
+
+/** Per-category question counts without downloading the questions. */
+export async function fetchTravelQuestionCounts(): Promise<Record<string, number>> {
+  const rows = await fetchAllPages<{ category_id: string }>('category_id');
+  const counts: Record<string, number> = {};
+  for (const r of rows) counts[r.category_id] = (counts[r.category_id] ?? 0) + 1;
+  return counts;
 }
 
 export async function upsertTravelQuestion(q: TravelQuestion): Promise<void> {

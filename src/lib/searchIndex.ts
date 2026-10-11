@@ -14,7 +14,7 @@ import { fetchOperatingRoomTopics, type OperatingRoomTopic } from "./operatingRo
 import { fetchObgynTopics, type ObgynTopic } from "./obgynTopicsApi";
 import { fetchClinicalProtocols, type ClinicalProtocol } from "./clinicalProtocolsApi";
 import { fetchLasaPairs, type LasaPair } from "./lasaApi";
-import { fetchTravelQuestions, type TravelQuestion } from "./travelQuestionsApi";
+import { fetchTravelQuestionsLite, type TravelQuestionLite } from "./travelQuestionsApi";
 
 interface ExtraSearchIndex {
   icuTopics: IcuTopic[];
@@ -32,7 +32,7 @@ interface ExtraSearchIndex {
   obgynTopics: ObgynTopic[];
   protocols: ClinicalProtocol[];
   lasaPairs: LasaPair[];
-  travelQuestions: TravelQuestion[];
+  travelQuestions: TravelQuestionLite[];
 }
 
 const empty: ExtraSearchIndex = { icuTopics: [], dialysisTopics: [], radiologyTopics: [], nicuTopics: [], pharmacologyTopics: [], terminologyTopics: [], firstAidTopics: [], erReceptionTopics: [], pediatricTopics: [], anatomyTopics: [], fundamentalsTopics: [], operatingRoomTopics: [], obgynTopics: [], protocols: [], lasaPairs: [], travelQuestions: [] };
@@ -56,7 +56,7 @@ async function loadIndex(): Promise<ExtraSearchIndex> {
     fetchObgynTopics().catch(() => []),
     fetchClinicalProtocols().catch(() => []),
     fetchLasaPairs().catch(() => []),
-    fetchTravelQuestions().catch(() => []),
+    fetchTravelQuestionsLite().catch(() => []),
   ]);
   return { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, lasaPairs, travelQuestions };
 }

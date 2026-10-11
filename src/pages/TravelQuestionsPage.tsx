@@ -13,6 +13,7 @@ import { useParams, Link } from 'react-router-dom';
 import {
   fetchTravelCategories,
   fetchTravelQuestions,
+  fetchTravelQuestionCounts,
   fetchTravelReviewSections,
   loadTravelProgress,
   saveTravelProgress,
@@ -49,11 +50,9 @@ export function TravelQuestionsHome() {
   });
 
   useEffect(() => {
-    Promise.all([fetchTravelCategories(), fetchTravelQuestions()])
-      .then(([cats, qs]) => {
+    Promise.all([fetchTravelCategories(), fetchTravelQuestionCounts()])
+      .then(([cats, c]) => {
         setCategories(cats);
-        const c: Record<string, number> = {};
-        for (const q of qs) c[q.category_id] = (c[q.category_id] ?? 0) + 1;
         setCounts(c);
       })
       .catch((e) => setError(String(e?.message ?? e)))
