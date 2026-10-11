@@ -150,3 +150,9 @@ export function resetTravelProgress(categoryId: string): void {
     /* ignore */
   }
 }
+
+export async function deleteTravelQuestions(ids: string[]): Promise<void> {
+  if (!supabase) throw new Error('Supabase client not initialized');
+  const { error } = await supabase.from('travel_questions').delete().in('id', ids);
+  if (error) throw error;
+}
