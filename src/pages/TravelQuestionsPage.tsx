@@ -107,7 +107,11 @@ export function TravelQuestionsHome() {
             <Link
               key={cat.id}
               to={`/travel-questions/${cat.id}`}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+              className={`rounded-2xl border bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:bg-slate-900 ${
+                cat.highlight
+                  ? 'border-2 border-emerald-400 bg-gradient-to-l from-emerald-50 to-white sm:col-span-2 dark:border-emerald-500/50 dark:from-emerald-500/10 dark:to-slate-900'
+                  : 'border-slate-200 dark:border-slate-800'
+              }`}
             >
               <div className="flex items-center gap-3">
                 <div className="text-3xl">{cat.icon}</div>
