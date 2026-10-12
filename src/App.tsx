@@ -130,7 +130,6 @@ import ObgynAdmin from "./admin/ObgynAdmin";
 import { ExamCategoriesAdmin, ExamsAdmin, ExamQuestionsAdmin } from "./admin/LicensureExamAdmin";
 import { InterviewCategoriesAdmin, InterviewQuestionsAdmin } from "./admin/InterviewQuestionsAdmin";
 import { TravelCategoriesAdmin, TravelQuestionsAdmin } from "./admin/TravelQuestionsAdmin";
-import { TravelDuplicatesAdmin } from "./admin/TravelDuplicatesAdmin";
 import TerminologyQuizAdmin from "./admin/TerminologyQuizAdmin";
 import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
 import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
@@ -375,7 +374,6 @@ export default function App() {
                   <Route path="/admin/interview-questions" element={<Admin><InterviewQuestionsAdmin /></Admin>} />
                   <Route path="/admin/travel-categories" element={<Admin><TravelCategoriesAdmin /></Admin>} />
                   <Route path="/admin/travel-questions" element={<Admin><TravelQuestionsAdmin /></Admin>} />
-                  <Route path="/admin/travel-duplicates" element={<Admin><TravelDuplicatesAdmin /></Admin>} />
                   <Route path="/admin/terminology-quiz" element={<Admin><TerminologyQuizAdmin /></Admin>} />
                   <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
                   <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />

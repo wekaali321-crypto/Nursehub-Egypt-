@@ -34,7 +34,6 @@ const nav: NavItem[] = [
   { p: "/admin/radiology", l: "قسم الأشعة (Radiology)", i: "🩻" },
   { p: "/admin/travel-categories", l: "أقسام أسئلة السفر للخارج", i: "✈️" },
   { p: "/admin/travel-questions", l: "أسئلة السفر للخارج", i: "🌍" },
-  { p: "/admin/travel-duplicates", l: "حذف المكرر (أسئلة السفر)", i: "🧹" },
   { p: "/admin/nicu", l: "قسم الحضانة (NICU)", i: "👶" },
   { p: "/admin/pharmacology", l: "قسم الفارماكولوجي (Pharmacology)", i: "🧪" },
   { p: "/admin/terminology", l: "قسم المصطلحات الطبية (Terminology)", i: "🔤" },
