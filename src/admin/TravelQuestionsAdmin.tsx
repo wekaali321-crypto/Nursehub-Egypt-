@@ -329,20 +329,34 @@ export function TravelQuestionsAdmin() {
               </button>
             </div>
 
-            <label className="block mb-3">
-              <span className="block text-xs text-slate-500 mb-1">الإجابة الصحيحة (correct_letter)</span>
-              <select
-                className="w-full rounded-lg border border-slate-200 p-2 text-sm"
-                value={form.correct_letter}
-                onChange={(e) => setForm({ ...form, correct_letter: e.target.value })}
-              >
-                {form.choices.map((c) => (
-                  <option key={c.letter} value={c.letter}>
-                    {c.letter}
-                  </option>
-                ))}
-              </select>
-            </label>
+            <div className="mb-3">
+              <span className="block text-xs text-slate-500 mb-1">
+                الإجابة الصحيحة (correct_letter) — اختر إجابة واحدة، أو أكثر من إجابة لسؤال "اختار كل ما ينطبق"
+              </span>
+              <div className="flex flex-wrap gap-3">
+                {form.choices.map((c) => {
+                  const set = form.correct_letter.split(',').map((x) => x.trim()).filter(Boolean);
+                  const checked = set.includes(c.letter);
+                  return (
+                    <label key={c.letter} className="flex items-center gap-1 text-sm">
+                      <input
+                        type="checkbox"
+                        checked={checked}
+                        onChange={() => {
+                          const next = checked ? set.filter((x) => x !== c.letter) : [...set, c.letter];
+                          next.sort();
+                          setForm({ ...form, correct_letter: next.join(',') });
+                        }}
+                      />
+                      {c.letter}
+                    </label>
+                  );
+                })}
+              </div>
+              {form.correct_letter.includes(',') && (
+                <p className="mt-1 text-xs text-amber-600">سؤال متعدد الاختيارات: سيظهر للطالب تنبيه ويجب اختيار كل الإجابات الصحيحة.</p>
+              )}
+            </div>
 
             <TextAreaField label="الشرح بالعربي (rationale_ar)" value={form.rationale_ar} onChange={(v) => setForm({ ...form, rationale_ar: v })} />
             <TextAreaField label="Rationale (English)" value={form.rationale_en} onChange={(v) => setForm({ ...form, rationale_en: v })} />

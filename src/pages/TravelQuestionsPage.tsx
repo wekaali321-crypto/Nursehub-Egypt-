@@ -290,6 +290,8 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
 
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
+  // Multi-answer ("select all that apply") questions: letters picked so far
+  const [picked, setPicked] = useState<string[]>([]);
   const [answeredCorrectly, setAnsweredCorrectly] = useState<string[]>([]);
   const [answeredWrong, setAnsweredWrong] = useState<string[]>([]);
   const [showArabic, setShowArabic] = useState(true);
@@ -324,8 +326,12 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
   }
 
   const q = questions[index];
-  const isAnswered = selected !== null;
-  const isCorrect = selected === q.correct_letter;
+  const correctSet = q.correct_letter.split(',').map((x) => x.trim()).filter(Boolean);
+  const isMulti = correctSet.length > 1;
+  const multiDone = isMulti && correctSet.every((l) => picked.includes(l));
+  const multiHadWrong = isMulti && picked.some((l) => !correctSet.includes(l));
+  const isAnswered = isMulti ? multiDone : selected !== null;
+  const isCorrect = isMulti ? multiDone && !multiHadWrong : selected === q.correct_letter;
 
   const arabicChoiceByLetter = new Map((q.choices_ar ?? []).map((c) => [c.letter, c.text]));
   const displayedQuestion = showArabic && q.question_ar ? q.question_ar : q.question_en;
@@ -340,12 +346,10 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
     saveTravelProgress(categoryId, { currentIndex: nextIndex, answeredCorrectly: correct, answeredWrong: wrong });
   }
 
-  function handleSelect(letter: string) {
-    if (isAnswered) return;
-    setSelected(letter);
+  function record(isRight: boolean) {
     let correct = answeredCorrectly;
     let wrong = answeredWrong;
-    if (letter === q.correct_letter) {
+    if (isRight) {
       if (!correct.includes(q.id)) correct = [...correct, q.id];
       setAnsweredCorrectly(correct);
     } else {
@@ -355,10 +359,26 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
     persist(index, correct, wrong);
   }
 
+  function handleSelect(letter: string) {
+    if (isAnswered) return;
+    if (isMulti) {
+      if (picked.includes(letter)) return;
+      const next = [...picked, letter];
+      setPicked(next);
+      if (correctSet.every((l) => next.includes(l))) {
+        record(!next.some((l) => !correctSet.includes(l)));
+      }
+      return;
+    }
+    setSelected(letter);
+    record(letter === q.correct_letter);
+  }
+
   function goTo(next: number) {
     const clamped = Math.max(0, Math.min(next, questions.length - 1));
     setIndex(clamped);
     setSelected(null);
+    setPicked([]);
     persist(clamped, answeredCorrectly, answeredWrong);
   }
 
@@ -367,6 +387,7 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
     resetTravelProgress(categoryId);
     setIndex(0);
     setSelected(null);
+    setPicked([]);
     setAnsweredCorrectly([]);
     setAnsweredWrong([]);
   }
@@ -421,6 +442,13 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
         dir={showArabic ? 'rtl' : 'ltr'}
       >
         <div className="mb-4 font-medium leading-relaxed text-slate-800 dark:text-white">{displayedQuestion}</div>
+        {isMulti && (
+          <div className="mb-4 rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-sm font-semibold text-amber-800 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-300">
+            {showArabic
+              ? '⚠️ تنبيه: هذا السؤال متعدد الاختيارات — اختر كل الإجابات الصحيحة. ستظهر باقي النتائج بعد اختيار كل الإجابات الصحيحة.'
+              : '⚠️ Note: this is a multiple-response question — select ALL correct answers. The remaining results appear once you have found all the correct ones.'}
+          </div>
+        )}
         {q.image_url && (
           <div className="mb-4 overflow-hidden rounded-xl border border-slate-200 bg-white p-2 dark:border-slate-700">
             <img
@@ -435,12 +463,21 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
 
         <div className="space-y-2">
           {displayedChoices.map((choice) => {
-            const isThisSelected = selected === choice.letter;
-            const isThisCorrect = choice.letter === q.correct_letter;
+            const isThisSelected = isMulti ? picked.includes(choice.letter) : selected === choice.letter;
+            const isThisCorrect = correctSet.includes(choice.letter);
 
             let stateClasses =
               'border-slate-200 hover:border-blue-300 hover:bg-blue-50 dark:border-slate-700 dark:hover:border-blue-700 dark:hover:bg-slate-800';
-            if (isAnswered && isThisCorrect) {
+            if (isMulti) {
+              if (isThisSelected && isThisCorrect) {
+                stateClasses = 'border-emerald-400 bg-emerald-50 dark:border-emerald-700 dark:bg-emerald-950/40';
+              } else if (isThisSelected && !isThisCorrect) {
+                stateClasses = 'border-red-300 bg-red-50 dark:border-red-800 dark:bg-red-950/40';
+              } else if (multiDone && !isThisCorrect) {
+                // once every correct answer is found, the wrong options are revealed in red
+                stateClasses = 'border-red-300 bg-red-50 dark:border-red-800 dark:bg-red-950/40';
+              }
+            } else if (isAnswered && isThisCorrect) {
               stateClasses = 'border-emerald-400 bg-emerald-50 dark:border-emerald-700 dark:bg-emerald-950/40';
             } else if (isAnswered && isThisSelected && !isThisCorrect) {
               stateClasses = 'border-red-300 bg-red-50 dark:border-red-800 dark:bg-red-950/40';
@@ -452,7 +489,7 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
               <button
                 key={choice.letter}
                 onClick={() => handleSelect(choice.letter)}
-                disabled={isAnswered}
+                disabled={isAnswered || (isMulti && isThisSelected)}
                 className={`flex w-full items-start gap-3 rounded-xl border p-3 text-right transition-colors rtl:text-right ${stateClasses}`}
               >
                 <span className="font-semibold text-slate-500 dark:text-slate-400">{choice.letter}.</span>
@@ -471,7 +508,11 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
             }`}
           >
             <div className={`mb-2 font-semibold ${isCorrect ? 'text-emerald-700 dark:text-emerald-400' : 'text-red-700 dark:text-red-400'}`}>
-              {isCorrect ? '✅ إجابة صحيحة (Correct)' : `❌ إجابة خاطئة — الصحيح هو (${q.correct_letter})`}
+              {isCorrect
+                ? '✅ إجابة صحيحة (Correct)'
+                : isMulti
+                  ? `❌ أخطأت في بعض الاختيارات — الإجابات الصحيحة هي (${correctSet.join(' ، ')})`
+                  : `❌ إجابة خاطئة — الصحيح هو (${q.correct_letter})`}
             </div>
             <div className="mb-2 text-slate-700 dark:text-slate-200">{q.rationale_ar}</div>
             <div className="border-t border-slate-200 pt-2 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400">
