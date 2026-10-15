@@ -41,6 +41,8 @@ export interface TravelQuestion {
   correct_letter: string;
   rationale_ar: string;
   rationale_en: string;
+  /** Optional exhibit image (e.g. an ECG strip) shown above the question. */
+  image_url?: string | null;
 }
 
 // ---------- Categories ----------

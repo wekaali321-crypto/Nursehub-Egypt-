@@ -295,6 +295,8 @@ export function TravelQuestionsAdmin() {
             </div>
             <TextAreaField label="نص السؤال (question_en)" value={form.question_en} onChange={(v) => setForm({ ...form, question_en: v })} />
             <TextAreaField label="ترجمة السؤال بالعربي (question_ar)" value={form.question_ar ?? ''} onChange={(v) => setForm({ ...form, question_ar: v })} />
+            <TextField label="رابط صورة السؤال (اختياري، مثل رسم القلب): /travel-ecg/xxx.jpg أو رابط كامل" value={form.image_url ?? ''} onChange={(v) => setForm({ ...form, image_url: v.trim() || null })} />
+            {form.image_url && <img src={form.image_url} alt="" className="mb-3 max-h-48 rounded-lg border border-slate-200" />}
 
             <div className="mb-3">
               <span className="block text-xs text-slate-500 mb-2">الاختيارات (Choices) — إنجليزي وترجمتها بالعربي</span>

@@ -421,6 +421,17 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
         dir={showArabic ? 'rtl' : 'ltr'}
       >
         <div className="mb-4 font-medium leading-relaxed text-slate-800 dark:text-white">{displayedQuestion}</div>
+        {q.image_url && (
+          <div className="mb-4 overflow-hidden rounded-xl border border-slate-200 bg-white p-2 dark:border-slate-700">
+            <img
+              src={q.image_url}
+              alt={q.question_en.slice(0, 80)}
+              loading="lazy"
+              className="mx-auto max-h-[420px] w-full object-contain"
+              dir="ltr"
+            />
+          </div>
+        )}
 
         <div className="space-y-2">
           {displayedChoices.map((choice) => {
