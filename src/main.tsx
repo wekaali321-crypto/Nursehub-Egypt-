@@ -1,3 +1,4 @@
+import "./lib/safeStorage"; // must run first: blocked web storage in in-app browsers must not crash the app
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";

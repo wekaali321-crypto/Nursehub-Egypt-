@@ -21,12 +21,14 @@ function rand(): string {
   }
 }
 
-function stored(storage: Storage | undefined, key: string): string {
+function stored(kind: "local" | "session", key: string): string {
+  // Merely touching window.localStorage can throw in some in-app browsers (blocked storage), so everything is guarded.
   try {
-    let v = storage?.getItem(key) || "";
+    const storage = kind === "local" ? window.localStorage : window.sessionStorage;
+    let v = storage.getItem(key) || "";
     if (!v) {
       v = rand();
-      storage?.setItem(key, v);
+      storage.setItem(key, v);
     }
     return v;
   } catch {
@@ -35,11 +37,11 @@ function stored(storage: Storage | undefined, key: string): string {
 }
 
 export function getVisitorId(): string {
-  return stored(typeof localStorage === "undefined" ? undefined : localStorage, VID_KEY);
+  return stored("local", VID_KEY);
 }
 
 function getSessionId(): string {
-  return stored(typeof sessionStorage === "undefined" ? undefined : sessionStorage, SID_KEY);
+  return stored("session", SID_KEY);
 }
 
 function isBot(): boolean {
@@ -78,13 +80,27 @@ function sourceOf(): string {
   return "other";
 }
 
-const trackable = () => isSupabaseConfigured() && !!supabase && !isBot();
+const trackable = () => {
+  try {
+    return isSupabaseConfigured() && !!supabase && !isBot();
+  } catch {
+    return false;
+  }
+};
 
 let lastPath = "";
 let appOpenSent = false;
 
 /** Call on every route change. Skips the admin area. */
 export function trackPageview(path: string) {
+  try {
+    trackPageviewUnsafe(path);
+  } catch {
+    /* tracking must never break the app */
+  }
+}
+
+function trackPageviewUnsafe(path: string) {
   if (!trackable() || path.startsWith("/admin") || path === lastPath) return;
   lastPath = path;
   const app = runningAsApp();
@@ -100,6 +116,14 @@ export function trackPageview(path: string) {
 
 /** Live presence: one lightweight ping per minute while the tab is visible. */
 export function startHeartbeat(getPath: () => string) {
+  try {
+    return startHeartbeatUnsafe(getPath);
+  } catch {
+    return () => undefined;
+  }
+}
+
+function startHeartbeatUnsafe(getPath: () => string) {
   if (!trackable()) return () => undefined;
   const ping = () => {
     if (document.visibilityState !== "visible" || getPath().startsWith("/admin")) return;
@@ -121,6 +145,14 @@ export function startHeartbeat(getPath: () => string) {
 export type InstallEventKind = "install_click" | "installed" | "apk_download" | "app_open";
 
 export function trackInstallEvent(kind: InstallEventKind) {
+  try {
+    trackInstallEventUnsafe(kind);
+  } catch {
+    /* tracking must never break the app */
+  }
+}
+
+function trackInstallEventUnsafe(kind: InstallEventKind) {
   if (!trackable()) return;
   const platform = runningAsApp() && kind === "app_open" ? (document.referrer.startsWith("android-app://") ? "android-app" : "pwa") : detectInstallPlatform();
   void supabase!
@@ -129,6 +161,8 @@ export function trackInstallEvent(kind: InstallEventKind) {
     .then(() => undefined, () => undefined);
 }
 
-if (typeof window !== "undefined") {
-  window.addEventListener("appinstalled", () => trackInstallEvent("installed"));
+try {
+  if (typeof window !== "undefined") window.addEventListener("appinstalled", () => trackInstallEvent("installed"));
+} catch {
+  /* ignore */
 }
