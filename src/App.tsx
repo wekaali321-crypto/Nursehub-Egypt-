@@ -1,5 +1,6 @@
-import { lazy, Suspense, type ReactNode } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { lazy, Suspense, useEffect, type ReactNode } from "react";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { trackPageview, startHeartbeat } from "./lib/siteTracker";
 import { ThemeProvider, AuthProvider, useAuth } from "./lib/theme";
 import { UserAuthProvider } from "./lib/userAuth";
 import { I18nProvider } from "./lib/i18n";
@@ -141,6 +142,7 @@ import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
 import IVCompatibilityAdmin from "./admin/IVCompatibilityAdmin";
 import { EarningsAdmin, AdsManager, AffiliateManager, PaymentsAdmin } from "./admin/Monetization";
 import { AnalyticsAdmin } from "./admin/Analytics";
+import { TrafficAdmin } from "./admin/TrafficAdmin";
 import { TrashAdmin, VersionsAdmin, MaintenanceAdmin, NotificationsAdmin } from "./admin/SystemAdmin";
 import { QuizAdmin } from "./admin/QuizAdmin";
 import { HomeCategoriesAdmin } from "./admin/HomeCategoriesAdmin";
@@ -223,6 +225,16 @@ function Admin({ children }: { children: ReactNode }) {
   );
 }
 
+/** Anonymous real-visitor tracking: page views per route change plus a live-presence heartbeat. */
+function SiteTracker() {
+  const { pathname, search } = useLocation();
+  useEffect(() => {
+    trackPageview(pathname + search);
+  }, [pathname, search]);
+  useEffect(() => startHeartbeat(() => window.location.pathname), []);
+  return null;
+}
+
 export default function App() {
   return (
     <ErrorBoundary>
@@ -235,6 +247,7 @@ export default function App() {
             <UserAuthProvider>
             <AuthProvider>
               <BrowserRouter>
+                <SiteTracker />
                 <Routes>
                   <Route path="/" element={<Public><Home /></Public>} />
                   <Route path="/category/:cat" element={<Public><CategoryPage /></Public>} />
@@ -408,6 +421,7 @@ export default function App() {
                   <Route path="/admin/payment-settings" element={<Admin><PaymentSettings /></Admin>} />
                   <Route path="/admin/orders" element={<Admin><OrdersAdmin /></Admin>} />
                   <Route path="/admin/coupons" element={<Admin><CouponsAdmin /></Admin>} />
+                  <Route path="/admin/traffic" element={<Admin><TrafficAdmin /></Admin>} />
                   <Route path="/admin/analytics" element={<Admin><AnalyticsAdmin /></Admin>} />
                   <Route path="/admin/users" element={<Admin><UsersAdmin /></Admin>} />
                   <Route path="/admin/home-categories" element={<Admin><HomeCategoriesAdmin /></Admin>} />

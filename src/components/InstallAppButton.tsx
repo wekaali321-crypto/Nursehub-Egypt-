@@ -1,3 +1,4 @@
+import { trackInstallEvent } from "../lib/siteTracker";
 import { useEffect, useState, type ReactNode } from "react";
 import { useI18n } from "../lib/i18n";
 import { detectInstallPlatform, isStandalone, usePwaInstall, type InstallPlatform } from "../lib/pwaInstall";
@@ -146,6 +147,7 @@ export default function InstallAppButton() {
   if (standalone || justInstalled) return null;
 
   const onClick = async () => {
+    trackInstallEvent("install_click");
     if (canPrompt) {
       const outcome = await promptInstall();
       if (outcome) return;
@@ -175,6 +177,7 @@ export default function InstallAppButton() {
     <a
       href={APK_URL}
       download="NurseHub-Egypt.apk"
+      onClick={() => trackInstallEvent("apk_download")}
       className="mt-3 flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/15 px-4 py-2 text-xs font-bold text-white backdrop-blur hover:bg-white/25 sm:text-sm"
     >
       <span aria-hidden>⬇️</span>
@@ -227,7 +230,7 @@ export default function InstallAppButton() {
                   <li>{ar ? "افتح الملف بعد التحميل واسمح بالتثبيت من هذا المصدر لو طلب منك الهاتف." : "Open the file and allow installing from this source if your phone asks."}</li>
                   <li>{ar ? "اضغط «تثبيت» — وهتلاقي أيقونة NurseHub في تطبيقاتك." : "Tap “Install” — the NurseHub icon appears in your apps."}</li>
                 </ol>
-                <a href={APK_URL} download="NurseHub-Egypt.apk" className="mt-2 block rounded-lg bg-emerald-600 py-2 text-center text-sm font-bold text-white hover:bg-emerald-700">
+                <a href={APK_URL} download="NurseHub-Egypt.apk" onClick={() => trackInstallEvent("apk_download")} className="mt-2 block rounded-lg bg-emerald-600 py-2 text-center text-sm font-bold text-white hover:bg-emerald-700">
                   ⬇️ {ar ? "تحميل APK" : "Download APK"}
                 </a>
               </div>

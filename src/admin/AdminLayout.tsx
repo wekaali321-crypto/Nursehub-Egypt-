@@ -75,6 +75,7 @@ const nav: NavItem[] = [
   { p: "/admin/orders", l: "الطلبات والفواتير", i: "🧾" },
   { p: "/admin/coupons", l: "الكوبونات", i: "🎟️" },
   { section: "التحليلات والإدارة" },
+  { p: "/admin/traffic", l: "الزوار والتنزيلات", i: "📡" },
   { p: "/admin/analytics", l: "التحليلات", i: "📈" },
   { p: "/admin/users", l: "المستخدمون والصلاحيات", i: "👥" },
   { p: "/admin/home-categories", l: "بطاقات الرئيسية", i: "🃏" },
