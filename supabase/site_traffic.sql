@@ -90,13 +90,13 @@ begin
     'daily', coalesce((select jsonb_agg(d order by d->>'day') from (
         select jsonb_build_object('day', g.day::date, 'visitors', coalesce(v.visitors,0), 'views', coalesce(v.views,0), 'installs', coalesce(i.installs,0)) d
         from generate_series(today - 29, today, interval '1 day') as g(day)
-        left join (select (created_at at time zone tz)::date day, count(distinct visitor_id) visitors, count(*) views from site_visits group by 1) v on v.day = g.day::date
-        left join (select (created_at at time zone tz)::date day, count(distinct visitor_id) installs from site_installs where kind in ('installed','apk_download') group by 1) i on i.day = g.day::date) x), '[]'::jsonb),
+        left join (select (created_at at time zone tz)::date as dy, count(distinct visitor_id) as visitors, count(*) as views from site_visits group by 1) v on v.dy = g.day::date
+        left join (select (created_at at time zone tz)::date as dy, count(distinct visitor_id) as installs from site_installs where kind in ('installed','apk_download') group by 1) i on i.dy = g.day::date) x), '[]'::jsonb),
     'monthly', coalesce((select jsonb_agg(m order by m->>'month' desc) from (
         select jsonb_build_object('month', to_char(g.mon,'YYYY-MM'), 'visitors', coalesce(v.visitors,0), 'views', coalesce(v.views,0), 'installs', coalesce(i.installs,0), 'app_users', coalesce(v.app_users,0)) m
         from generate_series(date_trunc('month', today::timestamp) - interval '11 months', date_trunc('month', today::timestamp), interval '1 month') as g(mon)
-        left join (select date_trunc('month', created_at at time zone tz) mon, count(distinct visitor_id) visitors, count(*) views, count(distinct visitor_id) filter (where is_app) app_users from site_visits group by 1) v on v.mon = g.mon
-        left join (select date_trunc('month', created_at at time zone tz) mon, count(distinct visitor_id) installs from site_installs where kind in ('installed','apk_download') group by 1) i on i.mon = g.mon) y), '[]'::jsonb),
+        left join (select date_trunc('month', created_at at time zone tz) as mo, count(distinct visitor_id) as visitors, count(*) as views, count(distinct visitor_id) filter (where is_app) as app_users from site_visits group by 1) v on v.mo = g.mon
+        left join (select date_trunc('month', created_at at time zone tz) as mo, count(distinct visitor_id) as installs from site_installs where kind in ('installed','apk_download') group by 1) i on i.mo = g.mon) y), '[]'::jsonb),
     'installs_by_kind', coalesce((select jsonb_object_agg(kind, c) from (select kind, count(*) c from site_installs group by kind) k), '{}'::jsonb),
     'installs_by_platform', coalesce((select jsonb_object_agg(coalesce(platform,'unknown'), c) from (select platform, count(distinct visitor_id) c from site_installs where kind in ('installed','apk_download') group by platform) k), '{}'::jsonb),
     'devices_30d', coalesce((select jsonb_object_agg(coalesce(device_type,'unknown'), c) from (select device_type, count(distinct visitor_id) c from site_visits where created_at > now() - interval '30 days' group by 1) k), '{}'::jsonb),
