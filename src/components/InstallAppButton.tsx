@@ -14,6 +14,8 @@ const DotsIcon = () => (
   </svg>
 );
 
+const APK_URL = "/NurseHub-Egypt.apk";
+
 interface Guide { title: string; steps: ReactNode[]; note?: string }
 
 function guideFor(platform: InstallPlatform, ar: boolean): Guide {
@@ -168,6 +170,17 @@ export default function InstallAppButton() {
   };
 
   const guide = guideFor(platform, ar);
+  const isAndroid = platform.startsWith("android");
+  const apkLink = (
+    <a
+      href={APK_URL}
+      download="NurseHub-Egypt.apk"
+      className="mt-3 flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/15 px-4 py-2 text-xs font-bold text-white backdrop-blur hover:bg-white/25 sm:text-sm"
+    >
+      <span aria-hidden>⬇️</span>
+      {ar ? "أو حمّل ملف التطبيق (APK) لأندرويد" : "Or download the Android app (APK)"}
+    </a>
+  );
 
   return (
     <>
@@ -179,6 +192,7 @@ export default function InstallAppButton() {
         <span className="text-xl" aria-hidden>📲</span>
         {ar ? "حمّل الموقع كتطبيق على موبايلك" : "Install the site as an app"}
       </button>
+      {isAndroid && <div className="mx-auto flex max-w-xs justify-center">{apkLink}</div>}
 
       {open && (
         <div className="fixed inset-0 z-[80] flex items-end justify-center bg-black/60 p-0 sm:items-center sm:p-4" onClick={() => setOpen(false)} role="dialog" aria-modal="true" aria-label={guide.title}>
@@ -205,6 +219,19 @@ export default function InstallAppButton() {
                 </li>
               ))}
             </ol>
+            {isAndroid && (
+              <div className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-xs text-emerald-900 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-200">
+                <div className="mb-1 text-sm font-bold">{ar ? "طريقة أسهل: ملف التطبيق (APK)" : "Easier: the app file (APK)"}</div>
+                <ol className="list-decimal space-y-1 ps-5">
+                  <li>{ar ? "اضغط زر «تحميل APK» أدناه." : "Tap the “Download APK” button below."}</li>
+                  <li>{ar ? "افتح الملف بعد التحميل واسمح بالتثبيت من هذا المصدر لو طلب منك الهاتف." : "Open the file and allow installing from this source if your phone asks."}</li>
+                  <li>{ar ? "اضغط «تثبيت» — وهتلاقي أيقونة NurseHub في تطبيقاتك." : "Tap “Install” — the NurseHub icon appears in your apps."}</li>
+                </ol>
+                <a href={APK_URL} download="NurseHub-Egypt.apk" className="mt-2 block rounded-lg bg-emerald-600 py-2 text-center text-sm font-bold text-white hover:bg-emerald-700">
+                  ⬇️ {ar ? "تحميل APK" : "Download APK"}
+                </a>
+              </div>
+            )}
             {guide.note && <p className="mt-3 rounded-xl bg-amber-50 p-3 text-xs text-amber-800 dark:bg-amber-900/20 dark:text-amber-200">{guide.note}</p>}
 
             <div className="mt-5 flex flex-wrap gap-2">
