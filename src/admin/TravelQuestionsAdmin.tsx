@@ -19,7 +19,7 @@ import {
   type TravelChoice,
 } from '../lib/travelQuestionsApi';
 
-function AdminSection({ title, children }: { title: string; children: React.ReactNode }) {
+export function AdminSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="max-w-5xl mx-auto p-4 md:p-6" dir="rtl">
       <h1 className="text-xl font-bold text-slate-800 mb-4">{title}</h1>
@@ -28,7 +28,7 @@ function AdminSection({ title, children }: { title: string; children: React.Reac
   );
 }
 
-function TextField({
+export function TextField({
   label,
   value,
   onChange,
@@ -52,7 +52,7 @@ function TextField({
   );
 }
 
-function TextAreaField({
+export function TextAreaField({
   label,
   value,
   onChange,

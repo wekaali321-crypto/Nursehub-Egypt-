@@ -404,3 +404,12 @@ body {
     repeating-linear-gradient(to right, rgba(148,163,184,0.10) 0 1px, transparent 1px 20px),
     repeating-linear-gradient(to bottom, rgba(148,163,184,0.10) 0 1px, transparent 1px 20px);
 }
+
+/* Course chapters: figures with captions, zoomable images, responsive tables */
+.nh-fig { margin: 1.25rem 0; text-align: center; }
+.nh-fig img { margin: 0 auto; max-width: 100%; height: auto; border-radius: 0.6rem; }
+.nh-fig figcaption { margin-top: 0.4rem; font-size: 0.85rem; color: #64748b; }
+.dark .nh-fig figcaption { color: #94a3b8; }
+.course-content img { cursor: zoom-in; max-width: 100%; height: auto; }
+.course-content { overflow-wrap: anywhere; }
+.course-content table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }

@@ -156,6 +156,7 @@ const defaultMenu = [
   { label: "قسم النساء والتوليد", path: "/obgyn" },
   { label: "اختبارات مزاولة المهنة", path: "/tests/licensure" },
   { label: "أسئلة السفر للخارج", path: "/travel-questions" },
+  { label: "الكورسات", path: "/courses" },
   { label: "المتجر", path: "/store" },
 ];
 

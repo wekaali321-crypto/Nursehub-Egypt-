@@ -15,6 +15,7 @@ import { fetchObgynTopics, type ObgynTopic } from "./obgynTopicsApi";
 import { fetchClinicalProtocols, type ClinicalProtocol } from "./clinicalProtocolsApi";
 import { fetchLasaPairs, type LasaPair } from "./lasaApi";
 import { fetchTravelQuestionsLite, type TravelQuestionLite } from "./travelQuestionsApi";
+import { fetchCourseChaptersLite, type CourseChapterLite } from "./coursesApi";
 
 interface ExtraSearchIndex {
   icuTopics: IcuTopic[];
@@ -33,14 +34,15 @@ interface ExtraSearchIndex {
   protocols: ClinicalProtocol[];
   lasaPairs: LasaPair[];
   travelQuestions: TravelQuestionLite[];
+  courseChapters: CourseChapterLite[];
 }
 
-const empty: ExtraSearchIndex = { icuTopics: [], dialysisTopics: [], radiologyTopics: [], nicuTopics: [], pharmacologyTopics: [], terminologyTopics: [], firstAidTopics: [], erReceptionTopics: [], pediatricTopics: [], anatomyTopics: [], fundamentalsTopics: [], operatingRoomTopics: [], obgynTopics: [], protocols: [], lasaPairs: [], travelQuestions: [] };
+const empty: ExtraSearchIndex = { icuTopics: [], dialysisTopics: [], radiologyTopics: [], nicuTopics: [], pharmacologyTopics: [], terminologyTopics: [], firstAidTopics: [], erReceptionTopics: [], pediatricTopics: [], anatomyTopics: [], fundamentalsTopics: [], operatingRoomTopics: [], obgynTopics: [], protocols: [], lasaPairs: [], travelQuestions: [], courseChapters: [] };
 let cache: ExtraSearchIndex | null = null;
 let inFlight: Promise<ExtraSearchIndex> | null = null;
 
 async function loadIndex(): Promise<ExtraSearchIndex> {
-  const [icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, lasaPairs, travelQuestions] = await Promise.all([
+  const [icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, lasaPairs, travelQuestions, courseChapters] = await Promise.all([
     fetchIcuTopics().catch(() => []),
     fetchDialysisTopics().catch(() => []),
     fetchRadiologyTopics().catch(() => []),
@@ -57,8 +59,9 @@ async function loadIndex(): Promise<ExtraSearchIndex> {
     fetchClinicalProtocols().catch(() => []),
     fetchLasaPairs().catch(() => []),
     fetchTravelQuestionsLite().catch(() => []),
+    fetchCourseChaptersLite().catch(() => []),
   ]);
-  return { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, lasaPairs, travelQuestions };
+  return { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, lasaPairs, travelQuestions, courseChapters };
 }
 
 /** ICU nursing topics, clinical protocols & LASA drug pairs live in their own

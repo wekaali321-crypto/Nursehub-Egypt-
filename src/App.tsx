@@ -90,6 +90,10 @@ const LicensureExamStudy = lazy(() => import("./pages/LicensureExamPage"));
 const InterviewQuestionsPage = lazy(() => import("./pages/InterviewQuestionsPage"));
 const TravelQuestionsHome = lazy(() => import("./pages/TravelQuestionsPage").then((m) => ({ default: m.TravelQuestionsHome })));
 const TravelQuestionsStudy = lazy(() => import("./pages/TravelQuestionsPage"));
+const CoursesHome = lazy(() => import("./pages/CoursesPage").then((m) => ({ default: m.CoursesHome })));
+const CoursePage = lazy(() => import("./pages/CoursesPage").then((m) => ({ default: m.CoursePage })));
+const ChapterPage = lazy(() => import("./pages/CoursesPage").then((m) => ({ default: m.ChapterPage })));
+const CourseQuiz = lazy(() => import("./pages/CoursesPage").then((m) => ({ default: m.CourseQuiz })));
 
 // Static + admin (named exports) — imported normally, still split out as needed
 import { About, Contact, FAQ, Privacy, Terms } from "./pages/StaticPages";
@@ -130,6 +134,7 @@ import ObgynAdmin from "./admin/ObgynAdmin";
 import { ExamCategoriesAdmin, ExamsAdmin, ExamQuestionsAdmin } from "./admin/LicensureExamAdmin";
 import { InterviewCategoriesAdmin, InterviewQuestionsAdmin } from "./admin/InterviewQuestionsAdmin";
 import { TravelCategoriesAdmin, TravelQuestionsAdmin } from "./admin/TravelQuestionsAdmin";
+import { CoursesAdmin, CourseChaptersAdmin, CourseQuestionsAdmin } from "./admin/CoursesAdmin";
 import TerminologyQuizAdmin from "./admin/TerminologyQuizAdmin";
 import OrganDoseAdjustmentsAdmin from "./admin/OrganDoseAdjustmentsAdmin";
 import PregnancyLactationAdmin from "./admin/PregnancyLactationAdmin";
@@ -306,6 +311,10 @@ export default function App() {
                   <Route path="/interview-questions" element={<Public><InterviewQuestionsPage /></Public>} />
                   <Route path="/travel-questions" element={<Public><TravelQuestionsHome /></Public>} />
                   <Route path="/travel-questions/:categoryId" element={<Public><TravelQuestionsStudy /></Public>} />
+                  <Route path="/courses" element={<Public><CoursesHome /></Public>} />
+                  <Route path="/courses/:courseId" element={<Public><CoursePage /></Public>} />
+                  <Route path="/courses/:courseId/chapter/:chapterId" element={<Public><ChapterPage /></Public>} />
+                  <Route path="/courses/:courseId/quiz" element={<Public><CourseQuiz /></Public>} />
                   <Route path="/login" element={<Public><LoginPage /></Public>} />
                   <Route path="/register" element={<Public><RegisterPage /></Public>} />
                   <Route path="/forgot" element={<Public><ForgotPage /></Public>} />
@@ -374,6 +383,9 @@ export default function App() {
                   <Route path="/admin/interview-questions" element={<Admin><InterviewQuestionsAdmin /></Admin>} />
                   <Route path="/admin/travel-categories" element={<Admin><TravelCategoriesAdmin /></Admin>} />
                   <Route path="/admin/travel-questions" element={<Admin><TravelQuestionsAdmin /></Admin>} />
+                  <Route path="/admin/courses" element={<Admin><CoursesAdmin /></Admin>} />
+                  <Route path="/admin/course-chapters" element={<Admin><CourseChaptersAdmin /></Admin>} />
+                  <Route path="/admin/course-questions" element={<Admin><CourseQuestionsAdmin /></Admin>} />
                   <Route path="/admin/terminology-quiz" element={<Admin><TerminologyQuizAdmin /></Admin>} />
                   <Route path="/admin/organ-dose" element={<Admin><OrganDoseAdjustmentsAdmin /></Admin>} />
                   <Route path="/admin/pregnancy-lactation" element={<Admin><PregnancyLactationAdmin /></Admin>} />

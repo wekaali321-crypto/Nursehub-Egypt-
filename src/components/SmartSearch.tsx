@@ -15,7 +15,7 @@ interface Suggestion {
 
 export default function SmartSearch({ onNavigate, variant = "compact" }: { onNavigate?: () => void; variant?: "compact" | "hero" }) {
   const { articles, drugs } = useStore();
-  const { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions } = useExtraSearchIndex();
+  const { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters } = useExtraSearchIndex();
   const { t, lang } = useI18n();
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
@@ -97,7 +97,11 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
       .filter((tq) => [tq.question_ar, tq.question_en].filter(Boolean).join(" ").toLowerCase().includes(lower))
       .slice(0, 3)
       .map((tq) => ({ label: bilingual(tq.question_ar ?? tq.question_en, tq.question_en, lang).text, sub: t("search.travelQuestionsHeading"), to: `/travel-questions/${tq.category_id}`, icon: "✈️" }));
-    const results = [...fromDrugs, ...fromIcu, ...fromDialysis, ...fromRadiology, ...fromNicu, ...fromPharmacology, ...fromTerminology, ...fromFirstAid, ...fromERReception, ...fromPediatrics, ...fromAnatomy, ...fromFundamentals, ...fromOperatingRoom, ...fromObgyn, ...fromProtocols, ...fromTravel, ...fromArticles].slice(0, 8);
+    const fromCourses: Suggestion[] = courseChapters
+      .filter((c) => [c.title_ar, c.title_en].filter(Boolean).join(" ").toLowerCase().includes(lower))
+      .slice(0, 3)
+      .map((c) => ({ label: bilingual(c.title_ar, c.title_en, lang).text, sub: t("search.coursesHeading"), to: `/courses/${c.course_id}/chapter/${c.id}`, icon: c.icon || "🎓" }));
+    const results = [...fromDrugs, ...fromIcu, ...fromDialysis, ...fromRadiology, ...fromNicu, ...fromPharmacology, ...fromTerminology, ...fromFirstAid, ...fromERReception, ...fromPediatrics, ...fromAnatomy, ...fromFundamentals, ...fromOperatingRoom, ...fromObgyn, ...fromProtocols, ...fromTravel, ...fromCourses, ...fromArticles].slice(0, 8);
 
     // Log real search analytics once per distinct query (debounced by ref, not per keystroke render).
     if (q.trim().length >= 3 && searchLogged.current !== lower) {
@@ -105,7 +109,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
       logSearch(q.trim(), results.length, "instant", lang);
     }
     return results;
-  }, [q, articles, drugs, icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, lang]);
+  }, [q, articles, drugs, icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters, lang]);
 
   const go = (to: string) => {
     setQ(""); setOpen(false); onNavigate?.();
