@@ -57,6 +57,13 @@ const titleOf = (c: { title_ar: string; title_en: string }, ar: boolean) => (ar 
 // 1) Hub — /courses
 // ---------------------------------------------------------------------------
 
+/** Where a guide's breadcrumb root points: the Courses section, or the Drugs hub for drug guides. */
+function sectionOf(course: { section?: string }) {
+  return course.section === 'drugs'
+    ? { path: '/drugs', label: (ar: boolean) => (ar ? 'الأدوية' : 'Drugs') }
+    : { path: '/courses', label: (ar: boolean) => (ar ? 'الكورسات' : 'Courses') };
+}
+
 export function CoursesHome() {
   const { lang } = useI18n();
   const ar = lang === 'ar';
@@ -74,7 +81,7 @@ export function CoursesHome() {
   useEffect(() => {
     Promise.all([fetchCourses(), fetchCourseChaptersLite(), fetchCourseQuestionCounts()])
       .then(([cs, chapters, q]) => {
-        setCourses(cs);
+        setCourses(cs.filter((c) => (c.section ?? 'courses') === 'courses'));
         setChapterCounts(countChaptersByCourse(chapters));
         setQuestionCounts(q.byCourse);
       })
@@ -180,11 +187,12 @@ export function CoursePage() {
   if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
   if (!course) return <NotFoundBlock text={ar ? 'الكورس غير موجود' : 'Course not found'} to="/courses" label={ar ? 'الكورسات' : 'Courses'} />;
 
+  const section = sectionOf(course);
   const doneCount = chapters.filter((c) => done.includes(c.id)).length;
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8" dir={ar ? 'rtl' : 'ltr'}>
-      <Breadcrumbs items={[{ label: ar ? 'الكورسات' : 'Courses', path: '/courses' }, { label: titleOf(course, ar) }]} />
+      <Breadcrumbs items={[{ label: section.label(ar), path: section.path }, { label: titleOf(course, ar) }]} />
 
       <div className="mb-6 overflow-hidden rounded-3xl bg-gradient-to-l from-rose-600 via-red-600 to-orange-600 p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">{course.icon || '🎓'}</div>
@@ -306,7 +314,7 @@ export function ChapterPage() {
     <div className="mx-auto max-w-4xl px-4 py-8" dir={siteAr ? 'rtl' : 'ltr'}>
       <Breadcrumbs
         items={[
-          { label: siteAr ? 'الكورسات' : 'Courses', path: '/courses' },
+          { label: sectionOf(course).label(siteAr), path: sectionOf(course).path },
           { label: titleOf(course, siteAr), path: `/courses/${course.id}` },
           { label: titleOf(chapter, siteAr) },
         ]}

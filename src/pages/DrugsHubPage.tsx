@@ -194,6 +194,16 @@ export default function DrugsHubPage() {
       count: { ar: `${rxCount} روشتة`, en: `${rxCount} prescriptions` },
       gradient: "from-emerald-600 to-teal-700",
     },
+    {
+      to: "/courses/peds-gyne",
+      icon: "👶",
+      title: { ar: "دليل الأطفال والنساء والتوليد", en: "Pediatrics & Gynecology Guide" },
+      desc: {
+        ar: "مرجع عيادة: الأدوية وجرعاتها حسب الوزن والعمر، وبروتوكولات علاج الحالات الشائعة، بجداول وصور توضيحية",
+        en: "A clinic handbook: drugs and weight/age-based doses, treatment protocols for common conditions, with tables and figures",
+      },
+      gradient: "from-pink-600 to-rose-600",
+    },
   ];
 
   const refs: Tile[] = [

@@ -12,6 +12,8 @@ export interface Course {
   description_en: string | null;
   icon: string | null;
   image_url: string | null;
+  /** 'courses' = the Courses section; 'drugs' = guides shown inside the Drugs hub. */
+  section?: string;
 }
 
 export interface CourseChapter {
