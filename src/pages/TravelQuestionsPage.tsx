@@ -16,8 +16,6 @@ import {
   fetchTravelQuestionCounts,
   fetchTravelReviewSections,
   loadTravelProgress,
-  saveTravelProgress,
-  resetTravelProgress,
   type TravelCategory,
   type TravelQuestion,
   type TravelReviewSection,
