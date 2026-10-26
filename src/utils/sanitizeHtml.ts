@@ -14,6 +14,11 @@ export function sanitizeHtml(html: string): string {
         child.remove();
         continue;
       }
+      if (child.tagName === 'IMG') {
+        // Chapters can hold dozens of full-resolution figures: load them as they scroll into view.
+        child.setAttribute('loading', 'lazy');
+        child.setAttribute('decoding', 'async');
+      }
       for (const attr of Array.from(child.attributes)) {
         const name = attr.name.toLowerCase();
         const value = attr.value.trim().toLowerCase();
