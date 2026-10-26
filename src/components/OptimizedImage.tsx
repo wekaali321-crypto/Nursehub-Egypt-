@@ -15,7 +15,7 @@ export default function OptimizedImage({
   ratio = "16/9",
   rounded = "",
 }: {
-  src: string;
+  src?: string | null;
   alt: string;
   className?: string;
   width?: number;
@@ -23,6 +23,13 @@ export default function OptimizedImage({
   rounded?: string;
 }) {
   const [loaded, setLoaded] = useState(false);
+  if (!src) {
+    return (
+      <div className={`flex items-center justify-center bg-gradient-to-br from-sky-100 to-emerald-100 text-5xl dark:from-slate-800 dark:to-slate-700 ${rounded}`} style={{ aspectRatio: ratio }} aria-hidden="true">
+        🩺
+      </div>
+    );
+  }
   const optimized = src.includes("images.unsplash.com")
     ? `${src.split("?")[0]}?w=${width}&q=75&auto=format&fit=crop`
     : src;
