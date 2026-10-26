@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
+import "./lib/pwaInstall"; // start listening for the browser install prompt before the UI mounts
 import App from "./App";
 import { isSupabaseConfigured, verifySupabaseConnection, getSupabaseStatus } from "./lib/supabase";
 

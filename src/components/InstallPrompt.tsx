@@ -1,27 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useI18n } from "../lib/i18n";
-
-interface BIPEvent extends Event { prompt: () => Promise<void>; userChoice: Promise<{ outcome: string }> }
+import { usePwaInstall } from "../lib/pwaInstall";
 
 /** Floating "Install App" button shown when the browser offers PWA install. */
 export default function InstallPrompt() {
   const { lang } = useI18n();
-  const [deferred, setDeferred] = useState<BIPEvent | null>(null);
+  const { canPrompt, promptInstall } = usePwaInstall();
   const [dismissed, setDismissed] = useState(() => localStorage.getItem("nursehub_pwa_dismissed") === "1");
 
-  useEffect(() => {
-    const handler = (e: Event) => { e.preventDefault(); setDeferred(e as BIPEvent); };
-    window.addEventListener("beforeinstallprompt", handler);
-    return () => window.removeEventListener("beforeinstallprompt", handler);
-  }, []);
+  if (!canPrompt || dismissed) return null;
 
-  if (!deferred || dismissed) return null;
-
-  const install = async () => {
-    await deferred.prompt();
-    await deferred.userChoice;
-    setDeferred(null);
-  };
+  const install = async () => { await promptInstall(); };
   const dismiss = () => { setDismissed(true); localStorage.setItem("nursehub_pwa_dismissed", "1"); };
 
   return (

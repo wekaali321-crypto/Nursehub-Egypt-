@@ -5,6 +5,7 @@ import type { HomeCategory } from "../lib/types";
 import { AdSlot, ArticleCard, SectionTitle } from "../components/common";
 import Newsletter from "../components/Newsletter";
 import SmartSearch from "../components/SmartSearch";
+import InstallAppButton from "../components/InstallAppButton";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 
@@ -93,6 +94,7 @@ export default function Home() {
             <h1 className="mx-auto max-w-3xl text-3xl font-black leading-tight sm:text-4xl md:text-6xl">{settings.siteName}</h1>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-sky-50 sm:text-lg md:text-xl">{lang === "ar" ? settings.tagline : t("brand.tagline")} — {t("home.heroDesc")}</p>
             <SmartSearch variant="hero" />
+            <InstallAppButton />
             <ul className="mx-auto mt-6 flex max-w-md flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-bold text-sky-50 sm:text-sm">
               <li className="flex items-center gap-1.5">💙 {t("home.mascotPoint1")}</li>
               <li className="flex items-center gap-1.5">📘 {t("home.mascotPoint2")}</li>
