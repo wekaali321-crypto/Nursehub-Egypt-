@@ -27,15 +27,17 @@ interface LogoProps {
   showSubtitle?: boolean;
   variant?: "auto" | "light"; // "light" forces white wordmark (for dark/gradient backgrounds)
   className?: string;
+  /** Hide the wordmark on very narrow phones (the tile already carries the brand name). */
+  hideWordmarkOnTiny?: boolean;
 }
 
 /** Full lockup: icon + "NurseHub" wordmark + "Egypt" subtitle. */
-export default function Logo({ size = 40, showSubtitle = true, variant = "auto", className = "" }: LogoProps) {
+export default function Logo({ size = 40, showSubtitle = true, variant = "auto", className = "", hideWordmarkOnTiny = false }: LogoProps) {
   const nurseColor = variant === "light" ? "text-white" : "text-slate-900 dark:text-white";
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
       <LogoMark size={size} />
-      <span className="leading-none">
+      <span className={`leading-none ${hideWordmarkOnTiny ? "max-[380px]:hidden" : ""}`}>
         <span className="block font-extrabold tracking-tight" style={{ fontSize: size * 0.42 }}>
           <span className={nurseColor}>Nurse</span><span className="text-sky-500" style={variant === "light" ? { color: "#e0f2fe" } : undefined}>Hub</span>
         </span>

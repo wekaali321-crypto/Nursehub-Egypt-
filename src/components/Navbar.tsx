@@ -77,7 +77,7 @@ function UserMenu() {
     return (
       <Link
         to="/login"
-        className="flex h-10 items-center justify-center gap-1.5 rounded-full border border-slate-200 px-4 text-sm font-bold text-slate-600 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+        className="flex h-9 items-center justify-center gap-1.5 rounded-full border border-slate-200 px-3 text-sm font-bold text-slate-600 hover:bg-slate-100 sm:h-10 sm:px-4 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
       >
         {isRTL ? "دخول" : "Login"}
       </Link>
@@ -188,9 +188,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/85 backdrop-blur-lg dark:border-slate-800 dark:bg-slate-900/85 print:hidden">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 px-3 py-2.5 sm:gap-4 sm:px-4 sm:py-3">
         <Link to="/" className="shrink-0" aria-label="NurseHub Egypt">
-          <Logo size={40} />
+          <Logo size={40} hideWordmarkOnTiny />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -210,14 +210,14 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex min-w-0 items-center gap-1.5 sm:gap-2">
           {loc.pathname !== "/" && <div className="hidden w-52 md:block"><SmartSearch /></div>}
 
           <button
             onClick={() => setLang(lang === "ar" ? "en" : "ar")}
             aria-label="Language"
             title={t("lang.switch")}
-            className="flex h-10 items-center justify-center gap-1 rounded-full border border-slate-200 px-3 text-sm font-bold hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800 dark:text-white"
+            className="flex h-9 items-center justify-center gap-1 rounded-full border border-slate-200 px-2.5 text-sm font-bold hover:bg-slate-100 sm:h-10 sm:px-3 dark:border-slate-700 dark:hover:bg-slate-800 dark:text-white"
           >
             🌍 {lang === "ar" ? "EN" : "ع"}
           </button>
@@ -226,7 +226,7 @@ export default function Navbar() {
             to="/favorites"
             aria-label="Favorites"
             title="المفضلة"
-            className="relative flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800"
+            className="relative hidden h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 sm:flex dark:border-slate-700 dark:hover:bg-slate-800"
           >
             ❤️
             {favCount > 0 && <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-500 px-1 text-[10px] font-bold text-white">{favCount}</span>}
@@ -238,19 +238,19 @@ export default function Navbar() {
               disabled={pushBusy}
               aria-label="تفعيل الإشعارات"
               title="فعّل الإشعارات — استقبل تنبيه بمقالات وكتب جديدة"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 disabled:opacity-50 dark:border-slate-700 dark:hover:bg-slate-800"
+              className="hidden h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 disabled:opacity-50 sm:flex dark:border-slate-700 dark:hover:bg-slate-800"
             >
               🔕
             </button>
           )}
           {pushOn && (
-            <span title="الإشعارات مفعّلة" className="flex h-10 w-10 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-lg dark:border-emerald-500/30 dark:bg-emerald-500/10">🔔</span>
+            <span title="الإشعارات مفعّلة" className="hidden h-10 w-10 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-lg sm:flex dark:border-emerald-500/30 dark:bg-emerald-500/10">🔔</span>
           )}
 
           <button
             onClick={toggle}
             aria-label="Theme"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 sm:h-10 sm:w-10 dark:border-slate-700 dark:hover:bg-slate-800"
           >
             {theme === "dark" ? "☀️" : "🌙"}
           </button>
@@ -266,7 +266,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen((o) => !o)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 lg:hidden dark:border-slate-700"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 sm:h-10 sm:w-10 lg:hidden dark:border-slate-700"
             aria-label="القائمة"
           >
             {open ? "✕" : "☰"}
@@ -284,6 +284,21 @@ export default function Navbar() {
               className="w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm outline-none dark:border-slate-700 dark:bg-slate-800"
             />
           </form>
+          <div className="mb-2 flex gap-2 sm:hidden">
+            <Link to="/favorites" onClick={() => setOpen(false)} className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 dark:border-slate-700 dark:text-slate-200">
+              ❤️ {lang === "ar" ? "المفضلة" : "Favorites"}{favCount > 0 ? ` (${favCount})` : ""}
+            </Link>
+            {isPushSupported() && !pushOn && (
+              <button onClick={handleSubscribe} disabled={pushBusy} className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 disabled:opacity-50 dark:border-slate-700 dark:text-slate-200">
+                🔕 {lang === "ar" ? "فعّل الإشعارات" : "Enable alerts"}
+              </button>
+            )}
+            {pushOn && (
+              <span className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300">
+                🔔 {lang === "ar" ? "الإشعارات مفعّلة" : "Alerts on"}
+              </span>
+            )}
+          </div>
           <div className="grid grid-cols-2 gap-1">
             {menu.filter(featureAllowed).map((m) => (
               <Link

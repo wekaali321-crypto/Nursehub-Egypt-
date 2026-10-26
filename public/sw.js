@@ -1,5 +1,5 @@
 // NurseHub Egypt PWA Service Worker
-const CACHE_NAME = "nursehub-v4";
+const CACHE_NAME = "nursehub-v5";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
@@ -46,22 +46,23 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Static assets: cache-first
+  // Manifest and icons: network-first so a changed manifest or icon is picked up (stale ones can block installability)
   if (
     request.url.includes("manifest.webmanifest") ||
     request.url.includes("favicon.png") ||
-    request.url.includes("icon-")
+    request.url.includes("icon-") ||
+    request.url.includes("apple-touch-icon")
   ) {
     event.respondWith(
-      caches.match(request).then((cached) =>
-        cached || fetch(request).then((res) => {
+      fetch(request)
+        .then((res) => {
           if (res.ok) {
             const clone = res.clone();
             caches.open(CACHE_NAME).then((c) => c.put(request, clone));
           }
           return res;
         })
-      )
+        .catch(() => caches.match(request))
     );
     return;
   }
