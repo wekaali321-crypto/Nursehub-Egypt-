@@ -151,6 +151,8 @@ body {
    محتوى المقالات (background/color على tr) ويضمن تناسق تلقائي
    مع الوضع الليلي/النهاري لأي مقال حالي أو مستقبلي.
    ============================================================ */
+.nh-table-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.2rem 0; }
+.nh-table-wrap > table { margin: 0; width: 100%; min-width: 100%; max-width: none; }
 .prose-content table {
   width: 100%;
   border-collapse: separate;

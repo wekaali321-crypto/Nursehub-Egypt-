@@ -29,6 +29,11 @@ function typeFor(tag: string): PartType {
   }
 }
 
+/** Wide tables scroll sideways inside their own box instead of being clipped by (or stretching) the page. */
+function wrapTables(html: string): string {
+  return html.replace(/<table(\s|>)/gi, '<div class="nh-table-wrap"><table$1').replace(/<\/table>/gi, "</table></div>");
+}
+
 export default function ArticleContent({ html, slug, lang = "ar", className = "" }: Props) {
   const dir = lang === "ar" ? "rtl" : "ltr";
   const parts: Array<{ type: PartType; value: string }> = [];
@@ -53,7 +58,7 @@ export default function ArticleContent({ html, slug, lang = "ar", className = ""
 
   // لو مفيش placeholders، نرجع HTML عادي
   if (parts.length === 1 && parts[0].type === "html") {
-    return <div dir={dir} className={className} dangerouslySetInnerHTML={{ __html: html }} />;
+    return <div dir={dir} className={className} dangerouslySetInnerHTML={{ __html: wrapTables(html) }} />;
   }
 
   return (
@@ -61,7 +66,7 @@ export default function ArticleContent({ html, slug, lang = "ar", className = ""
       {parts.map((part, index) => {
         switch (part.type) {
           case "html":
-            return <div key={index} dangerouslySetInnerHTML={{ __html: part.value }} />;
+            return <div key={index} dangerouslySetInnerHTML={{ __html: wrapTables(part.value) }} />;
           case "mcq":
             return <MCQQuiz key={index} slug={part.value} lang={lang} />;
           case "tf":

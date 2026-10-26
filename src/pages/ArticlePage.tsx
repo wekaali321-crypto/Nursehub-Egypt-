@@ -253,8 +253,8 @@ export default function ArticlePage() {
       <ReadingProgress />
       <Breadcrumbs items={[{ label: t(CAT_KEY[article.category]), path: `/category/${article.category}` }, { label: dispTitle.text }]} />
 
-      <div className="grid gap-8 lg:grid-cols-[1fr_280px]">
-        <article>
+      <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,1fr)_280px]">
+        <article className="min-w-0">
           <div className="flex items-center justify-between gap-3">
             <span className="rounded-full bg-sky-50 px-3 py-1 text-sm font-bold text-sky-600 dark:bg-sky-500/10">{t(CAT_KEY[article.category])}</span>
             <button
