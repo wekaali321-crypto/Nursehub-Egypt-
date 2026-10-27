@@ -157,6 +157,7 @@ const defaultMenu = [
   { label: "اختبارات مزاولة المهنة", path: "/tests/licensure" },
   { label: "أسئلة السفر للخارج", path: "/travel-questions" },
   { label: "الكورسات", path: "/courses" },
+  { label: "الحالات السريرية", path: "/cases" },
   { label: "المتجر", path: "/store" },
 ];
 
