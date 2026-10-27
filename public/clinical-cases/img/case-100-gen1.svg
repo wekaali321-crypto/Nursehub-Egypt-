@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" font-family="Tahoma, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2563a8"/></marker>
+  </defs>
+  <rect width="800" height="450" rx="14" fill="#f7f9fc"/>
+  <text x="400" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1f2d3d">التصريف الوريدي للخصيتين (Venous drainage of the testes)</text>
+  <!-- IVC -->
+  <rect x="368" y="58" width="26" height="262" rx="12" fill="#5b8fd1" stroke="#2563a8" stroke-width="2"/>
+  <text x="381" y="52" text-anchor="middle" font-size="13" fill="#1f2d3d">IVC</text>
+  <text x="400" y="338" text-anchor="start" font-size="12" fill="#1f2d3d">الوريد الأجوف السفلي</text>
+  <!-- right kidney (viewer's left) -->
+  <ellipse cx="215" cy="150" rx="52" ry="72" fill="#e9b7a0" stroke="#a35d44" stroke-width="2"/>
+  <circle cx="198" cy="128" r="26" fill="#7a2e2e" stroke="#4d1717" stroke-width="2"/>
+  <text x="215" y="248" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2d3d">الكلية اليمنى (Right kidney)</text>
+  <text x="120" y="62" text-anchor="middle" font-size="13" fill="#7a2e2e">ورم الكلية</text>
+  <text x="120" y="78" text-anchor="middle" font-size="12" fill="#7a2e2e">(hypernephroma)</text>
+  <path d="M250 175 L368 190" stroke="#2563a8" stroke-width="6" fill="none"/>
+  <!-- left kidney (viewer's right) -->
+  <ellipse cx="585" cy="150" rx="52" ry="72" fill="#e9b7a0" stroke="#a35d44" stroke-width="2"/>
+  <text x="585" y="248" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2d3d">الكلية اليسرى (Left kidney)</text>
+  <path d="M535 160 L394 160" stroke="#2563a8" stroke-width="8" fill="none"/>
+  <text x="465" y="110" text-anchor="middle" font-size="12" fill="#1f2d3d">الوريد الكلوي الأيسر (ضغط عالٍ)</text>
+  <text x="465" y="126" text-anchor="middle" font-size="11" fill="#1f2d3d">Left renal vein (high pressure)</text>
+  <!-- right testicular vein -> IVC directly -->
+  <path d="M290 372 L290 330 L368 270" stroke="#2563a8" stroke-width="4" fill="none" marker-end="url(#ar)"/>
+  <!-- left testicular vein -> left renal vein -->
+  <path d="M520 372 L520 300 L520 164" stroke="#2563a8" stroke-width="4" fill="none" marker-end="url(#ar)"/>
+  <!-- obstruction marks -->
+  <path d="M312 300 l16 16 m0 -16 l-16 16" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+  <text x="250" y="302" text-anchor="end" font-size="12" fill="#c0392b">انسداد التصريف</text>
+  <text x="250" y="318" text-anchor="end" font-size="11" fill="#c0392b">(obstructed drainage)</text>
+  <!-- testes -->
+  <ellipse cx="290" cy="395" rx="40" ry="24" fill="#f1d9c5" stroke="#a35d44" stroke-width="2"/>
+  <ellipse cx="520" cy="395" rx="40" ry="24" fill="#f1d9c5" stroke="#a35d44" stroke-width="2"/>
+  <text x="290" y="436" text-anchor="middle" font-size="13" fill="#1f2d3d">الخصية اليمنى (Right testis)</text>
+  <text x="520" y="436" text-anchor="middle" font-size="13" fill="#1f2d3d">الخصية اليسرى (Left testis)</text>
+  <text x="140" y="368" text-anchor="middle" font-size="12" fill="#1f2d3d">الوريد الخصوي الأيمن</text>
+  <text x="140" y="384" text-anchor="middle" font-size="11" fill="#1f2d3d">يصب مباشرة في IVC</text>
+  <text x="660" y="330" text-anchor="middle" font-size="12" fill="#1f2d3d">الوريد الخصوي الأيسر</text>
+  <text x="660" y="346" text-anchor="middle" font-size="11" fill="#1f2d3d">يصب في الوريد الكلوي</text>
+</svg>
