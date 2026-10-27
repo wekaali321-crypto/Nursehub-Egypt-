@@ -1,24 +1,6 @@
-import { useCallback, useEffect, useState } from "react";
-import { supabase, isSupabaseConfigured } from "../lib/supabase";
+import { useState } from "react";
+import { useSiteTraffic } from "./useSiteTraffic";
 import { BarChart } from "../components/Charts";
-
-type Daily = { day: string; visitors: number; views: number; installs: number };
-type Monthly = { month: string; visitors: number; views: number; installs: number; app_users: number };
-type Stats = {
-  generated_at: string;
-  online_now: number;
-  online_app: number;
-  today: { visitors: number; views: number; new_visitors: number; installs: number; app_users: number };
-  yesterday: { visitors: number; views: number };
-  totals: { visitors: number; views: number; installers: number; since: string | null };
-  daily: Daily[];
-  monthly: Monthly[];
-  installs_by_kind: Record<string, number>;
-  installs_by_platform: Record<string, number>;
-  devices_30d: Record<string, number>;
-  sources_30d: Record<string, number>;
-  top_pages_30d: { path: string; views: number; visitors: number }[];
-};
 
 const card = "rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900";
 const nf = (n: number) => n.toLocaleString("ar-EG");
@@ -60,26 +42,8 @@ function Breakdown({ title, data, labels }: { title: string; data: Record<string
 }
 
 export function TrafficAdmin() {
-  const [stats, setStats] = useState<Stats | null>(null);
-  const [error, setError] = useState("");
+  const { stats, error } = useSiteTraffic(10_000);
   const [metric, setMetric] = useState<"visitors" | "views" | "installs">("visitors");
-
-  const load = useCallback(async () => {
-    if (!isSupabaseConfigured() || !supabase) { setError("قاعدة البيانات غير متصلة."); return; }
-    const { data, error: err } = await supabase.rpc("admin_site_stats");
-    if (err) {
-      setError(/admin_site_stats|does not exist|schema cache/i.test(err.message) ? "لم يتم تفعيل جداول الزوار بعد. شغّل ملف supabase/site_traffic.sql مرة واحدة في Supabase SQL Editor." : err.message);
-      return;
-    }
-    setError("");
-    setStats(data as Stats);
-  }, []);
-
-  useEffect(() => {
-    void load();
-    const id = window.setInterval(() => { if (document.visibilityState === "visible") void load(); }, 15_000);
-    return () => window.clearInterval(id);
-  }, [load]);
 
   if (error) return <div className={`${card} text-sm text-rose-600`}>{error}</div>;
   if (!stats) return <div className={card}>جارٍ التحميل…</div>;
@@ -103,7 +67,7 @@ export function TrafficAdmin() {
     <div className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h1 className="text-2xl font-black dark:text-white">📡 الزوار والتنزيلات</h1>
-        <span className="text-xs text-slate-400">يتحدّث تلقائيًا كل 15 ثانية · آخر تحديث {new Date(stats.generated_at).toLocaleTimeString("ar-EG")}</span>
+        <span className="text-xs text-slate-400">يتحدّث تلقائيًا كل 10 ثوانٍ · آخر تحديث {new Date(stats.generated_at).toLocaleTimeString("ar-EG")}</span>
       </div>
 
       <div className="rounded-3xl bg-gradient-to-l from-emerald-500 to-sky-500 p-6 text-white shadow-lg">

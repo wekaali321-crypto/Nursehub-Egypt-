@@ -3,6 +3,7 @@ import { useStore } from "../../lib/store";
 import { BarChart, LineChart, DonutChart } from "../../components/Charts";
 import { useAdminStats, formatBytes, formatEGP } from "./useAdminData";
 import { PageHeader, StatCard, cardCls, Badge } from "./ui";
+import { useSiteTraffic } from "../useSiteTraffic";
 
 const AR_MONTHS = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"];
 
@@ -10,10 +11,12 @@ export default function DashboardHome() {
   const s = useAdminStats();
   const store = useStore();
   const now = new Date();
+  const { stats: tr, error: trErr } = useSiteTraffic(10_000);
+  const nf = (n: number) => n.toLocaleString("ar-EG");
 
   const stats = [
     { l: "إجمالي المستخدمين", v: s.totalUsers, i: "👥", c: "from-indigo-500 to-blue-600", to: "/admin/users" },
-    { l: "المستخدمون النشطون", v: s.activeUsers, i: "🟢", c: "from-emerald-500 to-green-600", to: "/admin/users" },
+    { l: "نشطون الآن على الموقع", v: tr ? nf(tr.online_now) : "…", i: "🟢", c: "from-emerald-500 to-green-600", to: "/admin/traffic" },
     { l: "المشتركون Premium", v: s.premiumUsers, i: "⭐", c: "from-amber-500 to-yellow-500", to: "/admin/users" },
     { l: "المقالات", v: s.articles, i: "📝", c: "from-sky-500 to-blue-500", to: "/admin/articles" },
     { l: "منشورة", v: s.publishedArticles, i: "✅", c: "from-emerald-500 to-teal-500", to: "/admin/articles" },
@@ -30,15 +33,10 @@ export default function DashboardHome() {
     { l: "التخزين", v: formatBytes(s.storageBytes), i: "💾", c: "from-cyan-500 to-sky-500", to: "/admin/media" },
   ];
 
-  // Real 6-month views trend from daily-view log
-  const viewsTrend = Array.from({ length: 6 }).map((_, idx) => {
-    const d = new Date(now.getFullYear(), now.getMonth() - (5 - idx), 1);
-    const prefix = d.toISOString().slice(0, 7);
-    const value = Object.entries(store.dailyViews || {})
-      .filter(([k]) => k.startsWith(prefix))
-      .reduce((sum, [, v]) => sum + (v as number), 0);
-    return { label: AR_MONTHS[d.getMonth()], value };
-  });
+  // Real 6-month trend: unique visitors per month from the live visit log (oldest first)
+  const viewsTrend = tr
+    ? [...tr.monthly].slice(0, 6).reverse().map((m) => ({ label: AR_MONTHS[Number(m.month.slice(5, 7)) - 1], value: m.visitors }))
+    : [];
 
   // Content distribution donut
   const contentDist = [
@@ -84,6 +82,38 @@ export default function DashboardHome() {
         }
       />
 
+      {/* Live visitors — real numbers, refreshed every 10 seconds */}
+      <div className="mb-6 rounded-3xl bg-gradient-to-l from-emerald-500 to-sky-500 p-5 text-white shadow-lg">
+        {trErr ? (
+          <div className="text-sm font-bold">{trErr}</div>
+        ) : (
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <div className="flex items-center gap-2 text-sm font-bold text-white/90">
+                <span className="relative flex h-3 w-3"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" /><span className="relative inline-flex h-3 w-3 rounded-full bg-white" /></span>
+                نشطون الآن على الموقع
+              </div>
+              <div className="mt-1 text-5xl font-black">{tr ? nf(tr.online_now) : "…"}</div>
+              <div className="text-xs text-white/80">{tr && tr.online_app ? `منهم ${nf(tr.online_app)} من التطبيق · ` : ""}آخر دقيقتين</div>
+            </div>
+            <div className="grid flex-1 grid-cols-2 gap-2 text-center sm:max-w-xl sm:grid-cols-4">
+              {[
+                ["زوار اليوم", tr?.today.visitors],
+                ["مشاهدات اليوم", tr?.today.views],
+                ["زوار الشهر", tr?.monthly[0]?.visitors],
+                ["نزّلوا التطبيق اليوم", tr?.today.installs],
+              ].map(([l, v]) => (
+                <div key={l as string} className="rounded-2xl bg-white/15 px-2 py-3">
+                  <div className="text-2xl font-black">{typeof v === "number" ? nf(v) : "…"}</div>
+                  <div className="text-[11px] text-white/85">{l}</div>
+                </div>
+              ))}
+            </div>
+            <Link to="/admin/traffic" className="rounded-full bg-white/20 px-4 py-2 text-sm font-bold hover:bg-white/30">التفاصيل الكاملة ←</Link>
+          </div>
+        )}
+      </div>
+
       {/* Revenue banner */}
       <div className="mb-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-5 text-white shadow-lg shadow-emerald-500/20">
@@ -128,7 +158,7 @@ export default function DashboardHome() {
       {/* Charts */}
       <div className="mb-6 grid gap-4 lg:grid-cols-3">
         <div className={`${cardCls} p-5 lg:col-span-2`}>
-          <h3 className="mb-4 font-black text-slate-800 dark:text-white">📈 المشاهدات (آخر 6 أشهر)</h3>
+          <h3 className="mb-4 font-black text-slate-800 dark:text-white">📈 الزوار شهريًا (آخر 6 أشهر)</h3>
           <LineChart data={viewsTrend} />
         </div>
         <div className={`${cardCls} p-5`}>
