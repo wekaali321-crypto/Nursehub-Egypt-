@@ -428,6 +428,17 @@ export function CasePage() {
               </div>
             )}
             <KeyPoints items={pickList(c.keyPoints, ar)} ar={ar} />
+            {c.refs && c.refs.length > 0 && (
+              <details className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm dark:border-slate-700 dark:bg-slate-800/50">
+                <summary className="cursor-pointer font-black text-slate-700 dark:text-slate-200">📚 {ar ? 'المراجع التي رُوجع عليها المحتوى' : 'References used to verify the content'}</summary>
+                <ul className="mt-3 list-disc space-y-1 ps-5 text-slate-600 dark:text-slate-300" dir="ltr">
+                  {c.refs.map((r, i) => (
+                    <li key={i}>{r.url ? <a href={r.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sky-600 underline">{r.title}</a> : r.title}</li>
+                  ))}
+                </ul>
+                <p className="mt-3 text-xs text-slate-400">{ar ? 'للتعليم فقط. تحقق دائمًا من بروتوكول مؤسستك والنشرة الدوائية الحالية قبل أي جرعة.' : 'For education only. Always check your institution’s protocol and the current drug label before any dose.'}</p>
+              </details>
+            )}
             <button onClick={toggleDone} className={`mt-8 w-full rounded-2xl px-6 py-3.5 font-black transition ${isDone ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300' : 'bg-emerald-500 text-white shadow-lg hover:bg-emerald-600'}`}>
               {isDone ? (ar ? '✓ تم إنجاز هذه الحالة (اضغط للإلغاء)' : '✓ Case completed (tap to undo)') : ar ? '🏁 أنهيت هذه الحالة' : '🏁 Mark case as completed'}
             </button>

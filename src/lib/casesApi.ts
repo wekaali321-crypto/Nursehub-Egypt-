@@ -28,6 +28,8 @@ export interface ClinicalCase extends CaseIndexItem {
   answer: Bi;
   keyPoints?: BiList;
   pearls?: BiList;
+  /** Guidelines / references consulted when verifying the clinical content. */
+  refs?: { title: string; url?: string }[];
 }
 
 export const SPECIALTIES: Record<string, { ar: string; en: string; icon: string; grad: string }> = {
