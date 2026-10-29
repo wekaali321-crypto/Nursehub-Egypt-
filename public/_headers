@@ -1,0 +1,18 @@
+# Cloudflare Pages / Netlify caching rules (ignored by Vercel, which uses vercel.json)
+/course-img/*
+  Cache-Control: public, max-age=2592000
+/skills-img/*
+  Cache-Control: public, max-age=2592000
+/clinical-cases/img/*
+  Cache-Control: public, max-age=2592000
+/travel-ecg/*
+  Cache-Control: public, max-age=2592000
+/icon-*
+  Cache-Control: public, max-age=604800
+/NurseHub-Egypt.apk
+  Content-Type: application/vnd.android.package-archive
+  Content-Disposition: attachment; filename="NurseHub-Egypt.apk"
+  Cache-Control: public, max-age=86400
+/.well-known/assetlinks.json
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *
