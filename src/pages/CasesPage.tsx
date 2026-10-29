@@ -194,7 +194,7 @@ export function CasesHome() {
       )}
 
       <p className="mt-10 text-center text-xs text-slate-400">
-        {ar ? 'محتوى تعليمي مُترجَم ومُعاد تنظيمه عن كتاب «100 Cases in Acute Medicine». لا يغني عن التقييم الإكلينيكي ولا عن بروتوكولات مؤسستك.' : 'Educational content translated and reorganised from “100 Cases in Acute Medicine”. It does not replace clinical judgement or your institution’s protocols.'}
+        {ar ? 'حالات تعليمية بصياغة ورسوم أصلية من إعداد الموقع، مبنية على سيناريوهات الطب الإسعافي الشائعة. لا تغني عن التقييم الإكلينيكي ولا عن بروتوكولات مؤسستك.' : 'Educational cases with original wording and illustrations by the site, built on common acute-medicine scenarios. They do not replace clinical judgement or your institution’s protocols.'}
       </p>
     </div>
   );
