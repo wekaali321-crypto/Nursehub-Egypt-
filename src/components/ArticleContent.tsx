@@ -30,7 +30,7 @@ function typeFor(tag: string): PartType {
 }
 
 /** Wide tables scroll sideways inside their own box instead of being clipped by (or stretching) the page. */
-function wrapTables(html: string): string {
+export function wrapTables(html: string): string {
   return html.replace(/<table(\s|>)/gi, '<div class="nh-table-wrap"><table$1').replace(/<\/table>/gi, "</table></div>");
 }
 

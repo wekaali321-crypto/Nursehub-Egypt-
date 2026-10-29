@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Tahoma, Arial, sans-serif">
+<rect width="800" height="450" fill="#f4f7fb"/>
+<rect x="40" y="30" width="420" height="390" rx="18" fill="#0f1b2d"/>
+<!-- spine -->
+<rect x="243" y="45" width="14" height="360" rx="7" fill="#2a3b55"/>
+<!-- trachea -->
+<rect x="244" y="48" width="12" height="90" rx="5" fill="#0b1422"/>
+<!-- left lung (image right) -->
+<path d="M262 120 C 330 100 410 130 425 230 C 435 320 410 385 340 392 C 290 395 265 360 262 320 Z" fill="#52718f" opacity=".75"/>
+<!-- right lung (image left) -->
+<path d="M238 120 C 170 100 90 130 75 230 C 65 320 90 385 160 392 C 210 395 235 360 238 320 Z" fill="#52718f" opacity=".75"/>
+<!-- heart -->
+<path d="M240 230 C 290 215 330 250 322 305 C 315 350 270 360 250 330 Z" fill="#9db4c9" opacity=".85"/>
+<!-- consolidation right lower zone -->
+<path d="M100 290 C 130 270 205 275 235 300 L 235 372 C 190 392 130 388 100 350 Z" fill="#e8f0f8" opacity=".95"/>
+<!-- air bronchograms -->
+<path d="M232 300 L 170 322 M 200 314 L 165 300 M 190 318 L 150 345 M 175 322 L 130 328" stroke="#0f1b2d" stroke-width="4" stroke-linecap="round" fill="none"/>
+<!-- diaphragm line blurred -->
+<path d="M90 392 C 140 370 200 372 238 392" stroke="#9fb3c8" stroke-width="3" stroke-dasharray="6 6" fill="none"/>
+<text x="75" y="62" font-size="18" font-weight="700" fill="#e6edf5">R</text>
+<text x="425" y="62" font-size="18" font-weight="700" fill="#e6edf5">L</text>
+<!-- callouts -->
+<line x1="235" y1="330" x2="478" y2="150" stroke="#e08a1e" stroke-width="2.5" opacity=".6"/>
+<line x1="190" y1="322" x2="478" y2="290" stroke="#2e9e6b" stroke-width="2.5" opacity=".6"/>
+<circle cx="235" cy="330" r="5" fill="#e08a1e"/><circle cx="190" cy="322" r="5" fill="#2e9e6b"/>
+<g text-anchor="end" font-size="18" font-weight="700">
+<text x="780" y="130" fill="#b36a0a">عتامة في الفص السفلي الأيمن</text>
+<text x="780" y="272" fill="#1f7a52">قصبات هوائية داخل التكثف</text>
+</g>
+<g text-anchor="end" font-size="14" fill="#51606f">
+<text x="780" y="154">Right lower lobe consolidation</text>
+<text x="780" y="296">Air bronchogram</text>
+<text x="780" y="148" fill="none"></text>
+</g>
+<text x="780" y="400" text-anchor="end" font-size="13" fill="#51606f">رسم تخطيطي من إعداد الموقع، وليس صورة مريض</text>
+<text x="780" y="418" text-anchor="end" font-size="12" fill="#51606f">Schematic only, not a real patient film</text>
+</svg>
