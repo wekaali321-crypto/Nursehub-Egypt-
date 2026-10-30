@@ -173,7 +173,10 @@ function Slot({ id, label, def, over, admin, ar, onSaved, onZoom }: { id: string
   const file = useRef<HTMLInputElement>(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
-  const url = over !== undefined ? over : def || '';
+  const [open, setOpen] = useState(false);
+  const isHidden = over !== undefined && (over === '' || over.startsWith('hidden:'));
+  const kept = over && over.startsWith('hidden:') ? over.slice(7) : '';
+  const url = isHidden ? '' : over !== undefined ? over : def || '';
   const act = async (fn: () => Promise<void>) => {
     setBusy(true);
     setErr('');
@@ -188,27 +191,48 @@ function Slot({ id, label, def, over, admin, ar, onSaved, onZoom }: { id: string
   };
   const upload = (f: File) => act(async () => saveImageOverride(id, (await uploadFile(f, 'diseases')).item.url));
   if (!url && !admin) return null;
+  const hidden = isHidden; // the admin hid a picture
+  const showBar = !url && !open;
+  const inp = (
+    <input ref={file} type="file" accept="image/*" hidden onChange={(e) => { const f = e.target.files?.[0]; if (f) void upload(f); e.target.value = ''; }} />
+  );
+  // Admin: no picture yet -> a slim toggle bar instead of a big empty box
+  if (showBar)
+    return (
+      <div className="my-2 flex items-center justify-between gap-2 rounded-xl border border-dashed border-slate-300 px-3 py-1.5 text-xs text-slate-500 dark:border-slate-600">
+        <span>📷 {hidden ? (ar ? 'صورة مخفية: ' : 'Hidden picture: ') : ar ? 'مكان صورة: ' : 'Picture slot: '}{label}</span>
+        <span className="flex gap-1">
+          {hidden && <button disabled={busy} onClick={() => act(() => saveImageOverride(id, kept || null))} className="rounded-full bg-teal-600 px-3 py-1 font-bold text-white">{ar ? '👁 إظهار' : 'Show'}</button>}
+          {!hidden && <button onClick={() => setOpen(true)} className="rounded-full bg-teal-600 px-3 py-1 font-bold text-white">{ar ? '👁 إظهار / رفع' : 'Show / upload'}</button>}
+        </span>
+        {inp}
+      </div>
+    );
   return (
     <figure className="cs-fig">
       {url ? (
         <img src={url} alt={label} loading="lazy" onClick={() => onZoom(url)} />
       ) : (
-        <button type="button" onClick={() => file.current?.click()} className="flex w-full flex-col items-center justify-center gap-1 rounded-2xl border-2 border-dashed border-slate-300 px-4 py-8 text-slate-500 hover:border-teal-400 dark:border-slate-600">
+        <button type="button" onClick={() => file.current?.click()} className="flex w-full flex-col items-center justify-center gap-1 rounded-2xl border-2 border-dashed border-slate-300 px-4 py-6 text-slate-500 hover:border-teal-400 dark:border-slate-600">
           <span className="text-3xl">📷</span>
           <span className="text-sm font-bold">{label}</span>
-          <span className="text-xs">{ar ? 'اضغط لرفع صورة (أدمن)' : 'Click to upload (admin)'}</span>
+          <span className="text-xs">{ar ? 'اضغط لرفع صورة' : 'Click to upload'}</span>
         </button>
       )}
       {label && url && <figcaption>{label}</figcaption>}
       {admin && (
         <div className="mt-2 flex flex-wrap items-center justify-center gap-2 text-xs">
           <button disabled={busy} onClick={() => file.current?.click()} className="rounded-full bg-teal-600 px-3 py-1 font-bold text-white disabled:opacity-50">{busy ? '…' : url ? (ar ? '🔄 تغيير الصورة' : 'Replace') : ar ? '⬆ رفع صورة' : 'Upload'}</button>
-          {url && <button disabled={busy} onClick={() => act(() => saveImageOverride(id, ''))} className="rounded-full bg-slate-200 px-3 py-1 font-bold text-slate-700 disabled:opacity-50 dark:bg-slate-700 dark:text-slate-100">{ar ? '🙈 إخفاء' : 'Hide'}</button>}
-          {over !== undefined && <button disabled={busy} onClick={() => act(() => saveImageOverride(id, null))} className="rounded-full bg-slate-200 px-3 py-1 font-bold text-slate-700 disabled:opacity-50 dark:bg-slate-700 dark:text-slate-100">{ar ? '↩ الافتراضي' : 'Reset'}</button>}
+          {url ? (
+            <button disabled={busy} onClick={() => act(() => saveImageOverride(id, `hidden:${over || def || ''}`))} className="rounded-full bg-slate-200 px-3 py-1 font-bold text-slate-700 disabled:opacity-50 dark:bg-slate-700 dark:text-slate-100">{ar ? '🙈 إخفاء' : 'Hide'}</button>
+          ) : (
+            <button onClick={() => setOpen(false)} className="rounded-full bg-slate-200 px-3 py-1 font-bold text-slate-700 dark:bg-slate-700 dark:text-slate-100">{ar ? '🙈 إخفاء الجزء' : 'Hide'}</button>
+          )}
+          {over !== undefined && !isHidden && <button disabled={busy} onClick={() => act(() => saveImageOverride(id, null))} className="rounded-full bg-slate-200 px-3 py-1 font-bold text-slate-700 disabled:opacity-50 dark:bg-slate-700 dark:text-slate-100">{ar ? '↩ الافتراضي' : 'Reset'}</button>}
           {err && <span className="text-rose-500">{err}</span>}
         </div>
       )}
-      <input ref={file} type="file" accept="image/*" hidden onChange={(e) => { const f = e.target.files?.[0]; if (f) void upload(f); e.target.value = ''; }} />
+      {inp}
     </figure>
   );
 }
