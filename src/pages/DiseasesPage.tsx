@@ -3,12 +3,15 @@
 //   /diseases       DiseasesHome — search, body-system filters, cards
 //   /diseases/:id   DiseasePage  — sticky section tabs, nursing-first layout, quiz
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import {
   fetchDisease,
   fetchDiseaseIndex,
   loadRead,
+  fetchImageOverrides,
+  saveImageOverride,
+  SLOT_RE,
   saveRead,
   pick,
   SYSTEMS,
@@ -24,6 +27,8 @@ import { wrapTables } from '../components/ArticleContent';
 import { sanitizeHtml } from '../utils/sanitizeHtml';
 import { useSEO } from '../lib/seo';
 import { useI18n } from '../lib/i18n';
+import { useAuth } from '../lib/theme';
+import { uploadFile } from '../lib/storage';
 
 const sys = (k: string) => SYSTEMS[k] ?? SYSTEMS.other;
 
@@ -160,6 +165,69 @@ export function DiseasesHome() {
 // ---------------------------------------------------------------------------
 // Reader — /diseases/:id
 // ---------------------------------------------------------------------------
+
+// ---------------------------------------------------------------------------
+// Image slot: built-in drawing or admin-uploaded picture; admins can upload / replace / hide it.
+// ---------------------------------------------------------------------------
+function Slot({ id, label, def, over, admin, ar, onSaved, onZoom }: { id: string; label: string; def?: string; over?: string; admin: boolean; ar: boolean; onSaved: () => void; onZoom: (u: string) => void }) {
+  const file = useRef<HTMLInputElement>(null);
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState('');
+  const url = over !== undefined ? over : def || '';
+  const act = async (fn: () => Promise<void>) => {
+    setBusy(true);
+    setErr('');
+    try {
+      await fn();
+      onSaved();
+    } catch {
+      setErr(ar ? 'تعذّر الحفظ — تأكد إنك مسجّل دخول كأدمن.' : 'Save failed — make sure you are signed in as admin.');
+    } finally {
+      setBusy(false);
+    }
+  };
+  const upload = (f: File) => act(async () => saveImageOverride(id, (await uploadFile(f, 'diseases')).item.url));
+  if (!url && !admin) return null;
+  return (
+    <figure className="cs-fig">
+      {url ? (
+        <img src={url} alt={label} loading="lazy" onClick={() => onZoom(url)} />
+      ) : (
+        <button type="button" onClick={() => file.current?.click()} className="flex w-full flex-col items-center justify-center gap-1 rounded-2xl border-2 border-dashed border-slate-300 px-4 py-8 text-slate-500 hover:border-teal-400 dark:border-slate-600">
+          <span className="text-3xl">📷</span>
+          <span className="text-sm font-bold">{label}</span>
+          <span className="text-xs">{ar ? 'اضغط لرفع صورة (أدمن)' : 'Click to upload (admin)'}</span>
+        </button>
+      )}
+      {label && url && <figcaption>{label}</figcaption>}
+      {admin && (
+        <div className="mt-2 flex flex-wrap items-center justify-center gap-2 text-xs">
+          <button disabled={busy} onClick={() => file.current?.click()} className="rounded-full bg-teal-600 px-3 py-1 font-bold text-white disabled:opacity-50">{busy ? '…' : url ? (ar ? '🔄 تغيير الصورة' : 'Replace') : ar ? '⬆ رفع صورة' : 'Upload'}</button>
+          {url && <button disabled={busy} onClick={() => act(() => saveImageOverride(id, ''))} className="rounded-full bg-slate-200 px-3 py-1 font-bold text-slate-700 disabled:opacity-50 dark:bg-slate-700 dark:text-slate-100">{ar ? '🙈 إخفاء' : 'Hide'}</button>}
+          {over !== undefined && <button disabled={busy} onClick={() => act(() => saveImageOverride(id, null))} className="rounded-full bg-slate-200 px-3 py-1 font-bold text-slate-700 disabled:opacity-50 dark:bg-slate-700 dark:text-slate-100">{ar ? '↩ الافتراضي' : 'Reset'}</button>}
+          {err && <span className="text-rose-500">{err}</span>}
+        </div>
+      )}
+      <input ref={file} type="file" accept="image/*" hidden onChange={(e) => { const f = e.target.files?.[0]; if (f) void upload(f); e.target.value = ''; }} />
+    </figure>
+  );
+}
+
+function Prose({ html, ar, overrides, admin, onSaved, onZoom }: { html: string; ar: boolean; overrides: Record<string, string>; admin: boolean; onSaved: () => void; onZoom: (u: string) => void }) {
+  const parts: React.ReactNode[] = [];
+  let last = 0;
+  let i = 0;
+  for (const m of html.matchAll(SLOT_RE)) {
+    const idx = m.index ?? 0;
+    if (idx > last) parts.push(<div key={`h${i}`} dangerouslySetInnerHTML={{ __html: wrapTables(sanitizeHtml(html.slice(last, idx))) }} />);
+    parts.push(<Slot key={`s${i}`} id={m[1]} label={m[2]} def={m[3]} over={overrides[m[1]]} admin={admin} ar={ar} onSaved={onSaved} onZoom={onZoom} />);
+    last = idx + m[0].length;
+    i++;
+  }
+  if (last < html.length) parts.push(<div key="tail" dangerouslySetInnerHTML={{ __html: wrapTables(sanitizeHtml(html.slice(last))) }} />);
+  return <div className="cs-prose" onClick={(e) => { const t = e.target as HTMLElement; if (t.tagName === 'IMG' && !t.closest('.cs-fig')) onZoom((t as HTMLImageElement).src); }}>{parts}</div>;
+}
+
 function Quiz({ d, ar }: { d: Disease; ar: boolean }) {
   const [picked, setPicked] = useState<Record<number, number>>({});
   if (!d.quiz?.length) return null;
@@ -211,6 +279,10 @@ export function DiseasePage() {
   const [index, setIndex] = useState<DiseaseIndexItem[]>([]);
   const [active, setActive] = useState('overview');
   const [zoom, setZoom] = useState<string | null>(null);
+  const { loggedIn } = useAuth();
+  const [overrides, setOverrides] = useState<Record<string, string>>({});
+  const refreshImgs = () => void fetchImageOverrides(true).then(setOverrides);
+  useEffect(() => { void fetchImageOverrides().then(setOverrides); }, []);
 
   useEffect(() => {
     setD(undefined);
@@ -296,14 +368,7 @@ export function DiseasePage() {
         {secs.map((x) => (
           <section key={x.key} id={`sec-${x.key}`} className={`scroll-mt-28 rounded-3xl border-t-4 bg-white p-5 shadow-sm dark:bg-slate-900 ${x.ring} ${x.key === 'nursing' ? 'ring-2 ring-emerald-400/50' : ''}`}>
             <h2 className="cs-h">{x.icon} {ar ? x.ar : x.en}</h2>
-            <div
-              className="cs-prose"
-              onClick={(e) => {
-                const t = e.target as HTMLElement;
-                if (t.tagName === 'IMG') setZoom((t as HTMLImageElement).src);
-              }}
-              dangerouslySetInnerHTML={{ __html: wrapTables(sanitizeHtml(pick(d.sections[x.key], ar))) }}
-            />
+            <Prose html={pick(d.sections[x.key], ar)} ar={ar} overrides={overrides} admin={loggedIn} onSaved={refreshImgs} onZoom={setZoom} />
           </section>
         ))}
 

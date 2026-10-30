@@ -20,7 +20,7 @@ for (const f of readdirSync(dir).filter((x) => /^dis-\d{3}\.json$/.test(x)).sort
   for (const k of ['overview', 'signs', 'treatment', 'nursing', 'redflags']) if (!c.sections?.[k]?.ar) problems.push(`${f}: missing section ${k}`);
   if (!c.quiz?.length) problems.push(`${f}: no quiz`);
   const html = JSON.stringify(c.sections);
-  for (const m of html.matchAll(/\/diseases\/img\/[^"'\\\s)<>]+/g)) if (!existsSync(join('public', m[0]))) problems.push(`${f}: missing image ${m[0]}`);
+  for (const m of html.matchAll(/\/diseases\/img\/[^"'\\\s)<>\]]+/g)) if (!existsSync(join('public', m[0]))) problems.push(`${f}: missing image ${m[0]}`);
   items.push({ id: c.id, num: c.num, system: c.system, icon: c.icon, title: c.title, teaser: c.teaser, chips: c.chips, level: c.level });
 }
 writeFileSync(out, JSON.stringify({ updated: new Date().toISOString().slice(0, 10), count: items.length, items }));

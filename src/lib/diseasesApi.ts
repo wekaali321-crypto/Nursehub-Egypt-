@@ -2,6 +2,8 @@
 // "الأمراض للتمريض" (Diseases for Nurses): static JSON shipped with the site
 // (public/diseases/index.json + public/diseases/items/<id>.json), no database.
 
+import { supabase } from './supabase';
+
 export type Bi = { ar: string; en?: string };
 
 export interface DiseaseIndexItem {
@@ -108,4 +110,41 @@ export function saveRead(ids: string[]): void {
   } catch {
     /* ignore */
   }
+}
+
+// ---- image slots ----
+// Disease HTML holds tokens like [[slot:dis-001-a|وصف الصورة|/diseases/img/x.svg]]
+// (the 3rd part is an optional built-in drawing). The admin can upload/replace/remove the image
+// from the public page; overrides live in the `disease_images` table ('' url = hidden).
+export const SLOT_RE = /\[\[slot:([\w-]+)\|([^|\]]*)(?:\|([^\]]*))?\]\]/g;
+
+let imgCache: Promise<Record<string, string>> | null = null;
+export function fetchImageOverrides(force = false): Promise<Record<string, string>> {
+  if (force) imgCache = null;
+  if (!imgCache) {
+    imgCache = (async () => {
+      try {
+        if (!supabase) return {};
+        const { data } = await supabase.from('disease_images').select('slot,url');
+        const m: Record<string, string> = {};
+        (data ?? []).forEach((r: { slot: string; url: string }) => (m[r.slot] = r.url));
+        return m;
+      } catch {
+        return {};
+      }
+    })();
+  }
+  return imgCache;
+}
+
+export async function saveImageOverride(slot: string, url: string | null): Promise<void> {
+  if (!supabase) throw new Error('no supabase');
+  if (url === null) {
+    const { error } = await supabase.from('disease_images').delete().eq('slot', slot);
+    if (error) throw error;
+  } else {
+    const { error } = await supabase.from('disease_images').upsert({ slot, url, updated_at: new Date().toISOString() });
+    if (error) throw error;
+  }
+  imgCache = null;
 }
