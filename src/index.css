@@ -426,6 +426,7 @@ body {
    Clinical Cases (الحالات السريرية)
    ============================================================ */
 .cs-hero { background: radial-gradient(1200px 400px at 90% -10%, rgba(255,255,255,.25), transparent), linear-gradient(135deg, #0ea5e9 0%, #6366f1 55%, #a855f7 100%); }
+.dz-hero { background: radial-gradient(1200px 400px at 90% -10%, rgba(255,255,255,.25), transparent), linear-gradient(135deg, #0d9488 0%, #0ea5e9 55%, #6366f1 100%); }
 .cs-ring { --p: 0; width: 7rem; height: 7rem; border-radius: 9999px; display: grid; place-items: center; background: conic-gradient(#fff calc(var(--p) * 1%), rgba(255,255,255,.25) 0); position: relative; }
 .cs-ring::before { content: ""; position: absolute; inset: .55rem; border-radius: 9999px; background: #4f46e5; }
 .cs-ring span { position: relative; font-weight: 900; font-size: 1.6rem; color: #fff; }
@@ -530,3 +531,17 @@ body {
 .dark .cs-col.against { background: rgba(239,68,68,.12); border-color: #991b1b; }
 .dark .cs-col.for h4 { color: #6ee7b7; }
 .dark .cs-col.against h4 { color: #fca5a5; }
+
+/* Diseases for Nurses (reuses cs-* blocks) */
+.cs-prose ul { list-style: disc; padding-inline-start: 1.4rem; margin: .5rem 0 1rem; }
+.cs-prose ol { list-style: decimal; padding-inline-start: 1.4rem; margin: .5rem 0 1rem; }
+.cs-prose li { margin: .25rem 0; line-height: 1.9; }
+.cs-prose table { width: 100%; min-width: 26rem; border-collapse: separate; border-spacing: 0; font-size: .88rem; margin: 1rem 0; border: 1px solid #e2e8f0; border-radius: .8rem; overflow: hidden; }
+.cs-prose th { background: linear-gradient(135deg, #0d9488, #0ea5e9); color: #fff; font-weight: 800; padding: .55rem .7rem; text-align: start; }
+.cs-prose td { padding: .55rem .7rem; border-top: 1px solid #e2e8f0; vertical-align: top; line-height: 1.7; }
+.cs-prose tbody tr:nth-child(even) td { background: #f8fafc; }
+.dark .cs-prose table { border-color: #334155; }
+.dark .cs-prose td { border-color: #334155; }
+.dark .cs-prose tbody tr:nth-child(even) td { background: rgba(255,255,255,.03); }
+.cs-compare { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 1rem; padding: .4rem 1rem; margin: .5rem 0 1rem; }
+.dark .cs-compare { background: rgba(255,255,255,.04); border-color: #334155; }
