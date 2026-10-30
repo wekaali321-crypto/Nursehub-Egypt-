@@ -1,0 +1,198 @@
+{
+ "id": "dis-144",
+ "num": 144,
+ "system": "cardio",
+ "icon": "📈",
+ "level": 2,
+ "title": {
+  "ar": "قراءة تخطيط القلب (ECG)",
+  "en": "ECG Reading"
+ },
+ "teaser": {
+  "ar": "من الأساسيات للبلوكات والتسرعات والجلطة: أنماط الـ ECG بالرسم والترتيب العملي للممرض وإزاي تسجّله صح."
+ },
+ "chips": [
+  {
+   "ar": "ECG"
+  },
+  {
+   "ar": "AV block"
+  },
+  {
+   "ar": "STEMI"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>تخطيط القلب (<b>ECG</b>) بيسجّل النشاط الكهربائي للقلب على ورق مربعات. مش بيقيس قوة الضخ، لكنه بيكشف <b>النظم، سرعة القلب، التوصيل، تضخم الحجرات، والإقفار/الجلطة</b>. ككل ممرض لازم تعرف تقرأ الأنماط الخطيرة وتسجّل التخطيط صح وتبلّغ بسرعة.</p>[[slot:dis-144-basics|مكونات نبضة القلب على الـ ECG وقيم الورق — رسم من إعداد الموقع|/diseases/img/dis-144-basics.svg]]<table><thead><tr><th>الموجة / المقطع</th><th>تمثّل</th><th>الطبيعي</th></tr></thead><tbody><tr><td>موجة P</td><td>انقباض الأذينين</td><td>أقل من 0.12 ث؛ إيجابية في II</td></tr><tr><td>مقطع/فترة PR</td><td>انتقال النبضة من الأذين للبطين (العقدة AV)</td><td>0.12–0.20 ث (3–5 مربعات صغيرة)</td></tr><tr><td>QRS</td><td>انقباض البطينين</td><td>أقل من 0.12 ث (أقل من 3 مربعات صغيرة)</td></tr><tr><td>مقطع ST</td><td>بين الانقباض والاسترخاء</td><td>على الخط الأساسي (isoelectric)</td></tr><tr><td>موجة T</td><td>عودة البطينين لحالة الراحة (repolarization)</td><td>إيجابية في معظم الاشتقاقات</td></tr><tr><td>QT</td><td>كل نشاط البطين</td><td>حسب المعدل (QTc أقل من 0.44 ث تقريباً)</td></tr></tbody></table>[[slot:dis-144-rate|حساب المعدل بسرعة (قاعدة 300) — رسم من إعداد الموقع|/diseases/img/dis-144-rate.svg]]<div class=\"cs-box cs-info\"><strong>سرعة الورق</strong><p>الورق عادة 25 مم/ثانية: المربع الصغير 0.04 ث، والكبير (5 صغار) 0.2 ث، وكل 5 كبار = ثانية واحدة.</p></div><div class=\"cs-box cs-pearl\"><strong>قاعدة أمان</strong><p><b>تعامل مع المريض مش مع الورقة</b>: ECG مريب مع مريض بدون أعراض قد يكون خطأ في التوصيل (artifact). وECG «طبيعي» مع ألم صدر مش بيستبعد الجلطة: كرّره وراجع التروبونين.</p></div>"
+  },
+  "causes": {
+   "ar": "<div class=\"cs-box cs-info\"><strong>خطوات قراءة أي ECG (لازم ترتيب ثابت)</strong><p>اقرأ بنفس الترتيب كل مرة عشان ماتنساش حاجة.</p></div><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>1) المعدل (Rate)</strong><p>300 ÷ عدد المربعات الكبيرة بين كل R وR (لو منتظم)؛ أو عدّ QRS في 6 ثوانٍ × 10 (لو غير منتظم). أقل من 60 بطء، أكتر من 100 تسرع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>2) النظم (Rhythm)</strong><p>منتظم أم لا؟ كل P يتبعها QRS؟ كل QRS قبله P؟ الأذين والبطين مرتبطين؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>3) المحور (Axis)</strong><p>بصّ على I وaVF: كلاهما إيجابي = طبيعي. I إيجابي وaVF سلبي = انحراف يساري؛ I سلبي وaVF إيجابي = انحراف يميني.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>4) الفواصل (Intervals)</strong><p>PR (0.12–0.20)، QRS (أقل من 0.12)، QT. PR طويل = block، QRS عريض = تأخير توصيل أو منشأ بطيني.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>5) الحجرات</strong><p>موجة P عالية/عريضة؟ R عالية في V5–V6 أو V1؟ (تضخم).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>6) ST وT</strong><p>ارتفاع ST (جلطة)؟ هبوط ST؟ T مقلوبة؟ Q مرضية؟ وقارن بالتخطيط القديم.</p></div></div></div>[[slot:dis-144-axis|انحراف المحور لليسار — رسم من إعداد الموقع|/diseases/img/dis-144-axis.svg]][[slot:dis-144-walls|أي اشتقاقات تشوف أي جدار — رسم من إعداد الموقع|/diseases/img/dis-144-walls.svg]]"
+  },
+  "signs": {
+   "ar": "<h4>أولاً: اضطرابات التوصيل (Conduction blocks)</h4>[[slot:dis-144-blocks-av1|أنواع AV block: الدرجة الأولى وMobitz I وMobitz II — رسم من إعداد الموقع|/diseases/img/dis-144-blocks-av1.svg]]<table><thead><tr><th>النوع</th><th>الشكل على الـ ECG</th><th>المعنى للممرض</th></tr></thead><tbody><tr><td><b>درجة أولى</b></td><td>موجة P واحدة قبل كل QRS؛ فترة PR طويلة (مثال 360 مللي ث)</td><td>غالباً حميد؛ راقب لو تطور أو مع أدوية مبطئة</td></tr><tr><td><b>درجة ثانية — Mobitz II</b></td><td>PR في النبضات الموصلة <b>ثابتة</b>، وفجأة موجة P لا يتبعها QRS</td><td>خطر التحول لدرجة ثالثة؛ جهّز Pacing</td></tr><tr><td><b>درجة ثانية — Wenckebach (Mobitz I)</b></td><td>PR <b>يطول تدريجياً</b> (مثلاً 260 ← 260 ← 320 مللي ث) ثم P لا يتبعها QRS</td><td>غالباً أقل خطورة (سفلية/أدوية)؛ راقب</td></tr><tr><td><b>درجة ثانية 2:1</b></td><td>موجتا P لكل QRS واحد؛ PR ثابتة في الموصلة. موجات P في T يمكن تمييزها لأن انتظامها واضح</td><td>قد يكون Mobitz I أو II — اسأل الطبيب</td></tr><tr><td><b>درجة ثالثة (كامل)</b></td><td>معدل P مثلاً 90/د ومعدل QRS 36/د؛ لا علاقة بين P وQRS</td><td>طارئ: بطء، دوخة/إغماء؛ بطارية Pacing</td></tr><tr><td><b>RBBB</b></td><td>نمط rSR' (أذنين أرنب) في V1 وV2 وV3 + QRS عريض</td><td>قد يكون طبيعياً، أو مرتبط بجلطة رئوية/قلب أيمن</td></tr><tr><td><b>LBBB</b></td><td>نمط M في QRS في aVL وV5 وV6 + QRS عريض</td><td>دائماً يستدعي تفسير: مرض قلب أو فشل</td></tr><tr><td><b>انحراف المحور لليسار</b></td><td>QRS إيجابي في I وسلبي في II وIII</td><td>قد يدل على LVH أو block فرعي أمامي</td></tr></tbody></table>[[slot:dis-144-bbb|RBBB وLBBB — رسم من إعداد الموقع|/diseases/img/dis-144-bbb.svg]][[slot:dis-144-blocks-av2|AV block 2:1 والدرجة الثالثة — رسم من إعداد الموقع|/diseases/img/dis-144-blocks-av2.svg]]<h4>ثانياً: التسرعات (Tachycardias)</h4>[[slot:dis-144-tachy-a|تسرع أذيني وفلتر وموصلي — رسم من إعداد الموقع|/diseases/img/dis-144-tachy-a.svg]][[slot:dis-144-tachy-b|VT وAF وVF — رسم من إعداد الموقع|/diseases/img/dis-144-tachy-b.svg]]<table><thead><tr><th>النوع</th><th>العلامات</th><th>ملاحظات</th></tr></thead><tbody><tr><td><b>تسرع أذيني (Atrial tachycardia)</b></td><td>أول 3 نبضات جيبية طبيعية ثم تسرع ~150/د؛ موجات P فوق T للنبضة السابقة؛ QRS طبيعي</td><td>مصدره الأذين</td></tr><tr><td><b>رفرفة أذينية (Atrial flutter)</b></td><td>موجات P بمعدل 300/د تعطي شكل أسنان المنشار؛ المعدل البطيني ~75/د</td><td>توصيل 4:1؛ يحتاج تقييم تجلط مثل AF</td></tr><tr><td><b>تسرع موصلي (Junctional)</b></td><td>لا موجات P، وQRS منتظم تماماً وطبيعي الشكل</td><td>مصدره منطقة العقدة AV</td></tr><tr><td><b>تسرع بطيني (VT)</b></td><td>أول موجتين جيبيتين ثم لا P، QRS عريض، معدل ~200/د</td><td>طارئ: انظر دليل VT</td></tr><tr><td><b>رجفان أذيني (AF)</b></td><td>لا P — خط أساسي غير منتظم؛ QRS غير منتظم بشكل طبيعي؛ موجات في V1 تشبه الفلتر</td><td>انظر دليل AF</td></tr><tr><td><b>رجفان بطيني (VF)</b></td><td>لا QRS؛ تخطيط فوضوي تماماً</td><td>توقف قلب: CPR وصدمة فوراً</td></tr></tbody></table><h4>ثالثاً: الموجات المرضية وتضخم الحجرات</h4>[[slot:dis-144-chambers|تضخم الأذينين والبطينين — رسم من إعداد الموقع|/diseases/img/dis-144-chambers.svg]]<table><thead><tr><th>الحالة</th><th>العلامات</th></tr></thead><tbody><tr><td>تضخم الأذين الأيمن</td><td>موجة P عالية ومدببة</td></tr><tr><td>تضخم الأذين الأيسر</td><td>موجة P عريضة ومشقوقة (bifid)</td></tr><tr><td>تضخم البطين الأيمن الشديد</td><td>R سائدة في V1؛ S عميقة في V2؛ T مقلوبة في II وIII وaVF وV1–V3؛ T مسطحة في V4 وV5</td></tr><tr><td>تضخم البطين الأيسر</td><td>R عالية في V5 وV6؛ S عميقة في V1 وV2</td></tr></tbody></table><h4>رابعاً: الإقفار والجلطة</h4>[[slot:dis-144-ischaemia|أنماط الإقفار والجلطة — رسم من إعداد الموقع|/diseases/img/dis-144-ischaemia.svg]]<table><thead><tr><th>الحالة</th><th>العلامات</th></tr></thead><tbody><tr><td><b>جلطة أمامية حادة</b></td><td>Q صغيرة في V2–V4 + ارتفاع ST في V2–V4</td></tr><tr><td><b>جلطة سفلية حادة + إقفار جانبي</b></td><td>Q في III وaVF؛ ارتفاع ST في II وIII وaVF؛ T مقلوبة في aVL وV1</td></tr><tr><td><b>إقفار بالمجهود</b></td><td>في الراحة (معدل 55/د): ST على الخط. بالمجهود (125/د): ST هابط</td></tr><tr><td><b>جلطة أمامية بدون ارتفاع ST (NSTEMI)</b></td><td>T مقلوبة في V3 وV4؛ T ثنائية الطور في V2 وV5</td></tr><tr><td><b>تأثير الديجيتال</b></td><td>ST هابط نازل (scooped) + T مقلوبة — علامة تواجد الدواء وليس بالضرورة تسمماً</td></tr></tbody></table><h4>خامساً: اضطرابات الأملاح (مهمة لا تنساها)</h4>[[slot:dis-144-electrolytes|تأثير البوتاسيوم والكالسيوم على الـ ECG — رسم من إعداد الموقع|/diseases/img/dis-144-electrolytes.svg]]<div class=\"cs-box cs-info\"><strong>أنماط إضافية تظهر في الطوارئ</strong><ul><li><b>التهاب التامور:</b> ارتفاع ST منتشر مقعّر في معظم الاشتقاقات + هبوط PR.</li><li><b>الجلطة الرئوية:</b> تسرع جيبي، وقد S في I وQ وT مقلوبة في III، وRBBB جديد.</li><li><b>Torsades:</b> VT متعدد الأشكال مع QT طويل.</li></ul></div>"
+  },
+  "tests": {
+   "ar": "<h4>كيف يُسجَّل الـ ECG صح (دور التمريض)</h4>[[slot:dis-144-placement|أماكن وضع الأقطاب — رسم من إعداد الموقع|/diseases/img/dis-144-placement.svg]]<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>جهّز المريض</strong><p>اشرح الإجراء، نام على ظهره بوضع مريح وهادئ، اكشف الصدر والمعصمين والكاحلين، وأبعد الأجهزة المحمولة والمعادن. حلق الشعر الكثيف ونظف الجلد وجففه.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>ضع الأقطاب</strong><p>الأطراف: RA ذراع أيمن، LA ذراع أيسر، LL رجل يسرى، RL رجل يمنى (أرض). الصدر: V1 الفراغ الوربي 4 يمين القص، V2 يسار القص، V4 الفراغ 5 منتصف الترقوة، V3 بينهما، V5 وV6 بنفس مستوى V4 على الخط الإبطي الأمامي والأوسط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اضبط الجهاز</strong><p>سرعة 25 مم/ث، معايرة 10 مم/مللي فولت، فلاتر قياسية. اطلب من المريض عدم الحركة وعدم الكلام أثناء التسجيل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>سجّل واكتب</strong><p>اسم المريض، العمر، الوقت، الأعراض (ألم صدر؟)، الأدوية. راجع الجودة: تموج خط الأساس؟ ارتعاش عضلي؟ قطب مفكوك؟ تأكد من عدم عكس الأطراف (P سلبية في I = عكس ذراعين).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ الطبيب الأمر</strong><p>ECG لجلطة مشتبهة: خلال 10 دقائق. وضع النتيجة بملف المريض وقارن بالتخطيط السابق.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>قاعدة ورق مفيدة</strong><p>اضبط معايرة الجهاز: 10 مم = 1 مللي فولت. المعايرة غير الصحيحة تغيّر ارتفاع الموجات وتخدع التفسير.</p></div>[[slot:dis-144-ecg-real|صورة: تخطيط 12 اشتقاق حقيقي — تُرفع لاحقاً]]"
+  },
+  "treatment": {
+   "ar": "<p>الـ ECG بيحدد الإجراء. جدول سريع «لو شفت كذا اعمل كذا»، دائماً مع تقييم المريض (نبض، ضغط، وعي):</p><table><thead><tr><th>اللي شفته</th><th>الإجراء العاجل</th></tr></thead><tbody><tr><td>ارتفاع ST في اشتقاقين متجاورين + أعراض</td><td>جلطة STEMI: بلّغ الطبيب فوراً، أسبرين، مونيتور، خط وريدي، خطة فتح الشريان (انظر دليل الجلطة)</td></tr><tr><td>VT بدون نبض أو VF</td><td>CPR وصدمة غير متزامنة فوراً</td></tr><tr><td>VT بنبض ومريض غير مستقر</td><td>صدمة متزامنة بأمر الطبيب</td></tr><tr><td>AF بمعدل سريع + عدم استقرار</td><td>صدمة متزامنة؛ ولو مستقر: بيتا/دوائي حسب الطبيب</td></tr><tr><td>AV block من الدرجة الثالثة أو بطء شديد بأعراض</td><td>أتروبين/Pacing حسب الطبيب، جهّز الباسر</td></tr><tr><td>T مدببة عالية + QRS عريض</td><td>ارتفاع بوتاسيوم: كالسيوم وريدي (أمر الطبيب) + أنسولين/جلوكوز وعلاج السبب</td></tr><tr><td>QT طويل + نوبات VT</td><td>أوقف الأدوية المطيلة، مغنسيوم وريدي، بوتاسيوم</td></tr><tr><td>هبوط ST/T مقلوبة مع ألم صدر</td><td>ذبحة غير مستقرة/NSTEMI: بلّغ، مونيتور، كرر ECG، تروبونين</td></tr><tr><td>Wenckebach (Mobitz I) بدون أعراض</td><td>راقب، وراجع الأدوية</td></tr><tr><td>LBBB/RBBB جديد</td><td>بلّغ الطبيب (قد يكون جديداً مع جلطة أو جلطة رئوية)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الـ LBBB الجديد وحده لم يعد يعتبر مكافئاً تلقائياً لـ STEMI في الإرشادات الحديثة؛ يُقيَّم بمعايير خاصة (Sgarbossa) مع الأعراض والتروبونين.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اربط ECG بحالة المريض</strong><p>ماذا يشعر؟ ألم؟ دوخة؟ خفقان؟ الضغط؟ نفس القراءة قد تكون خطيرة عند مريض وعادية عند آخر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اقرأ بترتيب</strong><p>معدل ← نظم ← محور ← فواصل ← حجرات ← ST/T، وقارن دائماً بتخطيط سابق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اكتشف الأنماط الحمراء</strong><p>ST مرتفع، VT/VF، block ثالث، توقف (asystole)، فلتر/AF بمعدل سريع مع عدم استقرار، T مدببة مع QRS عريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>تأكد من الجودة</strong><p>لو الخط غير مستقر: افحص التوصيل، خد القطب المفكوك، اطلب من المريض الهدوء. ما تشخّصش من تخطيط به تشويش؛ أعد التسجيل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>بلّغ بشكل منظم</strong><p>SBAR: الموقف (ECG + الأعراض)، الخلفية، التقييم (النمط)، الاقتراح (ما تحتاجه). سجّل الزمن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>تابع بعد التدخل</strong><p>كرر ECG بعد الأدوية أو الصدمة أو تغيّر الأعراض، وسجل تغيّرات ST.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>ما تنتظرش «التفسير الرسمي» لو المريض بيتدهور. ECG مريب + أعراض = بلّغ فوراً. ولا تعتمد على تفسير الجهاز الآلي وحده.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو شفت:</strong><ul><li>ارتفاع ST (STEMI) أو انقلاب T جديد مع ألم صدر</li><li>أي VT أو VF أو تخطيط مسطح (asystole) — ابدأ الإنعاش</li><li>AV block درجة ثالثة أو Mobitz II أو توقفات أكبر من 3 ثوانٍ</li><li>معدل أكبر من 150 أو أقل من 40 مع أعراض</li><li>QRS عريض جديد مع T مدببة (بوتاسيوم)</li><li>QT طويل وتسرع متعدد الأشكال</li><li>تغير ECG مع تغيّر في الوعي أو الضغط</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>الـ ECG فحص آمن وغير مؤلم ويأخذ دقائق؛ اهدأ وابق ساكناً.</li><li>لا تكلّم أثناء التسجيل ولا تحرّك يديك ورجليك.</li><li>احتفظ بنسخ من تخطيطاتك القديمة وخذها معك للطبيب.</li><li>أخبر الفريق بأدويتك (ديجوكسين، أدوية القلب) والمنشطات.</li><li>لو عندك خفقان أو إغماء: سجّل وقته وسبّبه وتحدث للطبيب.</li><li>لو لبست جهاز هولتر: اكتب أعراضك وأوقاتها بدقة.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "اقرأ الـ ECG بترتيب ثابت: معدل ← نظم ← محور ← فواصل ← حجرات ← ST/T",
+   "المربع الصغير 0.04 ث والكبير 0.2 ث؛ PR 0.12–0.20 وQRS أقل من 0.12",
+   "AV block: أولى (PR طويل)، Wenckebach (PR يطول ثم تسقط P)، Mobitz II (PR ثابت وتسقط P)، ثالثة (P وQRS منفصلان)",
+   "RBBB: rsR' في V1–V3؛ LBBB: نمط M في V5–V6 وaVL؛ كلاهما QRS عريض",
+   "التسرعات: أذيني، فلتر (منشار 300/د)، موصلي، VT (عريض)، AF (غير منتظم)، VF (فوضى)",
+   "ارتفاع ST في اشتقاقين متجاورين = STEMI: بلّغ فوراً",
+   "سجّل الـ ECG بأقطاب صحيحة وجودة جيدة، وقارنه بالسابق"
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ما الذي يميز Wenckebach عن Mobitz II؟"
+   },
+   "options": [
+    {
+     "ar": "PR يطول تدريجياً قبل سقوط P"
+    },
+    {
+     "ar": "PR ثابت ثم تسقط P"
+    },
+    {
+     "ar": "QRS عريض"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "في Wenckebach يطول PR تدريجياً ثم تسقط P؛ في Mobitz II يبقى PR ثابتاً."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تخطيط يظهر P منتظمة 90/د وQRS 36/د ولا علاقة بينهما؟"
+   },
+   "options": [
+    {
+     "ar": "block درجة أولى"
+    },
+    {
+     "ar": "block درجة ثالثة"
+    },
+    {
+     "ar": "AF"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "انفصال كامل بين الأذين والبطين = block كامل."
+   }
+  },
+  {
+   "q": {
+    "ar": "قاعدة سريعة لحساب المعدل لو 4 مربعات كبيرة بين كل R وR؟"
+   },
+   "options": [
+    {
+     "ar": "75"
+    },
+    {
+     "ar": "100"
+    },
+    {
+     "ar": "60"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "300 ÷ 4 = 75."
+   }
+  },
+  {
+   "q": {
+    "ar": "أين يوضع القطب V4؟"
+   },
+   "options": [
+    {
+     "ar": "الفراغ الوربي 4 يمين القص"
+    },
+    {
+     "ar": "الفراغ الوربي 5 على الخط منتصف الترقوة"
+    },
+    {
+     "ar": "الإبط"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "V4: الفراغ الوربي الخامس على الخط منتصف الترقوة."
+   }
+  },
+  {
+   "q": {
+    "ar": "ارتفاع ST في II وIII وaVF يعني؟"
+   },
+   "options": [
+    {
+     "ar": "جلطة سفلية"
+    },
+    {
+     "ar": "جلطة أمامية"
+    },
+    {
+     "ar": "تضخم أذين"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "هذه الاشتقاقات تقابل الجدار السفلي."
+   }
+  },
+  {
+   "q": {
+    "ar": "QRS عريض مع P غير مرتبطة ومعدل 200/د؟"
+   },
+   "options": [
+    {
+     "ar": "VT"
+    },
+    {
+     "ar": "AF"
+    },
+    {
+     "ar": "فلتر"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تسرع عريض منتظم بدون P مرتبطة = VT."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ECG Library / Life in the Fast Lane (LITFL): ECG basics, AV blocks, bundle branch blocks"
+  },
+  {
+   "title": "AHA/ACC/HRS Recommendations for the Standardization and Interpretation of the ECG (2007) — مبادئ وضع الأقطاب"
+  },
+  {
+   "title": "2025 ACC/AHA ACS Guideline — معايير STEMI"
+  },
+  {
+   "title": "ACLS Tachycardia Algorithm (AHA 2025)"
+  }
+ ]
+}
