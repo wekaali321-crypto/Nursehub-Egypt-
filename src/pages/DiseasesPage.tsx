@@ -237,18 +237,53 @@ function Slot({ id, label, def, over, admin, ar, onSaved, onZoom }: { id: string
   );
 }
 
+// Arabic text mixed with English terms/abbreviations scrambles punctuation ("PR (0.12)…"): isolate every Latin run.
+const LATIN_RE = /\d[\d.]*(?:[–/-]\d[\d.]*)+%?|[A-Za-z][A-Za-z0-9._/+%'’()–-]*(?: [A-Za-z0-9][A-Za-z0-9._/+%'’()–-]*)*/g;
+function isolateLatin(html: string): string {
+  if (typeof DOMParser === 'undefined' || !html) return html;
+  const doc = new DOMParser().parseFromString(`<div>${html}</div>`, 'text/html');
+  const root = doc.body.firstElementChild as HTMLElement;
+  const walker = doc.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const nodes: Text[] = [];
+  for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+    const el = (n as Text).parentElement;
+    if (el && !el.closest('bdi,svg,code') && /[A-Za-z\d]/.test((n as Text).data) && /[\u0600-\u06FF]/.test((n as Text).data)) nodes.push(n as Text);
+  }
+  for (const t of nodes) {
+    const frag = doc.createDocumentFragment();
+    let last = 0;
+    const str = t.data;
+    for (const m of str.matchAll(LATIN_RE)) {
+      let run = m[0];
+      const idx = m.index ?? 0;
+      while (run.endsWith(')') && (run.match(/\(/g)?.length ?? 0) < (run.match(/\)/g)?.length ?? 0)) run = run.slice(0, -1);
+      while (/[-–(]$/.test(run)) run = run.slice(0, -1);
+      if (idx > last) frag.append(str.slice(last, idx));
+      const b = doc.createElement('bdi');
+      b.setAttribute('dir', 'ltr');
+      b.textContent = run;
+      frag.append(b);
+      last = idx + run.length;
+    }
+    frag.append(str.slice(last));
+    t.replaceWith(frag);
+  }
+  return root.innerHTML;
+}
+
 function Prose({ html, ar, overrides, admin, onSaved, onZoom }: { html: string; ar: boolean; overrides: Record<string, string>; admin: boolean; onSaved: () => void; onZoom: (u: string) => void }) {
+  const fix = (h: string) => (ar ? isolateLatin(h) : h);
   const parts: React.ReactNode[] = [];
   let last = 0;
   let i = 0;
   for (const m of html.matchAll(SLOT_RE)) {
     const idx = m.index ?? 0;
-    if (idx > last) parts.push(<div key={`h${i}`} dangerouslySetInnerHTML={{ __html: wrapTables(sanitizeHtml(html.slice(last, idx))) }} />);
+    if (idx > last) parts.push(<div key={`h${i}`} dangerouslySetInnerHTML={{ __html: wrapTables(fix(sanitizeHtml(html.slice(last, idx)))) }} />);
     parts.push(<Slot key={`s${i}`} id={m[1]} label={m[2]} def={m[3]} over={overrides[m[1]]} admin={admin} ar={ar} onSaved={onSaved} onZoom={onZoom} />);
     last = idx + m[0].length;
     i++;
   }
-  if (last < html.length) parts.push(<div key="tail" dangerouslySetInnerHTML={{ __html: wrapTables(sanitizeHtml(html.slice(last))) }} />);
+  if (last < html.length) parts.push(<div key="tail" dangerouslySetInnerHTML={{ __html: wrapTables(fix(sanitizeHtml(html.slice(last)))) }} />);
   return <div className="cs-prose" onClick={(e) => { const t = e.target as HTMLElement; if (t.tagName === 'IMG' && !t.closest('.cs-fig')) onZoom((t as HTMLImageElement).src); }}>{parts}</div>;
 }
 
