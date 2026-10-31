@@ -4,7 +4,7 @@
 //   /diseases/:id   DiseasePage  — sticky section tabs, nursing-first layout, quiz
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import {
   fetchDisease,
   fetchDiseaseIndex,
@@ -272,6 +272,7 @@ function isolateLatin(html: string): string {
 }
 
 function Prose({ html, ar, overrides, admin, onSaved, onZoom }: { html: string; ar: boolean; overrides: Record<string, string>; admin: boolean; onSaved: () => void; onZoom: (u: string) => void }) {
+  const nav = useNavigate();
   const fix = (h: string) => (ar ? isolateLatin(h) : h);
   const parts: React.ReactNode[] = [];
   let last = 0;
@@ -284,7 +285,7 @@ function Prose({ html, ar, overrides, admin, onSaved, onZoom }: { html: string; 
     i++;
   }
   if (last < html.length) parts.push(<div key="tail" dangerouslySetInnerHTML={{ __html: wrapTables(fix(sanitizeHtml(html.slice(last)))) }} />);
-  return <div className="cs-prose" onClick={(e) => { const t = e.target as HTMLElement; if (t.tagName === 'IMG' && !t.closest('.cs-fig')) onZoom((t as HTMLImageElement).src); }}>{parts}</div>;
+  return <div className="cs-prose" onClick={(e) => { const t = e.target as HTMLElement; const a = t.closest('a'); const href = a?.getAttribute('href'); if (a && href && href.startsWith('/diseases/')) { e.preventDefault(); nav(href); return; } if (t.tagName === 'IMG' && !t.closest('.cs-fig')) onZoom((t as HTMLImageElement).src); }}>{parts}</div>;
 }
 
 function Quiz({ d, ar }: { d: Disease; ar: boolean }) {
