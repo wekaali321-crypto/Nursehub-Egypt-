@@ -158,6 +158,7 @@ const defaultMenu = [
   { label: "أسئلة السفر للخارج", path: "/travel-questions" },
   { label: "الكورسات", path: "/courses" },
   { label: "الحالات السريرية", path: "/cases" },
+  { label: "الأمراض للتمريض", path: "/diseases" },
   { label: "المتجر", path: "/store" },
 ];
 
