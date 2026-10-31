@@ -3,7 +3,7 @@ const STATIC = [
   ['/', 1.0], ['/category/articles', 0.8], ['/category/summaries', 0.8], ['/category/drugs', 0.8],
   ['/category/skills', 0.8], ['/category/careplans', 0.8], ['/category/books', 0.8],
   ['/drugs', 0.8], ['/drugs/all', 0.8], ['/drugs/peds-medications', 0.7], ['/drugs/prescriptions', 0.7],
-  ['/courses', 0.8], ['/tools', 0.7], ['/store', 0.7], ['/quizzes', 0.7], ['/travel-questions', 0.7],
+  ['/courses', 0.8], ['/diseases', 0.8], ['/tools', 0.7], ['/store', 0.7], ['/quizzes', 0.7], ['/travel-questions', 0.7],
   ['/about', 0.5], ['/contact', 0.5], ['/faq', 0.5],
 ];
 
@@ -33,6 +33,13 @@ export async function sitemapResponse({ request, env }) {
     drugs.forEach((d) => d.slug && urls.push([`/drug/${enc(d.slug)}`, 0.6]));
     courses.forEach((c) => urls.push([`/courses/${enc(c.id)}`, 0.7]));
     chapters.forEach((c) => urls.push([`/courses/${enc(c.course_id)}/chapter/${enc(c.id)}`, 0.6]));
+    try {
+      const r = await fetch(`${site}/diseases/index.json`);
+      const j = r.ok ? await r.json() : { items: [] };
+      (j.items || []).forEach((c) => urls.push([`/diseases/${enc(c.id)}`, 0.7]));
+    } catch {
+      /* optional */
+    }
     try {
       const r = await fetch(`${site}/clinical-cases/index.json`);
       const j = r.ok ? await r.json() : { cases: [] };

@@ -92,6 +92,8 @@ const InterviewQuestionsPage = lazy(() => import("./pages/InterviewQuestionsPage
 const TravelQuestionsHome = lazy(() => import("./pages/TravelQuestionsPage").then((m) => ({ default: m.TravelQuestionsHome })));
 const TravelQuestionsStudy = lazy(() => import("./pages/TravelQuestionsPage"));
 const CasesHome = lazy(() => import("./pages/CasesPage").then((m) => ({ default: m.CasesHome })));
+const DiseasesHome = lazy(() => import("./pages/DiseasesPage").then((m) => ({ default: m.DiseasesHome })));
+const DiseasePage = lazy(() => import("./pages/DiseasesPage").then((m) => ({ default: m.DiseasePage })));
 const CasePage = lazy(() => import("./pages/CasesPage").then((m) => ({ default: m.CasePage })));
 const CoursesHome = lazy(() => import("./pages/CoursesPage").then((m) => ({ default: m.CoursesHome })));
 const CoursePage = lazy(() => import("./pages/CoursesPage").then((m) => ({ default: m.CoursePage })));
@@ -328,6 +330,8 @@ export default function App() {
                   <Route path="/travel-questions/:categoryId" element={<Public><TravelQuestionsStudy /></Public>} />
                   <Route path="/cases" element={<Public><CasesHome /></Public>} />
                   <Route path="/cases/:id" element={<Public><CasePage /></Public>} />
+                  <Route path="/diseases" element={<Public><DiseasesHome /></Public>} />
+                  <Route path="/diseases/:id" element={<Public><DiseasePage /></Public>} />
                   <Route path="/courses" element={<Public><CoursesHome /></Public>} />
                   <Route path="/courses/:courseId" element={<Public><CoursePage /></Public>} />
                   <Route path="/courses/:courseId/chapter/:chapterId" element={<Public><ChapterPage /></Public>} />

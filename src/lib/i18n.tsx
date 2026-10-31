@@ -53,6 +53,7 @@ const dict = {
   "nav.travelQuestions": { ar: "أسئلة السفر للخارج", en: "Questions for Traveling Abroad" },
   "nav.courses": { ar: "الكورسات", en: "Courses" },
   "nav.cases": { ar: "الحالات السريرية", en: "Clinical Cases" },
+  "nav.diseases": { ar: "الأمراض للتمريض", en: "Diseases for Nurses" },
   "nav.store": { ar: "المتجر", en: "Store" },
   "nav.admin": { ar: "لوحة التحكم", en: "Dashboard" },
   "nav.login": { ar: "تسجيل الدخول", en: "Login" },
