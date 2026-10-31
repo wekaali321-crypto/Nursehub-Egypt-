@@ -16,6 +16,8 @@ for (const f of readdirSync(dir).filter((x) => /^dis-\d{3}\.json$/.test(x)).sort
     problems.push(`${f}: invalid JSON (${e.message})`);
     continue;
   }
+  // guides routed to another site section (target != diseases) are exported by the routing step, not listed here
+  if (c.target && c.target !== 'diseases') continue;
   for (const k of ['id', 'num', 'system', 'title', 'teaser', 'sections']) if (!c[k]) problems.push(`${f}: missing ${k}`);
   for (const k of ['overview', 'signs', 'treatment', 'nursing', 'redflags']) if (!c.sections?.[k]?.ar) problems.push(`${f}: missing section ${k}`);
   if (!c.quiz?.length) problems.push(`${f}: no quiz`);
