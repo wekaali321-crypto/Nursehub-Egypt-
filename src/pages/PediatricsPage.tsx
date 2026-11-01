@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Breadcrumbs } from "../components/common";
-import { RoutedGuides } from "./DiseasesPage";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchPediatricTopics, type PediatricTopic } from "../lib/pediatricTopicsApi";
@@ -18,7 +17,7 @@ export function PediatricsHome() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetchPediatricTopics().then(setTopics).catch(() => setTopics([]));
+    fetchPediatricTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
@@ -72,7 +71,7 @@ export function PediatricsHome() {
           {list.map((tp) => (
             <Link
               key={tp.id}
-              to={`/pediatrics/${tp.id}`}
+              to={(tp as { href?: string }).href ?? `/pediatrics/${tp.id}`}
               className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
             >
               <div className="text-3xl">{tp.icon || "🍼"}</div>
@@ -88,7 +87,6 @@ export function PediatricsHome() {
           ))}
         </div>
       )}
-      <RoutedGuides target="pediatrics" />
     </div>
   );
 }

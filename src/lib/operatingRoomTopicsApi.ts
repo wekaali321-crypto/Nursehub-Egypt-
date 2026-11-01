@@ -1,4 +1,5 @@
 import { supabase } from "./supabase";
+import { routedAsTopics } from "./diseasesApi";
 
 export interface OperatingRoomTopicSection {
   id: string;
@@ -22,10 +23,11 @@ export interface OperatingRoomTopic {
   sources: string[] | null;
 }
 
-export async function fetchOperatingRoomTopics(): Promise<OperatingRoomTopic[]> {
+export async function fetchOperatingRoomTopics(opts?: { withRouted?: boolean }): Promise<OperatingRoomTopic[]> {
   const { data, error } = await supabase.from("operating_room_topics").select("*").order("order_num", { ascending: true });
-  if (error) throw error;
-  return data as OperatingRoomTopic[];
+  if (error && !opts?.withRouted) throw error;
+  const rows = (data ?? []) as OperatingRoomTopic[];
+  return opts?.withRouted ? [...rows, ...(await routedAsTopics<OperatingRoomTopic>("operating-room"))] : rows;
 }
 
 export async function upsertOperatingRoomTopic(item: OperatingRoomTopic) {

@@ -1,4 +1,5 @@
 import { supabase } from "./supabase";
+import { routedAsTopics } from "./diseasesApi";
 
 export interface FirstAidTopicSection {
   id: string;
@@ -22,10 +23,11 @@ export interface FirstAidTopic {
   sources: string[] | null;
 }
 
-export async function fetchFirstAidTopics(): Promise<FirstAidTopic[]> {
+export async function fetchFirstAidTopics(opts?: { withRouted?: boolean }): Promise<FirstAidTopic[]> {
   const { data, error } = await supabase.from("first_aid_topics").select("*").order("order_num", { ascending: true });
-  if (error) throw error;
-  return data as FirstAidTopic[];
+  if (error && !opts?.withRouted) throw error;
+  const rows = (data ?? []) as FirstAidTopic[];
+  return opts?.withRouted ? [...rows, ...(await routedAsTopics<FirstAidTopic>("first-aid"))] : rows;
 }
 
 export async function upsertFirstAidTopic(item: FirstAidTopic) {

@@ -1,4 +1,5 @@
 import { supabase } from "./supabase";
+import { routedAsTopics } from "./diseasesApi";
 
 export interface ObgynTopicSection {
   id: string;
@@ -22,10 +23,11 @@ export interface ObgynTopic {
   sources: string[] | null;
 }
 
-export async function fetchObgynTopics(): Promise<ObgynTopic[]> {
+export async function fetchObgynTopics(opts?: { withRouted?: boolean }): Promise<ObgynTopic[]> {
   const { data, error } = await supabase.from("obgyn_topics").select("*").order("order_num", { ascending: true });
-  if (error) throw error;
-  return data as ObgynTopic[];
+  if (error && !opts?.withRouted) throw error;
+  const rows = (data ?? []) as ObgynTopic[];
+  return opts?.withRouted ? [...rows, ...(await routedAsTopics<ObgynTopic>("obgyn"))] : rows;
 }
 
 export async function upsertObgynTopic(item: ObgynTopic) {

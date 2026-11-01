@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Breadcrumbs } from "../components/common";
-import { RoutedGuides } from "./DiseasesPage";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchERReceptionTopics, type ERReceptionTopic } from "../lib/erReceptionTopicsApi";
@@ -17,7 +16,7 @@ export function ERReceptionHome() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetchERReceptionTopics().then(setTopics).catch(() => setTopics([]));
+    fetchERReceptionTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
@@ -91,7 +90,7 @@ export function ERReceptionHome() {
           {list.map((tp) => (
             <Link
               key={tp.id}
-              to={`/er-reception/${tp.id}`}
+              to={(tp as { href?: string }).href ?? `/er-reception/${tp.id}`}
               className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
             >
               <div className="text-3xl">{tp.icon || "🚨"}</div>
@@ -107,8 +106,6 @@ export function ERReceptionHome() {
           ))}
         </div>
       )}
-
-      <RoutedGuides target="er-reception" />
 
       <div className={`${card} mt-8 p-5`}>
         <div className="mb-2 font-black text-slate-700 dark:text-white">{isEn ? "Related sections" : "أقسام ذات صلة"}</div>

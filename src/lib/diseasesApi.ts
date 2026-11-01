@@ -189,3 +189,21 @@ export async function saveImageOverride(slot: string, url: string | null): Promi
 export async function fetchGuidesFor(target: string): Promise<DiseaseIndexItem[]> {
   return (await fetchDiseaseIndex()).filter((i) => i.target === target);
 }
+
+/** Routed guides in the shape of a section topic card (merged into the section's own topic grid). */
+export async function routedAsTopics<T>(target: string): Promise<T[]> {
+  const items = await fetchGuidesFor(target);
+  return items.map((i, n) => ({
+    id: i.id,
+    order_num: 100000 + n,
+    title_ar: i.title.ar,
+    title_en: i.title.en ?? null,
+    icon: i.icon ?? null,
+    category: null,
+    summary_ar: i.teaser.ar,
+    summary_en: i.teaser.en ?? null,
+    sections: Array.from({ length: 8 }, (_, k) => ({ id: 's' + k, heading_ar: '', body_ar: '' })),
+    sources: null,
+    href: '/guide/' + i.id,
+  })) as unknown as T[];
+}

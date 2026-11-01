@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Breadcrumbs } from "../components/common";
-import { RoutedGuides } from "./DiseasesPage";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchFundamentalsTopics, type FundamentalsTopic } from "../lib/fundamentalsTopicsApi";
@@ -17,7 +16,7 @@ export function FundamentalsHome() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetchFundamentalsTopics().then(setTopics).catch(() => setTopics([]));
+    fetchFundamentalsTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
@@ -69,7 +68,7 @@ export function FundamentalsHome() {
           {list.map((tp) => (
             <Link
               key={tp.id}
-              to={`/fundamentals/${tp.id}`}
+              to={(tp as { href?: string }).href ?? `/fundamentals/${tp.id}`}
               className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
             >
               <div className="text-3xl">{tp.icon || "🛏️"}</div>
@@ -85,7 +84,6 @@ export function FundamentalsHome() {
           ))}
         </div>
       )}
-      <RoutedGuides target="fundamentals" />
     </div>
   );
 }
