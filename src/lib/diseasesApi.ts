@@ -46,6 +46,8 @@ export const SYSTEMS: Record<string, { ar: string; en: string; icon: string; gra
   renal: { ar: 'الكلى والمسالك', en: 'Renal & Urinary', icon: '💧', grad: 'from-cyan-500 to-sky-600' },
   infect: { ar: 'العدوى والطفيليات', en: 'Infection & Parasites', icon: '🦠', grad: 'from-lime-500 to-green-600' },
   rheum: { ar: 'العظام والروماتيزم', en: 'Rheumatology & Bones', icon: '🦴', grad: 'from-indigo-500 to-blue-700' },
+  ent: { ar: 'الأنف والأذن والحنجرة', en: 'ENT', icon: '👂', grad: 'from-amber-500 to-orange-600' },
+  eye: { ar: 'العيون', en: 'Ophthalmology', icon: '👁️', grad: 'from-sky-500 to-blue-600' },
   neuro: { ar: 'الأعصاب والطوارئ', en: 'Neuro & Emergencies', icon: '🧠', grad: 'from-violet-500 to-purple-600' },
   blood: { ar: 'الدم', en: 'Hematology', icon: '🩸', grad: 'from-red-600 to-rose-700' },
   other: { ar: 'متنوعة', en: 'Other', icon: '📋', grad: 'from-slate-500 to-slate-700' },
