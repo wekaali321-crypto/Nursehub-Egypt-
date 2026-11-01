@@ -16,7 +16,7 @@ export function FundamentalsHome() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetchFundamentalsTopics().then(setTopics).catch(() => setTopics([]));
+    fetchFundamentalsTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
@@ -68,7 +68,7 @@ export function FundamentalsHome() {
           {list.map((tp) => (
             <Link
               key={tp.id}
-              to={`/fundamentals/${tp.id}`}
+              to={(tp as { href?: string }).href ?? `/fundamentals/${tp.id}`}
               className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
             >
               <div className="text-3xl">{tp.icon || "🛏️"}</div>

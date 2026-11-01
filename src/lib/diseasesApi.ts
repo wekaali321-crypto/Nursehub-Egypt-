@@ -16,6 +16,8 @@ export interface DiseaseIndexItem {
   chips?: Bi[];
   /** 1 = common daily, 2 = important, 3 = critical / emergency */
   level?: 1 | 2 | 3;
+  /** 'diseases' (default) | an existing site section | slug of a new section */
+  target?: string;
 }
 
 export type SectionKey = 'overview' | 'causes' | 'signs' | 'tests' | 'treatment' | 'nursing' | 'redflags' | 'teaching';
@@ -66,6 +68,37 @@ export const SECTIONS: { key: SectionKey; ar: string; en: string; icon: string; 
 
 export const pick = (v: Bi | undefined, ar: boolean): string => (v ? (ar ? v.ar : v.en || v.ar) : '');
 
+/** Existing site sections that also show routed guides (path = the section hub). */
+export const HOST_SECTIONS: Record<string, { ar: string; en: string; icon: string; path: string; grad: string }> = {
+  'er-reception': { ar: 'الاستقبال والطوارئ', en: 'Reception & Emergency', icon: '🚨', path: '/er-reception', grad: 'from-red-600 to-rose-600' },
+  obgyn: { ar: 'النساء والتوليد', en: 'Obstetrics & Gynecology', icon: '🤰', path: '/obgyn', grad: 'from-pink-500 to-rose-600' },
+  pediatrics: { ar: 'قسم الأطفال', en: 'Pediatrics', icon: '🍼', path: '/pediatrics', grad: 'from-sky-500 to-cyan-600' },
+  nicu: { ar: 'الحضانة', en: 'NICU', icon: '👶', path: '/nicu', grad: 'from-indigo-500 to-sky-600' },
+  'operating-room': { ar: 'قسم العمليات', en: 'Operating Room', icon: '🔪', path: '/operating-room', grad: 'from-emerald-600 to-teal-700' },
+  pharmacology: { ar: 'الفارماكولوجي', en: 'Pharmacology', icon: '🧪', path: '/pharmacology', grad: 'from-emerald-500 to-teal-600' },
+  fundamentals: { ar: 'أسس التمريض', en: 'Fundamentals of Nursing', icon: '🛏️', path: '/fundamentals', grad: 'from-blue-500 to-indigo-600' },
+  'first-aid': { ar: 'الإسعافات الأولية', en: 'First Aid', icon: '🩹', path: '/first-aid', grad: 'from-rose-500 to-orange-500' },
+  'icu-nursing': { ar: 'العناية المركزة', en: 'ICU Nursing', icon: '🏥', path: '/icu-nursing', grad: 'from-slate-600 to-slate-800' },
+  dialysis: { ar: 'الغسيل الكلوي', en: 'Dialysis', icon: '💧', path: '/dialysis', grad: 'from-cyan-500 to-sky-600' },
+  radiology: { ar: 'الأشعة', en: 'Radiology', icon: '🩻', path: '/radiology', grad: 'from-zinc-600 to-slate-800' },
+  anatomy: { ar: 'التشريح', en: 'Anatomy', icon: '🦴', path: '/anatomy', grad: 'from-stone-500 to-amber-700' },
+  terminology: { ar: 'المصطلحات الطبية', en: 'Terminology', icon: '🔤', path: '/terminology', grad: 'from-violet-500 to-purple-600' },
+  prescriptions: { ar: 'الروشتات', en: 'Prescriptions', icon: '📝', path: '/drugs/prescriptions', grad: 'from-teal-500 to-emerald-600' },
+};
+
+export interface NewSection { ar: string }
+let sectionsCache: Record<string, NewSection> = {};
+export const newSections = () => sectionsCache;
+
+/** Visual identity for the sections created from the handbook (slug → icon/gradient/English name). */
+export const NEW_SECTION_STYLE: Record<string, { icon: string; en: string; grad: string }> = {
+  ent: { icon: '👂', en: 'ENT', grad: 'from-amber-500 to-orange-600' },
+  'surgery-clinic': { icon: '🩺', en: 'Surgery Clinic', grad: 'from-emerald-500 to-teal-600' },
+  'lab-reference': { icon: '🧫', en: 'Lab Tests & Meaning', grad: 'from-violet-500 to-purple-600' },
+  ophthalmology: { icon: '👁️', en: 'Ophthalmology', grad: 'from-sky-500 to-blue-600' },
+  poisoning: { icon: '☠️', en: 'Poisoning & Toxicology', grad: 'from-fuchsia-600 to-rose-600' },
+};
+
 let indexCache: Promise<DiseaseIndexItem[]> | null = null;
 const itemCache = new Map<string, Promise<Disease | null>>();
 
@@ -73,7 +106,10 @@ export function fetchDiseaseIndex(): Promise<DiseaseIndexItem[]> {
   if (!indexCache) {
     indexCache = fetch('/diseases/index.json', { cache: 'no-cache' })
       .then((r) => (r.ok ? r.json() : { items: [] }))
-      .then((j) => ((j.items ?? []) as DiseaseIndexItem[]).sort((a, b) => a.num - b.num))
+      .then((j) => {
+        sectionsCache = (j.sections ?? {}) as Record<string, NewSection>;
+        return ((j.items ?? []) as DiseaseIndexItem[]).map((i) => ({ ...i, target: i.target || 'diseases' })).sort((a, b) => a.num - b.num);
+      })
       .catch(() => {
         indexCache = null;
         return [];
@@ -147,4 +183,27 @@ export async function saveImageOverride(slot: string, url: string | null): Promi
     if (error) throw error;
   }
   imgCache = null;
+}
+
+/** Guides routed to a given section (existing hub or new slug). */
+export async function fetchGuidesFor(target: string): Promise<DiseaseIndexItem[]> {
+  return (await fetchDiseaseIndex()).filter((i) => i.target === target);
+}
+
+/** Routed guides in the shape of a section topic card (merged into the section's own topic grid). */
+export async function routedAsTopics<T>(target: string): Promise<T[]> {
+  const items = await fetchGuidesFor(target);
+  return items.map((i, n) => ({
+    id: i.id,
+    order_num: 100000 + n,
+    title_ar: i.title.ar,
+    title_en: i.title.en ?? null,
+    icon: i.icon ?? null,
+    category: null,
+    summary_ar: i.teaser.ar,
+    summary_en: i.teaser.en ?? null,
+    sections: Array.from({ length: 8 }, (_, k) => ({ id: 's' + k, heading_ar: '', body_ar: '' })),
+    sources: null,
+    href: '/guide/' + i.id,
+  })) as unknown as T[];
 }

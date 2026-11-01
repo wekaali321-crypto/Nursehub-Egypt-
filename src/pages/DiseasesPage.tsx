@@ -4,7 +4,7 @@
 //   /diseases/:id   DiseasePage  — sticky section tabs, nursing-first layout, quiz
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
 import {
   fetchDisease,
   fetchDiseaseIndex,
@@ -12,6 +12,9 @@ import {
   fetchImageOverrides,
   saveImageOverride,
   SLOT_RE,
+  HOST_SECTIONS,
+  NEW_SECTION_STYLE,
+  newSections,
   saveRead,
   pick,
   SYSTEMS,
@@ -32,6 +35,19 @@ import { uploadFile } from '../lib/storage';
 
 const sys = (k: string) => SYSTEMS[k] ?? SYSTEMS.other;
 
+/** Reader URL: diseases keep /diseases/:id, every other target uses /guide/:id. */
+export const guidePath = (i: { id: string; target?: string }) => (!i.target || i.target === 'diseases' ? `/diseases/${i.id}` : `/guide/${i.id}`);
+
+/** Title / icon / gradient / hub path of a target (diseases, an existing section or a new section). */
+function sectionInfo(target: string, ar: boolean) {
+  if (target === 'diseases') return { name: ar ? 'الأمراض للتمريض' : 'Diseases for Nurses', icon: '🫀', grad: 'from-teal-500 via-sky-500 to-indigo-500', path: '/diseases' };
+  const host = HOST_SECTIONS[target];
+  if (host) return { name: ar ? host.ar : host.en, icon: host.icon, grad: host.grad, path: host.path };
+  const st = NEW_SECTION_STYLE[target];
+  const ns = newSections()[target];
+  return { name: ar ? ns?.ar || target : st?.en || ns?.ar || target, icon: st?.icon || '📚', grad: st?.grad || 'from-teal-500 to-sky-600', path: `/section/${target}` };
+}
+
 function Loading() {
   return <div className="flex items-center justify-center py-24 text-slate-500"><span className="animate-pulse">…</span></div>;
 }
@@ -39,7 +55,16 @@ function Loading() {
 // ---------------------------------------------------------------------------
 // Hub — /diseases
 // ---------------------------------------------------------------------------
+export function SectionHub() {
+  const { slug = '' } = useParams();
+  return <GuideHub target={slug} />;
+}
+
 export function DiseasesHome() {
+  return <GuideHub target="diseases" />;
+}
+
+function GuideHub({ target }: { target: string }) {
   const { lang } = useI18n();
   const ar = lang === 'ar';
   const [items, setItems] = useState<DiseaseIndexItem[] | null>(null);
@@ -48,16 +73,24 @@ export function DiseasesHome() {
   const [sp, setSp] = useState('all');
   const [lvl, setLvl] = useState(0);
 
+  const [ready, setReady] = useState(false);
+  const info = sectionInfo(target, ar);
+  const isDis = target === 'diseases';
   useSEO({
-    title: ar ? 'الأمراض للتمريض | NurseHub Egypt' : 'Diseases for Nurses | NurseHub Egypt',
+    title: `${info.name} | NurseHub Egypt`,
     description: ar
-      ? 'شرح مبسّط لأهم الأمراض موجّه للممرض: إيه المرض، إزاي تتعرف عليه، والعلاج، ودورك التمريضي خطوة بخطوة.'
-      : 'Nurse-focused guides to common diseases: what it is, how to recognise it, treatment and your nursing role step by step.',
+      ? isDis
+        ? 'شرح مبسّط لأهم الأمراض موجّه للممرض: إيه المرض، إزاي تتعرف عليه، والعلاج، ودورك التمريضي خطوة بخطوة.'
+        : `${info.name}: شرح عملي موجّه للتمريض، خطوة بخطوة مع الجرعات والرسومات وأسئلة المراجعة.`
+      : 'Nurse-focused guides: what it is, how to recognise it, treatment and your nursing role step by step.',
   });
 
   useEffect(() => {
-    void fetchDiseaseIndex().then(setItems);
-  }, []);
+    void fetchDiseaseIndex().then((all) => {
+      setItems(all.filter((i) => i.target === target));
+      setReady(true);
+    });
+  }, [target]);
 
   const counts = useMemo(() => {
     const m: Record<string, number> = {};
@@ -80,22 +113,22 @@ export function DiseasesHome() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8" dir={ar ? 'rtl' : 'ltr'}>
-      <Breadcrumbs items={[{ label: ar ? 'الأمراض للتمريض' : 'Diseases for Nurses' }]} />
+      <Breadcrumbs items={[{ label: info.name }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
 
-      <div className="dz-hero relative overflow-hidden rounded-3xl p-6 text-white sm:p-10">
+      <div className={`${isDis ? 'dz-hero' : `bg-gradient-to-br ${info.grad}`} relative overflow-hidden rounded-3xl p-6 text-white sm:p-10`}>
         <div className="relative z-10 grid items-center gap-6 sm:grid-cols-[1fr_auto]">
           <div>
-            <div className="text-sm font-bold text-white/80">{ar ? '🩺 اتعلّم المرض… واتعلّم تتعامل معاه' : '🩺 Know the disease — know how to nurse it'}</div>
-            <h1 className="mt-1 text-3xl font-black sm:text-5xl">{ar ? 'الأمراض للتمريض' : 'Diseases for Nurses'}</h1>
+            <div className="text-sm font-bold text-white/80">{isDis ? (ar ? '🩺 اتعلّم المرض… واتعلّم تتعامل معاه' : '🩺 Know the disease — know how to nurse it') : `${info.icon} ${ar ? 'قسم جديد' : 'New section'}`}</div>
+            <h1 className="mt-1 text-3xl font-black sm:text-5xl">{info.name}</h1>
             <p className="mt-3 max-w-xl text-white/90">
               {ar
-                ? 'كل مرض بنفس الترتيب: إيه هو، ليه بيحصل، إزاي تتعرف عليه، العلاج، وبعدين الأهم: إنت كممرض تعمل إيه ومتراقبش إيه.'
-                : 'Every disease in the same order: what it is, why it happens, how to recognise it, treatment — then what matters most: what you do and what you watch as the nurse.'}
+                ? 'كل موضوع بنفس الترتيب: إيه هو، ليه بيحصل، إزاي تتعرف عليه، العلاج، وبعدين الأهم: إنت كممرض تعمل إيه ومتراقبش إيه.'
+                : 'Every topic in the same order: what it is, why it happens, how to recognise it, treatment — then what matters most: what you do and what you watch as the nurse.'}
             </p>
           </div>
           <div className="mx-auto grid grid-cols-2 gap-3 text-center">
-            <div className="rounded-2xl bg-white/15 px-5 py-3 backdrop-blur"><div className="text-3xl font-black">{total}</div><div className="text-xs font-bold text-white/80">{ar ? 'مرض' : 'diseases'}</div></div>
+            <div className="rounded-2xl bg-white/15 px-5 py-3 backdrop-blur"><div className="text-3xl font-black">{total}</div><div className="text-xs font-bold text-white/80">{ar ? 'موضوع' : 'topics'}</div></div>
             <div className="rounded-2xl bg-white/15 px-5 py-3 backdrop-blur"><div className="text-3xl font-black">{doneN}</div><div className="text-xs font-bold text-white/80">{ar ? 'قريتها' : 'read'}</div></div>
           </div>
         </div>
@@ -127,7 +160,11 @@ export function DiseasesHome() {
         </div>
       </div>
 
-      {items === null ? (
+      {!ready && target !== 'diseases' && items === null ? (
+        <Loading />
+      ) : ready && target !== 'diseases' && items !== null && items.length === 0 ? (
+        <Navigate to="/" replace />
+      ) : items === null ? (
         <Loading />
       ) : shown.length === 0 ? (
         <div className="py-20 text-center text-slate-500">{total === 0 ? (ar ? 'الأمراض قيد الإضافة… عُد قريبًا.' : 'Diseases are being added… check back soon.') : ar ? 'لا توجد نتائج مطابقة.' : 'No matches.'}</div>
@@ -137,7 +174,7 @@ export function DiseasesHome() {
             const s = sys(c.system);
             const lv = LEVELS[c.level ?? 1];
             return (
-              <Link key={c.id} to={`/diseases/${c.id}`} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
+              <Link key={c.id} to={guidePath(c)} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
                 <div className={`relative flex h-24 items-end justify-between bg-gradient-to-br ${s.grad} p-4 text-white`}>
                   <span className="text-4xl drop-shadow">{c.icon || s.icon}</span>
                   <span className="rounded-full bg-black/25 px-3 py-1 text-xs font-black backdrop-blur">{ar ? s.ar : s.en}</span>
@@ -285,7 +322,7 @@ function Prose({ html, ar, overrides, admin, onSaved, onZoom }: { html: string; 
     i++;
   }
   if (last < html.length) parts.push(<div key="tail" dangerouslySetInnerHTML={{ __html: wrapTables(fix(sanitizeHtml(html.slice(last)))) }} />);
-  return <div className="cs-prose" onClick={(e) => { const t = e.target as HTMLElement; const a = t.closest('a'); const href = a?.getAttribute('href'); if (a && href && href.startsWith('/diseases/')) { e.preventDefault(); nav(href); return; } if (t.tagName === 'IMG' && !t.closest('.cs-fig')) onZoom((t as HTMLImageElement).src); }}>{parts}</div>;
+  return <div className="cs-prose" onClick={(e) => { const t = e.target as HTMLElement; const a = t.closest('a'); const href = a?.getAttribute('href'); if (a && href && /^\/(diseases|guide)\/dis-\d{3}$/.test(href)) { e.preventDefault(); void fetchDiseaseIndex().then((all) => { const it = all.find((x) => href.endsWith(x.id)); nav(it ? guidePath(it) : href); }); return; } if (t.tagName === 'IMG' && !t.closest('.cs-fig')) onZoom((t as HTMLImageElement).src); }}>{parts}</div>;
 }
 
 function Quiz({ d, ar }: { d: Disease; ar: boolean }) {
@@ -392,14 +429,17 @@ export function DiseasePage() {
     );
 
   const s = sys(d.system);
-  const pos = index.findIndex((x) => x.id === d.id);
-  const prev = pos > 0 ? index[pos - 1] : null;
-  const next = pos >= 0 && pos < index.length - 1 ? index[pos + 1] : null;
+  const me = index.find((x) => x.id === d.id);
+  const sInfo = sectionInfo(me?.target || 'diseases', ar);
+  const sameTarget = index.filter((x) => (x.target || 'diseases') === (me?.target || 'diseases'));
+  const pos = sameTarget.findIndex((x) => x.id === d.id);
+  const prev = pos > 0 ? sameTarget[pos - 1] : null;
+  const next = pos >= 0 && pos < sameTarget.length - 1 ? sameTarget[pos + 1] : null;
   const go = (k: string) => document.getElementById(`sec-${k}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-6" dir={ar ? 'rtl' : 'ltr'}>
-      <Breadcrumbs items={[{ label: ar ? 'الأمراض للتمريض' : 'Diseases', path: '/diseases' }, { label: pick(d.title, ar) }]} />
+      <Breadcrumbs items={[{ label: sInfo.name, path: sInfo.path }, { label: pick(d.title, ar) }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
 
       <header className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${s.grad} p-6 text-white sm:p-8`}>
@@ -456,11 +496,47 @@ export function DiseasePage() {
       </div>
 
       <div className="mt-8 grid grid-cols-2 gap-3">
-        {prev ? <Link to={`/diseases/${prev.id}`} className="rounded-2xl border border-slate-200 p-3 text-sm font-bold hover:border-teal-400 dark:border-slate-800 dark:text-white">{ar ? '→' : '←'} {pick(prev.title, ar)}</Link> : <span />}
-        {next ? <Link to={`/diseases/${next.id}`} className="rounded-2xl border border-slate-200 p-3 text-end text-sm font-bold hover:border-teal-400 dark:border-slate-800 dark:text-white">{pick(next.title, ar)} {ar ? '←' : '→'}</Link> : <span />}
+        {prev ? <Link to={guidePath(prev)} className="rounded-2xl border border-slate-200 p-3 text-sm font-bold hover:border-teal-400 dark:border-slate-800 dark:text-white">{ar ? '→' : '←'} {pick(prev.title, ar)}</Link> : <span />}
+        {next ? <Link to={guidePath(next)} className="rounded-2xl border border-slate-200 p-3 text-end text-sm font-bold hover:border-teal-400 dark:border-slate-800 dark:text-white">{pick(next.title, ar)} {ar ? '←' : '→'}</Link> : <span />}
       </div>
       <p className="mt-6 text-center text-xs text-slate-400">{ar ? 'للتعليم فقط — اتبع أوامر الطبيب وبروتوكول مؤسستك دائمًا.' : 'For education only — always follow physician orders and your institution’s protocol.'}</p>
       {zoom && <ImageLightbox src={zoom} onClose={() => setZoom(null)} />}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Cards of routed guides shown inside the existing section hubs (er-reception, obgyn, …)
+// ---------------------------------------------------------------------------
+export function RoutedGuides({ target }: { target: string }) {
+  const { lang } = useI18n();
+  const ar = lang === 'ar';
+  const [items, setItems] = useState<DiseaseIndexItem[]>([]);
+  useEffect(() => {
+    void fetchDiseaseIndex().then((all) => setItems(all.filter((i) => i.target === target)));
+  }, [target]);
+  if (!items.length) return null;
+  const host = HOST_SECTIONS[target];
+  return (
+    <div className="mt-8" dir={ar ? 'rtl' : 'ltr'}>
+      <div className="mb-3 flex items-center gap-2">
+        <span className="rounded-full bg-teal-500 px-3 py-1 text-xs font-black text-white">{ar ? 'جديد' : 'New'}</span>
+        <h2 className="text-lg font-black text-slate-800 dark:text-white">{ar ? `مواضيع إضافية في ${host?.ar ?? ''}` : `More in ${host?.en ?? ''}`}</h2>
+        <span className="text-xs text-slate-400">({items.length})</span>
+      </div>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map((c) => (
+          <Link key={c.id} to={guidePath(c)} className="rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
+            <div className="flex items-start gap-3">
+              <div className="text-3xl">{c.icon || '📘'}</div>
+              <div className="min-w-0">
+                <h3 className="font-black leading-snug text-slate-900 dark:text-white">{pick(c.title, ar)}</h3>
+                <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{pick(c.teaser, ar)}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

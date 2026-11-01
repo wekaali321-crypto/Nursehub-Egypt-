@@ -16,7 +16,7 @@ export function FirstAidHome() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetchFirstAidTopics().then(setTopics).catch(() => setTopics([]));
+    fetchFirstAidTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
@@ -68,7 +68,7 @@ export function FirstAidHome() {
           {list.map((tp) => (
             <Link
               key={tp.id}
-              to={`/first-aid/${tp.id}`}
+              to={(tp as { href?: string }).href ?? `/first-aid/${tp.id}`}
               className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
             >
               <div className="text-3xl">{tp.icon || "🩹"}</div>

@@ -16,7 +16,7 @@ export function ERReceptionHome() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetchERReceptionTopics().then(setTopics).catch(() => setTopics([]));
+    fetchERReceptionTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
@@ -90,7 +90,7 @@ export function ERReceptionHome() {
           {list.map((tp) => (
             <Link
               key={tp.id}
-              to={`/er-reception/${tp.id}`}
+              to={(tp as { href?: string }).href ?? `/er-reception/${tp.id}`}
               className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
             >
               <div className="text-3xl">{tp.icon || "🚨"}</div>

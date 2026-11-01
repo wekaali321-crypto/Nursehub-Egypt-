@@ -1,4 +1,5 @@
 import { supabase } from "./supabase";
+import { routedAsTopics } from "./diseasesApi";
 
 export interface ERReceptionTopicSection {
   id: string;
@@ -22,10 +23,11 @@ export interface ERReceptionTopic {
   sources: string[] | null;
 }
 
-export async function fetchERReceptionTopics(): Promise<ERReceptionTopic[]> {
+export async function fetchERReceptionTopics(opts?: { withRouted?: boolean }): Promise<ERReceptionTopic[]> {
   const { data, error } = await supabase.from("er_reception_topics").select("*").order("order_num", { ascending: true });
-  if (error) throw error;
-  return data as ERReceptionTopic[];
+  if (error && !opts?.withRouted) throw error;
+  const rows = (data ?? []) as ERReceptionTopic[];
+  return opts?.withRouted ? [...rows, ...(await routedAsTopics<ERReceptionTopic>("er-reception"))] : rows;
 }
 
 export async function upsertERReceptionTopic(item: ERReceptionTopic) {

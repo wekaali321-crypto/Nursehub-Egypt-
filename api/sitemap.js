@@ -41,7 +41,8 @@ export default async function handler(req, res) {
     try {
       const r = await fetch(`${SITE}/diseases/index.json`);
       const j = r.ok ? await r.json() : { items: [] };
-      (j.items || []).forEach((c) => urls.push([`/diseases/${enc(c.id)}`, 0.7]));
+      (j.items || []).forEach((c) => urls.push([!c.target || c.target === 'diseases' ? `/diseases/${enc(c.id)}` : `/guide/${enc(c.id)}`, 0.7]));
+      Object.keys(j.sections || {}).forEach((slug) => urls.push([`/section/${enc(slug)}`, 0.8]));
     } catch {
       /* optional */
     }

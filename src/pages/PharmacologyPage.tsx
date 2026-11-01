@@ -16,7 +16,7 @@ export function PharmacologyHome() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetchPharmacologyTopics().then(setTopics).catch(() => setTopics([]));
+    fetchPharmacologyTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
@@ -68,7 +68,7 @@ export function PharmacologyHome() {
           {list.map((tp) => (
             <Link
               key={tp.id}
-              to={`/pharmacology/${tp.id}`}
+              to={(tp as { href?: string }).href ?? `/pharmacology/${tp.id}`}
               className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
             >
               <div className="text-3xl">{tp.icon || "🧪"}</div>

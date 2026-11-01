@@ -16,7 +16,7 @@ export function OperatingRoomHome() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetchOperatingRoomTopics().then(setTopics).catch(() => setTopics([]));
+    fetchOperatingRoomTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
@@ -68,7 +68,7 @@ export function OperatingRoomHome() {
           {list.map((tp) => (
             <Link
               key={tp.id}
-              to={`/operating-room/${tp.id}`}
+              to={(tp as { href?: string }).href ?? `/operating-room/${tp.id}`}
               className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
             >
               <div className="text-3xl">{tp.icon || "🔪"}</div>
