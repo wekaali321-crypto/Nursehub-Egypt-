@@ -31,6 +31,7 @@ import { sanitizeHtml } from '../utils/sanitizeHtml';
 import { useSEO } from '../lib/seo';
 import { useI18n } from '../lib/i18n';
 import { useAuth } from '../lib/theme';
+import { LabHub, LabGuide } from './LabPages';
 import { uploadFile } from '../lib/storage';
 
 const sys = (k: string) => SYSTEMS[k] ?? SYSTEMS.other;
@@ -57,6 +58,7 @@ function Loading() {
 // ---------------------------------------------------------------------------
 export function SectionHub() {
   const { slug = '' } = useParams();
+  if (slug === 'lab-reference') return <LabHub />;
   return <GuideHub target={slug} />;
 }
 
@@ -308,7 +310,7 @@ function isolateLatin(html: string): string {
   return root.innerHTML;
 }
 
-function Prose({ html, ar, overrides, admin, onSaved, onZoom }: { html: string; ar: boolean; overrides: Record<string, string>; admin: boolean; onSaved: () => void; onZoom: (u: string) => void }) {
+export function Prose({ html, ar, overrides, admin, onSaved, onZoom }: { html: string; ar: boolean; overrides: Record<string, string>; admin: boolean; onSaved: () => void; onZoom: (u: string) => void }) {
   const nav = useNavigate();
   const fix = (h: string) => (ar ? isolateLatin(h) : h);
   const parts: React.ReactNode[] = [];
@@ -325,7 +327,7 @@ function Prose({ html, ar, overrides, admin, onSaved, onZoom }: { html: string; 
   return <div className="cs-prose" onClick={(e) => { const t = e.target as HTMLElement; const a = t.closest('a'); const href = a?.getAttribute('href'); if (a && href && /^\/(diseases|guide)\/dis-\d{3}$/.test(href)) { e.preventDefault(); void fetchDiseaseIndex().then((all) => { const it = all.find((x) => href.endsWith(x.id)); nav(it ? guidePath(it) : href); }); return; } if (t.tagName === 'IMG' && !t.closest('.cs-fig')) onZoom((t as HTMLImageElement).src); }}>{parts}</div>;
 }
 
-function Quiz({ d, ar }: { d: Disease; ar: boolean }) {
+export function Quiz({ d, ar }: { d: Disease; ar: boolean }) {
   const [picked, setPicked] = useState<Record<number, number>>({});
   if (!d.quiz?.length) return null;
   const score = d.quiz.filter((q, i) => picked[i] === q.answer).length;
@@ -430,6 +432,7 @@ export function DiseasePage() {
 
   const s = sys(d.system);
   const me = index.find((x) => x.id === d.id);
+  if (me?.target === 'lab-reference') return <LabGuide d={d} ar={ar} />;
   const sInfo = sectionInfo(me?.target || 'diseases', ar);
   const sameTarget = index.filter((x) => (x.target || 'diseases') === (me?.target || 'diseases'));
   const pos = sameTarget.findIndex((x) => x.id === d.id);
