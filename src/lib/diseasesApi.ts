@@ -34,6 +34,8 @@ export interface Disease extends DiseaseIndexItem {
   keyPoints?: { ar: string[]; en?: string[] };
   quiz?: QuizItem[];
   refs?: { title: string; url?: string }[];
+  /** optional per-guide section titles/icons (key → {t, i}) that replace the default disease headings */
+  labels?: Partial<Record<SectionKey, { t: string; i: string }>>;
 }
 
 export const SYSTEMS: Record<string, { ar: string; en: string; icon: string; grad: string }> = {
