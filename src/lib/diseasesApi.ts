@@ -97,7 +97,7 @@ export const newSections = () => sectionsCache;
 /** Visual identity for the sections created from the handbook (slug → icon/gradient/English name). */
 export const NEW_SECTION_STYLE: Record<string, { icon: string; en: string; grad: string }> = {
   ent: { icon: '👂', en: 'ENT', grad: 'from-amber-500 to-orange-600' },
-  'surgery-clinic': { icon: '🩺', en: 'Surgery Clinic', grad: 'from-emerald-500 to-teal-600' },
+  'surgical-dressings': { icon: '🩹', en: 'Surgical Dressings', grad: 'from-emerald-500 to-teal-600' },
   'lab-reference': { icon: '🧫', en: 'Lab Tests & Meaning', grad: 'from-violet-500 to-purple-600' },
   ophthalmology: { icon: '👁️', en: 'Ophthalmology', grad: 'from-sky-500 to-blue-600' },
   poisoning: { icon: '☠️', en: 'Poisoning & Toxicology', grad: 'from-fuchsia-600 to-rose-600' },

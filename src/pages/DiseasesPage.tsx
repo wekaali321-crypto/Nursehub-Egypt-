@@ -59,6 +59,7 @@ function Loading() {
 export function SectionHub() {
   const { slug = '' } = useParams();
   if (slug === 'lab-reference') return <LabHub />;
+  if (slug === 'surgery-clinic') return <Navigate to="/section/surgical-dressings" replace />;
   if (slug === 'ent' || slug === 'ophthalmology') return <Navigate to={`/diseases?system=${slug === 'ent' ? 'ent' : 'eye'}`} replace />;
   return <GuideHub target={slug} />;
 }
