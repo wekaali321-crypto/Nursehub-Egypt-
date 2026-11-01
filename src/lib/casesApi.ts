@@ -122,3 +122,21 @@ export function lastCase(): string | null {
     return null;
   }
 }
+
+// ---- extra guides (how-to pages shown in the cases hub): public/clinical-cases/extra/<id>.json ----
+export interface CaseGuideIndexItem { id: string; title: Bi; teaser?: Bi }
+export interface CaseGuide extends CaseGuideIndexItem { html: Bi }
+
+export function fetchCaseGuides(): Promise<CaseGuideIndexItem[]> {
+  return fetch('/clinical-cases/index.json', { cache: 'no-cache' })
+    .then((r) => (r.ok ? r.json() : { guides: [] }))
+    .then((j) => (j.guides ?? []) as CaseGuideIndexItem[])
+    .catch(() => []);
+}
+
+export function fetchCaseGuide(id: string): Promise<CaseGuide | null> {
+  if (!/^[a-z0-9-]+$/.test(id)) return Promise.resolve(null);
+  return fetch(`/clinical-cases/extra/${id}.json`, { cache: 'no-cache' })
+    .then((r) => (r.ok ? (r.json() as Promise<CaseGuide>) : null))
+    .catch(() => null);
+}
