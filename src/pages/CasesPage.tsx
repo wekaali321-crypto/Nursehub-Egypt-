@@ -8,6 +8,10 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import {
   fetchCase,
   fetchCaseIndex,
+  fetchCaseGuides,
+  fetchCaseGuide,
+  type CaseGuide,
+  type CaseGuideIndexItem,
   loadDoneCases,
   saveDoneCases,
   rememberLastCase,
@@ -52,6 +56,7 @@ export function CasesHome() {
   const ar = lang === 'ar';
   const nav = useNavigate();
   const [cases, setCases] = useState<CaseIndexItem[] | null>(null);
+  const [guides, setGuides] = useState<CaseGuideIndexItem[]>([]);
   const [done, setDone] = useState<string[]>(() => loadDoneCases());
   const [q, setQ] = useState('');
   const [sp, setSp] = useState('all');
@@ -65,6 +70,7 @@ export function CasesHome() {
 
   useEffect(() => {
     void fetchCaseIndex().then(setCases);
+    void fetchCaseGuides().then(setGuides);
   }, []);
 
   const counts = useMemo(() => {
@@ -129,6 +135,20 @@ export function CasesHome() {
           </div>
         </div>
       </div>
+
+      {guides.length > 0 && (
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
+          {guides.map((g) => (
+            <Link key={g.id} to={`/cases/guide/${g.id}`} className="flex items-center gap-4 rounded-2xl border border-indigo-200 bg-gradient-to-l from-indigo-50 to-white p-4 transition hover:-translate-y-0.5 hover:shadow-lg dark:border-indigo-500/30 dark:from-indigo-500/10 dark:to-slate-900">
+              <div className="text-4xl">📘</div>
+              <div className="min-w-0">
+                <div className="font-black text-slate-900 dark:text-white">{pick(g.title, ar)}</div>
+                {g.teaser && <div className="mt-0.5 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{pick(g.teaser, ar)}</div>}
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
 
       <div className="mt-6 space-y-3">
         <input
@@ -473,6 +493,37 @@ export function CasePage() {
       </div>
 
       {zoom && <ImageLightbox src={zoom.src} alt={zoom.alt} onClose={() => setZoom(null)} />}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// How-to guide — /cases/guide/:id
+// ---------------------------------------------------------------------------
+export function CaseGuidePage() {
+  const { id = '' } = useParams();
+  const { lang } = useI18n();
+  const ar = lang === 'ar';
+  const [g, setG] = useState<CaseGuide | null | undefined>(undefined);
+  useEffect(() => {
+    setG(undefined);
+    void fetchCaseGuide(id).then(setG);
+    window.scrollTo(0, 0);
+  }, [id]);
+  useSEO({ title: g ? `${pick(g.title, ar)} | NurseHub Egypt` : 'NurseHub Egypt', description: g?.teaser ? pick(g.teaser, ar) : '' });
+  if (g === undefined) return <Loading />;
+  if (g === null)
+    return (
+      <div className="py-24 text-center" dir={ar ? 'rtl' : 'ltr'}>
+        <Link to="/cases" className="font-bold text-sky-600">{ar ? '← الحالات السريرية' : '← Clinical Cases'}</Link>
+      </div>
+    );
+  return (
+    <div className="mx-auto max-w-3xl px-4 py-6" dir={ar ? 'rtl' : 'ltr'}>
+      <Breadcrumbs items={[{ label: ar ? 'الحالات السريرية' : 'Clinical Cases', path: '/cases' }, { label: pick(g.title, ar) }]} />
+      <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
+      <h1 className="mb-4 text-3xl font-black text-slate-900 dark:text-white">{pick(g.title, ar)}</h1>
+      <div className="cs-prose rounded-3xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900" dangerouslySetInnerHTML={{ __html: wrapTables(sanitizeHtml(pick(g.html, ar))) }} />
     </div>
   );
 }

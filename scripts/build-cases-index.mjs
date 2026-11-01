@@ -35,6 +35,19 @@ for (const f of readdirSync(dir).filter((x) => /^case-\d{3}\.json$/.test(x)).sor
     cover: c.cover,
   });
 }
-writeFileSync(out, JSON.stringify({ updated: new Date().toISOString().slice(0, 10), count: cases.length, cases }, null, 0));
+const guides = [];
+const gdir = 'public/clinical-cases/extra';
+if (existsSync(gdir)) {
+  for (const f of readdirSync(gdir).filter((x) => x.endsWith('.json') && x !== 'index.json').sort()) {
+    try {
+      const g = JSON.parse(readFileSync(join(gdir, f), 'utf8'));
+      if (g.id && g.title && g.html) guides.push({ id: g.id, title: g.title, teaser: g.teaser });
+      else problems.push(`extra/${f}: needs id, title, html`);
+    } catch (e) {
+      problems.push(`extra/${f}: invalid JSON (${e.message})`);
+    }
+  }
+}
+writeFileSync(out, JSON.stringify({ updated: new Date().toISOString().slice(0, 10), count: cases.length, cases, guides }, null, 0));
 console.log(`index.json: ${cases.length} cases`);
 if (problems.length) console.log('PROBLEMS:\n' + problems.join('\n'));
