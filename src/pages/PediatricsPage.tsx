@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Breadcrumbs } from "../components/common";
+import { RoutedGuides } from "./DiseasesPage";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchPediatricTopics, type PediatricTopic } from "../lib/pediatricTopicsApi";
@@ -87,6 +88,7 @@ export function PediatricsHome() {
           ))}
         </div>
       )}
+      <RoutedGuides target="pediatrics" />
     </div>
   );
 }

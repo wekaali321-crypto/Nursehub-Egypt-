@@ -159,6 +159,11 @@ const defaultMenu = [
   { label: "الكورسات", path: "/courses" },
   { label: "الحالات السريرية", path: "/cases" },
   { label: "الأمراض للتمريض", path: "/diseases" },
+  { label: "السموم", path: "/section/poisoning" },
+  { label: "الأنف والأذن والحنجرة", path: "/section/ent" },
+  { label: "عيادة الجراحة", path: "/section/surgery-clinic" },
+  { label: "العيون", path: "/section/ophthalmology" },
+  { label: "التحاليل ودلالاتها", path: "/section/lab-reference" },
   { label: "المتجر", path: "/store" },
 ];
 

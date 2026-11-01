@@ -43,13 +43,30 @@ export const RX_CATEGORY_LABELS: Record<string, { ar: string; en: string }> = {
   "الطوارئ": { ar: "الطوارئ", en: "Emergency" },
 };
 
+let staticRx: Promise<RxPrescription[]> | null = null;
+/** Prescriptions shipped with the site (public/diseases/rx.json, built from the guides). */
+function fetchStaticRx(): Promise<RxPrescription[]> {
+  if (!staticRx) {
+    staticRx = fetch("/diseases/rx.json")
+      .then((r) => (r.ok ? r.json() : { rx: [] }))
+      .then((j) => (j.rx ?? []) as RxPrescription[])
+      .catch(() => []);
+  }
+  return staticRx;
+}
+
 export async function fetchRxPrescriptions(): Promise<RxPrescription[]> {
-  const { data, error } = await supabase
-    .from("rx_prescriptions")
-    .select("*")
-    .order("order_num", { ascending: true });
-  if (error) throw error;
-  return data as RxPrescription[];
+  const extra = await fetchStaticRx();
+  let base: RxPrescription[] = [];
+  try {
+    if (supabase) {
+      const { data, error } = await supabase.from("rx_prescriptions").select("*").order("order_num", { ascending: true });
+      if (!error && data) base = data as RxPrescription[];
+    }
+  } catch {
+    /* offline: static prescriptions only */
+  }
+  return [...base, ...extra];
 }
 
 export async function upsertRxPrescription(item: RxPrescription) {

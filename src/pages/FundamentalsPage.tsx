@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Breadcrumbs } from "../components/common";
+import { RoutedGuides } from "./DiseasesPage";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchFundamentalsTopics, type FundamentalsTopic } from "../lib/fundamentalsTopicsApi";
@@ -84,6 +85,7 @@ export function FundamentalsHome() {
           ))}
         </div>
       )}
+      <RoutedGuides target="fundamentals" />
     </div>
   );
 }

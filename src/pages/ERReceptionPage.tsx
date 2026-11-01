@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Breadcrumbs } from "../components/common";
+import { RoutedGuides } from "./DiseasesPage";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchERReceptionTopics, type ERReceptionTopic } from "../lib/erReceptionTopicsApi";
@@ -106,6 +107,8 @@ export function ERReceptionHome() {
           ))}
         </div>
       )}
+
+      <RoutedGuides target="er-reception" />
 
       <div className={`${card} mt-8 p-5`}>
         <div className="mb-2 font-black text-slate-700 dark:text-white">{isEn ? "Related sections" : "أقسام ذات صلة"}</div>

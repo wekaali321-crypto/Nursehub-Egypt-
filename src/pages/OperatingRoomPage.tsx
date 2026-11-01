@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Breadcrumbs } from "../components/common";
+import { RoutedGuides } from "./DiseasesPage";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchOperatingRoomTopics, type OperatingRoomTopic } from "../lib/operatingRoomTopicsApi";
@@ -84,6 +85,7 @@ export function OperatingRoomHome() {
           ))}
         </div>
       )}
+      <RoutedGuides target="operating-room" />
     </div>
   );
 }
