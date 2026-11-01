@@ -82,6 +82,21 @@ function GuideHub({ target }: { target: string }) {
     }
   });
   const [lvl, setLvl] = useState(0);
+  const [view, setView] = useState<'compact' | 'cards'>(() => {
+    try {
+      return localStorage.getItem('nh_dis_view') === 'cards' ? 'cards' : 'compact';
+    } catch {
+      return 'compact';
+    }
+  });
+  const changeView = (m: 'compact' | 'cards') => {
+    setView(m);
+    try {
+      localStorage.setItem('nh_dis_view', m);
+    } catch {
+      /* ignore */
+    }
+  };
 
   const [ready, setReady] = useState(false);
   const info = sectionInfo(target, ar);
@@ -117,6 +132,14 @@ function GuideHub({ target }: { target: string }) {
       return `${c.title.ar} ${c.title.en ?? ''} ${c.teaser.ar} ${(c.chips ?? []).map((x) => x.ar + ' ' + (x.en ?? '')).join(' ')}`.toLowerCase().includes(s);
     });
   }, [items, q, sp, lvl]);
+
+  // group by body system when browsing everything (no search / no system filter)
+  const groups = useMemo(() => {
+    if (sp !== 'all' || q.trim() || shown.length < 12) return [{ key: 'all', title: '', icon: '', items: shown }];
+    return Object.keys(SYSTEMS)
+      .map((k) => ({ key: k, title: ar ? SYSTEMS[k].ar : SYSTEMS[k].en, icon: SYSTEMS[k].icon, items: shown.filter((i) => i.system === k) }))
+      .filter((g) => g.items.length);
+  }, [shown, sp, q, ar]);
 
   const total = items?.length ?? 0;
   const doneN = read.filter((id) => items?.some((c) => c.id === id)).length;
@@ -179,26 +202,71 @@ function GuideHub({ target }: { target: string }) {
       ) : shown.length === 0 ? (
         <div className="py-20 text-center text-slate-500">{total === 0 ? (ar ? 'الأمراض قيد الإضافة… عُد قريبًا.' : 'Diseases are being added… check back soon.') : ar ? 'لا توجد نتائج مطابقة.' : 'No matches.'}</div>
       ) : (
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {shown.map((c) => {
-            const s = sys(c.system);
-            const lv = LEVELS[c.level ?? 1];
-            return (
-              <Link key={c.id} to={guidePath(c)} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
-                <div className={`relative flex h-24 items-end justify-between bg-gradient-to-br ${s.grad} p-4 text-white`}>
-                  <span className="text-4xl drop-shadow">{c.icon || s.icon}</span>
-                  <span className="rounded-full bg-black/25 px-3 py-1 text-xs font-black backdrop-blur">{ar ? s.ar : s.en}</span>
-                  {read.includes(c.id) && <span className="absolute start-3 top-3 rounded-full bg-emerald-400 px-2 py-0.5 text-[11px] font-black text-emerald-950">✓ {ar ? 'قريتها' : 'Read'}</span>}
+        <div className="mt-5">
+          <div className="mb-3 flex items-center justify-between gap-2 text-xs text-slate-500">
+            <span className="font-bold">{shown.length} {ar ? 'موضوع' : 'topics'}</span>
+            <div className="inline-flex overflow-hidden rounded-full border border-slate-200 dark:border-slate-700">
+              {(['compact', 'cards'] as const).map((m) => (
+                <button key={m} onClick={() => changeView(m)} className={`px-3 py-1 font-bold ${view === m ? 'bg-teal-500 text-white' : 'bg-white text-slate-600 dark:bg-slate-900 dark:text-slate-300'}`}>
+                  {m === 'compact' ? (ar ? '☰ مضغوط' : '☰ Compact') : ar ? '▦ كروت' : '▦ Cards'}
+                </button>
+              ))}
+            </div>
+          </div>
+          {groups.map((g) => (
+            <section key={g.key} className="mb-5">
+              {g.title && (
+                <h2 className="sticky top-14 z-10 -mx-1 mb-2 flex items-center gap-2 bg-slate-50/95 px-1 py-1.5 text-sm font-black text-slate-700 backdrop-blur dark:bg-slate-950/95 dark:text-slate-200">
+                  <span>{g.icon}</span>
+                  {g.title}
+                  <span className="rounded-full bg-slate-200 px-2 py-0.5 text-[11px] font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">{g.items.length}</span>
+                </h2>
+              )}
+              {view === 'compact' ? (
+                <div className="grid grid-cols-[minmax(0,1fr)] gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
+                  {g.items.map((c) => {
+                    const s = sys(c.system);
+                                        return (
+                      <Link key={c.id} to={guidePath(c)} className="group flex items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-2.5 py-2 transition hover:border-teal-400 hover:shadow-sm dark:border-slate-800 dark:bg-slate-900">
+                        <span className={`grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-gradient-to-br ${s.grad} text-lg text-white`}>{c.icon || s.icon}</span>
+                        <span className="min-w-0 flex-1">
+                          <span className="flex items-center gap-1.5">
+                            <span className="truncate text-sm font-black text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</span>
+                            {c.level === 3 && <span className="shrink-0 rounded-full bg-rose-100 px-1.5 text-[10px] font-black text-rose-700 dark:bg-rose-500/15 dark:text-rose-300">{ar ? 'طارئ' : 'ER'}</span>}
+                            {read.includes(c.id) && <span className="shrink-0 text-[11px] text-emerald-500">✓</span>}
+                          </span>
+                          <span className="block overflow-hidden text-ellipsis whitespace-nowrap text-[11px] text-slate-400" dir={ar && c.title.en ? 'ltr' : undefined} style={ar && c.title.en ? { textAlign: 'right' } : undefined}>{ar && c.title.en ? c.title.en : pick(c.teaser, ar)}</span>
+                        </span>
+                        <span className="shrink-0 text-slate-300 group-hover:text-teal-500">{ar ? '‹' : '›'}</span>
+                      </Link>
+                    );
+                  })}
                 </div>
-                <div className="p-4">
-                  <h3 className="font-black leading-snug text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</h3>
-                  {c.title.en && ar && <div className="text-xs text-slate-400" dir="ltr">{c.title.en}</div>}
-                  <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{pick(c.teaser, ar)}</p>
-                  <div className="mt-3"><span className={`rounded-full px-2.5 py-0.5 text-[11px] font-black ${lv.cls}`}>{ar ? lv.ar : lv.en}</span></div>
+              ) : (
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {g.items.map((c) => {
+                    const s = sys(c.system);
+                    const lv = LEVELS[c.level ?? 1];
+                    return (
+                      <Link key={c.id} to={guidePath(c)} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
+                        <div className={`relative flex h-24 items-end justify-between bg-gradient-to-br ${s.grad} p-4 text-white`}>
+                          <span className="text-4xl drop-shadow">{c.icon || s.icon}</span>
+                          <span className="rounded-full bg-black/25 px-3 py-1 text-xs font-black backdrop-blur">{ar ? s.ar : s.en}</span>
+                          {read.includes(c.id) && <span className="absolute start-3 top-3 rounded-full bg-emerald-400 px-2 py-0.5 text-[11px] font-black text-emerald-950">✓ {ar ? 'قريتها' : 'Read'}</span>}
+                        </div>
+                        <div className="p-4">
+                          <h3 className="font-black leading-snug text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</h3>
+                          {c.title.en && ar && <div className="text-xs text-slate-400" dir="ltr">{c.title.en}</div>}
+                          <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{pick(c.teaser, ar)}</p>
+                          <div className="mt-3"><span className={`rounded-full px-2.5 py-0.5 text-[11px] font-black ${lv.cls}`}>{ar ? lv.ar : lv.en}</span></div>
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
-              </Link>
-            );
-          })}
+              )}
+            </section>
+          ))}
         </div>
       )}
 
