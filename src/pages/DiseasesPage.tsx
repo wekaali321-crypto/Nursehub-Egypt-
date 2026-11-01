@@ -59,6 +59,7 @@ function Loading() {
 export function SectionHub() {
   const { slug = '' } = useParams();
   if (slug === 'lab-reference') return <LabHub />;
+  if (slug === 'ent' || slug === 'ophthalmology') return <Navigate to={`/diseases?system=${slug === 'ent' ? 'ent' : 'eye'}`} replace />;
   return <GuideHub target={slug} />;
 }
 
@@ -72,7 +73,13 @@ function GuideHub({ target }: { target: string }) {
   const [items, setItems] = useState<DiseaseIndexItem[] | null>(null);
   const [read] = useState<string[]>(() => loadRead());
   const [q, setQ] = useState('');
-  const [sp, setSp] = useState('all');
+  const [sp, setSp] = useState(() => {
+    try {
+      return new URLSearchParams(window.location.search).get('system') || 'all';
+    } catch {
+      return 'all';
+    }
+  });
   const [lvl, setLvl] = useState(0);
 
   const [ready, setReady] = useState(false);

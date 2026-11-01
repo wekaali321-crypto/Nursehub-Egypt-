@@ -160,9 +160,7 @@ const defaultMenu = [
   { label: "الحالات السريرية", path: "/cases" },
   { label: "الأمراض للتمريض", path: "/diseases" },
   { label: "السموم", path: "/section/poisoning" },
-  { label: "الأنف والأذن والحنجرة", path: "/section/ent" },
   { label: "عيادة الجراحة", path: "/section/surgery-clinic" },
-  { label: "العيون", path: "/section/ophthalmology" },
   { label: "التحاليل ودلالاتها", path: "/section/lab-reference" },
   { label: "المتجر", path: "/store" },
 ];
@@ -271,7 +269,7 @@ function loadUiConfig(): { homeSections: string[]; menu: { label: string; path: 
       const p = JSON.parse(raw);
       return {
         homeSections: p.homeSections ?? defaultHome,
-        menu: mergeNewDefaults(p.menu, defaultMenu, "path"),
+        menu: mergeNewDefaults(p.menu, defaultMenu, "path").filter((m: { path: string }) => m.path !== "/section/ent" && m.path !== "/section/ophthalmology"),
         trash: p.trash ?? [],
         versions: p.versions ?? [],
         notifications: p.notifications ?? [],
@@ -284,7 +282,7 @@ function loadUiConfig(): { homeSections: string[]; menu: { label: string; path: 
         // own home tile — filter it out even for returning visitors whose browser already cached
         // it before this change, since mergeNewDefaults only appends, never removes stale entries.
         homeCategories: mergeNewDefaults(p.homeCategories, seedHomeCategories, "link").filter(
-          (h) => h.link !== "/tests/licensure"
+          (h) => h.link !== "/tests/licensure" && h.link !== "/section/ent" && h.link !== "/section/ophthalmology"
         ),
         homeSectionMeta: { ...defaultSectionMeta, ...(p.homeSectionMeta ?? {}) },
         dailyViews: p.dailyViews ?? {},
