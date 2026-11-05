@@ -15,7 +15,8 @@ interface Suggestion {
 
 export default function SmartSearch({ onNavigate, variant = "compact" }: { onNavigate?: () => void; variant?: "compact" | "hero" }) {
   const { articles, drugs } = useStore();
-  const { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters } = useExtraSearchIndex();
+  const [searchActive, setSearchActive] = useState(false);
+  const { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters } = useExtraSearchIndex(searchActive);
   const { t, lang } = useI18n();
   const [q, setQ] = useState("");
   const [open, setOpen] = useState(false);
@@ -125,8 +126,8 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
   const isHero = variant === "hero";
   const inputProps = {
     value: q,
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => { setQ(e.target.value); setOpen(true); setActive(0); },
-    onFocus: () => setOpen(true),
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => { setQ(e.target.value); setOpen(true); setActive(0); setSearchActive(true); },
+    onFocus: () => { setOpen(true); setSearchActive(true); },
     onBlur: () => { blurTimer.current = window.setTimeout(() => setOpen(false), 150); },
     onKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => {
       if (e.key === "ArrowDown") setActive((a) => Math.min(a + 1, suggestions.length - 1));

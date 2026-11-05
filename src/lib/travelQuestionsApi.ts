@@ -128,11 +128,17 @@ export async function fetchTravelQuestionsLite(): Promise<TravelQuestionLite[]> 
   return fetchAllPages<TravelQuestionLite>('id,category_id,question_en,question_ar');
 }
 
-/** Per-category question counts without downloading the questions. */
+/** Per-category question counts (HEAD count queries: no rows are downloaded). */
 export async function fetchTravelQuestionCounts(): Promise<Record<string, number>> {
-  const rows = await fetchAllPages<{ category_id: string }>('category_id');
   const counts: Record<string, number> = {};
-  for (const r of rows) counts[r.category_id] = (counts[r.category_id] ?? 0) + 1;
+  if (!supabase) return counts;
+  const cats = await fetchTravelCategories();
+  await Promise.all(
+    cats.map(async (c) => {
+      const { count } = await supabase!.from('travel_questions').select('id', { count: 'exact', head: true }).eq('category_id', c.id);
+      if (count) counts[c.id] = count;
+    }),
+  );
   return counts;
 }
 

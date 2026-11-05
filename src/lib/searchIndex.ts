@@ -14,6 +14,7 @@ import { fetchOperatingRoomTopics, type OperatingRoomTopic } from "./operatingRo
 import { fetchObgynTopics, type ObgynTopic } from "./obgynTopicsApi";
 import { fetchClinicalProtocols, type ClinicalProtocol } from "./clinicalProtocolsApi";
 import { fetchLasaPairs, type LasaPair } from "./lasaApi";
+import { cacheGet, cacheSet } from "./remoteCache";
 import { fetchTravelQuestionsLite, type TravelQuestionLite } from "./travelQuestionsApi";
 import { fetchCourseChaptersLite, type CourseChapterLite } from "./coursesApi";
 
@@ -68,12 +69,25 @@ async function loadIndex(): Promise<ExtraSearchIndex> {
  * Supabase tables, outside the generic `articles`/`drugs` store — so global
  * search can't see them unless it fetches this separately. Fetched once and
  * shared (in-memory) across every caller (navbar quick-search, /search page). */
-export function useExtraSearchIndex(): ExtraSearchIndex {
+export function useExtraSearchIndex(enabled = true): ExtraSearchIndex {
   const [data, setData] = useState<ExtraSearchIndex>(cache ?? empty);
   useEffect(() => {
-    if (cache) return;
-    if (!inFlight) inFlight = loadIndex();
+    // Lazy: the index (thousands of rows) is only downloaded once someone actually uses search,
+    // and then kept in IndexedDB for 12 hours so it is not re-downloaded on every visit.
+    if (!enabled) return;
+    if (cache) {
+      setData(cache);
+      return;
+    }
+    if (!inFlight) {
+      inFlight = cacheGet<ExtraSearchIndex>('search_index_v1', 12 * 3600 * 1000).then(async (hit) => {
+        if (hit) return hit;
+        const fresh = await loadIndex();
+        void cacheSet('search_index_v1', fresh);
+        return fresh;
+      });
+    }
     inFlight.then((res) => { cache = res; setData(res); });
-  }, []);
+  }, [enabled]);
   return data;
 }
