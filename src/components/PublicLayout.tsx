@@ -1,8 +1,25 @@
 import { useEffect, useState, type ReactNode } from "react";
+import { useLocation, useNavigationType } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import InstallPrompt from "./InstallPrompt";
 import { useI18n } from "../lib/i18n";
+
+/** Open every new page from the top (SPA navigation otherwise keeps the previous scroll position). Back/forward and #anchors are left alone. */
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+  const navType = useNavigationType();
+  useEffect(() => {
+    if (hash || navType === "POP") return;
+    const root = document.documentElement;
+    const prev = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    root.style.scrollBehavior = prev;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+  return null;
+}
 
 function BackToTop() {
   const { t } = useI18n();
@@ -32,6 +49,7 @@ export default function PublicLayout({ children }: { children: ReactNode }) {
       <Navbar />
       <main id="main-content" className="flex-1">{children}</main>
       <Footer />
+      <ScrollToTop />
       <BackToTop />
       <div className="print:hidden"><InstallPrompt /></div>
     </div>
