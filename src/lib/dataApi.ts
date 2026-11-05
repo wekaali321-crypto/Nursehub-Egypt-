@@ -141,20 +141,24 @@ export const toOrder = (o: any) => ({
 });
 
 /* ---------- Load everything from Supabase ---------- */
-export async function loadAllFromSupabase(): Promise<Partial<DataShape>> {
+// `light` = anonymous visitors: skip the admin-only tables (users, activity, orders, subscribers, affiliates, redirects, media)
+// so a public page view does not pull them down.
+export async function loadAllFromSupabase(light = false): Promise<Partial<DataShape>> {
   if (!isSupabaseEnabled || !supabase) throw new Error("Supabase not configured");
 
   const q = (t: string) => supabase!.from(t).select("*");
+  const adminOnly = new Set<string>([TABLES.users, TABLES.activity, TABLES.orders, TABLES.subscribers, TABLES.affiliates, TABLES.redirects, TABLES.media]);
+  const qq = (t: string) => (light && adminOnly.has(t) ? Promise.resolve({ data: [] as any[] }) : q(t));
   const [
     articles, comments, media, products, users, pages, categories, tags,
     subscribers, ads, affiliates, redirects, activity, drugs, drugInteractions, drugAntidotes, drugClassifications,
     drugSuffixes, cardiacMedGroups, pharmMnemonics, pharmacyFacts, otcConditions, settings, orders,
   ] = await Promise.all([
-    q(TABLES.articles), q(TABLES.comments), q(TABLES.media), q(TABLES.products),
-    q(TABLES.users), q(TABLES.pages), q(TABLES.categories), q(TABLES.tags),
-    q(TABLES.subscribers), q(TABLES.ads), q(TABLES.affiliates), q(TABLES.redirects),
-    q(TABLES.activity), q(TABLES.drugs), q(TABLES.drugInteractions), q(TABLES.drugAntidotes), q(TABLES.drugClassifications),
-    q(TABLES.drugSuffixes), q(TABLES.cardiacMedGroups), q(TABLES.pharmMnemonics), q(TABLES.pharmacyFacts), q(TABLES.otcConditions), q(TABLES.settings), q(TABLES.orders),
+    qq(TABLES.articles), qq(TABLES.comments), qq(TABLES.media), qq(TABLES.products),
+    qq(TABLES.users), qq(TABLES.pages), qq(TABLES.categories), qq(TABLES.tags),
+    qq(TABLES.subscribers), qq(TABLES.ads), qq(TABLES.affiliates), qq(TABLES.redirects),
+    qq(TABLES.activity), qq(TABLES.drugs), qq(TABLES.drugInteractions), qq(TABLES.drugAntidotes), qq(TABLES.drugClassifications),
+    qq(TABLES.drugSuffixes), qq(TABLES.cardiacMedGroups), qq(TABLES.pharmMnemonics), qq(TABLES.pharmacyFacts), qq(TABLES.otcConditions), qq(TABLES.settings), qq(TABLES.orders),
   ]);
 
   const s = settings.data?.[0];
