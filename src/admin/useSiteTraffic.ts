@@ -1,15 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
 import { supabase, isSupabaseConfigured } from "../lib/supabase";
 
-export type TrafficDaily = { day: string; visitors: number; views: number; installs: number };
+export type TrafficDaily = { day: string; visitors: number; views: number; sessions?: number; installs: number };
 export type TrafficMonthly = { month: string; visitors: number; views: number; installs: number; app_users: number };
 export type TrafficStats = {
   generated_at: string;
   online_now: number;
   online_app: number;
-  today: { visitors: number; views: number; new_visitors: number; installs: number; app_users: number };
-  yesterday: { visitors: number; views: number };
-  totals: { visitors: number; views: number; installers: number; since: string | null };
+  today: { visitors: number; views: number; sessions?: number; new_visitors: number; installs: number; app_users: number };
+  yesterday: { visitors: number; views: number; sessions?: number };
+  totals: { visitors: number; views: number; sessions?: number; installers: number; since: string | null };
   daily: TrafficDaily[];
   monthly: TrafficMonthly[];
   installs_by_kind: Record<string, number>;

@@ -96,9 +96,10 @@ export default function DashboardHome() {
               <div className="mt-1 text-5xl font-black">{tr ? nf(tr.online_now) : "…"}</div>
               <div className="text-xs text-white/80">{tr && tr.online_app ? `منهم ${nf(tr.online_app)} من التطبيق · ` : ""}آخر دقيقتين</div>
             </div>
-            <div className="grid flex-1 grid-cols-2 gap-2 text-center sm:max-w-xl sm:grid-cols-4">
+            <div className="grid flex-1 grid-cols-2 gap-2 text-center sm:max-w-2xl sm:grid-cols-5">
               {[
                 ["زوار اليوم", tr?.today.visitors],
+                ["زيارات اليوم", tr?.today.sessions],
                 ["مشاهدات اليوم", tr?.today.views],
                 ["زوار الشهر", tr?.monthly[0]?.visitors],
                 ["نزّلوا التطبيق اليوم", tr?.today.installs],

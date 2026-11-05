@@ -80,9 +80,30 @@ function sourceOf(): string {
   return "other";
 }
 
+const OWNER_KEY = "nh_notrack";
+
+/** Open any page with ?notrack=1 once on a device to stop counting it (owner/admin); ?notrack=0 turns counting back on. */
+try {
+  if (typeof window !== "undefined") {
+    const q = new URLSearchParams(window.location.search).get("notrack");
+    if (q === "1") window.localStorage.setItem(OWNER_KEY, "1");
+    else if (q === "0") window.localStorage.removeItem(OWNER_KEY);
+  }
+} catch {
+  /* ignore */
+}
+
+export function isOwnerDevice(): boolean {
+  try {
+    return window.localStorage.getItem(OWNER_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
 const trackable = () => {
   try {
-    return isSupabaseConfigured() && !!supabase && !isBot();
+    return isSupabaseConfigured() && !!supabase && !isBot() && !isOwnerDevice();
   } catch {
     return false;
   }
