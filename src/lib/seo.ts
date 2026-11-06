@@ -20,6 +20,10 @@ function upsertMeta(attr: "name" | "property", key: string, content: string) {
   el.setAttribute("content", content);
 }
 
+/** The old *.pages.dev address keeps working (the Android app uses it), but search engines should only see the main domain. */
+const OLD_HOST_RE = /https?:\/\/nursehub-egypt\.pages\.dev/g;
+const toCanon = (s: string) => s.replace(OLD_HOST_RE, "https://nursehubegypt.com");
+
 /**
  * Centralized SEO hook: sets title, meta description/keywords, canonical,
  * Open Graph, Twitter Cards and one-or-many JSON-LD schema blocks.
@@ -48,7 +52,7 @@ export function useSEO(opts: SEOOptions) {
       upsertMeta("name", "twitter:image", image);
     }
 
-    const canonHref = url ?? window.location.href;
+    const canonHref = toCanon(url ?? window.location.href);
     upsertMeta("property", "og:url", canonHref);
     let canon = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (!canon) {
@@ -66,7 +70,7 @@ export function useSEO(opts: SEOOptions) {
         const script = document.createElement("script");
         script.type = "application/ld+json";
         script.setAttribute("data-seo-jsonld", "true");
-        script.textContent = JSON.stringify(block);
+        script.textContent = toCanon(JSON.stringify(block));
         document.head.appendChild(script);
       });
     }

@@ -156,7 +156,7 @@ async function pageFor(path, env, request) {
 }
 
 function inject(html, page, url) {
-  const canonical = `${url.origin}${url.pathname.replace(/\/+$/, '') || '/'}`;
+  const canonical = `${url.origin.replace('https://nursehub-egypt.pages.dev', 'https://nursehubegypt.com')}${url.pathname.replace(/\/+$/, '') || '/'}`;
   const t = esc(page.title);
   const d = esc(page.description);
   let out = html;

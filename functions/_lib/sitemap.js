@@ -18,7 +18,9 @@ async function rows(env, table, columns, filter = '') {
 }
 
 export async function sitemapResponse({ request, env }) {
-  const site = env.SITE_URL || new URL(request.url).origin;
+  const origin = new URL(request.url).origin;
+  // The old *.pages.dev address is kept for the Android app, but the sitemap always lists the main domain.
+  const site = env.SITE_URL || (origin === 'https://nursehub-egypt.pages.dev' ? 'https://nursehubegypt.com' : origin);
   const urls = STATIC.map(([p, pr]) => [p, pr]);
   try {
     const [articles, drugs, courses, chapters, peds, rx] = await Promise.all([
