@@ -40,7 +40,7 @@
    "ar": "<table><thead><tr><th>الدرجة</th><th>المعنى</th><th>التدخل</th></tr></thead><tbody><tr><td>0–3</td><td>ضائقة شديدة</td><td>إنعاش كامل</td></tr><tr><td>4–6</td><td>ضائقة متوسطة</td><td>إنعاش جزئي</td></tr><tr><td>7–10</td><td>كافٍ</td><td>رعاية روتينية: أكسجين، شفط، تنشيط بفرك الظهر والقدمين</td></tr></tbody></table>"
   },
   "nursing": {
-   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>وقت التقييم</strong><p>سجّلي عند 1 و5 دقائق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>التقييم</strong><p>قيّمي الخمس علامات: اللون، النبض، الاستجابة، النشاط، التنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>التدخل</strong><p>حسب الدرجة، جفّفي وفركي الظهر والقدمين وشفط ثم أكسجين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>إعادة التقييم</strong><p>عند 10 دقائق إن < 7.</p></div></div></div>"
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>وقت التقييم</strong><p>سجّلي عند 1 و5 دقائق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>التقييم</strong><p>قيّمي الخمس علامات: اللون، النبض، الاستجابة، النشاط، التنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>التدخل</strong><p>حسب الدرجة، جفّفي وفركي الظهر والقدمين وشفط ثم أكسجين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>إعادة التقييم</strong><p>عند 10 دقائق إن < 7.</p></div></div></div><h4>أمثلة تطبيقية</h4><ul><li>مولود أزرق تمامًا، نبض 115، بكاء ضعيف، حركات نشطة، ثني الأطراف، تكشير: 0+2+1+2+1 = <strong>6</strong>.</li><li>نبض 92، بكاء ضعيف، تكشير بالتنبيه، جسم وردي وأطراف زرقاء، انثناء: درجة منخفضة تستدعي إنعاشًا جزئيًا.</li><li>بكاء قوي، نبض 130، توتر عضلي ما، جسم وردي وأطراف زرقاء: <strong>8</strong>.</li><li>درجة 10 عند الدقيقة الأولى: تكيف جيد لكن يُعاد التقييم عند 5 دقائق.</li></ul>"
   },
   "redflags": {
    "ar": "<ul><li>درجة 3 أو أقل.</li><li>نبض أقل من 100 أو انعدام التنفس.</li><li>زرقة مركزية.</li></ul>"
@@ -137,6 +137,26 @@
    "answer": 0,
    "why": {
     "ar": "بكاء قوي = 2 للتنفس."
+   }
+  },
+  {
+   "q": {
+    "ar": "مولود نبضه 115 أزرق تمامًا بكاؤه ضعيف حركاته نشطة ويكشّر: درجته"
+   },
+   "options": [
+    {
+     "ar": "6"
+    },
+    {
+     "ar": "8"
+    },
+    {
+     "ar": "10"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لون 0 + نبض 2 + ردة فعل 1 + نشاط 2 + تنفس 1 = 6."
    }
   }
  ],
