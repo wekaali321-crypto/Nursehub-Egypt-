@@ -98,7 +98,7 @@ async function pageFor(path, env, request) {
       type: 'CollectionPage',
     };
   }
-  if ((m = /^\/(?:diseases|guide)\/(dis-\d{3})$/.exec(p))) {
+  if ((m = /^\/(?:diseases|guide)\/(dis-\d{3,4})$/.exec(p))) {
     const d = await getJSON(env, request, `/diseases/items/${m[1]}.json`);
     if (!d) return null;
     const secs = SECTION_ORDER.filter((k) => d.sections?.[k]?.ar);

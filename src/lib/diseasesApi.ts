@@ -126,7 +126,7 @@ export function fetchDiseaseIndex(): Promise<DiseaseIndexItem[]> {
 }
 
 export function fetchDisease(id: string): Promise<Disease | null> {
-  if (!/^dis-\d{3}$/.test(id)) return Promise.resolve(null);
+  if (!/^dis-\d{3,4}$/.test(id)) return Promise.resolve(null);
   let p = itemCache.get(id);
   if (!p) {
     p = fetch(`/diseases/items/${id}.json`, { cache: 'no-cache' })

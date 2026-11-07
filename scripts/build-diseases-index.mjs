@@ -20,7 +20,7 @@ const RX_CAT = {
   'أخرى': 'عام ومكمّلات',
   'أطفال': 'عام ومكمّلات',
 };
-for (const f of readdirSync(dir).filter((x) => /^dis-\d{3}\.json$/.test(x)).sort()) {
+for (const f of readdirSync(dir).filter((x) => /^dis-\d{3,4}\.json$/.test(x)).sort()) {
   let c;
   try {
     c = JSON.parse(readFileSync(join(dir, f), 'utf8'));

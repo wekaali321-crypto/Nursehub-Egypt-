@@ -400,7 +400,7 @@ export function Prose({ html, ar, overrides, admin, onSaved, onZoom }: { html: s
     i++;
   }
   if (last < html.length) parts.push(<div key="tail" dangerouslySetInnerHTML={{ __html: wrapTables(fix(sanitizeHtml(html.slice(last)))) }} />);
-  return <div className="cs-prose" onClick={(e) => { const t = e.target as HTMLElement; const a = t.closest('a'); const href = a?.getAttribute('href'); if (a && href && /^\/(diseases|guide)\/dis-\d{3}$/.test(href)) { e.preventDefault(); void fetchDiseaseIndex().then((all) => { const it = all.find((x) => href.endsWith(x.id)); nav(it ? guidePath(it) : href); }); return; } if (t.tagName === 'IMG' && !t.closest('.cs-fig')) onZoom((t as HTMLImageElement).src); }}>{parts}</div>;
+  return <div className="cs-prose" onClick={(e) => { const t = e.target as HTMLElement; const a = t.closest('a'); const href = a?.getAttribute('href'); if (a && href && /^\/(diseases|guide)\/dis-\d{3,4}$/.test(href)) { e.preventDefault(); void fetchDiseaseIndex().then((all) => { const it = all.find((x) => href.endsWith(x.id)); nav(it ? guidePath(it) : href); }); return; } if (t.tagName === 'IMG' && !t.closest('.cs-fig')) onZoom((t as HTMLImageElement).src); }}>{parts}</div>;
 }
 
 export function Quiz({ d, ar }: { d: Disease; ar: boolean }) {
