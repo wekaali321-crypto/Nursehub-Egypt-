@@ -1,5 +1,5 @@
 // NurseHub Egypt PWA Service Worker
-const CACHE_NAME = "nursehub-v5";
+const CACHE_NAME = "nursehub-v6";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
