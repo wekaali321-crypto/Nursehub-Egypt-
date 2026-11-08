@@ -403,10 +403,24 @@ export function Prose({ html, ar, overrides, admin, onSaved, onZoom }: { html: s
   return <div className="cs-prose" onClick={(e) => { const t = e.target as HTMLElement; const a = t.closest('a'); const href = a?.getAttribute('href'); if (a && href && /^\/(diseases|guide)\/dis-\d{3,4}$/.test(href)) { e.preventDefault(); void fetchDiseaseIndex().then((all) => { const it = all.find((x) => href.endsWith(x.id)); nav(it ? guidePath(it) : href); }); return; } if (t.tagName === 'IMG' && !t.closest('.cs-fig')) onZoom((t as HTMLImageElement).src); }}>{parts}</div>;
 }
 
+/** Stable pseudo-random order per question (the authored data almost always lists the right answer first, so show them shuffled).
+ *  Questions with "all/none of the above"-style options keep their authored order. */
+function quizOrder(guideId: string, qi: number, options: { ar?: string; en?: string }[]): number[] {
+  const idx = options.map((_, k) => k);
+  const keepOrder = options.some((o) => /ما سبق|الاثنان|كلاهما|كل الإجابات|جميع الإجابات|all of the above|none of the above|both/i.test(`${o?.ar ?? ''} ${o?.en ?? ''}`));
+  if (keepOrder || idx.length < 2) return idx;
+  let h = 2166136261;
+  for (const ch of `${guideId}#${qi}`) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+  const rnd = () => { h = Math.imul(h ^ (h >>> 15), 2246822507); h = Math.imul(h ^ (h >>> 13), 3266489909); h ^= h >>> 16; return (h >>> 0) / 4294967296; };
+  for (let k = idx.length - 1; k > 0; k--) { const r = Math.floor(rnd() * (k + 1)); [idx[k], idx[r]] = [idx[r], idx[k]]; }
+  return idx;
+}
+
 export function Quiz({ d, ar }: { d: Disease; ar: boolean }) {
   const [picked, setPicked] = useState<Record<number, number>>({});
+  const orders = useMemo(() => (d.quiz ?? []).map((q, i) => quizOrder(d.id, i, q.options as { ar?: string; en?: string }[])), [d]);
   if (!d.quiz?.length) return null;
-  const score = d.quiz.filter((q, i) => picked[i] === q.answer).length;
+  const score = d.quiz.filter((q, i) => picked[i] === orders[i].indexOf(q.answer)).length;
   const answered = Object.keys(picked).length;
   return (
     <section id="sec-quiz" className="scroll-mt-28 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
@@ -416,9 +430,10 @@ export function Quiz({ d, ar }: { d: Disease; ar: boolean }) {
           <div key={i}>
             <div className="mb-2 font-bold text-slate-900 dark:text-white">{i + 1}. {pick(q.q, ar)}</div>
             <div className="grid gap-2">
-              {q.options.map((o, j) => {
+              {orders[i].map((src, j) => {
+                const o = q.options[src];
                 const chosen = picked[i] !== undefined;
-                const right = j === q.answer;
+                const right = src === q.answer;
                 const cls = !chosen
                   ? 'border-slate-200 hover:border-teal-400 dark:border-slate-700'
                   : right
