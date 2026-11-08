@@ -4,6 +4,7 @@ import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchTerminologyTopics, type TerminologyTopic } from "../lib/terminologyTopicsApi";
+import TermBody from "../components/TermBody";
 import TerminologyQuizWidget from "../components/TerminologyQuizWidget";
 
 const card = "rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900";
@@ -133,17 +134,30 @@ export default function TerminologyTopicPage() {
         {summary && <p className="mt-2 text-slate-500 dark:text-slate-400">{summary}</p>}
       </div>
 
+      {topic.sections.length > 1 && (
+        <div className="sticky top-14 z-10 -mx-4 mb-5 flex gap-2 overflow-x-auto bg-white/90 px-4 py-2 backdrop-blur dark:bg-slate-950/90">
+          {topic.sections.map((s, i) => (
+            <a key={s.id || i} href={`#tsec-${i}`} className="shrink-0 rounded-full bg-violet-50 px-3 py-1 text-xs font-bold text-violet-700 dark:bg-violet-500/10 dark:text-violet-300">
+              {i + 1}. {isEn && s.heading_en ? s.heading_en : s.heading_ar}
+            </a>
+          ))}
+        </div>
+      )}
+
       <div className="space-y-6">
         {topic.sections.map((s, i) => {
           const heading = isEn && s.heading_en ? s.heading_en : s.heading_ar;
           const body = isEn && s.body_en ? s.body_en : s.body_ar;
           return (
-            <section key={s.id || i} className={`${card} p-5`}>
-              <h2 className="mb-3 text-lg font-black text-violet-600">{heading}</h2>
+            <section key={s.id || i} id={`tsec-${i}`} className={`${card} scroll-mt-28 p-4 sm:p-5`}>
+              <h2 className="mb-3 flex items-center gap-2 text-lg font-black text-violet-700 dark:text-violet-300">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-fuchsia-500 text-sm text-white">{i + 1}</span>
+                {heading}
+              </h2>
               {s.image_url && (
                 <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
               )}
-              <div className="whitespace-pre-line text-sm leading-7 text-slate-700 dark:text-slate-300">{body}</div>
+              <TermBody body={body} isEn={isEn} />
             </section>
           );
         })}
