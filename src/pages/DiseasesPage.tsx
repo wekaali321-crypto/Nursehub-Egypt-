@@ -18,7 +18,6 @@ import {
   saveRead,
   pick,
   SYSTEMS,
-  SECTIONS,
   sectionsFor,
   LEVELS,
   type Disease,
@@ -496,7 +495,7 @@ export function DiseasePage() {
   });
 
   const guideTarget = index.find((x) => x.id === d?.id)?.target || 'diseases';
-  const secs = useMemo(() => sectionsFor(guideTarget, d).filter((s) => d?.sections[s.key]), [d, guideTarget]);
+  const secs = useMemo(() => sectionsFor(guideTarget, d ?? undefined).filter((s) => d?.sections[s.key]), [d, guideTarget]);
 
   useEffect(() => {
     if (!secs.length) return;
