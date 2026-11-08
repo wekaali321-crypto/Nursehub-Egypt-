@@ -73,6 +73,34 @@ export const SECTIONS: { key: SectionKey; ar: string; en: string; icon: string; 
   { key: 'teaching', ar: 'تثقيف المريض', en: 'Patient teaching', icon: '🗣️', ring: 'border-pink-400' },
 ];
 
+/** Section headings per hub. The guide engine was built for diseases ("What is the disease?"), so non-disease hubs get their own wording.
+ *  A guide can still override any heading with its own `labels`. Pair = [Arabic, English]. */
+const L = (a: string, e: string): [string, string] => [a, e];
+const GENERIC: Partial<Record<SectionKey, [string, string]>> = {
+  overview: L('نظرة عامة', 'Overview'), causes: L('ليه بيحصل؟', 'Why it happens'), signs: L('إزاي تتعرف عليه', 'How to recognise'),
+  tests: L('الفحوصات', 'Investigations'), treatment: L('العلاج والتدبير', 'Management'),
+};
+const TARGET_LABELS: Record<string, Partial<Record<SectionKey, [string, string]>>> = {
+  anatomy: { overview: L('نظرة عامة', 'Overview'), causes: L('التركيب والوظيفة', 'Structure & function'), signs: L('أهم النقاط والعلامات', 'Key points'), tests: L('الفحص والتقييم', 'Assessment'), treatment: L('التطبيق العملي', 'In practice'), redflags: L('تنبيهات مهمة', 'Important alerts') },
+  fundamentals: { overview: L('ما هو؟', 'What is it?'), causes: L('الأسس والمبادئ', 'Principles'), signs: L('الخطوات والعلامات', 'Steps & signs'), tests: L('التقييم والفحص', 'Assessment'), treatment: L('الإجراء والتطبيق', 'Procedure'), nursing: L('نقاط تمريضية', 'Nursing points'), redflags: L('تنبيهات ومضاعفات', 'Alerts & complications') },
+  pharmacology: { overview: L('ما هو الدواء أو المجموعة؟', 'What is it?'), causes: L('آلية العمل والاستعمال', 'Mechanism & use'), signs: L('الأعراض الجانبية والتحذيرات', 'Side effects & warnings'), tests: L('المراقبة والتحاليل', 'Monitoring'), treatment: L('الجرعات وطريقة الإعطاء', 'Dosing & administration'), nursing: L('الأولويات التمريضية', 'Nursing priorities'), redflags: L('بلّغ فورًا', 'Report immediately') },
+  'lab-reference': { overview: L('ما هو التحليل؟', 'What is it?'), causes: L('الأسباب', 'Causes'), signs: L('القيم والدلالات', 'Values & meaning'), tests: L('التحضير والعيّنة', 'Preparation & sample'), treatment: L('التصرف والتعامل', 'What to do'), redflags: L('قيم حرجة', 'Critical values') },
+  'icu-nursing': { overview: L('نظرة عامة', 'Overview'), causes: L('الفسيولوجيا والأسباب', 'Physiology & causes'), signs: L('العلامات والقراءة', 'Signs & reading'), tests: L('المتابعة والفحوصات', 'Monitoring'), treatment: L('التدخل', 'Intervention') },
+  'er-reception': GENERIC, 'first-aid': GENERIC, obgyn: GENERIC, pediatrics: GENERIC,
+  'operating-room': { overview: L('نظرة عامة', 'Overview'), causes: L('ليه بنعمله؟', 'Why it is done'), signs: L('التحضير والعلامات', 'Preparation & signs'), tests: L('الفحوصات', 'Investigations'), treatment: L('الإجراء', 'Procedure') },
+  'surgical-dressings': { overview: L('ما هو؟', 'What is it?'), causes: L('متى يُستخدم؟', 'When it is used'), signs: L('الأنواع والعلامات', 'Types & signs'), tests: L('التقييم', 'Assessment'), treatment: L('خطوات الغيار', 'Dressing steps') },
+};
+
+/** The section list for one guide: default (disease) headings, hub-specific wording, then the guide's own `labels`. */
+export function sectionsFor(target: string | undefined, d?: Disease): typeof SECTIONS {
+  const tl = TARGET_LABELS[target || 'diseases'];
+  return SECTIONS.map((sec) => {
+    const t = tl?.[sec.key];
+    const own = d?.labels?.[sec.key];
+    return { ...sec, ar: own?.t ?? t?.[0] ?? sec.ar, en: own?.t ?? t?.[1] ?? sec.en, icon: own?.i ?? sec.icon };
+  });
+}
+
 export const pick = (v: Bi | undefined, ar: boolean): string => (v ? (ar ? v.ar : v.en || v.ar) : '');
 
 /** Existing site sections that also show routed guides (path = the section hub). */

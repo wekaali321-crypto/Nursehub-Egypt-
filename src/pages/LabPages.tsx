@@ -5,7 +5,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchDisease, fetchDiseaseIndex, fetchImageOverrides, pick, SECTIONS, type Disease, type DiseaseIndexItem } from '../lib/diseasesApi';
+import { fetchDisease, fetchDiseaseIndex, fetchImageOverrides, pick, sectionsFor, type Disease, type DiseaseIndexItem } from '../lib/diseasesApi';
 import { Breadcrumbs } from '../components/common';
 import InlineLangToggle from '../components/InlineLangToggle';
 import { ImageLightbox } from '../components/Lightbox';
@@ -396,7 +396,7 @@ export function LabGuide({ d, ar }: { d: Disease; ar: boolean }) {
   }, []);
   useSEO({ title: `${pick(d.title, ar)} | NurseHub Egypt`, description: pick(d.teaser, ar) });
 
-  const secs = SECTIONS.filter((s) => d.sections[s.key]);
+  const secs = sectionsFor('lab-reference', d).filter((s) => d.sections[s.key]);
   const parsed = useMemo(() => secs.map((s) => ({ s, blocks: parseSection(d.sections[s.key]?.ar || '') })), [d]); // eslint-disable-line react-hooks/exhaustive-deps
   const tabs: { id: string; label: string }[] = [];
   parsed.forEach(({ s, blocks }) => {

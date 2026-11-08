@@ -19,6 +19,7 @@ import {
   pick,
   SYSTEMS,
   SECTIONS,
+  sectionsFor,
   LEVELS,
   type Disease,
   type DiseaseIndexItem,
@@ -494,7 +495,8 @@ export function DiseasePage() {
     description: d ? pick(d.teaser, ar) : '',
   });
 
-  const secs = useMemo(() => SECTIONS.filter((s) => d?.sections[s.key]), [d]);
+  const guideTarget = index.find((x) => x.id === d?.id)?.target || 'diseases';
+  const secs = useMemo(() => sectionsFor(guideTarget, d).filter((s) => d?.sections[s.key]), [d, guideTarget]);
 
   useEffect(() => {
     if (!secs.length) return;
@@ -538,7 +540,7 @@ export function DiseasePage() {
 
       <header className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${s.grad} p-6 text-white sm:p-8`}>
         <div className="text-5xl drop-shadow">{d.icon || s.icon}</div>
-        <div className="mt-2 text-xs font-bold text-white/80">{ar ? s.ar : s.en}</div>
+        <div className="mt-2 text-xs font-bold text-white/80">{guideTarget === 'diseases' ? (ar ? s.ar : s.en) : sInfo.name}</div>
         <h1 className="mt-1 text-3xl font-black sm:text-4xl">{pick(d.title, ar)}</h1>
         {d.title.en && ar && <div className="text-sm text-white/80" dir="ltr">{d.title.en}</div>}
         <p className="mt-3 max-w-2xl text-white/95">{pick(d.teaser, ar)}</p>
