@@ -16,7 +16,7 @@ export function AnatomyHome() {
   const [category, setCategory] = useState("all");
 
   useEffect(() => {
-    fetchAnatomyTopics().then(setTopics).catch(() => setTopics([]));
+    fetchAnatomyTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
@@ -68,7 +68,7 @@ export function AnatomyHome() {
           {list.map((tp) => (
             <Link
               key={tp.id}
-              to={`/anatomy/${tp.id}`}
+              to={(tp as { href?: string }).href ?? `/anatomy/${tp.id}`}
               className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
             >
               <div className="text-3xl">{tp.icon || "🦴"}</div>

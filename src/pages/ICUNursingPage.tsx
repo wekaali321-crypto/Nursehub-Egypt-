@@ -23,7 +23,7 @@ export function ICUNursingHome() {
   const [selected, setSelected] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    fetchIcuTopics().then(setTopics).catch(() => setTopics([]));
+    fetchIcuTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const toggleSelected = (id: string) => {
@@ -152,7 +152,7 @@ export function ICUNursingHome() {
                 {cardInner}
               </button>
             ) : (
-              <Link key={tp.id} to={`/icu-nursing/${tp.id}`} className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}>
+              <Link key={tp.id} to={(tp as { href?: string }).href ?? `/icu-nursing/${tp.id}`} className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}>
                 {cardInner}
               </Link>
             );
