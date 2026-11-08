@@ -181,11 +181,17 @@ function inject(html, page, url) {
   return out;
 }
 
+// Only crawlers / link-preview bots need the server-side SEO injection (the React app renders the same content for people).
+// Skipping everyone else keeps CPU time per request tiny: the Workers free plan allows only ~10ms, and this function
+// otherwise parses a large index.json and slices a ~3MB HTML file on every page view.
+const BOT_RE = /bot|crawl|spider|slurp|mediapartners|adsbot|google-inspectiontool|googleother|facebookexternalhit|facebot|whatsapp|telegram|embedly|pinterest|applebot|duckduck|yandex|baidu|ahrefs|semrush|lighthouse|pagespeed|preview/i;
+
 export async function onRequest({ request, env, next }) {
   try {
     const url = new URL(request.url);
     const accept = request.headers.get('accept') || '';
     if (request.method !== 'GET' || (!accept.includes('text/html') && !accept.includes('*/*'))) return next();
+    if (!BOT_RE.test(request.headers.get('user-agent') || '')) return next();
     const page = await pageFor(url.pathname, env, request);
     if (!page) return next();
     const res = await env.ASSETS.fetch(new URL('/', request.url));
