@@ -469,6 +469,16 @@ export function DiseasePage() {
   const [index, setIndex] = useState<DiseaseIndexItem[]>([]);
   const [active, setActive] = useState('overview');
   const [zoom, setZoom] = useState<string | null>(null);
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const on = () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(h > 0 ? Math.min(100, Math.max(0, (window.scrollY / h) * 100)) : 0);
+    };
+    on();
+    window.addEventListener('scroll', on, { passive: true });
+    return () => window.removeEventListener('scroll', on);
+  }, []);
   const { loggedIn } = useAuth();
   const [overrides, setOverrides] = useState<Record<string, string>>({});
   const refreshImgs = () => void fetchImageOverrides(true).then(setOverrides);
@@ -531,27 +541,46 @@ export function DiseasePage() {
   const prev = pos > 0 ? sameTarget[pos - 1] : null;
   const next = pos >= 0 && pos < sameTarget.length - 1 ? sameTarget[pos + 1] : null;
   const go = (k: string) => document.getElementById(`sec-${k}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const heroGrad = guideTarget === 'diseases' ? s.grad : sInfo.grad;
+  const readMin = Math.max(1, Math.round(secs.reduce((n, x) => n + pick(d.sections[x.key], ar).replace(/<[^>]+>/g, ' ').split(/\s+/).length, 0) / 170));
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-6" dir={ar ? 'rtl' : 'ltr'}>
       <Breadcrumbs items={[{ label: sInfo.name, path: sInfo.path }, { label: pick(d.title, ar) }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
 
-      <header className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${s.grad} p-6 text-white sm:p-8`}>
-        <div className="text-5xl drop-shadow">{d.icon || s.icon}</div>
-        <div className="mt-2 text-xs font-bold text-white/80">{guideTarget === 'diseases' ? (ar ? s.ar : s.en) : sInfo.name}</div>
-        <h1 className="mt-1 text-3xl font-black sm:text-4xl">{pick(d.title, ar)}</h1>
-        {d.title.en && ar && <div className="text-sm text-white/80" dir="ltr">{d.title.en}</div>}
-        <p className="mt-3 max-w-2xl text-white/95">{pick(d.teaser, ar)}</p>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {(d.chips ?? []).map((c, i) => <span key={i} className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold backdrop-blur">{pick(c, ar)}</span>)}
+      <div className="fixed inset-x-0 top-0 z-50 h-1 bg-transparent"><div className={`h-full bg-gradient-to-r ${heroGrad} transition-[width] duration-150`} style={{ width: `${progress}%` }} /></div>
+      <header className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${heroGrad} p-6 text-white shadow-xl sm:p-8`}>
+        <div aria-hidden className="pointer-events-none absolute -end-8 -top-10 select-none text-[11rem] leading-none opacity-15">{d.icon || s.icon}</div>
+        <div aria-hidden className="pointer-events-none absolute -bottom-16 -start-10 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
+        <div className="relative">
+          <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-xs font-black backdrop-blur">{guideTarget === 'diseases' ? `${s.icon} ${ar ? s.ar : s.en}` : `${sInfo.icon} ${sInfo.name}`}</span>
+          <div className="mt-3 text-5xl drop-shadow">{d.icon || s.icon}</div>
+          <h1 className="mt-2 text-3xl font-black leading-tight sm:text-4xl">{pick(d.title, ar)}</h1>
+          {d.title.en && ar && <div className="mt-1 text-sm text-white/80" dir="ltr">{d.title.en}</div>}
+          <p className="mt-3 max-w-2xl text-[15px] leading-7 text-white/95">{pick(d.teaser, ar)}</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {(d.chips ?? []).map((c, i) => <span key={i} className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold backdrop-blur">{pick(c, ar)}</span>)}
+          </div>
+          <div className="mt-5 grid max-w-md grid-cols-3 gap-2 text-center">
+            {[
+              [secs.length, ar ? 'أقسام' : 'sections'],
+              [readMin, ar ? 'دقيقة قراءة' : 'min read'],
+              [d.quiz?.length ?? 0, ar ? 'سؤال' : 'questions'],
+            ].map(([n, l], i) => (
+              <div key={i} className="rounded-2xl bg-black/15 px-2 py-2 backdrop-blur">
+                <div className="text-xl font-black">{n}</div>
+                <div className="text-[11px] font-bold text-white/80">{l}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </header>
 
       <nav className="sticky top-14 z-20 -mx-4 mt-4 overflow-x-auto bg-slate-50/90 px-4 py-2 backdrop-blur dark:bg-slate-950/90">
         <div className="flex gap-2">
           {secs.map((x) => (
-            <button key={x.key} onClick={() => go(x.key)} className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-black transition ${active === x.key ? 'bg-teal-500 text-white shadow' : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>
+            <button key={x.key} onClick={() => go(x.key)} className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-black transition ${active === x.key ? `bg-gradient-to-r ${heroGrad} text-white shadow-md` : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>
               {x.icon} {ar ? x.ar : x.en}
             </button>
           ))}
@@ -560,19 +589,26 @@ export function DiseasePage() {
       </nav>
 
       <div className="mt-4 space-y-5">
-        {secs.map((x) => (
-          <section key={x.key} id={`sec-${x.key}`} className={`scroll-mt-28 rounded-3xl border-t-4 bg-white p-5 shadow-sm dark:bg-slate-900 ${x.ring} ${x.key === 'nursing' ? 'ring-2 ring-emerald-400/50' : ''}`}>
-            <h2 className="cs-h">{x.icon} {ar ? x.ar : x.en}</h2>
-            <Prose html={pick(d.sections[x.key], ar)} ar={ar} overrides={overrides} admin={loggedIn} onSaved={refreshImgs} onZoom={setZoom} />
-          </section>
-        ))}
+        {secs.map((x, n) => {
+          const tone = x.key === 'redflags' ? 'bg-rose-50/70 dark:bg-rose-950/30' : x.key === 'nursing' ? 'bg-emerald-50/60 dark:bg-emerald-950/20' : 'bg-white dark:bg-slate-900';
+          return (
+            <section key={x.key} id={`sec-${x.key}`} className={`scroll-mt-28 rounded-3xl border-t-4 p-5 shadow-sm ${tone} ${x.ring} ${x.key === 'nursing' ? 'ring-2 ring-emerald-400/50' : ''} ${x.key === 'redflags' ? 'ring-2 ring-rose-400/40' : ''}`}>
+              <h2 className="cs-h flex items-center gap-2.5">
+                <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${heroGrad} text-lg text-white shadow`}>{x.icon}</span>
+                <span className="min-w-0 flex-1">{ar ? x.ar : x.en}</span>
+                <span className="text-xs font-black text-slate-300 dark:text-slate-600">{String(n + 1).padStart(2, '0')}</span>
+              </h2>
+              <Prose html={pick(d.sections[x.key], ar)} ar={ar} overrides={overrides} admin={loggedIn} onSaved={refreshImgs} onZoom={setZoom} />
+            </section>
+          );
+        })}
 
         {d.keyPoints && (
           <section className="rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-600 p-5 text-white shadow-lg">
             <h2 className="mb-3 text-xl font-black">⭐ {ar ? 'لو هتفتكر حاجات بس' : 'Remember these'}</h2>
             <ul className="space-y-2">
               {(ar ? d.keyPoints.ar : d.keyPoints.en?.length ? d.keyPoints.en : d.keyPoints.ar).map((k, i) => (
-                <li key={i} className="flex gap-2"><span className="font-black">✔</span><span>{k}</span></li>
+                <li key={i} className="flex gap-2 rounded-xl bg-white/10 p-2.5 text-[15px] leading-7"><span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-xs font-black text-emerald-600">{i + 1}</span><span>{k}</span></li>
               ))}
             </ul>
           </section>
