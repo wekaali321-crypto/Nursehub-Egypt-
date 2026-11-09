@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import TopicBody from "../components/TopicBody";
 import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
@@ -140,7 +141,7 @@ export default function RadiologyTopicPage() {
               {s.image_url && (
                 <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
               )}
-              <div className="whitespace-pre-line text-sm leading-7 text-slate-700 dark:text-slate-300">{body}</div>
+              <TopicBody body={body} accent="sky" />
             </section>
           );
         })}
