@@ -71,7 +71,7 @@ export default function HubGrid({ items, accent = "teal", isEn }: { items: HubIt
               <span className="min-w-0 flex-1">
                 <span className="flex items-center justify-between gap-2">
                   <span className={`line-clamp-2 text-sm font-black leading-5 text-slate-900 dark:text-white ${a.hover}`}>{isEn && it.titleEn ? it.titleEn : it.title}</span>
-                  {!isEn && it.titleEn && <span dir="ltr" className="max-w-[36%] shrink-0 truncate text-[11px] text-slate-400">{it.titleEn}</span>}
+                  {!isEn && it.titleEn && <span dir="ltr" className="max-w-[40%] shrink-0 truncate text-[13px] font-black text-slate-600 dark:text-slate-300">{it.titleEn}</span>}
                 </span>
                 {(it.category || it.count != null) && (
                   <span className="block truncate text-[11px] text-slate-400">{it.category}{it.count != null ? `${it.category ? " · " : ""}${it.count} ${isEn ? "sections" : "أقسام"}` : ""}</span>
@@ -92,7 +92,7 @@ export default function HubGrid({ items, accent = "teal", isEn }: { items: HubIt
               <div className="p-4">
                 <div className="flex items-baseline justify-between gap-2">
                   <h3 className={`font-black leading-snug text-slate-900 dark:text-white ${a.hover}`}>{isEn && it.titleEn ? it.titleEn : it.title}</h3>
-                  {!isEn && it.titleEn && <span dir="ltr" className="max-w-[45%] shrink-0 truncate text-xs text-slate-400">{it.titleEn}</span>}
+                  {!isEn && it.titleEn && <span dir="ltr" className="max-w-[42%] shrink-0 truncate text-sm font-black text-slate-600 dark:text-slate-300">{it.titleEn}</span>}
                 </div>
                 {it.summary && <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{it.summary}</p>}
                 {it.count != null && <div className={`mt-3 text-xs font-bold ${a.text}`}>{it.count} {isEn ? "sections" : "أقسام"} {isEn ? "→" : "←"}</div>}

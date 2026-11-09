@@ -236,7 +236,7 @@ function GuideHub({ target }: { target: string }) {
                               {c.level === 3 && <span className="shrink-0 rounded-full bg-rose-100 px-1.5 text-[10px] font-black text-rose-700 dark:bg-rose-500/15 dark:text-rose-300">{ar ? 'طارئ' : 'ER'}</span>}
                               {read.includes(c.id) && <span className="shrink-0 text-[11px] text-emerald-500">✓</span>}
                             </span>
-                            {ar && c.title.en && <span dir="ltr" className="max-w-[36%] shrink-0 truncate text-[11px] text-slate-400">{c.title.en}</span>}
+                            {ar && c.title.en && <span dir="ltr" className="max-w-[40%] shrink-0 truncate text-[13px] font-black text-slate-600 dark:text-slate-300">{c.title.en}</span>}
                           </span>
                           <span className="block overflow-hidden text-ellipsis whitespace-nowrap text-[11px] text-slate-400">{pick(c.teaser, ar)}</span>
                         </span>
@@ -260,7 +260,7 @@ function GuideHub({ target }: { target: string }) {
                         <div className="p-4">
                           <div className="flex items-baseline justify-between gap-2">
                             <h3 className="font-black leading-snug text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</h3>
-                            {c.title.en && ar && <span className="max-w-[45%] shrink-0 truncate text-xs text-slate-400" dir="ltr">{c.title.en}</span>}
+                            {c.title.en && ar && <span className="max-w-[42%] shrink-0 truncate text-sm font-black text-slate-600 dark:text-slate-300" dir="ltr">{c.title.en}</span>}
                           </div>
                           <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{pick(c.teaser, ar)}</p>
                           <div className="mt-3"><span className={`rounded-full px-2.5 py-0.5 text-[11px] font-black ${lv.cls}`}>{ar ? lv.ar : lv.en}</span></div>
@@ -562,7 +562,7 @@ export function DiseasePage() {
           <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-xs font-black backdrop-blur">{guideTarget === 'diseases' ? `${s.icon} ${ar ? s.ar : s.en}` : `${sInfo.icon} ${sInfo.name}`}</span>
           <div className="mt-3 text-5xl drop-shadow">{d.icon || s.icon}</div>
           <h1 className="mt-2 text-3xl font-black leading-tight sm:text-4xl">{pick(d.title, ar)}</h1>
-          {d.title.en && ar && <div className="mt-1 text-sm font-bold text-white/80" dir="ltr" style={{ textAlign: 'left' }}>{d.title.en}</div>}
+          {d.title.en && ar && <div className="mt-1 text-base font-black text-white/90" dir="ltr" style={{ textAlign: 'left' }}>{d.title.en}</div>}
           <p className="mt-3 max-w-2xl text-[15px] leading-7 text-white/95">{pick(d.teaser, ar)}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {(d.chips ?? []).map((c, i) => <span key={i} className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold backdrop-blur">{pick(c, ar)}</span>)}
