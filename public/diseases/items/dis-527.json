@@ -1,137 +1,173 @@
 {
-  "id": "dis-527",
-  "num": 527,
-  "system": "other",
-  "icon": "🐍",
-  "level": 3,
-  "target": "new:poisoning|السموم",
-  "title": {
-    "ar": "عضة الثعبان",
-    "en": "Snake Bite"
+ "id": "dis-527",
+ "num": 527,
+ "system": "other",
+ "icon": "🐍",
+ "level": 3,
+ "target": "new:poisoning|السموم",
+ "title": {
+  "ar": "عضة الثعبان",
+  "en": "Snake Bite"
+ },
+ "teaser": {
+  "ar": "معظم الثعابين في مصر غير سامة، بس مفيش تخمين: إسعاف أولي صح، تنظيف الجرح، التيتانوس، والمصل في مراكز السموم فقط.",
+  "en": "Most snakes in Egypt are not venomous, but there is no guessing: correct first aid, wound cleaning, tetanus, and antivenom at poison centers only."
+ },
+ "chips": [
+  {
+   "ar": "مصل",
+   "en": "Antivenom"
   },
-  "teaser": {
-    "ar": "معظم الثعابين في مصر غير سامة، بس مفيش تخمين: إسعاف أولي صح، تنظيف الجرح، التيتانوس، والمصل في مراكز السموم فقط."
+  {
+   "ar": "إسعاف أولي",
+   "en": "First aid"
   },
-  "chips": [
-    {
-      "ar": "مصل"
-    },
-    {
-      "ar": "إسعاف أولي"
-    },
-    {
-      "ar": "تيتانوس"
-    }
+  {
+   "ar": "تيتانوس",
+   "en": "Tetanus"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>معظم الثعابين في مصر بتبقى غير سامة، لكن لازم تتعامل مع كل عضة على إنها محتملة السمية لحد ما تثبت العكس.</p>[[slot:dis-527-bite|صورة آثار عضة ثعبان سام مقابل غير سام (ناب واحد/اتنين)]]\n<p>القواعد العامة (ABC، التاريخ، الدعم، المراقبة): <a href=\"/diseases/dis-503\">القواعد العامة في التعامل مع حالات التسمم</a>.</p>",
+   "en": "<p>Most snakes in Egypt are not venomous, but you must treat every bite as potentially venomous until proven otherwise.</p>[[slot:dis-527-bite|Photo of bite marks of a venomous versus a non-venomous snake (one/two fangs)]]\n<p>General rules (ABC, history, support, monitoring): <a href=\"/diseases/dis-503\">general rules for managing poisoning cases</a>.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li>علامات الأنياب (نقطتين) أو أكثر، ألم، تورم يزداد، كدمات.</li><li>سام: غثيان، نزف من الجرح، تغير في تجلط الدم، تدلّي الجفون وصعوبة بلع/تنفس (سموم عصبية)، هبوط ضغط.</li><li>كل ثعبان أو كل عضة: راقب ساعات بعد العضة.</li></ul>",
+   "en": "<ul><li>Fang marks (two points) or more, pain, increasing swelling, bruising.</li><li>Venomous: nausea, bleeding from the wound, change in blood clotting, drooping eyelids and difficulty swallowing/breathing (neurotoxins), hypotension.</li><li>Every snake or every bite: monitor for hours after the bite.</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>اختبار تجلط الدم (20-minute whole blood clotting test) / PT, INR</li><li>CBC، وظائف كلى وCK، ECG.</li></ul>",
+   "en": "<ul><li>Clotting test (20-minute whole blood clotting test) / PT, INR</li><li>CBC, kidney function and CK, ECG.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>الإسعاف الأولي (First aid)</h4><ul><li>حافظ على هدوء المصاب وما تحرّكش المكان المصاب.</li><li><b>ممنوع مص السم من مكان العضة.</b></li><li>ربط تورنيكيه أعلى مكان العضة بحيث لا يكون شديداً (حسب المراجع).</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>التوصية الحالية: تثبيت الطرف على مستوى القلب وإزالة الخواتم، وتجنب التورنيكيه الضاغط والقطع والثلج والأعشاب. نقل سريع للمستشفى.</p></div><h4>العلاج في المستشفى</h4><ol><li><b>دعم عام:</b> أهم حاجة تشوف الضغط ولو واطي ياخد محلول ملح.</li><li><b>تنظيف الجرح:</b> بملح وبيتادين + مصل التيتانوس + مضاد حيوي + مسكن. لا تنسَ اختبار الحساسية لمصل التيتانوس، ولو إيجابي اكتفي بمضاد حيوي.</li><li><b>ممنوع الأسبرين</b> كمسكن لأنه يزيد من سيولة الدم وانتشار السم.</li><li><b>المصل المضاد (Antivenom):</b> لا يُستعمل إلا في الثعابين السامة؛ للاطمئنان ابدأ معالجة الحالة ثم حوّلها لأقرب مركز سموم لوصف الثعبان وإعطاء المصل إذا كان سام.</li></ol><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>النهج الحديث: تعطي تيتانوس توكسويد (± TIG) حسب التطعيم، والمصل بجرعات تحتاج مراقبة تحسسية دقيقة (أدرينالين جاهز). تجنّب كل مسكنات NSAIDs.</p></div>",
+   "en": "<h4>First aid</h4><ul><li>Keep the victim calm and don't move the affected part.</li><li><b>Sucking the venom from the bite site is forbidden.</b></li><li>A tourniquet above the bite site, not too tight.</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The current recommendation: immobilize the limb at heart level and remove rings, and avoid a tight tourniquet, cutting, ice, and herbs. Rapid transfer to the hospital.</p></div><h4>Hospital treatment</h4><ol><li><b>General support:</b> the most important thing is to check BP, and if it is low give saline.</li><li><b>Clean the wound:</b> with saline and Betadine + tetanus serum + antibiotic + painkiller. Don't forget the allergy test for tetanus serum, and if positive, give only an antibiotic.</li><li><b>Aspirin is forbidden</b> as a painkiller because it increases blood thinning and spread of the venom.</li><li><b>Antivenom:</b> used only for venomous snakes; to be safe, start managing the case then transfer it to the nearest poison center to identify the snake and give the antivenom if it is venomous.</li></ol><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The modern approach: give tetanus toxoid (± TIG) according to vaccination status, and the antivenom in doses that need close allergy monitoring (epinephrine ready). Avoid all NSAID painkillers.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ul><li>اجعل المصاب هادئ ومرتاح والطرف على مستوى القلب؛ نزع الخواتم والأساور.</li><li>علامات حيوية وملاحظة التورم (علّم حدوده بقلم وسجّل الوقت).</li><li>تنظيف الجرح، تطعيم تيتانوس، مضاد حيوي، مسكن (باراسيتامول).</li><li>جهّز أدرينالين قبل أي مصل.</li><li>اسأل عن شكل الثعبان وتاريخ ووقت العضة وصوّره إن أمكن.</li><li>نقل لمركز سموم.</li></ul>",
+   "en": "<ul><li>Keep the victim calm and comfortable with the limb at heart level; remove rings and bracelets.</li><li>Vital signs and watch the swelling (mark its borders with a pen and record the time).</li><li>Clean the wound, tetanus vaccination, antibiotic, painkiller (paracetamol).</li><li>Prepare epinephrine before any antivenom.</li><li>Ask about the snake's appearance and the date and time of the bite, and photograph it if possible.</li><li>Transfer to a poison center.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>تدلي الجفون، صعوبة بلع/تنفس</li><li>نزف</li><li>هبوط ضغط</li><li>تورم يتقدّم بسرعة</li></ul>",
+   "en": "<ul><li>Drooping eyelids, difficulty swallowing/breathing</li><li>Bleeding</li><li>Hypotension</li><li>Rapidly progressing swelling</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>لا تحاول الإمساك بالثعبان.</li><li>لبس أحذية عالية عند الحقل.</li><li>لا مص ولا شق للجرح.</li></ul>",
+   "en": "<ul><li>Don't try to catch the snake.</li><li>Wear high boots in the field.</li><li>No sucking and no cutting the wound.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "معظم الثعابين في مصر غير سامة لكن تعامل بحذر.",
+   "ممنوع المص ولا الأسبرين.",
+   "تنظيف + تيتانوس + مضاد حيوي + مسكن.",
+   "المصل في الثعابين السامة فقط ومن مركز سموم.",
+   "مراقبة الضغط والتجلط والتنفس."
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>معظم الثعابين في مصر بتبقى غير سامة، لكن لازم تتعامل مع كل عضة على إنها محتملة السمية لحد ما تثبت العكس.</p>[[slot:dis-527-bite|صورة آثار عضة ثعبان سام مقابل غير سام (ناب واحد/اتنين)]]\n<p>القواعد العامة (ABC، التاريخ، الدعم، المراقبة): <a href=\"/diseases/dis-503\">القواعد العامة في التعامل مع حالات التسمم</a>.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li>علامات الأنياب (نقطتين) أو أكثر، ألم، تورم يزداد، كدمات.</li><li>سام: غثيان، نزف من الجرح، تغير في تجلط الدم، تدلّي الجفون وصعوبة بلع/تنفس (سموم عصبية)، هبوط ضغط.</li><li>كل ثعبان أو كل عضة: راقب ساعات بعد العضة.</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>اختبار تجلط الدم (20-minute whole blood clotting test) / PT, INR</li><li>CBC، وظائف كلى وCK، ECG.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>الإسعاف الأولي (First aid)</h4><ul><li>حافظ على هدوء المصاب وما تحرّكش المكان المصاب.</li><li><b>ممنوع مص السم من مكان العضة.</b></li><li>ربط تورنيكيه أعلى مكان العضة بحيث لا يكون شديداً (حسب المراجع).</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>التوصية الحالية: تثبيت الطرف على مستوى القلب وإزالة الخواتم، وتجنب التورنيكيه الضاغط والقطع والثلج والأعشاب. نقل سريع للمستشفى.</p></div><h4>العلاج في المستشفى</h4><ol><li><b>دعم عام:</b> أهم حاجة تشوف الضغط ولو واطي ياخد محلول ملح.</li><li><b>تنظيف الجرح:</b> بملح وبيتادين + مصل التيتانوس + مضاد حيوي + مسكن. لا تنسَ اختبار الحساسية لمصل التيتانوس، ولو إيجابي اكتفي بمضاد حيوي.</li><li><b>ممنوع الأسبرين</b> كمسكن لأنه يزيد من سيولة الدم وانتشار السم.</li><li><b>المصل المضاد (Antivenom):</b> لا يُستعمل إلا في الثعابين السامة؛ للاطمئنان ابدأ معالجة الحالة ثم حوّلها لأقرب مركز سموم لوصف الثعبان وإعطاء المصل إذا كان سام.</li></ol><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>النهج الحديث: تعطي تيتانوس توكسويد (± TIG) حسب التطعيم، والمصل بجرعات تحتاج مراقبة تحسسية دقيقة (أدرينالين جاهز). تجنّب كل مسكنات NSAIDs.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ul><li>اجعل المصاب هادئ ومرتاح والطرف على مستوى القلب؛ نزع الخواتم والأساور.</li><li>علامات حيوية وملاحظة التورم (علّم حدوده بقلم وسجّل الوقت).</li><li>تنظيف الجرح، تطعيم تيتانوس، مضاد حيوي، مسكن (باراسيتامول).</li><li>جهّز أدرينالين قبل أي مصل.</li><li>اسأل عن شكل الثعبان وتاريخ ووقت العضة وصوّره إن أمكن.</li><li>نقل لمركز سموم.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>تدلي الجفون، صعوبة بلع/تنفس</li><li>نزف</li><li>هبوط ضغط</li><li>تورم يتقدّم بسرعة</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>لا تحاول الإمساك بالثعبان.</li><li>لبس أحذية عالية عند الحقل.</li><li>لا مص ولا شق للجرح.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "معظم الثعابين في مصر غير سامة لكن تعامل بحذر.",
-      "ممنوع المص ولا الأسبرين.",
-      "تنظيف + تيتانوس + مضاد حيوي + مسكن.",
-      "المصل في الثعابين السامة فقط ومن مركز سموم.",
-      "مراقبة الضغط والتجلط والتنفس."
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ممنوع في عضة الثعبان؟"
-      },
-      "options": [
-        {
-          "ar": "تثبيت الطرف"
-        },
-        {
-          "ar": "مص السم"
-        },
-        {
-          "ar": "نقل للمستشفى"
-        },
-        {
-          "ar": "تنظيف الجرح"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يضر ولا يفيد."
-      }
-    },
-    {
-      "q": {
-        "ar": "مسكن ممنوع؟"
-      },
-      "options": [
-        {
-          "ar": "باراسيتامول"
-        },
-        {
-          "ar": "أسبرين"
-        },
-        {
-          "ar": "مضاد حيوي"
-        },
-        {
-          "ar": "أوكسجين"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يزيد النزف."
-      }
-    },
-    {
-      "q": {
-        "ar": "المصل؟"
-      },
-      "options": [
-        {
-          "ar": "لكل عضة"
-        },
-        {
-          "ar": "في السامة فقط"
-        },
-        {
-          "ar": "قبل التنظيف"
-        },
-        {
-          "ar": "بدون تقييم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "مراكز السموم."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "WHO Guidelines for the management of snakebite"
-    },
-    {
-      "title": "StatPearls: Snake Envenomation"
-    }
+  "en": [
+   "Most snakes in Egypt are not venomous but treat with caution.",
+   "No sucking and no aspirin.",
+   "Cleaning + tetanus + antibiotic + painkiller.",
+   "Antivenom only for venomous snakes and from a poison center.",
+   "Monitor BP, clotting, and breathing."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ممنوع في عضة الثعبان؟",
+    "en": "What is forbidden in a snakebite?"
+   },
+   "options": [
+    {
+     "ar": "تثبيت الطرف",
+     "en": "Immobilizing the limb"
+    },
+    {
+     "ar": "مص السم",
+     "en": "Sucking the venom"
+    },
+    {
+     "ar": "نقل للمستشفى",
+     "en": "Transfer to the hospital"
+    },
+    {
+     "ar": "تنظيف الجرح",
+     "en": "Cleaning the wound"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يضر ولا يفيد.",
+    "en": "It harms and does not help."
+   }
+  },
+  {
+   "q": {
+    "ar": "مسكن ممنوع؟",
+    "en": "Which painkiller is forbidden?"
+   },
+   "options": [
+    {
+     "ar": "باراسيتامول",
+     "en": "Paracetamol"
+    },
+    {
+     "ar": "أسبرين",
+     "en": "Aspirin"
+    },
+    {
+     "ar": "مضاد حيوي",
+     "en": "Antibiotic"
+    },
+    {
+     "ar": "أوكسجين",
+     "en": "Oxygen"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يزيد النزف.",
+    "en": "It increases bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "المصل؟",
+    "en": "The antivenom?"
+   },
+   "options": [
+    {
+     "ar": "لكل عضة",
+     "en": "For every bite"
+    },
+    {
+     "ar": "في السامة فقط",
+     "en": "Only for venomous bites"
+    },
+    {
+     "ar": "قبل التنظيف",
+     "en": "Before cleaning"
+    },
+    {
+     "ar": "بدون تقييم",
+     "en": "Without assessment"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "مراكز السموم.",
+    "en": "Poison centers."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "WHO Guidelines for the management of snakebite"
+  },
+  {
+   "title": "StatPearls: Snake Envenomation"
+  }
+ ]
 }
