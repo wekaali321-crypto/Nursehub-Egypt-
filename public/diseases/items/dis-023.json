@@ -1,520 +1,656 @@
 {
-  "id": "dis-023",
-  "num": 23,
-  "system": "endo",
-  "icon": "🚨",
-  "level": 3,
-  "title": {
-    "ar": "الحماض الكيتوني السكري",
-    "en": "Diabetic Ketoacidosis (DKA)"
+ "id": "dis-023",
+ "num": 23,
+ "system": "endo",
+ "icon": "🚨",
+ "level": 3,
+ "title": {
+  "ar": "الحماض الكيتوني السكري",
+  "en": "Diabetic Ketoacidosis (DKA)"
+ },
+ "teaser": {
+  "ar": "طارئ سكر قاتل: جفاف وحموضة ونقص بوتاسيوم. تعرّف على ترتيب العلاج، حسابات البوتاسيوم والبيكربونات، وإيه اللي تراقبه كل ساعة.",
+  "en": "A deadly diabetic emergency: dehydration, acidosis, and low potassium. Learn the order of treatment, the potassium and bicarbonate calculations, and what to monitor every hour."
+ },
+ "chips": [
+  {
+   "ar": "سوائل أولاً",
+   "en": "Fluids first"
   },
-  "teaser": {
-    "ar": "طارئ سكر قاتل: جفاف وحموضة ونقص بوتاسيوم. تعرّف على ترتيب العلاج، حسابات البوتاسيوم والبيكربونات، وإيه اللي تراقبه كل ساعة."
+  {
+   "ar": "إنسولين وريدي + بوتاسيوم",
+   "en": "IV insulin + potassium"
   },
-  "chips": [
-    {
-      "ar": "سوائل أولاً"
-    },
-    {
-      "ar": "إنسولين وريدي + بوتاسيوم"
-    },
-    {
-      "ar": "متابعة كل ساعة"
-    }
+  {
+   "ar": "متابعة كل ساعة",
+   "en": "Hourly monitoring"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الحماض الكيتوني السكري (Diabetic Ketoacidosis, DKA) طارئ مهدد للحياة بيحصل لمريض السكر (غالباً النوع الأول) لما الإنسولين يقل جداً: الجسم بيحرق الدهون وينتج كيتونات حمضية، والسكر بيعلى جداً، والمريض بيجف ويفقد بوتاسيوم.</p><div class=\"cs-stats\"><div><b>>200</b><span>سكر الدم غالباً (mg/dl)</span></div><div><b>+ / ++ / +++</b><span>الأسيتون في البول</span></div><div><b>6 لتر</b><span>السوائل المتوقعة في أول 24 ساعة</span></div><div><b>كل ساعة</b><span>قياس السكر</span></div></div>[[slot:dis-023-dka-mechanism|كيف تحدث الحموضة الكيتونية؟|/diseases/img/dis-023-dka-mechanism.svg]]<h4>عوامل التهييج (Precipitating factors)</h4><table><thead><tr><th>العامل</th><th>التوضيح</th></tr></thead><tbody><tr><td>نسيان جرعة الإنسولين (Missed insulin dose)</td><td>المريض لم ياخد جرعته</td></tr><tr><td>الضغط النفسي (Stress)</td><td>التوتر والضغط العصبي</td></tr><tr><td>العدوى (Infection)</td><td>عدوى أو ارتفاع حرارة: التهاب شعبي ورئوي ونزلات معوية</td></tr><tr><td>السكتة الدماغية والجلطة القلبية</td><td>Stroke and MI</td></tr><tr><td>سكر لم يُشخَّص بعد (Undiagnosed)</td><td>أول ظهور للمرض</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث (معايير 2024)</strong><p>الإجماع الحديث (ADA / EASD / AACE / JBDS) خفّض عتبة السكر لتشخيص DKA (200 mg/dl بدل 250، وبدون عتبة لمرضى السكر المعروفين، لأن DKA ممكن يحدث بسكر طبيعي خصوصاً مع أدوية SGLT2 مثل Jardiance وForxiga). التشخيص: كيتونات (β-hydroxybutyrate ≥ 3 mmol/L أو أسيتون ++ فأكتر في البول) + pH أقل من 7.3 و/أو bicarbonate أقل من 18 mmol/L. لازم نفحص الكيتونات لأي مريض سكر بغثيان أو قيء أو ألم بطن ولو السكر مش عالي جداً.</p></div>[[slot:dis-023-hourly|مسار DKA بالساعات — رسم من إعداد الموقع|/diseases/img/dis-023-hourly.svg]]<h4>المعايير الكلاسيكية (Cardinal biochemical features)</h4><table><thead><tr><th>القيمة</th><th>المعيار القديم</th><th>الحديث (ADA/JBDS)</th></tr></thead><tbody><tr><td>سكر البلازما</td><td>أكثر من 250 mg/dl</td><td>أكثر من 200 (أو سكري معروف)</td></tr><tr><td>pH الدم الشرياني</td><td>أقل من 7.30</td><td>أقل من 7.3</td></tr><tr><td>بيكربونات الدم</td><td>أقل من 15 mEq/L</td><td>أقل من 18 mmol/L</td></tr><tr><td>كيتونات الدم (Hyperketonemia)</td><td>أكثر من 3 mmol/L</td><td>≥ 3 mmol/L</td></tr><tr><td>كيتونات البول (Ketonuria)</td><td>أكثر من 2+ على الشريط</td><td>++ فأكتر</td></tr></tbody></table>\n<h4>DKA مقابل HHNS: مراجعة نقاط الامتحان</h4>[[slot:dis-023-p118|DKA مقابل HHNS — رسم من إعداد الموقع|/diseases/img/dis-023-p118.svg]]<ul><li>الأسباب (SSS): عدوى، مرض (فيروس معدة/إنفلونزا)، توتر/جراحة، ترك الإنسولين.</li><li><strong>علاج DKA:</strong> الجفاف أولًا بالملح 0.9%، ثم خفض السكر ببطء بفحص كل ساعة، فوق 250 أعطِ Regular وريدي (جرعة تحميل ثم تسريب)، تحت 200 أو عند اختفاء الكيتون: إنسولين تحت الجلد مع نصف الملح + D5W، وأضف بوتاسيوم (حتى لو طبيعي 3.5–5.0) أثناء الإنسولين.</li><li><strong>علاج HHNS:</strong> ملح 0.9% أولًا ثم منخفض التوتر؛ إنسولين Regular وريدي فقط.</li><li>إعادة التقييم: سكر كل ساعة، علامات الترطيب (ضغط ثابت وامتلاء شعيرات أقل من 3 ثوان، جلد دافئ، بول 30 مل/ساعة، كثافة بول 1.005–1.030)؛ لا تعتمد على النبض أو الرئة أو الحدقة.</li><li>البوتاسيوم الوريدي: أول إجراء مونيتور، لا يُدفع دفعة واحدة (قد يقتل)، حد أقصى 10–20 مم/ساعة بمضخة ويفضل وريد مركزي (حسب البروتوكول).</li><li>ECG: بوتاسيوم عالٍ = موجة T مدببة/ارتفاع ST؛ منخفض = T مسطحة، هبوط ST، موجة U.</li><li>سؤال: طفل مريض لا يأكل: يُعطى الإنسولين (جرعات يوم المرض) لأن السكر مرتفع أثناء المرض.</li></ul>\n<h4>DKA مقابل HHNS: مراجعة التمريض الباطني</h4><p>DKA يصيب غالباً النوع 1 والأصغر سناً: عدوى (الأشيع)، مرض كإنفلونزا أو معدة، إجهاد وجراحة، أو ترك الإنسولين. العلامات: جفاف وسكر 250–500+، كيتونات وتنفس كوسماول ورائحة فاكهية، ألم بطن، حماض (pH أقل من 7.35). HHNS للنوع 2 الأكبر سناً: سكر فوق 600، جفاف وتغير وعي، بلا كيتونات ولا حماض، وبداية أبطأ وبوتاسيوم مستقر.</p>[[slot:dis-023-p288|DKA مقابل HHNS — رسم من إعداد الموقع|/diseases/img/dis-023-p288.svg]]<ul><li>ترتيب علاج DKA: ① ماء (0.9% أولاً) ② خفض السكر ببطء وبإنسولين ريجولار وريدي فقط (بولس ثم تنقيط) إذا السكر فوق 250 مع فحص كل ساعة؛ وعند انخفاضه تقريباً دون 200–250 يُضاف دكستروز حسب بروتوكول المستشفى ③ البوتاسيوم أثناء الإنسولين حتى لو طبيعي.</li><li>HHNS: ترطيب بـ0.9% ثم منخفض التوتر، وإنسولين ريجولار وريدي فقط.</li><li>إعادة التقييم كل ساعة: سكر الدم، ضغط مستقر وامتلاء شعيري ≤ 3 ثوانٍ، جلد دافئ، بول ≥ 30 مل/س، ووزن نوعي 1.005–1.030.</li><li>البوتاسيوم الوريدي: مراقب قلب أولاً، لا دفع أبداً، بمضخة وبسرعة قصوى 10–20 mEq/ساعة، موضع آمن وببطء. ارتفاع K: T مدببة وST مرتفع؛ نقصه: T مسطحة وST منخفض وU.</li><li>DKA يموت منها المريض بنقص البوتاسيوم، وHHNS بنقص الحجم.</li></ul><p>مريض نوع 1 يتقيأ ولا يأكل ما زال يحتاج إنسولين (Sick-day) لأن الجلوكوز يرتفع في المرض.</p>",
+   "en": "<p>Diabetic ketoacidosis (DKA) is a life-threatening emergency that happens to a diabetic patient (usually type 1) when insulin becomes very low: the body burns fat and produces acidic ketones, blood sugar rises very high, and the patient becomes dehydrated and loses potassium.</p><div class=\"cs-stats\"><div><b>>200</b><span>Blood sugar usually (mg/dl)</span></div><div><b>+ / ++ / +++</b><span>Acetone in the urine</span></div><div><b>6 liters</b><span>Expected fluids in the first 24 hours</span></div><div><b>Hourly</b><span>Sugar measurement</span></div></div>[[slot:dis-023-dka-mechanism|How does ketoacidosis happen?|/diseases/img/dis-023-dka-mechanism.svg]]<h4>Precipitating factors</h4><table><thead><tr><th>Factor</th><th>Explanation</th></tr></thead><tbody><tr><td>Missed insulin dose</td><td>The patient did not take the dose</td></tr><tr><td>Stress</td><td>Tension and nervous pressure</td></tr><tr><td>Infection</td><td>Infection or fever: bronchitis, pneumonia, and gastroenteritis</td></tr><tr><td>Stroke and heart attack</td><td>Stroke and MI</td></tr><tr><td>Undiagnosed diabetes</td><td>First presentation of the disease</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update (2024 criteria)</strong><p>The modern consensus (ADA / EASD / AACE / JBDS) lowered the sugar threshold for diagnosing DKA (200 mg/dl instead of 250, and no threshold for known diabetic patients, because DKA can occur with normal sugar, especially with SGLT2 drugs such as Jardiance and Forxiga). Diagnosis: ketones (β-hydroxybutyrate ≥ 3 mmol/L or acetone ++ or more in the urine) + pH below 7.3 and/or bicarbonate below 18 mmol/L. We must check ketones for any diabetic patient with nausea, vomiting, or abdominal pain even if the sugar is not very high.</p></div>[[slot:dis-023-hourly|The DKA course by the hour — illustration made by the site|/diseases/img/dis-023-hourly.svg]]<h4>Classic criteria (cardinal biochemical features)</h4><table><thead><tr><th>Value</th><th>Old criterion</th><th>Modern (ADA/JBDS)</th></tr></thead><tbody><tr><td>Plasma sugar</td><td>More than 250 mg/dl</td><td>More than 200 (or known diabetes)</td></tr><tr><td>Arterial blood pH</td><td>Below 7.30</td><td>Below 7.3</td></tr><tr><td>Blood bicarbonate</td><td>Below 15 mEq/L</td><td>Below 18 mmol/L</td></tr><tr><td>Blood ketones (hyperketonemia)</td><td>More than 3 mmol/L</td><td>≥ 3 mmol/L</td></tr><tr><td>Urine ketones (ketonuria)</td><td>More than 2+ on the strip</td><td>++ or more</td></tr></tbody></table>\n<h4>DKA vs. HHNS: exam points review</h4>[[slot:dis-023-p118|DKA vs. HHNS — illustration made by the site|/diseases/img/dis-023-p118.svg]]<ul><li>Causes (SSS): infection, illness (stomach virus/flu), stress/surgery, skipping insulin.</li><li><strong>DKA treatment:</strong> dehydration first with 0.9% saline, then lower the sugar slowly with hourly checks; above 250 give IV Regular (a loading dose then an infusion); below 200 or when ketones disappear: subcutaneous insulin with half-strength saline + D5W, and add potassium (even if normal 3.5–5.0) during insulin.</li><li><strong>HHNS treatment:</strong> 0.9% saline first then hypotonic; IV Regular insulin only.</li><li>Reassessment: sugar every hour, signs of hydration (stable blood pressure and capillary refill less than 3 seconds, warm skin, urine 30 mL/hour, urine specific gravity 1.005–1.030); do not rely on the pulse, lungs, or pupils.</li><li>IV potassium: the first step is a monitor, never pushed all at once (it may kill), maximum 10–20 mEq/hour by pump and preferably a central vein (per protocol).</li><li>ECG: high potassium = peaked T wave/ST elevation; low = flat T, ST depression, U wave.</li><li>Question: a sick child who is not eating: insulin is given (sick-day doses) because sugar rises during illness.</li></ul>\n<h4>DKA vs. HHNS: medical-surgical nursing review</h4><p>DKA usually affects type 1 and the younger: infection (the most common), illness such as flu or stomach illness, stress and surgery, or skipping insulin. Signs: dehydration and sugar 250–500+, ketones and Kussmaul breathing and a fruity odor, abdominal pain, acidosis (pH below 7.35). HHNS is for older type 2: sugar above 600, dehydration and altered consciousness, no ketones and no acidosis, and a slower onset and stable potassium.</p>[[slot:dis-023-p288|DKA vs. HHNS — illustration made by the site|/diseases/img/dis-023-p288.svg]]<ul><li>Order of DKA treatment: ① water (0.9% first) ② lower the sugar slowly and with IV Regular insulin only (bolus then drip) if the sugar is above 250 with hourly checks; and when it falls to roughly below 200–250, dextrose is added per hospital protocol ③ potassium during insulin even if normal.</li><li>HHNS: hydration with 0.9% then hypotonic, and IV Regular insulin only.</li><li>Reassessment every hour: blood sugar, stable blood pressure and capillary refill ≤ 3 seconds, warm skin, urine ≥ 30 mL/h, and specific gravity 1.005–1.030.</li><li>IV potassium: cardiac monitor first, never push, by pump and at a maximum rate of 10–20 mEq/hour, a safe site and slowly. High K: peaked T and elevated ST; low K: flat T, depressed ST, and U.</li><li>The patient dies of DKA from low potassium, and of HHNS from low volume.</li></ul><p>A type 1 patient who is vomiting and not eating still needs insulin (sick-day) because glucose rises during illness.</p>"
+  },
+  "causes": {
+   "ar": "<h4>الخطأ الأيضي باختصار</h4><ol><li>نقص إنسولين شديد</li><li>الجلوكوز لا يدخل الخلايا فيرتفع في الدم</li><li>الجسم يحرق الدهون فيُنتج أجسام كيتونية (Acetone) حمضية</li><li>السكر الزائد يخرج في البول مع الماء (Osmotic diuresis) فيحصل جفاف وفقد أملاح</li><li>حموضة الدم ويعوضها الرئتان بتنفس عميق سريع (Kussmaul)</li><li>البوتاسيوم يتحرك من الخلايا ويخرج في البول، فيبدو طبيعي أو عالي في التحليل لكن إجمالي الجسم ناقص جداً</li></ol><h4>أسباب التهييج</h4><ul><li>إهمال جرعة الإنسولين</li><li>ضغط نفسي</li><li>عدوى (رئة، شعب، معدة وأمعاء)</li><li>سكتة أو جلطة قلب</li><li>مرض سكر لم يُشخص بعد</li><li>أدوية (كورتيزون، SGLT2 inhibitors)</li><li>حمل، صدمة، جراحة</li></ul>",
+   "en": "<h4>The metabolic error in brief</h4><ol><li>Severe insulin deficiency</li><li>Glucose cannot enter the cells so it rises in the blood</li><li>The body burns fat and produces acidic ketone bodies (acetone)</li><li>The excess sugar leaves in the urine with water (osmotic diuresis), causing dehydration and loss of salts</li><li>Blood acidity, which the lungs compensate for with deep rapid breathing (Kussmaul)</li><li>Potassium moves out of the cells and leaves in the urine, so it looks normal or high in the lab test but total body potassium is very low</li></ol><h4>Precipitating causes</h4><ul><li>Neglecting an insulin dose</li><li>Psychological stress</li><li>Infection (lung, bronchi, stomach and intestines)</li><li>Stroke or heart attack</li><li>Undiagnosed diabetes</li><li>Drugs (cortisone, SGLT2 inhibitors)</li><li>Pregnancy, trauma, surgery</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>التاريخ والشكوى</h4><ul><li>المريض سكري معروف (أو أول ظهور)</li><li>كثرة التبول (Polyuria)</li><li>عطش شديد (Thirst)</li><li>ألم بالبطن</li><li>غثيان وقيء</li><li>ضعف عام</li><li>زغللة في النظر</li></ul><h4>الفحص (On examination)</h4><ul><li>جفاف (Dehydration)</li><li>هبوط ضغط (Hypotension)</li><li>تسرع نبض (Tachycardia)</li><li>أطراف باردة</li><li>تنفس كوسماول (عميق وسريع وبدون صعوبة ظاهرة)</li><li>ريحة أسيتون في النفس (زي رائحة التفاح أو طلاء الأظافر)</li><li>غيبوبة (Coma)</li></ul><div class=\"cs-box cs-danger\"><strong>علامات الخطر</strong><p>نعاس، اضطراب وعي، صداع شديد، قيء مستمر، ألم بطن شديد، هبوط ضغط، أو تنفس شديد: هذا طارئ.</p></div>[[slot:dis-023-kussmaul|تنفس كوسماول: رسم أو فيديو توضيحي للتنفس العميق السريع]]<!--e2-23--><h4>ملاحظات عملية في الاستقبال</h4><ul><li>أعراض البطن (مغص، غثيان، قيء) في DKA كتير بتتشخص غلط كـ«بطن جراحي»: أي مريض سكر جاي بوجع بطن وترجيع = اعمل سكر عشوائي وكيتونات</li><li>اسأل المريض أو أهله: عندك سكر؟ جاتلك غيبوبة قبل كده؟ بتاخد إنسولين؟ مطمنش على العلاج؟ بتغيّر مكان الحقنة؟</li><li>أهم فحص: علامات الجفاف (لسان جاف، ثنية جلد بطيئة، عين غايرة)</li><li>الفحوص السريعة: RBG (غالباً أكتر من 250 في المراجع)، أسيتون البول +ve، غازات الدم (حموضة أيضية)</li></ul>",
+   "en": "<h4>History and complaint</h4><ul><li>A known diabetic patient (or first presentation)</li><li>Frequent urination (polyuria)</li><li>Severe thirst</li><li>Abdominal pain</li><li>Nausea and vomiting</li><li>General weakness</li><li>Blurred vision</li></ul><h4>On examination</h4><ul><li>Dehydration</li><li>Hypotension</li><li>Tachycardia</li><li>Cold extremities</li><li>Kussmaul breathing (deep and rapid without obvious difficulty)</li><li>Acetone odor on the breath (like the smell of apples or nail polish)</li><li>Coma</li></ul><div class=\"cs-box cs-danger\"><strong>Danger signs</strong><p>Drowsiness, altered consciousness, severe headache, persistent vomiting, severe abdominal pain, hypotension, or severe breathing: this is an emergency.</p></div>[[slot:dis-023-kussmaul|Kussmaul breathing: an explanatory illustration or video of deep rapid breathing]]<!--e2-23--><h4>Practical notes in the reception area</h4><ul><li>Abdominal symptoms (colic, nausea, vomiting) in DKA are often misdiagnosed as a \"surgical abdomen\": any diabetic patient who comes with abdominal pain and vomiting = do a random sugar and ketones</li><li>Ask the patient or family: do you have diabetes? Have you had a coma before? Do you take insulin? Are you unsure about the treatment? Do you rotate the injection site?</li><li>The most important exam: signs of dehydration (dry tongue, slow skin turgor, sunken eyes)</li><li>Quick tests: RBG (usually more than 250 in the references), urine acetone positive, blood gases (metabolic acidosis)</li></ul>"
+  },
+  "tests": {
+   "ar": "<h4>الفحوص السريعة (في نفس اللحظة)</h4><ul><li><b>سكر الدم العشوائي (RBS):</b> غالباً أكتر من 200 mg%</li><li><b>أسيتون البول:</b> إيجابي</li></ul><h4>طريقة شريط الأسيتون</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اجلب عينة بول</strong><p>خلي المريض يجيب عينة بول (أو من القسطرة لو مركبة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اغمس الشريط</strong><p>حط شريط الأسيتون في عينة البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اقرأ اللون</strong><p>لو اتحول للموف = (+). لو بنفسجي = (++). لو أسود/بنفسجي غامق = (+++).</p></div></div></div>[[slot:dis-023-ketone-strip|قراءة شريط الأسيتون في البول|/diseases/img/dis-023-ketone-strip.svg]][[slot:dis-023-ketone-photo|صورة: شريط أسيتون في البول بعد الغمس مع مقياس الألوان]]<h4>الفحوص الروتينية (بعد التعامل مع المريض وتعليق المحاليل ودخوله المستشفى)</h4><ul><li>اليوريا والكرياتينين</li><li>تحليل البول</li><li>أشعة الصدر (CXR)</li><li>تعداد الدم CBC</li><li>بروتين C التفاعلي (CRP)</li><li>الصوديوم والبوتاسيوم (Na and K)</li></ul><div class=\"cs-box cs-info\"><strong>تحديث</strong><p>أضف: غازات الدم أو pH وbicarbonate، الكيتونات في الدم (BHB) لو متاحة، ECG لمراقبة البوتاسيوم، وزراعة دم/بول لو شك في عدوى. تصحيح الصوديوم: Na + 1.6 لكل 100 mg/dl سكر فوق 100.</p></div><!--E16-dka--><h4>تشخيص DKA (ملخص)</h4><ul><li>إكلينيكياً + سكر عشوائي أعلى من 300 مج/دل (حد في بعض المراجع القديمة؛ المعيار الحديث أعلى من 200 مج/دل مع كيتونات وحماض)</li><li>أسيتون في البول إيجابي</li><li>ABG: حماض أيضي (Metabolic acidosis)</li></ul>",
+   "en": "<h4>Quick tests (at the same moment)</h4><ul><li><b>Random blood sugar (RBS):</b> usually more than 200 mg%</li><li><b>Urine acetone:</b> positive</li></ul><h4>The acetone strip method</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Bring a urine sample</strong><p>Have the patient bring a urine sample (or from the catheter if one is placed).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Dip the strip</strong><p>Put the acetone strip in the urine sample.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Read the color</strong><p>If it turns mauve = (+). If purple = (++). If black/dark purple = (+++).</p></div></div></div>[[slot:dis-023-ketone-strip|Reading the urine acetone strip|/diseases/img/dis-023-ketone-strip.svg]][[slot:dis-023-ketone-photo|Photo: a urine acetone strip after dipping with the color scale]]<h4>Routine tests (after managing the patient, hanging the fluids, and admission)</h4><ul><li>Urea and creatinine</li><li>Urinalysis</li><li>Chest X-ray (CXR)</li><li>Complete blood count CBC</li><li>C-reactive protein (CRP)</li><li>Sodium and potassium (Na and K)</li></ul><div class=\"cs-box cs-info\"><strong>Update</strong><p>Add: blood gases or pH and bicarbonate, blood ketones (BHB) if available, ECG to monitor potassium, and blood/urine cultures if infection is suspected. Sodium correction: Na + 1.6 for every 100 mg/dl of sugar above 100.</p></div><!--E16-dka--><h4>Diagnosis of DKA (summary)</h4><ul><li>Clinically + random sugar higher than 300 mg/dl (a limit in some older references; the modern criterion is higher than 200 mg/dl with ketones and acidosis)</li><li>Positive urine acetone</li><li>ABG: metabolic acidosis</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>المشاكل التي نعالجها بالترتيب</h4><ol><li>الجفاف (Dehydration): أهم شيء لأنه الأخطر</li><li>الحموضة (Acidosis)</li><li>نقص البوتاسيوم (Hypokalemia)</li><li>ارتفاع السكر (Hyperglycemia)</li><li>± عدوى (Infection)</li><li>± جلطات (Thrombosis)</li></ol><div class=\"cs-box cs-tip\"><strong>أول إجراء</strong><p>أول حاجة نعملها للمريض: نركّب كانيولا يمين وشمال (خطين وريديين)، ونركّب قسطرة بولية لو الحالة تتطلب ذلك (مراقبة كمية البول).</p></div><h4>1) علاج الجفاف (الكانيولا الأولى)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>محلول ملح 0.9%</strong><p>نركّب 500 سم الآن</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>بعد نص ساعة</strong><p>500 سم</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>بعد ساعة</strong><p>500 سم</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>بعد ساعتين</strong><p>500 سم</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>بعد 3 ساعات</strong><p>500 سم</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>بعد 4 ساعات</strong><p>500 سم</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وهكذا</strong><p>حتى يتحسن الجفاف</p></div></div></div><div class=\"cs-compare\"><ul><li>لازم تاخد بالك: الداخل = الخارج + 500 سم</li><li>عادة المريض يحتاج 6 لترات في أول 24 ساعة</li><li>لو انخفض السكر عن حوالي 250 mg% نستبدل محلول الملح بجلوكوز 5% حتى لا ينخفض السكر أكتر من المستوى المطلوب</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث (السوائل)</strong><p>الإجماع الحديث: 500–1000 مل/ساعة (حوالي 15–20 مل/كجم) في أول ساعة أو ساعتين بملح 0.9% أو محلول متزن (Ringer lactate)، ثم 250–500 مل/ساعة حسب الجفاف والصوديوم. المرضى كبار السن أو فشل القلب أو الكلى: أبطأ وبمراقبة أدق. إضافة دكستروز 5–10% عند هبوط السكر عن حوالي 250 mg/dl (وليس 270) مع استمرار الإنسولين.</p></div><h4>2) علاج ارتفاع السكر (الكانيولا الثانية)</h4><div class=\"cs-compare\"><ul><li>نركّب محلول ملح في الكانيولا التانية</li><li>نضيف إلى المحلول 50 وحدة إنسولين مائي (Actrapid) بمعدل تنقيط 15 نقطة في الدقيقة</li><li>الإنسولين المائي الوريدي: عدد الوحدات في الساعة = الوزن ÷ 10 (يعني 0.1 وحدة/كجم/ساعة)</li><li>نقيس سكر الدم كل ساعة</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث (الإنسولين والبوتاسيوم أولاً)</strong><p>الإجماع الحديث: لا يبدأ الإنسولين لو البوتاسيوم أقل من 3.3 mmol/L؛ يُصحّح أولاً. معدل الإنسولين الثابت 0.1 وحدة/كجم/ساعة (أو 0.05 لو السكر أقل من 250 مع دكستروز). الهدف نزول السكر 50–75 mg/dl في الساعة. لو ما نزلش 50 mg/dl في أول ساعة (مع التأكد من السوائل) زوّد المعدل. استخدم مضخة سرنجة (غالباً 50 وحدة في 50 مل ملح = 1 وحدة/مل) بدل التنقيط بالنقط لو متاح، لأنه أدق.</p></div><h4>3) علاج نقص البوتاسيوم</h4><div class=\"cs-compare\"><ul><li>لا تضيف بوتاسيوم في أول زجاجة محلول ملح (بالكانيولا الأولى) إلا لو البوتاسيوم أقل من 3</li><li>يضاف أمبول بوتاسيوم لكل زجاجة محلول ملح ابتداءً من الزجاجة الثانية</li><li>عدد الأمبولات = (النقص × نصف وزن الجسم) ÷ 10</li><li>النقص (Deficit) = 3.5 − مستوى بوتاسيوم المريض</li></ul></div><div class=\"cs-box cs-pearl\"><strong>مثال</strong><p>مريض وزنه 70 كجم وبوتاسيومه 2.5: النقص = 3.5 − 2.5 = 1. عدد الأمبولات = (1 × 35) ÷ 10 = 3.5 أمبول تقريباً على مدى المحاليل (وبأمر الطبيب).</p></div><div class=\"cs-box cs-warning\"><strong>تحديث (البوتاسيوم)</strong><p>بالإجماع الحديث: بوتاسيوم أقل من 3.3: احجب الإنسولين وأعطِ بوتاسيوم أولاً. بين 3.3 و5.2: أضف 20–30 mEq لكل لتر. أعلى من 5.2: لا تضف وراجع كل ساعتين. لا يُعطى البوتاسيوم أبداً مركّزاً بالوريد (IV push): لازم مخفف، وبمعدل أقصى 10 mEq/ساعة على القسم و20 تحت مونيتور (بروتوكول المستشفى). ومحتوى أمبول البوتاسيوم (mEq) مكتوب على الأمبول: احسب منه.</p></div><h4>4) علاج الحموضة</h4><div class=\"cs-compare\"><ul><li>التصحيح فقط لو pH أقل من 7.1 أو HCO3 أقل من 10</li><li>عدد الأمبولات = النقص ÷ 25</li><li>النقص = 22 − مستوى HCO3 للمريض</li><li>نعمل نص التصحيح (Half correction): نصف عدد الأمبولات على 100 سم رينجر على مدار ساعتين</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث (البيكربونات)</strong><p>لا يُعطى الصوديوم بيكربونات روتينياً. الإجماع الحديث: فقط لو pH أقل من 7.0 (بعضهم 6.9) رغم السوائل، وبمحلول متساوي الأسمولية وببطء، مع متابعة البوتاسيوم. التحسن بالإنسولين والسوائل يعالج الحموضة.</p></div><h4>5) العدوى</h4><table><thead><tr><th>النوع</th><th>الدواء المذكور</th><th>الجرعة</th></tr></thead><tbody><tr><td>Gram +ve</td><td>Unictam (Ampicillin/Sulbactam)</td><td>حسب أمر الطبيب ووظائف الكلى (الجرعة المعتادة 1.5–3 جم كل 6 ساعات)</td></tr><tr><td>Gram –ve</td><td>Cefotax (Cefotaxime)</td><td>500 أو 1000 مجم وريدي، والفاصل حسب أمر الطبيب/بروتوكول المستشفى</td></tr><tr><td>لاهوائيات (Anaerobes)</td><td>Flagyl (Metronidazole) زجاجة</td><td>كل 8 أو 12 ساعة</td></tr><tr><td>حرارة</td><td>Perfalgan (Paracetamol IV) زجاجة</td><td>حسب أمر الطبيب (الحد الأقصى 4 جم/يوم للبالغ فوق 50 كجم، وأقل في أمراض الكبد)</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>ملاحظة</strong><p>المضاد الحيوي لا يُعطى روتينياً؛ بيُعطى لو في عدوى مشتبهة أو مؤكدة، وبعد العينات (زراعة).</p></div><h4>6) الجلطات</h4><div class=\"cs-compare\"><ul><li>Clexan 20 أو 40 أو 60 أو 80 مجم حقنة تحت الجلد مرة أو مرتين يومياً</li><li>نستخدم التركيز على حسب وزن المريض (لو الوزن 60 كجم نستخدم Clexan 60 مجم)</li><li>نتجنب Clexan في القصور الكلوي ونستخدم Cal-Heparin بدلاً منه</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الجرعة الوقائية المعتادة من Enoxaparin 40 مجم مرة يومياً (السمنة والقصور الكلوي: تعديل الجرعة بأمر الطبيب/الصيدلية)؛ الجرعة «بوزن الجسم» هي علاجية وتُعطى بأمر الطبيب. اتبع أمر الطبيب وتحقق من الكلى (eGFR أقل من 30: Heparin).</p></div><h4>7) التغذية والإنسولين</h4><div class=\"cs-compare\"><ul><li>التغذية: نبدأ تدريجياً بالسوائل ثم شبه الصلب ثم الصلب</li><li>الإنسولين الوريدي: يُوقف عندما يبدأ المريض التغذية بالفم</li><li>الإنسولين تحت الجلد: يُبدأ قبل ساعتين من إيقاف مضخة الإنسولين</li></ul></div><div class=\"cs-box cs-info\"><strong>تحديث (متى نوقف الوريدي؟)</strong><p>الإنسولين الوريدي يستمر حتى حل DKA: pH ≥ 7.3 وbicarbonate ≥ 18 mmol/L وBHB أقل من 0.6 (أو غياب الكيتونات). وبعدها يتحول لإنسولين تحت الجلد قبل إيقاف الوريدي بساعة إلى ساعتين (والقاعدي قبلها).</p></div><h4>8) علاج استسقاء المخ (Brain oedema)</h4><ul><li>رفع الرأس</li><li>تنفس صناعي (Mechanical ventilation)</li><li>Mannitol 20% بالجرعة والسرعة حسب أمر الطبيب (تُحسب بالوزن)</li><li>Lasix: غير روتيني، حسب أمر الطبيب فقط</li></ul><div class=\"cs-box cs-info\"><strong>تحديث</strong><p>الوذمة المخية (Cerebral edema) أكتر في الأطفال والشباب، وأهم وقاية هي عدم خفض السكر والأسمولية بسرعة. لو ظهر صداع أو اضطراب وعي أو بطء نبض: بلّغ فوراً، والجرعة بأمر الطبيب.</p></div>[[slot:dis-023-dka-flowchart|خوارزمية معالجة DKA المختصرة]]<h4>بروتوكول الساعة الأولى (تدرّج بسيط للطوارئ)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>كانيولا اثنتين وسحب دم</strong><p>سحب يوريا (Blood urea)، تعداد الدم البيضاء (WBC)، البوتاسيوم (S.K)، وسكر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أهم شيء: السوائل</strong><p>محلول ملح عادي لتر (يعني باينتين = 2×500 مل) على نصف ساعة، ثم لتر آخر (باينتين) خلال ساعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>إنسولين مائي (Actrapid) 10 وحدات</strong><p>في العضل كجرعة أولى عند عدم توفر المضخة (والتسريب الوريدي 0.1 وحدة/كجم/ساعة هو الأفضل حالياً).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>انتبه: البوتاسيوم أقل من 2.5 (في بعض المراجع القديمة) ≈ 3.3 حديثاً</strong><p>لا تبدأ الإنسولين، تأخّر شوية وعوّض بس سوائل، لأن الإنسولين يسحب البوتاسيوم للخلايا فيهبط جداً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>بعد ساعة: قس السكر والبوتاسيوم</strong><p>وبناءً عليهما نبدأ الخطوة الثانية.</p></div></div></div><h4>الخطوة الثانية</h4><ul><li>نكمل محلول الملح: اللتر الثاني والثالث (قد نضيف نوع سوائل آخر لو الجفاف شديد جداً بأمر الطبيب)</li><li>نستمر في الإنسولين <b>5 وحدات/ساعة عضل</b> (أو التسريب الوريدي بالمضخة)</li><li>نحلل البوتاسيوم ونقرر حسب القيمة:</li></ul><table><thead><tr><th>قيمة البوتاسيوم (mmol/L)</th><th>الإجراء (المراجع القديمة)</th><th>الإجراء الحديث</th></tr></thead><tbody><tr><td>أكثر من 5.5</td><td>لا نعطي بوتاسيوم؛ ننتظر ونقيس مرة أخرى مع المونيتور</td><td>أكثر من 5.2: لا تضف وراجع كل ساعتين</td></tr><tr><td>3.5–5.5</td><td>المريض يحتاج 40 mEq لكل لتر</td><td>3.3–5.2: أضف 20–30 mEq/لتر</td></tr><tr><td>أقل من 3.5</td><td>يحتاج اختصاصاً دقيقاً</td><td>أقل من 3.3: صحّح قبل الإنسولين</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>اسأل أولاً: هل بال المريض؟</strong><p>قبل البوتاسيوم لازم المريض يبول (Pass urine) لأن الكلى هي اللي بتتخلص منه. ودايماً نبدأ البوتاسيوم من <b>اللتر الثاني</b> (نص: 10 mEq في كل باينت ملح عادي وهكذا حسب الأمر).</p></div><h4>الخطوة الثالثة</h4><ul><li>بعد ساعة أخرى: سكر وبوتاسيوم</li><li>نكمل الملح (نحتاج حتى 3 لتر) والبوتاسيوم والإنسولين</li><li>لما السكر يوصل <b>14 mmol/L (حوالي 250 mg/dl)</b>: نغيّر السوائل إلى <b>جلوكوز 10%</b> (الباينت على 4 ساعات) — نحتاج نحو 3 لتر</li><li>نقيس كل ساعة: BP، PR، RR، SpO₂، وإخراج البول</li></ul><h4>ملاحظات إضافية</h4><ul><li>المريض ما بال خلال 3 ساعات: ركّب قسطرة بول</li><li>لو المريض محموم: ابدأ مضاد حيوي لأن الالتهابات قد تكون المحرّض (Precipitating factor)</li><li>انتبه للسوائل عند <b>الأطفال والشباب</b> (خطر استسقاء مخ)</li><li>هدف خفض السكر 50–75 mg/dl بالساعة؛ لو أسرع من كده ممكن تحصل هبوط سكر/شوارد وخطر <b>استسقاء المخ (Cerebral edema)</b></li><li>لو تحليل البوتاسيوم مش متاح: <b>ECG</b> اختبار أكثر حساسية لمستوى البوتاسيوم (T مدببة/مسطحة)</li><li>نقص البوتاسيوم (Hypokalemia) مهم وغالباً ما نعالجه صح، وهو من أهم أسباب وفاة مريض DKA</li><li>نرجع المريض لجرعة الإنسولين تحت الجلد لما يقدر يأكل ويشرب والبيوكيمياء طبيعية</li><li>لو المريض أول ظهور للسكر: عند التحويل للإنسولين تحت الجلد نعطيه <b>ثلثي</b> جرعة الإنسولين المائي اللي احتاجها يومياً للسيطرة على السكر أثناء الـDKA</li></ul><h4>البروتوكول المختصر (طوارئ)</h4><ul><li>أول وأهم خطوة: علاج الجفاف، يليها خفض السكر. الأفضل: ابدأ المحاليل ثم الجرعة المبدئية من الإنسولين ثم حوّل المريض أو اطلب النائب</li><li>ملح 0.9%: لتر (زجاجتين) على نصف ساعة، ثم لتر على ساعة، ثم لتر على ساعتين، ثم لتر على 4 ساعات (حسب المراجع؛ الحديث لتر على ساعة أول ساعة)</li><li>قبل الإنسولين: قس البوتاسيوم لأن الإنسولين بيخفضه وقد تحتاج KCl مع المحلول</li><li>Bolus: Humulin R أو Actrapid 0.1 وحدة/كجم وريد أو عضل (مثال 70 كجم = 7 وحدات)</li><li>صيانة: 0.1 وحدة/كجم/ساعة وريد: 50 وحدة إنسولين مائي في 50 سم ملح (1 سم = 1 وحدة) تُعطى بعدد الوحدات المحسوب في الساعة (7 وحدات = 7 سم/ساعة)</li><li>الهدف: خفض السكر 50–100 mg/dl في الساعة (الحديث 50–75)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإجماع الحديث يبدأ بالسوائل 15–20 مل/كجم في أول ساعة، ويبدأ الإنسولين بعد التأكد من البوتاسيوم 3.3 فأكتر. الإنسولين العضل يُستخدم فقط عند عدم توفر الوريد/المضخة. اتبع بروتوكول المستشفى.</p></div>\n<h4>مراجعة NCLEX للأطفال: DKA وHHNS</h4>[[slot:dis-023-peds-hhns|DKA مقابل HHNS — رسم من إعداد الموقع|/diseases/img/dis-023-peds-hhns.svg]][[slot:dis-023-peds-dka|ترتيب علاج DKA — رسم من إعداد الموقع|/diseases/img/dis-023-peds-dka.svg]]<ul><li>طفل غثيان/قيء لا يأكل: <b>نعم يُعطى إنسولين</b> في أيام المرض لمنع DKA لأن السكر يرتفع بالمرض</li><li>طفل حمى وتنفس عميق سريع: أولًا قياس سكر الدم</li><li>تحليل بول: كيتونات وسكر مرتفع، جلد جاف، نبض شعاعي ضعيف، قلة الوعي: إعطاء سوائل وريدية، إنسولين، بوتاسيوم</li><li>جلد ساخن وجاف، سكر 375، pH 7.28: ابدأ المحلول الملحي الطبيعي أولًا</li><li>علامات DKA: كيتونات بالبول والدم، جفاف، رائحة أسيتون بالنفس</li></ul>\n<h4>مراجعة سريعة DKA وHHNS ومراقبة إعادة التقييم</h4>[[slot:dis-3322-dka-hhns|DKA مقابل HHNS — رسم من إعداد الموقع|/diseases/img/dis-3322-dka-hhns.svg]]<ul><li>DKA مع أسباب: Sepsis، المرض، الإجهاد/الجراحة، تخطي الأنسولين. علامات: جفاف وسكر 250–500+، كيتونات وKussmaul، ألم بطن، حموضة pH أقل من 7.35 وارتفاع K.</li><li>العلاج: الجفاف أولاً (محلول ملحي 0.9%)، خفض السكر ببطء بأنسولين Regular وريدياً (تحت الجلد لاحقاً)، سكر الدم كل ساعة؛ إذا نزل إلى 200 أو انتهت الكيتونات يُضاف محلول به دكستروز؛ ثم أضف البوتاسيوم (حتى لو طبيعي 3.5–5.0) أثناء الأنسولين.</li><li>البوتاسيوم الوريدي: ابدأ بمراقبة القلب، لا تدفعه أبداً دفعة (قد يقتل)، 10–20 ميلي مكافئ كحد أقصى في الساعة بمضخة، عبر موضع مركزي وبسرعة بطيئة.</li><li>إعادة التقييم: سكر كل ساعة، علامات ترطيب: ضغط ثابت وعودة الامتلاء الشعري أقل من 3 ثوان، جلد دافئ، بول 30 مل/ساعة أو أكثر، كثافة بول 1.005–1.030؛ لا تعتمد على النبض الطرفي أو الرئة أو الحدقة.</li><li>جلوكوز ويوم المرض: الطفل غثيان لا يأكل ← استمر في الأنسولين (أيام المرض) لأن الجلوكوز مرتفع.</li><li>HHNS: ترطيب 0.9% ثم محلول منخفض التوتر، ثم أنسولين Regular فقط وريدياً.</li><li>DKA يموت المريض من نقص البوتاسيوم؛ HHNS من نقص حجم السوائل.</li><li>البوتاسيوم: مرتفع ≥ 5.0: T عالية ورفع ST؛ منخفض أقل من 3.5: T مسطحة، هبوط ST، موجة U.</li></ul>",
+   "en": "<h4>The problems we treat in order</h4><ol><li>Dehydration: the most important because it is the most dangerous</li><li>Acidosis</li><li>Hypokalemia</li><li>Hyperglycemia</li><li>± Infection</li><li>± Thrombosis</li></ol><div class=\"cs-box cs-tip\"><strong>First action</strong><p>The first thing we do for the patient: place a cannula on the right and left (two IV lines), and place a urinary catheter if the condition requires it (to monitor urine volume).</p></div><h4>1) Treating dehydration (the first cannula)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>0.9% saline solution</strong><p>Hang 500 mL now</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>After half an hour</strong><p>500 mL</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>After an hour</strong><p>500 mL</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>After 2 hours</strong><p>500 mL</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>After 3 hours</strong><p>500 mL</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>After 4 hours</strong><p>500 mL</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>And so on</strong><p>Until the dehydration improves</p></div></div></div><div class=\"cs-compare\"><ul><li>You must pay attention: intake = output + 500 mL</li><li>The patient usually needs 6 liters in the first 24 hours</li><li>If the sugar falls below about 250 mg% we replace the saline with 5% glucose so that the sugar does not fall below the required level</li></ul></div><div class=\"cs-box cs-warning\"><strong>Update (fluids)</strong><p>Modern consensus: 500–1000 mL/hour (about 15–20 mL/kg) in the first hour or two with 0.9% saline or a balanced solution (Ringer lactate), then 250–500 mL/hour depending on dehydration and sodium. Older patients or those with heart or kidney failure: slower and with closer monitoring. Add 5–10% dextrose when sugar falls below about 250 mg/dl (not 270) with continued insulin.</p></div><h4>2) Treating hyperglycemia (the second cannula)</h4><div class=\"cs-compare\"><ul><li>We hang saline solution in the second cannula</li><li>We add 50 units of regular insulin (Actrapid) to the solution at a drip rate of 15 drops per minute</li><li>IV regular insulin: units per hour = weight ÷ 10 (that is 0.1 unit/kg/hour)</li><li>We measure blood sugar every hour</li></ul></div><div class=\"cs-box cs-warning\"><strong>Update (insulin and potassium first)</strong><p>Modern consensus: do not start insulin if potassium is below 3.3 mmol/L; correct it first. The fixed insulin rate is 0.1 unit/kg/hour (or 0.05 if sugar is below 250 with dextrose). The target is a sugar drop of 50–75 mg/dl per hour. If it did not fall 50 mg/dl in the first hour (after making sure of the fluids) increase the rate. Use a syringe pump (usually 50 units in 50 mL saline = 1 unit/mL) instead of a drop-counting drip if available, because it is more accurate.</p></div><h4>3) Treating low potassium</h4><div class=\"cs-compare\"><ul><li>Do not add potassium to the first bottle of saline (in the first cannula) unless potassium is below 3</li><li>A potassium ampoule is added to each bottle of saline starting from the second bottle</li><li>Number of ampoules = (deficit × half the body weight) ÷ 10</li><li>Deficit = 3.5 − the patient's potassium level</li></ul></div><div class=\"cs-box cs-pearl\"><strong>Example</strong><p>A patient weighing 70 kg with potassium 2.5: deficit = 3.5 − 2.5 = 1. Number of ampoules = (1 × 35) ÷ 10 = about 3.5 ampoules over the course of the fluids (and by physician's order).</p></div><div class=\"cs-box cs-warning\"><strong>Update (potassium)</strong><p>By modern consensus: potassium below 3.3: hold insulin and give potassium first. Between 3.3 and 5.2: add 20–30 mEq per liter. Above 5.2: do not add and recheck every two hours. Potassium is never given concentrated IV (IV push): it must be diluted, and at a maximum rate of 10 mEq/hour on the ward and 20 under a monitor (hospital protocol). And the content of the potassium ampoule (mEq) is written on the ampoule: calculate from it.</p></div><h4>4) Treating acidosis</h4><div class=\"cs-compare\"><ul><li>Correct only if pH is below 7.1 or HCO3 is below 10</li><li>Number of ampoules = deficit ÷ 25</li><li>Deficit = 22 − the patient's HCO3 level</li><li>We do half correction: half the number of ampoules in 100 mL Ringer over two hours</li></ul></div><div class=\"cs-box cs-warning\"><strong>Update (bicarbonate)</strong><p>Sodium bicarbonate is not given routinely. Modern consensus: only if pH is below 7.0 (some say 6.9) despite fluids, and as an isotonic solution and slowly, with potassium monitoring. Improvement with insulin and fluids treats the acidosis.</p></div><h4>5) Infection</h4><table><thead><tr><th>Type</th><th>Drug mentioned</th><th>Dose</th></tr></thead><tbody><tr><td>Gram +ve</td><td>Unictam (Ampicillin/Sulbactam)</td><td>Per physician's order and kidney function (the usual dose 1.5–3 g every 6 hours)</td></tr><tr><td>Gram –ve</td><td>Cefotax (Cefotaxime)</td><td>500 or 1000 mg IV, and the interval per physician's order/hospital protocol</td></tr><tr><td>Anaerobes</td><td>Flagyl (Metronidazole) bottle</td><td>Every 8 or 12 hours</td></tr><tr><td>Fever</td><td>Perfalgan (Paracetamol IV) bottle</td><td>Per physician's order (maximum 4 g/day for an adult over 50 kg, and less in liver disease)</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Note</strong><p>An antibiotic is not given routinely; it is given if infection is suspected or confirmed, and after samples (culture).</p></div><h4>6) Thrombosis</h4><div class=\"cs-compare\"><ul><li>Clexan 20, 40, 60, or 80 mg subcutaneous injection once or twice daily</li><li>We use the strength according to the patient's weight (if the weight is 60 kg we use Clexan 60 mg)</li><li>We avoid Clexan in kidney failure and use Cal-Heparin instead</li></ul></div><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The usual prophylactic dose of enoxaparin is 40 mg once daily (obesity and kidney failure: dose adjustment per physician's/pharmacy's order); the \"by body weight\" dose is therapeutic and is given by physician's order. Follow the physician's order and check the kidneys (eGFR below 30: heparin).</p></div><h4>7) Nutrition and insulin</h4><div class=\"cs-compare\"><ul><li>Nutrition: we start gradually with fluids then semi-solids then solids</li><li>IV insulin: stopped when the patient starts oral feeding</li><li>Subcutaneous insulin: started two hours before stopping the insulin pump</li></ul></div><div class=\"cs-box cs-info\"><strong>Update (when do we stop the IV?)</strong><p>IV insulin continues until DKA resolves: pH ≥ 7.3 and bicarbonate ≥ 18 mmol/L and BHB below 0.6 (or absence of ketones). Afterward it is switched to subcutaneous insulin one to two hours before stopping the IV (and the basal one before that).</p></div><h4>8) Treating brain edema (brain oedema)</h4><ul><li>Elevate the head</li><li>Mechanical ventilation</li><li>Mannitol 20% at the dose and rate per physician's order (calculated by weight)</li><li>Lasix: not routine, per physician's order only</li></ul><div class=\"cs-box cs-info\"><strong>Update</strong><p>Cerebral edema is more common in children and young people, and the most important prevention is not lowering sugar and osmolality quickly. If headache, altered consciousness, or slow pulse appears: report immediately, and the dose is per physician's order.</p></div>[[slot:dis-023-dka-flowchart|Brief DKA management algorithm]]<h4>The first-hour protocol (a simple emergency progression)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Two cannulas and a blood draw</strong><p>Draw blood urea, white blood cell count (WBC), potassium (S.K), and sugar.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>The most important thing: fluids</strong><p>Normal saline one liter (that is two pints = 2×500 mL) over half an hour, then another liter (two pints) over an hour.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Regular insulin (Actrapid) 10 units</strong><p>IM as a first dose when the pump is not available (and the IV infusion of 0.1 unit/kg/hour is currently the best).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Be careful: potassium below 2.5 (in some older references) ≈ 3.3 in modern ones</strong><p>Do not start insulin, delay a little and replace only fluids, because insulin pulls potassium into the cells so it drops very low.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>After an hour: measure sugar and potassium</strong><p>And based on them we start the second step.</p></div></div></div><h4>The second step</h4><ul><li>We continue the saline: the second and third liter (we may add another type of fluid if the dehydration is very severe, by physician's order)</li><li>We continue insulin <b>5 units/hour IM</b> (or an IV infusion by pump)</li><li>We analyze potassium and decide according to the value:</li></ul><table><thead><tr><th>Potassium value (mmol/L)</th><th>Action (old references)</th><th>Modern action</th></tr></thead><tbody><tr><td>More than 5.5</td><td>We do not give potassium; we wait and measure again with the monitor</td><td>More than 5.2: do not add and recheck every two hours</td></tr><tr><td>3.5–5.5</td><td>The patient needs 40 mEq per liter</td><td>3.3–5.2: add 20–30 mEq/liter</td></tr><tr><td>Less than 3.5</td><td>Needs careful specialist care</td><td>Less than 3.3: correct before insulin</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Ask first: has the patient urinated?</strong><p>Before potassium the patient must urinate (pass urine) because the kidneys are what get rid of it. And we always start potassium from <b>the second liter</b> (text: 10 mEq in every pint of normal saline and so on per the order).</p></div><h4>The third step</h4><ul><li>After another hour: sugar and potassium</li><li>We continue saline (we need up to 3 liters), potassium, and insulin</li><li>When the sugar reaches <b>14 mmol/L (about 250 mg/dl)</b>: we change the fluids to <b>10% glucose</b> (a pint over 4 hours): we need about 3 liters</li><li>We measure every hour: BP, PR, RR, SpO₂, and urine output</li></ul><h4>Additional notes</h4><ul><li>The patient did not urinate within 3 hours: place a urinary catheter</li><li>If the patient is febrile: start an antibiotic because infections may be the precipitating factor</li><li>Be careful with fluids in <b>children and young people</b> (risk of brain edema)</li><li>The goal is lowering the sugar 50–75 mg/dl per hour; if faster than that, hypoglycemia/electrolyte shifts and the risk of <b>cerebral edema</b> may occur</li><li>If the potassium test is not available: <b>ECG</b> is a more sensitive test for the potassium level (peaked/flat T)</li><li>Hypokalemia is important and is often not treated properly, and it is among the most important causes of death of a DKA patient</li><li>We return the patient to the subcutaneous insulin dose when he can eat and drink and the biochemistry is normal</li><li>If the patient is a first presentation of diabetes: when converting to subcutaneous insulin we give him <b>two thirds</b> of the regular insulin dose he needed daily to control the sugar during DKA</li></ul><h4>The brief protocol (emergency)</h4><ul><li>The first and most important step: treat dehydration, followed by lowering the sugar. Best: start the fluids then the initial insulin dose then transfer the patient or call the resident</li><li>0.9% saline: a liter (two bottles) over half an hour, then a liter over an hour, then a liter over two hours, then a liter over 4 hours (per the references; the modern one is a liter over the first hour)</li><li>Before insulin: measure potassium because insulin lowers it and you may need KCl with the fluid</li><li>Bolus: Humulin R or Actrapid 0.1 unit/kg IV or IM (example 70 kg = 7 units)</li><li>Maintenance: 0.1 unit/kg/hour IV: 50 units of regular insulin in 50 mL saline (1 mL = 1 unit) given at the calculated number of units per hour (7 units = 7 mL/hour)</li><li>The goal: lowering the sugar 50–100 mg/dl per hour (modern 50–75)</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The modern consensus starts with fluids 15–20 mL/kg in the first hour, and starts insulin after making sure potassium is 3.3 or more. IM insulin is used only when IV/pump is not available. Follow hospital protocol.</p></div>\n<h4>NCLEX pediatric review: DKA and HHNS</h4>[[slot:dis-023-peds-hhns|DKA vs. HHNS — illustration made by the site|/diseases/img/dis-023-peds-hhns.svg]][[slot:dis-023-peds-dka|Order of DKA treatment — illustration made by the site|/diseases/img/dis-023-peds-dka.svg]]<ul><li>A child with nausea/vomiting who is not eating: <b>yes, insulin is given</b> on sick days to prevent DKA because sugar rises with illness</li><li>A child with fever and deep rapid breathing: first measure blood sugar</li><li>Urinalysis: ketones and high sugar, dry skin, weak radial pulse, decreased consciousness: give IV fluids, insulin, potassium</li><li>Hot dry skin, sugar 375, pH 7.28: start normal saline first</li><li>Signs of DKA: ketones in urine and blood, dehydration, acetone odor on the breath</li></ul>\n<h4>Quick review of DKA and HHNS and reassessment monitoring</h4>[[slot:dis-3322-dka-hhns|DKA vs. HHNS — illustration made by the site|/diseases/img/dis-3322-dka-hhns.svg]]<ul><li>DKA with causes: sepsis, illness, stress/surgery, skipping insulin. Signs: dehydration and sugar 250–500+, ketones and Kussmaul, abdominal pain, acidosis pH below 7.35 and high K.</li><li>Treatment: dehydration first (0.9% saline), lower the sugar slowly with IV Regular insulin (subcutaneous later), blood sugar every hour; if it falls to 200 or the ketones end, a dextrose-containing fluid is added; then add potassium (even if normal 3.5–5.0) during insulin.</li><li>IV potassium: start with cardiac monitoring, never push it all at once (it may kill), 10–20 mEq maximum per hour by pump, via a central site and at a slow rate.</li><li>Reassessment: sugar every hour, signs of hydration: stable blood pressure and capillary refill less than 3 seconds, warm skin, urine 30 mL/hour or more, urine specific gravity 1.005–1.030; do not rely on the peripheral pulse, lungs, or pupils.</li><li>Glucose and sick day: a child with nausea who is not eating ← continue insulin (sick days) because glucose is high.</li><li>HHNS: hydration with 0.9% then hypotonic fluid, then only IV Regular insulin.</li><li>The DKA patient dies from low potassium; HHNS from low fluid volume.</li><li>Potassium: high ≥ 5.0: tall T and ST elevation; low below 3.5: flat T, ST depression, U wave.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<p>الـ DKA حالة طارئة وكل ساعة فارقة. دورك ينقذ المريض:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أمّن المجرى والتنفس والدورة</strong><p>ضع المريض على جنبه أو الرأس مرفوع لو واعي، أكسجين لو التشبع منخفض، مراقب قلب (ECG) وتشبع الأكسجين (SpO2). لو الوعي مضطرب: GCS وجهّز مجرى هواء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أول إجراء: خطّين وريديين</strong><p>كانيولا يمين وشمال. اسحب العينات (سكر، كيتونات، غازات، بوتاسيوم/صوديوم، اليوريا والكرياتينين، CBC، مزارع) قبل المحاليل الأولى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>سوائل أولاً</strong><p>ابدأ المحلول الملحي بالسرعة المأمور بها. سجّل الداخل والخارج بدقة (قسطرة بولية لو الحالة تتطلب). المطلوب الداخل = الخارج + 500 سم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الإنسولين الوريدي بأمر وبمضخة</strong><p>تحقق من بوتاسيوم المريض قبل البدء. جهّز المحلول (50 وحدة إنسولين مائي) وعلّم الزجاجة/السرنجة. ما تخلطش مع محاليل تانية. اغسل الخط (Prime) حسب البروتوكول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>البوتاسيوم</strong><p>راجع آخر قيمة. لا تعطي مركّز ولا Push. تابع ECG (موجة T عالية مدببة = ارتفاع، T مسطحة وU = نقص).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>قياس كل ساعة</strong><p>السكر كل ساعة، العلامات الحيوية كل 1–2 ساعة، الوعي، الجفاف، الداخل والخارج. صوديوم وبوتاسيوم كل 2–4 ساعات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>عند هبوط السكر عن حوالي 250–270</strong><p>بلّغ لتحويل المحلول لجلوكوز 5% (مع الاستمرار في الإنسولين) حسب أمر الطبيب. هبوط سكر مفاجئ = خطر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>كشف وعلاج السبب</strong><p>عدوى؟ جلطة؟ فقد جرعة؟ سجّل وبلّغ. تابع الحرارة وأي علامات عدوى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>وقاية المضاعفات</strong><p>Clexan أو Heparin بأمر الطبيب، وعناية بالفم والجلد والقدم، وتغيير الوضع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>الانتقال للإنسولين تحت الجلد والأكل</strong><p>ابدأ بالسوائل ثم شبه الصلب ثم الصلب. ابدأ الإنسولين تحت الجلد قبل إيقاف الوريدي بساعتين. لا توقف الوريدي قبل التأكد من الشفاء.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>ثلاثة أخطاء قاتلة: (1) إنسولين قبل السوائل أو مع بوتاسيوم منخفض، (2) بوتاسيوم مركّز بالوريد بدون تخفيف، (3) نسيان السكر كل ساعة. وعلامات استسقاء المخ (صداع، قيء، نبض بطيء، نعاس بعد التحسن) تبلّغ فوراً.</p></div><table><thead><tr><th>المتابعة</th><th>التكرار</th></tr></thead><tbody><tr><td>العلامات الحيوية (ضغط، نبض، حرارة)</td><td>كل ساعة أو ساعتين</td></tr><tr><td>الجفاف (Hydration) والداخل والخارج</td><td>مستمر</td></tr><tr><td>سكر الدم (RBS)</td><td>كل ساعة</td></tr><tr><td>الصوديوم والبوتاسيوم</td><td>كل 2–4 ساعات</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>توثيق</strong><p>سجّل: السكر، سرعة الإنسولين، نوع وكمية السوائل، بوتاسيوم، الوعي، ECG، وأي تعديل بأمر مين وإمتى.</p></div><div class=\"cs-box cs-tip\"><strong>قائمة الساعة (إضافة)</strong><p>• بعد كل ساعة جدول: BP/PR/RR/SpO₂/بول/سكر. • قبل البوتاسيوم: تأكد من وجود بول. • قبل الإنسولين: اعرف البوتاسيوم. • خلال 3 ساعات بدون بول: القسطرة. • لو مصاب بحمى: بلّغ للمضاد الحيوي. • تغيير السوائل لجلوكوز 10% عند 250 mg/dl بتوجيه الطبيب. • أي صداع أو تشوش أو بطء نبض: استسقاء مخ، بلّغ فوراً.</p></div>",
+   "en": "<p>DKA is an emergency and every hour counts. Your role saves the patient:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Secure airway, breathing, and circulation</strong><p>Place the patient on his side or with the head elevated if conscious, oxygen if saturation is low, a cardiac monitor (ECG) and oxygen saturation (SpO2). If consciousness is disturbed: GCS and prepare an airway.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>First action: two IV lines</strong><p>A cannula on the right and left. Draw samples (sugar, ketones, gases, potassium/sodium, urea and creatinine, CBC, cultures) before the first fluids.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Fluids first</strong><p>Start the saline at the ordered rate. Record intake and output accurately (urinary catheter if the condition requires). The required intake = output + 500 mL.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>IV insulin by order and by pump</strong><p>Check the patient's potassium before starting. Prepare the solution (50 units of regular insulin) and label the bottle/syringe. Do not mix with other fluids. Prime the line per protocol.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Potassium</strong><p>Review the last value. Do not give concentrated or push. Follow the ECG (tall peaked T wave = high, flat T and U = low).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Hourly measurement</strong><p>Sugar every hour, vital signs every 1–2 hours, consciousness, dehydration, intake and output. Sodium and potassium every 2–4 hours.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>When sugar falls below about 250–270</strong><p>Report to switch the fluid to 5% glucose (while continuing insulin) per physician's order. A sudden drop in sugar = danger.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Find and treat the cause</strong><p>Infection? Clot? Missed dose? Record and report. Monitor temperature and any signs of infection.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>Prevent complications</strong><p>Clexan or heparin by physician's order, and care of the mouth, skin, and feet, and repositioning.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>Transition to subcutaneous insulin and eating</strong><p>Start with fluids then semi-solids then solids. Start subcutaneous insulin two hours before stopping the IV. Do not stop the IV before confirming recovery.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Three fatal mistakes: (1) insulin before fluids or with low potassium, (2) concentrated IV potassium without dilution, (3) forgetting the sugar every hour. And signs of brain edema (headache, vomiting, slow pulse, drowsiness after improvement) are reported immediately.</p></div><table><thead><tr><th>Monitoring</th><th>Frequency</th></tr></thead><tbody><tr><td>Vital signs (pressure, pulse, temperature)</td><td>Every hour or two hours</td></tr><tr><td>Hydration and intake and output</td><td>Continuous</td></tr><tr><td>Blood sugar (RBS)</td><td>Every hour</td></tr><tr><td>Sodium and potassium</td><td>Every 2–4 hours</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>Documentation</strong><p>Record: the sugar, the insulin rate, type and amount of fluids, potassium, consciousness, ECG, and any adjustment by whose order and when.</p></div><div class=\"cs-box cs-tip\"><strong>Hourly checklist (addition)</strong><p>• Every hour chart: BP/PR/RR/SpO₂/urine/sugar. • Before potassium: make sure there is urine. • Before insulin: know the potassium. • Within 3 hours without urine: the catheter. • If febrile: report for the antibiotic. • Change the fluid to 10% glucose at 250 mg/dl as directed by the physician. • Any headache, confusion, or slow pulse: brain edema, report immediately.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>سكر أقل من 250 أثناء إنسولين وريدي أو أقل من 70 في أي وقت</li><li>بوتاسيوم أقل من 3.3 أو أعلى من 5.2 أو تغيّر ECG</li><li>تراجع الوعي، صداع شديد، قيء، نبض بطيء (استسقاء مخ)</li><li>ضغط يزداد هبوطاً رغم السوائل أو بول قليل جداً</li><li>تنفس بطيء أو تعب تنفسي</li><li>حرارة أو ارتجاف (عدوى) أو ألم صدر</li><li>ألم بطن جديد أو شديد</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Sugar below 250 during IV insulin or below 70 at any time</li><li>Potassium below 3.3 or above 5.2 or an ECG change</li><li>Decreased consciousness, severe headache, vomiting, slow pulse (brain edema)</li><li>Blood pressure falling further despite fluids or very little urine</li><li>Slow breathing or respiratory fatigue</li><li>Fever or shivering (infection) or chest pain</li><li>New or severe abdominal pain</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<p>للمريض وأهله بعد التحسن:</p><ul><li>لا تتوقف عن الإنسولين حتى لو لم تأكل أو أصبت بنزلة معوية؛ اتصل بالطبيب.</li><li>في المرض (حرارة، قيء، إسهال) اقيس السكر كل 4 ساعات واشرب سوائل.</li><li>اقيس الكيتونات في البول لو السكر أكتر من 250 أو أصابك مرض.</li><li>اعرف علامات الخطر: عطش شديد، كتر تبول، غثيان، ألم بطن، تنفس عميق، ريحة أسيتون، نعاس.</li><li>اتصل بالإسعاف فوراً لو ظهرت العلامات أو لو القيء لا يتوقف.</li><li>خذ الإنسولين في ميعاده وراجع طريقة الحقن.</li><li>خلي دايماً بطاقة تعريف بمرض السكر.</li></ul>",
+   "en": "<p>For the patient and family after improvement:</p><ul><li>Do not stop insulin even if you did not eat or had a stomach bug; call the physician.</li><li>During illness (fever, vomiting, diarrhea) measure sugar every 4 hours and drink fluids.</li><li>Measure urine ketones if sugar is more than 250 or you become ill.</li><li>Know the danger signs: severe thirst, frequent urination, nausea, abdominal pain, deep breathing, acetone smell, drowsiness.</li><li>Call an ambulance immediately if the signs appear or if vomiting does not stop.</li><li>Take insulin on time and review the injection technique.</li><li>Always keep a diabetes ID card.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "DKA = سكر عالي + كيتونات + حموضة، وكله من نقص الإنسولين",
+   "الجفاف أخطر وأول ما يُعالج: خطين وريديين وسوائل",
+   "لا إنسولين قبل التأكد من بوتاسيوم 3.3 فأكتر",
+   "الإنسولين المائي الوريدي = الوزن ÷ 10 وحدة/ساعة، والسكر كل ساعة",
+   "الصوديوم والبوتاسيوم كل 2–4 ساعات والعلامات الحيوية كل 1–2 ساعة",
+   "لا توقف الإنسولين الوريدي قبل بدء الأكل وحقن الإنسولين تحت الجلد بساعتين",
+   "الصداع والقيء ونبض بطيء بعد التحسن: احتمال استسقاء مخ",
+   "الساعة الأولى: لتر ملح خلال نصف ساعة ثم لتر خلال ساعة، ثم سكر وبوتاسيوم؛ والبوتاسيوم لا يبدأ قبل وجود بول",
+   "ألم البطن والقيء في سكري = اعمل سكر وكيتونات قبل ما تقول بطن جراحي",
+   "HHNS: سكر أعلى من 600 بلا كيتونات"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الحماض الكيتوني السكري (Diabetic Ketoacidosis, DKA) طارئ مهدد للحياة بيحصل لمريض السكر (غالباً النوع الأول) لما الإنسولين يقل جداً: الجسم بيحرق الدهون وينتج كيتونات حمضية، والسكر بيعلى جداً، والمريض بيجف ويفقد بوتاسيوم.</p><div class=\"cs-stats\"><div><b>>200</b><span>سكر الدم غالباً (mg/dl)</span></div><div><b>+ / ++ / +++</b><span>الأسيتون في البول</span></div><div><b>6 لتر</b><span>السوائل المتوقعة في أول 24 ساعة</span></div><div><b>كل ساعة</b><span>قياس السكر</span></div></div>[[slot:dis-023-dka-mechanism|كيف تحدث الحموضة الكيتونية؟|/diseases/img/dis-023-dka-mechanism.svg]]<h4>عوامل التهييج (Precipitating factors)</h4><table><thead><tr><th>العامل</th><th>التوضيح</th></tr></thead><tbody><tr><td>نسيان جرعة الإنسولين (Missed insulin dose)</td><td>المريض لم ياخد جرعته</td></tr><tr><td>الضغط النفسي (Stress)</td><td>التوتر والضغط العصبي</td></tr><tr><td>العدوى (Infection)</td><td>عدوى أو ارتفاع حرارة: التهاب شعبي ورئوي ونزلات معوية</td></tr><tr><td>السكتة الدماغية والجلطة القلبية</td><td>Stroke and MI</td></tr><tr><td>سكر لم يُشخَّص بعد (Undiagnosed)</td><td>أول ظهور للمرض</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث (معايير 2024)</strong><p>الإجماع الحديث (ADA / EASD / AACE / JBDS) خفّض عتبة السكر لتشخيص DKA (200 mg/dl بدل 250، وبدون عتبة لمرضى السكر المعروفين، لأن DKA ممكن يحدث بسكر طبيعي خصوصاً مع أدوية SGLT2 مثل Jardiance وForxiga). التشخيص: كيتونات (β-hydroxybutyrate ≥ 3 mmol/L أو أسيتون ++ فأكتر في البول) + pH أقل من 7.3 و/أو bicarbonate أقل من 18 mmol/L. لازم نفحص الكيتونات لأي مريض سكر بغثيان أو قيء أو ألم بطن ولو السكر مش عالي جداً.</p></div>[[slot:dis-023-hourly|مسار DKA بالساعات — رسم من إعداد الموقع|/diseases/img/dis-023-hourly.svg]]<h4>المعايير الكلاسيكية (Cardinal biochemical features)</h4><table><thead><tr><th>القيمة</th><th>المعيار القديم</th><th>الحديث (ADA/JBDS)</th></tr></thead><tbody><tr><td>سكر البلازما</td><td>أكثر من 250 mg/dl</td><td>أكثر من 200 (أو سكري معروف)</td></tr><tr><td>pH الدم الشرياني</td><td>أقل من 7.30</td><td>أقل من 7.3</td></tr><tr><td>بيكربونات الدم</td><td>أقل من 15 mEq/L</td><td>أقل من 18 mmol/L</td></tr><tr><td>كيتونات الدم (Hyperketonemia)</td><td>أكثر من 3 mmol/L</td><td>≥ 3 mmol/L</td></tr><tr><td>كيتونات البول (Ketonuria)</td><td>أكثر من 2+ على الشريط</td><td>++ فأكتر</td></tr></tbody></table>\n<h4>DKA مقابل HHNS: مراجعة نقاط الامتحان</h4>[[slot:dis-023-p118|DKA مقابل HHNS — رسم من إعداد الموقع|/diseases/img/dis-023-p118.svg]]<ul><li>الأسباب (SSS): عدوى، مرض (فيروس معدة/إنفلونزا)، توتر/جراحة، ترك الإنسولين.</li><li><strong>علاج DKA:</strong> الجفاف أولًا بالملح 0.9%، ثم خفض السكر ببطء بفحص كل ساعة، فوق 250 أعطِ Regular وريدي (جرعة تحميل ثم تسريب)، تحت 200 أو عند اختفاء الكيتون: إنسولين تحت الجلد مع نصف الملح + D5W، وأضف بوتاسيوم (حتى لو طبيعي 3.5–5.0) أثناء الإنسولين.</li><li><strong>علاج HHNS:</strong> ملح 0.9% أولًا ثم منخفض التوتر؛ إنسولين Regular وريدي فقط.</li><li>إعادة التقييم: سكر كل ساعة، علامات الترطيب (ضغط ثابت وامتلاء شعيرات أقل من 3 ثوان، جلد دافئ، بول 30 مل/ساعة، كثافة بول 1.005–1.030)؛ لا تعتمد على النبض أو الرئة أو الحدقة.</li><li>البوتاسيوم الوريدي: أول إجراء مونيتور، لا يُدفع دفعة واحدة (قد يقتل)، حد أقصى 10–20 مم/ساعة بمضخة ويفضل وريد مركزي (حسب البروتوكول).</li><li>ECG: بوتاسيوم عالٍ = موجة T مدببة/ارتفاع ST؛ منخفض = T مسطحة، هبوط ST، موجة U.</li><li>سؤال: طفل مريض لا يأكل: يُعطى الإنسولين (جرعات يوم المرض) لأن السكر مرتفع أثناء المرض.</li></ul>\n<h4>DKA مقابل HHNS: مراجعة التمريض الباطني</h4><p>DKA يصيب غالباً النوع 1 والأصغر سناً: عدوى (الأشيع)، مرض كإنفلونزا أو معدة، إجهاد وجراحة، أو ترك الإنسولين. العلامات: جفاف وسكر 250–500+، كيتونات وتنفس كوسماول ورائحة فاكهية، ألم بطن، حماض (pH أقل من 7.35). HHNS للنوع 2 الأكبر سناً: سكر فوق 600، جفاف وتغير وعي، بلا كيتونات ولا حماض، وبداية أبطأ وبوتاسيوم مستقر.</p>[[slot:dis-023-p288|DKA مقابل HHNS — رسم من إعداد الموقع|/diseases/img/dis-023-p288.svg]]<ul><li>ترتيب علاج DKA: ① ماء (0.9% أولاً) ② خفض السكر ببطء وبإنسولين ريجولار وريدي فقط (بولس ثم تنقيط) إذا السكر فوق 250 مع فحص كل ساعة؛ وعند انخفاضه تقريباً دون 200–250 يُضاف دكستروز حسب بروتوكول المستشفى ③ البوتاسيوم أثناء الإنسولين حتى لو طبيعي.</li><li>HHNS: ترطيب بـ0.9% ثم منخفض التوتر، وإنسولين ريجولار وريدي فقط.</li><li>إعادة التقييم كل ساعة: سكر الدم، ضغط مستقر وامتلاء شعيري ≤ 3 ثوانٍ، جلد دافئ، بول ≥ 30 مل/س، ووزن نوعي 1.005–1.030.</li><li>البوتاسيوم الوريدي: مراقب قلب أولاً، لا دفع أبداً، بمضخة وبسرعة قصوى 10–20 mEq/ساعة، موضع آمن وببطء. ارتفاع K: T مدببة وST مرتفع؛ نقصه: T مسطحة وST منخفض وU.</li><li>DKA يموت منها المريض بنقص البوتاسيوم، وHHNS بنقص الحجم.</li></ul><p>مريض نوع 1 يتقيأ ولا يأكل ما زال يحتاج إنسولين (Sick-day) لأن الجلوكوز يرتفع في المرض.</p>"
-    },
-    "causes": {
-      "ar": "<h4>الخطأ الأيضي باختصار</h4><ol><li>نقص إنسولين شديد</li><li>الجلوكوز لا يدخل الخلايا فيرتفع في الدم</li><li>الجسم يحرق الدهون فيُنتج أجسام كيتونية (Acetone) حمضية</li><li>السكر الزائد يخرج في البول مع الماء (Osmotic diuresis) فيحصل جفاف وفقد أملاح</li><li>حموضة الدم ويعوضها الرئتان بتنفس عميق سريع (Kussmaul)</li><li>البوتاسيوم يتحرك من الخلايا ويخرج في البول، فيبدو طبيعي أو عالي في التحليل لكن إجمالي الجسم ناقص جداً</li></ol><h4>أسباب التهييج</h4><ul><li>إهمال جرعة الإنسولين</li><li>ضغط نفسي</li><li>عدوى (رئة، شعب، معدة وأمعاء)</li><li>سكتة أو جلطة قلب</li><li>مرض سكر لم يُشخص بعد</li><li>أدوية (كورتيزون، SGLT2 inhibitors)</li><li>حمل، صدمة، جراحة</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>التاريخ والشكوى</h4><ul><li>المريض سكري معروف (أو أول ظهور)</li><li>كثرة التبول (Polyuria)</li><li>عطش شديد (Thirst)</li><li>ألم بالبطن</li><li>غثيان وقيء</li><li>ضعف عام</li><li>زغللة في النظر</li></ul><h4>الفحص (On examination)</h4><ul><li>جفاف (Dehydration)</li><li>هبوط ضغط (Hypotension)</li><li>تسرع نبض (Tachycardia)</li><li>أطراف باردة</li><li>تنفس كوسماول (عميق وسريع وبدون صعوبة ظاهرة)</li><li>ريحة أسيتون في النفس (زي رائحة التفاح أو طلاء الأظافر)</li><li>غيبوبة (Coma)</li></ul><div class=\"cs-box cs-danger\"><strong>علامات الخطر</strong><p>نعاس، اضطراب وعي، صداع شديد، قيء مستمر، ألم بطن شديد، هبوط ضغط، أو تنفس شديد: هذا طارئ.</p></div>[[slot:dis-023-kussmaul|تنفس كوسماول: رسم أو فيديو توضيحي للتنفس العميق السريع]]<!--e2-23--><h4>ملاحظات عملية في الاستقبال</h4><ul><li>أعراض البطن (مغص، غثيان، قيء) في DKA كتير بتتشخص غلط كـ«بطن جراحي»: أي مريض سكر جاي بوجع بطن وترجيع = اعمل سكر عشوائي وكيتونات</li><li>اسأل المريض أو أهله: عندك سكر؟ جاتلك غيبوبة قبل كده؟ بتاخد إنسولين؟ مطمنش على العلاج؟ بتغيّر مكان الحقنة؟</li><li>أهم فحص: علامات الجفاف (لسان جاف، ثنية جلد بطيئة، عين غايرة)</li><li>الفحوص السريعة: RBG (غالباً أكتر من 250 في المراجع)، أسيتون البول +ve، غازات الدم (حموضة أيضية)</li></ul>"
-    },
-    "tests": {
-      "ar": "<h4>الفحوص السريعة (في نفس اللحظة)</h4><ul><li><b>سكر الدم العشوائي (RBS):</b> غالباً أكتر من 200 mg%</li><li><b>أسيتون البول:</b> إيجابي</li></ul><h4>طريقة شريط الأسيتون</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اجلب عينة بول</strong><p>خلي المريض يجيب عينة بول (أو من القسطرة لو مركبة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اغمس الشريط</strong><p>حط شريط الأسيتون في عينة البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اقرأ اللون</strong><p>لو اتحول للموف = (+). لو بنفسجي = (++). لو أسود/بنفسجي غامق = (+++).</p></div></div></div>[[slot:dis-023-ketone-strip|قراءة شريط الأسيتون في البول|/diseases/img/dis-023-ketone-strip.svg]][[slot:dis-023-ketone-photo|صورة: شريط أسيتون في البول بعد الغمس مع مقياس الألوان]]<h4>الفحوص الروتينية (بعد التعامل مع المريض وتعليق المحاليل ودخوله المستشفى)</h4><ul><li>اليوريا والكرياتينين</li><li>تحليل البول</li><li>أشعة الصدر (CXR)</li><li>تعداد الدم CBC</li><li>بروتين C التفاعلي (CRP)</li><li>الصوديوم والبوتاسيوم (Na and K)</li></ul><div class=\"cs-box cs-info\"><strong>تحديث</strong><p>أضف: غازات الدم أو pH وbicarbonate، الكيتونات في الدم (BHB) لو متاحة، ECG لمراقبة البوتاسيوم، وزراعة دم/بول لو شك في عدوى. تصحيح الصوديوم: Na + 1.6 لكل 100 mg/dl سكر فوق 100.</p></div><!--E16-dka--><h4>تشخيص DKA (ملخص)</h4><ul><li>إكلينيكياً + سكر عشوائي أعلى من 300 مج/دل (حد في بعض المراجع القديمة؛ المعيار الحديث أعلى من 200 مج/دل مع كيتونات وحماض)</li><li>أسيتون في البول إيجابي</li><li>ABG: حماض أيضي (Metabolic acidosis)</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>المشاكل التي نعالجها بالترتيب</h4><ol><li>الجفاف (Dehydration): أهم شيء لأنه الأخطر</li><li>الحموضة (Acidosis)</li><li>نقص البوتاسيوم (Hypokalemia)</li><li>ارتفاع السكر (Hyperglycemia)</li><li>± عدوى (Infection)</li><li>± جلطات (Thrombosis)</li></ol><div class=\"cs-box cs-tip\"><strong>أول إجراء</strong><p>أول حاجة نعملها للمريض: نركّب كانيولا يمين وشمال (خطين وريديين)، ونركّب قسطرة بولية لو الحالة تتطلب ذلك (مراقبة كمية البول).</p></div><h4>1) علاج الجفاف (الكانيولا الأولى)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>محلول ملح 0.9%</strong><p>نركّب 500 سم الآن</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>بعد نص ساعة</strong><p>500 سم</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>بعد ساعة</strong><p>500 سم</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>بعد ساعتين</strong><p>500 سم</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>بعد 3 ساعات</strong><p>500 سم</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>بعد 4 ساعات</strong><p>500 سم</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وهكذا</strong><p>حتى يتحسن الجفاف</p></div></div></div><div class=\"cs-compare\"><ul><li>لازم تاخد بالك: الداخل = الخارج + 500 سم</li><li>عادة المريض يحتاج 6 لترات في أول 24 ساعة</li><li>لو انخفض السكر عن حوالي 250 mg% نستبدل محلول الملح بجلوكوز 5% حتى لا ينخفض السكر أكتر من المستوى المطلوب</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث (السوائل)</strong><p>الإجماع الحديث: 500–1000 مل/ساعة (حوالي 15–20 مل/كجم) في أول ساعة أو ساعتين بملح 0.9% أو محلول متزن (Ringer lactate)، ثم 250–500 مل/ساعة حسب الجفاف والصوديوم. المرضى كبار السن أو فشل القلب أو الكلى: أبطأ وبمراقبة أدق. إضافة دكستروز 5–10% عند هبوط السكر عن حوالي 250 mg/dl (وليس 270) مع استمرار الإنسولين.</p></div><h4>2) علاج ارتفاع السكر (الكانيولا الثانية)</h4><div class=\"cs-compare\"><ul><li>نركّب محلول ملح في الكانيولا التانية</li><li>نضيف إلى المحلول 50 وحدة إنسولين مائي (Actrapid) بمعدل تنقيط 15 نقطة في الدقيقة</li><li>الإنسولين المائي الوريدي: عدد الوحدات في الساعة = الوزن ÷ 10 (يعني 0.1 وحدة/كجم/ساعة)</li><li>نقيس سكر الدم كل ساعة</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث (الإنسولين والبوتاسيوم أولاً)</strong><p>الإجماع الحديث: لا يبدأ الإنسولين لو البوتاسيوم أقل من 3.3 mmol/L؛ يُصحّح أولاً. معدل الإنسولين الثابت 0.1 وحدة/كجم/ساعة (أو 0.05 لو السكر أقل من 250 مع دكستروز). الهدف نزول السكر 50–75 mg/dl في الساعة. لو ما نزلش 50 mg/dl في أول ساعة (مع التأكد من السوائل) زوّد المعدل. استخدم مضخة سرنجة (غالباً 50 وحدة في 50 مل ملح = 1 وحدة/مل) بدل التنقيط بالنقط لو متاح، لأنه أدق.</p></div><h4>3) علاج نقص البوتاسيوم</h4><div class=\"cs-compare\"><ul><li>لا تضيف بوتاسيوم في أول زجاجة محلول ملح (بالكانيولا الأولى) إلا لو البوتاسيوم أقل من 3</li><li>يضاف أمبول بوتاسيوم لكل زجاجة محلول ملح ابتداءً من الزجاجة الثانية</li><li>عدد الأمبولات = (النقص × نصف وزن الجسم) ÷ 10</li><li>النقص (Deficit) = 3.5 − مستوى بوتاسيوم المريض</li></ul></div><div class=\"cs-box cs-pearl\"><strong>مثال</strong><p>مريض وزنه 70 كجم وبوتاسيومه 2.5: النقص = 3.5 − 2.5 = 1. عدد الأمبولات = (1 × 35) ÷ 10 = 3.5 أمبول تقريباً على مدى المحاليل (وبأمر الطبيب).</p></div><div class=\"cs-box cs-warning\"><strong>تحديث (البوتاسيوم)</strong><p>بالإجماع الحديث: بوتاسيوم أقل من 3.3: احجب الإنسولين وأعطِ بوتاسيوم أولاً. بين 3.3 و5.2: أضف 20–30 mEq لكل لتر. أعلى من 5.2: لا تضف وراجع كل ساعتين. لا يُعطى البوتاسيوم أبداً مركّزاً بالوريد (IV push): لازم مخفف، وبمعدل أقصى 10 mEq/ساعة على القسم و20 تحت مونيتور (بروتوكول المستشفى). ومحتوى أمبول البوتاسيوم (mEq) مكتوب على الأمبول: احسب منه.</p></div><h4>4) علاج الحموضة</h4><div class=\"cs-compare\"><ul><li>التصحيح فقط لو pH أقل من 7.1 أو HCO3 أقل من 10</li><li>عدد الأمبولات = النقص ÷ 25</li><li>النقص = 22 − مستوى HCO3 للمريض</li><li>نعمل نص التصحيح (Half correction): نصف عدد الأمبولات على 100 سم رينجر على مدار ساعتين</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث (البيكربونات)</strong><p>لا يُعطى الصوديوم بيكربونات روتينياً. الإجماع الحديث: فقط لو pH أقل من 7.0 (بعضهم 6.9) رغم السوائل، وبمحلول متساوي الأسمولية وببطء، مع متابعة البوتاسيوم. التحسن بالإنسولين والسوائل يعالج الحموضة.</p></div><h4>5) العدوى</h4><table><thead><tr><th>النوع</th><th>الدواء المذكور</th><th>الجرعة</th></tr></thead><tbody><tr><td>Gram +ve</td><td>Unictam (Ampicillin/Sulbactam)</td><td>حسب أمر الطبيب ووظائف الكلى (الجرعة المعتادة 1.5–3 جم كل 6 ساعات)</td></tr><tr><td>Gram –ve</td><td>Cefotax (Cefotaxime)</td><td>500 أو 1000 مجم وريدي، والفاصل حسب أمر الطبيب/بروتوكول المستشفى</td></tr><tr><td>لاهوائيات (Anaerobes)</td><td>Flagyl (Metronidazole) زجاجة</td><td>كل 8 أو 12 ساعة</td></tr><tr><td>حرارة</td><td>Perfalgan (Paracetamol IV) زجاجة</td><td>حسب أمر الطبيب (الحد الأقصى 4 جم/يوم للبالغ فوق 50 كجم، وأقل في أمراض الكبد)</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>ملاحظة</strong><p>المضاد الحيوي لا يُعطى روتينياً؛ بيُعطى لو في عدوى مشتبهة أو مؤكدة، وبعد العينات (زراعة).</p></div><h4>6) الجلطات</h4><div class=\"cs-compare\"><ul><li>Clexan 20 أو 40 أو 60 أو 80 مجم حقنة تحت الجلد مرة أو مرتين يومياً</li><li>نستخدم التركيز على حسب وزن المريض (لو الوزن 60 كجم نستخدم Clexan 60 مجم)</li><li>نتجنب Clexan في القصور الكلوي ونستخدم Cal-Heparin بدلاً منه</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الجرعة الوقائية المعتادة من Enoxaparin 40 مجم مرة يومياً (السمنة والقصور الكلوي: تعديل الجرعة بأمر الطبيب/الصيدلية)؛ الجرعة «بوزن الجسم» هي علاجية وتُعطى بأمر الطبيب. اتبع أمر الطبيب وتحقق من الكلى (eGFR أقل من 30: Heparin).</p></div><h4>7) التغذية والإنسولين</h4><div class=\"cs-compare\"><ul><li>التغذية: نبدأ تدريجياً بالسوائل ثم شبه الصلب ثم الصلب</li><li>الإنسولين الوريدي: يُوقف عندما يبدأ المريض التغذية بالفم</li><li>الإنسولين تحت الجلد: يُبدأ قبل ساعتين من إيقاف مضخة الإنسولين</li></ul></div><div class=\"cs-box cs-info\"><strong>تحديث (متى نوقف الوريدي؟)</strong><p>الإنسولين الوريدي يستمر حتى حل DKA: pH ≥ 7.3 وbicarbonate ≥ 18 mmol/L وBHB أقل من 0.6 (أو غياب الكيتونات). وبعدها يتحول لإنسولين تحت الجلد قبل إيقاف الوريدي بساعة إلى ساعتين (والقاعدي قبلها).</p></div><h4>8) علاج استسقاء المخ (Brain oedema)</h4><ul><li>رفع الرأس</li><li>تنفس صناعي (Mechanical ventilation)</li><li>Mannitol 20% بالجرعة والسرعة حسب أمر الطبيب (تُحسب بالوزن)</li><li>Lasix: غير روتيني، حسب أمر الطبيب فقط</li></ul><div class=\"cs-box cs-info\"><strong>تحديث</strong><p>الوذمة المخية (Cerebral edema) أكتر في الأطفال والشباب، وأهم وقاية هي عدم خفض السكر والأسمولية بسرعة. لو ظهر صداع أو اضطراب وعي أو بطء نبض: بلّغ فوراً، والجرعة بأمر الطبيب.</p></div>[[slot:dis-023-dka-flowchart|خوارزمية معالجة DKA المختصرة]]<h4>بروتوكول الساعة الأولى (تدرّج بسيط للطوارئ)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>كانيولا اثنتين وسحب دم</strong><p>سحب يوريا (Blood urea)، تعداد الدم البيضاء (WBC)، البوتاسيوم (S.K)، وسكر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أهم شيء: السوائل</strong><p>محلول ملح عادي لتر (يعني باينتين = 2×500 مل) على نصف ساعة، ثم لتر آخر (باينتين) خلال ساعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>إنسولين مائي (Actrapid) 10 وحدات</strong><p>في العضل كجرعة أولى عند عدم توفر المضخة (والتسريب الوريدي 0.1 وحدة/كجم/ساعة هو الأفضل حالياً).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>انتبه: البوتاسيوم أقل من 2.5 (في بعض المراجع القديمة) ≈ 3.3 حديثاً</strong><p>لا تبدأ الإنسولين، تأخّر شوية وعوّض بس سوائل، لأن الإنسولين يسحب البوتاسيوم للخلايا فيهبط جداً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>بعد ساعة: قس السكر والبوتاسيوم</strong><p>وبناءً عليهما نبدأ الخطوة الثانية.</p></div></div></div><h4>الخطوة الثانية</h4><ul><li>نكمل محلول الملح: اللتر الثاني والثالث (قد نضيف نوع سوائل آخر لو الجفاف شديد جداً بأمر الطبيب)</li><li>نستمر في الإنسولين <b>5 وحدات/ساعة عضل</b> (أو التسريب الوريدي بالمضخة)</li><li>نحلل البوتاسيوم ونقرر حسب القيمة:</li></ul><table><thead><tr><th>قيمة البوتاسيوم (mmol/L)</th><th>الإجراء (المراجع القديمة)</th><th>الإجراء الحديث</th></tr></thead><tbody><tr><td>أكثر من 5.5</td><td>لا نعطي بوتاسيوم؛ ننتظر ونقيس مرة أخرى مع المونيتور</td><td>أكثر من 5.2: لا تضف وراجع كل ساعتين</td></tr><tr><td>3.5–5.5</td><td>المريض يحتاج 40 mEq لكل لتر</td><td>3.3–5.2: أضف 20–30 mEq/لتر</td></tr><tr><td>أقل من 3.5</td><td>يحتاج اختصاصاً دقيقاً</td><td>أقل من 3.3: صحّح قبل الإنسولين</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>اسأل أولاً: هل بال المريض؟</strong><p>قبل البوتاسيوم لازم المريض يبول (Pass urine) لأن الكلى هي اللي بتتخلص منه. ودايماً نبدأ البوتاسيوم من <b>اللتر الثاني</b> (نص: 10 mEq في كل باينت ملح عادي وهكذا حسب الأمر).</p></div><h4>الخطوة الثالثة</h4><ul><li>بعد ساعة أخرى: سكر وبوتاسيوم</li><li>نكمل الملح (نحتاج حتى 3 لتر) والبوتاسيوم والإنسولين</li><li>لما السكر يوصل <b>14 mmol/L (حوالي 250 mg/dl)</b>: نغيّر السوائل إلى <b>جلوكوز 10%</b> (الباينت على 4 ساعات) — نحتاج نحو 3 لتر</li><li>نقيس كل ساعة: BP، PR، RR، SpO₂، وإخراج البول</li></ul><h4>ملاحظات إضافية</h4><ul><li>المريض ما بال خلال 3 ساعات: ركّب قسطرة بول</li><li>لو المريض محموم: ابدأ مضاد حيوي لأن الالتهابات قد تكون المحرّض (Precipitating factor)</li><li>انتبه للسوائل عند <b>الأطفال والشباب</b> (خطر استسقاء مخ)</li><li>هدف خفض السكر 50–75 mg/dl بالساعة؛ لو أسرع من كده ممكن تحصل هبوط سكر/شوارد وخطر <b>استسقاء المخ (Cerebral edema)</b></li><li>لو تحليل البوتاسيوم مش متاح: <b>ECG</b> اختبار أكثر حساسية لمستوى البوتاسيوم (T مدببة/مسطحة)</li><li>نقص البوتاسيوم (Hypokalemia) مهم وغالباً ما نعالجه صح، وهو من أهم أسباب وفاة مريض DKA</li><li>نرجع المريض لجرعة الإنسولين تحت الجلد لما يقدر يأكل ويشرب والبيوكيمياء طبيعية</li><li>لو المريض أول ظهور للسكر: عند التحويل للإنسولين تحت الجلد نعطيه <b>ثلثي</b> جرعة الإنسولين المائي اللي احتاجها يومياً للسيطرة على السكر أثناء الـDKA</li></ul><h4>البروتوكول المختصر (طوارئ)</h4><ul><li>أول وأهم خطوة: علاج الجفاف، يليها خفض السكر. الأفضل: ابدأ المحاليل ثم الجرعة المبدئية من الإنسولين ثم حوّل المريض أو اطلب النائب</li><li>ملح 0.9%: لتر (زجاجتين) على نصف ساعة، ثم لتر على ساعة، ثم لتر على ساعتين، ثم لتر على 4 ساعات (حسب المراجع؛ الحديث لتر على ساعة أول ساعة)</li><li>قبل الإنسولين: قس البوتاسيوم لأن الإنسولين بيخفضه وقد تحتاج KCl مع المحلول</li><li>Bolus: Humulin R أو Actrapid 0.1 وحدة/كجم وريد أو عضل (مثال 70 كجم = 7 وحدات)</li><li>صيانة: 0.1 وحدة/كجم/ساعة وريد: 50 وحدة إنسولين مائي في 50 سم ملح (1 سم = 1 وحدة) تُعطى بعدد الوحدات المحسوب في الساعة (7 وحدات = 7 سم/ساعة)</li><li>الهدف: خفض السكر 50–100 mg/dl في الساعة (الحديث 50–75)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإجماع الحديث يبدأ بالسوائل 15–20 مل/كجم في أول ساعة، ويبدأ الإنسولين بعد التأكد من البوتاسيوم 3.3 فأكتر. الإنسولين العضل يُستخدم فقط عند عدم توفر الوريد/المضخة. اتبع بروتوكول المستشفى.</p></div>\n<h4>مراجعة NCLEX للأطفال: DKA وHHNS</h4>[[slot:dis-023-peds-hhns|DKA مقابل HHNS — رسم من إعداد الموقع|/diseases/img/dis-023-peds-hhns.svg]][[slot:dis-023-peds-dka|ترتيب علاج DKA — رسم من إعداد الموقع|/diseases/img/dis-023-peds-dka.svg]]<ul><li>طفل غثيان/قيء لا يأكل: <b>نعم يُعطى إنسولين</b> في أيام المرض لمنع DKA لأن السكر يرتفع بالمرض</li><li>طفل حمى وتنفس عميق سريع: أولًا قياس سكر الدم</li><li>تحليل بول: كيتونات وسكر مرتفع، جلد جاف، نبض شعاعي ضعيف، قلة الوعي: إعطاء سوائل وريدية، إنسولين، بوتاسيوم</li><li>جلد ساخن وجاف، سكر 375، pH 7.28: ابدأ المحلول الملحي الطبيعي أولًا</li><li>علامات DKA: كيتونات بالبول والدم، جفاف، رائحة أسيتون بالنفس</li></ul>\n<h4>مراجعة سريعة DKA وHHNS ومراقبة إعادة التقييم</h4>[[slot:dis-3322-dka-hhns|DKA مقابل HHNS — رسم من إعداد الموقع|/diseases/img/dis-3322-dka-hhns.svg]]<ul><li>DKA مع أسباب: Sepsis، المرض، الإجهاد/الجراحة، تخطي الأنسولين. علامات: جفاف وسكر 250–500+، كيتونات وKussmaul، ألم بطن، حموضة pH أقل من 7.35 وارتفاع K.</li><li>العلاج: الجفاف أولاً (محلول ملحي 0.9%)، خفض السكر ببطء بأنسولين Regular وريدياً (تحت الجلد لاحقاً)، سكر الدم كل ساعة؛ إذا نزل إلى 200 أو انتهت الكيتونات يُضاف محلول به دكستروز؛ ثم أضف البوتاسيوم (حتى لو طبيعي 3.5–5.0) أثناء الأنسولين.</li><li>البوتاسيوم الوريدي: ابدأ بمراقبة القلب، لا تدفعه أبداً دفعة (قد يقتل)، 10–20 ميلي مكافئ كحد أقصى في الساعة بمضخة، عبر موضع مركزي وبسرعة بطيئة.</li><li>إعادة التقييم: سكر كل ساعة، علامات ترطيب: ضغط ثابت وعودة الامتلاء الشعري أقل من 3 ثوان، جلد دافئ، بول 30 مل/ساعة أو أكثر، كثافة بول 1.005–1.030؛ لا تعتمد على النبض الطرفي أو الرئة أو الحدقة.</li><li>جلوكوز ويوم المرض: الطفل غثيان لا يأكل ← استمر في الأنسولين (أيام المرض) لأن الجلوكوز مرتفع.</li><li>HHNS: ترطيب 0.9% ثم محلول منخفض التوتر، ثم أنسولين Regular فقط وريدياً.</li><li>DKA يموت المريض من نقص البوتاسيوم؛ HHNS من نقص حجم السوائل.</li><li>البوتاسيوم: مرتفع ≥ 5.0: T عالية ورفع ST؛ منخفض أقل من 3.5: T مسطحة، هبوط ST، موجة U.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<p>الـ DKA حالة طارئة وكل ساعة فارقة. دورك ينقذ المريض:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أمّن المجرى والتنفس والدورة</strong><p>ضع المريض على جنبه أو الرأس مرفوع لو واعي، أكسجين لو التشبع منخفض، مراقب قلب (ECG) وتشبع الأكسجين (SpO2). لو الوعي مضطرب: GCS وجهّز مجرى هواء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أول إجراء: خطّين وريديين</strong><p>كانيولا يمين وشمال. اسحب العينات (سكر، كيتونات، غازات، بوتاسيوم/صوديوم، اليوريا والكرياتينين، CBC، مزارع) قبل المحاليل الأولى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>سوائل أولاً</strong><p>ابدأ المحلول الملحي بالسرعة المأمور بها. سجّل الداخل والخارج بدقة (قسطرة بولية لو الحالة تتطلب). المطلوب الداخل = الخارج + 500 سم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الإنسولين الوريدي بأمر وبمضخة</strong><p>تحقق من بوتاسيوم المريض قبل البدء. جهّز المحلول (50 وحدة إنسولين مائي) وعلّم الزجاجة/السرنجة. ما تخلطش مع محاليل تانية. اغسل الخط (Prime) حسب البروتوكول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>البوتاسيوم</strong><p>راجع آخر قيمة. لا تعطي مركّز ولا Push. تابع ECG (موجة T عالية مدببة = ارتفاع، T مسطحة وU = نقص).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>قياس كل ساعة</strong><p>السكر كل ساعة، العلامات الحيوية كل 1–2 ساعة، الوعي، الجفاف، الداخل والخارج. صوديوم وبوتاسيوم كل 2–4 ساعات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>عند هبوط السكر عن حوالي 250–270</strong><p>بلّغ لتحويل المحلول لجلوكوز 5% (مع الاستمرار في الإنسولين) حسب أمر الطبيب. هبوط سكر مفاجئ = خطر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>كشف وعلاج السبب</strong><p>عدوى؟ جلطة؟ فقد جرعة؟ سجّل وبلّغ. تابع الحرارة وأي علامات عدوى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>وقاية المضاعفات</strong><p>Clexan أو Heparin بأمر الطبيب، وعناية بالفم والجلد والقدم، وتغيير الوضع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>الانتقال للإنسولين تحت الجلد والأكل</strong><p>ابدأ بالسوائل ثم شبه الصلب ثم الصلب. ابدأ الإنسولين تحت الجلد قبل إيقاف الوريدي بساعتين. لا توقف الوريدي قبل التأكد من الشفاء.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>ثلاثة أخطاء قاتلة: (1) إنسولين قبل السوائل أو مع بوتاسيوم منخفض، (2) بوتاسيوم مركّز بالوريد بدون تخفيف، (3) نسيان السكر كل ساعة. وعلامات استسقاء المخ (صداع، قيء، نبض بطيء، نعاس بعد التحسن) تبلّغ فوراً.</p></div><table><thead><tr><th>المتابعة</th><th>التكرار</th></tr></thead><tbody><tr><td>العلامات الحيوية (ضغط، نبض، حرارة)</td><td>كل ساعة أو ساعتين</td></tr><tr><td>الجفاف (Hydration) والداخل والخارج</td><td>مستمر</td></tr><tr><td>سكر الدم (RBS)</td><td>كل ساعة</td></tr><tr><td>الصوديوم والبوتاسيوم</td><td>كل 2–4 ساعات</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>توثيق</strong><p>سجّل: السكر، سرعة الإنسولين، نوع وكمية السوائل، بوتاسيوم، الوعي، ECG، وأي تعديل بأمر مين وإمتى.</p></div><div class=\"cs-box cs-tip\"><strong>قائمة الساعة (إضافة)</strong><p>• بعد كل ساعة جدول: BP/PR/RR/SpO₂/بول/سكر. • قبل البوتاسيوم: تأكد من وجود بول. • قبل الإنسولين: اعرف البوتاسيوم. • خلال 3 ساعات بدون بول: القسطرة. • لو مصاب بحمى: بلّغ للمضاد الحيوي. • تغيير السوائل لجلوكوز 10% عند 250 mg/dl بتوجيه الطبيب. • أي صداع أو تشوش أو بطء نبض: استسقاء مخ، بلّغ فوراً.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>سكر أقل من 250 أثناء إنسولين وريدي أو أقل من 70 في أي وقت</li><li>بوتاسيوم أقل من 3.3 أو أعلى من 5.2 أو تغيّر ECG</li><li>تراجع الوعي، صداع شديد، قيء، نبض بطيء (استسقاء مخ)</li><li>ضغط يزداد هبوطاً رغم السوائل أو بول قليل جداً</li><li>تنفس بطيء أو تعب تنفسي</li><li>حرارة أو ارتجاف (عدوى) أو ألم صدر</li><li>ألم بطن جديد أو شديد</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<p>للمريض وأهله بعد التحسن:</p><ul><li>لا تتوقف عن الإنسولين حتى لو لم تأكل أو أصبت بنزلة معوية؛ اتصل بالطبيب.</li><li>في المرض (حرارة، قيء، إسهال) اقيس السكر كل 4 ساعات واشرب سوائل.</li><li>اقيس الكيتونات في البول لو السكر أكتر من 250 أو أصابك مرض.</li><li>اعرف علامات الخطر: عطش شديد، كتر تبول، غثيان، ألم بطن، تنفس عميق، ريحة أسيتون، نعاس.</li><li>اتصل بالإسعاف فوراً لو ظهرت العلامات أو لو القيء لا يتوقف.</li><li>خذ الإنسولين في ميعاده وراجع طريقة الحقن.</li><li>خلي دايماً بطاقة تعريف بمرض السكر.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "DKA = سكر عالي + كيتونات + حموضة، وكله من نقص الإنسولين",
-      "الجفاف أخطر وأول ما يُعالج: خطين وريديين وسوائل",
-      "لا إنسولين قبل التأكد من بوتاسيوم 3.3 فأكتر",
-      "الإنسولين المائي الوريدي = الوزن ÷ 10 وحدة/ساعة، والسكر كل ساعة",
-      "الصوديوم والبوتاسيوم كل 2–4 ساعات والعلامات الحيوية كل 1–2 ساعة",
-      "لا توقف الإنسولين الوريدي قبل بدء الأكل وحقن الإنسولين تحت الجلد بساعتين",
-      "الصداع والقيء ونبض بطيء بعد التحسن: احتمال استسقاء مخ",
-      "الساعة الأولى: لتر ملح خلال نصف ساعة ثم لتر خلال ساعة، ثم سكر وبوتاسيوم؛ والبوتاسيوم لا يبدأ قبل وجود بول",
-      "ألم البطن والقيء في سكري = اعمل سكر وكيتونات قبل ما تقول بطن جراحي",
-      "HHNS: سكر أعلى من 600 بلا كيتونات"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول إجراء لمريض DKA؟"
-      },
-      "options": [
-        {
-          "ar": "إنسولين فقط"
-        },
-        {
-          "ar": "سوائل وريدية وخطين وريديين"
-        },
-        {
-          "ar": "بيكربونات"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الجفاف أخطر وأول ما يُعالج."
-      }
-    },
-    {
-      "q": {
-        "ar": "بوتاسيوم 2.8 قبل بدء الإنسولين. التصرف الصحيح؟"
-      },
-      "options": [
-        {
-          "ar": "نبدأ الإنسولين فوراً"
-        },
-        {
-          "ar": "نصحّح البوتاسيوم أولاً بأمر الطبيب"
-        },
-        {
-          "ar": "نتجاهل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الإنسولين بيدخل البوتاسيوم للخلايا ويسبب هبوط خطير؛ نصحح أولاً."
-      }
-    },
-    {
-      "q": {
-        "ar": "كم مرة نقيس السكر أثناء الإنسولين الوريدي؟"
-      },
-      "options": [
-        {
-          "ar": "كل 6 ساعات"
-        },
-        {
-          "ar": "كل ساعة"
-        },
-        {
-          "ar": "مرة يومياً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "السكر كل ساعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "متى يُعطى بيكربونات الصوديوم؟"
-      },
-      "options": [
-        {
-          "ar": "دايماً"
-        },
-        {
-          "ar": "فقط لو pH شديد الانخفاض (أقل من 7.0)"
-        },
-        {
-          "ar": "مع كل زجاجة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التصحيح محدود في الحموضة الشديدة جداً."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد التحسن ظهر صداع وقيء ونبض بطيء. الاشتباه؟"
-      },
-      "options": [
-        {
-          "ar": "استسقاء مخ"
-        },
-        {
-          "ar": "جفاف"
-        },
-        {
-          "ar": "عدوى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "من مضاعفات DKA ويتطلب تبليغ فوري."
-      }
-    },
-    {
-      "q": {
-        "ar": "لون شريط الأسيتون الأسود/البنفسجي الغامق يعني؟"
-      },
-      "options": [
-        {
-          "ar": "(+)"
-        },
-        {
-          "ar": "(++)"
-        },
-        {
-          "ar": "(+++)"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "الأعلى تركيزاً."
-      }
-    },
-    {
-      "q": {
-        "ar": "ماذا نسأل المريض قبل بدء البوتاسيوم في DKA؟"
-      },
-      "options": [
-        {
-          "ar": "هل تناول إفطاراً؟"
-        },
-        {
-          "ar": "هل بال (يوجد بول)؟"
-        },
-        {
-          "ar": "هل ينام جيداً؟"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "البوتاسيوم يُطرح بالكلى، فلا نعطيه مع انقطاع البول."
-      }
-    },
-    {
-      "q": {
-        "ar": "عند وصول السكر إلى حوالي 250 mg/dl (14 mmol/L)؟"
-      },
-      "options": [
-        {
-          "ar": "نوقف الإنسولين"
-        },
-        {
-          "ar": "نغيّر السوائل إلى جلوكوز 10% مع استمرار الإنسولين"
-        },
-        {
-          "ar": "نزيد الملح"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "نمنع الهبوط ونكمل علاج الكيتونات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول علاج في DKA:"
-      },
-      "options": [
-        {
-          "ar": "ملح 0.9% للجفاف"
-        },
-        {
-          "ar": "بوتاسيوم دفعة"
-        },
-        {
-          "ar": "إنسولين تحت الجلد فقط"
-        },
-        {
-          "ar": "سكر وريدي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الجفاف أخطر وأول ما يعالج."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما يقتل مريض HHNS غالبًا:"
-      },
-      "options": [
-        {
-          "ar": "نقص الحجم"
-        },
-        {
-          "ar": "نقص البوتاسيوم"
-        },
-        {
-          "ar": "الحمى"
-        },
-        {
-          "ar": "النزف"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الجفاف الشديد."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة لـ DKA وليست HHNS؟"
-      },
-      "options": [
-        {
-          "ar": "رائحة فواكه وتنفس كوسماول"
-        },
-        {
-          "ar": "سكر أعلى من 600"
-        },
-        {
-          "ar": "لا كيتونات"
-        },
-        {
-          "ar": "تغير وعي دون حموضة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الكيتونات والحموضة مميزة لـ DKA."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول تدخل في DKA؟"
-      },
-      "options": [
-        {
-          "ar": "محلول ملحي 0.9%"
-        },
-        {
-          "ar": "إنسولين فقط"
-        },
-        {
-          "ar": "بوتاسيوم فقط"
-        },
-        {
-          "ar": "سكر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الجفاف أولًا: D في DKA."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل DKA: بوتاسيوم 4.0. هل يُضاف بوتاسيوم؟"
-      },
-      "options": [
-        {
-          "ar": "نعم أثناء الإنسولين الوريدي"
-        },
-        {
-          "ar": "لا"
-        },
-        {
-          "ar": "فقط إذا أقل من 2"
-        },
-        {
-          "ar": "فقط بالفم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإنسولين يُدخل البوتاسيوم للخلايا فينخفض."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول تدخل في DKA بعد التقييم؟"
-      },
-      "options": [
-        {
-          "ar": "إنسولين فقط"
-        },
-        {
-          "ar": "سوائل 0.9% للجفاف"
-        },
-        {
-          "ar": "دكستروز"
-        },
-        {
-          "ar": "مدرات"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "علاج الجفاف أولاً ثم الإنسولين والبوتاسيوم."
-      }
-    },
-    {
-      "q": {
-        "ar": "كيف يُعطى البوتاسيوم الوريدي؟"
-      },
-      "options": [
-        {
-          "ar": "دفعة سريعة"
-        },
-        {
-          "ar": "بمضخة ببطء مع مراقبة القلب"
-        },
-        {
-          "ar": "بالعضل"
-        },
-        {
-          "ar": "بدون مراقبة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الدفع السريع قد يقتل؛ يُعطى ببطء وتحت مراقبة قلب."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مما يلي يميز HHNS؟"
-      },
-      "options": [
-        {
-          "ar": "رائحة فاكهية"
-        },
-        {
-          "ar": "لا كيتونات ولا حماض وسكر عال جداً"
-        },
-        {
-          "ar": "ألم بطن"
-        },
-        {
-          "ar": "تنفس كوسماول"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "HHNS بلا كيتونات لأن بقاء بعض الإنسولين يمنع الحماض."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نقطة تفرّق HHNS عن DKA؟"
-      },
-      "options": [
-        {
-          "ar": "لا كيتونات ولا حموضة"
-        },
-        {
-          "ar": "نفَس فاكهي"
-        },
-        {
-          "ar": "ألم بطن"
-        },
-        {
-          "ar": "pH أقل من 7.35"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "HHNS: لا كيتونات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول علاج في DKA؟"
-      },
-      "options": [
-        {
-          "ar": "إعطاء سوائل 0.9%"
-        },
-        {
-          "ar": "أنسولين فقط"
-        },
-        {
-          "ar": "بوتاسيوم فقط"
-        },
-        {
-          "ar": "قطع السوائل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الجفاف أولاً."
-      }
-    },
-    {
-      "q": {
-        "ar": "قاعدة البوتاسيوم الوريدي؟"
-      },
-      "options": [
-        {
-          "ar": "دفعة سريعة"
-        },
-        {
-          "ar": "بمضخة ببطء مع مراقبة القلب"
-        },
-        {
-          "ar": "عضلياً"
-        },
-        {
-          "ar": "لا يعطى أبداً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الدفع السريع قد يقتل."
-      }
-    },
-    {
-      "q": {
-        "ar": "نوع الأنسولين الوريدي؟"
-      },
-      "options": [
-        {
-          "ar": "Regular فقط"
-        },
-        {
-          "ar": "NPH"
-        },
-        {
-          "ar": "Glargine"
-        },
-        {
-          "ar": "أي نوع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الوحيد الذي يعطى وريدياً."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ADA/EASD Consensus Report: Hyperglycaemic Crises in Adults with Diabetes (Diabetes Care/Diabetologia 2024)"
-    },
-    {
-      "title": "JBDS Management of Diabetic Ketoacidosis in Adults"
-    },
-    {
-      "title": "ADA Standards of Care: Diabetes Care in the Hospital"
-    },
-    {
-      "title": "StatPearls: Diabetic Ketoacidosis"
-    },
-    {
-      "title": "ISPAD Clinical Practice Consensus Guidelines: DKA — ملخص"
-    }
+  "en": [
+   "DKA = high sugar + ketones + acidosis, all from insulin deficiency",
+   "Dehydration is the most dangerous and treated first: two IV lines and fluids",
+   "No insulin before making sure potassium is 3.3 or more",
+   "IV regular insulin = weight ÷ 10 units/hour, and sugar every hour",
+   "Sodium and potassium every 2–4 hours and vital signs every 1–2 hours",
+   "Do not stop IV insulin before eating starts and subcutaneous insulin is injected two hours earlier",
+   "Headache, vomiting, and slow pulse after improvement: possible brain edema",
+   "First hour: a liter of saline over half an hour then a liter over an hour, then sugar and potassium; and potassium does not start before there is urine",
+   "Abdominal pain and vomiting in a diabetic = check sugar and ketones before saying surgical abdomen",
+   "HHNS: sugar above 600 without ketones"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول إجراء لمريض DKA؟",
+    "en": "The first action for a DKA patient?"
+   },
+   "options": [
+    {
+     "ar": "إنسولين فقط",
+     "en": "Insulin only"
+    },
+    {
+     "ar": "سوائل وريدية وخطين وريديين",
+     "en": "IV fluids and two IV lines"
+    },
+    {
+     "ar": "بيكربونات",
+     "en": "Bicarbonate"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الجفاف أخطر وأول ما يُعالج.",
+    "en": "Dehydration is the most dangerous and is treated first."
+   }
+  },
+  {
+   "q": {
+    "ar": "بوتاسيوم 2.8 قبل بدء الإنسولين. التصرف الصحيح؟",
+    "en": "Potassium 2.8 before starting insulin. The correct action?"
+   },
+   "options": [
+    {
+     "ar": "نبدأ الإنسولين فوراً",
+     "en": "Start insulin immediately"
+    },
+    {
+     "ar": "نصحّح البوتاسيوم أولاً بأمر الطبيب",
+     "en": "Correct the potassium first by physician's order"
+    },
+    {
+     "ar": "نتجاهل",
+     "en": "Ignore it"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الإنسولين بيدخل البوتاسيوم للخلايا ويسبب هبوط خطير؛ نصحح أولاً.",
+    "en": "Insulin moves potassium into the cells and causes a dangerous drop; correct first."
+   }
+  },
+  {
+   "q": {
+    "ar": "كم مرة نقيس السكر أثناء الإنسولين الوريدي؟",
+    "en": "How often do we measure sugar during IV insulin?"
+   },
+   "options": [
+    {
+     "ar": "كل 6 ساعات",
+     "en": "Every 6 hours"
+    },
+    {
+     "ar": "كل ساعة",
+     "en": "Every hour"
+    },
+    {
+     "ar": "مرة يومياً",
+     "en": "Once daily"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "السكر كل ساعة.",
+    "en": "Sugar every hour."
+   }
+  },
+  {
+   "q": {
+    "ar": "متى يُعطى بيكربونات الصوديوم؟",
+    "en": "When is sodium bicarbonate given?"
+   },
+   "options": [
+    {
+     "ar": "دايماً",
+     "en": "Always"
+    },
+    {
+     "ar": "فقط لو pH شديد الانخفاض (أقل من 7.0)",
+     "en": "Only if pH is extremely low (below 7.0)"
+    },
+    {
+     "ar": "مع كل زجاجة",
+     "en": "With every bottle"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التصحيح محدود في الحموضة الشديدة جداً.",
+    "en": "Correction is limited to very severe acidosis."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد التحسن ظهر صداع وقيء ونبض بطيء. الاشتباه؟",
+    "en": "After improvement, headache, vomiting, and slow pulse appeared. The suspicion?"
+   },
+   "options": [
+    {
+     "ar": "استسقاء مخ",
+     "en": "Brain edema"
+    },
+    {
+     "ar": "جفاف",
+     "en": "Dehydration"
+    },
+    {
+     "ar": "عدوى",
+     "en": "Infection"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "من مضاعفات DKA ويتطلب تبليغ فوري.",
+    "en": "A complication of DKA that requires immediate reporting."
+   }
+  },
+  {
+   "q": {
+    "ar": "لون شريط الأسيتون الأسود/البنفسجي الغامق يعني؟",
+    "en": "A black/dark purple acetone strip color means?"
+   },
+   "options": [
+    {
+     "ar": "(+)",
+     "en": "(+)"
+    },
+    {
+     "ar": "(++)",
+     "en": "(++)"
+    },
+    {
+     "ar": "(+++)",
+     "en": "(+++)"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "الأعلى تركيزاً.",
+    "en": "The highest concentration."
+   }
+  },
+  {
+   "q": {
+    "ar": "ماذا نسأل المريض قبل بدء البوتاسيوم في DKA؟",
+    "en": "What do we ask the patient before starting potassium in DKA?"
+   },
+   "options": [
+    {
+     "ar": "هل تناول إفطاراً؟",
+     "en": "Did he eat breakfast?"
+    },
+    {
+     "ar": "هل بال (يوجد بول)؟",
+     "en": "Has he urinated (is there urine)?"
+    },
+    {
+     "ar": "هل ينام جيداً؟",
+     "en": "Does he sleep well?"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "البوتاسيوم يُطرح بالكلى، فلا نعطيه مع انقطاع البول.",
+    "en": "Potassium is excreted by the kidneys, so we do not give it with absent urine."
+   }
+  },
+  {
+   "q": {
+    "ar": "عند وصول السكر إلى حوالي 250 mg/dl (14 mmol/L)؟",
+    "en": "When the sugar reaches about 250 mg/dl (14 mmol/L)?"
+   },
+   "options": [
+    {
+     "ar": "نوقف الإنسولين",
+     "en": "We stop insulin"
+    },
+    {
+     "ar": "نغيّر السوائل إلى جلوكوز 10% مع استمرار الإنسولين",
+     "en": "We change the fluids to 10% glucose while continuing insulin"
+    },
+    {
+     "ar": "نزيد الملح",
+     "en": "We increase the saline"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "نمنع الهبوط ونكمل علاج الكيتونات.",
+    "en": "We prevent the drop and continue treating the ketones."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول علاج في DKA:",
+    "en": "The first treatment in DKA:"
+   },
+   "options": [
+    {
+     "ar": "ملح 0.9% للجفاف",
+     "en": "0.9% saline for dehydration"
+    },
+    {
+     "ar": "بوتاسيوم دفعة",
+     "en": "Potassium push"
+    },
+    {
+     "ar": "إنسولين تحت الجلد فقط",
+     "en": "Subcutaneous insulin only"
+    },
+    {
+     "ar": "سكر وريدي",
+     "en": "IV sugar"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الجفاف أخطر وأول ما يعالج.",
+    "en": "Dehydration is the most dangerous and is treated first."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما يقتل مريض HHNS غالبًا:",
+    "en": "What usually kills an HHNS patient:"
+   },
+   "options": [
+    {
+     "ar": "نقص الحجم",
+     "en": "Low volume"
+    },
+    {
+     "ar": "نقص البوتاسيوم",
+     "en": "Low potassium"
+    },
+    {
+     "ar": "الحمى",
+     "en": "Fever"
+    },
+    {
+     "ar": "النزف",
+     "en": "Bleeding"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الجفاف الشديد.",
+    "en": "Severe dehydration."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة لـ DKA وليست HHNS؟",
+    "en": "Which sign is of DKA and not HHNS?"
+   },
+   "options": [
+    {
+     "ar": "رائحة فواكه وتنفس كوسماول",
+     "en": "Fruity odor and Kussmaul breathing"
+    },
+    {
+     "ar": "سكر أعلى من 600",
+     "en": "Sugar above 600"
+    },
+    {
+     "ar": "لا كيتونات",
+     "en": "No ketones"
+    },
+    {
+     "ar": "تغير وعي دون حموضة",
+     "en": "Altered consciousness without acidosis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الكيتونات والحموضة مميزة لـ DKA.",
+    "en": "Ketones and acidosis are characteristic of DKA."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول تدخل في DKA؟",
+    "en": "The first intervention in DKA?"
+   },
+   "options": [
+    {
+     "ar": "محلول ملحي 0.9%",
+     "en": "0.9% saline solution"
+    },
+    {
+     "ar": "إنسولين فقط",
+     "en": "Insulin only"
+    },
+    {
+     "ar": "بوتاسيوم فقط",
+     "en": "Potassium only"
+    },
+    {
+     "ar": "سكر",
+     "en": "Sugar"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الجفاف أولًا: D في DKA.",
+    "en": "Dehydration first: the D in DKA."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل DKA: بوتاسيوم 4.0. هل يُضاف بوتاسيوم؟",
+    "en": "A DKA child: potassium 4.0. Is potassium added?"
+   },
+   "options": [
+    {
+     "ar": "نعم أثناء الإنسولين الوريدي",
+     "en": "Yes, during IV insulin"
+    },
+    {
+     "ar": "لا",
+     "en": "No"
+    },
+    {
+     "ar": "فقط إذا أقل من 2",
+     "en": "Only if less than 2"
+    },
+    {
+     "ar": "فقط بالفم",
+     "en": "Only orally"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإنسولين يُدخل البوتاسيوم للخلايا فينخفض.",
+    "en": "Insulin moves potassium into the cells so it drops."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول تدخل في DKA بعد التقييم؟",
+    "en": "The first intervention in DKA after assessment?"
+   },
+   "options": [
+    {
+     "ar": "إنسولين فقط",
+     "en": "Insulin only"
+    },
+    {
+     "ar": "سوائل 0.9% للجفاف",
+     "en": "0.9% fluids for dehydration"
+    },
+    {
+     "ar": "دكستروز",
+     "en": "Dextrose"
+    },
+    {
+     "ar": "مدرات",
+     "en": "Diuretics"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "علاج الجفاف أولاً ثم الإنسولين والبوتاسيوم.",
+    "en": "Treat dehydration first then insulin and potassium."
+   }
+  },
+  {
+   "q": {
+    "ar": "كيف يُعطى البوتاسيوم الوريدي؟",
+    "en": "How is IV potassium given?"
+   },
+   "options": [
+    {
+     "ar": "دفعة سريعة",
+     "en": "Rapid push"
+    },
+    {
+     "ar": "بمضخة ببطء مع مراقبة القلب",
+     "en": "By pump slowly with cardiac monitoring"
+    },
+    {
+     "ar": "بالعضل",
+     "en": "Intramuscularly"
+    },
+    {
+     "ar": "بدون مراقبة",
+     "en": "Without monitoring"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الدفع السريع قد يقتل؛ يُعطى ببطء وتحت مراقبة قلب.",
+    "en": "A rapid push may kill; it is given slowly and under cardiac monitoring."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مما يلي يميز HHNS؟",
+    "en": "Which of the following characterizes HHNS?"
+   },
+   "options": [
+    {
+     "ar": "رائحة فاكهية",
+     "en": "Fruity odor"
+    },
+    {
+     "ar": "لا كيتونات ولا حماض وسكر عال جداً",
+     "en": "No ketones and no acidosis and very high sugar"
+    },
+    {
+     "ar": "ألم بطن",
+     "en": "Abdominal pain"
+    },
+    {
+     "ar": "تنفس كوسماول",
+     "en": "Kussmaul breathing"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "HHNS بلا كيتونات لأن بقاء بعض الإنسولين يمنع الحماض.",
+    "en": "HHNS has no ketones because some remaining insulin prevents acidosis."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نقطة تفرّق HHNS عن DKA؟",
+    "en": "Which point distinguishes HHNS from DKA?"
+   },
+   "options": [
+    {
+     "ar": "لا كيتونات ولا حموضة",
+     "en": "No ketones and no acidosis"
+    },
+    {
+     "ar": "نفَس فاكهي",
+     "en": "Fruity breath"
+    },
+    {
+     "ar": "ألم بطن",
+     "en": "Abdominal pain"
+    },
+    {
+     "ar": "pH أقل من 7.35",
+     "en": "pH below 7.35"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "HHNS: لا كيتونات.",
+    "en": "HHNS: no ketones."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول علاج في DKA؟",
+    "en": "The first treatment in DKA?"
+   },
+   "options": [
+    {
+     "ar": "إعطاء سوائل 0.9%",
+     "en": "Giving 0.9% fluids"
+    },
+    {
+     "ar": "أنسولين فقط",
+     "en": "Insulin only"
+    },
+    {
+     "ar": "بوتاسيوم فقط",
+     "en": "Potassium only"
+    },
+    {
+     "ar": "قطع السوائل",
+     "en": "Stopping fluids"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الجفاف أولاً.",
+    "en": "Dehydration first."
+   }
+  },
+  {
+   "q": {
+    "ar": "قاعدة البوتاسيوم الوريدي؟",
+    "en": "The rule for IV potassium?"
+   },
+   "options": [
+    {
+     "ar": "دفعة سريعة",
+     "en": "Rapid push"
+    },
+    {
+     "ar": "بمضخة ببطء مع مراقبة القلب",
+     "en": "By pump slowly with cardiac monitoring"
+    },
+    {
+     "ar": "عضلياً",
+     "en": "Intramuscularly"
+    },
+    {
+     "ar": "لا يعطى أبداً",
+     "en": "Never given"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الدفع السريع قد يقتل.",
+    "en": "A rapid push may kill."
+   }
+  },
+  {
+   "q": {
+    "ar": "نوع الأنسولين الوريدي؟",
+    "en": "The type of IV insulin?"
+   },
+   "options": [
+    {
+     "ar": "Regular فقط",
+     "en": "Regular only"
+    },
+    {
+     "ar": "NPH",
+     "en": "NPH"
+    },
+    {
+     "ar": "Glargine",
+     "en": "Glargine"
+    },
+    {
+     "ar": "أي نوع",
+     "en": "Any type"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الوحيد الذي يعطى وريدياً.",
+    "en": "The only one given intravenously."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ADA/EASD Consensus Report: Hyperglycaemic Crises in Adults with Diabetes (Diabetes Care/Diabetologia 2024)"
+  },
+  {
+   "title": "JBDS Management of Diabetic Ketoacidosis in Adults"
+  },
+  {
+   "title": "ADA Standards of Care: Diabetes Care in the Hospital"
+  },
+  {
+   "title": "StatPearls: Diabetic Ketoacidosis"
+  },
+  {
+   "title": "ISPAD Clinical Practice Consensus Guidelines: DKA — ملخص"
+  }
+ ]
 }
