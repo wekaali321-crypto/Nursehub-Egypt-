@@ -1,152 +1,192 @@
 {
-  "id": "dis-3104",
-  "num": 3104,
-  "system": "other",
-  "icon": "🩸",
-  "level": 2,
-  "target": "fundamentals",
-  "title": {
-    "ar": "تركيب الوريدي الطرفي (الكانيولا) ومضاعفاته",
-    "en": "Peripheral IV Insertion & Complications"
+ "id": "dis-3104",
+ "num": 3104,
+ "system": "other",
+ "icon": "🩸",
+ "level": 2,
+ "target": "fundamentals",
+ "title": {
+  "ar": "تركيب الوريدي الطرفي (الكانيولا) ومضاعفاته",
+  "en": "Peripheral IV Insertion & Complications"
+ },
+ "teaser": {
+  "ar": "خطوات تركيب القنية الوريدية وتقييم الأوردة وتغيير الأنابيب وتوثيقها، والتهاب الوريد والتسرب والانصمام الهوائي وتسرب الأدوية المؤذية.",
+  "en": "Steps for inserting an IV cannula, assessing veins, changing tubing and documenting it, and phlebitis, infiltration, air embolism, and leakage of harmful drugs."
+ },
+ "chips": [
+  {
+   "ar": "خطوات التركيب",
+   "en": "Insertion steps"
   },
-  "teaser": {
-    "ar": "خطوات تركيب القنية الوريدية وتقييم الأوردة وتغيير الأنابيب وتوثيقها، والتهاب الوريد والتسرب والانصمام الهوائي وتسرب الأدوية المؤذية."
+  {
+   "ar": "تقييم الموضع",
+   "en": "Site assessment"
   },
-  "chips": [
-    {
-      "ar": "خطوات التركيب"
-    },
-    {
-      "ar": "تقييم الموضع"
-    },
-    {
-      "ar": "مضاعفات"
-    },
-    {
-      "ar": "التوثيق"
-    }
+  {
+   "ar": "مضاعفات",
+   "en": "Complications"
+  },
+  {
+   "ar": "التوثيق",
+   "en": "Documentation"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>العلاج الوريدي يُعطي السوائل والأدوية والدم ومشتقاته والتغذية الوريدية لمن لا يستطيع الفم، ويعوّض الماء والأملاح أسرع من الطريق الفموي، ويوفر وصولًا فوريًا للدورة الدموية.</p>[[slot:dis-3104-complications|مضاعفات الوريدي الطرفي — رسم من إعداد الموقع|/diseases/img/dis-3104-complications.svg]]",
+   "en": "<p>IV therapy gives fluids, medicines, blood and its products, and parenteral nutrition to those who cannot take anything by mouth; it replaces water and salts faster than the oral route and provides immediate access to the circulation.</p>[[slot:dis-3104-complications|Complications of peripheral IV: a diagram prepared by the site|/diseases/img/dis-3104-complications.svg]]"
+  },
+  "signs": {
+   "ar": "<h4>المضاعفات</h4><ul><li><strong>التهاب الوريد:</strong> ألم واحمرار ودفء بموضع القنية.</li><li><strong>التسرب (Infiltration):</strong> الموضع بارد وشاحب ومنتفخ. لاختبار الموضع اضغط الوريد فوق نقطة الإدخال: لو استمر التدفق فهو متسرب.</li><li><strong>انصمام هوائي:</strong> تسرع قلب وألم صدر وضيق نفس وهبوط ضغط وازرقاق وانخفاض وعي. يحدث غالبًا بسبب عدم تعبئة الأنبوب جيدًا.</li><li><strong>Extravasation:</strong> تلف أنسجة بسبب تسرب أدوية مثل الدوبامين: تغيّر لون وتقشر الجلد وانزعاج.</li></ul>",
+   "en": "<h4>Complications</h4><ul><li><strong>Phlebitis:</strong> pain, redness, and warmth at the cannula site.</li><li><strong>Infiltration:</strong> the site is cold, pale, and swollen. To test the site, press on the vein above the insertion point: if the flow continues, it is infiltrated.</li><li><strong>Air embolism:</strong> tachycardia, chest pain, shortness of breath, low blood pressure, cyanosis, and decreased consciousness. It usually happens because the tubing was not primed well.</li><li><strong>Extravasation:</strong> Tissue damage due to leakage of drugs such as dopamine: skin discoloration, peeling, and discomfort.</li></ul>"
+  },
+  "tests": {
+   "ar": "<h4>التقييم قبل التركيب</h4><ul><li>تحديد الاستطباب</li><li>فحص أماكن الإدخال</li><li>حساسية اللاتكس واللاصق والدواء/المحلول</li><li>تجنب الطرف الوارم أو الضعيف أو المصاب بصدمة أو شلل، والذراع ذات الفستولا الدياليزية، أو منطقة ملتهبة</li></ul>",
+   "en": "<h4>Assessment before insertion</h4><ul><li>Identify the indication</li><li>Examine the insertion sites</li><li>Latex, adhesive, and drug/solution allergy</li><li>Avoid an arm that is swollen, weak, injured, or paralyzed, the arm with a dialysis fistula, or an inflamed area</li></ul>"
+  },
+  "treatment": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>التحضير</strong><p>تأكيد الأمر والموافقة، التحقق من الهوية، الخصوصية، غسل اليدين، العدة: قفازات، طقم بدء الوريدي، Tegaderm، رباط ضاغط، مناديل كحول، كلورهيكسيدين، لاصق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اختيار الوريد</strong><p>طبّق الرباط الضاغط وجس الوريد (مرونة)، نظّف الجلد بمسحة الكحول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الإدخال</strong><p>ثبّت الوريد أسفل نقطة الوخز، أدخل القسطرة عند التفرع بزاوية ~10°، تقدّم حتى ظهور وميض الدم ثم استمر في تقدم القسطرة وانزع الرباط الضاغط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>التثبيت</strong><p>اضغط فوق موضع الإدخال بإصبع اليد غير المسيطرة واسحب الإبرة، صل الأنبوب، ثبّت بـ Tegaderm وابدأ التسريب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>التسمية</strong><p>سمِّ الأنبوب: الأساسي 72 ساعة والثانوي 24 ساعة، سمِّ كيس المحلول، اكتب التاريخ والوقت والأحرف على الغيار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الإنهاء</strong><p>نظّف المكان، اغسل اليدين، وثّق.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات والأرقام للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Preparation</strong><p>Confirm the order and consent, verify identity, privacy, hand washing, equipment: gloves, IV start kit, Tegaderm, tourniquet, alcohol wipes, chlorhexidine, tape.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Choosing the vein</strong><p>Apply the tourniquet and palpate the vein (elasticity), clean the skin with an alcohol swab.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Insertion</strong><p>Anchor the vein below the puncture site, insert the catheter at the bifurcation at an angle of ~10°, advance until a flash of blood appears, then continue advancing the catheter and remove the tourniquet.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Securing</strong><p>Press above the insertion site with the non-dominant finger and withdraw the needle, connect the tubing, secure with Tegaderm, and start the infusion.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Labeling</strong><p>Label the tubing: primary 72 hours and secondary 24 hours, label the solution bag, and write the date, time, and initials on the dressing.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Finishing</strong><p>Clean the area, wash your hands, and document.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Alert</strong><p>Doses and numbers are for learning only; always verify with the physician/pharmacist before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<h4>إدارة المضاعفات</h4><ul><li>التهاب الوريد: انزع القنية فورًا، أعد التركيب في الطرف المقابل، كمادة دافئة رطبة، بلّغ الطبيب.</li><li>التسرب: انزع القنية فورًا، كمادة دافئة أو باردة، ارفع الطرف، <strong>لا تدلّك المنطقة</strong> لأن ذلك قد يسبب ورمًا دمويًا.</li><li>الانصمام الهوائي: اغلق الأنبوب، ضع المريض على الجانب الأيسر مع خفض الرأس (Trendelenburg) لحبس الهواء في الأذين الأيمن بعيدًا عن مخرج البطين، بلّغ الطبيب.</li><li>Extravasation: أوقف التسريب وبلّغ الطبيب فورًا.</li></ul><h4>التوثيق</h4><ul><li>التاريخ والوقت والسبب</li><li>عدد المحاولات ومقاس القسطرة</li><li>موضع الإدخال والمحلول والمعدل</li><li>استجابة المريض وهل يتدفق بسهولة</li></ul>",
+   "en": "<h4>Managing complications</h4><ul><li>Phlebitis: remove the cannula immediately, restart in the opposite limb, apply a warm moist compress, notify the physician.</li><li>Infiltration: remove the cannula immediately, a warm or cold compress, elevate the limb, <strong>do not massage the area</strong> because that may cause a hematoma.</li><li>Air embolism: clamp the tubing, place the patient on the left side with the head lowered (Trendelenburg) to trap the air in the right atrium away from the ventricular outflow, notify the physician.</li><li>Extravasation: stop the infusion and notify the physician immediately.</li></ul><h4>Documentation</h4><ul><li>Date, time, and reason</li><li>Number of attempts and catheter size</li><li>Insertion site, solution, and rate</li><li>Patient response and whether it flows easily</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>ضيق نفس وألم صدر وازرقاق بعد التسريب: انصمام هوائي.</li><li>تغيّر لون وتقشر الجلد حول القنية مع دواء مؤذٍ: Extravasation.</li><li>ارتفاع حرارة مع احمرار ممتد: عدوى أو التهاب وريد خثاري.</li></ul>",
+   "en": "<ul><li>Shortness of breath, chest pain, and cyanosis after the infusion: air embolism.</li><li>Skin discoloration and peeling around the cannula with a harmful drug: extravasation.</li><li>Fever with spreading redness: infection or thrombophlebitis.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرح الإجراء والإحساس (وخزة أو ألم بسيط).</li><li>بلّغ عن ألم أو احمرار أو تورم أو بلل حول الغيار.</li><li>لا تسحب الأنبوب ولا تبلل الموضع.</li></ul>",
+   "en": "<ul><li>Explain the procedure and the sensation (a prick or mild pain).</li><li>Report pain, redness, swelling, or wetness around the dressing.</li><li>Do not pull out the tubing and do not wet the site.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الابتعاد عن الطرف الوارم أو المشلول أو المصاب أو ذي الفستولا الدياليزية",
+   "زاوية الإدخال تقريبًا 10° وتظهر وميض دم ثم يُدفع القسطرة",
+   "الأنبوب الأساسي يُغيَّر كل 72 ساعة والثانوي كل 24 ساعة (وفق سياسة المكان)",
+   "Phlebitis: انزع وأعد في الطرف الآخر",
+   "Air embolism: اربط الأنبوب، الجنب الأيسر مع خفض الرأس (Trendelenburg)",
+   "التسرب لا يُدلَّك"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>العلاج الوريدي يُعطي السوائل والأدوية والدم ومشتقاته والتغذية الوريدية لمن لا يستطيع الفم، ويعوّض الماء والأملاح أسرع من الطريق الفموي، ويوفر وصولًا فوريًا للدورة الدموية.</p>[[slot:dis-3104-complications|مضاعفات الوريدي الطرفي — رسم من إعداد الموقع|/diseases/img/dis-3104-complications.svg]]"
-    },
-    "signs": {
-      "ar": "<h4>المضاعفات</h4><ul><li><strong>التهاب الوريد:</strong> ألم واحمرار ودفء بموضع القنية.</li><li><strong>التسرب (Infiltration):</strong> الموضع بارد وشاحب ومنتفخ. لاختبار الموضع اضغط الوريد فوق نقطة الإدخال: لو استمر التدفق فهو متسرب.</li><li><strong>انصمام هوائي:</strong> تسرع قلب وألم صدر وضيق نفس وهبوط ضغط وازرقاق وانخفاض وعي. يحدث غالبًا بسبب عدم تعبئة الأنبوب جيدًا.</li><li><strong>Extravasation:</strong> تلف أنسجة بسبب تسرب أدوية مثل الدوبامين: تغيّر لون وتقشر الجلد وانزعاج.</li></ul>"
-    },
-    "tests": {
-      "ar": "<h4>التقييم قبل التركيب</h4><ul><li>تحديد الاستطباب</li><li>فحص أماكن الإدخال</li><li>حساسية اللاتكس واللاصق والدواء/المحلول</li><li>تجنب الطرف الوارم أو الضعيف أو المصاب بصدمة أو شلل، والذراع ذات الفستولا الدياليزية، أو منطقة ملتهبة</li></ul>"
-    },
-    "treatment": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>التحضير</strong><p>تأكيد الأمر والموافقة، التحقق من الهوية، الخصوصية، غسل اليدين، العدة: قفازات، طقم بدء الوريدي، Tegaderm، رباط ضاغط، مناديل كحول، كلورهيكسيدين، لاصق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اختيار الوريد</strong><p>طبّق الرباط الضاغط وجس الوريد (مرونة)، نظّف الجلد بمسحة الكحول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الإدخال</strong><p>ثبّت الوريد أسفل نقطة الوخز، أدخل القسطرة عند التفرع بزاوية ~10°، تقدّم حتى ظهور وميض الدم ثم استمر في تقدم القسطرة وانزع الرباط الضاغط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>التثبيت</strong><p>اضغط فوق موضع الإدخال بإصبع اليد غير المسيطرة واسحب الإبرة، صل الأنبوب، ثبّت بـ Tegaderm وابدأ التسريب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>التسمية</strong><p>سمِّ الأنبوب: الأساسي 72 ساعة والثانوي 24 ساعة، سمِّ كيس المحلول، اكتب التاريخ والوقت والأحرف على الغيار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الإنهاء</strong><p>نظّف المكان، اغسل اليدين، وثّق.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات والأرقام للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<h4>إدارة المضاعفات</h4><ul><li>التهاب الوريد: انزع القنية فورًا، أعد التركيب في الطرف المقابل، كمادة دافئة رطبة، بلّغ الطبيب.</li><li>التسرب: انزع القنية فورًا، كمادة دافئة أو باردة، ارفع الطرف، <strong>لا تدلّك المنطقة</strong> لأن ذلك قد يسبب ورمًا دمويًا.</li><li>الانصمام الهوائي: اغلق الأنبوب، ضع المريض على الجانب الأيسر مع خفض الرأس (Trendelenburg) لحبس الهواء في الأذين الأيمن بعيدًا عن مخرج البطين، بلّغ الطبيب.</li><li>Extravasation: أوقف التسريب وبلّغ الطبيب فورًا.</li></ul><h4>التوثيق</h4><ul><li>التاريخ والوقت والسبب</li><li>عدد المحاولات ومقاس القسطرة</li><li>موضع الإدخال والمحلول والمعدل</li><li>استجابة المريض وهل يتدفق بسهولة</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>ضيق نفس وألم صدر وازرقاق بعد التسريب: انصمام هوائي.</li><li>تغيّر لون وتقشر الجلد حول القنية مع دواء مؤذٍ: Extravasation.</li><li>ارتفاع حرارة مع احمرار ممتد: عدوى أو التهاب وريد خثاري.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرح الإجراء والإحساس (وخزة أو ألم بسيط).</li><li>بلّغ عن ألم أو احمرار أو تورم أو بلل حول الغيار.</li><li>لا تسحب الأنبوب ولا تبلل الموضع.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الابتعاد عن الطرف الوارم أو المشلول أو المصاب أو ذي الفستولا الدياليزية",
-      "زاوية الإدخال تقريبًا 10° وتظهر وميض دم ثم يُدفع القسطرة",
-      "الأنبوب الأساسي يُغيَّر كل 72 ساعة والثانوي كل 24 ساعة (وفق سياسة المكان)",
-      "Phlebitis: انزع وأعد في الطرف الآخر",
-      "Air embolism: اربط الأنبوب، الجنب الأيسر مع خفض الرأس (Trendelenburg)",
-      "التسرب لا يُدلَّك"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول إجراء عند الاشتباه في انصمام هوائي:"
-      },
-      "options": [
-        {
-          "ar": "إغلاق الأنبوب ووضع المريض على الجنب الأيسر مع خفض الرأس (Trendelenburg)"
-        },
-        {
-          "ar": "رفع رأس السرير"
-        },
-        {
-          "ar": "زيادة معدل التسريب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الوضع على الأيسر مع انخفاض الرأس يحبس الهواء في الأذين الأيمن ويمنع وصوله للدماغ أو الرئة."
-      }
-    },
-    {
-      "q": {
-        "ar": "الموضع بارد وشاحب ومنتفخ حول القنية، فما التشخيص؟"
-      },
-      "options": [
-        {
-          "ar": "تسرب (Infiltration)"
-        },
-        {
-          "ar": "التهاب وريد"
-        },
-        {
-          "ar": "انصمام هوائي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "البرودة والشحوب والتورم نتيجة تسرب السائل خارج الوريد."
-      }
-    },
-    {
-      "q": {
-        "ar": "عند التسرب لا يجوز:"
-      },
-      "options": [
-        {
-          "ar": "تدليك المنطقة"
-        },
-        {
-          "ar": "رفع الطرف"
-        },
-        {
-          "ar": "نزع القنية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التدليك قد يزيد الضرر أو يسبب ورمًا دمويًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "مدة بقاء الأنبوب الثانوي (secondary) تقريبًا حسب سياسة المنشأة:"
-      },
-      "options": [
-        {
-          "ar": "24 ساعة"
-        },
-        {
-          "ar": "72 ساعة"
-        },
-        {
-          "ar": "أسبوعان"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأساسي 72 ساعة والثانوي 24 ساعة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "INS — Infusion Therapy Standards of Practice"
-    },
-    {
-      "title": "CDC — Prevention of Intravascular Catheter-Related Infections"
-    }
+  "en": [
+   "Massage may increase the damage or cause a hematoma.",
+   "The approximate duration of the secondary tubing according to facility policy:",
+   "24 hours",
+   "72 hours",
+   "Two weeks",
+   "The primary is 72 hours and the secondary is 24 hours."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول إجراء عند الاشتباه في انصمام هوائي:",
+    "en": "Stay away from a swollen, paralyzed, or injured limb or one with a dialysis fistula"
+   },
+   "options": [
+    {
+     "ar": "إغلاق الأنبوب ووضع المريض على الجنب الأيسر مع خفض الرأس (Trendelenburg)",
+     "en": "Insertion angle is about 10°; a flash of blood appears, then the catheter is advanced"
+    },
+    {
+     "ar": "رفع رأس السرير",
+     "en": "The primary tubing is changed every 72 hours and the secondary every 24 hours (per facility policy)"
+    },
+    {
+     "ar": "زيادة معدل التسريب",
+     "en": "Phlebitis: remove and restart in the other limb"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الوضع على الأيسر مع انخفاض الرأس يحبس الهواء في الأذين الأيمن ويمنع وصوله للدماغ أو الرئة.",
+    "en": "Air embolism: clamp the tubing, left side with the head lowered (Trendelenburg)"
+   }
+  },
+  {
+   "q": {
+    "ar": "الموضع بارد وشاحب ومنتفخ حول القنية، فما التشخيص؟",
+    "en": "Infiltration is not massaged"
+   },
+   "options": [
+    {
+     "ar": "تسرب (Infiltration)",
+     "en": "The first action when air embolism is suspected:"
+    },
+    {
+     "ar": "التهاب وريد",
+     "en": "Clamp the tubing and place the patient on the left side with the head lowered (Trendelenburg)"
+    },
+    {
+     "ar": "انصمام هوائي",
+     "en": "Raise the head of the bed"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "البرودة والشحوب والتورم نتيجة تسرب السائل خارج الوريد.",
+    "en": "Increase the infusion rate"
+   }
+  },
+  {
+   "q": {
+    "ar": "عند التسرب لا يجوز:",
+    "en": "The left-side position with the head lowered traps the air in the right atrium and prevents it from reaching the brain or lung."
+   },
+   "options": [
+    {
+     "ar": "تدليك المنطقة",
+     "en": "The site around the cannula is cold, pale, and swollen. What is the diagnosis?"
+    },
+    {
+     "ar": "رفع الطرف",
+     "en": "Infiltration"
+    },
+    {
+     "ar": "نزع القنية",
+     "en": "Phlebitis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التدليك قد يزيد الضرر أو يسبب ورمًا دمويًا.",
+    "en": "Air embolism"
+   }
+  },
+  {
+   "q": {
+    "ar": "مدة بقاء الأنبوب الثانوي (secondary) تقريبًا حسب سياسة المنشأة:",
+    "en": "Coldness, pallor, and swelling result from fluid leaking outside the vein."
+   },
+   "options": [
+    {
+     "ar": "24 ساعة",
+     "en": "With infiltration, you must not:"
+    },
+    {
+     "ar": "72 ساعة",
+     "en": "Massage the area"
+    },
+    {
+     "ar": "أسبوعان",
+     "en": "Elevate the limb"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأساسي 72 ساعة والثانوي 24 ساعة.",
+    "en": "Remove the cannula"
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "INS — Infusion Therapy Standards of Practice"
+  },
+  {
+   "title": "CDC — Prevention of Intravascular Catheter-Related Infections"
+  }
+ ]
 }

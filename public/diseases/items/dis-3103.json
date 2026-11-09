@@ -1,148 +1,186 @@
 {
-  "id": "dis-3103",
-  "num": 3103,
-  "system": "cardio",
-  "icon": "🫀",
-  "level": 3,
-  "target": "fundamentals",
-  "title": {
-    "ar": "القسطرة الوريدية المركزية وPICC وقسطرة الإبيدورال (فوق الجافية)",
-    "en": "Central Venous Catheters, PICC, Ports & Epidural Catheters"
+ "id": "dis-3103",
+ "num": 3103,
+ "system": "cardio",
+ "icon": "🫀",
+ "level": 3,
+ "target": "fundamentals",
+ "title": {
+  "ar": "القسطرة الوريدية المركزية وPICC وقسطرة الإبيدورال (فوق الجافية)",
+  "en": "Central Venous Catheters, PICC, Ports & Epidural Catheters"
+ },
+ "teaser": {
+  "ar": "أنواع الخطوط المركزية (النفقي، المنفذ المزروع، PICC)، الاستعمالات، مكان الإدخال، وضع المريض، وقسطرة فوق الجافية (Epidural).",
+  "en": "Types of central lines (tunneled, implanted port, PICC), uses, insertion site, patient position, and the epidural catheter."
+ },
+ "chips": [
+  {
+   "ar": "مركزي نفقي",
+   "en": "Tunneled central"
   },
-  "teaser": {
-    "ar": "أنواع الخطوط المركزية (النفقي، المنفذ المزروع، PICC)، الاستعمالات، مكان الإدخال، وضع المريض، وقسطرة فوق الجافية (Epidural)."
+  {
+   "ar": "Port",
+   "en": "Port"
   },
-  "chips": [
-    {
-      "ar": "مركزي نفقي"
-    },
-    {
-      "ar": "Port"
-    },
-    {
-      "ar": "PICC"
-    },
-    {
-      "ar": "Epidural"
-    }
+  {
+   "ar": "PICC",
+   "en": "PICC"
+  },
+  {
+   "ar": "Epidural",
+   "en": "Epidural"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>تُستعمل القسطرة المركزية لإعطاء المحاليل عالية الأسمولية، وقياس الضغط الوريدي المركزي (CVP)، والتغذية الوريدية الكاملة (TPN)، أو إعطاء عدة محاليل معًا. يُحدَّد موضع الطرف بالأشعة بعد التركيب. قد تكون أحادية أو مزدوجة أو ثلاثية القنوات؛ تعدد القنوات يتيح إعطاء أكثر من دواء في وقت واحد.</p>\n<p>تُدخل إما طرفيًا عبر الوريد الباسيليكي (Basilic) أو الرأسي (Cephalic) إلى الأجوف العلوي، أو مركزيًا عبر الوريد الوداجي الداخلي (Internal jugular) أو تحت الترقوة (Subclavian)، وقد تُزرع جراحيًا تحت الجلد.</p>[[slot:dis-3103-lines|أنواع القسطرة المركزية — رسم من إعداد الموقع|/diseases/img/dis-3103-lines.svg]]",
+   "en": "<p>A central catheter is used to give high-osmolarity solutions, measure central venous pressure (CVP), give total parenteral nutrition (TPN), or give several solutions together. The tip position is confirmed by X-ray after placement. It may be single-, double-, or triple-lumen; multiple lumens allow more than one drug to be given at the same time.</p>\n<p>It is inserted either peripherally through the basilic or cephalic vein into the superior vena cava, or centrally through the internal jugular or subclavian vein, and may be surgically implanted under the skin.</p>[[slot:dis-3103-lines|Types of central catheters — illustration made for the site|/diseases/img/dis-3103-lines.svg]]"
+  },
+  "signs": {
+   "ar": "<ul><li>مضاعفات عامة: عدوى الخط (CLABSI)، انسداد، خثار، انثقاب الرئة (pneumothorax) عند التركيب، انصمام هوائي.</li><li>PICC: التهاب وريدي (phlebitis) شائع، ونزف بسيط عند التركيب طبيعي.</li><li>Epidural: عدوى بالموضع، ثبوط تنفسي، هبوط ضغط.</li></ul>",
+   "en": "<ul><li>General complications: line infection (CLABSI), occlusion, thrombosis, lung puncture (pneumothorax) at insertion, air embolism.</li><li>PICC: phlebitis is common, and minor bleeding at insertion is normal.</li><li>Epidural: infection at the site, respiratory depression, hypotension.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>مقارنة الأنواع</h4><table><thead><tr><th>النوع</th><th>الاستعمال</th><th>ملاحظات</th></tr></thead><tbody><tr><td>نفقي (Tunneled)</td><td>علاج وريدي طويل</td><td>يُدخل في العمليات، أحادي/متعدد القنوات، جهاز تسريب متقطع (النظام يبقى مغلقًا)، غسيل بهيبارين مخفف</td></tr><tr><td>منفذ مزروع (Port)</td><td>علاج طويل</td><td>تحت الجلد، يتطلب جس وإبرة non-coring، غسيل دوري بهيبارين</td></tr><tr><td>PICC</td><td>علاج طويل غالبًا منزلي</td><td>باسيليكي، الطرف في تحت الترقوة أو الأجوف العلوي</td></tr><tr><td>Epidural</td><td>مسكنات</td><td>غير مركزي، في الحيز فوق الجافية</td></tr></tbody></table>[[slot:dis-3103-trendelenburg|وضع التركيب والنزع — رسم من إعداد الموقع|/diseases/img/dis-3103-trendelenburg.svg]]",
+   "en": "<h4>Comparison of types</h4><table><thead><tr><th>Type</th><th>Use</th><th>Notes</th></tr></thead><tbody><tr><td>Tunneled</td><td>Long-term IV therapy</td><td>Placed in the operating room, single/multiple lumen, intermittent infusion device (the system stays closed), flushed with diluted heparin</td></tr><tr><td>Implanted port</td><td>Long-term therapy</td><td>Under the skin, requires palpation and a non-coring needle, periodic heparin flush</td></tr><tr><td>PICC</td><td>Long-term therapy, often at home</td><td>Basilic vein, tip in the subclavian or superior vena cava</td></tr><tr><td>Epidural</td><td>Analgesics</td><td>Not central; in the epidural space</td></tr></tbody></table>[[slot:dis-3103-trendelenburg|Position for insertion and removal — illustration made for the site|/diseases/img/dis-3103-trendelenburg.svg]]"
+  },
+  "nursing": {
+   "ar": "<ul><li>إدخال الخط المركزي، تغيير الأنبوب، ونزع الخط: ضع المريض في Trendelenburg أو مستلقيًا، واطلب منه مناورة فالسالفا لرفع الضغط الوريدي المركزي أثناء فتح النظام (منعًا للانصمام الهوائي).</li><li>تأكد من الأشعة قبل أول استعمال.</li><li>Epidural: قيّم العلامات الحيوية والتنفس، افحص الموضع، راقب معدل التسريب، واسحب قبل الحقن.</li><li>تقنية معقمة عند التغيير.</li></ul>",
+   "en": "<ul><li>Central line insertion, tubing change, and line removal: place the patient in Trendelenburg or supine, and ask the patient to perform a Valsalva maneuver to raise central venous pressure while the system is open (to prevent air embolism).</li><li>Confirm the X-ray before first use.</li><li>Epidural: assess vital signs and breathing, inspect the site, monitor the infusion rate, and aspirate before injecting.</li><li>Use sterile technique when changing.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>ضيق نفس مفاجئ وألم صدر عند التركيب أو بعد فصل الخط: انصمام هوائي أو استرواح صدر.</li><li>أكثر من 1 mL سائل رائق أو دم عند السحب من epidural: لا تحقن وبلّغ.</li><li>نزف من PICC مستمر بعد 24 ساعة.</li><li>حمى أو احمرار حول الخط: عدوى.</li></ul>",
+   "en": "<ul><li>Sudden shortness of breath and chest pain at insertion or after disconnecting the line: air embolism or pneumothorax.</li><li>More than 1 mL of clear fluid or blood on aspiration from an epidural: do not inject, and report.</li><li>Bleeding from a PICC continuing after 24 hours.</li><li>Fever or redness around the line: infection.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>حافظ على جفاف الغيار ولا تغمر الخط بالماء.</li><li>بلّغ عن ألم أو تورم أو احمرار أو حمى.</li><li>مريض PICC المنزلي: غسيل منتظم وتجنب رفع أثقال بالذراع حسب التعليمات.</li></ul>",
+   "en": "<ul><li>Keep the dressing dry and do not submerge the line in water.</li><li>Report pain, swelling, redness, or fever.</li><li>Home PICC patient: regular flushing, and avoid lifting heavy weights with the arm as instructed.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الخط المركزي يُتأكد من موضعه بالأشعة بعد الإدخال",
+   "عند الإدخال/تغيير الأنبوب/النزع: Trendelenburg أو استلقاء + مناورة فالسالفا",
+   "الإبرة non-coring لازمة لمنفذ الـ Port",
+   "PICC: الباسيليكي، النزف بعد 24 ساعة يُبلَّغ",
+   "Epidural: اسحب أولًا، ولو أكثر من 1 mL سائل أو دم فلا تحقن"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>تُستعمل القسطرة المركزية لإعطاء المحاليل عالية الأسمولية، وقياس الضغط الوريدي المركزي (CVP)، والتغذية الوريدية الكاملة (TPN)، أو إعطاء عدة محاليل معًا. يُحدَّد موضع الطرف بالأشعة بعد التركيب. قد تكون أحادية أو مزدوجة أو ثلاثية القنوات؛ تعدد القنوات يتيح إعطاء أكثر من دواء في وقت واحد.</p>\n<p>تُدخل إما طرفيًا عبر الوريد الباسيليكي (Basilic) أو الرأسي (Cephalic) إلى الأجوف العلوي، أو مركزيًا عبر الوريد الوداجي الداخلي (Internal jugular) أو تحت الترقوة (Subclavian)، وقد تُزرع جراحيًا تحت الجلد.</p>[[slot:dis-3103-lines|أنواع القسطرة المركزية — رسم من إعداد الموقع|/diseases/img/dis-3103-lines.svg]]"
-    },
-    "signs": {
-      "ar": "<ul><li>مضاعفات عامة: عدوى الخط (CLABSI)، انسداد، خثار، انثقاب الرئة (pneumothorax) عند التركيب، انصمام هوائي.</li><li>PICC: التهاب وريدي (phlebitis) شائع، ونزف بسيط عند التركيب طبيعي.</li><li>Epidural: عدوى بالموضع، ثبوط تنفسي، هبوط ضغط.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>مقارنة الأنواع</h4><table><thead><tr><th>النوع</th><th>الاستعمال</th><th>ملاحظات</th></tr></thead><tbody><tr><td>نفقي (Tunneled)</td><td>علاج وريدي طويل</td><td>يُدخل في العمليات، أحادي/متعدد القنوات، جهاز تسريب متقطع (النظام يبقى مغلقًا)، غسيل بهيبارين مخفف</td></tr><tr><td>منفذ مزروع (Port)</td><td>علاج طويل</td><td>تحت الجلد، يتطلب جس وإبرة non-coring، غسيل دوري بهيبارين</td></tr><tr><td>PICC</td><td>علاج طويل غالبًا منزلي</td><td>باسيليكي، الطرف في تحت الترقوة أو الأجوف العلوي</td></tr><tr><td>Epidural</td><td>مسكنات</td><td>غير مركزي، في الحيز فوق الجافية</td></tr></tbody></table>[[slot:dis-3103-trendelenburg|وضع التركيب والنزع — رسم من إعداد الموقع|/diseases/img/dis-3103-trendelenburg.svg]]"
-    },
-    "nursing": {
-      "ar": "<ul><li>إدخال الخط المركزي، تغيير الأنبوب، ونزع الخط: ضع المريض في Trendelenburg أو مستلقيًا، واطلب منه مناورة فالسالفا لرفع الضغط الوريدي المركزي أثناء فتح النظام (منعًا للانصمام الهوائي).</li><li>تأكد من الأشعة قبل أول استعمال.</li><li>Epidural: قيّم العلامات الحيوية والتنفس، افحص الموضع، راقب معدل التسريب، واسحب قبل الحقن.</li><li>تقنية معقمة عند التغيير.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>ضيق نفس مفاجئ وألم صدر عند التركيب أو بعد فصل الخط: انصمام هوائي أو استرواح صدر.</li><li>أكثر من 1 mL سائل رائق أو دم عند السحب من epidural: لا تحقن وبلّغ.</li><li>نزف من PICC مستمر بعد 24 ساعة.</li><li>حمى أو احمرار حول الخط: عدوى.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>حافظ على جفاف الغيار ولا تغمر الخط بالماء.</li><li>بلّغ عن ألم أو تورم أو احمرار أو حمى.</li><li>مريض PICC المنزلي: غسيل منتظم وتجنب رفع أثقال بالذراع حسب التعليمات.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الخط المركزي يُتأكد من موضعه بالأشعة بعد الإدخال",
-      "عند الإدخال/تغيير الأنبوب/النزع: Trendelenburg أو استلقاء + مناورة فالسالفا",
-      "الإبرة non-coring لازمة لمنفذ الـ Port",
-      "PICC: الباسيليكي، النزف بعد 24 ساعة يُبلَّغ",
-      "Epidural: اسحب أولًا، ولو أكثر من 1 mL سائل أو دم فلا تحقن"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "وضع المريض الأنسب أثناء نزع الخط المركزي:"
-      },
-      "options": [
-        {
-          "ar": "Trendelenburg أو مستلقٍ مع مناورة فالسالفا"
-        },
-        {
-          "ar": "Fowler عالٍ"
-        },
-        {
-          "ar": "جلوس مائل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "رفع الضغط داخل الصدر وجعل الرأس أخفض يمنع دخول الهواء إلى الوريد."
-      }
-    },
-    {
-      "q": {
-        "ar": "نوع الإبرة اللازمة للوصول إلى Port مزروع:"
-      },
-      "options": [
-        {
-          "ar": "non-coring"
-        },
-        {
-          "ar": "إبرة عادية مقطعية"
-        },
-        {
-          "ar": "إبرة 14G حادة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإبرة non-coring لا تقتطع الحاجز المطاطي فيبقى سليمًا بعد عدة وخزات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أثناء إعطاء دواء عبر epidural سحبت أكثر من 1 mL من سائل رائق. ماذا تفعل؟"
-      },
-      "options": [
-        {
-          "ar": "لا تحقن وبلّغ الطبيب"
-        },
-        {
-          "ar": "احقن ببطء"
-        },
-        {
-          "ar": "اسحب أكثر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السائل الرائق قد يكون سائلًا مخيًا شوكيًا (خطأ مكان القسطرة) والحقن قد يسبب ضررًا خطيرًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "أين ينتهي طرف PICC؟"
-      },
-      "options": [
-        {
-          "ar": "تحت الترقوة أو الأجوف العلوي"
-        },
-        {
-          "ar": "شريان الفخذ"
-        },
-        {
-          "ar": "الأذين الأيسر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "طرف PICC يستقر في وريد مركزي كبير."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "INS — Infusion Therapy Standards of Practice"
-    },
-    {
-      "title": "CDC guidelines for prevention of intravascular catheter-related infections"
-    }
+  "en": [
+   "The position of a central line is confirmed by X-ray after insertion",
+   "At insertion/tubing change/removal: Trendelenburg or supine + Valsalva maneuver",
+   "A non-coring needle is required for a Port",
+   "PICC: basilic vein; bleeding after 24 hours is reported",
+   "Epidural: aspirate first, and if more than 1 mL of fluid or blood, do not inject"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "وضع المريض الأنسب أثناء نزع الخط المركزي:",
+    "en": "The best patient position during central line removal:"
+   },
+   "options": [
+    {
+     "ar": "Trendelenburg أو مستلقٍ مع مناورة فالسالفا",
+     "en": "Trendelenburg or supine with a Valsalva maneuver"
+    },
+    {
+     "ar": "Fowler عالٍ",
+     "en": "High Fowler's"
+    },
+    {
+     "ar": "جلوس مائل",
+     "en": "Semi-sitting"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "رفع الضغط داخل الصدر وجعل الرأس أخفض يمنع دخول الهواء إلى الوريد.",
+    "en": "Raising intrathoracic pressure and keeping the head lower prevents air from entering the vein."
+   }
+  },
+  {
+   "q": {
+    "ar": "نوع الإبرة اللازمة للوصول إلى Port مزروع:",
+    "en": "The type of needle needed to access an implanted Port:"
+   },
+   "options": [
+    {
+     "ar": "non-coring",
+     "en": "Non-coring"
+    },
+    {
+     "ar": "إبرة عادية مقطعية",
+     "en": "Ordinary beveled needle"
+    },
+    {
+     "ar": "إبرة 14G حادة",
+     "en": "Sharp 14G needle"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإبرة non-coring لا تقتطع الحاجز المطاطي فيبقى سليمًا بعد عدة وخزات.",
+    "en": "A non-coring needle does not cut out the rubber septum, so it stays intact after many punctures."
+   }
+  },
+  {
+   "q": {
+    "ar": "أثناء إعطاء دواء عبر epidural سحبت أكثر من 1 mL من سائل رائق. ماذا تفعل؟",
+    "en": "While giving a drug through an epidural, you aspirated more than 1 mL of clear fluid. What do you do?"
+   },
+   "options": [
+    {
+     "ar": "لا تحقن وبلّغ الطبيب",
+     "en": "Do not inject, and notify the physician"
+    },
+    {
+     "ar": "احقن ببطء",
+     "en": "Inject slowly"
+    },
+    {
+     "ar": "اسحب أكثر",
+     "en": "Aspirate more"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السائل الرائق قد يكون سائلًا مخيًا شوكيًا (خطأ مكان القسطرة) والحقن قد يسبب ضررًا خطيرًا.",
+    "en": "Clear fluid may be cerebrospinal fluid (wrong catheter placement), and injection may cause serious harm."
+   }
+  },
+  {
+   "q": {
+    "ar": "أين ينتهي طرف PICC؟",
+    "en": "Where does the tip of a PICC end?"
+   },
+   "options": [
+    {
+     "ar": "تحت الترقوة أو الأجوف العلوي",
+     "en": "Subclavian or superior vena cava"
+    },
+    {
+     "ar": "شريان الفخذ",
+     "en": "Femoral artery"
+    },
+    {
+     "ar": "الأذين الأيسر",
+     "en": "Left atrium"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "طرف PICC يستقر في وريد مركزي كبير.",
+    "en": "The PICC tip rests in a large central vein."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "INS — Infusion Therapy Standards of Practice"
+  },
+  {
+   "title": "CDC guidelines for prevention of intravascular catheter-related infections"
+  }
+ ]
 }

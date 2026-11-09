@@ -1,188 +1,236 @@
 {
-  "id": "dis-1812",
-  "num": "1812",
-  "system": "peds",
-  "icon": "👶",
-  "level": 2,
-  "title": {
-    "ar": "العلامات الحيوية والتقييم عند الأطفال",
-    "en": "Pediatric Vital Signs"
+ "id": "dis-1812",
+ "num": "1812",
+ "system": "peds",
+ "icon": "👶",
+ "level": 2,
+ "title": {
+  "ar": "العلامات الحيوية والتقييم عند الأطفال",
+  "en": "Pediatric Vital Signs"
+ },
+ "teaser": {
+  "ar": "نطاقات النبض والتنفس والضغط والحرارة حسب العمر وقواعد الفحص.",
+  "en": "Ranges of pulse, respiration, blood pressure, and temperature by age, and examination rules."
+ },
+ "chips": [
+  {
+   "ar": "Vital Signs",
+   "en": "Vital Signs"
   },
-  "teaser": {
-    "ar": "نطاقات النبض والتنفس والضغط والحرارة حسب العمر وقواعد الفحص."
+  {
+   "ar": "أطفال",
+   "en": "Children"
+  }
+ ],
+ "target": "pediatrics",
+ "sections": {
+  "overview": {
+   "ar": "<p>ركّز الامتحان على النبض والتنفس والضغط عند المولود والرضيع والدارج (الأكثر هشاشة). تختلف النطاقات قليلاً بين المراجع.</p>[[slot:dis-1812-vitals|العلامات الحيوية — رسم من إعداد الموقع|/diseases/img/dis-1812-vitals.svg]][[slot:dis-1812-temp|الحرارة والأكسجين — رسم من إعداد الموقع|/diseases/img/dis-1812-temp.svg]]",
+   "en": "<p>The exam focuses on pulse, respiration, and blood pressure in the newborn, infant, and toddler (the most fragile). The ranges differ slightly between references.</p>[[slot:dis-1812-vitals|Vital signs — illustration made by the site|/diseases/img/dis-1812-vitals.svg]][[slot:dis-1812-temp|Temperature and oxygen — illustration made by the site|/diseases/img/dis-1812-temp.svg]]"
   },
-  "chips": [
-    {
-      "ar": "Vital Signs"
-    },
-    {
-      "ar": "أطفال"
-    }
+  "causes": {
+   "ar": "<p>—</p>",
+   "en": "<p>—</p>"
+  },
+  "signs": {
+   "ar": "<table><thead><tr><th>العمر</th><th>نبض</th><th>تنفس</th><th>انقباضي</th><th>انبساطي</th><th>هبوط</th></tr></thead><tbody><tr><td>مولود 1-28 يوماً</td><td>110-180</td><td>30-60</td><td>60-90</td><td>20-60</td><td><60</td></tr><tr><td>رضيع</td><td>110-160</td><td>30-60</td><td>70-105</td><td>35-55</td><td><70</td></tr><tr><td>دارج 1-3</td><td>80-110</td><td>24-40</td><td>85-105</td><td>40-65</td><td>70+(عمر×2)</td></tr><tr><td>ما قبل المدرسة 3-6</td><td>70-110</td><td>22-34</td><td>90-110</td><td>45-70</td><td>70+(عمر×2)</td></tr><tr><td>مدرسة 6-12</td><td>65-105</td><td>18-30</td><td>97-120</td><td>55-70</td><td>70+(عمر×2)</td></tr><tr><td>مراهق 12-18</td><td>60-100</td><td>12-18</td><td>110-130</td><td>65-80</td><td><90</td></tr></tbody></table><p>الحرارة للأقل من 5 سنوات: شرجي 36.6-38 °م، فموي 35.5-37.5، إبطي 36.5-37.5، أذن 36.7-38؛ فوق 5 سنوات 37 °م. تشبع الأكسجين الهدف أكثر من 95%.</p><p>كلما صغر الطفل ارتفع المعدل الطبيعي لحرارته الأساسية. بالفهرنهايت (أقل من 5 سنوات): شرجي 97.9-100.4، فموي 95.9-99.5، إبطي 97.8-99.5، أذن 96.4-100.4؛ فوق 5 سنوات 98.6 ف.</p>",
+   "en": "<table><thead><tr><th>Age</th><th>Pulse</th><th>Respiration</th><th>Systolic</th><th>Diastolic</th><th>Hypotension</th></tr></thead><tbody><tr><td>Newborn 1-28 days</td><td>110-180</td><td>30-60</td><td>60-90</td><td>20-60</td><td><60</td></tr><tr><td>Infant</td><td>110-160</td><td>30-60</td><td>70-105</td><td>35-55</td><td><70</td></tr><tr><td>Toddler 1-3</td><td>80-110</td><td>24-40</td><td>85-105</td><td>40-65</td><td>70+(age×2)</td></tr><tr><td>Preschool 3-6</td><td>70-110</td><td>22-34</td><td>90-110</td><td>45-70</td><td>70+(age×2)</td></tr><tr><td>School age 6-12</td><td>65-105</td><td>18-30</td><td>97-120</td><td>55-70</td><td>70+(age×2)</td></tr><tr><td>Adolescent 12-18</td><td>60-100</td><td>12-18</td><td>110-130</td><td>65-80</td><td><90</td></tr></tbody></table><p>Temperature for under 5 years: rectal 36.6-38 °C, oral 35.5-37.5, axillary 36.5-37.5, ear 36.7-38; over 5 years 37 °C. The target oxygen saturation is more than 95%.</p><p>The younger the child, the higher the normal range of core temperature. In Fahrenheit (under 5 years): rectal 97.9-100.4, oral 95.9-99.5, axillary 97.8-99.5, ear 96.4-100.4; over 5 years 98.6 F.</p>"
+  },
+  "tests": {
+   "ar": "<p>—</p>",
+   "en": "<p>—</p>"
+  },
+  "treatment": {
+   "ar": "<ul><li>لا ينطبق: دليل تقييم.</li></ul>",
+   "en": "<ul><li>Not applicable: an assessment guide.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<h4>نقاط أساسية</h4><ul><li>تحدث مع الوالدين أولاً ثم الطفل.</li><li>ابدأ بالأقل تدخلاً (القلب والرئة قبل الضغط) في الطفل الهادئ.</li><li>الرضيع في حضن مقدم الرعاية.</li><li>عدّ النبض والتنفس دقيقة كاملة للرضع والدارجين.</li><li>النبض القمّي لمدة دقيقة كاملة عند عمر سنة.</li><li>الضغط أقل عند الأطفال لصغر الأعضاء.</li><li>حرارة: فموي من 5-6 سنوات، إبطي لكل الأعمار، شرجي للرضع (الأشيع) ولكن ليس مع مثبطي المناعة والكيماوي أو الأمراض القلبية أو الإسهال أو الانحشار الشرجي (Fecal impaction: تكتل البراز في المستقيم) (خطر ثقب).</li><li>قراءة الأكسجين: موجة ثابتة تطابق نبض الطفل.</li><li>أكسجين 88%: تحقق من موضع المجس أولاً.</li></ul><h4>أمثلة</h4><ul><li>طفل 10 أشهر بقيء وانتفاخ 6 ساعات والآن هادئ بنبض 220 وضغط 85/45: خمول مع تسارع قلب خطير فبلّغ.</li><li>طفلة سنتين ضغطها 92/60 طبيعي.</li><li>رضيع 12 شهراً تنفسه 36 طبيعي: وثّق.</li></ul>",
+   "en": "<h4>Key points</h4><ul><li>Talk to the parents first, then the child.</li><li>Start with the least invasive (heart and lungs before blood pressure) in a calm child.</li><li>The infant on the caregiver's lap.</li><li>Count the pulse and respirations for a full minute in infants and toddlers.</li><li>Apical pulse for a full minute at age one year.</li><li>Blood pressure is lower in children because the organs are small.</li><li>Temperature: oral from 5-6 years, axillary for all ages, rectal for infants (the most common) but not with immunosuppressed patients, chemotherapy, heart disease, diarrhea, or fecal impaction (stool packed in the rectum) (risk of perforation).</li><li>Oxygen reading: a steady waveform that matches the child's pulse.</li><li>Oxygen 88%: check the probe position first.</li></ul><h4>Examples</h4><ul><li>A 10-month-old with vomiting and bloating for 6 hours who is now quiet with a pulse of 220 and blood pressure 85/45: lethargy with dangerous tachycardia, so report.</li><li>A 2-year-old girl with blood pressure 92/60 is normal.</li><li>A 12-month-old infant with a respiratory rate of 36 is normal: document.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ</strong><ul><li>خمول مع تسارع نبض</li><li>تشبع 88%</li><li>ضغط أقل من حد الهبوط</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report</strong><ul><li>Lethargy with a fast pulse</li><li>Saturation 88%</li><li>Blood pressure below the hypotension limit</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرح للأهل.</li></ul>",
+   "en": "<ul><li>Explain to the parents.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "مولود نبض 110-180، رضيع 110-160",
+   "التنفس: مولود/رضيع 30-60",
+   "هبوط ضغط: 70 + (العمر×2)",
+   "الأكسجين > 95%",
+   "ابدأ بالأقل تدخلاً"
   ],
-  "target": "pediatrics",
-  "sections": {
-    "overview": {
-      "ar": "<p>ركّز الامتحان على النبض والتنفس والضغط عند المولود والرضيع والدارج (الأكثر هشاشة). تختلف النطاقات قليلاً بين المراجع.</p>[[slot:dis-1812-vitals|العلامات الحيوية — رسم من إعداد الموقع|/diseases/img/dis-1812-vitals.svg]][[slot:dis-1812-temp|الحرارة والأكسجين — رسم من إعداد الموقع|/diseases/img/dis-1812-temp.svg]]"
-    },
-    "causes": {
-      "ar": "<p>—</p>"
-    },
-    "signs": {
-      "ar": "<table><thead><tr><th>العمر</th><th>نبض</th><th>تنفس</th><th>انقباضي</th><th>انبساطي</th><th>هبوط</th></tr></thead><tbody><tr><td>مولود 1-28 يوماً</td><td>110-180</td><td>30-60</td><td>60-90</td><td>20-60</td><td><60</td></tr><tr><td>رضيع</td><td>110-160</td><td>30-60</td><td>70-105</td><td>35-55</td><td><70</td></tr><tr><td>دارج 1-3</td><td>80-110</td><td>24-40</td><td>85-105</td><td>40-65</td><td>70+(عمر×2)</td></tr><tr><td>ما قبل المدرسة 3-6</td><td>70-110</td><td>22-34</td><td>90-110</td><td>45-70</td><td>70+(عمر×2)</td></tr><tr><td>مدرسة 6-12</td><td>65-105</td><td>18-30</td><td>97-120</td><td>55-70</td><td>70+(عمر×2)</td></tr><tr><td>مراهق 12-18</td><td>60-100</td><td>12-18</td><td>110-130</td><td>65-80</td><td><90</td></tr></tbody></table><p>الحرارة للأقل من 5 سنوات: شرجي 36.6-38 °م، فموي 35.5-37.5، إبطي 36.5-37.5، أذن 36.7-38؛ فوق 5 سنوات 37 °م. تشبع الأكسجين الهدف أكثر من 95%.</p><p>كلما صغر الطفل ارتفع المعدل الطبيعي لحرارته الأساسية. بالفهرنهايت (أقل من 5 سنوات): شرجي 97.9-100.4، فموي 95.9-99.5، إبطي 97.8-99.5، أذن 96.4-100.4؛ فوق 5 سنوات 98.6 ف.</p>"
-    },
-    "tests": {
-      "ar": "<p>—</p>"
-    },
-    "treatment": {
-      "ar": "<ul><li>لا ينطبق: دليل تقييم.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<h4>نقاط أساسية</h4><ul><li>تحدث مع الوالدين أولاً ثم الطفل.</li><li>ابدأ بالأقل تدخلاً (القلب والرئة قبل الضغط) في الطفل الهادئ.</li><li>الرضيع في حضن مقدم الرعاية.</li><li>عدّ النبض والتنفس دقيقة كاملة للرضع والدارجين.</li><li>النبض القمّي لمدة دقيقة كاملة عند عمر سنة.</li><li>الضغط أقل عند الأطفال لصغر الأعضاء.</li><li>حرارة: فموي من 5-6 سنوات، إبطي لكل الأعمار، شرجي للرضع (الأشيع) ولكن ليس مع مثبطي المناعة والكيماوي أو الأمراض القلبية أو الإسهال أو الانحشار الشرجي (Fecal impaction: تكتل البراز في المستقيم) (خطر ثقب).</li><li>قراءة الأكسجين: موجة ثابتة تطابق نبض الطفل.</li><li>أكسجين 88%: تحقق من موضع المجس أولاً.</li></ul><h4>أمثلة</h4><ul><li>طفل 10 أشهر بقيء وانتفاخ 6 ساعات والآن هادئ بنبض 220 وضغط 85/45: خمول مع تسارع قلب خطير فبلّغ.</li><li>طفلة سنتين ضغطها 92/60 طبيعي.</li><li>رضيع 12 شهراً تنفسه 36 طبيعي: وثّق.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ</strong><ul><li>خمول مع تسارع نبض</li><li>تشبع 88%</li><li>ضغط أقل من حد الهبوط</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرح للأهل.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "مولود نبض 110-180، رضيع 110-160",
-      "التنفس: مولود/رضيع 30-60",
-      "هبوط ضغط: 70 + (العمر×2)",
-      "الأكسجين > 95%",
-      "ابدأ بالأقل تدخلاً"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "رضيع 6 أسابيع نائم، ماذا تقيّم أولاً؟"
-      },
-      "options": [
-        {
-          "ar": "صوت الرئة والقلب"
-        },
-        {
-          "ar": "الضغط"
-        },
-        {
-          "ar": "الحرارة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «صوت الرئة والقلب»؛ يُستغل نومه."
-      }
-    },
-    {
-      "q": {
-        "ar": "ضغط طفلة سنتين 92/60:"
-      },
-      "options": [
-        {
-          "ar": "طبيعي"
-        },
-        {
-          "ar": "مرتفع"
-        },
-        {
-          "ar": "هبوط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «طبيعي»؛ ضمن نطاق الدارج."
-      }
-    },
-    {
-      "q": {
-        "ar": "تشبع 88% لطفل:"
-      },
-      "options": [
-        {
-          "ar": "افحص موضع المجس"
-        },
-        {
-          "ar": "استدع الطبيب فوراً"
-        },
-        {
-          "ar": "أوقف"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قد يكون المجس خاطئاً."
-      }
-    },
-    {
-      "q": {
-        "ar": "الحرارة الشرجية ممنوعة عند:"
-      },
-      "options": [
-        {
-          "ar": "مثبطي المناعة"
-        },
-        {
-          "ar": "الرضع الأصحاء"
-        },
-        {
-          "ar": "المراهقين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «مثبطي المناعة»؛ خطر ثقب وعدوى."
-      }
-    },
-    {
-      "q": {
-        "ar": "رضيع 10 أشهر قيء وانتفاخ 6 ساعات، نبض 220 وضغط 85/45 وخامل: ماذا تبلّغ؟"
-      },
-      "options": [
-        {
-          "ar": "خمول مع تسارع القلب"
-        },
-        {
-          "ar": "الضغط فقط"
-        },
-        {
-          "ar": "القيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «خمول مع تسارع القلب»؛ علامة صدمة."
-      }
-    },
-    {
-      "q": {
-        "ar": "طريقة قياس نبض عمر سنة:"
-      },
-      "options": [
-        {
-          "ar": "قمّي لدقيقة كاملة"
-        },
-        {
-          "ar": "15 ثانية"
-        },
-        {
-          "ar": "محيطي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «قمّي لدقيقة كاملة» وفق ما شُرح في أقسام الدليل (العلامات والتمريض)."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AAP vitals"
-    },
-    {
-      "title": "PALS ranges"
-    }
+  "en": [
+   "Newborn pulse 110-180, infant 110-160",
+   "Respiration: newborn/infant 30-60",
+   "Hypotension: 70 + (age×2)",
+   "Oxygen > 95%",
+   "Start with the least invasive"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "رضيع 6 أسابيع نائم، ماذا تقيّم أولاً؟",
+    "en": "A 6-week-old infant is asleep; what do you assess first?"
+   },
+   "options": [
+    {
+     "ar": "صوت الرئة والقلب",
+     "en": "Lung and heart sounds"
+    },
+    {
+     "ar": "الضغط",
+     "en": "Blood pressure"
+    },
+    {
+     "ar": "الحرارة",
+     "en": "Temperature"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «صوت الرئة والقلب»؛ يُستغل نومه.",
+    "en": "The correct answer is \"lung and heart sounds\"; take advantage of his sleep."
+   }
+  },
+  {
+   "q": {
+    "ar": "ضغط طفلة سنتين 92/60:",
+    "en": "A 2-year-old girl's blood pressure 92/60:"
+   },
+   "options": [
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
+    },
+    {
+     "ar": "مرتفع",
+     "en": "High"
+    },
+    {
+     "ar": "هبوط",
+     "en": "Hypotension"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «طبيعي»؛ ضمن نطاق الدارج.",
+    "en": "The correct answer is \"normal\"; within the toddler range."
+   }
+  },
+  {
+   "q": {
+    "ar": "تشبع 88% لطفل:",
+    "en": "Saturation of 88% in a child:"
+   },
+   "options": [
+    {
+     "ar": "افحص موضع المجس",
+     "en": "Check the probe position"
+    },
+    {
+     "ar": "استدع الطبيب فوراً",
+     "en": "Call the physician immediately"
+    },
+    {
+     "ar": "أوقف",
+     "en": "Stop"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قد يكون المجس خاطئاً.",
+    "en": "The probe may be wrong."
+   }
+  },
+  {
+   "q": {
+    "ar": "الحرارة الشرجية ممنوعة عند:",
+    "en": "Rectal temperature is forbidden in:"
+   },
+   "options": [
+    {
+     "ar": "مثبطي المناعة",
+     "en": "Immunosuppressed patients"
+    },
+    {
+     "ar": "الرضع الأصحاء",
+     "en": "Healthy infants"
+    },
+    {
+     "ar": "المراهقين",
+     "en": "Adolescents"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «مثبطي المناعة»؛ خطر ثقب وعدوى.",
+    "en": "The correct answer is \"immunosuppressed patients\"; risk of perforation and infection."
+   }
+  },
+  {
+   "q": {
+    "ar": "رضيع 10 أشهر قيء وانتفاخ 6 ساعات، نبض 220 وضغط 85/45 وخامل: ماذا تبلّغ؟",
+    "en": "A 10-month-old infant with vomiting and bloating for 6 hours, pulse 220, blood pressure 85/45, and lethargic: what do you report?"
+   },
+   "options": [
+    {
+     "ar": "خمول مع تسارع القلب",
+     "en": "Lethargy with tachycardia"
+    },
+    {
+     "ar": "الضغط فقط",
+     "en": "Blood pressure only"
+    },
+    {
+     "ar": "القيء",
+     "en": "Vomiting"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «خمول مع تسارع القلب»؛ علامة صدمة.",
+    "en": "The correct answer is \"lethargy with tachycardia\"; a sign of shock."
+   }
+  },
+  {
+   "q": {
+    "ar": "طريقة قياس نبض عمر سنة:",
+    "en": "Method of measuring the pulse at age one year:"
+   },
+   "options": [
+    {
+     "ar": "قمّي لدقيقة كاملة",
+     "en": "Apical for a full minute"
+    },
+    {
+     "ar": "15 ثانية",
+     "en": "15 seconds"
+    },
+    {
+     "ar": "محيطي",
+     "en": "Peripheral"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «قمّي لدقيقة كاملة» وفق ما شُرح في أقسام الدليل (العلامات والتمريض).",
+    "en": "The correct answer is \"apical for a full minute\" as explained in the guide sections (signs and nursing)."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AAP vitals"
+  },
+  {
+   "title": "PALS ranges"
+  }
+ ]
 }

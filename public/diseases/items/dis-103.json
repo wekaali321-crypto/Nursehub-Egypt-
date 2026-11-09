@@ -1,193 +1,245 @@
 {
-  "id": "dis-103",
-  "num": 103,
-  "system": "infect",
-  "icon": "🌡️",
-  "level": 2,
-  "title": {
-    "ar": "التيفود (الحمى المعوية)",
-    "en": "Typhoid fever"
+ "id": "dis-103",
+ "num": 103,
+ "system": "infect",
+ "icon": "🌡️",
+ "level": 2,
+ "title": {
+  "ar": "التيفود (الحمى المعوية)",
+  "en": "Typhoid fever"
+ },
+ "teaser": {
+  "ar": "حرارة مع نبض بطيء وبطن مضطربة: اعرف أسبوعيات المرض، أخطر مضاعفاته، وإزاي تحمي نفسك والمرضى.",
+  "en": "Fever with a slow pulse and a disturbed abdomen: know the weekly course of the disease, its most dangerous complications, and how to protect yourself and patients."
+ },
+ "chips": [
+  {
+   "ar": "FAHM",
+   "en": "FAHM"
   },
-  "teaser": {
-    "ar": "حرارة مع نبض بطيء وبطن مضطربة: اعرف أسبوعيات المرض، أخطر مضاعفاته، وإزاي تحمي نفسك والمرضى."
+  {
+   "ar": "Ceftriaxone / Cipro",
+   "en": "Ceftriaxone / Cipro"
   },
-  "chips": [
-    {
-      "ar": "FAHM"
-    },
-    {
-      "ar": "Ceftriaxone / Cipro"
-    },
-    {
-      "ar": "نزيف وثقب معوي"
-    }
+  {
+   "ar": "نزيف وثقب معوي",
+   "en": "Bleeding and intestinal perforation"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>التيفود (Typhoid / الحمى المعوية) عدوى بكتيرية بتسببها <b>Salmonella Typhi</b>، بتنتقل عن طريق <b>الأكل والمية الملوثة بالبراز</b>. بعد فترة حضانة <b>1 إلى 3 أسابيع</b> تبدأ أعراض حمى شديدة ومشاكل في الأمعاء.</p><div class=\"cs-stats\"><div><b>1–3 أسابيع</b><span>فترة الحضانة</span></div><div><b>FAHM</b><span>حرارة، شهية، صداع، تعب</span></div><div><b>الأسبوع 3</b><span>خطر النزيف والثقب</span></div></div>[[slot:dis-103-weeks|مسار التيفود أسبوعاً بأسبوع — رسم توضيحي من إعداد الموقع|/diseases/img/dis-103-weeks.svg]]<div class=\"cs-box cs-info\"><strong>ليه مهم للتمريض؟</strong><p>التيفود مرض معدي مُبلَّغ عنه. مريضك مصدر عدوى (البراز)، والمضاعفات (نزيف وثقب الأمعاء) ممكن تحصل فجأة. مراقبتك هي اللي بتكشفها.</p></div>",
+   "en": "<p>Typhoid (enteric fever) is a bacterial infection caused by <b>Salmonella Typhi</b>, transmitted through <b>food and water contaminated with feces</b>. After an incubation period of <b>1 to 3 weeks</b>, symptoms of high fever and intestinal problems begin.</p><div class=\"cs-stats\"><div><b>1–3 weeks</b><span>incubation period</span></div><div><b>FAHM</b><span>fever, appetite loss, headache, malaise</span></div><div><b>Week 3</b><span>risk of bleeding and perforation</span></div></div>[[slot:dis-103-weeks|Typhoid course week by week — explanatory illustration made for the site|/diseases/img/dis-103-weeks.svg]]<div class=\"cs-box cs-info\"><strong>Why is it important for nursing?</strong><p>Typhoid is a reportable infectious disease. Your patient is a source of infection (feces), and complications (bleeding and intestinal perforation) can occur suddenly. Your monitoring is what detects them.</p></div>"
+  },
+  "causes": {
+   "ar": "<ul><li>البكتيريا: <b>Salmonella Typhi</b> (وأحياناً Paratyphi)</li><li>العدوى بالفم: مية أو أكل أو لبن أو خضار ملوثة، أو من أيدي ملوثة (خاصة مناولي الأكل)</li><li><b>حاملو العدوى (Carriers):</b> أشخاص أصحاء ببكتيريا في المرارة بيفضلوا ينشروا العدوى</li><li>ظروف الصرف والنظافة الضعيفة</li></ul><div class=\"cs-box cs-warning\"><strong>حمل البكتيريا</strong><p>بعض المتعافين بيفضلوا يخرجوا البكتيريا في البراز شهور. لازم عاملين الأكل يتفحصوا قبل الرجوع للشغل.</p></div>",
+   "en": "<ul><li>The bacteria: <b>Salmonella Typhi</b> (and sometimes Paratyphi)</li><li>Infection by mouth: contaminated water, food, milk, or vegetables, or from contaminated hands (especially food handlers)</li><li><b>Carriers:</b> healthy people with bacteria in the gallbladder who keep spreading the infection</li><li>Poor sewage and hygiene conditions</li></ul><div class=\"cs-box cs-warning\"><strong>Carrying the bacteria</strong><p>Some recovered people keep shedding the bacteria in the stool for months. Food workers must be tested before returning to work.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>الشكاوى (Complaint)</h4><ul><li><b>FAHM:</b> حرارة (Fever)، فقدان شهية (Anorexia)، صداع (Headache)، تعب عام (Malaise)</li><li>ألم بطن</li><li><b>إسهال مبكر ثم إمساك متأخر</b></li><li><b>طفح حطاطي بقعي (Macula-papular rash)</b> وردي غالباً في اليوم الخامس</li><li>المريض بيبقى <b>مريض جداً</b> مع <b>تشوش وهذيان (Confusion / Delirium)</b> في آخر الأسبوع الأول</li></ul><h4>الفحص</h4><ul><li><b>حرارة عالية مع بطء نسبي في النبض (Relative bradycardia)</b>: النبض أبطأ من المتوقع للحرارة</li><li>الطحال: <b>تضخم بسيط، لين، مؤلم</b></li></ul>[[slot:dis-103-rose|صورة: بقع التيفود الوردية (Rose spots) على جلد البطن]]<h4>المضاعفات</h4><ul><li><b>نزيف معوي (Intestinal hemorrhage)</b> وثقب الأمعاء (Perforation) غالباً الأسبوع الثالث</li><li>التهاب مرارة، التهاب عضلة القلب، التهاب سحايا نادراً</li><li>نكسة (Relapse) وحمل مزمن للبكتيريا</li></ul><h4>تفاصيل إضافية على مراحل المرض</h4><ul><li><b>الأعراض المبكرة:</b> صداع، كحة، ضعف وإرهاق، التهاب حلق، مع بطء نبض نسبي (Relative bradycardia).</li><li>قيء، إمساك أو إسهال، تضخم الطحال، وألم بطن غالباً.</li><li><b>المرحلة الثانية:</b> حرارة مستمرة (Continuous fever) وإسهال ببراز كشوربة البسلة (Pea soup).</li><li>في الحالات الشديدة: المريض يقع في <b>\"الحالة التيفودية\" (Typhoid state)</b>: راقد بلا حركة وعيناه نصف مغمضتين، هزيل ومنهك.</li><li>بقع وردية على الجذع (Rose spots).</li></ul><h4>مضاعفات تفصيلية</h4><ol><li><b>نزيف معوي:</b> هبوط مفاجئ في الضغط، ارتفاع في النبض، تيبس وألم بطن.</li><li><b>ثقب الأمعاء (Perforation).</b></li><li>التهاب رئوي، التهاب سحايا، عدوى المثانة والكلى.</li></ol>",
+   "en": "<h4>Complaints</h4><ul><li><b>FAHM:</b> Fever, Anorexia, Headache, Malaise</li><li>Abdominal pain</li><li><b>Early diarrhea then late constipation</b></li><li><b>Maculopapular rash</b>, usually pink, on the fifth day</li><li>The patient becomes <b>very ill</b> with <b>confusion and delirium</b> at the end of the first week</li></ul><h4>Examination</h4><ul><li><b>High fever with relative bradycardia</b>: the pulse is slower than expected for the temperature</li><li>Spleen: <b>mild enlargement, soft, tender</b></li></ul>[[slot:dis-103-rose|Photo: typhoid rose spots on the abdominal skin]]<h4>Complications</h4><ul><li><b>Intestinal hemorrhage</b> and intestinal perforation, usually in the third week</li><li>Cholecystitis, myocarditis, rarely meningitis</li><li>Relapse and chronic carriage of the bacteria</li></ul><h4>Additional details on the stages of the disease</h4><ul><li><b>Early symptoms:</b> headache, cough, weakness and fatigue, sore throat, with relative bradycardia.</li><li>Vomiting, constipation or diarrhea, enlarged spleen, and usually abdominal pain.</li><li><b>Second stage:</b> continuous fever and diarrhea with pea-soup stool.</li><li>In severe cases: the patient falls into the <b>\"typhoid state\"</b>: lying motionless with half-closed eyes, thin and exhausted.</li><li>Rose spots on the trunk.</li></ul><h4>Detailed complications</h4><ol><li><b>Intestinal hemorrhage:</b> sudden drop in blood pressure, rise in pulse, abdominal rigidity and pain.</li><li><b>Intestinal perforation.</b></li><li>Pneumonia, meningitis, bladder and kidney infection.</li></ol>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>صورة الدم (CBC):</b> قلة كرات بيضاء نسبية</li><li><b>مزرعة الدم (Blood culture):</b> إيجابية في <b>الأسبوع الأول</b></li><li><b>اختبار Widal:</b> إيجابي في <b>الأسبوع الثاني والثالث</b>:<ul><li>ارتفاع عيار <b>O</b> (أكثر من 360 حسب المراجع) = عدوى نشطة</li><li>ارتفاع <b>H</b> = عدوى سابقة أو تطعيم سابق</li></ul></li><li>مزرعة براز ومزرعة نخاع (في الحالات الصعبة)، وصورة CRP و وظائف كبد</li></ul>[[slot:dis-103-diagnosis|تفسير فحوصات التيفود — رسم توضيحي من إعداد الموقع|/diseases/img/dis-103-diagnosis.svg]]<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>اختبار Widal له قصور كبير: نتائج إيجابية كاذبة (عدوى أخرى أو تطعيم سابق) وسلبية كاذبة، ولهذا الأفضل <b>مزرعة الدم</b> وعيار Widal يُفسَّر مع الصورة الإكلينيكية ومع زيادة العيار بين عينتين.</p></div><div class=\"cs-box cs-tip\"><strong>دورك</strong><p>خد عينة دم المزرعة <b>قبل أول جرعة مضاد حيوي</b> (لو حالة المريض تسمح) بالتعقيم الكامل.</p></div><ul><li>مزرعة الدم والبول والبراز موجبة (+ve)</li><li>اختبار Widal موجب</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong>أثبتت الدراسات ضعف Widal كما ذُكر أعلاه؛ مزرعة الدم هي المعيار.</div><!--E16-widal--><h4>تفسير فيدال (إضافة)</h4><ul><li>إيجابي لو مولد الضد O أكبر من 1/160 أو ارتفاع التيتر 4 أضعاف في عينتين.</li><li>O سلبي: لا تيفود غالباً. كل المولدات إيجابية: لا تثق في النتيجة.</li><li>يجرى في معمل محترم، والتأكيد بمزرعة الدم (لكنها تحتاج وقتاً وقد تكون سلبية لو بدأ العلاج).</li></ul>",
+   "en": "<ul><li><b>Blood count (CBC):</b> relative leukopenia</li><li><b>Blood culture:</b> positive in the <b>first week</b></li><li><b>Widal test:</b> positive in the <b>second and third weeks</b>:<ul><li>A high <b>O</b> titer (more than 360 according to references) = active infection</li><li>A high <b>H</b> = past infection or previous vaccination</li></ul></li><li>Stool culture and bone marrow culture (in difficult cases), and CRP and liver function tests</li></ul>[[slot:dis-103-diagnosis|Interpreting typhoid tests — explanatory illustration made for the site|/diseases/img/dis-103-diagnosis.svg]]<div class=\"cs-box cs-warning\"><strong>Update</strong><p>The Widal test has major limitations: false positive results (other infection or previous vaccination) and false negatives, so <b>blood culture</b> is better and the Widal titer is interpreted with the clinical picture and with a rise in titer between two samples.</p></div><div class=\"cs-box cs-tip\"><strong>Your role</strong><p>Take the blood culture sample <b>before the first dose of antibiotic</b> (if the patient's condition allows) with full sterile technique.</p></div><ul><li>Blood, urine, and stool cultures positive (+ve)</li><li>Widal test positive</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong>Studies have shown the weakness of Widal as mentioned above; blood culture is the standard.</div><!--E16-widal--><h4>Interpreting Widal (addition)</h4><ul><li>Positive if the O antigen is greater than 1/160 or the titer rises 4-fold in two samples.</li><li>O negative: probably not typhoid. All antigens positive: do not trust the result.</li><li>Done in a reputable lab, and confirmed by blood culture (but it takes time and may be negative if treatment has started).</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>العلاج غير الدوائي (Non-pharmacological)</h4><ul><li>راحة تامة في السرير (Complete bed rest)</li><li>أكل لين (Soft diet)</li><li>سوائل بكثرة</li><li>كمادات (Cold sponge) لخفض الحرارة</li></ul><h4>العلاج الدوائي (Pharmacological) — بأمر الطبيب</h4><table><thead><tr><th>الدواء</th><th>الجرعة</th><th>المدة</th></tr></thead><tbody><tr><td><b>Ciprofloxacin</b> 500 مجم</td><td>قرص مرتين يومياً (كل 12 ساعة)</td><td>10 إلى 14 يوم</td></tr><tr><td><b>أو Ceftriaxone</b> 1000 مجم (1 جرام)</td><td>مرة واحدة يومياً (حقن)</td><td>10 إلى 14 يوم</td></tr><tr><td><b>Paracetamol</b> 500 مجم</td><td>مرتين يومياً</td><td>عند الحرارة</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>بسبب مقاومة السلالات للفلوروكينولونات (Ciprofloxacin) في بعض المناطق، منظمة الصحة العالمية تذكر <b>Azithromycin</b> و<b>Ceftriaxone</b> و<b>Ciprofloxacin</b> كخيارات حسب الحساسية، والطبيب يختار من نتيجة المزرعة والمنطقة. تُستخدم الكمادات الدافئة (Tepid sponging) بدل الباردة لأن الباردة بتسبب رعشة وانقباض أوعية. جرعات الأطفال والحوامل والكلى حسب الطبيب.</p></div><div class=\"cs-box cs-info\"><strong>ملاحظة</strong><p>المريض بيتحسن خلال 3-5 أيام وإكمال المدة كاملة ضروري لمنع النكسة وحمل البكتيريا.</p></div><h4>تفصيل العلاج حسب الخط (الحالات الحادة)</h4><p>عزل المريض وتعقيم الأغطية والملابس.</p><table><thead><tr><th>الخط</th><th>الدواء (بأمر الطبيب)</th><th>الجرعة</th></tr></thead><tbody><tr><td>الخط الأول: Co-trimoxazole</td><td>Septazole قرص أو Sutrim قرص</td><td>قرصان كل 12 ساعة لمدة أسبوعين</td></tr><tr><td>الخط الأول: Ceftriaxone أو Cefoperazone</td><td>Rocephin 1 جم فيال أو Cefazone 1 جم فيال</td><td>2 جم مرة يومياً</td></tr><tr><td>الخط الأول: Ciprofloxacin (لأن البكتيريا موجودة في البول والبراز)</td><td>Ciprofloxacin 500 قرص</td><td>قرص كل 12 ساعة لمدة أسبوعين</td></tr><tr><td>الخط الثاني (مقاومة متكررة): Ampicillin أو Amoxycillin</td><td>Ampicillin 250 كبسولة</td><td>كبسولتان كل 4 ساعات حتى تنخفض الحرارة، ثم كبسولتان كل 6 ساعات لمدة أسبوع</td></tr><tr><td>الخط الثالث (مقاومة وسمّية أكثر): Chloramphenicol</td><td>Miphenicol 250 مجم كبسولة، أو Cidocetine 250 مجم كبسولة، أو Thiophenicol 250 مجم قرص</td><td>البالغون: 4 كبسولات كل 6 ساعات حتى تنخفض الحرارة ثم كبسولتان كل 6 ساعات لمدة أسبوع. الأطفال: 50 مجم لكل كجم يومياً</td></tr></tbody></table><h4>علاجات مساعدة</h4><ul><li><b>Novalgin</b> لبوس أو شراب، أو <b>Paramol</b> شراب أو قرص: لبوسة بالشرج أو ملعقة صغيرة أو قرص بالفم 3 مرات يومياً.</li><li>فيتامين ب: <b>Beco-forte</b> أو <b>Becozyme</b> قرص 3 مرات يومياً.</li><li>في التسمم الشديد: <b>Hostacorten</b> قرص 3 مرات يومياً لمدة 3 أيام ثم قرصان يومياً لمدة 3 أيام ثم قرص يومياً.</li></ul><h4>ملاحظات (N.B.)</h4><ul><li>نقل دم في حالات النزيف.</li><li>جراحة عاجلة في حالات ثقب الأمعاء.</li><li>معالجة الصدمة.</li><li>راحة تامة بالسرير لمدة 3 أسابيع.</li><li>وجبات غنية بالسعرات الحرارية وقليلة النفايات (Low residue) مثل: السوائل، شوربة الخضار، اللبن، البيض نصف المسلوق، العسل، الجيلي، عصير العنب، فراخ أو أرانب مفرومة (مسلوقة)، الزبدة.</li></ul><h4>علاج حامل الميكروب (Carriers) والنكسات</h4><table><thead><tr><th>الاختيار</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Ampicillin أو Amoxycillin</td><td>Ampicillin 500 كبسولة أو Amoxil 500 كبسولة</td><td>كبسولتان كل 6 ساعات لمدة أسبوع</td></tr><tr><td>Co-trimoxazole أو Rifampicin</td><td>Sutrim قرص أو Septazole قرص</td><td>قرصان كل 12 ساعة لمدة أسبوعين</td></tr><tr><td></td><td>استئصال المرارة (Cholecystectomy) إذا لزم الأمر</td><td></td></tr></tbody></table><p>علاج النكسات (Relapses) هو نفس علاج الهجمة الحادة.</p><h4>الوقاية</h4><ul><li><b>لقاح التيفود</b> 0.5 سم³ تحت الجلد ويُكرر بعد 4 أسابيع (حسب المراجع).</li><li>حاملو المرض يوضعون تحت الملاحظة ويُمنعون من طهي الطعام أو حمله.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>Novalgin</b> (Metamizole) ممنوع أو غير مفضل في بلدان كثيرة لخطر نقص الكرات البيضاء (Agranulocytosis)؛ <b>الباراسيتامول هو الخافض الآمن</b>. الكورتيزون (Hostacorten) يستخدم فقط في التيفود الشديد المصحوب بصدمة أو اضطراب وعي وبجرعات عالية قصيرة (Dexamethasone) تحت مراقبة، والجدول المتناقص في المراجع لا يطابق الإرشاد. Chloramphenicol خيار احتياطي لخطر تثبيط النخاع. مع مقاومة المتعددة (MDR/XDR typhoid) تُستخدم Azithromycin أو Carbapenems. الجرعات الدقيقة بأمر الطبيب/بروتوكول المستشفى. نظام الأكل الحديث: لا حاجة لنظام شديد التقييد، لكن وجبات خفيفة سهلة الهضم ومحتوى سعرات كافي.</div>",
+   "en": "<h4>Non-pharmacological treatment</h4><ul><li>Complete bed rest</li><li>Soft diet</li><li>Plenty of fluids</li><li>Cold sponging to lower the fever</li></ul><h4>Pharmacological treatment — by physician order</h4><table><thead><tr><th>Drug</th><th>Dose</th><th>Duration</th></tr></thead><tbody><tr><td><b>Ciprofloxacin</b> 500 mg</td><td>One tablet twice daily (every 12 hours)</td><td>10 to 14 days</td></tr><tr><td><b>Or Ceftriaxone</b> 1000 mg (1 gram)</td><td>Once daily (injection)</td><td>10 to 14 days</td></tr><tr><td><b>Paracetamol</b> 500 mg</td><td>Twice daily</td><td>When febrile</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Because strains are resistant to fluoroquinolones (Ciprofloxacin) in some regions, the World Health Organization lists <b>Azithromycin</b>, <b>Ceftriaxone</b>, and <b>Ciprofloxacin</b> as options depending on sensitivity, and the physician chooses based on the culture result and the region. Tepid sponging is used instead of cold because cold causes shivering and vasoconstriction. Doses for children, pregnant women, and kidney patients are as the physician decides.</p></div><div class=\"cs-box cs-info\"><strong>Note</strong><p>The patient improves within 3-5 days, and completing the full course is necessary to prevent relapse and carriage of the bacteria.</p></div><h4>Treatment by line (acute cases)</h4><p>Isolate the patient and sterilize bedding and clothes.</p><table><thead><tr><th>Line</th><th>Drug (by physician order)</th><th>Dose</th></tr></thead><tbody><tr><td>First line: Co-trimoxazole</td><td>Septazole tablet or Sutrim tablet</td><td>Two tablets every 12 hours for two weeks</td></tr><tr><td>First line: Ceftriaxone or Cefoperazone</td><td>Rocephin 1 g vial or Cefazone 1 g vial</td><td>2 g once daily</td></tr><tr><td>First line: Ciprofloxacin (because the bacteria are present in urine and stool)</td><td>Ciprofloxacin 500 tablet</td><td>One tablet every 12 hours for two weeks</td></tr><tr><td>Second line (frequent resistance): Ampicillin or Amoxycillin</td><td>Ampicillin 250 capsule</td><td>Two capsules every 4 hours until the fever falls, then two capsules every 6 hours for a week</td></tr><tr><td>Third line (resistance and more toxicity): Chloramphenicol</td><td>Miphenicol 250 mg capsule, or Cidocetine 250 mg capsule, or Thiophenicol 250 mg tablet</td><td>Adults: 4 capsules every 6 hours until the fever falls then two capsules every 6 hours for a week. Children: 50 mg per kg daily</td></tr></tbody></table><h4>Supportive treatments</h4><ul><li><b>Novalgin</b> suppository or syrup, or <b>Paramol</b> syrup or tablet: a rectal suppository or a teaspoon or a tablet by mouth 3 times daily.</li><li>Vitamin B: <b>Beco-forte</b> or <b>Becozyme</b> tablet 3 times daily.</li><li>In severe toxicity: <b>Hostacorten</b> tablet 3 times daily for 3 days then two tablets daily for 3 days then one tablet daily.</li></ul><h4>Notes (N.B.)</h4><ul><li>Blood transfusion in cases of bleeding.</li><li>Urgent surgery in cases of intestinal perforation.</li><li>Treat shock.</li><li>Complete bed rest for 3 weeks.</li><li>High-calorie, low-residue meals such as: fluids, vegetable soup, milk, soft-boiled eggs, honey, jelly, grape juice, minced (boiled) chicken or rabbit, butter.</li></ul><h4>Treatment of carriers and relapses</h4><table><thead><tr><th>Choice</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Ampicillin or Amoxycillin</td><td>Ampicillin 500 capsule or Amoxil 500 capsule</td><td>Two capsules every 6 hours for a week</td></tr><tr><td>Co-trimoxazole or Rifampicin</td><td>Sutrim tablet or Septazole tablet</td><td>Two tablets every 12 hours for two weeks</td></tr><tr><td></td><td>Cholecystectomy if necessary</td><td></td></tr></tbody></table><p>Treatment of relapses is the same as the treatment of the acute attack.</p><h4>Prevention</h4><ul><li><b>Typhoid vaccine</b> 0.5 cm³ subcutaneously, repeated after 4 weeks (according to references).</li><li>Carriers are placed under observation and are prohibited from cooking or carrying food.</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><b>Novalgin</b> (Metamizole) is banned or not preferred in many countries because of the risk of low white blood cells (agranulocytosis); <b>paracetamol is the safe antipyretic</b>. Cortisone (Hostacorten) is used only in severe typhoid accompanied by shock or altered consciousness and in short high doses (Dexamethasone) under monitoring, and the tapering schedule in references does not match the guidance. Chloramphenicol is a backup option because of the risk of bone marrow suppression. With multidrug resistance (MDR/XDR typhoid), Azithromycin or Carbapenems are used. Exact doses are by physician order/hospital protocol. Modern diet: no need for a strictly restricted diet, but light, easily digested meals with enough calories.</div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>عزل مُعدٍ واحتياطات</strong><p>نظافة الأيدي بالماء والصابون، قفازات عند البراز والفراش، تطهير الحمام. أبلّغ مكافحة العدوى والمسؤول عن الإبلاغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّم وسجّل</strong><p>الحرارة كل 4 ساعات، النبض (الحرارة مع نبض بطيء نسبياً = علامة)، الضغط، الوعي (تشوش/هذيان).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راقب المضاعفات</strong><p><b>نزيف:</b> براز أسود أو دم، شحوب، تسارع النبض، هبوط الضغط. <b>ثقب:</b> ألم بطن مفاجئ شديد، صلابة البطن، قيء. أي منهم: طوارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اخفض الحرارة</strong><p>باراسيتامول بالأمر، كمادات دافئة، ملابس خفيفة، سوائل. تجنب الأسبرين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>السوائل والتغذية</strong><p>السوائل الفموية بكثرة (محلول معالجة الجفاف ORS)، وجبات لينة صغيرة متكررة، وزن/ميزان سوائل. سوائل وريدية بأمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أعطِ المضاد الحيوي بأمان</strong><p>Ceftriaxone: تأكد من الحساسية للبنسلين، إعطاء بطيء. Ciprofloxacin: لا مع مضادات الحموضة/الحديد/الكالسيوم في نفس الوقت (فاصل 2-4 ساعات)، ماء كتير، تحذير من ألم الأوتار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>نظافة وراحة</strong><p>عناية بالفم (الجفاف)، تغيير وضع كل ساعتين لمنع قرح الفراش، الراحة التامة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>ثقّف وتحرّى</strong><p>نظافة اليدين، فصل أدوات الأكل، فحص مخالطين، وعدم عودة المريض لتناول الطعام للآخرين قبل التحليل.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>تفاصيل إضافية للممرض</strong><p>راقب النزيف المعوي (هبوط ضغط ونبض سريع وبراز أسود/دم)، وصلابة البطن (ثقب) خصوصاً في الأسبوع الثالث. ثقف الحامل: لا يعمل بالأغذية حتى سلبية 3 مزارع. اسأل عن حساسية السلفا والبنسلين قبل الإعطاء، وسجّل الداخل والخارج.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Infectious isolation and precautions</strong><p>Hand hygiene with soap and water, gloves with stool and bedding, disinfect the bathroom. Notify infection control and the person responsible for reporting.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Assess and record</strong><p>Temperature every 4 hours, pulse (fever with a relatively slow pulse = a sign), blood pressure, consciousness (confusion/delirium).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Monitor for complications</strong><p><b>Bleeding:</b> black stool or blood, pallor, fast pulse, low blood pressure. <b>Perforation:</b> sudden severe abdominal pain, rigid abdomen, vomiting. Any of them: emergency.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Lower the fever</strong><p>Paracetamol by order, tepid sponging, light clothing, fluids. Avoid aspirin.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Fluids and nutrition</strong><p>Plenty of oral fluids (oral rehydration solution ORS), small frequent soft meals, weight/fluid balance. IV fluids by physician order.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Give the antibiotic safely</strong><p>Ceftriaxone: check for penicillin allergy, give slowly. Ciprofloxacin: not at the same time as antacids/iron/calcium (separate by 2-4 hours), plenty of water, warn about tendon pain.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Hygiene and rest</strong><p>Mouth care (dryness), reposition every two hours to prevent pressure sores, complete rest.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Teach and investigate</strong><p>Hand hygiene, separate eating utensils, examine contacts, and the patient must not return to handling food for others before testing.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>Additional details for the nurse</strong><p>Monitor for intestinal bleeding (low blood pressure, fast pulse, and black stool/blood) and abdominal rigidity (perforation), especially in the third week. Educate the carrier: no work with food until 3 cultures are negative. Ask about sulfa and penicillin allergy before giving, and record intake and output.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>براز أسود أو نزيف من الشرج أو شحوب مفاجئ</li><li>ألم بطن شديد مفاجئ أو بطن صلبة أو قيء</li><li>هبوط ضغط أو نبض سريع</li><li>تشوش أو هذيان أو تشنج</li><li>حرارة مستمرة بعد 3-5 أيام علاج</li><li>جفاف شديد أو انقطاع البول</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Black stool or bleeding from the rectum or sudden pallor</li><li>Sudden severe abdominal pain or a rigid abdomen or vomiting</li><li>Low blood pressure or fast pulse</li><li>Confusion, delirium, or seizure</li><li>Persistent fever after 3-5 days of treatment</li><li>Severe dehydration or stopped urine</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرب مية مغلية أو معبأة، وخضار تتغسل جيداً وتتطبخ الأكلات.</li><li>اغسل إيديك بالصابون بعد الحمّام وقبل الأكل.</li><li>كمّل العلاج كله حتى لو اتحسنت.</li><li>ما تحضّرش أكل لغيرك طول فترة المرض وبعد تحليل البراز.</li><li>تطعيم التيفود (Vi) متاح للمسافرين ولبعض الفئات.</li><li>لو راجع الحرارة أو الألم أو نزل دم: ارجع فوراً.</li></ul>",
+   "en": "<ul><li>Drink boiled or bottled water, and wash vegetables well and cook food.</li><li>Wash your hands with soap after the bathroom and before eating.</li><li>Complete the whole treatment even if you improve.</li><li>Do not prepare food for others throughout the illness and after the stool test.</li><li>The typhoid vaccine (Vi) is available for travelers and some groups.</li><li>If the fever or pain returns or blood comes out: return immediately.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الحضانة 1-3 أسابيع، ومن الأعراض: FAHM وإسهال مبكر وإمساك متأخر وطفح في اليوم الخامس",
+   "الحرارة العالية مع نبض بطيء نسبياً علامة مميزة",
+   "مزرعة الدم إيجابية في الأسبوع الأول، Widal في الأسبوع الثاني والثالث وله قصور",
+   "العلاج: Ciprofloxacin أو Ceftriaxone لمدة 10-14 يوم (حسب الحساسية والأمر)",
+   "أخطر مضاعفاته: نزيف وثقب الأمعاء في الأسبوع الثالث",
+   "عزل مُعدٍ، وسوائل، وكمادات دافئة",
+   "الأسبوع الثالث: خطر النزيف المعوي وثقب الأمعاء، والراحة 3 أسابيع",
+   "حامل الميكروب: Ampicillin/Co-trimoxazole وربما استئصال المرارة، ويُمنع من العمل بالأغذية"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>التيفود (Typhoid / الحمى المعوية) عدوى بكتيرية بتسببها <b>Salmonella Typhi</b>، بتنتقل عن طريق <b>الأكل والمية الملوثة بالبراز</b>. بعد فترة حضانة <b>1 إلى 3 أسابيع</b> تبدأ أعراض حمى شديدة ومشاكل في الأمعاء.</p><div class=\"cs-stats\"><div><b>1–3 أسابيع</b><span>فترة الحضانة</span></div><div><b>FAHM</b><span>حرارة، شهية، صداع، تعب</span></div><div><b>الأسبوع 3</b><span>خطر النزيف والثقب</span></div></div>[[slot:dis-103-weeks|مسار التيفود أسبوعاً بأسبوع — رسم توضيحي من إعداد الموقع|/diseases/img/dis-103-weeks.svg]]<div class=\"cs-box cs-info\"><strong>ليه مهم للتمريض؟</strong><p>التيفود مرض معدي مُبلَّغ عنه. مريضك مصدر عدوى (البراز)، والمضاعفات (نزيف وثقب الأمعاء) ممكن تحصل فجأة. مراقبتك هي اللي بتكشفها.</p></div>"
-    },
-    "causes": {
-      "ar": "<ul><li>البكتيريا: <b>Salmonella Typhi</b> (وأحياناً Paratyphi)</li><li>العدوى بالفم: مية أو أكل أو لبن أو خضار ملوثة، أو من أيدي ملوثة (خاصة مناولي الأكل)</li><li><b>حاملو العدوى (Carriers):</b> أشخاص أصحاء ببكتيريا في المرارة بيفضلوا ينشروا العدوى</li><li>ظروف الصرف والنظافة الضعيفة</li></ul><div class=\"cs-box cs-warning\"><strong>حمل البكتيريا</strong><p>بعض المتعافين بيفضلوا يخرجوا البكتيريا في البراز شهور. لازم عاملين الأكل يتفحصوا قبل الرجوع للشغل.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>الشكاوى (Complaint)</h4><ul><li><b>FAHM:</b> حرارة (Fever)، فقدان شهية (Anorexia)، صداع (Headache)، تعب عام (Malaise)</li><li>ألم بطن</li><li><b>إسهال مبكر ثم إمساك متأخر</b></li><li><b>طفح حطاطي بقعي (Macula-papular rash)</b> وردي غالباً في اليوم الخامس</li><li>المريض بيبقى <b>مريض جداً</b> مع <b>تشوش وهذيان (Confusion / Delirium)</b> في آخر الأسبوع الأول</li></ul><h4>الفحص</h4><ul><li><b>حرارة عالية مع بطء نسبي في النبض (Relative bradycardia)</b>: النبض أبطأ من المتوقع للحرارة</li><li>الطحال: <b>تضخم بسيط، لين، مؤلم</b></li></ul>[[slot:dis-103-rose|صورة: بقع التيفود الوردية (Rose spots) على جلد البطن]]<h4>المضاعفات</h4><ul><li><b>نزيف معوي (Intestinal hemorrhage)</b> وثقب الأمعاء (Perforation) غالباً الأسبوع الثالث</li><li>التهاب مرارة، التهاب عضلة القلب، التهاب سحايا نادراً</li><li>نكسة (Relapse) وحمل مزمن للبكتيريا</li></ul><h4>تفاصيل إضافية على مراحل المرض</h4><ul><li><b>الأعراض المبكرة:</b> صداع، كحة، ضعف وإرهاق، التهاب حلق، مع بطء نبض نسبي (Relative bradycardia).</li><li>قيء، إمساك أو إسهال، تضخم الطحال، وألم بطن غالباً.</li><li><b>المرحلة الثانية:</b> حرارة مستمرة (Continuous fever) وإسهال ببراز كشوربة البسلة (Pea soup).</li><li>في الحالات الشديدة: المريض يقع في <b>\"الحالة التيفودية\" (Typhoid state)</b>: راقد بلا حركة وعيناه نصف مغمضتين، هزيل ومنهك.</li><li>بقع وردية على الجذع (Rose spots).</li></ul><h4>مضاعفات تفصيلية</h4><ol><li><b>نزيف معوي:</b> هبوط مفاجئ في الضغط، ارتفاع في النبض، تيبس وألم بطن.</li><li><b>ثقب الأمعاء (Perforation).</b></li><li>التهاب رئوي، التهاب سحايا، عدوى المثانة والكلى.</li></ol>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>صورة الدم (CBC):</b> قلة كرات بيضاء نسبية</li><li><b>مزرعة الدم (Blood culture):</b> إيجابية في <b>الأسبوع الأول</b></li><li><b>اختبار Widal:</b> إيجابي في <b>الأسبوع الثاني والثالث</b>:<ul><li>ارتفاع عيار <b>O</b> (أكثر من 360 حسب المراجع) = عدوى نشطة</li><li>ارتفاع <b>H</b> = عدوى سابقة أو تطعيم سابق</li></ul></li><li>مزرعة براز ومزرعة نخاع (في الحالات الصعبة)، وصورة CRP و وظائف كبد</li></ul>[[slot:dis-103-diagnosis|تفسير فحوصات التيفود — رسم توضيحي من إعداد الموقع|/diseases/img/dis-103-diagnosis.svg]]<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>اختبار Widal له قصور كبير: نتائج إيجابية كاذبة (عدوى أخرى أو تطعيم سابق) وسلبية كاذبة، ولهذا الأفضل <b>مزرعة الدم</b> وعيار Widal يُفسَّر مع الصورة الإكلينيكية ومع زيادة العيار بين عينتين.</p></div><div class=\"cs-box cs-tip\"><strong>دورك</strong><p>خد عينة دم المزرعة <b>قبل أول جرعة مضاد حيوي</b> (لو حالة المريض تسمح) بالتعقيم الكامل.</p></div><ul><li>مزرعة الدم والبول والبراز موجبة (+ve)</li><li>اختبار Widal موجب</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong>أثبتت الدراسات ضعف Widal كما ذُكر أعلاه؛ مزرعة الدم هي المعيار.</div><!--E16-widal--><h4>تفسير فيدال (إضافة)</h4><ul><li>إيجابي لو مولد الضد O أكبر من 1/160 أو ارتفاع التيتر 4 أضعاف في عينتين.</li><li>O سلبي: لا تيفود غالباً. كل المولدات إيجابية: لا تثق في النتيجة.</li><li>يجرى في معمل محترم، والتأكيد بمزرعة الدم (لكنها تحتاج وقتاً وقد تكون سلبية لو بدأ العلاج).</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>العلاج غير الدوائي (Non-pharmacological)</h4><ul><li>راحة تامة في السرير (Complete bed rest)</li><li>أكل لين (Soft diet)</li><li>سوائل بكثرة</li><li>كمادات (Cold sponge) لخفض الحرارة</li></ul><h4>العلاج الدوائي (Pharmacological) — بأمر الطبيب</h4><table><thead><tr><th>الدواء</th><th>الجرعة</th><th>المدة</th></tr></thead><tbody><tr><td><b>Ciprofloxacin</b> 500 مجم</td><td>قرص مرتين يومياً (كل 12 ساعة)</td><td>10 إلى 14 يوم</td></tr><tr><td><b>أو Ceftriaxone</b> 1000 مجم (1 جرام)</td><td>مرة واحدة يومياً (حقن)</td><td>10 إلى 14 يوم</td></tr><tr><td><b>Paracetamol</b> 500 مجم</td><td>مرتين يومياً</td><td>عند الحرارة</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>بسبب مقاومة السلالات للفلوروكينولونات (Ciprofloxacin) في بعض المناطق، منظمة الصحة العالمية تذكر <b>Azithromycin</b> و<b>Ceftriaxone</b> و<b>Ciprofloxacin</b> كخيارات حسب الحساسية، والطبيب يختار من نتيجة المزرعة والمنطقة. تُستخدم الكمادات الدافئة (Tepid sponging) بدل الباردة لأن الباردة بتسبب رعشة وانقباض أوعية. جرعات الأطفال والحوامل والكلى حسب الطبيب.</p></div><div class=\"cs-box cs-info\"><strong>ملاحظة</strong><p>المريض بيتحسن خلال 3-5 أيام وإكمال المدة كاملة ضروري لمنع النكسة وحمل البكتيريا.</p></div><h4>تفصيل العلاج حسب الخط (الحالات الحادة)</h4><p>عزل المريض وتعقيم الأغطية والملابس.</p><table><thead><tr><th>الخط</th><th>الدواء (بأمر الطبيب)</th><th>الجرعة</th></tr></thead><tbody><tr><td>الخط الأول: Co-trimoxazole</td><td>Septazole قرص أو Sutrim قرص</td><td>قرصان كل 12 ساعة لمدة أسبوعين</td></tr><tr><td>الخط الأول: Ceftriaxone أو Cefoperazone</td><td>Rocephin 1 جم فيال أو Cefazone 1 جم فيال</td><td>2 جم مرة يومياً</td></tr><tr><td>الخط الأول: Ciprofloxacin (لأن البكتيريا موجودة في البول والبراز)</td><td>Ciprofloxacin 500 قرص</td><td>قرص كل 12 ساعة لمدة أسبوعين</td></tr><tr><td>الخط الثاني (مقاومة متكررة): Ampicillin أو Amoxycillin</td><td>Ampicillin 250 كبسولة</td><td>كبسولتان كل 4 ساعات حتى تنخفض الحرارة، ثم كبسولتان كل 6 ساعات لمدة أسبوع</td></tr><tr><td>الخط الثالث (مقاومة وسمّية أكثر): Chloramphenicol</td><td>Miphenicol 250 مجم كبسولة، أو Cidocetine 250 مجم كبسولة، أو Thiophenicol 250 مجم قرص</td><td>البالغون: 4 كبسولات كل 6 ساعات حتى تنخفض الحرارة ثم كبسولتان كل 6 ساعات لمدة أسبوع. الأطفال: 50 مجم لكل كجم يومياً</td></tr></tbody></table><h4>علاجات مساعدة</h4><ul><li><b>Novalgin</b> لبوس أو شراب، أو <b>Paramol</b> شراب أو قرص: لبوسة بالشرج أو ملعقة صغيرة أو قرص بالفم 3 مرات يومياً.</li><li>فيتامين ب: <b>Beco-forte</b> أو <b>Becozyme</b> قرص 3 مرات يومياً.</li><li>في التسمم الشديد: <b>Hostacorten</b> قرص 3 مرات يومياً لمدة 3 أيام ثم قرصان يومياً لمدة 3 أيام ثم قرص يومياً.</li></ul><h4>ملاحظات (N.B.)</h4><ul><li>نقل دم في حالات النزيف.</li><li>جراحة عاجلة في حالات ثقب الأمعاء.</li><li>معالجة الصدمة.</li><li>راحة تامة بالسرير لمدة 3 أسابيع.</li><li>وجبات غنية بالسعرات الحرارية وقليلة النفايات (Low residue) مثل: السوائل، شوربة الخضار، اللبن، البيض نصف المسلوق، العسل، الجيلي، عصير العنب، فراخ أو أرانب مفرومة (مسلوقة)، الزبدة.</li></ul><h4>علاج حامل الميكروب (Carriers) والنكسات</h4><table><thead><tr><th>الاختيار</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Ampicillin أو Amoxycillin</td><td>Ampicillin 500 كبسولة أو Amoxil 500 كبسولة</td><td>كبسولتان كل 6 ساعات لمدة أسبوع</td></tr><tr><td>Co-trimoxazole أو Rifampicin</td><td>Sutrim قرص أو Septazole قرص</td><td>قرصان كل 12 ساعة لمدة أسبوعين</td></tr><tr><td></td><td>استئصال المرارة (Cholecystectomy) إذا لزم الأمر</td><td></td></tr></tbody></table><p>علاج النكسات (Relapses) هو نفس علاج الهجمة الحادة.</p><h4>الوقاية</h4><ul><li><b>لقاح التيفود</b> 0.5 سم³ تحت الجلد ويُكرر بعد 4 أسابيع (حسب المراجع).</li><li>حاملو المرض يوضعون تحت الملاحظة ويُمنعون من طهي الطعام أو حمله.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>Novalgin</b> (Metamizole) ممنوع أو غير مفضل في بلدان كثيرة لخطر نقص الكرات البيضاء (Agranulocytosis)؛ <b>الباراسيتامول هو الخافض الآمن</b>. الكورتيزون (Hostacorten) يستخدم فقط في التيفود الشديد المصحوب بصدمة أو اضطراب وعي وبجرعات عالية قصيرة (Dexamethasone) تحت مراقبة، والجدول المتناقص في المراجع لا يطابق الإرشاد. Chloramphenicol خيار احتياطي لخطر تثبيط النخاع. مع مقاومة المتعددة (MDR/XDR typhoid) تُستخدم Azithromycin أو Carbapenems. الجرعات الدقيقة بأمر الطبيب/بروتوكول المستشفى. نظام الأكل الحديث: لا حاجة لنظام شديد التقييد، لكن وجبات خفيفة سهلة الهضم ومحتوى سعرات كافي.</div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>عزل مُعدٍ واحتياطات</strong><p>نظافة الأيدي بالماء والصابون، قفازات عند البراز والفراش، تطهير الحمام. أبلّغ مكافحة العدوى والمسؤول عن الإبلاغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّم وسجّل</strong><p>الحرارة كل 4 ساعات، النبض (الحرارة مع نبض بطيء نسبياً = علامة)، الضغط، الوعي (تشوش/هذيان).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راقب المضاعفات</strong><p><b>نزيف:</b> براز أسود أو دم، شحوب، تسارع النبض، هبوط الضغط. <b>ثقب:</b> ألم بطن مفاجئ شديد، صلابة البطن، قيء. أي منهم: طوارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اخفض الحرارة</strong><p>باراسيتامول بالأمر، كمادات دافئة، ملابس خفيفة، سوائل. تجنب الأسبرين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>السوائل والتغذية</strong><p>السوائل الفموية بكثرة (محلول معالجة الجفاف ORS)، وجبات لينة صغيرة متكررة، وزن/ميزان سوائل. سوائل وريدية بأمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أعطِ المضاد الحيوي بأمان</strong><p>Ceftriaxone: تأكد من الحساسية للبنسلين، إعطاء بطيء. Ciprofloxacin: لا مع مضادات الحموضة/الحديد/الكالسيوم في نفس الوقت (فاصل 2-4 ساعات)، ماء كتير، تحذير من ألم الأوتار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>نظافة وراحة</strong><p>عناية بالفم (الجفاف)، تغيير وضع كل ساعتين لمنع قرح الفراش، الراحة التامة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>ثقّف وتحرّى</strong><p>نظافة اليدين، فصل أدوات الأكل، فحص مخالطين، وعدم عودة المريض لتناول الطعام للآخرين قبل التحليل.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>تفاصيل إضافية للممرض</strong><p>راقب النزيف المعوي (هبوط ضغط ونبض سريع وبراز أسود/دم)، وصلابة البطن (ثقب) خصوصاً في الأسبوع الثالث. ثقف الحامل: لا يعمل بالأغذية حتى سلبية 3 مزارع. اسأل عن حساسية السلفا والبنسلين قبل الإعطاء، وسجّل الداخل والخارج.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>براز أسود أو نزيف من الشرج أو شحوب مفاجئ</li><li>ألم بطن شديد مفاجئ أو بطن صلبة أو قيء</li><li>هبوط ضغط أو نبض سريع</li><li>تشوش أو هذيان أو تشنج</li><li>حرارة مستمرة بعد 3-5 أيام علاج</li><li>جفاف شديد أو انقطاع البول</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرب مية مغلية أو معبأة، وخضار تتغسل جيداً وتتطبخ الأكلات.</li><li>اغسل إيديك بالصابون بعد الحمّام وقبل الأكل.</li><li>كمّل العلاج كله حتى لو اتحسنت.</li><li>ما تحضّرش أكل لغيرك طول فترة المرض وبعد تحليل البراز.</li><li>تطعيم التيفود (Vi) متاح للمسافرين ولبعض الفئات.</li><li>لو راجع الحرارة أو الألم أو نزل دم: ارجع فوراً.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الحضانة 1-3 أسابيع، ومن الأعراض: FAHM وإسهال مبكر وإمساك متأخر وطفح في اليوم الخامس",
-      "الحرارة العالية مع نبض بطيء نسبياً علامة مميزة",
-      "مزرعة الدم إيجابية في الأسبوع الأول، Widal في الأسبوع الثاني والثالث وله قصور",
-      "العلاج: Ciprofloxacin أو Ceftriaxone لمدة 10-14 يوم (حسب الحساسية والأمر)",
-      "أخطر مضاعفاته: نزيف وثقب الأمعاء في الأسبوع الثالث",
-      "عزل مُعدٍ، وسوائل، وكمادات دافئة",
-      "الأسبوع الثالث: خطر النزيف المعوي وثقب الأمعاء، والراحة 3 أسابيع",
-      "حامل الميكروب: Ampicillin/Co-trimoxazole وربما استئصال المرارة، ويُمنع من العمل بالأغذية"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي علامة تدل على التيفود؟"
-      },
-      "options": [
-        {
-          "ar": "حرارة عالية مع نبض بطيء نسبياً"
-        },
-        {
-          "ar": "حرارة مع نبض سريع جداً"
-        },
-        {
-          "ar": "برودة الأطراف"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Relative bradycardia من العلامات المميزة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أنسب وقت لمزرعة الدم؟"
-      },
-      "options": [
-        {
-          "ar": "الأسبوع الأول"
-        },
-        {
-          "ar": "الأسبوع الرابع"
-        },
-        {
-          "ar": "بعد العلاج بشهر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تكون إيجابية في الأسبوع الأول."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض تيفود حصل عنده براز أسود وهبوط ضغط في الأسبوع الثالث. الاحتمال؟"
-      },
-      "options": [
-        {
-          "ar": "نزيف معوي"
-        },
-        {
-          "ar": "إمساك"
-        },
-        {
-          "ar": "حساسية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "النزيف المعوي من أخطر المضاعفات."
-      }
-    },
-    {
-      "q": {
-        "ar": "ارتفاع عيار H في Widal يدل على:"
-      },
-      "options": [
-        {
-          "ar": "عدوى نشطة بالتأكيد"
-        },
-        {
-          "ar": "عدوى سابقة أو تطعيم"
-        },
-        {
-          "ar": "لا يدل على شيء"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "O هو المرتفع في العدوى النشطة، وH في السابق أو التطعيم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أفضل طريقة لخفض الحرارة؟"
-      },
-      "options": [
-        {
-          "ar": "كمادات دافئة وباراسيتامول"
-        },
-        {
-          "ar": "مياه ثلج"
-        },
-        {
-          "ar": "أسبرين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الكمادات الباردة تسبب رعشة؛ الأسبرين غير مناسب."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة نزيف معوي في التيفود؟"
-      },
-      "options": [
-        {
-          "ar": "هبوط ضغط مفاجئ مع نبض سريع وألم بطن"
-        },
-        {
-          "ar": "ارتفاع الضغط"
-        },
-        {
-          "ar": "كحة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تحتاج نقل دم وتدخل جراحي أحياناً."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Typhoid fever: issues in laboratory detection, treatment options and concerns in management in developing countries (Future Science OA, 2018)"
-    },
-    {
-      "title": "Cochrane review: Antibiotics for treating enteric fever (summary)"
-    }
+  "en": [
+   "Incubation 1-3 weeks, and symptoms include: FAHM, early diarrhea, late constipation, and a rash on the fifth day",
+   "High fever with a relatively slow pulse is a distinctive sign",
+   "Blood culture is positive in the first week, Widal in the second and third weeks and has limitations",
+   "Treatment: Ciprofloxacin or Ceftriaxone for 10-14 days (according to sensitivity and the order)",
+   "Most dangerous complications: bleeding and intestinal perforation in the third week",
+   "Infectious isolation, fluids, and tepid sponging",
+   "Third week: risk of intestinal bleeding and perforation, and rest for 3 weeks",
+   "Carrier: Ampicillin/Co-trimoxazole and perhaps cholecystectomy, and prohibited from working with food"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي علامة تدل على التيفود؟",
+    "en": "Which sign indicates typhoid?"
+   },
+   "options": [
+    {
+     "ar": "حرارة عالية مع نبض بطيء نسبياً",
+     "en": "High fever with a relatively slow pulse"
+    },
+    {
+     "ar": "حرارة مع نبض سريع جداً",
+     "en": "Fever with a very fast pulse"
+    },
+    {
+     "ar": "برودة الأطراف",
+     "en": "Cold extremities"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Relative bradycardia من العلامات المميزة.",
+    "en": "Relative bradycardia is a distinctive sign."
+   }
+  },
+  {
+   "q": {
+    "ar": "أنسب وقت لمزرعة الدم؟",
+    "en": "The best time for a blood culture?"
+   },
+   "options": [
+    {
+     "ar": "الأسبوع الأول",
+     "en": "The first week"
+    },
+    {
+     "ar": "الأسبوع الرابع",
+     "en": "The fourth week"
+    },
+    {
+     "ar": "بعد العلاج بشهر",
+     "en": "A month after treatment"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تكون إيجابية في الأسبوع الأول.",
+    "en": "It is positive in the first week."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض تيفود حصل عنده براز أسود وهبوط ضغط في الأسبوع الثالث. الاحتمال؟",
+    "en": "A typhoid patient has black stool and low blood pressure in the third week. The likely cause?"
+   },
+   "options": [
+    {
+     "ar": "نزيف معوي",
+     "en": "Intestinal bleeding"
+    },
+    {
+     "ar": "إمساك",
+     "en": "Constipation"
+    },
+    {
+     "ar": "حساسية",
+     "en": "Allergy"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "النزيف المعوي من أخطر المضاعفات.",
+    "en": "Intestinal bleeding is one of the most dangerous complications."
+   }
+  },
+  {
+   "q": {
+    "ar": "ارتفاع عيار H في Widal يدل على:",
+    "en": "A high H titer in Widal indicates:"
+   },
+   "options": [
+    {
+     "ar": "عدوى نشطة بالتأكيد",
+     "en": "Definitely an active infection"
+    },
+    {
+     "ar": "عدوى سابقة أو تطعيم",
+     "en": "A past infection or vaccination"
+    },
+    {
+     "ar": "لا يدل على شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "O هو المرتفع في العدوى النشطة، وH في السابق أو التطعيم.",
+    "en": "O is the one raised in active infection, and H in a past infection or vaccination."
+   }
+  },
+  {
+   "q": {
+    "ar": "أفضل طريقة لخفض الحرارة؟",
+    "en": "The best way to lower the fever?"
+   },
+   "options": [
+    {
+     "ar": "كمادات دافئة وباراسيتامول",
+     "en": "Tepid sponging and paracetamol"
+    },
+    {
+     "ar": "مياه ثلج",
+     "en": "Ice water"
+    },
+    {
+     "ar": "أسبرين",
+     "en": "Aspirin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الكمادات الباردة تسبب رعشة؛ الأسبرين غير مناسب.",
+    "en": "Cold compresses cause shivering; aspirin is not suitable."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة نزيف معوي في التيفود؟",
+    "en": "A sign of intestinal bleeding in typhoid?"
+   },
+   "options": [
+    {
+     "ar": "هبوط ضغط مفاجئ مع نبض سريع وألم بطن",
+     "en": "Sudden low blood pressure with fast pulse and abdominal pain"
+    },
+    {
+     "ar": "ارتفاع الضغط",
+     "en": "High blood pressure"
+    },
+    {
+     "ar": "كحة",
+     "en": "Cough"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تحتاج نقل دم وتدخل جراحي أحياناً.",
+    "en": "It needs blood transfusion and sometimes surgical intervention."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Typhoid fever: issues in laboratory detection, treatment options and concerns in management in developing countries (Future Science OA, 2018)"
+  },
+  {
+   "title": "Cochrane review: Antibiotics for treating enteric fever (summary)"
+  }
+ ]
 }

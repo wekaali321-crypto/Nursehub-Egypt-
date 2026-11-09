@@ -1,187 +1,237 @@
 {
-  "id": "dis-3302",
-  "num": 3302,
-  "system": "blood",
-  "icon": "🩸",
-  "level": 2,
-  "title": {
-    "ar": "الوارفارين (Warfarin) وINR ومقارنته بالهيبارين",
-    "en": "Warfarin, INR & Heparin vs Warfarin"
+ "id": "dis-3302",
+ "num": 3302,
+ "system": "blood",
+ "icon": "🩸",
+ "level": 2,
+ "title": {
+  "ar": "الوارفارين (Warfarin) وINR ومقارنته بالهيبارين",
+  "en": "Warfarin, INR & Heparin vs Warfarin"
+ },
+ "teaser": {
+  "ar": "المدى العلاجي لـINR، الترياق فيتامين K، الأغذية، تداخل المضادات الحيوية، وجدول مقارنة الهيبارين والوارفارين.",
+  "en": "The INR therapeutic range, the vitamin K antidote, foods, antibiotic interactions, and a comparison table of heparin and warfarin."
+ },
+ "chips": [
+  {
+   "ar": "INR 2–3",
+   "en": "INR 2–3"
   },
-  "teaser": {
-    "ar": "المدى العلاجي لـINR، الترياق فيتامين K، الأغذية، تداخل المضادات الحيوية، وجدول مقارنة الهيبارين والوارفارين."
+  {
+   "ar": "فيتامين K",
+   "en": "Vitamin K"
   },
-  "chips": [
-    {
-      "ar": "INR 2–3"
-    },
-    {
-      "ar": "فيتامين K"
-    },
-    {
-      "ar": "مقارنة"
-    }
+  {
+   "ar": "مقارنة",
+   "en": "Comparison"
+  }
+ ],
+ "target": "pharmacology",
+ "sections": {
+  "overview": {
+   "ar": "<p>الوارفارين مضاد تخثر فموي مفعوله بطيء البداية (حوالي 5 أيام ليصل لأثره الكامل) ويدوم طويلاً، فيُعطى مع الهيبارين عدة أيام حتى يلحق مفعوله. يُراقب بـ<strong>INR</strong>. (الهيبارين وغيره في <a href=\"/diseases/dis-3301\">دليل الهيبارين</a>.)</p>[[slot:dis-3302-compare|مقارنة الهيبارين والوارفارين — رسم من إعداد الموقع|/diseases/img/dis-3302-compare.svg]][[slot:dis-3302-inr|مقياس INR — رسم من إعداد الموقع|/diseases/img/dis-3302-inr.svg]]<p>قاعدة التحاليل: قيمة مرتفعة جدًا تعني نزفًا خطيرًا، ومنخفضة جدًا تعني أن الجلطات قد تكبر.</p>",
+   "en": "<p>Warfarin is an oral anticoagulant with a slow onset (about 5 days to reach its full effect) and a long duration, so it is given with heparin for several days until its effect catches up. It is monitored with <strong>INR</strong>. (Heparin and others are in the <a href=\"/diseases/dis-3301\">Heparin guide</a>.)</p>[[slot:dis-3302-compare|Comparison of heparin and warfarin — illustration made by the site|/diseases/img/dis-3302-compare.svg]][[slot:dis-3302-inr|INR scale — illustration made by the site|/diseases/img/dis-3302-inr.svg]]<p>Lab rule: a very high value means serious bleeding, and a very low value means clots may grow.</p>"
+  },
+  "causes": {
+   "ar": "<p>لماذا تتأثر قيمة INR؟</p><ul><li>فيتامين K من الغذاء (كبد، خضار ورقية: بروكلي، سبانخ) يقلل مفعول الوارفارين</li><li>المضادات الحيوية تقتل بكتيريا الأمعاء التي تصنع فيتامين K فيرتفع INR ويزيد خطر النزيف</li><li>أدوية وأعشاب تزيد النزيف (انظر <a href=\"/diseases/dis-3316\">احتياطات النزيف</a>)</li></ul>",
+   "en": "<p>Why is the INR value affected?</p><ul><li>Vitamin K from food (liver, leafy greens: broccoli, spinach) reduces the effect of warfarin</li><li>Antibiotics kill the gut bacteria that make vitamin K, so INR rises and bleeding risk increases</li><li>Drugs and herbs that increase bleeding (see <a href=\"/diseases/dis-3316\">Bleeding Precautions</a>)</li></ul>"
+  },
+  "signs": {
+   "ar": "<p>علامات الجرعة الزائدة/النزيف: براز أسود قطراني، دم في البول، رعاف، نمشات على الصدر (Petechiae)، كدمات بسهولة، وارتفاع INR.</p>",
+   "en": "<p>Signs of overdose/bleeding: black tarry stools, blood in the urine, nosebleed, petechiae on the chest, easy bruising, and elevated INR.</p>"
+  },
+  "tests": {
+   "ar": "<table><thead><tr><th>الحالة</th><th>القيمة/الإجراء</th></tr></thead><tbody><tr><td>المدى العلاجي</td><td>INR 2–3</td></tr><tr><td>صمام صناعي ميكانيكي</td><td>INR 2.5–3.5</td></tr><tr><td>INR 4 أو 5</td><td>قيّم النزيف وجهّز ترياق فيتامين K</td></tr><tr><td>جلطة دماغية إقفارية مع INR 2.0</td><td>أعطِ الوارفارين للوصول إلى 2.5</td></tr><tr><td>هيبارين</td><td>aPTT 46–70 ثانية</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>Situation</th><th>Value/Action</th></tr></thead><tbody><tr><td>Therapeutic range</td><td>INR 2–3</td></tr><tr><td>Mechanical prosthetic valve</td><td>INR 2.5–3.5</td></tr><tr><td>INR 4 or 5</td><td>Assess for bleeding and prepare the vitamin K antidote</td></tr><tr><td>Ischemic stroke with INR 2.0</td><td>Give warfarin to reach 2.5</td></tr><tr><td>Heparin</td><td>aPTT 46–70 seconds</td></tr></tbody></table>"
+  },
+  "treatment": {
+   "ar": "<ul><li>الترياق: <strong>فيتامين K</strong> (حيلة: K تقتل الوارفارين).</li><li>لا يُعطى فيتامين K كإجراء عادي لمريض ضمن المدى العلاجي.</li><li>عند التحويل من الهيبارين الوريدي: يستمر الهيبارين متداخلاً مع الوارفارين نحو 5 أيام على الأقل وحتى يبلغ INR المدى العلاجي، ويُوقف بأمر الطبيب. ولا يُعطى فيتامين K لمن INR عنده ضمن المدى العلاجي.</li><li>العلاج لمدى الحياة في حالات مثل الصمامات الميكانيكية.</li></ul><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء. أسماء الأدوية التجارية تُراجع من النشرة.</p></div>",
+   "en": "<ul><li>Antidote: <strong>vitamin K</strong> (trick: K kills warfarin).</li><li>Vitamin K is not given routinely to a patient within the therapeutic range.</li><li>When switching from IV heparin: heparin continues overlapping with warfarin for at least about 5 days and until the INR reaches the therapeutic range, and it is stopped on the physician's order. Vitamin K is not given to someone whose INR is within the therapeutic range.</li><li>Lifelong treatment in cases such as mechanical valves.</li></ul><div class=\"cs-box cs-danger\"><strong>Note</strong><p>Doses are for learning; always verify with the physician/pharmacist before administering. Brand names of drugs should be checked in the package insert.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ul><li>راجع INR قبل كل جرعة وحسب أمر الطبيب.</li><li>INR 4 أو 5: قيّم النزيف وجهّز فيتامين K.</li><li>لا تقل للمريض إن الأكل الأخضر ممنوع؛ المطلوب <strong>الثبات</strong> في تناول فيتامين K (لا زيادة ولا نقص ولا تجنّب كلي).</li><li>أي مضاد حيوي جديد: أبلغ الطبيب لأنه قد يرفع INR.</li></ul>",
+   "en": "<ul><li>Check the INR before every dose and as the physician orders.</li><li>INR 4 or 5: assess for bleeding and prepare vitamin K.</li><li>Do not tell the patient that green food is forbidden; what is required is <strong>consistency</strong> in vitamin K intake (no increase, no decrease, and no complete avoidance).</li><li>Any new antibiotic: tell the physician because it may raise the INR.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ الطبيب فوراً</strong><p>براز أسود، بول دموي، رعاف مستمر، صداع شديد أو نزيف غير متوقف، INR مرتفع جداً.</p></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report to the physician immediately</strong><p>Black stools, bloody urine, persistent nosebleed, severe headache or bleeding that does not stop, very high INR.</p></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>العلاج طويل الأمد وأحياناً مدى الحياة (مثل الصمامات الميكانيكية)</li><li>فحوص دم متكررة لـINR</li><li>ثبات الخضروات الورقية والكبد في الغذاء: ليس أكثر ولا أقل ولا الامتناع الكامل</li><li>عبارة تحتاج تصحيحاً: «سأزيد الخضار الورقية الداكنة»</li><li>إخبار أي طبيب أو صيدلي بتناول الوارفارين</li><li>سوار تنبيه طبي</li></ul>",
+   "en": "<ul><li>Long-term treatment and sometimes lifelong (such as mechanical valves)</li><li>Frequent blood tests for INR</li><li>Keep leafy greens and liver consistent in the diet: not more, not less, and not complete avoidance</li><li>A statement that needs correction: \"I will increase dark leafy greens\"</li><li>Tell any physician or pharmacist that you take warfarin</li><li>Medical alert bracelet</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "INR العلاجي 2–3 (صمام ميكانيكي 2.5–3.5)",
+   "الترياق فيتامين K",
+   "الثبات في فيتامين K",
+   "المضادات الحيوية ترفع INR",
+   "INR 4–5 قيّم النزيف وجهّز الترياق",
+   "البداية بطيئة ~5 أيام"
   ],
-  "target": "pharmacology",
-  "sections": {
-    "overview": {
-      "ar": "<p>الوارفارين مضاد تخثر فموي مفعوله بطيء البداية (حوالي 5 أيام ليصل لأثره الكامل) ويدوم طويلاً، فيُعطى مع الهيبارين عدة أيام حتى يلحق مفعوله. يُراقب بـ<strong>INR</strong>. (الهيبارين وغيره في <a href=\"/diseases/dis-3301\">دليل الهيبارين</a>.)</p>[[slot:dis-3302-compare|مقارنة الهيبارين والوارفارين — رسم من إعداد الموقع|/diseases/img/dis-3302-compare.svg]][[slot:dis-3302-inr|مقياس INR — رسم من إعداد الموقع|/diseases/img/dis-3302-inr.svg]]<p>قاعدة التحاليل: قيمة مرتفعة جدًا تعني نزفًا خطيرًا، ومنخفضة جدًا تعني أن الجلطات قد تكبر.</p>"
-    },
-    "causes": {
-      "ar": "<p>لماذا تتأثر قيمة INR؟</p><ul><li>فيتامين K من الغذاء (كبد، خضار ورقية: بروكلي، سبانخ) يقلل مفعول الوارفارين</li><li>المضادات الحيوية تقتل بكتيريا الأمعاء التي تصنع فيتامين K فيرتفع INR ويزيد خطر النزيف</li><li>أدوية وأعشاب تزيد النزيف (انظر <a href=\"/diseases/dis-3316\">احتياطات النزيف</a>)</li></ul>"
-    },
-    "signs": {
-      "ar": "<p>علامات الجرعة الزائدة/النزيف: براز أسود قطراني، دم في البول، رعاف، نمشات على الصدر (Petechiae)، كدمات بسهولة، وارتفاع INR.</p>"
-    },
-    "tests": {
-      "ar": "<table><thead><tr><th>الحالة</th><th>القيمة/الإجراء</th></tr></thead><tbody><tr><td>المدى العلاجي</td><td>INR 2–3</td></tr><tr><td>صمام صناعي ميكانيكي</td><td>INR 2.5–3.5</td></tr><tr><td>INR 4 أو 5</td><td>قيّم النزيف وجهّز ترياق فيتامين K</td></tr><tr><td>جلطة دماغية إقفارية مع INR 2.0</td><td>أعطِ الوارفارين للوصول إلى 2.5</td></tr><tr><td>هيبارين</td><td>aPTT 46–70 ثانية</td></tr></tbody></table>"
-    },
-    "treatment": {
-      "ar": "<ul><li>الترياق: <strong>فيتامين K</strong> (حيلة: K تقتل الوارفارين).</li><li>لا يُعطى فيتامين K كإجراء عادي لمريض ضمن المدى العلاجي.</li><li>عند التحويل من الهيبارين الوريدي: يستمر الهيبارين متداخلاً مع الوارفارين نحو 5 أيام على الأقل وحتى يبلغ INR المدى العلاجي، ويُوقف بأمر الطبيب. ولا يُعطى فيتامين K لمن INR عنده ضمن المدى العلاجي.</li><li>العلاج لمدى الحياة في حالات مثل الصمامات الميكانيكية.</li></ul><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء. أسماء الأدوية التجارية تُراجع من النشرة.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ul><li>راجع INR قبل كل جرعة وحسب أمر الطبيب.</li><li>INR 4 أو 5: قيّم النزيف وجهّز فيتامين K.</li><li>لا تقل للمريض إن الأكل الأخضر ممنوع؛ المطلوب <strong>الثبات</strong> في تناول فيتامين K (لا زيادة ولا نقص ولا تجنّب كلي).</li><li>أي مضاد حيوي جديد: أبلغ الطبيب لأنه قد يرفع INR.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ الطبيب فوراً</strong><p>براز أسود، بول دموي، رعاف مستمر، صداع شديد أو نزيف غير متوقف، INR مرتفع جداً.</p></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>العلاج طويل الأمد وأحياناً مدى الحياة (مثل الصمامات الميكانيكية)</li><li>فحوص دم متكررة لـINR</li><li>ثبات الخضروات الورقية والكبد في الغذاء: ليس أكثر ولا أقل ولا الامتناع الكامل</li><li>عبارة تحتاج تصحيحاً: «سأزيد الخضار الورقية الداكنة»</li><li>إخبار أي طبيب أو صيدلي بتناول الوارفارين</li><li>سوار تنبيه طبي</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "INR العلاجي 2–3 (صمام ميكانيكي 2.5–3.5)",
-      "الترياق فيتامين K",
-      "الثبات في فيتامين K",
-      "المضادات الحيوية ترفع INR",
-      "INR 4–5 قيّم النزيف وجهّز الترياق",
-      "البداية بطيئة ~5 أيام"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ترياق الوارفارين؟"
-      },
-      "options": [
-        {
-          "ar": "بروتامين"
-        },
-        {
-          "ar": "فيتامين K"
-        },
-        {
-          "ar": "نالوكسون"
-        },
-        {
-          "ar": "فلومازينيل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "فيتامين K يعكس أثر الوارفارين، أما البروتامين فللهيبارين."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عبارة من مريض على وارفارين تحتاج تدخلاً؟"
-      },
-      "options": [
-        {
-          "ar": "سأتناول الخضار الورقية بنفس الكمية"
-        },
-        {
-          "ar": "سأزيد الخضار الورقية الداكنة كثيراً"
-        },
-        {
-          "ar": "سأجري فحص INR دورياً"
-        },
-        {
-          "ar": "سأبلّغ عن النزيف"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التغيّر الكبير في فيتامين K يؤثر على INR؛ المطلوب الثبات."
-      }
-    },
-    {
-      "q": {
-        "ar": "INR = 4.5 لمريض على وارفارين. ماذا تفعل؟"
-      },
-      "options": [
-        {
-          "ar": "تعطي جرعته كالمعتاد"
-        },
-        {
-          "ar": "تقيّم النزيف وتجهّز فيتامين K وتبلّغ"
-        },
-        {
-          "ar": "تعطي هيبارين"
-        },
-        {
-          "ar": "تعطي أسبرين"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "INR مرتفع جداً يعني خطر نزيف؛ قيّم وجهّز الترياق وبلّغ."
-      }
-    },
-    {
-      "q": {
-        "ar": "لماذا ترفع المضادات الحيوية INR؟"
-      },
-      "options": [
-        {
-          "ar": "تقلل فيتامين K المنتج من بكتيريا الأمعاء"
-        },
-        {
-          "ar": "تزيد الصفائح"
-        },
-        {
-          "ar": "تسرّع الكبد"
-        },
-        {
-          "ar": "تقتل الوارفارين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قتل بكتيريا الأمعاء ينقص فيتامين K فيزيد خطر النزيف."
-      }
-    },
-    {
-      "q": {
-        "ar": "مدى INR العلاجي للصمام الميكانيكي؟"
-      },
-      "options": [
-        {
-          "ar": "1–2"
-        },
-        {
-          "ar": "2–3"
-        },
-        {
-          "ar": "2.5–3.5"
-        },
-        {
-          "ar": "5–6"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "الصمامات الميكانيكية تحتاج مدى أعلى 2.5–3.5."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CHEST guidelines: Antithrombotic therapy"
-    },
-    {
-      "title": "BNF: Warfarin"
-    }
+  "en": [
+   "Therapeutic INR 2–3 (mechanical valve 2.5–3.5)",
+   "Antidote is vitamin K",
+   "Consistency in vitamin K",
+   "Antibiotics raise INR",
+   "INR 4–5: assess bleeding and prepare the antidote",
+   "Slow onset ~5 days"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ترياق الوارفارين؟",
+    "en": "The antidote for warfarin?"
+   },
+   "options": [
+    {
+     "ar": "بروتامين",
+     "en": "Protamine"
+    },
+    {
+     "ar": "فيتامين K",
+     "en": "Vitamin K"
+    },
+    {
+     "ar": "نالوكسون",
+     "en": "Naloxone"
+    },
+    {
+     "ar": "فلومازينيل",
+     "en": "Flumazenil"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "فيتامين K يعكس أثر الوارفارين، أما البروتامين فللهيبارين.",
+    "en": "Vitamin K reverses the effect of warfarin, while protamine is for heparin."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عبارة من مريض على وارفارين تحتاج تدخلاً؟",
+    "en": "Which statement from a patient on warfarin needs intervention?"
+   },
+   "options": [
+    {
+     "ar": "سأتناول الخضار الورقية بنفس الكمية",
+     "en": "I will eat leafy greens in the same amount"
+    },
+    {
+     "ar": "سأزيد الخضار الورقية الداكنة كثيراً",
+     "en": "I will greatly increase dark leafy greens"
+    },
+    {
+     "ar": "سأجري فحص INR دورياً",
+     "en": "I will have my INR checked regularly"
+    },
+    {
+     "ar": "سأبلّغ عن النزيف",
+     "en": "I will report bleeding"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التغيّر الكبير في فيتامين K يؤثر على INR؛ المطلوب الثبات.",
+    "en": "A big change in vitamin K affects INR; consistency is required."
+   }
+  },
+  {
+   "q": {
+    "ar": "INR = 4.5 لمريض على وارفارين. ماذا تفعل؟",
+    "en": "INR = 4.5 for a patient on warfarin. What do you do?"
+   },
+   "options": [
+    {
+     "ar": "تعطي جرعته كالمعتاد",
+     "en": "Give his dose as usual"
+    },
+    {
+     "ar": "تقيّم النزيف وتجهّز فيتامين K وتبلّغ",
+     "en": "Assess for bleeding, prepare vitamin K, and report"
+    },
+    {
+     "ar": "تعطي هيبارين",
+     "en": "Give heparin"
+    },
+    {
+     "ar": "تعطي أسبرين",
+     "en": "Give aspirin"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "INR مرتفع جداً يعني خطر نزيف؛ قيّم وجهّز الترياق وبلّغ.",
+    "en": "A very high INR means bleeding risk; assess, prepare the antidote, and report."
+   }
+  },
+  {
+   "q": {
+    "ar": "لماذا ترفع المضادات الحيوية INR؟",
+    "en": "Why do antibiotics raise INR?"
+   },
+   "options": [
+    {
+     "ar": "تقلل فيتامين K المنتج من بكتيريا الأمعاء",
+     "en": "They reduce the vitamin K produced by gut bacteria"
+    },
+    {
+     "ar": "تزيد الصفائح",
+     "en": "They increase platelets"
+    },
+    {
+     "ar": "تسرّع الكبد",
+     "en": "They speed up the liver"
+    },
+    {
+     "ar": "تقتل الوارفارين",
+     "en": "They kill warfarin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قتل بكتيريا الأمعاء ينقص فيتامين K فيزيد خطر النزيف.",
+    "en": "Killing gut bacteria reduces vitamin K, so bleeding risk increases."
+   }
+  },
+  {
+   "q": {
+    "ar": "مدى INR العلاجي للصمام الميكانيكي؟",
+    "en": "The therapeutic INR range for a mechanical valve?"
+   },
+   "options": [
+    {
+     "ar": "1–2",
+     "en": "1–2"
+    },
+    {
+     "ar": "2–3",
+     "en": "2–3"
+    },
+    {
+     "ar": "2.5–3.5",
+     "en": "2.5–3.5"
+    },
+    {
+     "ar": "5–6",
+     "en": "5–6"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "الصمامات الميكانيكية تحتاج مدى أعلى 2.5–3.5.",
+    "en": "Mechanical valves need a higher range of 2.5–3.5."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CHEST guidelines: Antithrombotic therapy"
+  },
+  {
+   "title": "BNF: Warfarin"
+  }
+ ]
 }

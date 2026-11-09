@@ -1,206 +1,252 @@
 {
-  "id": "dis-460",
-  "num": 460,
-  "target": "er-reception",
-  "system": "other",
-  "icon": "🐕",
-  "level": 3,
-  "title": {
-    "ar": "التعامل مع عضة الحيوانات والإنسان",
-    "en": "Management of Animal & Human Bites"
+ "id": "dis-460",
+ "num": 460,
+ "target": "er-reception",
+ "system": "other",
+ "icon": "🐕",
+ "level": 3,
+ "title": {
+  "ar": "التعامل مع عضة الحيوانات والإنسان",
+  "en": "Management of Animal & Human Bites"
+ },
+ "teaser": {
+  "ar": "ممنوع تخيّط العضة! خطوات الغسيل بالترتيب، المضاد الحيوي، التيتانوس، ومتى يتحول المريض لمركز السعار — وإيه دورك كممرض.",
+  "en": "Never suture a bite! The washing steps in order, the antibiotic, tetanus, when to refer the patient to the rabies center, and what your role as a nurse is."
+ },
+ "chips": [
+  {
+   "ar": "غسيل قوي",
+   "en": "Vigorous washing"
   },
-  "teaser": {
-    "ar": "ممنوع تخيّط العضة! خطوات الغسيل بالترتيب، المضاد الحيوي، التيتانوس، ومتى يتحول المريض لمركز السعار — وإيه دورك كممرض."
+  {
+   "ar": "تيتانوس",
+   "en": "Tetanus"
   },
-  "chips": [
-    {
-      "ar": "غسيل قوي"
-    },
-    {
-      "ar": "تيتانوس"
-    },
-    {
-      "ar": "مصل السعار"
-    }
+  {
+   "ar": "مصل السعار",
+   "en": "Rabies serum"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>العضة (من كلب أو قطة أو حيوان آخر أو حتى إنسان) جرح <b>ملوث جداً</b> بميكروبات الفم. عشان كده القاعدة الذهبية في الاستقبال: <b>ممنوع خياطة الجرح الناتج عن العضة</b>، لأنه لو اتقفل على التلوث هيتحول لخراج وعدوى عميقة. العلاج يقوم على: غسيل قوي، مضاد حيوي، تضميد، تطعيم تيتانوس، وفي الكلاب والقطط والحيوانات المشتبهة: مصل وتطعيم السعار.</p><div class=\"cs-stats\"><div><b>5</b><span>خطوات علاج مرتبة</span></div><div><b>0-3-7-14-28</b><span>أيام جرعات السعار (حسب المراجع)</span></div><div><b>لا خياطة</b><span>للجرح الملوث بالعضة</span></div></div>[[slot:dis-460-flow|خطوات التعامل مع العضة — رسم من إعداد الموقع|/diseases/img/dis-460-flow.svg]]<div class=\"cs-box cs-danger\"><strong>قاعدة أساسية</strong><p>العضة = جرح ملوث. ما تخيّطهوش، ولا تقفله. اغسله أولاً وبقوة، وبلّغ الطبيب فوراً لو العضة في الوجه أو اليد أو المفصل أو الأعضاء التناسلية أو عند طفل أو مريض سكر أو مناعة ضعيفة.</p></div>",
+   "en": "<p>A bite (from a dog, cat, another animal, or even a human) is a <b>highly contaminated</b> wound with mouth microbes. That is why the golden rule in the reception area is: <b>never suture a bite wound</b>, because if it is closed over the contamination it will turn into an abscess and a deep infection. Treatment is based on: vigorous washing, an antibiotic, dressing, tetanus vaccination, and for dogs, cats, and suspected animals: rabies serum and vaccine.</p><div class=\"cs-stats\"><div><b>5</b><span>Treatment steps in order</span></div><div><b>0-3-7-14-28</b><span>Days of rabies doses (per references)</span></div><div><b>No suturing</b><span>For a bite-contaminated wound</span></div></div>[[slot:dis-460-flow|Steps for managing a bite — illustration made by the site|/diseases/img/dis-460-flow.svg]]<div class=\"cs-box cs-danger\"><strong>Basic rule</strong><p>A bite = a contaminated wound. Do not suture it, and do not close it. Wash it first and vigorously, and notify the physician immediately if the bite is on the face, hand, joint, or genitals, or in a child or a patient with diabetes or weak immunity.</p></div>"
+  },
+  "causes": {
+   "ar": "<h4>مصادر العضة</h4><ul><li>كلب أو قطة (الأهم بسبب السعار)</li><li>حيوانات أخرى (حمير، خيل، جرذان، ثعابين… وخلافه)</li><li>عضة إنسان (من خناقة أو طفل) — ملوثة جداً وبالذات لو على مفصل قبضة اليد</li></ul><h4>ليه الجرح خطير؟</h4><ul><li>تلوث بكتيري عالي (عدوى موضعية وخراج)</li><li>خطر التيتانوس</li><li>خطر السعار (Rabies) — مرض قاتل بعد ظهور الأعراض</li><li>وخز عميق قد يصيب وتر أو عصب أو مفصل أو عظم</li></ul>",
+   "en": "<h4>Sources of the bite</h4><ul><li>Dog or cat (the most important because of rabies)</li><li>Other animals (donkeys, horses, rats, snakes, etc.)</li><li>Human bite (from a fight or a child): highly contaminated, especially if over a knuckle joint of the fist</li></ul><h4>Why is the wound dangerous?</h4><ul><li>High bacterial contamination (local infection and abscess)</li><li>Risk of tetanus</li><li>Risk of rabies: a fatal disease once symptoms appear</li><li>A deep puncture may involve a tendon, nerve, joint, or bone</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>اسأل وافحص بسرعة</h4><ul><li>نوع الحيوان: أليف ومُطعَّم أم ضال/مجهول؟ هل الحيوان ما زال متاح للمراقبة؟</li><li>العضة كانت استفزازية أم بدون سبب؟ (السلوك غير المبرر يرفع الشك)</li><li>مكان الجرح وعمقه، وجود نزيف، حالة الحس والحركة والنبض بعد الجرح</li><li>آخر جرعة تيتانوس عند المصاب</li><li>أمراض مصاحبة: سكر، ضعف مناعة، حساسية للبنسلين</li></ul><h4>علامات عدوى لاحقة</h4><ul><li>احمرار وسخونة وتورم وألم يزيد</li><li>صديد أو رائحة</li><li>حمى وتورم غدد</li><li>خطوط حمراء على الذراع أو الساق</li></ul><div class=\"cs-box cs-info\"><strong>حد التيتانوس</strong><p>راجع دليل التيتانوس (dis-193) لجدول الجرعات حسب التطعيم السابق. اسأل المريض عن حساسية قبل أي حقنة.</p></div>",
+   "en": "<h4>Ask and examine quickly</h4><ul><li>Type of animal: domestic and vaccinated, or stray/unknown? Is the animal still available for observation?</li><li>Was the bite provoked or unprovoked? (Unprovoked behavior raises suspicion)</li><li>Location and depth of the wound, presence of bleeding, sensation, movement, and pulse after the wound</li><li>The injured person's last tetanus dose</li><li>Comorbidities: diabetes, weak immunity, penicillin allergy</li></ul><h4>Signs of later infection</h4><ul><li>Redness, warmth, swelling, and increasing pain</li><li>Pus or odor</li><li>Fever and swollen glands</li><li>Red streaks on the arm or leg</li></ul><div class=\"cs-box cs-info\"><strong>Tetanus limit</strong><p>See the tetanus guide (dis-193) for the dose schedule according to previous vaccination. Ask the patient about allergy before any injection.</p></div>"
+  },
+  "treatment": {
+   "ar": "<h4>الخطوات بالترتيب (حسب دليل الاستقبال)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>1) Vigorous cleaning — تنظيف قوي جداً</strong><p>تنظيف الجرح بمحلول ملح (Saline) ثم بيتادين (Betadine) ثم ملح ثم ماء أكسجين (H2O2) ثم ملح تاني. الغسيل الجيد أهم خطوة لتقليل العدوى والسعار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>2) مضاد حيوي موضعي</strong><p>Bivetracin spray أو Fucidin cream (كريم أو بخاخ مضاد حيوي) على الجرح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>3) التضميد (Dressing)</strong><p>تغطية الجرح بالسوفراتول (شاش فازلين) + شاش + بلاستر، بدون غرز.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>4) حقنة التيتانوس</strong><p>حسب السن والتطعيم السابق، وما تنساش تسأل عن الحساسية أو تعمل اختبارها قبل الحقنة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>5) تطعيم السعار (Rabies vaccine)</strong><p>لو العضة من كلب أو قطة أو حيوان مشابه: تحويل المصاب لأقرب مستشفى حميات أو مستشفى كبير يوفر مصل داء الكلب. المصل 5 جرعات في الأيام 0 و3 و7 و14 و28. يأخذ المريض أول جرعة ويُعطى كارت متابعة بمواعيد باقي الجرعات.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>تحديث (منظمة الصحة CDC)</strong><p>غسل الجرح بالماء الجاري والصابون <b>لمدة 15 دقيقة على الأقل</b> هو أهم إجراء وقائي ضد السعار، ويُكمل بمطهر (بوفيدون أيودين). الجدول الحديث للأشخاص ذوي المناعة الطبيعية: CDC تعتمد 4 جرعات (أيام 0 و3 و7 و14)، ومنظمة الصحة العالمية تعتمد IM أيام 0 و3 و7 (+ جرعة بين 14-28 في بعض الحالات) أو بروتوكولاً أقصر داخل الجلد؛ وجدول الـ5 جرعات (0-3-7-14-28) هو الجدول القديم (Essen) ولا يزال مستخدماً. التعرض من الفئة III (عضة نافذة، خدوش نازفة، تلوث غشاء مخاطي) يحتاج كذلك <b>immunoglobulin السعار</b> حول الجرح وأي جزء تحت الجلد. اتبع بروتوكول مركز السعار والمستشفى.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث (المضاد الحيوي والخياطة)</strong><p>الوقاية بمضاد حيوي (Amoxicillin/Clavulanate لمدة 3-5 أيام) مطلوبة في عضة اليد والقطط والجرح العميق والإنسان والمناعة الضعيفة. الخياطة الأولية قد تُنفذ بقرار الجراح في عضات الوجه فقط بعد غسيل ممتاز. قبل كل ذلك: أوقف النزيف بالضغط.</p></div><h4>روشتة الجرح (بالغ) حسب الدليل</h4><table><thead><tr><th>الدواء</th><th>الجرعة</th><th>ملاحظة</th></tr></thead><tbody><tr><td>Hibiotic 1 gm tab (أموكسيسيلين/كلافيولانيك)</td><td>قرص كل 12 ساعة لمدة 5 أيام</td><td>مضاد حيوي وقائي</td></tr><tr><td>Alphintern tab</td><td>قرص قبل الأكل بساعة 3 مرات يومياً لمدة 5 أيام</td><td>مضاد للتورم</td></tr><tr><td>Brufen 400 tab (إيبوبروفين)</td><td>قرص 3 مرات يومياً</td><td>مسكن</td></tr></tbody></table><p>مع كتابة ميعاد الغيار وفك الغرز (لو في جروح مخيطة) على ظهر الروشتة.</p>",
+   "en": "<h4>The steps in order (per the reception guide)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>1) Vigorous cleaning — very strong cleaning</strong><p>Clean the wound with saline solution, then Betadine, then saline, then hydrogen peroxide (H2O2), then saline again. Good washing is the most important step to reduce infection and rabies.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>2) Topical antibiotic</strong><p>Bivetracin spray or Fucidin cream (an antibiotic cream or spray) on the wound.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>3) Dressing</strong><p>Cover the wound with Sofratulle (petroleum gauze) + gauze + plaster, without stitches.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>4) Tetanus injection</strong><p>According to age and previous vaccination, and do not forget to ask about allergy or do the test before the injection.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>5) Rabies vaccine</strong><p>If the bite is from a dog, cat, or similar animal: refer the injured person to the nearest fever hospital or a large hospital that provides rabies serum. The serum is 5 doses on days 0, 3, 7, 14, and 28. The patient takes the first dose and is given a follow-up card with the dates of the remaining doses.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>Update (WHO/CDC)</strong><p>Washing the wound with running water and soap <b>for at least 15 minutes</b> is the most important preventive measure against rabies, followed by an antiseptic (povidone iodine). The modern schedule for people with normal immunity: the CDC adopts 4 doses (days 0, 3, 7, and 14), and the World Health Organization adopts IM on days 0, 3, and 7 (+ a dose between 14-28 in some cases) or a shorter intradermal protocol; the 5-dose schedule (0-3-7-14-28) is the old schedule (Essen) and is still used. Category III exposure (penetrating bite, bleeding scratches, mucous membrane contamination) also needs <b>rabies immunoglobulin</b> around the wound and any subcutaneous part. Follow the protocol of the rabies center and the hospital.</p></div><div class=\"cs-box cs-warning\"><strong>Update (antibiotic and suturing)</strong><p>Antibiotic prophylaxis (amoxicillin/clavulanate for 3-5 days) is required for hand bites, cat bites, deep wounds, human bites, and weak immunity. Primary suturing may be done by the surgeon's decision in facial bites only after excellent washing. Before all of that: stop the bleeding with pressure.</p></div><h4>Wound prescription (adult) per the guide</h4><table><thead><tr><th>Drug</th><th>Dose</th><th>Note</th></tr></thead><tbody><tr><td>Hibiotic 1 gm tab (amoxicillin/clavulanate)</td><td>A tablet every 12 hours for 5 days</td><td>Prophylactic antibiotic</td></tr><tr><td>Alphintern tab</td><td>A tablet one hour before meals 3 times daily for 5 days</td><td>Anti-swelling</td></tr><tr><td>Brufen 400 tab (ibuprofen)</td><td>A tablet 3 times daily</td><td>Analgesic</td></tr></tbody></table><p>With the dressing change date and suture removal (if there are sutured wounds) written on the back of the prescription.</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الحالة</strong><p>قيس العلامات الحيوية، افحص حس وحركة ونبض الطرف، وحدد عدد الجروح وأماكنها وعمقها وكمية النزيف. اسأل عن نوع الحيوان وتطعيمه وإمكانية مراقبته.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أوقف النزيف</strong><p>ضغط مباشر بشاش معقم ورفع الطرف. لا تستخدم رباط ضاغط يمنع الدورة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اغسل بالترتيب</strong><p>Saline ← Betadine ← Saline ← H2O2 ← Saline بكميات كبيرة وبضغط (سرنجة كبيرة). في العضات المشتبهة بالسعار: ماء وصابون 15 دقيقة. استخدم قفازات وتغطية الوجه عند الرش.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>ضمّد بدون خياطة</strong><p>مضاد حيوي موضعي ثم سوفراتول ثم شاش ثم بلاستر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ الأدوية بأمان</strong><p>قبل البنسلين/الكلافيولانيك اسأل عن الحساسية. مسكن بعد الأكل. حقنة تيتانوس عضل بعد اختبار الحساسية حسب بروتوكول الوحدة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>حوّل للسعار</strong><p>اتصل بمركز السعار/مستشفى الحميات، سلّم المريض كارت متابعة بتواريخ الجرعات (0-3-7-14-28)، ودوّن اسم الحيوان ومصيره.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وثّق وعلّم</strong><p>سجّل وقت العضة والجرح والإجراءات والمطعوم. علّم المريض علامات العدوى وموعد الغيار.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>معلومة للمريض</strong><p>الحيوان المشتبه لا يُقتل بل يُحجز ويُراقب 10 أيام إن أمكن، ويُبلَّغ عنه الطب البيطري.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess the condition</strong><p>Measure vital signs, examine sensation, movement, and pulse of the limb, and determine the number of wounds, their locations, depth, and the amount of bleeding. Ask about the type of animal, its vaccination, and whether it can be observed.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Stop the bleeding</strong><p>Direct pressure with sterile gauze and elevate the limb. Do not use a compression bandage that blocks circulation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Wash in order</strong><p>Saline ← Betadine ← Saline ← H2O2 ← Saline in large amounts and with pressure (a large syringe). In bites suspected of rabies: water and soap for 15 minutes. Use gloves and face protection when irrigating.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Dress without suturing</strong><p>Topical antibiotic, then Sofratulle, then gauze, then plaster.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Give drugs safely</strong><p>Before penicillin/clavulanate ask about allergy. Analgesic after food. IM tetanus injection after the allergy test per the unit's protocol.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Refer for rabies</strong><p>Contact the rabies center/fever hospital, hand the patient a follow-up card with the dose dates (0-3-7-14-28), and note the animal's name and fate.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Document and teach</strong><p>Record the time of the bite, the wound, the procedures, and the vaccine. Teach the patient signs of infection and the dressing change date.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>Information for the patient</strong><p>A suspected animal is not killed but is confined and observed for 10 days if possible, and the veterinary service is notified.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>عضة في الوجه أو الرقبة أو اليد أو الأعضاء التناسلية أو فوق مفصل</li><li>نزيف شديد أو فقد نبض أو حس أسفل الجرح</li><li>حمى أو تورم أو صديد أو خطوط حمراء خلال أيام</li><li>حيوان ضال أو سلوكه غير طبيعي (سعار محتمل) — تحويل فوري</li><li>مريض سكر أو ناقص مناعة أو طفل صغير</li><li>عدم الالتزام بمواعيد جرعات السعار</li></ul>",
+   "en": "<ul><li>A bite on the face, neck, hand, genitals, or over a joint</li><li>Severe bleeding or loss of pulse or sensation below the wound</li><li>Fever, swelling, pus, or red streaks within days</li><li>A stray animal or one with abnormal behavior (possible rabies): immediate referral</li><li>A patient with diabetes or immunodeficiency or a young child</li><li>Not adhering to rabies dose dates</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اغسل أي عضة فوراً بماء وصابون قبل ما توصل المستشفى</li><li>لا تقفل الجرح بالخياطة ولا تضع مواد شعبية (قهوة/تراب/عسل) عليه</li><li>التزم بجدول المصل: 0 و3 و7 و14 و28 يوماً وأحضر الكارت</li><li>أكمل المضاد الحيوي</li><li>راقب الحيوان لو أمكن وبلغ الطب البيطري</li><li>ارجع فوراً لو ظهرت حرارة أو صديد أو تنميل أو ألم متزايد</li></ul>",
+   "en": "<ul><li>Wash any bite immediately with water and soap before you reach the hospital</li><li>Do not close the wound with sutures and do not put folk remedies (coffee/dirt/honey) on it</li><li>Adhere to the serum schedule: days 0, 3, 7, 14, and 28 and bring the card</li><li>Finish the antibiotic</li><li>Observe the animal if possible and notify the veterinary service</li><li>Return immediately if fever, pus, numbness, or increasing pain appears</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "العضة جرح ملوث: ممنوع الخياطة (حسب الدليل) إلا بقرار جراح في حالات محددة",
+   "غسيل بالترتيب: ملح ← بيتادين ← ملح ← أكسجين ← ملح",
+   "مضاد حيوي موضعي + سوفراتول وشاش وبلاستر",
+   "حقنة تيتانوس حسب السن + اختبار حساسية",
+   "كلب أو قطة: تحويل لمستشفى حميات لمصل السعار بجرعات 0-3-7-14-28 (الجدول القديم)",
+   "ماء وصابون 15 دقيقة هو أهم إجراء ضد السعار",
+   "Hibiotic 1 جم كل 12 ساعة 5 أيام وقائياً"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>العضة (من كلب أو قطة أو حيوان آخر أو حتى إنسان) جرح <b>ملوث جداً</b> بميكروبات الفم. عشان كده القاعدة الذهبية في الاستقبال: <b>ممنوع خياطة الجرح الناتج عن العضة</b>، لأنه لو اتقفل على التلوث هيتحول لخراج وعدوى عميقة. العلاج يقوم على: غسيل قوي، مضاد حيوي، تضميد، تطعيم تيتانوس، وفي الكلاب والقطط والحيوانات المشتبهة: مصل وتطعيم السعار.</p><div class=\"cs-stats\"><div><b>5</b><span>خطوات علاج مرتبة</span></div><div><b>0-3-7-14-28</b><span>أيام جرعات السعار (حسب المراجع)</span></div><div><b>لا خياطة</b><span>للجرح الملوث بالعضة</span></div></div>[[slot:dis-460-flow|خطوات التعامل مع العضة — رسم من إعداد الموقع|/diseases/img/dis-460-flow.svg]]<div class=\"cs-box cs-danger\"><strong>قاعدة أساسية</strong><p>العضة = جرح ملوث. ما تخيّطهوش، ولا تقفله. اغسله أولاً وبقوة، وبلّغ الطبيب فوراً لو العضة في الوجه أو اليد أو المفصل أو الأعضاء التناسلية أو عند طفل أو مريض سكر أو مناعة ضعيفة.</p></div>"
-    },
-    "causes": {
-      "ar": "<h4>مصادر العضة</h4><ul><li>كلب أو قطة (الأهم بسبب السعار)</li><li>حيوانات أخرى (حمير، خيل، جرذان، ثعابين… وخلافه)</li><li>عضة إنسان (من خناقة أو طفل) — ملوثة جداً وبالذات لو على مفصل قبضة اليد</li></ul><h4>ليه الجرح خطير؟</h4><ul><li>تلوث بكتيري عالي (عدوى موضعية وخراج)</li><li>خطر التيتانوس</li><li>خطر السعار (Rabies) — مرض قاتل بعد ظهور الأعراض</li><li>وخز عميق قد يصيب وتر أو عصب أو مفصل أو عظم</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>اسأل وافحص بسرعة</h4><ul><li>نوع الحيوان: أليف ومُطعَّم أم ضال/مجهول؟ هل الحيوان ما زال متاح للمراقبة؟</li><li>العضة كانت استفزازية أم بدون سبب؟ (السلوك غير المبرر يرفع الشك)</li><li>مكان الجرح وعمقه، وجود نزيف، حالة الحس والحركة والنبض بعد الجرح</li><li>آخر جرعة تيتانوس عند المصاب</li><li>أمراض مصاحبة: سكر، ضعف مناعة، حساسية للبنسلين</li></ul><h4>علامات عدوى لاحقة</h4><ul><li>احمرار وسخونة وتورم وألم يزيد</li><li>صديد أو رائحة</li><li>حمى وتورم غدد</li><li>خطوط حمراء على الذراع أو الساق</li></ul><div class=\"cs-box cs-info\"><strong>حد التيتانوس</strong><p>راجع دليل التيتانوس (dis-193) لجدول الجرعات حسب التطعيم السابق. اسأل المريض عن حساسية قبل أي حقنة.</p></div>"
-    },
-    "treatment": {
-      "ar": "<h4>الخطوات بالترتيب (حسب دليل الاستقبال)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>1) Vigorous cleaning — تنظيف قوي جداً</strong><p>تنظيف الجرح بمحلول ملح (Saline) ثم بيتادين (Betadine) ثم ملح ثم ماء أكسجين (H2O2) ثم ملح تاني. الغسيل الجيد أهم خطوة لتقليل العدوى والسعار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>2) مضاد حيوي موضعي</strong><p>Bivetracin spray أو Fucidin cream (كريم أو بخاخ مضاد حيوي) على الجرح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>3) التضميد (Dressing)</strong><p>تغطية الجرح بالسوفراتول (شاش فازلين) + شاش + بلاستر، بدون غرز.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>4) حقنة التيتانوس</strong><p>حسب السن والتطعيم السابق، وما تنساش تسأل عن الحساسية أو تعمل اختبارها قبل الحقنة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>5) تطعيم السعار (Rabies vaccine)</strong><p>لو العضة من كلب أو قطة أو حيوان مشابه: تحويل المصاب لأقرب مستشفى حميات أو مستشفى كبير يوفر مصل داء الكلب. المصل 5 جرعات في الأيام 0 و3 و7 و14 و28. يأخذ المريض أول جرعة ويُعطى كارت متابعة بمواعيد باقي الجرعات.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>تحديث (منظمة الصحة CDC)</strong><p>غسل الجرح بالماء الجاري والصابون <b>لمدة 15 دقيقة على الأقل</b> هو أهم إجراء وقائي ضد السعار، ويُكمل بمطهر (بوفيدون أيودين). الجدول الحديث للأشخاص ذوي المناعة الطبيعية: CDC تعتمد 4 جرعات (أيام 0 و3 و7 و14)، ومنظمة الصحة العالمية تعتمد IM أيام 0 و3 و7 (+ جرعة بين 14-28 في بعض الحالات) أو بروتوكولاً أقصر داخل الجلد؛ وجدول الـ5 جرعات (0-3-7-14-28) هو الجدول القديم (Essen) ولا يزال مستخدماً. التعرض من الفئة III (عضة نافذة، خدوش نازفة، تلوث غشاء مخاطي) يحتاج كذلك <b>immunoglobulin السعار</b> حول الجرح وأي جزء تحت الجلد. اتبع بروتوكول مركز السعار والمستشفى.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث (المضاد الحيوي والخياطة)</strong><p>الوقاية بمضاد حيوي (Amoxicillin/Clavulanate لمدة 3-5 أيام) مطلوبة في عضة اليد والقطط والجرح العميق والإنسان والمناعة الضعيفة. الخياطة الأولية قد تُنفذ بقرار الجراح في عضات الوجه فقط بعد غسيل ممتاز. قبل كل ذلك: أوقف النزيف بالضغط.</p></div><h4>روشتة الجرح (بالغ) حسب الدليل</h4><table><thead><tr><th>الدواء</th><th>الجرعة</th><th>ملاحظة</th></tr></thead><tbody><tr><td>Hibiotic 1 gm tab (أموكسيسيلين/كلافيولانيك)</td><td>قرص كل 12 ساعة لمدة 5 أيام</td><td>مضاد حيوي وقائي</td></tr><tr><td>Alphintern tab</td><td>قرص قبل الأكل بساعة 3 مرات يومياً لمدة 5 أيام</td><td>مضاد للتورم</td></tr><tr><td>Brufen 400 tab (إيبوبروفين)</td><td>قرص 3 مرات يومياً</td><td>مسكن</td></tr></tbody></table><p>مع كتابة ميعاد الغيار وفك الغرز (لو في جروح مخيطة) على ظهر الروشتة.</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الحالة</strong><p>قيس العلامات الحيوية، افحص حس وحركة ونبض الطرف، وحدد عدد الجروح وأماكنها وعمقها وكمية النزيف. اسأل عن نوع الحيوان وتطعيمه وإمكانية مراقبته.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أوقف النزيف</strong><p>ضغط مباشر بشاش معقم ورفع الطرف. لا تستخدم رباط ضاغط يمنع الدورة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اغسل بالترتيب</strong><p>Saline ← Betadine ← Saline ← H2O2 ← Saline بكميات كبيرة وبضغط (سرنجة كبيرة). في العضات المشتبهة بالسعار: ماء وصابون 15 دقيقة. استخدم قفازات وتغطية الوجه عند الرش.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>ضمّد بدون خياطة</strong><p>مضاد حيوي موضعي ثم سوفراتول ثم شاش ثم بلاستر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ الأدوية بأمان</strong><p>قبل البنسلين/الكلافيولانيك اسأل عن الحساسية. مسكن بعد الأكل. حقنة تيتانوس عضل بعد اختبار الحساسية حسب بروتوكول الوحدة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>حوّل للسعار</strong><p>اتصل بمركز السعار/مستشفى الحميات، سلّم المريض كارت متابعة بتواريخ الجرعات (0-3-7-14-28)، ودوّن اسم الحيوان ومصيره.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وثّق وعلّم</strong><p>سجّل وقت العضة والجرح والإجراءات والمطعوم. علّم المريض علامات العدوى وموعد الغيار.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>معلومة للمريض</strong><p>الحيوان المشتبه لا يُقتل بل يُحجز ويُراقب 10 أيام إن أمكن، ويُبلَّغ عنه الطب البيطري.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>عضة في الوجه أو الرقبة أو اليد أو الأعضاء التناسلية أو فوق مفصل</li><li>نزيف شديد أو فقد نبض أو حس أسفل الجرح</li><li>حمى أو تورم أو صديد أو خطوط حمراء خلال أيام</li><li>حيوان ضال أو سلوكه غير طبيعي (سعار محتمل) — تحويل فوري</li><li>مريض سكر أو ناقص مناعة أو طفل صغير</li><li>عدم الالتزام بمواعيد جرعات السعار</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اغسل أي عضة فوراً بماء وصابون قبل ما توصل المستشفى</li><li>لا تقفل الجرح بالخياطة ولا تضع مواد شعبية (قهوة/تراب/عسل) عليه</li><li>التزم بجدول المصل: 0 و3 و7 و14 و28 يوماً وأحضر الكارت</li><li>أكمل المضاد الحيوي</li><li>راقب الحيوان لو أمكن وبلغ الطب البيطري</li><li>ارجع فوراً لو ظهرت حرارة أو صديد أو تنميل أو ألم متزايد</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "العضة جرح ملوث: ممنوع الخياطة (حسب الدليل) إلا بقرار جراح في حالات محددة",
-      "غسيل بالترتيب: ملح ← بيتادين ← ملح ← أكسجين ← ملح",
-      "مضاد حيوي موضعي + سوفراتول وشاش وبلاستر",
-      "حقنة تيتانوس حسب السن + اختبار حساسية",
-      "كلب أو قطة: تحويل لمستشفى حميات لمصل السعار بجرعات 0-3-7-14-28 (الجدول القديم)",
-      "ماء وصابون 15 دقيقة هو أهم إجراء ضد السعار",
-      "Hibiotic 1 جم كل 12 ساعة 5 أيام وقائياً"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "جاءت حالة عضة كلب في الساق. ما الخطأ؟"
-      },
-      "options": [
-        {
-          "ar": "غسيل قوي بالملح والبيتادين"
-        },
-        {
-          "ar": "خياطة الجرح فوراً"
-        },
-        {
-          "ar": "تحويل لمركز السعار"
-        },
-        {
-          "ar": "حقنة تيتانوس"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "العضة جرح شديد التلوث ولا تُخيَّط في الاستقبال."
-      }
-    },
-    {
-      "q": {
-        "ar": "ترتيب الغسيل الصحيح؟"
-      },
-      "options": [
-        {
-          "ar": "ملح ← بيتادين ← ملح ← أكسجين ← ملح"
-        },
-        {
-          "ar": "أكسجين فقط"
-        },
-        {
-          "ar": "بيتادين فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تبديل المحلول مع الملح يزيل التلوث ويقلل تهيج الجرح."
-      }
-    },
-    {
-      "q": {
-        "ar": "جرعات مصل السعار في الدليل (الجدول القديم)؟"
-      },
-      "options": [
-        {
-          "ar": "0 و3 و7 و14 و28"
-        },
-        {
-          "ar": "جرعة واحدة"
-        },
-        {
-          "ar": "كل أسبوع 10 أسابيع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "5 جرعات على الأيام 0-3-7-14-28 مع كارت المتابعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل حقنة التيتانوس لازم:"
-      },
-      "options": [
-        {
-          "ar": "نسأل/نختبر الحساسية"
-        },
-        {
-          "ar": "نصوم المريض"
-        },
-        {
-          "ar": "نقيس السكر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحساسية احتمال وارد."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم إجراء وقائي فوري ضد السعار؟"
-      },
-      "options": [
-        {
-          "ar": "غسل الجرح بماء وصابون 15 دقيقة"
-        },
-        {
-          "ar": "وضع قهوة على الجرح"
-        },
-        {
-          "ar": "انتظار الأعراض"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الغسيل يقلل حمل الفيروس بدرجة كبيرة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "WHO — Rabies: post-exposure prophylaxis (Weekly Epidemiological Record 2018 position paper)"
-    },
-    {
-      "title": "CDC — Rabies: human rabies prevention (ACIP 2010/2022 updates)"
-    },
-    {
-      "title": "StatPearls — Animal Bites"
-    }
-  ],
-  "rx": [
-    {
-      "category": "أخرى",
-      "condition_ar": "عضة حيوان / جرح ملوث (روشتة جرح لبالغ)",
-      "condition_en": "Animal bite / contaminated wound in adult",
-      "items": [
-        {
-          "drug_name": "Hibiotic 1 gm tab (Amoxicillin + Clavulanic acid)",
-          "dose": "قرص كل 12 ساعة لمدة 5 أيام",
-          "note": "مضاد حيوي وقائي؛ تأكد من الحساسية للبنسلين"
-        },
-        {
-          "drug_name": "Alphintern tab (إنزيمات مضادة للتورم)",
-          "dose": "قرص قبل الأكل بساعة 3 مرات يومياً لمدة 5 أيام",
-          "note": "مضاد للتورم"
-        },
-        {
-          "drug_name": "Brufen 400 tab (Ibuprofen)",
-          "dose": "قرص 3 مرات يومياً بعد الأكل",
-          "note": "مسكن؛ يُحتاط في القرحة وقصور الكلى"
-        },
-        {
-          "drug_name": "Bivetracin spray أو Fucidin cream (Fusidic acid)",
-          "dose": "موضعي على الجرح بعد التنظيف",
-          "note": "مضاد حيوي موضعي"
-        }
-      ],
-      "clinical_note": "اكتب للمريض ميعاد الغيار وميعاد فك الغرز (لو تم خياطة جرح آخر) على ظهر الروشتة. العضة نفسها لا تُخيَّط."
-    }
+  "en": [
+   "A bite is a contaminated wound: suturing is prohibited (per the guide) except by a surgeon's decision in specific cases",
+   "Wash in order: saline ← Betadine ← saline ← peroxide ← saline",
+   "Topical antibiotic + Sofratulle, gauze, and plaster",
+   "Tetanus injection according to age + allergy test",
+   "Dog or cat: refer to a fever hospital for rabies serum in doses 0-3-7-14-28 (the old schedule)",
+   "Water and soap for 15 minutes is the most important measure against rabies",
+   "Hibiotic 1 g every 12 hours for 5 days as prophylaxis"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "جاءت حالة عضة كلب في الساق. ما الخطأ؟",
+    "en": "A case of a dog bite on the leg arrived. What is wrong?"
+   },
+   "options": [
+    {
+     "ar": "غسيل قوي بالملح والبيتادين",
+     "en": "Vigorous washing with saline and Betadine"
+    },
+    {
+     "ar": "خياطة الجرح فوراً",
+     "en": "Suturing the wound immediately"
+    },
+    {
+     "ar": "تحويل لمركز السعار",
+     "en": "Referral to the rabies center"
+    },
+    {
+     "ar": "حقنة تيتانوس",
+     "en": "Tetanus injection"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "العضة جرح شديد التلوث ولا تُخيَّط في الاستقبال.",
+    "en": "A bite is a highly contaminated wound and is not sutured in the reception area."
+   }
+  },
+  {
+   "q": {
+    "ar": "ترتيب الغسيل الصحيح؟",
+    "en": "The correct washing order?"
+   },
+   "options": [
+    {
+     "ar": "ملح ← بيتادين ← ملح ← أكسجين ← ملح",
+     "en": "Saline ← Betadine ← saline ← peroxide ← saline"
+    },
+    {
+     "ar": "أكسجين فقط",
+     "en": "Peroxide only"
+    },
+    {
+     "ar": "بيتادين فقط",
+     "en": "Betadine only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تبديل المحلول مع الملح يزيل التلوث ويقلل تهيج الجرح.",
+    "en": "Alternating the solution with saline removes contamination and reduces irritation of the wound."
+   }
+  },
+  {
+   "q": {
+    "ar": "جرعات مصل السعار في الدليل (الجدول القديم)؟",
+    "en": "Rabies serum doses in the guide (the old schedule)?"
+   },
+   "options": [
+    {
+     "ar": "0 و3 و7 و14 و28",
+     "en": "0, 3, 7, 14, and 28"
+    },
+    {
+     "ar": "جرعة واحدة",
+     "en": "A single dose"
+    },
+    {
+     "ar": "كل أسبوع 10 أسابيع",
+     "en": "Every week for 10 weeks"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "5 جرعات على الأيام 0-3-7-14-28 مع كارت المتابعة.",
+    "en": "5 doses on days 0-3-7-14-28 with a follow-up card."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل حقنة التيتانوس لازم:",
+    "en": "Before the tetanus injection we must:"
+   },
+   "options": [
+    {
+     "ar": "نسأل/نختبر الحساسية",
+     "en": "Ask about/test for allergy"
+    },
+    {
+     "ar": "نصوم المريض",
+     "en": "Keep the patient fasting"
+    },
+    {
+     "ar": "نقيس السكر",
+     "en": "Measure the blood sugar"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحساسية احتمال وارد.",
+    "en": "Allergy is a possibility."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم إجراء وقائي فوري ضد السعار؟",
+    "en": "The most important immediate preventive measure against rabies?"
+   },
+   "options": [
+    {
+     "ar": "غسل الجرح بماء وصابون 15 دقيقة",
+     "en": "Washing the wound with water and soap for 15 minutes"
+    },
+    {
+     "ar": "وضع قهوة على الجرح",
+     "en": "Putting coffee on the wound"
+    },
+    {
+     "ar": "انتظار الأعراض",
+     "en": "Waiting for symptoms"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الغسيل يقلل حمل الفيروس بدرجة كبيرة.",
+    "en": "Washing greatly reduces the viral load."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "WHO — Rabies: post-exposure prophylaxis (Weekly Epidemiological Record 2018 position paper)"
+  },
+  {
+   "title": "CDC — Rabies: human rabies prevention (ACIP 2010/2022 updates)"
+  },
+  {
+   "title": "StatPearls — Animal Bites"
+  }
+ ],
+ "rx": [
+  {
+   "category": "أخرى",
+   "condition_ar": "عضة حيوان / جرح ملوث (روشتة جرح لبالغ)",
+   "condition_en": "Animal bite / contaminated wound in adult",
+   "items": [
+    {
+     "drug_name": "Hibiotic 1 gm tab (Amoxicillin + Clavulanic acid)",
+     "dose": "قرص كل 12 ساعة لمدة 5 أيام",
+     "note": "مضاد حيوي وقائي؛ تأكد من الحساسية للبنسلين"
+    },
+    {
+     "drug_name": "Alphintern tab (إنزيمات مضادة للتورم)",
+     "dose": "قرص قبل الأكل بساعة 3 مرات يومياً لمدة 5 أيام",
+     "note": "مضاد للتورم"
+    },
+    {
+     "drug_name": "Brufen 400 tab (Ibuprofen)",
+     "dose": "قرص 3 مرات يومياً بعد الأكل",
+     "note": "مسكن؛ يُحتاط في القرحة وقصور الكلى"
+    },
+    {
+     "drug_name": "Bivetracin spray أو Fucidin cream (Fusidic acid)",
+     "dose": "موضعي على الجرح بعد التنظيف",
+     "note": "مضاد حيوي موضعي"
+    }
+   ],
+   "clinical_note": "اكتب للمريض ميعاد الغيار وميعاد فك الغرز (لو تم خياطة جرح آخر) على ظهر الروشتة. العضة نفسها لا تُخيَّط."
+  }
+ ]
 }

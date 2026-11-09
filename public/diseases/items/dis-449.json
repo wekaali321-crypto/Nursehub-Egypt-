@@ -1,187 +1,228 @@
 {
-  "id": "dis-449",
-  "num": 449,
-  "system": "infect",
-  "icon": "💉",
-  "level": 2,
-  "target": "er-reception",
-  "title": {
-    "ar": "حقنة التيتانوس في الجرح الملوث",
-    "en": "Tetanus Prophylaxis in Dirty Wounds"
+ "id": "dis-449",
+ "num": 449,
+ "system": "infect",
+ "icon": "💉",
+ "level": 2,
+ "target": "er-reception",
+ "title": {
+  "ar": "حقنة التيتانوس في الجرح الملوث",
+  "en": "Tetanus Prophylaxis in Dirty Wounds"
+ },
+ "teaser": {
+  "ar": "مين يحتاج مصل ومين جرعة منشطة، اختبار حساسية المصل، والبدائل (Hibiotic + Flagyl) لو الاختبار إيجابي.",
+  "en": "Who needs serum and who needs a booster dose, the serum sensitivity test, and the alternatives (Hibiotic + Flagyl) if the test is positive."
+ },
+ "chips": [
+  {
+   "ar": "Tetanus toxoid",
+   "en": "Tetanus toxoid"
   },
-  "teaser": {
-    "ar": "مين يحتاج مصل ومين جرعة منشطة، اختبار حساسية المصل، والبدائل (Hibiotic + Flagyl) لو الاختبار إيجابي."
+  {
+   "ar": "TIG",
+   "en": "TIG"
   },
-  "chips": [
-    {
-      "ar": "Tetanus toxoid"
-    },
-    {
-      "ar": "TIG"
-    },
-    {
-      "ar": "اختبار حساسية"
-    }
+  {
+   "ar": "اختبار حساسية",
+   "en": "Sensitivity test"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>لو حد دخل في رجله مسمار صدي، أو الجرح ملوث (مثلاً حصل في الغيط) أو عضة حيوان: السؤال المهم هو إزاي أحدد إذا كان هياخد حقنة تيتانوس ولا لأ؟ الإجابة بتعتمد على <b>السن</b> و<b>آخر جرعة تطعيم</b> ونوع الجرح.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المرجع الحالي (CDC): 1) المريض اللي أخد 3 جرعات أو أكتر من تطعيم التيتانوس: جرح نضيف بسيط → جرعة منشطة فقط لو مرّ أكتر من 10 سنين؛ أي جرح تاني (ملوث، عميق، عضة، حرق) → جرعة منشطة لو مرّ أكتر من 5 سنين. 2) من لم يكمل 3 جرعات أو غير معروف: التطعيم (Td/Tdap) لكل الجروح + الجلوبيولين المناعي البشري للتيتانوس (TIG) 250 وحدة عضل لأي جرح غير نضيف بسيط. 3) المضادات الحيوية لا تمنع التيتانوس؛ الأساس هو تنضيف الجرح والتطعيم والـTIG.</p></div>",
+   "en": "<p>If someone steps on a rusty nail, or the wound is contaminated (for example in the field) or an animal bite: the important question is how do I decide whether he will get a tetanus shot or not? The answer depends on <b>age</b>, the <b>last vaccine dose</b>, and the type of wound.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Current guidance: 1) A patient who has had 3 or more doses of tetanus vaccine: a clean minor wound → a booster dose only if more than 10 years have passed; any other wound (contaminated, deep, bite, burn) → a booster dose if more than 5 years have passed. 2) Someone who has not completed 3 doses or is unknown: vaccination (Td/Tdap) for all wounds + human tetanus immune globulin (TIG) 250 units IM for any wound that is not clean and minor. 3) Antibiotics do not prevent tetanus; the basis is cleaning the wound, vaccination, and TIG.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>الأطفال أقل من 10 سنين</h4><p>مش هياخد حاجة لأن آخر جرعة من التطعيم بتديه مناعة لحد عشر سنين. بعض الآراء بتقول أقل من 7 سنين فقط، لأن WHO بتقول لو الجرح ملوث وآخر جرعة من المصل عدى عليها أكتر من 5 سنين المفروض ياخد جرعة منشطة. وبما إن الأطفال بياخدوا آخر جرعة في المدارس عند 1.5 سنة، فالمفروض لو الجرح ملوث والطفل سنه أكبر من 7 – 6.5 سنين يبقى محتاج جرعة منشطة.</p><h4>شخص أكبر من 10 سنين</h4><p>هياخد حقنة التيتانوس بعد عمل اختبار الحساسية (للمصل الحيواني).</p><div class=\"cs-box cs-info\"><strong>هل المصل لا يُعطى لو الجرح عدى عليه أكثر من 6 ساعات؟</strong><p>الكلام ده غير صحيح ولم يعد معترف به؛ طالما المريض لم تظهر عليه أعراض التيتانوس مثل التشنجات فغيره هياخد المصل عادي.</p></div><h4>اختبار الحساسية (Sensitivity test) للمصل</h4><ol><li>اسحب 0.1 مل من المصل بالسرنجة العادية أو 10 وحدات بسرنجة إنسولين.</li><li>احقنهم داخل الجلد (Intradermal) في باطن الساعد (Forearm).</li><li>اعمل دائرة حواليها بقلم جاف ولاحظ مكان الدائرة.</li><li>انتظر 15 – 30 دقيقة.</li><li>في حالة حدوث هرش أو احمرار مكان الحقن يبقى المريض عنده حساسية للمصل (positive).</li></ol>",
+   "en": "<h4>Children under 10 years</h4><p>He will not get anything because the last vaccine dose gives immunity for up to ten years. Some opinions say only under 7 years, because international guidance says if the wound is contaminated and more than 5 years have passed since the last dose, he should get a booster dose. And since children receive their last dose in school at 1.5 years, if the wound is contaminated and the child is older than 6.5–7 years, he needs a booster dose.</p><h4>A person older than 10 years</h4><p>He will get the tetanus shot after a sensitivity test (for the animal serum).</p><div class=\"cs-box cs-info\"><strong>Is the serum not given if more than 6 hours have passed since the wound?</strong><p>This statement is incorrect and no longer recognized; as long as the patient has no tetanus symptoms such as spasms, he will get the serum as usual.</p></div><h4>Sensitivity test for the serum</h4><ol><li>Draw 0.1 mL of the serum with an ordinary syringe or 10 units with an insulin syringe.</li><li>Inject it intradermally on the inner forearm.</li><li>Draw a circle around it with a ballpoint pen and note the position of the circle.</li><li>Wait 15 – 30 minutes.</li><li>If itching or redness occurs at the injection site, the patient is allergic to the serum (positive).</li></ol>"
+  },
+  "treatment": {
+   "ar": "<h4>حسب نتيجة الاختبار</h4><div class=\"cs-decision\"><strong>نتيجة اختبار الحساسية؟</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>سلبي (Negative)</b><p>هتدي المصل عادي (Anti-tetanus serum 1500 IU) + أمبول Tetanus toxoid، وتسحب باقي المصل بسرنجة عادية ويُعطى عضل.</p></div><div class=\"cs-branch no\"><b>إيجابي (Positive)</b><p>مش هتدي المصل وهتدي فقط مضاد حيوي قوي: Hibiotic 1 gm قرص كل 12 ساعة + Flagyl 500 قرص كل 8 ساعات.</p></div></div></div><h4>شخص كبير في السن</h4><p>المفروض إن ده ما لحقش نظام التطعيم الإجباري أصلاً، فطبقاً لكلام WHO إنه ياخد <b>Tetanus Toxoid + Tetanus Ig</b>. <b>Anti-tetanus serum 1500 IU (TIG)</b> أمبول، لازم يتعمله اختبار الحساسية أيضاً بـ 0.1 مل، ولو مفيش حساسية يعطى الباقي عضل. بالإضافة لأنه المفروض ياخد باقي جرعات المصل في مستشفى الحميات لأنه مش متطعم أصلاً ضد التيتانوس لكن ده مش بيحصل.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المصل الحيواني (ATS 1500 وحدة) قديم وفيه خطر حساسية؛ البديل الأمن هو الجلوبيولين المناعي البشري (TIG) 250 وحدة عضل (لا يحتاج اختبار حساسية). جرعة Tetanus toxoid/Td/Tdap = 0.5 مل عضل في العضلة الدالية. هذه التفاصيل بأمر الطبيب وحسب توفّر المستحضر.</p></div><h4>أصناف الأدوية (سوق مصر)</h4><table><thead><tr><th>الدواء</th><th>الاستخدام</th></tr></thead><tbody><tr><td>Tetanus toxoid ampoule</td><td>تطعيم، يُعطى عضل</td></tr><tr><td>Anti-tetanus serum 1500 IU</td><td>مصل (TIG حسب المراجع)، بعد اختبار حساسية</td></tr><tr><td>Hibiotic 1 gm (أموكسيسيلين + كلافيولانيك)</td><td>قرص كل 12 ساعة</td></tr><tr><td>Flagyl 500 (ميترونيدازول)</td><td>قرص كل 8 ساعات</td></tr></tbody></table>",
+   "en": "<h4>According to the test result</h4><div class=\"cs-decision\"><strong>Sensitivity test result?</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>Negative</b><p>You give the serum as usual (Anti-tetanus serum 1500 IU) + a Tetanus toxoid ampoule, and draw up the rest of the serum with an ordinary syringe and give it intramuscularly.</p></div><div class=\"cs-branch no\"><b>Positive</b><p>You do not give the serum and give only a strong antibiotic: Hibiotic 1 gm tablet every 12 hours + Flagyl 500 tablet every 8 hours.</p></div></div></div><h4>An older person</h4><p>This person presumably did not receive the mandatory vaccination schedule at all, so according to international guidance he should get <b>Tetanus Toxoid + Tetanus Ig</b>. <b>Anti-tetanus serum 1500 IU (TIG)</b> ampoule must also have a sensitivity test with 0.1 mL, and if there is no allergy the rest is given intramuscularly. In addition, he should receive the remaining serum doses in the fever hospital because he was never vaccinated against tetanus, but this does not happen.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The animal serum (ATS 1500 units) is old and carries a risk of allergy; the safe alternative is human immune globulin (TIG) 250 units IM (needs no sensitivity test). The dose of Tetanus toxoid/Td/Tdap = 0.5 mL IM in the deltoid muscle. These details are by physician order and according to product availability.</p></div><h4>Drug items (Egyptian market)</h4><table><thead><tr><th>Drug</th><th>Use</th></tr></thead><tbody><tr><td>Tetanus toxoid ampoule</td><td>Vaccination, given intramuscularly</td></tr><tr><td>Anti-tetanus serum 1500 IU</td><td>Serum (TIG per references), after a sensitivity test</td></tr><tr><td>Hibiotic 1 gm (amoxicillin + clavulanic acid)</td><td>A tablet every 12 hours</td></tr><tr><td>Flagyl 500 (metronidazole)</td><td>A tablet every 8 hours</td></tr></tbody></table>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل</strong><p>متى آخر جرعة؟ عدد الجرعات؟ هل الجرح ملوث؟ حساسية للمصل؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>نظّف الجرح</strong><p>الأساس في الوقاية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اختبار الحساسية</strong><p>تحضير 0.1 مل داخل الجلد، علّم الدائرة، 15-30 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اعط بعد أمر الطبيب</strong><p>التوكسويد عضل، والمصل/TIG حسب القرار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب بعد الحقن</strong><p>30 دقيقة لتحسس، وجهّز أدرينالين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وثّق</strong><p>نوع وتاريخ الجرعة وعدد الجرعات القادمة.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Ask</strong><p>When was the last dose? How many doses? Is the wound contaminated? Allergy to the serum?</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Clean the wound</strong><p>The basis of prevention.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Sensitivity test</strong><p>Prepare 0.1 mL intradermally, mark the circle, 15-30 minutes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Give after the physician's order</strong><p>The toxoid intramuscularly, and the serum/TIG according to the decision.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Monitor after the injection</strong><p>30 minutes for hypersensitivity, and have epinephrine ready.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Document</strong><p>The type and date of the dose and the number of upcoming doses.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>أعراض تحسسية بعد الحقن (طفح، صفير، هبوط ضغط)</li><li>تشنج عضلي أو صعوبة فتح الفم (Trismus)</li><li>جرح ملوث جداً أو عضة حيوان</li></ul>",
+   "en": "<ul><li>Allergic symptoms after the injection (rash, wheezing, low blood pressure)</li><li>Muscle spasm or difficulty opening the mouth (trismus)</li><li>A very contaminated wound or an animal bite</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>أكمل جدول التطعيم ضد التيتانوس.</li><li>أي جرح ملوث: ذكّر الطبيب بتاريخ آخر جرعة.</li><li>راجع لو ظهر تيبّس أو تشنج.</li></ul>",
+   "en": "<ul><li>Complete the tetanus vaccination schedule.</li><li>Any contaminated wound: remind the physician of the date of the last dose.</li><li>Return if stiffness or spasm appears.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "السن وآخر جرعة يحددان الحاجة",
+   "اختبار حساسية المصل: 0.1 مل داخل الجلد، 15-30 دقيقة",
+   "المصل لا يُمنع بعد 6 ساعات",
+   "المضادات الحيوية لا تمنع التيتانوس",
+   "TIG البشري 250 وحدة أمن بدون اختبار"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>لو حد دخل في رجله مسمار صدي، أو الجرح ملوث (مثلاً حصل في الغيط) أو عضة حيوان: السؤال المهم هو إزاي أحدد إذا كان هياخد حقنة تيتانوس ولا لأ؟ الإجابة بتعتمد على <b>السن</b> و<b>آخر جرعة تطعيم</b> ونوع الجرح.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المرجع الحالي (CDC): 1) المريض اللي أخد 3 جرعات أو أكتر من تطعيم التيتانوس: جرح نضيف بسيط → جرعة منشطة فقط لو مرّ أكتر من 10 سنين؛ أي جرح تاني (ملوث، عميق، عضة، حرق) → جرعة منشطة لو مرّ أكتر من 5 سنين. 2) من لم يكمل 3 جرعات أو غير معروف: التطعيم (Td/Tdap) لكل الجروح + الجلوبيولين المناعي البشري للتيتانوس (TIG) 250 وحدة عضل لأي جرح غير نضيف بسيط. 3) المضادات الحيوية لا تمنع التيتانوس؛ الأساس هو تنضيف الجرح والتطعيم والـTIG.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>الأطفال أقل من 10 سنين</h4><p>مش هياخد حاجة لأن آخر جرعة من التطعيم بتديه مناعة لحد عشر سنين. بعض الآراء بتقول أقل من 7 سنين فقط، لأن WHO بتقول لو الجرح ملوث وآخر جرعة من المصل عدى عليها أكتر من 5 سنين المفروض ياخد جرعة منشطة. وبما إن الأطفال بياخدوا آخر جرعة في المدارس عند 1.5 سنة، فالمفروض لو الجرح ملوث والطفل سنه أكبر من 7 – 6.5 سنين يبقى محتاج جرعة منشطة.</p><h4>شخص أكبر من 10 سنين</h4><p>هياخد حقنة التيتانوس بعد عمل اختبار الحساسية (للمصل الحيواني).</p><div class=\"cs-box cs-info\"><strong>هل المصل لا يُعطى لو الجرح عدى عليه أكثر من 6 ساعات؟</strong><p>الكلام ده غير صحيح ولم يعد معترف به؛ طالما المريض لم تظهر عليه أعراض التيتانوس مثل التشنجات فغيره هياخد المصل عادي.</p></div><h4>اختبار الحساسية (Sensitivity test) للمصل</h4><ol><li>اسحب 0.1 مل من المصل بالسرنجة العادية أو 10 وحدات بسرنجة إنسولين.</li><li>احقنهم داخل الجلد (Intradermal) في باطن الساعد (Forearm).</li><li>اعمل دائرة حواليها بقلم جاف ولاحظ مكان الدائرة.</li><li>انتظر 15 – 30 دقيقة.</li><li>في حالة حدوث هرش أو احمرار مكان الحقن يبقى المريض عنده حساسية للمصل (positive).</li></ol>"
-    },
-    "treatment": {
-      "ar": "<h4>حسب نتيجة الاختبار</h4><div class=\"cs-decision\"><strong>نتيجة اختبار الحساسية؟</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>سلبي (Negative)</b><p>هتدي المصل عادي (Anti-tetanus serum 1500 IU) + أمبول Tetanus toxoid، وتسحب باقي المصل بسرنجة عادية ويُعطى عضل.</p></div><div class=\"cs-branch no\"><b>إيجابي (Positive)</b><p>مش هتدي المصل وهتدي فقط مضاد حيوي قوي: Hibiotic 1 gm قرص كل 12 ساعة + Flagyl 500 قرص كل 8 ساعات.</p></div></div></div><h4>شخص كبير في السن</h4><p>المفروض إن ده ما لحقش نظام التطعيم الإجباري أصلاً، فطبقاً لكلام WHO إنه ياخد <b>Tetanus Toxoid + Tetanus Ig</b>. <b>Anti-tetanus serum 1500 IU (TIG)</b> أمبول، لازم يتعمله اختبار الحساسية أيضاً بـ 0.1 مل، ولو مفيش حساسية يعطى الباقي عضل. بالإضافة لأنه المفروض ياخد باقي جرعات المصل في مستشفى الحميات لأنه مش متطعم أصلاً ضد التيتانوس لكن ده مش بيحصل.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المصل الحيواني (ATS 1500 وحدة) قديم وفيه خطر حساسية؛ البديل الأمن هو الجلوبيولين المناعي البشري (TIG) 250 وحدة عضل (لا يحتاج اختبار حساسية). جرعة Tetanus toxoid/Td/Tdap = 0.5 مل عضل في العضلة الدالية. هذه التفاصيل بأمر الطبيب وحسب توفّر المستحضر.</p></div><h4>أصناف الأدوية (سوق مصر)</h4><table><thead><tr><th>الدواء</th><th>الاستخدام</th></tr></thead><tbody><tr><td>Tetanus toxoid ampoule</td><td>تطعيم، يُعطى عضل</td></tr><tr><td>Anti-tetanus serum 1500 IU</td><td>مصل (TIG حسب المراجع)، بعد اختبار حساسية</td></tr><tr><td>Hibiotic 1 gm (أموكسيسيلين + كلافيولانيك)</td><td>قرص كل 12 ساعة</td></tr><tr><td>Flagyl 500 (ميترونيدازول)</td><td>قرص كل 8 ساعات</td></tr></tbody></table>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل</strong><p>متى آخر جرعة؟ عدد الجرعات؟ هل الجرح ملوث؟ حساسية للمصل؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>نظّف الجرح</strong><p>الأساس في الوقاية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اختبار الحساسية</strong><p>تحضير 0.1 مل داخل الجلد، علّم الدائرة، 15-30 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اعط بعد أمر الطبيب</strong><p>التوكسويد عضل، والمصل/TIG حسب القرار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب بعد الحقن</strong><p>30 دقيقة لتحسس، وجهّز أدرينالين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وثّق</strong><p>نوع وتاريخ الجرعة وعدد الجرعات القادمة.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>أعراض تحسسية بعد الحقن (طفح، صفير، هبوط ضغط)</li><li>تشنج عضلي أو صعوبة فتح الفم (Trismus)</li><li>جرح ملوث جداً أو عضة حيوان</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>أكمل جدول التطعيم ضد التيتانوس.</li><li>أي جرح ملوث: ذكّر الطبيب بتاريخ آخر جرعة.</li><li>راجع لو ظهر تيبّس أو تشنج.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "السن وآخر جرعة يحددان الحاجة",
-      "اختبار حساسية المصل: 0.1 مل داخل الجلد، 15-30 دقيقة",
-      "المصل لا يُمنع بعد 6 ساعات",
-      "المضادات الحيوية لا تمنع التيتانوس",
-      "TIG البشري 250 وحدة أمن بدون اختبار"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "اختبار حساسية المصل يتم بحقن:"
-      },
-      "options": [
-        {
-          "ar": "عضل"
-        },
-        {
-          "ar": "وريد"
-        },
-        {
-          "ar": "داخل الجلد في الساعد"
-        },
-        {
-          "ar": "تحت الجلد في الفخذ"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "Intradermal في باطن الساعد."
-      }
-    },
-    {
-      "q": {
-        "ar": "مدة الانتظار بعد حقن الاختبار:"
-      },
-      "options": [
-        {
-          "ar": "دقيقة"
-        },
-        {
-          "ar": "15-30 دقيقة"
-        },
-        {
-          "ar": "ساعتين"
-        },
-        {
-          "ar": "يوم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "ثم تلاحظ الاحمرار أو الهرش."
-      }
-    },
-    {
-      "q": {
-        "ar": "هل ينفع المصل بعد 6 ساعات من الجرح؟"
-      },
-      "options": [
-        {
-          "ar": "لا"
-        },
-        {
-          "ar": "نعم طالما لا توجد أعراض تيتانوس"
-        },
-        {
-          "ar": "فقط للأطفال"
-        },
-        {
-          "ar": "فقط للكبار"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الكلام القديم غير صحيح."
-      }
-    },
-    {
-      "q": {
-        "ar": "جرعة TIG البشري حسب CDC:"
-      },
-      "options": [
-        {
-          "ar": "100 وحدة"
-        },
-        {
-          "ar": "250 وحدة عضل"
-        },
-        {
-          "ar": "1500 وحدة"
-        },
-        {
-          "ar": "5000 وحدة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "250 وحدة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CDC: Clinical Guidance for Wound Management to Prevent Tetanus"
-    },
-    {
-      "title": "WHO: Tetanus vaccines position paper"
-    }
-  ],
-  "rx": [
-    {
-      "category": "أخرى",
-      "condition_ar": "وقاية التيتانوس بعد جرح ملوث",
-      "condition_en": "Tetanus prophylaxis in dirty wound",
-      "items": [
-        {
-          "drug_name": "Tetanus toxoid ampoule",
-          "dose": "0.5 مل عضل (جرعة منشطة) بأمر الطبيب",
-          "note": "تطعيم"
-        },
-        {
-          "drug_name": "Anti-tetanus serum 1500 IU (TIG)",
-          "dose": "أمبول عضل بعد اختبار الحساسية السلبي",
-          "note": "البديل: TIG البشري 250 وحدة"
-        },
-        {
-          "drug_name": "Hibiotic 1 gm (Amoxicillin + Clavulanic acid)",
-          "dose": "قرص كل 12 ساعة",
-          "note": "لو اختبار الحساسية إيجابي"
-        },
-        {
-          "drug_name": "Flagyl 500 (Metronidazole)",
-          "dose": "قرص كل 8 ساعات",
-          "note": "يُضاف مع Hibiotic لو اختبار الحساسية إيجابي"
-        }
-      ],
-      "clinical_note": "المضاد الحيوي لا يغني عن التطعيم وتنضيف الجرح."
-    }
+  "en": [
+   "Age and the last dose determine the need",
+   "Serum sensitivity test: 0.1 mL intradermally, 15-30 minutes",
+   "The serum is not withheld after 6 hours",
+   "Antibiotics do not prevent tetanus",
+   "Human TIG 250 units is safe without a test"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "اختبار حساسية المصل يتم بحقن:",
+    "en": "The serum sensitivity test is done by injecting:"
+   },
+   "options": [
+    {
+     "ar": "عضل",
+     "en": "Intramuscularly"
+    },
+    {
+     "ar": "وريد",
+     "en": "Intravenously"
+    },
+    {
+     "ar": "داخل الجلد في الساعد",
+     "en": "Intradermally in the forearm"
+    },
+    {
+     "ar": "تحت الجلد في الفخذ",
+     "en": "Subcutaneously in the thigh"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "Intradermal في باطن الساعد.",
+    "en": "Intradermal on the inner forearm."
+   }
+  },
+  {
+   "q": {
+    "ar": "مدة الانتظار بعد حقن الاختبار:",
+    "en": "The waiting time after the test injection:"
+   },
+   "options": [
+    {
+     "ar": "دقيقة",
+     "en": "One minute"
+    },
+    {
+     "ar": "15-30 دقيقة",
+     "en": "15-30 minutes"
+    },
+    {
+     "ar": "ساعتين",
+     "en": "Two hours"
+    },
+    {
+     "ar": "يوم",
+     "en": "One day"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "ثم تلاحظ الاحمرار أو الهرش.",
+    "en": "Then you observe for redness or itching."
+   }
+  },
+  {
+   "q": {
+    "ar": "هل ينفع المصل بعد 6 ساعات من الجرح؟",
+    "en": "Is the serum still useful 6 hours after the wound?"
+   },
+   "options": [
+    {
+     "ar": "لا",
+     "en": "No"
+    },
+    {
+     "ar": "نعم طالما لا توجد أعراض تيتانوس",
+     "en": "Yes, as long as there are no tetanus symptoms"
+    },
+    {
+     "ar": "فقط للأطفال",
+     "en": "Only for children"
+    },
+    {
+     "ar": "فقط للكبار",
+     "en": "Only for adults"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الكلام القديم غير صحيح.",
+    "en": "The old statement is incorrect."
+   }
+  },
+  {
+   "q": {
+    "ar": "جرعة TIG البشري حسب CDC:",
+    "en": "The dose of human TIG according to current guidance:"
+   },
+   "options": [
+    {
+     "ar": "100 وحدة",
+     "en": "100 units"
+    },
+    {
+     "ar": "250 وحدة عضل",
+     "en": "250 units IM"
+    },
+    {
+     "ar": "1500 وحدة",
+     "en": "1500 units"
+    },
+    {
+     "ar": "5000 وحدة",
+     "en": "5000 units"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "250 وحدة.",
+    "en": "250 units."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CDC: Clinical Guidance for Wound Management to Prevent Tetanus"
+  },
+  {
+   "title": "WHO: Tetanus vaccines position paper"
+  }
+ ],
+ "rx": [
+  {
+   "category": "أخرى",
+   "condition_ar": "وقاية التيتانوس بعد جرح ملوث",
+   "condition_en": "Tetanus prophylaxis in dirty wound",
+   "items": [
+    {
+     "drug_name": "Tetanus toxoid ampoule",
+     "dose": "0.5 مل عضل (جرعة منشطة) بأمر الطبيب",
+     "note": "تطعيم"
+    },
+    {
+     "drug_name": "Anti-tetanus serum 1500 IU (TIG)",
+     "dose": "أمبول عضل بعد اختبار الحساسية السلبي",
+     "note": "البديل: TIG البشري 250 وحدة"
+    },
+    {
+     "drug_name": "Hibiotic 1 gm (Amoxicillin + Clavulanic acid)",
+     "dose": "قرص كل 12 ساعة",
+     "note": "لو اختبار الحساسية إيجابي"
+    },
+    {
+     "drug_name": "Flagyl 500 (Metronidazole)",
+     "dose": "قرص كل 8 ساعات",
+     "note": "يُضاف مع Hibiotic لو اختبار الحساسية إيجابي"
+    }
+   ],
+   "clinical_note": "المضاد الحيوي لا يغني عن التطعيم وتنضيف الجرح."
+  }
+ ]
 }

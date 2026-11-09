@@ -1,190 +1,226 @@
 {
-  "id": "dis-526",
-  "num": 526,
-  "system": "other",
-  "icon": "🧴",
-  "level": 3,
-  "target": "new:poisoning|السموم",
-  "title": {
-    "ar": "ابتلاع الكيروسين والمواد الكاوية والفينيك والنفتالين",
-    "en": "Hydrocarbon, Corrosive, Phenol & Naphthalene Ingestion"
+ "id": "dis-526",
+ "num": 526,
+ "system": "other",
+ "icon": "🧴",
+ "level": 3,
+ "target": "new:poisoning|السموم",
+ "title": {
+  "ar": "ابتلاع الكيروسين والمواد الكاوية والفينيك والنفتالين",
+  "en": "Hydrocarbon, Corrosive, Phenol & Naphthalene Ingestion"
+ },
+ "teaser": {
+  "ar": "أخطر الأخطاء: إحداث القيء أو غسيل المعدة. إزاي تتعامل مع البنزين والكلور والبطاس والنفتالين.",
+  "en": "The most dangerous mistakes: inducing vomiting or gastric lavage. How to deal with gasoline, chlorine, lye, and naphthalene."
+ },
+ "chips": [
+  {
+   "ar": "ممنوع القيء",
+   "en": "No vomiting"
   },
-  "teaser": {
-    "ar": "أخطر الأخطاء: إحداث القيء أو غسيل المعدة. إزاي تتعامل مع البنزين والكلور والبطاس والنفتالين."
+  {
+   "ar": "لبن بارد",
+   "en": "Cold milk"
   },
-  "chips": [
-    {
-      "ar": "ممنوع القيء"
-    },
-    {
-      "ar": "لبن بارد"
-    },
-    {
-      "ar": "غسل الجلد"
-    }
+  {
+   "ar": "غسل الجلد",
+   "en": "Wash the skin"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الحالات دي لازم تتحوّل للمستشفى أو مركز السموم بعد الرعاية الأولية.</p><table><thead><tr><th>المادة</th><th>الأمثلة</th></tr></thead><tbody><tr><td>كاويات (Corrosives)</td><td>بطاس ومنظفات بيت قوية؛ مية النار (أحماض)؛ كلور مركز (الكلوروكس لو مش مخفّف)؛ ميّة الأكسجين المركزة؛ فينيك (Phenol)</td></tr><tr><td>هيدروكربونات (Hydrocarbons)</td><td>بنزين، كيروسين، غاز، سولار، تنر</td></tr><tr><td>نفتالين</td><td>كرات النفتالين</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>قاعدة</strong><p><b>ممنوع إحداث القيء، وممنوع غسيل المعدة، وممنوع محاولة تعادل الحمض بالقلوي أو العكس.</b></p></div>\n<p>القواعد العامة (ABC، التاريخ، الدعم، المراقبة): <a href=\"/diseases/dis-503\">القواعد العامة في التعامل مع حالات التسمم</a>.</p>",
+   "en": "<p>These cases must be referred to the hospital or poison center after first aid.</p><table><thead><tr><th>Substance</th><th>Examples</th></tr></thead><tbody><tr><td>Corrosives</td><td>Lye and strong household cleaners; muriatic acid (\"fire water\"); concentrated chlorine (Clorox if undiluted); concentrated hydrogen peroxide; phenol (Phenyl disinfectant)</td></tr><tr><td>Hydrocarbons</td><td>Gasoline, kerosene, gas, diesel, thinner</td></tr><tr><td>Naphthalene</td><td>Mothballs</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Rule</strong><p><b>Inducing vomiting is forbidden, gastric lavage is forbidden, and trying to neutralize an acid with an alkali or the reverse is forbidden.</b></p></div>\n<p>General rules (ABC, history, support, monitoring): <a href=\"/diseases/dis-503\">general rules for dealing with poisoning cases</a>.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li><b>كاويات:</b> حروق حول الفم والشفايف، ألم بلع، سيلان لعاب، بحة صوت وصرير (خطر الانسداد)، قيء دموي.</li><li><b>هيدروكربونات:</b> كحة واختناق وزرقة (التهاب رئوي كيميائي)، ريحة كيروسين.</li><li><b>نفتالين:</b> قيء، بول غامق، شحوب وصفرة (تكسّر دم).</li></ul>",
+   "en": "<ul><li><b>Corrosives:</b> burns around the mouth and lips, painful swallowing, drooling, hoarse voice and stridor (risk of obstruction), bloody vomiting.</li><li><b>Hydrocarbons:</b> cough, choking, and cyanosis (chemical pneumonitis), smell of kerosene.</li><li><b>Naphthalene:</b> vomiting, dark urine, pallor and jaundice (hemolysis).</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>أشعة صدر (هيدروكربونات)، غازات دم، SpO2.</li><li>كاويات: تنظير بعد 12–24 ساعة بقرار الجراح/الباطنة.</li><li>نفتالين: CBC، بيليروبين، G6PD، بول.</li></ul>",
+   "en": "<ul><li>Chest X-ray (hydrocarbons), blood gases, SpO2.</li><li>Corrosives: endoscopy after 12–24 hours by decision of the surgeon/internist.</li><li>Naphthalene: CBC, bilirubin, G6PD, urine.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>هيدروكربونات (بنزين/كيروسين/غاز/سولار/تنر)</h4><ol><li>عناية بالتنفس وتحويل الحالة لأنبوبة تنفسية أو تنفس صناعي عند الحاجة.</li><li>لو على هدومه يخلعها وكمان لو على جلده أو حول الفم يتغسل بميّة وصابون.</li><li>شرب كوب من اللبن البارد (نص كوب في الأطفال).</li><li>إحداث قيء وغسيل المعدة <b>ممنوع</b>.</li><li>استنشاق أوكسجين.</li><li>جرعة من الملين.</li><li>Ventolin inhaler بختين كل 6 ساعات لتوسيع الشعب.</li><li>Zantac أمبول عضل أو وريد.</li><li>Solucortef فيال وريد أو عضل كل 6 ساعات لمدة يومين.</li><li>Penicillin G فيال حقنة واحدة عضل.</li></ol><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الكورتيزون والمضادات الحيوية الوقائية مش من الإرشادات الحديثة للهيدروكربونات إلا لو حصل التهاب رئوي أو بقرار طبي؛ والمهم الأوكسجين والدعم التنفسي. تجنّب الأدرينالين لأنه قد يسبب اضطراب نبض.</p></div><h4>كاويات (Corrosive ingestion)</h4><ol><li>عناية بالتنفس وتحويل لأنبوبة تنفسية أو تنفس صناعي عند الحاجة.</li><li>لو على هدومه يخلعها ويستحمي، ولو على جلده أو حول الفم يتغسل بميّة وصابون.</li><li>شرب كوب من اللبن البارد (نص كوب في الأطفال) هو أفضل علاج حسب المراجع.</li><li>قيء، غسيل معدة، فحم، ملينات، أحماض أو قلويات لمعادلته: <b>ممنوع</b>.</li><li>500 سم محلول جلوكوز ملحي (جلوكوز 5% + ملح 0.9%) عن طريق الوريد.</li><li>مضاد للقيء: Cortigen B6 Pediatric أمبول (عضل). لو لم يتوقف القيء: Danset 4 أو Zofran 4 أمبول بالتنقيط الوريدي.</li><li>Zantac أمبول أو Pantazol فيال (مضاد حموضة قوي في المحلول لحماية المعدة).</li><li>Pethidine 50 أمبول حقنة عضل لتقليل الألم.</li></ol><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأوفضل بالتقييم الحالي: لا شيء بالفم (NPO) لو في ألم بلع أو صوت مبحوح، وتنظير الجهاز الهضمي العلوي خلال 12–24 ساعة. اللبن/الماء بكمية قليلة جداً وبسرعة بعد البلع فقط ولو العيان واعي. Zantac (رانيتيدين) سُحب من أسواق كثيرة؛ البدائل بقرار الطبيب (Pantoprazole). Cortigen B6 (مستخلص قشرة الكظر + فيتامين B6) علاج داعم؛ أوندانسيترون (Danset/Zofran) أكثر إثباتاً.</p></div><h4>الفينيك (Phenol)</h4><ul><li>هو الكاوي الوحيد اللي ممكن تعمله غسيل معدة حسب المراجع، ويُفضَّل بزيت زيتون أو خروع مع حقن زيت زيتون أو خروع في الرايل بعد الغسيل.</li><li>الحروق في الوجه أو حول الفم أو الرقبة تتغسل بكمية كبيرة من الميّة أو الكحول، ويفضل بزيت الزيتون أو الخروع.</li><li>يشرب كوب لبن بارد عادي ويعامل معاملة الأحماض والقلويات.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الاتجاه الحالي تجنّب غسيل المعدة في أي كاوي بما فيه الفينول إلا بتوجيه مركز السموم؛ وغسل الجلد الكثيف بالماء (أو PEG 300/400 لو متاح) ضروري ومستعجل.</p></div><h4>النفتالين (Naphthalene)</h4><ul><li>لازم تتحول لأقرب مستشفى أو مركز سموم بعد الرعاية الأولية.</li><li>غسيل معدة.</li><li>Zantac أمبول حقنة وريد أو عضل.</li><li>Solucortef فيال حقنة وريد أو عضل.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الخطر الأكبر تكسر كرات الدم الحمراء خصوصاً في نقص إنزيم G6PD: قيس الهيموجلوبين والبيليروبين، وتُنقل دم عند اللزوم، وقد يُعطى ميثيلين بلو لمتلازمة الميتهيموجلوبين (بقرار طبيب وغير مناسب في نقص G6PD).</p></div>",
+   "en": "<h4>Hydrocarbons (gasoline/kerosene/gas/diesel/thinner)</h4><ol><li>Respiratory care and transfer to an endotracheal tube or mechanical ventilation when needed.</li><li>If it is on his clothes, remove them, and if it is on his skin or around the mouth, wash with water and soap.</li><li>Drinking a glass of cold milk (half a glass for children).</li><li>Inducing vomiting and gastric lavage are <b>forbidden</b>.</li><li>Oxygen inhalation.</li><li>A dose of laxative.</li><li>Ventolin inhaler two puffs every 6 hours to dilate the airways.</li><li>Zantac ampule IM or IV.</li><li>Solucortef vial IV or IM every 6 hours for two days.</li><li>Penicillin G vial one IM injection.</li></ol><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Cortisone and prophylactic antibiotics are not part of the current guidelines for hydrocarbons unless pneumonitis occurs or by medical decision; what matters is oxygen and respiratory support. Avoid epinephrine because it may cause arrhythmia.</p></div><h4>Corrosives (corrosive ingestion)</h4><ol><li>Respiratory care and transfer to an endotracheal tube or mechanical ventilation when needed.</li><li>If it is on his clothes, remove them and have him shower, and if it is on his skin or around the mouth, wash with water and soap.</li><li>Drinking a glass of cold milk (half a glass for children) is the best treatment per the references.</li><li>Vomiting, gastric lavage, charcoal, laxatives, acids or alkalis to neutralize it: <b>forbidden</b>.</li><li>500 cm³ of glucose saline solution (5% glucose + 0.9% saline) by IV.</li><li>Antiemetic: Cortigen B6 Pediatric ampule (IM). If vomiting does not stop: Danset 4 or Zofran 4 ampule by IV drip.</li><li>Zantac ampule or Pantazol vial (a strong antacid in the solution to protect the stomach).</li><li>Pethidine 50 ampule IM injection to reduce pain.</li></ol><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The better approach by current assessment: nothing by mouth (NPO) if there is painful swallowing or a hoarse voice, and upper GI endoscopy within 12–24 hours. Milk/water in a very small amount and quickly after swallowing only and if the patient is conscious. Zantac (ranitidine) has been withdrawn from many markets; alternatives are by the physician's decision (pantoprazole). Cortigen B6 (adrenal cortex extract + vitamin B6) is supportive treatment; ondansetron (Danset/Zofran) is better proven.</p></div><h4>Phenol (Phenyl)</h4><ul><li>It is the only corrosive for which gastric lavage can be done per the references, preferably with olive or castor oil, with olive or castor oil injected through the Ryle tube after the lavage.</li><li>Burns on the face, around the mouth, or the neck are washed with a large amount of water or alcohol, preferably with olive or castor oil.</li><li>He drinks an ordinary glass of cold milk and is treated like acids and alkalis.</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The current trend is to avoid gastric lavage in any corrosive including phenol unless directed by the poison center; and heavy washing of the skin with water (or PEG 300/400 if available) is necessary and urgent.</p></div><h4>Naphthalene</h4><ul><li>The patient must be transferred to the nearest hospital or poison center after first aid.</li><li>Gastric lavage.</li><li>Zantac ampule injection IV or IM.</li><li>Solucortef vial injection IV or IM.</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The biggest danger is destruction of red blood cells, especially in G6PD enzyme deficiency: measure hemoglobin and bilirubin, transfuse blood when needed, and methylene blue may be given for methemoglobinemia (by physician decision and not suitable in G6PD deficiency).</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>لا تعطِ شيء يقيّئ</strong><p>ممنوع قيء/غسيل معدة/فحم في كاويات وهيدروكربونات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>إزالة الملوّث</strong><p>خلع الملابس الملوثة وغسل الجلد والعين بالميّة بكميات وفيرة لمدة 15–20 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ABC</strong><p>أوكسجين، متابعة صوت/صرير/سيلان لعاب، جهّز طريق هوائي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>خط وريدي وسوائل</strong><p>حسب أمر الطبيب (500 سم جلوكوز ملحي).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مضاد قيء وحموضة ومسكن</strong><p>ذكرناهم؛ اتأكد من الجرعات والوقت.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>مراقبة</strong><p>تنفس، لون، بول (النفتالين)، ألم، قيء دموي.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Do not give anything that induces vomiting</strong><p>No vomiting/gastric lavage/charcoal in corrosives and hydrocarbons.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Remove the contaminant</strong><p>Remove contaminated clothing and wash the skin and eye with plenty of water for 15–20 minutes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ABC</strong><p>Oxygen, watch voice/stridor/drooling, prepare the airway.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>IV line and fluids</strong><p>Per the physician's order (500 cm³ glucose saline).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Antiemetic, antacid, and analgesic</strong><p>We mentioned them; make sure of the doses and the timing.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Monitoring</strong><p>Breathing, color, urine (naphthalene), pain, bloody vomiting.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>صرير أو بحة صوت أو سيلان لعاب</li><li>زرقة وضيق تنفس</li><li>قيء دموي أو ألم بطن شديد (انثقاب)</li><li>بول غامق وشحوب (نفتالين)</li></ul>",
+   "en": "<ul><li>Stridor, hoarse voice, or drooling</li><li>Cyanosis and difficulty breathing</li><li>Bloody vomiting or severe abdominal pain (perforation)</li><li>Dark urine and pallor (naphthalene)</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>حفظ الكيروسين والمنظفات في عبوات أصلية ومقفولة.</li><li>لا تُخزّن مواد منزلية في زجاجات مشروبات.</li><li>كرات النفتالين بعيد عن الأطفال.</li></ul>",
+   "en": "<ul><li>Keep kerosene and cleaners in original, closed containers.</li><li>Do not store household substances in drink bottles.</li><li>Keep mothballs away from children.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "القاعدة: لا قيء ولا غسيل معدة في الكاويات والهيدروكربونات.",
+   "اللبن البارد كوب (نص كوب للأطفال).",
+   "الكاويات: وريد + مضاد قيء + مضاد حموضة + مسكن.",
+   "الفينيك كاوي يمكن غسل المعدة فيه حسب المراجع (والمفضل تجنبه حالياً).",
+   "النفتالين خطره تكسّر الدم."
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الحالات دي لازم تتحوّل للمستشفى أو مركز السموم بعد الرعاية الأولية.</p><table><thead><tr><th>المادة</th><th>الأمثلة</th></tr></thead><tbody><tr><td>كاويات (Corrosives)</td><td>بطاس ومنظفات بيت قوية؛ مية النار (أحماض)؛ كلور مركز (الكلوروكس لو مش مخفّف)؛ ميّة الأكسجين المركزة؛ فينيك (Phenol)</td></tr><tr><td>هيدروكربونات (Hydrocarbons)</td><td>بنزين، كيروسين، غاز، سولار، تنر</td></tr><tr><td>نفتالين</td><td>كرات النفتالين</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>قاعدة</strong><p><b>ممنوع إحداث القيء، وممنوع غسيل المعدة، وممنوع محاولة تعادل الحمض بالقلوي أو العكس.</b></p></div>\n<p>القواعد العامة (ABC، التاريخ، الدعم، المراقبة): <a href=\"/diseases/dis-503\">القواعد العامة في التعامل مع حالات التسمم</a>.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li><b>كاويات:</b> حروق حول الفم والشفايف، ألم بلع، سيلان لعاب، بحة صوت وصرير (خطر الانسداد)، قيء دموي.</li><li><b>هيدروكربونات:</b> كحة واختناق وزرقة (التهاب رئوي كيميائي)، ريحة كيروسين.</li><li><b>نفتالين:</b> قيء، بول غامق، شحوب وصفرة (تكسّر دم).</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>أشعة صدر (هيدروكربونات)، غازات دم، SpO2.</li><li>كاويات: تنظير بعد 12–24 ساعة بقرار الجراح/الباطنة.</li><li>نفتالين: CBC، بيليروبين، G6PD، بول.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>هيدروكربونات (بنزين/كيروسين/غاز/سولار/تنر)</h4><ol><li>عناية بالتنفس وتحويل الحالة لأنبوبة تنفسية أو تنفس صناعي عند الحاجة.</li><li>لو على هدومه يخلعها وكمان لو على جلده أو حول الفم يتغسل بميّة وصابون.</li><li>شرب كوب من اللبن البارد (نص كوب في الأطفال).</li><li>إحداث قيء وغسيل المعدة <b>ممنوع</b>.</li><li>استنشاق أوكسجين.</li><li>جرعة من الملين.</li><li>Ventolin inhaler بختين كل 6 ساعات لتوسيع الشعب.</li><li>Zantac أمبول عضل أو وريد.</li><li>Solucortef فيال وريد أو عضل كل 6 ساعات لمدة يومين.</li><li>Penicillin G فيال حقنة واحدة عضل.</li></ol><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الكورتيزون والمضادات الحيوية الوقائية مش من الإرشادات الحديثة للهيدروكربونات إلا لو حصل التهاب رئوي أو بقرار طبي؛ والمهم الأوكسجين والدعم التنفسي. تجنّب الأدرينالين لأنه قد يسبب اضطراب نبض.</p></div><h4>كاويات (Corrosive ingestion)</h4><ol><li>عناية بالتنفس وتحويل لأنبوبة تنفسية أو تنفس صناعي عند الحاجة.</li><li>لو على هدومه يخلعها ويستحمي، ولو على جلده أو حول الفم يتغسل بميّة وصابون.</li><li>شرب كوب من اللبن البارد (نص كوب في الأطفال) هو أفضل علاج حسب المراجع.</li><li>قيء، غسيل معدة، فحم، ملينات، أحماض أو قلويات لمعادلته: <b>ممنوع</b>.</li><li>500 سم محلول جلوكوز ملحي (جلوكوز 5% + ملح 0.9%) عن طريق الوريد.</li><li>مضاد للقيء: Cortigen B6 Pediatric أمبول (عضل). لو لم يتوقف القيء: Danset 4 أو Zofran 4 أمبول بالتنقيط الوريدي.</li><li>Zantac أمبول أو Pantazol فيال (مضاد حموضة قوي في المحلول لحماية المعدة).</li><li>Pethidine 50 أمبول حقنة عضل لتقليل الألم.</li></ol><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأوفضل بالتقييم الحالي: لا شيء بالفم (NPO) لو في ألم بلع أو صوت مبحوح، وتنظير الجهاز الهضمي العلوي خلال 12–24 ساعة. اللبن/الماء بكمية قليلة جداً وبسرعة بعد البلع فقط ولو العيان واعي. Zantac (رانيتيدين) سُحب من أسواق كثيرة؛ البدائل بقرار الطبيب (Pantoprazole). Cortigen B6 (مستخلص قشرة الكظر + فيتامين B6) علاج داعم؛ أوندانسيترون (Danset/Zofran) أكثر إثباتاً.</p></div><h4>الفينيك (Phenol)</h4><ul><li>هو الكاوي الوحيد اللي ممكن تعمله غسيل معدة حسب المراجع، ويُفضَّل بزيت زيتون أو خروع مع حقن زيت زيتون أو خروع في الرايل بعد الغسيل.</li><li>الحروق في الوجه أو حول الفم أو الرقبة تتغسل بكمية كبيرة من الميّة أو الكحول، ويفضل بزيت الزيتون أو الخروع.</li><li>يشرب كوب لبن بارد عادي ويعامل معاملة الأحماض والقلويات.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الاتجاه الحالي تجنّب غسيل المعدة في أي كاوي بما فيه الفينول إلا بتوجيه مركز السموم؛ وغسل الجلد الكثيف بالماء (أو PEG 300/400 لو متاح) ضروري ومستعجل.</p></div><h4>النفتالين (Naphthalene)</h4><ul><li>لازم تتحول لأقرب مستشفى أو مركز سموم بعد الرعاية الأولية.</li><li>غسيل معدة.</li><li>Zantac أمبول حقنة وريد أو عضل.</li><li>Solucortef فيال حقنة وريد أو عضل.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الخطر الأكبر تكسر كرات الدم الحمراء خصوصاً في نقص إنزيم G6PD: قيس الهيموجلوبين والبيليروبين، وتُنقل دم عند اللزوم، وقد يُعطى ميثيلين بلو لمتلازمة الميتهيموجلوبين (بقرار طبيب وغير مناسب في نقص G6PD).</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>لا تعطِ شيء يقيّئ</strong><p>ممنوع قيء/غسيل معدة/فحم في كاويات وهيدروكربونات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>إزالة الملوّث</strong><p>خلع الملابس الملوثة وغسل الجلد والعين بالميّة بكميات وفيرة لمدة 15–20 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ABC</strong><p>أوكسجين، متابعة صوت/صرير/سيلان لعاب، جهّز طريق هوائي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>خط وريدي وسوائل</strong><p>حسب أمر الطبيب (500 سم جلوكوز ملحي).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مضاد قيء وحموضة ومسكن</strong><p>ذكرناهم؛ اتأكد من الجرعات والوقت.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>مراقبة</strong><p>تنفس، لون، بول (النفتالين)، ألم، قيء دموي.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>صرير أو بحة صوت أو سيلان لعاب</li><li>زرقة وضيق تنفس</li><li>قيء دموي أو ألم بطن شديد (انثقاب)</li><li>بول غامق وشحوب (نفتالين)</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>حفظ الكيروسين والمنظفات في عبوات أصلية ومقفولة.</li><li>لا تُخزّن مواد منزلية في زجاجات مشروبات.</li><li>كرات النفتالين بعيد عن الأطفال.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "القاعدة: لا قيء ولا غسيل معدة في الكاويات والهيدروكربونات.",
-      "اللبن البارد كوب (نص كوب للأطفال).",
-      "الكاويات: وريد + مضاد قيء + مضاد حموضة + مسكن.",
-      "الفينيك كاوي يمكن غسل المعدة فيه حسب المراجع (والمفضل تجنبه حالياً).",
-      "النفتالين خطره تكسّر الدم."
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ممنوع في الكيروسين؟"
-      },
-      "options": [
-        {
-          "ar": "اللبن"
-        },
-        {
-          "ar": "أوكسجين"
-        },
-        {
-          "ar": "إحداث قيء وغسيل معدة"
-        },
-        {
-          "ar": "الملين"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "خطر الاستنشاق الرئوي."
-      }
-    },
-    {
-      "q": {
-        "ar": "من الكاويات؟"
-      },
-      "options": [
-        {
-          "ar": "البطاس"
-        },
-        {
-          "ar": "اللبن"
-        },
-        {
-          "ar": "الباراسيتامول"
-        },
-        {
-          "ar": "الغراء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قلوي قوي."
-      }
-    },
-    {
-      "q": {
-        "ar": "الخطر الرئيسي للنفتالين؟"
-      },
-      "options": [
-        {
-          "ar": "تشنج"
-        },
-        {
-          "ar": "تكسّر كرات الدم"
-        },
-        {
-          "ar": "بطء نبض"
-        },
-        {
-          "ar": "جفاف"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "خصوصاً مع G6PD."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "StatPearls: Hydrocarbon Toxicity"
-    },
-    {
-      "title": "StatPearls: Caustic Ingestion"
-    },
-    {
-      "title": "StatPearls: Naphthalene Toxicity"
-    }
-  ],
-  "rx": [
-    {
-      "category": "الجهاز الهضمي",
-      "condition_ar": "ابتلاع الكيروسين والكاويات",
-      "condition_en": "Hydrocarbon / corrosive ingestion",
-      "items": [
-        {
-          "drug_name": "Ventolin inhaler",
-          "dose": "بختين كل 6 ساعات",
-          "note": "هيدروكربونات"
-        },
-        {
-          "drug_name": "Zantac amp",
-          "dose": "حقنة عضل أو وريد",
-          "note": "بدائل بأمر الطبيب"
-        },
-        {
-          "drug_name": "Solucortef vial",
-          "dose": "وريد/عضل كل 6 ساعات لمدة يومين (هيدروكربونات)",
-          "note": "فائدته محدودة"
-        },
-        {
-          "drug_name": "Penicillin G vial",
-          "dose": "حقنة عضل واحدة",
-          "note": "هيدروكربونات"
-        },
-        {
-          "drug_name": "Cortigen B6 Pediatric amp",
-          "dose": "حقنة عضل",
-          "note": "مضاد قيء (كاويات)"
-        },
-        {
-          "drug_name": "Danset 4 amp / Zofran 4 amp",
-          "dose": "تنقيط وريدي",
-          "note": "لو القيء لم يتوقف"
-        },
-        {
-          "drug_name": "Pantazol vial (pantoprazole)",
-          "dose": "في المحلول الوريدي",
-          "note": "حماية المعدة"
-        },
-        {
-          "drug_name": "Pethidine 50 amp",
-          "dose": "حقنة عضل",
-          "note": "تخفيف الألم"
-        }
-      ],
-      "clinical_note": "ممنوع القيء وغسيل المعدة"
-    }
+  "en": [
+   "The rule: no vomiting and no gastric lavage in corrosives and hydrocarbons.",
+   "Cold milk, one glass (half a glass for children).",
+   "Corrosives: IV + antiemetic + antacid + analgesic.",
+   "Phenol is a corrosive in which gastric lavage can be done per the references (but avoiding it is currently preferred).",
+   "Naphthalene's danger is hemolysis."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ممنوع في الكيروسين؟",
+    "en": "What is forbidden in kerosene?"
+   },
+   "options": [
+    {
+     "ar": "اللبن",
+     "en": "Milk"
+    },
+    {
+     "ar": "أوكسجين",
+     "en": "Oxygen"
+    },
+    {
+     "ar": "إحداث قيء وغسيل معدة",
+     "en": "Inducing vomiting and gastric lavage"
+    },
+    {
+     "ar": "الملين",
+     "en": "Laxative"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "خطر الاستنشاق الرئوي.",
+    "en": "Risk of pulmonary aspiration."
+   }
+  },
+  {
+   "q": {
+    "ar": "من الكاويات؟",
+    "en": "Which is a corrosive?"
+   },
+   "options": [
+    {
+     "ar": "البطاس",
+     "en": "Lye"
+    },
+    {
+     "ar": "اللبن",
+     "en": "Milk"
+    },
+    {
+     "ar": "الباراسيتامول",
+     "en": "Paracetamol"
+    },
+    {
+     "ar": "الغراء",
+     "en": "Glue"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قلوي قوي.",
+    "en": "A strong alkali."
+   }
+  },
+  {
+   "q": {
+    "ar": "الخطر الرئيسي للنفتالين؟",
+    "en": "The main danger of naphthalene?"
+   },
+   "options": [
+    {
+     "ar": "تشنج",
+     "en": "Seizure"
+    },
+    {
+     "ar": "تكسّر كرات الدم",
+     "en": "Hemolysis of blood cells"
+    },
+    {
+     "ar": "بطء نبض",
+     "en": "Slow pulse"
+    },
+    {
+     "ar": "جفاف",
+     "en": "Dehydration"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "خصوصاً مع G6PD.",
+    "en": "Especially with G6PD."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls: Hydrocarbon Toxicity"
+  },
+  {
+   "title": "StatPearls: Caustic Ingestion"
+  },
+  {
+   "title": "StatPearls: Naphthalene Toxicity"
+  }
+ ],
+ "rx": [
+  {
+   "category": "الجهاز الهضمي",
+   "condition_ar": "ابتلاع الكيروسين والكاويات",
+   "condition_en": "Hydrocarbon / corrosive ingestion",
+   "items": [
+    {
+     "drug_name": "Ventolin inhaler",
+     "dose": "بختين كل 6 ساعات",
+     "note": "هيدروكربونات"
+    },
+    {
+     "drug_name": "Zantac amp",
+     "dose": "حقنة عضل أو وريد",
+     "note": "بدائل بأمر الطبيب"
+    },
+    {
+     "drug_name": "Solucortef vial",
+     "dose": "وريد/عضل كل 6 ساعات لمدة يومين (هيدروكربونات)",
+     "note": "فائدته محدودة"
+    },
+    {
+     "drug_name": "Penicillin G vial",
+     "dose": "حقنة عضل واحدة",
+     "note": "هيدروكربونات"
+    },
+    {
+     "drug_name": "Cortigen B6 Pediatric amp",
+     "dose": "حقنة عضل",
+     "note": "مضاد قيء (كاويات)"
+    },
+    {
+     "drug_name": "Danset 4 amp / Zofran 4 amp",
+     "dose": "تنقيط وريدي",
+     "note": "لو القيء لم يتوقف"
+    },
+    {
+     "drug_name": "Pantazol vial (pantoprazole)",
+     "dose": "في المحلول الوريدي",
+     "note": "حماية المعدة"
+    },
+    {
+     "drug_name": "Pethidine 50 amp",
+     "dose": "حقنة عضل",
+     "note": "تخفيف الألم"
+    }
+   ],
+   "clinical_note": "ممنوع القيء وغسيل المعدة"
+  }
+ ]
 }

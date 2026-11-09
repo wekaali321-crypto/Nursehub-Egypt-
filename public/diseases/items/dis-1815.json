@@ -1,147 +1,185 @@
 {
-  "id": "dis-1815",
-  "num": "1815",
-  "system": "peds",
-  "icon": "😢",
-  "level": 1,
-  "title": {
-    "ar": "تقييم الألم عند الأطفال: CRIES وFLACC والوجوه والرقمي",
-    "en": "Pediatric Pain Scales"
+ "id": "dis-1815",
+ "num": "1815",
+ "system": "peds",
+ "icon": "😢",
+ "level": 1,
+ "title": {
+  "ar": "تقييم الألم عند الأطفال: CRIES وFLACC والوجوه والرقمي",
+  "en": "Pediatric Pain Scales"
+ },
+ "teaser": {
+  "ar": "اختيار مقياس الألم المناسب لكل عمر وتصورات الطفل للألم.",
+  "en": "Choosing the right pain scale for each age, and how children at each age understand pain."
+ },
+ "chips": [
+  {
+   "ar": "CRIES",
+   "en": "CRIES"
   },
-  "teaser": {
-    "ar": "اختيار مقياس الألم المناسب لكل عمر وتصورات الطفل للألم."
+  {
+   "ar": "FLACC",
+   "en": "FLACC"
   },
-  "chips": [
-    {
-      "ar": "CRIES"
-    },
-    {
-      "ar": "FLACC"
-    },
-    {
-      "ar": "Faces"
-    }
+  {
+   "ar": "Faces",
+   "en": "Faces"
+  }
+ ],
+ "target": "pediatrics",
+ "sections": {
+  "overview": {
+   "ar": "<p>يُختار المقياس حسب العمر. الأطفال 3-6 سنوات يرون الألم عقاباً أو يلومون غيرهم أو يظنون أنه سيختفي سحرياً (تفكير سحري).</p>[[slot:dis-1815-pain|مقاييس الألم — رسم من إعداد الموقع|/diseases/img/dis-1815-pain.svg]]",
+   "en": "<p>The scale is chosen by age. Children 3-6 years old see pain as punishment, blame others for it, or think it will disappear by magic (magical thinking).</p>[[slot:dis-1815-pain|Pain scales — illustration made for the site|/diseases/img/dis-1815-pain.svg]]"
+  },
+  "causes": {
+   "ar": "<p>—</p>",
+   "en": "<p>—</p>"
+  },
+  "signs": {
+   "ar": "<table><thead><tr><th>المقياس</th><th>العمر</th><th>العناصر</th></tr></thead><tbody><tr><td>CRIES</td><td>0-6 أشهر</td><td>بكاء، حاجة للأكسجين، ارتفاع علامات حيوية، تعبير الوجه، أرق</td></tr><tr><td>FLACC</td><td>2 شهر-7 سنوات</td><td>الوجه، الساقان، النشاط، البكاء، قابلية التهدئة</td></tr><tr><td>الوجوه</td><td>3 سنوات فأكثر</td><td>0 لا ألم إلى 5 أسوأ ألم</td></tr><tr><td>الرقمي</td><td>5 سنوات فأكثر</td><td>0-10 مع OPQRST</td></tr></tbody></table><p>المقياس الرقمي: 0 بلا ألم، 1-3 خفيف، 4-6 متوسط، 7-8 شديد، 9 شديد جداً، 10 أسوأ ألم ممكن.</p>",
+   "en": "<table><thead><tr><th>Scale</th><th>Age</th><th>Items</th></tr></thead><tbody><tr><td>CRIES</td><td>0-6 months</td><td>Crying, oxygen need, raised vital signs, facial expression, sleeplessness</td></tr><tr><td>FLACC</td><td>2 months-7 years</td><td>Face, legs, activity, cry, consolability</td></tr><tr><td>Faces</td><td>3 years and older</td><td>0 no pain to 5 worst pain</td></tr><tr><td>Numeric</td><td>5 years and older</td><td>0-10 with OPQRST</td></tr></tbody></table><p>Numeric scale: 0 no pain, 1-3 mild, 4-6 moderate, 7-8 severe, 9 very severe, 10 worst pain possible.</p>"
+  },
+  "tests": {
+   "ar": "<ul><li>OPQRST: البدء، المحرّض، النوعية، الانتشار، الشدة، الزمن</li></ul>",
+   "en": "<ul><li>OPQRST: Onset, Provocation, Quality, Radiation, Severity, Time</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li>راجع <a href=\"/diseases/dis-831\">دليل المسكنات</a>.</li></ul>",
+   "en": "<ul><li>See the <a href=\"/diseases/dis-831\">analgesics guide</a>.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<ul><li>اختر المقياس حسب العمر.</li><li>طفل 4 سنوات: توقع عقاباً/لوماً للغير/اعتقاد بالسحر.</li><li>أعد التقييم بعد التدخل.</li></ul>",
+   "en": "<ul><li>Choose the scale according to age.</li><li>A 4-year-old: expect punishment, blaming others, or belief in magic.</li><li>Reassess after the intervention.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ</strong><ul><li>ألم شديد لا يستجيب</li><li>بكاء حاد</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report</strong><ul><li>Severe pain that does not respond</li><li>Sharp crying</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>شجّع الطفل على التعبير.</li></ul>",
+   "en": "<ul><li>Encourage the child to express the pain.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "CRIES 0-6 أشهر",
+   "FLACC 2 شهر-7 سنوات",
+   "الوجوه 3+",
+   "الرقمي 5+"
   ],
-  "target": "pediatrics",
-  "sections": {
-    "overview": {
-      "ar": "<p>يُختار المقياس حسب العمر. الأطفال 3-6 سنوات يرون الألم عقاباً أو يلومون غيرهم أو يظنون أنه سيختفي سحرياً (تفكير سحري).</p>[[slot:dis-1815-pain|مقاييس الألم — رسم من إعداد الموقع|/diseases/img/dis-1815-pain.svg]]"
-    },
-    "causes": {
-      "ar": "<p>—</p>"
-    },
-    "signs": {
-      "ar": "<table><thead><tr><th>المقياس</th><th>العمر</th><th>العناصر</th></tr></thead><tbody><tr><td>CRIES</td><td>0-6 أشهر</td><td>بكاء، حاجة للأكسجين، ارتفاع علامات حيوية، تعبير الوجه، أرق</td></tr><tr><td>FLACC</td><td>2 شهر-7 سنوات</td><td>الوجه، الساقان، النشاط، البكاء، قابلية التهدئة</td></tr><tr><td>الوجوه</td><td>3 سنوات فأكثر</td><td>0 لا ألم إلى 5 أسوأ ألم</td></tr><tr><td>الرقمي</td><td>5 سنوات فأكثر</td><td>0-10 مع OPQRST</td></tr></tbody></table><p>المقياس الرقمي: 0 بلا ألم، 1-3 خفيف، 4-6 متوسط، 7-8 شديد، 9 شديد جداً، 10 أسوأ ألم ممكن.</p>"
-    },
-    "tests": {
-      "ar": "<ul><li>OPQRST: البدء، المحرّض، النوعية، الانتشار، الشدة، الزمن</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li>راجع <a href=\"/diseases/dis-831\">دليل المسكنات</a>.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<ul><li>اختر المقياس حسب العمر.</li><li>طفل 4 سنوات: توقع عقاباً/لوماً للغير/اعتقاد بالسحر.</li><li>أعد التقييم بعد التدخل.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ</strong><ul><li>ألم شديد لا يستجيب</li><li>بكاء حاد</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>شجّع الطفل على التعبير.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "CRIES 0-6 أشهر",
-      "FLACC 2 شهر-7 سنوات",
-      "الوجوه 3+",
-      "الرقمي 5+"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مقياس لرضيع 4 أشهر:"
-      },
-      "options": [
-        {
-          "ar": "CRIES"
-        },
-        {
-          "ar": "الرقمي"
-        },
-        {
-          "ar": "الوجوه"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «CRIES»؛ 0-6 أشهر."
-      }
-    },
-    {
-      "q": {
-        "ar": "FLACC تبدأ من:"
-      },
-      "options": [
-        {
-          "ar": "2 شهر"
-        },
-        {
-          "ar": "6 أشهر"
-        },
-        {
-          "ar": "3 سنوات"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «2 شهر»؛ حتى 7 سنوات."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل 4 سنوات يرى الألم:"
-      },
-      "options": [
-        {
-          "ar": "عقاباً"
-        },
-        {
-          "ar": "عادي"
-        },
-        {
-          "ar": "سحراً فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «عقاباً»؛ تفكير سحري."
-      }
-    },
-    {
-      "q": {
-        "ar": "المقياس الرقمي من عمر:"
-      },
-      "options": [
-        {
-          "ar": "5 سنوات"
-        },
-        {
-          "ar": "3 سنوات"
-        },
-        {
-          "ar": "سنة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «5 سنوات»؛ 0-10."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AAP pain assessment"
-    }
+  "en": [
+   "CRIES 0-6 months",
+   "FLACC 2 months-7 years",
+   "Faces 3+",
+   "Numeric 5+"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مقياس لرضيع 4 أشهر:",
+    "en": "Scale for a 4-month-old infant:"
+   },
+   "options": [
+    {
+     "ar": "CRIES",
+     "en": "CRIES"
+    },
+    {
+     "ar": "الرقمي",
+     "en": "Numeric"
+    },
+    {
+     "ar": "الوجوه",
+     "en": "Faces"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «CRIES»؛ 0-6 أشهر.",
+    "en": "The correct answer is \"CRIES\"; 0-6 months."
+   }
+  },
+  {
+   "q": {
+    "ar": "FLACC تبدأ من:",
+    "en": "FLACC starts from:"
+   },
+   "options": [
+    {
+     "ar": "2 شهر",
+     "en": "2 months"
+    },
+    {
+     "ar": "6 أشهر",
+     "en": "6 months"
+    },
+    {
+     "ar": "3 سنوات",
+     "en": "3 years"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «2 شهر»؛ حتى 7 سنوات.",
+    "en": "The correct answer is \"2 months\"; up to 7 years."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل 4 سنوات يرى الألم:",
+    "en": "A 4-year-old child sees pain as:"
+   },
+   "options": [
+    {
+     "ar": "عقاباً",
+     "en": "Punishment"
+    },
+    {
+     "ar": "عادي",
+     "en": "Normal"
+    },
+    {
+     "ar": "سحراً فقط",
+     "en": "Only magic"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «عقاباً»؛ تفكير سحري.",
+    "en": "The correct answer is \"punishment\"; magical thinking."
+   }
+  },
+  {
+   "q": {
+    "ar": "المقياس الرقمي من عمر:",
+    "en": "The numeric scale starts from age:"
+   },
+   "options": [
+    {
+     "ar": "5 سنوات",
+     "en": "5 years"
+    },
+    {
+     "ar": "3 سنوات",
+     "en": "3 years"
+    },
+    {
+     "ar": "سنة",
+     "en": "1 year"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «5 سنوات»؛ 0-10.",
+    "en": "The correct answer is \"5 years\"; 0-10."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AAP pain assessment"
+  }
+ ]
 }

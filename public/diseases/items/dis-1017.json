@@ -1,196 +1,247 @@
 {
-  "id": "dis-1017",
-  "num": 1017,
-  "system": "infect",
-  "icon": "🧤",
-  "level": 2,
-  "title": {
-    "ar": "احتياطات العزل ومكافحة العدوى: قياسية وتلامس وقطرات وهوائية",
-    "en": "Isolation Precautions & PPE"
+ "id": "dis-1017",
+ "num": 1017,
+ "system": "infect",
+ "icon": "🧤",
+ "level": 2,
+ "title": {
+  "ar": "احتياطات العزل ومكافحة العدوى: قياسية وتلامس وقطرات وهوائية",
+  "en": "Isolation Precautions & PPE"
+ },
+ "teaser": {
+  "ar": "أنواع احتياطات العزل الأربعة وأدوات الوقاية الشخصية والأمراض المرتبطة بكل نوع.",
+  "en": "The four types of isolation precautions, personal protective equipment, and the diseases linked to each type."
+ },
+ "chips": [
+  {
+   "ar": "عزل",
+   "en": "Isolation"
   },
-  "teaser": {
-    "ar": "أنواع احتياطات العزل الأربعة وأدوات الوقاية الشخصية والأمراض المرتبطة بكل نوع."
+  {
+   "ar": "PPE",
+   "en": "PPE"
   },
-  "chips": [
-    {
-      "ar": "عزل"
-    },
-    {
-      "ar": "PPE"
-    },
-    {
-      "ar": "مكافحة العدوى"
-    }
+  {
+   "ar": "مكافحة العدوى",
+   "en": "Infection control"
+  }
+ ],
+ "target": "fundamentals",
+ "sections": {
+  "overview": {
+   "ar": "<p>الاحتياطات الأساسية للسلامة ومكافحة العدوى أربعة: القياسية (standard) والتلامس والقطرات والهوائية. تُطبَّق القياسية على كل المرضى وتُضاف الأخرى حسب طريق العدوى.</p>[[slot:dis-1017-isolation|احتياطات العزل — رسم من إعداد الموقع|/diseases/img/dis-1017-isolation.svg]]",
+   "en": "<p>There are four basic safety and infection-control precautions: standard, contact, droplet, and airborne. Standard precautions apply to all patients, and the others are added according to the route of infection.</p>[[slot:dis-1017-isolation|Isolation precautions — diagram prepared by the site|/diseases/img/dis-1017-isolation.svg]]"
+  },
+  "causes": {
+   "ar": "<table><thead><tr><th>الاحتياط</th><th>الإجراء</th><th>الأمراض</th></tr></thead><tbody><tr><td>القياسية</td><td>قفازات عند ملامسة الدم والسوائل والإفرازات والأغشية والجلد غير السليم؛ جاون عند توقع تلوث الملابس</td><td>كل المرضى</td></tr><tr><td>القطرات (Droplet)</td><td>كمامة جراحية عند الاقتراب نحو متر (3 أقدام) من المريض</td><td>حمى قرمزية، التهاب البلعوم العقدي، السعال الديكي، parvovirus B19، الإنفلونزا (قطرات وتلامس)، الدفتيريا البلعومية، التهاب لسان المزمار (Hib)، الحصبة الألمانية، النكاف، التهاب السحايا بالمكورات السحائية، التهاب رئوي بالميكوبلازما، فيروس الغدّي (قطرات وتلامس)، الرينوفيروس</td></tr><tr><td>الهوائية (Airborne)</td><td>قناع N95 وغرفة ضغط سلبي</td><td>الحصبة، السل، الجدري المائي (هوائي وتلامس)، الهربس النطاقي المنتشر (هوائي وتلامس)</td></tr><tr><td>التلامس (Contact)</td><td>جاون وقفازات عند ملامسة المريض أو بيئته</td><td>كائنات مقاومة للأدوية (MRSA، VRE)، التهابات تنفسية (RSV، parainfluenza)، التهابات جلد (القوباء، القمل، الجرب، الهربس البسيط، الجدري المائي، الدفتيريا الجلدية، النطاقي)، جروح غزيرة الإفراز، التهابات معوية (C. diff، نوروفيروس، روتا)، التهاب الملتحمة</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>Precaution</th><th>Procedure</th><th>Diseases</th></tr></thead><tbody><tr><td>Standard</td><td>Gloves when touching blood, fluids, secretions, mucous membranes, and broken skin; gown when clothing contamination is expected</td><td>All patients</td></tr><tr><td>Droplet</td><td>Surgical mask when within about 1 meter (3 feet) of the patient</td><td>Scarlet fever, streptococcal pharyngitis, pertussis, parvovirus B19, influenza (droplet and contact), pharyngeal diphtheria, epiglottitis (Hib), rubella, mumps, meningococcal meningitis, mycoplasma pneumonia, adenovirus (droplet and contact), rhinovirus</td></tr><tr><td>Airborne</td><td>N95 mask and a negative-pressure room</td><td>Measles, tuberculosis, chickenpox (airborne and contact), disseminated herpes zoster (airborne and contact)</td></tr><tr><td>Contact</td><td>Gown and gloves when touching the patient or the environment</td><td>Drug-resistant organisms (MRSA, VRE), respiratory infections (RSV, parainfluenza), skin infections (impetigo, lice, scabies, herpes simplex, chickenpox, cutaneous diphtheria, zoster), heavily draining wounds, intestinal infections (C. diff, norovirus, rotavirus), conjunctivitis</td></tr></tbody></table>"
+  },
+  "signs": {
+   "ar": "<p>ينتقل المرض بالتلامس المباشر أو غير المباشر، بالقطرات الكبيرة قصيرة المدى، أو بالهباء الهوائي الذي يبقى معلقاً ويقطع مسافات.</p>",
+   "en": "<p>The disease spreads by direct or indirect contact, by large short-range droplets, or by airborne aerosols that stay suspended and travel distances.</p>"
+  },
+  "tests": {
+   "ar": "<p>مزارع وفحوص سريعة حسب العدوى، وتُوضع الاحتياطات المبدئية بناءً على الاشتباه قبل ظهور النتيجة.</p>",
+   "en": "<p>Cultures and rapid tests according to the infection, and initial precautions are put in place based on suspicion before the result appears.</p>"
+  },
+  "treatment": {
+   "ar": "<p>تُعالج العدوى حسب سببها، ويُعزل المريض لحين انتهاء فترة العدوى.</p>\n<h4>ترتيب لبس وخلع معدات الوقاية (PPE)</h4>[[slot:dis-1017-ppe|ترتيب لبس وخلع معدات الوقاية — رسم من إعداد الموقع|/diseases/img/dis-1017-ppe.svg]]<ul><li><strong>اللبس:</strong> غسل اليدين ← الجاون ← الكمامة ← النظارات ← القفازات.</li><li><strong>الخلع:</strong> القفازات ← النظارات ← الجاون ← الكمامة ← غسل اليدين.</li></ul><h4>الاحتياطات القياسية (لكل المرضى)</h4><ul><li>تُطبق على كل سوائل الجسم والإفرازات والمخرجات والأغشية المخاطية.</li><li>غسل اليدين قبل وبعد الإجراء وعند التلوث بالماء الدافئ بقوة لنحو 20 ثانية (مدة غناء «سنة حلوة يا جميل» مرتين).</li><li>قفازات، جاون، كمامة، حماية للعين.</li></ul><p>تذكير: فيروس نقص المناعة (HIV) يُعامل بالاحتياطات القياسية، والفيروس الغدّي يحتاج قطرات وتلامس.</p><h4>أمثلة تلخيصية لكل نوع</h4><ul><li><strong>التلامس:</strong> كائنات مقاومة للأدوية، عدوى تنفسية، عدوى جلدية، عدوى جروح، عدوى معوية، عدوى عيون، الجدري المائي، الدفتيريا الجلدية، الهربس البسيط، القوباء، القمل، الجرب.</li><li><strong>الهوائي:</strong> الحصبة، السل، الجدري المائي.</li><li><strong>القطرات:</strong> الإنتان والحمى القرمزية والعقديات، الفيروس الصغير B19 والالتهاب الرئوي والسعال الديكي، الإنفلونزا، الدفتيريا، التهاب لسان المزمار، الحصبة الألمانية، النكاف والتهاب السحايا والميكوبلازما والالتهاب الرئوي السحائي، الفيروس الغدي.</li></ul>",
+   "en": "<p>The infection is treated according to its cause, and the patient is isolated until the infectious period ends.</p>\n<h4>Order of putting on and removing protective equipment (PPE)</h4>[[slot:dis-1017-ppe|Order of putting on and removing protective equipment — diagram prepared by the site|/diseases/img/dis-1017-ppe.svg]]<ul><li><strong>Putting on:</strong> hand washing ← gown ← mask ← goggles ← gloves.</li><li><strong>Removing:</strong> gloves ← goggles ← gown ← mask ← hand washing.</li></ul><h4>Standard precautions (for all patients)</h4><ul><li>Applied to all body fluids, secretions, excretions, and mucous membranes.</li><li>Wash hands before and after a procedure and after contamination, with warm water, vigorously for about 20 seconds (the length of singing \"Happy Birthday\" twice).</li><li>Gloves, gown, mask, eye protection.</li></ul><p>Reminder: HIV is handled with standard precautions, and adenovirus needs droplet and contact precautions.</p><h4>Summary examples for each type</h4><ul><li><strong>Contact:</strong> drug-resistant organisms, respiratory infection, skin infection, wound infection, intestinal infection, eye infection, chickenpox, cutaneous diphtheria, herpes simplex, impetigo, lice, scabies.</li><li><strong>Airborne:</strong> measles, tuberculosis, chickenpox.</li><li><strong>Droplet:</strong> sepsis, scarlet fever, and streptococci, parvovirus B19, pneumonia, and pertussis, influenza, diphtheria, epiglottitis, rubella, mumps, meningitis, mycoplasma, and meningococcal pneumonia, adenovirus.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<ul><li>اغسل اليدين قبل وبعد كل مريض وقبل ارتداء القفازات وبعد خلعها.</li><li>في إسهال C. diff أو النوروفيروس: الغسيل بالماء والصابون وليس المطهر الكحولي.</li><li>التهاب الكبد A ينتقل بالبراز: انتبه مع المرضى المصابين بسلس.</li><li>ارتدِ القناع المناسب لنوع العزل وتخلص من الأدوات الملوثة بطريقة آمنة.</li></ul>",
+   "en": "<ul><li>Wash hands before and after every patient, before putting on gloves, and after removing them.</li><li>In C. diff or norovirus diarrhea: wash with soap and water, not alcohol sanitizer.</li><li>Hepatitis A spreads through stool: be careful with incontinent patients.</li><li>Wear the mask appropriate to the type of isolation and dispose of contaminated items safely.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً</strong><ul><li>عدوى مجهولة المصدر دون احتياط مناسب</li><li>كسر في تقنية خلع الأدوات</li><li>تعريض مرضى ضعيفي المناعة لمريض معدٍ</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately</strong><ul><li>Infection of unknown source without appropriate precautions</li><li>A break in the technique of removing equipment</li><li>Exposing immunocompromised patients to an infectious patient</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>شرح سبب العزل للمريض والزوار.</li><li>تعليم نظافة اليدين وآداب السعال.</li></ul>",
+   "en": "<ul><li>Explain the reason for isolation to the patient and visitors.</li><li>Teach hand hygiene and cough etiquette.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "القياسية لكل المرضى",
+   "القطرات: كمامة جراحية خلال نحو متر",
+   "الهوائية: N95 وغرفة ضغط سلبي (حصبة، سل، جدري مائي)",
+   "التلامس: جاون وقفازات (MRSA، VRE، C. diff)",
+   "C. diff ونوروفيروس: ماء وصابون",
+   "الإنفلونزا: قطرات وتلامس",
+   "اللبس: غسل يدين، جاون، كمامة، نظارات، قفازات؛ الخلع: قفازات، نظارات، جاون، كمامة، غسل يدين"
   ],
-  "target": "fundamentals",
-  "sections": {
-    "overview": {
-      "ar": "<p>الاحتياطات الأساسية للسلامة ومكافحة العدوى أربعة: القياسية (standard) والتلامس والقطرات والهوائية. تُطبَّق القياسية على كل المرضى وتُضاف الأخرى حسب طريق العدوى.</p>[[slot:dis-1017-isolation|احتياطات العزل — رسم من إعداد الموقع|/diseases/img/dis-1017-isolation.svg]]"
-    },
-    "causes": {
-      "ar": "<table><thead><tr><th>الاحتياط</th><th>الإجراء</th><th>الأمراض</th></tr></thead><tbody><tr><td>القياسية</td><td>قفازات عند ملامسة الدم والسوائل والإفرازات والأغشية والجلد غير السليم؛ جاون عند توقع تلوث الملابس</td><td>كل المرضى</td></tr><tr><td>القطرات (Droplet)</td><td>كمامة جراحية عند الاقتراب نحو متر (3 أقدام) من المريض</td><td>حمى قرمزية، التهاب البلعوم العقدي، السعال الديكي، parvovirus B19، الإنفلونزا (قطرات وتلامس)، الدفتيريا البلعومية، التهاب لسان المزمار (Hib)، الحصبة الألمانية، النكاف، التهاب السحايا بالمكورات السحائية، التهاب رئوي بالميكوبلازما، فيروس الغدّي (قطرات وتلامس)، الرينوفيروس</td></tr><tr><td>الهوائية (Airborne)</td><td>قناع N95 وغرفة ضغط سلبي</td><td>الحصبة، السل، الجدري المائي (هوائي وتلامس)، الهربس النطاقي المنتشر (هوائي وتلامس)</td></tr><tr><td>التلامس (Contact)</td><td>جاون وقفازات عند ملامسة المريض أو بيئته</td><td>كائنات مقاومة للأدوية (MRSA، VRE)، التهابات تنفسية (RSV، parainfluenza)، التهابات جلد (القوباء، القمل، الجرب، الهربس البسيط، الجدري المائي، الدفتيريا الجلدية، النطاقي)، جروح غزيرة الإفراز، التهابات معوية (C. diff، نوروفيروس، روتا)، التهاب الملتحمة</td></tr></tbody></table>"
-    },
-    "signs": {
-      "ar": "<p>ينتقل المرض بالتلامس المباشر أو غير المباشر، بالقطرات الكبيرة قصيرة المدى، أو بالهباء الهوائي الذي يبقى معلقاً ويقطع مسافات.</p>"
-    },
-    "tests": {
-      "ar": "<p>مزارع وفحوص سريعة حسب العدوى، وتُوضع الاحتياطات المبدئية بناءً على الاشتباه قبل ظهور النتيجة.</p>"
-    },
-    "treatment": {
-      "ar": "<p>تُعالج العدوى حسب سببها، ويُعزل المريض لحين انتهاء فترة العدوى.</p>\n<h4>ترتيب لبس وخلع معدات الوقاية (PPE)</h4>[[slot:dis-1017-ppe|ترتيب لبس وخلع معدات الوقاية — رسم من إعداد الموقع|/diseases/img/dis-1017-ppe.svg]]<ul><li><strong>اللبس:</strong> غسل اليدين ← الجاون ← الكمامة ← النظارات ← القفازات.</li><li><strong>الخلع:</strong> القفازات ← النظارات ← الجاون ← الكمامة ← غسل اليدين.</li></ul><h4>الاحتياطات القياسية (لكل المرضى)</h4><ul><li>تُطبق على كل سوائل الجسم والإفرازات والمخرجات والأغشية المخاطية.</li><li>غسل اليدين قبل وبعد الإجراء وعند التلوث بالماء الدافئ بقوة لنحو 20 ثانية (مدة غناء «سنة حلوة يا جميل» مرتين).</li><li>قفازات، جاون، كمامة، حماية للعين.</li></ul><p>تذكير: فيروس نقص المناعة (HIV) يُعامل بالاحتياطات القياسية، والفيروس الغدّي يحتاج قطرات وتلامس.</p><h4>أمثلة تلخيصية لكل نوع</h4><ul><li><strong>التلامس:</strong> كائنات مقاومة للأدوية، عدوى تنفسية، عدوى جلدية، عدوى جروح، عدوى معوية، عدوى عيون، الجدري المائي، الدفتيريا الجلدية، الهربس البسيط، القوباء، القمل، الجرب.</li><li><strong>الهوائي:</strong> الحصبة، السل، الجدري المائي.</li><li><strong>القطرات:</strong> الإنتان والحمى القرمزية والعقديات، الفيروس الصغير B19 والالتهاب الرئوي والسعال الديكي، الإنفلونزا، الدفتيريا، التهاب لسان المزمار، الحصبة الألمانية، النكاف والتهاب السحايا والميكوبلازما والالتهاب الرئوي السحائي، الفيروس الغدي.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<ul><li>اغسل اليدين قبل وبعد كل مريض وقبل ارتداء القفازات وبعد خلعها.</li><li>في إسهال C. diff أو النوروفيروس: الغسيل بالماء والصابون وليس المطهر الكحولي.</li><li>التهاب الكبد A ينتقل بالبراز: انتبه مع المرضى المصابين بسلس.</li><li>ارتدِ القناع المناسب لنوع العزل وتخلص من الأدوات الملوثة بطريقة آمنة.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً</strong><ul><li>عدوى مجهولة المصدر دون احتياط مناسب</li><li>كسر في تقنية خلع الأدوات</li><li>تعريض مرضى ضعيفي المناعة لمريض معدٍ</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>شرح سبب العزل للمريض والزوار.</li><li>تعليم نظافة اليدين وآداب السعال.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "القياسية لكل المرضى",
-      "القطرات: كمامة جراحية خلال نحو متر",
-      "الهوائية: N95 وغرفة ضغط سلبي (حصبة، سل، جدري مائي)",
-      "التلامس: جاون وقفازات (MRSA، VRE، C. diff)",
-      "C. diff ونوروفيروس: ماء وصابون",
-      "الإنفلونزا: قطرات وتلامس",
-      "اللبس: غسل يدين، جاون، كمامة، نظارات، قفازات؛ الخلع: قفازات، نظارات، جاون، كمامة، غسل يدين"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض بالسل يحتاج:"
-      },
-      "options": [
-        {
-          "ar": "احتياطات هوائية وقناع N95"
-        },
-        {
-          "ar": "كمامة جراحية"
-        },
-        {
-          "ar": "عزل تلامس فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السل ينتقل بالهباء الهوائي."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض بالتهاب سحايا بالمكورات السحائية:"
-      },
-      "options": [
-        {
-          "ar": "قطرات"
-        },
-        {
-          "ar": "تلامس"
-        },
-        {
-          "ar": "هوائي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ينتقل بالقطرات."
-      }
-    },
-    {
-      "q": {
-        "ar": "عند الإسهال بـ C. diff يكون غسل اليدين:"
-      },
-      "options": [
-        {
-          "ar": "بالماء والصابون"
-        },
-        {
-          "ar": "بالمطهر الكحولي فقط"
-        },
-        {
-          "ar": "لا حاجة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الكحول لا يقتل الأبواغ."
-      }
-    },
-    {
-      "q": {
-        "ar": "الجدري المائي يحتاج:"
-      },
-      "options": [
-        {
-          "ar": "هوائي وتلامس"
-        },
-        {
-          "ar": "قطرات فقط"
-        },
-        {
-          "ar": "قياسية فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ينتقل بالهواء وبملامسة الآفات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول خطوة عند خلع معدات الوقاية:"
-      },
-      "options": [
-        {
-          "ar": "القفازات"
-        },
-        {
-          "ar": "الكمامة"
-        },
-        {
-          "ar": "غسل اليدين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "القفازات الأكثر تلوثًا فتُخلع أولًا، والكمامة قبل الأخيرة وغسل اليدين في النهاية."
-      }
-    },
-    {
-      "q": {
-        "ar": "مرض يحتاج عزل هوائي:"
-      },
-      "options": [
-        {
-          "ar": "الحصبة"
-        },
-        {
-          "ar": "النكاف"
-        },
-        {
-          "ar": "الجرب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحصبة والسل والجدري المائي تنتقل بالهباء الهوائي. النكاف قطرات والجرب تلامس."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Potter & Perry Fundamentals of Nursing"
-    },
-    {
-      "title": "Kozier & Erb's Fundamentals of Nursing"
-    },
-    {
-      "title": "WHO/CDC infection prevention guidance"
-    }
+  "en": [
+   "Standard precautions for all patients",
+   "Droplet: surgical mask within about 1 meter",
+   "Airborne: N95 and a negative-pressure room (measles, TB, chickenpox)",
+   "Contact: gown and gloves (MRSA, VRE, C. diff)",
+   "C. diff and norovirus: soap and water",
+   "Influenza: droplet and contact",
+   "Putting on: hand washing, gown, mask, goggles, gloves; removing: gloves, goggles, gown, mask, hand washing"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض بالسل يحتاج:",
+    "en": "A patient with tuberculosis needs:"
+   },
+   "options": [
+    {
+     "ar": "احتياطات هوائية وقناع N95",
+     "en": "Airborne precautions and an N95 mask"
+    },
+    {
+     "ar": "كمامة جراحية",
+     "en": "A surgical mask"
+    },
+    {
+     "ar": "عزل تلامس فقط",
+     "en": "Contact isolation only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السل ينتقل بالهباء الهوائي.",
+    "en": "TB spreads by airborne aerosols."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض بالتهاب سحايا بالمكورات السحائية:",
+    "en": "A patient with meningococcal meningitis:"
+   },
+   "options": [
+    {
+     "ar": "قطرات",
+     "en": "Droplet"
+    },
+    {
+     "ar": "تلامس",
+     "en": "Contact"
+    },
+    {
+     "ar": "هوائي",
+     "en": "Airborne"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ينتقل بالقطرات.",
+    "en": "It spreads by droplets."
+   }
+  },
+  {
+   "q": {
+    "ar": "عند الإسهال بـ C. diff يكون غسل اليدين:",
+    "en": "In C. diff diarrhea, hand washing is done:"
+   },
+   "options": [
+    {
+     "ar": "بالماء والصابون",
+     "en": "With soap and water"
+    },
+    {
+     "ar": "بالمطهر الكحولي فقط",
+     "en": "With alcohol sanitizer only"
+    },
+    {
+     "ar": "لا حاجة",
+     "en": "Not needed"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الكحول لا يقتل الأبواغ.",
+    "en": "Alcohol does not kill the spores."
+   }
+  },
+  {
+   "q": {
+    "ar": "الجدري المائي يحتاج:",
+    "en": "Chickenpox needs:"
+   },
+   "options": [
+    {
+     "ar": "هوائي وتلامس",
+     "en": "Airborne and contact"
+    },
+    {
+     "ar": "قطرات فقط",
+     "en": "Droplet only"
+    },
+    {
+     "ar": "قياسية فقط",
+     "en": "Standard only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ينتقل بالهواء وبملامسة الآفات.",
+    "en": "It spreads by air and by touching the lesions."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول خطوة عند خلع معدات الوقاية:",
+    "en": "The first step when removing protective equipment:"
+   },
+   "options": [
+    {
+     "ar": "القفازات",
+     "en": "Gloves"
+    },
+    {
+     "ar": "الكمامة",
+     "en": "Mask"
+    },
+    {
+     "ar": "غسل اليدين",
+     "en": "Hand washing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "القفازات الأكثر تلوثًا فتُخلع أولًا، والكمامة قبل الأخيرة وغسل اليدين في النهاية.",
+    "en": "Gloves are the most contaminated so they are removed first, the mask is second to last, and hand washing is last."
+   }
+  },
+  {
+   "q": {
+    "ar": "مرض يحتاج عزل هوائي:",
+    "en": "A disease that needs airborne isolation:"
+   },
+   "options": [
+    {
+     "ar": "الحصبة",
+     "en": "Measles"
+    },
+    {
+     "ar": "النكاف",
+     "en": "Mumps"
+    },
+    {
+     "ar": "الجرب",
+     "en": "Scabies"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحصبة والسل والجدري المائي تنتقل بالهباء الهوائي. النكاف قطرات والجرب تلامس.",
+    "en": "Measles, TB, and chickenpox spread by airborne aerosols. Mumps is droplet and scabies is contact."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Potter & Perry Fundamentals of Nursing"
+  },
+  {
+   "title": "Kozier & Erb's Fundamentals of Nursing"
+  },
+  {
+   "title": "WHO/CDC infection prevention guidance"
+  }
+ ]
 }

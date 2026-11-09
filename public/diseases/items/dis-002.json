@@ -1,216 +1,263 @@
 {
-  "id": "dis-002",
-  "num": 2,
-  "system": "cardio",
-  "icon": "📉",
-  "level": 2,
-  "title": {
-    "ar": "هبوط ضغط الدم",
-    "en": "Hypotension"
+ "id": "dis-002",
+ "num": 2,
+ "system": "cardio",
+ "icon": "📉",
+ "level": 2,
+ "title": {
+  "ar": "هبوط ضغط الدم",
+  "en": "Hypotension"
+ },
+ "teaser": {
+  "ar": "ضغط أقل من 90/60: إمتى يبقى بسيط وإمتى يبقى صدمة؟ الأسباب (وأشهرها الأنيميا)، العلاج، والتعامل التمريضي السريع.",
+  "en": "Blood pressure below 90/60: when is it harmless and when is it shock? Causes (most commonly anemia), treatment, and quick nursing care."
+ },
+ "chips": [
+  {
+   "ar": "أقل من 90/60",
+   "en": "Below 90/60"
   },
-  "teaser": {
-    "ar": "ضغط أقل من 90/60: إمتى يبقى بسيط وإمتى يبقى صدمة؟ الأسباب (وأشهرها الأنيميا)، العلاج، والتعامل التمريضي السريع."
+  {
+   "ar": "أنيميا / جفاف",
+   "en": "Anemia / dehydration"
   },
-  "chips": [
-    {
-      "ar": "أقل من 90/60"
-    },
-    {
-      "ar": "أنيميا / جفاف"
-    },
-    {
-      "ar": "صدمة"
-    }
+  {
+   "ar": "صدمة",
+   "en": "Shock"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>هبوط الضغط (Hypotension) معناه إن الضغط أقل من <b>90/60 مم زئبق</b> ومعاه أعراض أو علامات إن الدم مش واصل كفاية للمخ والأعضاء. قد يكون بسيط ومزمن (ناس كتير عندها ضغط واطي طبيعي ومش بتشتكي)، وقد يكون علامة <b>صدمة (Shock)</b> وخطر على الحياة.</p><div class=\"cs-stats\"><div><b>< 90/60</b><span>تشخيص هبوط الضغط (مم زئبق)</span></div><div><b>90/60 → 80/50</b><span>درجة خفيفة إلى متوسطة</span></div><div><b>< 80/50</b><span>درجة شديدة</span></div></div>[[slot:dis-002-algorithm|خطوات التعامل مع هبوط الضغط — رسم من إعداد الموقع|/diseases/img/dis-002-algorithm.svg]]<div class=\"cs-box cs-warning\"><strong>مهم للممرض</strong><p>الأرقام لوحدها مش كل الحكاية: قارن بالضغط المعتاد للمريض، وبص على الأعراض (دوخة، نعاس، برودة، قلة بول). مريض مرتفع الضغط أصلاً ممكن يعاني من هبوط بقراءة 100/60.</p></div><!--M1--><p>للصدمة الناتجة عن نزيف أو جفاف شديد راجع <a href=\"/diseases/dis-605\">صدمة نقص الحجم</a>.</p>",
+   "en": "<p>Hypotension means blood pressure below <b>90/60 mmHg</b> together with symptoms or signs that blood is not reaching the brain and organs well enough. It may be mild and chronic (many people have naturally low pressure and no complaints), or it may be a sign of <b>shock</b> and a threat to life.</p><div class=\"cs-stats\"><div><b>< 90/60</b><span>Diagnosis of hypotension (mmHg)</span></div><div><b>90/60 → 80/50</b><span>Mild to moderate</span></div><div><b>< 80/50</b><span>Severe</span></div></div>[[slot:dis-002-algorithm|Steps for managing hypotension — diagram prepared by the site|/diseases/img/dis-002-algorithm.svg]]<div class=\"cs-box cs-warning\"><strong>Important for the nurse</strong><p>Numbers alone are not the whole story: compare with the patient's usual pressure and look at the symptoms (dizziness, drowsiness, cold skin, low urine output). A patient who is normally hypertensive can be hypotensive at a reading of 100/60.</p></div><!--M1--><p>For shock caused by bleeding or severe dehydration, see <a href=\"/diseases/dis-605\">hypovolemic shock</a>.</p>"
+  },
+  "causes": {
+   "ar": "<p>أهم نقطة: <b>ابحث عن السبب</b> (N.B. search for the cause). الطبيب بيعالج الأعراض اللي المريض بيشتكي منها، لكن لازم ما ننساش نعالج السبب.</p><h4>أسباب هبوط الضغط</h4><table><thead><tr><th>السبب</th><th>تفاصيل</th></tr></thead><tbody><tr><td>1) الأنيميا (Anemia)</td><td>من أشهر الأسباب. وعدد اللي بيعانوا من أنيميا في مصر أكبر بكتير من اللي ما بيعانوش. أهم أعراضها: الإرهاق والكسل والنهجان والإحساس بضربات القلب وعدم القدرة على التركيز.</td></tr><tr><td>2) نقص حجم الدم (Low blood volume)</td><td>نزيف / عرق شديد / فقد سوائل كتير زي الإسهال والقيء / الإفراط في استخدام المدرّات</td></tr><tr><td>3) تغيّرات هرمونية</td><td>مثلاً نقص هرمونات قشرة الغدة الأدرينالية (Hypocorticism)</td></tr><tr><td>4) الإفراط في موسّعات الأوعية</td><td>زي أدوية ACE inhibitors</td></tr><tr><td>5) فشل القلب (Heart failure)</td><td></td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>أسباب إضافية مهمة (من المراجع)</strong><p>العدوى الشديدة والإنتان (Sepsis)، الحساسية الشديدة (Anaphylaxis)، اضطرابات النبض، احتشاء القلب وانسداد الرئة، الجفاف، بعض الأدوية (مدرّات، أدوية ضغط، نترات، مهدئات، أدوية باركنسون)، والقيام المفاجئ (هبوط ضغط وضعي).</p></div><h4>أسباب عملية شائعة</h4><ul><li>رد فعل وعائي مبهمي (Vasovagal): زي اللي بيغمى عليهم لما يشوفوا الدم</li><li>أنيميا مزمنة (خصوصاً عند البنات): اعمل CBC</li><li>هبوط وضعي (Orthostatic): نزول الضغط خلال دقايق من الوقوف بعد الرقاد، يُشخَّص بقياس الضغط نايم ثم بعد 5 دقايق قعود</li><li>انخفاض عارض بعد مجهود شاق ونقص نوم وتغذية</li></ul>",
+   "en": "<p>Most important point: <b>look for the cause</b> (N.B. search for the cause). The doctor treats the symptoms the patient complains of, but we must not forget to treat the cause.</p><h4>Causes of hypotension</h4><table><thead><tr><th>Cause</th><th>Details</th></tr></thead><tbody><tr><td>1) Anemia</td><td>One of the most common causes. In Egypt, people with anemia far outnumber those without. Main symptoms: fatigue, lethargy, shortness of breath, palpitations, and poor concentration.</td></tr><tr><td>2) Low blood volume</td><td>Bleeding / heavy sweating / large fluid loss such as diarrhea and vomiting / overuse of diuretics</td></tr><tr><td>3) Hormonal changes</td><td>For example, deficiency of adrenal cortex hormones (hypocorticism)</td></tr><tr><td>4) Excess vasodilators</td><td>Such as ACE inhibitors</td></tr><tr><td>5) Heart failure</td><td></td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Other important causes</strong><p>Severe infection and sepsis, severe allergy (anaphylaxis), rhythm disturbances, myocardial infarction and pulmonary embolism, dehydration, some medications (diuretics, antihypertensives, nitrates, sedatives, Parkinson's drugs), and standing up suddenly (postural hypotension).</p></div><h4>Common practical causes</h4><ul><li>Vasovagal reaction: such as people who faint at the sight of blood</li><li>Chronic anemia (especially in girls): do a CBC</li><li>Orthostatic hypotension: pressure drops within minutes of standing after lying down; diagnosed by measuring pressure lying down and then after 5 minutes sitting</li><li>Temporary drop after strenuous effort, lack of sleep, and poor nutrition</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>التشخيص حسب المراجع</h4><ul><li>صداع (Headache)</li><li>نعاس / خمول (Drowsiness)</li><li>± صدمة (Shock)</li><li>ضغط الدم أقل من 90/60</li></ul><h4>أعراض وعلامات إضافية تفتّش عنها</h4><ul><li>دوخة أو إغماء، خصوصاً عند الوقوف</li><li>زغللة، برودة وشحوب وعرق بارد</li><li>سرعة نبض (تعويضية) وضعف النبض الطرفي</li><li>قلة البول (أقل من 0.5 مل/كجم/ساعة)</li><li>ارتباك وتغير الوعي</li><li>تنفس سريع، ضيق نفس</li></ul><div class=\"cs-box cs-danger\"><strong>علامات الصدمة</strong><p>ضغط منخفض + نبض سريع + جلد بارد رطب + قلة بول + تغير وعي = <b>صدمة</b>. بلّغ فوراً. (متوسط الضغط الشرياني MAP أقل من 65 مم زئبق علامة خطر معروفة).</p></div>",
+   "en": "<h4>Diagnosis</h4><ul><li>Headache</li><li>Drowsiness / lethargy</li><li>± Shock</li><li>Blood pressure below 90/60</li></ul><h4>Additional symptoms and signs to look for</h4><ul><li>Dizziness or fainting, especially on standing</li><li>Blurred vision, cold pale skin, and cold sweat</li><li>Fast (compensatory) pulse and weak peripheral pulse</li><li>Low urine output (less than 0.5 mL/kg/hour)</li><li>Confusion and altered consciousness</li><li>Rapid breathing, shortness of breath</li></ul><div class=\"cs-box cs-danger\"><strong>Signs of shock</strong><p>Low pressure + fast pulse + cold clammy skin + low urine output + altered consciousness = <b>shock</b>. Report immediately. (A mean arterial pressure MAP below 65 mmHg is a well-known danger sign.)</p></div>"
+  },
+  "tests": {
+   "ar": "<p>الفحص يتجه للسبب:</p><ul><li>صورة دم كاملة (CBC) للأنيميا</li><li>سوائل وأملاح الجسم (Na, K) ووظائف الكلى وسكر الدم</li><li>تحاليل الغدد (كورتيزول الغدة الأدرينالية / الدرقية) عند الشك</li><li>رسم قلب وسونار/إيكو عند شك في سبب قلبي</li><li>مزرعة دم ولاكتات في الصدمة الإنتانية</li><li>قياس الضغط نايم ثم واقف (اختبار الهبوط الوضعي)</li></ul><div class=\"cs-box cs-tip\"><strong>طريقة اختبار الهبوط الوضعي (Orthostatic)</strong><p>المريض يرقد 5 دقايق وتقيس الضغط والنبض، ثم يقف وتقيسهم بعد دقيقة وبعد 3 دقايق. لو نزل الانقباضي بمقدار 20 أو أكتر أو الانبساطي 10 أو أكتر = هبوط وضعي. ابقَ جنب المريض لمنع الوقوع.</p></div>",
+   "en": "<p>Testing is directed at the cause:</p><ul><li>Complete blood count (CBC) for anemia</li><li>Electrolytes (Na, K), kidney function, and blood sugar</li><li>Hormone tests (adrenal cortisol / thyroid) when suspected</li><li>ECG and ultrasound/echo when a cardiac cause is suspected</li><li>Blood culture and lactate in septic shock</li><li>Measuring pressure lying down then standing (orthostatic hypotension test)</li></ul><div class=\"cs-box cs-tip\"><strong>How to do the orthostatic hypotension test</strong><p>The patient lies down for 5 minutes and you measure pressure and pulse, then the patient stands and you measure them again after 1 minute and after 3 minutes. If the systolic drops by 20 or more, or the diastolic by 10 or more = orthostatic hypotension. Stay next to the patient to prevent falls.</p></div>"
+  },
+  "treatment": {
+   "ar": "<h4>العلاج حسب المراجع (قرار الطبيب)</h4><table><thead><tr><th>درجة الضغط</th><th>العلاج في المستشفى</th></tr></thead><tbody><tr><td>من 90/60 إلى 80/50</td><td>أمبول Dexa (ديكساميثازون 8 مجم) وريدي، أو فيال Solucortif وريدي</td></tr><tr><td>أقل من 80/50</td><td>تعليق محلول ملح (Saline infusion) + أمبول Dexa أو فيال Solucortif؛ والمريض ينصح بتناول بعض الأملاح من غير الإكثار منها</td></tr></tbody></table><h4>العلاج المنزلي (Home treatment)</h4><ul><li><b>Effortil نقط:</b> من 10 إلى 15 نقطة في نص كوب ماء، مرة أو مرتين أو ثلاث يومياً حسب الاستجابة والحالة الإكلينيكية. متوفر نقط وأقراص.</li><li>لو الضغط الواطي شديد ومش بيستجيب للـ Effortil: <b>Astonin H</b> أقراص — 2 قرص بعد الفطار وقرص بعد الغدا.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>الكورتيزون (Dexa / Solucortif) <b>مش علاج روتيني</b> لهبوط الضغط البسيط. بيستخدم في قصور الغدة الأدرينالية الحاد أو الصدمة المقاومة للسوائل (Hydrocortisone) فقط.</li><li><b>الأساس:</b> علاج السبب + تعويض السوائل (Crystalloid) لو نقص حجم، ثم رافعات الضغط (Vasopressors) حسب بروتوكول الصدمة. الهدف الشائع MAP 65 أو أكتر.</li><li>Astonin H هو Fludrocortisone (يُستخدم في الهبوط الوضعي المزمن). البداية الشائعة 100 ميكروجرام صباحاً وتتدرّج بأمر الطبيب، ومن آثاره احتباس سوائل وارتفاع الضغط في وضع النوم وانخفاض البوتاسيوم. الجرعات هنا حسب أمر الطبيب فقط (المراجع تذكر طريقة مختلفة).</li><li>Effortil (Etilefrine) رافع ضغط من نوع محفّز ألفا/بيتا: لا يصلح لمرضى ارتفاع الضغط أو الذبحة أو اضطراب النبض أو فرط الدرقية، وراجع النشرة (راجع النشرة لمعرفة كل موانعه).</li><li>قد تُعطى بعض الأملاح؛ الملح الزائد مش لكل مريض (ضار في القلب والكلى والضغط العالي).</li></ul></div><h4>علاج الهبوط الوضعي غير الدوائي</h4><ul><li>مراجعة الأدوية اللي بتسبب الهبوط</li><li>سوائل كافية وتجنب الجفاف</li><li>الوقوف ببطء وعلى مراحل (نايم ثم جالس ثم واقف)</li><li>جوارب ضاغطة وأحزمة بطن عند الحاجة</li><li>وجبات صغيرة متعددة وتجنّب الكحول</li><li>رفع رأس السرير للنوم حسب توصية الطبيب</li></ul><!--e2-2--><h4>علاج الهبوط البسيط والمزمن: أسماء تجارية إضافية</h4><table><thead><tr><th>الشكل</th><th>الدواء (تجاري)</th><th>الجرعة (حسب المراجع)</th></tr></thead><tbody><tr><td>نقط</td><td>Corasore drops</td><td>20 نقطة على نصف كوب ماء 3 مرات يومياً مع متابعة الضغط</td></tr><tr><td>نقط</td><td>Effortil drops (Etilefrine) / Vascon drops</td><td>10 نقط على نصف كوب ماء 3 مرات يومياً مع متابعة الضغط</td></tr><tr><td>أقراص</td><td>Corasore / Effortil / Vascon</td><td>قرص 3 مرات يومياً مع متابعة الضغط</td></tr><tr><td>أقراص</td><td>Midodrine / Gutron</td><td>قرص 3 مرات يومياً مع متابعة الضغط</td></tr><tr><td>أقراص (هبوط وضعي)</td><td>Astonin-H (Fludrocortisone)</td><td>قرص واحد يومياً</td></tr></tbody></table><h4>الحالات الشديدة والخفيفة</h4><ul><li>الدوخة والتوهان الشديدة: 500 سم محلول ملح 0.9% غالباً بتتحسن بعده</li><li>الحالة البسيطة: سوائل (مياه وعصائر) وأكل مملح، وممكن نوع واحد من النقط أو الأقراص مع متابعة الضغط</li><li>لا يوجد مصدر علمي يدعم الكورتيزون (Decadron/Dexamethasone أمبول) في علاج انخفاض الضغط الروتيني</li><li>الأنيميا: حديد فموي بعد CBC؛ الهبوط الوضعي: يقعد على السرير قبل ما يقوم، ماء كتير وأكل مملح، Astonin-H</li><li>دوخة أو صداع متكرر بسبب غير معروف: تحويل لعيادة الباطنة</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Midodrine (Gutron): رافع ضغط ألفا، خطر ارتفاع الضغط في الرقاد، فآخر جرعة قبل النوم بـ4 ساعات على الأقل ولا يُعطى مع الضغط العالي المزمن أو احتباس البول. Corasore وVascon: المادة الفعالة لهما غير موثقة، فاقرأ النشرة وراجع الصيدلي. الملح الزائد ليس لكل مريض.</p></div>",
+   "en": "<h4>Treatment (physician's decision)</h4><table><thead><tr><th>Pressure level</th><th>Hospital treatment</th></tr></thead><tbody><tr><td>From 90/60 to 80/50</td><td>Dexa ampoule (dexamethasone 8 mg) IV, or Solucortif vial IV</td></tr><tr><td>Below 80/50</td><td>Saline infusion + Dexa ampoule or Solucortif vial; the patient is advised to take some salt without overdoing it</td></tr></tbody></table><h4>Home treatment</h4><ul><li><b>Effortil drops:</b> 10 to 15 drops in half a glass of water, once, twice, or three times daily depending on response and clinical condition. Available as drops and tablets.</li><li>If the low pressure is severe and does not respond to Effortil: <b>Astonin H</b> tablets — 2 tablets after breakfast and 1 tablet after lunch.</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li>Cortisone (Dexa / Solucortif) is <b>not routine treatment</b> for simple hypotension. It is used only in acute adrenal insufficiency or fluid-resistant shock (hydrocortisone).</li><li><b>The basis:</b> treat the cause + replace fluids (crystalloid) if volume is low, then vasopressors according to the shock protocol. The common target is MAP 65 or higher.</li><li>Astonin H is fludrocortisone (used in chronic orthostatic hypotension). The usual starting dose is 100 micrograms in the morning, titrated on the doctor's order; its effects include fluid retention, high blood pressure when lying down, and low potassium. Doses here are only per the physician's order (other sources describe a different regimen).</li><li>Effortil (etilefrine) is a vasopressor that stimulates alpha/beta receptors: not suitable for patients with hypertension, angina, rhythm disturbances, or hyperthyroidism, and check the leaflet (see the leaflet for all its contraindications).</li><li>Some salt may be given; extra salt is not for every patient (harmful in heart disease, kidney disease, and high blood pressure).</li></ul></div><h4>Non-drug treatment of orthostatic hypotension</h4><ul><li>Review medications that cause the drop</li><li>Enough fluids and avoid dehydration</li><li>Stand slowly and in stages (lying, then sitting, then standing)</li><li>Compression stockings and abdominal binders when needed</li><li>Several small meals and avoid alcohol</li><li>Raise the head of the bed for sleep as the doctor recommends</li></ul><!--e2-2--><h4>Treatment of mild and chronic hypotension: additional brand names</h4><table><thead><tr><th>Form</th><th>Drug (brand)</th><th>Dose</th></tr></thead><tbody><tr><td>Drops</td><td>Corasore drops</td><td>20 drops in half a glass of water 3 times daily with blood pressure monitoring</td></tr><tr><td>Drops</td><td>Effortil drops (etilefrine) / Vascon drops</td><td>10 drops in half a glass of water 3 times daily with blood pressure monitoring</td></tr><tr><td>Tablets</td><td>Corasore / Effortil / Vascon</td><td>1 tablet 3 times daily with blood pressure monitoring</td></tr><tr><td>Tablets</td><td>Midodrine / Gutron</td><td>1 tablet 3 times daily with blood pressure monitoring</td></tr><tr><td>Tablets (orthostatic hypotension)</td><td>Astonin-H (fludrocortisone)</td><td>1 tablet daily</td></tr></tbody></table><h4>Severe and mild cases</h4><ul><li>Severe dizziness and disorientation: 500 cc of 0.9% saline solution usually improves it</li><li>Mild case: fluids (water and juices) and salty food, and possibly one type of drops or tablets with blood pressure monitoring</li><li>There is no scientific source supporting cortisone (Decadron/dexamethasone ampoule) in routine treatment of low blood pressure</li><li>Anemia: oral iron after a CBC; orthostatic hypotension: sit on the bed before getting up, plenty of water and salty food, Astonin-H</li><li>Recurrent dizziness or headache of unknown cause: refer to the internal medicine clinic</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Midodrine (Gutron): an alpha vasopressor, with a risk of high blood pressure when lying down, so the last dose is at least 4 hours before bedtime, and it is not given with chronic hypertension or urinary retention. Corasore and Vascon: their active ingredient is not documented, so read the leaflet and check with the pharmacist. Extra salt is not for every patient.</p></div>"
+  },
+  "nursing": {
+   "ar": "<p>أولويتك: تحديد هل هو بسيط ولا صدمة، وتأمين المريض من الوقوع.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم بسرعة</strong><p>ضغط ونبض وتنفس وحرارة وأكسجين ومستوى الوعي، لون وحرارة الجلد، البول. قارن بالضغط المعتاد للمريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أمّن المريض</strong><p>يرقد مسطح مع رفع الرجلين (Trendelenburg المعدل) لو في إغماء أو صدمة. تجنب الوقوف المفاجئ. سرير بحواجز أو مرافقة عند السير.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>بلّغ وجهّز</strong><p>ابلّغ الطبيب فوراً لو أقل من 90/60 مع أعراض أو MAP أقل من 65. جهّز خط وريدي (واحد أو اثنين كبار) وأكسجين ومونيتور وسوائل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ العلاج بأمان</strong><p>Saline بالسرعة المحددة وتابع علامات الحمل الزائد (ضيق نفس، رطوبة بالصدر). Dexa/Solucortif وريدي ببطء حسب الأمر. تأكد من حساسية المريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب</strong><p>ضغط كل 5–15 دقيقة في الحالة الحادة، ثم كل ساعة عند الاستقرار. بول كل ساعة (هدف 0.5 مل/كجم/ساعة)، سكر الدم، علامات النزيف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ابحث عن السبب</strong><p>اسأل عن نزيف، إسهال، قيء، أدوية جديدة، ألم صدر. اطلب CBC حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف</strong><p>قيام ببطء، شرب سوائل كفاية، متابعة الأنيميا.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>أدوية تستحق مراجعة قبل الإعطاء</strong><ul><li>أدوية الضغط (ACEi/ARBs/مدرّات/Beta blockers) والنترات: اقرأ الضغط قبل كل جرعة وبلّغ لو أقل من الحد.</li><li>سجل الأدوية الجديدة قبل بداية الأعراض.</li></ul></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>القراءات مع وضع المريض ووقتها، الأعراض، السوائل الداخلة والبول الخارج، الأدوية المعطاة، استجابة الضغط، ووقت التبليغ.</p></div>",
+   "en": "<p>Your priority: decide whether it is mild or shock, and protect the patient from falls.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess quickly</strong><p>Pressure, pulse, breathing, temperature, oxygen, and level of consciousness; skin color and temperature; urine. Compare with the patient's usual pressure.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Keep the patient safe</strong><p>Lie the patient flat with the legs raised (modified Trendelenburg) if there is fainting or shock. Avoid sudden standing. Bed rails or an escort when walking.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Report and prepare</strong><p>Report to the doctor immediately if below 90/60 with symptoms or MAP below 65. Prepare IV access (one or two large lines), oxygen, a monitor, and fluids.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Give treatment safely</strong><p>Saline at the ordered rate, and watch for signs of fluid overload (shortness of breath, crackles in the chest). Give Dexa/Solucortif IV slowly as ordered. Check the patient's allergies.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Monitor</strong><p>Pressure every 5–15 minutes in acute cases, then hourly when stable. Urine hourly (target 0.5 mL/kg/hour), blood sugar, signs of bleeding.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Look for the cause</strong><p>Ask about bleeding, diarrhea, vomiting, new medications, chest pain. Request a CBC as ordered.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Teach</strong><p>Rise slowly, drink enough fluids, follow up on anemia.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>Medications worth reviewing before giving</strong><ul><li>Blood pressure drugs (ACEi/ARBs/diuretics/beta blockers) and nitrates: check the pressure before each dose and report if below the limit.</li><li>Record any new medications started before the symptoms began.</li></ul></div><div class=\"cs-box cs-info\"><strong>Documentation</strong><p>Readings with the patient's position and time, symptoms, fluids in and urine out, medications given, pressure response, and the time of reporting.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>ضغط أقل من 90/60 مع نعاس أو إغماء أو ارتباك</li><li>نبض سريع وجلد بارد ورطب وقلة بول (صدمة)</li><li>نزيف ظاهر أو براز أسود أو قيء دموي</li><li>ألم صدر أو ضيق نفس أو اضطراب نبض</li><li>حمى مع هبوط الضغط (إنتان محتمل)</li><li>طفح وتورم وصفير بعد دواء/غذاء (حساسية شديدة)</li><li>الضغط لا يرتفع بعد السوائل</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately if:</strong><ul><li>Pressure below 90/60 with drowsiness, fainting, or confusion</li><li>Fast pulse, cold clammy skin, and low urine output (shock)</li><li>Visible bleeding, black stool, or vomiting blood</li><li>Chest pain, shortness of breath, or irregular pulse</li><li>Fever with low pressure (possible sepsis)</li><li>Rash, swelling, and wheezing after a drug/food (severe allergy)</li><li>Pressure does not rise after fluids</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>قم من النوم أو الجلوس ببطء، واقعد لحظات قبل ما تقف.</li><li>اشرب سوائل كفاية وقت الحر والإسهال.</li><li>الأنيميا من الأسباب: اهتم بالأكل الغني بالحديد وراجع الطبيب.</li><li>لا تتناول كمية كبيرة من الملح من نفسك.</li><li>لا توقف أدوية الضغط ولا تغير جرعتها من غير الطبيب.</li><li>Effortil نقط: 10–15 نقطة في نص كوب ماء، حسب توجيه الطبيب. وAstonin H أقراص حسب الإرشاد.</li><li>لو حصل إغماء أو خمول شديد أو نزيف، روح الطوارئ.</li></ul>",
+   "en": "<ul><li>Get up from lying or sitting slowly, and sit for a moment before you stand.</li><li>Drink enough fluids in hot weather and during diarrhea.</li><li>Anemia is one of the causes: eat iron-rich food and see the doctor.</li><li>Do not take a large amount of salt on your own.</li><li>Do not stop blood pressure medications or change their dose without the doctor.</li><li>Effortil drops: 10–15 drops in half a glass of water, as the doctor directs. And Astonin H tablets as instructed.</li><li>If fainting, severe lethargy, or bleeding happens, go to the emergency room.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "هبوط الضغط: أقل من 90/60 مع أعراض",
+   "ابحث عن السبب: أنيميا، فقد سوائل/نزيف، هرمونات، أدوية موسعة، فشل قلب",
+   "الكورتيزون مش علاج روتيني؛ الأساس علاج السبب والسوائل",
+   "Effortil وAstonin H للحالات المزمنة بأمر الطبيب",
+   "مريض بضغط واطي + برودة + قلة بول + نعاس = صدمة، بلّغ فوراً",
+   "علّم المريض القيام ببطء وشرب السوائل",
+   "Orthostatic: قس نايم ثم بعد 5 دقايق قعود",
+   "الكورتيزون لا يُستخدم روتينياً لهبوط الضغط"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>هبوط الضغط (Hypotension) معناه إن الضغط أقل من <b>90/60 مم زئبق</b> ومعاه أعراض أو علامات إن الدم مش واصل كفاية للمخ والأعضاء. قد يكون بسيط ومزمن (ناس كتير عندها ضغط واطي طبيعي ومش بتشتكي)، وقد يكون علامة <b>صدمة (Shock)</b> وخطر على الحياة.</p><div class=\"cs-stats\"><div><b>< 90/60</b><span>تشخيص هبوط الضغط (مم زئبق)</span></div><div><b>90/60 → 80/50</b><span>درجة خفيفة إلى متوسطة</span></div><div><b>< 80/50</b><span>درجة شديدة</span></div></div>[[slot:dis-002-algorithm|خطوات التعامل مع هبوط الضغط — رسم من إعداد الموقع|/diseases/img/dis-002-algorithm.svg]]<div class=\"cs-box cs-warning\"><strong>مهم للممرض</strong><p>الأرقام لوحدها مش كل الحكاية: قارن بالضغط المعتاد للمريض، وبص على الأعراض (دوخة، نعاس، برودة، قلة بول). مريض مرتفع الضغط أصلاً ممكن يعاني من هبوط بقراءة 100/60.</p></div><!--M1--><p>للصدمة الناتجة عن نزيف أو جفاف شديد راجع <a href=\"/diseases/dis-605\">صدمة نقص الحجم</a>.</p>"
-    },
-    "causes": {
-      "ar": "<p>أهم نقطة: <b>ابحث عن السبب</b> (N.B. search for the cause). الطبيب بيعالج الأعراض اللي المريض بيشتكي منها، لكن لازم ما ننساش نعالج السبب.</p><h4>أسباب هبوط الضغط</h4><table><thead><tr><th>السبب</th><th>تفاصيل</th></tr></thead><tbody><tr><td>1) الأنيميا (Anemia)</td><td>من أشهر الأسباب. وعدد اللي بيعانوا من أنيميا في مصر أكبر بكتير من اللي ما بيعانوش. أهم أعراضها: الإرهاق والكسل والنهجان والإحساس بضربات القلب وعدم القدرة على التركيز.</td></tr><tr><td>2) نقص حجم الدم (Low blood volume)</td><td>نزيف / عرق شديد / فقد سوائل كتير زي الإسهال والقيء / الإفراط في استخدام المدرّات</td></tr><tr><td>3) تغيّرات هرمونية</td><td>مثلاً نقص هرمونات قشرة الغدة الأدرينالية (Hypocorticism)</td></tr><tr><td>4) الإفراط في موسّعات الأوعية</td><td>زي أدوية ACE inhibitors</td></tr><tr><td>5) فشل القلب (Heart failure)</td><td></td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>أسباب إضافية مهمة (من المراجع)</strong><p>العدوى الشديدة والإنتان (Sepsis)، الحساسية الشديدة (Anaphylaxis)، اضطرابات النبض، احتشاء القلب وانسداد الرئة، الجفاف، بعض الأدوية (مدرّات، أدوية ضغط، نترات، مهدئات، أدوية باركنسون)، والقيام المفاجئ (هبوط ضغط وضعي).</p></div><h4>أسباب عملية شائعة</h4><ul><li>رد فعل وعائي مبهمي (Vasovagal): زي اللي بيغمى عليهم لما يشوفوا الدم</li><li>أنيميا مزمنة (خصوصاً عند البنات): اعمل CBC</li><li>هبوط وضعي (Orthostatic): نزول الضغط خلال دقايق من الوقوف بعد الرقاد، يُشخَّص بقياس الضغط نايم ثم بعد 5 دقايق قعود</li><li>انخفاض عارض بعد مجهود شاق ونقص نوم وتغذية</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>التشخيص حسب المراجع</h4><ul><li>صداع (Headache)</li><li>نعاس / خمول (Drowsiness)</li><li>± صدمة (Shock)</li><li>ضغط الدم أقل من 90/60</li></ul><h4>أعراض وعلامات إضافية تفتّش عنها</h4><ul><li>دوخة أو إغماء، خصوصاً عند الوقوف</li><li>زغللة، برودة وشحوب وعرق بارد</li><li>سرعة نبض (تعويضية) وضعف النبض الطرفي</li><li>قلة البول (أقل من 0.5 مل/كجم/ساعة)</li><li>ارتباك وتغير الوعي</li><li>تنفس سريع، ضيق نفس</li></ul><div class=\"cs-box cs-danger\"><strong>علامات الصدمة</strong><p>ضغط منخفض + نبض سريع + جلد بارد رطب + قلة بول + تغير وعي = <b>صدمة</b>. بلّغ فوراً. (متوسط الضغط الشرياني MAP أقل من 65 مم زئبق علامة خطر معروفة).</p></div>"
-    },
-    "tests": {
-      "ar": "<p>الفحص يتجه للسبب:</p><ul><li>صورة دم كاملة (CBC) للأنيميا</li><li>سوائل وأملاح الجسم (Na, K) ووظائف الكلى وسكر الدم</li><li>تحاليل الغدد (كورتيزول الغدة الأدرينالية / الدرقية) عند الشك</li><li>رسم قلب وسونار/إيكو عند شك في سبب قلبي</li><li>مزرعة دم ولاكتات في الصدمة الإنتانية</li><li>قياس الضغط نايم ثم واقف (اختبار الهبوط الوضعي)</li></ul><div class=\"cs-box cs-tip\"><strong>طريقة اختبار الهبوط الوضعي (Orthostatic)</strong><p>المريض يرقد 5 دقايق وتقيس الضغط والنبض، ثم يقف وتقيسهم بعد دقيقة وبعد 3 دقايق. لو نزل الانقباضي بمقدار 20 أو أكتر أو الانبساطي 10 أو أكتر = هبوط وضعي. ابقَ جنب المريض لمنع الوقوع.</p></div>"
-    },
-    "treatment": {
-      "ar": "<h4>العلاج حسب المراجع (قرار الطبيب)</h4><table><thead><tr><th>درجة الضغط</th><th>العلاج في المستشفى</th></tr></thead><tbody><tr><td>من 90/60 إلى 80/50</td><td>أمبول Dexa (ديكساميثازون 8 مجم) وريدي، أو فيال Solucortif وريدي</td></tr><tr><td>أقل من 80/50</td><td>تعليق محلول ملح (Saline infusion) + أمبول Dexa أو فيال Solucortif؛ والمريض ينصح بتناول بعض الأملاح من غير الإكثار منها</td></tr></tbody></table><h4>العلاج المنزلي (Home treatment)</h4><ul><li><b>Effortil نقط:</b> من 10 إلى 15 نقطة في نص كوب ماء، مرة أو مرتين أو ثلاث يومياً حسب الاستجابة والحالة الإكلينيكية. متوفر نقط وأقراص.</li><li>لو الضغط الواطي شديد ومش بيستجيب للـ Effortil: <b>Astonin H</b> أقراص — 2 قرص بعد الفطار وقرص بعد الغدا.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>الكورتيزون (Dexa / Solucortif) <b>مش علاج روتيني</b> لهبوط الضغط البسيط. بيستخدم في قصور الغدة الأدرينالية الحاد أو الصدمة المقاومة للسوائل (Hydrocortisone) فقط.</li><li><b>الأساس:</b> علاج السبب + تعويض السوائل (Crystalloid) لو نقص حجم، ثم رافعات الضغط (Vasopressors) حسب بروتوكول الصدمة. الهدف الشائع MAP 65 أو أكتر.</li><li>Astonin H هو Fludrocortisone (يُستخدم في الهبوط الوضعي المزمن). البداية الشائعة 100 ميكروجرام صباحاً وتتدرّج بأمر الطبيب، ومن آثاره احتباس سوائل وارتفاع الضغط في وضع النوم وانخفاض البوتاسيوم. الجرعات هنا حسب أمر الطبيب فقط (المراجع تذكر طريقة مختلفة).</li><li>Effortil (Etilefrine) رافع ضغط من نوع محفّز ألفا/بيتا: لا يصلح لمرضى ارتفاع الضغط أو الذبحة أو اضطراب النبض أو فرط الدرقية، وراجع النشرة (راجع النشرة لمعرفة كل موانعه).</li><li>قد تُعطى بعض الأملاح؛ الملح الزائد مش لكل مريض (ضار في القلب والكلى والضغط العالي).</li></ul></div><h4>علاج الهبوط الوضعي غير الدوائي</h4><ul><li>مراجعة الأدوية اللي بتسبب الهبوط</li><li>سوائل كافية وتجنب الجفاف</li><li>الوقوف ببطء وعلى مراحل (نايم ثم جالس ثم واقف)</li><li>جوارب ضاغطة وأحزمة بطن عند الحاجة</li><li>وجبات صغيرة متعددة وتجنّب الكحول</li><li>رفع رأس السرير للنوم حسب توصية الطبيب</li></ul><!--e2-2--><h4>علاج الهبوط البسيط والمزمن: أسماء تجارية إضافية</h4><table><thead><tr><th>الشكل</th><th>الدواء (تجاري)</th><th>الجرعة (حسب المراجع)</th></tr></thead><tbody><tr><td>نقط</td><td>Corasore drops</td><td>20 نقطة على نصف كوب ماء 3 مرات يومياً مع متابعة الضغط</td></tr><tr><td>نقط</td><td>Effortil drops (Etilefrine) / Vascon drops</td><td>10 نقط على نصف كوب ماء 3 مرات يومياً مع متابعة الضغط</td></tr><tr><td>أقراص</td><td>Corasore / Effortil / Vascon</td><td>قرص 3 مرات يومياً مع متابعة الضغط</td></tr><tr><td>أقراص</td><td>Midodrine / Gutron</td><td>قرص 3 مرات يومياً مع متابعة الضغط</td></tr><tr><td>أقراص (هبوط وضعي)</td><td>Astonin-H (Fludrocortisone)</td><td>قرص واحد يومياً</td></tr></tbody></table><h4>الحالات الشديدة والخفيفة</h4><ul><li>الدوخة والتوهان الشديدة: 500 سم محلول ملح 0.9% غالباً بتتحسن بعده</li><li>الحالة البسيطة: سوائل (مياه وعصائر) وأكل مملح، وممكن نوع واحد من النقط أو الأقراص مع متابعة الضغط</li><li>لا يوجد مصدر علمي يدعم الكورتيزون (Decadron/Dexamethasone أمبول) في علاج انخفاض الضغط الروتيني</li><li>الأنيميا: حديد فموي بعد CBC؛ الهبوط الوضعي: يقعد على السرير قبل ما يقوم، ماء كتير وأكل مملح، Astonin-H</li><li>دوخة أو صداع متكرر بسبب غير معروف: تحويل لعيادة الباطنة</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Midodrine (Gutron): رافع ضغط ألفا، خطر ارتفاع الضغط في الرقاد، فآخر جرعة قبل النوم بـ4 ساعات على الأقل ولا يُعطى مع الضغط العالي المزمن أو احتباس البول. Corasore وVascon: المادة الفعالة لهما غير موثقة، فاقرأ النشرة وراجع الصيدلي. الملح الزائد ليس لكل مريض.</p></div>"
-    },
-    "nursing": {
-      "ar": "<p>أولويتك: تحديد هل هو بسيط ولا صدمة، وتأمين المريض من الوقوع.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم بسرعة</strong><p>ضغط ونبض وتنفس وحرارة وأكسجين ومستوى الوعي، لون وحرارة الجلد، البول. قارن بالضغط المعتاد للمريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أمّن المريض</strong><p>يرقد مسطح مع رفع الرجلين (Trendelenburg المعدل) لو في إغماء أو صدمة. تجنب الوقوف المفاجئ. سرير بحواجز أو مرافقة عند السير.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>بلّغ وجهّز</strong><p>ابلّغ الطبيب فوراً لو أقل من 90/60 مع أعراض أو MAP أقل من 65. جهّز خط وريدي (واحد أو اثنين كبار) وأكسجين ومونيتور وسوائل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ العلاج بأمان</strong><p>Saline بالسرعة المحددة وتابع علامات الحمل الزائد (ضيق نفس، رطوبة بالصدر). Dexa/Solucortif وريدي ببطء حسب الأمر. تأكد من حساسية المريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب</strong><p>ضغط كل 5–15 دقيقة في الحالة الحادة، ثم كل ساعة عند الاستقرار. بول كل ساعة (هدف 0.5 مل/كجم/ساعة)، سكر الدم، علامات النزيف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ابحث عن السبب</strong><p>اسأل عن نزيف، إسهال، قيء، أدوية جديدة، ألم صدر. اطلب CBC حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف</strong><p>قيام ببطء، شرب سوائل كفاية، متابعة الأنيميا.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>أدوية تستحق مراجعة قبل الإعطاء</strong><ul><li>أدوية الضغط (ACEi/ARBs/مدرّات/Beta blockers) والنترات: اقرأ الضغط قبل كل جرعة وبلّغ لو أقل من الحد.</li><li>سجل الأدوية الجديدة قبل بداية الأعراض.</li></ul></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>القراءات مع وضع المريض ووقتها، الأعراض، السوائل الداخلة والبول الخارج، الأدوية المعطاة، استجابة الضغط، ووقت التبليغ.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>ضغط أقل من 90/60 مع نعاس أو إغماء أو ارتباك</li><li>نبض سريع وجلد بارد ورطب وقلة بول (صدمة)</li><li>نزيف ظاهر أو براز أسود أو قيء دموي</li><li>ألم صدر أو ضيق نفس أو اضطراب نبض</li><li>حمى مع هبوط الضغط (إنتان محتمل)</li><li>طفح وتورم وصفير بعد دواء/غذاء (حساسية شديدة)</li><li>الضغط لا يرتفع بعد السوائل</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>قم من النوم أو الجلوس ببطء، واقعد لحظات قبل ما تقف.</li><li>اشرب سوائل كفاية وقت الحر والإسهال.</li><li>الأنيميا من الأسباب: اهتم بالأكل الغني بالحديد وراجع الطبيب.</li><li>لا تتناول كمية كبيرة من الملح من نفسك.</li><li>لا توقف أدوية الضغط ولا تغير جرعتها من غير الطبيب.</li><li>Effortil نقط: 10–15 نقطة في نص كوب ماء، حسب توجيه الطبيب. وAstonin H أقراص حسب الإرشاد.</li><li>لو حصل إغماء أو خمول شديد أو نزيف، روح الطوارئ.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "هبوط الضغط: أقل من 90/60 مع أعراض",
-      "ابحث عن السبب: أنيميا، فقد سوائل/نزيف، هرمونات، أدوية موسعة، فشل قلب",
-      "الكورتيزون مش علاج روتيني؛ الأساس علاج السبب والسوائل",
-      "Effortil وAstonin H للحالات المزمنة بأمر الطبيب",
-      "مريض بضغط واطي + برودة + قلة بول + نعاس = صدمة، بلّغ فوراً",
-      "علّم المريض القيام ببطء وشرب السوائل",
-      "Orthostatic: قس نايم ثم بعد 5 دقايق قعود",
-      "الكورتيزون لا يُستخدم روتينياً لهبوط الضغط"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أقل قراءة تعتبر هبوط ضغط حسب المراجع؟"
-      },
-      "options": [
-        {
-          "ar": "أقل من 110/70"
-        },
-        {
-          "ar": "أقل من 90/60"
-        },
-        {
-          "ar": "أقل من 120/80"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التشخيص: ضغط أقل من 90/60."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي من دول من أسباب هبوط الضغط؟"
-      },
-      "options": [
-        {
-          "ar": "الأنيميا"
-        },
-        {
-          "ar": "السمنة فقط"
-        },
-        {
-          "ar": "التدخين فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأنيميا ونقص السوائل والمدرّات وفشل القلب من الأسباب."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض ضغطه 78/48، جلده بارد ونبضه سريع. أول تصرّف؟"
-      },
-      "options": [
-        {
-          "ar": "نبلّغ فوراً ونجهّز خط وريدي وسوائل"
-        },
-        {
-          "ar": "نديه كوب شاي"
-        },
-        {
-          "ar": "نسيبه ينام"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ده شكل صدمة ويحتاج تدخل فوري."
-      }
-    },
-    {
-      "q": {
-        "ar": "Astonin H عبارة عن؟"
-      },
-      "options": [
-        {
-          "ar": "Fludrocortisone"
-        },
-        {
-          "ar": "Furosemide"
-        },
-        {
-          "ar": "Atenolol"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Astonin-H هو Fludrocortisone ويحتبس الصوديوم والمياه."
-      }
-    },
-    {
-      "q": {
-        "ar": "إزاي نختبر الهبوط الوضعي؟"
-      },
-      "options": [
-        {
-          "ar": "قياس الضغط نايم ثم واقف بعد 1 و3 دقايق"
-        },
-        {
-          "ar": "قياس الضغط مرة واحدة جالس"
-        },
-        {
-          "ar": "قياس النبض فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نزول 20 أو أكتر في الانقباضي أو 10 في الانبساطي يعني هبوط وضعي."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Non-pharmacologic management of orthostatic hypotension (review, PubMed 2020)"
-    },
-    {
-      "title": "NHS/BNF — Fludrocortisone for postural hypotension"
-    },
-    {
-      "title": "Surviving Sepsis Campaign (MAP target 65)"
-    }
-  ],
-  "rx": [
-    {
-      "category": "القلب والأوعية الدموية",
-      "condition_ar": "هبوط الضغط البسيط",
-      "condition_en": "Mild hypotension",
-      "items": [
-        {
-          "drug_name": "Corasore drops",
-          "dose": "20 نقطة على نصف كوب ماء 3 مرات يومياً",
-          "note": "مع متابعة الضغط"
-        },
-        {
-          "drug_name": "Effortil drops (Etilefrine)",
-          "dose": "10 نقط على نصف كوب ماء 3 مرات يومياً",
-          "note": "مع متابعة الضغط"
-        },
-        {
-          "drug_name": "Vascon drops",
-          "dose": "10 نقط على نصف كوب ماء 3 مرات يومياً",
-          "note": "مع متابعة الضغط"
-        },
-        {
-          "drug_name": "Corasore / Effortil / Vascon tab",
-          "dose": "قرص 3 مرات يومياً",
-          "note": "مع متابعة الضغط"
-        },
-        {
-          "drug_name": "Midodrine / Gutron tab",
-          "dose": "قرص 3 مرات يومياً",
-          "note": "آخر جرعة قبل النوم بـ4 ساعات"
-        },
-        {
-          "drug_name": "Astonin-H (Fludrocortisone)",
-          "dose": "قرص واحد يومياً",
-          "note": "للهبوط الوضعي"
-        }
-      ],
-      "clinical_note": "علاج السبب: حديد للأنيميا، سوائل وملح للهبوط الوضعي، وتحويل الباطنة لو الدوخة متكررة."
-    }
+  "en": [
+   "Hypotension: below 90/60 with symptoms",
+   "Look for the cause: anemia, fluid loss/bleeding, hormones, vasodilator drugs, heart failure",
+   "Cortisone is not routine treatment; the basis is treating the cause and fluids",
+   "Effortil and Astonin H for chronic cases on the doctor's order",
+   "Low pressure + cold skin + low urine output + drowsiness = shock, report immediately",
+   "Teach the patient to rise slowly and drink fluids",
+   "Orthostatic: measure lying down then after 5 minutes sitting",
+   "Cortisone is not used routinely for hypotension"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أقل قراءة تعتبر هبوط ضغط حسب المراجع؟",
+    "en": "What is the lowest reading considered hypotension?"
+   },
+   "options": [
+    {
+     "ar": "أقل من 110/70",
+     "en": "Below 110/70"
+    },
+    {
+     "ar": "أقل من 90/60",
+     "en": "Below 90/60"
+    },
+    {
+     "ar": "أقل من 120/80",
+     "en": "Below 120/80"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التشخيص: ضغط أقل من 90/60.",
+    "en": "Diagnosis: pressure below 90/60."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من دول من أسباب هبوط الضغط؟",
+    "en": "Which of these is a cause of hypotension?"
+   },
+   "options": [
+    {
+     "ar": "الأنيميا",
+     "en": "Anemia"
+    },
+    {
+     "ar": "السمنة فقط",
+     "en": "Obesity only"
+    },
+    {
+     "ar": "التدخين فقط",
+     "en": "Smoking only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأنيميا ونقص السوائل والمدرّات وفشل القلب من الأسباب.",
+    "en": "Anemia, fluid loss, diuretics, and heart failure are causes."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض ضغطه 78/48، جلده بارد ونبضه سريع. أول تصرّف؟",
+    "en": "A patient's pressure is 78/48, the skin is cold and the pulse is fast. What is the first action?"
+   },
+   "options": [
+    {
+     "ar": "نبلّغ فوراً ونجهّز خط وريدي وسوائل",
+     "en": "Report immediately and prepare IV access and fluids"
+    },
+    {
+     "ar": "نديه كوب شاي",
+     "en": "Give a cup of tea"
+    },
+    {
+     "ar": "نسيبه ينام",
+     "en": "Let the patient sleep"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ده شكل صدمة ويحتاج تدخل فوري.",
+    "en": "This looks like shock and needs immediate intervention."
+   }
+  },
+  {
+   "q": {
+    "ar": "Astonin H عبارة عن؟",
+    "en": "What is Astonin H?"
+   },
+   "options": [
+    {
+     "ar": "Fludrocortisone",
+     "en": "Fludrocortisone"
+    },
+    {
+     "ar": "Furosemide",
+     "en": "Furosemide"
+    },
+    {
+     "ar": "Atenolol",
+     "en": "Atenolol"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Astonin-H هو Fludrocortisone ويحتبس الصوديوم والمياه.",
+    "en": "Astonin-H is fludrocortisone and it retains sodium and water."
+   }
+  },
+  {
+   "q": {
+    "ar": "إزاي نختبر الهبوط الوضعي؟",
+    "en": "How do we test for orthostatic hypotension?"
+   },
+   "options": [
+    {
+     "ar": "قياس الضغط نايم ثم واقف بعد 1 و3 دقايق",
+     "en": "Measure pressure lying down then standing after 1 and 3 minutes"
+    },
+    {
+     "ar": "قياس الضغط مرة واحدة جالس",
+     "en": "Measure pressure once while sitting"
+    },
+    {
+     "ar": "قياس النبض فقط",
+     "en": "Measure the pulse only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نزول 20 أو أكتر في الانقباضي أو 10 في الانبساطي يعني هبوط وضعي.",
+    "en": "A drop of 20 or more in systolic or 10 in diastolic means orthostatic hypotension."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Non-pharmacologic management of orthostatic hypotension (review, PubMed 2020)"
+  },
+  {
+   "title": "NHS/BNF — Fludrocortisone for postural hypotension"
+  },
+  {
+   "title": "Surviving Sepsis Campaign (MAP target 65)"
+  }
+ ],
+ "rx": [
+  {
+   "category": "القلب والأوعية الدموية",
+   "condition_ar": "هبوط الضغط البسيط",
+   "condition_en": "Mild hypotension",
+   "items": [
+    {
+     "drug_name": "Corasore drops",
+     "dose": "20 نقطة على نصف كوب ماء 3 مرات يومياً",
+     "note": "مع متابعة الضغط"
+    },
+    {
+     "drug_name": "Effortil drops (Etilefrine)",
+     "dose": "10 نقط على نصف كوب ماء 3 مرات يومياً",
+     "note": "مع متابعة الضغط"
+    },
+    {
+     "drug_name": "Vascon drops",
+     "dose": "10 نقط على نصف كوب ماء 3 مرات يومياً",
+     "note": "مع متابعة الضغط"
+    },
+    {
+     "drug_name": "Corasore / Effortil / Vascon tab",
+     "dose": "قرص 3 مرات يومياً",
+     "note": "مع متابعة الضغط"
+    },
+    {
+     "drug_name": "Midodrine / Gutron tab",
+     "dose": "قرص 3 مرات يومياً",
+     "note": "آخر جرعة قبل النوم بـ4 ساعات"
+    },
+    {
+     "drug_name": "Astonin-H (Fludrocortisone)",
+     "dose": "قرص واحد يومياً",
+     "note": "للهبوط الوضعي"
+    }
+   ],
+   "clinical_note": "علاج السبب: حديد للأنيميا، سوائل وملح للهبوط الوضعي، وتحويل الباطنة لو الدوخة متكررة."
+  }
+ ]
 }

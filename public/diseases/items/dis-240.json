@@ -1,178 +1,224 @@
 {
-  "id": "dis-240",
-  "num": 240,
-  "system": "cardio",
-  "icon": "💓",
-  "level": 3,
-  "title": {
-    "ar": "تسرع فوق البطيني (SVT)",
-    "en": "Supraventricular Tachycardia (SVT)"
+ "id": "dis-240",
+ "num": 240,
+ "system": "cardio",
+ "icon": "💓",
+ "level": 3,
+ "title": {
+  "ar": "تسرع فوق البطيني (SVT)",
+  "en": "Supraventricular Tachycardia (SVT)"
+ },
+ "teaser": {
+  "ar": "نبض سريع منتظم QRS ضيق: متى مناورة، متى أدينوسين، ومتى صدمة كهربائية، وإزاي تحقن الأدينوسين صح كممرض.",
+  "en": "A fast regular pulse with narrow QRS: when to use maneuvers, when adenosine, and when electrical shock, and how to inject adenosine correctly as a nurse."
+ },
+ "chips": [
+  {
+   "ar": "QRS ضيق",
+   "en": "Narrow QRS"
   },
-  "teaser": {
-    "ar": "نبض سريع منتظم QRS ضيق: متى مناورة، متى أدينوسين، ومتى صدمة كهربائية، وإزاي تحقن الأدينوسين صح كممرض."
+  {
+   "ar": "أدينوسين 6 → 12",
+   "en": "Adenosine 6 → 12"
   },
-  "chips": [
-    {
-      "ar": "QRS ضيق"
-    },
-    {
-      "ar": "أدينوسين 6 → 12"
-    },
-    {
-      "ar": "صدمة متزامنة"
-    }
+  {
+   "ar": "صدمة متزامنة",
+   "en": "Synchronized shock"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>تسرع فوق البطيني (<b>SVT – Supraventricular tachycardia</b>) معناه نبض سريع جداً ومنتظم منشؤه فوق البطينين (الأذين أو العقدة الأذينية البطينية AV node). الشكل المميز على التخطيط: <b>QRS ضيق، منتظم، سريع، وموجة P غائبة أو مخفية</b>. بيبدأ وينتهي فجأة، وغالباً بيحصل عند شباب وسيدات أصحاء، وممكن عند حامل.</p><div class=\"cs-stats\"><div><b>150–250</b><span>معدل القلب في النوبة (ن/د)</span></div><div><b>QRS ضيق</b><span>أقل من 0.12 ث</span></div><div><b>6 → 12</b><span>أدينوسين (ملجم)</span></div></div>[[slot:dis-240-algorithm|خطوات التعامل مع SVT — رسم من إعداد الموقع|/diseases/img/dis-240-algorithm.svg]]<h4>ECG: إزاي نعرفه؟</h4><table><thead><tr><th>العلامة</th><th>الموجود في SVT</th></tr></thead><tbody><tr><td>عرض QRS (Narrow)</td><td>ضيق (أقل من 3 مربعات صغيرة)</td></tr><tr><td>المعدل (Tachycardia)</td><td>سريع جداً، غالباً أكتر من 150/د</td></tr><tr><td>الانتظام (Regular)</td><td>منتظم تماماً (المسافات R–R متساوية)</td></tr><tr><td>موجة P</td><td>غائبة أو مدفونة داخل QRS/ T (Absent P wave)</td></tr></tbody></table>[[slot:dis-240-ecg-real|صورة: تخطيط 12 اشتقاق حقيقي لـ SVT (تسرع منتظم QRS ضيق بدون موجات P واضحة)]]<div class=\"cs-box cs-warning\"><strong>انتبه</strong><p>تسرع جيبي (Sinus tachycardia) برضه منتظم وQRS ضيق لكن <b>موجة P ظاهرة</b> وبيبدأ تدريجياً وغالباً أقل من 150/د وله سبب (حمى، ألم، جفاف، نزيف). ده ما بيتعالجش بالأدينوسين: عالج السبب. السؤال المفتاح: «بدأ فجأة وبينتهي فجأة؟» = SVT.</p></div>",
+   "en": "<p>Supraventricular tachycardia (<b>SVT</b>) means a very fast, regular heart rate that originates above the ventricles (the atrium or the atrioventricular node, AV node). The typical ECG pattern: <b>narrow QRS, regular, fast, and an absent or hidden P wave</b>. It starts and ends suddenly, and usually occurs in healthy young people and women, and can occur in a pregnant woman.</p><div class=\"cs-stats\"><div><b>150–250</b><span>heart rate during the attack (bpm)</span></div><div><b>Narrow QRS</b><span>less than 0.12 s</span></div><div><b>6 → 12</b><span>adenosine (mg)</span></div></div>[[slot:dis-240-algorithm|Steps for managing SVT — illustration made for the site|/diseases/img/dis-240-algorithm.svg]]<h4>ECG: how do we recognize it?</h4><table><thead><tr><th>Feature</th><th>Found in SVT</th></tr></thead><tbody><tr><td>QRS width (Narrow)</td><td>Narrow (less than 3 small squares)</td></tr><tr><td>Rate (Tachycardia)</td><td>Very fast, usually more than 150/min</td></tr><tr><td>Regularity (Regular)</td><td>Completely regular (R–R intervals are equal)</td></tr><tr><td>P wave</td><td>Absent or buried inside the QRS/T (Absent P wave)</td></tr></tbody></table>[[slot:dis-240-ecg-real|Photo: a real 12-lead ECG of SVT (regular narrow-QRS tachycardia without clear P waves)]]<div class=\"cs-box cs-warning\"><strong>Be careful</strong><p>Sinus tachycardia is also regular with a narrow QRS but has a <b>visible P wave</b>, starts gradually, is usually less than 150/min, and has a cause (fever, pain, dehydration, bleeding). It is not treated with adenosine: treat the cause. The key question: \"Did it start suddenly and end suddenly?\" = SVT.</p></div>"
+  },
+  "causes": {
+   "ar": "<p>أشهر آليات SVT دخول متكرر (re-entry) داخل أو حول العقدة AV (AVNRT) أو عبر مسار إضافي (AVRT – زي متلازمة WPW). محفزات النوبة:</p><ul><li>كافيين، تدخين، كحول، مشروبات طاقة</li><li>توتر ومجهود وقلة نوم</li><li>أدوية منبهة (بخاخات الربو، مزيلات احتقان) ومنشطات</li><li>فرط نشاط الغدة الدرقية، نقص بوتاسيوم/مغنسيوم</li><li>الحمل، أمراض القلب، وأحياناً بدون أي سبب</li></ul><p>لو المريض عنده نوبات متكررة: بيتم أخذ <b>حاصر بيتا أقراص</b> كوقاية بأمر الطبيب (أو الكي بالقسطرة لعلاج جذري).</p>",
+   "en": "<p>The most common SVT mechanisms are re-entry within or around the AV node (AVNRT) or through an accessory pathway (AVRT – as in WPW syndrome). Attack triggers:</p><ul><li>Caffeine, smoking, alcohol, energy drinks</li><li>Stress, exertion, and lack of sleep</li><li>Stimulant drugs (asthma inhalers, decongestants) and stimulants</li><li>Hyperthyroidism, low potassium/magnesium</li><li>Pregnancy, heart disease, and sometimes no cause at all</li></ul><p>If the patient has frequent attacks: a <b>beta blocker tablet</b> is taken as prevention by physician order (or catheter ablation for a definitive cure).</p>"
+  },
+  "signs": {
+   "ar": "<h4>الأعراض</h4><ul><li>خفقان سريع منتظم مفاجئ البداية والنهاية</li><li>دوخة، ضيق نفس، ضيق أو ألم بالصدر</li><li>عرق وقلق، وكتير بوليّة (تبول كثير بعد النوبة)</li><li>إغماء أو هبوط ضغط في الحالات الشديدة</li></ul><h4>تصنيف المريض (أهم نقطة)</h4><table><thead><tr><th>الحالة</th><th>معناها</th><th>القرار</th></tr></thead><tbody><tr><td>مستقر (Hemodynamically stable)</td><td>ضغط مقبول، وعي كامل، بدون ألم صدر/وذمة رئة</td><td>مناورات ثم دواء</td></tr><tr><td>غير مستقر (Unstable)</td><td>هبوط ضغط، ألم صدر إقفاري، فشل قلب حاد، تشوش وعي</td><td>صدمة كهربائية متزامنة فوراً</td></tr></tbody></table>",
+   "en": "<h4>Symptoms</h4><ul><li>Fast regular palpitations with sudden onset and end</li><li>Dizziness, shortness of breath, chest tightness or pain</li><li>Sweating and anxiety, and often polyuria (frequent urination after the attack)</li><li>Fainting or low blood pressure in severe cases</li></ul><h4>Patient classification (the most important point)</h4><table><thead><tr><th>Condition</th><th>Meaning</th><th>Decision</th></tr></thead><tbody><tr><td>Stable (Hemodynamically stable)</td><td>Acceptable blood pressure, fully conscious, no chest pain/pulmonary edema</td><td>Maneuvers then a drug</td></tr><tr><td>Unstable</td><td>Low blood pressure, ischemic chest pain, acute heart failure, confusion</td><td>Immediate synchronized electrical shock</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<ul><li>ECG 12 اشتقاق (قبل وبعد التحويل) + شريط مستمر على المونيتور أثناء أي علاج</li><li>تحاليل: بوتاسيوم، مغنسيوم، TSH، تروبونين لو ألم صدر، صورة دم</li><li>إيكو لو النوبات متكررة</li><li>بعد التحويل: لو ظهرت موجة دلتا وPR قصير (WPW) بلّغ الطبيب</li></ul>",
+   "en": "<ul><li>12-lead ECG (before and after cardioversion) + a continuous strip on the monitor during any treatment</li><li>Labs: potassium, magnesium, TSH, troponin if chest pain, blood count</li><li>Echo if attacks are frequent</li><li>After cardioversion: if a delta wave and short PR (WPW) appear, notify the physician</li></ul>"
+  },
+  "treatment": {
+   "ar": "<div class=\"cs-box cs-info\"><strong>المبدأ</strong><p>نقسم المريض مجموعتين: <b>مستقر</b> و<b>غير مستقر</b>. كل العلاج الدوائي يتم تحت ECG مستمر وجهاز صدمات جاهز.</p></div><h4>أولاً: المريض المستقر — طرق بدون دواء (Non-pharmacological)</h4><table><thead><tr><th>الطريقة</th><th>التفاصيل</th></tr></thead><tbody><tr><td>مناورة فالسالفا (Valsalva)</td><td>النفخ ضد مقاومة. انظر دليل «مناورة فالسالفا المعدّلة» للخطوات التفصيلية</td></tr><tr><td>فالسالفا المعدّلة (Modified)</td><td>الأعلى نجاحاً: نفخ 15 ثانية ثم نوم ورفع الرجلين 15 ثانية</td></tr><tr><td>منعكس التقيؤ (Gag reflex)</td><td>مذكور تاريخياً؛ لا يُنصح به كروتين لأنه غير آمن (قيء وشفط)</td></tr><tr><td>تدليك الجيب السباتي (Carotid sinus massage)</td><td>أسفل زاوية الفك، خفيف وقصير (ثوانٍ) وجانب واحد فقط، بواسطة الطبيب وتحت مونيتور؛ ممنوع مع صوت زمجرة بالشريان السباتي أو سكتة/TIA سابقة وكبار السن</td></tr></tbody></table><h4>ثانياً: المريض المستقر — العلاج الدوائي (تحت مونيتور)</h4><table><thead><tr><th>الدواء (تجاري)</th><th>الجرعة والطريقة</th><th>موانع/ملاحظات</th></tr></thead><tbody><tr><td><b>أدينوسين (Adenocor/Adenosine) 6 ملجم / 2 مل</b> — خيار أول</td><td>6 ملجم وريدي <b>سريع جداً</b> في وريد كبير + شطف 20 مل ملح فوراً؛ لو مفيش استجابة بعد 1–2 دقيقة: 12 ملجم؛ (ممكن تكرار 12 مرة تانية حسب بروتوكول ACLS). بعض المراجع تبدأ 3 ملجم، وده للخط المركزي أو مع ديبيريدامول/كاربامازيبين أو قلب مزروع</td><td>ممنوع/حذر في الربو والـCOPD الشديد (تشنج شعبي) وعند هبوط الضغط وحصار AV درجة 2–3؛ هو الدواء المفضل للحامل؛ نصف عمره ثوانٍ فقط</td></tr><tr><td><b>فيراباميل (Isoptin) أمبول 5 ملجم / 2 مل</b> — خيار ثاني</td><td>5 ملجم وريدي <b>ببطء</b> (على 2–3 دقائق)؛ الجرعة المعتادة في إرشادات ACLS: 2.5–5 ملجم، ولو مفيش استجابة بعد 15–30 دقيقة: 5–10 ملجم (الحد الأقصى 20 ملجم إجمالاً) وبأمر الطبيب</td><td>بشرط عدم وجود مانع لحاصرات الكالسيوم والضغط غير منخفض. ممنوع في فشل القلب، ومع حاصر بيتا وريدي، وفي تسرع QRS عريض، ومع WPW + AF</td></tr><tr><td><b>بروبرانولول (Inderal) أمبول 1 ملجم / 1 مل</b></td><td>1 ملجم وريدي ببطء ويتكرر كل 5 دقائق (الحد الأقصى 5 ملجم)</td><td>بشرط عدم وجود مانع لحاصرات بيتا (ربو، بطء، حصار، فشل قلب) والضغط غير منخفض</td></tr><tr><td><b>أميودارون (Cordarone) أمبول</b></td><td>جرعة تحميل 5 ملجم/كجم في 200 مل ملح أو جلوكوز 5% على 30 دقيقة (حسب المراجع)</td><td>تحت ECG مستمر. تأكد من تركيز الأمبول المكتوب (الأمبول الشائع 150 ملجم/3 مل)؛ الدفعة المعتادة في الإرشادات 150 ملجم على 10 دقائق للنوبات الأخرى؛ احسب واتّبع أمر الطبيب</td></tr></tbody></table><h4>ثالثاً: المريض غير المستقر</h4><div class=\"cs-box cs-danger\"><strong>صدمة كهربائية متزامنة (Synchronized DC shock)</strong><p>بطاقة <b>100 جول</b> (المدى الشائع 50–100 جول ثنائي الطور) مع تخدير/تسكين سريع لو المريض واعي. لا تنتظر الأدوية. شوف دليل «الصدمة الكهربائية» للخطوات.</p></div><h4>الوقاية من التكرار</h4><ul><li>مريض عنده نوبات متكررة: حاصر بيتا أقراص وقائي (أو حاصر كالسيوم) بأمر الطبيب</li><li>تجنب المحفزات (كافيين، منبهات، تدخين، سهر)</li><li>الكي بالقسطرة (Ablation) علاج جذري للمتكرر</li></ul><div class=\"cs-box cs-pearl\"><strong>تحديث</strong><p>ترتيب الخيارات الحديث (AHA/ESC): مناورة فالسالفا المعدّلة ثم أدينوسين ثم حاصر كالسيوم/بيتا، وأخيراً الصدمة. أما أميودارون فليس خياراً مبكراً لـSVT المنتظمة الضيقة عادة، وبيُترك للطبيب في الحالات المستعصية. طريقة «منعكس التقيؤ» قديمة وغير مفضّلة.</p></div>",
+   "en": "<div class=\"cs-box cs-info\"><strong>The principle</strong><p>We divide the patient into two groups: <b>stable</b> and <b>unstable</b>. All drug treatment is done under continuous ECG with a shock device ready.</p></div><h4>First: the stable patient — non-pharmacological methods</h4><table><thead><tr><th>Method</th><th>Details</th></tr></thead><tbody><tr><td>Valsalva maneuver</td><td>Blowing against resistance. See the \"modified Valsalva maneuver\" guide for the detailed steps</td></tr><tr><td>Modified Valsalva</td><td>The most successful: blow for 15 seconds then lie down and raise the legs for 15 seconds</td></tr><tr><td>Gag reflex</td><td>Mentioned historically; not recommended as routine because it is unsafe (vomiting and aspiration)</td></tr><tr><td>Carotid sinus massage</td><td>Below the angle of the jaw, light and brief (seconds) and on one side only, by the physician and under a monitor; contraindicated with a bruit in the carotid artery or a previous stroke/TIA and in older adults</td></tr></tbody></table><h4>Second: the stable patient — drug treatment (under a monitor)</h4><table><thead><tr><th>Drug (brand)</th><th>Dose and method</th><th>Contraindications/notes</th></tr></thead><tbody><tr><td><b>Adenosine (Adenocor/Adenosine) 6 mg / 2 mL</b> — first choice</td><td>6 mg IV <b>very rapidly</b> in a large vein + flush with 20 mL saline immediately; if no response after 1–2 minutes: 12 mg; (12 mg can be repeated once more per ACLS protocol). Some references start with 3 mg, which is for a central line or with dipyridamole/carbamazepine or a transplanted heart</td><td>Contraindicated/caution in asthma and severe COPD (bronchospasm) and with low blood pressure and 2nd–3rd degree AV block; it is the preferred drug in pregnancy; its half-life is only seconds</td></tr><tr><td><b>Verapamil (Isoptin) ampoule 5 mg / 2 mL</b> — second choice</td><td>5 mg IV <b>slowly</b> (over 2–3 minutes); the usual dose in ACLS guidelines: 2.5–5 mg, and if no response after 15–30 minutes: 5–10 mg (maximum 20 mg total) and by physician order</td><td>Provided there is no contraindication to calcium blockers and the blood pressure is not low. Contraindicated in heart failure, with an IV beta blocker, in wide-QRS tachycardia, and with WPW + AF</td></tr><tr><td><b>Propranolol (Inderal) ampoule 1 mg / 1 mL</b></td><td>1 mg IV slowly, repeated every 5 minutes (maximum 5 mg)</td><td>Provided there is no contraindication to beta blockers (asthma, bradycardia, block, heart failure) and the blood pressure is not low</td></tr><tr><td><b>Amiodarone (Cordarone) ampoule</b></td><td>Loading dose 5 mg/kg in 200 mL saline or 5% glucose over 30 minutes (per references)</td><td>Under continuous ECG. Confirm the written ampoule concentration (the common ampoule is 150 mg/3 mL); the usual bolus in guidelines is 150 mg over 10 minutes for other arrhythmias; calculate and follow the physician's order</td></tr></tbody></table><h4>Third: the unstable patient</h4><div class=\"cs-box cs-danger\"><strong>Synchronized electrical shock (Synchronized DC shock)</strong><p>Energy <b>100 joules</b> (the common range 50–100 joules biphasic) with rapid sedation/analgesia if the patient is conscious. Do not wait for drugs. See the \"electrical shock\" guide for the steps.</p></div><h4>Preventing recurrence</h4><ul><li>A patient with frequent attacks: a preventive beta blocker tablet (or calcium blocker) by physician order</li><li>Avoid triggers (caffeine, stimulants, smoking, staying up late)</li><li>Catheter ablation is a definitive treatment for recurrent cases</li></ul><div class=\"cs-box cs-pearl\"><strong>Update</strong><p>The modern order of options (current guidelines): modified Valsalva maneuver then adenosine then a calcium/beta blocker, and finally the shock. Amiodarone is usually not an early option for regular narrow SVT, and is left to the physician in resistant cases. The \"gag reflex\" method is old and not preferred.</p></div>"
+  },
+  "nursing": {
+   "ar": "<p>دورك في SVT هو الأمان والسرعة: التأكد إن المريض مستقر، تجهيز الأدوات، وإعطاء الأدينوسين بالتقنية الصح.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الاستقرار</strong><p> ضغط، نبض (قلبي بالسماعة دقيقة كاملة)، تنفس، SpO₂، وعي، ألم صدر. أي علامة عدم استقرار = بلّغ فوراً وجهّز الصدمة المتزامنة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>ركّب المونيتور والخط</strong><p>ECG مستمر + أطراف اللصق، خط وريدي كبير في ثنية الكوع (الأفضل يسار/يمين حسب الطبيب) وأكسجين لو SpO₂ منخفضة. ثبّت ورقة ECG 12 اشتقاق قبل أي علاج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>جهّز العربة</strong><p>جهاز الصدمات شغّال ومشحون للاستعمال، أدوية الطوارئ، مستلزمات تهوية، أتروبين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>ساعد في المناورة</strong><p>المناورة المعدّلة: المريض نصف جالس، انفخ في سرنجة 10 مل (أو مانومتر 40 مم زئبق) 15 ثانية، ثم نوّمه ورفع الرجلين 15 ثانية. المراقب على المونيتور.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ الأدينوسين صح</strong><p>سرنجة 6 ملجم + سرنجة ملح 20 مل على محبس ثلاثي. دفعة سريعة جداً ثم ملح فوراً + رفع الذراع. اطبع شريط ECG أثناء الحقن. قبلها قول للمريض: «هتحس بسخونية وضيق صدر لثواني».</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب الاستجابة</strong><p>لو رجع النظم الجيبي: ECG 12 اشتقاق جديد. لو لا: جرعة 12 ملجم بأمر الطبيب. وبلّغ لو ظهر نبض غير منتظم أو QRS عريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>الأدوية التانية</strong><p>فيراباميل/بروبرانولول: قبلها ضغط ونبض، ببطء مع مراقبة الضغط والنبض والـECG. ما تديش فيراباميل مع حاصر بيتا وريدي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>وثّق وثقّف</strong><p>وقت البداية، العلاج، النتيجة، العلامات الحيوية. اشرح للمريض المحفزات وإمتى يتصل بالإسعاف.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>آثار الأدينوسين الشائعة (مؤقتة)</strong><p>احمرار وجه، ضيق صدر، صعوبة نفس، طعم معدني، دوخة، وتوقف قلب لحظي أو بطء قبل الرجوع. تستمر ثوانٍ. جهّز الإنعاش لو طال التوقف.</p></div><div class=\"cs-box cs-warning\"><strong>ممنوعات</strong><p>ما تدّيش أدينوسين لمريض ربو نشط، ولا فيراباميل لمريض ضغطه منخفض أو فشل قلب أو تسرع عريض غير معروف، ولا حاصر بيتا + فيراباميل وريدي مع بعض.</p></div>",
+   "en": "<p>Your role in SVT is safety and speed: making sure the patient is stable, preparing the equipment, and giving adenosine with the right technique.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess stability</strong><p> Blood pressure, pulse (apical with a stethoscope for a full minute), breathing, SpO₂, consciousness, chest pain. Any sign of instability = report immediately and prepare the synchronized shock.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Set up the monitor and line</strong><p>Continuous ECG + adhesive electrodes, a large IV line in the antecubital fossa (preferably left/right as the physician decides) and oxygen if SpO₂ is low. Secure a 12-lead ECG strip before any treatment.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Prepare the cart</strong><p>The shock device working and charged for use, emergency drugs, ventilation supplies, atropine.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Help with the maneuver</strong><p>The modified maneuver: the patient semi-seated, blows into a 10 mL syringe (or a manometer at 40 mmHg) for 15 seconds, then lie down and raise the legs for 15 seconds. Watch the monitor.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Give adenosine correctly</strong><p>A 6 mg syringe + a 20 mL saline syringe on a three-way stopcock. A very rapid push then saline immediately + raise the arm. Print an ECG strip during the injection. Beforehand tell the patient: \"You will feel warmth and chest tightness for a few seconds.\"</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Monitor the response</strong><p>If sinus rhythm returns: a new 12-lead ECG. If not: a 12 mg dose by physician order. And report if an irregular pulse or wide QRS appears.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>The other drugs</strong><p>Verapamil/propranolol: check blood pressure and pulse beforehand, give slowly while monitoring blood pressure, pulse, and ECG. Do not give verapamil with an IV beta blocker.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Document and teach</strong><p>Start time, treatment, result, vital signs. Explain the triggers to the patient and when to call the ambulance.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>Common (temporary) effects of adenosine</strong><p>Facial flushing, chest tightness, difficulty breathing, metallic taste, dizziness, and a momentary cardiac pause or bradycardia before returning. They last seconds. Prepare resuscitation if the pause is prolonged.</p></div><div class=\"cs-box cs-warning\"><strong>Do not</strong><p>Do not give adenosine to a patient with active asthma, nor verapamil to a patient with low blood pressure, heart failure, or unidentified wide tachycardia, nor an IV beta blocker + verapamil together.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>ضغط انقباضي أقل من 90 أو تشوش وعي أو إغماء</li><li>ألم صدر أو وذمة رئة أثناء النوبة</li><li>QRS عريض أو نبض غير منتظم (غير SVT: AF/VT/WPW)</li><li>توقف أو بطء شديد بعد أي دواء</li><li>النوبة استمرت أكتر من ساعة أو رجعت بعد التحويل</li><li>حمل مع النوبة</li></ul>",
+   "en": "<ul><li>Systolic blood pressure less than 90 or confusion or fainting</li><li>Chest pain or pulmonary edema during the attack</li><li>Wide QRS or irregular pulse (not SVT: AF/VT/WPW)</li><li>A pause or severe bradycardia after any drug</li><li>The attack continued more than an hour or returned after cardioversion</li><li>Pregnancy with the attack</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>النوبة غالباً مش خطيرة لكن لازم تتقيّم. لو صدر ألم أو إغماء: إسعاف.</li><li>جرّب مناورة فالسالفا المعدّلة في البيت (لو الطبيب شرحها) بعد ما تتأكد إن الضغط سليم.</li><li>قلل الكافيين والتدخين والمنبهات والسهر.</li><li>الأقراص الوقائية (حاصر بيتا): بانتظام ولا تقطعها فجأة.</li><li>سجّل وقت وطول النوبات وأي عامل حفّزها.</li></ul>",
+   "en": "<ul><li>The attack is usually not dangerous but must be evaluated. If chest pain or fainting occurs: ambulance.</li><li>Try the modified Valsalva maneuver at home (if the physician explained it) after making sure your blood pressure is fine.</li><li>Reduce caffeine, smoking, stimulants, and staying up late.</li><li>Preventive tablets (beta blocker): regularly and do not stop them suddenly.</li><li>Record the time and length of attacks and any factor that triggered them.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "SVT: تسرع منتظم + QRS ضيق + موجة P غائبة ومعدل 150–250",
+   "أول سؤال: مستقر أم غير مستقر؟ غير مستقر = صدمة متزامنة 100 جول",
+   "المستقر: فالسالفا المعدّلة ← أدينوسين 6 ثم 12 ملجم",
+   "الأدينوسين: دفعة سريعة جداً في وريد كبير + شطف 20 مل ملح (نصف عمره ثوانٍ)",
+   "ممنوع الأدينوسين في الربو وهبوط الضغط الشديد وحصار AV؛ وهو المفضل في الحمل",
+   "فيراباميل/بروبرانولول فقط لو الضغط سليم ولا يوجد مانع",
+   "المراقبة بالـECG المستمر وجهاز صدمات جاهز طول العلاج"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>تسرع فوق البطيني (<b>SVT – Supraventricular tachycardia</b>) معناه نبض سريع جداً ومنتظم منشؤه فوق البطينين (الأذين أو العقدة الأذينية البطينية AV node). الشكل المميز على التخطيط: <b>QRS ضيق، منتظم، سريع، وموجة P غائبة أو مخفية</b>. بيبدأ وينتهي فجأة، وغالباً بيحصل عند شباب وسيدات أصحاء، وممكن عند حامل.</p><div class=\"cs-stats\"><div><b>150–250</b><span>معدل القلب في النوبة (ن/د)</span></div><div><b>QRS ضيق</b><span>أقل من 0.12 ث</span></div><div><b>6 → 12</b><span>أدينوسين (ملجم)</span></div></div>[[slot:dis-240-algorithm|خطوات التعامل مع SVT — رسم من إعداد الموقع|/diseases/img/dis-240-algorithm.svg]]<h4>ECG: إزاي نعرفه؟</h4><table><thead><tr><th>العلامة</th><th>الموجود في SVT</th></tr></thead><tbody><tr><td>عرض QRS (Narrow)</td><td>ضيق (أقل من 3 مربعات صغيرة)</td></tr><tr><td>المعدل (Tachycardia)</td><td>سريع جداً، غالباً أكتر من 150/د</td></tr><tr><td>الانتظام (Regular)</td><td>منتظم تماماً (المسافات R–R متساوية)</td></tr><tr><td>موجة P</td><td>غائبة أو مدفونة داخل QRS/ T (Absent P wave)</td></tr></tbody></table>[[slot:dis-240-ecg-real|صورة: تخطيط 12 اشتقاق حقيقي لـ SVT (تسرع منتظم QRS ضيق بدون موجات P واضحة)]]<div class=\"cs-box cs-warning\"><strong>انتبه</strong><p>تسرع جيبي (Sinus tachycardia) برضه منتظم وQRS ضيق لكن <b>موجة P ظاهرة</b> وبيبدأ تدريجياً وغالباً أقل من 150/د وله سبب (حمى، ألم، جفاف، نزيف). ده ما بيتعالجش بالأدينوسين: عالج السبب. السؤال المفتاح: «بدأ فجأة وبينتهي فجأة؟» = SVT.</p></div>"
-    },
-    "causes": {
-      "ar": "<p>أشهر آليات SVT دخول متكرر (re-entry) داخل أو حول العقدة AV (AVNRT) أو عبر مسار إضافي (AVRT – زي متلازمة WPW). محفزات النوبة:</p><ul><li>كافيين، تدخين، كحول، مشروبات طاقة</li><li>توتر ومجهود وقلة نوم</li><li>أدوية منبهة (بخاخات الربو، مزيلات احتقان) ومنشطات</li><li>فرط نشاط الغدة الدرقية، نقص بوتاسيوم/مغنسيوم</li><li>الحمل، أمراض القلب، وأحياناً بدون أي سبب</li></ul><p>لو المريض عنده نوبات متكررة: بيتم أخذ <b>حاصر بيتا أقراص</b> كوقاية بأمر الطبيب (أو الكي بالقسطرة لعلاج جذري).</p>"
-    },
-    "signs": {
-      "ar": "<h4>الأعراض</h4><ul><li>خفقان سريع منتظم مفاجئ البداية والنهاية</li><li>دوخة، ضيق نفس، ضيق أو ألم بالصدر</li><li>عرق وقلق، وكتير بوليّة (تبول كثير بعد النوبة)</li><li>إغماء أو هبوط ضغط في الحالات الشديدة</li></ul><h4>تصنيف المريض (أهم نقطة)</h4><table><thead><tr><th>الحالة</th><th>معناها</th><th>القرار</th></tr></thead><tbody><tr><td>مستقر (Hemodynamically stable)</td><td>ضغط مقبول، وعي كامل، بدون ألم صدر/وذمة رئة</td><td>مناورات ثم دواء</td></tr><tr><td>غير مستقر (Unstable)</td><td>هبوط ضغط، ألم صدر إقفاري، فشل قلب حاد، تشوش وعي</td><td>صدمة كهربائية متزامنة فوراً</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<ul><li>ECG 12 اشتقاق (قبل وبعد التحويل) + شريط مستمر على المونيتور أثناء أي علاج</li><li>تحاليل: بوتاسيوم، مغنسيوم، TSH، تروبونين لو ألم صدر، صورة دم</li><li>إيكو لو النوبات متكررة</li><li>بعد التحويل: لو ظهرت موجة دلتا وPR قصير (WPW) بلّغ الطبيب</li></ul>"
-    },
-    "treatment": {
-      "ar": "<div class=\"cs-box cs-info\"><strong>المبدأ</strong><p>نقسم المريض مجموعتين: <b>مستقر</b> و<b>غير مستقر</b>. كل العلاج الدوائي يتم تحت ECG مستمر وجهاز صدمات جاهز.</p></div><h4>أولاً: المريض المستقر — طرق بدون دواء (Non-pharmacological)</h4><table><thead><tr><th>الطريقة</th><th>التفاصيل</th></tr></thead><tbody><tr><td>مناورة فالسالفا (Valsalva)</td><td>النفخ ضد مقاومة. انظر دليل «مناورة فالسالفا المعدّلة» للخطوات التفصيلية</td></tr><tr><td>فالسالفا المعدّلة (Modified)</td><td>الأعلى نجاحاً: نفخ 15 ثانية ثم نوم ورفع الرجلين 15 ثانية</td></tr><tr><td>منعكس التقيؤ (Gag reflex)</td><td>مذكور تاريخياً؛ لا يُنصح به كروتين لأنه غير آمن (قيء وشفط)</td></tr><tr><td>تدليك الجيب السباتي (Carotid sinus massage)</td><td>أسفل زاوية الفك، خفيف وقصير (ثوانٍ) وجانب واحد فقط، بواسطة الطبيب وتحت مونيتور؛ ممنوع مع صوت زمجرة بالشريان السباتي أو سكتة/TIA سابقة وكبار السن</td></tr></tbody></table><h4>ثانياً: المريض المستقر — العلاج الدوائي (تحت مونيتور)</h4><table><thead><tr><th>الدواء (تجاري)</th><th>الجرعة والطريقة</th><th>موانع/ملاحظات</th></tr></thead><tbody><tr><td><b>أدينوسين (Adenocor/Adenosine) 6 ملجم / 2 مل</b> — خيار أول</td><td>6 ملجم وريدي <b>سريع جداً</b> في وريد كبير + شطف 20 مل ملح فوراً؛ لو مفيش استجابة بعد 1–2 دقيقة: 12 ملجم؛ (ممكن تكرار 12 مرة تانية حسب بروتوكول ACLS). بعض المراجع تبدأ 3 ملجم، وده للخط المركزي أو مع ديبيريدامول/كاربامازيبين أو قلب مزروع</td><td>ممنوع/حذر في الربو والـCOPD الشديد (تشنج شعبي) وعند هبوط الضغط وحصار AV درجة 2–3؛ هو الدواء المفضل للحامل؛ نصف عمره ثوانٍ فقط</td></tr><tr><td><b>فيراباميل (Isoptin) أمبول 5 ملجم / 2 مل</b> — خيار ثاني</td><td>5 ملجم وريدي <b>ببطء</b> (على 2–3 دقائق)؛ الجرعة المعتادة في إرشادات ACLS: 2.5–5 ملجم، ولو مفيش استجابة بعد 15–30 دقيقة: 5–10 ملجم (الحد الأقصى 20 ملجم إجمالاً) وبأمر الطبيب</td><td>بشرط عدم وجود مانع لحاصرات الكالسيوم والضغط غير منخفض. ممنوع في فشل القلب، ومع حاصر بيتا وريدي، وفي تسرع QRS عريض، ومع WPW + AF</td></tr><tr><td><b>بروبرانولول (Inderal) أمبول 1 ملجم / 1 مل</b></td><td>1 ملجم وريدي ببطء ويتكرر كل 5 دقائق (الحد الأقصى 5 ملجم)</td><td>بشرط عدم وجود مانع لحاصرات بيتا (ربو، بطء، حصار، فشل قلب) والضغط غير منخفض</td></tr><tr><td><b>أميودارون (Cordarone) أمبول</b></td><td>جرعة تحميل 5 ملجم/كجم في 200 مل ملح أو جلوكوز 5% على 30 دقيقة (حسب المراجع)</td><td>تحت ECG مستمر. تأكد من تركيز الأمبول المكتوب (الأمبول الشائع 150 ملجم/3 مل)؛ الدفعة المعتادة في الإرشادات 150 ملجم على 10 دقائق للنوبات الأخرى؛ احسب واتّبع أمر الطبيب</td></tr></tbody></table><h4>ثالثاً: المريض غير المستقر</h4><div class=\"cs-box cs-danger\"><strong>صدمة كهربائية متزامنة (Synchronized DC shock)</strong><p>بطاقة <b>100 جول</b> (المدى الشائع 50–100 جول ثنائي الطور) مع تخدير/تسكين سريع لو المريض واعي. لا تنتظر الأدوية. شوف دليل «الصدمة الكهربائية» للخطوات.</p></div><h4>الوقاية من التكرار</h4><ul><li>مريض عنده نوبات متكررة: حاصر بيتا أقراص وقائي (أو حاصر كالسيوم) بأمر الطبيب</li><li>تجنب المحفزات (كافيين، منبهات، تدخين، سهر)</li><li>الكي بالقسطرة (Ablation) علاج جذري للمتكرر</li></ul><div class=\"cs-box cs-pearl\"><strong>تحديث</strong><p>ترتيب الخيارات الحديث (AHA/ESC): مناورة فالسالفا المعدّلة ثم أدينوسين ثم حاصر كالسيوم/بيتا، وأخيراً الصدمة. أما أميودارون فليس خياراً مبكراً لـSVT المنتظمة الضيقة عادة، وبيُترك للطبيب في الحالات المستعصية. طريقة «منعكس التقيؤ» قديمة وغير مفضّلة.</p></div>"
-    },
-    "nursing": {
-      "ar": "<p>دورك في SVT هو الأمان والسرعة: التأكد إن المريض مستقر، تجهيز الأدوات، وإعطاء الأدينوسين بالتقنية الصح.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الاستقرار</strong><p> ضغط، نبض (قلبي بالسماعة دقيقة كاملة)، تنفس، SpO₂، وعي، ألم صدر. أي علامة عدم استقرار = بلّغ فوراً وجهّز الصدمة المتزامنة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>ركّب المونيتور والخط</strong><p>ECG مستمر + أطراف اللصق، خط وريدي كبير في ثنية الكوع (الأفضل يسار/يمين حسب الطبيب) وأكسجين لو SpO₂ منخفضة. ثبّت ورقة ECG 12 اشتقاق قبل أي علاج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>جهّز العربة</strong><p>جهاز الصدمات شغّال ومشحون للاستعمال، أدوية الطوارئ، مستلزمات تهوية، أتروبين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>ساعد في المناورة</strong><p>المناورة المعدّلة: المريض نصف جالس، انفخ في سرنجة 10 مل (أو مانومتر 40 مم زئبق) 15 ثانية، ثم نوّمه ورفع الرجلين 15 ثانية. المراقب على المونيتور.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ الأدينوسين صح</strong><p>سرنجة 6 ملجم + سرنجة ملح 20 مل على محبس ثلاثي. دفعة سريعة جداً ثم ملح فوراً + رفع الذراع. اطبع شريط ECG أثناء الحقن. قبلها قول للمريض: «هتحس بسخونية وضيق صدر لثواني».</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب الاستجابة</strong><p>لو رجع النظم الجيبي: ECG 12 اشتقاق جديد. لو لا: جرعة 12 ملجم بأمر الطبيب. وبلّغ لو ظهر نبض غير منتظم أو QRS عريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>الأدوية التانية</strong><p>فيراباميل/بروبرانولول: قبلها ضغط ونبض، ببطء مع مراقبة الضغط والنبض والـECG. ما تديش فيراباميل مع حاصر بيتا وريدي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>وثّق وثقّف</strong><p>وقت البداية، العلاج، النتيجة، العلامات الحيوية. اشرح للمريض المحفزات وإمتى يتصل بالإسعاف.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>آثار الأدينوسين الشائعة (مؤقتة)</strong><p>احمرار وجه، ضيق صدر، صعوبة نفس، طعم معدني، دوخة، وتوقف قلب لحظي أو بطء قبل الرجوع. تستمر ثوانٍ. جهّز الإنعاش لو طال التوقف.</p></div><div class=\"cs-box cs-warning\"><strong>ممنوعات</strong><p>ما تدّيش أدينوسين لمريض ربو نشط، ولا فيراباميل لمريض ضغطه منخفض أو فشل قلب أو تسرع عريض غير معروف، ولا حاصر بيتا + فيراباميل وريدي مع بعض.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>ضغط انقباضي أقل من 90 أو تشوش وعي أو إغماء</li><li>ألم صدر أو وذمة رئة أثناء النوبة</li><li>QRS عريض أو نبض غير منتظم (غير SVT: AF/VT/WPW)</li><li>توقف أو بطء شديد بعد أي دواء</li><li>النوبة استمرت أكتر من ساعة أو رجعت بعد التحويل</li><li>حمل مع النوبة</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>النوبة غالباً مش خطيرة لكن لازم تتقيّم. لو صدر ألم أو إغماء: إسعاف.</li><li>جرّب مناورة فالسالفا المعدّلة في البيت (لو الطبيب شرحها) بعد ما تتأكد إن الضغط سليم.</li><li>قلل الكافيين والتدخين والمنبهات والسهر.</li><li>الأقراص الوقائية (حاصر بيتا): بانتظام ولا تقطعها فجأة.</li><li>سجّل وقت وطول النوبات وأي عامل حفّزها.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "SVT: تسرع منتظم + QRS ضيق + موجة P غائبة ومعدل 150–250",
-      "أول سؤال: مستقر أم غير مستقر؟ غير مستقر = صدمة متزامنة 100 جول",
-      "المستقر: فالسالفا المعدّلة ← أدينوسين 6 ثم 12 ملجم",
-      "الأدينوسين: دفعة سريعة جداً في وريد كبير + شطف 20 مل ملح (نصف عمره ثوانٍ)",
-      "ممنوع الأدينوسين في الربو وهبوط الضغط الشديد وحصار AV؛ وهو المفضل في الحمل",
-      "فيراباميل/بروبرانولول فقط لو الضغط سليم ولا يوجد مانع",
-      "المراقبة بالـECG المستمر وجهاز صدمات جاهز طول العلاج"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض بتسرع منتظم QRS ضيق، ضغطه 70/40 ومشوش. الإجراء؟"
-      },
-      "options": [
-        {
-          "ar": "أدينوسين 6 ملجم"
-        },
-        {
-          "ar": "صدمة كهربائية متزامنة"
-        },
-        {
-          "ar": "فيراباميل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "غير مستقر = صدمة متزامنة فوراً بدون تأخير الأدوية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم تقنية عند حقن الأدينوسين؟"
-      },
-      "options": [
-        {
-          "ar": "ببطء على 5 دقائق"
-        },
-        {
-          "ar": "دفعة سريعة جداً في وريد كبير ثم شطف 20 مل ملح"
-        },
-        {
-          "ar": "عضلياً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "نصف عمره ثوانٍ فيتكسر لو اتحقن ببطء."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مريض لا يُعطى أدينوسين؟"
-      },
-      "options": [
-        {
-          "ar": "حامل"
-        },
-        {
-          "ar": "ربو نشط"
-        },
-        {
-          "ar": "شاب سليم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يسبب تشنج شعبي. وهو الدواء المفضل في الحمل."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول علاج للمريض المستقر بـSVT؟"
-      },
-      "options": [
-        {
-          "ar": "مناورة فالسالفا المعدّلة"
-        },
-        {
-          "ar": "أميودارون"
-        },
-        {
-          "ar": "استئصال بالقسطرة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "آمنة وبسيطة، ونجاحها أعلى من فالسالفا العادية."
-      }
-    },
-    {
-      "q": {
-        "ar": "نبض سريع منتظم مع موجة P واضحة وبيبدأ تدريجياً بعد حمى. أنسب تشخيص؟"
-      },
-      "options": [
-        {
-          "ar": "SVT"
-        },
-        {
-          "ar": "تسرع جيبي (عالج السبب)"
-        },
-        {
-          "ar": "VT"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التسرع الجيبي له سبب وP ظاهرة، ولا يُعطى أدينوسين."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AHA 2020/2025 ACLS Adult Tachycardia With a Pulse Algorithm"
-    },
-    {
-      "title": "2019 ESC Guidelines for the management of patients with supraventricular tachycardia"
-    },
-    {
-      "title": "Appelboam et al., REVERT trial, Lancet 2015 (modified Valsalva)"
-    },
-    {
-      "title": "LHSC / MSF adenosine product monographs (جرعات وتقنية الحقن)"
-    }
+  "en": [
+   "SVT: regular tachycardia + narrow QRS + absent P wave and a rate of 150–250",
+   "First question: stable or unstable? Unstable = synchronized shock 100 joules",
+   "Stable: modified Valsalva ← adenosine 6 then 12 mg",
+   "Adenosine: a very rapid push in a large vein + 20 mL saline flush (half-life of seconds)",
+   "Adenosine is contraindicated in asthma, severe hypotension, and AV block; and it is preferred in pregnancy",
+   "Verapamil/propranolol only if blood pressure is fine and there is no contraindication",
+   "Continuous ECG monitoring and a shock device ready throughout treatment"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض بتسرع منتظم QRS ضيق، ضغطه 70/40 ومشوش. الإجراء؟",
+    "en": "A patient with regular narrow-QRS tachycardia, blood pressure 70/40, and confused. The action?"
+   },
+   "options": [
+    {
+     "ar": "أدينوسين 6 ملجم",
+     "en": "Adenosine 6 mg"
+    },
+    {
+     "ar": "صدمة كهربائية متزامنة",
+     "en": "Synchronized electrical shock"
+    },
+    {
+     "ar": "فيراباميل",
+     "en": "Verapamil"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "غير مستقر = صدمة متزامنة فوراً بدون تأخير الأدوية.",
+    "en": "Unstable = synchronized shock immediately without delaying for drugs."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم تقنية عند حقن الأدينوسين؟",
+    "en": "The most important technique when injecting adenosine?"
+   },
+   "options": [
+    {
+     "ar": "ببطء على 5 دقائق",
+     "en": "Slowly over 5 minutes"
+    },
+    {
+     "ar": "دفعة سريعة جداً في وريد كبير ثم شطف 20 مل ملح",
+     "en": "A very rapid push in a large vein then a 20 mL saline flush"
+    },
+    {
+     "ar": "عضلياً",
+     "en": "Intramuscularly"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "نصف عمره ثوانٍ فيتكسر لو اتحقن ببطء.",
+    "en": "Its half-life is seconds so it is broken down if injected slowly."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مريض لا يُعطى أدينوسين؟",
+    "en": "Which patient is not given adenosine?"
+   },
+   "options": [
+    {
+     "ar": "حامل",
+     "en": "A pregnant woman"
+    },
+    {
+     "ar": "ربو نشط",
+     "en": "Active asthma"
+    },
+    {
+     "ar": "شاب سليم",
+     "en": "A healthy young person"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يسبب تشنج شعبي. وهو الدواء المفضل في الحمل.",
+    "en": "It causes bronchospasm. And it is the preferred drug in pregnancy."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول علاج للمريض المستقر بـSVT؟",
+    "en": "The first treatment for a stable SVT patient?"
+   },
+   "options": [
+    {
+     "ar": "مناورة فالسالفا المعدّلة",
+     "en": "Modified Valsalva maneuver"
+    },
+    {
+     "ar": "أميودارون",
+     "en": "Amiodarone"
+    },
+    {
+     "ar": "استئصال بالقسطرة",
+     "en": "Catheter ablation"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "آمنة وبسيطة، ونجاحها أعلى من فالسالفا العادية.",
+    "en": "It is safe and simple, and its success is higher than the ordinary Valsalva."
+   }
+  },
+  {
+   "q": {
+    "ar": "نبض سريع منتظم مع موجة P واضحة وبيبدأ تدريجياً بعد حمى. أنسب تشخيص؟",
+    "en": "A fast regular pulse with a clear P wave that started gradually after a fever. The most suitable diagnosis?"
+   },
+   "options": [
+    {
+     "ar": "SVT",
+     "en": "SVT"
+    },
+    {
+     "ar": "تسرع جيبي (عالج السبب)",
+     "en": "Sinus tachycardia (treat the cause)"
+    },
+    {
+     "ar": "VT",
+     "en": "VT"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التسرع الجيبي له سبب وP ظاهرة، ولا يُعطى أدينوسين.",
+    "en": "Sinus tachycardia has a cause and a visible P, and adenosine is not given."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AHA 2020/2025 ACLS Adult Tachycardia With a Pulse Algorithm"
+  },
+  {
+   "title": "2019 ESC Guidelines for the management of patients with supraventricular tachycardia"
+  },
+  {
+   "title": "Appelboam et al., REVERT trial, Lancet 2015 (modified Valsalva)"
+  },
+  {
+   "title": "LHSC / MSF adenosine product monographs (جرعات وتقنية الحقن)"
+  }
+ ]
 }

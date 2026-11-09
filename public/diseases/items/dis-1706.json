@@ -1,235 +1,295 @@
 {
-  "id": "dis-1706",
-  "num": 1706,
-  "system": "other",
-  "icon": "💓",
-  "level": 2,
-  "target": "obgyn",
-  "title": {
-    "ar": "مراقبة نبض الجنين (1): الأجهزة والخط القاعدي والتذبذب (Variability) والانقباضات",
-    "en": "Fetal Heart Monitoring: Devices, Baseline, Variability & Contractions"
+ "id": "dis-1706",
+ "num": 1706,
+ "system": "other",
+ "icon": "💓",
+ "level": 2,
+ "target": "obgyn",
+ "title": {
+  "ar": "مراقبة نبض الجنين (1): الأجهزة والخط القاعدي والتذبذب (Variability) والانقباضات",
+  "en": "Fetal Heart Monitoring: Devices, Baseline, Variability & Contractions"
+ },
+ "teaser": {
+  "ar": "الجهاز الخارجي والداخلي، النبض الطبيعي، أنواع التغيّر، وقاعدة 60 للانقباضات وفرط الانقباض.",
+  "en": "External and internal devices, normal heart rate, types of variability, and the rule of 60 for contractions and tachysystole."
+ },
+ "chips": [
+  {
+   "ar": "FSE",
+   "en": "FSE"
   },
-  "teaser": {
-    "ar": "الجهاز الخارجي والداخلي، النبض الطبيعي، أنواع التغيّر، وقاعدة 60 للانقباضات وفرط الانقباض."
+  {
+   "ar": "Variability",
+   "en": "Variability"
   },
-  "chips": [
-    {
-      "ar": "FSE"
-    },
-    {
-      "ar": "Variability"
-    },
-    {
-      "ar": "Tachysystole"
-    }
+  {
+   "ar": "Tachysystole",
+   "en": "Tachysystole"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>مراقبة نبض الجنين (FHR) تقيّم <strong>سلامة الجنين وأكسجته</strong> أثناء الطلق؛ ويُراقَب معها انقباضات الرحم معًا، فأي قراءة شاذة قد تدل على نقص أكسجين أو مشكلة أخرى. أنماط التباطؤ والتسارع وتدخلات ROADI في <a href=\"/diseases/dis-1707\">أنماط نبض الجنين</a>.</p>[[slot:dis-1706-devices|أجهزة المراقبة الخارجية والداخلية — رسم من إعداد الموقع|/diseases/img/dis-1706-devices.svg]]<p>الشريط الأعلى هو نبض الجنين وهو <strong>الذي يُقيَّم أولًا</strong>، والأسفل هو الانقباضات، والخطان الأحمران المزدوجان يمثلان دقيقة واحدة.</p>",
+   "en": "<p>Fetal heart rate (FHR) monitoring assesses <strong>fetal well-being and oxygenation</strong> during labor; uterine contractions are monitored together with it, so any abnormal reading may indicate low oxygen or another problem. Patterns of decelerations and accelerations and ROADI interventions are in <a href=\"/diseases/dis-1707\">Fetal heart rate patterns</a>.</p>[[slot:dis-1706-devices|External and internal monitoring devices (illustration prepared by the site)|/diseases/img/dis-1706-devices.svg]]<p>The upper strip is the fetal heart rate and it is <strong>assessed first</strong>, the lower one is the contractions, and the paired red lines represent one minute.</p>"
+  },
+  "causes": {
+   "ar": "<p>سبب المراقبة: أثناء الانقباض تتوقف أنفاس الجنين ويقل تدفق الدم، فيجب التأكد أنه يستعيد أكسجته بين الانقباضات.</p>",
+   "en": "<p>Reason for monitoring: during a contraction the fetus's breathing stops and blood flow decreases, so we must make sure it recovers its oxygenation between contractions.</p>"
+  },
+  "signs": {
+   "ar": "<h4>المفاهيم الأساسية</h4><ul><li><strong>الخط القاعدي (Baseline):</strong> الطبيعي 110–160 نبضة/دقيقة</li><li><strong>التغيّر (Variability):</strong> مدى تذبذب الخط؛ كلما زاد دل على سلامة الجهاز العصبي وعلى جنين مرتاح</li></ul>[[slot:dis-1706-variability|أنواع التغيّر (Variability) — رسم من إعداد الموقع|/diseases/img/dis-1706-variability.svg]]<table><thead><tr><th>النوع</th><th>الوصف</th><th>الدلالة</th></tr></thead><tbody><tr><td>منعدم (Absent)</td><td>خط مسطح غير متذبذب</td><td>سيئ جدًا (إشارة حمراء: تدخل وإنقاذ)</td></tr><tr><td>ضئيل (Minimal)</td><td>خط أكثر استواء «نعسان وحزين»</td><td>مريب</td></tr><tr><td>متوسط (Moderate)</td><td>تذبذب معتدل</td><td>طبيعي ومطلوب</td></tr><tr><td>مرتفع (Marked)</td><td>تذبذب حاد</td><td>جنين تحت ضغط</td></tr></tbody></table><h4>مكونات الانقباضات الأربعة</h4>[[slot:dis-1706-contractions|قاعدة الـ 60 للانقباضات — رسم من إعداد الموقع|/diseases/img/dis-1706-contractions.svg]]<table><thead><tr><th>المكوّن</th><th>المعنى</th><th>الطبيعي (قاعدة 60)</th></tr></thead><tbody><tr><td>التكرار (Frequency)</td><td>المسافة بين بدايات الانقباضات</td><td>كل 2–3 دقائق في الطلق النشط</td></tr><tr><td>المدة (Duration)</td><td>كم تستمر ثوانيها</td><td>60 ثانية</td></tr><tr><td>الشدة (Intensity)</td><td>قوة الانقباض (ملم زئبق)</td><td>60 ملم زئبق</td></tr><tr><td>الراحة (Rest)</td><td>طراوة الرحم بين الانقباضات</td><td>60 ثانية على الأقل</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>فرط الانقباض (Tachysystole)</strong><p>أكثر من 5 انقباضات في 10 دقائق = ضائقة جنينية ونقص تدفق دم المشيمة.</p></div><h4>مكان وضع الحسّاس ومزايا القطب الداخلي</h4><ul><li><strong>نقطة أقصى نبض (PMI):</strong> الموضع الذي يُسمع فيه نبض الجنين أوضح ما يكون، يوجد عند منطقة الكتفين/الصدر؛ فإذا كان الجنين رأسيًا فهو في أسفل بطن الأم، وإذا كان مقعديًا ففي أعلى البطن.</li><li>حسّاس الانقباضات (Toco) يوضع أعلى بطن الأم حيث يتحسس قاع الرحم.</li><li>القطب الجنيني الداخلي (FSE) سلك رفيع على فروة رأس الجنين عبر العنق: أدق من الخارجي ولا تؤثر فيه الحركة، ويُخصص غالبًا للحمل عالي الخطورة، ولكن ثمنه خطر عدوى أعلى لأنه جسم غريب في المهبل وعلى رأس الجنين.</li></ul>",
+   "en": "<h4>Basic concepts</h4><ul><li><strong>Baseline:</strong> normal is 110–160 beats/minute</li><li><strong>Variability:</strong> the extent of fluctuation of the line; the more of it, the healthier the nervous system and the more comfortable the fetus</li></ul>[[slot:dis-1706-variability|Types of variability (illustration prepared by the site)|/diseases/img/dis-1706-variability.svg]]<table><thead><tr><th>Type</th><th>Description</th><th>Significance</th></tr></thead><tbody><tr><td>Absent</td><td>Flat line with no fluctuation</td><td>Very bad (red flag: intervene and rescue)</td></tr><tr><td>Minimal</td><td>A flatter line, \"sleepy and sad\"</td><td>Suspicious</td></tr><tr><td>Moderate</td><td>Moderate fluctuation</td><td>Normal and desired</td></tr><tr><td>Marked</td><td>Sharp fluctuation</td><td>Fetus under stress</td></tr></tbody></table><h4>The four components of contractions</h4>[[slot:dis-1706-contractions|The rule of 60 for contractions (illustration prepared by the site)|/diseases/img/dis-1706-contractions.svg]]<table><thead><tr><th>Component</th><th>Meaning</th><th>Normal (rule of 60)</th></tr></thead><tbody><tr><td>Frequency</td><td>The distance between the starts of contractions</td><td>Every 2–3 minutes in active labor</td></tr><tr><td>Duration</td><td>How many seconds it lasts</td><td>60 seconds</td></tr><tr><td>Intensity</td><td>Strength of the contraction (mmHg)</td><td>60 mmHg</td></tr><tr><td>Rest</td><td>Uterine softness between contractions</td><td>At least 60 seconds</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Tachysystole</strong><p>More than 5 contractions in 10 minutes = fetal distress and decreased placental blood flow.</p></div><h4>Sensor placement and advantages of the internal electrode</h4><ul><li><strong>Point of maximum impulse (PMI):</strong> the location where the fetal heartbeat is heard most clearly, at the shoulder/chest area; if the fetus is head-down it is in the lower maternal abdomen, and if breech it is in the upper abdomen.</li><li>The contraction sensor (Toco) is placed on the upper maternal abdomen where it senses the uterine fundus.</li><li>The internal fetal scalp electrode (FSE) is a thin wire on the fetal scalp through the cervix: more accurate than the external one and not affected by movement, and it is usually reserved for high-risk pregnancy, but the price is a higher infection risk because it is a foreign body in the vagina and on the fetal head.</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>تتبع النبض والانقباضات بالسونو والتوكو، أو القطب الداخلي (FSE) عند الحاجة.</li><li>الشرط قبل القطب الداخلي: انفجار الكيس واتساع العنق 2 سم أو أكثر.</li></ul>",
+   "en": "<ul><li>Track the heart rate and contractions with the sonic transducer and toco, or the internal electrode (FSE) when needed.</li><li>Requirement before the internal electrode: ruptured membranes and cervical dilation of 2 cm or more.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<p>لا علاج للمراقبة نفسها؛ تُترجم القراءة لتدخل (تغيير وضع، أكسجين، سوائل، إيقاف أوكسيتوسين) كما في <a href=\"/diseases/dis-1707\">دليل الأنماط</a>. الأوكسيتوسين يزيد الانقباضات.</p>",
+   "en": "<p>There is no treatment for the monitoring itself; the reading is translated into an intervention (change position, oxygen, fluids, stop oxytocin) as in the <a href=\"/diseases/dis-1707\">Patterns guide</a>. Oxytocin increases contractions.</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>ضعي الأجهزة</strong><p>السونو عند نقطة أقصى نبض (PMI)، والتوكو أعلى بطن الأم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّمي النبض أولًا</strong><p>الخط القاعدي ثم التغيّر ثم التسارعات والتباطؤات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>قيّمي الانقباضات</strong><p>تكرارًا ومدة وشدة وراحة الرحم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>تدخّلي</strong><p>عند أي قراءة غير مطمئنة طبّقي ROADI وأبلغي الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الداخلي</strong><p>وفّريه فقط بعد انفجار الكيس واتساع 2 سم، وراقبي العدوى.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Apply the devices</strong><p>The sonic transducer at the point of maximum impulse (PMI), and the toco on the upper maternal abdomen.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Assess the heart rate first</strong><p>Baseline, then variability, then accelerations and decelerations.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Assess the contractions</strong><p>Frequency, duration, intensity, and uterine rest.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Intervene</strong><p>With any non-reassuring reading, apply ROADI and notify the physician.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Internal</strong><p>Provide it only after membrane rupture and 2 cm dilation, and watch for infection.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>تغيّر منعدم.</li><li>نبض فوق 160 أو تحت 110 أكثر من 10 دقائق.</li><li>تباطؤ متأخر أو متغير شديد.</li><li>أكثر من 5 انقباضات في 10 دقائق.</li></ul>",
+   "en": "<ul><li>Absent variability.</li><li>Heart rate above 160 or below 110 for more than 10 minutes.</li><li>Late or severe variable deceleration.</li><li>More than 5 contractions in 10 minutes.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرحي للأم سبب الأحزمة ولا تفكيها بلا سبب.</li><li>تغيير الوضع يحسّن الأكسجة.</li><li>أخبرينا بأي ألم غير معتاد.</li></ul>",
+   "en": "<ul><li>Explain to the mother the reason for the belts and do not remove them without reason.</li><li>Changing position improves oxygenation.</li><li>Tell us about any unusual pain.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الطبيعي 110–160 ن/د",
+   "نقيّم نبض الجنين أولًا",
+   "القطب الداخلي: كيس منفجر + اتساع ≥ 2 سم",
+   "تغيّر منعدم = خطر",
+   "قاعدة 60: كل 2–3 د، 60 ث، 60 ملم، راحة 60 ث",
+   "أكثر من 5 في 10 د = فرط انقباض"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>مراقبة نبض الجنين (FHR) تقيّم <strong>سلامة الجنين وأكسجته</strong> أثناء الطلق؛ ويُراقَب معها انقباضات الرحم معًا، فأي قراءة شاذة قد تدل على نقص أكسجين أو مشكلة أخرى. أنماط التباطؤ والتسارع وتدخلات ROADI في <a href=\"/diseases/dis-1707\">أنماط نبض الجنين</a>.</p>[[slot:dis-1706-devices|أجهزة المراقبة الخارجية والداخلية — رسم من إعداد الموقع|/diseases/img/dis-1706-devices.svg]]<p>الشريط الأعلى هو نبض الجنين وهو <strong>الذي يُقيَّم أولًا</strong>، والأسفل هو الانقباضات، والخطان الأحمران المزدوجان يمثلان دقيقة واحدة.</p>"
-    },
-    "causes": {
-      "ar": "<p>سبب المراقبة: أثناء الانقباض تتوقف أنفاس الجنين ويقل تدفق الدم، فيجب التأكد أنه يستعيد أكسجته بين الانقباضات.</p>"
-    },
-    "signs": {
-      "ar": "<h4>المفاهيم الأساسية</h4><ul><li><strong>الخط القاعدي (Baseline):</strong> الطبيعي 110–160 نبضة/دقيقة</li><li><strong>التغيّر (Variability):</strong> مدى تذبذب الخط؛ كلما زاد دل على سلامة الجهاز العصبي وعلى جنين مرتاح</li></ul>[[slot:dis-1706-variability|أنواع التغيّر (Variability) — رسم من إعداد الموقع|/diseases/img/dis-1706-variability.svg]]<table><thead><tr><th>النوع</th><th>الوصف</th><th>الدلالة</th></tr></thead><tbody><tr><td>منعدم (Absent)</td><td>خط مسطح غير متذبذب</td><td>سيئ جدًا (إشارة حمراء: تدخل وإنقاذ)</td></tr><tr><td>ضئيل (Minimal)</td><td>خط أكثر استواء «نعسان وحزين»</td><td>مريب</td></tr><tr><td>متوسط (Moderate)</td><td>تذبذب معتدل</td><td>طبيعي ومطلوب</td></tr><tr><td>مرتفع (Marked)</td><td>تذبذب حاد</td><td>جنين تحت ضغط</td></tr></tbody></table><h4>مكونات الانقباضات الأربعة</h4>[[slot:dis-1706-contractions|قاعدة الـ 60 للانقباضات — رسم من إعداد الموقع|/diseases/img/dis-1706-contractions.svg]]<table><thead><tr><th>المكوّن</th><th>المعنى</th><th>الطبيعي (قاعدة 60)</th></tr></thead><tbody><tr><td>التكرار (Frequency)</td><td>المسافة بين بدايات الانقباضات</td><td>كل 2–3 دقائق في الطلق النشط</td></tr><tr><td>المدة (Duration)</td><td>كم تستمر ثوانيها</td><td>60 ثانية</td></tr><tr><td>الشدة (Intensity)</td><td>قوة الانقباض (ملم زئبق)</td><td>60 ملم زئبق</td></tr><tr><td>الراحة (Rest)</td><td>طراوة الرحم بين الانقباضات</td><td>60 ثانية على الأقل</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>فرط الانقباض (Tachysystole)</strong><p>أكثر من 5 انقباضات في 10 دقائق = ضائقة جنينية ونقص تدفق دم المشيمة.</p></div><h4>مكان وضع الحسّاس ومزايا القطب الداخلي</h4><ul><li><strong>نقطة أقصى نبض (PMI):</strong> الموضع الذي يُسمع فيه نبض الجنين أوضح ما يكون، يوجد عند منطقة الكتفين/الصدر؛ فإذا كان الجنين رأسيًا فهو في أسفل بطن الأم، وإذا كان مقعديًا ففي أعلى البطن.</li><li>حسّاس الانقباضات (Toco) يوضع أعلى بطن الأم حيث يتحسس قاع الرحم.</li><li>القطب الجنيني الداخلي (FSE) سلك رفيع على فروة رأس الجنين عبر العنق: أدق من الخارجي ولا تؤثر فيه الحركة، ويُخصص غالبًا للحمل عالي الخطورة، ولكن ثمنه خطر عدوى أعلى لأنه جسم غريب في المهبل وعلى رأس الجنين.</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>تتبع النبض والانقباضات بالسونو والتوكو، أو القطب الداخلي (FSE) عند الحاجة.</li><li>الشرط قبل القطب الداخلي: انفجار الكيس واتساع العنق 2 سم أو أكثر.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<p>لا علاج للمراقبة نفسها؛ تُترجم القراءة لتدخل (تغيير وضع، أكسجين، سوائل، إيقاف أوكسيتوسين) كما في <a href=\"/diseases/dis-1707\">دليل الأنماط</a>. الأوكسيتوسين يزيد الانقباضات.</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>ضعي الأجهزة</strong><p>السونو عند نقطة أقصى نبض (PMI)، والتوكو أعلى بطن الأم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّمي النبض أولًا</strong><p>الخط القاعدي ثم التغيّر ثم التسارعات والتباطؤات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>قيّمي الانقباضات</strong><p>تكرارًا ومدة وشدة وراحة الرحم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>تدخّلي</strong><p>عند أي قراءة غير مطمئنة طبّقي ROADI وأبلغي الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الداخلي</strong><p>وفّريه فقط بعد انفجار الكيس واتساع 2 سم، وراقبي العدوى.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>تغيّر منعدم.</li><li>نبض فوق 160 أو تحت 110 أكثر من 10 دقائق.</li><li>تباطؤ متأخر أو متغير شديد.</li><li>أكثر من 5 انقباضات في 10 دقائق.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرحي للأم سبب الأحزمة ولا تفكيها بلا سبب.</li><li>تغيير الوضع يحسّن الأكسجة.</li><li>أخبرينا بأي ألم غير معتاد.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الطبيعي 110–160 ن/د",
-      "نقيّم نبض الجنين أولًا",
-      "القطب الداخلي: كيس منفجر + اتساع ≥ 2 سم",
-      "تغيّر منعدم = خطر",
-      "قاعدة 60: كل 2–3 د، 60 ث، 60 ملم، راحة 60 ث",
-      "أكثر من 5 في 10 د = فرط انقباض"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "شرط وضع القطب الداخلي:"
-      },
-      "options": [
-        {
-          "ar": "كيس منفجر واتساع 2 سم على الأقل"
-        },
-        {
-          "ar": "عنق مغلق"
-        },
-        {
-          "ar": "المخاض لم يبدأ"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يمر القطب عبر العنق على فروة الرأس فيلزم انفجار الكيس واتساع 2 سم أو أكثر."
-      }
-    },
-    {
-      "q": {
-        "ar": "أخطر أنواع التغيّر:"
-      },
-      "options": [
-        {
-          "ar": "متوسط"
-        },
-        {
-          "ar": "منعدم"
-        },
-        {
-          "ar": "مرتفع قليلًا"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "المنعدم يعني غياب التذبذب أي ضعف أكسجة/نظام عصبي، وهو حالة تدخل عاجل."
-      }
-    },
-    {
-      "q": {
-        "ar": "عدد الانقباضات الذي يُعد فرط انقباض:"
-      },
-      "options": [
-        {
-          "ar": "3 في 10 دقائق"
-        },
-        {
-          "ar": "أكثر من 5 في 10 دقائق"
-        },
-        {
-          "ar": "2 في 10 دقائق"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "أكثر من 5 في 10 دقائق تقلل تدفق المشيمة."
-      }
-    },
-    {
-      "q": {
-        "ar": "الشريط الذي يُقيَّم أولًا:"
-      },
-      "options": [
-        {
-          "ar": "الانقباضات"
-        },
-        {
-          "ar": "نبض الجنين"
-        },
-        {
-          "ar": "حرارة الأم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "النبض في الشريط العلوي يُقيَّم أولًا ثم تُربط قراءته بالانقباضات."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما الذي يحدث عند ارتفاع الأوكسيتوسين؟"
-      },
-      "options": [
-        {
-          "ar": "زيادة الانقباضات"
-        },
-        {
-          "ar": "نقص الانقباضات"
-        },
-        {
-          "ar": "لا تغيير"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأوكسيتوسين يقوّي الانقباض."
-      }
-    },
-    {
-      "q": {
-        "ar": "كيف تقيّمين سلامة الجنين أثناء الطلق؟"
-      },
-      "options": [
-        {
-          "ar": "استجابة نبض الجنين للانقباضات"
-        },
-        {
-          "ar": "وزن الأم"
-        },
-        {
-          "ar": "لون البول"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تفاعل النبض مع الانقباض يدل على الأكسجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أثناء الانقباض يحبس الجنين تنفسه؛ لذلك يُهم:"
-      },
-      "options": [
-        {
-          "ar": "رفع أكسجته بين الانقباضات"
-        },
-        {
-          "ar": "تقليل الراحة"
-        },
-        {
-          "ar": "زيادة الانقباض"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الراحة بين الانقباضات 60 ثانية تعيد الأكسجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مما يلي يجب أن يكون موجودًا قبل المراقبة الداخلية؟"
-      },
-      "options": [
-        {
-          "ar": "اتساع العنق 2 سم على الأقل"
-        },
-        {
-          "ar": "عنق مغلق"
-        },
-        {
-          "ar": "حمى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يلزم أيضًا انفجار الكيس."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ACOG Practice Bulletin: Intrapartum Fetal Heart Rate Monitoring"
-    },
-    {
-      "title": "NICHD three-tier FHR interpretation"
-    },
-    {
-      "title": "Williams Obstetrics"
-    }
+  "en": [
+   "Normal 110–160 bpm",
+   "Assess the fetal heart rate first",
+   "Internal electrode: ruptured membranes + dilation ≥ 2 cm",
+   "Absent variability = danger",
+   "Rule of 60: every 2–3 min, 60 s, 60 mmHg, rest 60 s",
+   "More than 5 in 10 min = tachysystole"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "شرط وضع القطب الداخلي:",
+    "en": "Requirement for placing the internal electrode:"
+   },
+   "options": [
+    {
+     "ar": "كيس منفجر واتساع 2 سم على الأقل",
+     "en": "Ruptured membranes and dilation of at least 2 cm"
+    },
+    {
+     "ar": "عنق مغلق",
+     "en": "Closed cervix"
+    },
+    {
+     "ar": "المخاض لم يبدأ",
+     "en": "Labor has not started"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يمر القطب عبر العنق على فروة الرأس فيلزم انفجار الكيس واتساع 2 سم أو أكثر.",
+    "en": "The electrode passes through the cervix to the scalp, so ruptured membranes and dilation of 2 cm or more are required."
+   }
+  },
+  {
+   "q": {
+    "ar": "أخطر أنواع التغيّر:",
+    "en": "The most dangerous type of variability:"
+   },
+   "options": [
+    {
+     "ar": "متوسط",
+     "en": "Moderate"
+    },
+    {
+     "ar": "منعدم",
+     "en": "Absent"
+    },
+    {
+     "ar": "مرتفع قليلًا",
+     "en": "Slightly marked"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "المنعدم يعني غياب التذبذب أي ضعف أكسجة/نظام عصبي، وهو حالة تدخل عاجل.",
+    "en": "Absent means no fluctuation, i.e., poor oxygenation/nervous system, and it is a condition for urgent intervention."
+   }
+  },
+  {
+   "q": {
+    "ar": "عدد الانقباضات الذي يُعد فرط انقباض:",
+    "en": "The number of contractions considered tachysystole:"
+   },
+   "options": [
+    {
+     "ar": "3 في 10 دقائق",
+     "en": "3 in 10 minutes"
+    },
+    {
+     "ar": "أكثر من 5 في 10 دقائق",
+     "en": "More than 5 in 10 minutes"
+    },
+    {
+     "ar": "2 في 10 دقائق",
+     "en": "2 in 10 minutes"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "أكثر من 5 في 10 دقائق تقلل تدفق المشيمة.",
+    "en": "More than 5 in 10 minutes reduces placental flow."
+   }
+  },
+  {
+   "q": {
+    "ar": "الشريط الذي يُقيَّم أولًا:",
+    "en": "The strip that is assessed first:"
+   },
+   "options": [
+    {
+     "ar": "الانقباضات",
+     "en": "Contractions"
+    },
+    {
+     "ar": "نبض الجنين",
+     "en": "Fetal heart rate"
+    },
+    {
+     "ar": "حرارة الأم",
+     "en": "Maternal temperature"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "النبض في الشريط العلوي يُقيَّم أولًا ثم تُربط قراءته بالانقباضات.",
+    "en": "The heart rate on the upper strip is assessed first, and then its reading is related to the contractions."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما الذي يحدث عند ارتفاع الأوكسيتوسين؟",
+    "en": "What happens when oxytocin is increased?"
+   },
+   "options": [
+    {
+     "ar": "زيادة الانقباضات",
+     "en": "Increased contractions"
+    },
+    {
+     "ar": "نقص الانقباضات",
+     "en": "Decreased contractions"
+    },
+    {
+     "ar": "لا تغيير",
+     "en": "No change"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأوكسيتوسين يقوّي الانقباض.",
+    "en": "Oxytocin strengthens contractions."
+   }
+  },
+  {
+   "q": {
+    "ar": "كيف تقيّمين سلامة الجنين أثناء الطلق؟",
+    "en": "How do you assess fetal well-being during labor?"
+   },
+   "options": [
+    {
+     "ar": "استجابة نبض الجنين للانقباضات",
+     "en": "The fetal heart rate response to contractions"
+    },
+    {
+     "ar": "وزن الأم",
+     "en": "Maternal weight"
+    },
+    {
+     "ar": "لون البول",
+     "en": "Urine color"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تفاعل النبض مع الانقباض يدل على الأكسجة.",
+    "en": "The heart rate's reaction to the contraction indicates oxygenation."
+   }
+  },
+  {
+   "q": {
+    "ar": "أثناء الانقباض يحبس الجنين تنفسه؛ لذلك يُهم:",
+    "en": "During a contraction the fetus holds its breath; therefore it matters to:"
+   },
+   "options": [
+    {
+     "ar": "رفع أكسجته بين الانقباضات",
+     "en": "Restore its oxygenation between contractions"
+    },
+    {
+     "ar": "تقليل الراحة",
+     "en": "Reduce rest"
+    },
+    {
+     "ar": "زيادة الانقباض",
+     "en": "Increase the contraction"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الراحة بين الانقباضات 60 ثانية تعيد الأكسجة.",
+    "en": "A rest of 60 seconds between contractions restores oxygenation."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مما يلي يجب أن يكون موجودًا قبل المراقبة الداخلية؟",
+    "en": "Which of the following must be present before internal monitoring?"
+   },
+   "options": [
+    {
+     "ar": "اتساع العنق 2 سم على الأقل",
+     "en": "Cervical dilation of at least 2 cm"
+    },
+    {
+     "ar": "عنق مغلق",
+     "en": "Closed cervix"
+    },
+    {
+     "ar": "حمى",
+     "en": "Fever"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يلزم أيضًا انفجار الكيس.",
+    "en": "Ruptured membranes are also required."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ACOG Practice Bulletin: Intrapartum Fetal Heart Rate Monitoring"
+  },
+  {
+   "title": "NICHD three-tier FHR interpretation"
+  },
+  {
+   "title": "Williams Obstetrics"
+  }
+ ]
 }

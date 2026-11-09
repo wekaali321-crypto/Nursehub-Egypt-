@@ -1,157 +1,193 @@
 {
-  "id": "dis-524",
-  "num": 524,
-  "system": "other",
-  "icon": "🧪",
-  "level": 3,
-  "target": "new:poisoning|السموم",
-  "title": {
-    "ar": "تسمم الباراسيتامول",
-    "en": "Paracetamol Poisoning"
+ "id": "dis-524",
+ "num": 524,
+ "system": "other",
+ "icon": "🧪",
+ "level": 3,
+ "target": "new:poisoning|السموم",
+ "title": {
+  "ar": "تسمم الباراسيتامول",
+  "en": "Paracetamol Poisoning"
+ },
+ "teaser": {
+  "ar": "التسمم الصامت اللي بيقتل الكبد بعد أيام: الجرعة السامة، مراحله، وإزاي تدّي الأسيتيل سيستين.",
+  "en": "The silent poisoning that kills the liver days later: the toxic dose, its stages, and how to give acetylcysteine."
+ },
+ "chips": [
+  {
+   "ar": "INR",
+   "en": "INR"
   },
-  "teaser": {
-    "ar": "التسمم الصامت اللي بيقتل الكبد بعد أيام: الجرعة السامة، مراحله، وإزاي تدّي الأسيتيل سيستين."
+  {
+   "ar": "Acetylcysteine",
+   "en": "Acetylcysteine"
   },
-  "chips": [
-    {
-      "ar": "INR"
-    },
-    {
-      "ar": "Acetylcysteine"
-    },
-    {
-      "ar": "كبد"
-    }
+  {
+   "ar": "كبد",
+   "en": "Liver"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الباراسيتامول موجود في أدوية كتير: <b>Abimol – Paracetamol – Cetal – Paramol</b>. الخطر إن الأعراض الأولى ممكن تكون خفيفة جداً.</p><div class=\"cs-stats\"><div><b>7.5 جم</b><span>جرعة سامة للكبار (15 قرص × 500 مجم)</span></div><div><b>150 مجم/كجم</b><span>جرعة سامة للأطفال</span></div><div><b>24 س</b><span>أول ما يظهر ضرر قبل ما تظهر الأعراض</span></div><div><b>17</b><span>جرعة أسيتيل سيستين فموي</span></div></div>\n<p>القواعد العامة (ABC، التاريخ، الدعم، المراقبة): <a href=\"/diseases/dis-503\">القواعد العامة في التعامل مع حالات التسمم</a>.</p>",
+   "en": "<p>Paracetamol is in many drugs: <b>Abimol – Paracetamol – Cetal – Paramol</b>. The danger is that the first symptoms may be very mild.</p><div class=\"cs-stats\"><div><b>7.5 g</b><span>Toxic dose for adults (15 tablets × 500 mg)</span></div><div><b>150 mg/kg</b><span>Toxic dose for children</span></div><div><b>24 h</b><span>Damage may begin before symptoms appear</span></div><div><b>17</b><span>Oral acetylcysteine doses</span></div></div>\n<p>General rules (ABC, history, support, monitoring): <a href=\"/diseases/dis-503\">General Rules for Managing Poisoning Cases</a>.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li><b>أول 24 ساعة:</b> ممكن مفيش أي أعراض، وأحياناً غثيان وقيء ومغص وألم فوق منطقة الكبد.</li><li><b>بعد 2–4 أيام:</b> الصفراء + غيبوبة كبدية (فشل كبد).</li></ul><div class=\"cs-box cs-pearl\"><strong>أحسس اختبار في أول 24 ساعة</strong><p><b>إطالة INR</b> (Prolonged INR) هو أكثر اختبار حساسية في أول 24 ساعة.</p></div>[[slot:dis-524-timeline|مراحل تسمم الباراسيتامول عبر الزمن|/diseases/img/dis-524-timeline.svg]]",
+   "en": "<ul><li><b>First 24 hours:</b> there may be no symptoms at all, and sometimes nausea, vomiting, colic, and pain over the liver area.</li><li><b>After 2–4 days:</b> jaundice + hepatic coma (liver failure).</li></ul><div class=\"cs-box cs-pearl\"><strong>The most sensitive test in the first 24 hours</strong><p><b>Prolonged INR</b> is the most sensitive test in the first 24 hours.</p></div>[[slot:dis-524-timeline|Stages of paracetamol poisoning over time|/diseases/img/dis-524-timeline.svg]]"
+  },
+  "tests": {
+   "ar": "<ul><li>مستوى الباراسيتامول في الدم (يُقاس بعد 4 ساعات من البلع ويُقارن بمنحنى Rumack–Matthew).</li><li>وظائف كبد (ALT/AST)، INR، كرياتينين، سكر، غازات الدم/اللاكتات.</li></ul>",
+   "en": "<ul><li>Blood paracetamol level (measured 4 hours after ingestion and compared with the Rumack–Matthew nomogram).</li><li>Liver function (ALT/AST), INR, creatinine, glucose, blood gases/lactate.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<p>حالة التسمم بالباراسيتامول لازم <b>تتحول للمستشفى بعد الرعاية الأولية وأول جرعة مضاد</b>.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الدعم العام</strong><p>كما سبق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>غسيل معدة</strong><p>في المراجع؛ الأحدث الفحم النشط خلال ساعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الترياق: أسيتيل سيستين (Acetylcysteine 600 مجم أكياس)</strong><p>خلال 24 ساعة من تناول الدواء. يحتاج 17 جرعة: أنت تبدأ أول جرعة وتحوّل للمستشفى ياخد الباقي. <b>أول جرعة = 140 مجم/كجم</b> (مثلاً 70 كجم = 16 كيس). الأكياس بتتحل في ميّة وتتشرب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>القيء</strong><p>قيء الجرعة = أمبول Primperan عضل + جرعة بديلة. لو مفيش جدوى مضادات القيء: الجرعة بأنبوبة رايل بالتنقيط البطيء.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأسيتيل سيستين يفيد أكتر لو بدأ خلال 8 ساعات لكنه يُعطى حتى بعد ذلك. الجرعة الفموية المعتمدة: 140 مجم/كجم تحميل ثم 70 مجم/كجم كل 4 ساعات (17 جرعة). الوريدي (المفضل في المستشفيات): 150 مجم/كجم على 15–60 دقيقة، ثم 50 مجم/كجم على 4 ساعات، ثم 100 مجم/كجم على 16 ساعة. يفضَّل أوندانسيترون كمضاد قيء (Primperan غير مناسب للأطفال). إعادة الجرعة لو القيء خلال ساعة.</p></div>",
+   "en": "<p>A paracetamol poisoning case must be <b>transferred to the hospital after first aid and the first antidote dose</b>.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>General support</strong><p>As above.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Gastric lavage</strong><p>In the references; the newer approach is activated charcoal within one hour.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Antidote: acetylcysteine (Acetylcysteine 600 mg sachets)</strong><p>Within 24 hours of taking the drug. It needs 17 doses: you start the first dose and the hospital the patient is transferred to gives the rest. <b>First dose = 140 mg/kg</b> (for example 70 kg = 16 sachets). The sachets are dissolved in water and drunk.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Vomiting</strong><p>If the dose is vomited = Primperan ampule IM + a replacement dose. If antiemetics are of no use: give the dose by nasogastric tube with slow drip.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Acetylcysteine is more beneficial if started within 8 hours, but it is given even after that. The approved oral dose: 140 mg/kg loading then 70 mg/kg every 4 hours (17 doses). IV (preferred in hospitals): 150 mg/kg over 15–60 minutes, then 50 mg/kg over 4 hours, then 100 mg/kg over 16 hours. Ondansetron is preferred as an antiemetic (Primperan is not suitable for children). Repeat the dose if vomiting occurs within one hour.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ul><li>اسأل بدقة: كام قرص؟ إمتى؟ الوزن؟ سبب (انتحار/غلط)؟ وخد العلبة.</li><li>سجّل وقت البلع بالضبط؛ ده بيحدد تفسير التحليل.</li><li>الأكياس: ذوّبها في ميّة أو عصير تفاح وقدّمها بارد؛ لو رجّع خلال ساعة بلّغ الطبيب لإعادة الجرعة.</li><li>تابع الوعي ونبرة الجلد والعين (صفار) والبول، وعلامات النزف.</li><li>سجل الجرعات والوقت بدقة — تأخير جرعة الترياق مضر.</li><li>تقييم نفسي قبل الخروج.</li></ul>",
+   "en": "<ul><li>Ask precisely: how many tablets? When? Weight? Reason (suicide/mistake)? And take the box.</li><li>Record the exact time of ingestion; it determines the interpretation of the test.</li><li>Sachets: dissolve them in water or apple juice and serve cold; if he vomits within one hour, tell the physician to repeat the dose.</li><li>Monitor consciousness, skin and eye color (yellowing), urine, and signs of bleeding.</li><li>Record the doses and times accurately — delaying an antidote dose is harmful.</li><li>Psychological assessment before discharge.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>صفراء، تغيّر في الوعي (غيبوبة كبدية)</li><li>نزف أو INR مرتفع</li><li>قلة بول</li><li>اضطراب سكر</li></ul>",
+   "en": "<ul><li>Jaundice, change in consciousness (hepatic coma)</li><li>Bleeding or elevated INR</li><li>Low urine output</li><li>Glucose disturbance</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>الجرعة الآمنة للأطفال 10–15 مجم/كجم كل 4–6 ساعات وبحد أقصى حسب الوزن.</li><li>تجنّب تكرار الدواء من أكتر من مصدر (برد + مسكن).</li><li>تخزين آمن بعيد عن الأطفال.</li></ul>",
+   "en": "<ul><li>The safe dose for children is 10–15 mg/kg every 4–6 hours with a maximum according to weight.</li><li>Avoid repeating the drug from more than one source (cold medicine + painkiller).</li><li>Safe storage away from children.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الجرعة السامة للكبار 7.5 جم (15 قرص 500 مجم)، وللأطفال 150 مجم/كجم.",
+   "الأعراض الأولى ممكن تكون صفر؛ الصفراء بعد 2–4 أيام.",
+   "أحسس اختبار في أول 24 ساعة: INR.",
+   "الترياق أسيتيل سيستين: أول جرعة 140 مجم/كجم ثم 17 جرعة.",
+   "اتحول للمستشفى بعد أول جرعة."
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الباراسيتامول موجود في أدوية كتير: <b>Abimol – Paracetamol – Cetal – Paramol</b>. الخطر إن الأعراض الأولى ممكن تكون خفيفة جداً.</p><div class=\"cs-stats\"><div><b>7.5 جم</b><span>جرعة سامة للكبار (15 قرص × 500 مجم)</span></div><div><b>150 مجم/كجم</b><span>جرعة سامة للأطفال</span></div><div><b>24 س</b><span>أول ما يظهر ضرر قبل ما تظهر الأعراض</span></div><div><b>17</b><span>جرعة أسيتيل سيستين فموي</span></div></div>\n<p>القواعد العامة (ABC، التاريخ، الدعم، المراقبة): <a href=\"/diseases/dis-503\">القواعد العامة في التعامل مع حالات التسمم</a>.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li><b>أول 24 ساعة:</b> ممكن مفيش أي أعراض، وأحياناً غثيان وقيء ومغص وألم فوق منطقة الكبد.</li><li><b>بعد 2–4 أيام:</b> الصفراء + غيبوبة كبدية (فشل كبد).</li></ul><div class=\"cs-box cs-pearl\"><strong>أحسس اختبار في أول 24 ساعة</strong><p><b>إطالة INR</b> (Prolonged INR) هو أكثر اختبار حساسية في أول 24 ساعة.</p></div>[[slot:dis-524-timeline|مراحل تسمم الباراسيتامول عبر الزمن|/diseases/img/dis-524-timeline.svg]]"
-    },
-    "tests": {
-      "ar": "<ul><li>مستوى الباراسيتامول في الدم (يُقاس بعد 4 ساعات من البلع ويُقارن بمنحنى Rumack–Matthew).</li><li>وظائف كبد (ALT/AST)، INR، كرياتينين، سكر، غازات الدم/اللاكتات.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<p>حالة التسمم بالباراسيتامول لازم <b>تتحول للمستشفى بعد الرعاية الأولية وأول جرعة مضاد</b>.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الدعم العام</strong><p>كما سبق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>غسيل معدة</strong><p>في المراجع؛ الأحدث الفحم النشط خلال ساعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الترياق: أسيتيل سيستين (Acetylcysteine 600 مجم أكياس)</strong><p>خلال 24 ساعة من تناول الدواء. يحتاج 17 جرعة: أنت تبدأ أول جرعة وتحوّل للمستشفى ياخد الباقي. <b>أول جرعة = 140 مجم/كجم</b> (مثلاً 70 كجم = 16 كيس). الأكياس بتتحل في ميّة وتتشرب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>القيء</strong><p>قيء الجرعة = أمبول Primperan عضل + جرعة بديلة. لو مفيش جدوى مضادات القيء: الجرعة بأنبوبة رايل بالتنقيط البطيء.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأسيتيل سيستين يفيد أكتر لو بدأ خلال 8 ساعات لكنه يُعطى حتى بعد ذلك. الجرعة الفموية المعتمدة: 140 مجم/كجم تحميل ثم 70 مجم/كجم كل 4 ساعات (17 جرعة). الوريدي (المفضل في المستشفيات): 150 مجم/كجم على 15–60 دقيقة، ثم 50 مجم/كجم على 4 ساعات، ثم 100 مجم/كجم على 16 ساعة. يفضَّل أوندانسيترون كمضاد قيء (Primperan غير مناسب للأطفال). إعادة الجرعة لو القيء خلال ساعة.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ul><li>اسأل بدقة: كام قرص؟ إمتى؟ الوزن؟ سبب (انتحار/غلط)؟ وخد العلبة.</li><li>سجّل وقت البلع بالضبط؛ ده بيحدد تفسير التحليل.</li><li>الأكياس: ذوّبها في ميّة أو عصير تفاح وقدّمها بارد؛ لو رجّع خلال ساعة بلّغ الطبيب لإعادة الجرعة.</li><li>تابع الوعي ونبرة الجلد والعين (صفار) والبول، وعلامات النزف.</li><li>سجل الجرعات والوقت بدقة — تأخير جرعة الترياق مضر.</li><li>تقييم نفسي قبل الخروج.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>صفراء، تغيّر في الوعي (غيبوبة كبدية)</li><li>نزف أو INR مرتفع</li><li>قلة بول</li><li>اضطراب سكر</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>الجرعة الآمنة للأطفال 10–15 مجم/كجم كل 4–6 ساعات وبحد أقصى حسب الوزن.</li><li>تجنّب تكرار الدواء من أكتر من مصدر (برد + مسكن).</li><li>تخزين آمن بعيد عن الأطفال.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الجرعة السامة للكبار 7.5 جم (15 قرص 500 مجم)، وللأطفال 150 مجم/كجم.",
-      "الأعراض الأولى ممكن تكون صفر؛ الصفراء بعد 2–4 أيام.",
-      "أحسس اختبار في أول 24 ساعة: INR.",
-      "الترياق أسيتيل سيستين: أول جرعة 140 مجم/كجم ثم 17 جرعة.",
-      "اتحول للمستشفى بعد أول جرعة."
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "الجرعة السامة للأطفال؟"
-      },
-      "options": [
-        {
-          "ar": "10 مجم/كجم"
-        },
-        {
-          "ar": "150 مجم/كجم"
-        },
-        {
-          "ar": "50 مجم/كجم"
-        },
-        {
-          "ar": "500 مجم/كجم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "150 مجم/كجم (أكتر من ذلك سام للكبد)."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول اختبار حساس خلال 24 ساعة؟"
-      },
-      "options": [
-        {
-          "ar": "SGPT فقط"
-        },
-        {
-          "ar": "INR"
-        },
-        {
-          "ar": "سكر"
-        },
-        {
-          "ar": "ECG"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "INR المتطاول."
-      }
-    },
-    {
-      "q": {
-        "ar": "الترياق؟"
-      },
-      "options": [
-        {
-          "ar": "فلومازينيل"
-        },
-        {
-          "ar": "نالوكسون"
-        },
-        {
-          "ar": "أسيتيل سيستين"
-        },
-        {
-          "ar": "أتروبين"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "Acetylcysteine."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "StatPearls: Acetaminophen Toxicity"
-    },
-    {
-      "title": "UK NICE/NPIS and Rumack-Matthew nomogram summaries"
-    }
-  ],
-  "rx": [
-    {
-      "category": "أخرى",
-      "condition_ar": "تسمم الباراسيتامول",
-      "condition_en": "Paracetamol poisoning",
-      "items": [
-        {
-          "drug_name": "Acetylcysteine 600 mg sachets",
-          "dose": "أول جرعة 140 مجم/كجم ثم 17 جرعة إجمالاً؛ تذوب في ميّة",
-          "note": "خلال 24 ساعة من البلع"
-        },
-        {
-          "drug_name": "Primperan amp (عضل) كمضاد قيء",
-          "dose": "مرة واحدة لإعادة الجرعة",
-          "note": "يفضل أوندانسيترون للأطفال"
-        }
-      ],
-      "clinical_note": "أهم اختبار أول 24 ساعة: INR"
-    }
+  "en": [
+   "Toxic dose for adults 7.5 g (15 tablets of 500 mg), and for children 150 mg/kg.",
+   "Early symptoms may be none; jaundice after 2–4 days.",
+   "The most sensitive test in the first 24 hours: INR.",
+   "Antidote acetylcysteine: first dose 140 mg/kg then 17 doses.",
+   "Transfer to the hospital after the first dose."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "الجرعة السامة للأطفال؟",
+    "en": "The toxic dose for children?"
+   },
+   "options": [
+    {
+     "ar": "10 مجم/كجم",
+     "en": "10 mg/kg"
+    },
+    {
+     "ar": "150 مجم/كجم",
+     "en": "150 mg/kg"
+    },
+    {
+     "ar": "50 مجم/كجم",
+     "en": "50 mg/kg"
+    },
+    {
+     "ar": "500 مجم/كجم",
+     "en": "500 mg/kg"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "150 مجم/كجم (أكتر من ذلك سام للكبد).",
+    "en": "150 mg/kg (more than that is toxic to the liver)."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول اختبار حساس خلال 24 ساعة؟",
+    "en": "The first sensitive test within 24 hours?"
+   },
+   "options": [
+    {
+     "ar": "SGPT فقط",
+     "en": "SGPT only"
+    },
+    {
+     "ar": "INR",
+     "en": "INR"
+    },
+    {
+     "ar": "سكر",
+     "en": "Glucose"
+    },
+    {
+     "ar": "ECG",
+     "en": "ECG"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "INR المتطاول.",
+    "en": "Prolonged INR."
+   }
+  },
+  {
+   "q": {
+    "ar": "الترياق؟",
+    "en": "The antidote?"
+   },
+   "options": [
+    {
+     "ar": "فلومازينيل",
+     "en": "Flumazenil"
+    },
+    {
+     "ar": "نالوكسون",
+     "en": "Naloxone"
+    },
+    {
+     "ar": "أسيتيل سيستين",
+     "en": "Acetylcysteine"
+    },
+    {
+     "ar": "أتروبين",
+     "en": "Atropine"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "Acetylcysteine.",
+    "en": "Acetylcysteine."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls: Acetaminophen Toxicity"
+  },
+  {
+   "title": "UK NICE/NPIS and Rumack-Matthew nomogram summaries"
+  }
+ ],
+ "rx": [
+  {
+   "category": "أخرى",
+   "condition_ar": "تسمم الباراسيتامول",
+   "condition_en": "Paracetamol poisoning",
+   "items": [
+    {
+     "drug_name": "Acetylcysteine 600 mg sachets",
+     "dose": "أول جرعة 140 مجم/كجم ثم 17 جرعة إجمالاً؛ تذوب في ميّة",
+     "note": "خلال 24 ساعة من البلع"
+    },
+    {
+     "drug_name": "Primperan amp (عضل) كمضاد قيء",
+     "dose": "مرة واحدة لإعادة الجرعة",
+     "note": "يفضل أوندانسيترون للأطفال"
+    }
+   ],
+   "clinical_note": "أهم اختبار أول 24 ساعة: INR"
+  }
+ ]
 }

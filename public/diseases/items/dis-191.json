@@ -1,174 +1,219 @@
 {
-  "id": "dis-191",
-  "num": 191,
-  "system": "infect",
-  "icon": "🦟",
-  "level": 3,
-  "title": {
-    "ar": "الملاريا",
-    "en": "Malaria"
+ "id": "dis-191",
+ "num": 191,
+ "system": "infect",
+ "icon": "🦟",
+ "level": 3,
+ "title": {
+  "ar": "الملاريا",
+  "en": "Malaria"
+ },
+ "teaser": {
+  "ar": "حمى وقشعريرة وأنيميا بعد السفر لمنطقة موبوءة: التشخيص بفيلم الدم، الوقاية الدوائية قبل السفر، الكلوروكين وبدائله، الملاريا الشديدة والمخية، والتحديثات الحديثة (ACT وArtesunate).",
+  "en": "Fever, chills, and anemia after travel to an endemic area: diagnosis by blood film, drug prophylaxis before travel, chloroquine and its alternatives, severe and cerebral malaria, and recent updates (ACT and Artesunate)."
+ },
+ "chips": [
+  {
+   "ar": "فيلم دم",
+   "en": "Blood film"
   },
-  "teaser": {
-    "ar": "حمى وقشعريرة وأنيميا بعد السفر لمنطقة موبوءة: التشخيص بفيلم الدم، الوقاية الدوائية قبل السفر، الكلوروكين وبدائله، الملاريا الشديدة والمخية، والتحديثات الحديثة (ACT وArtesunate)."
+  {
+   "ar": "وقاية قبل السفر",
+   "en": "Prophylaxis before travel"
   },
-  "chips": [
-    {
-      "ar": "فيلم دم"
-    },
-    {
-      "ar": "وقاية قبل السفر"
-    },
-    {
-      "ar": "Artesunate"
-    }
+  {
+   "ar": "Artesunate",
+   "en": "Artesunate"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p><b>الملاريا (Malaria)</b> مرض طفيلي بينتقل بلدغ بعوضة الأنوفيلس، بيسبب حمى وقشعريرة وأنيميا. مصر خالية رسمياً من الانتقال المحلي (شهادة منظمة الصحة 2010)، لكن ممكن تظهر حالات <b>مستوردة</b> من المسافرين لمناطق وبائية.</p>[[slot:dis-191-lifecycle|دورة المرض وتشخيصه|/diseases/img/dis-191-lifecycle.svg]]",
+   "en": "<p><b>Malaria</b> is a parasitic disease transmitted by the bite of the Anopheles mosquito, causing fever, chills, and anemia. Egypt is officially free of local transmission (WHO certification 2010), but <b>imported</b> cases may appear in travelers to endemic areas.</p>[[slot:dis-191-lifecycle|The disease cycle and its diagnosis|/diseases/img/dis-191-lifecycle.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li>طفيل Plasmodium (فالسيباروم، فيفاكس، ملاريا، أوفال، نولزي).</li><li>لدغة بعوضة الأنوفيلس الأنثى، ونادراً نقل دم أو انتقال من الأم.</li></ul>",
+   "en": "<ul><li>The Plasmodium parasite (falciparum, vivax, malariae, ovale, knowlesi).</li><li>The bite of the female Anopheles mosquito, and rarely blood transfusion or transmission from the mother.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ol><li>بادئة غير نوعية شبيهة بالإنفلونزا (Non-specific flu-like prodrome): صداع، توعك (Malaise)، آلام عضلات (Myalgia)، فقدان شهية.</li><li>ثم حمى وقشعريرة (Chills) ± إغماءات (Faints).</li><li>أنيميا ويرقان وتضخم الكبد والطحال (Hepatosplenomegaly).</li><li>فيلم دم سميك أو رفيع يُظهر الطفيل المميز داخل كريات الدم الحمراء.</li></ol>",
+   "en": "<ol><li>A non-specific flu-like prodrome: headache, malaise (Malaise), muscle aches (Myalgia), loss of appetite.</li><li>Then fever and chills (Chills) ± fainting (Faints).</li><li>Anemia, jaundice, and enlarged liver and spleen (Hepatosplenomegaly).</li><li>A thick or thin blood film shows the characteristic parasite inside red blood cells.</li></ol>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>فيلم دم سميك ورفيع (Thick & thin blood film)</b> — المعيار.</li><li>اختبار سريع (RDT) للمستضد.</li><li>صورة دم (أنيميا، نقص صفائح)، وظائف كبد وكلى، سكر الدم (هبوط)، غازات الدم في الشديدة.</li><li>مكرر لو سلبي مع الشك الإكلينيكي (كل 12–24 ساعة × 3).</li></ul>",
+   "en": "<ul><li><b>Thick & thin blood film</b> — the standard.</li><li>Rapid antigen test (RDT).</li><li>Blood count (anemia, low platelets), liver and kidney function, blood glucose (hypoglycemia), blood gases in severe cases.</li><li>Repeat if negative with clinical suspicion (every 12–24 hours × 3).</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>أ) الوقاية (Prophylaxis) في المناطق الموبوءة</h4><p>ابدأ <b>قبل السفر بأسبوعين</b> واستمر <b>8 أسابيع بعد مغادرة المنطقة</b> (حسب المراجع).</p><table><thead><tr><th>الدواء (اختيار)</th><th>الجرعة</th></tr></thead><tbody><tr><td>Daraprim (Pyrimethamine) 25 مجم (<b>الخط الأول حسب المراجع</b>)</td><td>قرص أسبوعياً</td></tr><tr><td>أو Chloroquine phosphate 250 مجم، أو Alexoquine، أو Dagrinol</td><td>قرصان أسبوعياً</td></tr></tbody></table><h4>ب) العلاج</h4><p><b>الكلوروكين الفموي (الخط الأول حسب المراجع):</b> Chloroquine 250 مجم أو Dagrinol أو Alexoquine: 4 أقراص أولاً، ثم قرصان بعد 6 ساعات، ثم قرصان بعد 24 ساعة، ثم قرصان بعد 48 ساعة (الإجمالي 25 مجم قاعدة/كجم، وفي مناطق حساسة للكلوروكين فقط).</p><p><b>الحالات الشديدة:</b> Dagrinol 250 مجم / 5 مل أمبول أو Chloroquine phosphate أمبول: أمبول واحد بالعضل ويكرر بعد 6 ساعات، ثم تستخدم الأقراص.</p><p><b>الحالات المقاومة للكلوروكين:</b></p><ul><li><b>للهجمات الحادة:</b> Quinine أو Mefloquine مع أحد: (أ) تتراسيكلين: Doxycycline أو Minocycline، (ب) Co-trimoxazole (Trimethoprim + Sulphamethoxazole)، (ج) Fansidar (Pyrimethamine + Sulphadoxine).</li><li>Quinine sulfate 650 مجم 3 مرات يومياً لمدة أسبوع، أو Fansidar 3 أقراص جرعة واحدة، مع Hostacycline قرص كل 6 ساعات لمدة أسبوع.</li></ul><p><b>في مرضى الغيبوبة مع وذمة مخية (Cerebral odema):</b> Decadron أو Fortacortin أمبول 4–10 مجم بالوريد كل 8 ساعات، وDextran 70 بالوريد بالتنقيط كل 12 ساعة. <b>ملحوظات:</b> نقل دم في حالات الأنيميا الشديدة، غسيل كلوي في حالات الفشل الكلوي.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>العلاج الحديث (WHO):</b> الملاريا المنجلية (P. falciparum) غير المعقدة تُعالج بـ <b>ACT</b> (Artemether-lumefantrine وغيره)، لأن مقاومة الكلوروكين منتشرة جداً. <b>الملاريا الشديدة:</b> Artesunate وريدي/عضل (على الأقل 24 ساعة ثم ACT كامل). Quinine + Doxycycline بديل عند عدم توفر Artesunate. <b>الكورتيزون (Decadron) والـ Dextran ليسا من العلاج الموصى به</b> في الملاريا المخية (ثبت ضرر الكورتيزون). Fansidar شبه مهجور لخطورة طفح Stevens-Johnson. ملاريا فيفاكس/أوفال تحتاج Primaquine بعد فحص G6PD لمنع النكس. الوقاية الدوائية تُختار حسب منطقة السفر (مقاومة الكلوروكين): Atovaquone-proguanil أو Doxycycline أو Mefloquine. استشر عيادة طب المسافرين. الجرعات بأمر الطبيب.</div>",
+   "en": "<h4>A) Prophylaxis in endemic areas</h4><p>Start <b>two weeks before travel</b> and continue <b>8 weeks after leaving the area</b> (per standard guidance).</p><table><thead><tr><th>Drug (choice)</th><th>Dose</th></tr></thead><tbody><tr><td>Daraprim (Pyrimethamine) 25 mg (<b>first line per standard guidance</b>)</td><td>One tablet weekly</td></tr><tr><td>Or Chloroquine phosphate 250 mg, or Alexoquine, or Dagrinol</td><td>Two tablets weekly</td></tr></tbody></table><h4>B) Treatment</h4><p><b>Oral chloroquine (first line per standard guidance):</b> Chloroquine 250 mg or Dagrinol or Alexoquine: 4 tablets first, then two tablets after 6 hours, then two tablets after 24 hours, then two tablets after 48 hours (total 25 mg base/kg, and only in chloroquine-sensitive areas).</p><p><b>Severe cases:</b> Dagrinol 250 mg / 5 mL ampoule or Chloroquine phosphate ampoule: one ampoule intramuscularly, repeated after 6 hours, then tablets are used.</p><p><b>Chloroquine-resistant cases:</b></p><ul><li><b>For acute attacks:</b> Quinine or Mefloquine with one of: (a) a tetracycline: Doxycycline or Minocycline, (b) Co-trimoxazole (Trimethoprim + Sulphamethoxazole), (c) Fansidar (Pyrimethamine + Sulphadoxine).</li><li>Quinine sulfate 650 mg 3 times daily for one week, or Fansidar 3 tablets as a single dose, with Hostacycline one tablet every 6 hours for one week.</li></ul><p><b>In comatose patients with cerebral edema (Cerebral odema):</b> Decadron or Fortacortin ampoule 4–10 mg IV every 8 hours, and Dextran 70 IV infusion every 12 hours. <b>Notes:</b> blood transfusion in severe anemia, dialysis in kidney failure.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><b>Modern treatment (WHO):</b> Uncomplicated falciparum malaria (P. falciparum) is treated with <b>ACT</b> (Artemether-lumefantrine and others), because chloroquine resistance is very widespread. <b>Severe malaria:</b> IV/IM Artesunate (at least 24 hours, then a full course of ACT). Quinine + Doxycycline is an alternative when Artesunate is unavailable. <b>Corticosteroids (Decadron) and Dextran are not recommended treatment</b> in cerebral malaria (harm from corticosteroids has been shown). Fansidar is nearly abandoned because of the risk of Stevens-Johnson rash. Vivax/ovale malaria needs Primaquine after a G6PD test to prevent relapse. Drug prophylaxis is chosen according to the travel region (chloroquine resistance): Atovaquone-proguanil or Doxycycline or Mefloquine. Consult a travel medicine clinic. Doses are per physician's order.</div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اشتبه واسأل</strong><p>أي مسافر لمنطقة وبائية (أفريقيا جنوب الصحراء، آسيا...) بحمى = ملاريا حتى يثبت العكس. اسأل عن السفر والوقاية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّم</strong><p>الحرارة والنمط الدوري، الوعي، ضغط الدم، التنفس، سكر الدم (هبوط)، لون الجلد والبول (يرقان، بول داكن)، كمية البول، الأنيميا.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>العينات</strong><p>فيلم دم سميك ورفيع قبل الدواء، وكرره حسب الأمر، ووقت أخذ العينة أثناء الحمى أفضل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ الأدوية بأمان</strong><p>Chloroquine بعد الأكل (غثيان)، حذر في الصرع. Quinine: راقب سكر الدم (هبوط)، رنين الأذن، تأخر الأعراض عند الحقن السريع. Dagrinol أمبول <b>عضل فقط</b> بالجرعة والمعاد المحدد. Hostacycline بعد الأكل وسوائل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب الحالة الشديدة</strong><p>تشوش وعي أو تشنج (مخية)، فشل كلوي (قلة بول)، ضيق نفس (وذمة رئة)، نزف، أنيميا شديدة. مونيتور وسكر دم كل 4–6 ساعات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وقّي</strong><p>ناموسية، طارد حشرات، قضاء على أماكن البعوض، تثقيف المسافرين.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>أي مريض ملاريا بـ <b>تشوش أو تشنج أو سكر منخفض أو جفاف أو قلة بول</b> = ملاريا شديدة طوارئ.</p></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>الحرارة وتوقيتها، فيلم الدم، الأدوية، السكر، الداخل والخارج، التبليغ.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Suspect and ask</strong><p>Any traveler to an endemic area (sub-Saharan Africa, Asia...) with fever = malaria until proven otherwise. Ask about travel and prophylaxis.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Assess</strong><p>Temperature and cyclic pattern, consciousness, blood pressure, breathing, blood glucose (hypoglycemia), skin and urine color (jaundice, dark urine), urine volume, anemia.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Specimens</strong><p>Thick and thin blood film before the drug, repeat it as ordered, and taking the sample during fever is better.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Give drugs safely</strong><p>Chloroquine after food (nausea), caution in epilepsy. Quinine: monitor blood glucose (hypoglycemia), ringing in the ears, delayed symptoms with rapid injection. Dagrinol ampoule <b>IM only</b> at the specified dose and time. Hostacycline after food and with fluids.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Monitor the severe case</strong><p>Confusion or seizure (cerebral), kidney failure (low urine output), shortness of breath (pulmonary edema), bleeding, severe anemia. Monitor and blood glucose every 4–6 hours.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Prevent</strong><p>Mosquito net, insect repellent, eliminating mosquito breeding places, traveler education.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Any malaria patient with <b>confusion, seizure, low glucose, dehydration, or low urine output</b> = severe malaria, an emergency.</p></div><div class=\"cs-box cs-info\"><strong>Documentation</strong><p>Temperature and its timing, blood film, drugs, glucose, intake and output, reporting.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>تشوش أو نعاس شديد أو تشنج</li><li>قلة بول أو بول داكن جداً</li><li>يرقان شديد</li><li>ضيق نفس</li><li>سكر دم منخفض</li><li>نزف</li><li>أنيميا شديدة (شحوب، تسارع نبض)</li><li>مسافر بحمى حتى لو أخذ وقاية</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Confusion, severe drowsiness, or seizure</li><li>Low urine output or very dark urine</li><li>Severe jaundice</li><li>Shortness of breath</li><li>Low blood glucose</li><li>Bleeding</li><li>Severe anemia (pallor, rapid pulse)</li><li>A traveler with fever even if he took prophylaxis</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>قبل السفر لمنطقة موبوءة: استشر عيادة طب المسافرين وابدأ الدواء الوقائي في موعده.</li><li>استخدم ناموسية وطارد حشرات وملابس طويلة وقت الغروب.</li><li>كمّل الدواء الوقائي لمدة 8 أسابيع بعد العودة (حسب المراجع).</li><li>أي حمى بعد العودة من السفر: اذهب للمستشفى فوراً وأخبر الطبيب عن السفر.</li><li>كمّل العلاج كامل المدة.</li></ul>",
+   "en": "<ul><li>Before traveling to an endemic area: consult a travel medicine clinic and start the preventive drug on time.</li><li>Use a mosquito net, insect repellent, and long clothing at sunset.</li><li>Continue the preventive drug for 8 weeks after returning (per standard guidance).</li><li>Any fever after returning from travel: go to the hospital immediately and tell the doctor about the travel.</li><li>Complete the treatment for the full duration.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الملاريا مرض طفيلي بينتقل بالبعوض، ومصر خالية منها محلياً لكن الحالات المستوردة ممكنة",
+   "الأعراض: توعك وصداع وآلام عضلات ثم حمى وقشعريرة، أنيميا ويرقان وتضخم كبد وطحال",
+   "التشخيص: فيلم دم سميك ورفيع يُظهر الطفيل",
+   "الوقاية قبل السفر لمنطقة وبائية: Daraprim أو Chloroquine أسبوعياً قبلها بأسبوعين وبعدها 8 أسابيع (حسب المراجع)",
+   "العلاج حسب المراجع: Chloroquine (خط أول)، وللمقاوم: Quinine أو Mefloquine مع Doxycycline",
+   "الحديث: ACT للبسيطة وArtesunate وريدي للشديدة (Severe malaria)"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p><b>الملاريا (Malaria)</b> مرض طفيلي بينتقل بلدغ بعوضة الأنوفيلس، بيسبب حمى وقشعريرة وأنيميا. مصر خالية رسمياً من الانتقال المحلي (شهادة منظمة الصحة 2010)، لكن ممكن تظهر حالات <b>مستوردة</b> من المسافرين لمناطق وبائية.</p>[[slot:dis-191-lifecycle|دورة المرض وتشخيصه|/diseases/img/dis-191-lifecycle.svg]]"
-    },
-    "causes": {
-      "ar": "<ul><li>طفيل Plasmodium (فالسيباروم، فيفاكس، ملاريا، أوفال، نولزي).</li><li>لدغة بعوضة الأنوفيلس الأنثى، ونادراً نقل دم أو انتقال من الأم.</li></ul>"
-    },
-    "signs": {
-      "ar": "<ol><li>بادئة غير نوعية شبيهة بالإنفلونزا (Non-specific flu-like prodrome): صداع، توعك (Malaise)، آلام عضلات (Myalgia)، فقدان شهية.</li><li>ثم حمى وقشعريرة (Chills) ± إغماءات (Faints).</li><li>أنيميا ويرقان وتضخم الكبد والطحال (Hepatosplenomegaly).</li><li>فيلم دم سميك أو رفيع يُظهر الطفيل المميز داخل كريات الدم الحمراء.</li></ol>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>فيلم دم سميك ورفيع (Thick & thin blood film)</b> — المعيار.</li><li>اختبار سريع (RDT) للمستضد.</li><li>صورة دم (أنيميا، نقص صفائح)، وظائف كبد وكلى، سكر الدم (هبوط)، غازات الدم في الشديدة.</li><li>مكرر لو سلبي مع الشك الإكلينيكي (كل 12–24 ساعة × 3).</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>أ) الوقاية (Prophylaxis) في المناطق الموبوءة</h4><p>ابدأ <b>قبل السفر بأسبوعين</b> واستمر <b>8 أسابيع بعد مغادرة المنطقة</b> (حسب المراجع).</p><table><thead><tr><th>الدواء (اختيار)</th><th>الجرعة</th></tr></thead><tbody><tr><td>Daraprim (Pyrimethamine) 25 مجم (<b>الخط الأول حسب المراجع</b>)</td><td>قرص أسبوعياً</td></tr><tr><td>أو Chloroquine phosphate 250 مجم، أو Alexoquine، أو Dagrinol</td><td>قرصان أسبوعياً</td></tr></tbody></table><h4>ب) العلاج</h4><p><b>الكلوروكين الفموي (الخط الأول حسب المراجع):</b> Chloroquine 250 مجم أو Dagrinol أو Alexoquine: 4 أقراص أولاً، ثم قرصان بعد 6 ساعات، ثم قرصان بعد 24 ساعة، ثم قرصان بعد 48 ساعة (الإجمالي 25 مجم قاعدة/كجم، وفي مناطق حساسة للكلوروكين فقط).</p><p><b>الحالات الشديدة:</b> Dagrinol 250 مجم / 5 مل أمبول أو Chloroquine phosphate أمبول: أمبول واحد بالعضل ويكرر بعد 6 ساعات، ثم تستخدم الأقراص.</p><p><b>الحالات المقاومة للكلوروكين:</b></p><ul><li><b>للهجمات الحادة:</b> Quinine أو Mefloquine مع أحد: (أ) تتراسيكلين: Doxycycline أو Minocycline، (ب) Co-trimoxazole (Trimethoprim + Sulphamethoxazole)، (ج) Fansidar (Pyrimethamine + Sulphadoxine).</li><li>Quinine sulfate 650 مجم 3 مرات يومياً لمدة أسبوع، أو Fansidar 3 أقراص جرعة واحدة، مع Hostacycline قرص كل 6 ساعات لمدة أسبوع.</li></ul><p><b>في مرضى الغيبوبة مع وذمة مخية (Cerebral odema):</b> Decadron أو Fortacortin أمبول 4–10 مجم بالوريد كل 8 ساعات، وDextran 70 بالوريد بالتنقيط كل 12 ساعة. <b>ملحوظات:</b> نقل دم في حالات الأنيميا الشديدة، غسيل كلوي في حالات الفشل الكلوي.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>العلاج الحديث (WHO):</b> الملاريا المنجلية (P. falciparum) غير المعقدة تُعالج بـ <b>ACT</b> (Artemether-lumefantrine وغيره)، لأن مقاومة الكلوروكين منتشرة جداً. <b>الملاريا الشديدة:</b> Artesunate وريدي/عضل (على الأقل 24 ساعة ثم ACT كامل). Quinine + Doxycycline بديل عند عدم توفر Artesunate. <b>الكورتيزون (Decadron) والـ Dextran ليسا من العلاج الموصى به</b> في الملاريا المخية (ثبت ضرر الكورتيزون). Fansidar شبه مهجور لخطورة طفح Stevens-Johnson. ملاريا فيفاكس/أوفال تحتاج Primaquine بعد فحص G6PD لمنع النكس. الوقاية الدوائية تُختار حسب منطقة السفر (مقاومة الكلوروكين): Atovaquone-proguanil أو Doxycycline أو Mefloquine. استشر عيادة طب المسافرين. الجرعات بأمر الطبيب.</div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اشتبه واسأل</strong><p>أي مسافر لمنطقة وبائية (أفريقيا جنوب الصحراء، آسيا...) بحمى = ملاريا حتى يثبت العكس. اسأل عن السفر والوقاية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّم</strong><p>الحرارة والنمط الدوري، الوعي، ضغط الدم، التنفس، سكر الدم (هبوط)، لون الجلد والبول (يرقان، بول داكن)، كمية البول، الأنيميا.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>العينات</strong><p>فيلم دم سميك ورفيع قبل الدواء، وكرره حسب الأمر، ووقت أخذ العينة أثناء الحمى أفضل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ الأدوية بأمان</strong><p>Chloroquine بعد الأكل (غثيان)، حذر في الصرع. Quinine: راقب سكر الدم (هبوط)، رنين الأذن، تأخر الأعراض عند الحقن السريع. Dagrinol أمبول <b>عضل فقط</b> بالجرعة والمعاد المحدد. Hostacycline بعد الأكل وسوائل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب الحالة الشديدة</strong><p>تشوش وعي أو تشنج (مخية)، فشل كلوي (قلة بول)، ضيق نفس (وذمة رئة)، نزف، أنيميا شديدة. مونيتور وسكر دم كل 4–6 ساعات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وقّي</strong><p>ناموسية، طارد حشرات، قضاء على أماكن البعوض، تثقيف المسافرين.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>أي مريض ملاريا بـ <b>تشوش أو تشنج أو سكر منخفض أو جفاف أو قلة بول</b> = ملاريا شديدة طوارئ.</p></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>الحرارة وتوقيتها، فيلم الدم، الأدوية، السكر، الداخل والخارج، التبليغ.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>تشوش أو نعاس شديد أو تشنج</li><li>قلة بول أو بول داكن جداً</li><li>يرقان شديد</li><li>ضيق نفس</li><li>سكر دم منخفض</li><li>نزف</li><li>أنيميا شديدة (شحوب، تسارع نبض)</li><li>مسافر بحمى حتى لو أخذ وقاية</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>قبل السفر لمنطقة موبوءة: استشر عيادة طب المسافرين وابدأ الدواء الوقائي في موعده.</li><li>استخدم ناموسية وطارد حشرات وملابس طويلة وقت الغروب.</li><li>كمّل الدواء الوقائي لمدة 8 أسابيع بعد العودة (حسب المراجع).</li><li>أي حمى بعد العودة من السفر: اذهب للمستشفى فوراً وأخبر الطبيب عن السفر.</li><li>كمّل العلاج كامل المدة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الملاريا مرض طفيلي بينتقل بالبعوض، ومصر خالية منها محلياً لكن الحالات المستوردة ممكنة",
-      "الأعراض: توعك وصداع وآلام عضلات ثم حمى وقشعريرة، أنيميا ويرقان وتضخم كبد وطحال",
-      "التشخيص: فيلم دم سميك ورفيع يُظهر الطفيل",
-      "الوقاية قبل السفر لمنطقة وبائية: Daraprim أو Chloroquine أسبوعياً قبلها بأسبوعين وبعدها 8 أسابيع (حسب المراجع)",
-      "العلاج حسب المراجع: Chloroquine (خط أول)، وللمقاوم: Quinine أو Mefloquine مع Doxycycline",
-      "الحديث: ACT للبسيطة وArtesunate وريدي للشديدة (Severe malaria)"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ناقل الملاريا؟"
-      },
-      "options": [
-        {
-          "ar": "بعوضة الأنوفيلس"
-        },
-        {
-          "ar": "الذبابة"
-        },
-        {
-          "ar": "القمل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Anopheles."
-      }
-    },
-    {
-      "q": {
-        "ar": "التشخيص الأمثل؟"
-      },
-      "options": [
-        {
-          "ar": "فيلم دم سميك ورفيع"
-        },
-        {
-          "ar": "تحليل بول"
-        },
-        {
-          "ar": "أشعة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يظهر الطفيل في الكريات."
-      }
-    },
-    {
-      "q": {
-        "ar": "الملاريا الشديدة المخية، الدواء الوريدي الأول حالياً؟"
-      },
-      "options": [
-        {
-          "ar": "Artesunate"
-        },
-        {
-          "ar": "Aspirin"
-        },
-        {
-          "ar": "Paracetamol فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "WHO."
-      }
-    },
-    {
-      "q": {
-        "ar": "مضاعفات تحتاج غسيل؟"
-      },
-      "options": [
-        {
-          "ar": "فشل كلوي"
-        },
-        {
-          "ar": "صداع"
-        },
-        {
-          "ar": "إسهال"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "غسيل كلوي في الفشل الكلوي."
-      }
-    },
-    {
-      "q": {
-        "ar": "وقاية المسافر؟"
-      },
-      "options": [
-        {
-          "ar": "دواء وقائي قبل وأثناء وبعد السفر وناموسية"
-        },
-        {
-          "ar": "لا شيء"
-        },
-        {
-          "ar": "مضاد حيوي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مع منع لدغ البعوض."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "WHO — Guidelines for malaria (latest consolidated) — ACT, IV artesunate for severe malaria"
-    },
-    {
-      "title": "CDC — Malaria: treatment and prophylaxis"
-    },
-    {
-      "title": "WHO — Eastern Mediterranean: Egypt certified malaria-free (2010)"
-    }
+  "en": [
+   "Malaria is a parasitic disease transmitted by mosquitoes; Egypt is free of it locally, but imported cases are possible",
+   "Symptoms: malaise, headache, and muscle aches, then fever and chills, anemia, jaundice, and enlarged liver and spleen",
+   "Diagnosis: thick and thin blood film showing the parasite",
+   "Prophylaxis before travel to an endemic area: Daraprim or Chloroquine weekly starting two weeks before and for 8 weeks after (per standard guidance)",
+   "Treatment per standard guidance: Chloroquine (first line), and for resistance: Quinine or Mefloquine with Doxycycline",
+   "Modern: ACT for uncomplicated and IV Artesunate for severe malaria (Severe malaria)"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ناقل الملاريا؟",
+    "en": "The vector of malaria?"
+   },
+   "options": [
+    {
+     "ar": "بعوضة الأنوفيلس",
+     "en": "Anopheles mosquito"
+    },
+    {
+     "ar": "الذبابة",
+     "en": "The fly"
+    },
+    {
+     "ar": "القمل",
+     "en": "Lice"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Anopheles.",
+    "en": "Anopheles."
+   }
+  },
+  {
+   "q": {
+    "ar": "التشخيص الأمثل؟",
+    "en": "The best diagnosis?"
+   },
+   "options": [
+    {
+     "ar": "فيلم دم سميك ورفيع",
+     "en": "Thick and thin blood film"
+    },
+    {
+     "ar": "تحليل بول",
+     "en": "Urinalysis"
+    },
+    {
+     "ar": "أشعة",
+     "en": "X-ray"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يظهر الطفيل في الكريات.",
+    "en": "It shows the parasite in the cells."
+   }
+  },
+  {
+   "q": {
+    "ar": "الملاريا الشديدة المخية، الدواء الوريدي الأول حالياً؟",
+    "en": "Severe cerebral malaria, the first IV drug currently?"
+   },
+   "options": [
+    {
+     "ar": "Artesunate",
+     "en": "Artesunate"
+    },
+    {
+     "ar": "Aspirin",
+     "en": "Aspirin"
+    },
+    {
+     "ar": "Paracetamol فقط",
+     "en": "Paracetamol only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "WHO.",
+    "en": "WHO."
+   }
+  },
+  {
+   "q": {
+    "ar": "مضاعفات تحتاج غسيل؟",
+    "en": "Complications that need dialysis?"
+   },
+   "options": [
+    {
+     "ar": "فشل كلوي",
+     "en": "Kidney failure"
+    },
+    {
+     "ar": "صداع",
+     "en": "Headache"
+    },
+    {
+     "ar": "إسهال",
+     "en": "Diarrhea"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "غسيل كلوي في الفشل الكلوي.",
+    "en": "Dialysis in kidney failure."
+   }
+  },
+  {
+   "q": {
+    "ar": "وقاية المسافر؟",
+    "en": "Traveler prevention?"
+   },
+   "options": [
+    {
+     "ar": "دواء وقائي قبل وأثناء وبعد السفر وناموسية",
+     "en": "Preventive drug before, during, and after travel and a mosquito net"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    },
+    {
+     "ar": "مضاد حيوي",
+     "en": "Antibiotic"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مع منع لدغ البعوض.",
+    "en": "Along with preventing mosquito bites."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "WHO — Guidelines for malaria (latest consolidated) — ACT, IV artesunate for severe malaria"
+  },
+  {
+   "title": "CDC — Malaria: treatment and prophylaxis"
+  },
+  {
+   "title": "WHO — Eastern Mediterranean: Egypt certified malaria-free (2010)"
+  }
+ ]
 }

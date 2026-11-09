@@ -1,149 +1,188 @@
 {
-  "id": "dis-3102",
-  "num": 3102,
-  "system": "other",
-  "icon": "🧮",
-  "level": 2,
-  "target": "fundamentals",
-  "title": {
-    "ar": "أساسيات حساب الجرعات: التنقيط والأقراص وجرعات الأطفال",
-    "en": "Dosage Calculation 101"
+ "id": "dis-3102",
+ "num": 3102,
+ "system": "other",
+ "icon": "🧮",
+ "level": 2,
+ "target": "fundamentals",
+ "title": {
+  "ar": "أساسيات حساب الجرعات: التنقيط والأقراص وجرعات الأطفال",
+  "en": "Dosage Calculation 101"
+ },
+ "teaser": {
+  "ar": "صيغ mL/hr وقطرة/دقيقة والأقراص وجرعات الأطفال بالوزن، مع أمثلة محلولة خطوة بخطوة.",
+  "en": "Formulas for mL/hr, drops per minute, tablets, and weight-based pediatric doses, with step-by-step worked examples."
+ },
+ "chips": [
+  {
+   "ar": "mL/hr وgtt/min",
+   "en": "mL/hr and gtt/min"
   },
-  "teaser": {
-    "ar": "صيغ mL/hr وقطرة/دقيقة والأقراص وجرعات الأطفال بالوزن، مع أمثلة محلولة خطوة بخطوة."
+  {
+   "ar": "الأقراص والكبسولات",
+   "en": "Tablets and capsules"
   },
-  "chips": [
-    {
-      "ar": "mL/hr وgtt/min"
-    },
-    {
-      "ar": "الأقراص والكبسولات"
-    },
-    {
-      "ar": "جرعات الأطفال"
-    }
+  {
+   "ar": "جرعات الأطفال",
+   "en": "Pediatric doses"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>حساب الجرعات مهارة أمان: الخطأ فيها من أخطر أخطاء الأدوية. ركّز على الوحدات، وراجع كل نتيجة بسؤال: «هل هذا الرقم منطقي؟».</p>[[slot:dis-3102-formulas|صيغ حساب الجرعات والتنقيط — رسم من إعداد الموقع|/diseases/img/dis-3102-formulas.svg]]<div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات والأرقام للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<p>Dose calculation is a safety skill: errors in it are among the most dangerous medication errors. Focus on units, and check every result by asking: \"Does this number make sense?\".</p>[[slot:dis-3102-formulas|Dose calculation and drip rate formulas (illustration prepared by the site)|/diseases/img/dis-3102-formulas.svg]]<div class=\"cs-box cs-danger\"><strong>Warning</strong><p>Doses and numbers are for learning only; always verify with the physician/pharmacist before administration.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>أخطاء شائعة</h4><ul><li>خلط الرطل بالكجم</li><li>نسيان ضرب/قسمة الدقائق على 60</li><li>استعمال معامل القطرة عند حساب mL/hr (لا يلزم)</li><li>تقريب خاطئ للقطرات (قطرات كاملة فقط)</li></ul>",
+   "en": "<h4>Common mistakes</h4><ul><li>Confusing pounds with kg</li><li>Forgetting to multiply/divide the minutes by 60</li><li>Using the drop factor when calculating mL/hr (not needed)</li><li>Wrong rounding of drops (whole drops only)</li></ul>"
+  },
+  "tests": {
+   "ar": "<h4>1) معدل التسريب mL/hr</h4><p>الحجم الكلي ÷ عدد الساعات. مثال: 500 mL خلال 120 دقيقة (ساعتان) = <strong>250 mL/hr</strong>.</p><h4>2) القطرات في الدقيقة (gtt/min)</h4><p>(الحجم ÷ (الساعات × 60)) × معامل القطرة. مثال: 1500 mL من محلول ملح خلال 7 ساعات ومعامل 20 قطرة/mL: 1500 ÷ 420 × 20 = 71.4 فتُقرَّب إلى <strong>71 قطرة/دقيقة</strong>.</p><h4>3) المعدل بالساعة بحسب الدواء (mg/hr)</h4><p>(الجرعة بالساعة ÷ الكمية المتوفرة) × الحجم. مثال: 400 mg فانكومايسين في 300 mL محلول جلوكوز 5% للتسريب بمعدل 10 mg/hr: (10 ÷ 400) × 300 = <strong>7.5 mL/hr</strong>.</p>",
+   "en": "<h4>1) Infusion rate mL/hr</h4><p>Total volume ÷ number of hours. Example: 500 mL over 120 minutes (2 hours) = <strong>250 mL/hr</strong>.</p><h4>2) Drops per minute (gtt/min)</h4><p>(Volume ÷ (hours × 60)) × drop factor. Example: 1500 mL of saline over 7 hours with a drop factor of 20 drops/mL: 1500 ÷ 420 × 20 = 71.4, rounded to <strong>71 drops/minute</strong>.</p><h4>3) Hourly rate by drug (mg/hr)</h4><p>(Hourly dose ÷ available amount) × volume. Example: 400 mg of vancomycin in 300 mL of 5% dextrose solution to infuse at 10 mg/hr: (10 ÷ 400) × 300 = <strong>7.5 mL/hr</strong>.</p>"
+  },
+  "treatment": {
+   "ar": "<h4>4) الأقراص والكبسولات</h4><p>المطلوب ÷ المتوفر × الوحدة. مثال: أمر الطبيب 50 mg والصيدلية صرفت أقراصًا 100 mg: 50 ÷ 100 = <strong>0.5 قرص (نصف قرص)</strong>.</p><h4>5) جرعات الأطفال بالوزن</h4><p>الوزن بالكيلو × الجرعة لكل كيلو = المقدار. لتحويل الرطل لكيلو اقسم على 2.2. وتستعمل نفس الصيغة لنطاق الأمان.</p>[[slot:dis-3102-pedsample|مثال جرعة آمنة لطفل — رسم من إعداد الموقع|/diseases/img/dis-3102-pedsample.svg]]<p>المثال: ميروبينيم 250 mg كل 8 ساعات لرضيع وزنه 15.7 رطل؛ النطاق 75–150 mg/كجم/يوم. الوزن = 7.13 كجم؛ الحد الأدنى اليومي = 534.75 والأعلى = 1069.5؛ الجرعة اليومية = 250 × 3 = 750 mg → <strong>ضمن النطاق الآمن</strong>.</p>",
+   "en": "<h4>4) Tablets and capsules</h4><p>Desired ÷ Available × Unit. Example: the physician ordered 50 mg and the pharmacy dispensed 100 mg tablets: 50 ÷ 100 = <strong>0.5 tablet (half a tablet)</strong>.</p><h4>5) Pediatric weight-based doses</h4><p>Weight in kg × dose per kg = the amount. To convert pounds to kg, divide by 2.2. The same formula is used for the safe range.</p>[[slot:dis-3102-pedsample|Example of a safe dose for a child (illustration prepared by the site)|/diseases/img/dis-3102-pedsample.svg]]<p>Example: meropenem 250 mg every 8 hours for an infant weighing 15.7 pounds; the range is 75–150 mg/kg/day. Weight = 7.13 kg; the minimum daily = 534.75 and the maximum = 1069.5; the daily dose = 250 × 3 = 750 mg → <strong>within the safe range</strong>.</p>"
+  },
+  "nursing": {
+   "ar": "<ul><li>اكتب الوحدات في كل خطوة.</li><li>تحقق من الجرعة مع ممرض آخر في الأدوية عالية الخطورة (الإنسولين، الهيبارين).</li><li>استعمل مضخة التسريب بدل القطارة قدر الإمكان، وتأكد من برمجتها.</li><li>قارن النتيجة بالمنطق وبالنطاق الآمن قبل الإعطاء.</li></ul>",
+   "en": "<ul><li>Write the units at every step.</li><li>Verify the dose with another nurse for high-alert drugs (insulin, heparin).</li><li>Use an infusion pump instead of a drip set whenever possible, and make sure it is programmed correctly.</li><li>Compare the result with logic and the safe range before administration.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>نتيجة غير منطقية (قرص أكثر من ثلاثة، أو mL/hr كبير جدًا): أعد الحساب واسأل.</li><li>جرعة طفل خارج النطاق الآمن: لا تُعطِ وبلّغ الطبيب والصيدلي.</li></ul>",
+   "en": "<ul><li>An illogical result (more than three tablets, or a very large mL/hr): recalculate and ask.</li><li>A child's dose outside the safe range: do not give it, and notify the physician and pharmacist.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<p>علّم المريض/الأهل ألا يغيروا الجرعة أو يقسّموا الأقراص إلا بتعليمات، وأن يعرفوا اسم الدواء وجرعته.</p>",
+   "en": "<p>Teach the patient/family not to change the dose or split tablets unless instructed, and to know the name of the drug and its dose.</p>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "لحساب المدة أو mL/hr لا تحتاج معامل القطرة؛ لحساب القطرات/دقيقة تحتاجه",
+   "قرص مطلوب = (المطلوب ÷ المتوفر)",
+   "الطفل: الرطل ÷ 2.2 = كجم",
+   "الجرعة اليومية = جرعة × عدد المرات، وتقارن بالنطاق الآمن (أدنى وأعلى)",
+   "راجع النتيجة بالمنطق: هل الرقم معقول؟",
+   "أي جرعة يُتحقق منها مع الصيدلي"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>حساب الجرعات مهارة أمان: الخطأ فيها من أخطر أخطاء الأدوية. ركّز على الوحدات، وراجع كل نتيجة بسؤال: «هل هذا الرقم منطقي؟».</p>[[slot:dis-3102-formulas|صيغ حساب الجرعات والتنقيط — رسم من إعداد الموقع|/diseases/img/dis-3102-formulas.svg]]<div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات والأرقام للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>أخطاء شائعة</h4><ul><li>خلط الرطل بالكجم</li><li>نسيان ضرب/قسمة الدقائق على 60</li><li>استعمال معامل القطرة عند حساب mL/hr (لا يلزم)</li><li>تقريب خاطئ للقطرات (قطرات كاملة فقط)</li></ul>"
-    },
-    "tests": {
-      "ar": "<h4>1) معدل التسريب mL/hr</h4><p>الحجم الكلي ÷ عدد الساعات. مثال: 500 mL خلال 120 دقيقة (ساعتان) = <strong>250 mL/hr</strong>.</p><h4>2) القطرات في الدقيقة (gtt/min)</h4><p>(الحجم ÷ (الساعات × 60)) × معامل القطرة. مثال: 1500 mL من محلول ملح خلال 7 ساعات ومعامل 20 قطرة/mL: 1500 ÷ 420 × 20 = 71.4 فتُقرَّب إلى <strong>71 قطرة/دقيقة</strong>.</p><h4>3) المعدل بالساعة بحسب الدواء (mg/hr)</h4><p>(الجرعة بالساعة ÷ الكمية المتوفرة) × الحجم. مثال: 400 mg فانكومايسين في 300 mL محلول جلوكوز 5% للتسريب بمعدل 10 mg/hr: (10 ÷ 400) × 300 = <strong>7.5 mL/hr</strong>.</p>"
-    },
-    "treatment": {
-      "ar": "<h4>4) الأقراص والكبسولات</h4><p>المطلوب ÷ المتوفر × الوحدة. مثال: أمر الطبيب 50 mg والصيدلية صرفت أقراصًا 100 mg: 50 ÷ 100 = <strong>0.5 قرص (نصف قرص)</strong>.</p><h4>5) جرعات الأطفال بالوزن</h4><p>الوزن بالكيلو × الجرعة لكل كيلو = المقدار. لتحويل الرطل لكيلو اقسم على 2.2. وتستعمل نفس الصيغة لنطاق الأمان.</p>[[slot:dis-3102-pedsample|مثال جرعة آمنة لطفل — رسم من إعداد الموقع|/diseases/img/dis-3102-pedsample.svg]]<p>المثال: ميروبينيم 250 mg كل 8 ساعات لرضيع وزنه 15.7 رطل؛ النطاق 75–150 mg/كجم/يوم. الوزن = 7.13 كجم؛ الحد الأدنى اليومي = 534.75 والأعلى = 1069.5؛ الجرعة اليومية = 250 × 3 = 750 mg → <strong>ضمن النطاق الآمن</strong>.</p>"
-    },
-    "nursing": {
-      "ar": "<ul><li>اكتب الوحدات في كل خطوة.</li><li>تحقق من الجرعة مع ممرض آخر في الأدوية عالية الخطورة (الإنسولين، الهيبارين).</li><li>استعمل مضخة التسريب بدل القطارة قدر الإمكان، وتأكد من برمجتها.</li><li>قارن النتيجة بالمنطق وبالنطاق الآمن قبل الإعطاء.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>نتيجة غير منطقية (قرص أكثر من ثلاثة، أو mL/hr كبير جدًا): أعد الحساب واسأل.</li><li>جرعة طفل خارج النطاق الآمن: لا تُعطِ وبلّغ الطبيب والصيدلي.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<p>علّم المريض/الأهل ألا يغيروا الجرعة أو يقسّموا الأقراص إلا بتعليمات، وأن يعرفوا اسم الدواء وجرعته.</p>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "لحساب المدة أو mL/hr لا تحتاج معامل القطرة؛ لحساب القطرات/دقيقة تحتاجه",
-      "قرص مطلوب = (المطلوب ÷ المتوفر)",
-      "الطفل: الرطل ÷ 2.2 = كجم",
-      "الجرعة اليومية = جرعة × عدد المرات، وتقارن بالنطاق الآمن (أدنى وأعلى)",
-      "راجع النتيجة بالمنطق: هل الرقم معقول؟",
-      "أي جرعة يُتحقق منها مع الصيدلي"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "تحويل وزن طفل من 22 رطل إلى كجم تقريبًا:"
-      },
-      "options": [
-        {
-          "ar": "10 كجم"
-        },
-        {
-          "ar": "48 كجم"
-        },
-        {
-          "ar": "5 كجم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "22 ÷ 2.2 = 10 كجم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي حساب لا يحتاج معامل القطرة؟"
-      },
-      "options": [
-        {
-          "ar": "mL/hr"
-        },
-        {
-          "ar": "gtt/min"
-        },
-        {
-          "ar": "كلاهما"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "mL/hr = الحجم ÷ الساعات فقط. معامل القطرة يلزم فقط عند حساب القطرات/الدقيقة."
-      }
-    },
-    {
-      "q": {
-        "ar": "المطلوب 50 mg والقرص 100 mg، كم قرصًا؟"
-      },
-      "options": [
-        {
-          "ar": "نصف قرص"
-        },
-        {
-          "ar": "قرصان"
-        },
-        {
-          "ar": "قرص ونصف"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "50 ÷ 100 = 0.5."
-      }
-    },
-    {
-      "q": {
-        "ar": "قارنت الجرعة اليومية للطفل بالنطاق الآمن فوجدتها أعلى منه. ماذا تفعل؟"
-      },
-      "options": [
-        {
-          "ar": "لا تعطِ وتواصل مع الطبيب والصيدلي"
-        },
-        {
-          "ar": "أعطِ نصف الجرعة"
-        },
-        {
-          "ar": "أعطِ الجرعة وراقب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "جرعة فوق النطاق قد تسبب سمية؛ لا تعطِ حتى يُراجع الأمر مع واصف الدواء والصيدلي."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Dosage Calculations textbooks (dimensional analysis)"
-    },
-    {
-      "title": "ISMP — High-alert medication practices"
-    }
+  "en": [
+   "To calculate duration or mL/hr, you do not need the drop factor; to calculate drops/minute, you do",
+   "Tablets needed = (Desired ÷ Available)",
+   "Child: pounds ÷ 2.2 = kg",
+   "Daily dose = dose × number of times, compared with the safe range (minimum and maximum)",
+   "Check the result with logic: is the number reasonable?",
+   "Any dose should be verified with the pharmacist"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "تحويل وزن طفل من 22 رطل إلى كجم تقريبًا:",
+    "en": "Converting a child's weight from 22 pounds to kg, approximately:"
+   },
+   "options": [
+    {
+     "ar": "10 كجم",
+     "en": "10 kg"
+    },
+    {
+     "ar": "48 كجم",
+     "en": "48 kg"
+    },
+    {
+     "ar": "5 كجم",
+     "en": "5 kg"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "22 ÷ 2.2 = 10 كجم.",
+    "en": "22 ÷ 2.2 = 10 kg."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي حساب لا يحتاج معامل القطرة؟",
+    "en": "Which calculation does not need the drop factor?"
+   },
+   "options": [
+    {
+     "ar": "mL/hr",
+     "en": "mL/hr"
+    },
+    {
+     "ar": "gtt/min",
+     "en": "gtt/min"
+    },
+    {
+     "ar": "كلاهما",
+     "en": "Both"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "mL/hr = الحجم ÷ الساعات فقط. معامل القطرة يلزم فقط عند حساب القطرات/الدقيقة.",
+    "en": "mL/hr = volume ÷ hours only. The drop factor is needed only when calculating drops/minute."
+   }
+  },
+  {
+   "q": {
+    "ar": "المطلوب 50 mg والقرص 100 mg، كم قرصًا؟",
+    "en": "The order is 50 mg and the tablet is 100 mg. How many tablets?"
+   },
+   "options": [
+    {
+     "ar": "نصف قرص",
+     "en": "Half a tablet"
+    },
+    {
+     "ar": "قرصان",
+     "en": "Two tablets"
+    },
+    {
+     "ar": "قرص ونصف",
+     "en": "One and a half tablets"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "50 ÷ 100 = 0.5.",
+    "en": "50 ÷ 100 = 0.5."
+   }
+  },
+  {
+   "q": {
+    "ar": "قارنت الجرعة اليومية للطفل بالنطاق الآمن فوجدتها أعلى منه. ماذا تفعل؟",
+    "en": "You compared the child's daily dose with the safe range and found it higher. What do you do?"
+   },
+   "options": [
+    {
+     "ar": "لا تعطِ وتواصل مع الطبيب والصيدلي",
+     "en": "Do not give it and contact the physician and pharmacist"
+    },
+    {
+     "ar": "أعطِ نصف الجرعة",
+     "en": "Give half the dose"
+    },
+    {
+     "ar": "أعطِ الجرعة وراقب",
+     "en": "Give the dose and monitor"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "جرعة فوق النطاق قد تسبب سمية؛ لا تعطِ حتى يُراجع الأمر مع واصف الدواء والصيدلي.",
+    "en": "A dose above the range may cause toxicity; do not give it until it is reviewed with the prescriber and the pharmacist."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Dosage Calculations textbooks (dimensional analysis)"
+  },
+  {
+   "title": "ISMP — High-alert medication practices"
+  }
+ ]
 }

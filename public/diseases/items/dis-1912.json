@@ -1,277 +1,349 @@
 {
-  "id": "dis-1912",
-  "num": "1912",
-  "system": "peds",
-  "icon": "🦷",
-  "level": 1,
-  "target": "pediatrics",
-  "title": {
-    "ar": "العناية بأسنان الأطفال والتسوس",
-    "en": "Pediatric Dental Care & Caries"
+ "id": "dis-1912",
+ "num": "1912",
+ "system": "peds",
+ "icon": "🦷",
+ "level": 1,
+ "target": "pediatrics",
+ "title": {
+  "ar": "العناية بأسنان الأطفال والتسوس",
+  "en": "Pediatric Dental Care & Caries"
+ },
+ "teaser": {
+  "ar": "التسنين، أول زيارة، تسوس الرضاعة، الحشو والعلاج، و8 نقاط تثقيف.",
+  "en": "Teething, the first visit, baby bottle tooth decay, fillings and treatment, and 8 teaching points."
+ },
+ "chips": [
+  {
+   "ar": "تسنين",
+   "en": "Teething"
   },
-  "teaser": {
-    "ar": "التسنين، أول زيارة، تسوس الرضاعة، الحشو والعلاج، و8 نقاط تثقيف."
+  {
+   "ar": "تسوس",
+   "en": "Tooth decay"
   },
-  "chips": [
-    {
-      "ar": "تسنين"
-    },
-    {
-      "ar": "تسوس"
-    },
-    {
-      "ar": "زجاجة ليلية"
-    }
+  {
+   "ar": "زجاجة ليلية",
+   "en": "Night bottle"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>أول زيارة لطبيب الأسنان: خلال <b>6 أشهر من بزوغ أول سن</b> أو عند عمر سنة. التسنين من 6 إلى 24 شهرًا: هياج، لثة حساسة ومنتفخة، سيلان لعاب، مص أكثر ووضع الأشياء والأصابع بالفم. <b>تسوس الأسنان (Dental caries)</b> تلف دائم تسببه النظافة السيئة والسكريات (حلوى، حلويات، مشروبات غازية) وتراكم لويحة لزجة يتحلل بها المينا.</p>[[slot:dis-1912-tips|العناية بالأسنان — رسم من إعداد الموقع|/diseases/img/dis-1912-tips.svg]]",
+   "en": "<p>The first dental visit: within <b>6 months of the first tooth erupting</b> or at 1 year of age. Teething occurs from 6 to 24 months: irritability, tender swollen gums, drooling, more sucking, and putting objects and fingers in the mouth. <b>Dental caries</b> is permanent damage caused by poor hygiene and sugars (candy, sweets, soft drinks) and a buildup of sticky plaque that breaks down the enamel.</p>[[slot:dis-1912-tips|Dental care — illustration made by the site|/diseases/img/dis-1912-tips.svg]]"
+  },
+  "causes": {
+   "ar": "<p>سكريات + لويحة بكتيرية + نظافة سيئة. زجاجة الحليب أو العصير ليلًا تهيّئ لـ(متلازمة تسوس الرضاعة).</p>",
+   "en": "<p>Sugars + bacterial plaque + poor hygiene. A bottle of milk or juice at night sets the stage for baby bottle tooth decay syndrome.</p>"
+  },
+  "signs": {
+   "ar": "<p>ألم أسنان تلقائي خفيف أو حاد عند الأكل/الشرب الحلو أو الساخن أو البارد.</p>",
+   "en": "<p>Mild spontaneous or sharp toothache when eating/drinking sweet, hot, or cold things.</p>"
+  },
+  "tests": {
+   "ar": "<p>فحص أسنان دوري.</p>",
+   "en": "<p>Regular dental examination.</p>"
+  },
+  "treatment": {
+   "ar": "<p>التسوس غير المعالج: حشوة أو تاج، وقد يحتاج علاج جذور أو خلع.</p>",
+   "en": "<p>Untreated decay: a filling or crown, and it may need root canal treatment or extraction.</p>"
+  },
+  "nursing": {
+   "ar": "<ul><li>التسنين: أعطِ حلقة تسنين باردة لتخفيف الالتهاب</li><li>مص الإبهام عند 17 شهرًا: لا تتدخل؛ سيزول وذروته نحو 24 شهرًا</li><li>عبارة أم تحتاج تصحيحًا: \"لا ضرورة لنظافة أسنان الطفل حتى بزوغ الأسنان الدائمة\"</li><li>الوقاية في سن المدرسة: تنظيف بعد الوجبات والوجبات الخفيفة وقبل النوم</li><li>زجاجة الحليب أو العصير ليلًا تعرّض لتسوس الطفولة</li></ul>",
+   "en": "<ul><li>Teething: give a cold teething ring to relieve the inflammation</li><li>Thumb sucking at 17 months: do not intervene; it will go away and peaks around 24 months</li><li>A mother's statement that needs correction: \"There is no need to clean the child's teeth until the permanent teeth erupt\"</li><li>Prevention at school age: brushing after meals and snacks and before bed</li><li>A bottle of milk or juice at night exposes the child to early childhood caries</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>راجع طبيب الأسنان</strong><ul><li>ألم أسنان مستمر أو تورم</li><li>سن تالف</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>See the dentist</strong><ul><li>Persistent toothache or swelling</li><li>A damaged tooth</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>فرشاة وخيط مرتين يوميًا</li><li>ماء الصنبور</li><li>لا زجاجة ليلية</li><li>أول زيارة قبل عمر سنة</li></ul><h4>8 نقاط تثقيف لوقاية الأسنان</h4><p><strong>التغذية:</strong></p><ol><li>علكة خالية من السكر.</li><li>قلّل الأطعمة الحلوة اللزجة (المشروبات الغازية والحلوى والفواكه المجففة).</li><li>حبوب كاملة وخضروات.</li><li>ألبان: حليب ولبن وجبن.</li></ol><p><strong>الروتين:</strong></p><ol start=\"5\"><li>لا تنم الرضيع وفي فمه زجاجة حليب أو عصير.</li><li>اشطف الفم بالماء بعد الوجبات عند تعذّر الفرشاة.</li><li>الفرشاة والخيط مرتين يوميًا على الأقل.</li><li>اشرب ماء الصنبور (الفلورايد).</li></ol><p>نقطة امتحان: مص الإبهام أو اللهاية يسبب سوء إطباق الأسنان إذا استمر بعد بزوغ الأسنان الدائمة، وأول زيارة لطبيب الأسنان خلال 6 أشهر من أول سن أو عند عمر سنة. التسوس غير المعالج قد يحتاج حشوة أو تاجًا، وفي الحالات الشديدة علاج جذور أو خلع.</p>",
+   "en": "<ul><li>Brush and floss twice daily</li><li>Tap water</li><li>No bottle at night</li><li>First visit before 1 year of age</li></ul><h4>8 teaching points for tooth decay prevention</h4><p><strong>Nutrition:</strong></p><ol><li>Sugar-free gum.</li><li>Reduce sticky sweet foods (soft drinks, candy, dried fruit).</li><li>Whole grains and vegetables.</li><li>Dairy: milk, yogurt, and cheese.</li></ol><p><strong>Routine:</strong></p><ol start=\"5\"><li>Do not put the infant to sleep with a bottle of milk or juice in the mouth.</li><li>Rinse the mouth with water after meals when brushing is not possible.</li><li>Brush and floss at least twice daily.</li><li>Drink tap water (fluoride).</li></ol><p>Exam point: thumb or pacifier sucking causes malocclusion if it continues after the permanent teeth erupt, and the first dental visit is within 6 months of the first tooth or at 1 year of age. Untreated decay may need a filling or crown, and in severe cases root canal treatment or extraction.</p>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "أول زيارة خلال 6 أشهر من أول سن",
+   "لا نوم بزجاجة",
+   "ماء الصنبور وفرشاة مرتين",
+   "مص الإبهام بعد بزوغ الدائمة = سوء إطباق"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>أول زيارة لطبيب الأسنان: خلال <b>6 أشهر من بزوغ أول سن</b> أو عند عمر سنة. التسنين من 6 إلى 24 شهرًا: هياج، لثة حساسة ومنتفخة، سيلان لعاب، مص أكثر ووضع الأشياء والأصابع بالفم. <b>تسوس الأسنان (Dental caries)</b> تلف دائم تسببه النظافة السيئة والسكريات (حلوى، حلويات، مشروبات غازية) وتراكم لويحة لزجة يتحلل بها المينا.</p>[[slot:dis-1912-tips|العناية بالأسنان — رسم من إعداد الموقع|/diseases/img/dis-1912-tips.svg]]"
-    },
-    "causes": {
-      "ar": "<p>سكريات + لويحة بكتيرية + نظافة سيئة. زجاجة الحليب أو العصير ليلًا تهيّئ لـ(متلازمة تسوس الرضاعة).</p>"
-    },
-    "signs": {
-      "ar": "<p>ألم أسنان تلقائي خفيف أو حاد عند الأكل/الشرب الحلو أو الساخن أو البارد.</p>"
-    },
-    "tests": {
-      "ar": "<p>فحص أسنان دوري.</p>"
-    },
-    "treatment": {
-      "ar": "<p>التسوس غير المعالج: حشوة أو تاج، وقد يحتاج علاج جذور أو خلع.</p>"
-    },
-    "nursing": {
-      "ar": "<ul><li>التسنين: أعطِ حلقة تسنين باردة لتخفيف الالتهاب</li><li>مص الإبهام عند 17 شهرًا: لا تتدخل؛ سيزول وذروته نحو 24 شهرًا</li><li>عبارة أم تحتاج تصحيحًا: \"لا ضرورة لنظافة أسنان الطفل حتى بزوغ الأسنان الدائمة\"</li><li>الوقاية في سن المدرسة: تنظيف بعد الوجبات والوجبات الخفيفة وقبل النوم</li><li>زجاجة الحليب أو العصير ليلًا تعرّض لتسوس الطفولة</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>راجع طبيب الأسنان</strong><ul><li>ألم أسنان مستمر أو تورم</li><li>سن تالف</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>فرشاة وخيط مرتين يوميًا</li><li>ماء الصنبور</li><li>لا زجاجة ليلية</li><li>أول زيارة قبل عمر سنة</li></ul><h4>8 نقاط تثقيف لوقاية الأسنان</h4><p><strong>التغذية:</strong></p><ol><li>علكة خالية من السكر.</li><li>قلّل الأطعمة الحلوة اللزجة (المشروبات الغازية والحلوى والفواكه المجففة).</li><li>حبوب كاملة وخضروات.</li><li>ألبان: حليب ولبن وجبن.</li></ol><p><strong>الروتين:</strong></p><ol start=\"5\"><li>لا تنم الرضيع وفي فمه زجاجة حليب أو عصير.</li><li>اشطف الفم بالماء بعد الوجبات عند تعذّر الفرشاة.</li><li>الفرشاة والخيط مرتين يوميًا على الأقل.</li><li>اشرب ماء الصنبور (الفلورايد).</li></ol><p>نقطة امتحان: مص الإبهام أو اللهاية يسبب سوء إطباق الأسنان إذا استمر بعد بزوغ الأسنان الدائمة، وأول زيارة لطبيب الأسنان خلال 6 أشهر من أول سن أو عند عمر سنة. التسوس غير المعالج قد يحتاج حشوة أو تاجًا، وفي الحالات الشديدة علاج جذور أو خلع.</p>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "أول زيارة خلال 6 أشهر من أول سن",
-      "لا نوم بزجاجة",
-      "ماء الصنبور وفرشاة مرتين",
-      "مص الإبهام بعد بزوغ الدائمة = سوء إطباق"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "متى أول زيارة للأسنان؟"
-      },
-      "options": [
-        {
-          "ar": "خلال 6 أشهر من أول سن"
-        },
-        {
-          "ar": "عند 6 سنين"
-        },
-        {
-          "ar": "عند 12 سنة"
-        },
-        {
-          "ar": "لا حاجة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التوصية."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما الذي يعرّض لتسوس الطفولة؟"
-      },
-      "options": [
-        {
-          "ar": "زجاجة حليب/عصير عند النوم"
-        },
-        {
-          "ar": "ماء الصنبور"
-        },
-        {
-          "ar": "فرشاة"
-        },
-        {
-          "ar": "لبن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "سكر ملامس لفترة طويلة."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل 17 شهرًا يمص إبهامه؟"
-      },
-      "options": [
-        {
-          "ar": "لا تتدخل غالبًا"
-        },
-        {
-          "ar": "عقاب"
-        },
-        {
-          "ar": "قفازات"
-        },
-        {
-          "ar": "مرارة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "سلوك مؤقت."
-      }
-    },
-    {
-      "q": {
-        "ar": "تسنين مؤلم؟"
-      },
-      "options": [
-        {
-          "ar": "حلقة تسنين باردة"
-        },
-        {
-          "ar": "عسل"
-        },
-        {
-          "ar": "أسبرين"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يخفف الالتهاب."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عبارة أم تدل على حاجة لتعليم؟ (التسنين)"
-      },
-      "options": [
-        {
-          "ar": "لا حاجة لتنظيف أسنان الطفل حتى تبزغ الدائمة"
-        },
-        {
-          "ar": "أنظف أسنانه"
-        },
-        {
-          "ar": "زيارة طبيب"
-        },
-        {
-          "ar": "فرشاة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خاطئة."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل 6 أشهر يسيل لعابه ويعض: ماذا؟"
-      },
-      "options": [
-        {
-          "ar": "تسنين"
-        },
-        {
-          "ar": "عدوى"
-        },
-        {
-          "ar": "حساسية"
-        },
-        {
-          "ar": "حمى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تسنين."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نصيحة لسن المدرسة للوقاية من التسوس؟"
-      },
-      "options": [
-        {
-          "ar": "تفريش بعد الوجبات والخفيفة وقبل النوم"
-        },
-        {
-          "ar": "عصير ليلًا"
-        },
-        {
-          "ar": "حلوى"
-        },
-        {
-          "ar": "لا فرشاة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "عادات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عبارة من أم طفل عمره 6 أشهر تدل على الحاجة لمزيد من التثقيف عن الأسنان؟"
-      },
-      "options": [
-        {
-          "ar": "لا حاجة لطبيب الأسنان حتى بزوغ الأسنان الدائمة"
-        },
-        {
-          "ar": "سأزور الطبيب بعد أول سن"
-        },
-        {
-          "ar": "أمنع الزجاجة ليلًا"
-        },
-        {
-          "ar": "أستعمل حلقة تسنين باردة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الزيارة الأولى خلال 6 أشهر من بزوغ أول سن أو عند عمر سنة، وليس بعد الأسنان الدائمة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تدبير يقلل تسوس الأسنان عند طفل المدرسة؟"
-      },
-      "options": [
-        {
-          "ar": "الفرشاة بعد الوجبات والوجبات الخفيفة وقبل النوم"
-        },
-        {
-          "ar": "الحلوى اللزجة بين الوجبات"
-        },
-        {
-          "ar": "عصير قبل النوم"
-        },
-        {
-          "ar": "تجنب الألبان"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "إزالة اللويحة بعد الأكل وقبل النوم تحمي المينا؛ العصير ليلًا والحلوى اللزجة تزيد التسوس."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "StatPearls — ملخص الموضوع"
-    },
-    {
-      "title": "Nelson Textbook of Pediatrics — ملخصات عامة"
-    }
+  "en": [
+   "First visit within 6 months of the first tooth",
+   "No sleeping with a bottle",
+   "Tap water and brushing twice",
+   "Thumb sucking after permanent teeth erupt = malocclusion"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "متى أول زيارة للأسنان؟",
+    "en": "When is the first dental visit?"
+   },
+   "options": [
+    {
+     "ar": "خلال 6 أشهر من أول سن",
+     "en": "Within 6 months of the first tooth"
+    },
+    {
+     "ar": "عند 6 سنين",
+     "en": "At 6 years"
+    },
+    {
+     "ar": "عند 12 سنة",
+     "en": "At 12 years"
+    },
+    {
+     "ar": "لا حاجة",
+     "en": "Not needed"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التوصية.",
+    "en": "The recommendation."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما الذي يعرّض لتسوس الطفولة؟",
+    "en": "What predisposes to early childhood caries?"
+   },
+   "options": [
+    {
+     "ar": "زجاجة حليب/عصير عند النوم",
+     "en": "A bottle of milk/juice at bedtime"
+    },
+    {
+     "ar": "ماء الصنبور",
+     "en": "Tap water"
+    },
+    {
+     "ar": "فرشاة",
+     "en": "Brush"
+    },
+    {
+     "ar": "لبن",
+     "en": "Yogurt"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "سكر ملامس لفترة طويلة.",
+    "en": "Sugar in prolonged contact."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل 17 شهرًا يمص إبهامه؟",
+    "en": "A 17-month-old child sucks his thumb?"
+   },
+   "options": [
+    {
+     "ar": "لا تتدخل غالبًا",
+     "en": "Usually do not intervene"
+    },
+    {
+     "ar": "عقاب",
+     "en": "Punishment"
+    },
+    {
+     "ar": "قفازات",
+     "en": "Gloves"
+    },
+    {
+     "ar": "مرارة",
+     "en": "Bitter taste"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "سلوك مؤقت.",
+    "en": "Temporary behavior."
+   }
+  },
+  {
+   "q": {
+    "ar": "تسنين مؤلم؟",
+    "en": "Painful teething?"
+   },
+   "options": [
+    {
+     "ar": "حلقة تسنين باردة",
+     "en": "Cold teething ring"
+    },
+    {
+     "ar": "عسل",
+     "en": "Honey"
+    },
+    {
+     "ar": "أسبرين",
+     "en": "Aspirin"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يخفف الالتهاب.",
+    "en": "It relieves the inflammation."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عبارة أم تدل على حاجة لتعليم؟ (التسنين)",
+    "en": "Which mother's statement shows a need for teaching? (Teething)"
+   },
+   "options": [
+    {
+     "ar": "لا حاجة لتنظيف أسنان الطفل حتى تبزغ الدائمة",
+     "en": "There is no need to clean the child's teeth until the permanent ones erupt"
+    },
+    {
+     "ar": "أنظف أسنانه",
+     "en": "I clean his teeth"
+    },
+    {
+     "ar": "زيارة طبيب",
+     "en": "Doctor visit"
+    },
+    {
+     "ar": "فرشاة",
+     "en": "Brush"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خاطئة.",
+    "en": "Incorrect."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل 6 أشهر يسيل لعابه ويعض: ماذا؟",
+    "en": "A 6-month-old child drools and bites: what is it?"
+   },
+   "options": [
+    {
+     "ar": "تسنين",
+     "en": "Teething"
+    },
+    {
+     "ar": "عدوى",
+     "en": "Infection"
+    },
+    {
+     "ar": "حساسية",
+     "en": "Allergy"
+    },
+    {
+     "ar": "حمى",
+     "en": "Fever"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تسنين.",
+    "en": "Teething."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نصيحة لسن المدرسة للوقاية من التسوس؟",
+    "en": "Which advice for school-age children prevents tooth decay?"
+   },
+   "options": [
+    {
+     "ar": "تفريش بعد الوجبات والخفيفة وقبل النوم",
+     "en": "Brushing after meals and snacks and before bed"
+    },
+    {
+     "ar": "عصير ليلًا",
+     "en": "Juice at night"
+    },
+    {
+     "ar": "حلوى",
+     "en": "Candy"
+    },
+    {
+     "ar": "لا فرشاة",
+     "en": "No brush"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "عادات.",
+    "en": "Habits."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عبارة من أم طفل عمره 6 أشهر تدل على الحاجة لمزيد من التثقيف عن الأسنان؟",
+    "en": "Which statement from the mother of a 6-month-old child shows a need for more dental teaching?"
+   },
+   "options": [
+    {
+     "ar": "لا حاجة لطبيب الأسنان حتى بزوغ الأسنان الدائمة",
+     "en": "There is no need for a dentist until the permanent teeth erupt"
+    },
+    {
+     "ar": "سأزور الطبيب بعد أول سن",
+     "en": "I will visit the dentist after the first tooth"
+    },
+    {
+     "ar": "أمنع الزجاجة ليلًا",
+     "en": "I will stop the bottle at night"
+    },
+    {
+     "ar": "أستعمل حلقة تسنين باردة",
+     "en": "I use a cold teething ring"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الزيارة الأولى خلال 6 أشهر من بزوغ أول سن أو عند عمر سنة، وليس بعد الأسنان الدائمة.",
+    "en": "The first visit is within 6 months of the first tooth erupting or at 1 year of age, not after the permanent teeth."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تدبير يقلل تسوس الأسنان عند طفل المدرسة؟",
+    "en": "Which measure reduces tooth decay in a school-age child?"
+   },
+   "options": [
+    {
+     "ar": "الفرشاة بعد الوجبات والوجبات الخفيفة وقبل النوم",
+     "en": "Brushing after meals and snacks and before bed"
+    },
+    {
+     "ar": "الحلوى اللزجة بين الوجبات",
+     "en": "Sticky candy between meals"
+    },
+    {
+     "ar": "عصير قبل النوم",
+     "en": "Juice before bed"
+    },
+    {
+     "ar": "تجنب الألبان",
+     "en": "Avoiding dairy"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "إزالة اللويحة بعد الأكل وقبل النوم تحمي المينا؛ العصير ليلًا والحلوى اللزجة تزيد التسوس.",
+    "en": "Removing plaque after eating and before bed protects the enamel; juice at night and sticky candy increase decay."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls — ملخص الموضوع"
+  },
+  {
+   "title": "Nelson Textbook of Pediatrics — ملخصات عامة"
+  }
+ ]
 }

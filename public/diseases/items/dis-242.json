@@ -1,234 +1,288 @@
 {
-  "id": "dis-242",
-  "num": 242,
-  "system": "cardio",
-  "icon": "🫀",
-  "level": 3,
-  "title": {
-    "ar": "التعامل مع ألم الصدر في الطوارئ",
-    "en": "Approach to Chest Pain"
+ "id": "dis-242",
+ "num": 242,
+ "system": "cardio",
+ "icon": "🫀",
+ "level": 3,
+ "title": {
+  "ar": "التعامل مع ألم الصدر في الطوارئ",
+  "en": "Approach to Chest Pain"
+ },
+ "teaser": {
+  "ar": "ألم صدر إقفاري أم غير نمطي أم غير إقفاري؟ ثلاث صفات وECG وتروبونين تحدد المسار: STEMI أو NSTEMI أو ذبحة غير مستقرة أو مراقبة 12 ساعة.",
+  "en": "Ischemic, atypical, or non-ischemic chest pain? Three characteristics, ECG, and troponin determine the pathway: STEMI, NSTEMI, unstable angina, or 12-hour monitoring."
+ },
+ "chips": [
+  {
+   "ar": "3 صفات إقفارية",
+   "en": "3 ischemic characteristics"
   },
-  "teaser": {
-    "ar": "ألم صدر إقفاري أم غير نمطي أم غير إقفاري؟ ثلاث صفات وECG وتروبونين تحدد المسار: STEMI أو NSTEMI أو ذبحة غير مستقرة أو مراقبة 12 ساعة."
+  {
+   "ar": "ECG خلال 10 د",
+   "en": "ECG within 10 min"
   },
-  "chips": [
-    {
-      "ar": "3 صفات إقفارية"
-    },
-    {
-      "ar": "ECG خلال 10 د"
-    },
-    {
-      "ar": "STEMI/NSTEMI/UA"
-    }
+  {
+   "ar": "STEMI/NSTEMI/UA",
+   "en": "STEMI/NSTEMI/UA"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>ألم الصدر (<b>Chest pain</b>) من أشهر الشكاوى في الطوارئ، وسببه ممكن يكون خطير (جلطة القلب، تسلخ الأورطي، جلطة رئوية) أو بسيط (شد عضلي، حموضة). المطلوب منك كممرض: <b>تصنيف سريع للألم + ECG خلال 10 دقائق</b> وعدم ترك أي مريض بدون تقييم.</p><div class=\"cs-stats\"><div><b>10 د</b><span>أقصى وقت لأول ECG</span></div><div><b>3 صفات</b><span>للألم الإقفاري</span></div><div><b>12 ساعة</b><span>مراقبة الألم غير النمطي</span></div></div>[[slot:dis-242-triage|تصنيف ألم الصدر إلى إقفاري وغير نمطي وغير إقفاري — رسم من إعداد الموقع|/diseases/img/dis-242-triage.svg]]<h4>الأنواع الثلاثة</h4><table><thead><tr><th>النوع</th><th>التعريف</th></tr></thead><tbody><tr><td>إقفاري (Ischemic)</td><td>يجمع الصفات الثلاث: (1) خلف القص (Retrosternal) (2) يزيد بالمجهود (Aggravated by exercise) (3) يخف بالراحة أو بالنيترات (Relieved by rest or nitrates)</td></tr><tr><td>غير نمطي (Atypical)</td><td>فيه صفتان فقط من الثلاث</td></tr><tr><td>غير إقفاري (Non-ischemic)</td><td>ولا صفة من الثلاث</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>قاعدة</strong><p>أي ألم إقفاري أو غير نمطي: ECG + تحليل تروبونين <b>فوراً</b>. لا ينتظر ولا يمشي المريض لوحده.</p></div>",
+   "en": "<p>Chest pain (<b>Chest pain</b>) is one of the most common complaints in the emergency room, and its cause may be serious (heart attack, aortic dissection, pulmonary embolism) or minor (muscle strain, acidity). What is required of you as a nurse: <b>rapid classification of the pain + ECG within 10 minutes</b> and never leaving any patient without assessment.</p><div class=\"cs-stats\"><div><b>10 min</b><span>Maximum time to first ECG</span></div><div><b>3 characteristics</b><span>of ischemic pain</span></div><div><b>12 hours</b><span>Monitoring of atypical pain</span></div></div>[[slot:dis-242-triage|Classifying chest pain as ischemic, atypical, and non-ischemic — illustration made by the site|/diseases/img/dis-242-triage.svg]]<h4>The three types</h4><table><thead><tr><th>Type</th><th>Definition</th></tr></thead><tbody><tr><td>Ischemic</td><td>Combines all three characteristics: (1) Retrosternal (2) Aggravated by exercise (3) Relieved by rest or nitrates</td></tr><tr><td>Atypical</td><td>Has only two of the three</td></tr><tr><td>Non-ischemic</td><td>None of the three</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Rule</strong><p>Any ischemic or atypical pain: ECG + troponin test <b>immediately</b>. The patient does not wait and does not walk alone.</p></div>"
+  },
+  "causes": {
+   "ar": "<h4>أهم أسباب ألم الصدر (للتفكير السريع)</h4><table><thead><tr><th>المجموعة</th><th>أمثلة</th></tr></thead><tbody><tr><td>قلبية خطيرة</td><td>متلازمة الشريان التاجي الحادة (جلطة/ذبحة غير مستقرة)، التهاب التامور (Pericarditis)، التهاب العضلة، تسلخ الأورطي</td></tr><tr><td>رئوية</td><td>جلطة رئوية، استرواح الصدر (Pneumothorax)، التهاب رئوي/غشاء الجنب</td></tr><tr><td>هضمية</td><td>ارتجاع المريء، قرحة، تقلص المريء، التهاب المرارة/البنكرياس</td></tr><tr><td>عضلية وعظمية</td><td>التهاب الغضروف الضلعي، شد عضلات الصدر، الفقرات العنقية</td></tr><tr><td>أخرى</td><td>القلق ونوبات الهلع، الهربس النطاقي (قبل ظهور الطفح)</td></tr></tbody></table>",
+   "en": "<h4>The most important causes of chest pain (for quick thinking)</h4><table><thead><tr><th>Group</th><th>Examples</th></tr></thead><tbody><tr><td>Serious cardiac</td><td>Acute coronary syndrome (heart attack/unstable angina), pericarditis, myocarditis, aortic dissection</td></tr><tr><td>Pulmonary</td><td>Pulmonary embolism, pneumothorax, pneumonia/pleurisy</td></tr><tr><td>Digestive</td><td>Reflux, ulcer, esophageal spasm, cholecystitis/pancreatitis</td></tr><tr><td>Musculoskeletal</td><td>Costochondritis, chest muscle strain, cervical vertebrae</td></tr><tr><td>Other</td><td>Anxiety and panic attacks, herpes zoster (before the rash appears)</td></tr></tbody></table>"
+  },
+  "signs": {
+   "ar": "<h4>كيف تسأل المريض؟ (تقييم الألم)</h4><ul><li>الموضع والانتشار: خلف القص؟ للذراع/الفك/الظهر؟</li><li>النوع: ضاغط/عاصر (إقفاري) أم طاعن/يزيد بالنفس أو الحركة (التهاب غشاء أو عضلي)؟</li><li>المدة والبداية: ثواني، دقايق، أم متواصل؟ فجائي؟</li><li>العلاقة بالمجهود والراحة والأكل ووضع الجسم</li><li>أعراض مصاحبة: ضيق نفس، عرق بارد، غثيان، إغماء، خفقان</li><li>عوامل الخطر: سكر، ضغط، تدخين، كوليسترول، تاريخ عائلي، جلطة سابقة</li><li>أدوية: نيترات؟ أسبرين؟ سيلدنافيل؟</li></ul><div class=\"cs-box cs-warning\"><strong>انتبه — جلطة بدون ألم</strong><p>مرضى السكر وكبار السن والنساء ممكن تظهر الجلطة بضيق نفس أو إعياء أو عرق أو غثيان بدون ألم نمطي.</p></div><div class=\"cs-box cs-pearl\"><strong>علامات تدل على سبب غير قلبي خطير</strong><p>ألم مفاجئ شديد يمتد للظهر مع اختلاف ضغط الذراعين = تسلخ أبهر؛ ضيق نفس مفاجئ + تسرع + (ساق متورمة أو جلطة سابقة) = جلطة رئوية؛ ألم يزيد بالتنفس مع غياب صوت التنفس = استرواح صدر.</p></div><!--e2-242--><h4>الألم الإقفاري النمطي (الذبحة وجلطة القلب)</h4><table><thead><tr><th>الصفة</th><th>التفاصيل</th></tr></thead><tbody><tr><td>المكان</td><td>منتصف الصدر خلف القص، يمتد غالباً للكتف أو الذراع الشمال (الجهة الداخلية حتى الخنصر)، وأحياناً الذراع اليمين، الرقبة، الفك، الأسنان، الظهر، أعلى البطن</td></tr><tr><td>الوصف</td><td>ضغط أو ثقل أو انعصار أو حرقان (طابق على صدري)</td></tr><tr><td>مصاحبات</td><td>نهجان، دوخة، عرق شديد، غثيان وترجيع</td></tr><tr><td>المحفزات</td><td>يزيد بالمجهود والتوتر والجو البارد</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>ألم زي سكاكين</strong><p>ألم طعن بيتقطع غالباً بعيد عن القلب، لكن لو في عوامل خطورة لا تستبعده.</p></div><div class=\"cs-box cs-danger\"><strong>مريض السكر</strong><p>أي مريض سكر جاي بوجع صدر بسيط، أو نهجان أو دوخة بدون ألم صدر: اعمل ECG لاستبعاد الجلطة الصامتة (Silent infarction)، لأن اعتلال الأعصاب السكري يخفي الألم.</p></div><h4>إسعاف أي ألم صدر نمطي: MONA</h4><p>تُنفّذ بمجرد الشك في IHD لأنها لا تضر المريض لو طلع مفيش حاجة، لكن هتنفعه لو عنده جلطة (بأمر الطبيب).</p><table><thead><tr><th>الحرف</th><th>الدواء</th><th>التفاصيل حسب المراجع</th></tr></thead><tbody><tr><td>M — Morphine</td><td>يفضل عدم استخدام المورفين إلا من طرف متخصص: Pethedin 50 أمبول، أو Nalufin أمبول</td><td>Pethedin: أمبول عضل أو يُخفف في 5 سم ملح وريد ببطء. Nalufin: عضل أو وريد ببطء أو يُخفف في 10 سم ملح وريد</td></tr><tr><td>O — Oxygen</td><td>أكسجين بالقناع</td><td></td></tr><tr><td>N — Nitrate</td><td>Dinitra 5 مجم قرص تحت اللسان</td><td>يكرر حتى 3 مرات بينهم 5 دقائق؛ قيس الضغط قبل الاستخدام لأنه بيخفضه</td></tr><tr><td>A — Aspirin</td><td>Aspocid chewable</td><td>4 أقراص يقرشهم المريض</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الحالية (AHA/ESC): الأكسجين فقط لو SpO2 أقل من 90%، والمورفين/Pethidine بحذر وللألم المقاوم فقط. Aspocid الشائع 75 مجم: 4 أقراص = 300 مجم (الجرعة المضغوطة المقبولة 162–325 مجم) ما لم يكن هناك تحسس أو نزيف. النيترات ممنوعة لو انقباضي أقل من 90 أو احتشاء البطين الأيمن أو أخذ Sildenafil خلال 24–48 ساعة. الجرعات بأمر الطبيب.</p></div><h4>بعد MONA: إزاي نفرّق؟</h4><ul><li>التوقيت: الألم بدأ إمتى وبقاله قد إيه؟</li><li>الاستجابة للنيترات: قرص Dinitra، لو ما تحسنش قرص تاني بعد 5 دقايق ثم آخر بعد 5 دقايق (أقصى 3 أقراص)</li></ul><div class=\"cs-decision\"><strong>الألم أقل من 15 دقيقة وارتاح بعد 1–3 أقراص؟</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>ذبحة</b><p>ذبحة مستقرة (Stable angina): مريض عارف حالته، قرص تحت اللسان وغالباً مش بيروح المستشفى إلا لو جديد؛ ممكن ECG للاطمئنان ويتابع مع الطبيب.</p></div><div class=\"cs-branch no\"><b>ACS</b><p>الألم أكتر من 30 دقيقة ولا استجابة بعد 3 أقراص: متلازمة تاجية حادة (ACS) — حالة طوارئ: ECG وإنزيمات (CK، CK-MB، Troponin) ثم نائب القلب.</p></div></div></div><table><thead><tr><th>النوع</th><th>ECG</th><th>الإنزيمات</th></tr></thead><tbody><tr><td>STEMI</td><td>ارتفاع ST ± انقلاب T</td><td>مرتفعة</td></tr><tr><td>Non-STEMI</td><td>هبوط ST ± انقلاب T</td><td>مرتفعة</td></tr><tr><td>Unstable angina</td><td>غير نوعي</td><td>طبيعية</td></tr></tbody></table><ul><li>الأسوأ تأثيراً: STEMI (جلطة كاملة السمك)</li><li>الأفضل مآلاً: STEMI لأنها لا تفوت وتستجيب للستربتوكيناز (حسب المراجع)</li></ul><div class=\"cs-box cs-danger\"><strong>تسلخ الأورطي (Dissecting aortic aneurysm)</strong><ul><li>حالة نادرة وصعب تشخيصها</li><li>غالباً رجل كبير مدخن عنده ضغط</li><li>ألم رهيب بالصدر زي مناشير أو سكاكين أو كأن حاجة بتتمزق</li><li>ممكن يطلع ECG وإنزيمات القلب طبيعية</li><li>أسهل علامة: قيس النبض والضغط في الذراعين؛ تلاقيه واقع في ناحية وكويس في الناحية التانية</li></ul></div>",
+   "en": "<h4>How do you question the patient? (pain assessment)</h4><ul><li>Location and radiation: behind the sternum? To the arm/jaw/back?</li><li>Type: pressing/squeezing (ischemic) or stabbing/worse with breathing or movement (pleural or muscular inflammation)?</li><li>Duration and onset: seconds, minutes, or continuous? Sudden?</li><li>Relationship to exertion, rest, eating, and body position</li><li>Associated symptoms: shortness of breath, cold sweat, nausea, fainting, palpitations</li><li>Risk factors: diabetes, hypertension, smoking, cholesterol, family history, previous heart attack</li><li>Medications: nitrates? Aspirin? Sildenafil?</li></ul><div class=\"cs-box cs-warning\"><strong>Be careful: a heart attack without pain</strong><p>In patients with diabetes, older adults, and women, a heart attack may appear with shortness of breath, fatigue, sweating, or nausea without typical pain.</p></div><div class=\"cs-box cs-pearl\"><strong>Signs of a serious non-cardiac cause</strong><p>Sudden severe pain radiating to the back with a difference in blood pressure between the arms = aortic dissection; sudden shortness of breath + tachycardia + (swollen leg or previous clot) = pulmonary embolism; pain worse with breathing with absent breath sounds = pneumothorax.</p></div><!--e2-242--><h4>Typical ischemic pain (angina and heart attack)</h4><table><thead><tr><th>Feature</th><th>Details</th></tr></thead><tbody><tr><td>Location</td><td>Middle of the chest behind the sternum, often radiating to the left shoulder or arm (the inner side down to the little finger), and sometimes the right arm, neck, jaw, teeth, back, upper abdomen</td></tr><tr><td>Description</td><td>Pressure, heaviness, squeezing, or burning (\"something is sitting on my chest\")</td></tr><tr><td>Associated</td><td>Breathlessness, dizziness, heavy sweating, nausea and vomiting</td></tr><tr><td>Triggers</td><td>Worse with exertion, stress, and cold weather</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Knife-like pain</strong><p>Stabbing pain that comes and goes is usually far from the heart, but if there are risk factors do not rule it out.</p></div><div class=\"cs-box cs-danger\"><strong>The diabetic patient</strong><p>Any diabetic patient who comes with mild chest pain, or breathlessness or dizziness without chest pain: do an ECG to rule out silent infarction, because diabetic neuropathy hides the pain.</p></div><h4>First aid for any typical chest pain: MONA</h4><p>Carry it out as soon as IHD is suspected because it does not harm the patient if nothing is found, but it will help if he has a heart attack (by physician's order).</p><table><thead><tr><th>Letter</th><th>Drug</th><th>Details per references</th></tr></thead><tbody><tr><td>M — Morphine</td><td>It is preferable not to use morphine except by a specialist: Pethedin 50 ampoule, or Nalufin ampoule</td><td>Pethedin: an ampoule IM or diluted in 5 mL saline slow IV. Nalufin: IM or slow IV or diluted in 10 mL saline IV</td></tr><tr><td>O — Oxygen</td><td>Oxygen by mask</td><td></td></tr><tr><td>N — Nitrate</td><td>Dinitra 5 mg tablet under the tongue</td><td>Repeat up to 3 times 5 minutes apart; measure blood pressure before use because it lowers it</td></tr><tr><td>A — Aspirin</td><td>Aspocid chewable</td><td>4 tablets, which the patient crushes</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Current guidelines (AHA/ESC): oxygen only if SpO2 is below 90%, and morphine/pethidine with caution and only for refractory pain. The common Aspocid 75 mg: 4 tablets = 300 mg (the accepted chewed dose is 162–325 mg) unless there is allergy or bleeding. Nitrates are contraindicated if systolic is below 90, in right ventricular infarction, or if Sildenafil was taken within 24–48 hours. Doses are per physician's order.</p></div><h4>After MONA: how do we differentiate?</h4><ul><li>Timing: when did the pain start and how long has it lasted?</li><li>Response to nitrates: a Dinitra tablet, and if no improvement another tablet after 5 minutes then another after 5 minutes (maximum 3 tablets)</li></ul><div class=\"cs-decision\"><strong>Pain under 15 minutes and relieved after 1–3 tablets?</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>Angina</b><p>Stable angina: a patient who knows his condition, a tablet under the tongue and usually does not go to the hospital unless it is new; an ECG may be done for reassurance and he follows up with the physician.</p></div><div class=\"cs-branch no\"><b>ACS</b><p>Pain over 30 minutes and no response after 3 tablets: acute coronary syndrome (ACS), an emergency: ECG and enzymes (CK, CK-MB, troponin) then the cardiology resident.</p></div></div></div><table><thead><tr><th>Type</th><th>ECG</th><th>Enzymes</th></tr></thead><tbody><tr><td>STEMI</td><td>ST elevation ± T inversion</td><td>Elevated</td></tr><tr><td>Non-STEMI</td><td>ST depression ± T inversion</td><td>Elevated</td></tr><tr><td>Unstable angina</td><td>Nonspecific</td><td>Normal</td></tr></tbody></table><ul><li>The worst in impact: STEMI (full-thickness infarct)</li><li>The best in outcome: STEMI because it is not missed and responds to streptokinase (per references)</li></ul><div class=\"cs-box cs-danger\"><strong>Aortic dissection (dissecting aortic aneurysm)</strong><ul><li>A rare condition that is hard to diagnose</li><li>Usually an older male smoker with hypertension</li><li>Terrible chest pain like saws or knives or as if something is tearing</li><li>The ECG and cardiac enzymes may come out normal</li><li>The easiest sign: measure the pulse and blood pressure in both arms; you find it low on one side and fine on the other</li></ul></div>"
+  },
+  "tests": {
+   "ar": "<h4>الفحوصات الأولية</h4><ul><li><b>ECG 12 اشتقاق خلال 10 دقائق</b> وتكراره عند تغير الألم</li><li>تروبونين (يُفضّل hs-troponin) وإعادته حسب البروتوكول (غالباً بعد 1–3 ساعات)</li><li>أشعة صدر، سكر، كلى وأملاح، صورة دم، تجلط (قبل أي مُذيب أو مُميّع)</li><li>عند الشك: إيكو، أشعة مقطعية للأبهر/الشرايين الرئوية</li></ul>[[slot:dis-242-acs|تصنيف ACS حسب الـECG والتروبونين — رسم من إعداد الموقع|/diseases/img/dis-242-acs.svg]]<table><thead><tr><th>ECG</th><th>تروبونين / CK-MB</th><th>التشخيص</th></tr></thead><tbody><tr><td>ارتفاع ST</td><td>مرتفع</td><td>STEMI</td></tr><tr><td>هبوط ST / T مقلوبة</td><td>مرتفع</td><td>NSTEMI</td></tr><tr><td>تغيّرات غير نوعية أو طبيعي</td><td>طبيعي</td><td>ذبحة غير مستقرة (Unstable angina)</td></tr></tbody></table>[[slot:dis-242-ecg-real|صورة: ECG حقيقي يوضح ارتفاع ST في STEMI للمقارنة]]",
+   "en": "<h4>Initial tests</h4><ul><li><b>12-lead ECG within 10 minutes</b> and repeating it when the pain changes</li><li>Troponin (preferably hs-troponin) and repeating it per protocol (usually after 1–3 hours)</li><li>Chest X-ray, sugar, kidneys and electrolytes, blood count, coagulation (before any thrombolytic or anticoagulant)</li><li>If in doubt: echo, CT of the aorta/pulmonary arteries</li></ul>[[slot:dis-242-acs|ACS classification by ECG and troponin — illustration made by the site|/diseases/img/dis-242-acs.svg]]<table><thead><tr><th>ECG</th><th>Troponin / CK-MB</th><th>Diagnosis</th></tr></thead><tbody><tr><td>ST elevation</td><td>Elevated</td><td>STEMI</td></tr><tr><td>ST depression / inverted T</td><td>Elevated</td><td>NSTEMI</td></tr><tr><td>Nonspecific changes or normal</td><td>Normal</td><td>Unstable angina</td></tr></tbody></table>[[slot:dis-242-ecg-real|Photo: a real ECG showing ST elevation in STEMI for comparison]]"
+  },
+  "treatment": {
+   "ar": "<h4>النوع الأول: الألم الإقفاري</h4><p>نعمل ECG وتحليل تروبونين ونقسم المريض لقسمين:</p><ul><li><b>ارتفاع ST + تروبونين مرتفع = STEMI</b> (جلطة بارتفاع ST) ← مسار الجلطة الحادة: أسبرين، فتح الشريان فوراً (انظر دليل «احتشاء عضلة القلب»)</li><li><b>تغيّرات ST وT بدون ارتفاع + تروبونين مرتفع = NSTEMI</b></li><li><b>تروبونين طبيعي = ذبحة غير مستقرة (UA)</b> (وممكن يُعاد القياس لأن التروبونين يتأخر ارتفاعه)</li></ul><h4>النوع الثاني: الألم غير النمطي</h4><ul><li>عمل ECG وتروبونين؛ لو الاثنين طبيعيان نبقي المريض تحت <b>مونيتور 12 ساعة</b> مع إعادة ECG وتروبونين</li><li>لو زاد الألم أو تغيّر الـECG أو ارتفع التروبونين ← يُعامل كذبحة غير مستقرة/ACS ويدخل <b>الإنعاش (CCU)</b></li><li>لو الألم ما زادش وبقى الـECG والتروبونين طبيعيين ← يُحضّر لـ<b>اختبار المجهود (Exercise ECG test)</b></li></ul><h4>النوع الثالث: غير إقفاري</h4><p>بدون أي صفة من الثلاثة: يُعالج حسب الأعراض والسبب (مسكن، مضاد حموضة، راحة، طمأنة)، بعد استبعاد الأسباب الخطيرة.</p><div class=\"cs-box cs-pearl\"><strong>تحديث</strong><p>الإرشادات الحديثة (ACC/AHA 2021 لألم الصدر، ESC 2023 للـACS) تعتمد على تروبونين عالي الحساسية بقياسين (0/1 أو 0/2–3 ساعات) مع مقياس خطر مثل HEART score لتحديد من يمكن خروجه بأمان؛ فالـ12 ساعة مراقبة مفيدة في المستشفيات اللي ما عندهاش hs-troponin. والمعيار: بروتوكول المستشفى.</p></div><h4>أدوية الإسعاف الأولي في الألم الإقفاري (بأمر الطبيب)</h4><ul><li>أسبرين 150–300 مجم مضغ (بعد السؤال عن الحساسية والنزيف)</li><li>نيتروجليسرين تحت اللسان 0.4 مجم (قبلها: ضغط انقباضي فوق 90 وعدم استخدام سيلدنافيل خلال 24–48 ساعة، واستبعاد إصابة البطين الأيمن)</li><li>أكسجين لو SpO₂ أقل من 90%</li><li>مسكن وريدي حذِر بأمر الطبيب</li></ul>",
+   "en": "<h4>Type one: ischemic pain</h4><p>We do an ECG and troponin test and divide the patient into two groups:</p><ul><li><b>ST elevation + elevated troponin = STEMI</b> (heart attack with ST elevation) ← the acute infarction pathway: aspirin, open the artery immediately (see the \"myocardial infarction\" guide)</li><li><b>ST and T changes without elevation + elevated troponin = NSTEMI</b></li><li><b>Normal troponin = unstable angina (UA)</b> (and the measurement may be repeated because troponin rises late)</li></ul><h4>Type two: atypical pain</h4><ul><li>Do an ECG and troponin; if both are normal we keep the patient under <b>12-hour monitoring</b> with a repeat ECG and troponin</li><li>If the pain increases or the ECG changes or the troponin rises ← treated as unstable angina/ACS and admitted to <b>the intensive care unit (CCU)</b></li><li>If the pain did not increase and the ECG and troponin stayed normal ← prepare for an <b>exercise ECG test</b></li></ul><h4>Type three: non-ischemic</h4><p>With none of the three characteristics: treated according to symptoms and cause (analgesic, antacid, rest, reassurance), after ruling out serious causes.</p><div class=\"cs-box cs-pearl\"><strong>Update</strong><p>Recent guidelines (ACC/AHA 2021 for chest pain, ESC 2023 for ACS) rely on high-sensitivity troponin with two measurements (0/1 or 0/2–3 hours) along with a risk score such as the HEART score to determine who can be discharged safely; so 12 hours of monitoring is useful in hospitals that do not have hs-troponin. The standard: hospital protocol.</p></div><h4>First-aid drugs in ischemic pain (per physician's order)</h4><ul><li>Aspirin 150–300 mg chewed (after asking about allergy and bleeding)</li><li>Nitroglycerin sublingual 0.4 mg (before it: systolic pressure above 90 and no sildenafil use within 24–48 hours, and rule out right ventricular involvement)</li><li>Oxygen if SpO₂ is below 90%</li><li>Cautious IV analgesic per physician's order</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>استقبل وصنّف فوراً</strong><p>قيّم العلامات الحيوية و SpO₂ والوعي. اسأل الأسئلة الثلاثة (خلف القص؟ مجهود؟ راحة/نيترات؟) وسجّل وقت بدء الألم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>ECG خلال 10 دقائق</strong><p>اطلب/اعمل ECG 12 اشتقاق، سلّمه للطبيب فوراً، كرّره لو تغيّر الألم. في الجلطة السفلية اطلب اشتقاقات يمنى (V4R).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>مونيتور وخط وريدي</strong><p>ECG مستمر، خط وريدي (والأفضل اثنين)، سحب تروبونين وتحاليل. اكتب أوقات سحب التروبونين الثاني.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ الأدوية بأمان</strong><p>أسبرين مضغ بعد السؤال عن الحساسية؛ نيترات بشروط الضغط والنبض والأدوية؛ لا تعطي نيترات لو شك في احتشاء البطين الأيمن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب الألم والمؤشرات</strong><p>قيّم شدة الألم (0–10) كل 5–15 دقيقة، والضغط والنبض والتنفس. أي ألم راجع أو تغيّر نظم: بلّغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ابقِ المريض ساكناً</strong><p>راحة تامة، لا مشي، لا يترك وحده. نقل بسرير/كرسي مع مرافق ومونيتور.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وثّق وسلّم</strong><p>وقت أول ECG، وقت التروبونين، الأدوية، الاستجابة. استخدم SBAR عند النقل للعناية.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>للألم غير النمطي</strong><p>المريض يبقى تحت المراقبة 12 ساعة (أو حسب البروتوكول) وبتتعاد ECG وتروبونين؛ أي تغير = إنذار فوري. لا تطمّن المريض بقول «طبيعي» وتخرجه قبل اكتمال المراقبة.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Receive and classify immediately</strong><p>Assess vital signs, SpO₂, and consciousness. Ask the three questions (behind the sternum? exertion? rest/nitrates?) and record the time the pain started.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>ECG within 10 minutes</strong><p>Request/do a 12-lead ECG, hand it to the physician immediately, and repeat it if the pain changes. In an inferior infarction request right-sided leads (V4R).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Monitor and IV line</strong><p>Continuous ECG, an IV line (preferably two), draw troponin and tests. Write down the time of the second troponin draw.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Give drugs safely</strong><p>Chewed aspirin after asking about allergy; nitrates with conditions of blood pressure, pulse, and drugs; do not give nitrates if right ventricular infarction is suspected.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Monitor pain and indicators</strong><p>Assess pain severity (0–10) every 5–15 minutes, and blood pressure, pulse, and breathing. Any returning pain or rhythm change: report.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Keep the patient still</strong><p>Complete rest, no walking, not left alone. Transport by bed/chair with an escort and monitor.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Document and hand over</strong><p>Time of first ECG, time of troponin, drugs, response. Use SBAR when transferring to intensive care.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>For atypical pain</strong><p>The patient stays under observation for 12 hours (or per protocol) and the ECG and troponin are repeated; any change = immediate alarm. Do not reassure the patient by saying \"normal\" and discharge him before the monitoring is complete.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>ألم مستمر أكتر من 20 دقيقة أو لا يخف بالنيترات</li><li>عرق بارد، شحوب، ضغط أقل من 90</li><li>ارتفاع ST أو تغيّر جديد بالـECG أو LBBB جديد</li><li>اضطراب نظم (VT/VF/بطء)</li><li>ضيق نفس شديد أو SpO₂ أقل من 90%</li><li>ألم مفاجئ ممزق يمتد للظهر أو فرق ضغط بين الذراعين</li><li>إغماء أو تشوش وعي</li></ul>",
+   "en": "<ul><li>Pain lasting more than 20 minutes or not relieved by nitrates</li><li>Cold sweat, pallor, blood pressure below 90</li><li>ST elevation or a new ECG change or new LBBB</li><li>Arrhythmia (VT/VF/bradycardia)</li><li>Severe shortness of breath or SpO₂ below 90%</li><li>Sudden tearing pain radiating to the back or a pressure difference between the arms</li><li>Fainting or confusion</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>أي ألم صدر ضاغط أكتر من 15–20 دقيقة أو مع عرق وضيق نفس: إسعاف فوراً ولا تقود بنفسك.</li><li>اعرف أعراض جلطتك: ممكن تكون ضيق نفس أو إعياء فقط، خصوصاً لمريض السكر.</li><li>نيترات تحت اللسان: اقعد، قرص واحد، والألم لو ما راحش بعد 5 دقائق: إسعاف.</li><li>اضبط الضغط والسكر والكوليسترول، وبطّل تدخين، واتحرك بانتظام.</li><li>اتبع خطة المتابعة واختبار المجهود لو طلبها الطبيب.</li></ul>",
+   "en": "<ul><li>Any pressing chest pain lasting more than 15–20 minutes or with sweating and shortness of breath: call an ambulance immediately and do not drive yourself.</li><li>Know your heart attack symptoms: it may be only shortness of breath or fatigue, especially for a diabetic patient.</li><li>Sublingual nitrate: sit down, one tablet, and if the pain does not go away after 5 minutes: call an ambulance.</li><li>Control blood pressure, sugar, and cholesterol, quit smoking, and exercise regularly.</li><li>Follow the follow-up plan and the exercise test if the physician requests it.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الألم الإقفاري: خلف القص + يزيد بالمجهود + يخف بالراحة/النيترات (3 صفات)",
+   "غير نمطي: صفتان؛ غير إقفاري: ولا صفة",
+   "أول إجراء: ECG خلال 10 دقائق + تروبونين",
+   "ارتفاع ST + تروبونين = STEMI؛ تغيّر ST/T + تروبونين = NSTEMI؛ تروبونين طبيعي = ذبحة غير مستقرة",
+   "غير النمطي: مونيتور 12 ساعة مع إعادة ECG وتروبونين",
+   "لو الألم زاد أو الـECG تغيّر أو التروبونين ارتفع: دخول الإنعاش",
+   "استبعد الأسباب القاتلة: تسلخ أبهر، جلطة رئوية، استرواح صدر",
+   "مريض السكر بنهجان أو دوخة: ECG لاستبعاد الجلطة الصامتة",
+   "MONA: Morphine/Pethidine، Oxygen، Nitrate (Dinitra)، Aspirin (Aspocid مضغ)",
+   "قارن الضغط في الذراعين: فرق كبير = تسلخ الأورطي"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>ألم الصدر (<b>Chest pain</b>) من أشهر الشكاوى في الطوارئ، وسببه ممكن يكون خطير (جلطة القلب، تسلخ الأورطي، جلطة رئوية) أو بسيط (شد عضلي، حموضة). المطلوب منك كممرض: <b>تصنيف سريع للألم + ECG خلال 10 دقائق</b> وعدم ترك أي مريض بدون تقييم.</p><div class=\"cs-stats\"><div><b>10 د</b><span>أقصى وقت لأول ECG</span></div><div><b>3 صفات</b><span>للألم الإقفاري</span></div><div><b>12 ساعة</b><span>مراقبة الألم غير النمطي</span></div></div>[[slot:dis-242-triage|تصنيف ألم الصدر إلى إقفاري وغير نمطي وغير إقفاري — رسم من إعداد الموقع|/diseases/img/dis-242-triage.svg]]<h4>الأنواع الثلاثة</h4><table><thead><tr><th>النوع</th><th>التعريف</th></tr></thead><tbody><tr><td>إقفاري (Ischemic)</td><td>يجمع الصفات الثلاث: (1) خلف القص (Retrosternal) (2) يزيد بالمجهود (Aggravated by exercise) (3) يخف بالراحة أو بالنيترات (Relieved by rest or nitrates)</td></tr><tr><td>غير نمطي (Atypical)</td><td>فيه صفتان فقط من الثلاث</td></tr><tr><td>غير إقفاري (Non-ischemic)</td><td>ولا صفة من الثلاث</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>قاعدة</strong><p>أي ألم إقفاري أو غير نمطي: ECG + تحليل تروبونين <b>فوراً</b>. لا ينتظر ولا يمشي المريض لوحده.</p></div>"
-    },
-    "causes": {
-      "ar": "<h4>أهم أسباب ألم الصدر (للتفكير السريع)</h4><table><thead><tr><th>المجموعة</th><th>أمثلة</th></tr></thead><tbody><tr><td>قلبية خطيرة</td><td>متلازمة الشريان التاجي الحادة (جلطة/ذبحة غير مستقرة)، التهاب التامور (Pericarditis)، التهاب العضلة، تسلخ الأورطي</td></tr><tr><td>رئوية</td><td>جلطة رئوية، استرواح الصدر (Pneumothorax)، التهاب رئوي/غشاء الجنب</td></tr><tr><td>هضمية</td><td>ارتجاع المريء، قرحة، تقلص المريء، التهاب المرارة/البنكرياس</td></tr><tr><td>عضلية وعظمية</td><td>التهاب الغضروف الضلعي، شد عضلات الصدر، الفقرات العنقية</td></tr><tr><td>أخرى</td><td>القلق ونوبات الهلع، الهربس النطاقي (قبل ظهور الطفح)</td></tr></tbody></table>"
-    },
-    "signs": {
-      "ar": "<h4>كيف تسأل المريض؟ (تقييم الألم)</h4><ul><li>الموضع والانتشار: خلف القص؟ للذراع/الفك/الظهر؟</li><li>النوع: ضاغط/عاصر (إقفاري) أم طاعن/يزيد بالنفس أو الحركة (التهاب غشاء أو عضلي)؟</li><li>المدة والبداية: ثواني، دقايق، أم متواصل؟ فجائي؟</li><li>العلاقة بالمجهود والراحة والأكل ووضع الجسم</li><li>أعراض مصاحبة: ضيق نفس، عرق بارد، غثيان، إغماء، خفقان</li><li>عوامل الخطر: سكر، ضغط، تدخين، كوليسترول، تاريخ عائلي، جلطة سابقة</li><li>أدوية: نيترات؟ أسبرين؟ سيلدنافيل؟</li></ul><div class=\"cs-box cs-warning\"><strong>انتبه — جلطة بدون ألم</strong><p>مرضى السكر وكبار السن والنساء ممكن تظهر الجلطة بضيق نفس أو إعياء أو عرق أو غثيان بدون ألم نمطي.</p></div><div class=\"cs-box cs-pearl\"><strong>علامات تدل على سبب غير قلبي خطير</strong><p>ألم مفاجئ شديد يمتد للظهر مع اختلاف ضغط الذراعين = تسلخ أبهر؛ ضيق نفس مفاجئ + تسرع + (ساق متورمة أو جلطة سابقة) = جلطة رئوية؛ ألم يزيد بالتنفس مع غياب صوت التنفس = استرواح صدر.</p></div><!--e2-242--><h4>الألم الإقفاري النمطي (الذبحة وجلطة القلب)</h4><table><thead><tr><th>الصفة</th><th>التفاصيل</th></tr></thead><tbody><tr><td>المكان</td><td>منتصف الصدر خلف القص، يمتد غالباً للكتف أو الذراع الشمال (الجهة الداخلية حتى الخنصر)، وأحياناً الذراع اليمين، الرقبة، الفك، الأسنان، الظهر، أعلى البطن</td></tr><tr><td>الوصف</td><td>ضغط أو ثقل أو انعصار أو حرقان (طابق على صدري)</td></tr><tr><td>مصاحبات</td><td>نهجان، دوخة، عرق شديد، غثيان وترجيع</td></tr><tr><td>المحفزات</td><td>يزيد بالمجهود والتوتر والجو البارد</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>ألم زي سكاكين</strong><p>ألم طعن بيتقطع غالباً بعيد عن القلب، لكن لو في عوامل خطورة لا تستبعده.</p></div><div class=\"cs-box cs-danger\"><strong>مريض السكر</strong><p>أي مريض سكر جاي بوجع صدر بسيط، أو نهجان أو دوخة بدون ألم صدر: اعمل ECG لاستبعاد الجلطة الصامتة (Silent infarction)، لأن اعتلال الأعصاب السكري يخفي الألم.</p></div><h4>إسعاف أي ألم صدر نمطي: MONA</h4><p>تُنفّذ بمجرد الشك في IHD لأنها لا تضر المريض لو طلع مفيش حاجة، لكن هتنفعه لو عنده جلطة (بأمر الطبيب).</p><table><thead><tr><th>الحرف</th><th>الدواء</th><th>التفاصيل حسب المراجع</th></tr></thead><tbody><tr><td>M — Morphine</td><td>يفضل عدم استخدام المورفين إلا من طرف متخصص: Pethedin 50 أمبول، أو Nalufin أمبول</td><td>Pethedin: أمبول عضل أو يُخفف في 5 سم ملح وريد ببطء. Nalufin: عضل أو وريد ببطء أو يُخفف في 10 سم ملح وريد</td></tr><tr><td>O — Oxygen</td><td>أكسجين بالقناع</td><td></td></tr><tr><td>N — Nitrate</td><td>Dinitra 5 مجم قرص تحت اللسان</td><td>يكرر حتى 3 مرات بينهم 5 دقائق؛ قيس الضغط قبل الاستخدام لأنه بيخفضه</td></tr><tr><td>A — Aspirin</td><td>Aspocid chewable</td><td>4 أقراص يقرشهم المريض</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الحالية (AHA/ESC): الأكسجين فقط لو SpO2 أقل من 90%، والمورفين/Pethidine بحذر وللألم المقاوم فقط. Aspocid الشائع 75 مجم: 4 أقراص = 300 مجم (الجرعة المضغوطة المقبولة 162–325 مجم) ما لم يكن هناك تحسس أو نزيف. النيترات ممنوعة لو انقباضي أقل من 90 أو احتشاء البطين الأيمن أو أخذ Sildenafil خلال 24–48 ساعة. الجرعات بأمر الطبيب.</p></div><h4>بعد MONA: إزاي نفرّق؟</h4><ul><li>التوقيت: الألم بدأ إمتى وبقاله قد إيه؟</li><li>الاستجابة للنيترات: قرص Dinitra، لو ما تحسنش قرص تاني بعد 5 دقايق ثم آخر بعد 5 دقايق (أقصى 3 أقراص)</li></ul><div class=\"cs-decision\"><strong>الألم أقل من 15 دقيقة وارتاح بعد 1–3 أقراص؟</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>ذبحة</b><p>ذبحة مستقرة (Stable angina): مريض عارف حالته، قرص تحت اللسان وغالباً مش بيروح المستشفى إلا لو جديد؛ ممكن ECG للاطمئنان ويتابع مع الطبيب.</p></div><div class=\"cs-branch no\"><b>ACS</b><p>الألم أكتر من 30 دقيقة ولا استجابة بعد 3 أقراص: متلازمة تاجية حادة (ACS) — حالة طوارئ: ECG وإنزيمات (CK، CK-MB، Troponin) ثم نائب القلب.</p></div></div></div><table><thead><tr><th>النوع</th><th>ECG</th><th>الإنزيمات</th></tr></thead><tbody><tr><td>STEMI</td><td>ارتفاع ST ± انقلاب T</td><td>مرتفعة</td></tr><tr><td>Non-STEMI</td><td>هبوط ST ± انقلاب T</td><td>مرتفعة</td></tr><tr><td>Unstable angina</td><td>غير نوعي</td><td>طبيعية</td></tr></tbody></table><ul><li>الأسوأ تأثيراً: STEMI (جلطة كاملة السمك)</li><li>الأفضل مآلاً: STEMI لأنها لا تفوت وتستجيب للستربتوكيناز (حسب المراجع)</li></ul><div class=\"cs-box cs-danger\"><strong>تسلخ الأورطي (Dissecting aortic aneurysm)</strong><ul><li>حالة نادرة وصعب تشخيصها</li><li>غالباً رجل كبير مدخن عنده ضغط</li><li>ألم رهيب بالصدر زي مناشير أو سكاكين أو كأن حاجة بتتمزق</li><li>ممكن يطلع ECG وإنزيمات القلب طبيعية</li><li>أسهل علامة: قيس النبض والضغط في الذراعين؛ تلاقيه واقع في ناحية وكويس في الناحية التانية</li></ul></div>"
-    },
-    "tests": {
-      "ar": "<h4>الفحوصات الأولية</h4><ul><li><b>ECG 12 اشتقاق خلال 10 دقائق</b> وتكراره عند تغير الألم</li><li>تروبونين (يُفضّل hs-troponin) وإعادته حسب البروتوكول (غالباً بعد 1–3 ساعات)</li><li>أشعة صدر، سكر، كلى وأملاح، صورة دم، تجلط (قبل أي مُذيب أو مُميّع)</li><li>عند الشك: إيكو، أشعة مقطعية للأبهر/الشرايين الرئوية</li></ul>[[slot:dis-242-acs|تصنيف ACS حسب الـECG والتروبونين — رسم من إعداد الموقع|/diseases/img/dis-242-acs.svg]]<table><thead><tr><th>ECG</th><th>تروبونين / CK-MB</th><th>التشخيص</th></tr></thead><tbody><tr><td>ارتفاع ST</td><td>مرتفع</td><td>STEMI</td></tr><tr><td>هبوط ST / T مقلوبة</td><td>مرتفع</td><td>NSTEMI</td></tr><tr><td>تغيّرات غير نوعية أو طبيعي</td><td>طبيعي</td><td>ذبحة غير مستقرة (Unstable angina)</td></tr></tbody></table>[[slot:dis-242-ecg-real|صورة: ECG حقيقي يوضح ارتفاع ST في STEMI للمقارنة]]"
-    },
-    "treatment": {
-      "ar": "<h4>النوع الأول: الألم الإقفاري</h4><p>نعمل ECG وتحليل تروبونين ونقسم المريض لقسمين:</p><ul><li><b>ارتفاع ST + تروبونين مرتفع = STEMI</b> (جلطة بارتفاع ST) ← مسار الجلطة الحادة: أسبرين، فتح الشريان فوراً (انظر دليل «احتشاء عضلة القلب»)</li><li><b>تغيّرات ST وT بدون ارتفاع + تروبونين مرتفع = NSTEMI</b></li><li><b>تروبونين طبيعي = ذبحة غير مستقرة (UA)</b> (وممكن يُعاد القياس لأن التروبونين يتأخر ارتفاعه)</li></ul><h4>النوع الثاني: الألم غير النمطي</h4><ul><li>عمل ECG وتروبونين؛ لو الاثنين طبيعيان نبقي المريض تحت <b>مونيتور 12 ساعة</b> مع إعادة ECG وتروبونين</li><li>لو زاد الألم أو تغيّر الـECG أو ارتفع التروبونين ← يُعامل كذبحة غير مستقرة/ACS ويدخل <b>الإنعاش (CCU)</b></li><li>لو الألم ما زادش وبقى الـECG والتروبونين طبيعيين ← يُحضّر لـ<b>اختبار المجهود (Exercise ECG test)</b></li></ul><h4>النوع الثالث: غير إقفاري</h4><p>بدون أي صفة من الثلاثة: يُعالج حسب الأعراض والسبب (مسكن، مضاد حموضة، راحة، طمأنة)، بعد استبعاد الأسباب الخطيرة.</p><div class=\"cs-box cs-pearl\"><strong>تحديث</strong><p>الإرشادات الحديثة (ACC/AHA 2021 لألم الصدر، ESC 2023 للـACS) تعتمد على تروبونين عالي الحساسية بقياسين (0/1 أو 0/2–3 ساعات) مع مقياس خطر مثل HEART score لتحديد من يمكن خروجه بأمان؛ فالـ12 ساعة مراقبة مفيدة في المستشفيات اللي ما عندهاش hs-troponin. والمعيار: بروتوكول المستشفى.</p></div><h4>أدوية الإسعاف الأولي في الألم الإقفاري (بأمر الطبيب)</h4><ul><li>أسبرين 150–300 مجم مضغ (بعد السؤال عن الحساسية والنزيف)</li><li>نيتروجليسرين تحت اللسان 0.4 مجم (قبلها: ضغط انقباضي فوق 90 وعدم استخدام سيلدنافيل خلال 24–48 ساعة، واستبعاد إصابة البطين الأيمن)</li><li>أكسجين لو SpO₂ أقل من 90%</li><li>مسكن وريدي حذِر بأمر الطبيب</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>استقبل وصنّف فوراً</strong><p>قيّم العلامات الحيوية و SpO₂ والوعي. اسأل الأسئلة الثلاثة (خلف القص؟ مجهود؟ راحة/نيترات؟) وسجّل وقت بدء الألم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>ECG خلال 10 دقائق</strong><p>اطلب/اعمل ECG 12 اشتقاق، سلّمه للطبيب فوراً، كرّره لو تغيّر الألم. في الجلطة السفلية اطلب اشتقاقات يمنى (V4R).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>مونيتور وخط وريدي</strong><p>ECG مستمر، خط وريدي (والأفضل اثنين)، سحب تروبونين وتحاليل. اكتب أوقات سحب التروبونين الثاني.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ الأدوية بأمان</strong><p>أسبرين مضغ بعد السؤال عن الحساسية؛ نيترات بشروط الضغط والنبض والأدوية؛ لا تعطي نيترات لو شك في احتشاء البطين الأيمن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب الألم والمؤشرات</strong><p>قيّم شدة الألم (0–10) كل 5–15 دقيقة، والضغط والنبض والتنفس. أي ألم راجع أو تغيّر نظم: بلّغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ابقِ المريض ساكناً</strong><p>راحة تامة، لا مشي، لا يترك وحده. نقل بسرير/كرسي مع مرافق ومونيتور.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وثّق وسلّم</strong><p>وقت أول ECG، وقت التروبونين، الأدوية، الاستجابة. استخدم SBAR عند النقل للعناية.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>للألم غير النمطي</strong><p>المريض يبقى تحت المراقبة 12 ساعة (أو حسب البروتوكول) وبتتعاد ECG وتروبونين؛ أي تغير = إنذار فوري. لا تطمّن المريض بقول «طبيعي» وتخرجه قبل اكتمال المراقبة.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>ألم مستمر أكتر من 20 دقيقة أو لا يخف بالنيترات</li><li>عرق بارد، شحوب، ضغط أقل من 90</li><li>ارتفاع ST أو تغيّر جديد بالـECG أو LBBB جديد</li><li>اضطراب نظم (VT/VF/بطء)</li><li>ضيق نفس شديد أو SpO₂ أقل من 90%</li><li>ألم مفاجئ ممزق يمتد للظهر أو فرق ضغط بين الذراعين</li><li>إغماء أو تشوش وعي</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>أي ألم صدر ضاغط أكتر من 15–20 دقيقة أو مع عرق وضيق نفس: إسعاف فوراً ولا تقود بنفسك.</li><li>اعرف أعراض جلطتك: ممكن تكون ضيق نفس أو إعياء فقط، خصوصاً لمريض السكر.</li><li>نيترات تحت اللسان: اقعد، قرص واحد، والألم لو ما راحش بعد 5 دقائق: إسعاف.</li><li>اضبط الضغط والسكر والكوليسترول، وبطّل تدخين، واتحرك بانتظام.</li><li>اتبع خطة المتابعة واختبار المجهود لو طلبها الطبيب.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الألم الإقفاري: خلف القص + يزيد بالمجهود + يخف بالراحة/النيترات (3 صفات)",
-      "غير نمطي: صفتان؛ غير إقفاري: ولا صفة",
-      "أول إجراء: ECG خلال 10 دقائق + تروبونين",
-      "ارتفاع ST + تروبونين = STEMI؛ تغيّر ST/T + تروبونين = NSTEMI؛ تروبونين طبيعي = ذبحة غير مستقرة",
-      "غير النمطي: مونيتور 12 ساعة مع إعادة ECG وتروبونين",
-      "لو الألم زاد أو الـECG تغيّر أو التروبونين ارتفع: دخول الإنعاش",
-      "استبعد الأسباب القاتلة: تسلخ أبهر، جلطة رئوية، استرواح صدر",
-      "مريض السكر بنهجان أو دوخة: ECG لاستبعاد الجلطة الصامتة",
-      "MONA: Morphine/Pethidine، Oxygen، Nitrate (Dinitra)، Aspirin (Aspocid مضغ)",
-      "قارن الضغط في الذراعين: فرق كبير = تسلخ الأورطي"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ألم صدر خلف القص يزيد بالمجهود لكن لا يخف بالراحة. نوعه؟"
-      },
-      "options": [
-        {
-          "ar": "إقفاري"
-        },
-        {
-          "ar": "غير نمطي"
-        },
-        {
-          "ar": "غير إقفاري"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "فيه صفتان فقط من الثلاث."
-      }
-    },
-    {
-      "q": {
-        "ar": "ارتفاع ST مع تروبونين مرتفع؟"
-      },
-      "options": [
-        {
-          "ar": "ذبحة غير مستقرة"
-        },
-        {
-          "ar": "NSTEMI"
-        },
-        {
-          "ar": "STEMI"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "ارتفاع ST + مؤشرات مرتفعة = STEMI."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض ألم غير نمطي وECG وتروبونين طبيعيان. التصرف؟"
-      },
-      "options": [
-        {
-          "ar": "خروج فوري"
-        },
-        {
-          "ar": "مونيتور 12 ساعة وإعادة ECG وتروبونين"
-        },
-        {
-          "ar": "تذويب جلطة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "لازم مراقبة وإعادة الفحوص قبل القرار."
-      }
-    },
-    {
-      "q": {
-        "ar": "أقصى وقت للحصول على أول ECG لألم صدر مشتبه؟"
-      },
-      "options": [
-        {
-          "ar": "10 دقائق"
-        },
-        {
-          "ar": "60 دقيقة"
-        },
-        {
-          "ar": "ساعتان"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ECG خلال 10 دقائق من الوصول."
-      }
-    },
-    {
-      "q": {
-        "ar": "ألم مفاجئ ممزق يمتد للظهر مع اختلاف الضغط بين الذراعين؟"
-      },
-      "options": [
-        {
-          "ar": "التهاب غضروف"
-        },
-        {
-          "ar": "تسلخ الأورطي (طارئ)"
-        },
-        {
-          "ar": "عسر هضم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تسلخ الأورطي طارئ قاتل ولا يُعطى فيه مُذيب."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض سكر بنهجان ودوخة بدون ألم صدر. أول إجراء؟"
-      },
-      "options": [
-        {
-          "ar": "تطمين"
-        },
-        {
-          "ar": "ECG"
-        },
-        {
-          "ar": "مسكن"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الجلطة الصامتة محتملة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "2021 AHA/ACC Guideline for the Evaluation and Diagnosis of Chest Pain"
-    },
-    {
-      "title": "2023 ESC Guidelines for the management of acute coronary syndromes"
-    },
-    {
-      "title": "2025 ACC/AHA ACS Guideline"
-    },
-    {
-      "title": "AHA/ACC Chest Pain Guideline 2021"
-    },
-    {
-      "title": "ESC ACS Guidelines 2023"
-    }
-  ],
-  "rx": [
-    {
-      "category": "القلب والأوعية الدموية",
-      "condition_ar": "ألم الصدر الإقفاري (MONA)",
-      "condition_en": "Ischemic chest pain",
-      "items": [
-        {
-          "drug_name": "Pethedin 50 amp (Pethidine)",
-          "dose": "أمبول عضل، أو يُخفف في 5 سم ملح وريد ببطء",
-          "note": "بحذر وبأمر الطبيب"
-        },
-        {
-          "drug_name": "Nalufin amp (Nalbuphine)",
-          "dose": "أمبول عضل أو وريد ببطء أو مخفف في 10 سم ملح",
-          "note": "بأمر الطبيب"
-        },
-        {
-          "drug_name": "Dinitra 5 tab (Isosorbide dinitrate)",
-          "dose": "قرص تحت اللسان، تكرار حتى 3 مرات كل 5 دقائق",
-          "note": "قيس الضغط أولاً"
-        },
-        {
-          "drug_name": "Aspocid chewable (Aspirin)",
-          "dose": "4 أقراص يقرشها المريض",
-          "note": "ما لم يوجد تحسس أو نزيف"
-        }
-      ],
-      "clinical_note": "استمرار الألم أكثر من 30 دقيقة أو لا استجابة بعد 3 أقراص نيترات = ACS: ECG وإنزيمات ونائب القلب."
-    }
+  "en": [
+   "Ischemic pain: behind the sternum + worse with exertion + relieved by rest/nitrates (3 characteristics)",
+   "Atypical: two characteristics; non-ischemic: none",
+   "First action: ECG within 10 minutes + troponin",
+   "ST elevation + troponin = STEMI; ST/T change + troponin = NSTEMI; normal troponin = unstable angina",
+   "Atypical: 12-hour monitoring with repeat ECG and troponin",
+   "If the pain increases or the ECG changes or troponin rises: admission to intensive care",
+   "Rule out fatal causes: aortic dissection, pulmonary embolism, pneumothorax",
+   "A diabetic patient with breathlessness or dizziness: ECG to rule out silent infarction",
+   "MONA: Morphine/Pethidine, Oxygen, Nitrate (Dinitra), Aspirin (Aspocid chewed)",
+   "Compare blood pressure in both arms: a big difference = aortic dissection"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ألم صدر خلف القص يزيد بالمجهود لكن لا يخف بالراحة. نوعه؟",
+    "en": "Chest pain behind the sternum that worsens with exertion but is not relieved by rest. Its type?"
+   },
+   "options": [
+    {
+     "ar": "إقفاري",
+     "en": "Ischemic"
+    },
+    {
+     "ar": "غير نمطي",
+     "en": "Atypical"
+    },
+    {
+     "ar": "غير إقفاري",
+     "en": "Non-ischemic"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "فيه صفتان فقط من الثلاث.",
+    "en": "It has only two of the three."
+   }
+  },
+  {
+   "q": {
+    "ar": "ارتفاع ST مع تروبونين مرتفع؟",
+    "en": "ST elevation with elevated troponin?"
+   },
+   "options": [
+    {
+     "ar": "ذبحة غير مستقرة",
+     "en": "Unstable angina"
+    },
+    {
+     "ar": "NSTEMI",
+     "en": "NSTEMI"
+    },
+    {
+     "ar": "STEMI",
+     "en": "STEMI"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "ارتفاع ST + مؤشرات مرتفعة = STEMI.",
+    "en": "ST elevation + elevated markers = STEMI."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض ألم غير نمطي وECG وتروبونين طبيعيان. التصرف؟",
+    "en": "A patient with atypical pain and a normal ECG and troponin. The action?"
+   },
+   "options": [
+    {
+     "ar": "خروج فوري",
+     "en": "Immediate discharge"
+    },
+    {
+     "ar": "مونيتور 12 ساعة وإعادة ECG وتروبونين",
+     "en": "12-hour monitoring and repeat ECG and troponin"
+    },
+    {
+     "ar": "تذويب جلطة",
+     "en": "Thrombolysis"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "لازم مراقبة وإعادة الفحوص قبل القرار.",
+    "en": "Monitoring and repeat tests are needed before the decision."
+   }
+  },
+  {
+   "q": {
+    "ar": "أقصى وقت للحصول على أول ECG لألم صدر مشتبه؟",
+    "en": "The maximum time to obtain the first ECG for suspected chest pain?"
+   },
+   "options": [
+    {
+     "ar": "10 دقائق",
+     "en": "10 minutes"
+    },
+    {
+     "ar": "60 دقيقة",
+     "en": "60 minutes"
+    },
+    {
+     "ar": "ساعتان",
+     "en": "Two hours"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ECG خلال 10 دقائق من الوصول.",
+    "en": "ECG within 10 minutes of arrival."
+   }
+  },
+  {
+   "q": {
+    "ar": "ألم مفاجئ ممزق يمتد للظهر مع اختلاف الضغط بين الذراعين؟",
+    "en": "Sudden tearing pain radiating to the back with a blood pressure difference between the arms?"
+   },
+   "options": [
+    {
+     "ar": "التهاب غضروف",
+     "en": "Costochondritis"
+    },
+    {
+     "ar": "تسلخ الأورطي (طارئ)",
+     "en": "Aortic dissection (emergency)"
+    },
+    {
+     "ar": "عسر هضم",
+     "en": "Indigestion"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تسلخ الأورطي طارئ قاتل ولا يُعطى فيه مُذيب.",
+    "en": "Aortic dissection is a fatal emergency and no thrombolytic is given in it."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض سكر بنهجان ودوخة بدون ألم صدر. أول إجراء؟",
+    "en": "A diabetic patient with breathlessness and dizziness without chest pain. The first action?"
+   },
+   "options": [
+    {
+     "ar": "تطمين",
+     "en": "Reassurance"
+    },
+    {
+     "ar": "ECG",
+     "en": "ECG"
+    },
+    {
+     "ar": "مسكن",
+     "en": "Analgesic"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الجلطة الصامتة محتملة.",
+    "en": "A silent infarction is possible."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "2021 AHA/ACC Guideline for the Evaluation and Diagnosis of Chest Pain"
+  },
+  {
+   "title": "2023 ESC Guidelines for the management of acute coronary syndromes"
+  },
+  {
+   "title": "2025 ACC/AHA ACS Guideline"
+  },
+  {
+   "title": "AHA/ACC Chest Pain Guideline 2021"
+  },
+  {
+   "title": "ESC ACS Guidelines 2023"
+  }
+ ],
+ "rx": [
+  {
+   "category": "القلب والأوعية الدموية",
+   "condition_ar": "ألم الصدر الإقفاري (MONA)",
+   "condition_en": "Ischemic chest pain",
+   "items": [
+    {
+     "drug_name": "Pethedin 50 amp (Pethidine)",
+     "dose": "أمبول عضل، أو يُخفف في 5 سم ملح وريد ببطء",
+     "note": "بحذر وبأمر الطبيب"
+    },
+    {
+     "drug_name": "Nalufin amp (Nalbuphine)",
+     "dose": "أمبول عضل أو وريد ببطء أو مخفف في 10 سم ملح",
+     "note": "بأمر الطبيب"
+    },
+    {
+     "drug_name": "Dinitra 5 tab (Isosorbide dinitrate)",
+     "dose": "قرص تحت اللسان، تكرار حتى 3 مرات كل 5 دقائق",
+     "note": "قيس الضغط أولاً"
+    },
+    {
+     "drug_name": "Aspocid chewable (Aspirin)",
+     "dose": "4 أقراص يقرشها المريض",
+     "note": "ما لم يوجد تحسس أو نزيف"
+    }
+   ],
+   "clinical_note": "استمرار الألم أكثر من 30 دقيقة أو لا استجابة بعد 3 أقراص نيترات = ACS: ECG وإنزيمات ونائب القلب."
+  }
+ ]
 }

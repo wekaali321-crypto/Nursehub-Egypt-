@@ -1,210 +1,266 @@
 {
-  "id": "dis-1204",
-  "num": 1204,
-  "system": "cardio",
-  "icon": "🚨",
-  "level": 3,
-  "target": "diseases",
-  "title": {
-    "ar": "أنواع الصدمة بالمقارنة: نقص الحجم، القلبية، الإنتانية، العصبية، التحسسية",
-    "en": "Shock Types Comparison"
+ "id": "dis-1204",
+ "num": 1204,
+ "system": "cardio",
+ "icon": "🚨",
+ "level": 3,
+ "target": "diseases",
+ "title": {
+  "ar": "أنواع الصدمة بالمقارنة: نقص الحجم، القلبية، الإنتانية، العصبية، التحسسية",
+  "en": "Shock Types Comparison"
+ },
+ "teaser": {
+  "ar": "جدول واحد يجمع الأنواع الخمسة للصدمة: الآلية والعلامة الفارقة والأولوية التمريضية والأدوية الأساسية مع قيم CVP وMAP.",
+  "en": "One table that brings together the five types of shock: mechanism, distinguishing sign, nursing priority, and key drugs, with CVP and MAP values."
+ },
+ "chips": [
+  {
+   "ar": "مقارنة سريعة",
+   "en": "Quick comparison"
   },
-  "teaser": {
-    "ar": "جدول واحد يجمع الأنواع الخمسة للصدمة: الآلية والعلامة الفارقة والأولوية التمريضية والأدوية الأساسية مع قيم CVP وMAP."
+  {
+   "ar": "أولويات",
+   "en": "Priorities"
   },
-  "chips": [
-    {
-      "ar": "مقارنة سريعة"
-    },
-    {
-      "ar": "أولويات"
-    },
-    {
-      "ar": "قيم CVP وMAP"
-    }
+  {
+   "ar": "قيم CVP وMAP",
+   "en": "CVP and MAP values"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الصدمة (Shock) حالة يعجز فيها الدم عن الوصول للأنسجة بالقدر الكافي من الأكسجين، فتتلف الأعضاء. تُقسَّم حسب السبب لخمسة أنواع، ولكل نوع علامة فارقة وأولوية مختلفة.</p>\n[[slot:dis-1204-types|مقارنة أنواع الصدمة الخمسة — رسم من إعداد الموقع|/diseases/img/dis-1204-types.svg]]\n<table><thead><tr><th>النوع</th><th>الآلية</th><th>الدليل المفصل</th></tr></thead><tbody><tr><td>نقص الحجم (Hypovolemic)</td><td>نقص حجم الدم بنزف أو جفاف أو حروق</td><td><a href=\"/diseases/dis-605\">دليل صدمة نقص الحجم</a></td></tr><tr><td>القلبية (Cardiogenic)</td><td>فشل القلب كمضخة بعد جلطة أو فشل قلب</td><td><a href=\"/diseases/dis-143\">الصدمة القلبية</a></td></tr><tr><td>الإنتانية (Septic)</td><td>عدوى تنتشر بالدم مع إفراز السيتوكينات واتساع الأوعية وتسرب السوائل</td><td><a href=\"/diseases/dis-661\">الصدمة الإنتانية</a></td></tr><tr><td>العصبية (Neurogenic)</td><td>فقد التحكم الودّي بعد إصابة نخاعية</td><td><a href=\"/diseases/dis-1201\">الصدمة العصبية</a></td></tr><tr><td>التحسسية (Anaphylactic)</td><td>حساسية مفرطة فورية</td><td><a href=\"/diseases/dis-081\">الحساسية والصدمة التحسسية</a></td></tr></tbody></table>",
+   "en": "<p>Shock is a condition in which the blood cannot deliver enough oxygen to the tissues, so organs are damaged. It is divided by cause into five types, and each type has a different distinguishing sign and priority.</p>\n[[slot:dis-1204-types|Comparison of the five types of shock (illustration prepared by the site)|/diseases/img/dis-1204-types.svg]]\n<table><thead><tr><th>Type</th><th>Mechanism</th><th>Detailed guide</th></tr></thead><tbody><tr><td>Hypovolemic</td><td>Decreased blood volume from bleeding, dehydration, or burns</td><td><a href=\"/diseases/dis-605\">Hypovolemic shock guide</a></td></tr><tr><td>Cardiogenic</td><td>Failure of the heart as a pump after a heart attack or heart failure</td><td><a href=\"/diseases/dis-143\">Cardiogenic shock</a></td></tr><tr><td>Septic</td><td>Infection spreading in the blood with release of cytokines, vessel dilation, and fluid leakage</td><td><a href=\"/diseases/dis-661\">Septic shock</a></td></tr><tr><td>Neurogenic</td><td>Loss of sympathetic control after a spinal cord injury</td><td><a href=\"/diseases/dis-1201\">Neurogenic shock</a></td></tr><tr><td>Anaphylactic</td><td>Immediate severe hypersensitivity</td><td><a href=\"/diseases/dis-081\">Allergy and anaphylactic shock</a></td></tr></tbody></table>"
+  },
+  "causes": {
+   "ar": "<table><thead><tr><th>النوع</th><th>أمثلة للأسباب</th></tr></thead><tbody><tr><td>نقص الحجم</td><td>إسهال وقيء، حروق، نزف بالجروح/الجراحة/الجهاز الهضمي</td></tr><tr><td>القلبية</td><td>جلطة القلب، تفاقم فشل القلب</td></tr><tr><td>الإنتانية</td><td>التهاب رئوي أو بولي أو كلوي يسوء وينتشر بالدم</td></tr><tr><td>العصبية</td><td>إصابة نخاعية عند T6 أو أعلى</td></tr><tr><td>التحسسية</td><td>لدغة نحل، حساسية فول سوداني، أدوية</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>Type</th><th>Examples of causes</th></tr></thead><tbody><tr><td>Hypovolemic</td><td>Diarrhea and vomiting, burns, bleeding from wounds/surgery/the digestive tract</td></tr><tr><td>Cardiogenic</td><td>Heart attack, worsening heart failure</td></tr><tr><td>Septic</td><td>Pneumonia, urinary, or kidney infection that worsens and spreads in the blood</td></tr><tr><td>Neurogenic</td><td>Spinal cord injury at T6 or above</td></tr><tr><td>Anaphylactic</td><td>Bee sting, peanut allergy, drugs</td></tr></tbody></table>"
+  },
+  "signs": {
+   "ar": "<table><thead><tr><th>النوع</th><th>العلامات المميزة</th></tr></thead><tbody><tr><td>نقص الحجم</td><td>ضغط أقل من 80 انقباضي، نبض سريع، جلد بارد ورطب، CVP منخفض (الطبيعي نحو 2–6 مم زئبق)</td></tr><tr><td>القلبية</td><td>ضغط ينخفض أكثر فأكثر مع نبض وتنفس يزدادان سرعة (مثال: 92 ثم 118 نبضة، وضغط 140/88 ثم 88/58)</td></tr><tr><td>الإنتانية</td><td>ضغط منخفض، جلد بارد ورطب، بطء امتلاء الشعيرات، تغيّر الوعي (تشوش/توهان)، WBC فوق 10,000، حرارة مرتفعة أو منخفضة جدًا (نحو 35.5°م = 96°ف)</td></tr><tr><td>العصبية</td><td>بطء قلب (<60) + ضغط منخفض + جلد دافئ ووردي وجاف</td></tr><tr><td>التحسسية</td><td>صفير وضيق نفس، وذمة وجه وحلق، طفح وحكة، هبوط ضغط</td></tr></tbody></table>\n<div class=\"cs-box cs-tip\"><strong>قاعدة الجلد</strong><p>الجلد <strong>بارد ورطب</strong> في معظم الأنواع، و<strong>دافئ وجاف</strong> في العصبية. وهذا سؤال شائع.</p></div>",
+   "en": "<table><thead><tr><th>Type</th><th>Distinguishing signs</th></tr></thead><tbody><tr><td>Hypovolemic</td><td>Systolic pressure below 80, rapid pulse, cold and clammy skin, low CVP (normal about 2–6 mmHg)</td></tr><tr><td>Cardiogenic</td><td>Pressure falling lower and lower while pulse and breathing get faster (example: 92 then 118 beats, and pressure 140/88 then 88/58)</td></tr><tr><td>Septic</td><td>Low pressure, cold and clammy skin, slow capillary refill, change in consciousness (confusion/disorientation), WBC above 10,000, very high or very low temperature (about 35.5°C = 96°F)</td></tr><tr><td>Neurogenic</td><td>Bradycardia (<60) + low pressure + warm, pink, dry skin</td></tr><tr><td>Anaphylactic</td><td>Wheezing and shortness of breath, facial and throat edema, rash and itching, low pressure</td></tr></tbody></table>\n<div class=\"cs-box cs-tip\"><strong>Skin rule</strong><p>Skin is <strong>cold and clammy</strong> in most types, and <strong>warm and dry</strong> in neurogenic. This is a common question.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>العلامات الحيوية والضغط الشرياني المتوسط (MAP): الهدف فوق 65 مم زئبق.</li><li>CVP: الطبيعي 2–6 مم زئبق (يقل في نقص الحجم).</li><li>لاكتات الدم، غازات الدم، بول ساعي، تعداد WBC.</li><li>مزرعة دم قبل المضاد الحيوي في الإنتانية.</li><li>تروبونين وتخطيط/إيكو في القلبية.</li></ul>",
+   "en": "<ul><li>Vital signs and mean arterial pressure (MAP): the target is above 65 mmHg.</li><li>CVP: normal 2–6 mmHg (decreased in hypovolemia).</li><li>Blood lactate, blood gases, hourly urine output, WBC count.</li><li>Blood culture before the antibiotic in sepsis.</li><li>Troponin and ECG/echo in cardiogenic shock.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<table><thead><tr><th>النوع</th><th>العلاج الأساسي</th></tr></thead><tbody><tr><td>نقص الحجم</td><td>تعويض الحجم: ملح 0.9% سريع + وقف المصدر، ثم مثبّتات الضغط مثل norepinephrine/dopamine بأمر الطبيب</td></tr><tr><td>القلبية</td><td>أدوية تقوّي انقباض القلب مثل dopamine و digoxin (مقوّيات انقباض)، علاج السبب (قسطرة/أدوية)</td></tr><tr><td>الإنتانية</td><td>مضادات حيوية مبكرة، أكسجين، سوائل وريدية، أدوية أخرى بأمر الطبيب</td></tr><tr><td>العصبية</td><td>ملح 0.9% وريدي (الأولوية) وتثبيت العمود</td></tr><tr><td>التحسسية</td><td>إبينفرين (epinephrine) عضليًا فورًا ثم الدعم؛ حقنة EpiPen للمريض</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء (راجع النشرة).</p></div>",
+   "en": "<table><thead><tr><th>Type</th><th>Main treatment</th></tr></thead><tbody><tr><td>Hypovolemic</td><td>Volume replacement: rapid 0.9% saline + stopping the source, then vasopressors such as norepinephrine/dopamine per physician's order</td></tr><tr><td>Cardiogenic</td><td>Drugs that strengthen heart contraction such as dopamine and digoxin (inotropes), treating the cause (catheterization/drugs)</td></tr><tr><td>Septic</td><td>Early antibiotics, oxygen, IV fluids, other drugs per physician's order</td></tr><tr><td>Neurogenic</td><td>IV 0.9% saline (the priority) and spinal immobilization</td></tr><tr><td>Anaphylactic</td><td>Epinephrine intramuscularly immediately, then support; EpiPen injector for the patient</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Dose warning</strong><p>Doses are for learning; always verify with the physician/pharmacist before administration (check the package insert).</p></div>"
+  },
+  "nursing": {
+   "ar": "<ul><li><strong>نقص الحجم:</strong> أولوية استقرار الدورة: أنزل رأس السرير فورًا (لا تضعه في وضع فاولر عالٍ)، ابدأ الملح 0.9%، ولا تؤخر كيس السوائل الجديد. حساس الأكسجين على الجبهة بدل الأطراف الباردة.</li><li>قيمة CVP أقل من 2 مم زئبق مع صدمة = زد معدل السوائل الوريدية أولًا.</li><li>الارتفاع التدريجي في النبض أول علامة لنزف وشيك، حتى لو بقي الضغط مقبولًا (مثال: نبض 110 بعد استئصال كلية).</li><li><strong>القلبية:</strong> dopamine: احذر النبض فوق 100 والاضطرابات. digoxin: أوقف الجرعة وأبلغ إن كان النبض القمّي أقل من 60 أو البوتاسيوم منخفضًا أو الأعراض سُمّية (رؤية ضبابية، غثيان، دوخة، مستوى سمّية فوق 2.0).</li><li><strong>العصبية:</strong> ثبّت العمود ودفّئ المريض.</li><li><strong>التحسسية:</strong> إبينفرين قبل كل شيء ثم مجرى الهواء.</li></ul>",
+   "en": "<ul><li><strong>Hypovolemic:</strong> priority is circulatory stability: lower the head of the bed immediately (do not put it in high Fowler position), start 0.9% saline, and do not delay a new fluid bag. Place the oxygen sensor on the forehead instead of the cold extremities.</li><li>A CVP below 2 mmHg with shock = increase the IV fluid rate first.</li><li>A gradual rise in pulse is the first sign of impending hemorrhage, even if the pressure remains acceptable (example: pulse 110 after nephrectomy).</li><li><strong>Cardiogenic:</strong> dopamine: watch for a pulse above 100 and arrhythmias. digoxin: hold the dose and report if the apical pulse is below 60 or potassium is low or the symptoms are toxic (blurred vision, nausea, dizziness, toxic level above 2.0).</li><li><strong>Neurogenic:</strong> immobilize the spine and warm the patient.</li><li><strong>Anaphylactic:</strong> epinephrine before everything, then the airway.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>ضغط منخفض مع تغيّر الوعي وقلة بول.</li><li>تدهور الضغط رغم السوائل.</li><li>نبض بطيء مع صدمة بعد إصابة نخاع.</li><li>تورم الحلق وصفير بعد دواء/طعام (تحسسية).</li><li>نبض قمّي أقل من 60 قبل ديجوكسين.</li></ul>",
+   "en": "<ul><li>Low pressure with change in consciousness and low urine output.</li><li>Pressure worsening despite fluids.</li><li>Slow pulse with shock after a spinal cord injury.</li><li>Throat swelling and wheezing after a drug/food (anaphylaxis).</li><li>Apical pulse below 60 before digoxin.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>لمرضى القلب: الالتزام بأدوية الفشل والتزام الراحة والمراجعة المبكرة.</li><li>لمرضى الحساسية: حمل حقنة الإبينفرين وتعلّم استعمالها وتجنب المسبب.</li><li>أهمية علاج العدوى مبكرًا وعدم إهمال الحمّى مع الاضطراب.</li><li>النزف أو الجفاف: لا تؤجل الذهاب للطوارئ.</li></ul>",
+   "en": "<ul><li>For heart patients: adhere to heart failure medications, rest, and early follow-up.</li><li>For allergy patients: carry the epinephrine injector, learn how to use it, and avoid the trigger.</li><li>The importance of treating infection early and not ignoring fever with confusion.</li><li>Bleeding or dehydration: do not delay going to the emergency department.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الجلد بارد ورطب إلا في العصبية (دافئ جاف)",
+   "نقص الحجم: رأس السرير منخفض + ملح 0.9%",
+   "العصبية: بطء قلب + هبوط ضغط",
+   "التحسسية: إبينفرين أولًا",
+   "القلبية: dopamine/digoxin مقوّيات للانقباض",
+   "هدف MAP فوق 65 وCVP الطبيعي 2–6"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الصدمة (Shock) حالة يعجز فيها الدم عن الوصول للأنسجة بالقدر الكافي من الأكسجين، فتتلف الأعضاء. تُقسَّم حسب السبب لخمسة أنواع، ولكل نوع علامة فارقة وأولوية مختلفة.</p>\n[[slot:dis-1204-types|مقارنة أنواع الصدمة الخمسة — رسم من إعداد الموقع|/diseases/img/dis-1204-types.svg]]\n<table><thead><tr><th>النوع</th><th>الآلية</th><th>الدليل المفصل</th></tr></thead><tbody><tr><td>نقص الحجم (Hypovolemic)</td><td>نقص حجم الدم بنزف أو جفاف أو حروق</td><td><a href=\"/diseases/dis-605\">دليل صدمة نقص الحجم</a></td></tr><tr><td>القلبية (Cardiogenic)</td><td>فشل القلب كمضخة بعد جلطة أو فشل قلب</td><td><a href=\"/diseases/dis-143\">الصدمة القلبية</a></td></tr><tr><td>الإنتانية (Septic)</td><td>عدوى تنتشر بالدم مع إفراز السيتوكينات واتساع الأوعية وتسرب السوائل</td><td><a href=\"/diseases/dis-661\">الصدمة الإنتانية</a></td></tr><tr><td>العصبية (Neurogenic)</td><td>فقد التحكم الودّي بعد إصابة نخاعية</td><td><a href=\"/diseases/dis-1201\">الصدمة العصبية</a></td></tr><tr><td>التحسسية (Anaphylactic)</td><td>حساسية مفرطة فورية</td><td><a href=\"/diseases/dis-081\">الحساسية والصدمة التحسسية</a></td></tr></tbody></table>"
-    },
-    "causes": {
-      "ar": "<table><thead><tr><th>النوع</th><th>أمثلة للأسباب</th></tr></thead><tbody><tr><td>نقص الحجم</td><td>إسهال وقيء، حروق، نزف بالجروح/الجراحة/الجهاز الهضمي</td></tr><tr><td>القلبية</td><td>جلطة القلب، تفاقم فشل القلب</td></tr><tr><td>الإنتانية</td><td>التهاب رئوي أو بولي أو كلوي يسوء وينتشر بالدم</td></tr><tr><td>العصبية</td><td>إصابة نخاعية عند T6 أو أعلى</td></tr><tr><td>التحسسية</td><td>لدغة نحل، حساسية فول سوداني، أدوية</td></tr></tbody></table>"
-    },
-    "signs": {
-      "ar": "<table><thead><tr><th>النوع</th><th>العلامات المميزة</th></tr></thead><tbody><tr><td>نقص الحجم</td><td>ضغط أقل من 80 انقباضي، نبض سريع، جلد بارد ورطب، CVP منخفض (الطبيعي نحو 2–6 مم زئبق)</td></tr><tr><td>القلبية</td><td>ضغط ينخفض أكثر فأكثر مع نبض وتنفس يزدادان سرعة (مثال: 92 ثم 118 نبضة، وضغط 140/88 ثم 88/58)</td></tr><tr><td>الإنتانية</td><td>ضغط منخفض، جلد بارد ورطب، بطء امتلاء الشعيرات، تغيّر الوعي (تشوش/توهان)، WBC فوق 10,000، حرارة مرتفعة أو منخفضة جدًا (نحو 35.5°م = 96°ف)</td></tr><tr><td>العصبية</td><td>بطء قلب (<60) + ضغط منخفض + جلد دافئ ووردي وجاف</td></tr><tr><td>التحسسية</td><td>صفير وضيق نفس، وذمة وجه وحلق، طفح وحكة، هبوط ضغط</td></tr></tbody></table>\n<div class=\"cs-box cs-tip\"><strong>قاعدة الجلد</strong><p>الجلد <strong>بارد ورطب</strong> في معظم الأنواع، و<strong>دافئ وجاف</strong> في العصبية. وهذا سؤال شائع.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>العلامات الحيوية والضغط الشرياني المتوسط (MAP): الهدف فوق 65 مم زئبق.</li><li>CVP: الطبيعي 2–6 مم زئبق (يقل في نقص الحجم).</li><li>لاكتات الدم، غازات الدم، بول ساعي، تعداد WBC.</li><li>مزرعة دم قبل المضاد الحيوي في الإنتانية.</li><li>تروبونين وتخطيط/إيكو في القلبية.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<table><thead><tr><th>النوع</th><th>العلاج الأساسي</th></tr></thead><tbody><tr><td>نقص الحجم</td><td>تعويض الحجم: ملح 0.9% سريع + وقف المصدر، ثم مثبّتات الضغط مثل norepinephrine/dopamine بأمر الطبيب</td></tr><tr><td>القلبية</td><td>أدوية تقوّي انقباض القلب مثل dopamine و digoxin (مقوّيات انقباض)، علاج السبب (قسطرة/أدوية)</td></tr><tr><td>الإنتانية</td><td>مضادات حيوية مبكرة، أكسجين، سوائل وريدية، أدوية أخرى بأمر الطبيب</td></tr><tr><td>العصبية</td><td>ملح 0.9% وريدي (الأولوية) وتثبيت العمود</td></tr><tr><td>التحسسية</td><td>إبينفرين (epinephrine) عضليًا فورًا ثم الدعم؛ حقنة EpiPen للمريض</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء (راجع النشرة).</p></div>"
-    },
-    "nursing": {
-      "ar": "<ul><li><strong>نقص الحجم:</strong> أولوية استقرار الدورة: أنزل رأس السرير فورًا (لا تضعه في وضع فاولر عالٍ)، ابدأ الملح 0.9%، ولا تؤخر كيس السوائل الجديد. حساس الأكسجين على الجبهة بدل الأطراف الباردة.</li><li>قيمة CVP أقل من 2 مم زئبق مع صدمة = زد معدل السوائل الوريدية أولًا.</li><li>الارتفاع التدريجي في النبض أول علامة لنزف وشيك، حتى لو بقي الضغط مقبولًا (مثال: نبض 110 بعد استئصال كلية).</li><li><strong>القلبية:</strong> dopamine: احذر النبض فوق 100 والاضطرابات. digoxin: أوقف الجرعة وأبلغ إن كان النبض القمّي أقل من 60 أو البوتاسيوم منخفضًا أو الأعراض سُمّية (رؤية ضبابية، غثيان، دوخة، مستوى سمّية فوق 2.0).</li><li><strong>العصبية:</strong> ثبّت العمود ودفّئ المريض.</li><li><strong>التحسسية:</strong> إبينفرين قبل كل شيء ثم مجرى الهواء.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>ضغط منخفض مع تغيّر الوعي وقلة بول.</li><li>تدهور الضغط رغم السوائل.</li><li>نبض بطيء مع صدمة بعد إصابة نخاع.</li><li>تورم الحلق وصفير بعد دواء/طعام (تحسسية).</li><li>نبض قمّي أقل من 60 قبل ديجوكسين.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>لمرضى القلب: الالتزام بأدوية الفشل والتزام الراحة والمراجعة المبكرة.</li><li>لمرضى الحساسية: حمل حقنة الإبينفرين وتعلّم استعمالها وتجنب المسبب.</li><li>أهمية علاج العدوى مبكرًا وعدم إهمال الحمّى مع الاضطراب.</li><li>النزف أو الجفاف: لا تؤجل الذهاب للطوارئ.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الجلد بارد ورطب إلا في العصبية (دافئ جاف)",
-      "نقص الحجم: رأس السرير منخفض + ملح 0.9%",
-      "العصبية: بطء قلب + هبوط ضغط",
-      "التحسسية: إبينفرين أولًا",
-      "القلبية: dopamine/digoxin مقوّيات للانقباض",
-      "هدف MAP فوق 65 وCVP الطبيعي 2–6"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي نوع صدمة يكون فيه النبض بطيئًا والجلد دافئًا؟"
-      },
-      "options": [
-        {
-          "ar": "نقص الحجم"
-        },
-        {
-          "ar": "العصبية"
-        },
-        {
-          "ar": "الإنتانية"
-        },
-        {
-          "ar": "القلبية"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "فقد التحكم الودّي يترك نظير الودّي فيبطؤ القلب وتتسع الأوعية."
-      }
-    },
-    {
-      "q": {
-        "ar": "عند صدمة نقص حجم أول إجراء بالوضع:"
-      },
-      "options": [
-        {
-          "ar": "رفع الرأس عاليًا"
-        },
-        {
-          "ar": "خفض رأس السرير فورًا"
-        },
-        {
-          "ar": "وضع جالس"
-        },
-        {
-          "ar": "لا يهم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تقليل الرأس يزيد رجوع الدم للقلب والمخ، ولا يُرفع رأس المريض عاليًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض بصدمة CVP لديه 1 مم زئبق. التدخل الأول:"
-      },
-      "options": [
-        {
-          "ar": "إبطاء السوائل"
-        },
-        {
-          "ar": "زيادة معدل السوائل الوريدية"
-        },
-        {
-          "ar": "إعطاء مدر بول"
-        },
-        {
-          "ar": "إيقاف الأكسجين"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "CVP منخفض يدل على نقص الحجم فيزيد التعويض بالسوائل."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل إعطاء ديجوكسين يوقف الممرض الجرعة ويبلغ عند:"
-      },
-      "options": [
-        {
-          "ar": "نبض قمّي 60 أو أقل أو بوتاسيوم منخفض"
-        },
-        {
-          "ar": "نبض 80"
-        },
-        {
-          "ar": "ضغط طبيعي"
-        },
-        {
-          "ar": "حرارة طبيعية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "بطء النبض ونقص البوتاسيوم يزيدان خطر سمية الديجوكسين."
-      }
-    },
-    {
-      "q": {
-        "ar": "الدواء الأول في الصدمة التحسسية:"
-      },
-      "options": [
-        {
-          "ar": "epinephrine"
-        },
-        {
-          "ar": "paracetamol"
-        },
-        {
-          "ar": "dopamine فقط"
-        },
-        {
-          "ar": "furosemide"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإبينفرين يرفع الضغط ويوسع القصبات ويوقف التفاعل."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض بتفاقم فشل القلب ويُشتبه بصدمة قلبية. أي تدخل دوائي يعزز قوة انقباض القلب؟"
-      },
-      "options": [
-        {
-          "ar": "إعطاء digoxin بأمر الطبيب"
-        },
-        {
-          "ar": "إعطاء مضاد حيوي فقط"
-        },
-        {
-          "ar": "إيقاف كل الأدوية"
-        },
-        {
-          "ar": "إعطاء مدر فقط دون تقييم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "digoxin وdopamine لهما أثر مقوٍّ للانقباض (inotropic) يساعد القلب الضعيف على الضخ بقوة أكبر، ويعطيان بأمر الطبيب مع مراقبة النبض والضغط."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Brunner & Suddarth Medical-Surgical Nursing (general reference)"
-    },
-    {
-      "title": "American Heart Association guidelines"
-    }
+  "en": [
+   "Skin is cold and clammy except in neurogenic (warm, dry)",
+   "Hypovolemic: head of bed low + 0.9% saline",
+   "Neurogenic: bradycardia + low pressure",
+   "Anaphylactic: epinephrine first",
+   "Cardiogenic: dopamine/digoxin as inotropes",
+   "MAP target above 65 and normal CVP 2–6"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي نوع صدمة يكون فيه النبض بطيئًا والجلد دافئًا؟",
+    "en": "Which type of shock has a slow pulse and warm skin?"
+   },
+   "options": [
+    {
+     "ar": "نقص الحجم",
+     "en": "Hypovolemic"
+    },
+    {
+     "ar": "العصبية",
+     "en": "Neurogenic"
+    },
+    {
+     "ar": "الإنتانية",
+     "en": "Septic"
+    },
+    {
+     "ar": "القلبية",
+     "en": "Cardiogenic"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "فقد التحكم الودّي يترك نظير الودّي فيبطؤ القلب وتتسع الأوعية.",
+    "en": "Loss of sympathetic control leaves the parasympathetic, so the heart slows and the vessels dilate."
+   }
+  },
+  {
+   "q": {
+    "ar": "عند صدمة نقص حجم أول إجراء بالوضع:",
+    "en": "In hypovolemic shock, the first positioning action is:"
+   },
+   "options": [
+    {
+     "ar": "رفع الرأس عاليًا",
+     "en": "Raise the head high"
+    },
+    {
+     "ar": "خفض رأس السرير فورًا",
+     "en": "Lower the head of the bed immediately"
+    },
+    {
+     "ar": "وضع جالس",
+     "en": "Sitting position"
+    },
+    {
+     "ar": "لا يهم",
+     "en": "It doesn't matter"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تقليل الرأس يزيد رجوع الدم للقلب والمخ، ولا يُرفع رأس المريض عاليًا.",
+    "en": "Lowering the head increases blood return to the heart and brain, and the patient's head is not raised high."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض بصدمة CVP لديه 1 مم زئبق. التدخل الأول:",
+    "en": "A patient in shock has a CVP of 1 mmHg. The first intervention:"
+   },
+   "options": [
+    {
+     "ar": "إبطاء السوائل",
+     "en": "Slow the fluids"
+    },
+    {
+     "ar": "زيادة معدل السوائل الوريدية",
+     "en": "Increase the IV fluid rate"
+    },
+    {
+     "ar": "إعطاء مدر بول",
+     "en": "Give a diuretic"
+    },
+    {
+     "ar": "إيقاف الأكسجين",
+     "en": "Stop the oxygen"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "CVP منخفض يدل على نقص الحجم فيزيد التعويض بالسوائل.",
+    "en": "A low CVP indicates hypovolemia, so fluid replacement is increased."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل إعطاء ديجوكسين يوقف الممرض الجرعة ويبلغ عند:",
+    "en": "Before giving digoxin, the nurse holds the dose and reports when:"
+   },
+   "options": [
+    {
+     "ar": "نبض قمّي 60 أو أقل أو بوتاسيوم منخفض",
+     "en": "Apical pulse 60 or less or low potassium"
+    },
+    {
+     "ar": "نبض 80",
+     "en": "Pulse 80"
+    },
+    {
+     "ar": "ضغط طبيعي",
+     "en": "Normal pressure"
+    },
+    {
+     "ar": "حرارة طبيعية",
+     "en": "Normal temperature"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "بطء النبض ونقص البوتاسيوم يزيدان خطر سمية الديجوكسين.",
+    "en": "A slow pulse and low potassium increase the risk of digoxin toxicity."
+   }
+  },
+  {
+   "q": {
+    "ar": "الدواء الأول في الصدمة التحسسية:",
+    "en": "The first drug in anaphylactic shock:"
+   },
+   "options": [
+    {
+     "ar": "epinephrine",
+     "en": "epinephrine"
+    },
+    {
+     "ar": "paracetamol",
+     "en": "paracetamol"
+    },
+    {
+     "ar": "dopamine فقط",
+     "en": "dopamine only"
+    },
+    {
+     "ar": "furosemide",
+     "en": "furosemide"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإبينفرين يرفع الضغط ويوسع القصبات ويوقف التفاعل.",
+    "en": "Epinephrine raises pressure, dilates the bronchi, and stops the reaction."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض بتفاقم فشل القلب ويُشتبه بصدمة قلبية. أي تدخل دوائي يعزز قوة انقباض القلب؟",
+    "en": "A patient with worsening heart failure and suspected cardiogenic shock. Which drug intervention strengthens the force of heart contraction?"
+   },
+   "options": [
+    {
+     "ar": "إعطاء digoxin بأمر الطبيب",
+     "en": "Giving digoxin per physician's order"
+    },
+    {
+     "ar": "إعطاء مضاد حيوي فقط",
+     "en": "Giving an antibiotic only"
+    },
+    {
+     "ar": "إيقاف كل الأدوية",
+     "en": "Stopping all drugs"
+    },
+    {
+     "ar": "إعطاء مدر فقط دون تقييم",
+     "en": "Giving a diuretic only without assessment"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "digoxin وdopamine لهما أثر مقوٍّ للانقباض (inotropic) يساعد القلب الضعيف على الضخ بقوة أكبر، ويعطيان بأمر الطبيب مع مراقبة النبض والضغط.",
+    "en": "digoxin and dopamine have an inotropic effect that helps the weak heart pump with more force, and they are given per physician's order with monitoring of pulse and pressure."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Brunner & Suddarth Medical-Surgical Nursing (general reference)"
+  },
+  {
+   "title": "American Heart Association guidelines"
+  }
+ ]
 }

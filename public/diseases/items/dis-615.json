@@ -1,184 +1,234 @@
 {
-  "id": "dis-615",
-  "num": 615,
-  "system": "cardio",
-  "icon": "🫀",
-  "level": 1,
-  "target": "diseases",
-  "title": {
-    "ar": "قصور الصمام ثلاثي الشرفات",
-    "en": "Tricuspid Insufficiency"
+ "id": "dis-615",
+ "num": 615,
+ "system": "cardio",
+ "icon": "🫀",
+ "level": 1,
+ "target": "diseases",
+ "title": {
+  "ar": "قصور الصمام ثلاثي الشرفات",
+  "en": "Tricuspid Insufficiency"
+ },
+ "teaser": {
+  "ar": "تسرب الجانب الأيمن: انتفاخ أوردة الرقبة وتورم الكبد، والعلاج بعلاج السبب.",
+  "en": "Right-sided leak: distended neck veins and liver swelling, treated by treating the cause."
+ },
+ "chips": [
+  {
+   "ar": "Tricuspid",
+   "en": "Tricuspid"
   },
-  "teaser": {
-    "ar": "تسرب الجانب الأيمن: انتفاخ أوردة الرقبة وتورم الكبد، والعلاج بعلاج السبب."
+  {
+   "ar": "JVD",
+   "en": "JVD"
   },
-  "chips": [
-    {
-      "ar": "Tricuspid"
-    },
-    {
-      "ar": "JVD"
-    },
-    {
-      "ar": "احتقان"
-    }
+  {
+   "ar": "احتقان",
+   "en": "Congestion"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>قصور الصمام ثلاثي الشرفات (Tricuspid Regurgitation): تسرب يعيد الدم من البطين الأيمن إلى الأذين الأيمن، فيرتفع ضغط الأذين وتزداد مقاومة عودة الدم من الأوردة ويتضخم الأذين. غالباً سببه <b>حمل زائد على البطين الأيمن</b> ناتج عن حمل البطين الأيسر. وقد يكون من جلطة سفلية أو التهاب شغاف أو سبب تشريحي.</p>[[slot:dis-615-murmur|نفخة قصور ثلاثي الشرفات — رسم من إعداد الموقع|/diseases/img/dis-615-murmur.svg]]\n<p>إن حُلت المشكلة الأساسية قد يتحسن التسرب، وإلا يُصلح أو يُبدل الصمام.</p>",
+   "en": "<p>Tricuspid regurgitation: a leak that returns blood from the right ventricle to the right atrium, so atrial pressure rises, resistance to venous return increases, and the atrium enlarges. It is usually caused by <b>increased load on the right ventricle</b> resulting from left ventricular load. It may also be from an inferior clot, endocarditis, or an anatomical cause.</p>[[slot:dis-615-murmur|Tricuspid regurgitation murmur: a diagram prepared by the site|/diseases/img/dis-615-murmur.svg]]\n<p>If the underlying problem is solved, the leak may improve; otherwise the valve is repaired or replaced.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>حمل زائد على البطين الأيمن (من فشل البطين الأيسر)</li><li>جلطة سفلية</li><li>التهاب الشغاف (Endocarditis)</li><li>سبب تشريحي</li></ul>",
+   "en": "<ul><li>Increased load on the right ventricle (from left ventricular failure)</li><li>Inferior clot</li><li>Endocarditis</li><li>Anatomical cause</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>ضيق نفس</li><li>إرهاق</li><li>انتفاخ أوردة الرقبة (JVD)</li><li>احتقان الكبد</li><li>نفخة تزيد مع الشهيق (يُذكر في بعض المراجع S3 مع الشهيق)</li></ul>",
+   "en": "<ul><li>Shortness of breath</li><li>Fatigue</li><li>Distended neck veins (JVD)</li><li>Liver congestion</li><li>A murmur that increases with inspiration (some references mention an S3 with inspiration)</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>أشعة صدر: تضخم البطين والأذين الأيمن</li><li>إيكو: ظهور الصمام المتدلي وتضخم الجانب الأيمن</li><li>ECG: تضخم الأيمن (P وQRS عريضة)</li></ul>",
+   "en": "<ul><li>Chest X-ray: enlarged right ventricle and atrium</li><li>Echo: a prolapsing valve and right-sided enlargement</li><li>ECG: right-sided enlargement (wide P and QRS)</li></ul>"
+  },
+  "treatment": {
+   "ar": "<p>علاج المرض الأساسي بالقلب لتقليل الضغط.</p><ul><li>مضادات تجلط بعد الجراحة: هيبارين، وارفارين، دالتيبارين، إينوكسابارين</li><li>إصلاح أو تبديل الصمام</li></ul><div class=\"cs-box cs-info\"><strong>إضافة</strong><p>مدرات البول تقلل الاحتقان الوريدي والكبدي.</p></div>",
+   "en": "<p>Treat the underlying heart disease to reduce pressure.</p><ul><li>Anticoagulants after surgery: heparin, warfarin, dalteparin, enoxaparin</li><li>Repair or replace the valve</li></ul><div class=\"cs-box cs-info\"><strong>Addition</strong><p>Diuretics reduce venous and liver congestion.</p></div>"
+  },
+  "nursing": {
+   "ar": "<p><b>التشخيصات التمريضية:</b> قلق، انخفاض النتاج القلبي، عدم تحمل النشاط.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>وضع المريض</strong><p>نصف جلوس عالي (High Fowler) لتسهيل التنفس + أكسجين حسب الأمر + إدارة الألم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>المراقبة</strong><p>العلامات الحيوية ونبض القلب والتشبع، والوزن كل صباح، والدخل والخرج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>المضاعفات</strong><p>وذمة رئوية، فشل قلب، تجلط، اضطراب نظم، ABG</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>تثقيف</strong><p>الأعراض، فترات راحة، قليل الملح والدهون</p></div></div></div>",
+   "en": "<p><b>Nursing diagnoses:</b> anxiety, decreased cardiac output, activity intolerance.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Patient position</strong><p>High Fowler to ease breathing + oxygen as ordered + pain management.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Monitoring</strong><p>Vital signs, heart rate, saturation, weight every morning, and intake and output.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Complications</strong><p>Pulmonary edema, heart failure, clotting, arrhythmia, ABG</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Education</strong><p>Symptoms, rest periods, low salt and fat</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>تورم الساقين والبطن</li><li>ضيق نفس</li><li>زيادة وزن سريعة</li><li>ألم أيمن علوي بالبطن</li></ul>",
+   "en": "<ul><li>Swelling of the legs and abdomen</li><li>Shortness of breath</li><li>Rapid weight gain</li><li>Right upper abdominal pain</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>وزن يومي</li><li>قلل الملح</li><li>ارفع الساقين</li><li>الأدوية والمتابعة</li></ul>",
+   "en": "<ul><li>Daily weight</li><li>Cut down on salt</li><li>Elevate the legs</li><li>Medicines and follow-up</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "رجوع الدم من البطين الأيمن للأذين الأيمن",
+   "غالباً بسبب حمل البطين الأيمن",
+   "JVD واحتقان الكبد",
+   "الإيكو يشخص",
+   "علاج السبب الأساسي",
+   "مميعات بعد التبديل"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>قصور الصمام ثلاثي الشرفات (Tricuspid Regurgitation): تسرب يعيد الدم من البطين الأيمن إلى الأذين الأيمن، فيرتفع ضغط الأذين وتزداد مقاومة عودة الدم من الأوردة ويتضخم الأذين. غالباً سببه <b>حمل زائد على البطين الأيمن</b> ناتج عن حمل البطين الأيسر. وقد يكون من جلطة سفلية أو التهاب شغاف أو سبب تشريحي.</p>[[slot:dis-615-murmur|نفخة قصور ثلاثي الشرفات — رسم من إعداد الموقع|/diseases/img/dis-615-murmur.svg]]\n<p>إن حُلت المشكلة الأساسية قد يتحسن التسرب، وإلا يُصلح أو يُبدل الصمام.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>حمل زائد على البطين الأيمن (من فشل البطين الأيسر)</li><li>جلطة سفلية</li><li>التهاب الشغاف (Endocarditis)</li><li>سبب تشريحي</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>ضيق نفس</li><li>إرهاق</li><li>انتفاخ أوردة الرقبة (JVD)</li><li>احتقان الكبد</li><li>نفخة تزيد مع الشهيق (يُذكر في بعض المراجع S3 مع الشهيق)</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>أشعة صدر: تضخم البطين والأذين الأيمن</li><li>إيكو: ظهور الصمام المتدلي وتضخم الجانب الأيمن</li><li>ECG: تضخم الأيمن (P وQRS عريضة)</li></ul>"
-    },
-    "treatment": {
-      "ar": "<p>علاج المرض الأساسي بالقلب لتقليل الضغط.</p><ul><li>مضادات تجلط بعد الجراحة: هيبارين، وارفارين، دالتيبارين، إينوكسابارين</li><li>إصلاح أو تبديل الصمام</li></ul><div class=\"cs-box cs-info\"><strong>إضافة</strong><p>مدرات البول تقلل الاحتقان الوريدي والكبدي.</p></div>"
-    },
-    "nursing": {
-      "ar": "<p><b>التشخيصات التمريضية:</b> قلق، انخفاض النتاج القلبي، عدم تحمل النشاط.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>وضع المريض</strong><p>نصف جلوس عالي (High Fowler) لتسهيل التنفس + أكسجين حسب الأمر + إدارة الألم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>المراقبة</strong><p>العلامات الحيوية ونبض القلب والتشبع، والوزن كل صباح، والدخل والخرج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>المضاعفات</strong><p>وذمة رئوية، فشل قلب، تجلط، اضطراب نظم، ABG</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>تثقيف</strong><p>الأعراض، فترات راحة، قليل الملح والدهون</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>تورم الساقين والبطن</li><li>ضيق نفس</li><li>زيادة وزن سريعة</li><li>ألم أيمن علوي بالبطن</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>وزن يومي</li><li>قلل الملح</li><li>ارفع الساقين</li><li>الأدوية والمتابعة</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "رجوع الدم من البطين الأيمن للأذين الأيمن",
-      "غالباً بسبب حمل البطين الأيمن",
-      "JVD واحتقان الكبد",
-      "الإيكو يشخص",
-      "علاج السبب الأساسي",
-      "مميعات بعد التبديل"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "الدم يرجع إلى:"
-      },
-      "options": [
-        {
-          "ar": "الأذين الأيمن"
-        },
-        {
-          "ar": "الأيسر"
-        },
-        {
-          "ar": "الأورطي"
-        },
-        {
-          "ar": "الكلى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تسرب ثلاثي."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة:"
-      },
-      "options": [
-        {
-          "ar": "JVD"
-        },
-        {
-          "ar": "بول رغوي"
-        },
-        {
-          "ar": "حكة"
-        },
-        {
-          "ar": "عرج"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ضغط الأذين الأيمن."
-      }
-    },
-    {
-      "q": {
-        "ar": "سبب شائع:"
-      },
-      "options": [
-        {
-          "ar": "حمل البطين الأيمن"
-        },
-        {
-          "ar": "برد"
-        },
-        {
-          "ar": "نوم"
-        },
-        {
-          "ar": "حرارة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ثانوي."
-      }
-    },
-    {
-      "q": {
-        "ar": "إيكو يظهر:"
-      },
-      "options": [
-        {
-          "ar": "تضخم الأيمن"
-        },
-        {
-          "ar": "الأيسر فقط"
-        },
-        {
-          "ar": "الرئة فقط"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "المؤكد."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد الجراحة:"
-      },
-      "options": [
-        {
-          "ar": "مراقبة وزن وتجلط"
-        },
-        {
-          "ar": "تجاهل"
-        },
-        {
-          "ar": "زيادة ملح"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "متابعة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ACC/AHA Valvular Heart Disease Guideline 2020"
-    }
+  "en": [
+   "After surgery:",
+   "Monitor weight and clotting",
+   "Ignore",
+   "Increase salt",
+   "Nothing",
+   "Follow-up."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "الدم يرجع إلى:",
+    "en": "Blood flowing back from the right ventricle to the right atrium"
+   },
+   "options": [
+    {
+     "ar": "الأذين الأيمن",
+     "en": "Usually due to right ventricular load"
+    },
+    {
+     "ar": "الأيسر",
+     "en": "JVD and liver congestion"
+    },
+    {
+     "ar": "الأورطي",
+     "en": "Echo diagnoses it"
+    },
+    {
+     "ar": "الكلى",
+     "en": "Treat the underlying cause"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تسرب ثلاثي.",
+    "en": "Blood thinners after replacement"
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة:",
+    "en": "The blood returns to:"
+   },
+   "options": [
+    {
+     "ar": "JVD",
+     "en": "JVD"
+    },
+    {
+     "ar": "بول رغوي",
+     "en": "The right atrium"
+    },
+    {
+     "ar": "حكة",
+     "en": "The left"
+    },
+    {
+     "ar": "عرج",
+     "en": "The aorta"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ضغط الأذين الأيمن.",
+    "en": "The kidneys"
+   }
+  },
+  {
+   "q": {
+    "ar": "سبب شائع:",
+    "en": "Tricuspid leak."
+   },
+   "options": [
+    {
+     "ar": "حمل البطين الأيمن",
+     "en": "A sign:"
+    },
+    {
+     "ar": "برد",
+     "en": "Foamy urine"
+    },
+    {
+     "ar": "نوم",
+     "en": "Itching"
+    },
+    {
+     "ar": "حرارة",
+     "en": "Limping"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ثانوي.",
+    "en": "Right atrial pressure."
+   }
+  },
+  {
+   "q": {
+    "ar": "إيكو يظهر:",
+    "en": "A common cause:"
+   },
+   "options": [
+    {
+     "ar": "تضخم الأيمن",
+     "en": "Right ventricular load"
+    },
+    {
+     "ar": "الأيسر فقط",
+     "en": "Cold"
+    },
+    {
+     "ar": "الرئة فقط",
+     "en": "Sleep"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Fever"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "المؤكد.",
+    "en": "Secondary."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد الجراحة:",
+    "en": "Echo shows:"
+   },
+   "options": [
+    {
+     "ar": "مراقبة وزن وتجلط",
+     "en": "Right-sided enlargement"
+    },
+    {
+     "ar": "تجاهل",
+     "en": "Left only"
+    },
+    {
+     "ar": "زيادة ملح",
+     "en": "Lung only"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "متابعة.",
+    "en": "The confirmatory test."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ACC/AHA Valvular Heart Disease Guideline 2020"
+  }
+ ]
 }

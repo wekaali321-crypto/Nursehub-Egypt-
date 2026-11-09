@@ -1,231 +1,290 @@
 {
-  "id": "dis-1813",
-  "num": "1813",
-  "system": "peds",
-  "icon": "👶",
-  "level": 2,
-  "title": {
-    "ar": "نمو الرضيع (0-12 شهراً): الفحص والتغذية والفونتانيل والمنعكسات",
-    "en": "Infant Growth and Physical Exam"
+ "id": "dis-1813",
+ "num": "1813",
+ "system": "peds",
+ "icon": "👶",
+ "level": 2,
+ "title": {
+  "ar": "نمو الرضيع (0-12 شهراً): الفحص والتغذية والفونتانيل والمنعكسات",
+  "en": "Infant Growth and Physical Exam"
+ },
+ "teaser": {
+  "ar": "نمو الوزن والطول، التغذية، الفونتانيل، الأسنان، منعكسات الرضيع، وبراز الوليد.",
+  "en": "Weight and length growth, nutrition, fontanelles, teeth, infant reflexes, and newborn stool."
+ },
+ "chips": [
+  {
+   "ar": "Growth",
+   "en": "Growth"
   },
-  "teaser": {
-    "ar": "نمو الوزن والطول، التغذية، الفونتانيل، الأسنان، منعكسات الرضيع، وبراز الوليد."
+  {
+   "ar": "Fontanelle",
+   "en": "Fontanelle"
   },
-  "chips": [
-    {
-      "ar": "Growth"
-    },
-    {
-      "ar": "Fontanelle"
-    },
-    {
-      "ar": "Reflexes"
-    }
+  {
+   "ar": "Reflexes",
+   "en": "Reflexes"
+  }
+ ],
+ "target": "pediatrics",
+ "sections": {
+  "overview": {
+   "ar": "<p>قواعد فحص الطفل (انظر أيضاً <a href=\"/diseases/dis-1812\">العلامات الحيوية للأطفال</a>): تعامل مع الوالدين أولاً ثم الطفل، شجّع الوالد على المشاركة، استخدم لغة بسيطة، أبعد الأدوات الطبية عن نظر الطفل، والإجراءات المزعجة (الأذن، كفة الضغط) آخراً. ترتيب 22 شهراً: الوالد، اللعب، الوزن والطول، القلب والرئة، العلامات الحيوية.</p>[[slot:dis-1812-order|ترتيب فحص طفل — رسم من إعداد الموقع|/diseases/img/dis-1812-order.svg]][[slot:dis-1813-infant|نمو الرضيع — رسم من إعداد الموقع|/diseases/img/dis-1813-infant.svg]]",
+   "en": "<p>Rules for examining a child (see also <a href=\"/diseases/dis-1812\">pediatric vital signs</a>): deal with the parents first, then the child, encourage the parent to take part, use simple language, keep medical instruments out of the child's sight, and leave the upsetting procedures (ear, BP cuff) for last. Order for a 22-month-old: the parent, play, weight and length, heart and lungs, vital signs.</p>[[slot:dis-1812-order|Order of examining a child — illustration made by the site|/diseases/img/dis-1812-order.svg]][[slot:dis-1813-infant|Infant growth — illustration made by the site|/diseases/img/dis-1813-infant.svg]]"
+  },
+  "causes": {
+   "ar": "<p>—</p>",
+   "en": "<p>—</p>"
+  },
+  "signs": {
+   "ar": "<h4>النمو</h4><ul><li>الطول بوصة شهرياً (+50% عند 12 شهراً).</li><li>الوزن يتضاعف عند 6 أشهر ويتضاعف ثلاثاً عند 12 شهراً: 6 أرطال ← 12 ← 18 رطلاً.</li><li>مولود 8 أرطال و5 أوقية لم يتجاوز 14 رطلاً و4 أوقية عند 6 أشهر: تأخر نمو (بلّغ).</li><li>رضيع 8 أشهر «اقترب فقط من ضعف وزن الميلاد»: هذا مؤشر تأخر نمو محتمل لأن الوزن يُفترض أن يتضاعف بعمر 6 أشهر (تصحيح لسطر سابق).</li></ul><h4>الرأس</h4>[[slot:dis-1813-infant|النمو — رسم من إعداد الموقع|/diseases/img/dis-1813-infant.svg]]<ul><li>الفونتانيل مسطح ويخفق قليلاً حتى مع البكاء والسعال؛ المنتفخ أثناء الراحة = ارتفاع ضغط/سحايا، والغائر = جفاف (أولوية).</li><li>الخلفي يغلق بشهرين والأمامي 12-18 شهراً.</li><li>سؤال: رضيع 3 أشهر مراقب لارتفاع الضغط وفونتانيله لين ومسطح: وثّق.</li></ul><h4>الضائقة التنفسية</h4><ul><li>اتساع الأنف، استعمال عضلات مساعدة، تنفس بطني، سعال غير منتج.</li><li>البكاء الزائد: قيّم النمط والتكرار والنوعية؛ صوت حاد = ارتفاع ضغط أو تلف دماغي.</li><li>التقييم قبل التدخل.</li></ul><h4>الأسنان</h4><ul><li>أول سن 6-10 أشهر (قاطع أوسط سفلي).</li><li>العلامات: سيلان لعاب وانفعال؛ عناية بقطعة قماش مبللة.</li></ul><h4>المنعكسات</h4>[[slot:dis-1813-reflex|منعكسات الرضيع — رسم من إعداد الموقع|/diseases/img/dis-1813-reflex.svg]]<ul><li>أكثرها اختباراً: Babinski (0-12 شهراً، بمسح الجانب الخارجي للقدم)، Rooting (0-4 أشهر، بمسح الخد)، Tonic neck (0-4 أشهر: ثني الذراع المقابلة ومد الذراع نحو الاتجاه).</li><li>Moro 0-4 أشهر، Stepping من شهر، Palmar 0-3 أشهر، Plantar 0-8 أشهر.</li></ul><h4>الجهاز الهضمي</h4><ul><li>مخاط دموي في حفاض المولود: لاحظ اللون والكمية والقوام باستمرار.</li><li>اليوم الثالث: براز بني مصفر.</li></ul><p>بالمقياس المتري: مولود 6 أرطال (2.7 كجم) ← 12 رطلاً (5.4 كجم) عند 6 أشهر ← 18 رطلاً (8.2 كجم) عند 12 شهراً. الدارج يزيد 4-6 أرطال (1.8-2.7 كجم) سنوياً، ويصبح وزنه نحو 4 أضعاف وزن الميلاد عند 30 شهراً. عند الولادة محيط الرأس أكبر قليلاً من الصدر ويتساويان نحو 12-18 شهراً، ويزيد محيط رأس الدارج 1 بوصة (2.5 سم) في السنة الثانية ثم يتباطأ إلى النصف حتى 5 سنوات؛ ويتجاوز محيط الصدر محيط البطن عند سنتين.</p>",
+   "en": "<h4>Growth</h4><ul><li>Length increases 1 inch per month (+50% at 12 months).</li><li>Weight doubles at 6 months and triples at 12 months: 6 lb → 12 → 18 lb.</li><li>A newborn of 8 lb 5 oz who has not exceeded 14 lb 4 oz at 6 months: growth delay (report).</li><li>An 8-month-old who \"only approached double the birth weight\": this is an indicator of possible growth delay because weight should double by 6 months (correction of a previous line).</li></ul><h4>Head</h4>[[slot:dis-1813-infant|Growth — illustration made by the site|/diseases/img/dis-1813-infant.svg]]<ul><li>The fontanelle is flat and pulsates slightly, even with crying and coughing; bulging at rest = raised pressure/meningitis, and sunken = dehydration (priority).</li><li>The posterior closes at 2 months and the anterior at 12-18 months.</li><li>Question: a 3-month-old monitored for raised pressure with a soft, flat fontanelle: document.</li></ul><h4>Respiratory distress</h4><ul><li>Nasal flaring, use of accessory muscles, abdominal breathing, non-productive cough.</li><li>Excessive crying: assess the pattern, frequency, and quality; a high-pitched cry = raised pressure or brain damage.</li><li>Assess before intervening.</li></ul><h4>Teeth</h4><ul><li>The first tooth at 6-10 months (lower central incisor).</li><li>Signs: drooling and irritability; care with a damp cloth.</li></ul><h4>Reflexes</h4>[[slot:dis-1813-reflex|Infant reflexes — illustration made by the site|/diseases/img/dis-1813-reflex.svg]]<ul><li>The most tested: Babinski (0-12 months, by stroking the outer side of the foot), rooting (0-4 months, by stroking the cheek), tonic neck (0-4 months: flexing the opposite arm and extending the arm toward the direction).</li><li>Moro 0-4 months, stepping from 1 month, palmar 0-3 months, plantar 0-8 months.</li></ul><h4>Digestive system</h4><ul><li>Bloody mucus in a newborn's diaper: continually note the color, amount, and consistency.</li><li>Day 3: yellowish-brown stool.</li></ul><p>In metric: a newborn of 6 lb (2.7 kg) → 12 lb (5.4 kg) at 6 months → 18 lb (8.2 kg) at 12 months. A toddler gains 4-6 lb (1.8-2.7 kg) per year, and by 30 months weighs about 4 times the birth weight. At birth the head circumference is slightly larger than the chest and they become equal at about 12-18 months, and the toddler's head circumference increases 1 inch (2.5 cm) in the second year then slows by half until 5 years; chest circumference exceeds abdominal circumference at 2 years.</p>"
+  },
+  "tests": {
+   "ar": "<p>—</p>",
+   "en": "<p>—</p>"
+  },
+  "treatment": {
+   "ar": "<ul><li>حليب أم أو تركيبة مدعمة بالحديد (لا حليب بقر).</li><li>الصلب من 4-6 أشهر، طعام جديد واحد أسبوعياً.</li></ul>",
+   "en": "<ul><li>Breast milk or iron-fortified formula (no cow's milk).</li><li>Solids from 4-6 months, one new food per week.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<ul><li>اشرح النتائج للأهل، وقيّم الفونتانيل في كل زيارة.</li><li>وثّق الوزن والطول مقارنة بالميلاد.</li></ul>",
+   "en": "<ul><li>Explain the findings to the parents, and assess the fontanelle at every visit.</li><li>Document weight and length compared with birth.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ</strong><ul><li>فونتانيل منتفخ أو غائر</li><li>تأخر نمو الوزن</li><li>بكاء حاد النبرة</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report</strong><ul><li>Bulging or sunken fontanelle</li><li>Delayed weight gain</li><li>High-pitched cry</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>أضيفي طعاماً جديداً واحداً أسبوعياً.</li></ul>",
+   "en": "<ul><li>Add one new food per week.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الوزن ×2 عند 6 أشهر و×3 عند 12 شهراً",
+   "الفونتانيل الخلفي شهران والأمامي 12-18 شهراً",
+   "منتفخ: ارتفاع الضغط، غائر: جفاف",
+   "Babinski 0-12، Rooting وTonic neck وMoro 0-4",
+   "طعام جديد واحد أسبوعياً"
   ],
-  "target": "pediatrics",
-  "sections": {
-    "overview": {
-      "ar": "<p>قواعد فحص الطفل (انظر أيضاً <a href=\"/diseases/dis-1812\">العلامات الحيوية للأطفال</a>): تعامل مع الوالدين أولاً ثم الطفل، شجّع الوالد على المشاركة، استخدم لغة بسيطة، أبعد الأدوات الطبية عن نظر الطفل، والإجراءات المزعجة (الأذن، كفة الضغط) آخراً. ترتيب 22 شهراً: الوالد، اللعب، الوزن والطول، القلب والرئة، العلامات الحيوية.</p>[[slot:dis-1812-order|ترتيب فحص طفل — رسم من إعداد الموقع|/diseases/img/dis-1812-order.svg]][[slot:dis-1813-infant|نمو الرضيع — رسم من إعداد الموقع|/diseases/img/dis-1813-infant.svg]]"
-    },
-    "causes": {
-      "ar": "<p>—</p>"
-    },
-    "signs": {
-      "ar": "<h4>النمو</h4><ul><li>الطول بوصة شهرياً (+50% عند 12 شهراً).</li><li>الوزن يتضاعف عند 6 أشهر ويتضاعف ثلاثاً عند 12 شهراً: 6 أرطال ← 12 ← 18 رطلاً.</li><li>مولود 8 أرطال و5 أوقية لم يتجاوز 14 رطلاً و4 أوقية عند 6 أشهر: تأخر نمو (بلّغ).</li><li>رضيع 8 أشهر «اقترب فقط من ضعف وزن الميلاد»: هذا مؤشر تأخر نمو محتمل لأن الوزن يُفترض أن يتضاعف بعمر 6 أشهر (تصحيح لسطر سابق).</li></ul><h4>الرأس</h4>[[slot:dis-1813-infant|النمو — رسم من إعداد الموقع|/diseases/img/dis-1813-infant.svg]]<ul><li>الفونتانيل مسطح ويخفق قليلاً حتى مع البكاء والسعال؛ المنتفخ أثناء الراحة = ارتفاع ضغط/سحايا، والغائر = جفاف (أولوية).</li><li>الخلفي يغلق بشهرين والأمامي 12-18 شهراً.</li><li>سؤال: رضيع 3 أشهر مراقب لارتفاع الضغط وفونتانيله لين ومسطح: وثّق.</li></ul><h4>الضائقة التنفسية</h4><ul><li>اتساع الأنف، استعمال عضلات مساعدة، تنفس بطني، سعال غير منتج.</li><li>البكاء الزائد: قيّم النمط والتكرار والنوعية؛ صوت حاد = ارتفاع ضغط أو تلف دماغي.</li><li>التقييم قبل التدخل.</li></ul><h4>الأسنان</h4><ul><li>أول سن 6-10 أشهر (قاطع أوسط سفلي).</li><li>العلامات: سيلان لعاب وانفعال؛ عناية بقطعة قماش مبللة.</li></ul><h4>المنعكسات</h4>[[slot:dis-1813-reflex|منعكسات الرضيع — رسم من إعداد الموقع|/diseases/img/dis-1813-reflex.svg]]<ul><li>أكثرها اختباراً: Babinski (0-12 شهراً، بمسح الجانب الخارجي للقدم)، Rooting (0-4 أشهر، بمسح الخد)، Tonic neck (0-4 أشهر: ثني الذراع المقابلة ومد الذراع نحو الاتجاه).</li><li>Moro 0-4 أشهر، Stepping من شهر، Palmar 0-3 أشهر، Plantar 0-8 أشهر.</li></ul><h4>الجهاز الهضمي</h4><ul><li>مخاط دموي في حفاض المولود: لاحظ اللون والكمية والقوام باستمرار.</li><li>اليوم الثالث: براز بني مصفر.</li></ul><p>بالمقياس المتري: مولود 6 أرطال (2.7 كجم) ← 12 رطلاً (5.4 كجم) عند 6 أشهر ← 18 رطلاً (8.2 كجم) عند 12 شهراً. الدارج يزيد 4-6 أرطال (1.8-2.7 كجم) سنوياً، ويصبح وزنه نحو 4 أضعاف وزن الميلاد عند 30 شهراً. عند الولادة محيط الرأس أكبر قليلاً من الصدر ويتساويان نحو 12-18 شهراً، ويزيد محيط رأس الدارج 1 بوصة (2.5 سم) في السنة الثانية ثم يتباطأ إلى النصف حتى 5 سنوات؛ ويتجاوز محيط الصدر محيط البطن عند سنتين.</p>"
-    },
-    "tests": {
-      "ar": "<p>—</p>"
-    },
-    "treatment": {
-      "ar": "<ul><li>حليب أم أو تركيبة مدعمة بالحديد (لا حليب بقر).</li><li>الصلب من 4-6 أشهر، طعام جديد واحد أسبوعياً.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<ul><li>اشرح النتائج للأهل، وقيّم الفونتانيل في كل زيارة.</li><li>وثّق الوزن والطول مقارنة بالميلاد.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ</strong><ul><li>فونتانيل منتفخ أو غائر</li><li>تأخر نمو الوزن</li><li>بكاء حاد النبرة</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>أضيفي طعاماً جديداً واحداً أسبوعياً.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الوزن ×2 عند 6 أشهر و×3 عند 12 شهراً",
-      "الفونتانيل الخلفي شهران والأمامي 12-18 شهراً",
-      "منتفخ: ارتفاع الضغط، غائر: جفاف",
-      "Babinski 0-12، Rooting وTonic neck وMoro 0-4",
-      "طعام جديد واحد أسبوعياً"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "متى يتضاعف وزن الميلاد؟"
-      },
-      "options": [
-        {
-          "ar": "6 أشهر"
-        },
-        {
-          "ar": "3 أشهر"
-        },
-        {
-          "ar": "12 شهراً"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "وثلاثة أضعاف عند 12."
-      }
-    },
-    {
-      "q": {
-        "ar": "فونتانيل غائر يعني:"
-      },
-      "options": [
-        {
-          "ar": "جفاف"
-        },
-        {
-          "ar": "ضغط جمجمة"
-        },
-        {
-          "ar": "طبيعي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «جفاف»؛ نقص سوائل."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي منعكس يبقى حتى 12 شهراً؟"
-      },
-      "options": [
-        {
-          "ar": "Babinski"
-        },
-        {
-          "ar": "Moro"
-        },
-        {
-          "ar": "Rooting"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يظهر بمسح باطن القدم الخارجي."
-      }
-    },
-    {
-      "q": {
-        "ar": "الفونتانيل الأمامي يغلق:"
-      },
-      "options": [
-        {
-          "ar": "12-18 شهراً"
-        },
-        {
-          "ar": "شهرين"
-        },
-        {
-          "ar": "6 أشهر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «12-18 شهراً»؛ والخلفي شهرين."
-      }
-    },
-    {
-      "q": {
-        "ar": "رضيع 8 أشهر «قارب ضعف وزن الميلاد»: التقدير؟"
-      },
-      "options": [
-        {
-          "ar": "تأخر نمو محتمل"
-        },
-        {
-          "ar": "طبيعي"
-        },
-        {
-          "ar": "زيادة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «تأخر نمو محتمل»؛ يتضاعف عند 6 أشهر."
-      }
-    },
-    {
-      "q": {
-        "ar": "ولد 8 أرطال 5 أوقية وعمره 6 أشهر ويزن 14 رطلاً 4 أوقية:"
-      },
-      "options": [
-        {
-          "ar": "تأخر نمو (بلّغ)"
-        },
-        {
-          "ar": "طبيعي"
-        },
-        {
-          "ar": "سمنة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "المتوقع قرابة 16.5 رطلاً."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل 39 شهراً وزنه 6 أضعاف الميلاد:"
-      },
-      "options": [
-        {
-          "ar": "يحتاج متابعة"
-        },
-        {
-          "ar": "طبيعي"
-        },
-        {
-          "ar": "يؤجل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "المتوقع 4 أضعاف عند 30 شهراً."
-      }
-    },
-    {
-      "q": {
-        "ar": "رضيع 3 أشهر فونتانيل لين ومسطح بمراقبة ضغط الجمجمة:"
-      },
-      "options": [
-        {
-          "ar": "وثّق النتيجة"
-        },
-        {
-          "ar": "اتصل بالطوارئ"
-        },
-        {
-          "ar": "اضغط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «وثّق النتيجة» وفق ما شُرح في أقسام الدليل (العلامات والتمريض)."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AAP growth"
-    },
-    {
-      "title": "WHO growth standards"
-    }
+  "en": [
+   "Weight ×2 at 6 months and ×3 at 12 months",
+   "Posterior fontanelle 2 months and anterior 12-18 months",
+   "Bulging: raised pressure, sunken: dehydration",
+   "Babinski 0-12, rooting, tonic neck, and Moro 0-4",
+   "One new food per week"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "متى يتضاعف وزن الميلاد؟",
+    "en": "When does the birth weight double?"
+   },
+   "options": [
+    {
+     "ar": "6 أشهر",
+     "en": "6 months"
+    },
+    {
+     "ar": "3 أشهر",
+     "en": "3 months"
+    },
+    {
+     "ar": "12 شهراً",
+     "en": "12 months"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "وثلاثة أضعاف عند 12.",
+    "en": "And triple at 12."
+   }
+  },
+  {
+   "q": {
+    "ar": "فونتانيل غائر يعني:",
+    "en": "A sunken fontanelle means:"
+   },
+   "options": [
+    {
+     "ar": "جفاف",
+     "en": "Dehydration"
+    },
+    {
+     "ar": "ضغط جمجمة",
+     "en": "Skull pressure"
+    },
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «جفاف»؛ نقص سوائل.",
+    "en": "The correct answer is \"dehydration\"; fluid deficit."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي منعكس يبقى حتى 12 شهراً؟",
+    "en": "Which reflex persists until 12 months?"
+   },
+   "options": [
+    {
+     "ar": "Babinski",
+     "en": "Babinski"
+    },
+    {
+     "ar": "Moro",
+     "en": "Moro"
+    },
+    {
+     "ar": "Rooting",
+     "en": "Rooting"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يظهر بمسح باطن القدم الخارجي.",
+    "en": "Elicited by stroking the outer side of the sole."
+   }
+  },
+  {
+   "q": {
+    "ar": "الفونتانيل الأمامي يغلق:",
+    "en": "The anterior fontanelle closes at:"
+   },
+   "options": [
+    {
+     "ar": "12-18 شهراً",
+     "en": "12-18 months"
+    },
+    {
+     "ar": "شهرين",
+     "en": "2 months"
+    },
+    {
+     "ar": "6 أشهر",
+     "en": "6 months"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «12-18 شهراً»؛ والخلفي شهرين.",
+    "en": "The correct answer is \"12-18 months\"; the posterior closes at 2 months."
+   }
+  },
+  {
+   "q": {
+    "ar": "رضيع 8 أشهر «قارب ضعف وزن الميلاد»: التقدير؟",
+    "en": "An 8-month-old who \"almost doubled the birth weight\": the assessment?"
+   },
+   "options": [
+    {
+     "ar": "تأخر نمو محتمل",
+     "en": "Possible growth delay"
+    },
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
+    },
+    {
+     "ar": "زيادة",
+     "en": "Excess"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «تأخر نمو محتمل»؛ يتضاعف عند 6 أشهر.",
+    "en": "The correct answer is \"possible growth delay\"; weight doubles at 6 months."
+   }
+  },
+  {
+   "q": {
+    "ar": "ولد 8 أرطال 5 أوقية وعمره 6 أشهر ويزن 14 رطلاً 4 أوقية:",
+    "en": "A boy born at 8 lb 5 oz is 6 months old and weighs 14 lb 4 oz:"
+   },
+   "options": [
+    {
+     "ar": "تأخر نمو (بلّغ)",
+     "en": "Growth delay (report)"
+    },
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
+    },
+    {
+     "ar": "سمنة",
+     "en": "Obesity"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "المتوقع قرابة 16.5 رطلاً.",
+    "en": "The expected weight is about 16.5 lb."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل 39 شهراً وزنه 6 أضعاف الميلاد:",
+    "en": "A 39-month-old child weighs 6 times the birth weight:"
+   },
+   "options": [
+    {
+     "ar": "يحتاج متابعة",
+     "en": "Needs follow-up"
+    },
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
+    },
+    {
+     "ar": "يؤجل",
+     "en": "Postpone"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "المتوقع 4 أضعاف عند 30 شهراً.",
+    "en": "The expected weight is 4 times at 30 months."
+   }
+  },
+  {
+   "q": {
+    "ar": "رضيع 3 أشهر فونتانيل لين ومسطح بمراقبة ضغط الجمجمة:",
+    "en": "A 3-month-old with a soft, flat fontanelle under monitoring for skull pressure:"
+   },
+   "options": [
+    {
+     "ar": "وثّق النتيجة",
+     "en": "Document the finding"
+    },
+    {
+     "ar": "اتصل بالطوارئ",
+     "en": "Call the emergency team"
+    },
+    {
+     "ar": "اضغط",
+     "en": "Press on it"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «وثّق النتيجة» وفق ما شُرح في أقسام الدليل (العلامات والتمريض).",
+    "en": "The correct answer is \"document the finding,\" as explained in the guide sections (signs and nursing)."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AAP growth"
+  },
+  {
+   "title": "WHO growth standards"
+  }
+ ]
 }

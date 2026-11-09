@@ -1,197 +1,250 @@
 {
-  "id": "dis-004",
-  "num": 4,
-  "system": "neuro",
-  "icon": "🤕",
-  "level": 1,
-  "title": {
-    "ar": "الصداع",
-    "en": "Headache"
+ "id": "dis-004",
+ "num": 4,
+ "system": "neuro",
+ "icon": "🤕",
+ "level": 1,
+ "title": {
+  "ar": "الصداع",
+  "en": "Headache"
+ },
+ "teaser": {
+  "ar": "أكتر شكوى في الطوارئ والعيادات: إزاي تفرّق بين صداع التوتر والصداع النصفي والصداع الخطير، وإيه اللي تقيسه قبل أي مسكن.",
+  "en": "The most common complaint in the ER and clinics: how to tell tension headache, migraine, and dangerous headache apart, and what to measure before any painkiller."
+ },
+ "chips": [
+  {
+   "ar": "توتر / نصفي",
+   "en": "Tension / migraine"
   },
-  "teaser": {
-    "ar": "أكتر شكوى في الطوارئ والعيادات: إزاي تفرّق بين صداع التوتر والصداع النصفي والصداع الخطير، وإيه اللي تقيسه قبل أي مسكن."
+  {
+   "ar": "علامات الخطر",
+   "en": "Red flags"
   },
-  "chips": [
-    {
-      "ar": "توتر / نصفي"
-    },
-    {
-      "ar": "علامات الخطر"
-    },
-    {
-      "ar": "قياس الضغط والحرارة"
-    }
+  {
+   "ar": "قياس الضغط والحرارة",
+   "en": "Check BP and temperature"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الصداع (Headache) عَرَض مش مرض. أغلبه بسيط (توتر أو إرهاق)، لكن قليل منه علامة على حاجة خطيرة (التهاب سحايا، نزيف مخ، ورم). شغلك كممرض تفرّق بين الاتنين بسرعة.</p><div class=\"cs-stats\"><div><b>5</b><span>خطوات تقييم أساسية</span></div><div><b>2</b><span>أشهر أنواع: توتر وصداع نصفي</span></div><div><b>1</b><span>شرط: ابحث عن العلامات الخطيرة</span></div></div>[[slot:dis-004-approach|خريطة أسباب الصداع وإزاي نتعامل معاه — رسم من إعداد الموقع|/diseases/img/dis-004-approach.svg]]<div class=\"cs-box cs-warning\"><strong>ما تعالجش العَرَض بس</strong><p>مسكّن بدون ما تقيس الضغط والحرارة وتسأل عن الأعراض الخطيرة ممكن يخبّي حالة خطيرة. اتبع خطوات التقييم الخمسة قبل ما تدّي أي دواء.</p></div>",
+   "en": "<p>Headache is a symptom, not a disease. Most are simple (tension or fatigue), but a few signal something dangerous (meningitis, brain hemorrhage, tumor). Your job as a nurse is to tell the two apart quickly.</p><div class=\"cs-stats\"><div><b>5</b><span>basic assessment steps</span></div><div><b>2</b><span>most common types: tension and migraine</span></div><div><b>1</b><span>rule: look for danger signs</span></div></div>[[slot:dis-004-approach|Map of headache causes and how to approach them — illustration made by the site|/diseases/img/dis-004-approach.svg]]<div class=\"cs-box cs-warning\"><strong>Don't treat the symptom only</strong><p>A painkiller given without measuring BP and temperature and asking about danger symptoms can hide a serious condition. Follow the five assessment steps before giving any medication.</p></div>"
+  },
+  "causes": {
+   "ar": "<h4>الأسباب (Etiology)</h4><table><thead><tr><th>النوع</th><th>الأمثلة</th></tr></thead><tbody><tr><td>أسباب عامة (General)</td><td>ارتفاع الضغط / هبوط الضغط / هبوط السكر / الأنيميا / العدوى (Infections) ... وغيرها</td></tr><tr><td>أسباب موضعية (Local)</td><td>1) أخطاء الانكسار بالعين (Errors of refraction) 2) التهاب الجيوب الأنفية (Sinusitis) 3) إصابة الرأس (Trauma) 4) آفة تشغل حيز داخل الجمجمة (Intracranial space occupying lesion) 5) الالتهابات: التهاب السحايا / التهاب المخ (Meningitis / Encephalitis) 6) أوعية دموية: نزيف داخل المخ (ICH) / الصداع النصفي (Migraine)</td></tr><tr><td>نفسي وتوتر (Psychic and tension headache)</td><td>من أشهر الأنواع، تشخيص بعد استبعاد غيره</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>أسباب إضافية</strong><p>الجفاف والصيام، الكافيين وانسحابه، الإفراط في المسكنات (Medication overuse)، قلة النوم، تسمم أول أكسيد الكربون، التهاب الشريان الصدغي في كبار السن، وتسمم الحمل (صداع مع ضغط عالي وتورم).</p></div>",
+   "en": "<h4>Causes (Etiology)</h4><table><thead><tr><th>Type</th><th>Examples</th></tr></thead><tbody><tr><td>General causes</td><td>High BP / low BP / hypoglycemia / anemia / infections ... and others</td></tr><tr><td>Local causes</td><td>1) Errors of refraction in the eye 2) Sinusitis 3) Head trauma 4) Intracranial space occupying lesion 5) Infections: Meningitis / Encephalitis 6) Vascular: intracerebral hemorrhage (ICH) / Migraine</td></tr><tr><td>Psychic and tension headache</td><td>One of the most common types; diagnosed after excluding others</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Additional causes</strong><p>Dehydration and fasting, caffeine and caffeine withdrawal, medication overuse, lack of sleep, carbon monoxide poisoning, temporal arteritis in the elderly, and preeclampsia (headache with high BP and swelling).</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>صداع التوتر (Tension headache)</h4><p>ألم ضاغط على الجبهة أو الرأس كله زي «طوق»، خفيف إلى متوسط، من غير غثيان شديد، وغالباً مرتبط بتوتر أو إجهاد أو شد عضلات الرقبة والكتف.</p>\n<h4>الصداع النصفي (Migraine) — الصورة الإكلينيكية</h4><p>ألم نابض (Throbbing) في نص الرأس (Hemicranial) على هيئة نوبات (Paroxysmal)، ممكن يصاحبه اضطرابات في الرؤية (Visual disturbance). عادةً ومعاه غثيان وحساسية للضوء والصوت.</p><div class=\"cs-box cs-danger\"><strong>علامات خطر (Red flags) — لازم تبلّغ فوراً</strong><ul><li>أسوأ صداع في حياته أو بدأ فجأة جداً (Thunderclap) — شك في نزيف تحت العنكبوتية</li><li>حرارة وتيبّس رقبة وطفح (سحايا)</li><li>ضعف أو تنميل أو صعوبة كلام أو تغير في الوعي</li><li>بعد إصابة في الراس</li><li>ازدواج رؤية أو نوبة تشنج</li><li>صداع جديد بعد عمر 50 سنة أو بيزيد تدريجياً ويتفاقم بالسعال أو الانحناء</li><li>حمل مع ضغط عالي</li></ul></div><h4>أخذ التاريخ (History)</h4><ul><li>بدأ إمتى؟ بيقل ولا بيزيد؟ المدة</li><li>مكانه فين؟ نوع الألم؟</li><li>إيه اللي بيزوده وإيه اللي بيخففه؟</li><li>مصاحبات: ترجيع، سخونية، تشنجات، توهة</li></ul><h4>الأنواع الأولية (بعد الاستبعاد)</h4><ul><li>الصداع التوتري: مسكّ مقدمة أو مؤخرة الراس في الجهتين، بيزيد بالليل</li><li>الصداع النصفي: نصف الراس نابض، غالباً مسبوق بهالة (ترجيع أو حساسية من الضوء)، والمريض بيتحمل الضوء بصعوبة وفي كتير سيدات</li></ul><div class=\"cs-box cs-tip\"><strong>الخلاصة لأي حالة صداع</strong><p>استبعد الـ Red flags أولاً. بعدين اسأل: نظر؟ جيوب؟ ودن؟ أسنان؟ برد؟ إمساك؟ ثم قس الضغط واطلب CBC. لو اتستبعدت الأسباب المشهورة ومعرفتش السبب: عيادة مخ وأعصاب.</p></div>",
+   "en": "<h4>Tension headache</h4><p>Pressing pain on the forehead or the whole head like a \"band,\" mild to moderate, without severe nausea, and usually linked to stress, strain, or tight neck and shoulder muscles.</p>\n<h4>Migraine — clinical picture</h4><p>Throbbing pain in one half of the head (hemicranial) in attacks (paroxysmal), possibly with visual disturbance. Usually accompanied by nausea and sensitivity to light and sound.</p><div class=\"cs-box cs-danger\"><strong>Red flags — report immediately</strong><ul><li>Worst headache of his life or very sudden onset (thunderclap) — suspect subarachnoid hemorrhage</li><li>Fever, stiff neck, and rash (meningitis)</li><li>Weakness, numbness, difficulty speaking, or change in consciousness</li><li>After a head injury</li><li>Double vision or a seizure</li><li>New headache after age 50, or one that gradually worsens and gets worse with coughing or bending</li><li>Pregnancy with high BP</li></ul></div><h4>History taking</h4><ul><li>When did it start? Is it getting better or worse? Duration</li><li>Where is it? What type of pain?</li><li>What makes it worse and what relieves it?</li><li>Associated symptoms: vomiting, fever, seizures, confusion</li></ul><h4>Primary types (after exclusion)</h4><ul><li>Tension headache: tight band across the front or back of the head on both sides, worse at night</li><li>Migraine: throbbing in half of the head, often preceded by an aura (vomiting or sensitivity to light); the patient barely tolerates light, and it is common in women</li></ul><div class=\"cs-box cs-tip\"><strong>Bottom line for any headache case</strong><p>Exclude the red flags first. Then ask: vision? sinuses? ear? teeth? cold? constipation? Then measure BP and request a CBC. If the common causes are excluded and the cause is still unknown: neurology clinic.</p></div>"
+  },
+  "tests": {
+   "ar": "<h4>الخطوات التشخيصية (Diagnosis)</h4><ol><li>قياس ضغط الدم (Measure blood pressure)</li><li>قياس درجة الحرارة (Measure body temperature)</li><li>البحث عن الشحوب (Search for pallor) لاستبعاد الأنيميا</li><li>السؤال عن الإمساك (Ask about constipation)</li><li>السؤال عن مشاكل العين / الأنف / الأذن / الأسنان / الجهاز العصبي</li></ol><div class=\"cs-box cs-info\"><strong>فحوصات يطلبها الطبيب عند الحاجة</strong><p>سكر الدم، CBC، أشعة مقطعية أو رنين على المخ، بزل قطني (عند الشك في التهاب سحايا أو نزيف)، فحص عين، أشعة جيوب. جهّز المريض والنماذج حسب طلب الطبيب.</p></div><!--e2-4--><h4>متى أقلق وأطلب أشعة مقطعية؟ (SNOOP)</h4><table><thead><tr><th>الحرف</th><th>العلامة</th></tr></thead><tbody><tr><td>S — Systemic</td><td>حرارة عالية، قيء مستمر، تيبّس رقبة</td></tr><tr><td>N — Neurological</td><td>اضطراب وعي، تشنجات، علامات عصبية بؤرية</td></tr><tr><td>O — Onset</td><td>بدء مفاجئ وشديد</td></tr><tr><td>O — Older</td><td>البداية بعد 40 سنة (التحديث: 50 في SNOOP الأصلي)</td></tr><tr><td>P — Previous</td><td>صداع سابق لكن بشكل مختلف</td></tr></tbody></table><p>أي علامة منهم = أشعة مقطعية عاجلة وتحويل لأخصائي.</p><div class=\"cs-box cs-danger\"><strong>لا تفوّت التهاب السحايا والمخ</strong><ul><li>سحايا: حرارة، اضطراب وعي، تيبس رقبة، رقبة محجّرة لما تثنيها</li><li>التهاب المخ: حرارة، اضطراب وعي، تشنجات، علامة عصبية (ضعف ذراع/قدم)</li></ul></div><h4>8 أسباب مزمنة اسأل عنها (لو مفيش طوارئ)</h4><table><thead><tr><th>السبب</th><th>اسأل المريض</th></tr></thead><tbody><tr><td>العين: أخطاء انكسار</td><td>مشكلة في النظر؟ اطلب كشف نظر لو مفيش سبب تاني</td></tr><tr><td>الأنف: جيوب أنفية</td><td>ألم في الجبهة أو جانبي الأنف يزيد بالضغط وبالانحناء للأمام (الركوع)</td></tr><tr><td>الأذن: التهاب وسط/خارجي</td><td>وجع في الودن أو إفرازات؟</td></tr><tr><td>الفم: ألم الأسنان</td><td>ألم أسنان؟ ممكن المريض لا يربطه بالصداع</td></tr><tr><td>حرارة وعدوى مثل البرد</td><td>سخونية، كحة، رشح، ألم في الزور، تكسير</td></tr><tr><td>إمساك مزمن</td><td>ممكن يسبب صداع مزمن</td></tr><tr><td>ضغط عالي أو واطي</td><td>قيس الضغط</td></tr><tr><td>أنيميا</td><td>من أشهر أسباب الصداع والدوخة والإجهاد خصوصاً في السيدات</td></tr></tbody></table>",
+   "en": "<h4>Diagnostic steps (Diagnosis)</h4><ol><li>Measure blood pressure</li><li>Measure body temperature</li><li>Search for pallor to exclude anemia</li><li>Ask about constipation</li><li>Ask about eye / nose / ear / teeth / nervous system problems</li></ol><div class=\"cs-box cs-info\"><strong>Tests the doctor orders when needed</strong><p>Blood glucose, CBC, CT or MRI of the brain, lumbar puncture (when meningitis or hemorrhage is suspected), eye exam, sinus X-ray. Prepare the patient and the forms as the doctor requests.</p></div><!--e2-4--><h4>When to worry and request a CT scan? (SNOOP)</h4><table><thead><tr><th>Letter</th><th>Sign</th></tr></thead><tbody><tr><td>S — Systemic</td><td>High fever, persistent vomiting, stiff neck</td></tr><tr><td>N — Neurological</td><td>Altered consciousness, seizures, focal neurological signs</td></tr><tr><td>O — Onset</td><td>Sudden and severe onset</td></tr><tr><td>O — Older</td><td>Onset after age 40 (updated: 50 in the original SNOOP)</td></tr><tr><td>P — Previous</td><td>Previous headaches but of a different pattern</td></tr></tbody></table><p>Any one of these = urgent CT scan and referral to a specialist.</p><div class=\"cs-box cs-danger\"><strong>Don't miss meningitis and encephalitis</strong><ul><li>Meningitis: fever, altered consciousness, stiff neck, neck rigid when you flex it</li><li>Encephalitis: fever, altered consciousness, seizures, neurological sign (arm/leg weakness)</li></ul></div><h4>8 chronic causes to ask about (if no emergency)</h4><table><thead><tr><th>Cause</th><th>Ask the patient</th></tr></thead><tbody><tr><td>Eye: errors of refraction</td><td>Any vision problem? Request an eye exam if there is no other cause</td></tr><tr><td>Nose: sinusitis</td><td>Pain in the forehead or beside the nose that increases with pressure and with bending forward</td></tr><tr><td>Ear: otitis media/externa</td><td>Earache or discharge?</td></tr><tr><td>Mouth: toothache</td><td>Tooth pain? The patient may not link it to the headache</td></tr><tr><td>Fever and infection like a cold</td><td>Fever, cough, runny nose, sore throat, body aches</td></tr><tr><td>Chronic constipation</td><td>Can cause chronic headache</td></tr><tr><td>High or low blood pressure</td><td>Measure BP</td></tr><tr><td>Anemia</td><td>One of the most common causes of headache, dizziness, and fatigue, especially in women</td></tr></tbody></table>"
+  },
+  "treatment": {
+   "ar": "<h4>1) العلاج العام</h4><p><b>أمبول Rheumafen 75 (ديكلوفيناك) عضل + علاج سبب الصداع.</b></p>\n<h4>2) علاج صداع التوتر (Treatment of tension headache)</h4><table><thead><tr><th>الفئة</th><th>الدواء</th><th>الجرعة حسب المراجع</th></tr></thead><tbody><tr><td>مسكّن (Analgesic)</td><td>Cataflam 25 قرص</td><td>قرص 3 مرات يومياً بعد الأكل</td></tr><tr><td>مرخي عضلات (Muscle relaxant)</td><td>Mylogin كبسولات</td><td>كبسولة مرتين يومياً بعد الأكل</td></tr><tr><td>مضاد اكتئاب (Antidepressant)</td><td>Tryptazole قرص</td><td>قرص مرة واحدة يومياً قبل النوم</td></tr></tbody></table><h4>3) الصداع النصفي (Migraine)</h4><ul><li>راحة تامة في السرير في غرفة مظلمة (Bed rest in dark room)</li><li><b>Metograine</b> قرص: قرصين، والتكرار والحد الأقصى حسب أمر الطبيب والنشرة (إرجوت)</li><li>أدوية الصداع النصفي <b>ممنوعة</b> في: الحمل / أمراض الشريان التاجي / أمراض الأوعية الطرفية (PVD)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>الخط الأول لصداع التوتر: Paracetamol أو مضاد التهاب (Ibuprofen/Naproxen/Diclofenac) لأيام قليلة؛ تجنّب الإفراط (أكتر من 10–15 يوم في الشهر يسبب «صداع الإفراط في المسكنات»). المهدئات والأفيونات لا تُنصح. Amitriptyline بجرعة صغيرة وقاية في المزمن بأمر الطبيب.</li><li>الديكلوفيناك العضل مناسب لنوبة شديدة أو قيء فقط وبحذر (قصور كلى، قرحة معدة، ربو، ارتفاع ضغط، أمراض قلب)؛ لم أجد مرجعاً يدعمه كروتين لصداع التوتر.</li><li>Metograine مشتق إرجوت (Ergot) حسب وصف المنتج؛ الإرجوت لها حد أقصى للجرعة في النوبة وفي الأسبوع، وبتسبب تضيق أوعية، وممنوعة مع بعض المضادات الحيوية والـ Triptans. التزم بالنشرة، وحدّ الـ3 مرات يومياً غير مؤكد. الخيار الحديث: NSAIDs/Triptans مع مضاد قيء.</li><li>Mylogin وTryptazole: التركيبة غير موثقة؛ تُصنَّف كمرخي عضلات ومضاد اكتئاب (Tryptazole غالباً Amitriptyline، غير مؤكد).</li></ul></div>",
+   "en": "<h4>1) General treatment</h4><p><b>Rheumafen 75 (diclofenac) ampoule IM + treat the cause of the headache.</b></p>\n<h4>2) Treatment of tension headache</h4><table><thead><tr><th>Category</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Analgesic</td><td>Cataflam 25 tablet</td><td>1 tablet 3 times daily after meals</td></tr><tr><td>Muscle relaxant</td><td>Mylogin capsules</td><td>1 capsule twice daily after meals</td></tr><tr><td>Antidepressant</td><td>Tryptazole tablet</td><td>1 tablet once daily before bedtime</td></tr></tbody></table><h4>3) Migraine</h4><ul><li>Complete bed rest in a dark room</li><li><b>Metograine</b> tablet: 2 tablets; repetition and maximum dose per the doctor's order and the package insert (ergot)</li><li>Migraine drugs are <b>contraindicated</b> in: pregnancy / coronary artery disease / peripheral vascular disease (PVD)</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li>First line for tension headache: paracetamol or an anti-inflammatory (ibuprofen/naproxen/diclofenac) for a few days; avoid overuse (more than 10–15 days a month causes \"medication overuse headache\"). Sedatives and opioids are not recommended. Low-dose amitriptyline for prevention in chronic cases, by doctor's order.</li><li>IM diclofenac is suitable only for a severe attack or vomiting and with caution (renal failure, peptic ulcer, asthma, hypertension, heart disease); no reference was found to support it as routine for tension headache.</li><li>Metograine is an ergot derivative according to the product description; ergots have a maximum dose per attack and per week, cause vasoconstriction, and are contraindicated with some antibiotics and with triptans. Follow the package insert; the \"3 times daily\" limit is unconfirmed. Modern option: NSAIDs/triptans with an antiemetic.</li><li>Mylogin and Tryptazole: composition not documented; classified as a muscle relaxant and an antidepressant (Tryptazole is probably amitriptyline, unconfirmed).</li></ul></div>"
+  },
+  "nursing": {
+   "ar": "<p>الصداع أحياناً بسيط لكن تقييمك السريع ممكن ينقذ حياة:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الألم</strong><p>بداية الألم (مفاجئ؟ تدريجي؟)، المكان، الشدة من 10، النوع (نابض/ضاغط)، المدة، مصاحبات (غثيان، حساسية للضوء، زغللة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>خُد العلامات الحيوية</strong><p>الضغط (مرتفع؟ منخفض؟)، الحرارة، النبض، التنفس، الوعي، وسكر الدم لو في شك.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>فتّش عن الأسباب والعلامات الخطيرة</strong><p>شحوب (أنيميا)، إمساك، مشاكل العين والأنف والأذن والأسنان والجهاز العصبي. تيبّس الرقبة، ضعف، تشنج = تبليغ فوري.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الراحة والبيئة</strong><p>غرفة هادية مظلمة، راحة في السرير، كمادات باردة على الجبهة، قلّل الأصوات والإضاءة (خصوصاً مع الصداع النصفي).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الدواء بأمان</strong><p>تأكد من الحساسية وحالة المعدة والكلى والحمل. Cataflam وMylogin بعد الأكل، وTryptazole قبل النوم (حسب المراجع). Rheumafen عضل عميق في المؤخرة ببطء. ما تديش أدوية الصداع النصفي (إرجوت) لحامل أو مريض قلب أو شرايين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أعد التقييم</strong><p>شدة الألم بعد 30–60 دقيقة، الأعراض الجديدة. لو ما اتحسنش أو ساء: بلّغ الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف</strong><p>مفكرة الصداع (الوقت والمحفزات والدواء)، نوم منتظم، سوائل كفاية، تقليل الكافيين، عدم الإفراط في المسكنات.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>صداع مفاجئ شديد أو مع حرارة وتيبّس رقبة أو ضعف أو تغير وعي أو بعد إصابة: <b>طوارئ</b>. بلّغ فوراً، سجّل العلامات العصبية (حجم البؤبؤ، قوة الأطراف، الوعي)، وجهّز المريض للأشعة.</p></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>وقت بداية الصداع ومقياس الألم والعلامات الحيوية وأي أعراض عصبية، الدواء المعطى وتأثيره.</p></div><!--g8bnursing--><div class=\"cs-box cs-info\"><strong>إضافة: أدوية الصداع النصفي</strong><p>راجع <a href=\"/diseases/dis-3536\">sumatriptan وergotamine</a>: تضيّق أوعية الدماغ، تُمنع في مرض الشريان التاجي والضغط غير المضبوط، وعلامة ergotamine الأولوية شحوب الأطراف.</p></div>",
+   "en": "<p>A headache is sometimes simple, but your quick assessment can save a life:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess the pain</strong><p>Onset (sudden? gradual?), location, severity out of 10, type (throbbing/pressing), duration, associated symptoms (nausea, sensitivity to light, blurred vision).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Take the vital signs</strong><p>BP (high? low?), temperature, pulse, respiration, consciousness, and blood glucose if in doubt.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Look for causes and danger signs</strong><p>Pallor (anemia), constipation, problems of the eye, nose, ear, teeth, and nervous system. Stiff neck, weakness, seizure = report immediately.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Rest and environment</strong><p>Quiet dark room, bed rest, cold compresses on the forehead, reduce noise and light (especially with migraine).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Give medication safely</strong><p>Check allergies and the condition of the stomach, kidneys, and pregnancy. Cataflam and Mylogin after meals, and Tryptazole before bedtime. Give Rheumafen deep IM in the buttock, slowly. Do not give migraine drugs (ergot) to a pregnant patient or a patient with heart or artery disease.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Reassess</strong><p>Pain severity after 30–60 minutes, any new symptoms. If not improved or worse: notify the doctor.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Educate</strong><p>Headache diary (time, triggers, medication), regular sleep, enough fluids, less caffeine, no overuse of painkillers.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Sudden severe headache, or headache with fever and stiff neck, weakness, altered consciousness, or after an injury: <b>emergency</b>. Report immediately, record the neurological signs (pupil size, limb strength, consciousness), and prepare the patient for imaging.</p></div><div class=\"cs-box cs-info\"><strong>Documentation</strong><p>Time of headache onset, pain scale, vital signs, any neurological symptoms, the medication given and its effect.</p></div><!--g8bnursing--><div class=\"cs-box cs-info\"><strong>Addition: migraine drugs</strong><p>See <a href=\"/diseases/dis-3536\">sumatriptan and ergotamine</a>: they constrict the brain's blood vessels, are contraindicated in coronary artery disease and uncontrolled hypertension, and the key sign of ergotamine toxicity is pale extremities.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>صداع مفاجئ شديد جداً («أسوأ صداع في حياتي»)</li><li>حرارة مع تيبّس الرقبة أو طفح أو تغيّر الوعي</li><li>ضعف أو تنميل أو صعوبة كلام أو ازدواج رؤية أو تشنج</li><li>صداع بعد ضربة على الراس أو سقوط</li><li>صداع مع ضغط عالي شديد أو في حامل</li><li>صداع جديد بعد 50 سنة أو بيزيد تدريجياً مع قيء متكرر</li><li>صداع مع هبوط سكر أو ضغط</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately if:</strong><ul><li>Sudden, very severe headache (\"worst headache of my life\")</li><li>Fever with stiff neck, rash, or change in consciousness</li><li>Weakness, numbness, difficulty speaking, double vision, or seizure</li><li>Headache after a blow to the head or a fall</li><li>Headache with severe high BP or in a pregnant woman</li><li>New headache after 50, or one that gradually worsens with repeated vomiting</li><li>Headache with low blood glucose or low BP</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرب سوائل، نام كفاية، وكُل منتظم (الصيام وقلة النوم من محفزات الصداع).</li><li>قلّل الكافيين، وابتعد عن المحفزات اللي بتلاحظها (روائح، أضواء، أكلات معينة).</li><li>سجّل مرات الصداع والدواء في مفكرة.</li><li>ما تاخدش مسكنات أكتر من 2–3 أيام متتالية من غير ما تستشير الطبيب.</li><li>مارس استرخاء وتمارين رقبة وكتف خفيفة لصداع التوتر.</li><li>قيس ضغطك وسكرك لو كررت الصداع.</li><li>الصداع النصفي: ارتاح في غرفة مظلمة. والأدوية ممنوعة في الحمل ومع أمراض القلب.</li><li>روح الطوارئ لو الصداع مفاجئ أو شديد أو معاه حرارة أو ضعف.</li></ul>",
+   "en": "<ul><li>Drink fluids, sleep enough, and eat regularly (fasting and lack of sleep trigger headaches).</li><li>Cut down on caffeine, and avoid the triggers you notice (smells, lights, certain foods).</li><li>Record your headaches and medication in a diary.</li><li>Don't take painkillers for more than 2–3 days in a row without consulting the doctor.</li><li>Practice relaxation and gentle neck and shoulder exercises for tension headache.</li><li>Check your BP and blood glucose if the headaches recur.</li><li>Migraine: rest in a dark room. The medications are contraindicated in pregnancy and with heart disease.</li><li>Go to the ER if the headache is sudden or severe or comes with fever or weakness.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الصداع عَرَض: قيس الضغط والحرارة واسأل عن الشحوب والإمساك ومشاكل العين/الأنف/الأذن/الأسنان/العصبي",
+   "من أسبابه العامة: ضغط عالي أو واطي، هبوط سكر، أنيميا، عدوى",
+   "الصداع النصفي: نابض في نص الرأس نوبات ± اضطراب رؤية، راحة في غرفة مظلمة",
+   "أدوية الصداع النصفي ممنوعة في الحمل وأمراض الشرايين التاجية والطرفية",
+   "صداع مفاجئ شديد أو مع حرارة وتيبّس رقبة أو ضعف = طوارئ",
+   "تجنّب الإفراط في المسكنات (صداع الإفراط)",
+   "SNOOP: أعراض عامة، عصبية، بدء مفاجئ، عمر فوق 40–50، صداع مختلف = أشعة عاجلة",
+   "لا تفوّت السحايا والتهاب المخ مع الحرارة واضطراب الوعي",
+   "اسأل عن 8 أسباب مزمنة: عين، أنف، أذن، أسنان، برد، إمساك، ضغط، أنيميا"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الصداع (Headache) عَرَض مش مرض. أغلبه بسيط (توتر أو إرهاق)، لكن قليل منه علامة على حاجة خطيرة (التهاب سحايا، نزيف مخ، ورم). شغلك كممرض تفرّق بين الاتنين بسرعة.</p><div class=\"cs-stats\"><div><b>5</b><span>خطوات تقييم أساسية</span></div><div><b>2</b><span>أشهر أنواع: توتر وصداع نصفي</span></div><div><b>1</b><span>شرط: ابحث عن العلامات الخطيرة</span></div></div>[[slot:dis-004-approach|خريطة أسباب الصداع وإزاي نتعامل معاه — رسم من إعداد الموقع|/diseases/img/dis-004-approach.svg]]<div class=\"cs-box cs-warning\"><strong>ما تعالجش العَرَض بس</strong><p>مسكّن بدون ما تقيس الضغط والحرارة وتسأل عن الأعراض الخطيرة ممكن يخبّي حالة خطيرة. اتبع خطوات التقييم الخمسة قبل ما تدّي أي دواء.</p></div>"
-    },
-    "causes": {
-      "ar": "<h4>الأسباب (Etiology)</h4><table><thead><tr><th>النوع</th><th>الأمثلة</th></tr></thead><tbody><tr><td>أسباب عامة (General)</td><td>ارتفاع الضغط / هبوط الضغط / هبوط السكر / الأنيميا / العدوى (Infections) ... وغيرها</td></tr><tr><td>أسباب موضعية (Local)</td><td>1) أخطاء الانكسار بالعين (Errors of refraction) 2) التهاب الجيوب الأنفية (Sinusitis) 3) إصابة الرأس (Trauma) 4) آفة تشغل حيز داخل الجمجمة (Intracranial space occupying lesion) 5) الالتهابات: التهاب السحايا / التهاب المخ (Meningitis / Encephalitis) 6) أوعية دموية: نزيف داخل المخ (ICH) / الصداع النصفي (Migraine)</td></tr><tr><td>نفسي وتوتر (Psychic and tension headache)</td><td>من أشهر الأنواع، تشخيص بعد استبعاد غيره</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>أسباب إضافية</strong><p>الجفاف والصيام، الكافيين وانسحابه، الإفراط في المسكنات (Medication overuse)، قلة النوم، تسمم أول أكسيد الكربون، التهاب الشريان الصدغي في كبار السن، وتسمم الحمل (صداع مع ضغط عالي وتورم).</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>صداع التوتر (Tension headache)</h4><p>ألم ضاغط على الجبهة أو الرأس كله زي «طوق»، خفيف إلى متوسط، من غير غثيان شديد، وغالباً مرتبط بتوتر أو إجهاد أو شد عضلات الرقبة والكتف.</p>\n<h4>الصداع النصفي (Migraine) — الصورة الإكلينيكية</h4><p>ألم نابض (Throbbing) في نص الرأس (Hemicranial) على هيئة نوبات (Paroxysmal)، ممكن يصاحبه اضطرابات في الرؤية (Visual disturbance). عادةً ومعاه غثيان وحساسية للضوء والصوت.</p><div class=\"cs-box cs-danger\"><strong>علامات خطر (Red flags) — لازم تبلّغ فوراً</strong><ul><li>أسوأ صداع في حياته أو بدأ فجأة جداً (Thunderclap) — شك في نزيف تحت العنكبوتية</li><li>حرارة وتيبّس رقبة وطفح (سحايا)</li><li>ضعف أو تنميل أو صعوبة كلام أو تغير في الوعي</li><li>بعد إصابة في الراس</li><li>ازدواج رؤية أو نوبة تشنج</li><li>صداع جديد بعد عمر 50 سنة أو بيزيد تدريجياً ويتفاقم بالسعال أو الانحناء</li><li>حمل مع ضغط عالي</li></ul></div><h4>أخذ التاريخ (History)</h4><ul><li>بدأ إمتى؟ بيقل ولا بيزيد؟ المدة</li><li>مكانه فين؟ نوع الألم؟</li><li>إيه اللي بيزوده وإيه اللي بيخففه؟</li><li>مصاحبات: ترجيع، سخونية، تشنجات، توهة</li></ul><h4>الأنواع الأولية (بعد الاستبعاد)</h4><ul><li>الصداع التوتري: مسكّ مقدمة أو مؤخرة الراس في الجهتين، بيزيد بالليل</li><li>الصداع النصفي: نصف الراس نابض، غالباً مسبوق بهالة (ترجيع أو حساسية من الضوء)، والمريض بيتحمل الضوء بصعوبة وفي كتير سيدات</li></ul><div class=\"cs-box cs-tip\"><strong>الخلاصة لأي حالة صداع</strong><p>استبعد الـ Red flags أولاً. بعدين اسأل: نظر؟ جيوب؟ ودن؟ أسنان؟ برد؟ إمساك؟ ثم قس الضغط واطلب CBC. لو اتستبعدت الأسباب المشهورة ومعرفتش السبب: عيادة مخ وأعصاب.</p></div>"
-    },
-    "tests": {
-      "ar": "<h4>الخطوات التشخيصية (Diagnosis)</h4><ol><li>قياس ضغط الدم (Measure blood pressure)</li><li>قياس درجة الحرارة (Measure body temperature)</li><li>البحث عن الشحوب (Search for pallor) لاستبعاد الأنيميا</li><li>السؤال عن الإمساك (Ask about constipation)</li><li>السؤال عن مشاكل العين / الأنف / الأذن / الأسنان / الجهاز العصبي</li></ol><div class=\"cs-box cs-info\"><strong>فحوصات يطلبها الطبيب عند الحاجة</strong><p>سكر الدم، CBC، أشعة مقطعية أو رنين على المخ، بزل قطني (عند الشك في التهاب سحايا أو نزيف)، فحص عين، أشعة جيوب. جهّز المريض والنماذج حسب طلب الطبيب.</p></div><!--e2-4--><h4>متى أقلق وأطلب أشعة مقطعية؟ (SNOOP)</h4><table><thead><tr><th>الحرف</th><th>العلامة</th></tr></thead><tbody><tr><td>S — Systemic</td><td>حرارة عالية، قيء مستمر، تيبّس رقبة</td></tr><tr><td>N — Neurological</td><td>اضطراب وعي، تشنجات، علامات عصبية بؤرية</td></tr><tr><td>O — Onset</td><td>بدء مفاجئ وشديد</td></tr><tr><td>O — Older</td><td>البداية بعد 40 سنة (التحديث: 50 في SNOOP الأصلي)</td></tr><tr><td>P — Previous</td><td>صداع سابق لكن بشكل مختلف</td></tr></tbody></table><p>أي علامة منهم = أشعة مقطعية عاجلة وتحويل لأخصائي.</p><div class=\"cs-box cs-danger\"><strong>لا تفوّت التهاب السحايا والمخ</strong><ul><li>سحايا: حرارة، اضطراب وعي، تيبس رقبة، رقبة محجّرة لما تثنيها</li><li>التهاب المخ: حرارة، اضطراب وعي، تشنجات، علامة عصبية (ضعف ذراع/قدم)</li></ul></div><h4>8 أسباب مزمنة اسأل عنها (لو مفيش طوارئ)</h4><table><thead><tr><th>السبب</th><th>اسأل المريض</th></tr></thead><tbody><tr><td>العين: أخطاء انكسار</td><td>مشكلة في النظر؟ اطلب كشف نظر لو مفيش سبب تاني</td></tr><tr><td>الأنف: جيوب أنفية</td><td>ألم في الجبهة أو جانبي الأنف يزيد بالضغط وبالانحناء للأمام (الركوع)</td></tr><tr><td>الأذن: التهاب وسط/خارجي</td><td>وجع في الودن أو إفرازات؟</td></tr><tr><td>الفم: ألم الأسنان</td><td>ألم أسنان؟ ممكن المريض لا يربطه بالصداع</td></tr><tr><td>حرارة وعدوى مثل البرد</td><td>سخونية، كحة، رشح، ألم في الزور، تكسير</td></tr><tr><td>إمساك مزمن</td><td>ممكن يسبب صداع مزمن</td></tr><tr><td>ضغط عالي أو واطي</td><td>قيس الضغط</td></tr><tr><td>أنيميا</td><td>من أشهر أسباب الصداع والدوخة والإجهاد خصوصاً في السيدات</td></tr></tbody></table>"
-    },
-    "treatment": {
-      "ar": "<h4>1) العلاج العام</h4><p><b>أمبول Rheumafen 75 (ديكلوفيناك) عضل + علاج سبب الصداع.</b></p>\n<h4>2) علاج صداع التوتر (Treatment of tension headache)</h4><table><thead><tr><th>الفئة</th><th>الدواء</th><th>الجرعة حسب المراجع</th></tr></thead><tbody><tr><td>مسكّن (Analgesic)</td><td>Cataflam 25 قرص</td><td>قرص 3 مرات يومياً بعد الأكل</td></tr><tr><td>مرخي عضلات (Muscle relaxant)</td><td>Mylogin كبسولات</td><td>كبسولة مرتين يومياً بعد الأكل</td></tr><tr><td>مضاد اكتئاب (Antidepressant)</td><td>Tryptazole قرص</td><td>قرص مرة واحدة يومياً قبل النوم</td></tr></tbody></table><h4>3) الصداع النصفي (Migraine)</h4><ul><li>راحة تامة في السرير في غرفة مظلمة (Bed rest in dark room)</li><li><b>Metograine</b> قرص: قرصين، والتكرار والحد الأقصى حسب أمر الطبيب والنشرة (إرجوت)</li><li>أدوية الصداع النصفي <b>ممنوعة</b> في: الحمل / أمراض الشريان التاجي / أمراض الأوعية الطرفية (PVD)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>الخط الأول لصداع التوتر: Paracetamol أو مضاد التهاب (Ibuprofen/Naproxen/Diclofenac) لأيام قليلة؛ تجنّب الإفراط (أكتر من 10–15 يوم في الشهر يسبب «صداع الإفراط في المسكنات»). المهدئات والأفيونات لا تُنصح. Amitriptyline بجرعة صغيرة وقاية في المزمن بأمر الطبيب.</li><li>الديكلوفيناك العضل مناسب لنوبة شديدة أو قيء فقط وبحذر (قصور كلى، قرحة معدة، ربو، ارتفاع ضغط، أمراض قلب)؛ لم أجد مرجعاً يدعمه كروتين لصداع التوتر.</li><li>Metograine مشتق إرجوت (Ergot) حسب وصف المنتج؛ الإرجوت لها حد أقصى للجرعة في النوبة وفي الأسبوع، وبتسبب تضيق أوعية، وممنوعة مع بعض المضادات الحيوية والـ Triptans. التزم بالنشرة، وحدّ الـ3 مرات يومياً غير مؤكد. الخيار الحديث: NSAIDs/Triptans مع مضاد قيء.</li><li>Mylogin وTryptazole: التركيبة غير موثقة؛ تُصنَّف كمرخي عضلات ومضاد اكتئاب (Tryptazole غالباً Amitriptyline، غير مؤكد).</li></ul></div>"
-    },
-    "nursing": {
-      "ar": "<p>الصداع أحياناً بسيط لكن تقييمك السريع ممكن ينقذ حياة:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الألم</strong><p>بداية الألم (مفاجئ؟ تدريجي؟)، المكان، الشدة من 10، النوع (نابض/ضاغط)، المدة، مصاحبات (غثيان، حساسية للضوء، زغللة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>خُد العلامات الحيوية</strong><p>الضغط (مرتفع؟ منخفض؟)، الحرارة، النبض، التنفس، الوعي، وسكر الدم لو في شك.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>فتّش عن الأسباب والعلامات الخطيرة</strong><p>شحوب (أنيميا)، إمساك، مشاكل العين والأنف والأذن والأسنان والجهاز العصبي. تيبّس الرقبة، ضعف، تشنج = تبليغ فوري.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الراحة والبيئة</strong><p>غرفة هادية مظلمة، راحة في السرير، كمادات باردة على الجبهة، قلّل الأصوات والإضاءة (خصوصاً مع الصداع النصفي).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الدواء بأمان</strong><p>تأكد من الحساسية وحالة المعدة والكلى والحمل. Cataflam وMylogin بعد الأكل، وTryptazole قبل النوم (حسب المراجع). Rheumafen عضل عميق في المؤخرة ببطء. ما تديش أدوية الصداع النصفي (إرجوت) لحامل أو مريض قلب أو شرايين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أعد التقييم</strong><p>شدة الألم بعد 30–60 دقيقة، الأعراض الجديدة. لو ما اتحسنش أو ساء: بلّغ الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف</strong><p>مفكرة الصداع (الوقت والمحفزات والدواء)، نوم منتظم، سوائل كفاية، تقليل الكافيين، عدم الإفراط في المسكنات.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>صداع مفاجئ شديد أو مع حرارة وتيبّس رقبة أو ضعف أو تغير وعي أو بعد إصابة: <b>طوارئ</b>. بلّغ فوراً، سجّل العلامات العصبية (حجم البؤبؤ، قوة الأطراف، الوعي)، وجهّز المريض للأشعة.</p></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>وقت بداية الصداع ومقياس الألم والعلامات الحيوية وأي أعراض عصبية، الدواء المعطى وتأثيره.</p></div><!--g8bnursing--><div class=\"cs-box cs-info\"><strong>إضافة: أدوية الصداع النصفي</strong><p>راجع <a href=\"/diseases/dis-3536\">sumatriptan وergotamine</a>: تضيّق أوعية الدماغ، تُمنع في مرض الشريان التاجي والضغط غير المضبوط، وعلامة ergotamine الأولوية شحوب الأطراف.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>صداع مفاجئ شديد جداً («أسوأ صداع في حياتي»)</li><li>حرارة مع تيبّس الرقبة أو طفح أو تغيّر الوعي</li><li>ضعف أو تنميل أو صعوبة كلام أو ازدواج رؤية أو تشنج</li><li>صداع بعد ضربة على الراس أو سقوط</li><li>صداع مع ضغط عالي شديد أو في حامل</li><li>صداع جديد بعد 50 سنة أو بيزيد تدريجياً مع قيء متكرر</li><li>صداع مع هبوط سكر أو ضغط</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرب سوائل، نام كفاية، وكُل منتظم (الصيام وقلة النوم من محفزات الصداع).</li><li>قلّل الكافيين، وابتعد عن المحفزات اللي بتلاحظها (روائح، أضواء، أكلات معينة).</li><li>سجّل مرات الصداع والدواء في مفكرة.</li><li>ما تاخدش مسكنات أكتر من 2–3 أيام متتالية من غير ما تستشير الطبيب.</li><li>مارس استرخاء وتمارين رقبة وكتف خفيفة لصداع التوتر.</li><li>قيس ضغطك وسكرك لو كررت الصداع.</li><li>الصداع النصفي: ارتاح في غرفة مظلمة. والأدوية ممنوعة في الحمل ومع أمراض القلب.</li><li>روح الطوارئ لو الصداع مفاجئ أو شديد أو معاه حرارة أو ضعف.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الصداع عَرَض: قيس الضغط والحرارة واسأل عن الشحوب والإمساك ومشاكل العين/الأنف/الأذن/الأسنان/العصبي",
-      "من أسبابه العامة: ضغط عالي أو واطي، هبوط سكر، أنيميا، عدوى",
-      "الصداع النصفي: نابض في نص الرأس نوبات ± اضطراب رؤية، راحة في غرفة مظلمة",
-      "أدوية الصداع النصفي ممنوعة في الحمل وأمراض الشرايين التاجية والطرفية",
-      "صداع مفاجئ شديد أو مع حرارة وتيبّس رقبة أو ضعف = طوارئ",
-      "تجنّب الإفراط في المسكنات (صداع الإفراط)",
-      "SNOOP: أعراض عامة، عصبية، بدء مفاجئ، عمر فوق 40–50، صداع مختلف = أشعة عاجلة",
-      "لا تفوّت السحايا والتهاب المخ مع الحرارة واضطراب الوعي",
-      "اسأل عن 8 أسباب مزمنة: عين، أنف، أذن، أسنان، برد، إمساك، ضغط، أنيميا"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول خطوة في تقييم المريض الشاكي من صداع؟"
-      },
-      "options": [
-        {
-          "ar": "إعطاء مسكن"
-        },
-        {
-          "ar": "قياس الضغط والحرارة والسؤال عن الأعراض"
-        },
-        {
-          "ar": "تحويله للأشعة فوراً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "قيس الضغط والحرارة قبل أي علاج."
-      }
-    },
-    {
-      "q": {
-        "ar": "ألم نابض في نص الرأس مع اضطراب رؤية على هيئة نوبات يوحي بـ؟"
-      },
-      "options": [
-        {
-          "ar": "صداع التوتر"
-        },
-        {
-          "ar": "الصداع النصفي"
-        },
-        {
-          "ar": "التهاب الجيوب"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "Paroxysmal hemicranial throbbing headache = Migraine."
-      }
-    },
-    {
-      "q": {
-        "ar": "أدوية الصداع النصفي ممنوعة في؟"
-      },
-      "options": [
-        {
-          "ar": "الحمل وأمراض الشريان التاجي والأوعية الطرفية"
-        },
-        {
-          "ar": "الأنيميا"
-        },
-        {
-          "ar": "الزكام"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإرجوت تضيّق الأوعية وتضر الحمل والقلب."
-      }
-    },
-    {
-      "q": {
-        "ar": "صداع مفاجئ شديد مع تيبّس الرقبة وحرارة. التصرّف؟"
-      },
-      "options": [
-        {
-          "ar": "مسكن وراحة"
-        },
-        {
-          "ar": "بلاغ فوري للطبيب (طوارئ)"
-        },
-        {
-          "ar": "إعطاء كمادات فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "شك في التهاب سحايا أو نزيف."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء يوصف قبل النوم لصداع التوتر حسب المراجع؟"
-      },
-      "options": [
-        {
-          "ar": "Cataflam"
-        },
-        {
-          "ar": "Tryptazole"
-        },
-        {
-          "ar": "Rheumafen"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "Tryptazole مضاد اكتئاب مرة يومياً قبل النوم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أيهما من علامات SNOOP؟"
-      },
-      "options": [
-        {
-          "ar": "صداع بسيط مع الإرهاق"
-        },
-        {
-          "ar": "بدء مفاجئ وشديد"
-        },
-        {
-          "ar": "صداع الدراسة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "البدء المفاجئ الشديد علامة خطر."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AMBOSS — Tension-type headache (overview)"
-    },
-    {
-      "title": "Kaiser Permanente Migraine and Tension Headache Guideline (red flags / SNOOP)"
-    },
-    {
-      "title": "NICE CG150 Headaches in over 12s: diagnosis and management"
-    }
+  "en": [
+   "Headache is a symptom: measure BP and temperature, and ask about pallor, constipation, and eye/nose/ear/teeth/neurological problems",
+   "General causes include: high or low BP, hypoglycemia, anemia, infection",
+   "Migraine: throbbing in half of the head in attacks ± visual disturbance; rest in a dark room",
+   "Migraine drugs are contraindicated in pregnancy and in coronary and peripheral artery disease",
+   "Sudden severe headache, or with fever and stiff neck or weakness = emergency",
+   "Avoid overuse of painkillers (medication overuse headache)",
+   "SNOOP: systemic symptoms, neurological, sudden onset, age over 40–50, different headache = urgent imaging",
+   "Don't miss meningitis and encephalitis with fever and altered consciousness",
+   "Ask about 8 chronic causes: eye, nose, ear, teeth, cold, constipation, BP, anemia"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول خطوة في تقييم المريض الشاكي من صداع؟",
+    "en": "What is the first step in assessing a patient complaining of headache?"
+   },
+   "options": [
+    {
+     "ar": "إعطاء مسكن",
+     "en": "Give a painkiller"
+    },
+    {
+     "ar": "قياس الضغط والحرارة والسؤال عن الأعراض",
+     "en": "Measure BP and temperature and ask about symptoms"
+    },
+    {
+     "ar": "تحويله للأشعة فوراً",
+     "en": "Send him for imaging immediately"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "قيس الضغط والحرارة قبل أي علاج.",
+    "en": "Measure BP and temperature before any treatment."
+   }
+  },
+  {
+   "q": {
+    "ar": "ألم نابض في نص الرأس مع اضطراب رؤية على هيئة نوبات يوحي بـ؟",
+    "en": "Throbbing pain in half of the head with visual disturbance in attacks suggests?"
+   },
+   "options": [
+    {
+     "ar": "صداع التوتر",
+     "en": "Tension headache"
+    },
+    {
+     "ar": "الصداع النصفي",
+     "en": "Migraine"
+    },
+    {
+     "ar": "التهاب الجيوب",
+     "en": "Sinusitis"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "Paroxysmal hemicranial throbbing headache = Migraine.",
+    "en": "Paroxysmal hemicranial throbbing headache = Migraine."
+   }
+  },
+  {
+   "q": {
+    "ar": "أدوية الصداع النصفي ممنوعة في؟",
+    "en": "Migraine drugs are contraindicated in?"
+   },
+   "options": [
+    {
+     "ar": "الحمل وأمراض الشريان التاجي والأوعية الطرفية",
+     "en": "Pregnancy, coronary artery disease, and peripheral vascular disease"
+    },
+    {
+     "ar": "الأنيميا",
+     "en": "Anemia"
+    },
+    {
+     "ar": "الزكام",
+     "en": "Common cold"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإرجوت تضيّق الأوعية وتضر الحمل والقلب.",
+    "en": "Ergots constrict blood vessels and harm pregnancy and the heart."
+   }
+  },
+  {
+   "q": {
+    "ar": "صداع مفاجئ شديد مع تيبّس الرقبة وحرارة. التصرّف؟",
+    "en": "Sudden severe headache with stiff neck and fever. What is the action?"
+   },
+   "options": [
+    {
+     "ar": "مسكن وراحة",
+     "en": "Painkiller and rest"
+    },
+    {
+     "ar": "بلاغ فوري للطبيب (طوارئ)",
+     "en": "Immediate report to the doctor (emergency)"
+    },
+    {
+     "ar": "إعطاء كمادات فقط",
+     "en": "Compresses only"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "شك في التهاب سحايا أو نزيف.",
+    "en": "Suspect meningitis or hemorrhage."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء يوصف قبل النوم لصداع التوتر حسب المراجع؟",
+    "en": "Which drug is prescribed before bedtime for tension headache?"
+   },
+   "options": [
+    {
+     "ar": "Cataflam",
+     "en": "Cataflam"
+    },
+    {
+     "ar": "Tryptazole",
+     "en": "Tryptazole"
+    },
+    {
+     "ar": "Rheumafen",
+     "en": "Rheumafen"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "Tryptazole مضاد اكتئاب مرة يومياً قبل النوم.",
+    "en": "Tryptazole is an antidepressant, once daily before bedtime."
+   }
+  },
+  {
+   "q": {
+    "ar": "أيهما من علامات SNOOP؟",
+    "en": "Which of these is a SNOOP sign?"
+   },
+   "options": [
+    {
+     "ar": "صداع بسيط مع الإرهاق",
+     "en": "Simple headache with fatigue"
+    },
+    {
+     "ar": "بدء مفاجئ وشديد",
+     "en": "Sudden and severe onset"
+    },
+    {
+     "ar": "صداع الدراسة",
+     "en": "Study headache"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "البدء المفاجئ الشديد علامة خطر.",
+    "en": "Sudden severe onset is a red flag."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AMBOSS — Tension-type headache (overview)"
+  },
+  {
+   "title": "Kaiser Permanente Migraine and Tension Headache Guideline (red flags / SNOOP)"
+  },
+  {
+   "title": "NICE CG150 Headaches in over 12s: diagnosis and management"
+  }
+ ]
 }

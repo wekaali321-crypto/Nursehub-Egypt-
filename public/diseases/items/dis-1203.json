@@ -1,188 +1,236 @@
 {
-  "id": "dis-1203",
-  "num": 1203,
-  "system": "cardio",
-  "icon": "🖤",
-  "level": 3,
-  "target": "diseases",
-  "title": {
-    "ar": "مرض بيرجر (التهاب الأوعية الانسدادي الخثاري)",
-    "en": "Buerger's Disease (Thromboangiitis Obliterans)"
+ "id": "dis-1203",
+ "num": 1203,
+ "system": "cardio",
+ "icon": "🖤",
+ "level": 3,
+ "target": "diseases",
+ "title": {
+  "ar": "مرض بيرجر (التهاب الأوعية الانسدادي الخثاري)",
+  "en": "Buerger's Disease (Thromboangiitis Obliterans)"
+ },
+ "teaser": {
+  "ar": "التهاب وانسداد الشرايين والأوردة الصغيرة بالأطراف عند المدخنين: الفرق عن رينو، الأعراض، والإقلاع التام عن التدخين.",
+  "en": "Inflammation and blockage of the small arteries and veins in the limbs of smokers: how it differs from Raynaud's, its symptoms, and complete smoking cessation."
+ },
+ "chips": [
+  {
+   "ar": "أصابع سوداء",
+   "en": "Black fingers"
   },
-  "teaser": {
-    "ar": "التهاب وانسداد الشرايين والأوردة الصغيرة بالأطراف عند المدخنين: الفرق عن رينو، الأعراض، والإقلاع التام عن التدخين."
+  {
+   "ar": "المدخنون",
+   "en": "Smokers"
   },
-  "chips": [
-    {
-      "ar": "أصابع سوداء"
-    },
-    {
-      "ar": "المدخنون"
-    },
-    {
-      "ar": "فرق عن رينو"
-    }
+  {
+   "ar": "فرق عن رينو",
+   "en": "Vs. Raynaud's"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>مرض بيرجر التهابٌ يصيب الشرايين والأوردة <strong>الصغيرة والمتوسطة في اليدين والقدمين</strong> فتنسد بالخثرات، مما يقلّل التروية للأصابع. يرتبط ارتباطًا وثيقًا بـ<strong>التدخين</strong> وغالبًا يصيب الرجال الأصغر سنًا. يتشابه اسمه مع رينو لكنه أخطر لأنه يؤدي إلى موت الأنسجة.</p>\n[[slot:dis-1203-compare|مقارنة رينو وبيرجر — رسم من إعداد الموقع|/diseases/img/dis-1203-compare.svg]]\n[[slot:dis-1203-hand-photo|صورة أصابع اليد والقدم المتغيرة اللون في مرض بيرجر]]\n<p>للمقارنة: <a href=\"/diseases/dis-607\">ظاهرة رينو</a>.</p>\n<h4>مقارنة مع ريناود</h4><p>الأصابع والأقدام في مرض بيرجر قد تصير سوداء (نخر/غنغرينا)، وهو يرتبط بالتدخين، بينما ريناود تغير لوني متقطع (أبيض ثم أزرق ثم أحمر). راجع <a href=\"/diseases/dis-607\">ريناود</a> و<a href=\"/diseases/dis-688\">رسم p270</a>.</p>",
+   "en": "<p>Buerger's disease is an inflammation affecting the <strong>small and medium arteries and veins of the hands and feet</strong>, which become blocked by clots, reducing blood flow to the fingers and toes. It is closely linked to <strong>smoking</strong> and usually affects younger men. Its name sounds like Raynaud's, but it is more dangerous because it leads to tissue death.</p>\n[[slot:dis-1203-compare|Comparing Raynaud's and Buerger's — illustration made by the site|/diseases/img/dis-1203-compare.svg]]\n[[slot:dis-1203-hand-photo|Photo of discolored fingers and toes in Buerger's disease]]\n<p>For comparison: <a href=\"/diseases/dis-607\">Raynaud's phenomenon</a>.</p>\n<h4>Comparison with Raynaud's</h4><p>In Buerger's disease the fingers and toes may turn black (necrosis/gangrene) and it is linked to smoking, while Raynaud's is an intermittent color change (white, then blue, then red). See <a href=\"/diseases/dis-607\">Raynaud's</a> and <a href=\"/diseases/dis-688\">the diagram</a>.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li><strong>التدخين</strong> أو مضغ/استعمال التبغ (السبب الرئيسي).</li><li>استعداد مناعي/وراثي محتمل.</li><li>لا يتحسن غالبًا إلا بالتوقف التام عن التبغ.</li></ul>",
+   "en": "<ul><li><strong>Smoking</strong> or chewing/using tobacco (the main cause).</li><li>Possible immune/genetic predisposition.</li><li>It usually improves only with complete cessation of tobacco.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>برودة وشحوب أو زرقة الأصابع في اليدين والقدمين.</li><li>ألم عند الراحة وليلًا، وعرج بالقدم.</li><li><strong>اسوداد الأصابع</strong> وقرح غير ملتئمة.</li><li>ضعف النبض الطرفي.</li><li>التهاب أوردة سطحية متكرر.</li></ul>",
+   "en": "<ul><li>Coldness, pallor, or blueness of the fingers and toes.</li><li>Pain at rest and at night, and limping in the foot.</li><li><strong>Blackening of the fingers</strong> and non-healing ulcers.</li><li>Weak peripheral pulses.</li><li>Recurrent superficial vein inflammation.</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>فحص النبض والتروية (اختبار آلين).</li><li>مؤشر الكاحل/العضد ودوبلر.</li><li>تصوير الأوعية (Angiography) يظهر انسدادًا بشكل «حلزوني/ملتف».</li><li>استبعاد أمراض أخرى: سكر، أمراض مناعية، تخثر.</li></ul>",
+   "en": "<ul><li>Pulse and perfusion examination (Allen test).</li><li>Ankle-brachial index and Doppler.</li><li>Angiography shows a \"corkscrew\" pattern of blockage.</li><li>Exclude other diseases: diabetes, autoimmune diseases, clotting disorders.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li><strong>الإقلاع التام عن التدخين</strong> وبدائل النيكوتين الممنوعة أيضًا — هو العلاج الأساسي.</li><li>أدوية موسّعة للأوعية أو مسكنات حسب الطبيب.</li><li>العناية بالجروح ومنع العدوى.</li><li>في الحالات المتقدمة: قطع الأعصاب الودّية أو البتر إذا ظهرت غرغرينا.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء (راجع النشرة).</p></div>",
+   "en": "<ul><li><strong>Complete smoking cessation</strong> (nicotine substitutes are also not allowed) — it is the main treatment.</li><li>Vasodilator drugs or painkillers as the doctor decides.</li><li>Wound care and infection prevention.</li><li>In advanced cases: sympathectomy or amputation if gangrene appears.</li></ul><div class=\"cs-box cs-info\"><strong>Dose note</strong><p>Doses are for learning; always verify with the physician/pharmacist before giving (check the package insert).</p></div>"
+  },
+  "nursing": {
+   "ar": "<ul><li>قيّم لون الأطراف ودفئها والنبض وحركتها بانتظام.</li><li>شجّع الإقلاع عن التدخين وأحِل لعيادات الإقلاع.</li><li>أبقِ الأطراف دافئة وتجنب البرد والضغط والإصابة.</li><li>العناية بالقدم: غسل وتجفيف وفحص يومي ومنع الجروح.</li><li>ضبط الألم ومراقبة علامات العدوى.</li></ul>",
+   "en": "<ul><li>Assess limb color, warmth, pulses, and movement regularly.</li><li>Encourage smoking cessation and refer to cessation clinics.</li><li>Keep the limbs warm and avoid cold, pressure, and injury.</li><li>Foot care: wash, dry, inspect daily, and prevent wounds.</li><li>Control pain and watch for signs of infection.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>اسوداد جديد أو توسع الغرغرينا.</li><li>ألم شديد مفاجئ مع برودة وشحوب (انسداد حاد).</li><li>حمّى وقيح بقرحة طرفية.</li></ul>",
+   "en": "<ul><li>New blackening or spreading gangrene.</li><li>Sudden severe pain with coldness and pallor (acute occlusion).</li><li>Fever and pus in a limb ulcer.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>لا تدخين نهائيًا ولا تعرّض للدخان.</li><li>تجنب البرد وارتداء قفازات وجوارب دافئة.</li><li>فحص القدمين يوميًا وارتداء حذاء مناسب.</li><li>الإبلاغ عن أي جرح أو تغير لون سريعًا.</li></ul>",
+   "en": "<ul><li>No smoking at all and avoid exposure to smoke.</li><li>Avoid cold and wear gloves and warm socks.</li><li>Inspect your feet daily and wear suitable shoes.</li><li>Report any wound or color change quickly.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "بيرجر: التهاب وانسداد أوعية الأطراف عند المدخنين",
+   "أصابع سوداء وغرغرينا",
+   "العلاج الأساسي: إيقاف التدخين تمامًا",
+   "رينو: تشنج قابل للتراجع بتغير ألوان"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>مرض بيرجر التهابٌ يصيب الشرايين والأوردة <strong>الصغيرة والمتوسطة في اليدين والقدمين</strong> فتنسد بالخثرات، مما يقلّل التروية للأصابع. يرتبط ارتباطًا وثيقًا بـ<strong>التدخين</strong> وغالبًا يصيب الرجال الأصغر سنًا. يتشابه اسمه مع رينو لكنه أخطر لأنه يؤدي إلى موت الأنسجة.</p>\n[[slot:dis-1203-compare|مقارنة رينو وبيرجر — رسم من إعداد الموقع|/diseases/img/dis-1203-compare.svg]]\n[[slot:dis-1203-hand-photo|صورة أصابع اليد والقدم المتغيرة اللون في مرض بيرجر]]\n<p>للمقارنة: <a href=\"/diseases/dis-607\">ظاهرة رينو</a>.</p>\n<h4>مقارنة مع ريناود</h4><p>الأصابع والأقدام في مرض بيرجر قد تصير سوداء (نخر/غنغرينا)، وهو يرتبط بالتدخين، بينما ريناود تغير لوني متقطع (أبيض ثم أزرق ثم أحمر). راجع <a href=\"/diseases/dis-607\">ريناود</a> و<a href=\"/diseases/dis-688\">رسم p270</a>.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li><strong>التدخين</strong> أو مضغ/استعمال التبغ (السبب الرئيسي).</li><li>استعداد مناعي/وراثي محتمل.</li><li>لا يتحسن غالبًا إلا بالتوقف التام عن التبغ.</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>برودة وشحوب أو زرقة الأصابع في اليدين والقدمين.</li><li>ألم عند الراحة وليلًا، وعرج بالقدم.</li><li><strong>اسوداد الأصابع</strong> وقرح غير ملتئمة.</li><li>ضعف النبض الطرفي.</li><li>التهاب أوردة سطحية متكرر.</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>فحص النبض والتروية (اختبار آلين).</li><li>مؤشر الكاحل/العضد ودوبلر.</li><li>تصوير الأوعية (Angiography) يظهر انسدادًا بشكل «حلزوني/ملتف».</li><li>استبعاد أمراض أخرى: سكر، أمراض مناعية، تخثر.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li><strong>الإقلاع التام عن التدخين</strong> وبدائل النيكوتين الممنوعة أيضًا — هو العلاج الأساسي.</li><li>أدوية موسّعة للأوعية أو مسكنات حسب الطبيب.</li><li>العناية بالجروح ومنع العدوى.</li><li>في الحالات المتقدمة: قطع الأعصاب الودّية أو البتر إذا ظهرت غرغرينا.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء (راجع النشرة).</p></div>"
-    },
-    "nursing": {
-      "ar": "<ul><li>قيّم لون الأطراف ودفئها والنبض وحركتها بانتظام.</li><li>شجّع الإقلاع عن التدخين وأحِل لعيادات الإقلاع.</li><li>أبقِ الأطراف دافئة وتجنب البرد والضغط والإصابة.</li><li>العناية بالقدم: غسل وتجفيف وفحص يومي ومنع الجروح.</li><li>ضبط الألم ومراقبة علامات العدوى.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>اسوداد جديد أو توسع الغرغرينا.</li><li>ألم شديد مفاجئ مع برودة وشحوب (انسداد حاد).</li><li>حمّى وقيح بقرحة طرفية.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>لا تدخين نهائيًا ولا تعرّض للدخان.</li><li>تجنب البرد وارتداء قفازات وجوارب دافئة.</li><li>فحص القدمين يوميًا وارتداء حذاء مناسب.</li><li>الإبلاغ عن أي جرح أو تغير لون سريعًا.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "بيرجر: التهاب وانسداد أوعية الأطراف عند المدخنين",
-      "أصابع سوداء وغرغرينا",
-      "العلاج الأساسي: إيقاف التدخين تمامًا",
-      "رينو: تشنج قابل للتراجع بتغير ألوان"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أهم عامل مرتبط بمرض بيرجر:"
-      },
-      "options": [
-        {
-          "ar": "التدخين"
-        },
-        {
-          "ar": "السكر النوع 1"
-        },
-        {
-          "ar": "نقص الحديد"
-        },
-        {
-          "ar": "الحمل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مرتبط بالتبغ ويتراجع بالإقلاع التام عنه."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم نصيحة علاجية للمريض:"
-      },
-      "options": [
-        {
-          "ar": "الراحة التامة"
-        },
-        {
-          "ar": "الإقلاع التام عن التدخين"
-        },
-        {
-          "ar": "التدليك القوي للأصابع"
-        },
-        {
-          "ar": "التعرض للبرد"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التبغ هو المحفز الأساسي، وإيقافه يوقف تقدم المرض."
-      }
-    },
-    {
-      "q": {
-        "ar": "العلامة الأخطر التي تستدعي تدخلًا عاجلًا:"
-      },
-      "options": [
-        {
-          "ar": "برودة الأصابع بالشتاء"
-        },
-        {
-          "ar": "اسوداد الأصبع مع ألم وعدوى"
-        },
-        {
-          "ar": "خدر خفيف"
-        },
-        {
-          "ar": "صداع"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الاسوداد دليل موت الأنسجة (غرغرينا) وقد يحتاج بترًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "الفرق الأهم عن رينو:"
-      },
-      "options": [
-        {
-          "ar": "رينو يسبب موت أنسجة غالبًا"
-        },
-        {
-          "ar": "بيرجر انسدادي التهابي مرتبط بالتدخين وقد يسبب غرغرينا"
-        },
-        {
-          "ar": "لا فرق"
-        },
-        {
-          "ar": "بيرجر يصيب القلب فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "رينو تشنج وعائي قابل للتراجع، أما بيرجر فالتهاب وانسداد."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مما يلي أوثق صلة بمرض بيرجر؟"
-      },
-      "options": [
-        {
-          "ar": "التدخين وسواد الأصابع"
-        },
-        {
-          "ar": "الحمل"
-        },
-        {
-          "ar": "فقر الدم المنجلي فقط"
-        },
-        {
-          "ar": "قلة النوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "بيرجر التهاب أوعية انسدادي مرتبط بالتدخين وينتج اسوداد الأصابع."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Brunner & Suddarth Medical-Surgical Nursing (general reference)"
-    },
-    {
-      "title": "American Heart Association guidelines"
-    },
-    {
-      "title": "Surviving Sepsis Campaign guidelines"
-    }
+  "en": [
+   "Buerger's: inflammation and blockage of limb vessels in smokers",
+   "Black fingers and gangrene",
+   "Main treatment: stop smoking completely",
+   "Raynaud's: reversible spasm with color changes"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أهم عامل مرتبط بمرض بيرجر:",
+    "en": "The most important factor linked to Buerger's disease:"
+   },
+   "options": [
+    {
+     "ar": "التدخين",
+     "en": "Smoking"
+    },
+    {
+     "ar": "السكر النوع 1",
+     "en": "Type 1 diabetes"
+    },
+    {
+     "ar": "نقص الحديد",
+     "en": "Iron deficiency"
+    },
+    {
+     "ar": "الحمل",
+     "en": "Pregnancy"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مرتبط بالتبغ ويتراجع بالإقلاع التام عنه.",
+    "en": "Linked to tobacco and improves with complete cessation."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم نصيحة علاجية للمريض:",
+    "en": "The most important treatment advice for the patient:"
+   },
+   "options": [
+    {
+     "ar": "الراحة التامة",
+     "en": "Complete rest"
+    },
+    {
+     "ar": "الإقلاع التام عن التدخين",
+     "en": "Complete smoking cessation"
+    },
+    {
+     "ar": "التدليك القوي للأصابع",
+     "en": "Vigorous finger massage"
+    },
+    {
+     "ar": "التعرض للبرد",
+     "en": "Exposure to cold"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التبغ هو المحفز الأساسي، وإيقافه يوقف تقدم المرض.",
+    "en": "Tobacco is the main trigger, and stopping it halts disease progression."
+   }
+  },
+  {
+   "q": {
+    "ar": "العلامة الأخطر التي تستدعي تدخلًا عاجلًا:",
+    "en": "The most dangerous sign that calls for urgent intervention:"
+   },
+   "options": [
+    {
+     "ar": "برودة الأصابع بالشتاء",
+     "en": "Cold fingers in winter"
+    },
+    {
+     "ar": "اسوداد الأصبع مع ألم وعدوى",
+     "en": "A blackened finger with pain and infection"
+    },
+    {
+     "ar": "خدر خفيف",
+     "en": "Mild numbness"
+    },
+    {
+     "ar": "صداع",
+     "en": "Headache"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الاسوداد دليل موت الأنسجة (غرغرينا) وقد يحتاج بترًا.",
+    "en": "Blackening is evidence of tissue death (gangrene) and may require amputation."
+   }
+  },
+  {
+   "q": {
+    "ar": "الفرق الأهم عن رينو:",
+    "en": "The most important difference from Raynaud's:"
+   },
+   "options": [
+    {
+     "ar": "رينو يسبب موت أنسجة غالبًا",
+     "en": "Raynaud's usually causes tissue death"
+    },
+    {
+     "ar": "بيرجر انسدادي التهابي مرتبط بالتدخين وقد يسبب غرغرينا",
+     "en": "Buerger's is an obstructive inflammatory disease linked to smoking and may cause gangrene"
+    },
+    {
+     "ar": "لا فرق",
+     "en": "No difference"
+    },
+    {
+     "ar": "بيرجر يصيب القلب فقط",
+     "en": "Buerger's affects only the heart"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "رينو تشنج وعائي قابل للتراجع، أما بيرجر فالتهاب وانسداد.",
+    "en": "Raynaud's is a reversible vascular spasm, while Buerger's is inflammation and blockage."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مما يلي أوثق صلة بمرض بيرجر؟",
+    "en": "Which of the following is most closely linked to Buerger's disease?"
+   },
+   "options": [
+    {
+     "ar": "التدخين وسواد الأصابع",
+     "en": "Smoking and black fingers"
+    },
+    {
+     "ar": "الحمل",
+     "en": "Pregnancy"
+    },
+    {
+     "ar": "فقر الدم المنجلي فقط",
+     "en": "Sickle cell anemia only"
+    },
+    {
+     "ar": "قلة النوم",
+     "en": "Lack of sleep"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "بيرجر التهاب أوعية انسدادي مرتبط بالتدخين وينتج اسوداد الأصابع.",
+    "en": "Buerger's is an obstructive vasculitis linked to smoking and causes blackening of the fingers."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Brunner & Suddarth Medical-Surgical Nursing (general reference)"
+  },
+  {
+   "title": "American Heart Association guidelines"
+  },
+  {
+   "title": "Surviving Sepsis Campaign guidelines"
+  }
+ ]
 }

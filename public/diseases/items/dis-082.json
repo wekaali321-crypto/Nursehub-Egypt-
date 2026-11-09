@@ -1,245 +1,306 @@
 {
-  "id": "dis-082",
-  "num": 82,
-  "system": "neuro",
-  "icon": "⚡",
-  "level": 3,
-  "title": {
-    "ar": "التشنجات (النوبات)",
-    "en": "Convulsions (Fits)"
+ "id": "dis-082",
+ "num": 82,
+ "system": "neuro",
+ "icon": "⚡",
+ "level": 3,
+ "title": {
+  "ar": "التشنجات (النوبات)",
+  "en": "Convulsions (Fits)"
+ },
+ "teaser": {
+  "ar": "مريض بيتشنج قدامك: إيه أول 3 حاجات تعملها، وإزاي تدّي Neuril بأمان وتدور على السبب بعد النوبة.",
+  "en": "A patient is seizing in front of you: the first 3 things to do, how to give Neuril safely, and how to look for the cause after the seizure."
+ },
+ "chips": [
+  {
+   "ar": "وضع جانبي",
+   "en": "Lateral position"
   },
-  "teaser": {
-    "ar": "مريض بيتشنج قدامك: إيه أول 3 حاجات تعملها، وإزاي تدّي Neuril بأمان وتدور على السبب بعد النوبة."
+  {
+   "ar": "Neuril / ديازيبام",
+   "en": "Neuril / diazepam"
   },
-  "chips": [
-    {
-      "ar": "وضع جانبي"
-    },
-    {
-      "ar": "Neuril / ديازيبام"
-    },
-    {
-      "ar": "سكر وكالسيوم"
-    }
+  {
+   "ar": "سكر وكالسيوم",
+   "en": "Glucose and calcium"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>التشنج (Convulsion / Fit) هو نوبة غير إرادية من انقباض عضلات الجسم مع أو بدون فقدان الوعي، سببها تفريغ كهربائي زائد في المخ. أغلب النوبات بتقف لوحدها خلال دقيقتين، لكن <b>النوبة الأطول من 5 دقايق</b> أو نوبات متتالية بدون إفاقة طارئة (Status epilepticus) وتهدد الحياة.</p><div class=\"cs-stats\" style=\"grid-template-columns:repeat(auto-fit,minmax(9rem,1fr))\"><div><b>5 د</b><span>نوبة أطول = طارئ</span></div><div><b>جانبي</b><span>وضع المريض</span></div><div><b>السكر</b><span>أول فحص</span></div></div>[[slot:dis-082-timeline|خطة التشنج حسب الزمن|/diseases/img/dis-082-timeline.svg]]<div class=\"cs-box cs-danger\"><strong>أولويات التمريض</strong><p>1) مجرى الهواء والوضع الجانبي. 2) أكسجين. 3) كانيولا. 4) مضاد التشنج بأمر الطبيب. وبعدين دور على السبب.</p></div>",
+   "en": "<p>A convulsion (seizure / fit) is an involuntary attack of body muscle contraction, with or without loss of consciousness, caused by excess electrical discharge in the brain. Most seizures stop on their own within two minutes, but a <b>seizure longer than 5 minutes</b> or repeated seizures without recovery in between is an emergency (status epilepticus) and threatens life.</p><div class=\"cs-stats\" style=\"grid-template-columns:repeat(auto-fit,minmax(9rem,1fr))\"><div><b>5 min</b><span>Longer seizure = emergency</span></div><div><b>Lateral</b><span>Patient position</span></div><div><b>Glucose</b><span>First check</span></div></div>[[slot:dis-082-timeline|Seizure plan by time|/diseases/img/dis-082-timeline.svg]]<div class=\"cs-box cs-danger\"><strong>Nursing priorities</strong><p>1) Airway and lateral position. 2) Oxygen. 3) Cannula. 4) Anticonvulsant by physician order. Then look for the cause.</p></div>"
+  },
+  "causes": {
+   "ar": "<h4>أسباب التشنج (بتتحدد بعد السيطرة عليه)</h4><div class=\"cs-compare\"><ul><li><b>حرارة:</b> تشنج حراري عند الأطفال (Febrile convulsion)، التهاب سحايا (Meningitis)، التهاب مخ</li><li><b>نزيف تحت العنكبوتية (SAH)</b> ونزيف أو جلطة مخية، ورم، إصابة رأس</li><li><b>سكر الدم:</b> هبوط (Hypoglycemia) أو ارتفاع شديد (Hyperglycemia)</li><li><b>الكالسيوم:</b> نقص الكالسيوم (Hypocalcemia) — انظر حالة نقص الكالسيوم</li><li><b>صرع</b> (مريض معروف) خصوصاً مع نسيان الدواء</li><li><b>أخرى:</b> الصوديوم والمغنيسيوم، فشل كلوي/كبدي، تسمم (مبيدات، أدوية)، انسحاب كحول/مهدئات، تسمم حمل (Eclampsia)</li></ul></div><p>هل هي صرع أم لا يتحدد بالتاريخ والفحوصات.</p>",
+   "en": "<h4>Causes of seizures (determined after it is controlled)</h4><div class=\"cs-compare\"><ul><li><b>Fever:</b> febrile convulsion in children, meningitis, encephalitis</li><li><b>Subarachnoid hemorrhage (SAH)</b> and brain bleeding or stroke, tumor, head injury</li><li><b>Blood sugar:</b> low (hypoglycemia) or very high (hyperglycemia)</li><li><b>Calcium:</b> low calcium (hypocalcemia) — see the hypocalcemia case</li><li><b>Epilepsy</b> (a known patient), especially with a missed medicine</li><li><b>Others:</b> sodium and magnesium, kidney/liver failure, poisoning (pesticides, drugs), alcohol/sedative withdrawal, eclampsia</li></ul></div><p>Whether it is epilepsy or not is decided by the history and tests.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li>فقدان وعي مفاجئ مع تصلّب ثم رجّات في الأطراف (Tonic–clonic)</li><li>زرقة حول الفم أو الشفايف، لعاب أو رغاوي، عض اللسان</li><li>تبول أو تبرز لا إرادي</li><li>بعد النوبة: نعاس وارتباك وصداع (حالة ما بعد النوبة) قد تستمر دقايق لساعات</li><li>أنواع تانية: شرود لحظات، حركات موضعية في طرف واحد، غياب</li></ul><div class=\"cs-box cs-info\"><strong>سجّل أثناء النوبة</strong><p>وقت البداية والنهاية، بدأت من فين في الجسم، الحدقتين، لون الوجه، أي إصابة، الحالة بعد النوبة. المعلومات دي بتساعد الطبيب جداً.</p></div><h4>تصنيف النوبات</h4><table><thead><tr><th>النوع</th><th>الوصف</th></tr></thead><tbody><tr><td>عامة: توترية-رمعية (Tonic-clonic)</td><td>تبدأ بتيبس ثم فقدان وعي ثم رجات إيقاعية</td></tr><tr><td>توترية</td><td>تيبس عضلات وفقدان وعي</td></tr><tr><td>رمعية (Clonic)</td><td>رجات إيقاعية</td></tr><tr><td>غياب (Absence)</td><td>شرود قصير وكأنه يحلم</td></tr><tr><td>رمع عضلي (Myoclonic)</td><td>انتفاضة سريعة في طرف أو عدة أطراف</td></tr><tr><td>فقدان التوتر (Atonic)</td><td>فقدان مفاجئ لقوة العضلة وسقوط</td></tr><tr><td>جزئية بسيطة</td><td>هالة (Aura) وإحساس أو حركة في طرف أو أعراض لاإرادية أو نفسية، بدون فقدان وعي</td></tr><tr><td>جزئية معقدة</td><td>فقدان وعي مع حركات آلية (مص الشفاه، لقط، نقر)</td></tr></tbody></table><p>قبل النوبة قد تأتي هالة حسية بصرية أو سمعية أو شمية، وبعدها مرحلة ما بعد النوبة بتشوش وإرهاق، وقد لا يتذكر المريض شيئاً.</p>",
+   "en": "<ul><li>Sudden loss of consciousness with stiffening then jerking of the limbs (tonic–clonic)</li><li>Blue color around the mouth or lips, saliva or foam, tongue biting</li><li>Involuntary urination or defecation</li><li>After the seizure: drowsiness, confusion, and headache (postictal state) that may last minutes to hours</li><li>Other types: brief staring spells, focal movements in one limb, absence</li></ul><div class=\"cs-box cs-info\"><strong>Record during the seizure</strong><p>Start and end time, where in the body it started, the pupils, face color, any injury, and the condition after the seizure. This information helps the physician a lot.</p></div><h4>Seizure classification</h4><table><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Generalized: tonic-clonic</td><td>Starts with stiffness, then loss of consciousness, then rhythmic jerks</td></tr><tr><td>Tonic</td><td>Muscle stiffness and loss of consciousness</td></tr><tr><td>Clonic</td><td>Rhythmic jerks</td></tr><tr><td>Absence</td><td>Brief staring as if daydreaming</td></tr><tr><td>Myoclonic</td><td>Quick jerk in one limb or several limbs</td></tr><tr><td>Atonic</td><td>Sudden loss of muscle strength and falling</td></tr><tr><td>Simple partial</td><td>Aura and a sensation or movement in a limb or autonomic or psychic symptoms, without loss of consciousness</td></tr><tr><td>Complex partial</td><td>Loss of consciousness with automatic movements (lip smacking, picking, tapping)</td></tr></tbody></table><p>Before the seizure there may be a visual, auditory, or olfactory sensory aura, and afterward comes the postictal phase with confusion and exhaustion, and the patient may remember nothing.</p>"
+  },
+  "tests": {
+   "ar": "<p>\"What to be done later\" — بعد السيطرة على النوبة:</p><ul><li><b>قياس الحرارة:</b> تشنج حراري / التهاب سحايا / نزيف تحت العنكبوتية (SAH)</li><li><b>سكر الدم العشوائي (RBS):</b> هبوط أو ارتفاع السكر</li><li><b>الكالسيوم الكلي والمتأين:</b> نقص الكالسيوم</li><li>صوديوم ومغنيسيوم، وظائف كلى وكبد، تحليل بول، سموم لو في شك</li><li>أشعة مقطعية أو رنين على المخ، وتخطيط مخ (EEG)</li><li>بزل قطني لو شك في التهاب سحايا (بأمر الطبيب فقط)</li><li>مستوى دواء الصرع في الدم لو المريض بيتعالج</li></ul>",
+   "en": "<p>\"What to be done later\" — after the seizure is controlled:</p><ul><li><b>Measure temperature:</b> febrile convulsion / meningitis / subarachnoid hemorrhage (SAH)</li><li><b>Random blood sugar (RBS):</b> low or high glucose</li><li><b>Total and ionized calcium:</b> low calcium</li><li>Sodium and magnesium, kidney and liver function, urinalysis, toxicology if suspected</li><li>CT or MRI of the brain, and EEG</li><li>Lumbar puncture if meningitis is suspected (by physician order only)</li><li>Blood level of the epilepsy medicine if the patient is on treatment</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>الإدارة (حسب البروتوكول)</h4><ul><li>مجرى الهواء: <b>وضع جانبي أيسر (Left lateral)</b> وشفط الإفرازات</li><li>قناع أكسجين (O2 mask)</li><li>تركيب كانيولا وريدية (Cannula)</li><li>مضادات الصرع (Anti-epileptic drugs)</li></ul><h4>أدوية التشنج (البروتوكول المتبع)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أمبول Neuril (ديازيبام)</strong><p>أمبول واحد وريدي ببطء، ثم الانتظار 15 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>لو لسه التشنج</strong><p>أمبول واحد مخفف في 10 سم رينجر يُعطى وريدي ببطء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>لو لسه التشنج</strong><p>أمبولين في 500 سم رينجر تنقيط وريدي.</p></div></div></div><h4>بديل: شراب Depakene (صوديوم فالبروات) بالمستقيم</h4><ul><li>يخفف الشراب بالماء بنسبة 1 : 7</li><li>يُسحب 10 مل من الناتج ويُدخل عبر أنبوب رايل (Ryle tube) في المستقيم لمسافة 4 سم</li><li>يُستخدم <b>إما Neuril أو Depakene</b></li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المرجع الحالي (EFNS وبروتوكولات الطوارئ البريطانية): أول خط هو <b>بنزوديازيبين وريدي</b> (Lorazepam 4 مجم أو Diazepam 10 مجم)، وتكرار الجرعة <b>مرة واحدة بعد 5–10 دقايق</b> لو التشنج مستمر، وليس الانتظار 15 دقيقة. تبقى النوبة >5 دقائق حالة طارئة. الجرعة تُعطى ببطء (ديازيبام في الوريد لا يزيد عن 5 مجم/دقيقة حسب النشرة) مع مراقبة التنفس. وبحسب نشرة ديازيبام لا يُخلط عادة في محاليل التنقيط (يترسب)، فالتخفيف في الرينجر ده يراجع مع الصيدلي أو الطبيب. لو التشنج استمر بعد جرعتين يبدأ الخط التاني بأمر الطبيب (فينيتوين أو فالبروات أو ليفيتيراسيتام وريدي) والنقل للعناية. أما فالبروات بالمستقيم فلم أجد له دعماً كخط أول في الإرشادات، والبديل الشائع بدون خط وريدي هو ديازيبام شرجي. لا تخفّف أي جرعة من عندك.</p></div><h4>علاج السبب</h4><ul><li>سكر واطي: جلوكوز وريدي</li><li>نقص كالسيوم: كالسيوم جلوكونات</li><li>حرارة/سحايا: خافض حرارة والمضاد الحيوي بأمر الطبيب</li><li>تسمم حمل: كبريتات المغنيسيوم بأمر الطبيب</li></ul><!--e2-82--><h4>الإسعافات الأولية (قبل الوصول للمستشفى)</h4><ul><li>ابعد أي أدوات صلبة قد يصطدم بها</li><li>حط وسادة أو مخدة تحت الراس</li><li>حطه في وضع الإفاقة (Recovery position) وانتظر انتهاء التشنجات</li><li>ممنوع تمنع التشنج (اطلب الإسعاف لو زادت عن 5 دقايق)</li><li>ممنوع وضع أي شيء في الفم أو فتحه (عض اللسان قد يحدث لكن وضع شيء في الفم أخطر)</li><li>بعد النوبة: وضع الإفاقة، تأكد من التنفس، وفي حالة توقف التنفس ابدأ تنفس إنقاذي واطلب الإسعاف</li><li>ابقَ معاه واطمّنه: التوهان وعدم التركيز (Post-ictal confusion) طبيعي ويستمر 5–15 دقيقة</li></ul><div class=\"cs-box cs-danger\"><strong>متى تخلي المريض يروح المستشفى؟</strong><p>نوبة أكتر من 5 دقايق أو متكررة بدون إفاقة، أو عدم استجابة المريض/صعوبة تنفس بعد النوبة.</p></div><h4>استبعد في أي تشنج</h4><ul><li>هبوط السكر: لازم سكر عشوائي لأي حالة جاية بتشنجات</li><li>التشنج مع حرارة: استبعد سحايا والتهاب مخ</li><li>الأطفال: تشنجات حرارية بين 5 شهور و5 سنين</li></ul><h4>جرعات ديازيبام (Neuril 10 مجم/2 مل) — حسب المراجع</h4><table><thead><tr><th>الفئة</th><th>الطريقة</th></tr></thead><tbody><tr><td>الكبار</td><td>أمبول يتخفف في 10 سم ملح ويُعطى وريد ببطء أو عضل بعمق</td></tr><tr><td>الأطفال (ممنوع أقل من 6 شهور)</td><td>شرطة لكل كجم (1 سم لكل 10 كجم) بدون تخفيف وريد ببطء أو عضل بعمق</td></tr><tr><td>بدون كانيولا (Rectal)</td><td>نفس الجرعة: 1 سم على سرنجة عادية = 10 وحدات على سرنجة الإنسولين؛ لو الجرعة أقل من 1 سم اسحب بسرنجة إنسولين؛ طفل أكبر من 20 كجم: 2 سم (أمبول كامل) ويتخفف مثل الكبار</td></tr><tr><td>Depakine drops 200 mg/ml (صوديوم فالبروات) للأطفال شرجياً</td><td>يخفف أولاً: 1 سم دياكين + 7 سم ماء؛ الجرعة 1 سم من المخفف لكل كجم بحقنة شرجية (حد أقصى 3 مرات). مثال 7 كجم: اسحب 1 سم دياكين + 7 سم ماء = 8 سم، وأعطِ 7 سم. مثال 10 كجم: 2 سم دياكين + 14 سم ماء = 16 سم، وأعطِ 10 سم</td></tr></tbody></table><p>طريقة الحقنة الشرجية: السرنجة بأنبوبة رايل، أدخل الأنبوبة في فتحة الشرج 4–5 سم، احقن المحلول، ثم أغلق مؤخرة الطفل دقيقة لمنع خروج المحلول.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>ديازيبام الوريدي في الأطفال عادة 0.1–0.3 مجم/كجم (حد أقصى 10 مجم) ببطء، والشرجي 0.5 مجم/كجم (2–5 سنين). الحقن العضلي امتصاصه غير منتظم. البديل الحديث: ميدازولام عضل/فموي-خدي/أنفي. جرعة فالبروات الشرجية ليست من الخط الأول في الإرشادات: لم أتمكن من توثيقها، فتُنفَّذ بأمر الطبيب فقط، وقد يتغير الحساب حسب تركيز المنتج. المعروف عن Neuril: 5 مجم/مل (10 مجم/2 مل).</p></div><h4>بعد التشنج في الأطفال</h4><ul><li>أي طفل بعد التشنج يُحوَّل للمستشفى للملاحظة</li><li>التشنج الحراري: خفض الحرارة بكمادات ماء بارد ولبوس باراسيتامول (Cetal) أو ديكلوفيناك (Dolphin) لو أكبر من سنة</li><li>اسأل عن إيقاف أدوية الصرع فجأة: قد يسبب التشنجات</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>التحديث: التبريد بالكمادات الباردة لا يُنصح به روتينياً، وخافضات الحرارة لا تمنع التشنج الحراري. الباراسيتامول للراحة فقط، والديكلوفيناك للأطفال بحذر حسب النشرة.</p></div><h4>مضادات الصرع طويلة الأمد والجراحة</h4><ul><li>Carbamazepine، Phenytoin، Phenobarbital، Clonazepam، Valproic acid، Lamotrigine، Gabapentin، Levetiracetam، Oxcarbazepine، Primidone، Tiagabine، Topiramate.</li><li>بعض المرضى يحتاجون أكثر من دواء.</li><li>جراحة لإزالة البؤرة أو قطع الجسم الجاسئ (Corpus callosotomy) لمن لا يتحكم بالأدوية.</li><li>تحفيز العصب المبهم (Vagus nerve stimulation) جهاز مزروع يقلل تكرار النوبات.</li><li>غلق خط وريدي (Saline lock) للمريض المنوم إن لم يحتج سوائل.</li></ul>",
+   "en": "<h4>Management (per protocol)</h4><ul><li>Airway: <b>left lateral position</b> and suction of secretions</li><li>Oxygen mask (O2 mask)</li><li>Insert an IV cannula</li><li>Anti-epileptic drugs</li></ul><h4>Seizure drugs (the protocol in use)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Neuril ampule (diazepam)</strong><p>One ampule IV slowly, then wait 15 minutes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>If still seizing</strong><p>One ampule diluted in 10 cm³ Ringer, given IV slowly.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>If still seizing</strong><p>Two ampules in 500 cm³ Ringer as an IV drip.</p></div></div></div><h4>Alternative: Depakene (sodium valproate) syrup rectally</h4><ul><li>Dilute the syrup with water at a ratio of 1 : 7</li><li>Draw up 10 mL of the mixture and insert it through a Ryle tube into the rectum for a distance of 4 cm</li><li>Use <b>either Neuril or Depakene</b></li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The current reference (EFNS and British emergency protocols): the first line is an <b>IV benzodiazepine</b> (lorazepam 4 mg or diazepam 10 mg), and repeat the dose <b>once after 5–10 minutes</b> if the seizure continues, rather than waiting 15 minutes. A seizure lasting >5 minutes remains an emergency. Give the dose slowly (IV diazepam no faster than 5 mg/minute per the leaflet) with breathing monitoring. According to the diazepam leaflet it is usually not mixed in drip solutions (it precipitates), so this dilution in Ringer should be reviewed with the pharmacist or physician. If the seizure continues after two doses, the second line starts by physician order (IV phenytoin, valproate, or levetiracetam) and transfer to intensive care. As for rectal valproate, I found no support for it as a first line in the guidelines, and the common alternative without an IV line is rectal diazepam. Do not dilute any dose on your own.</p></div><h4>Treat the cause</h4><ul><li>Low glucose: IV glucose</li><li>Low calcium: calcium gluconate</li><li>Fever/meningitis: antipyretic and antibiotic by physician order</li><li>Eclampsia: magnesium sulfate by physician order</li></ul><!--e2-82--><h4>First aid (before reaching the hospital)</h4><ul><li>Move away any hard objects he might hit</li><li>Put a pillow or cushion under the head</li><li>Place him in the recovery position and wait for the convulsions to end</li><li>Do not try to stop the seizure (call an ambulance if it lasts more than 5 minutes)</li><li>Do not put anything in the mouth or open it (tongue biting may happen but putting something in the mouth is more dangerous)</li><li>After the seizure: recovery position, check breathing, and if breathing stops begin rescue breathing and call an ambulance</li><li>Stay with him and reassure him: confusion and poor concentration (postictal confusion) are normal and last 5–15 minutes</li></ul><div class=\"cs-box cs-danger\"><strong>When should the patient go to the hospital?</strong><p>A seizure longer than 5 minutes or repeated without recovery, or the patient is unresponsive or has difficulty breathing after the seizure.</p></div><h4>Rule out in any seizure</h4><ul><li>Low blood sugar: a random glucose is required for every case arriving with seizures</li><li>Seizure with fever: rule out meningitis and encephalitis</li><li>Children: febrile seizures between 5 months and 5 years</li></ul><h4>Diazepam doses (Neuril 10 mg/2 mL) — per references</h4><table><thead><tr><th>Group</th><th>Method</th></tr></thead><tbody><tr><td>Adults</td><td>One ampule diluted in 10 cm³ saline and given IV slowly or IM deeply</td></tr><tr><td>Children (forbidden under 6 months)</td><td>One mark per kg (1 cm³ per 10 kg) undiluted, IV slowly or IM deeply</td></tr><tr><td>Without a cannula (Rectal)</td><td>The same dose: 1 cm³ on a regular syringe = 10 units on an insulin syringe; if the dose is less than 1 cm³ draw it up with an insulin syringe; a child over 20 kg: 2 cm³ (a full ampule) and diluted like adults</td></tr><tr><td>Depakine drops 200 mg/ml (sodium valproate) for children rectally</td><td>Dilute first: 1 cm³ Depakine + 7 cm³ water; the dose is 1 cm³ of the dilution per kg by rectal syringe (maximum 3 times). Example 7 kg: draw up 1 cm³ Depakine + 7 cm³ water = 8 cm³, and give 7 cm³. Example 10 kg: 2 cm³ Depakine + 14 cm³ water = 16 cm³, and give 10 cm³</td></tr></tbody></table><p>Rectal syringe method: attach the syringe to a Ryle tube, insert the tube into the anus 4–5 cm, inject the solution, then hold the child's buttocks closed for a minute to prevent the solution from coming out.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><p>IV diazepam in children is usually 0.1–0.3 mg/kg (maximum 10 mg) slowly, and rectal is 0.5 mg/kg (2–5 years). Absorption after IM injection is irregular. The modern alternative: midazolam IM/oral-buccal/intranasal. The rectal valproate dose is not first line in the guidelines: I could not document it, so it is carried out by physician order only, and the calculation may change with the product concentration. What is known about Neuril: 5 mg/mL (10 mg/2 mL).</p></div><h4>After a seizure in children</h4><ul><li>Any child after a seizure is referred to the hospital for observation</li><li>Febrile seizure: lower the temperature with cold water compresses and a paracetamol suppository (Cetal) or diclofenac (Dolphin) if older than a year</li><li>Ask about sudden stopping of epilepsy medicines: it can cause seizures</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Update: cooling with cold compresses is not routinely recommended, and antipyretics do not prevent febrile seizures. Paracetamol is for comfort only, and diclofenac for children is used with caution per the leaflet.</p></div><h4>Long-term antiepileptics and surgery</h4><ul><li>Carbamazepine, phenytoin, phenobarbital, clonazepam, valproic acid, lamotrigine, gabapentin, levetiracetam, oxcarbazepine, primidone, tiagabine, topiramate.</li><li>Some patients need more than one drug.</li><li>Surgery to remove the focus or cut the corpus callosum (corpus callosotomy) for those not controlled by drugs.</li><li>Vagus nerve stimulation is an implanted device that reduces seizure frequency.</li><li>Saline lock for the hospitalized patient if fluids are not needed.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أثناء النوبة: الأمان</strong><p>لا تحاول تمسك المريض أو تقيّده. ابعد الأدوات الخطرة، ضع شيئاً ناعماً تحت الراس، فكّ الملابس عند الرقبة. <b>ممنوع</b> وضع أي شيء في الفم أو إجبار المريض على شرب أو أكل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الوضع والمجرى</strong><p>لفّ المريض على جنبه الأيسر، افتح المجرى، اشفط اللعاب والقيء. لو سنان مخلوعة أو أطقم، شيلها بعد انتهاء الحركة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أكسجين وكانيولا</strong><p>قناع أكسجين وراقب SpO2. ركّب كانيولا أول ما تقدر تقترب بأمان، وخد عينة سكر (RBS) وتحاليل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الدواء بأمان</strong><p>Neuril: حقن وريدي بطيء جداً وراقب التنفس والضغط والوعي (خطر تثبيط التنفس). جهّز Ambu bag وقناع وشفط. لا تدفع بسرعة ولا تخلط الأمبول مع أدوية أخرى بالسرنجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>قِس وسجّل</strong><p>وقت بداية ونهاية النوبة، عددها، حرارة، سكر، ضغط، نبض، SpO2، الحدقتين ودرجة الوعي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>بعد النوبة</strong><p>وضع الإفاقة، مراقبة الوعي لحد ما يفوق، سلامة المريض من السقوط (جوانب السرير)، طمّنه وعرّفه بالمكان. ما تدّيش أكل/شرب قبل ما يفوق بالكامل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>بلّغ</strong><p>أي نوبة >5 دقايق أو متكررة، أو بعد إصابة راس، أو في حامل أو مريض سكر، أو حرارة مع رقبة متيبسة.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>تحذير ديازيبام</strong><p>أسرع إعطاء أو جرعات متكررة ممكن يوقف التنفس، خصوصاً في كبار السن والأطفال. ابقَ جنب المريض وراقبه.</p></div><h4>تفاصيل إضافية</h4><ul><li>راقب التنفس ولون الجلد أثناء النوبة وقد تحتاج أكسجين بعدها، وأبقِ معدات الأكسجين والشفط والمجرى الهوائي بجانب السرير.</li><li>سجل مدة النوبة وتطور الأعراض وسلس البول أو البراز.</li><li>انتبه للحالة الصرعية (Status epilepticus): نوبة مطولة أو متكررة، طارئ.</li><li>لا تضع شيئاً في الفم، أبعد الأشياء الخطرة، أدر المريض على جانبه.</li><li>ثقف المريض: عدم تفويت الجرعات، استشارة الطبيب قبل أي دواء جديد أو مكمل، وفحوص مستوى الدواء بالدم.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>During the seizure: safety</strong><p>Do not try to hold or restrain the patient. Move dangerous objects away, put something soft under the head, and loosen clothing at the neck. <b>Do not</b> put anything in the mouth or force the patient to drink or eat.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Position and airway</strong><p>Turn the patient onto the left side, open the airway, and suction saliva and vomit. If there are loose teeth or dentures, remove them after the movement ends.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Oxygen and cannula</strong><p>Oxygen mask and watch SpO2. Insert a cannula as soon as you can approach safely, and take a glucose sample (RBS) and labs.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>The drug, safely</strong><p>Neuril: very slow IV injection, and watch breathing, blood pressure, and consciousness (risk of respiratory depression). Prepare an Ambu bag, mask, and suction. Do not push fast, and do not mix the ampule with other drugs in the syringe.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Measure and record</strong><p>Start and end time of the seizure, its number, temperature, glucose, blood pressure, pulse, SpO2, pupils, and level of consciousness.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>After the seizure</strong><p>Recovery position, monitor consciousness until he wakes, protect the patient from falls (bed rails), reassure him and tell him where he is. Do not give food/drink until he is fully awake.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Report</strong><p>Any seizure >5 minutes or repeated, or after a head injury, or in a pregnant woman or a diabetic patient, or fever with a stiff neck.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>Diazepam warning</strong><p>Fast administration or repeated doses can stop breathing, especially in the elderly and children. Stay beside the patient and watch him.</p></div><h4>Extra details</h4><ul><li>Watch breathing and skin color during the seizure, and he may need oxygen afterward; keep oxygen, suction, and airway equipment beside the bed.</li><li>Record the length of the seizure, the progression of symptoms, and urinary or fecal incontinence.</li><li>Watch for status epilepticus: a prolonged or repeated seizure, an emergency.</li><li>Do not put anything in the mouth, move dangerous objects away, and turn the patient onto his side.</li><li>Teach the patient: do not miss doses, consult the physician before any new drug or supplement, and have blood drug level tests.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً:</strong><ul><li>نوبة أكثر من 5 دقايق أو نوبات متتالية بدون إفاقة</li><li>توقف أو بطء تنفس بعد الدواء، زرقة</li><li>حرارة مع تيبّس رقبة (سحايا)</li><li>إصابة راس أو صداع مفاجئ شديد (نزيف)</li><li>سكر أقل من 70 مجم/دل</li><li>أول نوبة في حياة المريض، أو في حامل (تسمم حمل)</li><li>ضعف أو شلل بعد النوبة أو لا يفيق</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately:</strong><ul><li>A seizure longer than 5 minutes or repeated seizures without recovery</li><li>Stopped or slow breathing after the drug, cyanosis</li><li>Fever with a stiff neck (meningitis)</li><li>Head injury or sudden severe headache (bleeding)</li><li>Glucose below 70 mg/dL</li><li>The first seizure in the patient's life, or in a pregnant woman (eclampsia)</li><li>Weakness or paralysis after the seizure or he does not wake</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اتعلم تتصرف مع أسرتك: لف المريض على جنبه، ما تحطش حاجة في بقه، وعدّ الوقت.</li><li>اتصل بالإسعاف لو النوبة أكتر من 5 دقايق.</li><li>خد دواء الصرع بانتظام وما توقفوش فجأة.</li><li>نام كفاية، وتجنب السهر والكحول وأي منبهات.</li><li>ما تسوقش ولا تسبح لوحدك ولا تطلع أماكن عالية إلا بعد إذن الطبيب.</li><li>الطفل بحرارة: خافض حرارة وتبريد خفيف، وراجع الطبيب لأول نوبة.</li></ul>",
+   "en": "<ul><li>Learn how to act with your family: turn the patient onto his side, do not put anything in his mouth, and count the time.</li><li>Call an ambulance if the seizure lasts more than 5 minutes.</li><li>Take your epilepsy medicine regularly and do not stop it suddenly.</li><li>Sleep enough, and avoid staying up late, alcohol, and any stimulants.</li><li>Do not drive or swim alone or go to high places except with the physician's permission.</li><li>A child with fever: an antipyretic and light cooling, and see the physician for the first seizure.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الوضع الجانبي الأيسر وشفط الإفرازات وأكسجين أولاً",
+   "لا تضع أي شيء في فم المريض ولا تقيّده",
+   "نوبة أكثر من 5 دقايق = طارئ حالة صرع متصلة",
+   "Neuril (ديازيبام) وريدي ببطء مع مراقبة التنفس",
+   "بعد النوبة: حرارة، سكر، كالسيوم",
+   "سجّل وقت النوبة وشكلها وحالة ما بعدها",
+   "ديازيبام لا يُخفف ويُخلط في محاليل إلا بمراجعة الصيدلي",
+   "اطلب الإسعاف لو النوبة أكتر من 5 دقايق أو لا تنفس بعدها",
+   "ممنوع تمنع التشنج أو تضع شيئاً في الفم",
+   "الأطفال: أي طفل بعد التشنج يُحوَّل للملاحظة",
+   "أنواع النوبات: عامة (توترية-رمعية، غياب، رمع عضلي، فقدان توتر) وجزئية (بسيطة ومعقدة)."
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>التشنج (Convulsion / Fit) هو نوبة غير إرادية من انقباض عضلات الجسم مع أو بدون فقدان الوعي، سببها تفريغ كهربائي زائد في المخ. أغلب النوبات بتقف لوحدها خلال دقيقتين، لكن <b>النوبة الأطول من 5 دقايق</b> أو نوبات متتالية بدون إفاقة طارئة (Status epilepticus) وتهدد الحياة.</p><div class=\"cs-stats\" style=\"grid-template-columns:repeat(auto-fit,minmax(9rem,1fr))\"><div><b>5 د</b><span>نوبة أطول = طارئ</span></div><div><b>جانبي</b><span>وضع المريض</span></div><div><b>السكر</b><span>أول فحص</span></div></div>[[slot:dis-082-timeline|خطة التشنج حسب الزمن|/diseases/img/dis-082-timeline.svg]]<div class=\"cs-box cs-danger\"><strong>أولويات التمريض</strong><p>1) مجرى الهواء والوضع الجانبي. 2) أكسجين. 3) كانيولا. 4) مضاد التشنج بأمر الطبيب. وبعدين دور على السبب.</p></div>"
-    },
-    "causes": {
-      "ar": "<h4>أسباب التشنج (بتتحدد بعد السيطرة عليه)</h4><div class=\"cs-compare\"><ul><li><b>حرارة:</b> تشنج حراري عند الأطفال (Febrile convulsion)، التهاب سحايا (Meningitis)، التهاب مخ</li><li><b>نزيف تحت العنكبوتية (SAH)</b> ونزيف أو جلطة مخية، ورم، إصابة رأس</li><li><b>سكر الدم:</b> هبوط (Hypoglycemia) أو ارتفاع شديد (Hyperglycemia)</li><li><b>الكالسيوم:</b> نقص الكالسيوم (Hypocalcemia) — انظر حالة نقص الكالسيوم</li><li><b>صرع</b> (مريض معروف) خصوصاً مع نسيان الدواء</li><li><b>أخرى:</b> الصوديوم والمغنيسيوم، فشل كلوي/كبدي، تسمم (مبيدات، أدوية)، انسحاب كحول/مهدئات، تسمم حمل (Eclampsia)</li></ul></div><p>هل هي صرع أم لا يتحدد بالتاريخ والفحوصات.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li>فقدان وعي مفاجئ مع تصلّب ثم رجّات في الأطراف (Tonic–clonic)</li><li>زرقة حول الفم أو الشفايف، لعاب أو رغاوي، عض اللسان</li><li>تبول أو تبرز لا إرادي</li><li>بعد النوبة: نعاس وارتباك وصداع (حالة ما بعد النوبة) قد تستمر دقايق لساعات</li><li>أنواع تانية: شرود لحظات، حركات موضعية في طرف واحد، غياب</li></ul><div class=\"cs-box cs-info\"><strong>سجّل أثناء النوبة</strong><p>وقت البداية والنهاية، بدأت من فين في الجسم، الحدقتين، لون الوجه، أي إصابة، الحالة بعد النوبة. المعلومات دي بتساعد الطبيب جداً.</p></div><h4>تصنيف النوبات</h4><table><thead><tr><th>النوع</th><th>الوصف</th></tr></thead><tbody><tr><td>عامة: توترية-رمعية (Tonic-clonic)</td><td>تبدأ بتيبس ثم فقدان وعي ثم رجات إيقاعية</td></tr><tr><td>توترية</td><td>تيبس عضلات وفقدان وعي</td></tr><tr><td>رمعية (Clonic)</td><td>رجات إيقاعية</td></tr><tr><td>غياب (Absence)</td><td>شرود قصير وكأنه يحلم</td></tr><tr><td>رمع عضلي (Myoclonic)</td><td>انتفاضة سريعة في طرف أو عدة أطراف</td></tr><tr><td>فقدان التوتر (Atonic)</td><td>فقدان مفاجئ لقوة العضلة وسقوط</td></tr><tr><td>جزئية بسيطة</td><td>هالة (Aura) وإحساس أو حركة في طرف أو أعراض لاإرادية أو نفسية، بدون فقدان وعي</td></tr><tr><td>جزئية معقدة</td><td>فقدان وعي مع حركات آلية (مص الشفاه، لقط، نقر)</td></tr></tbody></table><p>قبل النوبة قد تأتي هالة حسية بصرية أو سمعية أو شمية، وبعدها مرحلة ما بعد النوبة بتشوش وإرهاق، وقد لا يتذكر المريض شيئاً.</p>"
-    },
-    "tests": {
-      "ar": "<p>\"What to be done later\" — بعد السيطرة على النوبة:</p><ul><li><b>قياس الحرارة:</b> تشنج حراري / التهاب سحايا / نزيف تحت العنكبوتية (SAH)</li><li><b>سكر الدم العشوائي (RBS):</b> هبوط أو ارتفاع السكر</li><li><b>الكالسيوم الكلي والمتأين:</b> نقص الكالسيوم</li><li>صوديوم ومغنيسيوم، وظائف كلى وكبد، تحليل بول، سموم لو في شك</li><li>أشعة مقطعية أو رنين على المخ، وتخطيط مخ (EEG)</li><li>بزل قطني لو شك في التهاب سحايا (بأمر الطبيب فقط)</li><li>مستوى دواء الصرع في الدم لو المريض بيتعالج</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>الإدارة (حسب البروتوكول)</h4><ul><li>مجرى الهواء: <b>وضع جانبي أيسر (Left lateral)</b> وشفط الإفرازات</li><li>قناع أكسجين (O2 mask)</li><li>تركيب كانيولا وريدية (Cannula)</li><li>مضادات الصرع (Anti-epileptic drugs)</li></ul><h4>أدوية التشنج (البروتوكول المتبع)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أمبول Neuril (ديازيبام)</strong><p>أمبول واحد وريدي ببطء، ثم الانتظار 15 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>لو لسه التشنج</strong><p>أمبول واحد مخفف في 10 سم رينجر يُعطى وريدي ببطء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>لو لسه التشنج</strong><p>أمبولين في 500 سم رينجر تنقيط وريدي.</p></div></div></div><h4>بديل: شراب Depakene (صوديوم فالبروات) بالمستقيم</h4><ul><li>يخفف الشراب بالماء بنسبة 1 : 7</li><li>يُسحب 10 مل من الناتج ويُدخل عبر أنبوب رايل (Ryle tube) في المستقيم لمسافة 4 سم</li><li>يُستخدم <b>إما Neuril أو Depakene</b></li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المرجع الحالي (EFNS وبروتوكولات الطوارئ البريطانية): أول خط هو <b>بنزوديازيبين وريدي</b> (Lorazepam 4 مجم أو Diazepam 10 مجم)، وتكرار الجرعة <b>مرة واحدة بعد 5–10 دقايق</b> لو التشنج مستمر، وليس الانتظار 15 دقيقة. تبقى النوبة >5 دقائق حالة طارئة. الجرعة تُعطى ببطء (ديازيبام في الوريد لا يزيد عن 5 مجم/دقيقة حسب النشرة) مع مراقبة التنفس. وبحسب نشرة ديازيبام لا يُخلط عادة في محاليل التنقيط (يترسب)، فالتخفيف في الرينجر ده يراجع مع الصيدلي أو الطبيب. لو التشنج استمر بعد جرعتين يبدأ الخط التاني بأمر الطبيب (فينيتوين أو فالبروات أو ليفيتيراسيتام وريدي) والنقل للعناية. أما فالبروات بالمستقيم فلم أجد له دعماً كخط أول في الإرشادات، والبديل الشائع بدون خط وريدي هو ديازيبام شرجي. لا تخفّف أي جرعة من عندك.</p></div><h4>علاج السبب</h4><ul><li>سكر واطي: جلوكوز وريدي</li><li>نقص كالسيوم: كالسيوم جلوكونات</li><li>حرارة/سحايا: خافض حرارة والمضاد الحيوي بأمر الطبيب</li><li>تسمم حمل: كبريتات المغنيسيوم بأمر الطبيب</li></ul><!--e2-82--><h4>الإسعافات الأولية (قبل الوصول للمستشفى)</h4><ul><li>ابعد أي أدوات صلبة قد يصطدم بها</li><li>حط وسادة أو مخدة تحت الراس</li><li>حطه في وضع الإفاقة (Recovery position) وانتظر انتهاء التشنجات</li><li>ممنوع تمنع التشنج (اطلب الإسعاف لو زادت عن 5 دقايق)</li><li>ممنوع وضع أي شيء في الفم أو فتحه (عض اللسان قد يحدث لكن وضع شيء في الفم أخطر)</li><li>بعد النوبة: وضع الإفاقة، تأكد من التنفس، وفي حالة توقف التنفس ابدأ تنفس إنقاذي واطلب الإسعاف</li><li>ابقَ معاه واطمّنه: التوهان وعدم التركيز (Post-ictal confusion) طبيعي ويستمر 5–15 دقيقة</li></ul><div class=\"cs-box cs-danger\"><strong>متى تخلي المريض يروح المستشفى؟</strong><p>نوبة أكتر من 5 دقايق أو متكررة بدون إفاقة، أو عدم استجابة المريض/صعوبة تنفس بعد النوبة.</p></div><h4>استبعد في أي تشنج</h4><ul><li>هبوط السكر: لازم سكر عشوائي لأي حالة جاية بتشنجات</li><li>التشنج مع حرارة: استبعد سحايا والتهاب مخ</li><li>الأطفال: تشنجات حرارية بين 5 شهور و5 سنين</li></ul><h4>جرعات ديازيبام (Neuril 10 مجم/2 مل) — حسب المراجع</h4><table><thead><tr><th>الفئة</th><th>الطريقة</th></tr></thead><tbody><tr><td>الكبار</td><td>أمبول يتخفف في 10 سم ملح ويُعطى وريد ببطء أو عضل بعمق</td></tr><tr><td>الأطفال (ممنوع أقل من 6 شهور)</td><td>شرطة لكل كجم (1 سم لكل 10 كجم) بدون تخفيف وريد ببطء أو عضل بعمق</td></tr><tr><td>بدون كانيولا (Rectal)</td><td>نفس الجرعة: 1 سم على سرنجة عادية = 10 وحدات على سرنجة الإنسولين؛ لو الجرعة أقل من 1 سم اسحب بسرنجة إنسولين؛ طفل أكبر من 20 كجم: 2 سم (أمبول كامل) ويتخفف مثل الكبار</td></tr><tr><td>Depakine drops 200 mg/ml (صوديوم فالبروات) للأطفال شرجياً</td><td>يخفف أولاً: 1 سم دياكين + 7 سم ماء؛ الجرعة 1 سم من المخفف لكل كجم بحقنة شرجية (حد أقصى 3 مرات). مثال 7 كجم: اسحب 1 سم دياكين + 7 سم ماء = 8 سم، وأعطِ 7 سم. مثال 10 كجم: 2 سم دياكين + 14 سم ماء = 16 سم، وأعطِ 10 سم</td></tr></tbody></table><p>طريقة الحقنة الشرجية: السرنجة بأنبوبة رايل، أدخل الأنبوبة في فتحة الشرج 4–5 سم، احقن المحلول، ثم أغلق مؤخرة الطفل دقيقة لمنع خروج المحلول.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>ديازيبام الوريدي في الأطفال عادة 0.1–0.3 مجم/كجم (حد أقصى 10 مجم) ببطء، والشرجي 0.5 مجم/كجم (2–5 سنين). الحقن العضلي امتصاصه غير منتظم. البديل الحديث: ميدازولام عضل/فموي-خدي/أنفي. جرعة فالبروات الشرجية ليست من الخط الأول في الإرشادات: لم أتمكن من توثيقها، فتُنفَّذ بأمر الطبيب فقط، وقد يتغير الحساب حسب تركيز المنتج. المعروف عن Neuril: 5 مجم/مل (10 مجم/2 مل).</p></div><h4>بعد التشنج في الأطفال</h4><ul><li>أي طفل بعد التشنج يُحوَّل للمستشفى للملاحظة</li><li>التشنج الحراري: خفض الحرارة بكمادات ماء بارد ولبوس باراسيتامول (Cetal) أو ديكلوفيناك (Dolphin) لو أكبر من سنة</li><li>اسأل عن إيقاف أدوية الصرع فجأة: قد يسبب التشنجات</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>التحديث: التبريد بالكمادات الباردة لا يُنصح به روتينياً، وخافضات الحرارة لا تمنع التشنج الحراري. الباراسيتامول للراحة فقط، والديكلوفيناك للأطفال بحذر حسب النشرة.</p></div><h4>مضادات الصرع طويلة الأمد والجراحة</h4><ul><li>Carbamazepine، Phenytoin، Phenobarbital، Clonazepam، Valproic acid، Lamotrigine، Gabapentin، Levetiracetam، Oxcarbazepine، Primidone، Tiagabine، Topiramate.</li><li>بعض المرضى يحتاجون أكثر من دواء.</li><li>جراحة لإزالة البؤرة أو قطع الجسم الجاسئ (Corpus callosotomy) لمن لا يتحكم بالأدوية.</li><li>تحفيز العصب المبهم (Vagus nerve stimulation) جهاز مزروع يقلل تكرار النوبات.</li><li>غلق خط وريدي (Saline lock) للمريض المنوم إن لم يحتج سوائل.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أثناء النوبة: الأمان</strong><p>لا تحاول تمسك المريض أو تقيّده. ابعد الأدوات الخطرة، ضع شيئاً ناعماً تحت الراس، فكّ الملابس عند الرقبة. <b>ممنوع</b> وضع أي شيء في الفم أو إجبار المريض على شرب أو أكل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الوضع والمجرى</strong><p>لفّ المريض على جنبه الأيسر، افتح المجرى، اشفط اللعاب والقيء. لو سنان مخلوعة أو أطقم، شيلها بعد انتهاء الحركة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أكسجين وكانيولا</strong><p>قناع أكسجين وراقب SpO2. ركّب كانيولا أول ما تقدر تقترب بأمان، وخد عينة سكر (RBS) وتحاليل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الدواء بأمان</strong><p>Neuril: حقن وريدي بطيء جداً وراقب التنفس والضغط والوعي (خطر تثبيط التنفس). جهّز Ambu bag وقناع وشفط. لا تدفع بسرعة ولا تخلط الأمبول مع أدوية أخرى بالسرنجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>قِس وسجّل</strong><p>وقت بداية ونهاية النوبة، عددها، حرارة، سكر، ضغط، نبض، SpO2، الحدقتين ودرجة الوعي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>بعد النوبة</strong><p>وضع الإفاقة، مراقبة الوعي لحد ما يفوق، سلامة المريض من السقوط (جوانب السرير)، طمّنه وعرّفه بالمكان. ما تدّيش أكل/شرب قبل ما يفوق بالكامل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>بلّغ</strong><p>أي نوبة >5 دقايق أو متكررة، أو بعد إصابة راس، أو في حامل أو مريض سكر، أو حرارة مع رقبة متيبسة.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>تحذير ديازيبام</strong><p>أسرع إعطاء أو جرعات متكررة ممكن يوقف التنفس، خصوصاً في كبار السن والأطفال. ابقَ جنب المريض وراقبه.</p></div><h4>تفاصيل إضافية</h4><ul><li>راقب التنفس ولون الجلد أثناء النوبة وقد تحتاج أكسجين بعدها، وأبقِ معدات الأكسجين والشفط والمجرى الهوائي بجانب السرير.</li><li>سجل مدة النوبة وتطور الأعراض وسلس البول أو البراز.</li><li>انتبه للحالة الصرعية (Status epilepticus): نوبة مطولة أو متكررة، طارئ.</li><li>لا تضع شيئاً في الفم، أبعد الأشياء الخطرة، أدر المريض على جانبه.</li><li>ثقف المريض: عدم تفويت الجرعات، استشارة الطبيب قبل أي دواء جديد أو مكمل، وفحوص مستوى الدواء بالدم.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً:</strong><ul><li>نوبة أكثر من 5 دقايق أو نوبات متتالية بدون إفاقة</li><li>توقف أو بطء تنفس بعد الدواء، زرقة</li><li>حرارة مع تيبّس رقبة (سحايا)</li><li>إصابة راس أو صداع مفاجئ شديد (نزيف)</li><li>سكر أقل من 70 مجم/دل</li><li>أول نوبة في حياة المريض، أو في حامل (تسمم حمل)</li><li>ضعف أو شلل بعد النوبة أو لا يفيق</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اتعلم تتصرف مع أسرتك: لف المريض على جنبه، ما تحطش حاجة في بقه، وعدّ الوقت.</li><li>اتصل بالإسعاف لو النوبة أكتر من 5 دقايق.</li><li>خد دواء الصرع بانتظام وما توقفوش فجأة.</li><li>نام كفاية، وتجنب السهر والكحول وأي منبهات.</li><li>ما تسوقش ولا تسبح لوحدك ولا تطلع أماكن عالية إلا بعد إذن الطبيب.</li><li>الطفل بحرارة: خافض حرارة وتبريد خفيف، وراجع الطبيب لأول نوبة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الوضع الجانبي الأيسر وشفط الإفرازات وأكسجين أولاً",
-      "لا تضع أي شيء في فم المريض ولا تقيّده",
-      "نوبة أكثر من 5 دقايق = طارئ حالة صرع متصلة",
-      "Neuril (ديازيبام) وريدي ببطء مع مراقبة التنفس",
-      "بعد النوبة: حرارة، سكر، كالسيوم",
-      "سجّل وقت النوبة وشكلها وحالة ما بعدها",
-      "ديازيبام لا يُخفف ويُخلط في محاليل إلا بمراجعة الصيدلي",
-      "اطلب الإسعاف لو النوبة أكتر من 5 دقايق أو لا تنفس بعدها",
-      "ممنوع تمنع التشنج أو تضع شيئاً في الفم",
-      "الأطفال: أي طفل بعد التشنج يُحوَّل للملاحظة",
-      "أنواع النوبات: عامة (توترية-رمعية، غياب، رمع عضلي، فقدان توتر) وجزئية (بسيطة ومعقدة)."
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "وضع المريض أثناء التشنج وبعده؟"
-      },
-      "options": [
-        {
-          "ar": "مستلقٍ على الظهر"
-        },
-        {
-          "ar": "جانبي أيسر مع فتح المجرى"
-        },
-        {
-          "ar": "جالس"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يمنع الاختناق باللعاب والقيء."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما الذي يُفحص بعد السيطرة على التشنج؟"
-      },
-      "options": [
-        {
-          "ar": "الحرارة والسكر والكالسيوم"
-        },
-        {
-          "ar": "لا شيء"
-        },
-        {
-          "ar": "ضغط العين فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "أسباب قابلة للعلاج: سحايا وسكر وكالسيوم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أكثر مضاعفات ديازيبام الوريدي السريع؟"
-      },
-      "options": [
-        {
-          "ar": "ارتفاع السكر"
-        },
-        {
-          "ar": "تثبيط التنفس"
-        },
-        {
-          "ar": "ارتفاع الحرارة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يعطى ببطء مع مراقبة التنفس."
-      }
-    },
-    {
-      "q": {
-        "ar": "نوبة تشنج استمرت 6 دقايق، ماذا تفعل؟"
-      },
-      "options": [
-        {
-          "ar": "تنتظر لحد ما تقف لوحدها"
-        },
-        {
-          "ar": "تعتبرها طارئة: أكسجين وكانيولا وجهّز الدواء بأمر الطبيب"
-        },
-        {
-          "ar": "تعطي ماء"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "أكثر من 5 دقايق تعني حالة صرع متصلة."
-      }
-    },
-    {
-      "q": {
-        "ar": "ماذا يمنع أثناء النوبة؟"
-      },
-      "options": [
-        {
-          "ar": "لف المريض على جنبه"
-        },
-        {
-          "ar": "وضع شيء في الفم وتقييد الحركة"
-        },
-        {
-          "ar": "تسجيل الوقت"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يسبب إصابات وانسداد."
-      }
-    },
-    {
-      "q": {
-        "ar": "تشنجات مريض لأول مرة. أول تحليل؟"
-      },
-      "options": [
-        {
-          "ar": "سكر عشوائي"
-        },
-        {
-          "ar": "CBC فقط"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "هبوط السكر سبب شائع ويُعالج بسرعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "نوبة جزئية معقدة تتميز بـ:"
-      },
-      "options": [
-        {
-          "ar": "فقدان الوعي وحركات آلية"
-        },
-        {
-          "ar": "وعي سليم تماماً"
-        },
-        {
-          "ar": "سقوط فقط"
-        },
-        {
-          "ar": "حرارة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مص الشفاه ولقط."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "EFNS Guideline on the treatment of status epilepticus in adults (2010)"
-    },
-    {
-      "title": "Hospital status epilepticus guideline (UK NHS) — IV lorazepam/diazepam regimen"
-    },
-    {
-      "title": "Emergency Medicine Cases — Status Epilepticus"
-    },
-    {
-      "title": "MSD Manual – Seizure disorders"
-    }
-  ],
-  "rx": [
-    {
-      "category": "الأعصاب والنفسية",
-      "condition_ar": "التشنجات (الطوارئ)",
-      "condition_en": "Convulsions ER",
-      "items": [
-        {
-          "drug_name": "Neuril amp 10 mg/2 ml (Diazepam)",
-          "dose": "كبار: أمبول مخفف في 10 سم ملح وريد ببطء أو عضل بعمق؛ أطفال: 1 سم/10 كجم (ممنوع أقل من 6 شهور)",
-          "note": "راقب التنفس؛ تخفيف الأمبول يراجع مع الصيدلي"
-        },
-        {
-          "drug_name": "Depakine drops 200 mg/ml (Sodium valproate)",
-          "dose": "شرجياً للأطفال: 1 سم دياكين + 7 سم ماء، الجرعة 1 سم مخفف/كجم، حد أقصى 3 مرات",
-          "note": "بأمر الطبيب فقط"
-        }
-      ],
-      "clinical_note": "تحويل أي طفل بعد التشنج للمستشفى للملاحظة."
-    }
+  "en": [
+   "Left lateral position, suction of secretions, and oxygen first",
+   "Do not put anything in the patient's mouth and do not restrain him",
+   "A seizure over 5 minutes = emergency, status epilepticus",
+   "Neuril (diazepam) IV slowly with breathing monitoring",
+   "After the seizure: temperature, glucose, calcium",
+   "Record the time of the seizure, its form, and the condition afterward",
+   "Diazepam is not diluted and mixed in solutions except after consulting the pharmacist",
+   "Call an ambulance if the seizure lasts more than 5 minutes or there is no breathing after it",
+   "Do not stop the seizure or put anything in the mouth",
+   "Children: any child after a seizure is referred for observation",
+   "Seizure types: generalized (tonic-clonic, absence, myoclonic, atonic) and partial (simple and complex)."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "وضع المريض أثناء التشنج وبعده؟",
+    "en": "The patient's position during and after a seizure?"
+   },
+   "options": [
+    {
+     "ar": "مستلقٍ على الظهر",
+     "en": "Lying on the back"
+    },
+    {
+     "ar": "جانبي أيسر مع فتح المجرى",
+     "en": "Left lateral with an open airway"
+    },
+    {
+     "ar": "جالس",
+     "en": "Sitting"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يمنع الاختناق باللعاب والقيء.",
+    "en": "Prevents choking on saliva and vomit."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما الذي يُفحص بعد السيطرة على التشنج؟",
+    "en": "What is checked after the seizure is controlled?"
+   },
+   "options": [
+    {
+     "ar": "الحرارة والسكر والكالسيوم",
+     "en": "Temperature, glucose, and calcium"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    },
+    {
+     "ar": "ضغط العين فقط",
+     "en": "Eye pressure only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "أسباب قابلة للعلاج: سحايا وسكر وكالسيوم.",
+    "en": "Treatable causes: meningitis, glucose, and calcium."
+   }
+  },
+  {
+   "q": {
+    "ar": "أكثر مضاعفات ديازيبام الوريدي السريع؟",
+    "en": "The most common complication of fast IV diazepam?"
+   },
+   "options": [
+    {
+     "ar": "ارتفاع السكر",
+     "en": "High glucose"
+    },
+    {
+     "ar": "تثبيط التنفس",
+     "en": "Respiratory depression"
+    },
+    {
+     "ar": "ارتفاع الحرارة",
+     "en": "High temperature"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يعطى ببطء مع مراقبة التنفس.",
+    "en": "It is given slowly with breathing monitoring."
+   }
+  },
+  {
+   "q": {
+    "ar": "نوبة تشنج استمرت 6 دقايق، ماذا تفعل؟",
+    "en": "A seizure lasted 6 minutes. What do you do?"
+   },
+   "options": [
+    {
+     "ar": "تنتظر لحد ما تقف لوحدها",
+     "en": "Wait until it stops on its own"
+    },
+    {
+     "ar": "تعتبرها طارئة: أكسجين وكانيولا وجهّز الدواء بأمر الطبيب",
+     "en": "Treat it as an emergency: oxygen, cannula, and prepare the drug by physician order"
+    },
+    {
+     "ar": "تعطي ماء",
+     "en": "Give water"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "أكثر من 5 دقايق تعني حالة صرع متصلة.",
+    "en": "More than 5 minutes means status epilepticus."
+   }
+  },
+  {
+   "q": {
+    "ar": "ماذا يمنع أثناء النوبة؟",
+    "en": "What is forbidden during a seizure?"
+   },
+   "options": [
+    {
+     "ar": "لف المريض على جنبه",
+     "en": "Turning the patient onto his side"
+    },
+    {
+     "ar": "وضع شيء في الفم وتقييد الحركة",
+     "en": "Putting something in the mouth and restraining movement"
+    },
+    {
+     "ar": "تسجيل الوقت",
+     "en": "Recording the time"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يسبب إصابات وانسداد.",
+    "en": "It causes injuries and obstruction."
+   }
+  },
+  {
+   "q": {
+    "ar": "تشنجات مريض لأول مرة. أول تحليل؟",
+    "en": "A patient's first-time seizures. The first test?"
+   },
+   "options": [
+    {
+     "ar": "سكر عشوائي",
+     "en": "Random glucose"
+    },
+    {
+     "ar": "CBC فقط",
+     "en": "CBC only"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "هبوط السكر سبب شائع ويُعالج بسرعة.",
+    "en": "Low glucose is a common cause and is treated quickly."
+   }
+  },
+  {
+   "q": {
+    "ar": "نوبة جزئية معقدة تتميز بـ:",
+    "en": "A complex partial seizure is characterized by:"
+   },
+   "options": [
+    {
+     "ar": "فقدان الوعي وحركات آلية",
+     "en": "Loss of consciousness and automatic movements"
+    },
+    {
+     "ar": "وعي سليم تماماً",
+     "en": "Completely intact awareness"
+    },
+    {
+     "ar": "سقوط فقط",
+     "en": "Falling only"
+    },
+    {
+     "ar": "حرارة",
+     "en": "Fever"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مص الشفاه ولقط.",
+    "en": "Lip smacking and picking."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "EFNS Guideline on the treatment of status epilepticus in adults (2010)"
+  },
+  {
+   "title": "Hospital status epilepticus guideline (UK NHS) — IV lorazepam/diazepam regimen"
+  },
+  {
+   "title": "Emergency Medicine Cases — Status Epilepticus"
+  },
+  {
+   "title": "MSD Manual – Seizure disorders"
+  }
+ ],
+ "rx": [
+  {
+   "category": "الأعصاب والنفسية",
+   "condition_ar": "التشنجات (الطوارئ)",
+   "condition_en": "Convulsions ER",
+   "items": [
+    {
+     "drug_name": "Neuril amp 10 mg/2 ml (Diazepam)",
+     "dose": "كبار: أمبول مخفف في 10 سم ملح وريد ببطء أو عضل بعمق؛ أطفال: 1 سم/10 كجم (ممنوع أقل من 6 شهور)",
+     "note": "راقب التنفس؛ تخفيف الأمبول يراجع مع الصيدلي"
+    },
+    {
+     "drug_name": "Depakine drops 200 mg/ml (Sodium valproate)",
+     "dose": "شرجياً للأطفال: 1 سم دياكين + 7 سم ماء، الجرعة 1 سم مخفف/كجم، حد أقصى 3 مرات",
+     "note": "بأمر الطبيب فقط"
+    }
+   ],
+   "clinical_note": "تحويل أي طفل بعد التشنج للمستشفى للملاحظة."
+  }
+ ]
 }

@@ -1,147 +1,186 @@
 {
-  "id": "dis-262",
-  "num": 262,
-  "system": "gi",
-  "icon": "🔥",
-  "level": 2,
-  "target": "diseases",
-  "title": {
-    "ar": "الحموضة وعسر الهضم في الاستقبال: التفريق بين الالتهاب والقرحة والارتجاع",
-    "en": "Dyspepsia in the ER: Gastritis vs Peptic Ulcer vs Reflux"
+ "id": "dis-262",
+ "num": 262,
+ "system": "gi",
+ "icon": "🔥",
+ "level": 2,
+ "target": "diseases",
+ "title": {
+  "ar": "الحموضة وعسر الهضم في الاستقبال: التفريق بين الالتهاب والقرحة والارتجاع",
+  "en": "Dyspepsia in the ER: Gastritis vs Peptic Ulcer vs Reflux"
+ },
+ "teaser": {
+  "ar": "مفاتيح التشخيص السريع بالسؤال (علامة الإشارة، علاقة الألم بالأكل)، استبعاد البطن الحاد، وروشتة الطوارئ.",
+  "en": "Quick diagnostic clues by asking questions (pointing sign, relation of pain to food), ruling out the acute abdomen, and the emergency prescription."
+ },
+ "chips": [
+  {
+   "ar": "Pointing sign",
+   "en": "Pointing sign"
   },
-  "teaser": {
-    "ar": "مفاتيح التشخيص السريع بالسؤال (علامة الإشارة، علاقة الألم بالأكل)، استبعاد البطن الحاد، وروشتة الطوارئ."
+  {
+   "ar": "قرحة / ارتجاع",
+   "en": "Ulcer / Reflux"
   },
-  "chips": [
-    {
-      "ar": "Pointing sign"
-    },
-    {
-      "ar": "قرحة / ارتجاع"
-    },
-    {
-      "ar": "Zantac + Primperan"
-    }
+  {
+   "ar": "Zantac + Primperan",
+   "en": "Zantac + Primperan"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الحموضة والترجيع من أشهر الشكاوى في الاستقبال. الألم أو الحرقان أعلى البطن (Epigastric pain / Heartburn) والإحساس بامتلاء، وغالباً ترجيع وأحياناً تكريع. السؤال الأذكى: <b>هي عسر هضم بسيط ولا قرحة ولا ارتجاع؟</b></p>[[slot:dis-262-clues|مفاتيح التفريق بين عسر الهضم والقرحة والارتجاع|/diseases/img/dis-262-clues.svg]]<div class=\"cs-box cs-info\"><strong>مش حالة طوارئ بس بتيجي كتير</strong><p>المطلوب إن العيان يرتاح قبل ما يمشي ويتدى علاج يمشي عليه في البيت.</p></div>",
+   "en": "<p>Heartburn and vomiting are among the most common complaints in the emergency reception. Pain or burning in the upper abdomen (Epigastric pain / Heartburn) and a feeling of fullness, often vomiting and sometimes belching. The smartest question: <b>Is it simple indigestion, an ulcer, or reflux?</b></p>[[slot:dis-262-clues|Clues to tell indigestion, ulcer, and reflux apart|/diseases/img/dis-262-clues.svg]]<div class=\"cs-box cs-info\"><strong>Not an emergency, but very common</strong><p>The goal is for the patient to feel better before leaving and to receive treatment to follow at home.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>اسأل عن إيه (History)</h4><table><thead><tr><th>السؤال</th><th>ليه؟</th></tr></thead><tbody><tr><td>هل جاتلك قبل كده؟ ولا أول مرة؟</td><td>لو بتتكرر: غالباً قرحة أو ارتجاع</td></tr><tr><td>بتاخد علاج لحاجة؟</td><td>ممكن أدوية بتتعب المعدة زي NSAIDs</td></tr><tr><td>أكلت إيه النهارده؟</td><td>أكلة تقيلة أو أكل فاسد أو تعب معدة</td></tr><tr><td>بتشرب سجاير؟</td><td>التدخين من أكتر الحاجات المهيجة للمعدة</td></tr></tbody></table><h4>متى أشك في قرحة (Peptic ulcer)؟</h4><ul><li><b>تكرار:</b> المريض بيعاني غالباً من قرحة أو ارتجاع.</li><li><b>علامة الإشارة (Pointing sign):</b> لو طلبت من المريض يشاور على مكان الألم هيشاور بصباع واحد.</li><li><b>علاقة بالأكل:</b> يزيد مع الأكل في قرحة المعدة وبيرتاح مع الأكل في قرحة الاثنى عشر.</li></ul><h4>متى أشك في ارتجاع المريء (GERD)؟</h4><ul><li>تكرار الشكوى.</li><li>الحموضة بتزيد مع النوم على الظهر + كحة: المريض بيوصف إن حمو بيطلع على صدره، بيهيج زوره ويخليه يكح، وكله بيزيد لما ينام بالليل.</li></ul><div class=\"cs-box cs-danger\"><strong>أهم حاجة: استبعاد البطن الحاد</strong><p>افحص البطن بعد سماع التاريخ. ألم محرقة مع Guarding أو Rigidity أو Tenderness = احتمال قرحة مثقوبة (Perforated ulcer) = <b>بطن جراحي</b> يحتاج تحويل فوري.</p></div>",
+   "en": "<h4>What to ask about (History)</h4><table><thead><tr><th>Question</th><th>Why?</th></tr></thead><tbody><tr><td>Has it happened before? Or is this the first time?</td><td>If it recurs: probably an ulcer or reflux</td></tr><tr><td>Are you taking any medication?</td><td>Some drugs irritate the stomach, such as NSAIDs</td></tr><tr><td>What did you eat today?</td><td>A heavy meal, spoiled food, or a stomach upset</td></tr><tr><td>Do you smoke?</td><td>Smoking is one of the most common stomach irritants</td></tr></tbody></table><h4>When do I suspect a peptic ulcer?</h4><ul><li><b>Recurrence:</b> the patient is probably suffering from an ulcer or reflux.</li><li><b>Pointing sign:</b> if you ask the patient to point to the site of pain, he points with one finger.</li><li><b>Relation to food:</b> it increases with eating in gastric ulcer and eases with eating in duodenal ulcer.</li></ul><h4>When do I suspect gastroesophageal reflux (GERD)?</h4><ul><li>Recurrence of the complaint.</li><li>Heartburn increases when lying on the back + cough: the patient describes acid coming up to his chest, irritating his throat and making him cough, and everything gets worse when he lies down at night.</li></ul><div class=\"cs-box cs-danger\"><strong>Most important: rule out the acute abdomen</strong><p>Examine the abdomen after hearing the history. Burning pain with Guarding, Rigidity, or Tenderness = possible perforated ulcer (Perforated ulcer) = <b>surgical abdomen</b> that needs immediate referral.</p></div>"
+  },
+  "treatment": {
+   "ar": "<h4>إدارة الطوارئ</h4><ul><li>Primperan أمبول + Zantac أمبول (أهم حاجة): وريد أو عضل أو على 200 مل محلول ملح تنقيط (Visceralgine أمبول ممكن يتضاف).</li><li>في الحالات الشديدة: مثبط مضخة بروتون وريدي: Pantazol فيال على 200 مل محلول ملح.</li><li>ممنوع إعطاء أي مسكن في ألم المعدة أو القرحة لأنها بتزود المشكلة؛ NSAIDs سبب رئيسي للالتهاب والقرحة.</li></ul><h4>التعليمات للمنزل</h4><ul><li>ممنوع: الأكل المسبك والحراق والسمين والشاي والقهوة.</li><li>ممنوع التدخين تماماً.</li><li>ممنوع الأسبرين والمسكنات NSAIDs.</li></ul><h4>لو محتاج مسكن</h4><table><thead><tr><th>الاختيار</th><th>ملاحظة</th></tr></thead><tbody><tr><td>Paracetamol</td><td>آمن على المعدة لكنه مسكن ضعيف</td></tr><tr><td>مسكن انتقائي (Selective COX-2)</td><td>Celecoxib: Celebrex، Arythrex كبسول. Meloxicam: Melocam، Mobic، Anti-Cox II: ضعيف التأثير على المعدة لكن مش معدوم</td></tr><tr><td>مسكن تقليدي (Diclofenac، Ibuprofen)</td><td>يُكتب معه حماية معدة: Omepak أو Zantac</td></tr></tbody></table><h4>علاج الارتجاع (GERD)</h4><ul><li>نفس نصائح القرحة والتهاب المعدة + نوم على مخدتين بدل مخدة واحدة (رفع الرأس).</li><li>الأدوية: Antacids + (H2 blocker أو PPI) + Prokinetic: Motilium (40 قرص)، Motinorm (30 قرص)، Gastromotil (20 قرص): قرص قبل الأكل 3 مرات يومياً.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>للارتجاع الأفضل رفع رأس السرير 15–20 سم أو استخدام وسادة مائلة، لأن زيادة المخدات تثني الرقبة والبطن. ومضادات الحركة (Domperidone) بتتحدد مدتها وبحذر في القلب.</p></div><div class=\"cs-box cs-danger\"><strong>Clopidogrel وOmeprazole</strong><p>لا تكتبهم سوا؛ البديل Pantoprazole لمريض Plavix.</p></div><h4>روشتة عسر الهضم والتهاب المعدة</h4><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Zantac 150 قرص</td><td>صباحاً ومساءً لمدة أسبوعين</td></tr><tr><td>Gaviscon susp (يُكتب أحياناً Geveskon)</td><td>ملعقة كبيرة 3 مرات يومياً بعد الأكل</td></tr><tr><td>التعليمات تتكتب على ظهر الروشتة</td><td></td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>لو ما استجابش</strong><p>تحويل لأخصائي هضمي لتحليل H. pylori أو منظار.</p></div>",
+   "en": "<h4>Emergency management</h4><ul><li>Primperan ampoule + Zantac ampoule (most important): IV or IM or in 200 mL saline as an infusion (Visceralgine ampoule may be added).</li><li>In severe cases: IV proton pump inhibitor: Pantazol vial in 200 mL saline.</li><li>No painkiller is allowed in stomach pain or ulcer because it worsens the problem; NSAIDs are a major cause of gastritis and ulcer.</li></ul><h4>Home instructions</h4><ul><li>Forbidden: fried, spicy, and fatty food, and tea and coffee.</li><li>Smoking is completely forbidden.</li><li>Aspirin and NSAID painkillers are forbidden.</li></ul><h4>If a painkiller is needed</h4><table><thead><tr><th>Choice</th><th>Note</th></tr></thead><tbody><tr><td>Paracetamol</td><td>Safe for the stomach but a weak painkiller</td></tr><tr><td>Selective painkiller (Selective COX-2)</td><td>Celecoxib: Celebrex, Arythrex capsule. Meloxicam: Melocam, Mobic, Anti-Cox II: weak effect on the stomach but not zero</td></tr><tr><td>Conventional painkiller (Diclofenac, Ibuprofen)</td><td>Write stomach protection with it: Omepak or Zantac</td></tr></tbody></table><h4>Reflux (GERD) treatment</h4><ul><li>Same advice as for ulcer and gastritis + sleep on two pillows instead of one (head elevation).</li><li>Medications: Antacids + (H2 blocker or PPI) + Prokinetic: Motilium (40 tablets), Motinorm (30 tablets), Gastromotil (20 tablets): one tablet before meals 3 times daily.</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>For reflux, it is better to raise the head of the bed 15–20 cm or use a wedge pillow, because adding pillows bends the neck and abdomen. Prokinetics (Domperidone) are limited in duration and used with caution in heart disease.</p></div><div class=\"cs-box cs-danger\"><strong>Clopidogrel and Omeprazole</strong><p>Do not prescribe them together; the alternative is Pantoprazole for a Plavix patient.</p></div><h4>Prescription for indigestion and gastritis</h4><table><thead><tr><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Zantac 150 tablet</td><td>Morning and evening for two weeks</td></tr><tr><td>Gaviscon susp (sometimes written Geveskon)</td><td>One tablespoon 3 times daily after meals</td></tr><tr><td>The instructions are written on the back of the prescription</td><td></td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>If there is no response</strong><p>Refer to a gastroenterologist for H. pylori testing or endoscopy.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسمع التاريخ</strong><p>تكرار؟ أدوية؟ أكلة؟ تدخين؟ علاقة بالأكل؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>استبعد البطن الجراحي</strong><p>ألم محرقة/تيبس: بلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اقلب المريض مرتاح</strong><p>وضع نصف جالس. NPO لو الطبيب شك في ثقب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الدواء الوريدي</strong><p>Primperan + Zantac أو Pantazol بأمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>اشرح التعليمات</strong><p>ممنوعات الأكل، التدخين، المسكنات.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Listen to the history</strong><p>Recurrence? Medications? Meal? Smoking? Relation to food?</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Rule out the surgical abdomen</strong><p>Burning pain/rigidity: report immediately.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Make the patient comfortable</strong><p>Semi-sitting position. NPO if the physician suspects a perforation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>IV medication</strong><p>Primperan + Zantac or Pantazol per physician's order.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Explain the instructions</strong><p>Forbidden foods, smoking, painkillers.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>ألم بطن مفاجئ شديد مع تيبس (قرحة مثقوبة)</li><li>قيء دموي أو براز أسود</li><li>ألم صدر أو عرق بارد (احتمال قلب)</li><li>صعوبة بلع أو نزول وزن</li><li>عدم تحسن بعد أسبوعين</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately if:</strong><ul><li>Sudden severe abdominal pain with rigidity (perforated ulcer)</li><li>Bloody vomit or black stool</li><li>Chest pain or cold sweat (possible heart cause)</li><li>Difficulty swallowing or weight loss</li><li>No improvement after two weeks</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<p>ما تاكلش مسبك أو حراق أو دسم، وما تشربش شاي وقهوة كتير. ابعد عن السجاير والمسكنات (Aspirin/NSAIDs). نام وراسك مرفوعة بعد الأكل بساعتين وما تنامش بعد الأكل مباشرة.</p>",
+   "en": "<p>Don't eat fried, spicy, or fatty food, and don't drink too much tea and coffee. Stay away from cigarettes and painkillers (Aspirin/NSAIDs). Sleep with your head raised, wait two hours after eating, and don't lie down right after eating.</p>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "المشاورة بإصبع واحد = علامة Pointing تدل على قرحة",
+   "القرحة تتكرر والألم مرتبط بالأكل",
+   "الارتجاع يزيد بالنوم على الظهر مع كحة",
+   "NSAIDs سبب رئيسي للالتهاب والقرحة",
+   "الباراسيتامول آمن لكنه ضعيف",
+   "لا Plavix مع Omeprazole",
+   "القرحة المثقوبة = بطن جراحي"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الحموضة والترجيع من أشهر الشكاوى في الاستقبال. الألم أو الحرقان أعلى البطن (Epigastric pain / Heartburn) والإحساس بامتلاء، وغالباً ترجيع وأحياناً تكريع. السؤال الأذكى: <b>هي عسر هضم بسيط ولا قرحة ولا ارتجاع؟</b></p>[[slot:dis-262-clues|مفاتيح التفريق بين عسر الهضم والقرحة والارتجاع|/diseases/img/dis-262-clues.svg]]<div class=\"cs-box cs-info\"><strong>مش حالة طوارئ بس بتيجي كتير</strong><p>المطلوب إن العيان يرتاح قبل ما يمشي ويتدى علاج يمشي عليه في البيت.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>اسأل عن إيه (History)</h4><table><thead><tr><th>السؤال</th><th>ليه؟</th></tr></thead><tbody><tr><td>هل جاتلك قبل كده؟ ولا أول مرة؟</td><td>لو بتتكرر: غالباً قرحة أو ارتجاع</td></tr><tr><td>بتاخد علاج لحاجة؟</td><td>ممكن أدوية بتتعب المعدة زي NSAIDs</td></tr><tr><td>أكلت إيه النهارده؟</td><td>أكلة تقيلة أو أكل فاسد أو تعب معدة</td></tr><tr><td>بتشرب سجاير؟</td><td>التدخين من أكتر الحاجات المهيجة للمعدة</td></tr></tbody></table><h4>متى أشك في قرحة (Peptic ulcer)؟</h4><ul><li><b>تكرار:</b> المريض بيعاني غالباً من قرحة أو ارتجاع.</li><li><b>علامة الإشارة (Pointing sign):</b> لو طلبت من المريض يشاور على مكان الألم هيشاور بصباع واحد.</li><li><b>علاقة بالأكل:</b> يزيد مع الأكل في قرحة المعدة وبيرتاح مع الأكل في قرحة الاثنى عشر.</li></ul><h4>متى أشك في ارتجاع المريء (GERD)؟</h4><ul><li>تكرار الشكوى.</li><li>الحموضة بتزيد مع النوم على الظهر + كحة: المريض بيوصف إن حمو بيطلع على صدره، بيهيج زوره ويخليه يكح، وكله بيزيد لما ينام بالليل.</li></ul><div class=\"cs-box cs-danger\"><strong>أهم حاجة: استبعاد البطن الحاد</strong><p>افحص البطن بعد سماع التاريخ. ألم محرقة مع Guarding أو Rigidity أو Tenderness = احتمال قرحة مثقوبة (Perforated ulcer) = <b>بطن جراحي</b> يحتاج تحويل فوري.</p></div>"
-    },
-    "treatment": {
-      "ar": "<h4>إدارة الطوارئ</h4><ul><li>Primperan أمبول + Zantac أمبول (أهم حاجة): وريد أو عضل أو على 200 مل محلول ملح تنقيط (Visceralgine أمبول ممكن يتضاف).</li><li>في الحالات الشديدة: مثبط مضخة بروتون وريدي: Pantazol فيال على 200 مل محلول ملح.</li><li>ممنوع إعطاء أي مسكن في ألم المعدة أو القرحة لأنها بتزود المشكلة؛ NSAIDs سبب رئيسي للالتهاب والقرحة.</li></ul><h4>التعليمات للمنزل</h4><ul><li>ممنوع: الأكل المسبك والحراق والسمين والشاي والقهوة.</li><li>ممنوع التدخين تماماً.</li><li>ممنوع الأسبرين والمسكنات NSAIDs.</li></ul><h4>لو محتاج مسكن</h4><table><thead><tr><th>الاختيار</th><th>ملاحظة</th></tr></thead><tbody><tr><td>Paracetamol</td><td>آمن على المعدة لكنه مسكن ضعيف</td></tr><tr><td>مسكن انتقائي (Selective COX-2)</td><td>Celecoxib: Celebrex، Arythrex كبسول. Meloxicam: Melocam، Mobic، Anti-Cox II: ضعيف التأثير على المعدة لكن مش معدوم</td></tr><tr><td>مسكن تقليدي (Diclofenac، Ibuprofen)</td><td>يُكتب معه حماية معدة: Omepak أو Zantac</td></tr></tbody></table><h4>علاج الارتجاع (GERD)</h4><ul><li>نفس نصائح القرحة والتهاب المعدة + نوم على مخدتين بدل مخدة واحدة (رفع الرأس).</li><li>الأدوية: Antacids + (H2 blocker أو PPI) + Prokinetic: Motilium (40 قرص)، Motinorm (30 قرص)، Gastromotil (20 قرص): قرص قبل الأكل 3 مرات يومياً.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>للارتجاع الأفضل رفع رأس السرير 15–20 سم أو استخدام وسادة مائلة، لأن زيادة المخدات تثني الرقبة والبطن. ومضادات الحركة (Domperidone) بتتحدد مدتها وبحذر في القلب.</p></div><div class=\"cs-box cs-danger\"><strong>Clopidogrel وOmeprazole</strong><p>لا تكتبهم سوا؛ البديل Pantoprazole لمريض Plavix.</p></div><h4>روشتة عسر الهضم والتهاب المعدة</h4><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Zantac 150 قرص</td><td>صباحاً ومساءً لمدة أسبوعين</td></tr><tr><td>Gaviscon susp (يُكتب أحياناً Geveskon)</td><td>ملعقة كبيرة 3 مرات يومياً بعد الأكل</td></tr><tr><td>التعليمات تتكتب على ظهر الروشتة</td><td></td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>لو ما استجابش</strong><p>تحويل لأخصائي هضمي لتحليل H. pylori أو منظار.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسمع التاريخ</strong><p>تكرار؟ أدوية؟ أكلة؟ تدخين؟ علاقة بالأكل؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>استبعد البطن الجراحي</strong><p>ألم محرقة/تيبس: بلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اقلب المريض مرتاح</strong><p>وضع نصف جالس. NPO لو الطبيب شك في ثقب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الدواء الوريدي</strong><p>Primperan + Zantac أو Pantazol بأمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>اشرح التعليمات</strong><p>ممنوعات الأكل، التدخين، المسكنات.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>ألم بطن مفاجئ شديد مع تيبس (قرحة مثقوبة)</li><li>قيء دموي أو براز أسود</li><li>ألم صدر أو عرق بارد (احتمال قلب)</li><li>صعوبة بلع أو نزول وزن</li><li>عدم تحسن بعد أسبوعين</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<p>ما تاكلش مسبك أو حراق أو دسم، وما تشربش شاي وقهوة كتير. ابعد عن السجاير والمسكنات (Aspirin/NSAIDs). نام وراسك مرفوعة بعد الأكل بساعتين وما تنامش بعد الأكل مباشرة.</p>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "المشاورة بإصبع واحد = علامة Pointing تدل على قرحة",
-      "القرحة تتكرر والألم مرتبط بالأكل",
-      "الارتجاع يزيد بالنوم على الظهر مع كحة",
-      "NSAIDs سبب رئيسي للالتهاب والقرحة",
-      "الباراسيتامول آمن لكنه ضعيف",
-      "لا Plavix مع Omeprazole",
-      "القرحة المثقوبة = بطن جراحي"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض يشاور على مكان الألم بإصبع واحد. ده يشير إلى:"
-      },
-      "options": [
-        {
-          "ar": "قرحة"
-        },
-        {
-          "ar": "نزلة معوية"
-        },
-        {
-          "ar": "ارتجاع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "علامة الإشارة (Pointing sign)."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مسكن أنسب لمريض القرحة؟"
-      },
-      "options": [
-        {
-          "ar": "Diclofenac"
-        },
-        {
-          "ar": "Paracetamol"
-        },
-        {
-          "ar": "Aspirin"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الباراسيتامول آمن على المعدة."
-      }
-    },
-    {
-      "q": {
-        "ar": "الارتجاع يزيد مع:"
-      },
-      "options": [
-        {
-          "ar": "المشي"
-        },
-        {
-          "ar": "النوم على الظهر بالليل"
-        },
-        {
-          "ar": "شرب الماء"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يرجع الحمض مع الاستلقاء."
-      }
-    },
-    {
-      "q": {
-        "ar": "ألم محرق مع تيبس البطن:"
-      },
-      "options": [
-        {
-          "ar": "نديه مسكن ونمشيه"
-        },
-        {
-          "ar": "نبلّغ: احتمال ثقب"
-        },
-        {
-          "ar": "نديه أنتاسيد"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "بطن جراحي."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ACG/CAG guideline: Management of dyspepsia (2017)"
-    },
-    {
-      "title": "ACG guideline GERD (2022)"
-    }
+  "en": [
+   "Pointing with one finger = pointing sign suggests an ulcer",
+   "An ulcer recurs and the pain is related to food",
+   "Reflux worsens when lying on the back, with cough",
+   "NSAIDs are a major cause of gastritis and ulcer",
+   "Paracetamol is safe but weak",
+   "No Plavix with Omeprazole",
+   "Perforated ulcer = surgical abdomen"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض يشاور على مكان الألم بإصبع واحد. ده يشير إلى:",
+    "en": "A patient points to the site of pain with one finger. This indicates:"
+   },
+   "options": [
+    {
+     "ar": "قرحة",
+     "en": "Ulcer"
+    },
+    {
+     "ar": "نزلة معوية",
+     "en": "Gastroenteritis"
+    },
+    {
+     "ar": "ارتجاع",
+     "en": "Reflux"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "علامة الإشارة (Pointing sign).",
+    "en": "Pointing sign."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مسكن أنسب لمريض القرحة؟",
+    "en": "Which painkiller is most suitable for an ulcer patient?"
+   },
+   "options": [
+    {
+     "ar": "Diclofenac",
+     "en": "Diclofenac"
+    },
+    {
+     "ar": "Paracetamol",
+     "en": "Paracetamol"
+    },
+    {
+     "ar": "Aspirin",
+     "en": "Aspirin"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الباراسيتامول آمن على المعدة.",
+    "en": "Paracetamol is safe for the stomach."
+   }
+  },
+  {
+   "q": {
+    "ar": "الارتجاع يزيد مع:",
+    "en": "Reflux worsens with:"
+   },
+   "options": [
+    {
+     "ar": "المشي",
+     "en": "Walking"
+    },
+    {
+     "ar": "النوم على الظهر بالليل",
+     "en": "Lying on the back at night"
+    },
+    {
+     "ar": "شرب الماء",
+     "en": "Drinking water"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يرجع الحمض مع الاستلقاء.",
+    "en": "Acid flows back when lying down."
+   }
+  },
+  {
+   "q": {
+    "ar": "ألم محرق مع تيبس البطن:",
+    "en": "Burning pain with a rigid abdomen:"
+   },
+   "options": [
+    {
+     "ar": "نديه مسكن ونمشيه",
+     "en": "Give a painkiller and send him home"
+    },
+    {
+     "ar": "نبلّغ: احتمال ثقب",
+     "en": "Report: possible perforation"
+    },
+    {
+     "ar": "نديه أنتاسيد",
+     "en": "Give an antacid"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "بطن جراحي.",
+    "en": "Surgical abdomen."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ACG/CAG guideline: Management of dyspepsia (2017)"
+  },
+  {
+   "title": "ACG guideline GERD (2022)"
+  }
+ ]
 }

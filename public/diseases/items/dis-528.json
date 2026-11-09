@@ -1,113 +1,142 @@
 {
-  "id": "dis-528",
-  "num": 528,
-  "system": "other",
-  "icon": "🐟",
-  "level": 3,
-  "target": "new:poisoning|السموم",
-  "title": {
-    "ar": "تسمم الفسيخ (البوتيوليزم)",
-    "en": "Botulism"
+ "id": "dis-528",
+ "num": 528,
+ "system": "other",
+ "icon": "🐟",
+ "level": 3,
+ "target": "new:poisoning|السموم",
+ "title": {
+  "ar": "تسمم الفسيخ (البوتيوليزم)",
+  "en": "Botulism"
+ },
+ "teaser": {
+  "ar": "شلل نازل بيبدأ من الجفون بعد فسيخ أو رنجة: المصل المضاد والتنفس.",
+  "en": "Descending paralysis that starts at the eyelids after fesikh or renga: antitoxin and breathing support."
+ },
+ "chips": [
+  {
+   "ar": "فسيخ/رنجة",
+   "en": "Fesikh/Renga"
   },
-  "teaser": {
-    "ar": "شلل نازل بيبدأ من الجفون بعد فسيخ أو رنجة: المصل المضاد والتنفس."
+  {
+   "ar": "شلل نازل",
+   "en": "Descending paralysis"
   },
-  "chips": [
-    {
-      "ar": "فسيخ/رنجة"
-    },
-    {
-      "ar": "شلل نازل"
-    },
-    {
-      "ar": "مصل مضاد"
-    }
+  {
+   "ar": "مصل مضاد",
+   "en": "Antitoxin"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>سببه سمّ بكتيريا بتنمو في سمك مش مطهي كويس ومملّح، أشهرها <b>الفسيخ والرنجة</b>.</p>\n<p>القواعد العامة (ABC، التاريخ، الدعم، المراقبة): <a href=\"/diseases/dis-503\">القواعد العامة في التعامل مع حالات التسمم</a>.</p>",
+   "en": "<p>It is caused by a toxin from bacteria that grow in poorly cooked, salted fish, most famously <b>fesikh and renga</b>.</p>\n<p>General rules (ABC, history, support, monitoring): <a href=\"/diseases/dis-503\">General rules for managing poisoning cases</a>.</p>"
+  },
+  "signs": {
+   "ar": "<table><thead><tr><th>المرحلة</th><th>الأعراض</th></tr></thead><tbody><tr><td>هضمية (تبدأ الأول)</td><td>ترجيع (Nausea & vomiting)، ألم بطن، إسهال</td></tr><tr><td>عصبية — شلل نازل (Descending paralysis)</td><td>تساقط الجفون أول حاجة (Ptosis)، زغللة (Blurred vision)، تقطّع في الكلام (Dysarthria)، فقدان منعكس البلع (Gag reflex)، ضعف عضلات (يدين ثم رجلين)، فشل تنفسي</td></tr></tbody></table><ul><li>مفيش حرارة عادة والوعي سليم.</li><li>عند لمس مؤخرة الحلق بخافض لسان مش هتلاقيه عايز يرجع.</li><li>ارتخاء شديد في الجسم.</li></ul>",
+   "en": "<table><thead><tr><th>Stage</th><th>Symptoms</th></tr></thead><tbody><tr><td>Gastrointestinal (starts first)</td><td>Nausea & vomiting, abdominal pain, diarrhea</td></tr><tr><td>Neurological: descending paralysis</td><td>Drooping eyelids first (Ptosis), blurred vision, slurred speech (Dysarthria), loss of the gag reflex, muscle weakness (arms, then legs), respiratory failure</td></tr></tbody></table><ul><li>Usually no fever, and consciousness is intact.</li><li>When the back of the throat is touched with a tongue depressor, the patient does not try to gag.</li><li>Marked floppiness of the body.</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>التشخيص إكلينيكي (تاريخ أكل + شلل نازل)؛ تحليل التوكسين في العينة.</li><li>قياس السعة الحيوية (FVC) والتنفس بشكل دوري.</li></ul>",
+   "en": "<ul><li>Diagnosis is clinical (food history + descending paralysis); toxin testing on a sample.</li><li>Measure vital capacity (FVC) and monitor breathing regularly.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<p>لازم تتحول للمستشفى أو مركز السموم بعد الرعاية الأولية لأخذ <b>المصل المضاد (Anti-Botulinum Toxin)</b>.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>أعطِ المصل مبكراً بدون انتظار التحاليل، مع دعم تنفسي (تهوية ميكانيكية عند اللزوم). تجنّب الأمينوجليكوزيدات (تضعف العضلات). بلّغ الصحة العامة.</p></div>",
+   "en": "<p>After first aid, the patient must be transferred to a hospital or poison center to receive the <b>antitoxin (Anti-Botulinum Toxin)</b>.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Give the antitoxin early without waiting for test results, together with respiratory support (mechanical ventilation when needed). Avoid aminoglycosides (they worsen muscle weakness). Notify public health authorities.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ul><li>راقب التنفس (SpO2، معدل، سعة حيوية) كل 1–2 ساعة وجهّز تنفس صناعي.</li><li>ضع الرأس مرتفع وتجنب إطعام بالفم مع اختلال البلع.</li><li>عناية بالعين والفم ومنع القرحات والجلطات.</li><li>أبلغ الاشتباه؛ اسأل عن الآخرين الذين أكلوا نفس الأكل.</li></ul>",
+   "en": "<ul><li>Monitor breathing (SpO2, rate, vital capacity) every 1–2 hours and prepare for mechanical ventilation.</li><li>Keep the head elevated and avoid oral feeding when swallowing is impaired.</li><li>Provide eye and mouth care, and prevent pressure ulcers and clots.</li><li>Report the suspected case; ask about others who ate the same food.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>تساقط جفون + زغللة</li><li>ضعف بلع/كلام</li><li>ضيق تنفس</li></ul>",
+   "en": "<ul><li>Drooping eyelids + blurred vision</li><li>Difficulty swallowing/speaking</li><li>Shortness of breath</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>تجنّب الفسيخ والرنجة غير المطهية أو مجهولة المصدر.</li><li>التخزين الصحيح لأطعمة معلّبة.</li></ul>",
+   "en": "<ul><li>Avoid uncooked fesikh and renga or those from unknown sources.</li><li>Store canned foods properly.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "فسيخ/رنجة + شلل نازل = بوتيوليزم.",
+   "تساقط الجفون أول حاجة.",
+   "المصل المضاد والدعم التنفسي.",
+   "التحويل لمركز سموم."
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>سببه سمّ بكتيريا بتنمو في سمك مش مطهي كويس ومملّح، أشهرها <b>الفسيخ والرنجة</b>.</p>\n<p>القواعد العامة (ABC، التاريخ، الدعم، المراقبة): <a href=\"/diseases/dis-503\">القواعد العامة في التعامل مع حالات التسمم</a>.</p>"
-    },
-    "signs": {
-      "ar": "<table><thead><tr><th>المرحلة</th><th>الأعراض</th></tr></thead><tbody><tr><td>هضمية (تبدأ الأول)</td><td>ترجيع (Nausea & vomiting)، ألم بطن، إسهال</td></tr><tr><td>عصبية — شلل نازل (Descending paralysis)</td><td>تساقط الجفون أول حاجة (Ptosis)، زغللة (Blurred vision)، تقطّع في الكلام (Dysarthria)، فقدان منعكس البلع (Gag reflex)، ضعف عضلات (يدين ثم رجلين)، فشل تنفسي</td></tr></tbody></table><ul><li>مفيش حرارة عادة والوعي سليم.</li><li>عند لمس مؤخرة الحلق بخافض لسان مش هتلاقيه عايز يرجع.</li><li>ارتخاء شديد في الجسم.</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>التشخيص إكلينيكي (تاريخ أكل + شلل نازل)؛ تحليل التوكسين في العينة.</li><li>قياس السعة الحيوية (FVC) والتنفس بشكل دوري.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<p>لازم تتحول للمستشفى أو مركز السموم بعد الرعاية الأولية لأخذ <b>المصل المضاد (Anti-Botulinum Toxin)</b>.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>أعطِ المصل مبكراً بدون انتظار التحاليل، مع دعم تنفسي (تهوية ميكانيكية عند اللزوم). تجنّب الأمينوجليكوزيدات (تضعف العضلات). بلّغ الصحة العامة.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ul><li>راقب التنفس (SpO2، معدل، سعة حيوية) كل 1–2 ساعة وجهّز تنفس صناعي.</li><li>ضع الرأس مرتفع وتجنب إطعام بالفم مع اختلال البلع.</li><li>عناية بالعين والفم ومنع القرحات والجلطات.</li><li>أبلغ الاشتباه؛ اسأل عن الآخرين الذين أكلوا نفس الأكل.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>تساقط جفون + زغللة</li><li>ضعف بلع/كلام</li><li>ضيق تنفس</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>تجنّب الفسيخ والرنجة غير المطهية أو مجهولة المصدر.</li><li>التخزين الصحيح لأطعمة معلّبة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "فسيخ/رنجة + شلل نازل = بوتيوليزم.",
-      "تساقط الجفون أول حاجة.",
-      "المصل المضاد والدعم التنفسي.",
-      "التحويل لمركز سموم."
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول علامة عصبية؟"
-      },
-      "options": [
-        {
-          "ar": "صداع"
-        },
-        {
-          "ar": "تساقط الجفون"
-        },
-        {
-          "ar": "حرارة"
-        },
-        {
-          "ar": "تشنج"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "شلل نازل."
-      }
-    },
-    {
-      "q": {
-        "ar": "العلاج الأساسي؟"
-      },
-      "options": [
-        {
-          "ar": "مضاد حيوي"
-        },
-        {
-          "ar": "المصل المضاد + دعم تنفسي"
-        },
-        {
-          "ar": "أتروبين"
-        },
-        {
-          "ar": "فحم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "Anti-botulinum."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CDC: Botulism clinical overview"
-    },
-    {
-      "title": "StatPearls: Botulism"
-    }
+  "en": [
+   "Fesikh/renga + descending paralysis = botulism.",
+   "Drooping eyelids come first.",
+   "Antitoxin and respiratory support.",
+   "Transfer to a poison center."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول علامة عصبية؟",
+    "en": "First neurological sign?"
+   },
+   "options": [
+    {
+     "ar": "صداع",
+     "en": "Headache"
+    },
+    {
+     "ar": "تساقط الجفون",
+     "en": "Drooping eyelids"
+    },
+    {
+     "ar": "حرارة",
+     "en": "Fever"
+    },
+    {
+     "ar": "تشنج",
+     "en": "Seizure"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "شلل نازل.",
+    "en": "Descending paralysis."
+   }
+  },
+  {
+   "q": {
+    "ar": "العلاج الأساسي؟",
+    "en": "Main treatment?"
+   },
+   "options": [
+    {
+     "ar": "مضاد حيوي",
+     "en": "Antibiotic"
+    },
+    {
+     "ar": "المصل المضاد + دعم تنفسي",
+     "en": "Antitoxin + respiratory support"
+    },
+    {
+     "ar": "أتروبين",
+     "en": "Atropine"
+    },
+    {
+     "ar": "فحم",
+     "en": "Charcoal"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "Anti-botulinum.",
+    "en": "Anti-botulinum."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CDC: Botulism clinical overview"
+  },
+  {
+   "title": "StatPearls: Botulism"
+  }
+ ]
 }
