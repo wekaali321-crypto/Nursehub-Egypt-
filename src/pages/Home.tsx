@@ -96,7 +96,6 @@ export default function Home() {
             <p className="mx-auto mt-3 max-w-2xl text-sm text-sky-50 sm:text-lg md:text-xl">{lang === "ar" ? settings.tagline : t("brand.tagline")} — {t("home.heroDesc")}</p>
             <SmartSearch variant="hero" />
             <InstallAppButton />
-            <StudyStrip />
             <ul className="mx-auto mt-6 flex max-w-md flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-bold text-sky-50 sm:text-sm">
               <li className="flex items-center gap-1.5">💙 {t("home.mascotPoint1")}</li>
               <li className="flex items-center gap-1.5">📘 {t("home.mascotPoint2")}</li>
@@ -121,6 +120,7 @@ export default function Home() {
               <p className="mx-auto max-w-md text-sm text-sky-50 sm:text-base">{t("home.mascotDesc")}</p>
             </div>
           </div>
+          <StudyStrip />
         </div>
       </section>
     ),
