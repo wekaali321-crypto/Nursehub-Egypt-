@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import TopicBody from "../components/TopicBody";
 import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
@@ -130,7 +131,7 @@ export default function PharmacyFactsChapterPage() {
               <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-teal-500 to-emerald-500 text-xs font-black text-white shadow">{f.number}</span>
               <span className="h-px flex-1 bg-slate-100 dark:bg-slate-800" />
             </div>
-            <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{bilingual(f.content, f.contentEn, lang).text}</p>
+            <TopicBody body={bilingual(f.content, f.contentEn, lang).text} accent="violet" />
           </div>
         ))}
         {filtered.length === 0 && (

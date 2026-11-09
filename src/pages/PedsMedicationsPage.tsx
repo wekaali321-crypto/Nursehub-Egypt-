@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import TopicBody from "../components/TopicBody";
 import { fetchPedsMedications, PEDS_CATEGORY_ORDER, type PedsMedication } from "../lib/pedsMedApi";
 import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
 import { useI18n, bilingual } from "../lib/i18n";
@@ -44,7 +45,7 @@ function InfoBlock({ title, content }: { title: string; content?: string | null 
   return (
     <div className="mb-4">
       <h3 className="font-bold text-slate-700 dark:text-slate-200 mb-1">{title}</h3>
-      <p className="text-slate-600 dark:text-slate-400 leading-relaxed whitespace-pre-line">{content}</p>
+      <TopicBody body={content} accent="sky" />
     </div>
   );
 }

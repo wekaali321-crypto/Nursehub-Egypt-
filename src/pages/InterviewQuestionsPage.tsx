@@ -2,6 +2,7 @@
 // "أسئلة المقابلات الشخصية" (Interview Questions) — bilingual Q&A hub for nurses preparing
 // for hospital job interviews. Standalone-table feature (see src/lib/interviewQuestionsApi.ts).
 import { useEffect, useMemo, useState } from 'react';
+import TopicBody from "../components/TopicBody";
 import { Link } from 'react-router-dom';
 import {
   fetchInterviewCategories,
@@ -151,7 +152,7 @@ export default function InterviewQuestionsPage() {
                 <span className="mt-1 shrink-0 text-slate-400 transition-transform group-open:rotate-180">▾</span>
               </summary>
               <div className="border-t border-slate-100 px-4 pb-4 pt-3 dark:border-slate-800">
-                <div className="whitespace-pre-line leading-relaxed text-slate-700 dark:text-slate-200">{answer}</div>
+                <TopicBody body={answer} accent="emerald" />
                 {relatedLabel && q.related_path && (
                   <Link
                     to={q.related_path}

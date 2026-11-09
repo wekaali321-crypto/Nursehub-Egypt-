@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import TopicBody from "../components/TopicBody";
 import { useStore } from "../lib/store";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
@@ -199,7 +200,7 @@ function Section({
         <span>{icon}</span>
         <span>{title}</span>
       </h3>
-      <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{children}</p>
+      <TopicBody body={children} accent="teal" />
     </div>
   );
 }

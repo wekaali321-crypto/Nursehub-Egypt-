@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import TopicBody from "../components/TopicBody";
 import { Breadcrumbs, AdSlot } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { fetchAppliedPharmItems, type AppliedPharmItem } from "../lib/appliedPharmApi";
@@ -64,12 +65,10 @@ function ItemCard({ item, lang }: { item: AppliedPharmItem; lang: "ar" | "en" })
       {item.item_type === "qa" ? (
         <div className="space-y-2">
           <p className="font-bold text-slate-800 dark:text-white">؟ {question}</p>
-          <p className="whitespace-pre-line rounded-xl bg-white/60 p-3 text-[15px] leading-8 text-slate-700 dark:bg-slate-900/40 dark:text-slate-300">
-            {answer}
-          </p>
+          <div className="rounded-xl bg-white/60 p-3 dark:bg-slate-900/40"><TopicBody body={answer} accent="violet" /></div>
         </div>
       ) : (
-        <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{content}</p>
+        <TopicBody body={content} accent="violet" />
       )}
     </div>
   );
@@ -331,12 +330,12 @@ export default function AppliedPharmPlanPage() {
               </span>
               <h3 className="font-black text-slate-800 dark:text-white">{l.title}</h3>
             </div>
-            <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{l.content}</p>
+            <TopicBody body={l.content} accent="violet" />
           </div>
         ))}
         {lines.length === 0 && planContent && (
           <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
-            <p className="whitespace-pre-line text-[15px] leading-8 text-slate-700 dark:text-slate-300">{planContent}</p>
+            <TopicBody body={planContent} accent="violet" />
           </div>
         )}
       </div>
