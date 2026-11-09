@@ -230,12 +230,15 @@ function GuideHub({ target }: { target: string }) {
                       <Link key={c.id} to={guidePath(c)} className="group flex items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-2.5 py-2 transition hover:border-teal-400 hover:shadow-sm dark:border-slate-800 dark:bg-slate-900">
                         <span className={`grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-gradient-to-br ${s.grad} text-lg text-white`}>{c.icon || s.icon}</span>
                         <span className="min-w-0 flex-1">
-                          <span className="flex items-center gap-1.5">
-                            <span className="truncate text-sm font-black text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</span>
-                            {c.level === 3 && <span className="shrink-0 rounded-full bg-rose-100 px-1.5 text-[10px] font-black text-rose-700 dark:bg-rose-500/15 dark:text-rose-300">{ar ? 'طارئ' : 'ER'}</span>}
-                            {read.includes(c.id) && <span className="shrink-0 text-[11px] text-emerald-500">✓</span>}
+                          <span className="flex items-center justify-between gap-2">
+                            <span className="flex min-w-0 items-center gap-1.5">
+                              <span className="line-clamp-2 text-sm font-black leading-5 text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</span>
+                              {c.level === 3 && <span className="shrink-0 rounded-full bg-rose-100 px-1.5 text-[10px] font-black text-rose-700 dark:bg-rose-500/15 dark:text-rose-300">{ar ? 'طارئ' : 'ER'}</span>}
+                              {read.includes(c.id) && <span className="shrink-0 text-[11px] text-emerald-500">✓</span>}
+                            </span>
+                            {ar && c.title.en && <span dir="ltr" className="max-w-[36%] shrink-0 truncate text-[11px] text-slate-400">{c.title.en}</span>}
                           </span>
-                          <span className="block overflow-hidden text-ellipsis whitespace-nowrap text-[11px] text-slate-400" dir={ar && c.title.en ? 'ltr' : undefined} style={ar && c.title.en ? { textAlign: 'right' } : undefined}>{ar && c.title.en ? c.title.en : pick(c.teaser, ar)}</span>
+                          <span className="block overflow-hidden text-ellipsis whitespace-nowrap text-[11px] text-slate-400">{pick(c.teaser, ar)}</span>
                         </span>
                         <span className="shrink-0 text-slate-300 group-hover:text-teal-500">{ar ? '‹' : '›'}</span>
                       </Link>
@@ -255,8 +258,10 @@ function GuideHub({ target }: { target: string }) {
                           {read.includes(c.id) && <span className="absolute start-3 top-3 rounded-full bg-emerald-400 px-2 py-0.5 text-[11px] font-black text-emerald-950">✓ {ar ? 'قريتها' : 'Read'}</span>}
                         </div>
                         <div className="p-4">
-                          <h3 className="font-black leading-snug text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</h3>
-                          {c.title.en && ar && <div className="text-xs text-slate-400" dir="ltr">{c.title.en}</div>}
+                          <div className="flex items-baseline justify-between gap-2">
+                            <h3 className="font-black leading-snug text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</h3>
+                            {c.title.en && ar && <span className="max-w-[45%] shrink-0 truncate text-xs text-slate-400" dir="ltr">{c.title.en}</span>}
+                          </div>
                           <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{pick(c.teaser, ar)}</p>
                           <div className="mt-3"><span className={`rounded-full px-2.5 py-0.5 text-[11px] font-black ${lv.cls}`}>{ar ? lv.ar : lv.en}</span></div>
                         </div>
@@ -557,7 +562,7 @@ export function DiseasePage() {
           <span className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-xs font-black backdrop-blur">{guideTarget === 'diseases' ? `${s.icon} ${ar ? s.ar : s.en}` : `${sInfo.icon} ${sInfo.name}`}</span>
           <div className="mt-3 text-5xl drop-shadow">{d.icon || s.icon}</div>
           <h1 className="mt-2 text-3xl font-black leading-tight sm:text-4xl">{pick(d.title, ar)}</h1>
-          {d.title.en && ar && <div className="mt-1 text-sm text-white/80" dir="ltr">{d.title.en}</div>}
+          {d.title.en && ar && <div className="mt-1 text-sm font-bold text-white/80" dir="ltr" style={{ textAlign: 'left' }}>{d.title.en}</div>}
           <p className="mt-3 max-w-2xl text-[15px] leading-7 text-white/95">{pick(d.teaser, ar)}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             {(d.chips ?? []).map((c, i) => <span key={i} className="rounded-full bg-white/20 px-3 py-1 text-xs font-bold backdrop-blur">{pick(c, ar)}</span>)}
@@ -588,6 +593,11 @@ export function DiseasePage() {
         </div>
       </nav>
 
+      {!ar && !d.sections.overview?.en && (
+        <div className="mt-4 rounded-2xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm font-bold text-amber-800 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
+          🌐 The English version of this guide is being prepared. The text below is in Arabic for now.
+        </div>
+      )}
       <div className="mt-4 space-y-5">
         {secs.map((x, n) => {
           const tone = x.key === 'redflags' ? 'bg-rose-50/70 dark:bg-rose-950/30' : x.key === 'nursing' ? 'bg-emerald-50/60 dark:bg-emerald-950/20' : 'bg-white dark:bg-slate-900';

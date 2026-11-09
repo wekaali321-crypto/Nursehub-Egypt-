@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import HubGrid from "../components/HubGrid";
 import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
@@ -68,25 +69,11 @@ export function TerminologyHome() {
           <p className="mt-2">{isEn ? "Content coming soon." : "المحتوى قيد الإضافة قريبًا."}</p>
         </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {list.map((tp) => (
-            <Link
-              key={tp.id}
-              to={`/terminology/${tp.id}`}
-              className={`${card} group p-5 transition hover:-translate-y-0.5 hover:shadow-lg`}
-            >
-              <div className="text-3xl">{tp.icon || "🔤"}</div>
-              <h3 className="mt-2 font-black text-slate-800 group-hover:text-violet-600 dark:text-white">
-                {isEn && tp.title_en ? tp.title_en : tp.title_ar}
-              </h3>
-              {tp.category && <span className="mt-1 inline-block rounded-full bg-violet-50 px-2 py-0.5 text-[11px] font-bold text-violet-600 dark:bg-violet-500/10">{tp.category}</span>}
-              {(isEn ? tp.summary_en : tp.summary_ar) && (
-                <p className="mt-2 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{isEn ? tp.summary_en : tp.summary_ar}</p>
-              )}
-              <div className="mt-3 text-xs font-bold text-violet-600">{tp.sections.length} {isEn ? "sections" : "أقسام"} ←</div>
-            </Link>
-          ))}
-        </div>
+        <HubGrid
+          isEn={isEn}
+          accent="violet"
+          items={list.map((tp) => ({ id: tp.id, to: `/terminology/${tp.id}`, icon: tp.icon || "🔤", title: tp.title_ar, titleEn: tp.title_en, category: tp.category, summary: isEn ? tp.summary_en : tp.summary_ar, count: tp.sections.length }))}
+        />
       )}
     </div>
   );
