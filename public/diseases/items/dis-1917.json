@@ -1,231 +1,291 @@
 {
-  "id": "dis-1917",
-  "num": "1917",
-  "system": "infect",
-  "icon": "😷",
-  "level": 2,
-  "target": "pediatrics",
-  "title": {
-    "ar": "الاحتياطات الرذاذية والهوائية للعزل",
-    "en": "Droplet vs Airborne Precautions"
+ "id": "dis-1917",
+ "num": "1917",
+ "system": "infect",
+ "icon": "😷",
+ "level": 2,
+ "target": "pediatrics",
+ "title": {
+  "ar": "الاحتياطات الرذاذية والهوائية للعزل",
+  "en": "Droplet vs Airborne Precautions"
+ },
+ "teaser": {
+  "ar": "PIMP مقابل MTV: ما يُستخدم لكل نوع (كمامة جراحية أم N95)، النقل، وسؤال السحايا.",
+  "en": "PIMP versus MTV: what is used for each type (surgical mask or N95), transport, and the meningitis question."
+ },
+ "chips": [
+  {
+   "ar": "PIMP",
+   "en": "PIMP"
   },
-  "teaser": {
-    "ar": "PIMP مقابل MTV: ما يُستخدم لكل نوع (كمامة جراحية أم N95)، النقل، وسؤال السحايا."
+  {
+   "ar": "MTV",
+   "en": "MTV"
   },
-  "chips": [
-    {
-      "ar": "PIMP"
-    },
-    {
-      "ar": "MTV"
-    },
-    {
-      "ar": "N95"
-    }
+  {
+   "ar": "N95",
+   "en": "N95"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>يُفرّق بين <b>الاحتياطات الرذاذية (Droplet)</b> و<b>الاحتياطات الهوائية (Airborne)</b>. حيلتنا: رذاذية = P-I-M-P (Pertussis، Influenza، Meningitis، Pneumonia)؛ هوائية = M-T-V (Measles، TB، Varicella).</p>[[slot:dis-1917-compare|مقارنة الاحتياطات — رسم من إعداد الموقع|/diseases/img/dis-1917-compare.svg]]",
+   "en": "<p>Distinguish between <b>Droplet precautions</b> and <b>Airborne precautions</b>. Our mnemonic: droplet = P-I-M-P (Pertussis, Influenza, Meningitis, Pneumonia); airborne = M-T-V (Measles, TB, Varicella).</p>[[slot:dis-1917-compare|Comparison of precautions — illustration prepared by the site|/diseases/img/dis-1917-compare.svg]]"
+  },
+  "causes": {
+   "ar": "<p>انتقال العدوى بالرذاذ (مسافة قصيرة) أو بالهواء (جزيئات صغيرة معلقة).</p>",
+   "en": "<p>Infection spreads by droplets (short distance) or by air (small suspended particles).</p>"
+  },
+  "signs": {
+   "ar": "<p>انظر أدلة الأمراض.</p>",
+   "en": "<p>See the disease guides.</p>"
+  },
+  "tests": {
+   "ar": "<p>—</p>",
+   "en": "<p>—</p>"
+  },
+  "treatment": {
+   "ar": "<p>العزل جزء من العلاج.</p>",
+   "en": "<p>Isolation is part of treatment.</p>"
+  },
+  "nursing": {
+   "ar": "<h4>Droplet</h4><ul><li>كمامة جراحية ونظارة واقية، غرفة فردية</li><li>علّم غير المرخصين ارتداء الكمامة</li></ul><h4>Airborne</h4><ul><li>N95 للطاقم، غرفة ضغط سالب، الباب مغلق</li><li>عند النقل: المريض يلبس كمامة جراحية</li></ul><div class=\"cs-box cs-tip\"><strong>سؤال متكرر: التهاب السحايا بالمكورات السحائية</strong><p>الإجابات: كمامة جراحية لغير المرخصين، حواجز سرير مبطنة، إضاءة وضوضاء خفيفة. ليست: غرفة ضغط سالب ولا N95.</p></div>\n<h4>جدول المراجعة</h4><table><thead><tr><th></th><th>القطيرات</th><th>الهوائي</th></tr></thead><tbody><tr><td>أمراض</td><td>السعال الديكي، الإنفلونزا، التهاب السحايا، الالتهاب الرئوي</td><td>الحصبة، السل، الجديري/الحزام الناري</td></tr><tr><td>الوقاية</td><td>كمامة جراحية + نظارات، غرفة منفردة</td><td>N95 للطاقم، غرفة ضغط سالب، باب مغلق، المريض بكمامة جراحية عند النقل</td></tr></tbody></table>[[slot:dis-1917-p428|العزل: القطيرات والهوائي — رسم من إعداد الموقع|/diseases/img/dis-1917-p428.svg]]<h4>أكثر سؤالين خطأً</h4><ol><li><strong>اختبار توبركولين:</strong> بعد 48 ساعة، موضع الحقن أحمر مرتفع بتصلب 19 مم. الصحيح: توقع أوامر أشعة صدر أو عينات بلغم، والمريض مصاب بعدوى سلية. <em>ليس</em> عزلاً بالقطيرات، وليس بالضرورة سل نشطًا، وسحب QuantiFERON ليس هو المطلوب.</li><li><strong>التهاب السحايا البكتيري:</strong> علّم الأفراد غير المرخصين ارتداء كمامة جراحية، طبّق حواجز سرير مبطنة (لخطر التشنج)، وحافظ على الإضاءة والضجيج منخفضين. <em>لا</em> ضغط سالب ولا N95.</li></ol>",
+   "en": "<h4>Droplet</h4><ul><li>Surgical mask and protective eyewear, private room</li><li>Teach unlicensed staff to wear the mask</li></ul><h4>Airborne</h4><ul><li>N95 for staff, negative pressure room, door closed</li><li>During transport: the patient wears a surgical mask</li></ul><div class=\"cs-box cs-tip\"><strong>Frequent question: meningococcal meningitis</strong><p>Answers: surgical mask for unlicensed staff, padded bed rails, low light and noise. Not: negative pressure room and not N95.</p></div>\n<h4>Review table</h4><table><thead><tr><th></th><th>Droplet</th><th>Airborne</th></tr></thead><tbody><tr><td>Diseases</td><td>Pertussis, influenza, meningitis, pneumonia</td><td>Measles, TB, varicella/shingles</td></tr><tr><td>Prevention</td><td>Surgical mask + goggles, private room</td><td>N95 for staff, negative pressure room, door closed, patient wears a surgical mask during transport</td></tr></tbody></table>[[slot:dis-1917-p428|Isolation: droplet and airborne — illustration prepared by the site|/diseases/img/dis-1917-p428.svg]]<h4>The two most commonly missed questions</h4><ol><li><strong>Tuberculin test:</strong> after 48 hours, the injection site is red and raised with 19 mm induration. Correct: expect orders for a chest X-ray or sputum samples, and the patient has a TB infection. It is <em>not</em> droplet isolation, not necessarily active TB, and drawing QuantiFERON is not what is required.</li><li><strong>Bacterial meningitis:</strong> teach unlicensed individuals to wear a surgical mask, apply padded bed rails (for seizure risk), and keep light and noise low. <em>No</em> negative pressure and no N95.</li></ol>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ</strong><ul><li>طفل مشتبه بحصبة/سل/جدري دون عزل</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report</strong><ul><li>A child suspected of measles/TB/chickenpox without isolation</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>شرح الكمامة والعزل للأهل</li><li>نظافة الأيدي</li></ul>",
+   "en": "<ul><li>Explain the mask and isolation to the family</li><li>Hand hygiene</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "رذاذية: Pertussis, Influenza, Meningitis, Pneumonia",
+   "هوائية: Measles, TB, Varicella",
+   "سحايا بكتيري: كمامة جراحية ولا ضغط سالب",
+   "نقل مريض هوائي: كمامة جراحية للمريض"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>يُفرّق بين <b>الاحتياطات الرذاذية (Droplet)</b> و<b>الاحتياطات الهوائية (Airborne)</b>. حيلتنا: رذاذية = P-I-M-P (Pertussis، Influenza، Meningitis، Pneumonia)؛ هوائية = M-T-V (Measles، TB، Varicella).</p>[[slot:dis-1917-compare|مقارنة الاحتياطات — رسم من إعداد الموقع|/diseases/img/dis-1917-compare.svg]]"
-    },
-    "causes": {
-      "ar": "<p>انتقال العدوى بالرذاذ (مسافة قصيرة) أو بالهواء (جزيئات صغيرة معلقة).</p>"
-    },
-    "signs": {
-      "ar": "<p>انظر أدلة الأمراض.</p>"
-    },
-    "tests": {
-      "ar": "<p>—</p>"
-    },
-    "treatment": {
-      "ar": "<p>العزل جزء من العلاج.</p>"
-    },
-    "nursing": {
-      "ar": "<h4>Droplet</h4><ul><li>كمامة جراحية ونظارة واقية، غرفة فردية</li><li>علّم غير المرخصين ارتداء الكمامة</li></ul><h4>Airborne</h4><ul><li>N95 للطاقم، غرفة ضغط سالب، الباب مغلق</li><li>عند النقل: المريض يلبس كمامة جراحية</li></ul><div class=\"cs-box cs-tip\"><strong>سؤال متكرر: التهاب السحايا بالمكورات السحائية</strong><p>الإجابات: كمامة جراحية لغير المرخصين، حواجز سرير مبطنة، إضاءة وضوضاء خفيفة. ليست: غرفة ضغط سالب ولا N95.</p></div>\n<h4>جدول المراجعة</h4><table><thead><tr><th></th><th>القطيرات</th><th>الهوائي</th></tr></thead><tbody><tr><td>أمراض</td><td>السعال الديكي، الإنفلونزا، التهاب السحايا، الالتهاب الرئوي</td><td>الحصبة، السل، الجديري/الحزام الناري</td></tr><tr><td>الوقاية</td><td>كمامة جراحية + نظارات، غرفة منفردة</td><td>N95 للطاقم، غرفة ضغط سالب، باب مغلق، المريض بكمامة جراحية عند النقل</td></tr></tbody></table>[[slot:dis-1917-p428|العزل: القطيرات والهوائي — رسم من إعداد الموقع|/diseases/img/dis-1917-p428.svg]]<h4>أكثر سؤالين خطأً</h4><ol><li><strong>اختبار توبركولين:</strong> بعد 48 ساعة، موضع الحقن أحمر مرتفع بتصلب 19 مم. الصحيح: توقع أوامر أشعة صدر أو عينات بلغم، والمريض مصاب بعدوى سلية. <em>ليس</em> عزلاً بالقطيرات، وليس بالضرورة سل نشطًا، وسحب QuantiFERON ليس هو المطلوب.</li><li><strong>التهاب السحايا البكتيري:</strong> علّم الأفراد غير المرخصين ارتداء كمامة جراحية، طبّق حواجز سرير مبطنة (لخطر التشنج)، وحافظ على الإضاءة والضجيج منخفضين. <em>لا</em> ضغط سالب ولا N95.</li></ol>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ</strong><ul><li>طفل مشتبه بحصبة/سل/جدري دون عزل</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>شرح الكمامة والعزل للأهل</li><li>نظافة الأيدي</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "رذاذية: Pertussis, Influenza, Meningitis, Pneumonia",
-      "هوائية: Measles, TB, Varicella",
-      "سحايا بكتيري: كمامة جراحية ولا ضغط سالب",
-      "نقل مريض هوائي: كمامة جراحية للمريض"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي مرض يتطلب احتياطات هوائية؟"
-      },
-      "options": [
-        {
-          "ar": "الحصبة"
-        },
-        {
-          "ar": "الإنفلونزا"
-        },
-        {
-          "ar": "السحايا"
-        },
-        {
-          "ar": "السعال الديكي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "M في MTV."
-      }
-    },
-    {
-      "q": {
-        "ar": "التهاب سحايا بكتيري: أي إجراء صحيح؟"
-      },
-      "options": [
-        {
-          "ar": "كمامة جراحية لغير المرخصين"
-        },
-        {
-          "ar": "غرفة ضغط سالب"
-        },
-        {
-          "ar": "N95"
-        },
-        {
-          "ar": "باب مغلق دائمًا"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "رذاذية."
-      }
-    },
-    {
-      "q": {
-        "ar": "نقل مريض سل خارج الغرفة؟"
-      },
-      "options": [
-        {
-          "ar": "مريض بكمامة جراحية"
-        },
-        {
-          "ar": "طاقم بدون"
-        },
-        {
-          "ar": "بلا شيء"
-        },
-        {
-          "ar": "N95 للمريض"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يقلل الانتشار."
-      }
-    },
-    {
-      "q": {
-        "ar": "غرفة فردية وكمامة جراحية وواقٍ للعين تناسب؟"
-      },
-      "options": [
-        {
-          "ar": "احتياطات رذاذية"
-        },
-        {
-          "ar": "هوائية"
-        },
-        {
-          "ar": "تلامس"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تعريف."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مرض يتطلب كمامة جراحية وغرفة فردية؟"
-      },
-      "options": [
-        {
-          "ar": "السعال الديكي"
-        },
-        {
-          "ar": "الحصبة"
-        },
-        {
-          "ar": "السل"
-        },
-        {
-          "ar": "الجدري المائي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "رذاذية."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض لديه التهاب سحايا بكتيري. أي إجراءات تنفذها الممرضة؟ (اختر ما ينطبق)"
-      },
-      "options": [
-        {
-          "ar": "كمامة جراحية للطاقم وحواجز مبطنة وإضاءة وضجيج منخفضين"
-        },
-        {
-          "ar": "غرفة ضغط سالب وN95"
-        },
-        {
-          "ar": "لا احتياطات"
-        },
-        {
-          "ar": "عزل تلامس فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السحايا من احتياطات القطيرات، مع وقاية من التشنج وتقليل المحفزات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مرض يحتاج غرفة ضغط سالب وقناع N95؟"
-      },
-      "options": [
-        {
-          "ar": "السل"
-        },
-        {
-          "ar": "الإنفلونزا"
-        },
-        {
-          "ar": "التهاب السحايا"
-        },
-        {
-          "ar": "السعال الديكي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السل والحصبة والجديري تنتقل بالهواء."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "StatPearls — ملخص الموضوع"
-    },
-    {
-      "title": "Nelson Textbook of Pediatrics — ملخصات عامة"
-    }
+  "en": [
+   "Droplet: Pertussis, Influenza, Meningitis, Pneumonia",
+   "Airborne: Measles, TB, Varicella",
+   "Bacterial meningitis: surgical mask, no negative pressure",
+   "Transporting an airborne patient: surgical mask on the patient"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي مرض يتطلب احتياطات هوائية؟",
+    "en": "Which disease requires airborne precautions?"
+   },
+   "options": [
+    {
+     "ar": "الحصبة",
+     "en": "Measles"
+    },
+    {
+     "ar": "الإنفلونزا",
+     "en": "Influenza"
+    },
+    {
+     "ar": "السحايا",
+     "en": "Meningitis"
+    },
+    {
+     "ar": "السعال الديكي",
+     "en": "Pertussis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "M في MTV.",
+    "en": "The M in MTV."
+   }
+  },
+  {
+   "q": {
+    "ar": "التهاب سحايا بكتيري: أي إجراء صحيح؟",
+    "en": "Bacterial meningitis: which action is correct?"
+   },
+   "options": [
+    {
+     "ar": "كمامة جراحية لغير المرخصين",
+     "en": "Surgical mask for unlicensed staff"
+    },
+    {
+     "ar": "غرفة ضغط سالب",
+     "en": "Negative pressure room"
+    },
+    {
+     "ar": "N95",
+     "en": "N95"
+    },
+    {
+     "ar": "باب مغلق دائمًا",
+     "en": "Door always closed"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "رذاذية.",
+    "en": "Droplet."
+   }
+  },
+  {
+   "q": {
+    "ar": "نقل مريض سل خارج الغرفة؟",
+    "en": "Transporting a TB patient outside the room?"
+   },
+   "options": [
+    {
+     "ar": "مريض بكمامة جراحية",
+     "en": "Patient wears a surgical mask"
+    },
+    {
+     "ar": "طاقم بدون",
+     "en": "Staff without one"
+    },
+    {
+     "ar": "بلا شيء",
+     "en": "Nothing"
+    },
+    {
+     "ar": "N95 للمريض",
+     "en": "N95 for the patient"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يقلل الانتشار.",
+    "en": "It reduces spread."
+   }
+  },
+  {
+   "q": {
+    "ar": "غرفة فردية وكمامة جراحية وواقٍ للعين تناسب؟",
+    "en": "A private room, surgical mask, and eye protection suit:"
+   },
+   "options": [
+    {
+     "ar": "احتياطات رذاذية",
+     "en": "Droplet precautions"
+    },
+    {
+     "ar": "هوائية",
+     "en": "Airborne"
+    },
+    {
+     "ar": "تلامس",
+     "en": "Contact"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تعريف.",
+    "en": "Definition."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مرض يتطلب كمامة جراحية وغرفة فردية؟",
+    "en": "Which disease requires a surgical mask and a private room?"
+   },
+   "options": [
+    {
+     "ar": "السعال الديكي",
+     "en": "Pertussis"
+    },
+    {
+     "ar": "الحصبة",
+     "en": "Measles"
+    },
+    {
+     "ar": "السل",
+     "en": "TB"
+    },
+    {
+     "ar": "الجدري المائي",
+     "en": "Chickenpox"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "رذاذية.",
+    "en": "Droplet."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض لديه التهاب سحايا بكتيري. أي إجراءات تنفذها الممرضة؟ (اختر ما ينطبق)",
+    "en": "A patient has bacterial meningitis. Which actions does the nurse perform? (select all that apply)"
+   },
+   "options": [
+    {
+     "ar": "كمامة جراحية للطاقم وحواجز مبطنة وإضاءة وضجيج منخفضين",
+     "en": "Surgical mask for staff, padded rails, low light and noise"
+    },
+    {
+     "ar": "غرفة ضغط سالب وN95",
+     "en": "Negative pressure room and N95"
+    },
+    {
+     "ar": "لا احتياطات",
+     "en": "No precautions"
+    },
+    {
+     "ar": "عزل تلامس فقط",
+     "en": "Contact isolation only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السحايا من احتياطات القطيرات، مع وقاية من التشنج وتقليل المحفزات.",
+    "en": "Meningitis requires droplet precautions, with seizure protection and reduced stimuli."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مرض يحتاج غرفة ضغط سالب وقناع N95؟",
+    "en": "Which disease needs a negative pressure room and an N95 respirator?"
+   },
+   "options": [
+    {
+     "ar": "السل",
+     "en": "TB"
+    },
+    {
+     "ar": "الإنفلونزا",
+     "en": "Influenza"
+    },
+    {
+     "ar": "التهاب السحايا",
+     "en": "Meningitis"
+    },
+    {
+     "ar": "السعال الديكي",
+     "en": "Pertussis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السل والحصبة والجديري تنتقل بالهواء.",
+    "en": "TB, measles, and varicella are airborne."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls — ملخص الموضوع"
+  },
+  {
+   "title": "Nelson Textbook of Pediatrics — ملخصات عامة"
+  }
+ ]
 }

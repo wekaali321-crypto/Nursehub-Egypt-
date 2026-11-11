@@ -1,208 +1,262 @@
 {
-  "id": "dis-1913",
-  "num": "1913",
-  "system": "peds",
-  "icon": "🦷",
-  "level": 2,
-  "target": "pediatrics",
-  "title": {
-    "ar": "قلع الأسنان العرضي (Dental Avulsion) والتهاب الفم التقرحي (Mucositis)",
-    "en": "Dental Avulsion & Oral Mucositis"
+ "id": "dis-1913",
+ "num": "1913",
+ "system": "peds",
+ "icon": "🦷",
+ "level": 2,
+ "target": "pediatrics",
+ "title": {
+  "ar": "قلع الأسنان العرضي (Dental Avulsion) والتهاب الفم التقرحي (Mucositis)",
+  "en": "Dental Avulsion & Oral Mucositis"
+ },
+ "teaser": {
+  "ar": "إسعاف السن المقلوع (اشطف وأعد الغرس خلال 15 دقيقة) والعناية بتقرحات الفم أثناء علاج السرطان.",
+  "en": "First aid for a knocked-out tooth (rinse and reinsert within 15 minutes) and care of mouth sores during cancer treatment."
+ },
+ "chips": [
+  {
+   "ar": "Avulsion",
+   "en": "Avulsion"
   },
-  "teaser": {
-    "ar": "إسعاف السن المقلوع (اشطف وأعد الغرس خلال 15 دقيقة) والعناية بتقرحات الفم أثناء علاج السرطان."
+  {
+   "ar": "Rinse & Reinsert",
+   "en": "Rinse & Reinsert"
   },
-  "chips": [
-    {
-      "ar": "Avulsion"
-    },
-    {
-      "ar": "Rinse & Reinsert"
-    },
-    {
-      "ar": "Mucositis"
-    }
+  {
+   "ar": "Mucositis",
+   "en": "Mucositis"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p><b>قلع السن (Tooth avulsion)</b> طوارئ أسنان: يسقط السن أو ينفصل عن اللثة، وقد يموت السن إن لم يُعد غرسه لاستعادة التروية. <b>التهاب الفم والتقرحات (Oral mucositis)</b>: تقرحات مفتوحة داخل الفم، مضاعفة شائعة جدًا لعلاج السرطان.</p>[[slot:dis-1913-avulsion|إسعاف السن المقلوع — رسم من إعداد الموقع|/diseases/img/dis-1913-avulsion.svg]]",
+   "en": "<p><b>Tooth avulsion</b> is a dental emergency: the tooth falls out or separates from the gum, and the tooth may die if it is not reinserted to restore blood supply. <b>Oral mucositis</b>: open sores inside the mouth, a very common complication of cancer treatment.</p>[[slot:dis-1913-avulsion|First aid for an avulsed tooth — illustration prepared by the site|/diseases/img/dis-1913-avulsion.svg]]"
+  },
+  "causes": {
+   "ar": "<p>صدمة بالفم. Mucositis: الكيماوي/الإشعاع.</p>",
+   "en": "<p>Trauma to the mouth. Mucositis: chemotherapy/radiation.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li>سن منفصل ونزف من اللثة</li><li>Mucositis: تقرحات وألم داخل الفم</li></ul>",
+   "en": "<ul><li>Detached tooth and bleeding from the gum</li><li>Mucositis: sores and pain inside the mouth</li></ul>"
+  },
+  "tests": {
+   "ar": "<p>تقييم الفم والأسنان.</p>",
+   "en": "<p>Assess the mouth and teeth.</p>"
+  },
+  "treatment": {
+   "ar": "<h4>الأولوية: Rinse then Reinsert</h4><ul><li>اشطف السن وأعد غرسه فورًا في تجويف اللثة (خلال 15 دقيقة) وثبّته</li><li>إن لم يمكن: احفظه رطبًا بغمره في حليب بارد أو محلول ملحي معقم أو لعاب كآخر خيار</li></ul><div class=\"cs-box cs-danger\"><strong>ممنوع</strong><ul><li>لا تفرك السن (يتلف الجذر)</li><li>لا تلفّه بشاش معقم (يجففه)</li></ul></div>",
+   "en": "<h4>Priority: Rinse then Reinsert</h4><ul><li>Rinse the tooth and reinsert it immediately into the gum socket (within 15 minutes) and stabilize it</li><li>If not possible: keep it moist by submerging it in cold milk, sterile saline or saliva as a last option</li></ul><div class=\"cs-box cs-danger\"><strong>Do not</strong><ul><li>Do not scrub the tooth (it damages the root)</li><li>Do not wrap it in sterile gauze (it dries it out)</li></ul></div>"
+  },
+  "nursing": {
+   "ar": "<h4>Mucositis</h4><ul><li>قدّم السوائل بقشة</li><li>فرشاة أسنان ناعمة (يُتخلص منها بعد الاستعمال)</li><li>غرغرة بمحلول ملحي دافئ</li><li>أسترد السن وإن كان متسخًا اشطفه بالماء/الملح وأدخله ليمسكه الطفل</li></ul>",
+   "en": "<h4>Mucositis</h4><ul><li>Offer fluids with a straw</li><li>Soft toothbrush (discard after use)</li><li>Gargle with warm saline</li><li>Retrieve the tooth, and if it is dirty rinse it with water/saline and put it in for the child to hold in place</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ</strong><ul><li>سن مقلوع: خلال 15 دقيقة للطبيب</li><li>mucositis يمنع الأكل والشرب</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report</strong><ul><li>Avulsed tooth: to the physician within 15 minutes</li><li>Mucositis that prevents eating and drinking</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>إسعاف السن: Rinse + Reinsert</li><li>الغرغرة بالملح الدافئ</li><li>فرشاة ناعمة</li></ul>",
+   "en": "<ul><li>Tooth first aid: Rinse + Reinsert</li><li>Warm salt gargles</li><li>Soft toothbrush</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "السن المقلوع: اشطف ثم أعد الغرس فورًا (15 دقيقة)",
+   "لا تفرك ولا تلفّ بشاش",
+   "بديل: حليب بارد/ملح/لعاب",
+   "Mucositis: قشة، فرشاة ناعمة، غرغرة ملح دافئ"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p><b>قلع السن (Tooth avulsion)</b> طوارئ أسنان: يسقط السن أو ينفصل عن اللثة، وقد يموت السن إن لم يُعد غرسه لاستعادة التروية. <b>التهاب الفم والتقرحات (Oral mucositis)</b>: تقرحات مفتوحة داخل الفم، مضاعفة شائعة جدًا لعلاج السرطان.</p>[[slot:dis-1913-avulsion|إسعاف السن المقلوع — رسم من إعداد الموقع|/diseases/img/dis-1913-avulsion.svg]]"
-    },
-    "causes": {
-      "ar": "<p>صدمة بالفم. Mucositis: الكيماوي/الإشعاع.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li>سن منفصل ونزف من اللثة</li><li>Mucositis: تقرحات وألم داخل الفم</li></ul>"
-    },
-    "tests": {
-      "ar": "<p>تقييم الفم والأسنان.</p>"
-    },
-    "treatment": {
-      "ar": "<h4>الأولوية: Rinse then Reinsert</h4><ul><li>اشطف السن وأعد غرسه فورًا في تجويف اللثة (خلال 15 دقيقة) وثبّته</li><li>إن لم يمكن: احفظه رطبًا بغمره في حليب بارد أو محلول ملحي معقم أو لعاب كآخر خيار</li></ul><div class=\"cs-box cs-danger\"><strong>ممنوع</strong><ul><li>لا تفرك السن (يتلف الجذر)</li><li>لا تلفّه بشاش معقم (يجففه)</li></ul></div>"
-    },
-    "nursing": {
-      "ar": "<h4>Mucositis</h4><ul><li>قدّم السوائل بقشة</li><li>فرشاة أسنان ناعمة (يُتخلص منها بعد الاستعمال)</li><li>غرغرة بمحلول ملحي دافئ</li><li>أسترد السن وإن كان متسخًا اشطفه بالماء/الملح وأدخله ليمسكه الطفل</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ</strong><ul><li>سن مقلوع: خلال 15 دقيقة للطبيب</li><li>mucositis يمنع الأكل والشرب</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>إسعاف السن: Rinse + Reinsert</li><li>الغرغرة بالملح الدافئ</li><li>فرشاة ناعمة</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "السن المقلوع: اشطف ثم أعد الغرس فورًا (15 دقيقة)",
-      "لا تفرك ولا تلفّ بشاش",
-      "بديل: حليب بارد/ملح/لعاب",
-      "Mucositis: قشة، فرشاة ناعمة، غرغرة ملح دافئ"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أولوية السن المقلوع؟"
-      },
-      "options": [
-        {
-          "ar": "اشطفه وأعد غرسه وثبّته"
-        },
-        {
-          "ar": "لفّه بشاش"
-        },
-        {
-          "ar": "افركه"
-        },
-        {
-          "ar": "ارمِه"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لاستعادة التروية."
-      }
-    },
-    {
-      "q": {
-        "ar": "وسط حفظ السن إن لم يُغرس؟"
-      },
-      "options": [
-        {
-          "ar": "حليب بارد"
-        },
-        {
-          "ar": "ماء ساخن"
-        },
-        {
-          "ar": "كحول"
-        },
-        {
-          "ar": "بدون"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يحافظ على الخلايا."
-      }
-    },
-    {
-      "q": {
-        "ar": "تدبير mucositis؟"
-      },
-      "options": [
-        {
-          "ar": "غرغرة ملح دافئ وفرشاة ناعمة"
-        },
-        {
-          "ar": "شطف بالكحول"
-        },
-        {
-          "ar": "فرشاة خشنة"
-        },
-        {
-          "ar": "لا فم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يخفف الالتهاب."
-      }
-    },
-    {
-      "q": {
-        "ar": "خطأ شائع؟"
-      },
-      "options": [
-        {
-          "ar": "لف السن بشاش معقم"
-        },
-        {
-          "ar": "حفظه بحليب"
-        },
-        {
-          "ar": "غرسه خلال 15 د"
-        },
-        {
-          "ar": "شطفه"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يجففه."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي إجراءات لسن دائم مقلوع؟ (اختر)"
-      },
-      "options": [
-        {
-          "ar": "استرد السن، اشطف إن اتسخ، أعد غرسه ليمسكه الطفل"
-        },
-        {
-          "ar": "لف بشاش"
-        },
-        {
-          "ar": "افركه"
-        },
-        {
-          "ar": "ارمِه"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ثلاثة R."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تدخل لقرحة الفم؟"
-      },
-      "options": [
-        {
-          "ar": "قشة وفرشاة ناعمة وغرغرة ملح دافئ"
-        },
-        {
-          "ar": "كحول"
-        },
-        {
-          "ar": "طعام حار"
-        },
-        {
-          "ar": "فرشاة قاسية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "علاج داعم."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "StatPearls — ملخص الموضوع"
-    },
-    {
-      "title": "Nelson Textbook of Pediatrics — ملخصات عامة"
-    }
+  "en": [
+   "Avulsed tooth: rinse then reinsert immediately (15 minutes)",
+   "Do not scrub or wrap in gauze",
+   "Alternative: cold milk/saline/saliva",
+   "Mucositis: straw, soft toothbrush, warm salt gargle"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أولوية السن المقلوع؟",
+    "en": "The priority for an avulsed tooth?"
+   },
+   "options": [
+    {
+     "ar": "اشطفه وأعد غرسه وثبّته",
+     "en": "Rinse it, reinsert it and stabilize it"
+    },
+    {
+     "ar": "لفّه بشاش",
+     "en": "Wrap it in gauze"
+    },
+    {
+     "ar": "افركه",
+     "en": "Scrub it"
+    },
+    {
+     "ar": "ارمِه",
+     "en": "Throw it away"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لاستعادة التروية.",
+    "en": "To restore blood supply."
+   }
+  },
+  {
+   "q": {
+    "ar": "وسط حفظ السن إن لم يُغرس؟",
+    "en": "Storage medium for the tooth if it is not reinserted?"
+   },
+   "options": [
+    {
+     "ar": "حليب بارد",
+     "en": "Cold milk"
+    },
+    {
+     "ar": "ماء ساخن",
+     "en": "Hot water"
+    },
+    {
+     "ar": "كحول",
+     "en": "Alcohol"
+    },
+    {
+     "ar": "بدون",
+     "en": "None"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يحافظ على الخلايا.",
+    "en": "It preserves the cells."
+   }
+  },
+  {
+   "q": {
+    "ar": "تدبير mucositis؟",
+    "en": "Management of mucositis?"
+   },
+   "options": [
+    {
+     "ar": "غرغرة ملح دافئ وفرشاة ناعمة",
+     "en": "Warm salt gargle and a soft toothbrush"
+    },
+    {
+     "ar": "شطف بالكحول",
+     "en": "Alcohol rinse"
+    },
+    {
+     "ar": "فرشاة خشنة",
+     "en": "Hard toothbrush"
+    },
+    {
+     "ar": "لا فم",
+     "en": "Nothing by mouth"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يخفف الالتهاب.",
+    "en": "It reduces inflammation."
+   }
+  },
+  {
+   "q": {
+    "ar": "خطأ شائع؟",
+    "en": "A common mistake?"
+   },
+   "options": [
+    {
+     "ar": "لف السن بشاش معقم",
+     "en": "Wrapping the tooth in sterile gauze"
+    },
+    {
+     "ar": "حفظه بحليب",
+     "en": "Storing it in milk"
+    },
+    {
+     "ar": "غرسه خلال 15 د",
+     "en": "Reinserting it within 15 minutes"
+    },
+    {
+     "ar": "شطفه",
+     "en": "Rinsing it"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يجففه.",
+    "en": "It dries it out."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي إجراءات لسن دائم مقلوع؟ (اختر)",
+    "en": "Which actions are appropriate for an avulsed permanent tooth? (choose)"
+   },
+   "options": [
+    {
+     "ar": "استرد السن، اشطف إن اتسخ، أعد غرسه ليمسكه الطفل",
+     "en": "Retrieve the tooth, rinse it if dirty, and reinsert it for the child to hold in place"
+    },
+    {
+     "ar": "لف بشاش",
+     "en": "Wrap in gauze"
+    },
+    {
+     "ar": "افركه",
+     "en": "Scrub it"
+    },
+    {
+     "ar": "ارمِه",
+     "en": "Throw it away"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ثلاثة R.",
+    "en": "The three Rs."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تدخل لقرحة الفم؟",
+    "en": "Which intervention is appropriate for a mouth sore?"
+   },
+   "options": [
+    {
+     "ar": "قشة وفرشاة ناعمة وغرغرة ملح دافئ",
+     "en": "Straw, soft toothbrush and warm salt gargle"
+    },
+    {
+     "ar": "كحول",
+     "en": "Alcohol"
+    },
+    {
+     "ar": "طعام حار",
+     "en": "Spicy food"
+    },
+    {
+     "ar": "فرشاة قاسية",
+     "en": "Hard toothbrush"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "علاج داعم.",
+    "en": "Supportive treatment."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls — ملخص الموضوع"
+  },
+  {
+   "title": "Nelson Textbook of Pediatrics — ملخصات عامة"
+  }
+ ]
 }

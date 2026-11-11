@@ -1,211 +1,266 @@
 {
-  "id": "dis-1410",
-  "num": 1410,
-  "system": "chest",
-  "icon": "🦴",
-  "level": 3,
-  "target": "diseases",
-  "title": {
-    "ar": "الصدر الطافي وكسور الأضلاع",
-    "en": "Flail Chest & Rib Fractures"
+ "id": "dis-1410",
+ "num": 1410,
+ "system": "chest",
+ "icon": "🦴",
+ "level": 3,
+ "target": "diseases",
+ "title": {
+  "ar": "الصدر الطافي وكسور الأضلاع",
+  "en": "Flail Chest & Rib Fractures"
+ },
+ "teaser": {
+  "ar": "كسور الأضلاع بعد الرضوض وحالة الصدر الطافي الطارئة: الحركة المتناقضة، مضاعفات الالتهاب الرئوي واحتباس CO2، وأولوية تسكين الألم ثم النظافة الرئوية.",
+  "en": "Rib fractures after trauma and the emergency of flail chest: paradoxical movement, pneumonia and CO2 retention complications, and the priority of pain relief first, then pulmonary hygiene."
+ },
+ "chips": [
+  {
+   "ar": "حركة متناقضة",
+   "en": "Paradoxical movement"
   },
-  "teaser": {
-    "ar": "كسور الأضلاع بعد الرضوض وحالة الصدر الطافي الطارئة: الحركة المتناقضة، مضاعفات الالتهاب الرئوي واحتباس CO2، وأولوية تسكين الألم ثم النظافة الرئوية."
+  {
+   "ar": "تسكين أولًا",
+   "en": "Pain relief first"
   },
-  "chips": [
-    {
-      "ar": "حركة متناقضة"
-    },
-    {
-      "ar": "تسكين أولًا"
-    },
-    {
-      "ar": "TCDB"
-    },
-    {
-      "ar": "مقياس التحفيز"
-    }
+  {
+   "ar": "TCDB",
+   "en": "TCDB"
+  },
+  {
+   "ar": "مقياس التحفيز",
+   "en": "Incentive spirometer"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>تحدث كسور الأضلاع بعد رضوض كبيرة (حوادث سيارات، سقوط). الصدر الطافي: جزء من القفص الصدري ينكسر ويتحرر عن باقي الجدار وهو طارئ مهدد للحياة. تذكير: Flail chest = Funky chest wall movement. للمقارنة راجع <a href=\"/diseases/dis-648\">استرواح الصدر (Pneumothorax)</a>.</p>[[slot:dis-1410-flail|الصدر الطافي — رسم من إعداد الموقع|/diseases/img/dis-1410-flail.svg]]\n<h4>مراجعة NCLEX</h4><p>الصدر الطافي: انفصال كامل لجزء من القفص الصدري بعد رضّ شديد، وهو طارئ يهدد الحياة. العلامة المفتاحية: <strong>حركة جدار الصدر المتناقضة</strong> (يُسحب للداخل بالشهيق ويطفو للخارج بالزفير).</p>[[slot:dis-1410-p437|الصدر الطافي والأولويات — رسم من إعداد الموقع|/diseases/img/dis-1410-p437.svg]]",
+   "en": "<p>Rib fractures happen after major trauma (car accidents, falls). Flail chest: a segment of the rib cage breaks and becomes detached from the rest of the chest wall. It is a life-threatening emergency. Reminder: Flail chest = Funky chest wall movement. For comparison, see <a href=\"/diseases/dis-648\">Pneumothorax</a>.</p>[[slot:dis-1410-flail|Flail chest — illustration prepared by the site|/diseases/img/dis-1410-flail.svg]]\n<h4>NCLEX Review</h4><p>Flail chest: complete detachment of a segment of the rib cage after severe blunt trauma. It is a life-threatening emergency. The key sign is <strong>paradoxical chest wall movement</strong> (the segment is pulled inward on inspiration and bulges outward on expiration).</p>[[slot:dis-1410-p437|Flail chest and priorities — illustration prepared by the site|/diseases/img/dis-1410-p437.svg]]"
+  },
+  "causes": {
+   "ar": "<p>رضوض الصدر الكبيرة: حوادث، سقوط.</p>",
+   "en": "<p>Major chest trauma: accidents, falls.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li><strong>حركة جدار الصدر المتناقضة (Paradoxical movement)</strong> علامة رئيسية: يُسحب الجزء للداخل عند الشهيق ويطفو للخارج عند الزفير</li><li>ألم صدري شديد</li><li>تنفس ضحل</li></ul>[[slot:dis-1410-photo|صورة الصدر الطافي والحركة المتناقضة]]\n<p>حركة متناقضة، ألم صدري شديد، تنفس ضحل.</p>",
+   "en": "<ul><li><strong>Paradoxical chest wall movement</strong> is the main sign: the segment is pulled inward on inspiration and bulges outward on expiration</li><li>Severe chest pain</li><li>Shallow breathing</li></ul>[[slot:dis-1410-photo|Picture of flail chest and paradoxical movement]]\n<p>Paradoxical movement, severe chest pain, shallow breathing.</p>"
+  },
+  "tests": {
+   "ar": "<ul><li>أشعة الصدر ومقطعية لتحديد الكسور والرئة</li><li>غازات الدم ومقياس التأكسج</li></ul>",
+   "en": "<ul><li>Chest X-ray and CT to identify the fractures and the lung</li><li>Blood gases and pulse oximetry</li></ul>"
+  },
+  "treatment": {
+   "ar": "<p>تسكين الألم أولًا بأفيونات بأمر الطبيب (morphine، hydromorphone، hydrocodone)، ودعم تنفسي حسب الحاجة وقد يلزم تهوية ميكانيكية.</p><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<p>Pain relief first with opioids as ordered by the physician (morphine, hydromorphone, hydrocodone), respiratory support as needed, and mechanical ventilation may be required.</p><div class=\"cs-box cs-info\"><strong>Dose alert</strong><p>Doses are for learning; always verify with the physician/pharmacist before administration.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ol><li><strong>الأولوية الأولى: السيطرة على الألم</strong> بالأفيونات الموصوفة.</li><li>النظافة الرئوية <strong>بعد</strong> ضبط الألم فقط: TCDB (تقلب، سعال، تنفس عميق) ومقياس التحفيز (IS) لإعادة تمدد الرئة ومنع الانخماص (Atelectasis).</li></ol>\n<ol><li><strong>الأولوية: التحكم بالألم</strong> بأفيونات موصوفة (morphine وhydromorphone وhydrocodone).</li><li><strong>النظافة الرئوية بعد ضبط الألم فقط:</strong> TCDB (تقلب، سعال، تنفس عميق) ومقياس التنفس الحافز لإعادة توسيع الرئة ومنع الانخماص.</li></ol>",
+   "en": "<ol><li><strong>First priority: control the pain</strong> with prescribed opioids.</li><li>Pulmonary hygiene <strong>only after</strong> pain is controlled: TCDB (turn, cough, deep breathe) and incentive spirometer (IS) to re-expand the lung and prevent atelectasis.</li></ol>\n<ol><li><strong>Priority: pain control</strong> with prescribed opioids (morphine, hydromorphone, and hydrocodone).</li><li><strong>Pulmonary hygiene only after pain is controlled:</strong> TCDB (turn, cough, deep breathe) and incentive spirometer to re-expand the lung and prevent atelectasis.</li></ol>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>مضاعفات مميتة</strong><ul><li>خطر عالٍ للعدوى: الالتهاب الرئوي شائع</li><li>فشل تنفسي مفرط الكابنيا (احتباس CO2) يسبب حماضًا</li></ul></div>\n<p>المضاعفات القاتلة: عدوى والتهاب رئوي شائع جدًا، وفشل تنفسي احتباسي من احتباس CO₂ وحماض.</p>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Fatal complications</strong><ul><li>High risk of infection: pneumonia is common</li><li>Hypercapnic respiratory failure (CO2 retention) causing acidosis</li></ul></div>\n<p>Fatal complications: infection and very common pneumonia, and retentive respiratory failure from CO₂ retention and acidosis.</p>"
+  },
+  "teaching": {
+   "ar": "<ul><li>استعمال مقياس التحفيز بانتظام</li><li>أخذ المسكن قبل التمارين التنفسية</li><li>عدم تقييد التنفس بسبب الألم</li><li>بلّغ عن ضيق نفس أو حمى</li></ul>",
+   "en": "<ul><li>Use the incentive spirometer regularly</li><li>Take the pain medicine before breathing exercises</li><li>Do not restrict breathing because of pain</li><li>Report shortness of breath or fever</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الحركة المتناقضة علامة الصدر الطافي",
+   "الأولوية الأولى: تسكين الألم",
+   "النظافة الرئوية بعد الألم",
+   "المضاعفات: التهاب رئوي وحماض تنفسي"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>تحدث كسور الأضلاع بعد رضوض كبيرة (حوادث سيارات، سقوط). الصدر الطافي: جزء من القفص الصدري ينكسر ويتحرر عن باقي الجدار وهو طارئ مهدد للحياة. تذكير: Flail chest = Funky chest wall movement. للمقارنة راجع <a href=\"/diseases/dis-648\">استرواح الصدر (Pneumothorax)</a>.</p>[[slot:dis-1410-flail|الصدر الطافي — رسم من إعداد الموقع|/diseases/img/dis-1410-flail.svg]]\n<h4>مراجعة NCLEX</h4><p>الصدر الطافي: انفصال كامل لجزء من القفص الصدري بعد رضّ شديد، وهو طارئ يهدد الحياة. العلامة المفتاحية: <strong>حركة جدار الصدر المتناقضة</strong> (يُسحب للداخل بالشهيق ويطفو للخارج بالزفير).</p>[[slot:dis-1410-p437|الصدر الطافي والأولويات — رسم من إعداد الموقع|/diseases/img/dis-1410-p437.svg]]"
-    },
-    "causes": {
-      "ar": "<p>رضوض الصدر الكبيرة: حوادث، سقوط.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li><strong>حركة جدار الصدر المتناقضة (Paradoxical movement)</strong> علامة رئيسية: يُسحب الجزء للداخل عند الشهيق ويطفو للخارج عند الزفير</li><li>ألم صدري شديد</li><li>تنفس ضحل</li></ul>[[slot:dis-1410-photo|صورة الصدر الطافي والحركة المتناقضة]]\n<p>حركة متناقضة، ألم صدري شديد، تنفس ضحل.</p>"
-    },
-    "tests": {
-      "ar": "<ul><li>أشعة الصدر ومقطعية لتحديد الكسور والرئة</li><li>غازات الدم ومقياس التأكسج</li></ul>"
-    },
-    "treatment": {
-      "ar": "<p>تسكين الألم أولًا بأفيونات بأمر الطبيب (morphine، hydromorphone، hydrocodone)، ودعم تنفسي حسب الحاجة وقد يلزم تهوية ميكانيكية.</p><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ol><li><strong>الأولوية الأولى: السيطرة على الألم</strong> بالأفيونات الموصوفة.</li><li>النظافة الرئوية <strong>بعد</strong> ضبط الألم فقط: TCDB (تقلب، سعال، تنفس عميق) ومقياس التحفيز (IS) لإعادة تمدد الرئة ومنع الانخماص (Atelectasis).</li></ol>\n<ol><li><strong>الأولوية: التحكم بالألم</strong> بأفيونات موصوفة (morphine وhydromorphone وhydrocodone).</li><li><strong>النظافة الرئوية بعد ضبط الألم فقط:</strong> TCDB (تقلب، سعال، تنفس عميق) ومقياس التنفس الحافز لإعادة توسيع الرئة ومنع الانخماص.</li></ol>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>مضاعفات مميتة</strong><ul><li>خطر عالٍ للعدوى: الالتهاب الرئوي شائع</li><li>فشل تنفسي مفرط الكابنيا (احتباس CO2) يسبب حماضًا</li></ul></div>\n<p>المضاعفات القاتلة: عدوى والتهاب رئوي شائع جدًا، وفشل تنفسي احتباسي من احتباس CO₂ وحماض.</p>"
-    },
-    "teaching": {
-      "ar": "<ul><li>استعمال مقياس التحفيز بانتظام</li><li>أخذ المسكن قبل التمارين التنفسية</li><li>عدم تقييد التنفس بسبب الألم</li><li>بلّغ عن ضيق نفس أو حمى</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الحركة المتناقضة علامة الصدر الطافي",
-      "الأولوية الأولى: تسكين الألم",
-      "النظافة الرئوية بعد الألم",
-      "المضاعفات: التهاب رئوي وحماض تنفسي"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "العلامة الأساسية للصدر الطافي:"
-      },
-      "options": [
-        {
-          "ar": "حركة متناقضة لجزء من الصدر"
-        },
-        {
-          "ar": "سعال جاف"
-        },
-        {
-          "ar": "حمى"
-        },
-        {
-          "ar": "تعرق"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ينسحب للداخل أثناء الشهيق."
-      }
-    },
-    {
-      "q": {
-        "ar": "أولوية التمريض الأولى:"
-      },
-      "options": [
-        {
-          "ar": "تسكين الألم"
-        },
-        {
-          "ar": "مقياس التحفيز"
-        },
-        {
-          "ar": "أكسجين فقط"
-        },
-        {
-          "ar": "وزن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الألم يمنع التنفس العميق."
-      }
-    },
-    {
-      "q": {
-        "ar": "متى تبدأ النظافة الرئوية؟"
-      },
-      "options": [
-        {
-          "ar": "بعد ضبط الألم"
-        },
-        {
-          "ar": "فورًا دون مسكن"
-        },
-        {
-          "ar": "بعد أسبوع"
-        },
-        {
-          "ar": "أبدًا"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ليتمكن من السعال."
-      }
-    },
-    {
-      "q": {
-        "ar": "مضاعفة شائعة:"
-      },
-      "options": [
-        {
-          "ar": "التهاب رئوي"
-        },
-        {
-          "ar": "إسهال"
-        },
-        {
-          "ar": "سكري"
-        },
-        {
-          "ar": "حصوات"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ضعف التنفس والسعال."
-      }
-    },
-    {
-      "q": {
-        "ar": "أولوية التمريض لمريض صدر طافٍ؟"
-      },
-      "options": [
-        {
-          "ar": "التحكم بالألم أولًا"
-        },
-        {
-          "ar": "TCDB قبل المسكن"
-        },
-        {
-          "ar": "تقييد السوائل"
-        },
-        {
-          "ar": "الأكل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الألم يمنع التنفس العميق، فيُضبط قبل النظافة الرئوية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة مفتاحية للصدر الطافي؟"
-      },
-      "options": [
-        {
-          "ar": "حركة صدر متناقضة"
-        },
-        {
-          "ar": "صفير"
-        },
-        {
-          "ar": "سعال بلغم"
-        },
-        {
-          "ar": "صرير"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "القطعة المنفصلة تتحرك عكس بقية الصدر."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "NCLEX-RN Test Plan (NCSBN)"
-    },
-    {
-      "title": "Brunner & Suddarth Textbook of Medical-Surgical Nursing"
-    }
+  "en": [
+   "Paradoxical movement is the sign of flail chest",
+   "First priority: pain relief",
+   "Pulmonary hygiene comes after pain control",
+   "Complications: pneumonia and respiratory acidosis"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "العلامة الأساسية للصدر الطافي:",
+    "en": "The main sign of flail chest:"
+   },
+   "options": [
+    {
+     "ar": "حركة متناقضة لجزء من الصدر",
+     "en": "Paradoxical movement of part of the chest"
+    },
+    {
+     "ar": "سعال جاف",
+     "en": "Dry cough"
+    },
+    {
+     "ar": "حمى",
+     "en": "Fever"
+    },
+    {
+     "ar": "تعرق",
+     "en": "Sweating"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ينسحب للداخل أثناء الشهيق.",
+    "en": "The segment is pulled inward during inspiration."
+   }
+  },
+  {
+   "q": {
+    "ar": "أولوية التمريض الأولى:",
+    "en": "The first nursing priority:"
+   },
+   "options": [
+    {
+     "ar": "تسكين الألم",
+     "en": "Pain relief"
+    },
+    {
+     "ar": "مقياس التحفيز",
+     "en": "Incentive spirometer"
+    },
+    {
+     "ar": "أكسجين فقط",
+     "en": "Oxygen only"
+    },
+    {
+     "ar": "وزن",
+     "en": "Weight"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الألم يمنع التنفس العميق.",
+    "en": "Pain prevents deep breathing."
+   }
+  },
+  {
+   "q": {
+    "ar": "متى تبدأ النظافة الرئوية؟",
+    "en": "When does pulmonary hygiene begin?"
+   },
+   "options": [
+    {
+     "ar": "بعد ضبط الألم",
+     "en": "After pain is controlled"
+    },
+    {
+     "ar": "فورًا دون مسكن",
+     "en": "Immediately without analgesia"
+    },
+    {
+     "ar": "بعد أسبوع",
+     "en": "After a week"
+    },
+    {
+     "ar": "أبدًا",
+     "en": "Never"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ليتمكن من السعال.",
+    "en": "So the patient is able to cough."
+   }
+  },
+  {
+   "q": {
+    "ar": "مضاعفة شائعة:",
+    "en": "A common complication:"
+   },
+   "options": [
+    {
+     "ar": "التهاب رئوي",
+     "en": "Pneumonia"
+    },
+    {
+     "ar": "إسهال",
+     "en": "Diarrhea"
+    },
+    {
+     "ar": "سكري",
+     "en": "Diabetes"
+    },
+    {
+     "ar": "حصوات",
+     "en": "Stones"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ضعف التنفس والسعال.",
+    "en": "Weak breathing and cough."
+   }
+  },
+  {
+   "q": {
+    "ar": "أولوية التمريض لمريض صدر طافٍ؟",
+    "en": "The nursing priority for a flail chest patient?"
+   },
+   "options": [
+    {
+     "ar": "التحكم بالألم أولًا",
+     "en": "Control pain first"
+    },
+    {
+     "ar": "TCDB قبل المسكن",
+     "en": "TCDB before analgesic"
+    },
+    {
+     "ar": "تقييد السوائل",
+     "en": "Fluid restriction"
+    },
+    {
+     "ar": "الأكل",
+     "en": "Eating"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الألم يمنع التنفس العميق، فيُضبط قبل النظافة الرئوية.",
+    "en": "Pain prevents deep breathing, so it is controlled before pulmonary hygiene."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة مفتاحية للصدر الطافي؟",
+    "en": "Which is a key sign of flail chest?"
+   },
+   "options": [
+    {
+     "ar": "حركة صدر متناقضة",
+     "en": "Paradoxical chest movement"
+    },
+    {
+     "ar": "صفير",
+     "en": "Wheezing"
+    },
+    {
+     "ar": "سعال بلغم",
+     "en": "Productive cough"
+    },
+    {
+     "ar": "صرير",
+     "en": "Stridor"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "القطعة المنفصلة تتحرك عكس بقية الصدر.",
+    "en": "The detached segment moves opposite to the rest of the chest."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "NCLEX-RN Test Plan (NCSBN)"
+  },
+  {
+   "title": "Brunner & Suddarth Textbook of Medical-Surgical Nursing"
+  }
+ ]
 }
