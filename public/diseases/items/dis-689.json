@@ -1,355 +1,451 @@
 {
-  "id": "dis-689",
-  "num": 689,
-  "system": "blood",
-  "icon": "🩸",
-  "level": 2,
-  "title": {
-    "ar": "قلة الصفائح المناعية (ITP)",
-    "en": "Immune (Idiopathic) Thrombocytopenic Purpura"
+ "id": "dis-689",
+ "num": 689,
+ "system": "blood",
+ "icon": "🩸",
+ "level": 2,
+ "title": {
+  "ar": "قلة الصفائح المناعية (ITP)",
+  "en": "Immune (Idiopathic) Thrombocytopenic Purpura"
+ },
+ "teaser": {
+  "ar": "الجسم يهاجم صفائحه: كدمات ونقط نزفية ونزف لثة. الكورتيزون، IVIG، وإزاي تحمي المريض من النزف.",
+  "en": "The body attacks its own platelets: bruises, petechiae, and gum bleeding. Corticosteroids, IVIG, and how to protect the patient from bleeding."
+ },
+ "chips": [
+  {
+   "ar": "Platelets ↓",
+   "en": "Platelets ↓"
   },
-  "teaser": {
-    "ar": "الجسم يهاجم صفائحه: كدمات ونقط نزفية ونزف لثة. الكورتيزون، IVIG، وإزاي تحمي المريض من النزف."
+  {
+   "ar": "Prednisone",
+   "en": "Prednisone"
   },
-  "chips": [
-    {
-      "ar": "Platelets ↓"
-    },
-    {
-      "ar": "Prednisone"
-    },
-    {
-      "ar": "IVIG"
-    }
+  {
+   "ar": "IVIG",
+   "en": "IVIG"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>ITP مرض مناعي ذاتي تتكون فيه أجسام مضادة ضد الصفائح فتتحطم في الطحال بواسطة الخلايا البلعمية، فيقل العدد. أكثر في النساء، وفي البالغين يصبح مزمناً. المشاكل ناتجة عن النزف.</p><div class=\"cs-stats\"><div><b>PT</b><span>طبيعي</span></div><div><b>PTT</b><span>طبيعي</span></div><div><b>Plt ↓</b><span>العدد قليل فقط</span></div></div><p>الكورتيزون (Prednisone) يسيطر على معظم الحالات.</p>\n<h4>إضافة من المراجعة الشاملة</h4>\n[[slot:dis-689-p320|نقص الصفائح: الأرقام والـ P الأربعة — رسم من إعداد الموقع|/diseases/img/dis-689-p320.svg]]\n<p>الصفائح الطبيعية <b>150,000 – 400,000</b>. 150 ألف أو أقل = نقص صفائح، و100 ألف = خطر كبير، و<b>50 ألف أو أقل = قاتل</b>. الأسباب: كابتات المناعة، أمراض الكبد (التهاب/تليف)، وITP. الأعراض: لثة تنزف، سرعة قلب، ونمش دموي (Petechiae)؛ خطر نزف كالقنبلة الموقوتة من أي صدمة بسيطة.</p>",
+   "en": "<p>ITP is an autoimmune disease in which antibodies form against platelets, so they are destroyed in the spleen by phagocytic cells and the count falls. It is more common in women, and in adults it becomes chronic. The problems result from bleeding.</p><div class=\"cs-stats\"><div><b>PT</b><span>normal</span></div><div><b>PTT</b><span>normal</span></div><div><b>Plt ↓</b><span>only the count is low</span></div></div><p>Corticosteroids (Prednisone) control most cases.</p>\n<h4>Addition from the comprehensive review</h4>\n[[slot:dis-689-p320|Thrombocytopenia: the numbers and the four Ps — illustration prepared by the site|/diseases/img/dis-689-p320.svg]]\n<p>Normal platelets are <b>150,000 – 400,000</b>. 150K or less = thrombocytopenia, 100K = high risk, and <b>50K or less = deadly</b>. Causes: immunosuppressants, liver disease (hepatitis/cirrhosis), and ITP. Symptoms: bleeding gums, rapid heart rate, and petechiae (Petechiae); a bleeding risk like a ticking time bomb from any minor trauma.</p>"
+  },
+  "causes": {
+   "ar": "<p>مجهول السبب (Idiopathic) في الأغلب، وقد يسبقه عدوى فيروسية (خصوصاً الأطفال)، أو يرتبط بأمراض مناعية، HIV، التهاب كبد C، أو أدوية.</p>",
+   "en": "<p>Usually of unknown cause (Idiopathic); it may follow a viral infection (especially in children), or be linked to autoimmune diseases, HIV, hepatitis C, or drugs.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li>نقط نزفية (Petechiae) وبقع بنفسجية (Purpura).</li><li>رعاف ونزف لثة.</li><li>غزارة الطمث (Menorrhagia).</li><li>كدمات بسهولة.</li><li>نزف مخي نادر لكنه مميت عند الصفائح المنخفضة جداً.</li></ul>",
+   "en": "<ul><li>Pinpoint bleeding spots (Petechiae) and purple patches (Purpura).</li><li>Nosebleeds and gum bleeding.</li><li>Heavy menstruation (Menorrhagia).</li><li>Easy bruising.</li><li>Brain hemorrhage is rare but deadly with very low platelets.</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>نقص الصفائح فقط (Thrombocytopenia).</li><li>أنيميا خفيفة ثانوية للنزف.</li><li>PT وPTT طبيعيان.</li><li>نخاع طبيعي أو زائد إنتاج الصفائح (يتم عند الحاجة).</li><li>استبعاد أسباب أخرى (HIV، HCV، لوكيميا، أدوية).</li></ul>",
+   "en": "<ul><li>Low platelets only (Thrombocytopenia).</li><li>Mild anemia secondary to bleeding.</li><li>Normal PT and PTT.</li><li>Normal marrow or increased platelet production (done when needed).</li><li>Ruling out other causes (HIV, HCV, leukemia, drugs).</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li>Prednisone: يوقف النزف حتى قبل أن ترتفع الصفائح، ثم تنقص الجرعة تدريجياً.</li><li>IVIG عالي الجرعة للطوارئ أو قبل الجراحة.</li><li>Danazol.</li><li>مثبطات مناعة: Vincristine، Azathioprine، Cyclosporine، Cyclophosphamide، Rituximab.</li><li>زرع خلايا جذعية للحالات المقاومة.</li><li>استئصال الطحال للمزمن المقاوم (يعطي هدأة كاملة أو جزئية).</li><li>أدوية جديدة: Eltrombopag وRomiplostim (محفّزات الثرومبوبويتين).</li><li>نقل صفائح للنزف المهدد للحياة فقط.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>التعامل الحالي يركز على علاج الأعراض والنزف وليس رفع الرقم فقط؛ الصفائح فوق 30 ألف غالباً بدون نزف تتابع فقط.</p></div>",
+   "en": "<ul><li>Prednisone: stops bleeding even before platelets rise, then the dose is tapered gradually.</li><li>High-dose IVIG for emergencies or before surgery.</li><li>Danazol.</li><li>Immunosuppressants: Vincristine, Azathioprine, Cyclosporine, Cyclophosphamide, Rituximab.</li><li>Stem cell transplant for resistant cases.</li><li>Splenectomy for resistant chronic cases (gives complete or partial remission).</li><li>Newer drugs: Eltrombopag and Romiplostim (thrombopoietin agonists).</li><li>Platelet transfusion only for life-threatening bleeding.</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Current management focuses on treating symptoms and bleeding, not just raising the number; platelets above 30K, usually without bleeding, are only followed up.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تقييم</strong><p>علامات حيوية، فحص الجلد (نقط وكدمات)، اللثة، البول والبراز.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>منع النزف</strong><p>فرشاة ناعمة، حلاقة كهربائية، لا خيط أسنان، لا حقن عضل، تجنب قياس حرارة شرجي، ضغط 5–10 دقائق بعد الحقن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الكورتيزون</strong><p>مع الأكل، قياس السكر والضغط، تقليل الجرعة تدريجياً وعدم التوقف المفاجئ، ملاحظة العدوى وتغيرات المزاج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>IVIG</strong><p>اتبع معدل التسريب البطيء، راقب الحمى والصداع والحساسية، ماء كافٍ لحماية الكلى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الوقاية من العدوى</strong><p>خاصة بعد استئصال الطحال والمثبطات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الدعم النفسي</strong><p>تأثير الكورتيزون على الشكل (وجه مستدير) يسبب قلقاً: شجع التعبير.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تثقيف</strong><p>لا أسبرين أو NSAIDs، تجنب الرياضات العنيفة.</p></div></div></div>\n<h4>إضافة NCLEX</h4><ul><li>طبيعي 150000–400000؛ 100000 خطر كبير؛ 50000 فأقل خطر مميت</li><li>أسباب: مثبطات مناعة، أمراض كبد، ITP</li><li>العلامات: لثة نازفة، تسرع قلب، نمش نزفي (Petechiae)</li><li>صفائح أقل من 100 ألف: أوقف 4 P (هيبارين، أسبرين، كلوبيدوجريل، إينوكسابارين)، أبلغ الطبيب وخذ العلامات الحيوية</li><li>أولوية التشخيص: خطر الإصابة (Risk for injury)</li><li>تثقيف: لا شفرات حلاقة ولا NSAIDs</li><li>في الامتحان: تفضيل أخطر قيمة؛ مثال: صفائح 45000 مع تليف الكبد أخطر من 68000 أو 75000</li></ul>\n[[slot:dis-689-peds-itp|نقص الصفائح: القيم والتدخل — رسم من إعداد الموقع|/diseases/img/dis-689-peds-itp.svg]][[slot:dis-689-peds-exhibits|أمثلة قيم مخبرية — رسم من إعداد الموقع|/diseases/img/dis-689-peds-exhibits.svg]]\n<ul><li><b>الصفائح أقل من 100 ألف:</b> احبس الأدوية التي تبدأ بحرف P: <b>هيبارين (Heparin)، أسبرين (Aspirin)، كلوبيدوجريل (Clopidogrel)، إينوكسابارين (Enoxaparin)</b>؛ وأبلغ الطبيب وخذ العلامات الحيوية.</li><li><b>الأولوية التمريضية:</b> خطر الإصابة (Risk for injury).</li><li>في أسئلة «من نرى أولًا»: ابحث عن أخطر قيمة؛ مثلًا 68 ألف (مناعة/جراحة) و75 ألف (ولادة/إبيدورال) و<b>45 ألف (تليف كبد)</b> → الأخطر التليف لأنه الأقل من 50 ألف.</li></ul><h4>أمثلة مخبرية (Exhibits) لسؤال «من نراه أولًا؟» (نصًا)</h4>\n<table><thead><tr><th>الحالة</th><th>النتائج</th></tr></thead><tbody>\n<tr><td>مثبطات مناعة وجراحة</td><td>WBC 3,000؛ هيموجلوبين 9.5 جم/ديسيلتر؛ <strong>صفائح 68,000</strong></td></tr>\n<tr><td>ولادة وإبيدورال</td><td>فصيلة الدم A موجب؛ Rh سلبي؛ WBC 18,000؛ <strong>صفائح 75,000</strong></td></tr>\n<tr><td>تليف الكبد (Cirrhosis)</td><td>ألبومين 2.7 جم/ديسيلتر؛ بيليروبين سلبي؛ <strong>صفائح 45,000</strong>؛ أمونيا 125</td></tr>\n</tbody></table>\n<ol><li>ابحث عن أخطر قيمة: كلها أقل من 100,000 لكن التليف هو الأدنى (أقل من 50,000).</li><li>مهمتك التمريضية إنقاذ الأرواح: سؤال الامتحان سيعطي قيمًا ويطلب إجراء الأولوية؛ فاحفظ الأرقام.</li></ol>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assessment</strong><p>Vital signs, skin exam (spots and bruises), gums, urine, and stool.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Preventing bleeding</strong><p>Soft toothbrush, electric razor, no dental floss, no IM injections, avoid rectal temperatures, pressure for 5–10 minutes after injections.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Corticosteroids</strong><p>With food, monitor glucose and blood pressure, taper the dose gradually without stopping suddenly, watch for infection and mood changes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>IVIG</strong><p>Follow the slow infusion rate, watch for fever, headache, and allergy, adequate water to protect the kidneys.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Infection prevention</strong><p>Especially after splenectomy and immunosuppressants.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Psychological support</strong><p>The effect of corticosteroids on appearance (round face) causes anxiety: encourage expression of feelings.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Teaching</strong><p>No aspirin or NSAIDs, avoid contact sports.</p></div></div></div>\n<h4>NCLEX addition</h4><ul><li>Normal 150000–400000; 100000 high risk; 50000 or less deadly risk</li><li>Causes: immunosuppressants, liver disease, ITP</li><li>Signs: bleeding gums, tachycardia, petechiae (Petechiae)</li><li>Platelets below 100K: hold the 4 Ps (heparin, aspirin, clopidogrel, enoxaparin), notify the physician, and take vital signs</li><li>Priority diagnosis: Risk for injury</li><li>Teaching: no razor blades and no NSAIDs</li><li>On the exam: prioritize the most dangerous value; example: platelets 45000 with cirrhosis are more dangerous than 68000 or 75000</li></ul>\n[[slot:dis-689-peds-itp|Thrombocytopenia: values and intervention — illustration prepared by the site|/diseases/img/dis-689-peds-itp.svg]][[slot:dis-689-peds-exhibits|Examples of lab values — illustration prepared by the site|/diseases/img/dis-689-peds-exhibits.svg]]\n<ul><li><b>Platelets below 100K:</b> hold the drugs that start with P: <b>Heparin, asPirin (Aspirin), cloPidogrel (Clopidogrel), enoxaParin (Enoxaparin)</b>; notify the physician and take vital signs.</li><li><b>Nursing priority:</b> Risk for injury.</li><li>In \"who do we see first\" questions: look for the most dangerous value; for example 68K (immunosuppression/surgery), 75K (labor/epidural), and <b>45K (liver cirrhosis)</b> → cirrhosis is the most dangerous because it is below 50K.</li></ul><h4>Lab examples (Exhibits) for the \"who do we see first?\" question (as text)</h4>\n<table><thead><tr><th>Case</th><th>Results</th></tr></thead><tbody>\n<tr><td>Immunosuppressants and surgery</td><td>WBC 3,000; hemoglobin 9.5 g/dL; <strong>platelets 68,000</strong></td></tr>\n<tr><td>Labor and epidural</td><td>Blood group A positive; Rh negative; WBC 18,000; <strong>platelets 75,000</strong></td></tr>\n<tr><td>Liver cirrhosis (Cirrhosis)</td><td>Albumin 2.7 g/dL; bilirubin negative; <strong>platelets 45,000</strong>; ammonia 125</td></tr>\n</tbody></table>\n<ol><li>Look for the most dangerous value: all are below 100,000, but cirrhosis is the lowest (below 50,000).</li><li>Your nursing task is saving lives: the exam question will give values and ask for the priority action; so memorize the numbers.</li></ol>"
+  },
+  "redflags": {
+   "ar": "<ul><li>صداع شديد أو تغيّر وعي</li><li>قيء دموي أو براز أسود</li><li>نزف أنف لا يتوقف</li><li>حرارة أثناء العلاج المثبط</li><li>نزف طمث غزير جداً</li></ul>",
+   "en": "<ul><li>Severe headache or change in consciousness</li><li>Vomiting blood or black stool</li><li>A nosebleed that does not stop</li><li>Fever during immunosuppressive treatment</li><li>Very heavy menstrual bleeding</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>تجنب الأسبرين والمسكنات NSAIDs.</li><li>لا تتوقف عن الكورتيزون فجأة.</li><li>حماية من السقوط والإصابات.</li><li>أبلغ عن أي نزف.</li><li>أخبر طبيب الأسنان بحالتك.</li></ul>\n<ul><li>لا شفرات (استخدم ماكينة كهربائية) ولا NSAIDs دون استشارة.</li></ul>",
+   "en": "<ul><li>Avoid aspirin and NSAID analgesics.</li><li>Do not stop corticosteroids suddenly.</li><li>Protect yourself from falls and injuries.</li><li>Report any bleeding.</li><li>Tell your dentist about your condition.</li></ul>\n<ul><li>No razor blades (use an electric shaver) and no NSAIDs without consulting.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "أجسام مضادة تدمر الصفائح في الطحال.",
+   "نقص صفائح فقط مع PT/PTT طبيعيين.",
+   "الكورتيزون العلاج الأول.",
+   "IVIG وTPO agonists بدائل.",
+   "استئصال الطحال للمقاوم.",
+   "لا أسبرين ولا حقن عضل.",
+   "أخطر قيمة تُعالج أولًا",
+   "صفائح 150–400 ألف؛ 100 ألف خطر؛ 50 ألف أو أقل قاتل",
+   "تحت 100 ألف: لا هيبارين ولا أسبرين ولا كلوبيدوجريل ولا إينوكسابارين",
+   "أولوية التمريض: خطر الإصابة والنزف"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>ITP مرض مناعي ذاتي تتكون فيه أجسام مضادة ضد الصفائح فتتحطم في الطحال بواسطة الخلايا البلعمية، فيقل العدد. أكثر في النساء، وفي البالغين يصبح مزمناً. المشاكل ناتجة عن النزف.</p><div class=\"cs-stats\"><div><b>PT</b><span>طبيعي</span></div><div><b>PTT</b><span>طبيعي</span></div><div><b>Plt ↓</b><span>العدد قليل فقط</span></div></div><p>الكورتيزون (Prednisone) يسيطر على معظم الحالات.</p>\n<h4>إضافة من المراجعة الشاملة</h4>\n[[slot:dis-689-p320|نقص الصفائح: الأرقام والـ P الأربعة — رسم من إعداد الموقع|/diseases/img/dis-689-p320.svg]]\n<p>الصفائح الطبيعية <b>150,000 – 400,000</b>. 150 ألف أو أقل = نقص صفائح، و100 ألف = خطر كبير، و<b>50 ألف أو أقل = قاتل</b>. الأسباب: كابتات المناعة، أمراض الكبد (التهاب/تليف)، وITP. الأعراض: لثة تنزف، سرعة قلب، ونمش دموي (Petechiae)؛ خطر نزف كالقنبلة الموقوتة من أي صدمة بسيطة.</p>"
-    },
-    "causes": {
-      "ar": "<p>مجهول السبب (Idiopathic) في الأغلب، وقد يسبقه عدوى فيروسية (خصوصاً الأطفال)، أو يرتبط بأمراض مناعية، HIV، التهاب كبد C، أو أدوية.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li>نقط نزفية (Petechiae) وبقع بنفسجية (Purpura).</li><li>رعاف ونزف لثة.</li><li>غزارة الطمث (Menorrhagia).</li><li>كدمات بسهولة.</li><li>نزف مخي نادر لكنه مميت عند الصفائح المنخفضة جداً.</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>نقص الصفائح فقط (Thrombocytopenia).</li><li>أنيميا خفيفة ثانوية للنزف.</li><li>PT وPTT طبيعيان.</li><li>نخاع طبيعي أو زائد إنتاج الصفائح (يتم عند الحاجة).</li><li>استبعاد أسباب أخرى (HIV، HCV، لوكيميا، أدوية).</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li>Prednisone: يوقف النزف حتى قبل أن ترتفع الصفائح، ثم تنقص الجرعة تدريجياً.</li><li>IVIG عالي الجرعة للطوارئ أو قبل الجراحة.</li><li>Danazol.</li><li>مثبطات مناعة: Vincristine، Azathioprine، Cyclosporine، Cyclophosphamide، Rituximab.</li><li>زرع خلايا جذعية للحالات المقاومة.</li><li>استئصال الطحال للمزمن المقاوم (يعطي هدأة كاملة أو جزئية).</li><li>أدوية جديدة: Eltrombopag وRomiplostim (محفّزات الثرومبوبويتين).</li><li>نقل صفائح للنزف المهدد للحياة فقط.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>التعامل الحالي يركز على علاج الأعراض والنزف وليس رفع الرقم فقط؛ الصفائح فوق 30 ألف غالباً بدون نزف تتابع فقط.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تقييم</strong><p>علامات حيوية، فحص الجلد (نقط وكدمات)، اللثة، البول والبراز.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>منع النزف</strong><p>فرشاة ناعمة، حلاقة كهربائية، لا خيط أسنان، لا حقن عضل، تجنب قياس حرارة شرجي، ضغط 5–10 دقائق بعد الحقن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الكورتيزون</strong><p>مع الأكل، قياس السكر والضغط، تقليل الجرعة تدريجياً وعدم التوقف المفاجئ، ملاحظة العدوى وتغيرات المزاج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>IVIG</strong><p>اتبع معدل التسريب البطيء، راقب الحمى والصداع والحساسية، ماء كافٍ لحماية الكلى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الوقاية من العدوى</strong><p>خاصة بعد استئصال الطحال والمثبطات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الدعم النفسي</strong><p>تأثير الكورتيزون على الشكل (وجه مستدير) يسبب قلقاً: شجع التعبير.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تثقيف</strong><p>لا أسبرين أو NSAIDs، تجنب الرياضات العنيفة.</p></div></div></div>\n<h4>إضافة NCLEX</h4><ul><li>طبيعي 150000–400000؛ 100000 خطر كبير؛ 50000 فأقل خطر مميت</li><li>أسباب: مثبطات مناعة، أمراض كبد، ITP</li><li>العلامات: لثة نازفة، تسرع قلب، نمش نزفي (Petechiae)</li><li>صفائح أقل من 100 ألف: أوقف 4 P (هيبارين، أسبرين، كلوبيدوجريل، إينوكسابارين)، أبلغ الطبيب وخذ العلامات الحيوية</li><li>أولوية التشخيص: خطر الإصابة (Risk for injury)</li><li>تثقيف: لا شفرات حلاقة ولا NSAIDs</li><li>في الامتحان: تفضيل أخطر قيمة؛ مثال: صفائح 45000 مع تليف الكبد أخطر من 68000 أو 75000</li></ul>\n[[slot:dis-689-peds-itp|نقص الصفائح: القيم والتدخل — رسم من إعداد الموقع|/diseases/img/dis-689-peds-itp.svg]][[slot:dis-689-peds-exhibits|أمثلة قيم مخبرية — رسم من إعداد الموقع|/diseases/img/dis-689-peds-exhibits.svg]]\n<ul><li><b>الصفائح أقل من 100 ألف:</b> احبس الأدوية التي تبدأ بحرف P: <b>هيبارين (Heparin)، أسبرين (Aspirin)، كلوبيدوجريل (Clopidogrel)، إينوكسابارين (Enoxaparin)</b>؛ وأبلغ الطبيب وخذ العلامات الحيوية.</li><li><b>الأولوية التمريضية:</b> خطر الإصابة (Risk for injury).</li><li>في أسئلة «من نرى أولًا»: ابحث عن أخطر قيمة؛ مثلًا 68 ألف (مناعة/جراحة) و75 ألف (ولادة/إبيدورال) و<b>45 ألف (تليف كبد)</b> → الأخطر التليف لأنه الأقل من 50 ألف.</li></ul><h4>أمثلة مخبرية (Exhibits) لسؤال «من نراه أولًا؟» (نصًا)</h4>\n<table><thead><tr><th>الحالة</th><th>النتائج</th></tr></thead><tbody>\n<tr><td>مثبطات مناعة وجراحة</td><td>WBC 3,000؛ هيموجلوبين 9.5 جم/ديسيلتر؛ <strong>صفائح 68,000</strong></td></tr>\n<tr><td>ولادة وإبيدورال</td><td>فصيلة الدم A موجب؛ Rh سلبي؛ WBC 18,000؛ <strong>صفائح 75,000</strong></td></tr>\n<tr><td>تليف الكبد (Cirrhosis)</td><td>ألبومين 2.7 جم/ديسيلتر؛ بيليروبين سلبي؛ <strong>صفائح 45,000</strong>؛ أمونيا 125</td></tr>\n</tbody></table>\n<ol><li>ابحث عن أخطر قيمة: كلها أقل من 100,000 لكن التليف هو الأدنى (أقل من 50,000).</li><li>مهمتك التمريضية إنقاذ الأرواح: سؤال الامتحان سيعطي قيمًا ويطلب إجراء الأولوية؛ فاحفظ الأرقام.</li></ol>"
-    },
-    "redflags": {
-      "ar": "<ul><li>صداع شديد أو تغيّر وعي</li><li>قيء دموي أو براز أسود</li><li>نزف أنف لا يتوقف</li><li>حرارة أثناء العلاج المثبط</li><li>نزف طمث غزير جداً</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>تجنب الأسبرين والمسكنات NSAIDs.</li><li>لا تتوقف عن الكورتيزون فجأة.</li><li>حماية من السقوط والإصابات.</li><li>أبلغ عن أي نزف.</li><li>أخبر طبيب الأسنان بحالتك.</li></ul>\n<ul><li>لا شفرات (استخدم ماكينة كهربائية) ولا NSAIDs دون استشارة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "أجسام مضادة تدمر الصفائح في الطحال.",
-      "نقص صفائح فقط مع PT/PTT طبيعيين.",
-      "الكورتيزون العلاج الأول.",
-      "IVIG وTPO agonists بدائل.",
-      "استئصال الطحال للمقاوم.",
-      "لا أسبرين ولا حقن عضل.",
-      "أخطر قيمة تُعالج أولًا",
-      "صفائح 150–400 ألف؛ 100 ألف خطر؛ 50 ألف أو أقل قاتل",
-      "تحت 100 ألف: لا هيبارين ولا أسبرين ولا كلوبيدوجريل ولا إينوكسابارين",
-      "أولوية التمريض: خطر الإصابة والنزف"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "تحليل طبيعي في ITP:"
-      },
-      "options": [
-        {
-          "ar": "الصفائح"
-        },
-        {
-          "ar": "PT وPTT"
-        },
-        {
-          "ar": "الاثنان معاً"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "ITP نقص صفائح فقط."
-      }
-    },
-    {
-      "q": {
-        "ar": "علاج أول:"
-      },
-      "options": [
-        {
-          "ar": "Prednisone"
-        },
-        {
-          "ar": "Heparin"
-        },
-        {
-          "ar": "Warfarin"
-        },
-        {
-          "ar": "حديد"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يكبت المناعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "تثقيف المريض:"
-      },
-      "options": [
-        {
-          "ar": "اعتمد على الأسبرين"
-        },
-        {
-          "ar": "تجنب الأسبرين"
-        },
-        {
-          "ar": "احلق بشفرة عادية"
-        },
-        {
-          "ar": "استخدم الخيط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "لأن الأسبرين يضعف الصفائح."
-      }
-    },
-    {
-      "q": {
-        "ar": "مضاعفة نادرة وخطرة:"
-      },
-      "options": [
-        {
-          "ar": "نزف مخي"
-        },
-        {
-          "ar": "زكام"
-        },
-        {
-          "ar": "إمساك"
-        },
-        {
-          "ar": "حكة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مع صفائح منخفضة جداً."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد استئصال الطحال:"
-      },
-      "options": [
-        {
-          "ar": "لا عدوى"
-        },
-        {
-          "ar": "خطر عدوى أكبر"
-        },
-        {
-          "ar": "لا متابعة"
-        },
-        {
-          "ar": "لا تطعيم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الطحال دور مناعي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء يُحجز مع صفائح أقل من 100 ألف؟"
-      },
-      "options": [
-        {
-          "ar": "هيبارين وأسبرين وكلوبيدوجريل وإينوكسابارين"
-        },
-        {
-          "ar": "باراسيتامول"
-        },
-        {
-          "ar": "فيتامين C"
-        },
-        {
-          "ar": "سائل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مضادات التخثر/الصفيحات تزيد النزف."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة ترى بنقص الصفائح؟"
-      },
-      "options": [
-        {
-          "ar": "نمش نزفي"
-        },
-        {
-          "ar": "حمى فقط"
-        },
-        {
-          "ar": "سعال"
-        },
-        {
-          "ar": "إمساك"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Petechiae."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تشخيص تمريضي أولوية لمريض ITP؟"
-      },
-      "options": [
-        {
-          "ar": "خطر الإصابة"
-        },
-        {
-          "ar": "ألم مزمن"
-        },
-        {
-          "ar": "قلق"
-        },
-        {
-          "ar": "عزلة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر النزف."
-      }
-    },
-    {
-      "q": {
-        "ar": "من ثلاثة مرضى كل صفائحهم أقل من 100 ألف: أي يُعالج أولًا؟"
-      },
-      "options": [
-        {
-          "ar": "تليف الكبد 45000"
-        },
-        {
-          "ar": "75000"
-        },
-        {
-          "ar": "68000"
-        },
-        {
-          "ar": "لا فرق"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأقل والأخطر."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي رقم صفائح يُعد خطرًا قاتلًا؟"
-      },
-      "options": [
-        {
-          "ar": "150 ألف"
-        },
-        {
-          "ar": "100 ألف"
-        },
-        {
-          "ar": "50 ألف أو أقل"
-        },
-        {
-          "ar": "200 ألف"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "50 ألف أو أقل مرتبط بنزف عفوي خطير."
-      }
-    },
-    {
-      "q": {
-        "ar": "صفائح مريض 68 ألف، وآخر 75 ألف، وثالث (تليف كبد) 45 ألف. من الأولوية؟"
-      },
-      "options": [
-        {
-          "ar": "الأول"
-        },
-        {
-          "ar": "الثاني"
-        },
-        {
-          "ar": "الثالث"
-        },
-        {
-          "ar": "كلهم سواء"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "45 ألف أقل من 50 ألف فهو الأخطر."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء يُحجب عند صفائح أقل من 100 ألف؟"
-      },
-      "options": [
-        {
-          "ar": "باراسيتامول"
-        },
-        {
-          "ar": "إينوكسابارين"
-        },
-        {
-          "ar": "ماء"
-        },
-        {
-          "ar": "فيتامين C"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "مضادات التجلط والصفائح تزيد خطر النزف."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "MSD Manual Professional – Hematology/Oncology"
-    },
-    {
-      "title": "StatPearls – (NCBI Bookshelf) topics"
-    },
-    {
-      "title": "NCCN / ASH patient & professional guidance (حسب الموضوع)"
-    }
+  "en": [
+   "Antibodies destroy platelets in the spleen.",
+   "Low platelets only, with normal PT/PTT.",
+   "Corticosteroids are the first treatment.",
+   "IVIG and TPO agonists are alternatives.",
+   "Splenectomy for resistant cases.",
+   "No aspirin and no IM injections.",
+   "The most dangerous value is treated first",
+   "Platelets 150–400K; 100K is risky; 50K or less is deadly",
+   "Below 100K: no heparin, aspirin, clopidogrel, or enoxaparin",
+   "Nursing priority: risk for injury and bleeding"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "تحليل طبيعي في ITP:",
+    "en": "A normal test in ITP:"
+   },
+   "options": [
+    {
+     "ar": "الصفائح",
+     "en": "Platelets"
+    },
+    {
+     "ar": "PT وPTT",
+     "en": "PT and PTT"
+    },
+    {
+     "ar": "الاثنان معاً",
+     "en": "Both together"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "None"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "ITP نقص صفائح فقط.",
+    "en": "ITP is low platelets only."
+   }
+  },
+  {
+   "q": {
+    "ar": "علاج أول:",
+    "en": "First treatment:"
+   },
+   "options": [
+    {
+     "ar": "Prednisone",
+     "en": "Prednisone"
+    },
+    {
+     "ar": "Heparin",
+     "en": "Heparin"
+    },
+    {
+     "ar": "Warfarin",
+     "en": "Warfarin"
+    },
+    {
+     "ar": "حديد",
+     "en": "Iron"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يكبت المناعة.",
+    "en": "It suppresses immunity."
+   }
+  },
+  {
+   "q": {
+    "ar": "تثقيف المريض:",
+    "en": "Patient teaching:"
+   },
+   "options": [
+    {
+     "ar": "اعتمد على الأسبرين",
+     "en": "Rely on aspirin"
+    },
+    {
+     "ar": "تجنب الأسبرين",
+     "en": "Avoid aspirin"
+    },
+    {
+     "ar": "احلق بشفرة عادية",
+     "en": "Shave with a regular blade"
+    },
+    {
+     "ar": "استخدم الخيط",
+     "en": "Use dental floss"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "لأن الأسبرين يضعف الصفائح.",
+    "en": "Because aspirin weakens platelets."
+   }
+  },
+  {
+   "q": {
+    "ar": "مضاعفة نادرة وخطرة:",
+    "en": "A rare and dangerous complication:"
+   },
+   "options": [
+    {
+     "ar": "نزف مخي",
+     "en": "Brain hemorrhage"
+    },
+    {
+     "ar": "زكام",
+     "en": "Common cold"
+    },
+    {
+     "ar": "إمساك",
+     "en": "Constipation"
+    },
+    {
+     "ar": "حكة",
+     "en": "Itching"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مع صفائح منخفضة جداً.",
+    "en": "With very low platelets."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد استئصال الطحال:",
+    "en": "After splenectomy:"
+   },
+   "options": [
+    {
+     "ar": "لا عدوى",
+     "en": "No infection"
+    },
+    {
+     "ar": "خطر عدوى أكبر",
+     "en": "Greater risk of infection"
+    },
+    {
+     "ar": "لا متابعة",
+     "en": "No follow-up"
+    },
+    {
+     "ar": "لا تطعيم",
+     "en": "No vaccination"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الطحال دور مناعي.",
+    "en": "The spleen has an immune role."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء يُحجز مع صفائح أقل من 100 ألف؟",
+    "en": "Which drug is held with platelets below 100K?"
+   },
+   "options": [
+    {
+     "ar": "هيبارين وأسبرين وكلوبيدوجريل وإينوكسابارين",
+     "en": "Heparin, aspirin, clopidogrel, and enoxaparin"
+    },
+    {
+     "ar": "باراسيتامول",
+     "en": "Paracetamol"
+    },
+    {
+     "ar": "فيتامين C",
+     "en": "Vitamin C"
+    },
+    {
+     "ar": "سائل",
+     "en": "Fluids"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مضادات التخثر/الصفيحات تزيد النزف.",
+    "en": "Anticoagulants/antiplatelets increase bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة ترى بنقص الصفائح؟",
+    "en": "Which sign is seen with low platelets?"
+   },
+   "options": [
+    {
+     "ar": "نمش نزفي",
+     "en": "Petechiae"
+    },
+    {
+     "ar": "حمى فقط",
+     "en": "Fever only"
+    },
+    {
+     "ar": "سعال",
+     "en": "Cough"
+    },
+    {
+     "ar": "إمساك",
+     "en": "Constipation"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Petechiae.",
+    "en": "Petechiae."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تشخيص تمريضي أولوية لمريض ITP؟",
+    "en": "Which nursing diagnosis is the priority for an ITP patient?"
+   },
+   "options": [
+    {
+     "ar": "خطر الإصابة",
+     "en": "Risk for injury"
+    },
+    {
+     "ar": "ألم مزمن",
+     "en": "Chronic pain"
+    },
+    {
+     "ar": "قلق",
+     "en": "Anxiety"
+    },
+    {
+     "ar": "عزلة",
+     "en": "Isolation"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر النزف.",
+    "en": "Risk of bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "من ثلاثة مرضى كل صفائحهم أقل من 100 ألف: أي يُعالج أولًا؟",
+    "en": "Of three patients whose platelets are all below 100K, who is treated first?"
+   },
+   "options": [
+    {
+     "ar": "تليف الكبد 45000",
+     "en": "Liver cirrhosis 45000"
+    },
+    {
+     "ar": "75000",
+     "en": "75000"
+    },
+    {
+     "ar": "68000",
+     "en": "68000"
+    },
+    {
+     "ar": "لا فرق",
+     "en": "No difference"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأقل والأخطر.",
+    "en": "The lowest and most dangerous."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي رقم صفائح يُعد خطرًا قاتلًا؟",
+    "en": "Which platelet count is considered a deadly risk?"
+   },
+   "options": [
+    {
+     "ar": "150 ألف",
+     "en": "150K"
+    },
+    {
+     "ar": "100 ألف",
+     "en": "100K"
+    },
+    {
+     "ar": "50 ألف أو أقل",
+     "en": "50K or less"
+    },
+    {
+     "ar": "200 ألف",
+     "en": "200K"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "50 ألف أو أقل مرتبط بنزف عفوي خطير.",
+    "en": "50K or less is linked to serious spontaneous bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "صفائح مريض 68 ألف، وآخر 75 ألف، وثالث (تليف كبد) 45 ألف. من الأولوية؟",
+    "en": "One patient's platelets are 68K, another's 75K, and a third (liver cirrhosis) 45K. Who is the priority?"
+   },
+   "options": [
+    {
+     "ar": "الأول",
+     "en": "The first"
+    },
+    {
+     "ar": "الثاني",
+     "en": "The second"
+    },
+    {
+     "ar": "الثالث",
+     "en": "The third"
+    },
+    {
+     "ar": "كلهم سواء",
+     "en": "All the same"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "45 ألف أقل من 50 ألف فهو الأخطر.",
+    "en": "45K is below 50K, so it is the most dangerous."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء يُحجب عند صفائح أقل من 100 ألف؟",
+    "en": "Which drug is held with platelets below 100K?"
+   },
+   "options": [
+    {
+     "ar": "باراسيتامول",
+     "en": "Paracetamol"
+    },
+    {
+     "ar": "إينوكسابارين",
+     "en": "Enoxaparin"
+    },
+    {
+     "ar": "ماء",
+     "en": "Water"
+    },
+    {
+     "ar": "فيتامين C",
+     "en": "Vitamin C"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "مضادات التجلط والصفائح تزيد خطر النزف.",
+    "en": "Anticoagulants and antiplatelets increase the risk of bleeding."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "MSD Manual Professional – Hematology/Oncology"
+  },
+  {
+   "title": "StatPearls – (NCBI Bookshelf) topics"
+  },
+  {
+   "title": "NCCN / ASH patient & professional guidance (حسب الموضوع)"
+  }
+ ]
 }

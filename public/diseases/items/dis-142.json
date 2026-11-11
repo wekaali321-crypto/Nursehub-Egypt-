@@ -1,199 +1,250 @@
 {
-  "id": "dis-142",
-  "num": 142,
-  "system": "cardio",
-  "icon": "⚡",
-  "level": 3,
-  "title": {
-    "ar": "تسرع البطين",
-    "en": "Ventricular Tachycardia (VT)"
+ "id": "dis-142",
+ "num": 142,
+ "system": "cardio",
+ "icon": "⚡",
+ "level": 3,
+ "title": {
+  "ar": "تسرع البطين",
+  "en": "Ventricular Tachycardia (VT)"
+ },
+ "teaser": {
+  "ar": "تسرع عريض منتظم قد يتحول لتوقف قلب: جس النبض أولاً، ثم صدمة متزامنة أو غير متزامنة، وأدوية بحساب صحيح.",
+  "en": "A regular wide tachycardia that may turn into cardiac arrest: check the pulse first, then synchronized or unsynchronized shock, and drugs with correct calculation."
+ },
+ "chips": [
+  {
+   "ar": "VT",
+   "en": "VT"
   },
-  "teaser": {
-    "ar": "تسرع عريض منتظم قد يتحول لتوقف قلب: جس النبض أولاً، ثم صدمة متزامنة أو غير متزامنة، وأدوية بحساب صحيح."
+  {
+   "ar": "صدمة كهربائية",
+   "en": "Electric shock"
   },
-  "chips": [
-    {
-      "ar": "VT"
-    },
-    {
-      "ar": "صدمة كهربائية"
-    },
-    {
-      "ar": "Cordarone"
-    }
+  {
+   "ar": "Cordarone",
+   "en": "Cordarone"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>تسرع البطين (<b>VT</b>) هو نبض <b>سريع ومنتظم أكتر من 120 في الدقيقة</b> منشؤه البطينين. خطورته إنه ممكن يقلّل ضخ الدم بشدة أو يتحول إلى <b>رجفان بطيني (VF)</b> ويوقف القلب. أول سؤال دايماً: <b>هل فيه نبض؟ وهل المريض مستقر؟</b></p><div class=\"cs-stats\"><div><b>>120/د</b><span>معدل القلب</span></div><div><b>30 ث</b><span>الحد بين المستمر وغير المستمر</span></div><div><b>عريض</b><span>QRS</span></div></div>[[slot:dis-142-types|أنواع VT: مستمر وغير مستمر — رسم من إعداد الموقع|/diseases/img/dis-142-types.svg]]<h4>الأنواع</h4><table><thead><tr><th>النوع</th><th>التعريف</th></tr></thead><tbody><tr><td><b>مستمر (Sustained)</b></td><td>يستمر أكتر من 30 ثانية <b>أو</b> يسبب عدم استقرار دوراني</td></tr><tr><td><b>غير مستمر (Non-sustained)</b></td><td>أقل من 30 ثانية ولا يسبب عدم استقرار</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>VT = احتمال VF</strong><p>أي VT مع غياب النبض يُعامل كـ <b>توقف قلب</b>: إنعاش قلبي رئوي وصدمة غير متزامنة فوراً.</p></div><!--M1--><h4>معلومات مكملة</h4><p>في VT تنقبض البطينات بمعدل أكتر من 160 نبضة/دقيقة حسب المراجع (التعريف الحديث أكتر من 100 مع 3 نبضات متتالية) فلا يمتلئ البطين بما يكفي. يحدث غالباً بعد الجلطة وفي اعتلال العضلة وCAD وهبوط الميترالي. التكرار دليل إنذار سيء.</p>",
+   "en": "<p>Ventricular tachycardia (<b>VT</b>) is a <b>fast, regular rhythm of more than 120 per minute</b> originating in the ventricles. Its danger is that it can severely reduce cardiac output or turn into <b>ventricular fibrillation (VF)</b> and stop the heart. The first question is always: <b>Is there a pulse? And is the patient stable?</b></p><div class=\"cs-stats\"><div><b>>120/min</b><span>heart rate</span></div><div><b>30 s</b><span>the cutoff between sustained and non-sustained</span></div><div><b>Wide</b><span>QRS</span></div></div>[[slot:dis-142-types|Types of VT: sustained and non-sustained — original illustration|/diseases/img/dis-142-types.svg]]<h4>Types</h4><table><thead><tr><th>Type</th><th>Definition</th></tr></thead><tbody><tr><td><b>Sustained</b></td><td>Lasts more than 30 seconds <b>or</b> causes hemodynamic instability</td></tr><tr><td><b>Non-sustained</b></td><td>Less than 30 seconds and does not cause instability</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>VT = possible VF</strong><p>Any VT without a pulse is treated as <b>cardiac arrest</b>: CPR and an unsynchronized shock immediately.</p></div><!--M1--><h4>Additional information</h4><p>In VT the ventricles contract at more than 160 beats/minute (the modern definition is more than 100 with 3 consecutive beats), so the ventricle does not fill enough. It usually occurs after MI and in cardiomyopathy, CAD, and mitral valve prolapse. Recurrence is a poor prognostic sign.</p>"
+  },
+  "causes": {
+   "ar": "<h4>أسباب مرضية (Pathological)</h4><ul><li>أمراض الشرايين التاجية (الأكتر شيوعاً — خصوصاً بعد الجلطة)</li><li>اعتلال عضلة القلب (cardiomyopathy)</li><li>عيوب قلب خلقية</li><li>روماتيزم القلب</li><li>ارتفاع الضغط</li><li>فرط نشاط الغدة الدرقية</li></ul><h4>أسباب دوائية (Pharmacological)</h4><ul><li>الديجيتال (Digitalis)</li><li>أدوية محاكية للودي (Sympathomimetic)</li><li>بعض مضادات اضطراب النظم نفسها (تأثير حثّ على النظم / إطالة QT)</li></ul><div class=\"cs-box cs-info\"><strong>أسباب أخرى لازم تفتّش عنها</strong><p>نقص البوتاسيوم أو المغنسيوم، إطالة QT (أدوية أو وراثة)، نقص الأكسجين، الحماض، الكوكايين والمنشطات، وجود ندبة جلطة قديمة، متلازمات وراثية.</p></div>",
+   "en": "<h4>Pathological causes</h4><ul><li>Coronary artery disease (the most common — especially after MI)</li><li>Cardiomyopathy</li><li>Congenital heart defects</li><li>Rheumatic heart disease</li><li>Hypertension</li><li>Hyperthyroidism</li></ul><h4>Pharmacological causes</h4><ul><li>Digitalis</li><li>Sympathomimetic drugs</li><li>Some antiarrhythmics themselves (proarrhythmic effect / QT prolongation)</li></ul><div class=\"cs-box cs-info\"><strong>Other causes to look for</strong><p>Low potassium or magnesium, QT prolongation (drugs or inherited), hypoxia, acidosis, cocaine and stimulants, an old infarct scar, inherited syndromes.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>الأعراض</h4><ul><li><b>خفقان:</b> سريع، منتظم، متكرر، <b>بداية ونهاية مفاجئة</b>، ومدته قصيرة</li><li><b>أعراض قلة النتاج القلبي:</b> إغماء، ضيق نفس، ذبحة، دوخة، صدمة</li><li><b>موت مفاجئ</b> لو تحوّل إلى رجفان بطيني</li></ul><h4>الفحص</h4><table><thead><tr><th>الفحص</th><th>في VT</th></tr></thead><tbody><tr><td>النبض</td><td>منتظم، أكتر من 120 ن/د، <b>لا يتأثر بتدليك الجيب السباتي</b></td></tr><tr><td>السماعة</td><td>شدة S1 متغيرة، وأحياناً موجات «cannon waves» في الوريد الوداجي (لأن الأذين والبطين مش متزامنين)</td></tr><tr><td>الضغط</td><td>قد يكون طبيعياً أو منخفضاً</td></tr><tr><td>الجلد والوعي</td><td>شحوب وعرق وتغير وعي في عدم الاستقرار</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>مهم للمقارنة</strong><p>تسرع فوق البطيني بـ QRS عريض ممكن يتشابه مع VT. <b>القاعدة الذهبية: QRS عريض + تسرع = VT حتى يثبت العكس.</b> ولا تعطي Verapamil لتسرع عريض غير معروف.</p></div><!--M1--><ul><li>فقد وعي</li><li>انقطاع أو ضعف تنفس</li><li>جلد شاحب مبلل</li><li>دوخة لقلة الأكسجين للمخ</li><li>هبوط ضغط</li><li>نبض ضعيف</li></ul>",
+   "en": "<h4>Symptoms</h4><ul><li><b>Palpitations:</b> fast, regular, recurrent, with <b>sudden onset and offset</b>, and short duration</li><li><b>Symptoms of low cardiac output:</b> syncope, dyspnea, angina, dizziness, shock</li><li><b>Sudden death</b> if it turns into ventricular fibrillation</li></ul><h4>Examination</h4><table><thead><tr><th>Exam</th><th>In VT</th></tr></thead><tbody><tr><td>Pulse</td><td>Regular, more than 120 bpm, <b>not affected by carotid sinus massage</b></td></tr><tr><td>Auscultation</td><td>Variable intensity of S1, and sometimes “cannon waves” in the jugular vein (because the atria and ventricles are not synchronized)</td></tr><tr><td>Blood pressure</td><td>May be normal or low</td></tr><tr><td>Skin and consciousness</td><td>Pallor, sweating, and altered consciousness when unstable</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Important for comparison</strong><p>Supraventricular tachycardia with a wide QRS can resemble VT. <b>Golden rule: wide QRS + tachycardia = VT until proven otherwise.</b> Do not give Verapamil for an unknown wide tachycardia.</p></div><!--M1--><ul><li>Loss of consciousness</li><li>Absent or weak breathing</li><li>Pale, clammy skin</li><li>Dizziness from low brain oxygen</li><li>Low blood pressure</li><li>Weak pulse</li></ul>"
+  },
+  "tests": {
+   "ar": "<h4>تخطيط القلب (ECG)</h4><ul><li><b>QRS:</b> عريض، مشوّه الشكل، سريع، منتظم، معدله أكبر من 120/د</li><li><b>موجة P:</b> طبيعية في معدلها وشكلها لكنها تأتي <b>قبل أو بعد أو مخفية داخل QRS</b> (انفصال أذيني بطيني)</li></ul>[[slot:dis-144-tachy-b|شكل VT على الـ ECG (الشريط الأول) — رسم من دليل قراءة الـ ECG|/diseases/img/dis-144-tachy-b.svg]][[slot:dis-142-ecg-real|صورة: تخطيط ECG حقيقي لـ VT — يُرفع لاحقاً]]<h4>فحوصات داعمة</h4><ul><li>بوتاسيوم ومغنسيوم وكالسيوم ووظائف كلى وغدة درقية وغازات دم</li><li>تروبونين (لاستبعاد جلطة)</li><li>إيكو لتقييم وظيفة البطين وأسباب هيكلية</li><li>قسطرة تاجية أو رنين مغناطيسي حسب الحالة</li><li>دراسة كهربية (EP study) لتحديد البؤرة المسببة</li></ul><!--M1--><ul><li>ABG وأملاح وCBC ومستويات الأدوية وتجلط</li><li>ECG: QRS غير عادي بدون P، يبدأ وينتهي فجأة، أكتر من 160 نبضة</li></ul>",
+   "en": "<h4>Electrocardiogram (ECG)</h4><ul><li><b>QRS:</b> wide, bizarre, fast, regular, rate more than 120/min</li><li><b>P wave:</b> normal in rate and shape, but comes <b>before, after, or hidden within the QRS</b> (AV dissociation)</li></ul>[[slot:dis-144-tachy-b|VT on the ECG (first strip) — illustration from the ECG reading guide|/diseases/img/dis-144-tachy-b.svg]][[slot:dis-142-ecg-real|Image: a real ECG of VT — to be uploaded later]]<h4>Supporting tests</h4><ul><li>Potassium, magnesium, calcium, kidney and thyroid function, and blood gases</li><li>Troponin (to rule out MI)</li><li>Echo to assess ventricular function and structural causes</li><li>Coronary angiography or MRI as needed</li><li>Electrophysiology (EP) study to locate the causative focus</li></ul><!--M1--><ul><li>ABG, electrolytes, CBC, drug levels, and coagulation</li><li>ECG: abnormal QRS without P, starts and ends suddenly, more than 160 beats</li></ul>"
+  },
+  "treatment": {
+   "ar": "[[slot:dis-142-algorithm|خطوات التعامل مع VT — رسم من إعداد الموقع|/diseases/img/dis-142-algorithm.svg]]<h4>أولاً: VT غير مستقر (Hemodynamically unstable)</h4><p><b>صدمة كهربائية متزامنة فورية (DC cardioversion)</b> ثم <b>لِيدوكايين وريدياً</b> (انظر أدناه).</p><h4>ثانياً: VT مستقر</h4><p><b>Xylocard أمبول 5 سم (لِيدوكايين 20 مجم/سم = 100 مجم/أمبول):</b> <b>1–1.5 مجم/كجم</b> دفعة وريدية بطيئة (0.5–0.75 مجم/كجم في VT المستقر، وتُكرر بنصف الجرعة كل 5–10 دقائق بحد أقصى 3 مجم/كجم)، تليها <b>تسريب 1–4 مجم/دقيقة</b>.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الدليل الحالي (AHA/ACLS 2025) يفضّل <b>أميودارون 150 مجم وريدي خلال 10 دقائق</b> (يُكرر عند التكرار) ثم 1 مجم/دقيقة لـ 6 ساعات لمعظم الـ VT المستقر؛ ويبقى <b>اللِيدوكايين بديلاً</b> (المراجع الحديثة تذكر دفعة 1–1.5 مجم/كجم تُكرر بنصف الجرعة كل 5–10 دقائق بحد أقصى 3 مجم/كجم؛ وقد عُدّلت الجرعة (2 مجم/كجم) لتوافق هذا النطاق، والطبيب يحدد الجرعة). التسريب عادة 1–4 مجم/دقيقة. احسب الجرعة بالوزن واتّبع أمر الطبيب وبروتوكول المستشفى. ومع إطالة QT أو فشل قلب شديد تُتجنب بعض الأدوية (مثل بروكاييناميد).</p></div><h4>ثالثاً: الحالات المقاومة والمتكررة</h4><p><b>Cordarone أمبول 150 مجم:</b> <b>800–1000 مجم/يوم لمدة 7–21 يوماً</b> (تحميل) ثم الصيانة.</p><h4>رابعاً: العلاج الوقائي (Maintenance)</h4><ul><li>Cordarone 200 مجم أقراص مرتين يومياً</li><li>Concor (بيسوبرولول) 5 مجم مرة يومياً</li></ul><h4>خامساً: تعديلات علاجية (Modification)</h4><ul><li>كي البؤرة المسببة بالقسطرة بالترددات الراديوية (catheter radio-frequency ablation)</li><li>كي البؤرة جراحياً (surgical ablation)</li><li>زرع جهاز <b>ICD</b> (Implantable Cardioverter Defibrillator): يكتشف VT/VF ويصدمها تلقائياً</li></ul><div class=\"cs-box cs-tip\"><strong>تصحيح السبب</strong><p>صحّح البوتاسيوم (هدف 4–5) والمغنسيوم (≥2)، عالج الإقفار، وأوقف الأدوية المسببة (ديجيتال، منبهات، أدوية تطيل QT) بأمر الطبيب. VT متعدد الأشكال مع إطالة QT (torsades): <b>كبريتات المغنسيوم 2 جم وريدي</b>.</p></div><!--M1--><h4>تفاصيل</h4><ul><li>CPR وACLS لو لا نبض (VT بلا نبض تُعالج بالصدمة)</li><li>تنبيب وأكسجين</li><li>مضادات اضطراب النظم: ليدوكايين، إبينفرين، بريتيليوم، بروكاينأميد، أميودارون</li><li>تحويل كهربائي متزامن</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>البريتيليوم لم يعد متاحاً، والإبينفرين ليس مضاداً لاضطراب النظم بل للإنعاش. VT بنبض مستقر: أميودارون أو بروكاينأميد؛ غير مستقر: تحويل متزامن.</p></div>",
+   "en": "[[slot:dis-142-algorithm|Steps for managing VT — original illustration|/diseases/img/dis-142-algorithm.svg]]<h4>First: unstable VT (Hemodynamically unstable)</h4><p><b>Immediate synchronized electric shock (DC cardioversion)</b> followed by <b>IV lidocaine</b> (see below).</p><h4>Second: stable VT</h4><p><b>Xylocard 5 mL ampule (lidocaine 20 mg/mL = 100 mg/ampule):</b> <b>1–1.5 mg/kg</b> slow IV bolus (0.5–0.75 mg/kg in stable VT, repeated at half the dose every 5–10 minutes up to a maximum of 3 mg/kg), followed by an <b>infusion of 1–4 mg/minute</b>.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Current guidelines (AHA/ACLS 2025) prefer <b>amiodarone 150 mg IV over 10 minutes</b> (repeated if VT recurs), then 1 mg/minute for 6 hours, for most stable VT; <b>lidocaine remains an alternative</b> (a bolus of 1–1.5 mg/kg repeated at half the dose every 5–10 minutes up to a maximum of 3 mg/kg; the dose (2 mg/kg) was adjusted to fit this range, and the physician decides the dose). The infusion is usually 1–4 mg/minute. Calculate the dose by weight and follow the physician order and hospital protocol. With QT prolongation or severe heart failure, some drugs (such as procainamide) are avoided.</p></div><h4>Third: refractory and recurrent cases</h4><p><b>Cordarone 150 mg ampule:</b> <b>800–1000 mg/day for 7–21 days</b> (loading), then maintenance.</p><h4>Fourth: preventive treatment (Maintenance)</h4><ul><li>Cordarone 200 mg tablets twice daily</li><li>Concor (bisoprolol) 5 mg once daily</li></ul><h4>Fifth: therapeutic modification</h4><ul><li>Catheter radio-frequency ablation of the causative focus</li><li>Surgical ablation of the focus</li><li>Implanting an <b>ICD</b> (Implantable Cardioverter Defibrillator): detects VT/VF and shocks it automatically</li></ul><div class=\"cs-box cs-tip\"><strong>Correct the cause</strong><p>Correct potassium (target 4–5) and magnesium (≥2), treat ischemia, and stop causative drugs (digitalis, stimulants, QT-prolonging drugs) by physician order. Polymorphic VT with QT prolongation (torsades): <b>magnesium sulfate 2 g IV</b>.</p></div><!--M1--><h4>Details</h4><ul><li>CPR and ACLS if no pulse (pulseless VT is treated with a shock)</li><li>Intubation and oxygen</li><li>Antiarrhythmics: lidocaine, epinephrine, bretylium, procainamide, amiodarone</li><li>Synchronized cardioversion</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Bretylium is no longer available, and epinephrine is not an antiarrhythmic but a resuscitation drug. Stable VT with a pulse: amiodarone or procainamide; unstable: synchronized cardioversion.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تأكد من النبض والاستجابة</strong><p>لما تشوف VT على المونيتور: لمّس المريض، نادِ عليه، جس النبض السباتي ≤10 ثوان. <b>مفيش نبض</b> = ابدأ CPR فوراً + نادِ فريق الإنعاش + جهاز الصدمات (VT بدون نبض = صدمة غير متزامنة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>لو في نبض: قيّم الاستقرار</strong><p>ضغط، وعي، ألم صدر، ضيق نفس، شحوب وعرق. غير مستقر = صدمة <b>متزامنة</b> (SYNC) بتخدير سريع لو واعي (بأمر الطبيب).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>جهّز الأساسيات</strong><p>خط وريدي، أكسجين، مونيتور، ECG كامل، شفط وأدوات تهوية، عربة الطوارئ. اطلب عينة بوتاسيوم ومغنسيوم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أدوية اضطراب النظم</strong><p>لِيدوكايين: احسب 1–1.5 مجم/كجم حسب أمر الطبيب، وأعطِ ببطء. التسريب (1–4 مجم/د) بمضخة. راقب علامات السمّية: دوخة، تنميل حول الفم، لخبطة، نعاس، تشنج. أميودارون: خط وريدي كبير، مضخة، راقب الضغط والنبض (بطء/حصار).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>بعد الصدمة المتزامنة</strong><p>ECG فوراً، علامات حيوية، حروق جلد، مجرى هواء، تهدئة المريض. جهّز صدمة ثانية بطاقة أعلى لو استمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الوقاية والمتابعة</strong><p>مراقبة مستمرة، بوتاسيوم/مغنسيوم، أدوية الصيانة في ميعادها (Cordarone: راقب الغدة والكبد والرئة وQT؛ Concor: نبض وضغط قبل كل جرعة). سجّل كل نوبة (المدة، المعدل، الأعراض، العلاج).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف الأسرة والمريض</strong><p>أعراض الخطر، متى يتصل بالإسعاف، كارت ICD وأماكن الجهاز وتجنب المجالات المغناطيسية القوية.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>مريض VT <b>لازم ما يتركش لوحده</b>. جهاز الصدمات جاهز ومشحون ويُفحص يومياً. ولا تضغط زر الصدمة قبل التأكد: <b>الكل بعيد (clear)</b>، لا أكسجين مفتوح قرب الصدر، والوضع <b>SYNC</b> فقط لو في نبض.</p></div><table><thead><tr><th>الحالة</th><th>نوع الصدمة</th></tr></thead><tbody><tr><td>VT بدون نبض أو VF</td><td>غير متزامنة (defibrillation) + CPR</td></tr><tr><td>VT بنبض + غير مستقر</td><td>متزامنة (synchronized cardioversion)</td></tr><tr><td>VT بنبض + مستقر</td><td>دواء؛ والصدمة المتزامنة لو فشل</td></tr></tbody></table><!--M1--><ul><li>ابدأ CPR لو لا نبض</li><li>جهز الأدوية حسب الأمر</li><li>علّم المريض أهمية المتابعة والفحوص الدورية وبلّغ أي دوخة</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Confirm pulse and responsiveness</strong><p>When you see VT on the monitor: touch the patient, call them, check the carotid pulse for ≤10 seconds. <b>No pulse</b> = start CPR immediately + call the resuscitation team + defibrillator (pulseless VT = unsynchronized shock).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>If there is a pulse: assess stability</strong><p>Blood pressure, consciousness, chest pain, dyspnea, pallor and sweating. Unstable = <b>synchronized</b> shock (SYNC) with quick sedation if conscious (by physician order).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Prepare the basics</strong><p>IV line, oxygen, monitor, 12-lead ECG, suction and ventilation equipment, crash cart. Request potassium and magnesium samples.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Antiarrhythmic drugs</strong><p>Lidocaine: calculate 1–1.5 mg/kg per physician order and give slowly. The infusion (1–4 mg/min) by pump. Watch for signs of toxicity: dizziness, perioral numbness, confusion, drowsiness, seizure. Amiodarone: large IV line, pump; monitor blood pressure and pulse (bradycardia/block).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>After synchronized shock</strong><p>ECG immediately, vital signs, skin burns, airway, calming the patient. Prepare a second shock at higher energy if it continues.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Prevention and follow-up</strong><p>Continuous monitoring, potassium/magnesium, maintenance drugs on time (Cordarone: monitor thyroid, liver, lungs, and QT; Concor: pulse and blood pressure before each dose). Record every episode (duration, rate, symptoms, treatment).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Teach the family and patient</strong><p>Danger symptoms, when to call the ambulance, the ICD card, device location, and avoiding strong magnetic fields.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>A VT patient <b>must never be left alone</b>. The defibrillator is ready, charged, and checked daily. Do not press the shock button before making sure: <b>everyone is clear</b>, no open oxygen near the chest, and <b>SYNC</b> mode only if there is a pulse.</p></div><table><thead><tr><th>Situation</th><th>Type of shock</th></tr></thead><tbody><tr><td>Pulseless VT or VF</td><td>Unsynchronized (defibrillation) + CPR</td></tr><tr><td>VT with pulse + unstable</td><td>Synchronized (synchronized cardioversion)</td></tr><tr><td>VT with pulse + stable</td><td>Drugs; synchronized shock if they fail</td></tr></tbody></table><!--M1--><ul><li>Start CPR if no pulse</li><li>Prepare drugs as ordered</li><li>Teach the patient the importance of follow-up and regular checks, and to report any dizziness</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً / ابدأ الإنعاش لو:</strong><ul><li>تسرع عريض منتظم على المونيتور + فقد نبض أو وعي</li><li>فقدان وعي أو إغماء (حتى لو قصير)</li><li>ألم صدر، ضيق نفس شديد، شحوب وعرق مع تسرع</li><li>نوبات VT متكررة أو غير مستمرة طويلة</li><li>إطالة QT وتسرع متعدد الأشكال (torsades)</li><li>علامات سمّية لِيدوكايين: تنميل بالفم، تشنج، اضطراب وعي</li><li>صدمة من جهاز ICD (خصوصاً متكررة)</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately / start resuscitation if:</strong><ul><li>Regular wide tachycardia on the monitor + loss of pulse or consciousness</li><li>Loss of consciousness or fainting (even if brief)</li><li>Chest pain, severe dyspnea, pallor, and sweating with tachycardia</li><li>Recurrent VT episodes or long non-sustained runs</li><li>QT prolongation and polymorphic tachycardia (torsades)</li><li>Signs of lidocaine toxicity: oral numbness, seizure, altered consciousness</li><li>A shock from the ICD (especially repeated)</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>الخفقان المفاجئ الذي يبدأ وينتهي فجأة مع دوخة أو إغماء ليس عرضاً بسيطاً — اتصل بالإسعاف.</li><li>الالتزام بدواء الصيانة (Cordarone / Concor) حتى لو مفيش أعراض، ولا توقفه فجأة.</li><li>تجنّب المنبهات: الكافيين الزائد، المنشطات، مشروبات الطاقة، التدخين.</li><li>قيس نبضك وسجّل أي نوبات.</li><li>لو عندك ICD: احمل بطاقته، تجنب المغناطيس القوي، واتصل بالطبيب بعد أي صدمة.</li><li>تابع تحاليل البوتاسيوم والمغنسيوم، واحك للطبيب عن أي دواء جديد.</li></ul>",
+   "en": "<ul><li>Sudden palpitations that start and stop suddenly with dizziness or fainting are not a minor symptom — call the ambulance.</li><li>Adhere to the maintenance drug (Cordarone / Concor) even without symptoms, and do not stop it suddenly.</li><li>Avoid stimulants: excess caffeine, stimulant drugs, energy drinks, smoking.</li><li>Check your pulse and record any episodes.</li><li>If you have an ICD: carry its card, avoid strong magnets, and call the physician after any shock.</li><li>Follow up potassium and magnesium tests, and tell the physician about any new drug.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "VT: تسرع منتظم أكتر من 120/د بـ QRS عريض؛ مستمر لو أكتر من 30 ثانية أو غير مستقر",
+   "أول خطوة: جس النبض وتقييم الاستقرار",
+   "غير مستقر = صدمة متزامنة فوراً؛ بدون نبض = CPR + صدمة غير متزامنة",
+   "المستقر: أميودارون أو لِيدوكايين (الوصفة الشائعة: 2 مجم/كجم ثم 1–4 مجم/د)",
+   "المقاوم: Cordarone تحميل ثم صيانة، مع Concor، والكي أو ICD",
+   "صحّح البوتاسيوم والمغنسيوم وعالج السبب",
+   "VT قد يتحول لـ VF: الجهاز جاهز دائماً"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>تسرع البطين (<b>VT</b>) هو نبض <b>سريع ومنتظم أكتر من 120 في الدقيقة</b> منشؤه البطينين. خطورته إنه ممكن يقلّل ضخ الدم بشدة أو يتحول إلى <b>رجفان بطيني (VF)</b> ويوقف القلب. أول سؤال دايماً: <b>هل فيه نبض؟ وهل المريض مستقر؟</b></p><div class=\"cs-stats\"><div><b>>120/د</b><span>معدل القلب</span></div><div><b>30 ث</b><span>الحد بين المستمر وغير المستمر</span></div><div><b>عريض</b><span>QRS</span></div></div>[[slot:dis-142-types|أنواع VT: مستمر وغير مستمر — رسم من إعداد الموقع|/diseases/img/dis-142-types.svg]]<h4>الأنواع</h4><table><thead><tr><th>النوع</th><th>التعريف</th></tr></thead><tbody><tr><td><b>مستمر (Sustained)</b></td><td>يستمر أكتر من 30 ثانية <b>أو</b> يسبب عدم استقرار دوراني</td></tr><tr><td><b>غير مستمر (Non-sustained)</b></td><td>أقل من 30 ثانية ولا يسبب عدم استقرار</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>VT = احتمال VF</strong><p>أي VT مع غياب النبض يُعامل كـ <b>توقف قلب</b>: إنعاش قلبي رئوي وصدمة غير متزامنة فوراً.</p></div><!--M1--><h4>معلومات مكملة</h4><p>في VT تنقبض البطينات بمعدل أكتر من 160 نبضة/دقيقة حسب المراجع (التعريف الحديث أكتر من 100 مع 3 نبضات متتالية) فلا يمتلئ البطين بما يكفي. يحدث غالباً بعد الجلطة وفي اعتلال العضلة وCAD وهبوط الميترالي. التكرار دليل إنذار سيء.</p>"
-    },
-    "causes": {
-      "ar": "<h4>أسباب مرضية (Pathological)</h4><ul><li>أمراض الشرايين التاجية (الأكتر شيوعاً — خصوصاً بعد الجلطة)</li><li>اعتلال عضلة القلب (cardiomyopathy)</li><li>عيوب قلب خلقية</li><li>روماتيزم القلب</li><li>ارتفاع الضغط</li><li>فرط نشاط الغدة الدرقية</li></ul><h4>أسباب دوائية (Pharmacological)</h4><ul><li>الديجيتال (Digitalis)</li><li>أدوية محاكية للودي (Sympathomimetic)</li><li>بعض مضادات اضطراب النظم نفسها (تأثير حثّ على النظم / إطالة QT)</li></ul><div class=\"cs-box cs-info\"><strong>أسباب أخرى لازم تفتّش عنها</strong><p>نقص البوتاسيوم أو المغنسيوم، إطالة QT (أدوية أو وراثة)، نقص الأكسجين، الحماض، الكوكايين والمنشطات، وجود ندبة جلطة قديمة، متلازمات وراثية.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>الأعراض</h4><ul><li><b>خفقان:</b> سريع، منتظم، متكرر، <b>بداية ونهاية مفاجئة</b>، ومدته قصيرة</li><li><b>أعراض قلة النتاج القلبي:</b> إغماء، ضيق نفس، ذبحة، دوخة، صدمة</li><li><b>موت مفاجئ</b> لو تحوّل إلى رجفان بطيني</li></ul><h4>الفحص</h4><table><thead><tr><th>الفحص</th><th>في VT</th></tr></thead><tbody><tr><td>النبض</td><td>منتظم، أكتر من 120 ن/د، <b>لا يتأثر بتدليك الجيب السباتي</b></td></tr><tr><td>السماعة</td><td>شدة S1 متغيرة، وأحياناً موجات «cannon waves» في الوريد الوداجي (لأن الأذين والبطين مش متزامنين)</td></tr><tr><td>الضغط</td><td>قد يكون طبيعياً أو منخفضاً</td></tr><tr><td>الجلد والوعي</td><td>شحوب وعرق وتغير وعي في عدم الاستقرار</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>مهم للمقارنة</strong><p>تسرع فوق البطيني بـ QRS عريض ممكن يتشابه مع VT. <b>القاعدة الذهبية: QRS عريض + تسرع = VT حتى يثبت العكس.</b> ولا تعطي Verapamil لتسرع عريض غير معروف.</p></div><!--M1--><ul><li>فقد وعي</li><li>انقطاع أو ضعف تنفس</li><li>جلد شاحب مبلل</li><li>دوخة لقلة الأكسجين للمخ</li><li>هبوط ضغط</li><li>نبض ضعيف</li></ul>"
-    },
-    "tests": {
-      "ar": "<h4>تخطيط القلب (ECG)</h4><ul><li><b>QRS:</b> عريض، مشوّه الشكل، سريع، منتظم، معدله أكبر من 120/د</li><li><b>موجة P:</b> طبيعية في معدلها وشكلها لكنها تأتي <b>قبل أو بعد أو مخفية داخل QRS</b> (انفصال أذيني بطيني)</li></ul>[[slot:dis-144-tachy-b|شكل VT على الـ ECG (الشريط الأول) — رسم من دليل قراءة الـ ECG|/diseases/img/dis-144-tachy-b.svg]][[slot:dis-142-ecg-real|صورة: تخطيط ECG حقيقي لـ VT — يُرفع لاحقاً]]<h4>فحوصات داعمة</h4><ul><li>بوتاسيوم ومغنسيوم وكالسيوم ووظائف كلى وغدة درقية وغازات دم</li><li>تروبونين (لاستبعاد جلطة)</li><li>إيكو لتقييم وظيفة البطين وأسباب هيكلية</li><li>قسطرة تاجية أو رنين مغناطيسي حسب الحالة</li><li>دراسة كهربية (EP study) لتحديد البؤرة المسببة</li></ul><!--M1--><ul><li>ABG وأملاح وCBC ومستويات الأدوية وتجلط</li><li>ECG: QRS غير عادي بدون P، يبدأ وينتهي فجأة، أكتر من 160 نبضة</li></ul>"
-    },
-    "treatment": {
-      "ar": "[[slot:dis-142-algorithm|خطوات التعامل مع VT — رسم من إعداد الموقع|/diseases/img/dis-142-algorithm.svg]]<h4>أولاً: VT غير مستقر (Hemodynamically unstable)</h4><p><b>صدمة كهربائية متزامنة فورية (DC cardioversion)</b> ثم <b>لِيدوكايين وريدياً</b> (انظر أدناه).</p><h4>ثانياً: VT مستقر</h4><p><b>Xylocard أمبول 5 سم (لِيدوكايين 20 مجم/سم = 100 مجم/أمبول):</b> <b>1–1.5 مجم/كجم</b> دفعة وريدية بطيئة (0.5–0.75 مجم/كجم في VT المستقر، وتُكرر بنصف الجرعة كل 5–10 دقائق بحد أقصى 3 مجم/كجم)، تليها <b>تسريب 1–4 مجم/دقيقة</b>.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الدليل الحالي (AHA/ACLS 2025) يفضّل <b>أميودارون 150 مجم وريدي خلال 10 دقائق</b> (يُكرر عند التكرار) ثم 1 مجم/دقيقة لـ 6 ساعات لمعظم الـ VT المستقر؛ ويبقى <b>اللِيدوكايين بديلاً</b> (المراجع الحديثة تذكر دفعة 1–1.5 مجم/كجم تُكرر بنصف الجرعة كل 5–10 دقائق بحد أقصى 3 مجم/كجم؛ وقد عُدّلت الجرعة (2 مجم/كجم) لتوافق هذا النطاق، والطبيب يحدد الجرعة). التسريب عادة 1–4 مجم/دقيقة. احسب الجرعة بالوزن واتّبع أمر الطبيب وبروتوكول المستشفى. ومع إطالة QT أو فشل قلب شديد تُتجنب بعض الأدوية (مثل بروكاييناميد).</p></div><h4>ثالثاً: الحالات المقاومة والمتكررة</h4><p><b>Cordarone أمبول 150 مجم:</b> <b>800–1000 مجم/يوم لمدة 7–21 يوماً</b> (تحميل) ثم الصيانة.</p><h4>رابعاً: العلاج الوقائي (Maintenance)</h4><ul><li>Cordarone 200 مجم أقراص مرتين يومياً</li><li>Concor (بيسوبرولول) 5 مجم مرة يومياً</li></ul><h4>خامساً: تعديلات علاجية (Modification)</h4><ul><li>كي البؤرة المسببة بالقسطرة بالترددات الراديوية (catheter radio-frequency ablation)</li><li>كي البؤرة جراحياً (surgical ablation)</li><li>زرع جهاز <b>ICD</b> (Implantable Cardioverter Defibrillator): يكتشف VT/VF ويصدمها تلقائياً</li></ul><div class=\"cs-box cs-tip\"><strong>تصحيح السبب</strong><p>صحّح البوتاسيوم (هدف 4–5) والمغنسيوم (≥2)، عالج الإقفار، وأوقف الأدوية المسببة (ديجيتال، منبهات، أدوية تطيل QT) بأمر الطبيب. VT متعدد الأشكال مع إطالة QT (torsades): <b>كبريتات المغنسيوم 2 جم وريدي</b>.</p></div><!--M1--><h4>تفاصيل</h4><ul><li>CPR وACLS لو لا نبض (VT بلا نبض تُعالج بالصدمة)</li><li>تنبيب وأكسجين</li><li>مضادات اضطراب النظم: ليدوكايين، إبينفرين، بريتيليوم، بروكاينأميد، أميودارون</li><li>تحويل كهربائي متزامن</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>البريتيليوم لم يعد متاحاً، والإبينفرين ليس مضاداً لاضطراب النظم بل للإنعاش. VT بنبض مستقر: أميودارون أو بروكاينأميد؛ غير مستقر: تحويل متزامن.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تأكد من النبض والاستجابة</strong><p>لما تشوف VT على المونيتور: لمّس المريض، نادِ عليه، جس النبض السباتي ≤10 ثوان. <b>مفيش نبض</b> = ابدأ CPR فوراً + نادِ فريق الإنعاش + جهاز الصدمات (VT بدون نبض = صدمة غير متزامنة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>لو في نبض: قيّم الاستقرار</strong><p>ضغط، وعي، ألم صدر، ضيق نفس، شحوب وعرق. غير مستقر = صدمة <b>متزامنة</b> (SYNC) بتخدير سريع لو واعي (بأمر الطبيب).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>جهّز الأساسيات</strong><p>خط وريدي، أكسجين، مونيتور، ECG كامل، شفط وأدوات تهوية، عربة الطوارئ. اطلب عينة بوتاسيوم ومغنسيوم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أدوية اضطراب النظم</strong><p>لِيدوكايين: احسب 1–1.5 مجم/كجم حسب أمر الطبيب، وأعطِ ببطء. التسريب (1–4 مجم/د) بمضخة. راقب علامات السمّية: دوخة، تنميل حول الفم، لخبطة، نعاس، تشنج. أميودارون: خط وريدي كبير، مضخة، راقب الضغط والنبض (بطء/حصار).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>بعد الصدمة المتزامنة</strong><p>ECG فوراً، علامات حيوية، حروق جلد، مجرى هواء، تهدئة المريض. جهّز صدمة ثانية بطاقة أعلى لو استمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الوقاية والمتابعة</strong><p>مراقبة مستمرة، بوتاسيوم/مغنسيوم، أدوية الصيانة في ميعادها (Cordarone: راقب الغدة والكبد والرئة وQT؛ Concor: نبض وضغط قبل كل جرعة). سجّل كل نوبة (المدة، المعدل، الأعراض، العلاج).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف الأسرة والمريض</strong><p>أعراض الخطر، متى يتصل بالإسعاف، كارت ICD وأماكن الجهاز وتجنب المجالات المغناطيسية القوية.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>مريض VT <b>لازم ما يتركش لوحده</b>. جهاز الصدمات جاهز ومشحون ويُفحص يومياً. ولا تضغط زر الصدمة قبل التأكد: <b>الكل بعيد (clear)</b>، لا أكسجين مفتوح قرب الصدر، والوضع <b>SYNC</b> فقط لو في نبض.</p></div><table><thead><tr><th>الحالة</th><th>نوع الصدمة</th></tr></thead><tbody><tr><td>VT بدون نبض أو VF</td><td>غير متزامنة (defibrillation) + CPR</td></tr><tr><td>VT بنبض + غير مستقر</td><td>متزامنة (synchronized cardioversion)</td></tr><tr><td>VT بنبض + مستقر</td><td>دواء؛ والصدمة المتزامنة لو فشل</td></tr></tbody></table><!--M1--><ul><li>ابدأ CPR لو لا نبض</li><li>جهز الأدوية حسب الأمر</li><li>علّم المريض أهمية المتابعة والفحوص الدورية وبلّغ أي دوخة</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً / ابدأ الإنعاش لو:</strong><ul><li>تسرع عريض منتظم على المونيتور + فقد نبض أو وعي</li><li>فقدان وعي أو إغماء (حتى لو قصير)</li><li>ألم صدر، ضيق نفس شديد، شحوب وعرق مع تسرع</li><li>نوبات VT متكررة أو غير مستمرة طويلة</li><li>إطالة QT وتسرع متعدد الأشكال (torsades)</li><li>علامات سمّية لِيدوكايين: تنميل بالفم، تشنج، اضطراب وعي</li><li>صدمة من جهاز ICD (خصوصاً متكررة)</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>الخفقان المفاجئ الذي يبدأ وينتهي فجأة مع دوخة أو إغماء ليس عرضاً بسيطاً — اتصل بالإسعاف.</li><li>الالتزام بدواء الصيانة (Cordarone / Concor) حتى لو مفيش أعراض، ولا توقفه فجأة.</li><li>تجنّب المنبهات: الكافيين الزائد، المنشطات، مشروبات الطاقة، التدخين.</li><li>قيس نبضك وسجّل أي نوبات.</li><li>لو عندك ICD: احمل بطاقته، تجنب المغناطيس القوي، واتصل بالطبيب بعد أي صدمة.</li><li>تابع تحاليل البوتاسيوم والمغنسيوم، واحك للطبيب عن أي دواء جديد.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "VT: تسرع منتظم أكتر من 120/د بـ QRS عريض؛ مستمر لو أكتر من 30 ثانية أو غير مستقر",
-      "أول خطوة: جس النبض وتقييم الاستقرار",
-      "غير مستقر = صدمة متزامنة فوراً؛ بدون نبض = CPR + صدمة غير متزامنة",
-      "المستقر: أميودارون أو لِيدوكايين (الوصفة الشائعة: 2 مجم/كجم ثم 1–4 مجم/د)",
-      "المقاوم: Cordarone تحميل ثم صيانة، مع Concor، والكي أو ICD",
-      "صحّح البوتاسيوم والمغنسيوم وعالج السبب",
-      "VT قد يتحول لـ VF: الجهاز جاهز دائماً"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض على المونيتور VT منتظم، وهو غير مستجيب ولا يوجد نبض. ماذا تفعل؟"
-      },
-      "options": [
-        {
-          "ar": "صدمة متزامنة"
-        },
-        {
-          "ar": "CPR وصدمة غير متزامنة"
-        },
-        {
-          "ar": "لِيدوكايين وانتظر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "VT بدون نبض يُعامل كتوقف قلب: CPR وصدمة غير متزامنة."
-      }
-    },
-    {
-      "q": {
-        "ar": "VT واعي لكن ضغطه 70/40 وبه ألم صدر. الأنسب؟"
-      },
-      "options": [
-        {
-          "ar": "أميودارون ببطء وانتظار"
-        },
-        {
-          "ar": "صدمة متزامنة"
-        },
-        {
-          "ar": "قياس الضغط بعد ساعة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "عدم الاستقرار الدوراني يستوجب صدمة متزامنة فورية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تدل على سمّية اللِيدوكايين؟"
-      },
-      "options": [
-        {
-          "ar": "تنميل حول الفم وتشنج"
-        },
-        {
-          "ar": "عطس"
-        },
-        {
-          "ar": "صداع خفيف فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "سمّية لِيدوكايين تظهر كتنميل ودوخة واضطراب وعي وتشنجات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي ملف يفرّق VT المستمر عن غير المستمر؟"
-      },
-      "options": [
-        {
-          "ar": "الزمن 30 ثانية أو عدم الاستقرار"
-        },
-        {
-          "ar": "لون المريض"
-        },
-        {
-          "ar": "الطول"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "المستمر أكثر من 30 ثانية أو يسبب عدم استقرار."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل تشغيل الصدمة المتزامنة في مريض واعي:"
-      },
-      "options": [
-        {
-          "ar": "لا حاجة لتخدير"
-        },
-        {
-          "ar": "تخدير/تسكين سريع بأمر الطبيب وتأكد من وضع SYNC"
-        },
-        {
-          "ar": "أرفع شحنة الطاقة للأقصى دائماً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تخفف الألم والقلق ويجب ضبط الوضع المتزامن."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء يُستخدم كعلاج وقائي لـ VT المتكرر ضمن البروتوكول؟"
-      },
-      "options": [
-        {
-          "ar": "Cordarone 200 مجم مرتين يومياً + Concor 5 مجم"
-        },
-        {
-          "ar": "فيتامين C"
-        },
-        {
-          "ar": "أسبرين فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "أميودارون وحاصر بيتا (بيسوبرولول) ضمن الصيانة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AHA ACLS Tachycardia Algorithm 2025 / Part 9 Adult Advanced Life Support"
-    },
-    {
-      "title": "2022 ESC Guidelines for ventricular arrhythmias and prevention of sudden cardiac death"
-    },
-    {
-      "title": "StatPearls: Ventricular Tachycardia"
-    },
-    {
-      "title": "Lidocaine ACLS dosing (secondary reference pages seen in search)",
-      "url": "https://acls-algorithms.com/acls-drugs/acls-and-lidocaine/"
-    }
+  "en": [
+   "VT: regular tachycardia over 120/min with wide QRS; sustained if more than 30 seconds or unstable",
+   "First step: check the pulse and assess stability",
+   "Unstable = immediate synchronized shock; pulseless = CPR + unsynchronized shock",
+   "Stable: amiodarone or lidocaine (common prescription: 2 mg/kg, then 1–4 mg/min)",
+   "Refractory: Cordarone loading then maintenance, with Concor, and ablation or ICD",
+   "Correct potassium and magnesium and treat the cause",
+   "VT may turn into VF: keep the device always ready"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض على المونيتور VT منتظم، وهو غير مستجيب ولا يوجد نبض. ماذا تفعل؟",
+    "en": "A patient on the monitor shows regular VT, is unresponsive, and has no pulse. What do you do?"
+   },
+   "options": [
+    {
+     "ar": "صدمة متزامنة",
+     "en": "Synchronized shock"
+    },
+    {
+     "ar": "CPR وصدمة غير متزامنة",
+     "en": "CPR and unsynchronized shock"
+    },
+    {
+     "ar": "لِيدوكايين وانتظر",
+     "en": "Lidocaine and wait"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "VT بدون نبض يُعامل كتوقف قلب: CPR وصدمة غير متزامنة.",
+    "en": "Pulseless VT is treated as cardiac arrest: CPR and an unsynchronized shock."
+   }
+  },
+  {
+   "q": {
+    "ar": "VT واعي لكن ضغطه 70/40 وبه ألم صدر. الأنسب؟",
+    "en": "A conscious VT patient has BP 70/40 and chest pain. Best action?"
+   },
+   "options": [
+    {
+     "ar": "أميودارون ببطء وانتظار",
+     "en": "Slow amiodarone and wait"
+    },
+    {
+     "ar": "صدمة متزامنة",
+     "en": "Synchronized shock"
+    },
+    {
+     "ar": "قياس الضغط بعد ساعة",
+     "en": "Recheck BP in an hour"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "عدم الاستقرار الدوراني يستوجب صدمة متزامنة فورية.",
+    "en": "Hemodynamic instability requires an immediate synchronized shock."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تدل على سمّية اللِيدوكايين؟",
+    "en": "Which sign indicates lidocaine toxicity?"
+   },
+   "options": [
+    {
+     "ar": "تنميل حول الفم وتشنج",
+     "en": "Perioral numbness and seizure"
+    },
+    {
+     "ar": "عطس",
+     "en": "Sneezing"
+    },
+    {
+     "ar": "صداع خفيف فقط",
+     "en": "Mild headache only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "سمّية لِيدوكايين تظهر كتنميل ودوخة واضطراب وعي وتشنجات.",
+    "en": "Lidocaine toxicity appears as numbness, dizziness, altered consciousness, and seizures."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي ملف يفرّق VT المستمر عن غير المستمر؟",
+    "en": "What distinguishes sustained from non-sustained VT?"
+   },
+   "options": [
+    {
+     "ar": "الزمن 30 ثانية أو عدم الاستقرار",
+     "en": "Duration of 30 seconds or instability"
+    },
+    {
+     "ar": "لون المريض",
+     "en": "The patient's color"
+    },
+    {
+     "ar": "الطول",
+     "en": "Height"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "المستمر أكثر من 30 ثانية أو يسبب عدم استقرار.",
+    "en": "Sustained VT lasts more than 30 seconds or causes instability."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل تشغيل الصدمة المتزامنة في مريض واعي:",
+    "en": "Before a synchronized shock in a conscious patient:"
+   },
+   "options": [
+    {
+     "ar": "لا حاجة لتخدير",
+     "en": "No need for sedation"
+    },
+    {
+     "ar": "تخدير/تسكين سريع بأمر الطبيب وتأكد من وضع SYNC",
+     "en": "Quick sedation/analgesia by physician order and confirm SYNC mode"
+    },
+    {
+     "ar": "أرفع شحنة الطاقة للأقصى دائماً",
+     "en": "Always raise the energy to maximum"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تخفف الألم والقلق ويجب ضبط الوضع المتزامن.",
+    "en": "It reduces pain and anxiety, and synchronized mode must be set."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء يُستخدم كعلاج وقائي لـ VT المتكرر ضمن البروتوكول؟",
+    "en": "Which drug is used as preventive treatment for recurrent VT in the protocol?"
+   },
+   "options": [
+    {
+     "ar": "Cordarone 200 مجم مرتين يومياً + Concor 5 مجم",
+     "en": "Cordarone 200 mg twice daily + Concor 5 mg"
+    },
+    {
+     "ar": "فيتامين C",
+     "en": "Vitamin C"
+    },
+    {
+     "ar": "أسبرين فقط",
+     "en": "Aspirin only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "أميودارون وحاصر بيتا (بيسوبرولول) ضمن الصيانة.",
+    "en": "Amiodarone and a beta blocker (bisoprolol) are part of maintenance."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AHA ACLS Tachycardia Algorithm 2025 / Part 9 Adult Advanced Life Support"
+  },
+  {
+   "title": "2022 ESC Guidelines for ventricular arrhythmias and prevention of sudden cardiac death"
+  },
+  {
+   "title": "StatPearls: Ventricular Tachycardia"
+  },
+  {
+   "title": "Lidocaine ACLS dosing (secondary reference pages seen in search)",
+   "url": "https://acls-algorithms.com/acls-drugs/acls-and-lidocaine/"
+  }
+ ]
 }

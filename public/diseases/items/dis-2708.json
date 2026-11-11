@@ -1,193 +1,245 @@
 {
-  "id": "dis-2708",
-  "num": 2708,
-  "system": "chest",
-  "icon": "🩺",
-  "level": 2,
-  "title": {
-    "ar": "أصوات الرئة غير الطبيعية: الصفير والصرير والخراخر والاحتكاك وتنفس شاين-ستوكس (Cheyne-Stokes)",
-    "en": "Abnormal Lung Sounds"
+ "id": "dis-2708",
+ "num": 2708,
+ "system": "chest",
+ "icon": "🩺",
+ "level": 2,
+ "title": {
+  "ar": "أصوات الرئة غير الطبيعية: الصفير والصرير والخراخر والاحتكاك وتنفس شاين-ستوكس (Cheyne-Stokes)",
+  "en": "Abnormal Lung Sounds"
+ },
+ "teaser": {
+  "ar": "مقارنة بين الصفير (Wheeze) والصرير (Stridor) والخراخر (Crackles) والشخير (Rhonchi) واحتكاك الجنب وتنفس شاين-ستوكس: أين تسمعها ولماذا ومتى تتدخل.",
+  "en": "Comparing wheeze, stridor, crackles, rhonchi, pleural friction rub, and Cheyne-Stokes breathing: where you hear them, why, and when to intervene."
+ },
+ "chips": [
+  {
+   "ar": "Wheeze",
+   "en": "Wheeze"
   },
-  "teaser": {
-    "ar": "مقارنة بين الصفير (Wheeze) والصرير (Stridor) والخراخر (Crackles) والشخير (Rhonchi) واحتكاك الجنب وتنفس شاين-ستوكس: أين تسمعها ولماذا ومتى تتدخل."
+  {
+   "ar": "Stridor",
+   "en": "Stridor"
   },
-  "chips": [
-    {
-      "ar": "Wheeze"
-    },
-    {
-      "ar": "Stridor"
-    },
-    {
-      "ar": "Crackles"
-    },
-    {
-      "ar": "Rhonchi"
-    },
-    {
-      "ar": "Pleural rub"
-    }
+  {
+   "ar": "Crackles",
+   "en": "Crackles"
+  },
+  {
+   "ar": "Rhonchi",
+   "en": "Rhonchi"
+  },
+  {
+   "ar": "Pleural rub",
+   "en": "Pleural rub"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>الإصغاء لأصوات الرئة (Auscultation) يحدد سبب ضيق التنفس بسرعة. الصوت ووقته ومكانه يدل على المرض. للتفاصيل الأخرى انظر <a href=\"/diseases/dis-1019\">العلامات الحيوية وأصوات التنفس</a> و<a href=\"/diseases/dis-654\">أساسيات الجهاز التنفسي</a>.</p>[[slot:dis-2708-sounds|مقارنة أصوات الرئة — رسم من إعداد الموقع|/diseases/img/dis-2708-sounds.svg]]",
+   "en": "<p>Listening to lung sounds (Auscultation) quickly identifies the cause of shortness of breath. The sound, its timing, and its location point to the disease. For other details see <a href=\"/diseases/dis-1019\">Vital signs and breath sounds</a> and <a href=\"/diseases/dis-654\">Respiratory system basics</a>.</p>[[slot:dis-2708-sounds|Comparison of lung sounds — illustration prepared by the site|/diseases/img/dis-2708-sounds.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li><strong>الصفير:</strong> تضيق الشعب الهوائية (تشنج قصبي) بسبب التهاب الأنسجة.</li><li><strong>الصرير:</strong> انسداد في الحنجرة أو القصبة الهوائية.</li><li><strong>الخراخر:</strong> فتح حويصلات ملتهبة أو محتقنة بالسوائل «فرقعة».</li><li><strong>الشخير:</strong> إفرازات مخاطية في الشعب.</li><li><strong>احتكاك الجنب:</strong> عدوى تلتهب فيها الجنبة فتحتك الطبقتان.</li><li><strong>شاين-ستوكس:</strong> توقف تنفس ثم ارتفاع CO₂ فيحدث فرط تهوية لطرده.</li></ul>",
+   "en": "<ul><li><strong>Wheeze:</strong> narrowing of the airways (bronchospasm) due to tissue inflammation.</li><li><strong>Stridor:</strong> obstruction in the larynx or trachea.</li><li><strong>Crackles:</strong> opening of inflamed or fluid-filled alveoli, a \"popping\".</li><li><strong>Rhonchi:</strong> mucus secretions in the bronchi.</li><li><strong>Pleural rub:</strong> infection inflames the pleura, so the two layers rub together.</li><li><strong>Cheyne-Stokes:</strong> breathing stops, then CO₂ rises, causing hyperventilation to expel it.</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>تفاصيل كل صوت</h4><ul><li><strong>الصفير:</strong> عالي النغمة «ناي موسيقي»، في الرئة كلها، غالبًا في الزفير. أمراض: نوبة الربو وCOPD.</li><li><strong>الصرير:</strong> صفير عالٍ خشن في <strong>الشهيق</strong> عند الحلق. أمراض: اختناق بجسم غريب، التهاب لسان المزمار (Epiglottitis)، الخناق عند الطفل، <strong>بعد جراحة الغدة الدرقية</strong> (نقطة امتحان). <strong>طارئ مجرى هوائي.</strong></li><li><strong>الخراخر (Crackles):</strong> فقاعات سائلة؛ الدقيقة عالية النغمة (كفرك الشعر بين الأصابع) والخشنة منخفضة (كانفصال الفيلكرو)؛ مكانها الفصوص السفلية (قاعدة الرئة). أمراض: وذمة رئوية (فشل القلب) أو التهاب رئوي.</li><li><strong>الشخير (Rhonchi):</strong> منخفض النغمة كالشخير، في الشعب لا الحويصلات. أمراض: التهاب الشعب، COPD، التهاب رئوي، التليف الكيسي.</li><li><strong>احتكاك الجنب:</strong> منخفض جاف كحجرين يحتكان، مقدمة الرئة في الشهيق والزفير. أمراض: تفاقم الالتهاب الرئوي.</li><li><strong>شاين-ستوكس:</strong> زيادة ونقصان في معدل التنفس مع توقف دوري.</li></ul>",
+   "en": "<h4>Details of each sound</h4><ul><li><strong>Wheeze:</strong> high-pitched, like a \"musical flute\", throughout the lungs, mostly on expiration. Diseases: asthma attack and COPD.</li><li><strong>Stridor:</strong> loud, harsh, high-pitched sound on <strong>inspiration</strong> at the throat. Diseases: choking on a foreign body, epiglottitis, croup in a child, <strong>after thyroid surgery</strong> (exam point). <strong>Airway emergency.</strong></li><li><strong>Crackles:</strong> fluid bubbles; fine crackles are high-pitched (like rubbing hair between the fingers) and coarse ones are low (like Velcro pulling apart); located in the lower lobes (lung bases). Diseases: pulmonary edema (heart failure) or pneumonia.</li><li><strong>Rhonchi:</strong> low-pitched like snoring, in the bronchi not the alveoli. Diseases: bronchitis, COPD, pneumonia, cystic fibrosis.</li><li><strong>Pleural rub:</strong> low and dry like two stones rubbing, over the front of the lung on inspiration and expiration. Diseases: worsening pneumonia.</li><li><strong>Cheyne-Stokes:</strong> increase and decrease in breathing rate with periodic apnea.</li></ul>"
+  },
+  "tests": {
+   "ar": "<p>أشعة صدر، غازات الدم، تأكسج النبض، وبحسب السبب: ثقافة بلغم، BNP عند الشك بفشل القلب (<a href=\"/diseases/dis-653\">فحوصات الجهاز التنفسي</a>).</p>",
+   "en": "<p>Chest X-ray, blood gases, pulse oximetry, and depending on the cause: sputum culture, BNP when heart failure is suspected (<a href=\"/diseases/dis-653\">Respiratory system tests</a>).</p>"
+  },
+  "treatment": {
+   "ar": "<table><thead><tr><th>الصوت</th><th>العلاج</th></tr></thead><tbody><tr><td>صفير</td><td>نوبة ربو: albuterol وipratropium وmethylprednisolone (بأمر الطبيب)</td></tr><tr><td>صرير</td><td>تنبيب رغامي أو جراحة</td></tr><tr><td>خراخر</td><td>مدرات مثل furosemide (وذمة رئوية)، مضاد حيوي (عدوى)</td></tr><tr><td>شخير</td><td>قرع الصدر (سترة اهتزاز) وسوائل لتخفيف المخاط</td></tr><tr><td>احتكاك جنب</td><td>TCDB، مقياس تنفس حافز، مضاد حيوي</td></tr><tr><td>شاين-ستوكس</td><td>تنبيب وتهوية ميكانيكية</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<table><thead><tr><th>Sound</th><th>Treatment</th></tr></thead><tbody><tr><td>Wheeze</td><td>Asthma attack: albuterol, ipratropium, and methylprednisolone (per physician order)</td></tr><tr><td>Stridor</td><td>Endotracheal intubation or surgery</td></tr><tr><td>Crackles</td><td>Diuretics such as furosemide (pulmonary edema), antibiotic (infection)</td></tr><tr><td>Rhonchi</td><td>Chest percussion (vibration vest) and fluids to thin the mucus</td></tr><tr><td>Pleural rub</td><td>TCDB, incentive spirometer, antibiotic</td></tr><tr><td>Cheyne-Stokes</td><td>Intubation and mechanical ventilation</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Dose alert</strong><p>Doses are for learning; always verify with the physician/pharmacist before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ol><li>الصرير = طارئ: لا تترك المريض، أبلغ وجهّز مجرى هوائي.</li><li>راقب العلامات الحيوية والتأكسج، ارفع رأس السرير.</li><li>شجّع السعال والتنفس العميق (TCDB) وقياس التنفس الحافز لمرضى احتكاك الجنب.</li><li>بعد جراحة الغدة الدرقية: راقب الصرير وصعوبة التنفس (وذمة أو تشنج حنجرة).</li></ol>",
+   "en": "<ol><li>Stridor = emergency: do not leave the patient, report, and prepare an airway.</li><li>Monitor vital signs and oxygenation, raise the head of the bed.</li><li>Encourage coughing and deep breathing (TCDB) and incentive spirometry for patients with a pleural rub.</li><li>After thyroid surgery: monitor for stridor and difficulty breathing (edema or laryngospasm).</li></ol>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>طارئ</strong><p>صرير، توقف تنفس دوري (شاين-ستوكس)، أو صفير مع زرقة: بلّغ فورًا.</p></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Emergency</strong><p>Stridor, periodic apnea (Cheyne-Stokes), or wheeze with cyanosis: report immediately.</p></div>"
+  },
+  "teaching": {
+   "ar": "<p>علّم المريض التنفس العميق والسعال الفعال وتجنب المحفزات (للربو) وشرب السوائل لتخفيف المخاط.</p>",
+   "en": "<p>Teach the patient deep breathing, effective coughing, avoiding triggers (for asthma), and drinking fluids to thin the mucus.</p>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الصفير: زفير، ضيق الشعب، الربو وCOPD",
+   "الصرير: شهيق، طارئ مجرى هوائي، بعد جراحة الدرقية",
+   "الخراخر: القواعد، وذمة رئوية أو التهاب رئوي",
+   "الشخير: شعب، إفرازات؛ قرع صدر وسوائل",
+   "احتكاك الجنب: شهيق وزفير، التهاب الجنبة",
+   "شاين-ستوكس: تنفس متقطع مع فرط تهوية"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>الإصغاء لأصوات الرئة (Auscultation) يحدد سبب ضيق التنفس بسرعة. الصوت ووقته ومكانه يدل على المرض. للتفاصيل الأخرى انظر <a href=\"/diseases/dis-1019\">العلامات الحيوية وأصوات التنفس</a> و<a href=\"/diseases/dis-654\">أساسيات الجهاز التنفسي</a>.</p>[[slot:dis-2708-sounds|مقارنة أصوات الرئة — رسم من إعداد الموقع|/diseases/img/dis-2708-sounds.svg]]"
-    },
-    "causes": {
-      "ar": "<ul><li><strong>الصفير:</strong> تضيق الشعب الهوائية (تشنج قصبي) بسبب التهاب الأنسجة.</li><li><strong>الصرير:</strong> انسداد في الحنجرة أو القصبة الهوائية.</li><li><strong>الخراخر:</strong> فتح حويصلات ملتهبة أو محتقنة بالسوائل «فرقعة».</li><li><strong>الشخير:</strong> إفرازات مخاطية في الشعب.</li><li><strong>احتكاك الجنب:</strong> عدوى تلتهب فيها الجنبة فتحتك الطبقتان.</li><li><strong>شاين-ستوكس:</strong> توقف تنفس ثم ارتفاع CO₂ فيحدث فرط تهوية لطرده.</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>تفاصيل كل صوت</h4><ul><li><strong>الصفير:</strong> عالي النغمة «ناي موسيقي»، في الرئة كلها، غالبًا في الزفير. أمراض: نوبة الربو وCOPD.</li><li><strong>الصرير:</strong> صفير عالٍ خشن في <strong>الشهيق</strong> عند الحلق. أمراض: اختناق بجسم غريب، التهاب لسان المزمار (Epiglottitis)، الخناق عند الطفل، <strong>بعد جراحة الغدة الدرقية</strong> (نقطة امتحان). <strong>طارئ مجرى هوائي.</strong></li><li><strong>الخراخر (Crackles):</strong> فقاعات سائلة؛ الدقيقة عالية النغمة (كفرك الشعر بين الأصابع) والخشنة منخفضة (كانفصال الفيلكرو)؛ مكانها الفصوص السفلية (قاعدة الرئة). أمراض: وذمة رئوية (فشل القلب) أو التهاب رئوي.</li><li><strong>الشخير (Rhonchi):</strong> منخفض النغمة كالشخير، في الشعب لا الحويصلات. أمراض: التهاب الشعب، COPD، التهاب رئوي، التليف الكيسي.</li><li><strong>احتكاك الجنب:</strong> منخفض جاف كحجرين يحتكان، مقدمة الرئة في الشهيق والزفير. أمراض: تفاقم الالتهاب الرئوي.</li><li><strong>شاين-ستوكس:</strong> زيادة ونقصان في معدل التنفس مع توقف دوري.</li></ul>"
-    },
-    "tests": {
-      "ar": "<p>أشعة صدر، غازات الدم، تأكسج النبض، وبحسب السبب: ثقافة بلغم، BNP عند الشك بفشل القلب (<a href=\"/diseases/dis-653\">فحوصات الجهاز التنفسي</a>).</p>"
-    },
-    "treatment": {
-      "ar": "<table><thead><tr><th>الصوت</th><th>العلاج</th></tr></thead><tbody><tr><td>صفير</td><td>نوبة ربو: albuterol وipratropium وmethylprednisolone (بأمر الطبيب)</td></tr><tr><td>صرير</td><td>تنبيب رغامي أو جراحة</td></tr><tr><td>خراخر</td><td>مدرات مثل furosemide (وذمة رئوية)، مضاد حيوي (عدوى)</td></tr><tr><td>شخير</td><td>قرع الصدر (سترة اهتزاز) وسوائل لتخفيف المخاط</td></tr><tr><td>احتكاك جنب</td><td>TCDB، مقياس تنفس حافز، مضاد حيوي</td></tr><tr><td>شاين-ستوكس</td><td>تنبيب وتهوية ميكانيكية</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ol><li>الصرير = طارئ: لا تترك المريض، أبلغ وجهّز مجرى هوائي.</li><li>راقب العلامات الحيوية والتأكسج، ارفع رأس السرير.</li><li>شجّع السعال والتنفس العميق (TCDB) وقياس التنفس الحافز لمرضى احتكاك الجنب.</li><li>بعد جراحة الغدة الدرقية: راقب الصرير وصعوبة التنفس (وذمة أو تشنج حنجرة).</li></ol>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>طارئ</strong><p>صرير، توقف تنفس دوري (شاين-ستوكس)، أو صفير مع زرقة: بلّغ فورًا.</p></div>"
-    },
-    "teaching": {
-      "ar": "<p>علّم المريض التنفس العميق والسعال الفعال وتجنب المحفزات (للربو) وشرب السوائل لتخفيف المخاط.</p>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الصفير: زفير، ضيق الشعب، الربو وCOPD",
-      "الصرير: شهيق، طارئ مجرى هوائي، بعد جراحة الدرقية",
-      "الخراخر: القواعد، وذمة رئوية أو التهاب رئوي",
-      "الشخير: شعب، إفرازات؛ قرع صدر وسوائل",
-      "احتكاك الجنب: شهيق وزفير، التهاب الجنبة",
-      "شاين-ستوكس: تنفس متقطع مع فرط تهوية"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "صوت عالٍ خشن في الشهيق عند الحلق لمريض بعد جراحة الغدة الدرقية. ماذا يعني؟"
-      },
-      "options": [
-        {
-          "ar": "صرير: انسداد مجرى هوائي طارئ"
-        },
-        {
-          "ar": "خراخر"
-        },
-        {
-          "ar": "احتكاك جنب"
-        },
-        {
-          "ar": "تنفس طبيعي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الصرير علامة انسداد حنجري/قصبي ويتطلب تدخلًا عاجلًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "خراخر بقاعدتي الرئتين مع فشل قلب. أي علاج متوقع؟"
-      },
-      "options": [
-        {
-          "ar": "مدر مثل furosemide"
-        },
-        {
-          "ar": "مضاد صرع"
-        },
-        {
-          "ar": "مهدئ"
-        },
-        {
-          "ar": "مسكن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الوذمة الرئوية تُعالج بالمدرات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي صوت يُسمع غالبًا في الزفير وعالي النغمة؟"
-      },
-      "options": [
-        {
-          "ar": "الصفير"
-        },
-        {
-          "ar": "الخراخر"
-        },
-        {
-          "ar": "احتكاك الجنب"
-        },
-        {
-          "ar": "الشخير"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الصفير في ضيق الشعب الهوائية."
-      }
-    },
-    {
-      "q": {
-        "ar": "احتكاك الجنب يُسمع في؟"
-      },
-      "options": [
-        {
-          "ar": "الشهيق والزفير على مقدمة الصدر"
-        },
-        {
-          "ar": "القواعد فقط"
-        },
-        {
-          "ar": "الحلق فقط"
-        },
-        {
-          "ar": "الظهر فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "سببه التهاب الجنبة."
-      }
-    },
-    {
-      "q": {
-        "ar": "الشخير (Rhonchi) سببه؟"
-      },
-      "options": [
-        {
-          "ar": "إفرازات مخاطية في الشعب"
-        },
-        {
-          "ar": "حويصلات منهارة"
-        },
-        {
-          "ar": "انسداد حنجرة"
-        },
-        {
-          "ar": "احتكاك جنب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يتحسن بالسعال وقرع الصدر."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "NCLEX-RN Test Plan (NCSBN)"
-    },
-    {
-      "title": "Brunner & Suddarth Textbook of Medical-Surgical Nursing"
-    }
+  "en": [
+   "Wheeze: expiration, narrowed airways, asthma and COPD",
+   "Stridor: inspiration, airway emergency, after thyroid surgery",
+   "Crackles: bases, pulmonary edema or pneumonia",
+   "Rhonchi: bronchi, secretions; chest percussion and fluids",
+   "Pleural rub: inspiration and expiration, pleural inflammation",
+   "Cheyne-Stokes: periodic breathing with hyperventilation"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "صوت عالٍ خشن في الشهيق عند الحلق لمريض بعد جراحة الغدة الدرقية. ماذا يعني؟",
+    "en": "A loud, harsh sound on inspiration at the throat in a patient after thyroid surgery. What does it mean?"
+   },
+   "options": [
+    {
+     "ar": "صرير: انسداد مجرى هوائي طارئ",
+     "en": "Stridor: emergency airway obstruction"
+    },
+    {
+     "ar": "خراخر",
+     "en": "Crackles"
+    },
+    {
+     "ar": "احتكاك جنب",
+     "en": "Pleural rub"
+    },
+    {
+     "ar": "تنفس طبيعي",
+     "en": "Normal breathing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الصرير علامة انسداد حنجري/قصبي ويتطلب تدخلًا عاجلًا.",
+    "en": "Stridor is a sign of laryngeal/tracheal obstruction and requires urgent intervention."
+   }
+  },
+  {
+   "q": {
+    "ar": "خراخر بقاعدتي الرئتين مع فشل قلب. أي علاج متوقع؟",
+    "en": "Crackles at both lung bases with heart failure. Which treatment is expected?"
+   },
+   "options": [
+    {
+     "ar": "مدر مثل furosemide",
+     "en": "A diuretic such as furosemide"
+    },
+    {
+     "ar": "مضاد صرع",
+     "en": "An antiepileptic"
+    },
+    {
+     "ar": "مهدئ",
+     "en": "A sedative"
+    },
+    {
+     "ar": "مسكن",
+     "en": "An analgesic"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الوذمة الرئوية تُعالج بالمدرات.",
+    "en": "Pulmonary edema is treated with diuretics."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي صوت يُسمع غالبًا في الزفير وعالي النغمة؟",
+    "en": "Which sound is mostly heard on expiration and is high-pitched?"
+   },
+   "options": [
+    {
+     "ar": "الصفير",
+     "en": "Wheeze"
+    },
+    {
+     "ar": "الخراخر",
+     "en": "Crackles"
+    },
+    {
+     "ar": "احتكاك الجنب",
+     "en": "Pleural rub"
+    },
+    {
+     "ar": "الشخير",
+     "en": "Rhonchi"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الصفير في ضيق الشعب الهوائية.",
+    "en": "Wheeze occurs with airway narrowing."
+   }
+  },
+  {
+   "q": {
+    "ar": "احتكاك الجنب يُسمع في؟",
+    "en": "A pleural rub is heard:"
+   },
+   "options": [
+    {
+     "ar": "الشهيق والزفير على مقدمة الصدر",
+     "en": "On inspiration and expiration over the front of the chest"
+    },
+    {
+     "ar": "القواعد فقط",
+     "en": "At the bases only"
+    },
+    {
+     "ar": "الحلق فقط",
+     "en": "At the throat only"
+    },
+    {
+     "ar": "الظهر فقط",
+     "en": "On the back only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "سببه التهاب الجنبة.",
+    "en": "It is caused by pleural inflammation."
+   }
+  },
+  {
+   "q": {
+    "ar": "الشخير (Rhonchi) سببه؟",
+    "en": "Rhonchi are caused by:"
+   },
+   "options": [
+    {
+     "ar": "إفرازات مخاطية في الشعب",
+     "en": "Mucus secretions in the bronchi"
+    },
+    {
+     "ar": "حويصلات منهارة",
+     "en": "Collapsed alveoli"
+    },
+    {
+     "ar": "انسداد حنجرة",
+     "en": "Laryngeal obstruction"
+    },
+    {
+     "ar": "احتكاك جنب",
+     "en": "Pleural rub"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يتحسن بالسعال وقرع الصدر.",
+    "en": "They improve with coughing and chest percussion."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "NCLEX-RN Test Plan (NCSBN)"
+  },
+  {
+   "title": "Brunner & Suddarth Textbook of Medical-Surgical Nursing"
+  }
+ ]
 }

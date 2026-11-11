@@ -1,155 +1,195 @@
 {
-  "id": "dis-541",
-  "num": 541,
-  "system": "endo",
-  "icon": "🩸",
-  "level": 2,
-  "target": "diseases",
-  "title": {
-    "ar": "علاج السكر النوع الأول بالإنسولين: حساب الجرعة وأنظمة الحقن",
-    "en": "Type 1 Diabetes Insulin Regimens: Dose Calculation & Titration"
+ "id": "dis-541",
+ "num": 541,
+ "system": "endo",
+ "icon": "🩸",
+ "level": 2,
+ "target": "diseases",
+ "title": {
+  "ar": "علاج السكر النوع الأول بالإنسولين: حساب الجرعة وأنظمة الحقن",
+  "en": "Type 1 Diabetes Insulin Regimens: Dose Calculation & Titration"
+ },
+ "teaser": {
+  "ar": "الجرعة الابتدائية بالوزن، نظام N&R وLantus&R، تعديل الجرعة حسب توقيت السكر العالي، ومثال طفل 40 كجم محلول بالأرقام.",
+  "en": "The starting dose by weight, the N&R and Lantus&R regimens, adjusting the dose by the timing of high glucose, and a worked example of a 40 kg child with the numbers."
+ },
+ "chips": [
+  {
+   "ar": "حساب الجرعة",
+   "en": "Dose calculation"
   },
-  "teaser": {
-    "ar": "الجرعة الابتدائية بالوزن، نظام N&R وLantus&R، تعديل الجرعة حسب توقيت السكر العالي، ومثال طفل 40 كجم محلول بالأرقام."
+  {
+   "ar": "N & R",
+   "en": "N & R"
   },
-  "chips": [
-    {
-      "ar": "حساب الجرعة"
-    },
-    {
-      "ar": "N & R"
-    },
-    {
-      "ar": "Lantus & R"
-    }
+  {
+   "ar": "Lantus & R",
+   "en": "Lantus & R"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>مريض النوع الأول (Type 1 DM) بيحتاج الإنسولين طول العمر ومن اليوم الأول. العلاج مش بس «حقنة»، لكنه <b>تثقيف + أكل + رياضة + أنظمة حقن</b> تحاكي اللي بيعمله الجسم الطبيعي: كمية أساسية من الإنسولين طول اليوم (Basal) + جرعات إضافية مع كل وجبة (Bolus).</p><div class=\"cs-stats\"><div><b>0.5</b><span>وحدة/كجم/يوم جرعة ابتدائية للوزن المتوسط</span></div><div><b>50/50</b><span>أساسي : وجبات</span></div><div><b>4</b><span>حقن يومياً في الأنظمة الأساسية</span></div><div><b>3–7</b><span>أيام ثم نراجع القراءات</span></div></div><h4>أول خطوة: التثقيف (Patient education)</h4><ul><li>لازم <b>تُبلّغ المريض بالتشخيص</b> وتشرح له طبيعة المرض برفق؛ خبر الإصابة بالسكر يمثل مأساة كبيرة لشريحة واسعة من الناس، ولذلك بيتم تجاهل النقطة دي كتير بالغلط.</li><li>لازم يفهم إن السكر <b>مرض مزمن مش مشكلة مؤقتة</b> (Once diabetic always diabetic).</li><li>لو التزم بتعليمات الأكل والعلاج والمتابعة هيحافظ على نفسه ويعيش حياة طبيعية بدون مشاكل. أما الإهمال في الأكل أو العلاج أو المتابعة فبيعرّضه لمضاعفات زي تعب الكلى والشبكية والقلب.</li></ul><h4>الأكل والرياضة</h4><p>ممارسة الرياضة والمشي لو أمكن + نظام الأكل زي ما اتشرح في دليل السكر (وجبات صغيرة منتظمة، كربوهيدرات محسوبة، وسلطة مع كل وجبة).</p><h4>أنواع الإنسولين المتاحة في السوق المصري</h4><table><thead><tr><th>النوع</th><th>الأسماء التجارية</th><th>التركيز / الشكل</th></tr></thead><tbody><tr><td>قصير المفعول (Short / Regular)</td><td>Humulin R · Actrapid · Insulin R</td><td>فيال 10 مل: 40 أو 100 وحدة/مل</td></tr><tr><td>متوسط المفعول (Intermediate / NPH)</td><td>Insulatard · Humulin N · Insulin N</td><td>فيال 10 مل: 40 أو 100 وحدة/مل</td></tr><tr><td>طويل المفعول (Long-acting)</td><td>Lantus</td><td>كارتريدج 3 مل، 100 وحدة/مل</td></tr><tr><td>فائق السرعة (Ultra-short)</td><td>Apidra</td><td>كارتريدج 3 مل، 100 وحدة/مل</td></tr><tr><td>مخلوط 30% قصير + 70% متوسط</td><td>Insulin Mixtard · Human insulin Mix</td><td>فيال 10 مل: 40 أو 100 وحدة/مل</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>الأقلام الجاهزة</strong><p>Penfill وFlexpen وNovolet أشكال تانية للإنسولين (أقلام وخراطيش جاهزة)، لكنها غالية جداً فبتُستخدم لمرضى الإمكانيات العالية.</p></div>\n<p>الأساس العام للإنسولين وأنواعه ومواضع الحقن: <a href=\"/diseases/dis-022\">دليل الإنسولين</a>، والنوع الثاني: <a href=\"/diseases/dis-545\">علاج النوع الثاني عملياً</a>، والصورة الكاملة: <a href=\"/diseases/dis-020\">دليل السكر</a>.</p>",
+   "en": "<p>A patient with Type 1 DM needs insulin for life, from day one. Treatment is not just “an injection”; it is <b>education + diet + exercise + injection regimens</b> that mimic what the normal body does: a baseline amount of insulin all day (Basal) + extra doses with each meal (Bolus).</p><div class=\"cs-stats\"><div><b>0.5</b><span>units/kg/day starting dose for average weight</span></div><div><b>50/50</b><span>basal : meals</span></div><div><b>4</b><span>injections daily in the basic regimens</span></div><div><b>3–7</b><span>days, then we review the readings</span></div></div><h4>First step: patient education</h4><ul><li>You must <b>inform the patient of the diagnosis</b> and explain the nature of the disease gently; the news of having diabetes is a major tragedy for many people, which is why this point is often wrongly skipped.</li><li>They must understand that diabetes is <b>a chronic disease, not a temporary problem</b> (Once diabetic always diabetic).</li><li>If they follow the diet, treatment, and follow-up instructions, they will protect themselves and live a normal life without problems. Neglecting diet, treatment, or follow-up exposes them to complications such as kidney, retina, and heart damage.</li></ul><h4>Diet and exercise</h4><p>Exercise and walking if possible + the meal plan as explained in the diabetes guide (small regular meals, counted carbohydrates, and a salad with every meal).</p><h4>Insulin types available in the Egyptian market</h4><table><thead><tr><th>Type</th><th>Brand names</th><th>Concentration / form</th></tr></thead><tbody><tr><td>Short-acting (Short / Regular)</td><td>Humulin R · Actrapid · Insulin R</td><td>10 mL vial: 40 or 100 units/mL</td></tr><tr><td>Intermediate-acting (Intermediate / NPH)</td><td>Insulatard · Humulin N · Insulin N</td><td>10 mL vial: 40 or 100 units/mL</td></tr><tr><td>Long-acting</td><td>Lantus</td><td>3 mL cartridge, 100 units/mL</td></tr><tr><td>Ultra-short</td><td>Apidra</td><td>3 mL cartridge, 100 units/mL</td></tr><tr><td>Premixed 30% short + 70% intermediate</td><td>Insulin Mixtard · Human insulin Mix</td><td>10 mL vial: 40 or 100 units/mL</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Prefilled pens</strong><p>Penfill, Flexpen, and Novolet are other insulin forms (ready-made pens and cartridges), but they are very expensive, so they are used for patients who can afford them.</p></div>\n<p>General basics of insulin, its types, and injection sites: <a href=\"/diseases/dis-022\">insulin guide</a>; type 2: <a href=\"/diseases/dis-545\">practical type 2 treatment</a>; and the full picture: <a href=\"/diseases/dis-020\">diabetes guide</a>.</p>"
+  },
+  "causes": {
+   "ar": "<h4>حساب الجرعة الابتدائية</h4><table><thead><tr><th>الطريقة</th><th>الحساب</th></tr></thead><tbody><tr><td>حسب وزن الجسم (Body weight)</td><td>الجسم المتوسط: الوزن × 0.5 · الجسم النحيف: الوزن × 0.4 · الجسم السمين: الوزن × 0.6 (وحدة/يوم)</td></tr><tr><td>حسب سكر الصايم (Fasting blood glucose method)</td><td>سكر الصايم ÷ 5</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>ابدأ بأقل جرعة ممكنة</strong><p>المقلق دائماً هو <b>هبوط السكر (Hypoglycemia)</b> وليس ارتفاعه. زيادة الجرعة بتتظبط مع الوقت وبالتدريج، وارتفاع السكر شوية مش مشكلة كبيرة، أما النقص فهو الخطر.</p></div><p>في حالة النوع الأول تُقسّم الجرعة المحسوبة: <b>50% قصير المفعول (Short) + 50% متوسط المفعول (Intermediate)</b>.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المعادلات دي تقريبية للبداية. الإرشادات الحديثة للنوع الأول: الجرعة الكلية 0.4–1 وحدة/كجم/يوم (أقل في الأطفال في فترة شهر العسل وكبار السن، وأكبر في المراهقين والمرضى المقاومين)، وتُعدَّل حسب قراءات السكر. طريقة «سكر الصايم ÷ 5» غير شائعة في الإرشادات العالمية، فخلي القرار لأمر الطبيب. الأنظمة الحديثة المفضّلة: Basal-bolus بإنسولين طويل (Glargine/Detemir/Degludec) + سريع.</p></div>",
+   "en": "<h4>Calculating the starting dose</h4><table><thead><tr><th>Method</th><th>Calculation</th></tr></thead><tbody><tr><td>By body weight</td><td>Average build: weight × 0.5 · thin build: weight × 0.4 · obese build: weight × 0.6 (units/day)</td></tr><tr><td>By fasting blood glucose (fasting blood glucose method)</td><td>Fasting glucose ÷ 5</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Start with the lowest possible dose</strong><p>The worry is always <b>hypoglycemia</b>, not high glucose. Dose increases are adjusted gradually over time, and slightly high glucose is not a big problem, but low glucose is the danger.</p></div><p>In type 1, the calculated dose is divided: <b>50% short-acting (Short) + 50% intermediate-acting (Intermediate)</b>.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><p>These formulas are approximate for starting. Current guidelines for type 1: total daily dose 0.4–1 unit/kg/day (lower in children during the honeymoon period and in older adults, higher in adolescents and resistant patients), adjusted by glucose readings. The “fasting glucose ÷ 5” method is not common in international guidelines, so leave the decision to the physician's order. The preferred modern regimens: Basal-bolus with long-acting insulin (Glargine/Detemir/Degludec) + rapid-acting.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>طرق إعطاء الإنسولين (Methods of administration)</h4><p>النوع الأول يحتاج تحكماً قوياً في السكر، فلازم الطريقة تكون مماثلة لما يفعله الجسم الطبيعي، ولذلك نستخدم نظام <b>Basal-Bolus (ممنوع الإنسولين المخلوط Mixtard هنا)</b>: كمية أساسية في الدم طول اليوم + جرعات إضافية بعد الـ 3 وجبات لاستيعاب ارتفاع الجلوكوز. الإنسولين المخلوط لا يغطي اليوم كاملاً بهذه الدقة. فيه 3 طرق تقريباً:</p>[[slot:dis-541-regimens|نظاما N&R وLantus&R خلال اليوم|/diseases/img/dis-541-regimens.svg]]<h4>الطريقة 1: N & R (رخيصة شوية – 4 شكات)</h4><ul><li><b>Humulin N (العكر):</b> قبل الفطار وقبل النوم.</li><li><b>Humulin R (الرايق):</b> قبل كل وجبة (3 مرات).</li><li>حقنتا الصباح (N + R) بيتاخدوا مع بعض في سرنجة واحدة: يُسحب الرايق (R) أولاً وبعدين العكر (N). السبب: لو دخل أثر من العكر (N) في فيال الرايق (R) بيبوّظ صفاءه وبيأثر على مفعوله، لكن العكس مش بيحصل مشكلة كبيرة.</li><li>لما نجي نوزع جرعة الرايق على الـ 3 وجبات ولو مش بالتساوي: نعطي النصيب الأكبر لوجبة الغدا لأنها الأهم والأكبر عند المريض (أكبر وجبة).</li></ul><h4>الطريقة 2: Lantus & R (أغلى شوية – 4 شكات)</h4><ul><li><b>Lantus:</b> في معاد ثابت يومياً، غالباً قبل النوم.</li><li><b>Humulin R:</b> قبل كل وجبة.</li></ul><h4>الطريقة 3: Lantus & Ultra-short (مكلفة – 4 شكات أو أكثر)</h4><ul><li><b>Lantus:</b> في معاد ثابت غالباً قبل النوم. <b>Ultra-short</b> (مثل Apidra): قبل كل وجبة.</li><li>مناسبة لمريض ماديّاً كويس ووجباته غير منتظمة أو بياكل أكتر من 3 وجبات فاليوم.</li><li>المريض المصري غالباً مش بيهتم بمتابعة القراءات؛ في الحالة دي ممكن نعدّل الجرعات بناءً على أسئلة مثل «بتدخل الحمام بالليل كام مرة؟» (أكتر من 3–4 مرات = الجرعة محتاجة تتظبط).</li></ul>",
+   "en": "<h4>Methods of administration</h4><p>Type 1 needs tight glucose control, so the method must mimic what the normal body does; that is why we use a <b>Basal-Bolus regimen (premixed Mixtard insulin is not used here)</b>: a baseline amount in the blood all day + extra doses with the 3 meals to handle the rise in glucose. Premixed insulin does not cover the whole day this precisely. There are roughly 3 methods:</p>[[slot:dis-541-regimens|The N&R and Lantus&R regimens over the day|/diseases/img/dis-541-regimens.svg]]<h4>Method 1: N & R (somewhat cheaper – 4 injections)</h4><ul><li><b>Humulin N (cloudy):</b> before breakfast and at bedtime.</li><li><b>Humulin R (clear):</b> before each meal (3 times).</li><li>The two morning injections (N + R) are given together in one syringe: draw up the clear (R) first, then the cloudy (N). The reason: if any cloudy (N) gets into the clear (R) vial, it spoils its clarity and affects its action, but the reverse does not cause a big problem.</li><li>When dividing the clear dose over the 3 meals, if not equally: give the largest share to lunch, because it is the most important and largest meal for the patient.</li></ul><h4>Method 2: Lantus & R (somewhat more expensive – 4 injections)</h4><ul><li><b>Lantus:</b> at a fixed time daily, usually at bedtime.</li><li><b>Humulin R:</b> before each meal.</li></ul><h4>Method 3: Lantus & Ultra-short (costly – 4 injections or more)</h4><ul><li><b>Lantus:</b> at a fixed time, usually at bedtime. <b>Ultra-short</b> (such as Apidra): before each meal.</li><li>Suitable for a patient who can afford it, whose meals are irregular, or who eats more than 3 meals a day.</li><li>Egyptian patients often do not bother tracking readings; in that case, doses can be adjusted based on questions such as “How many times do you go to the bathroom at night?” (more than 3–4 times = the dose needs adjusting).</li></ul>"
+  },
+  "tests": {
+   "ar": "<h4>المتابعة وتعديل الجرعة</h4><p>قبل الوجبات وصايم: لما العيان يبدأ العلاج بيتابع السكر ثم يجيبلي القراءات بعد <b>3–7 أيام</b>.</p>[[slot:dis-541-titration|دليل تعديل الجرعة حسب توقيت القراءة العالية|/diseases/img/dis-541-titration.svg]]<h4>أولاً: N & R</h4><table><thead><tr><th>الموقف</th><th>التعديل</th></tr></thead><tbody><tr><td>السكر صايم مش مظبوط</td><td>تظبيط N بالليل</td></tr><tr><td>قبل الغدا والعشا مش مظبوطين</td><td>تظبيط N الصبح</td></tr><tr><td>قبل الغدا فقط مش مظبوط</td><td>تظبيط R الفطار</td></tr><tr><td>قبل العشا فقط مش مظبوط</td><td>تظبيط R الغدا</td></tr><tr><td>قبل الفطار مش مظبوط</td><td>تظبيط N بالليل (هو اللي يغطي الصبح)</td></tr></tbody></table><h4>لو السكر الصايم عالي: احتمالان</h4><ul><li><b>إما N بالليل قليلة:</b> نقص الإنسولين ← ارتفاع سكر الصباح (Hyperglycemia in morning).</li><li><b>إما N بالليل عالية:</b> زيادة الإنسولين ← هبوط سكر بالليل ← ارتفاع سكر ارتدادي في الصباح (Reactive hyperglycemia, Somogyi).</li></ul><p>طيب هنعرف السبب ونعدّل الجرعة إزاي؟ اسأل العيان:</p><ul><li>بتقوم بالليل من النوم تعبان وعرقان وتاكل حاجة مسكرة؟</li><li>بتحلم أحلام وحشة وإنت نايم؟ لو الحاجات دي بتحصل فمعناه إن في <b>هبوط سكر وقت الفجر (Hypoglycemia at dawn time)</b>.</li><li>بتتعشى بالليل؟ العشاء المتروك بعد حقنة R = هبوط سكر.</li><li>ممكن نزود قراءة رابعة لقياس السكر الساعة 4 فجراً لتحديد السبب.</li></ul><h4>ثانياً: Lantus & R</h4><table><thead><tr><th>الموقف</th><th>التعديل</th></tr></thead><tbody><tr><td>سكر الصايم مش مظبوط</td><td>تظبيط Lantus (نفس قصة N بالضبط)</td></tr><tr><td>قبل الغدا والعشا مش مظبوطين</td><td>تظبيط Lantus</td></tr><tr><td>قبل الغدا فقط</td><td>R الفطار</td></tr><tr><td>قبل العشا فقط</td><td>R الغدا</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>ملاحظة مهمة</strong><p>لو مستوى السكر عموماً بالمتابعة متأثر صايم وفي كل الوجبات، التعديل يبقى على جرعات الصبح أو الليل (جرعة الإنسولين الطويل/المتوسط). أما لو المشكلة في وجبة واحدة فالتعديل يتم على <b>الجرعة السابقة للوجبة دي فقط</b>. ولا تنسَ التأكد من الأكل لأنه ممكن يكون هو اللي ملخبط القراءات في حين إن الجرعات مظبوطة.</p></div><h4>ثالثاً: Lantus & Ultra-short</h4><p>نفس منطق Lantus & R، مع تعديل الجرعة بحسب الأسئلة العملية (مثال عدد مرات دخول الحمام بالليل) لو المريض مش بيهتم بمتابعة القراءات.</p>",
+   "en": "<h4>Follow-up and dose adjustment</h4><p>Before meals and fasting: when the patient starts treatment, they track glucose and bring the readings after <b>3–7 days</b>.</p>[[slot:dis-541-titration|Guide to dose adjustment by the timing of the high reading|/diseases/img/dis-541-titration.svg]]<h4>First: N & R</h4><table><thead><tr><th>Situation</th><th>Adjustment</th></tr></thead><tbody><tr><td>Fasting glucose not controlled</td><td>Adjust the night N</td></tr><tr><td>Before lunch and dinner not controlled</td><td>Adjust the morning N</td></tr><tr><td>Only before lunch not controlled</td><td>Adjust the breakfast R</td></tr><tr><td>Only before dinner not controlled</td><td>Adjust the lunch R</td></tr><tr><td>Before breakfast not controlled</td><td>Adjust the night N (it covers the morning)</td></tr></tbody></table><h4>If fasting glucose is high: two possibilities</h4><ul><li><b>Either the night N is too low:</b> insulin deficiency → high morning glucose (Hyperglycemia in morning).</li><li><b>Or the night N is too high:</b> excess insulin → hypoglycemia at night → rebound high glucose in the morning (Reactive hyperglycemia, Somogyi).</li></ul><p>So how do we find the cause and adjust the dose? Ask the patient:</p><ul><li>Do you wake up at night tired and sweaty and eat something sweet?</li><li>Do you have bad dreams while asleep? If these happen, it means there is <b>hypoglycemia at dawn time</b>.</li><li>Do you eat dinner? A dinner skipped after an R injection = hypoglycemia.</li><li>We can add a fourth glucose reading at 4 AM to identify the cause.</li></ul><h4>Second: Lantus & R</h4><table><thead><tr><th>Situation</th><th>Adjustment</th></tr></thead><tbody><tr><td>Fasting glucose not controlled</td><td>Adjust Lantus (exactly the same as N)</td></tr><tr><td>Before lunch and dinner not controlled</td><td>Adjust Lantus</td></tr><tr><td>Only before lunch</td><td>Breakfast R</td></tr><tr><td>Only before dinner</td><td>Lunch R</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>Important note</strong><p>If glucose on follow-up is generally affected when fasting and at all meals, the adjustment is to the morning or night doses (the long/intermediate insulin dose). If the problem is in one meal only, the adjustment is to <b>the dose before that meal only</b>. And do not forget to check the diet, because it may be what is disturbing the readings while the doses are correct.</p></div><h4>Third: Lantus & Ultra-short</h4><p>The same logic as Lantus & R, adjusting the dose with practical questions (for example, how many times the patient goes to the bathroom at night) if the patient does not bother tracking readings.</p>"
+  },
+  "treatment": {
+   "ar": "<h4>مثال تطبيقي كامل</h4><div class=\"cs-box cs-pearl\"><strong>طفل عنده 10 سنين، وزنه 40 كجم، تم تشخيصه بالسكر النوع الأول. إيه بروتوكول علاجه بالإنسولين؟</strong><p>الجرعة الابتدائية = 0.5 × 40 = <b>20 وحدة/يوم</b>.</p></div><table><thead><tr><th>النظام</th><th>التوزيع</th></tr></thead><tbody><tr><td>N & R</td><td>N (50%) = 10 وحدات: 5 وحدات قبل الفطار + 5 وحدات قبل النوم · R (50%) = 10 وحدات: 3 قبل الفطار + 4 قبل الغدا + 3 قبل العشا</td></tr><tr><td>Lantus & R</td><td>Lantus (50%) = 10 وحدات قبل النوم · R (50%) = 10 وحدات (زي ما سبق: 3 + 4 + 3)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>في الأطفال والمراهقين تُحسب الجرعات حسب بروتوكول مركز السكر (غالباً 0.7–1 وحدة/كجم/يوم في المراهقة). مثال توزيع 20 وحدة تعليمي وبسيط؛ المتابعة وتعديل الطبيب هما الأساس. لا تغيّر الجرعة بنفسك.</p></div><h4>أنظمة بديلة</h4><p>مضخات الإنسولين (Pumps) وأنظمة القياس المستمر (CGM) خيارات حديثة، لكنها خارج نطاق الدليل العملي هنا.</p>",
+   "en": "<h4>Complete worked example</h4><div class=\"cs-box cs-pearl\"><strong>A 10-year-old child weighing 40 kg was diagnosed with type 1 diabetes. What is the insulin treatment protocol?</strong><p>Starting dose = 0.5 × 40 = <b>20 units/day</b>.</p></div><table><thead><tr><th>Regimen</th><th>Distribution</th></tr></thead><tbody><tr><td>N & R</td><td>N (50%) = 10 units: 5 units before breakfast + 5 units at bedtime · R (50%) = 10 units: 3 before breakfast + 4 before lunch + 3 before dinner</td></tr><tr><td>Lantus & R</td><td>Lantus (50%) = 10 units at bedtime · R (50%) = 10 units (as above: 3 + 4 + 3)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>In children and adolescents, doses are calculated per the diabetes center protocol (often 0.7–1 unit/kg/day in adolescence). The 20-unit distribution example is simple and for teaching; follow-up and physician adjustment are the basis. Do not change the dose yourself.</p></div><h4>Alternative systems</h4><p>Insulin pumps and continuous glucose monitoring (CGM) are modern options, but they are outside the scope of this practical guide.</p>"
+  },
+  "nursing": {
+   "ar": "<p>مريض النوع الأول: أولويتك الحفاظ على الإنسولين الأساسي (حتى لو مش بياكل) وتفادي الهبوط:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اقيس السكر قبل كل جرعة</strong><p>وقبل النوم. سجّل التوقيت وعلاقته بالأكل والإنسولين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اربط النوع بتوقيته</strong><p>R قبل الوجبة بنص ساعة تقريباً · N وLantus في الميعاد الثابت · لا تحقن R من غير وجبة جاهزة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>لا توقف الإنسولين القاعدي</strong><p>لو المريض مريض أو مش بياكل: ما توقفش N/Lantus، بلّغ الطبيب (خطر DKA).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اسأل عن أعراض الليل</strong><p>عرق، كوابيس، صداع الصبح = شك في هبوط ليلي. بلّغ ووثّق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راجع الأكل</strong><p>وزّع الكربوهيدرات على الوجبات، والتزم بمواعيدها، وراقب النشاط والرياضة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ثقّف الأسرة</strong><p>خصوصاً لو الطفل: تدرّب على الحقن، السكر، وعلاج الهبوط بالسكر السريع، وسجل القراءات اليومية.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أمان</strong><p>الإنسولين عالي الخطورة. ما تعطيش جرعة وجبة لمريض لن يأكل. لو السكر أقل من 70 عالج الهبوط أولاً ثم بلّغ.</p></div>",
+   "en": "<p>For a type 1 patient, your priority is to maintain basal insulin (even if not eating) and avoid hypoglycemia:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Check glucose before every dose</strong><p>And at bedtime. Record the time and its relation to meals and insulin.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Match the type to its timing</strong><p>R about half an hour before the meal · N and Lantus at the fixed time · do not inject R without a meal ready.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Do not stop basal insulin</strong><p>If the patient is sick or not eating: do not stop N/Lantus; notify the physician (risk of DKA).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Ask about night symptoms</strong><p>Sweating, nightmares, morning headache = suspect nighttime hypoglycemia. Report and document.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Review the diet</strong><p>Spread carbohydrates over meals, keep meal times, and monitor activity and exercise.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Educate the family</strong><p>Especially if it is a child: training on injections, glucose checks, treating hypoglycemia with fast sugar, and a daily readings log.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety</strong><p>Insulin is high-alert. Do not give a meal dose to a patient who will not eat. If glucose is below 70, treat the hypoglycemia first, then report.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>سكر أقل من 70 مع أعراض أو فقدان وعي</li><li>سكر عالي مع قيء/ألم بطن/تنفس عميق/ريحة أسيتون (DKA)</li><li>هبوط متكرر ليلاً أو ارتفاع صباحي مستمر رغم تعديل الجرعة</li><li>خطأ في النوع أو الجرعة أو التركيز</li><li>مريض النوع الأول مريض أو مش بياكل (لا توقف القاعدي، بلّغ فوراً)</li></ul>",
+   "en": "<ul><li>Glucose below 70 with symptoms or loss of consciousness</li><li>High glucose with vomiting/abdominal pain/deep breathing/acetone breath (DKA)</li><li>Repeated nighttime hypoglycemia or persistent morning highs despite dose adjustment</li><li>An error in type, dose, or concentration</li><li>A type 1 patient who is sick or not eating (do not stop basal; report immediately)</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>السكر النوع الأول مرض مزمن، الإنسولين مش بيتوقف حتى لو السكر اتظبط.</li><li>احقن في الميعاد، وكُل بعد الحقنة، وغيّر مكان الحقن.</li><li>قِس السكر قبل الوجبات وقبل النوم واكتب القراءات وارجع بيها للطبيب بعد 3–7 أيام من أي تغيير.</li><li>لو قمت بالليل عرقان أو تعبان: كُل حاجة سكرية وقيس واحكي للطبيب.</li><li>ما توقفش الإنسولين لو تعبت أو ما أكلتش؛ اتصل بالطبيب.</li><li>الالتزام بيحميك من مضاعفات الكلى والعين والقلب.</li></ul>",
+   "en": "<ul><li>Type 1 diabetes is a chronic disease; insulin is not stopped even if glucose is controlled.</li><li>Inject on time, eat after the injection, and rotate injection sites.</li><li>Check glucose before meals and at bedtime, write down the readings, and bring them to the physician 3–7 days after any change.</li><li>If you wake at night sweaty or unwell: eat something sugary, check, and tell the physician.</li><li>Do not stop insulin if you are sick or did not eat; call the physician.</li><li>Adherence protects you from kidney, eye, and heart complications.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "جرعة البداية: الوزن × 0.5 (متوسط) / 0.4 (نحيف) / 0.6 (سمين) وحدة/يوم، وابدأ بأقل جرعة",
+   "النوع الأول: Basal-Bolus (50% أساسي + 50% عند الوجبات) ولا يُستخدم Mixtard",
+   "N&R: N الصبح وقبل النوم + R قبل كل وجبة · Lantus&R: Lantus قبل النوم + R قبل كل وجبة",
+   "السكر الصايم العالي: تظبيط N/Lantus بالليل بعد استبعاد هبوط الفجر (Somogyi)",
+   "قبل الغدا عالي ← R الفطار · قبل العشا عالي ← R الغدا",
+   "راجع القراءات بعد 3–7 أيام، وتأكد من الأكل قبل تعديل الجرعة"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>مريض النوع الأول (Type 1 DM) بيحتاج الإنسولين طول العمر ومن اليوم الأول. العلاج مش بس «حقنة»، لكنه <b>تثقيف + أكل + رياضة + أنظمة حقن</b> تحاكي اللي بيعمله الجسم الطبيعي: كمية أساسية من الإنسولين طول اليوم (Basal) + جرعات إضافية مع كل وجبة (Bolus).</p><div class=\"cs-stats\"><div><b>0.5</b><span>وحدة/كجم/يوم جرعة ابتدائية للوزن المتوسط</span></div><div><b>50/50</b><span>أساسي : وجبات</span></div><div><b>4</b><span>حقن يومياً في الأنظمة الأساسية</span></div><div><b>3–7</b><span>أيام ثم نراجع القراءات</span></div></div><h4>أول خطوة: التثقيف (Patient education)</h4><ul><li>لازم <b>تُبلّغ المريض بالتشخيص</b> وتشرح له طبيعة المرض برفق؛ خبر الإصابة بالسكر يمثل مأساة كبيرة لشريحة واسعة من الناس، ولذلك بيتم تجاهل النقطة دي كتير بالغلط.</li><li>لازم يفهم إن السكر <b>مرض مزمن مش مشكلة مؤقتة</b> (Once diabetic always diabetic).</li><li>لو التزم بتعليمات الأكل والعلاج والمتابعة هيحافظ على نفسه ويعيش حياة طبيعية بدون مشاكل. أما الإهمال في الأكل أو العلاج أو المتابعة فبيعرّضه لمضاعفات زي تعب الكلى والشبكية والقلب.</li></ul><h4>الأكل والرياضة</h4><p>ممارسة الرياضة والمشي لو أمكن + نظام الأكل زي ما اتشرح في دليل السكر (وجبات صغيرة منتظمة، كربوهيدرات محسوبة، وسلطة مع كل وجبة).</p><h4>أنواع الإنسولين المتاحة في السوق المصري</h4><table><thead><tr><th>النوع</th><th>الأسماء التجارية</th><th>التركيز / الشكل</th></tr></thead><tbody><tr><td>قصير المفعول (Short / Regular)</td><td>Humulin R · Actrapid · Insulin R</td><td>فيال 10 مل: 40 أو 100 وحدة/مل</td></tr><tr><td>متوسط المفعول (Intermediate / NPH)</td><td>Insulatard · Humulin N · Insulin N</td><td>فيال 10 مل: 40 أو 100 وحدة/مل</td></tr><tr><td>طويل المفعول (Long-acting)</td><td>Lantus</td><td>كارتريدج 3 مل، 100 وحدة/مل</td></tr><tr><td>فائق السرعة (Ultra-short)</td><td>Apidra</td><td>كارتريدج 3 مل، 100 وحدة/مل</td></tr><tr><td>مخلوط 30% قصير + 70% متوسط</td><td>Insulin Mixtard · Human insulin Mix</td><td>فيال 10 مل: 40 أو 100 وحدة/مل</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>الأقلام الجاهزة</strong><p>Penfill وFlexpen وNovolet أشكال تانية للإنسولين (أقلام وخراطيش جاهزة)، لكنها غالية جداً فبتُستخدم لمرضى الإمكانيات العالية.</p></div>\n<p>الأساس العام للإنسولين وأنواعه ومواضع الحقن: <a href=\"/diseases/dis-022\">دليل الإنسولين</a>، والنوع الثاني: <a href=\"/diseases/dis-545\">علاج النوع الثاني عملياً</a>، والصورة الكاملة: <a href=\"/diseases/dis-020\">دليل السكر</a>.</p>"
-    },
-    "causes": {
-      "ar": "<h4>حساب الجرعة الابتدائية</h4><table><thead><tr><th>الطريقة</th><th>الحساب</th></tr></thead><tbody><tr><td>حسب وزن الجسم (Body weight)</td><td>الجسم المتوسط: الوزن × 0.5 · الجسم النحيف: الوزن × 0.4 · الجسم السمين: الوزن × 0.6 (وحدة/يوم)</td></tr><tr><td>حسب سكر الصايم (Fasting blood glucose method)</td><td>سكر الصايم ÷ 5</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>ابدأ بأقل جرعة ممكنة</strong><p>المقلق دائماً هو <b>هبوط السكر (Hypoglycemia)</b> وليس ارتفاعه. زيادة الجرعة بتتظبط مع الوقت وبالتدريج، وارتفاع السكر شوية مش مشكلة كبيرة، أما النقص فهو الخطر.</p></div><p>في حالة النوع الأول تُقسّم الجرعة المحسوبة: <b>50% قصير المفعول (Short) + 50% متوسط المفعول (Intermediate)</b>.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المعادلات دي تقريبية للبداية. الإرشادات الحديثة للنوع الأول: الجرعة الكلية 0.4–1 وحدة/كجم/يوم (أقل في الأطفال في فترة شهر العسل وكبار السن، وأكبر في المراهقين والمرضى المقاومين)، وتُعدَّل حسب قراءات السكر. طريقة «سكر الصايم ÷ 5» غير شائعة في الإرشادات العالمية، فخلي القرار لأمر الطبيب. الأنظمة الحديثة المفضّلة: Basal-bolus بإنسولين طويل (Glargine/Detemir/Degludec) + سريع.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>طرق إعطاء الإنسولين (Methods of administration)</h4><p>النوع الأول يحتاج تحكماً قوياً في السكر، فلازم الطريقة تكون مماثلة لما يفعله الجسم الطبيعي، ولذلك نستخدم نظام <b>Basal-Bolus (ممنوع الإنسولين المخلوط Mixtard هنا)</b>: كمية أساسية في الدم طول اليوم + جرعات إضافية بعد الـ 3 وجبات لاستيعاب ارتفاع الجلوكوز. الإنسولين المخلوط لا يغطي اليوم كاملاً بهذه الدقة. فيه 3 طرق تقريباً:</p>[[slot:dis-541-regimens|نظاما N&R وLantus&R خلال اليوم|/diseases/img/dis-541-regimens.svg]]<h4>الطريقة 1: N & R (رخيصة شوية – 4 شكات)</h4><ul><li><b>Humulin N (العكر):</b> قبل الفطار وقبل النوم.</li><li><b>Humulin R (الرايق):</b> قبل كل وجبة (3 مرات).</li><li>حقنتا الصباح (N + R) بيتاخدوا مع بعض في سرنجة واحدة: يُسحب الرايق (R) أولاً وبعدين العكر (N). السبب: لو دخل أثر من العكر (N) في فيال الرايق (R) بيبوّظ صفاءه وبيأثر على مفعوله، لكن العكس مش بيحصل مشكلة كبيرة.</li><li>لما نجي نوزع جرعة الرايق على الـ 3 وجبات ولو مش بالتساوي: نعطي النصيب الأكبر لوجبة الغدا لأنها الأهم والأكبر عند المريض (أكبر وجبة).</li></ul><h4>الطريقة 2: Lantus & R (أغلى شوية – 4 شكات)</h4><ul><li><b>Lantus:</b> في معاد ثابت يومياً، غالباً قبل النوم.</li><li><b>Humulin R:</b> قبل كل وجبة.</li></ul><h4>الطريقة 3: Lantus & Ultra-short (مكلفة – 4 شكات أو أكثر)</h4><ul><li><b>Lantus:</b> في معاد ثابت غالباً قبل النوم. <b>Ultra-short</b> (مثل Apidra): قبل كل وجبة.</li><li>مناسبة لمريض ماديّاً كويس ووجباته غير منتظمة أو بياكل أكتر من 3 وجبات فاليوم.</li><li>المريض المصري غالباً مش بيهتم بمتابعة القراءات؛ في الحالة دي ممكن نعدّل الجرعات بناءً على أسئلة مثل «بتدخل الحمام بالليل كام مرة؟» (أكتر من 3–4 مرات = الجرعة محتاجة تتظبط).</li></ul>"
-    },
-    "tests": {
-      "ar": "<h4>المتابعة وتعديل الجرعة</h4><p>قبل الوجبات وصايم: لما العيان يبدأ العلاج بيتابع السكر ثم يجيبلي القراءات بعد <b>3–7 أيام</b>.</p>[[slot:dis-541-titration|دليل تعديل الجرعة حسب توقيت القراءة العالية|/diseases/img/dis-541-titration.svg]]<h4>أولاً: N & R</h4><table><thead><tr><th>الموقف</th><th>التعديل</th></tr></thead><tbody><tr><td>السكر صايم مش مظبوط</td><td>تظبيط N بالليل</td></tr><tr><td>قبل الغدا والعشا مش مظبوطين</td><td>تظبيط N الصبح</td></tr><tr><td>قبل الغدا فقط مش مظبوط</td><td>تظبيط R الفطار</td></tr><tr><td>قبل العشا فقط مش مظبوط</td><td>تظبيط R الغدا</td></tr><tr><td>قبل الفطار مش مظبوط</td><td>تظبيط N بالليل (هو اللي يغطي الصبح)</td></tr></tbody></table><h4>لو السكر الصايم عالي: احتمالان</h4><ul><li><b>إما N بالليل قليلة:</b> نقص الإنسولين ← ارتفاع سكر الصباح (Hyperglycemia in morning).</li><li><b>إما N بالليل عالية:</b> زيادة الإنسولين ← هبوط سكر بالليل ← ارتفاع سكر ارتدادي في الصباح (Reactive hyperglycemia, Somogyi).</li></ul><p>طيب هنعرف السبب ونعدّل الجرعة إزاي؟ اسأل العيان:</p><ul><li>بتقوم بالليل من النوم تعبان وعرقان وتاكل حاجة مسكرة؟</li><li>بتحلم أحلام وحشة وإنت نايم؟ لو الحاجات دي بتحصل فمعناه إن في <b>هبوط سكر وقت الفجر (Hypoglycemia at dawn time)</b>.</li><li>بتتعشى بالليل؟ العشاء المتروك بعد حقنة R = هبوط سكر.</li><li>ممكن نزود قراءة رابعة لقياس السكر الساعة 4 فجراً لتحديد السبب.</li></ul><h4>ثانياً: Lantus & R</h4><table><thead><tr><th>الموقف</th><th>التعديل</th></tr></thead><tbody><tr><td>سكر الصايم مش مظبوط</td><td>تظبيط Lantus (نفس قصة N بالضبط)</td></tr><tr><td>قبل الغدا والعشا مش مظبوطين</td><td>تظبيط Lantus</td></tr><tr><td>قبل الغدا فقط</td><td>R الفطار</td></tr><tr><td>قبل العشا فقط</td><td>R الغدا</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>ملاحظة مهمة</strong><p>لو مستوى السكر عموماً بالمتابعة متأثر صايم وفي كل الوجبات، التعديل يبقى على جرعات الصبح أو الليل (جرعة الإنسولين الطويل/المتوسط). أما لو المشكلة في وجبة واحدة فالتعديل يتم على <b>الجرعة السابقة للوجبة دي فقط</b>. ولا تنسَ التأكد من الأكل لأنه ممكن يكون هو اللي ملخبط القراءات في حين إن الجرعات مظبوطة.</p></div><h4>ثالثاً: Lantus & Ultra-short</h4><p>نفس منطق Lantus & R، مع تعديل الجرعة بحسب الأسئلة العملية (مثال عدد مرات دخول الحمام بالليل) لو المريض مش بيهتم بمتابعة القراءات.</p>"
-    },
-    "treatment": {
-      "ar": "<h4>مثال تطبيقي كامل</h4><div class=\"cs-box cs-pearl\"><strong>طفل عنده 10 سنين، وزنه 40 كجم، تم تشخيصه بالسكر النوع الأول. إيه بروتوكول علاجه بالإنسولين؟</strong><p>الجرعة الابتدائية = 0.5 × 40 = <b>20 وحدة/يوم</b>.</p></div><table><thead><tr><th>النظام</th><th>التوزيع</th></tr></thead><tbody><tr><td>N & R</td><td>N (50%) = 10 وحدات: 5 وحدات قبل الفطار + 5 وحدات قبل النوم · R (50%) = 10 وحدات: 3 قبل الفطار + 4 قبل الغدا + 3 قبل العشا</td></tr><tr><td>Lantus & R</td><td>Lantus (50%) = 10 وحدات قبل النوم · R (50%) = 10 وحدات (زي ما سبق: 3 + 4 + 3)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>في الأطفال والمراهقين تُحسب الجرعات حسب بروتوكول مركز السكر (غالباً 0.7–1 وحدة/كجم/يوم في المراهقة). مثال توزيع 20 وحدة تعليمي وبسيط؛ المتابعة وتعديل الطبيب هما الأساس. لا تغيّر الجرعة بنفسك.</p></div><h4>أنظمة بديلة</h4><p>مضخات الإنسولين (Pumps) وأنظمة القياس المستمر (CGM) خيارات حديثة، لكنها خارج نطاق الدليل العملي هنا.</p>"
-    },
-    "nursing": {
-      "ar": "<p>مريض النوع الأول: أولويتك الحفاظ على الإنسولين الأساسي (حتى لو مش بياكل) وتفادي الهبوط:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اقيس السكر قبل كل جرعة</strong><p>وقبل النوم. سجّل التوقيت وعلاقته بالأكل والإنسولين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اربط النوع بتوقيته</strong><p>R قبل الوجبة بنص ساعة تقريباً · N وLantus في الميعاد الثابت · لا تحقن R من غير وجبة جاهزة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>لا توقف الإنسولين القاعدي</strong><p>لو المريض مريض أو مش بياكل: ما توقفش N/Lantus، بلّغ الطبيب (خطر DKA).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اسأل عن أعراض الليل</strong><p>عرق، كوابيس، صداع الصبح = شك في هبوط ليلي. بلّغ ووثّق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راجع الأكل</strong><p>وزّع الكربوهيدرات على الوجبات، والتزم بمواعيدها، وراقب النشاط والرياضة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ثقّف الأسرة</strong><p>خصوصاً لو الطفل: تدرّب على الحقن، السكر، وعلاج الهبوط بالسكر السريع، وسجل القراءات اليومية.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أمان</strong><p>الإنسولين عالي الخطورة. ما تعطيش جرعة وجبة لمريض لن يأكل. لو السكر أقل من 70 عالج الهبوط أولاً ثم بلّغ.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>سكر أقل من 70 مع أعراض أو فقدان وعي</li><li>سكر عالي مع قيء/ألم بطن/تنفس عميق/ريحة أسيتون (DKA)</li><li>هبوط متكرر ليلاً أو ارتفاع صباحي مستمر رغم تعديل الجرعة</li><li>خطأ في النوع أو الجرعة أو التركيز</li><li>مريض النوع الأول مريض أو مش بياكل (لا توقف القاعدي، بلّغ فوراً)</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>السكر النوع الأول مرض مزمن، الإنسولين مش بيتوقف حتى لو السكر اتظبط.</li><li>احقن في الميعاد، وكُل بعد الحقنة، وغيّر مكان الحقن.</li><li>قِس السكر قبل الوجبات وقبل النوم واكتب القراءات وارجع بيها للطبيب بعد 3–7 أيام من أي تغيير.</li><li>لو قمت بالليل عرقان أو تعبان: كُل حاجة سكرية وقيس واحكي للطبيب.</li><li>ما توقفش الإنسولين لو تعبت أو ما أكلتش؛ اتصل بالطبيب.</li><li>الالتزام بيحميك من مضاعفات الكلى والعين والقلب.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "جرعة البداية: الوزن × 0.5 (متوسط) / 0.4 (نحيف) / 0.6 (سمين) وحدة/يوم، وابدأ بأقل جرعة",
-      "النوع الأول: Basal-Bolus (50% أساسي + 50% عند الوجبات) ولا يُستخدم Mixtard",
-      "N&R: N الصبح وقبل النوم + R قبل كل وجبة · Lantus&R: Lantus قبل النوم + R قبل كل وجبة",
-      "السكر الصايم العالي: تظبيط N/Lantus بالليل بعد استبعاد هبوط الفجر (Somogyi)",
-      "قبل الغدا عالي ← R الفطار · قبل العشا عالي ← R الغدا",
-      "راجع القراءات بعد 3–7 أيام، وتأكد من الأكل قبل تعديل الجرعة"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "طفل وزنه 40 كجم، جسم متوسط. الجرعة الابتدائية التقريبية؟"
-      },
-      "options": [
-        {
-          "ar": "10 وحدات"
-        },
-        {
-          "ar": "20 وحدة"
-        },
-        {
-          "ar": "40 وحدة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "0.5 × 40 = 20 وحدة/يوم، توزع 50% أساسي + 50% وجبات."
-      }
-    },
-    {
-      "q": {
-        "ar": "السكر قبل العشا فقط مش مظبوط في مريض على N&R. نعدل؟"
-      },
-      "options": [
-        {
-          "ar": "N الصبح"
-        },
-        {
-          "ar": "R الغدا"
-        },
-        {
-          "ar": "N بالليل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الجرعة السابقة للوجبة المسؤولة (R الغدا)."
-      }
-    },
-    {
-      "q": {
-        "ar": "لماذا يُمنع Mixtard في النوع الأول كنظام أساسي؟"
-      },
-      "options": [
-        {
-          "ar": "غالي"
-        },
-        {
-          "ar": "لا يحقق تغطية Basal-bolus الدقيقة"
-        },
-        {
-          "ar": "ممنوع على الأطفال"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "النوع الأول يحتاج تحكم قوي بجرعات أساسية + وجبات."
-      }
-    },
-    {
-      "q": {
-        "ar": "سكر الصايم عالي ومريض بيصحى عرقان بالليل. أقرب تفسير؟"
-      },
-      "options": [
-        {
-          "ar": "نقص إنسولين فقط"
-        },
-        {
-          "ar": "هبوط ليلي ثم ارتفاع ارتدادي (Somogyi)"
-        },
-        {
-          "ar": "غير مرتبط بالإنسولين"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يلزم قياس السكر 4 فجراً قبل زيادة الجرعة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ADA Standards of Care in Diabetes 2025: Pharmacologic approaches; Children and Adolescents"
-    },
-    {
-      "title": "ISPAD Clinical Practice Consensus Guidelines (insulin treatment)"
-    },
-    {
-      "title": "Joint British Diabetes Societies: Safe use of insulin"
-    }
+  "en": [
+   "Starting dose: weight × 0.5 (average) / 0.4 (thin) / 0.6 (obese) units/day, and start with the lowest dose",
+   "Type 1: Basal-Bolus (50% basal + 50% with meals), and Mixtard is not used",
+   "N&R: N in the morning and at bedtime + R before each meal · Lantus&R: Lantus at bedtime + R before each meal",
+   "High fasting glucose: adjust the night N/Lantus after ruling out dawn hypoglycemia (Somogyi)",
+   "High before lunch → breakfast R · high before dinner → lunch R",
+   "Review readings after 3–7 days, and check the diet before adjusting the dose"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "طفل وزنه 40 كجم، جسم متوسط. الجرعة الابتدائية التقريبية؟",
+    "en": "A child weighing 40 kg with an average build. The approximate starting dose?"
+   },
+   "options": [
+    {
+     "ar": "10 وحدات",
+     "en": "10 units"
+    },
+    {
+     "ar": "20 وحدة",
+     "en": "20 units"
+    },
+    {
+     "ar": "40 وحدة",
+     "en": "40 units"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "0.5 × 40 = 20 وحدة/يوم، توزع 50% أساسي + 50% وجبات.",
+    "en": "0.5 × 40 = 20 units/day, divided 50% basal + 50% meals."
+   }
+  },
+  {
+   "q": {
+    "ar": "السكر قبل العشا فقط مش مظبوط في مريض على N&R. نعدل؟",
+    "en": "Only the before-dinner glucose is not controlled in a patient on N&R. What do we adjust?"
+   },
+   "options": [
+    {
+     "ar": "N الصبح",
+     "en": "Morning N"
+    },
+    {
+     "ar": "R الغدا",
+     "en": "Lunch R"
+    },
+    {
+     "ar": "N بالليل",
+     "en": "Night N"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الجرعة السابقة للوجبة المسؤولة (R الغدا).",
+    "en": "The dose before the responsible meal (lunch R)."
+   }
+  },
+  {
+   "q": {
+    "ar": "لماذا يُمنع Mixtard في النوع الأول كنظام أساسي؟",
+    "en": "Why is Mixtard not used in type 1 as the main regimen?"
+   },
+   "options": [
+    {
+     "ar": "غالي",
+     "en": "It is expensive"
+    },
+    {
+     "ar": "لا يحقق تغطية Basal-bolus الدقيقة",
+     "en": "It does not achieve precise Basal-bolus coverage"
+    },
+    {
+     "ar": "ممنوع على الأطفال",
+     "en": "It is forbidden for children"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "النوع الأول يحتاج تحكم قوي بجرعات أساسية + وجبات.",
+    "en": "Type 1 needs tight control with basal + meal doses."
+   }
+  },
+  {
+   "q": {
+    "ar": "سكر الصايم عالي ومريض بيصحى عرقان بالليل. أقرب تفسير؟",
+    "en": "High fasting glucose and a patient who wakes up sweaty at night. The most likely explanation?"
+   },
+   "options": [
+    {
+     "ar": "نقص إنسولين فقط",
+     "en": "Insulin deficiency only"
+    },
+    {
+     "ar": "هبوط ليلي ثم ارتفاع ارتدادي (Somogyi)",
+     "en": "Nighttime hypoglycemia, then rebound high (Somogyi)"
+    },
+    {
+     "ar": "غير مرتبط بالإنسولين",
+     "en": "Not related to insulin"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يلزم قياس السكر 4 فجراً قبل زيادة الجرعة.",
+    "en": "Glucose should be checked at 4 AM before increasing the dose."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ADA Standards of Care in Diabetes 2025: Pharmacologic approaches; Children and Adolescents"
+  },
+  {
+   "title": "ISPAD Clinical Practice Consensus Guidelines (insulin treatment)"
+  },
+  {
+   "title": "Joint British Diabetes Societies: Safe use of insulin"
+  }
+ ]
 }

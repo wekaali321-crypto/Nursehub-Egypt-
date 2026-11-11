@@ -1,185 +1,234 @@
 {
-  "id": "dis-3107",
-  "num": 3107,
-  "system": "cardio",
-  "icon": "❤️‍🩹",
-  "level": 2,
-  "target": "er-reception",
-  "title": {
-    "ar": "الإنعاش القلبي الرئوي الأساسي (BLS/CPR): بالغ وطفل ورضيع وحامل",
-    "en": "Basic Life Support & CPR"
+ "id": "dis-3107",
+ "num": 3107,
+ "system": "cardio",
+ "icon": "❤️‍🩹",
+ "level": 2,
+ "target": "er-reception",
+ "title": {
+  "ar": "الإنعاش القلبي الرئوي الأساسي (BLS/CPR): بالغ وطفل ورضيع وحامل",
+  "en": "Basic Life Support & CPR"
+ },
+ "teaser": {
+  "ar": "الفسيولوجيا المرضية للسكتة القلبية، الأسباب (Hs & Ts)، أرقام الضغطات، لصقات AED للبالغ والطفل، إنعاش الرضيع والحامل، الأسيستول وPEA، ما بعد الإنعاش.",
+  "en": "Pathophysiology of cardiac arrest, causes (Hs & Ts), compression numbers, AED pads for adults and children, CPR for infants and pregnant women, asystole and PEA, and post-resuscitation care."
+ },
+ "chips": [
+  {
+   "ar": "بالغ",
+   "en": "Adult"
   },
-  "teaser": {
-    "ar": "الفسيولوجيا المرضية للسكتة القلبية، الأسباب (Hs & Ts)، أرقام الضغطات، لصقات AED للبالغ والطفل، إنعاش الرضيع والحامل، الأسيستول وPEA، ما بعد الإنعاش."
+  {
+   "ar": "طفل ورضيع",
+   "en": "Child and infant"
   },
-  "chips": [
-    {
-      "ar": "بالغ"
-    },
-    {
-      "ar": "طفل ورضيع"
-    },
-    {
-      "ar": "AED"
-    },
-    {
-      "ar": "حامل"
-    },
-    {
-      "ar": "أسيستول"
-    },
-    {
-      "ar": "ما بعد الإنعاش"
-    }
+  {
+   "ar": "AED",
+   "en": "AED"
+  },
+  {
+   "ar": "حامل",
+   "en": "Pregnant"
+  },
+  {
+   "ar": "أسيستول",
+   "en": "Asystole"
+  },
+  {
+   "ar": "ما بعد الإنعاش",
+   "en": "Post-resuscitation"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الإنعاش لمن دخل في <strong>سكتة قلبية</strong>، أي توقف القلب عن الضخ. الهدف: إيصال أكسجين وتروية للدماغ والأعضاء الحيوية فورًا لمنع التلف والوفاة. الأسباب كثيرة وتُلخّص بـ <strong>Hs & Ts</strong>: نقص أكسجة، فشل تنفسي، سموم، جلطات، واختلال الأملاح.</p>\n<div class=\"cs-box cs-danger\"><strong>نقطة امتحان</strong><p>إذا كنت المنقذ الوحيد وبلا مساعدة: ابدأ ضغطات الصدر العالية الجودة <strong>قبل</strong> طلب النجدة (كثير من الطلبة يخطئون هنا). في الواقع إن كان معك هاتف قريب فاستدعِ المساعدة بسرعة ثم ابدأ الضغطات.</p></div>\n[[slot:dis-3107-adult|أرقام الإنعاش ولصقات AED للبالغ — رسم من إعداد الموقع|/diseases/img/dis-3107-adult.svg]]",
+   "en": "<p>Resuscitation is for someone in <strong>cardiac arrest</strong>, meaning the heart has stopped pumping. The goal: deliver oxygen and perfusion to the brain and vital organs immediately to prevent damage and death. The causes are many and are summarized as <strong>Hs & Ts</strong>: hypoxia, respiratory failure, toxins, clots, and electrolyte imbalance.</p>\n<div class=\"cs-box cs-danger\"><strong>Exam point</strong><p>If you are the only rescuer with no help: start high-quality chest compressions <strong>before</strong> calling for help (many students get this wrong). In reality, if you have a phone nearby, call for help quickly and then start compressions.</p></div>\n[[slot:dis-3107-adult|CPR numbers and AED pads for adults — illustration prepared by the site|/diseases/img/dis-3107-adult.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li>نقص الأكسجة (Hypoxia)</li><li>فشل التنفس</li><li>السموم والأدوية</li><li>الجلطات (قلبية/رئوية)</li><li>اختلال الأملاح (البوتاسيوم، الكالسيوم...)</li></ul><p>لتفاصيل الأسباب القابلة للعكس (5H & 5T) راجع <a href=\"/diseases/dis-609\">دليل Asystole وPEA</a>.</p>",
+   "en": "<ul><li>Hypoxia (Hypoxia)</li><li>Respiratory failure</li><li>Toxins and drugs</li><li>Clots (cardiac/pulmonary)</li><li>Electrolyte imbalance (potassium, calcium...)</li></ul><p>For details of the reversible causes (5H & 5T), see <a href=\"/diseases/dis-609\">the Asystole and PEA guide</a>.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li>فقدان الوعي وعدم الاستجابة، لا نبض، لا تنفس طبيعي (أو تنفس لاهث متقطع).</li><li>تغيّر لون الجلد (ازرقاق/شحوب).</li></ul>",
+   "en": "<ul><li>Loss of consciousness and unresponsiveness, no pulse, no normal breathing (or gasping, irregular breathing).</li><li>Change in skin color (cyanosis/pallor).</li></ul>"
+  },
+  "tests": {
+   "ar": "<p>فحص النبض: بالغ/طفل سباتي أو فخذي، <strong>رضيع: الشريان العضدي (Brachial)</strong> خلال 10 ثوانٍ أو أقل. أثناء الإنعاش يُوقف التدليك كل دقيقتين لتقييم النظم والنبض (لا يتجاوز 10 ثوانٍ). المراقب يُظهر النظم: VF/VT بلا نبض (يُصدم) أو Asystole/PEA (لا يُصدم).</p>",
+   "en": "<p>Pulse check: adult/child carotid or femoral, <strong>infant: the brachial artery (Brachial)</strong> within 10 seconds or less. During CPR, compressions are paused every two minutes to assess the rhythm and pulse (no more than 10 seconds). The monitor shows the rhythm: VF/pulseless VT (shockable) or Asystole/PEA (not shockable).</p>"
+  },
+  "treatment": {
+   "ar": "<h4>بالغ</h4><table><thead><tr><th>العنصر</th><th>القيمة</th></tr></thead><tbody><tr><td>معدل الضغط</td><td>100–120/دقيقة</td></tr><tr><td>العمق</td><td>على الأقل 5–6 سم (2–2.4 بوصة)</td></tr><tr><td>مكان اليدين</td><td>منتصف الصدر، النصف السفلي من عظمة القص</td></tr><tr><td>التنفس (يدوي)</td><td>30 ضغطة : نفسان إنقاذيان</td></tr><tr><td>مع أنبوب تنفس</td><td>نفس كل 6 ثوانٍ دون إيقاف الضغطات</td></tr><tr><td>تقييم</td><td>كل دقيقتين: فحص نبض ≤10 ثوانٍ</td></tr></tbody></table>\n<h4>خطوات الصدمة بجهاز AED (بالغ)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>ضع اللصقات</strong><p>أعلى يمين الصدر قرب الكتف، والأخرى على يسار الصدر الجانبي عند الإبط الأمامي أسفل الحلمة (AED للعمر 8 سنوات فأكثر).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>انظر وأعلن</strong><p>نادِ «ابتعدوا» وتأكد أن لا أحد يلمس المريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>استأنف</strong><p>ابدأ الضغطات فورًا بعد الصدمة. لا حاجة لتخدير وريدي ولا زر Synchronize (هذا للتحويل الكهربائي).</p></div></div></div>\n<h4>الطفل والرضيع</h4>[[slot:dis-3107-peds|إنعاش الرضيع واللصقات الطفلية — رسم من إعداد الموقع|/diseases/img/dis-3107-peds.svg]]\n<ul><li><strong>AED للطفل:</strong> لصقة على الصدر وأخرى على الظهر، ولا تتداخل ولا تتلامس.</li><li><strong>الرضيع:</strong> نبض العضد ≤10 ثوانٍ → فعّل الاستغاثة → CPR دورات دقيقتين، 100–120/دقيقة. منقذ واحد 30:2، منقذان 15:2. أحضر AED بعد دقيقتين من الإنعاش (منقذ واحد). ضع لفافة تحت الكتفين وأمد الرقبة قليلًا. تقنيتا الضغط: إبهامان مع لف الصدر، أو إصبعان على منتصف القص.</li></ul>\n<h4>الإيقاعات التي لا تُصدم</h4><ol><li>CPR عالي الجودة (الأولوية)</li><li>إبينفرين كل 3–5 دقائق</li><li>تنبيب وتهوية</li><li>علاج الأسباب</li></ol><p>الأسيستول (خط مستقيم) وPEA: <strong>لا صدمة</strong>.</p><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات والأرقام للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>\n<h4>الحمل</h4><ul><li>الضغطات أعلى قليلًا على القص.</li><li>أزح الرحم يدويًا لليسار أو ضع بطانية مطوية تحت الجنب الأيمن؛ <strong>ليس مستلقية على الظهر</strong>.</li><li>إذا لم تعد الدورة بعد 4 دقائق تُجرى ولادة قيصرية فورية، وتتم خلال حوالي 5 دقائق من بدء الإنعاش.</li></ul>[[slot:dis-3107-special|الأسيستول والحمل وما بعد الإنعاش — رسم من إعداد الموقع|/diseases/img/dis-3107-special.svg]]",
+   "en": "<h4>Adult</h4><table><thead><tr><th>Item</th><th>Value</th></tr></thead><tbody><tr><td>Compression rate</td><td>100–120/minute</td></tr><tr><td>Depth</td><td>At least 5–6 cm (2–2.4 inches)</td></tr><tr><td>Hand position</td><td>Center of the chest, lower half of the sternum</td></tr><tr><td>Breaths (manual)</td><td>30 compressions : two rescue breaths</td></tr><tr><td>With an advanced airway</td><td>One breath every 6 seconds without pausing compressions</td></tr><tr><td>Assessment</td><td>Every two minutes: pulse check ≤10 seconds</td></tr></tbody></table>\n<h4>Shock steps with an AED (adult)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Apply the pads</strong><p>Upper right chest near the shoulder, and the other on the left lateral chest at the anterior axillary line below the nipple (AED for age 8 years and older).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Look and announce</strong><p>Call \"clear\" and make sure no one is touching the patient.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Resume</strong><p>Start compressions immediately after the shock. No need for IV sedation or the Synchronize button (that is for cardioversion).</p></div></div></div>\n<h4>Child and infant</h4>[[slot:dis-3107-peds|Infant CPR and pediatric pads — illustration prepared by the site|/diseases/img/dis-3107-peds.svg]]\n<ul><li><strong>Pediatric AED:</strong> one pad on the chest and the other on the back, not overlapping or touching.</li><li><strong>Infant:</strong> brachial pulse ≤10 seconds → activate the emergency response → CPR in two-minute cycles, 100–120/minute. One rescuer 30:2, two rescuers 15:2. Get the AED after two minutes of CPR (one rescuer). Place a roll under the shoulders and extend the neck slightly. Two compression techniques: two thumbs encircling the chest, or two fingers on the middle of the sternum.</li></ul>\n<h4>Non-shockable rhythms</h4><ol><li>High-quality CPR (the priority)</li><li>Epinephrine every 3–5 minutes</li><li>Intubation and ventilation</li><li>Treat the causes</li></ol><p>Asystole (flat line) and PEA: <strong>no shock</strong>.</p><div class=\"cs-box cs-danger\"><strong>Note</strong><p>Doses and numbers are for learning only; always verify with the physician/pharmacist before giving.</p></div>\n<h4>Pregnancy</h4><ul><li>Compressions slightly higher on the sternum.</li><li>Displace the uterus manually to the left or place a folded blanket under the right flank; <strong>not lying flat on her back</strong>.</li><li>If circulation does not return after 4 minutes, an immediate cesarean delivery is performed, completed within about 5 minutes of the start of CPR.</li></ul>[[slot:dis-3107-special|Asystole, pregnancy, and post-resuscitation — illustration prepared by the site|/diseases/img/dis-3107-special.svg]]"
+  },
+  "nursing": {
+   "ar": "<ul><li>ابدأ فورًا، ولا تؤخر الضغطات، وبدّل المنقذ كل دقيقتين.</li><li>اجلب عربة الطوارئ والـ AED وسجّل الوقت والإيقاع والصدمات والأدوية.</li><li>بعد عودة النبض: قيّم الوعي؛ <strong>المريض الذي لا ينفذ الأوامر (comatose)</strong> أولويته التبريد العلاجي (therapeutic hypothermia) مثل سوائل باردة وفق بروتوكول المستشفى. مدة التبريد وهدفه حسب البروتوكول.</li><li>تحدّث مع الأسرة بلطف واتبع البروتوكول.</li></ul>",
+   "en": "<ul><li>Start immediately, do not delay compressions, and switch rescuers every two minutes.</li><li>Bring the crash cart and the AED, and record the time, rhythm, shocks, and drugs.</li><li>After return of pulse: assess consciousness; <strong>the patient who does not follow commands (comatose)</strong> has therapeutic hypothermia (therapeutic hypothermia) as the priority, such as cold fluids per hospital protocol. Cooling duration and target are per protocol.</li><li>Speak with the family gently and follow the protocol.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>تنفس لاهث/متقطع (agonal) مع فقد الوعي: يعامل كتوقف قلب.</li><li>تحول الإيقاع إلى VF/VT بلا نبض: صدمة فورية.</li><li>عدم عودة الدورة في الحامل خلال 4 دقائق: قيصرية.</li></ul>",
+   "en": "<ul><li>Gasping/irregular (agonal) breathing with loss of consciousness: treat as cardiac arrest.</li><li>Rhythm changing to VF/pulseless VT: immediate shock.</li><li>No return of circulation in a pregnant woman within 4 minutes: cesarean.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>تدريب الجمهور على الإنعاش البسيط (الضغطات) يرفع نسبة النجاة.</li><li>للناجين: متابعة قلبية ودوائية، والإبلاغ عن دوخة أو إغماء.</li></ul>",
+   "en": "<ul><li>Training the public in basic CPR (compressions) increases survival.</li><li>For survivors: cardiac and medication follow-up, and report dizziness or fainting.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "سكتة القلب = توقف الضخ؛ الأسباب: نقص أكسجين، فشل تنفسي، سموم، جلطات، اختلال أملاح (Hs & Ts)",
+   "بالغ: 100–120/دقيقة، عمق 5–6 سم، 30:2",
+   "AED بالغ: أعلى يمين الصدر وجانب يسار؛ طفل: صدر وظهر بلا تلامس",
+   "رضيع: نبض عضدي، 30:2 (منقذ واحد) أو 15:2 (منقذان)",
+   "Asystole وPEA لا يُصدمان: CPR + إبينفرين + سبب",
+   "حامل: إزاحة الرحم يسارًا، قيصرية فورية إن لم تعد الدورة خلال 4 دقائق",
+   "بعد الإنعاش: فاقد الوعي → تبريد علاجي"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الإنعاش لمن دخل في <strong>سكتة قلبية</strong>، أي توقف القلب عن الضخ. الهدف: إيصال أكسجين وتروية للدماغ والأعضاء الحيوية فورًا لمنع التلف والوفاة. الأسباب كثيرة وتُلخّص بـ <strong>Hs & Ts</strong>: نقص أكسجة، فشل تنفسي، سموم، جلطات، واختلال الأملاح.</p>\n<div class=\"cs-box cs-danger\"><strong>نقطة امتحان</strong><p>إذا كنت المنقذ الوحيد وبلا مساعدة: ابدأ ضغطات الصدر العالية الجودة <strong>قبل</strong> طلب النجدة (كثير من الطلبة يخطئون هنا). في الواقع إن كان معك هاتف قريب فاستدعِ المساعدة بسرعة ثم ابدأ الضغطات.</p></div>\n[[slot:dis-3107-adult|أرقام الإنعاش ولصقات AED للبالغ — رسم من إعداد الموقع|/diseases/img/dis-3107-adult.svg]]"
-    },
-    "causes": {
-      "ar": "<ul><li>نقص الأكسجة (Hypoxia)</li><li>فشل التنفس</li><li>السموم والأدوية</li><li>الجلطات (قلبية/رئوية)</li><li>اختلال الأملاح (البوتاسيوم، الكالسيوم...)</li></ul><p>لتفاصيل الأسباب القابلة للعكس (5H & 5T) راجع <a href=\"/diseases/dis-609\">دليل Asystole وPEA</a>.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li>فقدان الوعي وعدم الاستجابة، لا نبض، لا تنفس طبيعي (أو تنفس لاهث متقطع).</li><li>تغيّر لون الجلد (ازرقاق/شحوب).</li></ul>"
-    },
-    "tests": {
-      "ar": "<p>فحص النبض: بالغ/طفل سباتي أو فخذي، <strong>رضيع: الشريان العضدي (Brachial)</strong> خلال 10 ثوانٍ أو أقل. أثناء الإنعاش يُوقف التدليك كل دقيقتين لتقييم النظم والنبض (لا يتجاوز 10 ثوانٍ). المراقب يُظهر النظم: VF/VT بلا نبض (يُصدم) أو Asystole/PEA (لا يُصدم).</p>"
-    },
-    "treatment": {
-      "ar": "<h4>بالغ</h4><table><thead><tr><th>العنصر</th><th>القيمة</th></tr></thead><tbody><tr><td>معدل الضغط</td><td>100–120/دقيقة</td></tr><tr><td>العمق</td><td>على الأقل 5–6 سم (2–2.4 بوصة)</td></tr><tr><td>مكان اليدين</td><td>منتصف الصدر، النصف السفلي من عظمة القص</td></tr><tr><td>التنفس (يدوي)</td><td>30 ضغطة : نفسان إنقاذيان</td></tr><tr><td>مع أنبوب تنفس</td><td>نفس كل 6 ثوانٍ دون إيقاف الضغطات</td></tr><tr><td>تقييم</td><td>كل دقيقتين: فحص نبض ≤10 ثوانٍ</td></tr></tbody></table>\n<h4>خطوات الصدمة بجهاز AED (بالغ)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>ضع اللصقات</strong><p>أعلى يمين الصدر قرب الكتف، والأخرى على يسار الصدر الجانبي عند الإبط الأمامي أسفل الحلمة (AED للعمر 8 سنوات فأكثر).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>انظر وأعلن</strong><p>نادِ «ابتعدوا» وتأكد أن لا أحد يلمس المريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>استأنف</strong><p>ابدأ الضغطات فورًا بعد الصدمة. لا حاجة لتخدير وريدي ولا زر Synchronize (هذا للتحويل الكهربائي).</p></div></div></div>\n<h4>الطفل والرضيع</h4>[[slot:dis-3107-peds|إنعاش الرضيع واللصقات الطفلية — رسم من إعداد الموقع|/diseases/img/dis-3107-peds.svg]]\n<ul><li><strong>AED للطفل:</strong> لصقة على الصدر وأخرى على الظهر، ولا تتداخل ولا تتلامس.</li><li><strong>الرضيع:</strong> نبض العضد ≤10 ثوانٍ → فعّل الاستغاثة → CPR دورات دقيقتين، 100–120/دقيقة. منقذ واحد 30:2، منقذان 15:2. أحضر AED بعد دقيقتين من الإنعاش (منقذ واحد). ضع لفافة تحت الكتفين وأمد الرقبة قليلًا. تقنيتا الضغط: إبهامان مع لف الصدر، أو إصبعان على منتصف القص.</li></ul>\n<h4>الإيقاعات التي لا تُصدم</h4><ol><li>CPR عالي الجودة (الأولوية)</li><li>إبينفرين كل 3–5 دقائق</li><li>تنبيب وتهوية</li><li>علاج الأسباب</li></ol><p>الأسيستول (خط مستقيم) وPEA: <strong>لا صدمة</strong>.</p><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات والأرقام للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>\n<h4>الحمل</h4><ul><li>الضغطات أعلى قليلًا على القص.</li><li>أزح الرحم يدويًا لليسار أو ضع بطانية مطوية تحت الجنب الأيمن؛ <strong>ليس مستلقية على الظهر</strong>.</li><li>إذا لم تعد الدورة بعد 4 دقائق تُجرى ولادة قيصرية فورية، وتتم خلال حوالي 5 دقائق من بدء الإنعاش.</li></ul>[[slot:dis-3107-special|الأسيستول والحمل وما بعد الإنعاش — رسم من إعداد الموقع|/diseases/img/dis-3107-special.svg]]"
-    },
-    "nursing": {
-      "ar": "<ul><li>ابدأ فورًا، ولا تؤخر الضغطات، وبدّل المنقذ كل دقيقتين.</li><li>اجلب عربة الطوارئ والـ AED وسجّل الوقت والإيقاع والصدمات والأدوية.</li><li>بعد عودة النبض: قيّم الوعي؛ <strong>المريض الذي لا ينفذ الأوامر (comatose)</strong> أولويته التبريد العلاجي (therapeutic hypothermia) مثل سوائل باردة وفق بروتوكول المستشفى. مدة التبريد وهدفه حسب البروتوكول.</li><li>تحدّث مع الأسرة بلطف واتبع البروتوكول.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>تنفس لاهث/متقطع (agonal) مع فقد الوعي: يعامل كتوقف قلب.</li><li>تحول الإيقاع إلى VF/VT بلا نبض: صدمة فورية.</li><li>عدم عودة الدورة في الحامل خلال 4 دقائق: قيصرية.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>تدريب الجمهور على الإنعاش البسيط (الضغطات) يرفع نسبة النجاة.</li><li>للناجين: متابعة قلبية ودوائية، والإبلاغ عن دوخة أو إغماء.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "سكتة القلب = توقف الضخ؛ الأسباب: نقص أكسجين، فشل تنفسي، سموم، جلطات، اختلال أملاح (Hs & Ts)",
-      "بالغ: 100–120/دقيقة، عمق 5–6 سم، 30:2",
-      "AED بالغ: أعلى يمين الصدر وجانب يسار؛ طفل: صدر وظهر بلا تلامس",
-      "رضيع: نبض عضدي، 30:2 (منقذ واحد) أو 15:2 (منقذان)",
-      "Asystole وPEA لا يُصدمان: CPR + إبينفرين + سبب",
-      "حامل: إزاحة الرحم يسارًا، قيصرية فورية إن لم تعد الدورة خلال 4 دقائق",
-      "بعد الإنعاش: فاقد الوعي → تبريد علاجي"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ما عمق الضغطات على صدر البالغ؟"
-      },
-      "options": [
-        {
-          "ar": "على الأقل 5–6 سم"
-        },
-        {
-          "ar": "1–2 سم"
-        },
-        {
-          "ar": "أكثر من 10 سم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "العمق الكافي يولد تروية فعالة؛ الأقل من ذلك لا يكفي والأعمق قد يسبب إصابة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نظم لا يُعالج بالصدمة الكهربائية؟"
-      },
-      "options": [
-        {
-          "ar": "Asystole وPEA"
-        },
-        {
-          "ar": "VF"
-        },
-        {
-          "ar": "VT بلا نبض"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "غياب النشاط الكهربائي لا يستجيب للصدمة؛ العلاج CPR وإبينفرين."
-      }
-    },
-    {
-      "q": {
-        "ar": "أين توضع لصقات AED عند الطفل؟"
-      },
-      "options": [
-        {
-          "ar": "واحدة على الصدر وأخرى على الظهر"
-        },
-        {
-          "ar": "كلاهما أعلى يمين الصدر"
-        },
-        {
-          "ar": "كلاهما على البطن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "حجم الصدر الصغير يتطلب وضعًا أمامي خلفي دون تلامس اللصقات."
-      }
-    },
-    {
-      "q": {
-        "ar": "شريان الاختيار لفحص نبض الرضيع في الإنعاش:"
-      },
-      "options": [
-        {
-          "ar": "العضدي"
-        },
-        {
-          "ar": "السباتي"
-        },
-        {
-          "ar": "الفخذي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "عنق الرضيع قصير وسمين، لذا يُفحص العضدي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أثناء إنعاش حامل، كيف يُوضع الرحم؟"
-      },
-      "options": [
-        {
-          "ar": "إزاحته يدويًا لليسار أو بطانية تحت الجنب الأيمن"
-        },
-        {
-          "ar": "على الظهر مباشرة"
-        },
-        {
-          "ar": "وضع Trendelenburg"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "إزاحة الرحم تخفف الضغط على الأجوف السفلي وتزيد العائد الوريدي."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AHA Guidelines for CPR and ECC"
-    },
-    {
-      "title": "ERC Guidelines — Resuscitation"
-    },
-    {
-      "title": "Egyptian Resuscitation / BLS course materials (general)"
-    }
+  "en": [
+   "Cardiac arrest = pumping stops; causes: hypoxia, respiratory failure, toxins, clots, electrolyte imbalance (Hs & Ts)",
+   "Adult: 100–120/minute, depth 5–6 cm, 30:2",
+   "Adult AED: upper right chest and left side; child: chest and back without touching",
+   "Infant: brachial pulse, 30:2 (one rescuer) or 15:2 (two rescuers)",
+   "Asystole and PEA are not shocked: CPR + epinephrine + cause",
+   "Pregnant: displace the uterus to the left; immediate cesarean if circulation does not return within 4 minutes",
+   "After resuscitation: unconscious → therapeutic hypothermia"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ما عمق الضغطات على صدر البالغ؟",
+    "en": "What is the compression depth on an adult chest?"
+   },
+   "options": [
+    {
+     "ar": "على الأقل 5–6 سم",
+     "en": "At least 5–6 cm"
+    },
+    {
+     "ar": "1–2 سم",
+     "en": "1–2 cm"
+    },
+    {
+     "ar": "أكثر من 10 سم",
+     "en": "More than 10 cm"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "العمق الكافي يولد تروية فعالة؛ الأقل من ذلك لا يكفي والأعمق قد يسبب إصابة.",
+    "en": "Adequate depth produces effective perfusion; less is not enough and deeper may cause injury."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نظم لا يُعالج بالصدمة الكهربائية؟",
+    "en": "Which rhythm is not treated with an electrical shock?"
+   },
+   "options": [
+    {
+     "ar": "Asystole وPEA",
+     "en": "Asystole and PEA"
+    },
+    {
+     "ar": "VF",
+     "en": "VF"
+    },
+    {
+     "ar": "VT بلا نبض",
+     "en": "Pulseless VT"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "غياب النشاط الكهربائي لا يستجيب للصدمة؛ العلاج CPR وإبينفرين.",
+    "en": "Absent electrical activity does not respond to a shock; treatment is CPR and epinephrine."
+   }
+  },
+  {
+   "q": {
+    "ar": "أين توضع لصقات AED عند الطفل؟",
+    "en": "Where are AED pads placed on a child?"
+   },
+   "options": [
+    {
+     "ar": "واحدة على الصدر وأخرى على الظهر",
+     "en": "One on the chest and the other on the back"
+    },
+    {
+     "ar": "كلاهما أعلى يمين الصدر",
+     "en": "Both on the upper right chest"
+    },
+    {
+     "ar": "كلاهما على البطن",
+     "en": "Both on the abdomen"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "حجم الصدر الصغير يتطلب وضعًا أمامي خلفي دون تلامس اللصقات.",
+    "en": "The small chest size requires anterior-posterior placement without the pads touching."
+   }
+  },
+  {
+   "q": {
+    "ar": "شريان الاختيار لفحص نبض الرضيع في الإنعاش:",
+    "en": "The artery of choice for checking an infant's pulse during CPR:"
+   },
+   "options": [
+    {
+     "ar": "العضدي",
+     "en": "Brachial"
+    },
+    {
+     "ar": "السباتي",
+     "en": "Carotid"
+    },
+    {
+     "ar": "الفخذي",
+     "en": "Femoral"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "عنق الرضيع قصير وسمين، لذا يُفحص العضدي.",
+    "en": "The infant's neck is short and chubby, so the brachial is checked."
+   }
+  },
+  {
+   "q": {
+    "ar": "أثناء إنعاش حامل، كيف يُوضع الرحم؟",
+    "en": "During CPR on a pregnant woman, how is the uterus positioned?"
+   },
+   "options": [
+    {
+     "ar": "إزاحته يدويًا لليسار أو بطانية تحت الجنب الأيمن",
+     "en": "Displaced manually to the left or a blanket under the right flank"
+    },
+    {
+     "ar": "على الظهر مباشرة",
+     "en": "Flat on the back"
+    },
+    {
+     "ar": "وضع Trendelenburg",
+     "en": "Trendelenburg position"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "إزاحة الرحم تخفف الضغط على الأجوف السفلي وتزيد العائد الوريدي.",
+    "en": "Displacing the uterus relieves pressure on the inferior vena cava and increases venous return."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AHA Guidelines for CPR and ECC"
+  },
+  {
+   "title": "ERC Guidelines — Resuscitation"
+  },
+  {
+   "title": "Egyptian Resuscitation / BLS course materials (general)"
+  }
+ ]
 }

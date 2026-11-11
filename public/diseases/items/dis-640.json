@@ -1,274 +1,347 @@
 {
-  "id": "dis-640",
-  "num": 640,
-  "system": "chest",
-  "icon": "🫁",
-  "level": 3,
-  "title": {
-    "ar": "متلازمة الضائقة التنفسية الحادة (ARDS)",
-    "en": "Acute Respiratory Distress Syndrome (ARDS)"
+ "id": "dis-640",
+ "num": 640,
+ "system": "chest",
+ "icon": "🫁",
+ "level": 3,
+ "title": {
+  "ar": "متلازمة الضائقة التنفسية الحادة (ARDS)",
+  "en": "Acute Respiratory Distress Syndrome (ARDS)"
+ },
+ "teaser": {
+  "ar": "رئتين بتتملي سوائل وبتتصلب والأكسجين مش بيكفي حتى مع 100%: السبب، تصنيف الشدة، التنفس الصناعي الواقي للرئة، وضع البطن (Prone) ودورك كممرض في العناية.",
+  "en": "Lungs that fill with fluid and stiffen, and oxygen is not enough even at 100%: the cause, severity classification, lung-protective ventilation, prone positioning, and your role as an ICU nurse."
+ },
+ "chips": [
+  {
+   "ar": "نقص أكسجة عنيد",
+   "en": "Refractory hypoxemia"
   },
-  "teaser": {
-    "ar": "رئتين بتتملي سوائل وبتتصلب والأكسجين مش بيكفي حتى مع 100%: السبب، تصنيف الشدة، التنفس الصناعي الواقي للرئة، وضع البطن (Prone) ودورك كممرض في العناية."
+  {
+   "ar": "PEEP / Prone",
+   "en": "PEEP / Prone"
   },
-  "chips": [
-    {
-      "ar": "نقص أكسجة عنيد"
-    },
-    {
-      "ar": "PEEP / Prone"
-    },
-    {
-      "ar": "عناية مركزة"
-    }
+  {
+   "ar": "عناية مركزة",
+   "en": "Intensive care"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>الـ ARDS هو <b>فشل تنفسي حاد</b> سببه التهاب شديد منتشر في الرئتين: الشعيرات اللي حوالين الحويصلات الهوائية (Alveoli) بتبقى «بتسرّب»، فالسوائل بتدخل النسيج الرئوي (Interstitium) والحويصلات نفسها. الرئة بتتصلب (قلّة المرونة Compliance)، المادة اللي بتمنع انكماش الحويصلات (Surfactant) بتتضرر فالحويصلات بتنهار (Atelectasis)، والأكسجين مش بيعدّي للدم رغم إن المريض بيتنفس أسرع. النتيجة: <b>نقص أكسجة (Hypoxemia)</b> وارتفاع ثاني أكسيد الكربون ثم حماض تنفسي.</p>\n<div class=\"cs-stats\"><div><b>200–300</b><span>P/F خفيف (مم زئبق)</span></div><div><b>100–200</b><span>P/F متوسط</span></div><div><b>≤100</b><span>P/F شديد</span></div><div><b>40–50%</b><span>وفيات تقريبية (50–60% في بعض المراجع)</span></div></div>\n<p>في محاولة الجسم يصلّح التلف ممكن يحصل <b>تليّف (Fibrosis)</b> وده اللي بيخلّي بعض المرضى يدخلوا مرحلة مزمنة محتاجة تنفس صناعي طويل. الاسم القديم «Adult RDS» لأنه بيصيب ناس معندهمش تاريخ مرض رئوي قبل كده.</p>\n<div class=\"cs-box cs-info\"><strong>معايير التشخيص (Berlin)</strong><p>بداية خلال أسبوع من محفّز معروف، <b>ظلال على الأشعة في الرئتين الاتنين</b> مش مفسَّرة بفشل القلب أو زيادة السوائل، ونسبة <b>PaO₂/FiO₂ ≤ 300</b> مع PEEP لا يقل عن 5. التصنيف: خفيف 200–300، متوسط 100–200، شديد ≤100. مثال: PaO₂ = 80 و FiO₂ = 1.0 (100%) يعني النسبة 80 = شديد.</p></div>\n[[slot:dis-640-flow|مسار حدوث ARDS من المحفّز إلى فشل التنفس|/diseases/img/dis-640-flow.svg]]<h4>إضافات تغطي نقاط المراجعة</h4><p>ARDS: تلتهب الشعيرات حول الحويصلات فتتسرب السوائل (حاجز متسرب) وتصبح الحويصلات صلبة ومتليّفة، فيستحيل دخول الأكسجين وخروج CO2؛ قد يموت المريض من نقص الأكسجة إذا لم يُوضع على جهاز مبكرًا. مميز: نقص أكسجة مقاوم (Refractory hypoxemia) رغم الأكسجين. من الأسباب: الإنتان، التهاب رئوي أو استنشاق سموم أو شفط، والتهاب البنكرياس الحاد (تسرب الإنزيمات والسيتوكينات للدم ثم للرئة).</p>[[slot:dis-044-ards|ARDS — رسم من إعداد الموقع|/diseases/img/dis-044-ards.svg]]\n<h4>مراجعة NCLEX: ARDS</h4><p>تتصلب الحويصلات لأن الشعيرات حولها تلتهب وتمتلئ بالسوائل فتتكون «حواجز متسربة» تملأ الحويصلات، فيستحيل دخول الأكسجين وخروج CO₂. قد يموت المريض من نقص الأكسجة إن لم يُوضع مبكرًا على التهوية الميكانيكية. التشخيص التمريضي الأولي: ضعف تبادل الغازات. وهو نقص أكسجة عنيد (مقاوم للأكسجين).</p>[[slot:dis-651-p429|الفشل التنفسي وARDS — رسم من إعداد الموقع|/diseases/img/dis-651-p429.svg]]",
+   "en": "<p>ARDS is <b>acute respiratory failure</b> caused by severe, widespread inflammation in the lungs: the capillaries around the air sacs (Alveoli) become \"leaky\", so fluid enters the lung tissue (Interstitium) and the alveoli themselves. The lung stiffens (reduced Compliance), the substance that prevents alveolar collapse (Surfactant) is damaged so the alveoli collapse (Atelectasis), and oxygen does not pass into the blood even though the patient breathes faster. The result: <b>hypoxemia (Hypoxemia)</b> and rising carbon dioxide, then respiratory acidosis.</p>\n<div class=\"cs-stats\"><div><b>200–300</b><span>Mild P/F (mmHg)</span></div><div><b>100–200</b><span>Moderate P/F</span></div><div><b>≤100</b><span>Severe P/F</span></div><div><b>40–50%</b><span>Approximate mortality (50–60% in some references)</span></div></div>\n<p>As the body tries to repair the damage, <b>fibrosis (Fibrosis)</b> may occur, which is why some patients enter a chronic phase that needs prolonged mechanical ventilation. The old name was \"Adult RDS\" because it affects people with no previous history of lung disease.</p>\n<div class=\"cs-box cs-info\"><strong>Diagnostic criteria (Berlin)</strong><p>Onset within one week of a known trigger, <b>bilateral opacities on chest imaging</b> not explained by heart failure or fluid overload, and a <b>PaO₂/FiO₂ ≤ 300</b> with PEEP of at least 5. Classification: mild 200–300, moderate 100–200, severe ≤100. Example: PaO₂ = 80 and FiO₂ = 1.0 (100%) means the ratio is 80 = severe.</p></div>\n[[slot:dis-640-flow|The pathway of ARDS from the trigger to respiratory failure|/diseases/img/dis-640-flow.svg]]<h4>Additions covering review points</h4><p>ARDS: the capillaries around the alveoli become inflamed so fluid leaks (a leaky barrier), and the alveoli become stiff and fibrotic, so oxygen cannot get in and CO2 cannot get out; the patient may die of hypoxemia if not placed on a ventilator early. Distinctive: refractory hypoxemia (Refractory hypoxemia) despite oxygen. Causes include: sepsis, pneumonia or inhalation of toxins or aspiration, and acute pancreatitis (leakage of enzymes and cytokines into the blood, then to the lung).</p>[[slot:dis-044-ards|ARDS — illustration prepared by the site|/diseases/img/dis-044-ards.svg]]\n<h4>NCLEX review: ARDS</h4><p>The alveoli stiffen because the capillaries around them become inflamed and fill with fluid, forming \"leaky barriers\" that fill the alveoli, so oxygen cannot get in and CO₂ cannot get out. The patient may die of hypoxemia if not placed early on mechanical ventilation. The primary nursing diagnosis: impaired gas exchange. It is refractory hypoxemia (resistant to oxygen).</p>[[slot:dis-651-p429|Respiratory failure and ARDS — illustration prepared by the site|/diseases/img/dis-651-p429.svg]]"
+  },
+  "causes": {
+   "ar": "<h4>أشهر المحفّزات</h4><table><thead><tr><th>مباشر (من الرئة)</th><th>غير مباشر (من خارج الرئة)</th></tr></thead><tbody><tr><td>التهاب رئوي شديد (Pneumonia) — أشهر سبب</td><td>تعفن الدم والصدمة الإنتانية (Sepsis / Septic shock)</td></tr><tr><td>استنشاق محتويات المعدة (Aspiration)</td><td>إصابات وكسور كبيرة (Trauma) وانسداد دهني</td></tr><tr><td>استنشاق دخان أو غاز سام (Inhalation injury)</td><td>نقل دم كثير (TRALI) وحروق كبيرة</td></tr><tr><td>غرق، كدمة رئة</td><td>التهاب البنكرياس الحاد، جلطة مخ أو إصابة رأس</td></tr></tbody></table><p>المراجع تذكر: الصدمة والتعفن والرضوض واستنشاق الدخان. ومعاهم عوامل خطر: إدمان الكحول، التدخين، سن كبير.</p>\n<ul><li>الإنتان (عدوى دموية تلتهب الجسم كله).</li><li>الالتهاب الرئوي، استنشاق سموم أو قيء.</li><li>التهاب البنكرياس الحاد: إطلاق إنزيمات البنكرياس والسيتوكينات في الدم فتصل الرئتين وتسبب التهابًا (نقطة امتحان).</li></ul>",
+   "en": "<h4>Most common triggers</h4><table><thead><tr><th>Direct (from the lung)</th><th>Indirect (from outside the lung)</th></tr></thead><tbody><tr><td>Severe pneumonia (Pneumonia) — the most common cause</td><td>Sepsis and septic shock (Sepsis / Septic shock)</td></tr><tr><td>Aspiration of stomach contents (Aspiration)</td><td>Major injuries and fractures (Trauma) and fat embolism</td></tr><tr><td>Inhalation of smoke or toxic gas (Inhalation injury)</td><td>Massive blood transfusion (TRALI) and major burns</td></tr><tr><td>Drowning, lung contusion</td><td>Acute pancreatitis, stroke or head injury</td></tr></tbody></table><p>The references mention: shock, sepsis, trauma, and smoke inhalation. Along with risk factors: alcoholism, smoking, older age.</p>\n<ul><li>Sepsis (a bloodstream infection that inflames the whole body).</li><li>Pneumonia, inhalation of toxins or vomit.</li><li>Acute pancreatitis: release of pancreatic enzymes and cytokines into the blood that reach the lungs and cause inflammation (exam point).</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li><b>نقص أكسجة عنيد (Refractory hypoxemia)</b> حتى مع أكسجين 100%.</li><li>ضيق نفس (Dyspnea) يزيد كل ما السوائل تتجمع وتقلّ مرونة الرئة.</li><li>تنفس أسرع من 20 في الدقيقة (Tachypnea).</li><li>وذمة رئوية (Pulmonary edema) غير قلبية.</li><li>انخفاض أصوات التنفس (سوائل في الحويصلات أو حويصلات منهارة).</li><li>قلق وعدم استقرار (Restlessness) بسبب قلة الأكسجين.</li><li>أصوات «طقطقة» (Crackles / Rales) مش بتظهر في الأول، وأحياناً صفير (Wheezing / Rhonchi) لو في التهاب أو بلغم.</li><li>زرقة (Cyanosis).</li><li>استخدام عضلات التنفس المساعدة: شفط الأضلاع (Intercostal retraction) وتحت القص (Substernal).</li></ul><div class=\"cs-box cs-warning\"><strong>انتبه</strong><p>المريض بيبدأ «مش مرتاح» وسرعة تنفس زايدة ومؤشر الأكسجين طبيعي تقريباً، وبعد ساعات بيدخل في الفشل. أي مريض ببنية خطر (تعفن، التهاب رئوي) وتنفسه بيسرع: بلّغ بدري.</p></div>",
+   "en": "<ul><li><b>Refractory hypoxemia (Refractory hypoxemia)</b> even with 100% oxygen.</li><li>Dyspnea (Dyspnea) that increases as fluid collects and lung compliance falls.</li><li>Breathing faster than 20 per minute (Tachypnea).</li><li>Non-cardiogenic pulmonary edema (Pulmonary edema).</li><li>Decreased breath sounds (fluid in the alveoli or collapsed alveoli).</li><li>Anxiety and restlessness (Restlessness) due to low oxygen.</li><li>Crackles (Crackles / Rales) that do not appear at first, and sometimes wheezing (Wheezing / Rhonchi) if there is inflammation or sputum.</li><li>Cyanosis (Cyanosis).</li><li>Use of accessory respiratory muscles: intercostal retractions (Intercostal retraction) and substernal retractions (Substernal).</li></ul><div class=\"cs-box cs-warning\"><strong>Watch out</strong><p>The patient starts out \"uncomfortable\" with a raised respiratory rate and a nearly normal oxygen reading, and hours later goes into failure. Any patient with a risk background (sepsis, pneumonia) whose breathing is speeding up: report early.</p></div>"
+  },
+  "tests": {
+   "ar": "<table><thead><tr><th>الفحص</th><th>النتيجة المتوقعة</th></tr></thead><tbody><tr><td>مقياس الأكسجين (SpO₂)</td><td>أقل من 90%</td></tr><tr><td>غازات الدم الشرياني (ABG)</td><td>حماض تنفسي: PaCO₂ فوق 45، وPaO₂ منخفض رغم الأكسجين الإضافي؛ P/F ≤ 300</td></tr><tr><td>أشعة الصدر</td><td>ظلال في الرئتين الاتنين («whiteout» أو شكل الزجاج المطحون)</td></tr><tr><td>ضغط الإسفين الشرياني الرئوي (PCWP)</td><td>منخفض إلى طبيعي (≤18) — يفرّق عن الوذمة القلبية</td></tr><tr><td>CBC</td><td>ارتفاع WBC مع عدوى، انخفاضه مع كبت مناعة أو فيروس؛ Hb/Hct للأنيميا</td></tr><tr><td>PT/PTT/INR</td><td>اضطراب التجلط وضبط جرعة الهيبارين</td></tr><tr><td>BUN وCreatinine</td><td>متابعة الكلى (فشل كلوي مصاحب شائع)</td></tr><tr><td>مزرعة بلغم / دم</td><td>لتحديد الميكروب والمضاد المناسب</td></tr></tbody></table>[[slot:dis-640-xray|أشعة صدر لحالة ARDS (ظلال ثنائية منتشرة)]]<p>معلومة: الإيكو (Echo) بيُطلب أحياناً لاستبعاد سبب قلبي.</p>",
+   "en": "<table><thead><tr><th>Test</th><th>Expected result</th></tr></thead><tbody><tr><td>Pulse oximetry (SpO₂)</td><td>Below 90%</td></tr><tr><td>Arterial blood gases (ABG)</td><td>Respiratory acidosis: PaCO₂ above 45, and low PaO₂ despite supplemental oxygen; P/F ≤ 300</td></tr><tr><td>Chest X-ray</td><td>Bilateral opacities (\"whiteout\" or ground-glass appearance)</td></tr><tr><td>Pulmonary capillary wedge pressure (PCWP)</td><td>Low to normal (≤18) — distinguishes it from cardiogenic edema</td></tr><tr><td>CBC</td><td>High WBC with infection, low with immunosuppression or a virus; Hb/Hct for anemia</td></tr><tr><td>PT/PTT/INR</td><td>Coagulation disorder and adjusting the heparin dose</td></tr><tr><td>BUN and Creatinine</td><td>Kidney monitoring (associated kidney failure is common)</td></tr><tr><td>Sputum / blood culture</td><td>To identify the organism and the right antibiotic</td></tr></tbody></table>[[slot:dis-640-xray|Chest X-ray of an ARDS case (diffuse bilateral opacities)]]<p>Fact: an echo (Echo) is sometimes ordered to rule out a cardiac cause.</p>"
+  },
+  "treatment": {
+   "ar": "<p>الهدف: علاج السبب (مضاد حيوي، تصريف بؤرة العدوى) + دعم الأكسجة بأقل أذى للرئة.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>راحة تامة + أكسجين عالي</strong><p>إدخال العناية المركزة وبدء أكسجين؛ لو فشل: <b>تنفس صناعي غير باضع (CPAP/NIV)</b> للحالات الخفيفة وبحذر، وإلا التنبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>تنبيب رغامي (Endotracheal intubation)</strong><p>يُعطى مخدر مثل <b>Propofol</b> لتسهيل التنبيب والراحة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>تنفس صناعي بـ PEEP</strong><p>ضغط زفير إيجابي (PEEP) يمنع انهيار الحويصلات. <b>الأسلوب الواقي:</b> حجم تنفس 4–8 مل/كجم من الوزن المثالي (غالباً 6) وضغط هضبة (Plateau) ≤30 سم ماء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مرخّي عضلات</strong><p><b>Pancuronium / Vecuronium</b> (ومثلهم Atracurium) لتجنب «معاكسة» المريض للجهاز — في الحالات الشديدة وبمدة قصيرة، وبعد التأكد من تهدئة وتسكين كافي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>وضع الانبطاح (Prone)</strong><p>في الحالات المتوسطة/الشديدة (P/F أقل من 150) أكثر من 12–16 ساعة يومياً — يقلل الوفيات وفق الأدلة.</p></div></div></div>\n<h4>الأدوية + ملاحظاتنا</h4><table><thead><tr><th>الدواء</th><th>الغرض</th><th>ملاحظة تمريضية/تحديث</th></tr></thead><tbody><tr><td>Furosemide / Ethacrynic acid / Bumetanide</td><td>طرد سوائل الرئة</td><td>فقط بعد ثبات الدورة الدموية؛ استراتيجية السوائل المحافظة (Conservative) مفيدة بعد زوال الصدمة. راقب البوتاسيوم والكلى.</td></tr><tr><td>Ranitidine / Famotidine / Nizatidine / Omeprazole</td><td>منع قرحة الإجهاد وارتجاع الحمض للرئة</td><td><b>Ranitidine سُحب من الأسواق عالمياً (2020)</b> ويُستبدل بـ Famotidine أو PPI (Omeprazole/Pantoprazole).</td></tr><tr><td>Heparin</td><td>منع الجلطات مع قلة الحركة</td><td>جرعة وقائية (Prophylaxis) للمريض الراقد؛ جرعة علاجية لو في جلطة. راقب aPTT والصفائح.</td></tr><tr><td>Morphine</td><td>تسكين وتقليل استهلاك الأكسجين</td><td>يُجرع بالمعايرة مع مراقبة الضغط والتنفس.</td></tr><tr><td>Hydrocortisone / Methylprednisolone</td><td>تقليل الالتهاب</td><td>مفيدة في بعض الحالات؛ توصيات حديثة (ATS 2024) تقترح الكورتيزون (مثل Dexamethasone) في ARDS المتوسطة-الشديدة، بقرار الطبيب.</td></tr><tr><td>Beractant (Surfactant)</td><td>تعويض المادة السطحية</td><td><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الـ Surfactant ينفع الرضّع، لكن <b>لم يُثبت فائدة</b> في ARDS عند البالغين ولا يُستعمل روتينياً.</p></div></td></tr><tr><td>مضادات حيوية</td><td>حسب المزرعة، وتغطية تجريبية لحين النتيجة</td><td>خذ العينة <b>قبل</b> أول جرعة قدر الإمكان.</td></tr></tbody></table>[[slot:dis-640-vent|لوحة جهاز التنفس الصناعي: PEEP وحجم التنفس وضغط الهضبة]]\n<p>التدخل الأساسي: <strong>تهوية ميكانيكية مع PEEP</strong> (ضغط نهاية الزفير الإيجابي).</p>",
+   "en": "<p>The goal: treat the cause (antibiotic, drain the source of infection) + support oxygenation with the least harm to the lung.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Complete rest + high oxygen</strong><p>ICU admission and start oxygen; if it fails: <b>noninvasive ventilation (CPAP/NIV)</b> for mild cases and with caution, otherwise intubation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Endotracheal intubation (Endotracheal intubation)</strong><p>A sedative such as <b>Propofol</b> is given to ease intubation and for comfort.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Mechanical ventilation with PEEP</strong><p>Positive end-expiratory pressure (PEEP) prevents alveolar collapse. <b>The protective approach:</b> tidal volume 4–8 mL/kg of ideal body weight (usually 6) and plateau pressure (Plateau) ≤30 cmH₂O.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Muscle relaxant</strong><p><b>Pancuronium / Vecuronium</b> (and similarly Atracurium) to prevent the patient \"fighting\" the ventilator — in severe cases and for a short time, after ensuring adequate sedation and analgesia.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Prone position (Prone)</strong><p>In moderate/severe cases (P/F below 150) for more than 12–16 hours daily — reduces mortality according to the evidence.</p></div></div></div>\n<h4>Drugs + our notes</h4><table><thead><tr><th>Drug</th><th>Purpose</th><th>Nursing note/update</th></tr></thead><tbody><tr><td>Furosemide / Ethacrynic acid / Bumetanide</td><td>Remove lung fluid</td><td>Only after hemodynamic stability; a conservative fluid strategy (Conservative) is useful after shock resolves. Monitor potassium and kidneys.</td></tr><tr><td>Ranitidine / Famotidine / Nizatidine / Omeprazole</td><td>Prevent stress ulcers and acid reflux into the lung</td><td><b>Ranitidine was withdrawn from markets worldwide (2020)</b> and is replaced by Famotidine or a PPI (Omeprazole/Pantoprazole).</td></tr><tr><td>Heparin</td><td>Prevent clots with immobility</td><td>A prophylactic dose (Prophylaxis) for the bedridden patient; a therapeutic dose if there is a clot. Monitor aPTT and platelets.</td></tr><tr><td>Morphine</td><td>Analgesia and reducing oxygen consumption</td><td>Titrated, with monitoring of BP and breathing.</td></tr><tr><td>Hydrocortisone / Methylprednisolone</td><td>Reduce inflammation</td><td>Useful in some cases; recent recommendations (ATS 2024) suggest corticosteroids (such as Dexamethasone) in moderate-severe ARDS, by physician decision.</td></tr><tr><td>Beractant (Surfactant)</td><td>Replace surfactant</td><td><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Surfactant helps infants, but <b>has not been shown to benefit</b> adults with ARDS and is not used routinely.</p></div></td></tr><tr><td>Antibiotics</td><td>According to culture, with empiric coverage until the result</td><td>Take the sample <b>before</b> the first dose whenever possible.</td></tr></tbody></table>[[slot:dis-640-vent|Ventilator panel: PEEP, tidal volume, and plateau pressure]]\n<p>The main intervention: <strong>mechanical ventilation with PEEP</strong> (positive end-expiratory pressure).</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تقييم تنفسي كل ساعة (أو أقل)</strong><p>معدل التنفس، الجهد والعضلات المساعدة، لون الجلد، أصوات الصدر، SpO₂ باستمرار. هدف SpO₂ عادةً 92–96% (أو حسب أمر الطبيب). نزول عن 90% أو زيادة التنفس عن 30: بلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>إعدادات الجهاز</strong><p>راجع كل وردية: FiO₂ وPEEP وحجم التنفس والضغوط وإنذارات. لا تطفئ إنذار. اشفط (Suction) عند الحاجة فقط بتقنية معقمة ولمدة أقل من 15 ثانية مع أكسجين قبل وبعد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>وضعية الجسم</strong><p>رأس السرير 30–45° (يقلل الشفط الرئوي وVAP). تبديل الوضع كل ساعتين ومنع قرح الضغط. في الانبطاح: فريق من 4–5 أشخاص، حماية الأنبوب والخطوط والعين والوجه والصدر، وفحص الجلد بعد التقليب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>السوائل والكلى</strong><p>سجّل المدخل والمخرج بدقة. إخراج بول أقل من 30 مل/ساعة (نحو 0.5 مل/كجم/س): بلّغ. تابع BUN وCreatinine. راقب زيادة السوائل لأنها بتزوّد الوذمة الرئوية وقد تسبب فشل قلب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الوزن اليومي</strong><p>نفس الميزان ونفس التوقيت: زيادة الوزن = تجمع سوائل في الفراغات (Third spacing).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>معمل ومتابعة</strong><p>WBC (عدوى/مناعة)، Hb/Hct، PT/PTT/INR وجرعة الهيبارين، بوتاسيوم، غازات الدم حسب الأوامر. اطلب ABG بعد أي تغيير في إعدادات الجهاز بـ 20–30 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>منع المضاعفات</strong><p>وقاية من VAP: نظافة الفم (كلورهيكسيدين حسب البروتوكول)، تفريغ الماء المتكثف من دوائر الجهاز، فحص بالونة الأنبوب (20–30 سم ماء). وقاية من الجلطات الوريدية وقرحة الإجهاد حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>الراحة والتهدئة</strong><p>قسّم الأنشطة وامنح فترات راحة؛ الإجهاد بيرفع استهلاك الأكسجين. التسكين والتهدئة (Sedation) حسب أمر الطبيب مع تقييم مستوى الوعي (RASS).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>التواصل والدعم</strong><p>شرح مبسط للمريض وللأسرة حتى وهو متنفس صناعياً؛ وسيلة تواصل بديلة (ورقة/صور).</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>نمط تنفس غير فعال • اضطراب تبادل الغازات • ضعف التروية النسيجية.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>تهوية ميكانيكية مع PEEP (ضغط نهاية الزفير الإيجابي)</li><li>رأس السرير مرتفع (وضع فاولر العالي)</li><li>شفط الفم وأكسجين</li><li>الاستماع لأصوات الرئتين</li><li>اطلب المساعدة وأخبر الطبيب</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Respiratory assessment every hour (or more often)</strong><p>Respiratory rate, effort and accessory muscles, skin color, chest sounds, continuous SpO₂. The SpO₂ target is usually 92–96% (or per physician order). A drop below 90% or a respiratory rate above 30: report immediately.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Ventilator settings</strong><p>Check every shift: FiO₂, PEEP, tidal volume, pressures, and alarms. Never silence an alarm. Suction (Suction) only when needed, with sterile technique, for less than 15 seconds, with oxygen before and after.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Body position</strong><p>Head of bed 30–45° (reduces aspiration and VAP). Reposition every two hours and prevent pressure ulcers. In prone positioning: a team of 4–5 people, protect the tube, lines, eyes, face, and chest, and check the skin after turning.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Fluids and kidneys</strong><p>Record intake and output accurately. Urine output below 30 mL/hour (about 0.5 mL/kg/h): report. Follow BUN and Creatinine. Watch for fluid overload because it worsens pulmonary edema and may cause heart failure.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Daily weight</strong><p>Same scale and same time: weight gain = fluid collecting in the spaces (Third spacing).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Labs and follow-up</strong><p>WBC (infection/immunity), Hb/Hct, PT/PTT/INR and the heparin dose, potassium, blood gases per orders. Request an ABG 20–30 minutes after any change in ventilator settings.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Prevent complications</strong><p>VAP prevention: oral care (chlorhexidine per protocol), draining condensed water from the ventilator circuit, checking the tube cuff (20–30 cmH₂O). Prevention of venous thrombosis and stress ulcers per order.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Rest and sedation</strong><p>Cluster activities and allow rest periods; exertion raises oxygen consumption. Analgesia and sedation (Sedation) per physician order, with assessment of the level of consciousness (RASS).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>Communication and support</strong><p>A simple explanation for the patient and family even while ventilated; an alternative means of communication (paper/pictures).</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Nursing diagnoses</strong><p>Ineffective breathing pattern • Impaired gas exchange • Ineffective tissue perfusion.</p></div><h4>Additions covering review points</h4><ul><li>Mechanical ventilation with PEEP (positive end-expiratory pressure)</li><li>Head of bed elevated (high Fowler's position)</li><li>Oral suctioning and oxygen</li><li>Listen to lung sounds</li><li>Call for help and inform the physician</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>SpO₂ أقل من 90% رغم زيادة الأكسجين، أو P/F أقل من 100.</li><li>ارتفاع مفاجئ في ضغط الهضبة أو اختفاء أصوات تنفس من جهة (استبعد <b>استرواح صدر Pneumothorax</b> من ضغط الجهاز) — طوارئ.</li><li>هبوط ضغط مع تسارع نبض (تعفن أو ضغط مرتفع في الصدر).</li><li>بول أقل من 0.5 مل/كجم/س لمدة ساعتين.</li><li>زرقة، تغير في الوعي أو هياج شديد.</li><li>نزيف من الأنبوب أو الفم أثناء الهيبارين.</li></ul>",
+   "en": "<ul><li>SpO₂ below 90% despite increased oxygen, or P/F below 100.</li><li>A sudden rise in plateau pressure or absent breath sounds on one side (rule out <b>pneumothorax (Pneumothorax)</b> from ventilator pressure) — emergency.</li><li>Hypotension with tachycardia (sepsis or high intrathoracic pressure).</li><li>Urine below 0.5 mL/kg/h for two hours.</li><li>Cyanosis, change in consciousness, or severe agitation.</li><li>Bleeding from the tube or mouth during heparin.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>بعد فصل الجهاز: تمارين <b>السعال والتنفس العميق</b> لطرد السوائل المتبقية وتوسيع الرئة.</li><li>علامات رجوع الضيق: ضيق نفس، سعال، صفير، تنفس سريع، زرقة، قلق وهياج — ارجع فوراً.</li><li>التعافي بطيء: ضعف عضلات وإرهاق شائع؛ تأهيل رئوي وتغذية عالية بروتين.</li><li>الإقلاع عن التدخين وتطعيم الإنفلونزا والرئوي.</li></ul>",
+   "en": "<ul><li>After weaning from the ventilator: <b>coughing and deep breathing</b> exercises to clear remaining fluid and expand the lung.</li><li>Signs of returning distress: dyspnea, cough, wheezing, rapid breathing, cyanosis, anxiety, and agitation — return immediately.</li><li>Recovery is slow: muscle weakness and fatigue are common; pulmonary rehabilitation and high-protein nutrition.</li><li>Quit smoking and get the influenza and pneumococcal vaccines.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "ARDS = التهاب منتشر + سوائل في الحويصلات + نقص أكسجة عنيد (P/F ≤ 300).",
+   "أسهل علامة تنبيه مبكرة: تنفس سريع + قلق + SpO₂ بيهبط رغم الأكسجين.",
+   "التنفس الواقي: حجم صغير (≈6 مل/كجم) وPEEP وضغط هضبة ≤30.",
+   "الانبطاح (Prone) أكثر من 12 ساعة بينقذ حياة في الحالات الشديدة.",
+   "المراجع تذكر Surfactant وRanitidine: الأول غير مفيد للبالغين والثاني مسحوب.",
+   "سجّل المدخل والمخرج والوزن: السوائل الزائدة بتسوء الرئة.",
+   "ضغط الهضبة المرتفع المفاجئ = ابحث عن استرواح صدر.",
+   "ARDS: نقص أكسجة مقاوم",
+   "PEEP والتهوية الميكانيكية",
+   "التهاب البنكرياس من أسبابها"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>الـ ARDS هو <b>فشل تنفسي حاد</b> سببه التهاب شديد منتشر في الرئتين: الشعيرات اللي حوالين الحويصلات الهوائية (Alveoli) بتبقى «بتسرّب»، فالسوائل بتدخل النسيج الرئوي (Interstitium) والحويصلات نفسها. الرئة بتتصلب (قلّة المرونة Compliance)، المادة اللي بتمنع انكماش الحويصلات (Surfactant) بتتضرر فالحويصلات بتنهار (Atelectasis)، والأكسجين مش بيعدّي للدم رغم إن المريض بيتنفس أسرع. النتيجة: <b>نقص أكسجة (Hypoxemia)</b> وارتفاع ثاني أكسيد الكربون ثم حماض تنفسي.</p>\n<div class=\"cs-stats\"><div><b>200–300</b><span>P/F خفيف (مم زئبق)</span></div><div><b>100–200</b><span>P/F متوسط</span></div><div><b>≤100</b><span>P/F شديد</span></div><div><b>40–50%</b><span>وفيات تقريبية (50–60% في بعض المراجع)</span></div></div>\n<p>في محاولة الجسم يصلّح التلف ممكن يحصل <b>تليّف (Fibrosis)</b> وده اللي بيخلّي بعض المرضى يدخلوا مرحلة مزمنة محتاجة تنفس صناعي طويل. الاسم القديم «Adult RDS» لأنه بيصيب ناس معندهمش تاريخ مرض رئوي قبل كده.</p>\n<div class=\"cs-box cs-info\"><strong>معايير التشخيص (Berlin)</strong><p>بداية خلال أسبوع من محفّز معروف، <b>ظلال على الأشعة في الرئتين الاتنين</b> مش مفسَّرة بفشل القلب أو زيادة السوائل، ونسبة <b>PaO₂/FiO₂ ≤ 300</b> مع PEEP لا يقل عن 5. التصنيف: خفيف 200–300، متوسط 100–200، شديد ≤100. مثال: PaO₂ = 80 و FiO₂ = 1.0 (100%) يعني النسبة 80 = شديد.</p></div>\n[[slot:dis-640-flow|مسار حدوث ARDS من المحفّز إلى فشل التنفس|/diseases/img/dis-640-flow.svg]]<h4>إضافات تغطي نقاط المراجعة</h4><p>ARDS: تلتهب الشعيرات حول الحويصلات فتتسرب السوائل (حاجز متسرب) وتصبح الحويصلات صلبة ومتليّفة، فيستحيل دخول الأكسجين وخروج CO2؛ قد يموت المريض من نقص الأكسجة إذا لم يُوضع على جهاز مبكرًا. مميز: نقص أكسجة مقاوم (Refractory hypoxemia) رغم الأكسجين. من الأسباب: الإنتان، التهاب رئوي أو استنشاق سموم أو شفط، والتهاب البنكرياس الحاد (تسرب الإنزيمات والسيتوكينات للدم ثم للرئة).</p>[[slot:dis-044-ards|ARDS — رسم من إعداد الموقع|/diseases/img/dis-044-ards.svg]]\n<h4>مراجعة NCLEX: ARDS</h4><p>تتصلب الحويصلات لأن الشعيرات حولها تلتهب وتمتلئ بالسوائل فتتكون «حواجز متسربة» تملأ الحويصلات، فيستحيل دخول الأكسجين وخروج CO₂. قد يموت المريض من نقص الأكسجة إن لم يُوضع مبكرًا على التهوية الميكانيكية. التشخيص التمريضي الأولي: ضعف تبادل الغازات. وهو نقص أكسجة عنيد (مقاوم للأكسجين).</p>[[slot:dis-651-p429|الفشل التنفسي وARDS — رسم من إعداد الموقع|/diseases/img/dis-651-p429.svg]]"
-    },
-    "causes": {
-      "ar": "<h4>أشهر المحفّزات</h4><table><thead><tr><th>مباشر (من الرئة)</th><th>غير مباشر (من خارج الرئة)</th></tr></thead><tbody><tr><td>التهاب رئوي شديد (Pneumonia) — أشهر سبب</td><td>تعفن الدم والصدمة الإنتانية (Sepsis / Septic shock)</td></tr><tr><td>استنشاق محتويات المعدة (Aspiration)</td><td>إصابات وكسور كبيرة (Trauma) وانسداد دهني</td></tr><tr><td>استنشاق دخان أو غاز سام (Inhalation injury)</td><td>نقل دم كثير (TRALI) وحروق كبيرة</td></tr><tr><td>غرق، كدمة رئة</td><td>التهاب البنكرياس الحاد، جلطة مخ أو إصابة رأس</td></tr></tbody></table><p>المراجع تذكر: الصدمة والتعفن والرضوض واستنشاق الدخان. ومعاهم عوامل خطر: إدمان الكحول، التدخين، سن كبير.</p>\n<ul><li>الإنتان (عدوى دموية تلتهب الجسم كله).</li><li>الالتهاب الرئوي، استنشاق سموم أو قيء.</li><li>التهاب البنكرياس الحاد: إطلاق إنزيمات البنكرياس والسيتوكينات في الدم فتصل الرئتين وتسبب التهابًا (نقطة امتحان).</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li><b>نقص أكسجة عنيد (Refractory hypoxemia)</b> حتى مع أكسجين 100%.</li><li>ضيق نفس (Dyspnea) يزيد كل ما السوائل تتجمع وتقلّ مرونة الرئة.</li><li>تنفس أسرع من 20 في الدقيقة (Tachypnea).</li><li>وذمة رئوية (Pulmonary edema) غير قلبية.</li><li>انخفاض أصوات التنفس (سوائل في الحويصلات أو حويصلات منهارة).</li><li>قلق وعدم استقرار (Restlessness) بسبب قلة الأكسجين.</li><li>أصوات «طقطقة» (Crackles / Rales) مش بتظهر في الأول، وأحياناً صفير (Wheezing / Rhonchi) لو في التهاب أو بلغم.</li><li>زرقة (Cyanosis).</li><li>استخدام عضلات التنفس المساعدة: شفط الأضلاع (Intercostal retraction) وتحت القص (Substernal).</li></ul><div class=\"cs-box cs-warning\"><strong>انتبه</strong><p>المريض بيبدأ «مش مرتاح» وسرعة تنفس زايدة ومؤشر الأكسجين طبيعي تقريباً، وبعد ساعات بيدخل في الفشل. أي مريض ببنية خطر (تعفن، التهاب رئوي) وتنفسه بيسرع: بلّغ بدري.</p></div>"
-    },
-    "tests": {
-      "ar": "<table><thead><tr><th>الفحص</th><th>النتيجة المتوقعة</th></tr></thead><tbody><tr><td>مقياس الأكسجين (SpO₂)</td><td>أقل من 90%</td></tr><tr><td>غازات الدم الشرياني (ABG)</td><td>حماض تنفسي: PaCO₂ فوق 45، وPaO₂ منخفض رغم الأكسجين الإضافي؛ P/F ≤ 300</td></tr><tr><td>أشعة الصدر</td><td>ظلال في الرئتين الاتنين («whiteout» أو شكل الزجاج المطحون)</td></tr><tr><td>ضغط الإسفين الشرياني الرئوي (PCWP)</td><td>منخفض إلى طبيعي (≤18) — يفرّق عن الوذمة القلبية</td></tr><tr><td>CBC</td><td>ارتفاع WBC مع عدوى، انخفاضه مع كبت مناعة أو فيروس؛ Hb/Hct للأنيميا</td></tr><tr><td>PT/PTT/INR</td><td>اضطراب التجلط وضبط جرعة الهيبارين</td></tr><tr><td>BUN وCreatinine</td><td>متابعة الكلى (فشل كلوي مصاحب شائع)</td></tr><tr><td>مزرعة بلغم / دم</td><td>لتحديد الميكروب والمضاد المناسب</td></tr></tbody></table>[[slot:dis-640-xray|أشعة صدر لحالة ARDS (ظلال ثنائية منتشرة)]]<p>معلومة: الإيكو (Echo) بيُطلب أحياناً لاستبعاد سبب قلبي.</p>"
-    },
-    "treatment": {
-      "ar": "<p>الهدف: علاج السبب (مضاد حيوي، تصريف بؤرة العدوى) + دعم الأكسجة بأقل أذى للرئة.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>راحة تامة + أكسجين عالي</strong><p>إدخال العناية المركزة وبدء أكسجين؛ لو فشل: <b>تنفس صناعي غير باضع (CPAP/NIV)</b> للحالات الخفيفة وبحذر، وإلا التنبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>تنبيب رغامي (Endotracheal intubation)</strong><p>يُعطى مخدر مثل <b>Propofol</b> لتسهيل التنبيب والراحة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>تنفس صناعي بـ PEEP</strong><p>ضغط زفير إيجابي (PEEP) يمنع انهيار الحويصلات. <b>الأسلوب الواقي:</b> حجم تنفس 4–8 مل/كجم من الوزن المثالي (غالباً 6) وضغط هضبة (Plateau) ≤30 سم ماء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مرخّي عضلات</strong><p><b>Pancuronium / Vecuronium</b> (ومثلهم Atracurium) لتجنب «معاكسة» المريض للجهاز — في الحالات الشديدة وبمدة قصيرة، وبعد التأكد من تهدئة وتسكين كافي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>وضع الانبطاح (Prone)</strong><p>في الحالات المتوسطة/الشديدة (P/F أقل من 150) أكثر من 12–16 ساعة يومياً — يقلل الوفيات وفق الأدلة.</p></div></div></div>\n<h4>الأدوية + ملاحظاتنا</h4><table><thead><tr><th>الدواء</th><th>الغرض</th><th>ملاحظة تمريضية/تحديث</th></tr></thead><tbody><tr><td>Furosemide / Ethacrynic acid / Bumetanide</td><td>طرد سوائل الرئة</td><td>فقط بعد ثبات الدورة الدموية؛ استراتيجية السوائل المحافظة (Conservative) مفيدة بعد زوال الصدمة. راقب البوتاسيوم والكلى.</td></tr><tr><td>Ranitidine / Famotidine / Nizatidine / Omeprazole</td><td>منع قرحة الإجهاد وارتجاع الحمض للرئة</td><td><b>Ranitidine سُحب من الأسواق عالمياً (2020)</b> ويُستبدل بـ Famotidine أو PPI (Omeprazole/Pantoprazole).</td></tr><tr><td>Heparin</td><td>منع الجلطات مع قلة الحركة</td><td>جرعة وقائية (Prophylaxis) للمريض الراقد؛ جرعة علاجية لو في جلطة. راقب aPTT والصفائح.</td></tr><tr><td>Morphine</td><td>تسكين وتقليل استهلاك الأكسجين</td><td>يُجرع بالمعايرة مع مراقبة الضغط والتنفس.</td></tr><tr><td>Hydrocortisone / Methylprednisolone</td><td>تقليل الالتهاب</td><td>مفيدة في بعض الحالات؛ توصيات حديثة (ATS 2024) تقترح الكورتيزون (مثل Dexamethasone) في ARDS المتوسطة-الشديدة، بقرار الطبيب.</td></tr><tr><td>Beractant (Surfactant)</td><td>تعويض المادة السطحية</td><td><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الـ Surfactant ينفع الرضّع، لكن <b>لم يُثبت فائدة</b> في ARDS عند البالغين ولا يُستعمل روتينياً.</p></div></td></tr><tr><td>مضادات حيوية</td><td>حسب المزرعة، وتغطية تجريبية لحين النتيجة</td><td>خذ العينة <b>قبل</b> أول جرعة قدر الإمكان.</td></tr></tbody></table>[[slot:dis-640-vent|لوحة جهاز التنفس الصناعي: PEEP وحجم التنفس وضغط الهضبة]]\n<p>التدخل الأساسي: <strong>تهوية ميكانيكية مع PEEP</strong> (ضغط نهاية الزفير الإيجابي).</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تقييم تنفسي كل ساعة (أو أقل)</strong><p>معدل التنفس، الجهد والعضلات المساعدة، لون الجلد، أصوات الصدر، SpO₂ باستمرار. هدف SpO₂ عادةً 92–96% (أو حسب أمر الطبيب). نزول عن 90% أو زيادة التنفس عن 30: بلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>إعدادات الجهاز</strong><p>راجع كل وردية: FiO₂ وPEEP وحجم التنفس والضغوط وإنذارات. لا تطفئ إنذار. اشفط (Suction) عند الحاجة فقط بتقنية معقمة ولمدة أقل من 15 ثانية مع أكسجين قبل وبعد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>وضعية الجسم</strong><p>رأس السرير 30–45° (يقلل الشفط الرئوي وVAP). تبديل الوضع كل ساعتين ومنع قرح الضغط. في الانبطاح: فريق من 4–5 أشخاص، حماية الأنبوب والخطوط والعين والوجه والصدر، وفحص الجلد بعد التقليب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>السوائل والكلى</strong><p>سجّل المدخل والمخرج بدقة. إخراج بول أقل من 30 مل/ساعة (نحو 0.5 مل/كجم/س): بلّغ. تابع BUN وCreatinine. راقب زيادة السوائل لأنها بتزوّد الوذمة الرئوية وقد تسبب فشل قلب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الوزن اليومي</strong><p>نفس الميزان ونفس التوقيت: زيادة الوزن = تجمع سوائل في الفراغات (Third spacing).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>معمل ومتابعة</strong><p>WBC (عدوى/مناعة)، Hb/Hct، PT/PTT/INR وجرعة الهيبارين، بوتاسيوم، غازات الدم حسب الأوامر. اطلب ABG بعد أي تغيير في إعدادات الجهاز بـ 20–30 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>منع المضاعفات</strong><p>وقاية من VAP: نظافة الفم (كلورهيكسيدين حسب البروتوكول)، تفريغ الماء المتكثف من دوائر الجهاز، فحص بالونة الأنبوب (20–30 سم ماء). وقاية من الجلطات الوريدية وقرحة الإجهاد حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>الراحة والتهدئة</strong><p>قسّم الأنشطة وامنح فترات راحة؛ الإجهاد بيرفع استهلاك الأكسجين. التسكين والتهدئة (Sedation) حسب أمر الطبيب مع تقييم مستوى الوعي (RASS).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>التواصل والدعم</strong><p>شرح مبسط للمريض وللأسرة حتى وهو متنفس صناعياً؛ وسيلة تواصل بديلة (ورقة/صور).</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>نمط تنفس غير فعال • اضطراب تبادل الغازات • ضعف التروية النسيجية.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>تهوية ميكانيكية مع PEEP (ضغط نهاية الزفير الإيجابي)</li><li>رأس السرير مرتفع (وضع فاولر العالي)</li><li>شفط الفم وأكسجين</li><li>الاستماع لأصوات الرئتين</li><li>اطلب المساعدة وأخبر الطبيب</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>SpO₂ أقل من 90% رغم زيادة الأكسجين، أو P/F أقل من 100.</li><li>ارتفاع مفاجئ في ضغط الهضبة أو اختفاء أصوات تنفس من جهة (استبعد <b>استرواح صدر Pneumothorax</b> من ضغط الجهاز) — طوارئ.</li><li>هبوط ضغط مع تسارع نبض (تعفن أو ضغط مرتفع في الصدر).</li><li>بول أقل من 0.5 مل/كجم/س لمدة ساعتين.</li><li>زرقة، تغير في الوعي أو هياج شديد.</li><li>نزيف من الأنبوب أو الفم أثناء الهيبارين.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>بعد فصل الجهاز: تمارين <b>السعال والتنفس العميق</b> لطرد السوائل المتبقية وتوسيع الرئة.</li><li>علامات رجوع الضيق: ضيق نفس، سعال، صفير، تنفس سريع، زرقة، قلق وهياج — ارجع فوراً.</li><li>التعافي بطيء: ضعف عضلات وإرهاق شائع؛ تأهيل رئوي وتغذية عالية بروتين.</li><li>الإقلاع عن التدخين وتطعيم الإنفلونزا والرئوي.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "ARDS = التهاب منتشر + سوائل في الحويصلات + نقص أكسجة عنيد (P/F ≤ 300).",
-      "أسهل علامة تنبيه مبكرة: تنفس سريع + قلق + SpO₂ بيهبط رغم الأكسجين.",
-      "التنفس الواقي: حجم صغير (≈6 مل/كجم) وPEEP وضغط هضبة ≤30.",
-      "الانبطاح (Prone) أكثر من 12 ساعة بينقذ حياة في الحالات الشديدة.",
-      "المراجع تذكر Surfactant وRanitidine: الأول غير مفيد للبالغين والثاني مسحوب.",
-      "سجّل المدخل والمخرج والوزن: السوائل الزائدة بتسوء الرئة.",
-      "ضغط الهضبة المرتفع المفاجئ = ابحث عن استرواح صدر.",
-      "ARDS: نقص أكسجة مقاوم",
-      "PEEP والتهوية الميكانيكية",
-      "التهاب البنكرياس من أسبابها"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي من التالي يميّز ARDS عن الوذمة الرئوية القلبية؟"
-      },
-      "options": [
-        {
-          "ar": "PCWP منخفض إلى طبيعي مع ظلال في الرئتين"
-        },
-        {
-          "ar": " PCWP مرتفع جداً"
-        },
-        {
-          "ar": "تضخم القلب دائماً"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "في ARDS السوائل بسبب تسرّب التهابي وليس ضغط قلبي، فالـ PCWP طبيعي أو منخفض."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض ARDS على جهاز، حجم التنفس المناسب غالباً:"
-      },
-      "options": [
-        {
-          "ar": "10–12 مل/كجم"
-        },
-        {
-          "ar": "حوالي 6 مل/كجم من الوزن المثالي"
-        },
-        {
-          "ar": "2 مل/كجم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التنفس الواقي يقلل أذى الرئة؛ ضغط الهضبة ≤30."
-      }
-    },
-    {
-      "q": {
-        "ar": "أكتر وضعية بتحسّن الأكسجة في ARDS الشديدة:"
-      },
-      "options": [
-        {
-          "ar": "الاستلقاء على الظهر"
-        },
-        {
-          "ar": "الانبطاح (Prone) فترات طويلة"
-        },
-        {
-          "ar": "الجلوس على كرسي"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الانبطاح يعيد توزيع الهواء والدم ويقلل الوفيات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أثناء التنفس الصناعي ارتفع الضغط فجأة واختفى صوت التنفس يميناً، أول ما تفكر فيه:"
-      },
-      "options": [
-        {
-          "ar": "استرواح صدر"
-        },
-        {
-          "ar": "جفاف"
-        },
-        {
-          "ar": "حرارة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ضغط الجهاز العالي قد يسبب Pneumothorax: بلّغ فوراً."
-      }
-    },
-    {
-      "q": {
-        "ar": "هدف رأس السرير للمريض المنبّب:"
-      },
-      "options": [
-        {
-          "ar": "صفر"
-        },
-        {
-          "ar": "30–45 درجة"
-        },
-        {
-          "ar": "90 درجة دائماً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يقلل الشفط وVAP."
-      }
-    },
-    {
-      "q": {
-        "ar": "ARDS يتميز بـ:"
-      },
-      "options": [
-        {
-          "ar": "نقص أكسجة مقاوم للأكسجين"
-        },
-        {
-          "ar": "ارتفاع PaO2"
-        },
-        {
-          "ar": "سعال فقط"
-        },
-        {
-          "ar": "لا أعراض"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحويصلات المتسرّبة."
-      }
-    },
-    {
-      "q": {
-        "ar": "سبب مرتبط بـ ARDS:"
-      },
-      "options": [
-        {
-          "ar": "التهاب البنكرياس الحاد"
-        },
-        {
-          "ar": "التمرين"
-        },
-        {
-          "ar": "الماء"
-        },
-        {
-          "ar": "الشمس"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإنزيمات تصل للرئة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي من الحالات التالية يرفع خطر ARDS؟"
-      },
-      "options": [
-        {
-          "ar": "التهاب البنكرياس الحاد"
-        },
-        {
-          "ar": "الأنيميا"
-        },
-        {
-          "ar": "الصداع"
-        },
-        {
-          "ar": "الحساسية الموسمية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "إنزيمات البنكرياس والسيتوكينات تصل الرئتين."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تدخل أساسي لمريض ARDS؟"
-      },
-      "options": [
-        {
-          "ar": "تهوية ميكانيكية مع PEEP"
-        },
-        {
-          "ar": "مسكن فقط"
-        },
-        {
-          "ar": "مضاد سعال"
-        },
-        {
-          "ar": "سوائل كثيرة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "PEEP يمنع انهيار الحويصلات ويحسن الأكسجة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Berlin Definition of ARDS (JAMA 2012)"
-    },
-    {
-      "title": "ATS Clinical Practice Guideline: Mechanical Ventilation in ARDS (2017) & Corticosteroids (2024 update)"
-    },
-    {
-      "title": "PROSEVA trial — prone positioning (NEJM 2013)"
-    },
-    {
-      "title": "StatPearls: Acute Respiratory Distress Syndrome"
-    }
+  "en": [
+   "ARDS = widespread inflammation + fluid in the alveoli + refractory hypoxemia (P/F ≤ 300).",
+   "The easiest early warning sign: rapid breathing + anxiety + SpO₂ falling despite oxygen.",
+   "Protective ventilation: small volume (≈6 mL/kg), PEEP, and plateau pressure ≤30.",
+   "Prone positioning for more than 12 hours saves lives in severe cases.",
+   "The references mention Surfactant and Ranitidine: the first is not useful in adults and the second is withdrawn.",
+   "Record intake, output, and weight: excess fluid worsens the lung.",
+   "A sudden high plateau pressure = look for pneumothorax.",
+   "ARDS: refractory hypoxemia",
+   "PEEP and mechanical ventilation",
+   "Pancreatitis is one of its causes"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي من التالي يميّز ARDS عن الوذمة الرئوية القلبية؟",
+    "en": "Which of the following distinguishes ARDS from cardiogenic pulmonary edema?"
+   },
+   "options": [
+    {
+     "ar": "PCWP منخفض إلى طبيعي مع ظلال في الرئتين",
+     "en": "Low to normal PCWP with lung opacities"
+    },
+    {
+     "ar": " PCWP مرتفع جداً",
+     "en": "Very high PCWP"
+    },
+    {
+     "ar": "تضخم القلب دائماً",
+     "en": "Always cardiomegaly"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "في ARDS السوائل بسبب تسرّب التهابي وليس ضغط قلبي، فالـ PCWP طبيعي أو منخفض.",
+    "en": "In ARDS the fluid is from inflammatory leakage, not cardiac pressure, so the PCWP is normal or low."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض ARDS على جهاز، حجم التنفس المناسب غالباً:",
+    "en": "An ARDS patient on a ventilator; the appropriate tidal volume is usually:"
+   },
+   "options": [
+    {
+     "ar": "10–12 مل/كجم",
+     "en": "10–12 mL/kg"
+    },
+    {
+     "ar": "حوالي 6 مل/كجم من الوزن المثالي",
+     "en": "About 6 mL/kg of ideal body weight"
+    },
+    {
+     "ar": "2 مل/كجم",
+     "en": "2 mL/kg"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التنفس الواقي يقلل أذى الرئة؛ ضغط الهضبة ≤30.",
+    "en": "Protective ventilation reduces lung injury; plateau pressure ≤30."
+   }
+  },
+  {
+   "q": {
+    "ar": "أكتر وضعية بتحسّن الأكسجة في ARDS الشديدة:",
+    "en": "The position that most improves oxygenation in severe ARDS:"
+   },
+   "options": [
+    {
+     "ar": "الاستلقاء على الظهر",
+     "en": "Lying on the back"
+    },
+    {
+     "ar": "الانبطاح (Prone) فترات طويلة",
+     "en": "Prone for long periods"
+    },
+    {
+     "ar": "الجلوس على كرسي",
+     "en": "Sitting in a chair"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الانبطاح يعيد توزيع الهواء والدم ويقلل الوفيات.",
+    "en": "Prone positioning redistributes air and blood and reduces mortality."
+   }
+  },
+  {
+   "q": {
+    "ar": "أثناء التنفس الصناعي ارتفع الضغط فجأة واختفى صوت التنفس يميناً، أول ما تفكر فيه:",
+    "en": "During mechanical ventilation the pressure suddenly rose and breath sounds disappeared on the right; your first thought:"
+   },
+   "options": [
+    {
+     "ar": "استرواح صدر",
+     "en": "Pneumothorax"
+    },
+    {
+     "ar": "جفاف",
+     "en": "Dehydration"
+    },
+    {
+     "ar": "حرارة",
+     "en": "Fever"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ضغط الجهاز العالي قد يسبب Pneumothorax: بلّغ فوراً.",
+    "en": "High ventilator pressure may cause a pneumothorax: report immediately."
+   }
+  },
+  {
+   "q": {
+    "ar": "هدف رأس السرير للمريض المنبّب:",
+    "en": "The head-of-bed target for an intubated patient:"
+   },
+   "options": [
+    {
+     "ar": "صفر",
+     "en": "Zero"
+    },
+    {
+     "ar": "30–45 درجة",
+     "en": "30–45 degrees"
+    },
+    {
+     "ar": "90 درجة دائماً",
+     "en": "Always 90 degrees"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يقلل الشفط وVAP.",
+    "en": "Reduces aspiration and VAP."
+   }
+  },
+  {
+   "q": {
+    "ar": "ARDS يتميز بـ:",
+    "en": "ARDS is characterized by:"
+   },
+   "options": [
+    {
+     "ar": "نقص أكسجة مقاوم للأكسجين",
+     "en": "Hypoxemia resistant to oxygen"
+    },
+    {
+     "ar": "ارتفاع PaO2",
+     "en": "High PaO2"
+    },
+    {
+     "ar": "سعال فقط",
+     "en": "Cough only"
+    },
+    {
+     "ar": "لا أعراض",
+     "en": "No symptoms"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحويصلات المتسرّبة.",
+    "en": "Leaky alveoli."
+   }
+  },
+  {
+   "q": {
+    "ar": "سبب مرتبط بـ ARDS:",
+    "en": "A cause associated with ARDS:"
+   },
+   "options": [
+    {
+     "ar": "التهاب البنكرياس الحاد",
+     "en": "Acute pancreatitis"
+    },
+    {
+     "ar": "التمرين",
+     "en": "Exercise"
+    },
+    {
+     "ar": "الماء",
+     "en": "Water"
+    },
+    {
+     "ar": "الشمس",
+     "en": "Sun"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإنزيمات تصل للرئة.",
+    "en": "The enzymes reach the lung."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من الحالات التالية يرفع خطر ARDS؟",
+    "en": "Which of the following conditions increases the risk of ARDS?"
+   },
+   "options": [
+    {
+     "ar": "التهاب البنكرياس الحاد",
+     "en": "Acute pancreatitis"
+    },
+    {
+     "ar": "الأنيميا",
+     "en": "Anemia"
+    },
+    {
+     "ar": "الصداع",
+     "en": "Headache"
+    },
+    {
+     "ar": "الحساسية الموسمية",
+     "en": "Seasonal allergy"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "إنزيمات البنكرياس والسيتوكينات تصل الرئتين.",
+    "en": "Pancreatic enzymes and cytokines reach the lungs."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تدخل أساسي لمريض ARDS؟",
+    "en": "Which is the main intervention for an ARDS patient?"
+   },
+   "options": [
+    {
+     "ar": "تهوية ميكانيكية مع PEEP",
+     "en": "Mechanical ventilation with PEEP"
+    },
+    {
+     "ar": "مسكن فقط",
+     "en": "Analgesic only"
+    },
+    {
+     "ar": "مضاد سعال",
+     "en": "Cough suppressant"
+    },
+    {
+     "ar": "سوائل كثيرة",
+     "en": "Large volumes of fluid"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "PEEP يمنع انهيار الحويصلات ويحسن الأكسجة.",
+    "en": "PEEP prevents alveolar collapse and improves oxygenation."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Berlin Definition of ARDS (JAMA 2012)"
+  },
+  {
+   "title": "ATS Clinical Practice Guideline: Mechanical Ventilation in ARDS (2017) & Corticosteroids (2024 update)"
+  },
+  {
+   "title": "PROSEVA trial — prone positioning (NEJM 2013)"
+  },
+  {
+   "title": "StatPearls: Acute Respiratory Distress Syndrome"
+  }
+ ]
 }

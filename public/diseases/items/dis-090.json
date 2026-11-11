@@ -1,220 +1,271 @@
 {
-  "id": "dis-090",
-  "num": 90,
-  "system": "infect",
-  "icon": "🦠",
-  "level": 1,
-  "title": {
-    "ar": "الإنكلستوما (الدودة الخطافية)",
-    "en": "Ancylostoma / Hookworm"
+ "id": "dis-090",
+ "num": 90,
+ "system": "infect",
+ "icon": "🦠",
+ "level": 1,
+ "title": {
+  "ar": "الإنكلستوما (الدودة الخطافية)",
+  "en": "Ancylostoma / Hookworm"
+ },
+ "teaser": {
+  "ar": "أنيميا من دودة صغيرة وقدم حافية: دورة اليرقة، نزف الأمعاء المزمن، جرعات الألبندازول والميبيندازول، وعلاج الحديد ومراقبة الهيموجلوبين.",
+  "en": "Anemia from a tiny worm and a bare foot: the larval cycle, chronic intestinal bleeding, albendazole and mebendazole doses, iron therapy, and hemoglobin monitoring."
+ },
+ "chips": [
+  {
+   "ar": "أنيميا",
+   "en": "Anemia"
   },
-  "teaser": {
-    "ar": "أنيميا من دودة صغيرة وقدم حافية: دورة اليرقة، نزف الأمعاء المزمن، جرعات الألبندازول والميبيندازول، وعلاج الحديد ومراقبة الهيموجلوبين."
+  {
+   "ar": "Mebendazole",
+   "en": "Mebendazole"
   },
-  "chips": [
-    {
-      "ar": "أنيميا"
-    },
-    {
-      "ar": "Mebendazole"
-    },
-    {
-      "ar": "حذاء ونظافة"
-    }
+  {
+   "ar": "حذاء ونظافة",
+   "en": "Shoes and hygiene"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الإنكلستوما (Ancylostoma duodenale / Hookworm) دودة صغيرة (حوالي 1 سم) بتلتصق بجدار الأمعاء الدقيقة وتمتص الدم، فتسبب أنيميا نقص الحديد المزمنة وخصوصاً مع التغذية الضعيفة.</p><div class=\"cs-stats\"><div><b>~1 سم</b><span>حجم الدودة</span></div><div><b>0.03–0.2 مل</b><span>دم يفقد يومياً لكل دودة</span></div><div><b>5–9 أسابيع</b><span>حتى ظهور البيض بعد العدوى</span></div></div>[[slot:dis-090-cycle|دورة الإنكلستوما|/diseases/img/dis-090-cycle.svg]]<h4>إيه اللي بيحصل في الجسم؟ (Pathophysiology)</h4><ol><li>اليرقة المعدية (Filariform) تخترق جلد القدم الحافية أو اليد من تربة رطبة ملوثة ببراز مصاب، وتسبب حكة والتهاب جلد موضعي.</li><li>تدخل الأوعية الدموية وتصل الرئتين، تخترق الحويصلات وتصعد للبلعوم وتُبلع (وقد تُبلع اليرقة مباشرة عن طريق الفم أيضاً مع A. duodenale).</li><li>في الأمعاء الدقيقة تنضج الديدان وتلتصق بأسنان قاطعة وتمتص الدم وتفرز مادة مانعة للتجلط؛ فيستمر نزف صغير مزمن.</li><li>النتيجة: فقد حديد وبروتين ← أنيميا نقص حديد (Microcytic hypochromic)، ونقص ألبومين وتورم، وتأخر نمو وتعلّم عند الأطفال، ومخاطر أكبر عند الحوامل.</li></ol>[[slot:dis-090-life|دورة الإنكلستوما بالتفصيل|/diseases/img/dis-090-life.svg]]<div class=\"cs-box cs-info\"><strong>ليه الخطر على الأطفال والحوامل؟</strong><p>الاحتياج للحديد عالي، والتغذية قد تكون ضعيفة؛ فالأنيميا بتأثر على النمو والمناعة والحمل وبتزيد خطر ولادة وزن منخفض.</p></div>",
+   "en": "<p>Hookworm (Ancylostoma duodenale) is a small worm (about 1 cm) that attaches to the wall of the small intestine and sucks blood, causing chronic iron-deficiency anemia, especially with poor nutrition.</p><div class=\"cs-stats\"><div><b>~1 cm</b><span>Worm size</span></div><div><b>0.03–0.2 mL</b><span>Blood lost daily per worm</span></div><div><b>5–9 weeks</b><span>Until eggs appear after infection</span></div></div>[[slot:dis-090-cycle|Hookworm cycle|/diseases/img/dis-090-cycle.svg]]<h4>What happens in the body? (Pathophysiology)</h4><ol><li>The infective (filariform) larva penetrates the skin of a bare foot or hand from moist soil contaminated with infected stool, causing itching and local dermatitis.</li><li>It enters the blood vessels and reaches the lungs, penetrates the alveoli, climbs to the pharynx, and is swallowed (with A. duodenale, larvae may also be swallowed directly by mouth).</li><li>In the small intestine, the worms mature, attach with cutting teeth, suck blood, and secrete an anticoagulant substance, so small chronic bleeding continues.</li><li>The result: loss of iron and protein → iron-deficiency anemia (microcytic hypochromic), low albumin and swelling, delayed growth and learning in children, and greater risks in pregnant women.</li></ol>[[slot:dis-090-life|Hookworm cycle in detail|/diseases/img/dis-090-life.svg]]<div class=\"cs-box cs-info\"><strong>Why the danger for children and pregnant women?</strong><p>Their iron needs are high, and nutrition may be poor; so anemia affects growth, immunity, and pregnancy, and increases the risk of low birth weight.</p></div>"
+  },
+  "causes": {
+   "ar": "<h4>طريق الانتقال</h4><ol><li><b>التماس مع تربة ملوثة</b> (القدم الحافية)</li><li><b>بلع اليرقات المعدية</b> عن طريق الفم</li></ol><p>أكثر في الريف والعمال الزراعيين والأماكن الرطبة.</p><h4>عوامل خطر</h4><ul><li>العمل في الأرض الزراعية والمجاري المائية وقدم حافية</li><li>غياب المراحيض الصحية والتبرز في الحقل أو استخدام براز الإنسان كسماد</li><li>تربة رطبة ظليلة ودافئة تساعد البيض على الفقس</li><li>الأطفال اللي بيلعبوا في التراب، وسوء التغذية ونقص الحديد المسبق</li></ul>",
+   "en": "<h4>Route of transmission</h4><ol><li><b>Contact with contaminated soil</b> (bare foot)</li><li><b>Swallowing infective larvae</b> by mouth</li></ol><p>More common in rural areas, among farm workers, and in moist places.</p><h4>Risk factors</h4><ul><li>Working in farmland and waterways barefoot</li><li>Lack of sanitary toilets and defecating in the field or using human feces as fertilizer</li><li>Moist, shaded, warm soil that helps eggs hatch</li><li>Children who play in dirt, malnutrition, and pre-existing iron deficiency</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>الصورة الإكلينيكية</h4><ul><li><b>بدون أعراض</b> (Asymptomatic)</li><li><b>آفة جلدية:</b> حكة والتهاب جلد (Dermatitis) في مكان الاختراق</li><li><b>أعراض رئوية:</b> حمى، سعال جاف، أزيز خفيف يشبه الربو</li><li><b>أعراض معوية:</b> غثيان، قيء، إسهال، ألم بطن</li></ul><p>مع العدوى المزمنة: شحوب، تعب، لهاث، تورم، أنيميا.</p><h4>حسب المرحلة</h4><table><thead><tr><th>المرحلة</th><th>العلامات</th></tr></thead><tbody><tr><td>الجلد (أيام)</td><td>حكة، حويصلات حمراء بين الأصابع أو القدم (Ground itch)</td></tr><tr><td>الرئة (أسبوع–أسبوعين)</td><td>سعال جاف، أزيز، حمى خفيفة، ارتفاع حمضات</td></tr><tr><td>المعوي (أسابيع)</td><td>ألم أعلى البطن، غثيان، شهية سيئة، براز داكن أحياناً</td></tr><tr><td>المزمن (شهور)</td><td>شحوب (الملتحمة، الأظافر، باطن الكف)، تعب، خفقان، لهاث، وذمة بالقدمين، تأخر نمو، نقص ألبومين، في الحالات الشديدة فشل قلب</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>فحص سريع للممرض</strong><p>شد الجفن السفلي وشوف لونه، ولاحظ شحوب راحة اليد والأظافر، وقس النبض والتنفس عند المجهود. لو اللهاث مع شحوب شديد وهيموجلوبين أقل من 7 جم/ديسيلتر بلّغ فوراً.</p></div>",
+   "en": "<h4>Clinical picture</h4><ul><li><b>Asymptomatic</b></li><li><b>Skin lesion:</b> itching and dermatitis at the penetration site</li><li><b>Respiratory symptoms:</b> fever, dry cough, mild asthma-like wheezing</li><li><b>Intestinal symptoms:</b> nausea, vomiting, diarrhea, abdominal pain</li></ul><p>With chronic infection: pallor, fatigue, breathlessness, swelling, anemia.</p><h4>By stage</h4><table><thead><tr><th>Stage</th><th>Signs</th></tr></thead><tbody><tr><td>Skin (days)</td><td>Itching, red vesicles between the toes or on the foot (ground itch)</td></tr><tr><td>Lung (one–two weeks)</td><td>Dry cough, wheezing, mild fever, raised eosinophils</td></tr><tr><td>Intestinal (weeks)</td><td>Upper abdominal pain, nausea, poor appetite, sometimes dark stools</td></tr><tr><td>Chronic (months)</td><td>Pallor (conjunctiva, nails, palms), fatigue, palpitations, breathlessness, foot edema, delayed growth, low albumin, heart failure in severe cases</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>Quick check for the nurse</strong><p>Pull down the lower eyelid and look at its color, note pallor of the palms and nails, and measure pulse and breathing on exertion. If there is breathlessness with severe pallor and hemoglobin below 7 g/dL, report immediately.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>تحليل براز:</b> بيض الإنكلستوما</li><li><b>صورة دم:</b> أنيميا وحمضات (Eosinophilia)</li><li>فيريتين وحديد، ودم خفي في البراز عند الحاجة</li></ul><h4>تفاصيل</h4><ul><li>البراز: عينة طازجة (البيض بيفقس بعد ساعات في الحرارة)، ولو متأخر تتحفظ في فورمالين. يتم عد البيض (Kato-Katz) لتقدير شدة العدوى حيث متاح.</li><li>CBC: Hb منخفض، MCV منخفض، MCH منخفض، ونسبة حمضات مرتفعة خصوصاً أثناء الهجرة الرئوية.</li><li>الفيريتين، الحديد وسعة الارتباط، الألبومين، وفحص دم خفي.</li><li>أشعة صدر لو الأعراض رئوية؛ وقد تظهر ارتشاحات عابرة.</li><li>لا تعطي الحديد قبل سحب عينة الحديد/الفيريتين لو لسه ما اتسحبتش.</li></ul><div class=\"cs-box cs-info\"><strong>تعليمات العينة</strong><p>وعاء نظيف مكتوب عليه الاسم والتاريخ، مش من الأرض ولا من التواليت، وبدون بول أو مطهر. وصّلها المعمل في أسرع وقت.</p></div>",
+   "en": "<ul><li><b>Stool test:</b> hookworm eggs</li><li><b>Blood count:</b> anemia and eosinophilia</li><li>Ferritin and iron, and fecal occult blood when needed</li></ul><h4>Details</h4><ul><li>Stool: a fresh sample (eggs hatch after hours in heat); if delayed, preserve it in formalin. Eggs are counted (Kato-Katz) to estimate infection intensity where available.</li><li>CBC: low Hb, low MCV, low MCH, and a high eosinophil percentage, especially during lung migration.</li><li>Ferritin, iron and binding capacity, albumin, and occult blood test.</li><li>Chest X-ray if there are respiratory symptoms; transient infiltrates may appear.</li><li>Do not give iron before drawing the iron/ferritin sample if it has not been drawn yet.</li></ul><div class=\"cs-box cs-info\"><strong>Sample instructions</strong><p>A clean container labeled with the name and date, not from the floor or the toilet, and without urine or disinfectant. Get it to the lab as soon as possible.</p></div>"
+  },
+  "treatment": {
+   "ar": "<h4>العلاج</h4><table><thead><tr><th>الدواء</th><th>الجرعة المذكورة</th></tr></thead><tbody><tr><td>Verm-1 500 مجم</td><td>قرص جرعة واحدة تتكرر كل 10 أيام</td></tr><tr><td>Vermox أقراص</td><td>قرص مرتين يومياً لمدة 3 أيام</td></tr><tr><td>Bendax أقراص</td><td>قرص مرتين يومياً لمدة 3 أيام</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>CDC: ألبندازول 400 مجم أو ميبيندازول 500 مجم جرعة واحدة، أو ميبيندازول 100 مجم مرتين يومياً 3 أيام. علاج الأنيميا (حديد) جزء أساسي. فترة تكرار الجرعة (كل 10 أيام) لم أجدها في المراجع لكن قد يقرر الطبيب إعادة العلاج.</p></div><table><thead><tr><th>الدواء</th><th>الجرعة المرجعية</th><th>ملاحظات</th></tr></thead><tbody><tr><td>Albendazole</td><td>400 مجم جرعة واحدة (200 مجم للأقل من سنتين حسب إرشادات الأطفال)</td><td>يؤخذ مع وجبة؛ يتجنب في الثلث الأول من الحمل</td></tr><tr><td>Mebendazole</td><td>500 مجم جرعة واحدة، أو 100 مجم مرتين يومياً × 3 أيام</td><td>يمكن مضغ القرص</td></tr><tr><td>Pyrantel pamoate</td><td>11 مجم/كجم (حتى 1 جم) يومياً × 3 أيام</td><td>بديل، يتحمله الحوامل أحياناً بأمر الطبيب</td></tr></tbody></table><p>مع الأنيميا: مكمل حديد وغذاء غني بالحديد وفيتامين C.</p><h4>علاج الأنيميا</h4><ul><li>حديد فموي (كبريتات حديدوز أو غيره) بجرعة يحددها الطبيب حسب العمر والوزن، والاستمرار لعدة أشهر بعد ما الهيموجلوبين يتظبط لتعويض المخزون.</li><li>أنيميا شديدة جداً أو أعراض قلبية: ممكن نقل دم بأمر الطبيب.</li><li>أكل غني بالحديد (كبدة مطبوخة جيداً، لحوم، عدس، فول، سبانخ) مع مصدر فيتامين C، وبعيداً عن الشاي واللبن ساعتين من الحديد.</li></ul><div class=\"cs-box cs-warning\"><strong>قبل الدواء</strong><p>اسأل عن الحمل. ألبندازول/ميبيندازول يتأجلوا للثلث الثاني أو الثالث بأمر الطبيب. الأم المرضعة والأطفال تحت سنتين بحسب الطبيب.</p></div><p>الجرعات اللي هنا مرجعية؛ الجرعة النهائية قرار الطبيب/الصيدلي حسب الوزن والعمر والحمل.</p><h4>إضافة: وصفات الممارسة العامة (مرجع ثالث)</h4><p>الجرعاتية أدناه كما وردت، وبعضها يختلف عن المراجع الحديثة (شوف التحديث). الجرعة النهائية بأمر الطبيب/الصيدلي حسب الوزن والعمر والحمل.</p><table><thead><tr><th>المادة</th><th>الاسم التجاري</th><th>الجرعة حسب المراجع</th></tr></thead><tbody><tr><td>Mebendazole</td><td>Antiver</td><td>قرص صباحاً ومساءً لمدة 3 أيام</td></tr><tr><td>Flubendazole</td><td>Fluvermal</td><td>قرص صباحاً ومساءً لمدة 3 أيام</td></tr><tr><td>Albendazole</td><td>Bendax</td><td>قرصين مرة واحدة فقط ولا تتكرر</td></tr><tr><td>(دواء واحد للأنواع الثلاثة)</td><td>Verm-1 tab</td><td>قرص واحد يُكرر بعد 10 أيام</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المراجع (CDC): ألبندازول 400 مجم جرعة واحدة؛ ميبيندازول 100 مجم مرتين يومياً 3 أيام (أو 500 مجم جرعة واحدة): يتطابق مع نظام الـ 3 أيام. اقرأ تركيز القرص قبل العدّ.</p></div>",
+   "en": "<h4>Treatment</h4><table><thead><tr><th>Drug</th><th>Stated dose</th></tr></thead><tbody><tr><td>Verm-1 500 mg</td><td>One tablet as a single dose, repeated every 10 days</td></tr><tr><td>Vermox tablets</td><td>One tablet twice daily for 3 days</td></tr><tr><td>Bendax tablets</td><td>One tablet twice daily for 3 days</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>CDC: albendazole 400 mg or mebendazole 500 mg as a single dose, or mebendazole 100 mg twice daily for 3 days. Treating the anemia (iron) is an essential part. The repeat-dose interval (every 10 days) was not found in references, but the physician may decide to repeat treatment.</p></div><table><thead><tr><th>Drug</th><th>Reference dose</th><th>Notes</th></tr></thead><tbody><tr><td>Albendazole</td><td>400 mg single dose (200 mg for those under two years, per pediatric guidelines)</td><td>Taken with a meal; avoided in the first trimester of pregnancy</td></tr><tr><td>Mebendazole</td><td>500 mg single dose, or 100 mg twice daily × 3 days</td><td>The tablet can be chewed</td></tr><tr><td>Pyrantel pamoate</td><td>11 mg/kg (up to 1 g) daily × 3 days</td><td>An alternative, sometimes tolerated in pregnancy by physician order</td></tr></tbody></table><p>With anemia: iron supplement and a diet rich in iron and vitamin C.</p><h4>Treating the anemia</h4><ul><li>Oral iron (ferrous sulfate or another) at a dose set by the physician based on age and weight, continued for several months after hemoglobin normalizes to replace stores.</li><li>Very severe anemia or cardiac symptoms: blood transfusion may be given by physician order.</li><li>Iron-rich food (well-cooked liver, meat, lentils, fava beans, spinach) with a vitamin C source, and two hours away from tea and milk.</li></ul><div class=\"cs-box cs-warning\"><strong>Before the drug</strong><p>Ask about pregnancy. Albendazole/mebendazole are postponed to the second or third trimester by physician order. Breastfeeding mothers and children under two years per the physician.</p></div><p>The doses here are for reference; the final dose is the physician's/pharmacist's decision based on weight, age, and pregnancy.</p><h4>Addition: general practice prescriptions (third reference)</h4><p>The doses below are as stated, and some differ from current references (see the update). The final dose is by physician/pharmacist order based on weight, age, and pregnancy.</p><table><thead><tr><th>Drug</th><th>Brand name</th><th>Dose per references</th></tr></thead><tbody><tr><td>Mebendazole</td><td>Antiver</td><td>One tablet morning and evening for 3 days</td></tr><tr><td>Flubendazole</td><td>Fluvermal</td><td>One tablet morning and evening for 3 days</td></tr><tr><td>Albendazole</td><td>Bendax</td><td>Two tablets once only, not repeated</td></tr><tr><td>(One drug for all three types)</td><td>Verm-1 tab</td><td>One tablet, repeated after 10 days</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>References (CDC): albendazole 400 mg single dose; mebendazole 100 mg twice daily for 3 days (or 500 mg single dose): matches the 3-day regimen. Read the tablet strength before counting.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الأسئلة والتقييم</strong><p>شحوب؟ تعب ولهاث؟ قدم حافية؟ حكة قدم؟ سعال؟ عمل زراعي؟ حمل؟ وزن وطول للأطفال، لون الملتحمة والأظافر، النبض والتنفس، تورم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>العينات</strong><p>براز طازج بوعاء معلّم، ودم لـ CBC (هيموجلوبين، MCV) وفيريتين وألبومين. اسحب عينة الحديد قبل بدء مكمل الحديد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>احتياطات العدوى</strong><p>احتياطات قياسية؛ العدوى ما بتنتقل مباشرة من شخص لشخص (محتاجة تربة)، فمفيش عزل. قفازات عند البراز، وتخلص آمن منه، وتنظيف الحمام.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الدواء بأمان</strong><p>أعطها بعد الأكل حسب النشرة. راقب الغثيان والمغص والدوخة، وقد يظهر دودة في البراز. جرعة تانية حسب أمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأنيميا والحديد</strong><p>قس الهيموجلوبين بالمتابعة، راقب الدوخة والنبض. الحديد يغيّر لون البراز لأسود (طبيعي) ويفضّل بعيداً عن الشاي واللبن، ومع عصير برتقال. وفّر راحة، وحذّر من الوقوف المفاجئ (خطر سقوط).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>التغذية</strong><p>أكل غني بالحديد والبروتين وفيتامين C، وسوائل كافية. للأطفال تغذية متوازنة ومتابعة النمو.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>التوثيق والتصعيد</strong><p>سجّل الأعراض، العلامات الحيوية، Hb، الدواء ووقته، وأي أعراض جانبية. بلّغ فوراً عن إغماء أو Hb منخفض جداً أو براز أسود غزير مع هبوط ضغط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>الوقاية</strong><p>حذاء ونظافة، مراحيض، علاج المخالطين، وفحص الأطفال دورياً.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Questions and assessment</strong><p>Pallor? Fatigue and breathlessness? Bare feet? Itchy feet? Cough? Farm work? Pregnancy? Weight and height for children, color of the conjunctiva and nails, pulse and breathing, swelling.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Samples</strong><p>Fresh stool in a labeled container, and blood for CBC (hemoglobin, MCV), ferritin, and albumin. Draw the iron sample before starting an iron supplement.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Infection precautions</strong><p>Standard precautions; the infection does not pass directly from person to person (it needs soil), so no isolation is needed. Gloves when handling stool, safe disposal of it, and cleaning the bathroom.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Safe medication</strong><p>Give after meals per the leaflet. Watch for nausea, cramps, and dizziness; worms may appear in the stool. A second dose per physician order.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Anemia and iron</strong><p>Check hemoglobin at follow-up, watch dizziness and pulse. Iron turns stool black (normal) and is best taken away from tea and milk, with orange juice. Provide rest, and warn against standing suddenly (fall risk).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Nutrition</strong><p>Food rich in iron, protein, and vitamin C, and enough fluids. For children, balanced nutrition and growth monitoring.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Documentation and escalation</strong><p>Record symptoms, vital signs, Hb, the drug and its time, and any side effects. Report immediately fainting, very low Hb, or heavy black stools with hypotension.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Prevention</strong><p>Shoes and hygiene, toilets, treating contacts, and regular screening of children.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب:</strong><ul><li>إغماء أو لهاث شديد (أنيميا شديدة)</li><li>براز أسود مع هبوط ضغط</li><li>سعال شديد أو ضيق نفس</li><li>ألم بطن شديد</li><li>هيموجلوبين أقل من 7 جم/ديسيلتر أو سرعة نبض مع دوخة</li><li>تورم عام وقلة بول (نقص بروتين)</li><li>حامل أو طفل أقل من سنتين محتاج علاج</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician:</strong><ul><li>Fainting or severe breathlessness (severe anemia)</li><li>Black stools with hypotension</li><li>Severe cough or shortness of breath</li><li>Severe abdominal pain</li><li>Hemoglobin below 7 g/dL or a rapid pulse with dizziness</li><li>Generalized swelling and low urine output (protein deficiency)</li><li>A pregnant woman or a child under two years who needs treatment</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>البس حذاء، خصوصاً في الأرض الزراعية.</li><li>اغسل إيديك وخضارك.</li><li>خد الحديد زي ما الطبيب كتب، وكل أكلاً غنياً بالحديد.</li><li>استخدم الحمام ولا تتبرز في الأرض.</li><li>لا تستخدم براز الإنسان سماداً.</li><li>خذ الدواء المضاد للديدان كاملاً، وعالج المخالطين (خصوصاً الأطفال).</li><li>الحديد: بعد الأكل لو معدتك بتتعب، مع عصير برتقال، بعيداً عن الشاي واللبن، ويفضل مدة طويلة.</li><li>راجع تحليل الدم بعد شهرين–ثلاثة للتأكد من تحسن الهيموجلوبين.</li><li>الأطفال: اغسلوا أيديهم، قلموا أظافرهم، ولا يلعبوا بقدم حافية في التراب.</li></ul>",
+   "en": "<ul><li>Wear shoes, especially on farmland.</li><li>Wash your hands and your vegetables.</li><li>Take iron as the physician prescribed, and eat iron-rich food.</li><li>Use the toilet and do not defecate on the ground.</li><li>Do not use human feces as fertilizer.</li><li>Take the full deworming drug course, and treat contacts (especially children).</li><li>Iron: after meals if your stomach is upset, with orange juice, away from tea and milk, and preferably for a long period.</li><li>Repeat the blood test after two–three months to confirm hemoglobin improvement.</li><li>Children: wash their hands, trim their nails, and do not let them play barefoot in dirt.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "تنتقل بالتماس مع تربة ملوثة أو بلع اليرقات",
+   "الأعراض: حكة جلدية ثم سعال ثم أعراض معوية",
+   "تسبب أنيميا نقص الحديد المزمنة وتأخر نمو",
+   "تحليل براز ودم (Hb وفيريتين) يؤكدان",
+   "العلاج ألبندازول 400 مجم مرة أو ميبيندازول مع علاج الحديد",
+   "تجنب الأدوية في الثلث الأول من الحمل",
+   "الحذاء والمراحيض ونظافة اليدين وقاية"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الإنكلستوما (Ancylostoma duodenale / Hookworm) دودة صغيرة (حوالي 1 سم) بتلتصق بجدار الأمعاء الدقيقة وتمتص الدم، فتسبب أنيميا نقص الحديد المزمنة وخصوصاً مع التغذية الضعيفة.</p><div class=\"cs-stats\"><div><b>~1 سم</b><span>حجم الدودة</span></div><div><b>0.03–0.2 مل</b><span>دم يفقد يومياً لكل دودة</span></div><div><b>5–9 أسابيع</b><span>حتى ظهور البيض بعد العدوى</span></div></div>[[slot:dis-090-cycle|دورة الإنكلستوما|/diseases/img/dis-090-cycle.svg]]<h4>إيه اللي بيحصل في الجسم؟ (Pathophysiology)</h4><ol><li>اليرقة المعدية (Filariform) تخترق جلد القدم الحافية أو اليد من تربة رطبة ملوثة ببراز مصاب، وتسبب حكة والتهاب جلد موضعي.</li><li>تدخل الأوعية الدموية وتصل الرئتين، تخترق الحويصلات وتصعد للبلعوم وتُبلع (وقد تُبلع اليرقة مباشرة عن طريق الفم أيضاً مع A. duodenale).</li><li>في الأمعاء الدقيقة تنضج الديدان وتلتصق بأسنان قاطعة وتمتص الدم وتفرز مادة مانعة للتجلط؛ فيستمر نزف صغير مزمن.</li><li>النتيجة: فقد حديد وبروتين ← أنيميا نقص حديد (Microcytic hypochromic)، ونقص ألبومين وتورم، وتأخر نمو وتعلّم عند الأطفال، ومخاطر أكبر عند الحوامل.</li></ol>[[slot:dis-090-life|دورة الإنكلستوما بالتفصيل|/diseases/img/dis-090-life.svg]]<div class=\"cs-box cs-info\"><strong>ليه الخطر على الأطفال والحوامل؟</strong><p>الاحتياج للحديد عالي، والتغذية قد تكون ضعيفة؛ فالأنيميا بتأثر على النمو والمناعة والحمل وبتزيد خطر ولادة وزن منخفض.</p></div>"
-    },
-    "causes": {
-      "ar": "<h4>طريق الانتقال</h4><ol><li><b>التماس مع تربة ملوثة</b> (القدم الحافية)</li><li><b>بلع اليرقات المعدية</b> عن طريق الفم</li></ol><p>أكثر في الريف والعمال الزراعيين والأماكن الرطبة.</p><h4>عوامل خطر</h4><ul><li>العمل في الأرض الزراعية والمجاري المائية وقدم حافية</li><li>غياب المراحيض الصحية والتبرز في الحقل أو استخدام براز الإنسان كسماد</li><li>تربة رطبة ظليلة ودافئة تساعد البيض على الفقس</li><li>الأطفال اللي بيلعبوا في التراب، وسوء التغذية ونقص الحديد المسبق</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>الصورة الإكلينيكية</h4><ul><li><b>بدون أعراض</b> (Asymptomatic)</li><li><b>آفة جلدية:</b> حكة والتهاب جلد (Dermatitis) في مكان الاختراق</li><li><b>أعراض رئوية:</b> حمى، سعال جاف، أزيز خفيف يشبه الربو</li><li><b>أعراض معوية:</b> غثيان، قيء، إسهال، ألم بطن</li></ul><p>مع العدوى المزمنة: شحوب، تعب، لهاث، تورم، أنيميا.</p><h4>حسب المرحلة</h4><table><thead><tr><th>المرحلة</th><th>العلامات</th></tr></thead><tbody><tr><td>الجلد (أيام)</td><td>حكة، حويصلات حمراء بين الأصابع أو القدم (Ground itch)</td></tr><tr><td>الرئة (أسبوع–أسبوعين)</td><td>سعال جاف، أزيز، حمى خفيفة، ارتفاع حمضات</td></tr><tr><td>المعوي (أسابيع)</td><td>ألم أعلى البطن، غثيان، شهية سيئة، براز داكن أحياناً</td></tr><tr><td>المزمن (شهور)</td><td>شحوب (الملتحمة، الأظافر، باطن الكف)، تعب، خفقان، لهاث، وذمة بالقدمين، تأخر نمو، نقص ألبومين، في الحالات الشديدة فشل قلب</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>فحص سريع للممرض</strong><p>شد الجفن السفلي وشوف لونه، ولاحظ شحوب راحة اليد والأظافر، وقس النبض والتنفس عند المجهود. لو اللهاث مع شحوب شديد وهيموجلوبين أقل من 7 جم/ديسيلتر بلّغ فوراً.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>تحليل براز:</b> بيض الإنكلستوما</li><li><b>صورة دم:</b> أنيميا وحمضات (Eosinophilia)</li><li>فيريتين وحديد، ودم خفي في البراز عند الحاجة</li></ul><h4>تفاصيل</h4><ul><li>البراز: عينة طازجة (البيض بيفقس بعد ساعات في الحرارة)، ولو متأخر تتحفظ في فورمالين. يتم عد البيض (Kato-Katz) لتقدير شدة العدوى حيث متاح.</li><li>CBC: Hb منخفض، MCV منخفض، MCH منخفض، ونسبة حمضات مرتفعة خصوصاً أثناء الهجرة الرئوية.</li><li>الفيريتين، الحديد وسعة الارتباط، الألبومين، وفحص دم خفي.</li><li>أشعة صدر لو الأعراض رئوية؛ وقد تظهر ارتشاحات عابرة.</li><li>لا تعطي الحديد قبل سحب عينة الحديد/الفيريتين لو لسه ما اتسحبتش.</li></ul><div class=\"cs-box cs-info\"><strong>تعليمات العينة</strong><p>وعاء نظيف مكتوب عليه الاسم والتاريخ، مش من الأرض ولا من التواليت، وبدون بول أو مطهر. وصّلها المعمل في أسرع وقت.</p></div>"
-    },
-    "treatment": {
-      "ar": "<h4>العلاج</h4><table><thead><tr><th>الدواء</th><th>الجرعة المذكورة</th></tr></thead><tbody><tr><td>Verm-1 500 مجم</td><td>قرص جرعة واحدة تتكرر كل 10 أيام</td></tr><tr><td>Vermox أقراص</td><td>قرص مرتين يومياً لمدة 3 أيام</td></tr><tr><td>Bendax أقراص</td><td>قرص مرتين يومياً لمدة 3 أيام</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>CDC: ألبندازول 400 مجم أو ميبيندازول 500 مجم جرعة واحدة، أو ميبيندازول 100 مجم مرتين يومياً 3 أيام. علاج الأنيميا (حديد) جزء أساسي. فترة تكرار الجرعة (كل 10 أيام) لم أجدها في المراجع لكن قد يقرر الطبيب إعادة العلاج.</p></div><table><thead><tr><th>الدواء</th><th>الجرعة المرجعية</th><th>ملاحظات</th></tr></thead><tbody><tr><td>Albendazole</td><td>400 مجم جرعة واحدة (200 مجم للأقل من سنتين حسب إرشادات الأطفال)</td><td>يؤخذ مع وجبة؛ يتجنب في الثلث الأول من الحمل</td></tr><tr><td>Mebendazole</td><td>500 مجم جرعة واحدة، أو 100 مجم مرتين يومياً × 3 أيام</td><td>يمكن مضغ القرص</td></tr><tr><td>Pyrantel pamoate</td><td>11 مجم/كجم (حتى 1 جم) يومياً × 3 أيام</td><td>بديل، يتحمله الحوامل أحياناً بأمر الطبيب</td></tr></tbody></table><p>مع الأنيميا: مكمل حديد وغذاء غني بالحديد وفيتامين C.</p><h4>علاج الأنيميا</h4><ul><li>حديد فموي (كبريتات حديدوز أو غيره) بجرعة يحددها الطبيب حسب العمر والوزن، والاستمرار لعدة أشهر بعد ما الهيموجلوبين يتظبط لتعويض المخزون.</li><li>أنيميا شديدة جداً أو أعراض قلبية: ممكن نقل دم بأمر الطبيب.</li><li>أكل غني بالحديد (كبدة مطبوخة جيداً، لحوم، عدس، فول، سبانخ) مع مصدر فيتامين C، وبعيداً عن الشاي واللبن ساعتين من الحديد.</li></ul><div class=\"cs-box cs-warning\"><strong>قبل الدواء</strong><p>اسأل عن الحمل. ألبندازول/ميبيندازول يتأجلوا للثلث الثاني أو الثالث بأمر الطبيب. الأم المرضعة والأطفال تحت سنتين بحسب الطبيب.</p></div><p>الجرعات اللي هنا مرجعية؛ الجرعة النهائية قرار الطبيب/الصيدلي حسب الوزن والعمر والحمل.</p><h4>إضافة: وصفات الممارسة العامة (مرجع ثالث)</h4><p>الجرعاتية أدناه كما وردت، وبعضها يختلف عن المراجع الحديثة (شوف التحديث). الجرعة النهائية بأمر الطبيب/الصيدلي حسب الوزن والعمر والحمل.</p><table><thead><tr><th>المادة</th><th>الاسم التجاري</th><th>الجرعة حسب المراجع</th></tr></thead><tbody><tr><td>Mebendazole</td><td>Antiver</td><td>قرص صباحاً ومساءً لمدة 3 أيام</td></tr><tr><td>Flubendazole</td><td>Fluvermal</td><td>قرص صباحاً ومساءً لمدة 3 أيام</td></tr><tr><td>Albendazole</td><td>Bendax</td><td>قرصين مرة واحدة فقط ولا تتكرر</td></tr><tr><td>(دواء واحد للأنواع الثلاثة)</td><td>Verm-1 tab</td><td>قرص واحد يُكرر بعد 10 أيام</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المراجع (CDC): ألبندازول 400 مجم جرعة واحدة؛ ميبيندازول 100 مجم مرتين يومياً 3 أيام (أو 500 مجم جرعة واحدة): يتطابق مع نظام الـ 3 أيام. اقرأ تركيز القرص قبل العدّ.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الأسئلة والتقييم</strong><p>شحوب؟ تعب ولهاث؟ قدم حافية؟ حكة قدم؟ سعال؟ عمل زراعي؟ حمل؟ وزن وطول للأطفال، لون الملتحمة والأظافر، النبض والتنفس، تورم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>العينات</strong><p>براز طازج بوعاء معلّم، ودم لـ CBC (هيموجلوبين، MCV) وفيريتين وألبومين. اسحب عينة الحديد قبل بدء مكمل الحديد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>احتياطات العدوى</strong><p>احتياطات قياسية؛ العدوى ما بتنتقل مباشرة من شخص لشخص (محتاجة تربة)، فمفيش عزل. قفازات عند البراز، وتخلص آمن منه، وتنظيف الحمام.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الدواء بأمان</strong><p>أعطها بعد الأكل حسب النشرة. راقب الغثيان والمغص والدوخة، وقد يظهر دودة في البراز. جرعة تانية حسب أمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأنيميا والحديد</strong><p>قس الهيموجلوبين بالمتابعة، راقب الدوخة والنبض. الحديد يغيّر لون البراز لأسود (طبيعي) ويفضّل بعيداً عن الشاي واللبن، ومع عصير برتقال. وفّر راحة، وحذّر من الوقوف المفاجئ (خطر سقوط).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>التغذية</strong><p>أكل غني بالحديد والبروتين وفيتامين C، وسوائل كافية. للأطفال تغذية متوازنة ومتابعة النمو.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>التوثيق والتصعيد</strong><p>سجّل الأعراض، العلامات الحيوية، Hb، الدواء ووقته، وأي أعراض جانبية. بلّغ فوراً عن إغماء أو Hb منخفض جداً أو براز أسود غزير مع هبوط ضغط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>الوقاية</strong><p>حذاء ونظافة، مراحيض، علاج المخالطين، وفحص الأطفال دورياً.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب:</strong><ul><li>إغماء أو لهاث شديد (أنيميا شديدة)</li><li>براز أسود مع هبوط ضغط</li><li>سعال شديد أو ضيق نفس</li><li>ألم بطن شديد</li><li>هيموجلوبين أقل من 7 جم/ديسيلتر أو سرعة نبض مع دوخة</li><li>تورم عام وقلة بول (نقص بروتين)</li><li>حامل أو طفل أقل من سنتين محتاج علاج</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>البس حذاء، خصوصاً في الأرض الزراعية.</li><li>اغسل إيديك وخضارك.</li><li>خد الحديد زي ما الطبيب كتب، وكل أكلاً غنياً بالحديد.</li><li>استخدم الحمام ولا تتبرز في الأرض.</li><li>لا تستخدم براز الإنسان سماداً.</li><li>خذ الدواء المضاد للديدان كاملاً، وعالج المخالطين (خصوصاً الأطفال).</li><li>الحديد: بعد الأكل لو معدتك بتتعب، مع عصير برتقال، بعيداً عن الشاي واللبن، ويفضل مدة طويلة.</li><li>راجع تحليل الدم بعد شهرين–ثلاثة للتأكد من تحسن الهيموجلوبين.</li><li>الأطفال: اغسلوا أيديهم، قلموا أظافرهم، ولا يلعبوا بقدم حافية في التراب.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "تنتقل بالتماس مع تربة ملوثة أو بلع اليرقات",
-      "الأعراض: حكة جلدية ثم سعال ثم أعراض معوية",
-      "تسبب أنيميا نقص الحديد المزمنة وتأخر نمو",
-      "تحليل براز ودم (Hb وفيريتين) يؤكدان",
-      "العلاج ألبندازول 400 مجم مرة أو ميبيندازول مع علاج الحديد",
-      "تجنب الأدوية في الثلث الأول من الحمل",
-      "الحذاء والمراحيض ونظافة اليدين وقاية"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أهم نتيجة مزمنة؟"
-      },
-      "options": [
-        {
-          "ar": "أنيميا"
-        },
-        {
-          "ar": "ارتفاع ضغط"
-        },
-        {
-          "ar": "سكري"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "فقد دم."
-      }
-    },
-    {
-      "q": {
-        "ar": "طريق العدوى؟"
-      },
-      "options": [
-        {
-          "ar": "اختراق الجلد من التربة"
-        },
-        {
-          "ar": "بالتنفس"
-        },
-        {
-          "ar": "لدغة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يرقات في التربة."
-      }
-    },
-    {
-      "q": {
-        "ar": "فحص مهم؟"
-      },
-      "options": [
-        {
-          "ar": "براز وصورة دم"
-        },
-        {
-          "ar": "أشعة عظام"
-        },
-        {
-          "ar": "رسم قلب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "بيض وأنيميا."
-      }
-    },
-    {
-      "q": {
-        "ar": "وقاية؟"
-      },
-      "options": [
-        {
-          "ar": "حذاء"
-        },
-        {
-          "ar": "أدوية"
-        },
-        {
-          "ar": "سباحة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تمنع الاختراق."
-      }
-    },
-    {
-      "q": {
-        "ar": "كيف تسبب الإنكلستوما الأنيميا؟"
-      },
-      "options": [
-        {
-          "ar": "بامتصاص الدم من جدار الأمعاء بشكل مزمن"
-        },
-        {
-          "ar": "بتكسير كرات الدم في الكبد"
-        },
-        {
-          "ar": "بنقص B12 فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الدودة تلتصق وتمتص الدم وتترك نزف صغير مستمر."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض بإنكلستوما بدأ حديد، لون البراز أسود. التصرف؟"
-      },
-      "options": [
-        {
-          "ar": "طبيعي مع الحديد"
-        },
-        {
-          "ar": "نزف هضمي طارئ"
-        },
-        {
-          "ar": "نوقف الحديد فوراً"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحديد يغمّق البراز؛ لكن لو معاه هبوط ضغط ودوخة شديدة بلّغ."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CDC — Hookworm (soil-transmitted helminths): clinical care"
-    },
-    {
-      "title": "WHO — Soil-transmitted helminth infections fact sheet"
-    },
-    {
-      "title": "WHO — Guideline: daily iron supplementation"
-    }
-  ],
-  "rx": [
-    {
-      "category": "الجهاز الهضمي",
-      "condition_ar": "الإنكلستوما",
-      "condition_en": "Ancylostoma",
-      "items": [
-        {
-          "drug_name": "Antiver (mebendazole) / Fluvermal (flubendazole)",
-          "dose": "قرص صباحاً ومساءً لمدة 3 أيام",
-          "note": ""
-        },
-        {
-          "drug_name": "Bendax (albendazole)",
-          "dose": "قرصين مرة واحدة فقط",
-          "note": "لا تتكرر"
-        },
-        {
-          "drug_name": "Verm-1 tab",
-          "dose": "قرص يُكرر بعد 10 أيام",
-          "note": ""
-        }
-      ],
-      "clinical_note": "تحليل براز قبل العلاج."
-    }
+  "en": [
+   "Transmitted by contact with contaminated soil or swallowing larvae",
+   "Symptoms: skin itching, then cough, then intestinal symptoms",
+   "Causes chronic iron-deficiency anemia and delayed growth",
+   "Stool and blood tests (Hb and ferritin) confirm",
+   "Treatment: albendazole 400 mg once or mebendazole, with iron therapy",
+   "Avoid the drugs in the first trimester of pregnancy",
+   "Shoes, toilets, and hand hygiene prevent it"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أهم نتيجة مزمنة؟",
+    "en": "The most important chronic result?"
+   },
+   "options": [
+    {
+     "ar": "أنيميا",
+     "en": "Anemia"
+    },
+    {
+     "ar": "ارتفاع ضغط",
+     "en": "Hypertension"
+    },
+    {
+     "ar": "سكري",
+     "en": "Diabetes"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "فقد دم.",
+    "en": "Blood loss."
+   }
+  },
+  {
+   "q": {
+    "ar": "طريق العدوى؟",
+    "en": "The route of infection?"
+   },
+   "options": [
+    {
+     "ar": "اختراق الجلد من التربة",
+     "en": "Skin penetration from soil"
+    },
+    {
+     "ar": "بالتنفس",
+     "en": "By breathing"
+    },
+    {
+     "ar": "لدغة",
+     "en": "A bite"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يرقات في التربة.",
+    "en": "Larvae in the soil."
+   }
+  },
+  {
+   "q": {
+    "ar": "فحص مهم؟",
+    "en": "An important test?"
+   },
+   "options": [
+    {
+     "ar": "براز وصورة دم",
+     "en": "Stool and blood count"
+    },
+    {
+     "ar": "أشعة عظام",
+     "en": "Bone X-ray"
+    },
+    {
+     "ar": "رسم قلب",
+     "en": "ECG"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "بيض وأنيميا.",
+    "en": "Eggs and anemia."
+   }
+  },
+  {
+   "q": {
+    "ar": "وقاية؟",
+    "en": "Prevention?"
+   },
+   "options": [
+    {
+     "ar": "حذاء",
+     "en": "Shoes"
+    },
+    {
+     "ar": "أدوية",
+     "en": "Drugs"
+    },
+    {
+     "ar": "سباحة",
+     "en": "Swimming"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تمنع الاختراق.",
+    "en": "They prevent penetration."
+   }
+  },
+  {
+   "q": {
+    "ar": "كيف تسبب الإنكلستوما الأنيميا؟",
+    "en": "How does hookworm cause anemia?"
+   },
+   "options": [
+    {
+     "ar": "بامتصاص الدم من جدار الأمعاء بشكل مزمن",
+     "en": "By chronically sucking blood from the intestinal wall"
+    },
+    {
+     "ar": "بتكسير كرات الدم في الكبد",
+     "en": "By breaking down blood cells in the liver"
+    },
+    {
+     "ar": "بنقص B12 فقط",
+     "en": "By B12 deficiency only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الدودة تلتصق وتمتص الدم وتترك نزف صغير مستمر.",
+    "en": "The worm attaches, sucks blood, and leaves small continuous bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض بإنكلستوما بدأ حديد، لون البراز أسود. التصرف؟",
+    "en": "A patient with hookworm started iron, and the stool is black. The action?"
+   },
+   "options": [
+    {
+     "ar": "طبيعي مع الحديد",
+     "en": "Normal with iron"
+    },
+    {
+     "ar": "نزف هضمي طارئ",
+     "en": "Emergency GI bleeding"
+    },
+    {
+     "ar": "نوقف الحديد فوراً",
+     "en": "Stop the iron immediately"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحديد يغمّق البراز؛ لكن لو معاه هبوط ضغط ودوخة شديدة بلّغ.",
+    "en": "Iron darkens the stool; but if it comes with hypotension and severe dizziness, report it."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CDC — Hookworm (soil-transmitted helminths): clinical care"
+  },
+  {
+   "title": "WHO — Soil-transmitted helminth infections fact sheet"
+  },
+  {
+   "title": "WHO — Guideline: daily iron supplementation"
+  }
+ ],
+ "rx": [
+  {
+   "category": "الجهاز الهضمي",
+   "condition_ar": "الإنكلستوما",
+   "condition_en": "Ancylostoma",
+   "items": [
+    {
+     "drug_name": "Antiver (mebendazole) / Fluvermal (flubendazole)",
+     "dose": "قرص صباحاً ومساءً لمدة 3 أيام",
+     "note": ""
+    },
+    {
+     "drug_name": "Bendax (albendazole)",
+     "dose": "قرصين مرة واحدة فقط",
+     "note": "لا تتكرر"
+    },
+    {
+     "drug_name": "Verm-1 tab",
+     "dose": "قرص يُكرر بعد 10 أيام",
+     "note": ""
+    }
+   ],
+   "clinical_note": "تحليل براز قبل العلاج."
+  }
+ ]
 }

@@ -1,173 +1,218 @@
 {
-  "id": "dis-462",
-  "num": 462,
-  "target": "er-reception",
-  "system": "other",
-  "icon": "🚑",
-  "level": 3,
-  "title": {
-    "ar": "إصابات الرأس والصدر والبطن والظهر والأطراف: التقييم والأشعة",
-    "en": "Trauma Assessment: Head, Chest, Abdomen, Back & Limbs"
+ "id": "dis-462",
+ "num": 462,
+ "target": "er-reception",
+ "system": "other",
+ "icon": "🚑",
+ "level": 3,
+ "title": {
+  "ar": "إصابات الرأس والصدر والبطن والظهر والأطراف: التقييم والأشعة",
+  "en": "Trauma Assessment: Head, Chest, Abdomen, Back & Limbs"
+ },
+ "teaser": {
+  "ar": "متى نطلب CT على المخ، أشعة الصدر والبطن (FAST)، وإصابات الأطراف والأوعية والأوتار والأظافر والرسغ — وإزاي نتصرف كممرض.",
+  "en": "When to order a brain CT, chest and abdominal imaging (FAST), and injuries of the limbs, vessels, tendons, nails, and wrist — and how to act as a nurse."
+ },
+ "chips": [
+  {
+   "ar": "CT المخ",
+   "en": "Brain CT"
   },
-  "teaser": {
-    "ar": "متى نطلب CT على المخ، أشعة الصدر والبطن (FAST)، وإصابات الأطراف والأوعية والأوتار والأظافر والرسغ — وإزاي نتصرف كممرض."
+  {
+   "ar": "FAST",
+   "en": "FAST"
   },
-  "chips": [
-    {
-      "ar": "CT المخ"
-    },
-    {
-      "ar": "FAST"
-    },
-    {
-      "ar": "إصابات الأطراف"
-    }
+  {
+   "ar": "إصابات الأطراف",
+   "en": "Limb injuries"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>أي إصابة (خبطة أو سقوط أو حادث) لازم <b>تستبعد الحاجات الخطيرة الأول</b>، وبعدين تطلب الأشعة المناسبة للمنطقة وتحوّل للتخصص الصح. الأساس: العلامات الحيوية (النبض والضغط) لاستبعاد النزيف، ثم الفحص الموضعي (ألم، فرقعة، تورم)، ثم الأشعة.</p><div class=\"cs-stats\"><div><b>3</b><span>أسئلة + فحصين في الرأس</span></div><div><b>FAST</b><span>سونار البطن للإصابة</span></div><div><b>2</b><span>كانيولا + تحاليل عند النزيف</span></div></div><div class=\"cs-box cs-danger\"><strong>دايماً</strong><p>قياس النبض والضغط أول حاجة في كل إصابة (الصدر والبطن خصوصاً) لاستبعاد النزيف الداخلي. أي إصابة بسكين أو مطواة: لا تسحب الجسم الغريب.</p></div>",
+   "en": "<p>In any injury (a blow, fall, or accident) you must <b>rule out the dangerous things first</b>, then order the right imaging for the area and refer to the right specialty. The basis: vital signs (pulse and BP) to rule out bleeding, then local examination (pain, crepitus, swelling), then imaging.</p><div class=\"cs-stats\"><div><b>3</b><span>Questions + two checks in the head</span></div><div><b>FAST</b><span>Abdominal ultrasound for trauma</span></div><div><b>2</b><span>Cannulas + labs when bleeding</span></div></div><div class=\"cs-box cs-danger\"><strong>Always</strong><p>Measure pulse and BP first in every injury (especially chest and abdomen) to rule out internal bleeding. Any knife or blade injury: do not pull out the foreign object.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>إصابة الرأس: 3 أسئلة + فحصين</h4><ul><li>مغمى عليه أو فقد الوعي؟</li><li>حصل تشنجات؟</li><li>رجع أكتر من 3 مرات؟</li><li>افحص الجمجمة لاستبعاد كسر ظاهر (منخسف أو مفتوح)</li><li>افحص علامات كسر قاعدة الجمجمة</li></ul><h4>علامات كسر قاعدة الجمجمة</h4><table><thead><tr><th>العلامة</th><th>الوصف</th></tr></thead><tbody><tr><td>Battle's sign</td><td>كدمة (Ecchymosis) خلف الأذن</td></tr><tr><td>Raccoon eye</td><td>كدمة حول العينين</td></tr><tr><td>Hemotympanum</td><td>دم خلف طبلة الأذن</td></tr><tr><td>CSF rhinorrhea / otorrhea</td><td>تسرب سائل المخ والنخاع من الأنف أو الأذن</td></tr></tbody></table><h4>إصابة الصدر</h4><ul><li>عام: النبض والضغط (استبعاد نزيف وخلافه)</li><li>موضعي: ألم شديد مكان الكسر (Tenderness)، وفرقعة عند الضغط على مكان الكسر (Crepitus) تميز الكسور</li></ul><h4>إصابة البطن</h4><ul><li>عام: النبض والضغط</li><li>موضعي: ألم شديد بالبطن (Tenderness)، بطن محجرة (Guarding & Rigidity)</li></ul><h4>إصابة الظهر والأطراف</h4><ul><li>ألم ونقطة ألم على الفقرات/العظام</li><li>فقدان النبض أو نزيف دم طازج في الطرف = إصابة وعاء</li><li>عدم القدرة على تحريك الإصبع/الرسغ = وتر</li><li>نزيف تحت الظفر</li></ul><h4>إصابات الرأس بالتفصيل</h4><p>لتفاصيل الارتجاج والكدمة المخية والنزف Epidural وSubdural (فوق وتحت الجافية) وكسور القاعدة ومقياس غلاسكو والتمريض العصبي، راجع <a href=\"/diseases/dis-692\">إصابات الرأس</a> و<a href=\"/diseases/dis-693\">ارتفاع الضغط داخل الجمجمة</a>. علامات تحذيرية: نبض بطيء مع ضغط مرتفع (كوشينج)، حدقة غير متساوية، فترة صفاء ثم تدهور (Epidural). ويلزم تثبيت العنق في أي إصابة شديدة، وانظر <a href=\"/diseases/dis-705\">إصابة الحبل الشوكي</a>.</p>",
+   "en": "<h4>Head injury: 3 questions + two checks</h4><ul><li>Did he faint or lose consciousness?</li><li>Were there seizures?</li><li>Did he vomit more than 3 times?</li><li>Examine the skull to rule out an obvious fracture (depressed or open)</li><li>Check for signs of a basilar skull fracture</li></ul><h4>Signs of basilar skull fracture</h4><table><thead><tr><th>Sign</th><th>Description</th></tr></thead><tbody><tr><td>Battle's sign</td><td>Bruising (Ecchymosis) behind the ear</td></tr><tr><td>Raccoon eye</td><td>Bruising around the eyes</td></tr><tr><td>Hemotympanum</td><td>Blood behind the eardrum</td></tr><tr><td>CSF rhinorrhea / otorrhea</td><td>Leakage of cerebrospinal fluid from the nose or ear</td></tr></tbody></table><h4>Chest injury</h4><ul><li>General: pulse and BP (rule out bleeding and other problems)</li><li>Local: severe pain at the fracture site (Tenderness), and crackling on pressing the fracture site (Crepitus) distinguishes fractures</li></ul><h4>Abdominal injury</h4><ul><li>General: pulse and BP</li><li>Local: severe abdominal pain (Tenderness), board-like abdomen (Guarding & Rigidity)</li></ul><h4>Back and limb injury</h4><ul><li>Pain and point tenderness over the vertebrae/bones</li><li>Loss of pulse or fresh bleeding in the limb = vessel injury</li><li>Inability to move the finger/wrist = tendon</li><li>Bleeding under the nail</li></ul><h4>Head injuries in detail</h4><p>For details on concussion, cerebral contusion, epidural and subdural hemorrhage (Epidural and Subdural), basilar fractures, the Glasgow scale, and neuro nursing, see <a href=\"/diseases/dis-692\">head injuries</a> and <a href=\"/diseases/dis-693\">increased intracranial pressure</a>. Warning signs: slow pulse with high BP (Cushing), unequal pupils, a lucid interval then deterioration (Epidural). Neck immobilization is required in any severe injury; see <a href=\"/diseases/dis-705\">spinal cord injury</a>.</p>"
+  },
+  "tests": {
+   "ar": "[[slot:dis-462-ct|معايير الأشعة المقطعية العاجلة على المخ — رسم من إعداد الموقع|/diseases/img/dis-462-ct.svg]]<table><thead><tr><th>المنطقة</th><th>الأشعة المطلوبة</th><th>ملاحظات</th></tr></thead><tbody><tr><td>الرأس (حالة خطيرة)</td><td>CT مخ عاجل</td><td>لو أي معيار من معايير الرأس (فقد وعي، تشنج، قيء >3، كسر، قاعدة جمجمة)</td></tr><tr><td>الرأس (احتمال كسر بالأنف/كسر واضح من الخارج)</td><td>أشعة عادية على الجمجمة (أمامي خلفي AP + جانبي Lateral)</td><td>حسب الدليل</td></tr><tr><td>الصدر</td><td>أشعة على الصدر (Postero-anterior PA)</td><td>ثم عرض على نائب جراحة القلب والصدر؛ لو الخبطة في أسفل الصدر (آخر ضلوع): سونار على البطن لاستبعاد إصابة الطحال أو الكبد</td></tr><tr><td>البطن</td><td>FAST: سونار للبطن في الإصابة</td><td>يبحث عن إصابة كبد، طحال، كلى، مثانة، ونزيف حر داخل البريتون</td></tr><tr><td>الظهر</td><td>أشعة على الفقرات القطنية والعجزية أو الصدرية (AP + Lateral)</td><td>حسب مكان الإصابة، ثم عرض على نائب العظام</td></tr><tr><td>طرف علوي/سفلي (غير اليد والقدم)</td><td>أشعة AP + Lateral</td><td>مثال: خبطة فخذ أيسر مع ألم وورم: أشعة على الفخذ الأيسر AP وLateral</td></tr><tr><td>اليد والقدم</td><td>أشعة AP + مائلة (Oblique)</td><td>مثال: خبطة إصبع إبهام أيمن: أشعة على اليد اليمنى AP وOblique</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الدليل الحديث (NICE 2023، Canadian CT Head Rule) يضيف معايير: عمر أكثر من 65 سنة، اضطرابات نزف أو مميعات الدم (وارفارين، DOAC)، آلية إصابة خطيرة، فقد ذاكرة، شك كسر قاعدة الجمجمة، وGCS أقل من 15 بعد ساعتين. أشعة الجمجمة العادية لم تعد تُستخدم روتينياً لإصابات المخ وتُستبدل بـCT. وبعض الآراء (المذكورة في المراجع) تنصح CT مخ للأطفال أقل من سنة والكبار أكبر من 50 سنة في كل الأحوال.</p></div>",
+   "en": "[[slot:dis-462-ct|Criteria for urgent brain CT — illustration prepared by the site|/diseases/img/dis-462-ct.svg]]<table><thead><tr><th>Area</th><th>Imaging required</th><th>Notes</th></tr></thead><tbody><tr><td>Head (serious case)</td><td>Urgent brain CT</td><td>If any head criterion is present (loss of consciousness, seizure, vomiting >3, fracture, skull base)</td></tr><tr><td>Head (possible nasal fracture/obvious external fracture)</td><td>Plain skull X-ray (anteroposterior AP + Lateral)</td><td>Per the guideline</td></tr><tr><td>Chest</td><td>Chest X-ray (Postero-anterior PA)</td><td>Then refer to the cardiothoracic surgery resident; if the blow is to the lower chest (last ribs): abdominal ultrasound to rule out spleen or liver injury</td></tr><tr><td>Abdomen</td><td>FAST: abdominal ultrasound in trauma</td><td>Looks for injury to the liver, spleen, kidneys, bladder, and free intraperitoneal bleeding</td></tr><tr><td>Back</td><td>X-ray of the lumbosacral or thoracic spine (AP + Lateral)</td><td>According to the injury site, then refer to the orthopedic resident</td></tr><tr><td>Upper/lower limb (other than hand and foot)</td><td>AP + Lateral X-ray</td><td>Example: blow to the left thigh with pain and swelling: X-ray of the left thigh AP and Lateral</td></tr><tr><td>Hand and foot</td><td>AP + oblique (Oblique) X-ray</td><td>Example: blow to the right thumb: X-ray of the right hand AP and Oblique</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Modern guidance (NICE 2023, Canadian CT Head Rule) adds criteria: age over 65 years, bleeding disorders or blood thinners (warfarin, DOAC), a dangerous mechanism of injury, amnesia, suspected basilar skull fracture, and GCS below 15 after two hours. Plain skull X-rays are no longer routinely used for brain injuries and are replaced by CT. Some opinions (mentioned in the references) advise a brain CT for children under one year and adults over 50 years in all cases.</p></div>"
+  },
+  "treatment": {
+   "ar": "<h4>القرارات حسب الإصابة</h4><div class=\"cs-decision\"><strong>إصابة الرأس: هل في معيار خطر؟</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>نعم</b><p>CT مخ عاجل ونائب جراحة المخ والأعصاب (حتى لو في شيء فات).</p></div><div class=\"cs-branch no\"><b>لا</b><p>لو حالته كويسة: عالج أي حاجة تانية (جرح يحتاج خياطة)، ثم تمشيه، وأهله يعرفوا إن لو حصل تشنج، إغماء، أو رجوع أكتر من 3 مرات يرجعوا تاني.</p></div></div></div><div class=\"cs-decision\"><strong>الطعنة (Stab wound) في الصدر</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>ماتحركش السكين</b><p>ولا تشيل الجسم الغريب إلا في العمليات</p></div><div class=\"cs-branch no\"><b>أمّن</b><p>كانيولا ×2 + محاليل + نائب جراحة القلب والصدر.</p></div></div></div><h4>البطن: FAST</h4><table><thead><tr><th>نتيجة FAST</th><th>القرار</th></tr></thead><tbody><tr><td>لا يوجد سائل حر (No free fluid)</td><td>لا يوجد نزيف؛ اطمئن. لو عنده مشاكل تانية أو حالته كويسة يمشي.</td></tr><tr><td>سائل حر خفيف إلى متوسط</td><td>عرض على نائب الجراحة العامة + كانيولا ×2 + محاليل (غالباً بيتحط تحت الملاحظة 24 ساعة ومفيش وجه استعجال)</td></tr><tr><td>سائل حر كبير (Marked)</td><td>عرض على نائب الجراحة العامة + كانيولا ×2 + محاليل (ممكن يحتاج تدخل جراحي سريع)</td></tr></tbody></table><h4>إصابات الأطراف المعقدة</h4><table><thead><tr><th>الحالة</th><th>التصرف</th></tr></thead><tbody><tr><td>وعاء دموي مقطوع (نزيف دم طازج ونبض غائب بعد الجرح)</td><td>عرض على نائب جراحة الأوعية الدموية</td></tr><tr><td>قطع في وتر</td><td>عرض على نائب العظام</td></tr><tr><td>إصابة الظفر (نزيف تحت الظفر)</td><td>قد يحتاج نزع الظفر (Nail extraction)، وخياطة القطع تحته، ثم وضع الظفر مكانه كحماية طبيعية حتى ينمو الظفر الجديد</td></tr><tr><td>قطع في الرسغ (Cut wrist) مع إصابة أوعية أو أعصاب أو أوتار</td><td>عمليات: عرض على نائب العظام أو التجميل</td></tr></tbody></table>",
+   "en": "<h4>Decisions by injury</h4><div class=\"cs-decision\"><strong>Head injury: is there a risk criterion?</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>Yes</b><p>Urgent brain CT and the neurosurgery resident (even if something has been missed).</p></div><div class=\"cs-branch no\"><b>No</b><p>If his condition is good: treat anything else (a wound needing sutures), then discharge him, and his family should know that if a seizure, fainting, or vomiting more than 3 times happens, they come back.</p></div></div></div><div class=\"cs-decision\"><strong>Stab wound (Stab wound) to the chest</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>Do not move the knife</b><p>And do not remove the foreign object except in the operating room</p></div><div class=\"cs-branch no\"><b>Secure</b><p>Cannula ×2 + IV fluids + the cardiothoracic surgery resident.</p></div></div></div><h4>Abdomen: FAST</h4><table><thead><tr><th>FAST result</th><th>Decision</th></tr></thead><tbody><tr><td>No free fluid (No free fluid)</td><td>No bleeding; be reassured. If he has other problems or his condition is good, he is discharged.</td></tr><tr><td>Mild to moderate free fluid</td><td>Refer to the general surgery resident + cannula ×2 + IV fluids (usually kept under observation for 24 hours with no urgency)</td></tr><tr><td>Large free fluid (Marked)</td><td>Refer to the general surgery resident + cannula ×2 + IV fluids (may need rapid surgical intervention)</td></tr></tbody></table><h4>Complex limb injuries</h4><table><thead><tr><th>Case</th><th>Action</th></tr></thead><tbody><tr><td>Severed blood vessel (fresh bleeding and absent pulse after the wound)</td><td>Refer to the vascular surgery resident</td></tr><tr><td>Tendon laceration</td><td>Refer to the orthopedic resident</td></tr><tr><td>Nail injury (subungual bleeding)</td><td>May need nail extraction (Nail extraction), suturing of the laceration beneath it, then placing the nail back as natural protection until the new nail grows</td></tr><tr><td>Cut wrist (Cut wrist) with injury to vessels, nerves, or tendons</td><td>Operating room: refer to the orthopedic or plastic surgery resident</td></tr></tbody></table>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم ABC والعلامات الحيوية</strong><p>نبض وضغط وتشبع أكسجين وحرارة وسكر. شاكّ في نزيف داخلي لو تسرع القلب مع هبوط الضغط. مع إصابة الرأس: قيّم الوعي (GCS) وحجم حدقة العين واتجاه الأعراض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أمّن الفقرات</strong><p>أي حادث قوي أو سقوط: ثبّت الرقبة والظهر حتى استبعاد كسر. عند الحركة: Log-roll.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>خط وريدي</strong><p>كانيولا ×2 + محاليل (حسب الحالة)، وسحب تحاليل (صورة دم، فصيلة، زمن نزف عند الحاجة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>جهّز للأشعة</strong><p>أزل المعادن، سجّل حساسية الصبغة، احمِ الحامل، وصحّب المريض غير المستقر (لا تتركه وحده).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>حضّر التحويل</strong><p>اتصل بالتخصص المطلوب (مخ وأعصاب، قلب وصدر، جراحة عامة، عظام، أوعية، تجميل) وسلّم التقرير.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب وسجّل</strong><p>وعي، قيء، تشنج، ألم يتزايد، استجابة. لو مشي بعد الإصابة: ورقة تعليمات مكتوبة.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>تعليمات الرأس عند الخروج</strong><p>للأهل: ارجعوا فوراً لو حصل تشنجات أو إغماء أو قيء أكثر من 3 مرات أو صداع شديد متزايد أو نعاس غير طبيعي أو ضعف أو تغير في الكلام.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess ABC and vital signs</strong><p>Pulse, BP, oxygen saturation, temperature, and glucose. Suspect internal bleeding if there is tachycardia with hypotension. With a head injury: assess consciousness (GCS), pupil size, and the trend of symptoms.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Secure the spine</strong><p>Any major accident or fall: immobilize the neck and back until a fracture is ruled out. When moving: Log-roll.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>IV line</strong><p>Cannula ×2 + IV fluids (as needed), and draw labs (CBC, blood group, bleeding time when needed).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Prepare for imaging</strong><p>Remove metal, record contrast allergy, protect a pregnant woman, and accompany the unstable patient (do not leave him alone).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Prepare the referral</strong><p>Call the required specialty (neurosurgery, cardiothoracic, general surgery, orthopedics, vascular, plastic surgery) and hand over the report.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Monitor and document</strong><p>Consciousness, vomiting, seizures, increasing pain, response. If he is discharged after the injury: a written instruction sheet.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>Head injury discharge instructions</strong><p>For the family: come back immediately if there are seizures, fainting, vomiting more than 3 times, a severe worsening headache, abnormal drowsiness, weakness, or a change in speech.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>اضطراب وعي، تشنج، قيء متكرر، علامات كسر قاعدة جمجمة</li><li>تسرع نبض وهبوط ضغط بعد إصابة صدر أو بطن</li><li>طعنة بالصدر أو البطن وجسم غريب مغروس — لا تسحبه</li><li>بطن محجرة أو ألم شديد</li><li>فقدان نبض أو حس أو حركة أسفل إصابة الطرف</li><li>كسر مفتوح أو نزيف شديد</li></ul>",
+   "en": "<ul><li>Altered consciousness, seizure, repeated vomiting, signs of basilar skull fracture</li><li>Tachycardia and hypotension after a chest or abdominal injury</li><li>A stab wound to the chest or abdomen with an embedded foreign object — do not pull it out</li><li>Board-like abdomen or severe pain</li><li>Loss of pulse, sensation, or movement below a limb injury</li><li>Open fracture or severe bleeding</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اتبع تعليمات الرأس واستمر في المراقبة 24 ساعة</li><li>لا تستخدم مسكنات قوية ولا تنام وحدك في أول ليلة بعد الإصابة</li><li>راجع المتابعة العظام أو الجراحة في موعدها</li><li>أي ألم يتزايد أو ورم أو تنميل: ارجع للطوارئ</li></ul>",
+   "en": "<ul><li>Follow the head injury instructions and continue observation for 24 hours</li><li>Do not use strong painkillers and do not sleep alone the first night after the injury</li><li>Attend the orthopedic or surgical follow-up on time</li><li>Any increasing pain, swelling, or numbness: return to the ER</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الرأس: 3 أسئلة (إغماء، تشنج، قيء >3) + فحص كسر وقاعدة الجمجمة",
+   "Battle behind ear، Raccoon حول العين، Hemotympanum، CSF من الأنف/الأذن",
+   "الصدر: أشعة PA ثم جراح صدر؛ الطعنة لا تُسحب",
+   "البطن: FAST — بدون سائل = اطمئنان، قليل = ملاحظة 24 ساعة، كبير = جراحة سريعة",
+   "الظهر: أشعة AP/Lateral ثم عظام",
+   "الأطراف: AP+Lateral، اليد والقدم AP+Oblique",
+   "وعاء مقطوع: أوعية؛ وتر: عظام؛ ظفر: نزع وخياطة ثم إعادة الظفر"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>أي إصابة (خبطة أو سقوط أو حادث) لازم <b>تستبعد الحاجات الخطيرة الأول</b>، وبعدين تطلب الأشعة المناسبة للمنطقة وتحوّل للتخصص الصح. الأساس: العلامات الحيوية (النبض والضغط) لاستبعاد النزيف، ثم الفحص الموضعي (ألم، فرقعة، تورم)، ثم الأشعة.</p><div class=\"cs-stats\"><div><b>3</b><span>أسئلة + فحصين في الرأس</span></div><div><b>FAST</b><span>سونار البطن للإصابة</span></div><div><b>2</b><span>كانيولا + تحاليل عند النزيف</span></div></div><div class=\"cs-box cs-danger\"><strong>دايماً</strong><p>قياس النبض والضغط أول حاجة في كل إصابة (الصدر والبطن خصوصاً) لاستبعاد النزيف الداخلي. أي إصابة بسكين أو مطواة: لا تسحب الجسم الغريب.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>إصابة الرأس: 3 أسئلة + فحصين</h4><ul><li>مغمى عليه أو فقد الوعي؟</li><li>حصل تشنجات؟</li><li>رجع أكتر من 3 مرات؟</li><li>افحص الجمجمة لاستبعاد كسر ظاهر (منخسف أو مفتوح)</li><li>افحص علامات كسر قاعدة الجمجمة</li></ul><h4>علامات كسر قاعدة الجمجمة</h4><table><thead><tr><th>العلامة</th><th>الوصف</th></tr></thead><tbody><tr><td>Battle's sign</td><td>كدمة (Ecchymosis) خلف الأذن</td></tr><tr><td>Raccoon eye</td><td>كدمة حول العينين</td></tr><tr><td>Hemotympanum</td><td>دم خلف طبلة الأذن</td></tr><tr><td>CSF rhinorrhea / otorrhea</td><td>تسرب سائل المخ والنخاع من الأنف أو الأذن</td></tr></tbody></table><h4>إصابة الصدر</h4><ul><li>عام: النبض والضغط (استبعاد نزيف وخلافه)</li><li>موضعي: ألم شديد مكان الكسر (Tenderness)، وفرقعة عند الضغط على مكان الكسر (Crepitus) تميز الكسور</li></ul><h4>إصابة البطن</h4><ul><li>عام: النبض والضغط</li><li>موضعي: ألم شديد بالبطن (Tenderness)، بطن محجرة (Guarding & Rigidity)</li></ul><h4>إصابة الظهر والأطراف</h4><ul><li>ألم ونقطة ألم على الفقرات/العظام</li><li>فقدان النبض أو نزيف دم طازج في الطرف = إصابة وعاء</li><li>عدم القدرة على تحريك الإصبع/الرسغ = وتر</li><li>نزيف تحت الظفر</li></ul><h4>إصابات الرأس بالتفصيل</h4><p>لتفاصيل الارتجاج والكدمة المخية والنزف Epidural وSubdural (فوق وتحت الجافية) وكسور القاعدة ومقياس غلاسكو والتمريض العصبي، راجع <a href=\"/diseases/dis-692\">إصابات الرأس</a> و<a href=\"/diseases/dis-693\">ارتفاع الضغط داخل الجمجمة</a>. علامات تحذيرية: نبض بطيء مع ضغط مرتفع (كوشينج)، حدقة غير متساوية، فترة صفاء ثم تدهور (Epidural). ويلزم تثبيت العنق في أي إصابة شديدة، وانظر <a href=\"/diseases/dis-705\">إصابة الحبل الشوكي</a>.</p>"
-    },
-    "tests": {
-      "ar": "[[slot:dis-462-ct|معايير الأشعة المقطعية العاجلة على المخ — رسم من إعداد الموقع|/diseases/img/dis-462-ct.svg]]<table><thead><tr><th>المنطقة</th><th>الأشعة المطلوبة</th><th>ملاحظات</th></tr></thead><tbody><tr><td>الرأس (حالة خطيرة)</td><td>CT مخ عاجل</td><td>لو أي معيار من معايير الرأس (فقد وعي، تشنج، قيء >3، كسر، قاعدة جمجمة)</td></tr><tr><td>الرأس (احتمال كسر بالأنف/كسر واضح من الخارج)</td><td>أشعة عادية على الجمجمة (أمامي خلفي AP + جانبي Lateral)</td><td>حسب الدليل</td></tr><tr><td>الصدر</td><td>أشعة على الصدر (Postero-anterior PA)</td><td>ثم عرض على نائب جراحة القلب والصدر؛ لو الخبطة في أسفل الصدر (آخر ضلوع): سونار على البطن لاستبعاد إصابة الطحال أو الكبد</td></tr><tr><td>البطن</td><td>FAST: سونار للبطن في الإصابة</td><td>يبحث عن إصابة كبد، طحال، كلى، مثانة، ونزيف حر داخل البريتون</td></tr><tr><td>الظهر</td><td>أشعة على الفقرات القطنية والعجزية أو الصدرية (AP + Lateral)</td><td>حسب مكان الإصابة، ثم عرض على نائب العظام</td></tr><tr><td>طرف علوي/سفلي (غير اليد والقدم)</td><td>أشعة AP + Lateral</td><td>مثال: خبطة فخذ أيسر مع ألم وورم: أشعة على الفخذ الأيسر AP وLateral</td></tr><tr><td>اليد والقدم</td><td>أشعة AP + مائلة (Oblique)</td><td>مثال: خبطة إصبع إبهام أيمن: أشعة على اليد اليمنى AP وOblique</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الدليل الحديث (NICE 2023، Canadian CT Head Rule) يضيف معايير: عمر أكثر من 65 سنة، اضطرابات نزف أو مميعات الدم (وارفارين، DOAC)، آلية إصابة خطيرة، فقد ذاكرة، شك كسر قاعدة الجمجمة، وGCS أقل من 15 بعد ساعتين. أشعة الجمجمة العادية لم تعد تُستخدم روتينياً لإصابات المخ وتُستبدل بـCT. وبعض الآراء (المذكورة في المراجع) تنصح CT مخ للأطفال أقل من سنة والكبار أكبر من 50 سنة في كل الأحوال.</p></div>"
-    },
-    "treatment": {
-      "ar": "<h4>القرارات حسب الإصابة</h4><div class=\"cs-decision\"><strong>إصابة الرأس: هل في معيار خطر؟</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>نعم</b><p>CT مخ عاجل ونائب جراحة المخ والأعصاب (حتى لو في شيء فات).</p></div><div class=\"cs-branch no\"><b>لا</b><p>لو حالته كويسة: عالج أي حاجة تانية (جرح يحتاج خياطة)، ثم تمشيه، وأهله يعرفوا إن لو حصل تشنج، إغماء، أو رجوع أكتر من 3 مرات يرجعوا تاني.</p></div></div></div><div class=\"cs-decision\"><strong>الطعنة (Stab wound) في الصدر</strong><div class=\"cs-branches\"><div class=\"cs-branch yes\"><b>ماتحركش السكين</b><p>ولا تشيل الجسم الغريب إلا في العمليات</p></div><div class=\"cs-branch no\"><b>أمّن</b><p>كانيولا ×2 + محاليل + نائب جراحة القلب والصدر.</p></div></div></div><h4>البطن: FAST</h4><table><thead><tr><th>نتيجة FAST</th><th>القرار</th></tr></thead><tbody><tr><td>لا يوجد سائل حر (No free fluid)</td><td>لا يوجد نزيف؛ اطمئن. لو عنده مشاكل تانية أو حالته كويسة يمشي.</td></tr><tr><td>سائل حر خفيف إلى متوسط</td><td>عرض على نائب الجراحة العامة + كانيولا ×2 + محاليل (غالباً بيتحط تحت الملاحظة 24 ساعة ومفيش وجه استعجال)</td></tr><tr><td>سائل حر كبير (Marked)</td><td>عرض على نائب الجراحة العامة + كانيولا ×2 + محاليل (ممكن يحتاج تدخل جراحي سريع)</td></tr></tbody></table><h4>إصابات الأطراف المعقدة</h4><table><thead><tr><th>الحالة</th><th>التصرف</th></tr></thead><tbody><tr><td>وعاء دموي مقطوع (نزيف دم طازج ونبض غائب بعد الجرح)</td><td>عرض على نائب جراحة الأوعية الدموية</td></tr><tr><td>قطع في وتر</td><td>عرض على نائب العظام</td></tr><tr><td>إصابة الظفر (نزيف تحت الظفر)</td><td>قد يحتاج نزع الظفر (Nail extraction)، وخياطة القطع تحته، ثم وضع الظفر مكانه كحماية طبيعية حتى ينمو الظفر الجديد</td></tr><tr><td>قطع في الرسغ (Cut wrist) مع إصابة أوعية أو أعصاب أو أوتار</td><td>عمليات: عرض على نائب العظام أو التجميل</td></tr></tbody></table>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم ABC والعلامات الحيوية</strong><p>نبض وضغط وتشبع أكسجين وحرارة وسكر. شاكّ في نزيف داخلي لو تسرع القلب مع هبوط الضغط. مع إصابة الرأس: قيّم الوعي (GCS) وحجم حدقة العين واتجاه الأعراض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أمّن الفقرات</strong><p>أي حادث قوي أو سقوط: ثبّت الرقبة والظهر حتى استبعاد كسر. عند الحركة: Log-roll.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>خط وريدي</strong><p>كانيولا ×2 + محاليل (حسب الحالة)، وسحب تحاليل (صورة دم، فصيلة، زمن نزف عند الحاجة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>جهّز للأشعة</strong><p>أزل المعادن، سجّل حساسية الصبغة، احمِ الحامل، وصحّب المريض غير المستقر (لا تتركه وحده).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>حضّر التحويل</strong><p>اتصل بالتخصص المطلوب (مخ وأعصاب، قلب وصدر، جراحة عامة، عظام، أوعية، تجميل) وسلّم التقرير.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب وسجّل</strong><p>وعي، قيء، تشنج، ألم يتزايد، استجابة. لو مشي بعد الإصابة: ورقة تعليمات مكتوبة.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>تعليمات الرأس عند الخروج</strong><p>للأهل: ارجعوا فوراً لو حصل تشنجات أو إغماء أو قيء أكثر من 3 مرات أو صداع شديد متزايد أو نعاس غير طبيعي أو ضعف أو تغير في الكلام.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>اضطراب وعي، تشنج، قيء متكرر، علامات كسر قاعدة جمجمة</li><li>تسرع نبض وهبوط ضغط بعد إصابة صدر أو بطن</li><li>طعنة بالصدر أو البطن وجسم غريب مغروس — لا تسحبه</li><li>بطن محجرة أو ألم شديد</li><li>فقدان نبض أو حس أو حركة أسفل إصابة الطرف</li><li>كسر مفتوح أو نزيف شديد</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اتبع تعليمات الرأس واستمر في المراقبة 24 ساعة</li><li>لا تستخدم مسكنات قوية ولا تنام وحدك في أول ليلة بعد الإصابة</li><li>راجع المتابعة العظام أو الجراحة في موعدها</li><li>أي ألم يتزايد أو ورم أو تنميل: ارجع للطوارئ</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الرأس: 3 أسئلة (إغماء، تشنج، قيء >3) + فحص كسر وقاعدة الجمجمة",
-      "Battle behind ear، Raccoon حول العين، Hemotympanum، CSF من الأنف/الأذن",
-      "الصدر: أشعة PA ثم جراح صدر؛ الطعنة لا تُسحب",
-      "البطن: FAST — بدون سائل = اطمئنان، قليل = ملاحظة 24 ساعة، كبير = جراحة سريعة",
-      "الظهر: أشعة AP/Lateral ثم عظام",
-      "الأطراف: AP+Lateral، اليد والقدم AP+Oblique",
-      "وعاء مقطوع: أوعية؛ وتر: عظام؛ ظفر: نزع وخياطة ثم إعادة الظفر"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي علامة تستدعي CT مخ عاجل؟"
-      },
-      "options": [
-        {
-          "ar": "قيء مرتين"
-        },
-        {
-          "ar": "تشنج بعد الإصابة"
-        },
-        {
-          "ar": "صداع بسيط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التشنج معيار خطر."
-      }
-    },
-    {
-      "q": {
-        "ar": "Raccoon eye تعني؟"
-      },
-      "options": [
-        {
-          "ar": "كدمة حول العينين = كسر قاعدة الجمجمة"
-        },
-        {
-          "ar": "التهاب ملتحمة"
-        },
-        {
-          "ar": "حساسية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "علامة كسر قاعدة جمجمة."
-      }
-    },
-    {
-      "q": {
-        "ar": "FAST للبطن يبحث عن؟"
-      },
-      "options": [
-        {
-          "ar": "سائل حر وإصابة أعضاء"
-        },
-        {
-          "ar": "كسور"
-        },
-        {
-          "ar": "حصوات"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "سونار للإصابة يكشف نزيف."
-      }
-    },
-    {
-      "q": {
-        "ar": "طعنة بسكين في الصدر ماتتعملش؟"
-      },
-      "options": [
-        {
-          "ar": "سحب السكين في الاستقبال"
-        },
-        {
-          "ar": "كانيولا وتحويل"
-        },
-        {
-          "ar": "مراقبة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لا يُسحب إلا في العمليات."
-      }
-    },
-    {
-      "q": {
-        "ar": "نبض غائب وبيزف دم طازج من الطرف"
-      },
-      "options": [
-        {
-          "ar": "جراحة الأوعية"
-        },
-        {
-          "ar": "عظام فقط"
-        },
-        {
-          "ar": "مسكن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "إصابة وعاء دموي."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "NICE NG232 — Head injury: assessment and early management (2023)"
-    },
-    {
-      "title": "Canadian CT Head Rule"
-    },
-    {
-      "title": "ATLS 10th ed. — Advanced Trauma Life Support"
-    }
+  "en": [
+   "Head: 3 questions (fainting, seizure, vomiting >3) + check for fracture and skull base",
+   "Battle behind the ear, Raccoon around the eyes, Hemotympanum, CSF from the nose/ear",
+   "Chest: PA X-ray then chest surgeon; a stab object is not pulled out",
+   "Abdomen: FAST — no fluid = reassurance, small = observation 24 hours, large = rapid surgery",
+   "Back: AP/Lateral X-ray then orthopedics",
+   "Limbs: AP+Lateral; hand and foot AP+Oblique",
+   "Severed vessel: vascular; tendon: orthopedics; nail: removal and suturing then replacing the nail"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي علامة تستدعي CT مخ عاجل؟",
+    "en": "Which sign requires an urgent brain CT?"
+   },
+   "options": [
+    {
+     "ar": "قيء مرتين",
+     "en": "Vomiting twice"
+    },
+    {
+     "ar": "تشنج بعد الإصابة",
+     "en": "Seizure after the injury"
+    },
+    {
+     "ar": "صداع بسيط",
+     "en": "Mild headache"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التشنج معيار خطر.",
+    "en": "Seizure is a risk criterion."
+   }
+  },
+  {
+   "q": {
+    "ar": "Raccoon eye تعني؟",
+    "en": "Raccoon eye means?"
+   },
+   "options": [
+    {
+     "ar": "كدمة حول العينين = كسر قاعدة الجمجمة",
+     "en": "Bruising around the eyes = basilar skull fracture"
+    },
+    {
+     "ar": "التهاب ملتحمة",
+     "en": "Conjunctivitis"
+    },
+    {
+     "ar": "حساسية",
+     "en": "Allergy"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "علامة كسر قاعدة جمجمة.",
+    "en": "A sign of basilar skull fracture."
+   }
+  },
+  {
+   "q": {
+    "ar": "FAST للبطن يبحث عن؟",
+    "en": "FAST of the abdomen looks for?"
+   },
+   "options": [
+    {
+     "ar": "سائل حر وإصابة أعضاء",
+     "en": "Free fluid and organ injury"
+    },
+    {
+     "ar": "كسور",
+     "en": "Fractures"
+    },
+    {
+     "ar": "حصوات",
+     "en": "Stones"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "سونار للإصابة يكشف نزيف.",
+    "en": "Trauma ultrasound detects bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "طعنة بسكين في الصدر ماتتعملش؟",
+    "en": "With a knife stab wound to the chest, what must not be done?"
+   },
+   "options": [
+    {
+     "ar": "سحب السكين في الاستقبال",
+     "en": "Pulling out the knife in the ER"
+    },
+    {
+     "ar": "كانيولا وتحويل",
+     "en": "Cannula and referral"
+    },
+    {
+     "ar": "مراقبة",
+     "en": "Monitoring"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لا يُسحب إلا في العمليات.",
+    "en": "It is not removed except in the operating room."
+   }
+  },
+  {
+   "q": {
+    "ar": "نبض غائب وبيزف دم طازج من الطرف",
+    "en": "Absent pulse and fresh blood bleeding from the limb"
+   },
+   "options": [
+    {
+     "ar": "جراحة الأوعية",
+     "en": "Vascular surgery"
+    },
+    {
+     "ar": "عظام فقط",
+     "en": "Orthopedics only"
+    },
+    {
+     "ar": "مسكن",
+     "en": "Analgesic"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "إصابة وعاء دموي.",
+    "en": "Blood vessel injury."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "NICE NG232 — Head injury: assessment and early management (2023)"
+  },
+  {
+   "title": "Canadian CT Head Rule"
+  },
+  {
+   "title": "ATLS 10th ed. — Advanced Trauma Life Support"
+  }
+ ]
 }

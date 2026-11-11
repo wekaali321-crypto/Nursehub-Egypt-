@@ -1,193 +1,243 @@
 {
-  "id": "dis-300",
-  "num": 300,
-  "system": "renal",
-  "icon": "🚻",
-  "level": 2,
-  "target": "er-reception",
-  "title": {
-    "ar": "احتباس البول الحاد",
-    "en": "Acute Urine Retention"
+ "id": "dis-300",
+ "num": 300,
+ "system": "renal",
+ "icon": "🚻",
+ "level": 2,
+ "target": "er-reception",
+ "title": {
+  "ar": "احتباس البول الحاد",
+  "en": "Acute Urine Retention"
+ },
+ "teaser": {
+  "ar": "أشهر طوارئ المسالك: مريض مش قادر يتبول ومعاه ألم شديد فوق العانة. إزاي تفرّق بينه وبين انقطاع البول، وإزاي تركّب القسطرة صح وتتجنب المضاعفات.",
+  "en": "The most common urologic emergency: a patient who cannot pass urine and has severe suprapubic pain. How to tell it apart from anuria, and how to insert a catheter correctly and avoid complications."
+ },
+ "chips": [
+  {
+   "ar": "ألم فوق العانة",
+   "en": "Suprapubic pain"
   },
-  "teaser": {
-    "ar": "أشهر طوارئ المسالك: مريض مش قادر يتبول ومعاه ألم شديد فوق العانة. إزاي تفرّق بينه وبين انقطاع البول، وإزاي تركّب القسطرة صح وتتجنب المضاعفات."
+  {
+   "ar": "قسطرة فولي",
+   "en": "Foley catheter"
   },
-  "chips": [
-    {
-      "ar": "ألم فوق العانة"
-    },
-    {
-      "ar": "قسطرة فولي"
-    },
-    {
-      "ar": "احتباس مقابل Anuria"
-    }
+  {
+   "ar": "احتباس مقابل Anuria",
+   "en": "Retention vs anuria"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>احتباس البول الحاد (Acute urinary retention) هو عدم قدرة المريض فجأة على التبول رغم إن المثانة ممتلئة. يعتبر <b>أشهر طوارئ المسالك البولية</b>. الكلى شغالة والبول بيتصنع، لكنه محبوس في المثانة.</p><div class=\"cs-stats\"><div><b>فجأة</b><span>عدم القدرة على التبول</span></div><div><b>ألم</b><span>شديد فوق العانة</span></div><div><b>Foley</b><span>قسطرة الاختيار الأول في الطوارئ</span></div></div><h4>الصورة الكلاسيكية</h4><p>المريض بيقول «عايز أتبول ومش عارف». معاه ألم شديد فوق العانة (Suprapubic pain) وإحساس بانتفاخ.</p>[[slot:dis-300-retention-vs-anuria|الفرق بين احتباس البول وانقطاع البول — رسم توضيحي من إعداد الموقع|/diseases/img/dis-300-retention-vs-anuria.svg]]<div class=\"cs-box cs-warning\"><strong>ازاي تفرّق بين الاحتباس والانقطاع (Anuria)؟</strong><p>لازم تفرّق بين مريض الكلى عنده شغالة بس البول مش بينزل لسبب ما (احتباس)، وبين مريض مفيش بول بيتكوّن أصلاً بسبب قصور في الكلى (Anuria). في Anuria: لا ألم فوق العانة، لا وجع باللمس ولا انتفاخ ولا كتمة بالقرع، الكرياتينين غالباً عالي، ومفيش بول بينزل حتى بعد تركيب القسطرة. <b>أهم فرق عملي:</b> لما تركّب القسطرة، لو مالقيتش بول يجي = مش احتباس.</p></div>",
+   "en": "<p>Acute urinary retention is the sudden inability to pass urine even though the bladder is full. It is considered <b>the most common urologic emergency</b>. The kidneys are working and urine is being made, but it is trapped in the bladder.</p><div class=\"cs-stats\"><div><b>Sudden</b><span>Inability to urinate</span></div><div><b>Pain</b><span>Severe, suprapubic</span></div><div><b>Foley</b><span>First-choice catheter in the ER</span></div></div><h4>The classic picture</h4><p>The patient says, \"I need to urinate and I can't.\" There is severe suprapubic pain (Suprapubic pain) and a feeling of bloating.</p>[[slot:dis-300-retention-vs-anuria|The difference between urinary retention and anuria — illustration prepared by the site|/diseases/img/dis-300-retention-vs-anuria.svg]]<div class=\"cs-box cs-warning\"><strong>How do you tell retention from anuria (Anuria)?</strong><p>You must distinguish a patient whose kidneys are working but whose urine is not coming out for some reason (retention) from a patient who is making no urine at all because of kidney failure (Anuria). In anuria: no suprapubic pain, no tenderness, no distension, and no dullness on percussion; creatinine is usually high, and no urine comes out even after inserting a catheter. <b>The most important practical difference:</b> when you insert the catheter, if no urine comes = it is not retention.</p></div>"
+  },
+  "causes": {
+   "ar": "<h4>أشهر الأسباب (حسب المرجع)</h4><ul><li><b>تضخم البروستاتا الحميد (BPH)</b> عند كبار السن من الرجال، وهو السبب الأشهر</li><li><b>حصوات المثانة أو مجرى البول (الإحليل)</b></li><li><b>احتباس ما بعد العمليات</b> (Post-operative retention)</li></ul><h4>أسباب إضافية لازم تعرفها</h4><ul><li>إمساك شديد وتكتل البراز</li><li>أدوية: مضادات الكولين (anticholinergics)، الأفيونات، مزيلات الاحتقان بالفم زي pseudoephedrine (موجودة في أدوية البرد المركبة)، بعض مضادات الهيستامين من الجيل الأول</li><li>ضيق في الإحليل (Stricture) أو التهاب البروستاتا أو الإحليل</li><li>جلطة دموية في المثانة</li><li>أسباب عصبية: إصابة النخاع الشوكي، متلازمة ذيل الحصان، السكر، الشلل</li><li>بعد الولادة، ألم شديد في المنطقة، أو انحباس القلفة (Paraphimosis)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأسباب الإضافية مأخوذة من المراجع (EAU / StatPearls) لأهميتها للتمريض في مراجعة قائمة أدوية المريض.</p></div>",
+   "en": "<h4>The most common causes (per the reference)</h4><ul><li><b>Benign prostatic hyperplasia (BPH)</b> in older men, the most common cause</li><li><b>Bladder or urethral stones</b></li><li><b>Post-operative retention</b> (Post-operative retention)</li></ul><h4>Additional causes you must know</h4><ul><li>Severe constipation and fecal impaction</li><li>Drugs: anticholinergics (anticholinergics), opioids, oral decongestants such as pseudoephedrine (found in combination cold remedies), and some first-generation antihistamines</li><li>Urethral stricture (Stricture), or prostatitis or urethritis</li><li>Blood clot in the bladder</li><li>Neurological causes: spinal cord injury, cauda equina syndrome, diabetes, paralysis</li><li>After childbirth, severe pain in the area, or paraphimosis (Paraphimosis)</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The additional causes are taken from current guidelines because they matter to nursing when reviewing the patient's medication list.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>الأعراض والعلامات</h4><ul><li>عدم القدرة على التبول فجأة</li><li>ألم شديد فوق العانة ورغبة ملحّة ومؤلمة</li><li>قلق وتقلب المريض</li></ul><h4>الفحص</h4><ul><li>انتفاخ فوق العانة (Suprapubic distension)</li><li>ألم عند اللمس فوق العانة (Suprapubic tenderness)</li><li>كتمة عند القرع فوق العانة (Dullness on percussion)</li></ul><p>المثانة الممتلئة بتتحس ككتلة ملساء مدورة فوق العانة.</p><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الاحتباس المزمن ممكن يكون <b>بدون ألم</b> (بول بيقطر منه المريض Overflow). مش كل احتباس مؤلم.</p></div>",
+   "en": "<h4>Symptoms and signs</h4><ul><li>Sudden inability to urinate</li><li>Severe suprapubic pain and an urgent, painful urge</li><li>Restlessness and agitation</li></ul><h4>Examination</h4><ul><li>Suprapubic distension</li><li>Suprapubic tenderness</li><li>Dullness on percussion above the pubis</li></ul><p>A full bladder is felt as a smooth, round mass above the pubis.</p><div class=\"cs-box cs-info\"><strong>Note</strong><p>Chronic retention can be <b>painless</b> (the patient dribbles urine: overflow). Not every retention is painful.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>فحص البطن (انتفاخ/كتمة فوق العانة) — تشخيص إكلينيكي في الأساس</li><li>سونار المثانة (Bladder scan) لقياس حجم البول المتبقي لو متاح</li><li>تحليل بول (عدوى، دم)</li><li>وظائف الكلى (كرياتينين، يوريا) وإلكتروليتات</li><li>سونار على الكلى والمسالك بعد تفريغ المثانة للبحث عن تمدد الحويضة (Hydronephrosis)</li><li>الكرياتينين العالي مع عدم وجود احتباس = فكّر في Anuria (قصور كلوي) لا في الاحتباس</li></ul><div class=\"cs-box cs-tip\"><strong>بعد التفريغ</strong><p>سجّل كمية البول اللي نزلت في أول 10–20 دقيقة، لأنها بتساعد الطبيب في توقع كمية البول بعد الانسداد (Post-obstructive diuresis).</p></div>",
+   "en": "<ul><li>Abdominal examination (suprapubic distension/dullness) — mainly a clinical diagnosis</li><li>Bladder ultrasound (Bladder scan) to measure residual urine volume if available</li><li>Urinalysis (infection, blood)</li><li>Kidney function (creatinine, urea) and electrolytes</li><li>Ultrasound of the kidneys and urinary tract after emptying the bladder to look for hydronephrosis (Hydronephrosis)</li><li>High creatinine without retention = think of anuria (kidney failure), not retention</li></ul><div class=\"cs-box cs-tip\"><strong>After drainage</strong><p>Record the amount of urine drained in the first 10–20 minutes, because it helps the physician anticipate post-obstructive diuresis (Post-obstructive diuresis).</p></div>"
+  },
+  "treatment": {
+   "ar": "<h4>العلاج في الطوارئ: تركيب قسطرة بولية فوراً (Urgent urethral catheterization)</h4><ul><li>المقاس الشائع: <b>18 Fr للرجال</b> و <b>16 Fr للسيدات</b></li><li><b>قسطرة فولي (Foley) هي المفضلة</b> لأنها بتتثبت ببالون وممكن تتساب. وده اللي المريض محتاجه لأنه لسه هيروح لطبيب المسالك يعرف السبب.</li></ul>[[slot:dis-300-catheter-types|أنواع القسطرة ومدة بقائها — رسم توضيحي من إعداد الموقع|/diseases/img/dis-300-catheter-types.svg]]<h4>الفرق بين أنواع القساطر</h4><table><thead><tr><th>النوع</th><th>الاستخدام ومدة البقاء (حسب المرجع)</th></tr></thead><tbody><tr><td>Nylaton (نيلاتون)</td><td>لغرض معين وتتشال على طول بعد التفريغ</td></tr><tr><td>Foley (فولي)</td><td>ممكن يفضل مكانه لحد أسبوع تقريباً (أرخص)</td></tr><tr><td>Silicone (سيليكون)</td><td>ممكن يفضل مكانه لحد شهر تقريباً (أغلى)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>مدة بقاء القسطرة بتتحدد من نوع الخامة وتعليمات المصنّع وبروتوكول المستشفى، وأقصر مدة لازمة أحسن لتقليل العدوى (CAUTI). السيليكون يناسب البقاء الأطول.</p></div><h4>نقاط مهمة في التفريغ</h4><ul><li><b>تجنّب التفريغ السريع جداً</b> لأنه قد يسبب نزيف في البول (Hematuria) بسبب انخفاض الضغط المفاجئ داخل المثانة. الطريقة العملية في المرجع: لما البول يبدأ ينزل اضغط على الأنبوبة بين صوابعك لثواني ثم اترك، وكرّر على فترات.</li><li>لو في مقاومة أثناء إدخال القسطرة: <b>جرّب مقاس أصغر</b>. لو مدخلتش بسهولة: حوّل الحالة للمستشفى/المسالك ولا تستخدم القوة.</li><li>بعد تركيب القسطرة لازم المريض يروح لطبيب المسالك يتابع معاه ويعرف السبب ويعالجه.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأدلة الحديثة بتقول إن التفريغ التدريجي (Clamping) مش بيمنع النزيف بشكل مؤكد، فمعظم البروتوكولات بتسمح بالتفريغ الكامل. المهم تراقب البول بعد التفريغ وتسجّل أول حجم.</p></div><h4>أدوية وإجراءات مكملة (قرار الطبيب)</h4><ul><li>علاج السبب: BPH (محصرات ألفا زي tamsulosin)، حصوة، عدوى، إيقاف دواء مسبب، علاج الإمساك</li><li>محاولة إزالة القسطرة بعد أيام (Trial without catheter) بعد بدء محصر ألفا</li><li>قسطرة فوق العانة (Suprapubic) لو القسطرة العادية مستحيلة أو في إصابة بالإحليل (يقرّرها الطبيب)</li></ul>",
+   "en": "<h4>Emergency treatment: immediate urinary catheter insertion (Urgent urethral catheterization)</h4><ul><li>Common size: <b>18 Fr for men</b> and <b>16 Fr for women</b></li><li><b>A Foley catheter is preferred</b> because it is held by a balloon and can be left in place. This is what the patient needs, because they still have to see a urologist to find the cause.</li></ul>[[slot:dis-300-catheter-types|Catheter types and how long they stay — illustration prepared by the site|/diseases/img/dis-300-catheter-types.svg]]<h4>The difference between catheter types</h4><table><thead><tr><th>Type</th><th>Use and dwell time (per the reference)</th></tr></thead><tbody><tr><td>Nelaton (Nylaton)</td><td>For a specific purpose and removed right after drainage</td></tr><tr><td>Foley</td><td>Can stay in place for about a week (cheaper)</td></tr><tr><td>Silicone</td><td>Can stay in place for about a month (more expensive)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Catheter dwell time is determined by the material, the manufacturer's instructions, and hospital protocol, and the shortest necessary time is best to reduce infection (CAUTI). Silicone suits longer dwell times.</p></div><h4>Important points during drainage</h4><ul><li><b>Avoid very rapid drainage</b> because it may cause blood in the urine (Hematuria) from a sudden drop in pressure inside the bladder. The practical method in the reference: when urine starts to flow, pinch the tube between your fingers for a few seconds, then release, and repeat at intervals.</li><li>If there is resistance while inserting the catheter: <b>try a smaller size</b>. If it does not pass easily: refer the patient to the hospital/urology and do not use force.</li><li>After catheter insertion, the patient must see a urologist for follow-up to find and treat the cause.</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Recent evidence says that gradual drainage (Clamping) does not reliably prevent bleeding, so most protocols allow complete drainage. What matters is monitoring the urine after drainage and recording the first volume.</p></div><h4>Complementary drugs and procedures (physician's decision)</h4><ul><li>Treat the cause: BPH (alpha blockers such as tamsulosin), stone, infection, stopping a causative drug, treating constipation</li><li>Attempt catheter removal after a few days (Trial without catheter) after starting an alpha blocker</li><li>Suprapubic catheter (Suprapubic) if a urethral catheter is impossible or there is a urethral injury (decided by the physician)</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p>اسأل عن آخر مرة تبول، الألم، الأدوية، الإمساك، العمليات الأخيرة. افحص فوق العانة (انتفاخ، ألم، كتمة) وقس العلامات الحيوية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>فرّق عن Anuria</strong><p>لو مفيش انتفاخ ولا ألم ولا كتمة والكرياتينين عالي = اشتبه في Anuria وبلّغ الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>جهّز العدة</strong><p>قسطرة فولي (18 للرجال و16 للسيدات) + مقاسات أصغر احتياطي، جل مخدر ومزلق معقم، محلول تطهير، قفازات معقمة، سرنجة بمياه معقمة للبالون، كيس تجميع، جهاز تثبيت.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اشرح وطمّن</strong><p>اشرح للمريض الإجراء، احمِ خصوصيته، وضع المريض مستلقي على ظهره.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>ركّب بتقنية معقمة</strong><p>نظّف المنطقة، افتح بالتحكم، ادخل برفق لحد ما يظهر البول وبعدها ادفع شوية، وبعدها انفخ البالون بعد تأكدك من خروج البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>فرّغ بحذر</strong><p>اترك البول ينزل ببطء، لو ينزل بسرعة: اضغط الأنبوبة لثواني ثم اترك. سجّل أول حجم ولون البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثبّت وسجّل</strong><p>ثبّت القسطرة على الفخذ، الكيس تحت مستوى المثانة، وسجّل المقاس والنوع وتاريخ التركيب وحجم البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>راقب</strong><p>العلامات الحيوية، لون البول (دم؟ جلطات؟)، كمية البول كل ساعة في أول ساعات (بول كتير جداً = Post-obstructive diuresis)، هبوط الضغط أو الدوخة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>حوّل</strong><p>وجّه المريض للمسالك بعد التركيب لمعرفة السبب.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>لا تركّب قسطرة بالقوة</strong><p>لو في دم عند فتحة الإحليل بعد إصابة في الحوض/الأعضاء، أو مقاومة شديدة: توقف وبلّغ الطبيب.</p></div><div class=\"cs-box cs-info\"><strong>خدمة الأمان</strong><p>نصيحة: الرجل كبير السن: بعد التركيب أعد القلفة لمكانها (Paraphimosis) لتجنب انحباسها.</p></div><div class=\"cs-box cs-tip\"><strong>العدوى</strong><p>نظام مغلق، غسل اليدين، كيس تحت مستوى المثانة، ولا تفصل الوصلات إلا للضرورة.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess</strong><p>Ask about the last time they urinated, the pain, medications, constipation, recent surgery. Examine the suprapubic area (distension, pain, dullness) and measure vital signs.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Distinguish from anuria</strong><p>If there is no distension, pain, or dullness and creatinine is high = suspect anuria and inform the physician.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Prepare the equipment</strong><p>Foley catheter (18 for men and 16 for women) + smaller sizes as backup, anesthetic gel and sterile lubricant, antiseptic solution, sterile gloves, a syringe with sterile water for the balloon, a drainage bag, a securing device.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Explain and reassure</strong><p>Explain the procedure to the patient, protect their privacy, and position the patient lying on their back.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Insert with sterile technique</strong><p>Clean the area, open with control, insert gently until urine appears, then advance a little further, then inflate the balloon after confirming urine flow.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Drain carefully</strong><p>Let the urine flow slowly; if it flows fast: pinch the tube for a few seconds, then release. Record the first volume and the color of the urine.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Secure and document</strong><p>Secure the catheter to the thigh, keep the bag below bladder level, and record the size, type, insertion date, and urine volume.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Monitor</strong><p>Vital signs, urine color (blood? clots?), urine output every hour in the first hours (very large output = Post-obstructive diuresis), hypotension or dizziness.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>Refer</strong><p>Direct the patient to urology after insertion to find the cause.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>Never force a catheter in</strong><p>If there is blood at the urethral opening after a pelvic/genital injury, or strong resistance: stop and inform the physician.</p></div><div class=\"cs-box cs-info\"><strong>Safety tip</strong><p>Tip: in an older man: after insertion, return the foreskin to its place (Paraphimosis) to prevent it from becoming trapped.</p></div><div class=\"cs-box cs-tip\"><strong>Infection</strong><p>Closed system, handwashing, bag below bladder level, and do not disconnect the connections unless necessary.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>بول كتير جداً بعد التفريغ (200 مل/ساعة أو أكتر لساعتين) = احتمال Post-obstructive diuresis ويحتاج متابعة السوائل والإلكتروليتات</li><li>دم أو جلطات تسد القسطرة</li><li>حرارة ورعشة (عدوى المسالك/إنتان)</li><li>هبوط ضغط أو إغماء بعد التفريغ</li><li>عدم نزول بول بعد القسطرة (فكّر في Anuria)</li><li>مقاومة شديدة أو دم عند فتحة الإحليل</li><li>ضعف في الرجلين أو خدر في منطقة السرج (سبب عصبي)</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Very large urine output after drainage (200 mL/hour or more for two hours) = possible post-obstructive diuresis, requiring monitoring of fluids and electrolytes</li><li>Blood or clots blocking the catheter</li><li>Fever and chills (urinary infection/sepsis)</li><li>Hypotension or fainting after drainage</li><li>No urine after catheterization (think of anuria)</li><li>Strong resistance or blood at the urethral opening</li><li>Leg weakness or numbness in the saddle area (neurological cause)</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>القسطرة مؤقتة وهدفها تفريغ المثانة، لازم تروح للمسالك تعرف السبب.</li><li>اشرب ماء كفاية (ما لم يمنعك الطبيب) وخلّي الكيس تحت مستوى المثانة ومتشدّش القسطرة.</li><li>نظافة المنطقة يومياً وغسل اليدين قبل لمس القسطرة.</li><li>ما تاخدش أدوية برد (مزيلات احتقان) أو مضادات حساسية من غير ما تسأل لو عندك تضخم بروستاتا.</li><li>متحبسش البول، وعالج الإمساك.</li><li>ارجع الطوارئ لو: حرارة، دم كتير، القسطرة اتسدت أو وقعت، ألم شديد.</li></ul>",
+   "en": "<ul><li>The catheter is temporary and its purpose is to empty the bladder; you must see urology to find the cause.</li><li>Drink enough water (unless the physician restricts it), keep the bag below bladder level, and do not pull on the catheter.</li><li>Clean the area daily and wash your hands before touching the catheter.</li><li>Do not take cold medicines (decongestants) or antihistamines without asking if you have an enlarged prostate.</li><li>Do not hold your urine, and treat constipation.</li><li>Return to the ER if: fever, a lot of blood, the catheter is blocked or falls out, severe pain.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "احتباس البول الحاد: أشهر طوارئ المسالك — ألم فوق العانة وعدم القدرة على التبول",
+   "السبب الأشهر عند الرجال كبار السن: تضخم البروستاتا",
+   "الاحتباس غير الأنوريا: لا ألم ولا انتفاخ في الأنوريا والكرياتينين عالي والقسطرة لا تنزل بول",
+   "العلاج: قسطرة فولي (18 للرجال، 16 للسيدات) فوراً",
+   "فرّغ بحذر وسجّل الحجم وراقب البول الكتير والنزيف",
+   "مقاومة؟ جرّب مقاس أصغر وإلا حوّل، والمريض لازم يتابع مع المسالك"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>احتباس البول الحاد (Acute urinary retention) هو عدم قدرة المريض فجأة على التبول رغم إن المثانة ممتلئة. يعتبر <b>أشهر طوارئ المسالك البولية</b>. الكلى شغالة والبول بيتصنع، لكنه محبوس في المثانة.</p><div class=\"cs-stats\"><div><b>فجأة</b><span>عدم القدرة على التبول</span></div><div><b>ألم</b><span>شديد فوق العانة</span></div><div><b>Foley</b><span>قسطرة الاختيار الأول في الطوارئ</span></div></div><h4>الصورة الكلاسيكية</h4><p>المريض بيقول «عايز أتبول ومش عارف». معاه ألم شديد فوق العانة (Suprapubic pain) وإحساس بانتفاخ.</p>[[slot:dis-300-retention-vs-anuria|الفرق بين احتباس البول وانقطاع البول — رسم توضيحي من إعداد الموقع|/diseases/img/dis-300-retention-vs-anuria.svg]]<div class=\"cs-box cs-warning\"><strong>ازاي تفرّق بين الاحتباس والانقطاع (Anuria)؟</strong><p>لازم تفرّق بين مريض الكلى عنده شغالة بس البول مش بينزل لسبب ما (احتباس)، وبين مريض مفيش بول بيتكوّن أصلاً بسبب قصور في الكلى (Anuria). في Anuria: لا ألم فوق العانة، لا وجع باللمس ولا انتفاخ ولا كتمة بالقرع، الكرياتينين غالباً عالي، ومفيش بول بينزل حتى بعد تركيب القسطرة. <b>أهم فرق عملي:</b> لما تركّب القسطرة، لو مالقيتش بول يجي = مش احتباس.</p></div>"
-    },
-    "causes": {
-      "ar": "<h4>أشهر الأسباب (حسب المرجع)</h4><ul><li><b>تضخم البروستاتا الحميد (BPH)</b> عند كبار السن من الرجال، وهو السبب الأشهر</li><li><b>حصوات المثانة أو مجرى البول (الإحليل)</b></li><li><b>احتباس ما بعد العمليات</b> (Post-operative retention)</li></ul><h4>أسباب إضافية لازم تعرفها</h4><ul><li>إمساك شديد وتكتل البراز</li><li>أدوية: مضادات الكولين (anticholinergics)، الأفيونات، مزيلات الاحتقان بالفم زي pseudoephedrine (موجودة في أدوية البرد المركبة)، بعض مضادات الهيستامين من الجيل الأول</li><li>ضيق في الإحليل (Stricture) أو التهاب البروستاتا أو الإحليل</li><li>جلطة دموية في المثانة</li><li>أسباب عصبية: إصابة النخاع الشوكي، متلازمة ذيل الحصان، السكر، الشلل</li><li>بعد الولادة، ألم شديد في المنطقة، أو انحباس القلفة (Paraphimosis)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأسباب الإضافية مأخوذة من المراجع (EAU / StatPearls) لأهميتها للتمريض في مراجعة قائمة أدوية المريض.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>الأعراض والعلامات</h4><ul><li>عدم القدرة على التبول فجأة</li><li>ألم شديد فوق العانة ورغبة ملحّة ومؤلمة</li><li>قلق وتقلب المريض</li></ul><h4>الفحص</h4><ul><li>انتفاخ فوق العانة (Suprapubic distension)</li><li>ألم عند اللمس فوق العانة (Suprapubic tenderness)</li><li>كتمة عند القرع فوق العانة (Dullness on percussion)</li></ul><p>المثانة الممتلئة بتتحس ككتلة ملساء مدورة فوق العانة.</p><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الاحتباس المزمن ممكن يكون <b>بدون ألم</b> (بول بيقطر منه المريض Overflow). مش كل احتباس مؤلم.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>فحص البطن (انتفاخ/كتمة فوق العانة) — تشخيص إكلينيكي في الأساس</li><li>سونار المثانة (Bladder scan) لقياس حجم البول المتبقي لو متاح</li><li>تحليل بول (عدوى، دم)</li><li>وظائف الكلى (كرياتينين، يوريا) وإلكتروليتات</li><li>سونار على الكلى والمسالك بعد تفريغ المثانة للبحث عن تمدد الحويضة (Hydronephrosis)</li><li>الكرياتينين العالي مع عدم وجود احتباس = فكّر في Anuria (قصور كلوي) لا في الاحتباس</li></ul><div class=\"cs-box cs-tip\"><strong>بعد التفريغ</strong><p>سجّل كمية البول اللي نزلت في أول 10–20 دقيقة، لأنها بتساعد الطبيب في توقع كمية البول بعد الانسداد (Post-obstructive diuresis).</p></div>"
-    },
-    "treatment": {
-      "ar": "<h4>العلاج في الطوارئ: تركيب قسطرة بولية فوراً (Urgent urethral catheterization)</h4><ul><li>المقاس الشائع: <b>18 Fr للرجال</b> و <b>16 Fr للسيدات</b></li><li><b>قسطرة فولي (Foley) هي المفضلة</b> لأنها بتتثبت ببالون وممكن تتساب. وده اللي المريض محتاجه لأنه لسه هيروح لطبيب المسالك يعرف السبب.</li></ul>[[slot:dis-300-catheter-types|أنواع القسطرة ومدة بقائها — رسم توضيحي من إعداد الموقع|/diseases/img/dis-300-catheter-types.svg]]<h4>الفرق بين أنواع القساطر</h4><table><thead><tr><th>النوع</th><th>الاستخدام ومدة البقاء (حسب المرجع)</th></tr></thead><tbody><tr><td>Nylaton (نيلاتون)</td><td>لغرض معين وتتشال على طول بعد التفريغ</td></tr><tr><td>Foley (فولي)</td><td>ممكن يفضل مكانه لحد أسبوع تقريباً (أرخص)</td></tr><tr><td>Silicone (سيليكون)</td><td>ممكن يفضل مكانه لحد شهر تقريباً (أغلى)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>مدة بقاء القسطرة بتتحدد من نوع الخامة وتعليمات المصنّع وبروتوكول المستشفى، وأقصر مدة لازمة أحسن لتقليل العدوى (CAUTI). السيليكون يناسب البقاء الأطول.</p></div><h4>نقاط مهمة في التفريغ</h4><ul><li><b>تجنّب التفريغ السريع جداً</b> لأنه قد يسبب نزيف في البول (Hematuria) بسبب انخفاض الضغط المفاجئ داخل المثانة. الطريقة العملية في المرجع: لما البول يبدأ ينزل اضغط على الأنبوبة بين صوابعك لثواني ثم اترك، وكرّر على فترات.</li><li>لو في مقاومة أثناء إدخال القسطرة: <b>جرّب مقاس أصغر</b>. لو مدخلتش بسهولة: حوّل الحالة للمستشفى/المسالك ولا تستخدم القوة.</li><li>بعد تركيب القسطرة لازم المريض يروح لطبيب المسالك يتابع معاه ويعرف السبب ويعالجه.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأدلة الحديثة بتقول إن التفريغ التدريجي (Clamping) مش بيمنع النزيف بشكل مؤكد، فمعظم البروتوكولات بتسمح بالتفريغ الكامل. المهم تراقب البول بعد التفريغ وتسجّل أول حجم.</p></div><h4>أدوية وإجراءات مكملة (قرار الطبيب)</h4><ul><li>علاج السبب: BPH (محصرات ألفا زي tamsulosin)، حصوة، عدوى، إيقاف دواء مسبب، علاج الإمساك</li><li>محاولة إزالة القسطرة بعد أيام (Trial without catheter) بعد بدء محصر ألفا</li><li>قسطرة فوق العانة (Suprapubic) لو القسطرة العادية مستحيلة أو في إصابة بالإحليل (يقرّرها الطبيب)</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p>اسأل عن آخر مرة تبول، الألم، الأدوية، الإمساك، العمليات الأخيرة. افحص فوق العانة (انتفاخ، ألم، كتمة) وقس العلامات الحيوية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>فرّق عن Anuria</strong><p>لو مفيش انتفاخ ولا ألم ولا كتمة والكرياتينين عالي = اشتبه في Anuria وبلّغ الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>جهّز العدة</strong><p>قسطرة فولي (18 للرجال و16 للسيدات) + مقاسات أصغر احتياطي، جل مخدر ومزلق معقم، محلول تطهير، قفازات معقمة، سرنجة بمياه معقمة للبالون، كيس تجميع، جهاز تثبيت.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اشرح وطمّن</strong><p>اشرح للمريض الإجراء، احمِ خصوصيته، وضع المريض مستلقي على ظهره.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>ركّب بتقنية معقمة</strong><p>نظّف المنطقة، افتح بالتحكم، ادخل برفق لحد ما يظهر البول وبعدها ادفع شوية، وبعدها انفخ البالون بعد تأكدك من خروج البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>فرّغ بحذر</strong><p>اترك البول ينزل ببطء، لو ينزل بسرعة: اضغط الأنبوبة لثواني ثم اترك. سجّل أول حجم ولون البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثبّت وسجّل</strong><p>ثبّت القسطرة على الفخذ، الكيس تحت مستوى المثانة، وسجّل المقاس والنوع وتاريخ التركيب وحجم البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>راقب</strong><p>العلامات الحيوية، لون البول (دم؟ جلطات؟)، كمية البول كل ساعة في أول ساعات (بول كتير جداً = Post-obstructive diuresis)، هبوط الضغط أو الدوخة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>حوّل</strong><p>وجّه المريض للمسالك بعد التركيب لمعرفة السبب.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>لا تركّب قسطرة بالقوة</strong><p>لو في دم عند فتحة الإحليل بعد إصابة في الحوض/الأعضاء، أو مقاومة شديدة: توقف وبلّغ الطبيب.</p></div><div class=\"cs-box cs-info\"><strong>خدمة الأمان</strong><p>نصيحة: الرجل كبير السن: بعد التركيب أعد القلفة لمكانها (Paraphimosis) لتجنب انحباسها.</p></div><div class=\"cs-box cs-tip\"><strong>العدوى</strong><p>نظام مغلق، غسل اليدين، كيس تحت مستوى المثانة، ولا تفصل الوصلات إلا للضرورة.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>بول كتير جداً بعد التفريغ (200 مل/ساعة أو أكتر لساعتين) = احتمال Post-obstructive diuresis ويحتاج متابعة السوائل والإلكتروليتات</li><li>دم أو جلطات تسد القسطرة</li><li>حرارة ورعشة (عدوى المسالك/إنتان)</li><li>هبوط ضغط أو إغماء بعد التفريغ</li><li>عدم نزول بول بعد القسطرة (فكّر في Anuria)</li><li>مقاومة شديدة أو دم عند فتحة الإحليل</li><li>ضعف في الرجلين أو خدر في منطقة السرج (سبب عصبي)</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>القسطرة مؤقتة وهدفها تفريغ المثانة، لازم تروح للمسالك تعرف السبب.</li><li>اشرب ماء كفاية (ما لم يمنعك الطبيب) وخلّي الكيس تحت مستوى المثانة ومتشدّش القسطرة.</li><li>نظافة المنطقة يومياً وغسل اليدين قبل لمس القسطرة.</li><li>ما تاخدش أدوية برد (مزيلات احتقان) أو مضادات حساسية من غير ما تسأل لو عندك تضخم بروستاتا.</li><li>متحبسش البول، وعالج الإمساك.</li><li>ارجع الطوارئ لو: حرارة، دم كتير، القسطرة اتسدت أو وقعت، ألم شديد.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "احتباس البول الحاد: أشهر طوارئ المسالك — ألم فوق العانة وعدم القدرة على التبول",
-      "السبب الأشهر عند الرجال كبار السن: تضخم البروستاتا",
-      "الاحتباس غير الأنوريا: لا ألم ولا انتفاخ في الأنوريا والكرياتينين عالي والقسطرة لا تنزل بول",
-      "العلاج: قسطرة فولي (18 للرجال، 16 للسيدات) فوراً",
-      "فرّغ بحذر وسجّل الحجم وراقب البول الكتير والنزيف",
-      "مقاومة؟ جرّب مقاس أصغر وإلا حوّل، والمريض لازم يتابع مع المسالك"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض رجل 70 سنة مش قادر يتبول ومعاه ألم شديد فوق العانة وانتفاخ. أنسب إجراء عاجل؟"
-      },
-      "options": [
-        {
-          "ar": "مسكن فموي وانتظار"
-        },
-        {
-          "ar": "تركيب قسطرة بولية فولي"
-        },
-        {
-          "ar": "محلول وريدي كبير"
-        },
-        {
-          "ar": "سونار بعد يوم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التفريغ بالقسطرة هو العلاج العاجل، والغالب سببها BPH."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم فرق عملي بين الاحتباس وانقطاع البول (Anuria)؟"
-      },
-      "options": [
-        {
-          "ar": "العمر"
-        },
-        {
-          "ar": "وجود ألم وانتفاخ فوق العانة ونزول بول بعد القسطرة"
-        },
-        {
-          "ar": "لون الجلد"
-        },
-        {
-          "ar": "الحرارة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "في الاحتباس تنزل كمية بول بعد القسطرة، في Anuria لا."
-      }
-    },
-    {
-      "q": {
-        "ar": "أنسب مقاس شائع للقسطرة؟"
-      },
-      "options": [
-        {
-          "ar": "10 للرجال و8 للسيدات"
-        },
-        {
-          "ar": "18 للرجال و16 للسيدات"
-        },
-        {
-          "ar": "24 للجميع"
-        },
-        {
-          "ar": "12 للجميع"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "المقاس الشائع 18 Fr للرجال و16 Fr للسيدات."
-      }
-    },
-    {
-      "q": {
-        "ar": "لو فيه مقاومة أثناء إدخال القسطرة؟"
-      },
-      "options": [
-        {
-          "ar": "زوّد القوة"
-        },
-        {
-          "ar": "جرّب مقاس أصغر ولو فشلت حوّل"
-        },
-        {
-          "ar": "اترك المريض"
-        },
-        {
-          "ar": "ركّب قسطرة أكبر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "ممنوع القوة: مقاس أصغر ثم تحويل."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض نزل منه بول كتير جداً ساعات بعد القسطرة. تفكر في؟"
-      },
-      "options": [
-        {
-          "ar": "Post-obstructive diuresis ويراقب السوائل والأملاح"
-        },
-        {
-          "ar": "حساسية"
-        },
-        {
-          "ar": "جفاف طبيعي"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "بول 200 مل/ساعة أو أكتر لساعتين يحتاج متابعة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "EAU Guidelines on Urological Infections / Non-neurogenic male LUTS (urinary retention)"
-    },
-    {
-      "title": "StatPearls: Acute Urinary Retention"
-    },
-    {
-      "title": "StatPearls: Postobstructive Diuresis"
-    },
-    {
-      "title": "LITFL: Post-obstructive diuresis"
-    }
+  "en": [
+   "Acute urinary retention: the most common urologic emergency — suprapubic pain and inability to urinate",
+   "The most common cause in older men: prostate enlargement",
+   "Retention is not anuria: in anuria there is no pain or distension, creatinine is high, and the catheter drains no urine",
+   "Treatment: a Foley catheter (18 for men, 16 for women) immediately",
+   "Drain carefully, record the volume, and monitor for large urine output and bleeding",
+   "Resistance? Try a smaller size, otherwise refer; the patient must follow up with urology"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض رجل 70 سنة مش قادر يتبول ومعاه ألم شديد فوق العانة وانتفاخ. أنسب إجراء عاجل؟",
+    "en": "A 70-year-old man cannot urinate and has severe suprapubic pain and distension. The most appropriate urgent action?"
+   },
+   "options": [
+    {
+     "ar": "مسكن فموي وانتظار",
+     "en": "An oral painkiller and waiting"
+    },
+    {
+     "ar": "تركيب قسطرة بولية فولي",
+     "en": "Inserting a Foley urinary catheter"
+    },
+    {
+     "ar": "محلول وريدي كبير",
+     "en": "A large IV fluid bolus"
+    },
+    {
+     "ar": "سونار بعد يوم",
+     "en": "Ultrasound after a day"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التفريغ بالقسطرة هو العلاج العاجل، والغالب سببها BPH.",
+    "en": "Catheter drainage is the urgent treatment, and the cause is most likely BPH."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم فرق عملي بين الاحتباس وانقطاع البول (Anuria)؟",
+    "en": "The most important practical difference between retention and anuria (Anuria)?"
+   },
+   "options": [
+    {
+     "ar": "العمر",
+     "en": "Age"
+    },
+    {
+     "ar": "وجود ألم وانتفاخ فوق العانة ونزول بول بعد القسطرة",
+     "en": "Presence of suprapubic pain and distension, and urine flow after catheterization"
+    },
+    {
+     "ar": "لون الجلد",
+     "en": "Skin color"
+    },
+    {
+     "ar": "الحرارة",
+     "en": "Temperature"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "في الاحتباس تنزل كمية بول بعد القسطرة، في Anuria لا.",
+    "en": "In retention, urine drains after catheterization; in anuria, it does not."
+   }
+  },
+  {
+   "q": {
+    "ar": "أنسب مقاس شائع للقسطرة؟",
+    "en": "The most suitable common catheter size?"
+   },
+   "options": [
+    {
+     "ar": "10 للرجال و8 للسيدات",
+     "en": "10 for men and 8 for women"
+    },
+    {
+     "ar": "18 للرجال و16 للسيدات",
+     "en": "18 for men and 16 for women"
+    },
+    {
+     "ar": "24 للجميع",
+     "en": "24 for everyone"
+    },
+    {
+     "ar": "12 للجميع",
+     "en": "12 for everyone"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "المقاس الشائع 18 Fr للرجال و16 Fr للسيدات.",
+    "en": "The common size is 18 Fr for men and 16 Fr for women."
+   }
+  },
+  {
+   "q": {
+    "ar": "لو فيه مقاومة أثناء إدخال القسطرة؟",
+    "en": "If there is resistance while inserting the catheter?"
+   },
+   "options": [
+    {
+     "ar": "زوّد القوة",
+     "en": "Use more force"
+    },
+    {
+     "ar": "جرّب مقاس أصغر ولو فشلت حوّل",
+     "en": "Try a smaller size, and if it fails, refer"
+    },
+    {
+     "ar": "اترك المريض",
+     "en": "Leave the patient"
+    },
+    {
+     "ar": "ركّب قسطرة أكبر",
+     "en": "Insert a larger catheter"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "ممنوع القوة: مقاس أصغر ثم تحويل.",
+    "en": "No force: a smaller size, then referral."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض نزل منه بول كتير جداً ساعات بعد القسطرة. تفكر في؟",
+    "en": "A patient passes a very large amount of urine in the hours after catheterization. You think of?"
+   },
+   "options": [
+    {
+     "ar": "Post-obstructive diuresis ويراقب السوائل والأملاح",
+     "en": "Post-obstructive diuresis, with monitoring of fluids and electrolytes"
+    },
+    {
+     "ar": "حساسية",
+     "en": "Allergy"
+    },
+    {
+     "ar": "جفاف طبيعي",
+     "en": "Normal dehydration"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "بول 200 مل/ساعة أو أكتر لساعتين يحتاج متابعة.",
+    "en": "Urine of 200 mL/hour or more for two hours needs monitoring."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "EAU Guidelines on Urological Infections / Non-neurogenic male LUTS (urinary retention)"
+  },
+  {
+   "title": "StatPearls: Acute Urinary Retention"
+  },
+  {
+   "title": "StatPearls: Postobstructive Diuresis"
+  },
+  {
+   "title": "LITFL: Post-obstructive diuresis"
+  }
+ ]
 }

@@ -1,155 +1,196 @@
 {
-  "id": "dis-3108",
-  "num": 3108,
-  "system": "other",
-  "icon": "🥶",
-  "level": 2,
-  "target": "er-reception",
-  "title": {
-    "ar": "انخفاض حرارة الجسم (Hypothermia): الأولويات والتدفئة",
-    "en": "Hypothermia"
+ "id": "dis-3108",
+ "num": 3108,
+ "system": "other",
+ "icon": "🥶",
+ "level": 2,
+ "target": "er-reception",
+ "title": {
+  "ar": "انخفاض حرارة الجسم (Hypothermia): الأولويات والتدفئة",
+  "en": "Hypothermia"
+ },
+ "teaser": {
+  "ar": "تعريف انخفاض الحرارة المركزية، لماذا يحدث الرجفان البطيني، العلامات، أولوية جهاز مراقبة القلب، وطرق التدفئة السلبية والفعالة.",
+  "en": "Definition of low core temperature, why ventricular fibrillation happens, the signs, the priority of the cardiac monitor, and passive and active rewarming methods."
+ },
+ "chips": [
+  {
+   "ar": "< 35°م",
+   "en": "< 35°C"
   },
-  "teaser": {
-    "ar": "تعريف انخفاض الحرارة المركزية، لماذا يحدث الرجفان البطيني، العلامات، أولوية جهاز مراقبة القلب، وطرق التدفئة السلبية والفعالة."
+  {
+   "ar": "VF",
+   "en": "VF"
   },
-  "chips": [
-    {
-      "ar": "< 35°م"
-    },
-    {
-      "ar": "VF"
-    },
-    {
-      "ar": "مراقبة القلب"
-    },
-    {
-      "ar": "التدفئة"
-    }
+  {
+   "ar": "مراقبة القلب",
+   "en": "Cardiac monitoring"
+  },
+  {
+   "ar": "التدفئة",
+   "en": "Rewarming"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>ينخفض الجسم إلى مرحلة «تجمد» تتعطل فيها الأعضاء ولا تستطيع تعويض فقدان الحرارة. عضلة القلب شديدة البرودة تصبح <strong>شديدة التهيج</strong> فتحدث اضطرابات قاتلة مثل الرجفان البطيني (VF).</p>\n<table><thead><tr><th>الدرجة (مرجع عام)</th><th>الحرارة المركزية التقريبية</th></tr></thead><tbody><tr><td>خفيفة</td><td>32–35°م</td></tr><tr><td>متوسطة</td><td>28–32°م</td></tr><tr><td>شديدة</td><td>أقل من 28°م</td></tr></tbody></table>\n[[slot:dis-3108-hypothermia|انخفاض الحرارة: الأولويات والتدفئة — رسم من إعداد الموقع|/diseases/img/dis-3108-hypothermia.svg]]",
+   "en": "<p>The body drops to a “freezing” stage in which organs fail and cannot make up for heat loss. Very cold heart muscle becomes <strong>highly irritable</strong>, so fatal dysrhythmias such as ventricular fibrillation (VF) occur.</p>\n<table><thead><tr><th>Grade (general reference)</th><th>Approximate core temperature</th></tr></thead><tbody><tr><td>Mild</td><td>32–35°C</td></tr><tr><td>Moderate</td><td>28–32°C</td></tr><tr><td>Severe</td><td>Below 28°C</td></tr></tbody></table>\n[[slot:dis-3108-hypothermia|Hypothermia: priorities and rewarming — illustration by the site|/diseases/img/dis-3108-hypothermia.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li>التعرض للبرد أو الماء البارد، خصوصًا مع الملابس المبللة.</li><li>كبار السن والرضع، التخدير، الكحول، قصور الغدة الدرقية، الإصابات.</li></ul>",
+   "en": "<ul><li>Exposure to cold or cold water, especially with wet clothes.</li><li>Older adults and infants, anesthesia, alcohol, hypothyroidism, injuries.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li><strong>القلب:</strong> نبض ضعيف خيطي من ضعف عضل القلب البارد.</li><li><strong>الرئتان:</strong> أزيز يدل على تشنج قصبي، وخراخر بقاعدة الرئتين تدل على وذمة رئوية.</li><li>برودة شديدة للجلد وبطء وظائف الأعضاء.</li></ul>",
+   "en": "<ul><li><strong>Heart:</strong> weak, thready pulse from weak, cold heart muscle.</li><li><strong>Lungs:</strong> wheezing indicates bronchospasm, and crackles at the lung bases indicate pulmonary edema.</li><li>Very cold skin and slowed organ function.</li></ul>"
+  },
+  "tests": {
+   "ar": "<p>قياس الحرارة المركزية بميزان حرارة مناسب للمدى المنخفض، تخطيط قلب مستمر (قد يظهر بطء أو VF)، غازات الدم، السكر والأملاح.</p>",
+   "en": "<p>Core temperature measured with a thermometer suited to the low range, continuous ECG (may show bradycardia or VF), blood gases, glucose, and electrolytes.</p>"
+  },
+  "treatment": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>A-B-C أولًا</strong><p>المجرى الهوائي: توقع التهوية الميكانيكية. الدورة: صل جهاز مراقبة القلب وتوقع إزالة الرجفان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>إزالة العامل</strong><p>انقل المريض من البرد، انزع الملابس المبللة، غطِّ بطانيات دافئة جافة (الرأس والجذع)، مصادر حرارة خارجية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>تدفئة داخلية فعالة</strong><p>سوائل وريدية دافئة عبر خطين وريديين كبيرين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مراقبة</strong><p>تخطيط، علامات حيوية، حرارة مركزية متكررة، مستوى الوعي.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات والأرقام للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>A-B-C first</strong><p>Airway: anticipate mechanical ventilation. Circulation: attach the cardiac monitor and anticipate defibrillation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Remove the cause</strong><p>Move the patient out of the cold, remove wet clothes, cover with warm dry blankets (head and trunk), external heat sources.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Active internal rewarming</strong><p>Warm IV fluids through two large-bore IV lines.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Monitoring</strong><p>ECG, vital signs, repeated core temperature, level of consciousness.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Alert</strong><p>Doses and numbers are for learning only; always verify with the physician/pharmacist before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ul><li><strong>الأولوية (NCLEX):</strong> 1) صل جهاز مراقبة القلب 2) توقع إزالة الرجفان.</li><li>تعامل مع المريض بلطف: الحركة العنيفة قد تحفز VF.</li><li>راقب الحرارة والعلامات الحيوية ومستوى الوعي والبول.</li><li>أدفئ الجذع قبل الأطراف لتجنب عودة الدم البارد للقلب.</li></ul>",
+   "en": "<ul><li><strong>Priority (NCLEX):</strong> 1) attach the cardiac monitor 2) anticipate defibrillation.</li><li>Handle the patient gently: rough movement can trigger VF.</li><li>Monitor temperature, vital signs, level of consciousness, and urine.</li><li>Warm the trunk before the limbs to avoid cold blood returning to the heart.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>VF أو بطء شديد أو انعدام النبض: ابدأ الإنعاش وإزالة الرجفان (راجع <a href=\"/diseases/dis-3107\">الإنعاش الأساسي</a>).</li><li>صعوبة تنفس مع خراخر: وذمة رئة.</li><li>تغير الوعي.</li></ul>",
+   "en": "<ul><li>VF, severe bradycardia, or pulselessness: start resuscitation and defibrillation (see <a href=\"/diseases/dis-3107\">basic life support</a>).</li><li>Difficulty breathing with crackles: pulmonary edema.</li><li>Change in consciousness.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>الملابس الدافئة والجافة طبقات، تجنب البلل، تجنب الكحول في البرد.</li><li>كبار السن: تدفئة المنزل ليلًا.</li></ul>",
+   "en": "<ul><li>Warm, dry clothes in layers, avoid getting wet, avoid alcohol in the cold.</li><li>Older adults: keep the home warm at night.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الحرارة المركزية أقل من 35°م (95°ف)",
+   "تهيج عضل القلب البارد → رجفان بطيني (VF)",
+   "الأولوية: مراقب القلب وتوقع إزالة الرجفان",
+   "A-B-C أولًا؛ توقع التهوية الميكانيكية",
+   "التدفئة: سلبية ثم داخلية فعالة (سوائل دافئة، بطانيات للجذع والرأس)",
+   "تعامل مع المريض برفق"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>ينخفض الجسم إلى مرحلة «تجمد» تتعطل فيها الأعضاء ولا تستطيع تعويض فقدان الحرارة. عضلة القلب شديدة البرودة تصبح <strong>شديدة التهيج</strong> فتحدث اضطرابات قاتلة مثل الرجفان البطيني (VF).</p>\n<table><thead><tr><th>الدرجة (مرجع عام)</th><th>الحرارة المركزية التقريبية</th></tr></thead><tbody><tr><td>خفيفة</td><td>32–35°م</td></tr><tr><td>متوسطة</td><td>28–32°م</td></tr><tr><td>شديدة</td><td>أقل من 28°م</td></tr></tbody></table>\n[[slot:dis-3108-hypothermia|انخفاض الحرارة: الأولويات والتدفئة — رسم من إعداد الموقع|/diseases/img/dis-3108-hypothermia.svg]]"
-    },
-    "causes": {
-      "ar": "<ul><li>التعرض للبرد أو الماء البارد، خصوصًا مع الملابس المبللة.</li><li>كبار السن والرضع، التخدير، الكحول، قصور الغدة الدرقية، الإصابات.</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li><strong>القلب:</strong> نبض ضعيف خيطي من ضعف عضل القلب البارد.</li><li><strong>الرئتان:</strong> أزيز يدل على تشنج قصبي، وخراخر بقاعدة الرئتين تدل على وذمة رئوية.</li><li>برودة شديدة للجلد وبطء وظائف الأعضاء.</li></ul>"
-    },
-    "tests": {
-      "ar": "<p>قياس الحرارة المركزية بميزان حرارة مناسب للمدى المنخفض، تخطيط قلب مستمر (قد يظهر بطء أو VF)، غازات الدم، السكر والأملاح.</p>"
-    },
-    "treatment": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>A-B-C أولًا</strong><p>المجرى الهوائي: توقع التهوية الميكانيكية. الدورة: صل جهاز مراقبة القلب وتوقع إزالة الرجفان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>إزالة العامل</strong><p>انقل المريض من البرد، انزع الملابس المبللة، غطِّ بطانيات دافئة جافة (الرأس والجذع)، مصادر حرارة خارجية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>تدفئة داخلية فعالة</strong><p>سوائل وريدية دافئة عبر خطين وريديين كبيرين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مراقبة</strong><p>تخطيط، علامات حيوية، حرارة مركزية متكررة، مستوى الوعي.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات والأرقام للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ul><li><strong>الأولوية (NCLEX):</strong> 1) صل جهاز مراقبة القلب 2) توقع إزالة الرجفان.</li><li>تعامل مع المريض بلطف: الحركة العنيفة قد تحفز VF.</li><li>راقب الحرارة والعلامات الحيوية ومستوى الوعي والبول.</li><li>أدفئ الجذع قبل الأطراف لتجنب عودة الدم البارد للقلب.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>VF أو بطء شديد أو انعدام النبض: ابدأ الإنعاش وإزالة الرجفان (راجع <a href=\"/diseases/dis-3107\">الإنعاش الأساسي</a>).</li><li>صعوبة تنفس مع خراخر: وذمة رئة.</li><li>تغير الوعي.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>الملابس الدافئة والجافة طبقات، تجنب البلل، تجنب الكحول في البرد.</li><li>كبار السن: تدفئة المنزل ليلًا.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الحرارة المركزية أقل من 35°م (95°ف)",
-      "تهيج عضل القلب البارد → رجفان بطيني (VF)",
-      "الأولوية: مراقب القلب وتوقع إزالة الرجفان",
-      "A-B-C أولًا؛ توقع التهوية الميكانيكية",
-      "التدفئة: سلبية ثم داخلية فعالة (سوائل دافئة، بطانيات للجذع والرأس)",
-      "تعامل مع المريض برفق"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول إجراء أولوية لمريض انخفاض حرارة شديد؟"
-      },
-      "options": [
-        {
-          "ar": "توصيل جهاز مراقبة القلب"
-        },
-        {
-          "ar": "وضع كمادات ساخنة على الأطراف"
-        },
-        {
-          "ar": "تدليك الأطراف"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الخطر الأكبر اضطراب نظم قاتل (VF)، فنراقب القلب ونتوقع إزالة الرجفان."
-      }
-    },
-    {
-      "q": {
-        "ar": "الحرارة المركزية التي تعرّف انخفاض الحرارة:"
-      },
-      "options": [
-        {
-          "ar": "أقل من 35°م (95°ف)"
-        },
-        {
-          "ar": "أقل من 37°م"
-        },
-        {
-          "ar": "أقل من 30°م فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تعريف الانخفاض أقل من 35°م."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة قاعدة الرئتين الدالة على وذمة رئة في هذه الحالة:"
-      },
-      "options": [
-        {
-          "ar": "خراخر (Crackles)"
-        },
-        {
-          "ar": "صفير حاد علوي"
-        },
-        {
-          "ar": "احتكاك جنبي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تراكم السوائل ينتج خراخر عند القواعد."
-      }
-    },
-    {
-      "q": {
-        "ar": "من أساليب التدفئة الفعالة الداخلية:"
-      },
-      "options": [
-        {
-          "ar": "سوائل وريدية دافئة عبر خطين كبيرين"
-        },
-        {
-          "ar": "حمام ماء ساخن جدًا"
-        },
-        {
-          "ar": "كمادة ساخنة على الساق"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تدفئة الدم من الداخل بالسوائل الدافئة أكثر أمانًا وفعالية."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AHA/ERC — Accidental hypothermia guidance"
-    },
-    {
-      "title": "Wilderness Medical Society — Hypothermia practice guideline"
-    }
+  "en": [
+   "Core temperature below 35°C (95°F)",
+   "Irritable cold heart muscle → ventricular fibrillation (VF)",
+   "Priority: cardiac monitor and anticipate defibrillation",
+   "A-B-C first; anticipate mechanical ventilation",
+   "Rewarming: passive, then active internal (warm fluids, blankets for the trunk and head)",
+   "Handle the patient gently"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول إجراء أولوية لمريض انخفاض حرارة شديد؟",
+    "en": "First priority action for a patient with severe hypothermia?"
+   },
+   "options": [
+    {
+     "ar": "توصيل جهاز مراقبة القلب",
+     "en": "Attach the cardiac monitor"
+    },
+    {
+     "ar": "وضع كمادات ساخنة على الأطراف",
+     "en": "Apply hot packs to the limbs"
+    },
+    {
+     "ar": "تدليك الأطراف",
+     "en": "Massage the limbs"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الخطر الأكبر اضطراب نظم قاتل (VF)، فنراقب القلب ونتوقع إزالة الرجفان.",
+    "en": "The biggest danger is a fatal dysrhythmia (VF), so we monitor the heart and anticipate defibrillation."
+   }
+  },
+  {
+   "q": {
+    "ar": "الحرارة المركزية التي تعرّف انخفاض الحرارة:",
+    "en": "The core temperature that defines hypothermia:"
+   },
+   "options": [
+    {
+     "ar": "أقل من 35°م (95°ف)",
+     "en": "Below 35°C (95°F)"
+    },
+    {
+     "ar": "أقل من 37°م",
+     "en": "Below 37°C"
+    },
+    {
+     "ar": "أقل من 30°م فقط",
+     "en": "Only below 30°C"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تعريف الانخفاض أقل من 35°م.",
+    "en": "Hypothermia is defined as below 35°C."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة قاعدة الرئتين الدالة على وذمة رئة في هذه الحالة:",
+    "en": "The lung-base sign indicating pulmonary edema in this case:"
+   },
+   "options": [
+    {
+     "ar": "خراخر (Crackles)",
+     "en": "Crackles"
+    },
+    {
+     "ar": "صفير حاد علوي",
+     "en": "High-pitched upper wheeze"
+    },
+    {
+     "ar": "احتكاك جنبي",
+     "en": "Pleural friction rub"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تراكم السوائل ينتج خراخر عند القواعد.",
+    "en": "Fluid buildup produces crackles at the bases."
+   }
+  },
+  {
+   "q": {
+    "ar": "من أساليب التدفئة الفعالة الداخلية:",
+    "en": "An active internal rewarming method:"
+   },
+   "options": [
+    {
+     "ar": "سوائل وريدية دافئة عبر خطين كبيرين",
+     "en": "Warm IV fluids through two large-bore lines"
+    },
+    {
+     "ar": "حمام ماء ساخن جدًا",
+     "en": "A very hot water bath"
+    },
+    {
+     "ar": "كمادة ساخنة على الساق",
+     "en": "A hot pack on the leg"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تدفئة الدم من الداخل بالسوائل الدافئة أكثر أمانًا وفعالية.",
+    "en": "Warming the blood from inside with warm fluids is safer and more effective."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AHA/ERC — Accidental hypothermia guidance"
+  },
+  {
+   "title": "Wilderness Medical Society — Hypothermia practice guideline"
+  }
+ ]
 }

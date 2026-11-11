@@ -1,231 +1,277 @@
 {
-  "id": "dis-343",
-  "num": 343,
-  "system": "endo",
-  "icon": "🦶",
-  "level": 2,
-  "target": "new:surgical-dressings|الغيارات الجراحية",
-  "title": {
-    "ar": "غيار جرح القدم السكري",
-    "en": "Diabetic Foot Dressing"
+ "id": "dis-343",
+ "num": 343,
+ "system": "endo",
+ "icon": "🦶",
+ "level": 2,
+ "target": "new:surgical-dressings|الغيارات الجراحية",
+ "title": {
+  "ar": "غيار جرح القدم السكري",
+  "en": "Diabetic Foot Dressing"
+ },
+ "teaser": {
+  "ar": "خطوات الغيار، رعاية القدم في البيت، المضاد الحيوي وحقن B12 بالأسماء التجارية وتحذيرات كل نوع.",
+  "en": "Dressing steps, home foot care, the antibiotic, and B12 injections by brand name with the warnings for each type."
+ },
+ "chips": [
+  {
+   "ar": "غيار",
+   "en": "Dressing"
   },
-  "teaser": {
-    "ar": "خطوات الغيار، رعاية القدم في البيت، المضاد الحيوي وحقن B12 بالأسماء التجارية وتحذيرات كل نوع."
+  {
+   "ar": "فحص القدم",
+   "en": "Foot exam"
   },
-  "chips": [
-    {
-      "ar": "غيار"
-    },
-    {
-      "ar": "فحص القدم"
-    },
-    {
-      "ar": "فيتامين B12"
-    }
+  {
+   "ar": "فيتامين B12",
+   "en": "Vitamin B12"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>غيار الجرح في القدم السكري إجراء تمريضي مهم، لكن الأهم منه <b>ضبط السكر</b>. لازم تخوّف المريض: طول ما السكر مش منتظم هتفضل رجله تتعور ويجيلها قرح والجروح مش هتلم.</p>[[slot:dis-343-dressing|خطوات غيار القدم السكري وفحص القدم — رسم من إعداد الموقع|/diseases/img/dis-343-dressing.svg]][[slot:dis-343-photo|صورة: غيار على قرحة قدم سكري — تُرفع لاحقاً]]",
+   "en": "<p>Dressing a diabetic foot wound is an important nursing procedure, but even more important is <b>glucose control</b>. Make the patient understand the risk: as long as glucose is uncontrolled, the foot will keep getting injured, ulcers will form, and wounds will not heal.</p>[[slot:dis-343-dressing|Diabetic foot dressing steps and foot exam — illustration prepared by the site|/diseases/img/dis-343-dressing.svg]][[slot:dis-343-photo|Image: dressing on a diabetic foot ulcer — to be uploaded later]]"
+  },
+  "causes": {
+   "ar": "<p>اعتلال الأعصاب (فقدان الإحساس) + ضعف الدورة الدموية + ضغط الحذاء + ضعف المناعة بالسكر المرتفع = جرح لا يلتئم بسهولة وقابل للعدوى.</p>",
+   "en": "<p>Neuropathy (loss of sensation) + poor circulation + shoe pressure + weakened immunity from high glucose = a wound that does not heal easily and is prone to infection.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li>جرح أو قرحة في القدم، خصوصاً الكعب وبين الأصابع وتحت المشط</li><li>أنسجة ميتة (سوداء أو صفراء)</li><li>احمرار وتورم وسخونة وصديد ورائحة (عدوى)</li><li>تنميل وفقدان إحساس</li></ul><table><thead><tr><th>درجة Wagner</th><th>الوصف</th></tr></thead><tbody><tr><td>0</td><td>قدم معرضة بدون جرح</td></tr><tr><td>1</td><td>قرحة سطحية</td></tr><tr><td>2</td><td>قرحة عميقة إلى وتر/عظم بدون خراج</td></tr><tr><td>3</td><td>قرحة عميقة مع خراج أو التهاب عظم</td></tr><tr><td>4</td><td>غرغرينا جزء من القدم</td></tr><tr><td>5</td><td>غرغرينا كل القدم</td></tr></tbody></table>",
+   "en": "<ul><li>A wound or ulcer on the foot, especially the heel, between the toes, and under the ball of the foot</li><li>Dead tissue (black or yellow)</li><li>Redness, swelling, warmth, pus, and odor (infection)</li><li>Numbness and loss of sensation</li></ul><table><thead><tr><th>Wagner grade</th><th>Description</th></tr></thead><tbody><tr><td>0</td><td>At-risk foot with no wound</td></tr><tr><td>1</td><td>Superficial ulcer</td></tr><tr><td>2</td><td>Deep ulcer to tendon/bone without abscess</td></tr><tr><td>3</td><td>Deep ulcer with abscess or osteomyelitis</td></tr><tr><td>4</td><td>Gangrene of part of the foot</td></tr><tr><td>5</td><td>Gangrene of the whole foot</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<p>سكر صائم وتراكمي، فحص النبض (ظهر القدم والخلفي الظنبوبي)، اختبار الإحساس (مونوفيلامنت)، مسحة/مزرعة من القاع بعد التنظيف، أشعة سينية للقدم لو شك التهاب عظم (probe-to-bone)، وصورة دم وCRP عند العدوى.</p>",
+   "en": "<p>Fasting glucose and HbA1c, pulse check (dorsalis pedis and posterior tibial), sensation test (monofilament), swab/culture from the wound base after cleaning, foot X-ray if osteomyelitis is suspected (probe-to-bone), and CBC and CRP with infection.</p>"
+  },
+  "treatment": {
+   "ar": "<h4>الغيار في العيادة (Outpatient)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>نظّف الجرح جيداً</strong><p>بمحلول ملح ثم بيتادين (Betadine) ثم محلول ملح، مع إزالة أي أنسجة ميتة وتنشيف جيد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>رش المستحضرات</strong><p>Healosol spray + Bivatracin spray (مضاد حيوي موضعي يحتوي Bacitracin + مُحسّن لتئام الجرح). تُرش بعد إزالة الأنسجة، وهيشتريهم المريض ويغير بهم بعد كده.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>غطّي الجرح</strong><p>بشاش فازلين (Sofratulle/Dermatol) ثم شاش عادي ثم لاصق (بلاستر).</p></div></div></div><h4>المتابعة في البيت</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>غسيل القدمين يومياً</strong><p>قبل النوم مع تجفيف كويس خصوصاً بين الأصابع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>فحص يومي</strong><p>بين الأصابع والكعب (مرآة أو مساعد).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>دهان فازلين يومياً</strong><p>على القدمين بعد الغسيل والتنشيف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>ممنوعات</strong><p>أحذية ضيقة (واخلع الحذاء لو لبسته أكتر من 6 ساعات لراحة القدم)، والمشي حافياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأظافر</strong><p>ممنوع القص دائرياً؛ تكون أطرافها مستقيمة، ويفضل استخدام المقص (حسب المراجع) والمواظبة على القص بانتظام.</p></div></div></div><h4>مضاد حيوي</h4><p><b>Hibiotic 1 gm tab</b> (Amoxicillin + Clavulanic acid): قرص كل 12 ساعة لمدة 5 أيام (حسب المراجع).</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الدولية (IWGDF) تقول: المضاد الحيوي لعدوى القدم السكري يُعطى حسب الشدة، وغالباً أسبوع إلى أسبوعين للعدوى الخفيفة-المتوسطة، وللحالات الأشد أطول وبعد مزرعة. مدة الـ 5 أيام للحالات البسيطة. أي علامة عدوى متقدمة (ذات رائحة، انتشار احمرار، حمى) = تحويل فوري. الجرح السكري يحتاج كمان تخفيف الضغط (Offloading) وتقييم الدورة الدموية.</p></div><h4>أمثلة الغيار اليومي</h4><ul><li>Bivatracin spray + Healosol spray: غيار على الجرح صباحاً ومساءً بالبخاخين ثم السوفراتول ثم شاش وبلاستر، ويُغيّر عليها مرة واحدة يومياً (لو العيان على قدها هتقولوله يجيلك).</li><li>Iruxol cream: لو لسه في نسيج ميت يحتاج يتشال، يكتب الكريم يغيّر بيه صباحاً ومساءً حتى تتم إزالة كل الأنسجة الميتة ثم يكمل بالبخاخ.</li></ul><h4>حقن فيتامين B12 (للأعصاب)</h4><table><thead><tr><th>الاسم</th><th>العبوة</th><th>الجرعة حسب المراجع</th></tr></thead><tbody><tr><td>Betolvex amp</td><td>2 amp</td><td>حقنة عضل مرة أسبوعياً لمدة شهر ثم مرة كل 3 شهور</td></tr><tr><td>Depovit B12 amp</td><td>2 amp</td><td>حقنة عضل يوم بعد يوم لمدة أسبوع أو أسبوعين، ثم مرة كل 1–3 شهور</td></tr><tr><td>B-com amp</td><td>3 amp</td><td>حقنة عضل مرتين أسبوعياً حتى التحسن ثم مرة كل 1–3 شهور</td></tr><tr><td>Tri-B amp</td><td>6 amp</td><td>نفس الجدول</td></tr><tr><td>Becozyme amp</td><td>12 amp</td><td>نفس الجدول</td></tr><tr><td>Neurorubine amp</td><td>3 amp</td><td>نفس الجدول</td></tr><tr><td>Neurobion amp</td><td>3 amp</td><td>نفس الجدول</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>ملاحظات خاصة بأنواع الحقن</strong><ul><li><b>Betolvex</b>: ألمه أقل من باقي الأنواع وتأثيره أضعف، لكن غالي شوية.</li><li><b>Neurorubine</b>: أفضل وأرخص حاجة (1 مل). آمن في الحمل والرضاعة وآمن في الأطفال أقل من 5 سنين (حسب المراجع).</li><li><b>Depovit B12 وNeurobion</b>: ممنوع في الأطفال أقل من 5 سنين والحمل والرضاعة (حسب المراجع).</li><li><b>Becozyme وB-com</b>: الوحيدين في الأدوية دي اللي ممكن يتعطوا عن طريق محلول وريدي.</li></ul><p>راجع نشرة كل صنف قبل الإعطاء.</p></div><p><b>Deltavit tab</b> فيتامين B12 تحت اللسان: قرص واحد يومياً تحت اللسان.</p>[[slot:dis-343-drugs|صور عبوات: Bivatracin و Healosol و Iruxol — تُرفع لاحقاً]]",
+   "en": "<h4>Dressing in the clinic (outpatient)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Clean the wound well</strong><p>With saline, then Betadine, then saline, removing any dead tissue and drying well.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Spray the products</strong><p>Healosol spray + Bivatracin spray (a topical antibiotic containing Bacitracin + a wound-healing enhancer). Spray after removing the tissue; the patient will buy them and use them for later dressings.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Cover the wound</strong><p>With petrolatum gauze (Sofratulle/Dermatol), then plain gauze, then adhesive tape.</p></div></div></div><h4>Follow-up at home</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Wash the feet daily</strong><p>Before bed, drying well, especially between the toes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Daily inspection</strong><p>Between the toes and the heel (mirror or a helper).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Apply petroleum jelly daily</strong><p>To the feet after washing and drying.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Don'ts</strong><p>Tight shoes (and take shoes off after wearing them more than 6 hours to rest the feet), and walking barefoot.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Nails</strong><p>Do not cut them rounded; keep the edges straight, preferably use scissors, and trim regularly.</p></div></div></div><h4>Antibiotic</h4><p><b>Hibiotic 1 gm tab</b> (Amoxicillin + Clavulanic acid): one tablet every 12 hours for 5 days.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><p>International guidelines (IWGDF) state: antibiotics for diabetic foot infection are given according to severity, usually one to two weeks for mild-to-moderate infection, and longer for more severe cases and after culture. The 5-day course is for simple cases. Any sign of advanced infection (foul odor, spreading redness, fever) = immediate referral. A diabetic wound also needs offloading and circulation assessment.</p></div><h4>Daily dressing examples</h4><ul><li>Bivatracin spray + Healosol spray: dress the wound morning and evening with the two sprays, then Sofratulle, then gauze and tape, and change it once daily (if the patient can manage, tell them to come to you).</li><li>Iruxol cream: if there is still dead tissue that needs removal, the cream is prescribed for dressing morning and evening until all dead tissue is removed, then continue with the spray.</li></ul><h4>Vitamin B12 injections (for the nerves)</h4><table><thead><tr><th>Name</th><th>Pack</th><th>Listed dose</th></tr></thead><tbody><tr><td>Betolvex amp</td><td>2 amp</td><td>IM injection once weekly for a month, then once every 3 months</td></tr><tr><td>Depovit B12 amp</td><td>2 amp</td><td>IM injection every other day for one or two weeks, then once every 1–3 months</td></tr><tr><td>B-com amp</td><td>3 amp</td><td>IM injection twice weekly until improvement, then once every 1–3 months</td></tr><tr><td>Tri-B amp</td><td>6 amp</td><td>Same schedule</td></tr><tr><td>Becozyme amp</td><td>12 amp</td><td>Same schedule</td></tr><tr><td>Neurorubine amp</td><td>3 amp</td><td>Same schedule</td></tr><tr><td>Neurobion amp</td><td>3 amp</td><td>Same schedule</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Notes on the injection types</strong><ul><li><b>Betolvex</b>: less painful than the other types and weaker in effect, but somewhat expensive.</li><li><b>Neurorubine</b>: the best and cheapest option (1 mL). Safe in pregnancy and breastfeeding and safe in children under 5 years.</li><li><b>Depovit B12 and Neurobion</b>: contraindicated in children under 5 years, pregnancy, and breastfeeding.</li><li><b>Becozyme and B-com</b>: the only ones among these drugs that can be given in an IV infusion.</li></ul><p>Check each product's package insert before administration.</p></div><p><b>Deltavit tab</b> sublingual vitamin B12: one tablet daily under the tongue.</p>[[slot:dis-343-drugs|Package images: Bivatracin, Healosol, and Iruxol — to be uploaded later]]"
+  },
+  "nursing": {
+   "ar": "<p>دورك:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>جهّز</strong><p>غسل أيدي، قفازات نظيفة/معقمة، محلول ملح، بيتادين، سبراي، شاش فازلين، شاش، لاصق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اسأل ولاحظ</strong><p>آخر سكر، ألم، حرارة، رائحة، صديد، تورم، لون الجلد، نبض القدم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>نظّف</strong><p>ملح ثم بيتادين ثم ملح، من الأنظف للأقذر، وأزل الأنسجة الميتة (إزالة الجراحي بمعرفة الطبيب).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>ضمّد</strong><p>رش، ثم فازلين، شاش، لاصق بدون ضغط على الجرح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>وثّق</strong><p>حجم الجرح (طول × عرض × عمق)، لون، إفراز، رائحة، صورة، ووقت الغيار التالي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ثقّف</strong><p>فحص ورعاية القدم والسكر والحذاء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>بلّغ</strong><p>أي توسع احمرار، حرارة، حمى، سكر مرتفع جداً.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>إعطاء B12</strong><p>حقن عضل عميقة، بدّل الأماكن، واسأل عن الحمل والعمر قبل الصنف. الوريدي فقط للأنواع المسموحة بالمحلول.</p></div>",
+   "en": "<p>Your role:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Prepare</strong><p>Hand washing, clean/sterile gloves, saline, Betadine, spray, petrolatum gauze, gauze, tape.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Ask and observe</strong><p>Latest glucose, pain, warmth, odor, pus, swelling, skin color, foot pulses.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Clean</strong><p>Saline, then Betadine, then saline, from cleanest to dirtiest, and remove dead tissue (surgical debridement by the physician).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Dress</strong><p>Spray, then petrolatum gauze, gauze, and tape without pressure on the wound.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Document</strong><p>Wound size (length × width × depth), color, drainage, odor, photo, and time of the next dressing.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Educate</strong><p>Foot inspection and care, glucose, and footwear.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Report</strong><p>Any spreading redness, warmth, fever, very high glucose.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>Giving B12</strong><p>Deep IM injections, rotate sites, and ask about pregnancy and age before choosing the product. IV only for the types approved for infusion.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>انتشار احمرار، حرارة، صديد، رائحة</li><li>حمى أو سكر مرتفع جداً</li><li>أنسجة سوداء (غرغرينا) أو قدم باردة شاحبة</li><li>جرح بدون تحسن بعد أسبوعين</li><li>ألم شديد مع تورم (التهاب عظم أو خراج)</li></ul>",
+   "en": "<ul><li>Spreading redness, warmth, pus, odor</li><li>Fever or very high glucose</li><li>Black tissue (gangrene) or a cold, pale foot</li><li>A wound with no improvement after two weeks</li><li>Severe pain with swelling (osteomyelitis or abscess)</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>أهم علاج: ضبط السكر.</li><li>اغسل رجليك كل يوم وجفّفهم خصوصاً بين الصوابع، وافحصهم كل يوم.</li><li>دهّن الفازلين بعد الغسيل.</li><li>ممنوع الحذاء الضيق والمشي حافي، واخلع الحذاء بعد 6 ساعات.</li><li>قص الأظافر مستقيم، ولا تقطع الجلد القاسي بنفسك.</li><li>التزم بالمضاد وبالغيار.</li></ul>",
+   "en": "<ul><li>The most important treatment: glucose control.</li><li>Wash your feet every day and dry them, especially between the toes, and inspect them every day.</li><li>Apply petroleum jelly after washing.</li><li>No tight shoes and no walking barefoot, and take your shoes off after 6 hours.</li><li>Cut nails straight across, and do not cut hard skin yourself.</li><li>Stick to the antibiotic and the dressings.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "ضبط السكر أهم علاج",
+   "تنظيف: ملح ثم بيتادين ثم ملح",
+   "Bivatracin + Healosol ثم Sofratulle وشاش وبلاستر",
+   "غسل وفحص القدمين يومياً وفازلين",
+   "لا حذاء ضيق ولا مشي حافي ولا قص دائري",
+   "Hibiotic 1 gm كل 12 ساعة 5 أيام",
+   "حقن B12 بأنواعها وتحذيرات الأطفال/الحمل"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>غيار الجرح في القدم السكري إجراء تمريضي مهم، لكن الأهم منه <b>ضبط السكر</b>. لازم تخوّف المريض: طول ما السكر مش منتظم هتفضل رجله تتعور ويجيلها قرح والجروح مش هتلم.</p>[[slot:dis-343-dressing|خطوات غيار القدم السكري وفحص القدم — رسم من إعداد الموقع|/diseases/img/dis-343-dressing.svg]][[slot:dis-343-photo|صورة: غيار على قرحة قدم سكري — تُرفع لاحقاً]]"
-    },
-    "causes": {
-      "ar": "<p>اعتلال الأعصاب (فقدان الإحساس) + ضعف الدورة الدموية + ضغط الحذاء + ضعف المناعة بالسكر المرتفع = جرح لا يلتئم بسهولة وقابل للعدوى.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li>جرح أو قرحة في القدم، خصوصاً الكعب وبين الأصابع وتحت المشط</li><li>أنسجة ميتة (سوداء أو صفراء)</li><li>احمرار وتورم وسخونة وصديد ورائحة (عدوى)</li><li>تنميل وفقدان إحساس</li></ul><table><thead><tr><th>درجة Wagner</th><th>الوصف</th></tr></thead><tbody><tr><td>0</td><td>قدم معرضة بدون جرح</td></tr><tr><td>1</td><td>قرحة سطحية</td></tr><tr><td>2</td><td>قرحة عميقة إلى وتر/عظم بدون خراج</td></tr><tr><td>3</td><td>قرحة عميقة مع خراج أو التهاب عظم</td></tr><tr><td>4</td><td>غرغرينا جزء من القدم</td></tr><tr><td>5</td><td>غرغرينا كل القدم</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<p>سكر صائم وتراكمي، فحص النبض (ظهر القدم والخلفي الظنبوبي)، اختبار الإحساس (مونوفيلامنت)، مسحة/مزرعة من القاع بعد التنظيف، أشعة سينية للقدم لو شك التهاب عظم (probe-to-bone)، وصورة دم وCRP عند العدوى.</p>"
-    },
-    "treatment": {
-      "ar": "<h4>الغيار في العيادة (Outpatient)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>نظّف الجرح جيداً</strong><p>بمحلول ملح ثم بيتادين (Betadine) ثم محلول ملح، مع إزالة أي أنسجة ميتة وتنشيف جيد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>رش المستحضرات</strong><p>Healosol spray + Bivatracin spray (مضاد حيوي موضعي يحتوي Bacitracin + مُحسّن لتئام الجرح). تُرش بعد إزالة الأنسجة، وهيشتريهم المريض ويغير بهم بعد كده.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>غطّي الجرح</strong><p>بشاش فازلين (Sofratulle/Dermatol) ثم شاش عادي ثم لاصق (بلاستر).</p></div></div></div><h4>المتابعة في البيت</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>غسيل القدمين يومياً</strong><p>قبل النوم مع تجفيف كويس خصوصاً بين الأصابع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>فحص يومي</strong><p>بين الأصابع والكعب (مرآة أو مساعد).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>دهان فازلين يومياً</strong><p>على القدمين بعد الغسيل والتنشيف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>ممنوعات</strong><p>أحذية ضيقة (واخلع الحذاء لو لبسته أكتر من 6 ساعات لراحة القدم)، والمشي حافياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأظافر</strong><p>ممنوع القص دائرياً؛ تكون أطرافها مستقيمة، ويفضل استخدام المقص (حسب المراجع) والمواظبة على القص بانتظام.</p></div></div></div><h4>مضاد حيوي</h4><p><b>Hibiotic 1 gm tab</b> (Amoxicillin + Clavulanic acid): قرص كل 12 ساعة لمدة 5 أيام (حسب المراجع).</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الدولية (IWGDF) تقول: المضاد الحيوي لعدوى القدم السكري يُعطى حسب الشدة، وغالباً أسبوع إلى أسبوعين للعدوى الخفيفة-المتوسطة، وللحالات الأشد أطول وبعد مزرعة. مدة الـ 5 أيام للحالات البسيطة. أي علامة عدوى متقدمة (ذات رائحة، انتشار احمرار، حمى) = تحويل فوري. الجرح السكري يحتاج كمان تخفيف الضغط (Offloading) وتقييم الدورة الدموية.</p></div><h4>أمثلة الغيار اليومي</h4><ul><li>Bivatracin spray + Healosol spray: غيار على الجرح صباحاً ومساءً بالبخاخين ثم السوفراتول ثم شاش وبلاستر، ويُغيّر عليها مرة واحدة يومياً (لو العيان على قدها هتقولوله يجيلك).</li><li>Iruxol cream: لو لسه في نسيج ميت يحتاج يتشال، يكتب الكريم يغيّر بيه صباحاً ومساءً حتى تتم إزالة كل الأنسجة الميتة ثم يكمل بالبخاخ.</li></ul><h4>حقن فيتامين B12 (للأعصاب)</h4><table><thead><tr><th>الاسم</th><th>العبوة</th><th>الجرعة حسب المراجع</th></tr></thead><tbody><tr><td>Betolvex amp</td><td>2 amp</td><td>حقنة عضل مرة أسبوعياً لمدة شهر ثم مرة كل 3 شهور</td></tr><tr><td>Depovit B12 amp</td><td>2 amp</td><td>حقنة عضل يوم بعد يوم لمدة أسبوع أو أسبوعين، ثم مرة كل 1–3 شهور</td></tr><tr><td>B-com amp</td><td>3 amp</td><td>حقنة عضل مرتين أسبوعياً حتى التحسن ثم مرة كل 1–3 شهور</td></tr><tr><td>Tri-B amp</td><td>6 amp</td><td>نفس الجدول</td></tr><tr><td>Becozyme amp</td><td>12 amp</td><td>نفس الجدول</td></tr><tr><td>Neurorubine amp</td><td>3 amp</td><td>نفس الجدول</td></tr><tr><td>Neurobion amp</td><td>3 amp</td><td>نفس الجدول</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>ملاحظات خاصة بأنواع الحقن</strong><ul><li><b>Betolvex</b>: ألمه أقل من باقي الأنواع وتأثيره أضعف، لكن غالي شوية.</li><li><b>Neurorubine</b>: أفضل وأرخص حاجة (1 مل). آمن في الحمل والرضاعة وآمن في الأطفال أقل من 5 سنين (حسب المراجع).</li><li><b>Depovit B12 وNeurobion</b>: ممنوع في الأطفال أقل من 5 سنين والحمل والرضاعة (حسب المراجع).</li><li><b>Becozyme وB-com</b>: الوحيدين في الأدوية دي اللي ممكن يتعطوا عن طريق محلول وريدي.</li></ul><p>راجع نشرة كل صنف قبل الإعطاء.</p></div><p><b>Deltavit tab</b> فيتامين B12 تحت اللسان: قرص واحد يومياً تحت اللسان.</p>[[slot:dis-343-drugs|صور عبوات: Bivatracin و Healosol و Iruxol — تُرفع لاحقاً]]"
-    },
-    "nursing": {
-      "ar": "<p>دورك:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>جهّز</strong><p>غسل أيدي، قفازات نظيفة/معقمة، محلول ملح، بيتادين، سبراي، شاش فازلين، شاش، لاصق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اسأل ولاحظ</strong><p>آخر سكر، ألم، حرارة، رائحة، صديد، تورم، لون الجلد، نبض القدم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>نظّف</strong><p>ملح ثم بيتادين ثم ملح، من الأنظف للأقذر، وأزل الأنسجة الميتة (إزالة الجراحي بمعرفة الطبيب).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>ضمّد</strong><p>رش، ثم فازلين، شاش، لاصق بدون ضغط على الجرح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>وثّق</strong><p>حجم الجرح (طول × عرض × عمق)، لون، إفراز، رائحة، صورة، ووقت الغيار التالي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ثقّف</strong><p>فحص ورعاية القدم والسكر والحذاء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>بلّغ</strong><p>أي توسع احمرار، حرارة، حمى، سكر مرتفع جداً.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>إعطاء B12</strong><p>حقن عضل عميقة، بدّل الأماكن، واسأل عن الحمل والعمر قبل الصنف. الوريدي فقط للأنواع المسموحة بالمحلول.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>انتشار احمرار، حرارة، صديد، رائحة</li><li>حمى أو سكر مرتفع جداً</li><li>أنسجة سوداء (غرغرينا) أو قدم باردة شاحبة</li><li>جرح بدون تحسن بعد أسبوعين</li><li>ألم شديد مع تورم (التهاب عظم أو خراج)</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>أهم علاج: ضبط السكر.</li><li>اغسل رجليك كل يوم وجفّفهم خصوصاً بين الصوابع، وافحصهم كل يوم.</li><li>دهّن الفازلين بعد الغسيل.</li><li>ممنوع الحذاء الضيق والمشي حافي، واخلع الحذاء بعد 6 ساعات.</li><li>قص الأظافر مستقيم، ولا تقطع الجلد القاسي بنفسك.</li><li>التزم بالمضاد وبالغيار.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "ضبط السكر أهم علاج",
-      "تنظيف: ملح ثم بيتادين ثم ملح",
-      "Bivatracin + Healosol ثم Sofratulle وشاش وبلاستر",
-      "غسل وفحص القدمين يومياً وفازلين",
-      "لا حذاء ضيق ولا مشي حافي ولا قص دائري",
-      "Hibiotic 1 gm كل 12 ساعة 5 أيام",
-      "حقن B12 بأنواعها وتحذيرات الأطفال/الحمل"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ترتيب تنظيف الجرح السكري؟"
-      },
-      "options": [
-        {
-          "ar": "ملح ثم بيتادين ثم ملح"
-        },
-        {
-          "ar": "بيتادين فقط"
-        },
-        {
-          "ar": "كحول"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التنظيف الثلاثي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم نقطة في علاج الجرح السكري؟"
-      },
-      "options": [
-        {
-          "ar": "ضبط السكر"
-        },
-        {
-          "ar": "الراحة فقط"
-        },
-        {
-          "ar": "فيتامين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السكر المرتفع يعطل الالتئام."
-      }
-    },
-    {
-      "q": {
-        "ar": "قص الأظافر؟"
-      },
-      "options": [
-        {
-          "ar": "مستقيم"
-        },
-        {
-          "ar": "دائري"
-        },
-        {
-          "ar": "لا يُقص"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تجنب الأظافر النامية للداخل."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي حقن B12 يُمكن بالمحلول الوريدي حسب المراجع؟"
-      },
-      "options": [
-        {
-          "ar": "Becozyme وB-com"
-        },
-        {
-          "ar": "Neurobion"
-        },
-        {
-          "ar": "Depovit"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "كلهم مذكورون في المراجع كمناسبين للمحلول الوريدي."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة تحويل فوري؟"
-      },
-      "options": [
-        {
-          "ar": "احمرار منتشر مع حمى"
-        },
-        {
-          "ar": "جفاف"
-        },
-        {
-          "ar": "حكة خفيفة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "عدوى متقدمة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "IWGDF Guidelines on diabetic foot (ملخصات)"
-    },
-    {
-      "title": "NICE NG19 Diabetic foot problems (مرجع عام)"
-    },
-    {
-      "title": "IDSA/IWGDF diabetic foot infection guidance"
-    }
-  ],
-  "rx": [
-    {
-      "category": "أخرى",
-      "condition_ar": "غيار الجرح في القدم السكري",
-      "condition_en": "Diabetic foot dressing",
-      "items": [
-        {
-          "drug_name": "Healosol spray",
-          "dose": "رش على الجرح بعد التنظيف",
-          "note": "مستحضر للتئام"
-        },
-        {
-          "drug_name": "Bivatracin spray",
-          "dose": "رش على الجرح بعد التنظيف",
-          "note": "مضاد حيوي موضعي (Bacitracin)"
-        },
-        {
-          "drug_name": "Sofratulle / Dermatol gauze",
-          "dose": "غطاء فازلين ثم شاش عادي ثم لاصق",
-          "note": "تغيير مرة يومياً"
-        },
-        {
-          "drug_name": "Hibiotic 1 gm tab (Amoxicillin/Clavulanate)",
-          "dose": "قرص كل 12 ساعة لمدة 5 أيام",
-          "note": ""
-        },
-        {
-          "drug_name": "Iruxol cream",
-          "dose": "صباحاً ومساءً حتى إزالة الأنسجة الميتة",
-          "note": "إزالة إنزيمية"
-        },
-        {
-          "drug_name": "Betolvex amp",
-          "dose": "عضل مرة أسبوعياً لمدة شهر ثم كل 3 شهور",
-          "note": "B12"
-        },
-        {
-          "drug_name": "Depovit B12 amp",
-          "dose": "عضل يوم بعد يوم لأسبوع أو أسبوعين ثم كل 1–3 شهور",
-          "note": "ممنوع <5 سنين والحمل والرضاعة"
-        },
-        {
-          "drug_name": "B-com / Tri-B / Becozyme / Neurorubine / Neurobion amp",
-          "dose": "عضل مرتين أسبوعياً حتى التحسن ثم كل 1–3 شهور",
-          "note": "B-com وBecozyme يمكن بالمحلول الوريدي"
-        },
-        {
-          "drug_name": "Deltavit tab",
-          "dose": "قرص يومياً تحت اللسان",
-          "note": "B12"
-        }
-      ],
-      "clinical_note": "الغيار مرة يومياً، والسكر المضبوط أهم علاج."
-    }
+  "en": [
+   "Glucose control is the most important treatment",
+   "Cleaning: saline, then Betadine, then saline",
+   "Bivatracin + Healosol, then Sofratulle, gauze, and tape",
+   "Wash and inspect the feet daily, plus petroleum jelly",
+   "No tight shoes, no barefoot walking, no rounded nail cutting",
+   "Hibiotic 1 gm every 12 hours for 5 days",
+   "B12 injection types and warnings for children/pregnancy"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ترتيب تنظيف الجرح السكري؟",
+    "en": "The order for cleaning a diabetic wound?"
+   },
+   "options": [
+    {
+     "ar": "ملح ثم بيتادين ثم ملح",
+     "en": "Saline, then Betadine, then saline"
+    },
+    {
+     "ar": "بيتادين فقط",
+     "en": "Betadine only"
+    },
+    {
+     "ar": "كحول",
+     "en": "Alcohol"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التنظيف الثلاثي.",
+    "en": "Three-step cleaning."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم نقطة في علاج الجرح السكري؟",
+    "en": "The most important point in treating a diabetic wound?"
+   },
+   "options": [
+    {
+     "ar": "ضبط السكر",
+     "en": "Glucose control"
+    },
+    {
+     "ar": "الراحة فقط",
+     "en": "Rest only"
+    },
+    {
+     "ar": "فيتامين",
+     "en": "A vitamin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السكر المرتفع يعطل الالتئام.",
+    "en": "High glucose impairs healing."
+   }
+  },
+  {
+   "q": {
+    "ar": "قص الأظافر؟",
+    "en": "Cutting the nails?"
+   },
+   "options": [
+    {
+     "ar": "مستقيم",
+     "en": "Straight across"
+    },
+    {
+     "ar": "دائري",
+     "en": "Rounded"
+    },
+    {
+     "ar": "لا يُقص",
+     "en": "Not cut"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تجنب الأظافر النامية للداخل.",
+    "en": "Prevents ingrown nails."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي حقن B12 يُمكن بالمحلول الوريدي حسب المراجع؟",
+    "en": "Which B12 injections can be given in an IV infusion?"
+   },
+   "options": [
+    {
+     "ar": "Becozyme وB-com",
+     "en": "Becozyme and B-com"
+    },
+    {
+     "ar": "Neurobion",
+     "en": "Neurobion"
+    },
+    {
+     "ar": "Depovit",
+     "en": "Depovit"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "كلهم مذكورون في المراجع كمناسبين للمحلول الوريدي.",
+    "en": "Both are listed as suitable for IV infusion."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة تحويل فوري؟",
+    "en": "A sign for immediate referral?"
+   },
+   "options": [
+    {
+     "ar": "احمرار منتشر مع حمى",
+     "en": "Spreading redness with fever"
+    },
+    {
+     "ar": "جفاف",
+     "en": "Dryness"
+    },
+    {
+     "ar": "حكة خفيفة",
+     "en": "Mild itching"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "عدوى متقدمة.",
+    "en": "Advanced infection."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "IWGDF Guidelines on diabetic foot (ملخصات)"
+  },
+  {
+   "title": "NICE NG19 Diabetic foot problems (مرجع عام)"
+  },
+  {
+   "title": "IDSA/IWGDF diabetic foot infection guidance"
+  }
+ ],
+ "rx": [
+  {
+   "category": "أخرى",
+   "condition_ar": "غيار الجرح في القدم السكري",
+   "condition_en": "Diabetic foot dressing",
+   "items": [
+    {
+     "drug_name": "Healosol spray",
+     "dose": "رش على الجرح بعد التنظيف",
+     "note": "مستحضر للتئام"
+    },
+    {
+     "drug_name": "Bivatracin spray",
+     "dose": "رش على الجرح بعد التنظيف",
+     "note": "مضاد حيوي موضعي (Bacitracin)"
+    },
+    {
+     "drug_name": "Sofratulle / Dermatol gauze",
+     "dose": "غطاء فازلين ثم شاش عادي ثم لاصق",
+     "note": "تغيير مرة يومياً"
+    },
+    {
+     "drug_name": "Hibiotic 1 gm tab (Amoxicillin/Clavulanate)",
+     "dose": "قرص كل 12 ساعة لمدة 5 أيام",
+     "note": ""
+    },
+    {
+     "drug_name": "Iruxol cream",
+     "dose": "صباحاً ومساءً حتى إزالة الأنسجة الميتة",
+     "note": "إزالة إنزيمية"
+    },
+    {
+     "drug_name": "Betolvex amp",
+     "dose": "عضل مرة أسبوعياً لمدة شهر ثم كل 3 شهور",
+     "note": "B12"
+    },
+    {
+     "drug_name": "Depovit B12 amp",
+     "dose": "عضل يوم بعد يوم لأسبوع أو أسبوعين ثم كل 1–3 شهور",
+     "note": "ممنوع <5 سنين والحمل والرضاعة"
+    },
+    {
+     "drug_name": "B-com / Tri-B / Becozyme / Neurorubine / Neurobion amp",
+     "dose": "عضل مرتين أسبوعياً حتى التحسن ثم كل 1–3 شهور",
+     "note": "B-com وBecozyme يمكن بالمحلول الوريدي"
+    },
+    {
+     "drug_name": "Deltavit tab",
+     "dose": "قرص يومياً تحت اللسان",
+     "note": "B12"
+    }
+   ],
+   "clinical_note": "الغيار مرة يومياً، والسكر المضبوط أهم علاج."
+  }
+ ]
 }

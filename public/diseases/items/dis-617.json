@@ -1,207 +1,262 @@
 {
-  "id": "dis-617",
-  "num": 617,
-  "system": "cardio",
-  "icon": "🩺",
-  "level": 2,
-  "target": "diseases",
-  "title": {
-    "ar": "الفحوصات التشخيصية — القلب والأوعية",
-    "en": "Crucial Diagnostic Tests — Cardiovascular"
+ "id": "dis-617",
+ "num": 617,
+ "system": "cardio",
+ "icon": "🩺",
+ "level": 2,
+ "target": "diseases",
+ "title": {
+  "ar": "الفحوصات التشخيصية — القلب والأوعية",
+  "en": "Crucial Diagnostic Tests — Cardiovascular"
+ },
+ "teaser": {
+  "ar": "12 فحص قلب: ليه بنعملها، تحضير المريض، متابعة بعدها (القسطرة، الصبغة، ABG)، وأخطاء شائعة.",
+  "en": "12 cardiac tests: why we do them, patient preparation, post-test follow-up (catheterization, contrast, ABG), and common mistakes."
+ },
+ "chips": [
+  {
+   "ar": "قسطرة",
+   "en": "Catheterization"
   },
-  "teaser": {
-    "ar": "12 فحص قلب: ليه بنعملها، تحضير المريض، متابعة بعدها (القسطرة، الصبغة، ABG)، وأخطاء شائعة."
+  {
+   "ar": "ECG",
+   "en": "ECG"
   },
-  "chips": [
-    {
-      "ar": "قسطرة"
-    },
-    {
-      "ar": "ECG"
-    },
-    {
-      "ar": "صبغة"
-    }
+  {
+   "ar": "صبغة",
+   "en": "Contrast"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>أهم الفحوص التشخيصية لأمراض القلب والأوعية، وإيه دور الممرض في التحضير ومتابعة ما بعد الفحص.</p>[[slot:dis-617-cath-timeline|متابعة ما بعد القسطرة — رسم من إعداد الموقع|/diseases/img/dis-617-cath-timeline.svg]]\n<table><thead><tr><th>الفحص</th><th>غرضه</th></tr></thead><tbody><tr><td>ECG</td><td>النشاط الكهربائي</td></tr><tr><td>قسطرة القلب</td><td>الشرايين التاجية وبنية القلب والضغوط والنتاج</td></tr><tr><td>الإيكو</td><td>بنية القلب وتدفق الدم</td></tr><tr><td>الطب النووي</td><td>التروية والانقباضية والاحتشاء وكسر القذف</td></tr><tr><td>DSA</td><td>الشرايين بصبغة وحاسوب</td></tr><tr><td>المراقبة الدموية</td><td>النتاج القلبي والضغوط</td></tr><tr><td>أشعة الصدر</td><td>حجم القلب والرئة</td></tr><tr><td>كيمياء الدم</td><td>أملاح، كلى، كبد، سكر، دهون، إنزيمات القلب</td></tr><tr><td>صورة دم</td><td>CBC، ESR، تجلط</td></tr><tr><td>ABG</td><td>التهوية والأكسجة والحمض</td></tr><tr><td>Venogram</td><td>الأوردة والجلطات</td></tr><tr><td>Pulse oximetry</td><td>تشبع الأكسجين</td></tr></tbody></table>",
+   "en": "<p>The most important diagnostic tests for heart and vascular disease, and the nurse's role in preparation and post-test follow-up.</p>[[slot:dis-617-cath-timeline|Follow-up after catheterization — illustration prepared by the site|/diseases/img/dis-617-cath-timeline.svg]]\n<table><thead><tr><th>Test</th><th>Purpose</th></tr></thead><tbody><tr><td>ECG</td><td>Electrical activity</td></tr><tr><td>Cardiac catheterization</td><td>Coronary arteries, heart structure, pressures, and output</td></tr><tr><td>Echo</td><td>Heart structure and blood flow</td></tr><tr><td>Nuclear medicine</td><td>Perfusion, contractility, infarction, and ejection fraction</td></tr><tr><td>DSA</td><td>Arteries with contrast and a computer</td></tr><tr><td>Hemodynamic monitoring</td><td>Cardiac output and pressures</td></tr><tr><td>Chest X-ray</td><td>Size of the heart and lungs</td></tr><tr><td>Blood chemistry</td><td>Electrolytes, kidneys, liver, glucose, lipids, cardiac enzymes</td></tr><tr><td>Blood count</td><td>CBC, ESR, coagulation</td></tr><tr><td>ABG</td><td>Ventilation, oxygenation, and acid-base</td></tr><tr><td>Venogram</td><td>Veins and clots</td></tr><tr><td>Pulse oximetry</td><td>Oxygen saturation</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<h4>1) تخطيط القلب (ECG / EKG)</h4><p>تمثيل بياني لنشاط القلب الكهربائي، غير جراحي، مجسم ثلاثي الأبعاد. استخدامات: (1) قياس قصير أثناء الفحص، (2) مراقبة مستمرة (Telemetry) بالمستشفى، (3) هولتر 24 ساعة، (4) اختبار الجهد. الأقطاب على الجلد تلتقط الإشارة، و12 وصلة: أطراف I، II، III، aVR، aVL، aVF وصدر V1–V6.</p><ul><li>المريض لن يشعر بصدمة</li><li>يرقد ساكناً دقائق في الفحص العادي</li><li>يتحرك في الهولتر/المراقبة</li><li>يسجل المريض يوميات أعراضه في الهولتر</li><li>لا يستعمل آلات (مايكروويف، ماكينة حلاقة كهربائية) ولا يستحم أثناء الهولتر</li><li>في اختبار الجهد: ملابس مناسبة وإبلاغ أي ألم</li><li>الممرض يعرف الإيقاع الجيبي الطبيعي وVT وVF ويعيد تركيب الأقطاب</li></ul>[[slot:dis-617-ecg|12 وصلة — توزيع الأقطاب على الصدر]]\n<h4>2) قسطرة القلب (Cardiac catheterization)</h4><p>إجراء تداخلي لفحص الشرايين التاجية وبنية القلب وقياس النتاج والضغوط والأكسجة. تُحقن صبغة ظليلة عبر قسطرة بالشريان الفخذي أو الحفرة المرفقية وتُصوّر بالفلوروسكوب.</p><table><thead><tr><th>قبل الفحص</th><th>بعد الفحص</th></tr></thead><tbody><tr><td>كيمياء (كرياتينين، BUN، تصفية الكرياتينين)</td><td>مراقبة النزف بموضع الحقن والضغط حتى التوقف</td></tr><tr><td>حساسية لليود أو المأكولات البحرية؟ بلّغ الطبيب فوراً</td><td>راحة بالسرير 8 ساعات</td></tr><tr><td>موافقة مكتوبة بعد شرح المخاطر والفوائد</td><td>ضغط الموضع 8 ساعات (حسب البروتوكول)</td></tr><tr><td>صيام NPO من 4–6 ساعات لتقليل خطر الشفط</td><td>فخذي: ابق الرجل مفرودة 8 ساعات؛ المرفق: الذراع مفرودة 3 ساعات</td></tr><tr><td>اشرح الآثار الجانبية: احمرار الوجه، غثيان، رغبة بالتبول، ألم صدر من الصبغة</td><td>مراقبة العلامات الحيوية</td></tr><tr><td>سجل العلامات الأساسية</td><td>زيادة السوائل لإخراج الصبغة</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>نصيحة</strong><p>افحص النبض البعيد (القدم) والدفء واللون ودرجة الإحساس في الطرف المقابل بعد القسطرة، وتحقق من تورم أو كتلة بالفخذ (هيماتوما). ميتفورمين يوقف عادةً قبل الصبغة حسب بروتوكول المستشفى.</p></div>[[slot:dis-617-angio|صورة قسطرة تاجية]]\n<h4>3) الإيكو (Echocardiography)</h4><p>موجات صوتية تعطي صورة لبنية القلب وتدفق الدم. اشرح الإجراء، ويرقد المريض ساكناً (حتى 30 دقيقة) لدقة الصورة.</p>[[slot:dis-617-echo|صورة إيكو القلب]]\n<h4>4) طب القلب النووي (Nuclear cardiology)</h4><p>يقيم تروية العضلة، الانقباضية، نقص التروية، الاحتشاء، حركة الجدار وكسر القذف. نظائر مشعة تُحقن وريدياً ويتتبعها كاشف إشعاعي. قبل: موافقة مكتوبة وشرح الثبات. بعد: افحص موضع الحقن للنزف.</p><h4>5) تصوير الأوعية بالطرح الرقمي (DSA)</h4><p>رؤية التروية الشريانية بصبغة تحتوي يود وتصوير حاسوبي يطرح العظام والأنسجة. قبل: موافقة وشرح. بعد: نزف موضع الحقن، شرب لتر سوائل لإخراج الصبغة، ومتابعة العلامات الحيوية.</p><h4>6) المراقبة الدموية (Hemodynamic monitoring)</h4><p>قسطرة ببالون (Swan-Ganz) في الشريان الرئوي (عادةً عبر وريد كبير) تقيس الضغوط بحجرات القلب والأوعية والنتاج القلبي. قبل: موافقة وشرح. بعد: نزف الموضع، علامات عدوى (احمرار، حرارة، تورم، ألم)، مضاعفات: انصمام هوائي، اضطراب نظم، جلطات، ونقص أو زيادة تنفس وضيق نفس.</p><h4>7) أشعة الصدر (CXR)</h4><p>تظهر حجم القلب وموضعه والبنية. الأجزاء الماصة للأشعة تظهر فاتحة. يطلب من المريض حبس النفس، وإزالة المجوهرات والمعدن.</p><h4>8) كيمياء الدم</h4><table><thead><tr><th>المقياس</th><th>يدل على</th></tr></thead><tbody><tr><td>الأملاح (Na, K, HCO3, Mg, Ca, P)</td><td>اضطراب السوائل والقلوية</td></tr><tr><td>BUN وكرياتينين</td><td>وظائف الكلى</td></tr><tr><td>AST/ALT</td><td>الكبد</td></tr><tr><td>سكر الدم (صائم أكثر من 125 = سكر)</td><td>السكري</td></tr><tr><td>كوليسترول وLDL وHDL والدهون الثلاثية</td><td>LDL والدهون أقل أفضل وHDL أعلى أفضل</td></tr><tr><td>CK وCK-MB وتروبونين وميوجلوبين وLDH</td><td>تلف عضلة القلب (ميوجلوبين مبكر)</td></tr></tbody></table><ul><li>عينة 3–5 مل</li><li>لا رياضة قبل السحب</li><li>NPO إذا طُلب</li><li>لا حقن عضلية قبل السحب أو سجّل اسم الدواء ووقته وجرعته مع العينة</li><li>صيام 12 ساعة للسكر والكوليسترول (الدهون الثلاثية)</li><li>افحص موضع الوخز للنزف</li></ul><h4>9) دراسات الدم (Hematology)</h4><table><thead><tr><th>الفحص</th><th>دلالته</th></tr></thead><tbody><tr><td>CBC / Hb / Hct</td><td>فقر دم، نزيف، جراحة (الحمراء تعيش 120 يوم)</td></tr><tr><td>WBC (5 أنواع: عدلات، قعدات، حمضات، لمفاويات، وحيدات)</td><td>عدوى، التهاب، حساسية، طفيليات</td></tr><tr><td>ESR</td><td>التهاب عام غير نوعي</td></tr><tr><td>PT/INR</td><td>يتابع الوارفارين وتصنيع الكبد</td></tr><tr><td>PTT</td><td>يتابع الهيبارين</td></tr><tr><td>الصفائح</td><td>التجلط</td></tr></tbody></table><ul><li>عينة 3–5 مل</li><li>افحص موضع الوخز</li></ul><h4>10) غازات الدم الشرياني (ABG)</h4><p>تحدد التهوية والأكسجة والحمض. عينة 3–5 مل من شريان (كعبري، عضدي، فخذي). راجع <a href=\"/diseases/dis-145\">تفاصيل ABG</a>.</p><ul><li>pH مرتفع: قلاء، منخفض: حماض</li><li>pCO2 مرتفع: مثل COPD (حسب المراجع)، وانخفاضه مع نقص أكسجين</li><li>HCO3 مرتفع / منخفض: جفاف أو فقد سوائل (حسب المراجع)</li><li>pO2 منخفض: فقر دم أو صعوبة تنفس (حسب المراجع)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>تفسير ABG الحديث: pCO2 مرتفع = فشل تهوية (حماض تنفسي) في COPD وغيره؛ HCO3 يعكس الجانب الأيضي. اعتمد التفسير الكامل في دليل ABG.</p></div><ul><li>اشرح أن وخز الشريان أكثر ألماً من الوريد</li><li>أبلغ المعمل بأكسجين مكمل أو إعدادات جهاز التنفس</li><li>ضغط ميكانيكي 5 دقائق على موضع الوخز، ثم ضمادة ضاغطة 30 دقيقة بعد توقف النزف</li><li>راقب النزف</li></ul><h4>11) تصوير الأوردة (Venogram)</h4><p>أشعة على تدفق الدم في الأوردة لتحديد الجلطات وحالة الصمامات الوريدية، بصبغة يود.</p><ul><li>قبل: راجع الكيمياء (BUN، كرياتينين)، حساسية يود/مأكولات بحرية، موافقة</li><li>اشرح الآثار: احمرار الوجه، غثيان، رغبة بالتبول، ألم صدر</li><li>بعد: نزف الموضع وعدوى (احمرار، حرارة، صديد)، سوائل زائدة</li></ul><h4>12) مقياس التأكسج النبضي (Pulse oximetry)</h4><p>ضوء تحت أحمر يمر عبر السرير الظفري أو الجلد؛ مقدار الضوء النافذ يحدد التشبع المحيطي، أما التشبع الكامل ففي ABG.</p><ul><li>ضع الحساس على الإصبع فوق الظفر، أو أصبع القدم، أو شحمة الأذن، أو جسر الأنف</li><li>نظف الموضع</li><li>طلاء الأظافر أو الأظافر الصناعية يشوش على القراءة</li><li>أيضاً: ضعف التروية والبرودة وسوء الحركة يشوشون</li></ul>",
+   "en": "<h4>1) Electrocardiogram (ECG / EKG)</h4><p>A graphic representation of the heart's electrical activity; non-invasive, giving a three-dimensional view. Uses: (1) a short recording during examination, (2) continuous monitoring (Telemetry) in hospital, (3) 24-hour Holter, (4) stress test. Electrodes on the skin pick up the signal, and the 12 leads are: limb leads I, II, III, aVR, aVL, aVF and chest leads V1–V6.</p><ul><li>The patient will not feel a shock</li><li>Lies still for a few minutes in the routine test</li><li>Moves around with Holter/monitoring</li><li>The patient keeps a diary of symptoms during Holter</li><li>Does not use appliances (microwave, electric shaver) and does not bathe during Holter</li><li>In the stress test: suitable clothing and reporting any pain</li><li>The nurse recognizes normal sinus rhythm, VT, and VF and reattaches the electrodes</li></ul>[[slot:dis-617-ecg|12 leads — electrode placement on the chest]]\n<h4>2) Cardiac catheterization (Cardiac catheterization)</h4><p>An invasive procedure to examine the coronary arteries and heart structure and measure output, pressures, and oxygenation. Radiopaque contrast is injected through a catheter in the femoral artery or the antecubital fossa and imaged with fluoroscopy.</p><table><thead><tr><th>Before the test</th><th>After the test</th></tr></thead><tbody><tr><td>Chemistry (creatinine, BUN, creatinine clearance)</td><td>Monitor for bleeding at the insertion site and apply pressure until it stops</td></tr><tr><td>Allergy to iodine or seafood? Inform the physician immediately</td><td>Bed rest for 8 hours</td></tr><tr><td>Written consent after explaining risks and benefits</td><td>Pressure on the site for 8 hours (per protocol)</td></tr><tr><td>NPO for 4–6 hours to reduce the risk of aspiration</td><td>Femoral: keep the leg straight for 8 hours; antecubital: arm straight for 3 hours</td></tr><tr><td>Explain side effects: facial flushing, nausea, urge to urinate, chest pain from the contrast</td><td>Monitor vital signs</td></tr><tr><td>Record baseline vital signs</td><td>Increase fluids to flush out the contrast</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>Tip</strong><p>Check the distal pulse (foot), warmth, color, and sensation in the affected limb after catheterization, and check for swelling or a lump in the groin (hematoma). Metformin is usually stopped before contrast per hospital protocol.</p></div>[[slot:dis-617-angio|Coronary angiography image]]\n<h4>3) Echo (Echocardiography)</h4><p>Sound waves give an image of the heart's structure and blood flow. Explain the procedure; the patient lies still (up to 30 minutes) for an accurate image.</p>[[slot:dis-617-echo|Echocardiogram image]]\n<h4>4) Nuclear cardiology (Nuclear cardiology)</h4><p>Evaluates muscle perfusion, contractility, ischemia, infarction, wall motion, and ejection fraction. Radioisotopes are injected IV and tracked by a radiation detector. Before: written consent and explaining the need to stay still. After: check the injection site for bleeding.</p><h4>5) Digital subtraction angiography (DSA)</h4><p>Visualizes arterial perfusion with iodine-containing contrast and computer imaging that subtracts bones and tissues. Before: consent and explanation. After: bleeding at the injection site, drinking a liter of fluids to flush out the contrast, and monitoring vital signs.</p><h4>6) Hemodynamic monitoring (Hemodynamic monitoring)</h4><p>A balloon catheter (Swan-Ganz) in the pulmonary artery (usually via a large vein) measures pressures in the heart chambers and vessels and cardiac output. Before: consent and explanation. After: site bleeding, signs of infection (redness, warmth, swelling, pain), complications: air embolism, arrhythmia, clots, decreased or increased breathing, and shortness of breath.</p><h4>7) Chest X-ray (CXR)</h4><p>Shows the size, position, and structure of the heart. Parts that absorb X-rays appear light. The patient is asked to hold their breath and to remove jewelry and metal.</p><h4>8) Blood chemistry</h4><table><thead><tr><th>Measure</th><th>Indicates</th></tr></thead><tbody><tr><td>Electrolytes (Na, K, HCO3, Mg, Ca, P)</td><td>Fluid and acid-base disturbances</td></tr><tr><td>BUN and creatinine</td><td>Kidney function</td></tr><tr><td>AST/ALT</td><td>Liver</td></tr><tr><td>Blood glucose (fasting above 125 = diabetes)</td><td>Diabetes</td></tr><tr><td>Cholesterol, LDL, HDL, and triglycerides</td><td>Lower LDL and lipids are better, and higher HDL is better</td></tr><tr><td>CK, CK-MB, troponin, myoglobin, and LDH</td><td>Heart muscle damage (myoglobin is early)</td></tr></tbody></table><ul><li>Sample of 3–5 mL</li><li>No exercise before the draw</li><li>NPO if ordered</li><li>No IM injections before the draw, or record the drug name, time, and dose with the sample</li><li>Fasting 12 hours for glucose and cholesterol (triglycerides)</li><li>Check the puncture site for bleeding</li></ul><h4>9) Blood studies (Hematology)</h4><table><thead><tr><th>Test</th><th>Significance</th></tr></thead><tbody><tr><td>CBC / Hb / Hct</td><td>Anemia, bleeding, surgery (red cells live 120 days)</td></tr><tr><td>WBC (5 types: neutrophils, basophils, eosinophils, lymphocytes, monocytes)</td><td>Infection, inflammation, allergy, parasites</td></tr><tr><td>ESR</td><td>Non-specific general inflammation</td></tr><tr><td>PT/INR</td><td>Monitors warfarin and liver synthesis</td></tr><tr><td>PTT</td><td>Monitors heparin</td></tr><tr><td>Platelets</td><td>Clotting</td></tr></tbody></table><ul><li>Sample of 3–5 mL</li><li>Check the puncture site</li></ul><h4>10) Arterial blood gases (ABG)</h4><p>Determine ventilation, oxygenation, and acid-base status. A 3–5 mL sample from an artery (radial, brachial, femoral). See <a href=\"/diseases/dis-145\">ABG details</a>.</p><ul><li>High pH: alkalosis; low: acidosis</li><li>High pCO2: such as COPD (per the references), and low with hypoxia</li><li>High / low HCO3: dehydration or fluid loss (per the references)</li><li>Low pO2: anemia or breathing difficulty (per the references)</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Modern ABG interpretation: high pCO2 = ventilatory failure (respiratory acidosis) in COPD and other conditions; HCO3 reflects the metabolic side. Use the full interpretation in the ABG guide.</p></div><ul><li>Explain that arterial puncture is more painful than venous</li><li>Inform the lab of supplemental oxygen or ventilator settings</li><li>Apply manual pressure for 5 minutes on the puncture site, then a pressure dressing for 30 minutes after bleeding stops</li><li>Monitor for bleeding</li></ul><h4>11) Venography (Venogram)</h4><p>An X-ray of blood flow in the veins to identify clots and the condition of the venous valves, using iodine contrast.</p><ul><li>Before: review chemistry (BUN, creatinine), iodine/seafood allergy, consent</li><li>Explain the effects: facial flushing, nausea, urge to urinate, chest pain</li><li>After: site bleeding and infection (redness, warmth, pus), extra fluids</li></ul><h4>12) Pulse oximetry (Pulse oximetry)</h4><p>Infrared light passes through the nail bed or skin; the amount of light transmitted determines peripheral saturation, while complete saturation is measured in ABG.</p><ul><li>Place the sensor on the finger over the nail, a toe, the earlobe, or the bridge of the nose</li><li>Clean the site</li><li>Nail polish or artificial nails interfere with the reading</li><li>Also: poor perfusion, cold, and movement interfere</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li>إيقاف ميتفورمين قبل الصبغة حسب البروتوكول</li><li>ملاحظة: الحساسية لليود لا تعني دائماً حساسية الصبغة لكن بلّغ الطبيب</li><li>شرب سوائل بعد الصبغة</li></ul>",
+   "en": "<ul><li>Stop metformin before contrast per protocol</li><li>Note: iodine allergy does not always mean contrast allergy, but inform the physician</li><li>Drink fluids after contrast</li></ul>"
+  },
+  "signs": {
+   "ar": "<p>أعراض الصبغة: احمرار الوجه، غثيان، رغبة في التبول، ألم صدر، وطفح — وأخطرها حساسية مفرطة (راجع <a href=\"/diseases/dis-081\">الحساسية</a>).</p>",
+   "en": "<p>Contrast symptoms: facial flushing, nausea, urge to urinate, chest pain, and rash — the most dangerous is anaphylaxis (see <a href=\"/diseases/dis-081\">Allergy</a>).</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قبل أي فحص</strong><p>تحقق من الهوية والموافقة والحساسية والكلى والصيام</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أثناء الفحص</strong><p>طمّن المريض، سجل العلامات، جهز أدوية الطوارئ</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>بعد الفحص</strong><p>موضع الحقن، العلامات الحيوية، النبض البعيد، السوائل</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>التوثيق</strong><p>الوقت والموضع وحالة المريض</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Before any test</strong><p>Verify identity, consent, allergies, kidney function, and fasting</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>During the test</strong><p>Reassure the patient, record vital signs, prepare emergency drugs</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>After the test</strong><p>Insertion site, vital signs, distal pulse, fluids</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Documentation</strong><p>Time, site, and patient condition</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>نزيف أو هيماتوما في موضع القسطرة</li><li>برودة أو شحوب الطرف</li><li>ألم صدر أو اضطراب نظم بعد الفحص</li><li>طفح أو ضيق نفس بعد الصبغة</li><li>بول قليل بعد الصبغة</li></ul>",
+   "en": "<ul><li>Bleeding or hematoma at the catheter site</li><li>Cold or pale limb</li><li>Chest pain or arrhythmia after the test</li><li>Rash or shortness of breath after contrast</li><li>Low urine output after contrast</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرح سبب الفحص والخطوات</li><li>ابقَ ساكناً عند الطلب</li><li>ارفع شكواك فوراً</li><li>اشرب كثيراً بعد الصبغة</li></ul>",
+   "en": "<ul><li>Explain the reason for the test and the steps</li><li>Stay still when asked</li><li>Report any complaint immediately</li><li>Drink plenty after contrast</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "القسطرة تحتاج NPO وفحص الكلى والحساسية",
+   "بعد القسطرة: راحة 8 ساعات والرجل مفرودة وضغط الموضع",
+   "الصبغة تتطلب سوائل كثيرة",
+   "INR للوارفارين وPTT للهيبارين",
+   "لا حقن عضلية قبل أخذ عينات الإنزيمات",
+   "طلاء الأظافر يشوش التأكسج"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>أهم الفحوص التشخيصية لأمراض القلب والأوعية، وإيه دور الممرض في التحضير ومتابعة ما بعد الفحص.</p>[[slot:dis-617-cath-timeline|متابعة ما بعد القسطرة — رسم من إعداد الموقع|/diseases/img/dis-617-cath-timeline.svg]]\n<table><thead><tr><th>الفحص</th><th>غرضه</th></tr></thead><tbody><tr><td>ECG</td><td>النشاط الكهربائي</td></tr><tr><td>قسطرة القلب</td><td>الشرايين التاجية وبنية القلب والضغوط والنتاج</td></tr><tr><td>الإيكو</td><td>بنية القلب وتدفق الدم</td></tr><tr><td>الطب النووي</td><td>التروية والانقباضية والاحتشاء وكسر القذف</td></tr><tr><td>DSA</td><td>الشرايين بصبغة وحاسوب</td></tr><tr><td>المراقبة الدموية</td><td>النتاج القلبي والضغوط</td></tr><tr><td>أشعة الصدر</td><td>حجم القلب والرئة</td></tr><tr><td>كيمياء الدم</td><td>أملاح، كلى، كبد، سكر، دهون، إنزيمات القلب</td></tr><tr><td>صورة دم</td><td>CBC، ESR، تجلط</td></tr><tr><td>ABG</td><td>التهوية والأكسجة والحمض</td></tr><tr><td>Venogram</td><td>الأوردة والجلطات</td></tr><tr><td>Pulse oximetry</td><td>تشبع الأكسجين</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<h4>1) تخطيط القلب (ECG / EKG)</h4><p>تمثيل بياني لنشاط القلب الكهربائي، غير جراحي، مجسم ثلاثي الأبعاد. استخدامات: (1) قياس قصير أثناء الفحص، (2) مراقبة مستمرة (Telemetry) بالمستشفى، (3) هولتر 24 ساعة، (4) اختبار الجهد. الأقطاب على الجلد تلتقط الإشارة، و12 وصلة: أطراف I، II، III، aVR، aVL، aVF وصدر V1–V6.</p><ul><li>المريض لن يشعر بصدمة</li><li>يرقد ساكناً دقائق في الفحص العادي</li><li>يتحرك في الهولتر/المراقبة</li><li>يسجل المريض يوميات أعراضه في الهولتر</li><li>لا يستعمل آلات (مايكروويف، ماكينة حلاقة كهربائية) ولا يستحم أثناء الهولتر</li><li>في اختبار الجهد: ملابس مناسبة وإبلاغ أي ألم</li><li>الممرض يعرف الإيقاع الجيبي الطبيعي وVT وVF ويعيد تركيب الأقطاب</li></ul>[[slot:dis-617-ecg|12 وصلة — توزيع الأقطاب على الصدر]]\n<h4>2) قسطرة القلب (Cardiac catheterization)</h4><p>إجراء تداخلي لفحص الشرايين التاجية وبنية القلب وقياس النتاج والضغوط والأكسجة. تُحقن صبغة ظليلة عبر قسطرة بالشريان الفخذي أو الحفرة المرفقية وتُصوّر بالفلوروسكوب.</p><table><thead><tr><th>قبل الفحص</th><th>بعد الفحص</th></tr></thead><tbody><tr><td>كيمياء (كرياتينين، BUN، تصفية الكرياتينين)</td><td>مراقبة النزف بموضع الحقن والضغط حتى التوقف</td></tr><tr><td>حساسية لليود أو المأكولات البحرية؟ بلّغ الطبيب فوراً</td><td>راحة بالسرير 8 ساعات</td></tr><tr><td>موافقة مكتوبة بعد شرح المخاطر والفوائد</td><td>ضغط الموضع 8 ساعات (حسب البروتوكول)</td></tr><tr><td>صيام NPO من 4–6 ساعات لتقليل خطر الشفط</td><td>فخذي: ابق الرجل مفرودة 8 ساعات؛ المرفق: الذراع مفرودة 3 ساعات</td></tr><tr><td>اشرح الآثار الجانبية: احمرار الوجه، غثيان، رغبة بالتبول، ألم صدر من الصبغة</td><td>مراقبة العلامات الحيوية</td></tr><tr><td>سجل العلامات الأساسية</td><td>زيادة السوائل لإخراج الصبغة</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>نصيحة</strong><p>افحص النبض البعيد (القدم) والدفء واللون ودرجة الإحساس في الطرف المقابل بعد القسطرة، وتحقق من تورم أو كتلة بالفخذ (هيماتوما). ميتفورمين يوقف عادةً قبل الصبغة حسب بروتوكول المستشفى.</p></div>[[slot:dis-617-angio|صورة قسطرة تاجية]]\n<h4>3) الإيكو (Echocardiography)</h4><p>موجات صوتية تعطي صورة لبنية القلب وتدفق الدم. اشرح الإجراء، ويرقد المريض ساكناً (حتى 30 دقيقة) لدقة الصورة.</p>[[slot:dis-617-echo|صورة إيكو القلب]]\n<h4>4) طب القلب النووي (Nuclear cardiology)</h4><p>يقيم تروية العضلة، الانقباضية، نقص التروية، الاحتشاء، حركة الجدار وكسر القذف. نظائر مشعة تُحقن وريدياً ويتتبعها كاشف إشعاعي. قبل: موافقة مكتوبة وشرح الثبات. بعد: افحص موضع الحقن للنزف.</p><h4>5) تصوير الأوعية بالطرح الرقمي (DSA)</h4><p>رؤية التروية الشريانية بصبغة تحتوي يود وتصوير حاسوبي يطرح العظام والأنسجة. قبل: موافقة وشرح. بعد: نزف موضع الحقن، شرب لتر سوائل لإخراج الصبغة، ومتابعة العلامات الحيوية.</p><h4>6) المراقبة الدموية (Hemodynamic monitoring)</h4><p>قسطرة ببالون (Swan-Ganz) في الشريان الرئوي (عادةً عبر وريد كبير) تقيس الضغوط بحجرات القلب والأوعية والنتاج القلبي. قبل: موافقة وشرح. بعد: نزف الموضع، علامات عدوى (احمرار، حرارة، تورم، ألم)، مضاعفات: انصمام هوائي، اضطراب نظم، جلطات، ونقص أو زيادة تنفس وضيق نفس.</p><h4>7) أشعة الصدر (CXR)</h4><p>تظهر حجم القلب وموضعه والبنية. الأجزاء الماصة للأشعة تظهر فاتحة. يطلب من المريض حبس النفس، وإزالة المجوهرات والمعدن.</p><h4>8) كيمياء الدم</h4><table><thead><tr><th>المقياس</th><th>يدل على</th></tr></thead><tbody><tr><td>الأملاح (Na, K, HCO3, Mg, Ca, P)</td><td>اضطراب السوائل والقلوية</td></tr><tr><td>BUN وكرياتينين</td><td>وظائف الكلى</td></tr><tr><td>AST/ALT</td><td>الكبد</td></tr><tr><td>سكر الدم (صائم أكثر من 125 = سكر)</td><td>السكري</td></tr><tr><td>كوليسترول وLDL وHDL والدهون الثلاثية</td><td>LDL والدهون أقل أفضل وHDL أعلى أفضل</td></tr><tr><td>CK وCK-MB وتروبونين وميوجلوبين وLDH</td><td>تلف عضلة القلب (ميوجلوبين مبكر)</td></tr></tbody></table><ul><li>عينة 3–5 مل</li><li>لا رياضة قبل السحب</li><li>NPO إذا طُلب</li><li>لا حقن عضلية قبل السحب أو سجّل اسم الدواء ووقته وجرعته مع العينة</li><li>صيام 12 ساعة للسكر والكوليسترول (الدهون الثلاثية)</li><li>افحص موضع الوخز للنزف</li></ul><h4>9) دراسات الدم (Hematology)</h4><table><thead><tr><th>الفحص</th><th>دلالته</th></tr></thead><tbody><tr><td>CBC / Hb / Hct</td><td>فقر دم، نزيف، جراحة (الحمراء تعيش 120 يوم)</td></tr><tr><td>WBC (5 أنواع: عدلات، قعدات، حمضات، لمفاويات، وحيدات)</td><td>عدوى، التهاب، حساسية، طفيليات</td></tr><tr><td>ESR</td><td>التهاب عام غير نوعي</td></tr><tr><td>PT/INR</td><td>يتابع الوارفارين وتصنيع الكبد</td></tr><tr><td>PTT</td><td>يتابع الهيبارين</td></tr><tr><td>الصفائح</td><td>التجلط</td></tr></tbody></table><ul><li>عينة 3–5 مل</li><li>افحص موضع الوخز</li></ul><h4>10) غازات الدم الشرياني (ABG)</h4><p>تحدد التهوية والأكسجة والحمض. عينة 3–5 مل من شريان (كعبري، عضدي، فخذي). راجع <a href=\"/diseases/dis-145\">تفاصيل ABG</a>.</p><ul><li>pH مرتفع: قلاء، منخفض: حماض</li><li>pCO2 مرتفع: مثل COPD (حسب المراجع)، وانخفاضه مع نقص أكسجين</li><li>HCO3 مرتفع / منخفض: جفاف أو فقد سوائل (حسب المراجع)</li><li>pO2 منخفض: فقر دم أو صعوبة تنفس (حسب المراجع)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>تفسير ABG الحديث: pCO2 مرتفع = فشل تهوية (حماض تنفسي) في COPD وغيره؛ HCO3 يعكس الجانب الأيضي. اعتمد التفسير الكامل في دليل ABG.</p></div><ul><li>اشرح أن وخز الشريان أكثر ألماً من الوريد</li><li>أبلغ المعمل بأكسجين مكمل أو إعدادات جهاز التنفس</li><li>ضغط ميكانيكي 5 دقائق على موضع الوخز، ثم ضمادة ضاغطة 30 دقيقة بعد توقف النزف</li><li>راقب النزف</li></ul><h4>11) تصوير الأوردة (Venogram)</h4><p>أشعة على تدفق الدم في الأوردة لتحديد الجلطات وحالة الصمامات الوريدية، بصبغة يود.</p><ul><li>قبل: راجع الكيمياء (BUN، كرياتينين)، حساسية يود/مأكولات بحرية، موافقة</li><li>اشرح الآثار: احمرار الوجه، غثيان، رغبة بالتبول، ألم صدر</li><li>بعد: نزف الموضع وعدوى (احمرار، حرارة، صديد)، سوائل زائدة</li></ul><h4>12) مقياس التأكسج النبضي (Pulse oximetry)</h4><p>ضوء تحت أحمر يمر عبر السرير الظفري أو الجلد؛ مقدار الضوء النافذ يحدد التشبع المحيطي، أما التشبع الكامل ففي ABG.</p><ul><li>ضع الحساس على الإصبع فوق الظفر، أو أصبع القدم، أو شحمة الأذن، أو جسر الأنف</li><li>نظف الموضع</li><li>طلاء الأظافر أو الأظافر الصناعية يشوش على القراءة</li><li>أيضاً: ضعف التروية والبرودة وسوء الحركة يشوشون</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li>إيقاف ميتفورمين قبل الصبغة حسب البروتوكول</li><li>ملاحظة: الحساسية لليود لا تعني دائماً حساسية الصبغة لكن بلّغ الطبيب</li><li>شرب سوائل بعد الصبغة</li></ul>"
-    },
-    "signs": {
-      "ar": "<p>أعراض الصبغة: احمرار الوجه، غثيان، رغبة في التبول، ألم صدر، وطفح — وأخطرها حساسية مفرطة (راجع <a href=\"/diseases/dis-081\">الحساسية</a>).</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قبل أي فحص</strong><p>تحقق من الهوية والموافقة والحساسية والكلى والصيام</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أثناء الفحص</strong><p>طمّن المريض، سجل العلامات، جهز أدوية الطوارئ</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>بعد الفحص</strong><p>موضع الحقن، العلامات الحيوية، النبض البعيد، السوائل</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>التوثيق</strong><p>الوقت والموضع وحالة المريض</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>نزيف أو هيماتوما في موضع القسطرة</li><li>برودة أو شحوب الطرف</li><li>ألم صدر أو اضطراب نظم بعد الفحص</li><li>طفح أو ضيق نفس بعد الصبغة</li><li>بول قليل بعد الصبغة</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرح سبب الفحص والخطوات</li><li>ابقَ ساكناً عند الطلب</li><li>ارفع شكواك فوراً</li><li>اشرب كثيراً بعد الصبغة</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "القسطرة تحتاج NPO وفحص الكلى والحساسية",
-      "بعد القسطرة: راحة 8 ساعات والرجل مفرودة وضغط الموضع",
-      "الصبغة تتطلب سوائل كثيرة",
-      "INR للوارفارين وPTT للهيبارين",
-      "لا حقن عضلية قبل أخذ عينات الإنزيمات",
-      "طلاء الأظافر يشوش التأكسج"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "بعد قسطرة فخذية:"
-      },
-      "options": [
-        {
-          "ar": "ابق الرجل مفرودة 8 ساعات"
-        },
-        {
-          "ar": "امش فوراً"
-        },
-        {
-          "ar": "اثنِ الرجل"
-        },
-        {
-          "ar": "لا تراقب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "منع النزف."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل الصبغة تسأل عن:"
-      },
-      "options": [
-        {
-          "ar": "حساسية اليود"
-        },
-        {
-          "ar": "الأذن"
-        },
-        {
-          "ar": "الشعر"
-        },
-        {
-          "ar": "السمع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قد يتحسس."
-      }
-    },
-    {
-      "q": {
-        "ar": "INR يتابع:"
-      },
-      "options": [
-        {
-          "ar": "وارفارين"
-        },
-        {
-          "ar": "هيبارين"
-        },
-        {
-          "ar": "أسبرين"
-        },
-        {
-          "ar": "ستاتين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "PT/INR."
-      }
-    },
-    {
-      "q": {
-        "ar": "يشوش على التأكسج:"
-      },
-      "options": [
-        {
-          "ar": "طلاء الأظافر"
-        },
-        {
-          "ar": "العطر"
-        },
-        {
-          "ar": "النظارة"
-        },
-        {
-          "ar": "الحذاء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يعيق الضوء."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد ABG:"
-      },
-      "options": [
-        {
-          "ar": "ضغط 5 دقائق"
-        },
-        {
-          "ar": "لا ضغط"
-        },
-        {
-          "ar": "تدليك"
-        },
-        {
-          "ar": "ثلج فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "منع النزف."
-      }
-    },
-    {
-      "q": {
-        "ar": "هولتر لا يسمح:"
-      },
-      "options": [
-        {
-          "ar": "استحمام"
-        },
-        {
-          "ar": "مشي"
-        },
-        {
-          "ar": "أكل"
-        },
-        {
-          "ar": "نوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الجهاز لا يبتل."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ACC/AHA diagnostic guidelines"
-    },
-    {
-      "title": "Society of Cardiovascular Angiography and Interventions (SCAI) post-cath care"
-    }
+  "en": [
+   "Catheterization requires NPO and checking kidney function and allergies",
+   "After catheterization: 8 hours of rest, the leg kept straight, and pressure on the site",
+   "Contrast requires plenty of fluids",
+   "INR for warfarin and PTT for heparin",
+   "No IM injections before drawing enzyme samples",
+   "Nail polish interferes with oximetry"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "بعد قسطرة فخذية:",
+    "en": "After femoral catheterization:"
+   },
+   "options": [
+    {
+     "ar": "ابق الرجل مفرودة 8 ساعات",
+     "en": "Keep the leg straight for 8 hours"
+    },
+    {
+     "ar": "امش فوراً",
+     "en": "Walk immediately"
+    },
+    {
+     "ar": "اثنِ الرجل",
+     "en": "Bend the leg"
+    },
+    {
+     "ar": "لا تراقب",
+     "en": "Do not monitor"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "منع النزف.",
+    "en": "To prevent bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل الصبغة تسأل عن:",
+    "en": "Before contrast, you ask about:"
+   },
+   "options": [
+    {
+     "ar": "حساسية اليود",
+     "en": "Iodine allergy"
+    },
+    {
+     "ar": "الأذن",
+     "en": "The ear"
+    },
+    {
+     "ar": "الشعر",
+     "en": "The hair"
+    },
+    {
+     "ar": "السمع",
+     "en": "Hearing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قد يتحسس.",
+    "en": "The patient may be allergic."
+   }
+  },
+  {
+   "q": {
+    "ar": "INR يتابع:",
+    "en": "INR monitors:"
+   },
+   "options": [
+    {
+     "ar": "وارفارين",
+     "en": "Warfarin"
+    },
+    {
+     "ar": "هيبارين",
+     "en": "Heparin"
+    },
+    {
+     "ar": "أسبرين",
+     "en": "Aspirin"
+    },
+    {
+     "ar": "ستاتين",
+     "en": "Statin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "PT/INR.",
+    "en": "PT/INR."
+   }
+  },
+  {
+   "q": {
+    "ar": "يشوش على التأكسج:",
+    "en": "Interferes with oximetry:"
+   },
+   "options": [
+    {
+     "ar": "طلاء الأظافر",
+     "en": "Nail polish"
+    },
+    {
+     "ar": "العطر",
+     "en": "Perfume"
+    },
+    {
+     "ar": "النظارة",
+     "en": "Glasses"
+    },
+    {
+     "ar": "الحذاء",
+     "en": "Shoes"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يعيق الضوء.",
+    "en": "It blocks the light."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد ABG:",
+    "en": "After ABG:"
+   },
+   "options": [
+    {
+     "ar": "ضغط 5 دقائق",
+     "en": "Pressure for 5 minutes"
+    },
+    {
+     "ar": "لا ضغط",
+     "en": "No pressure"
+    },
+    {
+     "ar": "تدليك",
+     "en": "Massage"
+    },
+    {
+     "ar": "ثلج فقط",
+     "en": "Ice only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "منع النزف.",
+    "en": "To prevent bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "هولتر لا يسمح:",
+    "en": "Holter does not allow:"
+   },
+   "options": [
+    {
+     "ar": "استحمام",
+     "en": "Bathing"
+    },
+    {
+     "ar": "مشي",
+     "en": "Walking"
+    },
+    {
+     "ar": "أكل",
+     "en": "Eating"
+    },
+    {
+     "ar": "نوم",
+     "en": "Sleeping"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الجهاز لا يبتل.",
+    "en": "The device must not get wet."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ACC/AHA diagnostic guidelines"
+  },
+  {
+   "title": "Society of Cardiovascular Angiography and Interventions (SCAI) post-cath care"
+  }
+ ]
 }

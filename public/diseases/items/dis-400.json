@@ -1,171 +1,210 @@
 {
-  "id": "dis-400",
-  "num": 400,
-  "system": "skin",
-  "icon": "💧",
-  "level": 1,
-  "target": "diseases",
-  "title": {
-    "ar": "العرق الزائد",
-    "en": "Hyperhidrosis (Excessive Sweating)"
+ "id": "dis-400",
+ "num": 400,
+ "system": "skin",
+ "icon": "💧",
+ "level": 1,
+ "target": "diseases",
+ "title": {
+  "ar": "العرق الزائد",
+  "en": "Hyperhidrosis (Excessive Sweating)"
+ },
+ "teaser": {
+  "ar": "مريض بيشتكي إن إيده بتتزحلق من كتر العرق: إزاي تفرّق بين العرق الأولي والعرق اللي وراه مرض (الغدة الدرقية أو هورنر)، وإيه سلّم العلاج من المضاد الموضعي لحد الجراحة.",
+  "en": "A patient complains that things slip from his hands because of sweating: how to tell primary sweating from sweating caused by disease (thyroid or Horner), and the treatment ladder from topical antiperspirant to surgery."
+ },
+ "chips": [
+  {
+   "ar": "عرق اليدين",
+   "en": "Sweaty hands"
   },
-  "teaser": {
-    "ar": "مريض بيشتكي إن إيده بتتزحلق من كتر العرق: إزاي تفرّق بين العرق الأولي والعرق اللي وراه مرض (الغدة الدرقية أو هورنر)، وإيه سلّم العلاج من المضاد الموضعي لحد الجراحة."
+  {
+   "ar": "Aluminum chloride 20%",
+   "en": "Aluminum chloride 20%"
   },
-  "chips": [
-    {
-      "ar": "عرق اليدين"
-    },
-    {
-      "ar": "Aluminum chloride 20%"
-    },
-    {
-      "ar": "استبعاد الغدة الدرقية"
-    }
+  {
+   "ar": "استبعاد الغدة الدرقية",
+   "en": "Rule out thyroid disease"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>العرق الزائد (Hyperhidrosis) إن الجسم يعرق <b>أكتر من اللازم</b> عن احتياج تنظيم الحرارة. المريض بيجي يشتكي إنه بيعرق زيادة عن الطبيعي، وخصوصاً <b>كف اليد</b> لدرجة إن الحاجة بتتزحلق من إيده.</p><div class=\"cs-stats\"><div><b>2</b><span>مرضين لازم تستبعدهم الأول</span></div><div><b>20%</b><span>تركيز Aluminum chloride الموضعي</span></div><div><b>4</b><span>درجات علاج من البسيط للجراحة</span></div></div><h4>نوعين أساسيين (إضافة للتفهّم)</h4><table><thead><tr><th>النوع</th><th>المعنى</th></tr></thead><tbody><tr><td>أولي (Primary focal)</td><td>عرق زيادة في أماكن محددة (كف، إبط، قدم، وش) من غير مرض وراه، غالباً من الصغر</td></tr><tr><td>ثانوي (Secondary)</td><td>سببه مرض أو دوا: فرط الغدة الدرقية، سكر (هبوط السكر)، عدوى، سن اليأس، أدوية، أورام، وغيرها — وغالباً عرق معمّم أو بالليل</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>في الحالة دي لازم تستبعد حاجتين</strong><ul><li><b>فرط نشاط الغدة الدرقية (Hyperthyroidism):</b> المريض حاسس برفرفة وزيادة ضربات القلب؟ بيرتعش (رعشة في اليدين)؟ حاسس بحرّ مستمر؟ في تضخم في الغدة عند الفحص؟ لو شاكك اطلب تحليل وظائف الغدة الدرقية.</li><li><b>متلازمة هورنر (Horner syndrome):</b> عرق كتير على <b>ناحية واحدة</b> من الوش + ضيق في حدقة العين (Miosis).</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>في هورنر الأصل إن العرق <b>بيقل</b> (Anhidrosis) في الناحية المصابة، والناحية السليمة هي اللي تبان إنها بتعرق أكتر. يعني «عرق من ناحية واحدة + حدقة ضيقة» علامة تحتاج طبيب ومتابعة، مش علاج موضعي.</p></div>[[slot:dis-400-ladder|سلّم علاج العرق الزائد|/diseases/img/dis-400-ladder.svg]]",
+   "en": "<p>Hyperhidrosis means the body sweats <b>more than needed</b> for temperature regulation. The patient complains of sweating more than normal, especially the <b>palms</b>, to the point that things slip from his hands.</p><div class=\"cs-stats\"><div><b>2</b><span>diseases you must rule out first</span></div><div><b>20%</b><span>strength of topical Aluminum chloride</span></div><div><b>4</b><span>treatment steps from simple to surgery</span></div></div><h4>Two main types (added for understanding)</h4><table><thead><tr><th>Type</th><th>Meaning</th></tr></thead><tbody><tr><td>Primary focal</td><td>Excess sweating in specific areas (palms, armpits, feet, face) without an underlying disease, usually since childhood</td></tr><tr><td>Secondary</td><td>Caused by a disease or drug: hyperthyroidism, diabetes (hypoglycemia), infection, menopause, medications, tumors, and others — usually generalized or night sweating</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>In this case you must rule out two things</strong><ul><li><b>Hyperthyroidism:</b> Does the patient feel palpitations and a fast heartbeat? Tremor (shaking hands)? Constantly feeling hot? An enlarged gland on exam? If you suspect it, request thyroid function tests.</li><li><b>Horner syndrome:</b> heavy sweating on <b>one side</b> of the face + a constricted pupil (Miosis).</li></ul></div><div class=\"cs-box cs-warning\"><strong>Update</strong><p>In Horner syndrome, sweating actually <b>decreases</b> (Anhidrosis) on the affected side, and the healthy side is the one that appears to sweat more. So \"one-sided sweating + a small pupil\" is a sign that needs a physician and follow-up, not topical treatment.</p></div>[[slot:dis-400-ladder|Hyperhidrosis treatment ladder|/diseases/img/dis-400-ladder.svg]]"
+  },
+  "causes": {
+   "ar": "<h4>أسباب العرق الثانوي (لازم تفكر فيها)</h4><ul><li>فرط الغدة الدرقية (الأهم حسب المراجع)</li><li>متلازمة هورنر (عرق غير متماثل بناحية واحدة)</li><li>هبوط السكر والسكر عموماً</li><li>العدوى المزمنة (الدرن، الحمى المالطية) والأورام (الليمفوما)</li><li>سن اليأس والهرمونات</li><li>أدوية: بعض مضادات الاكتئاب، مسكنات، أدوية خافضة للحرارة…</li><li>القلق والتوتر وزيادة نشاط الجهاز السمبثاوي</li></ul><div class=\"cs-box cs-info\"><strong>ملاحظة</strong><p>الأسباب الثانوية فوق (غير الغدة الدرقية وهورنر) إضافة تثقيفية للممرض لتعرف تسأل صح.</p></div>",
+   "en": "<h4>Causes of secondary sweating (you must consider them)</h4><ul><li>Hyperthyroidism (the most important)</li><li>Horner syndrome (asymmetric one-sided sweating)</li><li>Hypoglycemia and diabetes in general</li><li>Chronic infections (tuberculosis, brucellosis) and tumors (lymphoma)</li><li>Menopause and hormones</li><li>Medications: some antidepressants, analgesics, antipyretics…</li><li>Anxiety, stress, and increased sympathetic activity</li></ul><div class=\"cs-box cs-info\"><strong>Note</strong><p>The secondary causes above (other than thyroid and Horner) are an educational addition for the nurse to know how to ask correctly.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>إيه اللي يقوله المريض؟</h4><ul><li>شكوى من عرق زيادة عن الطبيعي، خصوصاً في كف اليد</li><li>الحاجة بتتزحلق من يده من كتر العرق</li></ul><h4>اسأل المريض عشان تستبعد السبب</h4><table><thead><tr><th>السؤال/العلامة</th><th>بيدل على</th></tr></thead><tbody><tr><td>برفرفة وزيادة ضربات القلب</td><td>فرط الغدة الدرقية</td></tr><tr><td>رعشة في اليدين أو إحساس مستمر بالحرّ</td><td>فرط الغدة الدرقية</td></tr><tr><td>تضخم في الغدة بالفحص</td><td>فرط الغدة الدرقية</td></tr><tr><td>عرق كتير على ناحية واحدة + حدقة ضيقة (Miosis)</td><td>متلازمة هورنر</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>نصيحة للممرض</strong><p>سجّل: مكان العرق (كفين/إبط/وش/معمّم)، بيحصل بالليل ولا لا، نزول وزن، حرارة، أدوية جديدة. ده بيساعد الطبيب يفرّق أولي من ثانوي.</p></div>",
+   "en": "<h4>What does the patient say?</h4><ul><li>Complaint of sweating more than normal, especially in the palms</li><li>Things slip from his hand because of the sweat</li></ul><h4>Ask the patient to rule out a cause</h4><table><thead><tr><th>Question/sign</th><th>Suggests</th></tr></thead><tbody><tr><td>Palpitations and fast heartbeat</td><td>Hyperthyroidism</td></tr><tr><td>Hand tremor or a constant feeling of heat</td><td>Hyperthyroidism</td></tr><tr><td>Enlarged gland on exam</td><td>Hyperthyroidism</td></tr><tr><td>Heavy sweating on one side + a small pupil (Miosis)</td><td>Horner syndrome</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>Tip for the nurse</strong><p>Record: site of sweating (palms/armpits/face/generalized), whether it happens at night, weight loss, fever, new medications. This helps the physician tell primary from secondary.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>وظائف الغدة الدرقية (TSH, T3, T4) لو في شك</li><li>سكر الدم لو في أعراض</li><li>فحص إكلينيكي للعين والغدة (للتأكد من هورنر)</li><li>باقي الفحوصات حسب شك الطبيب (الثانوي)</li></ul>",
+   "en": "<ul><li>Thyroid function tests (TSH, T3, T4) if suspected</li><li>Blood glucose if there are symptoms</li><li>Clinical exam of the eye and the gland (to check for Horner)</li><li>Other tests per the physician's suspicion (secondary)</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>١) العلاج الطبي (Medical)</h4><table><thead><tr><th>الدواء</th><th>الطريقة</th></tr></thead><tbody><tr><td><b>Aluminum chloride 20% in alcohol base</b> — بيتركّب في الصيدليات الكبيرة</td><td>يوضع المحلول على اليدين ويُترك ١٠ دقائق (حسب المراجع)، ويستخدم مرة أو مرتين في الأسبوع ثم مرة في اليوم لمدة أسبوع (الصياغة في المراجع مش واضحة)</td></tr><tr><td>Sunsola mouth wash (غسول فم)</td><td>المراجع تذكره كإنه ممكن يستخدم في الحالات دي — استخدام غير معتاد لم أتحقق منه</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الطريقة الأشهر في الإرشادات: Aluminum chloride 20% يوضع على جلد <b>جاف</b> قبل النوم (٦–٨ ساعات) ويُغسل الصبح، يومياً لحد التحسن ثم يتقلل لمرتين في الأسبوع. ممكن يسبب تهيج أو حرقان: وقتها يُقلل التكرار أو يُضاف كريم هيدروكورتيزون خفيف بأمر الطبيب. للوش (Craniofacial) الخط الأول Glycopyrrolate الموضعي. اتبع روشتة الطبيب وتركيز الصيدلية.</p></div><h4>٢) العلاج الجراحي / التدخلي (Surgical)</h4><ul><li><b>حقن توكسين البوتولينيوم (Botulinum toxin)</b></li><li><b>قطع العصب السمبثاوي (Sympathectomy)</b>: عملية مشهورة بس غالباً بيرجع العرق تاني (وممكن يظهر عرق تعويضي في أماكن تانية)</li></ul><h4>٣) خيارات تانية (إضافة)</h4><ul><li>الأيونتوفوريسيس (Iontophoresis) للكفين والقدمين</li><li>أدوية مضادة للكولين بالفم (مثل Glycopyrrolate) بأمر طبيب — جفاف الفم والإمساك من أعراضها</li><li>علاج السبب في الثانوي (الغدة الدرقية مثلاً)</li></ul>",
+   "en": "<h4>1) Medical treatment</h4><table><thead><tr><th>Drug</th><th>Method</th></tr></thead><tbody><tr><td><b>Aluminum chloride 20% in alcohol base</b> — compounded in large pharmacies</td><td>The solution is applied to the hands and left for 10 minutes, used once or twice a week, then once a day for a week (the original wording is unclear)</td></tr><tr><td>Sunsola mouth wash</td><td>Mentioned as possibly usable in these cases — an unusual use that has not been verified</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The most common method in guidelines: Aluminum chloride 20% is applied to <b>dry</b> skin at bedtime (6–8 hours) and washed off in the morning, daily until improvement, then reduced to twice a week. It may cause irritation or burning: then reduce the frequency or add a mild hydrocortisone cream per physician order. For the face (Craniofacial), the first line is topical Glycopyrrolate. Follow the physician's prescription and the pharmacy's strength.</p></div><h4>2) Surgical / interventional treatment</h4><ul><li><b>Botulinum toxin injection</b></li><li><b>Sympathectomy</b>: a well-known operation, but sweating often returns (and compensatory sweating may appear in other areas)</li></ul><h4>3) Other options (addition)</h4><ul><li>Iontophoresis for the palms and feet</li><li>Oral anticholinergic drugs (such as Glycopyrrolate) per physician order — dry mouth and constipation are side effects</li><li>Treating the cause in secondary cases (the thyroid, for example)</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسمع واسأل</strong><p>سجّل مكان العرق وبداية الشكوى وتأثيرها على شغله وحياته. اسأل عن الأعراض: رفرفة، رعشة، حرّ، وزن، حرارة، أدوية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>استبعد الخطير</strong><p>لو في أعراض غدة درقية أو حدقة ضيقة أو عرق بناحية واحدة: بلّغ الطبيب بدل ما تكتفي بنصايح موضعية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>قيس العلامات الحيوية</strong><p>نبض، ضغط، حرارة، وسكر دم عشوائي لو مناسب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>علّم طريقة الاستخدام</strong><p>المحلول على جلد جاف ونضيف، بعيد عن العين والجروح والجلد المتهتك؛ اغسل اليد بعد المدة المحددة؛ ما يتحطش على جلد مجروح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب التهيج</strong><p>احمرار، حرقان، هرش: بلّغ الطبيب. الأكل أو الغسل الصح بيقلل المشكلة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>تابع وحوّل</strong><p>لو الموضعي ما نفعش خلال أسابيع: تحويل لأخصائي جلدية للبوتولينيوم أو الخيارات الأخرى.</p></div></div></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>مكان العرق، الشدة، الأعراض المصاحبة، الدواء الموضعي وطريقة استخدامه، رد الفعل الجلدي، ومين اتبلّغ.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Listen and ask</strong><p>Record the site of sweating, onset of the complaint, and its effect on work and life. Ask about symptoms: palpitations, tremor, heat, weight, fever, medications.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Rule out the serious</strong><p>If there are thyroid symptoms, a small pupil, or one-sided sweating: notify the physician instead of only giving topical advice.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Measure vital signs</strong><p>Pulse, blood pressure, temperature, and random blood glucose if appropriate.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Teach how to use it</strong><p>The solution goes on dry, clean skin, away from the eyes, wounds, and broken skin; wash the hand after the set time; do not apply on injured skin.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Monitor irritation</strong><p>Redness, burning, itching: notify the physician. Correct use and washing reduce the problem.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Follow up and refer</strong><p>If topical treatment does not work within weeks: refer to a dermatologist for botulinum or other options.</p></div></div></div><div class=\"cs-box cs-info\"><strong>Documentation</strong><p>Site of sweating, severity, associated symptoms, the topical drug and how it is used, skin reaction, and who was notified.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب لو</strong><ul><li>عرق بالليل مع نزول وزن أو حرارة مستمرة</li><li>رفرفة قلب، رعشة، حرّ مستمر (غدة درقية)</li><li>عرق بناحية واحدة من الوش مع ضيق حدقة أو ارتخاء جفن (هورنر)</li><li>عرق بارد مع ألم صدر أو ضيق نفس أو دوخة</li><li>تهيج جلدي شديد أو عدوى في مكان الدواء</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician if</strong><ul><li>Night sweats with weight loss or persistent fever</li><li>Palpitations, tremor, constant heat (thyroid)</li><li>Sweating on one side of the face with a small pupil or drooping eyelid (Horner)</li><li>Cold sweat with chest pain, shortness of breath, or dizziness</li><li>Severe skin irritation or infection at the application site</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>ضع المحلول على جلد جاف ونضيف، وبعيد عن العين.</li><li>اغسل إيدك بعد الاستخدام ومتلمسش عينك.</li><li>الاستمرار بالدوا الموضعي ضروري، والنتيجة بتاخد أيام.</li><li>لو في تهيج أو الدوا ما نفعش: ارجع للطبيب، في خيارات تانية (حقن البوتولينيوم).</li><li>لبس قطن، تغيير الشراب والملابس المبللة، ومضاد التعرق في الإبط.</li><li>العملية الجراحية مش مضمونة وممكن العرق يرجع أو يظهر في مكان تاني.</li></ul>",
+   "en": "<ul><li>Apply the solution to dry, clean skin, away from the eyes.</li><li>Wash your hands after use and do not touch your eyes.</li><li>Continuing the topical medicine is necessary, and results take days.</li><li>If there is irritation or the medicine does not work: go back to the physician; there are other options (botulinum injections).</li><li>Wear cotton, change wet socks and clothes, and use an antiperspirant for the armpits.</li><li>Surgery is not guaranteed, and sweating may return or appear in another place.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "العرق الزائد الأولي أشهر من الثانوي؛ لكن لازم تستبعد فرط الغدة الدرقية وهورنر",
+   "Aluminum chloride 20% في أساس كحولي هو العلاج الموضعي الأول",
+   "الجراحة (قطع العصب السمبثاوي) غالباً بترجع الأعراض بعدها",
+   "حقن البوتولينيوم خيار تاني قبل الجراحة",
+   "أي عرق معمّم بالليل مع نزول وزن أو حرارة يحتاج تقييم الطبيب"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>العرق الزائد (Hyperhidrosis) إن الجسم يعرق <b>أكتر من اللازم</b> عن احتياج تنظيم الحرارة. المريض بيجي يشتكي إنه بيعرق زيادة عن الطبيعي، وخصوصاً <b>كف اليد</b> لدرجة إن الحاجة بتتزحلق من إيده.</p><div class=\"cs-stats\"><div><b>2</b><span>مرضين لازم تستبعدهم الأول</span></div><div><b>20%</b><span>تركيز Aluminum chloride الموضعي</span></div><div><b>4</b><span>درجات علاج من البسيط للجراحة</span></div></div><h4>نوعين أساسيين (إضافة للتفهّم)</h4><table><thead><tr><th>النوع</th><th>المعنى</th></tr></thead><tbody><tr><td>أولي (Primary focal)</td><td>عرق زيادة في أماكن محددة (كف، إبط، قدم، وش) من غير مرض وراه، غالباً من الصغر</td></tr><tr><td>ثانوي (Secondary)</td><td>سببه مرض أو دوا: فرط الغدة الدرقية، سكر (هبوط السكر)، عدوى، سن اليأس، أدوية، أورام، وغيرها — وغالباً عرق معمّم أو بالليل</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>في الحالة دي لازم تستبعد حاجتين</strong><ul><li><b>فرط نشاط الغدة الدرقية (Hyperthyroidism):</b> المريض حاسس برفرفة وزيادة ضربات القلب؟ بيرتعش (رعشة في اليدين)؟ حاسس بحرّ مستمر؟ في تضخم في الغدة عند الفحص؟ لو شاكك اطلب تحليل وظائف الغدة الدرقية.</li><li><b>متلازمة هورنر (Horner syndrome):</b> عرق كتير على <b>ناحية واحدة</b> من الوش + ضيق في حدقة العين (Miosis).</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>في هورنر الأصل إن العرق <b>بيقل</b> (Anhidrosis) في الناحية المصابة، والناحية السليمة هي اللي تبان إنها بتعرق أكتر. يعني «عرق من ناحية واحدة + حدقة ضيقة» علامة تحتاج طبيب ومتابعة، مش علاج موضعي.</p></div>[[slot:dis-400-ladder|سلّم علاج العرق الزائد|/diseases/img/dis-400-ladder.svg]]"
-    },
-    "causes": {
-      "ar": "<h4>أسباب العرق الثانوي (لازم تفكر فيها)</h4><ul><li>فرط الغدة الدرقية (الأهم حسب المراجع)</li><li>متلازمة هورنر (عرق غير متماثل بناحية واحدة)</li><li>هبوط السكر والسكر عموماً</li><li>العدوى المزمنة (الدرن، الحمى المالطية) والأورام (الليمفوما)</li><li>سن اليأس والهرمونات</li><li>أدوية: بعض مضادات الاكتئاب، مسكنات، أدوية خافضة للحرارة…</li><li>القلق والتوتر وزيادة نشاط الجهاز السمبثاوي</li></ul><div class=\"cs-box cs-info\"><strong>ملاحظة</strong><p>الأسباب الثانوية فوق (غير الغدة الدرقية وهورنر) إضافة تثقيفية للممرض لتعرف تسأل صح.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>إيه اللي يقوله المريض؟</h4><ul><li>شكوى من عرق زيادة عن الطبيعي، خصوصاً في كف اليد</li><li>الحاجة بتتزحلق من يده من كتر العرق</li></ul><h4>اسأل المريض عشان تستبعد السبب</h4><table><thead><tr><th>السؤال/العلامة</th><th>بيدل على</th></tr></thead><tbody><tr><td>برفرفة وزيادة ضربات القلب</td><td>فرط الغدة الدرقية</td></tr><tr><td>رعشة في اليدين أو إحساس مستمر بالحرّ</td><td>فرط الغدة الدرقية</td></tr><tr><td>تضخم في الغدة بالفحص</td><td>فرط الغدة الدرقية</td></tr><tr><td>عرق كتير على ناحية واحدة + حدقة ضيقة (Miosis)</td><td>متلازمة هورنر</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>نصيحة للممرض</strong><p>سجّل: مكان العرق (كفين/إبط/وش/معمّم)، بيحصل بالليل ولا لا، نزول وزن، حرارة، أدوية جديدة. ده بيساعد الطبيب يفرّق أولي من ثانوي.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>وظائف الغدة الدرقية (TSH, T3, T4) لو في شك</li><li>سكر الدم لو في أعراض</li><li>فحص إكلينيكي للعين والغدة (للتأكد من هورنر)</li><li>باقي الفحوصات حسب شك الطبيب (الثانوي)</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>١) العلاج الطبي (Medical)</h4><table><thead><tr><th>الدواء</th><th>الطريقة</th></tr></thead><tbody><tr><td><b>Aluminum chloride 20% in alcohol base</b> — بيتركّب في الصيدليات الكبيرة</td><td>يوضع المحلول على اليدين ويُترك ١٠ دقائق (حسب المراجع)، ويستخدم مرة أو مرتين في الأسبوع ثم مرة في اليوم لمدة أسبوع (الصياغة في المراجع مش واضحة)</td></tr><tr><td>Sunsola mouth wash (غسول فم)</td><td>المراجع تذكره كإنه ممكن يستخدم في الحالات دي — استخدام غير معتاد لم أتحقق منه</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الطريقة الأشهر في الإرشادات: Aluminum chloride 20% يوضع على جلد <b>جاف</b> قبل النوم (٦–٨ ساعات) ويُغسل الصبح، يومياً لحد التحسن ثم يتقلل لمرتين في الأسبوع. ممكن يسبب تهيج أو حرقان: وقتها يُقلل التكرار أو يُضاف كريم هيدروكورتيزون خفيف بأمر الطبيب. للوش (Craniofacial) الخط الأول Glycopyrrolate الموضعي. اتبع روشتة الطبيب وتركيز الصيدلية.</p></div><h4>٢) العلاج الجراحي / التدخلي (Surgical)</h4><ul><li><b>حقن توكسين البوتولينيوم (Botulinum toxin)</b></li><li><b>قطع العصب السمبثاوي (Sympathectomy)</b>: عملية مشهورة بس غالباً بيرجع العرق تاني (وممكن يظهر عرق تعويضي في أماكن تانية)</li></ul><h4>٣) خيارات تانية (إضافة)</h4><ul><li>الأيونتوفوريسيس (Iontophoresis) للكفين والقدمين</li><li>أدوية مضادة للكولين بالفم (مثل Glycopyrrolate) بأمر طبيب — جفاف الفم والإمساك من أعراضها</li><li>علاج السبب في الثانوي (الغدة الدرقية مثلاً)</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسمع واسأل</strong><p>سجّل مكان العرق وبداية الشكوى وتأثيرها على شغله وحياته. اسأل عن الأعراض: رفرفة، رعشة، حرّ، وزن، حرارة، أدوية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>استبعد الخطير</strong><p>لو في أعراض غدة درقية أو حدقة ضيقة أو عرق بناحية واحدة: بلّغ الطبيب بدل ما تكتفي بنصايح موضعية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>قيس العلامات الحيوية</strong><p>نبض، ضغط، حرارة، وسكر دم عشوائي لو مناسب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>علّم طريقة الاستخدام</strong><p>المحلول على جلد جاف ونضيف، بعيد عن العين والجروح والجلد المتهتك؛ اغسل اليد بعد المدة المحددة؛ ما يتحطش على جلد مجروح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب التهيج</strong><p>احمرار، حرقان، هرش: بلّغ الطبيب. الأكل أو الغسل الصح بيقلل المشكلة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>تابع وحوّل</strong><p>لو الموضعي ما نفعش خلال أسابيع: تحويل لأخصائي جلدية للبوتولينيوم أو الخيارات الأخرى.</p></div></div></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>مكان العرق، الشدة، الأعراض المصاحبة، الدواء الموضعي وطريقة استخدامه، رد الفعل الجلدي، ومين اتبلّغ.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب لو</strong><ul><li>عرق بالليل مع نزول وزن أو حرارة مستمرة</li><li>رفرفة قلب، رعشة، حرّ مستمر (غدة درقية)</li><li>عرق بناحية واحدة من الوش مع ضيق حدقة أو ارتخاء جفن (هورنر)</li><li>عرق بارد مع ألم صدر أو ضيق نفس أو دوخة</li><li>تهيج جلدي شديد أو عدوى في مكان الدواء</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>ضع المحلول على جلد جاف ونضيف، وبعيد عن العين.</li><li>اغسل إيدك بعد الاستخدام ومتلمسش عينك.</li><li>الاستمرار بالدوا الموضعي ضروري، والنتيجة بتاخد أيام.</li><li>لو في تهيج أو الدوا ما نفعش: ارجع للطبيب، في خيارات تانية (حقن البوتولينيوم).</li><li>لبس قطن، تغيير الشراب والملابس المبللة، ومضاد التعرق في الإبط.</li><li>العملية الجراحية مش مضمونة وممكن العرق يرجع أو يظهر في مكان تاني.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "العرق الزائد الأولي أشهر من الثانوي؛ لكن لازم تستبعد فرط الغدة الدرقية وهورنر",
-      "Aluminum chloride 20% في أساس كحولي هو العلاج الموضعي الأول",
-      "الجراحة (قطع العصب السمبثاوي) غالباً بترجع الأعراض بعدها",
-      "حقن البوتولينيوم خيار تاني قبل الجراحة",
-      "أي عرق معمّم بالليل مع نزول وزن أو حرارة يحتاج تقييم الطبيب"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض يشتكي من عرق زائد، وقال إنه حاسس برفرفة وبيرتعش. أول حاجة تفكر فيها؟"
-      },
-      "options": [
-        {
-          "ar": "القلق العادي"
-        },
-        {
-          "ar": "فرط نشاط الغدة الدرقية"
-        },
-        {
-          "ar": "نقص فيتامين C"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الرفرفة والرعشة والحرّ مع العرق علامات فرط الغدة الدرقية فاطلب وظائف الغدة."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما هو العلاج الموضعي الأول للعرق الزائد حسب المراجع؟"
-      },
-      "options": [
-        {
-          "ar": "Aluminum chloride 20%"
-        },
-        {
-          "ar": "Dermovate"
-        },
-        {
-          "ar": "Brufen"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مركّب الألومنيوم كلورايد بتركيز 20% في كحول."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي من التالي يمكن اعتباره علاجاً جراحياً أو تدخلياً؟"
-      },
-      "options": [
-        {
-          "ar": "غسول الفم"
-        },
-        {
-          "ar": "قطع العصب السمبثاوي"
-        },
-        {
-          "ar": "كريم مرطب"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "Sympathectomy وحقن البوتولينيوم."
-      }
-    },
-    {
-      "q": {
-        "ar": "عرق على ناحية واحدة من الوش + ضيق في الحدقة يوحي بـ؟"
-      },
-      "options": [
-        {
-          "ar": "هورنر"
-        },
-        {
-          "ar": "الجرب"
-        },
-        {
-          "ar": "الأنيميا"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Miosis مع تغير التعرق ناحية واحدة = Horner syndrome."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AAFP: Hyperhidrosis — Management Options (Am Fam Physician 2018)"
-    },
-    {
-      "title": "The Treatment of Primary Focal Hyperhidrosis (PubMed 30817880)"
-    }
-  ],
-  "rx": [
-    {
-      "category": "الجلدية",
-      "condition_ar": "العرق الزائد",
-      "condition_en": "Hyperhidrosis",
-      "items": [
-        {
-          "drug_name": "Aluminum chloride 20% in alcohol base (تركيب صيدلية)",
-          "dose": "على اليدين الجافتين وتُترك ١٠ دقائق (حسب المراجع) — مرة أو مرتين أسبوعياً ثم مرة يومياً أسبوع",
-          "note": "التحضير في الصيدليات الكبيرة"
-        },
-        {
-          "drug_name": "Sunsola mouth wash",
-          "dose": "غير محدد",
-          "note": "تذكره المراجع للاستخدام في هذه الحالات؛ لم يتم التحقق منه"
-        }
-      ],
-      "clinical_note": "استبعد فرط الغدة الدرقية وهورنر أولاً؛ العلاج الجراحي: بوتولينيوم أو قطع العصب السمبثاوي."
-    }
+  "en": [
+   "Primary hyperhidrosis is more common than secondary, but you must rule out hyperthyroidism and Horner",
+   "Aluminum chloride 20% in an alcohol base is the first topical treatment",
+   "After surgery (sympathectomy), symptoms often return",
+   "Botulinum injections are another option before surgery",
+   "Any generalized night sweating with weight loss or fever needs physician evaluation"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض يشتكي من عرق زائد، وقال إنه حاسس برفرفة وبيرتعش. أول حاجة تفكر فيها؟",
+    "en": "A patient complains of excessive sweating and says he feels palpitations and is shaking. The first thing to think of?"
+   },
+   "options": [
+    {
+     "ar": "القلق العادي",
+     "en": "Ordinary anxiety"
+    },
+    {
+     "ar": "فرط نشاط الغدة الدرقية",
+     "en": "Hyperthyroidism"
+    },
+    {
+     "ar": "نقص فيتامين C",
+     "en": "Vitamin C deficiency"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الرفرفة والرعشة والحرّ مع العرق علامات فرط الغدة الدرقية فاطلب وظائف الغدة.",
+    "en": "Palpitations, tremor, and heat with sweating are signs of hyperthyroidism, so request thyroid function tests."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما هو العلاج الموضعي الأول للعرق الزائد حسب المراجع؟",
+    "en": "What is the first topical treatment for hyperhidrosis?"
+   },
+   "options": [
+    {
+     "ar": "Aluminum chloride 20%",
+     "en": "Aluminum chloride 20%"
+    },
+    {
+     "ar": "Dermovate",
+     "en": "Dermovate"
+    },
+    {
+     "ar": "Brufen",
+     "en": "Brufen"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مركّب الألومنيوم كلورايد بتركيز 20% في كحول.",
+    "en": "Compounded aluminum chloride at 20% in alcohol."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من التالي يمكن اعتباره علاجاً جراحياً أو تدخلياً؟",
+    "en": "Which of the following can be considered a surgical or interventional treatment?"
+   },
+   "options": [
+    {
+     "ar": "غسول الفم",
+     "en": "Mouthwash"
+    },
+    {
+     "ar": "قطع العصب السمبثاوي",
+     "en": "Sympathectomy"
+    },
+    {
+     "ar": "كريم مرطب",
+     "en": "Moisturizing cream"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "Sympathectomy وحقن البوتولينيوم.",
+    "en": "Sympathectomy and botulinum injections."
+   }
+  },
+  {
+   "q": {
+    "ar": "عرق على ناحية واحدة من الوش + ضيق في الحدقة يوحي بـ؟",
+    "en": "Sweating on one side of the face + a small pupil suggests:"
+   },
+   "options": [
+    {
+     "ar": "هورنر",
+     "en": "Horner"
+    },
+    {
+     "ar": "الجرب",
+     "en": "Scabies"
+    },
+    {
+     "ar": "الأنيميا",
+     "en": "Anemia"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Miosis مع تغير التعرق ناحية واحدة = Horner syndrome.",
+    "en": "Miosis with one-sided sweating change = Horner syndrome."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AAFP: Hyperhidrosis — Management Options (Am Fam Physician 2018)"
+  },
+  {
+   "title": "The Treatment of Primary Focal Hyperhidrosis (PubMed 30817880)"
+  }
+ ],
+ "rx": [
+  {
+   "category": "الجلدية",
+   "condition_ar": "العرق الزائد",
+   "condition_en": "Hyperhidrosis",
+   "items": [
+    {
+     "drug_name": "Aluminum chloride 20% in alcohol base (تركيب صيدلية)",
+     "dose": "على اليدين الجافتين وتُترك ١٠ دقائق (حسب المراجع) — مرة أو مرتين أسبوعياً ثم مرة يومياً أسبوع",
+     "note": "التحضير في الصيدليات الكبيرة"
+    },
+    {
+     "drug_name": "Sunsola mouth wash",
+     "dose": "غير محدد",
+     "note": "تذكره المراجع للاستخدام في هذه الحالات؛ لم يتم التحقق منه"
+    }
+   ],
+   "clinical_note": "استبعد فرط الغدة الدرقية وهورنر أولاً؛ العلاج الجراحي: بوتولينيوم أو قطع العصب السمبثاوي."
+  }
+ ]
 }

@@ -1,174 +1,219 @@
 {
-  "id": "dis-161",
-  "num": 161,
-  "system": "peds",
-  "icon": "🍼",
-  "level": 1,
-  "title": {
-    "ar": "التغذية الصناعية (ألبان الأطفال)",
-    "en": "Artificial Feeding (Infant Formula)"
+ "id": "dis-161",
+ "num": 161,
+ "system": "peds",
+ "icon": "🍼",
+ "level": 1,
+ "title": {
+  "ar": "التغذية الصناعية (ألبان الأطفال)",
+  "en": "Artificial Feeding (Infant Formula)"
+ },
+ "teaser": {
+  "ar": "إمتى نلجأ للبن صناعي؟ إزاي نختار النوع المناسب لسن الطفل وحالته (مبتسر، ارتجاع، حساسية لاكتوز)، وإزاي نحضّره بأمان.",
+  "en": "When do we turn to infant formula? How to choose the right type for the baby's age and condition (preterm, reflux, lactose intolerance), and how to prepare it safely."
+ },
+ "chips": [
+  {
+   "ar": "ألبان حسب السن",
+   "en": "Formula by age"
   },
-  "teaser": {
-    "ar": "إمتى نلجأ للبن صناعي؟ إزاي نختار النوع المناسب لسن الطفل وحالته (مبتسر، ارتجاع، حساسية لاكتوز)، وإزاي نحضّره بأمان."
+  {
+   "ar": "تحضير اللبن",
+   "en": "Preparing the formula"
   },
-  "chips": [
-    {
-      "ar": "ألبان حسب السن"
-    },
-    {
-      "ar": "تحضير اللبن"
-    },
-    {
-      "ar": "ارتجاع / لاكتوز"
-    }
+  {
+   "ar": "ارتجاع / لاكتوز",
+   "en": "Reflux / lactose"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>لبن الأم هو <b>الاختيار الأول</b> ولا يوجد لبن صناعي يعادله. التغذية الصناعية (Artificial feeding) بتتدي لما الطفل مش بياخد كفاية من لبن أمه أو لما الرضاعة الطبيعية مش ممكنة طبياً. ألبان الأطفال بتتصنع من لبن البقر بعد فصل جزء من الدهون وتعديل البروتين والفيتامينات والمعادن عشان تناسب احتياج الطفل في كل مرحلة.</p>\n<div class=\"cs-stats\"><div><b>1</b><span>لبن الأم الاختيار الأول</span></div><div><b>1 : 30</b><span>ملعقة لبن : 30 مل ماء مغلي (قاعدة عامة)</span></div><div><b>3 ساعات</b><span>حسب المراجع: اللبن المحضّر يُرمى بعدها</span></div></div>\n[[slot:dis-161-bottle|صورة: تحضير الرضعة الصناعية (قياس المسحوق والماء)]]\n<h4>اختيار اللبن حسب حالة الطفل (8 فئات)</h4>\n<table><thead><tr><th>رقم</th><th>الحالة / السن</th><th>نوع اللبن</th></tr></thead><tbody><tr><td>1</td><td>من اليوم الأول حتى 6 شهور</td><td>ألبان المرحلة 1 (First infant formula)</td></tr><tr><td>2</td><td>طفل طبيعي مش بياخد كفاية من أمه</td><td>نفس ألبان المرحلة 1</td></tr><tr><td>3</td><td>عدم تحمل اللاكتوز (Lactose intolerance)</td><td>ألبان خالية أو قليلة اللاكتوز</td></tr><tr><td>4</td><td>المبتسرين وقليلي الوزن</td><td>ألبان المبتسرين</td></tr><tr><td>5</td><td>الارتجاع والقيء (Regurgitation)</td><td>ألبان مضادة للارتجاع (AR)</td></tr><tr><td>6</td><td>من 6 إلى 12 شهر</td><td>ألبان المرحلة 2</td></tr><tr><td>7</td><td>أكتر من 6 شهور حتى 3 سنين</td><td>أغذية/ألبان الأطفال (Baby food)</td></tr><tr><td>8</td><td>من 12 شهر حتى 3 سنين</td><td>ألبان المرحلة 3 (Growing-up)</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>عبارة «Lactulose intolerance» المقصود بها <b>عدم تحمل اللاكتوز (Lactose intolerance)</b>، لأن اللاكتيولوز دواء ملين مش سكر لبن. كمان بعد عمر سنة ممكن الطفل ياخد لبن البقر العادي مع غذاء متنوع، وألبان «النمو» ما بقتش ضرورية حسب إرشادات منظمات التغذية. ألبان المبتسرين والارتجاع وعدم تحمل اللاكتوز بتتحدد بأمر الطبيب مش بالاختيار الذاتي.</p></div>",
+   "en": "<p>Breast milk is <b>the first choice</b>, and no formula equals it. Artificial feeding is given when the baby does not get enough from the mother's milk or when breastfeeding is medically not possible. Infant formulas are made from cow's milk after removing part of the fat and adjusting the protein, vitamins, and minerals to suit the baby's needs at each stage.</p>\n<div class=\"cs-stats\"><div><b>1</b><span>breast milk is the first choice</span></div><div><b>1 : 30</b><span>scoop of powder : 30 mL boiled water (general rule)</span></div><div><b>3 hours</b><span>prepared formula is discarded after this</span></div></div>\n[[slot:dis-161-bottle|Image: preparing a formula feed (measuring powder and water)]]\n<h4>Choosing formula by the baby's condition (8 categories)</h4>\n<table><thead><tr><th>No.</th><th>Condition / age</th><th>Type of formula</th></tr></thead><tbody><tr><td>1</td><td>From day one to 6 months</td><td>Stage 1 formulas (First infant formula)</td></tr><tr><td>2</td><td>Healthy baby not getting enough from the mother</td><td>The same stage 1 formulas</td></tr><tr><td>3</td><td>Lactose intolerance</td><td>Lactose-free or low-lactose formulas</td></tr><tr><td>4</td><td>Preterm and low-birth-weight babies</td><td>Preterm formulas</td></tr><tr><td>5</td><td>Reflux and vomiting (Regurgitation)</td><td>Anti-reflux formulas (AR)</td></tr><tr><td>6</td><td>From 6 to 12 months</td><td>Stage 2 formulas</td></tr><tr><td>7</td><td>Over 6 months up to 3 years</td><td>Baby foods/formulas (Baby food)</td></tr><tr><td>8</td><td>From 12 months to 3 years</td><td>Stage 3 formulas (Growing-up)</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>Update</strong><p>The phrase “Lactulose intolerance” actually means <b>Lactose intolerance</b>, because lactulose is a laxative drug, not milk sugar. Also, after age one the child can drink regular cow's milk with a varied diet, and “growing-up” formulas are no longer necessary according to nutrition organizations. Preterm, reflux, and lactose-intolerance formulas are chosen by physician order, not by self-selection.</p></div>"
+  },
+  "causes": {
+   "ar": "<h4>الحالات اللي بتحتاج لبن صناعي (دواعي الاستخدام)</h4>\n<ul><li>اللبن اللي بتنتجه الأم لا يكفي الطفل (حسب المراجع)</li><li>بروتوكول طبي: أم بتاخد أدوية ممنوعة مع الرضاعة، أو عدوى (مثلاً HIV حسب سياسة الدولة)، أو غياب الأم</li><li>حالات ولادية نادرة للطفل (مثل الجالاكتوزيميا) لا تحتمل اللبن العادي</li><li>غياب الأم أو مرضها الشديد</li></ul>\n<div class=\"cs-box cs-info\"><strong>معلومة</strong><p>البند الأول فقط من المراجع؛ بقية البنود إضافة مرجعية (WHO). قبل ما تنصح الأم بالصناعي دوّر على سبب نقص اللبن: التصاق خاطئ، رضعات قليلة، قلق، تغذية الأم.</p></div>",
+   "en": "<h4>Situations that need formula (indications)</h4>\n<ul><li>The milk the mother produces is not enough for the baby</li><li>Medical protocol: a mother taking drugs contraindicated with breastfeeding, or an infection (for example HIV per national policy), or the mother's absence</li><li>Rare congenital conditions in the baby (such as galactosemia) that cannot tolerate regular milk</li><li>The mother's absence or severe illness</li></ul>\n<div class=\"cs-box cs-info\"><strong>Note</strong><p>Before advising the mother to use formula, look for the cause of low milk supply: poor latch, few feeds, anxiety, the mother's nutrition.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>أعراض متوقعة مع تغيير اللبن أو عدم تحمله</h4>\n<ul><li>مغص وانتفاخ وغازات: ممكن تحصل لو اتغير نوع اللبن من اسم تجاري لآخر (حسب المراجع)</li><li>قيء وارتجاع: يستلزم ألبان AR بأمر الطبيب</li><li>إسهال وانتفاخ بعد الرضعة: ممكن يدل على عدم تحمل اللاكتوز</li><li>إمساك: ممكن بسبب الحديد الموجود في تركيبة اللبن، لكن لازم تستبعد الأسباب المرضية (انسداد) قبل العلاج (حسب المراجع في فصل مغص الأطفال)</li></ul>\n<div class=\"cs-box cs-tip\"><strong>لاحظ يومياً</strong><p>وزن الطفل، عدد الحفاضات المبللة، مرات التبرز ولونه وقوامه، القيء، المغص، والنوم.</p></div>",
+   "en": "<h4>Expected symptoms with changing formula or intolerance</h4>\n<ul><li>Colic, bloating, and gas: may happen if the formula is changed from one brand to another</li><li>Vomiting and reflux: requires AR formulas by physician order</li><li>Diarrhea and bloating after the feed: may indicate lactose intolerance</li><li>Constipation: may be due to the iron in the formula, but disease causes (obstruction) must be ruled out before treatment</li></ul>\n<div class=\"cs-box cs-tip\"><strong>Observe daily</strong><p>The baby's weight, number of wet diapers, number, color, and consistency of stools, vomiting, colic, and sleep.</p></div>"
+  },
+  "tests": {
+   "ar": "<p>مفيش تحاليل خاصة. لو الطفل مش بيزيد وزنه أو عنده إسهال مزمن أو دم في البراز أو قيء مستمر: الطبيب يطلب تحليل براز (Reducing substances، دم خفي)، تحاليل دم، وتقييم حساسية بروتين لبن البقر (CMPA).</p>",
+   "en": "<p>There are no special tests. If the baby is not gaining weight or has chronic diarrhea, blood in the stool, or persistent vomiting: the physician orders a stool test (Reducing substances, occult blood), blood tests, and assessment for cow's milk protein allergy (CMPA).</p>"
+  },
+  "treatment": {
+   "ar": "<h4>1) ألبان من اليوم الأول لحد 6 شهور (المرحلة 1)</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم 2008</th><th>الشركة</th></tr></thead><tbody><tr><td>Aptamil 1</td><td>20.75</td><td>Milupa</td></tr><tr><td>Aptamil 1 Plus</td><td>25.90</td><td>Milupa</td></tr><tr><td>Bebelac 1</td><td>17.00</td><td>Nutricia</td></tr><tr><td>Biomil</td><td>17.00</td><td>Vacsera (فاكسيرا)</td></tr><tr><td>Nan 1</td><td>22.00</td><td>Nestle</td></tr><tr><td>Nutrilon Premium</td><td>17.00</td><td>Nutricia</td></tr><tr><td>S26 Gold</td><td>22.00</td><td>Wyeth</td></tr><tr><td>Sunny Premium</td><td>2.90 (مدعوم)</td><td>FranceXPA</td></tr></tbody></table>\n<p>المراجع تذكر إن الألبان في الجدول <b>متقاربة في التركيب</b> وأي واحد منها مناسب.</p>\n<h4>2) ألبان عدم تحمل اللاكتوز</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم</th><th>الشركة</th></tr></thead><tbody><tr><td>Bebelac-FL</td><td>25.00</td><td>Nutricia</td></tr><tr><td>Dialac-LF</td><td>20.00</td><td>Nutricia</td></tr><tr><td>Novalac L.F.</td><td>15.00</td><td>Nutricia</td></tr><tr><td>Nutrilon Low Lactose</td><td>16.00</td><td>Nutricia</td></tr><tr><td>S26 LF</td><td>18.50</td><td>Wyeth</td></tr></tbody></table>\n<h4>3) ألبان المبتسرين (قليلي الوزن)</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم</th><th>الشركة</th></tr></thead><tbody><tr><td>Aptamil Start</td><td>29.00</td><td>Milupa</td></tr><tr><td>Nenatal</td><td>23.30</td><td>Nutricia</td></tr><tr><td>S26 LBW</td><td>22.00</td><td>Wyeth</td></tr></tbody></table>\n<h4>4) ألبان الارتجاع والقيء (AR)</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم</th><th>الشركة</th></tr></thead><tbody><tr><td>Bebelac AR</td><td>27.50</td><td>Nutricia</td></tr><tr><td>Nutrilon A.R.</td><td>12.80</td><td>Nutricia</td></tr></tbody></table>\n<h4>5) من 6 شهور حتى 12 شهر (المرحلة 2)</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم</th><th>الشركة</th></tr></thead><tbody><tr><td>Aptamil 2</td><td>19.00</td><td>Milupa</td></tr><tr><td>Bebelac-2</td><td>22.50</td><td>Nutricia</td></tr><tr><td>Babysan 2</td><td>17.00</td><td>Lactomisr</td></tr><tr><td>Dialac-M</td><td>10.50</td><td>Nutricia</td></tr><tr><td>Lactogen</td><td>13.25 – 13.50</td><td>Nestle</td></tr><tr><td>Lactogen (مدعوم)</td><td>2.90</td><td>Nestle</td></tr><tr><td>Milupa 2</td><td>13.75</td><td>Milupa</td></tr><tr><td>Nan 2</td><td>17.00</td><td>Nestle</td></tr><tr><td>Nestogen</td><td>8.50</td><td>Nestle</td></tr><tr><td>Promil</td><td>20.00</td><td>Wyeth</td></tr></tbody></table>\n<h4>6) أغذية الأطفال من 12 شهر حتى 3 سنين (المرحلة 3)</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم</th><th>الشركة</th></tr></thead><tbody><tr><td>Delilac</td><td>17.60</td><td>Nutricia</td></tr><tr><td>Lacto 3</td><td>16.00</td><td>LactoMisr</td></tr><tr><td>Milupa 3</td><td>20.75</td><td>Milupa</td></tr><tr><td>Progress</td><td>25.00</td><td>Wyeth</td></tr></tbody></table>\n<p>المراجع تذكر إنك ممكن تصف أي «Baby food» من الجدول ده كمان للأطفال من أكتر من 6 شهور حتى 3 سنين.</p>\n<p><small>الأسعار المذكورة (بالجنيه) من عام 2008 للمقارنة التاريخية فقط وتغيّرت كتير؛ اسأل الصيدلية عن السعر الحالي.</small></p>\n<h4>قواعد التحضير والاستعمال (حسب المراجع)</h4>\n<ol><li>القاعدة العامة: <b>مكيال واحد</b> من المسحوق لكل <b>30 مل</b> ماء مغلي مسبقاً، ومكيالين لكل 60 مل، وهكذا.</li><li>اللبن المحضّر يتدي طازج ويُرمى بعد <b>3 ساعات</b> من تحضيره.</li><li>تغيير نوع اللبن من اسم تجاري لآخر ممكن يسبب مغص وغازات.</li><li>أغلب الألبان ليها سعر عادي وسعر مخفض من وزارة الصحة (2.90 جنيه حسب المراجع).</li></ol>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>المقياس:</b> اتبع تعليمات العلبة نفسها لأن حجم المكيال يختلف من شركة لأخرى: عادةً مكيال مستوي (غير مكبوس) لكل 30 مل ماء.</li><li><b>الماء:</b> يتغلى ويتساب أقل من 30 دقيقة (حرارته لسه حوالي 70 م أو أعلى) وقت إضافة المسحوق، ثم الرضعة تتبرّد تحت المياه الجارية قبل التقديم (WHO) لأن المسحوق مش معقّم. ما تضيفش مسحوق أكتر أو أقل من اللازم.</li><li><b>مدة الصلاحية:</b> WHO بتوصي بإنه اللبن المحضّر يستعمل خلال ساعتين من التحضير، وما يتخزنش ويتعاد؛ بقايا ما شربه الطفل بتترمي بعد الرضعة (قد يتلوث لعاب الطفل). لو اتحفظ في الثلاجة يستعمل خلال 24 ساعة (حسب الإرشاد المحلي).</li><li><b>الجرعة:</b> عدد الرضعات وحجمها حسب وزن وعمر الطفل وأمر الطبيب (قاعدة تقريبية 150 مل/كجم/يوم للرضيع الصغير).</li><li>ألبان المبتسرين لازم بإشراف أخصائي.</li><li>الارتجاع: ممكن يكفي تعديل وضع الرضاعة والتجشؤ قبل اللجوء للألبان الخاصة.</li></ul></div>",
+   "en": "<h4>1) Formulas from day one to 6 months (stage 1)</h4>\n<table><thead><tr><th>Formula</th><th>Old price 2008</th><th>Company</th></tr></thead><tbody><tr><td>Aptamil 1</td><td>20.75</td><td>Milupa</td></tr><tr><td>Aptamil 1 Plus</td><td>25.90</td><td>Milupa</td></tr><tr><td>Bebelac 1</td><td>17.00</td><td>Nutricia</td></tr><tr><td>Biomil</td><td>17.00</td><td>Vacsera</td></tr><tr><td>Nan 1</td><td>22.00</td><td>Nestle</td></tr><tr><td>Nutrilon Premium</td><td>17.00</td><td>Nutricia</td></tr><tr><td>S26 Gold</td><td>22.00</td><td>Wyeth</td></tr><tr><td>Sunny Premium</td><td>2.90 (subsidized)</td><td>FranceXPA</td></tr></tbody></table>\n<p>The formulas in the table are <b>similar in composition</b>, and any of them is suitable.</p>\n<h4>2) Lactose-intolerance formulas</h4>\n<table><thead><tr><th>Formula</th><th>Old price</th><th>Company</th></tr></thead><tbody><tr><td>Bebelac-FL</td><td>25.00</td><td>Nutricia</td></tr><tr><td>Dialac-LF</td><td>20.00</td><td>Nutricia</td></tr><tr><td>Novalac L.F.</td><td>15.00</td><td>Nutricia</td></tr><tr><td>Nutrilon Low Lactose</td><td>16.00</td><td>Nutricia</td></tr><tr><td>S26 LF</td><td>18.50</td><td>Wyeth</td></tr></tbody></table>\n<h4>3) Preterm formulas (low birth weight)</h4>\n<table><thead><tr><th>Formula</th><th>Old price</th><th>Company</th></tr></thead><tbody><tr><td>Aptamil Start</td><td>29.00</td><td>Milupa</td></tr><tr><td>Nenatal</td><td>23.30</td><td>Nutricia</td></tr><tr><td>S26 LBW</td><td>22.00</td><td>Wyeth</td></tr></tbody></table>\n<h4>4) Reflux and vomiting formulas (AR)</h4>\n<table><thead><tr><th>Formula</th><th>Old price</th><th>Company</th></tr></thead><tbody><tr><td>Bebelac AR</td><td>27.50</td><td>Nutricia</td></tr><tr><td>Nutrilon A.R.</td><td>12.80</td><td>Nutricia</td></tr></tbody></table>\n<h4>5) From 6 months to 12 months (stage 2)</h4>\n<table><thead><tr><th>Formula</th><th>Old price</th><th>Company</th></tr></thead><tbody><tr><td>Aptamil 2</td><td>19.00</td><td>Milupa</td></tr><tr><td>Bebelac-2</td><td>22.50</td><td>Nutricia</td></tr><tr><td>Babysan 2</td><td>17.00</td><td>Lactomisr</td></tr><tr><td>Dialac-M</td><td>10.50</td><td>Nutricia</td></tr><tr><td>Lactogen</td><td>13.25 – 13.50</td><td>Nestle</td></tr><tr><td>Lactogen (subsidized)</td><td>2.90</td><td>Nestle</td></tr><tr><td>Milupa 2</td><td>13.75</td><td>Milupa</td></tr><tr><td>Nan 2</td><td>17.00</td><td>Nestle</td></tr><tr><td>Nestogen</td><td>8.50</td><td>Nestle</td></tr><tr><td>Promil</td><td>20.00</td><td>Wyeth</td></tr></tbody></table>\n<h4>6) Baby foods from 12 months to 3 years (stage 3)</h4>\n<table><thead><tr><th>Formula</th><th>Old price</th><th>Company</th></tr></thead><tbody><tr><td>Delilac</td><td>17.60</td><td>Nutricia</td></tr><tr><td>Lacto 3</td><td>16.00</td><td>LactoMisr</td></tr><tr><td>Milupa 3</td><td>20.75</td><td>Milupa</td></tr><tr><td>Progress</td><td>25.00</td><td>Wyeth</td></tr></tbody></table>\n<p>Any “Baby food” from this table can also be prescribed for children over 6 months up to 3 years.</p>\n<p><small>The prices listed (in Egyptian pounds) are from 2008 for historical comparison only and have changed a lot; ask the pharmacy for the current price.</small></p>\n<h4>Preparation and use rules</h4>\n<ol><li>General rule: <b>one scoop</b> of powder for every <b>30 mL</b> of previously boiled water, two scoops for 60 mL, and so on.</li><li>Prepared formula is given fresh and discarded <b>3 hours</b> after preparation.</li><li>Changing the formula from one brand to another may cause colic and gas.</li><li>Most formulas have a regular price and a reduced Ministry of Health price (2.90 pounds).</li></ol>\n<div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li><b>Scoop:</b> follow the instructions on the can itself because the scoop size differs between companies: usually one level (not packed) scoop per 30 mL of water.</li><li><b>Water:</b> boiled and left for less than 30 minutes (still about 70 °C or higher) when adding the powder, then the feed is cooled under running water before serving, because the powder is not sterile. Do not add more or less powder than needed.</li><li><b>Shelf life:</b> prepared formula should be used within 2 hours of preparation and not stored and reused; leftovers the baby has drunk from are discarded after the feed (the baby's saliva may contaminate it). If kept in the refrigerator, use within 24 hours (per local guidance).</li><li><b>Amount:</b> number and volume of feeds depend on the baby's weight and age and the physician's order (approximate rule 150 mL/kg/day for the young infant).</li><li>Preterm formulas must be under specialist supervision.</li><li>Reflux: adjusting the feeding position and burping may be enough before turning to special formulas.</li></ul></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الاحتياج</strong><p>اسأل لماذا اختارت الأم الصناعي (نقص لبن؟ سبب طبي؟). شجّع لبن الأم كلما أمكن (ممكن رضاعة مختلطة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>تأكد من النوع والسن</strong><p>اللبن مناسب لعمر الطفل وحالته (مبتسر/ارتجاع/لاكتوز) وبأمر الطبيب. اقرأ تاريخ الصلاحية وتأكد من سلامة العلبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>حضّر بنظافة</strong><p>اغسل إيديك. زجاجة ورضّاعة معقمة (غلي 5 دقائق أو معقم). ماء مغلي حديثاً (حسب تعليمات العلبة وWHO). الماء أولاً ثم المسحوق بالمقياس المحدد على العلبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اتأكد من الحرارة</strong><p>قطّر نقطة على باطن الرسغ: دافئة مش ساخنة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أرضع بأمان</strong><p>الطفل في وضع شبه جالس، الرضّاعة مائلة بحيث الحلمة ممتلئة باللبن لمنع بلع الهواء، تجشيء بعد الرضعة، ما تسيبش رضّاعة مسنودة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب</strong><p>الكمية المأخوذة، القيء/الارتجاع، المغص والغازات، لون وعدد البراز، الحفاضات (6 فأكثر في اليوم)، والوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف الأم</strong><p>قاعدة 1:30، ما تستخدميش لبن مرّ عليه أكتر من ساعتين–3 ساعات، ما تغيّريش النوع من نفسك، وما تضيفيش سكر أو عسل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>وثّق</strong><p>النوع، الكمية، التحمل، الوزن، وأي عَرَض.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess the need</strong><p>Ask why the mother chose formula (low milk? medical reason?). Encourage breast milk whenever possible (mixed feeding is possible).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Check type and age</strong><p>The formula suits the baby's age and condition (preterm/reflux/lactose) and is by physician order. Read the expiry date and check that the can is intact.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Prepare cleanly</strong><p>Wash your hands. Sterilized bottle and nipple (boil 5 minutes or sterilizer). Freshly boiled water (per can instructions). Water first, then powder with the scoop specified on the can.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Check the temperature</strong><p>Drip a drop on the inner wrist: warm, not hot.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Feed safely</strong><p>Baby in a semi-sitting position, bottle tilted so the nipple is full of milk to prevent swallowing air, burp after the feed, never leave a propped bottle.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Monitor</strong><p>Amount taken, vomiting/reflux, colic and gas, stool color and number, diapers (6 or more a day), and weight.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Teach the mother</strong><p>The 1:30 rule, do not use formula older than 2–3 hours, do not change the type on your own, and do not add sugar or honey.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Document</strong><p>Type, amount, tolerance, weight, and any symptom.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب لو:</strong><ul><li>قيء أخضر (صفراوي) أو قيء قذفي أو دم في القيء أو البراز</li><li>إسهال مع علامات جفاف (عدم تبول 6–8 ساعات، لا دموع، لين اليافوخ)</li><li>عدم زيادة الوزن أو نقصه</li><li>طفح منتشر أو تورم الوجه بعد اللبن (حساسية)</li><li>رفض الرضاعة وخمول أو حرارة أو انتفاخ شديد بالبطن</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician if:</strong><ul><li>Green (bilious) vomiting or projectile vomiting or blood in vomit or stool</li><li>Diarrhea with signs of dehydration (no urine for 6–8 hours, no tears, sunken fontanelle)</li><li>No weight gain or weight loss</li><li>Widespread rash or facial swelling after the formula (allergy)</li><li>Refusing feeds and lethargy, fever, or severe abdominal distension</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>لبن الأم أفضل؛ كمّلي رضاعة طبيعية معاه لو أمكن.</li><li>اتبعي تعليمات العلبة، مكيال واحد لكل 30 مل ماء مغلي ومبرّد.</li><li>حضّري كل رضعة طازجة، وارمي الباقي.</li><li>عقّمي الرضّاعات وغسل الإيدين كل مرة.</li><li>ما تغيّريش نوع اللبن من غير ما تسألي الطبيب (ممكن يسبب مغص).</li><li>اللبن المخفض من وزارة الصحة متاح بسعر أقل، اسألي الوحدة الصحية.</li><li>إمساك أو ارتجاع أو إسهال متكرر: روحي للطبيب قبل ما تغيّري أي حاجة.</li></ul>",
+   "en": "<ul><li>Breast milk is best; continue breastfeeding alongside if possible.</li><li>Follow the can instructions, one scoop for every 30 mL of boiled and cooled water.</li><li>Prepare each feed fresh, and discard the rest.</li><li>Sterilize bottles and wash your hands every time.</li><li>Do not change the formula type without asking the physician (it may cause colic).</li><li>Reduced-price Ministry of Health formula is available at a lower price; ask the health unit.</li><li>Recurrent constipation, reflux, or diarrhea: see the physician before changing anything.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "لبن الأم هو الأفضل، والصناعي بديل لما يلزم",
+   "اختيار اللبن حسب السن: مرحلة 1 (0–6 شهور)، 2 (6–12 شهر)، 3 (12 شهر–3 سنين)",
+   "ألبان خاصة: لاكتوز، مبتسرين، ارتجاع AR بأمر الطبيب",
+   "قاعدة التحضير: مكيال لكل 30 مل ماء مغلي (والتزم بتعليمات العلبة)",
+   "المحضّر يُستعمل بسرعة (3 ساعات في المراجع القديمة، والأحدث ساعتين) والباقي يُرمى",
+   "تغيير النوع فجأة ممكن يسبب مغص وغازات"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>لبن الأم هو <b>الاختيار الأول</b> ولا يوجد لبن صناعي يعادله. التغذية الصناعية (Artificial feeding) بتتدي لما الطفل مش بياخد كفاية من لبن أمه أو لما الرضاعة الطبيعية مش ممكنة طبياً. ألبان الأطفال بتتصنع من لبن البقر بعد فصل جزء من الدهون وتعديل البروتين والفيتامينات والمعادن عشان تناسب احتياج الطفل في كل مرحلة.</p>\n<div class=\"cs-stats\"><div><b>1</b><span>لبن الأم الاختيار الأول</span></div><div><b>1 : 30</b><span>ملعقة لبن : 30 مل ماء مغلي (قاعدة عامة)</span></div><div><b>3 ساعات</b><span>حسب المراجع: اللبن المحضّر يُرمى بعدها</span></div></div>\n[[slot:dis-161-bottle|صورة: تحضير الرضعة الصناعية (قياس المسحوق والماء)]]\n<h4>اختيار اللبن حسب حالة الطفل (8 فئات)</h4>\n<table><thead><tr><th>رقم</th><th>الحالة / السن</th><th>نوع اللبن</th></tr></thead><tbody><tr><td>1</td><td>من اليوم الأول حتى 6 شهور</td><td>ألبان المرحلة 1 (First infant formula)</td></tr><tr><td>2</td><td>طفل طبيعي مش بياخد كفاية من أمه</td><td>نفس ألبان المرحلة 1</td></tr><tr><td>3</td><td>عدم تحمل اللاكتوز (Lactose intolerance)</td><td>ألبان خالية أو قليلة اللاكتوز</td></tr><tr><td>4</td><td>المبتسرين وقليلي الوزن</td><td>ألبان المبتسرين</td></tr><tr><td>5</td><td>الارتجاع والقيء (Regurgitation)</td><td>ألبان مضادة للارتجاع (AR)</td></tr><tr><td>6</td><td>من 6 إلى 12 شهر</td><td>ألبان المرحلة 2</td></tr><tr><td>7</td><td>أكتر من 6 شهور حتى 3 سنين</td><td>أغذية/ألبان الأطفال (Baby food)</td></tr><tr><td>8</td><td>من 12 شهر حتى 3 سنين</td><td>ألبان المرحلة 3 (Growing-up)</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>عبارة «Lactulose intolerance» المقصود بها <b>عدم تحمل اللاكتوز (Lactose intolerance)</b>، لأن اللاكتيولوز دواء ملين مش سكر لبن. كمان بعد عمر سنة ممكن الطفل ياخد لبن البقر العادي مع غذاء متنوع، وألبان «النمو» ما بقتش ضرورية حسب إرشادات منظمات التغذية. ألبان المبتسرين والارتجاع وعدم تحمل اللاكتوز بتتحدد بأمر الطبيب مش بالاختيار الذاتي.</p></div>"
-    },
-    "causes": {
-      "ar": "<h4>الحالات اللي بتحتاج لبن صناعي (دواعي الاستخدام)</h4>\n<ul><li>اللبن اللي بتنتجه الأم لا يكفي الطفل (حسب المراجع)</li><li>بروتوكول طبي: أم بتاخد أدوية ممنوعة مع الرضاعة، أو عدوى (مثلاً HIV حسب سياسة الدولة)، أو غياب الأم</li><li>حالات ولادية نادرة للطفل (مثل الجالاكتوزيميا) لا تحتمل اللبن العادي</li><li>غياب الأم أو مرضها الشديد</li></ul>\n<div class=\"cs-box cs-info\"><strong>معلومة</strong><p>البند الأول فقط من المراجع؛ بقية البنود إضافة مرجعية (WHO). قبل ما تنصح الأم بالصناعي دوّر على سبب نقص اللبن: التصاق خاطئ، رضعات قليلة، قلق، تغذية الأم.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>أعراض متوقعة مع تغيير اللبن أو عدم تحمله</h4>\n<ul><li>مغص وانتفاخ وغازات: ممكن تحصل لو اتغير نوع اللبن من اسم تجاري لآخر (حسب المراجع)</li><li>قيء وارتجاع: يستلزم ألبان AR بأمر الطبيب</li><li>إسهال وانتفاخ بعد الرضعة: ممكن يدل على عدم تحمل اللاكتوز</li><li>إمساك: ممكن بسبب الحديد الموجود في تركيبة اللبن، لكن لازم تستبعد الأسباب المرضية (انسداد) قبل العلاج (حسب المراجع في فصل مغص الأطفال)</li></ul>\n<div class=\"cs-box cs-tip\"><strong>لاحظ يومياً</strong><p>وزن الطفل، عدد الحفاضات المبللة، مرات التبرز ولونه وقوامه، القيء، المغص، والنوم.</p></div>"
-    },
-    "tests": {
-      "ar": "<p>مفيش تحاليل خاصة. لو الطفل مش بيزيد وزنه أو عنده إسهال مزمن أو دم في البراز أو قيء مستمر: الطبيب يطلب تحليل براز (Reducing substances، دم خفي)، تحاليل دم، وتقييم حساسية بروتين لبن البقر (CMPA).</p>"
-    },
-    "treatment": {
-      "ar": "<h4>1) ألبان من اليوم الأول لحد 6 شهور (المرحلة 1)</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم 2008</th><th>الشركة</th></tr></thead><tbody><tr><td>Aptamil 1</td><td>20.75</td><td>Milupa</td></tr><tr><td>Aptamil 1 Plus</td><td>25.90</td><td>Milupa</td></tr><tr><td>Bebelac 1</td><td>17.00</td><td>Nutricia</td></tr><tr><td>Biomil</td><td>17.00</td><td>Vacsera (فاكسيرا)</td></tr><tr><td>Nan 1</td><td>22.00</td><td>Nestle</td></tr><tr><td>Nutrilon Premium</td><td>17.00</td><td>Nutricia</td></tr><tr><td>S26 Gold</td><td>22.00</td><td>Wyeth</td></tr><tr><td>Sunny Premium</td><td>2.90 (مدعوم)</td><td>FranceXPA</td></tr></tbody></table>\n<p>المراجع تذكر إن الألبان في الجدول <b>متقاربة في التركيب</b> وأي واحد منها مناسب.</p>\n<h4>2) ألبان عدم تحمل اللاكتوز</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم</th><th>الشركة</th></tr></thead><tbody><tr><td>Bebelac-FL</td><td>25.00</td><td>Nutricia</td></tr><tr><td>Dialac-LF</td><td>20.00</td><td>Nutricia</td></tr><tr><td>Novalac L.F.</td><td>15.00</td><td>Nutricia</td></tr><tr><td>Nutrilon Low Lactose</td><td>16.00</td><td>Nutricia</td></tr><tr><td>S26 LF</td><td>18.50</td><td>Wyeth</td></tr></tbody></table>\n<h4>3) ألبان المبتسرين (قليلي الوزن)</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم</th><th>الشركة</th></tr></thead><tbody><tr><td>Aptamil Start</td><td>29.00</td><td>Milupa</td></tr><tr><td>Nenatal</td><td>23.30</td><td>Nutricia</td></tr><tr><td>S26 LBW</td><td>22.00</td><td>Wyeth</td></tr></tbody></table>\n<h4>4) ألبان الارتجاع والقيء (AR)</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم</th><th>الشركة</th></tr></thead><tbody><tr><td>Bebelac AR</td><td>27.50</td><td>Nutricia</td></tr><tr><td>Nutrilon A.R.</td><td>12.80</td><td>Nutricia</td></tr></tbody></table>\n<h4>5) من 6 شهور حتى 12 شهر (المرحلة 2)</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم</th><th>الشركة</th></tr></thead><tbody><tr><td>Aptamil 2</td><td>19.00</td><td>Milupa</td></tr><tr><td>Bebelac-2</td><td>22.50</td><td>Nutricia</td></tr><tr><td>Babysan 2</td><td>17.00</td><td>Lactomisr</td></tr><tr><td>Dialac-M</td><td>10.50</td><td>Nutricia</td></tr><tr><td>Lactogen</td><td>13.25 – 13.50</td><td>Nestle</td></tr><tr><td>Lactogen (مدعوم)</td><td>2.90</td><td>Nestle</td></tr><tr><td>Milupa 2</td><td>13.75</td><td>Milupa</td></tr><tr><td>Nan 2</td><td>17.00</td><td>Nestle</td></tr><tr><td>Nestogen</td><td>8.50</td><td>Nestle</td></tr><tr><td>Promil</td><td>20.00</td><td>Wyeth</td></tr></tbody></table>\n<h4>6) أغذية الأطفال من 12 شهر حتى 3 سنين (المرحلة 3)</h4>\n<table><thead><tr><th>اللبن</th><th>السعر القديم</th><th>الشركة</th></tr></thead><tbody><tr><td>Delilac</td><td>17.60</td><td>Nutricia</td></tr><tr><td>Lacto 3</td><td>16.00</td><td>LactoMisr</td></tr><tr><td>Milupa 3</td><td>20.75</td><td>Milupa</td></tr><tr><td>Progress</td><td>25.00</td><td>Wyeth</td></tr></tbody></table>\n<p>المراجع تذكر إنك ممكن تصف أي «Baby food» من الجدول ده كمان للأطفال من أكتر من 6 شهور حتى 3 سنين.</p>\n<p><small>الأسعار المذكورة (بالجنيه) من عام 2008 للمقارنة التاريخية فقط وتغيّرت كتير؛ اسأل الصيدلية عن السعر الحالي.</small></p>\n<h4>قواعد التحضير والاستعمال (حسب المراجع)</h4>\n<ol><li>القاعدة العامة: <b>مكيال واحد</b> من المسحوق لكل <b>30 مل</b> ماء مغلي مسبقاً، ومكيالين لكل 60 مل، وهكذا.</li><li>اللبن المحضّر يتدي طازج ويُرمى بعد <b>3 ساعات</b> من تحضيره.</li><li>تغيير نوع اللبن من اسم تجاري لآخر ممكن يسبب مغص وغازات.</li><li>أغلب الألبان ليها سعر عادي وسعر مخفض من وزارة الصحة (2.90 جنيه حسب المراجع).</li></ol>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>المقياس:</b> اتبع تعليمات العلبة نفسها لأن حجم المكيال يختلف من شركة لأخرى: عادةً مكيال مستوي (غير مكبوس) لكل 30 مل ماء.</li><li><b>الماء:</b> يتغلى ويتساب أقل من 30 دقيقة (حرارته لسه حوالي 70 م أو أعلى) وقت إضافة المسحوق، ثم الرضعة تتبرّد تحت المياه الجارية قبل التقديم (WHO) لأن المسحوق مش معقّم. ما تضيفش مسحوق أكتر أو أقل من اللازم.</li><li><b>مدة الصلاحية:</b> WHO بتوصي بإنه اللبن المحضّر يستعمل خلال ساعتين من التحضير، وما يتخزنش ويتعاد؛ بقايا ما شربه الطفل بتترمي بعد الرضعة (قد يتلوث لعاب الطفل). لو اتحفظ في الثلاجة يستعمل خلال 24 ساعة (حسب الإرشاد المحلي).</li><li><b>الجرعة:</b> عدد الرضعات وحجمها حسب وزن وعمر الطفل وأمر الطبيب (قاعدة تقريبية 150 مل/كجم/يوم للرضيع الصغير).</li><li>ألبان المبتسرين لازم بإشراف أخصائي.</li><li>الارتجاع: ممكن يكفي تعديل وضع الرضاعة والتجشؤ قبل اللجوء للألبان الخاصة.</li></ul></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الاحتياج</strong><p>اسأل لماذا اختارت الأم الصناعي (نقص لبن؟ سبب طبي؟). شجّع لبن الأم كلما أمكن (ممكن رضاعة مختلطة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>تأكد من النوع والسن</strong><p>اللبن مناسب لعمر الطفل وحالته (مبتسر/ارتجاع/لاكتوز) وبأمر الطبيب. اقرأ تاريخ الصلاحية وتأكد من سلامة العلبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>حضّر بنظافة</strong><p>اغسل إيديك. زجاجة ورضّاعة معقمة (غلي 5 دقائق أو معقم). ماء مغلي حديثاً (حسب تعليمات العلبة وWHO). الماء أولاً ثم المسحوق بالمقياس المحدد على العلبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اتأكد من الحرارة</strong><p>قطّر نقطة على باطن الرسغ: دافئة مش ساخنة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أرضع بأمان</strong><p>الطفل في وضع شبه جالس، الرضّاعة مائلة بحيث الحلمة ممتلئة باللبن لمنع بلع الهواء، تجشيء بعد الرضعة، ما تسيبش رضّاعة مسنودة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب</strong><p>الكمية المأخوذة، القيء/الارتجاع، المغص والغازات، لون وعدد البراز، الحفاضات (6 فأكثر في اليوم)، والوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف الأم</strong><p>قاعدة 1:30، ما تستخدميش لبن مرّ عليه أكتر من ساعتين–3 ساعات، ما تغيّريش النوع من نفسك، وما تضيفيش سكر أو عسل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>وثّق</strong><p>النوع، الكمية، التحمل، الوزن، وأي عَرَض.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب لو:</strong><ul><li>قيء أخضر (صفراوي) أو قيء قذفي أو دم في القيء أو البراز</li><li>إسهال مع علامات جفاف (عدم تبول 6–8 ساعات، لا دموع، لين اليافوخ)</li><li>عدم زيادة الوزن أو نقصه</li><li>طفح منتشر أو تورم الوجه بعد اللبن (حساسية)</li><li>رفض الرضاعة وخمول أو حرارة أو انتفاخ شديد بالبطن</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>لبن الأم أفضل؛ كمّلي رضاعة طبيعية معاه لو أمكن.</li><li>اتبعي تعليمات العلبة، مكيال واحد لكل 30 مل ماء مغلي ومبرّد.</li><li>حضّري كل رضعة طازجة، وارمي الباقي.</li><li>عقّمي الرضّاعات وغسل الإيدين كل مرة.</li><li>ما تغيّريش نوع اللبن من غير ما تسألي الطبيب (ممكن يسبب مغص).</li><li>اللبن المخفض من وزارة الصحة متاح بسعر أقل، اسألي الوحدة الصحية.</li><li>إمساك أو ارتجاع أو إسهال متكرر: روحي للطبيب قبل ما تغيّري أي حاجة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "لبن الأم هو الأفضل، والصناعي بديل لما يلزم",
-      "اختيار اللبن حسب السن: مرحلة 1 (0–6 شهور)، 2 (6–12 شهر)، 3 (12 شهر–3 سنين)",
-      "ألبان خاصة: لاكتوز، مبتسرين، ارتجاع AR بأمر الطبيب",
-      "قاعدة التحضير: مكيال لكل 30 مل ماء مغلي (والتزم بتعليمات العلبة)",
-      "المحضّر يُستعمل بسرعة (3 ساعات في المراجع القديمة، والأحدث ساعتين) والباقي يُرمى",
-      "تغيير النوع فجأة ممكن يسبب مغص وغازات"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول اختيار لتغذية الرضيع هو:"
-      },
-      "options": [
-        {
-          "ar": "لبن صناعي مرحلة 1"
-        },
-        {
-          "ar": "لبن الأم"
-        },
-        {
-          "ar": "لبن بقر كامل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "لبن الأم لا يعادله بديل."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل عمره 8 شهور سليم، نوع اللبن المناسب غالباً:"
-      },
-      "options": [
-        {
-          "ar": "مرحلة 1"
-        },
-        {
-          "ar": "مرحلة 2"
-        },
-        {
-          "ar": "ألبان المبتسرين"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "6–12 شهر ألبان المرحلة 2 مثل Aptamil 2 أو Nan 2."
-      }
-    },
-    {
-      "q": {
-        "ar": "القاعدة العامة للتحضير حسب المراجع:"
-      },
-      "options": [
-        {
-          "ar": "مكيال لكل 30 مل ماء مغلي"
-        },
-        {
-          "ar": "مكيالين لكل 30 مل"
-        },
-        {
-          "ar": "مكيال لكل 100 مل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مكيال/30 مل ومكيالين/60 مل، مع الالتزام بتعليمات العلبة."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل بيرجع اللبن بعد كل رضعة. ألبان خاصة ممكن توصف:"
-      },
-      "options": [
-        {
-          "ar": "AR مثل Bebelac AR"
-        },
-        {
-          "ar": "Low lactose دائماً"
-        },
-        {
-          "ar": "لبن مبتسرين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ألبان AR (Anti-regurgitation) للارتجاع."
-      }
-    },
-    {
-      "q": {
-        "ar": "اللبن المحضّر وتبقى منه جزء بعد ما الطفل خلّص:"
-      },
-      "options": [
-        {
-          "ar": "يتحفظ لرضعة تانية"
-        },
-        {
-          "ar": "يترمي"
-        },
-        {
-          "ar": "يتسخن ويتعاد"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "المسحوق غير معقم واللبن عرضة لتكاثر الميكروبات، فيُرمى."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "WHO — Safe preparation, storage and handling of powdered infant formula: guidelines (2007)"
-    },
-    {
-      "title": "WHO/UNICEF — Infant and young child feeding"
-    },
-    {
-      "title": "ESPGHAN position paper on young-child formulae / growing-up milks"
-    }
+  "en": [
+   "Breast milk is best, and formula is a substitute when needed",
+   "Choose formula by age: stage 1 (0–6 months), 2 (6–12 months), 3 (12 months–3 years)",
+   "Special formulas: lactose, preterm, reflux AR by physician order",
+   "Preparation rule: one scoop for every 30 mL of boiled water (and follow the can instructions)",
+   "Prepared formula is used quickly (3 hours in older guidance, 2 hours in newer guidance) and the rest is discarded",
+   "Changing the type suddenly may cause colic and gas"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول اختيار لتغذية الرضيع هو:",
+    "en": "The first choice for infant feeding is:"
+   },
+   "options": [
+    {
+     "ar": "لبن صناعي مرحلة 1",
+     "en": "Stage 1 formula"
+    },
+    {
+     "ar": "لبن الأم",
+     "en": "Breast milk"
+    },
+    {
+     "ar": "لبن بقر كامل",
+     "en": "Whole cow's milk"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "لبن الأم لا يعادله بديل.",
+    "en": "Nothing equals breast milk."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل عمره 8 شهور سليم، نوع اللبن المناسب غالباً:",
+    "en": "A healthy 8-month-old baby; the suitable formula is usually:"
+   },
+   "options": [
+    {
+     "ar": "مرحلة 1",
+     "en": "Stage 1"
+    },
+    {
+     "ar": "مرحلة 2",
+     "en": "Stage 2"
+    },
+    {
+     "ar": "ألبان المبتسرين",
+     "en": "Preterm formula"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "6–12 شهر ألبان المرحلة 2 مثل Aptamil 2 أو Nan 2.",
+    "en": "6–12 months: stage 2 formulas such as Aptamil 2 or Nan 2."
+   }
+  },
+  {
+   "q": {
+    "ar": "القاعدة العامة للتحضير حسب المراجع:",
+    "en": "The general preparation rule:"
+   },
+   "options": [
+    {
+     "ar": "مكيال لكل 30 مل ماء مغلي",
+     "en": "One scoop for every 30 mL of boiled water"
+    },
+    {
+     "ar": "مكيالين لكل 30 مل",
+     "en": "Two scoops for every 30 mL"
+    },
+    {
+     "ar": "مكيال لكل 100 مل",
+     "en": "One scoop for every 100 mL"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مكيال/30 مل ومكيالين/60 مل، مع الالتزام بتعليمات العلبة.",
+    "en": "One scoop/30 mL and two scoops/60 mL, while following the can instructions."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل بيرجع اللبن بعد كل رضعة. ألبان خاصة ممكن توصف:",
+    "en": "A baby vomits milk after every feed. A special formula that may be prescribed:"
+   },
+   "options": [
+    {
+     "ar": "AR مثل Bebelac AR",
+     "en": "AR such as Bebelac AR"
+    },
+    {
+     "ar": "Low lactose دائماً",
+     "en": "Low lactose always"
+    },
+    {
+     "ar": "لبن مبتسرين",
+     "en": "Preterm formula"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ألبان AR (Anti-regurgitation) للارتجاع.",
+    "en": "AR (Anti-regurgitation) formulas for reflux."
+   }
+  },
+  {
+   "q": {
+    "ar": "اللبن المحضّر وتبقى منه جزء بعد ما الطفل خلّص:",
+    "en": "Prepared formula with some left over after the baby finished:"
+   },
+   "options": [
+    {
+     "ar": "يتحفظ لرضعة تانية",
+     "en": "Kept for another feed"
+    },
+    {
+     "ar": "يترمي",
+     "en": "Discarded"
+    },
+    {
+     "ar": "يتسخن ويتعاد",
+     "en": "Reheated and reused"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "المسحوق غير معقم واللبن عرضة لتكاثر الميكروبات، فيُرمى.",
+    "en": "The powder is not sterile and the milk is prone to bacterial growth, so it is discarded."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "WHO — Safe preparation, storage and handling of powdered infant formula: guidelines (2007)"
+  },
+  {
+   "title": "WHO/UNICEF — Infant and young child feeding"
+  },
+  {
+   "title": "ESPGHAN position paper on young-child formulae / growing-up milks"
+  }
+ ]
 }

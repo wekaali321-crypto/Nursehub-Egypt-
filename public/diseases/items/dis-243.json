@@ -1,178 +1,224 @@
 {
-  "id": "dis-243",
-  "num": 243,
-  "system": "cardio",
-  "icon": "⚡",
-  "level": 3,
-  "title": {
-    "ar": "الصدمة الكهربائية: التحويل المتزامن وإزالة الرجفان",
-    "en": "DC Shock: Cardioversion & Defibrillation"
+ "id": "dis-243",
+ "num": 243,
+ "system": "cardio",
+ "icon": "⚡",
+ "level": 3,
+ "title": {
+  "ar": "الصدمة الكهربائية: التحويل المتزامن وإزالة الرجفان",
+  "en": "DC Shock: Cardioversion & Defibrillation"
+ },
+ "teaser": {
+  "ar": "متزامنة أم غير متزامنة؟ الطاقات وأماكن اللصقات وقواعد «ابتعدوا» وكل ما يفعله التمريض قبل وأثناء وبعد الصدمة.",
+  "en": "Synchronized or unsynchronized? Energy levels, pad placement, the \"stand clear\" rules, and everything nursing does before, during, and after the shock."
+ },
+ "chips": [
+  {
+   "ar": "SYNC",
+   "en": "SYNC"
   },
-  "teaser": {
-    "ar": "متزامنة أم غير متزامنة؟ الطاقات وأماكن اللصقات وقواعد «ابتعدوا» وكل ما يفعله التمريض قبل وأثناء وبعد الصدمة."
+  {
+   "ar": "ابتعدوا!",
+   "en": "Stand clear!"
   },
-  "chips": [
-    {
-      "ar": "SYNC"
-    },
-    {
-      "ar": "ابتعدوا!"
-    },
-    {
-      "ar": "+CPR فوراً"
-    }
+  {
+   "ar": "+CPR فوراً",
+   "en": "+CPR immediately"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الصدمة الكهربائية (<b>DC shock</b>) من أكفأ وأسرع علاجات اضطراب نظم القلب لو استُخدمت <b>بالطريقة الصحيحة وفي الوقت المناسب</b>. فيه نوعين: <b>تحويل متزامن (Synchronized cardioversion)</b> للتسرعات اللي فيها نبض، و<b>صدمة إزالة الرجفان غير المتزامنة (Defibrillation)</b> لتوقف القلب (VF / VT بدون نبض).</p><div class=\"cs-stats\"><div><b>~80%</b><span>نجاح الصدمة الفورية في VF</span></div><div><b>-10%</b><span>تراجع الفرصة كل دقيقة تأخير</span></div><div><b>SYNC</b><span>لكل التسرعات ماعدا VF</span></div></div>[[slot:dis-243-time|تراجع فرصة النجاح مع الوقت — رسم من إعداد الموقع|/diseases/img/dis-243-time.svg]][[slot:dis-243-sync|متى متزامنة ومتى غير متزامنة — رسم من إعداد الموقع|/diseases/img/dis-243-sync.svg]][[slot:dis-243-device|صورة: جهاز صدمات (Defibrillator) بمجدافين ولوحة التحكم — تُرفع لاحقاً]]",
+   "en": "<p>Electrical shock (<b>DC shock</b>) is one of the most effective and fastest treatments for cardiac arrhythmias when used <b>correctly and at the right time</b>. There are two types: <b>synchronized cardioversion</b> for tachycardias with a pulse, and <b>unsynchronized defibrillation</b> for cardiac arrest (VF / pulseless VT).</p><div class=\"cs-stats\"><div><b>~80%</b><span>Success of immediate shock in VF</span></div><div><b>-10%</b><span>Drop in the chance for every minute of delay</span></div><div><b>SYNC</b><span>For all tachycardias except VF</span></div></div>[[slot:dis-243-time|Decline in the chance of success over time — illustration prepared by the site|/diseases/img/dis-243-time.svg]][[slot:dis-243-sync|When synchronized and when unsynchronized — illustration prepared by the site|/diseases/img/dis-243-sync.svg]][[slot:dis-243-device|Image: a defibrillator with two paddles and the control panel — to be uploaded later]]"
+  },
+  "causes": {
+   "ar": "<h4>الفرق بين النوعين</h4><table><thead><tr><th></th><th>التحويل المتزامن (Cardioversion)</th><th>إزالة الرجفان (Defibrillation)</th></tr></thead><tbody><tr><td>الاستخدام</td><td>SVT، رفرفة/رجفان أذيني، VT بنبض (غير مستقر)</td><td>VF، VT بدون نبض</td></tr><tr><td>الزر</td><td>SYNC شغّال (الصدمة تنتظر موجة R)</td><td>SYNC مطفي</td></tr><tr><td>المريض</td><td>نبض موجود لكن غير مستقر، أو حالة اختيارية (Elective)</td><td>فاقد الوعي بلا نبض</td></tr><tr><td>التخدير</td><td>لو واعي: تخدير/تسكين سريع؛ الاختيارية تحت تخدير عام</td><td>لا تخدير (فاقد وعي)</td></tr><tr><td>الطاقة (ثنائي الطور)</td><td>SVT/رفرفة 50–100 J • AF 120–200 J • VT 100 J</td><td>120–200 J (أو أقصى طاقة للجهاز لو الطاقة غير معروفة)</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>ليه المتزامنة؟</strong><p>لو أعطينا الصدمة وقت موجة T (الفترة الحساسة) ممكن تتحول لـVF. الوضع SYNC يخلي الجهاز يصدم فوق R فقط.</p></div>",
+   "en": "<h4>The difference between the two types</h4><table><thead><tr><th></th><th>Synchronized cardioversion (Cardioversion)</th><th>Defibrillation (Defibrillation)</th></tr></thead><tbody><tr><td>Use</td><td>SVT, atrial flutter/fibrillation, VT with a pulse (unstable)</td><td>VF, pulseless VT</td></tr><tr><td>Button</td><td>SYNC on (the shock waits for the R wave)</td><td>SYNC off</td></tr><tr><td>Patient</td><td>Pulse present but unstable, or an elective case (Elective)</td><td>Unconscious with no pulse</td></tr><tr><td>Sedation</td><td>If conscious: rapid sedation/analgesia; elective cases under general anesthesia</td><td>No sedation (unconscious)</td></tr><tr><td>Energy (biphasic)</td><td>SVT/flutter 50–100 J • AF 120–200 J • VT 100 J</td><td>120–200 J (or the device's maximum energy if the energy is unknown)</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Why synchronized?</strong><p>If the shock is delivered during the T wave (the vulnerable period), it can turn into VF. SYNC mode makes the device shock on the R wave only.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>مؤشرات الصدمة</h4><table><thead><tr><th>الحالة</th><th>الصدمة</th></tr></thead><tbody><tr><td>VF أو VT بدون نبض</td><td>غير متزامنة فوراً + CPR</td></tr><tr><td>VT بنبض + غير مستقر</td><td>متزامنة</td></tr><tr><td>SVT غير مستقر (أو لم يستجب)</td><td>متزامنة (100 J حسب المراجع)</td></tr><tr><td>AF/رفرفة غير مستقرة</td><td>متزامنة</td></tr><tr><td>حالات اختيارية (Elective AF مثلاً)</td><td>متزامنة تحت تخدير عام وبعد تجهيز كامل</td></tr></tbody></table><h4>علامات عدم الاستقرار</h4><ul><li>هبوط ضغط، تشوش وعي، شحوب وبرودة</li><li>ألم صدر إقفاري، وذمة رئة / فشل قلب حاد</li><li>إغماء</li></ul><div class=\"cs-box cs-tip\"><strong>الصدمة آمنة في الحمل</strong><p>الصدمة الكهربائية آمنة للحامل ولا تؤذي الجنين غالباً؛ ما تأخرهاش. (مع إمالة الحوض لليسار بعد الأسبوع 20).</p></div>",
+   "en": "<h4>Indications for shock</h4><table><thead><tr><th>Condition</th><th>Shock</th></tr></thead><tbody><tr><td>VF or pulseless VT</td><td>Unsynchronized immediately + CPR</td></tr><tr><td>VT with a pulse + unstable</td><td>Synchronized</td></tr><tr><td>Unstable SVT (or not responding)</td><td>Synchronized (100 J per the references)</td></tr><tr><td>Unstable AF/flutter</td><td>Synchronized</td></tr><tr><td>Elective cases (e.g., elective AF)</td><td>Synchronized under general anesthesia after full preparation</td></tr></tbody></table><h4>Signs of instability</h4><ul><li>Hypotension, altered consciousness, pallor and coldness</li><li>Ischemic chest pain, pulmonary edema / acute heart failure</li><li>Syncope</li></ul><div class=\"cs-box cs-tip\"><strong>Shock is safe in pregnancy</strong><p>Electrical shock is safe for the pregnant woman and usually does not harm the fetus; do not delay it. (With left pelvic tilt after week 20.)</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>شريط ECG يؤكد النظم (VF/VT/SVT/AF) قبل الصدمة</li><li>فحص النبض السباتي (حتى 10 ثوانٍ)</li><li>الإلكتروليت: بوتاسيوم ومغنسيوم (خصوصاً للمبرمجة)</li><li>في الحالات المبرمجة: ديجوكسين/مضاد تجلط/INR وموافقة موقعة</li><li>بعد الصدمة: ECG 12 اشتقاق + علامات حيوية</li></ul>",
+   "en": "<ul><li>An ECG strip confirms the rhythm (VF/VT/SVT/AF) before the shock</li><li>Check the carotid pulse (up to 10 seconds)</li><li>Electrolytes: potassium and magnesium (especially for elective cases)</li><li>In elective cases: digoxin/anticoagulant/INR and signed consent</li><li>After the shock: 12-lead ECG + vital signs</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>الجرعة</h4><ul><li><b>إزالة الرجفان (بالغ):</b> 120–200 جول ثنائي الطور (أو 360 جول أحادي الطور)</li><li><b>متزامن:</b> SVT 50–100 • رفرفة 50–100 • AF 120–200 • VT 100</li><li><b>أطفال:</b> حسب المراجع 1–2 جول/كجم؛ الأحدث (PALS): إزالة الرجفان 2 جول/كجم ثم 4 جول/كجم؛ والمتزامن 0.5–1 ثم 2 جول/كجم</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأرقام السابقة للأجهزة ثنائية الطور؛ اتبع دليل الجهاز المستخدم (المصنّع بيحدد الطاقة الفعالة). أي صدمة تانية تكون بنفس الطاقة أو أعلى حسب الجهاز. بعد كل صدمة: ابدأ CPR 2 دقيقة قبل فحص النظم.</p></div><h4>الأدوية المصاحبة في توقف القلب (VF/VT)</h4><p>بعد الصدمة الثانية: أدرينالين 1 مجم وريدي كل 3–5 دقائق، وبعد الثالثة: أميودارون 300 مجم. (اتبع خوارزمية الإنعاش وأوامر قائد الفريق.)</p>[[slot:dis-243-pads|وضع اللصقات/المجاديف — رسم من إعداد الموقع|/diseases/img/dis-243-pads.svg]]",
+   "en": "<h4>Dose</h4><ul><li><b>Defibrillation (adult):</b> 120–200 joules biphasic (or 360 joules monophasic)</li><li><b>Synchronized:</b> SVT 50–100 • flutter 50–100 • AF 120–200 • VT 100</li><li><b>Children:</b> per the references 1–2 joules/kg; the latest (PALS): defibrillation 2 joules/kg then 4 joules/kg; synchronized 0.5–1 then 2 joules/kg</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The numbers above are for biphasic devices; follow the guide of the device in use (the manufacturer specifies the effective energy). Any second shock is at the same or higher energy depending on the device. After each shock: start CPR for 2 minutes before checking the rhythm.</p></div><h4>Accompanying drugs in cardiac arrest (VF/VT)</h4><p>After the second shock: adrenaline 1 mg IV every 3–5 minutes; after the third: amiodarone 300 mg. (Follow the resuscitation algorithm and the team leader's orders.)</p>[[slot:dis-243-pads|Pad/paddle placement — illustration prepared by the site|/diseases/img/dis-243-pads.svg]]"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>جهّز الجهاز والمريض</strong><p>تأكد من شغل الجهاز، شحن البطارية، اللصقات/المجاديف والجل، الأقطاب. اكشف الصدر وجففه وأزل لصقة النيترات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>وصّل الشريط وأكّد النظم</strong><p>شاشة المونيتور: VF؟ VT بدون نبض؟ أم تسرع بنبض؟ اجس النبض السباتي ≤10 ثانية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اختر الوضع</strong><p>متزامن: اضغط SYNC وتأكد من ظهور علامة فوق كل R. غير متزامن: SYNC مطفي. بعد كل صدمة متزامنة افحص إن SYNC لسه شغّال (بعض الأجهزة بترجع تلقائياً لغير المتزامن).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>ضع اللصقات/المجاديف</strong><p>واحدة على القمة (apex) والثانية أعلى الصدر يميناً. مع المجاديف: جل أو لصقات + ضغط قوي. بعيداً عن الباسر ≥8 سم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>خدّر (لو واعي)</strong><p>أمر الطبيب: تخدير/تسكين سريع، أكسجين وشفط، مجرى هواء جاهز، مراقبة. في الحالات الاختيارية: تخدير عام.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>اشحن ثم قل «ابتعدوا!»</strong><p>انظر حواليك: لا أحد يلمس السرير أو المريض أو الوريد/المحاليل، ارفع قناع الأكسجين من الوجه وبعده عن الصدر، ابعد مصدر الأكسجين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>أعطِ الصدمة</strong><p>اضغط الزر (الشخص المسؤول فقط). افحص الشاشة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>CPR فوراً بعد الصدمة (للتوقف)</strong><p>ابدأ الضغطات دون تأخير، 2 دقيقة ثم قيّم النظم. في المتزامنة: أعد تقييم النظم والنبض والضغط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>وثّق وراقب</strong><p>الطاقة، عدد الصدمات، التوقيت، النظم بعد الصدمة، حروق الجلد، العلامات الحيوية. أعد الـECG 12 اشتقاق.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>قواعد أمان لا تُكسر</strong><p>1) «ابتعدوا» قبل كل صدمة. 2) لا أكسجين مفتوح على الصدر. 3) لا تلمس سرير المريض أثناء الصدمة. 4) لا تصدم بدون التأكد من وضع SYNC/غير SYNC. 5) عند كل صدمة نتأكد من الاستعداد للـCPR.</p></div><h4>قبل الصدمة المبرمجة (Elective)</h4><ul><li>صيام وموافقة مكتوبة، شرح للمريض</li><li>مضاد تجلط ثابت قبل وبعد (أو TEE) لو AF أكتر من 48 ساعة</li><li>بوتاسيوم طبيعي، مراجعة الديجوكسين (التسمم يمنع)</li><li>خط وريدي، شفط، أكسجين، مجرى هواء، فريق تخدير</li></ul><h4>مضاعفات يُراقبها التمريض</h4><ul><li>حروق جلدية موضع اللصقات</li><li>اضطراب نظم بعد الصدمة (بطء، VF)</li><li>تجلط/انصمام بعد التحويل، وذمة رئة</li><li>تأثير التخدير: انسداد مجرى هواء، هبوط ضغط</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Prepare the device and the patient</strong><p>Make sure the device works, the battery is charged, and the pads/paddles, gel, and electrodes are ready. Expose and dry the chest and remove any nitrate patch.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Connect the leads and confirm the rhythm</strong><p>Monitor screen: VF? Pulseless VT? Or tachycardia with a pulse? Feel the carotid pulse for ≤10 seconds.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Choose the mode</strong><p>Synchronized: press SYNC and make sure a marker appears above each R. Unsynchronized: SYNC off. After each synchronized shock, check that SYNC is still on (some devices return automatically to unsynchronized).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Place the pads/paddles</strong><p>One at the apex and the second on the upper right chest. With paddles: gel or pads + firm pressure. At least ≥8 cm away from a pacemaker.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Sedate (if conscious)</strong><p>Per physician order: rapid sedation/analgesia, oxygen and suction, airway ready, monitoring. In elective cases: general anesthesia.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Charge, then say \"Stand clear!\"</strong><p>Look around: no one touches the bed, the patient, or the IV line/fluids; remove the oxygen mask from the face and away from the chest, and move the oxygen source away.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Deliver the shock</strong><p>Press the button (the responsible person only). Check the screen.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>CPR immediately after the shock (for arrest)</strong><p>Start compressions without delay, 2 minutes, then assess the rhythm. In synchronized cases: reassess rhythm, pulse, and blood pressure.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>Document and monitor</strong><p>Energy, number of shocks, timing, rhythm after the shock, skin burns, vital signs. Repeat the 12-lead ECG.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety rules that are never broken</strong><p>1) \"Stand clear\" before every shock. 2) No open oxygen over the chest. 3) Do not touch the patient's bed during the shock. 4) Do not shock without confirming SYNC/non-SYNC mode. 5) With every shock, make sure you are ready for CPR.</p></div><h4>Before an elective shock (Elective)</h4><ul><li>Fasting and written consent, explanation to the patient</li><li>Stable anticoagulation before and after (or TEE) if AF has lasted more than 48 hours</li><li>Normal potassium, review digoxin (toxicity is a contraindication)</li><li>IV line, suction, oxygen, airway, anesthesia team</li></ul><h4>Complications monitored by nursing</h4><ul><li>Skin burns at the pad sites</li><li>Arrhythmia after the shock (bradycardia, VF)</li><li>Thrombosis/embolism after cardioversion, pulmonary edema</li><li>Effects of sedation: airway obstruction, hypotension</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>فقد النبض أو وعي أثناء/بعد الصدمة</li><li>VF/VT متكرر بعد الصدمة</li><li>بطء شديد أو توقف قلب بعد التحويل</li><li>هبوط ضغط مستمر أو وذمة رئة بعد الصدمة</li><li>حروق شديدة بالجلد</li><li>علامات سكتة بعد التحويل (ضعف جانب/كلام)</li></ul>",
+   "en": "<ul><li>Loss of pulse or consciousness during/after the shock</li><li>Recurrent VF/VT after the shock</li><li>Severe bradycardia or cardiac arrest after cardioversion</li><li>Persistent hypotension or pulmonary edema after the shock</li><li>Severe skin burns</li><li>Signs of stroke after cardioversion (one-sided weakness/speech problems)</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>الصدمة الكهربائية آمنة وقصيرة، وهتكون نايم أثناءها في المبرمجة.</li><li>بعد الصدمة: ممكن احمرار بالصدر، يختفي بعد أيام (كريم مرطب حسب الطبيب).</li><li>التزم بمضاد التجلط والأدوية بانتظام بعد التحويل.</li><li>سجّل أي خفقان عاد وبلّغ الطبيب.</li><li>لو عندك جهاز ICD وأخد صدمة: اتصل بالطبيب.</li></ul>",
+   "en": "<ul><li>Electrical shock is safe and brief, and in elective cases you will be asleep during it.</li><li>After the shock: there may be redness on the chest that fades after a few days (moisturizing cream as the physician advises).</li><li>Take the anticoagulant and medications regularly after cardioversion.</li><li>Record any returning palpitations and inform the physician.</li><li>If you have an ICD and it delivers a shock: call the physician.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "كل اضطراب نظم بنبض يُعطى متزامناً (SYNC)، وVF/VT بدون نبض غير متزامن",
+   "نجاح الصدمة ~80% فورياً ويقل ~10% كل دقيقة",
+   "قبل الصدمة: ابتعدوا، ارفع الأكسجين، وتأكد من الوضع الصحيح",
+   "اللصقة الأولى على القمة والثانية أعلى الصدر يميناً (أو أمامي–خلفي)",
+   "بعد الصدمة: CPR فوراً في التوقف",
+   "الحالات الاختيارية: تخدير عام وتجهيز كامل ومضاد تجلط",
+   "الحامل: الصدمة آمنة؛ الأطفال بالجول لكل كجم"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الصدمة الكهربائية (<b>DC shock</b>) من أكفأ وأسرع علاجات اضطراب نظم القلب لو استُخدمت <b>بالطريقة الصحيحة وفي الوقت المناسب</b>. فيه نوعين: <b>تحويل متزامن (Synchronized cardioversion)</b> للتسرعات اللي فيها نبض، و<b>صدمة إزالة الرجفان غير المتزامنة (Defibrillation)</b> لتوقف القلب (VF / VT بدون نبض).</p><div class=\"cs-stats\"><div><b>~80%</b><span>نجاح الصدمة الفورية في VF</span></div><div><b>-10%</b><span>تراجع الفرصة كل دقيقة تأخير</span></div><div><b>SYNC</b><span>لكل التسرعات ماعدا VF</span></div></div>[[slot:dis-243-time|تراجع فرصة النجاح مع الوقت — رسم من إعداد الموقع|/diseases/img/dis-243-time.svg]][[slot:dis-243-sync|متى متزامنة ومتى غير متزامنة — رسم من إعداد الموقع|/diseases/img/dis-243-sync.svg]][[slot:dis-243-device|صورة: جهاز صدمات (Defibrillator) بمجدافين ولوحة التحكم — تُرفع لاحقاً]]"
-    },
-    "causes": {
-      "ar": "<h4>الفرق بين النوعين</h4><table><thead><tr><th></th><th>التحويل المتزامن (Cardioversion)</th><th>إزالة الرجفان (Defibrillation)</th></tr></thead><tbody><tr><td>الاستخدام</td><td>SVT، رفرفة/رجفان أذيني، VT بنبض (غير مستقر)</td><td>VF، VT بدون نبض</td></tr><tr><td>الزر</td><td>SYNC شغّال (الصدمة تنتظر موجة R)</td><td>SYNC مطفي</td></tr><tr><td>المريض</td><td>نبض موجود لكن غير مستقر، أو حالة اختيارية (Elective)</td><td>فاقد الوعي بلا نبض</td></tr><tr><td>التخدير</td><td>لو واعي: تخدير/تسكين سريع؛ الاختيارية تحت تخدير عام</td><td>لا تخدير (فاقد وعي)</td></tr><tr><td>الطاقة (ثنائي الطور)</td><td>SVT/رفرفة 50–100 J • AF 120–200 J • VT 100 J</td><td>120–200 J (أو أقصى طاقة للجهاز لو الطاقة غير معروفة)</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>ليه المتزامنة؟</strong><p>لو أعطينا الصدمة وقت موجة T (الفترة الحساسة) ممكن تتحول لـVF. الوضع SYNC يخلي الجهاز يصدم فوق R فقط.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>مؤشرات الصدمة</h4><table><thead><tr><th>الحالة</th><th>الصدمة</th></tr></thead><tbody><tr><td>VF أو VT بدون نبض</td><td>غير متزامنة فوراً + CPR</td></tr><tr><td>VT بنبض + غير مستقر</td><td>متزامنة</td></tr><tr><td>SVT غير مستقر (أو لم يستجب)</td><td>متزامنة (100 J حسب المراجع)</td></tr><tr><td>AF/رفرفة غير مستقرة</td><td>متزامنة</td></tr><tr><td>حالات اختيارية (Elective AF مثلاً)</td><td>متزامنة تحت تخدير عام وبعد تجهيز كامل</td></tr></tbody></table><h4>علامات عدم الاستقرار</h4><ul><li>هبوط ضغط، تشوش وعي، شحوب وبرودة</li><li>ألم صدر إقفاري، وذمة رئة / فشل قلب حاد</li><li>إغماء</li></ul><div class=\"cs-box cs-tip\"><strong>الصدمة آمنة في الحمل</strong><p>الصدمة الكهربائية آمنة للحامل ولا تؤذي الجنين غالباً؛ ما تأخرهاش. (مع إمالة الحوض لليسار بعد الأسبوع 20).</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>شريط ECG يؤكد النظم (VF/VT/SVT/AF) قبل الصدمة</li><li>فحص النبض السباتي (حتى 10 ثوانٍ)</li><li>الإلكتروليت: بوتاسيوم ومغنسيوم (خصوصاً للمبرمجة)</li><li>في الحالات المبرمجة: ديجوكسين/مضاد تجلط/INR وموافقة موقعة</li><li>بعد الصدمة: ECG 12 اشتقاق + علامات حيوية</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>الجرعة</h4><ul><li><b>إزالة الرجفان (بالغ):</b> 120–200 جول ثنائي الطور (أو 360 جول أحادي الطور)</li><li><b>متزامن:</b> SVT 50–100 • رفرفة 50–100 • AF 120–200 • VT 100</li><li><b>أطفال:</b> حسب المراجع 1–2 جول/كجم؛ الأحدث (PALS): إزالة الرجفان 2 جول/كجم ثم 4 جول/كجم؛ والمتزامن 0.5–1 ثم 2 جول/كجم</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأرقام السابقة للأجهزة ثنائية الطور؛ اتبع دليل الجهاز المستخدم (المصنّع بيحدد الطاقة الفعالة). أي صدمة تانية تكون بنفس الطاقة أو أعلى حسب الجهاز. بعد كل صدمة: ابدأ CPR 2 دقيقة قبل فحص النظم.</p></div><h4>الأدوية المصاحبة في توقف القلب (VF/VT)</h4><p>بعد الصدمة الثانية: أدرينالين 1 مجم وريدي كل 3–5 دقائق، وبعد الثالثة: أميودارون 300 مجم. (اتبع خوارزمية الإنعاش وأوامر قائد الفريق.)</p>[[slot:dis-243-pads|وضع اللصقات/المجاديف — رسم من إعداد الموقع|/diseases/img/dis-243-pads.svg]]"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>جهّز الجهاز والمريض</strong><p>تأكد من شغل الجهاز، شحن البطارية، اللصقات/المجاديف والجل، الأقطاب. اكشف الصدر وجففه وأزل لصقة النيترات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>وصّل الشريط وأكّد النظم</strong><p>شاشة المونيتور: VF؟ VT بدون نبض؟ أم تسرع بنبض؟ اجس النبض السباتي ≤10 ثانية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اختر الوضع</strong><p>متزامن: اضغط SYNC وتأكد من ظهور علامة فوق كل R. غير متزامن: SYNC مطفي. بعد كل صدمة متزامنة افحص إن SYNC لسه شغّال (بعض الأجهزة بترجع تلقائياً لغير المتزامن).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>ضع اللصقات/المجاديف</strong><p>واحدة على القمة (apex) والثانية أعلى الصدر يميناً. مع المجاديف: جل أو لصقات + ضغط قوي. بعيداً عن الباسر ≥8 سم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>خدّر (لو واعي)</strong><p>أمر الطبيب: تخدير/تسكين سريع، أكسجين وشفط، مجرى هواء جاهز، مراقبة. في الحالات الاختيارية: تخدير عام.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>اشحن ثم قل «ابتعدوا!»</strong><p>انظر حواليك: لا أحد يلمس السرير أو المريض أو الوريد/المحاليل، ارفع قناع الأكسجين من الوجه وبعده عن الصدر، ابعد مصدر الأكسجين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>أعطِ الصدمة</strong><p>اضغط الزر (الشخص المسؤول فقط). افحص الشاشة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>CPR فوراً بعد الصدمة (للتوقف)</strong><p>ابدأ الضغطات دون تأخير، 2 دقيقة ثم قيّم النظم. في المتزامنة: أعد تقييم النظم والنبض والضغط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>وثّق وراقب</strong><p>الطاقة، عدد الصدمات، التوقيت، النظم بعد الصدمة، حروق الجلد، العلامات الحيوية. أعد الـECG 12 اشتقاق.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>قواعد أمان لا تُكسر</strong><p>1) «ابتعدوا» قبل كل صدمة. 2) لا أكسجين مفتوح على الصدر. 3) لا تلمس سرير المريض أثناء الصدمة. 4) لا تصدم بدون التأكد من وضع SYNC/غير SYNC. 5) عند كل صدمة نتأكد من الاستعداد للـCPR.</p></div><h4>قبل الصدمة المبرمجة (Elective)</h4><ul><li>صيام وموافقة مكتوبة، شرح للمريض</li><li>مضاد تجلط ثابت قبل وبعد (أو TEE) لو AF أكتر من 48 ساعة</li><li>بوتاسيوم طبيعي، مراجعة الديجوكسين (التسمم يمنع)</li><li>خط وريدي، شفط، أكسجين، مجرى هواء، فريق تخدير</li></ul><h4>مضاعفات يُراقبها التمريض</h4><ul><li>حروق جلدية موضع اللصقات</li><li>اضطراب نظم بعد الصدمة (بطء، VF)</li><li>تجلط/انصمام بعد التحويل، وذمة رئة</li><li>تأثير التخدير: انسداد مجرى هواء، هبوط ضغط</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>فقد النبض أو وعي أثناء/بعد الصدمة</li><li>VF/VT متكرر بعد الصدمة</li><li>بطء شديد أو توقف قلب بعد التحويل</li><li>هبوط ضغط مستمر أو وذمة رئة بعد الصدمة</li><li>حروق شديدة بالجلد</li><li>علامات سكتة بعد التحويل (ضعف جانب/كلام)</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>الصدمة الكهربائية آمنة وقصيرة، وهتكون نايم أثناءها في المبرمجة.</li><li>بعد الصدمة: ممكن احمرار بالصدر، يختفي بعد أيام (كريم مرطب حسب الطبيب).</li><li>التزم بمضاد التجلط والأدوية بانتظام بعد التحويل.</li><li>سجّل أي خفقان عاد وبلّغ الطبيب.</li><li>لو عندك جهاز ICD وأخد صدمة: اتصل بالطبيب.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "كل اضطراب نظم بنبض يُعطى متزامناً (SYNC)، وVF/VT بدون نبض غير متزامن",
-      "نجاح الصدمة ~80% فورياً ويقل ~10% كل دقيقة",
-      "قبل الصدمة: ابتعدوا، ارفع الأكسجين، وتأكد من الوضع الصحيح",
-      "اللصقة الأولى على القمة والثانية أعلى الصدر يميناً (أو أمامي–خلفي)",
-      "بعد الصدمة: CPR فوراً في التوقف",
-      "الحالات الاختيارية: تخدير عام وتجهيز كامل ومضاد تجلط",
-      "الحامل: الصدمة آمنة؛ الأطفال بالجول لكل كجم"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي نظم يُصدم غير متزامن؟"
-      },
-      "options": [
-        {
-          "ar": "SVT"
-        },
-        {
-          "ar": "VF"
-        },
-        {
-          "ar": "AF"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "VF لا توجد فيه موجة R للمزامنة."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد صدمة VF مباشرة؟"
-      },
-      "options": [
-        {
-          "ar": "نفحص النبض 30 ث"
-        },
-        {
-          "ar": "CPR فوراً"
-        },
-        {
-          "ar": "نعيد الصدمة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "نبدأ الضغطات دون تأخير لمدة دقيقتين."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل الضغط على زر الصدمة؟"
-      },
-      "options": [
-        {
-          "ar": "نقول ابتعدوا ونرفع الأكسجين"
-        },
-        {
-          "ar": "ننتظر دقيقة"
-        },
-        {
-          "ar": "نضع الجل على السرير"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "أمان الفريق: لا ملامسة ولا أكسجين مفتوح."
-      }
-    },
-    {
-      "q": {
-        "ar": "تسرع بنبض ومريض غير مستقر؟"
-      },
-      "options": [
-        {
-          "ar": "صدمة متزامنة"
-        },
-        {
-          "ar": "غير متزامنة"
-        },
-        {
-          "ar": "ننتظر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تحويل متزامن مع تخدير لو واعي."
-      }
-    },
-    {
-      "q": {
-        "ar": "الصدمة الكهربائية للحامل؟"
-      },
-      "options": [
-        {
-          "ar": "ممنوعة"
-        },
-        {
-          "ar": "آمنة"
-        },
-        {
-          "ar": "تؤجل للولادة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "آمنة وفعالة للأم والجنين."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AHA 2020/2025 ACLS: Adult Cardiac Arrest and Tachycardia algorithms"
-    },
-    {
-      "title": "WikEM / ACLS synchronized cardioversion energy table"
-    },
-    {
-      "title": "ERC 2021 Guidelines: Adult advanced life support"
-    },
-    {
-      "title": "PALS defibrillation/cardioversion dosing (2 → 4 J/kg)"
-    }
+  "en": [
+   "Every arrhythmia with a pulse is shocked synchronized (SYNC); VF/pulseless VT unsynchronized",
+   "Shock success is ~80% when immediate and falls ~10% every minute",
+   "Before the shock: stand clear, remove the oxygen, and confirm the correct mode",
+   "The first pad at the apex and the second on the upper right chest (or anterior–posterior)",
+   "After the shock: immediate CPR in arrest",
+   "Elective cases: general anesthesia, full preparation, and anticoagulation",
+   "Pregnancy: the shock is safe; children by joules per kg"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي نظم يُصدم غير متزامن؟",
+    "en": "Which rhythm is shocked unsynchronized?"
+   },
+   "options": [
+    {
+     "ar": "SVT",
+     "en": "SVT"
+    },
+    {
+     "ar": "VF",
+     "en": "VF"
+    },
+    {
+     "ar": "AF",
+     "en": "AF"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "VF لا توجد فيه موجة R للمزامنة.",
+    "en": "VF has no R wave to synchronize with."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد صدمة VF مباشرة؟",
+    "en": "Immediately after shocking VF?"
+   },
+   "options": [
+    {
+     "ar": "نفحص النبض 30 ث",
+     "en": "Check the pulse for 30 s"
+    },
+    {
+     "ar": "CPR فوراً",
+     "en": "CPR immediately"
+    },
+    {
+     "ar": "نعيد الصدمة",
+     "en": "Repeat the shock"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "نبدأ الضغطات دون تأخير لمدة دقيقتين.",
+    "en": "Start compressions without delay for two minutes."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل الضغط على زر الصدمة؟",
+    "en": "Before pressing the shock button?"
+   },
+   "options": [
+    {
+     "ar": "نقول ابتعدوا ونرفع الأكسجين",
+     "en": "Say \"stand clear\" and remove the oxygen"
+    },
+    {
+     "ar": "ننتظر دقيقة",
+     "en": "Wait a minute"
+    },
+    {
+     "ar": "نضع الجل على السرير",
+     "en": "Put gel on the bed"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "أمان الفريق: لا ملامسة ولا أكسجين مفتوح.",
+    "en": "Team safety: no contact and no open oxygen."
+   }
+  },
+  {
+   "q": {
+    "ar": "تسرع بنبض ومريض غير مستقر؟",
+    "en": "Tachycardia with a pulse and an unstable patient?"
+   },
+   "options": [
+    {
+     "ar": "صدمة متزامنة",
+     "en": "Synchronized shock"
+    },
+    {
+     "ar": "غير متزامنة",
+     "en": "Unsynchronized"
+    },
+    {
+     "ar": "ننتظر",
+     "en": "Wait"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تحويل متزامن مع تخدير لو واعي.",
+    "en": "Synchronized cardioversion with sedation if conscious."
+   }
+  },
+  {
+   "q": {
+    "ar": "الصدمة الكهربائية للحامل؟",
+    "en": "Electrical shock in a pregnant woman?"
+   },
+   "options": [
+    {
+     "ar": "ممنوعة",
+     "en": "Contraindicated"
+    },
+    {
+     "ar": "آمنة",
+     "en": "Safe"
+    },
+    {
+     "ar": "تؤجل للولادة",
+     "en": "Postponed until delivery"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "آمنة وفعالة للأم والجنين.",
+    "en": "Safe and effective for mother and fetus."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AHA 2020/2025 ACLS: Adult Cardiac Arrest and Tachycardia algorithms"
+  },
+  {
+   "title": "WikEM / ACLS synchronized cardioversion energy table"
+  },
+  {
+   "title": "ERC 2021 Guidelines: Adult advanced life support"
+  },
+  {
+   "title": "PALS defibrillation/cardioversion dosing (2 → 4 J/kg)"
+  }
+ ]
 }

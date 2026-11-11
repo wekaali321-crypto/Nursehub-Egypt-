@@ -1,242 +1,304 @@
 {
-  "id": "dis-141",
-  "num": 141,
-  "system": "cardio",
-  "icon": "💓",
-  "level": 3,
-  "title": {
-    "ar": "الرجفان الأذيني",
-    "en": "Atrial Fibrillation (AF)"
+ "id": "dis-141",
+ "num": 141,
+ "system": "cardio",
+ "icon": "💓",
+ "level": 3,
+ "title": {
+  "ar": "الرجفان الأذيني",
+  "en": "Atrial Fibrillation (AF)"
+ },
+ "teaser": {
+  "ar": "نبض غير منتظم وخطر سكتة: اعرف الفرق بين المستقر وغير المستقر، وقاعدة الـ48 ساعة، ومراقبة الوارفارين وأميودارون.",
+  "en": "An irregular pulse and stroke risk: learn the difference between stable and unstable, the 48-hour rule, and monitoring of warfarin and amiodarone."
+ },
+ "chips": [
+  {
+   "ar": "AF",
+   "en": "AF"
   },
-  "teaser": {
-    "ar": "نبض غير منتظم وخطر سكتة: اعرف الفرق بين المستقر وغير المستقر، وقاعدة الـ48 ساعة، ومراقبة الوارفارين وأميودارون."
+  {
+   "ar": "مضاد التجلط",
+   "en": "Anticoagulant"
   },
-  "chips": [
-    {
-      "ar": "AF"
-    },
-    {
-      "ar": "مضاد التجلط"
-    },
-    {
-      "ar": "48 ساعة"
-    }
+  {
+   "ar": "48 ساعة",
+   "en": "48 hours"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الرجفان الأذيني (<b>AF</b>) هو أشهر اضطراب نظم مستمر. الأذينان بيرتعشوا بدل ما ينقبضوا بمعدل <b>400–600 مرة في الدقيقة</b>، والبطينان بيستجيبوا <b>لبعض النبضات بس وبشكل غير منتظم</b> (حصار فسيولوجي في العقدة الأذينية البطينية بيحمي البطين من كل الكمية دي). النتيجة: نبض سريع غير منتظم، وقدرة ضخ أقل، وخطر <b>تجلط في الأذين وانصمام (سكتة)</b>.</p><div class=\"cs-stats\"><div><b>400–600</b><span>انقباضة/د في الأذينين</span></div><div><b>غير منتظم</b><span>نبض بطيني</span></div><div><b>48 ساعة</b><span>حد فاصل لقرار التحويل</span></div></div>[[slot:dis-144-tachy-b|شكل الـ ECG في AF وVT وVF — رسم من دليل قراءة الـ ECG|/diseases/img/dis-144-tachy-b.svg]]<div class=\"cs-box cs-warning\"><strong>لماذا نهتم؟</strong><p>مريض AF بدون مضاد تجلط معرّض لسكتة دماغية أكتر بحوالي 5 أضعاف. وإحساس المريض بالخفقان ممكن يغيب تماماً (AF صامت).</p></div><h4>ثلاث خطوات لعلاج أي مريض AF</h4><ol><li><b>مضاد التجلط (Anticoagulant)</b> لكل المرضى (حسب تقييم الخطر والموانع)</li><li><b>إما التحكم في النظم (Rhythm control) أو في المعدل (Rate control)</b></li><li><b>علاج السبب</b> لو أمكن (غدة درقية، التهاب، جفاف، كحول…)</li></ol><div class=\"cs-box cs-pearl\"><strong>مهم: مش لازم نرجّع النظم الجيبي</strong><p>دراسات كبيرة زي AFFIRM بينت إن <b>مضاد التجلط + دواء يبطئ المعدل</b> بنفس فائدة محاولة إرجاع النظم من حيث البقاء. فمتخليش همك الأكبر إنك ترجّعه جيبي لأي ثمن.</p></div><!--M1--><h4>معلومات مكملة</h4><p>الرجفان الأذيني هو أشيع اضطراب نظم مزمن، وهو بحد ذاته ليس مهدداً للحياة لكنه يرفع خطر الجلطات والسكتة. غالباً يختفي عند علاج السبب. أعراض: بدون أعراض، نبض غير منتظم، شبه إغماء، خفقان، دوخة، ضيق نفس. ECG: QRS غير منتظم، PR غائب تقريباً، P غير موجودة أو منخفضة. تحليل الدرقية مهم لأن فرط الدرقية يسبب AF.</p>",
+   "en": "<p>Atrial fibrillation (<b>AF</b>) is the most common sustained rhythm disorder. The atria quiver instead of contracting, at a rate of <b>400–600 times per minute</b>, and the ventricles respond <b>to only some of the impulses, irregularly</b> (a physiological block in the AV node protects the ventricle from all that load). The result: a fast irregular pulse, reduced pumping ability, and a risk of <b>clot formation in the atrium and embolism (stroke)</b>.</p><div class=\"cs-stats\"><div><b>400–600</b><span>Contractions/min in the atria</span></div><div><b>Irregular</b><span>Ventricular pulse</span></div><div><b>48 hours</b><span>Cutoff for the cardioversion decision</span></div></div>[[slot:dis-144-tachy-b|ECG appearance in AF, VT, and VF — illustration from the ECG reading guide|/diseases/img/dis-144-tachy-b.svg]]<div class=\"cs-box cs-warning\"><strong>Why do we care?</strong><p>An AF patient without an anticoagulant has about 5 times higher risk of stroke. And the patient may not feel palpitations at all (silent AF).</p></div><h4>Three steps to treat any AF patient</h4><ol><li><b>Anticoagulant</b> for all patients (based on risk assessment and contraindications)</li><li><b>Either rhythm control or rate control</b></li><li><b>Treat the cause</b> if possible (thyroid, infection, dehydration, alcohol…)</li></ol><div class=\"cs-box cs-pearl\"><strong>Important: restoring sinus rhythm is not a must</strong><p>Large studies such as AFFIRM showed that <b>an anticoagulant + a rate-slowing drug</b> gives the same survival benefit as trying to restore the rhythm. So do not make restoring sinus rhythm at any cost your main concern.</p></div><!--M1--><h4>Supplementary information</h4><p>Atrial fibrillation is the most common chronic rhythm disorder; it is not life-threatening by itself, but it raises the risk of clots and stroke. It often disappears when the cause is treated. Symptoms: no symptoms, irregular pulse, near-fainting, palpitations, dizziness, shortness of breath. ECG: irregular QRS, PR nearly absent, P absent or low. Thyroid testing is important because hyperthyroidism causes AF.</p>"
+  },
+  "causes": {
+   "ar": "<h4>الأسباب والمحفزات</h4><div class=\"cs-compare\"><ul><li><b>قلبية:</b> روماتيزم القلب (الصمام الميترالي)، عيوب خلقية، مرض الشرايين التاجية، اعتلال العضلة والتهابها (cardiomyopathy / myocarditis)، فشل القلب الاحتقاني، التهاب التامور المضيّق (Constrictive pericarditis)، جراحات القلب، ارتفاع الضغط</li><li><b>صدرية:</b> جلطة رئوية (pulmonary embolism)، COPD</li><li><b>غدية:</b> فرط نشاط الغدة الدرقية (hyperthyroidism)</li><li><b>دوائية (iatrogenic):</b> أدوية محاكية للودي (sympathomimetic) زي بخاخات الربو والمنشطات</li><li><b>بدون سبب (idiopathic / lone AF):</b> ممكن يحصل في أشخاص أصحاء خصوصاً مع التوتر أو المجهود</li></ul></div><div class=\"cs-box cs-info\"><strong>أسباب إضافية مهمة</strong><p>الكحول («متلازمة قلب الإجازة»)، الكافيين الزائد، انقطاع النفس أثناء النوم، السمنة، اضطراب الأملاح (بوتاسيوم/مغنسيوم)، العدوى الشديدة، وبعد الجراحات.</p></div>",
+   "en": "<h4>Causes and triggers</h4><div class=\"cs-compare\"><ul><li><b>Cardiac:</b> rheumatic heart disease (mitral valve), congenital defects, coronary artery disease, cardiomyopathy and myocarditis (cardiomyopathy / myocarditis), congestive heart failure, constrictive pericarditis (Constrictive pericarditis), heart surgery, hypertension</li><li><b>Pulmonary:</b> pulmonary embolism (pulmonary embolism), COPD</li><li><b>Endocrine:</b> hyperthyroidism (hyperthyroidism)</li><li><b>Drug-induced (iatrogenic):</b> sympathomimetic drugs (sympathomimetic) such as asthma inhalers and stimulants</li><li><b>No cause (idiopathic / lone AF):</b> may occur in healthy people, especially with stress or exertion</li></ul></div><div class=\"cs-box cs-info\"><strong>Other important causes</strong><p>Alcohol (\"holiday heart syndrome\"), excess caffeine, sleep apnea, obesity, electrolyte imbalance (potassium/magnesium), severe infection, and after surgery.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>الأعراض</h4><ul><li><b>خفقان (palpitation):</b> سريع، غير منتظم، نوبي (paroxysmal) أو مستمر (persistent)</li><li><b>أعراض نقص النتاج القلبي (low COP):</b> إغماء، ضيق نفس، ذبحة، دوخة، صدمة</li><li><b>مضاعفات التجلط:</b> تجلط في الأذين وانصمام (سكتة دماغية، انسداد شريان طرف)</li></ul><h4>الفحص</h4><table><thead><tr><th>الفحص</th><th>الموجود في AF</th></tr></thead><tbody><tr><td>النبض</td><td>سريع، غير منتظم، مع <b>عجز نبض (pulse deficit)</b> أكتر من 10 ن/د؛ ويتأثر بتدليك الجيب السباتي (المعدل البطيني يتباطأ مؤقتاً لكن النظم يفضل غير منتظم)</td></tr><tr><td>السماعة</td><td>شدة الصوت الأول (S1) متغيرة من نبضة لنبضة</td></tr><tr><td>الضغط</td><td>قد ينخفض مع المعدل السريع جداً</td></tr></tbody></table>[[slot:dis-141-pulse-deficit|عجز النبض: الفرق بين النبض القلبي والنبض الرسغي — رسم من إعداد الموقع|/diseases/img/dis-141-pulse-deficit.svg]]<h4>التصنيف العملي</h4><table><thead><tr><th>النوع</th><th>التعريف</th></tr></thead><tbody><tr><td>نوبي (Paroxysmal)</td><td>يتوقف تلقائياً خلال 7 أيام</td></tr><tr><td>مستمر (Persistent)</td><td>أكتر من 7 أيام أو يحتاج تحويل</td></tr><tr><td>مستمر طويل / دائم</td><td>أكتر من 12 شهر / تقرر قبول الحالة</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>مؤشرات عدم الاستقرار</strong><p>هبوط ضغط، ألم صدر إقفاري، وذمة رئة / فشل حاد، تشوش وعي، شحوب وبرودة (صدمة): ده معناه <b>صدمة كهربائية متزامنة فوراً</b>.</p></div>",
+   "en": "<h4>Symptoms</h4><ul><li><b>Palpitations (palpitation):</b> fast, irregular, paroxysmal (paroxysmal) or persistent (persistent)</li><li><b>Symptoms of low cardiac output (low COP):</b> fainting, shortness of breath, angina, dizziness, shock</li><li><b>Thrombotic complications:</b> clot in the atrium and embolism (stroke, limb artery occlusion)</li></ul><h4>Examination</h4><table><thead><tr><th>Exam</th><th>Finding in AF</th></tr></thead><tbody><tr><td>Pulse</td><td>Fast, irregular, with a <b>pulse deficit</b> of more than 10 bpm; affected by carotid sinus massage (the ventricular rate slows temporarily but the rhythm stays irregular)</td></tr><tr><td>Stethoscope</td><td>The intensity of the first heart sound (S1) varies from beat to beat</td></tr><tr><td>Blood pressure</td><td>May drop with a very fast rate</td></tr></tbody></table>[[slot:dis-141-pulse-deficit|Pulse deficit: the difference between apical and radial pulse — site-made illustration|/diseases/img/dis-141-pulse-deficit.svg]]<h4>Practical classification</h4><table><thead><tr><th>Type</th><th>Definition</th></tr></thead><tbody><tr><td>Paroxysmal</td><td>Stops on its own within 7 days</td></tr><tr><td>Persistent</td><td>More than 7 days or needs cardioversion</td></tr><tr><td>Long-standing persistent / permanent</td><td>More than 12 months / decision to accept the condition</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Signs of instability</strong><p>Low blood pressure, ischemic chest pain, pulmonary edema / acute failure, altered consciousness, pallor and coldness (shock): this means <b>immediate synchronized cardioversion</b>.</p></div>"
+  },
+  "tests": {
+   "ar": "<h4>تخطيط القلب ECG</h4><ul><li><b>موجة P غائبة</b> وبدلها اهتزازات غير منتظمة في الخط الأساسي (fibrillatory waves)</li><li><b>QRS</b> شكله طبيعي لكن <b>إيقاعه غير منتظم</b> (irregularly irregular)</li></ul>[[slot:dis-144-tachy-b|شكل AF على الـ ECG (الشريط الثاني) — رسم من دليل قراءة الـ ECG|/diseases/img/dis-144-tachy-b.svg]][[slot:dis-141-ecg-real|صورة: تخطيط ECG حقيقي لرجفان أذيني — تُرفع لاحقاً]]<h4>فحوصات إضافية يطلبها الطبيب</h4><ul><li>تحاليل: وظائف غدة درقية (TSH)، وظائف كلى، بوتاسيوم ومغنسيوم، سكر، صورة دم، INR (لمن يأخذ وارفارين)</li><li>إيكو (Echo): حجم الأذين، وظيفة البطين، عيوب الصمامات، جلطة بالأذين (TEE للتأكد قبل التحويل)</li><li>هولتر لاكتشاف AF النوبي</li></ul>[[slot:dis-141-chadsvasc|تقدير خطر السكتة CHA₂DS₂-VASc — رسم من إعداد الموقع|/diseases/img/dis-141-chadsvasc.svg]][[slot:dis-141-ecg-real2|صورة: تخطيط AF حقيقي 12 اشتقاق (مثال: عدم انتظام R–R وغياب P)]]<div class=\"cs-box cs-info\"><strong>AF مع BBB أو WPW</strong><p>لو QRS عريض + غير منتظم: فكّر في AF مع حصار فرعي أو متلازمة WPW (خطر). انظر دليل «قراءة التسرع على الـECG».</p></div>",
+   "en": "<h4>Electrocardiogram (ECG)</h4><ul><li><b>Absent P wave</b>, replaced by irregular baseline oscillations (fibrillatory waves)</li><li><b>QRS</b> normal in shape but <b>irregular in rhythm</b> (irregularly irregular)</li></ul>[[slot:dis-144-tachy-b|AF appearance on the ECG (second strip) — illustration from the ECG reading guide|/diseases/img/dis-144-tachy-b.svg]][[slot:dis-141-ecg-real|Image: a real ECG of atrial fibrillation — to be uploaded later]]<h4>Additional tests the physician orders</h4><ul><li>Labs: thyroid function (TSH), kidney function, potassium and magnesium, glucose, blood count, INR (for those on warfarin)</li><li>Echo: atrial size, ventricular function, valve defects, atrial clot (TEE to confirm before cardioversion)</li><li>Holter to detect paroxysmal AF</li></ul>[[slot:dis-141-chadsvasc|Stroke risk estimation CHA₂DS₂-VASc — site-made illustration|/diseases/img/dis-141-chadsvasc.svg]][[slot:dis-141-ecg-real2|Image: a real 12-lead AF ECG (example: irregular R–R and absent P)]]<div class=\"cs-box cs-info\"><strong>AF with BBB or WPW</strong><p>If QRS is wide + irregular: think of AF with bundle branch block or WPW syndrome (danger). See the guide \"Reading tachycardia on the ECG\".</p></div>"
+  },
+  "treatment": {
+   "ar": "<div class=\"cs-box cs-info\"><strong>ثلاثة أسئلة في كل مريض AF</strong><p>1) هل هو <b>مستقر</b>؟ 2) هل نتحكم في <b>المعدل (rate)</b> أم نرجّع <b>النظم (rhythm)</b>؟ 3) هل يحتاج <b>مضاد تجلط</b>؟</p></div>[[slot:dis-141-algorithm|خطوات التعامل مع AF — رسم من إعداد الموقع|/diseases/img/dis-141-algorithm.svg]]<h4>أ) المريض غير مستقر (hemodynamically unstable)</h4><p><b>صدمة كهربائية متزامنة (DC cardioversion) فوراً</b> مع تخدير/تسكين لو المريض واعي.</p><h4>ب) مستقر والـ AF أقل من 48 ساعة</h4><ol><li><b>مضادات التجلط</b> قبل الصدمة (الوصفة الشائعة: Marevan؛ وفي الطوارئ غالباً هيبارين)</li><li><b>استعادة النظم الجيبي:</b> Cordarone (أميودارون) أمبول 150 مجم</li><li><b>صدمة كهربائية</b> لو فشل العلاج الدوائي</li><li><b>إبطاء استجابة البطين:</b> لو وظيفة الانقباض جيدة ← Inderal (بروبرانولول) 10 أو 40 مجم أقراص، ولو لأ ← Lanoxin (ديجوكسين) 0.25 مجم أقراص</li></ol><h4>ج) مستقر والـ AF أكثر من 48 ساعة أو غير معروف المدة</h4><ol><li><b>مضادات التجلط:</b> Marevan (وارفارين) 1 أو 3 أو 5 مجم</li><li><b>إبطاء استجابة البطين:</b> نفس الاختيار (Inderal لو الانقباض جيد، Lanoxin لو لأ)</li></ol><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>الأمان: لو المدة أكثر من 48 ساعة أو غير معروفة، <b>لا تحويل (دوائي أو كهربي)</b> قبل <b>3 أسابيع</b> مضاد تجلط فعّال، أو إيكو مريئي (TEE) يستبعد جلطة الأذين؛ و<b>4 أسابيع بعد التحويل</b> على الأقل. مع المدة أقل من 48 ساعة والخطر المنخفض ممكن يتخطى الطبيب مضاد التجلط قبل التحويل.</li><li>الاختيار الحالي (ACC/AHA 2023، ESC 2024): <b>مضادات التجلط الفموية الحديثة (DOACs: ريفاروكسابان، أبيكسابان، دابيجاتران، إدوكسابان)</b> مفضّلة على الوارفارين، إلا مع صمام ميكانيكي أو تضيق ميترالي متوسط/شديد فالوارفارين (INR 2–3).</li><li>التحكم في المعدل: الهدف بالراحة تحت 110 ن/د (أو أقل حسب الأعراض). المفضل <b>حاصر بيتا أو Verapamil/Diltiazem</b> (لا تُستخدم هذه الأخيرة مع ضعف انقباض البطين)؛ <b>Digoxin</b> أنسب لفشل القلب أو المريض قليل الحركة.</li><li>بروبرانولول (Inderal) غير انتقائي: انتبه في الربو/COPD. أميودارون الوريدي: 150 مجم خلال 10 دقائق ثم 1 مجم/دقيقة لـ 6 ساعات ثم 0.5 مجم/دقيقة (بالمضخة، حسب أمر الطبيب).</li><li>WPW مع AF: ممنوع حاصرات العقدة (Verapamil/Digoxin) — بلّغ الطبيب.</li></ul></div><h4>العلاج المنزلي في AF الحاد</h4><ul><li>Cordarone 200 مجم أقراص مرتين يومياً</li><li>Marevan 1 أو 3 أو 5 مجم أقراص مرة أو مرتين يومياً (<b>INR المطلوب 2–3</b>)</li><li>Inderal 10 مجم مرتين يومياً <b>أو</b> Lanoxin 0.25 مجم مرة أو مرتين يومياً</li></ul><h4>العلاج المنزلي في AF المزمن</h4><ul><li>Marevan 1 أو 3 أو 5 مجم مرة أو مرتين يومياً (INR = 2–3)</li><li>Inderal 10 مجم مرتين يومياً <b>أو</b> Lanoxin 0.25 مجم مرة أو مرتين يومياً</li></ul><h4>تعديلات علاجية (Modification)</h4><ul><li><b>الكي بالقسطرة</b> بالترددات الراديوية (catheter radio-frequency ablation)</li><li><b>الكي الجراحي</b> (surgical ablation)</li></ul><div class=\"cs-box cs-warning\"><strong>جدول تفاعلات مهم للممرض</strong><table><thead><tr><th>الدواء</th><th>خطر</th></tr></thead><tbody><tr><td>أميودارون + وارفارين</td><td>يرفع INR بشدة (قد تحتاج الجرعة تقليلاً)</td></tr><tr><td>أميودارون + ديجوكسين</td><td>يضاعف مستوى الديجوكسين → تسمم</td></tr><tr><td>ديجوكسين + نقص بوتاسيوم/مدرّات</td><td>سمّية أعلى واضطراب نظم</td></tr><tr><td>بيتا + فيراباميل/ديلتيازيم</td><td>بطء شديد/حصار</td></tr></tbody></table></div><h4>مين نرجّع له النظم الجيبي (Rhythm control)؟</h4><table><thead><tr><th>المريض اللي ننفع معه الإرجاع</th><th>السبب</th></tr></thead><tbody><tr><td>شاب (Young)</td><td>فرصة نجاح أكبر وأعراض أكتر</td></tr><tr><td>مدة AF أقل من 48 ساعة</td><td>خطر الجلطة أقل</td></tr><tr><td>بدون مرض قلب هيكلي (Structural heart disease: تغير في شكل أو حجم القلب، صمامات، عيوب خلقية)</td><td>النظم الجيبي يستمر أكتر</td></tr></tbody></table><p>أغلب مرضانا ما بيعطوا تفاصيل دقيقة عن حالتهم، فالأسلم والأكثر أماناً التركيز على <b>التحكم في المعدل (Rate limiting)</b> مع مضاد التجلط.</p><div class=\"cs-box cs-danger\"><strong>تحذير: لا أميودارون «لكل المرضى» بدون تقييم</strong><p>يمارس بعض الأطباء إعطاء أمبولتين Cordarone في نصف لتر ملح لأي مريض AF. ده خطر: لو رجع النظم الجيبي فجأة من غير مضاد تجلط كافٍ قد يحصل <b>«وابل انصمامات» (Showering of emboli)</b> وجلطة مخية (CVA)، فيدخل المريض ماشياً ويخرج مقعداً. لا تفعله إلا بأمر الطبيب بعد تحديد مدة AF والتجلط.</p></div><h4>الديجوكسين (Lanoxin) في AF — الجرعة وطريقة الإعطاء</h4>[[slot:dis-141-digoxin|مسار الديجوكسين الوريدي — رسم من إعداد الموقع|/diseases/img/dis-141-digoxin.svg]]<ul><li>الجرعة الكلية المعتادة: <b>1 – 1.5 مجم/يوم</b></li><li><b>دفعة (Bolus) 0.5 مجم</b> (أمبول 0.5 مجم) في 100 مل ملح أو جلوكوز خلال 30 دقيقة</li><li>بعد 8 ساعات: ECG وقياس النبض. لو وصل النبض للهدف: لا تكمل (حول للفموي). لو لا: تكمل الصيانة</li><li>الصيانة: 0.5 مجم لكل 500 مل سوائل على 8 ساعات ثم 0.5 مجم أخرى (المجموع 1.5 مجم)، أو 0.25 مجم لكل 500 مل على 8 ساعات مرتين (المجموع 1 مجم)</li></ul><div class=\"cs-box cs-info\"><strong>ملاحظات</strong><p>1) قلل جرعة الديجوكسين في كبار السن والقصور الكلوي. 2) نسبة التسمم ترتفع مع <b>نقص البوتاسيوم</b> (وبعض المدرّات). 3) الهدف: معدل القلب 60–90 في الراحة، وحتى 110 مع المجهود.</p></div><div class=\"cs-box cs-pearl\"><strong>تحديث</strong><p>تحميل الديجوكسين في النشرة الحديثة 8–12 مكجم/كجم إجمالاً بنصف الجرعة ثم ربعين كل 6–8 ساعات، ويُحقن على 5 دقائق على الأقل (لا دفعة سريعة)؛ والمستوى في الدم يؤخذ بعد 6 ساعات على الأقل من الجرعة. اتّبع أمر الطبيب. أما الهدف المريح <110 في الراحة فمقبول في إرشادات حديثة (RACE II) لو المريض بلا أعراض.</p></div><h4>علامات تسمم الديجوكسين</h4><table><thead><tr><th>خارج القلب (Noncardiac)</th><th>قلبية (Cardiac)</th></tr></thead><tbody><tr><td>فقدان الشهية، غثيان وقيء، ألم بطن</td><td>اضطراب نظم بطيني (Ventricular arrhythmias)</td></tr><tr><td>اضطراب النظر: هالات، رهاب الضوء، رؤية أخضر/أصفر</td><td>حصار أذيني بطيني (AV block)</td></tr><tr><td>تعب وضعف</td><td>اضطراب نظم أذيني</td></tr><tr><td>تشوش، هذيان، ذهان</td><td>بطء جيبي (Sinus bradycardia)</td></tr></tbody></table><!--M1--><h4>أدوية وإجراءات</h4><ul><li>مضادات اضطراب النظم بعد الاستقرار: أميودارون، ديجوكسين، ديلتيازيم، فيراباميل</li><li>المريض غير المستقر: تحويل كهربائي متزامن</li><li>جهاز تنظيم ضربات (Pacemaker) في بعض الحالات</li><li>وارفارين لو AF مستمر</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المراجع تذكر التحويل إذا AF أقل من 72 ساعة؛ الإرشادات الحالية 48 ساعة، وبعدها يحتاج مميعات 3 أسابيع قبل التحويل أو إيكو عبر المريء. وتفضل DOACs على الوارفارين لغير مرضى الميترالي الروماتيزمي أو الصمام الميكانيكي.</p></div>",
+   "en": "<div class=\"cs-box cs-info\"><strong>Three questions in every AF patient</strong><p>1) Is the patient <b>stable</b>? 2) Do we control the <b>rate</b> or restore the <b>rhythm</b>? 3) Does the patient need an <b>anticoagulant</b>?</p></div>[[slot:dis-141-algorithm|Steps for managing AF — site-made illustration|/diseases/img/dis-141-algorithm.svg]]<h4>A) Unstable patient (hemodynamically unstable)</h4><p><b>Immediate synchronized electrical cardioversion (DC cardioversion)</b> with sedation/analgesia if the patient is conscious.</p><h4>B) Stable and AF less than 48 hours</h4><ol><li><b>Anticoagulants</b> before cardioversion (common prescription: Marevan; in the emergency room usually heparin)</li><li><b>Restore sinus rhythm:</b> Cordarone (amiodarone) ampule 150 mg</li><li><b>Electrical cardioversion</b> if drug treatment fails</li><li><b>Slow the ventricular response:</b> if systolic function is good → Inderal (propranolol) 10 or 40 mg tablets; if not → Lanoxin (digoxin) 0.25 mg tablets</li></ol><h4>C) Stable and AF more than 48 hours or of unknown duration</h4><ol><li><b>Anticoagulants:</b> Marevan (warfarin) 1, 3, or 5 mg</li><li><b>Slow the ventricular response:</b> same choice (Inderal if contraction is good, Lanoxin if not)</li></ol><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li>Safety: if the duration is more than 48 hours or unknown, <b>no cardioversion (drug or electrical)</b> before <b>3 weeks</b> of effective anticoagulation, or a transesophageal echo (TEE) that rules out an atrial clot; and <b>4 weeks after cardioversion</b> at least. With a duration under 48 hours and low risk, the physician may skip anticoagulation before cardioversion.</li><li>Current choice (ACC/AHA 2023, ESC 2024): <b>direct oral anticoagulants (DOACs: rivaroxaban, apixaban, dabigatran, edoxaban)</b> are preferred over warfarin, except with a mechanical valve or moderate/severe mitral stenosis, where warfarin is used (INR 2–3).</li><li>Rate control: the resting target is under 110 bpm (or lower depending on symptoms). Preferred are <b>beta-blockers or Verapamil/Diltiazem</b> (the latter are not used with weak ventricular contraction); <b>Digoxin</b> suits heart failure or a less mobile patient.</li><li>Propranolol (Inderal) is non-selective: be careful in asthma/COPD. IV amiodarone: 150 mg over 10 minutes, then 1 mg/minute for 6 hours, then 0.5 mg/minute (by pump, per physician's order).</li><li>WPW with AF: AV nodal blockers (Verapamil/Digoxin) are forbidden — notify the physician.</li></ul></div><h4>Home treatment in acute AF</h4><ul><li>Cordarone 200 mg tablets twice daily</li><li>Marevan 1, 3, or 5 mg tablets once or twice daily (<b>target INR 2–3</b>)</li><li>Inderal 10 mg twice daily <b>or</b> Lanoxin 0.25 mg once or twice daily</li></ul><h4>Home treatment in chronic AF</h4><ul><li>Marevan 1, 3, or 5 mg once or twice daily (INR = 2–3)</li><li>Inderal 10 mg twice daily <b>or</b> Lanoxin 0.25 mg once or twice daily</li></ul><h4>Treatment modifications (Modification)</h4><ul><li><b>Catheter radiofrequency ablation</b> (catheter radio-frequency ablation)</li><li><b>Surgical ablation</b> (surgical ablation)</li></ul><div class=\"cs-box cs-warning\"><strong>Important interaction table for the nurse</strong><table><thead><tr><th>Drug</th><th>Risk</th></tr></thead><tbody><tr><td>Amiodarone + warfarin</td><td>Raises INR markedly (the dose may need reducing)</td></tr><tr><td>Amiodarone + digoxin</td><td>Doubles the digoxin level → toxicity</td></tr><tr><td>Digoxin + low potassium/diuretics</td><td>Higher toxicity and arrhythmia</td></tr><tr><td>Beta-blocker + verapamil/diltiazem</td><td>Severe bradycardia/block</td></tr></tbody></table></div><h4>Who do we restore sinus rhythm for (Rhythm control)?</h4><table><thead><tr><th>Patient suitable for rhythm restoration</th><th>Reason</th></tr></thead><tbody><tr><td>Young</td><td>Higher chance of success and more symptoms</td></tr><tr><td>AF duration less than 48 hours</td><td>Lower clot risk</td></tr><tr><td>No structural heart disease (Structural heart disease: change in heart shape or size, valves, congenital defects)</td><td>Sinus rhythm lasts longer</td></tr></tbody></table><p>Most of our patients do not give precise details about their condition, so the safest approach is to focus on <b>rate control (Rate limiting)</b> with an anticoagulant.</p><div class=\"cs-box cs-danger\"><strong>Warning: no amiodarone \"for all patients\" without assessment</strong><p>Some physicians give two Cordarone ampules in half a liter of saline to any AF patient. This is dangerous: if sinus rhythm returns suddenly without adequate anticoagulation, a <b>\"showering of emboli\" (Showering of emboli)</b> and a brain stroke (CVA) may occur, so the patient walks in and leaves disabled. Do not do it except by physician's order after determining the AF duration and anticoagulation.</p></div><h4>Digoxin (Lanoxin) in AF — dose and administration</h4>[[slot:dis-141-digoxin|IV digoxin pathway — site-made illustration|/diseases/img/dis-141-digoxin.svg]]<ul><li>Usual total dose: <b>1 – 1.5 mg/day</b></li><li><b>Bolus 0.5 mg</b> (0.5 mg ampule) in 100 mL saline or glucose over 30 minutes</li><li>After 8 hours: ECG and pulse check. If the pulse reaches the target: do not continue (switch to oral). If not: continue maintenance</li><li>Maintenance: 0.5 mg per 500 mL fluid over 8 hours, then another 0.5 mg (total 1.5 mg), or 0.25 mg per 500 mL over 8 hours twice (total 1 mg)</li></ul><div class=\"cs-box cs-info\"><strong>Notes</strong><p>1) Reduce the digoxin dose in the elderly and in renal impairment. 2) Toxicity rises with <b>low potassium</b> (and some diuretics). 3) Target: heart rate 60–90 at rest, and up to 110 with exertion.</p></div><div class=\"cs-box cs-pearl\"><strong>Update</strong><p>Digoxin loading in the current label is 8–12 mcg/kg total, given as half the dose then two quarters every 6–8 hours, injected over at least 5 minutes (not a rapid push); the blood level is taken at least 6 hours after the dose. Follow the physician's order. A lenient target of <110 at rest is accepted in recent guidelines (RACE II) if the patient has no symptoms.</p></div><h4>Signs of digoxin toxicity</h4><table><thead><tr><th>Noncardiac</th><th>Cardiac</th></tr></thead><tbody><tr><td>Loss of appetite, nausea and vomiting, abdominal pain</td><td>Ventricular arrhythmias</td></tr><tr><td>Visual disturbance: halos, photophobia, seeing green/yellow</td><td>AV block</td></tr><tr><td>Fatigue and weakness</td><td>Atrial arrhythmia</td></tr><tr><td>Confusion, delirium, psychosis</td><td>Sinus bradycardia</td></tr></tbody></table><!--M1--><h4>Drugs and procedures</h4><ul><li>Antiarrhythmics after stabilization: amiodarone, digoxin, diltiazem, verapamil</li><li>Unstable patient: synchronized electrical cardioversion</li><li>Pacemaker in some cases</li><li>Warfarin if AF persists</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Older teaching states cardioversion if AF is less than 72 hours; current guidelines say 48 hours, after which 3 weeks of anticoagulants are needed before cardioversion, or a transesophageal echo. DOACs are preferred over warfarin except in rheumatic mitral disease or a mechanical valve.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الاستقرار أولاً</strong><p>ضغط، نبض (قلبي بالسماعة دقيقة كاملة + رسغي)، تنفس، SpO₂، وعي، ألم صدر. أي علامة عدم استقرار = بلّغ فوراً وجهّز جهاز الصدمات والعربة وخط وريدي والتخدير.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>وصّل ECG ومونيتور</strong><p>12 اشتقاق، وسجّل المعدل البطيني. لا تعتمد على قراءة الجهاز الأوتوماتيكية للنبض (بتخطئ في AF).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اسأل واكتشف المدة</strong><p>متى بدأ الخفقان؟ (أقل أو أكثر من 48 ساعة؟) أدوية، كحول، كافيين، حرارة، ألم، دواء مضاد تجلط؟ هل أخذ الوارفارين بانتظام؟ ده بيحدد خطة العلاج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أدوية التحكم في المعدل</strong><p>قبل كل جرعة قيس نبض (60 ثانية) وضغط: لا تعطي Inderal أو Lanoxin لو النبض أقل من 50–60 أو الضغط منخفض (أو حسب حد الطبيب). Inderal: انتبه لأزيز الربو. Lanoxin: اعرف مستوى البوتاسيوم، اسأل عن غثيان/رؤية صفراء/هلاوس (علامات التسمم)، وراقب النبض الجيبي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أميودارون (Cordarone) الوريدي</strong><p>يُعطى بمضخة ومن خط وريدي كبير/مركزي لو متاح؛ يخفف في جلوكوز 5% (لا يُخلط بمحلول ملحي)، راقب الضغط والنبض (بطء/حصار)، والتهاب الوريد. لا تحقن دفعة سريعة. بعد الاستعادة راقب QT.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>مضاد التجلط</strong><p>وارفارين: INR هدفه 2–3؛ اسحب العينة قبل الجرعة، سجّل، وبلّغ لو أعلى من 3.5–4 أو نزيف. DOACs: لا تتطلب INR لكن راقب الكلى ونزيف. اسأل عن الأعشاب والمضادات الحيوية والأسبرين (تزيد النزيف).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>قبل الصدمة الكهربائية المبرمجة</strong><p>صيام، موافقة، INR/مضاد التجلط موثق، بوتاسيوم طبيعي، جهاز في وضع متزامن (SYNC)، تسطيح الرجلين وتجهيز التخدير والأكسجين وجهاز شفط. بعد الصدمة: تنفس، وعي، حروق جلد، ECG، وشرح للمريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>راقب السكتة والنزيف</strong><p>FAST: وجه، ذراع، كلام، زمن. أي علامة عصبية جديدة = طوارئ فورية (سجّل آخر وقت كان فيه طبيعي).</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>لا تفترض إن \"AF قديم\" يعني آمن: <b>معدل بطيني أكتر من 150 مع ضغط منخفض/ألم صدر/وذمة رئة/إغماء</b> = ناقوس خطر. ولا تعطِ حاصر بيتا أو Verapamil/Diltiazem في مريض <b>فشل قلب حاد</b> أو ضغط منخفض بدون أمر الطبيب. ولا تسحب مريض AF لحركة مفاجئة بعد صدمة بدون مراقبة.</p></div><h4>نقاط تثقيفية للتمريض</h4><ul><li>سجّل عدد ضربات القلب ونبض الرسغ في اليوم وسجّل الفرق (pulse deficit).</li><li>وثّق المدة وأي مضاد تجلط أُخذ وتوقيت آخر جرعة.</li><li>قبل خروج المريض: تأكد من فهمه لموعد الوارفارين وتحليل INR.</li></ul><div class=\"cs-box cs-tip\"><strong>الديجوكسين: تذكير</strong><p>قيس النبض دقيقة كاملة قبل الجرعة؛ 8 ساعات بعد الدفعة: ECG ومعدل النبض؛ لا تعطِ لو النبض أقل من 50–60؛ بوتاسيوم؛ وراقب أعراض التسمم (غثيان، رؤية صفراء، بطء).</p></div><!--M1--><h4>مراقبة نقص التروية</h4><ul><li>ضغط نبضي منخفض</li><li>أطراف باردة</li><li>تغير الحالة العقلية</li><li>نبض راحة سريع</li><li>تنفس متناوب عميق وسطحي</li><li>زيادة BUN</li><li>جهز تحويلاً متزامناً لو غير مستقر</li><li>قيّم اضطراب نظم مهدد للحياة</li><li>قيّم سمية الأدوية (تشنجات، توقف تنفس، اضطراب نظم) وأوقف الدواء</li><li>قلل نشاط المريض</li><li>تثقيف: الوارفارين والـINR والغذاء والمسكنات، تجنب الكحول والكافيين والنيكوتين، بلّغ الدوخة، رعاية وبطارية الباسميكر</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess stability first</strong><p>Blood pressure, pulse (apical with the stethoscope for a full minute + radial), respiration, SpO₂, consciousness, chest pain. Any sign of instability = report immediately and prepare the defibrillator, crash cart, IV line, and sedation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Connect ECG and monitor</strong><p>12 leads, and record the ventricular rate. Do not rely on the machine's automatic pulse reading (it is inaccurate in AF).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Ask and find out the duration</strong><p>When did the palpitations start? (less or more than 48 hours?) Drugs, alcohol, caffeine, fever, pain, an anticoagulant? Did the patient take warfarin regularly? This determines the treatment plan.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Rate-control drugs</strong><p>Before each dose measure the pulse (60 seconds) and blood pressure: do not give Inderal or Lanoxin if the pulse is below 50–60 or the blood pressure is low (or per the physician's limit). Inderal: watch for asthmatic wheezing. Lanoxin: know the potassium level, ask about nausea/yellow vision/hallucinations (signs of toxicity), and monitor the pulse.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>IV amiodarone (Cordarone)</strong><p>Given by pump through a large/central IV line if available; dilute in 5% glucose (do not mix with saline), monitor blood pressure and pulse (bradycardia/block), and phlebitis. Do not give a rapid push. After restoration, monitor QT.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Anticoagulant</strong><p>Warfarin: target INR 2–3; draw the sample before the dose, record it, and report if above 3.5–4 or if there is bleeding. DOACs: do not require INR but monitor the kidneys and bleeding. Ask about herbs, antibiotics, and aspirin (they increase bleeding).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Before elective cardioversion</strong><p>Fasting, consent, INR/anticoagulant documented, normal potassium, device in synchronized mode (SYNC), lay the patient flat and prepare sedation, oxygen, and suction. After the shock: breathing, consciousness, skin burns, ECG, and explanation to the patient.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Watch for stroke and bleeding</strong><p>FAST: face, arm, speech, time. Any new neurological sign = immediate emergency (record the last time the patient was normal).</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Do not assume that \"old AF\" means safe: <b>a ventricular rate above 150 with low blood pressure/chest pain/pulmonary edema/fainting</b> = alarm bell. And do not give a beta-blocker or Verapamil/Diltiazem to a patient with <b>acute heart failure</b> or low blood pressure without a physician's order. And do not get an AF patient up suddenly after cardioversion without monitoring.</p></div><h4>Nursing teaching points</h4><ul><li>Record the apical heart rate and radial pulse daily and record the difference (pulse deficit).</li><li>Document the duration, any anticoagulant taken, and the time of the last dose.</li><li>Before the patient's discharge: make sure they understand the warfarin schedule and the INR test.</li></ul><div class=\"cs-box cs-tip\"><strong>Digoxin: reminder</strong><p>Measure the pulse for a full minute before the dose; 8 hours after the bolus: ECG and pulse rate; do not give if the pulse is below 50–60; potassium; and watch for toxicity symptoms (nausea, yellow vision, bradycardia).</p></div><!--M1--><h4>Monitoring for hypoperfusion</h4><ul><li>Low pulse pressure</li><li>Cold extremities</li><li>Change in mental status</li><li>Fast resting pulse</li><li>Breathing alternating between deep and shallow</li><li>Rising BUN</li><li>Prepare for synchronized cardioversion if unstable</li><li>Assess for life-threatening arrhythmia</li><li>Assess drug toxicity (seizures, respiratory arrest, arrhythmia) and stop the drug</li><li>Reduce the patient's activity</li><li>Teaching: warfarin, INR, diet, and painkillers; avoid alcohol, caffeine, and nicotine; report dizziness; pacemaker care and battery</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>معدل القلب أكبر من 150 أو أقل من 40–50</li><li>ضغط انقباضي أقل من 90 / دوخة شديدة / إغماء</li><li>ألم صدر أو ضيق نفس شديد أو وذمة رئة</li><li>علامات سكتة (التواء الوجه، ضعف ذراع/رجل، اضطراب كلام)</li><li>نزيف (لثة، براز أسود، بول دموي) أو INR أكبر من 4</li><li>علامات سمّية الديجوكسين: غثيان، قيء، رؤية هالات صفراء، نبض بطيء/غير معتاد، اضطراب وعي</li><li>بطء شديد أو توقفات بعد حاصر بيتا/أميودارون</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Heart rate above 150 or below 40–50</li><li>Systolic blood pressure below 90 / severe dizziness / fainting</li><li>Chest pain, severe shortness of breath, or pulmonary edema</li><li>Signs of stroke (facial droop, arm/leg weakness, speech disturbance)</li><li>Bleeding (gums, black stool, bloody urine) or INR above 4</li><li>Signs of digoxin toxicity: nausea, vomiting, seeing yellow halos, slow/unusual pulse, altered consciousness</li><li>Severe bradycardia or pauses after a beta-blocker/amiodarone</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>خفقان سريع غير منتظم مش بيخليك تتجاهله: اللي بينتج عنه الخطر الحقيقي هو الجلطة.</li><li><b>الوارفارين:</b> نفس الوقت يومياً، ما تفوّتش جرعة ولا تضاعف، اعمل INR بانتظام (هدفه 2–3)، وغذاؤك ثابت (الخضروات الورقية بكميات ثابتة، لا أعشاب).</li><li>لو أخذت مضاد تجلط: بلّغ أي دكتور/صيدلي/أسنان قبل أي إجراء. تجنّب الأسبرين والمسكنات (NSAIDs) إلا بأمر الطبيب.</li><li>قِس نبضك يومياً (عدّ دقيقة كاملة) واكتب النتايج.</li><li>قلل الكافيين والكحول والتدخين والتوتر والسهر، وعالج الغدة الدرقية والضغط.</li><li>اتعلم علامات السكتة (FAST) واتصل بالإسعاف فوراً.</li><li>لا تقطع Inderal أو Cordarone فجأة.</li></ul>",
+   "en": "<ul><li>Do not ignore fast irregular palpitations: the real danger that results from them is a clot.</li><li><b>Warfarin:</b> same time daily, do not miss a dose or double it, do INR regularly (target 2–3), and keep your diet steady (leafy vegetables in steady amounts, no herbs).</li><li>If you take an anticoagulant: tell any physician/pharmacist/dentist before any procedure. Avoid aspirin and painkillers (NSAIDs) except by physician's order.</li><li>Check your pulse daily (count a full minute) and write down the results.</li><li>Reduce caffeine, alcohol, smoking, stress, and staying up late, and treat thyroid problems and high blood pressure.</li><li>Learn the signs of stroke (FAST) and call the ambulance immediately.</li><li>Do not stop Inderal or Cordarone suddenly.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "AF: الأذينان بيرتعشوا 400–600/د، ونبض بطيني غير منتظم، وخطر تجلط وسكتة",
+   "أول سؤال: هل المريض مستقر؟ غير مستقر = صدمة كهربائية متزامنة فوراً",
+   "أقل من 48 ساعة موثقة: مضاد تجلط ثم تحويل؛ أكثر من 48 ساعة/غير معروف: مضاد تجلط 3 أسابيع (أو TEE) قبل التحويل و4 أسابيع بعده",
+   "التحكم في المعدل: بيتا (Inderal) لو الانقباض جيد، Lanoxin لو ضعيف",
+   "الوارفارين INR المطلوب 2–3 والـ DOACs هي الخيار الحديث المفضل",
+   "قبل أي دواء مبطّئ للقلب قيس النبض (دقيقة كاملة) والضغط",
+   "أميودارون يزيد تأثير الوارفارين والديجوكسين",
+   "ثلاث خطوات: مضاد تجلط ثم (نظم أو معدل) ثم علاج السبب؛ ومضاد التجلط + إبطاء المعدل لا يقل فائدة عن إرجاع النظم"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الرجفان الأذيني (<b>AF</b>) هو أشهر اضطراب نظم مستمر. الأذينان بيرتعشوا بدل ما ينقبضوا بمعدل <b>400–600 مرة في الدقيقة</b>، والبطينان بيستجيبوا <b>لبعض النبضات بس وبشكل غير منتظم</b> (حصار فسيولوجي في العقدة الأذينية البطينية بيحمي البطين من كل الكمية دي). النتيجة: نبض سريع غير منتظم، وقدرة ضخ أقل، وخطر <b>تجلط في الأذين وانصمام (سكتة)</b>.</p><div class=\"cs-stats\"><div><b>400–600</b><span>انقباضة/د في الأذينين</span></div><div><b>غير منتظم</b><span>نبض بطيني</span></div><div><b>48 ساعة</b><span>حد فاصل لقرار التحويل</span></div></div>[[slot:dis-144-tachy-b|شكل الـ ECG في AF وVT وVF — رسم من دليل قراءة الـ ECG|/diseases/img/dis-144-tachy-b.svg]]<div class=\"cs-box cs-warning\"><strong>لماذا نهتم؟</strong><p>مريض AF بدون مضاد تجلط معرّض لسكتة دماغية أكتر بحوالي 5 أضعاف. وإحساس المريض بالخفقان ممكن يغيب تماماً (AF صامت).</p></div><h4>ثلاث خطوات لعلاج أي مريض AF</h4><ol><li><b>مضاد التجلط (Anticoagulant)</b> لكل المرضى (حسب تقييم الخطر والموانع)</li><li><b>إما التحكم في النظم (Rhythm control) أو في المعدل (Rate control)</b></li><li><b>علاج السبب</b> لو أمكن (غدة درقية، التهاب، جفاف، كحول…)</li></ol><div class=\"cs-box cs-pearl\"><strong>مهم: مش لازم نرجّع النظم الجيبي</strong><p>دراسات كبيرة زي AFFIRM بينت إن <b>مضاد التجلط + دواء يبطئ المعدل</b> بنفس فائدة محاولة إرجاع النظم من حيث البقاء. فمتخليش همك الأكبر إنك ترجّعه جيبي لأي ثمن.</p></div><!--M1--><h4>معلومات مكملة</h4><p>الرجفان الأذيني هو أشيع اضطراب نظم مزمن، وهو بحد ذاته ليس مهدداً للحياة لكنه يرفع خطر الجلطات والسكتة. غالباً يختفي عند علاج السبب. أعراض: بدون أعراض، نبض غير منتظم، شبه إغماء، خفقان، دوخة، ضيق نفس. ECG: QRS غير منتظم، PR غائب تقريباً، P غير موجودة أو منخفضة. تحليل الدرقية مهم لأن فرط الدرقية يسبب AF.</p>"
-    },
-    "causes": {
-      "ar": "<h4>الأسباب والمحفزات</h4><div class=\"cs-compare\"><ul><li><b>قلبية:</b> روماتيزم القلب (الصمام الميترالي)، عيوب خلقية، مرض الشرايين التاجية، اعتلال العضلة والتهابها (cardiomyopathy / myocarditis)، فشل القلب الاحتقاني، التهاب التامور المضيّق (Constrictive pericarditis)، جراحات القلب، ارتفاع الضغط</li><li><b>صدرية:</b> جلطة رئوية (pulmonary embolism)، COPD</li><li><b>غدية:</b> فرط نشاط الغدة الدرقية (hyperthyroidism)</li><li><b>دوائية (iatrogenic):</b> أدوية محاكية للودي (sympathomimetic) زي بخاخات الربو والمنشطات</li><li><b>بدون سبب (idiopathic / lone AF):</b> ممكن يحصل في أشخاص أصحاء خصوصاً مع التوتر أو المجهود</li></ul></div><div class=\"cs-box cs-info\"><strong>أسباب إضافية مهمة</strong><p>الكحول («متلازمة قلب الإجازة»)، الكافيين الزائد، انقطاع النفس أثناء النوم، السمنة، اضطراب الأملاح (بوتاسيوم/مغنسيوم)، العدوى الشديدة، وبعد الجراحات.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>الأعراض</h4><ul><li><b>خفقان (palpitation):</b> سريع، غير منتظم، نوبي (paroxysmal) أو مستمر (persistent)</li><li><b>أعراض نقص النتاج القلبي (low COP):</b> إغماء، ضيق نفس، ذبحة، دوخة، صدمة</li><li><b>مضاعفات التجلط:</b> تجلط في الأذين وانصمام (سكتة دماغية، انسداد شريان طرف)</li></ul><h4>الفحص</h4><table><thead><tr><th>الفحص</th><th>الموجود في AF</th></tr></thead><tbody><tr><td>النبض</td><td>سريع، غير منتظم، مع <b>عجز نبض (pulse deficit)</b> أكتر من 10 ن/د؛ ويتأثر بتدليك الجيب السباتي (المعدل البطيني يتباطأ مؤقتاً لكن النظم يفضل غير منتظم)</td></tr><tr><td>السماعة</td><td>شدة الصوت الأول (S1) متغيرة من نبضة لنبضة</td></tr><tr><td>الضغط</td><td>قد ينخفض مع المعدل السريع جداً</td></tr></tbody></table>[[slot:dis-141-pulse-deficit|عجز النبض: الفرق بين النبض القلبي والنبض الرسغي — رسم من إعداد الموقع|/diseases/img/dis-141-pulse-deficit.svg]]<h4>التصنيف العملي</h4><table><thead><tr><th>النوع</th><th>التعريف</th></tr></thead><tbody><tr><td>نوبي (Paroxysmal)</td><td>يتوقف تلقائياً خلال 7 أيام</td></tr><tr><td>مستمر (Persistent)</td><td>أكتر من 7 أيام أو يحتاج تحويل</td></tr><tr><td>مستمر طويل / دائم</td><td>أكتر من 12 شهر / تقرر قبول الحالة</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>مؤشرات عدم الاستقرار</strong><p>هبوط ضغط، ألم صدر إقفاري، وذمة رئة / فشل حاد، تشوش وعي، شحوب وبرودة (صدمة): ده معناه <b>صدمة كهربائية متزامنة فوراً</b>.</p></div>"
-    },
-    "tests": {
-      "ar": "<h4>تخطيط القلب ECG</h4><ul><li><b>موجة P غائبة</b> وبدلها اهتزازات غير منتظمة في الخط الأساسي (fibrillatory waves)</li><li><b>QRS</b> شكله طبيعي لكن <b>إيقاعه غير منتظم</b> (irregularly irregular)</li></ul>[[slot:dis-144-tachy-b|شكل AF على الـ ECG (الشريط الثاني) — رسم من دليل قراءة الـ ECG|/diseases/img/dis-144-tachy-b.svg]][[slot:dis-141-ecg-real|صورة: تخطيط ECG حقيقي لرجفان أذيني — تُرفع لاحقاً]]<h4>فحوصات إضافية يطلبها الطبيب</h4><ul><li>تحاليل: وظائف غدة درقية (TSH)، وظائف كلى، بوتاسيوم ومغنسيوم، سكر، صورة دم، INR (لمن يأخذ وارفارين)</li><li>إيكو (Echo): حجم الأذين، وظيفة البطين، عيوب الصمامات، جلطة بالأذين (TEE للتأكد قبل التحويل)</li><li>هولتر لاكتشاف AF النوبي</li></ul>[[slot:dis-141-chadsvasc|تقدير خطر السكتة CHA₂DS₂-VASc — رسم من إعداد الموقع|/diseases/img/dis-141-chadsvasc.svg]][[slot:dis-141-ecg-real2|صورة: تخطيط AF حقيقي 12 اشتقاق (مثال: عدم انتظام R–R وغياب P)]]<div class=\"cs-box cs-info\"><strong>AF مع BBB أو WPW</strong><p>لو QRS عريض + غير منتظم: فكّر في AF مع حصار فرعي أو متلازمة WPW (خطر). انظر دليل «قراءة التسرع على الـECG».</p></div>"
-    },
-    "treatment": {
-      "ar": "<div class=\"cs-box cs-info\"><strong>ثلاثة أسئلة في كل مريض AF</strong><p>1) هل هو <b>مستقر</b>؟ 2) هل نتحكم في <b>المعدل (rate)</b> أم نرجّع <b>النظم (rhythm)</b>؟ 3) هل يحتاج <b>مضاد تجلط</b>؟</p></div>[[slot:dis-141-algorithm|خطوات التعامل مع AF — رسم من إعداد الموقع|/diseases/img/dis-141-algorithm.svg]]<h4>أ) المريض غير مستقر (hemodynamically unstable)</h4><p><b>صدمة كهربائية متزامنة (DC cardioversion) فوراً</b> مع تخدير/تسكين لو المريض واعي.</p><h4>ب) مستقر والـ AF أقل من 48 ساعة</h4><ol><li><b>مضادات التجلط</b> قبل الصدمة (الوصفة الشائعة: Marevan؛ وفي الطوارئ غالباً هيبارين)</li><li><b>استعادة النظم الجيبي:</b> Cordarone (أميودارون) أمبول 150 مجم</li><li><b>صدمة كهربائية</b> لو فشل العلاج الدوائي</li><li><b>إبطاء استجابة البطين:</b> لو وظيفة الانقباض جيدة ← Inderal (بروبرانولول) 10 أو 40 مجم أقراص، ولو لأ ← Lanoxin (ديجوكسين) 0.25 مجم أقراص</li></ol><h4>ج) مستقر والـ AF أكثر من 48 ساعة أو غير معروف المدة</h4><ol><li><b>مضادات التجلط:</b> Marevan (وارفارين) 1 أو 3 أو 5 مجم</li><li><b>إبطاء استجابة البطين:</b> نفس الاختيار (Inderal لو الانقباض جيد، Lanoxin لو لأ)</li></ol><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>الأمان: لو المدة أكثر من 48 ساعة أو غير معروفة، <b>لا تحويل (دوائي أو كهربي)</b> قبل <b>3 أسابيع</b> مضاد تجلط فعّال، أو إيكو مريئي (TEE) يستبعد جلطة الأذين؛ و<b>4 أسابيع بعد التحويل</b> على الأقل. مع المدة أقل من 48 ساعة والخطر المنخفض ممكن يتخطى الطبيب مضاد التجلط قبل التحويل.</li><li>الاختيار الحالي (ACC/AHA 2023، ESC 2024): <b>مضادات التجلط الفموية الحديثة (DOACs: ريفاروكسابان، أبيكسابان، دابيجاتران، إدوكسابان)</b> مفضّلة على الوارفارين، إلا مع صمام ميكانيكي أو تضيق ميترالي متوسط/شديد فالوارفارين (INR 2–3).</li><li>التحكم في المعدل: الهدف بالراحة تحت 110 ن/د (أو أقل حسب الأعراض). المفضل <b>حاصر بيتا أو Verapamil/Diltiazem</b> (لا تُستخدم هذه الأخيرة مع ضعف انقباض البطين)؛ <b>Digoxin</b> أنسب لفشل القلب أو المريض قليل الحركة.</li><li>بروبرانولول (Inderal) غير انتقائي: انتبه في الربو/COPD. أميودارون الوريدي: 150 مجم خلال 10 دقائق ثم 1 مجم/دقيقة لـ 6 ساعات ثم 0.5 مجم/دقيقة (بالمضخة، حسب أمر الطبيب).</li><li>WPW مع AF: ممنوع حاصرات العقدة (Verapamil/Digoxin) — بلّغ الطبيب.</li></ul></div><h4>العلاج المنزلي في AF الحاد</h4><ul><li>Cordarone 200 مجم أقراص مرتين يومياً</li><li>Marevan 1 أو 3 أو 5 مجم أقراص مرة أو مرتين يومياً (<b>INR المطلوب 2–3</b>)</li><li>Inderal 10 مجم مرتين يومياً <b>أو</b> Lanoxin 0.25 مجم مرة أو مرتين يومياً</li></ul><h4>العلاج المنزلي في AF المزمن</h4><ul><li>Marevan 1 أو 3 أو 5 مجم مرة أو مرتين يومياً (INR = 2–3)</li><li>Inderal 10 مجم مرتين يومياً <b>أو</b> Lanoxin 0.25 مجم مرة أو مرتين يومياً</li></ul><h4>تعديلات علاجية (Modification)</h4><ul><li><b>الكي بالقسطرة</b> بالترددات الراديوية (catheter radio-frequency ablation)</li><li><b>الكي الجراحي</b> (surgical ablation)</li></ul><div class=\"cs-box cs-warning\"><strong>جدول تفاعلات مهم للممرض</strong><table><thead><tr><th>الدواء</th><th>خطر</th></tr></thead><tbody><tr><td>أميودارون + وارفارين</td><td>يرفع INR بشدة (قد تحتاج الجرعة تقليلاً)</td></tr><tr><td>أميودارون + ديجوكسين</td><td>يضاعف مستوى الديجوكسين → تسمم</td></tr><tr><td>ديجوكسين + نقص بوتاسيوم/مدرّات</td><td>سمّية أعلى واضطراب نظم</td></tr><tr><td>بيتا + فيراباميل/ديلتيازيم</td><td>بطء شديد/حصار</td></tr></tbody></table></div><h4>مين نرجّع له النظم الجيبي (Rhythm control)؟</h4><table><thead><tr><th>المريض اللي ننفع معه الإرجاع</th><th>السبب</th></tr></thead><tbody><tr><td>شاب (Young)</td><td>فرصة نجاح أكبر وأعراض أكتر</td></tr><tr><td>مدة AF أقل من 48 ساعة</td><td>خطر الجلطة أقل</td></tr><tr><td>بدون مرض قلب هيكلي (Structural heart disease: تغير في شكل أو حجم القلب، صمامات، عيوب خلقية)</td><td>النظم الجيبي يستمر أكتر</td></tr></tbody></table><p>أغلب مرضانا ما بيعطوا تفاصيل دقيقة عن حالتهم، فالأسلم والأكثر أماناً التركيز على <b>التحكم في المعدل (Rate limiting)</b> مع مضاد التجلط.</p><div class=\"cs-box cs-danger\"><strong>تحذير: لا أميودارون «لكل المرضى» بدون تقييم</strong><p>يمارس بعض الأطباء إعطاء أمبولتين Cordarone في نصف لتر ملح لأي مريض AF. ده خطر: لو رجع النظم الجيبي فجأة من غير مضاد تجلط كافٍ قد يحصل <b>«وابل انصمامات» (Showering of emboli)</b> وجلطة مخية (CVA)، فيدخل المريض ماشياً ويخرج مقعداً. لا تفعله إلا بأمر الطبيب بعد تحديد مدة AF والتجلط.</p></div><h4>الديجوكسين (Lanoxin) في AF — الجرعة وطريقة الإعطاء</h4>[[slot:dis-141-digoxin|مسار الديجوكسين الوريدي — رسم من إعداد الموقع|/diseases/img/dis-141-digoxin.svg]]<ul><li>الجرعة الكلية المعتادة: <b>1 – 1.5 مجم/يوم</b></li><li><b>دفعة (Bolus) 0.5 مجم</b> (أمبول 0.5 مجم) في 100 مل ملح أو جلوكوز خلال 30 دقيقة</li><li>بعد 8 ساعات: ECG وقياس النبض. لو وصل النبض للهدف: لا تكمل (حول للفموي). لو لا: تكمل الصيانة</li><li>الصيانة: 0.5 مجم لكل 500 مل سوائل على 8 ساعات ثم 0.5 مجم أخرى (المجموع 1.5 مجم)، أو 0.25 مجم لكل 500 مل على 8 ساعات مرتين (المجموع 1 مجم)</li></ul><div class=\"cs-box cs-info\"><strong>ملاحظات</strong><p>1) قلل جرعة الديجوكسين في كبار السن والقصور الكلوي. 2) نسبة التسمم ترتفع مع <b>نقص البوتاسيوم</b> (وبعض المدرّات). 3) الهدف: معدل القلب 60–90 في الراحة، وحتى 110 مع المجهود.</p></div><div class=\"cs-box cs-pearl\"><strong>تحديث</strong><p>تحميل الديجوكسين في النشرة الحديثة 8–12 مكجم/كجم إجمالاً بنصف الجرعة ثم ربعين كل 6–8 ساعات، ويُحقن على 5 دقائق على الأقل (لا دفعة سريعة)؛ والمستوى في الدم يؤخذ بعد 6 ساعات على الأقل من الجرعة. اتّبع أمر الطبيب. أما الهدف المريح <110 في الراحة فمقبول في إرشادات حديثة (RACE II) لو المريض بلا أعراض.</p></div><h4>علامات تسمم الديجوكسين</h4><table><thead><tr><th>خارج القلب (Noncardiac)</th><th>قلبية (Cardiac)</th></tr></thead><tbody><tr><td>فقدان الشهية، غثيان وقيء، ألم بطن</td><td>اضطراب نظم بطيني (Ventricular arrhythmias)</td></tr><tr><td>اضطراب النظر: هالات، رهاب الضوء، رؤية أخضر/أصفر</td><td>حصار أذيني بطيني (AV block)</td></tr><tr><td>تعب وضعف</td><td>اضطراب نظم أذيني</td></tr><tr><td>تشوش، هذيان، ذهان</td><td>بطء جيبي (Sinus bradycardia)</td></tr></tbody></table><!--M1--><h4>أدوية وإجراءات</h4><ul><li>مضادات اضطراب النظم بعد الاستقرار: أميودارون، ديجوكسين، ديلتيازيم، فيراباميل</li><li>المريض غير المستقر: تحويل كهربائي متزامن</li><li>جهاز تنظيم ضربات (Pacemaker) في بعض الحالات</li><li>وارفارين لو AF مستمر</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المراجع تذكر التحويل إذا AF أقل من 72 ساعة؛ الإرشادات الحالية 48 ساعة، وبعدها يحتاج مميعات 3 أسابيع قبل التحويل أو إيكو عبر المريء. وتفضل DOACs على الوارفارين لغير مرضى الميترالي الروماتيزمي أو الصمام الميكانيكي.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الاستقرار أولاً</strong><p>ضغط، نبض (قلبي بالسماعة دقيقة كاملة + رسغي)، تنفس، SpO₂، وعي، ألم صدر. أي علامة عدم استقرار = بلّغ فوراً وجهّز جهاز الصدمات والعربة وخط وريدي والتخدير.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>وصّل ECG ومونيتور</strong><p>12 اشتقاق، وسجّل المعدل البطيني. لا تعتمد على قراءة الجهاز الأوتوماتيكية للنبض (بتخطئ في AF).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اسأل واكتشف المدة</strong><p>متى بدأ الخفقان؟ (أقل أو أكثر من 48 ساعة؟) أدوية، كحول، كافيين، حرارة، ألم، دواء مضاد تجلط؟ هل أخذ الوارفارين بانتظام؟ ده بيحدد خطة العلاج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أدوية التحكم في المعدل</strong><p>قبل كل جرعة قيس نبض (60 ثانية) وضغط: لا تعطي Inderal أو Lanoxin لو النبض أقل من 50–60 أو الضغط منخفض (أو حسب حد الطبيب). Inderal: انتبه لأزيز الربو. Lanoxin: اعرف مستوى البوتاسيوم، اسأل عن غثيان/رؤية صفراء/هلاوس (علامات التسمم)، وراقب النبض الجيبي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أميودارون (Cordarone) الوريدي</strong><p>يُعطى بمضخة ومن خط وريدي كبير/مركزي لو متاح؛ يخفف في جلوكوز 5% (لا يُخلط بمحلول ملحي)، راقب الضغط والنبض (بطء/حصار)، والتهاب الوريد. لا تحقن دفعة سريعة. بعد الاستعادة راقب QT.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>مضاد التجلط</strong><p>وارفارين: INR هدفه 2–3؛ اسحب العينة قبل الجرعة، سجّل، وبلّغ لو أعلى من 3.5–4 أو نزيف. DOACs: لا تتطلب INR لكن راقب الكلى ونزيف. اسأل عن الأعشاب والمضادات الحيوية والأسبرين (تزيد النزيف).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>قبل الصدمة الكهربائية المبرمجة</strong><p>صيام، موافقة، INR/مضاد التجلط موثق، بوتاسيوم طبيعي، جهاز في وضع متزامن (SYNC)، تسطيح الرجلين وتجهيز التخدير والأكسجين وجهاز شفط. بعد الصدمة: تنفس، وعي، حروق جلد، ECG، وشرح للمريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>راقب السكتة والنزيف</strong><p>FAST: وجه، ذراع، كلام، زمن. أي علامة عصبية جديدة = طوارئ فورية (سجّل آخر وقت كان فيه طبيعي).</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>لا تفترض إن \"AF قديم\" يعني آمن: <b>معدل بطيني أكتر من 150 مع ضغط منخفض/ألم صدر/وذمة رئة/إغماء</b> = ناقوس خطر. ولا تعطِ حاصر بيتا أو Verapamil/Diltiazem في مريض <b>فشل قلب حاد</b> أو ضغط منخفض بدون أمر الطبيب. ولا تسحب مريض AF لحركة مفاجئة بعد صدمة بدون مراقبة.</p></div><h4>نقاط تثقيفية للتمريض</h4><ul><li>سجّل عدد ضربات القلب ونبض الرسغ في اليوم وسجّل الفرق (pulse deficit).</li><li>وثّق المدة وأي مضاد تجلط أُخذ وتوقيت آخر جرعة.</li><li>قبل خروج المريض: تأكد من فهمه لموعد الوارفارين وتحليل INR.</li></ul><div class=\"cs-box cs-tip\"><strong>الديجوكسين: تذكير</strong><p>قيس النبض دقيقة كاملة قبل الجرعة؛ 8 ساعات بعد الدفعة: ECG ومعدل النبض؛ لا تعطِ لو النبض أقل من 50–60؛ بوتاسيوم؛ وراقب أعراض التسمم (غثيان، رؤية صفراء، بطء).</p></div><!--M1--><h4>مراقبة نقص التروية</h4><ul><li>ضغط نبضي منخفض</li><li>أطراف باردة</li><li>تغير الحالة العقلية</li><li>نبض راحة سريع</li><li>تنفس متناوب عميق وسطحي</li><li>زيادة BUN</li><li>جهز تحويلاً متزامناً لو غير مستقر</li><li>قيّم اضطراب نظم مهدد للحياة</li><li>قيّم سمية الأدوية (تشنجات، توقف تنفس، اضطراب نظم) وأوقف الدواء</li><li>قلل نشاط المريض</li><li>تثقيف: الوارفارين والـINR والغذاء والمسكنات، تجنب الكحول والكافيين والنيكوتين، بلّغ الدوخة، رعاية وبطارية الباسميكر</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>معدل القلب أكبر من 150 أو أقل من 40–50</li><li>ضغط انقباضي أقل من 90 / دوخة شديدة / إغماء</li><li>ألم صدر أو ضيق نفس شديد أو وذمة رئة</li><li>علامات سكتة (التواء الوجه، ضعف ذراع/رجل، اضطراب كلام)</li><li>نزيف (لثة، براز أسود، بول دموي) أو INR أكبر من 4</li><li>علامات سمّية الديجوكسين: غثيان، قيء، رؤية هالات صفراء، نبض بطيء/غير معتاد، اضطراب وعي</li><li>بطء شديد أو توقفات بعد حاصر بيتا/أميودارون</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>خفقان سريع غير منتظم مش بيخليك تتجاهله: اللي بينتج عنه الخطر الحقيقي هو الجلطة.</li><li><b>الوارفارين:</b> نفس الوقت يومياً، ما تفوّتش جرعة ولا تضاعف، اعمل INR بانتظام (هدفه 2–3)، وغذاؤك ثابت (الخضروات الورقية بكميات ثابتة، لا أعشاب).</li><li>لو أخذت مضاد تجلط: بلّغ أي دكتور/صيدلي/أسنان قبل أي إجراء. تجنّب الأسبرين والمسكنات (NSAIDs) إلا بأمر الطبيب.</li><li>قِس نبضك يومياً (عدّ دقيقة كاملة) واكتب النتايج.</li><li>قلل الكافيين والكحول والتدخين والتوتر والسهر، وعالج الغدة الدرقية والضغط.</li><li>اتعلم علامات السكتة (FAST) واتصل بالإسعاف فوراً.</li><li>لا تقطع Inderal أو Cordarone فجأة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "AF: الأذينان بيرتعشوا 400–600/د، ونبض بطيني غير منتظم، وخطر تجلط وسكتة",
-      "أول سؤال: هل المريض مستقر؟ غير مستقر = صدمة كهربائية متزامنة فوراً",
-      "أقل من 48 ساعة موثقة: مضاد تجلط ثم تحويل؛ أكثر من 48 ساعة/غير معروف: مضاد تجلط 3 أسابيع (أو TEE) قبل التحويل و4 أسابيع بعده",
-      "التحكم في المعدل: بيتا (Inderal) لو الانقباض جيد، Lanoxin لو ضعيف",
-      "الوارفارين INR المطلوب 2–3 والـ DOACs هي الخيار الحديث المفضل",
-      "قبل أي دواء مبطّئ للقلب قيس النبض (دقيقة كاملة) والضغط",
-      "أميودارون يزيد تأثير الوارفارين والديجوكسين",
-      "ثلاث خطوات: مضاد تجلط ثم (نظم أو معدل) ثم علاج السبب؛ ومضاد التجلط + إبطاء المعدل لا يقل فائدة عن إرجاع النظم"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض AF ضغطه 80/50 ومشوش وألم صدر. الإجراء الأنسب؟"
-      },
-      "options": [
-        {
-          "ar": "إعطاء Inderal فوراً"
-        },
-        {
-          "ar": "صدمة كهربائية متزامنة بأمر الطبيب"
-        },
-        {
-          "ar": "مراقبة ساعة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "عدم الاستقرار الدوراني يستوجب تحويلاً كهربائياً متزامناً فوراً."
-      }
-    },
-    {
-      "q": {
-        "ar": "AF منذ يومين ومريض مستقر. لماذا لا نحوله فوراً؟"
-      },
-      "options": [
-        {
-          "ar": "لأن الصدمة غير فعالة"
-        },
-        {
-          "ar": "خطر انفصال جلطة من الأذين وسكتة؛ يحتاج مضاد تجلط 3 أسابيع أو TEE قبل التحويل"
-        },
-        {
-          "ar": "لأن الأميودارون ممنوع"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "بعد 48 ساعة يزداد احتمال جلطة بالأذين."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نتيجة INR مناسبة لمريض AF يأخذ وارفارين؟"
-      },
-      "options": [
-        {
-          "ar": "1.0"
-        },
-        {
-          "ar": "من 2 إلى 3"
-        },
-        {
-          "ar": "أكبر من 5"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الهدف العلاجي المعتاد 2–3."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد إضافة Cordarone لمريض يأخذ Marevan ماذا تتوقع؟"
-      },
-      "options": [
-        {
-          "ar": "انخفاض INR"
-        },
-        {
-          "ar": "ارتفاع INR وخطر نزيف"
-        },
-        {
-          "ar": "لا تغيير"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "أميودارون يثبط أيض الوارفارين فيرتفع INR."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل إعطاء Lanoxin وجدت نبض 48. ماذا تفعل؟"
-      },
-      "options": [
-        {
-          "ar": "أعطي الجرعة"
-        },
-        {
-          "ar": "أوقفها وأبلّغ الطبيب"
-        },
-        {
-          "ar": "أضاعفها"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "النبض أقل من 50–60 سبب للتوقف والتبليغ (بطء وخطر سمّية)."
-      }
-    },
-    {
-      "q": {
-        "ar": "عجز النبض (pulse deficit) في AF يعني؟"
-      },
-      "options": [
-        {
-          "ar": "النبض الرسغي أقل من القلبي بأكثر من 10"
-        },
-        {
-          "ar": "النبض أبطأ من 40"
-        },
-        {
-          "ar": "لا نبض"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "بعض الانقباضات لا تضخ دماً كافياً فلا تُحس عند الرسغ."
-      }
-    },
-    {
-      "q": {
-        "ar": "لماذا نتحذر من إعطاء أميودارون لكل مريض AF بدون تقييم؟"
-      },
-      "options": [
-        {
-          "ar": "قد يسبب وابل انصمامات وسكتة إذا رجع النظم فجأة بدون مضاد تجلط"
-        },
-        {
-          "ar": "لأنه رخيص"
-        },
-        {
-          "ar": "لأنه يبطئ النبض"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإرجاع بدون تجلط كافٍ يحرر خثرات الأذين."
-      }
-    },
-    {
-      "q": {
-        "ar": "من علامات تسمم الديجوكسين؟"
-      },
-      "options": [
-        {
-          "ar": "حمى"
-        },
-        {
-          "ar": "غثيان واضطراب نظر وبطء النبض"
-        },
-        {
-          "ar": "سعال"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "أعراض هضمية وبصرية وقلبية."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation"
-    },
-    {
-      "title": "2024 ESC Guidelines for the Management of Atrial Fibrillation"
-    },
-    {
-      "title": "ACLS Tachycardia Algorithm (AHA 2025)"
-    },
-    {
-      "title": "StatPearls: Atrial Fibrillation"
-    },
-    {
-      "title": "Digoxin injection prescribing information (loading 8–12 mcg/kg) + AFFIRM/RACE II trials"
-    }
+  "en": [
+   "AF: the atria quiver at 400–600/min, with an irregular ventricular pulse and a risk of clots and stroke",
+   "First question: is the patient stable? Unstable = immediate synchronized cardioversion",
+   "Documented less than 48 hours: anticoagulant then cardioversion; more than 48 hours/unknown: anticoagulant for 3 weeks (or TEE) before cardioversion and 4 weeks after",
+   "Rate control: beta-blocker (Inderal) if contraction is good, Lanoxin if weak",
+   "Warfarin target INR 2–3, and DOACs are the preferred modern choice",
+   "Before any heart-slowing drug, measure the pulse (full minute) and blood pressure",
+   "Amiodarone increases the effect of warfarin and digoxin",
+   "Three steps: anticoagulant, then (rhythm or rate), then treat the cause; anticoagulant + rate slowing is no less beneficial than restoring the rhythm"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض AF ضغطه 80/50 ومشوش وألم صدر. الإجراء الأنسب؟",
+    "en": "An AF patient with BP 80/50, confused, with chest pain. The most appropriate action?"
+   },
+   "options": [
+    {
+     "ar": "إعطاء Inderal فوراً",
+     "en": "Give Inderal immediately"
+    },
+    {
+     "ar": "صدمة كهربائية متزامنة بأمر الطبيب",
+     "en": "Synchronized cardioversion by physician's order"
+    },
+    {
+     "ar": "مراقبة ساعة",
+     "en": "Observe for an hour"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "عدم الاستقرار الدوراني يستوجب تحويلاً كهربائياً متزامناً فوراً.",
+    "en": "Hemodynamic instability requires immediate synchronized electrical cardioversion."
+   }
+  },
+  {
+   "q": {
+    "ar": "AF منذ يومين ومريض مستقر. لماذا لا نحوله فوراً؟",
+    "en": "AF for two days in a stable patient. Why not cardiovert immediately?"
+   },
+   "options": [
+    {
+     "ar": "لأن الصدمة غير فعالة",
+     "en": "Because the shock is ineffective"
+    },
+    {
+     "ar": "خطر انفصال جلطة من الأذين وسكتة؛ يحتاج مضاد تجلط 3 أسابيع أو TEE قبل التحويل",
+     "en": "Risk of a clot detaching from the atrium and stroke; needs 3 weeks of anticoagulant or TEE before cardioversion"
+    },
+    {
+     "ar": "لأن الأميودارون ممنوع",
+     "en": "Because amiodarone is forbidden"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "بعد 48 ساعة يزداد احتمال جلطة بالأذين.",
+    "en": "After 48 hours the likelihood of an atrial clot increases."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نتيجة INR مناسبة لمريض AF يأخذ وارفارين؟",
+    "en": "Which INR result is appropriate for an AF patient on warfarin?"
+   },
+   "options": [
+    {
+     "ar": "1.0",
+     "en": "1.0"
+    },
+    {
+     "ar": "من 2 إلى 3",
+     "en": "From 2 to 3"
+    },
+    {
+     "ar": "أكبر من 5",
+     "en": "Greater than 5"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الهدف العلاجي المعتاد 2–3.",
+    "en": "The usual therapeutic target is 2–3."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد إضافة Cordarone لمريض يأخذ Marevan ماذا تتوقع؟",
+    "en": "After adding Cordarone for a patient taking Marevan, what do you expect?"
+   },
+   "options": [
+    {
+     "ar": "انخفاض INR",
+     "en": "Decreased INR"
+    },
+    {
+     "ar": "ارتفاع INR وخطر نزيف",
+     "en": "Increased INR and bleeding risk"
+    },
+    {
+     "ar": "لا تغيير",
+     "en": "No change"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "أميودارون يثبط أيض الوارفارين فيرتفع INR.",
+    "en": "Amiodarone inhibits warfarin metabolism, so INR rises."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل إعطاء Lanoxin وجدت نبض 48. ماذا تفعل؟",
+    "en": "Before giving Lanoxin you find a pulse of 48. What do you do?"
+   },
+   "options": [
+    {
+     "ar": "أعطي الجرعة",
+     "en": "Give the dose"
+    },
+    {
+     "ar": "أوقفها وأبلّغ الطبيب",
+     "en": "Hold it and notify the physician"
+    },
+    {
+     "ar": "أضاعفها",
+     "en": "Double it"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "النبض أقل من 50–60 سبب للتوقف والتبليغ (بطء وخطر سمّية).",
+    "en": "A pulse below 50–60 is a reason to hold and report (bradycardia and toxicity risk)."
+   }
+  },
+  {
+   "q": {
+    "ar": "عجز النبض (pulse deficit) في AF يعني؟",
+    "en": "Pulse deficit in AF means?"
+   },
+   "options": [
+    {
+     "ar": "النبض الرسغي أقل من القلبي بأكثر من 10",
+     "en": "The radial pulse is lower than the apical by more than 10"
+    },
+    {
+     "ar": "النبض أبطأ من 40",
+     "en": "The pulse is slower than 40"
+    },
+    {
+     "ar": "لا نبض",
+     "en": "No pulse"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "بعض الانقباضات لا تضخ دماً كافياً فلا تُحس عند الرسغ.",
+    "en": "Some contractions do not pump enough blood, so they are not felt at the wrist."
+   }
+  },
+  {
+   "q": {
+    "ar": "لماذا نتحذر من إعطاء أميودارون لكل مريض AF بدون تقييم؟",
+    "en": "Why are we cautious about giving amiodarone to every AF patient without assessment?"
+   },
+   "options": [
+    {
+     "ar": "قد يسبب وابل انصمامات وسكتة إذا رجع النظم فجأة بدون مضاد تجلط",
+     "en": "It may cause a showering of emboli and stroke if the rhythm returns suddenly without anticoagulation"
+    },
+    {
+     "ar": "لأنه رخيص",
+     "en": "Because it is cheap"
+    },
+    {
+     "ar": "لأنه يبطئ النبض",
+     "en": "Because it slows the pulse"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإرجاع بدون تجلط كافٍ يحرر خثرات الأذين.",
+    "en": "Restoration without adequate anticoagulation releases atrial clots."
+   }
+  },
+  {
+   "q": {
+    "ar": "من علامات تسمم الديجوكسين؟",
+    "en": "Which is a sign of digoxin toxicity?"
+   },
+   "options": [
+    {
+     "ar": "حمى",
+     "en": "Fever"
+    },
+    {
+     "ar": "غثيان واضطراب نظر وبطء النبض",
+     "en": "Nausea, visual disturbance, and slow pulse"
+    },
+    {
+     "ar": "سعال",
+     "en": "Cough"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "أعراض هضمية وبصرية وقلبية.",
+    "en": "Gastrointestinal, visual, and cardiac symptoms."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation"
+  },
+  {
+   "title": "2024 ESC Guidelines for the Management of Atrial Fibrillation"
+  },
+  {
+   "title": "ACLS Tachycardia Algorithm (AHA 2025)"
+  },
+  {
+   "title": "StatPearls: Atrial Fibrillation"
+  },
+  {
+   "title": "Digoxin injection prescribing information (loading 8–12 mcg/kg) + AFFIRM/RACE II trials"
+  }
+ ]
 }

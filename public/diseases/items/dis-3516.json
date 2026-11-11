@@ -1,189 +1,238 @@
 {
-  "id": "dis-3516",
-  "num": 3516,
-  "system": "cardio",
-  "icon": "🫁",
-  "level": 3,
-  "target": "pharmacology",
-  "title": {
-    "ar": "فشل القلب: الأعراض والأولويات وأدويته (ACTS وDR BEDS)",
-    "en": "Heart Failure: Priorities, Pharmacology & Nursing Care"
+ "id": "dis-3516",
+ "num": 3516,
+ "system": "cardio",
+ "icon": "🫁",
+ "level": 3,
+ "target": "pharmacology",
+ "title": {
+  "ar": "فشل القلب: الأعراض والأولويات وأدويته (ACTS وDR BEDS)",
+  "en": "Heart Failure: Priorities, Pharmacology & Nursing Care"
+ },
+ "teaser": {
+  "ar": "فشل القلب (HF = Heavy Fluid): الفرق بين اليميني واليساري، أولويات وذمة الرئة، BNP وEF، عوامل الخطر، أدوية ACE/ARB وحاصرات بيتا والمدرات والموسعات وdigoxin، وDR BEDS للتمريض والتثقيف.",
+  "en": "Heart failure (HF = Heavy Fluid): right vs left failure, priorities in pulmonary edema, BNP and EF, risk factors, ACE/ARB, beta-blockers, diuretics, vasodilators, and digoxin, and DR BEDS for nursing and teaching."
+ },
+ "chips": [
+  {
+   "ar": "يمين ويسار",
+   "en": "Right and left"
   },
-  "teaser": {
-    "ar": "فشل القلب (HF = Heavy Fluid): الفرق بين اليميني واليساري، أولويات وذمة الرئة، BNP وEF، عوامل الخطر، أدوية ACE/ARB وحاصرات بيتا والمدرات والموسعات وdigoxin، وDR BEDS للتمريض والتثقيف."
+  {
+   "ar": "furosemide أولًا",
+   "en": "furosemide first"
   },
-  "chips": [
-    {
-      "ar": "يمين ويسار"
-    },
-    {
-      "ar": "furosemide أولًا"
-    },
-    {
-      "ar": "DR BEDS"
-    }
+  {
+   "ar": "DR BEDS",
+   "en": "DR BEDS"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>فشل القلب = فشل الضخ للأمام (Heart Failure) = سائل ثقيل في الرئتين والجسم (Heavy Fluid). تذكّر: <strong>الصوديوم ينتفخ (Sodium Swells)</strong> و<strong>زيادة الوزن = أزمة احتباس الماء (Weight Gain = Water Gain)</strong>. للمرض كاملًا راجع <a href=\"/diseases/dis-128\">فشل القلب</a>.</p>[[slot:dis-3516-hf|يمين مقابل يسار وأدوية فشل القلب — رسم من إعداد الموقع|/diseases/img/dis-3516-hf.svg]]<h4>الأعراض والأسباب</h4><table><thead><tr><th></th><th>فشل القلب الأيمن (R)</th><th>فشل القلب الأيسر (L)</th></tr></thead><tbody><tr><td>العلامات</td><td>وذمة محيطية، زيادة وزن، توسع أوردة العنق (JVD)، استسقاء، تضخم الكبد والطحال</td><td>وذمة رئوية: خراخر لا تزول بالسعال، بلغم رغوي وردي، orthopnea (ضيق نفس عند الاستلقاء)</td></tr><tr><td>الأسباب</td><td>الفشل الأيسر، ارتفاع الضغط الرئوي، تليّف الرئة</td><td>ضعف الضخ: احتشاء، مرض القلب الإقفاري (CAD/ACS)</td></tr></tbody></table>",
+   "en": "<p>Heart failure = failure of forward pumping (Heart Failure) = heavy fluid in the lungs and body (Heavy Fluid). Remember: <strong>Sodium Swells</strong> and <strong>Weight Gain = Water Gain</strong>. For the full disease, see <a href=\"/diseases/dis-128\">Heart failure</a>.</p>[[slot:dis-3516-hf|Right vs left and heart failure drugs — illustration prepared by the site|/diseases/img/dis-3516-hf.svg]]<h4>Symptoms and causes</h4><table><thead><tr><th></th><th>Right heart failure (R)</th><th>Left heart failure (L)</th></tr></thead><tbody><tr><td>Signs</td><td>Peripheral edema, weight gain, jugular venous distension (JVD), ascites, enlarged liver and spleen</td><td>Pulmonary edema: crackles that do not clear with coughing, pink frothy sputum, orthopnea (shortness of breath when lying down)</td></tr><tr><td>Causes</td><td>Left-sided failure, pulmonary hypertension, pulmonary fibrosis</td><td>Weak pumping: infarction, ischemic heart disease (CAD/ACS)</td></tr></tbody></table>"
+  },
+  "causes": {
+   "ar": "<h4>عوامل الخطر</h4><ul><li>أهمها ارتفاع الضغط</li><li>اضطراب النظم مثل الرجفان الأذيني</li><li>تسريب أو ضيق صمامات القلب (مثل ارتجاع التاجي)</li><li>اعتلال عضلة القلب</li></ul>",
+   "en": "<h4>Risk factors</h4><ul><li>The most important is high blood pressure</li><li>Arrhythmias such as atrial fibrillation</li><li>Leaking or narrowed heart valves (such as mitral regurgitation)</li><li>Cardiomyopathy</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>كلمات مفتاحية للأزمة</h4><div class=\"cs-box cs-danger\"><strong>وذمة الرئة (أزمة)</strong><p>أي أعراض جديدة، مفاجئة، متفاقمة، سريعة = أزمة وذمة رئوية (سائل رئوي).</p></div><h4>أولوية العلاج (الحفظ)</h4><ul><li><strong>#1 furosemide</strong> (مدر وريدي: يُصرّف السوائل)</li><li><strong>H:</strong> رفع الرأس 45° (نصف جلوس، جلوس عالٍ، وضع orthopneic)</li><li><strong>O:</strong> أكسجين</li><li><strong>P:</strong> furosemide + مورفين + منشطات انقباض موجبة (positive inotropes)</li><li><strong>E:</strong> إنهاء السوائل والصوديوم (لا شرب سوائل وإيقاف السوائل الوريدية)</li></ul>",
+   "en": "<h4>Key words for a crisis</h4><div class=\"cs-box cs-danger\"><strong>Pulmonary edema (crisis)</strong><p>Any new, sudden, worsening, rapid symptoms = a pulmonary edema crisis (fluid in the lungs).</p></div><h4>Treatment priority (memorize)</h4><ul><li><strong>#1 furosemide</strong> (IV diuretic: removes fluid)</li><li><strong>H:</strong> head of bed up 45° (semi-Fowler's, high Fowler's, orthopneic position)</li><li><strong>O:</strong> oxygen</li><li><strong>P:</strong> furosemide + morphine + positive inotropes (positive inotropes)</li><li><strong>E:</strong> end fluids and sodium (no oral fluids and stop IV fluids)</li></ul>"
+  },
+  "tests": {
+   "ar": "<h4>الفحوصات</h4><ul><li>BNP: 300 خفيف، 600 متوسط، 900 فأكثر شديد (حسب المراجع؛ راجع مرجع المعمل)</li><li>إيكو: EF أقل من 40% = فشل قلب (الطبيعي 55–70%)، وتضخم البطين الأيسر (LVH)</li><li>مراقبة Swan-Ganz (قسطرة شريان رئوي)، وCVP الطبيعي 2–8؛ أعلى من 8 غير جيد</li></ul>",
+   "en": "<h4>Tests</h4><ul><li>BNP: 300 mild, 600 moderate, 900 or more severe (per the references; check the lab's reference range)</li><li>Echo: EF below 40% = heart failure (normal 55–70%), and left ventricular hypertrophy (LVH)</li><li>Swan-Ganz monitoring (pulmonary artery catheter), and normal CVP 2–8; above 8 is not good</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>الأدوية: ACTS+ D</h4><table><thead><tr><th>الدواء</th><th>النقاط</th></tr></thead><tbody><tr><td>ACE (-pril) مثل lisinopril</td><td>الاختيار الأول؛ يؤثر على الضغط فقط (ليس النبض)</td></tr><tr><td>ARB (-sartan) مثل losartan</td><td>الاختيار الثاني (relax man)؛ تجنب الحمل؛ ACE: وذمة وعائية وسعال؛ ARB بلا سعال؛ ارتفاع K+ (3.5–5.0)</td></tr><tr><td>حاصرات بيتا (-lol) مثل atenolol</td><td>تخفض الضغط والمعدل؛ <strong>احبس الجرعة عند:</strong> بطء القلب < 60 أو ضغط منخفض (90/60) أو تفاقم HF الحاد أو الربو/COPD أو إخفاء هبوط السكر</td></tr><tr><td>حاصرات الكالسيوم</td><td>تهدئ الضغط والمعدل (-dipine، -zem، -amil)؛ تجنب مع المعدل والضغط المنخفضين</td></tr><tr><td>المدرات</td><td>K+ فاقد: furosemide وhydrochlorothiazide (انتبه لنقص K: تناول موز وبطيخ وخضار ورقية)؛ K+ حافظ: spironolactone (تجنب بدائل الملح والبطيخ…)</td></tr><tr><td>موسعات (nitrates)</td><td>nitroglycerin/isosorbide؛ ممنوع -afil؛ أوقف nitro drip إذا ضغط انقباضي < 90 أو هبط 30؛ الصداع طبيعي والضغط المنخفض ضار</td></tr><tr><td>digoxin</td><td>انقباض أعمق؛ نبض قلبي 1 دقيقة قبل الجرعة؛ سُمّية > 2.0 (تغير رؤية وغثيان)؛ البوتاسيوم ≤ 3.5 يزيد الخطر</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء. الأسماء التجارية المصرية للتعرّف فقط، راجع النشرة.</p></div>",
+   "en": "<h4>Drugs: ACTS+ D</h4><table><thead><tr><th>Drug</th><th>Points</th></tr></thead><tbody><tr><td>ACE (-pril) such as lisinopril</td><td>First choice; affects blood pressure only (not the pulse)</td></tr><tr><td>ARB (-sartan) such as losartan</td><td>Second choice (relax man); avoid in pregnancy; ACE: angioedema and cough; ARB has no cough; high K+ (3.5–5.0)</td></tr><tr><td>Beta-blockers (-lol) such as atenolol</td><td>Lower blood pressure and heart rate; <strong>hold the dose if:</strong> bradycardia < 60, low blood pressure (90/60), acute worsening of HF, asthma/COPD, or masking of hypoglycemia</td></tr><tr><td>Calcium channel blockers</td><td>Calm blood pressure and rate (-dipine, -zem, -amil); avoid with low rate and low blood pressure</td></tr><tr><td>Diuretics</td><td>K+ wasting: furosemide and hydrochlorothiazide (watch for low K: eat bananas, watermelon, and leafy greens); K+ sparing: spironolactone (avoid salt substitutes, watermelon…)</td></tr><tr><td>Vasodilators (nitrates)</td><td>nitroglycerin/isosorbide; no -afil drugs; stop the nitro drip if systolic pressure < 90 or drops by 30; headache is normal, low blood pressure is harmful</td></tr><tr><td>digoxin</td><td>Stronger contraction; apical pulse for 1 minute before the dose; toxicity > 2.0 (visual changes and nausea); potassium ≤ 3.5 increases the risk</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Caution</strong><p>Doses are for learning; always verify with the physician/pharmacist (and the leaflet). Egyptian brand names are for recognition only; check the leaflet.</p></div>"
+  },
+  "nursing": {
+   "ar": "<h4>DR. BEDS</h4><ul><li><strong>D (Diet):</strong> قليل الصوديوم والسعرات والكوليسترول؛ سوائل 2 لتر أو أقل؛ لا أدوية OTC (كحة، زكام، مضادات حموضة، NSAIDs)؛ لا أطعمة معلبة (شيبس، صلصات، لحوم، جبن، نبيذ).</li><li><strong>R (Risk for falls):</strong> غيّر الوضع ببطء.</li><li><strong>B (BP & BNP):</strong> الضغط يجب ألا يرتفع.</li><li><strong>E (Elevate):</strong> ارفع رأس السرير والساقين.</li><li><strong>D (Daily weights, I&O):</strong> زيادة 3 رطل (حوالي 1.4 كجم) يوميًا أو 5 رطل (حوالي 2.3 كجم) في 7 أيام = تفاقم.</li><li><strong>S (Stairs):</strong> لا علاقة جنسية حتى القدرة على صعود طابقين دون ضيق نفس.</li><li><strong>S (Stockings):</strong> جوارب TED تقلل تجمع الدم، تُنزع يوميًا.</li></ul><div class=\"cs-box cs-danger\"><strong>لا تدلّك الساقين</strong><p>لا تدلّك ساقي مريض فشل القلب (خطر جلطة).</p></div>",
+   "en": "<h4>DR. BEDS</h4><ul><li><strong>D (Diet):</strong> low in sodium, calories, and cholesterol; fluids 2 liters or less; no OTC drugs (cough, cold, antacids, NSAIDs); no processed/canned foods (chips, sauces, meats, cheese, wine).</li><li><strong>R (Risk for falls):</strong> change position slowly.</li><li><strong>B (BP & BNP):</strong> blood pressure must not rise.</li><li><strong>E (Elevate):</strong> raise the head of the bed and the legs.</li><li><strong>D (Daily weights, I&O):</strong> a gain of 3 lb (about 1.4 kg) per day or 5 lb (about 2.3 kg) in 7 days = worsening.</li><li><strong>S (Stairs):</strong> no sexual activity until able to climb two flights of stairs without shortness of breath.</li><li><strong>S (Stockings):</strong> TED stockings reduce blood pooling; remove them daily.</li></ul><div class=\"cs-box cs-danger\"><strong>Do not massage the legs</strong><p>Do not massage the legs of a heart failure patient (risk of clot).</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>خراخر ورغوة وردية وضيق نفس شديد</li><li>زيادة وزن سريعة</li><li>وذمة مفاجئة</li><li>سُمّية digoxin</li><li>ضغط منخفض مع نبض بطيء</li></ul>",
+   "en": "<ul><li>Crackles, pink froth, and severe shortness of breath</li><li>Rapid weight gain</li><li>Sudden edema</li><li>Digoxin toxicity</li><li>Low blood pressure with a slow pulse</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>وزن يومي وسجل.</li><li>قلّل الملح والسوائل (2 لتر).</li><li>لا أدوية بلا استشارة.</li><li>أبلغ عن زيادة الوزن وضيق النفس.</li><li>قم ببطء.</li></ul>",
+   "en": "<ul><li>Daily weight and a log.</li><li>Reduce salt and fluids (2 liters).</li><li>No medications without advice.</li><li>Report weight gain and shortness of breath.</li><li>Get up slowly.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "HF = Heavy Fluid",
+   "furosemide #1 في وذمة الرئة",
+   "HOB 45° وأكسجين وإنهاء السوائل",
+   "ACE اختيار أول",
+   "زيادة 3 رطل/يوم = تفاقم"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>فشل القلب = فشل الضخ للأمام (Heart Failure) = سائل ثقيل في الرئتين والجسم (Heavy Fluid). تذكّر: <strong>الصوديوم ينتفخ (Sodium Swells)</strong> و<strong>زيادة الوزن = أزمة احتباس الماء (Weight Gain = Water Gain)</strong>. للمرض كاملًا راجع <a href=\"/diseases/dis-128\">فشل القلب</a>.</p>[[slot:dis-3516-hf|يمين مقابل يسار وأدوية فشل القلب — رسم من إعداد الموقع|/diseases/img/dis-3516-hf.svg]]<h4>الأعراض والأسباب</h4><table><thead><tr><th></th><th>فشل القلب الأيمن (R)</th><th>فشل القلب الأيسر (L)</th></tr></thead><tbody><tr><td>العلامات</td><td>وذمة محيطية، زيادة وزن، توسع أوردة العنق (JVD)، استسقاء، تضخم الكبد والطحال</td><td>وذمة رئوية: خراخر لا تزول بالسعال، بلغم رغوي وردي، orthopnea (ضيق نفس عند الاستلقاء)</td></tr><tr><td>الأسباب</td><td>الفشل الأيسر، ارتفاع الضغط الرئوي، تليّف الرئة</td><td>ضعف الضخ: احتشاء، مرض القلب الإقفاري (CAD/ACS)</td></tr></tbody></table>"
-    },
-    "causes": {
-      "ar": "<h4>عوامل الخطر</h4><ul><li>أهمها ارتفاع الضغط</li><li>اضطراب النظم مثل الرجفان الأذيني</li><li>تسريب أو ضيق صمامات القلب (مثل ارتجاع التاجي)</li><li>اعتلال عضلة القلب</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>كلمات مفتاحية للأزمة</h4><div class=\"cs-box cs-danger\"><strong>وذمة الرئة (أزمة)</strong><p>أي أعراض جديدة، مفاجئة، متفاقمة، سريعة = أزمة وذمة رئوية (سائل رئوي).</p></div><h4>أولوية العلاج (الحفظ)</h4><ul><li><strong>#1 furosemide</strong> (مدر وريدي: يُصرّف السوائل)</li><li><strong>H:</strong> رفع الرأس 45° (نصف جلوس، جلوس عالٍ، وضع orthopneic)</li><li><strong>O:</strong> أكسجين</li><li><strong>P:</strong> furosemide + مورفين + منشطات انقباض موجبة (positive inotropes)</li><li><strong>E:</strong> إنهاء السوائل والصوديوم (لا شرب سوائل وإيقاف السوائل الوريدية)</li></ul>"
-    },
-    "tests": {
-      "ar": "<h4>الفحوصات</h4><ul><li>BNP: 300 خفيف، 600 متوسط، 900 فأكثر شديد (حسب المراجع؛ راجع مرجع المعمل)</li><li>إيكو: EF أقل من 40% = فشل قلب (الطبيعي 55–70%)، وتضخم البطين الأيسر (LVH)</li><li>مراقبة Swan-Ganz (قسطرة شريان رئوي)، وCVP الطبيعي 2–8؛ أعلى من 8 غير جيد</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>الأدوية: ACTS+ D</h4><table><thead><tr><th>الدواء</th><th>النقاط</th></tr></thead><tbody><tr><td>ACE (-pril) مثل lisinopril</td><td>الاختيار الأول؛ يؤثر على الضغط فقط (ليس النبض)</td></tr><tr><td>ARB (-sartan) مثل losartan</td><td>الاختيار الثاني (relax man)؛ تجنب الحمل؛ ACE: وذمة وعائية وسعال؛ ARB بلا سعال؛ ارتفاع K+ (3.5–5.0)</td></tr><tr><td>حاصرات بيتا (-lol) مثل atenolol</td><td>تخفض الضغط والمعدل؛ <strong>احبس الجرعة عند:</strong> بطء القلب < 60 أو ضغط منخفض (90/60) أو تفاقم HF الحاد أو الربو/COPD أو إخفاء هبوط السكر</td></tr><tr><td>حاصرات الكالسيوم</td><td>تهدئ الضغط والمعدل (-dipine، -zem، -amil)؛ تجنب مع المعدل والضغط المنخفضين</td></tr><tr><td>المدرات</td><td>K+ فاقد: furosemide وhydrochlorothiazide (انتبه لنقص K: تناول موز وبطيخ وخضار ورقية)؛ K+ حافظ: spironolactone (تجنب بدائل الملح والبطيخ…)</td></tr><tr><td>موسعات (nitrates)</td><td>nitroglycerin/isosorbide؛ ممنوع -afil؛ أوقف nitro drip إذا ضغط انقباضي < 90 أو هبط 30؛ الصداع طبيعي والضغط المنخفض ضار</td></tr><tr><td>digoxin</td><td>انقباض أعمق؛ نبض قلبي 1 دقيقة قبل الجرعة؛ سُمّية > 2.0 (تغير رؤية وغثيان)؛ البوتاسيوم ≤ 3.5 يزيد الخطر</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء. الأسماء التجارية المصرية للتعرّف فقط، راجع النشرة.</p></div>"
-    },
-    "nursing": {
-      "ar": "<h4>DR. BEDS</h4><ul><li><strong>D (Diet):</strong> قليل الصوديوم والسعرات والكوليسترول؛ سوائل 2 لتر أو أقل؛ لا أدوية OTC (كحة، زكام، مضادات حموضة، NSAIDs)؛ لا أطعمة معلبة (شيبس، صلصات، لحوم، جبن، نبيذ).</li><li><strong>R (Risk for falls):</strong> غيّر الوضع ببطء.</li><li><strong>B (BP & BNP):</strong> الضغط يجب ألا يرتفع.</li><li><strong>E (Elevate):</strong> ارفع رأس السرير والساقين.</li><li><strong>D (Daily weights, I&O):</strong> زيادة 3 رطل (حوالي 1.4 كجم) يوميًا أو 5 رطل (حوالي 2.3 كجم) في 7 أيام = تفاقم.</li><li><strong>S (Stairs):</strong> لا علاقة جنسية حتى القدرة على صعود طابقين دون ضيق نفس.</li><li><strong>S (Stockings):</strong> جوارب TED تقلل تجمع الدم، تُنزع يوميًا.</li></ul><div class=\"cs-box cs-danger\"><strong>لا تدلّك الساقين</strong><p>لا تدلّك ساقي مريض فشل القلب (خطر جلطة).</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>خراخر ورغوة وردية وضيق نفس شديد</li><li>زيادة وزن سريعة</li><li>وذمة مفاجئة</li><li>سُمّية digoxin</li><li>ضغط منخفض مع نبض بطيء</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>وزن يومي وسجل.</li><li>قلّل الملح والسوائل (2 لتر).</li><li>لا أدوية بلا استشارة.</li><li>أبلغ عن زيادة الوزن وضيق النفس.</li><li>قم ببطء.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "HF = Heavy Fluid",
-      "furosemide #1 في وذمة الرئة",
-      "HOB 45° وأكسجين وإنهاء السوائل",
-      "ACE اختيار أول",
-      "زيادة 3 رطل/يوم = تفاقم"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول دواء في وذمة الرئة:"
-      },
-      "options": [
-        {
-          "ar": "furosemide"
-        },
-        {
-          "ar": "digoxin"
-        },
-        {
-          "ar": "heparin"
-        },
-        {
-          "ar": "insulin"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مدر وريدي لتصريف السوائل."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة فشل القلب الأيسر:"
-      },
-      "options": [
-        {
-          "ar": "بلغم رغوي وردي"
-        },
-        {
-          "ar": "تضخم الكبد"
-        },
-        {
-          "ar": "JVD"
-        },
-        {
-          "ar": "استسقاء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "احتقان الرئتين."
-      }
-    },
-    {
-      "q": {
-        "ar": "زيادة الوزن المهمة:"
-      },
-      "options": [
-        {
-          "ar": "3 رطل في يوم أو 5 في أسبوع"
-        },
-        {
-          "ar": "أقل من رطل"
-        },
-        {
-          "ar": "لا تهم"
-        },
-        {
-          "ar": "كل شهر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تدل على احتباس سوائل."
-      }
-    },
-    {
-      "q": {
-        "ar": "EF أقل من:"
-      },
-      "options": [
-        {
-          "ar": "40% يدل على فشل القلب"
-        },
-        {
-          "ar": "70%"
-        },
-        {
-          "ar": "90%"
-        },
-        {
-          "ar": "100%"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الطبيعي 55–70%."
-      }
-    },
-    {
-      "q": {
-        "ar": "حاصر بيتا يُحتجز عند:"
-      },
-      "options": [
-        {
-          "ar": "نبض أقل من 60 أو ضغط منخفض"
-        },
-        {
-          "ar": "نبض 80"
-        },
-        {
-          "ar": "ضغط 120/80"
-        },
-        {
-          "ar": "حرارة طبيعية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر بطء القلب وهبوط الضغط."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "BNF — British National Formulary"
-    },
-    {
-      "title": "Lippincott Pharmacology"
-    },
-    {
-      "title": "إرشادات الجمعيات الطبية المعنية بكل فئة"
-    }
+  "en": [
+   "HF = Heavy Fluid",
+   "furosemide is #1 in pulmonary edema",
+   "HOB 45°, oxygen, and ending fluids",
+   "ACE is the first choice",
+   "A gain of 3 lb/day = worsening"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول دواء في وذمة الرئة:",
+    "en": "First drug in pulmonary edema:"
+   },
+   "options": [
+    {
+     "ar": "furosemide",
+     "en": "furosemide"
+    },
+    {
+     "ar": "digoxin",
+     "en": "digoxin"
+    },
+    {
+     "ar": "heparin",
+     "en": "heparin"
+    },
+    {
+     "ar": "insulin",
+     "en": "insulin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مدر وريدي لتصريف السوائل.",
+    "en": "An IV diuretic to remove fluid."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة فشل القلب الأيسر:",
+    "en": "A sign of left heart failure:"
+   },
+   "options": [
+    {
+     "ar": "بلغم رغوي وردي",
+     "en": "Pink frothy sputum"
+    },
+    {
+     "ar": "تضخم الكبد",
+     "en": "Enlarged liver"
+    },
+    {
+     "ar": "JVD",
+     "en": "JVD"
+    },
+    {
+     "ar": "استسقاء",
+     "en": "Ascites"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "احتقان الرئتين.",
+    "en": "Lung congestion."
+   }
+  },
+  {
+   "q": {
+    "ar": "زيادة الوزن المهمة:",
+    "en": "Significant weight gain:"
+   },
+   "options": [
+    {
+     "ar": "3 رطل في يوم أو 5 في أسبوع",
+     "en": "3 lb in a day or 5 in a week"
+    },
+    {
+     "ar": "أقل من رطل",
+     "en": "Less than a pound"
+    },
+    {
+     "ar": "لا تهم",
+     "en": "Does not matter"
+    },
+    {
+     "ar": "كل شهر",
+     "en": "Every month"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تدل على احتباس سوائل.",
+    "en": "It indicates fluid retention."
+   }
+  },
+  {
+   "q": {
+    "ar": "EF أقل من:",
+    "en": "EF below:"
+   },
+   "options": [
+    {
+     "ar": "40% يدل على فشل القلب",
+     "en": "40% indicates heart failure"
+    },
+    {
+     "ar": "70%",
+     "en": "70%"
+    },
+    {
+     "ar": "90%",
+     "en": "90%"
+    },
+    {
+     "ar": "100%",
+     "en": "100%"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الطبيعي 55–70%.",
+    "en": "Normal is 55–70%."
+   }
+  },
+  {
+   "q": {
+    "ar": "حاصر بيتا يُحتجز عند:",
+    "en": "A beta-blocker is held if:"
+   },
+   "options": [
+    {
+     "ar": "نبض أقل من 60 أو ضغط منخفض",
+     "en": "Pulse below 60 or low blood pressure"
+    },
+    {
+     "ar": "نبض 80",
+     "en": "Pulse 80"
+    },
+    {
+     "ar": "ضغط 120/80",
+     "en": "Blood pressure 120/80"
+    },
+    {
+     "ar": "حرارة طبيعية",
+     "en": "Normal temperature"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر بطء القلب وهبوط الضغط.",
+    "en": "Risk of bradycardia and hypotension."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "BNF — British National Formulary"
+  },
+  {
+   "title": "Lippincott Pharmacology"
+  },
+  {
+   "title": "إرشادات الجمعيات الطبية المعنية بكل فئة"
+  }
+ ]
 }

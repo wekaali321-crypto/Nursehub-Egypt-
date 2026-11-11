@@ -1,244 +1,301 @@
 {
-  "id": "dis-092",
-  "num": 92,
-  "system": "infect",
-  "icon": "🧫",
-  "level": 2,
-  "title": {
-    "ar": "الزحار الأميبي (الأميبيا المعوية)",
-    "en": "Intestinal Amebiasis"
+ "id": "dis-092",
+ "num": 92,
+ "system": "infect",
+ "icon": "🧫",
+ "level": 2,
+ "title": {
+  "ar": "الزحار الأميبي (الأميبيا المعوية)",
+  "en": "Intestinal Amebiasis"
+ },
+ "teaser": {
+  "ar": "إسهال بدم ومخاط بدون حرارة؟ دورة الأميبا، الفرق بينها وبين الباسيلي، جمع عينة البراز الدافئة، جرعات الميترونيدازول وقاتل الأكياس، وخراج الكبد.",
+  "en": "Diarrhea with blood and mucus but no fever? The amebic life cycle, how it differs from bacillary dysentery, collecting a warm stool sample, metronidazole and cysticidal doses, and liver abscess."
+ },
+ "chips": [
+  {
+   "ar": "E. histolytica",
+   "en": "E. histolytica"
   },
-  "teaser": {
-    "ar": "إسهال بدم ومخاط بدون حرارة؟ دورة الأميبا، الفرق بينها وبين الباسيلي، جمع عينة البراز الدافئة، جرعات الميترونيدازول وقاتل الأكياس، وخراج الكبد."
+  {
+   "ar": "Flagyl",
+   "en": "Flagyl"
   },
-  "chips": [
-    {
-      "ar": "E. histolytica"
-    },
-    {
-      "ar": "Flagyl"
-    },
-    {
-      "ar": "Furazole"
-    }
+  {
+   "ar": "Furazole",
+   "en": "Furazole"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الأميبيا المعوية (Intestinal amebiasis) عدوى بطفيلي Entamoeba histolytica ينتقل بالماء والأكل الملوث بأكياسه. بيسبب التهاب القولون مع إسهال دموي مخاط ومغص وزحير، وممكن يوصل للكبد (خراج كبدي). مميزاتها: <b>لا حرارة، لا سمّية، لا جفاف</b> عادةً.</p>[[slot:dis-092-compare|مقارنة الزحار الأميبي والباسيلي|/diseases/img/dis-092-compare.svg]][[slot:dis-092-cycle|دورة الأميبا المعوية|/diseases/img/dis-092-cycle.svg]]<h4>إيه اللي بيحصل جوه الجسم؟ (Pathophysiology)</h4><ol><li>الكيس المعدي (يحتوي 4 أنوية) يُبلع ويمر المعدة سليماً.</li><li>في الأمعاء الدقيقة يخرج الطور النشط (Trophozoite) وينزل للقولون.</li><li>في بعض الأشخاص يلتصق بالمخاط ويفرز إنزيمات تدمر الخلايا وتحدث قرح قارورية الشكل (Flask-shaped ulcers) نازفة في الأعور والقولون الصاعد والمستقيم.</li><li>قد ينتقل عبر الدم البابي للكبد فيكوّن خراجاً (Abscess) وربما ينتشر لأعضاء أخرى.</li><li>أغلب الناس يحملون الكيس بدون أعراض (حاملون) وينشرون العدوى.</li></ol><div class=\"cs-stats\"><div><b>2–4 أسابيع</b><span>فترة الحضانة المعتادة</span></div><div><b>3 عينات</b><span>براز طازجة على أيام</span></div><div><b>7–10 أيام</b><span>ميترونيدازول مرجعي</span></div></div><p>ملحوظة: Entamoeba dispar شكلها شبه، لكن غير مسبب للمرض؛ وبعض المعامل بتفرق بالمستضد أو PCR.</p>",
+   "en": "<p>Intestinal amebiasis is infection with the parasite Entamoeba histolytica, transmitted through water and food contaminated with its cysts. It causes colitis with bloody mucoid diarrhea, cramps, and tenesmus, and it can reach the liver (liver abscess). Its hallmarks: <b>no fever, no toxemia, no dehydration</b>, usually.</p>[[slot:dis-092-compare|Comparison of amebic and bacillary dysentery|/diseases/img/dis-092-compare.svg]][[slot:dis-092-cycle|The intestinal ameba life cycle|/diseases/img/dis-092-cycle.svg]]<h4>What happens inside the body? (Pathophysiology)</h4><ol><li>The infective cyst (containing 4 nuclei) is swallowed and passes through the stomach intact.</li><li>In the small intestine the active form (trophozoite) emerges and moves down to the colon.</li><li>In some people it attaches to the mucus and secretes enzymes that destroy cells and create bleeding flask-shaped ulcers in the cecum, ascending colon, and rectum.</li><li>It may travel through the portal blood to the liver, forming an abscess, and may spread to other organs.</li><li>Most people carry the cyst without symptoms (carriers) and spread the infection.</li></ol><div class=\"cs-stats\"><div><b>2–4 weeks</b><span>Usual incubation period</span></div><div><b>3 samples</b><span>Fresh stool on different days</span></div><div><b>7–10 days</b><span>Standard metronidazole course</span></div></div><p>Note: Entamoeba dispar looks similar but does not cause disease; some labs distinguish them by antigen or PCR.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>بلع أكياس E. histolytica مع ماء أو خضار أو أكل ملوث</li><li>سوء الصرف وقلة نظافة اليدين</li><li>الحاملون بدون أعراض ينشرونها</li><li>أماكن بدون صرف صحي كافٍ أو ماء الشرب مختلط بالصرف</li><li>الأكل من بائعين غير نظيفين والخضار الورقية غير المغسولة</li><li>السفر لمناطق موبوءة أو الإقامة المؤسسية (دور رعاية)</li><li>ضعف المناعة وسوء التغذية وحمل وعلاج بالستيرويد (قد يزيد خطورة المرض)</li></ul>",
+   "en": "<ul><li>Swallowing E. histolytica cysts with contaminated water, vegetables, or food</li><li>Poor sanitation and poor hand hygiene</li><li>Asymptomatic carriers spread it</li><li>Places without adequate sewage systems or where drinking water mixes with sewage</li><li>Eating from unhygienic vendors and unwashed leafy vegetables</li><li>Travel to endemic areas or institutional living (care homes)</li><li>Weak immunity, malnutrition, pregnancy, and steroid therapy (may increase disease severity)</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>الصورة الإكلينيكية</h4><ol><li><b>إسهال حاد</b> (نوبات متكررة)</li><li><b>مغص بطني</b></li><li><b>زحير (Tenesmus):</b> إحساس برغبة مؤلمة في التبرز</li><li><b>دم ومخاط في البراز</b></li><li><b>انتفاخ وغازات</b> (Flatulence)</li></ol><div class=\"cs-box cs-info\"><strong>الحالة العامة</strong><p>لا حرارة (No fever)، لا سمّية (No toxemia)، لا جفاف (No dehydration).</p></div><h4>تفاصيل إضافية</h4><ul><li>نوبات متكررة من الإسهال مع دم ومخاط (Recurrent attacks of diarrhea with blood, mucous)</li><li>البراز نصف صلب (Semisolid) كريه الرائحة ويحتوي على <i>E. histolytica</i></li><li>فحص البراز: الأطوار النشطة (Trophozoites) <i>E. histolytica</i> + دم + صديد</li></ul><h4>الأشكال الإكلينيكية</h4><table><thead><tr><th>الشكل</th><th>الوصف</th></tr></thead><tbody><tr><td>حامل الكيس</td><td>بدون أعراض</td></tr><tr><td>التهاب قولون خفيف إلى متوسط</td><td>مغص، إسهال متقطع، انتفاخ</td></tr><tr><td>دوسنتاريا أميبية</td><td>إسهال دموي مخاطي متكرر، زحير، ألم، فقدان وزن، حرارة غالباً قليلة أو منعدمة</td></tr><tr><td>خراج كبد أميبي</td><td>حمى مرتفعة وتعرق، ألم أيمن علوي، كبد متضخم مؤلم، قد لا يوجد إسهال</td></tr><tr><td>مضاعفات</td><td>تضخم القولون السام، ثقب، التهاب بريتون، أميبوما (كتلة التهابية)، خراج ينفجر في غشاء الرئة (Pleura) أو غشاء القلب (Pericardium)</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>فرق عن الباسيلي</strong><p>الأميبا: بداية تدريجية، براز قليل الكمية مع دم ومخاط (\"جلي الكشمش\")، حرارة قليلة. الباسيلي: بداية مفاجئة، حرارة عالية وسمّية وجفاف.</p></div><div class=\"cs-box cs-info\"><strong>كيف تتأكد من وجود الديدان؟</strong><p>الشكاوى الأشهر: إسهال أو إمساك أو تعنية (يدخل الحمام كتير ويحرق وما بيعملش حاجة)، براز فيه مخاط أو دم، مغص، حكة حول الشرج (بيهرش كتير عند فتحة الشرج)، وأنيميا (الديدان من أشهر أسباب الأنيميا). لتحديد النوع <b>لازم تحليل براز</b> لأن العلاج يعتمد على النوع. الأنواع المعتادة: Entamoeba، Giardia، Oxyuris، Ascaris، Ancylostoma.</p></div>",
+   "en": "<h4>Clinical picture</h4><ol><li><b>Acute diarrhea</b> (repeated attacks)</li><li><b>Abdominal cramps</b></li><li><b>Tenesmus:</b> a painful urge to pass stool</li><li><b>Blood and mucus in the stool</b></li><li><b>Bloating and gas</b> (flatulence)</li></ol><div class=\"cs-box cs-info\"><strong>General condition</strong><p>No fever, no toxemia, no dehydration.</p></div><h4>Additional details</h4><ul><li>Recurrent attacks of diarrhea with blood and mucus</li><li>Semisolid, foul-smelling stool containing <i>E. histolytica</i></li><li>Stool exam: <i>E. histolytica</i> trophozoites + blood + pus</li></ul><h4>Clinical forms</h4><table><thead><tr><th>Form</th><th>Description</th></tr></thead><tbody><tr><td>Cyst carrier</td><td>No symptoms</td></tr><tr><td>Mild to moderate colitis</td><td>Cramps, intermittent diarrhea, bloating</td></tr><tr><td>Amebic dysentery</td><td>Repeated bloody mucoid diarrhea, tenesmus, pain, weight loss, fever usually low or absent</td></tr><tr><td>Amebic liver abscess</td><td>High fever and sweating, right upper quadrant pain, enlarged tender liver; diarrhea may be absent</td></tr><tr><td>Complications</td><td>Toxic megacolon, perforation, peritonitis, ameboma (inflammatory mass), abscess rupturing into the pleura or pericardium</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>Difference from bacillary dysentery</strong><p>Amebic: gradual onset, small-volume stool with blood and mucus (\"redcurrant jelly\"), low fever. Bacillary: sudden onset, high fever, toxemia, and dehydration.</p></div><div class=\"cs-box cs-info\"><strong>How do you confirm worms?</strong><p>The most common complaints: diarrhea or constipation or tenesmus (frequent trips to the toilet with burning and nothing passed), stool with mucus or blood, cramps, perianal itching (frequent scratching around the anus), and anemia (worms are among the most common causes of anemia). To identify the type, <b>a stool test is required</b> because treatment depends on the type. The usual types: Entamoeba, Giardia, Oxyuris, Ascaris, Ancylostoma.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>تحليل براز:</b> الأميبا في الطور النشط (Vegetative) أو الكيس (Cyst)</li><li>أخذ العينة طازجة ودافئة للأطوار النشطة</li><li>سونار الكبد لو شك في خراج، وصورة دم</li></ul><h4>تفاصيل التحاليل وتجهيز العينة</h4><table><thead><tr><th>الفحص</th><th>ملاحظات</th></tr></thead><tbody><tr><td>براز مجهري (Wet mount)</td><td>أطوار نشطة بها كرات حمراء مبلوعة — خلال 30 دقيقة من الخروج، والعينة دافئة</td></tr><tr><td>براز بمحلول حافظ (فورمالين/PVA)</td><td>للأكياس عند التأخير</td></tr><tr><td>مستضد البراز / PCR</td><td>يفرق E. histolytica عن E. dispar</td></tr><tr><td>سيرولوجيا (الأجسام المضادة)</td><td>مفيدة في المرض الغازي وخراج الكبد</td></tr><tr><td>CBC / CRP</td><td>كرات بيضاء مرتفعة في الخراج؛ أنيميا</td></tr><tr><td>سونار / مقطعية الكبد</td><td>خراج منفرد غالباً بالفص الأيمن</td></tr><tr><td>تنظير قولون</td><td>لا يُطلب إلا للضرورة (خطر الثقب)</td></tr></tbody></table><ul><li>العينة الطازجة: وعاء نظيف جاف بدون بول أو مطهر، علّمه بالاسم والوقت، وسلمه فوراً.</li><li>اطلب 3 عينات على أيام مختلفة لو الأولى سلبية والشك كبير.</li><li>سجّل الأدوية المأخوذة (باريوم، مضادات حيوية، مسهلات) لأنها تؤثر على المجهر.</li><li>المخالطين أو الأسرة اللي عندهم أعراض يتفحصوا.</li></ul>",
+   "en": "<ul><li><b>Stool analysis:</b> ameba in the active (vegetative) form or cyst form</li><li>Collect the sample fresh and warm for active forms</li><li>Liver ultrasound if an abscess is suspected, and a CBC</li></ul><h4>Test details and sample preparation</h4><table><thead><tr><th>Test</th><th>Notes</th></tr></thead><tbody><tr><td>Microscopic stool (wet mount)</td><td>Active forms with ingested red cells — within 30 minutes of passage, with the sample warm</td></tr><tr><td>Stool in preservative (formalin/PVA)</td><td>For cysts when there is a delay</td></tr><tr><td>Stool antigen / PCR</td><td>Distinguishes E. histolytica from E. dispar</td></tr><tr><td>Serology (antibodies)</td><td>Useful in invasive disease and liver abscess</td></tr><tr><td>CBC / CRP</td><td>High white cells with abscess; anemia</td></tr><tr><td>Liver ultrasound / CT</td><td>Usually a single abscess in the right lobe</td></tr><tr><td>Colonoscopy</td><td>Ordered only when necessary (risk of perforation)</td></tr></tbody></table><ul><li>Fresh sample: a clean, dry container without urine or disinfectant; label it with name and time, and deliver it immediately.</li><li>Request 3 samples on different days if the first is negative and suspicion is high.</li><li>Record medications taken (barium, antibiotics, laxatives) because they affect microscopy.</li><li>Symptomatic contacts or family members should be tested.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>العلاج النوعي</h4><table><thead><tr><th>الطور</th><th>الدواء والجرعة</th></tr></thead><tbody><tr><td>الطور النشط (Vegetative)</td><td>Flagyl 500 مجم 3 مرات يومياً لمدة 10 أيام، ثم تكرار الكورس بعد 10 أيام</td></tr><tr><td>الكيس (Cyst)</td><td>Furazole أقراص 3 مرات يومياً لمدة 7 أيام، ثم تكرار الكورس بعد 10 أيام</td></tr></tbody></table><h4>علاج الأعراض</h4><ul><li>للمغص والإسهال: Streptoquine قرص 3 مرات يومياً</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المرجع: ميترونيدازول 500–750 مجم 3 مرات يومياً لمدة 7–10 أيام (للطور النسيجي)، <b>يليه</b> دواء يقتل الأكياس في تجويف الأمعاء (باروموميسين أو ديلوكسانيد فيورويت) لأن ميترونيدازول وحده يترك طفيلي في الأمعاء. Furazole المصري تركيبه ميترونيدازول 200 مجم + ديلوكسانيد 250 مجم (إيبيكو). تكرار كورس ميترونيدازول بعد 10 أيام غير معتاد في المراجع: يحدده الطبيب. Streptoquine لم أتحقق من تركيبه.</p></div><p>الجرعات اللي هنا مرجعية ومأخوذة من إرشادات معروفة؛ الجرعة النهائية قرار الطبيب/الصيدلي حسب الوزن والعمر والحمل وحالة الكبد.</p><h4>اختيار الأدوية المضادة للأميبا حسب الشكل الإكلينيكي</h4><table><thead><tr><th>الشكل</th><th>الاختيار</th></tr></thead><tbody><tr><td>أ) عدوى معوية بدون أعراض (حامل الكيس، Cyst carrier) — فموي</td><td>1) Diloxanide أو 2) Diodoquin</td></tr><tr><td>ب) التهاب قولون خفيف إلى متوسط (غير دوسنتاري) — فموي</td><td>1) Metronidazole + Diloxanide أو Diodoquin. 2) Tetracycline + Chloroquine phosphate + Diloxanide أو Diodoquin</td></tr><tr><td>ج) التهاب قولون شديد (دوسنتاري)</td><td>1) Metronidazole (وريدي ثم فموي) + Diloxanide أو Diodoquin. 2) Emetine HCl أو Dehydroemetine (عضل أو تحت الجلد) ثم Tetracycline فموي + Chloroquine phosphate + Diloxanide أو Diodoquin</td></tr><tr><td>د) أميبا الكبد (Hepatic amoebiasis)</td><td>1) Metronidazole (فموي أو حقن) + Chloroquine phosphate + Diloxanide أو Diodoquin. 2) Emetine HCl أو Dehydroemetine (عضل) + Chloroquine phosphate + Diloxanide أو Diodoquin</td></tr></tbody></table><p><b>ملحوظة:</b> Metronidazole فعّال ضد الطور النشط (Vegetative) بينما Diloxanide يقضي على أكياس الأمعاء (Gut cysts).</p><h4>الوصفات المصرية حسب شدة الحالة</h4><table><thead><tr><th>الحالة</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>دوسنتاريا أميبية شديدة</td><td>Flagyl قرص (أو Flagicure)</td><td>قرصان 3 مرات يومياً لمدة 10 أيام</td></tr><tr><td></td><td>أو Fasigyn قرص (أو Protozole)</td><td>4 أقراص جرعة واحدة يومياً لمدة 3 أيام</td></tr><tr><td></td><td>أو Flagyl infusion فيال 100 مل</td><td>وريدياً (للحالات الشديدة)</td></tr><tr><td>مضاد حيوي قاتل للأميبا</td><td>Tetracid كبسولة</td><td>كبسولة كل 6 ساعات لمدة 10 أيام</td></tr><tr><td></td><td>أو Hostacycline قرص</td><td>قرص كل 12 ساعة لمدة 10 أيام</td></tr><tr><td>قاتل أكياس</td><td>Entocid قرص أو Furamide (Diloxanide) قرص</td><td>قرص بعد الأكل 3 مرات يومياً لمدة 10 أيام</td></tr><tr><td>حامل الكيس (Carrier)</td><td>Furamide قرص، أو Amoebyl (Diloxanide) قرص، أو Furamibe forte (Metronidazole + Diloxanide) قرص، أو Furazol قرص، أو Dilozole قرص</td><td>قرص 3 مرات يومياً لمدة 10 أيام</td></tr></tbody></table><h4>خراج الكبد الأميبي (Amoebic liver abscess)</h4><p>هو عادة <b>كتلة واحدة في الفص الأيمن</b> وتحتوي على صديد بلون <b>صلصة الأنشوجة (Anchovy-sauce)</b>. عادة يصاحبه حرارة عالية متذبذبة (High swinging fever) وتعرق وألم عند اللمس (Tenderness).</p><ul><li><b>Flagyl infusion</b> فيال 100 مل: 100 مل كل 8 ساعات (أو حسب الأمر)</li><li>أو <b>Elyzol infusion</b> فيال 100 مل: 100 مل كل 8 ساعات (أو حسب الأمر)</li><li>أو Fasigyn قرص أو Dilozole قرص: كما سبق</li><li><b>شفط جراحي (Surgical aspiration)</b> إذا لم يحدث تحسن خلال 72 ساعة من بدء الميترونيدازول</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>Emetine وDehydroemetine</b> لم يعودا مستخدمين (سُمّية قلبية) ويُحل محلهما الميترونيدازول. وصفة التتراسيكلين + الكلوروكوين قديمة. <b>خراج الكبد:</b> ميترونيدازول 7–10 أيام (النظام المعتاد 500–750 مجم 3 مرات)، يليه دواء قاتل للأكياس (Diloxanide أو Paromomycin). الشفط/التصريف يُستعمل لو لا تحسن خلال 3–5 أيام، أو الخراج كبير (>5 سم) أو خطر الانفجار. الجرعات بأمر الطبيب والوزن (Flagyl infusion 500 مجم/100 مل كل 8 ساعات هو الشائع في البالغين؛ الجدول أعلاه من الوصفات الشائعة).</div><h4>جدول الجرعات المرجعية (بالغ / طفل)</h4><table><thead><tr><th>الغرض</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>التهاب قولون غازي أو خراج</td><td>Metronidazole</td><td>بالغ 500–750 مجم 3 مرات يومياً لمدة 7–10 أيام (وريدي ثم فموي حسب الحالة) · طفل 35–50 مجم/كجم/يوم على 3 جرعات 7–10 أيام</td></tr><tr><td>قاتل أكياس (بعد الميترونيدازول)</td><td>Paromomycin</td><td>25–35 مجم/كجم/يوم على 3 جرعات لمدة 7 أيام</td></tr><tr><td>قاتل أكياس بديل</td><td>Diloxanide furoate (Furamide / Entocid)</td><td>500 مجم 3 مرات يومياً لمدة 10 أيام</td></tr><tr><td>حامل بدون أعراض</td><td>Paromomycin أو Diloxanide</td><td>كما سبق، بدون ميترونيدازول</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تنبيهات أمان</strong><ul><li>ميترونيدازول: لا كحول أثناء العلاج وبعده 48 ساعة؛ مذاق معدني؛ راقب التنميل أو التشنج أو الدوخة؛ خفّض الجرعة عند الكبد الشديد.</li><li>الحمل: يتجنب في الثلث الأول إلا لضرورة (خراج شديد)؛ الطبيب يقرر.</li><li>لا يعطى الستيرويد ولا مضادات الحركة (لوبراميد) في الدوسنتاريا الأميبية لأنها تزيد خطر التضخم السام.</li><li>تجنب الجمع بين ميترونيدازول وwarfarin بدون متابعة INR.</li></ul></div><h4>إضافة: وصفات الممارسة العامة (مرجع ثالث)</h4><p>الجرعاتية أدناه كما وردت، وبعضها يختلف عن المراجع الحديثة (شوف التحديث). الجرعة النهائية بأمر الطبيب/الصيدلي حسب الوزن والعمر والحمل.</p><h4>الطور النشط (Vegetative form)</h4><p>النوع ده من الأميبا سهل القضاء عليه ويحتاج الجرعة العادية من Metronidazole.</p><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Metronidazole: Flagyl 500 — Amrizol 500</td><td>قرص 3 مرات يومياً لمدة أسبوع</td></tr><tr><td>Secnidazole: Fladazole 500</td><td>4 أقراص بعد الأكل مرة واحدة فقط ولا تتكرر</td></tr></tbody></table><h4>طور الكيس (Cyst form)</h4><p>أصعب في القضاء عليه ويحتاج علاج مختلف. <b>يُفضل علاج كل أفراد الأسرة بنفس العلاج.</b></p><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Metronidazole + Diloxanide: Furazol tab — Furamibe forte tab</td><td>قرصين 3 مرات يومياً لمدة 10 أيام</td></tr><tr><td>Secnidazole: Fladazole 500</td><td>4 أقراص بعد الأكل يومياً لمدة 3 أيام</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>لو Furazol ناقص من السوق وعنده Cyst form؟</strong><p>يأخذ Flagyl لمدة أسبوع، ثم يقف أسبوع عشان يستنى الأميبا الناتجة من الـ Cysts، ثم يأخذه أسبوع كمان.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>Secnidazole: الجرعة المرجعية للبالغين 2 جم مرة واحدة مع بداية الوجبة، وللأطفال 30 مجم/كجم مرة واحدة (نشرة الدواء). جرعة 4 أقراص 500 مجم (= 2 جم) تتطابق مع ذلك؛ أما تكرارها 3 أيام فللطور الكيسي بحسب المراجع وغير مؤكد في المراجع: يقرره الطبيب.</li><li>الطور النسيجي الفعّال يُتبع بدواء قاتل للأكياس داخل الأمعاء (diloxanide/paromomycin) لأن الميترونيدازول وحده لا يكفي.</li></ul></div>",
+   "en": "<h4>Specific treatment</h4><table><thead><tr><th>Form</th><th>Drug and dose</th></tr></thead><tbody><tr><td>Active (vegetative) form</td><td>Flagyl 500 mg 3 times daily for 10 days, then repeat the course after 10 days</td></tr><tr><td>Cyst form</td><td>Furazole tablets 3 times daily for 7 days, then repeat the course after 10 days</td></tr></tbody></table><h4>Symptomatic treatment</h4><ul><li>For cramps and diarrhea: Streptoquine one tablet 3 times daily</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Standard regimen: metronidazole 500–750 mg 3 times daily for 7–10 days (for the tissue form), <b>followed by</b> a drug that kills cysts in the intestinal lumen (paromomycin or diloxanide furoate), because metronidazole alone leaves parasites in the gut. The Egyptian Furazole contains metronidazole 200 mg + diloxanide 250 mg (EPICO). Repeating the metronidazole course after 10 days is not standard practice: the physician decides. The composition of Streptoquine has not been verified.</p></div><p>The doses here are for reference, based on recognized guidelines; the final dose is the physician's/pharmacist's decision based on weight, age, pregnancy, and liver status.</p><h4>Choosing antiamebic drugs by clinical form</h4><table><thead><tr><th>Form</th><th>Choice</th></tr></thead><tbody><tr><td>a) Asymptomatic intestinal infection (cyst carrier) — oral</td><td>1) Diloxanide or 2) Diodoquin</td></tr><tr><td>b) Mild to moderate colitis (non-dysenteric) — oral</td><td>1) Metronidazole + Diloxanide or Diodoquin. 2) Tetracycline + Chloroquine phosphate + Diloxanide or Diodoquin</td></tr><tr><td>c) Severe colitis (dysenteric)</td><td>1) Metronidazole (IV then oral) + Diloxanide or Diodoquin. 2) Emetine HCl or Dehydroemetine (IM or subcutaneous) then oral Tetracycline + Chloroquine phosphate + Diloxanide or Diodoquin</td></tr><tr><td>d) Hepatic amoebiasis</td><td>1) Metronidazole (oral or injection) + Chloroquine phosphate + Diloxanide or Diodoquin. 2) Emetine HCl or Dehydroemetine (IM) + Chloroquine phosphate + Diloxanide or Diodoquin</td></tr></tbody></table><p><b>Note:</b> Metronidazole is effective against the active (vegetative) form, while Diloxanide eliminates gut cysts.</p><h4>Egyptian prescriptions by severity</h4><table><thead><tr><th>Condition</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Severe amebic dysentery</td><td>Flagyl tablet (or Flagicure)</td><td>Two tablets 3 times daily for 10 days</td></tr><tr><td></td><td>Or Fasigyn tablet (or Protozole)</td><td>4 tablets as a single daily dose for 3 days</td></tr><tr><td></td><td>Or Flagyl infusion 100 mL vial</td><td>IV (for severe cases)</td></tr><tr><td>Amebicidal antibiotic</td><td>Tetracid capsule</td><td>One capsule every 6 hours for 10 days</td></tr><tr><td></td><td>Or Hostacycline tablet</td><td>One tablet every 12 hours for 10 days</td></tr><tr><td>Cysticide</td><td>Entocid tablet or Furamide (Diloxanide) tablet</td><td>One tablet after meals 3 times daily for 10 days</td></tr><tr><td>Cyst carrier</td><td>Furamide tablet, or Amoebyl (Diloxanide) tablet, or Furamibe forte (Metronidazole + Diloxanide) tablet, or Furazol tablet, or Dilozole tablet</td><td>One tablet 3 times daily for 10 days</td></tr></tbody></table><h4>Amoebic liver abscess</h4><p>It is usually <b>a single mass in the right lobe</b> containing pus the color of <b>anchovy sauce</b>. It is usually accompanied by a high swinging fever, sweating, and tenderness.</p><ul><li><b>Flagyl infusion</b> 100 mL vial: 100 mL every 8 hours (or as ordered)</li><li>Or <b>Elyzol infusion</b> 100 mL vial: 100 mL every 8 hours (or as ordered)</li><li>Or Fasigyn tablet or Dilozole tablet: as above</li><li><b>Surgical aspiration</b> if there is no improvement within 72 hours of starting metronidazole</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><b>Emetine and Dehydroemetine</b> are no longer used (cardiac toxicity) and have been replaced by metronidazole. The tetracycline + chloroquine regimen is outdated. <b>Liver abscess:</b> metronidazole for 7–10 days (usual regimen 500–750 mg 3 times daily), followed by a cysticidal drug (Diloxanide or Paromomycin). Aspiration/drainage is used if there is no improvement within 3–5 days, or the abscess is large (>5 cm) or at risk of rupture. Doses are by physician order and weight (Flagyl infusion 500 mg/100 mL every 8 hours is common in adults; the table above reflects common prescriptions).</div><h4>Standard dose table (adult / child)</h4><table><thead><tr><th>Purpose</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Invasive colitis or abscess</td><td>Metronidazole</td><td>Adult 500–750 mg 3 times daily for 7–10 days (IV then oral as appropriate) · Child 35–50 mg/kg/day in 3 doses for 7–10 days</td></tr><tr><td>Cysticide (after metronidazole)</td><td>Paromomycin</td><td>25–35 mg/kg/day in 3 doses for 7 days</td></tr><tr><td>Alternative cysticide</td><td>Diloxanide furoate (Furamide / Entocid)</td><td>500 mg 3 times daily for 10 days</td></tr><tr><td>Asymptomatic carrier</td><td>Paromomycin or Diloxanide</td><td>As above, without metronidazole</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Safety alerts</strong><ul><li>Metronidazole: no alcohol during treatment and for 48 hours after; metallic taste; watch for numbness, seizures, or dizziness; reduce the dose in severe liver disease.</li><li>Pregnancy: avoid in the first trimester unless necessary (severe abscess); the physician decides.</li><li>Do not give steroids or antimotility drugs (loperamide) in amebic dysentery because they increase the risk of toxic megacolon.</li><li>Avoid combining metronidazole with warfarin without INR monitoring.</li></ul></div><h4>Addendum: general practice prescriptions</h4><p>The doses below are as commonly prescribed, and some differ from current guidance (see the update). The final dose is by physician/pharmacist order based on weight, age, and pregnancy.</p><h4>Active (vegetative) form</h4><p>This form of ameba is easy to eliminate and needs the usual dose of Metronidazole.</p><table><thead><tr><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Metronidazole: Flagyl 500 — Amrizol 500</td><td>One tablet 3 times daily for one week</td></tr><tr><td>Secnidazole: Fladazole 500</td><td>4 tablets after a meal once only, not repeated</td></tr></tbody></table><h4>Cyst form</h4><p>Harder to eliminate and needs different treatment. <b>It is preferable to treat all family members with the same treatment.</b></p><table><thead><tr><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Metronidazole + Diloxanide: Furazol tab — Furamibe forte tab</td><td>Two tablets 3 times daily for 10 days</td></tr><tr><td>Secnidazole: Fladazole 500</td><td>4 tablets after meals daily for 3 days</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>What if Furazol is out of stock and the patient has the cyst form?</strong><p>Take Flagyl for one week, then stop for one week to wait for the amebae emerging from the cysts, then take it for another week.</p></div><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li>Secnidazole: the standard adult dose is 2 g once at the start of a meal, and for children 30 mg/kg once (drug leaflet). A dose of 4 tablets of 500 mg (= 2 g) matches this; repeating it for 3 days for the cyst form is not well established: the physician decides.</li><li>The active tissue form is followed by a cysticidal drug in the intestine (diloxanide/paromomycin) because metronidazole alone is not enough.</li></ul></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p> عدد مرات البراز، الدم والمخاط، المغص، الحرارة، علامات الجفاف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>العينة</strong><p>براز طازج في وعاء نظيف (وليس من التواليت) ويرسل بسرعة؛ قد تتكرر 3 عينات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الدواء</strong><p>ميترونيدازول بعد الأكل. حذّر المريض: طعم معدني، غثيان، بول داكن، <b>ممنوع الكحول</b> أثناء العلاج وبعده 48 ساعة، راقب التنميل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الحذر</strong><p>لا تعطي مضاد إسهال قوي (مثل لوبراميد) بدون أمر الطبيب في الإسهال الدموي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الوقاية</strong><p>احتياطات تلامس، غسل اليدين، تخلص من البراز بأمان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>المتابعة</strong><p>بلّغ عن حمى أو ألم كبد.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>تفاصيل إضافية</strong><p>في الخراج الكبدي: راقب الحرارة (متذبذبة)، ألم الجنب الأيمن/الكتف، وأي ضيق نفس (انفجار في الجنب). Flagyl الوريدي: يُعطى ببطء 30–60 دقيقة، وراقب الغثيان والطعم المعدني وتجنب الكحول (رد فعل). Tetracid/Hostacycline: بعد الأكل مع سوائل وبعيداً عن اللبن والحديد والمضادات الحموضة. Dilozole/Furamibe: ثقّف المريض على إكمال الأيام العشرة حتى مع غياب الأعراض.</p></div><h4>تفاصيل التمريض الإضافية</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>احتياطات العدوى</strong><p>احتياطات الإخراج/التلامس: قفاز ومريلة، غسل اليدين بالماء والصابون (الكحول لا يقتل الأكياس)، تطهير الحمام والأسطح بالكلور، حمام مخصص لو أمكن، والتخلص الآمن من البراز والقيء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>السوائل والتغذية</strong><p>قيّم الجفاف (نادر لكن ممكن)، ORS حسب الحاجة، أكل خفيف قليل الألياف الخشنة والدهون أثناء الإسهال ثم يتحسن تدريجياً، تغذية بروتين وسعرات لتعويض الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>المراقبة</strong><p>عدد مرات البراز، الدم والمخاط، الحرارة، انتفاخ البطن وحجمه، ألم البطن (أو علامات الثقب: صلابة، ألم شديد)، ألم الكبد، الوعي، الداخل والخارج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>التوثيق والتصعيد</strong><p>سجل شكل البراز، الأدوية والوقت، الأعراض الجانبية، نتائج العينات. بلّغ فوراً عن بطن منتفخ متصلب أو حمى عالية أو ألم أيمن شديد أو دم غزير أو قيء مستمر.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess</strong><p> Stool frequency, blood and mucus, cramps, temperature, signs of dehydration.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>The sample</strong><p>Fresh stool in a clean container (not from the toilet), sent quickly; 3 samples may be repeated.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Medication</strong><p>Metronidazole after meals. Warn the patient: metallic taste, nausea, dark urine, <b>no alcohol</b> during treatment and for 48 hours after; watch for numbness.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Caution</strong><p>Do not give a strong antidiarrheal (such as loperamide) without a physician order in bloody diarrhea.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Prevention</strong><p>Contact precautions, hand washing, safe disposal of stool.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Follow-up</strong><p>Report fever or liver pain.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>Additional details</strong><p>In liver abscess: monitor temperature (swinging), right flank/shoulder pain, and any shortness of breath (rupture into the pleura). IV Flagyl: give slowly over 30–60 minutes, monitor for nausea and metallic taste, and avoid alcohol (reaction). Tetracid/Hostacycline: after meals with fluids and away from milk, iron, and antacids. Dilozole/Furamibe: teach the patient to complete the ten days even when symptoms are gone.</p></div><h4>Additional nursing details</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Infection precautions</strong><p>Enteric/contact precautions: gloves and gown, hand washing with soap and water (alcohol does not kill cysts), disinfect the bathroom and surfaces with chlorine, a dedicated bathroom if possible, and safe disposal of stool and vomit.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Fluids and nutrition</strong><p>Assess dehydration (rare but possible), ORS as needed, light food low in coarse fiber and fat during diarrhea then advance gradually, protein and calorie nutrition to regain weight.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Monitoring</strong><p>Stool frequency, blood and mucus, temperature, abdominal distension and girth, abdominal pain (or signs of perforation: rigidity, severe pain), liver pain, consciousness, intake and output.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Documentation and escalation</strong><p>Record stool appearance, medications and times, side effects, and sample results. Report immediately a distended rigid abdomen, high fever, severe right-sided pain, heavy bleeding, or persistent vomiting.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب:</strong><ul><li>حمى وألم أيمن علوي (خراج كبدي)</li><li>إسهال دموي غزير ودوخة</li><li>انتفاخ شديد وألم بطن (تضخم القولون)</li><li>تنميل أو تشنج أثناء ميترونيدازول</li><li>بطن متصلب شديد الألم وصدمة (ثقب)</li><li>ضيق نفس وألم صدر بعد خراج الكبد (انفجار في الجنب)</li><li>لا تحسن بعد 72 ساعة من الميترونيدازول في الخراج</li><li>مريض حامل أو رضيع مصاب</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician:</strong><ul><li>Fever and right upper quadrant pain (liver abscess)</li><li>Heavy bloody diarrhea and dizziness</li><li>Severe distension and abdominal pain (megacolon)</li><li>Numbness or seizures during metronidazole</li><li>A rigid, very painful abdomen and shock (perforation)</li><li>Shortness of breath and chest pain after a liver abscess (rupture into the pleura)</li><li>No improvement 72 hours after metronidazole in an abscess</li><li>An infected pregnant patient or infant</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اغسل إيديك بالصابون بعد الحمام وقبل الأكل.</li><li>اشرب ماء نظيف واغسل الخضار والفاكهة.</li><li>كمّل الدواء كاملاً مع الكورس الثاني لو كتبه الطبيب.</li><li>لا تشرب كحول مع ميترونيدازول.</li><li>الأسرة تتفحص لو في أعراض.</li><li>غلي الماء أو استخدام فلتر جيد، وعدم الشرب من الترع أو الطلمبات غير المعالجة.</li><li>اغسل الخضار الورقية جيداً (انقعها في ماء نظيف مع خل ثم اشطفها) أو اطبخها.</li><li>حامل الكيس (بدون أعراض) يتعالج برضه، وما يحضّرش أكل لغيره قبل العلاج.</li><li>راجع الطبيب لو عاد الإسهال بعد الشفاء لإعادة الفحص.</li></ul>",
+   "en": "<ul><li>Wash your hands with soap after using the toilet and before eating.</li><li>Drink clean water and wash vegetables and fruit.</li><li>Complete the full course, including the second course if the physician prescribes it.</li><li>Do not drink alcohol with metronidazole.</li><li>Family members should be tested if they have symptoms.</li><li>Boil water or use a good filter, and do not drink from canals or untreated pumps.</li><li>Wash leafy vegetables well (soak them in clean water with vinegar, then rinse) or cook them.</li><li>A cyst carrier (without symptoms) is also treated, and should not prepare food for others before treatment.</li><li>See the physician if diarrhea returns after recovery for re-testing.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "إسهال متكرر ومغص وزحير ودم ومخاط بدون حرارة",
+   "التحليل: طور نشط أو كيس",
+   "Flagyl للطور النشط، Furazole للكيس حسب البروتوكول المتبع",
+   "يحتاج غالباً دواءً يقتل الأكياس بعد ميترونيدازول",
+   "لا كحول مع ميترونيدازول",
+   "احتياطات النظافة والتلامس",
+   "تقسيم العلاج: حامل الكيس (Diloxanide)، قولون خفيف (Metronidazole + Diloxanide)، دوسنتاري (وريدي ثم فموي)، كبد (+ Chloroquine)",
+   "العينة طازجة دافئة وتصل المعمل خلال 30 دقيقة للأطوار النشطة"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الأميبيا المعوية (Intestinal amebiasis) عدوى بطفيلي Entamoeba histolytica ينتقل بالماء والأكل الملوث بأكياسه. بيسبب التهاب القولون مع إسهال دموي مخاط ومغص وزحير، وممكن يوصل للكبد (خراج كبدي). مميزاتها: <b>لا حرارة، لا سمّية، لا جفاف</b> عادةً.</p>[[slot:dis-092-compare|مقارنة الزحار الأميبي والباسيلي|/diseases/img/dis-092-compare.svg]][[slot:dis-092-cycle|دورة الأميبا المعوية|/diseases/img/dis-092-cycle.svg]]<h4>إيه اللي بيحصل جوه الجسم؟ (Pathophysiology)</h4><ol><li>الكيس المعدي (يحتوي 4 أنوية) يُبلع ويمر المعدة سليماً.</li><li>في الأمعاء الدقيقة يخرج الطور النشط (Trophozoite) وينزل للقولون.</li><li>في بعض الأشخاص يلتصق بالمخاط ويفرز إنزيمات تدمر الخلايا وتحدث قرح قارورية الشكل (Flask-shaped ulcers) نازفة في الأعور والقولون الصاعد والمستقيم.</li><li>قد ينتقل عبر الدم البابي للكبد فيكوّن خراجاً (Abscess) وربما ينتشر لأعضاء أخرى.</li><li>أغلب الناس يحملون الكيس بدون أعراض (حاملون) وينشرون العدوى.</li></ol><div class=\"cs-stats\"><div><b>2–4 أسابيع</b><span>فترة الحضانة المعتادة</span></div><div><b>3 عينات</b><span>براز طازجة على أيام</span></div><div><b>7–10 أيام</b><span>ميترونيدازول مرجعي</span></div></div><p>ملحوظة: Entamoeba dispar شكلها شبه، لكن غير مسبب للمرض؛ وبعض المعامل بتفرق بالمستضد أو PCR.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>بلع أكياس E. histolytica مع ماء أو خضار أو أكل ملوث</li><li>سوء الصرف وقلة نظافة اليدين</li><li>الحاملون بدون أعراض ينشرونها</li><li>أماكن بدون صرف صحي كافٍ أو ماء الشرب مختلط بالصرف</li><li>الأكل من بائعين غير نظيفين والخضار الورقية غير المغسولة</li><li>السفر لمناطق موبوءة أو الإقامة المؤسسية (دور رعاية)</li><li>ضعف المناعة وسوء التغذية وحمل وعلاج بالستيرويد (قد يزيد خطورة المرض)</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>الصورة الإكلينيكية</h4><ol><li><b>إسهال حاد</b> (نوبات متكررة)</li><li><b>مغص بطني</b></li><li><b>زحير (Tenesmus):</b> إحساس برغبة مؤلمة في التبرز</li><li><b>دم ومخاط في البراز</b></li><li><b>انتفاخ وغازات</b> (Flatulence)</li></ol><div class=\"cs-box cs-info\"><strong>الحالة العامة</strong><p>لا حرارة (No fever)، لا سمّية (No toxemia)، لا جفاف (No dehydration).</p></div><h4>تفاصيل إضافية</h4><ul><li>نوبات متكررة من الإسهال مع دم ومخاط (Recurrent attacks of diarrhea with blood, mucous)</li><li>البراز نصف صلب (Semisolid) كريه الرائحة ويحتوي على <i>E. histolytica</i></li><li>فحص البراز: الأطوار النشطة (Trophozoites) <i>E. histolytica</i> + دم + صديد</li></ul><h4>الأشكال الإكلينيكية</h4><table><thead><tr><th>الشكل</th><th>الوصف</th></tr></thead><tbody><tr><td>حامل الكيس</td><td>بدون أعراض</td></tr><tr><td>التهاب قولون خفيف إلى متوسط</td><td>مغص، إسهال متقطع، انتفاخ</td></tr><tr><td>دوسنتاريا أميبية</td><td>إسهال دموي مخاطي متكرر، زحير، ألم، فقدان وزن، حرارة غالباً قليلة أو منعدمة</td></tr><tr><td>خراج كبد أميبي</td><td>حمى مرتفعة وتعرق، ألم أيمن علوي، كبد متضخم مؤلم، قد لا يوجد إسهال</td></tr><tr><td>مضاعفات</td><td>تضخم القولون السام، ثقب، التهاب بريتون، أميبوما (كتلة التهابية)، خراج ينفجر في غشاء الرئة (Pleura) أو غشاء القلب (Pericardium)</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>فرق عن الباسيلي</strong><p>الأميبا: بداية تدريجية، براز قليل الكمية مع دم ومخاط (\"جلي الكشمش\")، حرارة قليلة. الباسيلي: بداية مفاجئة، حرارة عالية وسمّية وجفاف.</p></div><div class=\"cs-box cs-info\"><strong>كيف تتأكد من وجود الديدان؟</strong><p>الشكاوى الأشهر: إسهال أو إمساك أو تعنية (يدخل الحمام كتير ويحرق وما بيعملش حاجة)، براز فيه مخاط أو دم، مغص، حكة حول الشرج (بيهرش كتير عند فتحة الشرج)، وأنيميا (الديدان من أشهر أسباب الأنيميا). لتحديد النوع <b>لازم تحليل براز</b> لأن العلاج يعتمد على النوع. الأنواع المعتادة: Entamoeba، Giardia، Oxyuris، Ascaris، Ancylostoma.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>تحليل براز:</b> الأميبا في الطور النشط (Vegetative) أو الكيس (Cyst)</li><li>أخذ العينة طازجة ودافئة للأطوار النشطة</li><li>سونار الكبد لو شك في خراج، وصورة دم</li></ul><h4>تفاصيل التحاليل وتجهيز العينة</h4><table><thead><tr><th>الفحص</th><th>ملاحظات</th></tr></thead><tbody><tr><td>براز مجهري (Wet mount)</td><td>أطوار نشطة بها كرات حمراء مبلوعة — خلال 30 دقيقة من الخروج، والعينة دافئة</td></tr><tr><td>براز بمحلول حافظ (فورمالين/PVA)</td><td>للأكياس عند التأخير</td></tr><tr><td>مستضد البراز / PCR</td><td>يفرق E. histolytica عن E. dispar</td></tr><tr><td>سيرولوجيا (الأجسام المضادة)</td><td>مفيدة في المرض الغازي وخراج الكبد</td></tr><tr><td>CBC / CRP</td><td>كرات بيضاء مرتفعة في الخراج؛ أنيميا</td></tr><tr><td>سونار / مقطعية الكبد</td><td>خراج منفرد غالباً بالفص الأيمن</td></tr><tr><td>تنظير قولون</td><td>لا يُطلب إلا للضرورة (خطر الثقب)</td></tr></tbody></table><ul><li>العينة الطازجة: وعاء نظيف جاف بدون بول أو مطهر، علّمه بالاسم والوقت، وسلمه فوراً.</li><li>اطلب 3 عينات على أيام مختلفة لو الأولى سلبية والشك كبير.</li><li>سجّل الأدوية المأخوذة (باريوم، مضادات حيوية، مسهلات) لأنها تؤثر على المجهر.</li><li>المخالطين أو الأسرة اللي عندهم أعراض يتفحصوا.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>العلاج النوعي</h4><table><thead><tr><th>الطور</th><th>الدواء والجرعة</th></tr></thead><tbody><tr><td>الطور النشط (Vegetative)</td><td>Flagyl 500 مجم 3 مرات يومياً لمدة 10 أيام، ثم تكرار الكورس بعد 10 أيام</td></tr><tr><td>الكيس (Cyst)</td><td>Furazole أقراص 3 مرات يومياً لمدة 7 أيام، ثم تكرار الكورس بعد 10 أيام</td></tr></tbody></table><h4>علاج الأعراض</h4><ul><li>للمغص والإسهال: Streptoquine قرص 3 مرات يومياً</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المرجع: ميترونيدازول 500–750 مجم 3 مرات يومياً لمدة 7–10 أيام (للطور النسيجي)، <b>يليه</b> دواء يقتل الأكياس في تجويف الأمعاء (باروموميسين أو ديلوكسانيد فيورويت) لأن ميترونيدازول وحده يترك طفيلي في الأمعاء. Furazole المصري تركيبه ميترونيدازول 200 مجم + ديلوكسانيد 250 مجم (إيبيكو). تكرار كورس ميترونيدازول بعد 10 أيام غير معتاد في المراجع: يحدده الطبيب. Streptoquine لم أتحقق من تركيبه.</p></div><p>الجرعات اللي هنا مرجعية ومأخوذة من إرشادات معروفة؛ الجرعة النهائية قرار الطبيب/الصيدلي حسب الوزن والعمر والحمل وحالة الكبد.</p><h4>اختيار الأدوية المضادة للأميبا حسب الشكل الإكلينيكي</h4><table><thead><tr><th>الشكل</th><th>الاختيار</th></tr></thead><tbody><tr><td>أ) عدوى معوية بدون أعراض (حامل الكيس، Cyst carrier) — فموي</td><td>1) Diloxanide أو 2) Diodoquin</td></tr><tr><td>ب) التهاب قولون خفيف إلى متوسط (غير دوسنتاري) — فموي</td><td>1) Metronidazole + Diloxanide أو Diodoquin. 2) Tetracycline + Chloroquine phosphate + Diloxanide أو Diodoquin</td></tr><tr><td>ج) التهاب قولون شديد (دوسنتاري)</td><td>1) Metronidazole (وريدي ثم فموي) + Diloxanide أو Diodoquin. 2) Emetine HCl أو Dehydroemetine (عضل أو تحت الجلد) ثم Tetracycline فموي + Chloroquine phosphate + Diloxanide أو Diodoquin</td></tr><tr><td>د) أميبا الكبد (Hepatic amoebiasis)</td><td>1) Metronidazole (فموي أو حقن) + Chloroquine phosphate + Diloxanide أو Diodoquin. 2) Emetine HCl أو Dehydroemetine (عضل) + Chloroquine phosphate + Diloxanide أو Diodoquin</td></tr></tbody></table><p><b>ملحوظة:</b> Metronidazole فعّال ضد الطور النشط (Vegetative) بينما Diloxanide يقضي على أكياس الأمعاء (Gut cysts).</p><h4>الوصفات المصرية حسب شدة الحالة</h4><table><thead><tr><th>الحالة</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>دوسنتاريا أميبية شديدة</td><td>Flagyl قرص (أو Flagicure)</td><td>قرصان 3 مرات يومياً لمدة 10 أيام</td></tr><tr><td></td><td>أو Fasigyn قرص (أو Protozole)</td><td>4 أقراص جرعة واحدة يومياً لمدة 3 أيام</td></tr><tr><td></td><td>أو Flagyl infusion فيال 100 مل</td><td>وريدياً (للحالات الشديدة)</td></tr><tr><td>مضاد حيوي قاتل للأميبا</td><td>Tetracid كبسولة</td><td>كبسولة كل 6 ساعات لمدة 10 أيام</td></tr><tr><td></td><td>أو Hostacycline قرص</td><td>قرص كل 12 ساعة لمدة 10 أيام</td></tr><tr><td>قاتل أكياس</td><td>Entocid قرص أو Furamide (Diloxanide) قرص</td><td>قرص بعد الأكل 3 مرات يومياً لمدة 10 أيام</td></tr><tr><td>حامل الكيس (Carrier)</td><td>Furamide قرص، أو Amoebyl (Diloxanide) قرص، أو Furamibe forte (Metronidazole + Diloxanide) قرص، أو Furazol قرص، أو Dilozole قرص</td><td>قرص 3 مرات يومياً لمدة 10 أيام</td></tr></tbody></table><h4>خراج الكبد الأميبي (Amoebic liver abscess)</h4><p>هو عادة <b>كتلة واحدة في الفص الأيمن</b> وتحتوي على صديد بلون <b>صلصة الأنشوجة (Anchovy-sauce)</b>. عادة يصاحبه حرارة عالية متذبذبة (High swinging fever) وتعرق وألم عند اللمس (Tenderness).</p><ul><li><b>Flagyl infusion</b> فيال 100 مل: 100 مل كل 8 ساعات (أو حسب الأمر)</li><li>أو <b>Elyzol infusion</b> فيال 100 مل: 100 مل كل 8 ساعات (أو حسب الأمر)</li><li>أو Fasigyn قرص أو Dilozole قرص: كما سبق</li><li><b>شفط جراحي (Surgical aspiration)</b> إذا لم يحدث تحسن خلال 72 ساعة من بدء الميترونيدازول</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>Emetine وDehydroemetine</b> لم يعودا مستخدمين (سُمّية قلبية) ويُحل محلهما الميترونيدازول. وصفة التتراسيكلين + الكلوروكوين قديمة. <b>خراج الكبد:</b> ميترونيدازول 7–10 أيام (النظام المعتاد 500–750 مجم 3 مرات)، يليه دواء قاتل للأكياس (Diloxanide أو Paromomycin). الشفط/التصريف يُستعمل لو لا تحسن خلال 3–5 أيام، أو الخراج كبير (>5 سم) أو خطر الانفجار. الجرعات بأمر الطبيب والوزن (Flagyl infusion 500 مجم/100 مل كل 8 ساعات هو الشائع في البالغين؛ الجدول أعلاه من الوصفات الشائعة).</div><h4>جدول الجرعات المرجعية (بالغ / طفل)</h4><table><thead><tr><th>الغرض</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>التهاب قولون غازي أو خراج</td><td>Metronidazole</td><td>بالغ 500–750 مجم 3 مرات يومياً لمدة 7–10 أيام (وريدي ثم فموي حسب الحالة) · طفل 35–50 مجم/كجم/يوم على 3 جرعات 7–10 أيام</td></tr><tr><td>قاتل أكياس (بعد الميترونيدازول)</td><td>Paromomycin</td><td>25–35 مجم/كجم/يوم على 3 جرعات لمدة 7 أيام</td></tr><tr><td>قاتل أكياس بديل</td><td>Diloxanide furoate (Furamide / Entocid)</td><td>500 مجم 3 مرات يومياً لمدة 10 أيام</td></tr><tr><td>حامل بدون أعراض</td><td>Paromomycin أو Diloxanide</td><td>كما سبق، بدون ميترونيدازول</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تنبيهات أمان</strong><ul><li>ميترونيدازول: لا كحول أثناء العلاج وبعده 48 ساعة؛ مذاق معدني؛ راقب التنميل أو التشنج أو الدوخة؛ خفّض الجرعة عند الكبد الشديد.</li><li>الحمل: يتجنب في الثلث الأول إلا لضرورة (خراج شديد)؛ الطبيب يقرر.</li><li>لا يعطى الستيرويد ولا مضادات الحركة (لوبراميد) في الدوسنتاريا الأميبية لأنها تزيد خطر التضخم السام.</li><li>تجنب الجمع بين ميترونيدازول وwarfarin بدون متابعة INR.</li></ul></div><h4>إضافة: وصفات الممارسة العامة (مرجع ثالث)</h4><p>الجرعاتية أدناه كما وردت، وبعضها يختلف عن المراجع الحديثة (شوف التحديث). الجرعة النهائية بأمر الطبيب/الصيدلي حسب الوزن والعمر والحمل.</p><h4>الطور النشط (Vegetative form)</h4><p>النوع ده من الأميبا سهل القضاء عليه ويحتاج الجرعة العادية من Metronidazole.</p><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Metronidazole: Flagyl 500 — Amrizol 500</td><td>قرص 3 مرات يومياً لمدة أسبوع</td></tr><tr><td>Secnidazole: Fladazole 500</td><td>4 أقراص بعد الأكل مرة واحدة فقط ولا تتكرر</td></tr></tbody></table><h4>طور الكيس (Cyst form)</h4><p>أصعب في القضاء عليه ويحتاج علاج مختلف. <b>يُفضل علاج كل أفراد الأسرة بنفس العلاج.</b></p><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Metronidazole + Diloxanide: Furazol tab — Furamibe forte tab</td><td>قرصين 3 مرات يومياً لمدة 10 أيام</td></tr><tr><td>Secnidazole: Fladazole 500</td><td>4 أقراص بعد الأكل يومياً لمدة 3 أيام</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>لو Furazol ناقص من السوق وعنده Cyst form؟</strong><p>يأخذ Flagyl لمدة أسبوع، ثم يقف أسبوع عشان يستنى الأميبا الناتجة من الـ Cysts، ثم يأخذه أسبوع كمان.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>Secnidazole: الجرعة المرجعية للبالغين 2 جم مرة واحدة مع بداية الوجبة، وللأطفال 30 مجم/كجم مرة واحدة (نشرة الدواء). جرعة 4 أقراص 500 مجم (= 2 جم) تتطابق مع ذلك؛ أما تكرارها 3 أيام فللطور الكيسي بحسب المراجع وغير مؤكد في المراجع: يقرره الطبيب.</li><li>الطور النسيجي الفعّال يُتبع بدواء قاتل للأكياس داخل الأمعاء (diloxanide/paromomycin) لأن الميترونيدازول وحده لا يكفي.</li></ul></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p> عدد مرات البراز، الدم والمخاط، المغص، الحرارة، علامات الجفاف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>العينة</strong><p>براز طازج في وعاء نظيف (وليس من التواليت) ويرسل بسرعة؛ قد تتكرر 3 عينات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الدواء</strong><p>ميترونيدازول بعد الأكل. حذّر المريض: طعم معدني، غثيان، بول داكن، <b>ممنوع الكحول</b> أثناء العلاج وبعده 48 ساعة، راقب التنميل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الحذر</strong><p>لا تعطي مضاد إسهال قوي (مثل لوبراميد) بدون أمر الطبيب في الإسهال الدموي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الوقاية</strong><p>احتياطات تلامس، غسل اليدين، تخلص من البراز بأمان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>المتابعة</strong><p>بلّغ عن حمى أو ألم كبد.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>تفاصيل إضافية</strong><p>في الخراج الكبدي: راقب الحرارة (متذبذبة)، ألم الجنب الأيمن/الكتف، وأي ضيق نفس (انفجار في الجنب). Flagyl الوريدي: يُعطى ببطء 30–60 دقيقة، وراقب الغثيان والطعم المعدني وتجنب الكحول (رد فعل). Tetracid/Hostacycline: بعد الأكل مع سوائل وبعيداً عن اللبن والحديد والمضادات الحموضة. Dilozole/Furamibe: ثقّف المريض على إكمال الأيام العشرة حتى مع غياب الأعراض.</p></div><h4>تفاصيل التمريض الإضافية</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>احتياطات العدوى</strong><p>احتياطات الإخراج/التلامس: قفاز ومريلة، غسل اليدين بالماء والصابون (الكحول لا يقتل الأكياس)، تطهير الحمام والأسطح بالكلور، حمام مخصص لو أمكن، والتخلص الآمن من البراز والقيء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>السوائل والتغذية</strong><p>قيّم الجفاف (نادر لكن ممكن)، ORS حسب الحاجة، أكل خفيف قليل الألياف الخشنة والدهون أثناء الإسهال ثم يتحسن تدريجياً، تغذية بروتين وسعرات لتعويض الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>المراقبة</strong><p>عدد مرات البراز، الدم والمخاط، الحرارة، انتفاخ البطن وحجمه، ألم البطن (أو علامات الثقب: صلابة، ألم شديد)، ألم الكبد، الوعي، الداخل والخارج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>التوثيق والتصعيد</strong><p>سجل شكل البراز، الأدوية والوقت، الأعراض الجانبية، نتائج العينات. بلّغ فوراً عن بطن منتفخ متصلب أو حمى عالية أو ألم أيمن شديد أو دم غزير أو قيء مستمر.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب:</strong><ul><li>حمى وألم أيمن علوي (خراج كبدي)</li><li>إسهال دموي غزير ودوخة</li><li>انتفاخ شديد وألم بطن (تضخم القولون)</li><li>تنميل أو تشنج أثناء ميترونيدازول</li><li>بطن متصلب شديد الألم وصدمة (ثقب)</li><li>ضيق نفس وألم صدر بعد خراج الكبد (انفجار في الجنب)</li><li>لا تحسن بعد 72 ساعة من الميترونيدازول في الخراج</li><li>مريض حامل أو رضيع مصاب</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اغسل إيديك بالصابون بعد الحمام وقبل الأكل.</li><li>اشرب ماء نظيف واغسل الخضار والفاكهة.</li><li>كمّل الدواء كاملاً مع الكورس الثاني لو كتبه الطبيب.</li><li>لا تشرب كحول مع ميترونيدازول.</li><li>الأسرة تتفحص لو في أعراض.</li><li>غلي الماء أو استخدام فلتر جيد، وعدم الشرب من الترع أو الطلمبات غير المعالجة.</li><li>اغسل الخضار الورقية جيداً (انقعها في ماء نظيف مع خل ثم اشطفها) أو اطبخها.</li><li>حامل الكيس (بدون أعراض) يتعالج برضه، وما يحضّرش أكل لغيره قبل العلاج.</li><li>راجع الطبيب لو عاد الإسهال بعد الشفاء لإعادة الفحص.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "إسهال متكرر ومغص وزحير ودم ومخاط بدون حرارة",
-      "التحليل: طور نشط أو كيس",
-      "Flagyl للطور النشط، Furazole للكيس حسب البروتوكول المتبع",
-      "يحتاج غالباً دواءً يقتل الأكياس بعد ميترونيدازول",
-      "لا كحول مع ميترونيدازول",
-      "احتياطات النظافة والتلامس",
-      "تقسيم العلاج: حامل الكيس (Diloxanide)، قولون خفيف (Metronidazole + Diloxanide)، دوسنتاري (وريدي ثم فموي)، كبد (+ Chloroquine)",
-      "العينة طازجة دافئة وتصل المعمل خلال 30 دقيقة للأطوار النشطة"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "علامة تميّز الأميبا؟"
-      },
-      "options": [
-        {
-          "ar": "لا حرارة ولا جفاف"
-        },
-        {
-          "ar": "حرارة عالية"
-        },
-        {
-          "ar": "تشنج"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لا سمّية عادة."
-      }
-    },
-    {
-      "q": {
-        "ar": "دواء الطور النشط؟"
-      },
-      "options": [
-        {
-          "ar": "Flagyl"
-        },
-        {
-          "ar": "Furazole فقط"
-        },
-        {
-          "ar": "Vitamin C"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ميترونيدازول."
-      }
-    },
-    {
-      "q": {
-        "ar": "ممنوع مع ميترونيدازول؟"
-      },
-      "options": [
-        {
-          "ar": "الكحول"
-        },
-        {
-          "ar": "الماء"
-        },
-        {
-          "ar": "الأكل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تفاعل شبيه بالديسلفيرام."
-      }
-    },
-    {
-      "q": {
-        "ar": "ماذا تتوقع في البراز؟"
-      },
-      "options": [
-        {
-          "ar": "دم ومخاط"
-        },
-        {
-          "ar": "دهون"
-        },
-        {
-          "ar": "براز أبيض"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التهاب قولون."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء يقتل أكياس الأميبا داخل الأمعاء؟"
-      },
-      "options": [
-        {
-          "ar": "Diloxanide"
-        },
-        {
-          "ar": "Metronidazole فقط"
-        },
-        {
-          "ar": "Ceftriaxone"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Metronidazole للأطوار النشطة فقط، ويُكمَّل بقاتل أكياس."
-      }
-    },
-    {
-      "q": {
-        "ar": "عينة براز أميبا يجب أن تصل المعمل؟"
-      },
-      "options": [
-        {
-          "ar": "خلال 30 دقيقة وهي طازجة"
-        },
-        {
-          "ar": "بعد يومين"
-        },
-        {
-          "ar": "مثلجة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأطوار النشطة تموت بسرعة خارج الجسم."
-      }
-    },
-    {
-      "q": {
-        "ar": "مضاعفة خطيرة تتطلب بلاغاً فورياً؟"
-      },
-      "options": [
-        {
-          "ar": "بطن منتفخ متصلب مع ألم وحمى"
-        },
-        {
-          "ar": "عطش خفيف"
-        },
-        {
-          "ar": "شهية ضعيفة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تضخم القولون السام أو الثقب."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CDC — Amebiasis: clinical overview and treatment"
-    },
-    {
-      "title": "Clinical reviews of amebiasis treatment (metronidazole + luminal agent)"
-    },
-    {
-      "title": "Egyptian drug registry listings — Furazol composition"
-    },
-    {
-      "title": "MSD Manual Professional — Amebiasis"
-    }
-  ],
-  "rx": [
-    {
-      "category": "الجهاز الهضمي",
-      "condition_ar": "الأميبا المعوية (الطور النشط وطور الكيس)",
-      "condition_en": "Intestinal amoebiasis",
-      "items": [
-        {
-          "drug_name": "Flagyl 500 / Amrizol 500 (metronidazole)",
-          "dose": "قرص 3 مرات يومياً لمدة أسبوع",
-          "note": "الطور النشط"
-        },
-        {
-          "drug_name": "Fladazole 500 (secnidazole)",
-          "dose": "4 أقراص بعد الأكل مرة واحدة (الطور النشط) أو يومياً 3 أيام (الكيس)",
-          "note": ""
-        },
-        {
-          "drug_name": "Furazol / Furamibe forte (metronidazole + diloxanide)",
-          "dose": "قرصين 3 مرات يومياً لمدة 10 أيام",
-          "note": "طور الكيس؛ يُعالج كل أفراد الأسرة"
-        }
-      ],
-      "clinical_note": "لو Furazol غير متاح: Flagyl أسبوع، راحة أسبوع، ثم Flagyl أسبوع."
-    }
+  "en": [
+   "Repeated diarrhea, cramps, tenesmus, blood, and mucus without fever",
+   "The test: active form or cyst",
+   "Flagyl for the active form, Furazole for the cyst per the protocol in use",
+   "Usually needs a cysticidal drug after metronidazole",
+   "No alcohol with metronidazole",
+   "Hygiene and contact precautions",
+   "Treatment by form: cyst carrier (Diloxanide), mild colitis (Metronidazole + Diloxanide), dysenteric (IV then oral), liver (+ Chloroquine)",
+   "The sample is fresh and warm and reaches the lab within 30 minutes for active forms"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "علامة تميّز الأميبا؟",
+    "en": "A distinguishing sign of amebiasis?"
+   },
+   "options": [
+    {
+     "ar": "لا حرارة ولا جفاف",
+     "en": "No fever and no dehydration"
+    },
+    {
+     "ar": "حرارة عالية",
+     "en": "High fever"
+    },
+    {
+     "ar": "تشنج",
+     "en": "Seizures"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لا سمّية عادة.",
+    "en": "Usually no toxemia."
+   }
+  },
+  {
+   "q": {
+    "ar": "دواء الطور النشط؟",
+    "en": "The drug for the active form?"
+   },
+   "options": [
+    {
+     "ar": "Flagyl",
+     "en": "Flagyl"
+    },
+    {
+     "ar": "Furazole فقط",
+     "en": "Furazole only"
+    },
+    {
+     "ar": "Vitamin C",
+     "en": "Vitamin C"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ميترونيدازول.",
+    "en": "Metronidazole."
+   }
+  },
+  {
+   "q": {
+    "ar": "ممنوع مع ميترونيدازول؟",
+    "en": "Prohibited with metronidazole?"
+   },
+   "options": [
+    {
+     "ar": "الكحول",
+     "en": "Alcohol"
+    },
+    {
+     "ar": "الماء",
+     "en": "Water"
+    },
+    {
+     "ar": "الأكل",
+     "en": "Food"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تفاعل شبيه بالديسلفيرام.",
+    "en": "A disulfiram-like reaction."
+   }
+  },
+  {
+   "q": {
+    "ar": "ماذا تتوقع في البراز؟",
+    "en": "What do you expect in the stool?"
+   },
+   "options": [
+    {
+     "ar": "دم ومخاط",
+     "en": "Blood and mucus"
+    },
+    {
+     "ar": "دهون",
+     "en": "Fat"
+    },
+    {
+     "ar": "براز أبيض",
+     "en": "White stool"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التهاب قولون.",
+    "en": "Colitis."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء يقتل أكياس الأميبا داخل الأمعاء؟",
+    "en": "Which drug kills amebic cysts inside the intestine?"
+   },
+   "options": [
+    {
+     "ar": "Diloxanide",
+     "en": "Diloxanide"
+    },
+    {
+     "ar": "Metronidazole فقط",
+     "en": "Metronidazole only"
+    },
+    {
+     "ar": "Ceftriaxone",
+     "en": "Ceftriaxone"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Metronidazole للأطوار النشطة فقط، ويُكمَّل بقاتل أكياس.",
+    "en": "Metronidazole is for active forms only and is completed with a cysticide."
+   }
+  },
+  {
+   "q": {
+    "ar": "عينة براز أميبا يجب أن تصل المعمل؟",
+    "en": "An amebic stool sample must reach the lab?"
+   },
+   "options": [
+    {
+     "ar": "خلال 30 دقيقة وهي طازجة",
+     "en": "Within 30 minutes, while fresh"
+    },
+    {
+     "ar": "بعد يومين",
+     "en": "After two days"
+    },
+    {
+     "ar": "مثلجة",
+     "en": "Frozen"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأطوار النشطة تموت بسرعة خارج الجسم.",
+    "en": "Active forms die quickly outside the body."
+   }
+  },
+  {
+   "q": {
+    "ar": "مضاعفة خطيرة تتطلب بلاغاً فورياً؟",
+    "en": "A serious complication requiring immediate reporting?"
+   },
+   "options": [
+    {
+     "ar": "بطن منتفخ متصلب مع ألم وحمى",
+     "en": "A distended rigid abdomen with pain and fever"
+    },
+    {
+     "ar": "عطش خفيف",
+     "en": "Mild thirst"
+    },
+    {
+     "ar": "شهية ضعيفة",
+     "en": "Poor appetite"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تضخم القولون السام أو الثقب.",
+    "en": "Toxic megacolon or perforation."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CDC — Amebiasis: clinical overview and treatment"
+  },
+  {
+   "title": "Clinical reviews of amebiasis treatment (metronidazole + luminal agent)"
+  },
+  {
+   "title": "Egyptian drug registry listings — Furazol composition"
+  },
+  {
+   "title": "MSD Manual Professional — Amebiasis"
+  }
+ ],
+ "rx": [
+  {
+   "category": "الجهاز الهضمي",
+   "condition_ar": "الأميبا المعوية (الطور النشط وطور الكيس)",
+   "condition_en": "Intestinal amoebiasis",
+   "items": [
+    {
+     "drug_name": "Flagyl 500 / Amrizol 500 (metronidazole)",
+     "dose": "قرص 3 مرات يومياً لمدة أسبوع",
+     "note": "الطور النشط"
+    },
+    {
+     "drug_name": "Fladazole 500 (secnidazole)",
+     "dose": "4 أقراص بعد الأكل مرة واحدة (الطور النشط) أو يومياً 3 أيام (الكيس)",
+     "note": ""
+    },
+    {
+     "drug_name": "Furazol / Furamibe forte (metronidazole + diloxanide)",
+     "dose": "قرصين 3 مرات يومياً لمدة 10 أيام",
+     "note": "طور الكيس؛ يُعالج كل أفراد الأسرة"
+    }
+   ],
+   "clinical_note": "لو Furazol غير متاح: Flagyl أسبوع، راحة أسبوع، ثم Flagyl أسبوع."
+  }
+ ]
 }

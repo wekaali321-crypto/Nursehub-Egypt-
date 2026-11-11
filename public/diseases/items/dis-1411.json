@@ -1,233 +1,293 @@
 {
-  "id": "dis-1411",
-  "num": 1411,
-  "system": "chest",
-  "icon": "😴",
-  "level": 2,
-  "target": "diseases",
-  "title": {
-    "ar": "انقطاع التنفس الانسدادي أثناء النوم (OSA)",
-    "en": "Obstructive Sleep Apnea (OSA)"
+ "id": "dis-1411",
+ "num": 1411,
+ "system": "chest",
+ "icon": "😴",
+ "level": 2,
+ "target": "diseases",
+ "title": {
+  "ar": "انقطاع التنفس الانسدادي أثناء النوم (OSA)",
+  "en": "Obstructive Sleep Apnea (OSA)"
+ },
+ "teaser": {
+  "ar": "انسداد البلعوم أثناء النوم: الأعراض النهارية والليلية، الأسباب (سمنة، مهدئات، كحول)، التدخلات وCPAP وأول إجراء عند انخفاض التشبع.",
+  "en": "Pharyngeal obstruction during sleep: daytime and nighttime symptoms, causes (obesity, sedatives, alcohol), interventions, CPAP, and the first action when saturation drops."
+ },
+ "chips": [
+  {
+   "ar": "شخير",
+   "en": "Snoring"
   },
-  "teaser": {
-    "ar": "انسداد البلعوم أثناء النوم: الأعراض النهارية والليلية، الأسباب (سمنة، مهدئات، كحول)، التدخلات وCPAP وأول إجراء عند انخفاض التشبع."
+  {
+   "ar": "CPAP",
+   "en": "CPAP"
   },
-  "chips": [
-    {
-      "ar": "شخير"
-    },
-    {
-      "ar": "CPAP"
-    },
-    {
-      "ar": "سمنة"
-    },
-    {
-      "ar": "مهدئات"
-    }
+  {
+   "ar": "سمنة",
+   "en": "Obesity"
+  },
+  {
+   "ar": "مهدئات",
+   "en": "Sedatives"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>يحدث عندما يسد اللسان أو عضلات البلعوم المجرى الهوائي فيتوقف التنفس والهواء لحظات (انقطاع نفس Apnea). OSA = Obstructed Snoring Airway.</p>\n<h4>مراجعة NCLEX</h4><p>تسد عضلات البلعوم أو اللسان المجرى الهوائي فتحدث لحظات بلا تنفس ولا تدفق هواء (انقطاع نفس).</p>[[slot:dis-1411-p440|OSA: الأعراض والأسباب والتثقيف — رسم من إعداد الموقع|/diseases/img/dis-1411-p440.svg]]",
+   "en": "<p>It happens when the tongue or pharyngeal muscles block the airway, so breathing and airflow stop for moments (Apnea). OSA = Obstructed Snoring Airway.</p>\n<h4>NCLEX Review</h4><p>The pharyngeal muscles or tongue block the airway, causing moments without breathing or airflow (apnea).</p>[[slot:dis-1411-p440|OSA: symptoms, causes, and teaching — illustration prepared by the site|/diseases/img/dis-1411-p440.svg]]"
+  },
+  "causes": {
+   "ar": "[[slot:dis-1411-causes|الأسباب — رسم من إعداد الموقع|/diseases/img/dis-1411-causes.svg]]",
+   "en": "[[slot:dis-1411-causes|Causes — illustration prepared by the site|/diseases/img/dis-1411-causes.svg]]"
+  },
+  "signs": {
+   "ar": "<h4>نهارًا</h4><ul><li>صداع صباحي</li><li>نعاس نهاري</li><li>إرهاق مزمن</li><li>تهيج وتقلب مزاج واكتئاب</li></ul><h4>ليلًا</h4><ul><li>شخير</li><li>نوبات انقطاع نفس</li></ul>\n<p>نهارًا: صداع صباحي، نعاس، إرهاق مزمن، تهيّج وتقلب مزاج واكتئاب. ليلًا: شخير ونوبات انقطاع تنفس. سؤال: من الأدلة المؤيدة تعب مزمن، والنوم 8 ساعات دون راحة.</p>",
+   "en": "<h4>Daytime</h4><ul><li>Morning headache</li><li>Daytime sleepiness</li><li>Chronic fatigue</li><li>Irritability, mood swings, and depression</li></ul><h4>Nighttime</h4><ul><li>Snoring</li><li>Episodes of apnea</li></ul>\n<p>Daytime: morning headache, sleepiness, chronic fatigue, irritability, mood swings, and depression. Nighttime: snoring and episodes of apnea. Question: supporting evidence includes chronic tiredness and sleeping 8 hours without feeling rested.</p>"
+  },
+  "tests": {
+   "ar": "<p>دراسة النوم (Polysomnography) بقرار الطبيب.</p>",
+   "en": "<p>Sleep study (Polysomnography) per the physician's decision.</p>"
+  },
+  "treatment": {
+   "ar": "<p><strong>CPAP</strong> (ضغط هواء إيجابي مستمر): قناع ومضخة تدفع الهواء في الأنف والفم فيمنع انهيار البلعوم واللسان للخلف. CPAP يعطي ضغطًا مستمرًا أثناء الشهيق والزفير فقد يكون أقل راحة، بينما BiPAP يتكيف مع التنفس الطبيعي.</p>",
+   "en": "<p><strong>CPAP</strong> (continuous positive airway pressure): a mask and pump that push air into the nose and mouth, preventing the pharynx and tongue from collapsing backward. CPAP gives continuous pressure during inspiration and expiration, so it may be less comfortable, while BiPAP adapts to normal breathing.</p>"
+  },
+  "nursing": {
+   "ar": "<ul><li>إنقاص الوزن والتمارين</li><li>تقليل الكحول</li><li>لا قيلولة نهارًا (حسب النص التعليمي)</li><li>لا مهدئات قبل النوم</li><li>لا وجبات خفيفة ليلًا</li><li><strong>أول إجراء لمريض على CPAP وتشبعه منخفض:</strong> افحص إحكام الأحزمة والقناع</li></ul>\n<ul><li>مريض على CPAP مع انخفاض التأكسج: أول إجراء افحص إحكام الأحزمة والقناع.</li><li>CPAP يعطي ضغطًا مستمرًا أثناء الشهيق والزفير فقد يزعج؛ يناسب BiPAP التنفس الطبيعي، فيُستعمل عند عدم الالتزام.</li></ul>",
+   "en": "<ul><li>Weight loss and exercise</li><li>Reduce alcohol</li><li>No daytime naps (as taught)</li><li>No sedatives before sleep</li><li>No nighttime snacks</li><li><strong>First action for a patient on CPAP with low saturation:</strong> check that the straps and mask are tight</li></ul>\n<ul><li>Patient on CPAP with low oxygenation: first action, check that the straps and mask are tight.</li><li>CPAP gives continuous pressure during inspiration and expiration, so it may be uncomfortable; BiPAP suits normal breathing, so it is used when the patient is nonadherent.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ</strong><ul><li>انخفاض التشبع المستمر رغم CPAP</li><li>نعاس شديد أثناء القيادة</li><li>انقطاع نفس طويل أو زرقة</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report</strong><ul><li>Persistently low saturation despite CPAP</li><li>Severe sleepiness while driving</li><li>Long apnea or cyanosis</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>التزم بجهاز CPAP كل ليلة</li><li>نم على الجانب</li><li>تجنب المهدئات والكحول قبل النوم</li><li>خسارة الوزن</li></ul>\n<p>الأسباب: سمنة، مهدئات قبل النوم (بنزوديازيبينات، أفيونات)، كحول. نصائح: إنقاص الوزن والتمارين، قلل الكحول، لا قيلولة نهارًا (كما ورد في المرجع)، لا مهدئات عند النوم، لا وجبات خفيفة قبل النوم.</p>",
+   "en": "<ul><li>Use the CPAP machine every night</li><li>Sleep on your side</li><li>Avoid sedatives and alcohol before sleep</li><li>Lose weight</li></ul>\n<p>Causes: obesity, sedatives before sleep (benzodiazepines, opioids), alcohol. Tips: weight loss and exercise, reduce alcohol, no daytime naps (as taught), no sedatives at bedtime, no snacks before sleep.</p>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "OSA: سمنة ومهدئات وكحول",
+   "CPAP ضغط مستمر",
+   "أول إجراء: فحص إحكام القناع والأحزمة"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>يحدث عندما يسد اللسان أو عضلات البلعوم المجرى الهوائي فيتوقف التنفس والهواء لحظات (انقطاع نفس Apnea). OSA = Obstructed Snoring Airway.</p>\n<h4>مراجعة NCLEX</h4><p>تسد عضلات البلعوم أو اللسان المجرى الهوائي فتحدث لحظات بلا تنفس ولا تدفق هواء (انقطاع نفس).</p>[[slot:dis-1411-p440|OSA: الأعراض والأسباب والتثقيف — رسم من إعداد الموقع|/diseases/img/dis-1411-p440.svg]]"
-    },
-    "causes": {
-      "ar": "[[slot:dis-1411-causes|الأسباب — رسم من إعداد الموقع|/diseases/img/dis-1411-causes.svg]]"
-    },
-    "signs": {
-      "ar": "<h4>نهارًا</h4><ul><li>صداع صباحي</li><li>نعاس نهاري</li><li>إرهاق مزمن</li><li>تهيج وتقلب مزاج واكتئاب</li></ul><h4>ليلًا</h4><ul><li>شخير</li><li>نوبات انقطاع نفس</li></ul>\n<p>نهارًا: صداع صباحي، نعاس، إرهاق مزمن، تهيّج وتقلب مزاج واكتئاب. ليلًا: شخير ونوبات انقطاع تنفس. سؤال: من الأدلة المؤيدة تعب مزمن، والنوم 8 ساعات دون راحة.</p>"
-    },
-    "tests": {
-      "ar": "<p>دراسة النوم (Polysomnography) بقرار الطبيب.</p>"
-    },
-    "treatment": {
-      "ar": "<p><strong>CPAP</strong> (ضغط هواء إيجابي مستمر): قناع ومضخة تدفع الهواء في الأنف والفم فيمنع انهيار البلعوم واللسان للخلف. CPAP يعطي ضغطًا مستمرًا أثناء الشهيق والزفير فقد يكون أقل راحة، بينما BiPAP يتكيف مع التنفس الطبيعي.</p>"
-    },
-    "nursing": {
-      "ar": "<ul><li>إنقاص الوزن والتمارين</li><li>تقليل الكحول</li><li>لا قيلولة نهارًا (حسب النص التعليمي)</li><li>لا مهدئات قبل النوم</li><li>لا وجبات خفيفة ليلًا</li><li><strong>أول إجراء لمريض على CPAP وتشبعه منخفض:</strong> افحص إحكام الأحزمة والقناع</li></ul>\n<ul><li>مريض على CPAP مع انخفاض التأكسج: أول إجراء افحص إحكام الأحزمة والقناع.</li><li>CPAP يعطي ضغطًا مستمرًا أثناء الشهيق والزفير فقد يزعج؛ يناسب BiPAP التنفس الطبيعي، فيُستعمل عند عدم الالتزام.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ</strong><ul><li>انخفاض التشبع المستمر رغم CPAP</li><li>نعاس شديد أثناء القيادة</li><li>انقطاع نفس طويل أو زرقة</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>التزم بجهاز CPAP كل ليلة</li><li>نم على الجانب</li><li>تجنب المهدئات والكحول قبل النوم</li><li>خسارة الوزن</li></ul>\n<p>الأسباب: سمنة، مهدئات قبل النوم (بنزوديازيبينات، أفيونات)، كحول. نصائح: إنقاص الوزن والتمارين، قلل الكحول، لا قيلولة نهارًا (كما ورد في المرجع)، لا مهدئات عند النوم، لا وجبات خفيفة قبل النوم.</p>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "OSA: سمنة ومهدئات وكحول",
-      "CPAP ضغط مستمر",
-      "أول إجراء: فحص إحكام القناع والأحزمة"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول إجراء لمريض على CPAP وتشبعه منخفض:"
-      },
-      "options": [
-        {
-          "ar": "فحص إحكام الأحزمة والقناع"
-        },
-        {
-          "ar": "إيقاف الجهاز"
-        },
-        {
-          "ar": "مهدئ"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التسرب يقلل الضغط."
-      }
-    },
-    {
-      "q": {
-        "ar": "من الأسباب:"
-      },
-      "options": [
-        {
-          "ar": "سمنة ومهدئات وكحول"
-        },
-        {
-          "ar": "رياضة"
-        },
-        {
-          "ar": "ماء"
-        },
-        {
-          "ar": "طعام فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تقلل ثبات المجرى."
-      }
-    },
-    {
-      "q": {
-        "ar": "CPAP يعطي:"
-      },
-      "options": [
-        {
-          "ar": "ضغطًا مستمرًا"
-        },
-        {
-          "ar": "ضغطين"
-        },
-        {
-          "ar": "ضغطًا سلبيًا"
-        },
-        {
-          "ar": "لا ضغط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Continuous positive airway pressure."
-      }
-    },
-    {
-      "q": {
-        "ar": "عرض نهاري:"
-      },
-      "options": [
-        {
-          "ar": "نعاس وصداع صباحي"
-        },
-        {
-          "ar": "سعال دموي"
-        },
-        {
-          "ar": "ألم صدر"
-        },
-        {
-          "ar": "ارتفاع حرارة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قلة جودة النوم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عبارة تدعم OSA؟"
-      },
-      "options": [
-        {
-          "ar": "ينام 8 ساعات ولا يشعر بالراحة"
-        },
-        {
-          "ar": "يستيقظ نشيطًا"
-        },
-        {
-          "ar": "ينام 4 ساعات فقط"
-        },
-        {
-          "ar": "أرق ليلي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "النوم غير المريح رغم ساعات كافية دليل."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض لا يلتزم بـCPAP؟"
-      },
-      "options": [
-        {
-          "ar": "استعمال BiPAP بدلًا منه"
-        },
-        {
-          "ar": "إيقاف العلاج"
-        },
-        {
-          "ar": "زيادة الجرعة"
-        },
-        {
-          "ar": "قناع أصغر دائمًا"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "BiPAP أكثر راحة لأنه يخفف الضغط عند الزفير."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض OSA على CPAP وتأكسجه منخفض. أول إجراء؟"
-      },
-      "options": [
-        {
-          "ar": "افحص إحكام الأحزمة والقناع"
-        },
-        {
-          "ar": "أوقف الجهاز"
-        },
-        {
-          "ar": "أعطه مهدئًا"
-        },
-        {
-          "ar": "انتظر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التسرب حول القناع يُفقد الضغط."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "NCLEX-RN Test Plan (NCSBN)"
-    },
-    {
-      "title": "Brunner & Suddarth Textbook of Medical-Surgical Nursing"
-    }
+  "en": [
+   "OSA: obesity, sedatives, and alcohol",
+   "CPAP = continuous pressure",
+   "First action: check the mask and straps are tight"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول إجراء لمريض على CPAP وتشبعه منخفض:",
+    "en": "First action for a patient on CPAP with low saturation:"
+   },
+   "options": [
+    {
+     "ar": "فحص إحكام الأحزمة والقناع",
+     "en": "Check that the straps and mask are tight"
+    },
+    {
+     "ar": "إيقاف الجهاز",
+     "en": "Turn off the machine"
+    },
+    {
+     "ar": "مهدئ",
+     "en": "A sedative"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التسرب يقلل الضغط.",
+    "en": "A leak reduces the pressure."
+   }
+  },
+  {
+   "q": {
+    "ar": "من الأسباب:",
+    "en": "Among the causes:"
+   },
+   "options": [
+    {
+     "ar": "سمنة ومهدئات وكحول",
+     "en": "Obesity, sedatives, and alcohol"
+    },
+    {
+     "ar": "رياضة",
+     "en": "Exercise"
+    },
+    {
+     "ar": "ماء",
+     "en": "Water"
+    },
+    {
+     "ar": "طعام فقط",
+     "en": "Food only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تقلل ثبات المجرى.",
+    "en": "They reduce airway stability."
+   }
+  },
+  {
+   "q": {
+    "ar": "CPAP يعطي:",
+    "en": "CPAP gives:"
+   },
+   "options": [
+    {
+     "ar": "ضغطًا مستمرًا",
+     "en": "Continuous pressure"
+    },
+    {
+     "ar": "ضغطين",
+     "en": "Two pressures"
+    },
+    {
+     "ar": "ضغطًا سلبيًا",
+     "en": "Negative pressure"
+    },
+    {
+     "ar": "لا ضغط",
+     "en": "No pressure"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Continuous positive airway pressure.",
+    "en": "Continuous positive airway pressure."
+   }
+  },
+  {
+   "q": {
+    "ar": "عرض نهاري:",
+    "en": "A daytime symptom:"
+   },
+   "options": [
+    {
+     "ar": "نعاس وصداع صباحي",
+     "en": "Sleepiness and morning headache"
+    },
+    {
+     "ar": "سعال دموي",
+     "en": "Coughing blood"
+    },
+    {
+     "ar": "ألم صدر",
+     "en": "Chest pain"
+    },
+    {
+     "ar": "ارتفاع حرارة",
+     "en": "High fever"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قلة جودة النوم.",
+    "en": "Poor sleep quality."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عبارة تدعم OSA؟",
+    "en": "Which statement supports OSA?"
+   },
+   "options": [
+    {
+     "ar": "ينام 8 ساعات ولا يشعر بالراحة",
+     "en": "Sleeps 8 hours and does not feel rested"
+    },
+    {
+     "ar": "يستيقظ نشيطًا",
+     "en": "Wakes up energetic"
+    },
+    {
+     "ar": "ينام 4 ساعات فقط",
+     "en": "Sleeps only 4 hours"
+    },
+    {
+     "ar": "أرق ليلي",
+     "en": "Nighttime insomnia"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "النوم غير المريح رغم ساعات كافية دليل.",
+    "en": "Unrefreshing sleep despite enough hours is evidence."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض لا يلتزم بـCPAP؟",
+    "en": "A patient who does not adhere to CPAP?"
+   },
+   "options": [
+    {
+     "ar": "استعمال BiPAP بدلًا منه",
+     "en": "Use BiPAP instead"
+    },
+    {
+     "ar": "إيقاف العلاج",
+     "en": "Stop treatment"
+    },
+    {
+     "ar": "زيادة الجرعة",
+     "en": "Increase the dose"
+    },
+    {
+     "ar": "قناع أصغر دائمًا",
+     "en": "Always a smaller mask"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "BiPAP أكثر راحة لأنه يخفف الضغط عند الزفير.",
+    "en": "BiPAP is more comfortable because it lowers pressure on expiration."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض OSA على CPAP وتأكسجه منخفض. أول إجراء؟",
+    "en": "An OSA patient on CPAP has low oxygenation. First action?"
+   },
+   "options": [
+    {
+     "ar": "افحص إحكام الأحزمة والقناع",
+     "en": "Check that the straps and mask are tight"
+    },
+    {
+     "ar": "أوقف الجهاز",
+     "en": "Turn off the machine"
+    },
+    {
+     "ar": "أعطه مهدئًا",
+     "en": "Give a sedative"
+    },
+    {
+     "ar": "انتظر",
+     "en": "Wait"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التسرب حول القناع يُفقد الضغط.",
+    "en": "A leak around the mask loses pressure."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "NCLEX-RN Test Plan (NCSBN)"
+  },
+  {
+   "title": "Brunner & Suddarth Textbook of Medical-Surgical Nursing"
+  }
+ ]
 }

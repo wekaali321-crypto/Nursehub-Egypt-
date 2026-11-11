@@ -1,282 +1,356 @@
 {
-  "id": "dis-684",
-  "num": 684,
-  "system": "blood",
-  "icon": "🧬",
-  "level": 3,
-  "title": {
-    "ar": "اللوكيميا (سرطان الدم)",
-    "en": "Leukemia (AML, ALL, CML, CLL)"
+ "id": "dis-684",
+ "num": 684,
+ "system": "blood",
+ "icon": "🧬",
+ "level": 3,
+ "title": {
+  "ar": "اللوكيميا (سرطان الدم)",
+  "en": "Leukemia (AML, ALL, CML, CLL)"
+ },
+ "teaser": {
+  "ar": "أنواع اللوكيميا الأربعة، علاجاتها، وإزاي تحمي مريض الكيماوي من العدوى والنزف.",
+  "en": "The four types of leukemia, their treatments, and how to protect a chemotherapy patient from infection and bleeding."
+ },
+ "chips": [
+  {
+   "ar": "AML / ALL",
+   "en": "AML / ALL"
   },
-  "teaser": {
-    "ar": "أنواع اللوكيميا الأربعة، علاجاتها، وإزاي تحمي مريض الكيماوي من العدوى والنزف."
+  {
+   "ar": "CML / CLL",
+   "en": "CML / CLL"
   },
-  "chips": [
-    {
-      "ar": "AML / ALL"
-    },
-    {
-      "ar": "CML / CLL"
-    },
-    {
-      "ar": "Neutropenia"
-    }
+  {
+   "ar": "Neutropenia",
+   "en": "Neutropenia"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>في اللوكيميا يحل محل النخاع العظمي خلايا بيضاء غير ناضجة بتتكاثر بدون ضابط وتدخل الدم، وتتجمع في الكبد والطحال والعقد، وأحياناً الجهاز العصبي. يُصنَّف المرض حسب نوع الخلية (لمفاوية Lymphocytic أو نخاعية Myelocytic) وحسب السرعة (حاد Acute أو مزمن Chronic).</p>[[slot:dis-684-types|جدول أنواع اللوكيميا وعلاجاتها|/diseases/img/dis-684-types.svg]]<div class=\"cs-stats\"><div><b>4</b><span>أنواع رئيسية</span></div><div><b>↑ WBC</b><span>غالباً عالية لكن غير وظيفية</span></div><div><b>↓ Plt</b><span>نقص الصفائح</span></div></div><div class=\"cs-box cs-info\"><strong>حاد أم مزمن؟</strong><p>الحاد عدواني وبداية سريعة ومسار قصير، والمزمن بداية خفية ومسار أطول وتشخيص أفضل غالباً.</p></div>\n[[slot:dis-684-overview|ملخص اللوكيميا — رسم من إعداد الموقع|/diseases/img/dis-684-overview.svg]]<p>أعراض إضافية للمراجعة: عدوى متكررة، ترنح (مشية غير ثابتة) وشحوب، كدمات ونقط نزفية، فقدان وزن وشهية، وألم عظام. التشخيص بخزعة النخاع من الشوكة الحرقفية الخلفية.</p>\n[[slot:dis-684-leukemia|اللوكيميا: مراجعة — رسم من إعداد الموقع|/diseases/img/dis-684-leukemia.svg]]\n<ul><li>زيادة غير طبيعية في كرات الدم البيضاء تزاحم إنتاج الحمراء والصفائح.</li><li>الأنواع: AML وALL (حادة، خلايا غير ناضجة، بداية مفاجئة، الأطفال أكثر في ALL) وCML وCLL (مزمنة، خلايا ناضجة، كبار السن).</li><li>العلامات: عدوى متكررة، تعب، مشي غير ثابت وشحوب، كدمات ونمش نزفي ونزف سهل، فقدان وزن وشهية، ألم عظام.</li><li>التحاليل: WBC مرتفع، Hb/Hct منخفض، صفائح منخفضة. التشخيص: <b>خزعة نخاع من عرف الحرقفة الخلفي (Posterior iliac crest)</b>. العلاج: كيماوي وإشعاع، وأحيانًا زرع خلايا جذعية.</li></ul><h4>من المراجعة الشاملة</h4>[[slot:dis-2634-leukemia|اللوكيميا — رسم من إعداد الموقع|/diseases/img/dis-2634-leukemia.svg]]<h4>الأنواع الأربعة بأسمائها الكاملة</h4><table><thead><tr><th>الاختصار</th><th>الاسم</th><th>ملاحظة</th></tr></thead><tbody><tr><td>AML</td><td>اللوكيميا النخاعية الحادة (Acute Myeloid Leukemia)</td><td>حادة</td></tr><tr><td>CML</td><td>اللوكيميا النخاعية المزمنة (Chronic Myeloid Leukemia)</td><td>مزمنة</td></tr><tr><td>ALL</td><td>اللوكيميا اللمفاوية الحادة (Acute Lymphocytic Leukemia)</td><td>الأكثر شيوعًا عند الأطفال</td></tr><tr><td>CLL</td><td>اللوكيميا اللمفاوية المزمنة (Chronic Lymphocytic Leukemia)</td><td>مزمنة، كبار السن</td></tr></tbody></table><p>المصطلح: Leuk = كرة دم بيضاء (Leukocyte)، emia = الدم.</p>",
+   "en": "<p>In leukemia, the bone marrow is replaced by immature white cells that multiply without control and enter the blood, collecting in the liver, spleen, and lymph nodes, and sometimes the nervous system. The disease is classified by cell type (lymphocytic, Lymphocytic, or myelocytic, Myelocytic) and by speed (acute, Acute, or chronic, Chronic).</p>[[slot:dis-684-types|Table of leukemia types and their treatments|/diseases/img/dis-684-types.svg]]<div class=\"cs-stats\"><div><b>4</b><span>Main types</span></div><div><b>↑ WBC</b><span>Often high but non-functional</span></div><div><b>↓ Plt</b><span>Low platelets</span></div></div><div class=\"cs-box cs-info\"><strong>Acute or chronic?</strong><p>Acute is aggressive with a rapid onset and short course, while chronic has an insidious onset, a longer course, and usually a better prognosis.</p></div>\n[[slot:dis-684-overview|Leukemia summary — illustration prepared by the site|/diseases/img/dis-684-overview.svg]]<p>Additional symptoms for review: recurrent infections, unsteady gait and pallor, bruises and petechiae, weight and appetite loss, and bone pain. Diagnosis is by bone marrow biopsy from the posterior iliac crest.</p>\n[[slot:dis-684-leukemia|Leukemia: review — illustration prepared by the site|/diseases/img/dis-684-leukemia.svg]]\n<ul><li>An abnormal increase in white blood cells that crowds out production of red cells and platelets.</li><li>Types: AML and ALL (acute, immature cells, sudden onset, children more often in ALL) and CML and CLL (chronic, mature cells, older adults).</li><li>Signs: recurrent infections, fatigue, unsteady gait and pallor, bruises, petechiae and easy bleeding, weight and appetite loss, bone pain.</li><li>Labs: high WBC, low Hb/Hct, low platelets. Diagnosis: <b>bone marrow biopsy from the posterior iliac crest (Posterior iliac crest)</b>. Treatment: chemotherapy and radiation, and sometimes stem cell transplant.</li></ul><h4>From the comprehensive review</h4>[[slot:dis-2634-leukemia|Leukemia — illustration prepared by the site|/diseases/img/dis-2634-leukemia.svg]]<h4>The four types with their full names</h4><table><thead><tr><th>Abbreviation</th><th>Name</th><th>Note</th></tr></thead><tbody><tr><td>AML</td><td>Acute myeloid leukemia (Acute Myeloid Leukemia)</td><td>Acute</td></tr><tr><td>CML</td><td>Chronic myeloid leukemia (Chronic Myeloid Leukemia)</td><td>Chronic</td></tr><tr><td>ALL</td><td>Acute lymphocytic leukemia (Acute Lymphocytic Leukemia)</td><td>The most common in children</td></tr><tr><td>CLL</td><td>Chronic lymphocytic leukemia (Chronic Lymphocytic Leukemia)</td><td>Chronic, older adults</td></tr></tbody></table><p>The term: Leuk = white blood cell (Leukocyte), emia = blood.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>السبب الدقيق غير معروف.</li><li>تعرض لإشعاع عالٍ أو للبنزين.</li><li>علاج كيماوي عدواني سابق لسرطان آخر.</li><li>استعداد وراثي: متلازمة داون، أنيميا فانكوني، تاريخ عائلي.</li></ul>",
+   "en": "<ul><li>The exact cause is unknown.</li><li>Exposure to high radiation or to benzene.</li><li>Previous aggressive chemotherapy for another cancer.</li><li>Genetic predisposition: Down syndrome, Fanconi anemia, family history.</li></ul>"
+  },
+  "signs": {
+   "ar": "<p><b>اللوكيميا الحادة:</b></p><ul><li>إرهاق وضعف من الأنيميا، حمى لزيادة قابلية العدوى.</li><li>نزف: نقط نزفية، كدمات، رعاف، نزف لثة (نقص صفائح).</li><li>ألم عظام من تمدد النخاع.</li><li>تضخم العقد (Lymphadenopathy) والكبد والطحال.</li><li>صداع وغثيان وقيء وفقدان وزن؛ وإن وصلت للجهاز العصبي: وذمة الحلمة العصبية، شلل أعصاب قحفية، تشنج.</li></ul><p><b>اللوكيميا المزمنة:</b></p><ul><li>إرهاق، فقدان وزن، ضعف شهية، تضخم عقد وطحال.</li><li>كثيراً ما تُكتشف صدفة في تحليل دم.</li></ul>",
+   "en": "<p><b>Acute leukemia:</b></p><ul><li>Fatigue and weakness from anemia, fever from increased susceptibility to infection.</li><li>Bleeding: petechiae, bruises, nosebleeds, gum bleeding (low platelets).</li><li>Bone pain from marrow expansion.</li><li>Enlarged lymph nodes (Lymphadenopathy), liver, and spleen.</li><li>Headache, nausea, vomiting, and weight loss; if it reaches the nervous system: papilledema, cranial nerve palsy, seizure.</li></ul><p><b>Chronic leukemia:</b></p><ul><li>Fatigue, weight loss, poor appetite, enlarged lymph nodes and spleen.</li><li>Often discovered by chance on a blood test.</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>تعداد دم: نقص RBC وهيموجلوبين، نقص صفائح، <b>ارتفاع كرات بيضاء</b> (Leukocytosis) بخلايا غير ناضجة.</li><li><b>خزعة نخاع</b> لتأكيد التشخيص وتحديد النوع (تُظهر خلايا غير ناضجة).</li><li>قياس الدم بالتدفق الخلوي (Flow cytometry) وفحص الكروموسومات (مثل كروموسوم فيلادلفيا في CML).</li><li>بزل قطني لو الاشتباه في إصابة الجهاز العصبي.</li></ul><h4>من المراجعة الشاملة</h4><p>خزعة نقي العظم من العرف الحرقفي الخلفي (HESI). تحاليل: WBC مرتفع، Hb/Hct منخفض، صفائح منخفضة.</p>",
+   "en": "<ul><li>Blood count: low RBC and hemoglobin, low platelets, <b>high white cells</b> (Leukocytosis) with immature cells.</li><li><b>Bone marrow biopsy</b> to confirm the diagnosis and determine the type (shows immature cells).</li><li>Flow cytometry (Flow cytometry) and chromosome testing (such as the Philadelphia chromosome in CML).</li><li>Lumbar puncture if nervous system involvement is suspected.</li></ul><h4>From the comprehensive review</h4><p>Bone marrow biopsy from the posterior iliac crest. Labs: high WBC, low Hb/Hct, low platelets.</p>"
+  },
+  "treatment": {
+   "ar": "<table><thead><tr><th>النوع</th><th>العلاج</th></tr></thead><tbody><tr><td>AML</td><td>Anthracycline (Idarubicin أو Daunorubicin) + Cytarabine؛ أو مجموعة Daunorubicin + Vincristine + Prednisone + Asparaginase؛ صفائح، Filgrastim لنقص العدلات، مضادات حيوية، زرع نخاع مع مثبطات مناعة</td></tr><tr><td>CML</td><td>Imatinib (مثبط إشارة)، Interferon-α، Busulfan، Hydroxyurea</td></tr><tr><td>CLL</td><td>Cyclophosphamide وChlorambucil (مؤلكلات)؛ Vincristine + Prednisone + Doxorubicin؛ أجسام مضادة وحيدة النسيلة (Alemtuzumab، Rituximab مع Fludarabine)</td></tr><tr><td>كل الأنواع</td><td>نقل كرات/صفائح حسب الحاجة، زرع نخاع، تغذية عالية البروتين</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>العلاج الحديث لـ CML يعتمد على مثبطات التيروزين كيناز (Imatinib وأجيال تالية) كخط أول، وهي غيّرت التشخيص جذرياً. Interferon وBusulfan من العلاجات القديمة.</p></div>",
+   "en": "<table><thead><tr><th>Type</th><th>Treatment</th></tr></thead><tbody><tr><td>AML</td><td>Anthracycline (Idarubicin or Daunorubicin) + Cytarabine; or the combination Daunorubicin + Vincristine + Prednisone + Asparaginase; platelets, Filgrastim for neutropenia, antibiotics, bone marrow transplant with immunosuppressants</td></tr><tr><td>CML</td><td>Imatinib (signal inhibitor), Interferon-α, Busulfan, Hydroxyurea</td></tr><tr><td>CLL</td><td>Cyclophosphamide and Chlorambucil (alkylating agents); Vincristine + Prednisone + Doxorubicin; monoclonal antibodies (Alemtuzumab, Rituximab with Fludarabine)</td></tr><tr><td>All types</td><td>Red cell/platelet transfusion as needed, bone marrow transplant, high-protein nutrition</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Modern CML treatment relies on tyrosine kinase inhibitors (Imatinib and later generations) as first line, and they have radically changed the prognosis. Interferon and Busulfan are older treatments.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>وقاية من العدوى</strong><p>العدلات المنخفضة (Neutropenia) تعني عزلاً وقائياً، غسل أيدي، منع الزوار المرضى، طعام مطبوخ جيداً، عناية فم بعد كل وجبة. أي حرارة 38 فأكثر = طارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>مراقبة النزف</strong><p>عدد الصفائح، كدمات، لثة، براز وبول. لا حقن عضل، حلاقة كهربائية، فرشاة ناعمة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الألم</strong><p>قيّم الألم بشكل منتظم (نوع ودرجة)، مسكنات حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>التغذية</strong><p>وجبات صغيرة متكررة، غنية بالبروتين والسعرات، علاج الغثيان قبل الوجبة، مراقبة الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الكيماوي</strong><p>تحقق من الجرعة والاسم مع زميلة (Double check)، قفازات ومعدات حماية، استخدم خطوط وريدية آمنة (تسرب بعض الأدوية يسبب نخر نسيجي)، مراقبة الغثيان والإسهال والتهاب الفم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الدعم النفسي</strong><p>فرصة للتعبير، دعم الأسرة، التواصل مع الفريق النفسي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>التثقيف</strong><p>تجنب المصابين بعدوى، الإبلاغ عن الحرارة والتهاب الحلق والنزف.</p></div></div></div><h4>أسئلة ATI (من المراجعة الشاملة)</h4><ul><li>طفل عمره 7 سنوات مصاب بلوكيميا لمفاوية حادة (ALL) يُقبل لتقييم الحمى: يُوضع في غرفة منفردة لمنع انتقال العدوى إليه من الآخرين.</li><li>النتائج المتوقعة عند تقييم طفل مصاب بلوكيميا (اختر كل ما ينطبق): فقدان الشهية، ونقط نزفية (Petechiae) في الأطراف، ومشية غير ثابتة.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Infection prevention</strong><p>Low neutrophils (Neutropenia) mean protective isolation, handwashing, no sick visitors, well-cooked food, and mouth care after every meal. Any temperature of 38 or more = emergency.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Bleeding monitoring</strong><p>Platelet count, bruises, gums, stool and urine. No IM injections, electric razor, soft toothbrush.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Pain</strong><p>Assess pain regularly (type and severity), painkillers as ordered.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Nutrition</strong><p>Small frequent meals rich in protein and calories, treat nausea before meals, monitor weight.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Chemotherapy</strong><p>Verify the dose and name with a colleague (Double check), gloves and protective equipment, use secure IV lines (extravasation of some drugs causes tissue necrosis), monitor for nausea, diarrhea, and mouth inflammation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Psychological support</strong><p>A chance to express feelings, family support, contact with the psychological team.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Education</strong><p>Avoid people with infections; report fever, sore throat, and bleeding.</p></div></div></div><h4>Review questions (from the comprehensive review)</h4><ul><li>A 7-year-old child with acute lymphocytic leukemia (ALL) is admitted for evaluation of fever: place the child in a private room to prevent infection from others.</li><li>Expected findings when assessing a child with leukemia (select all that apply): loss of appetite, petechiae (Petechiae) on the extremities, and an unsteady gait.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>حرارة 38°م أو أكثر</li><li>نزف غير متوقف أو نقط نزفية جديدة</li><li>ضيق نفس، ألم صدر</li><li>صداع شديد، تشنج أو تغيّر وعي</li><li>ألم عظام شديد مفاجئ</li><li>تسرب الدواء الكيماوي حول الكانيولا</li></ul>",
+   "en": "<ul><li>Temperature of 38°C or more</li><li>Bleeding that does not stop, or new petechiae</li><li>Shortness of breath, chest pain</li><li>Severe headache, seizure, or altered consciousness</li><li>Sudden severe bone pain</li><li>Leakage of the chemotherapy drug around the cannula</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>عدوى = طوارئ: لا تنتظر الصباح.</li><li>اهتم بنظافة الفم والجلد.</li><li>أطعمة مطبوخة جيداً وتجنب الخضار غير المغسولة جيداً أثناء انخفاض العدلات.</li><li>حلاقة كهربائية وفرشاة ناعمة.</li><li>مواعيد الفحوص والمتابعة.</li></ul>",
+   "en": "<ul><li>Infection = emergency: do not wait until morning.</li><li>Take care of mouth and skin hygiene.</li><li>Well-cooked foods, and avoid poorly washed vegetables while neutrophils are low.</li><li>Electric razor and soft toothbrush.</li><li>Keep test and follow-up appointments.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "حاد/مزمن × لمفاوي/نخاعي = أربعة أنواع.",
+   "خزعة النخاع تؤكد التشخيص.",
+   "نقص صفائح → نزف، نقص عدلات → عدوى.",
+   "مثبطات التيروزين كيناز (Imatinib) أساس علاج CML.",
+   "حرارة في مريض كيماوي = طارئ.",
+   "لا حقن عضل وحماية من العدوى والنزف."
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>في اللوكيميا يحل محل النخاع العظمي خلايا بيضاء غير ناضجة بتتكاثر بدون ضابط وتدخل الدم، وتتجمع في الكبد والطحال والعقد، وأحياناً الجهاز العصبي. يُصنَّف المرض حسب نوع الخلية (لمفاوية Lymphocytic أو نخاعية Myelocytic) وحسب السرعة (حاد Acute أو مزمن Chronic).</p>[[slot:dis-684-types|جدول أنواع اللوكيميا وعلاجاتها|/diseases/img/dis-684-types.svg]]<div class=\"cs-stats\"><div><b>4</b><span>أنواع رئيسية</span></div><div><b>↑ WBC</b><span>غالباً عالية لكن غير وظيفية</span></div><div><b>↓ Plt</b><span>نقص الصفائح</span></div></div><div class=\"cs-box cs-info\"><strong>حاد أم مزمن؟</strong><p>الحاد عدواني وبداية سريعة ومسار قصير، والمزمن بداية خفية ومسار أطول وتشخيص أفضل غالباً.</p></div>\n[[slot:dis-684-overview|ملخص اللوكيميا — رسم من إعداد الموقع|/diseases/img/dis-684-overview.svg]]<p>أعراض إضافية للمراجعة: عدوى متكررة، ترنح (مشية غير ثابتة) وشحوب، كدمات ونقط نزفية، فقدان وزن وشهية، وألم عظام. التشخيص بخزعة النخاع من الشوكة الحرقفية الخلفية.</p>\n[[slot:dis-684-leukemia|اللوكيميا: مراجعة — رسم من إعداد الموقع|/diseases/img/dis-684-leukemia.svg]]\n<ul><li>زيادة غير طبيعية في كرات الدم البيضاء تزاحم إنتاج الحمراء والصفائح.</li><li>الأنواع: AML وALL (حادة، خلايا غير ناضجة، بداية مفاجئة، الأطفال أكثر في ALL) وCML وCLL (مزمنة، خلايا ناضجة، كبار السن).</li><li>العلامات: عدوى متكررة، تعب، مشي غير ثابت وشحوب، كدمات ونمش نزفي ونزف سهل، فقدان وزن وشهية، ألم عظام.</li><li>التحاليل: WBC مرتفع، Hb/Hct منخفض، صفائح منخفضة. التشخيص: <b>خزعة نخاع من عرف الحرقفة الخلفي (Posterior iliac crest)</b>. العلاج: كيماوي وإشعاع، وأحيانًا زرع خلايا جذعية.</li></ul><h4>من المراجعة الشاملة</h4>[[slot:dis-2634-leukemia|اللوكيميا — رسم من إعداد الموقع|/diseases/img/dis-2634-leukemia.svg]]<h4>الأنواع الأربعة بأسمائها الكاملة</h4><table><thead><tr><th>الاختصار</th><th>الاسم</th><th>ملاحظة</th></tr></thead><tbody><tr><td>AML</td><td>اللوكيميا النخاعية الحادة (Acute Myeloid Leukemia)</td><td>حادة</td></tr><tr><td>CML</td><td>اللوكيميا النخاعية المزمنة (Chronic Myeloid Leukemia)</td><td>مزمنة</td></tr><tr><td>ALL</td><td>اللوكيميا اللمفاوية الحادة (Acute Lymphocytic Leukemia)</td><td>الأكثر شيوعًا عند الأطفال</td></tr><tr><td>CLL</td><td>اللوكيميا اللمفاوية المزمنة (Chronic Lymphocytic Leukemia)</td><td>مزمنة، كبار السن</td></tr></tbody></table><p>المصطلح: Leuk = كرة دم بيضاء (Leukocyte)، emia = الدم.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>السبب الدقيق غير معروف.</li><li>تعرض لإشعاع عالٍ أو للبنزين.</li><li>علاج كيماوي عدواني سابق لسرطان آخر.</li><li>استعداد وراثي: متلازمة داون، أنيميا فانكوني، تاريخ عائلي.</li></ul>"
-    },
-    "signs": {
-      "ar": "<p><b>اللوكيميا الحادة:</b></p><ul><li>إرهاق وضعف من الأنيميا، حمى لزيادة قابلية العدوى.</li><li>نزف: نقط نزفية، كدمات، رعاف، نزف لثة (نقص صفائح).</li><li>ألم عظام من تمدد النخاع.</li><li>تضخم العقد (Lymphadenopathy) والكبد والطحال.</li><li>صداع وغثيان وقيء وفقدان وزن؛ وإن وصلت للجهاز العصبي: وذمة الحلمة العصبية، شلل أعصاب قحفية، تشنج.</li></ul><p><b>اللوكيميا المزمنة:</b></p><ul><li>إرهاق، فقدان وزن، ضعف شهية، تضخم عقد وطحال.</li><li>كثيراً ما تُكتشف صدفة في تحليل دم.</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>تعداد دم: نقص RBC وهيموجلوبين، نقص صفائح، <b>ارتفاع كرات بيضاء</b> (Leukocytosis) بخلايا غير ناضجة.</li><li><b>خزعة نخاع</b> لتأكيد التشخيص وتحديد النوع (تُظهر خلايا غير ناضجة).</li><li>قياس الدم بالتدفق الخلوي (Flow cytometry) وفحص الكروموسومات (مثل كروموسوم فيلادلفيا في CML).</li><li>بزل قطني لو الاشتباه في إصابة الجهاز العصبي.</li></ul><h4>من المراجعة الشاملة</h4><p>خزعة نقي العظم من العرف الحرقفي الخلفي (HESI). تحاليل: WBC مرتفع، Hb/Hct منخفض، صفائح منخفضة.</p>"
-    },
-    "treatment": {
-      "ar": "<table><thead><tr><th>النوع</th><th>العلاج</th></tr></thead><tbody><tr><td>AML</td><td>Anthracycline (Idarubicin أو Daunorubicin) + Cytarabine؛ أو مجموعة Daunorubicin + Vincristine + Prednisone + Asparaginase؛ صفائح، Filgrastim لنقص العدلات، مضادات حيوية، زرع نخاع مع مثبطات مناعة</td></tr><tr><td>CML</td><td>Imatinib (مثبط إشارة)، Interferon-α، Busulfan، Hydroxyurea</td></tr><tr><td>CLL</td><td>Cyclophosphamide وChlorambucil (مؤلكلات)؛ Vincristine + Prednisone + Doxorubicin؛ أجسام مضادة وحيدة النسيلة (Alemtuzumab، Rituximab مع Fludarabine)</td></tr><tr><td>كل الأنواع</td><td>نقل كرات/صفائح حسب الحاجة، زرع نخاع، تغذية عالية البروتين</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>العلاج الحديث لـ CML يعتمد على مثبطات التيروزين كيناز (Imatinib وأجيال تالية) كخط أول، وهي غيّرت التشخيص جذرياً. Interferon وBusulfan من العلاجات القديمة.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>وقاية من العدوى</strong><p>العدلات المنخفضة (Neutropenia) تعني عزلاً وقائياً، غسل أيدي، منع الزوار المرضى، طعام مطبوخ جيداً، عناية فم بعد كل وجبة. أي حرارة 38 فأكثر = طارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>مراقبة النزف</strong><p>عدد الصفائح، كدمات، لثة، براز وبول. لا حقن عضل، حلاقة كهربائية، فرشاة ناعمة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الألم</strong><p>قيّم الألم بشكل منتظم (نوع ودرجة)، مسكنات حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>التغذية</strong><p>وجبات صغيرة متكررة، غنية بالبروتين والسعرات، علاج الغثيان قبل الوجبة، مراقبة الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الكيماوي</strong><p>تحقق من الجرعة والاسم مع زميلة (Double check)، قفازات ومعدات حماية، استخدم خطوط وريدية آمنة (تسرب بعض الأدوية يسبب نخر نسيجي)، مراقبة الغثيان والإسهال والتهاب الفم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الدعم النفسي</strong><p>فرصة للتعبير، دعم الأسرة، التواصل مع الفريق النفسي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>التثقيف</strong><p>تجنب المصابين بعدوى، الإبلاغ عن الحرارة والتهاب الحلق والنزف.</p></div></div></div><h4>أسئلة ATI (من المراجعة الشاملة)</h4><ul><li>طفل عمره 7 سنوات مصاب بلوكيميا لمفاوية حادة (ALL) يُقبل لتقييم الحمى: يُوضع في غرفة منفردة لمنع انتقال العدوى إليه من الآخرين.</li><li>النتائج المتوقعة عند تقييم طفل مصاب بلوكيميا (اختر كل ما ينطبق): فقدان الشهية، ونقط نزفية (Petechiae) في الأطراف، ومشية غير ثابتة.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>حرارة 38°م أو أكثر</li><li>نزف غير متوقف أو نقط نزفية جديدة</li><li>ضيق نفس، ألم صدر</li><li>صداع شديد، تشنج أو تغيّر وعي</li><li>ألم عظام شديد مفاجئ</li><li>تسرب الدواء الكيماوي حول الكانيولا</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>عدوى = طوارئ: لا تنتظر الصباح.</li><li>اهتم بنظافة الفم والجلد.</li><li>أطعمة مطبوخة جيداً وتجنب الخضار غير المغسولة جيداً أثناء انخفاض العدلات.</li><li>حلاقة كهربائية وفرشاة ناعمة.</li><li>مواعيد الفحوص والمتابعة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "حاد/مزمن × لمفاوي/نخاعي = أربعة أنواع.",
-      "خزعة النخاع تؤكد التشخيص.",
-      "نقص صفائح → نزف، نقص عدلات → عدوى.",
-      "مثبطات التيروزين كيناز (Imatinib) أساس علاج CML.",
-      "حرارة في مريض كيماوي = طارئ.",
-      "لا حقن عضل وحماية من العدوى والنزف."
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "الفحص المؤكد لتشخيص اللوكيميا:"
-      },
-      "options": [
-        {
-          "ar": "أشعة صدر"
-        },
-        {
-          "ar": "خزعة النخاع"
-        },
-        {
-          "ar": "تحليل بول"
-        },
-        {
-          "ar": "سكر صائم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تُظهر خلايا غير ناضجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "Imatinib يستخدم غالباً في:"
-      },
-      "options": [
-        {
-          "ar": "AML"
-        },
-        {
-          "ar": "ALL"
-        },
-        {
-          "ar": "CML"
-        },
-        {
-          "ar": "CLL"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "مثبط إشارة في CML."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض كيماوي حرارته 38.4:"
-      },
-      "options": [
-        {
-          "ar": "راقبه ساعتين"
-        },
-        {
-          "ar": "بلّغ الطبيب فوراً"
-        },
-        {
-          "ar": "كمادات فقط"
-        },
-        {
-          "ar": "أعطه أسبرين"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "نقص عدلات محتمل."
-      }
-    },
-    {
-      "q": {
-        "ar": "أفضل رعاية للفم:"
-      },
-      "options": [
-        {
-          "ar": "خيط أسنان قوي"
-        },
-        {
-          "ar": "فرشاة ناعمة"
-        },
-        {
-          "ar": "غرغرة كحول"
-        },
-        {
-          "ar": "تجنب نظافة الفم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تقليل النزف والعدوى."
-      }
-    },
-    {
-      "q": {
-        "ar": "سبب النزف في اللوكيميا:"
-      },
-      "options": [
-        {
-          "ar": "نقص الكرات الحمراء"
-        },
-        {
-          "ar": "نقص الصفائح"
-        },
-        {
-          "ar": "فرط البيض"
-        },
-        {
-          "ar": "نقص حديد"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الخلايا الشاذة تحل محل المنتجة للصفائح."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مكان تؤخذ منه خزعة النخاع غالبًا؟"
-      },
-      "options": [
-        {
-          "ar": "عظمة القص"
-        },
-        {
-          "ar": "عرف الحرقفة الخلفي"
-        },
-        {
-          "ar": "الفخذ"
-        },
-        {
-          "ar": "الجمجمة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "هو الموضع الأكثر استعمالًا للبالغين."
-      }
-    },
-    {
-      "q": {
-        "ar": "اللوكيميا الحادة تتميز بـ؟"
-      },
-      "options": [
-        {
-          "ar": "خلايا غير ناضجة وبداية مفاجئة"
-        },
-        {
-          "ar": "خلايا ناضجة"
-        },
-        {
-          "ar": "بداية خفية فقط"
-        },
-        {
-          "ar": "كبار السن فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحادة غير ناضجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "موضع خزعة النقي المعتاد؟"
-      },
-      "options": [
-        {
-          "ar": "العرف الحرقفي الخلفي"
-        },
-        {
-          "ar": "القص"
-        },
-        {
-          "ar": "الفخذ"
-        },
-        {
-          "ar": "العمود"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "العرف الحرقفي الخلفي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أين يوضع طفل مصاب بـ ALL ومحجوز لتقييم الحمى؟"
-      },
-      "options": [
-        {
-          "ar": "غرفة منفردة لحمايته من العدوى"
-        },
-        {
-          "ar": "غرفة مشتركة مع طفل مصاب بالتهاب رئوي"
-        },
-        {
-          "ar": "غرفة مشتركة مع طفل مصاب بجدري الماء"
-        },
-        {
-          "ar": "ممر الجناح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نقص المناعة (قلة العدلات) يجعله معرضًا للعدوى، لذا تُمنع مخالطته للمرضى."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "MSD Manual Professional – Hematology/Oncology"
-    },
-    {
-      "title": "StatPearls – (NCBI Bookshelf) topics"
-    },
-    {
-      "title": "NCCN / ASH patient & professional guidance (حسب الموضوع)"
-    }
+  "en": [
+   "Acute/chronic × lymphocytic/myeloid = four types.",
+   "Bone marrow biopsy confirms the diagnosis.",
+   "Low platelets → bleeding; low neutrophils → infection.",
+   "Tyrosine kinase inhibitors (Imatinib) are the basis of CML treatment.",
+   "Fever in a chemotherapy patient = emergency.",
+   "No IM injections, and protection from infection and bleeding."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "الفحص المؤكد لتشخيص اللوكيميا:",
+    "en": "The confirmatory test for diagnosing leukemia:"
+   },
+   "options": [
+    {
+     "ar": "أشعة صدر",
+     "en": "Chest X-ray"
+    },
+    {
+     "ar": "خزعة النخاع",
+     "en": "Bone marrow biopsy"
+    },
+    {
+     "ar": "تحليل بول",
+     "en": "Urinalysis"
+    },
+    {
+     "ar": "سكر صائم",
+     "en": "Fasting glucose"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تُظهر خلايا غير ناضجة.",
+    "en": "It shows immature cells."
+   }
+  },
+  {
+   "q": {
+    "ar": "Imatinib يستخدم غالباً في:",
+    "en": "Imatinib is usually used in:"
+   },
+   "options": [
+    {
+     "ar": "AML",
+     "en": "AML"
+    },
+    {
+     "ar": "ALL",
+     "en": "ALL"
+    },
+    {
+     "ar": "CML",
+     "en": "CML"
+    },
+    {
+     "ar": "CLL",
+     "en": "CLL"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "مثبط إشارة في CML.",
+    "en": "A signal inhibitor in CML."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض كيماوي حرارته 38.4:",
+    "en": "A chemotherapy patient with a temperature of 38.4:"
+   },
+   "options": [
+    {
+     "ar": "راقبه ساعتين",
+     "en": "Monitor for two hours"
+    },
+    {
+     "ar": "بلّغ الطبيب فوراً",
+     "en": "Inform the physician immediately"
+    },
+    {
+     "ar": "كمادات فقط",
+     "en": "Compresses only"
+    },
+    {
+     "ar": "أعطه أسبرين",
+     "en": "Give aspirin"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "نقص عدلات محتمل.",
+    "en": "Possible neutropenia."
+   }
+  },
+  {
+   "q": {
+    "ar": "أفضل رعاية للفم:",
+    "en": "Best mouth care:"
+   },
+   "options": [
+    {
+     "ar": "خيط أسنان قوي",
+     "en": "Vigorous flossing"
+    },
+    {
+     "ar": "فرشاة ناعمة",
+     "en": "Soft toothbrush"
+    },
+    {
+     "ar": "غرغرة كحول",
+     "en": "Alcohol gargle"
+    },
+    {
+     "ar": "تجنب نظافة الفم",
+     "en": "Avoid oral hygiene"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تقليل النزف والعدوى.",
+    "en": "Reduces bleeding and infection."
+   }
+  },
+  {
+   "q": {
+    "ar": "سبب النزف في اللوكيميا:",
+    "en": "The cause of bleeding in leukemia:"
+   },
+   "options": [
+    {
+     "ar": "نقص الكرات الحمراء",
+     "en": "Low red cells"
+    },
+    {
+     "ar": "نقص الصفائح",
+     "en": "Low platelets"
+    },
+    {
+     "ar": "فرط البيض",
+     "en": "Excess white cells"
+    },
+    {
+     "ar": "نقص حديد",
+     "en": "Iron deficiency"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الخلايا الشاذة تحل محل المنتجة للصفائح.",
+    "en": "Abnormal cells replace the platelet-producing cells."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مكان تؤخذ منه خزعة النخاع غالبًا؟",
+    "en": "Where is a bone marrow biopsy usually taken from?"
+   },
+   "options": [
+    {
+     "ar": "عظمة القص",
+     "en": "The sternum"
+    },
+    {
+     "ar": "عرف الحرقفة الخلفي",
+     "en": "The posterior iliac crest"
+    },
+    {
+     "ar": "الفخذ",
+     "en": "The femur"
+    },
+    {
+     "ar": "الجمجمة",
+     "en": "The skull"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "هو الموضع الأكثر استعمالًا للبالغين.",
+    "en": "It is the most commonly used site in adults."
+   }
+  },
+  {
+   "q": {
+    "ar": "اللوكيميا الحادة تتميز بـ؟",
+    "en": "Acute leukemia is characterized by?"
+   },
+   "options": [
+    {
+     "ar": "خلايا غير ناضجة وبداية مفاجئة",
+     "en": "Immature cells and sudden onset"
+    },
+    {
+     "ar": "خلايا ناضجة",
+     "en": "Mature cells"
+    },
+    {
+     "ar": "بداية خفية فقط",
+     "en": "Insidious onset only"
+    },
+    {
+     "ar": "كبار السن فقط",
+     "en": "Older adults only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحادة غير ناضجة.",
+    "en": "Acute leukemia involves immature cells."
+   }
+  },
+  {
+   "q": {
+    "ar": "موضع خزعة النقي المعتاد؟",
+    "en": "The usual site for a bone marrow biopsy?"
+   },
+   "options": [
+    {
+     "ar": "العرف الحرقفي الخلفي",
+     "en": "The posterior iliac crest"
+    },
+    {
+     "ar": "القص",
+     "en": "The sternum"
+    },
+    {
+     "ar": "الفخذ",
+     "en": "The femur"
+    },
+    {
+     "ar": "العمود",
+     "en": "The spine"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "العرف الحرقفي الخلفي.",
+    "en": "The posterior iliac crest."
+   }
+  },
+  {
+   "q": {
+    "ar": "أين يوضع طفل مصاب بـ ALL ومحجوز لتقييم الحمى؟",
+    "en": "Where is a child with ALL admitted for fever evaluation placed?"
+   },
+   "options": [
+    {
+     "ar": "غرفة منفردة لحمايته من العدوى",
+     "en": "A private room to protect them from infection"
+    },
+    {
+     "ar": "غرفة مشتركة مع طفل مصاب بالتهاب رئوي",
+     "en": "A shared room with a child who has pneumonia"
+    },
+    {
+     "ar": "غرفة مشتركة مع طفل مصاب بجدري الماء",
+     "en": "A shared room with a child who has chickenpox"
+    },
+    {
+     "ar": "ممر الجناح",
+     "en": "The ward corridor"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نقص المناعة (قلة العدلات) يجعله معرضًا للعدوى، لذا تُمنع مخالطته للمرضى.",
+    "en": "Immunosuppression (neutropenia) makes the child prone to infection, so contact with sick patients is prevented."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "MSD Manual Professional – Hematology/Oncology"
+  },
+  {
+   "title": "StatPearls – (NCBI Bookshelf) topics"
+  },
+  {
+   "title": "NCCN / ASH patient & professional guidance (حسب الموضوع)"
+  }
+ ]
 }

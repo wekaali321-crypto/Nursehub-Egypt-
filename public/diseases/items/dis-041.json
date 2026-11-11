@@ -1,264 +1,314 @@
 {
-  "id": "dis-041",
-  "num": 41,
-  "system": "chest",
-  "icon": "🤧",
-  "level": 1,
-  "title": {
-    "ar": "نزلة البرد",
-    "en": "Common Cold"
+ "id": "dis-041",
+ "num": 41,
+ "system": "chest",
+ "icon": "🤧",
+ "level": 1,
+ "title": {
+  "ar": "نزلة البرد",
+  "en": "Common Cold"
+ },
+ "teaser": {
+  "ar": "أبسط مرض وأكتر مرض بتتصرف فيه غلط: إمتى تريح المريض بس، وإمتى تبلّغ، وليه المضاد الحيوي مش الحل.",
+  "en": "The simplest illness and the one most often mishandled: when to just comfort the patient, when to report, and why antibiotics are not the answer."
+ },
+ "chips": [
+  {
+   "ar": "رشح وكحة",
+   "en": "Runny nose and cough"
   },
-  "teaser": {
-    "ar": "أبسط مرض وأكتر مرض بتتصرف فيه غلط: إمتى تريح المريض بس، وإمتى تبلّغ، وليه المضاد الحيوي مش الحل."
+  {
+   "ar": "راحة وسوائل دافئة",
+   "en": "Rest and warm fluids"
   },
-  "chips": [
-    {
-      "ar": "رشح وكحة"
-    },
-    {
-      "ar": "راحة وسوائل دافئة"
-    },
-    {
-      "ar": "قطرة الأنف 5 أيام"
-    }
+  {
+   "ar": "قطرة الأنف 5 أيام",
+   "en": "Nasal drops for 5 days"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>نزلة البرد (Common cold) عدوى فيروسية خفيفة في الأنف والحلق، بتجيب رشح وكحة جافة والتهاب حلق، وغالباً بتخف لوحدها خلال أسبوع تقريباً. العلاج هنا <b>لتخفيف الأعراض</b> مش لقتل الفيروس.</p>\n<div class=\"cs-stats\"><div><b>3</b><span>أعراض رئيسية: رشح + كحة جافة + التهاب حلق</span></div><div><b>7–10</b><span>أيام تقريباً حتى تخف الأعراض</span></div><div><b>0</b><span>حاجة للمضاد الحيوي في الغالب</span></div></div>\n[[slot:dis-041-course|مسار نزلة البرد على مدار الأيام وإيه المتوقع كل يوم|/diseases/img/dis-041-course.svg]]\n<div class=\"cs-box cs-info\"><strong>فرق بينها وبين الالتهاب الشعبي</strong><p>في نزلة البرد الأعراض في الأنف والحلق. لو بقت الكحة منتجة بلغم ومعاها حرارة وصدر فيه خرخرة، فده غالباً التهاب شعبي (راجع دليل الالتهاب الشعبي).</p></div>[[slot:dis-041-cold-meds|اختيار أدوية البرد المركبة حسب المريض — رسم توضيحي من إعداد الموقع|/diseases/img/dis-041-cold-meds.svg]]",
+   "en": "<p>The common cold is a mild viral infection of the nose and throat that causes a runny nose, dry cough, and sore throat, and usually resolves on its own within about a week. Treatment here is <b>to relieve symptoms</b>, not to kill the virus.</p>\n<div class=\"cs-stats\"><div><b>3</b><span>Main symptoms: runny nose + dry cough + sore throat</span></div><div><b>7–10</b><span>Days, roughly, until symptoms ease</span></div><div><b>0</b><span>Need for antibiotics in most cases</span></div></div>\n[[slot:dis-041-course|The course of a cold over the days and what to expect each day|/diseases/img/dis-041-course.svg]]\n<div class=\"cs-box cs-info\"><strong>How it differs from bronchitis</strong><p>In a cold, symptoms are in the nose and throat. If the cough becomes productive with fever and chest rattling, it is most likely bronchitis (see the bronchitis guide).</p></div>[[slot:dis-041-cold-meds|Choosing combination cold medicines by patient — illustration prepared by the site|/diseases/img/dis-041-cold-meds.svg]]"
+  },
+  "causes": {
+   "ar": "<p>لم تذكر المراجع مسببات، لكن المعروف:</p>\n<div class=\"cs-compare\"><ul><li>عدوى فيروسية (أشهرها Rhinovirus)، بتنتقل بالرذاذ ولمس الأسطح الملوثة</li><li>تزيد في الشتا والزحمة والإرهاق وقلة النوم</li><li>المناعة الضعيفة أو التدخين بيطوّلوا فترة المرض</li></ul></div><h4>معلومات إضافية عن الفيروسات والعدوى</h4><ul><li>نزلة البرد ممكن تتسبب من أكتر من <b>200 فيروس مختلف</b>، لكن أغلبها <b>Rhinovirus</b> و<b>Coronavirus</b>.</li><li>بتبدأ الأعراض غالباً بعد <b>2–3 أيام</b> من دخول الفيروس، وتستمر من عدة أيام لعدة أسابيع.</li><li>بتنتقل بالرذاذ أو بملامسة اليد لليد أو لسطح ملوث ثم لمس الوجه.</li><li>نزلة البرد (Cold) مرض خفيف نسبياً يزول لوحده، وممكن أحياناً يؤدي لعدوى ثانوية زي التهاب الأذن. أما الإنفلونزا (Flu) فممكن تسبب التهاب رئوي ومضاعفات خطيرة (راجع دليل الإنفلونزا).</li></ul>",
+   "en": "<p>Causes are not listed, but what is known:</p>\n<div class=\"cs-compare\"><ul><li>Viral infection (most commonly Rhinovirus), spread by droplets and by touching contaminated surfaces</li><li>More common in winter, crowding, exhaustion, and lack of sleep</li><li>Weak immunity or smoking prolong the illness</li></ul></div><h4>More about the viruses and infection</h4><ul><li>A cold can be caused by more than <b>200 different viruses</b>, but most are <b>Rhinovirus</b> and <b>Coronavirus</b>.</li><li>Symptoms usually start <b>2–3 days</b> after the virus enters, and last from several days to several weeks.</li><li>It spreads by droplets or by hand-to-hand contact or touching a contaminated surface and then the face.</li><li>A cold is a relatively mild illness that resolves on its own, and can sometimes lead to a secondary infection such as an ear infection. The flu, however, can cause pneumonia and serious complications (see the influenza guide).</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>الشكوى</h4>\n<ul><li><b>FAHM</b>: اختصار مكتوب في المراجع للأعراض العامة (يُفهم منه: حرارة وآلام جسم وصداع وتكسير عام)</li><li>سيلان الأنف (Rhinorrhea)</li><li>كحة جافة (Dry cough)</li><li>التهاب الحلق (Sore throat)</li></ul>\n<h4>الفحص</h4>\n<ul><li>احتقان الحلق (Congested throat)</li></ul>\n<div class=\"cs-box cs-warning\"><strong>متى مش مجرد برد؟</strong><ul><li>حرارة عالية أكتر من 3 أيام أو بتزيد</li><li>ألم شديد في الأذن أو الوجه والجيوب، أو إفرازات صفراء/خضراء مع صداع شديد بعد أسبوع</li><li>ضيق نفس أو ألم صدر أو أزيز</li><li>أعراض أكتر من 10 أيام</li></ul></div><h4>الأعراض الأكثر شيوعاً (قائمة كاملة)</h4><ol><li>انسداد وسيلان الأنف (Stuffy, runny nose)</li><li>خدش وحكة في الحلق (Scratchy, tickly throat)</li><li>عطس (Sneezing)</li><li>دموع في العين</li><li>حرارة خفيفة</li><li>التهاب حلق</li><li>كحة خفيفة جافة متقطعة</li><li>آلام عضلات وعظام</li><li>صداع</li><li>إرهاق خفيف</li><li>قشعريرة</li><li>إفرازات أنفية مائية تتكثف وتتحول للأصفر أو الأخضر</li></ol><h4>نزلة البرد مقابل الإنفلونزا</h4><table><thead><tr><th>العَرَض</th><th>نزلة البرد</th><th>الإنفلونزا</th></tr></thead><tbody><tr><td>الحرارة</td><td>قليلة أو لا توجد</td><td>عالية</td></tr><tr><td>الصداع</td><td>أحياناً</td><td>دايماً</td></tr><tr><td>الأنف</td><td>مسدود / رشح</td><td>رشح شفاف</td></tr><tr><td>العطس</td><td>موجود</td><td>أحياناً</td></tr><tr><td>الكحة</td><td>خفيفة جافة متقطعة</td><td>غالباً تشتد</td></tr><tr><td>آلام الجسم</td><td>خفيفة</td><td>غالباً شديدة</td></tr><tr><td>الإرهاق</td><td>خفيف</td><td>شديد، وقد يستمر أسابيع</td></tr><tr><td>التهاب الحلق</td><td>موجود</td><td>أحياناً</td></tr><tr><td>النشاط</td><td>طاقة طبيعية</td><td>إرهاق شديد</td></tr></tbody></table><h4>مقارنة تفصيلية (من المرجع)</h4><table><thead><tr><th></th><th>دور البرد العادي (Common cold)</th><th>الإنفلونزا (Flu)</th></tr></thead><tbody><tr><td>السبب</td><td>فيروس غالباً Rhinovirus</td><td>فيروس الإنفلونزا</td></tr><tr><td>البداية</td><td>تدريجية</td><td>سريعة خلال ساعات</td></tr><tr><td>الشائعة</td><td>التهاب بالحلق، رشح، احتقان بالأنف، عطس، كحة ببلغم</td><td>سخونية (38–40)، ألم شديد بالعضم، إرهاق شديد، صداع، رعشة، كحة ناشفة</td></tr><tr><td>النادرة</td><td>صداع، رعشة، تكسير بالعضم، سخونية بسيطة، إجهاد</td><td>رشح، عطس، التهاب الحلق، احتقان الأنف</td></tr><tr><td>الموسم</td><td>طول السنة</td><td>الشتاء والخريف</td></tr><tr><td>الخطورة</td><td>لا مضاعفات خطيرة</td><td>بعض المضاعفات الخطيرة مثل التهاب رئوي</td></tr></tbody></table><p>عموماً دور البرد والإنفلونزا يخف خلال أسبوع أو أسبوعين، لكن الكحة قد تستمر لفترة أطول وتسمى <b>Post-viral cough</b> خصوصاً في الأطفال.</p>",
+   "en": "<h4>Complaint</h4>\n<ul><li><b>FAHM</b>: an abbreviation for general symptoms (understood as: fever, body aches, headache, and general malaise)</li><li>Runny nose (rhinorrhea)</li><li>Dry cough</li><li>Sore throat</li></ul>\n<h4>Examination</h4>\n<ul><li>Congested throat</li></ul>\n<div class=\"cs-box cs-warning\"><strong>When is it more than a cold?</strong><ul><li>High fever for more than 3 days or rising</li><li>Severe ear or facial/sinus pain, or yellow/green discharge with a severe headache after a week</li><li>Shortness of breath, chest pain, or wheezing</li><li>Symptoms for more than 10 days</li></ul></div><h4>Most common symptoms (full list)</h4><ol><li>Stuffy, runny nose</li><li>Scratchy, tickly throat</li><li>Sneezing</li><li>Watery eyes</li><li>Low-grade fever</li><li>Sore throat</li><li>Mild, dry, intermittent cough</li><li>Muscle and bone aches</li><li>Headache</li><li>Mild fatigue</li><li>Chills</li><li>Watery nasal discharge that thickens and turns yellow or green</li></ol><h4>Cold vs. flu</h4><table><thead><tr><th>Symptom</th><th>Cold</th><th>Flu</th></tr></thead><tbody><tr><td>Fever</td><td>Low or absent</td><td>High</td></tr><tr><td>Headache</td><td>Sometimes</td><td>Always</td></tr><tr><td>Nose</td><td>Stuffy / runny</td><td>Clear runny nose</td></tr><tr><td>Sneezing</td><td>Present</td><td>Sometimes</td></tr><tr><td>Cough</td><td>Mild, dry, intermittent</td><td>Often becomes severe</td></tr><tr><td>Body aches</td><td>Mild</td><td>Often severe</td></tr><tr><td>Fatigue</td><td>Mild</td><td>Severe, may last weeks</td></tr><tr><td>Sore throat</td><td>Present</td><td>Sometimes</td></tr><tr><td>Activity</td><td>Normal energy</td><td>Severe exhaustion</td></tr></tbody></table><h4>Detailed comparison</h4><table><thead><tr><th></th><th>Common cold</th><th>Flu</th></tr></thead><tbody><tr><td>Cause</td><td>A virus, usually Rhinovirus</td><td>Influenza virus</td></tr><tr><td>Onset</td><td>Gradual</td><td>Rapid, within hours</td></tr><tr><td>Common</td><td>Sore throat, runny nose, nasal congestion, sneezing, productive cough</td><td>Fever (38–40), severe bone aches, severe fatigue, headache, chills, dry cough</td></tr><tr><td>Rare</td><td>Headache, chills, body aches, mild fever, fatigue</td><td>Runny nose, sneezing, sore throat, nasal congestion</td></tr><tr><td>Season</td><td>All year</td><td>Winter and fall</td></tr><tr><td>Severity</td><td>No serious complications</td><td>Some serious complications such as pneumonia</td></tr></tbody></table><p>In general, a cold and the flu ease within one or two weeks, but the cough may last longer and is called a <b>post-viral cough</b>, especially in children.</p>"
+  },
+  "tests": {
+   "ar": "<p>التشخيص إكلينيكي من الأعراض والفحص، <b>ما فيش فحوصات روتينية</b> للنزلة البسيطة. الطبيب بيطلب أشعة أو مزرعة حلق فقط لو شك في مضاعفة (التهاب لوزتين بكتيري، جيوب، رئة).</p>",
+   "en": "<p>Diagnosis is clinical from symptoms and examination; <b>there are no routine tests</b> for a simple cold. The physician orders an X-ray or throat culture only if a complication is suspected (bacterial tonsillitis, sinusitis, lung).</p>"
+  },
+  "treatment": {
+   "ar": "<h4>1) علاج غير دوائي (الأساس)</h4>\n<ul><li>راحة بالسرير</li><li>الإكثار من السوائل الدافئة: ينسون، نعناع، حلبة…</li><li>كمادات باردة (Cold sponge) للحرارة العالية</li></ul>\n<h4>2) علاج دوائي (للأعراض) حسب المراجع</h4>\n<table><thead><tr><th>الدواء</th><th>طريقة الاستخدام</th><th>ملاحظات</th></tr></thead><tbody><tr><td>Allercet Cold كبسولات (دواء للبرد: مضاد حساسية + مزيل احتقان حسب نشرة المنتج)</td><td>كبسولة مرة يومياً</td><td>نعاس محتمل، وحذر مع ارتفاع الضغط</td></tr><tr><td>أو Brufen Flu أقراص (ibuprofen + مزيل احتقان حسب نشرة المنتج)</td><td>قرص مرتين يومياً</td><td>يؤخذ بعد الأكل لحماية المعدة</td></tr><tr><td>Otrivin ND نقط الأنف (xylometazoline)</td><td>3 نقط في كل فتحة أنف 3 مرات يومياً لمدة 5 أيام فقط</td><td>لا يستمر أكثر من المدة: بيرجّع الاحتقان أشد</td></tr><tr><td>Immulant كبسولات (منشط مناعة)</td><td>كبسولة 3 مرات يومياً</td><td>لرفع المناعة</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>الأدوية الجاهزة للبرد بتجمع أكتر من مادة</b>: متديش Allercet Cold مع Brufen Flu مع بعض أبداً لأن فيهم مكونات متشابهة (مزيل احتقان + مضاد التهاب)، وتأكد إن المريض مش بيأخد بنادول زيادة.</li><li>الكمادات تبقى بماء <b>فاتر</b> (تبريد تدريجي)، مش ماء مثلج.</li><li>المضادات الحيوية <b>ما بتفيدش</b> في نزلة البرد (فيروسي) ولا في الغالب بتحتاجها.</li><li>مزيلات الاحتقان بالفم (pseudoephedrine) ممكن ترفع الضغط والنبض: استخدمها بحذر مع مرضى الضغط والقلب والسكر. نقط الأنف الموضعية حدها الأقصى حسب النشرة (عادة لا تزيد عن 5–7 أيام).</li><li>فعالية Immulant والفيتامينات والزنك محدودة، ولا تُوصف كعلاج أساسي. جرّب العسل مع الدافئ للكحة (لغير الرضع تحت سنة).</li></ul></div><h4>تفاصيل العلاج الدوائي حسب الفئة العمرية (أسماء السوق المصري)</h4><p>العلاج الأساسي: راحة بالسرير وسوائل دافئة مع وجبات خفيفة. الأدوية التالية للأعراض وبأمر الطبيب:</p><h4>البالغون</h4><table><thead><tr><th>الغرض</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>مزيل احتقان</td><td>Noflu قرص</td><td>قرص 3 مرات يومياً</td></tr><tr><td></td><td>Afrin نقط/بخاخ أنف أو Otrivin نقط أنف</td><td>قطرتان في كل فتحة 3 مرات يومياً</td></tr><tr><td>كحة</td><td>Ultrasolve شراب</td><td>ملعقة 3 مرات يومياً</td></tr><tr><td>مسكن وخافض حرارة</td><td>Brufen 600 قرص</td><td>قرص كل 12 ساعة (بعد الأكل)</td></tr><tr><td>فيتامين C</td><td>Vitacid C فوار</td><td>قرص فوار على نصف كوب ماء مرتين يومياً</td></tr><tr><td>مضاد حيوي عند عدوى ثانوية (التهاب أذن وسطى، جيوب، حرارة عالية، تضخم غدد، أو كحة ببلغم)</td><td>Flumox 500 كبسولة</td><td>كبسولة كل 8 ساعات</td></tr><tr><td></td><td>أو Flumox 1 جم فيال</td><td>حقنة بالعضل كل 12 ساعة</td></tr></tbody></table><h4>الأطفال</h4><table><thead><tr><th>الغرض</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>مزيل احتقان</td><td>Rhinopro شراب</td><td>ملعقة كل 12 ساعة</td></tr><tr><td>قطرة أنف</td><td>Afrin ped نقط أنف</td><td>نقط للأنف 3 مرات يومياً</td></tr><tr><td>كحة</td><td>Toplexil شراب</td><td>ملعقة 3 مرات يومياً</td></tr><tr><td>مضاد هيستامين</td><td>Avil شراب</td><td>ملعقة 3 مرات يومياً</td></tr><tr><td>حرارة وألم</td><td>Brufen شراب</td><td>ملعقة 3 مرات يومياً</td></tr><tr><td>مضاد حيوي عند عدوى ثانوية</td><td>Flumox أو Ceporex 250 شراب</td><td>ملعقة كل 6 ساعات</td></tr></tbody></table><h4>الرضّع</h4><table><thead><tr><th>الغرض</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>مزيل احتقان</td><td>Rhinostop نقط فموية</td><td>من نصف إلى ربع القطارة 3 مرات يومياً (حسب النشرة والوزن)</td></tr><tr><td>قطرة أنف</td><td>Otrivine saline نقط أنف</td><td>1–2 نقطة في كل أنف 3 مرات يومياً</td></tr><tr><td>مضاد هيستامين</td><td>Avil شراب</td><td>ملعقة شاي صغيرة 3 مرات يومياً</td></tr><tr><td>حرارة وألم</td><td>Tempra نقط</td><td>5–10 نقط بالفم 3 مرات يومياً</td></tr><tr><td></td><td>أو Dolphin 12.5 لبوس للرضّع</td><td>لبوسة كل 12 ساعة</td></tr><tr><td>فيتامين C</td><td>Ceviline نقط</td><td>5 نقط بالفم 3 مرات يومياً</td></tr><tr><td>مضاد حيوي عند عدوى ثانوية</td><td>Curisafe نقط</td><td>5–15 نقطة بالفم كل 12 ساعة</td></tr><tr><td></td><td>أو Cefotax 500 مجم فيال</td><td>يُحل في 4 مل ماء ويُعطى 2 مل بالعضل كل 12 ساعة</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>ملحوظة مهمة</strong><p>يُستخدم <b>الباراسيتامول بدل الأسبرين</b> لخفض الحرارة خصوصاً في الأطفال. الأسبرين (أو أي دواء به أسبرين) في الأمراض الفيروسية (برد، إنفلونزا، جدري) عند الأطفال مرتبط بـ <b>متلازمة راي (Reye's syndrome)</b>: اضطراب خطير قد يكون مميتاً.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>مضادات الاحتقان ومضادات الكحة وAvil والنقط الفموية للرضّع</b> لا ينصح بها لأقل من سنتين (وبعض الجهات لأقل من 4–6 سنين) لعدم فائدتها وخطر الجرعة الزائدة؛ الأفضل غسول ملحي للأنف وسوائل. <b>Cefotax / Flumox / Ceporex</b> للعدوى البكتيرية الثانوية المؤكدة فقط (الجرعات بالوزن). فيتامين C لا يمنع البرد وفائدته محدودة. <b>Brufen 600 مجم</b> جرعة عالية للبالغين تُعطى بعد الأكل وحسب الحاجة فقط.</div><!--e17--><div class=\"cs-box cs-tip\"><strong>نقط الأنف الملحية للرضع (Otrivin baby saline)</strong><p>تُعطى النقط في أنف الرضيع <b>قبل الرضاعة بربع ساعة</b>، لأن انسداد الأنف يقلل رغبة الطفل في الرضاعة؛ فتفتيح الأنف يحسّن الرضاعة ويحسّن العلاج.</p></div><h4>أدوية البرد المركبة في السوق المصري (من المرجع)</h4><p>معظمها يحتوي على مسكن وخافض حرارة مع مزيل احتقان (مثل pseudoephedrine) أو مضاد حساسية. العلاج في الحالتين (برد/إنفلونزا) واحد تقريباً.</p><h5>للبالغين</h5><table><thead><tr><th>التركيبة</th><th>الأسماء التجارية</th><th>الجرعة</th></tr></thead><tbody><tr><td>مسكن + pseudoephedrine (ibuprofen + مزيل احتقان)</td><td>Cetaphed tab، Brufen cold tab، Powercaps caps</td><td>حسب النشرة (عادة 3 مرات يومياً)</td></tr><tr><td>باراسيتامول + مزيل احتقان (للي معدتهم تتعب)</td><td>Adol cold tab، Panadol cold & flu tab</td><td>قرص 3 مرات يومياً</td></tr><tr><td>مسكن + مزيل احتقان + مضاد هيستامين جيل أول (يسبب نعاس ويؤثر على التركيز والعمل)</td><td>Comtrex tab، Congestal tab، Cold free tab، One two three tab</td><td>قرص 3 مرات يومياً</td></tr><tr><td>نفس التركيبة مع كافيين لتقليل النعاس</td><td>Flustop tab، Flurest tab</td><td>قرص 3 مرات يومياً</td></tr><tr><td>مسكن + مزيل احتقان + مضاد هيستامين جيل تاني (لا يسبب نعاس)</td><td>Allercet cold caps</td><td>واحد يومياً</td></tr><tr><td>أقراص نهارية وليلية (النهارية بدون نعاس وكافيين، الليلية بدون كافيين)</td><td>Coldex tab، Night & Day tab</td><td>قرص نهاراً وقرص ليلاً</td></tr><tr><td>للرشح الشديد (pseudoephedrine + antihistamine)</td><td>Actified tab، Clarinase tab</td><td>قرص صباحاً ومساءً</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Panadol وPanadol extra</strong><ul><li>Panadol: باراسيتامول 500 مجم فقط.</li><li>Panadol extra: باراسيتامول 500 مجم + كافيين (يزيد تأثير الباراسيتامول)، لكن لا يفضل لمرضى القلب والضغط.</li></ul></div><div class=\"cs-box cs-danger\"><strong>أدوية البرد في مرضى القلب</strong><p>معظم أدوية البرد لا تصلح لمرضى القلب بسبب: 1) Pseudoephedrine → تسرع القلب. 2) مضادات الهيستامين جيل أول (أثر شبه الأتروبين) → تسرع. 3) الكافيين → تسرع. لذلك يُنصح بالباراسيتامول فقط (Panadol – Paramol) أو مضاد هيستامين جيل تاني (Zyrtec – Histazine).</p></div><h5>للأطفال</h5><p>لا تُستخدم معظم أدوية البرد في الأطفال أقل من سنة، ويُعطى مسكن وخافض حرارة عادي بدلاً منها (بروفين أو باراسيتامول).</p><table><thead><tr><th>التركيبة</th><th>الأسماء</th><th>الجرعة</th></tr></thead><tbody><tr><td>مسكن + pseudoephedrine</td><td>Brufen flu susp، Dolo-D syrup</td><td>ملعقة صغيرة أو كبيرة 3 مرات يومياً</td></tr><tr><td>+ مضاد هيستامين جيل أول</td><td>One two three syrup، Congestal syrup، Sine up syrup</td><td>ملعقة صغيرة أو كبيرة 3 مرات يومياً</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>اختيار خافض الحرارة والمسكن في الأطفال</strong><ul><li>أقل من 6 شهور: Paracetamol فقط</li><li>من 6 شهور إلى سنة: Ibuprofen أو Paracetamol</li><li>أكبر من سنة: Declophenac أو Ibuprofen أو Paracetamol (الأسماء كما في المرجع؛ الجرعات بالوزن وبأمر الطبيب)</li></ul></div><h5>مزيلات احتقان الأنف (Nasal decongestant) — نقط تقلل احتقان الأنف</h5><p><b>لا تزيد فترة الاستخدام عن 3–4 أيام</b> لأنها قد تؤدي إلى زيادة الاحتقان (المرجع). (يختلف عن حدّ 5 أيام المذكور أعلاه: التزم الأقصر.)</p><table><thead><tr><th>الفئة</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>بالغون (الأفضل)</td><td>Otrivin adult drops</td><td>قطرتان بكل فتحة أنف 3 مرات يومياً لمدة 4 أيام بحد أقصى</td></tr><tr><td>بالغون</td><td>Afrin adult drops</td><td>قطرتان بكل فتحة أنف مرتين يومياً لمدة 4 أيام بحد أقصى</td></tr><tr><td>أطفال (لا تُستخدم أقل من سنة)</td><td>Otrivin ped. drops</td><td>قطرتان بكل فتحة أنف 3 مرات يومياً لمدة 4 أيام بحد أقصى</td></tr><tr><td>أطفال (لا تُستخدم أقل من سنة)</td><td>Afrin ped. drops</td><td>قطرتان بكل فتحة أنف مرتين يومياً لمدة 4 أيام بحد أقصى</td></tr><tr><td>رضّع وحوامل ولمن يحتاج استخداماً طويلاً (محلول ملح، بلا أثر جانبي)</td><td>Otrivin baby saline، Lyse</td><td>قطرتان بكل فتحة أنف 3 مرات يومياً (قبل الرضاعة بربع ساعة في الأطفال)</td></tr></tbody></table><h5>الكحة</h5><p>تفاصيل أدوية الكحة في دليل «أدوية الكحة».</p><h5>المضادات الحيوية</h5><p>المفروض أن المضادات الحيوية ليس لها أي دور في علاج الدور البرد والإنفلونزا. لكن في حالات نلجأ فيها للمضاد: <b>تاريخ مرضي لعدوى بكتيرية ثانوية متكررة</b> (مثلاً التهاب رئوي أو شعبي حاد بعد دور برد)، وكحة شديدة مستمرة مع اشتباه التهاب شعبي حاد. الثقافة العامة في المجتمع هي اللجوء للمضادات لعلاج أدوار البرد، ويجد الأطباء صعوبة في وصف روشتة لا تحتوي على مضاد حيوي، لكن هذا غير صحيح.</p>",
+   "en": "<h4>1) Non-drug treatment (the foundation)</h4>\n<ul><li>Bed rest</li><li>Plenty of warm fluids: anise, mint, fenugreek…</li><li>Cool sponging (cold sponge) for high fever</li></ul>\n<h4>2) Drug treatment (for symptoms)</h4>\n<table><thead><tr><th>Drug</th><th>How to use</th><th>Notes</th></tr></thead><tbody><tr><td>Allercet Cold capsules (cold medicine: antihistamine + decongestant per the product leaflet)</td><td>One capsule once daily</td><td>Possible drowsiness; caution with high blood pressure</td></tr><tr><td>Or Brufen Flu tablets (ibuprofen + decongestant per the product leaflet)</td><td>One tablet twice daily</td><td>Take after meals to protect the stomach</td></tr><tr><td>Otrivin ND nasal drops (xylometazoline)</td><td>3 drops in each nostril 3 times daily for 5 days only</td><td>Do not continue beyond this period: congestion comes back worse</td></tr><tr><td>Immulant capsules (immune booster)</td><td>One capsule 3 times daily</td><td>To boost immunity</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li><b>Ready-made cold medicines combine more than one ingredient</b>: never give Allercet Cold and Brufen Flu together because they contain similar ingredients (decongestant + anti-inflammatory), and make sure the patient is not taking extra Panadol.</li><li>Sponging should use <b>lukewarm</b> water (gradual cooling), not ice water.</li><li>Antibiotics <b>do not help</b> a cold (viral) and are usually not needed.</li><li>Oral decongestants (pseudoephedrine) can raise blood pressure and pulse: use with caution in patients with hypertension, heart disease, and diabetes. Topical nasal drops have a maximum duration per the leaflet (usually no more than 5–7 days).</li><li>The effectiveness of Immulant, vitamins, and zinc is limited, and they are not prescribed as primary treatment. Try honey in a warm drink for cough (not for infants under one year).</li></ul></div><h4>Drug treatment details by age group (Egyptian market names)</h4><p>Core treatment: bed rest and warm fluids with light meals. The following drugs are for symptoms and by physician order:</p><h4>Adults</h4><table><thead><tr><th>Purpose</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Decongestant</td><td>Noflu tablet</td><td>One tablet 3 times daily</td></tr><tr><td></td><td>Afrin nasal drops/spray or Otrivin nasal drops</td><td>Two drops in each nostril 3 times daily</td></tr><tr><td>Cough</td><td>Ultrasolve syrup</td><td>One spoonful 3 times daily</td></tr><tr><td>Analgesic and antipyretic</td><td>Brufen 600 tablet</td><td>One tablet every 12 hours (after meals)</td></tr><tr><td>Vitamin C</td><td>Vitacid C effervescent</td><td>One effervescent tablet in half a glass of water twice daily</td></tr><tr><td>Antibiotic for secondary infection (otitis media, sinusitis, high fever, swollen glands, or productive cough)</td><td>Flumox 500 capsule</td><td>One capsule every 8 hours</td></tr><tr><td></td><td>Or Flumox 1 g vial</td><td>IM injection every 12 hours</td></tr></tbody></table><h4>Children</h4><table><thead><tr><th>Purpose</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Decongestant</td><td>Rhinopro syrup</td><td>One spoonful every 12 hours</td></tr><tr><td>Nasal drops</td><td>Afrin ped nasal drops</td><td>Nasal drops 3 times daily</td></tr><tr><td>Cough</td><td>Toplexil syrup</td><td>One spoonful 3 times daily</td></tr><tr><td>Antihistamine</td><td>Avil syrup</td><td>One spoonful 3 times daily</td></tr><tr><td>Fever and pain</td><td>Brufen syrup</td><td>One spoonful 3 times daily</td></tr><tr><td>Antibiotic for secondary infection</td><td>Flumox or Ceporex 250 syrup</td><td>One spoonful every 6 hours</td></tr></tbody></table><h4>Infants</h4><table><thead><tr><th>Purpose</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Decongestant</td><td>Rhinostop oral drops</td><td>From half to a quarter of the dropper 3 times daily (per leaflet and weight)</td></tr><tr><td>Nasal drops</td><td>Otrivine saline nasal drops</td><td>1–2 drops in each nostril 3 times daily</td></tr><tr><td>Antihistamine</td><td>Avil syrup</td><td>One small teaspoon 3 times daily</td></tr><tr><td>Fever and pain</td><td>Tempra drops</td><td>5–10 drops by mouth 3 times daily</td></tr><tr><td></td><td>Or Dolphin 12.5 infant suppository</td><td>One suppository every 12 hours</td></tr><tr><td>Vitamin C</td><td>Ceviline drops</td><td>5 drops by mouth 3 times daily</td></tr><tr><td>Antibiotic for secondary infection</td><td>Curisafe drops</td><td>5–15 drops by mouth every 12 hours</td></tr><tr><td></td><td>Or Cefotax 500 mg vial</td><td>Dissolve in 4 mL water and give 2 mL IM every 12 hours</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Important note</strong><p><b>Paracetamol is used instead of aspirin</b> to reduce fever, especially in children. Aspirin (or any aspirin-containing drug) in viral illnesses (cold, flu, chickenpox) in children is linked to <b>Reye's syndrome</b>: a serious and potentially fatal disorder.</p></div><div class=\"cs-box cs-warning\"><strong>Update</strong><b>Decongestants, cough suppressants, Avil, and oral drops for infants</b> are not recommended under two years (and by some authorities under 4–6 years) because they lack benefit and carry overdose risk; saline nasal rinses and fluids are better. <b>Cefotax / Flumox / Ceporex</b> are for confirmed secondary bacterial infection only (weight-based doses). Vitamin C does not prevent colds and its benefit is limited. <b>Brufen 600 mg</b> is a high adult dose given after meals and only as needed.</div><!--e17--><div class=\"cs-box cs-tip\"><strong>Saline nasal drops for infants (Otrivin baby saline)</strong><p>Give the drops in the infant's nose <b>a quarter of an hour before feeding</b>, because a blocked nose reduces the baby's desire to feed; clearing the nose improves feeding and improves treatment.</p></div><h4>Combination cold medicines in the Egyptian market</h4><p>Most contain an analgesic and antipyretic with a decongestant (such as pseudoephedrine) or an antihistamine. Treatment in both cases (cold/flu) is about the same.</p><h5>For adults</h5><table><thead><tr><th>Formula</th><th>Brand names</th><th>Dose</th></tr></thead><tbody><tr><td>Analgesic + pseudoephedrine (ibuprofen + decongestant)</td><td>Cetaphed tab, Brufen cold tab, Powercaps caps</td><td>Per the leaflet (usually 3 times daily)</td></tr><tr><td>Paracetamol + decongestant (for those with sensitive stomachs)</td><td>Adol cold tab, Panadol cold & flu tab</td><td>One tablet 3 times daily</td></tr><tr><td>Analgesic + decongestant + first-generation antihistamine (causes drowsiness and affects concentration and work)</td><td>Comtrex tab, Congestal tab, Cold free tab, One two three tab</td><td>One tablet 3 times daily</td></tr><tr><td>The same formula with caffeine to reduce drowsiness</td><td>Flustop tab, Flurest tab</td><td>One tablet 3 times daily</td></tr><tr><td>Analgesic + decongestant + second-generation antihistamine (non-drowsy)</td><td>Allercet cold caps</td><td>One daily</td></tr><tr><td>Day and night tablets (the day tablet is non-drowsy with caffeine, the night tablet has no caffeine)</td><td>Coldex tab, Night & Day tab</td><td>One tablet by day and one at night</td></tr><tr><td>For severe runny nose (pseudoephedrine + antihistamine)</td><td>Actified tab, Clarinase tab</td><td>One tablet morning and evening</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Panadol and Panadol extra</strong><ul><li>Panadol: paracetamol 500 mg only.</li><li>Panadol extra: paracetamol 500 mg + caffeine (enhances the effect of paracetamol), but not preferred for patients with heart disease and hypertension.</li></ul></div><div class=\"cs-box cs-danger\"><strong>Cold medicines in heart patients</strong><p>Most cold medicines are unsuitable for heart patients because of: 1) Pseudoephedrine → tachycardia. 2) First-generation antihistamines (atropine-like effect) → tachycardia. 3) Caffeine → tachycardia. So paracetamol alone (Panadol – Paramol) or a second-generation antihistamine (Zyrtec – Histazine) is recommended.</p></div><h5>For children</h5><p>Most cold medicines are not used in children under one year; a plain analgesic and antipyretic is given instead (Brufen or paracetamol).</p><table><thead><tr><th>Formula</th><th>Names</th><th>Dose</th></tr></thead><tbody><tr><td>Analgesic + pseudoephedrine</td><td>Brufen flu susp, Dolo-D syrup</td><td>One teaspoon or tablespoon 3 times daily</td></tr><tr><td>+ first-generation antihistamine</td><td>One two three syrup, Congestal syrup, Sine up syrup</td><td>One teaspoon or tablespoon 3 times daily</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>Choosing an antipyretic and analgesic in children</strong><ul><li>Under 6 months: Paracetamol only</li><li>From 6 months to one year: Ibuprofen or Paracetamol</li><li>Over one year: Declophenac or Ibuprofen or Paracetamol (names as listed; doses are weight-based and by physician order)</li></ul></div><h5>Nasal decongestants — drops that reduce nasal congestion</h5><p><b>Do not use for more than 3–4 days</b> because they may lead to increased congestion. (This differs from the 5-day limit mentioned above: follow the shorter one.)</p><table><thead><tr><th>Group</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Adults (preferred)</td><td>Otrivin adult drops</td><td>Two drops in each nostril 3 times daily for 4 days maximum</td></tr><tr><td>Adults</td><td>Afrin adult drops</td><td>Two drops in each nostril twice daily for 4 days maximum</td></tr><tr><td>Children (not used under one year)</td><td>Otrivin ped. drops</td><td>Two drops in each nostril 3 times daily for 4 days maximum</td></tr><tr><td>Children (not used under one year)</td><td>Afrin ped. drops</td><td>Two drops in each nostril twice daily for 4 days maximum</td></tr><tr><td>Infants, pregnant women, and those needing long-term use (saline, no side effects)</td><td>Otrivin baby saline, Lyse</td><td>Two drops in each nostril 3 times daily (a quarter of an hour before feeding in children)</td></tr></tbody></table><h5>Cough</h5><p>Details of cough medicines are in the \"Cough medicines\" guide.</p><h5>Antibiotics</h5><p>Antibiotics should have no role at all in treating colds and flu. But there are cases where an antibiotic is used: <b>a history of recurrent secondary bacterial infection</b> (for example, pneumonia or acute bronchitis after a cold), and a severe persistent cough with suspected acute bronchitis. The common belief in the community is to turn to antibiotics to treat colds, and physicians find it hard to write a prescription without an antibiotic, but this is not correct.</p>"
+  },
+  "nursing": {
+   "ar": "<p>غالباً بتتعامل مع المريض في عيادة أو منزل أو قسم. نقاط مهمة:</p>\n<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم وطمّن</strong><p>قيس الحرارة والنبض والتنفس وSpO2. اسأل عن المدة والأعراض الخطيرة (صعوبة تنفس، ألم أذن، حرارة مستمرة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>طبّق العلاج غير الدوائي</strong><p>راحة، سوائل دافئة بكميات كبيرة، تهوية جيدة، رطوبة، ورفع الراس عند النوم لتخفيف الاحتقان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>نفّذ الأمر الدوائي بأمان</strong><p>اتأكد من مكونات الدواء (فيه بنادول؟) لتجنب تكرار المسكنات، ومن حساسية المريض. اسأل عن الضغط والسكر والحمل قبل مزيلات الاحتقان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>علّم قطرة الأنف</strong><p>ميّل الراس للخلف قليلاً، نقط 3 نقط كل فتحة، 3 مرات يومياً، <b>ومايزيدش عن 5 أيام</b>. ما تشاركش القطارة مع حد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>منع العدوى</strong><p>غسل الإيدين، المنديل لمرة واحدة، الكمامة عند السعال، ما تلمسش وشك، وعزل المريض عن الرضع وكبار السن لو ممكن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>تابع وسجّل</strong><p>سجّل العلامات الحيوية والأعراض وطلبت إيه. بلّغ لو ظهرت علامات حمراء.</p></div></div></div>\n<div class=\"cs-box cs-danger\"><strong>انتبه</strong><p>الرضع وكبار السن ومرضى الربو والقلب والمناعة الضعيفة: نزلة البرد عندهم أخطر وممكن تتحول لالتهاب شعبي أو رئوي بسرعة.</p></div><div class=\"cs-box cs-tip\"><strong>نقطة تمريضية إضافية</strong><p>للرضّع: ابدأ بغسول الملح في الأنف وشفط لطيف قبل الرضاعة، ولا تستخدم الدواء الفموي أو النقط الخافضة للاحتقان إلا بأمر الطبيب والوزن. لا تعطِ أسبرين لأي طفل. حافظ على سوائل كافية.</p></div><div class=\"cs-box cs-tip\"><strong>قبل ما تدّي دواء برد</strong><ul><li>اسأل عن القلب والضغط والسكر والحمل: لا مزيلات احتقان بالفم لمريض القلب.</li><li>الأنواع المحتوية على مضاد هيستامين جيل أول تسبب نعاس: حذّر من القيادة والعمل.</li><li>الباراسيتامول في Panadol cold وغيره: لا تكرر مسكن.</li><li>قطرة الأنف 3–4 أيام فقط (الأقصر)، وللرضع والحوامل محلول ملح.</li></ul></div>",
+   "en": "<p>You will usually deal with the patient in a clinic, at home, or on a ward. Key points:</p>\n<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess and reassure</strong><p>Measure temperature, pulse, respirations, and SpO2. Ask about duration and danger symptoms (difficulty breathing, ear pain, persistent fever).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Apply non-drug treatment</strong><p>Rest, large amounts of warm fluids, good ventilation, humidity, and raising the head during sleep to relieve congestion.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Carry out the drug order safely</strong><p>Check the drug's ingredients (does it contain Panadol?) to avoid duplicate analgesics, and check the patient's allergies. Ask about blood pressure, diabetes, and pregnancy before decongestants.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Teach nasal drops</strong><p>Tilt the head back slightly, 3 drops in each nostril, 3 times daily, <b>and no more than 5 days</b>. Do not share the dropper with anyone.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Prevent infection</strong><p>Hand washing, single-use tissues, a mask when coughing, do not touch your face, and separate the patient from infants and older adults if possible.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Follow up and document</strong><p>Record vital signs, symptoms, and what was requested. Report if red flags appear.</p></div></div></div>\n<div class=\"cs-box cs-danger\"><strong>Caution</strong><p>Infants, older adults, and patients with asthma, heart disease, and weak immunity: a cold is more dangerous for them and can quickly turn into bronchitis or pneumonia.</p></div><div class=\"cs-box cs-tip\"><strong>Additional nursing point</strong><p>For infants: start with saline nasal rinse and gentle suction before feeding, and do not use oral medicine or decongestant drops except by physician order and by weight. Do not give aspirin to any child. Maintain adequate fluids.</p></div><div class=\"cs-box cs-tip\"><strong>Before giving a cold medicine</strong><ul><li>Ask about heart disease, blood pressure, diabetes, and pregnancy: no oral decongestants for a heart patient.</li><li>Types containing a first-generation antihistamine cause drowsiness: warn against driving and working.</li><li>Paracetamol is in Panadol cold and others: do not duplicate analgesics.</li><li>Nasal drops for 3–4 days only (the shorter limit), and saline for infants and pregnant women.</li></ul></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب لو:</strong><ul><li>ضيق نفس أو أزيز أو زرقة</li><li>حرارة 39 أو أعلى، أو حرارة مستمرة أكتر من 3 أيام</li><li>ألم أذن شديد أو ألم/ضغط في الجيوب الأنفية مع إفرازات</li><li>كحة بتزيد أو ببلغم ملون أو دم</li><li>أعراض أكتر من 10 أيام</li><li>طفل رضيع أو مريض مناعته ضعيفة وبه أعراض</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician if:</strong><ul><li>Shortness of breath, wheezing, or cyanosis</li><li>Temperature of 39 or higher, or fever persisting more than 3 days</li><li>Severe ear pain or sinus pain/pressure with discharge</li><li>Worsening cough, or cough with colored sputum or blood</li><li>Symptoms for more than 10 days</li><li>An infant or an immunocompromised patient with symptoms</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<p>كلام بسيط للمريض:</p>\n<ul><li>ارتاح، واشرب مشروبات دافئة كتير (ينسون، نعناع، حلبة).</li><li>ما تطلبش مضاد حيوي: ده فيروس.</li><li>قطرة الأنف 5 أيام بس، مش أكتر.</li><li>متشربش أكتر من دواء برد في نفس الوقت من غير ما تقرأ المكونات.</li><li>اغسل إيدك وغطّي بقك لما تكح عشان ما تعديش حد.</li><li>لو الأعراض زادت أو طولت، ارجع للدكتور.</li></ul>",
+   "en": "<p>Simple words for the patient:</p>\n<ul><li>Rest, and drink plenty of warm drinks (anise, mint, fenugreek).</li><li>Do not ask for an antibiotic: this is a virus.</li><li>Nasal drops for 5 days only, no more.</li><li>Do not take more than one cold medicine at the same time without reading the ingredients.</li><li>Wash your hands and cover your mouth when you cough so you do not infect others.</li><li>If symptoms worsen or last long, go back to the doctor.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "فيروسية وبتخف في 7–10 أيام: العلاج للأعراض",
+   "الراحة والسوائل الدافئة والكمادات هي الأساس",
+   "قطرة Otrivin لا تزيد عن 5 أيام",
+   "تجنب تكرار أكتر من دواء بارد بنفس المكونات",
+   "ما فيش مضاد حيوي في الزكام",
+   "لاحظ علامات الخطورة وخاصة عند الأطفال وكبار السن",
+   "فيروسات متعددة (أكتر من 200): أغلبها Rhinovirus وCoronavirus، والأعراض تبدأ بعد 2–3 أيام من العدوى",
+   "الباراسيتامول وليس الأسبرين للأطفال (خطر Reye)",
+   "قطرة الأنف المزيلة للاحتقان 3–4 أيام فقط؛ للرضع والحوامل محلول ملح",
+   "مريض القلب: تجنب pseudoephedrine ومضادات هيستامين جيل أول والكافيين",
+   "Panadol = باراسيتامول، وPanadol extra يضيف كافيين"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>نزلة البرد (Common cold) عدوى فيروسية خفيفة في الأنف والحلق، بتجيب رشح وكحة جافة والتهاب حلق، وغالباً بتخف لوحدها خلال أسبوع تقريباً. العلاج هنا <b>لتخفيف الأعراض</b> مش لقتل الفيروس.</p>\n<div class=\"cs-stats\"><div><b>3</b><span>أعراض رئيسية: رشح + كحة جافة + التهاب حلق</span></div><div><b>7–10</b><span>أيام تقريباً حتى تخف الأعراض</span></div><div><b>0</b><span>حاجة للمضاد الحيوي في الغالب</span></div></div>\n[[slot:dis-041-course|مسار نزلة البرد على مدار الأيام وإيه المتوقع كل يوم|/diseases/img/dis-041-course.svg]]\n<div class=\"cs-box cs-info\"><strong>فرق بينها وبين الالتهاب الشعبي</strong><p>في نزلة البرد الأعراض في الأنف والحلق. لو بقت الكحة منتجة بلغم ومعاها حرارة وصدر فيه خرخرة، فده غالباً التهاب شعبي (راجع دليل الالتهاب الشعبي).</p></div>[[slot:dis-041-cold-meds|اختيار أدوية البرد المركبة حسب المريض — رسم توضيحي من إعداد الموقع|/diseases/img/dis-041-cold-meds.svg]]"
-    },
-    "causes": {
-      "ar": "<p>لم تذكر المراجع مسببات، لكن المعروف:</p>\n<div class=\"cs-compare\"><ul><li>عدوى فيروسية (أشهرها Rhinovirus)، بتنتقل بالرذاذ ولمس الأسطح الملوثة</li><li>تزيد في الشتا والزحمة والإرهاق وقلة النوم</li><li>المناعة الضعيفة أو التدخين بيطوّلوا فترة المرض</li></ul></div><h4>معلومات إضافية عن الفيروسات والعدوى</h4><ul><li>نزلة البرد ممكن تتسبب من أكتر من <b>200 فيروس مختلف</b>، لكن أغلبها <b>Rhinovirus</b> و<b>Coronavirus</b>.</li><li>بتبدأ الأعراض غالباً بعد <b>2–3 أيام</b> من دخول الفيروس، وتستمر من عدة أيام لعدة أسابيع.</li><li>بتنتقل بالرذاذ أو بملامسة اليد لليد أو لسطح ملوث ثم لمس الوجه.</li><li>نزلة البرد (Cold) مرض خفيف نسبياً يزول لوحده، وممكن أحياناً يؤدي لعدوى ثانوية زي التهاب الأذن. أما الإنفلونزا (Flu) فممكن تسبب التهاب رئوي ومضاعفات خطيرة (راجع دليل الإنفلونزا).</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>الشكوى</h4>\n<ul><li><b>FAHM</b>: اختصار مكتوب في المراجع للأعراض العامة (يُفهم منه: حرارة وآلام جسم وصداع وتكسير عام)</li><li>سيلان الأنف (Rhinorrhea)</li><li>كحة جافة (Dry cough)</li><li>التهاب الحلق (Sore throat)</li></ul>\n<h4>الفحص</h4>\n<ul><li>احتقان الحلق (Congested throat)</li></ul>\n<div class=\"cs-box cs-warning\"><strong>متى مش مجرد برد؟</strong><ul><li>حرارة عالية أكتر من 3 أيام أو بتزيد</li><li>ألم شديد في الأذن أو الوجه والجيوب، أو إفرازات صفراء/خضراء مع صداع شديد بعد أسبوع</li><li>ضيق نفس أو ألم صدر أو أزيز</li><li>أعراض أكتر من 10 أيام</li></ul></div><h4>الأعراض الأكثر شيوعاً (قائمة كاملة)</h4><ol><li>انسداد وسيلان الأنف (Stuffy, runny nose)</li><li>خدش وحكة في الحلق (Scratchy, tickly throat)</li><li>عطس (Sneezing)</li><li>دموع في العين</li><li>حرارة خفيفة</li><li>التهاب حلق</li><li>كحة خفيفة جافة متقطعة</li><li>آلام عضلات وعظام</li><li>صداع</li><li>إرهاق خفيف</li><li>قشعريرة</li><li>إفرازات أنفية مائية تتكثف وتتحول للأصفر أو الأخضر</li></ol><h4>نزلة البرد مقابل الإنفلونزا</h4><table><thead><tr><th>العَرَض</th><th>نزلة البرد</th><th>الإنفلونزا</th></tr></thead><tbody><tr><td>الحرارة</td><td>قليلة أو لا توجد</td><td>عالية</td></tr><tr><td>الصداع</td><td>أحياناً</td><td>دايماً</td></tr><tr><td>الأنف</td><td>مسدود / رشح</td><td>رشح شفاف</td></tr><tr><td>العطس</td><td>موجود</td><td>أحياناً</td></tr><tr><td>الكحة</td><td>خفيفة جافة متقطعة</td><td>غالباً تشتد</td></tr><tr><td>آلام الجسم</td><td>خفيفة</td><td>غالباً شديدة</td></tr><tr><td>الإرهاق</td><td>خفيف</td><td>شديد، وقد يستمر أسابيع</td></tr><tr><td>التهاب الحلق</td><td>موجود</td><td>أحياناً</td></tr><tr><td>النشاط</td><td>طاقة طبيعية</td><td>إرهاق شديد</td></tr></tbody></table><h4>مقارنة تفصيلية (من المرجع)</h4><table><thead><tr><th></th><th>دور البرد العادي (Common cold)</th><th>الإنفلونزا (Flu)</th></tr></thead><tbody><tr><td>السبب</td><td>فيروس غالباً Rhinovirus</td><td>فيروس الإنفلونزا</td></tr><tr><td>البداية</td><td>تدريجية</td><td>سريعة خلال ساعات</td></tr><tr><td>الشائعة</td><td>التهاب بالحلق، رشح، احتقان بالأنف، عطس، كحة ببلغم</td><td>سخونية (38–40)، ألم شديد بالعضم، إرهاق شديد، صداع، رعشة، كحة ناشفة</td></tr><tr><td>النادرة</td><td>صداع، رعشة، تكسير بالعضم، سخونية بسيطة، إجهاد</td><td>رشح، عطس، التهاب الحلق، احتقان الأنف</td></tr><tr><td>الموسم</td><td>طول السنة</td><td>الشتاء والخريف</td></tr><tr><td>الخطورة</td><td>لا مضاعفات خطيرة</td><td>بعض المضاعفات الخطيرة مثل التهاب رئوي</td></tr></tbody></table><p>عموماً دور البرد والإنفلونزا يخف خلال أسبوع أو أسبوعين، لكن الكحة قد تستمر لفترة أطول وتسمى <b>Post-viral cough</b> خصوصاً في الأطفال.</p>"
-    },
-    "tests": {
-      "ar": "<p>التشخيص إكلينيكي من الأعراض والفحص، <b>ما فيش فحوصات روتينية</b> للنزلة البسيطة. الطبيب بيطلب أشعة أو مزرعة حلق فقط لو شك في مضاعفة (التهاب لوزتين بكتيري، جيوب، رئة).</p>"
-    },
-    "treatment": {
-      "ar": "<h4>1) علاج غير دوائي (الأساس)</h4>\n<ul><li>راحة بالسرير</li><li>الإكثار من السوائل الدافئة: ينسون، نعناع، حلبة…</li><li>كمادات باردة (Cold sponge) للحرارة العالية</li></ul>\n<h4>2) علاج دوائي (للأعراض) حسب المراجع</h4>\n<table><thead><tr><th>الدواء</th><th>طريقة الاستخدام</th><th>ملاحظات</th></tr></thead><tbody><tr><td>Allercet Cold كبسولات (دواء للبرد: مضاد حساسية + مزيل احتقان حسب نشرة المنتج)</td><td>كبسولة مرة يومياً</td><td>نعاس محتمل، وحذر مع ارتفاع الضغط</td></tr><tr><td>أو Brufen Flu أقراص (ibuprofen + مزيل احتقان حسب نشرة المنتج)</td><td>قرص مرتين يومياً</td><td>يؤخذ بعد الأكل لحماية المعدة</td></tr><tr><td>Otrivin ND نقط الأنف (xylometazoline)</td><td>3 نقط في كل فتحة أنف 3 مرات يومياً لمدة 5 أيام فقط</td><td>لا يستمر أكثر من المدة: بيرجّع الاحتقان أشد</td></tr><tr><td>Immulant كبسولات (منشط مناعة)</td><td>كبسولة 3 مرات يومياً</td><td>لرفع المناعة</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>الأدوية الجاهزة للبرد بتجمع أكتر من مادة</b>: متديش Allercet Cold مع Brufen Flu مع بعض أبداً لأن فيهم مكونات متشابهة (مزيل احتقان + مضاد التهاب)، وتأكد إن المريض مش بيأخد بنادول زيادة.</li><li>الكمادات تبقى بماء <b>فاتر</b> (تبريد تدريجي)، مش ماء مثلج.</li><li>المضادات الحيوية <b>ما بتفيدش</b> في نزلة البرد (فيروسي) ولا في الغالب بتحتاجها.</li><li>مزيلات الاحتقان بالفم (pseudoephedrine) ممكن ترفع الضغط والنبض: استخدمها بحذر مع مرضى الضغط والقلب والسكر. نقط الأنف الموضعية حدها الأقصى حسب النشرة (عادة لا تزيد عن 5–7 أيام).</li><li>فعالية Immulant والفيتامينات والزنك محدودة، ولا تُوصف كعلاج أساسي. جرّب العسل مع الدافئ للكحة (لغير الرضع تحت سنة).</li></ul></div><h4>تفاصيل العلاج الدوائي حسب الفئة العمرية (أسماء السوق المصري)</h4><p>العلاج الأساسي: راحة بالسرير وسوائل دافئة مع وجبات خفيفة. الأدوية التالية للأعراض وبأمر الطبيب:</p><h4>البالغون</h4><table><thead><tr><th>الغرض</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>مزيل احتقان</td><td>Noflu قرص</td><td>قرص 3 مرات يومياً</td></tr><tr><td></td><td>Afrin نقط/بخاخ أنف أو Otrivin نقط أنف</td><td>قطرتان في كل فتحة 3 مرات يومياً</td></tr><tr><td>كحة</td><td>Ultrasolve شراب</td><td>ملعقة 3 مرات يومياً</td></tr><tr><td>مسكن وخافض حرارة</td><td>Brufen 600 قرص</td><td>قرص كل 12 ساعة (بعد الأكل)</td></tr><tr><td>فيتامين C</td><td>Vitacid C فوار</td><td>قرص فوار على نصف كوب ماء مرتين يومياً</td></tr><tr><td>مضاد حيوي عند عدوى ثانوية (التهاب أذن وسطى، جيوب، حرارة عالية، تضخم غدد، أو كحة ببلغم)</td><td>Flumox 500 كبسولة</td><td>كبسولة كل 8 ساعات</td></tr><tr><td></td><td>أو Flumox 1 جم فيال</td><td>حقنة بالعضل كل 12 ساعة</td></tr></tbody></table><h4>الأطفال</h4><table><thead><tr><th>الغرض</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>مزيل احتقان</td><td>Rhinopro شراب</td><td>ملعقة كل 12 ساعة</td></tr><tr><td>قطرة أنف</td><td>Afrin ped نقط أنف</td><td>نقط للأنف 3 مرات يومياً</td></tr><tr><td>كحة</td><td>Toplexil شراب</td><td>ملعقة 3 مرات يومياً</td></tr><tr><td>مضاد هيستامين</td><td>Avil شراب</td><td>ملعقة 3 مرات يومياً</td></tr><tr><td>حرارة وألم</td><td>Brufen شراب</td><td>ملعقة 3 مرات يومياً</td></tr><tr><td>مضاد حيوي عند عدوى ثانوية</td><td>Flumox أو Ceporex 250 شراب</td><td>ملعقة كل 6 ساعات</td></tr></tbody></table><h4>الرضّع</h4><table><thead><tr><th>الغرض</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>مزيل احتقان</td><td>Rhinostop نقط فموية</td><td>من نصف إلى ربع القطارة 3 مرات يومياً (حسب النشرة والوزن)</td></tr><tr><td>قطرة أنف</td><td>Otrivine saline نقط أنف</td><td>1–2 نقطة في كل أنف 3 مرات يومياً</td></tr><tr><td>مضاد هيستامين</td><td>Avil شراب</td><td>ملعقة شاي صغيرة 3 مرات يومياً</td></tr><tr><td>حرارة وألم</td><td>Tempra نقط</td><td>5–10 نقط بالفم 3 مرات يومياً</td></tr><tr><td></td><td>أو Dolphin 12.5 لبوس للرضّع</td><td>لبوسة كل 12 ساعة</td></tr><tr><td>فيتامين C</td><td>Ceviline نقط</td><td>5 نقط بالفم 3 مرات يومياً</td></tr><tr><td>مضاد حيوي عند عدوى ثانوية</td><td>Curisafe نقط</td><td>5–15 نقطة بالفم كل 12 ساعة</td></tr><tr><td></td><td>أو Cefotax 500 مجم فيال</td><td>يُحل في 4 مل ماء ويُعطى 2 مل بالعضل كل 12 ساعة</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>ملحوظة مهمة</strong><p>يُستخدم <b>الباراسيتامول بدل الأسبرين</b> لخفض الحرارة خصوصاً في الأطفال. الأسبرين (أو أي دواء به أسبرين) في الأمراض الفيروسية (برد، إنفلونزا، جدري) عند الأطفال مرتبط بـ <b>متلازمة راي (Reye's syndrome)</b>: اضطراب خطير قد يكون مميتاً.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>مضادات الاحتقان ومضادات الكحة وAvil والنقط الفموية للرضّع</b> لا ينصح بها لأقل من سنتين (وبعض الجهات لأقل من 4–6 سنين) لعدم فائدتها وخطر الجرعة الزائدة؛ الأفضل غسول ملحي للأنف وسوائل. <b>Cefotax / Flumox / Ceporex</b> للعدوى البكتيرية الثانوية المؤكدة فقط (الجرعات بالوزن). فيتامين C لا يمنع البرد وفائدته محدودة. <b>Brufen 600 مجم</b> جرعة عالية للبالغين تُعطى بعد الأكل وحسب الحاجة فقط.</div><!--e17--><div class=\"cs-box cs-tip\"><strong>نقط الأنف الملحية للرضع (Otrivin baby saline)</strong><p>تُعطى النقط في أنف الرضيع <b>قبل الرضاعة بربع ساعة</b>، لأن انسداد الأنف يقلل رغبة الطفل في الرضاعة؛ فتفتيح الأنف يحسّن الرضاعة ويحسّن العلاج.</p></div><h4>أدوية البرد المركبة في السوق المصري (من المرجع)</h4><p>معظمها يحتوي على مسكن وخافض حرارة مع مزيل احتقان (مثل pseudoephedrine) أو مضاد حساسية. العلاج في الحالتين (برد/إنفلونزا) واحد تقريباً.</p><h5>للبالغين</h5><table><thead><tr><th>التركيبة</th><th>الأسماء التجارية</th><th>الجرعة</th></tr></thead><tbody><tr><td>مسكن + pseudoephedrine (ibuprofen + مزيل احتقان)</td><td>Cetaphed tab، Brufen cold tab، Powercaps caps</td><td>حسب النشرة (عادة 3 مرات يومياً)</td></tr><tr><td>باراسيتامول + مزيل احتقان (للي معدتهم تتعب)</td><td>Adol cold tab، Panadol cold & flu tab</td><td>قرص 3 مرات يومياً</td></tr><tr><td>مسكن + مزيل احتقان + مضاد هيستامين جيل أول (يسبب نعاس ويؤثر على التركيز والعمل)</td><td>Comtrex tab، Congestal tab، Cold free tab، One two three tab</td><td>قرص 3 مرات يومياً</td></tr><tr><td>نفس التركيبة مع كافيين لتقليل النعاس</td><td>Flustop tab، Flurest tab</td><td>قرص 3 مرات يومياً</td></tr><tr><td>مسكن + مزيل احتقان + مضاد هيستامين جيل تاني (لا يسبب نعاس)</td><td>Allercet cold caps</td><td>واحد يومياً</td></tr><tr><td>أقراص نهارية وليلية (النهارية بدون نعاس وكافيين، الليلية بدون كافيين)</td><td>Coldex tab، Night & Day tab</td><td>قرص نهاراً وقرص ليلاً</td></tr><tr><td>للرشح الشديد (pseudoephedrine + antihistamine)</td><td>Actified tab، Clarinase tab</td><td>قرص صباحاً ومساءً</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Panadol وPanadol extra</strong><ul><li>Panadol: باراسيتامول 500 مجم فقط.</li><li>Panadol extra: باراسيتامول 500 مجم + كافيين (يزيد تأثير الباراسيتامول)، لكن لا يفضل لمرضى القلب والضغط.</li></ul></div><div class=\"cs-box cs-danger\"><strong>أدوية البرد في مرضى القلب</strong><p>معظم أدوية البرد لا تصلح لمرضى القلب بسبب: 1) Pseudoephedrine → تسرع القلب. 2) مضادات الهيستامين جيل أول (أثر شبه الأتروبين) → تسرع. 3) الكافيين → تسرع. لذلك يُنصح بالباراسيتامول فقط (Panadol – Paramol) أو مضاد هيستامين جيل تاني (Zyrtec – Histazine).</p></div><h5>للأطفال</h5><p>لا تُستخدم معظم أدوية البرد في الأطفال أقل من سنة، ويُعطى مسكن وخافض حرارة عادي بدلاً منها (بروفين أو باراسيتامول).</p><table><thead><tr><th>التركيبة</th><th>الأسماء</th><th>الجرعة</th></tr></thead><tbody><tr><td>مسكن + pseudoephedrine</td><td>Brufen flu susp، Dolo-D syrup</td><td>ملعقة صغيرة أو كبيرة 3 مرات يومياً</td></tr><tr><td>+ مضاد هيستامين جيل أول</td><td>One two three syrup، Congestal syrup، Sine up syrup</td><td>ملعقة صغيرة أو كبيرة 3 مرات يومياً</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>اختيار خافض الحرارة والمسكن في الأطفال</strong><ul><li>أقل من 6 شهور: Paracetamol فقط</li><li>من 6 شهور إلى سنة: Ibuprofen أو Paracetamol</li><li>أكبر من سنة: Declophenac أو Ibuprofen أو Paracetamol (الأسماء كما في المرجع؛ الجرعات بالوزن وبأمر الطبيب)</li></ul></div><h5>مزيلات احتقان الأنف (Nasal decongestant) — نقط تقلل احتقان الأنف</h5><p><b>لا تزيد فترة الاستخدام عن 3–4 أيام</b> لأنها قد تؤدي إلى زيادة الاحتقان (المرجع). (يختلف عن حدّ 5 أيام المذكور أعلاه: التزم الأقصر.)</p><table><thead><tr><th>الفئة</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>بالغون (الأفضل)</td><td>Otrivin adult drops</td><td>قطرتان بكل فتحة أنف 3 مرات يومياً لمدة 4 أيام بحد أقصى</td></tr><tr><td>بالغون</td><td>Afrin adult drops</td><td>قطرتان بكل فتحة أنف مرتين يومياً لمدة 4 أيام بحد أقصى</td></tr><tr><td>أطفال (لا تُستخدم أقل من سنة)</td><td>Otrivin ped. drops</td><td>قطرتان بكل فتحة أنف 3 مرات يومياً لمدة 4 أيام بحد أقصى</td></tr><tr><td>أطفال (لا تُستخدم أقل من سنة)</td><td>Afrin ped. drops</td><td>قطرتان بكل فتحة أنف مرتين يومياً لمدة 4 أيام بحد أقصى</td></tr><tr><td>رضّع وحوامل ولمن يحتاج استخداماً طويلاً (محلول ملح، بلا أثر جانبي)</td><td>Otrivin baby saline، Lyse</td><td>قطرتان بكل فتحة أنف 3 مرات يومياً (قبل الرضاعة بربع ساعة في الأطفال)</td></tr></tbody></table><h5>الكحة</h5><p>تفاصيل أدوية الكحة في دليل «أدوية الكحة».</p><h5>المضادات الحيوية</h5><p>المفروض أن المضادات الحيوية ليس لها أي دور في علاج الدور البرد والإنفلونزا. لكن في حالات نلجأ فيها للمضاد: <b>تاريخ مرضي لعدوى بكتيرية ثانوية متكررة</b> (مثلاً التهاب رئوي أو شعبي حاد بعد دور برد)، وكحة شديدة مستمرة مع اشتباه التهاب شعبي حاد. الثقافة العامة في المجتمع هي اللجوء للمضادات لعلاج أدوار البرد، ويجد الأطباء صعوبة في وصف روشتة لا تحتوي على مضاد حيوي، لكن هذا غير صحيح.</p>"
-    },
-    "nursing": {
-      "ar": "<p>غالباً بتتعامل مع المريض في عيادة أو منزل أو قسم. نقاط مهمة:</p>\n<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم وطمّن</strong><p>قيس الحرارة والنبض والتنفس وSpO2. اسأل عن المدة والأعراض الخطيرة (صعوبة تنفس، ألم أذن، حرارة مستمرة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>طبّق العلاج غير الدوائي</strong><p>راحة، سوائل دافئة بكميات كبيرة، تهوية جيدة، رطوبة، ورفع الراس عند النوم لتخفيف الاحتقان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>نفّذ الأمر الدوائي بأمان</strong><p>اتأكد من مكونات الدواء (فيه بنادول؟) لتجنب تكرار المسكنات، ومن حساسية المريض. اسأل عن الضغط والسكر والحمل قبل مزيلات الاحتقان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>علّم قطرة الأنف</strong><p>ميّل الراس للخلف قليلاً، نقط 3 نقط كل فتحة، 3 مرات يومياً، <b>ومايزيدش عن 5 أيام</b>. ما تشاركش القطارة مع حد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>منع العدوى</strong><p>غسل الإيدين، المنديل لمرة واحدة، الكمامة عند السعال، ما تلمسش وشك، وعزل المريض عن الرضع وكبار السن لو ممكن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>تابع وسجّل</strong><p>سجّل العلامات الحيوية والأعراض وطلبت إيه. بلّغ لو ظهرت علامات حمراء.</p></div></div></div>\n<div class=\"cs-box cs-danger\"><strong>انتبه</strong><p>الرضع وكبار السن ومرضى الربو والقلب والمناعة الضعيفة: نزلة البرد عندهم أخطر وممكن تتحول لالتهاب شعبي أو رئوي بسرعة.</p></div><div class=\"cs-box cs-tip\"><strong>نقطة تمريضية إضافية</strong><p>للرضّع: ابدأ بغسول الملح في الأنف وشفط لطيف قبل الرضاعة، ولا تستخدم الدواء الفموي أو النقط الخافضة للاحتقان إلا بأمر الطبيب والوزن. لا تعطِ أسبرين لأي طفل. حافظ على سوائل كافية.</p></div><div class=\"cs-box cs-tip\"><strong>قبل ما تدّي دواء برد</strong><ul><li>اسأل عن القلب والضغط والسكر والحمل: لا مزيلات احتقان بالفم لمريض القلب.</li><li>الأنواع المحتوية على مضاد هيستامين جيل أول تسبب نعاس: حذّر من القيادة والعمل.</li><li>الباراسيتامول في Panadol cold وغيره: لا تكرر مسكن.</li><li>قطرة الأنف 3–4 أيام فقط (الأقصر)، وللرضع والحوامل محلول ملح.</li></ul></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب لو:</strong><ul><li>ضيق نفس أو أزيز أو زرقة</li><li>حرارة 39 أو أعلى، أو حرارة مستمرة أكتر من 3 أيام</li><li>ألم أذن شديد أو ألم/ضغط في الجيوب الأنفية مع إفرازات</li><li>كحة بتزيد أو ببلغم ملون أو دم</li><li>أعراض أكتر من 10 أيام</li><li>طفل رضيع أو مريض مناعته ضعيفة وبه أعراض</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<p>كلام بسيط للمريض:</p>\n<ul><li>ارتاح، واشرب مشروبات دافئة كتير (ينسون، نعناع، حلبة).</li><li>ما تطلبش مضاد حيوي: ده فيروس.</li><li>قطرة الأنف 5 أيام بس، مش أكتر.</li><li>متشربش أكتر من دواء برد في نفس الوقت من غير ما تقرأ المكونات.</li><li>اغسل إيدك وغطّي بقك لما تكح عشان ما تعديش حد.</li><li>لو الأعراض زادت أو طولت، ارجع للدكتور.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "فيروسية وبتخف في 7–10 أيام: العلاج للأعراض",
-      "الراحة والسوائل الدافئة والكمادات هي الأساس",
-      "قطرة Otrivin لا تزيد عن 5 أيام",
-      "تجنب تكرار أكتر من دواء بارد بنفس المكونات",
-      "ما فيش مضاد حيوي في الزكام",
-      "لاحظ علامات الخطورة وخاصة عند الأطفال وكبار السن",
-      "فيروسات متعددة (أكتر من 200): أغلبها Rhinovirus وCoronavirus، والأعراض تبدأ بعد 2–3 أيام من العدوى",
-      "الباراسيتامول وليس الأسبرين للأطفال (خطر Reye)",
-      "قطرة الأنف المزيلة للاحتقان 3–4 أيام فقط؛ للرضع والحوامل محلول ملح",
-      "مريض القلب: تجنب pseudoephedrine ومضادات هيستامين جيل أول والكافيين",
-      "Panadol = باراسيتامول، وPanadol extra يضيف كافيين"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مدة استخدام قطرة Otrivin ND المسموحة في المراجع؟"
-      },
-      "options": [
-        {
-          "ar": "5 أيام فقط"
-        },
-        {
-          "ar": "شهر"
-        },
-        {
-          "ar": "حتى يتوقف الرشح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الاستخدام الأطول بيسبب احتقان ارتدادي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أنسب علاج أساسي لنزلة برد بسيطة؟"
-      },
-      "options": [
-        {
-          "ar": "مضاد حيوي بالحقن"
-        },
-        {
-          "ar": "راحة وسوائل دافئة"
-        },
-        {
-          "ar": "كورتيزون"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "العدوى فيروسية وبتخف بالرعاية الداعمة."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض بياخد Allercet Cold وطلب كمان Brufen Flu. تصرفك؟"
-      },
-      "options": [
-        {
-          "ar": "تديهم الاتنين"
-        },
-        {
-          "ar": "تراجع المكونات وتبلّغ الطبيب لتجنب التكرار"
-        },
-        {
-          "ar": "تضاعف الجرعة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تشابه المكونات (مزيل احتقان/ مضاد التهاب) بيزود الأعراض الجانبية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تعني إن الحالة مش نزلة برد بسيطة؟"
-      },
-      "options": [
-        {
-          "ar": "عطس خفيف"
-        },
-        {
-          "ar": "ضيق نفس وأزيز"
-        },
-        {
-          "ar": "رشح"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "دي علامات مرض في الشعب أو الرئة."
-      }
-    },
-    {
-      "q": {
-        "ar": "خافض الحرارة الأنسب لطفل بنزلة برد؟"
-      },
-      "options": [
-        {
-          "ar": "باراسيتامول"
-        },
-        {
-          "ar": "أسبرين"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأسبرين مرتبط بـ Reye في الأطفال مع الأمراض الفيروسية."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CDC — Common cold: symptom relief and antibiotic stewardship (adult treatment recommendations)"
-    },
-    {
-      "title": "NICE CKS — Common cold (self-care advice)"
-    }
-  ],
-  "rx": [
-    {
-      "category": "الجهاز التنفسي والحساسية",
-      "condition_ar": "نزلة البرد — بالغون",
-      "condition_en": "Common cold (adults)",
-      "items": [
-        {
-          "drug_name": "Cetaphed / Brufen cold / Powercaps",
-          "dose": "حسب النشرة، 3 مرات يومياً",
-          "note": "ibuprofen + مزيل احتقان"
-        },
-        {
-          "drug_name": "Adol cold / Panadol cold & flu",
-          "dose": "قرص 3 مرات يومياً",
-          "note": "باراسيتامول"
-        },
-        {
-          "drug_name": "Comtrex / Congestal / Cold free / One two three",
-          "dose": "قرص 3 مرات يومياً",
-          "note": "نعاس"
-        },
-        {
-          "drug_name": "Flustop / Flurest",
-          "dose": "قرص 3 مرات يومياً",
-          "note": "كافيين"
-        },
-        {
-          "drug_name": "Allercet cold caps",
-          "dose": "كبسولة يومياً",
-          "note": "جيل تاني"
-        },
-        {
-          "drug_name": "Coldex / Night & Day",
-          "dose": "قرص نهاراً وقرص ليلاً",
-          "note": ""
-        },
-        {
-          "drug_name": "Actified / Clarinase",
-          "dose": "قرص صباحاً ومساءً",
-          "note": "رشح شديد"
-        },
-        {
-          "drug_name": "Otrivin adult drops",
-          "dose": "قطرتان 3 مرات، 4 أيام بحد أقصى",
-          "note": ""
-        },
-        {
-          "drug_name": "Afrin adult drops",
-          "dose": "قطرتان مرتين، 4 أيام بحد أقصى",
-          "note": ""
-        }
-      ],
-      "clinical_note": "مريض القلب: باراسيتامول أو Zyrtec/Histazine"
-    },
-    {
-      "category": "أطفال",
-      "condition_ar": "نزلة البرد — أطفال ورضع",
-      "condition_en": "Common cold (children)",
-      "items": [
-        {
-          "drug_name": "Brufen flu susp / Dolo-D syrup",
-          "dose": "ملعقة 3 مرات يومياً",
-          "note": ""
-        },
-        {
-          "drug_name": "One two three / Congestal / Sine up syrup",
-          "dose": "ملعقة 3 مرات يومياً",
-          "note": "مضاد هيستامين"
-        },
-        {
-          "drug_name": "Otrivin ped. drops",
-          "dose": "قطرتان 3 مرات، 4 أيام",
-          "note": "أكبر من سنة"
-        },
-        {
-          "drug_name": "Afrin ped. drops",
-          "dose": "قطرتان مرتين، 4 أيام",
-          "note": "أكبر من سنة"
-        },
-        {
-          "drug_name": "Otrivin baby saline / Lyse",
-          "dose": "قطرتان 3 مرات",
-          "note": "للرضع والحوامل"
-        }
-      ],
-      "clinical_note": ""
-    }
+  "en": [
+   "Viral and resolves in 7–10 days: treatment is for symptoms",
+   "Rest, warm fluids, and sponging are the foundation",
+   "Otrivin drops for no more than 5 days",
+   "Avoid duplicating more than one cold medicine with the same ingredients",
+   "No antibiotics for the common cold",
+   "Watch for danger signs, especially in children and older adults",
+   "Many viruses (more than 200): mostly Rhinovirus and Coronavirus, and symptoms start 2–3 days after infection",
+   "Paracetamol, not aspirin, for children (risk of Reye's)",
+   "Decongestant nasal drops for 3–4 days only; saline for infants and pregnant women",
+   "Heart patients: avoid pseudoephedrine, first-generation antihistamines, and caffeine",
+   "Panadol = paracetamol, and Panadol extra adds caffeine"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مدة استخدام قطرة Otrivin ND المسموحة في المراجع؟",
+    "en": "The permitted duration of use for Otrivin ND drops?"
+   },
+   "options": [
+    {
+     "ar": "5 أيام فقط",
+     "en": "5 days only"
+    },
+    {
+     "ar": "شهر",
+     "en": "One month"
+    },
+    {
+     "ar": "حتى يتوقف الرشح",
+     "en": "Until the runny nose stops"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الاستخدام الأطول بيسبب احتقان ارتدادي.",
+    "en": "Longer use causes rebound congestion."
+   }
+  },
+  {
+   "q": {
+    "ar": "أنسب علاج أساسي لنزلة برد بسيطة؟",
+    "en": "The most appropriate core treatment for a simple cold?"
+   },
+   "options": [
+    {
+     "ar": "مضاد حيوي بالحقن",
+     "en": "An injectable antibiotic"
+    },
+    {
+     "ar": "راحة وسوائل دافئة",
+     "en": "Rest and warm fluids"
+    },
+    {
+     "ar": "كورتيزون",
+     "en": "Corticosteroids"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "العدوى فيروسية وبتخف بالرعاية الداعمة.",
+    "en": "The infection is viral and resolves with supportive care."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض بياخد Allercet Cold وطلب كمان Brufen Flu. تصرفك؟",
+    "en": "A patient taking Allercet Cold also asks for Brufen Flu. What do you do?"
+   },
+   "options": [
+    {
+     "ar": "تديهم الاتنين",
+     "en": "Give both"
+    },
+    {
+     "ar": "تراجع المكونات وتبلّغ الطبيب لتجنب التكرار",
+     "en": "Review the ingredients and notify the physician to avoid duplication"
+    },
+    {
+     "ar": "تضاعف الجرعة",
+     "en": "Double the dose"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تشابه المكونات (مزيل احتقان/ مضاد التهاب) بيزود الأعراض الجانبية.",
+    "en": "Similar ingredients (decongestant/anti-inflammatory) increase side effects."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تعني إن الحالة مش نزلة برد بسيطة؟",
+    "en": "Which sign means the condition is not a simple cold?"
+   },
+   "options": [
+    {
+     "ar": "عطس خفيف",
+     "en": "Mild sneezing"
+    },
+    {
+     "ar": "ضيق نفس وأزيز",
+     "en": "Shortness of breath and wheezing"
+    },
+    {
+     "ar": "رشح",
+     "en": "Runny nose"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "دي علامات مرض في الشعب أو الرئة.",
+    "en": "These are signs of airway or lung disease."
+   }
+  },
+  {
+   "q": {
+    "ar": "خافض الحرارة الأنسب لطفل بنزلة برد؟",
+    "en": "The most appropriate antipyretic for a child with a cold?"
+   },
+   "options": [
+    {
+     "ar": "باراسيتامول",
+     "en": "Paracetamol"
+    },
+    {
+     "ar": "أسبرين",
+     "en": "Aspirin"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأسبرين مرتبط بـ Reye في الأطفال مع الأمراض الفيروسية.",
+    "en": "Aspirin is linked to Reye's in children with viral illnesses."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CDC — Common cold: symptom relief and antibiotic stewardship (adult treatment recommendations)"
+  },
+  {
+   "title": "NICE CKS — Common cold (self-care advice)"
+  }
+ ],
+ "rx": [
+  {
+   "category": "الجهاز التنفسي والحساسية",
+   "condition_ar": "نزلة البرد — بالغون",
+   "condition_en": "Common cold (adults)",
+   "items": [
+    {
+     "drug_name": "Cetaphed / Brufen cold / Powercaps",
+     "dose": "حسب النشرة، 3 مرات يومياً",
+     "note": "ibuprofen + مزيل احتقان"
+    },
+    {
+     "drug_name": "Adol cold / Panadol cold & flu",
+     "dose": "قرص 3 مرات يومياً",
+     "note": "باراسيتامول"
+    },
+    {
+     "drug_name": "Comtrex / Congestal / Cold free / One two three",
+     "dose": "قرص 3 مرات يومياً",
+     "note": "نعاس"
+    },
+    {
+     "drug_name": "Flustop / Flurest",
+     "dose": "قرص 3 مرات يومياً",
+     "note": "كافيين"
+    },
+    {
+     "drug_name": "Allercet cold caps",
+     "dose": "كبسولة يومياً",
+     "note": "جيل تاني"
+    },
+    {
+     "drug_name": "Coldex / Night & Day",
+     "dose": "قرص نهاراً وقرص ليلاً",
+     "note": ""
+    },
+    {
+     "drug_name": "Actified / Clarinase",
+     "dose": "قرص صباحاً ومساءً",
+     "note": "رشح شديد"
+    },
+    {
+     "drug_name": "Otrivin adult drops",
+     "dose": "قطرتان 3 مرات، 4 أيام بحد أقصى",
+     "note": ""
+    },
+    {
+     "drug_name": "Afrin adult drops",
+     "dose": "قطرتان مرتين، 4 أيام بحد أقصى",
+     "note": ""
+    }
+   ],
+   "clinical_note": "مريض القلب: باراسيتامول أو Zyrtec/Histazine"
+  },
+  {
+   "category": "أطفال",
+   "condition_ar": "نزلة البرد — أطفال ورضع",
+   "condition_en": "Common cold (children)",
+   "items": [
+    {
+     "drug_name": "Brufen flu susp / Dolo-D syrup",
+     "dose": "ملعقة 3 مرات يومياً",
+     "note": ""
+    },
+    {
+     "drug_name": "One two three / Congestal / Sine up syrup",
+     "dose": "ملعقة 3 مرات يومياً",
+     "note": "مضاد هيستامين"
+    },
+    {
+     "drug_name": "Otrivin ped. drops",
+     "dose": "قطرتان 3 مرات، 4 أيام",
+     "note": "أكبر من سنة"
+    },
+    {
+     "drug_name": "Afrin ped. drops",
+     "dose": "قطرتان مرتين، 4 أيام",
+     "note": "أكبر من سنة"
+    },
+    {
+     "drug_name": "Otrivin baby saline / Lyse",
+     "dose": "قطرتان 3 مرات",
+     "note": "للرضع والحوامل"
+    }
+   ],
+   "clinical_note": ""
+  }
+ ]
 }

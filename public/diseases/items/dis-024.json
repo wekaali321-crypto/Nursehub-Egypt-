@@ -1,199 +1,252 @@
 {
-  "id": "dis-024",
-  "num": 24,
-  "system": "endo",
-  "icon": "💧",
-  "level": 3,
-  "title": {
-    "ar": "غيبوبة فرط الأسمولية السكرية",
-    "en": "Hyperosmolar Hyperglycemic State (HHS)"
+ "id": "dis-024",
+ "num": 24,
+ "system": "endo",
+ "icon": "💧",
+ "level": 3,
+ "title": {
+  "ar": "غيبوبة فرط الأسمولية السكرية",
+  "en": "Hyperosmolar Hyperglycemic State (HHS)"
+ },
+ "teaser": {
+  "ar": "غيبوبة كبار السن مع السكر العالي: الأساس هو السوائل. افهم الفرق عن DKA وإيه اللي تراقبه عشان ما تهبطش الأسمولية بسرعة.",
+  "en": "Diabetic coma in older adults with very high blood sugar: fluids are the foundation. Understand how it differs from DKA and what to monitor so osmolality does not drop too fast."
+ },
+ "chips": [
+  {
+   "ar": "سكر ≥ 600",
+   "en": "Glucose ≥ 600"
   },
-  "teaser": {
-    "ar": "غيبوبة كبار السن مع السكر العالي: الأساس هو السوائل. افهم الفرق عن DKA وإيه اللي تراقبه عشان ما تهبطش الأسمولية بسرعة."
+  {
+   "ar": "أسمولية > 320",
+   "en": "Osmolality > 320"
   },
-  "chips": [
-    {
-      "ar": "سكر ≥ 600"
-    },
-    {
-      "ar": "أسمولية > 320"
-    },
-    {
-      "ar": "السوائل أولاً"
-    }
+  {
+   "ar": "السوائل أولاً",
+   "en": "Fluids first"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>حالة فرط السكر والأسمولية (Hyperosmolar Hyperglycemic State, HHS) هي غيبوبة السكر في <b>كبار السن مرضى النوع الثاني</b>: سكر عالي جداً وجفاف شديد وأسمولية دم عالية، بدون حموضة كيتونية واضحة لأن الإنسولين موجود بكمية تمنع الكيتونات لكن لا تكفي لخفض السكر. بتبدأ ببطء على أيام.</p><div class=\"cs-stats\"><div><b>≥ 600</b><span>السكر (mg/dl)</span></div><div><b>> 320</b><span>أسمولية الدم (mosmol/L)</span></div><div><b>1–2 L</b><span>محلول ملح فوراً</span></div><div><b>كبار السن</b><span>النوع الثاني</span></div></div>[[slot:dis-024-dka-vs-hhs|مقارنة بين DKA و HHS|/diseases/img/dis-024-dka-vs-hhs.svg]]<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإجماع الحديث (2024): HHS = سكر ≥ 600 mg/dl، أسمولية فعالة ≥ 320 mOsm/kg، بيكربونات أكتر من 18 mmol/L، pH أكتر من 7.3، كيتونات قليلة (BHB أقل من 3 mmol/L). وجود كلا الحالتين معاً (DKA + HHS) ممكن. الدراسات القديمة وضعت حد بيكربونات أكتر من 15 (وهو ما ذُكر في دليل التدريب).</p></div>\n<h4>مقارنة سريعة مع DKA</h4><p>HHNS: نوع 2، سكر فوق 600، جفاف شديد، تغيّر الوعي، لا كيتونات ولا نفس فاكهي ولا ألم بطن، بدء أبطأ وبوتاسيوم مستقر. العلاج: ملح 0.9% ثم منخفض التوتر، ثم Regular وريدي فقط. انظر <a href=\"/diseases/dis-023\">DKA</a>.</p>\n<h4>مقارنة مع DKA (مراجعة)</h4><p>HHNS: نوع 2، أكبر سناً، سكر فوق 600، جفاف شديد وتغير وعي، بلا كيتونات ولا حماض، بداية أبطأ. العلاج: ترطيب 0.9% ثم منخفض التوتر، وإنسولين ريجولار وريدي فقط. انظر <a href=\"/diseases/dis-023\">DKA</a>.</p>[[slot:dis-023-p288|DKA مقابل HHNS — رسم من إعداد الموقع|/diseases/img/dis-023-p288.svg]]",
+   "en": "<p>Hyperosmolar Hyperglycemic State (HHS) is the diabetic coma of <b>older adults with type 2 diabetes</b>: very high blood sugar, severe dehydration, and high blood osmolality, without obvious ketoacidosis, because there is enough insulin to prevent ketones but not enough to lower glucose. It starts slowly over days.</p><div class=\"cs-stats\"><div><b>≥ 600</b><span>Glucose (mg/dl)</span></div><div><b>> 320</b><span>Blood osmolality (mosmol/L)</span></div><div><b>1–2 L</b><span>Saline immediately</span></div><div><b>Older adults</b><span>Type 2</span></div></div>[[slot:dis-024-dka-vs-hhs|Comparison of DKA and HHS|/diseases/img/dis-024-dka-vs-hhs.svg]]<div class=\"cs-box cs-warning\"><strong>Update</strong><p>Current consensus (2024): HHS = glucose ≥ 600 mg/dl, effective osmolality ≥ 320 mOsm/kg, bicarbonate above 18 mmol/L, pH above 7.3, low ketones (BHB below 3 mmol/L). Both conditions can occur together (DKA + HHS). Older studies used a bicarbonate cutoff above 15.</p></div>\n<h4>Quick comparison with DKA</h4><p>HHNS: type 2, glucose above 600, severe dehydration, altered consciousness, no ketones, no fruity breath, and no abdominal pain, slower onset and stable potassium. Treatment: 0.9% saline then hypotonic fluid, then IV Regular insulin only. See <a href=\"/diseases/dis-023\">DKA</a>.</p>\n<h4>Comparison with DKA (review)</h4><p>HHNS: type 2, older age, glucose above 600, severe dehydration and altered consciousness, no ketones and no acidosis, slower onset. Treatment: hydration with 0.9% then hypotonic fluid, and IV Regular insulin only. See <a href=\"/diseases/dis-023\">DKA</a>.</p>[[slot:dis-023-p288|DKA vs HHNS — illustration prepared by the site|/diseases/img/dis-023-p288.svg]]"
+  },
+  "causes": {
+   "ar": "<h4>عوامل التهييج</h4><ul><li>عدوى (التهاب رئوي، بول، قدم سكرية)</li><li>سكتة أو جلطة قلب</li><li>جفاف (قيء، إسهال، قلة شرب، مدرّات)</li><li>أدوية (كورتيزون، مدرّات، حاصرات بيتا) أو إهمال العلاج</li><li>عدم تشخيص السكر أو إهمال الأدوية</li><li>الإقامة في دار رعاية أو مريض لا يشعر بالعطش أو لا يستطيع الشرب</li></ul><div class=\"cs-box cs-info\"><strong>ليه HHS مش DKA؟</strong><p>المشكلة الأساسية في HHS هي <b>مقاومة الإنسولين</b> وليس نقصه الكامل، فالإنسولين الموجود يمنع تكوين الكيتونات، لكن السكر يفضل يعلى والجسم يفقد ماء حتى جفاف شديد.</p></div>",
+   "en": "<h4>Precipitating factors</h4><ul><li>Infection (pneumonia, urinary infection, diabetic foot)</li><li>Stroke or heart attack</li><li>Dehydration (vomiting, diarrhea, poor fluid intake, diuretics)</li><li>Medications (steroids, diuretics, beta-blockers) or missed treatment</li><li>Undiagnosed diabetes or neglected medications</li><li>Living in a care home, or a patient who does not feel thirst or cannot drink</li></ul><div class=\"cs-box cs-info\"><strong>Why HHS and not DKA?</strong><p>The main problem in HHS is <b>insulin resistance</b>, not complete insulin deficiency. The insulin present prevents ketone formation, but glucose keeps rising and the body loses water until severe dehydration develops.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>الصورة الإكلينيكية</h4><ol><li>كبار السن</li><li>النوع الثاني</li><li>بداية تدريجية لتعب (Malaise): ضعف، تخليط، غيبوبة، شلل نصفي (Hemiparesis)</li></ol><h4>الفحص</h4><ul><li>جفاف شديد (Severe dehydration)</li><li>تسرع نبض</li><li>هبوط ضغط</li><li>لو في علامات عصبية بؤرية: أشعة مقطعية CT للمخ مطلوبة وضرورية</li></ul><div class=\"cs-box cs-danger\"><strong>انتبه</strong><p>الشلل النصفي أو التشنج قد يكون من السكتة (سبب) وليس من HHS (نتيجة). لا تفترض.</p></div>[[slot:dis-024-dehydration-signs|صورة: علامات الجفاف الشديد (ثنية الجلد، جفاف اللسان)]]",
+   "en": "<h4>Clinical picture</h4><ol><li>Older adults</li><li>Type 2 diabetes</li><li>Gradual onset of malaise: weakness, confusion, coma, hemiparesis</li></ol><h4>Examination</h4><ul><li>Severe dehydration</li><li>Tachycardia</li><li>Hypotension</li><li>If there are focal neurological signs: a brain CT scan is required and essential</li></ul><div class=\"cs-box cs-danger\"><strong>Caution</strong><p>Hemiparesis or seizures may come from a stroke (the cause), not from HHS (the result). Do not assume.</p></div>[[slot:dis-024-dehydration-signs|Image: signs of severe dehydration (skin tenting, dry tongue)]]"
+  },
+  "tests": {
+   "ar": "<h4>الفحوص التشخيصية</h4><table><thead><tr><th>الفحص</th><th>القيمة</th></tr></thead><tbody><tr><td>الجلوكوز (Glucose)</td><td>≥ 600 mg/dl</td></tr><tr><td>pH</td><td>أكتر من 7.3</td></tr><tr><td>HCO3</td><td>أكتر من 15 (حديثاً أكتر من 18)</td></tr><tr><td>أسمولية المصل (Serum osmolarity)</td><td>أكتر من 320 mosmol/L</td></tr></tbody></table><div class=\"cs-box cs-pearl\"><strong>حساب أسمولية المصل</strong><p>الأسمولية = (2 × [Na + K]) + (سكر الدم ÷ 18). مثال: Na 150، K 4، سكر 900: 2 × 154 = 308 + 50 = 358 mosmol/L (مرتفعة جداً).</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المعادلة الأدق للأسمولية الفعالة (Effective osmolality) = 2 × Na + (سكر ÷ 18) بدون البوتاسيوم، واليوريا لا تُحسب في الفعالة. وصوديوم مصحح = Na مقاس + 1.6 لكل 100 mg/dl سكر فوق 100.</p></div><ul><li>CT للمخ لو علامات عصبية بؤرية</li><li>ECG وبوتاسيوم وصوديوم</li><li>اليوريا والكرياتينين (فشل كلوي حاد)</li><li>CBC وCRP وزراعة لو عدوى</li><li>تحليل بول وكيتونات</li><li>أشعة صدر</li></ul>[[slot:dis-024-ct-brain|أشعة مقطعية على المخ (صورة طبية يضيفها الأدمن)]]<!--e2-24--><h4>معيار الشك السريع في الاستقبال (HONK)</h4><p>علامات جفاف + سكر عشوائي أكبر من 500 + <b>مفيش أسيتون</b> في البول = اشتبه HONK.</p>",
+   "en": "<h4>Diagnostic tests</h4><table><thead><tr><th>Test</th><th>Value</th></tr></thead><tbody><tr><td>Glucose</td><td>≥ 600 mg/dl</td></tr><tr><td>pH</td><td>Above 7.3</td></tr><tr><td>HCO3</td><td>Above 15 (currently above 18)</td></tr><tr><td>Serum osmolarity</td><td>Above 320 mosmol/L</td></tr></tbody></table><div class=\"cs-box cs-pearl\"><strong>Calculating serum osmolality</strong><p>Osmolality = (2 × [Na + K]) + (blood glucose ÷ 18). Example: Na 150, K 4, glucose 900: 2 × 154 = 308 + 50 = 358 mosmol/L (very high).</p></div><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The more accurate formula for effective osmolality = 2 × Na + (glucose ÷ 18), without potassium, and urea is not counted in effective osmolality. Corrected sodium = measured Na + 1.6 for every 100 mg/dl of glucose above 100.</p></div><ul><li>Brain CT if focal neurological signs</li><li>ECG, potassium, and sodium</li><li>Urea and creatinine (acute kidney injury)</li><li>CBC, CRP, and cultures if infection</li><li>Urinalysis and ketones</li><li>Chest X-ray</li></ul>[[slot:dis-024-ct-brain|Brain CT scan (medical image added by the admin)]]<!--e2-24--><h4>Quick suspicion criterion in the ER (HONK)</h4><p>Signs of dehydration + random glucose above 500 + <b>no acetone</b> in the urine = suspect HONK.</p>"
+  },
+  "treatment": {
+   "ar": "<h4>العلاج (كما في DKA مع فروق مهمة)</h4><table><thead><tr><th>النقطة</th><th>في HHS</th></tr></thead><tbody><tr><td>السوائل</td><td><b>حجر الأساس</b>: 1–2 لتر ملح فوراً</td></tr><tr><td>الإنسولين</td><td>أقل أهمية (المشكلة مقاومة وليس نقص). يُعطى بعد تصحيح الحالة الدورانية (Hemodynamic)</td></tr><tr><td>البوتاسيوم</td><td>يُصحّح</td></tr><tr><td>البيكربونات</td><td>غير مطلوبة</td></tr><tr><td>Clexane</td><td>مهمة جداً (خطر جلطات مرتفع)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث (تفاصيل)</strong><p>الإجماع الحديث: سوائل ملح 0.9% بمعدل 1–1.5 لتر في أول ساعة حسب الحالة، ثم يقلّ الإعطاء. السكر يُنزل ببطء (حوالي 50–75 mg/dl/ساعة). الهبوط السريع للأسمولية (أكتر من 3–8 mOsm/kg/ساعة) خطر. الإنسولين بمعدل ثابت منخفض (حوالي 0.05 وحدة/كجم/ساعة) بعد بدء السوائل وبوتاسيوم 3.3 فأكتر، وبعد ما السكر يهبط لحوالي 300 mg/dl يضاف دكستروز لو لزم. الحل: أسمولية أقل من 300 وتحسن الوعي. وقاية الجلطات: Heparin/Clexane ما لم يوجد مانع.</p></div><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>سوائل</strong><p>1–2 لتر ملح 0.9% فوراً بأمر الطبيب، ثم حسب الصوديوم المصحح والجفاف والقلب والكلى</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>بوتاسيوم</strong><p>تابع وصحّح (لا إنسولين لو أقل من 3.3)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>إنسولين</strong><p>بعد استقرار الدورة الدموية وبمعدل ثابت</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>منع الجلطات</strong><p>Clexane / Heparin</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>السبب</strong><p>عدوى أو جلطة: عالجها</p></div></div></div><h4>الطوارئ الأولية</h4><p>سوائل وريدية سريعة: محلول ملح 0.9% لترين (زجاجتين) بسرعة، ثم تحويل الحالة أو طلب نائب الباطنة (حسب المراجع). المعدل التفصيلي بأمر الطبيب (ارجع للجدول أعلاه).</p>",
+   "en": "<h4>Treatment (as in DKA, with important differences)</h4><table><thead><tr><th>Point</th><th>In HHS</th></tr></thead><tbody><tr><td>Fluids</td><td><b>The cornerstone</b>: 1–2 liters of saline immediately</td></tr><tr><td>Insulin</td><td>Less important (the problem is resistance, not deficiency). Given after correcting the circulatory (hemodynamic) state</td></tr><tr><td>Potassium</td><td>Corrected</td></tr><tr><td>Bicarbonate</td><td>Not required</td></tr><tr><td>Clexane</td><td>Very important (high risk of clots)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update (details)</strong><p>Current consensus: 0.9% saline at 1–1.5 liters in the first hour depending on the condition, then the rate is reduced. Lower glucose slowly (about 50–75 mg/dl/hour). A rapid fall in osmolality (more than 3–8 mOsm/kg/hour) is dangerous. Insulin at a fixed low rate (about 0.05 units/kg/hour) after fluids have started and potassium is 3.3 or higher; once glucose falls to about 300 mg/dl, add dextrose if needed. Resolution: osmolality below 300 and improved consciousness. Clot prevention: Heparin/Clexane unless contraindicated.</p></div><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Fluids</strong><p>1–2 liters of 0.9% saline immediately per physician order, then according to corrected sodium, dehydration, heart, and kidneys</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Potassium</strong><p>Monitor and correct (no insulin if below 3.3)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Insulin</strong><p>After the circulation is stable, at a fixed rate</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Clot prevention</strong><p>Clexane / Heparin</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>The cause</strong><p>Infection or clot: treat it</p></div></div></div><h4>Initial emergency care</h4><p>Rapid IV fluids: 0.9% saline, two liters (two bottles) quickly, then transfer the patient or call the internal medicine resident. The detailed rate is per physician order (see the table above).</p>"
+  },
+  "nursing": {
+   "ar": "<p>الـ HHS يشبه DKA في الخطورة وهو أبطأ بداية وأعلى وفيات في كبار السن:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الوعي والجفاف</strong><p>GCS، جفاف اللسان وثنية الجلد، النبض، الضغط، كمية البول، الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>خطين وريديين وقسطرة</strong><p>خط وريدي ويفضل اتنين، وقسطرة بولية لو لازم، ومراقب قلب (ECG).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>سوائل أولاً</strong><p>اتبع المعدل المأمور (1–2 لتر ملح) ولاحظ كبار السن: ضيق نفس، ورم، ارتفاع الضغط الوريدي (فشل قلب).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الإنسولين بأمر وبعد السوائل</strong><p>لا تبدأ قبل ما الطبيب يأمر وبعد ما البوتاسيوم 3.3 فأكتر. بمضخة سرنجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>قياس مستمر</strong><p>السكر كل ساعة، صوديوم وبوتاسيوم كل 2–4 ساعات، العلامات الحيوية، الوعي. الأسمولية تنزل ببطء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وقاية المضاعفات</strong><p>وقاية الجلطات (Clexane)، العناية بالجلد (قرح الفراش)، الفم، تغيير الوضع، منع السقوط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>التغذية والإنسولين</strong><p>تغذية تدريجية، تحويل لإنسولين تحت الجلد قبل إيقاف الوريدي بساعتين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>السبب</strong><p>ابحث عن العدوى أو السكتة وسجّل أي تغير عصبي.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>هبوط الأسمولية بسرعة قد يسبب استسقاء المخ، وهبوط السكر السريع خطر. السوائل الزائدة خطر على القلب في كبار السن. راقب الوعي والتنفس باستمرار.</p></div><table><thead><tr><th>المتابعة</th><th>التكرار</th></tr></thead><tbody><tr><td>العلامات الحيوية</td><td>كل ساعة أو ساعتين</td></tr><tr><td>سكر الدم</td><td>كل ساعة</td></tr><tr><td>الصوديوم والبوتاسيوم</td><td>كل 2–4 ساعات</td></tr><tr><td>الداخل والخارج</td><td>مستمر</td></tr></tbody></table>",
+   "en": "<p>HHS is as dangerous as DKA; it has a slower onset and higher mortality in older adults:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess consciousness and dehydration</strong><p>GCS, dry tongue and skin tenting, pulse, blood pressure, urine output, weight.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Two IV lines and a catheter</strong><p>An IV line, preferably two, a urinary catheter if needed, and a cardiac monitor (ECG).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Fluids first</strong><p>Follow the ordered rate (1–2 liters of saline) and watch older adults for: shortness of breath, edema, raised venous pressure (heart failure).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Insulin by order and after fluids</strong><p>Do not start before the physician orders it and potassium is 3.3 or higher. Use a syringe pump.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Continuous monitoring</strong><p>Glucose every hour, sodium and potassium every 2–4 hours, vital signs, consciousness. Osmolality should fall slowly.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Prevent complications</strong><p>Clot prevention (Clexane), skin care (pressure ulcers), mouth care, repositioning, fall prevention.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Nutrition and insulin</strong><p>Gradual feeding; switch to subcutaneous insulin two hours before stopping the IV insulin.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>The cause</strong><p>Look for infection or stroke and document any neurological change.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>A rapid fall in osmolality can cause cerebral edema, and a rapid fall in glucose is dangerous. Excess fluids are dangerous for the heart in older adults. Monitor consciousness and breathing continuously.</p></div><table><thead><tr><th>Monitoring</th><th>Frequency</th></tr></thead><tbody><tr><td>Vital signs</td><td>Every 1 or 2 hours</td></tr><tr><td>Blood glucose</td><td>Every hour</td></tr><tr><td>Sodium and potassium</td><td>Every 2–4 hours</td></tr><tr><td>Intake and output</td><td>Continuous</td></tr></tbody></table>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>تراجع الوعي أو تشنج أو شلل جديد</li><li>ضغط منخفض رغم السوائل أو بول قليل جداً</li><li>ضيق نفس أو ورم أو أصوات رئوية (زيادة سوائل)</li><li>بوتاسيوم أقل من 3.3 أو أعلى من 5.2 أو تغير ECG</li><li>سكر ينزل أسرع من المعدل أو أقل من 250 مع إنسولين</li><li>حرارة أو علامات عدوى</li><li>ألم ساق أو ضيق نفس مفاجئ (جلطة وريدية/رئوية)</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Decreasing consciousness, a seizure, or new paralysis</li><li>Low blood pressure despite fluids, or very low urine output</li><li>Shortness of breath, edema, or lung crackles (fluid overload)</li><li>Potassium below 3.3 or above 5.2, or ECG changes</li><li>Glucose falling faster than the target rate, or below 250 on insulin</li><li>Fever or signs of infection</li><li>Leg pain or sudden shortness of breath (DVT/pulmonary embolism)</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<p>للمريض وأسرته:</p><ul><li>كبار السن مش دايماً بيحسوا بالعطش: لازم يشربوا ماء بانتظام.</li><li>قياس السكر بانتظام خصوصاً في المرض والحر.</li><li>في القيء والإسهال والحمى: اتصل بالطبيب، لا توقف الأدوية دون استشارة.</li><li>اعرف العلامات: عطش، كتر تبول، ضعف، خلط، نعاس.</li><li>التزم بأدوية السكر والضغط وراجع الطبيب عند تغيير أي دواء.</li><li>تفقد المسنين اللي عايشين لوحدهم.</li></ul>",
+   "en": "<p>For the patient and family:</p><ul><li>Older adults do not always feel thirsty: they must drink water regularly.</li><li>Check blood sugar regularly, especially during illness and hot weather.</li><li>With vomiting, diarrhea, or fever: call the physician; do not stop medications without advice.</li><li>Know the signs: thirst, frequent urination, weakness, confusion, drowsiness.</li><li>Take diabetes and blood pressure medications as prescribed, and see the physician before changing any medication.</li><li>Check on older adults who live alone.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "HHS يصيب كبار السن مرضى النوع الثاني ببداية تدريجية",
+   "التشخيص: سكر ≥ 600 وأسمولية > 320 وبدون حموضة كيتونية واضحة",
+   "السوائل حجر الأساس (1–2 لتر ملح فوراً) والإنسولين أقل أهمية",
+   "الإنسولين بعد تصحيح الدورة الدموية وبوتاسيوم 3.3 فأكتر",
+   "البيكربونات غير مطلوبة وClexane مهم جداً",
+   "CT للمخ لو عَرَض عصبي بؤري",
+   "خفض الأسمولية والسكر ببطء",
+   "HONK: جفاف + سكر أكبر من 500 + بدون أسيتون بالبول"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>حالة فرط السكر والأسمولية (Hyperosmolar Hyperglycemic State, HHS) هي غيبوبة السكر في <b>كبار السن مرضى النوع الثاني</b>: سكر عالي جداً وجفاف شديد وأسمولية دم عالية، بدون حموضة كيتونية واضحة لأن الإنسولين موجود بكمية تمنع الكيتونات لكن لا تكفي لخفض السكر. بتبدأ ببطء على أيام.</p><div class=\"cs-stats\"><div><b>≥ 600</b><span>السكر (mg/dl)</span></div><div><b>> 320</b><span>أسمولية الدم (mosmol/L)</span></div><div><b>1–2 L</b><span>محلول ملح فوراً</span></div><div><b>كبار السن</b><span>النوع الثاني</span></div></div>[[slot:dis-024-dka-vs-hhs|مقارنة بين DKA و HHS|/diseases/img/dis-024-dka-vs-hhs.svg]]<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإجماع الحديث (2024): HHS = سكر ≥ 600 mg/dl، أسمولية فعالة ≥ 320 mOsm/kg، بيكربونات أكتر من 18 mmol/L، pH أكتر من 7.3، كيتونات قليلة (BHB أقل من 3 mmol/L). وجود كلا الحالتين معاً (DKA + HHS) ممكن. الدراسات القديمة وضعت حد بيكربونات أكتر من 15 (وهو ما ذُكر في دليل التدريب).</p></div>\n<h4>مقارنة سريعة مع DKA</h4><p>HHNS: نوع 2، سكر فوق 600، جفاف شديد، تغيّر الوعي، لا كيتونات ولا نفس فاكهي ولا ألم بطن، بدء أبطأ وبوتاسيوم مستقر. العلاج: ملح 0.9% ثم منخفض التوتر، ثم Regular وريدي فقط. انظر <a href=\"/diseases/dis-023\">DKA</a>.</p>\n<h4>مقارنة مع DKA (مراجعة)</h4><p>HHNS: نوع 2، أكبر سناً، سكر فوق 600، جفاف شديد وتغير وعي، بلا كيتونات ولا حماض، بداية أبطأ. العلاج: ترطيب 0.9% ثم منخفض التوتر، وإنسولين ريجولار وريدي فقط. انظر <a href=\"/diseases/dis-023\">DKA</a>.</p>[[slot:dis-023-p288|DKA مقابل HHNS — رسم من إعداد الموقع|/diseases/img/dis-023-p288.svg]]"
-    },
-    "causes": {
-      "ar": "<h4>عوامل التهييج</h4><ul><li>عدوى (التهاب رئوي، بول، قدم سكرية)</li><li>سكتة أو جلطة قلب</li><li>جفاف (قيء، إسهال، قلة شرب، مدرّات)</li><li>أدوية (كورتيزون، مدرّات، حاصرات بيتا) أو إهمال العلاج</li><li>عدم تشخيص السكر أو إهمال الأدوية</li><li>الإقامة في دار رعاية أو مريض لا يشعر بالعطش أو لا يستطيع الشرب</li></ul><div class=\"cs-box cs-info\"><strong>ليه HHS مش DKA؟</strong><p>المشكلة الأساسية في HHS هي <b>مقاومة الإنسولين</b> وليس نقصه الكامل، فالإنسولين الموجود يمنع تكوين الكيتونات، لكن السكر يفضل يعلى والجسم يفقد ماء حتى جفاف شديد.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>الصورة الإكلينيكية</h4><ol><li>كبار السن</li><li>النوع الثاني</li><li>بداية تدريجية لتعب (Malaise): ضعف، تخليط، غيبوبة، شلل نصفي (Hemiparesis)</li></ol><h4>الفحص</h4><ul><li>جفاف شديد (Severe dehydration)</li><li>تسرع نبض</li><li>هبوط ضغط</li><li>لو في علامات عصبية بؤرية: أشعة مقطعية CT للمخ مطلوبة وضرورية</li></ul><div class=\"cs-box cs-danger\"><strong>انتبه</strong><p>الشلل النصفي أو التشنج قد يكون من السكتة (سبب) وليس من HHS (نتيجة). لا تفترض.</p></div>[[slot:dis-024-dehydration-signs|صورة: علامات الجفاف الشديد (ثنية الجلد، جفاف اللسان)]]"
-    },
-    "tests": {
-      "ar": "<h4>الفحوص التشخيصية</h4><table><thead><tr><th>الفحص</th><th>القيمة</th></tr></thead><tbody><tr><td>الجلوكوز (Glucose)</td><td>≥ 600 mg/dl</td></tr><tr><td>pH</td><td>أكتر من 7.3</td></tr><tr><td>HCO3</td><td>أكتر من 15 (حديثاً أكتر من 18)</td></tr><tr><td>أسمولية المصل (Serum osmolarity)</td><td>أكتر من 320 mosmol/L</td></tr></tbody></table><div class=\"cs-box cs-pearl\"><strong>حساب أسمولية المصل</strong><p>الأسمولية = (2 × [Na + K]) + (سكر الدم ÷ 18). مثال: Na 150، K 4، سكر 900: 2 × 154 = 308 + 50 = 358 mosmol/L (مرتفعة جداً).</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المعادلة الأدق للأسمولية الفعالة (Effective osmolality) = 2 × Na + (سكر ÷ 18) بدون البوتاسيوم، واليوريا لا تُحسب في الفعالة. وصوديوم مصحح = Na مقاس + 1.6 لكل 100 mg/dl سكر فوق 100.</p></div><ul><li>CT للمخ لو علامات عصبية بؤرية</li><li>ECG وبوتاسيوم وصوديوم</li><li>اليوريا والكرياتينين (فشل كلوي حاد)</li><li>CBC وCRP وزراعة لو عدوى</li><li>تحليل بول وكيتونات</li><li>أشعة صدر</li></ul>[[slot:dis-024-ct-brain|أشعة مقطعية على المخ (صورة طبية يضيفها الأدمن)]]<!--e2-24--><h4>معيار الشك السريع في الاستقبال (HONK)</h4><p>علامات جفاف + سكر عشوائي أكبر من 500 + <b>مفيش أسيتون</b> في البول = اشتبه HONK.</p>"
-    },
-    "treatment": {
-      "ar": "<h4>العلاج (كما في DKA مع فروق مهمة)</h4><table><thead><tr><th>النقطة</th><th>في HHS</th></tr></thead><tbody><tr><td>السوائل</td><td><b>حجر الأساس</b>: 1–2 لتر ملح فوراً</td></tr><tr><td>الإنسولين</td><td>أقل أهمية (المشكلة مقاومة وليس نقص). يُعطى بعد تصحيح الحالة الدورانية (Hemodynamic)</td></tr><tr><td>البوتاسيوم</td><td>يُصحّح</td></tr><tr><td>البيكربونات</td><td>غير مطلوبة</td></tr><tr><td>Clexane</td><td>مهمة جداً (خطر جلطات مرتفع)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث (تفاصيل)</strong><p>الإجماع الحديث: سوائل ملح 0.9% بمعدل 1–1.5 لتر في أول ساعة حسب الحالة، ثم يقلّ الإعطاء. السكر يُنزل ببطء (حوالي 50–75 mg/dl/ساعة). الهبوط السريع للأسمولية (أكتر من 3–8 mOsm/kg/ساعة) خطر. الإنسولين بمعدل ثابت منخفض (حوالي 0.05 وحدة/كجم/ساعة) بعد بدء السوائل وبوتاسيوم 3.3 فأكتر، وبعد ما السكر يهبط لحوالي 300 mg/dl يضاف دكستروز لو لزم. الحل: أسمولية أقل من 300 وتحسن الوعي. وقاية الجلطات: Heparin/Clexane ما لم يوجد مانع.</p></div><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>سوائل</strong><p>1–2 لتر ملح 0.9% فوراً بأمر الطبيب، ثم حسب الصوديوم المصحح والجفاف والقلب والكلى</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>بوتاسيوم</strong><p>تابع وصحّح (لا إنسولين لو أقل من 3.3)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>إنسولين</strong><p>بعد استقرار الدورة الدموية وبمعدل ثابت</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>منع الجلطات</strong><p>Clexane / Heparin</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>السبب</strong><p>عدوى أو جلطة: عالجها</p></div></div></div><h4>الطوارئ الأولية</h4><p>سوائل وريدية سريعة: محلول ملح 0.9% لترين (زجاجتين) بسرعة، ثم تحويل الحالة أو طلب نائب الباطنة (حسب المراجع). المعدل التفصيلي بأمر الطبيب (ارجع للجدول أعلاه).</p>"
-    },
-    "nursing": {
-      "ar": "<p>الـ HHS يشبه DKA في الخطورة وهو أبطأ بداية وأعلى وفيات في كبار السن:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الوعي والجفاف</strong><p>GCS، جفاف اللسان وثنية الجلد، النبض، الضغط، كمية البول، الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>خطين وريديين وقسطرة</strong><p>خط وريدي ويفضل اتنين، وقسطرة بولية لو لازم، ومراقب قلب (ECG).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>سوائل أولاً</strong><p>اتبع المعدل المأمور (1–2 لتر ملح) ولاحظ كبار السن: ضيق نفس، ورم، ارتفاع الضغط الوريدي (فشل قلب).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الإنسولين بأمر وبعد السوائل</strong><p>لا تبدأ قبل ما الطبيب يأمر وبعد ما البوتاسيوم 3.3 فأكتر. بمضخة سرنجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>قياس مستمر</strong><p>السكر كل ساعة، صوديوم وبوتاسيوم كل 2–4 ساعات، العلامات الحيوية، الوعي. الأسمولية تنزل ببطء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وقاية المضاعفات</strong><p>وقاية الجلطات (Clexane)، العناية بالجلد (قرح الفراش)، الفم، تغيير الوضع، منع السقوط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>التغذية والإنسولين</strong><p>تغذية تدريجية، تحويل لإنسولين تحت الجلد قبل إيقاف الوريدي بساعتين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>السبب</strong><p>ابحث عن العدوى أو السكتة وسجّل أي تغير عصبي.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>هبوط الأسمولية بسرعة قد يسبب استسقاء المخ، وهبوط السكر السريع خطر. السوائل الزائدة خطر على القلب في كبار السن. راقب الوعي والتنفس باستمرار.</p></div><table><thead><tr><th>المتابعة</th><th>التكرار</th></tr></thead><tbody><tr><td>العلامات الحيوية</td><td>كل ساعة أو ساعتين</td></tr><tr><td>سكر الدم</td><td>كل ساعة</td></tr><tr><td>الصوديوم والبوتاسيوم</td><td>كل 2–4 ساعات</td></tr><tr><td>الداخل والخارج</td><td>مستمر</td></tr></tbody></table>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>تراجع الوعي أو تشنج أو شلل جديد</li><li>ضغط منخفض رغم السوائل أو بول قليل جداً</li><li>ضيق نفس أو ورم أو أصوات رئوية (زيادة سوائل)</li><li>بوتاسيوم أقل من 3.3 أو أعلى من 5.2 أو تغير ECG</li><li>سكر ينزل أسرع من المعدل أو أقل من 250 مع إنسولين</li><li>حرارة أو علامات عدوى</li><li>ألم ساق أو ضيق نفس مفاجئ (جلطة وريدية/رئوية)</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<p>للمريض وأسرته:</p><ul><li>كبار السن مش دايماً بيحسوا بالعطش: لازم يشربوا ماء بانتظام.</li><li>قياس السكر بانتظام خصوصاً في المرض والحر.</li><li>في القيء والإسهال والحمى: اتصل بالطبيب، لا توقف الأدوية دون استشارة.</li><li>اعرف العلامات: عطش، كتر تبول، ضعف، خلط، نعاس.</li><li>التزم بأدوية السكر والضغط وراجع الطبيب عند تغيير أي دواء.</li><li>تفقد المسنين اللي عايشين لوحدهم.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "HHS يصيب كبار السن مرضى النوع الثاني ببداية تدريجية",
-      "التشخيص: سكر ≥ 600 وأسمولية > 320 وبدون حموضة كيتونية واضحة",
-      "السوائل حجر الأساس (1–2 لتر ملح فوراً) والإنسولين أقل أهمية",
-      "الإنسولين بعد تصحيح الدورة الدموية وبوتاسيوم 3.3 فأكتر",
-      "البيكربونات غير مطلوبة وClexane مهم جداً",
-      "CT للمخ لو عَرَض عصبي بؤري",
-      "خفض الأسمولية والسكر ببطء",
-      "HONK: جفاف + سكر أكبر من 500 + بدون أسيتون بالبول"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "الفرق الأساسي بين HHS وDKA؟"
-      },
-      "options": [
-        {
-          "ar": "HHS بدون حموضة كيتونية واضحة وسكر أعلى"
-        },
-        {
-          "ar": "HHS أسرع بداية"
-        },
-        {
-          "ar": "HHS للنوع الأول"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "HHS: سكر عالي جداً وجفاف وأسمولية، بدون كيتونات واضحة."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما حجر الأساس في علاج HHS؟"
-      },
-      "options": [
-        {
-          "ar": "الإنسولين"
-        },
-        {
-          "ar": "السوائل"
-        },
-        {
-          "ar": "البيكربونات"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الجفاف الشديد هو الأهم."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض HHS وعليه علامة عصبية بؤرية. ماذا يلزم؟"
-      },
-      "options": [
-        {
-          "ar": "CT للمخ"
-        },
-        {
-          "ar": "لا شيء"
-        },
-        {
-          "ar": "إنسولين فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قد يكون وراءه سكتة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أسمولية المصل = ؟"
-      },
-      "options": [
-        {
-          "ar": "2×(Na+K) + سكر/18"
-        },
-        {
-          "ar": "سكر × 2"
-        },
-        {
-          "ar": "Na × 3"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "المعادلة التقليدية؛ والأدق 2Na + سكر/18."
-      }
-    },
-    {
-      "q": {
-        "ar": "لماذا Clexane مهم في HHS؟"
-      },
-      "options": [
-        {
-          "ar": "خطر الجلطات مرتفع بسبب الجفاف"
-        },
-        {
-          "ar": "يخفض السكر"
-        },
-        {
-          "ar": "يعالج العدوى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الجفاف وكثافة الدم تزيد خطر التجلط."
-      }
-    },
-    {
-      "q": {
-        "ar": "الإنسولين الوريدي في HHNS:"
-      },
-      "options": [
-        {
-          "ar": "Regular فقط"
-        },
-        {
-          "ar": "NPH"
-        },
-        {
-          "ar": "glargine"
-        },
-        {
-          "ar": "لا إنسولين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الوحيد المسموح وريديًا."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ADA/EASD Consensus Report: Hyperglycaemic Crises in Adults with Diabetes (2024)"
-    },
-    {
-      "title": "ADA Standards of Care: Diabetes Care in the Hospital"
-    },
-    {
-      "title": "StatPearls: Hyperosmolar Hyperglycemic State"
-    }
+  "en": [
+   "HHS affects older adults with type 2 diabetes, with a gradual onset",
+   "Diagnosis: glucose ≥ 600, osmolality > 320, and no obvious ketoacidosis",
+   "Fluids are the cornerstone (1–2 liters of saline immediately); insulin is less important",
+   "Insulin after the circulation is corrected and potassium is 3.3 or higher",
+   "Bicarbonate is not required, and Clexane is very important",
+   "Brain CT if there is a focal neurological sign",
+   "Lower osmolality and glucose slowly",
+   "HONK: dehydration + glucose above 500 + no acetone in the urine"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "الفرق الأساسي بين HHS وDKA؟",
+    "en": "What is the main difference between HHS and DKA?"
+   },
+   "options": [
+    {
+     "ar": "HHS بدون حموضة كيتونية واضحة وسكر أعلى",
+     "en": "HHS has no obvious ketoacidosis and higher glucose"
+    },
+    {
+     "ar": "HHS أسرع بداية",
+     "en": "HHS has a faster onset"
+    },
+    {
+     "ar": "HHS للنوع الأول",
+     "en": "HHS is for type 1"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "HHS: سكر عالي جداً وجفاف وأسمولية، بدون كيتونات واضحة.",
+    "en": "HHS: very high glucose, dehydration, and high osmolality, without obvious ketones."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما حجر الأساس في علاج HHS؟",
+    "en": "What is the cornerstone of HHS treatment?"
+   },
+   "options": [
+    {
+     "ar": "الإنسولين",
+     "en": "Insulin"
+    },
+    {
+     "ar": "السوائل",
+     "en": "Fluids"
+    },
+    {
+     "ar": "البيكربونات",
+     "en": "Bicarbonate"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الجفاف الشديد هو الأهم.",
+    "en": "Severe dehydration is the most important problem."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض HHS وعليه علامة عصبية بؤرية. ماذا يلزم؟",
+    "en": "A patient with HHS has a focal neurological sign. What is needed?"
+   },
+   "options": [
+    {
+     "ar": "CT للمخ",
+     "en": "Brain CT"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    },
+    {
+     "ar": "إنسولين فقط",
+     "en": "Insulin only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قد يكون وراءه سكتة.",
+    "en": "A stroke may be behind it."
+   }
+  },
+  {
+   "q": {
+    "ar": "أسمولية المصل = ؟",
+    "en": "Serum osmolality = ?"
+   },
+   "options": [
+    {
+     "ar": "2×(Na+K) + سكر/18",
+     "en": "2×(Na+K) + glucose/18"
+    },
+    {
+     "ar": "سكر × 2",
+     "en": "Glucose × 2"
+    },
+    {
+     "ar": "Na × 3",
+     "en": "Na × 3"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "المعادلة التقليدية؛ والأدق 2Na + سكر/18.",
+    "en": "The traditional formula; the more accurate one is 2Na + glucose/18."
+   }
+  },
+  {
+   "q": {
+    "ar": "لماذا Clexane مهم في HHS؟",
+    "en": "Why is Clexane important in HHS?"
+   },
+   "options": [
+    {
+     "ar": "خطر الجلطات مرتفع بسبب الجفاف",
+     "en": "The risk of clots is high because of dehydration"
+    },
+    {
+     "ar": "يخفض السكر",
+     "en": "It lowers glucose"
+    },
+    {
+     "ar": "يعالج العدوى",
+     "en": "It treats infection"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الجفاف وكثافة الدم تزيد خطر التجلط.",
+    "en": "Dehydration and thick blood increase the risk of clotting."
+   }
+  },
+  {
+   "q": {
+    "ar": "الإنسولين الوريدي في HHNS:",
+    "en": "IV insulin in HHNS:"
+   },
+   "options": [
+    {
+     "ar": "Regular فقط",
+     "en": "Regular only"
+    },
+    {
+     "ar": "NPH",
+     "en": "NPH"
+    },
+    {
+     "ar": "glargine",
+     "en": "glargine"
+    },
+    {
+     "ar": "لا إنسولين",
+     "en": "No insulin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الوحيد المسموح وريديًا.",
+    "en": "The only type allowed intravenously."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ADA/EASD Consensus Report: Hyperglycaemic Crises in Adults with Diabetes (2024)"
+  },
+  {
+   "title": "ADA Standards of Care: Diabetes Care in the Hospital"
+  },
+  {
+   "title": "StatPearls: Hyperosmolar Hyperglycemic State"
+  }
+ ]
 }

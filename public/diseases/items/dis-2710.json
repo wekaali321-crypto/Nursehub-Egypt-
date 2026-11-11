@@ -1,254 +1,322 @@
 {
-  "id": "dis-2710",
-  "num": 2710,
-  "system": "chest",
-  "icon": "🫁",
-  "level": 3,
-  "title": {
-    "ar": "رعاية مريض التنفس الصناعي: الشفط وVAP وإزالة الأنبوب والفغرة الرغامية",
-    "en": "Mechanical Ventilation Nursing: Suction, VAP, Extubation & Tracheostomy"
+ "id": "dis-2710",
+ "num": 2710,
+ "system": "chest",
+ "icon": "🫁",
+ "level": 3,
+ "title": {
+  "ar": "رعاية مريض التنفس الصناعي: الشفط وVAP وإزالة الأنبوب والفغرة الرغامية",
+  "en": "Mechanical Ventilation Nursing: Suction, VAP, Extubation & Tracheostomy"
+ },
+ "teaser": {
+  "ar": "قواعد الشفط الخمس، الوقاية من الالتهاب الرئوي المرتبط بالتنفس الصناعي، مضاعفات PEEP العالي، رعاية ما بعد إزالة الأنبوب، وTracheostomy (فتحة القصبة الهوائية) الجديدة والناضجة.",
+  "en": "The five suctioning rules, prevention of ventilator-associated pneumonia, complications of high PEEP, post-extubation care, and the new and mature Tracheostomy."
+ },
+ "chips": [
+  {
+   "ar": "شفط ≤ 10 ثوان",
+   "en": "Suction ≤ 10 seconds"
   },
-  "teaser": {
-    "ar": "قواعد الشفط الخمس، الوقاية من الالتهاب الرئوي المرتبط بالتنفس الصناعي، مضاعفات PEEP العالي، رعاية ما بعد إزالة الأنبوب، وTracheostomy (فتحة القصبة الهوائية) الجديدة والناضجة."
+  {
+   "ar": "VAP",
+   "en": "VAP"
   },
-  "chips": [
-    {
-      "ar": "شفط ≤ 10 ثوان"
-    },
-    {
-      "ar": "VAP"
-    },
-    {
-      "ar": "إزالة الأنبوب"
-    },
-    {
-      "ar": "Tracheostomy (فغرة رغامية)"
-    }
+  {
+   "ar": "إزالة الأنبوب",
+   "en": "Extubation"
+  },
+  {
+   "ar": "Tracheostomy (فغرة رغامية)",
+   "en": "Tracheostomy"
+  }
+ ],
+ "target": "icu-nursing",
+ "sections": {
+  "overview": {
+   "ar": "<p>التهوية الميكانيكية: آلة تعطي المريض أنفاسًا بدفع هواء إلى الرئتين كمضخة إطار الدراجة؛ تسمى التهوية بالضغط الإيجابي (PPV). لنظام الأجهزة والإنذارات انظر <a href=\"/diseases/dis-2801\">جهاز التنفس الصناعي</a>، وللأكسجين والـBiPAP انظر <a href=\"/diseases/dis-1408\">أجهزة الأكسجين</a>.</p>[[slot:dis-2710-suction|الشفط وVAP — رسم من إعداد الموقع|/diseases/img/dis-2710-suction.svg]]",
+   "en": "<p>Mechanical ventilation: a machine that gives the patient breaths by pushing air into the lungs like a bicycle tire pump; it is called positive pressure ventilation (PPV). For the ventilator system and alarms see <a href=\"/diseases/dis-2801\">the mechanical ventilator</a>, and for oxygen and BiPAP see <a href=\"/diseases/dis-1408\">oxygen devices</a>.</p>[[slot:dis-2710-suction|Suctioning and VAP — site-made diagram|/diseases/img/dis-2710-suction.svg]]"
+  },
+  "causes": {
+   "ar": "<p>الفشل التنفسي، الغيبوبة، التخدير الجراحي، وARDS.</p>",
+   "en": "<p>Respiratory failure, coma, surgical anesthesia, and ARDS.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li>هبوط تشبع الأكسجين: اسمع أصوات الرئة، اشفط إن وُجدت إفرازات، استعمل كيس الإنعاش.</li><li>صرير بعد إزالة الأنبوب: أبلغ فورًا (قد يعني وذمة حنجرية).</li></ul>",
+   "en": "<ul><li>Falling oxygen saturation: listen to lung sounds, suction if secretions are present, use the resuscitation bag.</li><li>Stridor after extubation: report immediately (may mean laryngeal edema).</li></ul>"
+  },
+  "tests": {
+   "ar": "<p>غازات الدم الشرياني (لا تشفط قبلها بحوالي 20 دقيقة)، وأشعة الصدر وزرع البلغم لمؤشرات VAP.</p>",
+   "en": "<p>Arterial blood gases (do not suction for about 20 minutes before), and chest X-ray and sputum culture for VAP indicators.</p>"
+  },
+  "treatment": {
+   "ar": "<ul><li>ضبط FiO₂ عند تحضير الشفط، ومريض ارتفاع الضغط داخل الجمجمة: الشفط حين ينخفض التشبع بسبب زيادة الإفرازات.</li><li>التغذية: أنبوب أنفي معدي دون وجبات دفعة واحدة؛ وقاية من قرحة الإجهاد المعدية.</li></ul>\n<h4>العناية الروتينية بالـTracheostomy وشفطها</h4>[[slot:dis-2710-trachcare|العناية بالفغرة الرغامية والشفط — رسم من إعداد الموقع|/diseases/img/dis-2710-trachcare.svg]]<p>الغرض: دعم التئام فتحة الـTracheostomy ومنع تلف الجلد، والشفط المتكرر يزيل الإفرازات ويقلل خطر العدوى ونقص الأكسجة.</p><ul><li><strong>التقييم:</strong> الرائحة، نوع القنية، أصوات الرئة قبل وبعد، الإفرازات، سلامة الجلد وعلامات العدوى، نوع الـTracheostomy والضمادة.</li><li><strong>المخاطر:</strong> عدوى، نقص أكسجة، إصابة عند الإدخال أو النزع. جهّز أدوات الطوارئ بجانب المريض، وكيس إنعاش (Ambu) للمريض على الجهاز، تحسبًا لانزلاق الأنبوب.</li><li><strong>العدة:</strong> صينية تنظيف الـTracheostomy (قفازات معقمة، أحواض معقمة، منظفات أنابيب، فرشاة، أعواد قطنية، شاش)، إسفنجة/شاش 4×4 مشقوق غير متهرئ، قنية داخلية بديلة، ملح معقم، أربطة قطنية نظيفة أو حامل Velcro، وعاءان معقمان وقفازات معقمة إضافية.</li></ul><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تحقق وتجهيز</strong><p>تأكد من الهوية بمعرّفين، اشرح الإجراء، افتح الصينية وارتدِ قفازًا معقمًا واحدًا لتجهيز الحوضين، صبّ الملح في كل حوض باليد غير المعقمة، ثم ارتدِ القفاز الثاني.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>القنية الداخلية</strong><p>ثبّت صفيحة القنية الخارجية بالسبابة والإبهام، افك القفل (غالبًا بإدارة 90° لليسار) واسحبها برفق. انقعها في الملح المعقم أو تخلص منها إن كانت للاستعمال الواحد، ونظّف اللومن بالفرشاة المبللة وجففها على شاش معقم، ثم أعدها وأقفلها (إدارة لليمين) مع تثبيت الشفة الخارجية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الجلد والضمادة</strong><p>نظّف الجلد حول الـTracheostomy بشاش أو أعواد مبللة بملح من الحوض النظيف (الذي لم تُنظف فيه القنية) مع شاش مستقل للقنية الخارجية، ضع ضمادة مشقوقة جديدة بحيث تكون الشقوق متجهة للأعلى، وبدّل الأربطة عند الحاجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الإنهاء</strong><p>اسأل المريض عن حاجته، أقفل السرير بوضع منخفض والجرس في المتناول، ووثّق.</p></div></div></div><p>التوثيق: الوقت، لون ورائحة وكمية الإفراز على الضمادة، استجابة المريض وتحمله، الوضع بعد الإجراء، ونوع وكمية الإفرازات المشفوطة. التثقيف: اشرح الإجراء، واطلب من المريض أن يعبر عن فهمه لطريقة العناية، وأن الشعور مثل الاختناق الخفيف قد يحدث.</p>",
+   "en": "<ul><li>Adjust FiO₂ when preparing for suctioning; in a patient with raised intracranial pressure: suction when saturation falls because of increased secretions.</li><li>Nutrition: nasogastric tube without bolus feeds; prophylaxis against gastric stress ulcers.</li></ul>\n<h4>Routine Tracheostomy care and suctioning</h4>[[slot:dis-2710-trachcare|Tracheostomy care and suctioning — site-made diagram|/diseases/img/dis-2710-trachcare.svg]]<p>Purpose: support healing of the Tracheostomy opening and prevent skin breakdown; frequent suctioning removes secretions and reduces the risk of infection and hypoxia.</p><ul><li><strong>Assessment:</strong> odor, cannula type, lung sounds before and after, secretions, skin integrity and signs of infection, Tracheostomy type and dressing.</li><li><strong>Risks:</strong> infection, hypoxia, injury during insertion or removal. Keep emergency equipment at the bedside, and a resuscitation bag (Ambu) for the ventilated patient, in case the tube dislodges.</li><li><strong>Equipment:</strong> Tracheostomy cleaning tray (sterile gloves, sterile basins, pipe cleaners, brush, cotton-tipped applicators, gauze), a pre-cut, non-fraying 4×4 sponge/gauze, a spare inner cannula, sterile saline, clean cotton ties or a Velcro holder, two sterile containers and extra sterile gloves.</li></ul><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Verify and prepare</strong><p>Confirm identity with two identifiers, explain the procedure, open the tray and put on one sterile glove to set up the two basins, pour saline into each basin with the non-sterile hand, then put on the second glove.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>The inner cannula</strong><p>Stabilize the outer cannula faceplate with the index finger and thumb, unlock it (usually by turning 90° to the left) and withdraw it gently. Soak it in sterile saline or discard it if single-use, clean the lumen with the wet brush and dry it on sterile gauze, then reinsert it and lock it (turn to the right) while stabilizing the outer flange.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Skin and dressing</strong><p>Clean the skin around the Tracheostomy with gauze or applicators moistened with saline from the clean basin (the one not used to clean the cannula), with separate gauze for the outer cannula; apply a new pre-cut dressing with the slits facing upward, and change the ties when needed.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Finishing</strong><p>Ask the patient about their needs, lock the bed in a low position with the call bell within reach, and document.</p></div></div></div><p>Documentation: the time, color, odor and amount of drainage on the dressing, the patient's response and tolerance, the position after the procedure, and the type and amount of suctioned secretions. Teaching: explain the procedure, ask the patient to express understanding of the care method, and that a feeling like mild choking may occur.</p>"
+  },
+  "nursing": {
+   "ar": "<h4>5 نقاط للشفط</h4><ol><li>الشفط أثناء السحب فقط.</li><li>10 ثوان أو أقل.</li><li>أكسجين 100% قبل 30 ثانية.</li><li>لا شفط قبل ABG.</li><li>لا شفط روتيني.</li></ol><h4>وقاية VAP</h4><ul><li>تغيير الوضع جانبيًا كل ساعتين.</li><li>عناية فموية بـchlorhexidine كل ساعتين.</li><li>إيقاف المهدئ يوميًا والفطام، رفع الرأس 30–45°، غسل اليدين.</li></ul>[[slot:dis-2710-care|المضاعفات والإزالة والفغرة — رسم من إعداد الموقع|/diseases/img/dis-2710-care.svg]]<h4>المضاعفات والإزالة والـTracheostomy</h4><ul><li><strong>هبوط التشبع:</strong> أصوات الرئة، شفط، تهوية بكيس إنعاش (يجب وجوده عند السرير)، وتجهيز تنبيب ثانٍ وقناع صمام.</li><li><strong>استرواح صدر</strong> بسبب PEEP عالٍ (نقطة امتحان: أكثر من 60% من الطلاب يخطئون).</li><li><strong>هبوط الضغط.</strong></li><li><strong>بعد الإزالة:</strong> أكسجين دافئ رطب بقناع، عناية فموية، NPO، Fowler العالي. خطران: انخماص والتهاب رئوي (مقياس حافز كل ساعة وTCDB) وصرير (يُبلَّغ فورًا).</li><li><strong>الـTracheostomy الجديدة:</strong> أولوية: إحكام الأربطة (إصبع واحد تحتها). <strong>الناضجة (7 أيام فأكثر)</strong> إن خرجت: أدخل أنبوبًا جديدًا بملقط منحنٍ، وغطِّ الفتحة بضماد معقم محكم وهوِّ بكيس-قناع على الأنف/الفم.</li></ul>",
+   "en": "<h4>5 points for suctioning</h4><ol><li>Suction only while withdrawing.</li><li>10 seconds or less.</li><li>100% oxygen for 30 seconds before.</li><li>No suctioning before ABG.</li><li>No routine suctioning.</li></ol><h4>VAP prevention</h4><ul><li>Turn side to side every 2 hours.</li><li>Oral care with chlorhexidine every 2 hours.</li><li>Daily sedation interruption and weaning, head elevation 30–45°, hand washing.</li></ul>[[slot:dis-2710-care|Complications, extubation and tracheostomy — site-made diagram|/diseases/img/dis-2710-care.svg]]<h4>Complications, extubation and Tracheostomy</h4><ul><li><strong>Falling saturation:</strong> lung sounds, suction, ventilate with a resuscitation bag (must be at the bedside), and prepare for re-intubation and a bag-valve mask.</li><li><strong>Pneumothorax</strong> due to high PEEP (exam point: more than 60% of students get it wrong).</li><li><strong>Hypotension.</strong></li><li><strong>After extubation:</strong> warm humidified oxygen by mask, oral care, NPO, high Fowler's. Two dangers: atelectasis and pneumonia (incentive spirometer every hour and TCDB) and stridor (report immediately).</li><li><strong>New Tracheostomy:</strong> priority: secure ties (one finger under them). <strong>Mature (7 days or more)</strong> if it comes out: insert a new tube with a curved hemostat, and cover the opening with a sterile occlusive dressing and ventilate with a bag-mask over the nose/mouth.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>طارئ</strong><p>صرير بعد إزالة الأنبوب، هبوط تشبع مفاجئ مع غياب أصوات التنفس (استرواح)، أو خروج Tracheostomy جديدة.</p></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Emergency</strong><p>Stridor after extubation, sudden desaturation with absent breath sounds (pneumothorax), or dislodgement of a new Tracheostomy.</p></div>"
+  },
+  "teaching": {
+   "ar": "<p>للأسرة: الجهاز مؤقت، والتنفس بعد الإزالة يحتاج تمارين التنفس والسعال.</p>",
+   "en": "<p>For the family: the ventilator is temporary, and breathing after extubation needs breathing and coughing exercises.</p>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "التهوية بالضغط الإيجابي (PPV)",
+   "الشفط عند السحب فقط وبحد أقصى 10 ثوان وبأكسجين 100% قبله",
+   "لا شفط روتيني",
+   "VAP: رفع الرأس وchlorhexidine وغسل اليدين وإيقاف المهدئ يوميًا",
+   "PEEP عالٍ: استرواح صدر",
+   "بعد الإزالة: صرير = أبلغ فورًا",
+   "الـTracheostomy الجديدة: إصبع تحت الأربطة"
   ],
-  "target": "icu-nursing",
-  "sections": {
-    "overview": {
-      "ar": "<p>التهوية الميكانيكية: آلة تعطي المريض أنفاسًا بدفع هواء إلى الرئتين كمضخة إطار الدراجة؛ تسمى التهوية بالضغط الإيجابي (PPV). لنظام الأجهزة والإنذارات انظر <a href=\"/diseases/dis-2801\">جهاز التنفس الصناعي</a>، وللأكسجين والـBiPAP انظر <a href=\"/diseases/dis-1408\">أجهزة الأكسجين</a>.</p>[[slot:dis-2710-suction|الشفط وVAP — رسم من إعداد الموقع|/diseases/img/dis-2710-suction.svg]]"
-    },
-    "causes": {
-      "ar": "<p>الفشل التنفسي، الغيبوبة، التخدير الجراحي، وARDS.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li>هبوط تشبع الأكسجين: اسمع أصوات الرئة، اشفط إن وُجدت إفرازات، استعمل كيس الإنعاش.</li><li>صرير بعد إزالة الأنبوب: أبلغ فورًا (قد يعني وذمة حنجرية).</li></ul>"
-    },
-    "tests": {
-      "ar": "<p>غازات الدم الشرياني (لا تشفط قبلها بحوالي 20 دقيقة)، وأشعة الصدر وزرع البلغم لمؤشرات VAP.</p>"
-    },
-    "treatment": {
-      "ar": "<ul><li>ضبط FiO₂ عند تحضير الشفط، ومريض ارتفاع الضغط داخل الجمجمة: الشفط حين ينخفض التشبع بسبب زيادة الإفرازات.</li><li>التغذية: أنبوب أنفي معدي دون وجبات دفعة واحدة؛ وقاية من قرحة الإجهاد المعدية.</li></ul>\n<h4>العناية الروتينية بالـTracheostomy وشفطها</h4>[[slot:dis-2710-trachcare|العناية بالفغرة الرغامية والشفط — رسم من إعداد الموقع|/diseases/img/dis-2710-trachcare.svg]]<p>الغرض: دعم التئام فتحة الـTracheostomy ومنع تلف الجلد، والشفط المتكرر يزيل الإفرازات ويقلل خطر العدوى ونقص الأكسجة.</p><ul><li><strong>التقييم:</strong> الرائحة، نوع القنية، أصوات الرئة قبل وبعد، الإفرازات، سلامة الجلد وعلامات العدوى، نوع الـTracheostomy والضمادة.</li><li><strong>المخاطر:</strong> عدوى، نقص أكسجة، إصابة عند الإدخال أو النزع. جهّز أدوات الطوارئ بجانب المريض، وكيس إنعاش (Ambu) للمريض على الجهاز، تحسبًا لانزلاق الأنبوب.</li><li><strong>العدة:</strong> صينية تنظيف الـTracheostomy (قفازات معقمة، أحواض معقمة، منظفات أنابيب، فرشاة، أعواد قطنية، شاش)، إسفنجة/شاش 4×4 مشقوق غير متهرئ، قنية داخلية بديلة، ملح معقم، أربطة قطنية نظيفة أو حامل Velcro، وعاءان معقمان وقفازات معقمة إضافية.</li></ul><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تحقق وتجهيز</strong><p>تأكد من الهوية بمعرّفين، اشرح الإجراء، افتح الصينية وارتدِ قفازًا معقمًا واحدًا لتجهيز الحوضين، صبّ الملح في كل حوض باليد غير المعقمة، ثم ارتدِ القفاز الثاني.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>القنية الداخلية</strong><p>ثبّت صفيحة القنية الخارجية بالسبابة والإبهام، افك القفل (غالبًا بإدارة 90° لليسار) واسحبها برفق. انقعها في الملح المعقم أو تخلص منها إن كانت للاستعمال الواحد، ونظّف اللومن بالفرشاة المبللة وجففها على شاش معقم، ثم أعدها وأقفلها (إدارة لليمين) مع تثبيت الشفة الخارجية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الجلد والضمادة</strong><p>نظّف الجلد حول الـTracheostomy بشاش أو أعواد مبللة بملح من الحوض النظيف (الذي لم تُنظف فيه القنية) مع شاش مستقل للقنية الخارجية، ضع ضمادة مشقوقة جديدة بحيث تكون الشقوق متجهة للأعلى، وبدّل الأربطة عند الحاجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الإنهاء</strong><p>اسأل المريض عن حاجته، أقفل السرير بوضع منخفض والجرس في المتناول، ووثّق.</p></div></div></div><p>التوثيق: الوقت، لون ورائحة وكمية الإفراز على الضمادة، استجابة المريض وتحمله، الوضع بعد الإجراء، ونوع وكمية الإفرازات المشفوطة. التثقيف: اشرح الإجراء، واطلب من المريض أن يعبر عن فهمه لطريقة العناية، وأن الشعور مثل الاختناق الخفيف قد يحدث.</p>"
-    },
-    "nursing": {
-      "ar": "<h4>5 نقاط للشفط</h4><ol><li>الشفط أثناء السحب فقط.</li><li>10 ثوان أو أقل.</li><li>أكسجين 100% قبل 30 ثانية.</li><li>لا شفط قبل ABG.</li><li>لا شفط روتيني.</li></ol><h4>وقاية VAP</h4><ul><li>تغيير الوضع جانبيًا كل ساعتين.</li><li>عناية فموية بـchlorhexidine كل ساعتين.</li><li>إيقاف المهدئ يوميًا والفطام، رفع الرأس 30–45°، غسل اليدين.</li></ul>[[slot:dis-2710-care|المضاعفات والإزالة والفغرة — رسم من إعداد الموقع|/diseases/img/dis-2710-care.svg]]<h4>المضاعفات والإزالة والـTracheostomy</h4><ul><li><strong>هبوط التشبع:</strong> أصوات الرئة، شفط، تهوية بكيس إنعاش (يجب وجوده عند السرير)، وتجهيز تنبيب ثانٍ وقناع صمام.</li><li><strong>استرواح صدر</strong> بسبب PEEP عالٍ (نقطة امتحان: أكثر من 60% من الطلاب يخطئون).</li><li><strong>هبوط الضغط.</strong></li><li><strong>بعد الإزالة:</strong> أكسجين دافئ رطب بقناع، عناية فموية، NPO، Fowler العالي. خطران: انخماص والتهاب رئوي (مقياس حافز كل ساعة وTCDB) وصرير (يُبلَّغ فورًا).</li><li><strong>الـTracheostomy الجديدة:</strong> أولوية: إحكام الأربطة (إصبع واحد تحتها). <strong>الناضجة (7 أيام فأكثر)</strong> إن خرجت: أدخل أنبوبًا جديدًا بملقط منحنٍ، وغطِّ الفتحة بضماد معقم محكم وهوِّ بكيس-قناع على الأنف/الفم.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>طارئ</strong><p>صرير بعد إزالة الأنبوب، هبوط تشبع مفاجئ مع غياب أصوات التنفس (استرواح)، أو خروج Tracheostomy جديدة.</p></div>"
-    },
-    "teaching": {
-      "ar": "<p>للأسرة: الجهاز مؤقت، والتنفس بعد الإزالة يحتاج تمارين التنفس والسعال.</p>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "التهوية بالضغط الإيجابي (PPV)",
-      "الشفط عند السحب فقط وبحد أقصى 10 ثوان وبأكسجين 100% قبله",
-      "لا شفط روتيني",
-      "VAP: رفع الرأس وchlorhexidine وغسل اليدين وإيقاف المهدئ يوميًا",
-      "PEEP عالٍ: استرواح صدر",
-      "بعد الإزالة: صرير = أبلغ فورًا",
-      "الـTracheostomy الجديدة: إصبع تحت الأربطة"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي قواعد للشفط صحيحة؟"
-      },
-      "options": [
-        {
-          "ar": "10 ثوان أو أقل مع أكسجين 100% قبله"
-        },
-        {
-          "ar": "لا حد زمنيًا"
-        },
-        {
-          "ar": "شفط أثناء الإدخال"
-        },
-        {
-          "ar": "شفط روتيني كل ساعة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الشفط الطويل يسبب نقص أكسجة وإصابة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أفضل مؤشرات VAP؟ (اختر ما ينطبق)"
-      },
-      "options": [
-        {
-          "ar": "بلغم موجب الزرع وحمى وارتشاح جديد بالأشعة"
-        },
-        {
-          "ar": "جوع"
-        },
-        {
-          "ar": "صداع"
-        },
-        {
-          "ar": "تقرحات فم فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مؤشرات العدوى الرئوية على الجهاز."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي إجراءات تمنع VAP؟ (اختر ما ينطبق)"
-      },
-      "options": [
-        {
-          "ar": "إيقاف المهدئ يوميًا ورفع الرأس 30–45 وchlorhexidine وغسل اليدين"
-        },
-        {
-          "ar": "تسطيح السرير"
-        },
-        {
-          "ar": "تجنب العناية الفموية"
-        },
-        {
-          "ar": "تغيير الوضع كل 12 ساعة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "هذه الحزمة الوقائية المعتمدة."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد إزالة أنبوب القصبة بـ10 دقائق: أي نتيجة تُبلَّغ بأولوية؟"
-      },
-      "options": [
-        {
-          "ar": "صرير"
-        },
-        {
-          "ar": "سعال خفيف"
-        },
-        {
-          "ar": "عطش"
-        },
-        {
-          "ar": "نعاس"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الصرير قد يعني وذمة حنجرية وانسدادًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "Tracheostomy جديدة: أولوية التمريض؟"
-      },
-      "options": [
-        {
-          "ar": "فحص إحكام الأربطة (إصبع واحد تحتها)"
-        },
-        {
-          "ar": "تغيير الأنبوب يوميًا"
-        },
-        {
-          "ar": "إغلاقه"
-        },
-        {
-          "ar": "النظر فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأربطة الفضفاضة قد تُخرج الأنبوب والمشدودة تضغط الرقبة."
-      }
-    },
-    {
-      "q": {
-        "ar": "مضاعفة PEEP العالي؟"
-      },
-      "options": [
-        {
-          "ar": "استرواح صدر"
-        },
-        {
-          "ar": "فرط السكر"
-        },
-        {
-          "ar": "ارتفاع الضغط فقط"
-        },
-        {
-          "ar": "التهاب مفاصل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الضغط الإيجابي العالي يمزق الحويصلات (رضح ضغطي)."
-      }
-    },
-    {
-      "q": {
-        "ar": "أين تُجهّز أدوات الطوارئ أثناء العناية بالـTracheostomy؟"
-      },
-      "options": [
-        {
-          "ar": "بجانب المريض مع كيس إنعاش"
-        },
-        {
-          "ar": "في غرفة بعيدة"
-        },
-        {
-          "ar": "لا حاجة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "انزلاق الأنبوب يستلزم تدخلًا فوريًا بتهوية يدوية."
-      }
-    },
-    {
-      "q": {
-        "ar": "عند تنظيف الجلد حول الـTracheostomy تستعمل:"
-      },
-      "options": [
-        {
-          "ar": "حوضًا نظيفًا غير الذي نُظفت فيه القنية الداخلية"
-        },
-        {
-          "ar": "نفس الحوض"
-        },
-        {
-          "ar": "ماء الصنبور"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تجنب نقل الإفرازات من القنية إلى الجلد."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "NCLEX-RN Test Plan (NCSBN)"
-    },
-    {
-      "title": "Brunner & Suddarth Textbook of Medical-Surgical Nursing"
-    }
+  "en": [
+   "Positive pressure ventilation (PPV)",
+   "Suction only while withdrawing, for a maximum of 10 seconds, with 100% oxygen before",
+   "No routine suctioning",
+   "VAP: head elevation, chlorhexidine, hand washing and daily sedation interruption",
+   "High PEEP: pneumothorax",
+   "After extubation: stridor = report immediately",
+   "New Tracheostomy: one finger under the ties"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي قواعد للشفط صحيحة؟",
+    "en": "Which suctioning rules are correct?"
+   },
+   "options": [
+    {
+     "ar": "10 ثوان أو أقل مع أكسجين 100% قبله",
+     "en": "10 seconds or less with 100% oxygen before"
+    },
+    {
+     "ar": "لا حد زمنيًا",
+     "en": "No time limit"
+    },
+    {
+     "ar": "شفط أثناء الإدخال",
+     "en": "Suction during insertion"
+    },
+    {
+     "ar": "شفط روتيني كل ساعة",
+     "en": "Routine suctioning every hour"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الشفط الطويل يسبب نقص أكسجة وإصابة.",
+    "en": "Prolonged suctioning causes hypoxia and injury."
+   }
+  },
+  {
+   "q": {
+    "ar": "أفضل مؤشرات VAP؟ (اختر ما ينطبق)",
+    "en": "The best indicators of VAP? (select all that apply)"
+   },
+   "options": [
+    {
+     "ar": "بلغم موجب الزرع وحمى وارتشاح جديد بالأشعة",
+     "en": "Culture-positive sputum, fever and a new infiltrate on X-ray"
+    },
+    {
+     "ar": "جوع",
+     "en": "Hunger"
+    },
+    {
+     "ar": "صداع",
+     "en": "Headache"
+    },
+    {
+     "ar": "تقرحات فم فقط",
+     "en": "Mouth ulcers only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مؤشرات العدوى الرئوية على الجهاز.",
+    "en": "Indicators of lung infection on the ventilator."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي إجراءات تمنع VAP؟ (اختر ما ينطبق)",
+    "en": "Which measures prevent VAP? (select all that apply)"
+   },
+   "options": [
+    {
+     "ar": "إيقاف المهدئ يوميًا ورفع الرأس 30–45 وchlorhexidine وغسل اليدين",
+     "en": "Daily sedation interruption, head elevation 30–45, chlorhexidine and hand washing"
+    },
+    {
+     "ar": "تسطيح السرير",
+     "en": "Flattening the bed"
+    },
+    {
+     "ar": "تجنب العناية الفموية",
+     "en": "Avoiding oral care"
+    },
+    {
+     "ar": "تغيير الوضع كل 12 ساعة",
+     "en": "Turning every 12 hours"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "هذه الحزمة الوقائية المعتمدة.",
+    "en": "This is the approved prevention bundle."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد إزالة أنبوب القصبة بـ10 دقائق: أي نتيجة تُبلَّغ بأولوية؟",
+    "en": "10 minutes after removal of the endotracheal tube: which finding is reported as a priority?"
+   },
+   "options": [
+    {
+     "ar": "صرير",
+     "en": "Stridor"
+    },
+    {
+     "ar": "سعال خفيف",
+     "en": "Mild cough"
+    },
+    {
+     "ar": "عطش",
+     "en": "Thirst"
+    },
+    {
+     "ar": "نعاس",
+     "en": "Drowsiness"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الصرير قد يعني وذمة حنجرية وانسدادًا.",
+    "en": "Stridor may mean laryngeal edema and obstruction."
+   }
+  },
+  {
+   "q": {
+    "ar": "Tracheostomy جديدة: أولوية التمريض؟",
+    "en": "New Tracheostomy: nursing priority?"
+   },
+   "options": [
+    {
+     "ar": "فحص إحكام الأربطة (إصبع واحد تحتها)",
+     "en": "Check that the ties are secure (one finger under them)"
+    },
+    {
+     "ar": "تغيير الأنبوب يوميًا",
+     "en": "Change the tube daily"
+    },
+    {
+     "ar": "إغلاقه",
+     "en": "Close it"
+    },
+    {
+     "ar": "النظر فقط",
+     "en": "Just look"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأربطة الفضفاضة قد تُخرج الأنبوب والمشدودة تضغط الرقبة.",
+    "en": "Loose ties may let the tube come out, and tight ones compress the neck."
+   }
+  },
+  {
+   "q": {
+    "ar": "مضاعفة PEEP العالي؟",
+    "en": "A complication of high PEEP?"
+   },
+   "options": [
+    {
+     "ar": "استرواح صدر",
+     "en": "Pneumothorax"
+    },
+    {
+     "ar": "فرط السكر",
+     "en": "Hyperglycemia"
+    },
+    {
+     "ar": "ارتفاع الضغط فقط",
+     "en": "Hypertension only"
+    },
+    {
+     "ar": "التهاب مفاصل",
+     "en": "Arthritis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الضغط الإيجابي العالي يمزق الحويصلات (رضح ضغطي).",
+    "en": "High positive pressure ruptures the alveoli (barotrauma)."
+   }
+  },
+  {
+   "q": {
+    "ar": "أين تُجهّز أدوات الطوارئ أثناء العناية بالـTracheostomy؟",
+    "en": "Where is emergency equipment kept during Tracheostomy care?"
+   },
+   "options": [
+    {
+     "ar": "بجانب المريض مع كيس إنعاش",
+     "en": "At the bedside with a resuscitation bag"
+    },
+    {
+     "ar": "في غرفة بعيدة",
+     "en": "In a distant room"
+    },
+    {
+     "ar": "لا حاجة",
+     "en": "Not needed"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "انزلاق الأنبوب يستلزم تدخلًا فوريًا بتهوية يدوية.",
+    "en": "Tube dislodgement requires immediate intervention with manual ventilation."
+   }
+  },
+  {
+   "q": {
+    "ar": "عند تنظيف الجلد حول الـTracheostomy تستعمل:",
+    "en": "When cleaning the skin around the Tracheostomy you use:"
+   },
+   "options": [
+    {
+     "ar": "حوضًا نظيفًا غير الذي نُظفت فيه القنية الداخلية",
+     "en": "A clean basin other than the one used to clean the inner cannula"
+    },
+    {
+     "ar": "نفس الحوض",
+     "en": "The same basin"
+    },
+    {
+     "ar": "ماء الصنبور",
+     "en": "Tap water"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تجنب نقل الإفرازات من القنية إلى الجلد.",
+    "en": "Avoid transferring secretions from the cannula to the skin."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "NCLEX-RN Test Plan (NCSBN)"
+  },
+  {
+   "title": "Brunner & Suddarth Textbook of Medical-Surgical Nursing"
+  }
+ ]
 }

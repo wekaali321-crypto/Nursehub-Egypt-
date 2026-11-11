@@ -1,173 +1,218 @@
 {
-  "id": "dis-725",
-  "system": "gi",
-  "icon": "🧪",
-  "level": 2,
-  "title": {
-    "ar": "الفحوصات التشخيصية — الجهاز الهضمي والكبد",
-    "en": "Crucial Diagnostic Tests — GI & Liver"
+ "id": "dis-725",
+ "system": "gi",
+ "icon": "🧪",
+ "level": 2,
+ "title": {
+  "ar": "الفحوصات التشخيصية — الجهاز الهضمي والكبد",
+  "en": "Crucial Diagnostic Tests — GI & Liver"
+ },
+ "teaser": {
+  "ar": "جدول لكل فحص: الغرض، تجهيز المريض، والرعاية بعد الفحص (منظار المعدة والقولون، خزعة الكبد، ERCP، وظائف الكبد، فيروسات الكبد، H. pylori).",
+  "en": "A table for each test: its purpose, patient preparation, and post-test care (upper endoscopy and colonoscopy, liver biopsy, ERCP, liver function tests, hepatitis viruses, H. pylori)."
+ },
+ "chips": [
+  {
+   "ar": "منظار",
+   "en": "Endoscopy"
   },
-  "teaser": {
-    "ar": "جدول لكل فحص: الغرض، تجهيز المريض، والرعاية بعد الفحص (منظار المعدة والقولون، خزعة الكبد، ERCP، وظائف الكبد، فيروسات الكبد، H. pylori)."
+  {
+   "ar": "وظائف كبد",
+   "en": "Liver function"
   },
-  "chips": [
-    {
-      "ar": "منظار"
-    },
-    {
-      "ar": "وظائف كبد"
-    },
-    {
-      "ar": "تجهيز المريض"
-    }
+  {
+   "ar": "تجهيز المريض",
+   "en": "Patient preparation"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الفحوصات دي بتأكد التشخيص وبتحدد خطة العلاج. دورك: تجهيز المريض (الصيام، الموافقة، الحساسية)، ومراقبة بعد الفحص للمضاعفات.</p>[[slot:dis-725-lft|وظائف الكبد: إيه اللي بيدل عليه كل تحليل|/diseases/img/dis-725-lft.svg]]<div class=\"cs-box cs-tip\"><strong>قاعدة عامة</strong><p>قبل أي فحص بمنظار أو خزعة: <b>موافقة مستنيرة مكتوبة</b>، سؤال عن الحساسية (خاصة الصبغة والمخدر)، آخر أكل وشرب، الأدوية (مميعات/أسبرين/سكر)، وأطقم الأسنان تُنزع.</p></div>",
+   "en": "<p>These tests confirm the diagnosis and set the treatment plan. Your role: prepare the patient (fasting, consent, allergies), and monitor after the test for complications.</p>[[slot:dis-725-lft|Liver function: what each test indicates|/diseases/img/dis-725-lft.svg]]<div class=\"cs-box cs-tip\"><strong>General rule</strong><p>Before any endoscopy or biopsy: <b>written informed consent</b>, ask about allergies (especially to contrast and anesthetic), last food and drink, medications (anticoagulants/aspirin/diabetes drugs), and dentures are removed.</p></div>"
+  },
+  "tests": {
+   "ar": "<h4>1) الفحوصات بالمناظير والخزعات</h4><table><thead><tr><th>الفحص</th><th>الغرض</th><th>قبل الفحص</th><th>بعد الفحص</th></tr></thead><tbody><tr><td>منظار المعدة (Gastroscopy/EGD)</td><td>تشخيص قرحة معدة/اثنى عشر، أخذ خزعات واختبار H. pylori، رؤية نزيف أو أورام أو لحميات. المنظار يمر من الفم ويرى البلعوم والمريء والعاصرة السفلية (Lower esophageal sphincter) والمعدة والبواب والاثنى عشر</td><td>صيام (NPO) 6–8 ساعات، موافقة مستنيرة، بخاخ مخدر للحلق</td><td>قياس علامات حيوية، لا أكل/شرب حتى رجوع منعكس البلع (Gag reflex)، بلّغ عن ألم شديد أو حمى أو قيء دم</td></tr><tr><td>منظار القولون (Colonoscopy)</td><td>تشخيص انسداد، نزيف، تغير عادات الإخراج، سرطان القولون. يمر من الشرج عبر السيني والنازل والمستعرض والصاعد وصمام اللفائفي-الأعور (Ileocecal valve). قد يُنفخ القولون ويؤخذ خزعات</td><td>تحضير قولون كامل (ملين قوي) لتفريغ الأمعاء، وصيام ساعات بسبب المخدر</td><td>فحص البطن وأصواتها وألمها، علامات حيوية، تأثير المخدر؛ انتفاخ مؤقت طبيعي. خطر ثقب القولون: بلّغ فوراً عن ألم شديد أو حمى أو نزيف</td></tr><tr><td>ERCP (تصوير القنوات الصفراوية والبنكرياس بالمنظار)</td><td>منظار من الفم للاثنى عشر، هواء لنفخ الأمعاء، صبغة تُحقن في القنوات ثم أشعة. يشخص ويعالج حصوات وتضيقات</td><td>صيام (NPO)، موافقة</td><td>علامات حيوية، لا أكل حتى عودة منعكس البلع، قد يشعر بانتفاخ وألم حلق؛ راقب التهاب بنكرياس بعد الفحص (ألم شرسوف شديد) وثقب</td></tr><tr><td>خزعة الكبد</td><td>عينة صغيرة بإبرة قاطعة عبر جلد البطن تحت مخدر موضعي لتشخيص نهائي (تليّف، التهاب، ورم)</td><td>موافقة، تحليل PT/INR وصفائح، تعليمات الصيام</td><td>علامات حيوية متكررة (ضغط ↓ نبض ↑ تنفس ↑)، فحص مكان الوخز، شحوب وعرق (نزف). المضاعفات: كدم، نزف، عدوى</td></tr><tr><td>الفحص بالإبرة الدقيقة (FNA)</td><td>عينة من كتلة</td><td>موافقة</td><td>تغيير الضمادة، مراقبة الورم والنزف</td></tr></tbody></table>[[slot:dis-725-endoscope|صورة حقيقية: منظار معدة/قولون على شاشة العرض]]<h4>2) الأشعة والتصوير</h4><table><thead><tr><th>الفحص</th><th>الغرض</th><th>قبل</th><th>بعد</th></tr></thead><tbody><tr><td>سونار البطن</td><td>غير جراحي: صوت يرتد من الأعضاء لرؤية الكبد والمرارة والبنكرياس وسائل الاستسقاء</td><td>صيام عادة 6–8 ساعات</td><td>لا رعاية خاصة</td></tr><tr><td>أشعة بطن عادية (واقفاً ومستلقياً)</td><td>انسداد، أجسام غريبة، نمط الغازات، هواء حر (ثقب)، أورام</td><td>لا شيء</td><td>لا شيء</td></tr><tr><td>أشعة مقطعية (CT)</td><td>مقاطع عرضية، صبغة وريدية لتمييز الأورام</td><td>اسأل عن حساسية صبغة اليود/المحار، وظائف الكلى، صيام حسب المنطقة</td><td>ماء كتير للتخلص من الصبغة؛ راقب طفح أو حكة</td></tr><tr><td>رنين مغناطيسي (MRI/MRCP)</td><td>مجال مغناطيسي وموجات راديو، يرى القنوات الصفراوية</td><td>اسأل عن منظم ضربات أو شرائح معدنية وخوف الأماكن المغلقة؛ يستغرق 15–60 دقيقة وصوت عالٍ</td><td>لا رعاية خاصة</td></tr><tr><td>حقنة/بلع الباريوم، Upper GI</td><td>رؤية ضيق أو قرحة أو ناسور أو فتق؛ لا تُجرى لو شك في ثقب</td><td>صيام</td><td>ماء كتير، ملين خفيف حتى يخرج الباريوم (يكون البراز أبيض)</td></tr></tbody></table><h4>3) الدم والمعمل</h4><table><thead><tr><th>التحليل</th><th>ماذا يقيس</th><th>ملاحظات</th></tr></thead><tbody><tr><td>ALT</td><td>إنزيم في خلايا الكبد يتحرر عند التلف</td><td>طبيعي حوالي 7–55 وحدة/لتر (يختلف بالمعمل)</td></tr><tr><td>AST</td><td>إنزيم كبد وعضلات؛ ارتفاعه ينبه</td><td>نسبة AST/ALT تفيد في الكحول</td></tr><tr><td>الفوسفاتاز القلوي ALP</td><td>إنزيم في الكبد والقنوات والعظام</td><td>يرتفع في الانسداد الصفراوي</td></tr><tr><td>الألبومين والبروتين الكلي</td><td>قدرة الكبد على تصنيع البروتين</td><td>انخفاضه: مرض مزمن</td></tr><tr><td>البيليروبين</td><td>صبغة من تكسر RBC تخرج في البراز</td><td>ارتفاع = صفار؛ مباشر يرتفع في الانسداد</td></tr><tr><td>GGT</td><td>إنزيم القنوات الصفراوية</td><td>يرتفع مع الكحول</td></tr><tr><td>LDH</td><td>إنزيم في أنسجة كثيرة</td><td>غير نوعي</td></tr><tr><td>PT/PTT/INR</td><td>زمن التجلط</td><td>يطول مع تلف الكبد (مطلوب قبل الخزعة)</td></tr></tbody></table><h4>4) فيروسات الكبد</h4><table><thead><tr><th>الفيروس</th><th>الفحص المؤكد</th></tr></thead><tbody><tr><td>A</td><td>IgM anti-HAV = حاد؛ IgG = قديم/مناعة</td></tr><tr><td>B</td><td>HBsAg + IgM anti-HBc = حاد؛ HBeAg موجب = عدوى شديدة؛ HBV DNA (PCR) الأكثر حساسية لمتابعة العلاج</td></tr><tr><td>C</td><td>Anti-HCV (ELISA) ثم HCV RNA PCR للتأكيد</td></tr><tr><td>D</td><td>Anti-HDV + علامات B (لا يظهر بدون B)</td></tr><tr><td>E</td><td>فحوصات بحثية فقط في المراجع؛ يوجد IgM anti-HEV في بعض المعامل</td></tr></tbody></table><h4>5) فحص الملوية البوابية (H. pylori)</h4><ul><li>بكتيريا سالبة الجرام تُكتشف بتحليل دم (IgG)، خزعة معدة، أو <b>اختبار نفس اليوريا (Urea breath test)</b> الذي معدل سلبيته الكاذبة نحو 5–15%</li><li>اختبار مستضد البراز بديل ممتاز</li><li>قبل الاختبار: إيقاف مثبطات PPI أسبوعين والمضادات الحيوية 4 أسابيع حسب إرشاد الطبيب</li></ul>",
+   "en": "<h4>1) Endoscopy and biopsy tests</h4><table><thead><tr><th>Test</th><th>Purpose</th><th>Before the test</th><th>After the test</th></tr></thead><tbody><tr><td>Upper endoscopy (Gastroscopy/EGD)</td><td>Diagnose gastric/duodenal ulcer, take biopsies and test for H. pylori, see bleeding, tumors, or polyps. The scope passes through the mouth and views the pharynx, esophagus, lower esophageal sphincter, stomach, pylorus, and duodenum</td><td>NPO 6–8 hours, informed consent, anesthetic throat spray</td><td>Vital signs, no food/drink until the gag reflex returns, report severe pain, fever, or vomiting blood</td></tr><tr><td>Colonoscopy</td><td>Diagnose obstruction, bleeding, change in bowel habits, colon cancer. It passes through the anus via the sigmoid, descending, transverse, and ascending colon to the ileocecal valve. The colon may be insufflated and biopsies taken</td><td>Full bowel prep (strong laxative) to empty the bowel, and fasting for hours because of sedation</td><td>Check the abdomen, bowel sounds, and pain, vital signs, sedation effects; temporary bloating is normal. Risk of colon perforation: report severe pain, fever, or bleeding immediately</td></tr><tr><td>ERCP (endoscopic retrograde cholangiopancreatography)</td><td>A scope through the mouth into the duodenum, air to inflate the bowel, contrast injected into the ducts, then X-rays. It diagnoses and treats stones and strictures</td><td>NPO, consent</td><td>Vital signs, no food until the gag reflex returns, may feel bloating and a sore throat; watch for post-procedure pancreatitis (severe epigastric pain) and perforation</td></tr><tr><td>Liver biopsy</td><td>A small sample with a cutting needle through the abdominal skin under local anesthesia for a definitive diagnosis (fibrosis, inflammation, tumor)</td><td>Consent, PT/INR and platelet tests, fasting instructions</td><td>Frequent vital signs (BP ↓ pulse ↑ respirations ↑), check the puncture site, pallor and sweating (bleeding). Complications: bruising, bleeding, infection</td></tr><tr><td>Fine-needle aspiration (FNA)</td><td>A sample from a mass</td><td>Consent</td><td>Change the dressing, watch for swelling and bleeding</td></tr></tbody></table>[[slot:dis-725-endoscope|Real image: upper endoscopy/colonoscopy on the display screen]]<h4>2) Imaging</h4><table><thead><tr><th>Test</th><th>Purpose</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td>Abdominal ultrasound</td><td>Noninvasive: sound bounces off organs to show the liver, gallbladder, pancreas, and ascitic fluid</td><td>Usually fasting 6–8 hours</td><td>No special care</td></tr><tr><td>Plain abdominal X-ray (upright and supine)</td><td>Obstruction, foreign bodies, gas pattern, free air (perforation), tumors</td><td>Nothing</td><td>Nothing</td></tr><tr><td>Computed tomography (CT)</td><td>Cross-sections, IV contrast to distinguish tumors</td><td>Ask about iodine contrast/shellfish allergy, kidney function, fasting depending on the area</td><td>Plenty of water to clear the contrast; watch for rash or itching</td></tr><tr><td>Magnetic resonance (MRI/MRCP)</td><td>A magnetic field and radio waves; shows the bile ducts</td><td>Ask about a pacemaker or metal plates and claustrophobia; takes 15–60 minutes and is loud</td><td>No special care</td></tr><tr><td>Barium enema/swallow, Upper GI</td><td>Shows stricture, ulcer, fistula, or hernia; not done if perforation is suspected</td><td>Fasting</td><td>Plenty of water, a mild laxative until the barium passes (stool is white)</td></tr></tbody></table><h4>3) Blood and lab tests</h4><table><thead><tr><th>Test</th><th>What it measures</th><th>Notes</th></tr></thead><tbody><tr><td>ALT</td><td>An enzyme in liver cells released with damage</td><td>Normal about 7–55 units/L (varies by lab)</td></tr><tr><td>AST</td><td>A liver and muscle enzyme; a rise is a warning</td><td>The AST/ALT ratio helps in alcohol use</td></tr><tr><td>Alkaline phosphatase ALP</td><td>An enzyme in the liver, ducts, and bones</td><td>Rises in biliary obstruction</td></tr><tr><td>Albumin and total protein</td><td>The liver's ability to make protein</td><td>Low: chronic disease</td></tr><tr><td>Bilirubin</td><td>A pigment from RBC breakdown excreted in stool</td><td>High = jaundice; direct rises in obstruction</td></tr><tr><td>GGT</td><td>A bile duct enzyme</td><td>Rises with alcohol</td></tr><tr><td>LDH</td><td>An enzyme in many tissues</td><td>Nonspecific</td></tr><tr><td>PT/PTT/INR</td><td>Clotting time</td><td>Prolonged with liver damage (required before biopsy)</td></tr></tbody></table><h4>4) Hepatitis viruses</h4><table><thead><tr><th>Virus</th><th>Confirmatory test</th></tr></thead><tbody><tr><td>A</td><td>IgM anti-HAV = acute; IgG = past/immunity</td></tr><tr><td>B</td><td>HBsAg + IgM anti-HBc = acute; positive HBeAg = severe infection; HBV DNA (PCR) is the most sensitive for monitoring treatment</td></tr><tr><td>C</td><td>Anti-HCV (ELISA), then HCV RNA PCR to confirm</td></tr><tr><td>D</td><td>Anti-HDV + B markers (does not occur without B)</td></tr><tr><td>E</td><td>Research tests only in references; IgM anti-HEV is available in some labs</td></tr></tbody></table><h4>5) H. pylori testing</h4><ul><li>A gram-negative bacterium detected by blood test (IgG), gastric biopsy, or the <b>urea breath test</b>, whose false-negative rate is about 5–15%</li><li>The stool antigen test is an excellent alternative</li><li>Before the test: stop PPIs for two weeks and antibiotics for 4 weeks per the physician's instructions</li></ul>"
+  },
+  "signs": {
+   "ar": "<p>هذا دليل فحوصات؛ العلامات والأعراض تجدها في أدلة الأمراض: <a href=\"/diseases/dis-220\">القرحة</a>، <a href=\"/diseases/dis-064\">التهاب الكبد</a>، <a href=\"/diseases/dis-721\">التليّف</a>.</p>",
+   "en": "<p>This is a tests guide; you will find signs and symptoms in the disease guides: <a href=\"/diseases/dis-220\">peptic ulcer</a>, <a href=\"/diseases/dis-064\">hepatitis</a>, <a href=\"/diseases/dis-721\">cirrhosis</a>.</p>"
+  },
+  "treatment": {
+   "ar": "<p>تجهيز المريض لبعض الفحوصات يتطلب أدوية (ملين، مخدر). اتبع بروتوكول القسم.</p>",
+   "en": "<p>Preparing the patient for some tests requires drugs (laxative, sedation). Follow the unit protocol.</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قبل الفحص</strong><p>موافقة مستنيرة، حساسية، صيام، أدوية، علامات حيوية أساسية، شرح الإجراء وتقليل القلق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أثناء الفحص</strong><p>مراقبة (نبض، تشبع أكسجين)، مساعدة المريض في الوضع الصحيح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>بعد الفحص</strong><p>علامات حيوية كل 15–30 دقيقة حتى الاستقرار، استئناف الأكل بعد عودة منعكس البلع (منظار علوي)، فحص ألم وانتفاخ، مراقبة النزف والثقب والعدوى.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>علامات خطر بعد المناظير</strong><p>ألم بطن شديد ومتزايد، صلابة بطن، حمى، قيء دم، براز أسود غزير، ضيق نفس، دوخة وهبوط ضغط = بلّغ فوراً.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Before the test</strong><p>Informed consent, allergies, fasting, medications, baseline vital signs, explain the procedure and reduce anxiety.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>During the test</strong><p>Monitoring (pulse, oxygen saturation), help the patient into the correct position.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>After the test</strong><p>Vital signs every 15–30 minutes until stable, resume eating after the gag reflex returns (upper endoscopy), check for pain and bloating, monitor for bleeding, perforation, and infection.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>Danger signs after endoscopy</strong><p>Severe, increasing abdominal pain, abdominal rigidity, fever, vomiting blood, heavy black stools, shortness of breath, dizziness, and hypotension = report immediately.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً بعد الإجراء لو</strong><ul><li>ألم شديد أو بطن متصلب</li><li>نزيف أو دوخة وشحوب وعرق وهبوط ضغط (بعد خزعة)</li><li>حمى وقشعريرة</li><li>صعوبة تنفس أو ألم صدر</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately after the procedure if</strong><ul><li>Severe pain or a rigid abdomen</li><li>Bleeding, or dizziness, pallor, sweating, and hypotension (after a biopsy)</li><li>Fever and chills</li><li>Difficulty breathing or chest pain</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اتبع تعليمات الصيام بالضبط.</li><li>منظار القولون: خد مادة التنظيف كاملة؛ التحضير الناقص يعني إعادة الفحص.</li><li>بعد المنظار العلوي: ما تاكلش غير لما الطبيب يقول، وقد تحس بألم حلق بسيط.</li><li>بعد الخزعة: ارتاح اليوم، ولا ترفع أشياء ثقيلة.</li></ul>",
+   "en": "<ul><li>Follow the fasting instructions exactly.</li><li>Colonoscopy: take the whole bowel prep; incomplete prep means repeating the test.</li><li>After upper endoscopy: do not eat until the physician says so, and you may have a mild sore throat.</li><li>After a biopsy: rest for the day, and do not lift heavy objects.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الموافقة المستنيرة قبل المناظير والخزعة",
+   "منظار علوي: NPO وانتظر منعكس البلع",
+   "القولون: تحضير كامل وراقب الثقب",
+   "خزعة الكبد: راقب النزف ببيانات حيوية متكررة",
+   "ERCP: خطر التهاب بنكرياس",
+   "H. pylori: اختبار النفس سلبيته الكاذبة 5–15%",
+   "صبغة CT: اسأل عن الحساسية وابدأ سوائل"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الفحوصات دي بتأكد التشخيص وبتحدد خطة العلاج. دورك: تجهيز المريض (الصيام، الموافقة، الحساسية)، ومراقبة بعد الفحص للمضاعفات.</p>[[slot:dis-725-lft|وظائف الكبد: إيه اللي بيدل عليه كل تحليل|/diseases/img/dis-725-lft.svg]]<div class=\"cs-box cs-tip\"><strong>قاعدة عامة</strong><p>قبل أي فحص بمنظار أو خزعة: <b>موافقة مستنيرة مكتوبة</b>، سؤال عن الحساسية (خاصة الصبغة والمخدر)، آخر أكل وشرب، الأدوية (مميعات/أسبرين/سكر)، وأطقم الأسنان تُنزع.</p></div>"
+  "en": [
+   "Informed consent before endoscopy and biopsy",
+   "Upper endoscopy: NPO and wait for the gag reflex",
+   "Colonoscopy: full prep and watch for perforation",
+   "Liver biopsy: watch for bleeding with frequent vital signs",
+   "ERCP: risk of pancreatitis",
+   "H. pylori: breath test false-negative rate 5–15%",
+   "CT contrast: ask about allergy and start fluids"
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول ما يجب فعله بعد منظار المعدة قبل الأكل؟",
+    "en": "The first thing to do after upper endoscopy before eating?"
+   },
+   "options": [
+    {
+     "ar": "التأكد من عودة منعكس البلع",
+     "en": "Confirm the gag reflex has returned"
     },
-    "tests": {
-      "ar": "<h4>1) الفحوصات بالمناظير والخزعات</h4><table><thead><tr><th>الفحص</th><th>الغرض</th><th>قبل الفحص</th><th>بعد الفحص</th></tr></thead><tbody><tr><td>منظار المعدة (Gastroscopy/EGD)</td><td>تشخيص قرحة معدة/اثنى عشر، أخذ خزعات واختبار H. pylori، رؤية نزيف أو أورام أو لحميات. المنظار يمر من الفم ويرى البلعوم والمريء والعاصرة السفلية (Lower esophageal sphincter) والمعدة والبواب والاثنى عشر</td><td>صيام (NPO) 6–8 ساعات، موافقة مستنيرة، بخاخ مخدر للحلق</td><td>قياس علامات حيوية، لا أكل/شرب حتى رجوع منعكس البلع (Gag reflex)، بلّغ عن ألم شديد أو حمى أو قيء دم</td></tr><tr><td>منظار القولون (Colonoscopy)</td><td>تشخيص انسداد، نزيف، تغير عادات الإخراج، سرطان القولون. يمر من الشرج عبر السيني والنازل والمستعرض والصاعد وصمام اللفائفي-الأعور (Ileocecal valve). قد يُنفخ القولون ويؤخذ خزعات</td><td>تحضير قولون كامل (ملين قوي) لتفريغ الأمعاء، وصيام ساعات بسبب المخدر</td><td>فحص البطن وأصواتها وألمها، علامات حيوية، تأثير المخدر؛ انتفاخ مؤقت طبيعي. خطر ثقب القولون: بلّغ فوراً عن ألم شديد أو حمى أو نزيف</td></tr><tr><td>ERCP (تصوير القنوات الصفراوية والبنكرياس بالمنظار)</td><td>منظار من الفم للاثنى عشر، هواء لنفخ الأمعاء، صبغة تُحقن في القنوات ثم أشعة. يشخص ويعالج حصوات وتضيقات</td><td>صيام (NPO)، موافقة</td><td>علامات حيوية، لا أكل حتى عودة منعكس البلع، قد يشعر بانتفاخ وألم حلق؛ راقب التهاب بنكرياس بعد الفحص (ألم شرسوف شديد) وثقب</td></tr><tr><td>خزعة الكبد</td><td>عينة صغيرة بإبرة قاطعة عبر جلد البطن تحت مخدر موضعي لتشخيص نهائي (تليّف، التهاب، ورم)</td><td>موافقة، تحليل PT/INR وصفائح، تعليمات الصيام</td><td>علامات حيوية متكررة (ضغط ↓ نبض ↑ تنفس ↑)، فحص مكان الوخز، شحوب وعرق (نزف). المضاعفات: كدم، نزف، عدوى</td></tr><tr><td>الفحص بالإبرة الدقيقة (FNA)</td><td>عينة من كتلة</td><td>موافقة</td><td>تغيير الضمادة، مراقبة الورم والنزف</td></tr></tbody></table>[[slot:dis-725-endoscope|صورة حقيقية: منظار معدة/قولون على شاشة العرض]]<h4>2) الأشعة والتصوير</h4><table><thead><tr><th>الفحص</th><th>الغرض</th><th>قبل</th><th>بعد</th></tr></thead><tbody><tr><td>سونار البطن</td><td>غير جراحي: صوت يرتد من الأعضاء لرؤية الكبد والمرارة والبنكرياس وسائل الاستسقاء</td><td>صيام عادة 6–8 ساعات</td><td>لا رعاية خاصة</td></tr><tr><td>أشعة بطن عادية (واقفاً ومستلقياً)</td><td>انسداد، أجسام غريبة، نمط الغازات، هواء حر (ثقب)، أورام</td><td>لا شيء</td><td>لا شيء</td></tr><tr><td>أشعة مقطعية (CT)</td><td>مقاطع عرضية، صبغة وريدية لتمييز الأورام</td><td>اسأل عن حساسية صبغة اليود/المحار، وظائف الكلى، صيام حسب المنطقة</td><td>ماء كتير للتخلص من الصبغة؛ راقب طفح أو حكة</td></tr><tr><td>رنين مغناطيسي (MRI/MRCP)</td><td>مجال مغناطيسي وموجات راديو، يرى القنوات الصفراوية</td><td>اسأل عن منظم ضربات أو شرائح معدنية وخوف الأماكن المغلقة؛ يستغرق 15–60 دقيقة وصوت عالٍ</td><td>لا رعاية خاصة</td></tr><tr><td>حقنة/بلع الباريوم، Upper GI</td><td>رؤية ضيق أو قرحة أو ناسور أو فتق؛ لا تُجرى لو شك في ثقب</td><td>صيام</td><td>ماء كتير، ملين خفيف حتى يخرج الباريوم (يكون البراز أبيض)</td></tr></tbody></table><h4>3) الدم والمعمل</h4><table><thead><tr><th>التحليل</th><th>ماذا يقيس</th><th>ملاحظات</th></tr></thead><tbody><tr><td>ALT</td><td>إنزيم في خلايا الكبد يتحرر عند التلف</td><td>طبيعي حوالي 7–55 وحدة/لتر (يختلف بالمعمل)</td></tr><tr><td>AST</td><td>إنزيم كبد وعضلات؛ ارتفاعه ينبه</td><td>نسبة AST/ALT تفيد في الكحول</td></tr><tr><td>الفوسفاتاز القلوي ALP</td><td>إنزيم في الكبد والقنوات والعظام</td><td>يرتفع في الانسداد الصفراوي</td></tr><tr><td>الألبومين والبروتين الكلي</td><td>قدرة الكبد على تصنيع البروتين</td><td>انخفاضه: مرض مزمن</td></tr><tr><td>البيليروبين</td><td>صبغة من تكسر RBC تخرج في البراز</td><td>ارتفاع = صفار؛ مباشر يرتفع في الانسداد</td></tr><tr><td>GGT</td><td>إنزيم القنوات الصفراوية</td><td>يرتفع مع الكحول</td></tr><tr><td>LDH</td><td>إنزيم في أنسجة كثيرة</td><td>غير نوعي</td></tr><tr><td>PT/PTT/INR</td><td>زمن التجلط</td><td>يطول مع تلف الكبد (مطلوب قبل الخزعة)</td></tr></tbody></table><h4>4) فيروسات الكبد</h4><table><thead><tr><th>الفيروس</th><th>الفحص المؤكد</th></tr></thead><tbody><tr><td>A</td><td>IgM anti-HAV = حاد؛ IgG = قديم/مناعة</td></tr><tr><td>B</td><td>HBsAg + IgM anti-HBc = حاد؛ HBeAg موجب = عدوى شديدة؛ HBV DNA (PCR) الأكثر حساسية لمتابعة العلاج</td></tr><tr><td>C</td><td>Anti-HCV (ELISA) ثم HCV RNA PCR للتأكيد</td></tr><tr><td>D</td><td>Anti-HDV + علامات B (لا يظهر بدون B)</td></tr><tr><td>E</td><td>فحوصات بحثية فقط في المراجع؛ يوجد IgM anti-HEV في بعض المعامل</td></tr></tbody></table><h4>5) فحص الملوية البوابية (H. pylori)</h4><ul><li>بكتيريا سالبة الجرام تُكتشف بتحليل دم (IgG)، خزعة معدة، أو <b>اختبار نفس اليوريا (Urea breath test)</b> الذي معدل سلبيته الكاذبة نحو 5–15%</li><li>اختبار مستضد البراز بديل ممتاز</li><li>قبل الاختبار: إيقاف مثبطات PPI أسبوعين والمضادات الحيوية 4 أسابيع حسب إرشاد الطبيب</li></ul>"
+    {
+     "ar": "إعطاء مسكن",
+     "en": "Give a painkiller"
     },
-    "signs": {
-      "ar": "<p>هذا دليل فحوصات؛ العلامات والأعراض تجدها في أدلة الأمراض: <a href=\"/diseases/dis-220\">القرحة</a>، <a href=\"/diseases/dis-064\">التهاب الكبد</a>، <a href=\"/diseases/dis-721\">التليّف</a>.</p>"
-    },
-    "treatment": {
-      "ar": "<p>تجهيز المريض لبعض الفحوصات يتطلب أدوية (ملين، مخدر). اتبع بروتوكول القسم.</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قبل الفحص</strong><p>موافقة مستنيرة، حساسية، صيام، أدوية، علامات حيوية أساسية، شرح الإجراء وتقليل القلق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أثناء الفحص</strong><p>مراقبة (نبض، تشبع أكسجين)، مساعدة المريض في الوضع الصحيح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>بعد الفحص</strong><p>علامات حيوية كل 15–30 دقيقة حتى الاستقرار، استئناف الأكل بعد عودة منعكس البلع (منظار علوي)، فحص ألم وانتفاخ، مراقبة النزف والثقب والعدوى.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>علامات خطر بعد المناظير</strong><p>ألم بطن شديد ومتزايد، صلابة بطن، حمى، قيء دم، براز أسود غزير، ضيق نفس، دوخة وهبوط ضغط = بلّغ فوراً.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً بعد الإجراء لو</strong><ul><li>ألم شديد أو بطن متصلب</li><li>نزيف أو دوخة وشحوب وعرق وهبوط ضغط (بعد خزعة)</li><li>حمى وقشعريرة</li><li>صعوبة تنفس أو ألم صدر</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اتبع تعليمات الصيام بالضبط.</li><li>منظار القولون: خد مادة التنظيف كاملة؛ التحضير الناقص يعني إعادة الفحص.</li><li>بعد المنظار العلوي: ما تاكلش غير لما الطبيب يقول، وقد تحس بألم حلق بسيط.</li><li>بعد الخزعة: ارتاح اليوم، ولا ترفع أشياء ثقيلة.</li></ul>"
+    {
+     "ar": "التمشي",
+     "en": "Walk"
     }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لتجنب الاستنشاق.",
+    "en": "To avoid aspiration."
+   }
   },
-  "keyPoints": {
-    "ar": [
-      "الموافقة المستنيرة قبل المناظير والخزعة",
-      "منظار علوي: NPO وانتظر منعكس البلع",
-      "القولون: تحضير كامل وراقب الثقب",
-      "خزعة الكبد: راقب النزف ببيانات حيوية متكررة",
-      "ERCP: خطر التهاب بنكرياس",
-      "H. pylori: اختبار النفس سلبيته الكاذبة 5–15%",
-      "صبغة CT: اسأل عن الحساسية وابدأ سوائل"
-    ]
+  {
+   "q": {
+    "ar": "علامة نزف بعد خزعة الكبد؟",
+    "en": "A sign of bleeding after a liver biopsy?"
+   },
+   "options": [
+    {
+     "ar": "ضغط ↓ ونبض ↑ وشحوب وعرق",
+     "en": "BP ↓, pulse ↑, pallor, and sweating"
+    },
+    {
+     "ar": "ارتفاع الضغط",
+     "en": "High BP"
+    },
+    {
+     "ar": "نعاس فقط",
+     "en": "Drowsiness only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نزف داخلي.",
+    "en": "Internal bleeding."
+   }
   },
-  "quiz": [
+  {
+   "q": {
+    "ar": "تحضير القولون يتطلب:",
+    "en": "Colonoscopy prep requires:"
+   },
+   "options": [
     {
-      "q": {
-        "ar": "أول ما يجب فعله بعد منظار المعدة قبل الأكل؟"
-      },
-      "options": [
-        {
-          "ar": "التأكد من عودة منعكس البلع"
-        },
-        {
-          "ar": "إعطاء مسكن"
-        },
-        {
-          "ar": "التمشي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لتجنب الاستنشاق."
-      }
+     "ar": "تنظيف كامل للأمعاء",
+     "en": "Complete bowel cleansing"
     },
     {
-      "q": {
-        "ar": "علامة نزف بعد خزعة الكبد؟"
-      },
-      "options": [
-        {
-          "ar": "ضغط ↓ ونبض ↑ وشحوب وعرق"
-        },
-        {
-          "ar": "ارتفاع الضغط"
-        },
-        {
-          "ar": "نعاس فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نزف داخلي."
-      }
+     "ar": "وجبة دسمة",
+     "en": "A fatty meal"
     },
     {
-      "q": {
-        "ar": "تحضير القولون يتطلب:"
-      },
-      "options": [
-        {
-          "ar": "تنظيف كامل للأمعاء"
-        },
-        {
-          "ar": "وجبة دسمة"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لرؤية واضحة."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما المؤكد لالتهاب الكبد A الحاد؟"
-      },
-      "options": [
-        {
-          "ar": "IgM anti-HAV"
-        },
-        {
-          "ar": "HBsAg"
-        },
-        {
-          "ar": "anti-HCV"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "IgM للحاد."
-      }
-    },
-    {
-      "q": {
-        "ar": "ماذا يقيس PT/INR؟"
-      },
-      "options": [
-        {
-          "ar": "قدرة الكبد على إنتاج عوامل التجلط"
-        },
-        {
-          "ar": "السكر"
-        },
-        {
-          "ar": "الصفراء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ويُطلب قبل الخزعة."
-      }
+     "ar": "لا شيء",
+     "en": "Nothing"
     }
-  ],
-  "refs": [
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لرؤية واضحة.",
+    "en": "For a clear view."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما المؤكد لالتهاب الكبد A الحاد؟",
+    "en": "What confirms acute hepatitis A?"
+   },
+   "options": [
     {
-      "title": "ASGE guidelines on endoscopy"
+     "ar": "IgM anti-HAV",
+     "en": "IgM anti-HAV"
     },
     {
-      "title": "AASLD Practice Guidance: Liver biopsy"
+     "ar": "HBsAg",
+     "en": "HBsAg"
     },
     {
-      "title": "ACG Guideline on H. pylori treatment 2024"
+     "ar": "anti-HCV",
+     "en": "anti-HCV"
     }
-  ],
-  "num": 725,
-  "target": "diseases"
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "IgM للحاد.",
+    "en": "IgM indicates acute infection."
+   }
+  },
+  {
+   "q": {
+    "ar": "ماذا يقيس PT/INR؟",
+    "en": "What does PT/INR measure?"
+   },
+   "options": [
+    {
+     "ar": "قدرة الكبد على إنتاج عوامل التجلط",
+     "en": "The liver's ability to make clotting factors"
+    },
+    {
+     "ar": "السكر",
+     "en": "Glucose"
+    },
+    {
+     "ar": "الصفراء",
+     "en": "Bile"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ويُطلب قبل الخزعة.",
+    "en": "It is ordered before a biopsy."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ASGE guidelines on endoscopy"
+  },
+  {
+   "title": "AASLD Practice Guidance: Liver biopsy"
+  },
+  {
+   "title": "ACG Guideline on H. pylori treatment 2024"
+  }
+ ],
+ "num": 725,
+ "target": "diseases"
 }

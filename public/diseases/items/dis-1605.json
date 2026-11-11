@@ -1,183 +1,232 @@
 {
-  "id": "dis-1605",
-  "num": 1605,
-  "system": "renal",
-  "icon": "💧",
-  "level": 2,
-  "target": "fundamentals",
-  "title": {
-    "ar": "توازن السوائل: زيادة الحجم ونقصه والوذمة وتدريجها",
-    "en": "Fluid Balance: Overload, Deficit & Edema Grading"
+ "id": "dis-1605",
+ "num": 1605,
+ "system": "renal",
+ "icon": "💧",
+ "level": 2,
+ "target": "fundamentals",
+ "title": {
+  "ar": "توازن السوائل: زيادة الحجم ونقصه والوذمة وتدريجها",
+  "en": "Fluid Balance: Overload, Deficit & Edema Grading"
+ },
+ "teaser": {
+  "ar": "عوامل الماء بالجسم والمصطلحات، الوذمة (4 أسباب ودرجات 0 إلى 4)، أسباب الجفاف، ومقارنة كاملة بين زيادة وانخفاض حجم السوائل.",
+  "en": "Body water factors and terms, edema (4 causes and grades 0 to 4), causes of dehydration, and a full comparison between fluid volume excess and deficit."
+ },
+ "chips": [
+  {
+   "ar": "زيادة الحجم",
+   "en": "Volume excess"
   },
-  "teaser": {
-    "ar": "عوامل الماء بالجسم والمصطلحات، الوذمة (4 أسباب ودرجات 0 إلى 4)، أسباب الجفاف، ومقارنة كاملة بين زيادة وانخفاض حجم السوائل."
+  {
+   "ar": "نقص الحجم",
+   "en": "Volume deficit"
   },
-  "chips": [
-    {
-      "ar": "زيادة الحجم"
-    },
-    {
-      "ar": "نقص الحجم"
-    },
-    {
-      "ar": "وذمة 0+ إلى 4+"
-    }
+  {
+   "ar": "وذمة 0+ إلى 4+",
+   "en": "Edema 0+ to 4+"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>توازن السوائل هو أساس التمريض الباطني: المريض إما <b>منتفخ بالماء</b> (Fluid Volume Overload/Excess = FVE أو Hypervolemia) أو <b>جاف</b> (Fluid Volume Deficit = FVD أو Dehydration). الدليل ده يشمل: عوامل الماء بالجسم، المصطلحات (أسموزية، انتشار، ترشيح)، الوذمة ودرجاتها، أسباب الجفاف، والمقارنة الكاملة بين الحالتين. دليل المحاليل الوريدية في <a href=\"/diseases/dis-1606\">محاليل التوتر</a>، وأساسيات الأملاح في <a href=\"/diseases/dis-773\">الأساسيات</a> و<a href=\"/diseases/dis-783\">الجفاف عند البالغين</a>.</p>\n[[slot:dis-1605-terms|العوامل والمصطلحات — رسم من إعداد الموقع|/diseases/img/dis-1605-terms.svg]]\n<table><thead><tr><th>المصطلح</th><th>المعنى</th><th>مثال</th></tr></thead><tbody><tr><td>الأسموزية (Osmosis)</td><td>انتقال الماء من التركيز الأقل إلى الأعلى حتى التعادل</td><td>الأمعاء الغليظة تمتص الماء</td></tr><tr><td>الانتشار (Diffusion)</td><td>انتقال المذاب من التركيز الأعلى للأقل</td><td>تبادل O₂ وCO₂ في الرئة</td></tr><tr><td>الترشيح (Filtration)</td><td>انتقال الماء والمذاب معاً من ضغط عالٍ إلى منخفض</td><td>الكلى ترشح الدم</td></tr><tr><td>الأسمولالية (Osmolality)</td><td>تركيز المحلول: أعلى = أكثر مذاباً وأثقل</td><td>متساوي التوتر 270–300 mOsm/kg</td></tr></tbody></table>",
+   "en": "<p>Fluid balance is the foundation of medical nursing: the patient is either <b>overloaded with water</b> (Fluid Volume Overload/Excess = FVE or Hypervolemia) or <b>dry</b> (Fluid Volume Deficit = FVD or Dehydration). This guide covers: body water factors, the terms (osmosis, diffusion, filtration), edema and its grades, causes of dehydration, and a full comparison between the two states. The IV fluids guide is in <a href=\"/diseases/dis-1606\">tonicity solutions</a>, and electrolyte basics are in <a href=\"/diseases/dis-773\">the basics</a> and <a href=\"/diseases/dis-783\">dehydration in adults</a>.</p>\n[[slot:dis-1605-terms|Factors and terms — illustration prepared by the site|/diseases/img/dis-1605-terms.svg]]\n<table><thead><tr><th>Term</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td>Osmosis (Osmosis)</td><td>Movement of water from lower to higher concentration until balance</td><td>The large intestine absorbs water</td></tr><tr><td>Diffusion (Diffusion)</td><td>Movement of solute from higher to lower concentration</td><td>Exchange of O₂ and CO₂ in the lung</td></tr><tr><td>Filtration (Filtration)</td><td>Movement of water and solute together from high to low pressure</td><td>The kidneys filter the blood</td></tr><tr><td>Osmolality (Osmolality)</td><td>Concentration of a solution: higher = more solute and heavier</td><td>Isotonic 270–300 mOsm/kg</td></tr></tbody></table>"
+  },
+  "causes": {
+   "ar": "<h4>الوذمة: التعريف والأسباب الأربعة</h4><p>الوذمة (Edema) تورم الأنسجة الرخوة من تجمع سوائل، وتشبه المرتبة الإسفنجية عند الضغط. من 0+ إلى 4+.</p><table><thead><tr><th>السبب</th><th>الآلية</th><th>أمثلة</th></tr></thead><tbody><tr><td>ارتفاع الضغط الهيدروستاتيكي (نقطة امتحان)</td><td>حجم أكبر فضغط أعلى: ضغط دم مرتفع ووذمة انخماصية</td><td>فشل كلوي، فشل قلب (HF: Heavy Fluid)</td></tr><tr><td>انخفاض الضغط الأسموزي الغروي</td><td>نقص الألبومين (يسحب الماء) فيهرب الماء للأنسجة</td><td>تليف الكبد، المجاعة</td></tr><tr><td>زيادة نفاذية الشعيرات</td><td>تسريب من الأوعية</td><td>عدوى بكتيرية، حروق</td></tr><tr><td>انسداد الجهاز الليمفاوي</td><td>السائل لا يتصرف</td><td>سرطان، عدوى بالغدد</td></tr></tbody></table><h4>أسباب نقص الحجم (الجفاف): الأربعة الكبار</h4><ul><li>قيء وإسهال</li><li>ارتفاع الحرارة والتعرق: حمى، ضربة شمس، عاصفة درقية</li><li>حروق شديدة</li><li>فقد البول: السكري الكاذب (DI)، الحماض الكيتوني (DKA)، المدرّات (Furosemide وHydrochlorothiazide)</li></ul><table><thead><tr><th>السبب</th><th>معنى</th></tr></thead><tbody><tr><td>DI</td><td>فقد الماء من الجسم (جفاف داخلي)</td></tr><tr><td>DKA</td><td>سكر مرتفع يسحب الماء، وعدوى، وتنفس كوسماول يزيد الفقد غير المحسوس</td></tr><tr><td>المدرّات</td><td>تجفيف بالبول</td></tr></tbody></table><p>تعويض الجسم عن الجفاف: عطش، احتباس البول (تركيز)، زيادة النبض وتضيق الأوعية.</p>",
+   "en": "<h4>Edema: definition and the four causes</h4><p>Edema (Edema) is swelling of soft tissues from fluid collection, and it feels like a sponge mattress when pressed. Graded from 0+ to 4+.</p><table><thead><tr><th>Cause</th><th>Mechanism</th><th>Examples</th></tr></thead><tbody><tr><td>Increased hydrostatic pressure (exam point)</td><td>Larger volume so higher pressure: high blood pressure and pitting edema</td><td>Kidney failure, heart failure (HF: Heavy Fluid)</td></tr><tr><td>Decreased colloid osmotic pressure</td><td>Low albumin (which pulls water) so water escapes into the tissues</td><td>Liver cirrhosis, starvation</td></tr><tr><td>Increased capillary permeability</td><td>Leakage from the vessels</td><td>Bacterial infection, burns</td></tr><tr><td>Lymphatic obstruction</td><td>The fluid cannot drain</td><td>Cancer, lymph node infection</td></tr></tbody></table><h4>Causes of volume deficit (dehydration): the big four</h4><ul><li>Vomiting and diarrhea</li><li>High temperature and sweating: fever, heat stroke, thyroid storm</li><li>Severe burns</li><li>Urinary loss: diabetes insipidus (DI), diabetic ketoacidosis (DKA), diuretics (Furosemide and Hydrochlorothiazide)</li></ul><table><thead><tr><th>Cause</th><th>Meaning</th></tr></thead><tbody><tr><td>DI</td><td>Loss of water from the body (internal dehydration)</td></tr><tr><td>DKA</td><td>High glucose pulls water, plus infection, and Kussmaul breathing increases insensible loss</td></tr><tr><td>Diuretics</td><td>Drying out through the urine</td></tr></tbody></table><p>The body compensates for dehydration with: thirst, urine retention (concentration), increased pulse, and vasoconstriction.</p>"
+  },
+  "signs": {
+   "ar": "[[slot:dis-1605-pitting|درجات الوذمة — رسم من إعداد الموقع|/diseases/img/dis-1605-pitting.svg]]<table><thead><tr><th>الدرجة</th><th>العمق</th><th>الارتداد</th></tr></thead><tbody><tr><td>0+</td><td>لا وذمة</td><td>—</td></tr><tr><td>1+</td><td>2 مم أو أقل (خفيف)</td><td>فوري</td></tr><tr><td>2+</td><td>3–4 مم (متوسط)</td><td>15 ثانية</td></tr><tr><td>3+</td><td>5–6 مم (متوسط إلى شديد)</td><td>30 ثانية</td></tr><tr><td>4+</td><td>8 مم أو أكثر (شديد)</td><td>1–2 دقيقة</td></tr></tbody></table>[[slot:dis-1605-compare|الجدول الكامل — رسم من إعداد الموقع|/diseases/img/dis-1605-compare.svg]]<table><thead><tr><th>الجهاز</th><th>زيادة الحجم (Hypervolemia)</th><th>نقص الحجم (Hypovolemia)</th></tr></thead><tbody><tr><td>الضغط</td><td>ارتفاع، قد يصل 140+ (أزمة 180)</td><td>هبوط ضغط وانخفاض عند الوقوف</td></tr><tr><td>النبض</td><td>قوي متوثب</td><td>ضعيف خيطي، سريع فوق 100</td></tr><tr><td>الأوردة</td><td>أوردة رقبة منتفخة JVD، CVP مرتفع</td><td>أوردة الرقبة واليد مسطحة، CVP منخفض</td></tr><tr><td>الجلد</td><td>وذمة حول العين وانخماصية، شاحب بارد</td><td>عيون غائرة، جلد جاف مرن ضعيف، مخاطية جافة، حرارة أعلى</td></tr><tr><td>الأعصاب</td><td>تغير وعي، صداع، ضعف وتنميل</td><td>خمول حتى غيبوبة وضعف</td></tr><tr><td>البول</td><td>قلة بول، وزن نوعي منخفض (1.005)</td><td>بول مركز في البداية ثم قلة، وزن نوعي عالٍ (حتى 1.030)</td></tr><tr><td>الوزن</td><td>زيادة 2–3 رطل/يوم أو 5 رطل/أسبوع</td><td>فقدان وزن</td></tr><tr><td>التنفس</td><td>سريع ضحل، رالات (وذمة رئة)</td><td>سريع عميق</td></tr><tr><td>الهضم</td><td>إسهال، تضخم كبد، استسقاء</td><td>إمساك وحركة ضعيفة</td></tr><tr><td>التحاليل</td><td>ملح منخفض (Na أقل من 135)، Hct وBUN وأسمولالية أقل</td><td>Na فوق 145، Hct وBUN وأسمولالية أعلى</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>نقاط امتحان</strong><ul><li>زيادة الحجم: ضغط مرتفع (أكثر من 140 انقباضي)، أزمة (180)، خطر سكتة.</li><li>نقص الحجم: هبوط ضغط عند الوقوف (دوخة) وتسرع القلب فوق 100.</li><li>الوزن: زيادة 2–3 رطل خلال يوم أو 5 رطل خلال أسبوع = احتباس ماء. الفقد = ماء.</li><li>الوزن النوعي للبول الطبيعي 1.005–1.030.</li></ul></div>",
+   "en": "[[slot:dis-1605-pitting|Edema grades — illustration prepared by the site|/diseases/img/dis-1605-pitting.svg]]<table><thead><tr><th>Grade</th><th>Depth</th><th>Rebound</th></tr></thead><tbody><tr><td>0+</td><td>No edema</td><td>—</td></tr><tr><td>1+</td><td>2 mm or less (mild)</td><td>Immediate</td></tr><tr><td>2+</td><td>3–4 mm (moderate)</td><td>15 seconds</td></tr><tr><td>3+</td><td>5–6 mm (moderate to severe)</td><td>30 seconds</td></tr><tr><td>4+</td><td>8 mm or more (severe)</td><td>1–2 minutes</td></tr></tbody></table>[[slot:dis-1605-compare|The full table — illustration prepared by the site|/diseases/img/dis-1605-compare.svg]]<table><thead><tr><th>System</th><th>Volume excess (Hypervolemia)</th><th>Volume deficit (Hypovolemia)</th></tr></thead><tbody><tr><td>Blood pressure</td><td>Raised, may reach 140+ (crisis 180)</td><td>Hypotension and orthostatic drop</td></tr><tr><td>Pulse</td><td>Strong, bounding</td><td>Weak, thready, fast above 100</td></tr><tr><td>Veins</td><td>Distended neck veins (JVD), high CVP</td><td>Flat neck and hand veins, low CVP</td></tr><tr><td>Skin</td><td>Periorbital and pitting edema, pale and cool</td><td>Sunken eyes, dry skin with poor turgor, dry mucosa, higher temperature</td></tr><tr><td>Neuro</td><td>Change in consciousness, headache, weakness, and numbness</td><td>Lethargy up to coma, and weakness</td></tr><tr><td>Urine</td><td>Low urine output, low specific gravity (1.005)</td><td>Concentrated urine at first then low output, high specific gravity (up to 1.030)</td></tr><tr><td>Weight</td><td>Gain of 2–3 lb/day or 5 lb/week</td><td>Weight loss</td></tr><tr><td>Breathing</td><td>Rapid, shallow, crackles (pulmonary edema)</td><td>Rapid, deep</td></tr><tr><td>GI</td><td>Diarrhea, hepatomegaly, ascites</td><td>Constipation and weak motility</td></tr><tr><td>Labs</td><td>Low sodium (Na below 135), lower Hct, BUN, and osmolality</td><td>Na above 145, higher Hct, BUN, and osmolality</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>Exam points</strong><ul><li>Volume excess: high BP (systolic over 140), crisis (180), stroke risk.</li><li>Volume deficit: orthostatic hypotension (dizziness) and tachycardia above 100.</li><li>Weight: gain of 2–3 lb in a day or 5 lb in a week = water retention. Loss = water.</li><li>Normal urine specific gravity is 1.005–1.030.</li></ul></div>"
+  },
+  "tests": {
+   "ar": "",
+   "en": ""
+  },
+  "treatment": {
+   "ar": "<h4>زيادة الحجم</h4><ul><li>تقييد الصوديوم والسوائل، ورفع الرأس.</li><li>مدرّات بأمر الطبيب (Furosemide)، ومراقبة البوتاسيوم.</li><li>علاج السبب: قلب، كلى، كبد.</li></ul>\n<h4>نقص الحجم</h4><ul><li>تعويض السوائل فمياً أو وريدياً حسب الشدة (انظر <a href=\"/diseases/dis-1606\">المحاليل</a>).</li><li>علاج السبب: وقف القيء والإسهال، خفض الحرارة، علاج DKA.</li></ul>\n<p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p>",
+   "en": "<h4>Volume excess</h4><ul><li>Restrict sodium and fluids, and elevate the head.</li><li>Diuretics per physician order (Furosemide), and monitor potassium.</li><li>Treat the cause: heart, kidneys, liver.</li></ul>\n<h4>Volume deficit</h4><ul><li>Replace fluids orally or IV according to severity (see <a href=\"/diseases/dis-1606\">IV fluids</a>).</li><li>Treat the cause: stop vomiting and diarrhea, lower the temperature, treat DKA.</li></ul>\n<p>Doses are for learning; always verify with the physician/pharmacist before giving.</p>"
+  },
+  "nursing": {
+   "ar": "<ol><li>وزن يومي بنفس الميزان والوقت، ودخل وخرج.</li><li>قس الضغط والنبض وقيّم الأوردة والجلد والمخاطية والوعي.</li><li>لمريض زيادة الحجم: رفع الرأس، قيّم الرئة (رالات) وقِس الوذمة بالدرجة 0+ إلى 4+.</li><li>لمريض نقص الحجم: عوّض السوائل، وقِس الضغط واقفاً بحذر وتجنب السقوط.</li><li>راقب التحاليل: Na وHct وBUN والوزن النوعي للبول.</li><li>أبلغ عند أي تغير حاد في الوعي أو الضغط أو البول.</li></ol>",
+   "en": "<ol><li>Daily weight on the same scale at the same time, and intake and output.</li><li>Measure BP and pulse, and assess the veins, skin, mucosa, and consciousness.</li><li>For volume excess: elevate the head, assess the lungs (crackles), and grade edema from 0+ to 4+.</li><li>For volume deficit: replace fluids, measure standing BP carefully, and prevent falls.</li><li>Monitor labs: Na, Hct, BUN, and urine specific gravity.</li><li>Report any acute change in consciousness, BP, or urine.</li></ol>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ فوراً</strong><ul><li>ضغط 180 فأكثر مع صداع أو ارتباك (أزمة)</li><li>رالات ونفس سريع مع وذمة رئة</li><li>هبوط ضغط ونبض أكبر من 100 مع قلة بول</li><li>تغير وعي مع Na أقل من 135 أو أعلى من 145</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately</strong><ul><li>BP of 180 or more with headache or confusion (crisis)</li><li>Crackles and rapid breathing with pulmonary edema</li><li>Hypotension and pulse above 100 with low urine output</li><li>Change in consciousness with Na below 135 or above 145</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>زن نفسك يومياً صباحاً بنفس الميزان.</li><li>قلّل الملح إذا كان لديك فشل قلب أو كلى.</li><li>اشرب سوائل كافية وقت الحر والإسهال وأبلغ عن الدوخة.</li></ul>",
+   "en": "<ul><li>Weigh yourself daily in the morning on the same scale.</li><li>Reduce salt if you have heart or kidney failure.</li><li>Drink enough fluids in hot weather and with diarrhea, and report dizziness.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "وذمة 0+ إلى 4+ حسب العمق وزمن الارتداد",
+   "أسباب الوذمة: ضغط هيدروستاتيكي، نقص ألبومين، نفاذية، انسداد ليمفاوي",
+   "أسباب الجفاف: قيء وإسهال، تعرق، حروق، فقد بول (DI، DKA، مدرّات)",
+   "زيادة 2–3 رطل/يوم = احتباس ماء",
+   "الوزن النوعي للبول: منخفض في الزيادة، عالٍ في النقص"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>توازن السوائل هو أساس التمريض الباطني: المريض إما <b>منتفخ بالماء</b> (Fluid Volume Overload/Excess = FVE أو Hypervolemia) أو <b>جاف</b> (Fluid Volume Deficit = FVD أو Dehydration). الدليل ده يشمل: عوامل الماء بالجسم، المصطلحات (أسموزية، انتشار، ترشيح)، الوذمة ودرجاتها، أسباب الجفاف، والمقارنة الكاملة بين الحالتين. دليل المحاليل الوريدية في <a href=\"/diseases/dis-1606\">محاليل التوتر</a>، وأساسيات الأملاح في <a href=\"/diseases/dis-773\">الأساسيات</a> و<a href=\"/diseases/dis-783\">الجفاف عند البالغين</a>.</p>\n[[slot:dis-1605-terms|العوامل والمصطلحات — رسم من إعداد الموقع|/diseases/img/dis-1605-terms.svg]]\n<table><thead><tr><th>المصطلح</th><th>المعنى</th><th>مثال</th></tr></thead><tbody><tr><td>الأسموزية (Osmosis)</td><td>انتقال الماء من التركيز الأقل إلى الأعلى حتى التعادل</td><td>الأمعاء الغليظة تمتص الماء</td></tr><tr><td>الانتشار (Diffusion)</td><td>انتقال المذاب من التركيز الأعلى للأقل</td><td>تبادل O₂ وCO₂ في الرئة</td></tr><tr><td>الترشيح (Filtration)</td><td>انتقال الماء والمذاب معاً من ضغط عالٍ إلى منخفض</td><td>الكلى ترشح الدم</td></tr><tr><td>الأسمولالية (Osmolality)</td><td>تركيز المحلول: أعلى = أكثر مذاباً وأثقل</td><td>متساوي التوتر 270–300 mOsm/kg</td></tr></tbody></table>"
-    },
-    "causes": {
-      "ar": "<h4>الوذمة: التعريف والأسباب الأربعة</h4><p>الوذمة (Edema) تورم الأنسجة الرخوة من تجمع سوائل، وتشبه المرتبة الإسفنجية عند الضغط. من 0+ إلى 4+.</p><table><thead><tr><th>السبب</th><th>الآلية</th><th>أمثلة</th></tr></thead><tbody><tr><td>ارتفاع الضغط الهيدروستاتيكي (نقطة امتحان)</td><td>حجم أكبر فضغط أعلى: ضغط دم مرتفع ووذمة انخماصية</td><td>فشل كلوي، فشل قلب (HF: Heavy Fluid)</td></tr><tr><td>انخفاض الضغط الأسموزي الغروي</td><td>نقص الألبومين (يسحب الماء) فيهرب الماء للأنسجة</td><td>تليف الكبد، المجاعة</td></tr><tr><td>زيادة نفاذية الشعيرات</td><td>تسريب من الأوعية</td><td>عدوى بكتيرية، حروق</td></tr><tr><td>انسداد الجهاز الليمفاوي</td><td>السائل لا يتصرف</td><td>سرطان، عدوى بالغدد</td></tr></tbody></table><h4>أسباب نقص الحجم (الجفاف): الأربعة الكبار</h4><ul><li>قيء وإسهال</li><li>ارتفاع الحرارة والتعرق: حمى، ضربة شمس، عاصفة درقية</li><li>حروق شديدة</li><li>فقد البول: السكري الكاذب (DI)، الحماض الكيتوني (DKA)، المدرّات (Furosemide وHydrochlorothiazide)</li></ul><table><thead><tr><th>السبب</th><th>معنى</th></tr></thead><tbody><tr><td>DI</td><td>فقد الماء من الجسم (جفاف داخلي)</td></tr><tr><td>DKA</td><td>سكر مرتفع يسحب الماء، وعدوى، وتنفس كوسماول يزيد الفقد غير المحسوس</td></tr><tr><td>المدرّات</td><td>تجفيف بالبول</td></tr></tbody></table><p>تعويض الجسم عن الجفاف: عطش، احتباس البول (تركيز)، زيادة النبض وتضيق الأوعية.</p>"
-    },
-    "signs": {
-      "ar": "[[slot:dis-1605-pitting|درجات الوذمة — رسم من إعداد الموقع|/diseases/img/dis-1605-pitting.svg]]<table><thead><tr><th>الدرجة</th><th>العمق</th><th>الارتداد</th></tr></thead><tbody><tr><td>0+</td><td>لا وذمة</td><td>—</td></tr><tr><td>1+</td><td>2 مم أو أقل (خفيف)</td><td>فوري</td></tr><tr><td>2+</td><td>3–4 مم (متوسط)</td><td>15 ثانية</td></tr><tr><td>3+</td><td>5–6 مم (متوسط إلى شديد)</td><td>30 ثانية</td></tr><tr><td>4+</td><td>8 مم أو أكثر (شديد)</td><td>1–2 دقيقة</td></tr></tbody></table>[[slot:dis-1605-compare|الجدول الكامل — رسم من إعداد الموقع|/diseases/img/dis-1605-compare.svg]]<table><thead><tr><th>الجهاز</th><th>زيادة الحجم (Hypervolemia)</th><th>نقص الحجم (Hypovolemia)</th></tr></thead><tbody><tr><td>الضغط</td><td>ارتفاع، قد يصل 140+ (أزمة 180)</td><td>هبوط ضغط وانخفاض عند الوقوف</td></tr><tr><td>النبض</td><td>قوي متوثب</td><td>ضعيف خيطي، سريع فوق 100</td></tr><tr><td>الأوردة</td><td>أوردة رقبة منتفخة JVD، CVP مرتفع</td><td>أوردة الرقبة واليد مسطحة، CVP منخفض</td></tr><tr><td>الجلد</td><td>وذمة حول العين وانخماصية، شاحب بارد</td><td>عيون غائرة، جلد جاف مرن ضعيف، مخاطية جافة، حرارة أعلى</td></tr><tr><td>الأعصاب</td><td>تغير وعي، صداع، ضعف وتنميل</td><td>خمول حتى غيبوبة وضعف</td></tr><tr><td>البول</td><td>قلة بول، وزن نوعي منخفض (1.005)</td><td>بول مركز في البداية ثم قلة، وزن نوعي عالٍ (حتى 1.030)</td></tr><tr><td>الوزن</td><td>زيادة 2–3 رطل/يوم أو 5 رطل/أسبوع</td><td>فقدان وزن</td></tr><tr><td>التنفس</td><td>سريع ضحل، رالات (وذمة رئة)</td><td>سريع عميق</td></tr><tr><td>الهضم</td><td>إسهال، تضخم كبد، استسقاء</td><td>إمساك وحركة ضعيفة</td></tr><tr><td>التحاليل</td><td>ملح منخفض (Na أقل من 135)، Hct وBUN وأسمولالية أقل</td><td>Na فوق 145، Hct وBUN وأسمولالية أعلى</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>نقاط امتحان</strong><ul><li>زيادة الحجم: ضغط مرتفع (أكثر من 140 انقباضي)، أزمة (180)، خطر سكتة.</li><li>نقص الحجم: هبوط ضغط عند الوقوف (دوخة) وتسرع القلب فوق 100.</li><li>الوزن: زيادة 2–3 رطل خلال يوم أو 5 رطل خلال أسبوع = احتباس ماء. الفقد = ماء.</li><li>الوزن النوعي للبول الطبيعي 1.005–1.030.</li></ul></div>"
-    },
-    "tests": {
-      "ar": ""
-    },
-    "treatment": {
-      "ar": "<h4>زيادة الحجم</h4><ul><li>تقييد الصوديوم والسوائل، ورفع الرأس.</li><li>مدرّات بأمر الطبيب (Furosemide)، ومراقبة البوتاسيوم.</li><li>علاج السبب: قلب، كلى، كبد.</li></ul>\n<h4>نقص الحجم</h4><ul><li>تعويض السوائل فمياً أو وريدياً حسب الشدة (انظر <a href=\"/diseases/dis-1606\">المحاليل</a>).</li><li>علاج السبب: وقف القيء والإسهال، خفض الحرارة، علاج DKA.</li></ul>\n<p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p>"
-    },
-    "nursing": {
-      "ar": "<ol><li>وزن يومي بنفس الميزان والوقت، ودخل وخرج.</li><li>قس الضغط والنبض وقيّم الأوردة والجلد والمخاطية والوعي.</li><li>لمريض زيادة الحجم: رفع الرأس، قيّم الرئة (رالات) وقِس الوذمة بالدرجة 0+ إلى 4+.</li><li>لمريض نقص الحجم: عوّض السوائل، وقِس الضغط واقفاً بحذر وتجنب السقوط.</li><li>راقب التحاليل: Na وHct وBUN والوزن النوعي للبول.</li><li>أبلغ عند أي تغير حاد في الوعي أو الضغط أو البول.</li></ol>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ فوراً</strong><ul><li>ضغط 180 فأكثر مع صداع أو ارتباك (أزمة)</li><li>رالات ونفس سريع مع وذمة رئة</li><li>هبوط ضغط ونبض أكبر من 100 مع قلة بول</li><li>تغير وعي مع Na أقل من 135 أو أعلى من 145</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>زن نفسك يومياً صباحاً بنفس الميزان.</li><li>قلّل الملح إذا كان لديك فشل قلب أو كلى.</li><li>اشرب سوائل كافية وقت الحر والإسهال وأبلغ عن الدوخة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "وذمة 0+ إلى 4+ حسب العمق وزمن الارتداد",
-      "أسباب الوذمة: ضغط هيدروستاتيكي، نقص ألبومين، نفاذية، انسداد ليمفاوي",
-      "أسباب الجفاف: قيء وإسهال، تعرق، حروق، فقد بول (DI، DKA، مدرّات)",
-      "زيادة 2–3 رطل/يوم = احتباس ماء",
-      "الوزن النوعي للبول: منخفض في الزيادة، عالٍ في النقص"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "وذمة بعمق 5–6 مم ترتد خلال 30 ثانية تقريباً:"
-      },
-      "options": [
-        {
-          "ar": "3+"
-        },
-        {
-          "ar": "1+"
-        },
-        {
-          "ar": "2+"
-        },
-        {
-          "ar": "4+"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "3+ بعمق 5–6 مم وارتداد 30 ثانية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي سبب يزيد الضغط الهيدروستاتيكي؟"
-      },
-      "options": [
-        {
-          "ar": "فشل القلب"
-        },
-        {
-          "ar": "نقص الألبومين"
-        },
-        {
-          "ar": "الحروق"
-        },
-        {
-          "ar": "سرطان لمفاوي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحجم الزائد في فشل القلب والكلى يرفع الضغط."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض وزنه زاد 5 رطل في أسبوع مع وذمة. التفسير:"
-      },
-      "options": [
-        {
-          "ar": "احتباس سوائل"
-        },
-        {
-          "ar": "جفاف"
-        },
-        {
-          "ar": "طبيعي"
-        },
-        {
-          "ar": "نقص ملح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "زيادة الوزن السريعة تعني ماء."
-      }
-    },
-    {
-      "q": {
-        "ar": "الوزن النوعي المتوقع في الجفاف:"
-      },
-      "options": [
-        {
-          "ar": "مرتفع"
-        },
-        {
-          "ar": "منخفض"
-        },
-        {
-          "ar": "طبيعي دائماً"
-        },
-        {
-          "ar": "لا يتغير"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "البول المركز له كثافة أعلى."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تحليل مع الجفاف؟"
-      },
-      "options": [
-        {
-          "ar": "Hct وBUN مرتفعان"
-        },
-        {
-          "ar": "Hct منخفض"
-        },
-        {
-          "ar": "أسمولالية منخفضة"
-        },
-        {
-          "ar": "Na منخفض"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تركّز الدم يرفع Hct وBUN."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "مراجع عامة: Fundamentals of Nursing — Fluid Balance"
-    }
+  "en": [
+   "Edema 0+ to 4+ by depth and rebound time",
+   "Causes of edema: hydrostatic pressure, low albumin, permeability, lymphatic obstruction",
+   "Causes of dehydration: vomiting and diarrhea, sweating, burns, urinary loss (DI, DKA, diuretics)",
+   "Gain of 2–3 lb/day = water retention",
+   "Urine specific gravity: low in excess, high in deficit"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "وذمة بعمق 5–6 مم ترتد خلال 30 ثانية تقريباً:",
+    "en": "Edema 5–6 mm deep that rebounds in about 30 seconds:"
+   },
+   "options": [
+    {
+     "ar": "3+",
+     "en": "3+"
+    },
+    {
+     "ar": "1+",
+     "en": "1+"
+    },
+    {
+     "ar": "2+",
+     "en": "2+"
+    },
+    {
+     "ar": "4+",
+     "en": "4+"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "3+ بعمق 5–6 مم وارتداد 30 ثانية.",
+    "en": "3+ is 5–6 mm deep with a 30-second rebound."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي سبب يزيد الضغط الهيدروستاتيكي؟",
+    "en": "Which cause increases hydrostatic pressure?"
+   },
+   "options": [
+    {
+     "ar": "فشل القلب",
+     "en": "Heart failure"
+    },
+    {
+     "ar": "نقص الألبومين",
+     "en": "Low albumin"
+    },
+    {
+     "ar": "الحروق",
+     "en": "Burns"
+    },
+    {
+     "ar": "سرطان لمفاوي",
+     "en": "Lymphatic cancer"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحجم الزائد في فشل القلب والكلى يرفع الضغط.",
+    "en": "Excess volume in heart and kidney failure raises the pressure."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض وزنه زاد 5 رطل في أسبوع مع وذمة. التفسير:",
+    "en": "A patient gained 5 lb in a week with edema. The interpretation:"
+   },
+   "options": [
+    {
+     "ar": "احتباس سوائل",
+     "en": "Fluid retention"
+    },
+    {
+     "ar": "جفاف",
+     "en": "Dehydration"
+    },
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
+    },
+    {
+     "ar": "نقص ملح",
+     "en": "Low sodium"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "زيادة الوزن السريعة تعني ماء.",
+    "en": "Rapid weight gain means water."
+   }
+  },
+  {
+   "q": {
+    "ar": "الوزن النوعي المتوقع في الجفاف:",
+    "en": "The expected specific gravity in dehydration:"
+   },
+   "options": [
+    {
+     "ar": "مرتفع",
+     "en": "High"
+    },
+    {
+     "ar": "منخفض",
+     "en": "Low"
+    },
+    {
+     "ar": "طبيعي دائماً",
+     "en": "Always normal"
+    },
+    {
+     "ar": "لا يتغير",
+     "en": "Unchanged"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "البول المركز له كثافة أعلى.",
+    "en": "Concentrated urine has a higher density."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تحليل مع الجفاف؟",
+    "en": "Which lab goes with dehydration?"
+   },
+   "options": [
+    {
+     "ar": "Hct وBUN مرتفعان",
+     "en": "High Hct and BUN"
+    },
+    {
+     "ar": "Hct منخفض",
+     "en": "Low Hct"
+    },
+    {
+     "ar": "أسمولالية منخفضة",
+     "en": "Low osmolality"
+    },
+    {
+     "ar": "Na منخفض",
+     "en": "Low Na"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تركّز الدم يرفع Hct وBUN.",
+    "en": "Hemoconcentration raises Hct and BUN."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "مراجع عامة: Fundamentals of Nursing — Fluid Balance"
+  }
+ ]
 }

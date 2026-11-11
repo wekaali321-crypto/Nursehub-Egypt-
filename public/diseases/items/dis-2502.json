@@ -1,166 +1,209 @@
 {
-  "id": "dis-2502",
-  "num": 2502,
-  "system": "blood",
-  "icon": "🅰️",
-  "level": 1,
-  "title": {
-    "ar": "فصائل الدم وعامل Rh: المعطي العام والمستقبِل العام وRhoGAM",
-    "en": "Blood Types & Rh Factor"
+ "id": "dis-2502",
+ "num": 2502,
+ "system": "blood",
+ "icon": "🅰️",
+ "level": 1,
+ "title": {
+  "ar": "فصائل الدم وعامل Rh: المعطي العام والمستقبِل العام وRhoGAM",
+  "en": "Blood Types & Rh Factor"
+ },
+ "teaser": {
+  "ar": "من يعطي من؟ المعطي العام O والمستقبِل العام AB، معنى Rh وكومبس غير المباشر، وسبب إعطاء RhoGAM للأم Rh سالب.",
+  "en": "Who gives to whom? The universal donor is O and the universal recipient is AB, the meaning of Rh and the indirect Coombs test, and why RhoGAM is given to an Rh-negative mother."
+ },
+ "chips": [
+  {
+   "ar": "A وB وAB وO",
+   "en": "A, B, AB, and O"
   },
-  "teaser": {
-    "ar": "من يعطي من؟ المعطي العام O والمستقبِل العام AB، معنى Rh وكومبس غير المباشر، وسبب إعطاء RhoGAM للأم Rh سالب."
+  {
+   "ar": "Rh وكومبس",
+   "en": "Rh and Coombs"
   },
-  "chips": [
-    {
-      "ar": "A وB وAB وO"
-    },
-    {
-      "ar": "Rh وكومبس"
-    },
-    {
-      "ar": "RhoGAM"
-    }
+  {
+   "ar": "RhoGAM",
+   "en": "RhoGAM"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>فصائل الدم الرئيسية: <b>A وB وAB وO</b>. أهم نقطة تُسأل في الاختبار هي: <b>O معطٍ عام</b> (D<b>O</b>nor)، و<b>AB مستقبِل عام</b> (AB-sorbs: يستقبل من الكل). لا تقضِ وقتًا في حفظ الجدول الكامل لأنه نادر الظهور.</p>\n[[slot:dis-2502-types|من يعطي من؟ فصائل الدم — رسم من إعداد الموقع|/diseases/img/dis-2502-types.svg]]\n<p>ومن أسئلة الاختبار: مريض AB والبنك أرسل فصيلة A → <b>تُعطى حسب بروتوكول المنشأة</b> (AB يقبل A). ومريض يقول «أنا معطٍ عام» → فصيلته <b>O</b>.</p>\n<h4>عامل Rh</h4>\n<p>عامل Rh مادة (مستضد D) على سطح الكرات الحمراء؛ الشخص إما <b>Rh موجب</b> أو <b>سالب</b>، والسالب يكوّن أجسامًا مضادة لو تعرّض لدم موجب. <b>اختبار كومبس غير المباشر</b> يُجرى للتأكد من توافق الدم، ويكشف <b>الأجسام المضادة الدائرة ضد الكرات الحمراء</b> (إجابة سؤال: يُسأل المتبرع عن الغرض منه).</p>\n[[slot:dis-2502-hdn|عدم توافق Rh بين الأم والجنين — رسم من إعداد الموقع|/diseases/img/dis-2502-hdn.svg]]",
+   "en": "<p>The main blood types: <b>A, B, AB, and O</b>. The most important point asked on the exam: <b>O is the universal donor</b> (D<b>O</b>nor), and <b>AB is the universal recipient</b> (AB-sorbs: receives from all). Do not spend time memorizing the full table because it rarely appears.</p>\n[[slot:dis-2502-types|Who gives to whom? Blood types — original illustration|/diseases/img/dis-2502-types.svg]]\n<p>Among exam questions: an AB patient and the blood bank sent type A → <b>give it per facility protocol</b> (AB accepts A). And a patient who says “I am a universal donor” → their type is <b>O</b>.</p>\n<h4>Rh factor</h4>\n<p>The Rh factor is a substance (D antigen) on the surface of red blood cells; a person is either <b>Rh positive</b> or <b>Rh negative</b>, and an Rh-negative person forms antibodies if exposed to positive blood. The <b>indirect Coombs test</b> is done to confirm blood compatibility, and it detects <b>circulating antibodies against red blood cells</b> (answer to a question: the donor asks about its purpose).</p>\n[[slot:dis-2502-hdn|Rh incompatibility between mother and fetus — original illustration|/diseases/img/dis-2502-hdn.svg]]"
+  },
+  "causes": {
+   "ar": "<p>اختلاف Rh بين الأم (سالب) والجنين (موجب) يؤدي لتكوّن أجسام مضادة عند الأم، وهو سبب HDN.</p>",
+   "en": "<p>An Rh difference between the mother (negative) and the fetus (positive) leads to antibody formation in the mother, and this is the cause of HDN.</p>"
+  },
+  "signs": {
+   "ar": "<p>HDN عند المولود: <b>انحلال دم وأنيميا انحلالية ويرقان</b> (التفاصيل في دليل Rh). عند عدم توافق دم النقل: علامات التفاعل الانحلالي (ألم ظهر، حمى، هبوط ضغط).</p>",
+   "en": "<p>HDN in the newborn: <b>hemolysis, hemolytic anemia, and jaundice</b> (details in the Rh guide). With incompatible transfused blood: signs of a hemolytic reaction (back pain, fever, low blood pressure).</p>"
+  },
+  "tests": {
+   "ar": "<p><b>كومبس غير المباشر</b>: يكشف الأجسام المضادة الدائرة ضد كرات الدم، ويُجرى للتأكد أن الدم يمكن إعطاؤه أو استقباله. وفصيلة الدم وRh للأم في الحمل.</p>",
+   "en": "<p><b>Indirect Coombs</b>: detects circulating antibodies against blood cells, and is done to confirm that blood can be given or received. Plus the mother's blood type and Rh in pregnancy.</p>"
+  },
+  "treatment": {
+   "ar": "<p>الوقاية: <b>RhoGAM</b> للأم Rh سالب (حاملًا) لتحمي الجنين من انحلال الدم. والنقل يكون بفصيلة متوافقة.</p>",
+   "en": "<p>Prevention: <b>RhoGAM</b> for the Rh-negative (pregnant) mother to protect the fetus from hemolysis. Transfusion is with a compatible type.</p>"
+  },
+  "nursing": {
+   "ar": "<ul><li>الأم Rh سالب والجنين Rh موجب: في الحمل الأول قد تتكون أجسام مضادة، وفي الحمل الثاني تعبر المشيمة وتهاجم كرات الجنين فيحدث <b>مرض الانحلال الوليدي (HDN)</b> وأنيميا انحلالية.</li><li><b>RhoGAM</b> يُعطى للأم Rh سالب لحماية الجنين القادم (التفاصيل والتوقيت في <a href=\"/diseases/dis-821\">دليل عدم توافق Rh</a>).</li><li>قبل أي نقل دم: تأكد من فصيلة المريض والمنتج بالتحقق المزدوج (<a href=\"/diseases/dis-2501\">دليل نقل الدم</a>).</li></ul>\n<div class=\"cs-box cs-tip\"><strong>سؤال امتحان: وصلت فصيلة A لمريض فصيلته AB</strong><p>فصيلة AB تستقبل من A وB وAB وO، فالدم المرسل متوافق. المطلوب إكمال النقل حسب بروتوكول المستشفى (تحقق مزدوج من الاسم والفصيلة والوحدة مع ممرض ثانٍ) وليس رفض الوحدة أو إيقاف الإجراء دون سبب. وعبارة المريض «أنا معطٍ عام» تعني أن فصيلته O.</p></div>",
+   "en": "<ul><li>Rh-negative mother and Rh-positive fetus: in the first pregnancy antibodies may form, and in the second pregnancy they cross the placenta and attack the fetal cells, causing <b>hemolytic disease of the newborn (HDN)</b> and hemolytic anemia.</li><li><b>RhoGAM</b> is given to the Rh-negative mother to protect the next fetus (details and timing in the <a href=\"/diseases/dis-821\">Rh incompatibility guide</a>).</li><li>Before any blood transfusion: confirm the patient's and the product's type with a double check (<a href=\"/diseases/dis-2501\">blood transfusion guide</a>).</li></ul>\n<div class=\"cs-box cs-tip\"><strong>Exam question: type A arrived for a patient with type AB</strong><p>Type AB receives from A, B, AB, and O, so the blood sent is compatible. The required action is to complete the transfusion per hospital protocol (double-check the name, type, and unit with a second nurse), not to refuse the unit or stop the procedure without reason. A patient's statement “I am a universal donor” means their type is O.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>أي علامة تفاعل أثناء نقل الدم: أوقف النقل وبلّغ.</li><li>أم Rh سالب بلا حقنة RhoGAM بعد حدث يعرّضها لدم الجنين: بلّغ الطبيب.</li></ul>",
+   "en": "<ul><li>Any sign of a reaction during blood transfusion: stop the transfusion and report.</li><li>An Rh-negative mother without a RhoGAM injection after an event that exposes her to fetal blood: notify the physician.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرح للأم Rh سالب أن الحقنة تحمي طفلها في الحمل القادم وليست علاجًا لها.</li><li>اشرح للمتبرع أن كومبس غير المباشر يكشف الأجسام المضادة ضد كرات الدم.</li></ul>",
+   "en": "<ul><li>Explain to the Rh-negative mother that the injection protects her baby in the next pregnancy and is not a treatment for her.</li><li>Explain to the donor that the indirect Coombs test detects antibodies against blood cells.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "O معطٍ عام؛ AB مستقبِل عام",
+   "لا تُحفظ جداول التوافق بالتفصيل: نادرًا ما تُسأل",
+   "Rh سالب/موجب مادة على سطح الكرات؛ كومبس غير المباشر يكشف أجسامًا مضادة دائرة",
+   "RhoGAM للأم Rh سالب لحماية الجنين من HDN",
+   "HDN يظهر في الحمل الثاني بعد تكوّن الأجسام في الأول"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>فصائل الدم الرئيسية: <b>A وB وAB وO</b>. أهم نقطة تُسأل في الاختبار هي: <b>O معطٍ عام</b> (D<b>O</b>nor)، و<b>AB مستقبِل عام</b> (AB-sorbs: يستقبل من الكل). لا تقضِ وقتًا في حفظ الجدول الكامل لأنه نادر الظهور.</p>\n[[slot:dis-2502-types|من يعطي من؟ فصائل الدم — رسم من إعداد الموقع|/diseases/img/dis-2502-types.svg]]\n<p>ومن أسئلة الاختبار: مريض AB والبنك أرسل فصيلة A → <b>تُعطى حسب بروتوكول المنشأة</b> (AB يقبل A). ومريض يقول «أنا معطٍ عام» → فصيلته <b>O</b>.</p>\n<h4>عامل Rh</h4>\n<p>عامل Rh مادة (مستضد D) على سطح الكرات الحمراء؛ الشخص إما <b>Rh موجب</b> أو <b>سالب</b>، والسالب يكوّن أجسامًا مضادة لو تعرّض لدم موجب. <b>اختبار كومبس غير المباشر</b> يُجرى للتأكد من توافق الدم، ويكشف <b>الأجسام المضادة الدائرة ضد الكرات الحمراء</b> (إجابة سؤال: يُسأل المتبرع عن الغرض منه).</p>\n[[slot:dis-2502-hdn|عدم توافق Rh بين الأم والجنين — رسم من إعداد الموقع|/diseases/img/dis-2502-hdn.svg]]"
-    },
-    "causes": {
-      "ar": "<p>اختلاف Rh بين الأم (سالب) والجنين (موجب) يؤدي لتكوّن أجسام مضادة عند الأم، وهو سبب HDN.</p>"
-    },
-    "signs": {
-      "ar": "<p>HDN عند المولود: <b>انحلال دم وأنيميا انحلالية ويرقان</b> (التفاصيل في دليل Rh). عند عدم توافق دم النقل: علامات التفاعل الانحلالي (ألم ظهر، حمى، هبوط ضغط).</p>"
-    },
-    "tests": {
-      "ar": "<p><b>كومبس غير المباشر</b>: يكشف الأجسام المضادة الدائرة ضد كرات الدم، ويُجرى للتأكد أن الدم يمكن إعطاؤه أو استقباله. وفصيلة الدم وRh للأم في الحمل.</p>"
-    },
-    "treatment": {
-      "ar": "<p>الوقاية: <b>RhoGAM</b> للأم Rh سالب (حاملًا) لتحمي الجنين من انحلال الدم. والنقل يكون بفصيلة متوافقة.</p>"
-    },
-    "nursing": {
-      "ar": "<ul><li>الأم Rh سالب والجنين Rh موجب: في الحمل الأول قد تتكون أجسام مضادة، وفي الحمل الثاني تعبر المشيمة وتهاجم كرات الجنين فيحدث <b>مرض الانحلال الوليدي (HDN)</b> وأنيميا انحلالية.</li><li><b>RhoGAM</b> يُعطى للأم Rh سالب لحماية الجنين القادم (التفاصيل والتوقيت في <a href=\"/diseases/dis-821\">دليل عدم توافق Rh</a>).</li><li>قبل أي نقل دم: تأكد من فصيلة المريض والمنتج بالتحقق المزدوج (<a href=\"/diseases/dis-2501\">دليل نقل الدم</a>).</li></ul>\n<div class=\"cs-box cs-tip\"><strong>سؤال امتحان: وصلت فصيلة A لمريض فصيلته AB</strong><p>فصيلة AB تستقبل من A وB وAB وO، فالدم المرسل متوافق. المطلوب إكمال النقل حسب بروتوكول المستشفى (تحقق مزدوج من الاسم والفصيلة والوحدة مع ممرض ثانٍ) وليس رفض الوحدة أو إيقاف الإجراء دون سبب. وعبارة المريض «أنا معطٍ عام» تعني أن فصيلته O.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>أي علامة تفاعل أثناء نقل الدم: أوقف النقل وبلّغ.</li><li>أم Rh سالب بلا حقنة RhoGAM بعد حدث يعرّضها لدم الجنين: بلّغ الطبيب.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرح للأم Rh سالب أن الحقنة تحمي طفلها في الحمل القادم وليست علاجًا لها.</li><li>اشرح للمتبرع أن كومبس غير المباشر يكشف الأجسام المضادة ضد كرات الدم.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "O معطٍ عام؛ AB مستقبِل عام",
-      "لا تُحفظ جداول التوافق بالتفصيل: نادرًا ما تُسأل",
-      "Rh سالب/موجب مادة على سطح الكرات؛ كومبس غير المباشر يكشف أجسامًا مضادة دائرة",
-      "RhoGAM للأم Rh سالب لحماية الجنين من HDN",
-      "HDN يظهر في الحمل الثاني بعد تكوّن الأجسام في الأول"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض يقول: أنا معطٍ عام للدم. فصيلته؟"
-      },
-      "options": [
-        {
-          "ar": "A"
-        },
-        {
-          "ar": "B"
-        },
-        {
-          "ar": "AB"
-        },
-        {
-          "ar": "O"
-        }
-      ],
-      "answer": 3,
-      "why": {
-        "ar": "فصيلة O هي المعطي العام."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض AB والبنك أرسل A. ماذا تفعل؟"
-      },
-      "options": [
-        {
-          "ar": "ترفض فورًا"
-        },
-        {
-          "ar": "تعطي حسب بروتوكول المنشأة"
-        },
-        {
-          "ar": "تعطي O فقط"
-        },
-        {
-          "ar": "تعطي بلازما"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "AB مستقبِل عام ويقبل A؛ يُنفَّذ حسب البروتوكول مع التحقق المعتاد."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما الغرض من اختبار كومبس غير المباشر عند متبرع؟"
-      },
-      "options": [
-        {
-          "ar": "قياس الهيموجلوبين"
-        },
-        {
-          "ar": "كشف أجسام مضادة دائرة ضد كرات الدم"
-        },
-        {
-          "ar": "عدّ الصفائح"
-        },
-        {
-          "ar": "فحص السكر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يكشف الأجسام المضادة الدائرة ضد كرات الدم الحمراء."
-      }
-    },
-    {
-      "q": {
-        "ar": "لماذا تُعطى RhoGAM لأم Rh سالب حامل؟"
-      },
-      "options": [
-        {
-          "ar": "لعلاج الأم"
-        },
-        {
-          "ar": "لحماية الجنين من مرض الانحلال الوليدي"
-        },
-        {
-          "ar": "لزيادة الدم"
-        },
-        {
-          "ar": "لمنع الإجهاض"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تمنع تكوّن أجسام الأم المضادة التي تهاجم كرات الجنين Rh موجب."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Guidelines for blood grouping and compatibility — ملخصات عامة"
-    },
-    {
-      "title": "ACOG: Rh D Alloimmunization (ملخص)"
-    },
-    {
-      "title": "StatPearls: ABO Blood Group System; Rh Incompatibility"
-    }
+  "en": [
+   "O is the universal donor; AB is the universal recipient",
+   "Do not memorize compatibility tables in detail: they are rarely asked",
+   "Rh negative/positive is a substance on the cell surface; indirect Coombs detects circulating antibodies",
+   "RhoGAM for the Rh-negative mother to protect the fetus from HDN",
+   "HDN appears in the second pregnancy after antibodies form in the first"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض يقول: أنا معطٍ عام للدم. فصيلته؟",
+    "en": "A patient says: I am a universal blood donor. Their type?"
+   },
+   "options": [
+    {
+     "ar": "A",
+     "en": "A"
+    },
+    {
+     "ar": "B",
+     "en": "B"
+    },
+    {
+     "ar": "AB",
+     "en": "AB"
+    },
+    {
+     "ar": "O",
+     "en": "O"
+    }
+   ],
+   "answer": 3,
+   "why": {
+    "ar": "فصيلة O هي المعطي العام.",
+    "en": "Type O is the universal donor."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض AB والبنك أرسل A. ماذا تفعل؟",
+    "en": "An AB patient and the blood bank sent A. What do you do?"
+   },
+   "options": [
+    {
+     "ar": "ترفض فورًا",
+     "en": "Refuse immediately"
+    },
+    {
+     "ar": "تعطي حسب بروتوكول المنشأة",
+     "en": "Give per facility protocol"
+    },
+    {
+     "ar": "تعطي O فقط",
+     "en": "Give O only"
+    },
+    {
+     "ar": "تعطي بلازما",
+     "en": "Give plasma"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "AB مستقبِل عام ويقبل A؛ يُنفَّذ حسب البروتوكول مع التحقق المعتاد.",
+    "en": "AB is the universal recipient and accepts A; it is given per protocol with the usual verification."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما الغرض من اختبار كومبس غير المباشر عند متبرع؟",
+    "en": "What is the purpose of the indirect Coombs test in a donor?"
+   },
+   "options": [
+    {
+     "ar": "قياس الهيموجلوبين",
+     "en": "Measuring hemoglobin"
+    },
+    {
+     "ar": "كشف أجسام مضادة دائرة ضد كرات الدم",
+     "en": "Detecting circulating antibodies against blood cells"
+    },
+    {
+     "ar": "عدّ الصفائح",
+     "en": "Counting platelets"
+    },
+    {
+     "ar": "فحص السكر",
+     "en": "Checking glucose"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يكشف الأجسام المضادة الدائرة ضد كرات الدم الحمراء.",
+    "en": "It detects circulating antibodies against red blood cells."
+   }
+  },
+  {
+   "q": {
+    "ar": "لماذا تُعطى RhoGAM لأم Rh سالب حامل؟",
+    "en": "Why is RhoGAM given to a pregnant Rh-negative mother?"
+   },
+   "options": [
+    {
+     "ar": "لعلاج الأم",
+     "en": "To treat the mother"
+    },
+    {
+     "ar": "لحماية الجنين من مرض الانحلال الوليدي",
+     "en": "To protect the fetus from hemolytic disease of the newborn"
+    },
+    {
+     "ar": "لزيادة الدم",
+     "en": "To increase blood"
+    },
+    {
+     "ar": "لمنع الإجهاض",
+     "en": "To prevent miscarriage"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تمنع تكوّن أجسام الأم المضادة التي تهاجم كرات الجنين Rh موجب.",
+    "en": "It prevents the mother from forming antibodies that attack the Rh-positive fetal cells."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Guidelines for blood grouping and compatibility — ملخصات عامة"
+  },
+  {
+   "title": "ACOG: Rh D Alloimmunization (ملخص)"
+  },
+  {
+   "title": "StatPearls: ABO Blood Group System; Rh Incompatibility"
+  }
+ ]
 }

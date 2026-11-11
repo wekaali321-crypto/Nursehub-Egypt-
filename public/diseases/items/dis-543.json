@@ -1,146 +1,184 @@
 {
-  "id": "dis-543",
-  "num": 543,
-  "system": "endo",
-  "icon": "🌙",
-  "level": 2,
-  "target": "diseases",
-  "title": {
-    "ar": "مريض السكر في رمضان",
-    "en": "Diabetes & Ramadan Fasting"
+ "id": "dis-543",
+ "num": 543,
+ "system": "endo",
+ "icon": "🌙",
+ "level": 2,
+ "target": "diseases",
+ "title": {
+  "ar": "مريض السكر في رمضان",
+  "en": "Diabetes & Ramadan Fasting"
+ },
+ "teaser": {
+  "ar": "صيام مريض السكر خطوة بخطوة: توقيت الأقراص وMixtard وN&R وLantus، قياس السكر وقواعد كسر الصيام.",
+  "en": "Fasting with diabetes step by step: timing of tablets, Mixtard, N&R, and Lantus, glucose monitoring, and the rules for breaking the fast."
+ },
+ "chips": [
+  {
+   "ar": "رمضان",
+   "en": "Ramadan"
   },
-  "teaser": {
-    "ar": "صيام مريض السكر خطوة بخطوة: توقيت الأقراص وMixtard وN&R وLantus، قياس السكر وقواعد كسر الصيام."
+  {
+   "ar": "جدول الجرعات",
+   "en": "Dose schedule"
   },
-  "chips": [
-    {
-      "ar": "رمضان"
-    },
-    {
-      "ar": "جدول الجرعات"
-    },
-    {
-      "ar": "كسر الصيام"
-    }
+  {
+   "ar": "كسر الصيام",
+   "en": "Breaking the fast"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>المفروض إن مريض السكر <b>معفى من الصيام</b>، لكن ده مش بيحصل عملياً. لذلك لازم الفريق يعرف يعدّل الأدوية والمتابعة بأمان.</p><ul><li>الفطار هيبقى على <b>تمر</b>، ثم ياخد العلاج (أقراص أو إنسولين)، ثم يكمل الإفطار.</li><li>يشرب كمية مية كبيرة على قد ما يقدر عشان يقلل من خطر التجلط (Thrombosis).</li></ul><div class=\"cs-stats\"><div><b>70</b><span>أقل من كده = افطر فوراً</span></div><div><b>صباح + عصر</b><span>وقت قياس السكر</span></div><div><b>½</b><span>جرعة الليل تقل للنص</span></div></div>\n<p>الأساس العلاجي: <a href=\"/diseases/dis-545\">علاج النوع الثاني عملياً</a> و<a href=\"/diseases/dis-541\">إنسولين النوع الأول</a>، وأدوية الفم والإنسولين في <a href=\"/diseases/dis-021\">الخافضات الفموية</a> و<a href=\"/diseases/dis-022\">الإنسولين</a>.</p>",
+   "en": "<p>A patient with diabetes is supposed to be <b>exempt from fasting</b>, but in practice this does not happen. So the team must know how to adjust medications and monitoring safely.</p><ul><li>Iftar starts with <b>dates</b>, then the patient takes the treatment (tablets or insulin), then finishes the meal.</li><li>Drink as much water as possible to reduce the risk of thrombosis.</li></ul><div class=\"cs-stats\"><div><b>70</b><span>Below this = break the fast immediately</span></div><div><b>Morning + afternoon</b><span>Glucose check times</span></div><div><b>½</b><span>The night dose is cut in half</span></div></div>\n<p>Treatment basics: <a href=\"/diseases/dis-545\">practical type 2 treatment</a> and <a href=\"/diseases/dis-541\">type 1 insulin</a>, and oral drugs and insulin in <a href=\"/diseases/dis-021\">oral hypoglycemics</a> and <a href=\"/diseases/dis-022\">insulin</a>.</p>"
+  },
+  "signs": {
+   "ar": "<h4>أثناء الصيام (During fasting)</h4><ul><li>المفروض يقيس السكر <b>الصبح والعصر</b>، وفي أي وقت السكر يقل عن <b>70</b> وبشكل عام أي وقت يحس فيه بأعراض نقص السكر <b>لازم يفطر</b>.</li><li>المفروض يرتاح تماماً ويقلل المجهود على قد ما يقدر من بعد العصر.</li></ul>",
+   "en": "<h4>During fasting</h4><ul><li>Glucose should be checked <b>in the morning and afternoon</b>, and any time glucose falls below <b>70</b>, and in general any time symptoms of hypoglycemia appear, <b>the patient must break the fast</b>.</li><li>The patient should rest completely and reduce exertion as much as possible after the afternoon.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>إدارة الأدوية (Drugs administration)</h4><p>بشكل عام: <b>جرعة الصبح</b> هتتاخد قبل الفطار (عند الإفطار)، و<b>جرعة الليل</b> هتقل للنص وهتتاخد قبل السحور.</p>[[slot:dis-543-ramadan|جدول الأدوية والإنسولين في رمضان|/diseases/img/dis-543-ramadan.svg]]<table><thead><tr><th>النظام</th><th>الإفطار</th><th>السحور / قبل النوم</th></tr></thead><tbody><tr><td>أقراص مرة يومياً</td><td>قرص واحد قبل الفطار</td><td>—</td></tr><tr><td>أقراص مرتين</td><td>جرعة الصبح قبل الفطار</td><td>جرعة الليل تقل للنص وقبل السحور</td></tr><tr><td>Insulin Mixtard</td><td>جرعة الصبح قبل الفطار</td><td>جرعة الليل تقل للنص وتتاخد قبل السحور</td></tr><tr><td>N & R</td><td>N + R الصبح مع بعض قبل الفطار</td><td>R: قبل السحور وتقل للنص · N: قبل النوم وتقل للنص</td></tr><tr><td>Lantus & R</td><td>Lantus: قرب العصر (حوالي 4) حتى يبقى الـ peak في وقت الفطار · R: قبل الفطار</td><td>R: قبل السحور وتقل للنص</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الدولية (IDF-DAR 2021 وADA) بتوصي بتقييم الخطر قبل رمضان بـ 6–8 أسابيع، وتقسّم المرضى لخطر عالٍ جداً (هبوط شديد حديث، DKA/HHS حديثة، حمل، غسيل كلوي، مضاعفات متقدمة) لا يُنصح بصيامهم. وتوصي بأن <b>يكسر الصيام</b> لو السكر أقل من 70 (3.9 mmol/L) أو أعلى من 300 (16.7 mmol/L)، أو أعراض مرض. جرعات الإنسولين: الأساسي طويل المفعول (Lantus/Glargine) غالباً يتاخد وقت الإفطار بنفس جرعته أو أقل 15–30%، والمخلوط: جرعة الصباح العادية تتاخد عند الإفطار، وجرعة المساء تقل 25–50% وتتاخد عند السحور. الجدول أعلاه هو نص الدليل العملي؛ الطبيب يحدد الجرعة النهائية لكل مريض. وأدوية SGLT2 تحتاج حذر (جفاف وDKA)، وGlibenclamide يُفضَّل تجنبه.</p></div>[[slot:dis-543-iftar|صورة إفطار صحي لمريض السكر: تمر بحبة أو اتنين ثم شوربة وسلطة]]",
+   "en": "<h4>Drug administration</h4><p>In general: the <b>morning dose</b> is taken before iftar (at the time of breaking the fast), and the <b>night dose</b> is cut in half and taken before suhoor.</p>[[slot:dis-543-ramadan|Medication and insulin schedule in Ramadan|/diseases/img/dis-543-ramadan.svg]]<table><thead><tr><th>Regimen</th><th>Iftar</th><th>Suhoor / bedtime</th></tr></thead><tbody><tr><td>Tablets once daily</td><td>One tablet before iftar</td><td>—</td></tr><tr><td>Tablets twice daily</td><td>Morning dose before iftar</td><td>Night dose cut in half, before suhoor</td></tr><tr><td>Insulin Mixtard</td><td>Morning dose before iftar</td><td>Night dose cut in half and taken before suhoor</td></tr><tr><td>N & R</td><td>N + R in the morning together before iftar</td><td>R: before suhoor, cut in half · N: at bedtime, cut in half</td></tr><tr><td>Lantus & R</td><td>Lantus: near the afternoon (around 4) so the peak falls at iftar time · R: before iftar</td><td>R: before suhoor, cut in half</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>International guidelines (IDF-DAR 2021 and ADA) recommend a risk assessment 6–8 weeks before Ramadan, and classify patients at very high risk (recent severe hypoglycemia, recent DKA/HHS, pregnancy, dialysis, advanced complications) who are advised not to fast. They recommend <b>breaking the fast</b> if glucose is below 70 (3.9 mmol/L) or above 300 (16.7 mmol/L), or with symptoms of illness. Insulin doses: long-acting basal insulin (Lantus/Glargine) is usually taken at iftar at the same dose or 15–30% less; premixed insulin: the usual morning dose is taken at iftar, and the evening dose is reduced by 25–50% and taken at suhoor. The table above reflects practical guidance; the physician sets the final dose for each patient. SGLT2 drugs need caution (dehydration and DKA), and Glibenclamide is preferably avoided.</p></div>[[slot:dis-543-iftar|Image of a healthy iftar for a patient with diabetes: one or two dates, then soup and salad]]"
+  },
+  "nursing": {
+   "ar": "<p>خطوات عملية لمريض السكر الصائم:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قبل رمضان</strong><p>راجع التحكم، وأعد جدول الجرعات مع الطبيب، واشرح للمريض قياس السكر بالجلوكوميتر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أثناء النهار</strong><p>قيس الصبح والعصر وعند أي عرض. أقل من 70: اقطع الصيام فوراً وعالج الهبوط بالسكر السريع (3 حبات تمر أو 15 جم).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>عند الإفطار</strong><p>تمر ثم الدواء ثم تكملة الإفطار. وجبة متوازنة (سلطة، بروتين، نشويات محسوبة) مع شرب مية كتير بين الإفطار والسحور.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>السحور</strong><p>أكّل المريض السحور متأخراً قدر الإمكان، مع الجرعة المعدّلة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>بعد العصر</strong><p>قلل المجهود وارتاح؛ راقب أعراض الجفاف والهبوط.</p></div></div></div>",
+   "en": "<p>Practical steps for a fasting patient with diabetes:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Before Ramadan</strong><p>Review glycemic control, prepare the dose schedule with the physician, and teach the patient to check glucose with a glucometer.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>During the day</strong><p>Check in the morning and afternoon and with any symptom. Below 70: break the fast immediately and treat the low with fast-acting sugar (3 dates or 15 g).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>At iftar</strong><p>Dates, then the medication, then the rest of the meal. A balanced meal (salad, protein, measured carbohydrates) with plenty of water between iftar and suhoor.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Suhoor</strong><p>Have the patient eat suhoor as late as possible, with the adjusted dose.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>After the afternoon</strong><p>Reduce exertion and rest; watch for symptoms of dehydration and hypoglycemia.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>سكر أقل من 70 أو أعراض هبوط (يُكسر الصيام)</li><li>سكر أكثر من 300 أو عطش شديد وقيء (DKA/HHS)</li><li>جفاف: دوخة، جفاف فم، قلة بول</li><li>عدم القدرة على تعديل الجرعة أو شك في التعليمات</li><li>مريض فشل كلوي أو حامل أو هبوط شديد حديث: لا يصوم</li></ul>",
+   "en": "<ul><li>Glucose below 70 or symptoms of hypoglycemia (break the fast)</li><li>Glucose above 300 or severe thirst and vomiting (DKA/HHS)</li><li>Dehydration: dizziness, dry mouth, low urine output</li><li>Inability to adjust the dose or doubt about the instructions</li><li>A patient with renal failure, pregnancy, or recent severe hypoglycemia: should not fast</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>افطر على تمر بحبة أو اتنين ثم خد دواءك ثم كمل الفطار.</li><li>اشرب مية كتير بين الفطار والسحور.</li><li>قِس السكر الصبح والعصر وأي وقت تحس بأعراض.</li><li>لو السكر أقل من 70 أو عندك رعشة وعرق: افطر فوراً.</li><li>ارتح وقلل المجهود بعد العصر.</li><li>لا تعدّل الجرعة بنفسك: خد جدولاً مكتوباً من الطبيب.</li></ul>",
+   "en": "<ul><li>Break your fast with one or two dates, then take your medication, then finish your meal.</li><li>Drink plenty of water between iftar and suhoor.</li><li>Check your glucose in the morning, in the afternoon, and any time you feel symptoms.</li><li>If glucose is below 70 or you have shaking and sweating: break the fast immediately.</li><li>Rest and reduce exertion after the afternoon.</li><li>Do not adjust the dose yourself: get a written schedule from the physician.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "المريض معفى من الصيام شرعاً لكن لازم تجهيز الجرعات",
+   "الإفطار على تمر ثم الدواء ثم باقي الإفطار؛ مية كتير لتقليل التجلط",
+   "قياس السكر الصبح والعصر؛ أقل من 70 أو أعراض = افطر",
+   "جرعة الصبح عند الإفطار وجرعة الليل للنص قبل السحور",
+   "Lantus قرب العصر والـ R قبل الفطار والسحور (للنص)",
+   "تقييم قبل رمضان 6–8 أسابيع، وأمراض شديدة لا تصوم"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>المفروض إن مريض السكر <b>معفى من الصيام</b>، لكن ده مش بيحصل عملياً. لذلك لازم الفريق يعرف يعدّل الأدوية والمتابعة بأمان.</p><ul><li>الفطار هيبقى على <b>تمر</b>، ثم ياخد العلاج (أقراص أو إنسولين)، ثم يكمل الإفطار.</li><li>يشرب كمية مية كبيرة على قد ما يقدر عشان يقلل من خطر التجلط (Thrombosis).</li></ul><div class=\"cs-stats\"><div><b>70</b><span>أقل من كده = افطر فوراً</span></div><div><b>صباح + عصر</b><span>وقت قياس السكر</span></div><div><b>½</b><span>جرعة الليل تقل للنص</span></div></div>\n<p>الأساس العلاجي: <a href=\"/diseases/dis-545\">علاج النوع الثاني عملياً</a> و<a href=\"/diseases/dis-541\">إنسولين النوع الأول</a>، وأدوية الفم والإنسولين في <a href=\"/diseases/dis-021\">الخافضات الفموية</a> و<a href=\"/diseases/dis-022\">الإنسولين</a>.</p>"
-    },
-    "signs": {
-      "ar": "<h4>أثناء الصيام (During fasting)</h4><ul><li>المفروض يقيس السكر <b>الصبح والعصر</b>، وفي أي وقت السكر يقل عن <b>70</b> وبشكل عام أي وقت يحس فيه بأعراض نقص السكر <b>لازم يفطر</b>.</li><li>المفروض يرتاح تماماً ويقلل المجهود على قد ما يقدر من بعد العصر.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>إدارة الأدوية (Drugs administration)</h4><p>بشكل عام: <b>جرعة الصبح</b> هتتاخد قبل الفطار (عند الإفطار)، و<b>جرعة الليل</b> هتقل للنص وهتتاخد قبل السحور.</p>[[slot:dis-543-ramadan|جدول الأدوية والإنسولين في رمضان|/diseases/img/dis-543-ramadan.svg]]<table><thead><tr><th>النظام</th><th>الإفطار</th><th>السحور / قبل النوم</th></tr></thead><tbody><tr><td>أقراص مرة يومياً</td><td>قرص واحد قبل الفطار</td><td>—</td></tr><tr><td>أقراص مرتين</td><td>جرعة الصبح قبل الفطار</td><td>جرعة الليل تقل للنص وقبل السحور</td></tr><tr><td>Insulin Mixtard</td><td>جرعة الصبح قبل الفطار</td><td>جرعة الليل تقل للنص وتتاخد قبل السحور</td></tr><tr><td>N & R</td><td>N + R الصبح مع بعض قبل الفطار</td><td>R: قبل السحور وتقل للنص · N: قبل النوم وتقل للنص</td></tr><tr><td>Lantus & R</td><td>Lantus: قرب العصر (حوالي 4) حتى يبقى الـ peak في وقت الفطار · R: قبل الفطار</td><td>R: قبل السحور وتقل للنص</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الدولية (IDF-DAR 2021 وADA) بتوصي بتقييم الخطر قبل رمضان بـ 6–8 أسابيع، وتقسّم المرضى لخطر عالٍ جداً (هبوط شديد حديث، DKA/HHS حديثة، حمل، غسيل كلوي، مضاعفات متقدمة) لا يُنصح بصيامهم. وتوصي بأن <b>يكسر الصيام</b> لو السكر أقل من 70 (3.9 mmol/L) أو أعلى من 300 (16.7 mmol/L)، أو أعراض مرض. جرعات الإنسولين: الأساسي طويل المفعول (Lantus/Glargine) غالباً يتاخد وقت الإفطار بنفس جرعته أو أقل 15–30%، والمخلوط: جرعة الصباح العادية تتاخد عند الإفطار، وجرعة المساء تقل 25–50% وتتاخد عند السحور. الجدول أعلاه هو نص الدليل العملي؛ الطبيب يحدد الجرعة النهائية لكل مريض. وأدوية SGLT2 تحتاج حذر (جفاف وDKA)، وGlibenclamide يُفضَّل تجنبه.</p></div>[[slot:dis-543-iftar|صورة إفطار صحي لمريض السكر: تمر بحبة أو اتنين ثم شوربة وسلطة]]"
-    },
-    "nursing": {
-      "ar": "<p>خطوات عملية لمريض السكر الصائم:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قبل رمضان</strong><p>راجع التحكم، وأعد جدول الجرعات مع الطبيب، واشرح للمريض قياس السكر بالجلوكوميتر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أثناء النهار</strong><p>قيس الصبح والعصر وعند أي عرض. أقل من 70: اقطع الصيام فوراً وعالج الهبوط بالسكر السريع (3 حبات تمر أو 15 جم).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>عند الإفطار</strong><p>تمر ثم الدواء ثم تكملة الإفطار. وجبة متوازنة (سلطة، بروتين، نشويات محسوبة) مع شرب مية كتير بين الإفطار والسحور.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>السحور</strong><p>أكّل المريض السحور متأخراً قدر الإمكان، مع الجرعة المعدّلة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>بعد العصر</strong><p>قلل المجهود وارتاح؛ راقب أعراض الجفاف والهبوط.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>سكر أقل من 70 أو أعراض هبوط (يُكسر الصيام)</li><li>سكر أكثر من 300 أو عطش شديد وقيء (DKA/HHS)</li><li>جفاف: دوخة، جفاف فم، قلة بول</li><li>عدم القدرة على تعديل الجرعة أو شك في التعليمات</li><li>مريض فشل كلوي أو حامل أو هبوط شديد حديث: لا يصوم</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>افطر على تمر بحبة أو اتنين ثم خد دواءك ثم كمل الفطار.</li><li>اشرب مية كتير بين الفطار والسحور.</li><li>قِس السكر الصبح والعصر وأي وقت تحس بأعراض.</li><li>لو السكر أقل من 70 أو عندك رعشة وعرق: افطر فوراً.</li><li>ارتح وقلل المجهود بعد العصر.</li><li>لا تعدّل الجرعة بنفسك: خد جدولاً مكتوباً من الطبيب.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "المريض معفى من الصيام شرعاً لكن لازم تجهيز الجرعات",
-      "الإفطار على تمر ثم الدواء ثم باقي الإفطار؛ مية كتير لتقليل التجلط",
-      "قياس السكر الصبح والعصر؛ أقل من 70 أو أعراض = افطر",
-      "جرعة الصبح عند الإفطار وجرعة الليل للنص قبل السحور",
-      "Lantus قرب العصر والـ R قبل الفطار والسحور (للنص)",
-      "تقييم قبل رمضان 6–8 أسابيع، وأمراض شديدة لا تصوم"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض على Mixtard وصائم: أين تؤخذ جرعة الصباح؟"
-      },
-      "options": [
-        {
-          "ar": "قبل السحور"
-        },
-        {
-          "ar": "قبل الفطار"
-        },
-        {
-          "ar": "لا تؤخذ"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "جرعة الصبح تؤخذ عند الإفطار وجرعة الليل للنص قبل السحور."
-      }
-    },
-    {
-      "q": {
-        "ar": "أقل قراءة سكر يجب بعدها كسر الصيام؟"
-      },
-      "options": [
-        {
-          "ar": "أقل من 70"
-        },
-        {
-          "ar": "أقل من 120"
-        },
-        {
-          "ar": "أقل من 200"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نص الدليل: أقل من 70 أو أعراض."
-      }
-    },
-    {
-      "q": {
-        "ar": "نصيحة الشرب بكميات كبيرة لماذا؟"
-      },
-      "options": [
-        {
-          "ar": "لتقليل خطر التجلط (Thrombosis)"
-        },
-        {
-          "ar": "لخفض السكر"
-        },
-        {
-          "ar": "لزيادة الشهية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ذكرها الدليل لتقليل التجلط."
-      }
-    },
-    {
-      "q": {
-        "ar": "جرعة الليل من الإنسولين/الأقراص في رمضان؟"
-      },
-      "options": [
-        {
-          "ar": "تتضاعف"
-        },
-        {
-          "ar": "تقل للنص قبل السحور"
-        },
-        {
-          "ar": "تلغى"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "للحد من هبوط السكر."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "IDF-DAR Practical Guidelines: Diabetes and Ramadan (2021)"
-    },
-    {
-      "title": "ADA Standards of Care in Diabetes 2025: Diabetes and Ramadan considerations"
-    }
+  "en": [
+   "The patient is religiously exempt from fasting, but doses must be prepared",
+   "Iftar on dates, then medication, then the rest of the meal; plenty of water to reduce clotting",
+   "Check glucose morning and afternoon; below 70 or symptoms = break the fast",
+   "Morning dose at iftar and night dose halved before suhoor",
+   "Lantus near the afternoon, R before iftar and suhoor (halved)",
+   "Assessment 6–8 weeks before Ramadan; severe illness means no fasting"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض على Mixtard وصائم: أين تؤخذ جرعة الصباح؟",
+    "en": "A fasting patient on Mixtard: when is the morning dose taken?"
+   },
+   "options": [
+    {
+     "ar": "قبل السحور",
+     "en": "Before suhoor"
+    },
+    {
+     "ar": "قبل الفطار",
+     "en": "Before iftar"
+    },
+    {
+     "ar": "لا تؤخذ",
+     "en": "Not taken"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "جرعة الصبح تؤخذ عند الإفطار وجرعة الليل للنص قبل السحور.",
+    "en": "The morning dose is taken at iftar and the night dose is halved before suhoor."
+   }
+  },
+  {
+   "q": {
+    "ar": "أقل قراءة سكر يجب بعدها كسر الصيام؟",
+    "en": "The glucose reading below which the fast must be broken?"
+   },
+   "options": [
+    {
+     "ar": "أقل من 70",
+     "en": "Below 70"
+    },
+    {
+     "ar": "أقل من 120",
+     "en": "Below 120"
+    },
+    {
+     "ar": "أقل من 200",
+     "en": "Below 200"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نص الدليل: أقل من 70 أو أعراض.",
+    "en": "The guide states: below 70 or symptoms."
+   }
+  },
+  {
+   "q": {
+    "ar": "نصيحة الشرب بكميات كبيرة لماذا؟",
+    "en": "Why the advice to drink large amounts?"
+   },
+   "options": [
+    {
+     "ar": "لتقليل خطر التجلط (Thrombosis)",
+     "en": "To reduce the risk of thrombosis"
+    },
+    {
+     "ar": "لخفض السكر",
+     "en": "To lower glucose"
+    },
+    {
+     "ar": "لزيادة الشهية",
+     "en": "To increase appetite"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ذكرها الدليل لتقليل التجلط.",
+    "en": "The guide lists it to reduce clotting."
+   }
+  },
+  {
+   "q": {
+    "ar": "جرعة الليل من الإنسولين/الأقراص في رمضان؟",
+    "en": "The night dose of insulin/tablets in Ramadan?"
+   },
+   "options": [
+    {
+     "ar": "تتضاعف",
+     "en": "Is doubled"
+    },
+    {
+     "ar": "تقل للنص قبل السحور",
+     "en": "Is cut in half before suhoor"
+    },
+    {
+     "ar": "تلغى",
+     "en": "Is canceled"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "للحد من هبوط السكر.",
+    "en": "To limit hypoglycemia."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "IDF-DAR Practical Guidelines: Diabetes and Ramadan (2021)"
+  },
+  {
+   "title": "ADA Standards of Care in Diabetes 2025: Diabetes and Ramadan considerations"
+  }
+ ]
 }

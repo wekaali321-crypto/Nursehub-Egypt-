@@ -1,187 +1,237 @@
 {
-  "id": "dis-3201",
-  "num": 3201,
-  "system": "other",
-  "icon": "💊",
-  "level": 2,
-  "title": {
-    "ar": "نظرة سريعة على الأدوية: التصنيفات وجداول المراقبة وفئات الحمل ومبادئ حركة الدواء",
-    "en": "Pharmacology Quick Glance: Classes, Schedules, Pregnancy Categories & Drug Activity"
+ "id": "dis-3201",
+ "num": 3201,
+ "system": "other",
+ "icon": "💊",
+ "level": 2,
+ "title": {
+  "ar": "نظرة سريعة على الأدوية: التصنيفات وجداول المراقبة وفئات الحمل ومبادئ حركة الدواء",
+  "en": "Pharmacology Quick Glance: Classes, Schedules, Pregnancy Categories & Drug Activity"
+ },
+ "teaser": {
+  "ar": "ملخص سريع لتصنيفات الأدوية وعملها، وجداول المراقبة وفئات الحمل، واعتبارات تمريضية لأدوية مشهورة، ومفاهيم حركة الدواء والتفاعلات والتفاعلات التحسسية.",
+  "en": "A quick summary of drug classes and their actions, controlled substance schedules and pregnancy categories, nursing considerations for well-known drugs, and the concepts of drug movement, interactions, and allergic reactions."
+ },
+ "chips": [
+  {
+   "ar": "تصنيفات",
+   "en": "Classes"
   },
-  "teaser": {
-    "ar": "ملخص سريع لتصنيفات الأدوية وعملها، وجداول المراقبة وفئات الحمل، واعتبارات تمريضية لأدوية مشهورة، ومفاهيم حركة الدواء والتفاعلات والتفاعلات التحسسية."
+  {
+   "ar": "فئات الحمل",
+   "en": "Pregnancy categories"
   },
-  "chips": [
-    {
-      "ar": "تصنيفات"
-    },
-    {
-      "ar": "فئات الحمل"
-    },
-    {
-      "ar": "حركة الدواء"
-    },
-    {
-      "ar": "تفاعلات"
-    }
+  {
+   "ar": "حركة الدواء",
+   "en": "Drug movement"
+  },
+  {
+   "ar": "تفاعلات",
+   "en": "Interactions"
+  }
+ ],
+ "target": "pharmacology",
+ "sections": {
+  "overview": {
+   "ar": "<p>هذا الدليل مدخل لباقي أدلة الأدوية: يشرح أسماء المجموعات الدوائية الأساسية وما تفعله، وكيف يتحرك الدواء في الجسم، ثم أنواع التفاعلات والأعراض غير المرغوبة. التفاصيل الدقيقة لكل مجموعة في الأدلة التالية: <a href=\"/diseases/dis-3202\">الترياقات والمستويات العلاجية</a>، <a href=\"/diseases/dis-3203\">أسماء الأدوية الشائعة</a>، <a href=\"/diseases/dis-565\">المضادات الحيوية في السوق المصري</a>.</p>[[slot:dis-3201-classes|تصنيفات الأدوية الشائعة — رسم من إعداد الموقع|/diseases/img/dis-3201-classes.svg]]<div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div><h4>التصنيفات الدوائية الشائعة (نص مرجعي)</h4><table><thead><tr><th>المجموعة</th><th>وظيفتها</th></tr></thead><tbody>\n<tr><td>مضادات الحموضة (Antacids)</td><td>تقلل حمض المعدة (HCl)</td></tr>\n<tr><td>مضادات فقر الدم (Antianemics)</td><td>تزيد تكوين كريات الدم</td></tr>\n<tr><td>مضادات الكولين (Anticholinergics)</td><td>تقلل إفرازات الفم والجهاز التنفسي</td></tr>\n<tr><td>مضادات التخثر (Anticoagulants)</td><td>تمنع تكوّن الجلطة</td></tr>\n<tr><td>مضادات التشنج (Anticonvulsants)</td><td>للصرع واضطراب ثنائي القطب</td></tr>\n<tr><td>مضادات الإسهال (Antidiarrheals)</td><td>تبطئ حركة الأمعاء وتقلل ماء البراز</td></tr>\n<tr><td>مضادات الهيستامين (Antihistamines)</td><td>تحجب أثر الهيستامين</td></tr>\n<tr><td>خافضات الضغط (Antihypertensives)</td><td>تخفض الضغط وتحسّن تدفق الدم</td></tr>\n<tr><td>مضادات العدوى (Anti-infectives)</td><td>لعلاج العدوى</td></tr>\n<tr><td>موسّعات الشعب (Bronchodilators)</td><td>توسع الممرات الهوائية الكبيرة في الربو وأمراض الرئة مثل COPD</td></tr>\n<tr><td>المدرّات (Diuretics)</td><td>تطرح الماء والصوديوم (مثال: مدر العروة يعمل في عروة هنلي)</td></tr>\n<tr><td>الملينات (Laxatives)</td><td>تسهّل مرور البراز</td></tr>\n<tr><td>المضيّقات للحدقة (Miotics)</td><td>تضيّق الحدقة</td></tr>\n<tr><td>الموسّعات للحدقة (Mydriatics)</td><td>توسّع الحدقة</td></tr>\n<tr><td>المخدرات/المسكنات القوية (Narcotics/Analgesics)</td><td>تخفف الألم المتوسط إلى الشديد</td></tr></tbody></table>",
+   "en": "<p>This guide is an entry point to the other drug guides: it explains the names of the basic drug classes and what they do, how a drug moves in the body, and then the types of interactions and unwanted effects. Detailed information on each class is in the following guides: <a href=\"/diseases/dis-3202\">antidotes and therapeutic levels</a>, <a href=\"/diseases/dis-3203\">common drug names</a>, <a href=\"/diseases/dis-565\">antibiotics in the Egyptian market</a>.</p>[[slot:dis-3201-classes|Common drug classes — original illustration|/diseases/img/dis-3201-classes.svg]]<div class=\"cs-box cs-info\"><strong>Note:</strong> Doses and numbers are for learning; always verify with the physician/pharmacist (and the leaflet) before giving.</div><h4>Common drug classes</h4><table><thead><tr><th>Class</th><th>Function</th></tr></thead><tbody>\n<tr><td>Antacids</td><td>Reduce stomach acid (HCl)</td></tr>\n<tr><td>Antianemics</td><td>Increase blood cell production</td></tr>\n<tr><td>Anticholinergics</td><td>Reduce oral and respiratory secretions</td></tr>\n<tr><td>Anticoagulants</td><td>Prevent clot formation</td></tr>\n<tr><td>Anticonvulsants</td><td>For epilepsy and bipolar disorder</td></tr>\n<tr><td>Antidiarrheals</td><td>Slow bowel movement and reduce stool water</td></tr>\n<tr><td>Antihistamines</td><td>Block the effect of histamine</td></tr>\n<tr><td>Antihypertensives</td><td>Lower blood pressure and improve blood flow</td></tr>\n<tr><td>Anti-infectives</td><td>Treat infection</td></tr>\n<tr><td>Bronchodilators</td><td>Widen the large airways in asthma and lung diseases such as COPD</td></tr>\n<tr><td>Diuretics</td><td>Remove water and sodium (example: a loop diuretic acts in the loop of Henle)</td></tr>\n<tr><td>Laxatives</td><td>Ease the passage of stool</td></tr>\n<tr><td>Miotics</td><td>Constrict the pupil</td></tr>\n<tr><td>Mydriatics</td><td>Dilate the pupil</td></tr>\n<tr><td>Narcotics/Analgesics</td><td>Relieve moderate to severe pain</td></tr></tbody></table>"
+  },
+  "causes": {
+   "ar": "<h4>الأطوار الثلاثة لنشاط الدواء</h4>[[slot:dis-3201-phases|مراحل نشاط الدواء — رسم من إعداد الموقع|/diseases/img/dis-3201-phases.svg]]<table><thead><tr><th>الطور</th><th>ماذا يحدث</th><th>نقاط</th></tr></thead><tbody><tr><td>الدوائي (Pharmaceutic)</td><td>ذوبان الدواء داخل الجسم</td><td>السوائل والوريدي جاهزة وأسرع. القرص يمر على الجهاز الهضمي ليذوب. الأقراص المغلّفة معويًا (enteric coated) تحتاج وسطًا قلويًا في الأمعاء الدقيقة فلا تُسحق</td></tr><tr><td>الحركي (Pharmacokinetic)</td><td>انتقال وتوزيع الدواء</td><td>امتصاص ← توزيع ← أيض ← إخراج</td></tr><tr><td>الديناميكي (Pharmacodynamic)</td><td>فعل الدواء على الجسم</td><td>أثر أساسي (مطلوب) وأثر ثانوي، بتغيير وظيفة الخلية أو بيئتها</td></tr></tbody></table>\n<h4>مفاصل الحركة الدوائية</h4><ul><li><strong>الامتصاص (Absorption):</strong> انتقال الدواء من مكان الإعطاء إلى سوائل الجسم: نقل نشط، نقل سلبي، أو بلعمة (pinocytosis). يتأثر بالطريق (الوريدي/العضلي الأسرع)، والذوبانية، وحالة الأنسجة</li><li><strong>التوزيع (Distribution):</strong> الدم يوزّع الدواء للأنسجة؛ يعتمد على الارتباط بالبروتين، وتدفق الدم، والذوبانية. فقط الجزء <em>الحر</em> (غير المرتبط بالألبومين) يعطي الأثر</li><li><strong>الأيض (Metabolism):</strong> تحويل حيوي ليصبح الدواء أنشط أو أقل نشاطًا وقابلًا للإخراج؛ أغلبه في الكبد، وأيضًا الكلى والرئة والبلازما وغشاء الأمعاء. يتأثر بالعمر والوزن والجنس والمرض والطريق</li><li><strong>الإخراج (Excretion):</strong> بعد أن يعطّل الكبد الدواء يُطرح غالبًا عبر الكلى في البول</li></ul><div class=\"cs-box cs-info\"><p>مثال على الأثر الثانوي: sildenafil صُنع أصلًا لعلاج ارتفاع الضغط ثم لوحظ أنه يفيد في ضعف الانتصاب، فصار هذا الأثر الثانوي استعمالًا علاجيًا. الدواء يعمل بآليتين: تغيير وظيفة الخلية أو تغيير بيئتها.</p></div>",
+   "en": "<h4>The three phases of drug activity</h4>[[slot:dis-3201-phases|Phases of drug activity — original illustration|/diseases/img/dis-3201-phases.svg]]<table><thead><tr><th>Phase</th><th>What happens</th><th>Points</th></tr></thead><tbody><tr><td>Pharmaceutic</td><td>The drug dissolves inside the body</td><td>Liquids and IV drugs are ready and faster. A tablet passes through the GI tract to dissolve. Enteric coated tablets need an alkaline medium in the small intestine, so they are not crushed</td></tr><tr><td>Pharmacokinetic</td><td>Movement and distribution of the drug</td><td>Absorption ← distribution ← metabolism ← excretion</td></tr><tr><td>Pharmacodynamic</td><td>The drug's action on the body</td><td>A primary (desired) effect and a secondary effect, by changing cell function or its environment</td></tr></tbody></table>\n<h4>Key steps of pharmacokinetics</h4><ul><li><strong>Absorption:</strong> movement of the drug from the site of administration into body fluids: active transport, passive transport, or pinocytosis. Affected by route (IV/IM are fastest), solubility, and tissue condition</li><li><strong>Distribution:</strong> the blood distributes the drug to tissues; depends on protein binding, blood flow, and solubility. Only the <em>free</em> part (not bound to albumin) gives the effect</li><li><strong>Metabolism:</strong> biotransformation that makes the drug more or less active and excretable; mostly in the liver, and also the kidneys, lungs, plasma, and intestinal lining. Affected by age, weight, sex, disease, and route</li><li><strong>Excretion:</strong> after the liver inactivates the drug, it is mostly excreted through the kidneys in urine</li></ul><div class=\"cs-box cs-info\"><p>Example of a secondary effect: sildenafil was originally made to treat hypertension, then it was noticed to help erectile dysfunction, so this secondary effect became a therapeutic use. Drugs act by two mechanisms: changing cell function or changing its environment.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>مصطلحات أساسية</h4><table><thead><tr><th>المصطلح</th><th>المعنى</th></tr></thead><tbody><tr><td>First pass effect</td><td>انخفاض تركيز الدواء كثيرًا (في الكبد) قبل وصوله للدورة الدموية</td></tr><tr><td>Half-life</td><td>الوقت اللازم ليخرج الجسم 50% من الدواء</td></tr><tr><td>Onset</td><td>وقت بدء الأثر العلاجي بعد الإعطاء</td></tr><tr><td>Peak</td><td>الذروة: عندما يتساوى معدل الامتصاص مع الإخراج</td></tr><tr><td>Duration</td><td>المدة التي يعطي فيها الدواء أثرًا علاجيًا</td></tr><tr><td>Pharmacogenomics</td><td>اختلاف استجابة الناس للدواء بحسب تركيبهم الوراثي</td></tr><tr><td>Teratogen</td><td>مادة تسبب تشوّه الجنين</td></tr><tr><td>Idiosyncrasy</td><td>رد فعل غير مألوف أو غريب على الدواء</td></tr><tr><td>Tolerance</td><td>تناقص الاستجابة فتزيد الحاجة للجرعة</td></tr><tr><td>Cumulative effect</td><td>عند مرضى الكبد أو الكلى: لا يُخرج الجسم الجرعة قبل التالية فيتراكم الدواء</td></tr></tbody></table>\n<h4>التفاعلات الدوائية</h4><table><thead><tr><th>النوع</th><th>المعنى</th><th>مثال</th></tr></thead><tbody><tr><td>إضافي Additive</td><td>أثر دوائين معًا يساوي مجموع أثريهما كلٍّ على حدة</td><td>—</td></tr><tr><td>تآزري Synergistic</td><td>المجموع أكبر من الأجزاء</td><td>منوّم + كحول ← تثبيط الجهاز العصبي المركزي</td></tr><tr><td>تضادي Antagonistic</td><td>دواء يعاكس أثر دواء آخر</td><td>naloxone يعكس الأفيونات</td></tr><tr><td>غذائي</td><td>بعض الأطعمة تزيد أو تقلل أيض الدواء</td><td>—</td></tr></tbody></table>\n<h4>أثر الأدوية على الجهاز العصبي</h4><ul><li><strong>Sympathomimetic:</strong> يحاكي أثر الودّي ويحفّزه</li><li><strong>Sympatholytic:</strong> يعاكس/يثبّط نقل الإشارات الودّية</li><li><strong>Parasympathomimetic (cholinergic):</strong> ينبّه الجهاز نظير الودّي، ويُسمى كولينيًا لأن الناقل acetylcholine</li><li><strong>Parasympatholytic:</strong> يقلل نشاط نظير الودّي</li></ul>\n<h4>التفاعلات والأعراض غير المرغوبة</h4><ul><li><strong>تفاعل ضار (ADR):</strong> أثر غير مرغوب قد يكون خفيفًا أو شديدًا أو مهددًا للحياة، يظهر في الجرعة الأولى أو لاحقًا</li><li><strong>تفاعل تحسسي:</strong> فرط حساسية مناعي يعدّ الدواء جسمًا غريبًا؛ فوري أو متأخر</li><li><strong>صدمة تأقية (Anaphylaxis):</strong> شديدة جدًا وفورية غالبًا، تحتاج تدخلًا طبيًا فوريًا لرفع الضغط وتحسين التنفس، وقاتلة إن لم تُعالج</li><li><strong>وذمة وعائية (Angioedema):</strong> تجمع سوائل تحت الجلد، تصيب العينين والشفتين والفم والحلق غالبًا</li><li><strong>تفاعل سمّي:</strong> يتراكم السم عندما لا يستطيع الجسم إخراج الدواء</li></ul>",
+   "en": "<h4>Basic terms</h4><table><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody><tr><td>First pass effect</td><td>A large drop in drug concentration (in the liver) before it reaches the circulation</td></tr><tr><td>Half-life</td><td>The time needed for the body to eliminate 50% of the drug</td></tr><tr><td>Onset</td><td>Time for the therapeutic effect to start after administration</td></tr><tr><td>Peak</td><td>The peak: when the absorption rate equals the elimination rate</td></tr><tr><td>Duration</td><td>The period during which the drug gives a therapeutic effect</td></tr><tr><td>Pharmacogenomics</td><td>Differences in people's response to a drug according to their genetic makeup</td></tr><tr><td>Teratogen</td><td>A substance that causes fetal malformation</td></tr><tr><td>Idiosyncrasy</td><td>An unusual or strange reaction to a drug</td></tr><tr><td>Tolerance</td><td>Decreasing response, so a higher dose is needed</td></tr><tr><td>Cumulative effect</td><td>In patients with liver or kidney disease: the body does not eliminate a dose before the next, so the drug accumulates</td></tr></tbody></table>\n<h4>Drug interactions</h4><table><thead><tr><th>Type</th><th>Meaning</th><th>Example</th></tr></thead><tbody><tr><td>Additive</td><td>The effect of two drugs together equals the sum of their separate effects</td><td>—</td></tr><tr><td>Synergistic</td><td>The total is greater than the parts</td><td>Hypnotic + alcohol ← CNS depression</td></tr><tr><td>Antagonistic</td><td>One drug opposes the effect of another</td><td>naloxone reverses opioids</td></tr><tr><td>Food</td><td>Some foods increase or decrease drug metabolism</td><td>—</td></tr></tbody></table>\n<h4>Effect of drugs on the nervous system</h4><ul><li><strong>Sympathomimetic:</strong> mimics and stimulates the sympathetic effect</li><li><strong>Sympatholytic:</strong> opposes/inhibits sympathetic signal transmission</li><li><strong>Parasympathomimetic (cholinergic):</strong> stimulates the parasympathetic system, and is called cholinergic because the transmitter is acetylcholine</li><li><strong>Parasympatholytic:</strong> reduces parasympathetic activity</li></ul>\n<h4>Reactions and unwanted effects</h4><ul><li><strong>Adverse drug reaction (ADR):</strong> an unwanted effect that may be mild, severe, or life-threatening, appearing with the first dose or later</li><li><strong>Allergic reaction:</strong> an immune hypersensitivity that treats the drug as a foreign body; immediate or delayed</li><li><strong>Anaphylaxis:</strong> very severe and usually immediate; needs immediate medical intervention to raise blood pressure and improve breathing, and is fatal if untreated</li><li><strong>Angioedema:</strong> fluid collection under the skin, usually affecting the eyes, lips, mouth, and throat</li><li><strong>Toxic reaction:</strong> toxin accumulates when the body cannot eliminate the drug</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>ملاحظات تمريضية على أدوية مشهورة</h4><table><thead><tr><th>الدواء</th><th>نقطة المراقبة</th></tr></thead><tbody><tr><td>Digoxin (Lanoxin)</td><td>قِس النبض دقيقة كاملة؛ إن أقل من 60/د احجب الجرعة. راجع مستوى digoxin والبوتاسيوم</td></tr><tr><td>Aluminum hydroxide</td><td>لعلاج GERD وحصى الكلى؛ يسبب إمساكًا</td></tr><tr><td>Hydroxyzine</td><td>لعلاج القلق والحكة؛ انتبه لجفاف الفم</td></tr><tr><td>Midazolam</td><td>تهدئة واعية؛ راقب تثبيط التنفس وهبوط الضغط</td></tr><tr><td>Amiodarone</td><td>أعراض يُبلَّغ عنها: تعرق، ضيق نفس، خمول؛ إن فاتت جرعة تُؤخذ حين يُتذكر في نفس اليوم وإلا تُترك، ولا تُضاعف</td></tr><tr><td>Warfarin</td><td>راقب النزيف والإسهال والحمى والطفح؛ التزام بالجرعة وبمواعيد المتابعة</td></tr><tr><td>Methylphenidate</td><td>علاج ADHD؛ قيّم القلب وأبلغ فورًا؛ قد يحتاج الطفل \"إجازة دوائية\" لأن الدواء قد يكبح النمو</td></tr><tr><td>Dopamine</td><td>علاج هبوط الضغط والصدمة وانخفاض النتاج القلبي؛ راقب ECG وعدم انتظام النبض والضغط</td></tr><tr><td>Rifampin</td><td>لون أحمر برتقالي بالدموع والبول</td></tr><tr><td>Ethambutol</td><td>مشاكل بالرؤية وبالكبد</td></tr><tr><td>Isoniazid</td><td>اعتلال أعصاب طرفي؛ يُعطى فيتامين B6 للوقاية</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>للتفصيل:</strong> أدوية السل في <a href=\"/diseases/dis-2711\">دليل RIPE</a>.</div><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div><h4>جداول المواد الخاضعة للرقابة (نظام أمريكي للتعلّم)</h4><table><thead><tr><th>الجدول</th><th>المعنى</th><th>أمثلة</th></tr></thead><tbody>\n<tr><td>I</td><td>لا استعمال طبي مقبول حاليًا، للبحث فقط</td><td>heroin, LSD, MDMA</td></tr>\n<tr><td>II</td><td>احتمال إساءة استعمال عالٍ ويحتاج وصفة مكتوبة</td><td>methylphenidate (Ritalin), hydromorphone, meperidine, fentanyl</td></tr>\n<tr><td>III</td><td>وصفة جديدة بعد ستة أشهر أو خمس إعادات صرف</td><td>codeine (بعض التركيبات), testosterone, ketamine</td></tr>\n<tr><td>IV</td><td>وصفة جديدة بعد ستة أشهر</td><td>alprazolam, diazepam, carisoprodol (Soma)، وكان منها Darvon</td></tr>\n<tr><td>V</td><td>تُصرف كأي وصفة أو بدونها حسب القانون المحلي</td><td>مستحضرات السعال، diphenoxylate (Lomotil), Motofen</td></tr></tbody></table>\n<div class=\"cs-box cs-info\"><p>تصنيف المخدرات والرقابة في مصر يخضع لقانون ولوائح محلية مختلفة؛ الجدول أعلاه للتعلّم على نمط الامتحان.</p></div>\n<h4>فئات الخطر في الحمل (النظام القديم A-N)</h4><table><thead><tr><th>الفئة</th><th>المعنى</th><th>أمثلة</th></tr></thead><tbody>\n<tr><td>A</td><td>لا خطر في دراسات محكمة على البشر</td><td>-</td></tr>\n<tr><td>B</td><td>لا خطر في دراسات أخرى (حيوانية)</td><td>amoxicillin, cefotaxime</td></tr>\n<tr><td>C</td><td>لا يمكن استبعاد الخطر</td><td>rifampin, theophylline</td></tr>\n<tr><td>D</td><td>دليل إيجابي على الخطر</td><td>phenytoin, tetracycline</td></tr>\n<tr><td>X</td><td>ممنوع في الحمل تمامًا</td><td>isotretinoin, thalidomide</td></tr>\n<tr><td>N</td><td>لم يُصنَّف بعد</td><td>-</td></tr></tbody></table>\n<p>ملاحظة: النشرات الحديثة استبدلت الحروف بوصف سردي للمخاطر، لكن الامتحان ما زال يسأل عن الحروف.</p>",
+   "en": "<h4>Nursing notes on well-known drugs</h4><table><thead><tr><th>Drug</th><th>Monitoring point</th></tr></thead><tbody><tr><td>Digoxin (Lanoxin)</td><td>Count the pulse for a full minute; if less than 60/min hold the dose. Check digoxin and potassium levels</td></tr><tr><td>Aluminum hydroxide</td><td>For GERD and kidney stones; causes constipation</td></tr><tr><td>Hydroxyzine</td><td>For anxiety and itching; watch for dry mouth</td></tr><tr><td>Midazolam</td><td>Conscious sedation; monitor for respiratory depression and hypotension</td></tr><tr><td>Amiodarone</td><td>Symptoms to report: sweating, dyspnea, lethargy; if a dose is missed, take it when remembered on the same day, otherwise skip it, and do not double</td></tr><tr><td>Warfarin</td><td>Monitor for bleeding, diarrhea, fever, and rash; adhere to the dose and follow-up appointments</td></tr><tr><td>Methylphenidate</td><td>ADHD treatment; assess the heart and report immediately; the child may need a \"drug holiday\" because the drug may suppress growth</td></tr><tr><td>Dopamine</td><td>Treats hypotension, shock, and low cardiac output; monitor ECG, irregular pulse, and blood pressure</td></tr><tr><td>Rifampin</td><td>Red-orange color in tears and urine</td></tr><tr><td>Ethambutol</td><td>Vision and liver problems</td></tr><tr><td>Isoniazid</td><td>Peripheral neuropathy; vitamin B6 is given for prevention</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>For details:</strong> TB drugs are in the <a href=\"/diseases/dis-2711\">RIPE guide</a>.</div><div class=\"cs-box cs-info\"><strong>Note:</strong> Doses and numbers are for learning; always verify with the physician/pharmacist (and the leaflet) before giving.</div><h4>Controlled substance schedules (US system, for learning)</h4><table><thead><tr><th>Schedule</th><th>Meaning</th><th>Examples</th></tr></thead><tbody>\n<tr><td>I</td><td>No currently accepted medical use, for research only</td><td>heroin, LSD, MDMA</td></tr>\n<tr><td>II</td><td>High abuse potential and requires a written prescription</td><td>methylphenidate (Ritalin), hydromorphone, meperidine, fentanyl</td></tr>\n<tr><td>III</td><td>New prescription after six months or five refills</td><td>codeine (some formulations), testosterone, ketamine</td></tr>\n<tr><td>IV</td><td>New prescription after six months</td><td>alprazolam, diazepam, carisoprodol (Soma), and formerly Darvon</td></tr>\n<tr><td>V</td><td>Dispensed like any prescription or without one, per local law</td><td>Cough preparations, diphenoxylate (Lomotil), Motofen</td></tr></tbody></table>\n<div class=\"cs-box cs-info\"><p>Narcotic classification and control in Egypt are subject to different local laws and regulations; the table above is for learning in the exam style.</p></div>\n<h4>Pregnancy risk categories (old A-N system)</h4><table><thead><tr><th>Category</th><th>Meaning</th><th>Examples</th></tr></thead><tbody>\n<tr><td>A</td><td>No risk in controlled human studies</td><td>-</td></tr>\n<tr><td>B</td><td>No risk in other (animal) studies</td><td>amoxicillin, cefotaxime</td></tr>\n<tr><td>C</td><td>Risk cannot be ruled out</td><td>rifampin, theophylline</td></tr>\n<tr><td>D</td><td>Positive evidence of risk</td><td>phenytoin, tetracycline</td></tr>\n<tr><td>X</td><td>Completely contraindicated in pregnancy</td><td>isotretinoin, thalidomide</td></tr>\n<tr><td>N</td><td>Not yet classified</td><td>-</td></tr></tbody></table>\n<p>Note: modern leaflets replaced the letters with a narrative description of risks, but the exam still asks about the letters.</p>"
+  },
+  "nursing": {
+   "ar": "<ol><li>قبل أي دواء: الحقوق الخمسة، الحساسية، العلامات الحيوية المناسبة للدواء.</li><li>اعرف مجموعة الدواء من لاحقته (انظر <a href=\"/diseases/dis-3202\">اللواحق الدوائية</a>) لتتوقع أثره وآثاره الجانبية.</li><li>اسأل عن الحمل قبل أدوية فئة D وX.</li><li>للمصابين بأمراض الكبد/الكلى: انتبه لتراكم الدواء (cumulative effect).</li><li>الأقراص المغلّفة معويًا والممتدة المفعول لا تُسحق.</li><li>راقب علامات الحساسية بعد أول جرعة: طفح، وذمة وجه، ضيق نفس.</li></ol>",
+   "en": "<ol><li>Before any drug: the five rights, allergies, and the vital signs relevant to the drug.</li><li>Know the drug class from its suffix (see <a href=\"/diseases/dis-3202\">drug suffixes</a>) to predict its effect and side effects.</li><li>Ask about pregnancy before category D and X drugs.</li><li>For patients with liver/kidney disease: watch for drug accumulation (cumulative effect).</li><li>Enteric-coated and extended-release tablets are not crushed.</li><li>Watch for signs of allergy after the first dose: rash, facial edema, dyspnea.</li></ol>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ فورًا:</strong><ul><li>صفير أو ضيق نفس أو تورم الشفتين واللسان بعد دواء (أنافيلاكسيس/وذمة وعائية)</li><li>نبض أقل من 60 مع digoxin مع غثيان أو تغير رؤية</li><li>نزيف مع warfarin</li><li>بول وجلد أصفر/ألم كبد مع أدوية السل</li></ul></div><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately:</strong><ul><li>Wheezing, dyspnea, or swelling of the lips and tongue after a drug (anaphylaxis/angioedema)</li><li>Pulse less than 60 with digoxin, with nausea or vision changes</li><li>Bleeding with warfarin</li><li>Dark urine and yellow skin/liver pain with TB drugs</li></ul></div><div class=\"cs-box cs-info\"><strong>Note:</strong> Doses and numbers are for learning; always verify with the physician/pharmacist (and the leaflet) before giving.</div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>لا توقف الدواء من نفسك ولا تضاعف جرعة فائتة</li><li>اذكر كل أدويتك وأعشابك للطبيب والصيدلي</li><li>أخبر الطبيب إن كنتِ حاملًا أو تخططين للحمل</li><li>لا تسحق الأقراص المغلّفة إلا بإذن الصيدلي</li></ul>",
+   "en": "<ul><li>Do not stop the drug on your own and do not double a missed dose</li><li>Tell the physician and pharmacist about all your drugs and herbs</li><li>Tell the physician if you are pregnant or planning pregnancy</li><li>Do not crush coated tablets without the pharmacist's permission</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "كل مجموعة دوائية لها وظيفة واحدة تُحفظ: مضاد حموضة، مضاد تخثر، مدر…",
+   "المخدّرات تُقسَّم لجداول بحسب احتمال الإساءة والاستعمال الطبي",
+   "حمل X = ممنوع تمامًا في الحمل",
+   "الوريدي والعضلي أسرع الطرق امتصاصًا",
+   "Digoxin: نبض كامل دقيقة وتوقف إن أقل من 60",
+   "الدواء المتراكم يظهر عند ضعف الكبد أو الكلى"
   ],
-  "target": "pharmacology",
-  "sections": {
-    "overview": {
-      "ar": "<p>هذا الدليل مدخل لباقي أدلة الأدوية: يشرح أسماء المجموعات الدوائية الأساسية وما تفعله، وكيف يتحرك الدواء في الجسم، ثم أنواع التفاعلات والأعراض غير المرغوبة. التفاصيل الدقيقة لكل مجموعة في الأدلة التالية: <a href=\"/diseases/dis-3202\">الترياقات والمستويات العلاجية</a>، <a href=\"/diseases/dis-3203\">أسماء الأدوية الشائعة</a>، <a href=\"/diseases/dis-565\">المضادات الحيوية في السوق المصري</a>.</p>[[slot:dis-3201-classes|تصنيفات الأدوية الشائعة — رسم من إعداد الموقع|/diseases/img/dis-3201-classes.svg]]<div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div><h4>التصنيفات الدوائية الشائعة (نص مرجعي)</h4><table><thead><tr><th>المجموعة</th><th>وظيفتها</th></tr></thead><tbody>\n<tr><td>مضادات الحموضة (Antacids)</td><td>تقلل حمض المعدة (HCl)</td></tr>\n<tr><td>مضادات فقر الدم (Antianemics)</td><td>تزيد تكوين كريات الدم</td></tr>\n<tr><td>مضادات الكولين (Anticholinergics)</td><td>تقلل إفرازات الفم والجهاز التنفسي</td></tr>\n<tr><td>مضادات التخثر (Anticoagulants)</td><td>تمنع تكوّن الجلطة</td></tr>\n<tr><td>مضادات التشنج (Anticonvulsants)</td><td>للصرع واضطراب ثنائي القطب</td></tr>\n<tr><td>مضادات الإسهال (Antidiarrheals)</td><td>تبطئ حركة الأمعاء وتقلل ماء البراز</td></tr>\n<tr><td>مضادات الهيستامين (Antihistamines)</td><td>تحجب أثر الهيستامين</td></tr>\n<tr><td>خافضات الضغط (Antihypertensives)</td><td>تخفض الضغط وتحسّن تدفق الدم</td></tr>\n<tr><td>مضادات العدوى (Anti-infectives)</td><td>لعلاج العدوى</td></tr>\n<tr><td>موسّعات الشعب (Bronchodilators)</td><td>توسع الممرات الهوائية الكبيرة في الربو وأمراض الرئة مثل COPD</td></tr>\n<tr><td>المدرّات (Diuretics)</td><td>تطرح الماء والصوديوم (مثال: مدر العروة يعمل في عروة هنلي)</td></tr>\n<tr><td>الملينات (Laxatives)</td><td>تسهّل مرور البراز</td></tr>\n<tr><td>المضيّقات للحدقة (Miotics)</td><td>تضيّق الحدقة</td></tr>\n<tr><td>الموسّعات للحدقة (Mydriatics)</td><td>توسّع الحدقة</td></tr>\n<tr><td>المخدرات/المسكنات القوية (Narcotics/Analgesics)</td><td>تخفف الألم المتوسط إلى الشديد</td></tr></tbody></table>"
-    },
-    "causes": {
-      "ar": "<h4>الأطوار الثلاثة لنشاط الدواء</h4>[[slot:dis-3201-phases|مراحل نشاط الدواء — رسم من إعداد الموقع|/diseases/img/dis-3201-phases.svg]]<table><thead><tr><th>الطور</th><th>ماذا يحدث</th><th>نقاط</th></tr></thead><tbody><tr><td>الدوائي (Pharmaceutic)</td><td>ذوبان الدواء داخل الجسم</td><td>السوائل والوريدي جاهزة وأسرع. القرص يمر على الجهاز الهضمي ليذوب. الأقراص المغلّفة معويًا (enteric coated) تحتاج وسطًا قلويًا في الأمعاء الدقيقة فلا تُسحق</td></tr><tr><td>الحركي (Pharmacokinetic)</td><td>انتقال وتوزيع الدواء</td><td>امتصاص ← توزيع ← أيض ← إخراج</td></tr><tr><td>الديناميكي (Pharmacodynamic)</td><td>فعل الدواء على الجسم</td><td>أثر أساسي (مطلوب) وأثر ثانوي، بتغيير وظيفة الخلية أو بيئتها</td></tr></tbody></table>\n<h4>مفاصل الحركة الدوائية</h4><ul><li><strong>الامتصاص (Absorption):</strong> انتقال الدواء من مكان الإعطاء إلى سوائل الجسم: نقل نشط، نقل سلبي، أو بلعمة (pinocytosis). يتأثر بالطريق (الوريدي/العضلي الأسرع)، والذوبانية، وحالة الأنسجة</li><li><strong>التوزيع (Distribution):</strong> الدم يوزّع الدواء للأنسجة؛ يعتمد على الارتباط بالبروتين، وتدفق الدم، والذوبانية. فقط الجزء <em>الحر</em> (غير المرتبط بالألبومين) يعطي الأثر</li><li><strong>الأيض (Metabolism):</strong> تحويل حيوي ليصبح الدواء أنشط أو أقل نشاطًا وقابلًا للإخراج؛ أغلبه في الكبد، وأيضًا الكلى والرئة والبلازما وغشاء الأمعاء. يتأثر بالعمر والوزن والجنس والمرض والطريق</li><li><strong>الإخراج (Excretion):</strong> بعد أن يعطّل الكبد الدواء يُطرح غالبًا عبر الكلى في البول</li></ul><div class=\"cs-box cs-info\"><p>مثال على الأثر الثانوي: sildenafil صُنع أصلًا لعلاج ارتفاع الضغط ثم لوحظ أنه يفيد في ضعف الانتصاب، فصار هذا الأثر الثانوي استعمالًا علاجيًا. الدواء يعمل بآليتين: تغيير وظيفة الخلية أو تغيير بيئتها.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>مصطلحات أساسية</h4><table><thead><tr><th>المصطلح</th><th>المعنى</th></tr></thead><tbody><tr><td>First pass effect</td><td>انخفاض تركيز الدواء كثيرًا (في الكبد) قبل وصوله للدورة الدموية</td></tr><tr><td>Half-life</td><td>الوقت اللازم ليخرج الجسم 50% من الدواء</td></tr><tr><td>Onset</td><td>وقت بدء الأثر العلاجي بعد الإعطاء</td></tr><tr><td>Peak</td><td>الذروة: عندما يتساوى معدل الامتصاص مع الإخراج</td></tr><tr><td>Duration</td><td>المدة التي يعطي فيها الدواء أثرًا علاجيًا</td></tr><tr><td>Pharmacogenomics</td><td>اختلاف استجابة الناس للدواء بحسب تركيبهم الوراثي</td></tr><tr><td>Teratogen</td><td>مادة تسبب تشوّه الجنين</td></tr><tr><td>Idiosyncrasy</td><td>رد فعل غير مألوف أو غريب على الدواء</td></tr><tr><td>Tolerance</td><td>تناقص الاستجابة فتزيد الحاجة للجرعة</td></tr><tr><td>Cumulative effect</td><td>عند مرضى الكبد أو الكلى: لا يُخرج الجسم الجرعة قبل التالية فيتراكم الدواء</td></tr></tbody></table>\n<h4>التفاعلات الدوائية</h4><table><thead><tr><th>النوع</th><th>المعنى</th><th>مثال</th></tr></thead><tbody><tr><td>إضافي Additive</td><td>أثر دوائين معًا يساوي مجموع أثريهما كلٍّ على حدة</td><td>—</td></tr><tr><td>تآزري Synergistic</td><td>المجموع أكبر من الأجزاء</td><td>منوّم + كحول ← تثبيط الجهاز العصبي المركزي</td></tr><tr><td>تضادي Antagonistic</td><td>دواء يعاكس أثر دواء آخر</td><td>naloxone يعكس الأفيونات</td></tr><tr><td>غذائي</td><td>بعض الأطعمة تزيد أو تقلل أيض الدواء</td><td>—</td></tr></tbody></table>\n<h4>أثر الأدوية على الجهاز العصبي</h4><ul><li><strong>Sympathomimetic:</strong> يحاكي أثر الودّي ويحفّزه</li><li><strong>Sympatholytic:</strong> يعاكس/يثبّط نقل الإشارات الودّية</li><li><strong>Parasympathomimetic (cholinergic):</strong> ينبّه الجهاز نظير الودّي، ويُسمى كولينيًا لأن الناقل acetylcholine</li><li><strong>Parasympatholytic:</strong> يقلل نشاط نظير الودّي</li></ul>\n<h4>التفاعلات والأعراض غير المرغوبة</h4><ul><li><strong>تفاعل ضار (ADR):</strong> أثر غير مرغوب قد يكون خفيفًا أو شديدًا أو مهددًا للحياة، يظهر في الجرعة الأولى أو لاحقًا</li><li><strong>تفاعل تحسسي:</strong> فرط حساسية مناعي يعدّ الدواء جسمًا غريبًا؛ فوري أو متأخر</li><li><strong>صدمة تأقية (Anaphylaxis):</strong> شديدة جدًا وفورية غالبًا، تحتاج تدخلًا طبيًا فوريًا لرفع الضغط وتحسين التنفس، وقاتلة إن لم تُعالج</li><li><strong>وذمة وعائية (Angioedema):</strong> تجمع سوائل تحت الجلد، تصيب العينين والشفتين والفم والحلق غالبًا</li><li><strong>تفاعل سمّي:</strong> يتراكم السم عندما لا يستطيع الجسم إخراج الدواء</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>ملاحظات تمريضية على أدوية مشهورة</h4><table><thead><tr><th>الدواء</th><th>نقطة المراقبة</th></tr></thead><tbody><tr><td>Digoxin (Lanoxin)</td><td>قِس النبض دقيقة كاملة؛ إن أقل من 60/د احجب الجرعة. راجع مستوى digoxin والبوتاسيوم</td></tr><tr><td>Aluminum hydroxide</td><td>لعلاج GERD وحصى الكلى؛ يسبب إمساكًا</td></tr><tr><td>Hydroxyzine</td><td>لعلاج القلق والحكة؛ انتبه لجفاف الفم</td></tr><tr><td>Midazolam</td><td>تهدئة واعية؛ راقب تثبيط التنفس وهبوط الضغط</td></tr><tr><td>Amiodarone</td><td>أعراض يُبلَّغ عنها: تعرق، ضيق نفس، خمول؛ إن فاتت جرعة تُؤخذ حين يُتذكر في نفس اليوم وإلا تُترك، ولا تُضاعف</td></tr><tr><td>Warfarin</td><td>راقب النزيف والإسهال والحمى والطفح؛ التزام بالجرعة وبمواعيد المتابعة</td></tr><tr><td>Methylphenidate</td><td>علاج ADHD؛ قيّم القلب وأبلغ فورًا؛ قد يحتاج الطفل \"إجازة دوائية\" لأن الدواء قد يكبح النمو</td></tr><tr><td>Dopamine</td><td>علاج هبوط الضغط والصدمة وانخفاض النتاج القلبي؛ راقب ECG وعدم انتظام النبض والضغط</td></tr><tr><td>Rifampin</td><td>لون أحمر برتقالي بالدموع والبول</td></tr><tr><td>Ethambutol</td><td>مشاكل بالرؤية وبالكبد</td></tr><tr><td>Isoniazid</td><td>اعتلال أعصاب طرفي؛ يُعطى فيتامين B6 للوقاية</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>للتفصيل:</strong> أدوية السل في <a href=\"/diseases/dis-2711\">دليل RIPE</a>.</div><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div><h4>جداول المواد الخاضعة للرقابة (نظام أمريكي للتعلّم)</h4><table><thead><tr><th>الجدول</th><th>المعنى</th><th>أمثلة</th></tr></thead><tbody>\n<tr><td>I</td><td>لا استعمال طبي مقبول حاليًا، للبحث فقط</td><td>heroin, LSD, MDMA</td></tr>\n<tr><td>II</td><td>احتمال إساءة استعمال عالٍ ويحتاج وصفة مكتوبة</td><td>methylphenidate (Ritalin), hydromorphone, meperidine, fentanyl</td></tr>\n<tr><td>III</td><td>وصفة جديدة بعد ستة أشهر أو خمس إعادات صرف</td><td>codeine (بعض التركيبات), testosterone, ketamine</td></tr>\n<tr><td>IV</td><td>وصفة جديدة بعد ستة أشهر</td><td>alprazolam, diazepam, carisoprodol (Soma)، وكان منها Darvon</td></tr>\n<tr><td>V</td><td>تُصرف كأي وصفة أو بدونها حسب القانون المحلي</td><td>مستحضرات السعال، diphenoxylate (Lomotil), Motofen</td></tr></tbody></table>\n<div class=\"cs-box cs-info\"><p>تصنيف المخدرات والرقابة في مصر يخضع لقانون ولوائح محلية مختلفة؛ الجدول أعلاه للتعلّم على نمط الامتحان.</p></div>\n<h4>فئات الخطر في الحمل (النظام القديم A-N)</h4><table><thead><tr><th>الفئة</th><th>المعنى</th><th>أمثلة</th></tr></thead><tbody>\n<tr><td>A</td><td>لا خطر في دراسات محكمة على البشر</td><td>-</td></tr>\n<tr><td>B</td><td>لا خطر في دراسات أخرى (حيوانية)</td><td>amoxicillin, cefotaxime</td></tr>\n<tr><td>C</td><td>لا يمكن استبعاد الخطر</td><td>rifampin, theophylline</td></tr>\n<tr><td>D</td><td>دليل إيجابي على الخطر</td><td>phenytoin, tetracycline</td></tr>\n<tr><td>X</td><td>ممنوع في الحمل تمامًا</td><td>isotretinoin, thalidomide</td></tr>\n<tr><td>N</td><td>لم يُصنَّف بعد</td><td>-</td></tr></tbody></table>\n<p>ملاحظة: النشرات الحديثة استبدلت الحروف بوصف سردي للمخاطر، لكن الامتحان ما زال يسأل عن الحروف.</p>"
-    },
-    "nursing": {
-      "ar": "<ol><li>قبل أي دواء: الحقوق الخمسة، الحساسية، العلامات الحيوية المناسبة للدواء.</li><li>اعرف مجموعة الدواء من لاحقته (انظر <a href=\"/diseases/dis-3202\">اللواحق الدوائية</a>) لتتوقع أثره وآثاره الجانبية.</li><li>اسأل عن الحمل قبل أدوية فئة D وX.</li><li>للمصابين بأمراض الكبد/الكلى: انتبه لتراكم الدواء (cumulative effect).</li><li>الأقراص المغلّفة معويًا والممتدة المفعول لا تُسحق.</li><li>راقب علامات الحساسية بعد أول جرعة: طفح، وذمة وجه، ضيق نفس.</li></ol>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ فورًا:</strong><ul><li>صفير أو ضيق نفس أو تورم الشفتين واللسان بعد دواء (أنافيلاكسيس/وذمة وعائية)</li><li>نبض أقل من 60 مع digoxin مع غثيان أو تغير رؤية</li><li>نزيف مع warfarin</li><li>بول وجلد أصفر/ألم كبد مع أدوية السل</li></ul></div><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>لا توقف الدواء من نفسك ولا تضاعف جرعة فائتة</li><li>اذكر كل أدويتك وأعشابك للطبيب والصيدلي</li><li>أخبر الطبيب إن كنتِ حاملًا أو تخططين للحمل</li><li>لا تسحق الأقراص المغلّفة إلا بإذن الصيدلي</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "كل مجموعة دوائية لها وظيفة واحدة تُحفظ: مضاد حموضة، مضاد تخثر، مدر…",
-      "المخدّرات تُقسَّم لجداول بحسب احتمال الإساءة والاستعمال الطبي",
-      "حمل X = ممنوع تمامًا في الحمل",
-      "الوريدي والعضلي أسرع الطرق امتصاصًا",
-      "Digoxin: نبض كامل دقيقة وتوقف إن أقل من 60",
-      "الدواء المتراكم يظهر عند ضعف الكبد أو الكلى"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض يتناول digoxin والنبض 54/د. ماذا تفعل الممرضة؟"
-      },
-      "options": [
-        {
-          "ar": "تعطي الجرعة وتعيد القياس بعد ساعة"
-        },
-        {
-          "ar": "تحجب الجرعة وتبلّغ"
-        },
-        {
-          "ar": "تضاعف الجرعة التالية"
-        },
-        {
-          "ar": "تعطيه الجرعة مع تسريع الوريد"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "النبض أقل من 60 مع digoxin يعني احتمال تسمم أو بطء قلب خطير، لذلك تُحجب الجرعة ويُبلَّغ الطبيب ويُراجع مستوى الدواء والبوتاسيوم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي فئة حمل تعني أن الدواء ممنوع في الحمل؟"
-      },
-      "options": [
-        {
-          "ar": "A"
-        },
-        {
-          "ar": "B"
-        },
-        {
-          "ar": "C"
-        },
-        {
-          "ar": "X"
-        }
-      ],
-      "answer": 3,
-      "why": {
-        "ar": "الفئة X: ضرر الجنين مثبت والخطر يفوق أي فائدة، مثل isotretinoin وthalidomide."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما أسرع طرق الإعطاء امتصاصًا؟"
-      },
-      "options": [
-        {
-          "ar": "الفموي"
-        },
-        {
-          "ar": "الوريدي"
-        },
-        {
-          "ar": "الجلدي (لصقة)"
-        },
-        {
-          "ar": "تحت اللسان فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الوريدي يضع الدواء مباشرة في الدم دون مرحلة امتصاص فيكون الأسرع، ويليه العضلي."
-      }
-    },
-    {
-      "q": {
-        "ar": "كحول مع منوّم ينتج تثبيط مركزي زائد. هذا تفاعل:"
-      },
-      "options": [
-        {
-          "ar": "إضافي"
-        },
-        {
-          "ar": "تضادي"
-        },
-        {
-          "ar": "تآزري"
-        },
-        {
-          "ar": "غذائي"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "التفاعل التآزري (synergistic) يعطي أثرًا أكبر من مجموع الدوائين منفصلين."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما أثر isoniazid الذي يُوقى بفيتامين B6؟"
-      },
-      "options": [
-        {
-          "ar": "فشل كلوي"
-        },
-        {
-          "ar": "اعتلال أعصاب طرفي"
-        },
-        {
-          "ar": "طنين الأذن"
-        },
-        {
-          "ar": "تغيّر لون الدموع"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "isoniazid يستنزف فيتامين B6 فيسبب خدرًا وتنميلًا (اعتلال أعصاب طرفي)، ويُعطى B6 وقاية."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "British National Formulary (BNF)"
-    },
-    {
-      "title": "Egyptian Drug Authority (EDA) drug information leaflets"
-    }
+  "en": [
+   "Each drug class has one function to memorize: antacid, anticoagulant, diuretic…",
+   "Narcotics are divided into schedules by abuse potential and medical use",
+   "Pregnancy X = completely contraindicated in pregnancy",
+   "IV and IM are the fastest routes of absorption",
+   "Digoxin: full-minute pulse, and hold if less than 60",
+   "Drug accumulation appears with liver or kidney impairment"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض يتناول digoxin والنبض 54/د. ماذا تفعل الممرضة؟",
+    "en": "A patient taking digoxin has a pulse of 54/min. What does the nurse do?"
+   },
+   "options": [
+    {
+     "ar": "تعطي الجرعة وتعيد القياس بعد ساعة",
+     "en": "Give the dose and recheck after an hour"
+    },
+    {
+     "ar": "تحجب الجرعة وتبلّغ",
+     "en": "Hold the dose and report"
+    },
+    {
+     "ar": "تضاعف الجرعة التالية",
+     "en": "Double the next dose"
+    },
+    {
+     "ar": "تعطيه الجرعة مع تسريع الوريد",
+     "en": "Give the dose and speed up the IV"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "النبض أقل من 60 مع digoxin يعني احتمال تسمم أو بطء قلب خطير، لذلك تُحجب الجرعة ويُبلَّغ الطبيب ويُراجع مستوى الدواء والبوتاسيوم.",
+    "en": "A pulse less than 60 with digoxin means possible toxicity or dangerous bradycardia, so the dose is held, the physician is notified, and the drug and potassium levels are checked."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي فئة حمل تعني أن الدواء ممنوع في الحمل؟",
+    "en": "Which pregnancy category means the drug is contraindicated in pregnancy?"
+   },
+   "options": [
+    {
+     "ar": "A",
+     "en": "A"
+    },
+    {
+     "ar": "B",
+     "en": "B"
+    },
+    {
+     "ar": "C",
+     "en": "C"
+    },
+    {
+     "ar": "X",
+     "en": "X"
+    }
+   ],
+   "answer": 3,
+   "why": {
+    "ar": "الفئة X: ضرر الجنين مثبت والخطر يفوق أي فائدة، مثل isotretinoin وthalidomide.",
+    "en": "Category X: fetal harm is proven and the risk outweighs any benefit, such as isotretinoin and thalidomide."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما أسرع طرق الإعطاء امتصاصًا؟",
+    "en": "Which route has the fastest absorption?"
+   },
+   "options": [
+    {
+     "ar": "الفموي",
+     "en": "Oral"
+    },
+    {
+     "ar": "الوريدي",
+     "en": "IV"
+    },
+    {
+     "ar": "الجلدي (لصقة)",
+     "en": "Transdermal (patch)"
+    },
+    {
+     "ar": "تحت اللسان فقط",
+     "en": "Sublingual only"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الوريدي يضع الدواء مباشرة في الدم دون مرحلة امتصاص فيكون الأسرع، ويليه العضلي.",
+    "en": "IV puts the drug directly into the blood without an absorption phase, so it is the fastest, followed by IM."
+   }
+  },
+  {
+   "q": {
+    "ar": "كحول مع منوّم ينتج تثبيط مركزي زائد. هذا تفاعل:",
+    "en": "Alcohol with a hypnotic produces excessive CNS depression. This interaction is:"
+   },
+   "options": [
+    {
+     "ar": "إضافي",
+     "en": "Additive"
+    },
+    {
+     "ar": "تضادي",
+     "en": "Antagonistic"
+    },
+    {
+     "ar": "تآزري",
+     "en": "Synergistic"
+    },
+    {
+     "ar": "غذائي",
+     "en": "Food"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "التفاعل التآزري (synergistic) يعطي أثرًا أكبر من مجموع الدوائين منفصلين.",
+    "en": "A synergistic interaction gives an effect greater than the sum of the two drugs separately."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما أثر isoniazid الذي يُوقى بفيتامين B6؟",
+    "en": "What effect of isoniazid is prevented with vitamin B6?"
+   },
+   "options": [
+    {
+     "ar": "فشل كلوي",
+     "en": "Kidney failure"
+    },
+    {
+     "ar": "اعتلال أعصاب طرفي",
+     "en": "Peripheral neuropathy"
+    },
+    {
+     "ar": "طنين الأذن",
+     "en": "Tinnitus"
+    },
+    {
+     "ar": "تغيّر لون الدموع",
+     "en": "Discolored tears"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "isoniazid يستنزف فيتامين B6 فيسبب خدرًا وتنميلًا (اعتلال أعصاب طرفي)، ويُعطى B6 وقاية.",
+    "en": "Isoniazid depletes vitamin B6, causing numbness and tingling (peripheral neuropathy), and B6 is given for prevention."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "British National Formulary (BNF)"
+  },
+  {
+   "title": "Egyptian Drug Authority (EDA) drug information leaflets"
+  }
+ ]
 }

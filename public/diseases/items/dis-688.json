@@ -1,236 +1,298 @@
 {
-  "id": "dis-688",
-  "num": 688,
-  "system": "blood",
-  "icon": "🦵",
-  "level": 3,
-  "title": {
-    "ar": "الجلطة الوريدية العميقة (DVT)",
-    "en": "Deep Vein Thrombosis"
+ "id": "dis-688",
+ "num": 688,
+ "system": "blood",
+ "icon": "🦵",
+ "level": 3,
+ "title": {
+  "ar": "الجلطة الوريدية العميقة (DVT)",
+  "en": "Deep Vein Thrombosis"
+ },
+ "teaser": {
+  "ar": "ساق واحدة متورمة ومؤلمة قد تخفي خطر الانسداد الرئوي. الوقاية، العلاج بمضادات التخثر، وما لا يجب فعله.",
+  "en": "One swollen, painful leg may hide the risk of pulmonary embolism. Prevention, anticoagulant treatment, and what not to do."
+ },
+ "chips": [
+  {
+   "ar": "DVT / PE",
+   "en": "DVT / PE"
   },
-  "teaser": {
-    "ar": "ساق واحدة متورمة ومؤلمة قد تخفي خطر الانسداد الرئوي. الوقاية، العلاج بمضادات التخثر، وما لا يجب فعله."
+  {
+   "ar": "Heparin / Warfarin",
+   "en": "Heparin / Warfarin"
   },
-  "chips": [
-    {
-      "ar": "DVT / PE"
-    },
-    {
-      "ar": "Heparin / Warfarin"
-    },
-    {
-      "ar": "لا تدلّك"
-    }
+  {
+   "ar": "لا تدلّك",
+   "en": "Do not massage"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>الجلطة الوريدية العميقة (DVT) هي تكوّن خثرة داخل وريد عميق، غالباً بالساق، وأحياناً بالذراع. تبدأ بتجمع صفائح وكرات بيضاء على جدار الوريد، ثم تكبر. قد تظل صامتة لفترة، وقد ينفصل جزء منها (Embolus) ويصل الرئة (Pulmonary embolism) بأعراض تنفسية مفاجئة وربما الوفاة.</p>[[slot:dis-688-virchow|ثالوث فيرشو وخطر الجلطة|/diseases/img/dis-688-virchow.svg]]<div class=\"cs-stats\"><div><b>Wells</b><span>تقدير الاحتمال</span></div><div><b>D-dimer</b><span>يستبعد عند الاحتمال المنخفض</span></div><div><b>Duplex</b><span>فحص التشخيص الأول</span></div></div>\n<h4>مراجعة التمريض الباطني الجراحي: DVT وريناود وبيرجر</h4><p>الخثار الوريدي العميق (DVT) خثرة في وريد عميق، بينما <a href=\"/diseases/dis-607\">ريناود</a> و<a href=\"/diseases/dis-1203\">بيرجر</a> اضطرابان وعائيان للأصابع.</p>[[slot:dis-688-p270|DVT وريناود وبيرجر — رسم من إعداد الموقع|/diseases/img/dis-688-p270.svg]]<ul><li>علامات DVT: ألم وتشنج الربلة، تورم في طرف واحد، دفء واحمرار من تجمع الدم، وضيق نفس مع ألم صدر = انصمام رئوي (Pulmonary embolism)، فأبلغ الطبيب فوراً.</li><li>أثناء وجود الخثرة: لا تمشِ (راحة بالسرير) وارفع الطرف لتحسين العود الوريدي.</li><li>بعد زوال الخثرة: تمارين الربلة والعضلات الثابتة، ترطيب، مشي مبكر، تجنب الجلوس الطويل (سيارة أو طائرة أو سرير)، وارتداء جوارب TED وأجهزة الضغط المتقطع SCD بعد استقرار الخثرة وليس قبله.</li></ul>",
+   "en": "<p>Deep vein thrombosis (DVT) is the formation of a clot inside a deep vein, usually in the leg and sometimes in the arm. It starts as platelets and white cells collect on the vein wall, then it grows. It may stay silent for a while, and part of it may break off (embolus) and reach the lung (pulmonary embolism), with sudden respiratory symptoms and possibly death.</p>[[slot:dis-688-virchow|Virchow's triad and clot risk|/diseases/img/dis-688-virchow.svg]]<div class=\"cs-stats\"><div><b>Wells</b><span>Estimating probability</span></div><div><b>D-dimer</b><span>Rules out when probability is low</span></div><div><b>Duplex</b><span>First diagnostic test</span></div></div>\n<h4>Med-surg nursing review: DVT, Raynaud's, and Buerger's</h4><p>Deep vein thrombosis (DVT) is a clot in a deep vein, while <a href=\"/diseases/dis-607\">Raynaud's</a> and <a href=\"/diseases/dis-1203\">Buerger's</a> are vascular disorders of the fingers and toes.</p>[[slot:dis-688-p270|DVT, Raynaud's, and Buerger's — illustration prepared by the site|/diseases/img/dis-688-p270.svg]]<ul><li>Signs of DVT: calf pain and cramping, swelling in one limb, warmth and redness from pooled blood; shortness of breath with chest pain = pulmonary embolism, so notify the physician immediately.</li><li>While the clot is present: do not walk (bed rest) and elevate the limb to improve venous return.</li><li>After the clot resolves: calf and isometric exercises, hydration, early ambulation, avoid prolonged sitting (car, plane, or bed), and wear TED stockings and intermittent compression devices (SCD) after the clot has stabilized, not before.</li></ul>"
+  },
+  "causes": {
+   "ar": "<ul><li>قلة الحركة (راحة بالسرير، سفر طويل، جبيرة).</li><li>جراحات (خاصة العظام والحوض) وكسور.</li><li>السمنة، التدخين، التقدم بالعمر.</li><li>الحمل والولادة وحبوب منع الحمل والعلاج الهرموني.</li><li>السرطان، قصور القلب، اضطرابات التجلط الوراثية.</li><li>قسطرة وريدية مركزية.</li></ul>",
+   "en": "<ul><li>Immobility (bed rest, long travel, a cast).</li><li>Surgery (especially orthopedic and pelvic) and fractures.</li><li>Obesity, smoking, advanced age.</li><li>Pregnancy and childbirth, birth control pills, and hormone therapy.</li><li>Cancer, heart failure, inherited clotting disorders.</li><li>Central venous catheter.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>قد لا توجد أعراض.</li><li>ألم أو إيلام بالساق (بطة الساق أو الفخذ) أو الذراع.</li><li>تورم في طرف واحد (قارن محيط الساقين).</li><li>سخونة واحمرار أو لون مزرق.</li><li>علامة هومان (Homans) ألم عند ثني القدم لأعلى: غير موثوقة ولا يُعتمد عليها ولا تُجرى بقوة.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>علامة هومان غير حساسة ولا نوعية، والأفضل استخدام درجة Wells وD-dimer والموجات فوق الصوتية.</p></div>",
+   "en": "<ul><li>There may be no symptoms.</li><li>Pain or tenderness in the leg (calf or thigh) or arm.</li><li>Swelling in one limb (compare the circumference of both legs).</li><li>Warmth and redness or a bluish color.</li><li>Homans sign, pain with dorsiflexion of the foot: unreliable, should not be relied on, and is not performed forcefully.</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Homans sign is neither sensitive nor specific; it is better to use the Wells score, D-dimer, and ultrasound.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>موجات فوق صوتية دوبلر / دوبلكس وريدي (الأساس).</li><li>D-dimer: يفيد في استبعاد الجلطة عند احتمال منخفض.</li><li>Plethysmography لتدفق الوريد (أفضل للفخذ من السمانة).</li><li>تصوير الوريد بالصبغة (Venography): نادراً الآن.</li><li>رنين مغناطيسي مباشر للجلطة: للوريد الأجوف والحوض.</li><li>PT, PTT, INR, CBC وصفائح قاعدية قبل بدء مضادات التخثر.</li></ul>",
+   "en": "<ul><li>Venous Doppler / duplex ultrasound (the mainstay).</li><li>D-dimer: helps rule out a clot when probability is low.</li><li>Plethysmography for venous flow (better for the thigh than the calf).</li><li>Contrast venography: rarely used now.</li><li>Direct MRI of the clot: for the vena cava and pelvis.</li><li>Baseline PT, PTT, INR, CBC, and platelets before starting anticoagulants.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li>راحة وارتفاع الطرف في البداية.</li><li>هيبارين غير مجزأ وريدي حسب الوزن (Weight-based).</li><li>هيبارين منخفض الوزن الجزيئي (Enoxaparin، Dalteparin) تحت الجلد.</li><li>Warfarin عن طريق الفم مع متابعة INR (المدى المعتاد 2–3).</li><li>مضادات التخثر الفموية الحديثة (Rivaroxaban، Apixaban): الخط الأول لمعظم المرضى حسب الإرشادات الحديثة.</li><li>أدوية إذابة الجلطة (t-PA) في حالات محددة.</li><li>فلتر الوريد الأجوف السفلي (IVC filter) للمرضى المتكررين أو الذين لا يستطيعون أخذ مضادات التخثر.</li><li>استئصال الجلطة جراحياً (Thrombectomy).</li><li>كمادات دافئة رطبة متقطعة وجوارب ضاغطة حسب الحالة.</li></ul><div class=\"cs-box cs-info\"><strong>مدة العلاج</strong><p>عادة ثلاثة أشهر على الأقل، وتطول حسب السبب. القرار للطبيب.</p></div>",
+   "en": "<ul><li>Rest and limb elevation at first.</li><li>IV unfractionated heparin, weight-based.</li><li>Subcutaneous low-molecular-weight heparin (Enoxaparin, Dalteparin).</li><li>Oral Warfarin with INR monitoring (usual range 2–3).</li><li>Direct oral anticoagulants (Rivaroxaban, Apixaban): first line for most patients per current guidelines.</li><li>Clot-dissolving drugs (t-PA) in selected cases.</li><li>Inferior vena cava filter (IVC filter) for recurrent cases or patients who cannot take anticoagulants.</li><li>Surgical clot removal (thrombectomy).</li><li>Intermittent warm moist compresses and compression stockings as appropriate.</li></ul><div class=\"cs-box cs-info\"><strong>Duration of treatment</strong><p>Usually at least three months, longer depending on the cause. The decision is the physician's.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>راقب أعراض الانسداد الرئوي</strong><p>ضيق نفس مفاجئ، ألم صدر، نبض سريع، تنفس سريع، تعرق، سعال دموي. هذه طوارئ: أكسجين وبلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>لا تدلّك</strong><p>لا تدلك الساق ولا تفركها لتجنب دفع الجلطة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>هيبارين</strong><p>اتبع بروتوكول الجرعة حسب الوزن، تابع PTT (هدف 1.5–2.5× الطبيعي)، ومعدل التسريب بمضخة. هيبارين منخفض الوزن: حقن تحت الجلد بالبطن بعيداً عن السرة 5 سم، لا تدلك المكان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Warfarin</strong><p>تابع INR، جرعة ثابتة وقت واحد يومياً، تفاعلات غذائية (فيتامين K) ودوائية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مراقبة النزف</strong><p>لثة، بول، براز، كدمات، نزف أنف. فرشاة ناعمة وحلاقة كهربائية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>العناية بالطرف</strong><p>قياس محيط الساق يومياً، فحص الدورة الدموية، كمادات دافئة متقطعة مع تقييم الجلد بين الجلسات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وقاية</strong><p>الحركة المبكرة، تمارين الساق، جوارب ضاغطة، سوائل كافية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تثقيف</strong><p>الإبلاغ عن النزف، تجنب الإصابات، مراجعة أي دواء جديد مع الصيدلي.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية</strong><p>ضيق نفس مفاجئ أو ألم صدر في مريض DVT = انسداد رئوي حتى يثبت العكس.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Watch for signs of pulmonary embolism</strong><p>Sudden shortness of breath, chest pain, rapid pulse, rapid breathing, sweating, coughing up blood. This is an emergency: give oxygen and report immediately.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Do not massage</strong><p>Do not massage or rub the leg, to avoid dislodging the clot.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Heparin</strong><p>Follow the weight-based dosing protocol, monitor PTT (target 1.5–2.5× normal), and run the infusion by pump. Low-molecular-weight heparin: inject subcutaneously in the abdomen, 5 cm away from the umbilicus; do not rub the site.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Warfarin</strong><p>Monitor INR, a consistent dose at the same time daily, food (vitamin K) and drug interactions.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Bleeding monitoring</strong><p>Gums, urine, stool, bruising, nosebleeds. Soft toothbrush and electric razor.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Limb care</strong><p>Measure leg circumference daily, check circulation, intermittent warm compresses with skin assessment between sessions.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Prevention</strong><p>Early ambulation, leg exercises, compression stockings, adequate fluids.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Education</strong><p>Report bleeding, avoid injuries, review any new medication with the pharmacist.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Priority</strong><p>Sudden shortness of breath or chest pain in a DVT patient = pulmonary embolism until proven otherwise.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>ضيق نفس مفاجئ، ألم صدر، سعال دموي</li><li>تورم ساق متزايد مع ازرقاق وبرودة (Phlegmasia)</li><li>نزف غير متوقف</li><li>صداع شديد مفاجئ على مضاد تخثر</li><li>INR أعلى من المدى</li></ul>",
+   "en": "<ul><li>Sudden shortness of breath, chest pain, coughing up blood</li><li>Increasing leg swelling with cyanosis and coldness (phlegmasia)</li><li>Bleeding that will not stop</li><li>Sudden severe headache while on an anticoagulant</li><li>INR above range</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>تحرك كل ساعة في السفر الطويل واشرب سوائل.</li><li>لا تدخن.</li><li>التزم بجرعة مضاد التخثر ولا توقفه بدون استشارة.</li><li>حلاقة كهربائية وفرشاة ناعمة.</li><li>احمل بطاقة تعريف طبية.</li></ul>",
+   "en": "<ul><li>Move every hour on long trips and drink fluids.</li><li>Do not smoke.</li><li>Take your anticoagulant dose as prescribed and do not stop it without consulting.</li><li>Electric razor and soft toothbrush.</li><li>Carry a medical ID card.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "DVT: ساق واحدة ألم وتورم وسخونة.",
+   "الخطر: انسداد رئوي.",
+   "دوبلكس + D-dimer + Wells للتشخيص.",
+   "هيبارين ثم Warfarin أو مضادات تخثر فموية حديثة.",
+   "لا تدلك الساق.",
+   "راقب النزف وINR/PTT."
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>الجلطة الوريدية العميقة (DVT) هي تكوّن خثرة داخل وريد عميق، غالباً بالساق، وأحياناً بالذراع. تبدأ بتجمع صفائح وكرات بيضاء على جدار الوريد، ثم تكبر. قد تظل صامتة لفترة، وقد ينفصل جزء منها (Embolus) ويصل الرئة (Pulmonary embolism) بأعراض تنفسية مفاجئة وربما الوفاة.</p>[[slot:dis-688-virchow|ثالوث فيرشو وخطر الجلطة|/diseases/img/dis-688-virchow.svg]]<div class=\"cs-stats\"><div><b>Wells</b><span>تقدير الاحتمال</span></div><div><b>D-dimer</b><span>يستبعد عند الاحتمال المنخفض</span></div><div><b>Duplex</b><span>فحص التشخيص الأول</span></div></div>\n<h4>مراجعة التمريض الباطني الجراحي: DVT وريناود وبيرجر</h4><p>الخثار الوريدي العميق (DVT) خثرة في وريد عميق، بينما <a href=\"/diseases/dis-607\">ريناود</a> و<a href=\"/diseases/dis-1203\">بيرجر</a> اضطرابان وعائيان للأصابع.</p>[[slot:dis-688-p270|DVT وريناود وبيرجر — رسم من إعداد الموقع|/diseases/img/dis-688-p270.svg]]<ul><li>علامات DVT: ألم وتشنج الربلة، تورم في طرف واحد، دفء واحمرار من تجمع الدم، وضيق نفس مع ألم صدر = انصمام رئوي (Pulmonary embolism)، فأبلغ الطبيب فوراً.</li><li>أثناء وجود الخثرة: لا تمشِ (راحة بالسرير) وارفع الطرف لتحسين العود الوريدي.</li><li>بعد زوال الخثرة: تمارين الربلة والعضلات الثابتة، ترطيب، مشي مبكر، تجنب الجلوس الطويل (سيارة أو طائرة أو سرير)، وارتداء جوارب TED وأجهزة الضغط المتقطع SCD بعد استقرار الخثرة وليس قبله.</li></ul>"
-    },
-    "causes": {
-      "ar": "<ul><li>قلة الحركة (راحة بالسرير، سفر طويل، جبيرة).</li><li>جراحات (خاصة العظام والحوض) وكسور.</li><li>السمنة، التدخين، التقدم بالعمر.</li><li>الحمل والولادة وحبوب منع الحمل والعلاج الهرموني.</li><li>السرطان، قصور القلب، اضطرابات التجلط الوراثية.</li><li>قسطرة وريدية مركزية.</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>قد لا توجد أعراض.</li><li>ألم أو إيلام بالساق (بطة الساق أو الفخذ) أو الذراع.</li><li>تورم في طرف واحد (قارن محيط الساقين).</li><li>سخونة واحمرار أو لون مزرق.</li><li>علامة هومان (Homans) ألم عند ثني القدم لأعلى: غير موثوقة ولا يُعتمد عليها ولا تُجرى بقوة.</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>علامة هومان غير حساسة ولا نوعية، والأفضل استخدام درجة Wells وD-dimer والموجات فوق الصوتية.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>موجات فوق صوتية دوبلر / دوبلكس وريدي (الأساس).</li><li>D-dimer: يفيد في استبعاد الجلطة عند احتمال منخفض.</li><li>Plethysmography لتدفق الوريد (أفضل للفخذ من السمانة).</li><li>تصوير الوريد بالصبغة (Venography): نادراً الآن.</li><li>رنين مغناطيسي مباشر للجلطة: للوريد الأجوف والحوض.</li><li>PT, PTT, INR, CBC وصفائح قاعدية قبل بدء مضادات التخثر.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li>راحة وارتفاع الطرف في البداية.</li><li>هيبارين غير مجزأ وريدي حسب الوزن (Weight-based).</li><li>هيبارين منخفض الوزن الجزيئي (Enoxaparin، Dalteparin) تحت الجلد.</li><li>Warfarin عن طريق الفم مع متابعة INR (المدى المعتاد 2–3).</li><li>مضادات التخثر الفموية الحديثة (Rivaroxaban، Apixaban): الخط الأول لمعظم المرضى حسب الإرشادات الحديثة.</li><li>أدوية إذابة الجلطة (t-PA) في حالات محددة.</li><li>فلتر الوريد الأجوف السفلي (IVC filter) للمرضى المتكررين أو الذين لا يستطيعون أخذ مضادات التخثر.</li><li>استئصال الجلطة جراحياً (Thrombectomy).</li><li>كمادات دافئة رطبة متقطعة وجوارب ضاغطة حسب الحالة.</li></ul><div class=\"cs-box cs-info\"><strong>مدة العلاج</strong><p>عادة ثلاثة أشهر على الأقل، وتطول حسب السبب. القرار للطبيب.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>راقب أعراض الانسداد الرئوي</strong><p>ضيق نفس مفاجئ، ألم صدر، نبض سريع، تنفس سريع، تعرق، سعال دموي. هذه طوارئ: أكسجين وبلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>لا تدلّك</strong><p>لا تدلك الساق ولا تفركها لتجنب دفع الجلطة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>هيبارين</strong><p>اتبع بروتوكول الجرعة حسب الوزن، تابع PTT (هدف 1.5–2.5× الطبيعي)، ومعدل التسريب بمضخة. هيبارين منخفض الوزن: حقن تحت الجلد بالبطن بعيداً عن السرة 5 سم، لا تدلك المكان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Warfarin</strong><p>تابع INR، جرعة ثابتة وقت واحد يومياً، تفاعلات غذائية (فيتامين K) ودوائية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مراقبة النزف</strong><p>لثة، بول، براز، كدمات، نزف أنف. فرشاة ناعمة وحلاقة كهربائية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>العناية بالطرف</strong><p>قياس محيط الساق يومياً، فحص الدورة الدموية، كمادات دافئة متقطعة مع تقييم الجلد بين الجلسات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وقاية</strong><p>الحركة المبكرة، تمارين الساق، جوارب ضاغطة، سوائل كافية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تثقيف</strong><p>الإبلاغ عن النزف، تجنب الإصابات، مراجعة أي دواء جديد مع الصيدلي.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية</strong><p>ضيق نفس مفاجئ أو ألم صدر في مريض DVT = انسداد رئوي حتى يثبت العكس.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>ضيق نفس مفاجئ، ألم صدر، سعال دموي</li><li>تورم ساق متزايد مع ازرقاق وبرودة (Phlegmasia)</li><li>نزف غير متوقف</li><li>صداع شديد مفاجئ على مضاد تخثر</li><li>INR أعلى من المدى</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>تحرك كل ساعة في السفر الطويل واشرب سوائل.</li><li>لا تدخن.</li><li>التزم بجرعة مضاد التخثر ولا توقفه بدون استشارة.</li><li>حلاقة كهربائية وفرشاة ناعمة.</li><li>احمل بطاقة تعريف طبية.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "DVT: ساق واحدة ألم وتورم وسخونة.",
-      "الخطر: انسداد رئوي.",
-      "دوبلكس + D-dimer + Wells للتشخيص.",
-      "هيبارين ثم Warfarin أو مضادات تخثر فموية حديثة.",
-      "لا تدلك الساق.",
-      "راقب النزف وINR/PTT."
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أفضل فحص تشخيصي أولي:"
-      },
-      "options": [
-        {
-          "ar": "الدوبلكس"
-        },
-        {
-          "ar": "أشعة سينية"
-        },
-        {
-          "ar": "CT للمخ"
-        },
-        {
-          "ar": "تحليل بول"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "سريع وغير جراحي."
-      }
-    },
-    {
-      "q": {
-        "ar": "قرار تمريضي:"
-      },
-      "options": [
-        {
-          "ar": "تدليك الساق"
-        },
-        {
-          "ar": "عدم التدليك والمراقبة"
-        },
-        {
-          "ar": "ثلج مستمر"
-        },
-        {
-          "ar": "تحريك عنيف"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التدليك قد يحرر الجلطة."
-      }
-    },
-    {
-      "q": {
-        "ar": "ضيق نفس مفاجئ:"
-      },
-      "options": [
-        {
-          "ar": "قلق"
-        },
-        {
-          "ar": "انسداد رئوي محتمل"
-        },
-        {
-          "ar": "عادي"
-        },
-        {
-          "ar": "التهاب حلق"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "طارئ."
-      }
-    },
-    {
-      "q": {
-        "ar": "مدى INR المعتاد لـ Warfarin في DVT:"
-      },
-      "options": [
-        {
-          "ar": "1–1.5"
-        },
-        {
-          "ar": "2–3"
-        },
-        {
-          "ar": "5–6"
-        },
-        {
-          "ar": "لا يتابع"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "المدى القياسي."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة هومان:"
-      },
-      "options": [
-        {
-          "ar": "موثوقة جداً"
-        },
-        {
-          "ar": "غير موثوقة"
-        },
-        {
-          "ar": "تشخيص مؤكد"
-        },
-        {
-          "ar": "لا توجد"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "حساسية ونوعية ضعيفتان."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تعليمات تناسب مريض لديه DVT حاد لم تستقر خثرته بعد؟"
-      },
-      "options": [
-        {
-          "ar": "المشي الطويل ودلك الساق"
-        },
-        {
-          "ar": "راحة بالسرير مع رفع الطرف"
-        },
-        {
-          "ar": "ارتداء SCD فوراً"
-        },
-        {
-          "ar": "تدليك الربلة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "أثناء وجود الخثرة تمنع الحركة والتدليك خشية تحرك الخثرة؛ تُستعمل SCD بعد استقرارها."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض بـ DVT شكا فجأة من ضيق نفس وألم صدر. ما الأولوية؟"
-      },
-      "options": [
-        {
-          "ar": "تسجيل الشكوى فقط"
-        },
-        {
-          "ar": "إبلاغ الطبيب فوراً لشبهة انصمام رئوي"
-        },
-        {
-          "ar": "تشجيعه على المشي"
-        },
-        {
-          "ar": "إعطاء مسكن فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "هذه علامات انصمام رئوي، وهو طارئ."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CHEST Antithrombotic Therapy for VTE guidelines"
-    },
-    {
-      "title": "NICE NG158 Venous thromboembolic diseases"
-    },
-    {
-      "title": "StatPearls – Deep Vein Thrombosis"
-    }
+  "en": [
+   "DVT: one leg with pain, swelling, and warmth.",
+   "The danger: pulmonary embolism.",
+   "Duplex + D-dimer + Wells for diagnosis.",
+   "Heparin, then Warfarin or direct oral anticoagulants.",
+   "Do not massage the leg.",
+   "Monitor bleeding and INR/PTT."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أفضل فحص تشخيصي أولي:",
+    "en": "The best initial diagnostic test:"
+   },
+   "options": [
+    {
+     "ar": "الدوبلكس",
+     "en": "Duplex ultrasound"
+    },
+    {
+     "ar": "أشعة سينية",
+     "en": "X-ray"
+    },
+    {
+     "ar": "CT للمخ",
+     "en": "Brain CT"
+    },
+    {
+     "ar": "تحليل بول",
+     "en": "Urinalysis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "سريع وغير جراحي.",
+    "en": "Fast and noninvasive."
+   }
+  },
+  {
+   "q": {
+    "ar": "قرار تمريضي:",
+    "en": "Nursing decision:"
+   },
+   "options": [
+    {
+     "ar": "تدليك الساق",
+     "en": "Massage the leg"
+    },
+    {
+     "ar": "عدم التدليك والمراقبة",
+     "en": "No massage, and monitor"
+    },
+    {
+     "ar": "ثلج مستمر",
+     "en": "Continuous ice"
+    },
+    {
+     "ar": "تحريك عنيف",
+     "en": "Vigorous movement"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التدليك قد يحرر الجلطة.",
+    "en": "Massage may dislodge the clot."
+   }
+  },
+  {
+   "q": {
+    "ar": "ضيق نفس مفاجئ:",
+    "en": "Sudden shortness of breath:"
+   },
+   "options": [
+    {
+     "ar": "قلق",
+     "en": "Anxiety"
+    },
+    {
+     "ar": "انسداد رئوي محتمل",
+     "en": "Possible pulmonary embolism"
+    },
+    {
+     "ar": "عادي",
+     "en": "Normal"
+    },
+    {
+     "ar": "التهاب حلق",
+     "en": "Sore throat"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "طارئ.",
+    "en": "An emergency."
+   }
+  },
+  {
+   "q": {
+    "ar": "مدى INR المعتاد لـ Warfarin في DVT:",
+    "en": "The usual INR range for Warfarin in DVT:"
+   },
+   "options": [
+    {
+     "ar": "1–1.5",
+     "en": "1–1.5"
+    },
+    {
+     "ar": "2–3",
+     "en": "2–3"
+    },
+    {
+     "ar": "5–6",
+     "en": "5–6"
+    },
+    {
+     "ar": "لا يتابع",
+     "en": "Not monitored"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "المدى القياسي.",
+    "en": "The standard range."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة هومان:",
+    "en": "Homans sign:"
+   },
+   "options": [
+    {
+     "ar": "موثوقة جداً",
+     "en": "Very reliable"
+    },
+    {
+     "ar": "غير موثوقة",
+     "en": "Unreliable"
+    },
+    {
+     "ar": "تشخيص مؤكد",
+     "en": "A confirmed diagnosis"
+    },
+    {
+     "ar": "لا توجد",
+     "en": "Does not exist"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "حساسية ونوعية ضعيفتان.",
+    "en": "Poor sensitivity and specificity."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تعليمات تناسب مريض لديه DVT حاد لم تستقر خثرته بعد؟",
+    "en": "Which instruction suits a patient with acute DVT whose clot has not yet stabilized?"
+   },
+   "options": [
+    {
+     "ar": "المشي الطويل ودلك الساق",
+     "en": "Long walks and leg massage"
+    },
+    {
+     "ar": "راحة بالسرير مع رفع الطرف",
+     "en": "Bed rest with limb elevation"
+    },
+    {
+     "ar": "ارتداء SCD فوراً",
+     "en": "Apply SCDs immediately"
+    },
+    {
+     "ar": "تدليك الربلة",
+     "en": "Calf massage"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "أثناء وجود الخثرة تمنع الحركة والتدليك خشية تحرك الخثرة؛ تُستعمل SCD بعد استقرارها.",
+    "en": "While the clot is present, movement and massage are avoided for fear of moving the clot; SCDs are used after it stabilizes."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض بـ DVT شكا فجأة من ضيق نفس وألم صدر. ما الأولوية؟",
+    "en": "A patient with DVT suddenly complains of shortness of breath and chest pain. What is the priority?"
+   },
+   "options": [
+    {
+     "ar": "تسجيل الشكوى فقط",
+     "en": "Only document the complaint"
+    },
+    {
+     "ar": "إبلاغ الطبيب فوراً لشبهة انصمام رئوي",
+     "en": "Notify the physician immediately for suspected pulmonary embolism"
+    },
+    {
+     "ar": "تشجيعه على المشي",
+     "en": "Encourage the patient to walk"
+    },
+    {
+     "ar": "إعطاء مسكن فقط",
+     "en": "Give an analgesic only"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "هذه علامات انصمام رئوي، وهو طارئ.",
+    "en": "These are signs of pulmonary embolism, which is an emergency."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CHEST Antithrombotic Therapy for VTE guidelines"
+  },
+  {
+   "title": "NICE NG158 Venous thromboembolic diseases"
+  },
+  {
+   "title": "StatPearls – Deep Vein Thrombosis"
+  }
+ ]
 }

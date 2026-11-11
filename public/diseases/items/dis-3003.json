@@ -1,182 +1,230 @@
 {
-  "id": "dis-3003",
-  "num": "3003",
-  "system": "peds",
-  "icon": "🛡️",
-  "level": 2,
-  "title": {
-    "ar": "إساءة معاملة الأطفال وإهمالهم",
-    "en": "Child Abuse & Neglect"
+ "id": "dis-3003",
+ "num": "3003",
+ "system": "peds",
+ "icon": "🛡️",
+ "level": 2,
+ "title": {
+  "ar": "إساءة معاملة الأطفال وإهمالهم",
+  "en": "Child Abuse & Neglect"
+ },
+ "teaser": {
+  "ar": "التقييم أولًا ثم الإبلاغ: أنواع الإساءة وعوامل خطر المعتدي والتواصل مع الطفل بدون وعود أو أسرار.",
+  "en": "Assessment first, then reporting: types of abuse, the abuser's risk factors, and communicating with the child without promises or secrets."
+ },
+ "chips": [
+  {
+   "ar": "Neglect",
+   "en": "Neglect"
   },
-  "teaser": {
-    "ar": "التقييم أولًا ثم الإبلاغ: أنواع الإساءة وعوامل خطر المعتدي والتواصل مع الطفل بدون وعود أو أسرار."
+  {
+   "ar": "Physical abuse",
+   "en": "Physical abuse"
   },
-  "chips": [
-    {
-      "ar": "Neglect"
-    },
-    {
-      "ar": "Physical abuse"
-    },
-    {
-      "ar": "Emotional abuse"
-    }
+  {
+   "ar": "Emotional abuse",
+   "en": "Emotional abuse"
+  }
+ ],
+ "target": "pediatrics",
+ "sections": {
+  "overview": {
+   "ar": "<p>عند الاشتباه بإساءة معاملة طفل فأول خطوة في العملية التمريضية هي <b>التقييم</b>. أنواعها: الإهمال (الأكثر شيوعًا)، الجسدية، العاطفية.</p>[[slot:dis-3003-flow|تسلسل التعامل مع الاشتباه بالإساءة — رسم من إعداد الموقع|/diseases/img/dis-3003-flow.svg]][[slot:dis-3003-types|أنواع الإساءة وأمثلة الدلالة — رسم من إعداد الموقع|/diseases/img/dis-3003-types.svg]]",
+   "en": "<p>When child abuse is suspected, the first step of the nursing process is <b>assessment</b>. Its types: neglect (the most common), physical, and emotional.</p>[[slot:dis-3003-flow|Sequence for managing suspected abuse — site-made illustration|/diseases/img/dis-3003-flow.svg]][[slot:dis-3003-types|Types of abuse and example indicators — site-made illustration|/diseases/img/dis-3003-types.svg]]"
+  },
+  "causes": {
+   "ar": "<p><b>عوامل خطر المعتدي:</b> نشأة في بيئة عنف أسري، تاريخ كحول/مخدرات، تدني تقدير الذات والاندفاع، أسلوب سلطوي ناقد، والدان مراهقان أو أسرة بوالد واحد، توقعات غير واقعية من الرضيع، وطفل بتأخر نمائي أو وُلد خديجًا أو مصاب بالتوحد.</p>",
+   "en": "<p><b>Abuser risk factors:</b> growing up in an environment of family violence, a history of alcohol/drugs, low self-esteem and impulsivity, an authoritarian critical style, teenage parents or a single-parent family, unrealistic expectations of the infant, and a child with developmental delay, born prematurely, or with autism.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li><b>الإهمال:</b> غياب الغذاء والكساء والمأوى والرقابة: سوء تغذية، ملابس متسخة، أسنان غير معالجة، جفاف وحفاضة مبللة، عدم استخدام مقعد السيارة.</li><li><b>الجسدية:</b> أي إصابة غير عرضية: حروق باليدين الاثنتين، كسر لولبي بالساعد، علامة ضرب على الظهر، حروق سجائر.</li><li><b>العاطفية:</b> قلق، اكتئاب، انسحاب، عدوانية؛ ومنها الكلام المهين أو عدم المدح.</li><li>تغيّر قصة الوالد، وتفاعل سلبي: لوم ورفض مواساة وتحقير.</li></ul>",
+   "en": "<ul><li><b>Neglect:</b> lack of food, clothing, shelter, and supervision: malnutrition, dirty clothes, untreated teeth, dehydration and a wet diaper, not using a car seat.</li><li><b>Physical:</b> any non-accidental injury: burns on both hands, a spiral fracture of the forearm, a beating mark on the back, cigarette burns.</li><li><b>Emotional:</b> anxiety, depression, withdrawal, aggression; including demeaning words or lack of praise.</li><li>The parent's story changes, and negative interaction: blaming, refusing to comfort, and belittling.</li></ul>"
+  },
+  "tests": {
+   "ar": "",
+   "en": ""
+  },
+  "treatment": {
+   "ar": "<p>لا علاج دوائي نوعي؛ التدخل: حماية الطفل وعلاج الإصابات وإحالة الأسرة للدعم النفسي والاجتماعي وفق السياسة الرسمية.</p>",
+   "en": "<p>No specific drug treatment; the intervention: protecting the child, treating injuries, and referring the family for psychological and social support according to official policy.</p>"
+  },
+  "nursing": {
+   "ar": "<ol><li><b>التقييم أولًا:</b> مقابلة وفحص جسدي، وتقييم تفاعل الوالد بالطفل.</li><li>أخرج الوالد من الغرفة واسأل الطفل بأسئلة <b>مفتوحة وصفية</b>.</li><li>قِس الطول والوزن والعلامات الحيوية، وابحث عن الكدمات والجروح.</li><li><b>أبلغ</b> عن أي حالة اشتباه بعد تقييم وتاريخ كامل.</li><li>التواصل مع الطفل: «ليس خطأك»، «لست في مشكلة وفعلت الصواب»، <b>بلا وعود ولا أسرار</b>.</li><li>وثّق بدقة وبدون استنتاج.</li></ol><!--aud0651-l--><h4>تفاصيل إضافية لأسئلة الامتحان</h4><ul><li>أثناء التقييم: خذ الطول والوزن والعلامات الحيوية، افحص الجلد بحثًا عن كدمات أو تمزقات، واسأل الطفل عن المدرسة والحضور.</li><li>اطلب من مرافق الطفل مغادرة الغرفة ثم قابل الطفل منفردًا بأسئلة <strong>مفتوحة</strong> تتطلب إجابة وصفية، وتفاعل الوالد مع الطفل يُلاحَظ: اللوم، رفض المواساة، تغيّر الرواية.</li><li>لا تعد الطفل بالسرية ولا بأي وعد، وقل له: ليس ذنبك، ولست في مشكلة، وقد فعلت الصواب بإخبارنا.</li><li>أبلغ عن أي حالة اشتباه. المؤشرات: طفل عمره سنتان بتسوس شديد وجفاف وحفاضة مبللة ومتسخة ← قيّم التفاعل مع مقدّم الرعاية؛ حروق سجائر بالذراع = إساءة جسدية؛ طفل يقول «أبي يقول إنني لا أستحق نظرة ثانية» = إساءة عاطفية؛ أب لا يمدح رسوم طفله = إهمال عاطفي؛ عدم استخدام مقعد السيارة = إهمال.</li><li>عوامل الخطر الإضافية: أسلوب تربية سلطوي، توقعات غير واقعية من الرضيع، طفل مولود مبكرًا أو بتأخر نمائي أو توحد، أسرة بوالد واحد.</li></ul>",
+   "en": "<ol><li><b>Assessment first:</b> interview and physical exam, and assess the parent-child interaction.</li><li>Ask the parent to leave the room and ask the child <b>open-ended, descriptive</b> questions.</li><li>Measure height, weight, and vital signs, and look for bruises and wounds.</li><li><b>Report</b> any suspected case after assessment and a complete history.</li><li>Communicating with the child: \"It is not your fault\", \"You are not in trouble and you did the right thing\", <b>no promises and no secrets</b>.</li><li>Document accurately and without drawing conclusions.</li></ol><!--aud0651-l--><h4>Additional details for exam questions</h4><ul><li>During assessment: take height, weight, and vital signs, examine the skin for bruises or lacerations, and ask the child about school and attendance.</li><li>Ask the child's companion to leave the room, then interview the child alone with <strong>open-ended</strong> questions that require a descriptive answer, and observe the parent-child interaction: blaming, refusing to comfort, a changing story.</li><li>Do not promise the child confidentiality or anything else, and tell them: it is not your fault, you are not in trouble, and you did the right thing by telling us.</li><li>Report any suspected case. Indicators: a 2-year-old child with severe tooth decay, dehydration, and a wet, dirty diaper → assess the interaction with the caregiver; cigarette burns on the arm = physical abuse; a child who says \"My father says I am not worth a second look\" = emotional abuse; a father who does not praise his child's drawings = emotional neglect; not using a car seat = neglect.</li><li>Additional risk factors: authoritarian parenting style, unrealistic expectations of the infant, a child born early or with developmental delay or autism, a single-parent family.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>علامات الخطر</strong><p>إصابات لا تتوافق مع القصة، تأخر طلب الرعاية، أنماط تتكرر، أو طفل خائف من الوالد: أبلغ فورًا.</p></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Danger signs</strong><p>Injuries that do not match the story, delay in seeking care, repeated patterns, or a child afraid of the parent: report immediately.</p></div>"
+  },
+  "teaching": {
+   "ar": "<p>دعم الأسرة، تعليم مهارات تربوية وغير عنيفة، والتوعية بمصادر المساعدة.</p>",
+   "en": "<p>Family support, teaching non-violent parenting skills, and awareness of sources of help.</p>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "أول خطوة عند الاشتباه: التقييم",
+   "الإهمال أشيع أشكال الإساءة",
+   "لا وعود ولا أسرار مع الطفل ولا لوم",
+   "أبلغ عن كل حالة اشتباه"
   ],
-  "target": "pediatrics",
-  "sections": {
-    "overview": {
-      "ar": "<p>عند الاشتباه بإساءة معاملة طفل فأول خطوة في العملية التمريضية هي <b>التقييم</b>. أنواعها: الإهمال (الأكثر شيوعًا)، الجسدية، العاطفية.</p>[[slot:dis-3003-flow|تسلسل التعامل مع الاشتباه بالإساءة — رسم من إعداد الموقع|/diseases/img/dis-3003-flow.svg]][[slot:dis-3003-types|أنواع الإساءة وأمثلة الدلالة — رسم من إعداد الموقع|/diseases/img/dis-3003-types.svg]]"
-    },
-    "causes": {
-      "ar": "<p><b>عوامل خطر المعتدي:</b> نشأة في بيئة عنف أسري، تاريخ كحول/مخدرات، تدني تقدير الذات والاندفاع، أسلوب سلطوي ناقد، والدان مراهقان أو أسرة بوالد واحد، توقعات غير واقعية من الرضيع، وطفل بتأخر نمائي أو وُلد خديجًا أو مصاب بالتوحد.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li><b>الإهمال:</b> غياب الغذاء والكساء والمأوى والرقابة: سوء تغذية، ملابس متسخة، أسنان غير معالجة، جفاف وحفاضة مبللة، عدم استخدام مقعد السيارة.</li><li><b>الجسدية:</b> أي إصابة غير عرضية: حروق باليدين الاثنتين، كسر لولبي بالساعد، علامة ضرب على الظهر، حروق سجائر.</li><li><b>العاطفية:</b> قلق، اكتئاب، انسحاب، عدوانية؛ ومنها الكلام المهين أو عدم المدح.</li><li>تغيّر قصة الوالد، وتفاعل سلبي: لوم ورفض مواساة وتحقير.</li></ul>"
-    },
-    "tests": {
-      "ar": ""
-    },
-    "treatment": {
-      "ar": "<p>لا علاج دوائي نوعي؛ التدخل: حماية الطفل وعلاج الإصابات وإحالة الأسرة للدعم النفسي والاجتماعي وفق السياسة الرسمية.</p>"
-    },
-    "nursing": {
-      "ar": "<ol><li><b>التقييم أولًا:</b> مقابلة وفحص جسدي، وتقييم تفاعل الوالد بالطفل.</li><li>أخرج الوالد من الغرفة واسأل الطفل بأسئلة <b>مفتوحة وصفية</b>.</li><li>قِس الطول والوزن والعلامات الحيوية، وابحث عن الكدمات والجروح.</li><li><b>أبلغ</b> عن أي حالة اشتباه بعد تقييم وتاريخ كامل.</li><li>التواصل مع الطفل: «ليس خطأك»، «لست في مشكلة وفعلت الصواب»، <b>بلا وعود ولا أسرار</b>.</li><li>وثّق بدقة وبدون استنتاج.</li></ol><!--aud0651-l--><h4>تفاصيل إضافية لأسئلة الامتحان</h4><ul><li>أثناء التقييم: خذ الطول والوزن والعلامات الحيوية، افحص الجلد بحثًا عن كدمات أو تمزقات، واسأل الطفل عن المدرسة والحضور.</li><li>اطلب من مرافق الطفل مغادرة الغرفة ثم قابل الطفل منفردًا بأسئلة <strong>مفتوحة</strong> تتطلب إجابة وصفية، وتفاعل الوالد مع الطفل يُلاحَظ: اللوم، رفض المواساة، تغيّر الرواية.</li><li>لا تعد الطفل بالسرية ولا بأي وعد، وقل له: ليس ذنبك، ولست في مشكلة، وقد فعلت الصواب بإخبارنا.</li><li>أبلغ عن أي حالة اشتباه. المؤشرات: طفل عمره سنتان بتسوس شديد وجفاف وحفاضة مبللة ومتسخة ← قيّم التفاعل مع مقدّم الرعاية؛ حروق سجائر بالذراع = إساءة جسدية؛ طفل يقول «أبي يقول إنني لا أستحق نظرة ثانية» = إساءة عاطفية؛ أب لا يمدح رسوم طفله = إهمال عاطفي؛ عدم استخدام مقعد السيارة = إهمال.</li><li>عوامل الخطر الإضافية: أسلوب تربية سلطوي، توقعات غير واقعية من الرضيع، طفل مولود مبكرًا أو بتأخر نمائي أو توحد، أسرة بوالد واحد.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>علامات الخطر</strong><p>إصابات لا تتوافق مع القصة، تأخر طلب الرعاية، أنماط تتكرر، أو طفل خائف من الوالد: أبلغ فورًا.</p></div>"
-    },
-    "teaching": {
-      "ar": "<p>دعم الأسرة، تعليم مهارات تربوية وغير عنيفة، والتوعية بمصادر المساعدة.</p>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "أول خطوة عند الاشتباه: التقييم",
-      "الإهمال أشيع أشكال الإساءة",
-      "لا وعود ولا أسرار مع الطفل ولا لوم",
-      "أبلغ عن كل حالة اشتباه"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول إجراء عند الاشتباه بإساءة معاملة طفل؟"
-      },
-      "options": [
-        {
-          "ar": "إبلاغ الشرطة فورًا فقط"
-        },
-        {
-          "ar": "التقييم: مقابلة وفحص جسدي وتفاعل الوالد-الطفل"
-        },
-        {
-          "ar": "مواجهة الوالد"
-        },
-        {
-          "ar": "الصمت"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "العملية التمريضية تبدأ بالتقييم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عبارة مناسبة لطفل تعرض للإساءة؟"
-      },
-      "options": [
-        {
-          "ar": "أعدك ألا أخبر أحدًا"
-        },
-        {
-          "ar": "ليس خطأك أن هذا حدث"
-        },
-        {
-          "ar": "سبب ذلك أنك لم تطع"
-        },
-        {
-          "ar": "لا تقلق سيمر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "لا لوم ولا وعود بالسرية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أكثر أشكال الإساءة شيوعًا:"
-      },
-      "options": [
-        {
-          "ar": "الجسدية"
-        },
-        {
-          "ar": "الإهمال"
-        },
-        {
-          "ar": "الجنسية"
-        },
-        {
-          "ar": "العاطفية"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الإهمال هو الأشيع."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تدل على إساءة جسدية؟"
-      },
-      "options": [
-        {
-          "ar": "حروق بكلتا اليدين وكسر لولبي بالساعد"
-        },
-        {
-          "ar": "احمرار الخد بعد البكاء"
-        },
-        {
-          "ar": "كدمة على الركبة بعد اللعب"
-        },
-        {
-          "ar": "سقوط سن لبني"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحروق المتماثلة والكسر اللولبي غير عرضية."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل يخبر الممرضة بأنه تعرض للضرب. أنسب رد؟"
-      },
-      "options": [
-        {
-          "ar": "سأحفظ هذا السر بيننا"
-        },
-        {
-          "ar": "ليس ذنبك أن هذا حدث"
-        },
-        {
-          "ar": "ربما فعلت شيئًا خاطئًا"
-        },
-        {
-          "ar": "سأعدك ألا يعرف والداك"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يُطمأن الطفل بأنه غير ملوم، ولا تُقدَّم وعود بالسرية."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AAP: Child maltreatment guidance"
-    }
+  "en": [
+   "First step when abuse is suspected: assessment",
+   "Neglect is the most common form of abuse",
+   "No promises, no secrets, and no blame with the child",
+   "Report every suspected case"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول إجراء عند الاشتباه بإساءة معاملة طفل؟",
+    "en": "The first action when child abuse is suspected?"
+   },
+   "options": [
+    {
+     "ar": "إبلاغ الشرطة فورًا فقط",
+     "en": "Report to the police immediately only"
+    },
+    {
+     "ar": "التقييم: مقابلة وفحص جسدي وتفاعل الوالد-الطفل",
+     "en": "Assessment: interview, physical exam, and parent-child interaction"
+    },
+    {
+     "ar": "مواجهة الوالد",
+     "en": "Confront the parent"
+    },
+    {
+     "ar": "الصمت",
+     "en": "Silence"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "العملية التمريضية تبدأ بالتقييم.",
+    "en": "The nursing process starts with assessment."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عبارة مناسبة لطفل تعرض للإساءة؟",
+    "en": "Which statement is appropriate for an abused child?"
+   },
+   "options": [
+    {
+     "ar": "أعدك ألا أخبر أحدًا",
+     "en": "I promise not to tell anyone"
+    },
+    {
+     "ar": "ليس خطأك أن هذا حدث",
+     "en": "It is not your fault that this happened"
+    },
+    {
+     "ar": "سبب ذلك أنك لم تطع",
+     "en": "This happened because you did not obey"
+    },
+    {
+     "ar": "لا تقلق سيمر",
+     "en": "Don't worry, it will pass"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "لا لوم ولا وعود بالسرية.",
+    "en": "No blame and no promises of confidentiality."
+   }
+  },
+  {
+   "q": {
+    "ar": "أكثر أشكال الإساءة شيوعًا:",
+    "en": "The most common form of abuse:"
+   },
+   "options": [
+    {
+     "ar": "الجسدية",
+     "en": "Physical"
+    },
+    {
+     "ar": "الإهمال",
+     "en": "Neglect"
+    },
+    {
+     "ar": "الجنسية",
+     "en": "Sexual"
+    },
+    {
+     "ar": "العاطفية",
+     "en": "Emotional"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الإهمال هو الأشيع.",
+    "en": "Neglect is the most common."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تدل على إساءة جسدية؟",
+    "en": "Which sign indicates physical abuse?"
+   },
+   "options": [
+    {
+     "ar": "حروق بكلتا اليدين وكسر لولبي بالساعد",
+     "en": "Burns on both hands and a spiral fracture of the forearm"
+    },
+    {
+     "ar": "احمرار الخد بعد البكاء",
+     "en": "Redness of the cheek after crying"
+    },
+    {
+     "ar": "كدمة على الركبة بعد اللعب",
+     "en": "A bruise on the knee after playing"
+    },
+    {
+     "ar": "سقوط سن لبني",
+     "en": "Loss of a baby tooth"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحروق المتماثلة والكسر اللولبي غير عرضية.",
+    "en": "Symmetrical burns and a spiral fracture are non-accidental."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل يخبر الممرضة بأنه تعرض للضرب. أنسب رد؟",
+    "en": "A child tells the nurse that he was beaten. The most appropriate response?"
+   },
+   "options": [
+    {
+     "ar": "سأحفظ هذا السر بيننا",
+     "en": "I will keep this secret between us"
+    },
+    {
+     "ar": "ليس ذنبك أن هذا حدث",
+     "en": "It is not your fault that this happened"
+    },
+    {
+     "ar": "ربما فعلت شيئًا خاطئًا",
+     "en": "Maybe you did something wrong"
+    },
+    {
+     "ar": "سأعدك ألا يعرف والداك",
+     "en": "I promise your parents won't know"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يُطمأن الطفل بأنه غير ملوم، ولا تُقدَّم وعود بالسرية.",
+    "en": "Reassure the child that they are not to blame, and do not make promises of confidentiality."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AAP: Child maltreatment guidance"
+  }
+ ]
 }

@@ -1,183 +1,231 @@
 {
-  "id": "dis-3202",
-  "num": 3202,
-  "system": "other",
-  "icon": "🧪",
-  "level": 2,
-  "title": {
-    "ar": "الترياقات والمستويات العلاجية للأدوية واللواحق الدوائية (Suffixes)",
-    "en": "Common Antidotes, Therapeutic Ranges & Drug Suffixes"
+ "id": "dis-3202",
+ "num": 3202,
+ "system": "other",
+ "icon": "🧪",
+ "level": 2,
+ "title": {
+  "ar": "الترياقات والمستويات العلاجية للأدوية واللواحق الدوائية (Suffixes)",
+  "en": "Common Antidotes, Therapeutic Ranges & Drug Suffixes"
+ },
+ "teaser": {
+  "ar": "ترياق كل دواء شائع، ومستويات الدم العلاجية لأدوية خطرة، وجدول اللواحق الدوائية التي تكشف المجموعة من الاسم.",
+  "en": "The antidote for each common drug, therapeutic blood levels of high-risk drugs, and a table of drug suffixes that reveal the class from the name."
+ },
+ "chips": [
+  {
+   "ar": "ترياقات",
+   "en": "Antidotes"
   },
-  "teaser": {
-    "ar": "ترياق كل دواء شائع، ومستويات الدم العلاجية لأدوية خطرة، وجدول اللواحق الدوائية التي تكشف المجموعة من الاسم."
+  {
+   "ar": "مستويات علاجية",
+   "en": "Therapeutic levels"
   },
-  "chips": [
-    {
-      "ar": "ترياقات"
-    },
-    {
-      "ar": "مستويات علاجية"
-    },
-    {
-      "ar": "لواحق"
-    }
+  {
+   "ar": "لواحق",
+   "en": "Suffixes"
+  }
+ ],
+ "target": "pharmacology",
+ "sections": {
+  "overview": {
+   "ar": "<p>في الطوارئ والامتحان تُسأل عن الترياق الصحيح وعن المستوى الدوائي الآمن. تعلّم اللواحق يوفّر عليك حفظ مئات الأسماء. راجع أيضًا <a href=\"/diseases/dis-1104\">مستويات الأدوية السامة</a> و<a href=\"/diseases/dis-525\">الجرعات الزائدة</a> و<a href=\"/diseases/dis-3201\">نظرة سريعة على الأدوية</a>.</p>[[slot:dis-3202-antidotes|الترياقات — رسم من إعداد الموقع|/diseases/img/dis-3202-antidotes.svg]]",
+   "en": "<p>In emergencies and exams you are asked about the correct antidote and the safe drug level. Learning the suffixes saves you from memorizing hundreds of names. See also <a href=\"/diseases/dis-1104\">toxic drug levels</a>, <a href=\"/diseases/dis-525\">overdoses</a> and <a href=\"/diseases/dis-3201\">a quick look at drugs</a>.</p>[[slot:dis-3202-antidotes|Antidotes — site-made diagram|/diseases/img/dis-3202-antidotes.svg]]"
+  },
+  "signs": {
+   "ar": "<p>الاشتباه في التسمم الدوائي حسب الدواء: بطء نفس وخمول مع الأفيونات، نزيف مع heparin/warfarin، نعاس مع البنزوديازيبينات، غثيان وبطء نبض وتغير رؤية مع digoxin، رجفة وإسهال مع lithium، وطنين الأذن وتلف كلوي مع aminoglycosides. تدخّل سريعًا وأبلغ.</p>",
+   "en": "<p>Suspect drug toxicity according to the drug: slow breathing and lethargy with opioids, bleeding with heparin/warfarin, drowsiness with benzodiazepines, nausea, slow pulse and vision changes with digoxin, tremor and diarrhea with lithium, and tinnitus and kidney damage with aminoglycosides. Intervene quickly and report.</p>"
+  },
+  "tests": {
+   "ar": "<h4>المستويات العلاجية</h4>[[slot:dis-3202-ranges|المستويات العلاجية — رسم من إعداد الموقع|/diseases/img/dis-3202-ranges.svg]]<p>الذروة (Peak) تؤخذ بعد الإعطاء بحوالي 30 دقيقة إلى ساعة للمضادات الوريدية، والقاع (Trough) قبل الجرعة التالية بنحو 30 دقيقة. حدود المعمل قد تختلف قليلًا، فراجع مرجع المستشفى.</p><h4>جدول المستويات العلاجية (نص)</h4><table><thead><tr><th>الدواء</th><th>المدى</th></tr></thead><tbody>\n<tr><td>Digoxin</td><td>0.5–2.0 ng/mL (الوحدة ng وليس mg)</td></tr>\n<tr><td>Lithium</td><td>0.8–1.5 mEq/L</td></tr>\n<tr><td>Phenytoin (Dilantin)</td><td>10–20 mcg/mL</td></tr>\n<tr><td>Theophylline</td><td>10–20 mcg/mL</td></tr>\n<tr><td>Gentamicin</td><td>ذروة 5–10، قاع أقل من 2 mcg/mL</td></tr>\n<tr><td>Vancomycin</td><td>قاع 5–15 mcg/mL (الذروة تختلف حسب البروتوكول)</td></tr>\n<tr><td>Carbamazepine</td><td>4–10 mcg/mL</td></tr>\n<tr><td>Phenobarbital</td><td>15–40 mcg/mL</td></tr>\n<tr><td>Tobramycin</td><td>ذروة 5–10، قاع 0.5–2.0 mcg/mL</td></tr>\n<tr><td>Valproic acid</td><td>50–100 mcg/mL</td></tr></tbody></table><p>الحدود تختلف قليلًا بين المعامل؛ راجع مرجع المستشفى.</p>",
+   "en": "<h4>Therapeutic levels</h4>[[slot:dis-3202-ranges|Therapeutic levels — site-made diagram|/diseases/img/dis-3202-ranges.svg]]<p>The peak is drawn about 30 minutes to one hour after administration for IV antibiotics, and the trough about 30 minutes before the next dose. Lab limits may differ slightly, so check the hospital reference.</p><h4>Therapeutic levels table (text)</h4><table><thead><tr><th>Drug</th><th>Range</th></tr></thead><tbody>\n<tr><td>Digoxin</td><td>0.5–2.0 ng/mL (the unit is ng, not mg)</td></tr>\n<tr><td>Lithium</td><td>0.8–1.5 mEq/L</td></tr>\n<tr><td>Phenytoin (Dilantin)</td><td>10–20 mcg/mL</td></tr>\n<tr><td>Theophylline</td><td>10–20 mcg/mL</td></tr>\n<tr><td>Gentamicin</td><td>peak 5–10, trough less than 2 mcg/mL</td></tr>\n<tr><td>Vancomycin</td><td>trough 5–15 mcg/mL (the peak varies by protocol)</td></tr>\n<tr><td>Carbamazepine</td><td>4–10 mcg/mL</td></tr>\n<tr><td>Phenobarbital</td><td>15–40 mcg/mL</td></tr>\n<tr><td>Tobramycin</td><td>peak 5–10, trough 0.5–2.0 mcg/mL</td></tr>\n<tr><td>Valproic acid</td><td>50–100 mcg/mL</td></tr></tbody></table><p>Limits differ slightly between labs; check the hospital reference.</p>"
+  },
+  "treatment": {
+   "ar": "<table><thead><tr><th>الدواء/السم</th><th>الترياق</th></tr></thead><tbody><tr><td>Opioids</td><td>naloxone</td></tr><tr><td>Heparin</td><td>protamine sulfate</td></tr><tr><td>Warfarin</td><td>vitamin K</td></tr><tr><td>Benzodiazepines</td><td>flumazenil</td></tr><tr><td>Acetaminophen</td><td>acetylcysteine</td></tr><tr><td>Magnesium sulfate</td><td>calcium gluconate</td></tr><tr><td>Cholinergics</td><td>atropine</td></tr><tr><td>Digoxin</td><td>digoxin immune fab</td></tr><tr><td>Beta blockers</td><td>glucagon</td></tr><tr><td>Aspirin</td><td>sodium bicarbonate</td></tr><tr><td>Cyanide</td><td>sodium thiosulfate</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div><h4>اللواحق الدوائية</h4>[[slot:dis-3202-suffixes-a|اللواحق: الجهاز العصبي والعدوى — رسم من إعداد الموقع|/diseases/img/dis-3202-suffixes-a.svg]][[slot:dis-3202-suffixes-b|اللواحق: القلب والمعدة والأورام — رسم من إعداد الموقع|/diseases/img/dis-3202-suffixes-b.svg]]<div class=\"cs-box cs-tip\"><strong>تنبيه:</strong> لا تخلط -thromycin (ماكروليد مثل azithromycin) مع -mycin الأمينوجليكوزيدات (gentamicin وtobramycin)، ولا -floxacin (cipro) مع غيرها.</div><h4>اللواحق الدوائية (نص)</h4><table><thead><tr><th>اللاحقة</th><th>المجموعة</th><th>مثال</th></tr></thead><tbody>\n<tr><td colspan=\"3\"><strong>الجهاز العصبي العضلي</strong></td></tr>\n<tr><td>-chol</td><td>محاكٍ للمسكارين</td><td>carbachol</td></tr>\n<tr><td>-trop / -scop</td><td>حاصر مسكارين</td><td>atropine, scopolamine</td></tr>\n<tr><td>-stigmine</td><td>مثبط الأسيتيل كولين إستراز</td><td>neostigmine</td></tr>\n<tr><td>-curium / -curonium</td><td>مرخٍ عضلي غير مزيل للاستقطاب</td><td>atracurium, mivacurium, pancuronium</td></tr>\n<tr><td>-ane</td><td>مخدر استنشاقي</td><td>halothane</td></tr>\n<tr><td>-caine</td><td>مخدر موضعي</td><td>lidocaine</td></tr>\n<tr><td>-pam / -lam</td><td>بنزوديازيبين</td><td>diazepam, lorazepam</td></tr>\n<tr><td>-tal</td><td>باربيتورات</td><td>phenobarbital</td></tr>\n<tr><td>-zine</td><td>مضاد ذهان تقليدي أو مضاد هيستامين</td><td>chlorpromazine, thioridazine</td></tr>\n<tr><td>-apine / -idone</td><td>مضاد ذهان غير تقليدي</td><td>clozapine, risperidone</td></tr>\n<tr><td>-capone</td><td>مثبط COMT لباركنسون</td><td>tolcapone, entacapone</td></tr>\n<tr><td colspan=\"3\"><strong>العدوى</strong></td></tr>\n<tr><td>-penem</td><td>مثبط جدار الخلية واسع الطيف</td><td>imipenem, meropenem</td></tr>\n<tr><td>-floxacin</td><td>فلوروكينولون</td><td>ciprofloxacin, levofloxacin</td></tr>\n<tr><td>-conazole</td><td>مضاد فطري</td><td>ketoconazole, fluconazole</td></tr>\n<tr><td>-quine</td><td>مضاد ملاريا</td><td>chloroquine, primaquine</td></tr>\n<tr><td>-ovir</td><td>مضاد فيروسي (للهربس)</td><td>acyclovir, ganciclovir, valacyclovir</td></tr>\n<tr><td>-ivir</td><td>مثبط نورامينيداز للإنفلونزا</td><td>zanamivir</td></tr>\n<tr><td>-avir</td><td>مثبط بروتياز لفيروس HIV</td><td>indinavir, ritonavir</td></tr>\n<tr><td colspan=\"3\"><strong>القلب والأوعية</strong></td></tr>\n<tr><td>-olol</td><td>حاصر بيتا</td><td>metoprolol</td></tr>\n<tr><td>-alol / -ilol</td><td>حاصر ألفا وبيتا</td><td>sotalol, carvedilol</td></tr>\n<tr><td>-dipine</td><td>حاصر قنوات كالسيوم وعائي</td><td>nifedipine</td></tr>\n<tr><td>-zosin</td><td>حاصر ألفا-1</td><td>terazosin, doxazosin</td></tr>\n<tr><td>-pril</td><td>مثبط ACE</td><td>lisinopril</td></tr>\n<tr><td>-sartan</td><td>حاصر مستقبل أنجيوتنسين</td><td>losartan</td></tr>\n<tr><td>-darone</td><td>مضاد اضطراب نظم</td><td>amiodarone</td></tr>\n<tr><td>-statin</td><td>مثبط HMG-CoA reductase</td><td>rosuvastatin</td></tr>\n<tr><td>-zolamide</td><td>مثبط الكربونيك أنهيدراز</td><td>acetazolamide</td></tr>\n<tr><td>-semide</td><td>مدر عروة</td><td>furosemide</td></tr>\n<tr><td>-parin</td><td>هيبارين منخفض الوزن الجزيئي</td><td>enoxaparin</td></tr>\n<tr><td>-rudin</td><td>مثبط ثرومبين مباشر</td><td>lepirudin</td></tr>\n<tr><td colspan=\"3\"><strong>الجهاز الهضمي والأورام</strong></td></tr>\n<tr><td>-tidine</td><td>حاصر H2</td><td>cimetidine</td></tr>\n<tr><td>-prazole</td><td>مثبط مضخة البروتون</td><td>pantoprazole</td></tr>\n<tr><td>-setron</td><td>حاصر 5-HT3 مضاد قيء</td><td>ondansetron</td></tr>\n<tr><td>vin-</td><td>مثبط الأنيبيبات الدقيقة</td><td>vincristine, vinblastine</td></tr>\n<tr><td>-rubicin</td><td>دواء سرطان (أنثراسيكلين)</td><td>doxorubicin</td></tr>\n<tr><td>-mab</td><td>جسم مضاد وحيد النسيلة</td><td>rituximab</td></tr>\n<tr><td>-tinib</td><td>مثبط تيروزين كيناز</td><td>imatinib</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>Drug/poison</th><th>Antidote</th></tr></thead><tbody><tr><td>Opioids</td><td>naloxone</td></tr><tr><td>Heparin</td><td>protamine sulfate</td></tr><tr><td>Warfarin</td><td>vitamin K</td></tr><tr><td>Benzodiazepines</td><td>flumazenil</td></tr><tr><td>Acetaminophen</td><td>acetylcysteine</td></tr><tr><td>Magnesium sulfate</td><td>calcium gluconate</td></tr><tr><td>Cholinergics</td><td>atropine</td></tr><tr><td>Digoxin</td><td>digoxin immune fab</td></tr><tr><td>Beta blockers</td><td>glucagon</td></tr><tr><td>Aspirin</td><td>sodium bicarbonate</td></tr><tr><td>Cyanide</td><td>sodium thiosulfate</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Caution:</strong> Doses are for learning; always verify with the physician/pharmacist (and the leaflet).</div><h4>Drug suffixes</h4>[[slot:dis-3202-suffixes-a|Suffixes: nervous system and infection — site-made diagram|/diseases/img/dis-3202-suffixes-a.svg]][[slot:dis-3202-suffixes-b|Suffixes: heart, stomach and oncology — site-made diagram|/diseases/img/dis-3202-suffixes-b.svg]]<div class=\"cs-box cs-tip\"><strong>Caution:</strong> Do not confuse -thromycin (macrolides such as azithromycin) with the -mycin aminoglycosides (gentamicin and tobramycin), nor -floxacin (cipro) with others.</div><h4>Drug suffixes (text)</h4><table><thead><tr><th>Suffix</th><th>Class</th><th>Example</th></tr></thead><tbody>\n<tr><td colspan=\"3\"><strong>Neuromuscular system</strong></td></tr>\n<tr><td>-chol</td><td>Muscarinic agonist</td><td>carbachol</td></tr>\n<tr><td>-trop / -scop</td><td>Muscarinic blocker</td><td>atropine, scopolamine</td></tr>\n<tr><td>-stigmine</td><td>Acetylcholinesterase inhibitor</td><td>neostigmine</td></tr>\n<tr><td>-curium / -curonium</td><td>Non-depolarizing muscle relaxant</td><td>atracurium, mivacurium, pancuronium</td></tr>\n<tr><td>-ane</td><td>Inhaled anesthetic</td><td>halothane</td></tr>\n<tr><td>-caine</td><td>Local anesthetic</td><td>lidocaine</td></tr>\n<tr><td>-pam / -lam</td><td>Benzodiazepine</td><td>diazepam, lorazepam</td></tr>\n<tr><td>-tal</td><td>Barbiturate</td><td>phenobarbital</td></tr>\n<tr><td>-zine</td><td>Typical antipsychotic or antihistamine</td><td>chlorpromazine, thioridazine</td></tr>\n<tr><td>-apine / -idone</td><td>Atypical antipsychotic</td><td>clozapine, risperidone</td></tr>\n<tr><td>-capone</td><td>COMT inhibitor for Parkinson's</td><td>tolcapone, entacapone</td></tr>\n<tr><td colspan=\"3\"><strong>Infection</strong></td></tr>\n<tr><td>-penem</td><td>Broad-spectrum cell wall inhibitor</td><td>imipenem, meropenem</td></tr>\n<tr><td>-floxacin</td><td>Fluoroquinolone</td><td>ciprofloxacin, levofloxacin</td></tr>\n<tr><td>-conazole</td><td>Antifungal</td><td>ketoconazole, fluconazole</td></tr>\n<tr><td>-quine</td><td>Antimalarial</td><td>chloroquine, primaquine</td></tr>\n<tr><td>-ovir</td><td>Antiviral (for herpes)</td><td>acyclovir, ganciclovir, valacyclovir</td></tr>\n<tr><td>-ivir</td><td>Neuraminidase inhibitor for influenza</td><td>zanamivir</td></tr>\n<tr><td>-avir</td><td>HIV protease inhibitor</td><td>indinavir, ritonavir</td></tr>\n<tr><td colspan=\"3\"><strong>Heart and vessels</strong></td></tr>\n<tr><td>-olol</td><td>Beta blocker</td><td>metoprolol</td></tr>\n<tr><td>-alol / -ilol</td><td>Alpha and beta blocker</td><td>sotalol, carvedilol</td></tr>\n<tr><td>-dipine</td><td>Vascular calcium channel blocker</td><td>nifedipine</td></tr>\n<tr><td>-zosin</td><td>Alpha-1 blocker</td><td>terazosin, doxazosin</td></tr>\n<tr><td>-pril</td><td>ACE inhibitor</td><td>lisinopril</td></tr>\n<tr><td>-sartan</td><td>Angiotensin receptor blocker</td><td>losartan</td></tr>\n<tr><td>-darone</td><td>Antiarrhythmic</td><td>amiodarone</td></tr>\n<tr><td>-statin</td><td>HMG-CoA reductase inhibitor</td><td>rosuvastatin</td></tr>\n<tr><td>-zolamide</td><td>Carbonic anhydrase inhibitor</td><td>acetazolamide</td></tr>\n<tr><td>-semide</td><td>Loop diuretic</td><td>furosemide</td></tr>\n<tr><td>-parin</td><td>Low-molecular-weight heparin</td><td>enoxaparin</td></tr>\n<tr><td>-rudin</td><td>Direct thrombin inhibitor</td><td>lepirudin</td></tr>\n<tr><td colspan=\"3\"><strong>GI system and oncology</strong></td></tr>\n<tr><td>-tidine</td><td>H2 blocker</td><td>cimetidine</td></tr>\n<tr><td>-prazole</td><td>Proton pump inhibitor</td><td>pantoprazole</td></tr>\n<tr><td>-setron</td><td>5-HT3 blocker antiemetic</td><td>ondansetron</td></tr>\n<tr><td>vin-</td><td>Microtubule inhibitor</td><td>vincristine, vinblastine</td></tr>\n<tr><td>-rubicin</td><td>Cancer drug (anthracycline)</td><td>doxorubicin</td></tr>\n<tr><td>-mab</td><td>Monoclonal antibody</td><td>rituximab</td></tr>\n<tr><td>-tinib</td><td>Tyrosine kinase inhibitor</td><td>imatinib</td></tr></tbody></table>"
+  },
+  "nursing": {
+   "ar": "<ol><li>اعرف ترياق أي دواء عالي الخطورة تعطيه وتأكد من توفره في القسم.</li><li>خذ عينة المستوى في وقتها الصحيح (ذروة/قاع) ووثّق وقت آخر جرعة.</li><li>مستوى فوق المدى: احجب الجرعة وأبلغ؛ تحت المدى: أبلغ لأن العلاج غير كافٍ.</li><li>مع الأفيونات جهّز naloxone وراقب التنفس.</li><li>مع heparin راقب aPTT وتوفّر protamine؛ ومع warfarin راقب INR وvitamin K.</li></ol>",
+   "en": "<ol><li>Know the antidote for any high-alert drug you give and make sure it is available on the unit.</li><li>Draw the level sample at the correct time (peak/trough) and document the time of the last dose.</li><li>Level above range: hold the dose and report; below range: report because treatment is inadequate.</li><li>With opioids, have naloxone ready and monitor breathing.</li><li>With heparin, monitor aPTT and have protamine available; with warfarin, monitor INR and vitamin K.</li></ol>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>حالات طارئة:</strong><ul><li>تنفس أبطأ من الطبيعي مع الأفيون: naloxone</li><li>نزيف مع مضادات التخثر</li><li>رجفة وارتباك وإسهال مع lithium</li><li>طنين أذن/قلة بول مع الأمينوجليكوزيدات</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Emergencies:</strong><ul><li>Breathing slower than normal with an opioid: naloxone</li><li>Bleeding with anticoagulants</li><li>Tremor, confusion and diarrhea with lithium</li><li>Tinnitus/low urine output with aminoglycosides</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اتبع مواعيد تحليل مستوى الدواء المطلوبة منك</li><li>لا تغيّر جرعة الأدوية ضيقة المدى بنفسك</li><li>أخبر الطبيب بأي دواء جديد لأنه قد يغيّر مستوى digoxin أو lithium أو warfarin</li></ul>",
+   "en": "<ul><li>Follow the drug level testing schedule given to you</li><li>Do not change the dose of narrow-range drugs yourself</li><li>Tell the physician about any new drug because it may change the level of digoxin, lithium or warfarin</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "Heparin يقابله protamine وwarfarin يقابله vitamin K",
+   "Naloxone للأفيونات وflumazenil للبنزوديازيبين",
+   "Magnesium sulfate ← calcium gluconate",
+   "المستوى العلاجي الضيق يعني مراقبة دم دورية",
+   "اللاحقة تدلك على المجموعة: -pril ACE، -olol بيتا، -statin ستاتين"
   ],
-  "target": "pharmacology",
-  "sections": {
-    "overview": {
-      "ar": "<p>في الطوارئ والامتحان تُسأل عن الترياق الصحيح وعن المستوى الدوائي الآمن. تعلّم اللواحق يوفّر عليك حفظ مئات الأسماء. راجع أيضًا <a href=\"/diseases/dis-1104\">مستويات الأدوية السامة</a> و<a href=\"/diseases/dis-525\">الجرعات الزائدة</a> و<a href=\"/diseases/dis-3201\">نظرة سريعة على الأدوية</a>.</p>[[slot:dis-3202-antidotes|الترياقات — رسم من إعداد الموقع|/diseases/img/dis-3202-antidotes.svg]]"
-    },
-    "signs": {
-      "ar": "<p>الاشتباه في التسمم الدوائي حسب الدواء: بطء نفس وخمول مع الأفيونات، نزيف مع heparin/warfarin، نعاس مع البنزوديازيبينات، غثيان وبطء نبض وتغير رؤية مع digoxin، رجفة وإسهال مع lithium، وطنين الأذن وتلف كلوي مع aminoglycosides. تدخّل سريعًا وأبلغ.</p>"
-    },
-    "tests": {
-      "ar": "<h4>المستويات العلاجية</h4>[[slot:dis-3202-ranges|المستويات العلاجية — رسم من إعداد الموقع|/diseases/img/dis-3202-ranges.svg]]<p>الذروة (Peak) تؤخذ بعد الإعطاء بحوالي 30 دقيقة إلى ساعة للمضادات الوريدية، والقاع (Trough) قبل الجرعة التالية بنحو 30 دقيقة. حدود المعمل قد تختلف قليلًا، فراجع مرجع المستشفى.</p><h4>جدول المستويات العلاجية (نص)</h4><table><thead><tr><th>الدواء</th><th>المدى</th></tr></thead><tbody>\n<tr><td>Digoxin</td><td>0.5–2.0 ng/mL (الوحدة ng وليس mg)</td></tr>\n<tr><td>Lithium</td><td>0.8–1.5 mEq/L</td></tr>\n<tr><td>Phenytoin (Dilantin)</td><td>10–20 mcg/mL</td></tr>\n<tr><td>Theophylline</td><td>10–20 mcg/mL</td></tr>\n<tr><td>Gentamicin</td><td>ذروة 5–10، قاع أقل من 2 mcg/mL</td></tr>\n<tr><td>Vancomycin</td><td>قاع 5–15 mcg/mL (الذروة تختلف حسب البروتوكول)</td></tr>\n<tr><td>Carbamazepine</td><td>4–10 mcg/mL</td></tr>\n<tr><td>Phenobarbital</td><td>15–40 mcg/mL</td></tr>\n<tr><td>Tobramycin</td><td>ذروة 5–10، قاع 0.5–2.0 mcg/mL</td></tr>\n<tr><td>Valproic acid</td><td>50–100 mcg/mL</td></tr></tbody></table><p>الحدود تختلف قليلًا بين المعامل؛ راجع مرجع المستشفى.</p>"
-    },
-    "treatment": {
-      "ar": "<table><thead><tr><th>الدواء/السم</th><th>الترياق</th></tr></thead><tbody><tr><td>Opioids</td><td>naloxone</td></tr><tr><td>Heparin</td><td>protamine sulfate</td></tr><tr><td>Warfarin</td><td>vitamin K</td></tr><tr><td>Benzodiazepines</td><td>flumazenil</td></tr><tr><td>Acetaminophen</td><td>acetylcysteine</td></tr><tr><td>Magnesium sulfate</td><td>calcium gluconate</td></tr><tr><td>Cholinergics</td><td>atropine</td></tr><tr><td>Digoxin</td><td>digoxin immune fab</td></tr><tr><td>Beta blockers</td><td>glucagon</td></tr><tr><td>Aspirin</td><td>sodium bicarbonate</td></tr><tr><td>Cyanide</td><td>sodium thiosulfate</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div><h4>اللواحق الدوائية</h4>[[slot:dis-3202-suffixes-a|اللواحق: الجهاز العصبي والعدوى — رسم من إعداد الموقع|/diseases/img/dis-3202-suffixes-a.svg]][[slot:dis-3202-suffixes-b|اللواحق: القلب والمعدة والأورام — رسم من إعداد الموقع|/diseases/img/dis-3202-suffixes-b.svg]]<div class=\"cs-box cs-tip\"><strong>تنبيه:</strong> لا تخلط -thromycin (ماكروليد مثل azithromycin) مع -mycin الأمينوجليكوزيدات (gentamicin وtobramycin)، ولا -floxacin (cipro) مع غيرها.</div><h4>اللواحق الدوائية (نص)</h4><table><thead><tr><th>اللاحقة</th><th>المجموعة</th><th>مثال</th></tr></thead><tbody>\n<tr><td colspan=\"3\"><strong>الجهاز العصبي العضلي</strong></td></tr>\n<tr><td>-chol</td><td>محاكٍ للمسكارين</td><td>carbachol</td></tr>\n<tr><td>-trop / -scop</td><td>حاصر مسكارين</td><td>atropine, scopolamine</td></tr>\n<tr><td>-stigmine</td><td>مثبط الأسيتيل كولين إستراز</td><td>neostigmine</td></tr>\n<tr><td>-curium / -curonium</td><td>مرخٍ عضلي غير مزيل للاستقطاب</td><td>atracurium, mivacurium, pancuronium</td></tr>\n<tr><td>-ane</td><td>مخدر استنشاقي</td><td>halothane</td></tr>\n<tr><td>-caine</td><td>مخدر موضعي</td><td>lidocaine</td></tr>\n<tr><td>-pam / -lam</td><td>بنزوديازيبين</td><td>diazepam, lorazepam</td></tr>\n<tr><td>-tal</td><td>باربيتورات</td><td>phenobarbital</td></tr>\n<tr><td>-zine</td><td>مضاد ذهان تقليدي أو مضاد هيستامين</td><td>chlorpromazine, thioridazine</td></tr>\n<tr><td>-apine / -idone</td><td>مضاد ذهان غير تقليدي</td><td>clozapine, risperidone</td></tr>\n<tr><td>-capone</td><td>مثبط COMT لباركنسون</td><td>tolcapone, entacapone</td></tr>\n<tr><td colspan=\"3\"><strong>العدوى</strong></td></tr>\n<tr><td>-penem</td><td>مثبط جدار الخلية واسع الطيف</td><td>imipenem, meropenem</td></tr>\n<tr><td>-floxacin</td><td>فلوروكينولون</td><td>ciprofloxacin, levofloxacin</td></tr>\n<tr><td>-conazole</td><td>مضاد فطري</td><td>ketoconazole, fluconazole</td></tr>\n<tr><td>-quine</td><td>مضاد ملاريا</td><td>chloroquine, primaquine</td></tr>\n<tr><td>-ovir</td><td>مضاد فيروسي (للهربس)</td><td>acyclovir, ganciclovir, valacyclovir</td></tr>\n<tr><td>-ivir</td><td>مثبط نورامينيداز للإنفلونزا</td><td>zanamivir</td></tr>\n<tr><td>-avir</td><td>مثبط بروتياز لفيروس HIV</td><td>indinavir, ritonavir</td></tr>\n<tr><td colspan=\"3\"><strong>القلب والأوعية</strong></td></tr>\n<tr><td>-olol</td><td>حاصر بيتا</td><td>metoprolol</td></tr>\n<tr><td>-alol / -ilol</td><td>حاصر ألفا وبيتا</td><td>sotalol, carvedilol</td></tr>\n<tr><td>-dipine</td><td>حاصر قنوات كالسيوم وعائي</td><td>nifedipine</td></tr>\n<tr><td>-zosin</td><td>حاصر ألفا-1</td><td>terazosin, doxazosin</td></tr>\n<tr><td>-pril</td><td>مثبط ACE</td><td>lisinopril</td></tr>\n<tr><td>-sartan</td><td>حاصر مستقبل أنجيوتنسين</td><td>losartan</td></tr>\n<tr><td>-darone</td><td>مضاد اضطراب نظم</td><td>amiodarone</td></tr>\n<tr><td>-statin</td><td>مثبط HMG-CoA reductase</td><td>rosuvastatin</td></tr>\n<tr><td>-zolamide</td><td>مثبط الكربونيك أنهيدراز</td><td>acetazolamide</td></tr>\n<tr><td>-semide</td><td>مدر عروة</td><td>furosemide</td></tr>\n<tr><td>-parin</td><td>هيبارين منخفض الوزن الجزيئي</td><td>enoxaparin</td></tr>\n<tr><td>-rudin</td><td>مثبط ثرومبين مباشر</td><td>lepirudin</td></tr>\n<tr><td colspan=\"3\"><strong>الجهاز الهضمي والأورام</strong></td></tr>\n<tr><td>-tidine</td><td>حاصر H2</td><td>cimetidine</td></tr>\n<tr><td>-prazole</td><td>مثبط مضخة البروتون</td><td>pantoprazole</td></tr>\n<tr><td>-setron</td><td>حاصر 5-HT3 مضاد قيء</td><td>ondansetron</td></tr>\n<tr><td>vin-</td><td>مثبط الأنيبيبات الدقيقة</td><td>vincristine, vinblastine</td></tr>\n<tr><td>-rubicin</td><td>دواء سرطان (أنثراسيكلين)</td><td>doxorubicin</td></tr>\n<tr><td>-mab</td><td>جسم مضاد وحيد النسيلة</td><td>rituximab</td></tr>\n<tr><td>-tinib</td><td>مثبط تيروزين كيناز</td><td>imatinib</td></tr></tbody></table>"
-    },
-    "nursing": {
-      "ar": "<ol><li>اعرف ترياق أي دواء عالي الخطورة تعطيه وتأكد من توفره في القسم.</li><li>خذ عينة المستوى في وقتها الصحيح (ذروة/قاع) ووثّق وقت آخر جرعة.</li><li>مستوى فوق المدى: احجب الجرعة وأبلغ؛ تحت المدى: أبلغ لأن العلاج غير كافٍ.</li><li>مع الأفيونات جهّز naloxone وراقب التنفس.</li><li>مع heparin راقب aPTT وتوفّر protamine؛ ومع warfarin راقب INR وvitamin K.</li></ol>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>حالات طارئة:</strong><ul><li>تنفس أبطأ من الطبيعي مع الأفيون: naloxone</li><li>نزيف مع مضادات التخثر</li><li>رجفة وارتباك وإسهال مع lithium</li><li>طنين أذن/قلة بول مع الأمينوجليكوزيدات</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اتبع مواعيد تحليل مستوى الدواء المطلوبة منك</li><li>لا تغيّر جرعة الأدوية ضيقة المدى بنفسك</li><li>أخبر الطبيب بأي دواء جديد لأنه قد يغيّر مستوى digoxin أو lithium أو warfarin</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "Heparin يقابله protamine وwarfarin يقابله vitamin K",
-      "Naloxone للأفيونات وflumazenil للبنزوديازيبين",
-      "Magnesium sulfate ← calcium gluconate",
-      "المستوى العلاجي الضيق يعني مراقبة دم دورية",
-      "اللاحقة تدلك على المجموعة: -pril ACE، -olol بيتا، -statin ستاتين"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ترياق heparin هو:"
-      },
-      "options": [
-        {
-          "ar": "vitamin K"
-        },
-        {
-          "ar": "protamine sulfate"
-        },
-        {
-          "ar": "flumazenil"
-        },
-        {
-          "ar": "atropine"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "protamine sulfate يعادل أثر heparin؛ أما vitamin K فلـ warfarin."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض نعسان جدًا بعد جرعة midazolam مع تنفس بطيء. الترياق:"
-      },
-      "options": [
-        {
-          "ar": "naloxone"
-        },
-        {
-          "ar": "flumazenil"
-        },
-        {
-          "ar": "glucagon"
-        },
-        {
-          "ar": "acetylcysteine"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "flumazenil يعاكس البنزوديازيبينات؛ naloxone للأفيونات."
-      }
-    },
-    {
-      "q": {
-        "ar": "تسمم الباراسيتامول يُعالج بـ:"
-      },
-      "options": [
-        {
-          "ar": "sodium thiosulfate"
-        },
-        {
-          "ar": "calcium gluconate"
-        },
-        {
-          "ar": "acetylcysteine"
-        },
-        {
-          "ar": "digoxin immune fab"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "acetylcysteine يحمي الكبد من سمّية acetaminophen."
-      }
-    },
-    {
-      "q": {
-        "ar": "المدى العلاجي المناسب لـ digoxin تقريبًا:"
-      },
-      "options": [
-        {
-          "ar": "0.5–2.0 ng/mL"
-        },
-        {
-          "ar": "5–10 ng/mL"
-        },
-        {
-          "ar": "10–20 ng/mL"
-        },
-        {
-          "ar": "50–100 ng/mL"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "digoxin ضيق المدى (حوالي 0.5–2.0 ng/mL) وفوق ذلك خطر التسمم."
-      }
-    },
-    {
-      "q": {
-        "ar": "لاحقة -pril تدل على:"
-      },
-      "options": [
-        {
-          "ar": "حاصر بيتا"
-        },
-        {
-          "ar": "مثبّط ACE"
-        },
-        {
-          "ar": "مدر"
-        },
-        {
-          "ar": "ستاتين"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "-pril مثل lisinopril هو مثبّط الإنزيم المحوّل لأنجيوتنسين."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "British National Formulary (BNF)"
-    },
-    {
-      "title": "Egyptian Drug Authority (EDA) drug information leaflets"
-    }
+  "en": [
+   "Heparin is reversed by protamine and warfarin by vitamin K",
+   "Naloxone for opioids and flumazenil for benzodiazepines",
+   "Magnesium sulfate ← calcium gluconate",
+   "A narrow therapeutic range means regular blood monitoring",
+   "The suffix tells you the class: -pril ACE, -olol beta, -statin statin"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ترياق heparin هو:",
+    "en": "The antidote for heparin is:"
+   },
+   "options": [
+    {
+     "ar": "vitamin K",
+     "en": "vitamin K"
+    },
+    {
+     "ar": "protamine sulfate",
+     "en": "protamine sulfate"
+    },
+    {
+     "ar": "flumazenil",
+     "en": "flumazenil"
+    },
+    {
+     "ar": "atropine",
+     "en": "atropine"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "protamine sulfate يعادل أثر heparin؛ أما vitamin K فلـ warfarin.",
+    "en": "protamine sulfate neutralizes the effect of heparin; vitamin K is for warfarin."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض نعسان جدًا بعد جرعة midazolam مع تنفس بطيء. الترياق:",
+    "en": "A patient is very drowsy after a dose of midazolam, with slow breathing. The antidote:"
+   },
+   "options": [
+    {
+     "ar": "naloxone",
+     "en": "naloxone"
+    },
+    {
+     "ar": "flumazenil",
+     "en": "flumazenil"
+    },
+    {
+     "ar": "glucagon",
+     "en": "glucagon"
+    },
+    {
+     "ar": "acetylcysteine",
+     "en": "acetylcysteine"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "flumazenil يعاكس البنزوديازيبينات؛ naloxone للأفيونات.",
+    "en": "flumazenil reverses benzodiazepines; naloxone is for opioids."
+   }
+  },
+  {
+   "q": {
+    "ar": "تسمم الباراسيتامول يُعالج بـ:",
+    "en": "Paracetamol poisoning is treated with:"
+   },
+   "options": [
+    {
+     "ar": "sodium thiosulfate",
+     "en": "sodium thiosulfate"
+    },
+    {
+     "ar": "calcium gluconate",
+     "en": "calcium gluconate"
+    },
+    {
+     "ar": "acetylcysteine",
+     "en": "acetylcysteine"
+    },
+    {
+     "ar": "digoxin immune fab",
+     "en": "digoxin immune fab"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "acetylcysteine يحمي الكبد من سمّية acetaminophen.",
+    "en": "acetylcysteine protects the liver from acetaminophen toxicity."
+   }
+  },
+  {
+   "q": {
+    "ar": "المدى العلاجي المناسب لـ digoxin تقريبًا:",
+    "en": "The approximate therapeutic range for digoxin:"
+   },
+   "options": [
+    {
+     "ar": "0.5–2.0 ng/mL",
+     "en": "0.5–2.0 ng/mL"
+    },
+    {
+     "ar": "5–10 ng/mL",
+     "en": "5–10 ng/mL"
+    },
+    {
+     "ar": "10–20 ng/mL",
+     "en": "10–20 ng/mL"
+    },
+    {
+     "ar": "50–100 ng/mL",
+     "en": "50–100 ng/mL"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "digoxin ضيق المدى (حوالي 0.5–2.0 ng/mL) وفوق ذلك خطر التسمم.",
+    "en": "digoxin has a narrow range (about 0.5–2.0 ng/mL), and above that there is a risk of toxicity."
+   }
+  },
+  {
+   "q": {
+    "ar": "لاحقة -pril تدل على:",
+    "en": "The suffix -pril indicates:"
+   },
+   "options": [
+    {
+     "ar": "حاصر بيتا",
+     "en": "Beta blocker"
+    },
+    {
+     "ar": "مثبّط ACE",
+     "en": "ACE inhibitor"
+    },
+    {
+     "ar": "مدر",
+     "en": "Diuretic"
+    },
+    {
+     "ar": "ستاتين",
+     "en": "Statin"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "-pril مثل lisinopril هو مثبّط الإنزيم المحوّل لأنجيوتنسين.",
+    "en": "-pril, as in lisinopril, is an angiotensin-converting enzyme inhibitor."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "British National Formulary (BNF)"
+  },
+  {
+   "title": "Egyptian Drug Authority (EDA) drug information leaflets"
+  }
+ ]
 }
