@@ -1,155 +1,195 @@
 {
-  "id": "dis-645",
-  "num": 645,
-  "system": "chest",
-  "icon": "❤️",
-  "level": 2,
-  "title": {
-    "ar": "القلب الرئوي (Cor Pulmonale)",
-    "en": "Cor Pulmonale"
+ "id": "dis-645",
+ "num": 645,
+ "system": "chest",
+ "icon": "❤️",
+ "level": 2,
+ "title": {
+  "ar": "القلب الرئوي (Cor Pulmonale)",
+  "en": "Cor Pulmonale"
+ },
+ "teaser": {
+  "ar": "فشل القلب الأيمن بسبب مرض في الرئة: القلب بيتعب لأنه بيضخ ضد ضغط رئوي عالٍ. الأكسجين، المدرات، الديجوكسين وإزاي تراقب الوزن والبوتاسيوم والنبض.",
+  "en": "Right heart failure caused by lung disease: the heart tires because it pumps against high pulmonary pressure. Oxygen, diuretics, digoxin, and how to monitor weight, potassium, and pulse."
+ },
+ "chips": [
+  {
+   "ar": "فشل قلب أيمن",
+   "en": "Right heart failure"
   },
-  "teaser": {
-    "ar": "فشل القلب الأيمن بسبب مرض في الرئة: القلب بيتعب لأنه بيضخ ضد ضغط رئوي عالٍ. الأكسجين، المدرات، الديجوكسين وإزاي تراقب الوزن والبوتاسيوم والنبض."
+  {
+   "ar": "ضغط رئوي",
+   "en": "Pulmonary hypertension"
   },
-  "chips": [
-    {
-      "ar": "فشل قلب أيمن"
-    },
-    {
-      "ar": "ضغط رئوي"
-    },
-    {
-      "ar": "Digoxin / مدرّات"
-    }
+  {
+   "ar": "Digoxin / مدرّات",
+   "en": "Digoxin / diuretics"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>القلب الرئوي هو <b>تضخم وقصور البطين الأيمن</b> بسبب مرض رئوي أولي. الانسداد المزمن (COPD) أو نقص الأكسجة بيعمل <b>ضغط مرتفع في الشريان الرئوي (Pulmonary hypertension)</b>، فالبطين الأيمن بيشتغل ضد مقاومة أعلى بعدين بيفشل. المريض بيعاني من أعراض المرض الرئوي <b>+</b> فشل القلب الأيمن.</p>[[slot:dis-645-flow|سلسلة المرض الرئوي إلى فشل القلب الأيمن|/diseases/img/dis-645-flow.svg]]<div class=\"cs-stats\"><div><b>أكتر من 20</b><span>متوسط ضغط الشريان الرئوي (مم زئبق) = ارتفاع</span></div><div><b>2 لتر/د</b><span>أكسجين منخفض</span></div><div><b>2 لتر/يوم</b><span>حد السوائل (حسب المراجع)</span></div></div><p>الإدارة المشتركة للمرض الرئوي والقلب بتخفف الأعراض، لكن التفاقم متوقع والتقدم ممكن ويحتاج تعديل أدوية ونمط حياة.</p>",
+   "en": "<p>Cor pulmonale is <b>enlargement and failure of the right ventricle</b> due to a primary lung disease. Chronic obstruction (COPD) or hypoxia causes <b>Pulmonary hypertension</b>, so the right ventricle works against higher resistance and then fails. The patient suffers from lung disease symptoms <b>+</b> right heart failure.</p>[[slot:dis-645-flow|The chain from lung disease to right heart failure|/diseases/img/dis-645-flow.svg]]<div class=\"cs-stats\"><div><b>More than 20</b><span>mean pulmonary artery pressure (mmHg) = elevated</span></div><div><b>2 L/min</b><span>low-flow oxygen</span></div><div><b>2 L/day</b><span>fluid limit</span></div></div><p>Joint management of the lung disease and the heart relieves symptoms, but exacerbations are expected and progression is possible, requiring adjustment of drugs and lifestyle.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li><b>COPD</b> (التهاب شعبي مزمن + انتفاخ): أشهر سبب.</li><li>جلطات رئوية مزمنة (CTEPH).</li><li>التليف الرئوي والأسبستوس والتوسع الشعبي.</li><li>انقطاع النفس أثناء النوم ومتلازمة نقص التهوية للسمنة.</li><li>تشوهات الصدر (انحناء العمود) وأمراض العضلات العصبية.</li><li>مرتفعات عالية (نقص الأكسجة).</li></ul>",
+   "en": "<ul><li><b>COPD</b> (chronic bronchitis + emphysema): the most common cause.</li><li>Chronic pulmonary emboli (CTEPH).</li><li>Pulmonary fibrosis, asbestosis, and bronchiectasis.</li><li>Sleep apnea and obesity hypoventilation syndrome.</li><li>Chest deformities (spinal curvature) and neuromuscular diseases.</li><li>High altitudes (hypoxia).</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>زرقة (Cyanosis).</li><li>تعب وإرهاق (نقص أكسجة + فشل قلب).</li><li>صفير ناتج عن مرض رئوي أساسي.</li><li>ضيق نفس بالمجهود وعند الاستلقاء (Orthopnea).</li><li>سعال مع بلغم.</li><li><b>وذمة في الأطراف السفلية</b> (فشل أيمن).</li><li>زيادة وزن بسبب احتباس السوائل.</li><li>تنفس أكتر من 20 ونبض أكتر من 100.</li><li>علامات أيمن: احتقان وريد الرقبة (JVD)، تضخم كبد، استسقاء.</li></ul>",
+   "en": "<ul><li>Cyanosis.</li><li>Fatigue and exhaustion (hypoxia + heart failure).</li><li>Wheezing from the underlying lung disease.</li><li>Dyspnea on exertion and when lying down (Orthopnea).</li><li>Cough with sputum.</li><li><b>Lower limb edema</b> (right failure).</li><li>Weight gain due to fluid retention.</li><li>Respiratory rate more than 20 and pulse more than 100.</li><li>Right-sided signs: jugular venous distension (JVD), hepatomegaly, ascites.</li></ul>"
+  },
+  "tests": {
+   "ar": "<table><thead><tr><th>الفحص</th><th>النتيجة</th></tr></thead><tbody><tr><td>أشعة الصدر</td><td>تضخم الشرايين الرئوية والبطين الأيمن</td></tr><tr><td>الإيكو (Echo)</td><td>تضخم البطين الأيمن ± ارتفاع ضغط الرئوي</td></tr><tr><td>قسطرة الشريان الرئوي</td><td>ارتفاع ضغط البطين الأيمن والشريان الرئوي</td></tr><tr><td>غازات الدم/مؤشر الأكسجين</td><td>نقص O₂ وزيادة CO₂</td></tr><tr><td>CBC</td><td>ارتفاع الهيموجلوبين (تعويضي)</td></tr><tr><td>ECG</td><td>تضخم أذين/بطين أيمن (P pulmonale)</td></tr><tr><td>BNP</td><td>مرتفع</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>Test</th><th>Finding</th></tr></thead><tbody><tr><td>Chest X-ray</td><td>Enlarged pulmonary arteries and right ventricle</td></tr><tr><td>Echo</td><td>Enlarged right ventricle ± pulmonary hypertension</td></tr><tr><td>Pulmonary artery catheterization</td><td>High right ventricular and pulmonary artery pressure</td></tr><tr><td>Blood gases/oxygen index</td><td>Low O₂ and high CO₂</td></tr><tr><td>CBC</td><td>High hemoglobin (compensatory)</td></tr><tr><td>ECG</td><td>Right atrial/ventricular enlargement (P pulmonale)</td></tr><tr><td>BNP</td><td>Elevated</td></tr></tbody></table>"
+  },
+  "treatment": {
+   "ar": "<table><thead><tr><th>الإجراء/الدواء</th><th>الهدف</th><th>ملاحظات</th></tr></thead><tbody><tr><td>راحة أو تقليل النشاط</td><td>تقليل حمل القلب</td><td></td></tr><tr><td><b>أكسجين 2 لتر/د</b></td><td>يخفف نقص الأكسجة ويخفض الضغط الرئوي</td><td>مريض COPD لا يتحمل أكسجين عالي</td></tr><tr><td>حاصرات الكالسيوم: Diltiazem, Nifedipine, Nicardipine, Amlodipine</td><td>توسيع الأوعية</td><td>قد لا تناسب الجميع؛ بأمر الطبيب</td></tr><tr><td>موسعات الشريان الرئوي: Diazoxide, Hydralazine, Nitroprusside</td><td>خفض الضغط الرئوي</td><td>تُدار في العناية</td></tr><tr><td>مثبطات ACE: Captopril, Enalapril</td><td>خفض الحمل</td><td>راقب البوتاسيوم والكلى والكحة</td></tr><tr><td>مضادات التجلط: Heparin</td><td>منع الجلطات</td><td>حسب الحالة</td></tr><tr><td>مدرّات: Furosemide, Bumetanide</td><td>طرد السوائل</td><td>وزن، بوتاسيوم</td></tr><tr><td><b>Digoxin</b></td><td>تخفيف أعراض الفشل</td><td>راقب المستوى والنبض</td></tr><tr><td>تقليل الملح والسوائل</td><td>تقليل الاحتباس</td><td></td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>أهم علاج فعلي هو <b>الأكسجين المنزلي طويل المدى (≥15 ساعة/يوم)</b> لمرضى COPD بنقص أكسجة مزمن، وعلاج المرض الرئوي الأساسي. الحاصرات والـ ACE ليست روتينية، ويجب الحذر في Digoxin مع نقص البوتاسيوم والأكسجة (سُمّية).</p></div>",
+   "en": "<table><thead><tr><th>Measure/drug</th><th>Goal</th><th>Notes</th></tr></thead><tbody><tr><td>Rest or reduced activity</td><td>Reduce cardiac workload</td><td></td></tr><tr><td><b>Oxygen 2 L/min</b></td><td>Relieves hypoxia and lowers pulmonary pressure</td><td>A COPD patient does not tolerate high oxygen</td></tr><tr><td>Calcium channel blockers: Diltiazem, Nifedipine, Nicardipine, Amlodipine</td><td>Vasodilation</td><td>May not suit everyone; by physician order</td></tr><tr><td>Pulmonary artery vasodilators: Diazoxide, Hydralazine, Nitroprusside</td><td>Lower pulmonary pressure</td><td>Given in the ICU</td></tr><tr><td>ACE inhibitors: Captopril, Enalapril</td><td>Reduce load</td><td>Monitor potassium, kidneys, and cough</td></tr><tr><td>Anticoagulants: Heparin</td><td>Prevent clots</td><td>As indicated</td></tr><tr><td>Diuretics: Furosemide, Bumetanide</td><td>Remove fluid</td><td>Weight, potassium</td></tr><tr><td><b>Digoxin</b></td><td>Relieve failure symptoms</td><td>Monitor level and pulse</td></tr><tr><td>Reduce salt and fluids</td><td>Reduce retention</td><td></td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The most important real treatment is <b>long-term home oxygen (≥15 hours/day)</b> for COPD patients with chronic hypoxia, and treating the underlying lung disease. Calcium channel blockers and ACE inhibitors are not routine, and caution is needed with Digoxin in low potassium and hypoxia (toxicity).</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>حد السوائل 2 لتر/يوم</strong><p>وزّع على اليوم، سجّل المدخل والمخرج، وقيس الوزن يومياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قبل الديجوكسين</strong><p><b>قس النبض لمدة دقيقة كاملة</b>: لو أقل من 60 (أو حسب البروتوكول) <b>أوقف الجرعة وبلّغ</b>. أعراض السمية: غثيان، رؤية صفراء/هالات، اضطراب نظم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>مستوى الديجوكسين</strong><p>المدى العلاجي حوالي 0.5–0.9 نانوجرام/مل (حسب المرجع)؛ تأكد من البوتاسيوم ≥ 4 قبل الجرعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>البوتاسيوم</strong><p>الـ ACE ومدرات حافظة للبوتاسيوم ترفعه، والمدرات الأخرى تخفضه: تابع دورياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مراقبة تنفسية</strong><p>المعدل والجهد وSpO₂ وأصوات الصدر ولون الجلد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وضعية</strong><p>رأس السرير مرفوع، رفع الأرجل عند الجلوس لتقليل الوذمة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تغذية</strong><p>قلة ملح (أقل من 2 جرام صوديوم)، سعرات كافية.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>حجم سوائل زائد • اضطراب تبادل الغازات • عدم تحمل النشاط.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Fluid limit 2 L/day</strong><p>Spread it across the day, record intake and output, and weigh daily.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Before digoxin</strong><p><b>Count the pulse for a full minute</b>: if less than 60 (or per protocol) <b>hold the dose and report</b>. Toxicity symptoms: nausea, yellow vision/halos, arrhythmia.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Digoxin level</strong><p>The therapeutic range is about 0.5–0.9 ng/mL; make sure potassium is ≥ 4 before the dose.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Potassium</strong><p>ACE inhibitors and potassium-sparing diuretics raise it, and other diuretics lower it: monitor regularly.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Respiratory monitoring</strong><p>Rate, effort, SpO₂, chest sounds, and skin color.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Position</strong><p>Head of bed elevated, legs raised when sitting to reduce edema.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Nutrition</strong><p>Low salt (less than 2 g sodium), adequate calories.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Nursing diagnoses</strong><p>Excess fluid volume • Impaired gas exchange • Activity intolerance.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>زيادة ≥1 كجم/24 ساعة أو 2 كجم/أسبوع.</li><li>نبض أقل من 50–60 أو اضطراب نظم مع الديجوكسين.</li><li>إغماء أو ألم صدر (ضغط رئوي عالٍ/جلطة).</li><li>زرقة جديدة، أو نعاس مع أكسجين (CO₂).</li><li>بول قليل أو دوخة بعد المدرات.</li></ul>",
+   "en": "<ul><li>Gain of ≥1 kg/24 hours or 2 kg/week.</li><li>Pulse less than 50–60 or arrhythmia with digoxin.</li><li>Fainting or chest pain (high pulmonary pressure/embolism).</li><li>New cyanosis, or drowsiness with oxygen (CO₂).</li><li>Low urine output or dizziness after diuretics.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>كيف يستعمل الأكسجين المنزلي ولا يغيّر السرعة بنفسه.</li><li>الأدوية: لماذا ومتى وآثارها (الديجوكسين: النبض قبل الجرعة).</li><li>وزن يومي صباحاً بعد التبول؛ سجل.</li><li>تقليل الملح والسوائل، وترك التدخين.</li><li>تطعيمات الإنفلونزا والرئوي.</li></ul>",
+   "en": "<ul><li>How to use home oxygen and not to change the flow rate on their own.</li><li>Drugs: why, when, and their effects (digoxin: pulse before the dose).</li><li>Daily weight in the morning after voiding; record it.</li><li>Reduce salt and fluids, and quit smoking.</li><li>Influenza and pneumococcal vaccines.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "قلب رئوي = فشل قلب أيمن ثانوي لمرض رئوي (COPD أهمها).",
+   "العلاج: أكسجين منخفض الجرعة + علاج المرض الرئوي + مدرات.",
+   "Digoxin: قس النبض دقيقة كاملة؛ أقل من 60 = أوقف وبلّغ.",
+   "حد سوائل 2 لتر/يوم ووزن يومي.",
+   "تابع البوتاسيوم (ACE ومدرات).",
+   "تضخم الشريان والبطين الأيمن في الأشعة/الإيكو."
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>القلب الرئوي هو <b>تضخم وقصور البطين الأيمن</b> بسبب مرض رئوي أولي. الانسداد المزمن (COPD) أو نقص الأكسجة بيعمل <b>ضغط مرتفع في الشريان الرئوي (Pulmonary hypertension)</b>، فالبطين الأيمن بيشتغل ضد مقاومة أعلى بعدين بيفشل. المريض بيعاني من أعراض المرض الرئوي <b>+</b> فشل القلب الأيمن.</p>[[slot:dis-645-flow|سلسلة المرض الرئوي إلى فشل القلب الأيمن|/diseases/img/dis-645-flow.svg]]<div class=\"cs-stats\"><div><b>أكتر من 20</b><span>متوسط ضغط الشريان الرئوي (مم زئبق) = ارتفاع</span></div><div><b>2 لتر/د</b><span>أكسجين منخفض</span></div><div><b>2 لتر/يوم</b><span>حد السوائل (حسب المراجع)</span></div></div><p>الإدارة المشتركة للمرض الرئوي والقلب بتخفف الأعراض، لكن التفاقم متوقع والتقدم ممكن ويحتاج تعديل أدوية ونمط حياة.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li><b>COPD</b> (التهاب شعبي مزمن + انتفاخ): أشهر سبب.</li><li>جلطات رئوية مزمنة (CTEPH).</li><li>التليف الرئوي والأسبستوس والتوسع الشعبي.</li><li>انقطاع النفس أثناء النوم ومتلازمة نقص التهوية للسمنة.</li><li>تشوهات الصدر (انحناء العمود) وأمراض العضلات العصبية.</li><li>مرتفعات عالية (نقص الأكسجة).</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>زرقة (Cyanosis).</li><li>تعب وإرهاق (نقص أكسجة + فشل قلب).</li><li>صفير ناتج عن مرض رئوي أساسي.</li><li>ضيق نفس بالمجهود وعند الاستلقاء (Orthopnea).</li><li>سعال مع بلغم.</li><li><b>وذمة في الأطراف السفلية</b> (فشل أيمن).</li><li>زيادة وزن بسبب احتباس السوائل.</li><li>تنفس أكتر من 20 ونبض أكتر من 100.</li><li>علامات أيمن: احتقان وريد الرقبة (JVD)، تضخم كبد، استسقاء.</li></ul>"
-    },
-    "tests": {
-      "ar": "<table><thead><tr><th>الفحص</th><th>النتيجة</th></tr></thead><tbody><tr><td>أشعة الصدر</td><td>تضخم الشرايين الرئوية والبطين الأيمن</td></tr><tr><td>الإيكو (Echo)</td><td>تضخم البطين الأيمن ± ارتفاع ضغط الرئوي</td></tr><tr><td>قسطرة الشريان الرئوي</td><td>ارتفاع ضغط البطين الأيمن والشريان الرئوي</td></tr><tr><td>غازات الدم/مؤشر الأكسجين</td><td>نقص O₂ وزيادة CO₂</td></tr><tr><td>CBC</td><td>ارتفاع الهيموجلوبين (تعويضي)</td></tr><tr><td>ECG</td><td>تضخم أذين/بطين أيمن (P pulmonale)</td></tr><tr><td>BNP</td><td>مرتفع</td></tr></tbody></table>"
-    },
-    "treatment": {
-      "ar": "<table><thead><tr><th>الإجراء/الدواء</th><th>الهدف</th><th>ملاحظات</th></tr></thead><tbody><tr><td>راحة أو تقليل النشاط</td><td>تقليل حمل القلب</td><td></td></tr><tr><td><b>أكسجين 2 لتر/د</b></td><td>يخفف نقص الأكسجة ويخفض الضغط الرئوي</td><td>مريض COPD لا يتحمل أكسجين عالي</td></tr><tr><td>حاصرات الكالسيوم: Diltiazem, Nifedipine, Nicardipine, Amlodipine</td><td>توسيع الأوعية</td><td>قد لا تناسب الجميع؛ بأمر الطبيب</td></tr><tr><td>موسعات الشريان الرئوي: Diazoxide, Hydralazine, Nitroprusside</td><td>خفض الضغط الرئوي</td><td>تُدار في العناية</td></tr><tr><td>مثبطات ACE: Captopril, Enalapril</td><td>خفض الحمل</td><td>راقب البوتاسيوم والكلى والكحة</td></tr><tr><td>مضادات التجلط: Heparin</td><td>منع الجلطات</td><td>حسب الحالة</td></tr><tr><td>مدرّات: Furosemide, Bumetanide</td><td>طرد السوائل</td><td>وزن، بوتاسيوم</td></tr><tr><td><b>Digoxin</b></td><td>تخفيف أعراض الفشل</td><td>راقب المستوى والنبض</td></tr><tr><td>تقليل الملح والسوائل</td><td>تقليل الاحتباس</td><td></td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>أهم علاج فعلي هو <b>الأكسجين المنزلي طويل المدى (≥15 ساعة/يوم)</b> لمرضى COPD بنقص أكسجة مزمن، وعلاج المرض الرئوي الأساسي. الحاصرات والـ ACE ليست روتينية، ويجب الحذر في Digoxin مع نقص البوتاسيوم والأكسجة (سُمّية).</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>حد السوائل 2 لتر/يوم</strong><p>وزّع على اليوم، سجّل المدخل والمخرج، وقيس الوزن يومياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قبل الديجوكسين</strong><p><b>قس النبض لمدة دقيقة كاملة</b>: لو أقل من 60 (أو حسب البروتوكول) <b>أوقف الجرعة وبلّغ</b>. أعراض السمية: غثيان، رؤية صفراء/هالات، اضطراب نظم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>مستوى الديجوكسين</strong><p>المدى العلاجي حوالي 0.5–0.9 نانوجرام/مل (حسب المرجع)؛ تأكد من البوتاسيوم ≥ 4 قبل الجرعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>البوتاسيوم</strong><p>الـ ACE ومدرات حافظة للبوتاسيوم ترفعه، والمدرات الأخرى تخفضه: تابع دورياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مراقبة تنفسية</strong><p>المعدل والجهد وSpO₂ وأصوات الصدر ولون الجلد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وضعية</strong><p>رأس السرير مرفوع، رفع الأرجل عند الجلوس لتقليل الوذمة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تغذية</strong><p>قلة ملح (أقل من 2 جرام صوديوم)، سعرات كافية.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>حجم سوائل زائد • اضطراب تبادل الغازات • عدم تحمل النشاط.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>زيادة ≥1 كجم/24 ساعة أو 2 كجم/أسبوع.</li><li>نبض أقل من 50–60 أو اضطراب نظم مع الديجوكسين.</li><li>إغماء أو ألم صدر (ضغط رئوي عالٍ/جلطة).</li><li>زرقة جديدة، أو نعاس مع أكسجين (CO₂).</li><li>بول قليل أو دوخة بعد المدرات.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>كيف يستعمل الأكسجين المنزلي ولا يغيّر السرعة بنفسه.</li><li>الأدوية: لماذا ومتى وآثارها (الديجوكسين: النبض قبل الجرعة).</li><li>وزن يومي صباحاً بعد التبول؛ سجل.</li><li>تقليل الملح والسوائل، وترك التدخين.</li><li>تطعيمات الإنفلونزا والرئوي.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "قلب رئوي = فشل قلب أيمن ثانوي لمرض رئوي (COPD أهمها).",
-      "العلاج: أكسجين منخفض الجرعة + علاج المرض الرئوي + مدرات.",
-      "Digoxin: قس النبض دقيقة كاملة؛ أقل من 60 = أوقف وبلّغ.",
-      "حد سوائل 2 لتر/يوم ووزن يومي.",
-      "تابع البوتاسيوم (ACE ومدرات).",
-      "تضخم الشريان والبطين الأيمن في الأشعة/الإيكو."
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أشهر سبب للقلب الرئوي:"
-      },
-      "options": [
-        {
-          "ar": "COPD"
-        },
-        {
-          "ar": "فقر دم"
-        },
-        {
-          "ar": "سكر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ضغط رئوي مزمن."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل إعطاء Digoxin:"
-      },
-      "options": [
-        {
-          "ar": "قياس النبض دقيقة كاملة"
-        },
-        {
-          "ar": "قياس الحرارة"
-        },
-        {
-          "ar": "وزن فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نبض أقل من 60 يمنع الجرعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أكسجين مريض القلب الرئوي بسبب COPD:"
-      },
-      "options": [
-        {
-          "ar": "منخفض 1–2 لتر"
-        },
-        {
-          "ar": "أقصى جرعة"
-        },
-        {
-          "ar": "لا يعطى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تفادي احتباس CO₂."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة الفشل الأيمن:"
-      },
-      "options": [
-        {
-          "ar": "وذمة أطراف سفلية وJVD"
-        },
-        {
-          "ar": "وذمة رئوية فقط"
-        },
-        {
-          "ar": "سعال جاف"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "احتقان جهازي."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "StatPearls: Cor Pulmonale"
-    },
-    {
-      "title": "ESC/ERS Guidelines for pulmonary hypertension (2022)"
-    },
-    {
-      "title": "GOLD 2024: long-term oxygen therapy"
-    }
+  "en": [
+   "Cor pulmonale = right heart failure secondary to lung disease (COPD is the main one).",
+   "Treatment: low-dose oxygen + treating the lung disease + diuretics.",
+   "Digoxin: count the pulse for a full minute; less than 60 = hold and report.",
+   "Fluid limit 2 L/day and daily weight.",
+   "Monitor potassium (ACE inhibitors and diuretics).",
+   "Enlarged pulmonary artery and right ventricle on X-ray/echo."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أشهر سبب للقلب الرئوي:",
+    "en": "The most common cause of cor pulmonale:"
+   },
+   "options": [
+    {
+     "ar": "COPD",
+     "en": "COPD"
+    },
+    {
+     "ar": "فقر دم",
+     "en": "Anemia"
+    },
+    {
+     "ar": "سكر",
+     "en": "Diabetes"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ضغط رئوي مزمن.",
+    "en": "Chronic pulmonary hypertension."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل إعطاء Digoxin:",
+    "en": "Before giving Digoxin:"
+   },
+   "options": [
+    {
+     "ar": "قياس النبض دقيقة كاملة",
+     "en": "Count the pulse for a full minute"
+    },
+    {
+     "ar": "قياس الحرارة",
+     "en": "Measure temperature"
+    },
+    {
+     "ar": "وزن فقط",
+     "en": "Weight only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نبض أقل من 60 يمنع الجرعة.",
+    "en": "A pulse less than 60 means holding the dose."
+   }
+  },
+  {
+   "q": {
+    "ar": "أكسجين مريض القلب الرئوي بسبب COPD:",
+    "en": "Oxygen for a cor pulmonale patient due to COPD:"
+   },
+   "options": [
+    {
+     "ar": "منخفض 1–2 لتر",
+     "en": "Low 1–2 L"
+    },
+    {
+     "ar": "أقصى جرعة",
+     "en": "Maximum dose"
+    },
+    {
+     "ar": "لا يعطى",
+     "en": "Not given"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تفادي احتباس CO₂.",
+    "en": "To avoid CO₂ retention."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة الفشل الأيمن:",
+    "en": "Sign of right failure:"
+   },
+   "options": [
+    {
+     "ar": "وذمة أطراف سفلية وJVD",
+     "en": "Lower limb edema and JVD"
+    },
+    {
+     "ar": "وذمة رئوية فقط",
+     "en": "Pulmonary edema only"
+    },
+    {
+     "ar": "سعال جاف",
+     "en": "Dry cough"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "احتقان جهازي.",
+    "en": "Systemic congestion."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls: Cor Pulmonale"
+  },
+  {
+   "title": "ESC/ERS Guidelines for pulmonary hypertension (2022)"
+  },
+  {
+   "title": "GOLD 2024: long-term oxygen therapy"
+  }
+ ]
 }
