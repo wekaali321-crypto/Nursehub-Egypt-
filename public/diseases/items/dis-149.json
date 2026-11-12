@@ -1,462 +1,539 @@
 {
-  "id": "dis-149",
-  "num": 149,
-  "system": "infect",
-  "icon": "🍄",
-  "level": 1,
-  "title": {
-    "ar": "عدوى الجلد الفطرية",
-    "en": "Fungal Skin Infections"
+ "id": "dis-149",
+ "num": 149,
+ "system": "infect",
+ "icon": "🍄",
+ "level": 1,
+ "title": {
+  "ar": "عدوى الجلد الفطرية",
+  "en": "Fungal Skin Infections"
+ },
+ "teaser": {
+  "ar": "Tinea وTVC وCandida: التشخيص من الشكل والمكان، الأدوية الفموية ومحاذيرها الخطرة، ومدد العلاج الحقيقية.",
+  "en": "Tinea, TVC and Candida: diagnosis from appearance and location, oral drugs and their serious precautions, and the true treatment durations."
+ },
+ "chips": [
+  {
+   "ar": "Tinea",
+   "en": "Tinea"
   },
-  "teaser": {
-    "ar": "Tinea وTVC وCandida: التشخيص من الشكل والمكان، الأدوية الفموية ومحاذيرها الخطرة، ومدد العلاج الحقيقية."
+  {
+   "ar": "TVC",
+   "en": "TVC"
   },
-  "chips": [
-    {
-      "ar": "Tinea"
-    },
-    {
-      "ar": "TVC"
-    },
-    {
-      "ar": "Candida"
-    }
+  {
+   "ar": "Candida",
+   "en": "Candida"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>عدوى الجلد الفطرية بتتقسم لـ <b>3 مجموعات أساسية</b>. فهم المجموعة بيحدد الدواء ومدته، وفي كل نوع الشكل والمكان هما أهم علامة تشخيص.</p>[[slot:dis-149-groups|المجموعات الثلاث للفطريات الجلدية — رسم من إعداد الموقع|/diseases/img/dis-149-groups.svg]]<table><thead><tr><th>المجموعة</th><th>الأمراض</th><th>أهم مكان</th></tr></thead><tbody><tr><td><b>Dermatophyte = Tinea</b> (فطريات جلدية)</td><td>capitis (فروة الرأس)، corporis (الجسم)، Onychomycosis (الأظافر)، pedis & manum (القدم واليد)</td><td>حسب النوع</td></tr><tr><td><b>Pityriasis versicolor (TVC)</b></td><td>بقع فاتحة أو داكنة</td><td>الرقبة والظهر</td></tr><tr><td><b>Candidiasis = Moniliasis</b></td><td>نقط بيضاء حولها التهاب، ومثل التهاب الحفاض والتهاب الفم</td><td>مناطق رطبة (الحفاض، الفم)</td></tr></tbody></table><h4>إضافة: النخالية المبرقشة وفطريات أخرى (دليل الجلدية)</h4><ul><li><b>Tinea versicolor:</b> أشهر أنواع الفطريات، غالباً في الصيف بسبب الجو الحار الرطب والعرق. غالباً بقع فاتحة وأحياناً غامقة، متقشرة، وبتندمج لتصنع بقع أكبر، على الظهر والصدر والكتف والرقبة والذراع وتحت الإبط، وأحياناً بهرش. <b>غير معدية</b> ولا تنتقل من شخص لآخر عكس باقي التينيا.</li><li><b>Tinea circinata (corporis):</b> حلقات حمراء أطرافها مرتفعة بحويصلات والمركز طبيعي، غالباً <b>مش بتهرش</b> (حسب المراجع)، معدية.</li><li><b>Tinea pedis:</b> تقشير وهرش وشقوق بين صوابع القدم خصوصاً الرابع والخامس؛ بسبب الأحذية لمدة طويلة في جو حار ورطب، أو المشي حافي (رياضيين، جيش)؛ معدية.</li><li><b>Onychomycosis:</b> أشهر مشكلة في الأظافر: سماكة الظفر مع تغير لونه للأصفر أو الأبيض وتشققات وانفصال الظفر لو ما اتعالج.</li></ul>[[slot:dis-149-tinea-pedis-photo|صورة مطلوبة: Tinea pedis (تقشير وشقوق بين الأصابع)]]\n<h4>إضافة من المراجعة الشاملة</h4>\n[[slot:dis-149-p331|الفطريات الجلدية: الأنواع والعلاج والتثقيف — رسم من إعداد الموقع|/diseases/img/dis-149-p331.svg]]\n<p><b>Tinea</b> = السعفة (Ringworm)، و<b>Tinea pedis</b> = قدم الرياضي؛ وهي عدوى فطرية شديدة العدوى تعيش على سطح الجلد. الأعراض: طفح دائري بحافة حمراء ووسط شفاف، قشور، وحكة. في قدم الرياضي: رطوبة وحكة حول الأصابع.</p>",
+   "en": "<p>Fungal skin infections are divided into <b>3 main groups</b>. Understanding the group determines the drug and its duration, and in each type the appearance and location are the most important diagnostic sign.</p>[[slot:dis-149-groups|The three groups of skin fungi — illustration prepared by the site|/diseases/img/dis-149-groups.svg]]<table><thead><tr><th>Group</th><th>Diseases</th><th>Most important location</th></tr></thead><tbody><tr><td><b>Dermatophyte = Tinea</b> (skin fungi)</td><td>capitis (scalp), corporis (body), Onychomycosis (nails), pedis & manum (foot and hand)</td><td>Depends on the type</td></tr><tr><td><b>Pityriasis versicolor (TVC)</b></td><td>Light or dark patches</td><td>Neck and back</td></tr><tr><td><b>Candidiasis = Moniliasis</b></td><td>White dots surrounded by inflammation, such as diaper dermatitis and oral thrush</td><td>Moist areas (diaper area, mouth)</td></tr></tbody></table><h4>Addition: pityriasis versicolor and other fungi (dermatology guide)</h4><ul><li><b>Tinea versicolor:</b> the best-known type of fungus, usually in summer because of the hot humid weather and sweat. Mostly light patches and sometimes dark, scaly, and they merge to make larger patches, on the back, chest, shoulder, neck, arm and under the armpit, and sometimes itchy. <b>Not contagious</b> and does not pass from person to person unlike the other tineas.</li><li><b>Tinea circinata (corporis):</b> red rings with raised edges with vesicles and a normal-looking center, usually <b>not itchy</b> (according to the references), contagious.</li><li><b>Tinea pedis:</b> peeling, itching and cracks between the toes especially the fourth and fifth; due to wearing shoes for a long time in hot humid weather, or walking barefoot (athletes, army); contagious.</li><li><b>Onychomycosis:</b> the best-known nail problem: thickening of the nail with its color changing to yellow or white and cracks and detachment of the nail if untreated.</li></ul>[[slot:dis-149-tinea-pedis-photo|Photo needed: Tinea pedis (peeling and cracks between the toes)]]\n<h4>Addition from the comprehensive review</h4>\n[[slot:dis-149-p331|Skin fungi: types, treatment and teaching — illustration prepared by the site|/diseases/img/dis-149-p331.svg]]\n<p><b>Tinea</b> = ringworm (Ringworm), and <b>Tinea pedis</b> = athlete's foot; it is a highly contagious fungal infection living on the surface of the skin. Symptoms: a circular rash with a red border and clear center, scales, and itching. In athlete's foot: moisture and itching around the toes.</p>"
+  },
+  "causes": {
+   "ar": "<div class=\"cs-compare\"><ul><li><b>Dermatophytes:</b> فطريات تتغذى على الكيراتين: الجلد والشعر والأظافر؛ بتنتقل بالملامسة والأدوات والحيوانات</li><li><b>Pityriasis versicolor:</b> فطر الخميرة Malassezia الموجود طبيعياً على الجلد ويتكاثر مع الحر والرطوبة والعرق</li><li><b>Candida:</b> خميرة تتكاثر في الرطوبة والاحتكاك، ومع المضادات الحيوية الطويلة والسكر ونقص المناعة</li></ul></div><div class=\"cs-box cs-warning\"><strong>Candida في كبار السن</strong><p><b>ابحث عن سبب جهازي</b> مثل <b>السكر (DM)</b> أو <b>الإيدز (HIV)</b>، ويحتاج <b>مضاد فطريات جهازي</b> (systemic antifungal).</p></div>",
+   "en": "<div class=\"cs-compare\"><ul><li><b>Dermatophytes:</b> fungi that feed on keratin: skin, hair and nails; transmitted by contact, tools and animals</li><li><b>Pityriasis versicolor:</b> the yeast fungus Malassezia, normally present on the skin and multiplying with heat, moisture and sweat</li><li><b>Candida:</b> a yeast that multiplies in moisture and friction, and with prolonged antibiotics, sugar and immunodeficiency</li></ul></div><div class=\"cs-box cs-warning\"><strong>Candida in older adults</strong><p><b>Look for a systemic cause</b> such as <b>diabetes (DM)</b> or <b>AIDS (HIV)</b>, and it needs a <b>systemic antifungal</b> (systemic antifungal).</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>التشخيص والتوزيع (Diagnosis & distribution)</h4><table><thead><tr><th>النوع</th><th>العلامات</th></tr></thead><tbody><tr><td><b>Tinea capitis</b> (فروة الرأس)</td><td>مكانها فروة الرأس ولها <b>نوعين</b> ميفرقوش كتير في العلاج: <b>Black dot</b> (جزء في فروة الرأس كأنه محلوق بموس والشعر منبّت مكسور عند السطح) و<b>Grey patch</b> (قشرة بيضاء رمادية على منطقة أغمق)</td></tr><tr><td><b>Tinea pedis & manum</b></td><td>التهابات بين <b>أصابع اليد والقدم</b> وممكن يكون لونها <b>أبيض</b> (معطّن)</td></tr><tr><td><b>Tinea corporis (cercinata)</b></td><td>ممكن في أي مكان: آفة <b>دائرية</b> الجلد في المركز طبيعي والحافة <b>نشطة (active periphery)</b>، حدودها حمراء وممكن عليها <b>حويصلات</b> وغالباً تتلخبط مع غيرها من الآفات الحلقية</td></tr><tr><td><b>Onychomycosis</b></td><td>الظفر <b>يبقى لونه أبيض ويتخن ويتشوّه</b></td></tr><tr><td><b>Pityriasis versicolor (TVC)</b></td><td>بقع <b>فاتحة أو داكنة</b> (hypo/hyperpigmented macules) بتوزيع «<b>جاكيت قصير بكمّ طويل</b>» أشهر الأماكن: <b>الرقبة والظهر</b>. لو جلد الشخص فاتح هتبان غامقة، لو داكن هتبان فاتحة</td></tr><tr><td><b>Candidiasis</b></td><td>نقط بيضاء محاطة بالتهاب في مكان الحفاض (napkin). وفي الفم: <b>صعوبة رضاعة وطبقة بيضاء على اللسان</b> بعد مضادات حيوية طويلة</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>كيف نفرّق بين الآفات الحلقية؟ (Circinate lesions)</strong><ul><li><b>عدد الآفات يفرّق:</b> أكتر من 3 آفات (lesions) في الجسم = محتاج مضاد فطريات جهازي.</li><li><b>Herald patch of Pityriasis rosea:</b> توزيعها «جاكيت طويل بكم قصير» (long jacket short sleeves) وأحياناً نوع معكوس (inverted)؛ ما بتحترمش التوزيع؛ وتُعرف بـ <b>الاختبار العلاجي بمضاد الفطريات (antifungal therapeutic test)</b>.</li><li><b>الصدفية الحلقية (Circinate psoriasis):</b> تُشخَّص بـ <b>علامة Auspitz الإيجابية</b>: نزف نقطي بعد إزالة قشرة الصدفية يدوياً.</li></ul></div>[[slot:dis-149-tinea-photo|صورة: Tinea corporis (آفة حلقية بحافة نشطة) — تُرفع لاحقاً]][[slot:dis-149-tvc-photo|صورة: بقع الـ TVC على الظهر — تُرفع لاحقاً]][[slot:dis-149-candida-photo|صورة: Candida / Oral thrush — تُرفع لاحقاً]]<h4>إضافة: وصف كل نوع (إكلينيكي)</h4><table><thead><tr><th>النوع</th><th>الشكل والمكان</th></tr></thead><tbody><tr><td>Tinea circinata (القوباء الحلقية)</td><td>بقع دائرية بحافة حمراء متقشرة بها حويصلات وبثور ومركز صافي. على الأسطح المكشوفة من الجلد مع حكة</td></tr><tr><td>Favus (الجُدري الفطري/القراع)</td><td>قشرة مقعّرة مرتفعة صفراء على شكل طبق (saucer) تحيط بفتحة بصيلة الشعر تُسمى «كأس الكبريت» (sulphur cup) + بقع حمراء ± صلع (Alopecia)</td></tr><tr><td>Tinea cruris (الفخذ/الأربية)</td><td>بقعة حمراء محددة تنتشر من الأطراف ويصفى مركزها ± حويصلات ± حكة. أماكنها: الجزء الداخلي العلوي من الفخذ، الأرداف، منطقة العانة</td></tr><tr><td>Tinea versicolor (النخالية المبرقشة)</td><td>على الجذع والأجزاء المجاورة من الذراعين العلويين والرقبة: بقع متقشرة ملونة (أبيض أو بني أو وردي) قطرها من ملليمترات لسنتيمترات، بدون حكة</td></tr><tr><td>Tinea pedis (قدم الرياضي)</td><td>يُسمى كمان Dermatophytosis أو tinea of palms & soles. بين الأصابع جلد أبيض معطّن + حكة، أو حويصلات وفقاقيع + حكة وألم، أو تسمك الجلد (Hyperkeratosis) متفرق أو منتشر. ممكن يصل للأبط والركب والمرفق والأربية وكل مكان باسم مختلف (مثل Jock itch = tinea cruris)</td></tr><tr><td>Onychomycosis (فطر الأظافر)</td><td>ظفر هش ومتشقق مع سدادة متقرنة (hyperkeratotic plug) تحت الحافة الحرة</td></tr><tr><td>Cutaneous candidiasis (Moniliasis)</td><td>في الأماكن الرطبة: الفم (Oral thrush)، المهبل/الفرج، ثنيات الجلد في منطقة الحفاض، والحلمتين أثناء الرضاعة. تحدث أيضاً في أعضاء الذكر خصوصاً غير المختون</td></tr></tbody></table><h4>أسباب وبيئة نمو فطر القدم</h4><p>الجسم يحوي عادة كائنات «رمّية» (saprotrophic) منها نافع. الفطريات الجلدية (Dermatophytes) قد تنتقل من إنسان (anthropophilic) أو حيوان (zoophilic) أو تربة (geophilic). ينمو فطر قدم الرياضي في الأماكن المظلمة الدافئة الرطبة مثل داخل الأحذية، ويعيش طويلاً في غرف تبديل الملابس والحمامات المشتركة.</p><div class=\"cs-box cs-info\"><strong>Candida: معلومات أكتر</strong><p>حوالي ثلاثة أرباع النساء يصبن بالمونيليا مرة على الأقل؛ فطر Candida albicans موجود طبيعياً بمهبل أغلب النساء ولا يسبب مشاكل إلا لو اختل التوازن مع الفلورا الطبيعية (Lactobacilli) مثل استخدام الدش المهبلي، الحمل، حبوب منع الحمل، المضادات الحيوية، السكر. هو ثاني سبب شيوعاً لالتهاب المهبل (Vaginitis). الأطفال من 3–9 سنين قد يصابوا بفطريات فموية مزمنة (لطخ بيضاء حول الفم)، ومرضى نقص المناعة ممكن تنتشر العدوى للمريء وللدم (Fungemia). الأعراض المهبلية: حكة شديدة وحرقان والتهاب بالمهبل/الفرج وإفرازات بيضاء أو بيضاء رمادية.</p></div><h4>إضافة: الصورة الإكلينيكية</h4><table><thead><tr><th>المرض</th><th>العرض</th></tr></thead><tbody><tr><td>Tinea versicolor</td><td>أشهر أنواع التينيا، غالباً بيحصل في الصيف بسبب الجو الحار الرطب والعرق. بقع فاتحة (الأشهر) وأحياناً غامقة بتتضم وتكون بقع أكبر، وعليها قشور، وبتظهر أكتر على الظهر والصدر والكتف والرقبة والذراع وتحت الإبط (الجذع والرقبة والأطراف القريبة)، وفي بعض الحالات بتسبب هرش. <b>غير معدية</b> ولا تنتقل لآخر عكس باقي التينيا</td></tr><tr><td>Tinea cruris</td><td>بقع حمراء بأطراف مرتفعة عن الجلد ومعاها هرش، في الثنيات (فخذ، إبط، تحت الثدي)، شائعة في السكر والسمنة والحر. <b>معدية</b></td></tr><tr><td>Tinea circinata (corporis)</td><td>حلقات حمراء أطرافها مرتفعة فيها حويصلات ومركزها شكله طبيعي، غالباً مش بتهرش، <b>معدية</b></td></tr><tr><td>Tinea pedis (قدم الرياضي)</td><td>تقشير وهرش بين صوابع القدم خصوصاً بين الرابع والخامس؛ سببها لبس حذاء لفترات طويلة في الجو الحار الرطب أو المشي حافي (رياضيين وأفراد الجيش). معدية</td></tr><tr><td>Onychomycosis</td><td>أشهر مشكلة في الأظافر: زيادة سمك أظافر اليد أو القدم مع تغير لونها للأصفر أو الأبيض وتشققات وانفصالها لو لم تعالج</td></tr><tr><td>Candidiasis intertrigo / Erythrasma</td><td>راجع دليل طفح الثنيات (dis-362)</td></tr></tbody></table>",
+   "en": "<h4>Diagnosis and distribution (Diagnosis & distribution)</h4><table><thead><tr><th>Type</th><th>Signs</th></tr></thead><tbody><tr><td><b>Tinea capitis</b> (scalp)</td><td>Located on the scalp and has <b>two types</b> that do not differ much in treatment: <b>Black dot</b> (a part of the scalp as if shaved with a razor and the hair broken off at the surface) and <b>Grey patch</b> (a grey-white scale on a darker area)</td></tr><tr><td><b>Tinea pedis & manum</b></td><td>Infections between the <b>fingers and toes</b> and may be <b>white</b> (macerated)</td></tr><tr><td><b>Tinea corporis (cercinata)</b></td><td>May be anywhere: a <b>circular</b> lesion with normal skin in the center and an <b>active periphery</b>, its borders red and may have <b>vesicles</b> and often confused with other ring-shaped lesions</td></tr><tr><td><b>Onychomycosis</b></td><td>The nail <b>becomes white, thickens and deforms</b></td></tr><tr><td><b>Pityriasis versicolor (TVC)</b></td><td><b>Light or dark</b> patches (hypo/hyperpigmented macules) in a \"<b>short jacket with long sleeves</b>\" distribution, most common sites: <b>neck and back</b>. If the person's skin is light they appear dark, if dark they appear light</td></tr><tr><td><b>Candidiasis</b></td><td>White dots surrounded by inflammation in the diaper area (napkin). And in the mouth: <b>difficulty feeding and a white coating on the tongue</b> after prolonged antibiotics</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>How do we differentiate ring-shaped lesions? (Circinate lesions)</strong><ul><li><b>The number of lesions differentiates:</b> more than 3 lesions (lesions) on the body = needs a systemic antifungal.</li><li><b>Herald patch of Pityriasis rosea:</b> its distribution is a \"long jacket short sleeves\" and sometimes an inverted type; it does not respect the distribution; and is identified by the <b>antifungal therapeutic test</b>.</li><li><b>Circinate psoriasis:</b> diagnosed by a <b>positive Auspitz sign</b>: pinpoint bleeding after manually removing the psoriasis scale.</li></ul></div>[[slot:dis-149-tinea-photo|Photo: Tinea corporis (a ring lesion with an active border) — to be uploaded later]][[slot:dis-149-tvc-photo|Photo: TVC patches on the back — to be uploaded later]][[slot:dis-149-candida-photo|Photo: Candida / Oral thrush — to be uploaded later]]<h4>Addition: description of each type (clinical)</h4><table><thead><tr><th>Type</th><th>Appearance and location</th></tr></thead><tbody><tr><td>Tinea circinata (ringworm)</td><td>Circular patches with a red scaly border containing vesicles and pustules and a clear center. On exposed skin surfaces with itching</td></tr><tr><td>Favus</td><td>A raised concave yellow crust in the shape of a saucer (saucer) surrounding the hair follicle opening called a \"sulphur cup\" (sulphur cup) + red patches ± baldness (Alopecia)</td></tr><tr><td>Tinea cruris (thigh/groin)</td><td>A well-defined red patch spreading from the edges with a clearing center ± vesicles ± itching. Its sites: the upper inner thigh, buttocks, pubic area</td></tr><tr><td>Tinea versicolor (pityriasis versicolor)</td><td>On the trunk and adjacent parts of the upper arms and neck: scaly colored patches (white or brown or pink) with a diameter from millimeters to centimeters, without itching</td></tr><tr><td>Tinea pedis (athlete's foot)</td><td>Also called Dermatophytosis or tinea of palms & soles. Between the toes white macerated skin + itching, or vesicles and blisters + itching and pain, or thickening of the skin (Hyperkeratosis) scattered or diffuse. It can reach the armpits, knees, elbows, groin and everywhere under a different name (such as Jock itch = tinea cruris)</td></tr><tr><td>Onychomycosis (nail fungus)</td><td>A brittle cracked nail with a hyperkeratotic plug (hyperkeratotic plug) under the free edge</td></tr><tr><td>Cutaneous candidiasis (Moniliasis)</td><td>In moist places: the mouth (Oral thrush), vagina/vulva, skin folds in the diaper area, and the nipples during breastfeeding. It also occurs on male genitalia especially if uncircumcised</td></tr></tbody></table><h4>Causes and growth environment of foot fungus</h4><p>The body normally contains \"saprotrophic\" organisms (saprotrophic), some of them beneficial. Dermatophytes (Dermatophytes) may be transmitted from humans (anthropophilic), animals (zoophilic) or soil (geophilic). Athlete's foot fungus grows in dark warm moist places such as inside shoes, and lives long in changing rooms and shared bathrooms.</p><div class=\"cs-box cs-info\"><strong>Candida: more information</strong><p>About three quarters of women get moniliasis at least once; the fungus Candida albicans is normally present in the vagina of most women and causes no problems unless the balance with the normal flora (Lactobacilli) is disturbed such as using a vaginal douche, pregnancy, birth control pills, antibiotics, diabetes. It is the second most common cause of vaginitis (Vaginitis). Children from 3–9 years may get chronic oral fungus (white patches around the mouth), and in immunodeficient patients the infection can spread to the esophagus and the blood (Fungemia). Vaginal symptoms: severe itching and burning and inflammation of the vagina/vulva and white or grayish-white discharge.</p></div><h4>Addition: the clinical picture</h4><table><thead><tr><th>Disease</th><th>Symptom</th></tr></thead><tbody><tr><td>Tinea versicolor</td><td>The best-known type of tinea, usually occurring in summer because of the hot humid weather and sweat. Light patches (the most common) and sometimes dark merging to form larger patches, with scales, appearing most on the back, chest, shoulder, neck, arm and under the armpit (the trunk, neck and nearby limbs), and in some cases causing itching. <b>Not contagious</b> and does not pass to another unlike the other tineas</td></tr><tr><td>Tinea cruris</td><td>Red patches with edges raised from the skin and itching, in the folds (thigh, armpit, under the breast), common in diabetes, obesity and heat. <b>Contagious</b></td></tr><tr><td>Tinea circinata (corporis)</td><td>Red rings with raised edges containing vesicles and a normal-looking center, usually not itchy, <b>contagious</b></td></tr><tr><td>Tinea pedis (athlete's foot)</td><td>Peeling and itching between the toes especially between the fourth and fifth; caused by wearing shoes for long periods in hot humid weather or walking barefoot (athletes and army personnel). Contagious</td></tr><tr><td>Onychomycosis</td><td>The best-known nail problem: increased thickness of the fingernails or toenails with their color changing to yellow or white and cracks and detachment if not treated</td></tr><tr><td>Candidiasis intertrigo / Erythrasma</td><td>See the skin fold rash guide (dis-362)</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>فحص KOH مباشر</b> لقشور الجلد/الشعر/الظفر (يشوف الخيوط الفطرية)</li><li><b>مزرعة فطرية</b> أحياناً</li><li><b>ضوء وود (Wood's lamp):</b> بعض أنواع tinea capitis وTVC يتوهج</li><li>سكر الدم وفحص HIV عند Candida في كبار السن أو المتكررة</li><li>وظائف كبد قبل العلاج الفموي الطويل (خصوصاً Ketoconazole/Itraconazole/Terbinafine)</li><li>لو شك في صدفية: فحص Auspitz وتقييم الطبيب</li></ul><h4>إضافة: تحضير KOH والمزرعة</h4><p>تحضير KOH 10%: قطرة على كشطة الجلد على شريحة؛ KOH بيذيب خلايا الجلد ويترك الفطر: تحت المجهر تظهر خيوط (hyphae) وأبواغ كاذبة (pseudospores) وكثرتها تدل على عدوى خميرة. المزرعة: مسحة معقمة تُفرك على الجلد ثم على وسط زراعة وتحضن عدة أيام. <b>عوامل التهيؤ للمونيليا:</b> الحمل، السكر، متلازمة كوشينج، ضعف الصحة العامة، المضادات الحيوية الجهازية، الكورتيزون، حبوب منع الحمل.</p>",
+   "en": "<ul><li><b>Direct KOH exam</b> of skin scales/hair/nail (to see the fungal threads)</li><li><b>Fungal culture</b> sometimes</li><li><b>Wood's lamp (Wood's lamp):</b> some types of tinea capitis and TVC fluoresce</li><li>Blood glucose and HIV test with Candida in older adults or if recurrent</li><li>Liver function before long oral treatment (especially Ketoconazole/Itraconazole/Terbinafine)</li><li>If psoriasis is suspected: Auspitz test and physician evaluation</li></ul><h4>Addition: preparing KOH and the culture</h4><p>Preparing 10% KOH: a drop on a skin scraping on a slide; KOH dissolves skin cells and leaves the fungus: under the microscope threads (hyphae) and pseudospores (pseudospores) appear and their abundance indicates a yeast infection. The culture: a sterile swab is rubbed on the skin then on a culture medium and incubated for several days. <b>Predisposing factors for moniliasis:</b> pregnancy, diabetes, Cushing syndrome, poor general health, systemic antibiotics, cortisone, birth control pills.</p>"
+  },
+  "treatment": {
+   "ar": "<h4>العلاج ومدته</h4><div class=\"cs-box cs-info\"><strong>مضادات الفطريات الفموية — مقارنة</strong><table><thead><tr><th>الدواء</th><th>الجرعة</th><th>المدة</th></tr></thead><tbody><tr><td><b>Terbinafine 250 مجم</b> (اسمه في السوق Lamifine) <i>يؤخذ وسط الأكل</i>؛ ضد الفطريات الجلدية فقط</td><td>250 مجم/يوم</td><td>أسبوعين؛ في الأظافر (onychomycosis) 6 أسابيع لأظافر اليد و12 أسبوعاً لأظافر القدم</td></tr><tr><td><b>Griseofulvin</b> 10–20 مجم/كجم/يوم</td><td>—</td><td>6–8 أسابيع. كويس جداً في tinea capitis لكن قلّ استخدامه لأعراضه الجانبية الكثيرة وأهمها الصداع</td></tr><tr><td><b>Ketoconazole 200 مجم</b> (Ketazole) واسع الطيف</td><td>200 مجم/يوم</td><td>5 أيام في candidiasis، 10 أيام في TVC، 15 يوم في tinea</td></tr><tr><td><b>Itraconazole 100 مجم</b> (Itracan) واسع الطيف</td><td>كبسولة يومياً في tinea (أسبوعين)، كبسولتين لمدة أسبوع في TVC</td><td>حسب المرض</td></tr><tr><td><b>Fluconazole 150 مجم</b> (Flucazole) واسع الطيف</td><td>150 مجم <b>أسبوعياً</b></td><td>مدة العلاج حسب المرض: كبسولة واحدة مرة واحدة في candida، وكبسولتان مرة واحدة في TVC</td></tr></tbody></table></div><div class=\"cs-box cs-danger\"><strong>ممنوعات</strong><p><b>Fluconazole و Ketoconazole ممنوعين في:</b> الأطفال، الحوامل، المرضعات، ومرضى الكبد. <b>Itraconazole ممنوع في نفس الحالات + مرضى COPD والقلب (cardiac) وفقدان السمع (hearing loss)</b>.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>الكيتوكونازول <b>الفموي</b> لم يعد خياراً أول (سمية كبدية؛ تحذير FDA/EMA): الأفضل مضادات أخرى ولا يُستخدم إلا عند عدم وجود بديل وبمتابعة الكبد. والكيتوكونازول <b>الموضعي</b> (شامبو/كريم) آمن.</li><li>الـTerbinafine في الأظافر: الدليل المعتمد <b>6 أسابيع لأظافر اليد و12 أسبوعاً لأظافر القدم</b> (وليس 4 أسابيع)، وهو الخط الأول للأظافر وtinea capitis للبالغين. للأطفال: griseofulvin أو terbinafine بالوزن.</li><li>الـItraconazole ممنوع في فشل القلب (تأثير سلبي على الانقباض) ويتداخل مع أدوية كثيرة (ستاتين، وارفارين).</li><li>فلوكونازول 150 مجم أسبوعياً لمدة 2–4 أسابيع شائع لـ tinea، وجرعة وحيدة 150 مجم لـ candida المهبلية.</li></ul></div><h4>الوصفات الجاهزة</h4><table><thead><tr><th>الحالة</th><th>الوصفة</th></tr></thead><tbody><tr><td><b>Candida «Napkin dermatitis»</b></td><td><b>Dactacort cream</b> أو <b>Mycotral H</b>: دهان موضعي <b>مرتين يومياً</b> بعد التنشيف جيداً مع <b>المحافظة على مكان الالتهابات دايماً ناشف</b> • <b>Calamine lotion</b> 3 مرات يومياً</td></tr><tr><td><b>TVC</b></td><td><b>Nizapex shampoo</b> أو <b>Fungicure soap</b> للاستحمام <b>مرتين في الأسبوع</b> • <b>Miconaze cream</b> أو <b>Apexazole cream</b> مرتين في اليوم • <b>Flucazole 150</b>: <b>كبسولتين مرة واحدة</b>، أو كبسولة السبت ده والسبت اللي بعده، وفي حالة الكثرة بنخليها 4 أسابيع</td></tr><tr><td><b>Tinea circinata</b></td><td><b>Fungicure soap</b> مرتين في الأسبوع • <b>Tinea cure cream</b> أو <b>Batrifen cream</b> مرتين في اليوم • لو أكتر من 3 آفات: <b>Flucazole 150</b> كبسولة في الأسبوع لمدة 4 أسابيع</td></tr><tr><td><b>Onychomycosis</b></td><td>مضاد فطريات جهازي لمدة <b>3–6 شهور في اليد و3–9 شهور في القدم</b> • <b>Itracan 100 مجم</b>: كبسولتين مرتين يومياً (200 مجم مرتين) لمدة أسبوع ثم توقف 3 أسابيع، تُكرر شهرياً: دورتان لأظافر اليد وثلاث دورات لأظافر القدم (علاج نبضي)، أو <b>Flucazole 150</b> كبسولة مرة في الأسبوع لمدة 6 شهور</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تنبيه كورتيزون</strong><p>كريمات <b>Dactacort / Mycotral H</b> بتحتوي كورتيزون؛ استخدامها يكون لفترة قصيرة فقط لأن الكورتيزون وحده ممكن يغيّر شكل الفطر (tinea incognito) ويفاقمه، خاصة في الوجه والثنيات.</p></div><h4>إضافة: الوصفات التجارية حسب النوع (مرجع آخر)</h4><table><thead><tr><th>الحالة</th><th>الأدوية (الاسم التجاري)</th><th>الجرعة والمدة</th></tr></thead><tbody><tr><td>Tinea circinata</td><td>Grisofulvin F.P قرصين يومياً بعد الأكل • Tr.iodine 2% أو Tineacure lotion (مس مرتين يومياً) • Locasten أو Daktarin أو Nzoral cream أو Whitfield oint.</td><td>دهان موضعي مرتين يومياً</td></tr><tr><td>Tinea capitis (فروة الرأس عند الأطفال)</td><td>Grisofulvin F.P قرص لكل 10 كجم من وزن الجسم يومياً لمدة 6 أسابيع • Tr.iodine 2% أو Tineacure lotion أو Batrafen أو Daktarin cream</td><td>مرتين يومياً موضعياً</td></tr><tr><td>Tinea cruris</td><td>Grisofulvin F.P قرصين يومياً لمدة شهر أو Diflucan 150 مجم كبسولة مرة أسبوعياً 4 أسابيع • Tr.iodine 2% أو Castellani paint • Dermatin أو Lamisil أو Tineacure cream</td><td>مس/دهان مرتين يومياً</td></tr><tr><td>Tinea versicolor</td><td>صابون كبريت • Fluconazole 150 مجم: Diflucan أو Trichonal أو Flucoral • أو Nizoral قرص بعد الغداء وسط الأكل • Tr.iodine 2% أو Canesten lotion • شامبو Nizoral/Seboral/Nizapex/Curazole H • Dermatin أو Lamisil أو Tineacure cream</td><td>كبسولة أسبوعياً لمدة أسبوعين؛ Nizoral 10 أيام؛ الشامبو أسبوعياً 4 أسابيع؛ الدهان مرتين يومياً</td></tr><tr><td>Tinea pedis</td><td>نقع برمنجنات 1/8000 أو Boric acid lotion • Batrafen solution أو Trosyd 1% lotion • Trosyd cream أو Locasten cream • Miconaz powder • Diflucan 150 • Terbin قرص</td><td>النقع أو المس يومياً؛ Diflucan كبسولة أسبوعياً 4 أسابيع؛ Terbin قرص يومياً 6 أسابيع. يجب غسل الشراب في ماء مغلي يومياً</td></tr><tr><td>Onychomycosis</td><td>Lamisil 250 قرص يومياً 6–12 أسبوع (حسب المراجع) • Ketozole 200 قرص يومياً • Grisofulvin F.P • محلول Trosyd 28% للأظافر يُدهن بقضيب زجاجي على الظفر والمنطقة المحيطة • Lamisil أو Trosyd cream</td><td>حسب النشرة؛ Trosyd للأظافر مدة طويلة</td></tr><tr><td>Candida مهبلية</td><td>Gynozol تحاميل مهبلية • Fungican كبسولة</td><td>التحميلة يومياً ليلاً 1–2 أسبوع • Fungican كبسولة ثم تكرر بعد أسبوع</td></tr><tr><td>Candida جلدية</td><td>Castellani paint (تجنب نقع اليدين بالماء) • Mycostatin أو Miconaz أو Nystatin أو Daktarin cream • Diflucan 150 • Flucamox أو Erythrocin للعدوى البكتيرية المصاحبة وعلاج عوامل التهيؤ</td><td>دهان مرتين يومياً؛ Diflucan أسبوعياً 4 أسابيع؛ المضاد كل 6 ساعات</td></tr><tr><td>Oral thrush (فطر الفم)</td><td>Daktarin oral gel أو Miconaz oral gel أو Mycostatin oral drops أو fungistatin oral drops</td><td>الجل موضعياً على الفم واللسان 2–3 مرات يومياً؛ القطرات: ملء قطارة بالفم كل 6 ساعات</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>ملاحظات مهمة (N.B)</strong><p>Griseofulvin لا دور له في النخالية المبرقشة ولا الـ Candidiasis. في النخالية المبرقشة: التعرض الأشعة فوق البنفسجية/الشمس لاحقاً للمناطق الفاتحة، وغلي الملابس الداخلية يومياً، واستمرار العلاج حتى 6 أسابيع. فطر القدم: اغسل الشراب بماء مغلي يومياً.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Griseofulvin بجرعة فموية للأطفال 10–20 مجم/كجم/يوم (حسب الوزن) كما في الجدول الأعلى؛ «قرص لكل 10 كجم» تفسير المرجع للتبسيط ويختلف حسب تركيز القرص. Ketoconazole الفموي لم يعد خياراً أول لسمّية الكبد. Terbinafine (Lamisil) في أظافر القدم 12 أسبوعاً. Fluconazole أسبوعي لعدة أسابيع غير مرخص لكل الأنواع: بأمر الطبيب. Tr.iodine ممكن يهيّج الجلد ويصبغه ويضر الدرقية لو استُعمل مساحات واسعة. Castellani paint مستحضر قديم ملوّن؛ الأفضل كريمات الأزول أو Terbinafine الحديثة.</p></div><h4>إضافة: وصفات الجلدية</h4><h5>Tinea versicolor</h5><p>بتتحسن بالعلاج لكن لازم يفهم العيان إن البقع ممكن تفضل أسابيع أو شهور على ما تروح خالص وممكن تسيب أثر وممكن تتكرر كل صيف.</p><ul><li>استحمام باستمرار مع تنشيف المنطقة جيداً وارتداء ملابس قطنية واسعة</li><li>قبل الكريم أو الشامبو: اغسل المنطقة وانشفها جيداً</li><li>الشامبو في الصيف مرة أسبوعياً للوقاية؛ وعلاج التينيا في أي منطقة يُفضّل يصحبه علاج وقائي لفروة الرأس بالشامبو (لتجنب تكرار الإصابة)</li></ul><table><thead><tr><th>الحالة</th><th>المنتج</th><th>الاستخدام</th></tr></thead><tbody><tr><td>آفات صغيرة (الكريم أفضل)</td><td>Dermatin cream (clotrimazole 1%) • Miconaz cream (miconazole 2%) • Batrafen cream (ciclopirox 1%) • Lamisil cream (terbinafine 1%)</td><td>صباحاً ومساءً لمدة أسبوعين</td></tr><tr><td>آفات كبيرة أو منطقة مشعرة (الفروة): شامبو</td><td>Nizapex shampoo أو Nizoral shampoo (ketoconazole 2%)</td><td>مرة واحدة يومياً لمدة أسبوعين؛ يتساب 10 دقايق ثم يُشطف بالماء</td></tr><tr><td>حالات مقاومة</td><td>Selsun blue shampoo (selenium sulfide) — الأفضل لكن غالي</td><td>مرة يومياً لمدة أسبوعين؛ يتساب 10 دقايق ثم يُشطف</td></tr><tr><td>جهازي (Fluconazole هو الأفضل)</td><td>Flucoral caps (كبسولتين) • Fungican caps (كبسولة 150 مجم)</td><td>كبسولتين الآن ثم كبسولتين بعد أسبوع؛ <b>المريض ما ياخدش دش أول يوم ويبذل مجهود ليعرق</b> لأن الدواء بيتم إفرازه في العرق ويشتغل أحسن</td></tr></tbody></table>[[slot:dis-149-tv-rx|روشتة التينيا الملونة — Nizapex shampoo + Flucoral caps مع التعليمات على ظهر الروشتة — تُرفع لاحقاً]]<h5>Tinea circinata (corporis)</h5><ul><li>نفس التعليمات</li><li>كريم أو شامبو مضاد فطريات نفس المستخدم في Tinea versicolor لكن الجرعة: دهان صباحاً ومساءً لمدة أسبوع بعد اختفاء الحلقات</li><li>Systemic antifungals زي Tinea cruris</li></ul><h5>Tinea cruris</h5><ul><li>نفس التعليمات + كريم مركّب (مضاد فطريات + كورتيزون ضعيف: Dermatin-cort / Miconaz-H / Daktacort)</li><li>Terbinafine: Lamisil 250 أو Terbin 250 (7 أقراص) مرة يومياً من أسبوع إلى 4 أسابيع</li><li>Itraconazole: Itrapex 100 (15 كبسولة) كبسولتين في اليوم لمدة أسبوع</li></ul><h5>Tinea pedis</h5><ul><li>غسل القدم باستمرار مع تنشيفها جيداً خصوصاً بين الأصابع وارتداء شرابات قطنية</li><li>ما يستعملش فوطة أو حذاء أو شبشب خاص بشخص آخر</li><li>الهدوم والشرابات تتغسل وتتغلى كويس</li><li>تجنب ارتداء الأحذية بقدر الإمكان واترك القدم مكشوفة أثناء التواجد في البيت</li><li>عدم المشي حافياً في البيت أو أثناء التدريب حتى لا تنقل الفطر لشخص آخر؛ الفطر ينتعش دائماً في الجو الرطب وفي وجود الماء</li><li><b>بودرة</b> مضاد فطريات: Dermatin powder أو Miconaz powder بين الأصابع صباحاً ومساءً لمدة شهر ونصف</li><li>جهازي زي Tinea cruris</li></ul><h5>Onychomycosis</h5><p>العلاج مكلف لأن فترة العلاج طويلة، فلازم يفهم العيان طبيعة المشكلة من الأول ليلتزم؛ ولو لم تعالج بسرعة هتفضل عاملة للعيان مشكلة طول حياته.</p><table><thead><tr><th>النوع</th><th>المنتج</th><th>المدة</th></tr></thead><tbody><tr><td>موضعي (محلول أظافر)</td><td>Trosyd nail solution • Trozal nail solution</td><td>مرة يومياً لمدة شهر ونصف في أظافر اليد أو 3 شهور في أظافر القدم</td></tr><tr><td>جهازي</td><td>Lamisil 250 أو Terbin 250 (7 أقراص) قرص يومياً</td><td>شهر ونصف لليد، 3 شهور للقدم</td></tr><tr><td>جهازي</td><td>Itrapex 100 (15 كبسولة) كبسولتين في اليوم</td><td>شهر ونصف لليد، 3 شهور للقدم</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>مدة Terbinafine/Itraconazole المذكورة (شهر ونصف لليد و3 شهور للقدم) تقارب الدليل الحديث (6 أسابيع لليد و12 أسبوعاً للقدم لـ Terbinafine). Itraconazole ممنوع في فشل القلب والحمل وأمراض الكبد، وكل الأدوية الفموية تحتاج مراجعة الطبيب (الكبد والتداخلات). تينيا الفروة والأظافر تحتاج علاجاً جهازياً. Selenium sulfide آمن موضعياً. الشامبو يُفضّل عدم استخدامه على جروح الفروة.</p></div><h4>إضافة: وصفات دليل الجلدية (حسب النوع)</h4><h5>Tinea versicolor</h5><p>الحالة بتتحسن بالعلاج لكن لازم يفهم العيان إن البقع ممكن تفضل أسابيع أو شهور بعد زوال الفطر وممكن تتكرر كل صيف. تعليمات: الاستحمام باستمرار مع التنشيف الجيد وملابس قطنية واسعة. قبل الكريم أو الشامبو اغسل المنطقة وانشفها جيداً.</p><table><thead><tr><th>الحالة</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>آفات صغيرة (كريم)</td><td>Dermatin cream (clotrimazole 1%) • Miconaz cream (miconazole 2%) • Batrafen cream (ciclopirox 1%) • Lamisil cream (terbinafine 1%)</td><td>دهان صباحاً ومساءً لمدة أسبوعين</td></tr><tr><td>آفات كبيرة أو مناطق شعر (فروة)</td><td>Nizapex shampoo • Nizoral shampoo (ketoconazole 2%)</td><td>مرة يومياً لمدة أسبوعين؛ يتساب 10 دقائق ثم يشطف</td></tr><tr><td>حالات مقاومة</td><td>Selsun blue shampoo (selenium sulfide) — أفضل لكن غالي</td><td>مرة يومياً لمدة أسبوعين؛ 10 دقائق ثم يُشطف</td></tr><tr><td>جهازي (Fluconazole هو الأفضل)</td><td>Flucoral caps • Fungican caps (150 مجم)</td><td>كبسولتين الآن ثم كبسولتين بعد أسبوع</td></tr></tbody></table><ul><li>يُفضل الاستحمام بالشامبو مرة أسبوعياً في الصيف للوقاية</li><li>علاج التينيا في أي منطقة يُفضل أن يصحبه علاج وقائي لفروة الرأس بالشامبو (لعلاج أي إصابة قد تؤدي لسقوط قشور من الرأس وتكرار الإصابة)</li><li>نصيحة المريض مع Fluconazole: ما يحكش ويبذل مجهود في أول يوم ويخليه يعرق، لأن الدواء بيتم إفرازه في العرق وبكدة بيشتغل أحسن</li></ul><p><b>روشتة Tinea versicolor:</b> Nizapex shampoo مرة يومياً على البقع لمدة أسبوعين (تغسل البقع ثم تنشف ويوضع الشامبو ويترك 10 دقائق ثم يشطف) • Flucoral caps كبسولتين الآن ثم كبسولتين بعد أسبوع، مع كتابة التعليمات على ظهر الروشتة.</p><h5>Tinea circinata</h5><p>نفس الكريم أو الشامبو المستخدم في Tinea versicolor لكن الجرعة: دهان صباحاً ومساءً لمدة أسبوع بعد اختفاء الحلقات. جهازي: زي Tinea cruris.</p><h5>Tinea cruris</h5><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Lamisil 250 • Terbin 250 (terbinafine)</td><td>قرص مرة يومياً لمدة 1–4 أسابيع</td></tr><tr><td>Itrapex 100 (itraconazole)</td><td>كبسولتين في اليوم لمدة أسبوع</td></tr><tr><td>كريم مضاد فطريات + كورتيزون ضعيف</td><td>انظر دليل الثنيات (dis-362)</td></tr></tbody></table><h5>Tinea pedis</h5><ul><li>غسل القدم باستمرار مع تنشيفها جيداً خصوصاً بين الأصابع وارتداء شرابات قطنية</li><li>ما يستعملش فوطة أو حذاء أو شبشب شخص آخر</li><li>الهدوم والشرابات تتغسل وتتغلى كويس</li><li>تجنب ارتداء الأحذية بقدر الإمكان وحاول ترك القدم مكشوفة أثناء التواجد في البيت</li><li>عدم المشي حافياً في البيت أو أثناء التدريب حتى لا تنقل الفطر لشخص آخر (الفطر ينتعش دائماً في الجو الرطب وفي وجود الماء)</li></ul><table><thead><tr><th>الدواء</th><th>الطريقة</th></tr></thead><tbody><tr><td>Dermatin powder (clotrimazole)</td><td>بودرة بين الأصابع صباحاً ومساءً لمدة شهر ونصف</td></tr><tr><td>Miconaz powder (miconazole)</td><td>نفس الطريقة</td></tr><tr><td>جهازي</td><td>زي Tinea cruris</td></tr></tbody></table><h5>Onychomycosis (فطر الأظافر)</h5><ul><li>العلاج مكلف لأن فترة العلاج طويلة، فلازم يفهم العيان طبيعة المشكلة من الأول ويلتزم</li><li>إذا لم تعالج بسرعة هتفضل عاملة للعيان مشكلة طول حياته</li><li>نفس تعليمات تينيا القدم (التجفيف، شرابات قطن، عدم مشاركة الأدوات)</li></ul><table><thead><tr><th>الفئة</th><th>الدواء</th><th>المدة</th></tr></thead><tbody><tr><td>موضعي</td><td>Trosyd nail solution • Trozal nail solution</td><td>مرة يومياً لمدة شهر ونصف في أظافر اليد أو 3 شهور في أظافر القدم</td></tr><tr><td>جهازي</td><td>Lamisil 250 • Terbin 250</td><td>قرص يومياً شهر ونصف (يد) أو 3 شهور (قدم)</td></tr><tr><td>جهازي</td><td>Itrapex 100 (itraconazole)</td><td>كبسولتين في اليوم لنفس المدة (دورة مستمرة؛ والنبضي المذكور سابقاً بديل)</td></tr></tbody></table><h5>Candida الثنيات / Erythrasma</h5><p>راجع دليل «التهاب ثنيات الجلد» (dis-362). والنخالة الوردية/البيضاء في (dis-361).</p><h5>كريمات الفطريات المركبة بكورتيزون ضعيف</h5><table><thead><tr><th>الكريم</th><th>يحتوي</th></tr></thead><tbody><tr><td>Dermatin-cort</td><td>clotrimazole + كورتيزون ضعيف</td></tr><tr><td>Miconaz-H</td><td>miconazole + hydrocortisone</td></tr><tr><td>Daktacort</td><td>miconazole 2% + hydrocortisone 1%</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الكريمات المركبة لفترة قصيرة جداً (حتى زوال الهرش) ثم مضاد فطريات فقط. الشامبو والـ Fluconazole في TVC مذكور في المراجع؛ تم ربط كلاً بالجرعة المعتمدة (Fluconazole 300 مجم أسبوعياً × أسبوعين شائعة). أظافر القدم: Terbinafine 12 أسبوعاً (3 شهور)، الأظافر اليد 6 أسابيع (شهر ونصف).</p></div>\n<p><b>جريزيوفولفين</b> للسعفة وفروة الرأس: يستغرق <b>أسابيع إلى شهورًا</b>، <b>لا يُوقف</b> عند زوال الحكة، ويُمتص أفضل <b>بعد وجبة عالية الدهون</b>. <div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div></p>",
+   "en": "<h4>Treatment and its duration</h4><div class=\"cs-box cs-info\"><strong>Oral antifungals — comparison</strong><table><thead><tr><th>Drug</th><th>Dose</th><th>Duration</th></tr></thead><tbody><tr><td><b>Terbinafine 250 mg</b> (its market name is Lamifine) <i>taken in the middle of a meal</i>; against dermatophytes only</td><td>250 mg/day</td><td>Two weeks; in nails (onychomycosis) 6 weeks for fingernails and 12 weeks for toenails</td></tr><tr><td><b>Griseofulvin</b> 10–20 mg/kg/day</td><td>—</td><td>6–8 weeks. Very good in tinea capitis but its use has declined for its many side effects, the most important being headache</td></tr><tr><td><b>Ketoconazole 200 mg</b> (Ketazole) broad spectrum</td><td>200 mg/day</td><td>5 days in candidiasis, 10 days in TVC, 15 days in tinea</td></tr><tr><td><b>Itraconazole 100 mg</b> (Itracan) broad spectrum</td><td>A capsule daily in tinea (two weeks), two capsules for a week in TVC</td><td>Depending on the disease</td></tr><tr><td><b>Fluconazole 150 mg</b> (Flucazole) broad spectrum</td><td>150 mg <b>weekly</b></td><td>Duration of treatment depends on the disease: one capsule once in candida, and two capsules once in TVC</td></tr></tbody></table></div><div class=\"cs-box cs-danger\"><strong>Prohibitions</strong><p><b>Fluconazole and Ketoconazole are prohibited in:</b> children, pregnant women, breastfeeding women, and liver patients. <b>Itraconazole is prohibited in the same cases + COPD and cardiac patients and hearing loss (hearing loss)</b>.</p></div><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li><b>Oral</b> ketoconazole is no longer a first choice (liver toxicity; FDA/EMA warning): other antifungals are better and it is used only when there is no alternative and with liver monitoring. And <b>topical</b> ketoconazole (shampoo/cream) is safe.</li><li>Terbinafine in nails: the accepted guideline is <b>6 weeks for fingernails and 12 weeks for toenails</b> (not 4 weeks), and it is the first line for nails and tinea capitis in adults. For children: griseofulvin or terbinafine by weight.</li><li>Itraconazole is prohibited in heart failure (a negative effect on contraction) and interacts with many drugs (statins, warfarin).</li><li>Fluconazole 150 mg weekly for 2–4 weeks is common for tinea, and a single 150 mg dose for vaginal candida.</li></ul></div><h4>Ready prescriptions</h4><table><thead><tr><th>Condition</th><th>Prescription</th></tr></thead><tbody><tr><td><b>Candida \"Napkin dermatitis\"</b></td><td><b>Dactacort cream</b> or <b>Mycotral H</b>: topical application <b>twice daily</b> after drying well while <b>always keeping the inflamed area dry</b> • <b>Calamine lotion</b> 3 times daily</td></tr><tr><td><b>TVC</b></td><td><b>Nizapex shampoo</b> or <b>Fungicure soap</b> for bathing <b>twice a week</b> • <b>Miconaze cream</b> or <b>Apexazole cream</b> twice a day • <b>Flucazole 150</b>: <b>two capsules once</b>, or a capsule this Saturday and the Saturday after, and in extensive cases we make it 4 weeks</td></tr><tr><td><b>Tinea circinata</b></td><td><b>Fungicure soap</b> twice a week • <b>Tinea cure cream</b> or <b>Batrifen cream</b> twice a day • If more than 3 lesions: <b>Flucazole 150</b> a capsule a week for 4 weeks</td></tr><tr><td><b>Onychomycosis</b></td><td>A systemic antifungal for <b>3–6 months in the hand and 3–9 months in the foot</b> • <b>Itracan 100 mg</b>: two capsules twice daily (200 mg twice) for a week then stop for 3 weeks, repeated monthly: two cycles for fingernails and three cycles for toenails (pulse therapy), or <b>Flucazole 150</b> a capsule once a week for 6 months</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Cortisone warning</strong><p>The creams <b>Dactacort / Mycotral H</b> contain cortisone; their use should be for a short time only because cortisone alone may change the appearance of the fungus (tinea incognito) and worsen it, especially on the face and folds.</p></div><h4>Addition: commercial prescriptions by type (another reference)</h4><table><thead><tr><th>Condition</th><th>Drugs (brand name)</th><th>Dose and duration</th></tr></thead><tbody><tr><td>Tinea circinata</td><td>Grisofulvin F.P two tablets daily after food • Tr.iodine 2% or Tineacure lotion (painted twice daily) • Locasten or Daktarin or Nzoral cream or Whitfield oint.</td><td>Topical application twice daily</td></tr><tr><td>Tinea capitis (scalp in children)</td><td>Grisofulvin F.P a tablet per 10 kg of body weight daily for 6 weeks • Tr.iodine 2% or Tineacure lotion or Batrafen or Daktarin cream</td><td>Twice daily topically</td></tr><tr><td>Tinea cruris</td><td>Grisofulvin F.P two tablets daily for a month or Diflucan 150 mg a capsule once weekly 4 weeks • Tr.iodine 2% or Castellani paint • Dermatin or Lamisil or Tineacure cream</td><td>Painting/application twice daily</td></tr><tr><td>Tinea versicolor</td><td>Sulfur soap • Fluconazole 150 mg: Diflucan or Trichonal or Flucoral • or Nizoral a tablet after lunch in the middle of the meal • Tr.iodine 2% or Canesten lotion • Nizoral/Seboral/Nizapex/Curazole H shampoo • Dermatin or Lamisil or Tineacure cream</td><td>A capsule weekly for two weeks; Nizoral 10 days; the shampoo weekly 4 weeks; the application twice daily</td></tr><tr><td>Tinea pedis</td><td>Soaking in permanganate 1/8000 or Boric acid lotion • Batrafen solution or Trosyd 1% lotion • Trosyd cream or Locasten cream • Miconaz powder • Diflucan 150 • Terbin tablet</td><td>Soaking or painting daily; Diflucan a capsule weekly 4 weeks; Terbin a tablet daily 6 weeks. Socks must be washed in boiling water daily</td></tr><tr><td>Onychomycosis</td><td>Lamisil 250 a tablet daily 6–12 weeks (depending on the reference) • Ketozole 200 a tablet daily • Grisofulvin F.P • Trosyd 28% nail solution applied with a glass rod to the nail and the surrounding area • Lamisil or Trosyd cream</td><td>According to the leaflet; Trosyd for nails for a long time</td></tr><tr><td>Vaginal Candida</td><td>Gynozol vaginal suppositories • Fungican capsule</td><td>The suppository daily at night 1–2 weeks • Fungican a capsule then repeated after a week</td></tr><tr><td>Skin Candida</td><td>Castellani paint (avoid soaking the hands in water) • Mycostatin or Miconaz or Nystatin or Daktarin cream • Diflucan 150 • Flucamox or Erythrocin for the accompanying bacterial infection and treating the predisposing factors</td><td>Application twice daily; Diflucan weekly 4 weeks; the antibiotic every 6 hours</td></tr><tr><td>Oral thrush (oral fungus)</td><td>Daktarin oral gel or Miconaz oral gel or Mycostatin oral drops or fungistatin oral drops</td><td>The gel applied topically to the mouth and tongue 2–3 times daily; the drops: a filled dropper in the mouth every 6 hours</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Important notes (N.B)</strong><p>Griseofulvin has no role in pityriasis versicolor or Candidiasis. In pityriasis versicolor: later exposure of the light areas to ultraviolet/sunlight, boiling the underwear daily, and continuing treatment up to 6 weeks. Foot fungus: wash the socks in boiling water daily.</p></div><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Griseofulvin oral dose for children 10–20 mg/kg/day (by weight) as in the table above; \"a tablet per 10 kg\" is the reference's simplification and varies with tablet strength. Oral Ketoconazole is no longer a first choice because of liver toxicity. Terbinafine (Lamisil) in toenails 12 weeks. Weekly Fluconazole for several weeks is not licensed for all types: by physician order. Tr.iodine may irritate and stain the skin and harm the thyroid if used over wide areas. Castellani paint is an old colored preparation; azole creams or modern Terbinafine are better.</p></div><h4>Addition: dermatology guide prescriptions (by type)</h4><h5>Tinea versicolor</h5><p>It improves with treatment but the patient must understand that the patches may remain for weeks or months before disappearing completely and may leave a mark and may recur every summer.</p><ul><li>Bathing regularly with good drying of the area and wearing loose cotton clothing</li><li>Before the cream or shampoo: wash the area and dry it well</li><li>The shampoo once weekly in summer for prevention; and treatment of tinea in any area is preferably accompanied by preventive scalp treatment with the shampoo (to avoid recurrence)</li></ul><table><thead><tr><th>Condition</th><th>Product</th><th>Use</th></tr></thead><tbody><tr><td>Small lesions (the cream is better)</td><td>Dermatin cream (clotrimazole 1%) • Miconaz cream (miconazole 2%) • Batrafen cream (ciclopirox 1%) • Lamisil cream (terbinafine 1%)</td><td>Morning and evening for two weeks</td></tr><tr><td>Large lesions or a hairy area (scalp): shampoo</td><td>Nizapex shampoo or Nizoral shampoo (ketoconazole 2%)</td><td>Once daily for two weeks; left on for 10 minutes then rinsed with water</td></tr><tr><td>Resistant cases</td><td>Selsun blue shampoo (selenium sulfide) — the best but expensive</td><td>Once daily for two weeks; left on for 10 minutes then rinsed</td></tr><tr><td>Systemic (Fluconazole is the best)</td><td>Flucoral caps (two capsules) • Fungican caps (a 150 mg capsule)</td><td>Two capsules now then two capsules after a week; <b>the patient should not shower the first day and should exert himself to sweat</b> because the drug is secreted in sweat and works better</td></tr></tbody></table>[[slot:dis-149-tv-rx|Prescription for tinea versicolor — Nizapex shampoo + Flucoral caps with the instructions on the back of the prescription — to be uploaded later]]<h5>Tinea circinata (corporis)</h5><ul><li>The same instructions</li><li>An antifungal cream or shampoo the same as used in Tinea versicolor but the dose: application morning and evening for a week after the rings disappear</li><li>Systemic antifungals like Tinea cruris</li></ul><h5>Tinea cruris</h5><ul><li>The same instructions + a combination cream (antifungal + weak cortisone: Dermatin-cort / Miconaz-H / Daktacort)</li><li>Terbinafine: Lamisil 250 or Terbin 250 (7 tablets) once daily from a week to 4 weeks</li><li>Itraconazole: Itrapex 100 (15 capsules) two capsules a day for a week</li></ul><h5>Tinea pedis</h5><ul><li>Washing the foot regularly with good drying especially between the toes and wearing cotton socks</li><li>Do not use another person's towel, shoes or slippers</li><li>Clothes and socks are washed and boiled well</li><li>Avoid wearing shoes as much as possible and leave the foot uncovered while at home</li><li>Do not walk barefoot at home or during training so as not to pass the fungus to another person; the fungus always thrives in humid weather and in the presence of water</li><li>Antifungal <b>powder</b>: Dermatin powder or Miconaz powder between the toes morning and evening for a month and a half</li><li>Systemic like Tinea cruris</li></ul><h5>Onychomycosis</h5><p>Treatment is costly because the treatment period is long, so the patient must understand the nature of the problem from the start to comply; and if not treated quickly it will remain a problem for the patient his whole life.</p><table><thead><tr><th>Type</th><th>Product</th><th>Duration</th></tr></thead><tbody><tr><td>Topical (nail solution)</td><td>Trosyd nail solution • Trozal nail solution</td><td>Once daily for a month and a half in fingernails or 3 months in toenails</td></tr><tr><td>Systemic</td><td>Lamisil 250 or Terbin 250 (7 tablets) a tablet daily</td><td>A month and a half for the hand, 3 months for the foot</td></tr><tr><td>Systemic</td><td>Itrapex 100 (15 capsules) two capsules a day</td><td>A month and a half for the hand, 3 months for the foot</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The Terbinafine/Itraconazole durations mentioned (a month and a half for the hand and 3 months for the foot) approximate the modern guideline (6 weeks for the hand and 12 weeks for the foot for Terbinafine). Itraconazole is prohibited in heart failure, pregnancy and liver disease, and all oral drugs need physician review (liver and interactions). Scalp and nail tinea need systemic treatment. Selenium sulfide is safe topically. The shampoo is preferably not used on scalp wounds.</p></div><h4>Addition: prescriptions from the dermatology guide (by type)</h4><h5>Tinea versicolor</h5><p>The condition improves with treatment but the patient must understand that the patches may remain for weeks or months after the fungus is gone and may recur every summer. Instructions: bathing regularly with good drying and loose cotton clothing. Before the cream or shampoo wash the area and dry it well.</p><table><thead><tr><th>Condition</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Small lesions (cream)</td><td>Dermatin cream (clotrimazole 1%) • Miconaz cream (miconazole 2%) • Batrafen cream (ciclopirox 1%) • Lamisil cream (terbinafine 1%)</td><td>Application morning and evening for two weeks</td></tr><tr><td>Large lesions or hairy areas (scalp)</td><td>Nizapex shampoo • Nizoral shampoo (ketoconazole 2%)</td><td>Once daily for two weeks; left on 10 minutes then rinsed</td></tr><tr><td>Resistant cases</td><td>Selsun blue shampoo (selenium sulfide) — better but expensive</td><td>Once daily for two weeks; 10 minutes then rinsed</td></tr><tr><td>Systemic (Fluconazole is the best)</td><td>Flucoral caps • Fungican caps (150 mg)</td><td>Two capsules now then two capsules after a week</td></tr></tbody></table><ul><li>It is preferable to bathe with the shampoo once weekly in summer for prevention</li><li>Treatment of tinea in any area is preferably accompanied by preventive scalp treatment with the shampoo (to treat any infection that may cause scales to fall from the head and recurrence)</li><li>Advice to the patient with Fluconazole: do not shower and exert himself on the first day and make himself sweat, because the drug is secreted in sweat and thus works better</li></ul><p><b>Tinea versicolor prescription:</b> Nizapex shampoo once daily on the patches for two weeks (the patches are washed then dried and the shampoo is applied and left 10 minutes then rinsed) • Flucoral caps two capsules now then two capsules after a week, with the instructions written on the back of the prescription.</p><h5>Tinea circinata</h5><p>The same cream or shampoo used in Tinea versicolor but the dose: application morning and evening for a week after the rings disappear. Systemic: like Tinea cruris.</p><h5>Tinea cruris</h5><table><thead><tr><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Lamisil 250 • Terbin 250 (terbinafine)</td><td>A tablet once daily for 1–4 weeks</td></tr><tr><td>Itrapex 100 (itraconazole)</td><td>Two capsules a day for a week</td></tr><tr><td>Antifungal cream + weak cortisone</td><td>See the folds guide (dis-362)</td></tr></tbody></table><h5>Tinea pedis</h5><ul><li>Washing the foot regularly with good drying especially between the toes and wearing cotton socks</li><li>Do not use another person's towel, shoes or slippers</li><li>Clothes and socks are washed and boiled well</li><li>Avoid wearing shoes as much as possible and try to leave the foot uncovered while at home</li><li>Do not walk barefoot at home or during training so as not to pass the fungus to another person (the fungus always thrives in humid weather and in the presence of water)</li></ul><table><thead><tr><th>Drug</th><th>Method</th></tr></thead><tbody><tr><td>Dermatin powder (clotrimazole)</td><td>Powder between the toes morning and evening for a month and a half</td></tr><tr><td>Miconaz powder (miconazole)</td><td>The same way</td></tr><tr><td>Systemic</td><td>Like Tinea cruris</td></tr></tbody></table><h5>Onychomycosis (nail fungus)</h5><ul><li>Treatment is costly because the treatment period is long, so the patient must understand the nature of the problem from the start and comply</li><li>If not treated quickly it will remain a problem for the patient his whole life</li><li>The same instructions as tinea pedis (drying, cotton socks, not sharing tools)</li></ul><table><thead><tr><th>Category</th><th>Drug</th><th>Duration</th></tr></thead><tbody><tr><td>Topical</td><td>Trosyd nail solution • Trozal nail solution</td><td>Once daily for a month and a half in fingernails or 3 months in toenails</td></tr><tr><td>Systemic</td><td>Lamisil 250 • Terbin 250</td><td>A tablet daily a month and a half (hand) or 3 months (foot)</td></tr><tr><td>Systemic</td><td>Itrapex 100 (itraconazole)</td><td>Two capsules a day for the same duration (a continuous course; and the pulse mentioned earlier is an alternative)</td></tr></tbody></table><h5>Fold Candida / Erythrasma</h5><p>See the guide \"skin fold inflammation\" (dis-362). And pityriasis rosea/alba in (dis-361).</p><h5>Antifungal creams combined with weak cortisone</h5><table><thead><tr><th>The cream</th><th>Contains</th></tr></thead><tbody><tr><td>Dermatin-cort</td><td>clotrimazole + weak cortisone</td></tr><tr><td>Miconaz-H</td><td>miconazole + hydrocortisone</td></tr><tr><td>Daktacort</td><td>miconazole 2% + hydrocortisone 1%</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Combination creams for a very short time (until the itching goes away) then an antifungal only. The shampoo and Fluconazole in TVC are mentioned in the references; each was tied to the accepted dose (Fluconazole 300 mg weekly × two weeks is common). Toenails: Terbinafine 12 weeks (3 months), fingernails 6 weeks (a month and a half).</p></div>\n<p><b>Griseofulvin</b> for ringworm and the scalp: takes <b>weeks to months</b>, is <b>not stopped</b> when the itching goes away, and is absorbed better <b>after a high-fat meal</b>. <div class=\"cs-box cs-info\"><strong>Note</strong><p>Doses are for learning; always verify with the physician/pharmacist.</p></div></p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل واقرأ الجلد</strong><p>المكان، العدد، الحكة، تاريخ الأدوية (كورتيزون؟ مضاد حيوي طويل؟)، السكر، الحيوانات الأليفة، أدوات مشتركة. افحص بين الأصابع والأظافر والفروة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اجمع العينات</strong><p>اكشط القشور من الحافة النشطة بشفرة معقمة (للـ KOH)، وانتق الشعر المكسور في الفروة. سجّل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>تحقق قبل الدواء الفموي</strong><p>وظائف الكبد، الحمل/الرضاعة، العمر (أطفال)، أمراض القلب/COPD (Itraconazole)، وأدوية أخرى بتتداخل. بلّغ لو في مانع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>تعليمات التناول</strong><p>Terbinafine وسط الأكل؛ تناول Itraconazole مع وجبة دسمة (الكبسولة) ويُفضّل بمشروب حمضي؛ Fluconazole أسبوعي في نفس اليوم. سجّل الموعد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب الآثار الجانبية</strong><p>صداع (Griseofulvin)، غثيان، طفح، اصفرار/بول داكن (كبد)، تغير الطعم (Terbinafine)، اضطراب نظم/تورم رجلين (Itraconazole).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>عناية الجلد</strong><p>نظف وجفف الثنيات جيداً، قطن بدل النايلون، تغيير الحفاض بسرعة. للأظافر: قص الظفر بشكل مستقيم وأدوات خاصة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>نبّه على التكرار</strong><p>العلاج لازم يكمل المدة؛ الظفر ياخد شهور عشان يتجدد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>سجّل</strong><p>الصور والمقاسات والاستجابة، والتثقيف.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>مضادات الفطريات الفموية <b>مجموعة مؤثرة على الكبد وبتتداخل مع أدوية كثيرة</b>. لا تُعطَ لحامل أو طفل أو مريض كبد أو قلب بدون مراجعة الطبيب. وأي <b>اصفرار أو بول غامق أو براز فاتح أو غثيان شديد</b> = أوقف وبلّغ.</p></div><h4>إضافة: نقاط تمريض مرتبطة بالمستحضرات</h4><ul><li>Tr.iodine وCastellani: مواد ملونة بتبقّع الملابس وممكن تهيّج؛ اختبر على مساحة صغيرة وتجنب الجلد المجروح.</li><li>Diflucan/Fungican: اسأل عن الحمل وأمراض الكبد، وتفاعلات (warfarin، statins).</li><li>تحضير KOH: اكشط من الحافة النشطة بشفرة معقمة وضع في وعاء نظيف.</li><li>فطر القدم: علّم المريض تجفيف ما بين الأصابع، وغسل الشراب بماء مغلي يومياً، وعدم المشي حافياً في الحمامات العامة.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Ask and read the skin</strong><p>Location, number, itching, drug history (cortisone? prolonged antibiotic?), diabetes, pets, shared tools. Examine between the toes, the nails and the scalp.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Collect samples</strong><p>Scrape scales from the active border with a sterile blade (for KOH), and pluck broken hair in the scalp. Record.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Check before an oral drug</strong><p>Liver function, pregnancy/breastfeeding, age (children), heart disease/COPD (Itraconazole), and other interacting drugs. Report if there is a contraindication.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Instructions for taking</strong><p>Terbinafine in the middle of a meal; take Itraconazole (the capsule) with a fatty meal and preferably with an acidic drink; Fluconazole weekly on the same day. Record the appointment.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Monitor side effects</strong><p>Headache (Griseofulvin), nausea, rash, yellowing/dark urine (liver), taste change (Terbinafine), dysrhythmia/leg swelling (Itraconazole).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Skin care</strong><p>Clean and dry the folds well, cotton instead of nylon, change the diaper quickly. For nails: cut the nail straight and use separate tools.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Warn about recurrence</strong><p>Treatment must complete the duration; the nail takes months to renew.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Record</strong><p>Photos, measurements and response, and the teaching.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Oral antifungals are <b>a group that affects the liver and interacts with many drugs</b>. Do not give to a pregnant woman, a child or a liver or heart patient without physician review. And any <b>yellowing, dark urine, pale stool or severe nausea</b> = stop and report.</p></div><h4>Addition: nursing points related to the preparations</h4><ul><li>Tr.iodine and Castellani: colored substances that stain clothes and may irritate; test on a small area and avoid broken skin.</li><li>Diflucan/Fungican: ask about pregnancy and liver disease, and interactions (warfarin, statins).</li><li>Preparing KOH: scrape from the active border with a sterile blade and put in a clean container.</li><li>Foot fungus: teach the patient to dry between the toes, wash the socks in boiling water daily, and not walk barefoot in public bathrooms.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب لو:</strong><ul><li>اصفرار العين/الجلد، بول داكن، ألم أعلى البطن (كبد)</li><li>تورم القدمين وضيق نفس (مع Itraconazole)</li><li>طفح شديد أو حساسية أو فقاعات أو حرق</li><li>Candida متكررة أو شديدة (سكر؟ HIV؟)</li><li>فطريات الفروة عند الأطفال (تحتاج جهازي)</li><li>عدم تحسن بعد المدة المناسبة أو انتشار سريع</li><li>التهاب الظفر مع ألم وصديد (عدوى بكتيرية)</li><li>حمل أو رضاعة أثناء العلاج</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician if:</strong><ul><li>Yellowing of the eyes/skin, dark urine, upper abdominal pain (liver)</li><li>Swelling of the feet and shortness of breath (with Itraconazole)</li><li>Severe rash or allergy or blisters or burning</li><li>Recurrent or severe Candida (diabetes? HIV?)</li><li>Scalp fungus in children (needs systemic treatment)</li><li>No improvement after the appropriate duration or rapid spread</li><li>Nail inflammation with pain and pus (bacterial infection)</li><li>Pregnancy or breastfeeding during treatment</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>الفطريات بتحب الرطوبة: جفف الجلد جيداً خصوصاً بين الأصابع والثنيات.</li><li>لا تشارك المنشفة أو الشراب أو الأحذية أو المشط.</li><li>القطن أفضل من النايلون، وغيّر الشراب يومياً.</li><li>أكمل مدة الدواء حتى لو الجلد بقى كويس (الظفر شهور).</li><li>لا تستعمل كريمات الكورتيزون لوحدها على فطريات.</li><li>Fluconazole أسبوعي: خد الجرعة في نفس اليوم؛ ما تضاعفش لو نسيت.</li><li>الحيوانات الأليفة ممكن تنقل الفطر: اعرضها على بيطري.</li><li>الحفاض: غيّر بسرعة، نظف وجفف، ومرهم حاجز.</li></ul><ul><li>النخالية المبرقشة غير معدية، لكن الفطر في القدم والفخذ والجسم معدي.</li><li>البقع الفاتحة ممكن تفضل شهور بعد العلاج، وتتكرر في الصيف: استخدم الشامبو أسبوعياً في الصيف.</li></ul>\n<ul><li><b>الأولوية في Tinea corporis:</b> أهم شيء تعليم طرق منع الانتشار؛ لا مشاركة فرش أو مناشف أو قبعات أو ملابس.</li><li>قدم الرياضي: جوارب قطنية، أصابع نظيفة وجافة، ونقع الأصابع في محلول بورو (Burow).</li></ul>",
+   "en": "<ul><li>Fungi love moisture: dry the skin well especially between the toes and in the folds.</li><li>Do not share the towel, socks, shoes or comb.</li><li>Cotton is better than nylon, and change the socks daily.</li><li>Complete the drug duration even if the skin looks good (the nail takes months).</li><li>Do not use cortisone creams alone on fungus.</li><li>Weekly Fluconazole: take the dose on the same day; do not double if you forget.</li><li>Pets can pass the fungus: have them seen by a veterinarian.</li><li>Diaper: change quickly, clean and dry, and a barrier ointment.</li></ul><ul><li>Pityriasis versicolor is not contagious, but fungus in the foot, groin and body is contagious.</li><li>The light patches may remain for months after treatment, and recur in summer: use the shampoo weekly in summer.</li></ul>\n<ul><li><b>The priority in Tinea corporis:</b> the most important thing is teaching ways to prevent spread; no sharing of brushes, towels, hats or clothes.</li><li>Athlete's foot: cotton socks, clean dry toes, and soaking the toes in Burow's solution (Burow).</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "3 مجموعات: فطريات جلدية (Tinea)، TVC، Candida",
+   "Tinea corporis: دائرة بحافة نشطة؛ أكتر من 3 آفات = علاج جهازي",
+   "TVC: بقع فاتحة/داكنة بتوزيع «جاكيت قصير بكم طويل» على الرقبة والظهر",
+   "Candida: نقط بيضاء حولها التهاب؛ في كبار السن ابحث عن السكر/HIV",
+   "Fluconazole وKetoconazole ممنوعين في الأطفال والحوامل والمرضعات والكبد؛ وItraconazole + COPD والقلب والسمع",
+   "الأظافر: علاج جهازي شهور (اليد 3–6، القدم 3–9) مع وظائف كبد",
+   "حافظ على المنطقة جافة ونظيفة",
+   "Favus: كأس الكبريت (sulphur cup) علامة مميزة؛ Griseofulvin لا يفيد في النخالية ولا الكانديدا.",
+   "Tinea: فطريات؛ جريزيوفولفين مع وجبة دسمة ولا يُوقف مبكرًا؛ منع الانتشار أولوية"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>عدوى الجلد الفطرية بتتقسم لـ <b>3 مجموعات أساسية</b>. فهم المجموعة بيحدد الدواء ومدته، وفي كل نوع الشكل والمكان هما أهم علامة تشخيص.</p>[[slot:dis-149-groups|المجموعات الثلاث للفطريات الجلدية — رسم من إعداد الموقع|/diseases/img/dis-149-groups.svg]]<table><thead><tr><th>المجموعة</th><th>الأمراض</th><th>أهم مكان</th></tr></thead><tbody><tr><td><b>Dermatophyte = Tinea</b> (فطريات جلدية)</td><td>capitis (فروة الرأس)، corporis (الجسم)، Onychomycosis (الأظافر)، pedis & manum (القدم واليد)</td><td>حسب النوع</td></tr><tr><td><b>Pityriasis versicolor (TVC)</b></td><td>بقع فاتحة أو داكنة</td><td>الرقبة والظهر</td></tr><tr><td><b>Candidiasis = Moniliasis</b></td><td>نقط بيضاء حولها التهاب، ومثل التهاب الحفاض والتهاب الفم</td><td>مناطق رطبة (الحفاض، الفم)</td></tr></tbody></table><h4>إضافة: النخالية المبرقشة وفطريات أخرى (دليل الجلدية)</h4><ul><li><b>Tinea versicolor:</b> أشهر أنواع الفطريات، غالباً في الصيف بسبب الجو الحار الرطب والعرق. غالباً بقع فاتحة وأحياناً غامقة، متقشرة، وبتندمج لتصنع بقع أكبر، على الظهر والصدر والكتف والرقبة والذراع وتحت الإبط، وأحياناً بهرش. <b>غير معدية</b> ولا تنتقل من شخص لآخر عكس باقي التينيا.</li><li><b>Tinea circinata (corporis):</b> حلقات حمراء أطرافها مرتفعة بحويصلات والمركز طبيعي، غالباً <b>مش بتهرش</b> (حسب المراجع)، معدية.</li><li><b>Tinea pedis:</b> تقشير وهرش وشقوق بين صوابع القدم خصوصاً الرابع والخامس؛ بسبب الأحذية لمدة طويلة في جو حار ورطب، أو المشي حافي (رياضيين، جيش)؛ معدية.</li><li><b>Onychomycosis:</b> أشهر مشكلة في الأظافر: سماكة الظفر مع تغير لونه للأصفر أو الأبيض وتشققات وانفصال الظفر لو ما اتعالج.</li></ul>[[slot:dis-149-tinea-pedis-photo|صورة مطلوبة: Tinea pedis (تقشير وشقوق بين الأصابع)]]\n<h4>إضافة من المراجعة الشاملة</h4>\n[[slot:dis-149-p331|الفطريات الجلدية: الأنواع والعلاج والتثقيف — رسم من إعداد الموقع|/diseases/img/dis-149-p331.svg]]\n<p><b>Tinea</b> = السعفة (Ringworm)، و<b>Tinea pedis</b> = قدم الرياضي؛ وهي عدوى فطرية شديدة العدوى تعيش على سطح الجلد. الأعراض: طفح دائري بحافة حمراء ووسط شفاف، قشور، وحكة. في قدم الرياضي: رطوبة وحكة حول الأصابع.</p>"
-    },
-    "causes": {
-      "ar": "<div class=\"cs-compare\"><ul><li><b>Dermatophytes:</b> فطريات تتغذى على الكيراتين: الجلد والشعر والأظافر؛ بتنتقل بالملامسة والأدوات والحيوانات</li><li><b>Pityriasis versicolor:</b> فطر الخميرة Malassezia الموجود طبيعياً على الجلد ويتكاثر مع الحر والرطوبة والعرق</li><li><b>Candida:</b> خميرة تتكاثر في الرطوبة والاحتكاك، ومع المضادات الحيوية الطويلة والسكر ونقص المناعة</li></ul></div><div class=\"cs-box cs-warning\"><strong>Candida في كبار السن</strong><p><b>ابحث عن سبب جهازي</b> مثل <b>السكر (DM)</b> أو <b>الإيدز (HIV)</b>، ويحتاج <b>مضاد فطريات جهازي</b> (systemic antifungal).</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>التشخيص والتوزيع (Diagnosis & distribution)</h4><table><thead><tr><th>النوع</th><th>العلامات</th></tr></thead><tbody><tr><td><b>Tinea capitis</b> (فروة الرأس)</td><td>مكانها فروة الرأس ولها <b>نوعين</b> ميفرقوش كتير في العلاج: <b>Black dot</b> (جزء في فروة الرأس كأنه محلوق بموس والشعر منبّت مكسور عند السطح) و<b>Grey patch</b> (قشرة بيضاء رمادية على منطقة أغمق)</td></tr><tr><td><b>Tinea pedis & manum</b></td><td>التهابات بين <b>أصابع اليد والقدم</b> وممكن يكون لونها <b>أبيض</b> (معطّن)</td></tr><tr><td><b>Tinea corporis (cercinata)</b></td><td>ممكن في أي مكان: آفة <b>دائرية</b> الجلد في المركز طبيعي والحافة <b>نشطة (active periphery)</b>، حدودها حمراء وممكن عليها <b>حويصلات</b> وغالباً تتلخبط مع غيرها من الآفات الحلقية</td></tr><tr><td><b>Onychomycosis</b></td><td>الظفر <b>يبقى لونه أبيض ويتخن ويتشوّه</b></td></tr><tr><td><b>Pityriasis versicolor (TVC)</b></td><td>بقع <b>فاتحة أو داكنة</b> (hypo/hyperpigmented macules) بتوزيع «<b>جاكيت قصير بكمّ طويل</b>» أشهر الأماكن: <b>الرقبة والظهر</b>. لو جلد الشخص فاتح هتبان غامقة، لو داكن هتبان فاتحة</td></tr><tr><td><b>Candidiasis</b></td><td>نقط بيضاء محاطة بالتهاب في مكان الحفاض (napkin). وفي الفم: <b>صعوبة رضاعة وطبقة بيضاء على اللسان</b> بعد مضادات حيوية طويلة</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>كيف نفرّق بين الآفات الحلقية؟ (Circinate lesions)</strong><ul><li><b>عدد الآفات يفرّق:</b> أكتر من 3 آفات (lesions) في الجسم = محتاج مضاد فطريات جهازي.</li><li><b>Herald patch of Pityriasis rosea:</b> توزيعها «جاكيت طويل بكم قصير» (long jacket short sleeves) وأحياناً نوع معكوس (inverted)؛ ما بتحترمش التوزيع؛ وتُعرف بـ <b>الاختبار العلاجي بمضاد الفطريات (antifungal therapeutic test)</b>.</li><li><b>الصدفية الحلقية (Circinate psoriasis):</b> تُشخَّص بـ <b>علامة Auspitz الإيجابية</b>: نزف نقطي بعد إزالة قشرة الصدفية يدوياً.</li></ul></div>[[slot:dis-149-tinea-photo|صورة: Tinea corporis (آفة حلقية بحافة نشطة) — تُرفع لاحقاً]][[slot:dis-149-tvc-photo|صورة: بقع الـ TVC على الظهر — تُرفع لاحقاً]][[slot:dis-149-candida-photo|صورة: Candida / Oral thrush — تُرفع لاحقاً]]<h4>إضافة: وصف كل نوع (إكلينيكي)</h4><table><thead><tr><th>النوع</th><th>الشكل والمكان</th></tr></thead><tbody><tr><td>Tinea circinata (القوباء الحلقية)</td><td>بقع دائرية بحافة حمراء متقشرة بها حويصلات وبثور ومركز صافي. على الأسطح المكشوفة من الجلد مع حكة</td></tr><tr><td>Favus (الجُدري الفطري/القراع)</td><td>قشرة مقعّرة مرتفعة صفراء على شكل طبق (saucer) تحيط بفتحة بصيلة الشعر تُسمى «كأس الكبريت» (sulphur cup) + بقع حمراء ± صلع (Alopecia)</td></tr><tr><td>Tinea cruris (الفخذ/الأربية)</td><td>بقعة حمراء محددة تنتشر من الأطراف ويصفى مركزها ± حويصلات ± حكة. أماكنها: الجزء الداخلي العلوي من الفخذ، الأرداف، منطقة العانة</td></tr><tr><td>Tinea versicolor (النخالية المبرقشة)</td><td>على الجذع والأجزاء المجاورة من الذراعين العلويين والرقبة: بقع متقشرة ملونة (أبيض أو بني أو وردي) قطرها من ملليمترات لسنتيمترات، بدون حكة</td></tr><tr><td>Tinea pedis (قدم الرياضي)</td><td>يُسمى كمان Dermatophytosis أو tinea of palms & soles. بين الأصابع جلد أبيض معطّن + حكة، أو حويصلات وفقاقيع + حكة وألم، أو تسمك الجلد (Hyperkeratosis) متفرق أو منتشر. ممكن يصل للأبط والركب والمرفق والأربية وكل مكان باسم مختلف (مثل Jock itch = tinea cruris)</td></tr><tr><td>Onychomycosis (فطر الأظافر)</td><td>ظفر هش ومتشقق مع سدادة متقرنة (hyperkeratotic plug) تحت الحافة الحرة</td></tr><tr><td>Cutaneous candidiasis (Moniliasis)</td><td>في الأماكن الرطبة: الفم (Oral thrush)، المهبل/الفرج، ثنيات الجلد في منطقة الحفاض، والحلمتين أثناء الرضاعة. تحدث أيضاً في أعضاء الذكر خصوصاً غير المختون</td></tr></tbody></table><h4>أسباب وبيئة نمو فطر القدم</h4><p>الجسم يحوي عادة كائنات «رمّية» (saprotrophic) منها نافع. الفطريات الجلدية (Dermatophytes) قد تنتقل من إنسان (anthropophilic) أو حيوان (zoophilic) أو تربة (geophilic). ينمو فطر قدم الرياضي في الأماكن المظلمة الدافئة الرطبة مثل داخل الأحذية، ويعيش طويلاً في غرف تبديل الملابس والحمامات المشتركة.</p><div class=\"cs-box cs-info\"><strong>Candida: معلومات أكتر</strong><p>حوالي ثلاثة أرباع النساء يصبن بالمونيليا مرة على الأقل؛ فطر Candida albicans موجود طبيعياً بمهبل أغلب النساء ولا يسبب مشاكل إلا لو اختل التوازن مع الفلورا الطبيعية (Lactobacilli) مثل استخدام الدش المهبلي، الحمل، حبوب منع الحمل، المضادات الحيوية، السكر. هو ثاني سبب شيوعاً لالتهاب المهبل (Vaginitis). الأطفال من 3–9 سنين قد يصابوا بفطريات فموية مزمنة (لطخ بيضاء حول الفم)، ومرضى نقص المناعة ممكن تنتشر العدوى للمريء وللدم (Fungemia). الأعراض المهبلية: حكة شديدة وحرقان والتهاب بالمهبل/الفرج وإفرازات بيضاء أو بيضاء رمادية.</p></div><h4>إضافة: الصورة الإكلينيكية</h4><table><thead><tr><th>المرض</th><th>العرض</th></tr></thead><tbody><tr><td>Tinea versicolor</td><td>أشهر أنواع التينيا، غالباً بيحصل في الصيف بسبب الجو الحار الرطب والعرق. بقع فاتحة (الأشهر) وأحياناً غامقة بتتضم وتكون بقع أكبر، وعليها قشور، وبتظهر أكتر على الظهر والصدر والكتف والرقبة والذراع وتحت الإبط (الجذع والرقبة والأطراف القريبة)، وفي بعض الحالات بتسبب هرش. <b>غير معدية</b> ولا تنتقل لآخر عكس باقي التينيا</td></tr><tr><td>Tinea cruris</td><td>بقع حمراء بأطراف مرتفعة عن الجلد ومعاها هرش، في الثنيات (فخذ، إبط، تحت الثدي)، شائعة في السكر والسمنة والحر. <b>معدية</b></td></tr><tr><td>Tinea circinata (corporis)</td><td>حلقات حمراء أطرافها مرتفعة فيها حويصلات ومركزها شكله طبيعي، غالباً مش بتهرش، <b>معدية</b></td></tr><tr><td>Tinea pedis (قدم الرياضي)</td><td>تقشير وهرش بين صوابع القدم خصوصاً بين الرابع والخامس؛ سببها لبس حذاء لفترات طويلة في الجو الحار الرطب أو المشي حافي (رياضيين وأفراد الجيش). معدية</td></tr><tr><td>Onychomycosis</td><td>أشهر مشكلة في الأظافر: زيادة سمك أظافر اليد أو القدم مع تغير لونها للأصفر أو الأبيض وتشققات وانفصالها لو لم تعالج</td></tr><tr><td>Candidiasis intertrigo / Erythrasma</td><td>راجع دليل طفح الثنيات (dis-362)</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>فحص KOH مباشر</b> لقشور الجلد/الشعر/الظفر (يشوف الخيوط الفطرية)</li><li><b>مزرعة فطرية</b> أحياناً</li><li><b>ضوء وود (Wood's lamp):</b> بعض أنواع tinea capitis وTVC يتوهج</li><li>سكر الدم وفحص HIV عند Candida في كبار السن أو المتكررة</li><li>وظائف كبد قبل العلاج الفموي الطويل (خصوصاً Ketoconazole/Itraconazole/Terbinafine)</li><li>لو شك في صدفية: فحص Auspitz وتقييم الطبيب</li></ul><h4>إضافة: تحضير KOH والمزرعة</h4><p>تحضير KOH 10%: قطرة على كشطة الجلد على شريحة؛ KOH بيذيب خلايا الجلد ويترك الفطر: تحت المجهر تظهر خيوط (hyphae) وأبواغ كاذبة (pseudospores) وكثرتها تدل على عدوى خميرة. المزرعة: مسحة معقمة تُفرك على الجلد ثم على وسط زراعة وتحضن عدة أيام. <b>عوامل التهيؤ للمونيليا:</b> الحمل، السكر، متلازمة كوشينج، ضعف الصحة العامة، المضادات الحيوية الجهازية، الكورتيزون، حبوب منع الحمل.</p>"
-    },
-    "treatment": {
-      "ar": "<h4>العلاج ومدته</h4><div class=\"cs-box cs-info\"><strong>مضادات الفطريات الفموية — مقارنة</strong><table><thead><tr><th>الدواء</th><th>الجرعة</th><th>المدة</th></tr></thead><tbody><tr><td><b>Terbinafine 250 مجم</b> (اسمه في السوق Lamifine) <i>يؤخذ وسط الأكل</i>؛ ضد الفطريات الجلدية فقط</td><td>250 مجم/يوم</td><td>أسبوعين؛ في الأظافر (onychomycosis) 6 أسابيع لأظافر اليد و12 أسبوعاً لأظافر القدم</td></tr><tr><td><b>Griseofulvin</b> 10–20 مجم/كجم/يوم</td><td>—</td><td>6–8 أسابيع. كويس جداً في tinea capitis لكن قلّ استخدامه لأعراضه الجانبية الكثيرة وأهمها الصداع</td></tr><tr><td><b>Ketoconazole 200 مجم</b> (Ketazole) واسع الطيف</td><td>200 مجم/يوم</td><td>5 أيام في candidiasis، 10 أيام في TVC، 15 يوم في tinea</td></tr><tr><td><b>Itraconazole 100 مجم</b> (Itracan) واسع الطيف</td><td>كبسولة يومياً في tinea (أسبوعين)، كبسولتين لمدة أسبوع في TVC</td><td>حسب المرض</td></tr><tr><td><b>Fluconazole 150 مجم</b> (Flucazole) واسع الطيف</td><td>150 مجم <b>أسبوعياً</b></td><td>مدة العلاج حسب المرض: كبسولة واحدة مرة واحدة في candida، وكبسولتان مرة واحدة في TVC</td></tr></tbody></table></div><div class=\"cs-box cs-danger\"><strong>ممنوعات</strong><p><b>Fluconazole و Ketoconazole ممنوعين في:</b> الأطفال، الحوامل، المرضعات، ومرضى الكبد. <b>Itraconazole ممنوع في نفس الحالات + مرضى COPD والقلب (cardiac) وفقدان السمع (hearing loss)</b>.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>الكيتوكونازول <b>الفموي</b> لم يعد خياراً أول (سمية كبدية؛ تحذير FDA/EMA): الأفضل مضادات أخرى ولا يُستخدم إلا عند عدم وجود بديل وبمتابعة الكبد. والكيتوكونازول <b>الموضعي</b> (شامبو/كريم) آمن.</li><li>الـTerbinafine في الأظافر: الدليل المعتمد <b>6 أسابيع لأظافر اليد و12 أسبوعاً لأظافر القدم</b> (وليس 4 أسابيع)، وهو الخط الأول للأظافر وtinea capitis للبالغين. للأطفال: griseofulvin أو terbinafine بالوزن.</li><li>الـItraconazole ممنوع في فشل القلب (تأثير سلبي على الانقباض) ويتداخل مع أدوية كثيرة (ستاتين، وارفارين).</li><li>فلوكونازول 150 مجم أسبوعياً لمدة 2–4 أسابيع شائع لـ tinea، وجرعة وحيدة 150 مجم لـ candida المهبلية.</li></ul></div><h4>الوصفات الجاهزة</h4><table><thead><tr><th>الحالة</th><th>الوصفة</th></tr></thead><tbody><tr><td><b>Candida «Napkin dermatitis»</b></td><td><b>Dactacort cream</b> أو <b>Mycotral H</b>: دهان موضعي <b>مرتين يومياً</b> بعد التنشيف جيداً مع <b>المحافظة على مكان الالتهابات دايماً ناشف</b> • <b>Calamine lotion</b> 3 مرات يومياً</td></tr><tr><td><b>TVC</b></td><td><b>Nizapex shampoo</b> أو <b>Fungicure soap</b> للاستحمام <b>مرتين في الأسبوع</b> • <b>Miconaze cream</b> أو <b>Apexazole cream</b> مرتين في اليوم • <b>Flucazole 150</b>: <b>كبسولتين مرة واحدة</b>، أو كبسولة السبت ده والسبت اللي بعده، وفي حالة الكثرة بنخليها 4 أسابيع</td></tr><tr><td><b>Tinea circinata</b></td><td><b>Fungicure soap</b> مرتين في الأسبوع • <b>Tinea cure cream</b> أو <b>Batrifen cream</b> مرتين في اليوم • لو أكتر من 3 آفات: <b>Flucazole 150</b> كبسولة في الأسبوع لمدة 4 أسابيع</td></tr><tr><td><b>Onychomycosis</b></td><td>مضاد فطريات جهازي لمدة <b>3–6 شهور في اليد و3–9 شهور في القدم</b> • <b>Itracan 100 مجم</b>: كبسولتين مرتين يومياً (200 مجم مرتين) لمدة أسبوع ثم توقف 3 أسابيع، تُكرر شهرياً: دورتان لأظافر اليد وثلاث دورات لأظافر القدم (علاج نبضي)، أو <b>Flucazole 150</b> كبسولة مرة في الأسبوع لمدة 6 شهور</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تنبيه كورتيزون</strong><p>كريمات <b>Dactacort / Mycotral H</b> بتحتوي كورتيزون؛ استخدامها يكون لفترة قصيرة فقط لأن الكورتيزون وحده ممكن يغيّر شكل الفطر (tinea incognito) ويفاقمه، خاصة في الوجه والثنيات.</p></div><h4>إضافة: الوصفات التجارية حسب النوع (مرجع آخر)</h4><table><thead><tr><th>الحالة</th><th>الأدوية (الاسم التجاري)</th><th>الجرعة والمدة</th></tr></thead><tbody><tr><td>Tinea circinata</td><td>Grisofulvin F.P قرصين يومياً بعد الأكل • Tr.iodine 2% أو Tineacure lotion (مس مرتين يومياً) • Locasten أو Daktarin أو Nzoral cream أو Whitfield oint.</td><td>دهان موضعي مرتين يومياً</td></tr><tr><td>Tinea capitis (فروة الرأس عند الأطفال)</td><td>Grisofulvin F.P قرص لكل 10 كجم من وزن الجسم يومياً لمدة 6 أسابيع • Tr.iodine 2% أو Tineacure lotion أو Batrafen أو Daktarin cream</td><td>مرتين يومياً موضعياً</td></tr><tr><td>Tinea cruris</td><td>Grisofulvin F.P قرصين يومياً لمدة شهر أو Diflucan 150 مجم كبسولة مرة أسبوعياً 4 أسابيع • Tr.iodine 2% أو Castellani paint • Dermatin أو Lamisil أو Tineacure cream</td><td>مس/دهان مرتين يومياً</td></tr><tr><td>Tinea versicolor</td><td>صابون كبريت • Fluconazole 150 مجم: Diflucan أو Trichonal أو Flucoral • أو Nizoral قرص بعد الغداء وسط الأكل • Tr.iodine 2% أو Canesten lotion • شامبو Nizoral/Seboral/Nizapex/Curazole H • Dermatin أو Lamisil أو Tineacure cream</td><td>كبسولة أسبوعياً لمدة أسبوعين؛ Nizoral 10 أيام؛ الشامبو أسبوعياً 4 أسابيع؛ الدهان مرتين يومياً</td></tr><tr><td>Tinea pedis</td><td>نقع برمنجنات 1/8000 أو Boric acid lotion • Batrafen solution أو Trosyd 1% lotion • Trosyd cream أو Locasten cream • Miconaz powder • Diflucan 150 • Terbin قرص</td><td>النقع أو المس يومياً؛ Diflucan كبسولة أسبوعياً 4 أسابيع؛ Terbin قرص يومياً 6 أسابيع. يجب غسل الشراب في ماء مغلي يومياً</td></tr><tr><td>Onychomycosis</td><td>Lamisil 250 قرص يومياً 6–12 أسبوع (حسب المراجع) • Ketozole 200 قرص يومياً • Grisofulvin F.P • محلول Trosyd 28% للأظافر يُدهن بقضيب زجاجي على الظفر والمنطقة المحيطة • Lamisil أو Trosyd cream</td><td>حسب النشرة؛ Trosyd للأظافر مدة طويلة</td></tr><tr><td>Candida مهبلية</td><td>Gynozol تحاميل مهبلية • Fungican كبسولة</td><td>التحميلة يومياً ليلاً 1–2 أسبوع • Fungican كبسولة ثم تكرر بعد أسبوع</td></tr><tr><td>Candida جلدية</td><td>Castellani paint (تجنب نقع اليدين بالماء) • Mycostatin أو Miconaz أو Nystatin أو Daktarin cream • Diflucan 150 • Flucamox أو Erythrocin للعدوى البكتيرية المصاحبة وعلاج عوامل التهيؤ</td><td>دهان مرتين يومياً؛ Diflucan أسبوعياً 4 أسابيع؛ المضاد كل 6 ساعات</td></tr><tr><td>Oral thrush (فطر الفم)</td><td>Daktarin oral gel أو Miconaz oral gel أو Mycostatin oral drops أو fungistatin oral drops</td><td>الجل موضعياً على الفم واللسان 2–3 مرات يومياً؛ القطرات: ملء قطارة بالفم كل 6 ساعات</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>ملاحظات مهمة (N.B)</strong><p>Griseofulvin لا دور له في النخالية المبرقشة ولا الـ Candidiasis. في النخالية المبرقشة: التعرض الأشعة فوق البنفسجية/الشمس لاحقاً للمناطق الفاتحة، وغلي الملابس الداخلية يومياً، واستمرار العلاج حتى 6 أسابيع. فطر القدم: اغسل الشراب بماء مغلي يومياً.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Griseofulvin بجرعة فموية للأطفال 10–20 مجم/كجم/يوم (حسب الوزن) كما في الجدول الأعلى؛ «قرص لكل 10 كجم» تفسير المرجع للتبسيط ويختلف حسب تركيز القرص. Ketoconazole الفموي لم يعد خياراً أول لسمّية الكبد. Terbinafine (Lamisil) في أظافر القدم 12 أسبوعاً. Fluconazole أسبوعي لعدة أسابيع غير مرخص لكل الأنواع: بأمر الطبيب. Tr.iodine ممكن يهيّج الجلد ويصبغه ويضر الدرقية لو استُعمل مساحات واسعة. Castellani paint مستحضر قديم ملوّن؛ الأفضل كريمات الأزول أو Terbinafine الحديثة.</p></div><h4>إضافة: وصفات الجلدية</h4><h5>Tinea versicolor</h5><p>بتتحسن بالعلاج لكن لازم يفهم العيان إن البقع ممكن تفضل أسابيع أو شهور على ما تروح خالص وممكن تسيب أثر وممكن تتكرر كل صيف.</p><ul><li>استحمام باستمرار مع تنشيف المنطقة جيداً وارتداء ملابس قطنية واسعة</li><li>قبل الكريم أو الشامبو: اغسل المنطقة وانشفها جيداً</li><li>الشامبو في الصيف مرة أسبوعياً للوقاية؛ وعلاج التينيا في أي منطقة يُفضّل يصحبه علاج وقائي لفروة الرأس بالشامبو (لتجنب تكرار الإصابة)</li></ul><table><thead><tr><th>الحالة</th><th>المنتج</th><th>الاستخدام</th></tr></thead><tbody><tr><td>آفات صغيرة (الكريم أفضل)</td><td>Dermatin cream (clotrimazole 1%) • Miconaz cream (miconazole 2%) • Batrafen cream (ciclopirox 1%) • Lamisil cream (terbinafine 1%)</td><td>صباحاً ومساءً لمدة أسبوعين</td></tr><tr><td>آفات كبيرة أو منطقة مشعرة (الفروة): شامبو</td><td>Nizapex shampoo أو Nizoral shampoo (ketoconazole 2%)</td><td>مرة واحدة يومياً لمدة أسبوعين؛ يتساب 10 دقايق ثم يُشطف بالماء</td></tr><tr><td>حالات مقاومة</td><td>Selsun blue shampoo (selenium sulfide) — الأفضل لكن غالي</td><td>مرة يومياً لمدة أسبوعين؛ يتساب 10 دقايق ثم يُشطف</td></tr><tr><td>جهازي (Fluconazole هو الأفضل)</td><td>Flucoral caps (كبسولتين) • Fungican caps (كبسولة 150 مجم)</td><td>كبسولتين الآن ثم كبسولتين بعد أسبوع؛ <b>المريض ما ياخدش دش أول يوم ويبذل مجهود ليعرق</b> لأن الدواء بيتم إفرازه في العرق ويشتغل أحسن</td></tr></tbody></table>[[slot:dis-149-tv-rx|روشتة التينيا الملونة — Nizapex shampoo + Flucoral caps مع التعليمات على ظهر الروشتة — تُرفع لاحقاً]]<h5>Tinea circinata (corporis)</h5><ul><li>نفس التعليمات</li><li>كريم أو شامبو مضاد فطريات نفس المستخدم في Tinea versicolor لكن الجرعة: دهان صباحاً ومساءً لمدة أسبوع بعد اختفاء الحلقات</li><li>Systemic antifungals زي Tinea cruris</li></ul><h5>Tinea cruris</h5><ul><li>نفس التعليمات + كريم مركّب (مضاد فطريات + كورتيزون ضعيف: Dermatin-cort / Miconaz-H / Daktacort)</li><li>Terbinafine: Lamisil 250 أو Terbin 250 (7 أقراص) مرة يومياً من أسبوع إلى 4 أسابيع</li><li>Itraconazole: Itrapex 100 (15 كبسولة) كبسولتين في اليوم لمدة أسبوع</li></ul><h5>Tinea pedis</h5><ul><li>غسل القدم باستمرار مع تنشيفها جيداً خصوصاً بين الأصابع وارتداء شرابات قطنية</li><li>ما يستعملش فوطة أو حذاء أو شبشب خاص بشخص آخر</li><li>الهدوم والشرابات تتغسل وتتغلى كويس</li><li>تجنب ارتداء الأحذية بقدر الإمكان واترك القدم مكشوفة أثناء التواجد في البيت</li><li>عدم المشي حافياً في البيت أو أثناء التدريب حتى لا تنقل الفطر لشخص آخر؛ الفطر ينتعش دائماً في الجو الرطب وفي وجود الماء</li><li><b>بودرة</b> مضاد فطريات: Dermatin powder أو Miconaz powder بين الأصابع صباحاً ومساءً لمدة شهر ونصف</li><li>جهازي زي Tinea cruris</li></ul><h5>Onychomycosis</h5><p>العلاج مكلف لأن فترة العلاج طويلة، فلازم يفهم العيان طبيعة المشكلة من الأول ليلتزم؛ ولو لم تعالج بسرعة هتفضل عاملة للعيان مشكلة طول حياته.</p><table><thead><tr><th>النوع</th><th>المنتج</th><th>المدة</th></tr></thead><tbody><tr><td>موضعي (محلول أظافر)</td><td>Trosyd nail solution • Trozal nail solution</td><td>مرة يومياً لمدة شهر ونصف في أظافر اليد أو 3 شهور في أظافر القدم</td></tr><tr><td>جهازي</td><td>Lamisil 250 أو Terbin 250 (7 أقراص) قرص يومياً</td><td>شهر ونصف لليد، 3 شهور للقدم</td></tr><tr><td>جهازي</td><td>Itrapex 100 (15 كبسولة) كبسولتين في اليوم</td><td>شهر ونصف لليد، 3 شهور للقدم</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>مدة Terbinafine/Itraconazole المذكورة (شهر ونصف لليد و3 شهور للقدم) تقارب الدليل الحديث (6 أسابيع لليد و12 أسبوعاً للقدم لـ Terbinafine). Itraconazole ممنوع في فشل القلب والحمل وأمراض الكبد، وكل الأدوية الفموية تحتاج مراجعة الطبيب (الكبد والتداخلات). تينيا الفروة والأظافر تحتاج علاجاً جهازياً. Selenium sulfide آمن موضعياً. الشامبو يُفضّل عدم استخدامه على جروح الفروة.</p></div><h4>إضافة: وصفات دليل الجلدية (حسب النوع)</h4><h5>Tinea versicolor</h5><p>الحالة بتتحسن بالعلاج لكن لازم يفهم العيان إن البقع ممكن تفضل أسابيع أو شهور بعد زوال الفطر وممكن تتكرر كل صيف. تعليمات: الاستحمام باستمرار مع التنشيف الجيد وملابس قطنية واسعة. قبل الكريم أو الشامبو اغسل المنطقة وانشفها جيداً.</p><table><thead><tr><th>الحالة</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>آفات صغيرة (كريم)</td><td>Dermatin cream (clotrimazole 1%) • Miconaz cream (miconazole 2%) • Batrafen cream (ciclopirox 1%) • Lamisil cream (terbinafine 1%)</td><td>دهان صباحاً ومساءً لمدة أسبوعين</td></tr><tr><td>آفات كبيرة أو مناطق شعر (فروة)</td><td>Nizapex shampoo • Nizoral shampoo (ketoconazole 2%)</td><td>مرة يومياً لمدة أسبوعين؛ يتساب 10 دقائق ثم يشطف</td></tr><tr><td>حالات مقاومة</td><td>Selsun blue shampoo (selenium sulfide) — أفضل لكن غالي</td><td>مرة يومياً لمدة أسبوعين؛ 10 دقائق ثم يُشطف</td></tr><tr><td>جهازي (Fluconazole هو الأفضل)</td><td>Flucoral caps • Fungican caps (150 مجم)</td><td>كبسولتين الآن ثم كبسولتين بعد أسبوع</td></tr></tbody></table><ul><li>يُفضل الاستحمام بالشامبو مرة أسبوعياً في الصيف للوقاية</li><li>علاج التينيا في أي منطقة يُفضل أن يصحبه علاج وقائي لفروة الرأس بالشامبو (لعلاج أي إصابة قد تؤدي لسقوط قشور من الرأس وتكرار الإصابة)</li><li>نصيحة المريض مع Fluconazole: ما يحكش ويبذل مجهود في أول يوم ويخليه يعرق، لأن الدواء بيتم إفرازه في العرق وبكدة بيشتغل أحسن</li></ul><p><b>روشتة Tinea versicolor:</b> Nizapex shampoo مرة يومياً على البقع لمدة أسبوعين (تغسل البقع ثم تنشف ويوضع الشامبو ويترك 10 دقائق ثم يشطف) • Flucoral caps كبسولتين الآن ثم كبسولتين بعد أسبوع، مع كتابة التعليمات على ظهر الروشتة.</p><h5>Tinea circinata</h5><p>نفس الكريم أو الشامبو المستخدم في Tinea versicolor لكن الجرعة: دهان صباحاً ومساءً لمدة أسبوع بعد اختفاء الحلقات. جهازي: زي Tinea cruris.</p><h5>Tinea cruris</h5><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Lamisil 250 • Terbin 250 (terbinafine)</td><td>قرص مرة يومياً لمدة 1–4 أسابيع</td></tr><tr><td>Itrapex 100 (itraconazole)</td><td>كبسولتين في اليوم لمدة أسبوع</td></tr><tr><td>كريم مضاد فطريات + كورتيزون ضعيف</td><td>انظر دليل الثنيات (dis-362)</td></tr></tbody></table><h5>Tinea pedis</h5><ul><li>غسل القدم باستمرار مع تنشيفها جيداً خصوصاً بين الأصابع وارتداء شرابات قطنية</li><li>ما يستعملش فوطة أو حذاء أو شبشب شخص آخر</li><li>الهدوم والشرابات تتغسل وتتغلى كويس</li><li>تجنب ارتداء الأحذية بقدر الإمكان وحاول ترك القدم مكشوفة أثناء التواجد في البيت</li><li>عدم المشي حافياً في البيت أو أثناء التدريب حتى لا تنقل الفطر لشخص آخر (الفطر ينتعش دائماً في الجو الرطب وفي وجود الماء)</li></ul><table><thead><tr><th>الدواء</th><th>الطريقة</th></tr></thead><tbody><tr><td>Dermatin powder (clotrimazole)</td><td>بودرة بين الأصابع صباحاً ومساءً لمدة شهر ونصف</td></tr><tr><td>Miconaz powder (miconazole)</td><td>نفس الطريقة</td></tr><tr><td>جهازي</td><td>زي Tinea cruris</td></tr></tbody></table><h5>Onychomycosis (فطر الأظافر)</h5><ul><li>العلاج مكلف لأن فترة العلاج طويلة، فلازم يفهم العيان طبيعة المشكلة من الأول ويلتزم</li><li>إذا لم تعالج بسرعة هتفضل عاملة للعيان مشكلة طول حياته</li><li>نفس تعليمات تينيا القدم (التجفيف، شرابات قطن، عدم مشاركة الأدوات)</li></ul><table><thead><tr><th>الفئة</th><th>الدواء</th><th>المدة</th></tr></thead><tbody><tr><td>موضعي</td><td>Trosyd nail solution • Trozal nail solution</td><td>مرة يومياً لمدة شهر ونصف في أظافر اليد أو 3 شهور في أظافر القدم</td></tr><tr><td>جهازي</td><td>Lamisil 250 • Terbin 250</td><td>قرص يومياً شهر ونصف (يد) أو 3 شهور (قدم)</td></tr><tr><td>جهازي</td><td>Itrapex 100 (itraconazole)</td><td>كبسولتين في اليوم لنفس المدة (دورة مستمرة؛ والنبضي المذكور سابقاً بديل)</td></tr></tbody></table><h5>Candida الثنيات / Erythrasma</h5><p>راجع دليل «التهاب ثنيات الجلد» (dis-362). والنخالة الوردية/البيضاء في (dis-361).</p><h5>كريمات الفطريات المركبة بكورتيزون ضعيف</h5><table><thead><tr><th>الكريم</th><th>يحتوي</th></tr></thead><tbody><tr><td>Dermatin-cort</td><td>clotrimazole + كورتيزون ضعيف</td></tr><tr><td>Miconaz-H</td><td>miconazole + hydrocortisone</td></tr><tr><td>Daktacort</td><td>miconazole 2% + hydrocortisone 1%</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الكريمات المركبة لفترة قصيرة جداً (حتى زوال الهرش) ثم مضاد فطريات فقط. الشامبو والـ Fluconazole في TVC مذكور في المراجع؛ تم ربط كلاً بالجرعة المعتمدة (Fluconazole 300 مجم أسبوعياً × أسبوعين شائعة). أظافر القدم: Terbinafine 12 أسبوعاً (3 شهور)، الأظافر اليد 6 أسابيع (شهر ونصف).</p></div>\n<p><b>جريزيوفولفين</b> للسعفة وفروة الرأس: يستغرق <b>أسابيع إلى شهورًا</b>، <b>لا يُوقف</b> عند زوال الحكة، ويُمتص أفضل <b>بعد وجبة عالية الدهون</b>. <div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div></p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل واقرأ الجلد</strong><p>المكان، العدد، الحكة، تاريخ الأدوية (كورتيزون؟ مضاد حيوي طويل؟)، السكر، الحيوانات الأليفة، أدوات مشتركة. افحص بين الأصابع والأظافر والفروة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اجمع العينات</strong><p>اكشط القشور من الحافة النشطة بشفرة معقمة (للـ KOH)، وانتق الشعر المكسور في الفروة. سجّل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>تحقق قبل الدواء الفموي</strong><p>وظائف الكبد، الحمل/الرضاعة، العمر (أطفال)، أمراض القلب/COPD (Itraconazole)، وأدوية أخرى بتتداخل. بلّغ لو في مانع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>تعليمات التناول</strong><p>Terbinafine وسط الأكل؛ تناول Itraconazole مع وجبة دسمة (الكبسولة) ويُفضّل بمشروب حمضي؛ Fluconazole أسبوعي في نفس اليوم. سجّل الموعد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب الآثار الجانبية</strong><p>صداع (Griseofulvin)، غثيان، طفح، اصفرار/بول داكن (كبد)، تغير الطعم (Terbinafine)، اضطراب نظم/تورم رجلين (Itraconazole).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>عناية الجلد</strong><p>نظف وجفف الثنيات جيداً، قطن بدل النايلون، تغيير الحفاض بسرعة. للأظافر: قص الظفر بشكل مستقيم وأدوات خاصة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>نبّه على التكرار</strong><p>العلاج لازم يكمل المدة؛ الظفر ياخد شهور عشان يتجدد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>سجّل</strong><p>الصور والمقاسات والاستجابة، والتثقيف.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>مضادات الفطريات الفموية <b>مجموعة مؤثرة على الكبد وبتتداخل مع أدوية كثيرة</b>. لا تُعطَ لحامل أو طفل أو مريض كبد أو قلب بدون مراجعة الطبيب. وأي <b>اصفرار أو بول غامق أو براز فاتح أو غثيان شديد</b> = أوقف وبلّغ.</p></div><h4>إضافة: نقاط تمريض مرتبطة بالمستحضرات</h4><ul><li>Tr.iodine وCastellani: مواد ملونة بتبقّع الملابس وممكن تهيّج؛ اختبر على مساحة صغيرة وتجنب الجلد المجروح.</li><li>Diflucan/Fungican: اسأل عن الحمل وأمراض الكبد، وتفاعلات (warfarin، statins).</li><li>تحضير KOH: اكشط من الحافة النشطة بشفرة معقمة وضع في وعاء نظيف.</li><li>فطر القدم: علّم المريض تجفيف ما بين الأصابع، وغسل الشراب بماء مغلي يومياً، وعدم المشي حافياً في الحمامات العامة.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب لو:</strong><ul><li>اصفرار العين/الجلد، بول داكن، ألم أعلى البطن (كبد)</li><li>تورم القدمين وضيق نفس (مع Itraconazole)</li><li>طفح شديد أو حساسية أو فقاعات أو حرق</li><li>Candida متكررة أو شديدة (سكر؟ HIV؟)</li><li>فطريات الفروة عند الأطفال (تحتاج جهازي)</li><li>عدم تحسن بعد المدة المناسبة أو انتشار سريع</li><li>التهاب الظفر مع ألم وصديد (عدوى بكتيرية)</li><li>حمل أو رضاعة أثناء العلاج</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>الفطريات بتحب الرطوبة: جفف الجلد جيداً خصوصاً بين الأصابع والثنيات.</li><li>لا تشارك المنشفة أو الشراب أو الأحذية أو المشط.</li><li>القطن أفضل من النايلون، وغيّر الشراب يومياً.</li><li>أكمل مدة الدواء حتى لو الجلد بقى كويس (الظفر شهور).</li><li>لا تستعمل كريمات الكورتيزون لوحدها على فطريات.</li><li>Fluconazole أسبوعي: خد الجرعة في نفس اليوم؛ ما تضاعفش لو نسيت.</li><li>الحيوانات الأليفة ممكن تنقل الفطر: اعرضها على بيطري.</li><li>الحفاض: غيّر بسرعة، نظف وجفف، ومرهم حاجز.</li></ul><ul><li>النخالية المبرقشة غير معدية، لكن الفطر في القدم والفخذ والجسم معدي.</li><li>البقع الفاتحة ممكن تفضل شهور بعد العلاج، وتتكرر في الصيف: استخدم الشامبو أسبوعياً في الصيف.</li></ul>\n<ul><li><b>الأولوية في Tinea corporis:</b> أهم شيء تعليم طرق منع الانتشار؛ لا مشاركة فرش أو مناشف أو قبعات أو ملابس.</li><li>قدم الرياضي: جوارب قطنية، أصابع نظيفة وجافة، ونقع الأصابع في محلول بورو (Burow).</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "3 مجموعات: فطريات جلدية (Tinea)، TVC، Candida",
-      "Tinea corporis: دائرة بحافة نشطة؛ أكتر من 3 آفات = علاج جهازي",
-      "TVC: بقع فاتحة/داكنة بتوزيع «جاكيت قصير بكم طويل» على الرقبة والظهر",
-      "Candida: نقط بيضاء حولها التهاب؛ في كبار السن ابحث عن السكر/HIV",
-      "Fluconazole وKetoconazole ممنوعين في الأطفال والحوامل والمرضعات والكبد؛ وItraconazole + COPD والقلب والسمع",
-      "الأظافر: علاج جهازي شهور (اليد 3–6، القدم 3–9) مع وظائف كبد",
-      "حافظ على المنطقة جافة ونظيفة",
-      "Favus: كأس الكبريت (sulphur cup) علامة مميزة؛ Griseofulvin لا يفيد في النخالية ولا الكانديدا.",
-      "Tinea: فطريات؛ جريزيوفولفين مع وجبة دسمة ولا يُوقف مبكرًا؛ منع الانتشار أولوية"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "بقع فاتحة على الظهر والرقبة بتوزيع جاكيت قصير بكم طويل. التشخيص؟"
-      },
-      "options": [
-        {
-          "ar": "Tinea capitis"
-        },
-        {
-          "ar": "Pityriasis versicolor"
-        },
-        {
-          "ar": "Candida"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التوزيع المميز لـ TVC."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل رضيع عنده طبقة بيضاء على اللسان وصعوبة رضاعة بعد مضاد حيوي. التشخيص؟"
-      },
-      "options": [
-        {
-          "ar": "Oral candidiasis"
-        },
-        {
-          "ar": "Scabies"
-        },
-        {
-          "ar": "TVC"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Oral thrush بعد مضادات حيوية طويلة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء ممنوع في الحوامل والأطفال ومرضى الكبد؟"
-      },
-      "options": [
-        {
-          "ar": "Fluconazole و Ketoconazole"
-        },
-        {
-          "ar": "Terbinafine فقط"
-        },
-        {
-          "ar": "الكريمات الموضعية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مذكور بصريح العبارة (ويُضاف Itraconazole لنفس الفئة)."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تفرق الصدفية الحلقية؟"
-      },
-      "options": [
-        {
-          "ar": "Auspitz sign (نزف نقطي بعد إزالة القشرة)"
-        },
-        {
-          "ar": "الحكة"
-        },
-        {
-          "ar": "الحرارة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "علامة Auspitz إيجابية."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض Tinea corporis عنده 5 آفات. ماذا تتوقع؟"
-      },
-      "options": [
-        {
-          "ar": "كريم فقط"
-        },
-        {
-          "ar": "مضاد فطريات جهازي مع الموضعي"
-        },
-        {
-          "ar": "لا علاج"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "أكثر من 3 آفات تحتاج علاجاً جهازياً."
-      }
-    },
-    {
-      "q": {
-        "ar": "أفضل وقت لتناول Terbinafine؟"
-      },
-      "options": [
-        {
-          "ar": "وسط الأكل"
-        },
-        {
-          "ar": "معدة فارغة"
-        },
-        {
-          "ar": "قبل النوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يُؤخذ مع الأكل حسب الوصفة الشائعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم تثقيف لتينيا الجسم؟"
-      },
-      "options": [
-        {
-          "ar": "عدم مشاركة الأدوات الشخصية"
-        },
-        {
-          "ar": "مشاركة الفرش"
-        },
-        {
-          "ar": "إيقاف الدواء مبكرًا"
-        },
-        {
-          "ar": "تجنب الغسل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لمنع العدوى."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما أهم أولوية تعليمية في السعفة؟"
-      },
-      "options": [
-        {
-          "ar": "منع انتشار العدوى بعدم مشاركة الأغراض"
-        },
-        {
-          "ar": "الراحة التامة"
-        },
-        {
-          "ar": "تقليل الماء"
-        },
-        {
-          "ar": "إيقاف الدواء بعد يومين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "العدوى تنتقل بسهولة بالأغراض الشخصية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أفضل وقت لتناول جريزيوفولفين؟"
-      },
-      "options": [
-        {
-          "ar": "مع وجبة عالية الدهون"
-        },
-        {
-          "ar": "على معدة فاضية"
-        },
-        {
-          "ar": "مع قهوة"
-        },
-        {
-          "ar": "قبل النوم دون طعام"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "امتصاصه أفضل مع الدهون."
-      }
-    },
-    {
-      "q": {
-        "ar": "الحكة اختفت بعد أسبوع. ماذا تنصح؟"
-      },
-      "options": [
-        {
-          "ar": "إيقاف الدواء"
-        },
-        {
-          "ar": "الاستمرار حتى انتهاء المدة"
-        },
-        {
-          "ar": "مضاعفة الجرعة"
-        },
-        {
-          "ar": "تغيير الدواء"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "العلاج يستغرق أسابيع إلى شهورًا ولا يُوقف عند زوال الحكة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AAD: Fungal skin infections / Tinea / Onychomycosis guidelines"
-    },
-    {
-      "title": "IDSA / CDC: Candidiasis guidelines"
-    },
-    {
-      "title": "EMA & FDA safety warnings: oral ketoconazole (2013)"
-    },
-    {
-      "title": "StatPearls: Tinea Corporis, Pityriasis Versicolor, Onychomycosis"
-    },
-    {
-      "title": "AAD/CDC: Ringworm, tinea pedis, tinea versicolor and candidiasis pages; BNF: Fungal skin infections"
-    },
-    {
-      "title": "Terbinafine dosage (Drugs.com)",
-      "url": "https://www.drugs.com/dosage/terbinafine.html"
-    },
-    {
-      "title": "AAD: Tinea versicolor / onychomycosis treatment guidance"
-    }
-  ],
-  "rx": [
-    {
-      "category": "الجلدية",
-      "condition_ar": "التينيا الملونة (Tinea versicolor)",
-      "condition_en": "Tinea versicolor",
-      "items": [
-        {
-          "drug_name": "Dermatin cream (clotrimazole 1%) / Miconaz cream (miconazole 2%) / Batrafen cream (ciclopirox 1%) / Lamisil cream (terbinafine 1%)",
-          "dose": "صباحاً ومساءً لمدة أسبوعين",
-          "note": "آفات صغيرة"
-        },
-        {
-          "drug_name": "Nizapex shampoo / Nizoral shampoo (ketoconazole 2%)",
-          "dose": "مرة يومياً لمدة أسبوعين؛ يترك 10 دقائق ثم يُشطف",
-          "note": "آفات كبيرة أو الفروة"
-        },
-        {
-          "drug_name": "Selsun blue shampoo (selenium sulfide)",
-          "dose": "مرة يومياً لمدة أسبوعين؛ يترك 10 دقائق",
-          "note": "حالات مقاومة"
-        },
-        {
-          "drug_name": "Flucoral caps / Fungican caps (fluconazole 150 mg)",
-          "dose": "كبسولتين الآن ثم كبسولتين بعد أسبوع",
-          "note": "لا استحمام أول يوم ويعرق"
-        }
-      ],
-      "clinical_note": "الشامبو أسبوعياً في الصيف للوقاية."
-    },
-    {
-      "category": "الجلدية",
-      "condition_ar": "التينيا الحلقية (Tinea corporis)",
-      "condition_en": "Tinea circinata",
-      "items": [
-        {
-          "drug_name": "كريم/شامبو مضاد فطريات (كما في Tinea versicolor)",
-          "dose": "صباحاً ومساءً لمدة أسبوع بعد اختفاء الحلقات",
-          "note": ""
-        },
-        {
-          "drug_name": "Lamisil 250 / Terbin 250 أو Itrapex 100",
-          "dose": "كما في Tinea cruris",
-          "note": "جهازي"
-        }
-      ],
-      "clinical_note": "معدية."
-    },
-    {
-      "category": "الجلدية",
-      "condition_ar": "تينيا القدم (Tinea pedis)",
-      "condition_en": "Tinea pedis",
-      "items": [
-        {
-          "drug_name": "Dermatin powder / Miconaz powder",
-          "dose": "بودرة بين الأصابع صباحاً ومساءً لمدة شهر ونصف",
-          "note": ""
-        },
-        {
-          "drug_name": "Lamisil 250 / Terbin 250 أو Itrapex 100",
-          "dose": "كما في Tinea cruris",
-          "note": "جهازي"
-        }
-      ],
-      "clinical_note": "شرابات قطن وتجفيف وغلي."
-    },
-    {
-      "category": "الجلدية",
-      "condition_ar": "فطر الأظافر (Onychomycosis)",
-      "condition_en": "Onychomycosis",
-      "items": [
-        {
-          "drug_name": "Trosyd nail solution / Trozal nail solution",
-          "dose": "مرة يومياً لمدة شهر ونصف (يد) أو 3 شهور (قدم)",
-          "note": "موضعي"
-        },
-        {
-          "drug_name": "Lamisil 250 / Terbin 250 (terbinafine)",
-          "dose": "قرص يومياً لمدة شهر ونصف (يد) أو 3 شهور (قدم)",
-          "note": ""
-        },
-        {
-          "drug_name": "Itrapex 100 (itraconazole)",
-          "dose": "كبسولتين في اليوم لمدة شهر ونصف (يد) أو 3 شهور (قدم)",
-          "note": ""
-        }
-      ],
-      "clinical_note": "العلاج طويل والتزام المريض ضروري."
-    },
-    {
-      "category": "الجلدية",
-      "condition_ar": "Tinea versicolor",
-      "condition_en": "Tinea versicolor",
-      "items": [
-        {
-          "drug_name": "Dermatin cream",
-          "dose": "صباحاً ومساءً × أسبوعين",
-          "note": ""
-        },
-        {
-          "drug_name": "Miconaz cream",
-          "dose": "نفسه",
-          "note": ""
-        },
-        {
-          "drug_name": "Batrafen cream",
-          "dose": "نفسه",
-          "note": ""
-        },
-        {
-          "drug_name": "Lamisil cream",
-          "dose": "نفسه",
-          "note": ""
-        },
-        {
-          "drug_name": "Nizapex / Nizoral shampoo",
-          "dose": "يومياً × أسبوعين، 10 دقائق",
-          "note": ""
-        },
-        {
-          "drug_name": "Selsun blue shampoo",
-          "dose": "يومياً × أسبوعين",
-          "note": "للمقاوم"
-        },
-        {
-          "drug_name": "Flucoral / Fungican caps",
-          "dose": "كبسولتين الآن وبعد أسبوع",
-          "note": ""
-        }
-      ],
-      "clinical_note": ""
-    },
-    {
-      "category": "الجلدية",
-      "condition_ar": "Tinea pedis / Onychomycosis",
-      "condition_en": "Tinea pedis & onychomycosis",
-      "items": [
-        {
-          "drug_name": "Dermatin powder / Miconaz powder",
-          "dose": "بين الأصابع صباحاً ومساءً شهر ونصف",
-          "note": ""
-        },
-        {
-          "drug_name": "Trosyd / Trozal nail solution",
-          "dose": "يومياً 1.5 شهر (يد) أو 3 شهور (قدم)",
-          "note": ""
-        },
-        {
-          "drug_name": "Lamisil 250 / Terbin 250",
-          "dose": "قرص يومياً نفس المدة",
-          "note": ""
-        },
-        {
-          "drug_name": "Itrapex 100",
-          "dose": "كبسولتين يومياً نفس المدة",
-          "note": ""
-        }
-      ],
-      "clinical_note": ""
-    }
+  "en": [
+   "3 groups: dermatophytes (Tinea), TVC, Candida",
+   "Tinea corporis: a circle with an active border; more than 3 lesions = systemic treatment",
+   "TVC: light/dark patches in a \"short jacket with long sleeves\" distribution on the neck and back",
+   "Candida: white dots surrounded by inflammation; in older adults look for diabetes/HIV",
+   "Fluconazole and Ketoconazole are prohibited in children, pregnant and breastfeeding women and liver disease; and Itraconazole + COPD, heart and hearing",
+   "Nails: systemic treatment for months (hand 3–6, foot 3–9) with liver function",
+   "Keep the area dry and clean",
+   "Favus: the sulphur cup is a distinctive sign; Griseofulvin does not help in pityriasis versicolor or Candida.",
+   "Tinea: fungi; griseofulvin with a fatty meal and not stopped early; preventing spread is a priority"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "بقع فاتحة على الظهر والرقبة بتوزيع جاكيت قصير بكم طويل. التشخيص؟",
+    "en": "Light patches on the back and neck in a short-jacket-with-long-sleeves distribution. The diagnosis?"
+   },
+   "options": [
+    {
+     "ar": "Tinea capitis",
+     "en": "Tinea capitis"
+    },
+    {
+     "ar": "Pityriasis versicolor",
+     "en": "Pityriasis versicolor"
+    },
+    {
+     "ar": "Candida",
+     "en": "Candida"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التوزيع المميز لـ TVC.",
+    "en": "The characteristic distribution of TVC."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل رضيع عنده طبقة بيضاء على اللسان وصعوبة رضاعة بعد مضاد حيوي. التشخيص؟",
+    "en": "An infant has a white coating on the tongue and difficulty feeding after an antibiotic. The diagnosis?"
+   },
+   "options": [
+    {
+     "ar": "Oral candidiasis",
+     "en": "Oral candidiasis"
+    },
+    {
+     "ar": "Scabies",
+     "en": "Scabies"
+    },
+    {
+     "ar": "TVC",
+     "en": "TVC"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Oral thrush بعد مضادات حيوية طويلة.",
+    "en": "Oral thrush after prolonged antibiotics."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء ممنوع في الحوامل والأطفال ومرضى الكبد؟",
+    "en": "Which drug is prohibited in pregnant women, children and liver patients?"
+   },
+   "options": [
+    {
+     "ar": "Fluconazole و Ketoconazole",
+     "en": "Fluconazole and Ketoconazole"
+    },
+    {
+     "ar": "Terbinafine فقط",
+     "en": "Terbinafine only"
+    },
+    {
+     "ar": "الكريمات الموضعية",
+     "en": "Topical creams"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مذكور بصريح العبارة (ويُضاف Itraconazole لنفس الفئة).",
+    "en": "Stated explicitly (and Itraconazole is added to the same category)."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تفرق الصدفية الحلقية؟",
+    "en": "Which sign distinguishes circinate psoriasis?"
+   },
+   "options": [
+    {
+     "ar": "Auspitz sign (نزف نقطي بعد إزالة القشرة)",
+     "en": "Auspitz sign (pinpoint bleeding after removing the scale)"
+    },
+    {
+     "ar": "الحكة",
+     "en": "Itching"
+    },
+    {
+     "ar": "الحرارة",
+     "en": "Heat"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "علامة Auspitz إيجابية.",
+    "en": "A positive Auspitz sign."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض Tinea corporis عنده 5 آفات. ماذا تتوقع؟",
+    "en": "A Tinea corporis patient has 5 lesions. What do you expect?"
+   },
+   "options": [
+    {
+     "ar": "كريم فقط",
+     "en": "Cream only"
+    },
+    {
+     "ar": "مضاد فطريات جهازي مع الموضعي",
+     "en": "A systemic antifungal with the topical"
+    },
+    {
+     "ar": "لا علاج",
+     "en": "No treatment"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "أكثر من 3 آفات تحتاج علاجاً جهازياً.",
+    "en": "More than 3 lesions need systemic treatment."
+   }
+  },
+  {
+   "q": {
+    "ar": "أفضل وقت لتناول Terbinafine؟",
+    "en": "The best time to take Terbinafine?"
+   },
+   "options": [
+    {
+     "ar": "وسط الأكل",
+     "en": "In the middle of a meal"
+    },
+    {
+     "ar": "معدة فارغة",
+     "en": "Empty stomach"
+    },
+    {
+     "ar": "قبل النوم",
+     "en": "Before sleep"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يُؤخذ مع الأكل حسب الوصفة الشائعة.",
+    "en": "It is taken with food according to the common prescription."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم تثقيف لتينيا الجسم؟",
+    "en": "The most important teaching for tinea corporis?"
+   },
+   "options": [
+    {
+     "ar": "عدم مشاركة الأدوات الشخصية",
+     "en": "Not sharing personal items"
+    },
+    {
+     "ar": "مشاركة الفرش",
+     "en": "Sharing brushes"
+    },
+    {
+     "ar": "إيقاف الدواء مبكرًا",
+     "en": "Stopping the drug early"
+    },
+    {
+     "ar": "تجنب الغسل",
+     "en": "Avoiding washing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لمنع العدوى.",
+    "en": "To prevent infection."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما أهم أولوية تعليمية في السعفة؟",
+    "en": "What is the most important teaching priority in ringworm?"
+   },
+   "options": [
+    {
+     "ar": "منع انتشار العدوى بعدم مشاركة الأغراض",
+     "en": "Preventing the spread of infection by not sharing items"
+    },
+    {
+     "ar": "الراحة التامة",
+     "en": "Complete rest"
+    },
+    {
+     "ar": "تقليل الماء",
+     "en": "Reducing water"
+    },
+    {
+     "ar": "إيقاف الدواء بعد يومين",
+     "en": "Stopping the drug after two days"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "العدوى تنتقل بسهولة بالأغراض الشخصية.",
+    "en": "The infection spreads easily through personal items."
+   }
+  },
+  {
+   "q": {
+    "ar": "أفضل وقت لتناول جريزيوفولفين؟",
+    "en": "The best time to take griseofulvin?"
+   },
+   "options": [
+    {
+     "ar": "مع وجبة عالية الدهون",
+     "en": "With a high-fat meal"
+    },
+    {
+     "ar": "على معدة فاضية",
+     "en": "On an empty stomach"
+    },
+    {
+     "ar": "مع قهوة",
+     "en": "With coffee"
+    },
+    {
+     "ar": "قبل النوم دون طعام",
+     "en": "Before sleep without food"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "امتصاصه أفضل مع الدهون.",
+    "en": "Its absorption is better with fat."
+   }
+  },
+  {
+   "q": {
+    "ar": "الحكة اختفت بعد أسبوع. ماذا تنصح؟",
+    "en": "The itching disappeared after a week. What do you advise?"
+   },
+   "options": [
+    {
+     "ar": "إيقاف الدواء",
+     "en": "Stopping the drug"
+    },
+    {
+     "ar": "الاستمرار حتى انتهاء المدة",
+     "en": "Continuing until the duration ends"
+    },
+    {
+     "ar": "مضاعفة الجرعة",
+     "en": "Doubling the dose"
+    },
+    {
+     "ar": "تغيير الدواء",
+     "en": "Changing the drug"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "العلاج يستغرق أسابيع إلى شهورًا ولا يُوقف عند زوال الحكة.",
+    "en": "Treatment takes weeks to months and is not stopped when the itching goes away."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AAD: Fungal skin infections / Tinea / Onychomycosis guidelines"
+  },
+  {
+   "title": "IDSA / CDC: Candidiasis guidelines"
+  },
+  {
+   "title": "EMA & FDA safety warnings: oral ketoconazole (2013)"
+  },
+  {
+   "title": "StatPearls: Tinea Corporis, Pityriasis Versicolor, Onychomycosis"
+  },
+  {
+   "title": "AAD/CDC: Ringworm, tinea pedis, tinea versicolor and candidiasis pages; BNF: Fungal skin infections"
+  },
+  {
+   "title": "Terbinafine dosage (Drugs.com)",
+   "url": "https://www.drugs.com/dosage/terbinafine.html"
+  },
+  {
+   "title": "AAD: Tinea versicolor / onychomycosis treatment guidance"
+  }
+ ],
+ "rx": [
+  {
+   "category": "الجلدية",
+   "condition_ar": "التينيا الملونة (Tinea versicolor)",
+   "condition_en": "Tinea versicolor",
+   "items": [
+    {
+     "drug_name": "Dermatin cream (clotrimazole 1%) / Miconaz cream (miconazole 2%) / Batrafen cream (ciclopirox 1%) / Lamisil cream (terbinafine 1%)",
+     "dose": "صباحاً ومساءً لمدة أسبوعين",
+     "note": "آفات صغيرة"
+    },
+    {
+     "drug_name": "Nizapex shampoo / Nizoral shampoo (ketoconazole 2%)",
+     "dose": "مرة يومياً لمدة أسبوعين؛ يترك 10 دقائق ثم يُشطف",
+     "note": "آفات كبيرة أو الفروة"
+    },
+    {
+     "drug_name": "Selsun blue shampoo (selenium sulfide)",
+     "dose": "مرة يومياً لمدة أسبوعين؛ يترك 10 دقائق",
+     "note": "حالات مقاومة"
+    },
+    {
+     "drug_name": "Flucoral caps / Fungican caps (fluconazole 150 mg)",
+     "dose": "كبسولتين الآن ثم كبسولتين بعد أسبوع",
+     "note": "لا استحمام أول يوم ويعرق"
+    }
+   ],
+   "clinical_note": "الشامبو أسبوعياً في الصيف للوقاية."
+  },
+  {
+   "category": "الجلدية",
+   "condition_ar": "التينيا الحلقية (Tinea corporis)",
+   "condition_en": "Tinea circinata",
+   "items": [
+    {
+     "drug_name": "كريم/شامبو مضاد فطريات (كما في Tinea versicolor)",
+     "dose": "صباحاً ومساءً لمدة أسبوع بعد اختفاء الحلقات",
+     "note": ""
+    },
+    {
+     "drug_name": "Lamisil 250 / Terbin 250 أو Itrapex 100",
+     "dose": "كما في Tinea cruris",
+     "note": "جهازي"
+    }
+   ],
+   "clinical_note": "معدية."
+  },
+  {
+   "category": "الجلدية",
+   "condition_ar": "تينيا القدم (Tinea pedis)",
+   "condition_en": "Tinea pedis",
+   "items": [
+    {
+     "drug_name": "Dermatin powder / Miconaz powder",
+     "dose": "بودرة بين الأصابع صباحاً ومساءً لمدة شهر ونصف",
+     "note": ""
+    },
+    {
+     "drug_name": "Lamisil 250 / Terbin 250 أو Itrapex 100",
+     "dose": "كما في Tinea cruris",
+     "note": "جهازي"
+    }
+   ],
+   "clinical_note": "شرابات قطن وتجفيف وغلي."
+  },
+  {
+   "category": "الجلدية",
+   "condition_ar": "فطر الأظافر (Onychomycosis)",
+   "condition_en": "Onychomycosis",
+   "items": [
+    {
+     "drug_name": "Trosyd nail solution / Trozal nail solution",
+     "dose": "مرة يومياً لمدة شهر ونصف (يد) أو 3 شهور (قدم)",
+     "note": "موضعي"
+    },
+    {
+     "drug_name": "Lamisil 250 / Terbin 250 (terbinafine)",
+     "dose": "قرص يومياً لمدة شهر ونصف (يد) أو 3 شهور (قدم)",
+     "note": ""
+    },
+    {
+     "drug_name": "Itrapex 100 (itraconazole)",
+     "dose": "كبسولتين في اليوم لمدة شهر ونصف (يد) أو 3 شهور (قدم)",
+     "note": ""
+    }
+   ],
+   "clinical_note": "العلاج طويل والتزام المريض ضروري."
+  },
+  {
+   "category": "الجلدية",
+   "condition_ar": "Tinea versicolor",
+   "condition_en": "Tinea versicolor",
+   "items": [
+    {
+     "drug_name": "Dermatin cream",
+     "dose": "صباحاً ومساءً × أسبوعين",
+     "note": ""
+    },
+    {
+     "drug_name": "Miconaz cream",
+     "dose": "نفسه",
+     "note": ""
+    },
+    {
+     "drug_name": "Batrafen cream",
+     "dose": "نفسه",
+     "note": ""
+    },
+    {
+     "drug_name": "Lamisil cream",
+     "dose": "نفسه",
+     "note": ""
+    },
+    {
+     "drug_name": "Nizapex / Nizoral shampoo",
+     "dose": "يومياً × أسبوعين، 10 دقائق",
+     "note": ""
+    },
+    {
+     "drug_name": "Selsun blue shampoo",
+     "dose": "يومياً × أسبوعين",
+     "note": "للمقاوم"
+    },
+    {
+     "drug_name": "Flucoral / Fungican caps",
+     "dose": "كبسولتين الآن وبعد أسبوع",
+     "note": ""
+    }
+   ],
+   "clinical_note": ""
+  },
+  {
+   "category": "الجلدية",
+   "condition_ar": "Tinea pedis / Onychomycosis",
+   "condition_en": "Tinea pedis & onychomycosis",
+   "items": [
+    {
+     "drug_name": "Dermatin powder / Miconaz powder",
+     "dose": "بين الأصابع صباحاً ومساءً شهر ونصف",
+     "note": ""
+    },
+    {
+     "drug_name": "Trosyd / Trozal nail solution",
+     "dose": "يومياً 1.5 شهر (يد) أو 3 شهور (قدم)",
+     "note": ""
+    },
+    {
+     "drug_name": "Lamisil 250 / Terbin 250",
+     "dose": "قرص يومياً نفس المدة",
+     "note": ""
+    },
+    {
+     "drug_name": "Itrapex 100",
+     "dose": "كبسولتين يومياً نفس المدة",
+     "note": ""
+    }
+   ],
+   "clinical_note": ""
+  }
+ ]
 }
