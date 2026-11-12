@@ -1,174 +1,219 @@
 {
-  "id": "dis-190",
-  "num": 190,
-  "system": "infect",
-  "icon": "💧",
-  "level": 3,
-  "title": {
-    "ar": "الكوليرا",
-    "en": "Cholera"
+ "id": "dis-190",
+ "num": 190,
+ "system": "infect",
+ "icon": "💧",
+ "level": 3,
+ "title": {
+  "ar": "الكوليرا",
+  "en": "Cholera"
+ },
+ "teaser": {
+  "ar": "إسهال مائي كماء الأرز يسبب جفاف شديد في ساعات: العلامات، محاليل الجفاف الفموية والوريدية، المضاد الحيوي، العزل والإبلاغ والتطعيم.",
+  "en": "Rice-water diarrhea that causes severe dehydration within hours: signs, oral and intravenous rehydration solutions, the antibiotic, isolation, reporting, and vaccination."
+ },
+ "chips": [
+  {
+   "ar": "ماء الأرز",
+   "en": "Rice water"
   },
-  "teaser": {
-    "ar": "إسهال مائي كماء الأرز يسبب جفاف شديد في ساعات: العلامات، محاليل الجفاف الفموية والوريدية، المضاد الحيوي، العزل والإبلاغ والتطعيم."
+  {
+   "ar": "ORS / وريدي",
+   "en": "ORS / IV"
   },
-  "chips": [
-    {
-      "ar": "ماء الأرز"
-    },
-    {
-      "ar": "ORS / وريدي"
-    },
-    {
-      "ar": "عزل وإبلاغ"
-    }
+  {
+   "ar": "عزل وإبلاغ",
+   "en": "Isolation and reporting"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p><b>الكوليرا (Cholera)</b> عدوى معوية حادة بضمة الكوليرا (Vibrio cholerae) بتسبب إسهالاً مائياً غزيراً وقيئاً يؤدي لجفاف شديد خلال ساعات.</p>[[slot:dis-190-ors|مخطط علاج الكوليرا|/diseases/img/dis-190-ors.svg]]",
+   "en": "<p><b>Cholera</b> is an acute intestinal infection with the cholera bacterium (Vibrio cholerae) that causes profuse watery diarrhea and vomiting leading to severe dehydration within hours.</p>[[slot:dis-190-ors|Cholera treatment chart|/diseases/img/dis-190-ors.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li>ضمة الكوليرا (Vibrio cholerae) — ماء وأكل ملوث ببراز المصابين.</li><li>مناطق الوباء وسوء الصرف الصحي.</li></ul>",
+   "en": "<ul><li>Vibrio cholerae — water and food contaminated with the stool of infected people.</li><li>Epidemic areas and poor sanitation.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ol><li><b>إسهال غزير شديد بدون ألم (Painless)</b> بشكل ماء الأرز (Rice-water stools).</li><li>قيء، جفاف (Dehydration)، هبوط ضغط (Hypotension)، عطش، جلد جاف بارد، ± شبه غيبوبة أو غيبوبة، توقف البول (Anuria)، وقد تنتهي بالوفاة.</li><li>وجود ضمة الكوليرا في البراز (يؤكد التشخيص).</li></ol>",
+   "en": "<ol><li><b>Profuse severe painless diarrhea</b> in the form of rice water (Rice-water stools).</li><li>Vomiting, dehydration, hypotension, thirst, dry cold skin, ± stupor or coma, anuria, and it may end in death.</li><li>Presence of Vibrio cholerae in the stool (confirms the diagnosis).</li></ol>"
+  },
+  "tests": {
+   "ar": "<ul><li>فحص مجهري/مزرعة براز لإيجاد Vibrio (تأكيد).</li><li>اختبار سريع (Dipstick) في الوباء.</li><li>أملاح الدم والكلى وغازات الدم لتقدير الجفاف.</li></ul>",
+   "en": "<ul><li>Microscopy/stool culture to find Vibrio (confirmation).</li><li>Rapid test (Dipstick) in an epidemic.</li><li>Blood electrolytes, kidney tests, and blood gases to estimate dehydration.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>الوقاية</h4><ul><li>عزل المريض والتخلص من البراز بالطريقة الصحية</li><li>غلي الماء وطهي الطعام جيداً في المناطق الموبوءة</li><li>لقاح الكوليرا</li></ul><table><thead><tr><th>اللقاح (حسب المراجع)</th><th>الجرعة</th></tr></thead><tbody><tr><td>Cholera vaccine</td><td>0.5 سم³ تحت الجلد أو بالعضل، ثم 1 سم³ بعد 4 أسابيع، ثم 0.5 سم³ كل 4–6 أشهر عند توقع حدوث وباء</td></tr></tbody></table><h4>العلاج</h4><p><b>الحالات الخفيفة والمتوسطة:</b></p><p>محلول بالفم بكميات مكافئة للسوائل المفقودة: NaCl 4.2 جم/لتر + NaHCO3 4 جم/لتر + KCl 1.8 جم/لتر + جلوكوز 21.6 جم/لتر.</p><p><b>الحالات الشديدة:</b> محلول وريدي: NaCl 5 جم/لتر + NaHCO3 4 جم/لتر + KCl 1 جم/لتر، يعطى بالوريد بمعدل 1–2 لتر على مدى نصف ساعة، بعد ذلك يعطى المحلول بالفم لتعويض السوائل المفقودة عن طريق القيء والبراز.</p><table><thead><tr><th>المضاد الحيوي (حسب المراجع)</th><th>الجرعة</th></tr></thead><tbody><tr><td>Tetracid كبسولة</td><td>2 كبسولة كل 6 ساعات لمدة 5 أيام</td></tr><tr><td>Hostacycline 500 قرص</td><td>قرص كل 6 ساعات لمدة 5 أيام</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>التعويض هو العلاج الأساسي</b> والمضاد الحيوي يقصّر المرض ويقلل الإفراز. محلول الجفاف (ORS) الحالي المعتمد من WHO منخفض الأسمولية (صوديوم 75 ملي مول/لتر وجلوكوز 75) وهو متاح بأكياس جاهزة. وريدياً المفضل <b>Ringer's lactate</b> أو محلول ملحي. المضاد الحيوي بجرعة واحدة: <b>Doxycycline 300 مجم</b> للبالغين، أو <b>Azithromycin 1 جم</b> (20 مجم/كجم للأطفال)، أو حسب حساسية المنطقة (مقاومة التتراسيكلين). لقاح الكوليرا الحالي <b>فموي</b> (OCV) جرعتين تفصل بينهما أسبوعين، وليس الحقن القديم. أي اشتباه: عزل المريض وإبلاغ مكتب الصحة.</div><div class=\"cs-box cs-danger\"><strong>عزل وإبلاغ</strong><p>عند الاشتباه في الكوليرا: <b>عزل المريض وإبلاغ أقرب مكتب صحة</b> لاتخاذ الإجراءات اللازمة.</p></div>",
+   "en": "<h4>Prevention</h4><ul><li>Isolate the patient and dispose of stool in a sanitary way</li><li>Boil water and cook food well in epidemic areas</li><li>Cholera vaccine</li></ul><table><thead><tr><th>Vaccine</th><th>Dose</th></tr></thead><tbody><tr><td>Cholera vaccine</td><td>0.5 cm³ subcutaneously or intramuscularly, then 1 cm³ after 4 weeks, then 0.5 cm³ every 4–6 months when an epidemic is expected</td></tr></tbody></table><h4>Treatment</h4><p><b>Mild and moderate cases:</b></p><p>Oral solution in amounts equivalent to the fluids lost: NaCl 4.2 g/L + NaHCO3 4 g/L + KCl 1.8 g/L + glucose 21.6 g/L.</p><p><b>Severe cases:</b> intravenous solution: NaCl 5 g/L + NaHCO3 4 g/L + KCl 1 g/L, given intravenously at a rate of 1–2 liters over half an hour, then the oral solution is given to replace fluids lost through vomiting and stool.</p><table><thead><tr><th>Antibiotic</th><th>Dose</th></tr></thead><tbody><tr><td>Tetracid capsule</td><td>2 capsules every 6 hours for 5 days</td></tr><tr><td>Hostacycline 500 tablet</td><td>One tablet every 6 hours for 5 days</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><b>Replacement is the main treatment</b> and the antibiotic shortens the illness and reduces secretion. The current standard oral rehydration solution (ORS) is low-osmolarity (sodium 75 mmol/L and glucose 75) and is available in ready-made sachets. Intravenously, <b>Ringer's lactate</b> or normal saline is preferred. The single-dose antibiotic: <b>Doxycycline 300 mg</b> for adults, or <b>Azithromycin 1 g</b> (20 mg/kg for children), or according to local sensitivity (tetracycline resistance). The current cholera vaccine is <b>oral</b> (OCV), two doses two weeks apart, not the old injection. Any suspicion: isolate the patient and notify the health office.</div><div class=\"cs-box cs-danger\"><strong>Isolation and reporting</strong><p>When cholera is suspected: <b>isolate the patient and notify the nearest health office</b> to take the necessary measures.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الجفاف فوراً</strong><p>النبض، الضغط، امتلاء الأوردة، الوعي، تورّم الجلد (Skin turgor)، العطش، العيون الغائرة، كمية البول، الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اعزل واحتط</strong><p>عزل تلامسي، قفازات ومريلة، تخلّص آمن من القيء والبراز (محلول كلور)، غسل اليدين بالماء والصابون، سرير الكوليرا (فتحة وسطية ودلو).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>عوّض السوائل</strong><p>ORS فموي بكميات صغيرة متكررة حسب الأمر، ووريدي سريع للصدمة بخطين وريديين. سجّل بدقة الداخل (فموي ووريدي) والخارج (براز وقيء).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>راقب الأملاح</strong><p>بوتاسيوم (ضعف عضلات، اضطراب نبض)، صوديوم، بيكربونات، غازات الدم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>المضاد الحيوي</strong><p>في مواعيده حسب الأمر وبعد أخذ عينة براز.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب وسجّل</strong><p>العلامات الحيوية كل 15–30 دقيقة في الحالات الشديدة، تحسن الوعي، عودة البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>بلّغ ووقّي</strong><p>بلّغ الصحة فوراً، المخالطون، نظافة الماء والأكل.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>مريض كوليرا بنبض ضعيف وضغط منخفض وغائر العينين = جفاف شديد: <b>خطان وريديان وسوائل سريعة فوراً</b> وبلّغ الطبيب. الجفاف يقتل في ساعات.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess dehydration immediately</strong><p>Pulse, blood pressure, vein filling, consciousness, skin turgor, thirst, sunken eyes, urine amount, weight.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Isolate and take precautions</strong><p>Contact isolation, gloves and apron, safe disposal of vomit and stool (chlorine solution), handwashing with soap and water, cholera bed (central opening and a bucket).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Replace fluids</strong><p>Oral ORS in small frequent amounts as ordered, and rapid intravenous for shock with two IV lines. Record accurately the intake (oral and IV) and output (stool and vomit).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Monitor electrolytes</strong><p>Potassium (muscle weakness, pulse disturbance), sodium, bicarbonate, blood gases.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>The antibiotic</strong><p>On time as ordered and after taking a stool sample.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Monitor and record</strong><p>Vital signs every 15–30 minutes in severe cases, improvement in consciousness, return of urine.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Report and protect</strong><p>Notify health authorities immediately, contacts, water and food hygiene.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>A cholera patient with a weak pulse, low blood pressure, and sunken eyes = severe dehydration: <b>two IV lines and rapid fluids immediately</b> and notify the doctor. Dehydration kills within hours.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>هبوط ضغط أو نبض ضعيف أو برودة الأطراف</li><li>نعاس شديد أو غيبوبة</li><li>توقف البول</li><li>تقلصات عضلية شديدة أو اضطراب نبض (نقص بوتاسيوم)</li><li>قيء لا يسمح بالسوائل</li><li>طفل أو حامل أو كبير سن مصاب</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report to the doctor immediately if:</strong><ul><li>Low blood pressure, weak pulse, or cold extremities</li><li>Severe drowsiness or coma</li><li>Stopped urine</li><li>Severe muscle cramps or pulse disturbance (low potassium)</li><li>Vomiting that does not allow fluids</li><li>A child, pregnant woman, or elderly person affected</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرب محلول الجفاف أولاً بأول، حتى لو في قيء (رشفات صغيرة).</li><li>اغلِ الماء واطبخ الأكل جيداً وتجنب الأكل النيء في الوباء.</li><li>اغسل إيدك بالصابون بعد الحمام وقبل الأكل.</li><li>تخلص من براز المريض بطريقة صحية.</li><li>بلّغ الصحة عند أي إسهال مائي شديد مفاجئ.</li></ul>",
+   "en": "<ul><li>Drink the rehydration solution as you go, even if there is vomiting (small sips).</li><li>Boil water and cook food well and avoid raw food during an epidemic.</li><li>Wash your hands with soap after the toilet and before eating.</li><li>Dispose of the patient's stool in a sanitary way.</li><li>Notify health authorities of any sudden severe watery diarrhea.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الكوليرا: إسهال مائي غزير بلا ألم (Rice-water) مع قيء وجفاف شديد",
+   "قد تسبب هبوط ضغط وغيبوبة وتوقف البول وتنتهي بالوفاة لو تأخر العلاج",
+   "العلاج الأساسي تعويض السوائل (فموي أو وريدي) والمضاد الحيوي مكمّل",
+   "العزل والتخلص الصحي من البراز وغلي الماء وطهي الأكل جيداً",
+   "لازم إبلاغ مكتب الصحة عند أي اشتباه",
+   "الوقاية بتطعيم الكوليرا في أوقات الوباء"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p><b>الكوليرا (Cholera)</b> عدوى معوية حادة بضمة الكوليرا (Vibrio cholerae) بتسبب إسهالاً مائياً غزيراً وقيئاً يؤدي لجفاف شديد خلال ساعات.</p>[[slot:dis-190-ors|مخطط علاج الكوليرا|/diseases/img/dis-190-ors.svg]]"
-    },
-    "causes": {
-      "ar": "<ul><li>ضمة الكوليرا (Vibrio cholerae) — ماء وأكل ملوث ببراز المصابين.</li><li>مناطق الوباء وسوء الصرف الصحي.</li></ul>"
-    },
-    "signs": {
-      "ar": "<ol><li><b>إسهال غزير شديد بدون ألم (Painless)</b> بشكل ماء الأرز (Rice-water stools).</li><li>قيء، جفاف (Dehydration)، هبوط ضغط (Hypotension)، عطش، جلد جاف بارد، ± شبه غيبوبة أو غيبوبة، توقف البول (Anuria)، وقد تنتهي بالوفاة.</li><li>وجود ضمة الكوليرا في البراز (يؤكد التشخيص).</li></ol>"
-    },
-    "tests": {
-      "ar": "<ul><li>فحص مجهري/مزرعة براز لإيجاد Vibrio (تأكيد).</li><li>اختبار سريع (Dipstick) في الوباء.</li><li>أملاح الدم والكلى وغازات الدم لتقدير الجفاف.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>الوقاية</h4><ul><li>عزل المريض والتخلص من البراز بالطريقة الصحية</li><li>غلي الماء وطهي الطعام جيداً في المناطق الموبوءة</li><li>لقاح الكوليرا</li></ul><table><thead><tr><th>اللقاح (حسب المراجع)</th><th>الجرعة</th></tr></thead><tbody><tr><td>Cholera vaccine</td><td>0.5 سم³ تحت الجلد أو بالعضل، ثم 1 سم³ بعد 4 أسابيع، ثم 0.5 سم³ كل 4–6 أشهر عند توقع حدوث وباء</td></tr></tbody></table><h4>العلاج</h4><p><b>الحالات الخفيفة والمتوسطة:</b></p><p>محلول بالفم بكميات مكافئة للسوائل المفقودة: NaCl 4.2 جم/لتر + NaHCO3 4 جم/لتر + KCl 1.8 جم/لتر + جلوكوز 21.6 جم/لتر.</p><p><b>الحالات الشديدة:</b> محلول وريدي: NaCl 5 جم/لتر + NaHCO3 4 جم/لتر + KCl 1 جم/لتر، يعطى بالوريد بمعدل 1–2 لتر على مدى نصف ساعة، بعد ذلك يعطى المحلول بالفم لتعويض السوائل المفقودة عن طريق القيء والبراز.</p><table><thead><tr><th>المضاد الحيوي (حسب المراجع)</th><th>الجرعة</th></tr></thead><tbody><tr><td>Tetracid كبسولة</td><td>2 كبسولة كل 6 ساعات لمدة 5 أيام</td></tr><tr><td>Hostacycline 500 قرص</td><td>قرص كل 6 ساعات لمدة 5 أيام</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>التعويض هو العلاج الأساسي</b> والمضاد الحيوي يقصّر المرض ويقلل الإفراز. محلول الجفاف (ORS) الحالي المعتمد من WHO منخفض الأسمولية (صوديوم 75 ملي مول/لتر وجلوكوز 75) وهو متاح بأكياس جاهزة. وريدياً المفضل <b>Ringer's lactate</b> أو محلول ملحي. المضاد الحيوي بجرعة واحدة: <b>Doxycycline 300 مجم</b> للبالغين، أو <b>Azithromycin 1 جم</b> (20 مجم/كجم للأطفال)، أو حسب حساسية المنطقة (مقاومة التتراسيكلين). لقاح الكوليرا الحالي <b>فموي</b> (OCV) جرعتين تفصل بينهما أسبوعين، وليس الحقن القديم. أي اشتباه: عزل المريض وإبلاغ مكتب الصحة.</div><div class=\"cs-box cs-danger\"><strong>عزل وإبلاغ</strong><p>عند الاشتباه في الكوليرا: <b>عزل المريض وإبلاغ أقرب مكتب صحة</b> لاتخاذ الإجراءات اللازمة.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الجفاف فوراً</strong><p>النبض، الضغط، امتلاء الأوردة، الوعي، تورّم الجلد (Skin turgor)، العطش، العيون الغائرة، كمية البول، الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اعزل واحتط</strong><p>عزل تلامسي، قفازات ومريلة، تخلّص آمن من القيء والبراز (محلول كلور)، غسل اليدين بالماء والصابون، سرير الكوليرا (فتحة وسطية ودلو).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>عوّض السوائل</strong><p>ORS فموي بكميات صغيرة متكررة حسب الأمر، ووريدي سريع للصدمة بخطين وريديين. سجّل بدقة الداخل (فموي ووريدي) والخارج (براز وقيء).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>راقب الأملاح</strong><p>بوتاسيوم (ضعف عضلات، اضطراب نبض)، صوديوم، بيكربونات، غازات الدم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>المضاد الحيوي</strong><p>في مواعيده حسب الأمر وبعد أخذ عينة براز.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب وسجّل</strong><p>العلامات الحيوية كل 15–30 دقيقة في الحالات الشديدة، تحسن الوعي، عودة البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>بلّغ ووقّي</strong><p>بلّغ الصحة فوراً، المخالطون، نظافة الماء والأكل.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>مريض كوليرا بنبض ضعيف وضغط منخفض وغائر العينين = جفاف شديد: <b>خطان وريديان وسوائل سريعة فوراً</b> وبلّغ الطبيب. الجفاف يقتل في ساعات.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>هبوط ضغط أو نبض ضعيف أو برودة الأطراف</li><li>نعاس شديد أو غيبوبة</li><li>توقف البول</li><li>تقلصات عضلية شديدة أو اضطراب نبض (نقص بوتاسيوم)</li><li>قيء لا يسمح بالسوائل</li><li>طفل أو حامل أو كبير سن مصاب</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرب محلول الجفاف أولاً بأول، حتى لو في قيء (رشفات صغيرة).</li><li>اغلِ الماء واطبخ الأكل جيداً وتجنب الأكل النيء في الوباء.</li><li>اغسل إيدك بالصابون بعد الحمام وقبل الأكل.</li><li>تخلص من براز المريض بطريقة صحية.</li><li>بلّغ الصحة عند أي إسهال مائي شديد مفاجئ.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الكوليرا: إسهال مائي غزير بلا ألم (Rice-water) مع قيء وجفاف شديد",
-      "قد تسبب هبوط ضغط وغيبوبة وتوقف البول وتنتهي بالوفاة لو تأخر العلاج",
-      "العلاج الأساسي تعويض السوائل (فموي أو وريدي) والمضاد الحيوي مكمّل",
-      "العزل والتخلص الصحي من البراز وغلي الماء وطهي الأكل جيداً",
-      "لازم إبلاغ مكتب الصحة عند أي اشتباه",
-      "الوقاية بتطعيم الكوليرا في أوقات الوباء"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "شكل البراز في الكوليرا؟"
-      },
-      "options": [
-        {
-          "ar": "مائي كماء الأرز"
-        },
-        {
-          "ar": "دموي مخاطي"
-        },
-        {
-          "ar": "أسود"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Rice-water stools."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم علاج؟"
-      },
-      "options": [
-        {
-          "ar": "تعويض السوائل والأملاح"
-        },
-        {
-          "ar": "مضاد إسهال"
-        },
-        {
-          "ar": "مسكن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الجفاف هو القاتل."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض كوليرا بصدمة، أنسب؟"
-      },
-      "options": [
-        {
-          "ar": "سوائل وريدية 1–2 لتر خلال نصف ساعة"
-        },
-        {
-          "ar": "محلول فموي فقط"
-        },
-        {
-          "ar": "انتظار"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ثم تكمل بالفم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول إجراء عند الاشتباه؟"
-      },
-      "options": [
-        {
-          "ar": "عزل وإبلاغ الصحة"
-        },
-        {
-          "ar": "تسريح المريض"
-        },
-        {
-          "ar": "مضاد حيوي ثم تجاهل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مرض مبلّغ عنه."
-      }
-    },
-    {
-      "q": {
-        "ar": "وقاية الماء؟"
-      },
-      "options": [
-        {
-          "ar": "غلي الماء وطهي الأكل جيداً"
-        },
-        {
-          "ar": "تبريد"
-        },
-        {
-          "ar": "تخزين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لمنع تلوث الأكل والماء."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "WHO — Cholera fact sheet and Global Task Force on Cholera Control: clinical management"
-    },
-    {
-      "title": "CDC — Cholera treatment (rehydration, antibiotics)"
-    },
-    {
-      "title": "WHO Oral cholera vaccines position paper"
-    }
+  "en": [
+   "Cholera: profuse painless watery diarrhea (rice-water) with vomiting and severe dehydration",
+   "It may cause low blood pressure, coma, and anuria and end in death if treatment is delayed",
+   "The main treatment is fluid replacement (oral or IV) and the antibiotic is complementary",
+   "Isolation, sanitary stool disposal, boiling water, and cooking food well",
+   "Any suspicion must be reported to the health office",
+   "Prevention by cholera vaccination during epidemics"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "شكل البراز في الكوليرا؟",
+    "en": "The stool appearance in cholera?"
+   },
+   "options": [
+    {
+     "ar": "مائي كماء الأرز",
+     "en": "Watery like rice water"
+    },
+    {
+     "ar": "دموي مخاطي",
+     "en": "Bloody mucoid"
+    },
+    {
+     "ar": "أسود",
+     "en": "Black"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Rice-water stools.",
+    "en": "Rice-water stools."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم علاج؟",
+    "en": "The most important treatment?"
+   },
+   "options": [
+    {
+     "ar": "تعويض السوائل والأملاح",
+     "en": "Replacing fluids and electrolytes"
+    },
+    {
+     "ar": "مضاد إسهال",
+     "en": "Anti-diarrheal"
+    },
+    {
+     "ar": "مسكن",
+     "en": "Painkiller"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الجفاف هو القاتل.",
+    "en": "Dehydration is the killer."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض كوليرا بصدمة، أنسب؟",
+    "en": "A cholera patient in shock, the most suitable?"
+   },
+   "options": [
+    {
+     "ar": "سوائل وريدية 1–2 لتر خلال نصف ساعة",
+     "en": "IV fluids 1–2 liters within half an hour"
+    },
+    {
+     "ar": "محلول فموي فقط",
+     "en": "Oral solution only"
+    },
+    {
+     "ar": "انتظار",
+     "en": "Waiting"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ثم تكمل بالفم.",
+    "en": "Then continue by mouth."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول إجراء عند الاشتباه؟",
+    "en": "The first action when cholera is suspected?"
+   },
+   "options": [
+    {
+     "ar": "عزل وإبلاغ الصحة",
+     "en": "Isolate and notify health authorities"
+    },
+    {
+     "ar": "تسريح المريض",
+     "en": "Discharge the patient"
+    },
+    {
+     "ar": "مضاد حيوي ثم تجاهل",
+     "en": "Antibiotic then ignore"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مرض مبلّغ عنه.",
+    "en": "A notifiable disease."
+   }
+  },
+  {
+   "q": {
+    "ar": "وقاية الماء؟",
+    "en": "Water prevention?"
+   },
+   "options": [
+    {
+     "ar": "غلي الماء وطهي الأكل جيداً",
+     "en": "Boil water and cook food well"
+    },
+    {
+     "ar": "تبريد",
+     "en": "Cooling"
+    },
+    {
+     "ar": "تخزين",
+     "en": "Storage"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لمنع تلوث الأكل والماء.",
+    "en": "To prevent contamination of food and water."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "WHO — Cholera fact sheet and Global Task Force on Cholera Control: clinical management"
+  },
+  {
+   "title": "CDC — Cholera treatment (rehydration, antibiotics)"
+  },
+  {
+   "title": "WHO Oral cholera vaccines position paper"
+  }
+ ]
 }

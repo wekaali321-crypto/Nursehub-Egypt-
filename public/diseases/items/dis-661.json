@@ -1,178 +1,224 @@
 {
-  "id": "dis-661",
-  "num": 661,
-  "system": "infect",
-  "icon": "⚡",
-  "level": 3,
-  "title": {
-    "ar": "الصدمة الإنتانية (Septic Shock)",
-    "en": "Septic Shock"
+ "id": "dis-661",
+ "num": 661,
+ "system": "infect",
+ "icon": "⚡",
+ "level": 3,
+ "title": {
+  "ar": "الصدمة الإنتانية (Septic Shock)",
+  "en": "Septic Shock"
+ },
+ "teaser": {
+  "ar": "أخطر مضاعفات العدوى: الساعة الأولى (Hour-1 bundle)، السوائل والمضاد الحيوي، لاكتات، ضغط MAP ≥65 والمراقبة الدقيقة لتجنب الوفاة.",
+  "en": "The most dangerous complication of infection: the first hour (Hour-1 bundle), fluids and antibiotic, lactate, MAP ≥65 pressure, and close monitoring to avoid death."
+ },
+ "chips": [
+  {
+   "ar": "Hour-1 bundle",
+   "en": "Hour-1 bundle"
   },
-  "teaser": {
-    "ar": "أخطر مضاعفات العدوى: الساعة الأولى (Hour-1 bundle)، السوائل والمضاد الحيوي، لاكتات، ضغط MAP ≥65 والمراقبة الدقيقة لتجنب الوفاة."
+  {
+   "ar": "MAP ≥ 65",
+   "en": "MAP ≥ 65"
   },
-  "chips": [
-    {
-      "ar": "Hour-1 bundle"
-    },
-    {
-      "ar": "MAP ≥ 65"
-    },
-    {
-      "ar": "Lactate"
-    }
+  {
+   "ar": "Lactate",
+   "en": "Lactate"
+  }
+ ],
+ "target": "er-reception",
+ "sections": {
+  "overview": {
+   "ar": "<p>الصدمة الإنتانية تبدأ بتجرثم الدم (Bacteremia) غالباً بكتيريا سالبة الجرام من البولي أو الهضمي أو الرئة. تفرز الجسم <b>TNF-alpha</b> ومواد التهابية فتتسع الأوعية (توسع وعائي) وتزيد نفاذيتها فيتسرب الدم إلى الأنسجة السليمة والمصابة، فينخفض الضغط وتقل تروية الأعضاء → <b>حماض لاكتيكي</b> وفشل أعضاء.</p><div class=\"cs-stats\"><div><b>40–80%</b><span>وفيات (في بعض المراجع)، أقل اليوم مع العلاج المبكر</span></div><div><b>>2</b><span>Lactate (mmol/L) = تروية سيئة</span></div><div><b>≥65</b><span>MAP هدف (مم زئبق)</span></div></div><p>قد تكون العدوى موجودة منذ فترة. تتطور الصدمة أسرع عند كبار السن، ضعفاء المناعة، ذوي الأمراض المزمنة.</p>[[slot:dis-661-pathway|تسلسل العدوى إلى الصدمة الإنتانية|/diseases/img/dis-661-pathway.svg]]<table><thead><tr><th>المصطلح</th><th>التعريف (Sepsis-3)</th></tr></thead><tbody><tr><td>Sepsis</td><td>عدوى + خلل عضوي (SOFA ≥2)</td></tr><tr><td>Septic shock</td><td>Sepsis + حاجة لمحفّزات ضغط للحفاظ على MAP ≥65 + Lactate >2 رغم السوائل</td></tr></tbody></table>\n<h4>ملخص الفسيولوجيا المرضية والعلامات (مرجع سريع)</h4><p>تنتج الصدمة الإنتانية عن عدوى منتشرة بالدم (كالتهاب رئوي أو بولي أو كلوي يسوء) تغمر الجسم، فتنطلق السيتوكينات في الدم مسببة <strong>توسعًا شديدًا للأوعية وتسرب السوائل من الشعيرات</strong>.</p>[[slot:dis-661-p101|علامات الصدمة الإنتانية — رسم من إعداد الموقع|/diseases/img/dis-661-p101.svg]]<ul><li>ضغط منخفض جدًا (الانقباضي أقل من 80)</li><li>جلد بارد ورطب وأطراف شاحبة وباردة</li><li>بطء امتلاء الشعيرات</li><li>تغيّر الحالة العقلية: تشوش وتوهان (نقطة امتحان)</li><li>WBC أكثر من 10,000</li><li>حرارة مرتفعة أو منخفضة جدًا (نحو 35.5°م / 96°ف) (نقطة امتحان)</li></ul><p>العلاج الطارئ: أكسجين، سوائل وريدية، مضادات حيوية وأدوية داعمة أخرى.</p>",
+   "en": "<p>Septic shock starts with bacteremia (bacteria in the blood), usually gram-negative bacteria from the urinary tract, gut, or lung. The body secretes <b>TNF-alpha</b> and inflammatory substances so the vessels dilate (vasodilation) and their permeability increases, so blood leaks into healthy and infected tissue, blood pressure falls and organ perfusion decreases → <b>lactic acidosis</b> and organ failure.</p><div class=\"cs-stats\"><div><b>40–80%</b><span>mortality, lower today with early treatment</span></div><div><b>>2</b><span>Lactate (mmol/L) = poor perfusion</span></div><div><b>≥65</b><span>MAP target (mmHg)</span></div></div><p>The infection may have been present for some time. Shock develops faster in older adults, the immunocompromised, and those with chronic diseases.</p>[[slot:dis-661-pathway|Sequence from infection to septic shock|/diseases/img/dis-661-pathway.svg]]<table><thead><tr><th>Term</th><th>Definition</th></tr></thead><tbody><tr><td>Sepsis</td><td>Infection + organ dysfunction (SOFA ≥2)</td></tr><tr><td>Septic shock</td><td>Sepsis + need for vasopressors to maintain MAP ≥65 + Lactate >2 despite fluids</td></tr></tbody></table>\n<h4>Summary of pathophysiology and signs (quick review)</h4><p>Septic shock results from a spreading bloodstream infection (such as a pneumonia or a urinary or kidney infection that worsens) that overwhelms the body, so cytokines are released into the blood causing <strong>severe vasodilation and leakage of fluid from the capillaries</strong>.</p>[[slot:dis-661-p101|Signs of septic shock — illustration prepared by the site|/diseases/img/dis-661-p101.svg]]<ul><li>Very low blood pressure (systolic below 80)</li><li>Cold, clammy skin and pale, cold extremities</li><li>Slow capillary refill</li><li>Change in mental status: confusion and disorientation (an exam point)</li><li>WBC more than 10,000</li><li>Very high or very low temperature (about 35.5°C / 96°F) (an exam point)</li></ul><p>Emergency treatment: oxygen, IV fluids, antibiotics, and other supportive drugs.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li><b>المصادر:</b> مسالك بولية، جهاز هضمي (التهاب صفاق، مرارة، خراج)، رئة (التهاب رئوي)، جلد وجروح، قسطرة وخطوط وريدية.</li><li>الميكروب: سالب الجرام (E. coli, Klebsiella, Pseudomonas) أو موجب (Staph, Strep).</li><li>عوامل خطر: سكر، كبر سن، نقص مناعة، قسطرة بولية، جراحة حديثة.</li></ul>",
+   "en": "<ul><li><b>Sources:</b> urinary tract, digestive tract (peritonitis, gallbladder, abscess), lung (pneumonia), skin and wounds, catheters and IV lines.</li><li>Microbe: gram-negative (E. coli, Klebsiella, Pseudomonas) or gram-positive (Staph, Strep).</li><li>Risk factors: diabetes, old age, immunodeficiency, urinary catheter, recent surgery.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>غثيان وقيء مصدره العدوى.</li><li><b>حرارة أعلى من 38.3° (101°F)</b> أو انخفاض أقل من 36.</li><li><b>هبوط الضغط</b> (توسع أوعية وتسرب سوائل).</li><li>تسارع النبض (>90) والتنفس (>20).</li><li>حماض لاكتيكي بسبب قلة الأكسجة.</li><li>جلد دافئ أحمر (مبكراً) ثم بارد ومرقط، بول قليل، ارتباك.</li></ul>",
+   "en": "<ul><li>Nausea and vomiting from the infection.</li><li><b>Temperature above 38.3° (101°F)</b> or a drop below 36.</li><li><b>Hypotension</b> (vasodilation and fluid leakage).</li><li>Fast pulse (>90) and breathing (>20).</li><li>Lactic acidosis due to hypoxia.</li><li>Warm red skin (early) then cold and mottled, low urine, confusion.</li></ul>"
+  },
+  "tests": {
+   "ar": "<table><thead><tr><th>الفحص</th><th>المعنى</th></tr></thead><tbody><tr><td>WBC 15,000–30,000</td><td>عدوى (وقد ينخفض بشدة)</td></tr><tr><td>الصفائح منخفضة</td><td>اضطراب تخثر (DIC)</td></tr><tr><td>PT/PTT غير طبيعي</td><td>اضطراب تخثر</td></tr><tr><td>Lactate</td><td>>2 mmol/L = نقص تروية</td></tr><tr><td>مزارع الدم</td><td>قبل المضاد (2 مجموعة)</td></tr><tr><td>كرياتينين، بيليروبين، ABG</td><td>فشل أعضاء</td></tr><tr><td>بول، أشعة، سونار</td><td>تحديد المصدر</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>Test</th><th>Meaning</th></tr></thead><tbody><tr><td>WBC 15,000–30,000</td><td>Infection (and may fall sharply)</td></tr><tr><td>Low platelets</td><td>Clotting disorder (DIC)</td></tr><tr><td>Abnormal PT/PTT</td><td>Clotting disorder</td></tr><tr><td>Lactate</td><td>>2 mmol/L = hypoperfusion</td></tr><tr><td>Blood cultures</td><td>Before the antibiotic (2 sets)</td></tr><tr><td>Creatinine, bilirubin, ABG</td><td>Organ failure</td></tr><tr><td>Urine, X-ray, ultrasound</td><td>Identify the source</td></tr></tbody></table>"
+  },
+  "treatment": {
+   "ar": "<p>الأولوية: <b>تحديد المصدر والميكروب والمضاد المناسب والحفاظ على علامات حيوية طبيعية.</b></p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>خلال الساعة الأولى</strong><p>1) قياس Lactate 2) <b>مزارع دم قبل المضاد</b> 3) <b>مضاد حيوي واسع الطيف وريدي</b> 4) <b>30 مل/كجم محلول بلوري (Crystalloid) في 3 ساعات</b> لنقص الضغط أو Lactate ≥4 5) مثبّطات ضغط (Norepinephrine أول خط) لو MAP أقل من 65 بعد السوائل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>مضاد حيوي نوعي</strong><p>بعد المزرعة وتحديد الميكروب والمصدر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>السيطرة على المصدر</strong><p>تصريف خراج، إزالة قسطرة، جراحة طارئة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>دعم</strong><p>أكسجين/تنفس صناعي، Hydrocortisone لو الضغط لا يستجيب، تحكم بالسكر، وقاية جلطات.</p></div></div></div><div class=\"cs-box cs-info\"><strong>تحديث</strong><p>في المراجع: Norepinephrine وDopamine؛ الحالي (Surviving Sepsis 2021): <b>Norepinephrine أول خط</b>، ثم Vasopressin، ويُفضّل المحاليل المتوازنة (Ringer lactate).</p></div>",
+   "en": "<p>Priority: <b>identify the source and the microbe and the suitable antibiotic and maintain normal vital signs.</b></p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Within the first hour</strong><p>1) Measure lactate 2) <b>Blood cultures before the antibiotic</b> 3) <b>Broad-spectrum IV antibiotic</b> 4) <b>30 mL/kg crystalloid solution over 3 hours</b> for low pressure or lactate ≥4 5) Vasopressors (norepinephrine first line) if MAP is below 65 after fluids.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Specific antibiotic</strong><p>After the culture and identification of the microbe and the source.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Source control</strong><p>Drain an abscess, remove a catheter, emergency surgery.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Support</strong><p>Oxygen/mechanical ventilation, hydrocortisone if the pressure does not respond, glucose control, clot prevention.</p></div></div></div><div class=\"cs-box cs-info\"><strong>Update</strong><p>Older practice: norepinephrine and dopamine; the current approach: <b>norepinephrine is first line</b>, then vasopressin, and balanced solutions (Ringer's lactate) are preferred.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>A B C أولاً</strong><p>مجرى هواء، تنفس، دورة: الأولوية القصوى (ABC). أكسجين وSpO₂.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>خطان وريديان كبيران</strong><p>وابدأ السوائل بسرعة بأمر الطبيب (30 مل/كجم)، وراقب علامات فرط السوائل (طقطقة، ضيق نفس).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>مزارع قبل المضاد</strong><p>لا تؤخر المضاد أكثر من ساعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>علامات حيوية</strong><p>كل 15 دقيقة في الإنعاش: الضغط (MAP)، النبض، الحرارة، التنفس، الوعي. استخدم SOFA/qSOFA.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>المدخل والمخرج</strong><p>قسطرة بولية: هدف البول ≥0.5 مل/كجم/س.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>مثبّطات الضغط</strong><p>عن طريق خط مركزي أو محيطي كبير بمعدل معاير بالمضخة؛ تابع MAP كل 5 دقائق عند المعايرة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تخثر</strong><p>PT/PTT/INR والصفائح وCCS، راقب النزف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>الحرارة</strong><p>خافض حرارة وتبريد سطحي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>نظافة وجلد</strong><p>تقليب كل ساعتين.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>نقص النتاج القلبي • نقص حجم السوائل • ضعف سلامة الجلد.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>A B C first</strong><p>Airway, breathing, circulation: the highest priority (ABC). Oxygen and SpO₂.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Two large IV lines</strong><p>And start fluids quickly by the physician's order (30 mL/kg), and monitor signs of fluid overload (crackles, shortness of breath).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Cultures before the antibiotic</strong><p>Do not delay the antibiotic by more than an hour.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Vital signs</strong><p>Every 15 minutes in resuscitation: pressure (MAP), pulse, temperature, breathing, consciousness. Use SOFA/qSOFA.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Intake and output</strong><p>Urinary catheter: urine target ≥0.5 mL/kg/h.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Vasopressors</strong><p>Through a central line or a large peripheral line at a pump-calibrated rate; follow MAP every 5 minutes during titration.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Coagulation</strong><p>PT/PTT/INR, platelets, and CCS; monitor bleeding.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Temperature</strong><p>Antipyretic and surface cooling.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>Hygiene and skin</strong><p>Reposition every 2 hours.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Nursing diagnoses</strong><p>Decreased cardiac output • fluid volume deficit • impaired skin integrity.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>MAP أقل من 65 رغم السوائل.</li><li>Lactate >4 أو يرتفع.</li><li>بول أقل من 0.5 مل/كجم/س.</li><li>تغير الوعي أو ارتباك.</li><li>نزيف أو كدمات (DIC).</li><li>حرارة أقل من 36 (علامة سيئة).</li></ul>",
+   "en": "<ul><li>MAP below 65 despite fluids.</li><li>Lactate >4 or rising.</li><li>Urine below 0.5 mL/kg/h.</li><li>Change in consciousness or confusion.</li><li>Bleeding or bruising (DIC).</li><li>Temperature below 36 (a bad sign).</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>علاج العدوى مبكراً: بول، جروح، رئة.</li><li>أكمل المضاد.</li><li>الناجون: إرهاق وتعب نفسي (متلازمة ما بعد الإنتان).</li></ul>",
+   "en": "<ul><li>Treat infections early: urine, wounds, lung.</li><li>Complete the antibiotic.</li><li>Survivors: fatigue and psychological exhaustion (post-sepsis syndrome).</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "Sepsis = عدوى + خلل عضوي؛ الصدمة الإنتانية تحتاج محفزات ضغط.",
+   "Hour-1: لاكتات + مزارع + مضاد واسع + 30 مل/كجم.",
+   "هدف MAP ≥65.",
+   "Norepinephrine أول خط.",
+   "ABC أولاً (أعلى أولوية).",
+   "تابع التخثر والبول."
   ],
-  "target": "er-reception",
-  "sections": {
-    "overview": {
-      "ar": "<p>الصدمة الإنتانية تبدأ بتجرثم الدم (Bacteremia) غالباً بكتيريا سالبة الجرام من البولي أو الهضمي أو الرئة. تفرز الجسم <b>TNF-alpha</b> ومواد التهابية فتتسع الأوعية (توسع وعائي) وتزيد نفاذيتها فيتسرب الدم إلى الأنسجة السليمة والمصابة، فينخفض الضغط وتقل تروية الأعضاء → <b>حماض لاكتيكي</b> وفشل أعضاء.</p><div class=\"cs-stats\"><div><b>40–80%</b><span>وفيات (في بعض المراجع)، أقل اليوم مع العلاج المبكر</span></div><div><b>>2</b><span>Lactate (mmol/L) = تروية سيئة</span></div><div><b>≥65</b><span>MAP هدف (مم زئبق)</span></div></div><p>قد تكون العدوى موجودة منذ فترة. تتطور الصدمة أسرع عند كبار السن، ضعفاء المناعة، ذوي الأمراض المزمنة.</p>[[slot:dis-661-pathway|تسلسل العدوى إلى الصدمة الإنتانية|/diseases/img/dis-661-pathway.svg]]<table><thead><tr><th>المصطلح</th><th>التعريف (Sepsis-3)</th></tr></thead><tbody><tr><td>Sepsis</td><td>عدوى + خلل عضوي (SOFA ≥2)</td></tr><tr><td>Septic shock</td><td>Sepsis + حاجة لمحفّزات ضغط للحفاظ على MAP ≥65 + Lactate >2 رغم السوائل</td></tr></tbody></table>\n<h4>ملخص الفسيولوجيا المرضية والعلامات (مرجع سريع)</h4><p>تنتج الصدمة الإنتانية عن عدوى منتشرة بالدم (كالتهاب رئوي أو بولي أو كلوي يسوء) تغمر الجسم، فتنطلق السيتوكينات في الدم مسببة <strong>توسعًا شديدًا للأوعية وتسرب السوائل من الشعيرات</strong>.</p>[[slot:dis-661-p101|علامات الصدمة الإنتانية — رسم من إعداد الموقع|/diseases/img/dis-661-p101.svg]]<ul><li>ضغط منخفض جدًا (الانقباضي أقل من 80)</li><li>جلد بارد ورطب وأطراف شاحبة وباردة</li><li>بطء امتلاء الشعيرات</li><li>تغيّر الحالة العقلية: تشوش وتوهان (نقطة امتحان)</li><li>WBC أكثر من 10,000</li><li>حرارة مرتفعة أو منخفضة جدًا (نحو 35.5°م / 96°ف) (نقطة امتحان)</li></ul><p>العلاج الطارئ: أكسجين، سوائل وريدية، مضادات حيوية وأدوية داعمة أخرى.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li><b>المصادر:</b> مسالك بولية، جهاز هضمي (التهاب صفاق، مرارة، خراج)، رئة (التهاب رئوي)، جلد وجروح، قسطرة وخطوط وريدية.</li><li>الميكروب: سالب الجرام (E. coli, Klebsiella, Pseudomonas) أو موجب (Staph, Strep).</li><li>عوامل خطر: سكر، كبر سن، نقص مناعة، قسطرة بولية، جراحة حديثة.</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>غثيان وقيء مصدره العدوى.</li><li><b>حرارة أعلى من 38.3° (101°F)</b> أو انخفاض أقل من 36.</li><li><b>هبوط الضغط</b> (توسع أوعية وتسرب سوائل).</li><li>تسارع النبض (>90) والتنفس (>20).</li><li>حماض لاكتيكي بسبب قلة الأكسجة.</li><li>جلد دافئ أحمر (مبكراً) ثم بارد ومرقط، بول قليل، ارتباك.</li></ul>"
-    },
-    "tests": {
-      "ar": "<table><thead><tr><th>الفحص</th><th>المعنى</th></tr></thead><tbody><tr><td>WBC 15,000–30,000</td><td>عدوى (وقد ينخفض بشدة)</td></tr><tr><td>الصفائح منخفضة</td><td>اضطراب تخثر (DIC)</td></tr><tr><td>PT/PTT غير طبيعي</td><td>اضطراب تخثر</td></tr><tr><td>Lactate</td><td>>2 mmol/L = نقص تروية</td></tr><tr><td>مزارع الدم</td><td>قبل المضاد (2 مجموعة)</td></tr><tr><td>كرياتينين، بيليروبين، ABG</td><td>فشل أعضاء</td></tr><tr><td>بول، أشعة، سونار</td><td>تحديد المصدر</td></tr></tbody></table>"
-    },
-    "treatment": {
-      "ar": "<p>الأولوية: <b>تحديد المصدر والميكروب والمضاد المناسب والحفاظ على علامات حيوية طبيعية.</b></p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>خلال الساعة الأولى</strong><p>1) قياس Lactate 2) <b>مزارع دم قبل المضاد</b> 3) <b>مضاد حيوي واسع الطيف وريدي</b> 4) <b>30 مل/كجم محلول بلوري (Crystalloid) في 3 ساعات</b> لنقص الضغط أو Lactate ≥4 5) مثبّطات ضغط (Norepinephrine أول خط) لو MAP أقل من 65 بعد السوائل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>مضاد حيوي نوعي</strong><p>بعد المزرعة وتحديد الميكروب والمصدر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>السيطرة على المصدر</strong><p>تصريف خراج، إزالة قسطرة، جراحة طارئة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>دعم</strong><p>أكسجين/تنفس صناعي، Hydrocortisone لو الضغط لا يستجيب، تحكم بالسكر، وقاية جلطات.</p></div></div></div><div class=\"cs-box cs-info\"><strong>تحديث</strong><p>في المراجع: Norepinephrine وDopamine؛ الحالي (Surviving Sepsis 2021): <b>Norepinephrine أول خط</b>، ثم Vasopressin، ويُفضّل المحاليل المتوازنة (Ringer lactate).</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>A B C أولاً</strong><p>مجرى هواء، تنفس، دورة: الأولوية القصوى (ABC). أكسجين وSpO₂.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>خطان وريديان كبيران</strong><p>وابدأ السوائل بسرعة بأمر الطبيب (30 مل/كجم)، وراقب علامات فرط السوائل (طقطقة، ضيق نفس).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>مزارع قبل المضاد</strong><p>لا تؤخر المضاد أكثر من ساعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>علامات حيوية</strong><p>كل 15 دقيقة في الإنعاش: الضغط (MAP)، النبض، الحرارة، التنفس، الوعي. استخدم SOFA/qSOFA.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>المدخل والمخرج</strong><p>قسطرة بولية: هدف البول ≥0.5 مل/كجم/س.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>مثبّطات الضغط</strong><p>عن طريق خط مركزي أو محيطي كبير بمعدل معاير بالمضخة؛ تابع MAP كل 5 دقائق عند المعايرة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تخثر</strong><p>PT/PTT/INR والصفائح وCCS، راقب النزف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>الحرارة</strong><p>خافض حرارة وتبريد سطحي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>نظافة وجلد</strong><p>تقليب كل ساعتين.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>نقص النتاج القلبي • نقص حجم السوائل • ضعف سلامة الجلد.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>MAP أقل من 65 رغم السوائل.</li><li>Lactate >4 أو يرتفع.</li><li>بول أقل من 0.5 مل/كجم/س.</li><li>تغير الوعي أو ارتباك.</li><li>نزيف أو كدمات (DIC).</li><li>حرارة أقل من 36 (علامة سيئة).</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>علاج العدوى مبكراً: بول، جروح، رئة.</li><li>أكمل المضاد.</li><li>الناجون: إرهاق وتعب نفسي (متلازمة ما بعد الإنتان).</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "Sepsis = عدوى + خلل عضوي؛ الصدمة الإنتانية تحتاج محفزات ضغط.",
-      "Hour-1: لاكتات + مزارع + مضاد واسع + 30 مل/كجم.",
-      "هدف MAP ≥65.",
-      "Norepinephrine أول خط.",
-      "ABC أولاً (أعلى أولوية).",
-      "تابع التخثر والبول."
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "الأولوية في الصدمة الإنتانية:"
-      },
-      "options": [
-        {
-          "ar": "ABC"
-        },
-        {
-          "ar": "قياس الحرارة"
-        },
-        {
-          "ar": "مستويات ANA"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأنسب هو المجرى الهوائي والتنفس والدورة."
-      }
-    },
-    {
-      "q": {
-        "ar": "السوائل الموصى بها:"
-      },
-      "options": [
-        {
-          "ar": "30 مل/كجم بلوري"
-        },
-        {
-          "ar": "5 مل/كجم"
-        },
-        {
-          "ar": "لا سوائل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خلال 3 ساعات."
-      }
-    },
-    {
-      "q": {
-        "ar": "الهدف المتوسط للضغط:"
-      },
-      "options": [
-        {
-          "ar": "MAP ≥65"
-        },
-        {
-          "ar": "MAP ≥ 100"
-        },
-        {
-          "ar": "MAP ≥ 40"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تروية الأعضاء."
-      }
-    },
-    {
-      "q": {
-        "ar": "المزارع تؤخذ:"
-      },
-      "options": [
-        {
-          "ar": "قبل المضاد الحيوي"
-        },
-        {
-          "ar": "بعده"
-        },
-        {
-          "ar": "لا تؤخذ"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "دون تأخير الدواء."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تدل على صدمة إنتانية؟"
-      },
-      "options": [
-        {
-          "ar": "تشوش مع جلد بارد ورطب وضغط منخفض"
-        },
-        {
-          "ar": "نبض بطيء وجلد دافئ"
-        },
-        {
-          "ar": "ارتفاع ضغط"
-        },
-        {
-          "ar": "جلد وردي جاف"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تسرب السوائل واتساع الأوعية يسبب هبوط الضغط وتغير الوعي."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Surviving Sepsis Campaign: International Guidelines 2021"
-    },
-    {
-      "title": "Sepsis-3 definitions (JAMA 2016)"
-    },
-    {
-      "title": "StatPearls: Septic Shock"
-    }
+  "en": [
+   "Sepsis = infection + organ dysfunction; septic shock needs vasopressors.",
+   "Hour-1: lactate + cultures + broad antibiotic + 30 mL/kg.",
+   "MAP target ≥65.",
+   "Norepinephrine is first line.",
+   "ABC first (highest priority).",
+   "Follow coagulation and urine."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "الأولوية في الصدمة الإنتانية:",
+    "en": "The priority in septic shock:"
+   },
+   "options": [
+    {
+     "ar": "ABC",
+     "en": "ABC"
+    },
+    {
+     "ar": "قياس الحرارة",
+     "en": "Measuring temperature"
+    },
+    {
+     "ar": "مستويات ANA",
+     "en": "ANA levels"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأنسب هو المجرى الهوائي والتنفس والدورة.",
+    "en": "The most suitable is airway, breathing, and circulation."
+   }
+  },
+  {
+   "q": {
+    "ar": "السوائل الموصى بها:",
+    "en": "Recommended fluids:"
+   },
+   "options": [
+    {
+     "ar": "30 مل/كجم بلوري",
+     "en": "30 mL/kg crystalloid"
+    },
+    {
+     "ar": "5 مل/كجم",
+     "en": "5 mL/kg"
+    },
+    {
+     "ar": "لا سوائل",
+     "en": "No fluids"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خلال 3 ساعات.",
+    "en": "Within 3 hours."
+   }
+  },
+  {
+   "q": {
+    "ar": "الهدف المتوسط للضغط:",
+    "en": "The mean pressure target:"
+   },
+   "options": [
+    {
+     "ar": "MAP ≥65",
+     "en": "MAP ≥65"
+    },
+    {
+     "ar": "MAP ≥ 100",
+     "en": "MAP ≥ 100"
+    },
+    {
+     "ar": "MAP ≥ 40",
+     "en": "MAP ≥ 40"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تروية الأعضاء.",
+    "en": "Organ perfusion."
+   }
+  },
+  {
+   "q": {
+    "ar": "المزارع تؤخذ:",
+    "en": "Cultures are taken:"
+   },
+   "options": [
+    {
+     "ar": "قبل المضاد الحيوي",
+     "en": "Before the antibiotic"
+    },
+    {
+     "ar": "بعده",
+     "en": "After it"
+    },
+    {
+     "ar": "لا تؤخذ",
+     "en": "Not taken"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "دون تأخير الدواء.",
+    "en": "Without delaying the drug."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تدل على صدمة إنتانية؟",
+    "en": "Which sign indicates septic shock?"
+   },
+   "options": [
+    {
+     "ar": "تشوش مع جلد بارد ورطب وضغط منخفض",
+     "en": "Confusion with cold, clammy skin and low blood pressure"
+    },
+    {
+     "ar": "نبض بطيء وجلد دافئ",
+     "en": "Slow pulse and warm skin"
+    },
+    {
+     "ar": "ارتفاع ضغط",
+     "en": "High blood pressure"
+    },
+    {
+     "ar": "جلد وردي جاف",
+     "en": "Dry pink skin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تسرب السوائل واتساع الأوعية يسبب هبوط الضغط وتغير الوعي.",
+    "en": "Fluid leakage and vasodilation cause low pressure and change in consciousness."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Surviving Sepsis Campaign: International Guidelines 2021"
+  },
+  {
+   "title": "Sepsis-3 definitions (JAMA 2016)"
+  },
+  {
+   "title": "StatPearls: Septic Shock"
+  }
+ ]
 }

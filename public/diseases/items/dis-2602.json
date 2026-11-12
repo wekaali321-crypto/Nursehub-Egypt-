@@ -1,233 +1,295 @@
 {
-  "id": "dis-2602",
-  "num": 2602,
-  "system": "neuro",
-  "icon": "🧠",
-  "level": 2,
-  "title": {
-    "ar": "التقييم العصبي المركّز: الوعي والحدقة والأعصاب القحفية وGCS",
-    "en": "Focused Neurological Assessment"
+ "id": "dis-2602",
+ "num": 2602,
+ "system": "neuro",
+ "icon": "🧠",
+ "level": 2,
+ "title": {
+  "ar": "التقييم العصبي المركّز: الوعي والحدقة والأعصاب القحفية وGCS",
+  "en": "Focused Neurological Assessment"
+ },
+ "teaser": {
+  "ar": "مستويات الوعي والتوجه وPERRLA وقوة العضلات ومقياس غلاسكو والأعصاب القحفية ووضعيات التصلب.",
+  "en": "Levels of consciousness, orientation, PERRLA, muscle strength, the Glasgow scale, cranial nerves and posturing."
+ },
+ "chips": [
+  {
+   "ar": "GCS",
+   "en": "GCS"
   },
-  "teaser": {
-    "ar": "مستويات الوعي والتوجه وPERRLA وقوة العضلات ومقياس غلاسكو والأعصاب القحفية ووضعيات التصلب."
+  {
+   "ar": "PERRLA",
+   "en": "PERRLA"
   },
-  "chips": [
-    {
-      "ar": "GCS"
-    },
-    {
-      "ar": "PERRLA"
-    },
-    {
-      "ar": "12 عصب"
-    }
+  {
+   "ar": "12 عصب",
+   "en": "12 nerves"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>التقييم العصبي المركّز يقيس: مستوى الوعي، التوجه، الحدقتين، قوة العضلات، الاستجابة (GCS)، الأعصاب القحفية. مرتبط بـ <a href=\"/diseases/dis-693\">ارتفاع ICP</a> و<a href=\"/diseases/dis-707\">الفحوص العصبية</a>.</p>[[slot:dis-2617-loc-strength|الوعي وقوة العضلات — رسم من إعداد الموقع|/diseases/img/dis-2617-loc-strength.svg]]<table><thead><tr><th>التوجه</th><th>المعنى</th></tr></thead><tbody><tr><td>x3 (شخص ومكان وزمان)</td><td>يفهم المكتوب والمنطوق ويستجيب مناسبًا</td></tr><tr><td>x2</td><td>ارتباك خفيف، قد يخطئ في التاريخ، لا يتبع التعليمات أحيانًا</td></tr><tr><td>x1</td><td>مرتبك ولا يعرف الزمان والمكان وقد يهدأ ويهتاج</td></tr><tr><td>غير متوجه</td><td>لا يجيب بشكل مناسب، قد يهلوس ولا يتبع الأوامر</td></tr></tbody></table>",
+   "en": "<p>The focused neurological assessment measures: level of consciousness, orientation, pupils, muscle strength, response (GCS), and cranial nerves. It is linked to <a href=\"/diseases/dis-693\">raised ICP</a> and <a href=\"/diseases/dis-707\">neurological tests</a>.</p>[[slot:dis-2617-loc-strength|Consciousness and muscle strength — site-made illustration|/diseases/img/dis-2617-loc-strength.svg]]<table><thead><tr><th>Orientation</th><th>Meaning</th></tr></thead><tbody><tr><td>x3 (person, place and time)</td><td>Understands written and spoken language and responds appropriately</td></tr><tr><td>x2</td><td>Mild confusion, may make mistakes in the date, sometimes does not follow instructions</td></tr><tr><td>x1</td><td>Confused and does not know time and place, may calm down and become agitated</td></tr><tr><td>Disoriented</td><td>Does not respond appropriately, may hallucinate and does not follow commands</td></tr></tbody></table>"
+  },
+  "causes": {
+   "ar": "<p>يُستعمل التقييم عند الاشتباه بإصابة الرأس أو السكتة أو ارتفاع الضغط داخل الجمجمة أو الغيبوبة.</p>",
+   "en": "<p>The assessment is used when head injury, stroke, raised intracranial pressure or coma is suspected.</p>"
+  },
+  "signs": {
+   "ar": "[[slot:dis-2619-gcs-posture|GCS ووضعيات التصلب — رسم من إعداد الموقع|/diseases/img/dis-2619-gcs-posture.svg]]<ul><li>قوة العضلات: اطلب تحريك الأطراف، قبضة اليد، دفع وسحب، رفع الذراعين (انجراف)، ثني القدم، رفع الساقين دون مقاومة.</li><li>PERRLA: حدقتان متساويتان تتفاعلان؛ ضوء قلم لكل حدقة؛ انقباض سريع ومتساوٍ طبيعي.</li></ul><h4>مستويات الوعي (جدول نصي)</h4><table><thead><tr><th>المستوى</th><th>الوصف</th></tr></thead><tbody><tr><td>واعٍ تمامًا (Alert)</td><td>مستيقظ ومنتبه</td></tr><tr><td>خامل (Lethargic)</td><td>ينام كثيرًا لكنه يستيقظ بسهولة</td></tr><tr><td>مُتبلّد (Obtunded)</td><td>نعاس شديد ويحتاج منبهًا قويًا ليستيقظ</td></tr><tr><td>ذهول (Stupor)</td><td>حركة قليلة، يستيقظ لفترة قصيرة بمنبه قوي أو مؤلم ويستجيب بشكل غير مناسب</td></tr><tr><td>غيبوبة (Comatose)</td><td>لا يستجيب للمنبهات الكلامية أو اللمسية، وقد يستجيب للألم فقط بشكل مناسب</td></tr></tbody></table>\n<h4>فحص قوة العضلات ووظيفتها</h4><ul><li>اطلب تحريك كل الأطراف وعصر أصابعك.</li><li>اطلب دفع يديك وسحبهما.</li><li>اطلب رفع الذراعين أمام العينين لاكتشاف أي هبوط أو انجراف (Drift) في إحداهما.</li><li>ثني القدم للأعلى وللأسفل (Dorsiflexion / Plantar flexion).</li><li>رفع الساقين بدون مقاومة.</li></ul>\n<table><thead><tr><th>الدرجة</th><th>المعنى</th></tr></thead><tbody><tr><td>0</td><td>لا توجد حركة عضلية</td></tr><tr><td>1</td><td>انقباض ظاهر بدون حركة المفصل</td></tr><tr><td>2</td><td>حركة في المفصل لكن ليس ضد الجاذبية</td></tr><tr><td>3</td><td>حركة ضد الجاذبية دون مقاومة</td></tr><tr><td>4</td><td>حركة ضد المقاومة لكنها أقل من الطبيعي</td></tr><tr><td>5</td><td>قوة طبيعية</td></tr></tbody></table>\n<h4>الحدقتان (PERRLA)</h4><ul><li>نختبر الاستجابة والحجم والتناظر والشكل: يجب أن تكون الحدقتان متساويتين وتتفاعلان للضوء.</li><li>نوجّه ضوء القلم إلى كل حدقة: الانقباض الطبيعي سريع ومتساوٍ.</li><li>توسع الحدقتين من الجانبين: نقص أكسجة الدماغ أو أدوية مضادة للكولين، فراجع قائمة أدوية المريض.</li><li>ضيق الحدقتين من الجانبين: نزف داخل الجمجمة، أو الأفيونات، أو المبيدات الفوسفورية العضوية (Organophosphates).</li></ul>\n<h4>مقياس غلاسكو للغيبوبة GCS (جدول)</h4><table><thead><tr><th>المحور</th><th>الاستجابة</th><th>الدرجة</th></tr></thead><tbody><tr><td>العين</td><td>تلقائية</td><td>4</td></tr><tr><td>العين</td><td>عند الأمر الكلامي</td><td>3</td></tr><tr><td>العين</td><td>عند الألم</td><td>2</td></tr><tr><td>العين</td><td>لا استجابة</td><td>1</td></tr><tr><td>الكلام</td><td>متوجه وواعٍ</td><td>5</td></tr><tr><td>الكلام</td><td>مرتبك</td><td>4</td></tr><tr><td>الكلام</td><td>كلمات غير مناسبة</td><td>3</td></tr><tr><td>الكلام</td><td>أصوات غير مفهومة</td><td>2</td></tr><tr><td>الكلام</td><td>لا شيء</td><td>1</td></tr><tr><td>الحركة</td><td>يطيع الأوامر</td><td>6</td></tr><tr><td>الحركة</td><td>يحدد مكان الألم</td><td>5</td></tr><tr><td>الحركة</td><td>ينسحب من الألم</td><td>4</td></tr><tr><td>الحركة</td><td>ثني غير طبيعي (Decorticate)</td><td>3</td></tr><tr><td>الحركة</td><td>بسط غير طبيعي (Decerebrate)</td><td>2</td></tr><tr><td>الحركة</td><td>لا استجابة</td><td>1</td></tr></tbody></table><p>المجموع من 3 إلى 15؛ 15 أعلى درجة، و8 فأقل يحتاج غالبًا تأمين المجرى الهوائي (تنبيب)، و3 أدنى درجة. أبلغ فورًا عن أي هبوط في الدرجة.</p>\n<h4>وضعيات التصلب (Posturing)</h4><table><thead><tr><th>الوضعية</th><th>الوصف</th></tr></thead><tbody><tr><td>تصلب قشري (Decorticate)</td><td>الذراعان مثنيتان نحو الصدر، القبضتان مشدودتان، الساقان ممدودتان والقدمان مثنيتان للأسفل ومدارتان للداخل</td></tr><tr><td>تصلب انتزاعي (Decerebrate)</td><td>الذراعان والساقان ممدودة ومدارة للداخل، أصابع القدم للأسفل، والرأس والرقبة مقوّسان للخلف؛ أخطر من القشري</td></tr></tbody></table>",
+   "en": "[[slot:dis-2619-gcs-posture|GCS and posturing — site-made illustration|/diseases/img/dis-2619-gcs-posture.svg]]<ul><li>Muscle strength: ask the patient to move the limbs, grip, push and pull, raise both arms (drift), flex the foot, lift the legs without resistance.</li><li>PERRLA: pupils equal and reactive; penlight to each pupil; rapid and equal constriction is normal.</li></ul><h4>Levels of consciousness (text table)</h4><table><thead><tr><th>Level</th><th>Description</th></tr></thead><tbody><tr><td>Fully alert (Alert)</td><td>Awake and attentive</td></tr><tr><td>Lethargic</td><td>Sleeps a lot but wakes easily</td></tr><tr><td>Obtunded</td><td>Severe drowsiness and needs a strong stimulus to wake</td></tr><tr><td>Stupor</td><td>Little movement, wakes for a short time with a strong or painful stimulus and responds inappropriately</td></tr><tr><td>Comatose</td><td>Does not respond to verbal or touch stimuli, and may respond appropriately to pain only</td></tr></tbody></table>\n<h4>Examining muscle strength and function</h4><ul><li>Ask the patient to move all limbs and squeeze your fingers.</li><li>Ask the patient to push and pull your hands.</li><li>Ask the patient to raise both arms in front of the eyes to detect any drop or drift in one of them.</li><li>Flex the foot up and down (dorsiflexion / plantar flexion).</li><li>Lift the legs without resistance.</li></ul>\n<table><thead><tr><th>Grade</th><th>Meaning</th></tr></thead><tbody><tr><td>0</td><td>No muscle movement</td></tr><tr><td>1</td><td>Visible contraction without joint movement</td></tr><tr><td>2</td><td>Joint movement but not against gravity</td></tr><tr><td>3</td><td>Movement against gravity without resistance</td></tr><tr><td>4</td><td>Movement against resistance but less than normal</td></tr><tr><td>5</td><td>Normal strength</td></tr></tbody></table>\n<h4>The pupils (PERRLA)</h4><ul><li>We test response, size, symmetry and shape: the pupils must be equal and react to light.</li><li>Direct the penlight to each pupil: normal constriction is rapid and equal.</li><li>Dilation of both pupils: brain hypoxia or anticholinergic drugs, so review the patient's medication list.</li><li>Constriction of both pupils: intracranial bleeding, opioids, or organophosphate pesticides (Organophosphates).</li></ul>\n<h4>Glasgow Coma Scale GCS (table)</h4><table><thead><tr><th>Domain</th><th>Response</th><th>Score</th></tr></thead><tbody><tr><td>Eye</td><td>Spontaneous</td><td>4</td></tr><tr><td>Eye</td><td>To verbal command</td><td>3</td></tr><tr><td>Eye</td><td>To pain</td><td>2</td></tr><tr><td>Eye</td><td>No response</td><td>1</td></tr><tr><td>Verbal</td><td>Oriented and alert</td><td>5</td></tr><tr><td>Verbal</td><td>Confused</td><td>4</td></tr><tr><td>Verbal</td><td>Inappropriate words</td><td>3</td></tr><tr><td>Verbal</td><td>Incomprehensible sounds</td><td>2</td></tr><tr><td>Verbal</td><td>None</td><td>1</td></tr><tr><td>Motor</td><td>Obeys commands</td><td>6</td></tr><tr><td>Motor</td><td>Localizes pain</td><td>5</td></tr><tr><td>Motor</td><td>Withdraws from pain</td><td>4</td></tr><tr><td>Motor</td><td>Abnormal flexion (Decorticate)</td><td>3</td></tr><tr><td>Motor</td><td>Abnormal extension (Decerebrate)</td><td>2</td></tr><tr><td>Motor</td><td>No response</td><td>1</td></tr></tbody></table><p>The total is from 3 to 15; 15 is the highest score, 8 or less usually needs airway protection (intubation), and 3 is the lowest score. Report any drop in score immediately.</p>\n<h4>Posturing</h4><table><thead><tr><th>Posture</th><th>Description</th></tr></thead><tbody><tr><td>Decorticate</td><td>Arms flexed toward the chest, fists clenched, legs extended and feet flexed downward and rotated inward</td></tr><tr><td>Decerebrate</td><td>Arms and legs extended and rotated inward, toes pointing down, and head and neck arched backward; more dangerous than decorticate</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "[[slot:dis-2618-cranial|الأعصاب القحفية — رسم من إعداد الموقع|/diseases/img/dis-2618-cranial.svg]]<h4>الأعصاب القحفية الاثنا عشر واختبار كل عصب (جدول)</h4><table><thead><tr><th>الرقم</th><th>العصب</th><th>الوظيفة وكيفية الفحص</th></tr></thead><tbody><tr><td>I</td><td>الشمي (Olfactory)</td><td>الشم: يحدد رائحة مألوفة</td></tr><tr><td>II</td><td>البصري (Optic)</td><td>حدة الإبصار بلوحة سنلن والرؤية المحيطية</td></tr><tr><td>III</td><td>المحرك للعين (Oculomotor)</td><td>استجابة الحدقة (PERRLA)</td></tr><tr><td>IV</td><td>البكري (Trochlear)</td><td>حركة العين: يتبع الإصبع دون حركة الرأس</td></tr><tr><td>V</td><td>الثلاثي التوائم (Trigeminal)</td><td>إحساس الوجه بلمسه، وفتح الفم</td></tr><tr><td>VI</td><td>المبعد (Abducens)</td><td>حركة العين للجانب: يتبع الإصبع دون تحريك رأسه</td></tr><tr><td>VII</td><td>الوجهي (Facial)</td><td>التذوق وحركة الوجه: يبتسم وينفخ خديه ويميز بين الحلو والمالح</td></tr><tr><td>VIII</td><td>السمعي (Acoustic)</td><td>السمع والتوازن: فرقعة الأصابع قرب الأذن، ووقوف القدمين معًا والذراعان على الجانبين والعينان مغمضتان 5 ثوان</td></tr><tr><td>IX</td><td>اللساني البلعومي (Glossopharyngeal)</td><td>البلع والصوت: يبتلع ويقول «آه»</td></tr><tr><td>X</td><td>المبهم (Vagus)</td><td>منعكس التهوع بمسحة بخافض اللسان</td></tr><tr><td>XI</td><td>الشوكي الإضافي (Spinal accessory)</td><td>حركة الرقبة: يهز كتفيه ويدير رأسه ضد المقاومة</td></tr><tr><td>XII</td><td>تحت اللسان (Hypoglossal)</td><td>حركة اللسان: يخرجه ويحركه حول الفم</td></tr></tbody></table>",
+   "en": "[[slot:dis-2618-cranial|The cranial nerves — site-made illustration|/diseases/img/dis-2618-cranial.svg]]<h4>The twelve cranial nerves and testing each nerve (table)</h4><table><thead><tr><th>Number</th><th>Nerve</th><th>Function and how to test</th></tr></thead><tbody><tr><td>I</td><td>Olfactory</td><td>Smell: identifies a familiar odor</td></tr><tr><td>II</td><td>Optic</td><td>Visual acuity with a Snellen chart and peripheral vision</td></tr><tr><td>III</td><td>Oculomotor</td><td>Pupil response (PERRLA)</td></tr><tr><td>IV</td><td>Trochlear</td><td>Eye movement: follows the finger without moving the head</td></tr><tr><td>V</td><td>Trigeminal</td><td>Facial sensation by touching it, and opening the mouth</td></tr><tr><td>VI</td><td>Abducens</td><td>Lateral eye movement: follows the finger without moving the head</td></tr><tr><td>VII</td><td>Facial</td><td>Taste and facial movement: smiles, puffs the cheeks and distinguishes sweet from salty</td></tr><tr><td>VIII</td><td>Acoustic</td><td>Hearing and balance: finger snap near the ear, and standing with feet together, arms at the sides and eyes closed for 5 seconds</td></tr><tr><td>IX</td><td>Glossopharyngeal</td><td>Swallowing and voice: swallows and says \"ah\"</td></tr><tr><td>X</td><td>Vagus</td><td>Gag reflex by a touch with a tongue depressor</td></tr><tr><td>XI</td><td>Spinal accessory</td><td>Neck movement: shrugs the shoulders and turns the head against resistance</td></tr><tr><td>XII</td><td>Hypoglossal</td><td>Tongue movement: sticks it out and moves it around the mouth</td></tr></tbody></table>"
+  },
+  "treatment": {
+   "ar": "<p>التقييم ليس علاجًا؛ أي تدهور في GCS أو الحدقة يستدعي إبلاغ الطبيب فورًا.</p>",
+   "en": "<p>The assessment is not a treatment; any deterioration in GCS or pupils calls for notifying the physician immediately.</p>"
+  },
+  "nursing": {
+   "ar": "<ul><li>قارن كل فحص بما قبله وسجّل بنفس الأداة.</li><li>أول علامة لارتفاع ICP هبوط مستوى الوعي.</li></ul>",
+   "en": "<ul><li>Compare each exam with the one before and record with the same tool.</li><li>The first sign of raised ICP is a drop in level of consciousness.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>هبوط GCS نقطتين أو أكثر، حدقة واسعة ثابتة، تصلب قشري أو انتزاعي.</li></ul>",
+   "en": "<ul><li>GCS drop of two points or more, fixed dilated pupil, decorticate or decerebrate posturing.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<p>اشرح للمريض الأسرة أن الفحص المتكرر روتيني وأن أي تغير يجب الإبلاغ عنه.</p>",
+   "en": "<p>Explain to the patient's family that repeated examination is routine and that any change must be reported.</p>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "GCS: العين 4 + الكلام 5 + الحركة 6",
+   "PERRLA",
+   "12 عصبًا",
+   "القوة العضلية 0-5: 3 = ضد الجاذبية فقط، و4 = ضد مقاومة جزئية",
+   "GCS: 15 أعلى، 8 فأقل يحتاج تأمين المجرى، 3 أدنى",
+   "توسع الحدقتين ثنائيًا: نقص أكسجة أو مضادات كولين؛ ضيقهما: نزف داخل الجمجمة أو أفيونات أو مبيدات فوسفورية"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>التقييم العصبي المركّز يقيس: مستوى الوعي، التوجه، الحدقتين، قوة العضلات، الاستجابة (GCS)، الأعصاب القحفية. مرتبط بـ <a href=\"/diseases/dis-693\">ارتفاع ICP</a> و<a href=\"/diseases/dis-707\">الفحوص العصبية</a>.</p>[[slot:dis-2617-loc-strength|الوعي وقوة العضلات — رسم من إعداد الموقع|/diseases/img/dis-2617-loc-strength.svg]]<table><thead><tr><th>التوجه</th><th>المعنى</th></tr></thead><tbody><tr><td>x3 (شخص ومكان وزمان)</td><td>يفهم المكتوب والمنطوق ويستجيب مناسبًا</td></tr><tr><td>x2</td><td>ارتباك خفيف، قد يخطئ في التاريخ، لا يتبع التعليمات أحيانًا</td></tr><tr><td>x1</td><td>مرتبك ولا يعرف الزمان والمكان وقد يهدأ ويهتاج</td></tr><tr><td>غير متوجه</td><td>لا يجيب بشكل مناسب، قد يهلوس ولا يتبع الأوامر</td></tr></tbody></table>"
-    },
-    "causes": {
-      "ar": "<p>يُستعمل التقييم عند الاشتباه بإصابة الرأس أو السكتة أو ارتفاع الضغط داخل الجمجمة أو الغيبوبة.</p>"
-    },
-    "signs": {
-      "ar": "[[slot:dis-2619-gcs-posture|GCS ووضعيات التصلب — رسم من إعداد الموقع|/diseases/img/dis-2619-gcs-posture.svg]]<ul><li>قوة العضلات: اطلب تحريك الأطراف، قبضة اليد، دفع وسحب، رفع الذراعين (انجراف)، ثني القدم، رفع الساقين دون مقاومة.</li><li>PERRLA: حدقتان متساويتان تتفاعلان؛ ضوء قلم لكل حدقة؛ انقباض سريع ومتساوٍ طبيعي.</li></ul><h4>مستويات الوعي (جدول نصي)</h4><table><thead><tr><th>المستوى</th><th>الوصف</th></tr></thead><tbody><tr><td>واعٍ تمامًا (Alert)</td><td>مستيقظ ومنتبه</td></tr><tr><td>خامل (Lethargic)</td><td>ينام كثيرًا لكنه يستيقظ بسهولة</td></tr><tr><td>مُتبلّد (Obtunded)</td><td>نعاس شديد ويحتاج منبهًا قويًا ليستيقظ</td></tr><tr><td>ذهول (Stupor)</td><td>حركة قليلة، يستيقظ لفترة قصيرة بمنبه قوي أو مؤلم ويستجيب بشكل غير مناسب</td></tr><tr><td>غيبوبة (Comatose)</td><td>لا يستجيب للمنبهات الكلامية أو اللمسية، وقد يستجيب للألم فقط بشكل مناسب</td></tr></tbody></table>\n<h4>فحص قوة العضلات ووظيفتها</h4><ul><li>اطلب تحريك كل الأطراف وعصر أصابعك.</li><li>اطلب دفع يديك وسحبهما.</li><li>اطلب رفع الذراعين أمام العينين لاكتشاف أي هبوط أو انجراف (Drift) في إحداهما.</li><li>ثني القدم للأعلى وللأسفل (Dorsiflexion / Plantar flexion).</li><li>رفع الساقين بدون مقاومة.</li></ul>\n<table><thead><tr><th>الدرجة</th><th>المعنى</th></tr></thead><tbody><tr><td>0</td><td>لا توجد حركة عضلية</td></tr><tr><td>1</td><td>انقباض ظاهر بدون حركة المفصل</td></tr><tr><td>2</td><td>حركة في المفصل لكن ليس ضد الجاذبية</td></tr><tr><td>3</td><td>حركة ضد الجاذبية دون مقاومة</td></tr><tr><td>4</td><td>حركة ضد المقاومة لكنها أقل من الطبيعي</td></tr><tr><td>5</td><td>قوة طبيعية</td></tr></tbody></table>\n<h4>الحدقتان (PERRLA)</h4><ul><li>نختبر الاستجابة والحجم والتناظر والشكل: يجب أن تكون الحدقتان متساويتين وتتفاعلان للضوء.</li><li>نوجّه ضوء القلم إلى كل حدقة: الانقباض الطبيعي سريع ومتساوٍ.</li><li>توسع الحدقتين من الجانبين: نقص أكسجة الدماغ أو أدوية مضادة للكولين، فراجع قائمة أدوية المريض.</li><li>ضيق الحدقتين من الجانبين: نزف داخل الجمجمة، أو الأفيونات، أو المبيدات الفوسفورية العضوية (Organophosphates).</li></ul>\n<h4>مقياس غلاسكو للغيبوبة GCS (جدول)</h4><table><thead><tr><th>المحور</th><th>الاستجابة</th><th>الدرجة</th></tr></thead><tbody><tr><td>العين</td><td>تلقائية</td><td>4</td></tr><tr><td>العين</td><td>عند الأمر الكلامي</td><td>3</td></tr><tr><td>العين</td><td>عند الألم</td><td>2</td></tr><tr><td>العين</td><td>لا استجابة</td><td>1</td></tr><tr><td>الكلام</td><td>متوجه وواعٍ</td><td>5</td></tr><tr><td>الكلام</td><td>مرتبك</td><td>4</td></tr><tr><td>الكلام</td><td>كلمات غير مناسبة</td><td>3</td></tr><tr><td>الكلام</td><td>أصوات غير مفهومة</td><td>2</td></tr><tr><td>الكلام</td><td>لا شيء</td><td>1</td></tr><tr><td>الحركة</td><td>يطيع الأوامر</td><td>6</td></tr><tr><td>الحركة</td><td>يحدد مكان الألم</td><td>5</td></tr><tr><td>الحركة</td><td>ينسحب من الألم</td><td>4</td></tr><tr><td>الحركة</td><td>ثني غير طبيعي (Decorticate)</td><td>3</td></tr><tr><td>الحركة</td><td>بسط غير طبيعي (Decerebrate)</td><td>2</td></tr><tr><td>الحركة</td><td>لا استجابة</td><td>1</td></tr></tbody></table><p>المجموع من 3 إلى 15؛ 15 أعلى درجة، و8 فأقل يحتاج غالبًا تأمين المجرى الهوائي (تنبيب)، و3 أدنى درجة. أبلغ فورًا عن أي هبوط في الدرجة.</p>\n<h4>وضعيات التصلب (Posturing)</h4><table><thead><tr><th>الوضعية</th><th>الوصف</th></tr></thead><tbody><tr><td>تصلب قشري (Decorticate)</td><td>الذراعان مثنيتان نحو الصدر، القبضتان مشدودتان، الساقان ممدودتان والقدمان مثنيتان للأسفل ومدارتان للداخل</td></tr><tr><td>تصلب انتزاعي (Decerebrate)</td><td>الذراعان والساقان ممدودة ومدارة للداخل، أصابع القدم للأسفل، والرأس والرقبة مقوّسان للخلف؛ أخطر من القشري</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "[[slot:dis-2618-cranial|الأعصاب القحفية — رسم من إعداد الموقع|/diseases/img/dis-2618-cranial.svg]]<h4>الأعصاب القحفية الاثنا عشر واختبار كل عصب (جدول)</h4><table><thead><tr><th>الرقم</th><th>العصب</th><th>الوظيفة وكيفية الفحص</th></tr></thead><tbody><tr><td>I</td><td>الشمي (Olfactory)</td><td>الشم: يحدد رائحة مألوفة</td></tr><tr><td>II</td><td>البصري (Optic)</td><td>حدة الإبصار بلوحة سنلن والرؤية المحيطية</td></tr><tr><td>III</td><td>المحرك للعين (Oculomotor)</td><td>استجابة الحدقة (PERRLA)</td></tr><tr><td>IV</td><td>البكري (Trochlear)</td><td>حركة العين: يتبع الإصبع دون حركة الرأس</td></tr><tr><td>V</td><td>الثلاثي التوائم (Trigeminal)</td><td>إحساس الوجه بلمسه، وفتح الفم</td></tr><tr><td>VI</td><td>المبعد (Abducens)</td><td>حركة العين للجانب: يتبع الإصبع دون تحريك رأسه</td></tr><tr><td>VII</td><td>الوجهي (Facial)</td><td>التذوق وحركة الوجه: يبتسم وينفخ خديه ويميز بين الحلو والمالح</td></tr><tr><td>VIII</td><td>السمعي (Acoustic)</td><td>السمع والتوازن: فرقعة الأصابع قرب الأذن، ووقوف القدمين معًا والذراعان على الجانبين والعينان مغمضتان 5 ثوان</td></tr><tr><td>IX</td><td>اللساني البلعومي (Glossopharyngeal)</td><td>البلع والصوت: يبتلع ويقول «آه»</td></tr><tr><td>X</td><td>المبهم (Vagus)</td><td>منعكس التهوع بمسحة بخافض اللسان</td></tr><tr><td>XI</td><td>الشوكي الإضافي (Spinal accessory)</td><td>حركة الرقبة: يهز كتفيه ويدير رأسه ضد المقاومة</td></tr><tr><td>XII</td><td>تحت اللسان (Hypoglossal)</td><td>حركة اللسان: يخرجه ويحركه حول الفم</td></tr></tbody></table>"
-    },
-    "treatment": {
-      "ar": "<p>التقييم ليس علاجًا؛ أي تدهور في GCS أو الحدقة يستدعي إبلاغ الطبيب فورًا.</p>"
-    },
-    "nursing": {
-      "ar": "<ul><li>قارن كل فحص بما قبله وسجّل بنفس الأداة.</li><li>أول علامة لارتفاع ICP هبوط مستوى الوعي.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>هبوط GCS نقطتين أو أكثر، حدقة واسعة ثابتة، تصلب قشري أو انتزاعي.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<p>اشرح للمريض الأسرة أن الفحص المتكرر روتيني وأن أي تغير يجب الإبلاغ عنه.</p>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "GCS: العين 4 + الكلام 5 + الحركة 6",
-      "PERRLA",
-      "12 عصبًا",
-      "القوة العضلية 0-5: 3 = ضد الجاذبية فقط، و4 = ضد مقاومة جزئية",
-      "GCS: 15 أعلى، 8 فأقل يحتاج تأمين المجرى، 3 أدنى",
-      "توسع الحدقتين ثنائيًا: نقص أكسجة أو مضادات كولين؛ ضيقهما: نزف داخل الجمجمة أو أفيونات أو مبيدات فوسفورية"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض لا يستجيب للمنبه الكلامي أو اللمسي، ما مستوى وعيه؟"
-      },
-      "options": [
-        {
-          "ar": "خامل"
-        },
-        {
-          "ar": "متبلد"
-        },
-        {
-          "ar": "غيبوبة"
-        },
-        {
-          "ar": "ذهول"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "عدم الاستجابة للمنبهات الكلامية أو اللمسية يعرّف الغيبوبة."
-      }
-    },
-    {
-      "q": {
-        "ar": "درجة قوة العضلات حين يتحرك الطرف ضد الجاذبية ولا يتحرك ضد المقاومة؟"
-      },
-      "options": [
-        {
-          "ar": "2"
-        },
-        {
-          "ar": "3"
-        },
-        {
-          "ar": "4"
-        },
-        {
-          "ar": "5"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الدرجة 3 حركة ضد الجاذبية دون مقاومة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عصب يُفحص بمنعكس التهوع؟"
-      },
-      "options": [
-        {
-          "ar": "IX والمبهم X"
-        },
-        {
-          "ar": "V"
-        },
-        {
-          "ar": "VII"
-        },
-        {
-          "ar": "XII"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "منعكس التهوع يختبر العصبين التاسع والعاشر."
-      }
-    },
-    {
-      "q": {
-        "ar": "الذراعان مثنيتان على الصدر والقبضتان مشدودتان والساقان ممدودتان تسمى؟"
-      },
-      "options": [
-        {
-          "ar": "Decerebrate"
-        },
-        {
-          "ar": "Decorticate"
-        },
-        {
-          "ar": "Opisthotonos"
-        },
-        {
-          "ar": "Clonus"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تقشر القشرة (Decorticate)."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض حدقتاه ضيقتان من الجانبين مع تاريخ تعاطي أفيونات. أقرب تفسير؟"
-      },
-      "options": [
-        {
-          "ar": "تأثير الأفيونات"
-        },
-        {
-          "ar": "نقص أكسجة الدماغ"
-        },
-        {
-          "ar": "دواء مضاد للكولين"
-        },
-        {
-          "ar": "سكتة نزفية فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأفيونات والمبيدات الفوسفورية والنزف داخل الجمجمة تسبب ضيقًا ثنائيًا، أما نقص الأكسجة ومضادات الكولين فتسبب توسعًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "أقل درجة ممكنة في مقياس GCS هي:"
-      },
-      "options": [
-        {
-          "ar": "3"
-        },
-        {
-          "ar": "0"
-        },
-        {
-          "ar": "1"
-        },
-        {
-          "ar": "5"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "العين 1 + الكلام 1 + الحركة 1 = 3."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عصب قحفي يُفحص بسؤال المريض أن يبتلع ويقول «آه»؟"
-      },
-      "options": [
-        {
-          "ar": "اللساني البلعومي IX"
-        },
-        {
-          "ar": "الشمي I"
-        },
-        {
-          "ar": "تحت اللسان XII"
-        },
-        {
-          "ar": "البكري IV"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "العصب التاسع مسؤول عن البلع والصوت، ويُفحص مع العاشر بمنعكس التهوع."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Glasgow Coma Scale (Teasdale & Jennett)"
-    },
-    {
-      "title": "Nursing neurological assessment guidelines"
-    }
+  "en": [
+   "GCS: eye 4 + verbal 5 + motor 6",
+   "PERRLA",
+   "12 nerves",
+   "Muscle strength 0-5: 3 = against gravity only, and 4 = against partial resistance",
+   "GCS: 15 highest, 8 or less needs airway protection, 3 lowest",
+   "Bilateral pupil dilation: hypoxia or anticholinergics; constriction: intracranial bleeding, opioids or organophosphates"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض لا يستجيب للمنبه الكلامي أو اللمسي، ما مستوى وعيه؟",
+    "en": "A patient does not respond to verbal or touch stimuli. What is his level of consciousness?"
+   },
+   "options": [
+    {
+     "ar": "خامل",
+     "en": "Lethargic"
+    },
+    {
+     "ar": "متبلد",
+     "en": "Obtunded"
+    },
+    {
+     "ar": "غيبوبة",
+     "en": "Comatose"
+    },
+    {
+     "ar": "ذهول",
+     "en": "Stupor"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "عدم الاستجابة للمنبهات الكلامية أو اللمسية يعرّف الغيبوبة.",
+    "en": "Not responding to verbal or touch stimuli defines coma."
+   }
+  },
+  {
+   "q": {
+    "ar": "درجة قوة العضلات حين يتحرك الطرف ضد الجاذبية ولا يتحرك ضد المقاومة؟",
+    "en": "Muscle strength grade when the limb moves against gravity but not against resistance?"
+   },
+   "options": [
+    {
+     "ar": "2",
+     "en": "2"
+    },
+    {
+     "ar": "3",
+     "en": "3"
+    },
+    {
+     "ar": "4",
+     "en": "4"
+    },
+    {
+     "ar": "5",
+     "en": "5"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الدرجة 3 حركة ضد الجاذبية دون مقاومة.",
+    "en": "Grade 3 is movement against gravity without resistance."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عصب يُفحص بمنعكس التهوع؟",
+    "en": "Which nerves are tested by the gag reflex?"
+   },
+   "options": [
+    {
+     "ar": "IX والمبهم X",
+     "en": "IX and vagus X"
+    },
+    {
+     "ar": "V",
+     "en": "V"
+    },
+    {
+     "ar": "VII",
+     "en": "VII"
+    },
+    {
+     "ar": "XII",
+     "en": "XII"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "منعكس التهوع يختبر العصبين التاسع والعاشر.",
+    "en": "The gag reflex tests the ninth and tenth nerves."
+   }
+  },
+  {
+   "q": {
+    "ar": "الذراعان مثنيتان على الصدر والقبضتان مشدودتان والساقان ممدودتان تسمى؟",
+    "en": "Arms flexed on the chest, fists clenched and legs extended is called?"
+   },
+   "options": [
+    {
+     "ar": "Decerebrate",
+     "en": "Decerebrate"
+    },
+    {
+     "ar": "Decorticate",
+     "en": "Decorticate"
+    },
+    {
+     "ar": "Opisthotonos",
+     "en": "Opisthotonos"
+    },
+    {
+     "ar": "Clonus",
+     "en": "Clonus"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تقشر القشرة (Decorticate).",
+    "en": "Decorticate posturing."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض حدقتاه ضيقتان من الجانبين مع تاريخ تعاطي أفيونات. أقرب تفسير؟",
+    "en": "A patient has constricted pupils on both sides with a history of opioid use. The closest explanation?"
+   },
+   "options": [
+    {
+     "ar": "تأثير الأفيونات",
+     "en": "Opioid effect"
+    },
+    {
+     "ar": "نقص أكسجة الدماغ",
+     "en": "Brain hypoxia"
+    },
+    {
+     "ar": "دواء مضاد للكولين",
+     "en": "Anticholinergic drug"
+    },
+    {
+     "ar": "سكتة نزفية فقط",
+     "en": "Hemorrhagic stroke only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأفيونات والمبيدات الفوسفورية والنزف داخل الجمجمة تسبب ضيقًا ثنائيًا، أما نقص الأكسجة ومضادات الكولين فتسبب توسعًا.",
+    "en": "Opioids, organophosphates and intracranial bleeding cause bilateral constriction, while hypoxia and anticholinergics cause dilation."
+   }
+  },
+  {
+   "q": {
+    "ar": "أقل درجة ممكنة في مقياس GCS هي:",
+    "en": "The lowest possible score on the GCS is:"
+   },
+   "options": [
+    {
+     "ar": "3",
+     "en": "3"
+    },
+    {
+     "ar": "0",
+     "en": "0"
+    },
+    {
+     "ar": "1",
+     "en": "1"
+    },
+    {
+     "ar": "5",
+     "en": "5"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "العين 1 + الكلام 1 + الحركة 1 = 3.",
+    "en": "Eye 1 + verbal 1 + motor 1 = 3."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عصب قحفي يُفحص بسؤال المريض أن يبتلع ويقول «آه»؟",
+    "en": "Which cranial nerve is tested by asking the patient to swallow and say \"ah\"?"
+   },
+   "options": [
+    {
+     "ar": "اللساني البلعومي IX",
+     "en": "Glossopharyngeal IX"
+    },
+    {
+     "ar": "الشمي I",
+     "en": "Olfactory I"
+    },
+    {
+     "ar": "تحت اللسان XII",
+     "en": "Hypoglossal XII"
+    },
+    {
+     "ar": "البكري IV",
+     "en": "Trochlear IV"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "العصب التاسع مسؤول عن البلع والصوت، ويُفحص مع العاشر بمنعكس التهوع.",
+    "en": "The ninth nerve is responsible for swallowing and voice, and is tested with the tenth by the gag reflex."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Glasgow Coma Scale (Teasdale & Jennett)"
+  },
+  {
+   "title": "Nursing neurological assessment guidelines"
+  }
+ ]
 }

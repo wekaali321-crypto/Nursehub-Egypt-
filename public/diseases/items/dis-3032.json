@@ -1,182 +1,230 @@
 {
-  "id": "dis-3032",
-  "num": "3032",
-  "system": "other",
-  "icon": "💊",
-  "level": 2,
-  "title": {
-    "ar": "ابتلاع الأدوية عند الأطفال (إيبوبروفين وباراسيتامول وأسبرين)",
-    "en": "Pediatric Drug Ingestion"
+ "id": "dis-3032",
+ "num": "3032",
+ "system": "other",
+ "icon": "💊",
+ "level": 2,
+ "title": {
+  "ar": "ابتلاع الأدوية عند الأطفال (إيبوبروفين وباراسيتامول وأسبرين)",
+  "en": "Pediatric Drug Ingestion"
+ },
+ "teaser": {
+  "ar": "الطوارئ والفحم المنشط وتحاليل الدم، أسيتيل سيستين لترياق الباراسيتامول، والوقاية بغلق الأدوية.",
+  "en": "Emergency care, activated charcoal and blood tests, acetylcysteine as the paracetamol antidote, and prevention by locking up medicines."
+ },
+ "chips": [
+  {
+   "ar": "Activated charcoal",
+   "en": "Activated charcoal"
   },
-  "teaser": {
-    "ar": "الطوارئ والفحم المنشط وتحاليل الدم، أسيتيل سيستين لترياق الباراسيتامول، والوقاية بغلق الأدوية."
+  {
+   "ar": "Acetylcysteine",
+   "en": "Acetylcysteine"
   },
-  "chips": [
-    {
-      "ar": "Activated charcoal"
-    },
-    {
-      "ar": "Acetylcysteine"
-    },
-    {
-      "ar": "وقاية"
-    }
+  {
+   "ar": "وقاية",
+   "en": "Prevention"
+  }
+ ],
+ "target": "new:poisoning|السموم",
+ "sections": {
+  "overview": {
+   "ar": "<p>سمية الأدوية هاجس دائم مع الدارجين لأنهم فضوليون ويضعون كل شيء بأفواههم. تشمل الأدوية الشائعة: إيبوبروفين، باراسيتامول، أسبرين. انظر <a href=\"/diseases/dis-524\">تسمم الباراسيتامول</a> و<a href=\"/diseases/dis-532\">طرق التخلص من السموم</a>.</p>[[slot:dis-3032-drugtox|ابتلاع الأدوية: الأولويات — رسم من إعداد الموقع|/diseases/img/dis-3032-drugtox.svg]]",
+   "en": "<p>Drug toxicity is a constant worry with toddlers because they are curious and put everything in their mouths. Common drugs include: ibuprofen, paracetamol, aspirin. See <a href=\"/diseases/dis-524\">Paracetamol poisoning</a> and <a href=\"/diseases/dis-532\">Methods of decontamination</a>.</p>[[slot:dis-3032-drugtox|Drug ingestion: priorities — illustration prepared by the site|/diseases/img/dis-3032-drugtox.svg]]"
+  },
+  "causes": {
+   "ar": "",
+   "en": ""
+  },
+  "signs": {
+   "ar": "<p>تختلف حسب الدواء؛ اسأل عن اسم الدواء والكمية والوقت.</p>",
+   "en": "<p>It differs by drug; ask about the name of the drug, the amount, and the time.</p>"
+  },
+  "tests": {
+   "ar": "",
+   "en": ""
+  },
+  "treatment": {
+   "ar": "<ul><li>الطوارئ.</li><li><b>فحم منشط (Activated charcoal)</b> بحسب الأمر.</li><li>تقييم كامل بالتحاليل.</li><li>الباراسيتامول: الترياق <b>أسيتيل سيستين (Acetylcysteine)</b>.</li></ul><div class=\"cs-box cs-danger\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<ul><li>Emergency care.</li><li><b>Activated charcoal (Activated charcoal)</b> as ordered.</li><li>Full assessment with tests.</li><li>Paracetamol: the antidote is <b>acetylcysteine (Acetylcysteine)</b>.</li></ul><div class=\"cs-box cs-danger\"><strong>Dose warning</strong><p>Doses are for learning; always verify with the physician/pharmacist before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ol><li>تأمين المجرى الهوائي.</li><li>تجهيز الفحم المنشط.</li><li>أخذ تاريخ وفحص بدني كاملين.</li><li>فحص مستوى الباراسيتامول بالدم وتقييم وظائف الكبد.</li></ol><!--aud0651-ac--><h4>سيناريوهات للمراجعة</h4><ul><li>طفل عمره 3 سنوات وجد أبوه عبوة إيبوبروفين فارغة بيده: الإجراء الأول الفحم المنشط (ضمن توجيه الإسعاف/مركز السموم).</li><li>طفل بعمر 8 سنوات ابتلع اثني عشر قرصًا من الباراسيتامول (325 مجم): أولويات: تأمين المجرى، تجهيز الفحم المنشط، تاريخ وفحص كاملان، وقياس مستوى الباراسيتامول بالدم.</li><li>طفل ابتلع زجاجة Tylenol: خذ العلامات الحيوية أولًا ثم أبلغ؛ الترياق: <strong>أسيتيل سيستين</strong>، والفحص المخبري الأهم: وظائف الكبد.</li><li>أم تجد طفلها (سنتان) وسط زجاجات منظفات مفتوحة: اتصل بمركز السموم أولًا.</li><li>الوقاية: اترك الأدوية مغلقة بعيدًا عن النظر وضع رقم مركز السموم قرب الهاتف.</li></ul>",
+   "en": "<ol><li>Secure the airway.</li><li>Prepare the activated charcoal.</li><li>Take a full history and physical exam.</li><li>Check the blood paracetamol level and assess liver function.</li></ol><!--aud0651-ac--><h4>Review scenarios</h4><ul><li>A 3-year-old child whose father found an empty ibuprofen bottle in his hand: the first action is activated charcoal (within emergency/poison center guidance).</li><li>An 8-year-old child swallowed twelve paracetamol tablets (325 mg): priorities: secure the airway, prepare activated charcoal, a full history and exam, and a blood paracetamol level.</li><li>A child swallowed a bottle of Tylenol: take vital signs first then report; the antidote: <strong>acetylcysteine</strong>, and the most important lab test: liver function.</li><li>A mother finds her child (2 years) among open cleaning product bottles: call the poison center first.</li><li>Prevention: keep medicines closed and out of sight and place the poison center number near the phone.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>خطر</strong><p>تغير الوعي، صعوبة تنفس، أو ابتلاع كمية كبيرة: طوارئ فورًا.</p></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Danger</strong><p>Change in consciousness, difficulty breathing, or swallowing a large amount: emergency immediately.</p></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>احفظ الأدوية مغلقة بعيدة عن النظر.</li><li>ضع رقم مركز السموم قرب الهاتف.</li><li>عند وجود طفل ابن عامين وسط زجاجات تنظيف مفتوحة: اتصل بمركز السموم.</li></ul>",
+   "en": "<ul><li>Keep medicines closed and out of sight.</li><li>Place the poison center number near the phone.</li><li>If a 2-year-old child is among open cleaning bottles: call the poison center.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الدارج يبتلع الأدوية لفضوله",
+   "الأولويات: طوارئ ← فحم منشط ← تقييم بالتحاليل",
+   "ترياق الباراسيتامول أسيتيل سيستين",
+   "أدوية مغلقة ورقم مركز السموم"
   ],
-  "target": "new:poisoning|السموم",
-  "sections": {
-    "overview": {
-      "ar": "<p>سمية الأدوية هاجس دائم مع الدارجين لأنهم فضوليون ويضعون كل شيء بأفواههم. تشمل الأدوية الشائعة: إيبوبروفين، باراسيتامول، أسبرين. انظر <a href=\"/diseases/dis-524\">تسمم الباراسيتامول</a> و<a href=\"/diseases/dis-532\">طرق التخلص من السموم</a>.</p>[[slot:dis-3032-drugtox|ابتلاع الأدوية: الأولويات — رسم من إعداد الموقع|/diseases/img/dis-3032-drugtox.svg]]"
-    },
-    "causes": {
-      "ar": ""
-    },
-    "signs": {
-      "ar": "<p>تختلف حسب الدواء؛ اسأل عن اسم الدواء والكمية والوقت.</p>"
-    },
-    "tests": {
-      "ar": ""
-    },
-    "treatment": {
-      "ar": "<ul><li>الطوارئ.</li><li><b>فحم منشط (Activated charcoal)</b> بحسب الأمر.</li><li>تقييم كامل بالتحاليل.</li><li>الباراسيتامول: الترياق <b>أسيتيل سيستين (Acetylcysteine)</b>.</li></ul><div class=\"cs-box cs-danger\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ol><li>تأمين المجرى الهوائي.</li><li>تجهيز الفحم المنشط.</li><li>أخذ تاريخ وفحص بدني كاملين.</li><li>فحص مستوى الباراسيتامول بالدم وتقييم وظائف الكبد.</li></ol><!--aud0651-ac--><h4>سيناريوهات للمراجعة</h4><ul><li>طفل عمره 3 سنوات وجد أبوه عبوة إيبوبروفين فارغة بيده: الإجراء الأول الفحم المنشط (ضمن توجيه الإسعاف/مركز السموم).</li><li>طفل بعمر 8 سنوات ابتلع اثني عشر قرصًا من الباراسيتامول (325 مجم): أولويات: تأمين المجرى، تجهيز الفحم المنشط، تاريخ وفحص كاملان، وقياس مستوى الباراسيتامول بالدم.</li><li>طفل ابتلع زجاجة Tylenol: خذ العلامات الحيوية أولًا ثم أبلغ؛ الترياق: <strong>أسيتيل سيستين</strong>، والفحص المخبري الأهم: وظائف الكبد.</li><li>أم تجد طفلها (سنتان) وسط زجاجات منظفات مفتوحة: اتصل بمركز السموم أولًا.</li><li>الوقاية: اترك الأدوية مغلقة بعيدًا عن النظر وضع رقم مركز السموم قرب الهاتف.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>خطر</strong><p>تغير الوعي، صعوبة تنفس، أو ابتلاع كمية كبيرة: طوارئ فورًا.</p></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>احفظ الأدوية مغلقة بعيدة عن النظر.</li><li>ضع رقم مركز السموم قرب الهاتف.</li><li>عند وجود طفل ابن عامين وسط زجاجات تنظيف مفتوحة: اتصل بمركز السموم.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الدارج يبتلع الأدوية لفضوله",
-      "الأولويات: طوارئ ← فحم منشط ← تقييم بالتحاليل",
-      "ترياق الباراسيتامول أسيتيل سيستين",
-      "أدوية مغلقة ورقم مركز السموم"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ابتلع طفل عمره 3 سنوات زجاجة إيبوبروفين فارغة؛ الإجراء الأولي:"
-      },
-      "options": [
-        {
-          "ar": "فحم منشط"
-        },
-        {
-          "ar": "حمام"
-        },
-        {
-          "ar": "طعام"
-        },
-        {
-          "ar": "نوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "بحسب الأمر الطبي."
-      }
-    },
-    {
-      "q": {
-        "ar": "ترياق الباراسيتامول:"
-      },
-      "options": [
-        {
-          "ar": "أسيتيل سيستين"
-        },
-        {
-          "ar": "فيتامين K"
-        },
-        {
-          "ar": "نالوكسون"
-        },
-        {
-          "ar": "أتروبين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يحمي الكبد."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم تحليل بعد جرعة باراسيتامول زائدة:"
-      },
-      "options": [
-        {
-          "ar": "وظائف الكبد"
-        },
-        {
-          "ar": "سكر"
-        },
-        {
-          "ar": "كالسيوم"
-        },
-        {
-          "ar": "دهون"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الكبد العضو المستهدف."
-      }
-    },
-    {
-      "q": {
-        "ar": "تثقيف الوقاية:"
-      },
-      "options": [
-        {
-          "ar": "إبقاء الأدوية مغلقة بعيدة عن النظر"
-        },
-        {
-          "ar": "وضعها على الطاولة"
-        },
-        {
-          "ar": "حفظها بالحقيبة"
-        },
-        {
-          "ar": "تركها بالسيارة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الوقاية."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما الترياق النوعي لجرعة زائدة من الباراسيتامول؟"
-      },
-      "options": [
-        {
-          "ar": "الفحم المنشط وحده"
-        },
-        {
-          "ar": "أسيتيل سيستين"
-        },
-        {
-          "ar": "فيتامين K"
-        },
-        {
-          "ar": "النالوكسون"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الأسيتيل سيستين يحمي الكبد من سمية الباراسيتامول."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AAP: Poison prevention"
-    }
+  "en": [
+   "Toddlers swallow drugs out of curiosity",
+   "Priorities: emergency care ← activated charcoal ← assessment with tests",
+   "The paracetamol antidote is acetylcysteine",
+   "Closed medicines and the poison center number"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ابتلع طفل عمره 3 سنوات زجاجة إيبوبروفين فارغة؛ الإجراء الأولي:",
+    "en": "A 3-year-old child swallowed an empty ibuprofen bottle; the initial action:"
+   },
+   "options": [
+    {
+     "ar": "فحم منشط",
+     "en": "Activated charcoal"
+    },
+    {
+     "ar": "حمام",
+     "en": "Bath"
+    },
+    {
+     "ar": "طعام",
+     "en": "Food"
+    },
+    {
+     "ar": "نوم",
+     "en": "Sleep"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "بحسب الأمر الطبي.",
+    "en": "As per the medical order."
+   }
+  },
+  {
+   "q": {
+    "ar": "ترياق الباراسيتامول:",
+    "en": "The paracetamol antidote:"
+   },
+   "options": [
+    {
+     "ar": "أسيتيل سيستين",
+     "en": "Acetylcysteine"
+    },
+    {
+     "ar": "فيتامين K",
+     "en": "Vitamin K"
+    },
+    {
+     "ar": "نالوكسون",
+     "en": "Naloxone"
+    },
+    {
+     "ar": "أتروبين",
+     "en": "Atropine"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يحمي الكبد.",
+    "en": "It protects the liver."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم تحليل بعد جرعة باراسيتامول زائدة:",
+    "en": "The most important test after a paracetamol overdose:"
+   },
+   "options": [
+    {
+     "ar": "وظائف الكبد",
+     "en": "Liver function"
+    },
+    {
+     "ar": "سكر",
+     "en": "Sugar"
+    },
+    {
+     "ar": "كالسيوم",
+     "en": "Calcium"
+    },
+    {
+     "ar": "دهون",
+     "en": "Lipids"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الكبد العضو المستهدف.",
+    "en": "The liver is the target organ."
+   }
+  },
+  {
+   "q": {
+    "ar": "تثقيف الوقاية:",
+    "en": "Prevention education:"
+   },
+   "options": [
+    {
+     "ar": "إبقاء الأدوية مغلقة بعيدة عن النظر",
+     "en": "Keep medicines closed and out of sight"
+    },
+    {
+     "ar": "وضعها على الطاولة",
+     "en": "Put them on the table"
+    },
+    {
+     "ar": "حفظها بالحقيبة",
+     "en": "Keep them in the bag"
+    },
+    {
+     "ar": "تركها بالسيارة",
+     "en": "Leave them in the car"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الوقاية.",
+    "en": "Prevention."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما الترياق النوعي لجرعة زائدة من الباراسيتامول؟",
+    "en": "What is the specific antidote for a paracetamol overdose?"
+   },
+   "options": [
+    {
+     "ar": "الفحم المنشط وحده",
+     "en": "Activated charcoal alone"
+    },
+    {
+     "ar": "أسيتيل سيستين",
+     "en": "Acetylcysteine"
+    },
+    {
+     "ar": "فيتامين K",
+     "en": "Vitamin K"
+    },
+    {
+     "ar": "النالوكسون",
+     "en": "Naloxone"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الأسيتيل سيستين يحمي الكبد من سمية الباراسيتامول.",
+    "en": "Acetylcysteine protects the liver from paracetamol toxicity."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AAP: Poison prevention"
+  }
+ ]
 }

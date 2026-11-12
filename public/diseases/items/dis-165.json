@@ -1,387 +1,489 @@
 {
-  "id": "dis-165",
-  "num": 165,
-  "system": "peds",
-  "icon": "💧",
-  "level": 3,
-  "title": {
-    "ar": "الجفاف عند الأطفال",
-    "en": "Dehydration in Children"
+ "id": "dis-165",
+ "num": 165,
+ "system": "peds",
+ "icon": "💧",
+ "level": 3,
+ "title": {
+  "ar": "الجفاف عند الأطفال",
+  "en": "Dehydration in Children"
+ },
+ "teaser": {
+  "ar": "علامات فقد السوائل عند الرضيع والطفل، العلاج المنزلي بالـ ORS، ومتى المستشفى، مع خطط الإماهة A وB وC وأرقامها.",
+  "en": "Signs of fluid loss in infants and children, home treatment with ORS, when to go to the hospital, with rehydration plans A, B, and C and their numbers."
+ },
+ "chips": [
+  {
+   "ar": "ORS",
+   "en": "ORS"
   },
-  "teaser": {
-    "ar": "علامات فقد السوائل عند الرضيع والطفل، العلاج المنزلي بالـ ORS، ومتى المستشفى، مع خطط الإماهة A وB وC وأرقامها."
+  {
+   "ar": "علامات الجفاف",
+   "en": "Signs of dehydration"
   },
-  "chips": [
-    {
-      "ar": "ORS"
-    },
-    {
-      "ar": "علامات الجفاف"
-    },
-    {
-      "ar": "خطة A/B/C"
-    }
+  {
+   "ar": "خطة A/B/C",
+   "en": "Plan A/B/C"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الجفاف (Dehydration) بيحصل لما الرضيع أو الطفل يفقد سوائل جسم كتير لدرجة إنه مش قادر يحافظ على وظائفه العادية. ممكن يحصل بسبب قلة الشرب أو <b>القيء أو الإسهال أو الحرارة</b>. لو الجفاف شديد، الطفل ممكن مش قادر يعوّض السوائل بالشرب أو الأكل العادي، وساعتها بيحتاج دخول مستشفى.</p>\n<div class=\"cs-stats\"><div><b>6 حفاضات</b><span>أقل من كده في اليوم عند الرضيع = علامة خطر</span></div><div><b>8 ساعات</b><span>بدون حفاضة مبلولة عند الطفل الصغير = خطر</span></div><div><b>ORS</b><span>الأساس في المنزل</span></div></div>\n[[slot:dis-165-dehyd|درجات الجفاف عند الطفل وخطة كل درجة (رسم من إعداد الموقع)|/diseases/img/dis-165-dehyd.svg]]\n<p>الإسهال والقيء بيتم تناولهم بالتفصيل في أدلة النزلة المعوية.</p>",
+   "en": "<p>Dehydration (Dehydration) happens when an infant or child loses so much body fluid that he cannot maintain normal functions. It can happen from low intake or from <b>vomiting, diarrhea, or fever</b>. If dehydration is severe, the child may be unable to replace fluids by drinking or normal eating, and then needs hospital admission.</p>\n<div class=\"cs-stats\"><div><b>6 diapers</b><span>Fewer than this a day in an infant = a danger sign</span></div><div><b>8 hours</b><span>With no wet diaper in a young child = danger</span></div><div><b>ORS</b><span>The basis at home</span></div></div>\n[[slot:dis-165-dehyd|Degrees of dehydration in a child and the plan for each degree (illustration prepared by the site)|/diseases/img/dis-165-dehyd.svg]]\n<p>Diarrhea and vomiting are covered in detail in the gastroenteritis guides.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>القيء المتكرر</li><li>الإسهال (أشهر سبب: النزلات المعوية)</li><li>الحرارة العالية والعرق</li><li>قلة الشرب أو رفض الرضاعة (مثلاً مع التهاب الفم أو الحلق)</li><li>جو حار ورطب أو لبس زيادة عن اللزوم</li><li>أسباب أخرى: السكر عند الأطفال، أمراض الكلى</li></ul><h4>أسباب الإسهال الحاد عند الأطفال (تكملة)</h4><ul><li><strong>فيروسات</strong> (أشيعها الروتا تحت 5 سنوات).</li><li><strong>بكتيريا وطفيليات:</strong> غالبًا من طعام غير مطهو جيدًا (مثل السالمونيلا) أو سوء الصرف الصحي وقلة مياه الشرب النظيفة.</li><li><strong>أدوية:</strong> المضادات الحيوية وحتى الملينات.</li><li><strong>عدم تحمل اللاكتوز</strong> (Lactose intolerance).</li><li>عوامل مهيئة: سوء الصرف، العمر الصغير، نقص التغذية، عدوى الجهاز التنفسي العلوي.</li></ul><div class=\"cs-box cs-info\"><p><strong>تذكّر:</strong> السوائل تتدفق للخارج والأملاح تضيع معها: انخفاض الصوديوم (Hyponatremia أقل من 135) وانخفاض البوتاسيوم (Hypokalemia أقل من 3.5).</p></div>",
+   "en": "<ul><li>Repeated vomiting</li><li>Diarrhea (the commonest cause: gastroenteritis)</li><li>High fever and sweating</li><li>Poor intake or refusing feeds (for example with mouth or throat inflammation)</li><li>Hot and humid weather or overdressing</li><li>Other causes: diabetes in children, kidney diseases</li></ul><h4>Causes of acute diarrhea in children (more)</h4><ul><li><strong>Viruses</strong> (the commonest is rotavirus under 5 years).</li><li><strong>Bacteria and parasites:</strong> often from poorly cooked food (such as Salmonella) or poor sanitation and lack of clean drinking water.</li><li><strong>Drugs:</strong> antibiotics and even laxatives.</li><li><strong>Lactose intolerance</strong> (Lactose intolerance).</li><li>Predisposing factors: poor sanitation, young age, malnutrition, upper respiratory tract infection.</li></ul><div class=\"cs-box cs-info\"><p><strong>Remember:</strong> fluids flow out and salts are lost with them: low sodium (Hyponatremia less than 135) and low potassium (Hypokalemia less than 3.5).</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>علامات الجفاف عند الأطفال (حسب المراجع)</h4>\n<ol><li>لسان وشفايف جافة (Dry tongue and lips)</li><li>مفيش دموع عند البكاء</li><li>أقل من 6 حفاضات مبلولة في اليوم عند الرضيع، وعدم وجود حفاضة مبلولة لمدة 8 ساعات عند الطفل الصغير</li><li>يافوخ غايب (Sunken soft spot) عند الرضع</li><li>عيون غايرة (Sunken eyes)</li><li>جلد جاف ومتغضن (Dry and wrinkled skin)</li><li>تنفس عميق وسريع (Deep, rapid breathing)</li><li>أيادي وأرجل باردة ومبقعة (Cool and blotchy hands and feet)</li></ol>\n<h4>تقييم الدرجة (WHO)</h4>\n<table><thead><tr><th>العلامة</th><th>لا جفاف</th><th>جفاف متوسط (Some)</th><th>جفاف شديد (Severe)</th></tr></thead><tbody><tr><td>الحالة العامة</td><td>نشيط</td><td>قلقان / متهيج</td><td>خامل أو فاقد الوعي</td></tr><tr><td>العيون</td><td>عادية</td><td>غايرة</td><td>غايرة جداً</td></tr><tr><td>الدموع</td><td>موجودة</td><td>قليلة أو غايبة</td><td>غايبة</td></tr><tr><td>الفم واللسان</td><td>رطب</td><td>جاف</td><td>جاف جداً</td></tr><tr><td>العطش / الشرب</td><td>يشرب عادي</td><td>عطشان بيشرب بلهفة</td><td>مش قادر يشرب</td></tr><tr><td>قرصة الجلد</td><td>ترجع فوراً</td><td>ترجع ببطء</td><td>ترجع ببطء شديد (أكتر من ثانيتين)</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>جدول التقييم ده إضافة من مرجع WHO/IMCI. وهو يضيف التدرج للعلامات.</p></div><div class=\"cs-box cs-info\"><strong>للتفصيل</strong><p>جدول تقييم درجة الجفاف (الحالة العامة، العطش، رجوع الجلد، غور العين) والمحاليل والأدوية المصرية في دليل «النزلة المعوية والجفاف عند الأطفال (في الاستقبال)».</p></div><table><thead><tr><th>العلامة</th><th>لا/خفيف</th><th>متوسط</th><th>شديد</th></tr></thead><tbody><tr><td>الحالة</td><td>كويس</td><td>مشدود</td><td>دايخ خالص</td></tr><tr><td>العطش</td><td>يشرب عادي</td><td>ملهوف</td><td>مش قادر</td></tr><tr><td>رجوع الجلد</td><td>سريع</td><td>بطيء</td><td>بطيء جداً</td></tr><tr><td>غور العين</td><td>لا</td><td>متوسط</td><td>شديد</td></tr></tbody></table>",
+   "en": "<h4>Signs of dehydration in children</h4>\n<ol><li>Dry tongue and lips (Dry tongue and lips)</li><li>No tears when crying</li><li>Fewer than 6 wet diapers a day in an infant, and no wet diaper for 8 hours in a young child</li><li>Sunken soft spot (Sunken soft spot) in infants</li><li>Sunken eyes (Sunken eyes)</li><li>Dry and wrinkled skin (Dry and wrinkled skin)</li><li>Deep, rapid breathing (Deep, rapid breathing)</li><li>Cool and blotchy hands and feet (Cool and blotchy hands and feet)</li></ol>\n<h4>Assessing the degree</h4>\n<table><thead><tr><th>Sign</th><th>No dehydration</th><th>Some dehydration (Some)</th><th>Severe dehydration (Severe)</th></tr></thead><tbody><tr><td>General condition</td><td>Active</td><td>Restless / irritable</td><td>Lethargic or unconscious</td></tr><tr><td>Eyes</td><td>Normal</td><td>Sunken</td><td>Very sunken</td></tr><tr><td>Tears</td><td>Present</td><td>Few or absent</td><td>Absent</td></tr><tr><td>Mouth and tongue</td><td>Moist</td><td>Dry</td><td>Very dry</td></tr><tr><td>Thirst / drinking</td><td>Drinks normally</td><td>Thirsty, drinks eagerly</td><td>Unable to drink</td></tr><tr><td>Skin pinch</td><td>Returns immediately</td><td>Returns slowly</td><td>Returns very slowly (more than 2 seconds)</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>Update</strong><p>This assessment table is an addition. It adds gradation to the signs.</p></div><div class=\"cs-box cs-info\"><strong>For details</strong><p>The table for assessing the degree of dehydration (general condition, thirst, skin return, sunken eyes) and the Egyptian solutions and drugs are in the guide \"Gastroenteritis and dehydration in children (in the reception area).\"</p></div><table><thead><tr><th>Sign</th><th>None/mild</th><th>Moderate</th><th>Severe</th></tr></thead><tbody><tr><td>Condition</td><td>Good</td><td>Tense</td><td>Very drowsy</td></tr><tr><td>Thirst</td><td>Drinks normally</td><td>Eager</td><td>Unable</td></tr><tr><td>Skin return</td><td>Fast</td><td>Slow</td><td>Very slow</td></tr><tr><td>Sunken eyes</td><td>No</td><td>Moderate</td><td>Severe</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<ul><li>الأغلب بيتشخص إكلينيكياً (بالفحص).</li><li>الوزن الحالي مقارنة بالسابق: فقد الوزن هو أدق مقياس لنسبة الجفاف.</li><li>في الجفاف المتوسط والشديد أو القيء المستمر: الطبيب يطلب كهارل (Na, K)، يوريا وكرياتينين، سكر الدم، غازات دم حسب الحالة.</li><li>تحليل بول (كثافة البول والكيتونات) وعدّ البول.</li></ul>",
+   "en": "<ul><li>Mostly diagnosed clinically (by examination).</li><li>Current weight compared with the previous one: weight loss is the most accurate measure of the percentage of dehydration.</li><li>In moderate and severe dehydration or persistent vomiting: the doctor orders electrolytes (Na, K), urea and creatinine, blood sugar, and blood gases depending on the case.</li><li>Urinalysis (urine specific gravity and ketones) and urine counting.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>العلاج في البيت (حسب المراجع): كيف أساعد الطفل يتحسن؟</h4>\n<ol><li>شجّع الطفل على شرب سوائل غير محلاة؛ الصودا والعصائر المحلاة والجيلي ذو النكهات ممكن تهيّج الإسهال.</li><li>كمّل رضاعة الرضيع بشكل طبيعي.</li><li>محاليل الأملاح (Electrolyte solutions) تفيد لما تتدي.</li><li>زوّد السوائل والغذاء بالتدريج.</li><li>اعطِ الطفل Acetaminophen للحرارة. <b>لا تعطيه أسبرين</b>.</li><li>سيبه يرتاح كتير.</li><li>راقب علامات رجوع الجفاف أو تفاقمه.</li></ol>\n<h4>العلاج في المستشفى (للحالات الشديدة)</h4>\n<ol><li>سوائل وريدية (IV)</li><li>Acetaminophen للحرارة</li><li>راحة</li></ol>\n<h4>خطط الإماهة (WHO) — إضافة مرجعية</h4>\n<table><thead><tr><th>الخطة</th><th>الإجراء</th></tr></thead><tbody><tr><td>A (بدون جفاف)</td><td>سوائل أكتر + ORS بعد كل براز سائل (أقل من سنتين: 50–100 مل، 2–10 سنين: 100–200 مل) + كمّل رضاعة وأكل + زنك + علامات رجوع للطبيب</td></tr><tr><td>B (جفاف متوسط)</td><td>ORS حوالي 75 مل/كجم على 4 ساعات في المركز بإشراف التمريض (وفي بعض الإرشادات 50–100 مل/كجم)، ثم إعادة تقييم</td></tr><tr><td>C (جفاف شديد)</td><td>بدء سوائل وريدية فوراً (رينجر لاكتات أو محلول ملح): من سنة فأكتر 30 مل/كجم في 30 دقيقة ثم 70 مل/كجم في 2.5 ساعة، ورضيع أقل من سنة 30 مل/كجم في ساعة ثم 70 مل/كجم في 5 ساعات؛ ويبدأ ORS لما يقدر يشرب</td></tr><tr><td>زنك</td><td>10 مجم يومياً (أقل من 6 شهور) أو 20 مجم يومياً (أكبر)، لمدة 10–14 يوم</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>السوائل المحلاة والعصائر: الأفضل الابتعاد عن المشروبات عالية السكر لأنها بتزود الإسهال. وكمان لا تعطى مياه سادة فقط لرضيع بإسهال (قلة أملاح).</li><li><b>ORS</b>: يحضّر حسب العبوة بالظبط في الكمية المحددة من الماء المغلي المبرّد؛ اللي زيادة أو أقل بيضر. ما تعطيش الأطفال عصير مركز أو كوكاكولا بدل ORS.</li><li><b>القيء:</b> انتظر 10 دقائق وابدأ بملعقة صغيرة أو حقنة كل 1–2 دقيقة؛ القيء المتقطع لا يمنع الإماهة.</li><li><b>خافض الحرارة:</b> Paracetamol آمن. Ibuprofen بحذر في الجفاف (خطر على الكلى)، فيستعمل بعد إماهة وبأمر الطبيب.</li><li>أرقام الخطط من WHO/IMCI (مراجع ثانوية)، تُضبط حسب بروتوكول المستشفى وأمر الطبيب.</li></ul></div><h4>كميات المحاليل في المراجع (محلول Pansol)</h4><table><thead><tr><th>الدرجة</th><th>الكمية</th></tr></thead><tbody><tr><td>خفيف</td><td>30–50 مل/كجم</td></tr><tr><td>متوسط</td><td>50–70 مل/كجم</td></tr><tr><td>شديد</td><td>70–100 مل/كجم</td></tr><tr><td>صدمة</td><td>20 مل رنجر/كجم (يكرر)</td></tr></tbody></table><p>أكياس ORS: Rehydro-zinc (أفضلها)، Rehydran، Hydrosafe، كيس على كوب ماء سبق غليه بعد كل 3 مرات إسهال أو ترجيع.</p>",
+   "en": "<h4>Treatment at home: how do I help the child improve?</h4>\n<ol><li>Encourage the child to drink unsweetened fluids; soda, sweetened juices, and flavored gelatin may aggravate diarrhea.</li><li>Continue feeding the infant normally.</li><li>Electrolyte solutions (Electrolyte solutions) help when given.</li><li>Increase fluids and food gradually.</li><li>Give the child Acetaminophen for fever. <b>Do not give aspirin</b>.</li><li>Let him rest a lot.</li><li>Watch for signs of dehydration returning or worsening.</li></ol>\n<h4>Treatment in the hospital (for severe cases)</h4>\n<ol><li>IV fluids (IV)</li><li>Acetaminophen for fever</li><li>Rest</li></ol>\n<h4>Rehydration plans — additional information</h4>\n<table><thead><tr><th>Plan</th><th>Action</th></tr></thead><tbody><tr><td>A (no dehydration)</td><td>More fluids + ORS after each liquid stool (under 2 years: 50–100 mL, 2–10 years: 100–200 mL) + continue feeding and eating + zinc + signs for returning to the doctor</td></tr><tr><td>B (moderate dehydration)</td><td>ORS about 75 mL/kg over 4 hours at the center under nursing supervision (and in some guidelines 50–100 mL/kg), then reassessment</td></tr><tr><td>C (severe dehydration)</td><td>Start IV fluids immediately (lactated Ringer's or saline): from 1 year and older 30 mL/kg in 30 minutes then 70 mL/kg in 2.5 hours, and an infant under 1 year 30 mL/kg in 1 hour then 70 mL/kg in 5 hours; and start ORS when he can drink</td></tr><tr><td>Zinc</td><td>10 mg daily (under 6 months) or 20 mg daily (older), for 10–14 days</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li>Sweetened fluids and juices: it is better to avoid high-sugar drinks because they increase diarrhea. Also, plain water alone should not be given to an infant with diarrhea (lack of salts).</li><li><b>ORS</b>: prepare exactly as the package says, in the stated amount of boiled, cooled water; more or less is harmful. Do not give children concentrated juice or cola instead of ORS.</li><li><b>Vomiting:</b> wait 10 minutes and start with a teaspoon or syringe every 1–2 minutes; intermittent vomiting does not prevent rehydration.</li><li><b>Antipyretic:</b> Paracetamol is safe. Ibuprofen with caution in dehydration (risk to the kidneys), so it is used after rehydration and by physician's order.</li><li>The plan numbers are standard figures, adjusted to hospital protocol and physician's order.</li></ul></div><h4>Solution amounts (Pansol solution)</h4><table><thead><tr><th>Degree</th><th>Amount</th></tr></thead><tbody><tr><td>Mild</td><td>30–50 mL/kg</td></tr><tr><td>Moderate</td><td>50–70 mL/kg</td></tr><tr><td>Severe</td><td>70–100 mL/kg</td></tr><tr><td>Shock</td><td>20 mL Ringer's/kg (repeat)</td></tr></tbody></table><p>ORS sachets: Rehydro-zinc (the best), Rehydran, Hydrosafe, one sachet in a cup of previously boiled water after every 3 episodes of diarrhea or vomiting.</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم بسرعة</strong><p>الوعي، العيون، الدموع، الفم، قرصة الجلد، اليافوخ، النبض ووقت امتلاء الشعيرات (CRT)، التنفس، الحرارة، الوزن، آخر تبول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>حدد الدرجة</strong><p>لا جفاف / متوسط / شديد. لو متوسط أو شديد بلّغ الطبيب فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ابدأ ORS</strong><p>ملعقة أو كوب أو حقنة (للرضع) بكميات صغيرة ومتكررة. القيء: انتظر 10 دقائق وكمّل ببطء. الرضاعة بتستمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>خط وريدي</strong><p>لو الجفاف شديد أو فشل ORS: خط وريدي، رينجر لاكتات أو ملح 0.9% حسب الأمر، تدفق سريع للجرعة الأولى، مونيتور، قياس الضغط والنبض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Intake / Output</strong><p>سجّل كل سائل داخل (فم + وريد) وكمية القيء والبراز والبول (ml/kg/h)، وزن الحفاضات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>سيطر على الحرارة</strong><p>Paracetamol بالجرعة الصحيحة حسب الوزن. لا أسبرين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>راقب</strong><p>كل 15–30 دقيقة في الشديد: الوعي، النبض، ضغط الدم، CRT، البول، وعلامات زيادة السوائل (وذمة، لهاث). عند الانتهاء إعادة تقييم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>منع انتقال العدوى</strong><p>قفازات، غسل أيدي، تنظيف الأسطح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>علّم الأهل</strong><p>التحضير الصحيح للـ ORS، تكرار الإعطاء، علامات الخطر، استمرار الرضاعة والأكل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>وثّق</strong><p>الدرجة، كل التدخلات، الاستجابة، وقت التبول الأول، التبليغ.</p></div></div></div>\n<div class=\"cs-box cs-tip\"><strong>ملاحظة عملية</strong><p>اعتمد على الوزن (الميزان نفس الوقت) أكتر من التقدير بالعين. الأطفال الرضع والمبتسرين والمصابين بسوء تغذية بيتدهوروا بسرعة.</p></div>\n<h4>إضافة (مراجعة تمريضية للامتحان)</h4><ul><li>التهاب القولون بالفيروسات من الأسباب الأكثر شيوعًا؛ الروتا هو الأكثر شيوعًا تحت 5 سنوات</li><li>الإماهة: <b>ORS أولًا</b>، وإن لم تنفع أو كان الجفاف شديدًا: <b>20 مل/كجم</b> محلول ملحي وريدي بلعة</li><li><b>لا تُستخدم</b> المشروبات الرياضية للإماهة</li><li>الغذاء: النظام الغذائي الطبيعي (الأطعمة الصلبة) في الإسهال الحاد، ولا يُكتفى بحمية BRAT (موز، أرز، تفاح مهروس، توست)</li><li>لا تُعطى أدوية الإسهال (لوبراميد/إيموديوم) للأطفال</li><li>علامات إضافية مهمة: كثافة بول نوعية 1.035 تدل على تركيز البول (جفاف)</li></ul>[[slot:dis-165-diarrhea|إسهال الأطفال: أسباب وعلامات وإماهة — رسم من إعداد الموقع|/diseases/img/dis-165-diarrhea.svg]]",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess quickly</strong><p>Consciousness, eyes, tears, mouth, skin pinch, soft spot, pulse and capillary refill time (CRT), breathing, temperature, weight, last urination.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Determine the degree</strong><p>No dehydration / moderate / severe. If moderate or severe, notify the doctor immediately.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Start ORS</strong><p>Spoon, cup, or syringe (for infants) in small frequent amounts. Vomiting: wait 10 minutes and continue slowly. Breastfeeding continues.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>IV line</strong><p>If dehydration is severe or ORS fails: IV line, lactated Ringer's or 0.9% saline as ordered, rapid flow for the first dose, monitor, measure pressure and pulse.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Intake / Output</strong><p>Record every fluid taken in (mouth + IV) and the amount of vomit, stool, and urine (mL/kg/h), weigh diapers.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Control the fever</strong><p>Paracetamol at the correct dose by weight. No aspirin.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Monitor</strong><p>Every 15–30 minutes in severe cases: consciousness, pulse, blood pressure, CRT, urine, and signs of fluid overload (edema, gasping). Reassess when done.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Prevent spread of infection</strong><p>Gloves, hand washing, cleaning surfaces.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>Teach the family</strong><p>Correct preparation of ORS, repeated giving, danger signs, continuing breastfeeding and eating.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>Document</strong><p>The degree, all interventions, the response, time of first urination, reporting.</p></div></div></div>\n<div class=\"cs-box cs-tip\"><strong>Practical note</strong><p>Rely on weight (same scale, same time) more than eyeball estimation. Infants, premature babies, and malnourished children deteriorate quickly.</p></div>\n<h4>Addition (nursing exam review)</h4><ul><li>Viral colitis is among the most common causes; rotavirus is the most common under 5 years</li><li>Rehydration: <b>ORS first</b>, and if it does not work or dehydration is severe: <b>20 mL/kg</b> IV saline bolus</li><li>Sports drinks are <b>not used</b> for rehydration</li><li>Food: the normal diet (solid foods) in acute diarrhea, and the BRAT diet (banana, rice, applesauce, toast) alone is not enough</li><li>Antidiarrheal drugs (loperamide/Imodium) are not given to children</li><li>Additional important signs: urine specific gravity 1.035 shows concentrated urine (dehydration)</li></ul>[[slot:dis-165-diarrhea|Diarrhea in children: causes, signs, and rehydration — illustration prepared by the site|/diseases/img/dis-165-diarrhea.svg]]"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب / الطوارئ فوراً لو:</strong><ul><li>خمول أو صعوبة في إيقاظ الطفل أو تشنج</li><li>عدم القدرة على الشرب أو قيء متكرر لا يتوقف</li><li>عيون غايرة جداً، يافوخ غايب، جلد يرجع ببطء</li><li>أيادي وأرجل باردة ومبقعة، نبض ضعيف سريع، تنفس سريع عميق</li><li>عدم التبول 8 ساعات (أو أكتر من 6 ساعات في الرضيع)</li><li>براز دموي أو قيء أخضر أو حرارة عالية أو بطن منتفخ</li><li>رضيع أقل من 6 شهور أو مبتسر أو مريض مزمن</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the doctor / emergency immediately if:</strong><ul><li>Lethargy, difficulty waking the child, or convulsion</li><li>Unable to drink, or repeated vomiting that does not stop</li><li>Very sunken eyes, sunken soft spot, skin that returns slowly</li><li>Cool and blotchy hands and feet, weak rapid pulse, rapid deep breathing</li><li>No urination for 8 hours (or more than 6 hours in an infant)</li><li>Bloody stool or green vomit, high fever, or swollen abdomen</li><li>Infant under 6 months, premature, or with a chronic illness</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>ادّي الطفل سوائل كتير: ORS (من الصيدلية) أو ماء، وكمّلي رضاعة.</li><li>حضّري ORS بالظبط زي العبوة. وما تدّيش عصير مركز أو صودا.</li><li>على دفعات صغيرة ومتكررة (ملعقة كل دقيقة لو بيرجع).</li><li>خافض الحرارة الباراسيتامول فقط. ما تدّيش أسبرين.</li><li>استمري في الأكل والرضاعة.</li><li>علامات الرجوع للطبيب: خمول، عيون غايرة، مفيش بول 8 ساعات، دم في البراز.</li><li>اغسلي إيديكي وعقّمي رضّاعات الطفل.</li></ul>",
+   "en": "<ul><li>Give the child plenty of fluids: ORS (from the pharmacy) or water, and continue breastfeeding.</li><li>Prepare ORS exactly as on the package. And do not give concentrated juice or soda.</li><li>In small frequent amounts (a spoon every minute if he vomits).</li><li>Use only paracetamol as the fever reducer. Do not give aspirin.</li><li>Continue eating and breastfeeding.</li><li>Signs to return to the doctor: lethargy, sunken eyes, no urine for 8 hours, blood in the stool.</li><li>Wash your hands and sterilize the child's bottles.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الجفاف = فقد سوائل أكتر من اللي بيتعوّض (قيء/إسهال/حرارة)",
+   "أبرز علامات: جفاف الفم، غياب الدموع، قلة الحفاضات، يافوخ وعيون غايرة، جلد جاف، تنفس سريع، أطراف باردة",
+   "المنزل: سوائل غير محلاة + ORS + رضاعة + أكل تدريجي + باراسيتامول (لا أسبرين)",
+   "المستشفى: سوائل وريدية + خافض حرارة + راحة",
+   "WHO: A منزل، B ORS حوالي 75 مل/كجم/4 ساعات، C وريدي فوراً",
+   "الزنك 10–20 مجم 10–14 يوم",
+   "قِس الوزن والـ I/O وراقب علامات الخطر",
+   "لوبراميد ممنوع للأطفال في الإسهال الحاد",
+   "بلعة 20 مل/كجم محلول ملحي عند الجفاف الشديد"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الجفاف (Dehydration) بيحصل لما الرضيع أو الطفل يفقد سوائل جسم كتير لدرجة إنه مش قادر يحافظ على وظائفه العادية. ممكن يحصل بسبب قلة الشرب أو <b>القيء أو الإسهال أو الحرارة</b>. لو الجفاف شديد، الطفل ممكن مش قادر يعوّض السوائل بالشرب أو الأكل العادي، وساعتها بيحتاج دخول مستشفى.</p>\n<div class=\"cs-stats\"><div><b>6 حفاضات</b><span>أقل من كده في اليوم عند الرضيع = علامة خطر</span></div><div><b>8 ساعات</b><span>بدون حفاضة مبلولة عند الطفل الصغير = خطر</span></div><div><b>ORS</b><span>الأساس في المنزل</span></div></div>\n[[slot:dis-165-dehyd|درجات الجفاف عند الطفل وخطة كل درجة (رسم من إعداد الموقع)|/diseases/img/dis-165-dehyd.svg]]\n<p>الإسهال والقيء بيتم تناولهم بالتفصيل في أدلة النزلة المعوية.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>القيء المتكرر</li><li>الإسهال (أشهر سبب: النزلات المعوية)</li><li>الحرارة العالية والعرق</li><li>قلة الشرب أو رفض الرضاعة (مثلاً مع التهاب الفم أو الحلق)</li><li>جو حار ورطب أو لبس زيادة عن اللزوم</li><li>أسباب أخرى: السكر عند الأطفال، أمراض الكلى</li></ul><h4>أسباب الإسهال الحاد عند الأطفال (تكملة)</h4><ul><li><strong>فيروسات</strong> (أشيعها الروتا تحت 5 سنوات).</li><li><strong>بكتيريا وطفيليات:</strong> غالبًا من طعام غير مطهو جيدًا (مثل السالمونيلا) أو سوء الصرف الصحي وقلة مياه الشرب النظيفة.</li><li><strong>أدوية:</strong> المضادات الحيوية وحتى الملينات.</li><li><strong>عدم تحمل اللاكتوز</strong> (Lactose intolerance).</li><li>عوامل مهيئة: سوء الصرف، العمر الصغير، نقص التغذية، عدوى الجهاز التنفسي العلوي.</li></ul><div class=\"cs-box cs-info\"><p><strong>تذكّر:</strong> السوائل تتدفق للخارج والأملاح تضيع معها: انخفاض الصوديوم (Hyponatremia أقل من 135) وانخفاض البوتاسيوم (Hypokalemia أقل من 3.5).</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>علامات الجفاف عند الأطفال (حسب المراجع)</h4>\n<ol><li>لسان وشفايف جافة (Dry tongue and lips)</li><li>مفيش دموع عند البكاء</li><li>أقل من 6 حفاضات مبلولة في اليوم عند الرضيع، وعدم وجود حفاضة مبلولة لمدة 8 ساعات عند الطفل الصغير</li><li>يافوخ غايب (Sunken soft spot) عند الرضع</li><li>عيون غايرة (Sunken eyes)</li><li>جلد جاف ومتغضن (Dry and wrinkled skin)</li><li>تنفس عميق وسريع (Deep, rapid breathing)</li><li>أيادي وأرجل باردة ومبقعة (Cool and blotchy hands and feet)</li></ol>\n<h4>تقييم الدرجة (WHO)</h4>\n<table><thead><tr><th>العلامة</th><th>لا جفاف</th><th>جفاف متوسط (Some)</th><th>جفاف شديد (Severe)</th></tr></thead><tbody><tr><td>الحالة العامة</td><td>نشيط</td><td>قلقان / متهيج</td><td>خامل أو فاقد الوعي</td></tr><tr><td>العيون</td><td>عادية</td><td>غايرة</td><td>غايرة جداً</td></tr><tr><td>الدموع</td><td>موجودة</td><td>قليلة أو غايبة</td><td>غايبة</td></tr><tr><td>الفم واللسان</td><td>رطب</td><td>جاف</td><td>جاف جداً</td></tr><tr><td>العطش / الشرب</td><td>يشرب عادي</td><td>عطشان بيشرب بلهفة</td><td>مش قادر يشرب</td></tr><tr><td>قرصة الجلد</td><td>ترجع فوراً</td><td>ترجع ببطء</td><td>ترجع ببطء شديد (أكتر من ثانيتين)</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>جدول التقييم ده إضافة من مرجع WHO/IMCI. وهو يضيف التدرج للعلامات.</p></div><div class=\"cs-box cs-info\"><strong>للتفصيل</strong><p>جدول تقييم درجة الجفاف (الحالة العامة، العطش، رجوع الجلد، غور العين) والمحاليل والأدوية المصرية في دليل «النزلة المعوية والجفاف عند الأطفال (في الاستقبال)».</p></div><table><thead><tr><th>العلامة</th><th>لا/خفيف</th><th>متوسط</th><th>شديد</th></tr></thead><tbody><tr><td>الحالة</td><td>كويس</td><td>مشدود</td><td>دايخ خالص</td></tr><tr><td>العطش</td><td>يشرب عادي</td><td>ملهوف</td><td>مش قادر</td></tr><tr><td>رجوع الجلد</td><td>سريع</td><td>بطيء</td><td>بطيء جداً</td></tr><tr><td>غور العين</td><td>لا</td><td>متوسط</td><td>شديد</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<ul><li>الأغلب بيتشخص إكلينيكياً (بالفحص).</li><li>الوزن الحالي مقارنة بالسابق: فقد الوزن هو أدق مقياس لنسبة الجفاف.</li><li>في الجفاف المتوسط والشديد أو القيء المستمر: الطبيب يطلب كهارل (Na, K)، يوريا وكرياتينين، سكر الدم، غازات دم حسب الحالة.</li><li>تحليل بول (كثافة البول والكيتونات) وعدّ البول.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>العلاج في البيت (حسب المراجع): كيف أساعد الطفل يتحسن؟</h4>\n<ol><li>شجّع الطفل على شرب سوائل غير محلاة؛ الصودا والعصائر المحلاة والجيلي ذو النكهات ممكن تهيّج الإسهال.</li><li>كمّل رضاعة الرضيع بشكل طبيعي.</li><li>محاليل الأملاح (Electrolyte solutions) تفيد لما تتدي.</li><li>زوّد السوائل والغذاء بالتدريج.</li><li>اعطِ الطفل Acetaminophen للحرارة. <b>لا تعطيه أسبرين</b>.</li><li>سيبه يرتاح كتير.</li><li>راقب علامات رجوع الجفاف أو تفاقمه.</li></ol>\n<h4>العلاج في المستشفى (للحالات الشديدة)</h4>\n<ol><li>سوائل وريدية (IV)</li><li>Acetaminophen للحرارة</li><li>راحة</li></ol>\n<h4>خطط الإماهة (WHO) — إضافة مرجعية</h4>\n<table><thead><tr><th>الخطة</th><th>الإجراء</th></tr></thead><tbody><tr><td>A (بدون جفاف)</td><td>سوائل أكتر + ORS بعد كل براز سائل (أقل من سنتين: 50–100 مل، 2–10 سنين: 100–200 مل) + كمّل رضاعة وأكل + زنك + علامات رجوع للطبيب</td></tr><tr><td>B (جفاف متوسط)</td><td>ORS حوالي 75 مل/كجم على 4 ساعات في المركز بإشراف التمريض (وفي بعض الإرشادات 50–100 مل/كجم)، ثم إعادة تقييم</td></tr><tr><td>C (جفاف شديد)</td><td>بدء سوائل وريدية فوراً (رينجر لاكتات أو محلول ملح): من سنة فأكتر 30 مل/كجم في 30 دقيقة ثم 70 مل/كجم في 2.5 ساعة، ورضيع أقل من سنة 30 مل/كجم في ساعة ثم 70 مل/كجم في 5 ساعات؛ ويبدأ ORS لما يقدر يشرب</td></tr><tr><td>زنك</td><td>10 مجم يومياً (أقل من 6 شهور) أو 20 مجم يومياً (أكبر)، لمدة 10–14 يوم</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>السوائل المحلاة والعصائر: الأفضل الابتعاد عن المشروبات عالية السكر لأنها بتزود الإسهال. وكمان لا تعطى مياه سادة فقط لرضيع بإسهال (قلة أملاح).</li><li><b>ORS</b>: يحضّر حسب العبوة بالظبط في الكمية المحددة من الماء المغلي المبرّد؛ اللي زيادة أو أقل بيضر. ما تعطيش الأطفال عصير مركز أو كوكاكولا بدل ORS.</li><li><b>القيء:</b> انتظر 10 دقائق وابدأ بملعقة صغيرة أو حقنة كل 1–2 دقيقة؛ القيء المتقطع لا يمنع الإماهة.</li><li><b>خافض الحرارة:</b> Paracetamol آمن. Ibuprofen بحذر في الجفاف (خطر على الكلى)، فيستعمل بعد إماهة وبأمر الطبيب.</li><li>أرقام الخطط من WHO/IMCI (مراجع ثانوية)، تُضبط حسب بروتوكول المستشفى وأمر الطبيب.</li></ul></div><h4>كميات المحاليل في المراجع (محلول Pansol)</h4><table><thead><tr><th>الدرجة</th><th>الكمية</th></tr></thead><tbody><tr><td>خفيف</td><td>30–50 مل/كجم</td></tr><tr><td>متوسط</td><td>50–70 مل/كجم</td></tr><tr><td>شديد</td><td>70–100 مل/كجم</td></tr><tr><td>صدمة</td><td>20 مل رنجر/كجم (يكرر)</td></tr></tbody></table><p>أكياس ORS: Rehydro-zinc (أفضلها)، Rehydran، Hydrosafe، كيس على كوب ماء سبق غليه بعد كل 3 مرات إسهال أو ترجيع.</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم بسرعة</strong><p>الوعي، العيون، الدموع، الفم، قرصة الجلد، اليافوخ، النبض ووقت امتلاء الشعيرات (CRT)، التنفس، الحرارة، الوزن، آخر تبول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>حدد الدرجة</strong><p>لا جفاف / متوسط / شديد. لو متوسط أو شديد بلّغ الطبيب فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ابدأ ORS</strong><p>ملعقة أو كوب أو حقنة (للرضع) بكميات صغيرة ومتكررة. القيء: انتظر 10 دقائق وكمّل ببطء. الرضاعة بتستمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>خط وريدي</strong><p>لو الجفاف شديد أو فشل ORS: خط وريدي، رينجر لاكتات أو ملح 0.9% حسب الأمر، تدفق سريع للجرعة الأولى، مونيتور، قياس الضغط والنبض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Intake / Output</strong><p>سجّل كل سائل داخل (فم + وريد) وكمية القيء والبراز والبول (ml/kg/h)، وزن الحفاضات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>سيطر على الحرارة</strong><p>Paracetamol بالجرعة الصحيحة حسب الوزن. لا أسبرين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>راقب</strong><p>كل 15–30 دقيقة في الشديد: الوعي، النبض، ضغط الدم، CRT، البول، وعلامات زيادة السوائل (وذمة، لهاث). عند الانتهاء إعادة تقييم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>منع انتقال العدوى</strong><p>قفازات، غسل أيدي، تنظيف الأسطح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>علّم الأهل</strong><p>التحضير الصحيح للـ ORS، تكرار الإعطاء، علامات الخطر، استمرار الرضاعة والأكل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>وثّق</strong><p>الدرجة، كل التدخلات، الاستجابة، وقت التبول الأول، التبليغ.</p></div></div></div>\n<div class=\"cs-box cs-tip\"><strong>ملاحظة عملية</strong><p>اعتمد على الوزن (الميزان نفس الوقت) أكتر من التقدير بالعين. الأطفال الرضع والمبتسرين والمصابين بسوء تغذية بيتدهوروا بسرعة.</p></div>\n<h4>إضافة (مراجعة تمريضية للامتحان)</h4><ul><li>التهاب القولون بالفيروسات من الأسباب الأكثر شيوعًا؛ الروتا هو الأكثر شيوعًا تحت 5 سنوات</li><li>الإماهة: <b>ORS أولًا</b>، وإن لم تنفع أو كان الجفاف شديدًا: <b>20 مل/كجم</b> محلول ملحي وريدي بلعة</li><li><b>لا تُستخدم</b> المشروبات الرياضية للإماهة</li><li>الغذاء: النظام الغذائي الطبيعي (الأطعمة الصلبة) في الإسهال الحاد، ولا يُكتفى بحمية BRAT (موز، أرز، تفاح مهروس، توست)</li><li>لا تُعطى أدوية الإسهال (لوبراميد/إيموديوم) للأطفال</li><li>علامات إضافية مهمة: كثافة بول نوعية 1.035 تدل على تركيز البول (جفاف)</li></ul>[[slot:dis-165-diarrhea|إسهال الأطفال: أسباب وعلامات وإماهة — رسم من إعداد الموقع|/diseases/img/dis-165-diarrhea.svg]]"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب / الطوارئ فوراً لو:</strong><ul><li>خمول أو صعوبة في إيقاظ الطفل أو تشنج</li><li>عدم القدرة على الشرب أو قيء متكرر لا يتوقف</li><li>عيون غايرة جداً، يافوخ غايب، جلد يرجع ببطء</li><li>أيادي وأرجل باردة ومبقعة، نبض ضعيف سريع، تنفس سريع عميق</li><li>عدم التبول 8 ساعات (أو أكتر من 6 ساعات في الرضيع)</li><li>براز دموي أو قيء أخضر أو حرارة عالية أو بطن منتفخ</li><li>رضيع أقل من 6 شهور أو مبتسر أو مريض مزمن</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>ادّي الطفل سوائل كتير: ORS (من الصيدلية) أو ماء، وكمّلي رضاعة.</li><li>حضّري ORS بالظبط زي العبوة. وما تدّيش عصير مركز أو صودا.</li><li>على دفعات صغيرة ومتكررة (ملعقة كل دقيقة لو بيرجع).</li><li>خافض الحرارة الباراسيتامول فقط. ما تدّيش أسبرين.</li><li>استمري في الأكل والرضاعة.</li><li>علامات الرجوع للطبيب: خمول، عيون غايرة، مفيش بول 8 ساعات، دم في البراز.</li><li>اغسلي إيديكي وعقّمي رضّاعات الطفل.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الجفاف = فقد سوائل أكتر من اللي بيتعوّض (قيء/إسهال/حرارة)",
-      "أبرز علامات: جفاف الفم، غياب الدموع، قلة الحفاضات، يافوخ وعيون غايرة، جلد جاف، تنفس سريع، أطراف باردة",
-      "المنزل: سوائل غير محلاة + ORS + رضاعة + أكل تدريجي + باراسيتامول (لا أسبرين)",
-      "المستشفى: سوائل وريدية + خافض حرارة + راحة",
-      "WHO: A منزل، B ORS حوالي 75 مل/كجم/4 ساعات، C وريدي فوراً",
-      "الزنك 10–20 مجم 10–14 يوم",
-      "قِس الوزن والـ I/O وراقب علامات الخطر",
-      "لوبراميد ممنوع للأطفال في الإسهال الحاد",
-      "بلعة 20 مل/كجم محلول ملحي عند الجفاف الشديد"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي علامة تدل على جفاف عند الرضيع؟"
-      },
-      "options": [
-        {
-          "ar": "يافوخ غايب"
-        },
-        {
-          "ar": "بكاء بدموع"
-        },
-        {
-          "ar": "جلد مرن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "اليافوخ الغايب وغياب الدموع من العلامات."
-      }
-    },
-    {
-      "q": {
-        "ar": "خافض الحرارة المناسب للطفل المجفف:"
-      },
-      "options": [
-        {
-          "ar": "أسبرين"
-        },
-        {
-          "ar": "أسيتامينوفين"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الأسيتامينوفين (باراسيتامول)، والأسبرين ممنوع."
-      }
-    },
-    {
-      "q": {
-        "ar": "الجفاف الشديد (خطة C) يعالج بـ:"
-      },
-      "options": [
-        {
-          "ar": "ORS في البيت"
-        },
-        {
-          "ar": "سوائل وريدية فوراً"
-        },
-        {
-          "ar": "عصير"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "السوائل الوريدية فوراً مع مراقبة لصيقة."
-      }
-    },
-    {
-      "q": {
-        "ar": "رضيع بيرجع بعد ORS:"
-      },
-      "options": [
-        {
-          "ar": "نقطع السوائل"
-        },
-        {
-          "ar": "ننتظر 10 دقائق ونبدأ بكميات صغيرة"
-        },
-        {
-          "ar": "نعطي صودا"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "القيء المتقطع لا يمنع الإماهة بكميات صغيرة."
-      }
-    },
-    {
-      "q": {
-        "ar": "الأفضل للسوائل في المنزل:"
-      },
-      "options": [
-        {
-          "ar": "مشروبات غازية"
-        },
-        {
-          "ar": "ORS وسوائل غير محلاة"
-        },
-        {
-          "ar": "جيلي بنكهات"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "السكر الزائد يزود الإسهال."
-      }
-    },
-    {
-      "q": {
-        "ar": "أكثر سبب للإسهال تحت 5 سنوات؟"
-      },
-      "options": [
-        {
-          "ar": "فيروس الروتا"
-        },
-        {
-          "ar": "حساسية الجلوتين"
-        },
-        {
-          "ar": "التهاب الزائدة"
-        },
-        {
-          "ar": "الدرن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الروتا فيروس أكثر شيوعًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي سائل غير مناسب لإماهة الطفل؟"
-      },
-      "options": [
-        {
-          "ar": "المشروبات الرياضية"
-        },
-        {
-          "ar": "ORS"
-        },
-        {
-          "ar": "محلول ملحي وريدي"
-        },
-        {
-          "ar": "حليب الأم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السكريات العالية وقلة الأملاح لا تعوض."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تدبير غذائي مناسب في الإسهال الحاد؟"
-      },
-      "options": [
-        {
-          "ar": "غذاء طبيعي صلب ومناسب للسن"
-        },
-        {
-          "ar": "حمية BRAT فقط"
-        },
-        {
-          "ar": "صيام يوم"
-        },
-        {
-          "ar": "عصير مركز"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التغذية المبكرة تحسن الشفاء."
-      }
-    },
-    {
-      "q": {
-        "ar": "رضيع 8 أشهر: جفاف شديد (يافوخ غائر، تعبئة شعرية 4 ثوانٍ، نبض 160). الأنسب؟"
-      },
-      "options": [
-        {
-          "ar": "بلعة 20 مل/كجم محلول ملحي خلال 20 دقيقة"
-        },
-        {
-          "ar": "عصير"
-        },
-        {
-          "ar": "لا شيء"
-        },
-        {
-          "ar": "مضاد حيوي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "علاج الجفاف الشديد."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة جلدية تدل على ترطيب كاف؟"
-      },
-      "options": [
-        {
-          "ar": "مرونة الجلد جيدة"
-        },
-        {
-          "ar": "جلد جاف"
-        },
-        {
-          "ar": "يافوخ غائر"
-        },
-        {
-          "ar": "لا دموع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Skin turgor."
-      }
-    },
-    {
-      "q": {
-        "ar": "كثافة بول نوعية 1.035 تدل على؟"
-      },
-      "options": [
-        {
-          "ar": "جفاف"
-        },
-        {
-          "ar": "ترطيب جيد"
-        },
-        {
-          "ar": "سكر"
-        },
-        {
-          "ar": "عدوى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "بول مركز."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عامل يسبب إسهالًا؟"
-      },
-      "options": [
-        {
-          "ar": "مضاد حيوي، مسهل، عدوى تنفسية، سوء صرف"
-        },
-        {
-          "ar": "ماء نظيف"
-        },
-        {
-          "ar": "تغذية جيدة"
-        },
-        {
-          "ar": "نوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "عوامل مهيئة."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل ببكاء بلا دموع وإسهال منذ 3 أيام: أي علامة أخرى تتوقعها؟"
-      },
-      "options": [
-        {
-          "ar": "يافوخ غائر وجفاف الأغشية المخاطية ونقص الوزن"
-        },
-        {
-          "ar": "يافوخ منتفخ"
-        },
-        {
-          "ar": "جلد مرن ورطب"
-        },
-        {
-          "ar": "زيادة الدموع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "فقدان السوائل يسبب غور اليافوخ والعينين وجفاف الأغشية ونقص الوزن وقلة الدموع ونقص مرونة الجلد."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تغير كهربي يتوقع مع الإسهال الشديد؟"
-      },
-      "options": [
-        {
-          "ar": "نقص الصوديوم (<135) ونقص البوتاسيوم (<3.5)"
-        },
-        {
-          "ar": "ارتفاع الكالسيوم"
-        },
-        {
-          "ar": "ارتفاع المغنيسيوم"
-        },
-        {
-          "ar": "لا تغير"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإسهال يهدر الصوديوم والبوتاسيوم مع السوائل (السوائل تتدفق والأملاح تذهب)."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "WHO — Treatment of diarrhoea: a manual for physicians and other senior health workers; IMCI chart booklet"
-    },
-    {
-      "title": "MSF Clinical Guidelines — Rehydration plans (WHO)"
-    },
-    {
-      "title": "WHO/UNICEF Joint statement on ORS and zinc for treatment of diarrhoea"
-    },
-    {
-      "title": "WHO: Oral rehydration therapy — ملخص"
-    }
+  "en": [
+   "Dehydration = losing more fluid than is replaced (vomiting/diarrhea/fever)",
+   "Main signs: dry mouth, no tears, few diapers, sunken soft spot and eyes, dry skin, rapid breathing, cold limbs",
+   "Home: unsweetened fluids + ORS + breastfeeding + gradual food + paracetamol (no aspirin)",
+   "Hospital: IV fluids + antipyretic + rest",
+   "Plans: A home, B ORS about 75 mL/kg/4 hours, C IV immediately",
+   "Zinc 10–20 mg for 10–14 days",
+   "Measure weight and I/O and watch for danger signs",
+   "Loperamide is forbidden for children in acute diarrhea",
+   "20 mL/kg saline bolus in severe dehydration"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي علامة تدل على جفاف عند الرضيع؟",
+    "en": "Which sign indicates dehydration in an infant?"
+   },
+   "options": [
+    {
+     "ar": "يافوخ غايب",
+     "en": "Sunken soft spot"
+    },
+    {
+     "ar": "بكاء بدموع",
+     "en": "Crying with tears"
+    },
+    {
+     "ar": "جلد مرن",
+     "en": "Elastic skin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "اليافوخ الغايب وغياب الدموع من العلامات.",
+    "en": "A sunken soft spot and absent tears are signs."
+   }
+  },
+  {
+   "q": {
+    "ar": "خافض الحرارة المناسب للطفل المجفف:",
+    "en": "The suitable antipyretic for a dehydrated child:"
+   },
+   "options": [
+    {
+     "ar": "أسبرين",
+     "en": "Aspirin"
+    },
+    {
+     "ar": "أسيتامينوفين",
+     "en": "Acetaminophen"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الأسيتامينوفين (باراسيتامول)، والأسبرين ممنوع.",
+    "en": "Acetaminophen (paracetamol), and aspirin is forbidden."
+   }
+  },
+  {
+   "q": {
+    "ar": "الجفاف الشديد (خطة C) يعالج بـ:",
+    "en": "Severe dehydration (plan C) is treated with:"
+   },
+   "options": [
+    {
+     "ar": "ORS في البيت",
+     "en": "ORS at home"
+    },
+    {
+     "ar": "سوائل وريدية فوراً",
+     "en": "IV fluids immediately"
+    },
+    {
+     "ar": "عصير",
+     "en": "Juice"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "السوائل الوريدية فوراً مع مراقبة لصيقة.",
+    "en": "IV fluids immediately with close monitoring."
+   }
+  },
+  {
+   "q": {
+    "ar": "رضيع بيرجع بعد ORS:",
+    "en": "An infant vomiting after ORS:"
+   },
+   "options": [
+    {
+     "ar": "نقطع السوائل",
+     "en": "Stop the fluids"
+    },
+    {
+     "ar": "ننتظر 10 دقائق ونبدأ بكميات صغيرة",
+     "en": "Wait 10 minutes and start with small amounts"
+    },
+    {
+     "ar": "نعطي صودا",
+     "en": "Give soda"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "القيء المتقطع لا يمنع الإماهة بكميات صغيرة.",
+    "en": "Intermittent vomiting does not prevent rehydration in small amounts."
+   }
+  },
+  {
+   "q": {
+    "ar": "الأفضل للسوائل في المنزل:",
+    "en": "The best fluids at home:"
+   },
+   "options": [
+    {
+     "ar": "مشروبات غازية",
+     "en": "Carbonated drinks"
+    },
+    {
+     "ar": "ORS وسوائل غير محلاة",
+     "en": "ORS and unsweetened fluids"
+    },
+    {
+     "ar": "جيلي بنكهات",
+     "en": "Flavored gelatin"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "السكر الزائد يزود الإسهال.",
+    "en": "Excess sugar increases diarrhea."
+   }
+  },
+  {
+   "q": {
+    "ar": "أكثر سبب للإسهال تحت 5 سنوات؟",
+    "en": "The commonest cause of diarrhea under 5 years?"
+   },
+   "options": [
+    {
+     "ar": "فيروس الروتا",
+     "en": "Rotavirus"
+    },
+    {
+     "ar": "حساسية الجلوتين",
+     "en": "Gluten allergy"
+    },
+    {
+     "ar": "التهاب الزائدة",
+     "en": "Appendicitis"
+    },
+    {
+     "ar": "الدرن",
+     "en": "Tuberculosis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الروتا فيروس أكثر شيوعًا.",
+    "en": "Rotavirus is the most common virus."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي سائل غير مناسب لإماهة الطفل؟",
+    "en": "Which fluid is unsuitable for rehydrating a child?"
+   },
+   "options": [
+    {
+     "ar": "المشروبات الرياضية",
+     "en": "Sports drinks"
+    },
+    {
+     "ar": "ORS",
+     "en": "ORS"
+    },
+    {
+     "ar": "محلول ملحي وريدي",
+     "en": "IV saline"
+    },
+    {
+     "ar": "حليب الأم",
+     "en": "Breast milk"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السكريات العالية وقلة الأملاح لا تعوض.",
+    "en": "High sugars and lack of salts do not replace losses."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تدبير غذائي مناسب في الإسهال الحاد؟",
+    "en": "Which dietary management is suitable in acute diarrhea?"
+   },
+   "options": [
+    {
+     "ar": "غذاء طبيعي صلب ومناسب للسن",
+     "en": "Normal solid food suitable for age"
+    },
+    {
+     "ar": "حمية BRAT فقط",
+     "en": "BRAT diet only"
+    },
+    {
+     "ar": "صيام يوم",
+     "en": "Fasting for a day"
+    },
+    {
+     "ar": "عصير مركز",
+     "en": "Concentrated juice"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التغذية المبكرة تحسن الشفاء.",
+    "en": "Early feeding improves recovery."
+   }
+  },
+  {
+   "q": {
+    "ar": "رضيع 8 أشهر: جفاف شديد (يافوخ غائر، تعبئة شعرية 4 ثوانٍ، نبض 160). الأنسب؟",
+    "en": "An 8-month-old infant: severe dehydration (sunken fontanelle, capillary refill 4 seconds, pulse 160). The most suitable?"
+   },
+   "options": [
+    {
+     "ar": "بلعة 20 مل/كجم محلول ملحي خلال 20 دقيقة",
+     "en": "20 mL/kg saline bolus over 20 minutes"
+    },
+    {
+     "ar": "عصير",
+     "en": "Juice"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    },
+    {
+     "ar": "مضاد حيوي",
+     "en": "Antibiotic"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "علاج الجفاف الشديد.",
+    "en": "Treatment of severe dehydration."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة جلدية تدل على ترطيب كاف؟",
+    "en": "Which skin sign shows adequate hydration?"
+   },
+   "options": [
+    {
+     "ar": "مرونة الجلد جيدة",
+     "en": "Good skin elasticity"
+    },
+    {
+     "ar": "جلد جاف",
+     "en": "Dry skin"
+    },
+    {
+     "ar": "يافوخ غائر",
+     "en": "Sunken fontanelle"
+    },
+    {
+     "ar": "لا دموع",
+     "en": "No tears"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Skin turgor.",
+    "en": "Skin turgor."
+   }
+  },
+  {
+   "q": {
+    "ar": "كثافة بول نوعية 1.035 تدل على؟",
+    "en": "A urine specific gravity of 1.035 indicates?"
+   },
+   "options": [
+    {
+     "ar": "جفاف",
+     "en": "Dehydration"
+    },
+    {
+     "ar": "ترطيب جيد",
+     "en": "Good hydration"
+    },
+    {
+     "ar": "سكر",
+     "en": "Sugar"
+    },
+    {
+     "ar": "عدوى",
+     "en": "Infection"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "بول مركز.",
+    "en": "Concentrated urine."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عامل يسبب إسهالًا؟",
+    "en": "Which factor causes diarrhea?"
+   },
+   "options": [
+    {
+     "ar": "مضاد حيوي، مسهل، عدوى تنفسية، سوء صرف",
+     "en": "Antibiotic, laxative, respiratory infection, poor sanitation"
+    },
+    {
+     "ar": "ماء نظيف",
+     "en": "Clean water"
+    },
+    {
+     "ar": "تغذية جيدة",
+     "en": "Good nutrition"
+    },
+    {
+     "ar": "نوم",
+     "en": "Sleep"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "عوامل مهيئة.",
+    "en": "Predisposing factors."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل ببكاء بلا دموع وإسهال منذ 3 أيام: أي علامة أخرى تتوقعها؟",
+    "en": "A child cries without tears and has had diarrhea for 3 days: which other sign do you expect?"
+   },
+   "options": [
+    {
+     "ar": "يافوخ غائر وجفاف الأغشية المخاطية ونقص الوزن",
+     "en": "Sunken fontanelle, dry mucous membranes, and weight loss"
+    },
+    {
+     "ar": "يافوخ منتفخ",
+     "en": "Bulging fontanelle"
+    },
+    {
+     "ar": "جلد مرن ورطب",
+     "en": "Elastic, moist skin"
+    },
+    {
+     "ar": "زيادة الدموع",
+     "en": "Increased tears"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "فقدان السوائل يسبب غور اليافوخ والعينين وجفاف الأغشية ونقص الوزن وقلة الدموع ونقص مرونة الجلد.",
+    "en": "Fluid loss causes sunken fontanelle and eyes, dry membranes, weight loss, fewer tears, and reduced skin elasticity."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تغير كهربي يتوقع مع الإسهال الشديد؟",
+    "en": "Which electrolyte change is expected with severe diarrhea?"
+   },
+   "options": [
+    {
+     "ar": "نقص الصوديوم (<135) ونقص البوتاسيوم (<3.5)",
+     "en": "Low sodium (<135) and low potassium (<3.5)"
+    },
+    {
+     "ar": "ارتفاع الكالسيوم",
+     "en": "High calcium"
+    },
+    {
+     "ar": "ارتفاع المغنيسيوم",
+     "en": "High magnesium"
+    },
+    {
+     "ar": "لا تغير",
+     "en": "No change"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإسهال يهدر الصوديوم والبوتاسيوم مع السوائل (السوائل تتدفق والأملاح تذهب).",
+    "en": "Diarrhea wastes sodium and potassium with the fluids (fluids flow and salts go)."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "WHO — Treatment of diarrhoea: a manual for physicians and other senior health workers; IMCI chart booklet"
+  },
+  {
+   "title": "MSF Clinical Guidelines — Rehydration plans (WHO)"
+  },
+  {
+   "title": "WHO/UNICEF Joint statement on ORS and zinc for treatment of diarrhoea"
+  },
+  {
+   "title": "WHO: Oral rehydration therapy — ملخص"
+  }
+ ]
 }

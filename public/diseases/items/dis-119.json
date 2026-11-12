@@ -1,318 +1,402 @@
 {
-  "id": "dis-119",
-  "num": 119,
-  "system": "endo",
-  "icon": "🦴",
-  "level": 2,
-  "title": {
-    "ar": "هشاشة العظام",
-    "en": "Osteoporosis"
+ "id": "dis-119",
+ "num": 119,
+ "system": "endo",
+ "icon": "🦴",
+ "level": 2,
+ "title": {
+  "ar": "هشاشة العظام",
+  "en": "Osteoporosis"
+ },
+ "teaser": {
+  "ar": "مرض صامت حتى أول كسر: DEXA للتشخيص، وقرص أسبوعي بطريقة دقيقة، وحماية من السقوط.",
+  "en": "A silent disease until the first fracture: DEXA for diagnosis, a weekly tablet taken precisely, and fall prevention."
+ },
+ "chips": [
+  {
+   "ar": "DEXA",
+   "en": "DEXA"
   },
-  "teaser": {
-    "ar": "مرض صامت حتى أول كسر: DEXA للتشخيص، وقرص أسبوعي بطريقة دقيقة، وحماية من السقوط."
+  {
+   "ar": "قرص أسبوعي",
+   "en": "Weekly tablet"
   },
-  "chips": [
-    {
-      "ar": "DEXA"
-    },
-    {
-      "ar": "قرص أسبوعي"
-    },
-    {
-      "ar": "الوقاية من السقوط"
-    }
+  {
+   "ar": "الوقاية من السقوط",
+   "en": "Fall prevention"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>هشاشة العظام (Osteoporosis) هي <b>نقص في كثافة العظم وضعف في بنيته</b> فتصبح العظام هشة وتنكسر بسهولة (حتى من سقطة بسيطة أو عطسة). الأهم إنها <b>بدون أعراض إلا لو حصل كسر هشاشي (Fragility fracture)</b>، وإنها شائعة في <b>كبار السن وبعد انقطاع الطمث</b>.</p><div class=\"cs-stats\"><div><b>صامتة</b><span>لا أعراض قبل الكسر</span></div><div><b>DEXA</b><span>الفحص الأساسي</span></div><div><b>أسبوعي</b><span>قرص الهشاشة</span></div></div>[[slot:dis-119-dexa|تفسير فحص DEXA — رسم توضيحي من إعداد الموقع|/diseases/img/dis-119-dexa.svg]][[slot:dis-119-xray|صورة أشعة: كسر ضغطي في فقرة قطنية مع تقوّس الظهر]][[slot:dis-119-dexa-photo|صورة: جهاز DEXA وجلسة الفحص]]\n<h4>إضافة من المراجعة الشاملة</h4>\n[[slot:dis-119-p349|هشاشة العظام: التعريفات وعوامل الخطر والتثقيف — رسم من إعداد الموقع|/diseases/img/dis-119-p349.svg]]\n<p>عظام هشة مسامية وكثافة منخفضة بسبب زيادة الامتصاص (Resorption). <b>Osteopenia</b> = نقص كتلة العظم وضعفه؛ <b>Osteomalacia</b> = لين العظام لنقص حاد في فيتامين D. عوامل الخطر: أنثى، تقدم السن، <b>بعد انقطاع الطمث</b>، قوقازي وآسيوي، كافيين زائد، تدخين، كحول، أدوية (مضادات التشنج، الستيرويدات كبريدنيزون)، وأمراض (فرط جار الدرقية، كوشنج، السكري). الأعراض: مسامية، كسور متكررة، نقص الطول، حدب (Kyphosis) عند المسنين.</p>",
+   "en": "<p>Osteoporosis is a <b>decrease in bone density and weakening of its structure</b> so bones become fragile and break easily (even from a minor fall or a sneeze). Most importantly, it is <b>without symptoms unless a fragility fracture occurs</b>, and it is common in <b>older adults and after menopause</b>.</p><div class=\"cs-stats\"><div><b>Silent</b><span>no symptoms before a fracture</span></div><div><b>DEXA</b><span>the basic test</span></div><div><b>Weekly</b><span>the osteoporosis tablet</span></div></div>[[slot:dis-119-dexa|Interpreting the DEXA test — site-made explanatory illustration|/diseases/img/dis-119-dexa.svg]][[slot:dis-119-xray|X-ray image: compression fracture in a lumbar vertebra with a rounded back]][[slot:dis-119-dexa-photo|Photo: the DEXA machine and the test session]]\n<h4>Addition from the comprehensive review</h4>\n[[slot:dis-119-p349|Osteoporosis: definitions, risk factors and teaching — site-made illustration|/diseases/img/dis-119-p349.svg]]\n<p>Fragile porous bones with low density due to increased resorption. <b>Osteopenia</b> = decreased bone mass and weakness; <b>Osteomalacia</b> = softening of bones from severe vitamin D deficiency. Risk factors: female, older age, <b>after menopause</b>, Caucasian and Asian, excess caffeine, smoking, alcohol, drugs (anticonvulsants, steroids such as prednisone), and diseases (hyperparathyroidism, Cushing's, diabetes). Symptoms: porosity, repeated fractures, loss of height, kyphosis in older adults.</p>"
+  },
+  "causes": {
+   "ar": "<h4>عوامل الخطر</h4><ul><li>التقدم في السن وبعد انقطاع الطمث (نقص الإستروجين)</li><li>أدوية: <b>الكورتيزون طويل المدة</b> (أهم دواء)، مضادات الصرع، مميعات (هيبارين) طويلاً، وبعض أدوية السرطان</li><li>نقص الكالسيوم وفيتامين D وقلة التعرض للشمس</li><li>النحافة، قلة الحركة، التدخين والكحول</li><li>أمراض: فرط نشاط الغدة الدرقية والجار درقية، السكري، أمراض الكلى والكبد والأمعاء، الروماتويد، ضعف الهرمونات الجنسية</li><li>تاريخ عائلي (كسر الحوض عند الأم)</li></ul><p>عوامل الخطر: السن، قلة النشاط، سوء التغذية، صغر الهيكل، العرق الأبيض والآسيوي، الجنس الأنثوي. أسباب ثانوية: الكورتيزون وبعض أدوية الصرع، اضطرابات الهرمونات (كوشينج والغدة الدرقية)، والعجز الحركي الطويل.</p>",
+   "en": "<h4>Risk factors</h4><ul><li>Advancing age and after menopause (estrogen deficiency)</li><li>Drugs: <b>long-term cortisone</b> (the most important drug), antiepileptics, long-term blood thinners (heparin), and some cancer drugs</li><li>Calcium and vitamin D deficiency and little sun exposure</li><li>Thinness, little movement, smoking and alcohol</li><li>Diseases: hyperthyroidism and hyperparathyroidism, diabetes, kidney, liver and intestinal diseases, rheumatoid arthritis, low sex hormones</li><li>Family history (hip fracture in the mother)</li></ul><p>Risk factors: age, low activity, poor nutrition, small frame, white and Asian race, female sex. Secondary causes: cortisone and some epilepsy drugs, hormone disorders (Cushing's and thyroid), and long immobility.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li><b>لا أعراض في الغالب</b> (حسب المراجع) إلا لو حدث كسر هشاشي (Fragility fracture)</li><li>الكسور الأشهر: <b>الفقرات (كسر ضغطي)</b>، <b>الحوض (عنق الفخذ)</b>، <b>الرسغ</b></li><li>ألم ظهر مفاجئ بعد مجهود بسيط، نقص الطول (أكثر من 3-4 سم)، وتقوّس أعلى الظهر (Kyphosis)</li></ul><div class=\"cs-box cs-danger\"><strong>كسر الحوض</strong><p>سقطة عند مسن مع ألم الحوض وعدم القدرة على الوقوف: ثبّت وبلّغ فوراً، وتجنب تحريك الطرف.</p></div><ul><li>فقدان الطول وانحناء الظهر للأمام (Kyphosis) بسبب كسور انضغاطية في الفقرات الصدرية.</li><li>كسر بإصابة بسيطة.</li><li>لا أعراض في أغلب الوقت، وأشعة العظام العادية لا تظهر النقص إلا متأخراً، لذلك يُعتمد على DEXA.</li></ul>",
+   "en": "<ul><li><b>Mostly no symptoms</b> unless a fragility fracture occurs</li><li>The most common fractures: <b>vertebrae (compression fracture)</b>, <b>hip (femoral neck)</b>, <b>wrist</b></li><li>Sudden back pain after minor effort, loss of height (more than 3-4 cm), and rounding of the upper back (kyphosis)</li></ul><div class=\"cs-box cs-danger\"><strong>Hip fracture</strong><p>A fall in an older adult with pelvic pain and inability to stand: immobilize and report immediately, and avoid moving the limb.</p></div><ul><li>Loss of height and forward bending of the back (kyphosis) due to compression fractures in the thoracic vertebrae.</li><li>Fracture from a minor injury.</li><li>No symptoms most of the time, and ordinary bone X-rays show the loss only late, so DEXA is relied on.</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>DEXA (Dual Energy X-ray Absorptiometry) على العمود القطني والحوض (Lumbar spine and hip)</b>: الفحص الأساسي لقياس كثافة العظم</li><li><b>كالسيوم وفوسفات الدم (Serum calcium and phosphate)</b></li></ul><h4>فحوص مكملة (الطبيب)</h4><ul><li>فيتامين D، هرمون الجار درقية (PTH)، وظائف كلى وكبد، الغدة الدرقية، صورة الدم</li><li>بروتين البول، والهرمونات الجنسية حسب الحالة</li><li>أشعة عادية لو شك في كسر الفقرات</li><li>تقييم خطر الكسر (FRAX)</li></ul><div class=\"cs-box cs-tip\"><strong>دورك</strong><p>جهاز DEXA إشعاعه قليل جداً والفحص غير مؤلم. اطلب من المريض خلع المعادن، وتجنب مكملات الكالسيوم قبل الفحص بـ24 ساعة (حسب قسم الأشعة)، وأبلغ لو حامل.</p></div>",
+   "en": "<ul><li><b>DEXA (Dual Energy X-ray Absorptiometry) of the lumbar spine and hip</b>: the basic test for measuring bone density</li><li><b>Serum calcium and phosphate</b></li></ul><h4>Complementary tests (physician)</h4><ul><li>Vitamin D, parathyroid hormone (PTH), kidney and liver function, thyroid, blood count</li><li>Urine protein, and sex hormones according to the case</li><li>Plain X-ray if vertebral fracture is suspected</li><li>Fracture risk assessment (FRAX)</li></ul><div class=\"cs-box cs-tip\"><strong>Your role</strong><p>The DEXA machine gives very little radiation and the test is painless. Ask the patient to remove metal, avoid calcium supplements for 24 hours before the test (according to the radiology department), and report if pregnant.</p></div>"
+  },
+  "treatment": {
+   "ar": "<h4>العلاج الدوائي المذكور (بأمر الطبيب)</h4><table><thead><tr><th>الدواء</th><th>الاستخدام (من المراجع)</th></tr></thead><tbody><tr><td><b>Risaldene 35 مجم</b> (Risedronate)</td><td>مرة <b>أسبوعياً</b> • <b>30 دقيقة قبل الأكل</b> • بكمية وفيرة من الماء • الراحة 30 دقيقة بعد البلع</td></tr><tr><td><b>Bonapex 70 مجم</b> (Alendronate)</td><td>مرة <b>أسبوعياً</b> • ساعة قبل أو بعد الأكل • بكمية وفيرة من الماء</td></tr><tr><td><b>Calcimate</b> (كالسيوم)</td><td>3 مرات يومياً</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>ملاحظة مهمة من المراجع</strong><p>بنستخدم <b>علاج واحد فقط</b> من العلاجين (Risaldene أو Bonapex)، مش الاتنين. المريض ياخد القرص <b>قبل الأكل بنصف ساعة بكمية وفيرة من الماء</b>، و<b>يستريح نصف ساعة في الوضع جالساً</b>، ويُكرر العلاج <b>مرة واحدة أسبوعياً</b>.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>Alendronate (Bonapex): تنص النشرة على <b>على الريق عند الاستيقاظ مع كوب ماء (200 مل على الأقل) وانتظار 30 دقيقة على الأقل قبل أول أكل أو شرب</b>، والبقاء قائماً/جالساً 30 دقيقة. «ساعة بعد الأكل» لا تناسب الامتصاص.</li><li>الكالسيوم والفيتامين D: حوالي <b>1000-1200 مجم كالسيوم يومياً</b> (من الغذاء + المكمل) و<b>800-1000 وحدة فيتامين D</b>، ويؤخذ الكالسيوم <b>بعيداً</b> عن قرص الهشاشة. كربونات الكالسيوم مع الأكل. وتجنب الزيادة (حصوات الكلى).</li><li>بدائل: Zoledronic acid وريدي سنوي، Denosumab، Teriparatide، أو علاج هرموني بأمر الطبيب. وفحص الأسنان قبل البدء.</li><li>لا يُعطى البيسفوسفونات لمن لا يستطيع الجلوس 30 دقيقة، أو لديه مشاكل مريء، أو نقص كالسيوم دم، أو قصور كلوي شديد.</li></ul></div>[[slot:dis-119-bisph|خطوات تناول قرص الهشاشة الأسبوعي — رسم توضيحي من إعداد الموقع|/diseases/img/dis-119-bisph.svg]]<h4>الوقاية ونمط الحياة</h4><ul><li>رياضة حمل الوزن (مشي) وتقوية العضلات والتوازن</li><li>التعرض للشمس وأكل غني بالكالسيوم (ألبان، سردين بالعظم، ورقيات)</li><li>ترك التدخين وتقليل الكحول والكافيين</li><li>الوقاية من السقوط: إضاءة، إزالة السجاد السائب، مقابض، نظارة مناسبة، تقليل المهدئات</li></ul><h4>إضافات تكميلية</h4><ul><li>Bisphosphonates: Alendronate، Risedronate، Ibandronate فموياً؛ Zoledronic acid وPamidronate حقناً.</li><li>Calcitonin بخاخ أنفي يزيد الكثافة وله تأثير مسكن للألم بعد 2–4 أسابيع (استخدامه تراجع في الإرشادات الحديثة).</li><li>Raloxifene (مُعدّل مستقبلات الإستروجين) للوقاية بعد انقطاع الطمث.</li><li>Teriparatide يحفز تكوين العظم.</li><li>كالسيوم 1000–1500 مجم يومياً مقسمة، وفيتامين د.</li><li>أخذ البيسفوسفونات صباحاً على معدة فارغة بكوب ماء كامل، وعدم الاستلقاء 30–60 دقيقة لتقليل تهيج المريء، ومراقبة آثار الجهاز الهضمي.</li></ul>\n<p>كالسيوم وفيتامين D، <b>ألندرونات (Alendronate)</b> (-nate). التعرض للشمس. <div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div></p>",
+   "en": "<h4>Drug treatment mentioned (by physician order)</h4><table><thead><tr><th>Drug</th><th>Use</th></tr></thead><tbody><tr><td><b>Risaldene 35 mg</b> (Risedronate)</td><td>Once <b>weekly</b> • <b>30 minutes before food</b> • with plenty of water • rest 30 minutes after swallowing</td></tr><tr><td><b>Bonapex 70 mg</b> (Alendronate)</td><td>Once <b>weekly</b> • an hour before or after food • with plenty of water</td></tr><tr><td><b>Calcimate</b> (calcium)</td><td>3 times daily</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Important note</strong><p>We use <b>only one</b> of the two treatments (Risaldene or Bonapex), not both. The patient takes the tablet <b>half an hour before food with plenty of water</b>, <b>rests half an hour sitting</b>, and repeats the treatment <b>once weekly</b>.</p></div><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li>Alendronate (Bonapex): the package insert states <b>on an empty stomach on waking with a glass of water (at least 200 mL) and waiting at least 30 minutes before the first food or drink</b>, and staying upright/seated for 30 minutes. \"An hour after food\" is not suitable for absorption.</li><li>Calcium and vitamin D: about <b>1000-1200 mg calcium daily</b> (from food + supplement) and <b>800-1000 units of vitamin D</b>, and calcium is taken <b>apart</b> from the osteoporosis tablet. Calcium carbonate with food. And avoid excess (kidney stones).</li><li>Alternatives: yearly IV zoledronic acid, denosumab, teriparatide, or hormonal treatment by physician order. And a dental check before starting.</li><li>Bisphosphonates are not given to anyone who cannot sit for 30 minutes, or has esophageal problems, low blood calcium, or severe kidney failure.</li></ul></div>[[slot:dis-119-bisph|Steps for taking the weekly osteoporosis tablet — site-made explanatory illustration|/diseases/img/dis-119-bisph.svg]]<h4>Prevention and lifestyle</h4><ul><li>Weight-bearing exercise (walking) and strengthening muscles and balance</li><li>Sun exposure and food rich in calcium (dairy, sardines with bones, leafy greens)</li><li>Quit smoking and reduce alcohol and caffeine</li><li>Fall prevention: lighting, removing loose rugs, grab bars, suitable glasses, reducing sedatives</li></ul><h4>Supplementary additions</h4><ul><li>Bisphosphonates: alendronate, risedronate, ibandronate orally; zoledronic acid and pamidronate by injection.</li><li>Calcitonin nasal spray increases density and has a pain-relieving effect after 2–4 weeks (its use has declined in recent guidelines).</li><li>Raloxifene (an estrogen receptor modulator) for prevention after menopause.</li><li>Teriparatide stimulates bone formation.</li><li>Calcium 1000–1500 mg daily in divided doses, and vitamin D.</li><li>Take bisphosphonates in the morning on an empty stomach with a full glass of water, and do not lie down for 30–60 minutes to reduce esophageal irritation, and monitor gastrointestinal effects.</li></ul>\n<p>Calcium and vitamin D, <b>alendronate (Alendronate)</b> (-nate). Sun exposure. <div class=\"cs-box cs-info\"><strong>Alert</strong><p>Doses are for learning; always verify with the physician/pharmacist before administration.</p></div></p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الخطر</strong><p>كسور سابقة؟ كورتيزون؟ سقوط؟ طول؟ تقوّس الظهر؟ مشاكل بلع أو ارتجاع (حرقان)؟ سجّل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>فحص قبل البدء</strong><p>اسأل عن حالة الأسنان، صعوبة البلع، الارتجاع، قدرة الجلوس 30 دقيقة، وتحقق من الكالسيوم والكلى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أعطِ القرص الأسبوعي بأمان</strong><p>صباحاً على الريق بكوب ماء كامل، المريض جالس أو واقف 30 دقيقة، لا أكل قبل 30 دقيقة، لا لبن/كالسيوم معه. اكتب اليوم الثابت وتأكد من عدم تكرار الجرعة اليومية بالغلط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الكالسيوم وفيتامين D</strong><p>في وقت آخر مع الأكل. تأكد أن الجرعة اليومية الكلية مناسبة، وراقب الإمساك.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>حماية من السقوط</strong><p>تقييم خطر السقوط (Morse)، سرير منخفض، جرس قريب، حذاء ثابت، ممر خالٍ، مرافقة عند القيام، حذر عند المهدئات وخافضات الضغط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>تعامل لطيف</strong><p>عند التحريك واللف: بلطف وبتناسق (Log-roll)، وتجنب شد الأطراف وضغط الصدر بقوة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>راقب الآثار الجانبية</strong><p>ألم صدر خلف القص أو صعوبة/ألم بلع، حرقان: أوقف وبلّغ. ألم فخذ أو أُذن فك: بلّغ (كسر فخذ غير نمطي/فك).</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess the risk</strong><p>Previous fractures? Cortisone? Falls? Height? Rounded back? Swallowing or reflux problems (heartburn)? Record.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Check before starting</strong><p>Ask about dental condition, difficulty swallowing, reflux, ability to sit for 30 minutes, and check calcium and kidneys.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Give the weekly tablet safely</strong><p>In the morning on an empty stomach with a full glass of water, the patient sitting or standing for 30 minutes, no food for 30 minutes, no milk/calcium with it. Write the fixed day and make sure the daily dose is not repeated by mistake.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Calcium and vitamin D</strong><p>At another time with food. Make sure the total daily dose is appropriate, and monitor constipation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Fall protection</strong><p>Fall risk assessment (Morse), low bed, call bell within reach, stable shoes, clear path, accompany when getting up, caution with sedatives and antihypertensives.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Gentle handling</strong><p>When moving and turning: gently and in unison (log-roll), and avoid pulling the limbs and pressing the chest hard.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Monitor side effects</strong><p>Chest pain behind the sternum or difficult/painful swallowing, heartburn: stop and report. Thigh pain or jaw/ear pain: report (atypical femoral/jaw fracture).</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>ألم أو صعوبة في البلع، ألم خلف القص، حرقان جديد، أو قيء دموي/براز أسود</li><li>ألم فخذ أو أرداف جديد (قبل كسر)</li><li>ألم أو تورم أو تخدر في الفك أو تحرك الأسنان</li><li>سقوط أو ألم ظهر مفاجئ أو عدم القدرة على الوقوف</li><li>تقلصات أو تنميل (نقص كالسيوم)</li><li>طفح جلدي أو دوخة بعد الدواء</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Pain or difficulty swallowing, pain behind the sternum, new heartburn, or bloody vomit/black stool</li><li>New thigh or hip pain (before a fracture)</li><li>Pain, swelling or numbness in the jaw or loosening of teeth</li><li>A fall or sudden back pain or inability to stand</li><li>Cramps or tingling (low calcium)</li><li>Skin rash or dizziness after the drug</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>القرص مرة واحدة في الأسبوع، في نفس اليوم: على الريق مع كوب ماء كامل.</li><li>اقعد أو قف 30 دقيقة، وما تنامش، وما تاكلش قبل نص ساعة.</li><li>الكالسيوم وفيتامين D في وقت تاني بعيد عن القرص.</li><li>امشي يومياً وتعرض للشمس، وكل ألبان وخضرة.</li><li>خلي بيتك آمن: ما فيش سجاد سايب، إضاءة كويسة، مقابض بالحمّام.</li><li>بلّغ لو حسيت بألم بلع أو حرقان شديد.</li><li>اعمل فحص الأسنان قبل البدء، وبلّغ الطبيب بأي علاج أسنان جراحي.</li></ul>\n[[slot:dis-119-osteo|هشاشة العظام: إضافات — رسم من إعداد الموقع|/diseases/img/dis-119-osteo.svg]]\n<ul><li>Osteopenia: فقد كتلة العظم؛ Osteomalacia: لين العظام لنقص فيتامين D الشديد.</li><li>الأعراض: كسور متكررة، نقص طول، حدب (Kyphosis).</li><li>العلاج والتثقيف: كالسيوم وفيتامين D، تعرض للشمس، تمارين تحميل وحركة متكررة، منع السقوط (حصائر مطاطية، إضاءة، لا سجاد)، الإقلاع عن التدخين وتقليل الكافيين، alendronate.</li></ul>\n<ul><li>تمارين حمل الوزن ومشي متكرر (نحو 30 دقيقة 4 مرات أسبوعيًا).</li><li>الوقاية من السقوط: حصائر مطاطية بالحمام، إضاءة الممرات، لا سجاد منزلق.</li><li>الإقلاع عن التدخين وتقليل الكافيين.</li></ul>",
+   "en": "<ul><li>The tablet once a week, on the same day: on an empty stomach with a full glass of water.</li><li>Sit or stand for 30 minutes, do not lie down, and do not eat before half an hour.</li><li>Calcium and vitamin D at another time, apart from the tablet.</li><li>Walk daily and get sun exposure, and eat dairy and greens.</li><li>Keep your home safe: no loose rugs, good lighting, grab bars in the bathroom.</li><li>Report if you feel pain on swallowing or severe heartburn.</li><li>Have a dental check before starting, and tell the physician about any surgical dental treatment.</li></ul>\n[[slot:dis-119-osteo|Osteoporosis: additions — site-made illustration|/diseases/img/dis-119-osteo.svg]]\n<ul><li>Osteopenia: loss of bone mass; Osteomalacia: softening of bones from severe vitamin D deficiency.</li><li>Symptoms: repeated fractures, loss of height, kyphosis.</li><li>Treatment and teaching: calcium and vitamin D, sun exposure, weight-bearing exercises and frequent movement, fall prevention (rubber mats, lighting, no rugs), quit smoking and reduce caffeine, alendronate.</li></ul>\n<ul><li>Weight-bearing exercises and frequent walking (about 30 minutes 4 times a week).</li><li>Fall prevention: rubber mats in the bathroom, lit hallways, no slippery rugs.</li><li>Quit smoking and reduce caffeine.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الهشاشة بدون أعراض إلا لو حدث كسر هشاشي، وشائعة بعد سن اليأس وفي كبار السن",
+   "التشخيص: DEXA للعمود القطني والحوض + كالسيوم وفوسفات الدم",
+   "نستخدم علاجاً واحداً من Risaldene 35 أو Bonapex 70 أسبوعياً",
+   "القرص على الريق بكوب ماء كامل، والجلوس 30 دقيقة، والأكل بعدها بنصف ساعة",
+   "الكالسيوم (Calcimate) بعيداً عن القرص، مع فيتامين D",
+   "حماية من السقوط وفحص الأسنان قبل البدء",
+   "البيسفوسفونات على معدة فارغة مع كوب ماء كامل وبلا استلقاء 30–60 دقيقة.",
+   "هشاشة العظام: بعد سن اليأس، ستيرويدات، فرط الجار درقية، كوشنج",
+   "كالسيوم+D وألندرونات؛ مشي حمل الوزن؛ منع السقوط"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>هشاشة العظام (Osteoporosis) هي <b>نقص في كثافة العظم وضعف في بنيته</b> فتصبح العظام هشة وتنكسر بسهولة (حتى من سقطة بسيطة أو عطسة). الأهم إنها <b>بدون أعراض إلا لو حصل كسر هشاشي (Fragility fracture)</b>، وإنها شائعة في <b>كبار السن وبعد انقطاع الطمث</b>.</p><div class=\"cs-stats\"><div><b>صامتة</b><span>لا أعراض قبل الكسر</span></div><div><b>DEXA</b><span>الفحص الأساسي</span></div><div><b>أسبوعي</b><span>قرص الهشاشة</span></div></div>[[slot:dis-119-dexa|تفسير فحص DEXA — رسم توضيحي من إعداد الموقع|/diseases/img/dis-119-dexa.svg]][[slot:dis-119-xray|صورة أشعة: كسر ضغطي في فقرة قطنية مع تقوّس الظهر]][[slot:dis-119-dexa-photo|صورة: جهاز DEXA وجلسة الفحص]]\n<h4>إضافة من المراجعة الشاملة</h4>\n[[slot:dis-119-p349|هشاشة العظام: التعريفات وعوامل الخطر والتثقيف — رسم من إعداد الموقع|/diseases/img/dis-119-p349.svg]]\n<p>عظام هشة مسامية وكثافة منخفضة بسبب زيادة الامتصاص (Resorption). <b>Osteopenia</b> = نقص كتلة العظم وضعفه؛ <b>Osteomalacia</b> = لين العظام لنقص حاد في فيتامين D. عوامل الخطر: أنثى، تقدم السن، <b>بعد انقطاع الطمث</b>، قوقازي وآسيوي، كافيين زائد، تدخين، كحول، أدوية (مضادات التشنج، الستيرويدات كبريدنيزون)، وأمراض (فرط جار الدرقية، كوشنج، السكري). الأعراض: مسامية، كسور متكررة، نقص الطول، حدب (Kyphosis) عند المسنين.</p>"
-    },
-    "causes": {
-      "ar": "<h4>عوامل الخطر</h4><ul><li>التقدم في السن وبعد انقطاع الطمث (نقص الإستروجين)</li><li>أدوية: <b>الكورتيزون طويل المدة</b> (أهم دواء)، مضادات الصرع، مميعات (هيبارين) طويلاً، وبعض أدوية السرطان</li><li>نقص الكالسيوم وفيتامين D وقلة التعرض للشمس</li><li>النحافة، قلة الحركة، التدخين والكحول</li><li>أمراض: فرط نشاط الغدة الدرقية والجار درقية، السكري، أمراض الكلى والكبد والأمعاء، الروماتويد، ضعف الهرمونات الجنسية</li><li>تاريخ عائلي (كسر الحوض عند الأم)</li></ul><p>عوامل الخطر: السن، قلة النشاط، سوء التغذية، صغر الهيكل، العرق الأبيض والآسيوي، الجنس الأنثوي. أسباب ثانوية: الكورتيزون وبعض أدوية الصرع، اضطرابات الهرمونات (كوشينج والغدة الدرقية)، والعجز الحركي الطويل.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li><b>لا أعراض في الغالب</b> (حسب المراجع) إلا لو حدث كسر هشاشي (Fragility fracture)</li><li>الكسور الأشهر: <b>الفقرات (كسر ضغطي)</b>، <b>الحوض (عنق الفخذ)</b>، <b>الرسغ</b></li><li>ألم ظهر مفاجئ بعد مجهود بسيط، نقص الطول (أكثر من 3-4 سم)، وتقوّس أعلى الظهر (Kyphosis)</li></ul><div class=\"cs-box cs-danger\"><strong>كسر الحوض</strong><p>سقطة عند مسن مع ألم الحوض وعدم القدرة على الوقوف: ثبّت وبلّغ فوراً، وتجنب تحريك الطرف.</p></div><ul><li>فقدان الطول وانحناء الظهر للأمام (Kyphosis) بسبب كسور انضغاطية في الفقرات الصدرية.</li><li>كسر بإصابة بسيطة.</li><li>لا أعراض في أغلب الوقت، وأشعة العظام العادية لا تظهر النقص إلا متأخراً، لذلك يُعتمد على DEXA.</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>DEXA (Dual Energy X-ray Absorptiometry) على العمود القطني والحوض (Lumbar spine and hip)</b>: الفحص الأساسي لقياس كثافة العظم</li><li><b>كالسيوم وفوسفات الدم (Serum calcium and phosphate)</b></li></ul><h4>فحوص مكملة (الطبيب)</h4><ul><li>فيتامين D، هرمون الجار درقية (PTH)، وظائف كلى وكبد، الغدة الدرقية، صورة الدم</li><li>بروتين البول، والهرمونات الجنسية حسب الحالة</li><li>أشعة عادية لو شك في كسر الفقرات</li><li>تقييم خطر الكسر (FRAX)</li></ul><div class=\"cs-box cs-tip\"><strong>دورك</strong><p>جهاز DEXA إشعاعه قليل جداً والفحص غير مؤلم. اطلب من المريض خلع المعادن، وتجنب مكملات الكالسيوم قبل الفحص بـ24 ساعة (حسب قسم الأشعة)، وأبلغ لو حامل.</p></div>"
-    },
-    "treatment": {
-      "ar": "<h4>العلاج الدوائي المذكور (بأمر الطبيب)</h4><table><thead><tr><th>الدواء</th><th>الاستخدام (من المراجع)</th></tr></thead><tbody><tr><td><b>Risaldene 35 مجم</b> (Risedronate)</td><td>مرة <b>أسبوعياً</b> • <b>30 دقيقة قبل الأكل</b> • بكمية وفيرة من الماء • الراحة 30 دقيقة بعد البلع</td></tr><tr><td><b>Bonapex 70 مجم</b> (Alendronate)</td><td>مرة <b>أسبوعياً</b> • ساعة قبل أو بعد الأكل • بكمية وفيرة من الماء</td></tr><tr><td><b>Calcimate</b> (كالسيوم)</td><td>3 مرات يومياً</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>ملاحظة مهمة من المراجع</strong><p>بنستخدم <b>علاج واحد فقط</b> من العلاجين (Risaldene أو Bonapex)، مش الاتنين. المريض ياخد القرص <b>قبل الأكل بنصف ساعة بكمية وفيرة من الماء</b>، و<b>يستريح نصف ساعة في الوضع جالساً</b>، ويُكرر العلاج <b>مرة واحدة أسبوعياً</b>.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>Alendronate (Bonapex): تنص النشرة على <b>على الريق عند الاستيقاظ مع كوب ماء (200 مل على الأقل) وانتظار 30 دقيقة على الأقل قبل أول أكل أو شرب</b>، والبقاء قائماً/جالساً 30 دقيقة. «ساعة بعد الأكل» لا تناسب الامتصاص.</li><li>الكالسيوم والفيتامين D: حوالي <b>1000-1200 مجم كالسيوم يومياً</b> (من الغذاء + المكمل) و<b>800-1000 وحدة فيتامين D</b>، ويؤخذ الكالسيوم <b>بعيداً</b> عن قرص الهشاشة. كربونات الكالسيوم مع الأكل. وتجنب الزيادة (حصوات الكلى).</li><li>بدائل: Zoledronic acid وريدي سنوي، Denosumab، Teriparatide، أو علاج هرموني بأمر الطبيب. وفحص الأسنان قبل البدء.</li><li>لا يُعطى البيسفوسفونات لمن لا يستطيع الجلوس 30 دقيقة، أو لديه مشاكل مريء، أو نقص كالسيوم دم، أو قصور كلوي شديد.</li></ul></div>[[slot:dis-119-bisph|خطوات تناول قرص الهشاشة الأسبوعي — رسم توضيحي من إعداد الموقع|/diseases/img/dis-119-bisph.svg]]<h4>الوقاية ونمط الحياة</h4><ul><li>رياضة حمل الوزن (مشي) وتقوية العضلات والتوازن</li><li>التعرض للشمس وأكل غني بالكالسيوم (ألبان، سردين بالعظم، ورقيات)</li><li>ترك التدخين وتقليل الكحول والكافيين</li><li>الوقاية من السقوط: إضاءة، إزالة السجاد السائب، مقابض، نظارة مناسبة، تقليل المهدئات</li></ul><h4>إضافات تكميلية</h4><ul><li>Bisphosphonates: Alendronate، Risedronate، Ibandronate فموياً؛ Zoledronic acid وPamidronate حقناً.</li><li>Calcitonin بخاخ أنفي يزيد الكثافة وله تأثير مسكن للألم بعد 2–4 أسابيع (استخدامه تراجع في الإرشادات الحديثة).</li><li>Raloxifene (مُعدّل مستقبلات الإستروجين) للوقاية بعد انقطاع الطمث.</li><li>Teriparatide يحفز تكوين العظم.</li><li>كالسيوم 1000–1500 مجم يومياً مقسمة، وفيتامين د.</li><li>أخذ البيسفوسفونات صباحاً على معدة فارغة بكوب ماء كامل، وعدم الاستلقاء 30–60 دقيقة لتقليل تهيج المريء، ومراقبة آثار الجهاز الهضمي.</li></ul>\n<p>كالسيوم وفيتامين D، <b>ألندرونات (Alendronate)</b> (-nate). التعرض للشمس. <div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div></p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الخطر</strong><p>كسور سابقة؟ كورتيزون؟ سقوط؟ طول؟ تقوّس الظهر؟ مشاكل بلع أو ارتجاع (حرقان)؟ سجّل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>فحص قبل البدء</strong><p>اسأل عن حالة الأسنان، صعوبة البلع، الارتجاع، قدرة الجلوس 30 دقيقة، وتحقق من الكالسيوم والكلى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أعطِ القرص الأسبوعي بأمان</strong><p>صباحاً على الريق بكوب ماء كامل، المريض جالس أو واقف 30 دقيقة، لا أكل قبل 30 دقيقة، لا لبن/كالسيوم معه. اكتب اليوم الثابت وتأكد من عدم تكرار الجرعة اليومية بالغلط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الكالسيوم وفيتامين D</strong><p>في وقت آخر مع الأكل. تأكد أن الجرعة اليومية الكلية مناسبة، وراقب الإمساك.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>حماية من السقوط</strong><p>تقييم خطر السقوط (Morse)، سرير منخفض، جرس قريب، حذاء ثابت، ممر خالٍ، مرافقة عند القيام، حذر عند المهدئات وخافضات الضغط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>تعامل لطيف</strong><p>عند التحريك واللف: بلطف وبتناسق (Log-roll)، وتجنب شد الأطراف وضغط الصدر بقوة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>راقب الآثار الجانبية</strong><p>ألم صدر خلف القص أو صعوبة/ألم بلع، حرقان: أوقف وبلّغ. ألم فخذ أو أُذن فك: بلّغ (كسر فخذ غير نمطي/فك).</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>ألم أو صعوبة في البلع، ألم خلف القص، حرقان جديد، أو قيء دموي/براز أسود</li><li>ألم فخذ أو أرداف جديد (قبل كسر)</li><li>ألم أو تورم أو تخدر في الفك أو تحرك الأسنان</li><li>سقوط أو ألم ظهر مفاجئ أو عدم القدرة على الوقوف</li><li>تقلصات أو تنميل (نقص كالسيوم)</li><li>طفح جلدي أو دوخة بعد الدواء</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>القرص مرة واحدة في الأسبوع، في نفس اليوم: على الريق مع كوب ماء كامل.</li><li>اقعد أو قف 30 دقيقة، وما تنامش، وما تاكلش قبل نص ساعة.</li><li>الكالسيوم وفيتامين D في وقت تاني بعيد عن القرص.</li><li>امشي يومياً وتعرض للشمس، وكل ألبان وخضرة.</li><li>خلي بيتك آمن: ما فيش سجاد سايب، إضاءة كويسة، مقابض بالحمّام.</li><li>بلّغ لو حسيت بألم بلع أو حرقان شديد.</li><li>اعمل فحص الأسنان قبل البدء، وبلّغ الطبيب بأي علاج أسنان جراحي.</li></ul>\n[[slot:dis-119-osteo|هشاشة العظام: إضافات — رسم من إعداد الموقع|/diseases/img/dis-119-osteo.svg]]\n<ul><li>Osteopenia: فقد كتلة العظم؛ Osteomalacia: لين العظام لنقص فيتامين D الشديد.</li><li>الأعراض: كسور متكررة، نقص طول، حدب (Kyphosis).</li><li>العلاج والتثقيف: كالسيوم وفيتامين D، تعرض للشمس، تمارين تحميل وحركة متكررة، منع السقوط (حصائر مطاطية، إضاءة، لا سجاد)، الإقلاع عن التدخين وتقليل الكافيين، alendronate.</li></ul>\n<ul><li>تمارين حمل الوزن ومشي متكرر (نحو 30 دقيقة 4 مرات أسبوعيًا).</li><li>الوقاية من السقوط: حصائر مطاطية بالحمام، إضاءة الممرات، لا سجاد منزلق.</li><li>الإقلاع عن التدخين وتقليل الكافيين.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الهشاشة بدون أعراض إلا لو حدث كسر هشاشي، وشائعة بعد سن اليأس وفي كبار السن",
-      "التشخيص: DEXA للعمود القطني والحوض + كالسيوم وفوسفات الدم",
-      "نستخدم علاجاً واحداً من Risaldene 35 أو Bonapex 70 أسبوعياً",
-      "القرص على الريق بكوب ماء كامل، والجلوس 30 دقيقة، والأكل بعدها بنصف ساعة",
-      "الكالسيوم (Calcimate) بعيداً عن القرص، مع فيتامين D",
-      "حماية من السقوط وفحص الأسنان قبل البدء",
-      "البيسفوسفونات على معدة فارغة مع كوب ماء كامل وبلا استلقاء 30–60 دقيقة.",
-      "هشاشة العظام: بعد سن اليأس، ستيرويدات، فرط الجار درقية، كوشنج",
-      "كالسيوم+D وألندرونات؛ مشي حمل الوزن؛ منع السقوط"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "الفحص الأساسي لهشاشة العظام:"
-      },
-      "options": [
-        {
-          "ar": "DEXA على القطني والحوض"
-        },
-        {
-          "ar": "تحليل بول"
-        },
-        {
-          "ar": "تخطيط قلب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قياس كثافة العظم."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد ابتلاع Risaldene 35 المريض:"
-      },
-      "options": [
-        {
-          "ar": "يستلقي فوراً"
-        },
-        {
-          "ar": "يبقى جالساً أو واقفاً 30 دقيقة"
-        },
-        {
-          "ar": "يأكل فوراً مع اللبن"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "لحماية المريء."
-      }
-    },
-    {
-      "q": {
-        "ar": "كم مرة يؤخذ قرص الهشاشة الأسبوعي؟"
-      },
-      "options": [
-        {
-          "ar": "يومياً"
-        },
-        {
-          "ar": "مرة في الأسبوع"
-        },
-        {
-          "ar": "عند الألم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "أسبوعياً."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عرض يستدعي التبليغ بعد البيسفوسفونات؟"
-      },
-      "options": [
-        {
-          "ar": "ألم وصعوبة بلع أو حرقان شديد"
-        },
-        {
-          "ar": "عطش"
-        },
-        {
-          "ar": "نعاس"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قد يدل على التهاب المريء."
-      }
-    },
-    {
-      "q": {
-        "ar": "هل نعطي Risaldene وBonapex معاً؟"
-      },
-      "options": [
-        {
-          "ar": "نعم"
-        },
-        {
-          "ar": "لا: نستخدم علاجاً واحداً فقط"
-        },
-        {
-          "ar": "يومياً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "حسب المراجع."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد تناول Alendronate يجب:"
-      },
-      "options": [
-        {
-          "ar": "البقاء منتصباً 30–60 دقيقة"
-        },
-        {
-          "ar": "الاستلقاء فوراً"
-        },
-        {
-          "ar": "النوم"
-        },
-        {
-          "ar": "تناول اللبن فوراً"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لحماية المريء."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مرض يزيد خطر هشاشة العظام؟"
-      },
-      "options": [
-        {
-          "ar": "فرط جار الدرقية"
-        },
-        {
-          "ar": "قصور الدرقية"
-        },
-        {
-          "ar": "هبوط ضغط"
-        },
-        {
-          "ar": "أنيميا"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يرفع PTH فيهدم العظم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء لهشاشة العظام؟"
-      },
-      "options": [
-        {
-          "ar": "alendronate"
-        },
-        {
-          "ar": "allopurinol"
-        },
-        {
-          "ar": "warfarin"
-        },
-        {
-          "ar": "digoxin"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ثنائي فوسفونات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء يزيد خطر هشاشة العظام؟"
-      },
-      "options": [
-        {
-          "ar": "بريدنيزون"
-        },
-        {
-          "ar": "فيتامين D"
-        },
-        {
-          "ar": "كالسيوم"
-        },
-        {
-          "ar": "ألندرونات"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الستيرويدات تقلل كثافة العظم."
-      }
-    },
-    {
-      "q": {
-        "ar": "تثقيف مناسب لمسنة هشاشة؟"
-      },
-      "options": [
-        {
-          "ar": "حصائر مطاطية وتمارين حمل الوزن"
-        },
-        {
-          "ar": "الراحة الكاملة"
-        },
-        {
-          "ar": "سجاد ناعم"
-        },
-        {
-          "ar": "شرب القهوة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "للوقاية من السقوط وتقوية العظم."
-      }
-    },
-    {
-      "q": {
-        "ar": "الفرق بين Osteopenia وOsteomalacia؟"
-      },
-      "options": [
-        {
-          "ar": "الثانية لين عظام من نقص فيتامين D"
-        },
-        {
-          "ar": "لا فرق"
-        },
-        {
-          "ar": "الأولى لين عظام"
-        },
-        {
-          "ar": "الثانية كسر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Osteomalacia نقص فيتامين D."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Alendronic acid 70 mg tablets: Summary of Product Characteristics (EMC)"
-    },
-    {
-      "title": "ACOG Practice Bulletin: Osteoporosis (summary)"
-    },
-    {
-      "title": "Egyptian drug databases (Vezeeta, dwaprices, Tdawi) for brand compositions"
-    },
-    {
-      "title": "MSD Manual – Osteoporosis"
-    }
+  "en": [
+   "Osteoporosis has no symptoms unless a fragility fracture occurs, and is common after menopause and in older adults",
+   "Diagnosis: DEXA of the lumbar spine and hip + serum calcium and phosphate",
+   "Use one treatment, Risaldene 35 or Bonapex 70 weekly",
+   "Tablet on an empty stomach with a full glass of water, sit 30 minutes, and eat half an hour later",
+   "Calcium (Calcimate) apart from the tablet, with vitamin D",
+   "Fall protection and a dental check before starting",
+   "Bisphosphonates on an empty stomach with a full glass of water and no lying down for 30–60 minutes.",
+   "Osteoporosis: after menopause, steroids, hyperparathyroidism, Cushing's",
+   "Calcium + D and alendronate; weight-bearing walking; fall prevention"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "الفحص الأساسي لهشاشة العظام:",
+    "en": "The basic test for osteoporosis:"
+   },
+   "options": [
+    {
+     "ar": "DEXA على القطني والحوض",
+     "en": "DEXA of the lumbar spine and hip"
+    },
+    {
+     "ar": "تحليل بول",
+     "en": "Urinalysis"
+    },
+    {
+     "ar": "تخطيط قلب",
+     "en": "ECG"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قياس كثافة العظم.",
+    "en": "Measures bone density."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد ابتلاع Risaldene 35 المريض:",
+    "en": "After swallowing Risaldene 35 the patient:"
+   },
+   "options": [
+    {
+     "ar": "يستلقي فوراً",
+     "en": "Lies down immediately"
+    },
+    {
+     "ar": "يبقى جالساً أو واقفاً 30 دقيقة",
+     "en": "Stays sitting or standing for 30 minutes"
+    },
+    {
+     "ar": "يأكل فوراً مع اللبن",
+     "en": "Eats immediately with milk"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "لحماية المريء.",
+    "en": "To protect the esophagus."
+   }
+  },
+  {
+   "q": {
+    "ar": "كم مرة يؤخذ قرص الهشاشة الأسبوعي؟",
+    "en": "How often is the weekly osteoporosis tablet taken?"
+   },
+   "options": [
+    {
+     "ar": "يومياً",
+     "en": "Daily"
+    },
+    {
+     "ar": "مرة في الأسبوع",
+     "en": "Once a week"
+    },
+    {
+     "ar": "عند الألم",
+     "en": "When in pain"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "أسبوعياً.",
+    "en": "Weekly."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عرض يستدعي التبليغ بعد البيسفوسفونات؟",
+    "en": "Which symptom calls for reporting after bisphosphonates?"
+   },
+   "options": [
+    {
+     "ar": "ألم وصعوبة بلع أو حرقان شديد",
+     "en": "Pain and difficulty swallowing or severe heartburn"
+    },
+    {
+     "ar": "عطش",
+     "en": "Thirst"
+    },
+    {
+     "ar": "نعاس",
+     "en": "Drowsiness"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قد يدل على التهاب المريء.",
+    "en": "May indicate esophagitis."
+   }
+  },
+  {
+   "q": {
+    "ar": "هل نعطي Risaldene وBonapex معاً؟",
+    "en": "Do we give Risaldene and Bonapex together?"
+   },
+   "options": [
+    {
+     "ar": "نعم",
+     "en": "Yes"
+    },
+    {
+     "ar": "لا: نستخدم علاجاً واحداً فقط",
+     "en": "No: we use only one treatment"
+    },
+    {
+     "ar": "يومياً",
+     "en": "Daily"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "حسب المراجع.",
+    "en": "One treatment only."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد تناول Alendronate يجب:",
+    "en": "After taking alendronate one must:"
+   },
+   "options": [
+    {
+     "ar": "البقاء منتصباً 30–60 دقيقة",
+     "en": "Stay upright 30–60 minutes"
+    },
+    {
+     "ar": "الاستلقاء فوراً",
+     "en": "Lie down immediately"
+    },
+    {
+     "ar": "النوم",
+     "en": "Sleep"
+    },
+    {
+     "ar": "تناول اللبن فوراً",
+     "en": "Drink milk immediately"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لحماية المريء.",
+    "en": "To protect the esophagus."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مرض يزيد خطر هشاشة العظام؟",
+    "en": "Which disease increases the risk of osteoporosis?"
+   },
+   "options": [
+    {
+     "ar": "فرط جار الدرقية",
+     "en": "Hyperparathyroidism"
+    },
+    {
+     "ar": "قصور الدرقية",
+     "en": "Hypothyroidism"
+    },
+    {
+     "ar": "هبوط ضغط",
+     "en": "Low blood pressure"
+    },
+    {
+     "ar": "أنيميا",
+     "en": "Anemia"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يرفع PTH فيهدم العظم.",
+    "en": "It raises PTH, which breaks down bone."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء لهشاشة العظام؟",
+    "en": "Which drug is for osteoporosis?"
+   },
+   "options": [
+    {
+     "ar": "alendronate",
+     "en": "Alendronate"
+    },
+    {
+     "ar": "allopurinol",
+     "en": "Allopurinol"
+    },
+    {
+     "ar": "warfarin",
+     "en": "Warfarin"
+    },
+    {
+     "ar": "digoxin",
+     "en": "Digoxin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ثنائي فوسفونات.",
+    "en": "A bisphosphonate."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء يزيد خطر هشاشة العظام؟",
+    "en": "Which drug increases the risk of osteoporosis?"
+   },
+   "options": [
+    {
+     "ar": "بريدنيزون",
+     "en": "Prednisone"
+    },
+    {
+     "ar": "فيتامين D",
+     "en": "Vitamin D"
+    },
+    {
+     "ar": "كالسيوم",
+     "en": "Calcium"
+    },
+    {
+     "ar": "ألندرونات",
+     "en": "Alendronate"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الستيرويدات تقلل كثافة العظم.",
+    "en": "Steroids reduce bone density."
+   }
+  },
+  {
+   "q": {
+    "ar": "تثقيف مناسب لمسنة هشاشة؟",
+    "en": "Appropriate teaching for an older woman with osteoporosis?"
+   },
+   "options": [
+    {
+     "ar": "حصائر مطاطية وتمارين حمل الوزن",
+     "en": "Rubber mats and weight-bearing exercises"
+    },
+    {
+     "ar": "الراحة الكاملة",
+     "en": "Complete rest"
+    },
+    {
+     "ar": "سجاد ناعم",
+     "en": "Soft rugs"
+    },
+    {
+     "ar": "شرب القهوة",
+     "en": "Drinking coffee"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "للوقاية من السقوط وتقوية العظم.",
+    "en": "To prevent falls and strengthen bone."
+   }
+  },
+  {
+   "q": {
+    "ar": "الفرق بين Osteopenia وOsteomalacia؟",
+    "en": "Difference between osteopenia and osteomalacia?"
+   },
+   "options": [
+    {
+     "ar": "الثانية لين عظام من نقص فيتامين D",
+     "en": "The second is softening of bones from vitamin D deficiency"
+    },
+    {
+     "ar": "لا فرق",
+     "en": "No difference"
+    },
+    {
+     "ar": "الأولى لين عظام",
+     "en": "The first is softening of bones"
+    },
+    {
+     "ar": "الثانية كسر",
+     "en": "The second is a fracture"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Osteomalacia نقص فيتامين D.",
+    "en": "Osteomalacia is vitamin D deficiency."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Alendronic acid 70 mg tablets: Summary of Product Characteristics (EMC)"
+  },
+  {
+   "title": "ACOG Practice Bulletin: Osteoporosis (summary)"
+  },
+  {
+   "title": "Egyptian drug databases (Vezeeta, dwaprices, Tdawi) for brand compositions"
+  },
+  {
+   "title": "MSD Manual – Osteoporosis"
+  }
+ ]
 }

@@ -1,234 +1,294 @@
 {
-  "id": "dis-1806",
-  "num": "1806",
-  "system": "blood",
-  "icon": "🩸",
-  "level": 2,
-  "title": {
-    "ar": "أنيميا الحمل واشتهاء مواد غير غذائية (Pica): نقص الحديد، المنجلية، الخبيثة، اللاتنسجية",
-    "en": "Anemia and Pica in Pregnancy"
+ "id": "dis-1806",
+ "num": "1806",
+ "system": "blood",
+ "icon": "🩸",
+ "level": 2,
+ "title": {
+  "ar": "أنيميا الحمل واشتهاء مواد غير غذائية (Pica): نقص الحديد، المنجلية، الخبيثة، اللاتنسجية",
+  "en": "Anemia and Pica in Pregnancy"
+ },
+ "teaser": {
+  "ar": "أنواع الأنيميا الأكثر اختباراً مع نقص الحديد في الحمل والأطفال والبيكا، وتفاصيل العلاج.",
+  "en": "The most commonly tested types of anemia, with iron deficiency in pregnancy and children, pica, and treatment details."
+ },
+ "chips": [
+  {
+   "ar": "Iron",
+   "en": "Iron"
   },
-  "teaser": {
-    "ar": "أنواع الأنيميا الأكثر اختباراً مع نقص الحديد في الحمل والأطفال والبيكا، وتفاصيل العلاج."
+  {
+   "ar": "Pica",
+   "en": "Pica"
   },
-  "chips": [
-    {
-      "ar": "Iron"
-    },
-    {
-      "ar": "Pica"
-    },
-    {
-      "ar": "B12"
-    },
-    {
-      "ar": "Sickle"
-    }
+  {
+   "ar": "B12",
+   "en": "B12"
+  },
+  {
+   "ar": "Sickle",
+   "en": "Sickle"
+  }
+ ],
+ "target": "obgyn",
+ "sections": {
+  "overview": {
+   "ar": "<p>الأنيميا نقص كريات الدم الحمراء فلا يصل الأكسجين للأنسجة، فيظهر التعب والشحوب والدوخة وضيق النفس. Hb الطبيعي 12 فأكثر، 8-9 سيئ، وأقل من 7 خطر. الأنواع الأكثر اختباراً: نقص الحديد، المنجلية، الخبيثة (B12)، اللاتنسجية (Pancytopenia: نقص كل الخلايا)، الانحلالية (تحطم الكريات كما في نقل دم غير متوافق).</p>[[slot:dis-1806-anemia|أنواع الأنيميا — رسم من إعداد الموقع|/diseases/img/dis-1806-anemia.svg]]<h4>الفسيولوجيا المرضية حسب النوع</h4><ul><li><strong>المنجلية:</strong> كريات حمراء مشوهة (منجلية) تموت أسرع وتحمل أكسجيناً أقل وتسد الأوعية الدقيقة فتسبب إقفاراً وألماً شديداً (أزمة انسداد وعائي Vaso-occlusive crisis)</li><li><strong>الخبيثة (Pernicious):</strong> الجسم لا يمتص فيتامين B12 لغياب العامل الداخلي (Intrinsic factor) من المعدة، فتقل كريات الدم</li><li><strong>اللاتنسجية (Aplastic):</strong> فشل نخاع العظم فيقل إنتاج كريات حمراء وبيضاء وصفائح (Pancytopenia)</li><li><strong>الانحلالية:</strong> تحطم الكريات الحمراء، مثل نقل دم غير متوافق (تفاعل مستضد-جسم مضاد)</li><li>الأنيميا في الحمل شائعة لأن الجنين يستهلك الحديد؛ والمنجلية والخبيثة يُعالجان بإشراف طبيب نساء وأمراض دم</li></ul>",
+   "en": "<p>Anemia is a shortage of red blood cells, so oxygen does not reach the tissues, causing fatigue, pallor, dizziness, and shortness of breath. Normal Hb is 12 or more, 8-9 is poor, and below 7 is dangerous. The most commonly tested types: iron deficiency, sickle cell, pernicious (B12), aplastic (pancytopenia: shortage of all cells), and hemolytic (destruction of cells, as in an incompatible blood transfusion).</p>[[slot:dis-1806-anemia|Types of anemia — illustration made for the site|/diseases/img/dis-1806-anemia.svg]]<h4>Pathophysiology by type</h4><ul><li><strong>Sickle cell:</strong> deformed (sickle-shaped) red cells die faster, carry less oxygen, and block small vessels, causing ischemia and severe pain (vaso-occlusive crisis)</li><li><strong>Pernicious:</strong> the body cannot absorb vitamin B12 because the stomach lacks intrinsic factor, so blood cells decrease</li><li><strong>Aplastic:</strong> bone marrow failure reduces production of red cells, white cells, and platelets (pancytopenia)</li><li><strong>Hemolytic:</strong> destruction of red cells, such as an incompatible blood transfusion (antigen-antibody reaction)</li><li>Anemia is common in pregnancy because the fetus uses up iron; sickle cell and pernicious anemia are managed under the supervision of an obstetrician and a hematologist</li></ul>"
+  },
+  "causes": {
+   "ar": "<ul><li>نزيف: جراحة، رضوض، حيض غزير</li><li>علاج كيماوي ومثبطات المناعة يثبط النخاع</li><li>نقص مواد البناء: حديد، B12</li></ul><h4>نقص الحديد</h4><ul><li>غذاء فقير باللحوم والأسماك والدواجن</li><li>جراحة تحويل المعدة</li><li>الحمل (الجنين يخزن الحديد)</li><li>البيكا: أكل غير غذائي مع انخفاض Hct وHb</li><li>نقص B12 وقلة حمض المعدة وضمور المعدة</li></ul><h4>الأطفال</h4><ul><li>الولادة المبكرة</li><li>قلة المتناول</li><li>الإفراط في الحليب (نقطة امتحان)</li><li>الرضيع المبتسر (Premature) برضاعة الزجاجة حصراً/الحليب فقط</li><li>النباتي: خبز وحبوب مدعمة وأغذية عالية الحديد وفيتامين C وكالسيوم وD</li></ul>",
+   "en": "<ul><li>Bleeding: surgery, trauma, heavy menstruation</li><li>Chemotherapy and immunosuppressants suppress the marrow</li><li>Shortage of building materials: iron, B12</li></ul><h4>Iron deficiency</h4><ul><li>Diet poor in meat, fish, and poultry</li><li>Gastric bypass surgery</li><li>Pregnancy (the fetus stores iron)</li><li>Pica: eating non-food items with low Hct and Hb</li><li>B12 deficiency, low stomach acid, and gastric atrophy</li></ul><h4>Children</h4><ul><li>Premature birth</li><li>Low intake</li><li>Excess milk (an exam point)</li><li>Premature infant fed exclusively by bottle/milk only</li><li>Vegetarian: bread and fortified grains and foods high in iron, vitamin C, calcium, and D</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>إرهاق وشحوب ودوخة وضيق نفس</li><li>نقص الحديد: التهاب الفم والشفاه (Stomatitis) والتهاب اللسان (Glossitis)</li><li>المنجلية: ألم شديد بسبب انسداد الأوعية وإقفار؛ ضعف ذراع من جانب واحد وتورم اليدين والقدمين (Dactylitis)؛ شلل مفاجئ بالأطراف أو عدم القدرة على الإيقاظ (نقطة امتحان)؛ أزمة حجز الطحال: تضخم سريع وهبوط ضغط</li><li>الخبيثة: التهاب لسان أحمر أملس، ضعف شديد، يرقان (جلد أصفر شاحب)</li></ul>",
+   "en": "<ul><li>Fatigue, pallor, dizziness, and shortness of breath</li><li>Iron deficiency: inflammation of the mouth and lips (stomatitis) and of the tongue (glossitis)</li><li>Sickle cell: severe pain from vessel blockage and ischemia; weakness of one arm and swelling of the hands and feet (dactylitis); sudden paralysis of the limbs or inability to wake the child (an exam point); splenic sequestration crisis: rapid enlargement and low blood pressure</li><li>Pernicious: smooth red tongue inflammation, severe weakness, jaundice (pale yellow skin)</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>CBC: Hb وHct</li><li>حديد وفيريتين وB12</li></ul>",
+   "en": "<ul><li>CBC: Hb and Hct</li><li>Iron, ferritin, and B12</li></ul>"
+  },
+  "treatment": {
+   "ar": "<table><thead><tr><th>النوع</th><th>العلاج</th></tr></thead><tbody><tr><td>نقص الحديد</td><td>أغذية غنية (لحوم، أسماك، دواجن، خضار ورقية كالسبانخ، حبوب كاملة) مع فيتامين C؛ ferrous sulfate فموي أو iron dextran وريدي/عضلي</td></tr><tr><td>المنجلية</td><td>سوائل وريدية، راحة، تحكم بالألم (PCA)، اتصل بالطبيب لجرعات أعلى</td></tr><tr><td>الخبيثة</td><td>B12 حقن عضلي أو وريدي وليس فموياً</td></tr><tr><td>أطفال</td><td>قلل الحليب المفرط وزد فيتامين C والأغذية الغنية بالحديد</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<table><thead><tr><th>Type</th><th>Treatment</th></tr></thead><tbody><tr><td>Iron deficiency</td><td>Rich foods (meat, fish, poultry, leafy vegetables such as spinach, whole grains) with vitamin C; oral ferrous sulfate or IV/IM iron dextran</td></tr><tr><td>Sickle cell</td><td>IV fluids, rest, pain control (PCA), call the physician for higher doses</td></tr><tr><td>Pernicious</td><td>B12 by IM or IV injection, not orally</td></tr><tr><td>Children</td><td>Reduce excess milk and increase vitamin C and iron-rich foods</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>Note</strong><p>Doses are for learning; always verify with the physician/pharmacist before administration.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ul><li>براز أسود أو داكن مع الحديد طبيعي ومتوقع وليس نزيفاً.</li><li>يُؤخذ الحديد على معدة فارغة قبل الوجبة بساعة (أو حسب الصيدلي).</li><li>بلّغ عند Hb أقل من 7.</li><li>المنجلية: مسكن PCA، سوائل، راحة، كمادات دافئة.</li></ul>",
+   "en": "<ul><li>Black or dark stool with iron is normal and expected, not bleeding.</li><li>Iron is taken on an empty stomach one hour before the meal (or as the pharmacist advises).</li><li>Report when Hb is below 7.</li><li>Sickle cell: PCA analgesic, fluids, rest, warm compresses.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ</strong><ul><li>Hb أقل من 7</li><li>شلل مفاجئ أو ضعف جانب واحد</li><li>تضخم طحال سريع وهبوط ضغط</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report</strong><ul><li>Hb below 7</li><li>Sudden paralysis or one-sided weakness</li><li>Rapid spleen enlargement and low blood pressure</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اتبعي الأطعمة الغنية بالحديد وفيتامين C.</li><li>لا تقلقي من لون البراز الأسود مع الحديد.</li><li>حديد قبل الأكل بساعة.</li></ul>",
+   "en": "<ul><li>Follow foods rich in iron and vitamin C.</li><li>Do not worry about black stool color with iron.</li><li>Take iron one hour before eating.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "Hb 12 فأكثر طبيعي، أقل من 7 خطر",
+   "البراز الأسود مع الحديد طبيعي",
+   "B12 الأنيميا الخبيثة حقن لا فم",
+   "حليب مفرط سبب لدى الأطفال",
+   "أزمة المنجلية: سوائل وراحة وPCA"
   ],
-  "target": "obgyn",
-  "sections": {
-    "overview": {
-      "ar": "<p>الأنيميا نقص كريات الدم الحمراء فلا يصل الأكسجين للأنسجة، فيظهر التعب والشحوب والدوخة وضيق النفس. Hb الطبيعي 12 فأكثر، 8-9 سيئ، وأقل من 7 خطر. الأنواع الأكثر اختباراً: نقص الحديد، المنجلية، الخبيثة (B12)، اللاتنسجية (Pancytopenia: نقص كل الخلايا)، الانحلالية (تحطم الكريات كما في نقل دم غير متوافق).</p>[[slot:dis-1806-anemia|أنواع الأنيميا — رسم من إعداد الموقع|/diseases/img/dis-1806-anemia.svg]]<h4>الفسيولوجيا المرضية حسب النوع</h4><ul><li><strong>المنجلية:</strong> كريات حمراء مشوهة (منجلية) تموت أسرع وتحمل أكسجيناً أقل وتسد الأوعية الدقيقة فتسبب إقفاراً وألماً شديداً (أزمة انسداد وعائي Vaso-occlusive crisis)</li><li><strong>الخبيثة (Pernicious):</strong> الجسم لا يمتص فيتامين B12 لغياب العامل الداخلي (Intrinsic factor) من المعدة، فتقل كريات الدم</li><li><strong>اللاتنسجية (Aplastic):</strong> فشل نخاع العظم فيقل إنتاج كريات حمراء وبيضاء وصفائح (Pancytopenia)</li><li><strong>الانحلالية:</strong> تحطم الكريات الحمراء، مثل نقل دم غير متوافق (تفاعل مستضد-جسم مضاد)</li><li>الأنيميا في الحمل شائعة لأن الجنين يستهلك الحديد؛ والمنجلية والخبيثة يُعالجان بإشراف طبيب نساء وأمراض دم</li></ul>"
-    },
-    "causes": {
-      "ar": "<ul><li>نزيف: جراحة، رضوض، حيض غزير</li><li>علاج كيماوي ومثبطات المناعة يثبط النخاع</li><li>نقص مواد البناء: حديد، B12</li></ul><h4>نقص الحديد</h4><ul><li>غذاء فقير باللحوم والأسماك والدواجن</li><li>جراحة تحويل المعدة</li><li>الحمل (الجنين يخزن الحديد)</li><li>البيكا: أكل غير غذائي مع انخفاض Hct وHb</li><li>نقص B12 وقلة حمض المعدة وضمور المعدة</li></ul><h4>الأطفال</h4><ul><li>الولادة المبكرة</li><li>قلة المتناول</li><li>الإفراط في الحليب (نقطة امتحان)</li><li>الرضيع المبتسر (Premature) برضاعة الزجاجة حصراً/الحليب فقط</li><li>النباتي: خبز وحبوب مدعمة وأغذية عالية الحديد وفيتامين C وكالسيوم وD</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>إرهاق وشحوب ودوخة وضيق نفس</li><li>نقص الحديد: التهاب الفم والشفاه (Stomatitis) والتهاب اللسان (Glossitis)</li><li>المنجلية: ألم شديد بسبب انسداد الأوعية وإقفار؛ ضعف ذراع من جانب واحد وتورم اليدين والقدمين (Dactylitis)؛ شلل مفاجئ بالأطراف أو عدم القدرة على الإيقاظ (نقطة امتحان)؛ أزمة حجز الطحال: تضخم سريع وهبوط ضغط</li><li>الخبيثة: التهاب لسان أحمر أملس، ضعف شديد، يرقان (جلد أصفر شاحب)</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>CBC: Hb وHct</li><li>حديد وفيريتين وB12</li></ul>"
-    },
-    "treatment": {
-      "ar": "<table><thead><tr><th>النوع</th><th>العلاج</th></tr></thead><tbody><tr><td>نقص الحديد</td><td>أغذية غنية (لحوم، أسماك، دواجن، خضار ورقية كالسبانخ، حبوب كاملة) مع فيتامين C؛ ferrous sulfate فموي أو iron dextran وريدي/عضلي</td></tr><tr><td>المنجلية</td><td>سوائل وريدية، راحة، تحكم بالألم (PCA)، اتصل بالطبيب لجرعات أعلى</td></tr><tr><td>الخبيثة</td><td>B12 حقن عضلي أو وريدي وليس فموياً</td></tr><tr><td>أطفال</td><td>قلل الحليب المفرط وزد فيتامين C والأغذية الغنية بالحديد</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ul><li>براز أسود أو داكن مع الحديد طبيعي ومتوقع وليس نزيفاً.</li><li>يُؤخذ الحديد على معدة فارغة قبل الوجبة بساعة (أو حسب الصيدلي).</li><li>بلّغ عند Hb أقل من 7.</li><li>المنجلية: مسكن PCA، سوائل، راحة، كمادات دافئة.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ</strong><ul><li>Hb أقل من 7</li><li>شلل مفاجئ أو ضعف جانب واحد</li><li>تضخم طحال سريع وهبوط ضغط</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اتبعي الأطعمة الغنية بالحديد وفيتامين C.</li><li>لا تقلقي من لون البراز الأسود مع الحديد.</li><li>حديد قبل الأكل بساعة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "Hb 12 فأكثر طبيعي، أقل من 7 خطر",
-      "البراز الأسود مع الحديد طبيعي",
-      "B12 الأنيميا الخبيثة حقن لا فم",
-      "حليب مفرط سبب لدى الأطفال",
-      "أزمة المنجلية: سوائل وراحة وPCA"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "براز أسود مع الحديد:"
-      },
-      "options": [
-        {
-          "ar": "نزيف معدي"
-        },
-        {
-          "ar": "طبيعي ومتوقع"
-        },
-        {
-          "ar": "حساسية"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يتلون البراز بالحديد."
-      }
-    },
-    {
-      "q": {
-        "ar": "علاج الأنيميا الخبيثة:"
-      },
-      "options": [
-        {
-          "ar": "B12 حقن"
-        },
-        {
-          "ar": "B12 فموي"
-        },
-        {
-          "ar": "حديد"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "غياب العامل الداخلي يمنع الامتصاص الفموي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أزمة حجز الطحال:"
-      },
-      "options": [
-        {
-          "ar": "تضخم سريع وهبوط ضغط"
-        },
-        {
-          "ar": "ألم رأس"
-        },
-        {
-          "ar": "ارتفاع ضغط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "احتجاز الدم بالطحال."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي حالة تسبب Pancytopenia؟"
-      },
-      "options": [
-        {
-          "ar": "اللاتنسجية"
-        },
-        {
-          "ar": "المنجلية"
-        },
-        {
-          "ar": "الخبيثة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «اللاتنسجية»؛ فشل النخاع."
-      }
-    },
-    {
-      "q": {
-        "ar": "قيمة الهيموجلوبين الخطيرة التي تُبلَّغ فوراً هي أقل من:"
-      },
-      "options": [
-        {
-          "ar": "7 g/dL خطير جداً"
-        },
-        {
-          "ar": "12"
-        },
-        {
-          "ar": "10"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «7 g/dL خطير جداً»؛ تُبلَّغ فوراً."
-      }
-    },
-    {
-      "q": {
-        "ar": "وقت أخذ الحديد الفموي:"
-      },
-      "options": [
-        {
-          "ar": "على معدة فارغة"
-        },
-        {
-          "ar": "بعد وجبة دسمة مع لبن"
-        },
-        {
-          "ar": "مع شاي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «على معدة فارغة»؛ يفضّل مع فيتامين C."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة تدل على جلطة بالمنجلية:"
-      },
-      "options": [
-        {
-          "ar": "ضعف ذراع من جانب واحد أو شلل مفاجئ"
-        },
-        {
-          "ar": "طفح"
-        },
-        {
-          "ar": "سعال"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «ضعف ذراع من جانب واحد أو شلل مفاجئ»؛ سكتة."
-      }
-    },
-    {
-      "q": {
-        "ar": "سبب الأنيميا الخبيثة:"
-      },
-      "options": [
-        {
-          "ar": "غياب العامل الداخلي فلا يُمتص B12"
-        },
-        {
-          "ar": "نقص الحديد في الغذاء"
-        },
-        {
-          "ar": "فشل النخاع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "العامل الداخلي لازم لامتصاص B12؛ لذلك يُعطى حقناً."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "WHO anemia guidelines"
-    },
-    {
-      "title": "ACOG anemia in pregnancy"
-    }
+  "en": [
+   "Hb 12 or more is normal, below 7 is dangerous",
+   "Black stool with iron is normal",
+   "Pernicious anemia: B12 by injection, not by mouth",
+   "Excess milk is a cause in children",
+   "Sickle cell crisis: fluids, rest, and PCA"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "براز أسود مع الحديد:",
+    "en": "Black stool with iron:"
+   },
+   "options": [
+    {
+     "ar": "نزيف معدي",
+     "en": "Gastric bleeding"
+    },
+    {
+     "ar": "طبيعي ومتوقع",
+     "en": "Normal and expected"
+    },
+    {
+     "ar": "حساسية",
+     "en": "Allergy"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يتلون البراز بالحديد.",
+    "en": "Iron colors the stool."
+   }
+  },
+  {
+   "q": {
+    "ar": "علاج الأنيميا الخبيثة:",
+    "en": "Treatment of pernicious anemia:"
+   },
+   "options": [
+    {
+     "ar": "B12 حقن",
+     "en": "B12 injections"
+    },
+    {
+     "ar": "B12 فموي",
+     "en": "Oral B12"
+    },
+    {
+     "ar": "حديد",
+     "en": "Iron"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "غياب العامل الداخلي يمنع الامتصاص الفموي.",
+    "en": "Absence of intrinsic factor prevents oral absorption."
+   }
+  },
+  {
+   "q": {
+    "ar": "أزمة حجز الطحال:",
+    "en": "Splenic sequestration crisis:"
+   },
+   "options": [
+    {
+     "ar": "تضخم سريع وهبوط ضغط",
+     "en": "Rapid enlargement and low blood pressure"
+    },
+    {
+     "ar": "ألم رأس",
+     "en": "Headache"
+    },
+    {
+     "ar": "ارتفاع ضغط",
+     "en": "High blood pressure"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "احتجاز الدم بالطحال.",
+    "en": "Blood is trapped in the spleen."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي حالة تسبب Pancytopenia؟",
+    "en": "Which condition causes pancytopenia?"
+   },
+   "options": [
+    {
+     "ar": "اللاتنسجية",
+     "en": "Aplastic"
+    },
+    {
+     "ar": "المنجلية",
+     "en": "Sickle cell"
+    },
+    {
+     "ar": "الخبيثة",
+     "en": "Pernicious"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «اللاتنسجية»؛ فشل النخاع.",
+    "en": "The correct answer is \"aplastic\"; marrow failure."
+   }
+  },
+  {
+   "q": {
+    "ar": "قيمة الهيموجلوبين الخطيرة التي تُبلَّغ فوراً هي أقل من:",
+    "en": "The dangerous hemoglobin value that is reported immediately is below:"
+   },
+   "options": [
+    {
+     "ar": "7 g/dL خطير جداً",
+     "en": "7 g/dL, very dangerous"
+    },
+    {
+     "ar": "12",
+     "en": "12"
+    },
+    {
+     "ar": "10",
+     "en": "10"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «7 g/dL خطير جداً»؛ تُبلَّغ فوراً.",
+    "en": "The correct answer is \"7 g/dL, very dangerous\"; report immediately."
+   }
+  },
+  {
+   "q": {
+    "ar": "وقت أخذ الحديد الفموي:",
+    "en": "When to take oral iron:"
+   },
+   "options": [
+    {
+     "ar": "على معدة فارغة",
+     "en": "On an empty stomach"
+    },
+    {
+     "ar": "بعد وجبة دسمة مع لبن",
+     "en": "After a heavy meal with yogurt"
+    },
+    {
+     "ar": "مع شاي",
+     "en": "With tea"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «على معدة فارغة»؛ يفضّل مع فيتامين C.",
+    "en": "The correct answer is \"on an empty stomach\"; preferably with vitamin C."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة تدل على جلطة بالمنجلية:",
+    "en": "A sign of a clot in sickle cell disease:"
+   },
+   "options": [
+    {
+     "ar": "ضعف ذراع من جانب واحد أو شلل مفاجئ",
+     "en": "One-sided arm weakness or sudden paralysis"
+    },
+    {
+     "ar": "طفح",
+     "en": "Rash"
+    },
+    {
+     "ar": "سعال",
+     "en": "Cough"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «ضعف ذراع من جانب واحد أو شلل مفاجئ»؛ سكتة.",
+    "en": "The correct answer is \"one-sided arm weakness or sudden paralysis\"; stroke."
+   }
+  },
+  {
+   "q": {
+    "ar": "سبب الأنيميا الخبيثة:",
+    "en": "The cause of pernicious anemia:"
+   },
+   "options": [
+    {
+     "ar": "غياب العامل الداخلي فلا يُمتص B12",
+     "en": "Absence of intrinsic factor, so B12 is not absorbed"
+    },
+    {
+     "ar": "نقص الحديد في الغذاء",
+     "en": "Iron deficiency in the diet"
+    },
+    {
+     "ar": "فشل النخاع",
+     "en": "Marrow failure"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "العامل الداخلي لازم لامتصاص B12؛ لذلك يُعطى حقناً.",
+    "en": "Intrinsic factor is needed to absorb B12; therefore it is given by injection."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "WHO anemia guidelines"
+  },
+  {
+   "title": "ACOG anemia in pregnancy"
+  }
+ ]
 }

@@ -1,157 +1,197 @@
 {
-  "id": "dis-209",
-  "num": 209,
-  "system": "infect",
-  "icon": "💊",
-  "level": 2,
-  "title": {
-    "ar": "المونوباكتام والكاربابينيمات",
-    "en": "Monobactams & Carbapenems"
+ "id": "dis-209",
+ "num": 209,
+ "system": "infect",
+ "icon": "💊",
+ "level": 2,
+ "title": {
+  "ar": "المونوباكتام والكاربابينيمات",
+  "en": "Monobactams & Carbapenems"
+ },
+ "teaser": {
+  "ar": "Aztreonam وImipenem (Tienam) وMeropenem (Meronem): الفرق في الطيف، الجرعات، التشنجات، والأسماء التجارية.",
+  "en": "Aztreonam, Imipenem (Tienam), and Meropenem (Meronem): the difference in spectrum, doses, seizures, and brand names."
+ },
+ "chips": [
+  {
+   "ar": "Tienam",
+   "en": "Tienam"
   },
-  "teaser": {
-    "ar": "Aztreonam وImipenem (Tienam) وMeropenem (Meronem): الفرق في الطيف، الجرعات، التشنجات، والأسماء التجارية."
+  {
+   "ar": "Meronem",
+   "en": "Meronem"
   },
-  "chips": [
-    {
-      "ar": "Tienam"
-    },
-    {
-      "ar": "Meronem"
-    },
-    {
-      "ar": "Azactam"
-    }
+  {
+   "ar": "Azactam",
+   "en": "Azactam"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>مجموعتان من مضادات β-Lactam القوية للمستشفيات: <b>المونوباكتامات (Monobactams)</b> مثل Aztreonam، و<b>الكاربابينيمات (Carbapenems)</b> مثل Imipenem وMeropenem. بتُعطى بالوريد في العدوى الشديدة المكتسبة من المستشفى (Nosocomial).</p><table><thead><tr><th></th><th>Monobactam (Aztreonam)</th><th>Carbapenem (Imipenem/Meropenem)</th></tr></thead><tbody><tr><td>الارتباط</td><td>PBP-3</td><td>PBP-2</td></tr><tr><td>الطيف</td><td>ضيق: هوائية سالبة الجرام (منها Pseudomonas وN. gonorrhoeae وH. influenzae)</td><td>واسع جداً: موجبة وسالبة، هوائية ولاهوائية</td></tr><tr><td>الفاعلية ضد موجبة/لاهوائية</td><td>لا</td><td>نعم</td></tr><tr><td>حساسية البنسلين</td><td>مناسب لمرضى حساسية البنسلين</td><td>تعارض متقاطع جزئي</td></tr><tr><td>الأسماء</td><td>Azactam</td><td>Tienam · Meronem</td></tr></tbody></table><div class=\"cs-stats\"><div><b>IV فقط</b><span>طريق الإعطاء</span></div><div><b>كلية</b><span>تعديل الجرعة</span></div><div><b>Valproate</b><span>تداخل خطير</span></div></div><div class=\"cs-box cs-info\"><strong>متى نستخدمها؟</strong><p>التهابات شديدة بكتيريا مقاومة (ESBL، Pseudomonas، Acinetobacter) أو مختلطة، أو إنتان بالمستشفى بعد مزرعة وحساسية. الاستخدام الواسع بدون داعي يزيد المقاومة.</p></div>\n<p>ملخص عملي بالأسماء التجارية وقواعد الأمان (الأطفال والحمل وG6PD): <a href=\"/diseases/dis-565\">دليل عملي للمضادات الحيوية</a>.</p>",
+   "en": "<p>Two groups of strong β-Lactam antibiotics for hospitals: <b>Monobactams</b> such as Aztreonam, and <b>Carbapenems</b> such as Imipenem and Meropenem. They are given intravenously in severe hospital-acquired (Nosocomial) infections.</p><table><thead><tr><th></th><th>Monobactam (Aztreonam)</th><th>Carbapenem (Imipenem/Meropenem)</th></tr></thead><tbody><tr><td>Binding</td><td>PBP-3</td><td>PBP-2</td></tr><tr><td>Spectrum</td><td>Narrow: aerobic gram-negative (including Pseudomonas, N. gonorrhoeae, and H. influenzae)</td><td>Very broad: positive and negative, aerobic and anaerobic</td></tr><tr><td>Activity against gram-positive/anaerobes</td><td>No</td><td>Yes</td></tr><tr><td>Penicillin allergy</td><td>Suitable for penicillin-allergic patients</td><td>Partial cross-reactivity</td></tr><tr><td>Names</td><td>Azactam</td><td>Tienam · Meronem</td></tr></tbody></table><div class=\"cs-stats\"><div><b>IV only</b><span>Route of administration</span></div><div><b>Renal</b><span>Dose adjustment</span></div><div><b>Valproate</b><span>Dangerous interaction</span></div></div><div class=\"cs-box cs-info\"><strong>When do we use them?</strong><p>Severe infections with resistant bacteria (ESBL, Pseudomonas, Acinetobacter) or mixed infections, or hospital sepsis after culture and sensitivity. Wide unnecessary use increases resistance.</p></div>\n<p>A practical summary with brand names and safety rules (children, pregnancy, and G6PD): <a href=\"/diseases/dis-565\">A practical antibiotic guide</a>.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>بيرتبطوا بـPBP فيمنعوا تصنيع جدار الخلية (مبيدة)</li><li>Imipenem بيتعطل بإنزيم Dipeptidase الكلوي ← مستقلب سام للكلى، فبيُعطى مع Cilastatin (مثبط الإنزيم) = Tienam</li><li>Meropenem لا يتأثر بالإنزيم ويسبب تشنجات أقل</li></ul><h4>ملاحظة آلية</h4><ul><li>تغطي اللاهوائيات (Bacteroides) ومعظم المكورات الموجبة (ما عدا MRSA والمكورات المعوية المقاومة).</li><li>لا تغطي: MRSA وAtypicals (Mycoplasma) والفطريات ومعظم Stenotrophomonas.</li><li>Aztreonam لا يغطي الموجبة واللاهوائية، فيُجمع غالباً مع Vancomycin وMetronidazole حسب الحالة.</li></ul>",
+   "en": "<ul><li>They bind to PBP and prevent cell wall synthesis (bactericidal)</li><li>Imipenem is broken down by the renal dipeptidase enzyme ← a kidney-toxic metabolite, so it is given with Cilastatin (an enzyme inhibitor) = Tienam</li><li>Meropenem is not affected by the enzyme and causes fewer seizures</li></ul><h4>Mechanism note</h4><ul><li>They cover anaerobes (Bacteroides) and most gram-positive cocci (except MRSA and resistant enterococci).</li><li>They do not cover: MRSA, atypicals (Mycoplasma), fungi, and most Stenotrophomonas.</li><li>Aztreonam does not cover gram-positives and anaerobes, so it is often combined with Vancomycin and Metronidazole depending on the case.</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>الآثار الجانبية</h4><ul><li><b>Aztreonam:</b> استعمار بميكروبات موجبة الجرام، التهاب القولون الغشائي الكاذب (Vancomycin فموي أو Metronidazole)</li><li><b>Carbapenems:</b> حساسية وتعارض جزئي مع البنسلين، اضطراب هضمي، <b>تشنجات (Seizures)</b></li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Imipenem بجرعات عالية أو في الفشل الكلوي أو أمراض المخ يزيد خطر التشنج. ويتفاعل Carbapenems مع Valproate فيقل مستواه بشدة، وتجنب الجمع.</p></div><h4>أعراض إضافية</h4><table><thead><tr><th>الأثر</th><th>التفاصيل</th></tr></thead><tbody><tr><td>حساسية</td><td>طفح، حكة، صدمة تحسسية (تعارض جزئي ~1% مع البنسلين)</td></tr><tr><td>هضمي</td><td>غثيان، قيء، إسهال، C. difficile</td></tr><tr><td>عصبي</td><td>ارتجاف، تخليط، تشنجات (Imipenem أكتر)</td></tr><tr><td>وريد</td><td>التهاب وريد موضع الحقن</td></tr><tr><td>مخبري</td><td>ارتفاع إنزيمات كبد، قلة صفائح أو كرات بيضاء، ارتفاع كرياتينين</td></tr></tbody></table>",
+   "en": "<h4>Side effects</h4><ul><li><b>Aztreonam:</b> colonization with gram-positive microbes, pseudomembranous colitis (oral Vancomycin or Metronidazole)</li><li><b>Carbapenems:</b> allergy and partial cross-reactivity with penicillin, digestive upset, <b>seizures</b></li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Imipenem at high doses or in renal failure or brain disease increases seizure risk. Carbapenems interact with Valproate and its level falls sharply, so avoid combining them.</p></div><h4>Additional symptoms</h4><table><thead><tr><th>Effect</th><th>Details</th></tr></thead><tbody><tr><td>Allergy</td><td>Rash, itching, anaphylactic shock (partial cross-reactivity ~1% with penicillin)</td></tr><tr><td>Digestive</td><td>Nausea, vomiting, diarrhea, C. difficile</td></tr><tr><td>Neurological</td><td>Tremor, confusion, seizures (more with Imipenem)</td></tr><tr><td>Vein</td><td>Phlebitis at the injection site</td></tr><tr><td>Laboratory</td><td>Elevated liver enzymes, low platelets or white blood cells, elevated creatinine</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<ul><li>كرياتينين وإخراج الكلى (تعديل الجرعة)</li><li>CBC ووظائف كبد</li><li>مزرعة وحساسية (Carbapenem-resistant organisms: بلّغ مكافحة العدوى)</li></ul><h4>المتابعة</h4><ul><li>وظائف كلى قبل البدء وأثناء العلاج (تعديل الجرعة حسب إخراج الكرياتينين).</li><li>CBC ووظائف كبد أسبوعياً في العلاج الطويل.</li><li>مستوى Valproate لو بيتناوله المريض (يقل حتى 60–100%).</li><li>مزرعة قبل أول جرعة (دم، بول، بلغم، جرح)، وتقييم الاستمرار بعد 48–72 ساعة (De-escalation).</li></ul>",
+   "en": "<ul><li>Creatinine and renal output (dose adjustment)</li><li>CBC and liver function</li><li>Culture and sensitivity (Carbapenem-resistant organisms: notify infection control)</li></ul><h4>Follow-up</h4><ul><li>Kidney function before starting and during treatment (dose adjustment according to creatinine clearance).</li><li>CBC and liver function weekly in long treatment.</li><li>Valproate level if the patient takes it (falls by up to 60–100%).</li><li>Culture before the first dose (blood, urine, sputum, wound), and assessment of continuation after 48–72 hours (De-escalation).</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>Aztreonam (Azactam)</h4><ul><li>β-Lactam مبيد، يرتبط بـPBP-3 ويقلل تصنيع جدار الخلية</li><li>مقاوم لإنزيم β-Lactamase</li><li>طيف ضيق: بكتيريا هوائية سالبة الجرام (Pseudomonas aeruginosa، N. gonorrhoeae، H. influenzae)، غير فعّال ضد موجبة الجرام أو اللاهوائيات</li><li>التوافر الحيوي 100% بعد العضل ويعتمد على الإخراج الكلوي</li><li>الاستخدام: عدوى سالبة الجرام خصوصاً لمرضى حساسية البنسلين</li><li>الجرعة: بالغ 0.5–2 جم كل 8–12 ساعة عضل أو وريد (حسب المرجع الأول: 1–2 جم كل 6–8 ساعات) · أطفال 30–50 مجم/كجم كل 6–8 ساعات</li><li>Azactam فيال 500 مجم و1 جم</li></ul><h4>Carbapenems</h4><ul><li>مثال: <b>Imipenem</b> نصف إلى 1 جم كل 6 ساعات؛ يُعدّل بالفشل الكلوي</li><li>β-Lactam مبيد يرتبط بـPBP-2</li><li>طيف واسع جداً: موجبة وسالبة، هوائية ولاهوائية، سواء في حالة نمو أو لا</li><li>يتعطل بإنزيم Dipeptidase الكلوي ← مستقلب سام للكلى؛ لذلك يُضاف Cilastatin (مثبط لإنزيم) = Imipenem + Cilastatin = Tienam</li><li>يُعطى وريدياً في العدوى المكتسبة من المستشفى الشديدة</li><li><b>Meropenem:</b> شبيه بـImipenem لكن: (1) لا يُستقلب بإنزيم Dipeptidase (2) أقل احتمالاً للتشنجات</li></ul><table><thead><tr><th>الاسم التجاري</th><th>الأشكال</th></tr></thead><tbody><tr><td>Meronem</td><td>فيال 500 و1000 مجم</td></tr><tr><td>Tienam IM</td><td>فيال 500 مجم (عضل)</td></tr><tr><td>Tienam IV</td><td>فيال 500 مجم (وريد)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الجرعات الحديثة: Meropenem 1 جم كل 8 ساعات (2 جم في السحايا)، Imipenem/Cilastatin 500 مجم كل 6 ساعات. التسريب 20–30 دقيقة (Imipenem) أو 15–30 (Meropenem). يُحتفظ بالكاربابينيمات للعدوى المقاومة لتقليل مقاومتها.</p></div><h4>جرعات مرجعية وتجهيز</h4><table><thead><tr><th>الدواء</th><th>الجرعة المرجعية</th><th>التسريب</th></tr></thead><tbody><tr><td>Meropenem</td><td>1 جم كل 8 ساعات (2 جم في السحايا)؛ طفل 20–40 مجم/كجم كل 8 ساعات</td><td>15–30 دقيقة (أو أطول للتسريب الممتد)</td></tr><tr><td>Imipenem/Cilastatin (Tienam IV)</td><td>500 مجم كل 6 ساعات (1 جم في الشديدة، حد 4 جم/يوم)</td><td>20–30 دقيقة (60 دقيقة لجرعة 1 جم)</td></tr><tr><td>Aztreonam</td><td>1–2 جم كل 8 ساعات (حتى 8 جم/يوم)</td><td>20–60 دقيقة وريدي، أو عضل</td></tr><tr><td>Ertapenem (للعلم)</td><td>1 جم مرة يومياً</td><td>30 دقيقة</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تعديل الجرعة للكلى</strong><p>الكرياتينين كليرنس أقل من 50 مل/د يتطلب خفض جرعة أو مباعدة الفترة؛ الصيدلي والطبيب يحددوا. لا تعطي Tienam IM وريدياً ولا العكس.</p></div><p>الجرعات مرجعية؛ بروتوكول المستشفى وأمر الطبيب هما المرجع.</p><!--e17--><h4>الكاربابينيمات: ملاحظات من الممارسة</h4>\n<ul><li>الطيف: قوي على موجبة وسالبة الجرام معاً؛ <b>أوسع وأقوى وأغلى مجموعة مضادات حيوية في السوق</b>.</li></ul>\n<table><thead><tr><th>الدواء</th><th>الاسم التجاري</th><th>الإعطاء</th></tr></thead><tbody>\n<tr><td>Imipenem (الأشهر)</td><td>Tienam: فيال 0.5 جم</td><td>حقنة وريد أو عضل كل 8 ساعات. يُحل الفيال في 10 مل محلول ملح ثم يُضاف على 100 مل محلول ملح ويُعطى على مدار نصف ساعة</td></tr>\n<tr><td>Meropenem</td><td>Meronem: فيال 0.5 و1 جم</td><td>وريد أو عضل كل 8 ساعات (حسب المتداول)</td></tr>\n<tr><td>Aztreonam (من مجموعة Monobactam)</td><td>Azactam: فيال 0.5 و1 جم</td><td>وريد أو عضل كل 8 ساعات</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Imipenem/Cilastatin القياسي كل 6 ساعات (500 مجم) والتسريب 20–30 دقيقة؛ Meropenem يُعطى وريدياً (التسريب أو الدفعة البطيئة)، والعضل ليس طريقة معتمدة له. التسجيل بحسب بروتوكول الصيدلية.</p></div>",
+   "en": "<h4>Aztreonam (Azactam)</h4><ul><li>A bactericidal β-Lactam, binds to PBP-3 and reduces cell wall synthesis</li><li>Resistant to the β-Lactamase enzyme</li><li>Narrow spectrum: aerobic gram-negative bacteria (Pseudomonas aeruginosa, N. gonorrhoeae, H. influenzae), ineffective against gram-positives or anaerobes</li><li>Bioavailability 100% after intramuscular injection and depends on renal excretion</li><li>Use: gram-negative infections especially for penicillin-allergic patients</li><li>Dose: adult 0.5–2 g every 8–12 hours IM or IV (some regimens use 1–2 g every 6–8 hours) · children 30–50 mg/kg every 6–8 hours</li><li>Azactam vials 500 mg and 1 g</li></ul><h4>Carbapenems</h4><ul><li>Example: <b>Imipenem</b> half to 1 g every 6 hours; adjusted in renal failure</li><li>A bactericidal β-Lactam that binds to PBP-2</li><li>Very broad spectrum: positive and negative, aerobic and anaerobic, whether growing or not</li><li>Broken down by the renal dipeptidase enzyme ← a kidney-toxic metabolite; therefore Cilastatin (an enzyme inhibitor) is added = Imipenem + Cilastatin = Tienam</li><li>Given intravenously in severe hospital-acquired infections</li><li><b>Meropenem:</b> similar to Imipenem but: (1) it is not metabolized by the dipeptidase enzyme (2) less likely to cause seizures</li></ul><table><thead><tr><th>Brand name</th><th>Forms</th></tr></thead><tbody><tr><td>Meronem</td><td>Vial 500 and 1000 mg</td></tr><tr><td>Tienam IM</td><td>Vial 500 mg (intramuscular)</td></tr><tr><td>Tienam IV</td><td>Vial 500 mg (intravenous)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Modern doses: Meropenem 1 g every 8 hours (2 g in meningitis), Imipenem/Cilastatin 500 mg every 6 hours. Infusion 20–30 minutes (Imipenem) or 15–30 (Meropenem). Carbapenems are reserved for resistant infections to reduce their resistance.</p></div><h4>Standard doses and preparation</h4><table><thead><tr><th>Drug</th><th>Standard dose</th><th>Infusion</th></tr></thead><tbody><tr><td>Meropenem</td><td>1 g every 8 hours (2 g in meningitis); child 20–40 mg/kg every 8 hours</td><td>15–30 minutes (or longer for extended infusion)</td></tr><tr><td>Imipenem/Cilastatin (Tienam IV)</td><td>500 mg every 6 hours (1 g in severe cases, limit 4 g/day)</td><td>20–30 minutes (60 minutes for a 1 g dose)</td></tr><tr><td>Aztreonam</td><td>1–2 g every 8 hours (up to 8 g/day)</td><td>20–60 minutes IV, or IM</td></tr><tr><td>Ertapenem (for information)</td><td>1 g once daily</td><td>30 minutes</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Dose adjustment for the kidneys</strong><p>Creatinine clearance below 50 mL/min requires reducing the dose or lengthening the interval; the pharmacist and doctor decide. Do not give Tienam IM intravenously or the reverse.</p></div><p>Doses are for guidance; the hospital protocol and the physician's order govern.</p><!--e17--><h4>Carbapenems: practice notes</h4>\n<ul><li>Spectrum: strong on gram-positive and gram-negative together; <b>the broadest, strongest, and most expensive group of antibiotics on the market</b>.</li></ul>\n<table><thead><tr><th>Drug</th><th>Brand name</th><th>Administration</th></tr></thead><tbody>\n<tr><td>Imipenem (the best known)</td><td>Tienam: 0.5 g vial</td><td>Injection IV or IM every 8 hours. The vial is dissolved in 10 mL of saline then added to 100 mL of saline and given over half an hour</td></tr>\n<tr><td>Meropenem</td><td>Meronem: 0.5 and 1 g vial</td><td>IV or IM every 8 hours (as commonly used)</td></tr>\n<tr><td>Aztreonam (from the Monobactam group)</td><td>Azactam: 0.5 and 1 g vial</td><td>IV or IM every 8 hours</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>Update</strong><p>Standard Imipenem/Cilastatin is every 6 hours (500 mg) with a 20–30 minute infusion; Meropenem is given intravenously (infusion or slow push), and intramuscular is not an approved route for it. Recording follows the pharmacy protocol.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل</strong><p>حساسية بنسلين؟ أمراض كلى؟ صرع؟ يأخذ Valproate؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الجرعة والتسريب</strong><p>تأكد من الجرعة حسب الكلى. Imipenem تسريب بطيء (غثيان أسرع معدل). Tienam IM مختلف عن IV: لا تخلط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راقب</strong><p>تشنجات، إسهال شديد، طفح، قلة بول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مقاومة</strong><p>أي ميكروب مقاوم للكاربابينيمات: عزل وبلاغ مكافحة العدوى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>تسجيل</strong><p>ساعات الجرعات وأي تشنج.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Ask</strong><p>Penicillin allergy? Kidney disease? Epilepsy? Taking Valproate?</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Dose and infusion</strong><p>Confirm the dose according to the kidneys. Imipenem slow infusion (nausea with a fast rate). Tienam IM is different from IV: do not mix them.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Monitor</strong><p>Seizures, severe diarrhea, rash, low urine.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Resistance</strong><p>Any carbapenem-resistant microbe: isolation and notify infection control.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Documentation</strong><p>Dose times and any seizure.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ لو:</strong><ul><li>تشنج أو ارتجاف</li><li>إسهال مائي شديد</li><li>صدمة تحسسية</li><li>قلة بول</li><li>تخليط أو ارتجاف (علامات تشنج وشيك)</li><li>طفح شديد أو تقشر جلد</li><li>نقص كرات الدم أو صفائح</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report if:</strong><ul><li>Seizure or tremor</li><li>Severe watery diarrhea</li><li>Anaphylactic shock</li><li>Low urine</li><li>Confusion or tremor (signs of an impending seizure)</li><li>Severe rash or skin peeling</li><li>Low blood cells or platelets</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>العلاج وريدي بالمستشفى ويتطلب الالتزام بالجرعات.</li><li>بلّغ عن أي حساسية بنسلين وأدوية الصرع التي تأخذها.</li><li>بلّغ لو إسهال شديد.</li><li>أخبر الفريق بأي دواء تأخذه (خصوصاً أدوية الصرع).</li><li>أعراض مثل طفح أو ضيق نفس أو تورم الوجه: بلّغ فوراً.</li><li>كمّل المدة التي يحددها الطبيب فقط، ولا تتناول مضادات حيوية بدون وصفة.</li></ul>",
+   "en": "<ul><li>The treatment is intravenous in the hospital and requires adherence to doses.</li><li>Report any penicillin allergy and the epilepsy drugs you take.</li><li>Report if there is severe diarrhea.</li><li>Tell the team about any drug you take (especially epilepsy drugs).</li><li>Symptoms such as rash, shortness of breath, or facial swelling: report immediately.</li><li>Complete only the duration the doctor specifies, and do not take antibiotics without a prescription.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "Aztreonam: سالبة الجرام الهوائية فقط، مناسب لحساسية البنسلين",
+   "Imipenem+Cilastatin (Tienam): أوسع طيف",
+   "Meropenem لا يُستقلب بالإنزيم وأقل تشنجاً",
+   "Carbapenems للعدوى المستشفيات الشديدة",
+   "خطر التشنجات والتداخل مع Valproate",
+   "عدل الجرعة بحسب الكلى"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>مجموعتان من مضادات β-Lactam القوية للمستشفيات: <b>المونوباكتامات (Monobactams)</b> مثل Aztreonam، و<b>الكاربابينيمات (Carbapenems)</b> مثل Imipenem وMeropenem. بتُعطى بالوريد في العدوى الشديدة المكتسبة من المستشفى (Nosocomial).</p><table><thead><tr><th></th><th>Monobactam (Aztreonam)</th><th>Carbapenem (Imipenem/Meropenem)</th></tr></thead><tbody><tr><td>الارتباط</td><td>PBP-3</td><td>PBP-2</td></tr><tr><td>الطيف</td><td>ضيق: هوائية سالبة الجرام (منها Pseudomonas وN. gonorrhoeae وH. influenzae)</td><td>واسع جداً: موجبة وسالبة، هوائية ولاهوائية</td></tr><tr><td>الفاعلية ضد موجبة/لاهوائية</td><td>لا</td><td>نعم</td></tr><tr><td>حساسية البنسلين</td><td>مناسب لمرضى حساسية البنسلين</td><td>تعارض متقاطع جزئي</td></tr><tr><td>الأسماء</td><td>Azactam</td><td>Tienam · Meronem</td></tr></tbody></table><div class=\"cs-stats\"><div><b>IV فقط</b><span>طريق الإعطاء</span></div><div><b>كلية</b><span>تعديل الجرعة</span></div><div><b>Valproate</b><span>تداخل خطير</span></div></div><div class=\"cs-box cs-info\"><strong>متى نستخدمها؟</strong><p>التهابات شديدة بكتيريا مقاومة (ESBL، Pseudomonas، Acinetobacter) أو مختلطة، أو إنتان بالمستشفى بعد مزرعة وحساسية. الاستخدام الواسع بدون داعي يزيد المقاومة.</p></div>\n<p>ملخص عملي بالأسماء التجارية وقواعد الأمان (الأطفال والحمل وG6PD): <a href=\"/diseases/dis-565\">دليل عملي للمضادات الحيوية</a>.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>بيرتبطوا بـPBP فيمنعوا تصنيع جدار الخلية (مبيدة)</li><li>Imipenem بيتعطل بإنزيم Dipeptidase الكلوي ← مستقلب سام للكلى، فبيُعطى مع Cilastatin (مثبط الإنزيم) = Tienam</li><li>Meropenem لا يتأثر بالإنزيم ويسبب تشنجات أقل</li></ul><h4>ملاحظة آلية</h4><ul><li>تغطي اللاهوائيات (Bacteroides) ومعظم المكورات الموجبة (ما عدا MRSA والمكورات المعوية المقاومة).</li><li>لا تغطي: MRSA وAtypicals (Mycoplasma) والفطريات ومعظم Stenotrophomonas.</li><li>Aztreonam لا يغطي الموجبة واللاهوائية، فيُجمع غالباً مع Vancomycin وMetronidazole حسب الحالة.</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>الآثار الجانبية</h4><ul><li><b>Aztreonam:</b> استعمار بميكروبات موجبة الجرام، التهاب القولون الغشائي الكاذب (Vancomycin فموي أو Metronidazole)</li><li><b>Carbapenems:</b> حساسية وتعارض جزئي مع البنسلين، اضطراب هضمي، <b>تشنجات (Seizures)</b></li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Imipenem بجرعات عالية أو في الفشل الكلوي أو أمراض المخ يزيد خطر التشنج. ويتفاعل Carbapenems مع Valproate فيقل مستواه بشدة، وتجنب الجمع.</p></div><h4>أعراض إضافية</h4><table><thead><tr><th>الأثر</th><th>التفاصيل</th></tr></thead><tbody><tr><td>حساسية</td><td>طفح، حكة، صدمة تحسسية (تعارض جزئي ~1% مع البنسلين)</td></tr><tr><td>هضمي</td><td>غثيان، قيء، إسهال، C. difficile</td></tr><tr><td>عصبي</td><td>ارتجاف، تخليط، تشنجات (Imipenem أكتر)</td></tr><tr><td>وريد</td><td>التهاب وريد موضع الحقن</td></tr><tr><td>مخبري</td><td>ارتفاع إنزيمات كبد، قلة صفائح أو كرات بيضاء، ارتفاع كرياتينين</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<ul><li>كرياتينين وإخراج الكلى (تعديل الجرعة)</li><li>CBC ووظائف كبد</li><li>مزرعة وحساسية (Carbapenem-resistant organisms: بلّغ مكافحة العدوى)</li></ul><h4>المتابعة</h4><ul><li>وظائف كلى قبل البدء وأثناء العلاج (تعديل الجرعة حسب إخراج الكرياتينين).</li><li>CBC ووظائف كبد أسبوعياً في العلاج الطويل.</li><li>مستوى Valproate لو بيتناوله المريض (يقل حتى 60–100%).</li><li>مزرعة قبل أول جرعة (دم، بول، بلغم، جرح)، وتقييم الاستمرار بعد 48–72 ساعة (De-escalation).</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>Aztreonam (Azactam)</h4><ul><li>β-Lactam مبيد، يرتبط بـPBP-3 ويقلل تصنيع جدار الخلية</li><li>مقاوم لإنزيم β-Lactamase</li><li>طيف ضيق: بكتيريا هوائية سالبة الجرام (Pseudomonas aeruginosa، N. gonorrhoeae، H. influenzae)، غير فعّال ضد موجبة الجرام أو اللاهوائيات</li><li>التوافر الحيوي 100% بعد العضل ويعتمد على الإخراج الكلوي</li><li>الاستخدام: عدوى سالبة الجرام خصوصاً لمرضى حساسية البنسلين</li><li>الجرعة: بالغ 0.5–2 جم كل 8–12 ساعة عضل أو وريد (حسب المرجع الأول: 1–2 جم كل 6–8 ساعات) · أطفال 30–50 مجم/كجم كل 6–8 ساعات</li><li>Azactam فيال 500 مجم و1 جم</li></ul><h4>Carbapenems</h4><ul><li>مثال: <b>Imipenem</b> نصف إلى 1 جم كل 6 ساعات؛ يُعدّل بالفشل الكلوي</li><li>β-Lactam مبيد يرتبط بـPBP-2</li><li>طيف واسع جداً: موجبة وسالبة، هوائية ولاهوائية، سواء في حالة نمو أو لا</li><li>يتعطل بإنزيم Dipeptidase الكلوي ← مستقلب سام للكلى؛ لذلك يُضاف Cilastatin (مثبط لإنزيم) = Imipenem + Cilastatin = Tienam</li><li>يُعطى وريدياً في العدوى المكتسبة من المستشفى الشديدة</li><li><b>Meropenem:</b> شبيه بـImipenem لكن: (1) لا يُستقلب بإنزيم Dipeptidase (2) أقل احتمالاً للتشنجات</li></ul><table><thead><tr><th>الاسم التجاري</th><th>الأشكال</th></tr></thead><tbody><tr><td>Meronem</td><td>فيال 500 و1000 مجم</td></tr><tr><td>Tienam IM</td><td>فيال 500 مجم (عضل)</td></tr><tr><td>Tienam IV</td><td>فيال 500 مجم (وريد)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الجرعات الحديثة: Meropenem 1 جم كل 8 ساعات (2 جم في السحايا)، Imipenem/Cilastatin 500 مجم كل 6 ساعات. التسريب 20–30 دقيقة (Imipenem) أو 15–30 (Meropenem). يُحتفظ بالكاربابينيمات للعدوى المقاومة لتقليل مقاومتها.</p></div><h4>جرعات مرجعية وتجهيز</h4><table><thead><tr><th>الدواء</th><th>الجرعة المرجعية</th><th>التسريب</th></tr></thead><tbody><tr><td>Meropenem</td><td>1 جم كل 8 ساعات (2 جم في السحايا)؛ طفل 20–40 مجم/كجم كل 8 ساعات</td><td>15–30 دقيقة (أو أطول للتسريب الممتد)</td></tr><tr><td>Imipenem/Cilastatin (Tienam IV)</td><td>500 مجم كل 6 ساعات (1 جم في الشديدة، حد 4 جم/يوم)</td><td>20–30 دقيقة (60 دقيقة لجرعة 1 جم)</td></tr><tr><td>Aztreonam</td><td>1–2 جم كل 8 ساعات (حتى 8 جم/يوم)</td><td>20–60 دقيقة وريدي، أو عضل</td></tr><tr><td>Ertapenem (للعلم)</td><td>1 جم مرة يومياً</td><td>30 دقيقة</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تعديل الجرعة للكلى</strong><p>الكرياتينين كليرنس أقل من 50 مل/د يتطلب خفض جرعة أو مباعدة الفترة؛ الصيدلي والطبيب يحددوا. لا تعطي Tienam IM وريدياً ولا العكس.</p></div><p>الجرعات مرجعية؛ بروتوكول المستشفى وأمر الطبيب هما المرجع.</p><!--e17--><h4>الكاربابينيمات: ملاحظات من الممارسة</h4>\n<ul><li>الطيف: قوي على موجبة وسالبة الجرام معاً؛ <b>أوسع وأقوى وأغلى مجموعة مضادات حيوية في السوق</b>.</li></ul>\n<table><thead><tr><th>الدواء</th><th>الاسم التجاري</th><th>الإعطاء</th></tr></thead><tbody>\n<tr><td>Imipenem (الأشهر)</td><td>Tienam: فيال 0.5 جم</td><td>حقنة وريد أو عضل كل 8 ساعات. يُحل الفيال في 10 مل محلول ملح ثم يُضاف على 100 مل محلول ملح ويُعطى على مدار نصف ساعة</td></tr>\n<tr><td>Meropenem</td><td>Meronem: فيال 0.5 و1 جم</td><td>وريد أو عضل كل 8 ساعات (حسب المتداول)</td></tr>\n<tr><td>Aztreonam (من مجموعة Monobactam)</td><td>Azactam: فيال 0.5 و1 جم</td><td>وريد أو عضل كل 8 ساعات</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Imipenem/Cilastatin القياسي كل 6 ساعات (500 مجم) والتسريب 20–30 دقيقة؛ Meropenem يُعطى وريدياً (التسريب أو الدفعة البطيئة)، والعضل ليس طريقة معتمدة له. التسجيل بحسب بروتوكول الصيدلية.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل</strong><p>حساسية بنسلين؟ أمراض كلى؟ صرع؟ يأخذ Valproate؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الجرعة والتسريب</strong><p>تأكد من الجرعة حسب الكلى. Imipenem تسريب بطيء (غثيان أسرع معدل). Tienam IM مختلف عن IV: لا تخلط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راقب</strong><p>تشنجات، إسهال شديد، طفح، قلة بول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مقاومة</strong><p>أي ميكروب مقاوم للكاربابينيمات: عزل وبلاغ مكافحة العدوى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>تسجيل</strong><p>ساعات الجرعات وأي تشنج.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ لو:</strong><ul><li>تشنج أو ارتجاف</li><li>إسهال مائي شديد</li><li>صدمة تحسسية</li><li>قلة بول</li><li>تخليط أو ارتجاف (علامات تشنج وشيك)</li><li>طفح شديد أو تقشر جلد</li><li>نقص كرات الدم أو صفائح</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>العلاج وريدي بالمستشفى ويتطلب الالتزام بالجرعات.</li><li>بلّغ عن أي حساسية بنسلين وأدوية الصرع التي تأخذها.</li><li>بلّغ لو إسهال شديد.</li><li>أخبر الفريق بأي دواء تأخذه (خصوصاً أدوية الصرع).</li><li>أعراض مثل طفح أو ضيق نفس أو تورم الوجه: بلّغ فوراً.</li><li>كمّل المدة التي يحددها الطبيب فقط، ولا تتناول مضادات حيوية بدون وصفة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "Aztreonam: سالبة الجرام الهوائية فقط، مناسب لحساسية البنسلين",
-      "Imipenem+Cilastatin (Tienam): أوسع طيف",
-      "Meropenem لا يُستقلب بالإنزيم وأقل تشنجاً",
-      "Carbapenems للعدوى المستشفيات الشديدة",
-      "خطر التشنجات والتداخل مع Valproate",
-      "عدل الجرعة بحسب الكلى"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "لماذا يُضاف Cilastatin لـImipenem؟"
-      },
-      "options": [
-        {
-          "ar": "لمنع تعطيله بإنزيم الكلى"
-        },
-        {
-          "ar": "لتوسيع الطيف"
-        },
-        {
-          "ar": "لتقليل الألم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يمنع تكوين مستقلب سام."
-      }
-    },
-    {
-      "q": {
-        "ar": "Aztreonam لا يغطي:"
-      },
-      "options": [
-        {
-          "ar": "Pseudomonas"
-        },
-        {
-          "ar": "موجبة الجرام واللاهوائيات"
-        },
-        {
-          "ar": "H. influenzae"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "طيف ضيق."
-      }
-    },
-    {
-      "q": {
-        "ar": "أقل تشنجاً بين الكاربابينيمات:"
-      },
-      "options": [
-        {
-          "ar": "Meropenem"
-        },
-        {
-          "ar": "Imipenem"
-        },
-        {
-          "ar": "كلاهما"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لا يتحلل بالإنزيم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء ينخفض مستواه بشدة مع الكاربابينيمات؟"
-      },
-      "options": [
-        {
-          "ar": "Valproate"
-        },
-        {
-          "ar": "Paracetamol"
-        },
-        {
-          "ar": "Insulin"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تفاعل خطير يزيد خطر التشنج."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "BNF: Aztreonam; Meropenem; Imipenem with cilastatin"
-    },
-    {
-      "title": "Sanford Guide: Carbapenems"
-    },
-    {
-      "title": "StatPearls: Carbapenems; Aztreonam"
-    },
-    {
-      "title": "WHO AWaRe antibiotic book: carbapenems (Reserve/Watch)"
-    }
+  "en": [
+   "Aztreonam: aerobic gram-negatives only, suitable for penicillin allergy",
+   "Imipenem+Cilastatin (Tienam): the broadest spectrum",
+   "Meropenem is not metabolized by the enzyme and causes fewer seizures",
+   "Carbapenems for severe hospital infections",
+   "Risk of seizures and interaction with Valproate",
+   "Adjust the dose according to the kidneys"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "لماذا يُضاف Cilastatin لـImipenem؟",
+    "en": "Why is Cilastatin added to Imipenem?"
+   },
+   "options": [
+    {
+     "ar": "لمنع تعطيله بإنزيم الكلى",
+     "en": "To prevent its breakdown by the kidney enzyme"
+    },
+    {
+     "ar": "لتوسيع الطيف",
+     "en": "To broaden the spectrum"
+    },
+    {
+     "ar": "لتقليل الألم",
+     "en": "To reduce pain"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يمنع تكوين مستقلب سام.",
+    "en": "It prevents formation of a toxic metabolite."
+   }
+  },
+  {
+   "q": {
+    "ar": "Aztreonam لا يغطي:",
+    "en": "Aztreonam does not cover:"
+   },
+   "options": [
+    {
+     "ar": "Pseudomonas",
+     "en": "Pseudomonas"
+    },
+    {
+     "ar": "موجبة الجرام واللاهوائيات",
+     "en": "Gram-positives and anaerobes"
+    },
+    {
+     "ar": "H. influenzae",
+     "en": "H. influenzae"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "طيف ضيق.",
+    "en": "Narrow spectrum."
+   }
+  },
+  {
+   "q": {
+    "ar": "أقل تشنجاً بين الكاربابينيمات:",
+    "en": "Least seizure-causing among the carbapenems:"
+   },
+   "options": [
+    {
+     "ar": "Meropenem",
+     "en": "Meropenem"
+    },
+    {
+     "ar": "Imipenem",
+     "en": "Imipenem"
+    },
+    {
+     "ar": "كلاهما",
+     "en": "Both"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لا يتحلل بالإنزيم.",
+    "en": "It is not broken down by the enzyme."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء ينخفض مستواه بشدة مع الكاربابينيمات؟",
+    "en": "Which drug's level falls sharply with carbapenems?"
+   },
+   "options": [
+    {
+     "ar": "Valproate",
+     "en": "Valproate"
+    },
+    {
+     "ar": "Paracetamol",
+     "en": "Paracetamol"
+    },
+    {
+     "ar": "Insulin",
+     "en": "Insulin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تفاعل خطير يزيد خطر التشنج.",
+    "en": "A dangerous interaction that increases seizure risk."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "BNF: Aztreonam; Meropenem; Imipenem with cilastatin"
+  },
+  {
+   "title": "Sanford Guide: Carbapenems"
+  },
+  {
+   "title": "StatPearls: Carbapenems; Aztreonam"
+  },
+  {
+   "title": "WHO AWaRe antibiotic book: carbapenems (Reserve/Watch)"
+  }
+ ]
 }

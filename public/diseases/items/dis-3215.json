@@ -1,160 +1,202 @@
 {
-  "id": "dis-3215",
-  "num": 3215,
-  "system": "infect",
-  "icon": "🎗️",
-  "level": 3,
-  "title": {
-    "ar": "مضادات الفيروسات القهقرية (ARV): فئات الأدوية والتداخلات والتمريض",
-    "en": "Antiretrovirals (HIV): Classes, Interactions & Nursing"
+ "id": "dis-3215",
+ "num": 3215,
+ "system": "infect",
+ "icon": "🎗️",
+ "level": 3,
+ "title": {
+  "ar": "مضادات الفيروسات القهقرية (ARV): فئات الأدوية والتداخلات والتمريض",
+  "en": "Antiretrovirals (HIV): Classes, Interactions & Nursing"
+ },
+ "teaser": {
+  "ar": "خمس فئات تعمل على مراحل مختلفة من دورة HIV، وأهم موانعها وتداخلاتها (ritonavir، St John's wort، sildenafil، حبوب منع الحمل) والعدوى الانتهازية.",
+  "en": "Five classes acting at different stages of the HIV cycle, and their most important contraindications and interactions (ritonavir, St John's wort, sildenafil, birth control pills) and opportunistic infections."
+ },
+ "chips": [
+  {
+   "ar": "HIV",
+   "en": "HIV"
   },
-  "teaser": {
-    "ar": "خمس فئات تعمل على مراحل مختلفة من دورة HIV، وأهم موانعها وتداخلاتها (ritonavir، St John's wort، sildenafil، حبوب منع الحمل) والعدوى الانتهازية."
+  {
+   "ar": "protease",
+   "en": "protease"
   },
-  "chips": [
-    {
-      "ar": "HIV"
-    },
-    {
-      "ar": "protease"
-    },
-    {
-      "ar": "NRTI"
-    },
-    {
-      "ar": "ritonavir"
-    }
+  {
+   "ar": "NRTI",
+   "en": "NRTI"
+  },
+  {
+   "ar": "ritonavir",
+   "en": "ritonavir"
+  }
+ ],
+ "target": "pharmacology",
+ "sections": {
+  "overview": {
+   "ar": "<p>تُستعمل الأدوية المضادة للفيروسات القهقرية في عدوى HIV/الإيدز. التفاصيل المرضية في <a href=\"/diseases/dis-202\">الإيدز</a> وأدوية الفيروسات العامة في <a href=\"/diseases/dis-212\">مضادات الفيروسات</a>.</p>[[slot:dis-3215-art|فئات ARV — رسم من إعداد الموقع|/diseases/img/dis-3215-art.svg]]<div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div>",
+   "en": "<p>Antiretroviral drugs are used in HIV/AIDS infection. The disease details are in <a href=\"/diseases/dis-202\">AIDS</a> and general antiviral drugs in <a href=\"/diseases/dis-212\">Antivirals</a>.</p>[[slot:dis-3215-art|ARV classes — illustration prepared by the site|/diseases/img/dis-3215-art.svg]]<div class=\"cs-box cs-info\"><strong>Note:</strong> Doses and numbers are for learning; always verify with the physician/pharmacist (and the leaflet) before giving.</div>"
+  },
+  "signs": {
+   "ar": "<ul><li>آثار: غثيان، قيء، إسهال، تغير التذوق، طفح، خدر وتنميل حول الفم أو الأطراف.</li><li>راقب علامات العدوى: حمى (ولو خفيفة)، وعكة، التهاب حلق، خمول.</li></ul>",
+   "en": "<ul><li>Effects: nausea, vomiting, diarrhea, taste change, rash, numbness and tingling around the mouth or limbs.</li><li>Watch for signs of infection: fever (even mild), malaise, sore throat, lethargy.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<table><thead><tr><th>البند</th><th>التفصيل</th></tr></thead><tbody><tr><td>الاستعمال</td><td>علاج عدوى HIV/AIDS</td></tr><tr><td>zidovudine (Retrovir)</td><td>HIV ومنع انتقال العدوى من الأم للجنين</td></tr><tr><td>lamivudine (3TC, Epivir)</td><td>HIV، والتهاب الكبد B المزمن (Epivir-HB)</td></tr><tr><td>تداخلات</td><td>مضادات الفطريات ترفع مستوى ARV؛ clarithromycin يرفع مستوى كليهما؛ sildenafil تزداد آثاره؛ مسكنات الأفيون مع ritonavir خطر سمّية؛ مضادات التخثر ومضادات الصرع ومضادات الطفيليات تقل فعاليتها مع ritonavir؛ حبوب منع الحمل تقل فعاليتها</td></tr><tr><td>موانع</td><td>تحسس، رضاعة، وتجنب مع cisapride وpimozide وtriazolam وmidazolam ومشتقات ergot؛ ritonavir مع bupropion وzolpidem ومضادات اضطراب النظم</td></tr><tr><td>أعشاب</td><td>St John's wort يضعف فعالية مثبطات البروتياز؛ على المريض إبلاغ الطبيب بكل مكمل</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div><h4>آلية عمل الفئات الخمس لمضادات الفيروسات القهقرية</h4><table><thead><tr><th>الفئة</th><th>طريقة العمل</th></tr></thead><tbody>\n<tr><td>مثبطات البروتياز (-avir)</td><td>تحجب إنزيم البروتياز فلا تنضج الجسيمات الفيروسية الجديدة</td></tr>\n<tr><td>مثبطات الإنزيم الناسخ العكسي النيوكليوزيدية (NRTIs: zidovudine, lamivudine)</td><td>تحجب الإنزيم الناسخ العكسي فلا يتحول RNA الفيروس إلى DNA ولا تتكون نسخ جديدة داخل الخلية</td></tr>\n<tr><td>مثبطات الناسخ العكسي غير النيوكليوزيدية (NNRTIs)</td><td>ترتبط بالإنزيم نفسه فتعطّل صنع DNA الفيروسي</td></tr>\n<tr><td>مثبطات الدخول (Entry inhibitors)</td><td>تمنع التصاق الفيروس بالخلية المضيفة أو اندماجه معها في البداية</td></tr>\n<tr><td>مثبطات الإنتيجراز (Integrase inhibitors)</td><td>تمنع إدخال المادة الوراثية للفيروس في DNA الخلية</td></tr></tbody></table>\n<ul><li>الأدوية لا تشفي من العدوى الفيروسية بل تخفف المرض وتقلل انتقاله؛ ولا تمنع نقل العدوى للآخرين، فتبقى احتياطات العدوى قائمة.</li><li>ممنوعة عند الرضاعة، وعند تناول cisapride أو pimozide أو triazolam أو midazolam أو مشتقات الإرجوت؛ وritonavir يُمنع مع bupropion وzolpidem ومضادات اضطراب النظم.</li><li>بعض الأدوية تسبب حساسية ضوئية: واقي شمس وملابس واقية.</li><li>مع ritonavir: مضادات التخثر ومضادات التشنج ومضادات الطفيليات تقل فعاليتها، وحبوب منع الحمل تقل فعاليتها.</li></ul>",
+   "en": "<table><thead><tr><th>Item</th><th>Details</th></tr></thead><tbody><tr><td>Use</td><td>Treatment of HIV/AIDS infection</td></tr><tr><td>zidovudine (Retrovir)</td><td>HIV and preventing transmission from mother to fetus</td></tr><tr><td>lamivudine (3TC, Epivir)</td><td>HIV, and chronic hepatitis B (Epivir-HB)</td></tr><tr><td>Interactions</td><td>Antifungals raise ARV levels; clarithromycin raises the level of both; sildenafil's effects increase; opioid analgesics with ritonavir risk toxicity; anticoagulants, antiepileptics, and antiparasitics lose effectiveness with ritonavir; birth control pills lose effectiveness</td></tr><tr><td>Contraindications</td><td>Hypersensitivity, breastfeeding, and avoid with cisapride, pimozide, triazolam, midazolam, and ergot derivatives; ritonavir with bupropion, zolpidem, and antiarrhythmics</td></tr><tr><td>Herbs</td><td>St John's wort weakens the effect of protease inhibitors; the patient must tell the doctor about every supplement</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Note:</strong> Doses and numbers are for learning; always verify with the physician/pharmacist (and the leaflet) before giving.</div><h4>Mechanism of the five classes of antiretrovirals</h4><table><thead><tr><th>Class</th><th>How it works</th></tr></thead><tbody>\n<tr><td>Protease inhibitors (-avir)</td><td>Block the protease enzyme so new viral particles do not mature</td></tr>\n<tr><td>Nucleoside reverse transcriptase inhibitors (NRTIs: zidovudine, lamivudine)</td><td>Block reverse transcriptase so the virus RNA is not converted to DNA and no new copies form inside the cell</td></tr>\n<tr><td>Non-nucleoside reverse transcriptase inhibitors (NNRTIs)</td><td>Bind to the enzyme itself and disrupt making viral DNA</td></tr>\n<tr><td>Entry inhibitors (Entry inhibitors)</td><td>Prevent the virus from attaching to or fusing with the host cell at the start</td></tr>\n<tr><td>Integrase inhibitors (Integrase inhibitors)</td><td>Prevent insertion of the virus's genetic material into the cell's DNA</td></tr></tbody></table>\n<ul><li>The drugs do not cure the viral infection but reduce the disease and its transmission; they do not prevent passing the infection to others, so infection precautions remain.</li><li>Forbidden in breastfeeding, and when taking cisapride, pimozide, triazolam, midazolam, or ergot derivatives; and ritonavir is forbidden with bupropion, zolpidem, and antiarrhythmics.</li><li>Some drugs cause photosensitivity: sunscreen and protective clothing.</li><li>With ritonavir: anticoagulants, anticonvulsants, and antiparasitics lose effectiveness, and birth control pills lose effectiveness.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<ol><li>قيّم علامات العدوى الانتهازية في كل زيارة.</li><li>غسل الأيدي لجميع المخالطين.</li><li>راجع كل أدوية المريض ومكملاته قبل البدء.</li><li>راقب الكبد عند إيقاف علاج التهاب كبد B.</li><li>التزام صارم بالجرعات.</li></ol>",
+   "en": "<ol><li>Assess signs of opportunistic infection at every visit.</li><li>Hand washing for all contacts.</li><li>Review all the patient's drugs and supplements before starting.</li><li>Monitor the liver when stopping hepatitis B treatment.</li><li>Strict adherence to doses.</li></ol>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><ul><li>حمى أو تعب أو التهاب حلق جديد</li><li>طفح شديد</li><li>اصفرار الجلد أو ألم كبد بعد إيقاف دواء B</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><ul><li>New fever, tiredness, or sore throat</li><li>Severe rash</li><li>Yellow skin or liver pain after stopping a hepatitis B drug</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>لا توقف الدواء من تلقاء نفسك</li><li>لا تتناول St John's wort</li><li>وسيلة إضافية لمنع الحمل مع ritonavir</li><li>أخبر الطبيب بأي دواء جديد</li></ul>",
+   "en": "<ul><li>Do not stop the drug on your own</li><li>Do not take St John's wort</li><li>An additional birth control method with ritonavir</li><li>Tell the doctor about any new drug</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "ARV لا تشفي لكنها تكبح الفيروس",
+   "المريض معرّض لعدوى انتهازية: راقب الحرارة حتى الخفيفة والتعب والتهاب الحلق",
+   "St John's wort يقلل فعالية مثبطات البروتياز",
+   "ritonavir يقلل فعالية حبوب منع الحمل ويتعارض مع bupropion وzolpidem ومضادات اضطراب النظم",
+   "إيقاف أدوية التهاب الكبد B قد يؤدي لانتكاسة حادة"
   ],
-  "target": "pharmacology",
-  "sections": {
-    "overview": {
-      "ar": "<p>تُستعمل الأدوية المضادة للفيروسات القهقرية في عدوى HIV/الإيدز. التفاصيل المرضية في <a href=\"/diseases/dis-202\">الإيدز</a> وأدوية الفيروسات العامة في <a href=\"/diseases/dis-212\">مضادات الفيروسات</a>.</p>[[slot:dis-3215-art|فئات ARV — رسم من إعداد الموقع|/diseases/img/dis-3215-art.svg]]<div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div>"
-    },
-    "signs": {
-      "ar": "<ul><li>آثار: غثيان، قيء، إسهال، تغير التذوق، طفح، خدر وتنميل حول الفم أو الأطراف.</li><li>راقب علامات العدوى: حمى (ولو خفيفة)، وعكة، التهاب حلق، خمول.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<table><thead><tr><th>البند</th><th>التفصيل</th></tr></thead><tbody><tr><td>الاستعمال</td><td>علاج عدوى HIV/AIDS</td></tr><tr><td>zidovudine (Retrovir)</td><td>HIV ومنع انتقال العدوى من الأم للجنين</td></tr><tr><td>lamivudine (3TC, Epivir)</td><td>HIV، والتهاب الكبد B المزمن (Epivir-HB)</td></tr><tr><td>تداخلات</td><td>مضادات الفطريات ترفع مستوى ARV؛ clarithromycin يرفع مستوى كليهما؛ sildenafil تزداد آثاره؛ مسكنات الأفيون مع ritonavir خطر سمّية؛ مضادات التخثر ومضادات الصرع ومضادات الطفيليات تقل فعاليتها مع ritonavir؛ حبوب منع الحمل تقل فعاليتها</td></tr><tr><td>موانع</td><td>تحسس، رضاعة، وتجنب مع cisapride وpimozide وtriazolam وmidazolam ومشتقات ergot؛ ritonavir مع bupropion وzolpidem ومضادات اضطراب النظم</td></tr><tr><td>أعشاب</td><td>St John's wort يضعف فعالية مثبطات البروتياز؛ على المريض إبلاغ الطبيب بكل مكمل</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div><h4>آلية عمل الفئات الخمس لمضادات الفيروسات القهقرية</h4><table><thead><tr><th>الفئة</th><th>طريقة العمل</th></tr></thead><tbody>\n<tr><td>مثبطات البروتياز (-avir)</td><td>تحجب إنزيم البروتياز فلا تنضج الجسيمات الفيروسية الجديدة</td></tr>\n<tr><td>مثبطات الإنزيم الناسخ العكسي النيوكليوزيدية (NRTIs: zidovudine, lamivudine)</td><td>تحجب الإنزيم الناسخ العكسي فلا يتحول RNA الفيروس إلى DNA ولا تتكون نسخ جديدة داخل الخلية</td></tr>\n<tr><td>مثبطات الناسخ العكسي غير النيوكليوزيدية (NNRTIs)</td><td>ترتبط بالإنزيم نفسه فتعطّل صنع DNA الفيروسي</td></tr>\n<tr><td>مثبطات الدخول (Entry inhibitors)</td><td>تمنع التصاق الفيروس بالخلية المضيفة أو اندماجه معها في البداية</td></tr>\n<tr><td>مثبطات الإنتيجراز (Integrase inhibitors)</td><td>تمنع إدخال المادة الوراثية للفيروس في DNA الخلية</td></tr></tbody></table>\n<ul><li>الأدوية لا تشفي من العدوى الفيروسية بل تخفف المرض وتقلل انتقاله؛ ولا تمنع نقل العدوى للآخرين، فتبقى احتياطات العدوى قائمة.</li><li>ممنوعة عند الرضاعة، وعند تناول cisapride أو pimozide أو triazolam أو midazolam أو مشتقات الإرجوت؛ وritonavir يُمنع مع bupropion وzolpidem ومضادات اضطراب النظم.</li><li>بعض الأدوية تسبب حساسية ضوئية: واقي شمس وملابس واقية.</li><li>مع ritonavir: مضادات التخثر ومضادات التشنج ومضادات الطفيليات تقل فعاليتها، وحبوب منع الحمل تقل فعاليتها.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<ol><li>قيّم علامات العدوى الانتهازية في كل زيارة.</li><li>غسل الأيدي لجميع المخالطين.</li><li>راجع كل أدوية المريض ومكملاته قبل البدء.</li><li>راقب الكبد عند إيقاف علاج التهاب كبد B.</li><li>التزام صارم بالجرعات.</li></ol>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><ul><li>حمى أو تعب أو التهاب حلق جديد</li><li>طفح شديد</li><li>اصفرار الجلد أو ألم كبد بعد إيقاف دواء B</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>لا توقف الدواء من تلقاء نفسك</li><li>لا تتناول St John's wort</li><li>وسيلة إضافية لمنع الحمل مع ritonavir</li><li>أخبر الطبيب بأي دواء جديد</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "ARV لا تشفي لكنها تكبح الفيروس",
-      "المريض معرّض لعدوى انتهازية: راقب الحرارة حتى الخفيفة والتعب والتهاب الحلق",
-      "St John's wort يقلل فعالية مثبطات البروتياز",
-      "ritonavir يقلل فعالية حبوب منع الحمل ويتعارض مع bupropion وzolpidem ومضادات اضطراب النظم",
-      "إيقاف أدوية التهاب الكبد B قد يؤدي لانتكاسة حادة"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي عشب يقلل فعالية مثبطات البروتياز؟"
-      },
-      "options": [
-        {
-          "ar": "St John's wort"
-        },
-        {
-          "ar": "الزنجبيل"
-        },
-        {
-          "ar": "النعناع"
-        },
-        {
-          "ar": "الحلبة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يستحث أيض الدواء فيقلل مستواه."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تتطلب إبلاغًا عاجلًا لمريض HIV على ARV؟"
-      },
-      "options": [
-        {
-          "ar": "حمى خفيفة جديدة مع وعكة"
-        },
-        {
-          "ar": "عطس واحد"
-        },
-        {
-          "ar": "شعور بالجوع"
-        },
-        {
-          "ar": "تثاؤب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "حتى الحمى الخفيفة قد تعني عدوى انتهازية."
-      }
-    },
-    {
-      "q": {
-        "ar": "مثبطات البروتياز تعمل بـ:"
-      },
-      "options": [
-        {
-          "ar": "منع نضج الفيروسات الجديدة"
-        },
-        {
-          "ar": "حجب الدخول للخلية"
-        },
-        {
-          "ar": "منع تكوين الأجسام المضادة"
-        },
-        {
-          "ar": "قتل الخلية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تعطّل إنزيم البروتياز فلا تنضج الجسيمات."
-      }
-    },
-    {
-      "q": {
-        "ar": "إيقاف أدوية علاج التهاب الكبد B قد يسبب:"
-      },
-      "options": [
-        {
-          "ar": "انتكاسة حادة للمرض"
-        },
-        {
-          "ar": "شفاء"
-        },
-        {
-          "ar": "بطء قلب"
-        },
-        {
-          "ar": "سعال"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قد يحدث تفاقم حاد في بعض المرضى فتراقب الكبد."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "British National Formulary (BNF)"
-    },
-    {
-      "title": "Egyptian Drug Authority (EDA) drug information leaflets"
-    }
+  "en": [
+   "ARVs do not cure but suppress the virus",
+   "The patient is prone to opportunistic infection: watch for fever, even mild, tiredness, and sore throat",
+   "St John's wort lowers the effectiveness of protease inhibitors",
+   "Ritonavir lowers the effectiveness of birth control pills and conflicts with bupropion, zolpidem, and antiarrhythmics",
+   "Stopping hepatitis B drugs may lead to an acute flare"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي عشب يقلل فعالية مثبطات البروتياز؟",
+    "en": "Which herb lowers the effectiveness of protease inhibitors?"
+   },
+   "options": [
+    {
+     "ar": "St John's wort",
+     "en": "St John's wort"
+    },
+    {
+     "ar": "الزنجبيل",
+     "en": "Ginger"
+    },
+    {
+     "ar": "النعناع",
+     "en": "Mint"
+    },
+    {
+     "ar": "الحلبة",
+     "en": "Fenugreek"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يستحث أيض الدواء فيقلل مستواه.",
+    "en": "It induces drug metabolism and so lowers its level."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تتطلب إبلاغًا عاجلًا لمريض HIV على ARV؟",
+    "en": "Which sign needs urgent reporting for an HIV patient on ARVs?"
+   },
+   "options": [
+    {
+     "ar": "حمى خفيفة جديدة مع وعكة",
+     "en": "A new mild fever with malaise"
+    },
+    {
+     "ar": "عطس واحد",
+     "en": "A single sneeze"
+    },
+    {
+     "ar": "شعور بالجوع",
+     "en": "Feeling hungry"
+    },
+    {
+     "ar": "تثاؤب",
+     "en": "Yawning"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "حتى الحمى الخفيفة قد تعني عدوى انتهازية.",
+    "en": "Even a mild fever may mean an opportunistic infection."
+   }
+  },
+  {
+   "q": {
+    "ar": "مثبطات البروتياز تعمل بـ:",
+    "en": "Protease inhibitors work by:"
+   },
+   "options": [
+    {
+     "ar": "منع نضج الفيروسات الجديدة",
+     "en": "Preventing new viruses from maturing"
+    },
+    {
+     "ar": "حجب الدخول للخلية",
+     "en": "Blocking entry into the cell"
+    },
+    {
+     "ar": "منع تكوين الأجسام المضادة",
+     "en": "Preventing antibody formation"
+    },
+    {
+     "ar": "قتل الخلية",
+     "en": "Killing the cell"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تعطّل إنزيم البروتياز فلا تنضج الجسيمات.",
+    "en": "They disrupt the protease enzyme so the particles do not mature."
+   }
+  },
+  {
+   "q": {
+    "ar": "إيقاف أدوية علاج التهاب الكبد B قد يسبب:",
+    "en": "Stopping hepatitis B treatment drugs may cause:"
+   },
+   "options": [
+    {
+     "ar": "انتكاسة حادة للمرض",
+     "en": "An acute flare of the disease"
+    },
+    {
+     "ar": "شفاء",
+     "en": "Cure"
+    },
+    {
+     "ar": "بطء قلب",
+     "en": "Slow heart rate"
+    },
+    {
+     "ar": "سعال",
+     "en": "Cough"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قد يحدث تفاقم حاد في بعض المرضى فتراقب الكبد.",
+    "en": "An acute exacerbation may occur in some patients, so monitor the liver."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "British National Formulary (BNF)"
+  },
+  {
+   "title": "Egyptian Drug Authority (EDA) drug information leaflets"
+  }
+ ]
 }
