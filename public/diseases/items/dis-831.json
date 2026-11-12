@@ -1,335 +1,425 @@
 {
-  "id": "dis-831",
-  "num": 831,
-  "system": "other",
-  "icon": "💊",
-  "level": 2,
-  "title": {
-    "ar": "دليل المسكنات: بسيطة، NSAIDs، أفيونات، أدوية الألم العصبي (مع PCA)",
-    "en": "Analgesic Drug Guide for Nurses"
+ "id": "dis-831",
+ "num": 831,
+ "system": "other",
+ "icon": "💊",
+ "level": 2,
+ "title": {
+  "ar": "دليل المسكنات: بسيطة، NSAIDs، أفيونات، أدوية الألم العصبي (مع PCA)",
+  "en": "Analgesic Drug Guide for Nurses"
+ },
+ "teaser": {
+  "ar": "كل مجموعات مسكنات الألم بأسمائها العلمية، سلامة الإعطاء، المراقبة، وPCA وما يجب فعله قبل الجرعة وبعدها.",
+  "en": "All groups of pain relievers by generic name, safe administration, monitoring, and PCA and what to do before and after the dose."
+ },
+ "chips": [
+  {
+   "ar": "NSAIDs",
+   "en": "NSAIDs"
   },
-  "teaser": {
-    "ar": "كل مجموعات مسكنات الألم بأسمائها العلمية، سلامة الإعطاء، المراقبة، وPCA وما يجب فعله قبل الجرعة وبعدها."
+  {
+   "ar": "أفيونات",
+   "en": "Opioids"
   },
-  "chips": [
-    {
-      "ar": "NSAIDs"
-    },
-    {
-      "ar": "أفيونات"
-    },
-    {
-      "ar": "PCA"
-    }
+  {
+   "ar": "PCA",
+   "en": "PCA"
+  }
+ ],
+ "target": "pharmacology",
+ "sections": {
+  "overview": {
+   "ar": "<p>المسكنات تنقسم لمجموعات: بسيطة، NSAIDs، أفيونات، ومضادات ألم عصبي ومساعدات. اختيار المجموعة حسب نوع وشدة الألم (<a href=\"/diseases/dis-824\">الألم الحاد</a> و<a href=\"/diseases/dis-825\">المزمن</a> و<a href=\"/diseases/dis-826\">العصبي</a>).</p>[[slot:dis-831-drugs|مجموعات المسكنات|/diseases/img/dis-831-drugs.svg]]\n<h4>الباراسيتامول (Acetaminophen / Tylenol)</h4><p>للحمى والألم الخفيف، ويُستخدم بدلًا من NSAIDs لتقليل خطر النزف (القرحة الهضمية، الهيموفيليا). يمكن التبديل بينه وبين NSAIDs لخفض الحرارة، وإذا وصلت الحد الأقصى لأحدهما تستعمل الآخر؛ لذا يُوصى به لطفل مصاب بالإنفلونزا.</p>[[slot:dis-3605-apap-nsaid|مقارنة الباراسيتامول والـ NSAIDs — رسم من إعداد الموقع|/diseases/img/dis-3605-apap-nsaid.svg]]\n<ul><li><strong>الكبد:</strong> تاريخ كحول = خطر سمّية كبدية، فتجنب الكحول (مثال سؤال: رجل 54 سنة يتعاطى الكحول هو الأعلى خطرًا).</li><li><strong>الترياق:</strong> acetylcysteine (وسيلة حفظ من وضعنا: Acetylcysteine يعاكس Acetaminophen).</li><li>عند الجرعة الزائدة: راقب ALT وAST.</li></ul>",
+   "en": "<p>Analgesics are divided into groups: simple, NSAIDs, opioids, and neuropathic pain drugs and adjuvants. The choice of group depends on the type and severity of pain (<a href=\"/diseases/dis-824\">acute pain</a>, <a href=\"/diseases/dis-825\">chronic</a>, and <a href=\"/diseases/dis-826\">neuropathic</a>).</p>[[slot:dis-831-drugs|Groups of analgesics|/diseases/img/dis-831-drugs.svg]]\n<h4>Paracetamol (Acetaminophen / Tylenol)</h4><p>For fever and mild pain, and it is used instead of NSAIDs to reduce bleeding risk (peptic ulcer, hemophilia). It can be alternated with NSAIDs to lower fever, and if one reaches its maximum you use the other; so it is recommended for a child with influenza.</p>[[slot:dis-3605-apap-nsaid|Comparison of paracetamol and NSAIDs — illustration prepared by the site|/diseases/img/dis-3605-apap-nsaid.svg]]\n<ul><li><strong>Liver:</strong> a history of alcohol = risk of liver toxicity, so avoid alcohol (example question: a 54-year-old man who drinks alcohol is at highest risk).</li><li><strong>Antidote:</strong> acetylcysteine (a memory aid: Acetylcysteine counteracts Acetaminophen).</li><li>In an overdose: monitor ALT and AST.</li></ul>"
+  },
+  "signs": {
+   "ar": "<p>المراقبة بعد الإعطاء: الألم قبل وبعد، التنفس، الوعي، الضغط، البطن، الجلد.</p>\n<h4>NSAIDs: ما يجب مراقبته</h4><p>تثبط استجابة البروستاغلاندين فتخفف الألم والالتهاب والحمى. الأدوية: naproxen، الأسبرين (salicylic/acetylsalicylic acid)، ibuprofen، indomethacin، ketorolac (Toradol).</p>[[slot:dis-3605-nsaid-risks|مخاطر NSAIDs — رسم من إعداد الموقع|/diseases/img/dis-3605-nsaid-risks.svg]]\n<ul><li>كدمات سهلة، براز قطراني وقيء كالبن (نزف هضمي) = أبلغ الطبيب</li><li>تجنبها مع القرحة الهضمية، وتناولها مع الطعام وليس على معدة فارغة</li><li>مرضى الربو أو سلائل الأنف: استعمل acetaminophen بدل NSAID</li><li>مرضى الضغط أو فشل القلب: يتصلون بالطبيب قبل ibuprofen</li><li>مريض النقرس: ibuprofen وnaproxen مناسبان للألم</li><li>الأسبرين: تجنبه للأطفال (متلازمة راي)، وطنين الأذن علامة سمّية مبكرة</li><li>مريض الارتجاع على ranitidine مع NSAID: مقبول، والاستعمال المتقطع لألم الركبة مقبول</li></ul><h4>مخاطر NSAIDs: ملخص</h4><table><thead><tr><th>الخطر</th><th>التفاصيل</th></tr></thead><tbody><tr><td>لا تناسب الجسم</td><td>الكلى، فشل القلب، الربو، الجهاز الهضمي، الجلطات</td></tr><tr><td>دم لزج (جلطات)</td><td>زيادة خطر التخثر</td></tr><tr><td>الربو</td><td>قد يزداد سوءًا</td></tr><tr><td>زيادة النزف</td><td>كدمات سهلة، براز قطراني</td></tr><tr><td>الكلى</td><td>إصابة كلوية مع الاستعمال الطويل: يُبلَّغ إذا كان الكرياتينين أكثر من 1.3 أو الإخراج البولي 30 مل/ساعة أو أقل</td></tr><tr><td>تورم القلب</td><td>فشل القلب (CHF) وارتفاع الضغط يزدادان سوءًا</td></tr></tbody></table>",
+   "en": "<p>Monitoring after giving: pain before and after, breathing, consciousness, blood pressure, abdomen, skin.</p>\n<h4>NSAIDs: what to monitor</h4><p>They inhibit the prostaglandin response so they relieve pain, inflammation, and fever. Drugs: naproxen, aspirin (salicylic/acetylsalicylic acid), ibuprofen, indomethacin, ketorolac (Toradol).</p>[[slot:dis-3605-nsaid-risks|Risks of NSAIDs — illustration prepared by the site|/diseases/img/dis-3605-nsaid-risks.svg]]\n<ul><li>Easy bruising, tarry stool, and coffee-ground vomit (gastrointestinal bleeding) = report to the doctor</li><li>Avoid them with a peptic ulcer, and take them with food, not on an empty stomach</li><li>Patients with asthma or nasal polyps: use acetaminophen instead of an NSAID</li><li>Patients with high blood pressure or heart failure: call the doctor before ibuprofen</li><li>A gout patient: ibuprofen and naproxen are suitable for pain</li><li>Aspirin: avoid it for children (Reye's syndrome), and tinnitus is an early sign of toxicity</li><li>A reflux patient on ranitidine with an NSAID: acceptable, and intermittent use for knee pain is acceptable</li></ul><h4>NSAID risks: summary</h4><table><thead><tr><th>Risk</th><th>Details</th></tr></thead><tbody><tr><td>Not suited to the body</td><td>Kidneys, heart failure, asthma, gastrointestinal tract, clots</td></tr><tr><td>Thick blood (clots)</td><td>Increased clotting risk</td></tr><tr><td>Asthma</td><td>May get worse</td></tr><tr><td>Increased bleeding</td><td>Easy bruising, tarry stool</td></tr><tr><td>Kidneys</td><td>Kidney injury with long use: report if creatinine is above 1.3 or urine output is 30 mL/hour or less</td></tr><tr><td>Heart swelling</td><td>Heart failure (CHF) and high blood pressure get worse</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<ul><li>وظائف كبد وكلى قبل الاستعمال المطول</li><li>مستوى الوعي والتنفس مع الأفيونات</li></ul>",
+   "en": "<ul><li>Liver and kidney function before prolonged use</li><li>Level of consciousness and breathing with opioids</li></ul>"
+  },
+  "treatment": {
+   "ar": "<table><thead><tr><th>المجموعة</th><th>الأدوية</th><th>نقاط أمان</th></tr></thead><tbody><tr><td>بسيطة</td><td>acetaminophen, aspirin, مثبطات COX-2</td><td>باراسيتامول: حد أقصى 4 جم/يوم؛ أسبرين: معدة ونزيف</td></tr><tr><td>NSAIDs</td><td>celecoxib, diclofenac, flurbiprofen, ibuprofen, indomethacin, ketorolac, nabumetone, naproxen</td><td>مع الأكل؛ تجنب في قرحة وكلى وحمل؛ ketorolac قصير المدة (5 أيام)</td></tr><tr><td>أفيونات</td><td>codeine, hydrocodone, hydromorphone, levorphanol, meperidine, methadone, morphine, oxycodone</td><td>تنفس ≥ 12 قبل الجرعة؛ مليّن؛ سقوط؛ ترياق naloxone</td></tr><tr><td>ثلاثية الحلقات</td><td>amitriptyline, desipramine, imipramine</td><td>نعاس، جفاف فم، نبض</td></tr><tr><td>غير ثلاثية</td><td>bupropion</td><td>تشنجات بجرعات عالية</td></tr><tr><td>مضادات صرع</td><td>carbamazepine, clonazepam, gabapentin, pregabalin</td><td>دوخة، نعاس، لا إيقاف مفاجئ</td></tr><tr><td>موضعي</td><td>لصقة lidocaine</td><td>جلد سليم فقط</td></tr><tr><td>أخرى</td><td>مضادات تشنج، مرخيات عضلات، مضادات قلق، ستيرويدات</td></tr></tbody></table><h4>PCA</h4><p>مضخة PCA وريدية: جرعة أساسية صغيرة مستمرة وزر يضغطه المريض، والمضخة تتحقق من الوقت والكمية فتعطي الجرعة فقط إن كان مسموحاً. المريض فقط هو من يضغط الزر (لا الأسرة).</p><p>acetaminophen الوريدي (IV) صيغة للاستعمال القصير بالتسريب الوريدي. وعند الألم تُستعمل أحياناً أدوية متعددة الأنماط (multimodal) معاً مع إعطاء منتظم على مدار الساعة بدل عند اللزوم فقط. الجرعات للتعلّم وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p>\n<h4>الأفيونات: الأدوية والمخاطر</h4><p>أمثلة: morphine sulfate، hydromorphone، codeine، oxycodone (OxyContin)، fentanyl. تُستخدم للألم الشديد (ليست مضادة للالتهاب ولا خافضة للحرارة). وسيلة الحفظ من وضعنا: «الأفيونات تُبطئ الجسم: تنفس وضغط ووعي».</p>\n<table><thead><tr><th>الأثر الخطر</th><th>المفتاح</th></tr></thead><tbody><tr><td>تثبيط تنفس (انخماص رئوي Atelectasis/التهاب رئة)</td><td>احجب الجرعة إذا التنفس أقل من 12</td></tr><tr><td>هبوط ضغط انتصابي</td><td>دوخة: اجلس ولا تقم بلا مساعدة</td></tr><tr><td>تثبيط مركزي</td><td>ينام أثناء الحديث، لا يستيقظ بسهولة</td></tr><tr><td>إمساك (طويل الأمد)</td><td>مليّن عند اللزوم وتثقيف وقائي</td></tr></tbody></table>\n<p><strong>أعلى خطر للوفاة:</strong> المسنون (70 فأكثر)، أمراض الرئة الأساسية (COPD، ربو)، أول 24 ساعة بعد الجراحة.</p>\n<p><strong>oxycodone:</strong> يُعطى بجدول منتظم «على مدار الساعة» وليس عند الألم فقط، ومع مسكنات أخرى.</p>\n<h4>الترياق naloxone (Narcan)</h4>[[slot:dis-3605-opioid-aims|تسلسل التصرف عند الجرعة الزائدة — رسم من إعداد الموقع|/diseases/img/dis-3605-opioid-aims.svg]]<ul><li>يعاكس الأفيون والهيروين؛ نصف عمره 1–2 ساعة فأعد التقييم كل 60 دقيقة.</li><li>علامات الجرعة الزائدة: RR أقل من 12، لا يستيقظ، ينام أثناء الكلام.</li><li>جهّز جرعة ثانية وأبلغ الطبيب. تسلسل: ABC ثم أكسجين ثم الطبيب ثم جرعة ثانية.</li><li>وريدي: دفعة خلال 2–3 دقائق (ليس 5–10 ثوانٍ)، وأعد التقييم بعد 15–30 دقيقة، ولا تنتظر بعد ساعة.</li></ul>",
+   "en": "<table><thead><tr><th>Group</th><th>Drugs</th><th>Safety points</th></tr></thead><tbody><tr><td>Simple</td><td>acetaminophen, aspirin, COX-2 inhibitors</td><td>Paracetamol: maximum 4 g/day; aspirin: stomach and bleeding</td></tr><tr><td>NSAIDs</td><td>celecoxib, diclofenac, flurbiprofen, ibuprofen, indomethacin, ketorolac, nabumetone, naproxen</td><td>With food; avoid in ulcer, kidney disease, and pregnancy; ketorolac short course (5 days)</td></tr><tr><td>Opioids</td><td>codeine, hydrocodone, hydromorphone, levorphanol, meperidine, methadone, morphine, oxycodone</td><td>Breathing ≥ 12 before the dose; laxative; falls; antidote naloxone</td></tr><tr><td>Tricyclics</td><td>amitriptyline, desipramine, imipramine</td><td>Drowsiness, dry mouth, pulse</td></tr><tr><td>Non-tricyclic</td><td>bupropion</td><td>Seizures at high doses</td></tr><tr><td>Anticonvulsants</td><td>carbamazepine, clonazepam, gabapentin, pregabalin</td><td>Dizziness, drowsiness, no sudden stopping</td></tr><tr><td>Topical</td><td>lidocaine patch</td><td>Intact skin only</td></tr><tr><td>Others</td><td>antispasmodics, muscle relaxants, anti-anxiety drugs, steroids</td></tr></tbody></table><h4>PCA</h4><p>An IV PCA pump: a small continuous basal dose and a button the patient presses, and the pump checks the time and amount so it gives the dose only if allowed. Only the patient presses the button (not the family).</p><p>IV acetaminophen is a formulation for short-term use by IV infusion. And for pain, multimodal drugs are sometimes used together with regular around-the-clock administration instead of only as needed. Doses are for learning; always verify with the physician/pharmacist before giving.</p>\n<h4>Opioids: drugs and risks</h4><p>Examples: morphine sulfate, hydromorphone, codeine, oxycodone (OxyContin), fentanyl. Used for severe pain (they are not anti-inflammatory or antipyretic). A memory aid: \"Opioids slow the body: breathing, pressure, and consciousness.\"</p>\n<table><thead><tr><th>Dangerous effect</th><th>Key</th></tr></thead><tbody><tr><td>Respiratory depression (atelectasis/pneumonia)</td><td>Hold the dose if breathing is below 12</td></tr><tr><td>Orthostatic hypotension</td><td>Dizziness: sit and do not get up without help</td></tr><tr><td>Central sedation</td><td>Sleeps while talking, does not wake easily</td></tr><tr><td>Constipation (long-term)</td><td>Laxative when needed and preventive teaching</td></tr></tbody></table>\n<p><strong>Highest risk of death:</strong> the elderly (70 and over), underlying lung disease (COPD, asthma), the first 24 hours after surgery.</p>\n<p><strong>oxycodone:</strong> given on a regular \"around-the-clock\" schedule and not only when in pain, together with other analgesics.</p>\n<h4>The antidote naloxone (Narcan)</h4>[[slot:dis-3605-opioid-aims|Sequence of action in an overdose — illustration prepared by the site|/diseases/img/dis-3605-opioid-aims.svg]]<ul><li>It reverses opioids and heroin; its half-life is 1–2 hours so reassess every 60 minutes.</li><li>Signs of overdose: RR below 12, cannot be woken, sleeps while talking.</li><li>Prepare a second dose and notify the doctor. Sequence: ABC then oxygen then the doctor then a second dose.</li><li>IV: a push over 2–3 minutes (not 5–10 seconds), and reassess after 15–30 minutes, and do not wait after an hour.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قبل</strong><p>5 حقوق، حساسية، قياس العلامات، مستوى الألم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أعطِ</strong><p>حسب الطريق والموعد، سجل الوقت.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راقب</strong><p>بعد 30 دقيقة فموي، 15 وريدي: الألم، التنفس، الوعي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الأفيون</strong><p>مقياس تنويم، تنفس، حدقة، مليّن، وقاية سقوط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>PCA</strong><p>تأكد من الإعدادات، فحص مزدوج، لا أحد غير المريض يضغط الزر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وثّق</strong><p>تحسن، آثار جانبية، بلّغ عند عدم الاستجابة.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>متى تحجب الجرعة؟</strong><p>تنفس أقل من 10-12/د، نعاس شديد، ضغط منخفض، أو علامات تسمم: احجب وبلّغ.</p></div>\n<h4>PCA ولصقة fentanyl</h4>[[slot:dis-3605-pca-fentanyl|مقارنة PCA ولصقة fentanyl — رسم من إعداد الموقع|/diseases/img/dis-3605-pca-fentanyl.svg]]\n<ul><li><strong>PCA:</strong> المريض فقط يضغط. إن استمر الألم بعد الجرعات: الخطوة الأولى <strong>تقييم الألم</strong>، ثم التدخل، ثم إعادة التقييم (قاعدة AIR: Assessment، Intervention، Re-assessment).</li><li><strong>لصقة fentanyl:</strong> للألم المزمن المستمر (persistent) لا الحاد ولا الألم المتقطع بعد الجراحة؛ استوضح الأمر. تُستعمل عند الحساسية من codeine. تصل لأثرها الكامل بعد حتى 17 ساعة. أزل اللصقة القديمة قبل لصق جديدة، ونظّف وجفف الجلد.</li><li>الإمساك: مليّنات. التحمل (tolerance) = الحاجة لجرعات أكبر لنفس الأثر.</li></ul><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Before</strong><p>5 rights, allergy, measure the signs, pain level.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Give</strong><p>By route and time, record the time.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Monitor</strong><p>After 30 minutes oral, 15 IV: pain, breathing, consciousness.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Opioid</strong><p>Sedation scale, breathing, pupils, laxative, fall prevention.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>PCA</strong><p>Confirm the settings, double check, no one but the patient presses the button.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Document</strong><p>Improvement, side effects, report if there is no response.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>When do you hold the dose?</strong><p>Breathing below 10-12/min, severe drowsiness, low blood pressure, or signs of toxicity: hold and report.</p></div>\n<h4>PCA and the fentanyl patch</h4>[[slot:dis-3605-pca-fentanyl|Comparison of PCA and the fentanyl patch — illustration prepared by the site|/diseases/img/dis-3605-pca-fentanyl.svg]]\n<ul><li><strong>PCA:</strong> only the patient presses. If pain continues after the doses: the first step is <strong>assessing the pain</strong>, then intervention, then reassessment (the AIR rule: Assessment, Intervention, Re-assessment).</li><li><strong>Fentanyl patch:</strong> for chronic persistent pain, not acute pain or intermittent pain after surgery; clarify the order. It is used with an allergy to codeine. It reaches its full effect after up to 17 hours. Remove the old patch before applying a new one, and clean and dry the skin.</li><li>Constipation: laxatives. Tolerance = the need for larger doses for the same effect.</li></ul><div class=\"cs-box cs-danger\"><strong>Note</strong><p>Doses are for learning, and are verified with the physician/pharmacist (and the leaflet) before giving.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ:</strong><ul><li>اكتئاب تنفسي</li><li>طفح أو تورم وجه (تحسس)</li><li>براز أسود أو قيء دموي</li><li>انحباس بول (Urinary retention) أو إمساك شديد</li></ul></div>\n<div class=\"cs-box cs-danger\"><strong>أفيون:</strong><p>تنفس أقل من 12، ينام أثناء الكلام، لا يستجيب: naloxone وأبلغ الطبيب. <strong>NSAID:</strong> براز أسود أو قيء كالبن. <strong>acetaminophen:</strong> سمّية الكبد (ALT وAST).</p></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report:</strong><ul><li>Respiratory depression</li><li>Rash or facial swelling (allergy)</li><li>Black stool or bloody vomit</li><li>Urinary retention or severe constipation</li></ul></div>\n<div class=\"cs-box cs-danger\"><strong>Opioid:</strong><p>Breathing below 12, sleeps while talking, unresponsive: naloxone and notify the doctor. <strong>NSAID:</strong> black stool or coffee-ground vomit. <strong>acetaminophen:</strong> liver toxicity (ALT and AST).</p></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>خذ الجرعات في ميعادها</li><li>لا تقود مع الأفيونات</li><li>لا تخلط الكحول</li><li>لا تشارك دواءك مع غيرك</li><li>مليّن مع الأفيون</li></ul>\n<ul><li>لا تشرب الكحول مع acetaminophen.</li><li>خذ NSAID مع الطعام.</li><li>لا أسبرين للأطفال.</li><li>أبلغ عن اللصقات والقيء والإمساك.</li><li>اللصقة: إزالة القديمة قبل الجديدة.</li></ul>",
+   "en": "<ul><li>Take the doses on time</li><li>Do not drive with opioids</li><li>Do not mix with alcohol</li><li>Do not share your medicine with others</li><li>A laxative with the opioid</li></ul>\n<ul><li>Do not drink alcohol with acetaminophen.</li><li>Take an NSAID with food.</li><li>No aspirin for children.</li><li>Report patches, vomiting, and constipation.</li><li>The patch: remove the old one before the new one.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "اختيار المسكن حسب نوع وشدة الألم",
+   "NSAID مع الأكل وانتبه للكلى والمعدة",
+   "الأفيون: تنفس ووعي ومليّن",
+   "PCA بزر المريض فقط",
+   "أدوية الألم العصبي: gabapentinoids وTCAs",
+   "لا تشارك الأدوية",
+   "acetaminophen: ترياقه acetylcysteine وتجنب الكحول",
+   "NSAID: نزف، كلى، ربو، مع الطعام",
+   "أفيون: RR<12 احجب، naloxone نصف عمره قصير",
+   "لصقة fentanyl للألم المزمن وليس الحاد",
+   "PCA: المريض فقط"
   ],
-  "target": "pharmacology",
-  "sections": {
-    "overview": {
-      "ar": "<p>المسكنات تنقسم لمجموعات: بسيطة، NSAIDs، أفيونات، ومضادات ألم عصبي ومساعدات. اختيار المجموعة حسب نوع وشدة الألم (<a href=\"/diseases/dis-824\">الألم الحاد</a> و<a href=\"/diseases/dis-825\">المزمن</a> و<a href=\"/diseases/dis-826\">العصبي</a>).</p>[[slot:dis-831-drugs|مجموعات المسكنات|/diseases/img/dis-831-drugs.svg]]\n<h4>الباراسيتامول (Acetaminophen / Tylenol)</h4><p>للحمى والألم الخفيف، ويُستخدم بدلًا من NSAIDs لتقليل خطر النزف (القرحة الهضمية، الهيموفيليا). يمكن التبديل بينه وبين NSAIDs لخفض الحرارة، وإذا وصلت الحد الأقصى لأحدهما تستعمل الآخر؛ لذا يُوصى به لطفل مصاب بالإنفلونزا.</p>[[slot:dis-3605-apap-nsaid|مقارنة الباراسيتامول والـ NSAIDs — رسم من إعداد الموقع|/diseases/img/dis-3605-apap-nsaid.svg]]\n<ul><li><strong>الكبد:</strong> تاريخ كحول = خطر سمّية كبدية، فتجنب الكحول (مثال سؤال: رجل 54 سنة يتعاطى الكحول هو الأعلى خطرًا).</li><li><strong>الترياق:</strong> acetylcysteine (وسيلة حفظ من وضعنا: Acetylcysteine يعاكس Acetaminophen).</li><li>عند الجرعة الزائدة: راقب ALT وAST.</li></ul>"
-    },
-    "signs": {
-      "ar": "<p>المراقبة بعد الإعطاء: الألم قبل وبعد، التنفس، الوعي، الضغط، البطن، الجلد.</p>\n<h4>NSAIDs: ما يجب مراقبته</h4><p>تثبط استجابة البروستاغلاندين فتخفف الألم والالتهاب والحمى. الأدوية: naproxen، الأسبرين (salicylic/acetylsalicylic acid)، ibuprofen، indomethacin، ketorolac (Toradol).</p>[[slot:dis-3605-nsaid-risks|مخاطر NSAIDs — رسم من إعداد الموقع|/diseases/img/dis-3605-nsaid-risks.svg]]\n<ul><li>كدمات سهلة، براز قطراني وقيء كالبن (نزف هضمي) = أبلغ الطبيب</li><li>تجنبها مع القرحة الهضمية، وتناولها مع الطعام وليس على معدة فارغة</li><li>مرضى الربو أو سلائل الأنف: استعمل acetaminophen بدل NSAID</li><li>مرضى الضغط أو فشل القلب: يتصلون بالطبيب قبل ibuprofen</li><li>مريض النقرس: ibuprofen وnaproxen مناسبان للألم</li><li>الأسبرين: تجنبه للأطفال (متلازمة راي)، وطنين الأذن علامة سمّية مبكرة</li><li>مريض الارتجاع على ranitidine مع NSAID: مقبول، والاستعمال المتقطع لألم الركبة مقبول</li></ul><h4>مخاطر NSAIDs: ملخص</h4><table><thead><tr><th>الخطر</th><th>التفاصيل</th></tr></thead><tbody><tr><td>لا تناسب الجسم</td><td>الكلى، فشل القلب، الربو، الجهاز الهضمي، الجلطات</td></tr><tr><td>دم لزج (جلطات)</td><td>زيادة خطر التخثر</td></tr><tr><td>الربو</td><td>قد يزداد سوءًا</td></tr><tr><td>زيادة النزف</td><td>كدمات سهلة، براز قطراني</td></tr><tr><td>الكلى</td><td>إصابة كلوية مع الاستعمال الطويل: يُبلَّغ إذا كان الكرياتينين أكثر من 1.3 أو الإخراج البولي 30 مل/ساعة أو أقل</td></tr><tr><td>تورم القلب</td><td>فشل القلب (CHF) وارتفاع الضغط يزدادان سوءًا</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<ul><li>وظائف كبد وكلى قبل الاستعمال المطول</li><li>مستوى الوعي والتنفس مع الأفيونات</li></ul>"
-    },
-    "treatment": {
-      "ar": "<table><thead><tr><th>المجموعة</th><th>الأدوية</th><th>نقاط أمان</th></tr></thead><tbody><tr><td>بسيطة</td><td>acetaminophen, aspirin, مثبطات COX-2</td><td>باراسيتامول: حد أقصى 4 جم/يوم؛ أسبرين: معدة ونزيف</td></tr><tr><td>NSAIDs</td><td>celecoxib, diclofenac, flurbiprofen, ibuprofen, indomethacin, ketorolac, nabumetone, naproxen</td><td>مع الأكل؛ تجنب في قرحة وكلى وحمل؛ ketorolac قصير المدة (5 أيام)</td></tr><tr><td>أفيونات</td><td>codeine, hydrocodone, hydromorphone, levorphanol, meperidine, methadone, morphine, oxycodone</td><td>تنفس ≥ 12 قبل الجرعة؛ مليّن؛ سقوط؛ ترياق naloxone</td></tr><tr><td>ثلاثية الحلقات</td><td>amitriptyline, desipramine, imipramine</td><td>نعاس، جفاف فم، نبض</td></tr><tr><td>غير ثلاثية</td><td>bupropion</td><td>تشنجات بجرعات عالية</td></tr><tr><td>مضادات صرع</td><td>carbamazepine, clonazepam, gabapentin, pregabalin</td><td>دوخة، نعاس، لا إيقاف مفاجئ</td></tr><tr><td>موضعي</td><td>لصقة lidocaine</td><td>جلد سليم فقط</td></tr><tr><td>أخرى</td><td>مضادات تشنج، مرخيات عضلات، مضادات قلق، ستيرويدات</td></tr></tbody></table><h4>PCA</h4><p>مضخة PCA وريدية: جرعة أساسية صغيرة مستمرة وزر يضغطه المريض، والمضخة تتحقق من الوقت والكمية فتعطي الجرعة فقط إن كان مسموحاً. المريض فقط هو من يضغط الزر (لا الأسرة).</p><p>acetaminophen الوريدي (IV) صيغة للاستعمال القصير بالتسريب الوريدي. وعند الألم تُستعمل أحياناً أدوية متعددة الأنماط (multimodal) معاً مع إعطاء منتظم على مدار الساعة بدل عند اللزوم فقط. الجرعات للتعلّم وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p>\n<h4>الأفيونات: الأدوية والمخاطر</h4><p>أمثلة: morphine sulfate، hydromorphone، codeine، oxycodone (OxyContin)، fentanyl. تُستخدم للألم الشديد (ليست مضادة للالتهاب ولا خافضة للحرارة). وسيلة الحفظ من وضعنا: «الأفيونات تُبطئ الجسم: تنفس وضغط ووعي».</p>\n<table><thead><tr><th>الأثر الخطر</th><th>المفتاح</th></tr></thead><tbody><tr><td>تثبيط تنفس (انخماص رئوي Atelectasis/التهاب رئة)</td><td>احجب الجرعة إذا التنفس أقل من 12</td></tr><tr><td>هبوط ضغط انتصابي</td><td>دوخة: اجلس ولا تقم بلا مساعدة</td></tr><tr><td>تثبيط مركزي</td><td>ينام أثناء الحديث، لا يستيقظ بسهولة</td></tr><tr><td>إمساك (طويل الأمد)</td><td>مليّن عند اللزوم وتثقيف وقائي</td></tr></tbody></table>\n<p><strong>أعلى خطر للوفاة:</strong> المسنون (70 فأكثر)، أمراض الرئة الأساسية (COPD، ربو)، أول 24 ساعة بعد الجراحة.</p>\n<p><strong>oxycodone:</strong> يُعطى بجدول منتظم «على مدار الساعة» وليس عند الألم فقط، ومع مسكنات أخرى.</p>\n<h4>الترياق naloxone (Narcan)</h4>[[slot:dis-3605-opioid-aims|تسلسل التصرف عند الجرعة الزائدة — رسم من إعداد الموقع|/diseases/img/dis-3605-opioid-aims.svg]]<ul><li>يعاكس الأفيون والهيروين؛ نصف عمره 1–2 ساعة فأعد التقييم كل 60 دقيقة.</li><li>علامات الجرعة الزائدة: RR أقل من 12، لا يستيقظ، ينام أثناء الكلام.</li><li>جهّز جرعة ثانية وأبلغ الطبيب. تسلسل: ABC ثم أكسجين ثم الطبيب ثم جرعة ثانية.</li><li>وريدي: دفعة خلال 2–3 دقائق (ليس 5–10 ثوانٍ)، وأعد التقييم بعد 15–30 دقيقة، ولا تنتظر بعد ساعة.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قبل</strong><p>5 حقوق، حساسية، قياس العلامات، مستوى الألم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أعطِ</strong><p>حسب الطريق والموعد، سجل الوقت.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راقب</strong><p>بعد 30 دقيقة فموي، 15 وريدي: الألم، التنفس، الوعي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الأفيون</strong><p>مقياس تنويم، تنفس، حدقة، مليّن، وقاية سقوط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>PCA</strong><p>تأكد من الإعدادات، فحص مزدوج، لا أحد غير المريض يضغط الزر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وثّق</strong><p>تحسن، آثار جانبية، بلّغ عند عدم الاستجابة.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>متى تحجب الجرعة؟</strong><p>تنفس أقل من 10-12/د، نعاس شديد، ضغط منخفض، أو علامات تسمم: احجب وبلّغ.</p></div>\n<h4>PCA ولصقة fentanyl</h4>[[slot:dis-3605-pca-fentanyl|مقارنة PCA ولصقة fentanyl — رسم من إعداد الموقع|/diseases/img/dis-3605-pca-fentanyl.svg]]\n<ul><li><strong>PCA:</strong> المريض فقط يضغط. إن استمر الألم بعد الجرعات: الخطوة الأولى <strong>تقييم الألم</strong>، ثم التدخل، ثم إعادة التقييم (قاعدة AIR: Assessment، Intervention، Re-assessment).</li><li><strong>لصقة fentanyl:</strong> للألم المزمن المستمر (persistent) لا الحاد ولا الألم المتقطع بعد الجراحة؛ استوضح الأمر. تُستعمل عند الحساسية من codeine. تصل لأثرها الكامل بعد حتى 17 ساعة. أزل اللصقة القديمة قبل لصق جديدة، ونظّف وجفف الجلد.</li><li>الإمساك: مليّنات. التحمل (tolerance) = الحاجة لجرعات أكبر لنفس الأثر.</li></ul><div class=\"cs-box cs-danger\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ:</strong><ul><li>اكتئاب تنفسي</li><li>طفح أو تورم وجه (تحسس)</li><li>براز أسود أو قيء دموي</li><li>انحباس بول (Urinary retention) أو إمساك شديد</li></ul></div>\n<div class=\"cs-box cs-danger\"><strong>أفيون:</strong><p>تنفس أقل من 12، ينام أثناء الكلام، لا يستجيب: naloxone وأبلغ الطبيب. <strong>NSAID:</strong> براز أسود أو قيء كالبن. <strong>acetaminophen:</strong> سمّية الكبد (ALT وAST).</p></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>خذ الجرعات في ميعادها</li><li>لا تقود مع الأفيونات</li><li>لا تخلط الكحول</li><li>لا تشارك دواءك مع غيرك</li><li>مليّن مع الأفيون</li></ul>\n<ul><li>لا تشرب الكحول مع acetaminophen.</li><li>خذ NSAID مع الطعام.</li><li>لا أسبرين للأطفال.</li><li>أبلغ عن اللصقات والقيء والإمساك.</li><li>اللصقة: إزالة القديمة قبل الجديدة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "اختيار المسكن حسب نوع وشدة الألم",
-      "NSAID مع الأكل وانتبه للكلى والمعدة",
-      "الأفيون: تنفس ووعي ومليّن",
-      "PCA بزر المريض فقط",
-      "أدوية الألم العصبي: gabapentinoids وTCAs",
-      "لا تشارك الأدوية",
-      "acetaminophen: ترياقه acetylcysteine وتجنب الكحول",
-      "NSAID: نزف، كلى، ربو، مع الطعام",
-      "أفيون: RR<12 احجب، naloxone نصف عمره قصير",
-      "لصقة fentanyl للألم المزمن وليس الحاد",
-      "PCA: المريض فقط"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مسكن أفيوني:"
-      },
-      "options": [
-        {
-          "ar": "ibuprofen"
-        },
-        {
-          "ar": "morphine"
-        },
-        {
-          "ar": "gabapentin"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "راجع الشرح في الدليل: هذه هي الإجابة الصحيحة."
-      }
-    },
-    {
-      "q": {
-        "ar": "NSAID يؤخذ:"
-      },
-      "options": [
-        {
-          "ar": "على الريق دائماً"
-        },
-        {
-          "ar": "بعد النوم"
-        },
-        {
-          "ar": "مع الأكل"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "راجع الشرح في الدليل: هذه هي الإجابة الصحيحة."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل أفيون نقيس:"
-      },
-      "options": [
-        {
-          "ar": "التنفس والوعي"
-        },
-        {
-          "ar": "الطول"
-        },
-        {
-          "ar": "الحرارة فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "راجع الشرح في الدليل: هذه هي الإجابة الصحيحة."
-      }
-    },
-    {
-      "q": {
-        "ar": "زر PCA يضغطه:"
-      },
-      "options": [
-        {
-          "ar": "الأسرة"
-        },
-        {
-          "ar": "المريض فقط"
-        },
-        {
-          "ar": "الممرض دائماً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "راجع الشرح في الدليل: هذه هي الإجابة الصحيحة."
-      }
-    },
-    {
-      "q": {
-        "ar": "ترياق الأفيون:"
-      },
-      "options": [
-        {
-          "ar": "flumazenil"
-        },
-        {
-          "ar": "acetylcysteine"
-        },
-        {
-          "ar": "naloxone"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "راجع الشرح في الدليل: هذه هي الإجابة الصحيحة."
-      }
-    },
-    {
-      "q": {
-        "ar": "الإعطاء المنتظم على مدار الساعة يناسب:"
-      },
-      "options": [
-        {
-          "ar": "ألماً مستمراً متوقعاً"
-        },
-        {
-          "ar": "ألماً عابراً نادراً"
-        },
-        {
-          "ar": "عدم وجود ألم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يحافظ على مستوى ثابت من الدواء ويمنع تصاعد الألم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مريض أعلى خطرًا عند استعمال acetaminophen؟"
-      },
-      "options": [
-        {
-          "ar": "طفل بالإنفلونزا"
-        },
-        {
-          "ar": "مريض قرحة"
-        },
-        {
-          "ar": "مصاب بألم مفاصل خفيف"
-        },
-        {
-          "ar": "رجل يتعاطى الكحول"
-        }
-      ],
-      "answer": 3,
-      "why": {
-        "ar": "الكحول مع acetaminophen يزيد سمّية الكبد."
-      }
-    },
-    {
-      "q": {
-        "ar": "ترياق جرعة acetaminophen الزائدة:"
-      },
-      "options": [
-        {
-          "ar": "acetylcysteine"
-        },
-        {
-          "ar": "naloxone"
-        },
-        {
-          "ar": "protamine"
-        },
-        {
-          "ar": "vitamin K"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "acetylcysteine هو الترياق المتخصص."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض بالربو يحتاج مسكنًا: الأنسب؟"
-      },
-      "options": [
-        {
-          "ar": "aspirin"
-        },
-        {
-          "ar": "acetaminophen بدل NSAID"
-        },
-        {
-          "ar": "ibuprofen"
-        },
-        {
-          "ar": "ketorolac"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "مثبطات البروستاغلاندين (NSAIDs) قد تزيد تشنج القصبات وتسوّئ الربو عند بعض المرضى، فيُفضل acetaminophen."
-      }
-    },
-    {
-      "q": {
-        "ar": "تنفس مريض على morphine 10/د: ماذا تفعل؟"
-      },
-      "options": [
-        {
-          "ar": "أعطِ الجرعة"
-        },
-        {
-          "ar": "أعطِ مهدئًا"
-        },
-        {
-          "ar": "احجب الجرعة وقيّم وأبلغ"
-        },
-        {
-          "ar": "اتركه"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "التنفس أقل من 12/د يعني تثبيطًا تنفسيًا، فيُحجب الأفيون ويُقيَّم المريض ويُبلَّغ الطبيب ويُجهَّز naloxone عند الحاجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول إجراء لمريض PCA ما زال يتألم:"
-      },
-      "options": [
-        {
-          "ar": "زيادة الجرعة"
-        },
-        {
-          "ar": "ضغط الزر بدلًا منه"
-        },
-        {
-          "ar": "إيقاف المضخة"
-        },
-        {
-          "ar": "تقييم الألم"
-        }
-      ],
-      "answer": 3,
-      "why": {
-        "ar": "قاعدة AIR: التقييم قبل التدخل."
-      }
-    },
-    {
-      "q": {
-        "ar": "من يضغط زر PCA؟"
-      },
-      "options": [
-        {
-          "ar": "المريض فقط"
-        },
-        {
-          "ar": "الممرض"
-        },
-        {
-          "ar": "الأهل"
-        },
-        {
-          "ar": "الطبيب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يمنع الضغط من الغير خطر الجرعة الزائدة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "WHO analgesic ladder"
-    },
-    {
-      "title": "ISMP PCA safety"
-    },
-    {
-      "title": "BNF analgesics"
-    }
+  "en": [
+   "Choose the analgesic by the type and severity of pain",
+   "NSAID with food and watch the kidneys and stomach",
+   "Opioid: breathing, consciousness, and a laxative",
+   "PCA with the patient's button only",
+   "Neuropathic pain drugs: gabapentinoids and TCAs",
+   "Do not share medicines",
+   "acetaminophen: its antidote is acetylcysteine and avoid alcohol",
+   "NSAID: bleeding, kidneys, asthma, with food",
+   "Opioid: hold if RR<12, naloxone has a short half-life",
+   "Fentanyl patch for chronic pain, not acute",
+   "PCA: the patient only"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مسكن أفيوني:",
+    "en": "An opioid analgesic:"
+   },
+   "options": [
+    {
+     "ar": "ibuprofen",
+     "en": "ibuprofen"
+    },
+    {
+     "ar": "morphine",
+     "en": "morphine"
+    },
+    {
+     "ar": "gabapentin",
+     "en": "gabapentin"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "راجع الشرح في الدليل: هذه هي الإجابة الصحيحة.",
+    "en": "See the explanation in the guide: this is the correct answer."
+   }
+  },
+  {
+   "q": {
+    "ar": "NSAID يؤخذ:",
+    "en": "An NSAID is taken:"
+   },
+   "options": [
+    {
+     "ar": "على الريق دائماً",
+     "en": "Always on an empty stomach"
+    },
+    {
+     "ar": "بعد النوم",
+     "en": "After sleep"
+    },
+    {
+     "ar": "مع الأكل",
+     "en": "With food"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "راجع الشرح في الدليل: هذه هي الإجابة الصحيحة.",
+    "en": "See the explanation in the guide: this is the correct answer."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل أفيون نقيس:",
+    "en": "Before an opioid we measure:"
+   },
+   "options": [
+    {
+     "ar": "التنفس والوعي",
+     "en": "Breathing and consciousness"
+    },
+    {
+     "ar": "الطول",
+     "en": "Height"
+    },
+    {
+     "ar": "الحرارة فقط",
+     "en": "Temperature only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "راجع الشرح في الدليل: هذه هي الإجابة الصحيحة.",
+    "en": "See the explanation in the guide: this is the correct answer."
+   }
+  },
+  {
+   "q": {
+    "ar": "زر PCA يضغطه:",
+    "en": "The PCA button is pressed by:"
+   },
+   "options": [
+    {
+     "ar": "الأسرة",
+     "en": "The family"
+    },
+    {
+     "ar": "المريض فقط",
+     "en": "The patient only"
+    },
+    {
+     "ar": "الممرض دائماً",
+     "en": "The nurse always"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "راجع الشرح في الدليل: هذه هي الإجابة الصحيحة.",
+    "en": "See the explanation in the guide: this is the correct answer."
+   }
+  },
+  {
+   "q": {
+    "ar": "ترياق الأفيون:",
+    "en": "The opioid antidote:"
+   },
+   "options": [
+    {
+     "ar": "flumazenil",
+     "en": "flumazenil"
+    },
+    {
+     "ar": "acetylcysteine",
+     "en": "acetylcysteine"
+    },
+    {
+     "ar": "naloxone",
+     "en": "naloxone"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "راجع الشرح في الدليل: هذه هي الإجابة الصحيحة.",
+    "en": "See the explanation in the guide: this is the correct answer."
+   }
+  },
+  {
+   "q": {
+    "ar": "الإعطاء المنتظم على مدار الساعة يناسب:",
+    "en": "Regular around-the-clock administration suits:"
+   },
+   "options": [
+    {
+     "ar": "ألماً مستمراً متوقعاً",
+     "en": "Continuous expected pain"
+    },
+    {
+     "ar": "ألماً عابراً نادراً",
+     "en": "Rare transient pain"
+    },
+    {
+     "ar": "عدم وجود ألم",
+     "en": "No pain"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يحافظ على مستوى ثابت من الدواء ويمنع تصاعد الألم.",
+    "en": "It maintains a steady level of the drug and prevents the pain from escalating."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مريض أعلى خطرًا عند استعمال acetaminophen؟",
+    "en": "Which patient is at the highest risk when using acetaminophen?"
+   },
+   "options": [
+    {
+     "ar": "طفل بالإنفلونزا",
+     "en": "A child with influenza"
+    },
+    {
+     "ar": "مريض قرحة",
+     "en": "An ulcer patient"
+    },
+    {
+     "ar": "مصاب بألم مفاصل خفيف",
+     "en": "One with mild joint pain"
+    },
+    {
+     "ar": "رجل يتعاطى الكحول",
+     "en": "A man who drinks alcohol"
+    }
+   ],
+   "answer": 3,
+   "why": {
+    "ar": "الكحول مع acetaminophen يزيد سمّية الكبد.",
+    "en": "Alcohol with acetaminophen increases liver toxicity."
+   }
+  },
+  {
+   "q": {
+    "ar": "ترياق جرعة acetaminophen الزائدة:",
+    "en": "The antidote for an acetaminophen overdose:"
+   },
+   "options": [
+    {
+     "ar": "acetylcysteine",
+     "en": "acetylcysteine"
+    },
+    {
+     "ar": "naloxone",
+     "en": "naloxone"
+    },
+    {
+     "ar": "protamine",
+     "en": "protamine"
+    },
+    {
+     "ar": "vitamin K",
+     "en": "vitamin K"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "acetylcysteine هو الترياق المتخصص.",
+    "en": "Acetylcysteine is the specific antidote."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض بالربو يحتاج مسكنًا: الأنسب؟",
+    "en": "An asthma patient needs an analgesic: the most suitable?"
+   },
+   "options": [
+    {
+     "ar": "aspirin",
+     "en": "aspirin"
+    },
+    {
+     "ar": "acetaminophen بدل NSAID",
+     "en": "acetaminophen instead of an NSAID"
+    },
+    {
+     "ar": "ibuprofen",
+     "en": "ibuprofen"
+    },
+    {
+     "ar": "ketorolac",
+     "en": "ketorolac"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "مثبطات البروستاغلاندين (NSAIDs) قد تزيد تشنج القصبات وتسوّئ الربو عند بعض المرضى، فيُفضل acetaminophen.",
+    "en": "Prostaglandin inhibitors (NSAIDs) may increase bronchospasm and worsen asthma in some patients, so acetaminophen is preferred."
+   }
+  },
+  {
+   "q": {
+    "ar": "تنفس مريض على morphine 10/د: ماذا تفعل؟",
+    "en": "The breathing of a patient on morphine is 10/min: what do you do?"
+   },
+   "options": [
+    {
+     "ar": "أعطِ الجرعة",
+     "en": "Give the dose"
+    },
+    {
+     "ar": "أعطِ مهدئًا",
+     "en": "Give a sedative"
+    },
+    {
+     "ar": "احجب الجرعة وقيّم وأبلغ",
+     "en": "Hold the dose, assess, and report"
+    },
+    {
+     "ar": "اتركه",
+     "en": "Leave him"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "التنفس أقل من 12/د يعني تثبيطًا تنفسيًا، فيُحجب الأفيون ويُقيَّم المريض ويُبلَّغ الطبيب ويُجهَّز naloxone عند الحاجة.",
+    "en": "Breathing below 12/min means respiratory depression, so the opioid is held, the patient assessed, the doctor notified, and naloxone prepared if needed."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول إجراء لمريض PCA ما زال يتألم:",
+    "en": "The first action for a PCA patient who is still in pain:"
+   },
+   "options": [
+    {
+     "ar": "زيادة الجرعة",
+     "en": "Increase the dose"
+    },
+    {
+     "ar": "ضغط الزر بدلًا منه",
+     "en": "Press the button for him"
+    },
+    {
+     "ar": "إيقاف المضخة",
+     "en": "Stop the pump"
+    },
+    {
+     "ar": "تقييم الألم",
+     "en": "Assess the pain"
+    }
+   ],
+   "answer": 3,
+   "why": {
+    "ar": "قاعدة AIR: التقييم قبل التدخل.",
+    "en": "The AIR rule: assessment before intervention."
+   }
+  },
+  {
+   "q": {
+    "ar": "من يضغط زر PCA؟",
+    "en": "Who presses the PCA button?"
+   },
+   "options": [
+    {
+     "ar": "المريض فقط",
+     "en": "The patient only"
+    },
+    {
+     "ar": "الممرض",
+     "en": "The nurse"
+    },
+    {
+     "ar": "الأهل",
+     "en": "The relatives"
+    },
+    {
+     "ar": "الطبيب",
+     "en": "The doctor"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يمنع الضغط من الغير خطر الجرعة الزائدة.",
+    "en": "Pressing by others risks an overdose."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "WHO analgesic ladder"
+  },
+  {
+   "title": "ISMP PCA safety"
+  },
+  {
+   "title": "BNF analgesics"
+  }
+ ]
 }
