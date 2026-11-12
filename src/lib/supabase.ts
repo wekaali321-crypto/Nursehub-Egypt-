@@ -1,4 +1,5 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import { withStaticFallback } from "./staticFallback";
 
 /**
  * Supabase Production Client
@@ -79,6 +80,7 @@ if (status.configured) {
         flowType: "pkce",
       },
       global: {
+        fetch: withStaticFallback(SUPABASE_URL),
         headers: {
           "x-client-info": "nursehub-egypt/6.0",
         },

@@ -12,7 +12,7 @@ const supabase = createClient(
 const WHATSAPP_NUMBER = '201095652098'
 
 // رابط PDF الثابت للتحميل المباشر
-const PDF_URL = "https://vpgzbjbcbrbexpzoxrup.supabase.co/storage/v1/object/sign/pdf-store/vital%20signs%20.pdf?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV8yMWUzODQ5MS04YzE5LTRmZjgtYjE3Yi01NzQ0ZDYwZDE4YzciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJwZGYtc3RvcmUvdml0YWwgc2lnbnMgLnBkZiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODUxNzY5MjIsImV4cCI6MTgxNjcxMjkyMn0.nRglNCWrg4wJuAarqI7--u5RZP1PlauskAJ1Qd5v4g4";
+const PDF_URL = "/media/media/f-root/m1785230036180785-vital%20signs%20.pdf";
 
 export default function BuyButton({
   productId,
