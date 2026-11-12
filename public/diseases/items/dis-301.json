@@ -1,283 +1,340 @@
 {
-  "id": "dis-301",
-  "num": 301,
-  "system": "chest",
-  "icon": "🍯",
-  "level": 1,
-  "target": "pharmacology",
-  "title": {
-    "ar": "أدوية الكحة (جافة وببلغم) لكل الأعمار",
-    "en": "Anti-Cough Medications"
+ "id": "dis-301",
+ "num": 301,
+ "system": "chest",
+ "icon": "🍯",
+ "level": 1,
+ "target": "pharmacology",
+ "title": {
+  "ar": "أدوية الكحة (جافة وببلغم) لكل الأعمار",
+  "en": "Anti-Cough Medications"
+ },
+ "teaser": {
+  "ar": "قبل ما تصرف أو تدّي أي دواء كحة: اسأل السن وجافة ولا ببلغم. المجموعات، أسماء السوق المصري، الجرعات للرضّع والأطفال والكبار، وإمتى الكحة مش محتاجة دواء أصلاً.",
+  "en": "Before you dispense or give any cough medicine: ask age, and dry or with phlegm. The groups, Egyptian market names, doses for infants, children, and adults, and when a cough needs no medicine at all."
+ },
+ "chips": [
+  {
+   "ar": "جافة / ببلغم",
+   "en": "Dry / productive"
   },
-  "teaser": {
-    "ar": "قبل ما تصرف أو تدّي أي دواء كحة: اسأل السن وجافة ولا ببلغم. المجموعات، أسماء السوق المصري، الجرعات للرضّع والأطفال والكبار، وإمتى الكحة مش محتاجة دواء أصلاً."
+  {
+   "ar": "رضّع وأطفال وكبار",
+   "en": "Infants, children, and adults"
   },
-  "chips": [
-    {
-      "ar": "جافة / ببلغم"
-    },
-    {
-      "ar": "رضّع وأطفال وكبار"
-    },
-    {
-      "ar": "مذيبات وطاردات"
-    }
+  {
+   "ar": "مذيبات وطاردات",
+   "en": "Mucolytics and expectorants"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>أدوية الكحة في السوق المصري كتيرة جداً ومختلفة التركيب، واختيار الدواء بيعتمد على <b>نوع الكحة</b> و<b>السن</b> وحالة المريض. القاعدة الذهبية: اسأل سؤالين قبل أي وصفة.</p><div class=\"cs-box cs-warning\"><strong>سؤالان إلزاميان قبل أي دواء كحة</strong><ul><li>السن كام؟</li><li>كحة جافة ولا ببلغم؟</li></ul></div>[[slot:dis-301-age-algorithm|اختيار دواء الكحة حسب السن ونوع الكحة — رسم توضيحي من إعداد الموقع|/diseases/img/dis-301-age-algorithm.svg]]<h4>مجموعات الأدوية</h4>[[slot:dis-301-classes|مجموعات أدوية الكحة — رسم توضيحي من إعداد الموقع|/diseases/img/dis-301-classes.svg]]<table><thead><tr><th>المجموعة</th><th>مثال (مادة فعالة)</th><th>ملاحظة</th></tr></thead><tbody><tr><td><b>أدوية الكحة الجافة:</b> مثبّط كحة (Cough suppressant)</td><td>dextromethorphan</td><td>بيشتغل على مركز الكحة في المخ ويقللها</td></tr><tr><td><b>مذيب بلغم (Mucolytic)</b></td><td>bromhexine, ambroxol</td><td>للكحة ببلغم</td></tr><tr><td><b>طارد بلغم (Expectorant)</b></td><td>guaifenesin</td><td>للكحة ببلغم</td></tr><tr><td><b>موسّع شعب (Bronchodilator)</b></td><td>aminophylline, terbutaline</td><td>كويس للكحة عموماً، لكن بيفضل لو المريض نفسه مضايق/حساسية صدر أو أزيز</td></tr><tr><td><b>مضاد هيستامين (Antihistaminic)</b></td><td>chlorpheniramine, oxomemazine</td><td>للرشح والعطس المصاحب لأدوار البرد</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>ممنوع مثبّطات الكحة في الكحة ببلغم</strong><p>الكحة ببلغم هي وسيلة الجسم الطبيعية لطرد البلغم. بعض الأطباء يوصفوا شراباً مثبّطاً <b>قبل النوم فقط</b> (ملعقة واحدة) في الكحة ببلغم الشديدة اللي بتمنع النوم. وبعضهم يفضّل الأدوية الطاردة والمذيبة صباحاً وعصراً فقط وليس مساءً لأنها تزوّد الكحة وقت النوم.</p></div>\n<p>للروشتات الجاهزة لأعمار 2 سنة فما فوق (أطفال وبالغين) وجرعات الأقراص والفوار والحقن: <a href=\"/diseases/dis-324\">دليل وصفات الكحة</a>.</p>",
+   "en": "<p>Cough medicines in the Egyptian market are very many and differ in composition, and choosing the drug depends on the <b>type of cough</b>, the <b>age</b>, and the patient's condition. The golden rule: ask two questions before any prescription.</p><div class=\"cs-box cs-warning\"><strong>Two mandatory questions before any cough medicine</strong><ul><li>How old?</li><li>Dry cough or with phlegm?</li></ul></div>[[slot:dis-301-age-algorithm|Choosing a cough medicine by age and type of cough — site illustration|/diseases/img/dis-301-age-algorithm.svg]]<h4>Drug groups</h4>[[slot:dis-301-classes|Cough medicine groups — site illustration|/diseases/img/dis-301-classes.svg]]<table><thead><tr><th>Group</th><th>Example (active ingredient)</th><th>Note</th></tr></thead><tbody><tr><td><b>Dry cough drugs:</b> cough suppressant (Cough suppressant)</td><td>dextromethorphan</td><td>Works on the cough center in the brain and reduces it</td></tr><tr><td><b>Mucolytic</b></td><td>bromhexine, ambroxol</td><td>For cough with phlegm</td></tr><tr><td><b>Expectorant</b></td><td>guaifenesin</td><td>For cough with phlegm</td></tr><tr><td><b>Bronchodilator</b></td><td>aminophylline, terbutaline</td><td>Good for cough in general, but preferred if the patient is distressed/has chest allergy or wheezing</td></tr><tr><td><b>Antihistamine</b></td><td>chlorpheniramine, oxomemazine</td><td>For the runny nose and sneezing accompanying colds</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Cough suppressants are prohibited in a cough with phlegm</strong><p>A cough with phlegm is the body's natural way of expelling phlegm. Some doctors prescribe a suppressant syrup <b>at bedtime only</b> (one spoon) in a severe productive cough that prevents sleep. And some prefer expectorant and mucolytic drugs in the morning and afternoon only and not in the evening because they increase the cough at sleep time.</p></div>\n<p>For ready-made prescriptions for ages 2 years and above (children and adults) and doses of tablets, effervescents, and injections: <a href=\"/diseases/dis-324\">cough prescriptions guide</a>.</p>"
+  },
+  "causes": {
+   "ar": "<h4>أشهر الأسباب العملية للكحة الجافة (اسأل المريض)</h4><table><thead><tr><th>السبب</th><th>إزاي تعرفه</th><th>التصرف</th></tr></thead><tbody><tr><td><b>إنفلونزا حالية أو لسه خالصة</b> (كحة ما بعد الفيروس Post-viral cough)</td><td>أعراض تانية: صداع، تكسير، سخونية، احتقان في الزور؟ لسه طالع من دور برد؟</td><td>الكحة ممكن تطوّل بعد دور البرد أو الإنفلونزا. لو الكحة شديدة أو طولت أكتر من أسبوعين غالباً بقى التهاب شعبي حاد (Acute bronchitis).</td></tr><tr><td><b>مثبطات الإنزيم المحوّل ACE inhibitors</b> (مثل Capoten/Capotril)</td><td>اسأل: بتاخد دواء للضغط؟</td><td>الكحة الناشفة من أشهر آثارها الجانبية؛ بلّغ الطبيب لتغيير الدواء (غالباً ARB).</td></tr><tr><td><b>ارتجاع المريء (GERD)</b></td><td>حرقان في فم المعدة أو حموضة، وبتزيد لما ينام؟</td><td>ارتجاع حمض المعدة أحد أهم أسباب الكحة الناشفة بسبب الاستنشاق وتهيّج الحمض، فلازم تستبعده.</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأسباب الإضافية للكحة المزمنة (أكتر من 8 أسابيع): الربو، تنقيط الأنف الخلفي، التدخين، السل، الأورام. أي كحة أطول من 3 أسابيع أو بدم أو بنقص وزن تحتاج تقييم الطبيب وأشعة صدر.</p></div>",
+   "en": "<h4>The most common practical causes of dry cough (ask the patient)</h4><table><thead><tr><th>Cause</th><th>How to recognize it</th><th>Action</th></tr></thead><tbody><tr><td><b>Current or just-finished influenza</b> (Post-viral cough)</td><td>Other symptoms: headache, body aches, fever, throat congestion? Just recovering from a cold?</td><td>The cough may last after a cold or influenza. If the cough is severe or lasts more than two weeks it is probably acute bronchitis (Acute bronchitis).</td></tr><tr><td><b>ACE inhibitors</b> (such as Capoten/Capotril)</td><td>Ask: do you take a blood pressure medicine?</td><td>A dry cough is one of the best-known side effects; inform the physician to change the drug (usually to an ARB).</td></tr><tr><td><b>Gastroesophageal reflux (GERD)</b></td><td>Burning at the pit of the stomach or heartburn, which increases when lying down?</td><td>Stomach acid reflux is one of the most important causes of dry cough due to aspiration and acid irritation, so it must be ruled out.</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Additional causes of chronic cough (more than 8 weeks): asthma, postnasal drip, smoking, tuberculosis, tumors. Any cough longer than 3 weeks or with blood or weight loss needs the physician's assessment and a chest X-ray.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>نوع الكحة يحدد الدواء</h4><table><thead><tr><th></th><th>كحة جافة (Dry)</th><th>كحة ببلغم (Productive)</th></tr></thead><tbody><tr><td>الصفة</td><td>ناشفة، تهيج، بدون بلغم</td><td>بلغم يطلع (أبيض/أصفر/أخضر)</td></tr><tr><td>الدواء</td><td>مثبط كحة أو أعشاب للجافة</td><td>مذيب/طارد بلغم، موسّع شعب لو أزيز</td></tr><tr><td>تجنّب</td><td>—</td><td>مثبّطات الكحة (إلا قبل النوم بقرار الطبيب)</td></tr></tbody></table><h4>ملحوظة مهمة</h4><p>الأدوية الكيميائية قليلة جداً بين الأعشاب في الأعمار الصغيرة، والعشبية بعضها للجافة فقط وبعضها للنوعين.</p><div class=\"cs-box cs-danger\"><strong>علامات خطر في الكحة</strong><ul><li>صعوبة تنفس أو أزيز أو زرقة</li><li>كحة بدم أو بلغم صدئي</li><li>حرارة عالية مستمرة</li><li>كحة أكتر من 3 أسابيع، أو نقص وزن، أو عرق ليلي</li><li>طفل رضيع بكحة شديدة، شهقة أو صوت صفير (stridor)</li></ul></div>",
+   "en": "<h4>The type of cough determines the drug</h4><table><thead><tr><th></th><th>Dry cough (Dry)</th><th>Cough with phlegm (Productive)</th></tr></thead><tbody><tr><td>Character</td><td>Hacking, irritating, without phlegm</td><td>Phlegm comes up (white/yellow/green)</td></tr><tr><td>Drug</td><td>A cough suppressant or herbs for dry cough</td><td>Mucolytic/expectorant, bronchodilator if wheezing</td></tr><tr><td>Avoid</td><td>—</td><td>Cough suppressants (except at bedtime by the physician's decision)</td></tr></tbody></table><h4>Important note</h4><p>Chemical drugs are very few among the herbal ones in young ages, and some herbal ones are for dry cough only and some are for both types.</p><div class=\"cs-box cs-danger\"><strong>Danger signs in cough</strong><ul><li>Difficulty breathing, wheezing, or cyanosis</li><li>Cough with blood or rusty sputum</li><li>Persistent high fever</li><li>Cough longer than 3 weeks, or weight loss, or night sweats</li><li>An infant with a severe cough, gasping, or a whistling sound (stridor)</li></ul></div>"
+  },
+  "tests": {
+   "ar": "<p>أغلب الكحة الحادة بتتشخّص إكلينيكياً. الطبيب يطلب أشعة صدر لو حرارة مستمرة أو ضيق نفس أو كحة طويلة، وفحص بصاق/سل لو شك، ووظائف رئة لو ربو.</p>",
+   "en": "<p>Most acute cough is diagnosed clinically. The physician requests a chest X-ray if there is persistent fever, shortness of breath, or a long cough, sputum/TB testing if suspected, and pulmonary function tests for asthma.</p>"
+  },
+  "treatment": {
+   "ar": "<h4>أولاً: الرضّع والأطفال أقل من سنتين</h4><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الدولية (FDA وAAP وغيرها) تنصح بعدم استخدام أدوية الكحة والبرد في الأطفال أقل من سنتين، وكثير من الجهات حتى 4–6 سنين، لضعف الفائدة وخطر الجرعة الزائدة. المرجع الذي اعتمدنا عليه يذكر أدوية مناسبة للرضّع، فنذكرها للمعرفة. <b>لا تُعطى إلا بأمر الطبيب وبجرعة مناسبة للوزن</b>. بدائل الأمان: سوائل، رفع الرأس، غسول ملحي للأنف، والعسل لما فوق السنة.</p></div><h5>الكحة الجافة</h5><table><thead><tr><th>الشكل</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>نقط (Drops) عشبية</td><td>Mini Guava drops</td><td>4–8 نقط 3 مرات يومياً</td></tr><tr><td>نقط كيميائية</td><td>Sinecod drops</td><td>حتى 10 نقط 3 مرات يومياً (للأطفال أقل من سنة)</td></tr><tr><td>شراب (أعشاب للجافة فقط)</td><td>Sina-Dry syrup, Alveolin syrup</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>شراب (للنوعين: جافة وببلغم)</td><td>Herba-cough syrup, Guava syrup, Balsam syrup, Bronchicum syrup</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>لبوس</td><td>Selgon supp (10 لبوس)</td><td>نصف لبوسة 2–3 مرات يومياً</td></tr></tbody></table><h5>الكحة ببلغم</h5><table><thead><tr><th>الشكل</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>نقط كيميائية</td><td>Bisolvon drops (bromhexine)</td><td>3–8 نقط 3 مرات يومياً (للأطفال أقل من سنة). أشهر أثر جانبي: اضطراب الجهاز الهضمي</td></tr><tr><td>شراب أعشاب (بلغم فقط)</td><td>Sina-Wet syrup, Alveolin-P syrup, Broncho syrup</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>شراب أعشاب (النوعين)</td><td>Guava, Balsam, Bronchicum syrup</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>شراب كيميائي</td><td>Bisolvon syrup</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>لبوس</td><td>Rectoplexil supp (10 لبوس) — مشهور في أدوار البرد لاحتوائه على باراسيتامول</td><td>لبوسة صباحاً ومساءً</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>الجرعة: ملعقة صغيرة</strong><p>المرجع يحددها 2.5 سم بالسرنجة. استخدم دائماً أداة القياس الموجودة في عبوة الدواء لأن حجم الملعقة يختلف من منتج لآخر، وراجع النشرة والوزن.</p></div><h5>أمثلة روشتات شائعة (أقل من سنتين)</h5><table><thead><tr><th>الحالة</th><th>الروشتة</th></tr></thead><tbody><tr><td>كحة جافة في رضيع</td><td>Mini Guava drops 5 نقط 3 مرات يومياً أو Selgon supp نصف لبوسة صباحاً ومساءً</td></tr><tr><td>كحة جافة في طفل سنة ونصف</td><td>Sina-Dry syrup ملعقة صغيرة 3 مرات يومياً أو Herba-cough/Guava syrup ملعقة صغيرة 3 مرات</td></tr><tr><td>كحة ببلغم في طفل عمره شهرين</td><td>Bisolvon drops 8 نقط 3 مرات أو Rectoplexil supp لبوسة صباحاً ومساءً</td></tr><tr><td>كحة ببلغم في طفل عمره سنة</td><td>Sina-Wet syrup ملعقة صغيرة 3 مرات أو Herba-cough/Guava syrup ملعقة صغيرة 3 مرات</td></tr><tr><td>كحة ببلغم شديدة والطفل مش مرتاح</td><td>Bronchicum syrup ملعقة صغيرة 3 مرات يومياً</td></tr></tbody></table><h4>ثانياً: الأطفال من 2 إلى 12 سنة</h4><p>غالباً الشراب هو الأنسب في الأطفال الأكبر من سنة.</p><h5>الكحة الجافة</h5><ul><li><b>أعشاب:</b> نفس الأدوية السابقة لكن بجرعة <b>ملعقة كبيرة</b> 3 مرات يومياً</li><li><b>كيميائية</b> (من سنتين، معظم الأدوية الكيميائية ممكن استخدامها): Pectipro syrup وSinecod syrup — من 2 إلى 6 سنين: ملعقة صغيرة 3 مرات يومياً، ومن 6 إلى 12 سنة: ملعقة كبيرة 3 مرات يومياً</li><li>لبوس: Selgon supp لبوسة 2–3 مرات يومياً</li></ul><h5>الكحة ببلغم</h5><table><thead><tr><th>المجموعة</th><th>الأدوية</th><th>الجرعة</th></tr></thead><tbody><tr><td>أعشاب</td><td>نفس الأدوية السابقة</td><td>ملعقة كبيرة 3 مرات يومياً</td></tr><tr><td>مذيب بلغم (Mucolytic)</td><td>Bisolvon syrup, Mucosol ped. syrup, Bronchopro syrup</td><td>2–6 سنين: ملعقة صغيرة 3 مرات. 6–12 سنة: ملعقة كبيرة 3 مرات</td></tr><tr><td>مذيب + موسّع شعب</td><td>Mucophylline syrup</td><td>2–6 سنين: نصف ملعقة صغيرة. 6–10 سنين: ملعقة صغيرة. أكبر من 10: ملعقة كبيرة (كلها 3 مرات يومياً)</td></tr><tr><td>مذيب + طارد + موسّع شعب</td><td>All-Vent, Osipect, Farcosolvin syrup</td><td>2–6 سنين: ملعقة صغيرة. 6–12 سنة: ملعقة كبيرة (3 مرات يومياً)</td></tr><tr><td>مذيب + طارد + مضاد هيستامين</td><td>Ultra-solv syrup (من أفضل الأدوية في إذابة البلغم)</td><td>2–6: ملعقة صغيرة. 6–12: ملعقة كبيرة 3 مرات</td></tr><tr><td>مذيب + طارد + مضاد هيستامين + باراسيتامول</td><td>Toplexil syrup (من أفضل الأدوية في أدوار البرد)</td><td>ملعقة كبيرة 3 مرات يومياً (جرعته مثل العشبية)</td></tr><tr><td>طارد بلغم + مهدئ كحة</td><td>Bronchophane, Tusskan syrup</td><td>حسب النشرة. المرجع ينبه أن تركيبتهم غير منطقية (بتهدّئ الكحة وتطرد البلغم معاً) ونتائجهم أقل من الأنواع الأخرى</td></tr><tr><td>لبوس</td><td>Rectoplexil supp</td><td>لبوسة 2–3 مرات يومياً</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>ملاحظات</strong><ul><li>موسعات الشعب مفيدة للكحة عموماً وخصوصاً مع حساسية الصدر.</li><li>بعض الأطباء ما يوصفوش Mucophylline في السن الصغيرة لاحتوائه على aminophylline، لأن الفرق بين الجرعة العلاجية والسامة صغير.</li></ul></div><p>أمثلة روشتات جاهزة لهذه الفئة: راجع <a href=\"/diseases/dis-324\">وصفات الكحة (شراب وأقراص وفوار وحقن ولبوس)</a>.</p><h4>ثالثاً: البالغون والأطفال أكبر من 12 سنة</h4><p>الشراب في الكبار عموماً بيجيب نتائج ضعيفة جداً، والأقراص والكبسولات أفضل.</p><h5>الكحة الجافة</h5><ul><li>شراب (أعشاب أو كيميائي): نفس الأدوية لكن 1–2 ملعقة كبيرة 3 مرات يومياً</li><li>أقراص: Selgon tab وSilomat tab — قرص 3 مرات يومياً</li></ul><h5>الكحة ببلغم</h5><table><thead><tr><th>الشكل</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>شراب</td><td>أعشاب أو كيميائي نفس السابقة (انتبه: Mucosol adult syrup للكبار وفيه نسخة للأطفال)</td><td>1–2 ملعقة كبيرة 3 مرات يومياً</td></tr><tr><td>أقراص/كبسولات</td><td>Bisolvon tab، Farcosolvin caps</td><td>قرص 3 مرات يومياً</td></tr><tr><td>كبسولات ممتدة المفعول</td><td>Muco SR caps، Ambroxol SR caps</td><td>كبسولة واحدة يومياً</td></tr><tr><td>فوار</td><td>Acetylcysteine 200 mg</td><td>كيس على نصف كوب ماء 3 مرات يومياً ويُشرب أثناء الفوران</td></tr><tr><td>فوار</td><td>Acetylcysteine 600 mg</td><td>كيس على نصف كوب ماء مرتين يومياً ويُشرب أثناء الفوران</td></tr><tr><td>أمبول (الحالات الشديدة)</td><td>Bisolvon amp</td><td>حقنة عضل أو بالتنقيط في المحلول</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Acetylcysteine والربو</strong><p>المرجع ينبه إنه مش حلو للناس اللي عندها ربو (Asthma) لأنه ممكن يعمل تشنج شعبي (Bronchospasm). استعمل بحذر مع مرضى الربو وبأمر الطبيب.</p></div><p>أمثلة روشتات جاهزة لهذه الفئة: راجع <a href=\"/diseases/dis-324\">وصفات الكحة (شراب وأقراص وفوار وحقن ولبوس)</a>.</p><div class=\"cs-box cs-warning\"><strong>تحديث (معلومات الأدوية)</strong><p>المواد الفعالة المذكورة (dextromethorphan, bromhexine, ambroxol, guaifenesin, aminophylline, terbutaline, chlorpheniramine, oxomemazine, acetylcysteine) من المراجع. الأسماء التجارية تتغير تركيبتها حسب الشركة والتشغيلة، فتأكد من العلبة. Silomat (clobutinol) سُحب في دول كثيرة بسبب خطر اضطراب نظم القلب (إطالة QT)، فتأكد من حالته في السوق قبل التوصية. فعالية مذيبات وطاردات البلغم محدودة في الدراسات. مثبطات الكحة التي تحتوي dextromethorphan قد تتفاعل مع مضادات الاكتئاب (SSRIs/MAOIs). الأمينوفيللين (في بعض الأدوية المركبة) تتفاعل مع سيبروفلوكساسين فترتفع مستوياته. لم أتمكن من التأكد من التركيبة المحلية الدقيقة لكل من: Pectipro, Alveolin, Bronchopro, Osipect, Tusskan.</p></div><div class=\"cs-box cs-tip\"><strong>قبل أي وصفة</strong><p>ابحث عن السبب: الإنفلونزا الأخيرة، ACE inhibitors، الارتجاع المعدي المريئي. علاج السبب أهم من شراب الكحة.</p></div>",
+   "en": "<h4>First: infants and children under two years</h4><div class=\"cs-box cs-warning\"><strong>Update</strong><p>International guidance advises against using cough and cold medicines in children under two years, and many bodies up to 4–6 years, because of weak benefit and the risk of overdose. Drugs used for infants exist, so we list them for knowledge. <b>They are given only by the physician's order and at a dose suitable for weight</b>. Safe alternatives: fluids, head elevation, saline nasal wash, and honey for those over one year.</p></div><h5>Dry cough</h5><table><thead><tr><th>Form</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Herbal drops (Drops)</td><td>Mini Guava drops</td><td>4–8 drops 3 times daily</td></tr><tr><td>Chemical drops</td><td>Sinecod drops</td><td>Up to 10 drops 3 times daily (for children under one year)</td></tr><tr><td>Syrup (herbs for dry cough only)</td><td>Sina-Dry syrup, Alveolin syrup</td><td>A teaspoon 3 times daily</td></tr><tr><td>Syrup (for both types: dry and productive)</td><td>Herba-cough syrup, Guava syrup, Balsam syrup, Bronchicum syrup</td><td>A teaspoon 3 times daily</td></tr><tr><td>Suppository</td><td>Selgon supp (10 suppositories)</td><td>Half a suppository 2–3 times daily</td></tr></tbody></table><h5>Cough with phlegm</h5><table><thead><tr><th>Form</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Chemical drops</td><td>Bisolvon drops (bromhexine)</td><td>3–8 drops 3 times daily (for children under one year). Best-known side effect: gastrointestinal upset</td></tr><tr><td>Herbal syrup (phlegm only)</td><td>Sina-Wet syrup, Alveolin-P syrup, Broncho syrup</td><td>A teaspoon 3 times daily</td></tr><tr><td>Herbal syrup (both types)</td><td>Guava, Balsam, Bronchicum syrup</td><td>A teaspoon 3 times daily</td></tr><tr><td>Chemical syrup</td><td>Bisolvon syrup</td><td>A teaspoon 3 times daily</td></tr><tr><td>Suppository</td><td>Rectoplexil supp (10 suppositories) — well known in colds because it contains paracetamol</td><td>A suppository morning and evening</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>The dose: a teaspoon</strong><p>It is defined as 2.5 cm by syringe. Always use the measuring tool in the medicine package because the spoon size differs from one product to another, and check the leaflet and the weight.</p></div><h5>Common prescription examples (under two years)</h5><table><thead><tr><th>Case</th><th>Prescription</th></tr></thead><tbody><tr><td>Dry cough in an infant</td><td>Mini Guava drops 5 drops 3 times daily or Selgon supp half a suppository morning and evening</td></tr><tr><td>Dry cough in a child of a year and a half</td><td>Sina-Dry syrup a teaspoon 3 times daily or Herba-cough/Guava syrup a teaspoon 3 times</td></tr><tr><td>Productive cough in a two-month-old</td><td>Bisolvon drops 8 drops 3 times or Rectoplexil supp a suppository morning and evening</td></tr><tr><td>Productive cough in a one-year-old</td><td>Sina-Wet syrup a teaspoon 3 times or Herba-cough/Guava syrup a teaspoon 3 times</td></tr><tr><td>Severe productive cough and the child is uncomfortable</td><td>Bronchicum syrup a teaspoon 3 times daily</td></tr></tbody></table><h4>Second: children 2 to 12 years</h4><p>Syrup is usually the most suitable in children older than one year.</p><h5>Dry cough</h5><ul><li><b>Herbal:</b> the same previous drugs but at a dose of <b>a tablespoon</b> 3 times daily</li><li><b>Chemical</b> (from two years, most chemical drugs can be used): Pectipro syrup and Sinecod syrup — from 2 to 6 years: a teaspoon 3 times daily, and from 6 to 12 years: a tablespoon 3 times daily</li><li>Suppository: Selgon supp a suppository 2–3 times daily</li></ul><h5>Cough with phlegm</h5><table><thead><tr><th>Group</th><th>Drugs</th><th>Dose</th></tr></thead><tbody><tr><td>Herbal</td><td>The same previous drugs</td><td>A tablespoon 3 times daily</td></tr><tr><td>Mucolytic</td><td>Bisolvon syrup, Mucosol ped. syrup, Bronchopro syrup</td><td>2–6 years: a teaspoon 3 times. 6–12 years: a tablespoon 3 times</td></tr><tr><td>Mucolytic + bronchodilator</td><td>Mucophylline syrup</td><td>2–6 years: half a teaspoon. 6–10 years: a teaspoon. Older than 10: a tablespoon (all 3 times daily)</td></tr><tr><td>Mucolytic + expectorant + bronchodilator</td><td>All-Vent, Osipect, Farcosolvin syrup</td><td>2–6 years: a teaspoon. 6–12 years: a tablespoon (3 times daily)</td></tr><tr><td>Mucolytic + expectorant + antihistamine</td><td>Ultra-solv syrup (one of the best drugs at dissolving phlegm)</td><td>2–6: a teaspoon. 6–12: a tablespoon 3 times</td></tr><tr><td>Mucolytic + expectorant + antihistamine + paracetamol</td><td>Toplexil syrup (one of the best drugs in colds)</td><td>A tablespoon 3 times daily (its dose is like the herbal ones)</td></tr><tr><td>Expectorant + cough soother</td><td>Bronchophane, Tusskan syrup</td><td>Per the leaflet. Note that their composition is illogical (soothing the cough and expelling phlegm together) and their results are less than the other types</td></tr><tr><td>Suppository</td><td>Rectoplexil supp</td><td>A suppository 2–3 times daily</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Notes</strong><ul><li>Bronchodilators are useful for cough in general and especially with chest allergy.</li><li>Some doctors do not prescribe Mucophylline in young ages because it contains aminophylline, since the difference between the therapeutic and toxic dose is small.</li></ul></div><p>Examples of ready-made prescriptions for this group: see <a href=\"/diseases/dis-324\">cough prescriptions (syrup, tablets, effervescent, injections, and suppositories)</a>.</p><h4>Third: adults and children older than 12 years</h4><p>Syrup in adults generally gives very weak results, and tablets and capsules are better.</p><h5>Dry cough</h5><ul><li>Syrup (herbal or chemical): the same drugs but 1–2 tablespoons 3 times daily</li><li>Tablets: Selgon tab and Silomat tab — a tablet 3 times daily</li></ul><h5>Cough with phlegm</h5><table><thead><tr><th>Form</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>Syrup</td><td>Herbal or chemical, the same as before (note: Mucosol adult syrup is for adults and there is a children's version)</td><td>1–2 tablespoons 3 times daily</td></tr><tr><td>Tablets/capsules</td><td>Bisolvon tab, Farcosolvin caps</td><td>A tablet 3 times daily</td></tr><tr><td>Extended-release capsules</td><td>Muco SR caps, Ambroxol SR caps</td><td>One capsule daily</td></tr><tr><td>Effervescent</td><td>Acetylcysteine 200 mg</td><td>A sachet in half a glass of water 3 times daily and drink it while fizzing</td></tr><tr><td>Effervescent</td><td>Acetylcysteine 600 mg</td><td>A sachet in half a glass of water twice daily and drink it while fizzing</td></tr><tr><td>Ampoule (severe cases)</td><td>Bisolvon amp</td><td>An IM injection or by drip in the solution</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Acetylcysteine and asthma</strong><p>It is noted that it is not good for people who have asthma (Asthma) because it may cause bronchospasm (Bronchospasm). Use with caution in asthma patients and by the physician's order.</p></div><p>Examples of ready-made prescriptions for this group: see <a href=\"/diseases/dis-324\">cough prescriptions (syrup, tablets, effervescent, injections, and suppositories)</a>.</p><div class=\"cs-box cs-warning\"><strong>Update (drug information)</strong><p>The active ingredients mentioned (dextromethorphan, bromhexine, ambroxol, guaifenesin, aminophylline, terbutaline, chlorpheniramine, oxomemazine, acetylcysteine) are the commonly used ones. The composition of brand names changes by company and batch, so check the package. Silomat (clobutinol) was withdrawn in many countries because of the risk of dysrhythmia (QT prolongation), so check its status in the market before recommending. The effectiveness of mucolytics and expectorants is limited in studies. Cough suppressants that contain dextromethorphan may interact with antidepressants (SSRIs/MAOIs). Aminophylline (in some combined drugs) interacts with ciprofloxacin so its levels rise. I could not verify the exact local composition of each of: Pectipro, Alveolin, Bronchopro, Osipect, Tusskan.</p></div><div class=\"cs-box cs-tip\"><strong>Before any prescription</strong><p>Look for the cause: recent influenza, ACE inhibitors, gastroesophageal reflux. Treating the cause is more important than the cough syrup.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل سؤالين</strong><p>السن؟ جافة ولا ببلغم؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اسأل عن السبب</strong><p>فلو حديث؟ دواء ضغط (Capoten/ACEi)؟ حرقان وارتجاع يزيد في النوم؟ تدخين؟ ربو؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راجع الأمان</strong><p>الحساسية، الحمل والرضاعة، الربو (قبل Acetylcysteine)، القلب (قبل مزيلات الاحتقان/aminophylline)، تعدد الأدوية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اختر الشكل المناسب للسن</strong><p>نقط ولبوس للرضع، شراب للأطفال، أقراص/كبسولات/فوار للكبار. استخدم أداة القياس المرفقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>علّم التوقيت</strong><p>الطاردات والمذيبات صباحاً وعصراً (مش مساءً)، المثبط قبل النوم في الجافة. اشرب سوائل كتير.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب</strong><p>تحسن الكحة، الأزيز، النعاس، الآثار الهضمية (Bisolvon)، الحرارة، لون البلغم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>بلّغ</strong><p>أي علامة خطر أو كحة تطوّل أكتر من 3 أسابيع.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>لا تخلط</strong><p>كتير من أدوية البرد المركبة بتحتوي مضاد هيستامين وباراسيتامول؛ ما تدّيش أكتر من دواء مركب مع بعض.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Ask two questions</strong><p>Age? Dry or with phlegm?</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Ask about the cause</strong><p>Recent flu? Blood pressure drug (Capoten/ACEi)? Burning and reflux that increases during sleep? Smoking? Asthma?</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Check safety</strong><p>Allergy, pregnancy and breastfeeding, asthma (before Acetylcysteine), heart (before decongestants/aminophylline), multiple medications.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Choose the form suitable for the age</strong><p>Drops and suppositories for infants, syrup for children, tablets/capsules/effervescents for adults. Use the enclosed measuring tool.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Teach the timing</strong><p>Expectorants and mucolytics in the morning and afternoon (not evening), the suppressant at bedtime in dry cough. Drink plenty of fluids.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Monitor</strong><p>Cough improvement, wheezing, drowsiness, GI effects (Bisolvon), fever, sputum color.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Report</strong><p>Any danger sign or a cough lasting more than 3 weeks.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>Do not combine</strong><p>Many combined cold medicines contain an antihistamine and paracetamol; do not give more than one combined drug together.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب لو:</strong><ul><li>ضيق نفس أو أزيز أو زرقة (خصوصاً مع الرضّع)</li><li>كحة بدم</li><li>حرارة عالية أكتر من 3 أيام</li><li>الكحة أكتر من 3 أسابيع، أو مع نقص وزن وعرق ليلي</li><li>رضيع أقل من 3 شهور بكحة</li><li>اشتباه استنشاق جسم غريب</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Inform the physician if:</strong><ul><li>Shortness of breath, wheezing, or cyanosis (especially with infants)</li><li>Cough with blood</li><li>High fever for more than 3 days</li><li>Cough longer than 3 weeks, or with weight loss and night sweats</li><li>An infant under 3 months with a cough</li><li>Suspected foreign body aspiration</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرب سوائل دافئة كتير، والعسل ممكن للكحة لغير الرضع تحت سنة.</li><li>لو بتاخد دواء ضغط وبتكح كحة ناشفة: قول للطبيب (ممكن ACE inhibitor).</li><li>لو حرقان وحموضة بالليل: ارفع راسك وقلل الأكل المتأخر، وقول للطبيب.</li><li>متستخدمش مثبّط كحة لو الكحة ببلغم.</li><li>استخدم أداة القياس بتاعة الدواء ومتدّيش الطفل جرعة كبار.</li><li>متدّيش أدوية كحة للرضّع من غير طبيب.</li><li>قلّل التدخين والغبار.</li></ul>",
+   "en": "<ul><li>Drink plenty of warm fluids, and honey may be used for cough in those not infants under one year.</li><li>If you take a blood pressure drug and have a dry cough: tell the physician (it may be an ACE inhibitor).</li><li>If heartburn and acidity at night: raise your head and reduce late eating, and tell the physician.</li><li>Do not use a cough suppressant if the cough is productive.</li><li>Use the medicine's measuring tool and do not give the child an adult dose.</li><li>Do not give infants cough medicines without a physician.</li><li>Reduce smoking and dust.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "اسأل السن ونوع الكحة (جافة/ببلغم) قبل أي دواء",
+   "الجافة: مثبّط كحة أو أعشاب. ببلغم: مذيب/طارد بلغم ولا تثبّط الكحة",
+   "أسباب الجافة: فلو، ACE inhibitor، ارتجاع المريء",
+   "الرضّع: نقط/شراب/لبوس بأمر الطبيب، وإرشادات حديثة تحذّر من أدوية الكحة تحت سنتين",
+   "الكبار: أقراص/كبسولات/فوار أفضل من الشراب",
+   "Acetylcysteine: حذر في الربو (تشنج شعبي)",
+   "Toplexil وUltra-Solv من أشهر المركبات للبلغم، وفيها مضاد هيستامين فقد تسبب نعاس"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>أدوية الكحة في السوق المصري كتيرة جداً ومختلفة التركيب، واختيار الدواء بيعتمد على <b>نوع الكحة</b> و<b>السن</b> وحالة المريض. القاعدة الذهبية: اسأل سؤالين قبل أي وصفة.</p><div class=\"cs-box cs-warning\"><strong>سؤالان إلزاميان قبل أي دواء كحة</strong><ul><li>السن كام؟</li><li>كحة جافة ولا ببلغم؟</li></ul></div>[[slot:dis-301-age-algorithm|اختيار دواء الكحة حسب السن ونوع الكحة — رسم توضيحي من إعداد الموقع|/diseases/img/dis-301-age-algorithm.svg]]<h4>مجموعات الأدوية</h4>[[slot:dis-301-classes|مجموعات أدوية الكحة — رسم توضيحي من إعداد الموقع|/diseases/img/dis-301-classes.svg]]<table><thead><tr><th>المجموعة</th><th>مثال (مادة فعالة)</th><th>ملاحظة</th></tr></thead><tbody><tr><td><b>أدوية الكحة الجافة:</b> مثبّط كحة (Cough suppressant)</td><td>dextromethorphan</td><td>بيشتغل على مركز الكحة في المخ ويقللها</td></tr><tr><td><b>مذيب بلغم (Mucolytic)</b></td><td>bromhexine, ambroxol</td><td>للكحة ببلغم</td></tr><tr><td><b>طارد بلغم (Expectorant)</b></td><td>guaifenesin</td><td>للكحة ببلغم</td></tr><tr><td><b>موسّع شعب (Bronchodilator)</b></td><td>aminophylline, terbutaline</td><td>كويس للكحة عموماً، لكن بيفضل لو المريض نفسه مضايق/حساسية صدر أو أزيز</td></tr><tr><td><b>مضاد هيستامين (Antihistaminic)</b></td><td>chlorpheniramine, oxomemazine</td><td>للرشح والعطس المصاحب لأدوار البرد</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>ممنوع مثبّطات الكحة في الكحة ببلغم</strong><p>الكحة ببلغم هي وسيلة الجسم الطبيعية لطرد البلغم. بعض الأطباء يوصفوا شراباً مثبّطاً <b>قبل النوم فقط</b> (ملعقة واحدة) في الكحة ببلغم الشديدة اللي بتمنع النوم. وبعضهم يفضّل الأدوية الطاردة والمذيبة صباحاً وعصراً فقط وليس مساءً لأنها تزوّد الكحة وقت النوم.</p></div>\n<p>للروشتات الجاهزة لأعمار 2 سنة فما فوق (أطفال وبالغين) وجرعات الأقراص والفوار والحقن: <a href=\"/diseases/dis-324\">دليل وصفات الكحة</a>.</p>"
-    },
-    "causes": {
-      "ar": "<h4>أشهر الأسباب العملية للكحة الجافة (اسأل المريض)</h4><table><thead><tr><th>السبب</th><th>إزاي تعرفه</th><th>التصرف</th></tr></thead><tbody><tr><td><b>إنفلونزا حالية أو لسه خالصة</b> (كحة ما بعد الفيروس Post-viral cough)</td><td>أعراض تانية: صداع، تكسير، سخونية، احتقان في الزور؟ لسه طالع من دور برد؟</td><td>الكحة ممكن تطوّل بعد دور البرد أو الإنفلونزا. لو الكحة شديدة أو طولت أكتر من أسبوعين غالباً بقى التهاب شعبي حاد (Acute bronchitis).</td></tr><tr><td><b>مثبطات الإنزيم المحوّل ACE inhibitors</b> (مثل Capoten/Capotril)</td><td>اسأل: بتاخد دواء للضغط؟</td><td>الكحة الناشفة من أشهر آثارها الجانبية؛ بلّغ الطبيب لتغيير الدواء (غالباً ARB).</td></tr><tr><td><b>ارتجاع المريء (GERD)</b></td><td>حرقان في فم المعدة أو حموضة، وبتزيد لما ينام؟</td><td>ارتجاع حمض المعدة أحد أهم أسباب الكحة الناشفة بسبب الاستنشاق وتهيّج الحمض، فلازم تستبعده.</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأسباب الإضافية للكحة المزمنة (أكتر من 8 أسابيع): الربو، تنقيط الأنف الخلفي، التدخين، السل، الأورام. أي كحة أطول من 3 أسابيع أو بدم أو بنقص وزن تحتاج تقييم الطبيب وأشعة صدر.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>نوع الكحة يحدد الدواء</h4><table><thead><tr><th></th><th>كحة جافة (Dry)</th><th>كحة ببلغم (Productive)</th></tr></thead><tbody><tr><td>الصفة</td><td>ناشفة، تهيج، بدون بلغم</td><td>بلغم يطلع (أبيض/أصفر/أخضر)</td></tr><tr><td>الدواء</td><td>مثبط كحة أو أعشاب للجافة</td><td>مذيب/طارد بلغم، موسّع شعب لو أزيز</td></tr><tr><td>تجنّب</td><td>—</td><td>مثبّطات الكحة (إلا قبل النوم بقرار الطبيب)</td></tr></tbody></table><h4>ملحوظة مهمة</h4><p>الأدوية الكيميائية قليلة جداً بين الأعشاب في الأعمار الصغيرة، والعشبية بعضها للجافة فقط وبعضها للنوعين.</p><div class=\"cs-box cs-danger\"><strong>علامات خطر في الكحة</strong><ul><li>صعوبة تنفس أو أزيز أو زرقة</li><li>كحة بدم أو بلغم صدئي</li><li>حرارة عالية مستمرة</li><li>كحة أكتر من 3 أسابيع، أو نقص وزن، أو عرق ليلي</li><li>طفل رضيع بكحة شديدة، شهقة أو صوت صفير (stridor)</li></ul></div>"
-    },
-    "tests": {
-      "ar": "<p>أغلب الكحة الحادة بتتشخّص إكلينيكياً. الطبيب يطلب أشعة صدر لو حرارة مستمرة أو ضيق نفس أو كحة طويلة، وفحص بصاق/سل لو شك، ووظائف رئة لو ربو.</p>"
-    },
-    "treatment": {
-      "ar": "<h4>أولاً: الرضّع والأطفال أقل من سنتين</h4><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الدولية (FDA وAAP وغيرها) تنصح بعدم استخدام أدوية الكحة والبرد في الأطفال أقل من سنتين، وكثير من الجهات حتى 4–6 سنين، لضعف الفائدة وخطر الجرعة الزائدة. المرجع الذي اعتمدنا عليه يذكر أدوية مناسبة للرضّع، فنذكرها للمعرفة. <b>لا تُعطى إلا بأمر الطبيب وبجرعة مناسبة للوزن</b>. بدائل الأمان: سوائل، رفع الرأس، غسول ملحي للأنف، والعسل لما فوق السنة.</p></div><h5>الكحة الجافة</h5><table><thead><tr><th>الشكل</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>نقط (Drops) عشبية</td><td>Mini Guava drops</td><td>4–8 نقط 3 مرات يومياً</td></tr><tr><td>نقط كيميائية</td><td>Sinecod drops</td><td>حتى 10 نقط 3 مرات يومياً (للأطفال أقل من سنة)</td></tr><tr><td>شراب (أعشاب للجافة فقط)</td><td>Sina-Dry syrup, Alveolin syrup</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>شراب (للنوعين: جافة وببلغم)</td><td>Herba-cough syrup, Guava syrup, Balsam syrup, Bronchicum syrup</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>لبوس</td><td>Selgon supp (10 لبوس)</td><td>نصف لبوسة 2–3 مرات يومياً</td></tr></tbody></table><h5>الكحة ببلغم</h5><table><thead><tr><th>الشكل</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>نقط كيميائية</td><td>Bisolvon drops (bromhexine)</td><td>3–8 نقط 3 مرات يومياً (للأطفال أقل من سنة). أشهر أثر جانبي: اضطراب الجهاز الهضمي</td></tr><tr><td>شراب أعشاب (بلغم فقط)</td><td>Sina-Wet syrup, Alveolin-P syrup, Broncho syrup</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>شراب أعشاب (النوعين)</td><td>Guava, Balsam, Bronchicum syrup</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>شراب كيميائي</td><td>Bisolvon syrup</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>لبوس</td><td>Rectoplexil supp (10 لبوس) — مشهور في أدوار البرد لاحتوائه على باراسيتامول</td><td>لبوسة صباحاً ومساءً</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>الجرعة: ملعقة صغيرة</strong><p>المرجع يحددها 2.5 سم بالسرنجة. استخدم دائماً أداة القياس الموجودة في عبوة الدواء لأن حجم الملعقة يختلف من منتج لآخر، وراجع النشرة والوزن.</p></div><h5>أمثلة روشتات شائعة (أقل من سنتين)</h5><table><thead><tr><th>الحالة</th><th>الروشتة</th></tr></thead><tbody><tr><td>كحة جافة في رضيع</td><td>Mini Guava drops 5 نقط 3 مرات يومياً أو Selgon supp نصف لبوسة صباحاً ومساءً</td></tr><tr><td>كحة جافة في طفل سنة ونصف</td><td>Sina-Dry syrup ملعقة صغيرة 3 مرات يومياً أو Herba-cough/Guava syrup ملعقة صغيرة 3 مرات</td></tr><tr><td>كحة ببلغم في طفل عمره شهرين</td><td>Bisolvon drops 8 نقط 3 مرات أو Rectoplexil supp لبوسة صباحاً ومساءً</td></tr><tr><td>كحة ببلغم في طفل عمره سنة</td><td>Sina-Wet syrup ملعقة صغيرة 3 مرات أو Herba-cough/Guava syrup ملعقة صغيرة 3 مرات</td></tr><tr><td>كحة ببلغم شديدة والطفل مش مرتاح</td><td>Bronchicum syrup ملعقة صغيرة 3 مرات يومياً</td></tr></tbody></table><h4>ثانياً: الأطفال من 2 إلى 12 سنة</h4><p>غالباً الشراب هو الأنسب في الأطفال الأكبر من سنة.</p><h5>الكحة الجافة</h5><ul><li><b>أعشاب:</b> نفس الأدوية السابقة لكن بجرعة <b>ملعقة كبيرة</b> 3 مرات يومياً</li><li><b>كيميائية</b> (من سنتين، معظم الأدوية الكيميائية ممكن استخدامها): Pectipro syrup وSinecod syrup — من 2 إلى 6 سنين: ملعقة صغيرة 3 مرات يومياً، ومن 6 إلى 12 سنة: ملعقة كبيرة 3 مرات يومياً</li><li>لبوس: Selgon supp لبوسة 2–3 مرات يومياً</li></ul><h5>الكحة ببلغم</h5><table><thead><tr><th>المجموعة</th><th>الأدوية</th><th>الجرعة</th></tr></thead><tbody><tr><td>أعشاب</td><td>نفس الأدوية السابقة</td><td>ملعقة كبيرة 3 مرات يومياً</td></tr><tr><td>مذيب بلغم (Mucolytic)</td><td>Bisolvon syrup, Mucosol ped. syrup, Bronchopro syrup</td><td>2–6 سنين: ملعقة صغيرة 3 مرات. 6–12 سنة: ملعقة كبيرة 3 مرات</td></tr><tr><td>مذيب + موسّع شعب</td><td>Mucophylline syrup</td><td>2–6 سنين: نصف ملعقة صغيرة. 6–10 سنين: ملعقة صغيرة. أكبر من 10: ملعقة كبيرة (كلها 3 مرات يومياً)</td></tr><tr><td>مذيب + طارد + موسّع شعب</td><td>All-Vent, Osipect, Farcosolvin syrup</td><td>2–6 سنين: ملعقة صغيرة. 6–12 سنة: ملعقة كبيرة (3 مرات يومياً)</td></tr><tr><td>مذيب + طارد + مضاد هيستامين</td><td>Ultra-solv syrup (من أفضل الأدوية في إذابة البلغم)</td><td>2–6: ملعقة صغيرة. 6–12: ملعقة كبيرة 3 مرات</td></tr><tr><td>مذيب + طارد + مضاد هيستامين + باراسيتامول</td><td>Toplexil syrup (من أفضل الأدوية في أدوار البرد)</td><td>ملعقة كبيرة 3 مرات يومياً (جرعته مثل العشبية)</td></tr><tr><td>طارد بلغم + مهدئ كحة</td><td>Bronchophane, Tusskan syrup</td><td>حسب النشرة. المرجع ينبه أن تركيبتهم غير منطقية (بتهدّئ الكحة وتطرد البلغم معاً) ونتائجهم أقل من الأنواع الأخرى</td></tr><tr><td>لبوس</td><td>Rectoplexil supp</td><td>لبوسة 2–3 مرات يومياً</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>ملاحظات</strong><ul><li>موسعات الشعب مفيدة للكحة عموماً وخصوصاً مع حساسية الصدر.</li><li>بعض الأطباء ما يوصفوش Mucophylline في السن الصغيرة لاحتوائه على aminophylline، لأن الفرق بين الجرعة العلاجية والسامة صغير.</li></ul></div><p>أمثلة روشتات جاهزة لهذه الفئة: راجع <a href=\"/diseases/dis-324\">وصفات الكحة (شراب وأقراص وفوار وحقن ولبوس)</a>.</p><h4>ثالثاً: البالغون والأطفال أكبر من 12 سنة</h4><p>الشراب في الكبار عموماً بيجيب نتائج ضعيفة جداً، والأقراص والكبسولات أفضل.</p><h5>الكحة الجافة</h5><ul><li>شراب (أعشاب أو كيميائي): نفس الأدوية لكن 1–2 ملعقة كبيرة 3 مرات يومياً</li><li>أقراص: Selgon tab وSilomat tab — قرص 3 مرات يومياً</li></ul><h5>الكحة ببلغم</h5><table><thead><tr><th>الشكل</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>شراب</td><td>أعشاب أو كيميائي نفس السابقة (انتبه: Mucosol adult syrup للكبار وفيه نسخة للأطفال)</td><td>1–2 ملعقة كبيرة 3 مرات يومياً</td></tr><tr><td>أقراص/كبسولات</td><td>Bisolvon tab، Farcosolvin caps</td><td>قرص 3 مرات يومياً</td></tr><tr><td>كبسولات ممتدة المفعول</td><td>Muco SR caps، Ambroxol SR caps</td><td>كبسولة واحدة يومياً</td></tr><tr><td>فوار</td><td>Acetylcysteine 200 mg</td><td>كيس على نصف كوب ماء 3 مرات يومياً ويُشرب أثناء الفوران</td></tr><tr><td>فوار</td><td>Acetylcysteine 600 mg</td><td>كيس على نصف كوب ماء مرتين يومياً ويُشرب أثناء الفوران</td></tr><tr><td>أمبول (الحالات الشديدة)</td><td>Bisolvon amp</td><td>حقنة عضل أو بالتنقيط في المحلول</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Acetylcysteine والربو</strong><p>المرجع ينبه إنه مش حلو للناس اللي عندها ربو (Asthma) لأنه ممكن يعمل تشنج شعبي (Bronchospasm). استعمل بحذر مع مرضى الربو وبأمر الطبيب.</p></div><p>أمثلة روشتات جاهزة لهذه الفئة: راجع <a href=\"/diseases/dis-324\">وصفات الكحة (شراب وأقراص وفوار وحقن ولبوس)</a>.</p><div class=\"cs-box cs-warning\"><strong>تحديث (معلومات الأدوية)</strong><p>المواد الفعالة المذكورة (dextromethorphan, bromhexine, ambroxol, guaifenesin, aminophylline, terbutaline, chlorpheniramine, oxomemazine, acetylcysteine) من المراجع. الأسماء التجارية تتغير تركيبتها حسب الشركة والتشغيلة، فتأكد من العلبة. Silomat (clobutinol) سُحب في دول كثيرة بسبب خطر اضطراب نظم القلب (إطالة QT)، فتأكد من حالته في السوق قبل التوصية. فعالية مذيبات وطاردات البلغم محدودة في الدراسات. مثبطات الكحة التي تحتوي dextromethorphan قد تتفاعل مع مضادات الاكتئاب (SSRIs/MAOIs). الأمينوفيللين (في بعض الأدوية المركبة) تتفاعل مع سيبروفلوكساسين فترتفع مستوياته. لم أتمكن من التأكد من التركيبة المحلية الدقيقة لكل من: Pectipro, Alveolin, Bronchopro, Osipect, Tusskan.</p></div><div class=\"cs-box cs-tip\"><strong>قبل أي وصفة</strong><p>ابحث عن السبب: الإنفلونزا الأخيرة، ACE inhibitors، الارتجاع المعدي المريئي. علاج السبب أهم من شراب الكحة.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل سؤالين</strong><p>السن؟ جافة ولا ببلغم؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اسأل عن السبب</strong><p>فلو حديث؟ دواء ضغط (Capoten/ACEi)؟ حرقان وارتجاع يزيد في النوم؟ تدخين؟ ربو؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راجع الأمان</strong><p>الحساسية، الحمل والرضاعة، الربو (قبل Acetylcysteine)، القلب (قبل مزيلات الاحتقان/aminophylline)، تعدد الأدوية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اختر الشكل المناسب للسن</strong><p>نقط ولبوس للرضع، شراب للأطفال، أقراص/كبسولات/فوار للكبار. استخدم أداة القياس المرفقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>علّم التوقيت</strong><p>الطاردات والمذيبات صباحاً وعصراً (مش مساءً)، المثبط قبل النوم في الجافة. اشرب سوائل كتير.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب</strong><p>تحسن الكحة، الأزيز، النعاس، الآثار الهضمية (Bisolvon)، الحرارة، لون البلغم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>بلّغ</strong><p>أي علامة خطر أو كحة تطوّل أكتر من 3 أسابيع.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>لا تخلط</strong><p>كتير من أدوية البرد المركبة بتحتوي مضاد هيستامين وباراسيتامول؛ ما تدّيش أكتر من دواء مركب مع بعض.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب لو:</strong><ul><li>ضيق نفس أو أزيز أو زرقة (خصوصاً مع الرضّع)</li><li>كحة بدم</li><li>حرارة عالية أكتر من 3 أيام</li><li>الكحة أكتر من 3 أسابيع، أو مع نقص وزن وعرق ليلي</li><li>رضيع أقل من 3 شهور بكحة</li><li>اشتباه استنشاق جسم غريب</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرب سوائل دافئة كتير، والعسل ممكن للكحة لغير الرضع تحت سنة.</li><li>لو بتاخد دواء ضغط وبتكح كحة ناشفة: قول للطبيب (ممكن ACE inhibitor).</li><li>لو حرقان وحموضة بالليل: ارفع راسك وقلل الأكل المتأخر، وقول للطبيب.</li><li>متستخدمش مثبّط كحة لو الكحة ببلغم.</li><li>استخدم أداة القياس بتاعة الدواء ومتدّيش الطفل جرعة كبار.</li><li>متدّيش أدوية كحة للرضّع من غير طبيب.</li><li>قلّل التدخين والغبار.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "اسأل السن ونوع الكحة (جافة/ببلغم) قبل أي دواء",
-      "الجافة: مثبّط كحة أو أعشاب. ببلغم: مذيب/طارد بلغم ولا تثبّط الكحة",
-      "أسباب الجافة: فلو، ACE inhibitor، ارتجاع المريء",
-      "الرضّع: نقط/شراب/لبوس بأمر الطبيب، وإرشادات حديثة تحذّر من أدوية الكحة تحت سنتين",
-      "الكبار: أقراص/كبسولات/فوار أفضل من الشراب",
-      "Acetylcysteine: حذر في الربو (تشنج شعبي)",
-      "Toplexil وUltra-Solv من أشهر المركبات للبلغم، وفيها مضاد هيستامين فقد تسبب نعاس"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض بيكح كحة ناشفة وبياخد Capoten للضغط. السبب الأرجح؟"
-      },
-      "options": [
-        {
-          "ar": "ارتجاع المريء"
-        },
-        {
-          "ar": "أثر جانبي لمثبط ACE"
-        },
-        {
-          "ar": "التهاب رئوي"
-        },
-        {
-          "ar": "ربو"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الكحة الناشفة من أشهر آثار ACE inhibitors."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نوع كحة ممنوع فيه مثبّط الكحة غالباً؟"
-      },
-      "options": [
-        {
-          "ar": "الجافة"
-        },
-        {
-          "ar": "ببلغم"
-        },
-        {
-          "ar": "بعد فلو"
-        },
-        {
-          "ar": "بالليل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "البلغم لازم يتطرد؛ المثبط ممكن يحبسه (إلا قبل النوم بقرار الطبيب)."
-      }
-    },
-    {
-      "q": {
-        "ar": "Acetylcysteine الفوار يُحذر منه في؟"
-      },
-      "options": [
-        {
-          "ar": "الصداع"
-        },
-        {
-          "ar": "الربو (تشنج شعبي)"
-        },
-        {
-          "ar": "الإسهال"
-        },
-        {
-          "ar": "السكر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "ممكن يسبب Bronchospasm."
-      }
-    },
-    {
-      "q": {
-        "ar": "نقط Bisolvon أشهر أثر جانبي؟"
-      },
-      "options": [
-        {
-          "ar": "اضطراب الجهاز الهضمي"
-        },
-        {
-          "ar": "هبوط الضغط"
-        },
-        {
-          "ar": "نعاس شديد"
-        },
-        {
-          "ar": "طفح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "GIT upset."
-      }
-    },
-    {
-      "q": {
-        "ar": "Mucophylline مش بيتحط في الصغار غالباً لأن؟"
-      },
-      "options": [
-        {
-          "ar": "طعمه وحش"
-        },
-        {
-          "ar": "يحتوي aminophylline وفرق الجرعة العلاجية والسامة صغير"
-        },
-        {
-          "ar": "غالي"
-        },
-        {
-          "ar": "لا يؤثر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الأمينوفيللين فرقه ضيق."
-      }
-    },
-    {
-      "q": {
-        "ar": "الأنسب لمريض القلب في أدوية الكحة والبرد؟"
-      },
-      "options": [
-        {
-          "ar": "مزيلات احتقان بالفم"
-        },
-        {
-          "ar": "أدوية بكافيين"
-        },
-        {
-          "ar": "تجنّب pseudoephedrine والمركبات؛ باراسيتامول فقط"
-        },
-        {
-          "ar": "أي مركب"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "مزيلات الاحتقان تزيد النبض والضغط."
-      }
-    }
-  ],
-  "rx": [
-    {
-      "category": "الجهاز التنفسي والحساسية",
-      "condition_ar": "كحة جافة — رضّع (أقل من سنتين)",
-      "condition_en": "Dry cough (infants)",
-      "items": [
-        {
-          "drug_name": "Mini Guava drops (عشبي)",
-          "dose": "4–8 نقط 3 مرات يومياً",
-          "note": "للرضع"
-        },
-        {
-          "drug_name": "Sinecod drops",
-          "dose": "حتى 10 نقط 3 مرات يومياً (أقل من سنة)",
-          "note": "كيميائي"
-        },
-        {
-          "drug_name": "Sina-Dry syrup / Alveolin syrup",
-          "dose": "ملعقة صغيرة 3 مرات يومياً",
-          "note": "عشبي للجافة"
-        },
-        {
-          "drug_name": "Herba-cough / Guava / Balsam / Bronchicum syrup",
-          "dose": "ملعقة صغيرة 3 مرات يومياً",
-          "note": "للجافة والببلغم"
-        },
-        {
-          "drug_name": "Selgon supp",
-          "dose": "نصف لبوسة 2–3 مرات يومياً",
-          "note": ""
-        }
-      ],
-      "clinical_note": "بأمر الطبيب ووزن الطفل"
-    },
-    {
-      "category": "الجهاز التنفسي والحساسية",
-      "condition_ar": "كحة ببلغم — رضّع",
-      "condition_en": "Productive cough (infants)",
-      "items": [
-        {
-          "drug_name": "Bisolvon drops (bromhexine)",
-          "dose": "3–8 نقط 3 مرات يومياً (أقل من سنة)",
-          "note": "قد يسبب اضطراب هضمي"
-        },
-        {
-          "drug_name": "Sina-Wet / Alveolin-P / Broncho syrup",
-          "dose": "ملعقة صغيرة 3 مرات يومياً",
-          "note": "عشبي"
-        },
-        {
-          "drug_name": "Bisolvon syrup",
-          "dose": "ملعقة صغيرة 3 مرات يومياً",
-          "note": ""
-        },
-        {
-          "drug_name": "Rectoplexil supp",
-          "dose": "لبوسة صباحاً ومساءً",
-          "note": "يحتوي باراسيتامول"
-        }
-      ],
-      "clinical_note": ""
-    }
-  ],
-  "refs": [
-    {
-      "title": "StatPearls: Cough"
-    },
-    {
-      "title": "ACCP / CHEST guideline: Chronic cough"
-    },
-    {
-      "title": "FDA: Use of OTC cough and cold products in children"
-    },
-    {
-      "title": "Mayo Clinic: Pseudoephedrine (oral route)"
-    },
-    {
-      "title": "WHO/EMA notices on clobutinol withdrawal"
-    }
+  "en": [
+   "Ask the age and type of cough (dry/productive) before any drug",
+   "Dry: a cough suppressant or herbs. Productive: mucolytic/expectorant and do not suppress the cough",
+   "Causes of dry cough: flu, ACE inhibitor, esophageal reflux",
+   "Infants: drops/syrup/suppositories by the physician's order, and recent guidance warns against cough medicines under two years",
+   "Adults: tablets/capsules/effervescents are better than syrup",
+   "Acetylcysteine: caution in asthma (bronchospasm)",
+   "Toplexil and Ultra-Solv are among the best-known combinations for phlegm, and they contain an antihistamine so they may cause drowsiness"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض بيكح كحة ناشفة وبياخد Capoten للضغط. السبب الأرجح؟",
+    "en": "A patient has a dry cough and takes Capoten for blood pressure. The most likely cause?"
+   },
+   "options": [
+    {
+     "ar": "ارتجاع المريء",
+     "en": "Esophageal reflux"
+    },
+    {
+     "ar": "أثر جانبي لمثبط ACE",
+     "en": "A side effect of an ACE inhibitor"
+    },
+    {
+     "ar": "التهاب رئوي",
+     "en": "Pneumonia"
+    },
+    {
+     "ar": "ربو",
+     "en": "Asthma"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الكحة الناشفة من أشهر آثار ACE inhibitors.",
+    "en": "A dry cough is one of the best-known effects of ACE inhibitors."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نوع كحة ممنوع فيه مثبّط الكحة غالباً؟",
+    "en": "In which type of cough is a cough suppressant usually prohibited?"
+   },
+   "options": [
+    {
+     "ar": "الجافة",
+     "en": "Dry"
+    },
+    {
+     "ar": "ببلغم",
+     "en": "Productive"
+    },
+    {
+     "ar": "بعد فلو",
+     "en": "After flu"
+    },
+    {
+     "ar": "بالليل",
+     "en": "At night"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "البلغم لازم يتطرد؛ المثبط ممكن يحبسه (إلا قبل النوم بقرار الطبيب).",
+    "en": "Phlegm must be expelled; a suppressant may trap it (except at bedtime by the physician's decision)."
+   }
+  },
+  {
+   "q": {
+    "ar": "Acetylcysteine الفوار يُحذر منه في؟",
+    "en": "Effervescent Acetylcysteine is cautioned in?"
+   },
+   "options": [
+    {
+     "ar": "الصداع",
+     "en": "Headache"
+    },
+    {
+     "ar": "الربو (تشنج شعبي)",
+     "en": "Asthma (bronchospasm)"
+    },
+    {
+     "ar": "الإسهال",
+     "en": "Diarrhea"
+    },
+    {
+     "ar": "السكر",
+     "en": "Diabetes"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "ممكن يسبب Bronchospasm.",
+    "en": "It may cause bronchospasm."
+   }
+  },
+  {
+   "q": {
+    "ar": "نقط Bisolvon أشهر أثر جانبي؟",
+    "en": "The best-known side effect of Bisolvon drops?"
+   },
+   "options": [
+    {
+     "ar": "اضطراب الجهاز الهضمي",
+     "en": "Gastrointestinal upset"
+    },
+    {
+     "ar": "هبوط الضغط",
+     "en": "Low blood pressure"
+    },
+    {
+     "ar": "نعاس شديد",
+     "en": "Severe drowsiness"
+    },
+    {
+     "ar": "طفح",
+     "en": "Rash"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "GIT upset.",
+    "en": "GIT upset."
+   }
+  },
+  {
+   "q": {
+    "ar": "Mucophylline مش بيتحط في الصغار غالباً لأن؟",
+    "en": "Mucophylline is usually not given to young children because?"
+   },
+   "options": [
+    {
+     "ar": "طعمه وحش",
+     "en": "Its taste is bad"
+    },
+    {
+     "ar": "يحتوي aminophylline وفرق الجرعة العلاجية والسامة صغير",
+     "en": "It contains aminophylline and the difference between the therapeutic and toxic dose is small"
+    },
+    {
+     "ar": "غالي",
+     "en": "It is expensive"
+    },
+    {
+     "ar": "لا يؤثر",
+     "en": "It has no effect"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الأمينوفيللين فرقه ضيق.",
+    "en": "Aminophylline has a narrow margin."
+   }
+  },
+  {
+   "q": {
+    "ar": "الأنسب لمريض القلب في أدوية الكحة والبرد؟",
+    "en": "The most suitable for a heart patient among cough and cold medicines?"
+   },
+   "options": [
+    {
+     "ar": "مزيلات احتقان بالفم",
+     "en": "Oral decongestants"
+    },
+    {
+     "ar": "أدوية بكافيين",
+     "en": "Caffeine-containing drugs"
+    },
+    {
+     "ar": "تجنّب pseudoephedrine والمركبات؛ باراسيتامول فقط",
+     "en": "Avoid pseudoephedrine and combinations; paracetamol only"
+    },
+    {
+     "ar": "أي مركب",
+     "en": "Any combination"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "مزيلات الاحتقان تزيد النبض والضغط.",
+    "en": "Decongestants increase pulse and blood pressure."
+   }
+  }
+ ],
+ "rx": [
+  {
+   "category": "الجهاز التنفسي والحساسية",
+   "condition_ar": "كحة جافة — رضّع (أقل من سنتين)",
+   "condition_en": "Dry cough (infants)",
+   "items": [
+    {
+     "drug_name": "Mini Guava drops (عشبي)",
+     "dose": "4–8 نقط 3 مرات يومياً",
+     "note": "للرضع"
+    },
+    {
+     "drug_name": "Sinecod drops",
+     "dose": "حتى 10 نقط 3 مرات يومياً (أقل من سنة)",
+     "note": "كيميائي"
+    },
+    {
+     "drug_name": "Sina-Dry syrup / Alveolin syrup",
+     "dose": "ملعقة صغيرة 3 مرات يومياً",
+     "note": "عشبي للجافة"
+    },
+    {
+     "drug_name": "Herba-cough / Guava / Balsam / Bronchicum syrup",
+     "dose": "ملعقة صغيرة 3 مرات يومياً",
+     "note": "للجافة والببلغم"
+    },
+    {
+     "drug_name": "Selgon supp",
+     "dose": "نصف لبوسة 2–3 مرات يومياً",
+     "note": ""
+    }
+   ],
+   "clinical_note": "بأمر الطبيب ووزن الطفل"
+  },
+  {
+   "category": "الجهاز التنفسي والحساسية",
+   "condition_ar": "كحة ببلغم — رضّع",
+   "condition_en": "Productive cough (infants)",
+   "items": [
+    {
+     "drug_name": "Bisolvon drops (bromhexine)",
+     "dose": "3–8 نقط 3 مرات يومياً (أقل من سنة)",
+     "note": "قد يسبب اضطراب هضمي"
+    },
+    {
+     "drug_name": "Sina-Wet / Alveolin-P / Broncho syrup",
+     "dose": "ملعقة صغيرة 3 مرات يومياً",
+     "note": "عشبي"
+    },
+    {
+     "drug_name": "Bisolvon syrup",
+     "dose": "ملعقة صغيرة 3 مرات يومياً",
+     "note": ""
+    },
+    {
+     "drug_name": "Rectoplexil supp",
+     "dose": "لبوسة صباحاً ومساءً",
+     "note": "يحتوي باراسيتامول"
+    }
+   ],
+   "clinical_note": ""
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls: Cough"
+  },
+  {
+   "title": "ACCP / CHEST guideline: Chronic cough"
+  },
+  {
+   "title": "FDA: Use of OTC cough and cold products in children"
+  },
+  {
+   "title": "Mayo Clinic: Pseudoephedrine (oral route)"
+  },
+  {
+   "title": "WHO/EMA notices on clobutinol withdrawal"
+  }
+ ]
 }
