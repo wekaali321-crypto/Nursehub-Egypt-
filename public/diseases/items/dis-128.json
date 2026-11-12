@@ -1,367 +1,460 @@
 {
-  "id": "dis-128",
-  "num": 128,
-  "system": "cardio",
-  "icon": "🫀",
-  "level": 2,
-  "title": {
-    "ar": "فشل القلب",
-    "en": "Heart Failure"
+ "id": "dis-128",
+ "num": 128,
+ "system": "cardio",
+ "icon": "🫀",
+ "level": 2,
+ "title": {
+  "ar": "فشل القلب",
+  "en": "Heart Failure"
+ },
+ "teaser": {
+  "ar": "ورم في القدمين وضيق نفس؟ الفرق بين فشل القلب الأيسر والأيمن، والمدرّات والديجوكسين، ومراقبة الوزن اليومية.",
+  "en": "Swollen feet and shortness of breath? The difference between left and right heart failure, diuretics and digoxin, and daily weight monitoring."
+ },
+ "chips": [
+  {
+   "ar": "أيسر / أيمن",
+   "en": "Left / right"
   },
-  "teaser": {
-    "ar": "ورم في القدمين وضيق نفس؟ الفرق بين فشل القلب الأيسر والأيمن، والمدرّات والديجوكسين، ومراقبة الوزن اليومية."
+  {
+   "ar": "مدرّات وديجوكسين",
+   "en": "Diuretics and digoxin"
   },
-  "chips": [
-    {
-      "ar": "أيسر / أيمن"
-    },
-    {
-      "ar": "مدرّات وديجوكسين"
-    },
-    {
-      "ar": "وزن يومي"
-    }
+  {
+   "ar": "وزن يومي",
+   "en": "Daily weight"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>فشل القلب (Heart failure) هو متلازمة سريرية بسبب <b>عجز القلب عن ضخ دم كافٍ لاحتياجات الجسم</b>. القلب ممكن يكون ضعيف الانقباض أو متصلب لا يمتلئ كويس، فينتج عنه احتقان (رئة أو أوردة) وقلة تروية (تعب، قلة بول).</p><div class=\"cs-stats\"><div><b>LSHF</b><span>احتقان رئوي</span></div><div><b>RSHF</b><span>احتقان جهازي (ورم)</span></div><div><b>Wt ↑</b><span>زيادة الوزن = احتباس</span></div></div>[[slot:dis-128-lshf-rshf|فشل القلب الأيسر والأيمن — رسم من إعداد الموقع|/diseases/img/dis-128-lshf-rshf.svg]]<div class=\"cs-box cs-info\"><strong>تصنيف سريع (إضافة)</strong><p>حسب الكسر القذفي EF: ضعيف الانقباض (HFrEF) أقل من أو يساوي 40%، متوسط (HFmrEF) 41–49%، محفوظ (HFpEF) 50% فأكتر. وحسب الأعراض (NYHA): I بدون أعراض، II تعب مع مجهود عادي، III مع مجهود خفيف، IV عند الراحة.</p></div><!--M1--><h4>الركائز الأربعة لأداء القلب</h4><p>الفشل القلبي ينتج عن خلل في واحد أو أكتر من: <b>الانقباضية</b>، <b>معدل القلب</b>، <b>الحمل المسبق (Preload)</b>، <b>الحمل اللاحق (Afterload)</b>. القلوب السليمة تتحمل بعض التغيرات، بينما القلوب المريضة المسنة لا تتحمل فيحدث الفشل. النتيجة في المراحل المبكرة غالباً جيدة والمدى الطويل يختلف حسب الشدة والأمراض المصاحبة.</p>\n<h4>مراجعة التمريض الباطني: أعراض وأسباب وأولويات</h4><p>فشل القلب (Heart Failure) = عجز القلب عن ضخ نتاج كاف فيتراكم السائل ويزيد الوزن (زيادة الوزن = زيادة الماء).</p>[[slot:dis-128-p278|قصور القلب الأيمن والأيسر والأولويات — رسم من إعداد الموقع|/diseases/img/dis-128-p278.svg]]<table><thead><tr><th></th><th>قصور أيمن</th><th>قصور أيسر</th></tr></thead><tbody><tr><td>العلامات</td><td>وذمة طرفية، زيادة وزن، JVD، استسقاء وتضخم كبد وطحال</td><td>وذمة رئوية، خراخر لا تزول بالكحة، بلغم وردي رغوي، ضيق نفس عند الاستلقاء</td></tr><tr><td>الأسباب</td><td>ارتفاع ضغط، ارتفاع ضغط رئوي، رئتان متليفتان، قد ينتج عن الأيسر</td><td>قلب ضعيف بعد MI، CAD/ACS</td></tr></tbody></table><p>عوامل الخطر: ارتفاع الضغط (الأول)، رجفان أذيني واضطرابات النظم، ارتجاع تاجي، اعتلال عضلة. الفحوص: BNP (فوق 900 شديد)، إيكو (EF 55–70% طبيعي، 40% أو أقل قصور)، قسطرة سوان-غانز (فوق 8 غير جيد، الطبيعي نحو 2–8 مم زئبق حسب المرجع).</p>",
+   "en": "<p>Heart failure is a clinical syndrome caused by <b>the heart's inability to pump enough blood for the body's needs</b>. The heart may contract weakly or be stiff and not fill well, which results in congestion (lung or veins) and poor perfusion (fatigue, low urine output).</p><div class=\"cs-stats\"><div><b>LSHF</b><span>Pulmonary congestion</span></div><div><b>RSHF</b><span>Systemic congestion (edema)</span></div><div><b>Wt ↑</b><span>Weight gain = retention</span></div></div>[[slot:dis-128-lshf-rshf|Left and right heart failure — site illustration|/diseases/img/dis-128-lshf-rshf.svg]]<div class=\"cs-box cs-info\"><strong>Quick classification (addition)</strong><p>By ejection fraction EF: reduced (HFrEF) less than or equal to 40%, mildly reduced (HFmrEF) 41–49%, preserved (HFpEF) 50% or more. By symptoms (NYHA): I no symptoms, II fatigue with ordinary exertion, III with mild exertion, IV at rest.</p></div><!--M1--><h4>The four pillars of cardiac performance</h4><p>Heart failure results from a defect in one or more of: <b>contractility</b>, <b>heart rate</b>, <b>Preload</b>, <b>Afterload</b>. Healthy hearts tolerate some changes, while diseased, aged hearts do not, so failure occurs. The outcome in early stages is usually good, and the long term varies with severity and comorbidities.</p>\n<h4>Medical nursing review: symptoms, causes, and priorities</h4><p>Heart Failure = the heart's inability to pump adequate output, so fluid accumulates and weight increases (weight gain = water gain).</p>[[slot:dis-128-p278|Right and left heart failure and priorities — site illustration|/diseases/img/dis-128-p278.svg]]<table><thead><tr><th></th><th>Right-sided failure</th><th>Left-sided failure</th></tr></thead><tbody><tr><td>Signs</td><td>Peripheral edema, weight gain, JVD, ascites, and enlarged liver and spleen</td><td>Pulmonary edema, crackles that do not clear with coughing, pink frothy sputum, shortness of breath when lying down</td></tr><tr><td>Causes</td><td>Hypertension, pulmonary hypertension, fibrotic lungs, may result from left-sided failure</td><td>Weak heart after MI, CAD/ACS</td></tr></tbody></table><p>Risk factors: hypertension (the first), atrial fibrillation and dysrhythmias, mitral regurgitation, cardiomyopathy. Tests: BNP (above 900 is severe), echo (EF 55–70% normal, 40% or less is failure), Swan-Ganz catheter (above 8 is not good, normal is about 2–8 mmHg).</p>"
+  },
+  "causes": {
+   "ar": "<h4>أسباب فشل الأذين (Atrial)</h4><table><thead><tr><th>الأيسر</th><th>الأيمن</th></tr></thead><tbody><tr><td>ضيق الصمام التاجي (Mitral stenosis)<br>ورم أذيني (Atrial myxoma)</td><td>ضيق الصمام ثلاثي الشرف (Tricuspid stenosis)<br>ورم أذيني (Atrial myxoma)</td></tr></tbody></table><h4>أسباب فشل البطين الأيسر (LVF)</h4><ol><li>ارتفاع ضغط الدم الجهازي</li><li>ضيق الأورطي (AS) / ارتجاع الأورطي (AR) / ارتجاع التاجي (MR) / ثقب بين البطينين (VSD)</li><li>حالة فرط الحركة الدورية (Hyperdynamic circulation)</li><li>جلطة القلب (MI) / التهاب عضلة القلب / اعتلال العضلة (Cardiomyopathy)</li><li>انضغاط القلب (Tamponade) / التهاب التامور المضيّق (Constrictive pericarditis)</li></ol><h4>أسباب فشل البطين الأيمن (RVF)</h4><ol><li>ارتفاع ضغط الشريان الرئوي (بسبب LVF أو COPD أو جلطة رئوية PE)</li><li>ضيق الرئوي (PS) / ارتجاع الرئوي (PR) / ارتجاع ثلاثي الشرف (TR) / ثقب بين الأذينين (ASD)</li><li>فرط الحركة الدورية</li><li>MI / التهاب عضلة / اعتلال عضلة</li><li>Tamponade / Constrictive pericarditis</li></ol><h4>عوامل مرسّبة (Precipitating factors)</h4><ul><li>عدوى (أي عدوى، خصوصاً التهاب الشغاف (Endocarditis)، نشاط الروماتيزم، التهاب الصدر)</li><li>أسباب طبية المنشأ: كورتيزون، حاصرات الكالسيوم، ملح زيادة، سوائل وريدية زيادة</li><li>جلطة قلبية حادة</li><li>اضطراب النظم (مثل الرجفان الأذيني)</li><li>أنيميا، فرط نشاط الدرقية، غيرها من فرط الحركة الدورية</li><li>إجهاد جسدي وانفعالي</li><li>الحمل والمخاض المتأخر</li><li>أيضاً: ترك الأدوية أو الملح، NSAIDs، كحول</li></ul>",
+   "en": "<h4>Causes of atrial failure</h4><table><thead><tr><th>Left</th><th>Right</th></tr></thead><tbody><tr><td>Mitral stenosis<br>Atrial myxoma</td><td>Tricuspid stenosis<br>Atrial myxoma</td></tr></tbody></table><h4>Causes of left ventricular failure (LVF)</h4><ol><li>Systemic hypertension</li><li>Aortic stenosis (AS) / aortic regurgitation (AR) / mitral regurgitation (MR) / ventricular septal defect (VSD)</li><li>Hyperdynamic circulation</li><li>Myocardial infarction (MI) / myocarditis / Cardiomyopathy</li><li>Cardiac Tamponade / Constrictive pericarditis</li></ol><h4>Causes of right ventricular failure (RVF)</h4><ol><li>Pulmonary artery hypertension (due to LVF, COPD, or pulmonary embolism PE)</li><li>Pulmonary stenosis (PS) / pulmonary regurgitation (PR) / tricuspid regurgitation (TR) / atrial septal defect (ASD)</li><li>Hyperdynamic circulation</li><li>MI / myocarditis / cardiomyopathy</li><li>Tamponade / Constrictive pericarditis</li></ol><h4>Precipitating factors</h4><ul><li>Infection (any infection, especially Endocarditis, rheumatic activity, chest infection)</li><li>Iatrogenic causes: corticosteroids, calcium channel blockers, excess salt, excess IV fluids</li><li>Acute myocardial infarction</li><li>Dysrhythmia (such as atrial fibrillation)</li><li>Anemia, hyperthyroidism, and other hyperdynamic states</li><li>Physical and emotional stress</li><li>Pregnancy and late labor</li><li>Also: stopping medications or the salt restriction, NSAIDs, alcohol</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>مظاهر نقص النتاج القلبي (Low cardiac output) — في الأيسر أو الأيمن أو الاثنين</h4><table><thead><tr><th>العضو</th><th>العلامة</th></tr></thead><tbody><tr><td>المخ</td><td>دوخة، صداع، إغماء</td></tr><tr><td>العين</td><td>زغللة</td></tr><tr><td>القلب</td><td>ذبحة صدرية</td></tr><tr><td>الكلى</td><td>قلة البول (Oliguria)</td></tr><tr><td>العضلات</td><td>سهولة التعب، عرج متقطع</td></tr><tr><td>الجلد</td><td>شحوب، برودة، زرقة طرفية في الحالات الشديدة</td></tr></tbody></table><h4>مظاهر احتقان الرئة (فشل أيسر)</h4><ol><li>ضيق نفس (Dyspnea) — بالمجهود ثم عند الاستلقاء (Orthopnea) والنوبات الليلية (PND)</li><li>كحة</li><li>نفث دم (Hemoptysis)</li><li>عدوى صدر متكررة</li><li>انصباب جنبي (Pleural effusion)</li><li>طقطقة دقيقة في قاعدة الرئتين على الجانبين (Fine basal bilateral crepitations)</li></ol><h4>مظاهر احتقان الأوردة (فشل أيمن)</h4><ol><li>الرقبة: أوردة منتفخة نابضة</li><li>الكبد: ألم في الجانب الأيمن (Right hypochondrium)</li><li>الأطراف السفلية: ورم في الأماكن المنخفضة (الساقين أو أسفل الظهر Sacrum)</li></ol><h4>الفحص (Examination)</h4><table><thead><tr><th>الفحص</th><th>فشل أيسر (LSHF)</th><th>فشل أيمن (RSHF)</th></tr></thead><tbody><tr><td>الضغط</td><td>انخفاض الانقباضي</td><td>انخفاض الانقباضي</td></tr><tr><td>النبض</td><td>سريع إلا لو المريض على ديجوكسين أو حاصر بيتا؛ نبض متبادل القوة (Pulsus alternans)</td><td>سريع إلا لو ديجوكسين أو حاصر بيتا</td></tr><tr><td>التنفس</td><td>سريع وسطحي (Tachypnea)</td><td>—</td></tr><tr><td>الصدر / القلب</td><td>إيقاع حصان (Gallop) عند القمة التاجية، نفخات، طقطقة دقيقة بقاعدة الرئتين</td><td>إيقاع حصان عند الصمام ثلاثي الشرف، نفخات</td></tr></tbody></table>[[slot:dis-128-cxr|صورة أشعة صدر: تضخم القلب واحتقان رئوي (Cardiomegaly + congestion)]]<div class=\"cs-box cs-danger\"><strong>متى تكون الحالة حادة؟</strong><p>ضيق نفس شديد عند الراحة، بلغم رغوي وردي، أو هبوط ضغط وبرودة: وقتها فكّر في وذمة رئوية حادة أو صدمة قلبية (راجع دليل الوذمة الرئوية الحادة).</p></div><!--M1--><h4>تدرج الأعراض</h4><table><thead><tr><th>المرحلة</th><th>العلامات</th></tr></thead><tbody><tr><td>مبكرة</td><td>طقطقة قاعدية بالرئة (Basilar rales)، تبول ليلي (Nocturia)، ضيق نفس بالمجهود، إرهاق، ارتجاع كبدي وداجي موجب (Hepatojugular reflux)، صوت S3</td></tr><tr><td>متوسطة</td><td>سعال، ضيق نفس بالاستلقاء (Orthopnea)، ألم أعلى يمين البطن لتضخم الكبد، طقطقة قلبية، وذمة، تضخم قلب</td></tr><tr><td>متأخرة</td><td>وذمة معممة (Anasarca)، بلغم رغوي أو وردي من نفاذية الشعيرات</td></tr></tbody></table><table><thead><tr><th>الصوت</th><th>الوصف</th></tr></thead><tbody><tr><td>S3</td><td>صوت ناعم بعد S2 بسبب امتلاء سريع للبطين؛ يُسمع عند القمة (الفراغ الرابع، خط منتصف الترقوة) وأفضل والمريض على جانبه الأيسر، ويدل غالباً على الفشل</td></tr><tr><td>S4</td><td>قبل S1 عند القمة، بسبب قلب متيبس وانقباض الأذين</td></tr><tr><td>نفخة</td><td>اضطراب تدفق ويُسمع حول القلب</td></tr></tbody></table>",
+   "en": "<h4>Manifestations of Low cardiac output — in left, right, or both</h4><table><thead><tr><th>Organ</th><th>Sign</th></tr></thead><tbody><tr><td>Brain</td><td>Dizziness, headache, syncope</td></tr><tr><td>Eye</td><td>Blurred vision</td></tr><tr><td>Heart</td><td>Angina</td></tr><tr><td>Kidney</td><td>Low urine output (Oliguria)</td></tr><tr><td>Muscles</td><td>Easy fatigability, intermittent claudication</td></tr><tr><td>Skin</td><td>Pallor, coldness, peripheral cyanosis in severe cases</td></tr></tbody></table><h4>Manifestations of lung congestion (left-sided failure)</h4><ol><li>Dyspnea — on exertion, then when lying down (Orthopnea) and nocturnal attacks (PND)</li><li>Cough</li><li>Hemoptysis</li><li>Recurrent chest infections</li><li>Pleural effusion</li><li>Fine basal bilateral crepitations</li></ol><h4>Manifestations of venous congestion (right-sided failure)</h4><ol><li>Neck: distended, pulsating veins</li><li>Liver: pain in the right side (Right hypochondrium)</li><li>Lower limbs: edema in dependent areas (the legs or the lower back, Sacrum)</li></ol><h4>Examination</h4><table><thead><tr><th>Examination</th><th>Left-sided failure (LSHF)</th><th>Right-sided failure (RSHF)</th></tr></thead><tbody><tr><td>Blood pressure</td><td>Low systolic</td><td>Low systolic</td></tr><tr><td>Pulse</td><td>Rapid unless the patient is on digoxin or a beta blocker; Pulsus alternans</td><td>Rapid unless on digoxin or a beta blocker</td></tr><tr><td>Respiration</td><td>Rapid and shallow (Tachypnea)</td><td>—</td></tr><tr><td>Chest / heart</td><td>Gallop rhythm at the mitral apex, murmurs, fine crepitations at the lung bases</td><td>Gallop rhythm at the tricuspid valve, murmurs</td></tr></tbody></table>[[slot:dis-128-cxr|Chest X-ray image: Cardiomegaly + pulmonary congestion]]<div class=\"cs-box cs-danger\"><strong>When is the condition acute?</strong><p>Severe shortness of breath at rest, pink frothy sputum, or low blood pressure and coldness: then think of acute pulmonary edema or cardiogenic shock (see the acute pulmonary edema guide).</p></div><!--M1--><h4>Progression of symptoms</h4><table><thead><tr><th>Stage</th><th>Signs</th></tr></thead><tbody><tr><td>Early</td><td>Basilar rales, Nocturia, exertional dyspnea, fatigue, positive Hepatojugular reflux, S3 sound</td></tr><tr><td>Moderate</td><td>Cough, Orthopnea, right upper abdominal pain from liver enlargement, cardiac rales, edema, cardiomegaly</td></tr><tr><td>Late</td><td>Generalized edema (Anasarca), frothy or pink sputum from capillary permeability</td></tr></tbody></table><table><thead><tr><th>Sound</th><th>Description</th></tr></thead><tbody><tr><td>S3</td><td>A soft sound after S2 due to rapid ventricular filling; heard at the apex (fourth space, midclavicular line) and best with the patient on the left side, and it usually indicates failure</td></tr><tr><td>S4</td><td>Before S1 at the apex, due to a stiff heart and atrial contraction</td></tr><tr><td>Murmur</td><td>Turbulent flow, heard around the heart</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<h4>الفحوصات (حسب المراجع)</h4><table><thead><tr><th>الفحص</th><th>اللي بيكشفه</th></tr></thead><tbody><tr><td>رسم القلب ECG</td><td>تضخم القلب، اضطراب النظم، حصار الفرع (BBB)، مرض الشرايين التاجية (CAD)</td></tr><tr><td>أشعة الصدر CXR</td><td>تضخم القلب، احتقان رئوي، انصباب جنبي</td></tr><tr><td>الإيكو (Echo)</td><td>تضخم القلب، آفات الصمامات، انخفاض الكسر القذفي EF</td></tr><tr><td>قسطرة القلب</td><td>حسب الحالة</td></tr></tbody></table><h4>البحث عن السبب</h4><table><thead><tr><th>التحليل</th><th>الغرض</th></tr></thead><tbody><tr><td>إنزيمات القلب</td><td>جلطة قلبية</td></tr><tr><td>صورة دم CBC</td><td>الأنيميا</td></tr><tr><td>وظائف الغدة الدرقية</td><td>فرط الدرقية</td></tr><tr><td>صورة الدهون</td><td>ارتفاع الكوليسترول والأحماض الدهنية</td></tr></tbody></table><p>وتحاليل أخرى حسب الأعراض.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>إضافات حديثة: <b>BNP أو NT-proBNP</b> مفيد جداً في تشخيص فشل القلب واستبعاده في ضيق النفس، وتابع كلى وإلكتروليت (Na، K) ووظائف الكبد وسكر. والإيكو هو الأساس لتحديد EF.</p></div><!--M1--><h4>مكملات</h4><ul><li>BNP مرتفع نتيجة تمدد البطينين</li><li>ECG: نقص تروية (T مقلوبة)، سرعة نبض، نبضات زائدة</li><li>CBC: فقر دم لو Hb أقل من 12 للإناث أو أقل من 14 للذكور</li><li>كيمياء: مشكلة كلى أو اضطراب أملاح</li><li>CXR فشل أيسر: احتقان رئوي وتضخم البطين الأيسر؛ فشل أيمن: احتقان وانصباب جنبي وتضخم القلب</li></ul>",
+   "en": "<h4>Investigations</h4><table><thead><tr><th>Test</th><th>What it shows</th></tr></thead><tbody><tr><td>ECG</td><td>Cardiac enlargement, dysrhythmia, bundle branch block (BBB), coronary artery disease (CAD)</td></tr><tr><td>Chest X-ray CXR</td><td>Cardiomegaly, pulmonary congestion, pleural effusion</td></tr><tr><td>Echo</td><td>Cardiac enlargement, valve lesions, reduced ejection fraction EF</td></tr><tr><td>Cardiac catheterization</td><td>According to the case</td></tr></tbody></table><h4>Looking for the cause</h4><table><thead><tr><th>Test</th><th>Purpose</th></tr></thead><tbody><tr><td>Cardiac enzymes</td><td>Myocardial infarction</td></tr><tr><td>CBC</td><td>Anemia</td></tr><tr><td>Thyroid function</td><td>Hyperthyroidism</td></tr><tr><td>Lipid profile</td><td>High cholesterol and fatty acids</td></tr></tbody></table><p>And other tests according to symptoms.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Recent additions: <b>BNP or NT-proBNP</b> is very useful in diagnosing heart failure and ruling it out in shortness of breath; also follow kidney function, electrolytes (Na, K), liver function, and glucose. Echo is the basis for determining EF.</p></div><!--M1--><h4>Supplements</h4><ul><li>BNP is elevated as a result of ventricular stretch</li><li>ECG: ischemia (inverted T), tachycardia, extra beats</li><li>CBC: anemia if Hb is less than 12 for females or less than 14 for males</li><li>Chemistry: kidney problem or electrolyte disturbance</li><li>CXR left-sided failure: pulmonary congestion and left ventricular enlargement; right-sided failure: congestion, pleural effusion, and cardiomegaly</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>1) علاج غير دوائي</h4><ul><li><b>الراحة:</b> راحة بالسرير في وضع نصف جلوس (Semi-sitting) لتقليل العائد الوريدي وتقليل احتياجات الجسم الأيضية</li><li><b>الراحة النفسية:</b> Neuril (نيوريل) 2 أو 5 mg قرص 3 مرات يومياً فموياً — أو Neuril (Diazepam) أمبول وريدي: حسب أمر الطبيب، يُحقن ببطء غير مخفف بمعدل لا يزيد عن 5 مجم/دقيقة (لا يُخفف في محاليل التسريب العادية)</li><li><b>الغذاء:</b> تقليل الملح، تقييد السوائل، وجبات صغيرة متكررة، تقليل الوزن، الإقلاع عن التدخين</li></ul><h4>2) العلاج المحدد (Specific treatment)</h4><table><thead><tr><th>الدواء</th><th>الجرعة / الاستخدام (حسب المراجع)</th></tr></thead><tbody><tr><td><b>مدرّات:</b> Lasix (لازيكس) 20 أو 40 mg أمبول</td><td>1–2 mg/kg/يوم وريدي</td></tr><tr><td>Aldactone (ألداكتون) 25 mg قرص</td><td>2–3 mg/kg/يوم مرتين يومياً</td></tr><tr><td><b>موسّع أوعية:</b> Nitronal (نيترونال) فيال</td><td>10 سم³ تُضاف إلى 90 سم³ جلوكوز 5% على جهاز محلول (سلوسيت). يبدأ التسريب بمعدل 3 نقط/دقيقة ويُضاعف تدريجياً بحيث لا ينزل الضغط عن 100/70 mmHg</td></tr><tr><td><b>ديجوكسين (Digitalization)</b> فموي</td><td>الجرعة الأولى 2 قرص يومياً لمدة 5 أيام، ثم الصيانة نصف إلى 1 قرص (0.125–0.25 مجم) يومياً حسب الطبيب</td></tr><tr><td>ديجوكسين وريدي (في الوذمة الرئوية الحادة وعدم انتظام النبض السريع)</td><td>0.5 mg كجرعة أولى في جلوكوز 5% على 30 دقيقة (لا تقل عن 5 دقائق)، ثم 0.25 mg كل 6–8 ساعات حتى إجمالي التحميل المحدد بأمر الطبيب (غالباً 8–12 مكجم/كجم)، ثم يكمل فموياً</td></tr><tr><td>السوق المصري</td><td>Lanoxin (لانوكسين) 0.25 mg أقراص و0.5 mg أمبول</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>Aldactone:</b> الجرعة بالكيلوجرام (2–3 mg/kg) تخص الأطفال؛ البالغين عادةً 25–50 mg يومياً مع مراقبة البوتاسيوم والكلى.</li><li><b>Lasix:</b> الجرعة بالجرعة (20–40 mg وريدي أو ضعف الجرعة الفموية المعتادة) ويُعدّل حسب الاستجابة، ولا يُعطى بالكجم عند البالغ.</li><li><b>الديجوكسين:</b> لم يعد العلاج الأول؛ لا يُستخدم «Digitalization 5 أيام» عادة اليوم؛ جرعة الصيانة تقريباً 0.125–0.25 mg يومياً (أقل في كبار السن والفشل الكلوي) مع مستوى هدف 0.5–0.9 ng/mL، ويُستخدم للمرضى الذين لا يزالون بأعراض أو لضبط سرعة الرجفان الأذيني.</li><li><b>Nitronal:</b> استخدم مضخة (Infusion pump) بـ mcg/min بدل نقط/دقيقة لأن حجم النقطة يختلف حسب الجهاز؛ يبدأ عادة 10–20 mcg/min ويزيد 5–10 كل 5 دقائق حسب الأمر، وبحد ضغط يحدده الطبيب (غالباً SBP لا يقل عن 90–100).</li><li><b>Neuril (Diazepam)</b> يخفف القلق ولكن يثبط التنفس؛ بحذر وبأمر الطبيب.</li><li><b>أمينوفيلين:</b> يُستخدم لضيق النفس القلبي في المراجع؛ اليوم لا يُوصى به روتينياً (يزيد النبض واضطراب النظم)، وينحصر في وجود تشنج قصبي.</li></ul></div>[[slot:dis-128-pillars|أعمدة علاج فشل القلب الحديثة — رسم من إعداد الموقع|/diseases/img/dis-128-pillars.svg]]<h4>3) علاج الأعراض</h4><ul><li>نقص الأكسجين (Hypoxia): أكسجين</li><li>ضيق النفس القلبي: Aminophylline (حسب المراجع)</li></ul><h4>4) علاج السبب والعوامل المرسّبة</h4><ul><li>ارتفاع الضغط: ضبطه، مثال: Capozide (كابوزيد) قرص مرتين أو 3 مرات يومياً (Captopril + Hydrochlorothiazide)</li><li>عدوى الصدر: مضادات حيوية مناسبة، مسكن ومضاد التهاب، ومقشعات</li></ul><h4>5) علاج العوامل الميكانيكية</h4><ul><li>مرض صمامي شديد: تبديل الصمام</li><li>انصباب التامور: بزل (Tapping)</li><li>التهاب التامور المضيّق: استئصال التامور (Pericardiectomy)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>إضافة: العلاج الأساسي حسب الأدلة في HFrEF = 4 أعمدة: ACEi/ARB/ARNI + حاصر بيتا (Carvedilol/Bisoprolol/Metoprolol succinate) + مضاد مستقبلات الألدوستيرون (Spironolactone/Eplerenone) + SGLT2i (Dapagliflozin/Empagliflozin) (إرشادات AHA/ACC/HFSA 2022 وESC 2021). والمدرّات للأعراض فقط. وحاصرات الكالسيوم من نوع Verapamil/Diltiazem تُتجنب في HFrEF. وتُتجنب NSAIDs وTZD. وكذلك تُحسب فائدة التطعيم (إنفلونزا، ضد الالتهاب الرئوي).</p></div><!--M1--><h4>جدول الأدوية حسب المراجع</h4><table><thead><tr><th>الفئة</th><th>أمثلة</th><th>ملاحظة</th></tr></thead><tbody><tr><td>مدرات</td><td>فوروسيميد، بوميتانيد، ميتولازون، هيدروكلوروثيازيد، سبيرونولاكتون</td><td>تحسن الراحة بخفض الحجم؛ راقب البوتاسيوم والأملاح</td></tr><tr><td>مثبطات ACE</td><td>كابتوبريل، إينالابريل، ليزينوبريل</td><td>خفض الحمل اللاحق</td></tr><tr><td>حاصرات بيتا</td><td>—</td><td>ترفع كسر القذف وتقلل حجم البطين</td></tr><tr><td>ديجوكسين</td><td>—</td><td>يقوي الانقباض</td></tr><tr><td>موسعات</td><td>نيتروبروسايد، نيتروجليسرين موضعي</td><td>خفض الحمل المسبق وتخفيف الضيق</td></tr><tr><td>مميعات</td><td>وارفارين</td><td>للفشل الشديد (خطر الخثرات) ومع AF</td></tr></tbody></table><ul><li>تقليل السوائل</li><li>وضع Fowler العالي لتحسين حركة الحجاب</li><li>أكسجين لتقليل شغل القلب</li><li>حمية قليلة الصوديوم</li></ul>\n<h4>وذمة الرئة الحادة وأدوية القصور</h4><div class=\"cs-box cs-danger\"><strong>كلمات الأولوية: \"جديد، مفاجئ، متفاقم، سريع\"</strong><p>الإجراء الأول هو فيوروسيمايد وريدي: ارفع رأس السرير 45 درجة أو أكثر، أكسجين، فيوروسيمايد + مورفين + محفزات الانقباض بأمر الطبيب، وقف الصوديوم والسوائل (لا شرب ولا سوائل وريدية).</p></div>[[slot:dis-128-p279|أدوية قصور القلب والرعاية — رسم من إعداد الموقع|/diseases/img/dis-128-p279.svg]]<table><thead><tr><th>الدواء</th><th>مثال</th><th>الفعل والتنبيه</th></tr></thead><tbody><tr><td>ACE (-pril)</td><td>ليسينوبريل</td><td>خيار أول؛ يخفض الضغط؛ تجنب الحمل، وذمة وعائية، سعال، ارتفاع K</td></tr><tr><td>ARB (-sartan)</td><td>لوسارتان</td><td>خيار ثانٍ بلا سعال</td></tr><tr><td>بيتا (-lol)</td><td>أتينولول</td><td>احجب عند بطء <60 أو ضغط 90/60 أو ربو/COPD أو قصور حاد، ويخفي أعراض هبوط السكر</td></tr><tr><td>CCB</td><td>نيفيديبين، ديلتيازيم، فيراباميل</td><td>تجنب نبض وضغط منخفضين</td></tr><tr><td>ديجوكسين</td><td>—</td><td>يقوي الانقباض؛ نبض قمي دقيقة كاملة؛ التسمم فوق 2.0: غثيان وقيء وتغير رؤية؛ K ≤ 3.5 يزيد الخطر</td></tr><tr><td>مدرات</td><td>فيوروسيمايد، HCTZ، سبيرونولاكتون</td><td>مضيعة K: أكل موز وبطيخ وخضرة؛ حافظ K: تجنب بدائل الملح</td></tr><tr><td>موسّعات</td><td>نيتروغليسرين، أيزوسوربيد</td><td>ممنوع الفياجرا؛ وريدي: أوقف إن الانقباضي <90 أو هبط 30</td></tr><tr><td>ميلرينون</td><td>—</td><td>محفز وريدي، خيار أخير/تلطيفي</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<h4>1) Non-drug treatment</h4><ul><li><b>Rest:</b> bed rest in the Semi-sitting position to reduce venous return and reduce the body's metabolic needs</li><li><b>Mental rest:</b> Neuril 2 or 5 mg tablet 3 times daily orally — or Neuril (Diazepam) ampoule IV: by physician's order, injected slowly undiluted at a rate not exceeding 5 mg/minute (not diluted in regular infusion solutions)</li><li><b>Diet:</b> reduce salt, restrict fluids, small frequent meals, weight reduction, stop smoking</li></ul><h4>2) Specific treatment</h4><table><thead><tr><th>Drug</th><th>Dose / use</th></tr></thead><tbody><tr><td><b>Diuretics:</b> Lasix 20 or 40 mg ampoule</td><td>1–2 mg/kg/day IV</td></tr><tr><td>Aldactone 25 mg tablet</td><td>2–3 mg/kg/day twice daily</td></tr><tr><td><b>Vasodilator:</b> Nitronal vial</td><td>10 cc added to 90 cc glucose 5% on a burette set (Soluset). The infusion starts at a rate of 3 drops/minute and is doubled gradually so that blood pressure does not drop below 100/70 mmHg</td></tr><tr><td><b>Digoxin (Digitalization)</b> oral</td><td>The initial dose is 2 tablets daily for 5 days, then maintenance half to 1 tablet (0.125–0.25 mg) daily per the physician</td></tr><tr><td>IV digoxin (in acute pulmonary edema and rapid irregular pulse)</td><td>0.5 mg as a first dose in glucose 5% over 30 minutes (not less than 5 minutes), then 0.25 mg every 6–8 hours up to the total loading set by physician's order (usually 8–12 mcg/kg), then continued orally</td></tr><tr><td>Egyptian market</td><td>Lanoxin 0.25 mg tablets and 0.5 mg ampoule</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li><b>Aldactone:</b> the per-kilogram dose (2–3 mg/kg) applies to children; adults usually take 25–50 mg daily with potassium and kidney monitoring.</li><li><b>Lasix:</b> dosed as a fixed dose (20–40 mg IV or double the usual oral dose) and adjusted by response, and it is not given per kg in adults.</li><li><b>Digoxin:</b> no longer first-line treatment; “5-day Digitalization” is not usually used today; the maintenance dose is about 0.125–0.25 mg daily (lower in the elderly and renal failure) with a target level of 0.5–0.9 ng/mL, and it is used for patients who remain symptomatic or to control the rate of atrial fibrillation.</li><li><b>Nitronal:</b> use an Infusion pump in mcg/min instead of drops/minute because drop size varies by set; it usually starts at 10–20 mcg/min and increases by 5–10 every 5 minutes per the order, with a pressure limit set by the physician (usually SBP not below 90–100).</li><li><b>Neuril (Diazepam)</b> relieves anxiety but depresses respiration; use with caution and by physician's order.</li><li><b>Aminophylline:</b> traditionally used for cardiac dyspnea; today it is not routinely recommended (it increases heart rate and dysrhythmia), and it is limited to cases with bronchospasm.</li></ul></div>[[slot:dis-128-pillars|The modern pillars of heart failure treatment — site illustration|/diseases/img/dis-128-pillars.svg]]<h4>3) Symptomatic treatment</h4><ul><li>Hypoxia: oxygen</li><li>Cardiac dyspnea: Aminophylline (traditional practice)</li></ul><h4>4) Treating the cause and precipitating factors</h4><ul><li>Hypertension: control it, example: Capozide tablet twice or 3 times daily (Captopril + Hydrochlorothiazide)</li><li>Chest infection: appropriate antibiotics, analgesic and anti-inflammatory, and expectorants</li></ul><h4>5) Treating mechanical factors</h4><ul><li>Severe valve disease: valve replacement</li><li>Pericardial effusion: Tapping</li><li>Constrictive pericarditis: Pericardiectomy</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Addition: the evidence-based core treatment in HFrEF = 4 pillars: ACEi/ARB/ARNI + beta blocker (Carvedilol/Bisoprolol/Metoprolol succinate) + aldosterone receptor antagonist (Spironolactone/Eplerenone) + SGLT2i (Dapagliflozin/Empagliflozin). Diuretics are for symptoms only. Calcium channel blockers of the Verapamil/Diltiazem type are avoided in HFrEF. NSAIDs and TZDs are avoided. The benefit of vaccination (influenza, pneumococcal) also counts.</p></div><!--M1--><h4>Drug table</h4><table><thead><tr><th>Class</th><th>Examples</th><th>Note</th></tr></thead><tbody><tr><td>Diuretics</td><td>Furosemide, bumetanide, metolazone, hydrochlorothiazide, spironolactone</td><td>Improve comfort by lowering volume; monitor potassium and electrolytes</td></tr><tr><td>ACE inhibitors</td><td>Captopril, enalapril, lisinopril</td><td>Lower afterload</td></tr><tr><td>Beta blockers</td><td>—</td><td>Raise the ejection fraction and reduce ventricular size</td></tr><tr><td>Digoxin</td><td>—</td><td>Strengthens contraction</td></tr><tr><td>Vasodilators</td><td>Nitroprusside, topical nitroglycerin</td><td>Lower preload and relieve dyspnea</td></tr><tr><td>Anticoagulants</td><td>Warfarin</td><td>For severe failure (risk of thrombi) and with AF</td></tr></tbody></table><ul><li>Reduce fluids</li><li>High Fowler position to improve diaphragm movement</li><li>Oxygen to reduce cardiac workload</li><li>Low-sodium diet</li></ul>\n<h4>Acute pulmonary edema and heart failure drugs</h4><div class=\"cs-box cs-danger\"><strong>Priority words: \"new, sudden, worsening, rapid\"</strong><p>The first action is IV furosemide: raise the head of the bed 45 degrees or more, oxygen, furosemide + morphine + inotropes by physician's order, stop sodium and fluids (no drinking and no IV fluids).</p></div>[[slot:dis-128-p279|Heart failure drugs and care — site illustration|/diseases/img/dis-128-p279.svg]]<table><thead><tr><th>Drug</th><th>Example</th><th>Action and caution</th></tr></thead><tbody><tr><td>ACE (-pril)</td><td>Lisinopril</td><td>First choice; lowers blood pressure; avoid in pregnancy, angioedema, cough, high K</td></tr><tr><td>ARB (-sartan)</td><td>Losartan</td><td>Second choice without cough</td></tr><tr><td>Beta (-lol)</td><td>Atenolol</td><td>Hold for a rate <60, blood pressure 90/60, asthma/COPD, or acute failure; it masks symptoms of hypoglycemia</td></tr><tr><td>CCB</td><td>Nifedipine, diltiazem, verapamil</td><td>Avoid with low pulse and blood pressure</td></tr><tr><td>Digoxin</td><td>—</td><td>Strengthens contraction; apical pulse for a full minute; toxicity above 2.0: nausea, vomiting, and vision changes; K ≤ 3.5 increases the risk</td></tr><tr><td>Diuretics</td><td>Furosemide, HCTZ, spironolactone</td><td>K-wasting: eat bananas, melon, and greens; K-sparing: avoid salt substitutes</td></tr><tr><td>Vasodilators</td><td>Nitroglycerin, isosorbide</td><td>No Viagra; IV: stop if systolic <90 or drops by 30</td></tr><tr><td>Milrinone</td><td>—</td><td>IV inotrope, last resort/palliative</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Note</strong><p>Doses are for learning; always verify with the physician/pharmacist.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم القلب والرئتين</strong><p>نبض كامل دقيقة (انتظام، سرعة)، ضغط (قاعد ووقوف)، تنفس، SpO2، رئتين (Crepitations)، وريد الرقبة، تورم، حجم الكبد، وعي. قارن بالأمس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الوزن والسوائل</strong><p>وزّن المريض كل صباح (بعد التبول، قبل الأكل، نفس الميزان والملابس). زيادة 1 كجم في يوم أو 2 كجم في 3 أيام = احتباس: بلّغ. سجل Intake/Output وكمية البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>وضع المريض</strong><p>نصف جلوس (Semi-Fowler / Fowler) مع مسند للرجلين لراحة التنفس؛ في الورم رفع الرجلين. لا ثني الركبة طويلاً. غيّر الوضع كل ساعتين لمنع قرح الفراش (الجلد المتورم ضعيف).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ المدرّات بأمان</strong><p>Lasix وريدي ببطء (2–5 دقائق، ولا يزيد 4 mg/دقيقة)، أعطه الصبح، سجّل البول بعد 30–60 دقيقة. راقب الضغط (دوخة)، البوتاسيوم (ضعف، نبض غير منتظم)، الصوديوم، والجفاف. Aldactone: راقب ارتفاع البوتاسيوم، لا تعطي مع مكملات بوتاسيوم أو ACEi إلا بمراقبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>ديجوكسين بأمان</strong><p>نبض دقيقة كاملة قبل كل جرعة: أقل من 60 (أو 50 للبالغ) أوقف وبلّغ. تأكد من بوتاسيوم طبيعي (نقص البوتاسيوم يزيد السُمّيّة). أعراض السمّيّة: غثيان وقيء، فقدان شهية، رؤية صفراء/هالات، اضطراب نظم، ارتباك. إعطاء وريدي: على 30 دقيقة مع مونيتور.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Nitronal بأمان</strong><p>مضخة تسريب، مونيتور ضغط مستمر أو كل 5 دقائق أثناء الزيادة. أوقف وبلّغ لو الضغط أقل من الحد الأدنى، صداع شديد، دوخة. تأكد إن المريض لم يأخذ Sildenafil أو Tadalafil. حافظ على الزجاجة/الخط المناسب (بعض الخطوط البلاستيك تمتص الدواء).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ACEi وحاصر بيتا</strong><p>ACEi: ضغط، كرياتينين، بوتاسيوم، كحة جافة، تورم الوجه (Angioedema: طوارئ). حاصر بيتا: لا يبدأ في فشل حاد، نبض وضغط قبل الجرعة، راقب زيادة الاحتقان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>الغذاء والسوائل</strong><p>ملح قليل (حسب الطبيب)، سوائل حسب الأمر (غالباً 1.5–2 لتر في الحالات الشديدة)، وجبات صغيرة متكررة. ماء ومحاليل وريدية: بحذر وبمعدل بطيء (زيادة السوائل مرسّب). منع الكحول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>الجلد والنشاط</strong><p>حماية الجلد، تقليل الجهد: خطط الأنشطة مع راحات، تدريج الحركة، وقاية من الجلطات (جوارب/ حركة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>أكسجين وتهوية</strong><p>أكسجين لو SpO2 أقل من 90–94% حسب الأمر. ضيق نفس مفاجئ شديد = وذمة رئوية: ارفع الرأس وأبلغ.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>ضيق نفس شديد، بلغم وردي رغوي، نبض سريع جداً، ضغط منخفض مع جلد بارد، أو إغماء: طوارئ. اجلس المريض بساقين متدليتين، أكسجين، ونداء الطبيب فوراً.</p></div><h4>التوثيق</h4><ul><li>الوزن اليومي والداخل/الخارج</li><li>التنفس والرئتان والتورم</li><li>الأدوية (قبل وبعد: نبض/ضغط/بوتاسيوم)</li><li>النوم والوضع والنشاط</li><li>التثقيف المنجز</li></ul><!--M1--><h4>نقاط تمريضية إضافية</h4><ul><li>وزن يومي ودخل وخرج</li><li>نصف جلوس للراحة</li><li>أكسجين حسب الأمر</li><li>ارفع الساقين أثناء الجلوس لتقليل الوذمة</li><li>الأكل قليل الملح: لا يوجد «لانشون قليل الملح» لهذه الحالة</li><li>بلّغ عن زيادة عدة أرطال (ما يقارب 1.4 كجم أو أكتر) في 1–2 يوم أو احتباس سوائل</li></ul>\n<h4>الرعاية اليومية</h4><ul><li>غذاء قليل الصوديوم والسوائل (2 لتر و2 غ أو أقل يومياً).</li><li>خطر السقوط: غيّر الوضع ببطء. تابع الضغط وBNP.</li><li>ارفع الساقين وضع المريض في وضع فاولر العالي.</li><li>وزن يومي: زيادة 3 باوند (نحو 1.4 كغ) أو 5 باوند (نحو 2.3 كغ) في أسبوع = تدهور.</li><li>جنس: مسموح إن صعد سلمين بلا ضيق نفس.</li><li>جوارب TED لتقليل تجمع الدم وتُخلع يومياً.</li><li>لا أدوية بلا وصفة (سعال/إنفلونزا، مضادات حموضة، NSAIDs) ولا أطعمة معلبة أو مصنعة (رقائق وصلصات ولحوم وجبن ونبيذ).</li><li><strong>لا تدلك ساقي مريض القصور أبداً.</strong></li></ul><!--g5nursing--><div class=\"cs-box cs-info\"><strong>إضافة: أدوية فشل القلب وDR BEDS</strong><p>راجع <a href=\"/diseases/dis-3516\">أولويات فشل القلب وأدويته (ACTS وDR BEDS)</a> و<a href=\"/diseases/dis-3507\">Inotropic وChronotropic</a>. زيادة الوزن 3 رطل (حوالي 1.4 كجم) في يوم أو 5 رطل (حوالي 2.3 كجم) في أسبوع تدل على التفاقم، ولا تدلّك الساقين لتجنب خطر الجلطة.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess the heart and lungs</strong><p>Pulse for a full minute (regularity, rate), blood pressure (sitting and standing), respiration, SpO2, lungs (Crepitations), neck vein, edema, liver size, consciousness. Compare with yesterday.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Weight and fluids</strong><p>Weigh the patient every morning (after voiding, before eating, same scale and clothes). A gain of 1 kg in a day or 2 kg in 3 days = retention: report. Record Intake/Output and urine amount.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Patient position</strong><p>Semi-sitting (Semi-Fowler / Fowler) with a footrest for easier breathing; with edema, elevate the legs. No prolonged knee flexion. Change position every 2 hours to prevent pressure ulcers (edematous skin is fragile).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Give diuretics safely</strong><p>Lasix IV slowly (2–5 minutes, not exceeding 4 mg/minute), give it in the morning, record urine after 30–60 minutes. Monitor blood pressure (dizziness), potassium (weakness, irregular pulse), sodium, and dehydration. Aldactone: monitor for high potassium, do not give with potassium supplements or an ACEi except with monitoring.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Digoxin safely</strong><p>Pulse for a full minute before each dose: less than 60 (or 50 for an adult), hold and report. Make sure potassium is normal (low potassium increases toxicity). Toxicity symptoms: nausea and vomiting, loss of appetite, yellow vision/halos, dysrhythmia, confusion. IV administration: over 30 minutes with a monitor.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Nitronal safely</strong><p>Infusion pump, continuous blood pressure monitoring or every 5 minutes during titration. Stop and report if blood pressure is below the lower limit, severe headache, dizziness. Make sure the patient has not taken Sildenafil or Tadalafil. Use the appropriate bottle/line (some plastic lines absorb the drug).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ACEi and beta blocker</strong><p>ACEi: blood pressure, creatinine, potassium, dry cough, facial swelling (Angioedema: emergency). Beta blocker: not started in acute failure, pulse and blood pressure before the dose, monitor for increased congestion.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Diet and fluids</strong><p>Low salt (per the physician), fluids per order (usually 1.5–2 liters in severe cases), small frequent meals. Water and IV solutions: with caution and at a slow rate (excess fluid is a precipitant). No alcohol.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>Skin and activity</strong><p>Skin protection, reduce effort: plan activities with rest periods, gradual mobilization, clot prevention (stockings/ movement).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>Oxygen and ventilation</strong><p>Oxygen if SpO2 is below 90–94% per order. Sudden severe shortness of breath = pulmonary edema: raise the head and report.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Severe shortness of breath, pink frothy sputum, very rapid pulse, low blood pressure with cold skin, or syncope: emergency. Sit the patient up with legs dangling, give oxygen, and call the physician immediately.</p></div><h4>Documentation</h4><ul><li>Daily weight and intake/output</li><li>Breathing, lungs, and edema</li><li>Medications (before and after: pulse/blood pressure/potassium)</li><li>Sleep, position, and activity</li><li>Teaching completed</li></ul><!--M1--><h4>Additional nursing points</h4><ul><li>Daily weight and intake and output</li><li>Semi-sitting for comfort</li><li>Oxygen per order</li><li>Elevate the legs while sitting to reduce edema</li><li>Low-salt food: there is no “low-salt luncheon meat” for this condition</li><li>Report a gain of several pounds (about 1.4 kg or more) in 1–2 days or fluid retention</li></ul>\n<h4>Daily care</h4><ul><li>Low-sodium, low-fluid diet (2 liters and 2 g or less daily).</li><li>Fall risk: change position slowly. Follow blood pressure and BNP.</li><li>Elevate the legs and place the patient in high Fowler position.</li><li>Daily weight: a gain of 3 pounds (about 1.4 kg) or 5 pounds (about 2.3 kg) in a week = deterioration.</li><li>Sex: allowed if the patient can climb two flights of stairs without shortness of breath.</li><li>TED stockings to reduce blood pooling; removed daily.</li><li>No over-the-counter drugs (cough/flu, antacids, NSAIDs) and no canned or processed foods (chips, sauces, meats, cheese, and wine).</li><li><strong>Never massage the legs of a heart failure patient.</strong></li></ul><!--g5nursing--><div class=\"cs-box cs-info\"><strong>Addition: heart failure drugs and DR BEDS</strong><p>See <a href=\"/diseases/dis-3516\">Heart failure priorities and drugs (ACTS and DR BEDS)</a> and <a href=\"/diseases/dis-3507\">Inotropic and Chronotropic</a>. A weight gain of 3 pounds (about 1.4 kg) in a day or 5 pounds (about 2.3 kg) in a week indicates worsening, and do not massage the legs to avoid the risk of a clot.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>ضيق نفس شديد أو بلغم وردي رغوي أو زرقة</li><li>زيادة وزن 1 كجم في يوم أو 2 كجم في 3 أيام</li><li>ضغط انقباضي أقل من 90 أو نبض أقل من 50/أكثر من 120</li><li>قلة بول شديدة أو ارتباك</li><li>ألم صدر أو إغماء أو خفقان</li><li>أعراض سمّيّة ديجوكسين أو بوتاسيوم غير طبيعي</li><li>تورم شديد في الوجه أو الحلق بعد ACEi</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Inform the physician immediately if:</strong><ul><li>Severe shortness of breath, pink frothy sputum, or cyanosis</li><li>Weight gain of 1 kg in a day or 2 kg in 3 days</li><li>Systolic pressure below 90 or pulse below 50/above 120</li><li>Severe low urine output or confusion</li><li>Chest pain, syncope, or palpitations</li><li>Digoxin toxicity symptoms or abnormal potassium</li><li>Severe swelling of the face or throat after an ACEi</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>وزّن نفسك كل صباح وسجّله؛ زيادة 1 كجم في يوم أو 2 كجم في 3 أيام: كلّم الطبيب.</li><li>قلّل الملح (المخللات، الجبنة المالحة، الشيبسي، المرقة)، وخد السوائل حسب تعليمات الطبيب.</li><li>نام بوسادتين أو أكتر لو ضيق النفس بالليل، وبلّغ لو زاد.</li><li>خد الأدوية كل يوم ومتوقفش حتى لو اتحسنت، وإياك والمسكنات NSAIDs.</li><li>الديجوكسين: خد نبضك قبل الجرعة، وبلّغ عن غثيان أو تغير الرؤية.</li><li>بطّل تدخين، قلّل الوزن، ومارس نشاط خفيف حسب توجيه الطبيب.</li><li>خد تطعيم الإنفلونزا والالتهاب الرئوي.</li><li>تابع بانتظام ولا تهمل أي عَرَض جديد.</li></ul>\n[[slot:dis-128-review|فشل القلب الأيمن والأيسر وHOPE — رسم من إعداد الموقع|/diseases/img/dis-128-review.svg]][[slot:dis-128-pharm|أدوية الفشل والتمريض — رسم من إعداد الموقع|/diseases/img/dis-128-pharm.svg]]<h4>إضافات للمراجعة</h4><ul><li>وذمة الرئة الحادة: ارفع الرأس 45 درجة أو أكثر، أكسجين، فوروسيميد وريدي (أو بوميتانيد) أولاً مع مورفين ومقويات بأمر الطبيب، أوقف الصوديوم والسوائل.</li><li>سؤال متكرر: مريض فشل قلب مزمن بسعال بلغم وردي رغوي ورالات تزداد = أعطِ مدراً وريدياً أولاً.</li><li>الإمساك: ملينات وحركة وألياف ولا تشرب سوائل زائدة.</li><li>لا طعام معلب أو مصنع (شيبسي، صلصات، لحوم مصنعة، جبن، نبيذ).</li><li>لا أدوية بلا وصفة: برد/سعال، مضادات حموضة، NSAIDs.</li><li>لا تدلّك سمانة مريض الفشل.</li><li>الديجوكسين: نبض قمة دقيقة كاملة، سمية فوق 2.0 (رؤية وغثيان)، البوتاسيوم أقل من 3.5 يزيد السمية. مدرّات فاقدة للبوتاسيوم: تناول موز وشمام وخضر ورقية؛ الموفرة (سبيرونولاكتون): تجنب بدائل الملح والشمام والخضر الورقية.</li><li>حاصر بيتا: أوقفه لو النبض أقل من 60 والضغط 90/60، أو ضيق شعب، أو سكر يخفي الأعراض.</li><li>ميلرينون: داعم انقباض يُستخدم كخط أخير/تلطيفي.</li><li>ضغط الشريان الرئوي (قسطرة سوان-جانز): ارتفاع الضغوط غير جيد؛ الأصل ذكر 2–8 مم زئبق حسب المرجع.</li></ul>",
+   "en": "<ul><li>Weigh yourself every morning and record it; a gain of 1 kg in a day or 2 kg in 3 days: call the physician.</li><li>Cut down on salt (pickles, salty cheese, chips, stock), and take fluids as the physician instructs.</li><li>Sleep on two or more pillows if you are short of breath at night, and report if it gets worse.</li><li>Take your medications every day and do not stop even if you feel better, and stay away from NSAID painkillers.</li><li>Digoxin: take your pulse before the dose, and report nausea or vision changes.</li><li>Stop smoking, lose weight, and do light activity as the physician directs.</li><li>Get the influenza and pneumococcal vaccines.</li><li>Follow up regularly and do not ignore any new symptom.</li></ul>\n[[slot:dis-128-review|Right and left heart failure and HOPE — site illustration|/diseases/img/dis-128-review.svg]][[slot:dis-128-pharm|Heart failure drugs and nursing — site illustration|/diseases/img/dis-128-pharm.svg]]<h4>Additions for review</h4><ul><li>Acute pulmonary edema: raise the head 45 degrees or more, oxygen, IV furosemide (or bumetanide) first with morphine and inotropes by physician's order, stop sodium and fluids.</li><li>Frequent question: a chronic heart failure patient with a cough, pink frothy sputum, and increasing rales = give an IV diuretic first.</li><li>Constipation: laxatives, movement, and fiber, and do not drink excess fluids.</li><li>No canned or processed food (chips, sauces, processed meats, cheese, wine).</li><li>No over-the-counter drugs: cold/cough, antacids, NSAIDs.</li><li>Do not massage the calf of a heart failure patient.</li><li>Digoxin: apical pulse for a full minute, toxicity above 2.0 (vision and nausea), potassium below 3.5 increases toxicity. Potassium-wasting diuretics: eat bananas, cantaloupe, and leafy greens; potassium-sparing (spironolactone): avoid salt substitutes, cantaloupe, and leafy greens.</li><li>Beta blocker: hold it if the pulse is below 60 and blood pressure is 90/60, or with bronchospasm, or in diabetes where it masks symptoms.</li><li>Milrinone: an inotrope used as a last-line/palliative option.</li><li>Pulmonary artery pressure (Swan-Ganz catheter): elevated pressures are not good; the stated range is 2–8 mmHg.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "فشل القلب = عجز عن ضخ دم كافٍ لاحتياجات الجسم",
+   "الأيسر: احتقان رئوي (ضيق نفس، طقطقة)، الأيمن: احتقان جهازي (ورم، رقبة، كبد)",
+   "العوامل المرسّبة: عدوى، ملح وسوائل زيادة، جلطة، اضطراب نظم، أنيميا، حمل",
+   "العلاج: راحة نصف جلوس، تقليل الملح، مدرّات، فازودايلاتور، ديجوكسين وعلاج السبب",
+   "وزن يومي ومراقبة الداخل والخارج هما أساس المتابعة",
+   "ديجوكسين: النبض قبل الجرعة والبوتاسيوم، وLasix يؤثر على البوتاسيوم"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>فشل القلب (Heart failure) هو متلازمة سريرية بسبب <b>عجز القلب عن ضخ دم كافٍ لاحتياجات الجسم</b>. القلب ممكن يكون ضعيف الانقباض أو متصلب لا يمتلئ كويس، فينتج عنه احتقان (رئة أو أوردة) وقلة تروية (تعب، قلة بول).</p><div class=\"cs-stats\"><div><b>LSHF</b><span>احتقان رئوي</span></div><div><b>RSHF</b><span>احتقان جهازي (ورم)</span></div><div><b>Wt ↑</b><span>زيادة الوزن = احتباس</span></div></div>[[slot:dis-128-lshf-rshf|فشل القلب الأيسر والأيمن — رسم من إعداد الموقع|/diseases/img/dis-128-lshf-rshf.svg]]<div class=\"cs-box cs-info\"><strong>تصنيف سريع (إضافة)</strong><p>حسب الكسر القذفي EF: ضعيف الانقباض (HFrEF) أقل من أو يساوي 40%، متوسط (HFmrEF) 41–49%، محفوظ (HFpEF) 50% فأكتر. وحسب الأعراض (NYHA): I بدون أعراض، II تعب مع مجهود عادي، III مع مجهود خفيف، IV عند الراحة.</p></div><!--M1--><h4>الركائز الأربعة لأداء القلب</h4><p>الفشل القلبي ينتج عن خلل في واحد أو أكتر من: <b>الانقباضية</b>، <b>معدل القلب</b>، <b>الحمل المسبق (Preload)</b>، <b>الحمل اللاحق (Afterload)</b>. القلوب السليمة تتحمل بعض التغيرات، بينما القلوب المريضة المسنة لا تتحمل فيحدث الفشل. النتيجة في المراحل المبكرة غالباً جيدة والمدى الطويل يختلف حسب الشدة والأمراض المصاحبة.</p>\n<h4>مراجعة التمريض الباطني: أعراض وأسباب وأولويات</h4><p>فشل القلب (Heart Failure) = عجز القلب عن ضخ نتاج كاف فيتراكم السائل ويزيد الوزن (زيادة الوزن = زيادة الماء).</p>[[slot:dis-128-p278|قصور القلب الأيمن والأيسر والأولويات — رسم من إعداد الموقع|/diseases/img/dis-128-p278.svg]]<table><thead><tr><th></th><th>قصور أيمن</th><th>قصور أيسر</th></tr></thead><tbody><tr><td>العلامات</td><td>وذمة طرفية، زيادة وزن، JVD، استسقاء وتضخم كبد وطحال</td><td>وذمة رئوية، خراخر لا تزول بالكحة، بلغم وردي رغوي، ضيق نفس عند الاستلقاء</td></tr><tr><td>الأسباب</td><td>ارتفاع ضغط، ارتفاع ضغط رئوي، رئتان متليفتان، قد ينتج عن الأيسر</td><td>قلب ضعيف بعد MI، CAD/ACS</td></tr></tbody></table><p>عوامل الخطر: ارتفاع الضغط (الأول)، رجفان أذيني واضطرابات النظم، ارتجاع تاجي، اعتلال عضلة. الفحوص: BNP (فوق 900 شديد)، إيكو (EF 55–70% طبيعي، 40% أو أقل قصور)، قسطرة سوان-غانز (فوق 8 غير جيد، الطبيعي نحو 2–8 مم زئبق حسب المرجع).</p>"
+  "en": [
+   "Heart failure = inability to pump enough blood for the body's needs",
+   "Left: pulmonary congestion (shortness of breath, crepitations); right: systemic congestion (edema, neck, liver)",
+   "Precipitating factors: infection, excess salt and fluids, infarction, dysrhythmia, anemia, pregnancy",
+   "Treatment: semi-sitting rest, salt reduction, diuretics, vasodilator, digoxin, and treating the cause",
+   "Daily weight and intake/output monitoring are the basis of follow-up",
+   "Digoxin: pulse before the dose and potassium, and Lasix affects potassium"
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "طقطقة دقيقة بقاعدة الرئتين تدل على؟",
+    "en": "Fine crepitations at the lung bases indicate?"
+   },
+   "options": [
+    {
+     "ar": "فشل القلب الأيسر",
+     "en": "Left heart failure"
     },
-    "causes": {
-      "ar": "<h4>أسباب فشل الأذين (Atrial)</h4><table><thead><tr><th>الأيسر</th><th>الأيمن</th></tr></thead><tbody><tr><td>ضيق الصمام التاجي (Mitral stenosis)<br>ورم أذيني (Atrial myxoma)</td><td>ضيق الصمام ثلاثي الشرف (Tricuspid stenosis)<br>ورم أذيني (Atrial myxoma)</td></tr></tbody></table><h4>أسباب فشل البطين الأيسر (LVF)</h4><ol><li>ارتفاع ضغط الدم الجهازي</li><li>ضيق الأورطي (AS) / ارتجاع الأورطي (AR) / ارتجاع التاجي (MR) / ثقب بين البطينين (VSD)</li><li>حالة فرط الحركة الدورية (Hyperdynamic circulation)</li><li>جلطة القلب (MI) / التهاب عضلة القلب / اعتلال العضلة (Cardiomyopathy)</li><li>انضغاط القلب (Tamponade) / التهاب التامور المضيّق (Constrictive pericarditis)</li></ol><h4>أسباب فشل البطين الأيمن (RVF)</h4><ol><li>ارتفاع ضغط الشريان الرئوي (بسبب LVF أو COPD أو جلطة رئوية PE)</li><li>ضيق الرئوي (PS) / ارتجاع الرئوي (PR) / ارتجاع ثلاثي الشرف (TR) / ثقب بين الأذينين (ASD)</li><li>فرط الحركة الدورية</li><li>MI / التهاب عضلة / اعتلال عضلة</li><li>Tamponade / Constrictive pericarditis</li></ol><h4>عوامل مرسّبة (Precipitating factors)</h4><ul><li>عدوى (أي عدوى، خصوصاً التهاب الشغاف (Endocarditis)، نشاط الروماتيزم، التهاب الصدر)</li><li>أسباب طبية المنشأ: كورتيزون، حاصرات الكالسيوم، ملح زيادة، سوائل وريدية زيادة</li><li>جلطة قلبية حادة</li><li>اضطراب النظم (مثل الرجفان الأذيني)</li><li>أنيميا، فرط نشاط الدرقية، غيرها من فرط الحركة الدورية</li><li>إجهاد جسدي وانفعالي</li><li>الحمل والمخاض المتأخر</li><li>أيضاً: ترك الأدوية أو الملح، NSAIDs، كحول</li></ul>"
+    {
+     "ar": "فشل القلب الأيمن",
+     "en": "Right heart failure"
     },
-    "signs": {
-      "ar": "<h4>مظاهر نقص النتاج القلبي (Low cardiac output) — في الأيسر أو الأيمن أو الاثنين</h4><table><thead><tr><th>العضو</th><th>العلامة</th></tr></thead><tbody><tr><td>المخ</td><td>دوخة، صداع، إغماء</td></tr><tr><td>العين</td><td>زغللة</td></tr><tr><td>القلب</td><td>ذبحة صدرية</td></tr><tr><td>الكلى</td><td>قلة البول (Oliguria)</td></tr><tr><td>العضلات</td><td>سهولة التعب، عرج متقطع</td></tr><tr><td>الجلد</td><td>شحوب، برودة، زرقة طرفية في الحالات الشديدة</td></tr></tbody></table><h4>مظاهر احتقان الرئة (فشل أيسر)</h4><ol><li>ضيق نفس (Dyspnea) — بالمجهود ثم عند الاستلقاء (Orthopnea) والنوبات الليلية (PND)</li><li>كحة</li><li>نفث دم (Hemoptysis)</li><li>عدوى صدر متكررة</li><li>انصباب جنبي (Pleural effusion)</li><li>طقطقة دقيقة في قاعدة الرئتين على الجانبين (Fine basal bilateral crepitations)</li></ol><h4>مظاهر احتقان الأوردة (فشل أيمن)</h4><ol><li>الرقبة: أوردة منتفخة نابضة</li><li>الكبد: ألم في الجانب الأيمن (Right hypochondrium)</li><li>الأطراف السفلية: ورم في الأماكن المنخفضة (الساقين أو أسفل الظهر Sacrum)</li></ol><h4>الفحص (Examination)</h4><table><thead><tr><th>الفحص</th><th>فشل أيسر (LSHF)</th><th>فشل أيمن (RSHF)</th></tr></thead><tbody><tr><td>الضغط</td><td>انخفاض الانقباضي</td><td>انخفاض الانقباضي</td></tr><tr><td>النبض</td><td>سريع إلا لو المريض على ديجوكسين أو حاصر بيتا؛ نبض متبادل القوة (Pulsus alternans)</td><td>سريع إلا لو ديجوكسين أو حاصر بيتا</td></tr><tr><td>التنفس</td><td>سريع وسطحي (Tachypnea)</td><td>—</td></tr><tr><td>الصدر / القلب</td><td>إيقاع حصان (Gallop) عند القمة التاجية، نفخات، طقطقة دقيقة بقاعدة الرئتين</td><td>إيقاع حصان عند الصمام ثلاثي الشرف، نفخات</td></tr></tbody></table>[[slot:dis-128-cxr|صورة أشعة صدر: تضخم القلب واحتقان رئوي (Cardiomegaly + congestion)]]<div class=\"cs-box cs-danger\"><strong>متى تكون الحالة حادة؟</strong><p>ضيق نفس شديد عند الراحة، بلغم رغوي وردي، أو هبوط ضغط وبرودة: وقتها فكّر في وذمة رئوية حادة أو صدمة قلبية (راجع دليل الوذمة الرئوية الحادة).</p></div><!--M1--><h4>تدرج الأعراض</h4><table><thead><tr><th>المرحلة</th><th>العلامات</th></tr></thead><tbody><tr><td>مبكرة</td><td>طقطقة قاعدية بالرئة (Basilar rales)، تبول ليلي (Nocturia)، ضيق نفس بالمجهود، إرهاق، ارتجاع كبدي وداجي موجب (Hepatojugular reflux)، صوت S3</td></tr><tr><td>متوسطة</td><td>سعال، ضيق نفس بالاستلقاء (Orthopnea)، ألم أعلى يمين البطن لتضخم الكبد، طقطقة قلبية، وذمة، تضخم قلب</td></tr><tr><td>متأخرة</td><td>وذمة معممة (Anasarca)، بلغم رغوي أو وردي من نفاذية الشعيرات</td></tr></tbody></table><table><thead><tr><th>الصوت</th><th>الوصف</th></tr></thead><tbody><tr><td>S3</td><td>صوت ناعم بعد S2 بسبب امتلاء سريع للبطين؛ يُسمع عند القمة (الفراغ الرابع، خط منتصف الترقوة) وأفضل والمريض على جانبه الأيسر، ويدل غالباً على الفشل</td></tr><tr><td>S4</td><td>قبل S1 عند القمة، بسبب قلب متيبس وانقباض الأذين</td></tr><tr><td>نفخة</td><td>اضطراب تدفق ويُسمع حول القلب</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<h4>الفحوصات (حسب المراجع)</h4><table><thead><tr><th>الفحص</th><th>اللي بيكشفه</th></tr></thead><tbody><tr><td>رسم القلب ECG</td><td>تضخم القلب، اضطراب النظم، حصار الفرع (BBB)، مرض الشرايين التاجية (CAD)</td></tr><tr><td>أشعة الصدر CXR</td><td>تضخم القلب، احتقان رئوي، انصباب جنبي</td></tr><tr><td>الإيكو (Echo)</td><td>تضخم القلب، آفات الصمامات، انخفاض الكسر القذفي EF</td></tr><tr><td>قسطرة القلب</td><td>حسب الحالة</td></tr></tbody></table><h4>البحث عن السبب</h4><table><thead><tr><th>التحليل</th><th>الغرض</th></tr></thead><tbody><tr><td>إنزيمات القلب</td><td>جلطة قلبية</td></tr><tr><td>صورة دم CBC</td><td>الأنيميا</td></tr><tr><td>وظائف الغدة الدرقية</td><td>فرط الدرقية</td></tr><tr><td>صورة الدهون</td><td>ارتفاع الكوليسترول والأحماض الدهنية</td></tr></tbody></table><p>وتحاليل أخرى حسب الأعراض.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>إضافات حديثة: <b>BNP أو NT-proBNP</b> مفيد جداً في تشخيص فشل القلب واستبعاده في ضيق النفس، وتابع كلى وإلكتروليت (Na، K) ووظائف الكبد وسكر. والإيكو هو الأساس لتحديد EF.</p></div><!--M1--><h4>مكملات</h4><ul><li>BNP مرتفع نتيجة تمدد البطينين</li><li>ECG: نقص تروية (T مقلوبة)، سرعة نبض، نبضات زائدة</li><li>CBC: فقر دم لو Hb أقل من 12 للإناث أو أقل من 14 للذكور</li><li>كيمياء: مشكلة كلى أو اضطراب أملاح</li><li>CXR فشل أيسر: احتقان رئوي وتضخم البطين الأيسر؛ فشل أيمن: احتقان وانصباب جنبي وتضخم القلب</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>1) علاج غير دوائي</h4><ul><li><b>الراحة:</b> راحة بالسرير في وضع نصف جلوس (Semi-sitting) لتقليل العائد الوريدي وتقليل احتياجات الجسم الأيضية</li><li><b>الراحة النفسية:</b> Neuril (نيوريل) 2 أو 5 mg قرص 3 مرات يومياً فموياً — أو Neuril (Diazepam) أمبول وريدي: حسب أمر الطبيب، يُحقن ببطء غير مخفف بمعدل لا يزيد عن 5 مجم/دقيقة (لا يُخفف في محاليل التسريب العادية)</li><li><b>الغذاء:</b> تقليل الملح، تقييد السوائل، وجبات صغيرة متكررة، تقليل الوزن، الإقلاع عن التدخين</li></ul><h4>2) العلاج المحدد (Specific treatment)</h4><table><thead><tr><th>الدواء</th><th>الجرعة / الاستخدام (حسب المراجع)</th></tr></thead><tbody><tr><td><b>مدرّات:</b> Lasix (لازيكس) 20 أو 40 mg أمبول</td><td>1–2 mg/kg/يوم وريدي</td></tr><tr><td>Aldactone (ألداكتون) 25 mg قرص</td><td>2–3 mg/kg/يوم مرتين يومياً</td></tr><tr><td><b>موسّع أوعية:</b> Nitronal (نيترونال) فيال</td><td>10 سم³ تُضاف إلى 90 سم³ جلوكوز 5% على جهاز محلول (سلوسيت). يبدأ التسريب بمعدل 3 نقط/دقيقة ويُضاعف تدريجياً بحيث لا ينزل الضغط عن 100/70 mmHg</td></tr><tr><td><b>ديجوكسين (Digitalization)</b> فموي</td><td>الجرعة الأولى 2 قرص يومياً لمدة 5 أيام، ثم الصيانة نصف إلى 1 قرص (0.125–0.25 مجم) يومياً حسب الطبيب</td></tr><tr><td>ديجوكسين وريدي (في الوذمة الرئوية الحادة وعدم انتظام النبض السريع)</td><td>0.5 mg كجرعة أولى في جلوكوز 5% على 30 دقيقة (لا تقل عن 5 دقائق)، ثم 0.25 mg كل 6–8 ساعات حتى إجمالي التحميل المحدد بأمر الطبيب (غالباً 8–12 مكجم/كجم)، ثم يكمل فموياً</td></tr><tr><td>السوق المصري</td><td>Lanoxin (لانوكسين) 0.25 mg أقراص و0.5 mg أمبول</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>Aldactone:</b> الجرعة بالكيلوجرام (2–3 mg/kg) تخص الأطفال؛ البالغين عادةً 25–50 mg يومياً مع مراقبة البوتاسيوم والكلى.</li><li><b>Lasix:</b> الجرعة بالجرعة (20–40 mg وريدي أو ضعف الجرعة الفموية المعتادة) ويُعدّل حسب الاستجابة، ولا يُعطى بالكجم عند البالغ.</li><li><b>الديجوكسين:</b> لم يعد العلاج الأول؛ لا يُستخدم «Digitalization 5 أيام» عادة اليوم؛ جرعة الصيانة تقريباً 0.125–0.25 mg يومياً (أقل في كبار السن والفشل الكلوي) مع مستوى هدف 0.5–0.9 ng/mL، ويُستخدم للمرضى الذين لا يزالون بأعراض أو لضبط سرعة الرجفان الأذيني.</li><li><b>Nitronal:</b> استخدم مضخة (Infusion pump) بـ mcg/min بدل نقط/دقيقة لأن حجم النقطة يختلف حسب الجهاز؛ يبدأ عادة 10–20 mcg/min ويزيد 5–10 كل 5 دقائق حسب الأمر، وبحد ضغط يحدده الطبيب (غالباً SBP لا يقل عن 90–100).</li><li><b>Neuril (Diazepam)</b> يخفف القلق ولكن يثبط التنفس؛ بحذر وبأمر الطبيب.</li><li><b>أمينوفيلين:</b> يُستخدم لضيق النفس القلبي في المراجع؛ اليوم لا يُوصى به روتينياً (يزيد النبض واضطراب النظم)، وينحصر في وجود تشنج قصبي.</li></ul></div>[[slot:dis-128-pillars|أعمدة علاج فشل القلب الحديثة — رسم من إعداد الموقع|/diseases/img/dis-128-pillars.svg]]<h4>3) علاج الأعراض</h4><ul><li>نقص الأكسجين (Hypoxia): أكسجين</li><li>ضيق النفس القلبي: Aminophylline (حسب المراجع)</li></ul><h4>4) علاج السبب والعوامل المرسّبة</h4><ul><li>ارتفاع الضغط: ضبطه، مثال: Capozide (كابوزيد) قرص مرتين أو 3 مرات يومياً (Captopril + Hydrochlorothiazide)</li><li>عدوى الصدر: مضادات حيوية مناسبة، مسكن ومضاد التهاب، ومقشعات</li></ul><h4>5) علاج العوامل الميكانيكية</h4><ul><li>مرض صمامي شديد: تبديل الصمام</li><li>انصباب التامور: بزل (Tapping)</li><li>التهاب التامور المضيّق: استئصال التامور (Pericardiectomy)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>إضافة: العلاج الأساسي حسب الأدلة في HFrEF = 4 أعمدة: ACEi/ARB/ARNI + حاصر بيتا (Carvedilol/Bisoprolol/Metoprolol succinate) + مضاد مستقبلات الألدوستيرون (Spironolactone/Eplerenone) + SGLT2i (Dapagliflozin/Empagliflozin) (إرشادات AHA/ACC/HFSA 2022 وESC 2021). والمدرّات للأعراض فقط. وحاصرات الكالسيوم من نوع Verapamil/Diltiazem تُتجنب في HFrEF. وتُتجنب NSAIDs وTZD. وكذلك تُحسب فائدة التطعيم (إنفلونزا، ضد الالتهاب الرئوي).</p></div><!--M1--><h4>جدول الأدوية حسب المراجع</h4><table><thead><tr><th>الفئة</th><th>أمثلة</th><th>ملاحظة</th></tr></thead><tbody><tr><td>مدرات</td><td>فوروسيميد، بوميتانيد، ميتولازون، هيدروكلوروثيازيد، سبيرونولاكتون</td><td>تحسن الراحة بخفض الحجم؛ راقب البوتاسيوم والأملاح</td></tr><tr><td>مثبطات ACE</td><td>كابتوبريل، إينالابريل، ليزينوبريل</td><td>خفض الحمل اللاحق</td></tr><tr><td>حاصرات بيتا</td><td>—</td><td>ترفع كسر القذف وتقلل حجم البطين</td></tr><tr><td>ديجوكسين</td><td>—</td><td>يقوي الانقباض</td></tr><tr><td>موسعات</td><td>نيتروبروسايد، نيتروجليسرين موضعي</td><td>خفض الحمل المسبق وتخفيف الضيق</td></tr><tr><td>مميعات</td><td>وارفارين</td><td>للفشل الشديد (خطر الخثرات) ومع AF</td></tr></tbody></table><ul><li>تقليل السوائل</li><li>وضع Fowler العالي لتحسين حركة الحجاب</li><li>أكسجين لتقليل شغل القلب</li><li>حمية قليلة الصوديوم</li></ul>\n<h4>وذمة الرئة الحادة وأدوية القصور</h4><div class=\"cs-box cs-danger\"><strong>كلمات الأولوية: \"جديد، مفاجئ، متفاقم، سريع\"</strong><p>الإجراء الأول هو فيوروسيمايد وريدي: ارفع رأس السرير 45 درجة أو أكثر، أكسجين، فيوروسيمايد + مورفين + محفزات الانقباض بأمر الطبيب، وقف الصوديوم والسوائل (لا شرب ولا سوائل وريدية).</p></div>[[slot:dis-128-p279|أدوية قصور القلب والرعاية — رسم من إعداد الموقع|/diseases/img/dis-128-p279.svg]]<table><thead><tr><th>الدواء</th><th>مثال</th><th>الفعل والتنبيه</th></tr></thead><tbody><tr><td>ACE (-pril)</td><td>ليسينوبريل</td><td>خيار أول؛ يخفض الضغط؛ تجنب الحمل، وذمة وعائية، سعال، ارتفاع K</td></tr><tr><td>ARB (-sartan)</td><td>لوسارتان</td><td>خيار ثانٍ بلا سعال</td></tr><tr><td>بيتا (-lol)</td><td>أتينولول</td><td>احجب عند بطء <60 أو ضغط 90/60 أو ربو/COPD أو قصور حاد، ويخفي أعراض هبوط السكر</td></tr><tr><td>CCB</td><td>نيفيديبين، ديلتيازيم، فيراباميل</td><td>تجنب نبض وضغط منخفضين</td></tr><tr><td>ديجوكسين</td><td>—</td><td>يقوي الانقباض؛ نبض قمي دقيقة كاملة؛ التسمم فوق 2.0: غثيان وقيء وتغير رؤية؛ K ≤ 3.5 يزيد الخطر</td></tr><tr><td>مدرات</td><td>فيوروسيمايد، HCTZ، سبيرونولاكتون</td><td>مضيعة K: أكل موز وبطيخ وخضرة؛ حافظ K: تجنب بدائل الملح</td></tr><tr><td>موسّعات</td><td>نيتروغليسرين، أيزوسوربيد</td><td>ممنوع الفياجرا؛ وريدي: أوقف إن الانقباضي <90 أو هبط 30</td></tr><tr><td>ميلرينون</td><td>—</td><td>محفز وريدي، خيار أخير/تلطيفي</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم القلب والرئتين</strong><p>نبض كامل دقيقة (انتظام، سرعة)، ضغط (قاعد ووقوف)، تنفس، SpO2، رئتين (Crepitations)، وريد الرقبة، تورم، حجم الكبد، وعي. قارن بالأمس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الوزن والسوائل</strong><p>وزّن المريض كل صباح (بعد التبول، قبل الأكل، نفس الميزان والملابس). زيادة 1 كجم في يوم أو 2 كجم في 3 أيام = احتباس: بلّغ. سجل Intake/Output وكمية البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>وضع المريض</strong><p>نصف جلوس (Semi-Fowler / Fowler) مع مسند للرجلين لراحة التنفس؛ في الورم رفع الرجلين. لا ثني الركبة طويلاً. غيّر الوضع كل ساعتين لمنع قرح الفراش (الجلد المتورم ضعيف).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ المدرّات بأمان</strong><p>Lasix وريدي ببطء (2–5 دقائق، ولا يزيد 4 mg/دقيقة)، أعطه الصبح، سجّل البول بعد 30–60 دقيقة. راقب الضغط (دوخة)، البوتاسيوم (ضعف، نبض غير منتظم)، الصوديوم، والجفاف. Aldactone: راقب ارتفاع البوتاسيوم، لا تعطي مع مكملات بوتاسيوم أو ACEi إلا بمراقبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>ديجوكسين بأمان</strong><p>نبض دقيقة كاملة قبل كل جرعة: أقل من 60 (أو 50 للبالغ) أوقف وبلّغ. تأكد من بوتاسيوم طبيعي (نقص البوتاسيوم يزيد السُمّيّة). أعراض السمّيّة: غثيان وقيء، فقدان شهية، رؤية صفراء/هالات، اضطراب نظم، ارتباك. إعطاء وريدي: على 30 دقيقة مع مونيتور.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Nitronal بأمان</strong><p>مضخة تسريب، مونيتور ضغط مستمر أو كل 5 دقائق أثناء الزيادة. أوقف وبلّغ لو الضغط أقل من الحد الأدنى، صداع شديد، دوخة. تأكد إن المريض لم يأخذ Sildenafil أو Tadalafil. حافظ على الزجاجة/الخط المناسب (بعض الخطوط البلاستيك تمتص الدواء).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ACEi وحاصر بيتا</strong><p>ACEi: ضغط، كرياتينين، بوتاسيوم، كحة جافة، تورم الوجه (Angioedema: طوارئ). حاصر بيتا: لا يبدأ في فشل حاد، نبض وضغط قبل الجرعة، راقب زيادة الاحتقان.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>الغذاء والسوائل</strong><p>ملح قليل (حسب الطبيب)، سوائل حسب الأمر (غالباً 1.5–2 لتر في الحالات الشديدة)، وجبات صغيرة متكررة. ماء ومحاليل وريدية: بحذر وبمعدل بطيء (زيادة السوائل مرسّب). منع الكحول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>الجلد والنشاط</strong><p>حماية الجلد، تقليل الجهد: خطط الأنشطة مع راحات، تدريج الحركة، وقاية من الجلطات (جوارب/ حركة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>أكسجين وتهوية</strong><p>أكسجين لو SpO2 أقل من 90–94% حسب الأمر. ضيق نفس مفاجئ شديد = وذمة رئوية: ارفع الرأس وأبلغ.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>ضيق نفس شديد، بلغم وردي رغوي، نبض سريع جداً، ضغط منخفض مع جلد بارد، أو إغماء: طوارئ. اجلس المريض بساقين متدليتين، أكسجين، ونداء الطبيب فوراً.</p></div><h4>التوثيق</h4><ul><li>الوزن اليومي والداخل/الخارج</li><li>التنفس والرئتان والتورم</li><li>الأدوية (قبل وبعد: نبض/ضغط/بوتاسيوم)</li><li>النوم والوضع والنشاط</li><li>التثقيف المنجز</li></ul><!--M1--><h4>نقاط تمريضية إضافية</h4><ul><li>وزن يومي ودخل وخرج</li><li>نصف جلوس للراحة</li><li>أكسجين حسب الأمر</li><li>ارفع الساقين أثناء الجلوس لتقليل الوذمة</li><li>الأكل قليل الملح: لا يوجد «لانشون قليل الملح» لهذه الحالة</li><li>بلّغ عن زيادة عدة أرطال (ما يقارب 1.4 كجم أو أكتر) في 1–2 يوم أو احتباس سوائل</li></ul>\n<h4>الرعاية اليومية</h4><ul><li>غذاء قليل الصوديوم والسوائل (2 لتر و2 غ أو أقل يومياً).</li><li>خطر السقوط: غيّر الوضع ببطء. تابع الضغط وBNP.</li><li>ارفع الساقين وضع المريض في وضع فاولر العالي.</li><li>وزن يومي: زيادة 3 باوند (نحو 1.4 كغ) أو 5 باوند (نحو 2.3 كغ) في أسبوع = تدهور.</li><li>جنس: مسموح إن صعد سلمين بلا ضيق نفس.</li><li>جوارب TED لتقليل تجمع الدم وتُخلع يومياً.</li><li>لا أدوية بلا وصفة (سعال/إنفلونزا، مضادات حموضة، NSAIDs) ولا أطعمة معلبة أو مصنعة (رقائق وصلصات ولحوم وجبن ونبيذ).</li><li><strong>لا تدلك ساقي مريض القصور أبداً.</strong></li></ul><!--g5nursing--><div class=\"cs-box cs-info\"><strong>إضافة: أدوية فشل القلب وDR BEDS</strong><p>راجع <a href=\"/diseases/dis-3516\">أولويات فشل القلب وأدويته (ACTS وDR BEDS)</a> و<a href=\"/diseases/dis-3507\">Inotropic وChronotropic</a>. زيادة الوزن 3 رطل (حوالي 1.4 كجم) في يوم أو 5 رطل (حوالي 2.3 كجم) في أسبوع تدل على التفاقم، ولا تدلّك الساقين لتجنب خطر الجلطة.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>ضيق نفس شديد أو بلغم وردي رغوي أو زرقة</li><li>زيادة وزن 1 كجم في يوم أو 2 كجم في 3 أيام</li><li>ضغط انقباضي أقل من 90 أو نبض أقل من 50/أكثر من 120</li><li>قلة بول شديدة أو ارتباك</li><li>ألم صدر أو إغماء أو خفقان</li><li>أعراض سمّيّة ديجوكسين أو بوتاسيوم غير طبيعي</li><li>تورم شديد في الوجه أو الحلق بعد ACEi</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>وزّن نفسك كل صباح وسجّله؛ زيادة 1 كجم في يوم أو 2 كجم في 3 أيام: كلّم الطبيب.</li><li>قلّل الملح (المخللات، الجبنة المالحة، الشيبسي، المرقة)، وخد السوائل حسب تعليمات الطبيب.</li><li>نام بوسادتين أو أكتر لو ضيق النفس بالليل، وبلّغ لو زاد.</li><li>خد الأدوية كل يوم ومتوقفش حتى لو اتحسنت، وإياك والمسكنات NSAIDs.</li><li>الديجوكسين: خد نبضك قبل الجرعة، وبلّغ عن غثيان أو تغير الرؤية.</li><li>بطّل تدخين، قلّل الوزن، ومارس نشاط خفيف حسب توجيه الطبيب.</li><li>خد تطعيم الإنفلونزا والالتهاب الرئوي.</li><li>تابع بانتظام ولا تهمل أي عَرَض جديد.</li></ul>\n[[slot:dis-128-review|فشل القلب الأيمن والأيسر وHOPE — رسم من إعداد الموقع|/diseases/img/dis-128-review.svg]][[slot:dis-128-pharm|أدوية الفشل والتمريض — رسم من إعداد الموقع|/diseases/img/dis-128-pharm.svg]]<h4>إضافات للمراجعة</h4><ul><li>وذمة الرئة الحادة: ارفع الرأس 45 درجة أو أكثر، أكسجين، فوروسيميد وريدي (أو بوميتانيد) أولاً مع مورفين ومقويات بأمر الطبيب، أوقف الصوديوم والسوائل.</li><li>سؤال متكرر: مريض فشل قلب مزمن بسعال بلغم وردي رغوي ورالات تزداد = أعطِ مدراً وريدياً أولاً.</li><li>الإمساك: ملينات وحركة وألياف ولا تشرب سوائل زائدة.</li><li>لا طعام معلب أو مصنع (شيبسي، صلصات، لحوم مصنعة، جبن، نبيذ).</li><li>لا أدوية بلا وصفة: برد/سعال، مضادات حموضة، NSAIDs.</li><li>لا تدلّك سمانة مريض الفشل.</li><li>الديجوكسين: نبض قمة دقيقة كاملة، سمية فوق 2.0 (رؤية وغثيان)، البوتاسيوم أقل من 3.5 يزيد السمية. مدرّات فاقدة للبوتاسيوم: تناول موز وشمام وخضر ورقية؛ الموفرة (سبيرونولاكتون): تجنب بدائل الملح والشمام والخضر الورقية.</li><li>حاصر بيتا: أوقفه لو النبض أقل من 60 والضغط 90/60، أو ضيق شعب، أو سكر يخفي الأعراض.</li><li>ميلرينون: داعم انقباض يُستخدم كخط أخير/تلطيفي.</li><li>ضغط الشريان الرئوي (قسطرة سوان-جانز): ارتفاع الضغوط غير جيد؛ الأصل ذكر 2–8 مم زئبق حسب المرجع.</li></ul>"
+    {
+     "ar": "ربو",
+     "en": "Asthma"
     }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "احتقان الرئة من فشل البطين الأيسر.",
+    "en": "Lung congestion from left ventricular failure."
+   }
   },
-  "keyPoints": {
-    "ar": [
-      "فشل القلب = عجز عن ضخ دم كافٍ لاحتياجات الجسم",
-      "الأيسر: احتقان رئوي (ضيق نفس، طقطقة)، الأيمن: احتقان جهازي (ورم، رقبة، كبد)",
-      "العوامل المرسّبة: عدوى، ملح وسوائل زيادة، جلطة، اضطراب نظم، أنيميا، حمل",
-      "العلاج: راحة نصف جلوس، تقليل الملح، مدرّات، فازودايلاتور، ديجوكسين وعلاج السبب",
-      "وزن يومي ومراقبة الداخل والخارج هما أساس المتابعة",
-      "ديجوكسين: النبض قبل الجرعة والبوتاسيوم، وLasix يؤثر على البوتاسيوم"
-    ]
+  {
+   "q": {
+    "ar": "ورم القدمين وانتفاخ أوردة الرقبة وضخامة الكبد؟",
+    "en": "Swollen feet, distended neck veins, and an enlarged liver?"
+   },
+   "options": [
+    {
+     "ar": "فشل القلب الأيمن",
+     "en": "Right heart failure"
+    },
+    {
+     "ar": "فشل القلب الأيسر فقط",
+     "en": "Left heart failure only"
+    },
+    {
+     "ar": "سليم",
+     "en": "Healthy"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "احتقان الأوردة الجهازي.",
+    "en": "Systemic venous congestion."
+   }
   },
-  "quiz": [
+  {
+   "q": {
+    "ar": "قبل Digoxin وجدت النبض 48. التصرف؟",
+    "en": "Before Digoxin you found the pulse at 48. What do you do?"
+   },
+   "options": [
     {
-      "q": {
-        "ar": "طقطقة دقيقة بقاعدة الرئتين تدل على؟"
-      },
-      "options": [
-        {
-          "ar": "فشل القلب الأيسر"
-        },
-        {
-          "ar": "فشل القلب الأيمن"
-        },
-        {
-          "ar": "ربو"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "احتقان الرئة من فشل البطين الأيسر."
-      }
+     "ar": "تعطي الجرعة",
+     "en": "Give the dose"
     },
     {
-      "q": {
-        "ar": "ورم القدمين وانتفاخ أوردة الرقبة وضخامة الكبد؟"
-      },
-      "options": [
-        {
-          "ar": "فشل القلب الأيمن"
-        },
-        {
-          "ar": "فشل القلب الأيسر فقط"
-        },
-        {
-          "ar": "سليم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "احتقان الأوردة الجهازي."
-      }
+     "ar": "توقف وتبلغ",
+     "en": "Hold and report"
     },
     {
-      "q": {
-        "ar": "قبل Digoxin وجدت النبض 48. التصرف؟"
-      },
-      "options": [
-        {
-          "ar": "تعطي الجرعة"
-        },
-        {
-          "ar": "توقف وتبلغ"
-        },
-        {
-          "ar": "تضاعف الجرعة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "بطء النبض سبب لإيقاف الجرعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة احتباس السوائل التي لازم تبلغ عنها؟"
-      },
-      "options": [
-        {
-          "ar": "زيادة 1 كجم في يوم"
-        },
-        {
-          "ar": "نقص 100 جم"
-        },
-        {
-          "ar": "وزن ثابت"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "زيادة سريعة في الوزن تعني احتقان."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عامل قد يرسّب فشل القلب؟"
-      },
-      "options": [
-        {
-          "ar": "تقليل الملح"
-        },
-        {
-          "ar": "سوائل وريدية زيادة وعدوى صدر"
-        },
-        {
-          "ar": "الراحة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "السوائل الزائدة والعدوى من العوامل المرسّبة."
-      }
-    },
-    {
-      "q": {
-        "ar": "S3 يسمع عند:"
-      },
-      "options": [
-        {
-          "ar": "القمة والمريض على الجانب الأيسر"
-        },
-        {
-          "ar": "القاعدة"
-        },
-        {
-          "ar": "الرقبة"
-        },
-        {
-          "ar": "البطن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ويدل على الفشل."
-      }
-    },
-    {
-      "q": {
-        "ar": "وذمة رئة حادة: ما الإجراء الأول؟"
-      },
-      "options": [
-        {
-          "ar": "رفع الرأس وأكسجين وفوروسيميد وريدي"
-        },
-        {
-          "ar": "تقييد الحركة"
-        },
-        {
-          "ar": "شرب سوائل"
-        },
-        {
-          "ar": "استلقاء مسطح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "HOPE: رأس مرتفع، أكسجين، دفع الفوروسيميد، ووقف الصوديوم والسوائل."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض يتناول ديجوكسين: أي ما يزيد السمية؟"
-      },
-      "options": [
-        {
-          "ar": "K أقل من 3.5"
-        },
-        {
-          "ar": "K 4.5"
-        },
-        {
-          "ar": "Na 140"
-        },
-        {
-          "ar": "Mg طبيعي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نقص البوتاسيوم يزيد سمية الديجوكسين."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض قصور قلب مزمن أخذ دواء برد، ظهر عنده سعال برغوة وردية وخراخر متفاقمة. أول إجراء؟"
-      },
-      "options": [
-        {
-          "ar": "تقييم الرئتين فقط"
-        },
-        {
-          "ar": "بيوميتانيد وريدي"
-        },
-        {
-          "ar": "إبلاغ الطبيب فقط"
-        },
-        {
-          "ar": "استراحة الغداء"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "علامات وذمة رئوية حادة فتكون الأولوية للمدر الوريدي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي طعام يتجنبه مريض قصور القلب؟"
-      },
-      "options": [
-        {
-          "ar": "خضروات"
-        },
-        {
-          "ar": "فاصوليا معلبة ورقائق (شيبس)"
-        },
-        {
-          "ar": "فواكه"
-        },
-        {
-          "ar": "خبز قليل الملح"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "المعلبات والمصنعات عالية الصوديوم تزيد احتباس السوائل."
-      }
-    },
-    {
-      "q": {
-        "ar": "زيادة وزن كم خلال أسبوع تعني تدهوراً عند مريض القصور؟"
-      },
-      "options": [
-        {
-          "ar": "5 باوند (نحو 2.3 كغ) أو أكثر"
-        },
-        {
-          "ar": "نصف كيلو"
-        },
-        {
-          "ar": "لا شيء"
-        },
-        {
-          "ar": "2 جم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "زيادة سريعة في الوزن تعني احتباس ماء وتدهور القصور."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي إجراء يُمنع في مريض قصور القلب؟"
-      },
-      "options": [
-        {
-          "ar": "رفع الساقين"
-        },
-        {
-          "ar": "تدليك الساقين"
-        },
-        {
-          "ar": "الوزن اليومي"
-        },
-        {
-          "ar": "قلة الصوديوم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التدليك قد يحرك خثرة وريدية فيحدث انصمام."
-      }
-    },
-    {
-      "q": {
-        "ar": "أولوية العلاج الأولى في وذمة الرئة الحادة:"
-      },
-      "options": [
-        {
-          "ar": "furosemide وريدي"
-        },
-        {
-          "ar": "نقل دم"
-        },
-        {
-          "ar": "مضاد حيوي"
-        },
-        {
-          "ar": "إنسولين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مدر قوي يسحب السوائل."
-      }
+     "ar": "تضاعف الجرعة",
+     "en": "Double the dose"
     }
-  ],
-  "refs": [
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "بطء النبض سبب لإيقاف الجرعة.",
+    "en": "A slow pulse is a reason to hold the dose."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة احتباس السوائل التي لازم تبلغ عنها؟",
+    "en": "The sign of fluid retention that you must report?"
+   },
+   "options": [
     {
-      "title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure"
+     "ar": "زيادة 1 كجم في يوم",
+     "en": "A gain of 1 kg in a day"
     },
     {
-      "title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure"
+     "ar": "نقص 100 جم",
+     "en": "A loss of 100 g"
     },
     {
-      "title": "StatPearls: Heart Failure; Digoxin"
-    },
-    {
-      "title": "Diazepam Injection BP SmPC (UK)",
-      "url": "https://www.medicines.org.uk/emc/product/6274/smpc"
-    },
-    {
-      "title": "Digoxin injection dosing (PrescriberPoint)",
-      "url": "https://prescriberpoint.com/therapies/digoxin-58f45ab"
+     "ar": "وزن ثابت",
+     "en": "Stable weight"
     }
-  ],
-  "_m1q": 1
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "زيادة سريعة في الوزن تعني احتقان.",
+    "en": "Rapid weight gain means congestion."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عامل قد يرسّب فشل القلب؟",
+    "en": "Which factor may precipitate heart failure?"
+   },
+   "options": [
+    {
+     "ar": "تقليل الملح",
+     "en": "Reducing salt"
+    },
+    {
+     "ar": "سوائل وريدية زيادة وعدوى صدر",
+     "en": "Excess IV fluids and chest infection"
+    },
+    {
+     "ar": "الراحة",
+     "en": "Rest"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "السوائل الزائدة والعدوى من العوامل المرسّبة.",
+    "en": "Excess fluids and infection are precipitating factors."
+   }
+  },
+  {
+   "q": {
+    "ar": "S3 يسمع عند:",
+    "en": "S3 is heard at:"
+   },
+   "options": [
+    {
+     "ar": "القمة والمريض على الجانب الأيسر",
+     "en": "The apex with the patient on the left side"
+    },
+    {
+     "ar": "القاعدة",
+     "en": "The base"
+    },
+    {
+     "ar": "الرقبة",
+     "en": "The neck"
+    },
+    {
+     "ar": "البطن",
+     "en": "The abdomen"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ويدل على الفشل.",
+    "en": "And it indicates failure."
+   }
+  },
+  {
+   "q": {
+    "ar": "وذمة رئة حادة: ما الإجراء الأول؟",
+    "en": "Acute pulmonary edema: what is the first action?"
+   },
+   "options": [
+    {
+     "ar": "رفع الرأس وأكسجين وفوروسيميد وريدي",
+     "en": "Raise the head, oxygen, and IV furosemide"
+    },
+    {
+     "ar": "تقييد الحركة",
+     "en": "Restrict movement"
+    },
+    {
+     "ar": "شرب سوائل",
+     "en": "Drink fluids"
+    },
+    {
+     "ar": "استلقاء مسطح",
+     "en": "Lie flat"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "HOPE: رأس مرتفع، أكسجين، دفع الفوروسيميد، ووقف الصوديوم والسوائل.",
+    "en": "HOPE: head up, oxygen, push furosemide, and stop sodium and fluids."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض يتناول ديجوكسين: أي ما يزيد السمية؟",
+    "en": "A patient taking digoxin: which increases toxicity?"
+   },
+   "options": [
+    {
+     "ar": "K أقل من 3.5",
+     "en": "K below 3.5"
+    },
+    {
+     "ar": "K 4.5",
+     "en": "K 4.5"
+    },
+    {
+     "ar": "Na 140",
+     "en": "Na 140"
+    },
+    {
+     "ar": "Mg طبيعي",
+     "en": "Normal Mg"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نقص البوتاسيوم يزيد سمية الديجوكسين.",
+    "en": "Low potassium increases digoxin toxicity."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض قصور قلب مزمن أخذ دواء برد، ظهر عنده سعال برغوة وردية وخراخر متفاقمة. أول إجراء؟",
+    "en": "A chronic heart failure patient took a cold medicine and developed a cough with pink froth and worsening crackles. First action?"
+   },
+   "options": [
+    {
+     "ar": "تقييم الرئتين فقط",
+     "en": "Assess the lungs only"
+    },
+    {
+     "ar": "بيوميتانيد وريدي",
+     "en": "IV bumetanide"
+    },
+    {
+     "ar": "إبلاغ الطبيب فقط",
+     "en": "Inform the physician only"
+    },
+    {
+     "ar": "استراحة الغداء",
+     "en": "Lunch break"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "علامات وذمة رئوية حادة فتكون الأولوية للمدر الوريدي.",
+    "en": "Signs of acute pulmonary edema, so the priority is the IV diuretic."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي طعام يتجنبه مريض قصور القلب؟",
+    "en": "Which food does a heart failure patient avoid?"
+   },
+   "options": [
+    {
+     "ar": "خضروات",
+     "en": "Vegetables"
+    },
+    {
+     "ar": "فاصوليا معلبة ورقائق (شيبس)",
+     "en": "Canned beans and chips"
+    },
+    {
+     "ar": "فواكه",
+     "en": "Fruits"
+    },
+    {
+     "ar": "خبز قليل الملح",
+     "en": "Low-salt bread"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "المعلبات والمصنعات عالية الصوديوم تزيد احتباس السوائل.",
+    "en": "Canned and processed foods are high in sodium and increase fluid retention."
+   }
+  },
+  {
+   "q": {
+    "ar": "زيادة وزن كم خلال أسبوع تعني تدهوراً عند مريض القصور؟",
+    "en": "How much weight gain in a week means deterioration in a heart failure patient?"
+   },
+   "options": [
+    {
+     "ar": "5 باوند (نحو 2.3 كغ) أو أكثر",
+     "en": "5 pounds (about 2.3 kg) or more"
+    },
+    {
+     "ar": "نصف كيلو",
+     "en": "Half a kilo"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    },
+    {
+     "ar": "2 جم",
+     "en": "2 g"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "زيادة سريعة في الوزن تعني احتباس ماء وتدهور القصور.",
+    "en": "Rapid weight gain means water retention and worsening failure."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي إجراء يُمنع في مريض قصور القلب؟",
+    "en": "Which action is prohibited in a heart failure patient?"
+   },
+   "options": [
+    {
+     "ar": "رفع الساقين",
+     "en": "Elevating the legs"
+    },
+    {
+     "ar": "تدليك الساقين",
+     "en": "Massaging the legs"
+    },
+    {
+     "ar": "الوزن اليومي",
+     "en": "Daily weight"
+    },
+    {
+     "ar": "قلة الصوديوم",
+     "en": "Low sodium"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التدليك قد يحرك خثرة وريدية فيحدث انصمام.",
+    "en": "Massage may dislodge a venous thrombus, causing an embolism."
+   }
+  },
+  {
+   "q": {
+    "ar": "أولوية العلاج الأولى في وذمة الرئة الحادة:",
+    "en": "The first treatment priority in acute pulmonary edema:"
+   },
+   "options": [
+    {
+     "ar": "furosemide وريدي",
+     "en": "IV furosemide"
+    },
+    {
+     "ar": "نقل دم",
+     "en": "Blood transfusion"
+    },
+    {
+     "ar": "مضاد حيوي",
+     "en": "Antibiotic"
+    },
+    {
+     "ar": "إنسولين",
+     "en": "Insulin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مدر قوي يسحب السوائل.",
+    "en": "A strong diuretic that pulls off fluid."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure"
+  },
+  {
+   "title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure"
+  },
+  {
+   "title": "StatPearls: Heart Failure; Digoxin"
+  },
+  {
+   "title": "Diazepam Injection BP SmPC (UK)",
+   "url": "https://www.medicines.org.uk/emc/product/6274/smpc"
+  },
+  {
+   "title": "Digoxin injection dosing (PrescriberPoint)",
+   "url": "https://prescriberpoint.com/therapies/digoxin-58f45ab"
+  }
+ ],
+ "_m1q": 1
 }

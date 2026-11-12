@@ -1,320 +1,401 @@
 {
-  "id": "dis-127",
-  "num": 127,
-  "system": "cardio",
-  "icon": "❤️‍🩹",
-  "level": 3,
-  "title": {
-    "ar": "الذبحة الصدرية",
-    "en": "Angina Pectoris"
+ "id": "dis-127",
+ "num": 127,
+ "system": "cardio",
+ "icon": "❤️‍🩹",
+ "level": 3,
+ "title": {
+  "ar": "الذبحة الصدرية",
+  "en": "Angina Pectoris"
+ },
+ "teaser": {
+  "ar": "ألم الصدر بالمجهود: أنواعها، إسعاف النوبة بالنيترات، ومتى تتحول لطوارئ جلطة.",
+  "en": "Chest pain on exertion: its types, first aid for the attack with nitrates, and when it becomes an MI emergency."
+ },
+ "chips": [
+  {
+   "ar": "نيترات تحت اللسان",
+   "en": "Sublingual nitrates"
   },
-  "teaser": {
-    "ar": "ألم الصدر بالمجهود: أنواعها، إسعاف النوبة بالنيترات، ومتى تتحول لطوارئ جلطة."
+  {
+   "ar": "ST",
+   "en": "ST"
   },
-  "chips": [
-    {
-      "ar": "نيترات تحت اللسان"
-    },
-    {
-      "ar": "ST"
-    },
-    {
-      "ar": "ثلاثي العلاج"
-    }
+  {
+   "ar": "ثلاثي العلاج",
+   "en": "Triple therapy"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الذبحة الصدرية (Angina pectoris) هي ألم أو ضغط في الصدر بسبب <b>نقص مؤقت في وصول الدم والأكسجين لعضلة القلب</b> (Ischemia) من غير موت للخلايا. لو الانسداد كامل ومستمر بتتحول لجلطة قلبية (MI).</p>[[slot:dis-127-balance|ميزان إمداد واحتياج الأكسجين في القلب — رسم من إعداد الموقع|/diseases/img/dis-127-balance.svg]]<div class=\"cs-stats\"><div><b>Rest / NTG</b><span>الألم بيروح بالراحة أو النيترات</span></div><div><b>5 دقائق</b><span>تكرار النيترات</span></div><div><b>15 mg</b><span>أقصى جرعة حسب المراجع</span></div></div><div class=\"cs-box cs-danger\"><strong>للتمريض</strong><p>ألم صدر ما بيروحش بالراحة والنيتروجلسرين خلال دقائق، أو بقى أشد/ أطول، هو احتمال جلطة (MI). اتعامل معاه كطوارئ فوراً.</p></div><!--M1--><h4>تصنيف الذبحة (مراجعة سريعة)</h4><table><thead><tr><th>النوع</th><th>الوصف</th></tr></thead><tbody><tr><td>مستقرة (Stable)</td><td>الألم بالجهد ويزول بالراحة أو النيترات والأعراض ثابتة النمط</td></tr><tr><td>غير مستقرة (Unstable)</td><td>تظهر بالراحة أو جديدة أو تزيد شدة/مدة/قوة، لا تزول بالراحة وتتأخر الاستجابة للنيتروجليسرين</td></tr><tr><td>برنزميتال (Prinzmetal/Vasospastic)</td><td>تحدث غالباً بالراحة أو بمجهود بسيط، وكثيراً بالليل (تقلص شريان)</td></tr></tbody></table><p>الذبحة غالباً أول إشارة على وجود مرض قلب تصلبي؛ يظهر الألم لما احتياج العضلة للأكسجين يفوق المتاح. أهم عنصر في الإنذار هو <b>تثقيف المريض</b> ليعرف متى يطلب المساعدة، ويُقيَّم أي تغير في نمط الألم أو ضعف استجابته للعلاج.</p>",
+   "en": "<p>Angina pectoris is chest pain or pressure caused by a <b>temporary lack of blood and oxygen reaching the heart muscle</b> (Ischemia) without cell death. If the blockage is complete and persistent, it becomes a myocardial infarction (MI).</p>[[slot:dis-127-balance|The balance of oxygen supply and demand in the heart — illustration|/diseases/img/dis-127-balance.svg]]<div class=\"cs-stats\"><div><b>Rest / NTG</b><span>the pain goes away with rest or nitrates</span></div><div><b>5 minutes</b><span>repeating the nitrate</span></div><div><b>15 mg</b><span>maximum dose</span></div></div><div class=\"cs-box cs-danger\"><strong>For nurses</strong><p>Chest pain that does not go away with rest and nitroglycerin within minutes, or that has become stronger/longer, is a possible MI. Treat it as an emergency immediately.</p></div><!--M1--><h4>Classification of angina (quick review)</h4><table><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Stable</td><td>Pain with exertion that is relieved by rest or nitrates, with a fixed pattern of symptoms</td></tr><tr><td>Unstable</td><td>Appears at rest, or is new, or increases in severity/duration/intensity, is not relieved by rest, and responds late to nitroglycerin</td></tr><tr><td>Prinzmetal (Vasospastic)</td><td>Usually occurs at rest or with minimal exertion, and often at night (arterial spasm)</td></tr></tbody></table><p>Angina is often the first sign of atherosclerotic heart disease; the pain appears when the muscle's oxygen demand exceeds the supply. The most important element in the prognosis is <b>patient education</b>, so the patient knows when to seek help, and any change in the pain pattern or poorer response to treatment is assessed.</p>"
+  },
+  "causes": {
+   "ar": "<h4>أولاً: نقص كمية الدم التاجي (Decreased quantity)</h4><ol><li>تصلب الشرايين التاجية (Coronary atherosclerosis) — الأشهر</li><li>التهاب الشرايين (Arteritis): PAN / الذئبة SLE</li><li>أمراض الدم: زيادة كريات الدم الحمراء (PRV)، التجلط المنتشر (DIC)</li><li>عيوب خلقية في الشريان التاجي (تضيق)</li><li>التمزق (Dissection)</li><li>الانسداد بجلطة متحركة (Emboli)</li><li>تشنج الشرايين التاجية (Spasm) — تشخيص أفضل</li><li>قصور النتاج القلبي (Low cardiac output) مثل ضيق الصمام الأورطي (Aortic stenosis)</li></ol><h4>ثانياً: نقص جودة الدم (Decreased quality)</h4><ol><li>فقر الدم (Anemia)</li><li>نقص الأكسجين (Hypoxia)</li></ol><h4>ثالثاً: زيادة احتياج القلب للأكسجين</h4><ol><li>تضخم البطين (Ventricular hypertrophy)</li><li>حالة فرط الحركة الدورية (Hyperdynamic circulation) مثل الغدة الدرقية</li><li>ارتفاع ضغط الدم</li><li>تسارع النبض (Tachycardia)</li><li>الإجهاد الشديد (Severe stress)</li></ol><h4>عوامل الخطورة (من المراجع + مراجعة)</h4><ul><li>ارتفاع الدهون (Dyslipidemia)، السمنة، السكر، الضغط</li><li>التدخين، قلة الحركة، الوراثة، العمر</li></ul>",
+   "en": "<h4>First: decreased quantity of coronary blood</h4><ol><li>Coronary atherosclerosis — the most common</li><li>Arteritis: PAN / lupus (SLE)</li><li>Blood diseases: increased red blood cells (PRV), disseminated intravascular coagulation (DIC)</li><li>Congenital coronary artery anomalies (narrowing)</li><li>Dissection</li><li>Blockage by a traveling clot (Emboli)</li><li>Coronary artery spasm — better prognosis</li><li>Low cardiac output, such as Aortic stenosis</li></ol><h4>Second: decreased quality of blood</h4><ol><li>Anemia</li><li>Hypoxia</li></ol><h4>Third: increased cardiac oxygen demand</h4><ol><li>Ventricular hypertrophy</li><li>Hyperdynamic circulation, such as thyroid disease</li><li>High blood pressure</li><li>Tachycardia</li><li>Severe stress</li></ol><h4>Risk factors (with review)</h4><ul><li>Dyslipidemia, obesity, diabetes, hypertension</li><li>Smoking, physical inactivity, heredity, age</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>ألم الصدر (CHEST PAIN)</h4><table><thead><tr><th>البند</th><th>التفاصيل</th></tr></thead><tbody><tr><td>المكان</td><td>ألم منتشر خلف عظمة القص (Diffuse retrosternal)</td></tr><tr><td>الانتشار</td><td>الأكتاف، الذراعين، الساعدين، الرقبة، الفك، الظهر، الإبيجاستريوم</td></tr><tr><td>يثيره</td><td>إجهاد شديد، جو بارد، الجماع، الوجبات الثقيلة</td></tr><tr><td>يخففه</td><td>الراحة أو النيترات تحت اللسان</td></tr><tr><td>أعراض مصاحبة</td><td>تعرق، غثيان، قيء، خفقان، دوخة، ضيق نفس</td></tr></tbody></table><h4>الأنواع</h4><table><thead><tr><th>النوع</th><th>الوصف</th></tr></thead><tbody><tr><td>مستقرة (Stable)</td><td>ألم بنفس الشدة ونفس طريقة التخفيف</td></tr><tr><td>غير مستقرة (Unstable)</td><td>1) تدريجية (Crescendo): زيادة التكرار/الشدة/المدة. 2) ألم أثناء الراحة. 3) ألم لا يستجيب للعلاج</td></tr><tr><td>برنزميتال (Prinzmetal)</td><td>ألم أثناء الراحة بسبب تشنج الشرايين التاجية</td></tr></tbody></table>[[slot:dis-127-types|أنواع الذبحة الصدرية — رسم من إعداد الموقع|/diseases/img/dis-127-types.svg]]<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الذبحة غير المستقرة اليوم جزء من <b>المتلازمة التاجية الحادة (ACS)</b> مع جلطة القلب: لازم تقييم عاجل وECG وتروبونين. وعند النساء وكبار السن والسكر ممكن الأعراض غير نمطية (ضيق نفس، تعب، غثيان بدون ألم صدر).</p></div>",
+   "en": "<h4>CHEST PAIN</h4><table><thead><tr><th>Item</th><th>Details</th></tr></thead><tbody><tr><td>Site</td><td>Diffuse retrosternal pain (behind the breastbone)</td></tr><tr><td>Radiation</td><td>Shoulders, arms, forearms, neck, jaw, back, epigastrium</td></tr><tr><td>Triggered by</td><td>Heavy exertion, cold weather, sexual intercourse, heavy meals</td></tr><tr><td>Relieved by</td><td>Rest or sublingual nitrates</td></tr><tr><td>Associated symptoms</td><td>Sweating, nausea, vomiting, palpitations, dizziness, shortness of breath</td></tr></tbody></table><h4>Types</h4><table><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Stable</td><td>Pain of the same severity and the same way of relief</td></tr><tr><td>Unstable</td><td>1) Crescendo: increasing frequency/severity/duration. 2) Pain at rest. 3) Pain that does not respond to treatment</td></tr><tr><td>Prinzmetal</td><td>Pain at rest due to coronary artery spasm</td></tr></tbody></table>[[slot:dis-127-types|Types of angina pectoris — illustration|/diseases/img/dis-127-types.svg]]<div class=\"cs-box cs-warning\"><strong>Update</strong><p>Unstable angina today is part of <b>acute coronary syndrome (ACS)</b> together with MI: it needs urgent assessment, ECG, and troponin. In women, the elderly, and diabetics, symptoms may be atypical (shortness of breath, fatigue, nausea without chest pain).</p></div>"
+  },
+  "tests": {
+   "ar": "<h4>رسم القلب العادي (Standard ECG)</h4><ul><li>طبيعي بين النوبات</li><li>أثناء النوبة: هبوط ST (ST depression)، ارتفاع ST في برنزميتال، انقلاب موجة T، اضطراب النظم أو حصار قلب</li></ul>[[slot:dis-127-ecg|صورة: ECG أثناء نوبة ذبحة (هبوط ST) مقابل ECG بعد زوال الألم]]<h4>رسم القلب بالمجهود (Exercise ECG)</h4><p>الاختبار إيجابي لنقص التروية لو حصل:</p><ul><li>ألم صدر نمطي</li><li>هبوط في ST</li><li>اضطراب نظم بطيني</li></ul><p>ممنوع (مضاد استطباب) في:</p><ul><li>ضيق صمام أورطي شديد (خطر إغماء مع المجهود)</li><li>ضغط مرتفع شديد (خطر نزيف مخي)</li><li>فشل قلب احتقاني (يحتاج راحة تامة)</li><li>ذبحة غير مستقرة أو جلطة حديثة</li></ul><h4>قسطرة القلب (Cardiac catheterization) — استطباباتها</h4><ol><li>ذبحة لا تستجيب للعلاج الدوائي</li><li>ذبحة غير مستقرة</li><li>ذبحة بعد الجلطة</li><li>اختبار مجهود إيجابي بشدة</li><li>ذبحة مرشحة لإعادة التروية (Revascularization)</li><li>ألم صدر متكرر غير معروف السبب</li><li>اضطراب نظم بطيني مقاوم</li></ol><h4>أخرى</h4><ul><li>إيكو بالمجهود (Exercise ECHO)</li><li>تحاليل: تروبونين (لاستبعاد الجلطة)، دهون، سكر، صورة دم (أنيميا)، غدة درقية</li></ul><div class=\"cs-box cs-tip\"><strong>تجهيز المريض للاختبار</strong><p>خد الأدوية حسب تعليمات الطبيب (بعض أدوية البيتا تُوقف)، لبس مريح وحذاء، ما يأكلش وجبة ثقيلة قبلها بساعتين، وقِس الضغط والنبض قبله.</p></div><!--M1--><h4>فحوص إضافية وأدلة التشخيص</h4><ul><li><b>ECG أثناء النوبة:</b> انقلاب T (نقص تروية، غالباً أول علامة)، تغيّر ST (إصابة)، Q مرضية (احتشاء)</li><li><b>الإنزيمات:</b> تروبونين وCK-MB (CK-MB يرتفع 2–6 ساعات بعد الاحتشاء)</li><li><b>هولتر</b> (تخطيط محمول 24–48 ساعة)</li><li><b>تصوير الشرايين التاجية</b> أو PET لتحديد اللويحات</li><li><b>اختبار الجهد</b> (رياضي أو دوائي) وإيكو الجهد لكشف خلل حركة الجدار</li><li>استشارة قلب</li><li>تحاليل غير عاجلة: CBC، كيمياء (أملاح، كلى، سكر، كالسيوم)، PT/INR وPTT لتقييم النزف والمميعات، وproBNP لشدة الفشل</li><li>دهون: ارتفاع الكوليسترول الكلي وLDL والدهون الثلاثية وانخفاض HDL = خطر أعلى</li></ul>",
+   "en": "<h4>Standard ECG</h4><ul><li>Normal between attacks</li><li>During the attack: ST depression, ST elevation in Prinzmetal, T wave inversion, arrhythmia or heart block</li></ul>[[slot:dis-127-ecg|Image: ECG during an angina attack (ST depression) versus ECG after the pain resolves]]<h4>Exercise ECG</h4><p>The test is positive for ischemia if any of these occur:</p><ul><li>Typical chest pain</li><li>ST depression</li><li>Ventricular arrhythmia</li></ul><p>Contraindicated in:</p><ul><li>Severe aortic stenosis (risk of fainting with exertion)</li><li>Severe hypertension (risk of brain hemorrhage)</li><li>Congestive heart failure (needs complete rest)</li><li>Unstable angina or recent MI</li></ul><h4>Cardiac catheterization — indications</h4><ol><li>Angina not responding to drug treatment</li><li>Unstable angina</li><li>Post-infarction angina</li><li>Strongly positive exercise test</li><li>Angina that is a candidate for Revascularization</li><li>Recurrent chest pain of unknown cause</li><li>Resistant ventricular arrhythmia</li></ol><h4>Others</h4><ul><li>Exercise ECHO</li><li>Labs: troponin (to rule out MI), lipids, glucose, CBC (anemia), thyroid</li></ul><div class=\"cs-box cs-tip\"><strong>Preparing the patient for the test</strong><p>Take the drugs as the physician instructs (some beta blockers are held), comfortable clothes and shoes, no heavy meal in the two hours before it, and measure blood pressure and pulse before it.</p></div><!--M1--><h4>Additional tests and diagnostic clues</h4><ul><li><b>ECG during the attack:</b> T inversion (ischemia, usually the first sign), ST change (injury), pathological Q (infarction)</li><li><b>Enzymes:</b> troponin and CK-MB (CK-MB rises 2–6 hours after infarction)</li><li><b>Holter</b> (portable ECG for 24–48 hours)</li><li><b>Coronary angiography</b> or PET to locate plaques</li><li><b>Stress test</b> (exercise or pharmacological) and stress echo to detect wall motion abnormality</li><li>Cardiology consultation</li><li>Non-urgent labs: CBC, chemistry (electrolytes, kidney, glucose, calcium), PT/INR and PTT to assess bleeding and anticoagulants, and proBNP for the severity of failure</li><li>Lipids: high total cholesterol, LDL, and triglycerides with low HDL = higher risk</li></ul>"
+  },
+  "treatment": {
+   "ar": "[[slot:dis-127-attack|خطوات إسعاف نوبة الذبحة — رسم من إعداد الموقع|/diseases/img/dis-127-attack.svg]]<h4>1) أثناء النوبة (حسب المراجع)</h4><ul><li>راحة كاملة (Complete REST)</li><li>نيترات تحت اللسان: <b>Dinitra 5 mg</b> قرص، يكرر كل 5 دقائق حتى يزول الألم (أقصى جرعة 15 mg)</li><li>المورفين: هو الدواء المختار للألم الذي لا يستجيب للنيتروجلسرين</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الممارسة الحالية (AHA/ESC): لو الألم ما زال بعد <b>5 دقائق</b> من أول جرعة نيترات يُطلب الإسعاف/طوارئ فوراً. والمورفين في ACS يُعطى بحذر ولألم مقاوم فقط (يؤخر امتصاص مضادات الصفائح ويزيد الغثيان). وأعطِ الأسبرين (حوالي 162–325 مجم مضغ) في الاشتباه بـACS ما لم يكن هناك تحسس أو نزيف. وممنوع النيترات لو ضغط انقباضي أقل من 90، أو أخذ المريض Sildenafil/Vardenafil خلال 24 ساعة أو Tadalafil خلال 48 ساعة، أو احتشاء البطين الأيمن، أو ضيق أورطي شديد.</p></div><h4>2) بين النوبات: غير دوائي</h4><ul><li>تجنب المحفزات</li><li>التوقف عن التدخين</li><li>تقليل الكوليسترول والدهون المشبعة</li><li>وجبات صغيرة خفيفة متكررة</li><li>تمارين منتظمة</li></ul><h4>3) بين النوبات: دوائي</h4><p>العلاج الثلاثي (Triple therapy): نيترات + حاصرات بيتا + حاصرات قنوات الكالسيوم، مع مضادات الصفائح و/أو مضادات التجلط.</p><table><thead><tr><th>الفئة</th><th>الدواء (الاسم التجاري)</th><th>الجرعة</th></tr></thead><tbody><tr><td>نيتروجلسرين فموي</td><td>Nitromack Retard 2.5 أو 5 mg كبسولة</td><td>3 مرات يومياً</td></tr><tr><td>Isosorbide mononitrate</td><td>Monomack (مونوماك) 20 أو 40 mg</td><td>مرتين يومياً</td></tr><tr><td>Isosorbide dinitrate</td><td>Dinitra (دينيترا) 5 أو 10 أو 20 mg</td><td>مرتين يومياً</td></tr><tr><td>حاصر بيتا</td><td>Ateno (أتينو) 50 أو 100 mg — Atenolol</td><td>مرة يومياً</td></tr><tr><td>حاصر كالسيوم</td><td>Alkapress (ألكابريس) 5 أو 10 mg — Amlodipine</td><td>مرة يومياً</td></tr><tr><td>مضاد صفائح</td><td>Aspocid (أسبوسيد) 75 mg، Aspirin Protect 100 mg</td><td>75–300 mg مرة يومياً بعد العشاء</td></tr></tbody></table><h4>اختيار العلاج (حسب المراجع)</h4><ol><li>البدء بالنيترات</li><li>للذبحة المجهودية المستقرة: أضف حاصر بيتا أو حاصر كالسيوم</li><li>لو الذبحة عادت على دواءين: علاج ثلاثي</li><li>الذبحة غير المستقرة: الهيبارين والأسبرين أهم شيء</li></ol><h4>4) علاج السبب وعوامل الخطورة</h4><ul><li>السبب: ضغط، تضيق الأورطي، فقر دم، فرط نشاط الدرقية…</li><li>عوامل الخطورة: الدهون، السمنة، السكر، الضغط…</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>تحديث حديث: الأساس الآن هو حاصر بيتا أو حاصر كالسيوم كخط أول، ونيترات سريعة (Sublingual) عند اللزوم، وليس النيترات الطويلة وحدها (تُضاف عند اللزوم، مع فترة خالية من النيترات ليلاً لمنع التحمل). ويُضاف <b>ستاتين</b> لجميع المرضى (Atorvastatin 40–80 مجم)، ومثبط ACE/ARB لو ضغط أو سكر أو ضعف قلب، والتحكم بالسكر. والجرعة الدنيا من الأسبرين 75–100 مجم يومياً تكفي. حاصر بيتا غير المختار (Propranolol) ممنوع في Prinzmetal (تشنج)، وعلاجه حاصر كالسيوم + نيترات. وممكن Ranolazine أو Trimetazidine أو Ivabradine كخيار إضافي. وغالباً قسطرة وتوسيع (PCI) أو جراحة (CABG) للحالات الشديدة.</p></div><!--e2-127--><p>راجع أيضاً دليل «التعامل مع ألم الصدر في الطوارئ» (dis-242): MONA بالأسماء التجارية: Pethedin 50 أو Nalufin، أكسجين، Dinitra 5 تحت اللسان (حتى 3 مرات كل 5 دقايق بعد قياس الضغط)، Aspocid chewable (4 أقراص مضغ). ألم أقل من 15 دقيقة يهدأ بعد 1–3 أقراص = ذبحة مستقرة؛ أكتر من 30 دقيقة بلا استجابة = ACS.</p><!--M1--><h4>تفاصيل العلاج حسب الفئات</h4><table><thead><tr><th>الفئة</th><th>الأمثلة / الشكل</th><th>الغرض</th></tr></thead><tbody><tr><td>أكسجين</td><td>2–4 لتر/دقيقة</td><td>تحديث: يُعطى لو التشبع أقل من 90% أو ضيق نفس، وليس لكل ألم صدر</td></tr><tr><td>حاصرات بيتا</td><td>بروبرانولول، نادولول، أتينولول، ميتوبرولول</td><td>حماية القلب، تقليل الشغل واضطراب النظم</td></tr><tr><td>نيترات</td><td>نيتروجليسرين تحت اللسان أو بخاخ، أقراص ممتدة، لزقة أو معجون موضعي</td><td>توسيع التاجي وتخفيف الألم</td></tr><tr><td>أسبرين</td><td>—</td><td>مضاد صفائح</td></tr><tr><td>مورفين وريدي</td><td>أثناء الألم الحاد</td><td>تخفيف الألم وتقليل الطلب على الأكسجين</td></tr></tbody></table><table><thead><tr><th>إجراء</th><th>الوصف</th></tr></thead><tbody><tr><td>رأب الشريان بالبالون (PTCA)</td><td>قسطرة ببالون تتنفخ في الشريان الضيق</td></tr><tr><td>دعامة (Stent)</td><td>شبكة معدنية تُترك لتبقي الشريان مفتوح</td></tr><tr><td>جراحة تجاوز (CABG)</td><td>وريد من الساق أو شريان من الذراع/الصدر يُوصَّل لتجاوز الانسداد</td></tr></tbody></table><p>حمية قليلة الكوليسترول والملح والدهون.</p>\n<h4>النيتروغليسرين: قرص/بخاخ ولصقة</h4><p>الأقراص أو البخاخ للذبحة المستقرة وتؤخذ قبل المجهود. اتصل بالإسعاف إن لم يزل الألم بعد 5 دقائق من الجرعة الأولى؛ بحد أقصى 3 جرعات بينها 5 دقائق، وتوضع تحت اللسان ولا تُبلع. تُحفظ بعيداً عن الضوء والحرارة وفي عبوتها الأصلية الغامقة (لا في علبة حبوب أو السيارة) وتُستبدل كل 6 أشهر. اللصقة للذبحة غير المستقرة/غير الزائلة بالراحة: مرة يومياً لا عند اللزوم، لصقة واحدة، على جلد نظيف جاف أعلى الجسم بلا شعر أو ندبات أو جروح، وبدّل المكان يومياً، والاستحمام مسموح. إن سقطت أكثر من ساعة فضع غيرها (يحتاج 40–60 دقيقة)، ولبس الممرض قفازاً لتجنب الصداع. الأثر الجانبي المتوقع صداع، والضار هبوط ضغط فتغيير الوضعية ببطء، ويُمنع الفياجرا (-afil).</p>[[slot:dis-127-p274|قسطرة القلب والنيتروغليسرين — رسم من إعداد الموقع|/diseases/img/dis-127-p274.svg]]",
+   "en": "[[slot:dis-127-attack|Steps of first aid for an angina attack — illustration|/diseases/img/dis-127-attack.svg]]<h4>1) During the attack</h4><ul><li>Complete REST</li><li>Sublingual nitrate: <b>Dinitra 5 mg</b> tablet, repeated every 5 minutes until the pain goes away (maximum dose 15 mg)</li><li>Morphine: the drug of choice for pain that does not respond to nitroglycerin</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Current practice: if the pain persists <b>5 minutes</b> after the first nitrate dose, call the ambulance/emergency immediately. Morphine in ACS is given with caution and only for resistant pain (it delays antiplatelet absorption and increases nausea). Give aspirin (about 162–325 mg chewed) in suspected ACS unless there is allergy or bleeding. Nitrates are contraindicated if systolic pressure is below 90, if the patient took Sildenafil/Vardenafil within 24 hours or Tadalafil within 48 hours, in right ventricular infarction, or in severe aortic stenosis.</p></div><h4>2) Between attacks: non-drug</h4><ul><li>Avoid triggers</li><li>Stop smoking</li><li>Reduce cholesterol and saturated fats</li><li>Small, light, frequent meals</li><li>Regular exercise</li></ul><h4>3) Between attacks: drugs</h4><p>Triple therapy: nitrates + beta blockers + calcium channel blockers, with antiplatelets and/or anticoagulants.</p><table><thead><tr><th>Class</th><th>Drug (brand name)</th><th>Dose</th></tr></thead><tbody><tr><td>Oral nitroglycerin</td><td>Nitromack Retard 2.5 or 5 mg capsule</td><td>3 times daily</td></tr><tr><td>Isosorbide mononitrate</td><td>Monomack 20 or 40 mg</td><td>Twice daily</td></tr><tr><td>Isosorbide dinitrate</td><td>Dinitra 5, 10, or 20 mg</td><td>Twice daily</td></tr><tr><td>Beta blocker</td><td>Ateno 50 or 100 mg — Atenolol</td><td>Once daily</td></tr><tr><td>Calcium blocker</td><td>Alkapress 5 or 10 mg — Amlodipine</td><td>Once daily</td></tr><tr><td>Antiplatelet</td><td>Aspocid 75 mg, Aspirin Protect 100 mg</td><td>75–300 mg once daily after dinner</td></tr></tbody></table><h4>Choosing the treatment</h4><ol><li>Start with nitrates</li><li>For stable exertional angina: add a beta blocker or a calcium blocker</li><li>If angina returns on two drugs: triple therapy</li><li>Unstable angina: heparin and aspirin are the most important</li></ol><h4>4) Treating the cause and risk factors</h4><ul><li>The cause: hypertension, aortic stenosis, anemia, hyperthyroidism…</li><li>Risk factors: lipids, obesity, diabetes, hypertension…</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Recent update: the basis now is a beta blocker or a calcium blocker as first line, with a fast-acting nitrate (Sublingual) as needed, not long-acting nitrates alone (they are added when needed, with a nitrate-free interval at night to prevent tolerance). A <b>statin</b> is added for all patients (Atorvastatin 40–80 mg), an ACE inhibitor/ARB if there is hypertension, diabetes, or weak heart function, plus glucose control. The low dose of aspirin, 75–100 mg daily, is enough. A non-selective beta blocker (Propranolol) is contraindicated in Prinzmetal (spasm), whose treatment is a calcium blocker + nitrates. Ranolazine, Trimetazidine, or Ivabradine may be an additional option. Severe cases usually need catheterization and angioplasty (PCI) or surgery (CABG).</p></div><!--e2-127--><p>See also the guide \"Managing chest pain in the emergency room\" (dis-242): MONA with brand names: Pethedin 50 or Nalufin, oxygen, Dinitra 5 sublingual (up to 3 times every 5 minutes after measuring blood pressure), Aspocid chewable (4 chewed tablets). Pain of less than 15 minutes that settles after 1–3 tablets = stable angina; more than 30 minutes with no response = ACS.</p><!--M1--><h4>Treatment details by class</h4><table><thead><tr><th>Class</th><th>Examples / form</th><th>Purpose</th></tr></thead><tbody><tr><td>Oxygen</td><td>2–4 L/min</td><td>Update: given if saturation is below 90% or there is shortness of breath, not for every chest pain</td></tr><tr><td>Beta blockers</td><td>Propranolol, nadolol, atenolol, metoprolol</td><td>Protect the heart, reduce workload and arrhythmia</td></tr><tr><td>Nitrates</td><td>Nitroglycerin sublingual or spray, extended-release tablets, patch or topical paste</td><td>Dilate the coronaries and relieve pain</td></tr><tr><td>Aspirin</td><td>—</td><td>Antiplatelet</td></tr><tr><td>IV morphine</td><td>During acute pain</td><td>Relieve pain and reduce oxygen demand</td></tr></tbody></table><table><thead><tr><th>Procedure</th><th>Description</th></tr></thead><tbody><tr><td>Balloon angioplasty (PTCA)</td><td>A balloon catheter is inflated in the narrowed artery</td></tr><tr><td>Stent</td><td>A metal mesh left in place to keep the artery open</td></tr><tr><td>Bypass surgery (CABG)</td><td>A vein from the leg or an artery from the arm/chest is grafted to bypass the blockage</td></tr></tbody></table><p>A diet low in cholesterol, salt, and fat.</p>\n<h4>Nitroglycerin: tablet/spray and patch</h4><p>Tablets or spray are for stable angina and are taken before exertion. Call the ambulance if the pain is not gone 5 minutes after the first dose; a maximum of 3 doses, 5 minutes apart, placed under the tongue and not swallowed. Store them away from light and heat in their original dark container (not in a pill box or the car) and replace them every 6 months. The patch is for unstable angina/angina not relieved by rest: once daily, not as needed, one patch only, on clean dry skin of the upper body with no hair, scars, or wounds; change the site daily, and showering is allowed. If it has been off for more than an hour, apply another (it needs 40–60 minutes), and the nurse wears a glove to avoid headache. The expected side effect is headache, the harmful one is low blood pressure, so change position slowly, and Viagra (-afil) is contraindicated.</p>[[slot:dis-127-p274|Cardiac catheterization and nitroglycerin — illustration|/diseases/img/dis-127-p274.svg]]"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>عند حدوث ألم صدر</strong><p>أوقف المريض عن أي نشاط، اقعده أو ارفع رأسه، افتح الملابس. اسأل (PQRST): ما بدأ إمتى؟ أسوأ إيه؟ الشدة 0–10، الانتشار، مدة النوبة، أعراض مصاحبة. قس النبض والضغط وSpO2 والتنفس وسجّلها.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>ECG فوراً</strong><p>عمل رسم قلب 12 قناة خلال 10 دقائق، وأرسله للطبيب. قارن بالسابق. ارتفاع ST = طوارئ جلطة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أكسجين بحذر</strong><p>لو SpO2 أقل من 90% أو ضيق نفس. لا تعطي أكسجين زيادة لمريض بنسبة طبيعية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ النيترات بأمان</strong><p>قبل كل جرعة: الضغط الانقباضي (فوق 90–100)، لا Sildenafil/Tadalafil، لا احتشاء بطين أيمن. المريض قاعد (قد يحدث دوخة)، القرص تحت اللسان (لا يُبلع). كرر كل 5 دقائق مع قياس الضغط بعد كل جرعة. لو ظهر صداع قوي أو دوخة أو ضغط منخفض: أوقف وبلّغ. ما تعطيش النيترات الفموية الطويلة لو الضغط واطي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأسبرين والمورفين</strong><p>الأسبرين بأمر الطبيب (مضغ). المورفين/Nalbuphine: جرعات صغيرة وريدية ببطء، راقب التنفس والضغط والغثيان، مضاد (Naloxone) جاهز.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أدوية بين النوبات</strong><p>Atenolol: نبض قبل الجرعة (أقل من 55–60 أوقف وبلّغ) وضغط وراقب الربو/ COPD وتغطية أعراض هبوط السكر. Amlodipine: تورم الكاحلين وصداع. الأسبرين بعد الأكل (حماية المعدة) وراقب النزف. النيترات الفموية: صداع، دوخة وضعية، والتحمل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>مراقبة مستمرة</strong><p>مونيتور ECG عند عدم الاستقرار، ابحث عن اضطراب نظم أو حصار، وراقب العلامات الحيوية كل 15 دقيقة أثناء النوبة، ثم كل 1–4 ساعات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>التوثيق</strong><p>وقت بداية الألم، شدته قبل وبعد كل جرعة، الجرعات والوقت، العلامات الحيوية، ECG ونتيجته، وتعليمات المريض.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>ألم صدر لا يزول بـ3 جرعات نيترات (أو 5 دقائق من الأولى) أو يزيد، أو معه عرق بارد وهبوط ضغط وإغماء: نداء الطوارئ فوراً وتجهيز لمسار جلطة قلبية. ولا تترك المريض وحده، ولا تعطي النيترات لمريض ضغطه منخفض.</p></div><h4>تثقيف وتجهيز للاختبار</h4><ul><li>شرح اختبار المجهود وأسباب المنع</li><li>أخذ تعليمات ما قبل القسطرة: صيام، حساسية الصبغة، الكلى، وقف بعض الأدوية</li></ul><!--M1--><h4>نقاط تمريضية إضافية</h4><ul><li>بلّغ الطبيب لو الضغط الانقباضي أقل من 90 (قد يُؤمر بحجب النيترات منعاً للإغماء)</li><li>بلّغ لو النبض أقل من 60 (قد يُؤمر بحجب حاصر بيتا) وراقب النبض باستمرار</li><li>قيّم الألم بـ PQRST: المكان، النوع، الانتشار، الشدة 1–10، التوقيت وما سبقه</li><li>12-lead ECG جديد مع كل نوبة ألم حتى لو عُمل واحد اليوم</li><li>سجل الدخل والخرج لتقييم الكلى</li><li>وضع نصف جلوس (Semi-Fowler) مع ثني الركبتين</li><li>تحقق من عدم وجود فرق بين معدل القلب ومعدل النبض الكعبري (Pulse deficit)</li><li>العلاج السريع: ريح، نيتروجليسرين عند أول ألم، وأتصل بالإسعاف لو الألم أكتر من 10 دقائق أو عند الجرعة الثالثة (جرعة كل 5 دقائق بشرط الضغط يسمح، بحد أقصى 3)</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>When chest pain occurs</strong><p>Stop the patient from any activity, sit him up or raise his head, loosen the clothes. Ask (PQRST): when did it start? what makes it worse? severity 0–10, radiation, duration of the attack, associated symptoms. Measure pulse, blood pressure, SpO2, and respiration and record them.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>ECG immediately</strong><p>Do a 12-lead ECG within 10 minutes and send it to the physician. Compare with the previous one. ST elevation = MI emergency.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Oxygen with caution</strong><p>If SpO2 is below 90% or there is shortness of breath. Do not give extra oxygen to a patient with a normal saturation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Give nitrates safely</strong><p>Before each dose: systolic pressure (above 90–100), no Sildenafil/Tadalafil, no right ventricular infarction. The patient is seated (dizziness may occur), the tablet goes under the tongue (not swallowed). Repeat every 5 minutes, measuring blood pressure after each dose. If severe headache, dizziness, or low pressure appears: stop and report. Do not give long-acting oral nitrates if the pressure is low.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Aspirin and morphine</strong><p>Aspirin by physician order (chewed). Morphine/Nalbuphine: small slow IV doses, monitor breathing, blood pressure, and nausea, with the antidote (Naloxone) ready.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Drugs between attacks</strong><p>Atenolol: pulse before the dose (below 55–60, hold and report) and blood pressure, and watch for asthma/COPD and masking of hypoglycemia symptoms. Amlodipine: ankle swelling and headache. Aspirin after eating (stomach protection) and watch for bleeding. Oral nitrates: headache, postural dizziness, and tolerance.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Continuous monitoring</strong><p>ECG monitor when unstable, look for arrhythmia or block, and monitor vital signs every 15 minutes during the attack, then every 1–4 hours.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Documentation</strong><p>Time the pain started, its severity before and after each dose, the doses and times, vital signs, the ECG and its result, and patient instructions.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Chest pain that does not go away with 3 nitrate doses (or 5 minutes after the first) or that increases, or comes with cold sweat, low blood pressure, and fainting: call the emergency team immediately and prepare for the MI pathway. Do not leave the patient alone, and do not give nitrates to a patient with low blood pressure.</p></div><h4>Education and preparation for the test</h4><ul><li>Explain the exercise test and its contraindications</li><li>Follow the pre-catheterization instructions: fasting, contrast allergy, kidneys, holding some drugs</li></ul><!--M1--><h4>Additional nursing points</h4><ul><li>Inform the physician if systolic pressure is below 90 (holding the nitrate may be ordered to prevent fainting)</li><li>Report if the pulse is below 60 (holding the beta blocker may be ordered) and monitor the pulse continuously</li><li>Assess the pain with PQRST: site, type, radiation, severity 1–10, timing and what preceded it</li><li>A new 12-lead ECG with every pain attack, even if one was done today</li><li>Record intake and output to assess the kidneys</li><li>Semi-Fowler position with the knees bent</li><li>Check that there is no difference between the heart rate and the radial pulse rate (Pulse deficit)</li><li>Rapid treatment: rest, nitroglycerin at the first pain, and call the ambulance if the pain lasts more than 10 minutes or at the third dose (a dose every 5 minutes provided the blood pressure allows, maximum 3)</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>ألم صدر أكثر من 5–10 دقائق أو لا يزول بالراحة والنيترات</li><li>ألم أثناء الراحة أو يزيد تكراراً/شدة/مدة</li><li>عرق بارد، غثيان، ضيق نفس، إغماء</li><li>ضغط انقباضي أقل من 90 أو نبض أقل من 50 أو أكثر من 120</li><li>نبض غير منتظم أو ارتفاع ST على ECG</li><li>صداع شديد أو إغماء بعد نيترات</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Inform the physician immediately if:</strong><ul><li>Chest pain for more than 5–10 minutes or not relieved by rest and nitrates</li><li>Pain at rest or increasing in frequency/severity/duration</li><li>Cold sweat, nausea, shortness of breath, fainting</li><li>Systolic pressure below 90, or pulse below 50 or above 120</li><li>Irregular pulse or ST elevation on ECG</li><li>Severe headache or fainting after nitrates</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>خلّي قرص النيترات تحت اللسان معاك دايماً. ولما تحس بألم: اقعد، حط القرص تحت اللسان، ولو ما راحش خلال 5 دقائق اطلب الإسعاف.</li><li>خزّن القرص في علبته الأصلية الزجاجية واتبع نشرة المنتج في مدة الصلاحية بعد الفتح، لأنه يفقد فعاليته.</li><li>لا تأخذ Viagra/Cialis مع النيترات أبداً.</li><li>بطّل تدخين، قلّل الدهون، امشي بانتظام، وخفف الوزن، وتحكم في الضغط والسكر.</li><li>وجبات صغيرة، وتجنب المجهود والبرد الشديد والانفعال.</li><li>خد الأدوية كل يوم حتى لو مفيش ألم.</li><li>الأسبرين بعد العشاء.</li></ul>\n[[slot:dis-127-nitro|أنواع الذبحة وتثقيف النيتروجليسرين — رسم من إعداد الموقع|/diseases/img/dis-127-nitro.svg]]<h4>نقاط تثقيف إضافية</h4><ul><li>القرص تحت اللسان قبل مجهود شديد متوقع، وهدفك أن تؤدي أنشطة يومك (تمشيط، لبس) بلا ألم.</li><li>الألم 5 دقائق بعد أول جرعة: اتصل بالإسعاف؛ بحد أقصى 3 جرعات بفاصل 5 دقائق، تحت اللسان وليس بالبلع.</li><li>حفظ القرص: زجاجة داكنة، ليس علبة أقراص أو سيارة أو كيس بلاستيك؛ اتبع نشرة المنتج في مدة الصلاحية (بعض الإرشادات 6 أشهر بعد الفتح).</li><li>اللصقة: مرة يومياً (وليست عند اللزوم)، لصقة واحدة، مكان نظيف جاف محلوق وبدّل الموضع يومياً (جزء علوي)، ليس على جلد مشعر أو متندب أو محروق أو مجروح؛ الاستحمام مسموح. سقطت منذ أكثر من ساعة: قرص/بخاخ، واللصقة الجديدة تعمل بعد 40–60 دقيقة.</li><li>الممرض يلبس قفازاً عند لمس اللصقة (صداع قوي لو لامست جلده).</li><li>الذبحة المتغايرة (Prinzmetal) سببها تشنج مؤقت بالشريان من توتر ومنبهات (كافيين، ميثامفيتامين، كوكايين)، تدخين وبرد، وليس تضيقاً من لويحة.</li></ul>",
+   "en": "<ul><li>Always keep the sublingual nitrate tablet with you. When you feel pain: sit down, put the tablet under your tongue, and if it is not gone within 5 minutes, call the ambulance.</li><li>Store the tablet in its original glass container and follow the product leaflet for the shelf life after opening, because it loses its effect.</li><li>Never take Viagra/Cialis with nitrates.</li><li>Stop smoking, cut down on fats, walk regularly, lose weight, and control your blood pressure and sugar.</li><li>Small meals, and avoid exertion, extreme cold, and emotional upset.</li><li>Take the drugs every day even if there is no pain.</li><li>Aspirin after dinner.</li></ul>\n[[slot:dis-127-nitro|Types of angina and nitroglycerin education — illustration|/diseases/img/dis-127-nitro.svg]]<h4>Additional teaching points</h4><ul><li>The sublingual tablet before expected heavy exertion; your goal is to do your daily activities (combing, dressing) without pain.</li><li>Pain 5 minutes after the first dose: call the ambulance; a maximum of 3 doses 5 minutes apart, under the tongue and not swallowed.</li><li>Storing the tablet: a dark bottle, not a pill box, a car, or a plastic bag; follow the product leaflet for the shelf life (some guidance says 6 months after opening).</li><li>The patch: once daily (not as needed), one patch only, on a clean, dry, shaved site, changing the site daily (upper body), not on hairy, scarred, burned, or wounded skin; showering is allowed. If it fell off more than an hour ago: tablet/spray, and the new patch works after 40–60 minutes.</li><li>The nurse wears a glove when touching the patch (severe headache if it touches the skin).</li><li>Variant angina (Prinzmetal) is caused by temporary arterial spasm from stress and stimulants (caffeine, methamphetamine, cocaine), smoking, and cold, not by narrowing from a plaque.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الذبحة = ألم صدر من نقص تروية مؤقت، يزول بالراحة أو النيترات",
+   "الأنواع: مستقرة، غير مستقرة (طوارئ)، برنزميتال",
+   "ECG أثناء النوبة: هبوط ST (وارتفاعه في برنزميتال)",
+   "نيترات تحت اللسان كل 5 دقائق (أقصى 15 mg حسب المراجع) بشرط الضغط كافٍ",
+   "لا تعطِ النيترات مع Sildenafil أو ضغط أقل من 90",
+   "العلاج الدائم: ثلاثي + أسبرين + علاج السبب والعوامل"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الذبحة الصدرية (Angina pectoris) هي ألم أو ضغط في الصدر بسبب <b>نقص مؤقت في وصول الدم والأكسجين لعضلة القلب</b> (Ischemia) من غير موت للخلايا. لو الانسداد كامل ومستمر بتتحول لجلطة قلبية (MI).</p>[[slot:dis-127-balance|ميزان إمداد واحتياج الأكسجين في القلب — رسم من إعداد الموقع|/diseases/img/dis-127-balance.svg]]<div class=\"cs-stats\"><div><b>Rest / NTG</b><span>الألم بيروح بالراحة أو النيترات</span></div><div><b>5 دقائق</b><span>تكرار النيترات</span></div><div><b>15 mg</b><span>أقصى جرعة حسب المراجع</span></div></div><div class=\"cs-box cs-danger\"><strong>للتمريض</strong><p>ألم صدر ما بيروحش بالراحة والنيتروجلسرين خلال دقائق، أو بقى أشد/ أطول، هو احتمال جلطة (MI). اتعامل معاه كطوارئ فوراً.</p></div><!--M1--><h4>تصنيف الذبحة (مراجعة سريعة)</h4><table><thead><tr><th>النوع</th><th>الوصف</th></tr></thead><tbody><tr><td>مستقرة (Stable)</td><td>الألم بالجهد ويزول بالراحة أو النيترات والأعراض ثابتة النمط</td></tr><tr><td>غير مستقرة (Unstable)</td><td>تظهر بالراحة أو جديدة أو تزيد شدة/مدة/قوة، لا تزول بالراحة وتتأخر الاستجابة للنيتروجليسرين</td></tr><tr><td>برنزميتال (Prinzmetal/Vasospastic)</td><td>تحدث غالباً بالراحة أو بمجهود بسيط، وكثيراً بالليل (تقلص شريان)</td></tr></tbody></table><p>الذبحة غالباً أول إشارة على وجود مرض قلب تصلبي؛ يظهر الألم لما احتياج العضلة للأكسجين يفوق المتاح. أهم عنصر في الإنذار هو <b>تثقيف المريض</b> ليعرف متى يطلب المساعدة، ويُقيَّم أي تغير في نمط الألم أو ضعف استجابته للعلاج.</p>"
+  "en": [
+   "Angina = chest pain from temporary ischemia, relieved by rest or nitrates",
+   "Types: stable, unstable (emergency), Prinzmetal",
+   "ECG during the attack: ST depression (and elevation in Prinzmetal)",
+   "Sublingual nitrate every 5 minutes (maximum 15 mg) provided the blood pressure is adequate",
+   "Do not give nitrates with Sildenafil or a pressure below 90",
+   "Long-term treatment: triple therapy + aspirin + treating the cause and risk factors"
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "الذبحة غير المستقرة تتميز بـ؟",
+    "en": "Unstable angina is characterized by?"
+   },
+   "options": [
+    {
+     "ar": "ألم ثابت الشدة بالمجهود",
+     "en": "Pain of fixed severity with exertion"
     },
-    "causes": {
-      "ar": "<h4>أولاً: نقص كمية الدم التاجي (Decreased quantity)</h4><ol><li>تصلب الشرايين التاجية (Coronary atherosclerosis) — الأشهر</li><li>التهاب الشرايين (Arteritis): PAN / الذئبة SLE</li><li>أمراض الدم: زيادة كريات الدم الحمراء (PRV)، التجلط المنتشر (DIC)</li><li>عيوب خلقية في الشريان التاجي (تضيق)</li><li>التمزق (Dissection)</li><li>الانسداد بجلطة متحركة (Emboli)</li><li>تشنج الشرايين التاجية (Spasm) — تشخيص أفضل</li><li>قصور النتاج القلبي (Low cardiac output) مثل ضيق الصمام الأورطي (Aortic stenosis)</li></ol><h4>ثانياً: نقص جودة الدم (Decreased quality)</h4><ol><li>فقر الدم (Anemia)</li><li>نقص الأكسجين (Hypoxia)</li></ol><h4>ثالثاً: زيادة احتياج القلب للأكسجين</h4><ol><li>تضخم البطين (Ventricular hypertrophy)</li><li>حالة فرط الحركة الدورية (Hyperdynamic circulation) مثل الغدة الدرقية</li><li>ارتفاع ضغط الدم</li><li>تسارع النبض (Tachycardia)</li><li>الإجهاد الشديد (Severe stress)</li></ol><h4>عوامل الخطورة (من المراجع + مراجعة)</h4><ul><li>ارتفاع الدهون (Dyslipidemia)، السمنة، السكر، الضغط</li><li>التدخين، قلة الحركة، الوراثة، العمر</li></ul>"
+    {
+     "ar": "ألم أثناء الراحة أو يزيد تكراراً وشدة",
+     "en": "Pain at rest or increasing in frequency and severity"
     },
-    "signs": {
-      "ar": "<h4>ألم الصدر (CHEST PAIN)</h4><table><thead><tr><th>البند</th><th>التفاصيل</th></tr></thead><tbody><tr><td>المكان</td><td>ألم منتشر خلف عظمة القص (Diffuse retrosternal)</td></tr><tr><td>الانتشار</td><td>الأكتاف، الذراعين، الساعدين، الرقبة، الفك، الظهر، الإبيجاستريوم</td></tr><tr><td>يثيره</td><td>إجهاد شديد، جو بارد، الجماع، الوجبات الثقيلة</td></tr><tr><td>يخففه</td><td>الراحة أو النيترات تحت اللسان</td></tr><tr><td>أعراض مصاحبة</td><td>تعرق، غثيان، قيء، خفقان، دوخة، ضيق نفس</td></tr></tbody></table><h4>الأنواع</h4><table><thead><tr><th>النوع</th><th>الوصف</th></tr></thead><tbody><tr><td>مستقرة (Stable)</td><td>ألم بنفس الشدة ونفس طريقة التخفيف</td></tr><tr><td>غير مستقرة (Unstable)</td><td>1) تدريجية (Crescendo): زيادة التكرار/الشدة/المدة. 2) ألم أثناء الراحة. 3) ألم لا يستجيب للعلاج</td></tr><tr><td>برنزميتال (Prinzmetal)</td><td>ألم أثناء الراحة بسبب تشنج الشرايين التاجية</td></tr></tbody></table>[[slot:dis-127-types|أنواع الذبحة الصدرية — رسم من إعداد الموقع|/diseases/img/dis-127-types.svg]]<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الذبحة غير المستقرة اليوم جزء من <b>المتلازمة التاجية الحادة (ACS)</b> مع جلطة القلب: لازم تقييم عاجل وECG وتروبونين. وعند النساء وكبار السن والسكر ممكن الأعراض غير نمطية (ضيق نفس، تعب، غثيان بدون ألم صدر).</p></div>"
-    },
-    "tests": {
-      "ar": "<h4>رسم القلب العادي (Standard ECG)</h4><ul><li>طبيعي بين النوبات</li><li>أثناء النوبة: هبوط ST (ST depression)، ارتفاع ST في برنزميتال، انقلاب موجة T، اضطراب النظم أو حصار قلب</li></ul>[[slot:dis-127-ecg|صورة: ECG أثناء نوبة ذبحة (هبوط ST) مقابل ECG بعد زوال الألم]]<h4>رسم القلب بالمجهود (Exercise ECG)</h4><p>الاختبار إيجابي لنقص التروية لو حصل:</p><ul><li>ألم صدر نمطي</li><li>هبوط في ST</li><li>اضطراب نظم بطيني</li></ul><p>ممنوع (مضاد استطباب) في:</p><ul><li>ضيق صمام أورطي شديد (خطر إغماء مع المجهود)</li><li>ضغط مرتفع شديد (خطر نزيف مخي)</li><li>فشل قلب احتقاني (يحتاج راحة تامة)</li><li>ذبحة غير مستقرة أو جلطة حديثة</li></ul><h4>قسطرة القلب (Cardiac catheterization) — استطباباتها</h4><ol><li>ذبحة لا تستجيب للعلاج الدوائي</li><li>ذبحة غير مستقرة</li><li>ذبحة بعد الجلطة</li><li>اختبار مجهود إيجابي بشدة</li><li>ذبحة مرشحة لإعادة التروية (Revascularization)</li><li>ألم صدر متكرر غير معروف السبب</li><li>اضطراب نظم بطيني مقاوم</li></ol><h4>أخرى</h4><ul><li>إيكو بالمجهود (Exercise ECHO)</li><li>تحاليل: تروبونين (لاستبعاد الجلطة)، دهون، سكر، صورة دم (أنيميا)، غدة درقية</li></ul><div class=\"cs-box cs-tip\"><strong>تجهيز المريض للاختبار</strong><p>خد الأدوية حسب تعليمات الطبيب (بعض أدوية البيتا تُوقف)، لبس مريح وحذاء، ما يأكلش وجبة ثقيلة قبلها بساعتين، وقِس الضغط والنبض قبله.</p></div><!--M1--><h4>فحوص إضافية وأدلة التشخيص</h4><ul><li><b>ECG أثناء النوبة:</b> انقلاب T (نقص تروية، غالباً أول علامة)، تغيّر ST (إصابة)، Q مرضية (احتشاء)</li><li><b>الإنزيمات:</b> تروبونين وCK-MB (CK-MB يرتفع 2–6 ساعات بعد الاحتشاء)</li><li><b>هولتر</b> (تخطيط محمول 24–48 ساعة)</li><li><b>تصوير الشرايين التاجية</b> أو PET لتحديد اللويحات</li><li><b>اختبار الجهد</b> (رياضي أو دوائي) وإيكو الجهد لكشف خلل حركة الجدار</li><li>استشارة قلب</li><li>تحاليل غير عاجلة: CBC، كيمياء (أملاح، كلى، سكر، كالسيوم)، PT/INR وPTT لتقييم النزف والمميعات، وproBNP لشدة الفشل</li><li>دهون: ارتفاع الكوليسترول الكلي وLDL والدهون الثلاثية وانخفاض HDL = خطر أعلى</li></ul>"
-    },
-    "treatment": {
-      "ar": "[[slot:dis-127-attack|خطوات إسعاف نوبة الذبحة — رسم من إعداد الموقع|/diseases/img/dis-127-attack.svg]]<h4>1) أثناء النوبة (حسب المراجع)</h4><ul><li>راحة كاملة (Complete REST)</li><li>نيترات تحت اللسان: <b>Dinitra 5 mg</b> قرص، يكرر كل 5 دقائق حتى يزول الألم (أقصى جرعة 15 mg)</li><li>المورفين: هو الدواء المختار للألم الذي لا يستجيب للنيتروجلسرين</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الممارسة الحالية (AHA/ESC): لو الألم ما زال بعد <b>5 دقائق</b> من أول جرعة نيترات يُطلب الإسعاف/طوارئ فوراً. والمورفين في ACS يُعطى بحذر ولألم مقاوم فقط (يؤخر امتصاص مضادات الصفائح ويزيد الغثيان). وأعطِ الأسبرين (حوالي 162–325 مجم مضغ) في الاشتباه بـACS ما لم يكن هناك تحسس أو نزيف. وممنوع النيترات لو ضغط انقباضي أقل من 90، أو أخذ المريض Sildenafil/Vardenafil خلال 24 ساعة أو Tadalafil خلال 48 ساعة، أو احتشاء البطين الأيمن، أو ضيق أورطي شديد.</p></div><h4>2) بين النوبات: غير دوائي</h4><ul><li>تجنب المحفزات</li><li>التوقف عن التدخين</li><li>تقليل الكوليسترول والدهون المشبعة</li><li>وجبات صغيرة خفيفة متكررة</li><li>تمارين منتظمة</li></ul><h4>3) بين النوبات: دوائي</h4><p>العلاج الثلاثي (Triple therapy): نيترات + حاصرات بيتا + حاصرات قنوات الكالسيوم، مع مضادات الصفائح و/أو مضادات التجلط.</p><table><thead><tr><th>الفئة</th><th>الدواء (الاسم التجاري)</th><th>الجرعة</th></tr></thead><tbody><tr><td>نيتروجلسرين فموي</td><td>Nitromack Retard 2.5 أو 5 mg كبسولة</td><td>3 مرات يومياً</td></tr><tr><td>Isosorbide mononitrate</td><td>Monomack (مونوماك) 20 أو 40 mg</td><td>مرتين يومياً</td></tr><tr><td>Isosorbide dinitrate</td><td>Dinitra (دينيترا) 5 أو 10 أو 20 mg</td><td>مرتين يومياً</td></tr><tr><td>حاصر بيتا</td><td>Ateno (أتينو) 50 أو 100 mg — Atenolol</td><td>مرة يومياً</td></tr><tr><td>حاصر كالسيوم</td><td>Alkapress (ألكابريس) 5 أو 10 mg — Amlodipine</td><td>مرة يومياً</td></tr><tr><td>مضاد صفائح</td><td>Aspocid (أسبوسيد) 75 mg، Aspirin Protect 100 mg</td><td>75–300 mg مرة يومياً بعد العشاء</td></tr></tbody></table><h4>اختيار العلاج (حسب المراجع)</h4><ol><li>البدء بالنيترات</li><li>للذبحة المجهودية المستقرة: أضف حاصر بيتا أو حاصر كالسيوم</li><li>لو الذبحة عادت على دواءين: علاج ثلاثي</li><li>الذبحة غير المستقرة: الهيبارين والأسبرين أهم شيء</li></ol><h4>4) علاج السبب وعوامل الخطورة</h4><ul><li>السبب: ضغط، تضيق الأورطي، فقر دم، فرط نشاط الدرقية…</li><li>عوامل الخطورة: الدهون، السمنة، السكر، الضغط…</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>تحديث حديث: الأساس الآن هو حاصر بيتا أو حاصر كالسيوم كخط أول، ونيترات سريعة (Sublingual) عند اللزوم، وليس النيترات الطويلة وحدها (تُضاف عند اللزوم، مع فترة خالية من النيترات ليلاً لمنع التحمل). ويُضاف <b>ستاتين</b> لجميع المرضى (Atorvastatin 40–80 مجم)، ومثبط ACE/ARB لو ضغط أو سكر أو ضعف قلب، والتحكم بالسكر. والجرعة الدنيا من الأسبرين 75–100 مجم يومياً تكفي. حاصر بيتا غير المختار (Propranolol) ممنوع في Prinzmetal (تشنج)، وعلاجه حاصر كالسيوم + نيترات. وممكن Ranolazine أو Trimetazidine أو Ivabradine كخيار إضافي. وغالباً قسطرة وتوسيع (PCI) أو جراحة (CABG) للحالات الشديدة.</p></div><!--e2-127--><p>راجع أيضاً دليل «التعامل مع ألم الصدر في الطوارئ» (dis-242): MONA بالأسماء التجارية: Pethedin 50 أو Nalufin، أكسجين، Dinitra 5 تحت اللسان (حتى 3 مرات كل 5 دقايق بعد قياس الضغط)، Aspocid chewable (4 أقراص مضغ). ألم أقل من 15 دقيقة يهدأ بعد 1–3 أقراص = ذبحة مستقرة؛ أكتر من 30 دقيقة بلا استجابة = ACS.</p><!--M1--><h4>تفاصيل العلاج حسب الفئات</h4><table><thead><tr><th>الفئة</th><th>الأمثلة / الشكل</th><th>الغرض</th></tr></thead><tbody><tr><td>أكسجين</td><td>2–4 لتر/دقيقة</td><td>تحديث: يُعطى لو التشبع أقل من 90% أو ضيق نفس، وليس لكل ألم صدر</td></tr><tr><td>حاصرات بيتا</td><td>بروبرانولول، نادولول، أتينولول، ميتوبرولول</td><td>حماية القلب، تقليل الشغل واضطراب النظم</td></tr><tr><td>نيترات</td><td>نيتروجليسرين تحت اللسان أو بخاخ، أقراص ممتدة، لزقة أو معجون موضعي</td><td>توسيع التاجي وتخفيف الألم</td></tr><tr><td>أسبرين</td><td>—</td><td>مضاد صفائح</td></tr><tr><td>مورفين وريدي</td><td>أثناء الألم الحاد</td><td>تخفيف الألم وتقليل الطلب على الأكسجين</td></tr></tbody></table><table><thead><tr><th>إجراء</th><th>الوصف</th></tr></thead><tbody><tr><td>رأب الشريان بالبالون (PTCA)</td><td>قسطرة ببالون تتنفخ في الشريان الضيق</td></tr><tr><td>دعامة (Stent)</td><td>شبكة معدنية تُترك لتبقي الشريان مفتوح</td></tr><tr><td>جراحة تجاوز (CABG)</td><td>وريد من الساق أو شريان من الذراع/الصدر يُوصَّل لتجاوز الانسداد</td></tr></tbody></table><p>حمية قليلة الكوليسترول والملح والدهون.</p>\n<h4>النيتروغليسرين: قرص/بخاخ ولصقة</h4><p>الأقراص أو البخاخ للذبحة المستقرة وتؤخذ قبل المجهود. اتصل بالإسعاف إن لم يزل الألم بعد 5 دقائق من الجرعة الأولى؛ بحد أقصى 3 جرعات بينها 5 دقائق، وتوضع تحت اللسان ولا تُبلع. تُحفظ بعيداً عن الضوء والحرارة وفي عبوتها الأصلية الغامقة (لا في علبة حبوب أو السيارة) وتُستبدل كل 6 أشهر. اللصقة للذبحة غير المستقرة/غير الزائلة بالراحة: مرة يومياً لا عند اللزوم، لصقة واحدة، على جلد نظيف جاف أعلى الجسم بلا شعر أو ندبات أو جروح، وبدّل المكان يومياً، والاستحمام مسموح. إن سقطت أكثر من ساعة فضع غيرها (يحتاج 40–60 دقيقة)، ولبس الممرض قفازاً لتجنب الصداع. الأثر الجانبي المتوقع صداع، والضار هبوط ضغط فتغيير الوضعية ببطء، ويُمنع الفياجرا (-afil).</p>[[slot:dis-127-p274|قسطرة القلب والنيتروغليسرين — رسم من إعداد الموقع|/diseases/img/dis-127-p274.svg]]"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>عند حدوث ألم صدر</strong><p>أوقف المريض عن أي نشاط، اقعده أو ارفع رأسه، افتح الملابس. اسأل (PQRST): ما بدأ إمتى؟ أسوأ إيه؟ الشدة 0–10، الانتشار، مدة النوبة، أعراض مصاحبة. قس النبض والضغط وSpO2 والتنفس وسجّلها.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>ECG فوراً</strong><p>عمل رسم قلب 12 قناة خلال 10 دقائق، وأرسله للطبيب. قارن بالسابق. ارتفاع ST = طوارئ جلطة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أكسجين بحذر</strong><p>لو SpO2 أقل من 90% أو ضيق نفس. لا تعطي أكسجين زيادة لمريض بنسبة طبيعية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ النيترات بأمان</strong><p>قبل كل جرعة: الضغط الانقباضي (فوق 90–100)، لا Sildenafil/Tadalafil، لا احتشاء بطين أيمن. المريض قاعد (قد يحدث دوخة)، القرص تحت اللسان (لا يُبلع). كرر كل 5 دقائق مع قياس الضغط بعد كل جرعة. لو ظهر صداع قوي أو دوخة أو ضغط منخفض: أوقف وبلّغ. ما تعطيش النيترات الفموية الطويلة لو الضغط واطي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأسبرين والمورفين</strong><p>الأسبرين بأمر الطبيب (مضغ). المورفين/Nalbuphine: جرعات صغيرة وريدية ببطء، راقب التنفس والضغط والغثيان، مضاد (Naloxone) جاهز.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أدوية بين النوبات</strong><p>Atenolol: نبض قبل الجرعة (أقل من 55–60 أوقف وبلّغ) وضغط وراقب الربو/ COPD وتغطية أعراض هبوط السكر. Amlodipine: تورم الكاحلين وصداع. الأسبرين بعد الأكل (حماية المعدة) وراقب النزف. النيترات الفموية: صداع، دوخة وضعية، والتحمل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>مراقبة مستمرة</strong><p>مونيتور ECG عند عدم الاستقرار، ابحث عن اضطراب نظم أو حصار، وراقب العلامات الحيوية كل 15 دقيقة أثناء النوبة، ثم كل 1–4 ساعات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>التوثيق</strong><p>وقت بداية الألم، شدته قبل وبعد كل جرعة، الجرعات والوقت، العلامات الحيوية، ECG ونتيجته، وتعليمات المريض.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>ألم صدر لا يزول بـ3 جرعات نيترات (أو 5 دقائق من الأولى) أو يزيد، أو معه عرق بارد وهبوط ضغط وإغماء: نداء الطوارئ فوراً وتجهيز لمسار جلطة قلبية. ولا تترك المريض وحده، ولا تعطي النيترات لمريض ضغطه منخفض.</p></div><h4>تثقيف وتجهيز للاختبار</h4><ul><li>شرح اختبار المجهود وأسباب المنع</li><li>أخذ تعليمات ما قبل القسطرة: صيام، حساسية الصبغة، الكلى، وقف بعض الأدوية</li></ul><!--M1--><h4>نقاط تمريضية إضافية</h4><ul><li>بلّغ الطبيب لو الضغط الانقباضي أقل من 90 (قد يُؤمر بحجب النيترات منعاً للإغماء)</li><li>بلّغ لو النبض أقل من 60 (قد يُؤمر بحجب حاصر بيتا) وراقب النبض باستمرار</li><li>قيّم الألم بـ PQRST: المكان، النوع، الانتشار، الشدة 1–10، التوقيت وما سبقه</li><li>12-lead ECG جديد مع كل نوبة ألم حتى لو عُمل واحد اليوم</li><li>سجل الدخل والخرج لتقييم الكلى</li><li>وضع نصف جلوس (Semi-Fowler) مع ثني الركبتين</li><li>تحقق من عدم وجود فرق بين معدل القلب ومعدل النبض الكعبري (Pulse deficit)</li><li>العلاج السريع: ريح، نيتروجليسرين عند أول ألم، وأتصل بالإسعاف لو الألم أكتر من 10 دقائق أو عند الجرعة الثالثة (جرعة كل 5 دقائق بشرط الضغط يسمح، بحد أقصى 3)</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>ألم صدر أكثر من 5–10 دقائق أو لا يزول بالراحة والنيترات</li><li>ألم أثناء الراحة أو يزيد تكراراً/شدة/مدة</li><li>عرق بارد، غثيان، ضيق نفس، إغماء</li><li>ضغط انقباضي أقل من 90 أو نبض أقل من 50 أو أكثر من 120</li><li>نبض غير منتظم أو ارتفاع ST على ECG</li><li>صداع شديد أو إغماء بعد نيترات</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>خلّي قرص النيترات تحت اللسان معاك دايماً. ولما تحس بألم: اقعد، حط القرص تحت اللسان، ولو ما راحش خلال 5 دقائق اطلب الإسعاف.</li><li>خزّن القرص في علبته الأصلية الزجاجية واتبع نشرة المنتج في مدة الصلاحية بعد الفتح، لأنه يفقد فعاليته.</li><li>لا تأخذ Viagra/Cialis مع النيترات أبداً.</li><li>بطّل تدخين، قلّل الدهون، امشي بانتظام، وخفف الوزن، وتحكم في الضغط والسكر.</li><li>وجبات صغيرة، وتجنب المجهود والبرد الشديد والانفعال.</li><li>خد الأدوية كل يوم حتى لو مفيش ألم.</li><li>الأسبرين بعد العشاء.</li></ul>\n[[slot:dis-127-nitro|أنواع الذبحة وتثقيف النيتروجليسرين — رسم من إعداد الموقع|/diseases/img/dis-127-nitro.svg]]<h4>نقاط تثقيف إضافية</h4><ul><li>القرص تحت اللسان قبل مجهود شديد متوقع، وهدفك أن تؤدي أنشطة يومك (تمشيط، لبس) بلا ألم.</li><li>الألم 5 دقائق بعد أول جرعة: اتصل بالإسعاف؛ بحد أقصى 3 جرعات بفاصل 5 دقائق، تحت اللسان وليس بالبلع.</li><li>حفظ القرص: زجاجة داكنة، ليس علبة أقراص أو سيارة أو كيس بلاستيك؛ اتبع نشرة المنتج في مدة الصلاحية (بعض الإرشادات 6 أشهر بعد الفتح).</li><li>اللصقة: مرة يومياً (وليست عند اللزوم)، لصقة واحدة، مكان نظيف جاف محلوق وبدّل الموضع يومياً (جزء علوي)، ليس على جلد مشعر أو متندب أو محروق أو مجروح؛ الاستحمام مسموح. سقطت منذ أكثر من ساعة: قرص/بخاخ، واللصقة الجديدة تعمل بعد 40–60 دقيقة.</li><li>الممرض يلبس قفازاً عند لمس اللصقة (صداع قوي لو لامست جلده).</li><li>الذبحة المتغايرة (Prinzmetal) سببها تشنج مؤقت بالشريان من توتر ومنبهات (كافيين، ميثامفيتامين، كوكايين)، تدخين وبرد، وليس تضيقاً من لويحة.</li></ul>"
+    {
+     "ar": "ألم فقط بعد الأكل",
+     "en": "Pain only after eating"
     }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "هذه علامات عدم الاستقرار (Crescendo/Rest).",
+    "en": "These are signs of instability (Crescendo/Rest)."
+   }
   },
-  "keyPoints": {
-    "ar": [
-      "الذبحة = ألم صدر من نقص تروية مؤقت، يزول بالراحة أو النيترات",
-      "الأنواع: مستقرة، غير مستقرة (طوارئ)، برنزميتال",
-      "ECG أثناء النوبة: هبوط ST (وارتفاعه في برنزميتال)",
-      "نيترات تحت اللسان كل 5 دقائق (أقصى 15 mg حسب المراجع) بشرط الضغط كافٍ",
-      "لا تعطِ النيترات مع Sildenafil أو ضغط أقل من 90",
-      "العلاج الدائم: ثلاثي + أسبرين + علاج السبب والعوامل"
-    ]
+  {
+   "q": {
+    "ar": "نصيحة النيترات تحت اللسان؟",
+    "en": "Advice for sublingual nitrates?"
+   },
+   "options": [
+    {
+     "ar": "يُبلع بالماء",
+     "en": "Swallowed with water"
+    },
+    {
+     "ar": "توضع تحت اللسان والمريض جالس",
+     "en": "Placed under the tongue with the patient seated"
+    },
+    {
+     "ar": "تُعطى وريدياً دائماً",
+     "en": "Always given IV"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الامتصاص تحت اللسان سريع، والجلوس يقلل خطر الدوخة.",
+    "en": "Sublingual absorption is fast, and sitting reduces the risk of dizziness."
+   }
   },
-  "quiz": [
+  {
+   "q": {
+    "ar": "ممنوع إعطاء النيترات لمريض أخذ؟",
+    "en": "Nitrates must not be given to a patient who took?"
+   },
+   "options": [
     {
-      "q": {
-        "ar": "الذبحة غير المستقرة تتميز بـ؟"
-      },
-      "options": [
-        {
-          "ar": "ألم ثابت الشدة بالمجهود"
-        },
-        {
-          "ar": "ألم أثناء الراحة أو يزيد تكراراً وشدة"
-        },
-        {
-          "ar": "ألم فقط بعد الأكل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "هذه علامات عدم الاستقرار (Crescendo/Rest)."
-      }
+     "ar": "Sildenafil",
+     "en": "Sildenafil"
     },
     {
-      "q": {
-        "ar": "نصيحة النيترات تحت اللسان؟"
-      },
-      "options": [
-        {
-          "ar": "يُبلع بالماء"
-        },
-        {
-          "ar": "توضع تحت اللسان والمريض جالس"
-        },
-        {
-          "ar": "تُعطى وريدياً دائماً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الامتصاص تحت اللسان سريع، والجلوس يقلل خطر الدوخة."
-      }
+     "ar": "Paracetamol",
+     "en": "Paracetamol"
     },
     {
-      "q": {
-        "ar": "ممنوع إعطاء النيترات لمريض أخذ؟"
-      },
-      "options": [
-        {
-          "ar": "Sildenafil"
-        },
-        {
-          "ar": "Paracetamol"
-        },
-        {
-          "ar": "فيتامين C"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر هبوط ضغط شديد."
-      }
-    },
-    {
-      "q": {
-        "ar": "رسم القلب في الذبحة بين النوبات؟"
-      },
-      "options": [
-        {
-          "ar": "دائماً غير طبيعي"
-        },
-        {
-          "ar": "غالباً طبيعي"
-        },
-        {
-          "ar": "ST مرتفع دائماً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التغيرات تظهر أثناء النوبة."
-      }
-    },
-    {
-      "q": {
-        "ar": "اختبار المجهود ممنوع في؟"
-      },
-      "options": [
-        {
-          "ar": "الذبحة المستقرة"
-        },
-        {
-          "ar": "الذبحة غير المستقرة والجلطة الحديثة"
-        },
-        {
-          "ar": "كل الحالات"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "خطر مضاعفات."
-      }
-    },
-    {
-      "q": {
-        "ar": "متى يُحجب النيتروجليسرين غالباً؟"
-      },
-      "options": [
-        {
-          "ar": "ضغط انقباضي أقل من 90"
-        },
-        {
-          "ar": "نبض 80"
-        },
-        {
-          "ar": "حرارة 37"
-        },
-        {
-          "ar": "سكر 100"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر الإغماء."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي موجة غالباً أول علامة نقص تروية؟"
-      },
-      "options": [
-        {
-          "ar": "انقلاب T"
-        },
-        {
-          "ar": "Q"
-        },
-        {
-          "ar": "P"
-        },
-        {
-          "ar": "U"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ثم ST."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عبارة صحيحة عن لصقة النيتروجليسرين؟"
-      },
-      "options": [
-        {
-          "ar": "تُلصق مرة يومياً بجلد نظيف جاف محلوق"
-        },
-        {
-          "ar": "تُستعمل عند اللزوم فقط"
-        },
-        {
-          "ar": "لصقتان معاً"
-        },
-        {
-          "ar": "تلصق على جلد مجروح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "اللصقة جرعة يومية ثابتة وليست دواء إنقاذ."
-      }
-    },
-    {
-      "q": {
-        "ar": "ذبحة بالراحة ولا تزول:"
-      },
-      "options": [
-        {
-          "ar": "غير مستقرة: إنذار جلطة"
-        },
-        {
-          "ar": "مستقرة"
-        },
-        {
-          "ar": "متغايرة بالضرورة"
-        },
-        {
-          "ar": "طبيعية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تستدعي طوارئ."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض ألمه لم يزل بعد 5 دقائق من أول قرص نيترو تحت اللسان. ما الإجراء؟"
-      },
-      "options": [
-        {
-          "ar": "يبلع القرص"
-        },
-        {
-          "ar": "يتصل بالإسعاف"
-        },
-        {
-          "ar": "ينتظر ساعة"
-        },
-        {
-          "ar": "يضع لصقة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "عدم زوال الألم بعد 5 دقائق من الجرعة الأولى يستدعي الاتصال بالإسعاف."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تعليمات للصقة النيترو صحيحة؟"
-      },
-      "options": [
-        {
-          "ar": "لصقتان معاً"
-        },
-        {
-          "ar": "في مكان نظيف جاف خالٍ من الشعر ويبدّل يومياً"
-        },
-        {
-          "ar": "على جلد مجروح"
-        },
-        {
-          "ar": "تُستعمل عند اللزوم فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تُوضع لصقة واحدة يومياً في مكان نظيف جاف أعلى الجسم مع تدوير المواضع."
-      }
+     "ar": "فيتامين C",
+     "en": "Vitamin C"
     }
-  ],
-  "refs": [
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر هبوط ضغط شديد.",
+    "en": "Risk of severe hypotension."
+   }
+  },
+  {
+   "q": {
+    "ar": "رسم القلب في الذبحة بين النوبات؟",
+    "en": "The ECG in angina between attacks?"
+   },
+   "options": [
     {
-      "title": "2019 ESC Guidelines on Chronic Coronary Syndromes"
+     "ar": "دائماً غير طبيعي",
+     "en": "Always abnormal"
     },
     {
-      "title": "2021 AHA/ACC Chest Pain Guideline & 2023 AHA/ACC Chronic Coronary Disease Guideline"
+     "ar": "غالباً طبيعي",
+     "en": "Usually normal"
     },
     {
-      "title": "Nitroglycerin SL prescribing information (contraindications with PDE-5 inhibitors)"
-    },
-    {
-      "title": "ESC press release: oxygen in acute coronary syndrome",
-      "url": "https://escardio.org/The-ESC/Press-Office/Press-releases/oxygen-is-neither-beneficial-nor-harmful-in-patients-with-acute-coronary-syndrome"
-    },
-    {
-      "title": "2021 AHA/ACC Chest Pain Guideline"
+     "ar": "ST مرتفع دائماً",
+     "en": "ST always elevated"
     }
-  ],
-  "_m1q": 1
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التغيرات تظهر أثناء النوبة.",
+    "en": "The changes appear during the attack."
+   }
+  },
+  {
+   "q": {
+    "ar": "اختبار المجهود ممنوع في؟",
+    "en": "The exercise test is contraindicated in?"
+   },
+   "options": [
+    {
+     "ar": "الذبحة المستقرة",
+     "en": "Stable angina"
+    },
+    {
+     "ar": "الذبحة غير المستقرة والجلطة الحديثة",
+     "en": "Unstable angina and recent MI"
+    },
+    {
+     "ar": "كل الحالات",
+     "en": "All cases"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "خطر مضاعفات.",
+    "en": "Risk of complications."
+   }
+  },
+  {
+   "q": {
+    "ar": "متى يُحجب النيتروجليسرين غالباً؟",
+    "en": "When is nitroglycerin usually held?"
+   },
+   "options": [
+    {
+     "ar": "ضغط انقباضي أقل من 90",
+     "en": "Systolic pressure below 90"
+    },
+    {
+     "ar": "نبض 80",
+     "en": "Pulse 80"
+    },
+    {
+     "ar": "حرارة 37",
+     "en": "Temperature 37"
+    },
+    {
+     "ar": "سكر 100",
+     "en": "Glucose 100"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر الإغماء.",
+    "en": "Risk of fainting."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي موجة غالباً أول علامة نقص تروية؟",
+    "en": "Which wave is usually the first sign of ischemia?"
+   },
+   "options": [
+    {
+     "ar": "انقلاب T",
+     "en": "T inversion"
+    },
+    {
+     "ar": "Q",
+     "en": "Q"
+    },
+    {
+     "ar": "P",
+     "en": "P"
+    },
+    {
+     "ar": "U",
+     "en": "U"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ثم ST.",
+    "en": "Then ST."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عبارة صحيحة عن لصقة النيتروجليسرين؟",
+    "en": "Which statement about the nitroglycerin patch is correct?"
+   },
+   "options": [
+    {
+     "ar": "تُلصق مرة يومياً بجلد نظيف جاف محلوق",
+     "en": "Applied once daily to clean, dry, shaved skin"
+    },
+    {
+     "ar": "تُستعمل عند اللزوم فقط",
+     "en": "Used only as needed"
+    },
+    {
+     "ar": "لصقتان معاً",
+     "en": "Two patches together"
+    },
+    {
+     "ar": "تلصق على جلد مجروح",
+     "en": "Applied to wounded skin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "اللصقة جرعة يومية ثابتة وليست دواء إنقاذ.",
+    "en": "The patch is a fixed daily dose, not a rescue drug."
+   }
+  },
+  {
+   "q": {
+    "ar": "ذبحة بالراحة ولا تزول:",
+    "en": "Angina at rest that does not go away:"
+   },
+   "options": [
+    {
+     "ar": "غير مستقرة: إنذار جلطة",
+     "en": "Unstable: a warning of MI"
+    },
+    {
+     "ar": "مستقرة",
+     "en": "Stable"
+    },
+    {
+     "ar": "متغايرة بالضرورة",
+     "en": "Necessarily variant"
+    },
+    {
+     "ar": "طبيعية",
+     "en": "Normal"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تستدعي طوارئ.",
+    "en": "It requires emergency care."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض ألمه لم يزل بعد 5 دقائق من أول قرص نيترو تحت اللسان. ما الإجراء؟",
+    "en": "A patient's pain is not gone 5 minutes after the first sublingual nitro tablet. What is the action?"
+   },
+   "options": [
+    {
+     "ar": "يبلع القرص",
+     "en": "Swallow the tablet"
+    },
+    {
+     "ar": "يتصل بالإسعاف",
+     "en": "Call the ambulance"
+    },
+    {
+     "ar": "ينتظر ساعة",
+     "en": "Wait an hour"
+    },
+    {
+     "ar": "يضع لصقة",
+     "en": "Apply a patch"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "عدم زوال الألم بعد 5 دقائق من الجرعة الأولى يستدعي الاتصال بالإسعاف.",
+    "en": "Pain that persists 5 minutes after the first dose requires calling the ambulance."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تعليمات للصقة النيترو صحيحة؟",
+    "en": "Which instruction for the nitro patch is correct?"
+   },
+   "options": [
+    {
+     "ar": "لصقتان معاً",
+     "en": "Two patches together"
+    },
+    {
+     "ar": "في مكان نظيف جاف خالٍ من الشعر ويبدّل يومياً",
+     "en": "On a clean, dry, hair-free site, changed daily"
+    },
+    {
+     "ar": "على جلد مجروح",
+     "en": "On wounded skin"
+    },
+    {
+     "ar": "تُستعمل عند اللزوم فقط",
+     "en": "Used only as needed"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تُوضع لصقة واحدة يومياً في مكان نظيف جاف أعلى الجسم مع تدوير المواضع.",
+    "en": "One patch is applied daily on a clean dry site of the upper body, rotating the sites."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "2019 ESC Guidelines on Chronic Coronary Syndromes"
+  },
+  {
+   "title": "2021 AHA/ACC Chest Pain Guideline & 2023 AHA/ACC Chronic Coronary Disease Guideline"
+  },
+  {
+   "title": "Nitroglycerin SL prescribing information (contraindications with PDE-5 inhibitors)"
+  },
+  {
+   "title": "ESC press release: oxygen in acute coronary syndrome",
+   "url": "https://escardio.org/The-ESC/Press-Office/Press-releases/oxygen-is-neither-beneficial-nor-harmful-in-patients-with-acute-coronary-syndrome"
+  },
+  {
+   "title": "2021 AHA/ACC Chest Pain Guideline"
+  }
+ ],
+ "_m1q": 1
 }

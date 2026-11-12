@@ -1,231 +1,291 @@
 {
-  "id": "dis-1615",
-  "num": 1615,
-  "system": "cardio",
-  "icon": "🦵",
-  "level": 2,
-  "target": "diseases",
-  "title": {
-    "ar": "مرض الأوعية المحيطية: الفرق بين PVD (الأوردة) وPAD (الشرايين)",
-    "en": "Peripheral Vascular Disease: PVD (Venous) vs PAD (Arterial)"
+ "id": "dis-1615",
+ "num": 1615,
+ "system": "cardio",
+ "icon": "🦵",
+ "level": 2,
+ "target": "diseases",
+ "title": {
+  "ar": "مرض الأوعية المحيطية: الفرق بين PVD (الأوردة) وPAD (الشرايين)",
+  "en": "Peripheral Vascular Disease: PVD (Venous) vs PAD (Arterial)"
+ },
+ "teaser": {
+  "ar": "مقارنة الوريد بالشريان: العلامات، الأسباب، التصلب العصيدي، الفحوص، الأدوية، وتدخلات التمريض (رفع/تدلية).",
+  "en": "Comparing vein with artery: signs, causes, atherosclerosis, tests, drugs, and nursing interventions (elevate/dangle)."
+ },
+ "chips": [
+  {
+   "ar": "PVD وPAD",
+   "en": "PVD and PAD"
   },
-  "teaser": {
-    "ar": "مقارنة الوريد بالشريان: العلامات، الأسباب، التصلب العصيدي، الفحوص، الأدوية، وتدخلات التمريض (رفع/تدلية)."
+  {
+   "ar": "ABI",
+   "en": "ABI"
   },
-  "chips": [
-    {
-      "ar": "PVD وPAD"
-    },
-    {
-      "ar": "ABI"
-    },
-    {
-      "ar": "C ممنوعات"
-    }
+  {
+   "ar": "C ممنوعات",
+   "en": "The C don'ts"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>مرض الأوعية المحيطية (Peripheral Vascular Disease) نوعان: <b>PVD</b> = مرض الأوردة (تجمع دم ودوالي) و<b>PAD</b> = مرض الشرايين (إقفار Ischemia ونخر). الفرق بينهم هو سر أسئلة التمريض: الوريد يُرفع والشريان يُدلّى. أدلة قريبة: <a href=\"/diseases/dis-602\">PAD</a>، <a href=\"/diseases/dis-342\">دوالي الساقين</a>، <a href=\"/diseases/dis-608\">التهاب الوريد الخثاري</a>، <a href=\"/diseases/dis-1202\">تصلب الشرايين</a>.</p>[[slot:dis-1615-compare|الوريد والشريان — رسم من إعداد الموقع|/diseases/img/dis-1615-compare.svg]]\n<h4>مراجعة التمريض الباطني: PVD مقابل PAD</h4><p>PVD وريدية (تضيق وريد): نبض واضح وأرجل دافئة، وذمة، قرح ضحلة غير منتظمة، ألم خفيف، وثنايا كاحل صفراء بنية، والوضعية برفع الساقين. PAD شريانية (تضيق شريان): نبض وشعر غائبان وجلد لامع وأرجل باردة، قرح مستديرة، أصابع وقدم شاحبة أو سوداء (إسكار)، وألم حاد بالربلة عند المشي (Claudication)، والوضعية بتدلي الساقين لأسفل. التثقيف المشترك: لا ملابس ضيقة ولا تربيع الساقين ولا سجائر ولا كافيين ولا برد، ولا يقص الأظافر إلا طبيب/مختص.</p>[[slot:dis-1615-p276|PVD مقابل PAD — رسم من إعداد الموقع|/diseases/img/dis-1615-p276.svg]]",
+   "en": "<p>Peripheral Vascular Disease has two types: <b>PVD</b> = venous disease (blood pooling and varicose veins) and <b>PAD</b> = arterial disease (ischemia and necrosis). The difference between them is the key to nursing questions: the vein is elevated and the artery is dangled. Related guides: <a href=\"/diseases/dis-602\">PAD</a>, <a href=\"/diseases/dis-342\">Varicose veins of the legs</a>, <a href=\"/diseases/dis-608\">Thrombophlebitis</a>, <a href=\"/diseases/dis-1202\">Atherosclerosis</a>.</p>[[slot:dis-1615-compare|Vein and artery — illustration prepared by the site|/diseases/img/dis-1615-compare.svg]]\n<h4>Medical-surgical nursing review: PVD versus PAD</h4><p>PVD is venous (narrowed vein): a clear pulse and warm legs, edema, shallow irregular ulcers, mild pain, yellow-brown ankle creases, and positioning by elevating the legs. PAD is arterial (narrowed artery): absent pulse and hair, shiny skin and cold legs, round ulcers, pale or black toes and foot (eschar), sharp calf pain on walking (Claudication), and positioning by dangling the legs down. Shared teaching: no tight clothes, no crossing the legs, no cigarettes, no caffeine, no cold, and nails are cut only by a physician/specialist.</p>[[slot:dis-1615-p276|PVD versus PAD — illustration prepared by the site|/diseases/img/dis-1615-p276.svg]]"
+  },
+  "causes": {
+   "ar": "<h4>عوامل الخطر (أي شيء يخدش بطانة الأوعية)</h4><table><thead><tr><th>قابلة للتعديل</th><th>تفاصيل</th></tr></thead><tbody><tr><td>السمنة (BMI فوق 25)</td><td>ضغط على الأوعية</td></tr><tr><td>الخمول</td><td>تيبس الأوعية</td></tr><tr><td>التدخين</td><td>مواد كيميائية تخدش الجدار</td></tr><tr><td>السكر غير المنضبط</td><td>سكر عالٍ يخدش ويجرح الأوعية</td></tr><tr><td>ارتفاع الكوليسترول</td><td>ترسب فيشكل لويحات</td></tr><tr><td>ارتفاع الضغط</td><td>تمدد وتلف الأوعية</td></tr><tr><td>الإجهاد</td><td>يرفع الضغط</td></tr></tbody></table><p>غير القابلة للتعديل: العمر، الجنس، الوراثة.</p><p><b>تصلب الشرايين (Atherosclerosis):</b> بعد الخدش تترسب دهون وكالسيوم وخلايا فتكوّن لويحة تُضيّق وتُقسّي الشريان، وقد تنفجر فتتكون جلطة. الأماكن الرئيسية: الأورطي البطني، السباتيان، الفخذيان، الحرقفيان.</p>",
+   "en": "<h4>Risk factors (anything that scratches the vessel lining)</h4><table><thead><tr><th>Modifiable</th><th>Details</th></tr></thead><tbody><tr><td>Obesity (BMI above 25)</td><td>Pressure on the vessels</td></tr><tr><td>Inactivity</td><td>Stiff vessels</td></tr><tr><td>Smoking</td><td>Chemicals that scratch the wall</td></tr><tr><td>Uncontrolled diabetes</td><td>High sugar scratches and injures the vessels</td></tr><tr><td>High cholesterol</td><td>Deposits that form plaques</td></tr><tr><td>High blood pressure</td><td>Stretching and damage of the vessels</td></tr><tr><td>Stress</td><td>Raises the blood pressure</td></tr></tbody></table><p>Non-modifiable: age, sex, heredity.</p><p><b>Atherosclerosis:</b> after the scratch, fat, calcium, and cells are deposited and form a plaque that narrows and hardens the artery; it may rupture and a clot forms. The main sites: the abdominal aorta, the carotids, the femorals, the iliacs.</p>"
+  },
+  "signs": {
+   "ar": "[[slot:dis-1615-signs|علامات الوريد والشريان — رسم من إعداد الموقع|/diseases/img/dis-1615-signs.svg]]<table><thead><tr><th></th><th>PVD (وريد)</th><th>PAD (شريان)</th></tr></thead><tbody><tr><td>النبض</td><td>واضح ودافئة الساق</td><td>غائب، جلد لامع بارد</td></tr><tr><td>الألم</td><td>خفيف أو لا ألم حاد</td><td>ألم حاد بالسمانة (عرج متقطع) مع المجهود</td></tr><tr><td>الجلد</td><td>وذمة، بقع صفراء/بنية بالكاحل</td><td>شحوب أو سواد (Eschar) بالأصابع</td></tr><tr><td>القرح</td><td>غير منتظمة الشكل</td><td>مستديرة عميقة</td></tr><tr><td>الاسم</td><td>Varicose Veins</td><td>Intermittent Claudication</td></tr></tbody></table><p>وسيلة حفظ PAD: عرج متقطع = ألم سمانة (Calf) بمجهود (Exercise) ويتحسن بالراحة.</p>",
+   "en": "[[slot:dis-1615-signs|Signs of vein and artery — illustration prepared by the site|/diseases/img/dis-1615-signs.svg]]<table><thead><tr><th></th><th>PVD (vein)</th><th>PAD (artery)</th></tr></thead><tbody><tr><td>Pulse</td><td>Clear, and the leg is warm</td><td>Absent, shiny cold skin</td></tr><tr><td>Pain</td><td>Mild or no sharp pain</td><td>Sharp calf pain (intermittent claudication) with exertion</td></tr><tr><td>Skin</td><td>Edema, yellow/brown patches at the ankle</td><td>Pallor or blackening (Eschar) of the toes</td></tr><tr><td>Ulcers</td><td>Irregular in shape</td><td>Round and deep</td></tr><tr><td>Name</td><td>Varicose Veins</td><td>Intermittent Claudication</td></tr></tbody></table><p>Memory aid for PAD: intermittent claudication = calf pain (Calf) with exertion (Exercise) that improves with rest.</p>"
+  },
+  "tests": {
+   "ar": "<p>سونار دوبلر، وABI (مؤشر الكاحل/العضد) لـPAD.</p>[[slot:dis-1615-care|الممنوعات والفحوص والأدوية — رسم من إعداد الموقع|/diseases/img/dis-1615-care.svg]]",
+   "en": "<p>Doppler ultrasound, and ABI (ankle/brachial index) for PAD.</p>[[slot:dis-1615-care|The don'ts, tests, and drugs — illustration prepared by the site|/diseases/img/dis-1615-care.svg]]"
+  },
+  "treatment": {
+   "ar": "<h4>تدخلات التمريض المميزة</h4><table><thead><tr><th>الحالة</th><th>الوضع</th></tr></thead><tbody><tr><td>PVD (أوردة)</td><td>ارفع الساقين (Veins = Elevate)</td></tr><tr><td>PAD (شرايين)</td><td>دلّ الساقين لأسفل (Arteries = Hang)</td></tr></tbody></table>\n<h4>أدوية</h4><ul><li>مضادات الصفائح: أسبرين، كلوبيدوجريل (خطر نزف).</li><li>خافضات الكوليسترول: لوفاستاتين وغيره، قد تسبب سمية كبدية، لا جريب فروت.</li></ul>\n<div class=\"cs-box cs-tip\"><strong>نقطة امتحان</strong><p>PVD مع دوالي: جوارب ضاغطة وتقليل الوقوف الطويل لإعادة الدم للقلب.</p></div><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p>",
+   "en": "<h4>The distinctive nursing interventions</h4><table><thead><tr><th>Condition</th><th>Position</th></tr></thead><tbody><tr><td>PVD (veins)</td><td>Elevate the legs (Veins = Elevate)</td></tr><tr><td>PAD (arteries)</td><td>Dangle the legs down (Arteries = Hang)</td></tr></tbody></table>\n<h4>Drugs</h4><ul><li>Antiplatelets: aspirin, clopidogrel (bleeding risk).</li><li>Cholesterol-lowering drugs: lovastatin and others; may cause liver toxicity; no grapefruit.</li></ul>\n<div class=\"cs-box cs-tip\"><strong>Exam point</strong><p>PVD with varicose veins: compression stockings and less prolonged standing to return blood to the heart.</p></div><p>Doses are for learning; always verify with the physician/pharmacist before giving.</p>"
+  },
+  "nursing": {
+   "ar": "<ol><li>قيّم النبض ولون الجلد ودفئه ووجود قرح بكل طرف.</li><li>طبّق الوضع حسب النوع: رفع للوريد وتدلية للشريان.</li><li>امنع حرف C: لا تقاطع الساقين ولا ملابس ضيقة ولا تدخين ولا كافيين ولا برد.</li><li>لا يقصّ المريض أظافر القدم؛ الطبيب فقط.</li><li>اعتنِ بالجلد وراقب الجروح.</li><li>شجّع المشي المنتظم والإقلاع عن التدخين.</li></ol>",
+   "en": "<ol><li>Assess the pulse, skin color and warmth, and the presence of ulcers in each limb.</li><li>Apply the position by type: elevation for the vein and dangling for the artery.</li><li>Prevent the letter C: no crossing the legs, no tight clothes, no smoking, no caffeine, no cold.</li><li>The patient does not cut the toenails; the physician only.</li><li>Care for the skin and watch the wounds.</li><li>Encourage regular walking and quitting smoking.</li></ol>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ فوراً</strong><ul><li>ساق باردة شاحبة أو بلا نبض فجأة</li><li>قرحة سوداء أو تتسع</li><li>ألم شديد أو تورم أحمر ساخن (خثار)</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately</strong><ul><li>A leg that is suddenly cold, pale, or pulseless</li><li>An ulcer that is black or enlarging</li><li>Severe pain or hot red swelling (thrombosis)</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>أقلع عن التدخين وتجنب الكافيين والبرد.</li><li>لا تقاطع ساقيك ولا ترتدِ ملابس ضيقة.</li><li>لا تقص أظافر القدم بنفسك إن كان لديك مرض شرايين.</li></ul>",
+   "en": "<ul><li>Quit smoking and avoid caffeine and cold.</li><li>Do not cross your legs or wear tight clothes.</li><li>Do not cut your toenails yourself if you have arterial disease.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "PVD وريد: رفع؛ PAD شريان: تدلية",
+   "عرج متقطع = ألم سمانة بالمجهود",
+   "ABI ودوبلر للتشخيص",
+   "ممنوعات C: ضغط، تقاطع، ملابس ضيقة، تدخين، كافيين، برد"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>مرض الأوعية المحيطية (Peripheral Vascular Disease) نوعان: <b>PVD</b> = مرض الأوردة (تجمع دم ودوالي) و<b>PAD</b> = مرض الشرايين (إقفار Ischemia ونخر). الفرق بينهم هو سر أسئلة التمريض: الوريد يُرفع والشريان يُدلّى. أدلة قريبة: <a href=\"/diseases/dis-602\">PAD</a>، <a href=\"/diseases/dis-342\">دوالي الساقين</a>، <a href=\"/diseases/dis-608\">التهاب الوريد الخثاري</a>، <a href=\"/diseases/dis-1202\">تصلب الشرايين</a>.</p>[[slot:dis-1615-compare|الوريد والشريان — رسم من إعداد الموقع|/diseases/img/dis-1615-compare.svg]]\n<h4>مراجعة التمريض الباطني: PVD مقابل PAD</h4><p>PVD وريدية (تضيق وريد): نبض واضح وأرجل دافئة، وذمة، قرح ضحلة غير منتظمة، ألم خفيف، وثنايا كاحل صفراء بنية، والوضعية برفع الساقين. PAD شريانية (تضيق شريان): نبض وشعر غائبان وجلد لامع وأرجل باردة، قرح مستديرة، أصابع وقدم شاحبة أو سوداء (إسكار)، وألم حاد بالربلة عند المشي (Claudication)، والوضعية بتدلي الساقين لأسفل. التثقيف المشترك: لا ملابس ضيقة ولا تربيع الساقين ولا سجائر ولا كافيين ولا برد، ولا يقص الأظافر إلا طبيب/مختص.</p>[[slot:dis-1615-p276|PVD مقابل PAD — رسم من إعداد الموقع|/diseases/img/dis-1615-p276.svg]]"
-    },
-    "causes": {
-      "ar": "<h4>عوامل الخطر (أي شيء يخدش بطانة الأوعية)</h4><table><thead><tr><th>قابلة للتعديل</th><th>تفاصيل</th></tr></thead><tbody><tr><td>السمنة (BMI فوق 25)</td><td>ضغط على الأوعية</td></tr><tr><td>الخمول</td><td>تيبس الأوعية</td></tr><tr><td>التدخين</td><td>مواد كيميائية تخدش الجدار</td></tr><tr><td>السكر غير المنضبط</td><td>سكر عالٍ يخدش ويجرح الأوعية</td></tr><tr><td>ارتفاع الكوليسترول</td><td>ترسب فيشكل لويحات</td></tr><tr><td>ارتفاع الضغط</td><td>تمدد وتلف الأوعية</td></tr><tr><td>الإجهاد</td><td>يرفع الضغط</td></tr></tbody></table><p>غير القابلة للتعديل: العمر، الجنس، الوراثة.</p><p><b>تصلب الشرايين (Atherosclerosis):</b> بعد الخدش تترسب دهون وكالسيوم وخلايا فتكوّن لويحة تُضيّق وتُقسّي الشريان، وقد تنفجر فتتكون جلطة. الأماكن الرئيسية: الأورطي البطني، السباتيان، الفخذيان، الحرقفيان.</p>"
-    },
-    "signs": {
-      "ar": "[[slot:dis-1615-signs|علامات الوريد والشريان — رسم من إعداد الموقع|/diseases/img/dis-1615-signs.svg]]<table><thead><tr><th></th><th>PVD (وريد)</th><th>PAD (شريان)</th></tr></thead><tbody><tr><td>النبض</td><td>واضح ودافئة الساق</td><td>غائب، جلد لامع بارد</td></tr><tr><td>الألم</td><td>خفيف أو لا ألم حاد</td><td>ألم حاد بالسمانة (عرج متقطع) مع المجهود</td></tr><tr><td>الجلد</td><td>وذمة، بقع صفراء/بنية بالكاحل</td><td>شحوب أو سواد (Eschar) بالأصابع</td></tr><tr><td>القرح</td><td>غير منتظمة الشكل</td><td>مستديرة عميقة</td></tr><tr><td>الاسم</td><td>Varicose Veins</td><td>Intermittent Claudication</td></tr></tbody></table><p>وسيلة حفظ PAD: عرج متقطع = ألم سمانة (Calf) بمجهود (Exercise) ويتحسن بالراحة.</p>"
-    },
-    "tests": {
-      "ar": "<p>سونار دوبلر، وABI (مؤشر الكاحل/العضد) لـPAD.</p>[[slot:dis-1615-care|الممنوعات والفحوص والأدوية — رسم من إعداد الموقع|/diseases/img/dis-1615-care.svg]]"
-    },
-    "treatment": {
-      "ar": "<h4>تدخلات التمريض المميزة</h4><table><thead><tr><th>الحالة</th><th>الوضع</th></tr></thead><tbody><tr><td>PVD (أوردة)</td><td>ارفع الساقين (Veins = Elevate)</td></tr><tr><td>PAD (شرايين)</td><td>دلّ الساقين لأسفل (Arteries = Hang)</td></tr></tbody></table>\n<h4>أدوية</h4><ul><li>مضادات الصفائح: أسبرين، كلوبيدوجريل (خطر نزف).</li><li>خافضات الكوليسترول: لوفاستاتين وغيره، قد تسبب سمية كبدية، لا جريب فروت.</li></ul>\n<div class=\"cs-box cs-tip\"><strong>نقطة امتحان</strong><p>PVD مع دوالي: جوارب ضاغطة وتقليل الوقوف الطويل لإعادة الدم للقلب.</p></div><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p>"
-    },
-    "nursing": {
-      "ar": "<ol><li>قيّم النبض ولون الجلد ودفئه ووجود قرح بكل طرف.</li><li>طبّق الوضع حسب النوع: رفع للوريد وتدلية للشريان.</li><li>امنع حرف C: لا تقاطع الساقين ولا ملابس ضيقة ولا تدخين ولا كافيين ولا برد.</li><li>لا يقصّ المريض أظافر القدم؛ الطبيب فقط.</li><li>اعتنِ بالجلد وراقب الجروح.</li><li>شجّع المشي المنتظم والإقلاع عن التدخين.</li></ol>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ فوراً</strong><ul><li>ساق باردة شاحبة أو بلا نبض فجأة</li><li>قرحة سوداء أو تتسع</li><li>ألم شديد أو تورم أحمر ساخن (خثار)</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>أقلع عن التدخين وتجنب الكافيين والبرد.</li><li>لا تقاطع ساقيك ولا ترتدِ ملابس ضيقة.</li><li>لا تقص أظافر القدم بنفسك إن كان لديك مرض شرايين.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "PVD وريد: رفع؛ PAD شريان: تدلية",
-      "عرج متقطع = ألم سمانة بالمجهود",
-      "ABI ودوبلر للتشخيص",
-      "ممنوعات C: ضغط، تقاطع، ملابس ضيقة، تدخين، كافيين، برد"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "تدخل مريض PAD:"
-      },
-      "options": [
-        {
-          "ar": "تدلية الساقين"
-        },
-        {
-          "ar": "رفعهما"
-        },
-        {
-          "ar": "لف بالضغط"
-        },
-        {
-          "ar": "التدليك"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الشريان يحتاج جاذبية لتدفق الدم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة لـPVD؟"
-      },
-      "options": [
-        {
-          "ar": "قرح غير منتظمة وساق دافئة بنبض واضح"
-        },
-        {
-          "ar": "جلد لامع بارد"
-        },
-        {
-          "ar": "ألم عرج بالمجهود"
-        },
-        {
-          "ar": "أصابع سوداء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأوردة تحتبس فيها السوائل."
-      }
-    },
-    {
-      "q": {
-        "ar": "فحص PAD:"
-      },
-      "options": [
-        {
-          "ar": "ABI"
-        },
-        {
-          "ar": "تروبونين"
-        },
-        {
-          "ar": "أشعة رنين فقط"
-        },
-        {
-          "ar": "ECG"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مؤشر الكاحل/العضد."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض دوالي يرتدي:"
-      },
-      "options": [
-        {
-          "ar": "جوارب ضاغطة"
-        },
-        {
-          "ar": "شاش دافئ"
-        },
-        {
-          "ar": "بلا شيء"
-        },
-        {
-          "ar": "رباط ضيق بالركبة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تعيد الدم للقلب."
-      }
-    },
-    {
-      "q": {
-        "ar": "من الممنوعات:"
-      },
-      "options": [
-        {
-          "ar": "تقاطع الساقين"
-        },
-        {
-          "ar": "المشي"
-        },
-        {
-          "ar": "الراحة"
-        },
-        {
-          "ar": "الماء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يعيق الدورة."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض ساقه باردة بلا شعر ولامعة مع قرح مستديرة. أي وضعية مناسبة؟"
-      },
-      "options": [
-        {
-          "ar": "رفع الساقين فوق القلب"
-        },
-        {
-          "ar": "تدلي الساقين لأسفل"
-        },
-        {
-          "ar": "وضع ضغط شديد"
-        },
-        {
-          "ar": "الجلوس المتقاطع"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الشرايين (PAD) تحتاج تدفقاً بالجاذبية فتُدلّى الساقان، بينما الأوردة (PVD) تُرفع."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تميز PVD (الوريدي)؟"
-      },
-      "options": [
-        {
-          "ar": "نبض غائب"
-        },
-        {
-          "ar": "وذمة وقرح غير منتظمة ودفء"
-        },
-        {
-          "ar": "برودة وشحوب"
-        },
-        {
-          "ar": "ألم عرجي"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الوذمة والدفء والقرح الضحلة غير المنتظمة تميز الوريدي."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AHA/ACC PAD Guidelines"
-    },
-    {
-      "title": "SVS — Vascular Disease Basics"
-    }
+  "en": [
+   "PVD vein: elevate; PAD artery: dangle",
+   "Intermittent claudication = calf pain with exertion",
+   "ABI and Doppler for diagnosis",
+   "The C don'ts: compression, crossing, tight clothes, smoking, caffeine, cold"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "تدخل مريض PAD:",
+    "en": "Intervention for a PAD patient:"
+   },
+   "options": [
+    {
+     "ar": "تدلية الساقين",
+     "en": "Dangling the legs"
+    },
+    {
+     "ar": "رفعهما",
+     "en": "Elevating them"
+    },
+    {
+     "ar": "لف بالضغط",
+     "en": "Compression wrapping"
+    },
+    {
+     "ar": "التدليك",
+     "en": "Massage"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الشريان يحتاج جاذبية لتدفق الدم.",
+    "en": "The artery needs gravity for blood flow."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة لـPVD؟",
+    "en": "Which is a sign of PVD?"
+   },
+   "options": [
+    {
+     "ar": "قرح غير منتظمة وساق دافئة بنبض واضح",
+     "en": "Irregular ulcers and a warm leg with a clear pulse"
+    },
+    {
+     "ar": "جلد لامع بارد",
+     "en": "Shiny cold skin"
+    },
+    {
+     "ar": "ألم عرج بالمجهود",
+     "en": "Claudication pain with exertion"
+    },
+    {
+     "ar": "أصابع سوداء",
+     "en": "Black toes"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأوردة تحتبس فيها السوائل.",
+    "en": "Fluid is trapped in the veins."
+   }
+  },
+  {
+   "q": {
+    "ar": "فحص PAD:",
+    "en": "Test for PAD:"
+   },
+   "options": [
+    {
+     "ar": "ABI",
+     "en": "ABI"
+    },
+    {
+     "ar": "تروبونين",
+     "en": "Troponin"
+    },
+    {
+     "ar": "أشعة رنين فقط",
+     "en": "MRI only"
+    },
+    {
+     "ar": "ECG",
+     "en": "ECG"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مؤشر الكاحل/العضد.",
+    "en": "The ankle/brachial index."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض دوالي يرتدي:",
+    "en": "A patient with varicose veins wears:"
+   },
+   "options": [
+    {
+     "ar": "جوارب ضاغطة",
+     "en": "Compression stockings"
+    },
+    {
+     "ar": "شاش دافئ",
+     "en": "Warm gauze"
+    },
+    {
+     "ar": "بلا شيء",
+     "en": "Nothing"
+    },
+    {
+     "ar": "رباط ضيق بالركبة",
+     "en": "A tight band at the knee"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تعيد الدم للقلب.",
+    "en": "They return blood to the heart."
+   }
+  },
+  {
+   "q": {
+    "ar": "من الممنوعات:",
+    "en": "One of the don'ts:"
+   },
+   "options": [
+    {
+     "ar": "تقاطع الساقين",
+     "en": "Crossing the legs"
+    },
+    {
+     "ar": "المشي",
+     "en": "Walking"
+    },
+    {
+     "ar": "الراحة",
+     "en": "Rest"
+    },
+    {
+     "ar": "الماء",
+     "en": "Water"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يعيق الدورة.",
+    "en": "It impedes circulation."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض ساقه باردة بلا شعر ولامعة مع قرح مستديرة. أي وضعية مناسبة؟",
+    "en": "A patient's leg is cold, hairless, and shiny with round ulcers. Which position is appropriate?"
+   },
+   "options": [
+    {
+     "ar": "رفع الساقين فوق القلب",
+     "en": "Elevating the legs above the heart"
+    },
+    {
+     "ar": "تدلي الساقين لأسفل",
+     "en": "Dangling the legs down"
+    },
+    {
+     "ar": "وضع ضغط شديد",
+     "en": "Applying strong compression"
+    },
+    {
+     "ar": "الجلوس المتقاطع",
+     "en": "Sitting cross-legged"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الشرايين (PAD) تحتاج تدفقاً بالجاذبية فتُدلّى الساقان، بينما الأوردة (PVD) تُرفع.",
+    "en": "Arteries (PAD) need gravity-assisted flow so the legs are dangled, while veins (PVD) are elevated."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تميز PVD (الوريدي)؟",
+    "en": "Which sign distinguishes PVD (venous)?"
+   },
+   "options": [
+    {
+     "ar": "نبض غائب",
+     "en": "Absent pulse"
+    },
+    {
+     "ar": "وذمة وقرح غير منتظمة ودفء",
+     "en": "Edema, irregular ulcers, and warmth"
+    },
+    {
+     "ar": "برودة وشحوب",
+     "en": "Coldness and pallor"
+    },
+    {
+     "ar": "ألم عرجي",
+     "en": "Claudication pain"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الوذمة والدفء والقرح الضحلة غير المنتظمة تميز الوريدي.",
+    "en": "Edema, warmth, and shallow irregular ulcers distinguish venous disease."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AHA/ACC PAD Guidelines"
+  },
+  {
+   "title": "SVS — Vascular Disease Basics"
+  }
+ ]
 }

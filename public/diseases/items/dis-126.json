@@ -1,174 +1,219 @@
 {
-  "id": "dis-126",
-  "num": 126,
-  "system": "cardio",
-  "icon": "💓",
-  "level": 3,
-  "title": {
-    "ar": "التهاب عضلة القلب",
-    "en": "Myocarditis"
+ "id": "dis-126",
+ "num": 126,
+ "system": "cardio",
+ "icon": "💓",
+ "level": 3,
+ "title": {
+  "ar": "التهاب عضلة القلب",
+  "en": "Myocarditis"
+ },
+ "teaser": {
+  "ar": "التهاب فيروسي في عضلة القلب قد يسبب فشل قلب أو اضطراب نبض: العلامات والمراقبة ودور التمريض.",
+  "en": "A viral inflammation of the heart muscle that can cause heart failure or arrhythmia: signs, monitoring and the nursing role."
+ },
+ "chips": [
+  {
+   "ar": "فيروسي غالباً",
+   "en": "Usually viral"
   },
-  "teaser": {
-    "ar": "التهاب فيروسي في عضلة القلب قد يسبب فشل قلب أو اضطراب نبض: العلامات والمراقبة ودور التمريض."
+  {
+   "ar": "ECG سرج",
+   "en": "Saddle-shaped ECG"
   },
-  "chips": [
-    {
-      "ar": "فيروسي غالباً"
-    },
-    {
-      "ar": "ECG سرج"
-    },
-    {
-      "ar": "راحة تامة"
-    }
+  {
+   "ar": "راحة تامة",
+   "en": "Complete rest"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>التهاب عضلة القلب (Myocarditis) هو التهاب في عضلة القلب نفسها، غالباً من فيروس أو مناعة ذاتية أو دواء. بيتراوح من حالة بسيطة وتتحسن لوحدها، إلى فشل قلب واضطراب نبض خطير وموت مفاجئ، وخصوصاً عند الشباب والرياضيين.</p>[[slot:dis-126-pathway|مسار المرض — رسم من إعداد الموقع|/diseases/img/dis-126-pathway.svg]]<div class=\"cs-stats\"><div><b>Viral</b><span>الأشهر: فيروسي</span></div><div><b>ECG + Echo</b><span>أهم فحصين</span></div><div><b>راحة تامة</b><span>أول علاج</span></div></div><div class=\"cs-box cs-warning\"><strong>ليه مهم؟</strong><p>ألم صدر عند شاب بعد عدوى فيروسية (برد أو إسهال) ممكن يكون Myocarditis وليس «تعب عادي». ومعاه خفقان أو ضيق نفس = بلّغ فوراً.</p></div><!--M1--><h4>معلومات مكملة</h4><p>التهاب عضلة القلب غالباً بسبب عدوى (أغلبها فيروسية)، وقد ينتج أيضاً عن التسمم الكحولي المزمن أو الأدوية أو أمراض تنكس العضلة. النتيجة ضعف الضخ وفشل القلب. بعضها يشفى تلقائياً وبعضها يتطور إلى اعتلال عضلة قلب متوسع <a href=\"/diseases/dis-604\">(راجع هنا)</a> أو فشل قلب.</p>",
+   "en": "<p>Myocarditis is inflammation of the heart muscle itself, usually from a virus, autoimmunity or a drug. It ranges from a mild case that improves on its own to heart failure, dangerous arrhythmia and sudden death, especially in young people and athletes.</p>[[slot:dis-126-pathway|Disease pathway — illustration prepared by the site|/diseases/img/dis-126-pathway.svg]]<div class=\"cs-stats\"><div><b>Viral</b><span>Most common: viral</span></div><div><b>ECG + Echo</b><span>The two key tests</span></div><div><b>Complete rest</b><span>First treatment</span></div></div><div class=\"cs-box cs-warning\"><strong>Why does it matter?</strong><p>Chest pain in a young person after a viral infection (cold or diarrhea) may be myocarditis and not \"ordinary fatigue\". With palpitations or shortness of breath = report immediately.</p></div><!--M1--><h4>Supplementary information</h4><p>Myocarditis is usually caused by infection (mostly viral), and may also result from chronic alcohol toxicity, drugs or degenerative muscle diseases. The result is weak pumping and heart failure. Some cases heal spontaneously and some progress to dilated cardiomyopathy <a href=\"/diseases/dis-604\">(see here)</a> or heart failure.</p>"
+  },
+  "causes": {
+   "ar": "<h4>أسباب (Etiology)</h4><ol><li><b>فيروسات:</b> Coxsackie وAdenoviruses وInfluenza وغيرها</li><li><b>بكتيريا / فطريات / ريكتسيا / طفيليات</b></li><li><b>حساسية دوائية (Drug hypersensitivity)</b></li><li><b>مناعة ذاتية (Auto-immunity)</b></li></ol><div class=\"cs-box cs-info\"><strong>أسباب إضافية ينبغي معرفتها</strong><p>الدفتيريا (مضاعفة معروفة)، داء شاغاس، الذئبة، الساركويد، السموم والكحول، بعض أدوية السرطان، وأحياناً بعد عدوى كوفيد أو لقاحات mRNA (نادر وغالباً حميد عند الشباب الذكور).</p></div>",
+   "en": "<h4>Causes (Etiology)</h4><ol><li><b>Viruses:</b> Coxsackie, Adenoviruses, Influenza and others</li><li><b>Bacteria / fungi / rickettsia / parasites</b></li><li><b>Drug hypersensitivity</b></li><li><b>Autoimmunity</b></li></ol><div class=\"cs-box cs-info\"><strong>Additional causes worth knowing</strong><p>Diphtheria (a known complication), Chagas disease, lupus, sarcoidosis, toxins and alcohol, some cancer drugs, and sometimes after COVID infection or mRNA vaccines (rare and usually benign in young males).</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>الصورة السريرية</h4><ol><li><b>ألم صدر</b></li><li><b>فشل قلب احتقاني (CHF):</b> احتقان أوردة الرقبة، تضخم الكبد، وتورم الرجلين (LL oedema)</li><li><b>خفقان</b> بسبب اضطراب النبض (Arrhythmias)</li><li><b>حرارة</b> وخصوصاً لو العدوى هي السبب</li><li><b>موت مفاجئ</b></li></ol><div class=\"cs-box cs-tip\"><strong>فكّر بالتالي</strong><p>مرض فيروسي حديث + تعب شديد + ضيق نفس مع مجهود + ألم صدر خفيف أو خفقان. وبعض المرضى بلا أي أعراض.</p></div><h4>الحالات المتقدمة</h4><ul><li>إغماء (Syncope) أو اضطراب نظم بطيني</li><li>فشل القلب الحاد وصدمة قلبية (Fulminant myocarditis)</li><li>ألم صدر مثل التهاب التامور مع احتكاك</li></ul>",
+   "en": "<h4>Clinical picture</h4><ol><li><b>Chest pain</b></li><li><b>Congestive heart failure (CHF):</b> congested neck veins, enlarged liver, and leg swelling (LL oedema)</li><li><b>Palpitations</b> due to arrhythmias</li><li><b>Fever</b>, especially if infection is the cause</li><li><b>Sudden death</b></li></ol><div class=\"cs-box cs-tip\"><strong>Think of it with</strong><p>A recent viral illness + severe fatigue + shortness of breath on exertion + mild chest pain or palpitations. Some patients have no symptoms at all.</p></div><h4>Advanced cases</h4><ul><li>Syncope or ventricular arrhythmia</li><li>Acute heart failure and cardiogenic shock (Fulminant myocarditis)</li><li>Chest pain like pericarditis, with a friction rub</li></ul>"
+  },
+  "tests": {
+   "ar": "<h4>الفحوصات (حسب المراجع)</h4><table><thead><tr><th>الفحص</th><th>النتيجة</th></tr></thead><tbody><tr><td>ECG</td><td>انقلاب موجة T منتشر، ارتفاع ST بشكل «سرج» (Saddle shaped)</td></tr><tr><td>أشعة صدر (CXR)</td><td>ظل القلب طبيعي، وتضخم القلب لو فشل قلب</td></tr><tr><td>إيكو (Echo)</td><td>ضعف وظيفة البطين الأيسر الانقباضية والانبساطية، انخفاض الكسر القذفي (EF)، وقد يوجد انصباب تاموري</td></tr><tr><td>MRI</td><td>للتشخيص الدقيق</td></tr><tr><td>تحاليل دم</td><td>ارتفاع ESR وCRP وإنزيمات القلب وكرات الدم البيضاء وLDH</td></tr></tbody></table>[[slot:dis-126-ecg|صورة: رسم قلب بارتفاع ST منتشر على شكل سرج وانقلاب T]]<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>التشخيص الحديث: <b>التروبونين</b> مرتفع غالباً، و<b>Cardiac MRI</b> (معايير Lake Louise) هو الفحص المركزي، والخزعة عضلية بالقسطرة (EMB) تُستخدم في الحالات الشديدة أو الغامضة. وقسطرة القلب أو CT للشرايين لاستبعاد الجلطة القلبية لأن الأعراض متشابهة. ومعظم الفحوص (ESR/CRP/LDH) غير نوعية.</p></div><!--M1--><h4>تفاصيل</h4><ul><li>ECG: تغيرات ST بسبب تهيج العضلة</li><li>خزعة عضلة القلب لتحديد الميكروب أو الالتهاب بعد الشفاء من العدوى</li><li>أشعة صدر: تضخم القلب</li><li>إيكو لحجم ووظيفة القلب</li><li>CK-MB وتروبونين بسبب موت الخلايا</li></ul>",
+   "en": "<h4>Investigations</h4><table><thead><tr><th>Test</th><th>Finding</th></tr></thead><tbody><tr><td>ECG</td><td>Diffuse T-wave inversion, saddle-shaped ST elevation</td></tr><tr><td>Chest X-ray (CXR)</td><td>Normal cardiac shadow, and cardiomegaly if there is heart failure</td></tr><tr><td>Echo</td><td>Impaired left ventricular systolic and diastolic function, reduced ejection fraction (EF), and there may be a pericardial effusion</td></tr><tr><td>MRI</td><td>For accurate diagnosis</td></tr><tr><td>Blood tests</td><td>Raised ESR, CRP, cardiac enzymes, white blood cells and LDH</td></tr></tbody></table>[[slot:dis-126-ecg|Image: ECG with diffuse saddle-shaped ST elevation and T inversion]]<div class=\"cs-box cs-warning\"><strong>Update</strong><p>Modern diagnosis: <b>troponin</b> is usually raised, and <b>Cardiac MRI</b> (Lake Louise criteria) is the central test; endomyocardial biopsy by catheter (EMB) is used in severe or unclear cases. Cardiac catheterization or CT coronary angiography is done to rule out myocardial infarction because the symptoms are similar. Most tests (ESR/CRP/LDH) are non-specific.</p></div><!--M1--><h4>Details</h4><ul><li>ECG: ST changes due to muscle irritation</li><li>Heart muscle biopsy to identify the organism or inflammation after recovery from the infection</li><li>Chest X-ray: cardiomegaly</li><li>Echo for heart size and function</li><li>CK-MB and troponin due to cell death</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>1) الراحة</h4><p>راحة تامة في السرير (Complete bed rest) خصوصاً في الفترة الحادة.</p><h4>2) الأدوية</h4><table><thead><tr><th>الفئة</th><th>الدواء (الاسم التجاري)</th><th>الجرعة (حسب المراجع)</th></tr></thead><tbody><tr><td>مثبط ACE</td><td>Tritace (تريتاس) 2.5 mg — Ramipril</td><td>قرص مرة أو مرتين يومياً</td></tr><tr><td>حاصر قنوات الكالسيوم</td><td>Alkapress (ألكابريس) 5 أو 10 mg — Amlodipine</td><td>قرص مرة يومياً</td></tr><tr><td>مدرّ بول</td><td>Lasix (لازيكس) 20 mg — Furosemide</td><td>أمبول وريدي مرتين يومياً</td></tr><tr><td>حاصر ألفا وبيتا</td><td>Carvid (كارفيد) 6.25 mg — Carvedilol</td><td>قرص مرتين يومياً</td></tr><tr><td>مقوٍّ للقلب (Inotropic)</td><td>Lanoxin (لانوكسين) 0.25 mg — Digoxin</td><td>نصف إلى قرص واحد (0.125–0.25 مجم) مرة يومياً حسب أمر الطبيب</td></tr><tr><td>مضاد حيوي مناسب</td><td>Cefotax (سيفوتاكس) 1 جم</td><td>عضل أو وريدي مرتين يومياً</td></tr><tr><td>كورتيكوستيرويد (للمناعة الذاتية)</td><td>Synacthen (سينكاثين) أمبول — Tetracosactide</td><td>حقنة عضل</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>Digoxin:</b> في التهاب العضلة الحاد القلب أكثر حساسية له وخطر اضطراب النبض أكبر؛ يُستخدم بحذر شديد وبأمر الطبيب فقط.</li><li><b>Amlodipine:</b> ليس علاجاً أساسياً في فشل القلب الانقباضي (HFrEF)؛ يعتمد الاختيار على الطبيب.</li><li><b>Synacthen</b> هو ACTH صناعي (يحفز الغدة الكظرية) وليس ستيرويداً مباشراً؛ يُستخدم الكورتيزون (Prednisolone) أو مثبطات المناعة في أنواع محددة (Giant cell، Eosinophilic، الساركويد) بقرار متخصص.</li><li><b>تجنب مضادات الالتهاب غير الستيرويدية (NSAIDs) وتجنب المجهود الشديد:</b> يوصى بالامتناع عن الرياضة التنافسية 3–6 أشهر ثم إعادة التقييم.</li><li>ينفّذ علاج فشل القلب القياسي (ACEi/ARNI، حاصر بيتا، MRA...) عند ضعف الوظيفة، والحالات الشديدة تحتاج عناية مركزة ودعم ميكانيكي.</li></ul></div><!--M1--><h4>أدوية</h4><ul><li>علاج السبب</li><li>دعم الفشل القلبي</li><li>مضادات اضطراب النظم لو لزم: كينيدين، بروكاينأميد (ملاحظة: الكينيدين قل استخدامه)</li></ul>",
+   "en": "<h4>1) Rest</h4><p>Complete bed rest, especially in the acute period.</p><h4>2) Medications</h4><table><thead><tr><th>Class</th><th>Drug (brand name)</th><th>Dose</th></tr></thead><tbody><tr><td>ACE inhibitor</td><td>Tritace 2.5 mg — Ramipril</td><td>One tablet once or twice daily</td></tr><tr><td>Calcium channel blocker</td><td>Alkapress 5 or 10 mg — Amlodipine</td><td>One tablet once daily</td></tr><tr><td>Diuretic</td><td>Lasix 20 mg — Furosemide</td><td>IV ampoule twice daily</td></tr><tr><td>Alpha and beta blocker</td><td>Carvid 6.25 mg — Carvedilol</td><td>One tablet twice daily</td></tr><tr><td>Inotropic</td><td>Lanoxin 0.25 mg — Digoxin</td><td>Half to one tablet (0.125–0.25 mg) once daily per physician's order</td></tr><tr><td>Appropriate antibiotic</td><td>Cefotax 1 g</td><td>IM or IV twice daily</td></tr><tr><td>Corticosteroid (for autoimmunity)</td><td>Synacthen ampoule — Tetracosactide</td><td>IM injection</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li><b>Digoxin:</b> in acute myocarditis the heart is more sensitive to it and the risk of arrhythmia is higher; use with extreme caution and only on the physician's order.</li><li><b>Amlodipine:</b> not a core treatment in systolic heart failure (HFrEF); the choice depends on the physician.</li><li><b>Synacthen</b> is synthetic ACTH (it stimulates the adrenal gland) and not a direct steroid; cortisone (Prednisolone) or immunosuppressants are used in specific types (Giant cell, Eosinophilic, sarcoidosis) by specialist decision.</li><li><b>Avoid non-steroidal anti-inflammatory drugs (NSAIDs) and avoid strenuous exertion:</b> abstaining from competitive sports for 3–6 months then reassessment is recommended.</li><li>Standard heart failure therapy (ACEi/ARNI, beta blocker, MRA...) is given when function is impaired, and severe cases need intensive care and mechanical support.</li></ul></div><!--M1--><h4>Drugs</h4><ul><li>Treat the cause</li><li>Support the failing heart</li><li>Antiarrhythmics if needed: quinidine, procainamide (note: quinidine is now less used)</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم القلب بعمق</strong><p>نبض (سرعة، انتظام)، ضغط، تنفس، SpO2، وعي. استمع/سجّل أي نفخة. ألم الصدر: مكانه وشدته وهل يتغير بالتنفس أو الوضع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>مونيتور مستمر</strong><p>مراقبة ECG مستمرة في الحالات الحادة: ابحث عن خروج نبض مبكر، رجفان، تسارع بطيني، حصار. جهّز جهاز الصدمة وأدوية الطوارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راحة تامة</strong><p>سرير مع رفع الرأس 30–45 درجة لو ضيق نفس، تقليل النشاط والإزعاج، مساعدة في كل الأنشطة، وتجنب الإجهاد (الحمام/السرير).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الوزن والسوائل</strong><p>وزن يومي بنفس الميزان، Intake/Output، تورم الكاحلين، احتقان الرقبة، ضيق النفس. بلّغ عن زيادة 1 كجم في يوم أو 2 كجم في 3 أيام (علامات احتقان).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ الأدوية بأمان</strong><p>Lasix: وريدي ببطء 2–5 دقائق (لا يزيد 4 mg/دقيقة)، تابع بوتاسيوم وصوديوم وكلى، ورقابة الضغط. ACEi/Carvedilol: اقيس الضغط والنبض قبل كل جرعة، وأوقف وبلّغ لو النبض أقل من 50–60 أو الضغط الانقباضي أقل من 90 أو أعراض هبوط الضغط. Digoxin: نبض كامل دقيقة قبل الجرعة (أقل من 60 أوقف وبلّغ)، تأكد من البوتاسيوم؛ اسأل عن غثيان ورؤية صفراء. Cefotaxime: حساسية البنسلين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الحرارة والعدوى</strong><p>قياس الحرارة كل 4 ساعات، عزل لو فيروسي معدي، علاج خفض الحرارة حسب الأمر (باراسيتامول، وتجنب NSAIDs).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>النفسية والتثقيف</strong><p>القلق شائع: طمّن المريض واشرح أهمية الراحة. وتجنب الرياضة 3–6 أشهر على الأقل حسب الطبيب.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>ألم صدر + نبض غير منتظم أو سريع جداً أو بطيء جداً، أو إغماء، أو ضيق نفس مفاجئ مع انخفاض الضغط: نداء طوارئ فوراً (ECG، مونيتور، أكسجين لو SpO2 أقل من 94%).</p></div><h4>التوثيق</h4><ul><li>نمط النبض وECG والألم</li><li>الوزن والسوائل</li><li>الأدوية والتحاليل (بوتاسيوم، تروبونين، كلى)</li><li>الحرارة</li><li>تعليمات الراحة والمتابعة</li></ul><!--M1--><h4>نقاط تمريضية إضافية</h4><ul><li>حدد النشاط مؤقتاً لتقليل الجهد</li><li>وفّر كومود بجانب السرير</li><li>راقب ضيق النفس (احتقان) وسرعة النبض (أكتر من 100)</li><li>ممنوع الرياضة التنافسية</li><li>العودة التدريجية للنشاط بعد إذن الطبيب (غالباً بعد 3–6 شهور)</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess the heart in depth</strong><p>Pulse (rate, regularity), blood pressure, breathing, SpO2, consciousness. Listen for/record any murmur. Chest pain: its site and severity, and whether it changes with breathing or position.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Continuous monitor</strong><p>Continuous ECG monitoring in acute cases: look for premature beats, fibrillation, ventricular tachycardia, block. Prepare the defibrillator and emergency drugs.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Complete rest</strong><p>Bed with the head raised 30–45 degrees if short of breath, reduce activity and disturbance, help with all activities, and avoid straining (toilet/bed).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Weight and fluids</strong><p>Daily weight on the same scale, Intake/Output, ankle swelling, neck vein congestion, shortness of breath. Report a gain of 1 kg in a day or 2 kg in 3 days (signs of congestion).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Give medications safely</strong><p>Lasix: IV slowly over 2–5 minutes (not more than 4 mg/minute), follow potassium, sodium and kidney function, and watch the blood pressure. ACEi/Carvedilol: measure blood pressure and pulse before each dose, and hold and report if the pulse is below 50–60, systolic pressure is below 90, or there are symptoms of hypotension. Digoxin: full one-minute pulse before the dose (below 60: hold and report), check potassium; ask about nausea and yellow vision. Cefotaxime: penicillin allergy.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Temperature and infection</strong><p>Measure temperature every 4 hours, isolate if contagious viral infection, antipyretic treatment as ordered (paracetamol, and avoid NSAIDs).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Emotional support and education</strong><p>Anxiety is common: reassure the patient and explain the importance of rest. Avoid sports for at least 3–6 months, per the physician.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Chest pain + an irregular, very fast or very slow pulse, or syncope, or sudden shortness of breath with low blood pressure: call an emergency immediately (ECG, monitor, oxygen if SpO2 is below 94%).</p></div><h4>Documentation</h4><ul><li>Pulse pattern, ECG and pain</li><li>Weight and fluids</li><li>Medications and labs (potassium, troponin, kidney function)</li><li>Temperature</li><li>Rest and follow-up instructions</li></ul><!--M1--><h4>Additional nursing points</h4><ul><li>Limit activity temporarily to reduce the workload</li><li>Provide a bedside commode</li><li>Watch for shortness of breath (congestion) and a fast pulse (more than 100)</li><li>No competitive sports</li><li>Gradual return to activity after the physician's permission (usually after 3–6 months)</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>ألم صدر مفاجئ أو متزايد</li><li>خفقان شديد أو نبض غير منتظم أو إغماء</li><li>ضيق نفس شديد أو زرقة أو زيادة الوزن بسرعة</li><li>انخفاض ضغط أو برودة وتعرق (صدمة قلبية)</li><li>نبض أقل من 50 قبل Carvedilol أو Digoxin</li><li>حرارة جديدة مع تدهور الحالة</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report to the physician immediately if:</strong><ul><li>Sudden or increasing chest pain</li><li>Severe palpitations, an irregular pulse or syncope</li><li>Severe shortness of breath, cyanosis or rapid weight gain</li><li>Low blood pressure or cold, sweaty skin (cardiogenic shock)</li><li>Pulse below 50 before Carvedilol or Digoxin</li><li>New fever with deterioration</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>الراحة التامة في فترة المرض والرجوع للرياضة والمجهود بعد موافقة الطبيب فقط (غالباً بعد 3–6 أشهر).</li><li>وزن نفسك كل صباح وسجّله، وقلل الملح.</li><li>التزم بالأدوية ولا تتخطّى الجرعات.</li><li>ابتعد عن مسكنات NSAIDs (ديكلوفيناك، إيبوبروفين) إلا بأمر الطبيب.</li><li>أي خفقان أو إغماء أو ألم صدر: اذهب للطوارئ.</li><li>راجع الطبيب للمتابعة بالإيكو.</li></ul>",
+   "en": "<ul><li>Complete rest during the illness, and return to sports and exertion only after the physician's approval (usually after 3–6 months).</li><li>Weigh yourself every morning and record it, and reduce salt.</li><li>Stick to your medications and do not skip doses.</li><li>Stay away from NSAID painkillers (diclofenac, ibuprofen) unless ordered by the physician.</li><li>Any palpitations, fainting or chest pain: go to the ER.</li><li>See the physician for follow-up with echo.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "السبب الأشهر فيروسي (Coxsackie وغيره) أو مناعي أو دوائي",
+   "الأعراض: ألم صدر، فشل قلب، خفقان، حرارة، موت مفاجئ",
+   "ECG: انقلاب T منتشر وارتفاع ST سرجي، والإيكو يظهر ضعف الوظيفة",
+   "العلاج: راحة تامة + علاج فشل القلب + السبب",
+   "Digoxin بحذر شديد وراقب النبض قبل الجرعة",
+   "تجنب المجهود 3–6 شهور وNSAIDs"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>التهاب عضلة القلب (Myocarditis) هو التهاب في عضلة القلب نفسها، غالباً من فيروس أو مناعة ذاتية أو دواء. بيتراوح من حالة بسيطة وتتحسن لوحدها، إلى فشل قلب واضطراب نبض خطير وموت مفاجئ، وخصوصاً عند الشباب والرياضيين.</p>[[slot:dis-126-pathway|مسار المرض — رسم من إعداد الموقع|/diseases/img/dis-126-pathway.svg]]<div class=\"cs-stats\"><div><b>Viral</b><span>الأشهر: فيروسي</span></div><div><b>ECG + Echo</b><span>أهم فحصين</span></div><div><b>راحة تامة</b><span>أول علاج</span></div></div><div class=\"cs-box cs-warning\"><strong>ليه مهم؟</strong><p>ألم صدر عند شاب بعد عدوى فيروسية (برد أو إسهال) ممكن يكون Myocarditis وليس «تعب عادي». ومعاه خفقان أو ضيق نفس = بلّغ فوراً.</p></div><!--M1--><h4>معلومات مكملة</h4><p>التهاب عضلة القلب غالباً بسبب عدوى (أغلبها فيروسية)، وقد ينتج أيضاً عن التسمم الكحولي المزمن أو الأدوية أو أمراض تنكس العضلة. النتيجة ضعف الضخ وفشل القلب. بعضها يشفى تلقائياً وبعضها يتطور إلى اعتلال عضلة قلب متوسع <a href=\"/diseases/dis-604\">(راجع هنا)</a> أو فشل قلب.</p>"
-    },
-    "causes": {
-      "ar": "<h4>أسباب (Etiology)</h4><ol><li><b>فيروسات:</b> Coxsackie وAdenoviruses وInfluenza وغيرها</li><li><b>بكتيريا / فطريات / ريكتسيا / طفيليات</b></li><li><b>حساسية دوائية (Drug hypersensitivity)</b></li><li><b>مناعة ذاتية (Auto-immunity)</b></li></ol><div class=\"cs-box cs-info\"><strong>أسباب إضافية ينبغي معرفتها</strong><p>الدفتيريا (مضاعفة معروفة)، داء شاغاس، الذئبة، الساركويد، السموم والكحول، بعض أدوية السرطان، وأحياناً بعد عدوى كوفيد أو لقاحات mRNA (نادر وغالباً حميد عند الشباب الذكور).</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>الصورة السريرية</h4><ol><li><b>ألم صدر</b></li><li><b>فشل قلب احتقاني (CHF):</b> احتقان أوردة الرقبة، تضخم الكبد، وتورم الرجلين (LL oedema)</li><li><b>خفقان</b> بسبب اضطراب النبض (Arrhythmias)</li><li><b>حرارة</b> وخصوصاً لو العدوى هي السبب</li><li><b>موت مفاجئ</b></li></ol><div class=\"cs-box cs-tip\"><strong>فكّر بالتالي</strong><p>مرض فيروسي حديث + تعب شديد + ضيق نفس مع مجهود + ألم صدر خفيف أو خفقان. وبعض المرضى بلا أي أعراض.</p></div><h4>الحالات المتقدمة</h4><ul><li>إغماء (Syncope) أو اضطراب نظم بطيني</li><li>فشل القلب الحاد وصدمة قلبية (Fulminant myocarditis)</li><li>ألم صدر مثل التهاب التامور مع احتكاك</li></ul>"
-    },
-    "tests": {
-      "ar": "<h4>الفحوصات (حسب المراجع)</h4><table><thead><tr><th>الفحص</th><th>النتيجة</th></tr></thead><tbody><tr><td>ECG</td><td>انقلاب موجة T منتشر، ارتفاع ST بشكل «سرج» (Saddle shaped)</td></tr><tr><td>أشعة صدر (CXR)</td><td>ظل القلب طبيعي، وتضخم القلب لو فشل قلب</td></tr><tr><td>إيكو (Echo)</td><td>ضعف وظيفة البطين الأيسر الانقباضية والانبساطية، انخفاض الكسر القذفي (EF)، وقد يوجد انصباب تاموري</td></tr><tr><td>MRI</td><td>للتشخيص الدقيق</td></tr><tr><td>تحاليل دم</td><td>ارتفاع ESR وCRP وإنزيمات القلب وكرات الدم البيضاء وLDH</td></tr></tbody></table>[[slot:dis-126-ecg|صورة: رسم قلب بارتفاع ST منتشر على شكل سرج وانقلاب T]]<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>التشخيص الحديث: <b>التروبونين</b> مرتفع غالباً، و<b>Cardiac MRI</b> (معايير Lake Louise) هو الفحص المركزي، والخزعة عضلية بالقسطرة (EMB) تُستخدم في الحالات الشديدة أو الغامضة. وقسطرة القلب أو CT للشرايين لاستبعاد الجلطة القلبية لأن الأعراض متشابهة. ومعظم الفحوص (ESR/CRP/LDH) غير نوعية.</p></div><!--M1--><h4>تفاصيل</h4><ul><li>ECG: تغيرات ST بسبب تهيج العضلة</li><li>خزعة عضلة القلب لتحديد الميكروب أو الالتهاب بعد الشفاء من العدوى</li><li>أشعة صدر: تضخم القلب</li><li>إيكو لحجم ووظيفة القلب</li><li>CK-MB وتروبونين بسبب موت الخلايا</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>1) الراحة</h4><p>راحة تامة في السرير (Complete bed rest) خصوصاً في الفترة الحادة.</p><h4>2) الأدوية</h4><table><thead><tr><th>الفئة</th><th>الدواء (الاسم التجاري)</th><th>الجرعة (حسب المراجع)</th></tr></thead><tbody><tr><td>مثبط ACE</td><td>Tritace (تريتاس) 2.5 mg — Ramipril</td><td>قرص مرة أو مرتين يومياً</td></tr><tr><td>حاصر قنوات الكالسيوم</td><td>Alkapress (ألكابريس) 5 أو 10 mg — Amlodipine</td><td>قرص مرة يومياً</td></tr><tr><td>مدرّ بول</td><td>Lasix (لازيكس) 20 mg — Furosemide</td><td>أمبول وريدي مرتين يومياً</td></tr><tr><td>حاصر ألفا وبيتا</td><td>Carvid (كارفيد) 6.25 mg — Carvedilol</td><td>قرص مرتين يومياً</td></tr><tr><td>مقوٍّ للقلب (Inotropic)</td><td>Lanoxin (لانوكسين) 0.25 mg — Digoxin</td><td>نصف إلى قرص واحد (0.125–0.25 مجم) مرة يومياً حسب أمر الطبيب</td></tr><tr><td>مضاد حيوي مناسب</td><td>Cefotax (سيفوتاكس) 1 جم</td><td>عضل أو وريدي مرتين يومياً</td></tr><tr><td>كورتيكوستيرويد (للمناعة الذاتية)</td><td>Synacthen (سينكاثين) أمبول — Tetracosactide</td><td>حقنة عضل</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>Digoxin:</b> في التهاب العضلة الحاد القلب أكثر حساسية له وخطر اضطراب النبض أكبر؛ يُستخدم بحذر شديد وبأمر الطبيب فقط.</li><li><b>Amlodipine:</b> ليس علاجاً أساسياً في فشل القلب الانقباضي (HFrEF)؛ يعتمد الاختيار على الطبيب.</li><li><b>Synacthen</b> هو ACTH صناعي (يحفز الغدة الكظرية) وليس ستيرويداً مباشراً؛ يُستخدم الكورتيزون (Prednisolone) أو مثبطات المناعة في أنواع محددة (Giant cell، Eosinophilic، الساركويد) بقرار متخصص.</li><li><b>تجنب مضادات الالتهاب غير الستيرويدية (NSAIDs) وتجنب المجهود الشديد:</b> يوصى بالامتناع عن الرياضة التنافسية 3–6 أشهر ثم إعادة التقييم.</li><li>ينفّذ علاج فشل القلب القياسي (ACEi/ARNI، حاصر بيتا، MRA...) عند ضعف الوظيفة، والحالات الشديدة تحتاج عناية مركزة ودعم ميكانيكي.</li></ul></div><!--M1--><h4>أدوية</h4><ul><li>علاج السبب</li><li>دعم الفشل القلبي</li><li>مضادات اضطراب النظم لو لزم: كينيدين، بروكاينأميد (ملاحظة: الكينيدين قل استخدامه)</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم القلب بعمق</strong><p>نبض (سرعة، انتظام)، ضغط، تنفس، SpO2، وعي. استمع/سجّل أي نفخة. ألم الصدر: مكانه وشدته وهل يتغير بالتنفس أو الوضع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>مونيتور مستمر</strong><p>مراقبة ECG مستمرة في الحالات الحادة: ابحث عن خروج نبض مبكر، رجفان، تسارع بطيني، حصار. جهّز جهاز الصدمة وأدوية الطوارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راحة تامة</strong><p>سرير مع رفع الرأس 30–45 درجة لو ضيق نفس، تقليل النشاط والإزعاج، مساعدة في كل الأنشطة، وتجنب الإجهاد (الحمام/السرير).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الوزن والسوائل</strong><p>وزن يومي بنفس الميزان، Intake/Output، تورم الكاحلين، احتقان الرقبة، ضيق النفس. بلّغ عن زيادة 1 كجم في يوم أو 2 كجم في 3 أيام (علامات احتقان).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ الأدوية بأمان</strong><p>Lasix: وريدي ببطء 2–5 دقائق (لا يزيد 4 mg/دقيقة)، تابع بوتاسيوم وصوديوم وكلى، ورقابة الضغط. ACEi/Carvedilol: اقيس الضغط والنبض قبل كل جرعة، وأوقف وبلّغ لو النبض أقل من 50–60 أو الضغط الانقباضي أقل من 90 أو أعراض هبوط الضغط. Digoxin: نبض كامل دقيقة قبل الجرعة (أقل من 60 أوقف وبلّغ)، تأكد من البوتاسيوم؛ اسأل عن غثيان ورؤية صفراء. Cefotaxime: حساسية البنسلين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الحرارة والعدوى</strong><p>قياس الحرارة كل 4 ساعات، عزل لو فيروسي معدي، علاج خفض الحرارة حسب الأمر (باراسيتامول، وتجنب NSAIDs).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>النفسية والتثقيف</strong><p>القلق شائع: طمّن المريض واشرح أهمية الراحة. وتجنب الرياضة 3–6 أشهر على الأقل حسب الطبيب.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>ألم صدر + نبض غير منتظم أو سريع جداً أو بطيء جداً، أو إغماء، أو ضيق نفس مفاجئ مع انخفاض الضغط: نداء طوارئ فوراً (ECG، مونيتور، أكسجين لو SpO2 أقل من 94%).</p></div><h4>التوثيق</h4><ul><li>نمط النبض وECG والألم</li><li>الوزن والسوائل</li><li>الأدوية والتحاليل (بوتاسيوم، تروبونين، كلى)</li><li>الحرارة</li><li>تعليمات الراحة والمتابعة</li></ul><!--M1--><h4>نقاط تمريضية إضافية</h4><ul><li>حدد النشاط مؤقتاً لتقليل الجهد</li><li>وفّر كومود بجانب السرير</li><li>راقب ضيق النفس (احتقان) وسرعة النبض (أكتر من 100)</li><li>ممنوع الرياضة التنافسية</li><li>العودة التدريجية للنشاط بعد إذن الطبيب (غالباً بعد 3–6 شهور)</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>ألم صدر مفاجئ أو متزايد</li><li>خفقان شديد أو نبض غير منتظم أو إغماء</li><li>ضيق نفس شديد أو زرقة أو زيادة الوزن بسرعة</li><li>انخفاض ضغط أو برودة وتعرق (صدمة قلبية)</li><li>نبض أقل من 50 قبل Carvedilol أو Digoxin</li><li>حرارة جديدة مع تدهور الحالة</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>الراحة التامة في فترة المرض والرجوع للرياضة والمجهود بعد موافقة الطبيب فقط (غالباً بعد 3–6 أشهر).</li><li>وزن نفسك كل صباح وسجّله، وقلل الملح.</li><li>التزم بالأدوية ولا تتخطّى الجرعات.</li><li>ابتعد عن مسكنات NSAIDs (ديكلوفيناك، إيبوبروفين) إلا بأمر الطبيب.</li><li>أي خفقان أو إغماء أو ألم صدر: اذهب للطوارئ.</li><li>راجع الطبيب للمتابعة بالإيكو.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "السبب الأشهر فيروسي (Coxsackie وغيره) أو مناعي أو دوائي",
-      "الأعراض: ألم صدر، فشل قلب، خفقان، حرارة، موت مفاجئ",
-      "ECG: انقلاب T منتشر وارتفاع ST سرجي، والإيكو يظهر ضعف الوظيفة",
-      "العلاج: راحة تامة + علاج فشل القلب + السبب",
-      "Digoxin بحذر شديد وراقب النبض قبل الجرعة",
-      "تجنب المجهود 3–6 شهور وNSAIDs"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي من الآتي سبب شائع لالتهاب عضلة القلب؟"
-      },
-      "options": [
-        {
-          "ar": "فيروس Coxsackie"
-        },
-        {
-          "ar": "نقص كالسيوم"
-        },
-        {
-          "ar": "السكر فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الفيروسات أشهر الأسباب."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول إجراء علاجي حسب المراجع؟"
-      },
-      "options": [
-        {
-          "ar": "رياضة"
-        },
-        {
-          "ar": "راحة تامة في السرير"
-        },
-        {
-          "ar": "صيام"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الراحة تخفف العبء على القلب."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل Digoxin يكون النبض 52. ماذا تفعل؟"
-      },
-      "options": [
-        {
-          "ar": "تعطي الجرعة"
-        },
-        {
-          "ar": "توقف الجرعة وتبلّغ"
-        },
-        {
-          "ar": "تضاعف"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "النبض أقل من 60 سبب للتوقف."
-      }
-    },
-    {
-      "q": {
-        "ar": "نتيجة ECG مشهورة في Myocarditis؟"
-      },
-      "options": [
-        {
-          "ar": "انقلاب T منتشر وST سرجي"
-        },
-        {
-          "ar": "ECG مطابق تماماً دائماً"
-        },
-        {
-          "ar": "Q waves فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تغيرات منتشرة في عدة تسجيلات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي من الآتي يجب تجنبه؟"
-      },
-      "options": [
-        {
-          "ar": "الراحة"
-        },
-        {
-          "ar": "NSAIDs والمجهود الشديد"
-        },
-        {
-          "ar": "وزن يومي"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "قد يزيد الالتهاب والاضطراب."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ESC Position Statement on Myocarditis (2013) and ESC 2025 Myocarditis & Pericarditis Guidelines"
-    },
-    {
-      "title": "AHA Scientific Statement: Diagnosis and Management of Myocarditis (2020)"
-    },
-    {
-      "title": "StatPearls: Myocarditis"
-    }
+  "en": [
+   "The most common cause is viral (Coxsackie and others), or immune or drug-related",
+   "Symptoms: chest pain, heart failure, palpitations, fever, sudden death",
+   "ECG: diffuse T inversion and saddle-shaped ST elevation, and echo shows impaired function",
+   "Treatment: complete rest + heart failure therapy + the cause",
+   "Digoxin with extreme caution, and check the pulse before the dose",
+   "Avoid exertion for 3–6 months and NSAIDs"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي من الآتي سبب شائع لالتهاب عضلة القلب؟",
+    "en": "Which of the following is a common cause of myocarditis?"
+   },
+   "options": [
+    {
+     "ar": "فيروس Coxsackie",
+     "en": "Coxsackie virus"
+    },
+    {
+     "ar": "نقص كالسيوم",
+     "en": "Low calcium"
+    },
+    {
+     "ar": "السكر فقط",
+     "en": "Diabetes only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الفيروسات أشهر الأسباب.",
+    "en": "Viruses are the most common causes."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول إجراء علاجي حسب المراجع؟",
+    "en": "The first treatment measure?"
+   },
+   "options": [
+    {
+     "ar": "رياضة",
+     "en": "Exercise"
+    },
+    {
+     "ar": "راحة تامة في السرير",
+     "en": "Complete bed rest"
+    },
+    {
+     "ar": "صيام",
+     "en": "Fasting"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الراحة تخفف العبء على القلب.",
+    "en": "Rest reduces the load on the heart."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل Digoxin يكون النبض 52. ماذا تفعل؟",
+    "en": "Before Digoxin the pulse is 52. What do you do?"
+   },
+   "options": [
+    {
+     "ar": "تعطي الجرعة",
+     "en": "Give the dose"
+    },
+    {
+     "ar": "توقف الجرعة وتبلّغ",
+     "en": "Hold the dose and report"
+    },
+    {
+     "ar": "تضاعف",
+     "en": "Double it"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "النبض أقل من 60 سبب للتوقف.",
+    "en": "A pulse below 60 is a reason to hold."
+   }
+  },
+  {
+   "q": {
+    "ar": "نتيجة ECG مشهورة في Myocarditis؟",
+    "en": "A well-known ECG finding in myocarditis?"
+   },
+   "options": [
+    {
+     "ar": "انقلاب T منتشر وST سرجي",
+     "en": "Diffuse T inversion and saddle-shaped ST"
+    },
+    {
+     "ar": "ECG مطابق تماماً دائماً",
+     "en": "A completely normal ECG always"
+    },
+    {
+     "ar": "Q waves فقط",
+     "en": "Q waves only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تغيرات منتشرة في عدة تسجيلات.",
+    "en": "Diffuse changes across several leads."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من الآتي يجب تجنبه؟",
+    "en": "Which of the following should be avoided?"
+   },
+   "options": [
+    {
+     "ar": "الراحة",
+     "en": "Rest"
+    },
+    {
+     "ar": "NSAIDs والمجهود الشديد",
+     "en": "NSAIDs and strenuous exertion"
+    },
+    {
+     "ar": "وزن يومي",
+     "en": "Daily weight"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "قد يزيد الالتهاب والاضطراب.",
+    "en": "They may increase inflammation and arrhythmia."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ESC Position Statement on Myocarditis (2013) and ESC 2025 Myocarditis & Pericarditis Guidelines"
+  },
+  {
+   "title": "AHA Scientific Statement: Diagnosis and Management of Myocarditis (2020)"
+  },
+  {
+   "title": "StatPearls: Myocarditis"
+  }
+ ]
 }

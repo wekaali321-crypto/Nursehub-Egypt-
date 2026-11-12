@@ -1,175 +1,221 @@
 {
-  "id": "dis-049",
-  "num": 49,
-  "system": "blood",
-  "icon": "🩸",
-  "level": 3,
-  "title": {
-    "ar": "الإدارة العامة للنزيف",
-    "en": "General Management of Bleeding"
+ "id": "dis-049",
+ "num": 49,
+ "system": "blood",
+ "icon": "🩸",
+ "level": 3,
+ "title": {
+  "ar": "الإدارة العامة للنزيف",
+  "en": "General Management of Bleeding"
+ },
+ "teaser": {
+  "ar": "أول خمس دقايق: ضغط على الجرح، مؤشرات حيوية، كانيولتين، فصيلة دم، محلول. ومتى تنقل دم، وإيه تعمل لو حصل رد فعل نقل.",
+  "en": "The first five minutes: pressure on the wound, vital signs, two cannulas, blood group, IV fluid. Plus when to transfuse blood, and what to do if a transfusion reaction happens."
+ },
+ "chips": [
+  {
+   "ar": "ضغط + كانيولتين",
+   "en": "Pressure + two cannulas"
   },
-  "teaser": {
-    "ar": "أول خمس دقايق: ضغط على الجرح، مؤشرات حيوية، كانيولتين، فصيلة دم، محلول. ومتى تنقل دم، وإيه تعمل لو حصل رد فعل نقل."
+  {
+   "ar": "نقل الدم",
+   "en": "Blood transfusion"
   },
-  "chips": [
-    {
-      "ar": "ضغط + كانيولتين"
-    },
-    {
-      "ar": "نقل الدم"
-    },
-    {
-      "ar": "مضاعفات النقل"
-    }
+  {
+   "ar": "مضاعفات النقل",
+   "en": "Transfusion complications"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>أي مريض بينزف لازم يتعامل معاه بنفس الترتيب السريع: <b>إيقاف النزيف + تقييم + خط وريدي + عينة + سوائل</b>. السرعة هي اللي بتفرق بين مريض بيستقر ومريض بيدخل في صدمة.</p>\n[[slot:dis-049-steps|خطوات الإدارة الأولية للنزيف بالترتيب|/diseases/img/dis-049-steps.svg]]\n<div class=\"cs-box cs-danger\"><strong>القاعدة الذهبية </strong><p>أول ما تشوف مريض بينزف: <b>حاول توقف النزيف بالضغط على مكان النزيف</b>، قيس الضغط والنبض، ركّب كانيولات، خد عينة واعرف الفصيلة، وركّب محلول لوقف النزيف.</p></div>\n[[slot:dis-049-photo|صورة توضح الضغط المباشر على جرح نازف مع رفع الطرف]]",
+   "en": "<p>Any bleeding patient must be managed in the same fast order: <b>stop the bleeding + assess + IV line + sample + fluids</b>. Speed is what makes the difference between a patient who stabilizes and a patient who goes into shock.</p>\n[[slot:dis-049-steps|Steps of initial bleeding management in order|/diseases/img/dis-049-steps.svg]]\n<div class=\"cs-box cs-danger\"><strong>The golden rule </strong><p>As soon as you see a bleeding patient: <b>try to stop the bleeding by pressing on the bleeding site</b>, measure the blood pressure and pulse, insert cannulas, take a sample and find out the blood group, and hang an IV solution to stop the bleeding.</p></div>\n[[slot:dis-049-photo|Picture showing direct pressure on a bleeding wound with the limb elevated]]"
+  },
+  "causes": {
+   "ar": "<p>مصادر النزيف (معلومة عامة تساعد التقييم):</p>\n<div class=\"cs-compare\"><ul><li><b>خارجي:</b> جروح وإصابات، نزيف أنف، نزيف أطراف</li><li><b>جهاز هضمي علوي:</b> قرحة، التهاب معدة، مالوري ويس، دوالي المريء (قيء دم، براز أسود)</li><li><b>جهاز هضمي سفلي:</b> بواسير، أورام، التهاب قولون (دم مع البراز)</li><li><b>نسائي وولادة:</b> نزيف الحمل والولادة</li><li><b>اضطراب تخثر:</b> أدوية مميعة، أمراض كبد، نقص صفائح</li></ul></div>",
+   "en": "<p>Sources of bleeding (general information that helps assessment):</p>\n<div class=\"cs-compare\"><ul><li><b>External:</b> wounds and injuries, nosebleed, limb bleeding</li><li><b>Upper GI tract:</b> ulcer, gastritis, Mallory-Weiss tear, esophageal varices (hematemesis, black stool)</li><li><b>Lower GI tract:</b> hemorrhoids, tumors, colitis (blood with the stool)</li><li><b>Gynecologic and obstetric:</b> bleeding of pregnancy and delivery</li><li><b>Coagulation disorder:</b> blood-thinning drugs, liver disease, low platelets</li></ul></div>"
+  },
+  "signs": {
+   "ar": "<h4>علامات فقد الدم</h4>\n<ul><li>نبض سريع وضعيف، ضغط منخفض (انخفاض الضغط عند الوقوف علامة مبكرة)</li><li>شحوب وبرودة وعرق، عطش، دوخة</li><li>تنفس سريع، قلق وتشويش، قلة بول</li><li>ضغط انقباضي أقل من 100 مم زئبق أو نبض أكتر من 100 دقيقة (من مؤشرات نقل الدم في المراجع)</li></ul>\n<table><thead><tr><th>درجة فقد الدم (تقسيم ATLS)</th><th>تقريب الفقد</th><th>العلامات</th></tr></thead><tbody><tr><td>I</td><td>أقل من 15% (حتى 750 مل)</td><td>غالباً طبيعي</td></tr><tr><td>II</td><td>15–30%</td><td>نبض سريع، ضغط الانبساطي ممكن يقل قليلاً</td></tr><tr><td>III</td><td>30–40%</td><td>نبض سريع جداً، ضغط منخفض، تشويش</td></tr><tr><td>IV</td><td>أكتر من 40%</td><td>تهديد مباشر للحياة</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>ملاحظة</strong><p>الشباب والرياضيين بيعوضوا الفقد لفترة، فالضغط ممكن يفضل طبيعي لحد ما ينهار فجأة. النبض السريع أول علامة. والمرضى على Beta blockers قد لا يسرع نبضهم.</p></div>",
+   "en": "<h4>Signs of blood loss</h4>\n<ul><li>Fast, weak pulse and low blood pressure (a drop in pressure on standing is an early sign)</li><li>Pallor, coldness and sweating, thirst, dizziness</li><li>Fast breathing, anxiety and confusion, low urine output</li><li>Systolic pressure below 100 mmHg or pulse above 100 per minute (among the indications for blood transfusion)</li></ul>\n<table><thead><tr><th>Class of blood loss (ATLS classification)</th><th>Approximate loss</th><th>Signs</th></tr></thead><tbody><tr><td>I</td><td>Less than 15% (up to 750 mL)</td><td>Usually normal</td></tr><tr><td>II</td><td>15–30%</td><td>Fast pulse, diastolic pressure may drop slightly</td></tr><tr><td>III</td><td>30–40%</td><td>Very fast pulse, low blood pressure, confusion</td></tr><tr><td>IV</td><td>More than 40%</td><td>Immediate threat to life</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>Note</strong><p>Young people and athletes compensate for the loss for a while, so the blood pressure may stay normal until it suddenly collapses. A fast pulse is the first sign. Patients on beta blockers may not develop a fast pulse.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>فصيلة الدم وتحاليل التطابق (Blood group & cross-match)</b></li><li>صورة دم كاملة (CBC): هيموجلوبين (Hb) وصفائح، ويتكرر بعد النزيف لأن القيمة الأولى قد تكون مضللة</li><li>تحاليل التجلط (PT/INR, aPTT) ووظائف الكبد والكلى والكهارل</li><li>غازات دم/لاكتات في الحالات الشديدة</li><li>منظار أو أشعة أو سونار لتحديد مصدر النزيف (حسب الحالة)</li></ul>\n<div class=\"cs-box cs-tip\"><strong>للتمريض</strong><p>وقت أخد العينة: خدها من خط تاني غير الخط اللي فيه محاليل لتجنب التخفيف. اكتب بيانات المريض بوضوح على أنبوبة فصيلة الدم، لأن الخطأ فيها خطر الحياة.</p></div>",
+   "en": "<ul><li><b>Blood group and cross-match</b></li><li>Complete blood count (CBC): hemoglobin (Hb) and platelets, repeated after the bleeding because the first value may be misleading</li><li>Coagulation tests (PT/INR, aPTT), liver and kidney function, and electrolytes</li><li>Blood gases/lactate in severe cases</li><li>Endoscopy, X-ray, or ultrasound to locate the source of bleeding (depending on the case)</li></ul>\n<div class=\"cs-box cs-tip\"><strong>For nursing</strong><p>When taking the sample: take it from a different line than the one running IV fluids to avoid dilution. Write the patient's data clearly on the blood group tube, because an error here is life-threatening.</p></div>"
+  },
+  "treatment": {
+   "ar": "<h4>الإدارة الأولية (Initial management)</h4>\n<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>افحص النبض والضغط</strong><p>Check pulse and blood pressure</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أكسجين بالقناع لو لازم</strong><p>Oxygen mask if needed</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ركّب كانيولا في الذراعين اليمين والشمال (وريد طرفي)</strong><p>Insert right and left cannula (peripheral vein)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>فصيلة الدم</strong><p>Blood group</p></div></div></div>\n<h4>محلول وأدوية للنزيف (حسب المراجع)</h4>\n<p>تنقيط (Infusion): <b>500 سم رينجر + Dycinone أمبول (2 أمبول) + Cyclo-Capron أمبول (2 أمبول) + فيتامين K أمبول + Zantac أمبول</b>.</p>\n<table><thead><tr><th>الدواء</th><th>المادة الفعالة (حسب المنتج)</th><th>الدور المقصود</th></tr></thead><tbody><tr><td>Dycinone</td><td>ethamsylate</td><td>مساعد لوقف النزيف الشعيري</td></tr><tr><td>Cyclo-Capron</td><td>tranexamic acid</td><td>مانع للتحلل الليفي</td></tr><tr><td>فيتامين K</td><td>phytomenadione</td><td>يعوض عوامل التجلط الفيتامين K-معتمدة</td></tr><tr><td>Zantac</td><td>ranitidine</td><td>يخفض حمض المعدة (للنزيف الهضمي)</td></tr></tbody></table>\n<h4>دواعي نقل الدم (Indications of blood transfusion)</h4>\n<ul><li>فقد دم حاد مع نبض أكتر من 100 في الدقيقة أو ضغط أقل من 100 مم زئبق</li><li>هيموجلوبين أقل من 7 جم%</li><li>هيموجلوبين أقل من 8 جم% في مريض قلب أو صدر</li></ul>\n<p><b>ملاحظة (N.B.):</b> وحدة كرات حمراء مركزة (1 unit packed RBCs) ترفع الهيموجلوبين حوالي 1 جم%.</p>\n<h4>مضاعفات نقل الدم (Complications)</h4>\n<table><thead><tr><th>المضاعفة</th><th>العلاج</th></tr></thead><tbody><tr><td>حساسية (Allergy)</td><td>حقن وريدي: Avil + Dexa</td></tr><tr><td>حرارة (Fever)</td><td>حقن وريدي: Avil + Dexa، وحقن عضلي Declophen (diclofenac)</td></tr><tr><td>نقل دم غير متوافق (Incompatible)</td><td>سوائل وريدية بغزارة، مدرّات: Lasix + Mannitol + Dopamine، وبيكربونات الصوديوم NaHCO3</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>الضغط المباشر</b> على النزيف الخارجي هو الأساس (قماش نظيف أو شاش، مع رفع الطرف لو ممكن)، ولو غلب أو نزيف في الأطراف شديد: رباط ضاغط (Tourniquet) حسب التدريب والبروتوكول. ATLS الحديث بيبدأ بـ \"إيقاف النزيف الخارجي الشديد\" أولاً قبل ABC.</li><li><b>الهدف مش الضغط الطبيعي فوراً:</b> في النزيف النشط يُفضل تقليل المحاليل البلورية (رينجر/ملح) وتعويض الدم ومشتقاته مبكراً (permissive hypotension) لحد السيطرة على النزيف، حسب بروتوكول المستشفى. المحلول المذكور (500 سم) يكون تمهيداً لحين وصول الدم.</li><li>حد النقل المعتمد (7 جم% للمرضى المستقرين، و8 جم% للقلب) مطابق للإرشادات الحديثة (restrictive strategy: 7–9 جم%). لكن <b>مع نزيف نشط وعدم استقرار لا ننتظر الهيموجلوبين</b>: النقل بالأعراض والعلامات.</li><li><b>Tranexamic acid</b> مفيد في الإصابات والنزيف الشديد خلال 3 ساعات من الحدث (بروتوكول الجرعة: غالباً 1 جم ثم 1 جم تسريب حسب الأمر). لكن في النزيف الهضمي لم يثبت فائدة (دراسة HALT-IT) وزاد الجلطات: لا يُعطى روتينياً.</li><li>Dycinone: دليل ضعيف على فعاليته في النزيف الشديد. وفيتامين K مفيد فقط في حالات نقصه (أدوية warfarin، أمراض كبد/صفراء).</li><li>Zantac (ranitidine) اتسحب: في النزيف الهضمي البديل هو PPI وريدي (pantoprazole) حسب الأمر.</li><li><b>رد فعل نقل الدم:</b> أول خطوة دايماً: <b>وقف النقل فوراً</b>، إبقاء الخط مفتوح بمحلول ملح عادي (جديد ومش بنفس الأنبوب)، التأكد من هوية المريض والكيس، إبلاغ الطبيب وبنك الدم وإرجاع الكيس مع عينة دم. بعدها العلاج حسب النوع. الحرارة البسيطة: خافض (paracetamol) بدل diclofenac IM (مضاد التهاب ممكن يضر الكلى والنزيف). الحساسية البسيطة: مضاد هيستامين، والشديدة (تضيق، هبوط ضغط) = أدرينالين عضلي حسب بروتوكول الحساسية المفرطة. نقل الدم غير المتوافق طوارئ: سوائل + دعم كلوي ومدرّات حسب الطبيب.</li></ul></div><!--e2-49--><h4>القيء الدموي</h4><p>للقيء الدموي (غالباً دوالي المريء أو قرحة) راجع دليل «القيء الدموي» (dis-280): كانيولتين، دم بعد التوافق، 500 سم ملح 0.9% + Pantazol + Dycinone + Kapron (Tranexamic acid)، وأنبوبة رايل لو أمر الطبيب. وحديثاً Kapron غير موصى به في نزيف الجهاز الهضمي (HALT-IT).</p>",
+   "en": "<h4>Initial management</h4>\n<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Check the pulse and blood pressure</strong><p>Check pulse and blood pressure</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Oxygen by mask if needed</strong><p>Oxygen mask if needed</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Insert a cannula in the right and left arms (peripheral vein)</strong><p>Insert right and left cannula (peripheral vein)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Blood group</strong><p>Blood group</p></div></div></div>\n<h4>IV solution and drugs for bleeding</h4>\n<p>Infusion: <b>500 cc Ringer's + Dycinone ampoule (2 ampoules) + Cyclo-Capron ampoule (2 ampoules) + vitamin K ampoule + Zantac ampoule</b>.</p>\n<table><thead><tr><th>Drug</th><th>Active ingredient (per product)</th><th>Intended role</th></tr></thead><tbody><tr><td>Dycinone</td><td>ethamsylate</td><td>Helps stop capillary bleeding</td></tr><tr><td>Cyclo-Capron</td><td>tranexamic acid</td><td>Antifibrinolytic</td></tr><tr><td>Vitamin K</td><td>phytomenadione</td><td>Replaces the vitamin K-dependent clotting factors</td></tr><tr><td>Zantac</td><td>ranitidine</td><td>Lowers stomach acid (for GI bleeding)</td></tr></tbody></table>\n<h4>Indications of blood transfusion</h4>\n<ul><li>Acute blood loss with pulse above 100 per minute or blood pressure below 100 mmHg</li><li>Hemoglobin below 7 g%</li><li>Hemoglobin below 8 g% in a cardiac or chest patient</li></ul>\n<p><b>Note (N.B.):</b> One unit of packed red cells (1 unit packed RBCs) raises hemoglobin by about 1 g%.</p>\n<h4>Complications of blood transfusion</h4>\n<table><thead><tr><th>Complication</th><th>Treatment</th></tr></thead><tbody><tr><td>Allergy</td><td>IV injection: Avil + Dexa</td></tr><tr><td>Fever</td><td>IV injection: Avil + Dexa, and IM injection of Declophen (diclofenac)</td></tr><tr><td>Incompatible blood transfusion</td><td>Generous IV fluids, diuretics: Lasix + Mannitol + Dopamine, and sodium bicarbonate NaHCO3</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li><b>Direct pressure</b> on external bleeding is the foundation (clean cloth or gauze, with limb elevation if possible), and if it fails or limb bleeding is severe: a tourniquet according to training and protocol. Modern ATLS starts with \"stopping severe external bleeding\" first, before ABC.</li><li><b>The goal is not a normal blood pressure right away:</b> in active bleeding it is preferred to limit crystalloids (Ringer's/saline) and replace blood and blood products early (permissive hypotension) until the bleeding is controlled, per hospital protocol. The solution mentioned (500 cc) serves as a bridge until blood arrives.</li><li>The accepted transfusion threshold (7 g% for stable patients, and 8 g% for cardiac patients) matches current guidance (restrictive strategy: 7–9 g%). But <b>with active bleeding and instability we do not wait for the hemoglobin</b>: transfuse based on symptoms and signs.</li><li><b>Tranexamic acid</b> is useful in trauma and severe bleeding within 3 hours of the event (dose protocol: usually 1 g then 1 g by infusion as ordered). But in GI bleeding no benefit was proven (the HALT-IT trial) and clots increased: it is not given routinely.</li><li>Dycinone: weak evidence of effectiveness in severe bleeding. Vitamin K is useful only in cases of deficiency (warfarin therapy, liver disease/jaundice).</li><li>Zantac (ranitidine) was withdrawn: in GI bleeding the alternative is an IV PPI (pantoprazole) as ordered.</li><li><b>Transfusion reaction:</b> the first step is always: <b>stop the transfusion immediately</b>, keep the line open with normal saline (new, and not through the same tubing), verify the identity of the patient and the bag, notify the physician and the blood bank, and return the bag with a blood sample. After that, treatment depends on the type. Mild fever: an antipyretic (paracetamol) instead of diclofenac IM (an anti-inflammatory that may harm the kidneys and worsen bleeding). Mild allergy: an antihistamine; severe allergy (airway narrowing, drop in blood pressure) = IM adrenaline per the anaphylaxis protocol. Incompatible blood transfusion is an emergency: fluids + renal support and diuretics per the physician.</li></ul></div><!--e2-49--><h4>Hematemesis</h4><p>For hematemesis (usually esophageal varices or an ulcer) see the \"Hematemesis\" guide (dis-280): two cannulas, blood after cross-matching, 500 cc saline 0.9% + Pantazol + Dycinone + Kapron (Tranexamic acid), and a Ryle tube if the physician orders it. More recently, Kapron is not recommended in GI bleeding (HALT-IT).</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أوقف النزيف الخارجي</strong><p>ضغط مباشر بقماش نظيف، رفع الطرف، استمر بدون رفع اليد لعدة دقايق. لا تشيل الضمادة الأولى وضيف فوقها. لو غلب: رباط ضاغط حسب الحالة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّم بسرعة</strong><p>نبض، ضغط، RR، SpO2، حرارة، وعي، لون الجلد، كمية النزيف ولونه ومكانه. ابدأ مراقبة مستمرة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أكسجين ووضع</strong><p>أكسجين لو SpO2 منخفضة أو صدمة. وضع المريض مستلقي، ورجل مرفوعة قليلاً (أو وضع حسب الحالة). ما ترفعش الراس لو ضغط منخفض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>خطين وريديين كبار</strong><p>كانيولا يمين وشمال (أكبر مقاس متاح). اسحب العينات: فصيلة، تطابق، CBC، تجلط، كيمياء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>سوائل وأدوية</strong><p>ابدأ المحلول حسب الأمر (رينجر 500 سم + الأدوية المضافة)، وراقب الحمل الزائد في مرضى القلب والكلى. ما تضيفش أدوية للكيس من غير أمر وتحقق من التوافق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>جهّز الدم</strong><p>اتحقق من اسم المريض وفصيلته مرتين مع زميل قبل كل وحدة. ابدأ ببطء أول 15 دقيقة وراقب العلامات كل 15 دقيقة، ثم حسب البروتوكول. قيس الحرارة قبل وبعد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>راقب رد فعل النقل</strong><p>حرارة، قشعريرة، طفح، حكة، ضيق نفس، ألم ضهر، بول أحمر، هبوط ضغط: <b>أوقف النقل فوراً</b> وبلّغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تابع وسجّل</strong><p>وقت بداية النزيف، الكمية التقريبية، العلامات الحيوية، المحاليل والدم، التغير في Hb، البول (هدف أكتر من 0.5 مل/كجم/ساعة). صيام لو مطلوب منظار.</p></div></div></div>\n<div class=\"cs-box cs-danger\"><strong>نقل الدم: وقف أولاً</strong><p>أي رد فعل مشتبه = <b>أوقف النقل</b>، أبقِ الخط بالملح العادي، بلّغ الطبيب وبنك الدم، وأعد الكيس. لا تستمر \"نشوف هيحصل إيه\".</p></div>\n<div class=\"cs-box cs-tip\"><strong>للتأكد قبل النقل</strong><p>الاسم الثلاثي، رقم الملف، الفصيلة على الكيس مطابقة للمريض، تاريخ الصلاحية، وسلامة الكيس (لون، تجلط، تسريب). لا تخلط دم مع أي محلول غير الملح العادي.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Stop the external bleeding</strong><p>Direct pressure with a clean cloth, elevate the limb, and keep pressing without lifting your hand for several minutes. Do not remove the first dressing; add more on top of it. If it fails: a tourniquet depending on the case.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Assess quickly</strong><p>Pulse, blood pressure, RR, SpO2, temperature, level of consciousness, skin color, and the amount, color, and site of bleeding. Start continuous monitoring.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Oxygen and position</strong><p>Oxygen if SpO2 is low or there is shock. Position the patient supine with the legs slightly raised (or a position that suits the case). Do not raise the head if the blood pressure is low.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Two large IV lines</strong><p>A cannula on the right and on the left (the largest size available). Draw the samples: blood group, cross-match, CBC, coagulation, chemistry.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Fluids and drugs</strong><p>Start the solution as ordered (Ringer's 500 cc + the added drugs), and watch for fluid overload in cardiac and renal patients. Do not add drugs to the bag without an order, and check compatibility.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Prepare the blood</strong><p>Check the patient's name and blood group twice with a colleague before every unit. Start slowly for the first 15 minutes and monitor the signs every 15 minutes, then per protocol. Measure the temperature before and after.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Watch for a transfusion reaction</strong><p>Fever, chills, rash, itching, shortness of breath, back pain, red urine, drop in blood pressure: <b>stop the transfusion immediately</b> and report.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Follow up and document</strong><p>Time the bleeding started, approximate amount, vital signs, fluids and blood given, change in Hb, urine output (target more than 0.5 mL/kg/hour). NPO if endoscopy is needed.</p></div></div></div>\n<div class=\"cs-box cs-danger\"><strong>Blood transfusion: stop first</strong><p>Any suspected reaction = <b>stop the transfusion</b>, keep the line open with normal saline, notify the physician and the blood bank, and return the bag. Do not continue \"to see what happens.\"</p></div>\n<div class=\"cs-box cs-tip\"><strong>To verify before transfusion</strong><p>Full three-part name, file number, blood group on the bag matching the patient, expiry date, and integrity of the bag (color, clots, leakage). Do not mix blood with any solution other than normal saline.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>نبض أكتر من 100 أو ضغط أقل من 100 انقباضي</li><li>تشويش أو نعاس أو برودة وشحوب</li><li>قيء دم أو براز أسود أو نزيف لا يتوقف بالضغط</li><li>انخفاض الهيموجلوبين عن 7 جم% (أو 8 في القلب والصدر)</li><li>أي علامة رد فعل نقل: حرارة، طفح، ضيق نفس، بول أحمر</li><li>نقص البول أو عدم التبول</li><li>مريض على مميعات الدم أو أمراض تخثر</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Pulse above 100 or systolic pressure below 100</li><li>Confusion, drowsiness, or coldness and pallor</li><li>Hematemesis, black stool, or bleeding that does not stop with pressure</li><li>Hemoglobin drops below 7 g% (or 8 in cardiac and chest patients)</li><li>Any sign of a transfusion reaction: fever, rash, shortness of breath, red urine</li><li>Decreased urine output or no urination</li><li>A patient on blood thinners or with a coagulation disorder</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<p>كلام بسيط للمريض/الأهل:</p>\n<ul><li>ما تزيلش الضمادة الأولى، ضيف فوقها واضغط.</li><li>قول لو بتاخد أسبرين أو مميعات أو لو عندك مرض كبد أو حساسية قبل نقل دم.</li><li>قول فوراً لو حسيت بقشعريرة أو حكة أو ضيق نفس أثناء نقل الدم.</li><li>براز أسود أو قيء بلون القهوة = روح الطوارئ.</li><li>التزم بأدوية المعدة والمتابعة بعد النزيف الهضمي.</li></ul>",
+   "en": "<p>Simple words for the patient/family:</p>\n<ul><li>Do not remove the first dressing; add more on top of it and press.</li><li>Tell us if you take aspirin or blood thinners, or if you have liver disease or an allergy, before a blood transfusion.</li><li>Tell us right away if you feel chills, itching, or shortness of breath during the blood transfusion.</li><li>Black stool or coffee-colored vomit = go to the emergency department.</li><li>Stick to your stomach medicines and follow-up after GI bleeding.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "أول خطوة: ضغط على مكان النزيف ثم نبض وضغط",
+   "كانيولا في الذراعين + فصيلة دم + محلول",
+   "النقل: نبض أكتر من 100 أو ضغط أقل من 100 أو Hb أقل من 7 (8 للقلب والصدر)",
+   "وحدة كرات حمراء مركزة ≈ رفع Hb 1 جم%",
+   "رد فعل نقل: أوقف النقل فوراً وأبقِ الخط وبلّغ",
+   "Dycinone وCyclo-Capron وvit K: دورهم محدود ومحدد بحالات",
+   "الضغط الطبيعي مش هدف فوري في النزيف النشط"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>أي مريض بينزف لازم يتعامل معاه بنفس الترتيب السريع: <b>إيقاف النزيف + تقييم + خط وريدي + عينة + سوائل</b>. السرعة هي اللي بتفرق بين مريض بيستقر ومريض بيدخل في صدمة.</p>\n[[slot:dis-049-steps|خطوات الإدارة الأولية للنزيف بالترتيب|/diseases/img/dis-049-steps.svg]]\n<div class=\"cs-box cs-danger\"><strong>القاعدة الذهبية </strong><p>أول ما تشوف مريض بينزف: <b>حاول توقف النزيف بالضغط على مكان النزيف</b>، قيس الضغط والنبض، ركّب كانيولات، خد عينة واعرف الفصيلة، وركّب محلول لوقف النزيف.</p></div>\n[[slot:dis-049-photo|صورة توضح الضغط المباشر على جرح نازف مع رفع الطرف]]"
-    },
-    "causes": {
-      "ar": "<p>مصادر النزيف (معلومة عامة تساعد التقييم):</p>\n<div class=\"cs-compare\"><ul><li><b>خارجي:</b> جروح وإصابات، نزيف أنف، نزيف أطراف</li><li><b>جهاز هضمي علوي:</b> قرحة، التهاب معدة، مالوري ويس، دوالي المريء (قيء دم، براز أسود)</li><li><b>جهاز هضمي سفلي:</b> بواسير، أورام، التهاب قولون (دم مع البراز)</li><li><b>نسائي وولادة:</b> نزيف الحمل والولادة</li><li><b>اضطراب تخثر:</b> أدوية مميعة، أمراض كبد، نقص صفائح</li></ul></div>"
-    },
-    "signs": {
-      "ar": "<h4>علامات فقد الدم</h4>\n<ul><li>نبض سريع وضعيف، ضغط منخفض (انخفاض الضغط عند الوقوف علامة مبكرة)</li><li>شحوب وبرودة وعرق، عطش، دوخة</li><li>تنفس سريع، قلق وتشويش، قلة بول</li><li>ضغط انقباضي أقل من 100 مم زئبق أو نبض أكتر من 100 دقيقة (من مؤشرات نقل الدم في المراجع)</li></ul>\n<table><thead><tr><th>درجة فقد الدم (تقسيم ATLS)</th><th>تقريب الفقد</th><th>العلامات</th></tr></thead><tbody><tr><td>I</td><td>أقل من 15% (حتى 750 مل)</td><td>غالباً طبيعي</td></tr><tr><td>II</td><td>15–30%</td><td>نبض سريع، ضغط الانبساطي ممكن يقل قليلاً</td></tr><tr><td>III</td><td>30–40%</td><td>نبض سريع جداً، ضغط منخفض، تشويش</td></tr><tr><td>IV</td><td>أكتر من 40%</td><td>تهديد مباشر للحياة</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>ملاحظة</strong><p>الشباب والرياضيين بيعوضوا الفقد لفترة، فالضغط ممكن يفضل طبيعي لحد ما ينهار فجأة. النبض السريع أول علامة. والمرضى على Beta blockers قد لا يسرع نبضهم.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>فصيلة الدم وتحاليل التطابق (Blood group & cross-match)</b></li><li>صورة دم كاملة (CBC): هيموجلوبين (Hb) وصفائح، ويتكرر بعد النزيف لأن القيمة الأولى قد تكون مضللة</li><li>تحاليل التجلط (PT/INR, aPTT) ووظائف الكبد والكلى والكهارل</li><li>غازات دم/لاكتات في الحالات الشديدة</li><li>منظار أو أشعة أو سونار لتحديد مصدر النزيف (حسب الحالة)</li></ul>\n<div class=\"cs-box cs-tip\"><strong>للتمريض</strong><p>وقت أخد العينة: خدها من خط تاني غير الخط اللي فيه محاليل لتجنب التخفيف. اكتب بيانات المريض بوضوح على أنبوبة فصيلة الدم، لأن الخطأ فيها خطر الحياة.</p></div>"
-    },
-    "treatment": {
-      "ar": "<h4>الإدارة الأولية (Initial management)</h4>\n<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>افحص النبض والضغط</strong><p>Check pulse and blood pressure</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أكسجين بالقناع لو لازم</strong><p>Oxygen mask if needed</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ركّب كانيولا في الذراعين اليمين والشمال (وريد طرفي)</strong><p>Insert right and left cannula (peripheral vein)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>فصيلة الدم</strong><p>Blood group</p></div></div></div>\n<h4>محلول وأدوية للنزيف (حسب المراجع)</h4>\n<p>تنقيط (Infusion): <b>500 سم رينجر + Dycinone أمبول (2 أمبول) + Cyclo-Capron أمبول (2 أمبول) + فيتامين K أمبول + Zantac أمبول</b>.</p>\n<table><thead><tr><th>الدواء</th><th>المادة الفعالة (حسب المنتج)</th><th>الدور المقصود</th></tr></thead><tbody><tr><td>Dycinone</td><td>ethamsylate</td><td>مساعد لوقف النزيف الشعيري</td></tr><tr><td>Cyclo-Capron</td><td>tranexamic acid</td><td>مانع للتحلل الليفي</td></tr><tr><td>فيتامين K</td><td>phytomenadione</td><td>يعوض عوامل التجلط الفيتامين K-معتمدة</td></tr><tr><td>Zantac</td><td>ranitidine</td><td>يخفض حمض المعدة (للنزيف الهضمي)</td></tr></tbody></table>\n<h4>دواعي نقل الدم (Indications of blood transfusion)</h4>\n<ul><li>فقد دم حاد مع نبض أكتر من 100 في الدقيقة أو ضغط أقل من 100 مم زئبق</li><li>هيموجلوبين أقل من 7 جم%</li><li>هيموجلوبين أقل من 8 جم% في مريض قلب أو صدر</li></ul>\n<p><b>ملاحظة (N.B.):</b> وحدة كرات حمراء مركزة (1 unit packed RBCs) ترفع الهيموجلوبين حوالي 1 جم%.</p>\n<h4>مضاعفات نقل الدم (Complications)</h4>\n<table><thead><tr><th>المضاعفة</th><th>العلاج</th></tr></thead><tbody><tr><td>حساسية (Allergy)</td><td>حقن وريدي: Avil + Dexa</td></tr><tr><td>حرارة (Fever)</td><td>حقن وريدي: Avil + Dexa، وحقن عضلي Declophen (diclofenac)</td></tr><tr><td>نقل دم غير متوافق (Incompatible)</td><td>سوائل وريدية بغزارة، مدرّات: Lasix + Mannitol + Dopamine، وبيكربونات الصوديوم NaHCO3</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>الضغط المباشر</b> على النزيف الخارجي هو الأساس (قماش نظيف أو شاش، مع رفع الطرف لو ممكن)، ولو غلب أو نزيف في الأطراف شديد: رباط ضاغط (Tourniquet) حسب التدريب والبروتوكول. ATLS الحديث بيبدأ بـ \"إيقاف النزيف الخارجي الشديد\" أولاً قبل ABC.</li><li><b>الهدف مش الضغط الطبيعي فوراً:</b> في النزيف النشط يُفضل تقليل المحاليل البلورية (رينجر/ملح) وتعويض الدم ومشتقاته مبكراً (permissive hypotension) لحد السيطرة على النزيف، حسب بروتوكول المستشفى. المحلول المذكور (500 سم) يكون تمهيداً لحين وصول الدم.</li><li>حد النقل المعتمد (7 جم% للمرضى المستقرين، و8 جم% للقلب) مطابق للإرشادات الحديثة (restrictive strategy: 7–9 جم%). لكن <b>مع نزيف نشط وعدم استقرار لا ننتظر الهيموجلوبين</b>: النقل بالأعراض والعلامات.</li><li><b>Tranexamic acid</b> مفيد في الإصابات والنزيف الشديد خلال 3 ساعات من الحدث (بروتوكول الجرعة: غالباً 1 جم ثم 1 جم تسريب حسب الأمر). لكن في النزيف الهضمي لم يثبت فائدة (دراسة HALT-IT) وزاد الجلطات: لا يُعطى روتينياً.</li><li>Dycinone: دليل ضعيف على فعاليته في النزيف الشديد. وفيتامين K مفيد فقط في حالات نقصه (أدوية warfarin، أمراض كبد/صفراء).</li><li>Zantac (ranitidine) اتسحب: في النزيف الهضمي البديل هو PPI وريدي (pantoprazole) حسب الأمر.</li><li><b>رد فعل نقل الدم:</b> أول خطوة دايماً: <b>وقف النقل فوراً</b>، إبقاء الخط مفتوح بمحلول ملح عادي (جديد ومش بنفس الأنبوب)، التأكد من هوية المريض والكيس، إبلاغ الطبيب وبنك الدم وإرجاع الكيس مع عينة دم. بعدها العلاج حسب النوع. الحرارة البسيطة: خافض (paracetamol) بدل diclofenac IM (مضاد التهاب ممكن يضر الكلى والنزيف). الحساسية البسيطة: مضاد هيستامين، والشديدة (تضيق، هبوط ضغط) = أدرينالين عضلي حسب بروتوكول الحساسية المفرطة. نقل الدم غير المتوافق طوارئ: سوائل + دعم كلوي ومدرّات حسب الطبيب.</li></ul></div><!--e2-49--><h4>القيء الدموي</h4><p>للقيء الدموي (غالباً دوالي المريء أو قرحة) راجع دليل «القيء الدموي» (dis-280): كانيولتين، دم بعد التوافق، 500 سم ملح 0.9% + Pantazol + Dycinone + Kapron (Tranexamic acid)، وأنبوبة رايل لو أمر الطبيب. وحديثاً Kapron غير موصى به في نزيف الجهاز الهضمي (HALT-IT).</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أوقف النزيف الخارجي</strong><p>ضغط مباشر بقماش نظيف، رفع الطرف، استمر بدون رفع اليد لعدة دقايق. لا تشيل الضمادة الأولى وضيف فوقها. لو غلب: رباط ضاغط حسب الحالة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّم بسرعة</strong><p>نبض، ضغط، RR، SpO2، حرارة، وعي، لون الجلد، كمية النزيف ولونه ومكانه. ابدأ مراقبة مستمرة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أكسجين ووضع</strong><p>أكسجين لو SpO2 منخفضة أو صدمة. وضع المريض مستلقي، ورجل مرفوعة قليلاً (أو وضع حسب الحالة). ما ترفعش الراس لو ضغط منخفض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>خطين وريديين كبار</strong><p>كانيولا يمين وشمال (أكبر مقاس متاح). اسحب العينات: فصيلة، تطابق، CBC، تجلط، كيمياء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>سوائل وأدوية</strong><p>ابدأ المحلول حسب الأمر (رينجر 500 سم + الأدوية المضافة)، وراقب الحمل الزائد في مرضى القلب والكلى. ما تضيفش أدوية للكيس من غير أمر وتحقق من التوافق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>جهّز الدم</strong><p>اتحقق من اسم المريض وفصيلته مرتين مع زميل قبل كل وحدة. ابدأ ببطء أول 15 دقيقة وراقب العلامات كل 15 دقيقة، ثم حسب البروتوكول. قيس الحرارة قبل وبعد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>راقب رد فعل النقل</strong><p>حرارة، قشعريرة، طفح، حكة، ضيق نفس، ألم ضهر، بول أحمر، هبوط ضغط: <b>أوقف النقل فوراً</b> وبلّغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تابع وسجّل</strong><p>وقت بداية النزيف، الكمية التقريبية، العلامات الحيوية، المحاليل والدم، التغير في Hb، البول (هدف أكتر من 0.5 مل/كجم/ساعة). صيام لو مطلوب منظار.</p></div></div></div>\n<div class=\"cs-box cs-danger\"><strong>نقل الدم: وقف أولاً</strong><p>أي رد فعل مشتبه = <b>أوقف النقل</b>، أبقِ الخط بالملح العادي، بلّغ الطبيب وبنك الدم، وأعد الكيس. لا تستمر \"نشوف هيحصل إيه\".</p></div>\n<div class=\"cs-box cs-tip\"><strong>للتأكد قبل النقل</strong><p>الاسم الثلاثي، رقم الملف، الفصيلة على الكيس مطابقة للمريض، تاريخ الصلاحية، وسلامة الكيس (لون، تجلط، تسريب). لا تخلط دم مع أي محلول غير الملح العادي.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>نبض أكتر من 100 أو ضغط أقل من 100 انقباضي</li><li>تشويش أو نعاس أو برودة وشحوب</li><li>قيء دم أو براز أسود أو نزيف لا يتوقف بالضغط</li><li>انخفاض الهيموجلوبين عن 7 جم% (أو 8 في القلب والصدر)</li><li>أي علامة رد فعل نقل: حرارة، طفح، ضيق نفس، بول أحمر</li><li>نقص البول أو عدم التبول</li><li>مريض على مميعات الدم أو أمراض تخثر</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<p>كلام بسيط للمريض/الأهل:</p>\n<ul><li>ما تزيلش الضمادة الأولى، ضيف فوقها واضغط.</li><li>قول لو بتاخد أسبرين أو مميعات أو لو عندك مرض كبد أو حساسية قبل نقل دم.</li><li>قول فوراً لو حسيت بقشعريرة أو حكة أو ضيق نفس أثناء نقل الدم.</li><li>براز أسود أو قيء بلون القهوة = روح الطوارئ.</li><li>التزم بأدوية المعدة والمتابعة بعد النزيف الهضمي.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "أول خطوة: ضغط على مكان النزيف ثم نبض وضغط",
-      "كانيولا في الذراعين + فصيلة دم + محلول",
-      "النقل: نبض أكتر من 100 أو ضغط أقل من 100 أو Hb أقل من 7 (8 للقلب والصدر)",
-      "وحدة كرات حمراء مركزة ≈ رفع Hb 1 جم%",
-      "رد فعل نقل: أوقف النقل فوراً وأبقِ الخط وبلّغ",
-      "Dycinone وCyclo-Capron وvit K: دورهم محدود ومحدد بحالات",
-      "الضغط الطبيعي مش هدف فوري في النزيف النشط"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول خطوة عند رؤية مريض ينزف من جرح خارجي؟"
-      },
-      "options": [
-        {
-          "ar": "ضغط مباشر على موضع النزيف"
-        },
-        {
-          "ar": "غسل الجرح بالمطهر فقط"
-        },
-        {
-          "ar": "ترك الجرح للهواء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الضغط المباشر أسرع وسيلة للسيطرة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي من الآتي يستدعي نقل دم حسب المراجع؟"
-      },
-      "options": [
-        {
-          "ar": "Hb 11 جم%"
-        },
-        {
-          "ar": "فقد حاد مع نبض 110"
-        },
-        {
-          "ar": "نزيف أنف بسيط توقف"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "فقد حاد مع نبض أكتر من 100 أو ضغط أقل من 100 من الدواعي."
-      }
-    },
-    {
-      "q": {
-        "ar": "حد الهيموجلوبين لمريض قلب أو صدر للنقل؟"
-      },
-      "options": [
-        {
-          "ar": "أقل من 8 جم%"
-        },
-        {
-          "ar": "أقل من 12"
-        },
-        {
-          "ar": "أقل من 5"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "8 جم% عندهم، و7 لغيرهم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أثناء نقل الدم ظهرت قشعريرة وحرارة. أول خطوة؟"
-      },
-      "options": [
-        {
-          "ar": "نزود السرعة"
-        },
-        {
-          "ar": "نوقف النقل فوراً ونبقي الخط بالملح ونبلّغ"
-        },
-        {
-          "ar": "نكمل ونراقب"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الوقف الفوري أهم إجراء."
-      }
-    },
-    {
-      "q": {
-        "ar": "كم ترفع وحدة كرات حمراء مركزة الهيموجلوبين تقريباً؟"
-      },
-      "options": [
-        {
-          "ar": "1 جم%"
-        },
-        {
-          "ar": "5 جم%"
-        },
-        {
-          "ar": "10 جم%"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "وحدة واحدة ≈ 1 جم% عند بالغ بدون نزيف مستمر."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ATLS 11th edition updates (xABCDE, TXA, restrictive resuscitation) — consulted via search summaries"
-    },
-    {
-      "title": "Restrictive RBC transfusion strategy in trauma (RESTRIC trial) — via search summaries"
-    },
-    {
-      "title": "HALT-IT trial: tranexamic acid in GI bleeding — from general knowledge"
-    }
+  "en": [
+   "First step: pressure on the bleeding site, then pulse and blood pressure",
+   "A cannula in both arms + blood group + IV solution",
+   "Transfusion: pulse above 100 or pressure below 100 or Hb below 7 (8 for cardiac and chest patients)",
+   "One unit of packed red cells ≈ raises Hb by 1 g%",
+   "Transfusion reaction: stop the transfusion immediately, keep the line, and report",
+   "Dycinone, Cyclo-Capron, and vit K: their role is limited and specific to certain cases",
+   "A normal blood pressure is not an immediate goal in active bleeding"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول خطوة عند رؤية مريض ينزف من جرح خارجي؟",
+    "en": "What is the first step when you see a patient bleeding from an external wound?"
+   },
+   "options": [
+    {
+     "ar": "ضغط مباشر على موضع النزيف",
+     "en": "Direct pressure on the bleeding site"
+    },
+    {
+     "ar": "غسل الجرح بالمطهر فقط",
+     "en": "Washing the wound with antiseptic only"
+    },
+    {
+     "ar": "ترك الجرح للهواء",
+     "en": "Leaving the wound open to air"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الضغط المباشر أسرع وسيلة للسيطرة.",
+    "en": "Direct pressure is the fastest way to gain control."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من الآتي يستدعي نقل دم حسب المراجع؟",
+    "en": "Which of the following calls for a blood transfusion?"
+   },
+   "options": [
+    {
+     "ar": "Hb 11 جم%",
+     "en": "Hb 11 g%"
+    },
+    {
+     "ar": "فقد حاد مع نبض 110",
+     "en": "Acute loss with a pulse of 110"
+    },
+    {
+     "ar": "نزيف أنف بسيط توقف",
+     "en": "A mild nosebleed that stopped"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "فقد حاد مع نبض أكتر من 100 أو ضغط أقل من 100 من الدواعي.",
+    "en": "Acute loss with pulse above 100 or pressure below 100 is among the indications."
+   }
+  },
+  {
+   "q": {
+    "ar": "حد الهيموجلوبين لمريض قلب أو صدر للنقل؟",
+    "en": "What is the hemoglobin threshold for transfusion in a cardiac or chest patient?"
+   },
+   "options": [
+    {
+     "ar": "أقل من 8 جم%",
+     "en": "Below 8 g%"
+    },
+    {
+     "ar": "أقل من 12",
+     "en": "Below 12"
+    },
+    {
+     "ar": "أقل من 5",
+     "en": "Below 5"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "8 جم% عندهم، و7 لغيرهم.",
+    "en": "8 g% for them, and 7 for others."
+   }
+  },
+  {
+   "q": {
+    "ar": "أثناء نقل الدم ظهرت قشعريرة وحرارة. أول خطوة؟",
+    "en": "Chills and fever appeared during a blood transfusion. What is the first step?"
+   },
+   "options": [
+    {
+     "ar": "نزود السرعة",
+     "en": "Increase the rate"
+    },
+    {
+     "ar": "نوقف النقل فوراً ونبقي الخط بالملح ونبلّغ",
+     "en": "Stop the transfusion immediately, keep the line open with saline, and report"
+    },
+    {
+     "ar": "نكمل ونراقب",
+     "en": "Continue and observe"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الوقف الفوري أهم إجراء.",
+    "en": "Stopping immediately is the most important action."
+   }
+  },
+  {
+   "q": {
+    "ar": "كم ترفع وحدة كرات حمراء مركزة الهيموجلوبين تقريباً؟",
+    "en": "About how much does one unit of packed red cells raise the hemoglobin?"
+   },
+   "options": [
+    {
+     "ar": "1 جم%",
+     "en": "1 g%"
+    },
+    {
+     "ar": "5 جم%",
+     "en": "5 g%"
+    },
+    {
+     "ar": "10 جم%",
+     "en": "10 g%"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "وحدة واحدة ≈ 1 جم% عند بالغ بدون نزيف مستمر.",
+    "en": "One unit ≈ 1 g% in an adult without ongoing bleeding."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ATLS 11th edition updates (xABCDE, TXA, restrictive resuscitation) — consulted via search summaries"
+  },
+  {
+   "title": "Restrictive RBC transfusion strategy in trauma (RESTRIC trial) — via search summaries"
+  },
+  {
+   "title": "HALT-IT trial: tranexamic acid in GI bleeding — from general knowledge"
+  }
+ ]
 }

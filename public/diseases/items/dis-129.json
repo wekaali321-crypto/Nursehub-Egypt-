@@ -1,219 +1,276 @@
 {
-  "id": "dis-129",
-  "num": 129,
-  "system": "cardio",
-  "icon": "🫁",
-  "level": 3,
-  "title": {
-    "ar": "الوذمة الرئوية الحادة",
-    "en": "Acute Pulmonary Oedema"
+ "id": "dis-129",
+ "num": 129,
+ "system": "cardio",
+ "icon": "🫁",
+ "level": 3,
+ "title": {
+  "ar": "الوذمة الرئوية الحادة",
+  "en": "Acute Pulmonary Oedema"
+ },
+ "teaser": {
+  "ar": "ضيق نفس شديد وبلغم وردي رغوي: الإسعاف خطوة بخطوة (جلوس، أكسجين، Lasix، نيترات) ودور التمريض.",
+  "en": "Severe shortness of breath and pink frothy sputum: step-by-step emergency care (sitting up, oxygen, Lasix, nitrates) and the nursing role."
+ },
+ "chips": [
+  {
+   "ar": "طارئ",
+   "en": "Emergency"
   },
-  "teaser": {
-    "ar": "ضيق نفس شديد وبلغم وردي رغوي: الإسعاف خطوة بخطوة (جلوس، أكسجين، Lasix، نيترات) ودور التمريض."
+  {
+   "ar": "Lasix + نيترات",
+   "en": "Lasix + nitrates"
   },
-  "chips": [
-    {
-      "ar": "طارئ"
-    },
-    {
-      "ar": "Lasix + نيترات"
-    },
-    {
-      "ar": "CPAP"
-    }
+  {
+   "ar": "CPAP",
+   "en": "CPAP"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الوذمة الرئوية الحادة (Acute pulmonary oedema) هي تجمع سريع للسوائل داخل الحويصلات الهوائية والنسيج الرئوي، فيحصل صعوبة تنفس شديدة ونقص أكسجين. غالباً سببها قلبي (فشل البطين الأيسر الحاد)، وممكن تكون غير قلبية. <b>حالة طارئة تهدد الحياة</b> وتحتاج تدخل خلال دقائق.</p>[[slot:dis-129-algorithm|خطوات التعامل السريع مع الوذمة الرئوية — رسم من إعداد الموقع|/diseases/img/dis-129-algorithm.svg]]<div class=\"cs-stats\"><div><b>ICU</b><span>دخول العناية</span></div><div><b>جلوس</b><span>وضع المريض</span></div><div><b>O₂ + Lasix + نيترات</b><span>أساس العلاج</span></div></div><div class=\"cs-box cs-danger\"><strong>أول ما تلاحظ</strong><p>مريض فجأة ضيق نفس شديد، قاعد ومش قادر يستلقي، بلغم رغوي وردي، عرق بارد وقلق: <b>اطلب الطبيب فوراً</b> وابدأ الإسعاف الأولي (جلوس، أكسجين، مونيتور).</p></div><h4>تقسيم المريض حسب الضغط (الأساس في القرار)</h4><table><thead><tr><th>القسم</th><th>الحالة</th><th>المبدأ</th></tr></thead><tbody><tr><td>القسم الأول</td><td>وذمة رئوية + <b>انخفاض الضغط</b> (صدمة قلبية)</td><td>محتاجين مقويات قلب (Inotropes) زي دوبامين أو دوبوتامين</td></tr><tr><td>القسم الثاني</td><td>وذمة رئوية + ضغط <b>طبيعي أو مرتفع</b></td><td>أساس العلاج: مدرّات + نيترات + أكسجين/CPAP</td></tr></tbody></table>[[slot:dis-129-sbp|القرار العلاجي حسب الضغط الانقباضي — رسم من إعداد الموقع|/diseases/img/dis-129-sbp.svg]]<!--M1--><h4>معلومات مكملة</h4><p>الوذمة الرئوية ناتجة عن ضخ غير فعال في فشل البطين الأيسر أو الجلطة أو زيادة الحجم، مما يسبب نقص أكسجة. علامات إضافية: ضيق نفس حتى الجلوس، تنفس سريع أكتر من 20/دقيقة، بلغم رغوي مدمم، زرقة، جلد بارد ندي، قلق وخوف، انتفاخ أوردة الرقبة، طقطقة وصفير. وقد تنتج أيضاً أسباب غير قلبية.</p>",
+   "en": "<p>Acute pulmonary edema is a rapid collection of fluid inside the alveoli and lung tissue, causing severe difficulty breathing and hypoxia. It is usually cardiac in origin (acute left ventricular failure) and can be non-cardiac. <b>A life-threatening emergency</b> that needs intervention within minutes.</p>[[slot:dis-129-algorithm|Steps for rapid management of pulmonary edema — illustration prepared by the site|/diseases/img/dis-129-algorithm.svg]]<div class=\"cs-stats\"><div><b>ICU</b><span>ICU admission</span></div><div><b>Sitting</b><span>patient position</span></div><div><b>O₂ + Lasix + nitrates</b><span>mainstay of treatment</span></div></div><div class=\"cs-box cs-danger\"><strong>As soon as you notice</strong><p>A patient with sudden severe shortness of breath, sitting up and unable to lie down, pink frothy sputum, cold sweat, and anxiety: <b>call the physician immediately</b> and start first aid (sitting up, oxygen, monitor).</p></div><h4>Classifying the patient by blood pressure (the basis of the decision)</h4><table><thead><tr><th>Group</th><th>Condition</th><th>Principle</th></tr></thead><tbody><tr><td>Group one</td><td>Pulmonary edema + <b>low blood pressure</b> (cardiogenic shock)</td><td>Needs inotropes such as dopamine or dobutamine</td></tr><tr><td>Group two</td><td>Pulmonary edema + <b>normal or high</b> blood pressure</td><td>Mainstay of treatment: diuretics + nitrates + oxygen/CPAP</td></tr></tbody></table>[[slot:dis-129-sbp|Treatment decision by systolic blood pressure — illustration prepared by the site|/diseases/img/dis-129-sbp.svg]]<!--M1--><h4>Supplementary information</h4><p>Pulmonary edema results from ineffective pumping in left ventricular failure, MI, or volume overload, causing hypoxemia. Additional signs: shortness of breath even when sitting, fast breathing above 20/minute, frothy blood-tinged sputum, cyanosis, cool clammy skin, anxiety and fear, distended neck veins, crackles and wheeze. Non-cardiac causes may also produce it.</p>"
+  },
+  "causes": {
+   "ar": "[[slot:dis-129-types|أنواع الوذمة الرئوية الحادة — رسم من إعداد الموقع|/diseases/img/dis-129-types.svg]]<h4>قلبية المنشأ (Cardiogenic)</h4><ol><li>فشل القلب الأيسر الحاد (Acute LSHF)</li><li>تدهور حاد في فشل قلب مزمن (مثل ضيق الصمام التاجي مع رجفان أذيني MS + AF)</li></ol><h4>غير قلبية المنشأ (Non-cardiogenic)</h4><ol><li>تعفن الدم / الالتهاب الرئوي / التهاب البنكرياس</li><li>سكتة دماغية / إصابة رأس</li><li>الصدمة (Shock)</li><li>الرضوح والحروق</li><li>المراحل النهائية من فشل الكبد والكلى</li><li>استنشاق غازات (مثل الكلور)</li><li>استنشاق محتوى المعدة (Aspiration)</li><li>التجلط المنتشر داخل الأوعية (DIC)</li></ol><h4>أسباب أخرى</h4><ol><li>السحب السريع لانصباب جنبي ضخم</li><li>نقص ألبيومين شديد</li></ol><h4>عوامل تسبب النوبة عند مريض القلب (إضافة)</h4><ul><li>ارتفاع ضغط مفاجئ، رجفان أذيني سريع، جلطة قلبية</li><li>ملح وسوائل وريدية زيادة، ترك الأدوية، عدوى، أنيميا</li><li>فشل الكلى أو زيادة الحمل الحجمي</li></ul>",
+   "en": "[[slot:dis-129-types|Types of acute pulmonary edema — illustration prepared by the site|/diseases/img/dis-129-types.svg]]<h4>Cardiogenic</h4><ol><li>Acute left-sided heart failure (Acute LSHF)</li><li>Acute decompensation of chronic heart failure (such as mitral stenosis with atrial fibrillation, MS + AF)</li></ol><h4>Non-cardiogenic</h4><ol><li>Sepsis / pneumonia / pancreatitis</li><li>Stroke / head injury</li><li>Shock</li><li>Trauma and burns</li><li>End stages of liver and kidney failure</li><li>Gas inhalation (such as chlorine)</li><li>Aspiration of stomach contents</li><li>Disseminated intravascular coagulation (DIC)</li></ol><h4>Other causes</h4><ol><li>Rapid drainage of a massive pleural effusion</li><li>Severe hypoalbuminemia</li></ol><h4>Factors that trigger an attack in a cardiac patient (addition)</h4><ul><li>Sudden rise in blood pressure, rapid atrial fibrillation, myocardial infarction</li><li>Excess salt and IV fluids, stopping medications, infection, anemia</li><li>Kidney failure or volume overload</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>الصورة السريرية</h4><ol><li>ضيق نفس شديد حتى عند الراحة مع عدم القدرة على الاستلقاء (Orthopnea)</li><li>كحة ببلغم رغوي (Frothy) وقد يكون مشوباً بالدم</li><li>أصوات «فقاعية» منتشرة (Bubbling crepitations) في الصدر كله</li><li>تعرق غزير وقلق شديد</li><li>زرقة مركزية (Central cyanosis)</li><li>صفير منتشر (Generalized wheeze) — «ربو قلبي»</li></ol><h4>الصورة السريرية للسبب</h4><ul><li>ألم صدر نمطي في الجلطة القلبية (MI)</li><li>علامات عصبية في السكتة (Stroke)</li></ul><div class=\"cs-box cs-tip\"><strong>تفرقة سريعة</strong><p>الربو: صفير بدون بلغم رغوي وغالباً تاريخ سابق. الوذمة الرئوية القلبية: بلغم رغوي وردي وطقطقة منتشرة وتاريخ قلب. لا تعطِ حاصر بيتا بدون أمر الطبيب في هذا الوضع.</p></div>",
+   "en": "<h4>Clinical picture</h4><ol><li>Severe shortness of breath even at rest with inability to lie down (Orthopnea)</li><li>Cough with frothy sputum that may be blood-tinged</li><li>Widespread \"bubbling\" sounds (Bubbling crepitations) all over the chest</li><li>Profuse sweating and severe anxiety</li><li>Central cyanosis</li><li>Generalized wheeze — \"cardiac asthma\"</li></ol><h4>Clinical picture of the cause</h4><ul><li>Typical chest pain in myocardial infarction (MI)</li><li>Neurologic signs in stroke</li></ul><div class=\"cs-box cs-tip\"><strong>Quick differentiation</strong><p>Asthma: wheeze without frothy sputum and usually a previous history. Cardiac pulmonary edema: pink frothy sputum, widespread crackles, and a cardiac history. Do not give a beta blocker without a physician's order in this situation.</p></div>"
+  },
+  "tests": {
+   "ar": "<h4>أشعة الصدر (CXR)</h4><ol><li>زيادة العلامات الوعائية القصبية (Increased bronchovascular markings)</li><li>عتامة / ضباب بحقول الرئة (Haziness)</li></ol>[[slot:dis-129-cxr|صورة أشعة صدر: وذمة رئوية (ظل «جناح الفراشة» حول السرة الرئوية)]]<h4>غازات الدم الشريانية (ABG)</h4><ol><li>PO₂ منخفض</li><li>PCO₂ منخفض في البداية، ويرتفع متأخراً في الحالات الشديدة (فشل تنفسي)</li></ol><h4>البحث عن السبب</h4><ol><li>ECG وإنزيمات القلب (Troponin) للجلطة القلبية</li><li>أشعة مقطعية على المخ (CT brain) للسكتة</li></ol><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>إضافات: الإيكو السريع (لتقدير EF والصمامات)، NT-proBNP، كرياتينين وإلكتروليت، سكر، وصورة دم. ولو مسح الرئة بالموجات (Lung US) متاح فيه خطوط B كثيرة.</p></div><div class=\"cs-box cs-tip\"><strong>للتمريض أثناء ABG</strong><p>خد العينة بسرعة بدون هواء في السرنجة، ضع على ثلج لو التحليل هيتأخر، سجّل نسبة الأكسجين اللي بياخدها المريض وقت السحب، واضغط 5 دقائق على الشريان بعد الوخز.</p></div><h4>فحوصات سريعة يطلبها الفريق</h4><ul><li><b>يوريا وكرياتينين</b> (وظائف الكلى — مقاومة المدر)</li><li>سكر عشوائي (RBS) وأملاح</li><li><b>ECG</b> لاكتشاف جلطة أو رجفان أذيني</li><li><b>أشعة صدر (X-Ray)</b></li><li>تحاليل أخرى حسب الشك: تروبونين، ABG، صورة دم</li></ul><!--M1--><ul><li>تشبع الأكسجين أقل من 90%</li><li>أشعة الصدر: سائل بالحويصلات وقلب كبير</li><li>إيكو لكسر القذف</li><li>تحليل BUN وكرياتينين</li></ul>",
+   "en": "<h4>Chest X-ray (CXR)</h4><ol><li>Increased bronchovascular markings</li><li>Opacity / haziness of the lung fields</li></ol>[[slot:dis-129-cxr|Chest X-ray image: pulmonary edema (\"butterfly wing\" shadow around the hilum)]]<h4>Arterial blood gases (ABG)</h4><ol><li>Low PO₂</li><li>PCO₂ low at first, rising late in severe cases (respiratory failure)</li></ol><h4>Looking for the cause</h4><ol><li>ECG and cardiac enzymes (Troponin) for myocardial infarction</li><li>CT brain for stroke</li></ol><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Additions: rapid echo (to estimate EF and the valves), NT-proBNP, creatinine and electrolytes, glucose, and CBC. If lung ultrasound (Lung US) is available, it shows many B lines.</p></div><div class=\"cs-box cs-tip\"><strong>For nursing during ABG</strong><p>Take the sample quickly with no air in the syringe, place it on ice if analysis will be delayed, record the oxygen percentage the patient is receiving at the time of sampling, and press on the artery for 5 minutes after the puncture.</p></div><h4>Rapid tests the team orders</h4><ul><li><b>Urea and creatinine</b> (kidney function — diuretic resistance)</li><li>Random blood sugar (RBS) and electrolytes</li><li><b>ECG</b> to detect infarction or atrial fibrillation</li><li><b>Chest X-ray</b></li><li>Other tests according to suspicion: troponin, ABG, CBC</li></ul><!--M1--><ul><li>Oxygen saturation below 90%</li><li>Chest X-ray: fluid in the alveoli and an enlarged heart</li><li>Echo for ejection fraction</li><li>BUN and creatinine</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>1) الإسعاف حسب المراجع</h4><table><thead><tr><th>الإجراء</th><th>التفاصيل</th></tr></thead><tbody><tr><td>الدخول</td><td>العناية المركزة (ICU)، راحة في وضع الجلوس</td></tr><tr><td>الأكسجين</td><td>6–8 لتر/دقيقة</td></tr><tr><td>مسكن/ مهدئ</td><td>Nalufin (نالوفين) 5 mg أمبول وريدي — لتخفيف القلق وتقليل التنبيه الودي</td></tr><tr><td>مدرّ</td><td>Lasix (لازيكس) 40 mg وريدي، يكرر كل نصف ساعة حتى الراحة</td></tr><tr><td>موسّع وريدي</td><td>Nitronal (نيترونال): 10 سم³ في 90 سم³ جلوكوز 5% بجهاز محلول؛ يبدأ بمعدل 3 نقط/دقيقة أو ضعفها بحيث لا يقل الضغط عن 100/70 mmHg</td></tr><tr><td>مقوٍّ للقلب</td><td>Dopamine (دوبامين): أمبول واحد في 200 سم³ رينجر، المعدل 5 نقط/دقيقة</td></tr><tr><td>موسّع شُعب</td><td>Minophylline (مينوفيلين) وريدي 250–500 mg ببطء</td></tr></tbody></table><h4>2) الحالات المقاومة</h4><ul><li>سحب سوائل ميكانيكياً بفصد الدم (Phlebotomy) أو الغسيل الكلوي</li><li>تنفس صناعي (Mechanical ventilation)</li><li>دعم ميكانيكي: بالون داخل الشريان الأورطي (Intra-aortic balloon counterpulsation)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>Nalufin</b> هو Nalbuphine (مسكن أفيوني مختلط) وليس مورفين؛ وحالياً <b>الأفيونات لا تُعطى روتينياً</b> في الوذمة الرئوية (قد تثبط التنفس وتزيد الحاجة للتهوية)، وتُستخدم بجرعات صغيرة فقط عند قلق/ألم شديد بأمر الطبيب.</li><li><b>الأكسجين:</b> يُعطى لو SpO2 أقل من 90–94% بهدف حوالي 94–98% (وأقل لمرضى احتباس CO2). ونطاق 6–8 لتر صحيح للبداية. الأولوية الحديثة: <b>CPAP / NIV</b> مبكراً (يبدأ CPAP ~5 وحتى 10 cmH₂O) لأنه يقلل الجهد التنفسي والحاجة للتهوية الميكانيكية.</li><li><b>Lasix:</b> الجرعة المعتادة 40–80 mg وريدي (20–40 mg لمن لم يتناول مدرّات)، ويُكرر حسب البول والاستجابة بدلاً من «كل نصف ساعة» تلقائياً.</li><li><b>النيترات الوريدية:</b> أفضل في المريض صاحب ضغط مرتفع/طبيعي (مثلاً الضغط الانقباضي فوق 110 في ESC)، وتُستخدم مضخة بـ mcg/min (بدء 10–20 mcg/min وزيادة 5–10 كل 5 دقائق)، وقد تُستخدم جرعات أعلى في البروتوكولات الحديثة بإشراف طبي. وممنوعة مع Sildenafil أو الضغط المنخفض.</li><li><b>Dopamine:</b> فقط لو ضغط منخفض (أقل من 90) أو صدمة قلبية؛ ليس لكل مريض وذمة. يُفضَّل المضخة (mcg/kg/min) على «نقط/دقيقة».</li><li><b>Aminophylline:</b> فقط لو تشنج قصبي، لأنه يسبب تسارع النبض واضطراب النظم.</li></ul></div><h4>تسلسل الإسعاف المرتب (ضغط طبيعي/مرتفع)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>ارفع الرأس 45° (أو اجلس)</strong><p>وضع السرير: رفع جانب الرأس 45° أو الجلوس مع تدلية الساقين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أكسجين</strong><p>عالي التدفق والتركيز؛ يُفضّل مرطّب؛ CPAP/NIV لو لم يتحسن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>كانيولا وقسطرة بولية ومونيتور</strong><p>وصّل ECG، وركّب قسطرة بول لقياس الإخراج بالساعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>لازيكس (فوروسيمايد) 40–80 مجم وريدي</strong><p>الجرعة المعتادة 40–80 مجم (الأمبول 20 مجم/2 مل أو 40 مجم/4 مل حسب العلبة). جرعات أعلى في القصور الكلوي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>نيترات تحت اللسان</strong><p>حبة (أو بخّتان) ويمكن إعادتها كل 5 دقائق لو الضغط كافٍ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>انتظر وقيّم الاستجابة</strong><p>تنفس، SpO₂، ضغط، بول، سماع الصدر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>مسكن أفيوني (مورفين/دياموفين) بحذر</strong><p>تحت الجلد/وريدي بجرعات صغيرة وببطء؛ قد يثبط التنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>ضغط مرتفع جداً: نيترات وريدي</strong><p>تنقيط عبر مضخة؛ مع تغطية المحلول بغطاء معتم (مثل علاقة سوداء) لأنه يتأثر بالضوء.</p></div></div></div><h4>خطوات الإسعاف المختصرة (بروتوكول دولي)</h4><ul><li>اجلس • أكسجين عالي التدفق لو SpO₂ منخفضة • خط وريدي وECG • عالج اضطراب النظم (مثل AF)</li><li>دياموفين 1.25–5 مجم وريدي ببطء — حذر في فشل الكبد وCOPD</li><li>لازيكس 40–80 مجم وريدي ببطء (جرعات أكبر في القصور الكلوي)</li><li>نيتروجليسرين بخاخ بخّتان تحت اللسان أو قرصان 0.3 مجم — لا يُعطى لو الانقباضي أقل من 90</li><li>لو الانقباضي ≥ 100: تسريب نيترات (مثل ايزوسوربيد دينيترات 2–10 مجم/ساعة) مع إبقاء الانقباضي ≥ 90</li><li>لو يسوء المريض: جرعة لازيكس أخرى، CPAP (يُحسّن التهوية ويدفع السوائل للأوعية — استعن بخبير قبل البدء)، زيادة النيترات لو الضغط يسمح، وفكّر بتشخيصات بديلة: ارتفاع ضغط، تسلخ أبهر، جلطة رئوية، التهاب رئوي</li><li>لو الانقباضي أقل من 100: عامله كصدمة قلبية وحوّل للعناية المركزة</li></ul><div class=\"cs-box cs-warning\"><strong>نقاط إضافية</strong><b>1)</b> الحرارة أو العدوى: لو المريض محموم أعطِ خافض حرارة (باراسيتامول فيال) ومضاد حيوي (أمبول) حسب الأمر. <b>2)</b> مقاومة المدر (Diuretic resistance): من أهم أسبابها القصور الكلوي، فتحتاج <b>جرعة أعلى</b> من المدر. <b>3)</b> مع اضطراب نظم (رجفان أذيني سريع): هيبارين + ديجوكسين أمبول يبدأ 0.5 مجم، يُخفف في 100 مل جلوكوز 5%. <b>4)</b> لو الضغط مرتفع: ممكن مثبط ACE أو ARB. <b>5)</b> <b>ممنوع</b> حاصر بيتا وحاصر الكالسيوم هنا (موانع في الوذمة الحادة). <b>6)</b> بعد الاستقرار: النقل للردهة ثم الخروج لو الحالة مستقرة على العلاج الفموي نحو يومين.</div><h4>القسم الأول: وذمة رئوية مع هبوط الضغط (صدمة قلبية)</h4><p>هنا نحتاج <b>أدوية مقوية (Inotropic agents)</b> زي <b>دوبامين</b> أو <b>دوبوتامين</b>. لو مفيش استجابة: بالون داخل الشريان الأورطي (<b>Intra-aortic balloon pump</b>)، وفي النهاية زراعة القلب في بعض الحالات.</p>[[slot:dis-129-dopamine|تحضير الدوبامين وحساب المعدل — رسم من إعداد الموقع|/diseases/img/dis-129-dopamine.svg]]<table><thead><tr><th>الجرعة</th><th>التأثير</th></tr></thead><tbody><tr><td>3–5 مكجم/كجم/دقيقة</td><td>يعمل كمدرّ (التأثير الكلوي غير مثبت حديثاً)</td></tr><tr><td>5–10 مكجم/كجم/دقيقة</td><td>مقوٍّ لانقباض القلب (Positive inotrope)</td></tr><tr><td>10–15 مكجم/كجم/دقيقة</td><td>قابض محيطي للأوعية (Vasoconstrictor)</td></tr></tbody></table><p><b>في الصدمة القلبية نحتاج أعلى جرعة.</b> طريقة الحساب بالبيت: تركيز المحلول: أمبولتان (200 مجم لكل أمبول 5 مل) في 400 مل ملح، فكل 1 مل = 1 مجم = 1000 مكجم. نحسب بالوزن المثالي للبالغ (70 كجم): 70 × 15 = 1050 مكجم/دقيقة ≈ 1000، أي نحتاج حوالي 1 مل/دقيقة، وبما أن كل 1 مل = 15 نقطة فنحتاج حوالي <b>15 نقطة/دقيقة</b>. عملياً: <b>ابدأ بجرعة صغيرة (مثلاً 5 نقط/دقيقة)</b> وزد تدريجياً حتى توصل للجرعة المطلوبة.</p><div class=\"cs-box cs-danger\"><strong>تنبيهات الدوبامين</strong><p>1) من آثاره الجانبية: تسرع القلب واضطراب النظم. 2) يسبب تعوّداً (Tachyphylaxis) لو استُخدم أكثر من 3 أيام فتحتاج زيادة الجرعة. 3) المريض يحتاج دخول وحدة القلب (CCU) ومراقبة دقيقة للضغط والنبض وECG.</p></div><div class=\"cs-box cs-pearl\"><strong>تحديث</strong><p>في الصدمة القلبية الحديثة (ESC 2021/AHA) <b>النورأدرينالين مفضّل</b> أولاً عند هبوط الضغط الشديد لأنه أقل ضرراً على النظم، والدوبوتامين يُضاف لتحسين الانقباض. الدوبامين ما زال خياراً لو بطء القلب مصاحب أو لو لا يتوفر غيره. اتّبع أمر الطبيب وبروتوكول الوحدة.</p></div><h4>مثال حساب سريع بالمضخة (70 كجم، دوبامين 1 مجم/مل)</h4><table><thead><tr><th>الجرعة</th><th>مكجم/د</th><th>مل/ساعة</th></tr></thead><tbody><tr><td>5 مكجم/كجم/د</td><td>350</td><td>21</td></tr><tr><td>10</td><td>700</td><td>42</td></tr><tr><td>15</td><td>1050</td><td>63</td></tr></tbody></table><p>المعادلة: مل/ساعة = (الجرعة × الوزن × 60) ÷ التركيز (مكجم/مل).</p><!--M1--><h4>جدول الأدوية الإضافي</h4><table><thead><tr><th>الفئة</th><th>أمثلة</th><th>الغرض</th></tr></thead><tbody><tr><td>أكسجين</td><td>—</td><td>رفع PaO2، وقد يلزم تنفس صناعي</td></tr><tr><td>مورفين</td><td>—</td><td>يخفض ضغط الأذين الأيسر والطلب على الأكسجين والقلق والألم</td></tr><tr><td>مدرات</td><td>فوروسيميد، بوميتانيد، ميتولازون</td><td>إزالة السوائل</td></tr><tr><td>جليكوزيدات</td><td>ديجوكسين</td><td>زيادة الانقباض</td></tr><tr><td>منشطات الانقباض</td><td>دوبيوتامين، إينامرينون، ميلرينون</td><td>تقوية العضلة</td></tr><tr><td>نيترات</td><td>أيزوسوربيد دينيترات</td><td>خفض الضغط وامتلاء البطين الأيسر</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المورفين لم يعد موصى به روتينياً؛ والتهوية غير الغازية (CPAP/BiPAP) والنيترات والفوروسيميد هي الأساس. إينامرينون لم يعد مستخدماً.</p></div>",
+   "en": "<h4>1) Emergency care</h4><table><thead><tr><th>Measure</th><th>Details</th></tr></thead><tbody><tr><td>Admission</td><td>Intensive care unit (ICU), rest in the sitting position</td></tr><tr><td>Oxygen</td><td>6–8 L/minute</td></tr><tr><td>Analgesic / sedative</td><td>Nalufin 5 mg ampoule IV — to relieve anxiety and reduce sympathetic stimulation</td></tr><tr><td>Diuretic</td><td>Lasix 40 mg IV, repeated every half hour until relief</td></tr><tr><td>Venodilator</td><td>Nitronal: 10 cc in 90 cc glucose 5% through an infusion set; start at a rate of 3 drops/minute or double it, so that blood pressure does not fall below 100/70 mmHg</td></tr><tr><td>Inotrope</td><td>Dopamine: one ampoule in 200 cc Ringer's, rate 5 drops/minute</td></tr><tr><td>Bronchodilator</td><td>Minophylline IV 250–500 mg slowly</td></tr></tbody></table><h4>2) Resistant cases</h4><ul><li>Mechanical fluid removal by phlebotomy or dialysis</li><li>Mechanical ventilation</li><li>Mechanical support: intra-aortic balloon counterpulsation</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li><b>Nalufin</b> is Nalbuphine (a mixed opioid analgesic), not morphine; currently <b>opioids are not given routinely</b> in pulmonary edema (they may depress breathing and increase the need for ventilation), and are used only in small doses for severe anxiety/pain on the physician's order.</li><li><b>Oxygen:</b> given if SpO2 is below 90–94%, aiming for about 94–98% (lower for patients with CO2 retention). The 6–8 L range is correct to start. The modern priority: early <b>CPAP / NIV</b> (CPAP starts at ~5 and up to 10 cmH₂O) because it reduces the work of breathing and the need for mechanical ventilation.</li><li><b>Lasix:</b> the usual dose is 40–80 mg IV (20–40 mg for those not previously on diuretics), repeated according to urine output and response rather than automatically \"every half hour\".</li><li><b>IV nitrates:</b> best in the patient with high/normal blood pressure (for example, systolic above 110), given by pump in mcg/min (start 10–20 mcg/min and increase by 5–10 every 5 minutes); higher doses may be used in modern protocols under medical supervision. Contraindicated with Sildenafil or low blood pressure.</li><li><b>Dopamine:</b> only if blood pressure is low (below 90) or in cardiogenic shock; not for every patient with edema. A pump (mcg/kg/min) is preferred over \"drops/minute\".</li><li><b>Aminophylline:</b> only if there is bronchospasm, because it causes tachycardia and arrhythmia.</li></ul></div><h4>Ordered emergency sequence (normal/high blood pressure)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Raise the head 45° (or sit up)</strong><p>Bed position: raise the head end 45° or sit with the legs dangling.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Oxygen</strong><p>High flow and concentration; humidified is preferred; CPAP/NIV if no improvement.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Cannula, urinary catheter, and monitor</strong><p>Connect the ECG, and insert a urinary catheter to measure hourly output.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Lasix (furosemide) 40–80 mg IV</strong><p>The usual dose is 40–80 mg (the ampoule is 20 mg/2 mL or 40 mg/4 mL depending on the pack). Higher doses in renal impairment.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Sublingual nitrate</strong><p>One tablet (or two sprays), which can be repeated every 5 minutes if blood pressure is adequate.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Wait and assess the response</strong><p>Breathing, SpO₂, blood pressure, urine, chest auscultation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Opioid analgesic (morphine/diamorphine) with caution</strong><p>Subcutaneous/IV in small doses and slowly; it may depress breathing.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Very high blood pressure: IV nitrate</strong><p>Infusion through a pump; cover the solution with an opaque cover (such as a black bag) because it is light-sensitive.</p></div></div></div><h4>Brief emergency steps (international protocol)</h4><ul><li>Sit up • high-flow oxygen if SpO₂ is low • IV line and ECG • treat arrhythmia (such as AF)</li><li>Diamorphine 1.25–5 mg IV slowly — caution in liver failure and COPD</li><li>Lasix 40–80 mg IV slowly (larger doses in renal impairment)</li><li>Nitroglycerin spray, two sprays sublingually, or two 0.3 mg tablets — not given if systolic is below 90</li><li>If systolic ≥ 100: nitrate infusion (such as isosorbide dinitrate 2–10 mg/hour), keeping systolic ≥ 90</li><li>If the patient worsens: another dose of Lasix, CPAP (improves ventilation and pushes fluid into the vessels — get expert help before starting), increase the nitrate if blood pressure allows, and consider alternative diagnoses: hypertension, aortic dissection, pulmonary embolism, pneumonia</li><li>If systolic is below 100: treat as cardiogenic shock and transfer to intensive care</li></ul><div class=\"cs-box cs-warning\"><strong>Additional points</strong><b>1)</b> Fever or infection: if the patient is febrile, give an antipyretic (paracetamol vial) and an antibiotic (ampoule) as ordered. <b>2)</b> Diuretic resistance: one of its main causes is renal impairment, so a <b>higher dose</b> of the diuretic is needed. <b>3)</b> With arrhythmia (rapid atrial fibrillation): heparin + digoxin ampoule starting at 0.5 mg, diluted in 100 mL glucose 5%. <b>4)</b> If blood pressure is high: an ACE inhibitor or ARB may be used. <b>5)</b> Beta blockers and calcium channel blockers are <b>forbidden</b> here (contraindicated in acute edema). <b>6)</b> After stabilization: transfer to the ward, then discharge if the condition is stable on oral treatment for about two days.</div><h4>Group one: pulmonary edema with low blood pressure (cardiogenic shock)</h4><p>Here we need <b>inotropic agents</b> such as <b>dopamine</b> or <b>dobutamine</b>. If there is no response: an <b>intra-aortic balloon pump</b>, and ultimately heart transplantation in some cases.</p>[[slot:dis-129-dopamine|Preparing dopamine and calculating the rate — illustration prepared by the site|/diseases/img/dis-129-dopamine.svg]]<table><thead><tr><th>Dose</th><th>Effect</th></tr></thead><tbody><tr><td>3–5 mcg/kg/minute</td><td>Acts as a diuretic (the renal effect is not supported by recent evidence)</td></tr><tr><td>5–10 mcg/kg/minute</td><td>Positive inotrope (strengthens cardiac contraction)</td></tr><tr><td>10–15 mcg/kg/minute</td><td>Peripheral vasoconstrictor</td></tr></tbody></table><p><b>In cardiogenic shock we need the highest dose.</b> The bedside calculation method: solution concentration: two ampoules (200 mg per 5 mL ampoule) in 400 mL saline, so each 1 mL = 1 mg = 1000 mcg. We calculate using the ideal adult weight (70 kg): 70 × 15 = 1050 mcg/minute ≈ 1000, meaning we need about 1 mL/minute, and since each 1 mL = 15 drops, we need about <b>15 drops/minute</b>. In practice: <b>start with a small dose (for example 5 drops/minute)</b> and increase gradually until you reach the required dose.</p><div class=\"cs-box cs-danger\"><strong>Dopamine alerts</strong><p>1) Its side effects include tachycardia and arrhythmia. 2) It causes tolerance (Tachyphylaxis) if used for more than 3 days, so the dose needs to be increased. 3) The patient needs admission to the coronary care unit (CCU) and close monitoring of blood pressure, pulse, and ECG.</p></div><div class=\"cs-box cs-pearl\"><strong>Update</strong><p>In current management of cardiogenic shock, <b>noradrenaline is preferred</b> first for severe hypotension because it is less harmful to the rhythm, and dobutamine is added to improve contractility. Dopamine is still an option if there is associated bradycardia or nothing else is available. Follow the physician's order and the unit protocol.</p></div><h4>Quick pump calculation example (70 kg, dopamine 1 mg/mL)</h4><table><thead><tr><th>Dose</th><th>mcg/min</th><th>mL/hour</th></tr></thead><tbody><tr><td>5 mcg/kg/min</td><td>350</td><td>21</td></tr><tr><td>10</td><td>700</td><td>42</td></tr><tr><td>15</td><td>1050</td><td>63</td></tr></tbody></table><p>Formula: mL/hour = (dose × weight × 60) ÷ concentration (mcg/mL).</p><!--M1--><h4>Additional drug table</h4><table><thead><tr><th>Class</th><th>Examples</th><th>Purpose</th></tr></thead><tbody><tr><td>Oxygen</td><td>—</td><td>Raise PaO2; mechanical ventilation may be needed</td></tr><tr><td>Morphine</td><td>—</td><td>Lowers left atrial pressure, oxygen demand, anxiety, and pain</td></tr><tr><td>Diuretics</td><td>Furosemide, bumetanide, metolazone</td><td>Remove fluid</td></tr><tr><td>Glycosides</td><td>Digoxin</td><td>Increase contractility</td></tr><tr><td>Inotropes</td><td>Dobutamine, inamrinone, milrinone</td><td>Strengthen the muscle</td></tr><tr><td>Nitrates</td><td>Isosorbide dinitrate</td><td>Lower blood pressure and left ventricular filling</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Morphine is no longer recommended routinely; non-invasive ventilation (CPAP/BiPAP), nitrates, and furosemide are the mainstay. Inamrinone is no longer used.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الأولوية 1: الجلوس والأكسجين</strong><p>اجلسه فوراً (ساقاه متدليتان) أو رفع الرأس 90 درجة ونصف الجسم عالياً، أكسجين بقناع (غير معيد التنفس) وفتح SpO2. جهّز CPAP/NIV لو أمر الطبيب. اخلع الملابس الضيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>مونيتور وخط وريدي</strong><p>ECG مستمر، SpO2، ضغط كل 5–15 دقيقة، نبض، تنفس. خط وريدي واحد أو اثنين (قطر كبير) وسحب عينات (بما فيها ABG وتروبونين) وECG.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ابلغ الطبيب فوراً</strong><p>نداء طوارئ، وجهّز: دواء مدر، نيترات، أدوية طوارئ، عربة صدمة، مستلزمات تنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>قسطرة بولية / داخل خارج</strong><p>قسطرة بولية لقياس البول بالساعة (الهدف بول فوري بعد Lasix: غالباً 100–150 مل في أول ساعة). سجّل كل السوائل. أوقف السوائل الوريدية الزايدة بأمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ Lasix بأمان</strong><p>وريدي ببطء (لا يزيد 4 mg/دقيقة)، سجّل البول بعد 30 دقيقة، راقب الضغط والبوتاسيوم والكلى، والسمع (الجرعات العالية).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أعطِ النيترات بأمان</strong><p>مضخة تسريب. أوقف لو الضغط الانقباضي أقل من الحد المحدد (غالباً 90–100)، وراقب الصداع والنبض السريع. أعد النظر في الجرعة عند هبوط الضغط. لا Sildenafil.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>المورفين/نالوفين</strong><p>فقط بأمر الطبيب، جرعة صغيرة وريدياً ببطء، راقب التنفس والوعي والضغط، ومضاد Naloxone جاهز. لو وعي ينخفض: بلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Dopamine / مقويات</strong><p>مضخة، ضغط ونبض مستمر، لا تخلطه مع محاليل قلوية، خط وريدي كبير آمن (تسرب = نخر). أوقف تدريجياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>تقييم الاستجابة</strong><p>كل 15 دقيقة: التنفس، SpO2، ضغط، نبض، وعي، بول. التحسن: يقل ضيق النفس والطقطقة. عدم التحسن = جهّز لتنفس ميكانيكي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>بعد الاستقرار</strong><p>وزن يومي، تقييد ملح وسوائل، متابعة بوتاسيوم/كلى، التحضير للتثقيف، علاج السبب (جلطة قلبية؟ عدوى؟).</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>لو نعاس أو ارتباك أو بطء التنفس بعد المسكن/المهدئ، أو انخفاض SpO2 رغم الأكسجين، أو هبوط ضغط: تجهيز مجرى هوائي وتنفس صناعي فوراً. ولا تنيّم المريض مسطحاً.</p></div><h4>التوثيق</h4><ul><li>وقت البداية والأعراض</li><li>SpO2 والأكسجين المعطى (جهاز/تدفق)</li><li>الأدوية والجرعات والمعدلات والوقت</li><li>البول بالساعة</li><li>ECG والنتائج</li><li>الاستجابة وقرارات التصعيد</li></ul><div class=\"cs-box cs-tip\"><strong>إضافات تمريضية</strong><p>• المريض في الوضع 45° ورأسه مرتفع، وثّق وقت القسطرة والبول. • حضّر الدوبامين بتركيز موحّد (1 مجم/مل) وسجّل: التركيز، المعدل، التاريخ. • لو الضغط انخفض أثناء النيترات: أوقف أو قلل واخبر الطبيب. • الغطاء المعتم لمحلول النيترات. • اطلب الفحوص السريعة (يوريا، سكر، ECG، أشعة) فوراً. • قبل النقل للردهة: مستقر على العلاج الفموي لـ48 ساعة تقريباً.</p></div><!--M1--><h4>نقاط تمريضية إضافية</h4><ul><li>وضع جلوس كامل مع تدلي الساقين على جانب السرير</li><li>راقب أصوات القلب والرئتين والتشبع</li><li>سجل الدخل والخرج ومواصفات البلغم</li><li>وزن يومي: زيادة 2 رطل (حوالي 1 كجم) في اليوم تُبلَّغ</li><li>بلّغ لو BUN وكرياتينين زادوا</li><li>علّم: النوم برأس مرفوع (3 مخدات)، قلل الصوديوم، اتصل بالإسعاف لو ضيق نفس</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Priority 1: sitting up and oxygen</strong><p>Sit the patient up immediately (legs dangling) or raise the head 90 degrees with the upper body high, give oxygen by mask (non-rebreather), and start SpO2 monitoring. Prepare CPAP/NIV if the physician orders it. Remove tight clothing.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Monitor and IV line</strong><p>Continuous ECG, SpO2, blood pressure every 5–15 minutes, pulse, respiration. One or two IV lines (large bore), draw samples (including ABG and troponin), and an ECG.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Notify the physician immediately</strong><p>Emergency call, and prepare: diuretic, nitrates, emergency drugs, crash cart, airway supplies.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Urinary catheter / intake and output</strong><p>A urinary catheter to measure hourly urine (the goal is prompt urine after Lasix: usually 100–150 mL in the first hour). Record all fluids. Stop excess IV fluids on the physician's order.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Give Lasix safely</strong><p>IV slowly (no more than 4 mg/minute), record urine after 30 minutes, and monitor blood pressure, potassium, kidney function, and hearing (high doses).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Give nitrates safely</strong><p>Infusion pump. Stop if systolic pressure is below the set limit (usually 90–100), and watch for headache and fast pulse. Reconsider the dose if blood pressure drops. No Sildenafil.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Morphine/Nalufin</strong><p>Only on the physician's order, a small dose IV slowly; monitor breathing, consciousness, and blood pressure, with the antidote Naloxone ready. If consciousness drops: report immediately.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Dopamine / inotropes</strong><p>Pump, continuous blood pressure and pulse, do not mix with alkaline solutions, a secure large IV line (extravasation = necrosis). Wean gradually.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>Assess the response</strong><p>Every 15 minutes: breathing, SpO2, blood pressure, pulse, consciousness, urine. Improvement: less shortness of breath and fewer crackles. No improvement = prepare for mechanical ventilation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>After stabilization</strong><p>Daily weight, salt and fluid restriction, potassium/kidney follow-up, preparing for teaching, treating the cause (MI? infection?).</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>If there is drowsiness, confusion, or slow breathing after the analgesic/sedative, or SpO2 drops despite oxygen, or blood pressure falls: prepare the airway and mechanical ventilation immediately. Do not lay the patient flat.</p></div><h4>Documentation</h4><ul><li>Time of onset and symptoms</li><li>SpO2 and the oxygen given (device/flow)</li><li>Drugs, doses, rates, and time</li><li>Hourly urine</li><li>ECG and results</li><li>Response and escalation decisions</li></ul><div class=\"cs-box cs-tip\"><strong>Nursing additions</strong><p>• The patient is at 45° with the head raised; document the time of catheterization and the urine. • Prepare dopamine at a standard concentration (1 mg/mL) and record: concentration, rate, date. • If blood pressure drops during nitrates: stop or reduce and tell the physician. • Opaque cover for the nitrate solution. • Request the rapid tests (urea, glucose, ECG, X-ray) immediately. • Before transfer to the ward: stable on oral treatment for about 48 hours.</p></div><!--M1--><h4>Additional nursing points</h4><ul><li>Full sitting position with the legs dangling over the side of the bed</li><li>Monitor heart and lung sounds and saturation</li><li>Record intake and output and the characteristics of the sputum</li><li>Daily weight: a gain of 2 pounds (about 1 kg) in a day is reported</li><li>Report if BUN and creatinine rise</li><li>Teach: sleep with the head raised (3 pillows), reduce sodium, call the ambulance if short of breath</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>أي ضيق نفس شديد عند الراحة أو بلغم وردي رغوي</li><li>SpO2 أقل من 90% رغم الأكسجين</li><li>ضغط انقباضي أقل من 90 أو نبض سريع جداً أو غير منتظم</li><li>نعاس أو ارتباك أو توقف التنفس</li><li>بول قليل جداً بعد المدرّ</li><li>ألم صدر (جلطة) أو علامات سكتة</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Any severe shortness of breath at rest or pink frothy sputum</li><li>SpO2 below 90% despite oxygen</li><li>Systolic pressure below 90, or a very fast or irregular pulse</li><li>Drowsiness, confusion, or respiratory arrest</li><li>Very little urine after the diuretic</li><li>Chest pain (MI) or signs of stroke</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>الوذمة الرئوية ممكن ترجع: التزم بأدويتك (مدرّات، أدوية القلب) وبالملح القليل.</li><li>وزّن نفسك يومياً وبلّغ عن زيادة 1 كجم في يوم أو 2 كجم في 3 أيام.</li><li>نام بوسادتين أو أكتر لو بيحصل ضيق نفس بالليل.</li><li>أي ضيق نفس مفاجئ أو سعال ببلغم وردي: اطلب الإسعاف فوراً، واجلس.</li><li>ابتعد عن المخللات والأكل المالح، وخف السوائل حسب تعليمات الطبيب.</li><li>اتبع علاج السبب (الضغط، الصمام، الجلطة).</li></ul>",
+   "en": "<ul><li>Pulmonary edema can come back: stick to your medications (diuretics, heart drugs) and to a low-salt diet.</li><li>Weigh yourself daily and report a gain of 1 kg in a day or 2 kg in 3 days.</li><li>Sleep on two or more pillows if you get short of breath at night.</li><li>Any sudden shortness of breath or cough with pink sputum: call the ambulance immediately, and sit up.</li><li>Stay away from pickles and salty food, and limit fluids as the physician instructs.</li><li>Follow the treatment of the cause (blood pressure, valve, MI).</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "وذمة رئوية = طوارئ: ضيق نفس شديد وبلغم رغوي وردي وزرقة",
+   "الغالب قلبي (فشل بطين أيسر حاد)، وغير قلبي (تعفن، رضوح، غازات…)",
+   "الجلوس + أكسجين (6–8 لتر أو CPAP) + مونيتور أول خطوة",
+   "العلاج: Lasix وريدي + نيترات وريدي (ضغط كافٍ) ± مسكن بحذر",
+   "Dopamine فقط لو ضغط منخفض/صدمة",
+   "المراقبة: SpO2، ضغط، بول بالساعة، وعي، ونتائج ABG",
+   "قسّم المريض: ضغط منخفض (مقويات قلب/صدمة قلبية) أو طبيعي/مرتفع (مدر + نيترات)",
+   "الدوبامين: 3–5 / 5–10 / 10–15 مكجم/كجم/د، ويسبب تسرع ونتحمل 3 أيام قبل التعوّد"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الوذمة الرئوية الحادة (Acute pulmonary oedema) هي تجمع سريع للسوائل داخل الحويصلات الهوائية والنسيج الرئوي، فيحصل صعوبة تنفس شديدة ونقص أكسجين. غالباً سببها قلبي (فشل البطين الأيسر الحاد)، وممكن تكون غير قلبية. <b>حالة طارئة تهدد الحياة</b> وتحتاج تدخل خلال دقائق.</p>[[slot:dis-129-algorithm|خطوات التعامل السريع مع الوذمة الرئوية — رسم من إعداد الموقع|/diseases/img/dis-129-algorithm.svg]]<div class=\"cs-stats\"><div><b>ICU</b><span>دخول العناية</span></div><div><b>جلوس</b><span>وضع المريض</span></div><div><b>O₂ + Lasix + نيترات</b><span>أساس العلاج</span></div></div><div class=\"cs-box cs-danger\"><strong>أول ما تلاحظ</strong><p>مريض فجأة ضيق نفس شديد، قاعد ومش قادر يستلقي، بلغم رغوي وردي، عرق بارد وقلق: <b>اطلب الطبيب فوراً</b> وابدأ الإسعاف الأولي (جلوس، أكسجين، مونيتور).</p></div><h4>تقسيم المريض حسب الضغط (الأساس في القرار)</h4><table><thead><tr><th>القسم</th><th>الحالة</th><th>المبدأ</th></tr></thead><tbody><tr><td>القسم الأول</td><td>وذمة رئوية + <b>انخفاض الضغط</b> (صدمة قلبية)</td><td>محتاجين مقويات قلب (Inotropes) زي دوبامين أو دوبوتامين</td></tr><tr><td>القسم الثاني</td><td>وذمة رئوية + ضغط <b>طبيعي أو مرتفع</b></td><td>أساس العلاج: مدرّات + نيترات + أكسجين/CPAP</td></tr></tbody></table>[[slot:dis-129-sbp|القرار العلاجي حسب الضغط الانقباضي — رسم من إعداد الموقع|/diseases/img/dis-129-sbp.svg]]<!--M1--><h4>معلومات مكملة</h4><p>الوذمة الرئوية ناتجة عن ضخ غير فعال في فشل البطين الأيسر أو الجلطة أو زيادة الحجم، مما يسبب نقص أكسجة. علامات إضافية: ضيق نفس حتى الجلوس، تنفس سريع أكتر من 20/دقيقة، بلغم رغوي مدمم، زرقة، جلد بارد ندي، قلق وخوف، انتفاخ أوردة الرقبة، طقطقة وصفير. وقد تنتج أيضاً أسباب غير قلبية.</p>"
-    },
-    "causes": {
-      "ar": "[[slot:dis-129-types|أنواع الوذمة الرئوية الحادة — رسم من إعداد الموقع|/diseases/img/dis-129-types.svg]]<h4>قلبية المنشأ (Cardiogenic)</h4><ol><li>فشل القلب الأيسر الحاد (Acute LSHF)</li><li>تدهور حاد في فشل قلب مزمن (مثل ضيق الصمام التاجي مع رجفان أذيني MS + AF)</li></ol><h4>غير قلبية المنشأ (Non-cardiogenic)</h4><ol><li>تعفن الدم / الالتهاب الرئوي / التهاب البنكرياس</li><li>سكتة دماغية / إصابة رأس</li><li>الصدمة (Shock)</li><li>الرضوح والحروق</li><li>المراحل النهائية من فشل الكبد والكلى</li><li>استنشاق غازات (مثل الكلور)</li><li>استنشاق محتوى المعدة (Aspiration)</li><li>التجلط المنتشر داخل الأوعية (DIC)</li></ol><h4>أسباب أخرى</h4><ol><li>السحب السريع لانصباب جنبي ضخم</li><li>نقص ألبيومين شديد</li></ol><h4>عوامل تسبب النوبة عند مريض القلب (إضافة)</h4><ul><li>ارتفاع ضغط مفاجئ، رجفان أذيني سريع، جلطة قلبية</li><li>ملح وسوائل وريدية زيادة، ترك الأدوية، عدوى، أنيميا</li><li>فشل الكلى أو زيادة الحمل الحجمي</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>الصورة السريرية</h4><ol><li>ضيق نفس شديد حتى عند الراحة مع عدم القدرة على الاستلقاء (Orthopnea)</li><li>كحة ببلغم رغوي (Frothy) وقد يكون مشوباً بالدم</li><li>أصوات «فقاعية» منتشرة (Bubbling crepitations) في الصدر كله</li><li>تعرق غزير وقلق شديد</li><li>زرقة مركزية (Central cyanosis)</li><li>صفير منتشر (Generalized wheeze) — «ربو قلبي»</li></ol><h4>الصورة السريرية للسبب</h4><ul><li>ألم صدر نمطي في الجلطة القلبية (MI)</li><li>علامات عصبية في السكتة (Stroke)</li></ul><div class=\"cs-box cs-tip\"><strong>تفرقة سريعة</strong><p>الربو: صفير بدون بلغم رغوي وغالباً تاريخ سابق. الوذمة الرئوية القلبية: بلغم رغوي وردي وطقطقة منتشرة وتاريخ قلب. لا تعطِ حاصر بيتا بدون أمر الطبيب في هذا الوضع.</p></div>"
-    },
-    "tests": {
-      "ar": "<h4>أشعة الصدر (CXR)</h4><ol><li>زيادة العلامات الوعائية القصبية (Increased bronchovascular markings)</li><li>عتامة / ضباب بحقول الرئة (Haziness)</li></ol>[[slot:dis-129-cxr|صورة أشعة صدر: وذمة رئوية (ظل «جناح الفراشة» حول السرة الرئوية)]]<h4>غازات الدم الشريانية (ABG)</h4><ol><li>PO₂ منخفض</li><li>PCO₂ منخفض في البداية، ويرتفع متأخراً في الحالات الشديدة (فشل تنفسي)</li></ol><h4>البحث عن السبب</h4><ol><li>ECG وإنزيمات القلب (Troponin) للجلطة القلبية</li><li>أشعة مقطعية على المخ (CT brain) للسكتة</li></ol><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>إضافات: الإيكو السريع (لتقدير EF والصمامات)، NT-proBNP، كرياتينين وإلكتروليت، سكر، وصورة دم. ولو مسح الرئة بالموجات (Lung US) متاح فيه خطوط B كثيرة.</p></div><div class=\"cs-box cs-tip\"><strong>للتمريض أثناء ABG</strong><p>خد العينة بسرعة بدون هواء في السرنجة، ضع على ثلج لو التحليل هيتأخر، سجّل نسبة الأكسجين اللي بياخدها المريض وقت السحب، واضغط 5 دقائق على الشريان بعد الوخز.</p></div><h4>فحوصات سريعة يطلبها الفريق</h4><ul><li><b>يوريا وكرياتينين</b> (وظائف الكلى — مقاومة المدر)</li><li>سكر عشوائي (RBS) وأملاح</li><li><b>ECG</b> لاكتشاف جلطة أو رجفان أذيني</li><li><b>أشعة صدر (X-Ray)</b></li><li>تحاليل أخرى حسب الشك: تروبونين، ABG، صورة دم</li></ul><!--M1--><ul><li>تشبع الأكسجين أقل من 90%</li><li>أشعة الصدر: سائل بالحويصلات وقلب كبير</li><li>إيكو لكسر القذف</li><li>تحليل BUN وكرياتينين</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>1) الإسعاف حسب المراجع</h4><table><thead><tr><th>الإجراء</th><th>التفاصيل</th></tr></thead><tbody><tr><td>الدخول</td><td>العناية المركزة (ICU)، راحة في وضع الجلوس</td></tr><tr><td>الأكسجين</td><td>6–8 لتر/دقيقة</td></tr><tr><td>مسكن/ مهدئ</td><td>Nalufin (نالوفين) 5 mg أمبول وريدي — لتخفيف القلق وتقليل التنبيه الودي</td></tr><tr><td>مدرّ</td><td>Lasix (لازيكس) 40 mg وريدي، يكرر كل نصف ساعة حتى الراحة</td></tr><tr><td>موسّع وريدي</td><td>Nitronal (نيترونال): 10 سم³ في 90 سم³ جلوكوز 5% بجهاز محلول؛ يبدأ بمعدل 3 نقط/دقيقة أو ضعفها بحيث لا يقل الضغط عن 100/70 mmHg</td></tr><tr><td>مقوٍّ للقلب</td><td>Dopamine (دوبامين): أمبول واحد في 200 سم³ رينجر، المعدل 5 نقط/دقيقة</td></tr><tr><td>موسّع شُعب</td><td>Minophylline (مينوفيلين) وريدي 250–500 mg ببطء</td></tr></tbody></table><h4>2) الحالات المقاومة</h4><ul><li>سحب سوائل ميكانيكياً بفصد الدم (Phlebotomy) أو الغسيل الكلوي</li><li>تنفس صناعي (Mechanical ventilation)</li><li>دعم ميكانيكي: بالون داخل الشريان الأورطي (Intra-aortic balloon counterpulsation)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li><b>Nalufin</b> هو Nalbuphine (مسكن أفيوني مختلط) وليس مورفين؛ وحالياً <b>الأفيونات لا تُعطى روتينياً</b> في الوذمة الرئوية (قد تثبط التنفس وتزيد الحاجة للتهوية)، وتُستخدم بجرعات صغيرة فقط عند قلق/ألم شديد بأمر الطبيب.</li><li><b>الأكسجين:</b> يُعطى لو SpO2 أقل من 90–94% بهدف حوالي 94–98% (وأقل لمرضى احتباس CO2). ونطاق 6–8 لتر صحيح للبداية. الأولوية الحديثة: <b>CPAP / NIV</b> مبكراً (يبدأ CPAP ~5 وحتى 10 cmH₂O) لأنه يقلل الجهد التنفسي والحاجة للتهوية الميكانيكية.</li><li><b>Lasix:</b> الجرعة المعتادة 40–80 mg وريدي (20–40 mg لمن لم يتناول مدرّات)، ويُكرر حسب البول والاستجابة بدلاً من «كل نصف ساعة» تلقائياً.</li><li><b>النيترات الوريدية:</b> أفضل في المريض صاحب ضغط مرتفع/طبيعي (مثلاً الضغط الانقباضي فوق 110 في ESC)، وتُستخدم مضخة بـ mcg/min (بدء 10–20 mcg/min وزيادة 5–10 كل 5 دقائق)، وقد تُستخدم جرعات أعلى في البروتوكولات الحديثة بإشراف طبي. وممنوعة مع Sildenafil أو الضغط المنخفض.</li><li><b>Dopamine:</b> فقط لو ضغط منخفض (أقل من 90) أو صدمة قلبية؛ ليس لكل مريض وذمة. يُفضَّل المضخة (mcg/kg/min) على «نقط/دقيقة».</li><li><b>Aminophylline:</b> فقط لو تشنج قصبي، لأنه يسبب تسارع النبض واضطراب النظم.</li></ul></div><h4>تسلسل الإسعاف المرتب (ضغط طبيعي/مرتفع)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>ارفع الرأس 45° (أو اجلس)</strong><p>وضع السرير: رفع جانب الرأس 45° أو الجلوس مع تدلية الساقين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أكسجين</strong><p>عالي التدفق والتركيز؛ يُفضّل مرطّب؛ CPAP/NIV لو لم يتحسن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>كانيولا وقسطرة بولية ومونيتور</strong><p>وصّل ECG، وركّب قسطرة بول لقياس الإخراج بالساعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>لازيكس (فوروسيمايد) 40–80 مجم وريدي</strong><p>الجرعة المعتادة 40–80 مجم (الأمبول 20 مجم/2 مل أو 40 مجم/4 مل حسب العلبة). جرعات أعلى في القصور الكلوي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>نيترات تحت اللسان</strong><p>حبة (أو بخّتان) ويمكن إعادتها كل 5 دقائق لو الضغط كافٍ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>انتظر وقيّم الاستجابة</strong><p>تنفس، SpO₂، ضغط، بول، سماع الصدر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>مسكن أفيوني (مورفين/دياموفين) بحذر</strong><p>تحت الجلد/وريدي بجرعات صغيرة وببطء؛ قد يثبط التنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>ضغط مرتفع جداً: نيترات وريدي</strong><p>تنقيط عبر مضخة؛ مع تغطية المحلول بغطاء معتم (مثل علاقة سوداء) لأنه يتأثر بالضوء.</p></div></div></div><h4>خطوات الإسعاف المختصرة (بروتوكول دولي)</h4><ul><li>اجلس • أكسجين عالي التدفق لو SpO₂ منخفضة • خط وريدي وECG • عالج اضطراب النظم (مثل AF)</li><li>دياموفين 1.25–5 مجم وريدي ببطء — حذر في فشل الكبد وCOPD</li><li>لازيكس 40–80 مجم وريدي ببطء (جرعات أكبر في القصور الكلوي)</li><li>نيتروجليسرين بخاخ بخّتان تحت اللسان أو قرصان 0.3 مجم — لا يُعطى لو الانقباضي أقل من 90</li><li>لو الانقباضي ≥ 100: تسريب نيترات (مثل ايزوسوربيد دينيترات 2–10 مجم/ساعة) مع إبقاء الانقباضي ≥ 90</li><li>لو يسوء المريض: جرعة لازيكس أخرى، CPAP (يُحسّن التهوية ويدفع السوائل للأوعية — استعن بخبير قبل البدء)، زيادة النيترات لو الضغط يسمح، وفكّر بتشخيصات بديلة: ارتفاع ضغط، تسلخ أبهر، جلطة رئوية، التهاب رئوي</li><li>لو الانقباضي أقل من 100: عامله كصدمة قلبية وحوّل للعناية المركزة</li></ul><div class=\"cs-box cs-warning\"><strong>نقاط إضافية</strong><b>1)</b> الحرارة أو العدوى: لو المريض محموم أعطِ خافض حرارة (باراسيتامول فيال) ومضاد حيوي (أمبول) حسب الأمر. <b>2)</b> مقاومة المدر (Diuretic resistance): من أهم أسبابها القصور الكلوي، فتحتاج <b>جرعة أعلى</b> من المدر. <b>3)</b> مع اضطراب نظم (رجفان أذيني سريع): هيبارين + ديجوكسين أمبول يبدأ 0.5 مجم، يُخفف في 100 مل جلوكوز 5%. <b>4)</b> لو الضغط مرتفع: ممكن مثبط ACE أو ARB. <b>5)</b> <b>ممنوع</b> حاصر بيتا وحاصر الكالسيوم هنا (موانع في الوذمة الحادة). <b>6)</b> بعد الاستقرار: النقل للردهة ثم الخروج لو الحالة مستقرة على العلاج الفموي نحو يومين.</div><h4>القسم الأول: وذمة رئوية مع هبوط الضغط (صدمة قلبية)</h4><p>هنا نحتاج <b>أدوية مقوية (Inotropic agents)</b> زي <b>دوبامين</b> أو <b>دوبوتامين</b>. لو مفيش استجابة: بالون داخل الشريان الأورطي (<b>Intra-aortic balloon pump</b>)، وفي النهاية زراعة القلب في بعض الحالات.</p>[[slot:dis-129-dopamine|تحضير الدوبامين وحساب المعدل — رسم من إعداد الموقع|/diseases/img/dis-129-dopamine.svg]]<table><thead><tr><th>الجرعة</th><th>التأثير</th></tr></thead><tbody><tr><td>3–5 مكجم/كجم/دقيقة</td><td>يعمل كمدرّ (التأثير الكلوي غير مثبت حديثاً)</td></tr><tr><td>5–10 مكجم/كجم/دقيقة</td><td>مقوٍّ لانقباض القلب (Positive inotrope)</td></tr><tr><td>10–15 مكجم/كجم/دقيقة</td><td>قابض محيطي للأوعية (Vasoconstrictor)</td></tr></tbody></table><p><b>في الصدمة القلبية نحتاج أعلى جرعة.</b> طريقة الحساب بالبيت: تركيز المحلول: أمبولتان (200 مجم لكل أمبول 5 مل) في 400 مل ملح، فكل 1 مل = 1 مجم = 1000 مكجم. نحسب بالوزن المثالي للبالغ (70 كجم): 70 × 15 = 1050 مكجم/دقيقة ≈ 1000، أي نحتاج حوالي 1 مل/دقيقة، وبما أن كل 1 مل = 15 نقطة فنحتاج حوالي <b>15 نقطة/دقيقة</b>. عملياً: <b>ابدأ بجرعة صغيرة (مثلاً 5 نقط/دقيقة)</b> وزد تدريجياً حتى توصل للجرعة المطلوبة.</p><div class=\"cs-box cs-danger\"><strong>تنبيهات الدوبامين</strong><p>1) من آثاره الجانبية: تسرع القلب واضطراب النظم. 2) يسبب تعوّداً (Tachyphylaxis) لو استُخدم أكثر من 3 أيام فتحتاج زيادة الجرعة. 3) المريض يحتاج دخول وحدة القلب (CCU) ومراقبة دقيقة للضغط والنبض وECG.</p></div><div class=\"cs-box cs-pearl\"><strong>تحديث</strong><p>في الصدمة القلبية الحديثة (ESC 2021/AHA) <b>النورأدرينالين مفضّل</b> أولاً عند هبوط الضغط الشديد لأنه أقل ضرراً على النظم، والدوبوتامين يُضاف لتحسين الانقباض. الدوبامين ما زال خياراً لو بطء القلب مصاحب أو لو لا يتوفر غيره. اتّبع أمر الطبيب وبروتوكول الوحدة.</p></div><h4>مثال حساب سريع بالمضخة (70 كجم، دوبامين 1 مجم/مل)</h4><table><thead><tr><th>الجرعة</th><th>مكجم/د</th><th>مل/ساعة</th></tr></thead><tbody><tr><td>5 مكجم/كجم/د</td><td>350</td><td>21</td></tr><tr><td>10</td><td>700</td><td>42</td></tr><tr><td>15</td><td>1050</td><td>63</td></tr></tbody></table><p>المعادلة: مل/ساعة = (الجرعة × الوزن × 60) ÷ التركيز (مكجم/مل).</p><!--M1--><h4>جدول الأدوية الإضافي</h4><table><thead><tr><th>الفئة</th><th>أمثلة</th><th>الغرض</th></tr></thead><tbody><tr><td>أكسجين</td><td>—</td><td>رفع PaO2، وقد يلزم تنفس صناعي</td></tr><tr><td>مورفين</td><td>—</td><td>يخفض ضغط الأذين الأيسر والطلب على الأكسجين والقلق والألم</td></tr><tr><td>مدرات</td><td>فوروسيميد، بوميتانيد، ميتولازون</td><td>إزالة السوائل</td></tr><tr><td>جليكوزيدات</td><td>ديجوكسين</td><td>زيادة الانقباض</td></tr><tr><td>منشطات الانقباض</td><td>دوبيوتامين، إينامرينون، ميلرينون</td><td>تقوية العضلة</td></tr><tr><td>نيترات</td><td>أيزوسوربيد دينيترات</td><td>خفض الضغط وامتلاء البطين الأيسر</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المورفين لم يعد موصى به روتينياً؛ والتهوية غير الغازية (CPAP/BiPAP) والنيترات والفوروسيميد هي الأساس. إينامرينون لم يعد مستخدماً.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الأولوية 1: الجلوس والأكسجين</strong><p>اجلسه فوراً (ساقاه متدليتان) أو رفع الرأس 90 درجة ونصف الجسم عالياً، أكسجين بقناع (غير معيد التنفس) وفتح SpO2. جهّز CPAP/NIV لو أمر الطبيب. اخلع الملابس الضيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>مونيتور وخط وريدي</strong><p>ECG مستمر، SpO2، ضغط كل 5–15 دقيقة، نبض، تنفس. خط وريدي واحد أو اثنين (قطر كبير) وسحب عينات (بما فيها ABG وتروبونين) وECG.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ابلغ الطبيب فوراً</strong><p>نداء طوارئ، وجهّز: دواء مدر، نيترات، أدوية طوارئ، عربة صدمة، مستلزمات تنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>قسطرة بولية / داخل خارج</strong><p>قسطرة بولية لقياس البول بالساعة (الهدف بول فوري بعد Lasix: غالباً 100–150 مل في أول ساعة). سجّل كل السوائل. أوقف السوائل الوريدية الزايدة بأمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ Lasix بأمان</strong><p>وريدي ببطء (لا يزيد 4 mg/دقيقة)، سجّل البول بعد 30 دقيقة، راقب الضغط والبوتاسيوم والكلى، والسمع (الجرعات العالية).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أعطِ النيترات بأمان</strong><p>مضخة تسريب. أوقف لو الضغط الانقباضي أقل من الحد المحدد (غالباً 90–100)، وراقب الصداع والنبض السريع. أعد النظر في الجرعة عند هبوط الضغط. لا Sildenafil.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>المورفين/نالوفين</strong><p>فقط بأمر الطبيب، جرعة صغيرة وريدياً ببطء، راقب التنفس والوعي والضغط، ومضاد Naloxone جاهز. لو وعي ينخفض: بلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Dopamine / مقويات</strong><p>مضخة، ضغط ونبض مستمر، لا تخلطه مع محاليل قلوية، خط وريدي كبير آمن (تسرب = نخر). أوقف تدريجياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>تقييم الاستجابة</strong><p>كل 15 دقيقة: التنفس، SpO2، ضغط، نبض، وعي، بول. التحسن: يقل ضيق النفس والطقطقة. عدم التحسن = جهّز لتنفس ميكانيكي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">10</span><div><strong>بعد الاستقرار</strong><p>وزن يومي، تقييد ملح وسوائل، متابعة بوتاسيوم/كلى، التحضير للتثقيف، علاج السبب (جلطة قلبية؟ عدوى؟).</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>لو نعاس أو ارتباك أو بطء التنفس بعد المسكن/المهدئ، أو انخفاض SpO2 رغم الأكسجين، أو هبوط ضغط: تجهيز مجرى هوائي وتنفس صناعي فوراً. ولا تنيّم المريض مسطحاً.</p></div><h4>التوثيق</h4><ul><li>وقت البداية والأعراض</li><li>SpO2 والأكسجين المعطى (جهاز/تدفق)</li><li>الأدوية والجرعات والمعدلات والوقت</li><li>البول بالساعة</li><li>ECG والنتائج</li><li>الاستجابة وقرارات التصعيد</li></ul><div class=\"cs-box cs-tip\"><strong>إضافات تمريضية</strong><p>• المريض في الوضع 45° ورأسه مرتفع، وثّق وقت القسطرة والبول. • حضّر الدوبامين بتركيز موحّد (1 مجم/مل) وسجّل: التركيز، المعدل، التاريخ. • لو الضغط انخفض أثناء النيترات: أوقف أو قلل واخبر الطبيب. • الغطاء المعتم لمحلول النيترات. • اطلب الفحوص السريعة (يوريا، سكر، ECG، أشعة) فوراً. • قبل النقل للردهة: مستقر على العلاج الفموي لـ48 ساعة تقريباً.</p></div><!--M1--><h4>نقاط تمريضية إضافية</h4><ul><li>وضع جلوس كامل مع تدلي الساقين على جانب السرير</li><li>راقب أصوات القلب والرئتين والتشبع</li><li>سجل الدخل والخرج ومواصفات البلغم</li><li>وزن يومي: زيادة 2 رطل (حوالي 1 كجم) في اليوم تُبلَّغ</li><li>بلّغ لو BUN وكرياتينين زادوا</li><li>علّم: النوم برأس مرفوع (3 مخدات)، قلل الصوديوم، اتصل بالإسعاف لو ضيق نفس</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>أي ضيق نفس شديد عند الراحة أو بلغم وردي رغوي</li><li>SpO2 أقل من 90% رغم الأكسجين</li><li>ضغط انقباضي أقل من 90 أو نبض سريع جداً أو غير منتظم</li><li>نعاس أو ارتباك أو توقف التنفس</li><li>بول قليل جداً بعد المدرّ</li><li>ألم صدر (جلطة) أو علامات سكتة</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>الوذمة الرئوية ممكن ترجع: التزم بأدويتك (مدرّات، أدوية القلب) وبالملح القليل.</li><li>وزّن نفسك يومياً وبلّغ عن زيادة 1 كجم في يوم أو 2 كجم في 3 أيام.</li><li>نام بوسادتين أو أكتر لو بيحصل ضيق نفس بالليل.</li><li>أي ضيق نفس مفاجئ أو سعال ببلغم وردي: اطلب الإسعاف فوراً، واجلس.</li><li>ابتعد عن المخللات والأكل المالح، وخف السوائل حسب تعليمات الطبيب.</li><li>اتبع علاج السبب (الضغط، الصمام، الجلطة).</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "وذمة رئوية = طوارئ: ضيق نفس شديد وبلغم رغوي وردي وزرقة",
-      "الغالب قلبي (فشل بطين أيسر حاد)، وغير قلبي (تعفن، رضوح، غازات…)",
-      "الجلوس + أكسجين (6–8 لتر أو CPAP) + مونيتور أول خطوة",
-      "العلاج: Lasix وريدي + نيترات وريدي (ضغط كافٍ) ± مسكن بحذر",
-      "Dopamine فقط لو ضغط منخفض/صدمة",
-      "المراقبة: SpO2، ضغط، بول بالساعة، وعي، ونتائج ABG",
-      "قسّم المريض: ضغط منخفض (مقويات قلب/صدمة قلبية) أو طبيعي/مرتفع (مدر + نيترات)",
-      "الدوبامين: 3–5 / 5–10 / 10–15 مكجم/كجم/د، ويسبب تسرع ونتحمل 3 أيام قبل التعوّد"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أفضل وضع لمريض وذمة رئوية حادة؟"
-      },
-      "options": [
-        {
-          "ar": "مسطح على الظهر"
-        },
-        {
-          "ar": "جلوس مع تدلي الساقين"
-        },
-        {
-          "ar": "على البطن"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يقلل العائد الوريدي ويسهل التنفس."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي من الآتي سبب غير قلبي؟"
-      },
-      "options": [
-        {
-          "ar": "فشل بطين أيسر حاد"
-        },
-        {
-          "ar": "استنشاق الكلور"
-        },
-        {
-          "ar": "جلطة قلبية فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الغازات السامة تسبب وذمة غير قلبية."
-      }
-    },
-    {
-      "q": {
-        "ar": "لو ضغط المريض 80/50 أثناء النوبة؟"
-      },
-      "options": [
-        {
-          "ar": "نواصل النيترات بجرعة أعلى"
-        },
-        {
-          "ar": "نوقف النيترات ونبلّغ ونجهز مقويات"
-        },
-        {
-          "ar": "نتجاهل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "النيترات تهبط الضغط؛ وتحتاج هذه الحالة مقويات."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد إعطاء مسكن أفيوني بدأ المريض بالنعاس وبطء التنفس. التصرف؟"
-      },
-      "options": [
-        {
-          "ar": "نتركه ينام"
-        },
-        {
-          "ar": "نقيّم التنفس ونبلّغ ونجهز Naloxone"
-        },
-        {
-          "ar": "نعطيه جرعة أخرى"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تثبيط التنفس خطر."
-      }
-    },
-    {
-      "q": {
-        "ar": "نتيجة ABG المتأخرة في الحالات الشديدة؟"
-      },
-      "options": [
-        {
-          "ar": "PO2 مرتفع"
-        },
-        {
-          "ar": "PCO2 يرتفع مع PO2 منخفض"
-        },
-        {
-          "ar": "كلاهما طبيعي"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "PCO2 ينخفض في البداية ثم يرتفع مع الإرهاق والفشل التنفسي."
-      }
-    },
-    {
-      "q": {
-        "ar": "محلول دوبامين 400 مجم في 400 مل لمريض 70 كجم. أي معدل تقريبي يعطي 5 مكجم/كجم/د؟"
-      },
-      "options": [
-        {
-          "ar": "5 نقط/د (~21 مل/س)"
-        },
-        {
-          "ar": "50 نقطة/د"
-        },
-        {
-          "ar": "1 نقطة/د"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "70×5=350 مكجم/د = 0.35 مل/د ≈ 5 نقط/د."
-      }
-    },
-    {
-      "q": {
-        "ar": "وذمة رئوية بضغط مرتفع ومريض على حاصر كالسيوم/بيتا. ما رأيك؟"
-      },
-      "options": [
-        {
-          "ar": "نزوّد الجرعة"
-        },
-        {
-          "ar": "هذه الأدوية ممنوعة في الوذمة الحادة؛ نبلّغ"
-        },
-        {
-          "ar": "لا يهم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تقلل انقباض القلب وتزيد الفشل."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure"
-    },
-    {
-      "title": "MSD Manual Professional: Pulmonary Edema"
-    },
-    {
-      "title": "RCEM Learning: Cardiogenic pulmonary oedema; MSF Clinical guidelines: Acute heart failure (acute pulmonary oedema)"
-    },
-    {
-      "title": "2021 ESC HF guideline (acute HF algorithm by SBP) + Oxford Handbook acute HF pathway"
-    }
+  "en": [
+   "Pulmonary edema = emergency: severe shortness of breath, pink frothy sputum, and cyanosis",
+   "Mostly cardiac (acute left ventricular failure), and non-cardiac (sepsis, trauma, gases…)",
+   "Sitting up + oxygen (6–8 L or CPAP) + monitor is the first step",
+   "Treatment: IV Lasix + IV nitrate (adequate blood pressure) ± analgesic with caution",
+   "Dopamine only if blood pressure is low/shock",
+   "Monitoring: SpO2, blood pressure, hourly urine, consciousness, and ABG results",
+   "Classify the patient: low blood pressure (inotropes/cardiogenic shock) or normal/high (diuretic + nitrates)",
+   "Dopamine: 3–5 / 5–10 / 10–15 mcg/kg/min; it causes tachycardia, and tolerance develops after 3 days"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أفضل وضع لمريض وذمة رئوية حادة؟",
+    "en": "The best position for a patient with acute pulmonary edema?"
+   },
+   "options": [
+    {
+     "ar": "مسطح على الظهر",
+     "en": "Flat on the back"
+    },
+    {
+     "ar": "جلوس مع تدلي الساقين",
+     "en": "Sitting with the legs dangling"
+    },
+    {
+     "ar": "على البطن",
+     "en": "Prone"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يقلل العائد الوريدي ويسهل التنفس.",
+    "en": "It reduces venous return and eases breathing."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من الآتي سبب غير قلبي؟",
+    "en": "Which of the following is a non-cardiac cause?"
+   },
+   "options": [
+    {
+     "ar": "فشل بطين أيسر حاد",
+     "en": "Acute left ventricular failure"
+    },
+    {
+     "ar": "استنشاق الكلور",
+     "en": "Chlorine inhalation"
+    },
+    {
+     "ar": "جلطة قلبية فقط",
+     "en": "Myocardial infarction only"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الغازات السامة تسبب وذمة غير قلبية.",
+    "en": "Toxic gases cause non-cardiac edema."
+   }
+  },
+  {
+   "q": {
+    "ar": "لو ضغط المريض 80/50 أثناء النوبة؟",
+    "en": "If the patient's blood pressure is 80/50 during the attack?"
+   },
+   "options": [
+    {
+     "ar": "نواصل النيترات بجرعة أعلى",
+     "en": "Continue nitrates at a higher dose"
+    },
+    {
+     "ar": "نوقف النيترات ونبلّغ ونجهز مقويات",
+     "en": "Stop nitrates, report, and prepare inotropes"
+    },
+    {
+     "ar": "نتجاهل",
+     "en": "Ignore it"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "النيترات تهبط الضغط؛ وتحتاج هذه الحالة مقويات.",
+    "en": "Nitrates lower blood pressure; this situation needs inotropes."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد إعطاء مسكن أفيوني بدأ المريض بالنعاس وبطء التنفس. التصرف؟",
+    "en": "After an opioid analgesic the patient becomes drowsy with slow breathing. Action?"
+   },
+   "options": [
+    {
+     "ar": "نتركه ينام",
+     "en": "Let the patient sleep"
+    },
+    {
+     "ar": "نقيّم التنفس ونبلّغ ونجهز Naloxone",
+     "en": "Assess breathing, report, and prepare Naloxone"
+    },
+    {
+     "ar": "نعطيه جرعة أخرى",
+     "en": "Give another dose"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تثبيط التنفس خطر.",
+    "en": "Respiratory depression is dangerous."
+   }
+  },
+  {
+   "q": {
+    "ar": "نتيجة ABG المتأخرة في الحالات الشديدة؟",
+    "en": "The late ABG finding in severe cases?"
+   },
+   "options": [
+    {
+     "ar": "PO2 مرتفع",
+     "en": "High PO2"
+    },
+    {
+     "ar": "PCO2 يرتفع مع PO2 منخفض",
+     "en": "PCO2 rises with low PO2"
+    },
+    {
+     "ar": "كلاهما طبيعي",
+     "en": "Both normal"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "PCO2 ينخفض في البداية ثم يرتفع مع الإرهاق والفشل التنفسي.",
+    "en": "PCO2 falls at first and then rises with exhaustion and respiratory failure."
+   }
+  },
+  {
+   "q": {
+    "ar": "محلول دوبامين 400 مجم في 400 مل لمريض 70 كجم. أي معدل تقريبي يعطي 5 مكجم/كجم/د؟",
+    "en": "A dopamine solution of 400 mg in 400 mL for a 70 kg patient. Which approximate rate gives 5 mcg/kg/min?"
+   },
+   "options": [
+    {
+     "ar": "5 نقط/د (~21 مل/س)",
+     "en": "5 drops/min (~21 mL/h)"
+    },
+    {
+     "ar": "50 نقطة/د",
+     "en": "50 drops/min"
+    },
+    {
+     "ar": "1 نقطة/د",
+     "en": "1 drop/min"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "70×5=350 مكجم/د = 0.35 مل/د ≈ 5 نقط/د.",
+    "en": "70×5=350 mcg/min = 0.35 mL/min ≈ 5 drops/min."
+   }
+  },
+  {
+   "q": {
+    "ar": "وذمة رئوية بضغط مرتفع ومريض على حاصر كالسيوم/بيتا. ما رأيك؟",
+    "en": "Pulmonary edema with high blood pressure in a patient on a calcium channel blocker/beta blocker. What do you think?"
+   },
+   "options": [
+    {
+     "ar": "نزوّد الجرعة",
+     "en": "Increase the dose"
+    },
+    {
+     "ar": "هذه الأدوية ممنوعة في الوذمة الحادة؛ نبلّغ",
+     "en": "These drugs are contraindicated in acute edema; report"
+    },
+    {
+     "ar": "لا يهم",
+     "en": "It does not matter"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تقلل انقباض القلب وتزيد الفشل.",
+    "en": "They reduce cardiac contractility and worsen the failure."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure"
+  },
+  {
+   "title": "MSD Manual Professional: Pulmonary Edema"
+  },
+  {
+   "title": "RCEM Learning: Cardiogenic pulmonary oedema; MSF Clinical guidelines: Acute heart failure (acute pulmonary oedema)"
+  },
+  {
+   "title": "2021 ESC HF guideline (acute HF algorithm by SBP) + Oxford Handbook acute HF pathway"
+  }
+ ]
 }
