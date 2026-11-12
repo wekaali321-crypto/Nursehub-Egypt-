@@ -1,258 +1,325 @@
 {
-  "id": "dis-1303",
-  "num": 1303,
-  "system": "blood",
-  "icon": "🧫",
-  "level": 2,
-  "target": "diseases",
-  "title": {
-    "ar": "قلة العدلات وتثبيط المناعة: احتياطات الكيماوي",
-    "en": "Neutropenia & Immunosuppression: Neutropenic Precautions"
+ "id": "dis-1303",
+ "num": 1303,
+ "system": "blood",
+ "icon": "🧫",
+ "level": 2,
+ "target": "diseases",
+ "title": {
+  "ar": "قلة العدلات وتثبيط المناعة: احتياطات الكيماوي",
+  "en": "Neutropenia & Immunosuppression: Neutropenic Precautions"
+ },
+ "teaser": {
+  "ar": "لماذا الحمى مع قلة العدلات طارئة، تعريف القيم (WBC وANC وصفائح)، الاحتياطات اليومية، أدوية الكيماوي الشائعة وسُمّيتها (دوكسوروبيسين وسيكلوفوسفاميد وسيسبلاتين) ومتى تبلّغ.",
+  "en": "Why fever with neutropenia is an emergency, defining the values (WBC, ANC, and platelets), daily precautions, common chemotherapy drugs and their toxicities (doxorubicin, cyclophosphamide, and cisplatin), and when to report."
+ },
+ "chips": [
+  {
+   "ar": "Febrile neutropenia",
+   "en": "Febrile neutropenia"
   },
-  "teaser": {
-    "ar": "لماذا الحمى مع قلة العدلات طارئة، تعريف القيم (WBC وANC وصفائح)، الاحتياطات اليومية، أدوية الكيماوي الشائعة وسُمّيتها (دوكسوروبيسين وسيكلوفوسفاميد وسيسبلاتين) ومتى تبلّغ."
+  {
+   "ar": "ANC / صفائح",
+   "en": "ANC / platelets"
   },
-  "chips": [
-    {
-      "ar": "Febrile neutropenia"
-    },
-    {
-      "ar": "ANC / صفائح"
-    },
-    {
-      "ar": "سُمّية الكيماوي"
-    }
+  {
+   "ar": "سُمّية الكيماوي",
+   "en": "Chemotherapy toxicity"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>العدلات (Neutrophils) هي خط الدفاع الأول ضد البكتيريا. لما ينزل عددها بشدة (<b>قلة العدلات Neutropenia</b>) يبقى أي ميكروب خطر، وممكن يبدأ كحمى بسيطة ويتحول لتسمم دم في ساعات. غالبًا بيحصل بعد <b>العلاج الكيماوي والإشعاع</b> لأنه بيقتل الخلايا السريعة الانقسام: الورم ومعاه نخاع العظم والغشاء المخاطي وبصيلات الشعر.</p>\n[[slot:dis-1303-neutropenia|احتياطات قلة العدلات وما يجب تجنبه — رسم من إعداد الموقع|/diseases/img/dis-1303-neutropenia.svg]]\n<table><thead><tr><th>القيمة</th><th>التصنيف</th></tr></thead><tbody><tr><td>WBC أقل من 4,000/µL</td><td>قلة كرات بيضاء (Leukopenia)</td></tr><tr><td>العدلات المطلقة ANC أقل من 1,500/µL</td><td>قلة عدلات</td></tr><tr><td>ANC أقل من 500/µL</td><td>قلة عدلات شديدة: أعلى خطر عدوى</td></tr></tbody></table>\n<div class=\"cs-box cs-danger\"><strong>القاعدة الذهبية</strong><p><b>الحمى مع قلة العدلات حالة طارئة</b> (Febrile neutropenia): تُجرى مزارع دم ويبدأ مضاد حيوي واسع المجال وريديًا بأسرع وقت (الهدف خلال ساعة من الاشتباه حسب البروتوكول)، من غير انتظار النتائج.</p></div>",
+   "en": "<p>Neutrophils (Neutrophils) are the first line of defense against bacteria. When their count drops sharply (<b>neutropenia</b>), any microbe becomes a danger, and what starts as a mild fever can turn into sepsis within hours. It usually happens after <b>chemotherapy and radiation</b> because they kill rapidly dividing cells: the tumor along with the bone marrow, mucous membranes, and hair follicles.</p>\n[[slot:dis-1303-neutropenia|Neutropenic precautions and what to avoid — illustration prepared by the site|/diseases/img/dis-1303-neutropenia.svg]]\n<table><thead><tr><th>Value</th><th>Classification</th></tr></thead><tbody><tr><td>WBC below 4,000/µL</td><td>Low white cells (Leukopenia)</td></tr><tr><td>Absolute neutrophil count ANC below 1,500/µL</td><td>Neutropenia</td></tr><tr><td>ANC below 500/µL</td><td>Severe neutropenia: highest infection risk</td></tr></tbody></table>\n<div class=\"cs-box cs-danger\"><strong>The golden rule</strong><p><b>Fever with neutropenia is an emergency</b> (Febrile neutropenia): blood cultures are drawn and a broad-spectrum IV antibiotic is started as soon as possible (the goal is within one hour of suspicion per protocol), without waiting for results.</p></div>"
+  },
+  "causes": {
+   "ar": "<ul><li>علاج كيماوي أو إشعاع (أشهرها: doxorubicin وcyclophosphamide وcisplatin وغيرها)</li><li>أدوية مثبطة للمناعة بعد زرع الأعضاء أو في أمراض المناعة الذاتية</li><li>أمراض النخاع: لوكيميا، فشل النخاع (<a href=\"/diseases/dis-680\">أنيميا لاتنسجية</a>)</li><li>عدوى فيروسية شديدة أو نقص تغذية</li><li>نقص مناعة خلقي أو مكتسب (<a href=\"/diseases/dis-202\">HIV</a>)</li></ul>",
+   "en": "<ul><li>Chemotherapy or radiation (the best known: doxorubicin, cyclophosphamide, cisplatin, and others)</li><li>Immunosuppressive drugs after organ transplant or in autoimmune diseases</li><li>Marrow diseases: leukemia, marrow failure (<a href=\"/diseases/dis-680\">aplastic anemia</a>)</li><li>Severe viral infection or malnutrition</li><li>Congenital or acquired immunodeficiency (<a href=\"/diseases/dis-202\">HIV</a>)</li></ul>"
+  },
+  "signs": {
+   "ar": "<table><thead><tr><th>الخلايا</th><th>أثر تثبيط النخاع</th><th>الدلالة</th></tr></thead><tbody><tr><td>حمراء</td><td>أنيميا (Hb منخفض)</td><td>تعب وشحوب وضيق نفس</td></tr><tr><td>بيضاء</td><td>قلة بيضاء وعدلات</td><td>عدوى وحرارة</td></tr><tr><td>صفائح</td><td>قلة صفائح (أقل من 150,000)</td><td>كدمات ونزف؛ البلاغ عند أقل من 50,000</td></tr></tbody></table>\n<ul><li>التهاب الفم والغشاء المخاطي (Mucositis) وغثيان وقيء وإسهال</li><li>تساقط الشعر وجفاف الجلد وتعب شديد</li></ul>\n<div class=\"cs-box cs-tip\"><p><strong>سؤال امتحان شائع: مريضة سرطان مبيض تتلقى doxorubicin</strong></p><p>تُبلَّغ للطبيب: صفائح 48,000 (أقل من 50,000)، حرارة 38.2 م (100.7 ف)، كرات بيضاء 3,600 (أقل من 4,000). أما كرات الدم الحمراء 5 مليون فطبيعية (4.5–6 مليون) ولا تستدعي بلاغًا في هذا السؤال، وكذلك لا يكون زمن الثرومبوبلاستين الجزئي (PTT) هو المطلوب إبلاغه هنا.</p></div>",
+   "en": "<table><thead><tr><th>Cells</th><th>Effect of marrow suppression</th><th>Significance</th></tr></thead><tbody><tr><td>Red</td><td>Anemia (low Hb)</td><td>Fatigue, pallor, and shortness of breath</td></tr><tr><td>White</td><td>Low white cells and neutrophils</td><td>Infection and fever</td></tr><tr><td>Platelets</td><td>Thrombocytopenia (below 150,000)</td><td>Bruising and bleeding; report at below 50,000</td></tr></tbody></table>\n<ul><li>Stomatitis and mucosal inflammation (Mucositis), nausea, vomiting, and diarrhea</li><li>Hair loss, dry skin, and severe fatigue</li></ul>\n<div class=\"cs-box cs-tip\"><p><strong>A common exam question: an ovarian cancer patient receiving doxorubicin</strong></p><p>Report to the physician: platelets 48,000 (below 50,000), temperature 38.2°C (100.7°F), white cells 3,600 (below 4,000). A red blood cell count of 5 million is normal (4.5–6 million) and does not need reporting in this question, and likewise the partial thromboplastin time (PTT) is not what needs reporting here.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>CBC يومي أو حسب الخطة، وحساب ANC</li><li>مزارع دم من الوريد المحيطي ومن القسطرة المركزية قبل المضاد الحيوي</li><li>مزرعة بول وبصاق وأشعة صدر عند الحمى</li><li>كرياتينين ويوريا وإلكتروليتات (خاصة مع cisplatin)</li><li>وظائف قلب (إيكو) قبل وأثناء الأدوية السامة للقلب</li></ul>",
+   "en": "<ul><li>Daily CBC or per the plan, and calculating ANC</li><li>Blood cultures from a peripheral vein and from the central catheter before the antibiotic</li><li>Urine and sputum cultures and a chest X-ray with fever</li><li>Creatinine, urea, and electrolytes (especially with cisplatin)</li><li>Cardiac function (echo) before and during cardiotoxic drugs</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li><b>مضادات حيوية وريدية واسعة المجال</b> عند الحمى فورًا.</li><li><b>عوامل النمو (مثل filgrastim)</b> لتحفيز العدلات بأمر الطبيب، وقد تسبب ألم عظام.</li><li>مضادات فطريات/فيروسات وقائية عند الأعلى خطرًا.</li><li>تأجيل أو تعديل جرعة الكيماوي بقرار الطبيب.</li><li>نقل صفائح أو دم عند الحاجة.</li></ul>\n<h4>أدوية الكيماوي: أبرز ما يجب مراقبته</h4><table><thead><tr><th>الدواء</th><th>أبرز السُمّية</th><th>مراقبة</th></tr></thead><tbody><tr><td>Doxorubicin</td><td>سُمّية القلب التراكمية، قلة عدلات</td><td>وظيفة القلب، العلامات الحيوية</td></tr><tr><td>Cyclophosphamide</td><td>التهاب المثانة النزفي، تثبيط نخاع</td><td>سوائل وفيرة وتبول متكرر</td></tr><tr><td>Cisplatin</td><td>سُمّية كلى وسمع وغثيان شديد</td><td>كرياتينين، دخول وخروج السوائل، ضغط ، بول</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>\n<div class=\"cs-box cs-info\"><strong>مع Cisplatin</strong><p>راقب الكلى بدقة: ارتفاع الكرياتينين فوق حوالي 1.3 جم/دل أو نقص البول عن 30 مل/ساعة يستدعي إبلاغ الطبيب فورًا، مع ترطيب وريدي بأمر الطبيب.</p></div>",
+   "en": "<ul><li><b>Broad-spectrum IV antibiotics</b> immediately with fever.</li><li><b>Growth factors (such as filgrastim)</b> to stimulate neutrophils by physician order; they may cause bone pain.</li><li>Prophylactic antifungals/antivirals for those at highest risk.</li><li>Delaying or adjusting the chemotherapy dose by physician decision.</li><li>Platelet or blood transfusion when needed.</li></ul>\n<h4>Chemotherapy drugs: what to monitor most</h4><table><thead><tr><th>Drug</th><th>Main toxicity</th><th>Monitoring</th></tr></thead><tbody><tr><td>Doxorubicin</td><td>Cumulative cardiotoxicity, neutropenia</td><td>Cardiac function, vital signs</td></tr><tr><td>Cyclophosphamide</td><td>Hemorrhagic cystitis, marrow suppression</td><td>Plenty of fluids and frequent urination</td></tr><tr><td>Cisplatin</td><td>Kidney and hearing toxicity and severe nausea</td><td>Creatinine, intake and output, blood pressure, urine</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Note</strong><p>Doses are for learning; always verify with the physician/pharmacist before giving.</p></div>\n<div class=\"cs-box cs-info\"><strong>With Cisplatin</strong><p>Monitor the kidneys closely: creatinine rising above about 1.3 g/dL or urine output below 30 mL/hour requires notifying the physician immediately, with IV hydration by physician order.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الحرارة والعلامات</strong><p>قِس الحرارة بانتظام بالفم أو الإبط وليس الشرج؛ 38 م فأكثر = بلاغ فوري وعدم إعطاء خافض يخفي الحمى قبل الإبلاغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>احمِ من العدوى</strong><p>غسل أيدي صارم، غرفة خاصة عند الشدة، كمامة للمريض عند الخروج، ممنوع الزهور والنباتات، اطلب من المرضى بزكام عدم الزيارة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>عناية فم وجلد</strong><p>فرشاة ناعمة، غسول فم حسب الأمر، ترطيب الجلد، فحص مكان القسطرة وأي جرح يوميًا.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>غذاء آمن</strong><p>طعام مطبوخ جيدًا، فواكه وخضار مغسولة أو مقشرة حسب سياسة المستشفى، تجنب اللحم والبيض غير المطهي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>نزف وإرهاق</strong><p>لو الصفائح منخفضة: احتياطات النزف، ولو Hb منخفض: راحة ومساعدة بالحركة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ثقّف الأهل</strong><p>متى يتصلون بالمستشفى فورًا (حرارة، رعشة، قشعريرة).</p></div></div></div>\n<!-- g6-bun --><h4>مؤشرات الكلى مع cisplatin</h4><ul><li>كرياتينين أعلى من حوالي 1.3 جم/دل، BUN أعلى من حوالي 20 مجم/دل، وبول 30 مل/ساعة أو أقل = ضائقة كلوية، تُبلَّغ فورًا.</li><li>سجل الداخل والخارج بدقة.</li></ul><p>قيم طبيعية للمراجعة: RBC 4.5–6 مليون، صفائح 150–400 ألف (أقل من 100 ألف نقص واضح)، WBC 5–10 آلاف (أقل من 4 آلاف قلة).</p><h4>من المراجعة الشاملة</h4>[[slot:dis-2639-palliative-neutropenia|الرعاية التلطيفية وقلة العدلات — رسم من إعداد الموقع|/diseases/img/dis-2639-palliative-neutropenia.svg]]<ul><li>WBC الطبيعي 5000-10000؛ الكيماوي والإشعاع يقتلان النقي.</li><li>لا زهور ولا فواكه طازجة؛ تجنب الزحام؛ حرارة فوق 100.3°F (38°C) أولوية.</li><li>قِس الحرارة كل 4 ساعات؛ أبلغ عن التهاب الحلق؛ غسل الأيدي وكمامة للزوار.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess temperature and signs</strong><p>Measure temperature regularly orally or in the axilla, not rectally; 38°C or higher = immediate report, and do not give an antipyretic that hides the fever before reporting.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Protect from infection</strong><p>Strict hand washing, a private room when severe, a mask for the patient when leaving, no flowers or plants, and ask patients with colds not to visit.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Mouth and skin care</strong><p>Soft toothbrush, mouthwash as ordered, moisturize the skin, and check the catheter site and any wound daily.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Safe food</strong><p>Well-cooked food, washed or peeled fruits and vegetables per hospital policy, avoid undercooked meat and eggs.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Bleeding and fatigue</strong><p>If platelets are low: bleeding precautions, and if Hb is low: rest and help with movement.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Educate the family</strong><p>When to call the hospital immediately (fever, rigors, chills).</p></div></div></div>\n<!-- g6-bun --><h4>Kidney indicators with cisplatin</h4><ul><li>Creatinine above about 1.3 g/dL, BUN above about 20 mg/dL, and urine output of 30 mL/hour or less = renal distress, reported immediately.</li><li>Record intake and output accurately.</li></ul><p>Normal values to review: RBC 4.5–6 million, platelets 150–400 thousand (below 100 thousand is a clear deficiency), WBC 5–10 thousand (below 4 thousand is low).</p><h4>From the comprehensive review</h4>[[slot:dis-2639-palliative-neutropenia|Palliative care and neutropenia — illustration prepared by the site|/diseases/img/dis-2639-palliative-neutropenia.svg]]<ul><li>Normal WBC 5000-10000; chemotherapy and radiation kill the marrow.</li><li>No flowers and no fresh fruit; avoid crowds; a temperature above 100.3°F (38°C) is a priority.</li><li>Measure temperature every 4 hours; report a sore throat; hand washing and a mask for visitors.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فورًا</strong><ul><li>حرارة 38 م (100.4 ف) أو أكثر، رعشة، أو هبوط حرارة (علامة متأخرة لتسمم الدم)</li><li>تسارع نبض وتنفس وهبوط ضغط أو تغيّر وعي</li><li>صفائح أقل من 50,000 أو أي نزف</li><li>ارتفاع كرياتينين أو نقص بول مع cisplatin</li><li>احمرار أو صديد حول القسطرة المركزية</li><li>قرح فم تمنع الأكل والشرب</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately</strong><ul><li>Temperature of 38°C (100.4°F) or more, rigors, or a drop in temperature (a late sign of sepsis)</li><li>Rapid pulse and breathing, hypotension, or a change in consciousness</li><li>Platelets below 50,000 or any bleeding</li><li>Rising creatinine or low urine output with cisplatin</li><li>Redness or pus around the central catheter</li><li>Mouth sores that prevent eating and drinking</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اغسل يديك كثيرًا واطلب من المحيطين فعل ذلك</li><li>قس حرارتك يوميًا وعند أي شعور بالتعب، واتصل فورًا لو 38 م فأكثر</li><li>تجنب الزحام والمرضى والمواصلات المزدحمة أثناء الانخفاض</li><li>نظّف الأسنان بفرشاة ناعمة، ولا تستعمل خيط أو أدوات حادة في الفم</li><li>لا تُقدم على أي تطعيم من غير أمر الأونكولوجي</li><li>اشرب سوائل كافية خاصة مع الأدوية السامة للكلى</li></ul>",
+   "en": "<ul><li>Wash your hands often and ask those around you to do the same</li><li>Take your temperature daily and whenever you feel tired, and call immediately if it is 38°C or higher</li><li>Avoid crowds, sick people, and crowded transportation while counts are low</li><li>Clean your teeth with a soft brush, and do not use floss or sharp tools in the mouth</li><li>Do not get any vaccine without the oncologist's order</li><li>Drink enough fluids, especially with drugs toxic to the kidneys</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الكيماوي يقتل كل الخلايا السريعة: ورم ونخاع ومخاط وشعر",
+   "ANC أقل من 1,500 قلة عدلات وأقل من 500 شديدة",
+   "حرارة 38 م مع قلة العدلات = طوارئ ومضاد حيوي وريدي فورًا",
+   "لا حرارة شرجية ولا حقن شرجية ولا زهور",
+   "Cisplatin = كلى: كرياتينين فوق 1.3 أو بول أقل من 30 مل/س يُبلَّغ"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>العدلات (Neutrophils) هي خط الدفاع الأول ضد البكتيريا. لما ينزل عددها بشدة (<b>قلة العدلات Neutropenia</b>) يبقى أي ميكروب خطر، وممكن يبدأ كحمى بسيطة ويتحول لتسمم دم في ساعات. غالبًا بيحصل بعد <b>العلاج الكيماوي والإشعاع</b> لأنه بيقتل الخلايا السريعة الانقسام: الورم ومعاه نخاع العظم والغشاء المخاطي وبصيلات الشعر.</p>\n[[slot:dis-1303-neutropenia|احتياطات قلة العدلات وما يجب تجنبه — رسم من إعداد الموقع|/diseases/img/dis-1303-neutropenia.svg]]\n<table><thead><tr><th>القيمة</th><th>التصنيف</th></tr></thead><tbody><tr><td>WBC أقل من 4,000/µL</td><td>قلة كرات بيضاء (Leukopenia)</td></tr><tr><td>العدلات المطلقة ANC أقل من 1,500/µL</td><td>قلة عدلات</td></tr><tr><td>ANC أقل من 500/µL</td><td>قلة عدلات شديدة: أعلى خطر عدوى</td></tr></tbody></table>\n<div class=\"cs-box cs-danger\"><strong>القاعدة الذهبية</strong><p><b>الحمى مع قلة العدلات حالة طارئة</b> (Febrile neutropenia): تُجرى مزارع دم ويبدأ مضاد حيوي واسع المجال وريديًا بأسرع وقت (الهدف خلال ساعة من الاشتباه حسب البروتوكول)، من غير انتظار النتائج.</p></div>"
-    },
-    "causes": {
-      "ar": "<ul><li>علاج كيماوي أو إشعاع (أشهرها: doxorubicin وcyclophosphamide وcisplatin وغيرها)</li><li>أدوية مثبطة للمناعة بعد زرع الأعضاء أو في أمراض المناعة الذاتية</li><li>أمراض النخاع: لوكيميا، فشل النخاع (<a href=\"/diseases/dis-680\">أنيميا لاتنسجية</a>)</li><li>عدوى فيروسية شديدة أو نقص تغذية</li><li>نقص مناعة خلقي أو مكتسب (<a href=\"/diseases/dis-202\">HIV</a>)</li></ul>"
-    },
-    "signs": {
-      "ar": "<table><thead><tr><th>الخلايا</th><th>أثر تثبيط النخاع</th><th>الدلالة</th></tr></thead><tbody><tr><td>حمراء</td><td>أنيميا (Hb منخفض)</td><td>تعب وشحوب وضيق نفس</td></tr><tr><td>بيضاء</td><td>قلة بيضاء وعدلات</td><td>عدوى وحرارة</td></tr><tr><td>صفائح</td><td>قلة صفائح (أقل من 150,000)</td><td>كدمات ونزف؛ البلاغ عند أقل من 50,000</td></tr></tbody></table>\n<ul><li>التهاب الفم والغشاء المخاطي (Mucositis) وغثيان وقيء وإسهال</li><li>تساقط الشعر وجفاف الجلد وتعب شديد</li></ul>\n<div class=\"cs-box cs-tip\"><p><strong>سؤال امتحان شائع: مريضة سرطان مبيض تتلقى doxorubicin</strong></p><p>تُبلَّغ للطبيب: صفائح 48,000 (أقل من 50,000)، حرارة 38.2 م (100.7 ف)، كرات بيضاء 3,600 (أقل من 4,000). أما كرات الدم الحمراء 5 مليون فطبيعية (4.5–6 مليون) ولا تستدعي بلاغًا في هذا السؤال، وكذلك لا يكون زمن الثرومبوبلاستين الجزئي (PTT) هو المطلوب إبلاغه هنا.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>CBC يومي أو حسب الخطة، وحساب ANC</li><li>مزارع دم من الوريد المحيطي ومن القسطرة المركزية قبل المضاد الحيوي</li><li>مزرعة بول وبصاق وأشعة صدر عند الحمى</li><li>كرياتينين ويوريا وإلكتروليتات (خاصة مع cisplatin)</li><li>وظائف قلب (إيكو) قبل وأثناء الأدوية السامة للقلب</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li><b>مضادات حيوية وريدية واسعة المجال</b> عند الحمى فورًا.</li><li><b>عوامل النمو (مثل filgrastim)</b> لتحفيز العدلات بأمر الطبيب، وقد تسبب ألم عظام.</li><li>مضادات فطريات/فيروسات وقائية عند الأعلى خطرًا.</li><li>تأجيل أو تعديل جرعة الكيماوي بقرار الطبيب.</li><li>نقل صفائح أو دم عند الحاجة.</li></ul>\n<h4>أدوية الكيماوي: أبرز ما يجب مراقبته</h4><table><thead><tr><th>الدواء</th><th>أبرز السُمّية</th><th>مراقبة</th></tr></thead><tbody><tr><td>Doxorubicin</td><td>سُمّية القلب التراكمية، قلة عدلات</td><td>وظيفة القلب، العلامات الحيوية</td></tr><tr><td>Cyclophosphamide</td><td>التهاب المثانة النزفي، تثبيط نخاع</td><td>سوائل وفيرة وتبول متكرر</td></tr><tr><td>Cisplatin</td><td>سُمّية كلى وسمع وغثيان شديد</td><td>كرياتينين، دخول وخروج السوائل، ضغط ، بول</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>\n<div class=\"cs-box cs-info\"><strong>مع Cisplatin</strong><p>راقب الكلى بدقة: ارتفاع الكرياتينين فوق حوالي 1.3 جم/دل أو نقص البول عن 30 مل/ساعة يستدعي إبلاغ الطبيب فورًا، مع ترطيب وريدي بأمر الطبيب.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الحرارة والعلامات</strong><p>قِس الحرارة بانتظام بالفم أو الإبط وليس الشرج؛ 38 م فأكثر = بلاغ فوري وعدم إعطاء خافض يخفي الحمى قبل الإبلاغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>احمِ من العدوى</strong><p>غسل أيدي صارم، غرفة خاصة عند الشدة، كمامة للمريض عند الخروج، ممنوع الزهور والنباتات، اطلب من المرضى بزكام عدم الزيارة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>عناية فم وجلد</strong><p>فرشاة ناعمة، غسول فم حسب الأمر، ترطيب الجلد، فحص مكان القسطرة وأي جرح يوميًا.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>غذاء آمن</strong><p>طعام مطبوخ جيدًا، فواكه وخضار مغسولة أو مقشرة حسب سياسة المستشفى، تجنب اللحم والبيض غير المطهي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>نزف وإرهاق</strong><p>لو الصفائح منخفضة: احتياطات النزف، ولو Hb منخفض: راحة ومساعدة بالحركة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ثقّف الأهل</strong><p>متى يتصلون بالمستشفى فورًا (حرارة، رعشة، قشعريرة).</p></div></div></div>\n<!-- g6-bun --><h4>مؤشرات الكلى مع cisplatin</h4><ul><li>كرياتينين أعلى من حوالي 1.3 جم/دل، BUN أعلى من حوالي 20 مجم/دل، وبول 30 مل/ساعة أو أقل = ضائقة كلوية، تُبلَّغ فورًا.</li><li>سجل الداخل والخارج بدقة.</li></ul><p>قيم طبيعية للمراجعة: RBC 4.5–6 مليون، صفائح 150–400 ألف (أقل من 100 ألف نقص واضح)، WBC 5–10 آلاف (أقل من 4 آلاف قلة).</p><h4>من المراجعة الشاملة</h4>[[slot:dis-2639-palliative-neutropenia|الرعاية التلطيفية وقلة العدلات — رسم من إعداد الموقع|/diseases/img/dis-2639-palliative-neutropenia.svg]]<ul><li>WBC الطبيعي 5000-10000؛ الكيماوي والإشعاع يقتلان النقي.</li><li>لا زهور ولا فواكه طازجة؛ تجنب الزحام؛ حرارة فوق 100.3°F (38°C) أولوية.</li><li>قِس الحرارة كل 4 ساعات؛ أبلغ عن التهاب الحلق؛ غسل الأيدي وكمامة للزوار.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فورًا</strong><ul><li>حرارة 38 م (100.4 ف) أو أكثر، رعشة، أو هبوط حرارة (علامة متأخرة لتسمم الدم)</li><li>تسارع نبض وتنفس وهبوط ضغط أو تغيّر وعي</li><li>صفائح أقل من 50,000 أو أي نزف</li><li>ارتفاع كرياتينين أو نقص بول مع cisplatin</li><li>احمرار أو صديد حول القسطرة المركزية</li><li>قرح فم تمنع الأكل والشرب</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اغسل يديك كثيرًا واطلب من المحيطين فعل ذلك</li><li>قس حرارتك يوميًا وعند أي شعور بالتعب، واتصل فورًا لو 38 م فأكثر</li><li>تجنب الزحام والمرضى والمواصلات المزدحمة أثناء الانخفاض</li><li>نظّف الأسنان بفرشاة ناعمة، ولا تستعمل خيط أو أدوات حادة في الفم</li><li>لا تُقدم على أي تطعيم من غير أمر الأونكولوجي</li><li>اشرب سوائل كافية خاصة مع الأدوية السامة للكلى</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الكيماوي يقتل كل الخلايا السريعة: ورم ونخاع ومخاط وشعر",
-      "ANC أقل من 1,500 قلة عدلات وأقل من 500 شديدة",
-      "حرارة 38 م مع قلة العدلات = طوارئ ومضاد حيوي وريدي فورًا",
-      "لا حرارة شرجية ولا حقن شرجية ولا زهور",
-      "Cisplatin = كلى: كرياتينين فوق 1.3 أو بول أقل من 30 مل/س يُبلَّغ"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض يتلقى doxorubicin: أي نتيجة تستدعي إبلاغ الطبيب فورًا؟"
-      },
-      "options": [
-        {
-          "ar": "صفائح 220,000"
-        },
-        {
-          "ar": "حرارة 38.2 م"
-        },
-        {
-          "ar": "هيموجلوبين 14"
-        },
-        {
-          "ar": "صوديوم 140"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الحرارة 38 م فأكثر مع احتمال قلة العدلات طوارئ تحتاج مضادًا حيويًا سريعًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "أنسب تصرف مع مريض قلة عدلات؟"
-      },
-      "options": [
-        {
-          "ar": "وضع زهور طازجة لرفع المعنويات"
-        },
-        {
-          "ar": "قياس الحرارة شرجيًا"
-        },
-        {
-          "ar": "السماح بالزيارة لمن لا يعاني عدوى فقط مع غسل الأيدي"
-        },
-        {
-          "ar": "إعطاء لقاح حي"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "الزيارة المحدودة بدون عدوى وغسل الأيدي تقلل الخطر؛ أما الزهور والحرارة الشرجية واللقاح الحي فممنوعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء أبرز سُميّته الكلوية وتراقب معه كرياتينين وكمية البول؟"
-      },
-      "options": [
-        {
-          "ar": "Cisplatin"
-        },
-        {
-          "ar": "Doxorubicin"
-        },
-        {
-          "ar": "Cyclophosphamide"
-        },
-        {
-          "ar": "Filgrastim"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "سيسبلاتين شهير بسمية الكلى والسمع، لذلك يلزم ترطيب ومتابعة وظائف الكلى."
-      }
-    },
-    {
-      "q": {
-        "ar": "ANC قيمته 300/µL تعني؟"
-      },
-      "options": [
-        {
-          "ar": "طبيعي"
-        },
-        {
-          "ar": "قلة عدلات شديدة"
-        },
-        {
-          "ar": "زيادة عدلات"
-        },
-        {
-          "ar": "قلة صفائح"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "أقل من 500 تصنف شديدة وخطر العدوى فيها مرتفع جدًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "صفائح مريض كيماوي 42,000. أي إجراء أنسب؟"
-      },
-      "options": [
-        {
-          "ar": "قياس حرارة شرجي"
-        },
-        {
-          "ar": "فرشاة ناعمة وإبلاغ الطبيب واحتياطات النزف"
-        },
-        {
-          "ar": "حقنة عضلية"
-        },
-        {
-          "ar": "أسبرين للصداع"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الصفائح أقل من 50 ألف تستلزم بلاغًا واحتياطات نزف وتجنب الأسبرين والحقن العضلي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نتيجة مع cisplatin تدل على سُمّية كلوية؟"
-      },
-      "options": [
-        {
-          "ar": "كرياتينين 0.8"
-        },
-        {
-          "ar": "BUN 12"
-        },
-        {
-          "ar": "كرياتينين 1.8 وبول 25 مل/س"
-        },
-        {
-          "ar": "بول 80 مل/س"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "ارتفاع الكرياتينين وقلة البول علامة ضائقة كلوية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي إجراء ضمن احتياطات قلة العدلات؟"
-      },
-      "options": [
-        {
-          "ar": "زهور طازجة"
-        },
-        {
-          "ar": "إزالة الزهور الطازجة"
-        },
-        {
-          "ar": "تشجيع الزيارات"
-        },
-        {
-          "ar": "فواكه طازجة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الزهور مصدر عدوى."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريضة سرطان مبيض تتلقى doxorubicin. أي مجموعة نتائج تُبلَّغ للطبيب؟"
-      },
-      "options": [
-        {
-          "ar": "صفائح 48,000 + حرارة 38.2 م + كرات بيضاء 3,600"
-        },
-        {
-          "ar": "RBC 5 مليون + حرارة 37 م + صفائح 250,000"
-        },
-        {
-          "ar": "Hb 14 + صوديوم 140 + بوتاسيوم 4"
-        },
-        {
-          "ar": "كرياتينين 0.9 + صفائح 200,000 + WBC 7,000"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الصفائح أقل من 50,000 تنذر بالنزف، والحرارة 38 م فأكثر طوارئ مع احتمال قلة العدلات، والكرات البيضاء أقل من 4,000 قلة مناعة. باقي الخيارات قيم طبيعية."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "IDSA/ASCO guidance on febrile neutropenia (ملخصات)"
-    },
-    {
-      "title": "StatPearls: Neutropenia; Chemotherapy Toxicity"
-    },
-    {
-      "title": "ONS Chemotherapy and Biotherapy Guidelines (ملخص)"
-    }
+  "en": [
+   "Chemotherapy kills all rapidly dividing cells: tumor, marrow, mucosa, and hair",
+   "ANC below 1,500 is neutropenia and below 500 is severe",
+   "Temperature of 38°C with neutropenia = emergency and an IV antibiotic immediately",
+   "No rectal temperature, no enemas, and no flowers",
+   "Cisplatin = kidneys: creatinine above 1.3 or urine below 30 mL/hr is reported"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض يتلقى doxorubicin: أي نتيجة تستدعي إبلاغ الطبيب فورًا؟",
+    "en": "A patient receiving doxorubicin: which result requires notifying the physician immediately?"
+   },
+   "options": [
+    {
+     "ar": "صفائح 220,000",
+     "en": "Platelets 220,000"
+    },
+    {
+     "ar": "حرارة 38.2 م",
+     "en": "Temperature 38.2°C"
+    },
+    {
+     "ar": "هيموجلوبين 14",
+     "en": "Hemoglobin 14"
+    },
+    {
+     "ar": "صوديوم 140",
+     "en": "Sodium 140"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الحرارة 38 م فأكثر مع احتمال قلة العدلات طوارئ تحتاج مضادًا حيويًا سريعًا.",
+    "en": "A temperature of 38°C or higher with possible neutropenia is an emergency needing a rapid antibiotic."
+   }
+  },
+  {
+   "q": {
+    "ar": "أنسب تصرف مع مريض قلة عدلات؟",
+    "en": "The most appropriate action with a neutropenic patient?"
+   },
+   "options": [
+    {
+     "ar": "وضع زهور طازجة لرفع المعنويات",
+     "en": "Placing fresh flowers to lift morale"
+    },
+    {
+     "ar": "قياس الحرارة شرجيًا",
+     "en": "Taking the temperature rectally"
+    },
+    {
+     "ar": "السماح بالزيارة لمن لا يعاني عدوى فقط مع غسل الأيدي",
+     "en": "Allowing visits only from people without infection, with hand washing"
+    },
+    {
+     "ar": "إعطاء لقاح حي",
+     "en": "Giving a live vaccine"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "الزيارة المحدودة بدون عدوى وغسل الأيدي تقلل الخطر؛ أما الزهور والحرارة الشرجية واللقاح الحي فممنوعة.",
+    "en": "Limited visits without infection and hand washing reduce the risk; flowers, rectal temperature, and a live vaccine are prohibited."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء أبرز سُميّته الكلوية وتراقب معه كرياتينين وكمية البول؟",
+    "en": "Which drug is best known for kidney toxicity, so you monitor creatinine and urine output?"
+   },
+   "options": [
+    {
+     "ar": "Cisplatin",
+     "en": "Cisplatin"
+    },
+    {
+     "ar": "Doxorubicin",
+     "en": "Doxorubicin"
+    },
+    {
+     "ar": "Cyclophosphamide",
+     "en": "Cyclophosphamide"
+    },
+    {
+     "ar": "Filgrastim",
+     "en": "Filgrastim"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "سيسبلاتين شهير بسمية الكلى والسمع، لذلك يلزم ترطيب ومتابعة وظائف الكلى.",
+    "en": "Cisplatin is well known for kidney and hearing toxicity, so hydration and following kidney function are needed."
+   }
+  },
+  {
+   "q": {
+    "ar": "ANC قيمته 300/µL تعني؟",
+    "en": "An ANC of 300/µL means?"
+   },
+   "options": [
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
+    },
+    {
+     "ar": "قلة عدلات شديدة",
+     "en": "Severe neutropenia"
+    },
+    {
+     "ar": "زيادة عدلات",
+     "en": "Neutrophilia"
+    },
+    {
+     "ar": "قلة صفائح",
+     "en": "Thrombocytopenia"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "أقل من 500 تصنف شديدة وخطر العدوى فيها مرتفع جدًا.",
+    "en": "Below 500 is classified as severe and the infection risk is very high."
+   }
+  },
+  {
+   "q": {
+    "ar": "صفائح مريض كيماوي 42,000. أي إجراء أنسب؟",
+    "en": "A chemotherapy patient's platelets are 42,000. Which action is most appropriate?"
+   },
+   "options": [
+    {
+     "ar": "قياس حرارة شرجي",
+     "en": "Rectal temperature"
+    },
+    {
+     "ar": "فرشاة ناعمة وإبلاغ الطبيب واحتياطات النزف",
+     "en": "Soft toothbrush, notifying the physician, and bleeding precautions"
+    },
+    {
+     "ar": "حقنة عضلية",
+     "en": "Intramuscular injection"
+    },
+    {
+     "ar": "أسبرين للصداع",
+     "en": "Aspirin for a headache"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الصفائح أقل من 50 ألف تستلزم بلاغًا واحتياطات نزف وتجنب الأسبرين والحقن العضلي.",
+    "en": "Platelets below 50 thousand call for a report, bleeding precautions, and avoiding aspirin and intramuscular injections."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نتيجة مع cisplatin تدل على سُمّية كلوية؟",
+    "en": "Which result with cisplatin indicates kidney toxicity?"
+   },
+   "options": [
+    {
+     "ar": "كرياتينين 0.8",
+     "en": "Creatinine 0.8"
+    },
+    {
+     "ar": "BUN 12",
+     "en": "BUN 12"
+    },
+    {
+     "ar": "كرياتينين 1.8 وبول 25 مل/س",
+     "en": "Creatinine 1.8 and urine 25 mL/hr"
+    },
+    {
+     "ar": "بول 80 مل/س",
+     "en": "Urine 80 mL/hr"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "ارتفاع الكرياتينين وقلة البول علامة ضائقة كلوية.",
+    "en": "Rising creatinine and low urine output are a sign of renal distress."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي إجراء ضمن احتياطات قلة العدلات؟",
+    "en": "Which action is part of neutropenic precautions?"
+   },
+   "options": [
+    {
+     "ar": "زهور طازجة",
+     "en": "Fresh flowers"
+    },
+    {
+     "ar": "إزالة الزهور الطازجة",
+     "en": "Removing fresh flowers"
+    },
+    {
+     "ar": "تشجيع الزيارات",
+     "en": "Encouraging visits"
+    },
+    {
+     "ar": "فواكه طازجة",
+     "en": "Fresh fruit"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الزهور مصدر عدوى.",
+    "en": "Flowers are a source of infection."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريضة سرطان مبيض تتلقى doxorubicin. أي مجموعة نتائج تُبلَّغ للطبيب؟",
+    "en": "An ovarian cancer patient receiving doxorubicin. Which group of results is reported to the physician?"
+   },
+   "options": [
+    {
+     "ar": "صفائح 48,000 + حرارة 38.2 م + كرات بيضاء 3,600",
+     "en": "Platelets 48,000 + temperature 38.2°C + white cells 3,600"
+    },
+    {
+     "ar": "RBC 5 مليون + حرارة 37 م + صفائح 250,000",
+     "en": "RBC 5 million + temperature 37°C + platelets 250,000"
+    },
+    {
+     "ar": "Hb 14 + صوديوم 140 + بوتاسيوم 4",
+     "en": "Hb 14 + sodium 140 + potassium 4"
+    },
+    {
+     "ar": "كرياتينين 0.9 + صفائح 200,000 + WBC 7,000",
+     "en": "Creatinine 0.9 + platelets 200,000 + WBC 7,000"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الصفائح أقل من 50,000 تنذر بالنزف، والحرارة 38 م فأكثر طوارئ مع احتمال قلة العدلات، والكرات البيضاء أقل من 4,000 قلة مناعة. باقي الخيارات قيم طبيعية.",
+    "en": "Platelets below 50,000 warn of bleeding, a temperature of 38°C or higher is an emergency with possible neutropenia, and white cells below 4,000 mean low immunity. The other options are normal values."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "IDSA/ASCO guidance on febrile neutropenia (ملخصات)"
+  },
+  {
+   "title": "StatPearls: Neutropenia; Chemotherapy Toxicity"
+  },
+  {
+   "title": "ONS Chemotherapy and Biotherapy Guidelines (ملخص)"
+  }
+ ]
 }

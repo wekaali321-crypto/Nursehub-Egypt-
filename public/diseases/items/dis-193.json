@@ -1,174 +1,219 @@
 {
-  "id": "dis-193",
-  "num": 193,
-  "system": "infect",
-  "icon": "🦷",
-  "level": 3,
-  "title": {
-    "ar": "التيتانوس (الكزاز)",
-    "en": "Tetanus (Lockjaw)"
+ "id": "dis-193",
+ "num": 193,
+ "system": "infect",
+ "icon": "🦷",
+ "level": 3,
+ "title": {
+  "ar": "التيتانوس (الكزاز)",
+  "en": "Tetanus (Lockjaw)"
+ },
+ "teaser": {
+  "ar": "تيبس الفك وتشنجات مؤلمة بعد جرح ملوّث: السم، الأعراض، مضاد السم والمضادات الحيوية والمهدئات، أدوية الحالات المتوسطة والشديدة، الوقاية بعد الجرح، ومراقبة المريض.",
+  "en": "Jaw stiffness and painful spasms after a contaminated wound: the toxin, symptoms, antitoxin, antibiotics and sedatives, drugs for moderate and severe cases, post-wound prophylaxis, and patient monitoring."
+ },
+ "chips": [
+  {
+   "ar": "تيبس الفك",
+   "en": "Lockjaw"
   },
-  "teaser": {
-    "ar": "تيبس الفك وتشنجات مؤلمة بعد جرح ملوّث: السم، الأعراض، مضاد السم والمضادات الحيوية والمهدئات، أدوية الحالات المتوسطة والشديدة، الوقاية بعد الجرح، ومراقبة المريض."
+  {
+   "ar": "TIG + مهدئ",
+   "en": "TIG + sedative"
   },
-  "chips": [
-    {
-      "ar": "تيبس الفك"
-    },
-    {
-      "ar": "TIG + مهدئ"
-    },
-    {
-      "ar": "وقاية بعد الجرح"
-    }
+  {
+   "ar": "وقاية بعد الجرح",
+   "en": "Post-wound prophylaxis"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p><b>التيتانوس (Tetanus)</b> أو <b>Lockjaw (الفك المقفول)</b> سببه بكتيريا أبواغها (Spores) موجودة في التربة. لو دخلت الأبواغ في جرح عميق بعيد عن الأكسجين (بعيداً عن الهواء)، تنبت وتفرز سم <b>Tetanospasmin</b> بيتداخل مع الأعصاب المتحكمة في العضلات. الحضانة من الإصابة لحد الأعراض: <b>5 أيام إلى 3 أسابيع</b> (متوسط 8–12 يوم).</p><div class=\"cs-stats\"><div><b>8–12</b><span>يوم متوسط الحضانة</span></div><div><b>10 س</b><span>منشط التطعيم</span></div><div><b>TIG</b><span>مضاد السم</span></div></div>[[slot:dis-193-grades|العلاج حسب الشدة|/diseases/img/dis-193-grades.svg]]",
+   "en": "<p><b>Tetanus</b> or <b>Lockjaw</b> is caused by a bacterium whose spores are found in soil. If the spores enter a deep wound away from oxygen (away from air), they germinate and release the toxin <b>Tetanospasmin</b>, which interferes with the nerves that control muscles. Incubation from injury to symptoms: <b>5 days to 3 weeks</b> (average 8–12 days).</p><div class=\"cs-stats\"><div><b>8–12</b><span>days average incubation</span></div><div><b>10 y</b><span>vaccine booster</span></div><div><b>TIG</b><span>antitoxin</span></div></div>[[slot:dis-193-grades|Treatment by severity|/diseases/img/dis-193-grades.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li>جروح ملوثة بالتربة أو الصدأ أو روث الحيوان، جروح وخزية، حروق، سرة المولود غير المعقمة.</li><li>عدم التطعيم أو انقطاع المنشط.</li><li>العمل في الزراعة والبناء.</li></ul>",
+   "en": "<ul><li>Wounds contaminated with soil, rust or animal manure, puncture wounds, burns, an unsterilized newborn umbilical cord.</li><li>No vaccination or a lapsed booster.</li><li>Work in farming and construction.</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>التشخيص (الأعراض)</h4><ul><li>تيبس الفك والرقبة وعضلات أخرى (Stiffness of the jaw, neck)</li><li>صعوبة البلع وتهيج</li><li>تشنجات عضلات الفك أو الوجه (ابتسامة تيتانوسية Risus sardonicus)، ثم تتطور لتشنجات وتصلب عضلات الرقبة والبطن والظهر (Opisthotonus)</li><li>تشنجات مؤلمة (Painful convulsions) بسبب مثيرات بسيطة</li></ul><div class=\"cs-box cs-danger\"><strong>التوقعات</strong><p>لو بدأت تشنجات العضلات مبكراً، فرص التعافي ضعيفة. التيتانوس خطير جداً وكتير بيؤدي للوفاة خصوصاً عند الأطفال الصغار وكبار السن. علشان كده <b>الوقاية هي أفضل علاج</b>.</p></div>",
+   "en": "<h4>Diagnosis (symptoms)</h4><ul><li>Stiffness of the jaw, neck and other muscles</li><li>Difficulty swallowing and irritability</li><li>Spasms of the jaw or face muscles (tetanic smile, Risus sardonicus), then progressing to spasms and rigidity of the neck, abdominal and back muscles (Opisthotonus)</li><li>Painful convulsions triggered by minor stimuli</li></ul><div class=\"cs-box cs-danger\"><strong>Outlook</strong><p>If muscle spasms start early, the chances of recovery are poor. Tetanus is very dangerous and often leads to death, especially in young children and the elderly. That is why <b>prevention is the best treatment</b>.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>التشخيص إكلينيكي (لا يوجد اختبار مؤكد، والمزرعة من الجرح قد تكون سلبية).</li><li>تاريخ التطعيم والجرح.</li><li>CK وغازات الدم وأملاح الدم وتحاليل الكلى/القلب لمتابعة المضاعفات.</li></ul>",
+   "en": "<ul><li>Diagnosis is clinical (there is no confirmatory test, and a wound culture may be negative).</li><li>Vaccination and wound history.</li><li>CK, blood gases, blood electrolytes and kidney/heart tests to follow complications.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>الوقاية</h4><p><b>التحصين النشط (Active immunization):</b> بيتاخد للأطفال كجزء من حقنة DTP (زي الدفتيريا) مع منشطات كل 10 سنين أو وقت الإصابة الكبيرة.</p>[[slot:dis-193-prophylaxis|الوقاية من التيتانوس بعد الجرح|/diseases/img/dis-193-prophylaxis.svg]]<h4>العلاج</h4><p><b>افتح الجرح ونظّفه (Open and clean the wound).</b></p><p><b>الحالات الخفيفة:</b></p><table><thead><tr><th>الغرض</th><th>الدواء (بأمر الطبيب)</th><th>الإعطاء</th></tr></thead><tbody><tr><td>مضاد السم</td><td>Tetanus antitoxin U فيالات</td><td>عضل بعد اختبار الحساسية</td></tr><tr><td>أو Tetanus human immunoglobulin (TIG)</td><td>500 وحدة</td><td>عضل</td></tr><tr><td>مهدئ ومرخّي (تشنجات)</td><td>Valium أمبول، أو Neurazine أمبول</td><td>أمبول عند اللزوم</td></tr><tr><td>مضاد حيوي</td><td>Vibramycin كبسولة، أو Hostacycline أمبول/قرص، أو Tetracid كبسولة</td><td>كبسولة أو قرص كل 12 ساعة</td></tr><tr><td>أو بنسلين</td><td>Penadur فيال، أو Retarpen فيال</td><td>حقنة واحدة بالعضل</td></tr><tr><td></td><td>أو Crystalline penicillin 1,000,000 وحدة فيال</td><td>حقنة بالعضل كل 6 ساعات</td></tr></tbody></table><p><b>الحالات المتوسطة:</b> نفس الحالات الخفيفة بالإضافة إلى: شق القصبة الهوائية (Tracheostomy)، مراقبة ضغط الدم وتنفس صناعي (Artificial respiration).</p><p><b>الحالات الشديدة:</b> نفس المتوسطة بالإضافة إلى: قسطرة لتفريغ المثانة، تنقيط Pavulon (مرخي عضلات) لتخفيف التصلب والتشنجات، غرفة هادئة ومعتمة.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong>الرعاية الحديثة: <b>TIG بشري</b> مفضل على مضاد السم الحيواني (TAT) لقلة الحساسية، ويُعطى في أقرب وقت (جرعة وقائية 250–500 وحدة؛ وللعلاج 500–3000 وحدة أو 150 وحدة/كجم عضل في أماكن متعددة حسب البروتوكول). <b>Metronidazole</b> (500 مجم كل 6–8 ساعات 7–10 أيام) هو المضاد الحيوي المفضل (البنسلين قد يزيد التشنج بتثبيطه GABA). <b>البنزوديازيبينات</b> (Diazepam/Midazolam) أساس التحكم في التشنجات، والماغنسيوم وريدي مساعد في تقلبات الجهاز اللاإرادي وبعض التشنجات. التنفس الصناعي والتغذية الوريدية/الأنبوبية في الحالات الشديدة. <b>التيتانوس لا يعطي مناعة</b>: يجب تطعيم المريض بعد الشفاء لإكمال السلسلة. التخلص من الجرح (Debridement) ضروري. الجرعات بأمر الطبيب.</div>",
+   "en": "<h4>Prevention</h4><p><b>Active immunization:</b> given to children as part of the DTP injection (like diphtheria) with boosters every 10 years or at the time of a major injury.</p>[[slot:dis-193-prophylaxis|Tetanus prophylaxis after a wound|/diseases/img/dis-193-prophylaxis.svg]]<h4>Treatment</h4><p><b>Open and clean the wound.</b></p><p><b>Mild cases:</b></p><table><thead><tr><th>Purpose</th><th>Drug (on the physician's order)</th><th>Administration</th></tr></thead><tbody><tr><td>Antitoxin</td><td>Tetanus antitoxin U vials</td><td>IM after an allergy test</td></tr><tr><td>Or Tetanus human immunoglobulin (TIG)</td><td>500 units</td><td>IM</td></tr><tr><td>Sedative and relaxant (spasms)</td><td>Valium ampoule, or Neurazine ampoule</td><td>One ampoule when needed</td></tr><tr><td>Antibiotic</td><td>Vibramycin capsule, or Hostacycline ampoule/tablet, or Tetracid capsule</td><td>Capsule or tablet every 12 hours</td></tr><tr><td>Or penicillin</td><td>Penadur vial, or Retarpen vial</td><td>One IM injection</td></tr><tr><td></td><td>Or Crystalline penicillin 1,000,000 units vial</td><td>IM injection every 6 hours</td></tr></tbody></table><p><b>Moderate cases:</b> the same as mild cases plus: Tracheostomy, blood pressure monitoring and artificial respiration.</p><p><b>Severe cases:</b> the same as moderate plus: a catheter to empty the bladder, a Pavulon drip (muscle relaxant) to relieve rigidity and spasms, and a quiet, dark room.</p><div class=\"cs-box cs-warning\"><strong>Update</strong>Modern care: <b>human TIG</b> is preferred over animal antitoxin (TAT) because of less allergy, and is given as early as possible (prophylactic dose 250–500 units; for treatment 500–3000 units or 150 units/kg IM at multiple sites per protocol). <b>Metronidazole</b> (500 mg every 6–8 hours for 7–10 days) is the preferred antibiotic (penicillin may increase spasm by inhibiting GABA). <b>Benzodiazepines</b> (Diazepam/Midazolam) are the basis of spasm control, and IV magnesium helps with autonomic instability and some spasms. Artificial ventilation and IV/tube feeding in severe cases. <b>Tetanus does not give immunity</b>: the patient must be vaccinated after recovery to complete the series. Wound debridement is necessary. Doses are per the physician's order.</div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم بسرعة</strong><p>الجرح ومكانه وتاريخه، تاريخ التطعيم، الفك (فتح الفم)، البلع، التنفس، الوعي، الحرارة، ضغط الدم والنبض (اضطراب لاإرادي: ضغط متقلب ونبض سريع وتعرق).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>هيّئ البيئة</strong><p>غرفة <b>هادئة معتمة</b> بعيداً عن الضجيج، أقل لمس وتحريك ممكن، تجميع الإجراءات في وقت واحد، إضاءة خافتة، سرير بحواجز.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>نظّف الجرح</strong><p>فتح وتنظيف الجرح بالتعاون مع الطبيب بعد إعطاء المهدئ والمضاد (قفازات).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ المضاد والمهدئ بأمان</strong><p>اختبار حساسية قبل TAT (جهّز أدرينالين). TIG عضل عميق في مكان مختلف عن لقاح. Valium بطيء وريدياً مع مراقبة التنفس. مضاد حيوي في موعده (Penadur عضل عميق).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أمّن مجرى الهواء</strong><p>شفط الإفرازات، جهّز أكسجين وأمبو وعدة شق القصبة. وضع جانبي/رأس مرفوع. لا تضع شيئاً في الفم أثناء التشنج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>العناية بالمثانة والأمعاء والتغذية</strong><p>قسطرة فولي (في الشديدة)، أنبوب معدة للتغذية بأمر الطبيب (صعوبة البلع)، سوائل وريدية، منع الإمساك.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وقاية الأمان</strong><p>احتياطات سقوط، حماية اللسان والأسنان، تغيير الوضع كل ساعتين لمنع قرح الفراش مع أدنى حركة، ومراقبة الدورة الدموية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>وثّق وثقّف</strong><p>التشنجات (عددها ومدتها والمثير)، التنفس، الضغط، الأدوية، والتطعيم قبل الخروج.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>أي <b>تشنج حنجري أو صعوبة تنفس أو زرقة</b> = طوارئ فورية: مجرى هواء، أكسجين، شفط، وتجهيز شق القصبة/تنفس صناعي. وأي مثير مفاجئ (صوت/ضوء/لمس) ممكن يطلق تشنجاً، فخفّض المثيرات.</p></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>تاريخ الجرح والتطعيم، الأدوية ووقتها، التشنجات، العلامات الحيوية، المثانة والأمعاء، قياس التنفس، وإبلاغ الصحة.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess quickly</strong><p>The wound, its site and date, vaccination history, the jaw (mouth opening), swallowing, breathing, consciousness, temperature, blood pressure and pulse (autonomic disturbance: fluctuating pressure, fast pulse and sweating).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Prepare the environment</strong><p>A <b>quiet, dark</b> room away from noise, as little touching and moving as possible, group procedures at one time, dim lighting, a bed with rails.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Clean the wound</strong><p>Opening and cleaning the wound together with the physician after giving the sedative and antitoxin (gloves).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Give the antitoxin and sedative safely</strong><p>Allergy test before TAT (have epinephrine ready). TIG deep IM at a different site from the vaccine. Valium slowly IV with breathing monitoring. Antibiotic on time (Penadur deep IM).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Secure the airway</strong><p>Suction secretions, prepare oxygen, a bag-valve mask and a tracheostomy set. Side-lying/head raised. Do not put anything in the mouth during a spasm.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Care of the bladder, bowel and nutrition</strong><p>Foley catheter (in severe cases), a stomach tube for feeding on the physician's order (difficulty swallowing), IV fluids, prevent constipation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Safety protection</strong><p>Fall precautions, protect the tongue and teeth, change position every 2 hours to prevent pressure ulcers with minimal movement, and monitor circulation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Document and educate</strong><p>The spasms (number, duration and trigger), breathing, pressure, medications, and vaccination before discharge.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Any <b>laryngeal spasm, difficulty breathing or cyanosis</b> = immediate emergency: airway, oxygen, suction, and preparing a tracheostomy/artificial ventilation. And any sudden stimulus (sound/light/touch) can trigger a spasm, so reduce stimuli.</p></div><div class=\"cs-box cs-info\"><strong>Documentation</strong><p>Wound and vaccination dates, medications and their times, spasms, vital signs, bladder and bowel, breathing measurements, and notifying public health.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>تيبس الفك أو الرقبة بعد جرح</li><li>صعوبة بلع أو تنفس أو زرقة</li><li>تشنجات أو تقوس الظهر</li><li>ضغط متقلب جداً أو نبض سريع أو تعرق شديد</li><li>احتباس بول</li><li>حرارة عالية</li><li>رد فعل تحسسي لمضاد السم (طفح، ضيق نفس، هبوط ضغط)</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report to the physician immediately if:</strong><ul><li>Jaw or neck stiffness after a wound</li><li>Difficulty swallowing or breathing, or cyanosis</li><li>Spasms or arching of the back</li><li>Very fluctuating pressure, fast pulse or severe sweating</li><li>Urinary retention</li><li>High fever</li><li>An allergic reaction to the antitoxin (rash, shortness of breath, low blood pressure)</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>نظّف أي جرح بالماء والصابون فوراً، وروح الطبيب لو الجرح عميق أو ملوث بالتراب أو الصدأ.</li><li>اسأل عن آخر منشط تيتانوس: كل <b>10 سنين</b> أو عند إصابة كبيرة.</li><li>طعّم أطفالك DTP في مواعيده، والحامل تتطعم Td.</li><li>كمّل الدواء وجلسات الرعاية حتى لو اتحسنت.</li><li>بعد الشفاء لازم تكمل سلسلة التطعيم لأن المرض مش بيدي مناعة.</li><li>التيتانوس خطير: الوقاية بالتطعيم أرخص بكتير من العلاج.</li></ul>",
+   "en": "<ul><li>Clean any wound with soap and water immediately, and see the physician if the wound is deep or contaminated with soil or rust.</li><li>Ask about your last tetanus booster: every <b>10 years</b> or at a major injury.</li><li>Vaccinate your children with DTP on schedule, and the pregnant woman gets Td.</li><li>Complete the medication and care sessions even if you improve.</li><li>After recovery you must complete the vaccination series because the disease does not give immunity.</li><li>Tetanus is dangerous: prevention by vaccination is far cheaper than treatment.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "التيتانوس (Lockjaw) بكتيريا (Clostridium tetani) أبواغها في التربة وتنتج سم (Tetanospasmin) يؤثر على الأعصاب المتحكمة في العضلات",
+   "الحضانة 5 أيام – 3 أسابيع (متوسط 8–12 يوم)",
+   "أعراض: تيبس الفك والرقبة، صعوبة بلع، تشنجات الوجه ثم تصلب عضلات الرقبة والبطن والظهر وتشنجات مؤلمة بأقل مثير",
+   "لو التشنجات بدأت بدري، فرص التعافي ضعيفة: الوقاية هي العلاج الأفضل",
+   "العلاج: فتح الجرح وتنظيفه، TIG/Antitoxin بعد اختبار الحساسية، مضاد حيوي، Valium، غرفة هادئة معتمة وتأمين التنفس",
+   "التطعيم DTP للأطفال + منشط كل 10 سنين أو عند إصابة كبيرة"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p><b>التيتانوس (Tetanus)</b> أو <b>Lockjaw (الفك المقفول)</b> سببه بكتيريا أبواغها (Spores) موجودة في التربة. لو دخلت الأبواغ في جرح عميق بعيد عن الأكسجين (بعيداً عن الهواء)، تنبت وتفرز سم <b>Tetanospasmin</b> بيتداخل مع الأعصاب المتحكمة في العضلات. الحضانة من الإصابة لحد الأعراض: <b>5 أيام إلى 3 أسابيع</b> (متوسط 8–12 يوم).</p><div class=\"cs-stats\"><div><b>8–12</b><span>يوم متوسط الحضانة</span></div><div><b>10 س</b><span>منشط التطعيم</span></div><div><b>TIG</b><span>مضاد السم</span></div></div>[[slot:dis-193-grades|العلاج حسب الشدة|/diseases/img/dis-193-grades.svg]]"
-    },
-    "causes": {
-      "ar": "<ul><li>جروح ملوثة بالتربة أو الصدأ أو روث الحيوان، جروح وخزية، حروق، سرة المولود غير المعقمة.</li><li>عدم التطعيم أو انقطاع المنشط.</li><li>العمل في الزراعة والبناء.</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>التشخيص (الأعراض)</h4><ul><li>تيبس الفك والرقبة وعضلات أخرى (Stiffness of the jaw, neck)</li><li>صعوبة البلع وتهيج</li><li>تشنجات عضلات الفك أو الوجه (ابتسامة تيتانوسية Risus sardonicus)، ثم تتطور لتشنجات وتصلب عضلات الرقبة والبطن والظهر (Opisthotonus)</li><li>تشنجات مؤلمة (Painful convulsions) بسبب مثيرات بسيطة</li></ul><div class=\"cs-box cs-danger\"><strong>التوقعات</strong><p>لو بدأت تشنجات العضلات مبكراً، فرص التعافي ضعيفة. التيتانوس خطير جداً وكتير بيؤدي للوفاة خصوصاً عند الأطفال الصغار وكبار السن. علشان كده <b>الوقاية هي أفضل علاج</b>.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>التشخيص إكلينيكي (لا يوجد اختبار مؤكد، والمزرعة من الجرح قد تكون سلبية).</li><li>تاريخ التطعيم والجرح.</li><li>CK وغازات الدم وأملاح الدم وتحاليل الكلى/القلب لمتابعة المضاعفات.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>الوقاية</h4><p><b>التحصين النشط (Active immunization):</b> بيتاخد للأطفال كجزء من حقنة DTP (زي الدفتيريا) مع منشطات كل 10 سنين أو وقت الإصابة الكبيرة.</p>[[slot:dis-193-prophylaxis|الوقاية من التيتانوس بعد الجرح|/diseases/img/dis-193-prophylaxis.svg]]<h4>العلاج</h4><p><b>افتح الجرح ونظّفه (Open and clean the wound).</b></p><p><b>الحالات الخفيفة:</b></p><table><thead><tr><th>الغرض</th><th>الدواء (بأمر الطبيب)</th><th>الإعطاء</th></tr></thead><tbody><tr><td>مضاد السم</td><td>Tetanus antitoxin U فيالات</td><td>عضل بعد اختبار الحساسية</td></tr><tr><td>أو Tetanus human immunoglobulin (TIG)</td><td>500 وحدة</td><td>عضل</td></tr><tr><td>مهدئ ومرخّي (تشنجات)</td><td>Valium أمبول، أو Neurazine أمبول</td><td>أمبول عند اللزوم</td></tr><tr><td>مضاد حيوي</td><td>Vibramycin كبسولة، أو Hostacycline أمبول/قرص، أو Tetracid كبسولة</td><td>كبسولة أو قرص كل 12 ساعة</td></tr><tr><td>أو بنسلين</td><td>Penadur فيال، أو Retarpen فيال</td><td>حقنة واحدة بالعضل</td></tr><tr><td></td><td>أو Crystalline penicillin 1,000,000 وحدة فيال</td><td>حقنة بالعضل كل 6 ساعات</td></tr></tbody></table><p><b>الحالات المتوسطة:</b> نفس الحالات الخفيفة بالإضافة إلى: شق القصبة الهوائية (Tracheostomy)، مراقبة ضغط الدم وتنفس صناعي (Artificial respiration).</p><p><b>الحالات الشديدة:</b> نفس المتوسطة بالإضافة إلى: قسطرة لتفريغ المثانة، تنقيط Pavulon (مرخي عضلات) لتخفيف التصلب والتشنجات، غرفة هادئة ومعتمة.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong>الرعاية الحديثة: <b>TIG بشري</b> مفضل على مضاد السم الحيواني (TAT) لقلة الحساسية، ويُعطى في أقرب وقت (جرعة وقائية 250–500 وحدة؛ وللعلاج 500–3000 وحدة أو 150 وحدة/كجم عضل في أماكن متعددة حسب البروتوكول). <b>Metronidazole</b> (500 مجم كل 6–8 ساعات 7–10 أيام) هو المضاد الحيوي المفضل (البنسلين قد يزيد التشنج بتثبيطه GABA). <b>البنزوديازيبينات</b> (Diazepam/Midazolam) أساس التحكم في التشنجات، والماغنسيوم وريدي مساعد في تقلبات الجهاز اللاإرادي وبعض التشنجات. التنفس الصناعي والتغذية الوريدية/الأنبوبية في الحالات الشديدة. <b>التيتانوس لا يعطي مناعة</b>: يجب تطعيم المريض بعد الشفاء لإكمال السلسلة. التخلص من الجرح (Debridement) ضروري. الجرعات بأمر الطبيب.</div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم بسرعة</strong><p>الجرح ومكانه وتاريخه، تاريخ التطعيم، الفك (فتح الفم)، البلع، التنفس، الوعي، الحرارة، ضغط الدم والنبض (اضطراب لاإرادي: ضغط متقلب ونبض سريع وتعرق).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>هيّئ البيئة</strong><p>غرفة <b>هادئة معتمة</b> بعيداً عن الضجيج، أقل لمس وتحريك ممكن، تجميع الإجراءات في وقت واحد، إضاءة خافتة، سرير بحواجز.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>نظّف الجرح</strong><p>فتح وتنظيف الجرح بالتعاون مع الطبيب بعد إعطاء المهدئ والمضاد (قفازات).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ المضاد والمهدئ بأمان</strong><p>اختبار حساسية قبل TAT (جهّز أدرينالين). TIG عضل عميق في مكان مختلف عن لقاح. Valium بطيء وريدياً مع مراقبة التنفس. مضاد حيوي في موعده (Penadur عضل عميق).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أمّن مجرى الهواء</strong><p>شفط الإفرازات، جهّز أكسجين وأمبو وعدة شق القصبة. وضع جانبي/رأس مرفوع. لا تضع شيئاً في الفم أثناء التشنج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>العناية بالمثانة والأمعاء والتغذية</strong><p>قسطرة فولي (في الشديدة)، أنبوب معدة للتغذية بأمر الطبيب (صعوبة البلع)، سوائل وريدية، منع الإمساك.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وقاية الأمان</strong><p>احتياطات سقوط، حماية اللسان والأسنان، تغيير الوضع كل ساعتين لمنع قرح الفراش مع أدنى حركة، ومراقبة الدورة الدموية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>وثّق وثقّف</strong><p>التشنجات (عددها ومدتها والمثير)، التنفس، الضغط، الأدوية، والتطعيم قبل الخروج.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>أي <b>تشنج حنجري أو صعوبة تنفس أو زرقة</b> = طوارئ فورية: مجرى هواء، أكسجين، شفط، وتجهيز شق القصبة/تنفس صناعي. وأي مثير مفاجئ (صوت/ضوء/لمس) ممكن يطلق تشنجاً، فخفّض المثيرات.</p></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>تاريخ الجرح والتطعيم، الأدوية ووقتها، التشنجات، العلامات الحيوية، المثانة والأمعاء، قياس التنفس، وإبلاغ الصحة.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>تيبس الفك أو الرقبة بعد جرح</li><li>صعوبة بلع أو تنفس أو زرقة</li><li>تشنجات أو تقوس الظهر</li><li>ضغط متقلب جداً أو نبض سريع أو تعرق شديد</li><li>احتباس بول</li><li>حرارة عالية</li><li>رد فعل تحسسي لمضاد السم (طفح، ضيق نفس، هبوط ضغط)</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>نظّف أي جرح بالماء والصابون فوراً، وروح الطبيب لو الجرح عميق أو ملوث بالتراب أو الصدأ.</li><li>اسأل عن آخر منشط تيتانوس: كل <b>10 سنين</b> أو عند إصابة كبيرة.</li><li>طعّم أطفالك DTP في مواعيده، والحامل تتطعم Td.</li><li>كمّل الدواء وجلسات الرعاية حتى لو اتحسنت.</li><li>بعد الشفاء لازم تكمل سلسلة التطعيم لأن المرض مش بيدي مناعة.</li><li>التيتانوس خطير: الوقاية بالتطعيم أرخص بكتير من العلاج.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "التيتانوس (Lockjaw) بكتيريا (Clostridium tetani) أبواغها في التربة وتنتج سم (Tetanospasmin) يؤثر على الأعصاب المتحكمة في العضلات",
-      "الحضانة 5 أيام – 3 أسابيع (متوسط 8–12 يوم)",
-      "أعراض: تيبس الفك والرقبة، صعوبة بلع، تشنجات الوجه ثم تصلب عضلات الرقبة والبطن والظهر وتشنجات مؤلمة بأقل مثير",
-      "لو التشنجات بدأت بدري، فرص التعافي ضعيفة: الوقاية هي العلاج الأفضل",
-      "العلاج: فتح الجرح وتنظيفه، TIG/Antitoxin بعد اختبار الحساسية، مضاد حيوي، Valium، غرفة هادئة معتمة وتأمين التنفس",
-      "التطعيم DTP للأطفال + منشط كل 10 سنين أو عند إصابة كبيرة"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أول علامة غالباً للتيتانوس؟"
-      },
-      "options": [
-        {
-          "ar": "تيبس الفك والرقبة"
-        },
-        {
-          "ar": "طفح"
-        },
-        {
-          "ar": "إسهال"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Lockjaw."
-      }
-    },
-    {
-      "q": {
-        "ar": "تشنجات التيتانوس تُثار بـ؟"
-      },
-      "options": [
-        {
-          "ar": "أقل مثير (ضوء/صوت/لمس)"
-        },
-        {
-          "ar": "الجوع"
-        },
-        {
-          "ar": "النوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لذلك غرفة هادئة معتمة."
-      }
-    },
-    {
-      "q": {
-        "ar": "مضاد السم المناعي البشري حسب المراجع؟"
-      },
-      "options": [
-        {
-          "ar": "TIG 500 وحدة عضل"
-        },
-        {
-          "ar": "مضاد حيوي فقط"
-        },
-        {
-          "ar": "أسبرين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يمنع السم الجديد."
-      }
-    },
-    {
-      "q": {
-        "ar": "إجراء مهم قبل مضاد السم الحيواني (TAT)؟"
-      },
-      "options": [
-        {
-          "ar": "اختبار حساسية"
-        },
-        {
-          "ar": "صيام"
-        },
-        {
-          "ar": "تحاليل كبد"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر الحساسية."
-      }
-    },
-    {
-      "q": {
-        "ar": "منشط التيتانوس؟"
-      },
-      "options": [
-        {
-          "ar": "كل 10 سنين أو عند إصابة كبيرة"
-        },
-        {
-          "ar": "كل شهر"
-        },
-        {
-          "ar": "مرة واحدة فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "DTP/Td."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CDC — Tetanus: clinical overview, management, vaccination guidance for wounds"
-    },
-    {
-      "title": "WHO — Tetanus fact sheet"
-    },
-    {
-      "title": "StatPearls — Tetanus"
-    }
+  "en": [
+   "Tetanus (Lockjaw) is caused by a bacterium (Clostridium tetani) whose spores are in soil and which produces a toxin (Tetanospasmin) acting on the nerves that control muscles",
+   "Incubation 5 days – 3 weeks (average 8–12 days)",
+   "Symptoms: jaw and neck stiffness, difficulty swallowing, facial spasms then rigidity of the neck, abdominal and back muscles, and painful spasms with the slightest stimulus",
+   "If spasms start early, the chances of recovery are poor: prevention is the best treatment",
+   "Treatment: open and clean the wound, TIG/Antitoxin after an allergy test, antibiotic, Valium, a quiet dark room and securing breathing",
+   "DTP vaccination for children + a booster every 10 years or at a major injury"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أول علامة غالباً للتيتانوس؟",
+    "en": "The most likely first sign of tetanus?"
+   },
+   "options": [
+    {
+     "ar": "تيبس الفك والرقبة",
+     "en": "Jaw and neck stiffness"
+    },
+    {
+     "ar": "طفح",
+     "en": "Rash"
+    },
+    {
+     "ar": "إسهال",
+     "en": "Diarrhea"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Lockjaw.",
+    "en": "Lockjaw."
+   }
+  },
+  {
+   "q": {
+    "ar": "تشنجات التيتانوس تُثار بـ؟",
+    "en": "Tetanus spasms are triggered by?"
+   },
+   "options": [
+    {
+     "ar": "أقل مثير (ضوء/صوت/لمس)",
+     "en": "The slightest stimulus (light/sound/touch)"
+    },
+    {
+     "ar": "الجوع",
+     "en": "Hunger"
+    },
+    {
+     "ar": "النوم",
+     "en": "Sleep"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لذلك غرفة هادئة معتمة.",
+    "en": "That is why a quiet, dark room."
+   }
+  },
+  {
+   "q": {
+    "ar": "مضاد السم المناعي البشري حسب المراجع؟",
+    "en": "The human immune antitoxin listed?"
+   },
+   "options": [
+    {
+     "ar": "TIG 500 وحدة عضل",
+     "en": "TIG 500 units IM"
+    },
+    {
+     "ar": "مضاد حيوي فقط",
+     "en": "Antibiotic only"
+    },
+    {
+     "ar": "أسبرين",
+     "en": "Aspirin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يمنع السم الجديد.",
+    "en": "It prevents new toxin."
+   }
+  },
+  {
+   "q": {
+    "ar": "إجراء مهم قبل مضاد السم الحيواني (TAT)؟",
+    "en": "An important step before animal antitoxin (TAT)?"
+   },
+   "options": [
+    {
+     "ar": "اختبار حساسية",
+     "en": "Allergy test"
+    },
+    {
+     "ar": "صيام",
+     "en": "Fasting"
+    },
+    {
+     "ar": "تحاليل كبد",
+     "en": "Liver tests"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر الحساسية.",
+    "en": "Risk of allergy."
+   }
+  },
+  {
+   "q": {
+    "ar": "منشط التيتانوس؟",
+    "en": "The tetanus booster?"
+   },
+   "options": [
+    {
+     "ar": "كل 10 سنين أو عند إصابة كبيرة",
+     "en": "Every 10 years or at a major injury"
+    },
+    {
+     "ar": "كل شهر",
+     "en": "Every month"
+    },
+    {
+     "ar": "مرة واحدة فقط",
+     "en": "Only once"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "DTP/Td.",
+    "en": "DTP/Td."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CDC — Tetanus: clinical overview, management, vaccination guidance for wounds"
+  },
+  {
+   "title": "WHO — Tetanus fact sheet"
+  },
+  {
+   "title": "StatPearls — Tetanus"
+  }
+ ]
 }

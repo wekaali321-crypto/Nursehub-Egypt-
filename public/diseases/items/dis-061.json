@@ -1,416 +1,518 @@
 {
-  "id": "dis-061",
-  "system": "renal",
-  "icon": "🚽",
-  "level": 1,
-  "teaser": {
-    "ar": "حرقان، تكرار تبول، حرارة وألم خاصرة: فرّق بين السفلي والعلوي، وخد المزرعة قبل المضاد، وتعلّم إيه الأدوية ومتى تبلّغ."
+ "id": "dis-061",
+ "system": "renal",
+ "icon": "🚽",
+ "level": 1,
+ "teaser": {
+  "ar": "حرقان، تكرار تبول، حرارة وألم خاصرة: فرّق بين السفلي والعلوي، وخد المزرعة قبل المضاد، وتعلّم إيه الأدوية ومتى تبلّغ.",
+  "en": "Burning, frequent urination, fever, and flank pain: tell lower from upper, take the culture before the antibiotic, and learn the drugs and when to report."
+ },
+ "chips": [
+  {
+   "ar": "سفلي / علوي",
+   "en": "Lower / upper"
   },
-  "chips": [
-    {
-      "ar": "سفلي / علوي"
-    },
-    {
-      "ar": "مزرعة قبل المضاد"
-    },
-    {
-      "ar": "سوائل ونظافة"
-    }
+  {
+   "ar": "مزرعة قبل المضاد",
+   "en": "Culture before antibiotic"
+  },
+  {
+   "ar": "سوائل ونظافة",
+   "en": "Fluids and hygiene"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>التهاب المسالك البولية (UTI) هو عدوى بكتيرية في أي جزء من الجهاز البولي: المثانة والإحليل (سفلي)، أو الحالب والكلى (علوي). أشهر شكوى عند النساء، ولكنه في الرجال والأطفال والمسنين ومرضى القسطرة بيحتاج انتباه أكبر.</p>[[slot:dis-061-lower-upper|الفرق بين التهاب المسالك السفلي والعلوي — رسم توضيحي من إعداد الموقع|/diseases/img/dis-061-lower-upper.svg]]<div class=\"cs-box cs-info\"><strong>ليه التفرقة مهمة؟</strong><p>السفلي بيتعالج غالباً بالفم وفي البيت، لكن العلوي (حرارة + ألم خاصرة + قيء) ممكن يحتاج مضاد وريدي وتنويم.</p></div><h4>التقسيم حسب المرجع</h4><ul><li><b>التهاب علوي (Upper UTI):</b> التهاب الحالب (Ureteritis) والحويضة (Pyelitis) والكلى (Pyelonephritis): ألم في الخاصرة (Loin pain) + حرارة عالية. لو شكيت في الحالة: حوّلها لعيادة مسالك.</li><li><b>التهاب سفلي (Lower UTI):</b> التهاب المثانة (Cystitis) والإحليل (Urethritis): غالباً بسيطة ويمكن التعامل معها.</li></ul><h4>معلومات مكمّلة: العدوى المكتسبة من المجتمع والمستشفى</h4><p>أغلب العدوى «مكتسبة من المجتمع» وغير معقدة: بكتيريا سالبة الجرام (غالباً E. coli) موجودة على جلد منطقة الأعضاء التناسلية وتدخل من فتحة الإحليل، أو تنتقل أثناء الجماع. أما <b>العدوى المستشفوية (Nosocomial)</b> فترتبط بوجود <b>قسطرة بولية</b> (تفتح طريقاً للبكتيريا إلى المثانة) أو بالتدخلات مثل منظار المثانة؛ الأجهزة ذات الألياف الضوئية والعدسات لا تتحمل التعقيم بالحرارة العالية فتُعامل بمطهر عالي المستوى، وإن لم تُعالج صح قد تنقل عدوى بين المرضى. العدوى غير المعالجة قد تصعد للكلى أو تتحول لتسمم دم خصوصاً عند المسنين وضعاف المناعة.</p>[[slot:dis-061-addons|خطوات التعامل مع الشك بالتهاب المسالك — رسم من إعداد الموقع|/diseases/img/dis-061-addons.svg]]<h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-061-vs|UTI مقابل التهاب الحويضة — رسم من إعداد الموقع|/diseases/img/dis-061-vs.svg]]\n<h4>مراجعة NCLEX: UTI والتهاب الحويضة</h4><p>التهاب المسالك يشمل الإحليل والمثانة (التهاب المثانة Cystitis)، أما التهاب الحويضة فهو عدوى كلوية أخطر تحدث حين تصعد العدوى عبر الحالبين.</p>[[slot:dis-061-p413|التهاب المسالك البولية مقابل التهاب الحويضة — رسم من إعداد الموقع|/diseases/img/dis-061-p413.svg]]",
+   "en": "<p>A urinary tract infection (UTI) is a bacterial infection in any part of the urinary system: the bladder and urethra (lower), or the ureter and kidney (upper). It is the most common complaint in women, but in men, children, the elderly, and catheterized patients it needs more attention.</p>[[slot:dis-061-lower-upper|The difference between lower and upper urinary tract infection — an illustration prepared by the site|/diseases/img/dis-061-lower-upper.svg]]<div class=\"cs-box cs-info\"><strong>Why is telling them apart important?</strong><p>Lower UTI is usually treated by mouth at home, but upper (fever + flank pain + vomiting) may need an IV antibiotic and admission.</p></div><h4>Classification</h4><ul><li><b>Upper UTI:</b> inflammation of the ureter (Ureteritis), renal pelvis (Pyelitis), and kidney (Pyelonephritis): flank pain (Loin pain) + high fever. If in doubt about the case: refer it to a urology clinic.</li><li><b>Lower UTI:</b> inflammation of the bladder (Cystitis) and urethra (Urethritis): usually simple and can be managed.</li></ul><h4>Supplementary information: community-acquired and hospital-acquired infection</h4><p>Most infections are \"community-acquired\" and uncomplicated: gram-negative bacteria (usually E. coli) present on the skin of the genital area enter through the urethral opening, or are carried during intercourse. <b>Hospital-acquired infection (Nosocomial)</b> is linked to having a <b>urinary catheter</b> (which opens a path for bacteria to the bladder) or to procedures such as cystoscopy; fiber-optic instruments and lenses cannot tolerate high-heat sterilization, so they are treated with a high-level disinfectant, and if not treated correctly they may transmit infection between patients. Untreated infection may ascend to the kidneys or turn into sepsis, especially in the elderly and the immunocompromised.</p>[[slot:dis-061-addons|Steps for handling suspected urinary tract infection — illustration prepared by the site|/diseases/img/dis-061-addons.svg]]<h4>Additions covering review points</h4>[[slot:dis-061-vs|UTI versus pyelonephritis — illustration prepared by the site|/diseases/img/dis-061-vs.svg]]\n<h4>NCLEX review: UTI and pyelonephritis</h4><p>A urinary tract infection involves the urethra and bladder (cystitis, Cystitis), while pyelonephritis is a more serious kidney infection that occurs when the infection ascends through the ureters.</p>[[slot:dis-061-p413|Urinary tract infection versus pyelonephritis — illustration prepared by the site|/diseases/img/dis-061-p413.svg]]"
+  },
+  "causes": {
+   "ar": "<p>أغلب الحالات من بكتيريا القولون (E. coli) اللي بتطلع من الأمعاء لمدخل المجرى البولي. عوامل بتساعد على العدوى:</p><ul><li>قلة شرب المياه وحبس البول</li><li>ضعف النظافة الشخصية</li><li>وجود حصوات أو انسداد (ركود البول)</li><li>قسطرة بولية</li><li>السكر والمناعة الضعيفة والحمل</li><li>التكرار بتاع العدوى لازم يدور الطبيب على سبب</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>تذكر أن المضاد الحيوي بيتغير حسب المزرعة ومقاومة البكتيريا المحلية.</p></div>",
+   "en": "<p>Most cases are from colon bacteria (E. coli) that travel from the intestine to the entrance of the urinary tract. Factors that help infection:</p><ul><li>Drinking too little water and holding urine</li><li>Poor personal hygiene</li><li>Stones or obstruction (urinary stasis)</li><li>A urinary catheter</li><li>Diabetes, weak immunity, and pregnancy</li><li>Recurrent infection means the physician must look for a cause</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Remember that the antibiotic changes depending on the culture and local bacterial resistance.</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>الأعراض</h4><table><thead><tr><th>التهاب سفلي (Lower UTI)</th><th>التهاب علوي (Upper UTI)</th></tr></thead><tbody><tr><td>أعراض موضعية غالباً</td><td>أعراض عامة غالباً</td></tr><tr><td>لا حرارة أو خفيفة</td><td>حرارة عالية</td></tr><tr><td>ألم فوق العانة (Supra-pubic)</td><td>ألم في الخاصرة (Loin pain)</td></tr><tr><td>حرقان وعسر في التبول (Dysuria)</td><td>قيء</td></tr><tr><td>سلس بول (Incontinence)</td><td>رعشة وقشعريرة (Rigor)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>انتبه</strong><p>عند كبار السن والأطفال ممكن يظهر الالتهاب كـ تخليط ذهني أو خمول أو حرارة فقط بدون حرقان. افحص البول عند أي تغير مفاجئ.</p></div><h4>أشهر 3 شكاوى (التهاب سفلي)</h4><ul><li>حرقان في البول (Dysuria)</li><li>مغص في البطن أو الجنبين (Abdominal / loin pain)</li><li>أعراض التهاب المثانة (Cystitis): كثرة دخول الحمام (Frequency)، عدم القدرة على التحكم أحياناً (Urgency)، شكة أو نغزة فوق العانة (Suprapubic pain)</li></ul><h4>في كبار السن</h4><p>الالتهاب بيعمل حاجتين مهمتين: <b>سخونية غير معروفة السبب</b> و<b>توهان وتخاريف مفاجئة (Confusion, delirium)</b>.</p><h4>إضافات تمريضية</h4><ul><li>تكرار الإلحاح بسبب تهيج عضلة المثانة</li><li>ثقل أو إحساس بامتلاء فوق العانة</li><li>ألم أسفل الظهر</li><li>تشخيصات تمريضية: خطر اضطراب التبول، وخطر سلس البول الإلحاحي (Urge incontinence)</li></ul>\n<p>حمى، حرقة عند التبول (dysuria)، تكرار. تحليل البول: عكر ونتن، كريات بيضاء، نيتريت. عدّ الجراثيم يُحدَّد بالمختبر (يُذكر في المراجعة أكثر من 10,000 جرثومة/مل). عند المسن: التشوش المفاجئ قد يكون العلامة الوحيدة.</p>",
+   "en": "<h4>Symptoms</h4><table><thead><tr><th>Lower UTI</th><th>Upper UTI</th></tr></thead><tbody><tr><td>Mostly local symptoms</td><td>Mostly general symptoms</td></tr><tr><td>No fever or mild</td><td>High fever</td></tr><tr><td>Suprapubic pain (Supra-pubic)</td><td>Flank pain (Loin pain)</td></tr><tr><td>Burning and difficulty urinating (Dysuria)</td><td>Vomiting</td></tr><tr><td>Incontinence (Incontinence)</td><td>Rigors and chills (Rigor)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Be careful</strong><p>In the elderly and children the infection may show up as mental confusion, lethargy, or fever only without burning. Test the urine at any sudden change.</p></div><h4>The top 3 complaints (lower infection)</h4><ul><li>Burning in the urine (Dysuria)</li><li>Abdominal or flank cramps (Abdominal / loin pain)</li><li>Cystitis symptoms (Cystitis): going to the bathroom often (Frequency), sometimes being unable to control it (Urgency), a pinch or stab above the pubis (Suprapubic pain)</li></ul><h4>In the elderly</h4><p>The infection causes two important things: <b>fever of unknown cause</b> and <b>sudden disorientation and delirium (Confusion, delirium)</b>.</p><h4>Nursing additions</h4><ul><li>Repeated urgency because of bladder muscle irritation</li><li>Heaviness or a feeling of fullness above the pubis</li><li>Lower back pain</li><li>Nursing diagnoses: risk for impaired urination, and risk for urge incontinence (Urge incontinence)</li></ul>\n<p>Fever, burning on urination (dysuria), frequency. Urinalysis: cloudy and foul-smelling, white cells, nitrite. The bacterial count is determined by the lab (more than 10,000 bacteria/mL is cited in review). In the elderly: sudden confusion may be the only sign.</p>"
+  },
+  "tests": {
+   "ar": "<h4>الفحوصات</h4><ul><li><b>تحليل بول:</b> صديد (Pus cells) أكتر من 5 في الساحة. وقد تزيد كرات الدم الحمراء بسبب احتقان</li><li><b>صورة دم كاملة CBC:</b> زيادة كرات الدم البيضاء (Leucocytosis)</li><li><b>مزرعة بول:</b> مطلوبة لو الصديد أكتر من 20 في الساحة وفي الالتهاب المتكرر</li><li><b>وظائف الكلى:</b> في الالتهاب الطويل أو المتكرر</li></ul><div class=\"cs-box cs-tip\"><strong>قاعدة عينة المزرعة</strong><p>لازم تتاخد <b>قبل</b> بدء المضاد الحيوي، أو بعد 48 ساعة من توقفه. عينة وسط التبول بعد غسل المنطقة.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المعيار المعتمد حالياً للعدوى: أعراض + صديد في التحليل، ومزرعة ≥ 10 أس 3–5 CFU/مل حسب الحالة. المزرعة بتفيد خصوصاً في التهاب الكلى والتكرار والرجال والحمل.</p></div><ul><li><b>تحليل بول:</b> تشخيص UTI لو لقيت Pus cells أكتر من 5.</li><li><b>مزرعة بول (Urine culture):</b> غالباً نلجأ لها لو الصديد أكتر من 50 لتحديد نوع المضاد المناسب. ممكن أخذ العينة للمزرعة ثم البدء في مضاد حيوي تجريبي (Empirical) لحد ظهور النتيجة.</li></ul><h4>تحليل البول والمزرعة</h4><ul><li>تحليل بول: كرات بيضاء، <b>نيتريت</b>، كرات حمراء</li><li>المزرعة والحساسية تحدد الميكروب والمضاد المناسب (ويجب أخذ العينة قبل أول جرعة)</li><li><b>عينة منتصف التيار (Midstream clean catch):</b> نظافة فتحة الإحليل، بدء التبول، ثم وضع العبوة المعقمة في منتصف التيار بدون إيقافه، وسحبها عند امتلاء أكثر من النصف، وإكمال التبول، وغلق العبوة بإحكام وإرسالها فوراً</li><li>انظر دليل الفحوصات <a href=\"/diseases/dis-766\">الفحوصات التشخيصية — الكلى والمسالك</a></li></ul><h4>إضافات تغطي نقاط المراجعة</h4><p>تحليل البول: عكر ذو رائحة، WBC، نيتريت (عدوى كلوية)، مزرعة وحساسية (أكثر من 10,000 جرثومة/مل في المرجع التعليمي؛ راجع حد مكانك). <strong>الأولوية: التقييم أولًا ثم التدخل.</strong></p>\n<p><strong>المزرعة والحساسية أولًا ثم المضاد.</strong> عيّنة منتصف البول التي بقيت ساعتين في الحمام: تُرمى ويؤخذ غيرها فورًا.</p>\n<p>أسئلة مراجعة: بول عكر = وجود بكتيريا. حرقة وتكرار تبول: الفحص المتوقع هو مزرعة البول. 72 سنة مشوشة فجأة: افحص التهاب المسالك.</p>",
+   "en": "<h4>Tests</h4><ul><li><b>Urinalysis:</b> pus cells (Pus cells) more than 5 per field. Red blood cells may also be increased because of congestion</li><li><b>Complete blood count CBC:</b> increased white blood cells (Leucocytosis)</li><li><b>Urine culture:</b> requested if pus is more than 20 per field and in recurrent infection</li><li><b>Kidney function:</b> in prolonged or recurrent infection</li></ul><div class=\"cs-box cs-tip\"><strong>Culture specimen rule</strong><p>It must be taken <b>before</b> starting the antibiotic, or 48 hours after stopping it. A midstream sample after cleaning the area.</p></div><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The currently accepted standard for infection: symptoms + pus in the urinalysis, and a culture ≥ 10 to the power of 3–5 CFU/mL depending on the case. The culture is especially useful in kidney infection, recurrence, men, and pregnancy.</p></div><ul><li><b>Urinalysis:</b> diagnose UTI if you find pus cells more than 5.</li><li><b>Urine culture (Urine culture):</b> we usually resort to it if pus is more than 50 to determine the appropriate antibiotic. The sample can be taken for culture and then an empiric antibiotic (Empirical) started until the result appears.</li></ul><h4>Urinalysis and culture</h4><ul><li>Urinalysis: white cells, <b>nitrite</b>, red cells</li><li>The culture and sensitivity determine the microbe and the appropriate antibiotic (and the sample must be taken before the first dose)</li><li><b>Midstream clean catch (Midstream clean catch):</b> clean the urethral opening, start urinating, then place the sterile container in the middle of the stream without stopping it, remove it when more than half full, finish urinating, close the container tightly and send it immediately</li><li>See the tests guide <a href=\"/diseases/dis-766\">Diagnostic tests — kidney and urinary tract</a></li></ul><h4>Additions covering review points</h4><p>Urinalysis: cloudy with odor, WBC, nitrite (kidney infection), culture and sensitivity (more than 10,000 bacteria/mL in the teaching standard; check your local threshold). <strong>Priority: assessment first, then intervention.</strong></p>\n<p><strong>Culture and sensitivity first, then the antibiotic.</strong> A midstream sample that stayed two hours in the bathroom: discard it and take another immediately.</p>\n<p>Review questions: cloudy urine = presence of bacteria. Burning and frequent urination: the expected test is a urine culture. A 72-year-old suddenly confused: check for a urinary tract infection.</p>"
+  },
+  "treatment": {
+   "ar": "<h4>أولاً: علاج غير دوائي</h4><ul><li>شرب سوائل كتير (حوالي 2 لتر يومياً)</li><li>التبول فوراً عند الإحساس بالرغبة وعدم الحبس</li><li>النظافة الشخصية الجيدة بتقلل العدوى</li></ul><h4>ثانياً: الأدوية المذكورة (بأمر الطبيب)</h4><table><thead><tr><th>الدواء</th><th>الجرعة والمدة</th></tr></thead><tbody><tr><td>Ciprfar (سيبروفلوكساسين) 500 مجم</td><td>مرتين يومياً (كل 12 ساعة) لمدة 10–14 يوم</td></tr><tr><td>Healthibact 400 مجم أقراص</td><td>مرتين يومياً لمدة 10–14 يوم</td></tr><tr><td>Ceftriaxone 1 جم فيال</td><td>مرة يومياً لمدة 5–10 أيام</td></tr><tr><td>Rowatinex كبسولات</td><td>كبسولة كل 8 ساعات (مطهّر للبول)</td></tr><tr><td>Cystone أقراص</td><td>قرص كل 12 ساعة (يعمل على إذابة الحصوات ومنع تكوينها)</td></tr></tbody></table><p>الأدوية التلاتة الأولى (سيبروفلوكساسين، هيلثيباكت، سيفترياكسون) هي الأشهر في علاج التهاب المجرى البولي، ومش بتتاخد كلها مرة واحدة، الطبيب بيختار واحد منها.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الحديثة (IDSA/EAU) لا تضع الفلوروكينولونات (مثل سيبروفلوكساسين) كخط أول لالتهاب المثانة غير المعقد بسبب المقاومة وآثارها الجانبية؛ المفضل: نيتروفورانتوين 5 أيام، أو فوسفوميسين جرعة واحدة، أو تراي ميثوبريم/سلفا حسب مقاومة المنطقة، ومدة 3–7 أيام للمثانة غير المعقدة (و7 أيام للعلوي بالفلوروكينولون أو 10–14 ببقية الأدوية). نيتروفورانتوين لا يصلح للكلى ولا للرجال. المدد المذكورة (10–14 يوم) أنسب للعدوى المعقدة/العلوية. اتبع بروتوكول المستشفى ونتيجة المزرعة. المادة الفعالة لـ Healthibact لم أتمكن من التأكد منها: اقرأ العلبة.</p></div><h4>علاج حسب الروشتات الشائعة (نموذج العيادة)</h4><ul><li>شرب كمية مناسبة من الماء يومياً (6–8 أكواب)</li><li>التبول باستمرار وعدم حبس البول لفترات طويلة</li></ul><h5>مطهرات ومسكنات المسالك البولية ومرخيات العضلات</h5><table><thead><tr><th>الدواء</th><th>الاستعمال</th></tr></thead><tbody><tr><td>Proximol eff / Coli-urinal eff</td><td>كيس على نصف كوب ماء 3 مرات يومياً</td></tr><tr><td>Proximol tab, Rowatinex caps, Urinex caps, Sham caps</td><td>قرص أو كبسولة 3 مرات يومياً</td></tr></tbody></table><h5>المضادات الحيوية بحسب الصديد في التحليل (حسب المرجع)</h5>[[slot:dis-061-pus-ladder|اختيار المضاد حسب نتيجة التحليل — رسم توضيحي من إعداد الموقع|/diseases/img/dis-061-pus-ladder.svg]]<table><thead><tr><th>الصديد (Pus cells)</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>5–30</td><td>Uvamine retard caps (nitrofurantoin)</td><td>كبسولة كل 12 ساعة لمدة أسبوع</td></tr><tr><td>30–50</td><td>Ciprofloxacin: Ciprofar 500 tab أو Cipro 500 tab</td><td>قرص كل 12 ساعة، قبل الأكل بساعة أو بعد الأكل بساعتين، لمدة أسبوع</td></tr><tr><td>30–50</td><td>Sulfa + Trimethoprim: Septazol forte tab أو Septrin tab</td><td>قرص كل 12 ساعة لمدة أسبوع</td></tr><tr><td>30–50</td><td>Levofloxacin: Tavacin 750 tab أو Levoflox 500 tab</td><td>قرص واحد يومياً، قبل الأكل بساعة أو بعد الأكل بساعتين، لمدة 5 أيام</td></tr><tr><td>أكتر من 50</td><td>يفضّل أخذ عينة بول وعمل مزرعة</td><td>ثم البدء بمضاد تجريبي (Empirical) ويفضّل Ciprofloxacin</td></tr></tbody></table><h5>روشتة: UTI بصديد متوسط</h5><ul><li>Rowatinex caps: كبسولة 3 مرات يومياً</li><li>Ciprofar 500 tab: قرص كل 12 ساعة قبل الأكل بساعة أو بعد الأكل بساعتين لمدة أسبوع</li><li>مع كتابة التعليمات على ظهر الروشتة</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الصديد لوحده لا يحدد المضاد أو المدة؛ الاختيار بحسب الأعراض والمزرعة ومقاومة المنطقة وحالة المريض. Nitrofurantoin لا يصلح للإنتان الكلوي ولا لنقص وظائف الكلى الشديد ويحذر في G6PD وآخر الحمل. Septrin/Septazol تجنّب في الحمل المبكر وحساسية السلفا ومع ارتفاع البوتاسيوم. الفلوروكينولونات (Cipro/Levofloxacin) لها تحذيرات FDA (أوتار، أعصاب، تقلبات سكر) وتُحفظ لحالات يختارها الطبيب. لم أجد تأكيد Tavacin 750 في السوق؛ التقرير يتبع المرجع، فاقرأ العلبة.</p></div><p>جرعة Levofloxacin 750 مجم يومياً لمدة 5 أيام لها دعم في الإرشادات للعدوى المعقدة، وجرعة 500 مجم تُستعمل لمدة أطول حسب البروتوكول.</p><h4>قائمة المضادات المذكورة في المرجع التمريضي</h4><ul><li>Nitrofurantoin، Ciprofloxacin، Levofloxacin، Ofloxacin، Trimethoprim-Sulfamethoxazole، Ampicillin، Amoxicillin — الاختيار حسب المزرعة وحساسية المنطقة والحالة (الحمل، الكلى، السن)</li><li><b>Phenazopyridine</b> لتسكين الحرقان: يلوّن البول <b>برتقالي</b>؛ يُعطى يومين فقط؛ يُمنع في القصور الكلوي الشديد ونقص إنزيم G6PD</li><li>الفوائد: سوائل لتخفيف تركيز البول</li><li>إعادة اختبار البول بعد انتهاء المضاد الحيوي</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>بالنسبة لـ Ampicillin/Amoxicillin: مقاومة E. coli لهما عالية، فلا تُستخدم تجريبياً إلا بعد معرفة الحساسية. الكينولونات يُحتفظ بها للحالات المعقدة بسبب أعراضها الجانبية.</p></div>\n<p>مضادات حيوية مثل sulfonamides وlevofloxacin مع مسكنات للألم (يُفضّل تجنب NSAIDs عند اشتباه ضعف الكلى، بأمر الطبيب).</p>[[slot:dis-061-p414|أسباب وتثقيف التهاب المسالك — رسم من إعداد الموقع|/diseases/img/dis-061-p414.svg]]",
+   "en": "<h4>First: non-drug treatment</h4><ul><li>Drink plenty of fluids (about 2 liters daily)</li><li>Urinate immediately when you feel the urge and do not hold it</li><li>Good personal hygiene reduces infection</li></ul><h4>Second: the drugs mentioned (by physician order)</h4><table><thead><tr><th>Drug</th><th>Dose and duration</th></tr></thead><tbody><tr><td>Ciprfar (ciprofloxacin) 500 mg</td><td>Twice daily (every 12 hours) for 10–14 days</td></tr><tr><td>Healthibact 400 mg tablets</td><td>Twice daily for 10–14 days</td></tr><tr><td>Ceftriaxone 1 g vial</td><td>Once daily for 5–10 days</td></tr><tr><td>Rowatinex capsules</td><td>One capsule every 8 hours (urinary antiseptic)</td></tr><tr><td>Cystone tablets</td><td>One tablet every 12 hours (works to dissolve stones and prevent their formation)</td></tr></tbody></table><p>The first three drugs (ciprofloxacin, Healthibact, ceftriaxone) are the best known in treating urinary tract infection, and they are not all taken at once; the physician chooses one of them.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Current guidelines do not place fluoroquinolones (such as ciprofloxacin) as first line for uncomplicated cystitis because of resistance and their side effects; preferred: nitrofurantoin for 5 days, or fosfomycin as a single dose, or trimethoprim/sulfa depending on regional resistance, and a duration of 3–7 days for uncomplicated bladder infection (and 7 days for upper with a fluoroquinolone or 10–14 with the other drugs). Nitrofurantoin is not suitable for the kidneys or for men. The durations mentioned (10–14 days) are more suitable for complicated/upper infection. Follow the hospital protocol and the culture result. The active ingredient of Healthibact is not confirmed here: read the box.</p></div><h4>Treatment per common prescriptions (clinic model)</h4><ul><li>Drink a suitable amount of water daily (6–8 cups)</li><li>Urinate continually and do not hold urine for long periods</li></ul><h5>Urinary antiseptics, analgesics, and muscle relaxants</h5><table><thead><tr><th>Drug</th><th>Use</th></tr></thead><tbody><tr><td>Proximol eff / Coli-urinal eff</td><td>One sachet in half a glass of water 3 times daily</td></tr><tr><td>Proximol tab, Rowatinex caps, Urinex caps, Sham caps</td><td>One tablet or capsule 3 times daily</td></tr></tbody></table><h5>Antibiotics by the pus level in the urinalysis (classic teaching)</h5>[[slot:dis-061-pus-ladder|Choosing the antibiotic by the urinalysis result — an illustration prepared by the site|/diseases/img/dis-061-pus-ladder.svg]]<table><thead><tr><th>Pus (Pus cells)</th><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td>5–30</td><td>Uvamine retard caps (nitrofurantoin)</td><td>One capsule every 12 hours for a week</td></tr><tr><td>30–50</td><td>Ciprofloxacin: Ciprofar 500 tab or Cipro 500 tab</td><td>One tablet every 12 hours, one hour before food or two hours after food, for a week</td></tr><tr><td>30–50</td><td>Sulfa + Trimethoprim: Septazol forte tab or Septrin tab</td><td>One tablet every 12 hours for a week</td></tr><tr><td>30–50</td><td>Levofloxacin: Tavacin 750 tab or Levoflox 500 tab</td><td>One tablet daily, one hour before food or two hours after food, for 5 days</td></tr><tr><td>More than 50</td><td>It is preferable to take a urine sample and do a culture</td><td>Then start an empiric antibiotic (Empirical), preferably Ciprofloxacin</td></tr></tbody></table><h5>Prescription: UTI with moderate pus</h5><ul><li>Rowatinex caps: one capsule 3 times daily</li><li>Ciprofar 500 tab: one tablet every 12 hours one hour before food or two hours after food for a week</li><li>With the instructions written on the back of the prescription</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Pus alone does not determine the antibiotic or the duration; the choice depends on symptoms, the culture, regional resistance, and the patient's condition. Nitrofurantoin is not suitable for kidney sepsis or severe kidney impairment, and use caution in G6PD deficiency and at the end of pregnancy. Avoid Septrin/Septazol in early pregnancy, sulfa allergy, and with high potassium. Fluoroquinolones (Cipro/Levofloxacin) carry safety warnings (tendons, nerves, glucose swings) and are kept for cases the physician chooses. The availability of Tavacin 750 on the market is not confirmed: read the box.</p></div><p>A Levofloxacin dose of 750 mg daily for 5 days has support in the guidelines for complicated infection, and a 500 mg dose is used for a longer time per protocol.</p><h4>The antibiotic list mentioned in the nursing text</h4><ul><li>Nitrofurantoin, Ciprofloxacin, Levofloxacin, Ofloxacin, Trimethoprim-Sulfamethoxazole, Ampicillin, Amoxicillin — the choice depends on the culture, regional sensitivity, and the case (pregnancy, kidneys, age)</li><li><b>Phenazopyridine</b> to relieve burning: turns urine <b>orange</b>; given for two days only; prohibited in severe renal impairment and G6PD enzyme deficiency</li><li>Benefits: fluids to dilute the urine</li><li>Retest the urine after the antibiotic ends</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>For Ampicillin/Amoxicillin: E. coli resistance to them is high, so they are not used empirically except after knowing the sensitivity. Quinolones are kept for complicated cases because of their side effects.</p></div>\n<p>Antibiotics such as sulfonamides and levofloxacin with pain relievers (it is preferable to avoid NSAIDs when kidney impairment is suspected, per the physician's order).</p>[[slot:dis-061-p414|Causes and education for urinary tract infection — illustration prepared by the site|/diseases/img/dis-061-p414.svg]]"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p>الأعراض، الحرارة، ألم الخاصرة، لون ورائحة البول، تكرار التبول، وعدد مرات السلس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>خد المزرعة قبل المضاد</strong><p>عينة وسط التبول معقمة، واكتب وقت الجمع. بلّغ إن المريض على مضاد حالياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أعطِ المضاد في ميعاده</strong><p>احترم المواعيد (كل 12 ساعة بالضبط). Ceftriaxone وريدي: ببطء حسب الصيدلية، واسأل عن حساسية البنسلين. سيبروفلوكساسين: ابعده عن الألبان والمغنيسيوم والحديد بساعتين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>رطّب</strong><p>شجّع على 2 لتر يومياً ما لم يوجد منع (قصور قلب/كلى)، وسجّل I/O.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب</strong><p>الحرارة كل 4 ساعات، النبض والضغط (علامات تسمم دموي: ضغط منخفض، تسرع، تخليط)، كمية البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>نظّف وامنع العدوى</strong><p>النظافة من الأمام للخلف، وعناية القسطرة (نظام مغلق، كيس تحت مستوى المثانة)، وشيل القسطرة بأسرع وقت.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف</strong><p>إكمال المدة كاملة حتى لو الأعراض اختفت.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>لو حرارة عالية + رعشة + ألم خاصرة</strong><p>ده التهاب علوي: بلّغ الطبيب فوراً. جهّز المزرعة (بول ودم) قبل المضاد الوريدي وراقب علامات الإنتان (Sepsis).</p></div><div class=\"cs-box cs-tip\"><strong>نقاط إضافية من العيادة</strong><ul><li>اسأل كبار السن عن التوهان أو السخونية: ممكن تكون UTI بدون حرقان.</li><li>السيبروفلوكساسين قبل الأكل بساعة أو بعد الأكل بساعتين، بعيداً عن الألبان والحديد والمغنيسيوم.</li><li>أعطِ مضاد المزرعة الأول ثم راجع النتيجة.</li></ul></div><h4>إضافات تمريضية</h4><ul><li>سجّل المدخول والمخرج؛ شجّع شرب السوائل (لكن لا تفرط لو عندك قصور قلب/كلى)</li><li>راقب الحرارة والعلامات الحيوية</li><li>شجّع التبول المنتظم وعدم حبس البول</li><li><b>عصير التوت البري (Cranberry):</b> كان يُنصح به لتحميض البول، لكن الدليل الحالي يدعم فائدة متواضعة في <b>الوقاية</b> من التكرار فقط وليس العلاج؛ لا يغني عن المضاد الحيوي</li><li>علّم المريض أن Phenazopyridine يلوّن البول برتقالي ويلوّن الملابس والعدسات اللاصقة</li><li>في القسطرة: تقليل أيام الاستخدام، نظام مغلق، تثبيت الكيس أسفل المثانة، غسل اليدين</li></ul><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>زيادة السوائل نحو 2000 mL ماء يوميًا</li><li>التبول بعد الجماع</li><li>مكملات التوت البري (Cranberry)</li><li>تجنب الكافيين والكحول</li><li>لا دش مهبلي ولا مبيدات منويات ولا مزيلات عرق للمنطقة ولا ملابس نايلون وسبانديكس ولا حمام فقاعات</li><li>المسح من الأمام للخلف</li></ul>\n<h4>الأسباب والتثقيف (مراجعة)</h4><ul><li><strong>الأسباب:</strong> احتباس البول (BPH، حبس البول، حصوات)، قسطرة فولي، E. coli (المسح من الخلف للأمام).</li><li>مسن مشوش فجأة: افحص التهاب المسالك — قد يصير إنتانًا بوليًا.</li><li><strong>التثقيف:</strong> 2000 مل ماء يوميًا، التبول بعد الجماع، التوت البري، تجنب الكافيين والكحول.</li><li><strong>ممنوعات:</strong> الغسول المهبلي، مبيد الحيوانات المنوية، مزيل روائح المنطقة، النايلون/السباندكس، حمامات الفقاعات؛ المسح من الأمام للخلف.</li></ul><p>وسيلة حفظ للتشوش: «لا تنسَ التفتيش عن التهاب عند أي لخبطة جديدة».</p><h4>الأطفال/نقاط اختبار</h4><ul><li>أول إجراء: زراعة دم وبول ثم بدء المضاد الحيوي؛ أكثر من 10000 كائن/مل بالزراعة.</li><li>أسباب: احتباس البول، قسطرة، E. coli؛ المسح من الأمام للخلف.</li><li>تثقيف: سوائل 2000 مل، التبول بعد الجماع، التوت البري، تجنب الكافيين والكحول والغسول والملابس الصناعية وحمامات الرغوة.</li><li>مضاعفة: ارتباك وتحول سريع لتسمم دموي بولي (Urosepsis). مضادات: سلفوناميدات وليفوفلوكساسين حسب الطبيب.</li></ul>[[slot:dis-3039-uti|الالتهاب البولي — رسم من إعداد الموقع|/diseases/img/dis-3039-uti.svg]]<!--aud0651-ai--><h4>إضافة (مراجعة الأطفال والحويضة)</h4><p>الالتهاب البولي يشمل الإحليل والمثانة (Cystitis)، وقد يصعد للحالبين فالكلى. علامات المثانة: حمى، حرقان بالتبول، تكرار. تحليل البول: عكر ذو رائحة، كريات بيضاء، نيتريت (يدل على إصابة كلوية)، ومزرعة وحساسية (أكثر من 10,000 كائن/مل). التهاب الحويضة: ألم خاصرة مبهم يمتد باتجاه السرة. الأسباب: احتباس البول (تضخم بروستات، حبس البول طويلًا، حصوات) والقسطرة، والجرثومة الأشهر E. coli. أول إجراء: خذ مزرعتي الدم والبول <strong>ثم</strong> ابدأ المضاد الحيوي. المضاعفة: ارتباك والتحول السريع لتعفن دموي بولي (Urosepsis). الدواء: سلفوناميدات أو ليفوفلوكساسين مع مسكن للألم (الجرعات للتعلّم وتراجع مع الطبيب/الصيدلي). الوقاية: ماء نحو 2000 مل/يوم، تبول بعد الجماع، التوت البري، وتجنب الكافيين والكحول، والمسح من الأمام للخلف، ولا دوش ولا مزيل روائح ولا نايلون ولا حمام فقاعات.</p>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess</strong><p>Symptoms, temperature, flank pain, urine color and odor, urinary frequency, and the number of incontinence episodes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Take the culture before the antibiotic</strong><p>A sterile midstream sample, and write the collection time. Report if the patient is currently on an antibiotic.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Give the antibiotic on time</strong><p>Respect the times (exactly every 12 hours). IV ceftriaxone: slowly per pharmacy, and ask about penicillin allergy. Ciprofloxacin: keep it two hours away from dairy, magnesium, and iron.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Hydrate</strong><p>Encourage 2 liters daily unless there is a restriction (heart/kidney failure), and record I/O.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Monitor</strong><p>Temperature every 4 hours, pulse and blood pressure (signs of sepsis: low blood pressure, tachycardia, confusion), urine output.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Clean and prevent infection</strong><p>Hygiene front to back, and catheter care (closed system, bag below bladder level), and remove the catheter as soon as possible.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Educate</strong><p>Complete the full course even if symptoms disappear.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>If high fever + rigors + flank pain</strong><p>This is an upper infection: notify the physician immediately. Prepare the cultures (urine and blood) before the IV antibiotic and watch for signs of sepsis (Sepsis).</p></div><div class=\"cs-box cs-tip\"><strong>Extra points from the clinic</strong><ul><li>Ask the elderly about disorientation or fever: it may be UTI without burning.</li><li>Ciprofloxacin one hour before food or two hours after food, away from dairy, iron, and magnesium.</li><li>Give the first antibiotic after the culture, then review the result.</li></ul></div><h4>Nursing additions</h4><ul><li>Record intake and output; encourage drinking fluids (but do not overdo it with heart/kidney failure)</li><li>Monitor temperature and vital signs</li><li>Encourage regular urination and not holding urine</li><li><b>Cranberry juice (Cranberry):</b> it used to be advised to acidify urine, but current evidence supports a modest benefit in <b>preventing</b> recurrence only and not treatment; it does not replace the antibiotic</li><li>Teach the patient that Phenazopyridine turns the urine orange and stains clothes and contact lenses</li><li>With a catheter: reduce days of use, closed system, secure the bag below the bladder, hand washing</li></ul><h4>Additions covering review points</h4><ul><li>Increase fluids to about 2000 mL of water daily</li><li>Urinate after intercourse</li><li>Cranberry supplements (Cranberry)</li><li>Avoid caffeine and alcohol</li><li>No vaginal douching, no spermicides, no deodorants for the area, no nylon and spandex clothing, and no bubble baths</li><li>Wipe front to back</li></ul>\n<h4>Causes and education (review)</h4><ul><li><strong>Causes:</strong> urinary retention (BPH, holding urine, stones), Foley catheter, E. coli (wiping back to front).</li><li>An elderly person suddenly confused: check for a urinary tract infection — it may become urosepsis.</li><li><strong>Education:</strong> 2000 mL water daily, urinate after intercourse, cranberry, avoid caffeine and alcohol.</li><li><strong>Prohibited:</strong> vaginal douche, spermicide, deodorant for the area, nylon/spandex, bubble baths; wipe front to back.</li></ul><p>A memory aid for confusion: \"Do not forget to look for infection at any new muddle.\"</p><h4>Children/exam points</h4><ul><li>First action: blood and urine cultures then start the antibiotic; more than 10000 organisms/mL on culture.</li><li>Causes: urinary retention, catheter, E. coli; wipe front to back.</li><li>Education: fluids 2000 mL, urinate after intercourse, cranberry, avoid caffeine, alcohol, douches, synthetic clothing, and bubble baths.</li><li>Complication: confusion and rapid progression to urosepsis (Urosepsis). Drugs: sulfonamides and levofloxacin per the physician.</li></ul>[[slot:dis-3039-uti|Urinary tract infection — illustration prepared by the site|/diseases/img/dis-3039-uti.svg]]<!--aud0651-ai--><h4>Addition (pediatric and pyelonephritis review)</h4><p>Urinary infection involves the urethra and bladder (Cystitis), and may ascend to the ureters and then the kidneys. Bladder signs: fever, burning on urination, frequency. Urinalysis: cloudy with odor, white cells, nitrite (indicates kidney involvement), and culture and sensitivity (more than 10,000 organisms/mL). Pyelonephritis: vague flank pain that extends toward the navel. Causes: urinary retention (prostate enlargement, holding urine for long periods, stones) and catheterization, and the best-known germ is E. coli. First action: take both blood and urine cultures <strong>then</strong> start the antibiotic. Complication: confusion and rapid progression to urosepsis (Urosepsis). Drug: sulfonamides or levofloxacin with a pain reliever (doses are for learning; always verify with the physician/pharmacist). Prevention: water about 2000 mL/day, urination after intercourse, cranberry, and avoiding caffeine and alcohol, wiping front to back, and no douches, deodorants, nylon, or bubble baths.</p>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>حرارة 38.5 أو أكتر مع رعشة وألم خاصرة</li><li>قيء وعدم القدرة على الشرب</li><li>انقطاع البول أو بول قليل جداً</li><li>ضغط منخفض أو تخليط أو سرعة نبض</li><li>دم واضح في البول</li><li>التهاب في حامل أو طفل صغير أو مريض سكر أو قسطرة</li></ul></div><h4>إضافات تغطي نقاط المراجعة</h4><p>الارتباك عند المسن مع UTI قد يعني Urosepsis (عدوى في الدم تصيب المخ).</p>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately if:</strong><ul><li>Temperature of 38.5 or more with rigors and flank pain</li><li>Vomiting and inability to drink</li><li>Cessation of urine or very little urine</li><li>Low blood pressure, confusion, or rapid pulse</li><li>Visible blood in the urine</li><li>Infection in a pregnant woman, a young child, a diabetic patient, or a catheterized patient</li></ul></div><h4>Additions covering review points</h4><p>Confusion in an elderly person with UTI may mean urosepsis (a blood infection that affects the brain).</p>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرب لتر ونص إلى 2 لتر مياه يومياً.</li><li>متحبسش البول، وافرغ المثانة بعد العلاقة الزوجية.</li><li>نظّف المنطقة من الأمام للخلف.</li><li>كمّل المضاد الحيوي للآخر.</li><li>أي حرقان يرجع بسرعة أو بول فيه دم: ارجع للطبيب ومتاخدش مضاد من عندك.</li><li>ممكن يغير لون البول بعض الأدوية فاسأل.</li></ul>\n<h4>قائمة «ممنوع» لوقاية التهاب المسالك البولية (مراجعة)</h4><ul>\n<li>لا غسول مهبلي (Douching).</li><li>لا موانع حمل قاتلة للحيوانات المنوية (Spermicidal).</li><li>لا مزيلات روائح للمنطقة الحميمة.</li><li>لا ملابس داخلية من ألياف صناعية مثل النايلون أو الإسباندكس (فضّل القطن).</li><li>لا حمامات رغوة (Bubble bath).</li><li>امسح دائمًا من الأمام إلى الخلف، وتبوّل بعد الجماع، واشرب نحو 2000 mL ماء يوميًا، وقلّل الكافيين والكحول.</li></ul>",
+   "en": "<ul><li>Drink a liter and a half to 2 liters of water daily.</li><li>Do not hold your urine, and empty the bladder after marital relations.</li><li>Clean the area from front to back.</li><li>Finish the antibiotic to the end.</li><li>Any burning that returns quickly or urine with blood: go back to the physician and do not take an antibiotic on your own.</li><li>Some drugs can change urine color, so ask.</li></ul>\n<h4>The \"do not\" list for preventing urinary tract infection (review)</h4><ul>\n<li>No vaginal douching (Douching).</li><li>No spermicidal contraceptives (Spermicidal).</li><li>No deodorants for the intimate area.</li><li>No underwear made of synthetic fibers such as nylon or spandex (prefer cotton).</li><li>No bubble baths (Bubble bath).</li><li>Always wipe from front to back, urinate after intercourse, drink about 2000 mL of water daily, and reduce caffeine and alcohol.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "مزرعة البول قبل المضاد أو بعد 48 ساعة منه",
+   "العلوي = حرارة عالية وألم خاصرة وقيء ورعشة",
+   "صديد أكتر من 5/ساحة في تحليل البول، ومزرعة لو أكتر من 20 أو تكرار",
+   "اشرب حوالي 2 لتر سوائل يومياً",
+   "التهاب متكرر/ممتد يحتاج وظائف كلى",
+   "لا تمنح الدواء بدون مراجعة الحساسية والكلى",
+   "علوي = ألم خاصرة + حرارة عالية → تحويل",
+   "كبار السن: سخونية أو توهان بدون حرقان قد تكون UTI",
+   "المزرعة غالباً لو الصديد أكتر من 50، ومضاد تجريبي لحد النتيجة",
+   "العدوى المستشفوية ترتبط بالقسطرة والمناظير؛ نظام مغلق ونزع القسطرة مبكراً",
+   "Phenazopyridine: بول برتقالي ويومين فقط",
+   "التوت البري للوقاية وليس العلاج",
+   "الارتباك مع UTI = احتمال تسمم دم",
+   "2000 mL سوائل والتبول بعد الجماع",
+   "المسح من الأمام للخلف"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>التهاب المسالك البولية (UTI) هو عدوى بكتيرية في أي جزء من الجهاز البولي: المثانة والإحليل (سفلي)، أو الحالب والكلى (علوي). أشهر شكوى عند النساء، ولكنه في الرجال والأطفال والمسنين ومرضى القسطرة بيحتاج انتباه أكبر.</p>[[slot:dis-061-lower-upper|الفرق بين التهاب المسالك السفلي والعلوي — رسم توضيحي من إعداد الموقع|/diseases/img/dis-061-lower-upper.svg]]<div class=\"cs-box cs-info\"><strong>ليه التفرقة مهمة؟</strong><p>السفلي بيتعالج غالباً بالفم وفي البيت، لكن العلوي (حرارة + ألم خاصرة + قيء) ممكن يحتاج مضاد وريدي وتنويم.</p></div><h4>التقسيم حسب المرجع</h4><ul><li><b>التهاب علوي (Upper UTI):</b> التهاب الحالب (Ureteritis) والحويضة (Pyelitis) والكلى (Pyelonephritis): ألم في الخاصرة (Loin pain) + حرارة عالية. لو شكيت في الحالة: حوّلها لعيادة مسالك.</li><li><b>التهاب سفلي (Lower UTI):</b> التهاب المثانة (Cystitis) والإحليل (Urethritis): غالباً بسيطة ويمكن التعامل معها.</li></ul><h4>معلومات مكمّلة: العدوى المكتسبة من المجتمع والمستشفى</h4><p>أغلب العدوى «مكتسبة من المجتمع» وغير معقدة: بكتيريا سالبة الجرام (غالباً E. coli) موجودة على جلد منطقة الأعضاء التناسلية وتدخل من فتحة الإحليل، أو تنتقل أثناء الجماع. أما <b>العدوى المستشفوية (Nosocomial)</b> فترتبط بوجود <b>قسطرة بولية</b> (تفتح طريقاً للبكتيريا إلى المثانة) أو بالتدخلات مثل منظار المثانة؛ الأجهزة ذات الألياف الضوئية والعدسات لا تتحمل التعقيم بالحرارة العالية فتُعامل بمطهر عالي المستوى، وإن لم تُعالج صح قد تنقل عدوى بين المرضى. العدوى غير المعالجة قد تصعد للكلى أو تتحول لتسمم دم خصوصاً عند المسنين وضعاف المناعة.</p>[[slot:dis-061-addons|خطوات التعامل مع الشك بالتهاب المسالك — رسم من إعداد الموقع|/diseases/img/dis-061-addons.svg]]<h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-061-vs|UTI مقابل التهاب الحويضة — رسم من إعداد الموقع|/diseases/img/dis-061-vs.svg]]\n<h4>مراجعة NCLEX: UTI والتهاب الحويضة</h4><p>التهاب المسالك يشمل الإحليل والمثانة (التهاب المثانة Cystitis)، أما التهاب الحويضة فهو عدوى كلوية أخطر تحدث حين تصعد العدوى عبر الحالبين.</p>[[slot:dis-061-p413|التهاب المسالك البولية مقابل التهاب الحويضة — رسم من إعداد الموقع|/diseases/img/dis-061-p413.svg]]"
-    },
-    "causes": {
-      "ar": "<p>أغلب الحالات من بكتيريا القولون (E. coli) اللي بتطلع من الأمعاء لمدخل المجرى البولي. عوامل بتساعد على العدوى:</p><ul><li>قلة شرب المياه وحبس البول</li><li>ضعف النظافة الشخصية</li><li>وجود حصوات أو انسداد (ركود البول)</li><li>قسطرة بولية</li><li>السكر والمناعة الضعيفة والحمل</li><li>التكرار بتاع العدوى لازم يدور الطبيب على سبب</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>تذكر أن المضاد الحيوي بيتغير حسب المزرعة ومقاومة البكتيريا المحلية.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>الأعراض</h4><table><thead><tr><th>التهاب سفلي (Lower UTI)</th><th>التهاب علوي (Upper UTI)</th></tr></thead><tbody><tr><td>أعراض موضعية غالباً</td><td>أعراض عامة غالباً</td></tr><tr><td>لا حرارة أو خفيفة</td><td>حرارة عالية</td></tr><tr><td>ألم فوق العانة (Supra-pubic)</td><td>ألم في الخاصرة (Loin pain)</td></tr><tr><td>حرقان وعسر في التبول (Dysuria)</td><td>قيء</td></tr><tr><td>سلس بول (Incontinence)</td><td>رعشة وقشعريرة (Rigor)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>انتبه</strong><p>عند كبار السن والأطفال ممكن يظهر الالتهاب كـ تخليط ذهني أو خمول أو حرارة فقط بدون حرقان. افحص البول عند أي تغير مفاجئ.</p></div><h4>أشهر 3 شكاوى (التهاب سفلي)</h4><ul><li>حرقان في البول (Dysuria)</li><li>مغص في البطن أو الجنبين (Abdominal / loin pain)</li><li>أعراض التهاب المثانة (Cystitis): كثرة دخول الحمام (Frequency)، عدم القدرة على التحكم أحياناً (Urgency)، شكة أو نغزة فوق العانة (Suprapubic pain)</li></ul><h4>في كبار السن</h4><p>الالتهاب بيعمل حاجتين مهمتين: <b>سخونية غير معروفة السبب</b> و<b>توهان وتخاريف مفاجئة (Confusion, delirium)</b>.</p><h4>إضافات تمريضية</h4><ul><li>تكرار الإلحاح بسبب تهيج عضلة المثانة</li><li>ثقل أو إحساس بامتلاء فوق العانة</li><li>ألم أسفل الظهر</li><li>تشخيصات تمريضية: خطر اضطراب التبول، وخطر سلس البول الإلحاحي (Urge incontinence)</li></ul>\n<p>حمى، حرقة عند التبول (dysuria)، تكرار. تحليل البول: عكر ونتن، كريات بيضاء، نيتريت. عدّ الجراثيم يُحدَّد بالمختبر (يُذكر في المراجعة أكثر من 10,000 جرثومة/مل). عند المسن: التشوش المفاجئ قد يكون العلامة الوحيدة.</p>"
-    },
-    "tests": {
-      "ar": "<h4>الفحوصات</h4><ul><li><b>تحليل بول:</b> صديد (Pus cells) أكتر من 5 في الساحة. وقد تزيد كرات الدم الحمراء بسبب احتقان</li><li><b>صورة دم كاملة CBC:</b> زيادة كرات الدم البيضاء (Leucocytosis)</li><li><b>مزرعة بول:</b> مطلوبة لو الصديد أكتر من 20 في الساحة وفي الالتهاب المتكرر</li><li><b>وظائف الكلى:</b> في الالتهاب الطويل أو المتكرر</li></ul><div class=\"cs-box cs-tip\"><strong>قاعدة عينة المزرعة</strong><p>لازم تتاخد <b>قبل</b> بدء المضاد الحيوي، أو بعد 48 ساعة من توقفه. عينة وسط التبول بعد غسل المنطقة.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المعيار المعتمد حالياً للعدوى: أعراض + صديد في التحليل، ومزرعة ≥ 10 أس 3–5 CFU/مل حسب الحالة. المزرعة بتفيد خصوصاً في التهاب الكلى والتكرار والرجال والحمل.</p></div><ul><li><b>تحليل بول:</b> تشخيص UTI لو لقيت Pus cells أكتر من 5.</li><li><b>مزرعة بول (Urine culture):</b> غالباً نلجأ لها لو الصديد أكتر من 50 لتحديد نوع المضاد المناسب. ممكن أخذ العينة للمزرعة ثم البدء في مضاد حيوي تجريبي (Empirical) لحد ظهور النتيجة.</li></ul><h4>تحليل البول والمزرعة</h4><ul><li>تحليل بول: كرات بيضاء، <b>نيتريت</b>، كرات حمراء</li><li>المزرعة والحساسية تحدد الميكروب والمضاد المناسب (ويجب أخذ العينة قبل أول جرعة)</li><li><b>عينة منتصف التيار (Midstream clean catch):</b> نظافة فتحة الإحليل، بدء التبول، ثم وضع العبوة المعقمة في منتصف التيار بدون إيقافه، وسحبها عند امتلاء أكثر من النصف، وإكمال التبول، وغلق العبوة بإحكام وإرسالها فوراً</li><li>انظر دليل الفحوصات <a href=\"/diseases/dis-766\">الفحوصات التشخيصية — الكلى والمسالك</a></li></ul><h4>إضافات تغطي نقاط المراجعة</h4><p>تحليل البول: عكر ذو رائحة، WBC، نيتريت (عدوى كلوية)، مزرعة وحساسية (أكثر من 10,000 جرثومة/مل في المرجع التعليمي؛ راجع حد مكانك). <strong>الأولوية: التقييم أولًا ثم التدخل.</strong></p>\n<p><strong>المزرعة والحساسية أولًا ثم المضاد.</strong> عيّنة منتصف البول التي بقيت ساعتين في الحمام: تُرمى ويؤخذ غيرها فورًا.</p>\n<p>أسئلة مراجعة: بول عكر = وجود بكتيريا. حرقة وتكرار تبول: الفحص المتوقع هو مزرعة البول. 72 سنة مشوشة فجأة: افحص التهاب المسالك.</p>"
-    },
-    "treatment": {
-      "ar": "<h4>أولاً: علاج غير دوائي</h4><ul><li>شرب سوائل كتير (حوالي 2 لتر يومياً)</li><li>التبول فوراً عند الإحساس بالرغبة وعدم الحبس</li><li>النظافة الشخصية الجيدة بتقلل العدوى</li></ul><h4>ثانياً: الأدوية المذكورة (بأمر الطبيب)</h4><table><thead><tr><th>الدواء</th><th>الجرعة والمدة</th></tr></thead><tbody><tr><td>Ciprfar (سيبروفلوكساسين) 500 مجم</td><td>مرتين يومياً (كل 12 ساعة) لمدة 10–14 يوم</td></tr><tr><td>Healthibact 400 مجم أقراص</td><td>مرتين يومياً لمدة 10–14 يوم</td></tr><tr><td>Ceftriaxone 1 جم فيال</td><td>مرة يومياً لمدة 5–10 أيام</td></tr><tr><td>Rowatinex كبسولات</td><td>كبسولة كل 8 ساعات (مطهّر للبول)</td></tr><tr><td>Cystone أقراص</td><td>قرص كل 12 ساعة (يعمل على إذابة الحصوات ومنع تكوينها)</td></tr></tbody></table><p>الأدوية التلاتة الأولى (سيبروفلوكساسين، هيلثيباكت، سيفترياكسون) هي الأشهر في علاج التهاب المجرى البولي، ومش بتتاخد كلها مرة واحدة، الطبيب بيختار واحد منها.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الحديثة (IDSA/EAU) لا تضع الفلوروكينولونات (مثل سيبروفلوكساسين) كخط أول لالتهاب المثانة غير المعقد بسبب المقاومة وآثارها الجانبية؛ المفضل: نيتروفورانتوين 5 أيام، أو فوسفوميسين جرعة واحدة، أو تراي ميثوبريم/سلفا حسب مقاومة المنطقة، ومدة 3–7 أيام للمثانة غير المعقدة (و7 أيام للعلوي بالفلوروكينولون أو 10–14 ببقية الأدوية). نيتروفورانتوين لا يصلح للكلى ولا للرجال. المدد المذكورة (10–14 يوم) أنسب للعدوى المعقدة/العلوية. اتبع بروتوكول المستشفى ونتيجة المزرعة. المادة الفعالة لـ Healthibact لم أتمكن من التأكد منها: اقرأ العلبة.</p></div><h4>علاج حسب الروشتات الشائعة (نموذج العيادة)</h4><ul><li>شرب كمية مناسبة من الماء يومياً (6–8 أكواب)</li><li>التبول باستمرار وعدم حبس البول لفترات طويلة</li></ul><h5>مطهرات ومسكنات المسالك البولية ومرخيات العضلات</h5><table><thead><tr><th>الدواء</th><th>الاستعمال</th></tr></thead><tbody><tr><td>Proximol eff / Coli-urinal eff</td><td>كيس على نصف كوب ماء 3 مرات يومياً</td></tr><tr><td>Proximol tab, Rowatinex caps, Urinex caps, Sham caps</td><td>قرص أو كبسولة 3 مرات يومياً</td></tr></tbody></table><h5>المضادات الحيوية بحسب الصديد في التحليل (حسب المرجع)</h5>[[slot:dis-061-pus-ladder|اختيار المضاد حسب نتيجة التحليل — رسم توضيحي من إعداد الموقع|/diseases/img/dis-061-pus-ladder.svg]]<table><thead><tr><th>الصديد (Pus cells)</th><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td>5–30</td><td>Uvamine retard caps (nitrofurantoin)</td><td>كبسولة كل 12 ساعة لمدة أسبوع</td></tr><tr><td>30–50</td><td>Ciprofloxacin: Ciprofar 500 tab أو Cipro 500 tab</td><td>قرص كل 12 ساعة، قبل الأكل بساعة أو بعد الأكل بساعتين، لمدة أسبوع</td></tr><tr><td>30–50</td><td>Sulfa + Trimethoprim: Septazol forte tab أو Septrin tab</td><td>قرص كل 12 ساعة لمدة أسبوع</td></tr><tr><td>30–50</td><td>Levofloxacin: Tavacin 750 tab أو Levoflox 500 tab</td><td>قرص واحد يومياً، قبل الأكل بساعة أو بعد الأكل بساعتين، لمدة 5 أيام</td></tr><tr><td>أكتر من 50</td><td>يفضّل أخذ عينة بول وعمل مزرعة</td><td>ثم البدء بمضاد تجريبي (Empirical) ويفضّل Ciprofloxacin</td></tr></tbody></table><h5>روشتة: UTI بصديد متوسط</h5><ul><li>Rowatinex caps: كبسولة 3 مرات يومياً</li><li>Ciprofar 500 tab: قرص كل 12 ساعة قبل الأكل بساعة أو بعد الأكل بساعتين لمدة أسبوع</li><li>مع كتابة التعليمات على ظهر الروشتة</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الصديد لوحده لا يحدد المضاد أو المدة؛ الاختيار بحسب الأعراض والمزرعة ومقاومة المنطقة وحالة المريض. Nitrofurantoin لا يصلح للإنتان الكلوي ولا لنقص وظائف الكلى الشديد ويحذر في G6PD وآخر الحمل. Septrin/Septazol تجنّب في الحمل المبكر وحساسية السلفا ومع ارتفاع البوتاسيوم. الفلوروكينولونات (Cipro/Levofloxacin) لها تحذيرات FDA (أوتار، أعصاب، تقلبات سكر) وتُحفظ لحالات يختارها الطبيب. لم أجد تأكيد Tavacin 750 في السوق؛ التقرير يتبع المرجع، فاقرأ العلبة.</p></div><p>جرعة Levofloxacin 750 مجم يومياً لمدة 5 أيام لها دعم في الإرشادات للعدوى المعقدة، وجرعة 500 مجم تُستعمل لمدة أطول حسب البروتوكول.</p><h4>قائمة المضادات المذكورة في المرجع التمريضي</h4><ul><li>Nitrofurantoin، Ciprofloxacin، Levofloxacin، Ofloxacin، Trimethoprim-Sulfamethoxazole، Ampicillin، Amoxicillin — الاختيار حسب المزرعة وحساسية المنطقة والحالة (الحمل، الكلى، السن)</li><li><b>Phenazopyridine</b> لتسكين الحرقان: يلوّن البول <b>برتقالي</b>؛ يُعطى يومين فقط؛ يُمنع في القصور الكلوي الشديد ونقص إنزيم G6PD</li><li>الفوائد: سوائل لتخفيف تركيز البول</li><li>إعادة اختبار البول بعد انتهاء المضاد الحيوي</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>بالنسبة لـ Ampicillin/Amoxicillin: مقاومة E. coli لهما عالية، فلا تُستخدم تجريبياً إلا بعد معرفة الحساسية. الكينولونات يُحتفظ بها للحالات المعقدة بسبب أعراضها الجانبية.</p></div>\n<p>مضادات حيوية مثل sulfonamides وlevofloxacin مع مسكنات للألم (يُفضّل تجنب NSAIDs عند اشتباه ضعف الكلى، بأمر الطبيب).</p>[[slot:dis-061-p414|أسباب وتثقيف التهاب المسالك — رسم من إعداد الموقع|/diseases/img/dis-061-p414.svg]]"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p>الأعراض، الحرارة، ألم الخاصرة، لون ورائحة البول، تكرار التبول، وعدد مرات السلس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>خد المزرعة قبل المضاد</strong><p>عينة وسط التبول معقمة، واكتب وقت الجمع. بلّغ إن المريض على مضاد حالياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أعطِ المضاد في ميعاده</strong><p>احترم المواعيد (كل 12 ساعة بالضبط). Ceftriaxone وريدي: ببطء حسب الصيدلية، واسأل عن حساسية البنسلين. سيبروفلوكساسين: ابعده عن الألبان والمغنيسيوم والحديد بساعتين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>رطّب</strong><p>شجّع على 2 لتر يومياً ما لم يوجد منع (قصور قلب/كلى)، وسجّل I/O.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب</strong><p>الحرارة كل 4 ساعات، النبض والضغط (علامات تسمم دموي: ضغط منخفض، تسرع، تخليط)، كمية البول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>نظّف وامنع العدوى</strong><p>النظافة من الأمام للخلف، وعناية القسطرة (نظام مغلق، كيس تحت مستوى المثانة)، وشيل القسطرة بأسرع وقت.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف</strong><p>إكمال المدة كاملة حتى لو الأعراض اختفت.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>لو حرارة عالية + رعشة + ألم خاصرة</strong><p>ده التهاب علوي: بلّغ الطبيب فوراً. جهّز المزرعة (بول ودم) قبل المضاد الوريدي وراقب علامات الإنتان (Sepsis).</p></div><div class=\"cs-box cs-tip\"><strong>نقاط إضافية من العيادة</strong><ul><li>اسأل كبار السن عن التوهان أو السخونية: ممكن تكون UTI بدون حرقان.</li><li>السيبروفلوكساسين قبل الأكل بساعة أو بعد الأكل بساعتين، بعيداً عن الألبان والحديد والمغنيسيوم.</li><li>أعطِ مضاد المزرعة الأول ثم راجع النتيجة.</li></ul></div><h4>إضافات تمريضية</h4><ul><li>سجّل المدخول والمخرج؛ شجّع شرب السوائل (لكن لا تفرط لو عندك قصور قلب/كلى)</li><li>راقب الحرارة والعلامات الحيوية</li><li>شجّع التبول المنتظم وعدم حبس البول</li><li><b>عصير التوت البري (Cranberry):</b> كان يُنصح به لتحميض البول، لكن الدليل الحالي يدعم فائدة متواضعة في <b>الوقاية</b> من التكرار فقط وليس العلاج؛ لا يغني عن المضاد الحيوي</li><li>علّم المريض أن Phenazopyridine يلوّن البول برتقالي ويلوّن الملابس والعدسات اللاصقة</li><li>في القسطرة: تقليل أيام الاستخدام، نظام مغلق، تثبيت الكيس أسفل المثانة، غسل اليدين</li></ul><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>زيادة السوائل نحو 2000 mL ماء يوميًا</li><li>التبول بعد الجماع</li><li>مكملات التوت البري (Cranberry)</li><li>تجنب الكافيين والكحول</li><li>لا دش مهبلي ولا مبيدات منويات ولا مزيلات عرق للمنطقة ولا ملابس نايلون وسبانديكس ولا حمام فقاعات</li><li>المسح من الأمام للخلف</li></ul>\n<h4>الأسباب والتثقيف (مراجعة)</h4><ul><li><strong>الأسباب:</strong> احتباس البول (BPH، حبس البول، حصوات)، قسطرة فولي، E. coli (المسح من الخلف للأمام).</li><li>مسن مشوش فجأة: افحص التهاب المسالك — قد يصير إنتانًا بوليًا.</li><li><strong>التثقيف:</strong> 2000 مل ماء يوميًا، التبول بعد الجماع، التوت البري، تجنب الكافيين والكحول.</li><li><strong>ممنوعات:</strong> الغسول المهبلي، مبيد الحيوانات المنوية، مزيل روائح المنطقة، النايلون/السباندكس، حمامات الفقاعات؛ المسح من الأمام للخلف.</li></ul><p>وسيلة حفظ للتشوش: «لا تنسَ التفتيش عن التهاب عند أي لخبطة جديدة».</p><h4>الأطفال/نقاط اختبار</h4><ul><li>أول إجراء: زراعة دم وبول ثم بدء المضاد الحيوي؛ أكثر من 10000 كائن/مل بالزراعة.</li><li>أسباب: احتباس البول، قسطرة، E. coli؛ المسح من الأمام للخلف.</li><li>تثقيف: سوائل 2000 مل، التبول بعد الجماع، التوت البري، تجنب الكافيين والكحول والغسول والملابس الصناعية وحمامات الرغوة.</li><li>مضاعفة: ارتباك وتحول سريع لتسمم دموي بولي (Urosepsis). مضادات: سلفوناميدات وليفوفلوكساسين حسب الطبيب.</li></ul>[[slot:dis-3039-uti|الالتهاب البولي — رسم من إعداد الموقع|/diseases/img/dis-3039-uti.svg]]<!--aud0651-ai--><h4>إضافة (مراجعة الأطفال والحويضة)</h4><p>الالتهاب البولي يشمل الإحليل والمثانة (Cystitis)، وقد يصعد للحالبين فالكلى. علامات المثانة: حمى، حرقان بالتبول، تكرار. تحليل البول: عكر ذو رائحة، كريات بيضاء، نيتريت (يدل على إصابة كلوية)، ومزرعة وحساسية (أكثر من 10,000 كائن/مل). التهاب الحويضة: ألم خاصرة مبهم يمتد باتجاه السرة. الأسباب: احتباس البول (تضخم بروستات، حبس البول طويلًا، حصوات) والقسطرة، والجرثومة الأشهر E. coli. أول إجراء: خذ مزرعتي الدم والبول <strong>ثم</strong> ابدأ المضاد الحيوي. المضاعفة: ارتباك والتحول السريع لتعفن دموي بولي (Urosepsis). الدواء: سلفوناميدات أو ليفوفلوكساسين مع مسكن للألم (الجرعات للتعلّم وتراجع مع الطبيب/الصيدلي). الوقاية: ماء نحو 2000 مل/يوم، تبول بعد الجماع، التوت البري، وتجنب الكافيين والكحول، والمسح من الأمام للخلف، ولا دوش ولا مزيل روائح ولا نايلون ولا حمام فقاعات.</p>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>حرارة 38.5 أو أكتر مع رعشة وألم خاصرة</li><li>قيء وعدم القدرة على الشرب</li><li>انقطاع البول أو بول قليل جداً</li><li>ضغط منخفض أو تخليط أو سرعة نبض</li><li>دم واضح في البول</li><li>التهاب في حامل أو طفل صغير أو مريض سكر أو قسطرة</li></ul></div><h4>إضافات تغطي نقاط المراجعة</h4><p>الارتباك عند المسن مع UTI قد يعني Urosepsis (عدوى في الدم تصيب المخ).</p>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرب لتر ونص إلى 2 لتر مياه يومياً.</li><li>متحبسش البول، وافرغ المثانة بعد العلاقة الزوجية.</li><li>نظّف المنطقة من الأمام للخلف.</li><li>كمّل المضاد الحيوي للآخر.</li><li>أي حرقان يرجع بسرعة أو بول فيه دم: ارجع للطبيب ومتاخدش مضاد من عندك.</li><li>ممكن يغير لون البول بعض الأدوية فاسأل.</li></ul>\n<h4>قائمة «ممنوع» لوقاية التهاب المسالك البولية (مراجعة)</h4><ul>\n<li>لا غسول مهبلي (Douching).</li><li>لا موانع حمل قاتلة للحيوانات المنوية (Spermicidal).</li><li>لا مزيلات روائح للمنطقة الحميمة.</li><li>لا ملابس داخلية من ألياف صناعية مثل النايلون أو الإسباندكس (فضّل القطن).</li><li>لا حمامات رغوة (Bubble bath).</li><li>امسح دائمًا من الأمام إلى الخلف، وتبوّل بعد الجماع، واشرب نحو 2000 mL ماء يوميًا، وقلّل الكافيين والكحول.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "مزرعة البول قبل المضاد أو بعد 48 ساعة منه",
-      "العلوي = حرارة عالية وألم خاصرة وقيء ورعشة",
-      "صديد أكتر من 5/ساحة في تحليل البول، ومزرعة لو أكتر من 20 أو تكرار",
-      "اشرب حوالي 2 لتر سوائل يومياً",
-      "التهاب متكرر/ممتد يحتاج وظائف كلى",
-      "لا تمنح الدواء بدون مراجعة الحساسية والكلى",
-      "علوي = ألم خاصرة + حرارة عالية → تحويل",
-      "كبار السن: سخونية أو توهان بدون حرقان قد تكون UTI",
-      "المزرعة غالباً لو الصديد أكتر من 50، ومضاد تجريبي لحد النتيجة",
-      "العدوى المستشفوية ترتبط بالقسطرة والمناظير؛ نظام مغلق ونزع القسطرة مبكراً",
-      "Phenazopyridine: بول برتقالي ويومين فقط",
-      "التوت البري للوقاية وليس العلاج",
-      "الارتباك مع UTI = احتمال تسمم دم",
-      "2000 mL سوائل والتبول بعد الجماع",
-      "المسح من الأمام للخلف"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أنسب وقت لأخذ عينة مزرعة البول؟"
-      },
-      "options": [
-        {
-          "ar": "بعد أسبوع من المضاد"
-        },
-        {
-          "ar": "قبل المضاد أو بعد 48 ساعة من إيقافه"
-        },
-        {
-          "ar": "لا يهم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "المضاد يعطي مزرعة سلبية كاذبة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تدل على التهاب علوي؟"
-      },
-      "options": [
-        {
-          "ar": "حرقان فقط"
-        },
-        {
-          "ar": "حرارة عالية وألم خاصرة وقيء"
-        },
-        {
-          "ar": "تكرار تبول"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الأعراض العامة تدل على إصابة الكلى."
-      }
-    },
-    {
-      "q": {
-        "ar": "كمية السوائل الموصى بها يومياً في التهاب المسالك؟"
-      },
-      "options": [
-        {
-          "ar": "نصف لتر"
-        },
-        {
-          "ar": "حوالي 2 لتر"
-        },
-        {
-          "ar": "5 لتر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "السوائل بتغسل المجرى بشرط عدم وجود منع."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض مكتوب له Ciprfar. أي تعليمات تعطيها؟"
-      },
-      "options": [
-        {
-          "ar": "مع اللبن مباشرة"
-        },
-        {
-          "ar": "مرتين كل 12 ساعة ومتباعد عن اللبن والحديد"
-        },
-        {
-          "ar": "مرة واحدة فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "اللبن والحديد يقللان الامتصاص."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تتوقعها بعد إعطاء Phenazopyridine؟"
-      },
-      "options": [
-        {
-          "ar": "بول أخضر"
-        },
-        {
-          "ar": "بول برتقالي"
-        },
-        {
-          "ar": "براز أسود"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تأثير غير ضار لكنه يلوّن البول."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول إجراء لالتهاب الحويضة:"
-      },
-      "options": [
-        {
-          "ar": "مزرعة دم وبول ثم المضاد الحيوي"
-        },
-        {
-          "ar": "مضاد أولًا"
-        },
-        {
-          "ar": "لا شيء"
-        },
-        {
-          "ar": "جراحة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نأخذ العينات قبل المضاد."
-      }
-    },
-    {
-      "q": {
-        "ar": "وقاية: "
-      },
-      "options": [
-        {
-          "ar": "المسح من الأمام للخلف"
-        },
-        {
-          "ar": "دش مهبلي"
-        },
-        {
-          "ar": "حمام فقاعات"
-        },
-        {
-          "ar": "ملابس ضيقة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يقلل نقل البكتيريا."
-      }
-    },
-    {
-      "q": {
-        "ar": "مسنة (72 سنة) أصبحت مشوشة فجأة. أول إجراء؟"
-      },
-      "options": [
-        {
-          "ar": "تقييم علامات التهاب المسالك البولية"
-        },
-        {
-          "ar": "إعطاء مهدئ"
-        },
-        {
-          "ar": "تقييد حركتها"
-        },
-        {
-          "ar": "انتظار يومين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التشوش المفاجئ عند المسن علامة شائعة لالتهاب المسالك."
-      }
-    },
-    {
-      "q": {
-        "ar": "عيّنة منتصف البول بقيت ساعتين في الحمام. ماذا تفعل الممرضة؟"
-      },
-      "options": [
-        {
-          "ar": "ترميها وتأخذ عيّنة جديدة"
-        },
-        {
-          "ar": "ترسلها للمختبر"
-        },
-        {
-          "ar": "تبردها وتحتفظ بها"
-        },
-        {
-          "ar": "تضيف مضادًا حيويًا"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "بقاء العيّنة يسمح بتكاثر الجراثيم فتفقد قيمتها."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تعليمات تقلل التهاب المسالك؟"
-      },
-      "options": [
-        {
-          "ar": "شرب 2 لتر ماء يوميًا والتبول بعد الجماع"
-        },
-        {
-          "ar": "حمامات الفقاعات"
-        },
-        {
-          "ar": "لبس النايلون"
-        },
-        {
-          "ar": "حبس البول"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السوائل والتبول بعد الجماع يغسلان الجراثيم."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض يشكو حرقة وتكرار تبول. أي فحص تتوقع الممرضة طلبه؟"
-      },
-      "options": [
-        {
-          "ar": "مزرعة بول"
-        },
-        {
-          "ar": "أشعة صدر"
-        },
-        {
-          "ar": "تخطيط قلب"
-        },
-        {
-          "ar": "سكر صائم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "المزرعة تحدد البكتيريا وحساسيتها للمضاد."
-      }
-    },
-    {
-      "q": {
-        "ar": "بول عكر يدل غالبًا على؟"
-      },
-      "options": [
-        {
-          "ar": "وجود بكتيريا بالبول"
-        },
-        {
-          "ar": "فرط السكر"
-        },
-        {
-          "ar": "جفاف فقط"
-        },
-        {
-          "ar": "نقص البوتاسيوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "العكارة قد تدل على قيح وبكتيريا."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول إجراء لالتهاب الحويضة:"
-      },
-      "options": [
-        {
-          "ar": "زراعة الدم والبول ثم المضاد"
-        },
-        {
-          "ar": "مسكن فقط"
-        },
-        {
-          "ar": "سوائل مقيدة"
-        },
-        {
-          "ar": "جراحة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الزراعة قبل المضاد."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "IDSA/ESCMID Guideline: Uncomplicated Cystitis and Pyelonephritis"
-    },
-    {
-      "title": "EAU Guidelines on Urological Infections"
-    },
-    {
-      "title": "StatPearls: Urinary Tract Infection"
-    },
-    {
-      "title": "UpToDate-style overview: Acute simple cystitis in women"
-    },
-    {
-      "title": "StatPearls: Phenazopyridine"
-    },
-    {
-      "title": "Cochrane: Cranberries for preventing UTIs"
-    }
-  ],
-  "title": {
-    "ar": "التهاب المسالك البولية",
-    "en": "Urinary Tract Infection (UTI)"
-  },
-  "num": 61,
-  "rx": [
-    {
-      "category": "الكلى والمسالك البولية",
-      "condition_ar": "التهاب المسالك البولية السفلي",
-      "condition_en": "Lower UTI",
-      "items": [
-        {
-          "drug_name": "Proximol eff / Coli-urinal eff",
-          "dose": "كيس في نصف كوب 3 مرات يومياً",
-          "note": "مطهر"
-        },
-        {
-          "drug_name": "Proximol tab / Rowatinex / Urinex / Sham caps",
-          "dose": "قرص أو كبسولة 3 مرات يومياً",
-          "note": ""
-        },
-        {
-          "drug_name": "Uvamine retard caps",
-          "dose": "كبسولة كل 12 ساعة أسبوع",
-          "note": "صديد 5–30"
-        },
-        {
-          "drug_name": "Ciprofar 500 / Cipro 500",
-          "dose": "قرص كل 12 ساعة أسبوع، قبل الأكل بساعة أو بعده بساعتين",
-          "note": "صديد 30–50"
-        },
-        {
-          "drug_name": "Septazol forte / Septrin",
-          "dose": "قرص كل 12 ساعة أسبوع",
-          "note": "صديد 30–50"
-        },
-        {
-          "drug_name": "Tavacin 750 / Levoflox 500",
-          "dose": "قرص يومياً 5 أيام",
-          "note": "صديد 30–50"
-        }
-      ],
-      "clinical_note": "أكتر من 50: مزرعة ثم Ciprofloxacin تجريبي"
-    }
+  "en": [
+   "Urine culture before the antibiotic or 48 hours after it",
+   "Upper = high fever, flank pain, vomiting, and rigors",
+   "Pus more than 5/field in urinalysis, and a culture if more than 20 or recurrence",
+   "Drink about 2 liters of fluids daily",
+   "Recurrent/prolonged infection needs kidney function tests",
+   "Do not give the drug without reviewing sensitivity and the kidneys",
+   "Upper = flank pain + high fever → referral",
+   "Elderly: fever or disorientation without burning may be UTI",
+   "Culture usually if pus is more than 50, and an empiric antibiotic until the result",
+   "Hospital-acquired infection is linked to catheters and scopes; closed system and early catheter removal",
+   "Phenazopyridine: orange urine and two days only",
+   "Cranberry for prevention, not treatment",
+   "Confusion with UTI = possible sepsis",
+   "2000 mL fluids and urinating after intercourse",
+   "Wipe front to back"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أنسب وقت لأخذ عينة مزرعة البول؟",
+    "en": "The most suitable time to take a urine culture sample?"
+   },
+   "options": [
+    {
+     "ar": "بعد أسبوع من المضاد",
+     "en": "A week after the antibiotic"
+    },
+    {
+     "ar": "قبل المضاد أو بعد 48 ساعة من إيقافه",
+     "en": "Before the antibiotic or 48 hours after stopping it"
+    },
+    {
+     "ar": "لا يهم",
+     "en": "It does not matter"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "المضاد يعطي مزرعة سلبية كاذبة.",
+    "en": "The antibiotic gives a false-negative culture."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تدل على التهاب علوي؟",
+    "en": "Which sign indicates an upper infection?"
+   },
+   "options": [
+    {
+     "ar": "حرقان فقط",
+     "en": "Burning only"
+    },
+    {
+     "ar": "حرارة عالية وألم خاصرة وقيء",
+     "en": "High fever, flank pain, and vomiting"
+    },
+    {
+     "ar": "تكرار تبول",
+     "en": "Frequent urination"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الأعراض العامة تدل على إصابة الكلى.",
+    "en": "General symptoms indicate kidney involvement."
+   }
+  },
+  {
+   "q": {
+    "ar": "كمية السوائل الموصى بها يومياً في التهاب المسالك؟",
+    "en": "The recommended daily amount of fluids in a urinary tract infection?"
+   },
+   "options": [
+    {
+     "ar": "نصف لتر",
+     "en": "Half a liter"
+    },
+    {
+     "ar": "حوالي 2 لتر",
+     "en": "About 2 liters"
+    },
+    {
+     "ar": "5 لتر",
+     "en": "5 liters"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "السوائل بتغسل المجرى بشرط عدم وجود منع.",
+    "en": "Fluids flush the tract provided there is no restriction."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض مكتوب له Ciprfar. أي تعليمات تعطيها؟",
+    "en": "A patient is prescribed Ciprfar. Which instructions do you give?"
+   },
+   "options": [
+    {
+     "ar": "مع اللبن مباشرة",
+     "en": "Directly with milk"
+    },
+    {
+     "ar": "مرتين كل 12 ساعة ومتباعد عن اللبن والحديد",
+     "en": "Twice every 12 hours and spaced from milk and iron"
+    },
+    {
+     "ar": "مرة واحدة فقط",
+     "en": "Only once"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "اللبن والحديد يقللان الامتصاص.",
+    "en": "Milk and iron reduce absorption."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تتوقعها بعد إعطاء Phenazopyridine؟",
+    "en": "Which sign do you expect after giving Phenazopyridine?"
+   },
+   "options": [
+    {
+     "ar": "بول أخضر",
+     "en": "Green urine"
+    },
+    {
+     "ar": "بول برتقالي",
+     "en": "Orange urine"
+    },
+    {
+     "ar": "براز أسود",
+     "en": "Black stool"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تأثير غير ضار لكنه يلوّن البول.",
+    "en": "A harmless effect but it colors the urine."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول إجراء لالتهاب الحويضة:",
+    "en": "The first action for pyelonephritis:"
+   },
+   "options": [
+    {
+     "ar": "مزرعة دم وبول ثم المضاد الحيوي",
+     "en": "Blood and urine cultures then the antibiotic"
+    },
+    {
+     "ar": "مضاد أولًا",
+     "en": "Antibiotic first"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    },
+    {
+     "ar": "جراحة",
+     "en": "Surgery"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نأخذ العينات قبل المضاد.",
+    "en": "We take samples before the antibiotic."
+   }
+  },
+  {
+   "q": {
+    "ar": "وقاية: ",
+    "en": "Prevention:"
+   },
+   "options": [
+    {
+     "ar": "المسح من الأمام للخلف",
+     "en": "Wiping front to back"
+    },
+    {
+     "ar": "دش مهبلي",
+     "en": "Vaginal douche"
+    },
+    {
+     "ar": "حمام فقاعات",
+     "en": "Bubble bath"
+    },
+    {
+     "ar": "ملابس ضيقة",
+     "en": "Tight clothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يقلل نقل البكتيريا.",
+    "en": "It reduces the transfer of bacteria."
+   }
+  },
+  {
+   "q": {
+    "ar": "مسنة (72 سنة) أصبحت مشوشة فجأة. أول إجراء؟",
+    "en": "An elderly woman (72 years) suddenly became confused. The first action?"
+   },
+   "options": [
+    {
+     "ar": "تقييم علامات التهاب المسالك البولية",
+     "en": "Assess for signs of a urinary tract infection"
+    },
+    {
+     "ar": "إعطاء مهدئ",
+     "en": "Give a sedative"
+    },
+    {
+     "ar": "تقييد حركتها",
+     "en": "Restrict her movement"
+    },
+    {
+     "ar": "انتظار يومين",
+     "en": "Wait two days"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التشوش المفاجئ عند المسن علامة شائعة لالتهاب المسالك.",
+    "en": "Sudden confusion in the elderly is a common sign of urinary tract infection."
+   }
+  },
+  {
+   "q": {
+    "ar": "عيّنة منتصف البول بقيت ساعتين في الحمام. ماذا تفعل الممرضة؟",
+    "en": "A midstream sample stayed two hours in the bathroom. What does the nurse do?"
+   },
+   "options": [
+    {
+     "ar": "ترميها وتأخذ عيّنة جديدة",
+     "en": "Discards it and takes a new sample"
+    },
+    {
+     "ar": "ترسلها للمختبر",
+     "en": "Sends it to the lab"
+    },
+    {
+     "ar": "تبردها وتحتفظ بها",
+     "en": "Refrigerates and keeps it"
+    },
+    {
+     "ar": "تضيف مضادًا حيويًا",
+     "en": "Adds an antibiotic"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "بقاء العيّنة يسمح بتكاثر الجراثيم فتفقد قيمتها.",
+    "en": "Leaving the sample allows bacteria to multiply, so it loses its value."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تعليمات تقلل التهاب المسالك؟",
+    "en": "Which instructions reduce urinary tract infection?"
+   },
+   "options": [
+    {
+     "ar": "شرب 2 لتر ماء يوميًا والتبول بعد الجماع",
+     "en": "Drinking 2 liters of water daily and urinating after intercourse"
+    },
+    {
+     "ar": "حمامات الفقاعات",
+     "en": "Bubble baths"
+    },
+    {
+     "ar": "لبس النايلون",
+     "en": "Wearing nylon"
+    },
+    {
+     "ar": "حبس البول",
+     "en": "Holding urine"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السوائل والتبول بعد الجماع يغسلان الجراثيم.",
+    "en": "Fluids and urinating after intercourse flush out bacteria."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض يشكو حرقة وتكرار تبول. أي فحص تتوقع الممرضة طلبه؟",
+    "en": "A patient complains of burning and frequent urination. Which test does the nurse expect to be ordered?"
+   },
+   "options": [
+    {
+     "ar": "مزرعة بول",
+     "en": "Urine culture"
+    },
+    {
+     "ar": "أشعة صدر",
+     "en": "Chest X-ray"
+    },
+    {
+     "ar": "تخطيط قلب",
+     "en": "ECG"
+    },
+    {
+     "ar": "سكر صائم",
+     "en": "Fasting glucose"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "المزرعة تحدد البكتيريا وحساسيتها للمضاد.",
+    "en": "The culture identifies the bacteria and their antibiotic sensitivity."
+   }
+  },
+  {
+   "q": {
+    "ar": "بول عكر يدل غالبًا على؟",
+    "en": "Cloudy urine most often indicates?"
+   },
+   "options": [
+    {
+     "ar": "وجود بكتيريا بالبول",
+     "en": "Bacteria in the urine"
+    },
+    {
+     "ar": "فرط السكر",
+     "en": "Hyperglycemia"
+    },
+    {
+     "ar": "جفاف فقط",
+     "en": "Dehydration only"
+    },
+    {
+     "ar": "نقص البوتاسيوم",
+     "en": "Hypokalemia"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "العكارة قد تدل على قيح وبكتيريا.",
+    "en": "Cloudiness may indicate pus and bacteria."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول إجراء لالتهاب الحويضة:",
+    "en": "The first action for pyelonephritis:"
+   },
+   "options": [
+    {
+     "ar": "زراعة الدم والبول ثم المضاد",
+     "en": "Blood and urine cultures then the antibiotic"
+    },
+    {
+     "ar": "مسكن فقط",
+     "en": "Only a pain reliever"
+    },
+    {
+     "ar": "سوائل مقيدة",
+     "en": "Restricted fluids"
+    },
+    {
+     "ar": "جراحة",
+     "en": "Surgery"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الزراعة قبل المضاد.",
+    "en": "Culture before the antibiotic."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "IDSA/ESCMID Guideline: Uncomplicated Cystitis and Pyelonephritis"
+  },
+  {
+   "title": "EAU Guidelines on Urological Infections"
+  },
+  {
+   "title": "StatPearls: Urinary Tract Infection"
+  },
+  {
+   "title": "UpToDate-style overview: Acute simple cystitis in women"
+  },
+  {
+   "title": "StatPearls: Phenazopyridine"
+  },
+  {
+   "title": "Cochrane: Cranberries for preventing UTIs"
+  }
+ ],
+ "title": {
+  "ar": "التهاب المسالك البولية",
+  "en": "Urinary Tract Infection (UTI)"
+ },
+ "num": 61,
+ "rx": [
+  {
+   "category": "الكلى والمسالك البولية",
+   "condition_ar": "التهاب المسالك البولية السفلي",
+   "condition_en": "Lower UTI",
+   "items": [
+    {
+     "drug_name": "Proximol eff / Coli-urinal eff",
+     "dose": "كيس في نصف كوب 3 مرات يومياً",
+     "note": "مطهر"
+    },
+    {
+     "drug_name": "Proximol tab / Rowatinex / Urinex / Sham caps",
+     "dose": "قرص أو كبسولة 3 مرات يومياً",
+     "note": ""
+    },
+    {
+     "drug_name": "Uvamine retard caps",
+     "dose": "كبسولة كل 12 ساعة أسبوع",
+     "note": "صديد 5–30"
+    },
+    {
+     "drug_name": "Ciprofar 500 / Cipro 500",
+     "dose": "قرص كل 12 ساعة أسبوع، قبل الأكل بساعة أو بعده بساعتين",
+     "note": "صديد 30–50"
+    },
+    {
+     "drug_name": "Septazol forte / Septrin",
+     "dose": "قرص كل 12 ساعة أسبوع",
+     "note": "صديد 30–50"
+    },
+    {
+     "drug_name": "Tavacin 750 / Levoflox 500",
+     "dose": "قرص يومياً 5 أيام",
+     "note": "صديد 30–50"
+    }
+   ],
+   "clinical_note": "أكتر من 50: مزرعة ثم Ciprofloxacin تجريبي"
+  }
+ ]
 }

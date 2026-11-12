@@ -1,274 +1,348 @@
 {
-  "id": "dis-652",
-  "num": 652,
-  "system": "chest",
-  "icon": "🩸",
-  "level": 3,
-  "title": {
-    "ar": "الانسداد الرئوي (الجلطة الرئوية / PE)",
-    "en": "Pulmonary Embolism (PE)"
+ "id": "dis-652",
+ "num": 652,
+ "system": "chest",
+ "icon": "🩸",
+ "level": 3,
+ "title": {
+  "ar": "الانسداد الرئوي (الجلطة الرئوية / PE)",
+  "en": "Pulmonary Embolism (PE)"
+ },
+ "teaser": {
+  "ar": "جلطة من الساق تسافر للرئة: العلامات المفاجئة، D-dimer وCT وV/Q، الهيبارين وCoagulants الحديثة، والوقاية بالحركة والجوارب الضاغطة.",
+  "en": "A clot from the leg travels to the lung: the sudden signs, D-dimer, CT and V/Q, heparin and modern anticoagulants, and prevention with movement and compression stockings."
+ },
+ "chips": [
+  {
+   "ar": "ضيق نفس مفاجئ",
+   "en": "Sudden shortness of breath"
   },
-  "teaser": {
-    "ar": "جلطة من الساق تسافر للرئة: العلامات المفاجئة، D-dimer وCT وV/Q، الهيبارين وCoagulants الحديثة، والوقاية بالحركة والجوارب الضاغطة."
+  {
+   "ar": "Heparin",
+   "en": "Heparin"
   },
-  "chips": [
-    {
-      "ar": "ضيق نفس مفاجئ"
-    },
-    {
-      "ar": "Heparin"
-    },
-    {
-      "ar": "DVT"
-    }
+  {
+   "ar": "DVT",
+   "en": "DVT"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>الانسداد الرئوي (PE) هو <b>انسداد شريان رئوي بجلطة دموية</b> (أو هواء أو دهن) تعطّل تبادل الغازات. معظم الجلطات تتكون في <b>أوردة الساقين (DVT)</b>، وتنفصل (تصبح Embolus) وتسير في الدم عبر القلب الأيمن لتستقر في الرئة. المنطقة اللي بعد الانسداد تفقد تروية الدم فتنهار حويصلاتها (Atelectasis) وربما احتشاء رئوي.</p><div class=\"cs-stats\"><div><b>DVT</b><span>المصدر الغالب</span></div><div><b>>100</b><span>نبض</span></div><div><b>> 20</b><span>تنفس</span></div><div><b>مفاجئ</b><span>بداية الأعراض</span></div></div>[[slot:dis-652-path|مسار الجلطة من الساق للرئة|/diseases/img/dis-652-path.svg]]\n<p>الانسداد الصغير يتحسن. الانسداد الكبير في الشريان الرئوي الرئيسي <b>قد يكون قاتلاً</b>. بعض المرضى يحتاجون مضادات تجلط طويلة المدى عند تكرار الجلطات أو اضطراب تخثر.</p><div class=\"cs-box cs-info\"><strong>ثلاثية فيرشو (Virchow)</strong><p>ركود الدم (قلة حركة) + تلف جدار الوعاء + فرط تجلط الدم = الجلطة.</p></div><h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-652-pe|ملخص PE — رسم من إعداد الموقع|/diseases/img/dis-652-pe.svg]]\n<h4>مراجعة NCLEX</h4><p>انسداد وعاء رئوي بجلطة، عادة من DVT بالساق تنفلت. أعلى أولوية: ضعف تبادل الغازات الناتج عن عدم توافق التهوية والإرواء.</p>[[slot:dis-652-p443|الجلطة الرئوية — رسم من إعداد الموقع|/diseases/img/dis-652-p443.svg]]",
+   "en": "<p>Pulmonary embolism (PE) is <b>blockage of a pulmonary artery by a blood clot</b> (or air or fat) that disrupts gas exchange. Most clots form in the <b>leg veins (DVT)</b>, break off (becoming an Embolus) and travel in the blood through the right heart to lodge in the lung. The area beyond the blockage loses its blood supply so its alveoli collapse (Atelectasis) and possibly a pulmonary infarction occurs.</p><div class=\"cs-stats\"><div><b>DVT</b><span>The main source</span></div><div><b>>100</b><span>Pulse</span></div><div><b>> 20</b><span>Respirations</span></div><div><b>Sudden</b><span>Onset of symptoms</span></div></div>[[slot:dis-652-path|The path of the clot from the leg to the lung|/diseases/img/dis-652-path.svg]]\n<p>A small embolism improves. A large embolism in the main pulmonary artery <b>may be fatal</b>. Some patients need long-term anticoagulants when clots recur or there is a clotting disorder.</p><div class=\"cs-box cs-info\"><strong>Virchow's triad (Virchow)</strong><p>Blood stasis (little movement) + vessel wall damage + hypercoagulability = the clot.</p></div><h4>Additions covering the review points</h4>[[slot:dis-652-pe|PE summary — illustration prepared by the site|/diseases/img/dis-652-pe.svg]]\n<h4>NCLEX review</h4><p>Blockage of a pulmonary vessel by a clot, usually from a DVT in the leg that breaks loose. The highest priority: impaired gas exchange resulting from ventilation-perfusion mismatch.</p>[[slot:dis-652-p443|Pulmonary embolism — illustration prepared by the site|/diseases/img/dis-652-p443.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li>قلة الحركة: جراحة كبرى (خصوصاً عظام وبطن)، رقود طويل، سفر طويل.</li><li>كسور الحوض والفخذ، إصابات.</li><li>السرطان.</li><li>الحمل والنفاس.</li><li><b>حبوب منع الحمل والعلاج الهرموني</b> (تزيد خطر الجلطة)، التدخين.</li><li>سمنة، كبر سن، فشل قلب.</li><li>اضطرابات تخثر وراثية (Factor V Leiden…).</li><li>قسطرة مركزية، دهن (كسر عظام طويلة)، هواء (حقن وريدي خاطئ).</li></ul>\n<p>التدخين، السمنة، عدم الحركة، رجفان أذيني، اضطراب صمامات القلب. <strong>موانع الحمل الفموية (استروجين)</strong> الأكثر اختبارًا.</p>",
+   "en": "<ul><li>Immobility: major surgery (especially orthopedic and abdominal), prolonged bed rest, long travel.</li><li>Pelvic and femur fractures, trauma.</li><li>Cancer.</li><li>Pregnancy and the postpartum period.</li><li><b>Birth control pills and hormone therapy</b> (increase the risk of clots), smoking.</li><li>Obesity, old age, heart failure.</li><li>Inherited clotting disorders (Factor V Leiden…).</li><li>Central catheter, fat (long bone fracture), air (wrong IV injection).</li></ul>\n<p>Smoking, obesity, immobility, atrial fibrillation, heart valve disorder. <strong>Oral contraceptives (estrogen)</strong> are the most tested.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li><b>ضيق نفس مفاجئ</b> عند استقرار الجلطة.</li><li>نبض أكتر من 100.</li><li>تنفس أكتر من 20.</li><li>ألم صدر جنبي أو انضغاطي (الاحتشاء/الانخماص).</li><li>سعال ببلغم مدمّى (نفث دم).</li><li>طقطقة قرب المنطقة.</li><li>علامات DVT: ألم وتورم ساق واحدة وحرارة واحمرار.</li><li>الحالة الشديدة: إغماء، هبوط ضغط، زرقة، احتقان عنق (فشل القلب الأيمن).</li></ul>\n<p>أول علامة: نقص الأكسجة (قلق، تهيّج، تغير الحالة العقلية)؛ ألم صدر، ضيق نفس، تسارع تنفس وقلب، قلق.</p>",
+   "en": "<ul><li><b>Sudden shortness of breath</b> when the clot lodges.</li><li>Pulse more than 100.</li><li>Respirations more than 20.</li><li>Pleuritic or pressure-type chest pain (infarction/atelectasis).</li><li>Cough with bloody sputum (hemoptysis).</li><li>Crackles near the area.</li><li>DVT signs: pain and swelling of one leg with warmth and redness.</li><li>Severe case: fainting, hypotension, cyanosis, neck vein distention (right heart failure).</li></ul>\n<p>The first sign: hypoxia (anxiety, restlessness, change in mental status); chest pain, shortness of breath, fast breathing and heart rate, anxiety.</p>"
+  },
+  "tests": {
+   "ar": "<table><thead><tr><th>الفحص</th><th>الفائدة</th></tr></thead><tbody><tr><td><b>D-dimer</b></td><td>إيجابي عند وجود تحلّل جلطة؛ يُستعمل لاستبعاد PE عند احتمال منخفض. ليس نوعياً (جراحة/حمل/سرطان ترفعه)</td></tr><tr><td><b>CT شرايين رئوية (CTPA / Helical CT)</b></td><td>الفحص الأول: يظهر الجلطة</td></tr><tr><td>مسح التهوية والتروية (V/Q)</td><td>عدم توافق؛ بديل في الحمل أو الكلى</td></tr><tr><td>تصوير الشريان الرئوي (Angiography)</td><td>يظهر الجلطة؛ نادر حالياً</td></tr><tr><td>أشعة صدر</td><td>شريان رئوي متوسع أو انصباب جنبي (غير نوعي)</td></tr><tr><td>ABG</td><td>انخفاض PaO₂ وPaCO₂ حسب الحجم</td></tr><tr><td>سونار أوردة الساقين</td><td>يظهر DVT</td></tr><tr><td>ECG/Troponin/Echo</td><td>إجهاد قلب أيمن (S1Q3T3)؛ تقييم الخطورة</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>احتمال PE</strong><p>تُستعمل درجات Wells وGeneva لتقدير الاحتمال قبل اختيار D-dimer أو CT.</p></div>[[slot:dis-652-ct|CTPA: ملء نقص في الشريان الرئوي]]\n<p>D-dimer مرتفع يدل على خطر جلطة (الطبيعي 68–494 ng/dL).</p>",
+   "en": "<table><thead><tr><th>Test</th><th>Benefit</th></tr></thead><tbody><tr><td><b>D-dimer</b></td><td>Positive when a clot is breaking down; used to rule out PE when the probability is low. Not specific (surgery/pregnancy/cancer raise it)</td></tr><tr><td><b>CT pulmonary angiography (CTPA / Helical CT)</b></td><td>The first test: shows the clot</td></tr><tr><td>Ventilation-perfusion scan (V/Q)</td><td>Mismatch; an alternative in pregnancy or kidney disease</td></tr><tr><td>Pulmonary angiography (Angiography)</td><td>Shows the clot; rare now</td></tr><tr><td>Chest X-ray</td><td>Dilated pulmonary artery or pleural effusion (nonspecific)</td></tr><tr><td>ABG</td><td>Decreased PaO₂ and PaCO₂ depending on the size</td></tr><tr><td>Leg vein ultrasound</td><td>Shows DVT</td></tr><tr><td>ECG/Troponin/Echo</td><td>Right heart strain (S1Q3T3); risk assessment</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Probability of PE</strong><p>The Wells and Geneva scores are used to estimate the probability before choosing D-dimer or CT.</p></div>[[slot:dis-652-ct|CTPA: a filling defect in the pulmonary artery]]\n<p>An elevated D-dimer indicates a risk of clot (normal 68–494 ng/dL).</p>"
+  },
+  "treatment": {
+   "ar": "<p>الهدف: الأكسجة، منع نمو الجلطة أو تحركها، ومنع جلطات جديدة.</p><table><thead><tr><th>الإجراء/الدواء</th><th>التفاصيل</th></tr></thead><tbody><tr><td>أكسجين</td><td>حسب التشبع</td></tr><tr><td><b>Heparin</b> (غير مجزأ أو LMWH مثل Enoxaparin/Clexane)</td><td>يبدأ فور الاشتباه القوي؛ وزن، aPTT/anti-Xa، صفائح</td></tr><tr><td><b>Warfarin</b> (Marevan)</td><td>INR 2–3؛ تداخل غذائي ودوائي</td></tr><tr><td>مضادات حديثة (Rivaroxaban/Apixaban)</td><td>بديل شائع بالفم</td></tr><tr><td><b>مذيبات الجلطة</b> (Alteplase, Urokinase)</td><td>في الانسداد الكبير مع عدم الاستقرار</td></tr><tr><td>Morphine</td><td>لتسكين الألم وتقليل استهلاك الأكسجين</td></tr><tr><td><b>فلتر الوريد الأجوف (IVC filter)</b></td><td>لمن لا يتحمل مضادات التجلط</td></tr><tr><td>راحة تامة</td><td>لتجنب انفصال جلطات</td></tr><tr><td>استخراج جراحي أو قسطري للجلطة</td><td>في الحالات الخطيرة</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p><b>الراحة التامة في السرير</b> لم تعد مطلوبة دائماً للمستقر بعد البدء بالتمييع؛ يُسمح بالحركة تدريجياً حسب أمر الطبيب. الحالات الشديدة فقط تحتاج مراقبة مكثفة.</p></div>\n<ul><li>مضادات تخثر: heparin وwarfarin.</li><li>حالّات الخثرة: tPA وalteplase وstreptokinase.</li><li>جراحيًا: استئصال الصمة وفلتر الوريد الأجوف السفلي.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<p>The goal: oxygenation, preventing clot growth or movement, and preventing new clots.</p><table><thead><tr><th>Measure/drug</th><th>Details</th></tr></thead><tbody><tr><td>Oxygen</td><td>According to saturation</td></tr><tr><td><b>Heparin</b> (unfractionated or LMWH such as Enoxaparin/Clexane)</td><td>Starts as soon as there is strong suspicion; weight, aPTT/anti-Xa, platelets</td></tr><tr><td><b>Warfarin</b> (Marevan)</td><td>INR 2–3; food and drug interactions</td></tr><tr><td>Modern anticoagulants (Rivaroxaban/Apixaban)</td><td>A common oral alternative</td></tr><tr><td><b>Clot dissolvers</b> (Alteplase, Urokinase)</td><td>In a large embolism with instability</td></tr><tr><td>Morphine</td><td>To relieve pain and reduce oxygen consumption</td></tr><tr><td><b>Vena cava filter (IVC filter)</b></td><td>For those who cannot tolerate anticoagulants</td></tr><tr><td>Complete rest</td><td>To avoid dislodging clots</td></tr><tr><td>Surgical or catheter removal of the clot</td><td>In serious cases</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p><b>Complete bed rest</b> is no longer always required for a stable patient after starting anticoagulation; gradual movement is allowed per physician order. Only severe cases need intensive monitoring.</p></div>\n<ul><li>Anticoagulants: heparin and warfarin.</li><li>Thrombolytics: tPA, alteplase and streptokinase.</li><li>Surgically: embolectomy and an inferior vena cava filter.</li></ul><div class=\"cs-box cs-info\"><strong>Dose note</strong><p>Doses are for learning; always verify with the physician/pharmacist.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الدورة والتنفس</strong><p>النبض، الإيقاع، أصوات القلب، الضغط، الجهد التنفسي، لون الجلد؛ SpO₂ مستمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>وضعية</strong><p>High Fowler؛ راحة؛ تجنب تدليك الساق المصابة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الهيبارين</strong><p>تحقق من الوزن والجرعة بفاحصَين، aPTT كل 6 ساعات، وعدد الصفائح (HIT)، مراقبة نزيف (لثة، بول، براز، جروح). توفر Protamine.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>وارفارين</strong><p>INR المنتظم، تثقيف الغذاء الغني بفيتامين K، تفاعلات الأدوية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>ABG وSpO₂</strong><p>تابع نقص الأكسجة وتحسّنه.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وقاية</strong><p>جوارب ضاغطة، حركة مبكرة، تمارين الساق، أجهزة ضغط متقطع، LMWH وقائي حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تنفس</strong><p>تقلب وسعال وتنفس عميق.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>اضطراب تبادل الغازات • ضعف التروية النسيجية • قلق.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess circulation and breathing</strong><p>Pulse, rhythm, heart sounds, blood pressure, respiratory effort, skin color; continuous SpO₂.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Position</strong><p>High Fowler; rest; avoid massaging the affected leg.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Heparin</strong><p>Verify the weight and dose with two checkers, aPTT every 6 hours, and the platelet count (HIT), monitor for bleeding (gums, urine, stool, wounds). Have Protamine available.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Warfarin</strong><p>Regular INR, teaching about food rich in vitamin K, drug interactions.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>ABG and SpO₂</strong><p>Follow the hypoxia and its improvement.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Prevention</strong><p>Compression stockings, early movement, leg exercises, intermittent compression devices, preventive LMWH as ordered.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Breathing</strong><p>Turning, coughing and deep breathing.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Nursing diagnoses</strong><p>Impaired gas exchange • Impaired tissue perfusion • Anxiety.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>إغماء أو هبوط ضغط (PE ضخم).</li><li>ألم صدر مفاجئ + نفث دم.</li><li>نزيف أثناء مضادات التجلط (براز أسود، دم بالبول، صداع شديد).</li><li>تورم ساق جديد أو ألم.</li><li>هبوط SpO₂ مفاجئ.</li></ul>",
+   "en": "<ul><li>Fainting or hypotension (massive PE).</li><li>Sudden chest pain + hemoptysis.</li><li>Bleeding during anticoagulants (black stool, blood in the urine, severe headache).</li><li>New leg swelling or pain.</li><li>Sudden drop in SpO₂.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>تجنب الجلوس أو الوقوف الطويل؛ قم بالمشي وحرك القدمين كل ساعة في السفر.</li><li>لا تضع ساقاً على ساق (يقلل انضغاط الأوعية).</li><li>علامات نزيف أو كدمات من المميعات؛ لا تأخذ أسبرين أو مسكنات NSAID بدون استشارة.</li><li><b>حبوب منع الحمل الهرمونية تزيد الخطر</b>: يلزم وسيلة أخرى مستقبلاً.</li><li>التزم بمواعيد INR وبالجرعة نفسها.</li></ul>",
+   "en": "<ul><li>Avoid prolonged sitting or standing; walk and move the feet every hour when traveling.</li><li>Do not cross one leg over the other (reduces vessel compression).</li><li>Signs of bleeding or bruising from anticoagulants; do not take aspirin or NSAID analgesics without consultation.</li><li><b>Hormonal birth control pills increase the risk</b>: another method is needed in the future.</li><li>Keep INR appointments and the same dose.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "PE غالباً من DVT بالساق.",
+   "ضيق نفس مفاجئ + نبض وتنفس سريعين + ألم صدر + نفث دم.",
+   "التشخيص: D-dimer (للاستبعاد) ثم CTPA أو V/Q.",
+   "العلاج: Heparin ثم Warfarin/مضادات جديدة؛ مذيبات للحاد الكبير.",
+   "وقاية: حركة وجوارب وLMWH.",
+   "الهرمونات تزيد الخطر؛ غيّر الوسيلة.",
+   "راقب النزيف وaPTT وINR.",
+   "أول علامة: نقص الأكسجة والقلق",
+   "D-dimer مرتفع",
+   "موانع الحمل بالإستروجين من عوامل الخطر"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>الانسداد الرئوي (PE) هو <b>انسداد شريان رئوي بجلطة دموية</b> (أو هواء أو دهن) تعطّل تبادل الغازات. معظم الجلطات تتكون في <b>أوردة الساقين (DVT)</b>، وتنفصل (تصبح Embolus) وتسير في الدم عبر القلب الأيمن لتستقر في الرئة. المنطقة اللي بعد الانسداد تفقد تروية الدم فتنهار حويصلاتها (Atelectasis) وربما احتشاء رئوي.</p><div class=\"cs-stats\"><div><b>DVT</b><span>المصدر الغالب</span></div><div><b>>100</b><span>نبض</span></div><div><b>> 20</b><span>تنفس</span></div><div><b>مفاجئ</b><span>بداية الأعراض</span></div></div>[[slot:dis-652-path|مسار الجلطة من الساق للرئة|/diseases/img/dis-652-path.svg]]\n<p>الانسداد الصغير يتحسن. الانسداد الكبير في الشريان الرئوي الرئيسي <b>قد يكون قاتلاً</b>. بعض المرضى يحتاجون مضادات تجلط طويلة المدى عند تكرار الجلطات أو اضطراب تخثر.</p><div class=\"cs-box cs-info\"><strong>ثلاثية فيرشو (Virchow)</strong><p>ركود الدم (قلة حركة) + تلف جدار الوعاء + فرط تجلط الدم = الجلطة.</p></div><h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-652-pe|ملخص PE — رسم من إعداد الموقع|/diseases/img/dis-652-pe.svg]]\n<h4>مراجعة NCLEX</h4><p>انسداد وعاء رئوي بجلطة، عادة من DVT بالساق تنفلت. أعلى أولوية: ضعف تبادل الغازات الناتج عن عدم توافق التهوية والإرواء.</p>[[slot:dis-652-p443|الجلطة الرئوية — رسم من إعداد الموقع|/diseases/img/dis-652-p443.svg]]"
-    },
-    "causes": {
-      "ar": "<ul><li>قلة الحركة: جراحة كبرى (خصوصاً عظام وبطن)، رقود طويل، سفر طويل.</li><li>كسور الحوض والفخذ، إصابات.</li><li>السرطان.</li><li>الحمل والنفاس.</li><li><b>حبوب منع الحمل والعلاج الهرموني</b> (تزيد خطر الجلطة)، التدخين.</li><li>سمنة، كبر سن، فشل قلب.</li><li>اضطرابات تخثر وراثية (Factor V Leiden…).</li><li>قسطرة مركزية، دهن (كسر عظام طويلة)، هواء (حقن وريدي خاطئ).</li></ul>\n<p>التدخين، السمنة، عدم الحركة، رجفان أذيني، اضطراب صمامات القلب. <strong>موانع الحمل الفموية (استروجين)</strong> الأكثر اختبارًا.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li><b>ضيق نفس مفاجئ</b> عند استقرار الجلطة.</li><li>نبض أكتر من 100.</li><li>تنفس أكتر من 20.</li><li>ألم صدر جنبي أو انضغاطي (الاحتشاء/الانخماص).</li><li>سعال ببلغم مدمّى (نفث دم).</li><li>طقطقة قرب المنطقة.</li><li>علامات DVT: ألم وتورم ساق واحدة وحرارة واحمرار.</li><li>الحالة الشديدة: إغماء، هبوط ضغط، زرقة، احتقان عنق (فشل القلب الأيمن).</li></ul>\n<p>أول علامة: نقص الأكسجة (قلق، تهيّج، تغير الحالة العقلية)؛ ألم صدر، ضيق نفس، تسارع تنفس وقلب، قلق.</p>"
-    },
-    "tests": {
-      "ar": "<table><thead><tr><th>الفحص</th><th>الفائدة</th></tr></thead><tbody><tr><td><b>D-dimer</b></td><td>إيجابي عند وجود تحلّل جلطة؛ يُستعمل لاستبعاد PE عند احتمال منخفض. ليس نوعياً (جراحة/حمل/سرطان ترفعه)</td></tr><tr><td><b>CT شرايين رئوية (CTPA / Helical CT)</b></td><td>الفحص الأول: يظهر الجلطة</td></tr><tr><td>مسح التهوية والتروية (V/Q)</td><td>عدم توافق؛ بديل في الحمل أو الكلى</td></tr><tr><td>تصوير الشريان الرئوي (Angiography)</td><td>يظهر الجلطة؛ نادر حالياً</td></tr><tr><td>أشعة صدر</td><td>شريان رئوي متوسع أو انصباب جنبي (غير نوعي)</td></tr><tr><td>ABG</td><td>انخفاض PaO₂ وPaCO₂ حسب الحجم</td></tr><tr><td>سونار أوردة الساقين</td><td>يظهر DVT</td></tr><tr><td>ECG/Troponin/Echo</td><td>إجهاد قلب أيمن (S1Q3T3)؛ تقييم الخطورة</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>احتمال PE</strong><p>تُستعمل درجات Wells وGeneva لتقدير الاحتمال قبل اختيار D-dimer أو CT.</p></div>[[slot:dis-652-ct|CTPA: ملء نقص في الشريان الرئوي]]\n<p>D-dimer مرتفع يدل على خطر جلطة (الطبيعي 68–494 ng/dL).</p>"
-    },
-    "treatment": {
-      "ar": "<p>الهدف: الأكسجة، منع نمو الجلطة أو تحركها، ومنع جلطات جديدة.</p><table><thead><tr><th>الإجراء/الدواء</th><th>التفاصيل</th></tr></thead><tbody><tr><td>أكسجين</td><td>حسب التشبع</td></tr><tr><td><b>Heparin</b> (غير مجزأ أو LMWH مثل Enoxaparin/Clexane)</td><td>يبدأ فور الاشتباه القوي؛ وزن، aPTT/anti-Xa، صفائح</td></tr><tr><td><b>Warfarin</b> (Marevan)</td><td>INR 2–3؛ تداخل غذائي ودوائي</td></tr><tr><td>مضادات حديثة (Rivaroxaban/Apixaban)</td><td>بديل شائع بالفم</td></tr><tr><td><b>مذيبات الجلطة</b> (Alteplase, Urokinase)</td><td>في الانسداد الكبير مع عدم الاستقرار</td></tr><tr><td>Morphine</td><td>لتسكين الألم وتقليل استهلاك الأكسجين</td></tr><tr><td><b>فلتر الوريد الأجوف (IVC filter)</b></td><td>لمن لا يتحمل مضادات التجلط</td></tr><tr><td>راحة تامة</td><td>لتجنب انفصال جلطات</td></tr><tr><td>استخراج جراحي أو قسطري للجلطة</td><td>في الحالات الخطيرة</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p><b>الراحة التامة في السرير</b> لم تعد مطلوبة دائماً للمستقر بعد البدء بالتمييع؛ يُسمح بالحركة تدريجياً حسب أمر الطبيب. الحالات الشديدة فقط تحتاج مراقبة مكثفة.</p></div>\n<ul><li>مضادات تخثر: heparin وwarfarin.</li><li>حالّات الخثرة: tPA وalteplase وstreptokinase.</li><li>جراحيًا: استئصال الصمة وفلتر الوريد الأجوف السفلي.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الدورة والتنفس</strong><p>النبض، الإيقاع، أصوات القلب، الضغط، الجهد التنفسي، لون الجلد؛ SpO₂ مستمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>وضعية</strong><p>High Fowler؛ راحة؛ تجنب تدليك الساق المصابة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الهيبارين</strong><p>تحقق من الوزن والجرعة بفاحصَين، aPTT كل 6 ساعات، وعدد الصفائح (HIT)، مراقبة نزيف (لثة، بول، براز، جروح). توفر Protamine.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>وارفارين</strong><p>INR المنتظم، تثقيف الغذاء الغني بفيتامين K، تفاعلات الأدوية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>ABG وSpO₂</strong><p>تابع نقص الأكسجة وتحسّنه.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وقاية</strong><p>جوارب ضاغطة، حركة مبكرة، تمارين الساق، أجهزة ضغط متقطع، LMWH وقائي حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تنفس</strong><p>تقلب وسعال وتنفس عميق.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>اضطراب تبادل الغازات • ضعف التروية النسيجية • قلق.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>إغماء أو هبوط ضغط (PE ضخم).</li><li>ألم صدر مفاجئ + نفث دم.</li><li>نزيف أثناء مضادات التجلط (براز أسود، دم بالبول، صداع شديد).</li><li>تورم ساق جديد أو ألم.</li><li>هبوط SpO₂ مفاجئ.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>تجنب الجلوس أو الوقوف الطويل؛ قم بالمشي وحرك القدمين كل ساعة في السفر.</li><li>لا تضع ساقاً على ساق (يقلل انضغاط الأوعية).</li><li>علامات نزيف أو كدمات من المميعات؛ لا تأخذ أسبرين أو مسكنات NSAID بدون استشارة.</li><li><b>حبوب منع الحمل الهرمونية تزيد الخطر</b>: يلزم وسيلة أخرى مستقبلاً.</li><li>التزم بمواعيد INR وبالجرعة نفسها.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "PE غالباً من DVT بالساق.",
-      "ضيق نفس مفاجئ + نبض وتنفس سريعين + ألم صدر + نفث دم.",
-      "التشخيص: D-dimer (للاستبعاد) ثم CTPA أو V/Q.",
-      "العلاج: Heparin ثم Warfarin/مضادات جديدة؛ مذيبات للحاد الكبير.",
-      "وقاية: حركة وجوارب وLMWH.",
-      "الهرمونات تزيد الخطر؛ غيّر الوسيلة.",
-      "راقب النزيف وaPTT وINR.",
-      "أول علامة: نقص الأكسجة والقلق",
-      "D-dimer مرتفع",
-      "موانع الحمل بالإستروجين من عوامل الخطر"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "الفحص الأكثر استعمالاً لتأكيد PE:"
-      },
-      "options": [
-        {
-          "ar": "CTPA"
-        },
-        {
-          "ar": "ECG"
-        },
-        {
-          "ar": "تحليل بول"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يظهر الجلطة مباشرة."
-      }
-    },
-    {
-      "q": {
-        "ar": "من أدوية التمييع:"
-      },
-      "options": [
-        {
-          "ar": "Heparin"
-        },
-        {
-          "ar": "Albuterol"
-        },
-        {
-          "ar": "Furosemide"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يمنع نمو الجلطة."
-      }
-    },
-    {
-      "q": {
-        "ar": "نصيحة السفر الطويل:"
-      },
-      "options": [
-        {
-          "ar": "المشي وتحريك القدمين"
-        },
-        {
-          "ar": "الجلوس بلا حركة"
-        },
-        {
-          "ar": "وضع ساق على ساق"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الركود يسبب الجلطة."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة نزيف خطير:"
-      },
-      "options": [
-        {
-          "ar": "براز أسود"
-        },
-        {
-          "ar": "تحسن"
-        },
-        {
-          "ar": "إعياء بسيط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نزيف هضمي."
-      }
-    },
-    {
-      "q": {
-        "ar": "فحص دم يرتفع في PE:"
-      },
-      "options": [
-        {
-          "ar": "D-dimer"
-        },
-        {
-          "ar": "CK-MB"
-        },
-        {
-          "ar": "الكرياتينين فقط"
-        },
-        {
-          "ar": "الصوديوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يدل على جلطات."
-      }
-    },
-    {
-      "q": {
-        "ar": "فلتر الوريد الأجوف:"
-      },
-      "options": [
-        {
-          "ar": "شبكة تصطاد الجلطات"
-        },
-        {
-          "ar": "مسكن"
-        },
-        {
-          "ar": "مضاد حيوي"
-        },
-        {
-          "ar": "مدر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يمنع وصولها للرئة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نتيجة تدعم الجلطة الرئوية؟"
-      },
-      "options": [
-        {
-          "ar": "D-dimer إيجابي"
-        },
-        {
-          "ar": "D-dimer سلبي"
-        },
-        {
-          "ar": "CK-MB فقط"
-        },
-        {
-          "ar": "البوتاسيوم مرتفع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "D-dimer المرتفع يعني تحلل جلطات في الجسم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علاج جراحي للجلطة الرئوية؟"
-      },
-      "options": [
-        {
-          "ar": "فلتر الوريد الأجوف السفلي"
-        },
-        {
-          "ar": "استئصال المرارة"
-        },
-        {
-          "ar": "فتح القصبة"
-        },
-        {
-          "ar": "قسطرة بولية"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الفلتر يصطاد الجلطات الجديدة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول علامة لنقص الأكسجة بسبب PE؟"
-      },
-      "options": [
-        {
-          "ar": "قلق وتغير الحالة العقلية"
-        },
-        {
-          "ar": "زرقة"
-        },
-        {
-          "ar": "سعال"
-        },
-        {
-          "ar": "حمى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الدماغ حساس لنقص الأكسجين."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ESC Guidelines on Acute Pulmonary Embolism (2019)"
-    },
-    {
-      "title": "ASH/CHEST VTE guidelines"
-    },
-    {
-      "title": "StatPearls: Pulmonary Embolism"
-    }
+  "en": [
+   "PE is usually from a leg DVT.",
+   "Sudden shortness of breath + fast pulse and breathing + chest pain + hemoptysis.",
+   "Diagnosis: D-dimer (to rule out) then CTPA or V/Q.",
+   "Treatment: Heparin then Warfarin/new anticoagulants; thrombolytics for large acute cases.",
+   "Prevention: movement, stockings and LMWH.",
+   "Hormones increase the risk; change the method.",
+   "Monitor bleeding, aPTT and INR.",
+   "The first sign: hypoxia and anxiety",
+   "Elevated D-dimer",
+   "Estrogen contraceptives are among the risk factors"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "الفحص الأكثر استعمالاً لتأكيد PE:",
+    "en": "The most used test to confirm PE:"
+   },
+   "options": [
+    {
+     "ar": "CTPA",
+     "en": "CTPA"
+    },
+    {
+     "ar": "ECG",
+     "en": "ECG"
+    },
+    {
+     "ar": "تحليل بول",
+     "en": "Urinalysis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يظهر الجلطة مباشرة.",
+    "en": "It shows the clot directly."
+   }
+  },
+  {
+   "q": {
+    "ar": "من أدوية التمييع:",
+    "en": "One of the anticoagulant drugs:"
+   },
+   "options": [
+    {
+     "ar": "Heparin",
+     "en": "Heparin"
+    },
+    {
+     "ar": "Albuterol",
+     "en": "Albuterol"
+    },
+    {
+     "ar": "Furosemide",
+     "en": "Furosemide"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يمنع نمو الجلطة.",
+    "en": "It prevents clot growth."
+   }
+  },
+  {
+   "q": {
+    "ar": "نصيحة السفر الطويل:",
+    "en": "Advice for long travel:"
+   },
+   "options": [
+    {
+     "ar": "المشي وتحريك القدمين",
+     "en": "Walking and moving the feet"
+    },
+    {
+     "ar": "الجلوس بلا حركة",
+     "en": "Sitting without movement"
+    },
+    {
+     "ar": "وضع ساق على ساق",
+     "en": "Crossing one leg over the other"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الركود يسبب الجلطة.",
+    "en": "Stasis causes clots."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة نزيف خطير:",
+    "en": "A sign of serious bleeding:"
+   },
+   "options": [
+    {
+     "ar": "براز أسود",
+     "en": "Black stool"
+    },
+    {
+     "ar": "تحسن",
+     "en": "Improvement"
+    },
+    {
+     "ar": "إعياء بسيط",
+     "en": "Mild fatigue"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نزيف هضمي.",
+    "en": "GI bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "فحص دم يرتفع في PE:",
+    "en": "A blood test that rises in PE:"
+   },
+   "options": [
+    {
+     "ar": "D-dimer",
+     "en": "D-dimer"
+    },
+    {
+     "ar": "CK-MB",
+     "en": "CK-MB"
+    },
+    {
+     "ar": "الكرياتينين فقط",
+     "en": "Creatinine only"
+    },
+    {
+     "ar": "الصوديوم",
+     "en": "Sodium"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يدل على جلطات.",
+    "en": "It indicates clots."
+   }
+  },
+  {
+   "q": {
+    "ar": "فلتر الوريد الأجوف:",
+    "en": "The vena cava filter:"
+   },
+   "options": [
+    {
+     "ar": "شبكة تصطاد الجلطات",
+     "en": "A mesh that catches clots"
+    },
+    {
+     "ar": "مسكن",
+     "en": "An analgesic"
+    },
+    {
+     "ar": "مضاد حيوي",
+     "en": "An antibiotic"
+    },
+    {
+     "ar": "مدر",
+     "en": "A diuretic"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يمنع وصولها للرئة.",
+    "en": "It prevents them from reaching the lung."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نتيجة تدعم الجلطة الرئوية؟",
+    "en": "Which result supports pulmonary embolism?"
+   },
+   "options": [
+    {
+     "ar": "D-dimer إيجابي",
+     "en": "Positive D-dimer"
+    },
+    {
+     "ar": "D-dimer سلبي",
+     "en": "Negative D-dimer"
+    },
+    {
+     "ar": "CK-MB فقط",
+     "en": "CK-MB only"
+    },
+    {
+     "ar": "البوتاسيوم مرتفع",
+     "en": "High potassium"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "D-dimer المرتفع يعني تحلل جلطات في الجسم.",
+    "en": "An elevated D-dimer means clots are breaking down in the body."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علاج جراحي للجلطة الرئوية؟",
+    "en": "Which surgical treatment for pulmonary embolism?"
+   },
+   "options": [
+    {
+     "ar": "فلتر الوريد الأجوف السفلي",
+     "en": "Inferior vena cava filter"
+    },
+    {
+     "ar": "استئصال المرارة",
+     "en": "Cholecystectomy"
+    },
+    {
+     "ar": "فتح القصبة",
+     "en": "Opening the trachea"
+    },
+    {
+     "ar": "قسطرة بولية",
+     "en": "Urinary catheter"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الفلتر يصطاد الجلطات الجديدة.",
+    "en": "The filter catches new clots."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول علامة لنقص الأكسجة بسبب PE؟",
+    "en": "The first sign of hypoxia due to PE?"
+   },
+   "options": [
+    {
+     "ar": "قلق وتغير الحالة العقلية",
+     "en": "Anxiety and change in mental status"
+    },
+    {
+     "ar": "زرقة",
+     "en": "Cyanosis"
+    },
+    {
+     "ar": "سعال",
+     "en": "Cough"
+    },
+    {
+     "ar": "حمى",
+     "en": "Fever"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الدماغ حساس لنقص الأكسجين.",
+    "en": "The brain is sensitive to lack of oxygen."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ESC Guidelines on Acute Pulmonary Embolism (2019)"
+  },
+  {
+   "title": "ASH/CHEST VTE guidelines"
+  },
+  {
+   "title": "StatPearls: Pulmonary Embolism"
+  }
+ ]
 }

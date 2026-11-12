@@ -1,325 +1,408 @@
 {
-  "id": "dis-204",
-  "num": 204,
-  "system": "infect",
-  "icon": "💊",
-  "level": 2,
-  "title": {
-    "ar": "السيفالوسبورينات",
-    "en": "Cephalosporins"
+ "id": "dis-204",
+ "num": 204,
+ "system": "infect",
+ "icon": "💊",
+ "level": 2,
+ "title": {
+  "ar": "السيفالوسبورينات",
+  "en": "Cephalosporins"
+ },
+ "teaser": {
+  "ar": "الأجيال الأربعة، أيها يدخل السحايا، وكل الأسماء التجارية في السوق المصري، وتحذير Ceftriaxone مع الكالسيوم.",
+  "en": "The four generations, which ones enter the meninges, all the brand names in the Egyptian market, and the Ceftriaxone-with-calcium warning."
+ },
+ "chips": [
+  {
+   "ar": "4 أجيال",
+   "en": "4 generations"
   },
-  "teaser": {
-    "ar": "الأجيال الأربعة، أيها يدخل السحايا، وكل الأسماء التجارية في السوق المصري، وتحذير Ceftriaxone مع الكالسيوم."
+  {
+   "ar": "Ceftriaxone",
+   "en": "Ceftriaxone"
   },
-  "chips": [
-    {
-      "ar": "4 أجيال"
-    },
-    {
-      "ar": "Ceftriaxone"
-    },
-    {
-      "ar": "أسماء تجارية"
-    },
-    {
-      "ar": "ceph/cef"
-    }
+  {
+   "ar": "أسماء تجارية",
+   "en": "Brand names"
+  },
+  {
+   "ar": "ceph/cef",
+   "en": "ceph/cef"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>السيفالوسبورينات (Cephalosporins) مضادات حيوية واسعة الطيف <b>مبيدة</b> للبكتيريا، قريبة من البنسلين وبتسمّم جدار الخلية البكتيرية. بتتقسم لـ4 أجيال: كل ما زاد الجيل زاد التأثير على السالبة الجرام وزاد اختراق السحايا (مع استثناءات).</p><div class=\"cs-box cs-danger\"><strong>ما تنساش: كل السيفالوسبورينات لا تعمل ضد</strong><p><b>MRSA</b> · <b>C. difficile</b> · <b>Enterococci</b> (Strept. faecalis) — وكمان Listeria.</p></div><table><thead><tr><th>الجيل</th><th>القوة</th><th>السحايا</th><th>أشهرها</th></tr></thead><tbody><tr><td>الأول</td><td>موجبة الجرام (Staph) + بعض السالبة</td><td>لا ينفع</td><td>Cephradine · Cephalexin · Cefadroxil · Cefazolin</td></tr><tr><td>الثاني</td><td>أقل على الموجبة وأكثر على السالبة + لاهوائيات (ليس B. fragilis)</td><td>لا (إلا Cefuroxime)</td><td>Cefuroxime · Cefprozil · Cefaclor</td></tr><tr><td>الثالث (حقن)</td><td>أقل موجبة وأكثر سالبة؛ مقاومة للإنزيم</td><td>نعم (Cefotaxime/Ceftazidime/Ceftriaxone)</td><td>Cefotaxime · Ceftazidime · Cefoperazone · Ceftriaxone</td></tr><tr><td>الرابع (حقن)</td><td>مثل Ceftazidime وأكثر مقاومة للإنزيم</td><td>—</td><td>Cefepime</td></tr></tbody></table>\n<p>ملخص عملي بالأسماء التجارية وقواعد الأمان (الأطفال والحمل وG6PD): <a href=\"/diseases/dis-565\">دليل عملي للمضادات الحيوية</a>.</p>",
+   "en": "<p>Cephalosporins (Cephalosporins) are broad-spectrum <b>bactericidal</b> antibiotics, close to penicillin, that poison the bacterial cell wall. They are divided into 4 generations: the higher the generation, the greater the effect on gram-negatives and the greater the penetration of the meninges (with exceptions).</p><div class=\"cs-box cs-danger\"><strong>Do not forget: no cephalosporins work against</strong><p><b>MRSA</b> · <b>C. difficile</b> · <b>Enterococci</b> (Strept. faecalis) — and also Listeria.</p></div><table><thead><tr><th>Generation</th><th>Strength</th><th>Meninges</th><th>Best known</th></tr></thead><tbody><tr><td>First</td><td>Gram-positive (Staph) + some gram-negatives</td><td>Not useful</td><td>Cephradine · Cephalexin · Cefadroxil · Cefazolin</td></tr><tr><td>Second</td><td>Less on gram-positives and more on gram-negatives + anaerobes (not B. fragilis)</td><td>No (except Cefuroxime)</td><td>Cefuroxime · Cefprozil · Cefaclor</td></tr><tr><td>Third (injectable)</td><td>Less gram-positive and more gram-negative; enzyme-resistant</td><td>Yes (Cefotaxime/Ceftazidime/Ceftriaxone)</td><td>Cefotaxime · Ceftazidime · Cefoperazone · Ceftriaxone</td></tr><tr><td>Fourth (injectable)</td><td>Like Ceftazidime and more enzyme-resistant</td><td>—</td><td>Cefepime</td></tr></tbody></table>\n<p>A practical summary with brand names and safety rules (children, pregnancy and G6PD): <a href=\"/diseases/dis-565\">a practical guide to antibiotics</a>.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>بتثبّط تكوين جدار الخلية (سمّية للبكتيريا فقط)</li><li>المقاومة: إنتاج β-Lactamase (خصوصاً ESBL في Klebsiella وE. coli) أو تغيّر مستقبلات البنسلين (MRSA)</li><li>حساسية متقاطعة جزئية مع البنسلين (حوالي 1–2% في الدراسات الحديثة، والأعلى مع الأجيال الأولى المتشابهة في السلسلة الجانبية؛ الأرقام القديمة 5–10%)</li></ul>",
+   "en": "<ul><li>They inhibit cell wall formation (toxic to bacteria only)</li><li>Resistance: production of β-Lactamase (especially ESBL in Klebsiella and E. coli) or a change in penicillin receptors (MRSA)</li><li>Partial cross-sensitivity with penicillin (about 1–2% in recent studies, and higher with the first generations that are similar in the side chain; the old numbers are 5–10%)</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>الآثار الجانبية</h4><ul><li>حساسية (طفح، شرى، نادراً صدمة) — خصوصاً لو الشخص عنده حساسية بنسلين</li><li>اضطراب هضمي، إسهال، التهاب قولون C. difficile</li><li>ألم أو التهاب وريدي مكان الحقن (Phlebitis)</li><li>Ceftriaxone: رواسب كالسيوم (ممنوع مع الكالسيوم الوريدي للمواليد)، وطين في المرارة (Biliary sludge)</li><li>Cefoperazone: اضطراب تجلط (نقص فيتامين K) وتفاعل مع الكحول</li><li>تأثيرات على الكلى مع الجرعات العالية (معظمها يُعدّل بالكلى ما عدا Ceftriaxone وCefoperazone)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>تعديل الجرعة بالكلى مطلوب لمعظم السيفالوسبورينات؛ Ceftriaxone وCefoperazone يخرجوا بالصفراء فمسموحين بدون تعديل في مرضى الكلى (حسب المرجع).</p></div>",
+   "en": "<h4>Side effects</h4><ul><li>Allergy (rash, urticaria, rarely shock) — especially if the person has a penicillin allergy</li><li>GI upset, diarrhea, C. difficile colitis</li><li>Pain or inflammation of the vein at the injection site (Phlebitis)</li><li>Ceftriaxone: calcium precipitates (prohibited with IV calcium for newborns), and gallbladder sludge (Biliary sludge)</li><li>Cefoperazone: clotting disorder (vitamin K deficiency) and an alcohol reaction</li><li>Kidney effects with high doses (most are adjusted for the kidneys except Ceftriaxone and Cefoperazone)</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Dose adjustment for the kidneys is required for most cephalosporins; Ceftriaxone and Cefoperazone are excreted in bile so they are allowed without adjustment in kidney patients (according to the reference).</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>مزرعة وحساسية (خصوصاً قبل بدء 3rd gen)</li><li>وظائف الكلى لتعديل الجرعات</li><li>تحاليل التجلط PT/INR مع Cefoperazone</li><li>متابعة CBC عند الاستخدام الطويل</li></ul>",
+   "en": "<ul><li>Culture and sensitivity (especially before starting 3rd gen)</li><li>Kidney function to adjust doses</li><li>Clotting tests PT/INR with Cefoperazone</li><li>Follow the CBC with long-term use</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>الجيل الأول (First generation)</h4><ul><li>واسع الطيف، فعّال أساساً ضد موجبة الجرام بما فيها Staph aureus، وبعض السالبة الجرام (لكن ليس H. influenzae أو Proteus أو Pseudomonas)</li><li>لا يخترق السحايا فلا يفيد في التهاب السحايا</li></ul><table><thead><tr><th>الاسم العلمي</th><th>التجاري</th><th>الأشكال</th></tr></thead><tbody><tr><td>Cephradine</td><td>Velosef</td><td>كبسول 250/500/1000 · شراب 250/125 · فيال 250/500/1000</td></tr><tr><td>Cephalexin</td><td>Ceporex</td><td>كبسول 250/500/1000 · شراب 250/125 · فيال 500/1000</td></tr><tr><td>Cephalexin</td><td>Ospexin</td><td>قرص 1000 · شراب 125/250</td></tr><tr><td>Cephalexin</td><td>Keflex</td><td>قرص 500 · شراب 250</td></tr><tr><td>Cefadroxil</td><td>Duricef</td><td>كبسول 250/500 · قرص 1000 · شراب 125/250/500 · نقط 100</td></tr><tr><td>Cefadroxil</td><td>Biodroxil</td><td>كبسول 500 · قرص 1000 · شراب 250/500</td></tr><tr><td>Cefadroxil</td><td>Ibidroxil</td><td>كبسول 250/500 · قرص 1000 · شراب 125/250</td></tr><tr><td>Cefadroxil</td><td>Curisafe</td><td>كبسول 500 · شراب 125/250 · نقط 100</td></tr><tr><td>Cefadroxil</td><td>Longicef</td><td>كبسول 500 · شراب 125/250 · نقط 100</td></tr><tr><td>Cephapirin</td><td>Cefatrexyl</td><td>فيال 500/1000</td></tr><tr><td>Cefazolin</td><td>Totacef</td><td>فيال 500/1000</td></tr></tbody></table><h4>الجيل الثاني (Second generation)</h4><ul><li>طيف واسع مشابه للأول لكن أقل على الموجبة وأكثر على السالبة (ليس Pseudomonas) واللاهوائيات (ليس B. fragilis)</li><li>لا يعبر الحاجز الدموي المخي (BBB) <b>ما عدا Cefuroxime</b></li></ul><table><thead><tr><th>الاسم العلمي</th><th>التجاري</th><th>الأشكال</th></tr></thead><tbody><tr><td>Cefuroxime</td><td>Zinnat</td><td>قرص 125/250/500 · فيال 250/750/1500 · شراب 500</td></tr><tr><td>Cefprozil</td><td>Cefzil</td><td>قرص 250/500 · شراب 125/250</td></tr><tr><td>Cefpodoxime</td><td>Orelox</td><td>قرص 100 · شراب 40</td></tr><tr><td>Cefpodoxime</td><td>Cepodem</td><td>قرص 100 · شراب 40</td></tr><tr><td>Cefaclor</td><td>Ceclor</td><td>كبسول 250 · SR 375 · كبسول 500 · SR 500 / 750 · شراب 125/250</td></tr><tr><td>Cefaclor</td><td>Bacticlor</td><td>كبسول 250/500 · شراب 125/250</td></tr><tr><td>Cefaclor</td><td>Serviclor</td><td>شراب 125/250 · كبسول 250/500</td></tr><tr><td>Cefixime</td><td>Ximacef</td><td>كبسول 200/400 · شراب 100</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Cefpodoxime وCefixime أُدرجوا في المرجع ضمن الجيل الثاني، لكنهم تصنيفياً <b>جيل ثالث فموي</b>؛ Cefixime فعّال في التيفود والسيلان والتهاب المسالك.</p></div><h4>الجيل الثالث (Third generation) — حقن</h4><ul><li>طيف واسع ضد موجبة وسالبة الجرام الهوائية واللاهوائية، شبيه بالثاني لكن أقل على الموجبة وأكثر على السالبة، مقاوم للإنزيم</li></ul><table><thead><tr><th>الدواء</th><th>الخصائص</th><th>التجاري والأشكال</th></tr></thead><tbody><tr><td>Cefotaxime</td><td>يُستقلب بالكبد · يعبر BBB فمفيد في السحايا</td><td>Claforan 250/500/1000 فيال · Cefotax-T3A 250/500/1000 · Cefotax-EIPICO 250/500/1000 · Ceforan 500/1000 · Foxime 500/1000</td></tr><tr><td>Ceftazidime</td><td>فعّال ضد Pseudomonas aeruginosa · فعّال في السحايا</td><td>Fortum 250/500/1000 فيال</td></tr><tr><td>Cefoperazone</td><td>فعّال ضد Pseudomonas · غير فعّال في السحايا · يخرج بالصفراء فيُسمح به في الكلى بدون تعديل الجرعة</td><td>Cefobid · Cefozon · Cefazone — فيال 500/1000</td></tr><tr><td>Ceftriaxone</td><td>نصف عمر طويل، مرة يومياً · مركّز في CSF والعظام · يخرج بالصفراء فمسموح في الكلى بدون تعديل</td><td>Rocephin 500/1000 عضل · Ceftriaxone 500/1000 عضل · Cefotrix 250/500/1000 عضل ووريد</td></tr></tbody></table><h4>الجيل الرابع (Fourth generation) — حقن</h4><ul><li>شبيه بـCeftazidime لكن أكثر مقاومة لـβ-Lactamase</li><li>المثال: Cefepime — Maxipime فيال 500 و1000</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الجرعات المعتادة للبالغ (بحسب الإرشادات؛ تُعتمد بأمر الطبيب): Cefazolin 1–2 جم كل 8 ساعات · Ceftriaxone 1–2 جم يومياً (حتى 2 جم كل 12 س في السحايا) · Cefotaxime 1–2 جم كل 8 ساعات · Ceftazidime 1–2 جم كل 8 ساعات · Cefepime 1–2 جم كل 8–12 ساعة. Cefuroxime فموي 250–500 كل 12 ساعة. اعتمد دائماً الأمر الطبي.</p></div><!--e17--><h4>أسماء السوق وجداول الإعطاء (تكملة عملية)</h4>\n<table><thead><tr><th>الجيل / الدواء</th><th>الاسم التجاري والأشكال</th><th>الإعطاء وملاحظات</th></tr></thead><tbody>\n<tr><td>الجيل 1: ضعيف على Staph، موجبة الجرام أساساً</td><td></td><td></td></tr>\n<tr><td>Cephradine (أضعف أنواع الجيل ومش كتير الاستخدام)</td><td>Velosef (مستورد): كبسول 250 و500 · فيال 500 مجم و1 جم · معلق 125 و250. بدائل: Farcosef · Ultracef</td><td>الحقنة وريد أو عضل كل 12 ساعة؛ القرص والشراب كل 8 ساعات</td></tr>\n<tr><td>Cephadroxil / Cefadroxil (أفضل أنواع الجيل: قوي ضد Staph، تأثيره طويل، <b>فموي فقط</b> بدون حقن)</td><td>Duricef (مستورد): كبسول 500 · قرص 1 جم · معلق 125 و250 و500. بدائل: Biodroxil · Ibidroxil · Curosafe</td><td>قرص أو جرعة بالسم كل 12 ساعة</td></tr>\n<tr><td>Cephalexin (من أحسن الأنواع ونتائجه كويسة جداً)</td><td>Ceporex (مستورد): فيال 500 مجم و1 جم · قرص 250 و500 مجم و1 جم · معلق 125 و250. بدائل: Cephalexin · Ospexin</td><td>الحقنة وريد أو عضل كل 12 ساعة؛ القرص والشراب كل 8 ساعات</td></tr>\n<tr><td>الجيل 2: فعّال بالتساوي على موجبة وسالبة الجرام، ضعيف على Staph</td><td></td><td></td></tr>\n<tr><td>Cefuroxime</td><td>Zinnat (مستورد): فيال 750 مجم و1.5 جم · قرص 250 و500 · معلق 125</td><td>حقنة عضل أو وريد أو قرص أو جرعة بالسم كل 12 ساعة</td></tr>\n<tr><td>Cefaclor (النوع الوحيد في المجموعة اللي يشتغل على الميكروبات اللانمطية Atypical، ومفيش منه حقن)</td><td>Bacticlor: كبسول 250 و500 · معلق 125 و250. بدائل: Ceclor · Cefaclor</td><td>قرص أو جرعة بالسم كل 8 ساعات</td></tr>\n<tr><td>الجيل 3: أساساً سالبة الجرام، قوي ضد Staph وضد Pseudomonas (خصوصاً Ceftazidime)؛ معظمه حقن وبعضه فموي</td><td></td><td>كل الحقن تتعطى كل 12 ساعة ما عدا Ceftriaxone مرة يومياً (حسب المراجع)</td></tr>\n<tr><td>Cefotaxime (من أشهر المضادات وأكثرها استخداماً)</td><td>Claforan (مستورد): فيال 250 و500 مجم و1 جم. بدائل: Cefotax (الأشهر) · Sigmataxim</td><td>حقنة وريد أو عضل كل 12 ساعة</td></tr>\n<tr><td>Ceftriaxone (من أكثر المضادات استخداماً وفعّال جداً في النزلات المعوية خصوصاً التيفود)</td><td>Ceftriaxone 0.5 و1 جم (مستورد) / Ceftriaxone 1 جم (مصري). بدائل: Rocephin (أغلى) · Wintriaxone (من أرخص الأسعار)</td><td>مرة واحدة يومياً وريد أو عضل. عبوة العضل فيها محلول Lidocaine، والوريد محلول آخر (10 مل ماء مقطر): <b>ممنوع استخدام أحدهما مكان الآخر</b></td></tr>\n<tr><td>Cefoperazone (من أحسن المضادات في عدوى القنوات الصفراوية؛ يخرج بالصفراء فمش محتاج تعديل جرعة في الكلى)</td><td>Cefobid (مستورد): فيال 0.5 و1 و2 جم. بدائل: Cefazone · Cefoperazone</td><td>وريد أو عضل كل 12 ساعة. بعض الدراسات (حيوانية) تشير لضمور الخصية، فبعض الأطباء لا يحبون وصفه للأطفال</td></tr>\n<tr><td>Ceftazidime (مشهور بقوته ضد Pseudomonas)</td><td>Fortum (مستورد): فيال 250 و500 مجم و1 جم. بدائل: Cefidime · Ceftazidime</td><td>وريد أو عضل كل 12 ساعة</td></tr>\n<tr><td>Cefdinir (فموي فقط وغالي)</td><td>Cefdin (مستورد): معلق 125 · كبسول 300. بدائل: Dinar · Omnicef</td><td>كبسولة أو جرعة بالسم كل 12 ساعة</td></tr>\n<tr><td>Cefixime (فموي فقط، طيف خاص: موجبة وسالبة؛ نتائجه ممتازة في التهاب الأذن الوسطى والجيوب وعدوى الجهاز التنفسي العلوي والمسالك البولية)</td><td>Ximacef (الأشهر): معلق 100 و200 · كبسول 200 و400. بدائل: Suprax · Cefixime</td><td>كبسولة أو جرعة بالسم <b>مرة واحدة يومياً</b></td></tr>\n<tr><td>الجيل 4: Cefepime — من أوسع الأطياف بين المضادات ومن الأقوى في الممارسة</td><td>Maxipime (الأشهر والأفضل لأنه مستورد): فيال 0.5 و1 جم. بدائل: Cefrom · Wincef · Forcetex</td><td>حقنة وريد أو عضل كل 12 ساعة</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>جرعات Cefotaxime وCeftazidime القياسية في كثير من البروتوكولات كل 8 ساعات (1–2 جم)، وCeftriaxone وريدي يُعطى بتسريب 30 دقيقة، ومن غير محلول الليدوكايين. جدول الـ12 ساعة هنا هو المتداول في العيادات؛ اتبع أمر الطبيب. وفي مرضى حساسية البنسلين الخفيفة يمكن استخدام السيفالوسبورينات بحذر عادةً.</p></div><!--E16-rociphen--><ul><li>Ceftriaxone: من الأسماء التجارية المنتشرة Rociphen (غالباً أغلى) وWintriaxone (من الأرخص)، وهناك المستورد (0.5 و1 جم) والمصري (1 جم). علبة العضل بها Lidocaine ومحلول وريدي منفصل (10 سم ماء مقطر): <b>لا يستخدم أحدهما مكان الآخر</b>.</li></ul><h4>تداخلات إضافية</h4><ul><li>مع الأمينوجليكوزيدات: يزيد خطر سمّية الكلى.</li><li>مع مضادات التخثر الفموية: يزيد خطر النزف.</li><li>مع المدرّات العروية (مثل furosemide): يرتفع مستوى السيفالوسبورين في الدم.</li></ul><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p>",
+   "en": "<h4>First generation (First generation)</h4><ul><li>Broad spectrum, effective mainly against gram-positives including Staph aureus, and some gram-negatives (but not H. influenzae, Proteus or Pseudomonas)</li><li>It does not penetrate the meninges, so it is not useful in meningitis</li></ul><table><thead><tr><th>Generic name</th><th>Brand</th><th>Forms</th></tr></thead><tbody><tr><td>Cephradine</td><td>Velosef</td><td>Capsule 250/500/1000 · syrup 250/125 · vial 250/500/1000</td></tr><tr><td>Cephalexin</td><td>Ceporex</td><td>Capsule 250/500/1000 · syrup 250/125 · vial 500/1000</td></tr><tr><td>Cephalexin</td><td>Ospexin</td><td>Tablet 1000 · syrup 125/250</td></tr><tr><td>Cephalexin</td><td>Keflex</td><td>Tablet 500 · syrup 250</td></tr><tr><td>Cefadroxil</td><td>Duricef</td><td>Capsule 250/500 · tablet 1000 · syrup 125/250/500 · drops 100</td></tr><tr><td>Cefadroxil</td><td>Biodroxil</td><td>Capsule 500 · tablet 1000 · syrup 250/500</td></tr><tr><td>Cefadroxil</td><td>Ibidroxil</td><td>Capsule 250/500 · tablet 1000 · syrup 125/250</td></tr><tr><td>Cefadroxil</td><td>Curisafe</td><td>Capsule 500 · syrup 125/250 · drops 100</td></tr><tr><td>Cefadroxil</td><td>Longicef</td><td>Capsule 500 · syrup 125/250 · drops 100</td></tr><tr><td>Cephapirin</td><td>Cefatrexyl</td><td>Vial 500/1000</td></tr><tr><td>Cefazolin</td><td>Totacef</td><td>Vial 500/1000</td></tr></tbody></table><h4>Second generation (Second generation)</h4><ul><li>A broad spectrum similar to the first but less on gram-positives and more on gram-negatives (not Pseudomonas) and anaerobes (not B. fragilis)</li><li>It does not cross the blood-brain barrier (BBB) <b>except Cefuroxime</b></li></ul><table><thead><tr><th>Generic name</th><th>Brand</th><th>Forms</th></tr></thead><tbody><tr><td>Cefuroxime</td><td>Zinnat</td><td>Tablet 125/250/500 · vial 250/750/1500 · syrup 500</td></tr><tr><td>Cefprozil</td><td>Cefzil</td><td>Tablet 250/500 · syrup 125/250</td></tr><tr><td>Cefpodoxime</td><td>Orelox</td><td>Tablet 100 · syrup 40</td></tr><tr><td>Cefpodoxime</td><td>Cepodem</td><td>Tablet 100 · syrup 40</td></tr><tr><td>Cefaclor</td><td>Ceclor</td><td>Capsule 250 · SR 375 · capsule 500 · SR 500 / 750 · syrup 125/250</td></tr><tr><td>Cefaclor</td><td>Bacticlor</td><td>Capsule 250/500 · syrup 125/250</td></tr><tr><td>Cefaclor</td><td>Serviclor</td><td>Syrup 125/250 · capsule 250/500</td></tr><tr><td>Cefixime</td><td>Ximacef</td><td>Capsule 200/400 · syrup 100</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Cefpodoxime and Cefixime are listed in the reference under the second generation, but by classification they are <b>third-generation oral</b>; Cefixime is effective in typhoid, gonorrhea and urinary tract infection.</p></div><h4>Third generation (Third generation) — injectable</h4><ul><li>A broad spectrum against aerobic and anaerobic gram-positives and gram-negatives, similar to the second but less on gram-positives and more on gram-negatives, enzyme-resistant</li></ul><table><thead><tr><th>Drug</th><th>Properties</th><th>Brand and forms</th></tr></thead><tbody><tr><td>Cefotaxime</td><td>Metabolized by the liver · crosses the BBB so it is useful in meningitis</td><td>Claforan 250/500/1000 vial · Cefotax-T3A 250/500/1000 · Cefotax-EIPICO 250/500/1000 · Ceforan 500/1000 · Foxime 500/1000</td></tr><tr><td>Ceftazidime</td><td>Effective against Pseudomonas aeruginosa · effective in meningitis</td><td>Fortum 250/500/1000 vial</td></tr><tr><td>Cefoperazone</td><td>Effective against Pseudomonas · not effective in meningitis · excreted in bile so it is allowed in the kidneys without dose adjustment</td><td>Cefobid · Cefozon · Cefazone — vial 500/1000</td></tr><tr><td>Ceftriaxone</td><td>Long half-life, once daily · concentrated in CSF and bone · excreted in bile so it is allowed in the kidneys without adjustment</td><td>Rocephin 500/1000 IM · Ceftriaxone 500/1000 IM · Cefotrix 250/500/1000 IM and IV</td></tr></tbody></table><h4>Fourth generation (Fourth generation) — injectable</h4><ul><li>Similar to Ceftazidime but more resistant to β-Lactamase</li><li>Example: Cefepime — Maxipime vial 500 and 1000</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Usual adult doses (per the guidelines; adopted by physician order): Cefazolin 1–2 g every 8 hours · Ceftriaxone 1–2 g daily (up to 2 g every 12 h in meningitis) · Cefotaxime 1–2 g every 8 hours · Ceftazidime 1–2 g every 8 hours · Cefepime 1–2 g every 8–12 hours. Oral Cefuroxime 250–500 every 12 hours. Always rely on the physician's order.</p></div><!--e17--><h4>Market names and administration schedules (practical supplement)</h4>\n<table><thead><tr><th>Generation / drug</th><th>Brand name and forms</th><th>Administration and notes</th></tr></thead><tbody>\n<tr><td>Generation 1: weak on Staph, mainly gram-positive</td><td></td><td></td></tr>\n<tr><td>Cephradine (the weakest type in the generation and not used much)</td><td>Velosef (imported): capsule 250 and 500 · vial 500 mg and 1 g · suspension 125 and 250. Alternatives: Farcosef · Ultracef</td><td>Injection IV or IM every 12 hours; tablet and syrup every 8 hours</td></tr>\n<tr><td>Cephadroxil / Cefadroxil (the best type in the generation: strong against Staph, long-acting, <b>oral only</b> with no injection)</td><td>Duricef (imported): capsule 500 · tablet 1 g · suspension 125 and 250 and 500. Alternatives: Biodroxil · Ibidroxil · Curosafe</td><td>Tablet or a measured dose every 12 hours</td></tr>\n<tr><td>Cephalexin (one of the best types and its results are very good)</td><td>Ceporex (imported): vial 500 mg and 1 g · tablet 250 and 500 mg and 1 g · suspension 125 and 250. Alternatives: Cephalexin · Ospexin</td><td>Injection IV or IM every 12 hours; tablet and syrup every 8 hours</td></tr>\n<tr><td>Generation 2: equally effective on gram-positives and gram-negatives, weak on Staph</td><td></td><td></td></tr>\n<tr><td>Cefuroxime</td><td>Zinnat (imported): vial 750 mg and 1.5 g · tablet 250 and 500 · suspension 125</td><td>Injection IM or IV or tablet or a measured dose every 12 hours</td></tr>\n<tr><td>Cefaclor (the only type in the group that works on atypical organisms Atypical, and it has no injection)</td><td>Bacticlor: capsule 250 and 500 · suspension 125 and 250. Alternatives: Ceclor · Cefaclor</td><td>Tablet or a measured dose every 8 hours</td></tr>\n<tr><td>Generation 3: mainly gram-negatives, strong against Staph and against Pseudomonas (especially Ceftazidime); mostly injectable and some oral</td><td></td><td>All injections are given every 12 hours except Ceftriaxone once daily (according to the references)</td></tr>\n<tr><td>Cefotaxime (one of the most famous antibiotics and most used)</td><td>Claforan (imported): vial 250 and 500 mg and 1 g. Alternatives: Cefotax (the most famous) · Sigmataxim</td><td>Injection IV or IM every 12 hours</td></tr>\n<tr><td>Ceftriaxone (one of the most used antibiotics and very effective in intestinal infections, especially typhoid)</td><td>Ceftriaxone 0.5 and 1 g (imported) / Ceftriaxone 1 g (Egyptian). Alternatives: Rocephin (more expensive) · Wintriaxone (one of the cheapest prices)</td><td>Once daily IV or IM. The IM pack contains Lidocaine solution, and the IV another solution (10 mL distilled water): <b>never use one in place of the other</b></td></tr>\n<tr><td>Cefoperazone (one of the best antibiotics in bile duct infection; excreted in bile so it needs no dose adjustment in the kidneys)</td><td>Cefobid (imported): vial 0.5 and 1 and 2 g. Alternatives: Cefazone · Cefoperazone</td><td>IV or IM every 12 hours. Some (animal) studies point to testicular atrophy, so some physicians do not like prescribing it for children</td></tr>\n<tr><td>Ceftazidime (famous for its strength against Pseudomonas)</td><td>Fortum (imported): vial 250 and 500 mg and 1 g. Alternatives: Cefidime · Ceftazidime</td><td>IV or IM every 12 hours</td></tr>\n<tr><td>Cefdinir (oral only and expensive)</td><td>Cefdin (imported): suspension 125 · capsule 300. Alternatives: Dinar · Omnicef</td><td>Capsule or a measured dose every 12 hours</td></tr>\n<tr><td>Cefixime (oral only, a special spectrum: gram-positive and gram-negative; excellent results in middle ear infection, sinusitis, upper respiratory infection and urinary tract infection)</td><td>Ximacef (the most famous): suspension 100 and 200 · capsule 200 and 400. Alternatives: Suprax · Cefixime</td><td>Capsule or a measured dose <b>once daily</b></td></tr>\n<tr><td>Generation 4: Cefepime — one of the broadest spectrums among antibiotics and one of the strongest in practice</td><td>Maxipime (the most famous and best because it is imported): vial 0.5 and 1 g. Alternatives: Cefrom · Wincef · Forcetex</td><td>Injection IV or IM every 12 hours</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>Update</strong><p>The standard doses of Cefotaxime and Ceftazidime in many protocols are every 8 hours (1–2 g), and IV Ceftriaxone is given by a 30-minute infusion, and without the lidocaine solution. The 12-hour schedule here is the one circulating in clinics; follow the physician's order. And in patients with mild penicillin allergy, cephalosporins can usually be used with caution.</p></div><!--E16-rociphen--><ul><li>Ceftriaxone: among the widespread brand names are Rociphen (usually more expensive) and Wintriaxone (one of the cheapest), and there is the imported (0.5 and 1 g) and the Egyptian (1 g). The IM pack has Lidocaine and a separate IV solution (10 cm distilled water): <b>never use one in place of the other</b>.</li></ul><h4>Additional interactions</h4><ul><li>With aminoglycosides: increases the risk of kidney toxicity.</li><li>With oral anticoagulants: increases the risk of bleeding.</li><li>With loop diuretics (such as furosemide): the cephalosporin level in the blood rises.</li></ul><p>Doses are for learning; always verify with the physician/pharmacist.</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل عن الحساسية</strong><p>تاريخ حساسية بنسلين/سيفالوسبورين؟ حساسية متقاطعة نحو 1–2% (أعلى مع الجيل الأول). بلّغ قبل الجرعة الأولى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>تحقق من الدواء والجيل</strong><p>الجيل الأول للجلد والمسالك والوقاية الجراحية؛ الثالث للسحايا والأمراض الشديدة. تأكد من الجرعة والمدة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>تحضير الحقن</strong><p>عضل Ceftriaxone غالباً مع ليدوكايين (حسب النشرة، ولا يُحقن ليدوكايين وريدياً). وريدي: تسريب 15–30 دقيقة وفق النشرة. ممنوع خلط Ceftriaxone مع المحاليل أو الأدوية المحتوية على كالسيوم (Ringer، Calcium gluconate) خصوصاً في المواليد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>راقب أثناء الجرعة الأولى</strong><p>30 دقيقة: طفح، ضيق تنفس، حكة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأدوية الفموية</strong><p>Cefuroxime مع الأكل لزيادة الامتصاص؛ Cefaclor/Cefixime حسب النشرة؛ الحفاظ على الشراب مبرداً وبعد التجهيز ينتهي في 7–14 يوم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب أثناء العلاج</strong><p>إسهال شديد (C. diff)، بياض فموي، نزف (Cefoperazone)، الكلى، الوريد (التهاب).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تسجيل</strong><p>وقت كل جرعة، رد الفعل، الحرارة، الكرات البيضاء.</p></div></div></div>\n<!--nclex-p776--><h4>نقاط تمريضية مضافة: عائلة ceph/cef</h4>[[slot:dis-3211-pcn-ceph|البنسلينات والسيفالوسبورينات — رسم من إعداد الموقع|/diseases/img/dis-3211-pcn-ceph.svg]]<ul><li>اسمها يبدأ بـ <strong>ceph/cef</strong>: cephalexin (Keflex)، cefazolin، ceftriaxone (Rocephin)، cefepime، cefoxitin.</li><li>أثر جانبي مميز: إسهال؛ أبلغ عن الإسهال الشديد أو الدموي.</li><li>تحسس متصالب مع البنسلينات (Cross sensitivity).</li><li>بعض السيفالوسبورينات تعطي تفاعلًا يشبه disulfiram مع الكحول (احمرار، غثيان، قيء، خفقان).</li><li>تُعطى مع الأكل إن حدث انزعاج معدي؛ والمعلّق يُرجّ جيدًا.</li><li>أي تفاعل: أوقف الدواء، قيّم الرئتين، جهّز adrenaline.</li></ul>\n<!--nclex-p785-->[[slot:dis-3214-ceph-gen|أجيال السيفالوسبورينات والتداخلات — رسم من إعداد الموقع|/diseases/img/dis-3214-ceph-gen.svg]]<h4>تفاصيل إضافية</h4><ul><li><strong>الآلية:</strong> حلقة β-lactam تستهدف جدار الخلية فتجعله هشًا؛ مبيدة غالبًا.</li><li><strong>الاستعمال:</strong> الجهاز التنفسي، التهاب الأذن الوسطى، العظام والمفاصل، البولي التناسلي وعدوى بكتيرية أخرى.</li><li><strong>آثار خطيرة:</strong> سمّية كلوية، إعياء، Stevens-Johnson، فقر دم لاتنسجي، تنخر البشرة السمّي (TEN)؛ وآثار عامة: غثيان، قيء، إسهال، صداع، دوخة، حرقة، حمى.</li><li><strong>التحقق من الحساسية</strong> للبنسلين والسيفالوسبورين قبل الجرعة الأولى حتى لو سُجّل تاريخ سابق صحيح؛ بعد حقن بنسلين عضلي في العيادة اطلب من المريض الانتظار 30 دقيقة (أكثر وقت لحدوث الأنافيلاكسيس).</li><li><strong>تفاعل شبيه بـ disulfiram</strong> مع الكحول خلال 72 ساعة من بعض السيفالوسبورينات: احمرار، نبض بالرأس والعنق، ضيق نفس، قيء، تعرّق، ألم صدر، هبوط ضغط، وقد يصل لاضطراب نظم وفقدان وعي.</li><li><strong>PKU:</strong> معلّق cefprozil الفموي يحتوي phenylalanine.</li><li>حذر: أمراض الكلى، قصور الكبد، اضطراب النزف، الحمل، وتحسس البنسلين.</li><li>لا تسحق الأقراص ممتدة المفعول؛ وما يؤخذ على معدة فارغة: قبل الأكل بساعة أو بعده بساعتين.</li><li>جرعات للتعلّم: cefadroxil حوالي 1–2 غ/يوم مقسّمة (راجع النشرة).</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Ask about allergy</strong><p>A history of penicillin/cephalosporin allergy? Cross-sensitivity is about 1–2% (higher with the first generation). Report before the first dose.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Verify the drug and generation</strong><p>The first generation for skin, urinary tract and surgical prophylaxis; the third for meningitis and severe diseases. Confirm the dose and duration.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Preparing injections</strong><p>IM Ceftriaxone usually with lidocaine (per the leaflet, and lidocaine is not injected intravenously). IV: infusion over 15–30 minutes per the leaflet. Never mix Ceftriaxone with solutions or drugs containing calcium (Ringer, Calcium gluconate), especially in newborns.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Monitor during the first dose</strong><p>30 minutes: rash, shortness of breath, itching.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Oral drugs</strong><p>Cefuroxime with food to increase absorption; Cefaclor/Cefixime per the leaflet; keep the syrup refrigerated and after preparation it expires in 7–14 days.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Monitor during treatment</strong><p>Severe diarrhea (C. diff), oral thrush, bleeding (Cefoperazone), the kidneys, the vein (inflammation).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Documentation</strong><p>The time of each dose, the reaction, temperature, white blood cells.</p></div></div></div>\n<!--nclex-p776--><h4>Added nursing points: the ceph/cef family</h4>[[slot:dis-3211-pcn-ceph|Penicillins and cephalosporins — illustration prepared by the site|/diseases/img/dis-3211-pcn-ceph.svg]]<ul><li>Their name starts with <strong>ceph/cef</strong>: cephalexin (Keflex), cefazolin, ceftriaxone (Rocephin), cefepime, cefoxitin.</li><li>A distinctive side effect: diarrhea; report severe or bloody diarrhea.</li><li>Cross-sensitivity with penicillins (Cross sensitivity).</li><li>Some cephalosporins give a disulfiram-like reaction with alcohol (flushing, nausea, vomiting, palpitations).</li><li>Give with food if stomach upset occurs; and shake the suspension well.</li><li>Any reaction: stop the drug, assess the lungs, prepare adrenaline.</li></ul>\n<!--nclex-p785-->[[slot:dis-3214-ceph-gen|Cephalosporin generations and interactions — illustration prepared by the site|/diseases/img/dis-3214-ceph-gen.svg]]<h4>Additional details</h4><ul><li><strong>Mechanism:</strong> the β-lactam ring targets the cell wall and makes it fragile; mostly bactericidal.</li><li><strong>Use:</strong> the respiratory tract, middle ear infection, bones and joints, genitourinary and other bacterial infections.</li><li><strong>Serious effects:</strong> kidney toxicity, fatigue, Stevens-Johnson, aplastic anemia, toxic epidermal necrolysis (TEN); and general effects: nausea, vomiting, diarrhea, headache, dizziness, heartburn, fever.</li><li><strong>Verify allergy</strong> to penicillin and cephalosporin before the first dose even if a correct history was recorded; after an IM penicillin injection in the clinic ask the patient to wait 30 minutes (the most likely time for anaphylaxis).</li><li><strong>A disulfiram-like reaction</strong> with alcohol within 72 hours of some cephalosporins: flushing, throbbing in the head and neck, shortness of breath, vomiting, sweating, chest pain, hypotension, and it may reach dysrhythmia and loss of consciousness.</li><li><strong>PKU:</strong> oral cefprozil suspension contains phenylalanine.</li><li>Caution: kidney disease, liver failure, bleeding disorder, pregnancy, and penicillin allergy.</li><li>Do not crush extended-release tablets; and what is taken on an empty stomach: an hour before eating or two hours after.</li><li>Doses for learning: cefadroxil about 1–2 g/day divided (check the leaflet).</li></ul><div class=\"cs-box cs-info\"><strong>Note:</strong> Doses and numbers are for learning; always verify with the physician/pharmacist (and the package insert) before giving.</div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>ضيق تنفس/تورم/ضغط واطي بعد الحقن</li><li>إسهال مائي شديد أو دموي</li><li>نزف أو كدمات جديدة (Cefoperazone)</li><li>قلة بول</li><li>طفح جلدي منتشر أو تقشر</li><li>ألم شديد بالمرارة مع Ceftriaxone</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately if:</strong><ul><li>Shortness of breath/swelling/low blood pressure after the injection</li><li>Severe watery or bloody diarrhea</li><li>New bleeding or bruising (Cefoperazone)</li><li>Low urine output</li><li>Widespread skin rash or peeling</li><li>Severe gallbladder pain with Ceftriaxone</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>كمّل العلاج المدة كلها حتى لو اتحسنت.</li><li>قول للطبيب عن أي حساسية بنسلين قبل البداية.</li><li>لو إسهال شديد بعد المضاد، لا تاخد مضاد إسهال وكلّم الطبيب.</li><li>Cefoperazone: ما تشربش كحول خلال العلاج وبعده بـ3–5 أيام.</li><li>الشراب يتحفظ في الثلاجة ويرج قبل الاستعمال.</li></ul>",
+   "en": "<ul><li>Complete the treatment for the whole duration even if you improve.</li><li>Tell the physician about any penicillin allergy before starting.</li><li>If you have severe diarrhea after the antibiotic, do not take an antidiarrheal and talk to the physician.</li><li>Cefoperazone: do not drink alcohol during treatment and for 3–5 days after.</li><li>The syrup is kept in the refrigerator and shaken before use.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "4 أجيال: الأول للموجبة، الثالث للسالبة والسحايا",
+   "لا تغطي MRSA وEnterococci وC. difficile وListeria",
+   "Cefuroxime الوحيد من الجيل الثاني اللي يعبر BBB",
+   "Cefotaxime/Ceftazidime/Ceftriaxone للسحايا، Cefoperazone لا",
+   "Ceftazidime وCefoperazone ضد Pseudomonas",
+   "Ceftriaxone مرة يومياً ويخرج بالصفراء، لا يُخلط مع الكالسيوم",
+   "Cefepime جيل رابع أكثر مقاومة للإنزيم"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>السيفالوسبورينات (Cephalosporins) مضادات حيوية واسعة الطيف <b>مبيدة</b> للبكتيريا، قريبة من البنسلين وبتسمّم جدار الخلية البكتيرية. بتتقسم لـ4 أجيال: كل ما زاد الجيل زاد التأثير على السالبة الجرام وزاد اختراق السحايا (مع استثناءات).</p><div class=\"cs-box cs-danger\"><strong>ما تنساش: كل السيفالوسبورينات لا تعمل ضد</strong><p><b>MRSA</b> · <b>C. difficile</b> · <b>Enterococci</b> (Strept. faecalis) — وكمان Listeria.</p></div><table><thead><tr><th>الجيل</th><th>القوة</th><th>السحايا</th><th>أشهرها</th></tr></thead><tbody><tr><td>الأول</td><td>موجبة الجرام (Staph) + بعض السالبة</td><td>لا ينفع</td><td>Cephradine · Cephalexin · Cefadroxil · Cefazolin</td></tr><tr><td>الثاني</td><td>أقل على الموجبة وأكثر على السالبة + لاهوائيات (ليس B. fragilis)</td><td>لا (إلا Cefuroxime)</td><td>Cefuroxime · Cefprozil · Cefaclor</td></tr><tr><td>الثالث (حقن)</td><td>أقل موجبة وأكثر سالبة؛ مقاومة للإنزيم</td><td>نعم (Cefotaxime/Ceftazidime/Ceftriaxone)</td><td>Cefotaxime · Ceftazidime · Cefoperazone · Ceftriaxone</td></tr><tr><td>الرابع (حقن)</td><td>مثل Ceftazidime وأكثر مقاومة للإنزيم</td><td>—</td><td>Cefepime</td></tr></tbody></table>\n<p>ملخص عملي بالأسماء التجارية وقواعد الأمان (الأطفال والحمل وG6PD): <a href=\"/diseases/dis-565\">دليل عملي للمضادات الحيوية</a>.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>بتثبّط تكوين جدار الخلية (سمّية للبكتيريا فقط)</li><li>المقاومة: إنتاج β-Lactamase (خصوصاً ESBL في Klebsiella وE. coli) أو تغيّر مستقبلات البنسلين (MRSA)</li><li>حساسية متقاطعة جزئية مع البنسلين (حوالي 1–2% في الدراسات الحديثة، والأعلى مع الأجيال الأولى المتشابهة في السلسلة الجانبية؛ الأرقام القديمة 5–10%)</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>الآثار الجانبية</h4><ul><li>حساسية (طفح، شرى، نادراً صدمة) — خصوصاً لو الشخص عنده حساسية بنسلين</li><li>اضطراب هضمي، إسهال، التهاب قولون C. difficile</li><li>ألم أو التهاب وريدي مكان الحقن (Phlebitis)</li><li>Ceftriaxone: رواسب كالسيوم (ممنوع مع الكالسيوم الوريدي للمواليد)، وطين في المرارة (Biliary sludge)</li><li>Cefoperazone: اضطراب تجلط (نقص فيتامين K) وتفاعل مع الكحول</li><li>تأثيرات على الكلى مع الجرعات العالية (معظمها يُعدّل بالكلى ما عدا Ceftriaxone وCefoperazone)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>تعديل الجرعة بالكلى مطلوب لمعظم السيفالوسبورينات؛ Ceftriaxone وCefoperazone يخرجوا بالصفراء فمسموحين بدون تعديل في مرضى الكلى (حسب المرجع).</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>مزرعة وحساسية (خصوصاً قبل بدء 3rd gen)</li><li>وظائف الكلى لتعديل الجرعات</li><li>تحاليل التجلط PT/INR مع Cefoperazone</li><li>متابعة CBC عند الاستخدام الطويل</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>الجيل الأول (First generation)</h4><ul><li>واسع الطيف، فعّال أساساً ضد موجبة الجرام بما فيها Staph aureus، وبعض السالبة الجرام (لكن ليس H. influenzae أو Proteus أو Pseudomonas)</li><li>لا يخترق السحايا فلا يفيد في التهاب السحايا</li></ul><table><thead><tr><th>الاسم العلمي</th><th>التجاري</th><th>الأشكال</th></tr></thead><tbody><tr><td>Cephradine</td><td>Velosef</td><td>كبسول 250/500/1000 · شراب 250/125 · فيال 250/500/1000</td></tr><tr><td>Cephalexin</td><td>Ceporex</td><td>كبسول 250/500/1000 · شراب 250/125 · فيال 500/1000</td></tr><tr><td>Cephalexin</td><td>Ospexin</td><td>قرص 1000 · شراب 125/250</td></tr><tr><td>Cephalexin</td><td>Keflex</td><td>قرص 500 · شراب 250</td></tr><tr><td>Cefadroxil</td><td>Duricef</td><td>كبسول 250/500 · قرص 1000 · شراب 125/250/500 · نقط 100</td></tr><tr><td>Cefadroxil</td><td>Biodroxil</td><td>كبسول 500 · قرص 1000 · شراب 250/500</td></tr><tr><td>Cefadroxil</td><td>Ibidroxil</td><td>كبسول 250/500 · قرص 1000 · شراب 125/250</td></tr><tr><td>Cefadroxil</td><td>Curisafe</td><td>كبسول 500 · شراب 125/250 · نقط 100</td></tr><tr><td>Cefadroxil</td><td>Longicef</td><td>كبسول 500 · شراب 125/250 · نقط 100</td></tr><tr><td>Cephapirin</td><td>Cefatrexyl</td><td>فيال 500/1000</td></tr><tr><td>Cefazolin</td><td>Totacef</td><td>فيال 500/1000</td></tr></tbody></table><h4>الجيل الثاني (Second generation)</h4><ul><li>طيف واسع مشابه للأول لكن أقل على الموجبة وأكثر على السالبة (ليس Pseudomonas) واللاهوائيات (ليس B. fragilis)</li><li>لا يعبر الحاجز الدموي المخي (BBB) <b>ما عدا Cefuroxime</b></li></ul><table><thead><tr><th>الاسم العلمي</th><th>التجاري</th><th>الأشكال</th></tr></thead><tbody><tr><td>Cefuroxime</td><td>Zinnat</td><td>قرص 125/250/500 · فيال 250/750/1500 · شراب 500</td></tr><tr><td>Cefprozil</td><td>Cefzil</td><td>قرص 250/500 · شراب 125/250</td></tr><tr><td>Cefpodoxime</td><td>Orelox</td><td>قرص 100 · شراب 40</td></tr><tr><td>Cefpodoxime</td><td>Cepodem</td><td>قرص 100 · شراب 40</td></tr><tr><td>Cefaclor</td><td>Ceclor</td><td>كبسول 250 · SR 375 · كبسول 500 · SR 500 / 750 · شراب 125/250</td></tr><tr><td>Cefaclor</td><td>Bacticlor</td><td>كبسول 250/500 · شراب 125/250</td></tr><tr><td>Cefaclor</td><td>Serviclor</td><td>شراب 125/250 · كبسول 250/500</td></tr><tr><td>Cefixime</td><td>Ximacef</td><td>كبسول 200/400 · شراب 100</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Cefpodoxime وCefixime أُدرجوا في المرجع ضمن الجيل الثاني، لكنهم تصنيفياً <b>جيل ثالث فموي</b>؛ Cefixime فعّال في التيفود والسيلان والتهاب المسالك.</p></div><h4>الجيل الثالث (Third generation) — حقن</h4><ul><li>طيف واسع ضد موجبة وسالبة الجرام الهوائية واللاهوائية، شبيه بالثاني لكن أقل على الموجبة وأكثر على السالبة، مقاوم للإنزيم</li></ul><table><thead><tr><th>الدواء</th><th>الخصائص</th><th>التجاري والأشكال</th></tr></thead><tbody><tr><td>Cefotaxime</td><td>يُستقلب بالكبد · يعبر BBB فمفيد في السحايا</td><td>Claforan 250/500/1000 فيال · Cefotax-T3A 250/500/1000 · Cefotax-EIPICO 250/500/1000 · Ceforan 500/1000 · Foxime 500/1000</td></tr><tr><td>Ceftazidime</td><td>فعّال ضد Pseudomonas aeruginosa · فعّال في السحايا</td><td>Fortum 250/500/1000 فيال</td></tr><tr><td>Cefoperazone</td><td>فعّال ضد Pseudomonas · غير فعّال في السحايا · يخرج بالصفراء فيُسمح به في الكلى بدون تعديل الجرعة</td><td>Cefobid · Cefozon · Cefazone — فيال 500/1000</td></tr><tr><td>Ceftriaxone</td><td>نصف عمر طويل، مرة يومياً · مركّز في CSF والعظام · يخرج بالصفراء فمسموح في الكلى بدون تعديل</td><td>Rocephin 500/1000 عضل · Ceftriaxone 500/1000 عضل · Cefotrix 250/500/1000 عضل ووريد</td></tr></tbody></table><h4>الجيل الرابع (Fourth generation) — حقن</h4><ul><li>شبيه بـCeftazidime لكن أكثر مقاومة لـβ-Lactamase</li><li>المثال: Cefepime — Maxipime فيال 500 و1000</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الجرعات المعتادة للبالغ (بحسب الإرشادات؛ تُعتمد بأمر الطبيب): Cefazolin 1–2 جم كل 8 ساعات · Ceftriaxone 1–2 جم يومياً (حتى 2 جم كل 12 س في السحايا) · Cefotaxime 1–2 جم كل 8 ساعات · Ceftazidime 1–2 جم كل 8 ساعات · Cefepime 1–2 جم كل 8–12 ساعة. Cefuroxime فموي 250–500 كل 12 ساعة. اعتمد دائماً الأمر الطبي.</p></div><!--e17--><h4>أسماء السوق وجداول الإعطاء (تكملة عملية)</h4>\n<table><thead><tr><th>الجيل / الدواء</th><th>الاسم التجاري والأشكال</th><th>الإعطاء وملاحظات</th></tr></thead><tbody>\n<tr><td>الجيل 1: ضعيف على Staph، موجبة الجرام أساساً</td><td></td><td></td></tr>\n<tr><td>Cephradine (أضعف أنواع الجيل ومش كتير الاستخدام)</td><td>Velosef (مستورد): كبسول 250 و500 · فيال 500 مجم و1 جم · معلق 125 و250. بدائل: Farcosef · Ultracef</td><td>الحقنة وريد أو عضل كل 12 ساعة؛ القرص والشراب كل 8 ساعات</td></tr>\n<tr><td>Cephadroxil / Cefadroxil (أفضل أنواع الجيل: قوي ضد Staph، تأثيره طويل، <b>فموي فقط</b> بدون حقن)</td><td>Duricef (مستورد): كبسول 500 · قرص 1 جم · معلق 125 و250 و500. بدائل: Biodroxil · Ibidroxil · Curosafe</td><td>قرص أو جرعة بالسم كل 12 ساعة</td></tr>\n<tr><td>Cephalexin (من أحسن الأنواع ونتائجه كويسة جداً)</td><td>Ceporex (مستورد): فيال 500 مجم و1 جم · قرص 250 و500 مجم و1 جم · معلق 125 و250. بدائل: Cephalexin · Ospexin</td><td>الحقنة وريد أو عضل كل 12 ساعة؛ القرص والشراب كل 8 ساعات</td></tr>\n<tr><td>الجيل 2: فعّال بالتساوي على موجبة وسالبة الجرام، ضعيف على Staph</td><td></td><td></td></tr>\n<tr><td>Cefuroxime</td><td>Zinnat (مستورد): فيال 750 مجم و1.5 جم · قرص 250 و500 · معلق 125</td><td>حقنة عضل أو وريد أو قرص أو جرعة بالسم كل 12 ساعة</td></tr>\n<tr><td>Cefaclor (النوع الوحيد في المجموعة اللي يشتغل على الميكروبات اللانمطية Atypical، ومفيش منه حقن)</td><td>Bacticlor: كبسول 250 و500 · معلق 125 و250. بدائل: Ceclor · Cefaclor</td><td>قرص أو جرعة بالسم كل 8 ساعات</td></tr>\n<tr><td>الجيل 3: أساساً سالبة الجرام، قوي ضد Staph وضد Pseudomonas (خصوصاً Ceftazidime)؛ معظمه حقن وبعضه فموي</td><td></td><td>كل الحقن تتعطى كل 12 ساعة ما عدا Ceftriaxone مرة يومياً (حسب المراجع)</td></tr>\n<tr><td>Cefotaxime (من أشهر المضادات وأكثرها استخداماً)</td><td>Claforan (مستورد): فيال 250 و500 مجم و1 جم. بدائل: Cefotax (الأشهر) · Sigmataxim</td><td>حقنة وريد أو عضل كل 12 ساعة</td></tr>\n<tr><td>Ceftriaxone (من أكثر المضادات استخداماً وفعّال جداً في النزلات المعوية خصوصاً التيفود)</td><td>Ceftriaxone 0.5 و1 جم (مستورد) / Ceftriaxone 1 جم (مصري). بدائل: Rocephin (أغلى) · Wintriaxone (من أرخص الأسعار)</td><td>مرة واحدة يومياً وريد أو عضل. عبوة العضل فيها محلول Lidocaine، والوريد محلول آخر (10 مل ماء مقطر): <b>ممنوع استخدام أحدهما مكان الآخر</b></td></tr>\n<tr><td>Cefoperazone (من أحسن المضادات في عدوى القنوات الصفراوية؛ يخرج بالصفراء فمش محتاج تعديل جرعة في الكلى)</td><td>Cefobid (مستورد): فيال 0.5 و1 و2 جم. بدائل: Cefazone · Cefoperazone</td><td>وريد أو عضل كل 12 ساعة. بعض الدراسات (حيوانية) تشير لضمور الخصية، فبعض الأطباء لا يحبون وصفه للأطفال</td></tr>\n<tr><td>Ceftazidime (مشهور بقوته ضد Pseudomonas)</td><td>Fortum (مستورد): فيال 250 و500 مجم و1 جم. بدائل: Cefidime · Ceftazidime</td><td>وريد أو عضل كل 12 ساعة</td></tr>\n<tr><td>Cefdinir (فموي فقط وغالي)</td><td>Cefdin (مستورد): معلق 125 · كبسول 300. بدائل: Dinar · Omnicef</td><td>كبسولة أو جرعة بالسم كل 12 ساعة</td></tr>\n<tr><td>Cefixime (فموي فقط، طيف خاص: موجبة وسالبة؛ نتائجه ممتازة في التهاب الأذن الوسطى والجيوب وعدوى الجهاز التنفسي العلوي والمسالك البولية)</td><td>Ximacef (الأشهر): معلق 100 و200 · كبسول 200 و400. بدائل: Suprax · Cefixime</td><td>كبسولة أو جرعة بالسم <b>مرة واحدة يومياً</b></td></tr>\n<tr><td>الجيل 4: Cefepime — من أوسع الأطياف بين المضادات ومن الأقوى في الممارسة</td><td>Maxipime (الأشهر والأفضل لأنه مستورد): فيال 0.5 و1 جم. بدائل: Cefrom · Wincef · Forcetex</td><td>حقنة وريد أو عضل كل 12 ساعة</td></tr></tbody></table>\n<div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>جرعات Cefotaxime وCeftazidime القياسية في كثير من البروتوكولات كل 8 ساعات (1–2 جم)، وCeftriaxone وريدي يُعطى بتسريب 30 دقيقة، ومن غير محلول الليدوكايين. جدول الـ12 ساعة هنا هو المتداول في العيادات؛ اتبع أمر الطبيب. وفي مرضى حساسية البنسلين الخفيفة يمكن استخدام السيفالوسبورينات بحذر عادةً.</p></div><!--E16-rociphen--><ul><li>Ceftriaxone: من الأسماء التجارية المنتشرة Rociphen (غالباً أغلى) وWintriaxone (من الأرخص)، وهناك المستورد (0.5 و1 جم) والمصري (1 جم). علبة العضل بها Lidocaine ومحلول وريدي منفصل (10 سم ماء مقطر): <b>لا يستخدم أحدهما مكان الآخر</b>.</li></ul><h4>تداخلات إضافية</h4><ul><li>مع الأمينوجليكوزيدات: يزيد خطر سمّية الكلى.</li><li>مع مضادات التخثر الفموية: يزيد خطر النزف.</li><li>مع المدرّات العروية (مثل furosemide): يرتفع مستوى السيفالوسبورين في الدم.</li></ul><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل عن الحساسية</strong><p>تاريخ حساسية بنسلين/سيفالوسبورين؟ حساسية متقاطعة نحو 1–2% (أعلى مع الجيل الأول). بلّغ قبل الجرعة الأولى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>تحقق من الدواء والجيل</strong><p>الجيل الأول للجلد والمسالك والوقاية الجراحية؛ الثالث للسحايا والأمراض الشديدة. تأكد من الجرعة والمدة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>تحضير الحقن</strong><p>عضل Ceftriaxone غالباً مع ليدوكايين (حسب النشرة، ولا يُحقن ليدوكايين وريدياً). وريدي: تسريب 15–30 دقيقة وفق النشرة. ممنوع خلط Ceftriaxone مع المحاليل أو الأدوية المحتوية على كالسيوم (Ringer، Calcium gluconate) خصوصاً في المواليد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>راقب أثناء الجرعة الأولى</strong><p>30 دقيقة: طفح، ضيق تنفس، حكة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأدوية الفموية</strong><p>Cefuroxime مع الأكل لزيادة الامتصاص؛ Cefaclor/Cefixime حسب النشرة؛ الحفاظ على الشراب مبرداً وبعد التجهيز ينتهي في 7–14 يوم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب أثناء العلاج</strong><p>إسهال شديد (C. diff)، بياض فموي، نزف (Cefoperazone)، الكلى، الوريد (التهاب).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تسجيل</strong><p>وقت كل جرعة، رد الفعل، الحرارة، الكرات البيضاء.</p></div></div></div>\n<!--nclex-p776--><h4>نقاط تمريضية مضافة: عائلة ceph/cef</h4>[[slot:dis-3211-pcn-ceph|البنسلينات والسيفالوسبورينات — رسم من إعداد الموقع|/diseases/img/dis-3211-pcn-ceph.svg]]<ul><li>اسمها يبدأ بـ <strong>ceph/cef</strong>: cephalexin (Keflex)، cefazolin، ceftriaxone (Rocephin)، cefepime، cefoxitin.</li><li>أثر جانبي مميز: إسهال؛ أبلغ عن الإسهال الشديد أو الدموي.</li><li>تحسس متصالب مع البنسلينات (Cross sensitivity).</li><li>بعض السيفالوسبورينات تعطي تفاعلًا يشبه disulfiram مع الكحول (احمرار، غثيان، قيء، خفقان).</li><li>تُعطى مع الأكل إن حدث انزعاج معدي؛ والمعلّق يُرجّ جيدًا.</li><li>أي تفاعل: أوقف الدواء، قيّم الرئتين، جهّز adrenaline.</li></ul>\n<!--nclex-p785-->[[slot:dis-3214-ceph-gen|أجيال السيفالوسبورينات والتداخلات — رسم من إعداد الموقع|/diseases/img/dis-3214-ceph-gen.svg]]<h4>تفاصيل إضافية</h4><ul><li><strong>الآلية:</strong> حلقة β-lactam تستهدف جدار الخلية فتجعله هشًا؛ مبيدة غالبًا.</li><li><strong>الاستعمال:</strong> الجهاز التنفسي، التهاب الأذن الوسطى، العظام والمفاصل، البولي التناسلي وعدوى بكتيرية أخرى.</li><li><strong>آثار خطيرة:</strong> سمّية كلوية، إعياء، Stevens-Johnson، فقر دم لاتنسجي، تنخر البشرة السمّي (TEN)؛ وآثار عامة: غثيان، قيء، إسهال، صداع، دوخة، حرقة، حمى.</li><li><strong>التحقق من الحساسية</strong> للبنسلين والسيفالوسبورين قبل الجرعة الأولى حتى لو سُجّل تاريخ سابق صحيح؛ بعد حقن بنسلين عضلي في العيادة اطلب من المريض الانتظار 30 دقيقة (أكثر وقت لحدوث الأنافيلاكسيس).</li><li><strong>تفاعل شبيه بـ disulfiram</strong> مع الكحول خلال 72 ساعة من بعض السيفالوسبورينات: احمرار، نبض بالرأس والعنق، ضيق نفس، قيء، تعرّق، ألم صدر، هبوط ضغط، وقد يصل لاضطراب نظم وفقدان وعي.</li><li><strong>PKU:</strong> معلّق cefprozil الفموي يحتوي phenylalanine.</li><li>حذر: أمراض الكلى، قصور الكبد، اضطراب النزف، الحمل، وتحسس البنسلين.</li><li>لا تسحق الأقراص ممتدة المفعول؛ وما يؤخذ على معدة فارغة: قبل الأكل بساعة أو بعده بساعتين.</li><li>جرعات للتعلّم: cefadroxil حوالي 1–2 غ/يوم مقسّمة (راجع النشرة).</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>ضيق تنفس/تورم/ضغط واطي بعد الحقن</li><li>إسهال مائي شديد أو دموي</li><li>نزف أو كدمات جديدة (Cefoperazone)</li><li>قلة بول</li><li>طفح جلدي منتشر أو تقشر</li><li>ألم شديد بالمرارة مع Ceftriaxone</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>كمّل العلاج المدة كلها حتى لو اتحسنت.</li><li>قول للطبيب عن أي حساسية بنسلين قبل البداية.</li><li>لو إسهال شديد بعد المضاد، لا تاخد مضاد إسهال وكلّم الطبيب.</li><li>Cefoperazone: ما تشربش كحول خلال العلاج وبعده بـ3–5 أيام.</li><li>الشراب يتحفظ في الثلاجة ويرج قبل الاستعمال.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "4 أجيال: الأول للموجبة، الثالث للسالبة والسحايا",
-      "لا تغطي MRSA وEnterococci وC. difficile وListeria",
-      "Cefuroxime الوحيد من الجيل الثاني اللي يعبر BBB",
-      "Cefotaxime/Ceftazidime/Ceftriaxone للسحايا، Cefoperazone لا",
-      "Ceftazidime وCefoperazone ضد Pseudomonas",
-      "Ceftriaxone مرة يومياً ويخرج بالصفراء، لا يُخلط مع الكالسيوم",
-      "Cefepime جيل رابع أكثر مقاومة للإنزيم"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي سيفالوسبورين لا يُنصح به في السحايا؟"
-      },
-      "options": [
-        {
-          "ar": "Cefotaxime"
-        },
-        {
-          "ar": "Ceftriaxone"
-        },
-        {
-          "ar": "Cefoperazone"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "Cefoperazone غير فعال في السحايا."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي جيل لا يدخل السحايا ما عدا Cefuroxime؟"
-      },
-      "options": [
-        {
-          "ar": "الثاني"
-        },
-        {
-          "ar": "الثالث"
-        },
-        {
-          "ar": "الرابع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الجيل الثاني."
-      }
-    },
-    {
-      "q": {
-        "ar": "Ceftriaxone ممنوع مع:"
-      },
-      "options": [
-        {
-          "ar": "محاليل بها كالسيوم"
-        },
-        {
-          "ar": "محلول ملح"
-        },
-        {
-          "ar": "Dextrose"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يحدث راسب خطير."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء يغطي Pseudomonas؟"
-      },
-      "options": [
-        {
-          "ar": "Ceftazidime"
-        },
-        {
-          "ar": "Cephalexin"
-        },
-        {
-          "ar": "Cefuroxime"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Ceftazidime وCefoperazone وCefepime."
-      }
-    },
-    {
-      "q": {
-        "ar": "كل السيفالوسبورينات لا تغطي:"
-      },
-      "options": [
-        {
-          "ar": "E. coli"
-        },
-        {
-          "ar": "MRSA وEnterococci وC. difficile"
-        },
-        {
-          "ar": "Staph حساس"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "ثغرة معروفة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي من الأدوية التالية سيفالوسبورين؟"
-      },
-      "options": [
-        {
-          "ar": "amoxicillin"
-        },
-        {
-          "ar": "ceftriaxone"
-        },
-        {
-          "ar": "gentamicin"
-        },
-        {
-          "ar": "azithromycin"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "ceftriaxone (Rocephin) يبدأ بـ cef فهو سيفالوسبورين."
-      }
-    },
-    {
-      "q": {
-        "ar": "الأثر الجانبي المميز لعائلة ceph:"
-      },
-      "options": [
-        {
-          "ar": "نزف"
-        },
-        {
-          "ar": "إسهال"
-        },
-        {
-          "ar": "طنين"
-        },
-        {
-          "ar": "تلون الأسنان"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الإسهال شائع مع السيفالوسبورينات، ويُبلَّغ إن كان شديدًا أو دمويًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض سيتناول cephalosporin وسبق أن تحسّس من penicillin. ما التصرف؟"
-      },
-      "options": [
-        {
-          "ar": "يُعطى مباشرة"
-        },
-        {
-          "ar": "يُسأل عن نوع التفاعل ويُبلَّغ الطبيب"
-        },
-        {
-          "ar": "لا يُسأل لأن العائلتين مختلفتان"
-        },
-        {
-          "ar": "يُعطى مع antihistamine دائمًا"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "قد يوجد تحسس متصالب، وتُحسم القرارات بعد معرفة نوع التفاعل."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مما يلي تفاعل شبيه بـ disulfiram مع سيفالوسبورين؟"
-      },
-      "options": [
-        {
-          "ar": "احمرار وقيء وخفقان بعد الكحول"
-        },
-        {
-          "ar": "سعال جاف"
-        },
-        {
-          "ar": "بول برتقالي"
-        },
-        {
-          "ar": "طنين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "بعض السيفالوسبورينات مع الكحول تعطي احمرارًا وغثيانًا وقيئًا وخفقانًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريضة PKU تحتاج cefprozil معلّق. التعليم:"
-      },
-      "options": [
-        {
-          "ar": "يحتوي phenylalanine فيحتاج حذرًا"
-        },
-        {
-          "ar": "يعالج PKU"
-        },
-        {
-          "ar": "يُعطى بالحقن فقط"
-        },
-        {
-          "ar": "لا علاقة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "المعلّق يحتوي phenylalanine الذي لا يستطيع مرضى PKU معالجته."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض لديه حساسية من levofloxacin وceftriaxone ووُصف له أحدهما. أنسب إجراء قبل الإعطاء:"
-      },
-      "options": [
-        {
-          "ar": "أعطه الدواء ثم راقبه"
-        },
-        {
-          "ar": "اسأله عن نوع رد الفعل الذي حدث له مع الدواء"
-        },
-        {
-          "ar": "أعطه الدواءين بينهما محلول ملح"
-        },
-        {
-          "ar": "اطلب منه أن يوقّع إقرارًا فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "نوع رد الفعل (طفح بسيط أم تأقي) يحدد هل الدواء آمن أم يجب تغييره، فيُسأل المريض ثم يُوضَّح الأمر مع الطبيب/الصيدلي قبل الإعطاء. إعطاء الدواء أولًا أو الفصل بمحلول لا يزيل خطر التحسس."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "BNF: Cephalosporins"
-    },
-    {
-      "title": "Sanford Guide to Antimicrobial Therapy (cephalosporin generations)"
-    },
-    {
-      "title": "StatPearls: Cephalosporins"
-    },
-    {
-      "title": "FDA label: Ceftriaxone (calcium-containing solutions warning)"
-    },
-    {
-      "title": "WHO Model Formulary: Cephalosporins"
-    },
-    {
-      "title": "Ceftriaxone product leaflet (IM lidocaine diluent — IM only)"
-    }
+  "en": [
+   "4 generations: the first for gram-positives, the third for gram-negatives and meningitis",
+   "They do not cover MRSA, Enterococci, C. difficile and Listeria",
+   "Cefuroxime is the only second-generation drug that crosses the BBB",
+   "Cefotaxime/Ceftazidime/Ceftriaxone for meningitis, Cefoperazone no",
+   "Ceftazidime and Cefoperazone against Pseudomonas",
+   "Ceftriaxone once daily and excreted in bile, never mixed with calcium",
+   "Cefepime is a fourth generation more resistant to the enzyme"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي سيفالوسبورين لا يُنصح به في السحايا؟",
+    "en": "Which cephalosporin is not recommended in meningitis?"
+   },
+   "options": [
+    {
+     "ar": "Cefotaxime",
+     "en": "Cefotaxime"
+    },
+    {
+     "ar": "Ceftriaxone",
+     "en": "Ceftriaxone"
+    },
+    {
+     "ar": "Cefoperazone",
+     "en": "Cefoperazone"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "Cefoperazone غير فعال في السحايا.",
+    "en": "Cefoperazone is not effective in meningitis."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي جيل لا يدخل السحايا ما عدا Cefuroxime؟",
+    "en": "Which generation does not enter the meninges except Cefuroxime?"
+   },
+   "options": [
+    {
+     "ar": "الثاني",
+     "en": "Second"
+    },
+    {
+     "ar": "الثالث",
+     "en": "Third"
+    },
+    {
+     "ar": "الرابع",
+     "en": "Fourth"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الجيل الثاني.",
+    "en": "The second generation."
+   }
+  },
+  {
+   "q": {
+    "ar": "Ceftriaxone ممنوع مع:",
+    "en": "Ceftriaxone is prohibited with:"
+   },
+   "options": [
+    {
+     "ar": "محاليل بها كالسيوم",
+     "en": "Solutions containing calcium"
+    },
+    {
+     "ar": "محلول ملح",
+     "en": "Saline"
+    },
+    {
+     "ar": "Dextrose",
+     "en": "Dextrose"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يحدث راسب خطير.",
+    "en": "A dangerous precipitate occurs."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء يغطي Pseudomonas؟",
+    "en": "Which drug covers Pseudomonas?"
+   },
+   "options": [
+    {
+     "ar": "Ceftazidime",
+     "en": "Ceftazidime"
+    },
+    {
+     "ar": "Cephalexin",
+     "en": "Cephalexin"
+    },
+    {
+     "ar": "Cefuroxime",
+     "en": "Cefuroxime"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Ceftazidime وCefoperazone وCefepime.",
+    "en": "Ceftazidime, Cefoperazone and Cefepime."
+   }
+  },
+  {
+   "q": {
+    "ar": "كل السيفالوسبورينات لا تغطي:",
+    "en": "All cephalosporins do not cover:"
+   },
+   "options": [
+    {
+     "ar": "E. coli",
+     "en": "E. coli"
+    },
+    {
+     "ar": "MRSA وEnterococci وC. difficile",
+     "en": "MRSA, Enterococci and C. difficile"
+    },
+    {
+     "ar": "Staph حساس",
+     "en": "Sensitive Staph"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "ثغرة معروفة.",
+    "en": "A known gap."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من الأدوية التالية سيفالوسبورين؟",
+    "en": "Which of the following drugs is a cephalosporin?"
+   },
+   "options": [
+    {
+     "ar": "amoxicillin",
+     "en": "amoxicillin"
+    },
+    {
+     "ar": "ceftriaxone",
+     "en": "ceftriaxone"
+    },
+    {
+     "ar": "gentamicin",
+     "en": "gentamicin"
+    },
+    {
+     "ar": "azithromycin",
+     "en": "azithromycin"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "ceftriaxone (Rocephin) يبدأ بـ cef فهو سيفالوسبورين.",
+    "en": "ceftriaxone (Rocephin) starts with cef so it is a cephalosporin."
+   }
+  },
+  {
+   "q": {
+    "ar": "الأثر الجانبي المميز لعائلة ceph:",
+    "en": "The distinctive side effect of the ceph family:"
+   },
+   "options": [
+    {
+     "ar": "نزف",
+     "en": "Bleeding"
+    },
+    {
+     "ar": "إسهال",
+     "en": "Diarrhea"
+    },
+    {
+     "ar": "طنين",
+     "en": "Tinnitus"
+    },
+    {
+     "ar": "تلون الأسنان",
+     "en": "Tooth discoloration"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الإسهال شائع مع السيفالوسبورينات، ويُبلَّغ إن كان شديدًا أو دمويًا.",
+    "en": "Diarrhea is common with cephalosporins, and it is reported if severe or bloody."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض سيتناول cephalosporin وسبق أن تحسّس من penicillin. ما التصرف؟",
+    "en": "A patient will take a cephalosporin and previously had an allergy to penicillin. What is the action?"
+   },
+   "options": [
+    {
+     "ar": "يُعطى مباشرة",
+     "en": "Give it directly"
+    },
+    {
+     "ar": "يُسأل عن نوع التفاعل ويُبلَّغ الطبيب",
+     "en": "Ask about the type of reaction and notify the physician"
+    },
+    {
+     "ar": "لا يُسأل لأن العائلتين مختلفتان",
+     "en": "Do not ask because the two families are different"
+    },
+    {
+     "ar": "يُعطى مع antihistamine دائمًا",
+     "en": "Always give it with an antihistamine"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "قد يوجد تحسس متصالب، وتُحسم القرارات بعد معرفة نوع التفاعل.",
+    "en": "There may be cross-sensitivity, and decisions are settled after knowing the type of reaction."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مما يلي تفاعل شبيه بـ disulfiram مع سيفالوسبورين؟",
+    "en": "Which of the following is a disulfiram-like reaction with a cephalosporin?"
+   },
+   "options": [
+    {
+     "ar": "احمرار وقيء وخفقان بعد الكحول",
+     "en": "Flushing, vomiting and palpitations after alcohol"
+    },
+    {
+     "ar": "سعال جاف",
+     "en": "Dry cough"
+    },
+    {
+     "ar": "بول برتقالي",
+     "en": "Orange urine"
+    },
+    {
+     "ar": "طنين",
+     "en": "Tinnitus"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "بعض السيفالوسبورينات مع الكحول تعطي احمرارًا وغثيانًا وقيئًا وخفقانًا.",
+    "en": "Some cephalosporins with alcohol cause flushing, nausea, vomiting and palpitations."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريضة PKU تحتاج cefprozil معلّق. التعليم:",
+    "en": "A PKU patient needs cefprozil suspension. The teaching:"
+   },
+   "options": [
+    {
+     "ar": "يحتوي phenylalanine فيحتاج حذرًا",
+     "en": "It contains phenylalanine so it needs caution"
+    },
+    {
+     "ar": "يعالج PKU",
+     "en": "It treats PKU"
+    },
+    {
+     "ar": "يُعطى بالحقن فقط",
+     "en": "It is given by injection only"
+    },
+    {
+     "ar": "لا علاقة",
+     "en": "No relation"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "المعلّق يحتوي phenylalanine الذي لا يستطيع مرضى PKU معالجته.",
+    "en": "The suspension contains phenylalanine, which PKU patients cannot process."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض لديه حساسية من levofloxacin وceftriaxone ووُصف له أحدهما. أنسب إجراء قبل الإعطاء:",
+    "en": "A patient has an allergy to levofloxacin and ceftriaxone and one of them was prescribed. The most appropriate action before giving:"
+   },
+   "options": [
+    {
+     "ar": "أعطه الدواء ثم راقبه",
+     "en": "Give the drug and then monitor him"
+    },
+    {
+     "ar": "اسأله عن نوع رد الفعل الذي حدث له مع الدواء",
+     "en": "Ask him what type of reaction happened to him with the drug"
+    },
+    {
+     "ar": "أعطه الدواءين بينهما محلول ملح",
+     "en": "Give both drugs with saline between them"
+    },
+    {
+     "ar": "اطلب منه أن يوقّع إقرارًا فقط",
+     "en": "Just ask him to sign a waiver"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "نوع رد الفعل (طفح بسيط أم تأقي) يحدد هل الدواء آمن أم يجب تغييره، فيُسأل المريض ثم يُوضَّح الأمر مع الطبيب/الصيدلي قبل الإعطاء. إعطاء الدواء أولًا أو الفصل بمحلول لا يزيل خطر التحسس.",
+    "en": "The type of reaction (a simple rash or anaphylaxis) determines whether the drug is safe or must be changed, so the patient is asked and then it is clarified with the physician/pharmacist before giving. Giving the drug first or separating with saline does not remove the risk of allergy."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "BNF: Cephalosporins"
+  },
+  {
+   "title": "Sanford Guide to Antimicrobial Therapy (cephalosporin generations)"
+  },
+  {
+   "title": "StatPearls: Cephalosporins"
+  },
+  {
+   "title": "FDA label: Ceftriaxone (calcium-containing solutions warning)"
+  },
+  {
+   "title": "WHO Model Formulary: Cephalosporins"
+  },
+  {
+   "title": "Ceftriaxone product leaflet (IM lidocaine diluent — IM only)"
+  }
+ ]
 }

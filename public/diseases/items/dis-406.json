@@ -1,229 +1,282 @@
 {
-  "id": "dis-406",
-  "num": 406,
-  "system": "ent",
-  "icon": "💫",
-  "level": 2,
-  "target": "diseases",
-  "title": {
-    "ar": "الدوخة والدوار",
-    "en": "Dizziness & Vertigo"
+ "id": "dis-406",
+ "num": 406,
+ "system": "ent",
+ "icon": "💫",
+ "level": 2,
+ "target": "diseases",
+ "title": {
+  "ar": "الدوخة والدوار",
+  "en": "Dizziness & Vertigo"
+ },
+ "teaser": {
+  "ar": "من أكتر الشكاوى المحيّرة: إزاي تسأل المريض عشان تفرّق دوخة بسيطة من دوار حقيقي، السبعة أسباب العملية للدوخة، وBPPV، وأدوية السوق (Betaserc, Stugeron).",
+  "en": "One of the most puzzling complaints: how to question the patient to tell simple dizziness from true vertigo, the seven practical causes of dizziness, BPPV, and market drugs (Betaserc, Stugeron)."
+ },
+ "chips": [
+  {
+   "ar": "دوخة ولا دوار؟",
+   "en": "Dizziness or vertigo?"
   },
-  "teaser": {
-    "ar": "من أكتر الشكاوى المحيّرة: إزاي تسأل المريض عشان تفرّق دوخة بسيطة من دوار حقيقي، السبعة أسباب العملية للدوخة، وBPPV، وأدوية السوق (Betaserc, Stugeron)."
+  {
+   "ar": "قياس ضغط وسكر",
+   "en": "Measure pressure and glucose"
   },
-  "chips": [
-    {
-      "ar": "دوخة ولا دوار؟"
-    },
-    {
-      "ar": "قياس ضغط وسكر"
-    },
-    {
-      "ar": "Betaserc / Stugeron"
-    }
+  {
+   "ar": "Betaserc / Stugeron",
+   "en": "Betaserc / Stugeron"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الدوخة والدوار من أكثر الشكاوى الطبية المحيّرة، لأن المرضى بيختلفوا في التعبير عن طبيعة الشكوى. المريض بيقول: «دوخة» أو «حاسس إن دماغي خفيفة» أو «حاسس إني هقع» أو «الدنيا بتلف بيّا».</p>[[slot:dis-406-algorithm|خطوات التقييم|/diseases/img/dis-406-algorithm.svg]]<h4>اسأل المريض كذا سؤال عشان تفرق بين Dizziness و Vertigo</h4><ul><li>دوخة بسيطة ولا حاسس إن الدنيا بتلف حواليك؟</li><li>معاها غثيان (حاسس إنك عايز ترجع) أو ترجيع؟</li><li>معاها ضعف في السمع؟</li><li>معاها زن أو وش في الودن؟</li></ul>",
+   "en": "<p>Dizziness and vertigo are among the most puzzling medical complaints, because patients differ in how they describe the nature of the complaint. The patient says: “dizzy” or “my head feels light” or “I feel I'm going to fall” or “the world is spinning around me.”</p>[[slot:dis-406-algorithm|Assessment steps|/diseases/img/dis-406-algorithm.svg]]<h4>Ask the patient several questions to tell Dizziness from Vertigo</h4><ul><li>Simple dizziness, or do you feel the world spinning around you?</li><li>Is it with nausea (feeling like vomiting) or vomiting?</li><li>Is it with hearing loss?</li><li>Is it with ringing or buzzing in the ear?</li></ul>"
+  },
+  "causes": {
+   "ar": "<h4>أكثر أسباب الدوخة (Dizziness) عملياً</h4><table><thead><tr><th>السبب</th><th>التفاصيل</th></tr></thead><tbody><tr><td>١) Orthostatic hypotension</td><td>انخفاض الضغط بعد القيام أو الجلوس من وضع النوم فجأة</td></tr><tr><td>٢) Hypoglycemia</td><td>نقص السكر في الدم: مريض سكر أو بذل مجهود كبير بدون تناول أكل</td></tr><tr><td>٣) Anemia</td><td>أنيميا في الدم، خصوصاً لو المريض شكله شاحب وضعيف</td></tr><tr><td>٤) Fever & infection esp. common cold</td><td>عندك كحة، رشح، عطس، ألم في الزور، سخونية، تكسير في العضم؟ في حالات كتير حاجة بدوخة بسبب دور برد: اسأل على الأعراض هتلاقيها موجودة</td></tr><tr><td>٥) Heart disease e.g. arrhythmia</td><td>مشاكل القلب زي عدم انتظام ضربات القلب ممكن تعمل دوخة مفاجأة — هتشوف النبض وتسمع القلب بالسماعة، ويفضل رسم قلب في السن الكبير</td></tr><tr><td>٦) Transient ischemic attack (TIA)</td><td>نقص في الدم الواصل للمخ بياخد عدة دقائق ثم يختفي — إنذار مبكر لحدوث جلطات؛ يحتاج متابعة في عيادة المخ والأعصاب</td></tr><tr><td>٧) Pregnancy in newly married woman</td><td>لو واحدة ست متجوزة جديد ومنتظرة حمل: اسألها الدورة نزلت ولا لأ؟ ولو منزلتش اعمل اختبار حمل منزلي</td></tr></tbody></table><h4>أسباب الدوار (Vertigo): الدنيا بتلف حوالين المريض</h4><table><thead><tr><th>السبب</th><th>التفاصيل</th></tr></thead><tbody><tr><td>BPPV (Benign Paroxysmal Positional Vertigo)</td><td><b>أشهر سبب للدوار</b>: نوبات دوخة لمدة ثواني أو دقائق، غالباً عند التقليب في السرير أو القيام من السرير صباحاً</td></tr><tr><td>Viral labyrinthitis</td><td>التهاب الأذن الداخلية، غالباً بييجي بعد دور برد أو إنفلونزا</td></tr><tr><td>أخرى (إضافة)</td><td>التهابات الأذن الوسطى، مرض مينيير (Ménière: دوار + طنين + نقص سمع)، أدوية سامة للأذن، السكتة الخلفية (طوارئ)</td></tr></tbody></table>",
+   "en": "<h4>The most practical causes of Dizziness</h4><table><thead><tr><th>Cause</th><th>Details</th></tr></thead><tbody><tr><td>1) Orthostatic hypotension</td><td>Low blood pressure after standing or sitting up suddenly from lying down</td></tr><tr><td>2) Hypoglycemia</td><td>Low blood glucose: a diabetic patient or great exertion without eating</td></tr><tr><td>3) Anemia</td><td>Anemia, especially if the patient looks pale and weak</td></tr><tr><td>4) Fever & infection esp. common cold</td><td>Do you have a cough, runny nose, sneezing, sore throat, fever, body aches? In many cases dizziness is due to a cold: ask about the symptoms and you will find them</td></tr><tr><td>5) Heart disease e.g. arrhythmia</td><td>Heart problems like an irregular heartbeat can cause sudden dizziness — check the pulse and listen to the heart with the stethoscope, and an ECG is preferred in the elderly</td></tr><tr><td>6) Transient ischemic attack (TIA)</td><td>A reduction in blood reaching the brain lasting several minutes then disappearing — an early warning of strokes; needs follow-up in the neurology clinic</td></tr><tr><td>7) Pregnancy in newly married woman</td><td>If a woman is newly married and expecting pregnancy: ask whether her period came or not. If it did not, do a home pregnancy test</td></tr></tbody></table><h4>Causes of Vertigo: the world spins around the patient</h4><table><thead><tr><th>Cause</th><th>Details</th></tr></thead><tbody><tr><td>BPPV (Benign Paroxysmal Positional Vertigo)</td><td><b>The most famous cause of vertigo</b>: episodes of dizziness lasting seconds or minutes, mostly when turning in bed or getting out of bed in the morning</td></tr><tr><td>Viral labyrinthitis</td><td>Inflammation of the inner ear, usually after a cold or influenza</td></tr><tr><td>Others (addition)</td><td>Middle ear infections, Ménière's disease (vertigo + tinnitus + hearing loss), ototoxic drugs, posterior stroke (emergency)</td></tr></tbody></table>"
+  },
+  "signs": {
+   "ar": "<h4>الدوخة البسيطة (Dizziness)</h4><p>دوخة بسيطة ممكن يبقى معاها غثيان بس مفيش مشكلة في السمع أو وش (غالباً المشكلة بتبقى بسيطة وبتروح لوحدها).</p><h4>الدوار (Vertigo)</h4><p>الدنيا بتلف حوالين المريض + غثيان أو ترجيع وأحياناً ضعف في السمع أو وش (ممكن يبقى في مشكلة في الأذن الداخلية ويفضل تحويلها).</p><div class=\"cs-box cs-danger\"><strong>علامات خطر (إضافة)</strong><ul><li>ضعف مفاجئ في طرف، تلعثم، اعوجاج الوش، ازدواج رؤية (سكتة مخية)</li><li>صداع شديد مفاجئ أو بعد إصابة رأس</li><li>عدم القدرة على الوقوف أو المشي</li><li>فقدان سمع مفاجئ في أذن</li></ul></div>\n<h4>مرض مينيير (Ménière's Disease): مراجعة امتحانية</h4>[[slot:dis-2873-meniere|مرض مينيير: الثلاثي الكلاسيكي والتثقيف — رسم من إعداد الموقع|/diseases/img/dis-2873-meniere.svg]]<p>تجمع سوائل في الأذن الداخلية، يصيب غالباً <strong>جانباً واحداً</strong> ويأتي ويذهب بنوبات مفاجئة، وقد يؤدي إلى صمم دائم.</p><div class=\"cs-box cs-danger\"><strong>3 علامات رئيسية</strong><p><strong>طنين (Tinnitus)</strong> + <strong>فقد سمع من جانب واحد</strong> + <strong>دوار (Vertigo)</strong> (دوخة وفقدان توازن).</p></div>",
+   "en": "<h4>Simple dizziness (Dizziness)</h4><p>Simple dizziness may come with nausea but with no hearing problem or ringing (usually the problem is minor and goes away on its own).</p><h4>Vertigo</h4><p>The world spins around the patient + nausea or vomiting and sometimes hearing loss or ringing (there may be an inner ear problem and referral is preferred).</p><div class=\"cs-box cs-danger\"><strong>Danger signs (addition)</strong><ul><li>Sudden weakness in a limb, slurred speech, facial droop, double vision (stroke)</li><li>Sudden severe headache or after a head injury</li><li>Inability to stand or walk</li><li>Sudden hearing loss in one ear</li></ul></div>\n<h4>Ménière's Disease: exam review</h4>[[slot:dis-2873-meniere|Ménière's disease: the classic triad and teaching — site illustration|/diseases/img/dis-2873-meniere.svg]]<p>A buildup of fluid in the inner ear, usually affecting <strong>one side</strong> and coming and going in sudden attacks, and it may lead to permanent deafness.</p><div class=\"cs-box cs-danger\"><strong>3 main signs</strong><p><strong>Tinnitus</strong> + <strong>hearing loss on one side</strong> + <strong>Vertigo</strong> (dizziness and loss of balance).</p></div>"
+  },
+  "tests": {
+   "ar": "<h4>لخّص: أي حالة جاية الاستقبال أو العيادة بدوخة</h4><ol><li>قياس الضغط (<b>نائماً</b> ثم يجلس ٥ دقائق ويقاس <b>جالساً</b>) — فرق انخفاض بعد الوقوف = هبوط ضغط وضعي</li><li>قياس السكر</li><li>السؤال عن أعراض دور البرد</li><li>طلب تحليل دم (CBC/أنيميا)</li><li>قياس النبض وسماع القلب + رسم قلب في السن الكبير</li><li>السؤال عن أعراض نقص الدم للمخ</li><li>لو واحدة ست متجوزة جديد تسأل الدورة نزلت ولا لأ؟</li></ol><p>بعد عمل الفحوصات اللازمة واستبعاد الأسباب المشهورة للدوخة: هتكتب أي من الأدوية اللي فاتت للمريض وتقوله يحيلك بعد أسبوعين. لو مفيش تحسن: يتم تحويل الحالة إلى أخصائي ENT.</p><div class=\"cs-box cs-tip\"><strong>إضافة: اختبار Dix-Hallpike لـ BPPV</strong><p>إرشادات AAO-HNS تقترح Dix-Hallpike (اتجاهين) لتشخيص BPPV، والعلاج الأساسي مناورة Epley لإعادة توزيع بلورات الأذن الداخلية (Otoconia)؛ <b>لا يُنصح بمثبطات الدهليز (Vestibular suppressants) (مثل مضادات الهستامين والبنزوديازيبين) كعلاج روتيني لـ BPPV</b>. يفعلها الطبيب/المعالج المدرب.</p></div>",
+   "en": "<h4>Summary: any case coming to the emergency or clinic with dizziness</h4><ol><li>Measure blood pressure (<b>lying down</b> then sit for 5 minutes and measure <b>sitting</b>) — a drop after standing = orthostatic hypotension</li><li>Measure glucose</li><li>Ask about cold symptoms</li><li>Request a blood test (CBC/anemia)</li><li>Measure the pulse and listen to the heart + an ECG in the elderly</li><li>Ask about symptoms of reduced blood flow to the brain</li><li>If a woman is newly married, ask whether her period came or not</li></ol><p>After doing the necessary tests and ruling out the well-known causes of dizziness: prescribe one of the drugs above and tell the patient to come back after two weeks. If there is no improvement: the case is referred to an ENT specialist.</p><div class=\"cs-box cs-tip\"><strong>Addition: the Dix-Hallpike test for BPPV</strong><p>Guidelines suggest Dix-Hallpike (both directions) to diagnose BPPV, and the main treatment is the Epley maneuver to redistribute the inner ear crystals (Otoconia); <b>Vestibular suppressants (such as antihistamines and benzodiazepines) are not advised as routine treatment for BPPV</b>. It is performed by the physician/trained therapist.</p></div>"
+  },
+  "treatment": {
+   "ar": "<p>علاج السبب أولاً (ضغط، سكر، أنيميا، برد، قلب، حمل…).</p><h4>أدوية الدوار (حسب المراجع — بعد الفحوصات واستبعاد السبب)</h4><p>بعض الدكاترة بتكتب أدوية بتحسّن الدم الواصل للشعيرات الدموية في الأذن الداخلية بعد عمل الفحوصات وعدم وجود سبب واضح لدوخة وبتجيب نتائج كويسة.</p><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td><b>Betaserc 16</b> tab (20 tab) — <b>Verserc 16</b> — <b>Microserc 16</b></td><td>قرص ٣ مرات يومياً (عند حدوث تحسن تقل الجرعة إلى قرص صباحاً ومساءً)</td></tr><tr><td><b>Stugeron</b> tab (30 tab)</td><td>قرص ٣ مرات يومياً بعد الأكل</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Betaserc/Verserc/Microserc هو <b>Betahistine 16 mg</b>، وStugeron هو <b>Cinnarizine 25 mg</b>. فعالية Betahistine في الدوار غير الأكيدة في الدراسات (يُستخدم أساساً لمرض مينيير)، وCinnarizine قد يسبب نعاس وتصلب أو رعشة عند الاستخدام الطويل وخصوصاً كبار السن؛ لا يُعطى لمريض Parkinson. Betahistine بحذر لمرضى الربو وقرحة المعدة والفيوكروموسيتوما. لا تعتبرهم علاج BPPV؛ العلاج الأساسي مناورة Epley.</p></div>",
+   "en": "<p>Treat the cause first (blood pressure, glucose, anemia, cold, heart, pregnancy…).</p><h4>Vertigo drugs (after the tests and ruling out the cause)</h4><p>Some doctors prescribe drugs that improve blood reaching the capillaries of the inner ear after doing the tests and finding no clear cause of dizziness, and they give good results.</p><table><thead><tr><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td><b>Betaserc 16</b> tab (20 tab) — <b>Verserc 16</b> — <b>Microserc 16</b></td><td>One tablet 3 times daily (when improvement occurs the dose is reduced to one tablet morning and evening)</td></tr><tr><td><b>Stugeron</b> tab (30 tab)</td><td>One tablet 3 times daily after food</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Betaserc/Verserc/Microserc is <b>Betahistine 16 mg</b>, and Stugeron is <b>Cinnarizine 25 mg</b>. The effectiveness of Betahistine in vertigo is uncertain in studies (it is mainly used for Ménière's disease), and Cinnarizine may cause drowsiness and stiffness or tremor with long-term use, especially in the elderly; it is not given to a Parkinson patient. Betahistine with caution in patients with asthma, stomach ulcer, and pheochromocytoma. Do not consider them treatment for BPPV; the main treatment is the Epley maneuver.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل وصنّف</strong><p>دوخة ولا دوار؟ مدة النوبة، تغيّر مع الوضع، غثيان، سمع/طنين، حرارة، أدوية، حمل. قيّم السقوط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قياس سريع</strong><p>ضغط نايماً ثم جالساً بعد ٥ دقائق، نبض، سكر الدم، حرارة. بلّغ بأي رقم غير طبيعي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أمّن المريض</strong><p>يقعد/ينام فوراً، سرير بحواجز، مساعدة عند المشي، إضاءة كافية. لا يقوم بسرعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اعطِ الأدوية</strong><p>Betaserc: مع الأكل (يقلل المعدة) ٣ مرات. Stugeron: بعد الأكل ٣ مرات؛ انتبه للنعاس والسقوط. غثيان: بأمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>اكتشف الأخطر</strong><p>أعراض سكتة أو TIA (ضعف/تلعثم/اعوجاج)، فقدان سمع مفاجئ، صداع شديد: طوارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>سجل ومتابعة</strong><p>نوع الدوخة، الأرقام، الأدوية، التثقيف، ميعاد المتابعة بعد أسبوعين.</p></div></div></div>\n<p><strong>نقطة امتحان:</strong> لمريض مينيير الأولوية سلامته: وقاية من السقوط وتغيير وضعيات ببطء.</p>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Ask and classify</strong><p>Dizziness or vertigo? Duration of the episode, change with position, nausea, hearing/ringing, fever, medications, pregnancy. Assess fall risk.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Quick measurements</strong><p>Blood pressure lying then sitting after 5 minutes, pulse, blood glucose, temperature. Report any abnormal number.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Keep the patient safe</strong><p>Sit/lie down immediately, bed with rails, help when walking, adequate lighting. Do not get up quickly.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Give the medications</strong><p>Betaserc: with food (reduces stomach upset) 3 times. Stugeron: after food 3 times; watch for drowsiness and falls. Nausea: by physician's order.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Detect the more serious</strong><p>Symptoms of stroke or TIA (weakness/slurred speech/facial droop), sudden hearing loss, severe headache: emergency.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Document and follow up</strong><p>Type of dizziness, the numbers, the medications, teaching, follow-up appointment after two weeks.</p></div></div></div>\n<p><strong>Exam point:</strong> for a Ménière's patient the priority is safety: fall prevention and changing positions slowly.</p>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>طوارئ — بلّغ فوراً</strong><ul><li>ضعف أو تنميل جانب، تلعثم، اعوجاج الوش، ضعف رؤية (TIA/سكتة)</li><li>ألم صدر أو خفقان أو إغماء (قلب)</li><li>سكر أقل من 70 أو أعراض هبوط سكر</li><li>صداع شديد مفاجئ أو بعد ضربة على الرأس</li><li>فقدان سمع مفاجئ</li><li>دوخة مستمرة بعد أسبوعين من العلاج: تحويل ENT</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Emergency — report immediately</strong><ul><li>Weakness or numbness on one side, slurred speech, facial droop, impaired vision (TIA/stroke)</li><li>Chest pain, palpitations, or fainting (heart)</li><li>Glucose below 70 or symptoms of hypoglycemia</li><li>Sudden severe headache or after a blow to the head</li><li>Sudden hearing loss</li><li>Dizziness continuing after two weeks of treatment: ENT referral</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>قوم من السرير والكرسي ببطء (اقعد دقيقة قبل ما تقف).</li><li>كُل في مواعيدك ولا تبذل مجهود بدون أكل (خصوصاً السكر).</li><li>القرص ٣ مرات بعد الأكل، وقلّل الجرعة لما تتحسن حسب الدكتور.</li><li>ما تسوقش ولا تشتغل في عالي لو بتدوخ.</li><li>لو الدوخة اتكررت أو طنين أو ضعف سمع: روح لأخصائي أنف وأذن.</li></ul>\n<h4>تثقيف مريض مينيير</h4><ul><li>الوقاية من السقوط (Fall precautions): <strong>غيّر وضعيتك ببطء</strong>.</li><li>تقييد الصوديوم (الصوديوم يحبس السوائل).</li><li>تجنب: التدخين، الكافيين، الكحول.</li></ul>",
+   "en": "<ul><li>Get up from the bed and chair slowly (sit for a minute before you stand).</li><li>Eat at your times and do not exert yourself without eating (especially diabetics).</li><li>The tablet 3 times after food, and reduce the dose when you improve per the doctor.</li><li>Do not drive or work at heights if you get dizzy.</li><li>If the dizziness recurs, or with ringing or hearing loss: go to an ENT specialist.</li></ul>\n<h4>Teaching for the Ménière's patient</h4><ul><li>Fall precautions: <strong>change your position slowly</strong>.</li><li>Restrict sodium (sodium retains fluid).</li><li>Avoid: smoking, caffeine, alcohol.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "فرّق الدوخة (Dizziness) عن الدوار (Vertigo) بالسؤال",
+   "سبعة أسباب عملية للدوخة: ضغط وضعي، سكر، أنيميا، برد، قلب، TIA، حمل",
+   "أشهر سبب للدوار: BPPV (ثواني مع التقليب)",
+   "التهاب الأذن الداخلية الفيروسي بعد برد أو إنفلونزا",
+   "اقيس الضغط (نايم ثم جالس ٥ دقائق) والسكر وحلل دم",
+   "بعد أسبوعين بدون تحسن: ENT",
+   "مينيير: طنين + فقد سمع أحادي + دوار، وتثقيفه الوقاية من السقوط وتقييد الصوديوم وتجنب التدخين والكافيين والكحول"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الدوخة والدوار من أكثر الشكاوى الطبية المحيّرة، لأن المرضى بيختلفوا في التعبير عن طبيعة الشكوى. المريض بيقول: «دوخة» أو «حاسس إن دماغي خفيفة» أو «حاسس إني هقع» أو «الدنيا بتلف بيّا».</p>[[slot:dis-406-algorithm|خطوات التقييم|/diseases/img/dis-406-algorithm.svg]]<h4>اسأل المريض كذا سؤال عشان تفرق بين Dizziness و Vertigo</h4><ul><li>دوخة بسيطة ولا حاسس إن الدنيا بتلف حواليك؟</li><li>معاها غثيان (حاسس إنك عايز ترجع) أو ترجيع؟</li><li>معاها ضعف في السمع؟</li><li>معاها زن أو وش في الودن؟</li></ul>"
-    },
-    "causes": {
-      "ar": "<h4>أكثر أسباب الدوخة (Dizziness) عملياً</h4><table><thead><tr><th>السبب</th><th>التفاصيل</th></tr></thead><tbody><tr><td>١) Orthostatic hypotension</td><td>انخفاض الضغط بعد القيام أو الجلوس من وضع النوم فجأة</td></tr><tr><td>٢) Hypoglycemia</td><td>نقص السكر في الدم: مريض سكر أو بذل مجهود كبير بدون تناول أكل</td></tr><tr><td>٣) Anemia</td><td>أنيميا في الدم، خصوصاً لو المريض شكله شاحب وضعيف</td></tr><tr><td>٤) Fever & infection esp. common cold</td><td>عندك كحة، رشح، عطس، ألم في الزور، سخونية، تكسير في العضم؟ في حالات كتير حاجة بدوخة بسبب دور برد: اسأل على الأعراض هتلاقيها موجودة</td></tr><tr><td>٥) Heart disease e.g. arrhythmia</td><td>مشاكل القلب زي عدم انتظام ضربات القلب ممكن تعمل دوخة مفاجأة — هتشوف النبض وتسمع القلب بالسماعة، ويفضل رسم قلب في السن الكبير</td></tr><tr><td>٦) Transient ischemic attack (TIA)</td><td>نقص في الدم الواصل للمخ بياخد عدة دقائق ثم يختفي — إنذار مبكر لحدوث جلطات؛ يحتاج متابعة في عيادة المخ والأعصاب</td></tr><tr><td>٧) Pregnancy in newly married woman</td><td>لو واحدة ست متجوزة جديد ومنتظرة حمل: اسألها الدورة نزلت ولا لأ؟ ولو منزلتش اعمل اختبار حمل منزلي</td></tr></tbody></table><h4>أسباب الدوار (Vertigo): الدنيا بتلف حوالين المريض</h4><table><thead><tr><th>السبب</th><th>التفاصيل</th></tr></thead><tbody><tr><td>BPPV (Benign Paroxysmal Positional Vertigo)</td><td><b>أشهر سبب للدوار</b>: نوبات دوخة لمدة ثواني أو دقائق، غالباً عند التقليب في السرير أو القيام من السرير صباحاً</td></tr><tr><td>Viral labyrinthitis</td><td>التهاب الأذن الداخلية، غالباً بييجي بعد دور برد أو إنفلونزا</td></tr><tr><td>أخرى (إضافة)</td><td>التهابات الأذن الوسطى، مرض مينيير (Ménière: دوار + طنين + نقص سمع)، أدوية سامة للأذن، السكتة الخلفية (طوارئ)</td></tr></tbody></table>"
-    },
-    "signs": {
-      "ar": "<h4>الدوخة البسيطة (Dizziness)</h4><p>دوخة بسيطة ممكن يبقى معاها غثيان بس مفيش مشكلة في السمع أو وش (غالباً المشكلة بتبقى بسيطة وبتروح لوحدها).</p><h4>الدوار (Vertigo)</h4><p>الدنيا بتلف حوالين المريض + غثيان أو ترجيع وأحياناً ضعف في السمع أو وش (ممكن يبقى في مشكلة في الأذن الداخلية ويفضل تحويلها).</p><div class=\"cs-box cs-danger\"><strong>علامات خطر (إضافة)</strong><ul><li>ضعف مفاجئ في طرف، تلعثم، اعوجاج الوش، ازدواج رؤية (سكتة مخية)</li><li>صداع شديد مفاجئ أو بعد إصابة رأس</li><li>عدم القدرة على الوقوف أو المشي</li><li>فقدان سمع مفاجئ في أذن</li></ul></div>\n<h4>مرض مينيير (Ménière's Disease): مراجعة امتحانية</h4>[[slot:dis-2873-meniere|مرض مينيير: الثلاثي الكلاسيكي والتثقيف — رسم من إعداد الموقع|/diseases/img/dis-2873-meniere.svg]]<p>تجمع سوائل في الأذن الداخلية، يصيب غالباً <strong>جانباً واحداً</strong> ويأتي ويذهب بنوبات مفاجئة، وقد يؤدي إلى صمم دائم.</p><div class=\"cs-box cs-danger\"><strong>3 علامات رئيسية</strong><p><strong>طنين (Tinnitus)</strong> + <strong>فقد سمع من جانب واحد</strong> + <strong>دوار (Vertigo)</strong> (دوخة وفقدان توازن).</p></div>"
-    },
-    "tests": {
-      "ar": "<h4>لخّص: أي حالة جاية الاستقبال أو العيادة بدوخة</h4><ol><li>قياس الضغط (<b>نائماً</b> ثم يجلس ٥ دقائق ويقاس <b>جالساً</b>) — فرق انخفاض بعد الوقوف = هبوط ضغط وضعي</li><li>قياس السكر</li><li>السؤال عن أعراض دور البرد</li><li>طلب تحليل دم (CBC/أنيميا)</li><li>قياس النبض وسماع القلب + رسم قلب في السن الكبير</li><li>السؤال عن أعراض نقص الدم للمخ</li><li>لو واحدة ست متجوزة جديد تسأل الدورة نزلت ولا لأ؟</li></ol><p>بعد عمل الفحوصات اللازمة واستبعاد الأسباب المشهورة للدوخة: هتكتب أي من الأدوية اللي فاتت للمريض وتقوله يحيلك بعد أسبوعين. لو مفيش تحسن: يتم تحويل الحالة إلى أخصائي ENT.</p><div class=\"cs-box cs-tip\"><strong>إضافة: اختبار Dix-Hallpike لـ BPPV</strong><p>إرشادات AAO-HNS تقترح Dix-Hallpike (اتجاهين) لتشخيص BPPV، والعلاج الأساسي مناورة Epley لإعادة توزيع بلورات الأذن الداخلية (Otoconia)؛ <b>لا يُنصح بمثبطات الدهليز (Vestibular suppressants) (مثل مضادات الهستامين والبنزوديازيبين) كعلاج روتيني لـ BPPV</b>. يفعلها الطبيب/المعالج المدرب.</p></div>"
-    },
-    "treatment": {
-      "ar": "<p>علاج السبب أولاً (ضغط، سكر، أنيميا، برد، قلب، حمل…).</p><h4>أدوية الدوار (حسب المراجع — بعد الفحوصات واستبعاد السبب)</h4><p>بعض الدكاترة بتكتب أدوية بتحسّن الدم الواصل للشعيرات الدموية في الأذن الداخلية بعد عمل الفحوصات وعدم وجود سبب واضح لدوخة وبتجيب نتائج كويسة.</p><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td><b>Betaserc 16</b> tab (20 tab) — <b>Verserc 16</b> — <b>Microserc 16</b></td><td>قرص ٣ مرات يومياً (عند حدوث تحسن تقل الجرعة إلى قرص صباحاً ومساءً)</td></tr><tr><td><b>Stugeron</b> tab (30 tab)</td><td>قرص ٣ مرات يومياً بعد الأكل</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Betaserc/Verserc/Microserc هو <b>Betahistine 16 mg</b>، وStugeron هو <b>Cinnarizine 25 mg</b>. فعالية Betahistine في الدوار غير الأكيدة في الدراسات (يُستخدم أساساً لمرض مينيير)، وCinnarizine قد يسبب نعاس وتصلب أو رعشة عند الاستخدام الطويل وخصوصاً كبار السن؛ لا يُعطى لمريض Parkinson. Betahistine بحذر لمرضى الربو وقرحة المعدة والفيوكروموسيتوما. لا تعتبرهم علاج BPPV؛ العلاج الأساسي مناورة Epley.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل وصنّف</strong><p>دوخة ولا دوار؟ مدة النوبة، تغيّر مع الوضع، غثيان، سمع/طنين، حرارة، أدوية، حمل. قيّم السقوط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قياس سريع</strong><p>ضغط نايماً ثم جالساً بعد ٥ دقائق، نبض، سكر الدم، حرارة. بلّغ بأي رقم غير طبيعي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أمّن المريض</strong><p>يقعد/ينام فوراً، سرير بحواجز، مساعدة عند المشي، إضاءة كافية. لا يقوم بسرعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اعطِ الأدوية</strong><p>Betaserc: مع الأكل (يقلل المعدة) ٣ مرات. Stugeron: بعد الأكل ٣ مرات؛ انتبه للنعاس والسقوط. غثيان: بأمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>اكتشف الأخطر</strong><p>أعراض سكتة أو TIA (ضعف/تلعثم/اعوجاج)، فقدان سمع مفاجئ، صداع شديد: طوارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>سجل ومتابعة</strong><p>نوع الدوخة، الأرقام، الأدوية، التثقيف، ميعاد المتابعة بعد أسبوعين.</p></div></div></div>\n<p><strong>نقطة امتحان:</strong> لمريض مينيير الأولوية سلامته: وقاية من السقوط وتغيير وضعيات ببطء.</p>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>طوارئ — بلّغ فوراً</strong><ul><li>ضعف أو تنميل جانب، تلعثم، اعوجاج الوش، ضعف رؤية (TIA/سكتة)</li><li>ألم صدر أو خفقان أو إغماء (قلب)</li><li>سكر أقل من 70 أو أعراض هبوط سكر</li><li>صداع شديد مفاجئ أو بعد ضربة على الرأس</li><li>فقدان سمع مفاجئ</li><li>دوخة مستمرة بعد أسبوعين من العلاج: تحويل ENT</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>قوم من السرير والكرسي ببطء (اقعد دقيقة قبل ما تقف).</li><li>كُل في مواعيدك ولا تبذل مجهود بدون أكل (خصوصاً السكر).</li><li>القرص ٣ مرات بعد الأكل، وقلّل الجرعة لما تتحسن حسب الدكتور.</li><li>ما تسوقش ولا تشتغل في عالي لو بتدوخ.</li><li>لو الدوخة اتكررت أو طنين أو ضعف سمع: روح لأخصائي أنف وأذن.</li></ul>\n<h4>تثقيف مريض مينيير</h4><ul><li>الوقاية من السقوط (Fall precautions): <strong>غيّر وضعيتك ببطء</strong>.</li><li>تقييد الصوديوم (الصوديوم يحبس السوائل).</li><li>تجنب: التدخين، الكافيين، الكحول.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "فرّق الدوخة (Dizziness) عن الدوار (Vertigo) بالسؤال",
-      "سبعة أسباب عملية للدوخة: ضغط وضعي، سكر، أنيميا، برد، قلب، TIA، حمل",
-      "أشهر سبب للدوار: BPPV (ثواني مع التقليب)",
-      "التهاب الأذن الداخلية الفيروسي بعد برد أو إنفلونزا",
-      "اقيس الضغط (نايم ثم جالس ٥ دقائق) والسكر وحلل دم",
-      "بعد أسبوعين بدون تحسن: ENT",
-      "مينيير: طنين + فقد سمع أحادي + دوار، وتثقيفه الوقاية من السقوط وتقييد الصوديوم وتجنب التدخين والكافيين والكحول"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أشهر سبب للدوار (Vertigo)؟"
-      },
-      "options": [
-        {
-          "ar": "BPPV"
-        },
-        {
-          "ar": "أنيميا"
-        },
-        {
-          "ar": "حمل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نوبات ثواني مع حركة الرأس."
-      }
-    },
-    {
-      "q": {
-        "ar": "إزاي نقيس الضغط في مريض بدوخة؟"
-      },
-      "options": [
-        {
-          "ar": "مرة واحدة واقف"
-        },
-        {
-          "ar": "نائماً ثم جالساً بعد ٥ دقائق"
-        },
-        {
-          "ar": "لا يقاس"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "لاكتشاف الهبوط الوضعي."
-      }
-    },
-    {
-      "q": {
-        "ar": "سيدة متزوجة حديثاً تشكو من دوخة. إيه السؤال المهم؟"
-      },
-      "options": [
-        {
-          "ar": "الدورة نزلت ولا لأ؟"
-        },
-        {
-          "ar": "أكلت إيه؟"
-        },
-        {
-          "ar": "شغلها"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحمل سبب شائع."
-      }
-    },
-    {
-      "q": {
-        "ar": "Stugeron هو؟"
-      },
-      "options": [
-        {
-          "ar": "Cinnarizine"
-        },
-        {
-          "ar": "Amoxicillin"
-        },
-        {
-          "ar": "Paracetamol"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Cinnarizine 25 mg."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي ثلاثي أعراض يميز مرض مينيير؟"
-      },
-      "options": [
-        {
-          "ar": "طنين وفقد سمع من جانب واحد ودوار"
-        },
-        {
-          "ar": "صداع وحمى وطفح"
-        },
-        {
-          "ar": "سعال وبلغم وضيق نفس"
-        },
-        {
-          "ar": "ألم صدر وخفقان وإغماء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الثلاثي الكلاسيكي هو الطنين وفقد السمع الأحادي والدوار."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تثقيف غذائي مناسب لمريض مينيير؟"
-      },
-      "options": [
-        {
-          "ar": "تقييد الصوديوم"
-        },
-        {
-          "ar": "زيادة الملح"
-        },
-        {
-          "ar": "زيادة الكافيين"
-        },
-        {
-          "ar": "الكحول بكميات صغيرة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الصوديوم يحبس السوائل ويزيد الضغط في الأذن الداخلية."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AAO-HNSF Clinical Practice Guideline: BPPV (2008, updated 2017)"
-    },
-    {
-      "title": "NICE CKS: Dizziness"
-    }
-  ],
-  "rx": [
-    {
-      "category": "أعصاب",
-      "condition_ar": "الدوخة والدوار",
-      "condition_en": "Dizziness & vertigo",
-      "items": [
-        {
-          "drug_name": "Betaserc 16 (betahistine)",
-          "dose": "قرص ٣ مرات يومياً (يقل لمرتين عند التحسن)",
-          "note": "20 قرص"
-        },
-        {
-          "drug_name": "Verserc 16 (betahistine)",
-          "dose": "قرص ٣ مرات يومياً",
-          "note": "20 قرص"
-        },
-        {
-          "drug_name": "Microserc 16 (betahistine)",
-          "dose": "قرص ٣ مرات يومياً",
-          "note": "20 قرص"
-        },
-        {
-          "drug_name": "Stugeron (cinnarizine)",
-          "dose": "قرص ٣ مرات يومياً بعد الأكل",
-          "note": "30 قرص"
-        }
-      ],
-      "clinical_note": "بعد قياس الضغط والسكر وتحاليل الدم والقلب، ومتابعة بعد أسبوعين وإلا ENT."
-    }
+  "en": [
+   "Tell Dizziness from Vertigo by asking",
+   "Seven practical causes of dizziness: orthostatic pressure, glucose, anemia, cold, heart, TIA, pregnancy",
+   "The most famous cause of vertigo: BPPV (seconds with turning)",
+   "Viral inner ear inflammation after a cold or influenza",
+   "Measure pressure (lying then sitting 5 minutes), glucose, and a blood test",
+   "After two weeks without improvement: ENT",
+   "Ménière's: tinnitus + unilateral hearing loss + vertigo, and its teaching is fall prevention, sodium restriction, and avoiding smoking, caffeine, and alcohol"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أشهر سبب للدوار (Vertigo)؟",
+    "en": "The most famous cause of vertigo?"
+   },
+   "options": [
+    {
+     "ar": "BPPV",
+     "en": "BPPV"
+    },
+    {
+     "ar": "أنيميا",
+     "en": "Anemia"
+    },
+    {
+     "ar": "حمل",
+     "en": "Pregnancy"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نوبات ثواني مع حركة الرأس.",
+    "en": "Episodes lasting seconds with head movement."
+   }
+  },
+  {
+   "q": {
+    "ar": "إزاي نقيس الضغط في مريض بدوخة؟",
+    "en": "How do we measure blood pressure in a patient with dizziness?"
+   },
+   "options": [
+    {
+     "ar": "مرة واحدة واقف",
+     "en": "Once standing"
+    },
+    {
+     "ar": "نائماً ثم جالساً بعد ٥ دقائق",
+     "en": "Lying down then sitting after 5 minutes"
+    },
+    {
+     "ar": "لا يقاس",
+     "en": "It is not measured"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "لاكتشاف الهبوط الوضعي.",
+    "en": "To detect orthostatic hypotension."
+   }
+  },
+  {
+   "q": {
+    "ar": "سيدة متزوجة حديثاً تشكو من دوخة. إيه السؤال المهم؟",
+    "en": "A newly married woman complains of dizziness. What is the important question?"
+   },
+   "options": [
+    {
+     "ar": "الدورة نزلت ولا لأ؟",
+     "en": "Did her period come or not?"
+    },
+    {
+     "ar": "أكلت إيه؟",
+     "en": "What did she eat?"
+    },
+    {
+     "ar": "شغلها",
+     "en": "Her job"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحمل سبب شائع.",
+    "en": "Pregnancy is a common cause."
+   }
+  },
+  {
+   "q": {
+    "ar": "Stugeron هو؟",
+    "en": "Stugeron is?"
+   },
+   "options": [
+    {
+     "ar": "Cinnarizine",
+     "en": "Cinnarizine"
+    },
+    {
+     "ar": "Amoxicillin",
+     "en": "Amoxicillin"
+    },
+    {
+     "ar": "Paracetamol",
+     "en": "Paracetamol"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Cinnarizine 25 mg.",
+    "en": "Cinnarizine 25 mg."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي ثلاثي أعراض يميز مرض مينيير؟",
+    "en": "Which triad of symptoms distinguishes Ménière's disease?"
+   },
+   "options": [
+    {
+     "ar": "طنين وفقد سمع من جانب واحد ودوار",
+     "en": "Tinnitus, unilateral hearing loss, and vertigo"
+    },
+    {
+     "ar": "صداع وحمى وطفح",
+     "en": "Headache, fever, and rash"
+    },
+    {
+     "ar": "سعال وبلغم وضيق نفس",
+     "en": "Cough, sputum, and shortness of breath"
+    },
+    {
+     "ar": "ألم صدر وخفقان وإغماء",
+     "en": "Chest pain, palpitations, and fainting"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الثلاثي الكلاسيكي هو الطنين وفقد السمع الأحادي والدوار.",
+    "en": "The classic triad is tinnitus, unilateral hearing loss, and vertigo."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تثقيف غذائي مناسب لمريض مينيير؟",
+    "en": "Which dietary teaching suits a Ménière's patient?"
+   },
+   "options": [
+    {
+     "ar": "تقييد الصوديوم",
+     "en": "Restrict sodium"
+    },
+    {
+     "ar": "زيادة الملح",
+     "en": "Increase salt"
+    },
+    {
+     "ar": "زيادة الكافيين",
+     "en": "Increase caffeine"
+    },
+    {
+     "ar": "الكحول بكميات صغيرة",
+     "en": "Alcohol in small amounts"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الصوديوم يحبس السوائل ويزيد الضغط في الأذن الداخلية.",
+    "en": "Sodium retains fluid and raises pressure in the inner ear."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AAO-HNSF Clinical Practice Guideline: BPPV (2008, updated 2017)"
+  },
+  {
+   "title": "NICE CKS: Dizziness"
+  }
+ ],
+ "rx": [
+  {
+   "category": "أعصاب",
+   "condition_ar": "الدوخة والدوار",
+   "condition_en": "Dizziness & vertigo",
+   "items": [
+    {
+     "drug_name": "Betaserc 16 (betahistine)",
+     "dose": "قرص ٣ مرات يومياً (يقل لمرتين عند التحسن)",
+     "note": "20 قرص"
+    },
+    {
+     "drug_name": "Verserc 16 (betahistine)",
+     "dose": "قرص ٣ مرات يومياً",
+     "note": "20 قرص"
+    },
+    {
+     "drug_name": "Microserc 16 (betahistine)",
+     "dose": "قرص ٣ مرات يومياً",
+     "note": "20 قرص"
+    },
+    {
+     "drug_name": "Stugeron (cinnarizine)",
+     "dose": "قرص ٣ مرات يومياً بعد الأكل",
+     "note": "30 قرص"
+    }
+   ],
+   "clinical_note": "بعد قياس الضغط والسكر وتحاليل الدم والقلب، ومتابعة بعد أسبوعين وإلا ENT."
+  }
+ ]
 }

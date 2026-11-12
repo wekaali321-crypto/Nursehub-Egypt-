@@ -1,272 +1,344 @@
 {
-  "id": "dis-648",
-  "num": 648,
-  "system": "chest",
-  "icon": "🫁",
-  "level": 3,
-  "title": {
-    "ar": "استرواح الصدر (Pneumothorax)",
-    "en": "Pneumothorax"
+ "id": "dis-648",
+ "num": 648,
+ "system": "chest",
+ "icon": "🫁",
+ "level": 3,
+ "title": {
+  "ar": "استرواح الصدر (Pneumothorax)",
+  "en": "Pneumothorax"
+ },
+ "teaser": {
+  "ar": "هواء بين الرئة وجدار الصدر: المفتوح، المغلق، التلقائي والتوتري المهدد للحياة. العلامات الحرجة، خطوات الطوارئ، ورعاية الأنبوب الصدري.",
+  "en": "Air between the lung and the chest wall: open, closed, spontaneous, and the life-threatening tension type. Critical signs, emergency steps, and chest tube care."
+ },
+ "chips": [
+  {
+   "ar": "Tension",
+   "en": "Tension"
   },
-  "teaser": {
-    "ar": "هواء بين الرئة وجدار الصدر: المفتوح، المغلق، التلقائي والتوتري المهدد للحياة. العلامات الحرجة، خطوات الطوارئ، ورعاية الأنبوب الصدري."
+  {
+   "ar": "Chest tube",
+   "en": "Chest tube"
   },
-  "chips": [
-    {
-      "ar": "Tension"
-    },
-    {
-      "ar": "Chest tube"
-    },
-    {
-      "ar": "طوارئ الصدر"
-    }
+  {
+   "ar": "طوارئ الصدر",
+   "en": "Chest emergencies"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>الحيز بين الرئة وجدار الصدر (Pleural space) فيه كمية صغيرة سائل تمنع الاحتكاك. لما يدخل <b>هواء</b> للحيز ده، بيحصل استرواح (Pneumothorax): الهواء بياخد مكان الرئة فتنهار جزئياً أو كلياً، وكل ما زاد الهواء زاد الانهيار.</p><table><thead><tr><th>النوع</th><th>السبب</th></tr></thead><tbody><tr><td><b>مفتوح (Open / sucking chest wound)</b></td><td>جرح نافذ بالصدر؛ هواء يدخل ويخرج مع التنفس بصوت «شفط»</td></tr><tr><td><b>مغلق (Closed)</b></td><td>رض غير نافذ، بعد وضع قسطرة وريدية مركزية، أو بعد بزل جنبي، أو كسر ضلع</td></tr><tr><td><b>تلقائي (Spontaneous)</b></td><td>أولي (شباب نحاف طوال، مدخنين) أو ثانوي لمرض رئوي (COPD، سل، تليف)</td></tr><tr><td><b>توتري (Tension)</b></td><td>هواء محبوس بضغط متزايد (صمام أحادي الاتجاه): يزيح المنصف (Mediastinum) والرئة السليمة ويقلل العائد الوريدي للقلب = <b>تهديد للحياة</b></td></tr></tbody></table>[[slot:dis-648-types|أنواع الاسترواح الصدري|/diseases/img/dis-648-types.svg]]<div class=\"cs-box cs-danger\"><strong>التوتري = طارئ</strong><p>لا تنتظر الأشعة: ضيق نفس شديد + انحراف القصبة الهوائية + اختفاء الأصوات من جهة + هبوط ضغط + احتقان أوردة الرقبة. يحتاج <b>فتح الصدر الإبري (Needle decompression)</b> فوراً ثم أنبوب صدري.</p></div><h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-648-types|المقارنة — رسم من إعداد الموقع|/diseases/img/dis-648-types.svg]]\n<h4>مراجعة NCLEX: المقارنة الثلاثية</h4><ul><li><strong>تجمع دم بالجنب (Hemothorax):</strong> دم في الحيز الجنبي (بين الرئة وجدار الصدر) يسبب انهيار الرئة؛ رنين مكتوم.</li><li><strong>استرواح الصدر (Pneumothorax):</strong> هواء في الحيز الجنبي؛ العلامة المفتاحية رنين مفرط كالطرق على طبل أجوف.</li><li><strong>استرواح الصدر الضاغط (Tension):</strong> قد ينتج عن استرواح مفتوح («جرح ماص»): يُسحب الهواء للحيز الجنبي بالشهيق ولا يخرج، فيتراكم الضغط ويدفع الأعضاء والقصبة الهوائية (Trachea) لجانب واحد.</li></ul>[[slot:dis-648-p438|هيموثوراكس واسترواح الصدر والضاغط — رسم من إعداد الموقع|/diseases/img/dis-648-p438.svg]]",
+   "en": "<p>The space between the lung and the chest wall (Pleural space) contains a small amount of fluid that prevents friction. When <b>air</b> enters this space, a pneumothorax occurs: the air takes the place of the lung so it collapses partially or completely, and the more air, the more collapse.</p><table><thead><tr><th>Type</th><th>Cause</th></tr></thead><tbody><tr><td><b>Open (Open / sucking chest wound)</b></td><td>A penetrating chest wound; air enters and leaves with breathing with a \"sucking\" sound</td></tr><tr><td><b>Closed</b></td><td>Blunt trauma, after central venous catheter placement, or after thoracentesis, or a rib fracture</td></tr><tr><td><b>Spontaneous</b></td><td>Primary (tall thin young people, smokers) or secondary to lung disease (COPD, TB, fibrosis)</td></tr><tr><td><b>Tension</b></td><td>Trapped air under increasing pressure (a one-way valve): it displaces the mediastinum and the healthy lung and reduces venous return to the heart = <b>life-threatening</b></td></tr></tbody></table>[[slot:dis-648-types|Types of pneumothorax|/diseases/img/dis-648-types.svg]]<div class=\"cs-box cs-danger\"><strong>Tension = an emergency</strong><p>Do not wait for the X-ray: severe shortness of breath + tracheal deviation + absent breath sounds on one side + low blood pressure + distended neck veins. It needs <b>needle decompression</b> immediately and then a chest tube.</p></div><h4>Additions covering review points</h4>[[slot:dis-648-types|The comparison — illustration|/diseases/img/dis-648-types.svg]]\n<h4>Review: the three-way comparison</h4><ul><li><strong>Blood in the pleural space (Hemothorax):</strong> blood in the pleural space (between the lung and the chest wall) causes lung collapse; dull percussion.</li><li><strong>Pneumothorax:</strong> air in the pleural space; the key sign is hyperresonance like tapping a hollow drum.</li><li><strong>Tension pneumothorax:</strong> may result from an open pneumothorax (\"sucking wound\"): air is drawn into the pleural space on inspiration and does not leave, so the pressure builds up and pushes the organs and the trachea to one side.</li></ul>[[slot:dis-648-p438|Hemothorax, pneumothorax, and tension — illustration|/diseases/img/dis-648-p438.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li>إصابات نافذة (طعن، رصاص) وإصابات الصدر الحادة (كسور أضلاع).</li><li>إجراءات طبية: قسطرة وريد مركزي، بزل جنبي، خزعة رئة، تنفس صناعي بضغط عالٍ (Barotrauma).</li><li>أمراض رئوية: COPD، انتفاخ، ربو شديد، سل، التهاب رئوي بنيوموسيستس.</li><li>تلقائي أولي: جنس ذكري، طويل ونحيف، تدخين.</li><li>غوص أو طيران (نادراً).</li></ul>",
+   "en": "<ul><li>Penetrating injuries (stabbing, gunshot) and blunt chest injuries (rib fractures).</li><li>Medical procedures: central venous catheter, thoracentesis, lung biopsy, mechanical ventilation with high pressure (Barotrauma).</li><li>Lung diseases: COPD, emphysema, severe asthma, TB, Pneumocystis pneumonia.</li><li>Primary spontaneous: male sex, tall and thin, smoking.</li><li>Diving or flying (rarely).</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li><b>ألم صدري حاد مفاجئ</b> يزيد بالتنفس والسعال والحركة.</li><li>ضيق نفس بسبب عدم تمدد الرئة.</li><li><b>غياب أصوات التنفس</b> فوق المنطقة.</li><li>رنين زائد (Hyperresonance) بالطرق.</li><li><b>انتفاخ تحت الجلد (Subcutaneous emphysema)</b>: إحساس طقطقة كرقائق الرز بالجس.</li><li>نبض وتنفس سريعين.</li><li>في التوتري: <b>إزاحة المنصف وانحراف القصبة نحو الجانب السليم</b>، احتقان وريد الرقبة، هبوط ضغط وزرقة.</li></ul>\n<p>ضيق نفس، تسارع قلب وتنفس؛ في الضاغط: انحراف القصبة الهوائية.</p>",
+   "en": "<ul><li><b>Sudden sharp chest pain</b> that increases with breathing, coughing, and movement.</li><li>Shortness of breath because the lung does not expand.</li><li><b>Absent breath sounds</b> over the area.</li><li>Hyperresonance on percussion.</li><li><b>Subcutaneous emphysema</b>: a crackling feeling like puffed rice on palpation.</li><li>Fast pulse and breathing.</li><li>In tension: <b>mediastinal shift and tracheal deviation toward the healthy side</b>, distended neck veins, low blood pressure, and cyanosis.</li></ul>\n<p>Shortness of breath, fast heart rate and breathing; in tension: tracheal deviation.</p>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>أشعة الصدر</b>: خط الرئة المنكمشة (Visceral pleural line) وغياب علامات الأوعية خارجه؛ إزاحة القصبة في التوتري.</li><li><b>غازات الدم:</b> ارتفاع CO₂ ونقص O₂.</li><li>SpO₂ منخفض.</li><li>CT لو الحالة غير واضحة، وسونار الصدر (Lung sliding غائب) في الطوارئ.</li></ul>[[slot:dis-648-xray|أشعة صدر: استرواح صدر مع انكماش الرئة]]",
+   "en": "<ul><li><b>Chest X-ray</b>: the line of the collapsed lung (Visceral pleural line) and absence of vascular markings beyond it; tracheal shift in tension.</li><li><b>Blood gases:</b> high CO₂ and low O₂.</li><li>Low SpO₂.</li><li>CT if the case is unclear, and chest ultrasound (absent Lung sliding) in the emergency room.</li></ul>[[slot:dis-648-xray|Chest X-ray: pneumothorax with lung collapse]]"
+  },
+  "treatment": {
+   "ar": "<p>بمجرد اكتشافه يمكن علاجه بالكامل. الصغير جداً قد يتحسن بالمراقبة، لكن يُتابع حتى يزول.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>إسعاف أولي</strong><p>أكسجين عالي، راحة، جلسة نصف جلوس. في الجرح المفتوح: <b>ضمادة ثلاثية الجوانب (Three-sided occlusive dressing)</b> تسمح بخروج الهواء ولا تدخله.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>توتري</strong><p><b>فتح إبري</b> بالمساحة الثانية بين الأضلاع على خط منتصف الترقوة (أو الخامسة قدام الإبط الأمامي) ثم أنبوب صدري.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أنبوب صدري موصل بشفط</strong><p>لإعادة توسيع الرئة في الحالات الكبيرة أو المصحوبة بأعراض أو مع تنفس صناعي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مسكن</strong><p>Morphine أو حسب الألم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>منع العودة</strong><p>Pleurodesis أو جراحة (VATS) للتكرار.</p></div></div></div><div class=\"cs-box cs-info\"><strong>تحديث</strong><p>في الاسترواح التلقائي الأولي الصغير والمستقر يُفضّل <b>الشفط بإبرة/قسطرة صغيرة</b> أو المراقبة قبل الأنبوب الكبير (BTS 2023). الراحة المطلقة في السرير ليست ضرورية دائماً؛ اتبع أمر الطبيب. ممنوع الطيران والغوص حتى يشفى ويؤكد الأشعة.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><p>أنبوب صدري Chest tube. الاسترواح المفتوح (\"صوت مص\"): غطِّ الجرح بضمادة محكمة (شاش مشبع بالفازلين) <strong>وثبّتها من 3 جهات فقط</strong> مع طلب الطبيب.</p>\n<p>أنبوب صدري (<a href=\"/diseases/dis-2709\">دليل الأنبوب الصدري</a>). الاسترواح المفتوح: غطِّ الجرح بضمادة محكمة (غيار بترولاتوم) والصقها <strong>من ثلاث جهات</strong>.</p>",
+   "en": "<p>Once discovered it can be completely treated. A very small one may improve with observation, but it is followed until it resolves.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>First aid</strong><p>High oxygen, rest, a semi-sitting position. In an open wound: a <b>three-sided occlusive dressing</b> that lets air out and not in.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Tension</strong><p><b>Needle decompression</b> in the second intercostal space on the midclavicular line (or the fifth in front of the anterior axillary line) then a chest tube.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>A chest tube connected to suction</strong><p>To re-expand the lung in large cases or those with symptoms or on mechanical ventilation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Painkiller</strong><p>Morphine or according to the pain.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Preventing recurrence</strong><p>Pleurodesis or surgery (VATS) for recurrence.</p></div></div></div><div class=\"cs-box cs-info\"><strong>Update</strong><p>In a small, stable primary spontaneous pneumothorax, <b>needle/small catheter aspiration</b> or observation is preferred before a large tube (2023). Absolute bed rest is not always necessary; follow the physician's order. Flying and diving are forbidden until it heals and the X-ray confirms.</p></div><h4>Additions covering review points</h4><p>Chest tube. Open pneumothorax (\"sucking sound\"): cover the wound with an airtight dressing (gauze soaked in Vaseline) <strong>and tape it on 3 sides only</strong> and ask the physician.</p>\n<p>Chest tube (<a href=\"/diseases/dis-2709\">chest tube guide</a>). Open pneumothorax: cover the wound with an airtight dressing (petrolatum dressing) and tape it <strong>on three sides</strong>.</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>وضعية</strong><p>High أو Semi-Fowler لتسهيل التنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>علامات حيوية وتنفس</strong><p>قيّم كل 15 دقيقة في الحاد ثم كل ساعة: المعدل، الجهد، العضلات المساعدة، الزرقة، SpO₂، أصوات الصدر، الضغط. اهتم بانحراف القصبة وتورم الرقبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الأنبوب الصدري</strong><p>راقب التصريف (كمية/لون)، التذبذب، الفقاعات، ثبات الأنبوب، والوعاء أقل من الصدر؛ <b>لا تقفل الأنبوب</b> أثناء وجود تسرب هواء. تأكد من الشفط (عادة −20 سم ماء) حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الألم</strong><p>مسكن قبل التمارين وتشجيع التنفس العميق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>تمارين</strong><p>سعال، تنفس عميق، تقلب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>انتفاخ تحت الجلد</strong><p>حدّد حدوده بقلم وراقب توسعه.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>ألم حاد • تنفس غير فعال • اضطراب تبادل الغازات.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Position</strong><p>High or Semi-Fowler to ease breathing.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Vital signs and breathing</strong><p>Assess every 15 minutes in the acute phase then every hour: rate, effort, accessory muscles, cyanosis, SpO₂, chest sounds, blood pressure. Pay attention to tracheal deviation and neck swelling.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>The chest tube</strong><p>Monitor drainage (amount/color), tidaling, bubbling, tube stability, and the container lower than the chest; <b>do not clamp the tube</b> while there is an air leak. Check the suction (usually −20 cm water) as ordered.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Pain</strong><p>A painkiller before exercises and encourage deep breathing.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Exercises</strong><p>Coughing, deep breathing, turning.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Subcutaneous emphysema</strong><p>Mark its borders with a pen and monitor its spread.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Nursing diagnoses</strong><p>Acute pain • ineffective breathing • impaired gas exchange.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>انحراف القصبة + هبوط ضغط + ضيق نفس شديد = توتري، بلّغ فوراً وجهّز Needle وأنبوب صدري.</li><li>انتفاخ جلدي يتسع بسرعة.</li><li>توقف الفقاعات مع ضيق نفس متزايد (انسداد أنبوب).</li><li>انفصال أو خروج الأنبوب.</li><li>هبوط SpO₂ تحت 90%.</li></ul>",
+   "en": "<ul><li>Tracheal deviation + low blood pressure + severe shortness of breath = tension, report immediately and prepare a needle and a chest tube.</li><li>Skin swelling that spreads quickly.</li><li>Bubbling stops with increasing shortness of breath (tube blockage).</li><li>Disconnection or removal of the tube.</li><li>SpO₂ drops below 90%.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>شرح ما حدث وأهمية السعال والتنفس العميق.</li><li>التوقف عن التدخين نهائياً (يقلل التكرار).</li><li>تجنب الطيران والغوص حتى الإذن الطبي.</li><li>أعراض العودة: ألم صدر وضيق نفس مفاجئ → طوارئ.</li></ul>",
+   "en": "<ul><li>Explain what happened and the importance of coughing and deep breathing.</li><li>Stop smoking permanently (it reduces recurrence).</li><li>Avoid flying and diving until medical permission.</li><li>Symptoms of recurrence: sudden chest pain and shortness of breath → emergency.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "استرواح: هواء في الحيز الجنبي → انهيار الرئة.",
+   "الأنواع: مفتوح، مغلق، تلقائي، توتري.",
+   "التوتري = طوارئ؛ انحراف القصبة للجانب السليم + هبوط ضغط.",
+   "علامات: ألم حاد، غياب الأصوات، انتفاخ تحت الجلد.",
+   "الجرح المفتوح: ضمادة ثلاثية الجوانب.",
+   "لا تقفل الأنبوب الصدري ولا ترفع الوعاء فوق الصدر.",
+   "Hemothorax كتامة وPneumothorax رنين مفرط",
+   "المفتوح: ضمادة محكمة وتثبيت 3 جهات"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>الحيز بين الرئة وجدار الصدر (Pleural space) فيه كمية صغيرة سائل تمنع الاحتكاك. لما يدخل <b>هواء</b> للحيز ده، بيحصل استرواح (Pneumothorax): الهواء بياخد مكان الرئة فتنهار جزئياً أو كلياً، وكل ما زاد الهواء زاد الانهيار.</p><table><thead><tr><th>النوع</th><th>السبب</th></tr></thead><tbody><tr><td><b>مفتوح (Open / sucking chest wound)</b></td><td>جرح نافذ بالصدر؛ هواء يدخل ويخرج مع التنفس بصوت «شفط»</td></tr><tr><td><b>مغلق (Closed)</b></td><td>رض غير نافذ، بعد وضع قسطرة وريدية مركزية، أو بعد بزل جنبي، أو كسر ضلع</td></tr><tr><td><b>تلقائي (Spontaneous)</b></td><td>أولي (شباب نحاف طوال، مدخنين) أو ثانوي لمرض رئوي (COPD، سل، تليف)</td></tr><tr><td><b>توتري (Tension)</b></td><td>هواء محبوس بضغط متزايد (صمام أحادي الاتجاه): يزيح المنصف (Mediastinum) والرئة السليمة ويقلل العائد الوريدي للقلب = <b>تهديد للحياة</b></td></tr></tbody></table>[[slot:dis-648-types|أنواع الاسترواح الصدري|/diseases/img/dis-648-types.svg]]<div class=\"cs-box cs-danger\"><strong>التوتري = طارئ</strong><p>لا تنتظر الأشعة: ضيق نفس شديد + انحراف القصبة الهوائية + اختفاء الأصوات من جهة + هبوط ضغط + احتقان أوردة الرقبة. يحتاج <b>فتح الصدر الإبري (Needle decompression)</b> فوراً ثم أنبوب صدري.</p></div><h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-648-types|المقارنة — رسم من إعداد الموقع|/diseases/img/dis-648-types.svg]]\n<h4>مراجعة NCLEX: المقارنة الثلاثية</h4><ul><li><strong>تجمع دم بالجنب (Hemothorax):</strong> دم في الحيز الجنبي (بين الرئة وجدار الصدر) يسبب انهيار الرئة؛ رنين مكتوم.</li><li><strong>استرواح الصدر (Pneumothorax):</strong> هواء في الحيز الجنبي؛ العلامة المفتاحية رنين مفرط كالطرق على طبل أجوف.</li><li><strong>استرواح الصدر الضاغط (Tension):</strong> قد ينتج عن استرواح مفتوح («جرح ماص»): يُسحب الهواء للحيز الجنبي بالشهيق ولا يخرج، فيتراكم الضغط ويدفع الأعضاء والقصبة الهوائية (Trachea) لجانب واحد.</li></ul>[[slot:dis-648-p438|هيموثوراكس واسترواح الصدر والضاغط — رسم من إعداد الموقع|/diseases/img/dis-648-p438.svg]]"
-    },
-    "causes": {
-      "ar": "<ul><li>إصابات نافذة (طعن، رصاص) وإصابات الصدر الحادة (كسور أضلاع).</li><li>إجراءات طبية: قسطرة وريد مركزي، بزل جنبي، خزعة رئة، تنفس صناعي بضغط عالٍ (Barotrauma).</li><li>أمراض رئوية: COPD، انتفاخ، ربو شديد، سل، التهاب رئوي بنيوموسيستس.</li><li>تلقائي أولي: جنس ذكري، طويل ونحيف، تدخين.</li><li>غوص أو طيران (نادراً).</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li><b>ألم صدري حاد مفاجئ</b> يزيد بالتنفس والسعال والحركة.</li><li>ضيق نفس بسبب عدم تمدد الرئة.</li><li><b>غياب أصوات التنفس</b> فوق المنطقة.</li><li>رنين زائد (Hyperresonance) بالطرق.</li><li><b>انتفاخ تحت الجلد (Subcutaneous emphysema)</b>: إحساس طقطقة كرقائق الرز بالجس.</li><li>نبض وتنفس سريعين.</li><li>في التوتري: <b>إزاحة المنصف وانحراف القصبة نحو الجانب السليم</b>، احتقان وريد الرقبة، هبوط ضغط وزرقة.</li></ul>\n<p>ضيق نفس، تسارع قلب وتنفس؛ في الضاغط: انحراف القصبة الهوائية.</p>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>أشعة الصدر</b>: خط الرئة المنكمشة (Visceral pleural line) وغياب علامات الأوعية خارجه؛ إزاحة القصبة في التوتري.</li><li><b>غازات الدم:</b> ارتفاع CO₂ ونقص O₂.</li><li>SpO₂ منخفض.</li><li>CT لو الحالة غير واضحة، وسونار الصدر (Lung sliding غائب) في الطوارئ.</li></ul>[[slot:dis-648-xray|أشعة صدر: استرواح صدر مع انكماش الرئة]]"
-    },
-    "treatment": {
-      "ar": "<p>بمجرد اكتشافه يمكن علاجه بالكامل. الصغير جداً قد يتحسن بالمراقبة، لكن يُتابع حتى يزول.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>إسعاف أولي</strong><p>أكسجين عالي، راحة، جلسة نصف جلوس. في الجرح المفتوح: <b>ضمادة ثلاثية الجوانب (Three-sided occlusive dressing)</b> تسمح بخروج الهواء ولا تدخله.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>توتري</strong><p><b>فتح إبري</b> بالمساحة الثانية بين الأضلاع على خط منتصف الترقوة (أو الخامسة قدام الإبط الأمامي) ثم أنبوب صدري.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أنبوب صدري موصل بشفط</strong><p>لإعادة توسيع الرئة في الحالات الكبيرة أو المصحوبة بأعراض أو مع تنفس صناعي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مسكن</strong><p>Morphine أو حسب الألم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>منع العودة</strong><p>Pleurodesis أو جراحة (VATS) للتكرار.</p></div></div></div><div class=\"cs-box cs-info\"><strong>تحديث</strong><p>في الاسترواح التلقائي الأولي الصغير والمستقر يُفضّل <b>الشفط بإبرة/قسطرة صغيرة</b> أو المراقبة قبل الأنبوب الكبير (BTS 2023). الراحة المطلقة في السرير ليست ضرورية دائماً؛ اتبع أمر الطبيب. ممنوع الطيران والغوص حتى يشفى ويؤكد الأشعة.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><p>أنبوب صدري Chest tube. الاسترواح المفتوح (\"صوت مص\"): غطِّ الجرح بضمادة محكمة (شاش مشبع بالفازلين) <strong>وثبّتها من 3 جهات فقط</strong> مع طلب الطبيب.</p>\n<p>أنبوب صدري (<a href=\"/diseases/dis-2709\">دليل الأنبوب الصدري</a>). الاسترواح المفتوح: غطِّ الجرح بضمادة محكمة (غيار بترولاتوم) والصقها <strong>من ثلاث جهات</strong>.</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>وضعية</strong><p>High أو Semi-Fowler لتسهيل التنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>علامات حيوية وتنفس</strong><p>قيّم كل 15 دقيقة في الحاد ثم كل ساعة: المعدل، الجهد، العضلات المساعدة، الزرقة، SpO₂، أصوات الصدر، الضغط. اهتم بانحراف القصبة وتورم الرقبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الأنبوب الصدري</strong><p>راقب التصريف (كمية/لون)، التذبذب، الفقاعات، ثبات الأنبوب، والوعاء أقل من الصدر؛ <b>لا تقفل الأنبوب</b> أثناء وجود تسرب هواء. تأكد من الشفط (عادة −20 سم ماء) حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الألم</strong><p>مسكن قبل التمارين وتشجيع التنفس العميق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>تمارين</strong><p>سعال، تنفس عميق، تقلب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>انتفاخ تحت الجلد</strong><p>حدّد حدوده بقلم وراقب توسعه.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>ألم حاد • تنفس غير فعال • اضطراب تبادل الغازات.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>انحراف القصبة + هبوط ضغط + ضيق نفس شديد = توتري، بلّغ فوراً وجهّز Needle وأنبوب صدري.</li><li>انتفاخ جلدي يتسع بسرعة.</li><li>توقف الفقاعات مع ضيق نفس متزايد (انسداد أنبوب).</li><li>انفصال أو خروج الأنبوب.</li><li>هبوط SpO₂ تحت 90%.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>شرح ما حدث وأهمية السعال والتنفس العميق.</li><li>التوقف عن التدخين نهائياً (يقلل التكرار).</li><li>تجنب الطيران والغوص حتى الإذن الطبي.</li><li>أعراض العودة: ألم صدر وضيق نفس مفاجئ → طوارئ.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "استرواح: هواء في الحيز الجنبي → انهيار الرئة.",
-      "الأنواع: مفتوح، مغلق، تلقائي، توتري.",
-      "التوتري = طوارئ؛ انحراف القصبة للجانب السليم + هبوط ضغط.",
-      "علامات: ألم حاد، غياب الأصوات، انتفاخ تحت الجلد.",
-      "الجرح المفتوح: ضمادة ثلاثية الجوانب.",
-      "لا تقفل الأنبوب الصدري ولا ترفع الوعاء فوق الصدر.",
-      "Hemothorax كتامة وPneumothorax رنين مفرط",
-      "المفتوح: ضمادة محكمة وتثبيت 3 جهات"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "في التوتري تنحرف القصبة:"
-      },
-      "options": [
-        {
-          "ar": "نحو الجانب السليم"
-        },
-        {
-          "ar": "نحو الجانب المصاب"
-        },
-        {
-          "ar": "لا تنحرف"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الضغط يدفع المنصف."
-      }
-    },
-    {
-      "q": {
-        "ar": "جرح نافذ بالصدر يسمع بصوت شفط:"
-      },
-      "options": [
-        {
-          "ar": "ضمادة ثلاثية الجوانب"
-        },
-        {
-          "ar": "ضمادة محكمة من الأربع"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تسمح بخروج الهواء فقط."
-      }
-    },
-    {
-      "q": {
-        "ar": "انتفاخ تحت الجلد يعني:"
-      },
-      "options": [
-        {
-          "ar": "هواء تحت الجلد"
-        },
-        {
-          "ar": "ماء"
-        },
-        {
-          "ar": "دم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "طقطقة بالجس."
-      }
-    },
-    {
-      "q": {
-        "ar": "توقف الفقاعات مع ضيق نفس متزايد:"
-      },
-      "options": [
-        {
-          "ar": "انسداد الأنبوب: بلّغ"
-        },
-        {
-          "ar": "شفاء"
-        },
-        {
-          "ar": "طبيعي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر استرواح متكرر."
-      }
-    },
-    {
-      "q": {
-        "ar": "ضمادة الاسترواح المفتوح تُثبّت على:"
-      },
-      "options": [
-        {
-          "ar": "3 جهات"
-        },
-        {
-          "ar": "4 جهات"
-        },
-        {
-          "ar": "لا تثبّت"
-        },
-        {
-          "ar": "جهة واحدة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تسمح بخروج الهواء وتمنع الدخول."
-      }
-    },
-    {
-      "q": {
-        "ar": "رنين مفرط عند القرع:"
-      },
-      "options": [
-        {
-          "ar": "استرواح"
-        },
-        {
-          "ar": "هيموثوراكس"
-        },
-        {
-          "ar": "انصباب"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "هواء في الحيز الجنبي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أثناء تركيب قسطرة مركزية ظهر ضيق نفس وتسارع تنفس وطلب الطبيب صينية أنبوب صدري. ماذا يُشتبه؟"
-      },
-      "options": [
-        {
-          "ar": "استرواح الصدر"
-        },
-        {
-          "ar": "احتشاء"
-        },
-        {
-          "ar": "حساسية"
-        },
-        {
-          "ar": "قلق"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التسبب بثقب في الجنبة أثناء القسطرة يؤدي لاسترواح."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة مفتاحية لاسترواح الصدر؟"
-      },
-      "options": [
-        {
-          "ar": "رنين مفرط"
-        },
-        {
-          "ar": "رنين مكتوم"
-        },
-        {
-          "ar": "خراخر فقط"
-        },
-        {
-          "ar": "صرير"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الهواء المحبوس يعطي صوتًا مفرطًا عند القرع."
-      }
-    },
-    {
-      "q": {
-        "ar": "أمام جرح صدر ماص، أول تدخل؟"
-      },
-      "options": [
-        {
-          "ar": "غيار محكم يُلصق من 3 جهات"
-        },
-        {
-          "ar": "لصق من 4 جهات"
-        },
-        {
-          "ar": "سحب الجرح"
-        },
-        {
-          "ar": "ضغط شديد"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ثلاث جهات تسمح بخروج الهواء وتمنع دخوله."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "BTS Pleural Disease Guideline 2023 (spontaneous pneumothorax)"
-    },
-    {
-      "title": "ATLS 10th ed. — Tension pneumothorax"
-    },
-    {
-      "title": "StatPearls: Pneumothorax"
-    }
+  "en": [
+   "Pneumothorax: air in the pleural space → lung collapse.",
+   "Types: open, closed, spontaneous, tension.",
+   "Tension = an emergency; tracheal deviation to the healthy side + low blood pressure.",
+   "Signs: sharp pain, absent sounds, subcutaneous emphysema.",
+   "Open wound: a three-sided dressing.",
+   "Do not clamp the chest tube and do not raise the container above the chest.",
+   "Hemothorax is dullness and pneumothorax is hyperresonance",
+   "Open: an airtight dressing taped on 3 sides"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "في التوتري تنحرف القصبة:",
+    "en": "In tension the trachea deviates:"
+   },
+   "options": [
+    {
+     "ar": "نحو الجانب السليم",
+     "en": "Toward the healthy side"
+    },
+    {
+     "ar": "نحو الجانب المصاب",
+     "en": "Toward the affected side"
+    },
+    {
+     "ar": "لا تنحرف",
+     "en": "It does not deviate"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الضغط يدفع المنصف.",
+    "en": "The pressure pushes the mediastinum."
+   }
+  },
+  {
+   "q": {
+    "ar": "جرح نافذ بالصدر يسمع بصوت شفط:",
+    "en": "A penetrating chest wound heard with a sucking sound:"
+   },
+   "options": [
+    {
+     "ar": "ضمادة ثلاثية الجوانب",
+     "en": "A three-sided dressing"
+    },
+    {
+     "ar": "ضمادة محكمة من الأربع",
+     "en": "A dressing sealed on all four sides"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تسمح بخروج الهواء فقط.",
+    "en": "It lets air out only."
+   }
+  },
+  {
+   "q": {
+    "ar": "انتفاخ تحت الجلد يعني:",
+    "en": "Subcutaneous swelling means:"
+   },
+   "options": [
+    {
+     "ar": "هواء تحت الجلد",
+     "en": "Air under the skin"
+    },
+    {
+     "ar": "ماء",
+     "en": "Water"
+    },
+    {
+     "ar": "دم",
+     "en": "Blood"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "طقطقة بالجس.",
+    "en": "Crackling on palpation."
+   }
+  },
+  {
+   "q": {
+    "ar": "توقف الفقاعات مع ضيق نفس متزايد:",
+    "en": "Bubbling stops with increasing shortness of breath:"
+   },
+   "options": [
+    {
+     "ar": "انسداد الأنبوب: بلّغ",
+     "en": "Tube blockage: report"
+    },
+    {
+     "ar": "شفاء",
+     "en": "Healing"
+    },
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر استرواح متكرر.",
+    "en": "Risk of a recurrent pneumothorax."
+   }
+  },
+  {
+   "q": {
+    "ar": "ضمادة الاسترواح المفتوح تُثبّت على:",
+    "en": "The open pneumothorax dressing is taped on:"
+   },
+   "options": [
+    {
+     "ar": "3 جهات",
+     "en": "3 sides"
+    },
+    {
+     "ar": "4 جهات",
+     "en": "4 sides"
+    },
+    {
+     "ar": "لا تثبّت",
+     "en": "It is not taped"
+    },
+    {
+     "ar": "جهة واحدة",
+     "en": "One side"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تسمح بخروج الهواء وتمنع الدخول.",
+    "en": "It lets air out and prevents entry."
+   }
+  },
+  {
+   "q": {
+    "ar": "رنين مفرط عند القرع:",
+    "en": "Hyperresonance on percussion:"
+   },
+   "options": [
+    {
+     "ar": "استرواح",
+     "en": "Pneumothorax"
+    },
+    {
+     "ar": "هيموثوراكس",
+     "en": "Hemothorax"
+    },
+    {
+     "ar": "انصباب",
+     "en": "Effusion"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "هواء في الحيز الجنبي.",
+    "en": "Air in the pleural space."
+   }
+  },
+  {
+   "q": {
+    "ar": "أثناء تركيب قسطرة مركزية ظهر ضيق نفس وتسارع تنفس وطلب الطبيب صينية أنبوب صدري. ماذا يُشتبه؟",
+    "en": "During central catheter placement shortness of breath and fast breathing appeared and the physician asked for a chest tube tray. What is suspected?"
+   },
+   "options": [
+    {
+     "ar": "استرواح الصدر",
+     "en": "Pneumothorax"
+    },
+    {
+     "ar": "احتشاء",
+     "en": "Infarction"
+    },
+    {
+     "ar": "حساسية",
+     "en": "Allergy"
+    },
+    {
+     "ar": "قلق",
+     "en": "Anxiety"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التسبب بثقب في الجنبة أثناء القسطرة يؤدي لاسترواح.",
+    "en": "Puncturing the pleura during catheterization leads to pneumothorax."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة مفتاحية لاسترواح الصدر؟",
+    "en": "Which is a key sign of pneumothorax?"
+   },
+   "options": [
+    {
+     "ar": "رنين مفرط",
+     "en": "Hyperresonance"
+    },
+    {
+     "ar": "رنين مكتوم",
+     "en": "Dullness"
+    },
+    {
+     "ar": "خراخر فقط",
+     "en": "Crackles only"
+    },
+    {
+     "ar": "صرير",
+     "en": "Stridor"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الهواء المحبوس يعطي صوتًا مفرطًا عند القرع.",
+    "en": "Trapped air gives an excessive sound on percussion."
+   }
+  },
+  {
+   "q": {
+    "ar": "أمام جرح صدر ماص، أول تدخل؟",
+    "en": "Faced with a sucking chest wound, the first intervention?"
+   },
+   "options": [
+    {
+     "ar": "غيار محكم يُلصق من 3 جهات",
+     "en": "An airtight dressing taped on 3 sides"
+    },
+    {
+     "ar": "لصق من 4 جهات",
+     "en": "Taping on 4 sides"
+    },
+    {
+     "ar": "سحب الجرح",
+     "en": "Pulling the wound"
+    },
+    {
+     "ar": "ضغط شديد",
+     "en": "Heavy pressure"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ثلاث جهات تسمح بخروج الهواء وتمنع دخوله.",
+    "en": "Three sides let air out and prevent it from entering."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "BTS Pleural Disease Guideline 2023 (spontaneous pneumothorax)"
+  },
+  {
+   "title": "ATLS 10th ed. — Tension pneumothorax"
+  },
+  {
+   "title": "StatPearls: Pneumothorax"
+  }
+ ]
 }

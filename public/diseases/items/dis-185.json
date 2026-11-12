@@ -1,244 +1,308 @@
 {
-  "id": "dis-185",
-  "num": 185,
-  "system": "infect",
-  "icon": "😮‍💨",
-  "level": 2,
-  "title": {
-    "ar": "السعال الديكي (الشاهوق)",
-    "en": "Whooping Cough (Pertussis)"
+ "id": "dis-185",
+ "num": 185,
+ "system": "infect",
+ "icon": "😮‍💨",
+ "level": 2,
+ "title": {
+  "ar": "السعال الديكي (الشاهوق)",
+  "en": "Whooping Cough (Pertussis)"
+ },
+ "teaser": {
+  "ar": "نوبات الكحة المتتالية والشهقة المميزة، الخطر الأكبر على الرضّع تحت 6 شهور، نوبات انقطاع النفس والتصرف معها، علاج الأعراض بالأسماء المصرية، والتطعيم DTP.",
+  "en": "Consecutive coughing fits and the characteristic whoop, the greatest danger to infants under 6 months, apneic attacks and how to handle them, symptom treatment with Egyptian brand names, and the DTP vaccine."
+ },
+ "chips": [
+  {
+   "ar": "شهقة (Whoop)",
+   "en": "Whoop"
   },
-  "teaser": {
-    "ar": "نوبات الكحة المتتالية والشهقة المميزة، الخطر الأكبر على الرضّع تحت 6 شهور، نوبات انقطاع النفس والتصرف معها، علاج الأعراض بالأسماء المصرية، والتطعيم DTP."
+  {
+   "ar": "نوبات انقطاع نفس",
+   "en": "Apneic attacks"
   },
-  "chips": [
-    {
-      "ar": "شهقة (Whoop)"
-    },
-    {
-      "ar": "نوبات انقطاع نفس"
-    },
-    {
-      "ar": "DTP"
-    }
+  {
+   "ar": "DTP",
+   "en": "DTP"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p><b>السعال الديكي (Whooping cough / Pertussis)</b> بيصيب أساساً <b>الرضّع والأطفال الصغار</b>. سببه بكتيريا، ومميّز بـ <b>نوبات (Paroxysms) كحة شديدة</b> بتنتهي بصوت الشهقة (Whoop) لما الهواء يتشهّق.</p><div class=\"cs-stats\"><div><b>1–3</b><span>أسابيع حضانة (حسب المراجع)</span></div><div><b>10</b><span>أسابيع قد تستمر</span></div><div><b>DTP</b><span>الوقاية</span></div></div>[[slot:dis-185-stages|مراحل السعال الديكي|/diseases/img/dis-185-stages.svg]]",
+   "en": "<p><b>Whooping cough (Whooping cough / Pertussis)</b> mainly affects <b>infants and young children</b>. It is caused by bacteria and is marked by <b>severe coughing fits (Paroxysms)</b> that end with the whoop sound (Whoop) when air is gasped in.</p><div class=\"cs-stats\"><div><b>1–3</b><span>weeks incubation (depending on the reference)</span></div><div><b>10</b><span>weeks it may last</span></div><div><b>DTP</b><span>Prevention</span></div></div>[[slot:dis-185-stages|Stages of whooping cough|/diseases/img/dis-185-stages.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li>بكتيريا <i>Bordetella pertussis</i> بتنتقل بالرذاذ.</li><li>أطفال غير مطعمين أو لم يكتمل تطعيمهم (خصوصاً أقل من 6 شهور).</li><li>البالغين والمراهقين مصدر العدوى للرضّع.</li></ul>",
+   "en": "<ul><li><i>Bordetella pertussis</i> bacteria, transmitted by droplets.</li><li>Unvaccinated children or those whose vaccination is incomplete (especially under 6 months).</li><li>Adults and adolescents are the source of infection for infants.</li></ul>"
+  },
+  "signs": {
+   "ar": "<p>الأعراض عادة بتظهر بعد حضانة 1 إلى 3 أسابيع:</p><ol><li>كحة</li><li>عطس</li><li>إفرازات أنفية</li><li>حرارة</li><li>دموع في العين (Watery eyes)</li><li>الشهقة (Whooping)</li><li>زرقة الشفاه واللسان والأظافر أثناء نوبات الكحة (Cyanosis)</li></ol><p>ممكن تستمر الحالة لحد 10 أسابيع وتؤدي للالتهاب الرئوي. وفي الرضّع تحت 6 شهور ممكن ما يظهرش الـ Whoop بل نوبات توقف تنفس.</p><div class=\"cs-box cs-danger\"><strong>مضاعفات</strong><p>التهاب رئوي، تشنجات، نزف تحت الملتحمة، فتق، نقص أكسجين، وفاة (أغلبها في الرضّع).</p></div>",
+   "en": "<p>Symptoms usually appear after an incubation of 1 to 3 weeks:</p><ol><li>Cough</li><li>Sneezing</li><li>Nasal discharge</li><li>Fever</li><li>Watery eyes (Watery eyes)</li><li>The whoop (Whooping)</li><li>Blue lips, tongue and nails during coughing fits (Cyanosis)</li></ol><p>The condition may last up to 10 weeks and lead to pneumonia. And in infants under 6 months the Whoop may not appear, and instead there are apnea episodes.</p><div class=\"cs-box cs-danger\"><strong>Complications</strong><p>Pneumonia, seizures, subconjunctival hemorrhage, hernia, hypoxia, death (mostly in infants).</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>مزرعة من الأنف (Culture)</b> حسب المراجع، أو PCR على مسحة البلعوم الأنفي (الأدق حالياً).</li><li>صورة دم: ارتفاع الكرات البيضاء مع زيادة الليمفاويات.</li><li>أشعة صدر لو شك في التهاب رئوي.</li></ul>",
+   "en": "<ul><li><b>Nasal culture (Culture)</b> depending on the reference, or PCR on a nasopharyngeal swab (the most accurate currently).</li><li>Blood count: high white cells with increased lymphocytes.</li><li>Chest X-ray if pneumonia is suspected.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<p><b>تجنب أي مثير للكحة</b> (دخان، تراب، بكاء...)، ووجبات خفيفة.</p><table><thead><tr><th>الهدف</th><th>الدواء (بأمر الطبيب)</th><th>الجرعة</th></tr></thead><tbody><tr><td>منع العدوى البكتيرية الثانوية</td><td>Curam 156 أو 312 مجم شراب</td><td>ملعقة صغيرة كل 6 ساعات</td></tr><tr><td>كحة</td><td>Toplexil شراب / Eucaphaol لبوس</td><td>ملعقة صغيرة 3 مرات يومياً / لبوسة كل 12 ساعة</td></tr><tr><td>حرارة</td><td>Abimol شراب</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>فيتامين</td><td>Mediavit شراب</td><td>ملعقة صغيرة يومياً</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>أثناء نوبات انقطاع النفس (Apnoeic attacks)</strong><ul><li>ضمان مجرى الهواء (Airway)</li><li>شفط إفرازات البلعوم (Suction)</li><li>إعطاء أكسجين وتنفس صناعي (Artificial respiration) عند الحاجة</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong>العلاج النوعي المفضل: <b>مضاد حيوي من مجموعة الماكروليدات (Azithromycin)</b> يقلل العدوى والانتقال خصوصاً لو بدأ مبكراً في أول 3 أسابيع (يعطى للمخالطين المقربين وقائياً أيضاً). Curam (Amoxicillin-Clavulanate) ليس العلاج المفضل للبكتيريا نفسها. <b>مثبطات الكحة وأدوية البلغم ليست مفيدة</b> في السعال الديكي ولا يُنصح بها للرضّع. الرضّع تحت 6 شهور غالباً يدخلوا المستشفى للمراقبة. جرعات الماكروليدات حسب العمر والوزن بأمر الطبيب (الرضّع تحت شهر: حذر لخطر تضيق البواب). يلزم العزل بالرذاذ حتى 5 أيام من بدء المضاد الحيوي.</div><h4>الوقاية</h4><p>لقاح <b>DTP</b> (دفتيريا + تيتانوس + سعال ديكي) بيتاخد روتينياً في السنة الأولى. ومع كده الحالات لسه بتحصل خصوصاً في الرضّع تحت 6 شهور. (راجع جدول التطعيم في دليل الدفتيريا).</p>",
+   "en": "<p><b>Avoid any trigger for coughing</b> (smoke, dust, crying...), and light meals.</p><table><thead><tr><th>Goal</th><th>Drug (by physician order)</th><th>Dose</th></tr></thead><tbody><tr><td>Preventing secondary bacterial infection</td><td>Curam 156 or 312 mg syrup</td><td>A teaspoon every 6 hours</td></tr><tr><td>Cough</td><td>Toplexil syrup / Eucaphaol suppository</td><td>A teaspoon 3 times daily / a suppository every 12 hours</td></tr><tr><td>Fever</td><td>Abimol syrup</td><td>A teaspoon 3 times daily</td></tr><tr><td>Vitamin</td><td>Mediavit syrup</td><td>A teaspoon daily</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>During apneic attacks (Apnoeic attacks)</strong><ul><li>Secure the airway (Airway)</li><li>Suction pharyngeal secretions (Suction)</li><li>Give oxygen and artificial respiration (Artificial respiration) when needed</li></ul></div><div class=\"cs-box cs-warning\"><strong>Update</strong>The preferred specific treatment: <b>a macrolide antibiotic (Azithromycin)</b> reduces infection and transmission, especially if started early in the first 3 weeks (it is also given preventively to close contacts). Curam (Amoxicillin-Clavulanate) is not the preferred treatment for the bacteria itself. <b>Cough suppressants and expectorants are not helpful</b> in whooping cough and are not recommended for infants. Infants under 6 months are often admitted to hospital for monitoring. Macrolide doses depend on age and weight by physician order (infants under a month: caution because of the risk of pyloric stenosis). Droplet isolation is needed until 5 days after starting the antibiotic.</div><h4>Prevention</h4><p>The <b>DTP</b> vaccine (diphtheria + tetanus + pertussis) is given routinely in the first year. Even so, cases still occur, especially in infants under 6 months. (See the vaccination schedule in the diphtheria guide).</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اعزل</strong><p>احتياطات الرذاذ: غرفة منفصلة وكمامة وغسل يدين، خصوصاً بعيداً عن الرضّع غير المطعمين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّم</strong><p>التنفس (معدل، جهد)، SpO2، الحرارة، شكل نوبات الكحة، لون الشفاه، القدرة على الرضاعة والأكل، الجفاف، الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>جهّز للطوارئ</strong><p>شفاط، أكسجين، ماسك وأمبو، مجرى هواء بجوار الرضيع، مونيتور SpO2 للرضّع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أثناء النوبة</strong><p>ارفع الرأس/قلّب الطفل على جنبه، نظّف الفم والأنف بلطف، لا تضغط على الصدر، أكسجين بأمر الطبيب، سجّل الزرقة ومدتها.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>غذّي بأمان</strong><p>وجبات صغيرة متكررة بعد النوبة وليس أثناءها، وراقب القيء بعد الكحة والجفاف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أعطِ الأدوية</strong><p>المضاد الحيوي في مواعيده، لبوس Eucaphaol (شرجي) كل 12 ساعة، شراب الحرارة بالجرعة الصحيحة حسب الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وقّي</strong><p>عزل، تطعيم المخالطين، وقاية المخالطين المقربين بمضاد حيوي حسب الأمر.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>أي رضيع بتوقف تنفس أو زرقة أثناء/بعد الكحة = <b>طوارئ فورية</b>: مجرى هواء، شفط، أكسجين، نداء الطبيب.</p></div>\n<h4>مراجعة NCLEX</h4><ul><li>انتقاله بالرذاذ: كمامة جراحية ونظارة للطاقم وغرفة فردية (وليست ضغط سالب)</li><li>سعال تشنجي بصوت \"Whoop\" (الشاهوق) (مثل نباح الفقمة)، حمى خفيفة ورشح واحتقان أنف وعيون حمراء دامعة</li><li>لا مثبطات سعال: الهدف إخراج المخاط وكبته قد يسبب انسدادًا</li><li>تشخيص: مسحة أنف/حلق وفحوص دم</li><li>أزيثرومايسين، أكسجين رطب وشفط الممرات، سوائل صغيرة متكررة، راقب انسداد المجرى</li></ul><div class=\"cs-box cs-danger\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>\n[[slot:dis-185-peds-pertussis|السعال الديكي: ملخص — رسم من إعداد الموقع|/diseases/img/dis-185-peds-pertussis.svg]]<!--aud0651-d--><h4>إضافات من مراجعة الصفحة</h4>\n<ul><li>البكتيريا تلتصق بالأهداب (الشعيرات الدقيقة) المبطنة للمجرى فتسبب تورمه، والرضّع أخطر لأن مجاريهم أصغر وتنسد بسهولة.</li><li>ارتدِ الكمامة الجراحية والنظارة الواقية، وغرفة خاصة بسيطة (وليست ضغط سالب لأنها ليست هوائية).</li><li>العلاج: راقب انسداد المجرى، أزيثرومايسين، أكسجين مرطب، شفط المجرى، وسوائل بكميات صغيرة متكررة. لا تعطِ مثبطات السعال.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Isolate</strong><p>Droplet precautions: a separate room, a mask and handwashing, especially away from unvaccinated infants.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Assess</strong><p>Breathing (rate, effort), SpO2, temperature, the pattern of the coughing fits, lip color, ability to breastfeed and eat, dehydration, weight.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Prepare for emergencies</strong><p>Suction, oxygen, mask and bag, an airway beside the infant, an SpO2 monitor for infants.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>During the attack</strong><p>Raise the head/turn the child on his side, gently clean the mouth and nose, do not press on the chest, oxygen by physician order, record the cyanosis and its duration.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Feed safely</strong><p>Small frequent meals after the attack and not during it, and watch for vomiting after coughing and dehydration.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Give the drugs</strong><p>The antibiotic on time, Eucaphaol suppository (rectal) every 12 hours, fever syrup in the correct dose by weight.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Prevent</strong><p>Isolation, vaccinating contacts, and preventing close contacts with an antibiotic as ordered.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Any infant with apnea or cyanosis during/after coughing = <b>an immediate emergency</b>: airway, suction, oxygen, call the physician.</p></div>\n<h4>NCLEX review</h4><ul><li>Transmitted by droplets: a surgical mask and goggles for the staff and a private room (not negative pressure)</li><li>Paroxysmal cough with a \"Whoop\" sound (like a seal's bark), low-grade fever, runny nose, nasal congestion and red watery eyes</li><li>No cough suppressants: the goal is to clear mucus and suppressing it may cause obstruction</li><li>Diagnosis: nose/throat swab and blood tests</li><li>Azithromycin, humidified oxygen and suctioning the passages, small frequent fluids, watch for airway obstruction</li></ul><div class=\"cs-box cs-danger\"><strong>Dose note</strong><p>Doses are for learning; always verify with the physician/pharmacist.</p></div>\n[[slot:dis-185-peds-pertussis|Whooping cough: summary — illustration prepared by the site|/diseases/img/dis-185-peds-pertussis.svg]]<!--aud0651-d--><h4>Additions from the page review</h4>\n<ul><li>The bacteria attach to the cilia (tiny hairs) lining the airway, causing swelling, and infants are at greater risk because their airways are smaller and block easily.</li><li>Wear a surgical mask and protective goggles, and a simple private room (not negative pressure because it is not airborne).</li><li>Treatment: watch for airway obstruction, azithromycin, humidified oxygen, suctioning the airway, and small frequent amounts of fluids. Do not give cough suppressants.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>توقف تنفس أو زرقة</li><li>رضيع أقل من 6 شهور بنوبات كحة</li><li>تشنجات</li><li>رفض رضاعة وجفاف</li><li>ضيق نفس أو حرارة عالية جديدة (التهاب رئوي)</li><li>قيء مستمر</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Apnea or cyanosis</li><li>An infant under 6 months with coughing fits</li><li>Seizures</li><li>Refusal to feed and dehydration</li><li>Shortness of breath or a new high fever (pneumonia)</li><li>Persistent vomiting</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>طعّم طفلك DTP في المواعيد (2 و4 و6 شهور + منشطات).</li><li>ابعد الرضيع عن أي حد بيكح.</li><li>تجنب مثيرات الكحة (دخان وتراب).</li><li>وجبات خفيفة وصغيرة متكررة.</li><li>اللي بيتعرض للمريض يسأل الطبيب عن وقاية بالمضاد الحيوي.</li><li>لو طفلك أزرق أو وقف نفسه: اتصل بالإسعاف فوراً.</li><li>الحامل تتطعم Tdap في الثلث الأخير لحماية الرضيع.</li></ul>",
+   "en": "<ul><li>Vaccinate your child with DTP on schedule (2, 4 and 6 months + boosters).</li><li>Keep the infant away from anyone who is coughing.</li><li>Avoid cough triggers (smoke and dust).</li><li>Light, small, frequent meals.</li><li>Anyone exposed to the patient should ask the physician about antibiotic prevention.</li><li>If your child is blue or stops breathing: call the ambulance immediately.</li><li>A pregnant woman should get Tdap in the last trimester to protect the infant.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "بكتيريا (Bordetella pertussis) تصيب الرضّع والأطفال الصغار",
+   "نوبات كحة تنتهي بشهقة، وقد تزرق الشفاه والأظافر",
+   "قد تستمر الحالة حتى 10 أسابيع وتؤدي لالتهاب رئوي",
+   "أخطر ما فيه نوبات انقطاع النفس (Apnoea) عند الرضّع: مجرى هواء وشفط وأكسجين",
+   "الوقاية بـ DTP في السنة الأولى، والحالات تحدث خصوصاً تحت 6 شهور",
+   "التشخيص بمزرعة/PCR من مسحة الأنف",
+   "لا مثبطات سعال"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p><b>السعال الديكي (Whooping cough / Pertussis)</b> بيصيب أساساً <b>الرضّع والأطفال الصغار</b>. سببه بكتيريا، ومميّز بـ <b>نوبات (Paroxysms) كحة شديدة</b> بتنتهي بصوت الشهقة (Whoop) لما الهواء يتشهّق.</p><div class=\"cs-stats\"><div><b>1–3</b><span>أسابيع حضانة (حسب المراجع)</span></div><div><b>10</b><span>أسابيع قد تستمر</span></div><div><b>DTP</b><span>الوقاية</span></div></div>[[slot:dis-185-stages|مراحل السعال الديكي|/diseases/img/dis-185-stages.svg]]"
-    },
-    "causes": {
-      "ar": "<ul><li>بكتيريا <i>Bordetella pertussis</i> بتنتقل بالرذاذ.</li><li>أطفال غير مطعمين أو لم يكتمل تطعيمهم (خصوصاً أقل من 6 شهور).</li><li>البالغين والمراهقين مصدر العدوى للرضّع.</li></ul>"
-    },
-    "signs": {
-      "ar": "<p>الأعراض عادة بتظهر بعد حضانة 1 إلى 3 أسابيع:</p><ol><li>كحة</li><li>عطس</li><li>إفرازات أنفية</li><li>حرارة</li><li>دموع في العين (Watery eyes)</li><li>الشهقة (Whooping)</li><li>زرقة الشفاه واللسان والأظافر أثناء نوبات الكحة (Cyanosis)</li></ol><p>ممكن تستمر الحالة لحد 10 أسابيع وتؤدي للالتهاب الرئوي. وفي الرضّع تحت 6 شهور ممكن ما يظهرش الـ Whoop بل نوبات توقف تنفس.</p><div class=\"cs-box cs-danger\"><strong>مضاعفات</strong><p>التهاب رئوي، تشنجات، نزف تحت الملتحمة، فتق، نقص أكسجين، وفاة (أغلبها في الرضّع).</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>مزرعة من الأنف (Culture)</b> حسب المراجع، أو PCR على مسحة البلعوم الأنفي (الأدق حالياً).</li><li>صورة دم: ارتفاع الكرات البيضاء مع زيادة الليمفاويات.</li><li>أشعة صدر لو شك في التهاب رئوي.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<p><b>تجنب أي مثير للكحة</b> (دخان، تراب، بكاء...)، ووجبات خفيفة.</p><table><thead><tr><th>الهدف</th><th>الدواء (بأمر الطبيب)</th><th>الجرعة</th></tr></thead><tbody><tr><td>منع العدوى البكتيرية الثانوية</td><td>Curam 156 أو 312 مجم شراب</td><td>ملعقة صغيرة كل 6 ساعات</td></tr><tr><td>كحة</td><td>Toplexil شراب / Eucaphaol لبوس</td><td>ملعقة صغيرة 3 مرات يومياً / لبوسة كل 12 ساعة</td></tr><tr><td>حرارة</td><td>Abimol شراب</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>فيتامين</td><td>Mediavit شراب</td><td>ملعقة صغيرة يومياً</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>أثناء نوبات انقطاع النفس (Apnoeic attacks)</strong><ul><li>ضمان مجرى الهواء (Airway)</li><li>شفط إفرازات البلعوم (Suction)</li><li>إعطاء أكسجين وتنفس صناعي (Artificial respiration) عند الحاجة</li></ul></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong>العلاج النوعي المفضل: <b>مضاد حيوي من مجموعة الماكروليدات (Azithromycin)</b> يقلل العدوى والانتقال خصوصاً لو بدأ مبكراً في أول 3 أسابيع (يعطى للمخالطين المقربين وقائياً أيضاً). Curam (Amoxicillin-Clavulanate) ليس العلاج المفضل للبكتيريا نفسها. <b>مثبطات الكحة وأدوية البلغم ليست مفيدة</b> في السعال الديكي ولا يُنصح بها للرضّع. الرضّع تحت 6 شهور غالباً يدخلوا المستشفى للمراقبة. جرعات الماكروليدات حسب العمر والوزن بأمر الطبيب (الرضّع تحت شهر: حذر لخطر تضيق البواب). يلزم العزل بالرذاذ حتى 5 أيام من بدء المضاد الحيوي.</div><h4>الوقاية</h4><p>لقاح <b>DTP</b> (دفتيريا + تيتانوس + سعال ديكي) بيتاخد روتينياً في السنة الأولى. ومع كده الحالات لسه بتحصل خصوصاً في الرضّع تحت 6 شهور. (راجع جدول التطعيم في دليل الدفتيريا).</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اعزل</strong><p>احتياطات الرذاذ: غرفة منفصلة وكمامة وغسل يدين، خصوصاً بعيداً عن الرضّع غير المطعمين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّم</strong><p>التنفس (معدل، جهد)، SpO2، الحرارة، شكل نوبات الكحة، لون الشفاه، القدرة على الرضاعة والأكل، الجفاف، الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>جهّز للطوارئ</strong><p>شفاط، أكسجين، ماسك وأمبو، مجرى هواء بجوار الرضيع، مونيتور SpO2 للرضّع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أثناء النوبة</strong><p>ارفع الرأس/قلّب الطفل على جنبه، نظّف الفم والأنف بلطف، لا تضغط على الصدر، أكسجين بأمر الطبيب، سجّل الزرقة ومدتها.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>غذّي بأمان</strong><p>وجبات صغيرة متكررة بعد النوبة وليس أثناءها، وراقب القيء بعد الكحة والجفاف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أعطِ الأدوية</strong><p>المضاد الحيوي في مواعيده، لبوس Eucaphaol (شرجي) كل 12 ساعة، شراب الحرارة بالجرعة الصحيحة حسب الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>وقّي</strong><p>عزل، تطعيم المخالطين، وقاية المخالطين المقربين بمضاد حيوي حسب الأمر.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>أي رضيع بتوقف تنفس أو زرقة أثناء/بعد الكحة = <b>طوارئ فورية</b>: مجرى هواء، شفط، أكسجين، نداء الطبيب.</p></div>\n<h4>مراجعة NCLEX</h4><ul><li>انتقاله بالرذاذ: كمامة جراحية ونظارة للطاقم وغرفة فردية (وليست ضغط سالب)</li><li>سعال تشنجي بصوت \"Whoop\" (الشاهوق) (مثل نباح الفقمة)، حمى خفيفة ورشح واحتقان أنف وعيون حمراء دامعة</li><li>لا مثبطات سعال: الهدف إخراج المخاط وكبته قد يسبب انسدادًا</li><li>تشخيص: مسحة أنف/حلق وفحوص دم</li><li>أزيثرومايسين، أكسجين رطب وشفط الممرات، سوائل صغيرة متكررة، راقب انسداد المجرى</li></ul><div class=\"cs-box cs-danger\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>\n[[slot:dis-185-peds-pertussis|السعال الديكي: ملخص — رسم من إعداد الموقع|/diseases/img/dis-185-peds-pertussis.svg]]<!--aud0651-d--><h4>إضافات من مراجعة الصفحة</h4>\n<ul><li>البكتيريا تلتصق بالأهداب (الشعيرات الدقيقة) المبطنة للمجرى فتسبب تورمه، والرضّع أخطر لأن مجاريهم أصغر وتنسد بسهولة.</li><li>ارتدِ الكمامة الجراحية والنظارة الواقية، وغرفة خاصة بسيطة (وليست ضغط سالب لأنها ليست هوائية).</li><li>العلاج: راقب انسداد المجرى، أزيثرومايسين، أكسجين مرطب، شفط المجرى، وسوائل بكميات صغيرة متكررة. لا تعطِ مثبطات السعال.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>توقف تنفس أو زرقة</li><li>رضيع أقل من 6 شهور بنوبات كحة</li><li>تشنجات</li><li>رفض رضاعة وجفاف</li><li>ضيق نفس أو حرارة عالية جديدة (التهاب رئوي)</li><li>قيء مستمر</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>طعّم طفلك DTP في المواعيد (2 و4 و6 شهور + منشطات).</li><li>ابعد الرضيع عن أي حد بيكح.</li><li>تجنب مثيرات الكحة (دخان وتراب).</li><li>وجبات خفيفة وصغيرة متكررة.</li><li>اللي بيتعرض للمريض يسأل الطبيب عن وقاية بالمضاد الحيوي.</li><li>لو طفلك أزرق أو وقف نفسه: اتصل بالإسعاف فوراً.</li><li>الحامل تتطعم Tdap في الثلث الأخير لحماية الرضيع.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "بكتيريا (Bordetella pertussis) تصيب الرضّع والأطفال الصغار",
-      "نوبات كحة تنتهي بشهقة، وقد تزرق الشفاه والأظافر",
-      "قد تستمر الحالة حتى 10 أسابيع وتؤدي لالتهاب رئوي",
-      "أخطر ما فيه نوبات انقطاع النفس (Apnoea) عند الرضّع: مجرى هواء وشفط وأكسجين",
-      "الوقاية بـ DTP في السنة الأولى، والحالات تحدث خصوصاً تحت 6 شهور",
-      "التشخيص بمزرعة/PCR من مسحة الأنف",
-      "لا مثبطات سعال"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أخطر فئة عمرية للسعال الديكي؟"
-      },
-      "options": [
-        {
-          "ar": "رضّع أقل من 6 شهور"
-        },
-        {
-          "ar": "مراهقون"
-        },
-        {
-          "ar": "كبار السن فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "غير المكتمل تطعيمهم ويتعرضون لانقطاع النفس."
-      }
-    },
-    {
-      "q": {
-        "ar": "العَرَض المميز؟"
-      },
-      "options": [
-        {
-          "ar": "شهقة بعد نوبة كحة متتالية"
-        },
-        {
-          "ar": "حويصلات"
-        },
-        {
-          "ar": "طفح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Whoop."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول تصرف عند انقطاع نفس رضيع؟"
-      },
-      "options": [
-        {
-          "ar": "ضمان مجرى الهواء وشفط الإفرازات وأكسجين"
-        },
-        {
-          "ar": "إعطاء شراب كحة"
-        },
-        {
-          "ar": "انتظار"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ثم تنفس صناعي عند الحاجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تشخيص معملي مذكور؟"
-      },
-      "options": [
-        {
-          "ar": "مزرعة من الأنف"
-        },
-        {
-          "ar": "صورة دم فقط"
-        },
-        {
-          "ar": "تحليل بول"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Culture/PCR."
-      }
-    },
-    {
-      "q": {
-        "ar": "الوقاية؟"
-      },
-      "options": [
-        {
-          "ar": "DTP في السنة الأولى"
-        },
-        {
-          "ar": "فيتامين C"
-        },
-        {
-          "ar": "مضاد حيوي يومي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التطعيم الثلاثي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي إجراء تمريضي لرضيع سعال ديكي؟"
-      },
-      "options": [
-        {
-          "ar": "كمامة جراحية وغرفة فردية"
-        },
-        {
-          "ar": "ضغط سالب"
-        },
-        {
-          "ar": "مثبط سعال"
-        },
-        {
-          "ar": "لا عزل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "عزل رذاذي."
-      }
-    },
-    {
-      "q": {
-        "ar": "طريقة انتقال السعال الديكي؟"
-      },
-      "options": [
-        {
-          "ar": "رذاذ"
-        },
-        {
-          "ar": "هواء"
-        },
-        {
-          "ar": "تلامس فقط"
-        },
-        {
-          "ar": "دم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "عدوى رذاذية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أعراض متوقعة؟"
-      },
-      "options": [
-        {
-          "ar": "تشنج سعال ورشح وحمى"
-        },
-        {
-          "ar": "طفح"
-        },
-        {
-          "ar": "قيء دموي"
-        },
-        {
-          "ar": "فقدان بصر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "من الأعراض."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CDC — Pertussis (Whooping cough): clinical features, treatment and prevention"
-    },
-    {
-      "title": "WHO — Pertussis vaccines position paper"
-    },
-    {
-      "title": "NICE CKS — Whooping cough"
-    }
+  "en": [
+   "Bacteria (Bordetella pertussis) affecting infants and young children",
+   "Coughing fits ending with a whoop, and the lips and nails may turn blue",
+   "The condition may last up to 10 weeks and lead to pneumonia",
+   "The most dangerous part is apneic attacks (Apnoea) in infants: airway, suction and oxygen",
+   "Prevention with DTP in the first year, and cases occur especially under 6 months",
+   "Diagnosis by culture/PCR from a nasal swab",
+   "No cough suppressants"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أخطر فئة عمرية للسعال الديكي؟",
+    "en": "The most at-risk age group for whooping cough?"
+   },
+   "options": [
+    {
+     "ar": "رضّع أقل من 6 شهور",
+     "en": "Infants under 6 months"
+    },
+    {
+     "ar": "مراهقون",
+     "en": "Adolescents"
+    },
+    {
+     "ar": "كبار السن فقط",
+     "en": "Older adults only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "غير المكتمل تطعيمهم ويتعرضون لانقطاع النفس.",
+    "en": "Those whose vaccination is incomplete and who are exposed to apnea."
+   }
+  },
+  {
+   "q": {
+    "ar": "العَرَض المميز؟",
+    "en": "The characteristic symptom?"
+   },
+   "options": [
+    {
+     "ar": "شهقة بعد نوبة كحة متتالية",
+     "en": "A gasp after a run of consecutive coughs"
+    },
+    {
+     "ar": "حويصلات",
+     "en": "Vesicles"
+    },
+    {
+     "ar": "طفح",
+     "en": "Rash"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Whoop.",
+    "en": "Whoop."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول تصرف عند انقطاع نفس رضيع؟",
+    "en": "The first action when an infant has apnea?"
+   },
+   "options": [
+    {
+     "ar": "ضمان مجرى الهواء وشفط الإفرازات وأكسجين",
+     "en": "Secure the airway, suction secretions and give oxygen"
+    },
+    {
+     "ar": "إعطاء شراب كحة",
+     "en": "Give cough syrup"
+    },
+    {
+     "ar": "انتظار",
+     "en": "Wait"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ثم تنفس صناعي عند الحاجة.",
+    "en": "Then artificial respiration when needed."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تشخيص معملي مذكور؟",
+    "en": "Which lab diagnosis is mentioned?"
+   },
+   "options": [
+    {
+     "ar": "مزرعة من الأنف",
+     "en": "Nasal culture"
+    },
+    {
+     "ar": "صورة دم فقط",
+     "en": "Blood count only"
+    },
+    {
+     "ar": "تحليل بول",
+     "en": "Urinalysis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Culture/PCR.",
+    "en": "Culture/PCR."
+   }
+  },
+  {
+   "q": {
+    "ar": "الوقاية؟",
+    "en": "Prevention?"
+   },
+   "options": [
+    {
+     "ar": "DTP في السنة الأولى",
+     "en": "DTP in the first year"
+    },
+    {
+     "ar": "فيتامين C",
+     "en": "Vitamin C"
+    },
+    {
+     "ar": "مضاد حيوي يومي",
+     "en": "A daily antibiotic"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التطعيم الثلاثي.",
+    "en": "The triple vaccine."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي إجراء تمريضي لرضيع سعال ديكي؟",
+    "en": "Which nursing measure for an infant with whooping cough?"
+   },
+   "options": [
+    {
+     "ar": "كمامة جراحية وغرفة فردية",
+     "en": "Surgical mask and a private room"
+    },
+    {
+     "ar": "ضغط سالب",
+     "en": "Negative pressure"
+    },
+    {
+     "ar": "مثبط سعال",
+     "en": "Cough suppressant"
+    },
+    {
+     "ar": "لا عزل",
+     "en": "No isolation"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "عزل رذاذي.",
+    "en": "Droplet isolation."
+   }
+  },
+  {
+   "q": {
+    "ar": "طريقة انتقال السعال الديكي؟",
+    "en": "How is whooping cough transmitted?"
+   },
+   "options": [
+    {
+     "ar": "رذاذ",
+     "en": "Droplets"
+    },
+    {
+     "ar": "هواء",
+     "en": "Air"
+    },
+    {
+     "ar": "تلامس فقط",
+     "en": "Contact only"
+    },
+    {
+     "ar": "دم",
+     "en": "Blood"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "عدوى رذاذية.",
+    "en": "Droplet infection."
+   }
+  },
+  {
+   "q": {
+    "ar": "أعراض متوقعة؟",
+    "en": "Expected symptoms?"
+   },
+   "options": [
+    {
+     "ar": "تشنج سعال ورشح وحمى",
+     "en": "Paroxysmal cough, runny nose and fever"
+    },
+    {
+     "ar": "طفح",
+     "en": "Rash"
+    },
+    {
+     "ar": "قيء دموي",
+     "en": "Bloody vomiting"
+    },
+    {
+     "ar": "فقدان بصر",
+     "en": "Loss of vision"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "من الأعراض.",
+    "en": "Among the symptoms."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CDC — Pertussis (Whooping cough): clinical features, treatment and prevention"
+  },
+  {
+   "title": "WHO — Pertussis vaccines position paper"
+  },
+  {
+   "title": "NICE CKS — Whooping cough"
+  }
+ ]
 }

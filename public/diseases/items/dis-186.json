@@ -1,174 +1,219 @@
 {
-  "id": "dis-186",
-  "num": 186,
-  "system": "infect",
-  "icon": "🦠",
-  "level": 3,
-  "title": {
-    "ar": "الدفتيريا (الخناق) وجدول التطعيمات",
-    "en": "Diphtheria & Childhood Immunization Schedule"
+ "id": "dis-186",
+ "num": 186,
+ "system": "infect",
+ "icon": "🦠",
+ "level": 3,
+ "title": {
+  "ar": "الدفتيريا (الخناق) وجدول التطعيمات",
+  "en": "Diphtheria & Childhood Immunization Schedule"
+ },
+ "teaser": {
+  "ar": "غشاء رمادي سميك في الحلق قد يسد التنفس: أعراض الدفتيريا التنفسية والجلدية، مضاد السم والمضاد الحيوي، وجدول التطعيم الأساسي للأطفال.",
+  "en": "A thick gray membrane in the throat that can block breathing: respiratory and cutaneous diphtheria, antitoxin and antibiotic, and the basic childhood immunization schedule."
+ },
+ "chips": [
+  {
+   "ar": "غشاء رمادي",
+   "en": "Gray membrane"
   },
-  "teaser": {
-    "ar": "غشاء رمادي سميك في الحلق قد يسد التنفس: أعراض الدفتيريا التنفسية والجلدية، مضاد السم والمضاد الحيوي، وجدول التطعيم الأساسي للأطفال."
+  {
+   "ar": "مضاد السم",
+   "en": "Antitoxin"
   },
-  "chips": [
-    {
-      "ar": "غشاء رمادي"
-    },
-    {
-      "ar": "مضاد السم"
-    },
-    {
-      "ar": "جدول التطعيم"
-    }
+  {
+   "ar": "جدول التطعيم",
+   "en": "Immunization schedule"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p><b>الدفتيريا (Diphtheria)</b> مرض بكتيري حاد بيصيب منطقتين: <b>الحلق (دفتيريا تنفسية)</b> أو <b>الجلد (دفتيريا جلدية)</b>. مرض شائع في الطفولة (قبل التطعيم).</p><div class=\"cs-stats\"><div><b>2–4</b><span>أيام حضانة</span></div><div><b>غشاء</b><span>رمادي سميك</span></div><div><b>DAT</b><span>مضاد السم</span></div></div>[[slot:dis-186-mgmt|التعامل مع اشتباه الدفتيريا|/diseases/img/dis-186-mgmt.svg]]\n<p>للجداول الأمريكية (حسب اللقاح وحسب العمر) وموانع اللقاحات الحية والحساسية: <a href=\"/diseases/dis-1915\">التطعيمات عند الأطفال</a>.</p>",
+   "en": "<p><b>Diphtheria (Diphtheria)</b> is an acute bacterial disease that affects two areas: the <b>throat (respiratory diphtheria)</b> or the <b>skin (cutaneous diphtheria)</b>. It was a common childhood disease (before vaccination).</p><div class=\"cs-stats\"><div><b>2–4</b><span>days incubation</span></div><div><b>Membrane</b><span>thick gray</span></div><div><b>DAT</b><span>antitoxin</span></div></div>[[slot:dis-186-mgmt|Managing suspected diphtheria|/diseases/img/dis-186-mgmt.svg]]\n<p>For the American schedules (by vaccine and by age) and the contraindications to live vaccines and allergy: <a href=\"/diseases/dis-1915\">childhood immunizations</a>.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>بكتيريا <i>Corynebacterium diphtheriae</i> (تفرز سم Toxin).</li><li>بتدخل الجسم من الأنف والفم، وممكن من جرح في الجلد.</li><li>بتنتقل من شخص لآخر بإفرازات الجهاز التنفسي أو الرذاذ في الهواء.</li><li>بعد التعرض، الأعراض تستغرق 2–4 أيام.</li></ul>",
+   "en": "<ul><li>The bacterium <i>Corynebacterium diphtheriae</i> (releases a toxin, Toxin).</li><li>It enters the body through the nose and mouth, and possibly through a skin wound.</li><li>It spreads from person to person through respiratory secretions or droplets in the air.</li><li>After exposure, symptoms take 2–4 days.</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>الدفتيريا التنفسية</h4><p>البكتيريا بتتكاثر عادة في الحلق. ممكن يتكون غشاء فوق الحلق واللوزتين. الأعراض:</p><ol><li>صعوبة تنفس</li><li>صوت مبحوح (Husky voice)</li><li>تضخم الغدد الليمفاوية</li><li>سرعة القلب (Tachycardia)</li><li>صرير (Stridor): صوت تنفس حاد أثناء الشهيق</li><li>إفرازات أنفية</li><li>تورم سقف الفم (الحنك)</li><li>التهاب حلق</li><li>حرارة خفيفة</li><li>تعب عام (Malaise)</li></ol><p>قد يموت المصاب <b>بالاختناق</b> لما يسد الغشاء (غشاء رمادي سميك يغطي الحلق واللوز) مجرى التنفس. ومضاعفات أخرى بسبب السم في الدم: فشل القلب.</p><h4>الدفتيريا الجلدية</h4><p>الأعراض عادة أخف: بقع أو قروح صفراء (شبه القوباء Impetigo) على الجلد.</p>[[slot:dis-186-photo|صورة: الغشاء الرمادي في الحلق (الدفتيريا) — تُرفع لاحقاً]]",
+   "en": "<h4>Respiratory diphtheria</h4><p>The bacteria usually multiply in the throat. A membrane may form over the throat and tonsils. Symptoms:</p><ol><li>Difficulty breathing</li><li>Hoarse voice (Husky voice)</li><li>Enlarged lymph nodes</li><li>Rapid heart rate (Tachycardia)</li><li>Stridor (Stridor): a harsh breathing sound during inspiration</li><li>Nasal discharge</li><li>Swelling of the roof of the mouth (palate)</li><li>Sore throat</li><li>Mild fever</li><li>General fatigue (Malaise)</li></ol><p>The patient may die of <b>suffocation</b> when the membrane (a thick gray membrane covering the throat and tonsils) blocks the airway. Other complications from the toxin in the blood: heart failure.</p><h4>Cutaneous diphtheria</h4><p>Symptoms are usually milder: yellow patches or sores (similar to impetigo, Impetigo) on the skin.</p>[[slot:dis-186-photo|Photo: the gray membrane in the throat (diphtheria) — to be uploaded later]]"
+  },
+  "tests": {
+   "ar": "<ul><li><b>مسحة من الحلق/الغشاء للمزرعة</b> (لكن العلاج لا ينتظر النتيجة).</li><li>ECG لمتابعة تأثر القلب (التهاب العضلة).</li><li>صورة دم، وظائف كلى وأنزيمات قلب حسب الحالة.</li></ul>",
+   "en": "<ul><li><b>A swab from the throat/membrane for culture</b> (but treatment does not wait for the result).</li><li>ECG to follow cardiac involvement (myocarditis).</li><li>Blood count, kidney function, and cardiac enzymes as the case requires.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>مهم</strong><p>عند الاشتباه في الدفتيريا يجب <b>بدء العلاج فوراً</b> ولا تنتظر نتيجة المسحة.</p></div><p>راحة بالسرير ووجبات خفيفة.</p><table><thead><tr><th>الغرض</th><th>الدواء (بأمر الطبيب)</th><th>الإعطاء</th></tr></thead><tbody><tr><td>السم</td><td>Diphtheria Antitoxin</td><td>وريدياً بعد إجراء اختبار الحساسية</td></tr><tr><td>العدوى</td><td>Penicillin فيال</td><td>حقنة بالعضل أو الوريد كل 6 ساعات</td></tr><tr><td></td><td>أو Cefobid 0.5 جم فيال</td><td>بالعضل أو الوريد كل 8–12 ساعة</td></tr><tr><td>الحرارة</td><td>Brufen شراب</td><td>ملعقة 3 مرات يومياً</td></tr><tr><td>الحالات الشديدة</td><td>Hostacortin أقراص</td><td>قرص 3 مرات يومياً لمدة 5 أيام ثم قرص مرتين يومياً ثم قرص مرة يومياً</td></tr><tr><td>دعم</td><td>محلول جلوكوز 25% بالوريد</td><td>علاج مساعد</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>انسداد الحنجرة</strong><p>لو في انسداد حنجري: <b>شق الحنجرة (Tracheostomy)</b> (فتح في القصبة الهوائية لإدخال أنبوب تنفس) وجهاز تنفس صناعي (Mechanical respirator).</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong>مضاد السم (DAT) هو العلاج الأهم ويُعطى بجرعة 20,000–100,000 وحدة حسب شدة الحالة ومكان الغشاء، بعد اختبار الحساسية (مصل حصان). المضاد الحيوي (Penicillin G أو Erythromycin) <b>14 يوماً</b> لللقضاء على البكتيريا. <b>الكورتيزون لا يثبت فائدته</b> في منع التهاب عضلة القلب. المخالطون يحصلون على مضاد حيوي وقائي (Penicillin G بنزاثين حقنة واحدة أو Erythromycin 7–10 أيام) وتطعيم منشط. العزل بالرذاذ (والتلامس للجلدية) حتى 2 مزرعة سلبية. الجرعات حسب بروتوكول المستشفى/الطبيب.</div><h4>الوقاية: التطعيم</h4><p>بتطعيم <b>DTP</b> (توكسويد الدفتيريا + تيتانوس + السعال الديكي).</p>[[slot:dis-186-schedule|جدول تطعيمات قديم (للاطلاع فقط — الجدول الرسمي الحالي في الشرح التالي)|/diseases/img/dis-186-schedule.svg]]<div class=\"cs-box cs-warning\"><strong>تحديث</strong>الجدول أعلاه من المراجع. جدول وزارة الصحة المصرية الحالي يستخدم اللقاح الخماسي (DTP-HepB-Hib) في 2 و4 و6 شهور، وشلل الأطفال (OPV + IPV)، وMMR عند 12 و18 شهراً، ومنشطات DTP عند 18 شهر و4–6 سنين. اتبع الجدول الرسمي المحدّث للوزارة.</div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Important</strong><p>When diphtheria is suspected, <b>start treatment immediately</b> and do not wait for the swab result.</p></div><p>Bed rest and light meals.</p><table><thead><tr><th>Purpose</th><th>Drug (by physician order)</th><th>Administration</th></tr></thead><tbody><tr><td>Toxin</td><td>Diphtheria Antitoxin</td><td>IV after an allergy test</td></tr><tr><td>Infection</td><td>Penicillin vial</td><td>Injection IM or IV every 6 hours</td></tr><tr><td></td><td>Or Cefobid 0.5 g vial</td><td>IM or IV every 8–12 hours</td></tr><tr><td>Fever</td><td>Brufen syrup</td><td>One spoonful 3 times daily</td></tr><tr><td>Severe cases</td><td>Hostacortin tablets</td><td>One tablet 3 times daily for 5 days, then one tablet twice daily, then one tablet once daily</td></tr><tr><td>Support</td><td>Glucose 25% solution IV</td><td>Adjunct treatment</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Laryngeal obstruction</strong><p>If there is laryngeal obstruction: <b>tracheostomy (Tracheostomy)</b> (an opening in the trachea to insert a breathing tube) and a mechanical ventilator (Mechanical respirator).</p></div><div class=\"cs-box cs-warning\"><strong>Update</strong>The antitoxin (DAT) is the most important treatment and is given at a dose of 20,000–100,000 units depending on the severity of the case and the site of the membrane, after an allergy test (horse serum). The antibiotic (Penicillin G or Erythromycin) for <b>14 days</b> to eliminate the bacteria. <b>Cortisone has not been shown to help</b> prevent myocarditis. Contacts receive a prophylactic antibiotic (Penicillin G benzathine as a single injection or Erythromycin for 7–10 days) and a booster vaccine. Droplet isolation (and contact isolation for cutaneous) until 2 negative cultures. Doses follow the hospital/physician protocol.</div><h4>Prevention: vaccination</h4><p>With the <b>DTP</b> vaccine (diphtheria toxoid + tetanus + pertussis).</p>[[slot:dis-186-schedule|An older vaccination schedule (for viewing only — the current official schedule is in the next explanation)|/diseases/img/dis-186-schedule.svg]]<div class=\"cs-box cs-warning\"><strong>Update</strong>The schedule above is an older one. The current Egyptian Ministry of Health schedule uses the pentavalent vaccine (DTP-HepB-Hib) at 2, 4, and 6 months, polio (OPV + IPV), MMR at 12 and 18 months, and DTP boosters at 18 months and 4–6 years. Follow the Ministry's official updated schedule.</div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>عزل فوري</strong><p>عزل رذاذ (وعزل تلامس للجلدية) في غرفة منفصلة، كمامة ومريلة وقفاز، حتى تأكيد سلبية المزرعة مرتين حسب البروتوكول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أبلغ وخذ العينة</strong><p>بلّغ الطبيب والصحة الوقائية فوراً. خذ المسحة من تحت الغشاء/الحلق بحذر <b>دون أن تُجري ضغطاً</b> قد يسبب انسداداً. لا تؤخر العلاج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>جهّز الحساسية</strong><p>قبل مضاد السم: اختبار حساسية (جلدي/ملتحمة) حسب بروتوكول المستشفى، جهّز أدرينالين وهيدروكورتيزون وأكسجين، خط وريدي. أعطه ببطء ومراقبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ الأدوية</strong><p>Penicillin بعد التأكد من حساسية الدواء، Cefobid في مواعيده، Brufen بعد الأكل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب التنفس</strong><p>صرير، تراجع أضلاع، SpO2، جهّز عدة شق الحنجرة وشفاط وأكسجين. وضع نصف جالس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب القلب</strong><p>نبض، ضغط، ECG: بطء نبض أو اضطراب نظم أو هبوط ضغط = أبلغ فوراً (التهاب عضلة القلب). راحة تامة بالسرير 2–3 أسابيع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>راقب الأعصاب والكلى</strong><p>صعوبة بلع أو صوت أنفي أو ضعف: أبلغ. سجّل الداخل والخارج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>وقّي</strong><p>تطعيم المخالطين ومنشط، وقاية بالمضاد الحيوي.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>صرير أو زرقة أو صعوبة تنفس مع غشاء في الحلق = <b>طوارئ</b> (انسداد مجرى هواء). جهّز Tracheostomy، ولا تترك المريض وحده.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Immediate isolation</strong><p>Droplet isolation (and contact isolation for cutaneous) in a separate room, mask, gown, and gloves, until two negative cultures are confirmed per protocol.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Notify and take the specimen</strong><p>Notify the physician and preventive health immediately. Take the swab from under the membrane/throat carefully <b>without applying pressure</b> that may cause obstruction. Do not delay treatment.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Prepare for allergy</strong><p>Before the antitoxin: an allergy test (skin/conjunctival) per hospital protocol, prepare epinephrine, hydrocortisone, and oxygen, and an IV line. Give it slowly with monitoring.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Give the medications</strong><p>Penicillin after confirming no drug allergy, Cefobid on schedule, Brufen after food.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Monitor breathing</strong><p>Stridor, rib retractions, SpO2, prepare the tracheostomy kit, suction, and oxygen. Semi-sitting position.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Monitor the heart</strong><p>Pulse, blood pressure, ECG: slow pulse, arrhythmia, or hypotension = report immediately (myocarditis). Complete bed rest for 2–3 weeks.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Monitor the nerves and kidneys</strong><p>Difficulty swallowing, nasal voice, or weakness: report. Record intake and output.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Prevent</strong><p>Vaccinate contacts and give a booster, and antibiotic prophylaxis.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Stridor, cyanosis, or difficulty breathing with a membrane in the throat = <b>emergency</b> (airway obstruction). Prepare the tracheostomy, and do not leave the patient alone.</p></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>صرير أو صعوبة تنفس أو زرقة</li><li>غشاء رمادي في الحلق</li><li>نبض سريع/بطيء أو اضطراب أو إغماء أو هبوط ضغط</li><li>صوت أنفي أو صعوبة بلع أو ضعف</li><li>رد فعل تحسسي أثناء مضاد السم (طفح، تورم، ضيق نفس، هبوط ضغط)</li><li>قلة بول</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Stridor, difficulty breathing, or cyanosis</li><li>A gray membrane in the throat</li><li>Fast/slow pulse, arrhythmia, fainting, or hypotension</li><li>Nasal voice, difficulty swallowing, or weakness</li><li>An allergic reaction during the antitoxin (rash, swelling, shortness of breath, hypotension)</li><li>Low urine output</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>التطعيم هو الحماية: DTP في مواعيده وTd منشط كل 10 سنين.</li><li>أي حلق احمر مع حرارة وبحة صوت غير معتادة وغشاء: اذهب للطوارئ فوراً.</li><li>المخالطون لازم يبلّغوا الصحة ويأخدوا مضاد حيوي وتطعيم.</li><li>العزل والراحة التامة بأمر الطبيب.</li><li>اكمل العلاج كامل المدة (14 يوم مضاد حيوي).</li></ul>",
+   "en": "<ul><li>Vaccination is the protection: DTP on schedule and a Td booster every 10 years.</li><li>Any red throat with fever, unusual hoarseness, and a membrane: go to the emergency department immediately.</li><li>Contacts must notify health authorities and get an antibiotic and a vaccine.</li><li>Isolation and complete rest by physician order.</li><li>Complete the treatment for the full duration (14 days of antibiotic).</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الدفتيريا (الخناق) عدوى بكتيرية بتصيب الحلق (تنفسية) أو الجلد",
+   "الحضانة 2–4 أيام، وأخطر ما فيها غشاء رمادي سميك قد يسبب اختناقاً",
+   "السم (Toxin) بيسبب فشل قلب وتلف أعصاب",
+   "ابدأ العلاج فور الاشتباه ولا تنتظر نتيجة المسحة",
+   "العلاج: مضاد السم (Antitoxin) بعد اختبار الحساسية + مضاد حيوي (Penicillin/Cefobid)",
+   "الوقاية: DTP حسب جدول التطعيم و Td منشط كل 10 سنين"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p><b>الدفتيريا (Diphtheria)</b> مرض بكتيري حاد بيصيب منطقتين: <b>الحلق (دفتيريا تنفسية)</b> أو <b>الجلد (دفتيريا جلدية)</b>. مرض شائع في الطفولة (قبل التطعيم).</p><div class=\"cs-stats\"><div><b>2–4</b><span>أيام حضانة</span></div><div><b>غشاء</b><span>رمادي سميك</span></div><div><b>DAT</b><span>مضاد السم</span></div></div>[[slot:dis-186-mgmt|التعامل مع اشتباه الدفتيريا|/diseases/img/dis-186-mgmt.svg]]\n<p>للجداول الأمريكية (حسب اللقاح وحسب العمر) وموانع اللقاحات الحية والحساسية: <a href=\"/diseases/dis-1915\">التطعيمات عند الأطفال</a>.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>بكتيريا <i>Corynebacterium diphtheriae</i> (تفرز سم Toxin).</li><li>بتدخل الجسم من الأنف والفم، وممكن من جرح في الجلد.</li><li>بتنتقل من شخص لآخر بإفرازات الجهاز التنفسي أو الرذاذ في الهواء.</li><li>بعد التعرض، الأعراض تستغرق 2–4 أيام.</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>الدفتيريا التنفسية</h4><p>البكتيريا بتتكاثر عادة في الحلق. ممكن يتكون غشاء فوق الحلق واللوزتين. الأعراض:</p><ol><li>صعوبة تنفس</li><li>صوت مبحوح (Husky voice)</li><li>تضخم الغدد الليمفاوية</li><li>سرعة القلب (Tachycardia)</li><li>صرير (Stridor): صوت تنفس حاد أثناء الشهيق</li><li>إفرازات أنفية</li><li>تورم سقف الفم (الحنك)</li><li>التهاب حلق</li><li>حرارة خفيفة</li><li>تعب عام (Malaise)</li></ol><p>قد يموت المصاب <b>بالاختناق</b> لما يسد الغشاء (غشاء رمادي سميك يغطي الحلق واللوز) مجرى التنفس. ومضاعفات أخرى بسبب السم في الدم: فشل القلب.</p><h4>الدفتيريا الجلدية</h4><p>الأعراض عادة أخف: بقع أو قروح صفراء (شبه القوباء Impetigo) على الجلد.</p>[[slot:dis-186-photo|صورة: الغشاء الرمادي في الحلق (الدفتيريا) — تُرفع لاحقاً]]"
-    },
-    "tests": {
-      "ar": "<ul><li><b>مسحة من الحلق/الغشاء للمزرعة</b> (لكن العلاج لا ينتظر النتيجة).</li><li>ECG لمتابعة تأثر القلب (التهاب العضلة).</li><li>صورة دم، وظائف كلى وأنزيمات قلب حسب الحالة.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>مهم</strong><p>عند الاشتباه في الدفتيريا يجب <b>بدء العلاج فوراً</b> ولا تنتظر نتيجة المسحة.</p></div><p>راحة بالسرير ووجبات خفيفة.</p><table><thead><tr><th>الغرض</th><th>الدواء (بأمر الطبيب)</th><th>الإعطاء</th></tr></thead><tbody><tr><td>السم</td><td>Diphtheria Antitoxin</td><td>وريدياً بعد إجراء اختبار الحساسية</td></tr><tr><td>العدوى</td><td>Penicillin فيال</td><td>حقنة بالعضل أو الوريد كل 6 ساعات</td></tr><tr><td></td><td>أو Cefobid 0.5 جم فيال</td><td>بالعضل أو الوريد كل 8–12 ساعة</td></tr><tr><td>الحرارة</td><td>Brufen شراب</td><td>ملعقة 3 مرات يومياً</td></tr><tr><td>الحالات الشديدة</td><td>Hostacortin أقراص</td><td>قرص 3 مرات يومياً لمدة 5 أيام ثم قرص مرتين يومياً ثم قرص مرة يومياً</td></tr><tr><td>دعم</td><td>محلول جلوكوز 25% بالوريد</td><td>علاج مساعد</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>انسداد الحنجرة</strong><p>لو في انسداد حنجري: <b>شق الحنجرة (Tracheostomy)</b> (فتح في القصبة الهوائية لإدخال أنبوب تنفس) وجهاز تنفس صناعي (Mechanical respirator).</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong>مضاد السم (DAT) هو العلاج الأهم ويُعطى بجرعة 20,000–100,000 وحدة حسب شدة الحالة ومكان الغشاء، بعد اختبار الحساسية (مصل حصان). المضاد الحيوي (Penicillin G أو Erythromycin) <b>14 يوماً</b> لللقضاء على البكتيريا. <b>الكورتيزون لا يثبت فائدته</b> في منع التهاب عضلة القلب. المخالطون يحصلون على مضاد حيوي وقائي (Penicillin G بنزاثين حقنة واحدة أو Erythromycin 7–10 أيام) وتطعيم منشط. العزل بالرذاذ (والتلامس للجلدية) حتى 2 مزرعة سلبية. الجرعات حسب بروتوكول المستشفى/الطبيب.</div><h4>الوقاية: التطعيم</h4><p>بتطعيم <b>DTP</b> (توكسويد الدفتيريا + تيتانوس + السعال الديكي).</p>[[slot:dis-186-schedule|جدول تطعيمات قديم (للاطلاع فقط — الجدول الرسمي الحالي في الشرح التالي)|/diseases/img/dis-186-schedule.svg]]<div class=\"cs-box cs-warning\"><strong>تحديث</strong>الجدول أعلاه من المراجع. جدول وزارة الصحة المصرية الحالي يستخدم اللقاح الخماسي (DTP-HepB-Hib) في 2 و4 و6 شهور، وشلل الأطفال (OPV + IPV)، وMMR عند 12 و18 شهراً، ومنشطات DTP عند 18 شهر و4–6 سنين. اتبع الجدول الرسمي المحدّث للوزارة.</div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>عزل فوري</strong><p>عزل رذاذ (وعزل تلامس للجلدية) في غرفة منفصلة، كمامة ومريلة وقفاز، حتى تأكيد سلبية المزرعة مرتين حسب البروتوكول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أبلغ وخذ العينة</strong><p>بلّغ الطبيب والصحة الوقائية فوراً. خذ المسحة من تحت الغشاء/الحلق بحذر <b>دون أن تُجري ضغطاً</b> قد يسبب انسداداً. لا تؤخر العلاج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>جهّز الحساسية</strong><p>قبل مضاد السم: اختبار حساسية (جلدي/ملتحمة) حسب بروتوكول المستشفى، جهّز أدرينالين وهيدروكورتيزون وأكسجين، خط وريدي. أعطه ببطء ومراقبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ الأدوية</strong><p>Penicillin بعد التأكد من حساسية الدواء، Cefobid في مواعيده، Brufen بعد الأكل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب التنفس</strong><p>صرير، تراجع أضلاع، SpO2، جهّز عدة شق الحنجرة وشفاط وأكسجين. وضع نصف جالس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب القلب</strong><p>نبض، ضغط، ECG: بطء نبض أو اضطراب نظم أو هبوط ضغط = أبلغ فوراً (التهاب عضلة القلب). راحة تامة بالسرير 2–3 أسابيع.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>راقب الأعصاب والكلى</strong><p>صعوبة بلع أو صوت أنفي أو ضعف: أبلغ. سجّل الداخل والخارج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>وقّي</strong><p>تطعيم المخالطين ومنشط، وقاية بالمضاد الحيوي.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>صرير أو زرقة أو صعوبة تنفس مع غشاء في الحلق = <b>طوارئ</b> (انسداد مجرى هواء). جهّز Tracheostomy، ولا تترك المريض وحده.</p></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>صرير أو صعوبة تنفس أو زرقة</li><li>غشاء رمادي في الحلق</li><li>نبض سريع/بطيء أو اضطراب أو إغماء أو هبوط ضغط</li><li>صوت أنفي أو صعوبة بلع أو ضعف</li><li>رد فعل تحسسي أثناء مضاد السم (طفح، تورم، ضيق نفس، هبوط ضغط)</li><li>قلة بول</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>التطعيم هو الحماية: DTP في مواعيده وTd منشط كل 10 سنين.</li><li>أي حلق احمر مع حرارة وبحة صوت غير معتادة وغشاء: اذهب للطوارئ فوراً.</li><li>المخالطون لازم يبلّغوا الصحة ويأخدوا مضاد حيوي وتطعيم.</li><li>العزل والراحة التامة بأمر الطبيب.</li><li>اكمل العلاج كامل المدة (14 يوم مضاد حيوي).</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الدفتيريا (الخناق) عدوى بكتيرية بتصيب الحلق (تنفسية) أو الجلد",
-      "الحضانة 2–4 أيام، وأخطر ما فيها غشاء رمادي سميك قد يسبب اختناقاً",
-      "السم (Toxin) بيسبب فشل قلب وتلف أعصاب",
-      "ابدأ العلاج فور الاشتباه ولا تنتظر نتيجة المسحة",
-      "العلاج: مضاد السم (Antitoxin) بعد اختبار الحساسية + مضاد حيوي (Penicillin/Cefobid)",
-      "الوقاية: DTP حسب جدول التطعيم و Td منشط كل 10 سنين"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "العلامة المميزة للدفتيريا؟"
-      },
-      "options": [
-        {
-          "ar": "غشاء رمادي سميك على الحلق واللوز"
-        },
-        {
-          "ar": "طفح حويصلي"
-        },
-        {
-          "ar": "سعال شهقي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "غشاء (Pseudomembrane) قد يسد المجرى."
-      }
-    },
-    {
-      "q": {
-        "ar": "متى تبدأ العلاج؟"
-      },
-      "options": [
-        {
-          "ar": "فور الاشتباه دون انتظار المسحة"
-        },
-        {
-          "ar": "بعد النتيجة"
-        },
-        {
-          "ar": "بعد أسبوع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التأخير يزيد المضاعفات."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل مضاد السم لازم؟"
-      },
-      "options": [
-        {
-          "ar": "اختبار حساسية"
-        },
-        {
-          "ar": "صيام"
-        },
-        {
-          "ar": "تحاليل كبد"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لأنه مصل حيواني المصدر."
-      }
-    },
-    {
-      "q": {
-        "ar": "مضاعفة قلبية للسم؟"
-      },
-      "options": [
-        {
-          "ar": "فشل القلب والتهاب عضلة القلب"
-        },
-        {
-          "ar": "ارتفاع الضغط فقط"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السم يسبب هبوط القلب."
-      }
-    },
-    {
-      "q": {
-        "ar": "منشط الكبار؟"
-      },
-      "options": [
-        {
-          "ar": "Td كل 10 سنين"
-        },
-        {
-          "ar": "DTP كل سنة"
-        },
-        {
-          "ar": "لا يلزم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تيتانوس ودفتيريا للكبار."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CDC — Diphtheria: clinical features, treatment, DAT"
-    },
-    {
-      "title": "WHO — Diphtheria vaccine position paper"
-    },
-    {
-      "title": "Egypt MOH national immunization schedule (consult current version)"
-    }
+  "en": [
+   "Diphtheria is a bacterial infection that affects the throat (respiratory) or the skin",
+   "Incubation is 2–4 days, and the most dangerous feature is a thick gray membrane that may cause suffocation",
+   "The toxin (Toxin) causes heart failure and nerve damage",
+   "Start treatment as soon as it is suspected; do not wait for the swab result",
+   "Treatment: antitoxin (Antitoxin) after an allergy test + an antibiotic (Penicillin/Cefobid)",
+   "Prevention: DTP per the immunization schedule and a Td booster every 10 years"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "العلامة المميزة للدفتيريا؟",
+    "en": "The distinguishing sign of diphtheria?"
+   },
+   "options": [
+    {
+     "ar": "غشاء رمادي سميك على الحلق واللوز",
+     "en": "A thick gray membrane on the throat and tonsils"
+    },
+    {
+     "ar": "طفح حويصلي",
+     "en": "A vesicular rash"
+    },
+    {
+     "ar": "سعال شهقي",
+     "en": "A whooping cough"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "غشاء (Pseudomembrane) قد يسد المجرى.",
+    "en": "A membrane (Pseudomembrane) that may block the airway."
+   }
+  },
+  {
+   "q": {
+    "ar": "متى تبدأ العلاج؟",
+    "en": "When do you start treatment?"
+   },
+   "options": [
+    {
+     "ar": "فور الاشتباه دون انتظار المسحة",
+     "en": "As soon as it is suspected, without waiting for the swab"
+    },
+    {
+     "ar": "بعد النتيجة",
+     "en": "After the result"
+    },
+    {
+     "ar": "بعد أسبوع",
+     "en": "After a week"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التأخير يزيد المضاعفات.",
+    "en": "Delay increases complications."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل مضاد السم لازم؟",
+    "en": "What is needed before the antitoxin?"
+   },
+   "options": [
+    {
+     "ar": "اختبار حساسية",
+     "en": "An allergy test"
+    },
+    {
+     "ar": "صيام",
+     "en": "Fasting"
+    },
+    {
+     "ar": "تحاليل كبد",
+     "en": "Liver tests"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لأنه مصل حيواني المصدر.",
+    "en": "Because it is of animal serum origin."
+   }
+  },
+  {
+   "q": {
+    "ar": "مضاعفة قلبية للسم؟",
+    "en": "A cardiac complication of the toxin?"
+   },
+   "options": [
+    {
+     "ar": "فشل القلب والتهاب عضلة القلب",
+     "en": "Heart failure and myocarditis"
+    },
+    {
+     "ar": "ارتفاع الضغط فقط",
+     "en": "Only high blood pressure"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السم يسبب هبوط القلب.",
+    "en": "The toxin causes cardiac failure."
+   }
+  },
+  {
+   "q": {
+    "ar": "منشط الكبار؟",
+    "en": "The adult booster?"
+   },
+   "options": [
+    {
+     "ar": "Td كل 10 سنين",
+     "en": "Td every 10 years"
+    },
+    {
+     "ar": "DTP كل سنة",
+     "en": "DTP every year"
+    },
+    {
+     "ar": "لا يلزم",
+     "en": "Not needed"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تيتانوس ودفتيريا للكبار.",
+    "en": "Tetanus and diphtheria for adults."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CDC — Diphtheria: clinical features, treatment, DAT"
+  },
+  {
+   "title": "WHO — Diphtheria vaccine position paper"
+  },
+  {
+   "title": "Egypt MOH national immunization schedule (consult current version)"
+  }
+ ]
 }

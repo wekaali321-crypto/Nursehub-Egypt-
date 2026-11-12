@@ -1,391 +1,497 @@
 {
-  "id": "dis-200",
-  "num": 200,
-  "system": "neuro",
-  "icon": "🧠",
-  "level": 3,
-  "title": {
-    "ar": "التهاب السحايا",
-    "en": "Meningitis"
+ "id": "dis-200",
+ "num": 200,
+ "system": "neuro",
+ "icon": "🧠",
+ "level": 3,
+ "title": {
+  "ar": "التهاب السحايا",
+  "en": "Meningitis"
+ },
+ "teaser": {
+  "ar": "التهاب سحايا بكتيري = طوارئ: الأعراض، علامات كيرنج، تحليل CSF، المضادات الحيوية حسب العمر والميكروب، ودورك في الأول ساعة والعزل.",
+  "en": "Bacterial meningitis = an emergency: symptoms, Kernig's sign, CSF analysis, antibiotics by age and organism, and your role in the first hour and isolation."
+ },
+ "chips": [
+  {
+   "ar": "علامات التهيج",
+   "en": "Signs of irritation"
   },
-  "teaser": {
-    "ar": "التهاب سحايا بكتيري = طوارئ: الأعراض، علامات كيرنج، تحليل CSF، المضادات الحيوية حسب العمر والميكروب، ودورك في الأول ساعة والعزل."
+  {
+   "ar": "CSF",
+   "en": "CSF"
   },
-  "chips": [
-    {
-      "ar": "علامات التهيج"
-    },
-    {
-      "ar": "CSF"
-    },
-    {
-      "ar": "المضاد الحيوي"
-    }
+  {
+   "ar": "المضاد الحيوي",
+   "en": "Antibiotic"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>التهاب السحايا (Meningitis) هو التهاب الأغشية اللي بتغلّف المخ والحبل الشوكي، غالباً من بكتيريا أو فيروس أو سل (TB) أو فطريات. الالتهاب البكتيري <b>طارئ مهدد للحياة</b>: كل ساعة تأخير في المضاد الحيوي بتزوّد الوفاة والمضاعفات العصبية.</p><div class=\"cs-stats\"><div><b>3 أنواع</b><span>بكتيري (Pyogenic) · درني (TB) · فيروسي (Aseptic)</span></div><div><b>10–14 يوم</b><span>مدة المضاد الحيوي المعتادة في البكتيري</span></div><div><b>LP</b><span>البزل القطني + مزرعة CSF للتشخيص</span></div></div>[[slot:dis-200-rash|صورة الطفح الجلدي النزفي (Petechiae/Purpura) في التهاب السحايا بالمكورات السحائية]]<div class=\"cs-box cs-danger\"><strong>القاعدة الذهبية</strong><p>صداع + حرارة + رقبة متيبسة (أو تغيّر وعي / طفح لا يبهت بالضغط) = <b>اشتباه التهاب سحايا بكتيري</b>. ابدأ المضاد الحيوي فوراً بأمر الطبيب ولا تستنى نتيجة البزل أو الأشعة.</p></div><h4>من المراجعة الشاملة</h4>[[slot:dis-2626-meningitis|التهاب السحايا — رسم من إعداد الموقع|/diseases/img/dis-2626-meningitis.svg]][[slot:dis-2627-isolation|العزل واللبس والخلع — رسم من إعداد الموقع|/diseases/img/dis-2627-isolation.svg]]",
+   "en": "<p>Meningitis is inflammation of the membranes that cover the brain and spinal cord, usually from bacteria, a virus, tuberculosis (TB), or fungi. Bacterial meningitis is a <b>life-threatening emergency</b>: every hour of delay in the antibiotic increases death and neurological complications.</p><div class=\"cs-stats\"><div><b>3 types</b><span>Bacterial (Pyogenic) · Tuberculous (TB) · Viral (Aseptic)</span></div><div><b>10–14 days</b><span>the usual antibiotic duration in bacterial meningitis</span></div><div><b>LP</b><span>lumbar puncture + CSF culture for diagnosis</span></div></div>[[slot:dis-200-rash|Image of the hemorrhagic skin rash (Petechiae/Purpura) in meningococcal meningitis]]<div class=\"cs-box cs-danger\"><strong>The golden rule</strong><p>Headache + fever + stiff neck (or altered consciousness / a rash that does not fade with pressure) = <b>suspected bacterial meningitis</b>. Start the antibiotic immediately by physician order and do not wait for the puncture or imaging result.</p></div><h4>From the comprehensive review</h4>[[slot:dis-2626-meningitis|Meningitis — illustration|/diseases/img/dis-2626-meningitis.svg]][[slot:dis-2627-isolation|Isolation, donning and doffing — illustration|/diseases/img/dis-2627-isolation.svg]]"
+  },
+  "causes": {
+   "ar": "<h4>أشهر الميكروبات حسب السن</h4><table><thead><tr><th>الفئة</th><th>الميكروبات الأشهر</th></tr></thead><tbody><tr><td>حديثو الولادة (Neonates)</td><td>E. coli · المكورات العقدية مجموعة B (Group B Streptococci)</td></tr><tr><td>أطفال أقل من 14 سنة</td><td>H. influenzae (لو أقل من 4 سنين وغير مطعّم) · المكورات السحائية (N. meningitidis) · المكورات الرئوية (Strep. pneumoniae) · السل TB (في المناطق الموبوءة)</td></tr><tr><td>البالغين والأطفال الأكبر</td><td>المكورات السحائية (Meningococcus) · المكورات الرئوية (Pneumococcus)</td></tr><tr><td>كبار السن ونقص المناعة</td><td>المكورات الرئوية · Listeria monocytogenes · السل TB · البكتيريا سالبة الجرام (Gram-negative) · Cryptococcus (فطر)</td></tr></tbody></table><h4>تصنيف حسب السبب</h4><ul><li><b>بكتيري/قيحي (Pyogenic):</b> الأخطر والأسرع</li><li><b>درني (T.B. meningitis):</b> أبطأ بداية، لمفاوي، بيحتاج علاج طويل</li><li><b>فيروسي/معقّم (Viral/Aseptic):</b> غالباً أخف ويتحسن غالباً بالعلاج الداعم</li></ul><div class=\"cs-box cs-info\"><strong>ملحوظة</strong><p>الـCryptococcus والـTB والـToxoplasma أسباب مهمة في مرضى نقص المناعة (مثلاً HIV).</p></div><p>من الأسباب الأخرى للالتهاب السحائي: إصابات الرأس، وأمراض المناعة الذاتية مثل الذئبة (Lupus). والالتهاب يسبب تورمًا شديدًا في المخ وارتفاعًا خطيرًا في ICP قد ينتهي بالوفاة.</p>",
+   "en": "<h4>The most common organisms by age</h4><table><thead><tr><th>Group</th><th>The most common organisms</th></tr></thead><tbody><tr><td>Newborns (Neonates)</td><td>E. coli · Group B Streptococci</td></tr><tr><td>Children under 14 years</td><td>H. influenzae (if under 4 years and unvaccinated) · Meningococcus (N. meningitidis) · Pneumococcus (Strep. pneumoniae) · TB (in endemic areas)</td></tr><tr><td>Adults and older children</td><td>Meningococcus · Pneumococcus</td></tr><tr><td>The elderly and immunocompromised</td><td>Pneumococcus · Listeria monocytogenes · TB · Gram-negative bacteria · Cryptococcus (fungus)</td></tr></tbody></table><h4>Classification by cause</h4><ul><li><b>Bacterial/Pyogenic:</b> the most dangerous and fastest</li><li><b>Tuberculous (T.B. meningitis):</b> slower onset, lymphocytic, needs long treatment</li><li><b>Viral/Aseptic:</b> usually milder and often improves with supportive treatment</li></ul><div class=\"cs-box cs-info\"><strong>Note</strong><p>Cryptococcus, TB, and Toxoplasma are important causes in immunocompromised patients (for example HIV).</p></div><p>Other causes of meningeal inflammation: head injuries, and autoimmune diseases such as Lupus. The inflammation causes severe brain swelling and a dangerous rise in ICP that may end in death.</p>"
+  },
+  "signs": {
+   "ar": "<h4>الأعراض والعلامات</h4><ul><li>صداع شديد، قيء، حرارة وقشعريرة (Rigors)</li><li>تخليط (Confusion) وهذيان (Delirium) وتشنجات (Convulsions)</li><li>طفح جلدي (Skin rash) — الطفح النزفي اللي لا يبهت بالضغط علامة مكورات سحائية</li><li><b>علامات تهيّج السحايا (Meningeal irritation):</b> رهاب الضوء (Photophobia)، تيبّس الرقبة (Neck rigidity)، تقوّس الجسم للخلف (Opisthotonos)، علامة كيرنج (Kernig) وبرودزنسكي (Brudzinski) إيجابية</li><li>صدمة (Shock) وتجلط منتشر داخل الأوعية (DIC) في الحالات الشديدة</li></ul><div class=\"cs-box cs-info\"><strong>إزاي تفحص كيرنج وبرودزنسكي (للمعرفة)</strong><p><b>برودزنسكي:</b> ثني رقبة المريض النايم على ظهره فتنثني الركبتان تلقائياً. <b>كيرنج:</b> المريض نايم، الفخذ والركبة مثنيتين 90° ومحاولة فرد الركبة بتسبب ألم ومقاومة. الأطفال الصغار قد لا تظهر عندهم، وبدلاً منها: اليافوخ منتفخ، بكاء عالي، رفض الرضاعة، خمول.</p></div><h4>تحليل السائل النخاعي (CSF)</h4><table><thead><tr><th>البند</th><th>قيحي (Pyogenic)</th><th>درني (T.B.)</th><th>فيروسي (Aseptic)</th><th>الطبيعي</th></tr></thead><tbody><tr><td>الخلايا /مم³</td><td>ارتفاع كبير 500–3000 أو أكتر (غالباً متعادلات)</td><td>50–500 غالباً ليمفاوية</td><td>50–500 غالباً ليمفاوية</td><td>0–5 وحيدة النواة</td></tr><tr><td>البروتين</td><td>↑↑</td><td>↑</td><td>طبيعي أو ↑</td><td>20–40 مجم%</td></tr><tr><td>السكر</td><td>أقل من نصف سكر الدم</td><td>↓</td><td>طبيعي</td><td>40–80 مجم%</td></tr><tr><td>الكلوريد</td><td>طبيعي</td><td>↓</td><td>طبيعي</td><td>690–720 مجم%</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الجدول في المرجع كتب الخلايا في القيحي «ليمفاوية»، والصحيح إن الخلايا الغالبة في الالتهاب البكتيري هي <b>المتعادلات (Polymorphs)</b>. الليمفاويات هي الغالبة في الفيروسي والدرني. ولاحظ إن ضغط البزل (Opening pressure) يكون مرتفعاً في البكتيري، والـCSF يكون عكراً.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>الأطفال: بكاء حاد عالي الطبقة وانتفاخ اليافوخ</li><li>البالغون: هياج وتغيّر وعي ثم تشنجات وغيبوبة وربما الوفاة</li><li>العلامات الثلاث: صداع مع رهاب الضوء، تيبّس الرقبة، حمى عالية</li><li>علامة <strong>Kernig</strong>: عند فرد الركبة والمريض مستلقٍ يحدث ألم شديد</li><li>علامة <strong>Brudzinski</strong>: ثني الرقبة يسبب ثني الوركين والركبتين تلقائيًا</li></ul>[[slot:dis-200-signs|علامات السحايا — رسم من إعداد الموقع|/diseases/img/dis-200-signs.svg]]",
+   "en": "<h4>Symptoms and signs</h4><ul><li>Severe headache, vomiting, fever and chills (Rigors)</li><li>Confusion, delirium, and convulsions</li><li>Skin rash — a hemorrhagic rash that does not fade with pressure is a sign of meningococcus</li><li><b>Signs of meningeal irritation:</b> photophobia, neck rigidity, arching of the body backward (Opisthotonos), positive Kernig and Brudzinski signs</li><li>Shock and disseminated intravascular coagulation (DIC) in severe cases</li></ul><div class=\"cs-box cs-info\"><strong>How to test Kernig and Brudzinski (for knowledge)</strong><p><b>Brudzinski:</b> flexing the neck of the patient lying on his back makes the knees flex automatically. <b>Kernig:</b> the patient lies down, the hip and knee flexed at 90°, and trying to straighten the knee causes pain and resistance. Young children may not show them; instead: bulging fontanelle, high-pitched cry, refusal to feed, lethargy.</p></div><h4>Cerebrospinal fluid (CSF) analysis</h4><table><thead><tr><th>Item</th><th>Pyogenic</th><th>Tuberculous (T.B.)</th><th>Viral (Aseptic)</th><th>Normal</th></tr></thead><tbody><tr><td>Cells /mm³</td><td>Marked rise 500–3000 or more (mostly neutrophils)</td><td>50–500 mostly lymphocytes</td><td>50–500 mostly lymphocytes</td><td>0–5 mononuclear</td></tr><tr><td>Protein</td><td>↑↑</td><td>↑</td><td>Normal or ↑</td><td>20–40 mg%</td></tr><tr><td>Glucose</td><td>Less than half the blood glucose</td><td>↓</td><td>Normal</td><td>40–80 mg%</td></tr><tr><td>Chloride</td><td>Normal</td><td>↓</td><td>Normal</td><td>690–720 mg%</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>An older table listed the cells in pyogenic meningitis as \"lymphocytic\", but the correct point is that the predominant cells in bacterial meningitis are <b>neutrophils (Polymorphs)</b>. Lymphocytes predominate in viral and tuberculous meningitis. Note that the opening pressure is high in bacterial meningitis, and the CSF is turbid.</p></div><h4>Additions covering review points</h4><ul><li>Infants: sharp high-pitched cry and bulging fontanelle</li><li>Adults: agitation and altered consciousness, then seizures, coma, and possibly death</li><li>The three signs: headache with photophobia, neck stiffness, high fever</li><li><strong>Kernig</strong> sign: severe pain when the knee is straightened with the patient lying down</li><li><strong>Brudzinski</strong> sign: neck flexion causes automatic flexion of the hips and knees</li></ul>[[slot:dis-200-signs|Signs of meningitis — illustration|/diseases/img/dis-200-signs.svg]]"
+  },
+  "tests": {
+   "ar": "<ul><li><b>البزل القطني (LP):</b> ضغط CSF زائد، خلايا (متعادلات)، بروتين، وسكر منخفض (البكتيريا بتستهلكه)</li><li><b>مزرعة وحساسية</b> للدم وللـCSF</li><li><b>أشعة مقطعية CT</b> لمعرفة وجود خراج أو تورم عميق (قبل البزل لو في علامات ضغط مخ زايد أو تشنجات أو وعي متدني)</li><li>فحوصات الجلطات (DIC) وأملاح الدم والسكر وغازات الدم في الحالات الشديدة</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الحديثة: خُد مزرعة دم <b>قبل</b> أول جرعة مضاد حيوي، لكن لو البزل هيتأخر (CT أو مريض غير مستقر) <b>ابدأ المضاد الحيوي بدون انتظار</b>. ممنوع البزل لو في علامات ارتفاع ضغط المخ (وعي متدهور، حدقة متسعة، تشنج مستمر)، اضطراب تجلط، أو عدوى جلد مكان البزل.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>أشعة مقطعية CT أولًا ثم بزل قطني (LP)</li><li>السائل الشوكي: <strong>فيروسي صافٍ</strong> و<strong>بكتيري عكر</strong></li><li>بعد البزل: راقب ضمادة مكان الإبرة لتسرب سائل صافٍ</li><li>المضاد الحيوي يُعطى <strong>بعد</strong> سحب مزارع الدم</li></ul>",
+   "en": "<ul><li><b>Lumbar puncture (LP):</b> raised CSF pressure, cells (neutrophils), protein, and low glucose (bacteria consume it)</li><li><b>Culture and sensitivity</b> for blood and CSF</li><li><b>CT scan</b> to find an abscess or deep swelling (before the puncture if there are signs of raised intracranial pressure, seizures, or reduced consciousness)</li><li>Clotting tests (DIC), blood electrolytes, glucose, and blood gases in severe cases</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Current guidance: take a blood culture <b>before</b> the first antibiotic dose, but if the puncture will be delayed (CT or an unstable patient) <b>start the antibiotic without waiting</b>. LP is contraindicated if there are signs of raised intracranial pressure (deteriorating consciousness, dilated pupil, persistent seizure), a clotting disorder, or a skin infection at the puncture site.</p></div><h4>Additions covering review points</h4><ul><li>CT scan first, then lumbar puncture (LP)</li><li>CSF: <strong>viral is clear</strong> and <strong>bacterial is turbid</strong></li><li>After the puncture: watch the dressing at the needle site for leakage of clear fluid</li><li>The antibiotic is given <strong>after</strong> the blood cultures are drawn</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>أ) المضاد الحيوي المبدئي لحين نتيجة المزرعة</h4><table><thead><tr><th>الحالة</th><th>الدواء المختار</th><th>البديل</th></tr></thead><tbody><tr><td>حديثو الولادة</td><td>Ampicillin + Gentamicin أو Ampicillin + Cefotaxime/Ceftriaxone*</td><td>Vancomycin + Gentamicin</td></tr><tr><td>رضع وأطفال</td><td>Ampicillin + Chloramphenicol أو Ceftriaxone</td><td>Erythromycin + Chloramphenicol</td></tr><tr><td>بالغين</td><td>Ampicillin + Ceftriaxone</td><td>Erythromycin + Chloramphenicol</td></tr></tbody></table><h4>ب) العلاج حسب الميكروب بعد المزرعة</h4><table><thead><tr><th>الميكروب</th><th>الدواء المختار</th><th>البديل (لو في حساسية بنسلين)</th></tr></thead><tbody><tr><td>Strep. pneumoniae (مكورات رئوية)</td><td>Ceftriaxone + Vancomycin</td><td>Ceftriaxone + Rifampicin / Erythromycin</td></tr><tr><td>Streptococcus مجموعة A و B</td><td>Penicillin G</td><td>Erythromycin</td></tr><tr><td>Streptococcus مجموعة D (Enterococcus)</td><td>Penicillin + Gentamicin</td><td>Vancomycin + Gentamicin</td></tr><tr><td>Staphylococcus</td><td>Gentamicin / Vancomycin</td><td>Vancomycin + Penicillin G</td></tr><tr><td>Listeria monocytogenes</td><td>Ampicillin</td><td>Trimethoprim-Sulfamethoxazole / Chloramphenicol</td></tr><tr><td>Meningococcus (مكورات سحائية)</td><td>Penicillin G</td><td>Cephalosporin جيل ثالث / Chloramphenicol</td></tr><tr><td>Haemophilus influenzae</td><td>Ampicillin أو سيفالوسبورين جيل ثالث</td><td>Chloramphenicol</td></tr><tr><td>سالبة الجرام المعوية (E. coli, Proteus, Klebsiella)</td><td>سيفالوسبورين جيل ثالث أو Ticarcillin + Gentamicin</td><td>Gentamicin</td></tr><tr><td>Pseudomonas aeruginosa</td><td>Ticarcillin (أو Ceftazidime) + Gentamicin</td><td>Gentamicin</td></tr></tbody></table><p>يستمر المضاد الحيوي <b>10 إلى 14 يوم</b> ولحد ما يرجع سكر السائل النخاعي لطبيعته.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الممارسة الحالية (NICE/IDSA/ESCMID): الأمبيسيلين والأوريثرومايسين والكلورامفينيكول بقوا بدائل محدودة. الأساس للبالغين Ceftriaxone 2 جم وريدي كل 12 ساعة (أو Cefotaxime) ± Vancomycin حسب منطقة مقاومة البنيسلين، ويُضاف Ampicillin/Amoxicillin فوق عمر 50 سنة أو نقص مناعة لتغطية Listeria. العلاج التجريبي يحدده طبيب العناية/الأمراض المعدية حسب بروتوكول المستشفى. Gentamicin لا يخترق السحايا جيداً وهو مكمّل فقط (لو بالنقص الشديد). الـ Ceftriaxone ممنوع للمولود الأقل من 41 أسبوع تصحيحي أو اللي بياخد كالسيوم وريدي، فيستخدم Cefotaxime بدله. وعادة يُعطى Dexamethasone 0.15 مجم/كجم كل 6 ساعات (10 مجم للبالغ) 4 أيام قبل أو مع أول جرعة مضاد حيوي في البالغين والأطفال (غير حديثي الولادة) لتقليل الصمم والمضاعفات.</p></div><h4>جرعات وأسماء السوق (Egyptian brands)</h4><table><thead><tr><th>الدواء</th><th>الأسماء التجارية</th><th>الجرعة</th></tr></thead><tbody><tr><td>Gentamicin</td><td>Garamycin 80 مجم أمبول · Garamycin 20 مجم أمبول (للأطفال)</td><td>بالغ: أمبول 80 مجم عضل كل 8 ساعات · أطفال ورضع: 2 مجم/كجم/8 ساعات عضل</td></tr><tr><td>Chloramphenicol كبسول</td><td>Cidocetine 250 · Mephenicol 250</td><td>بالغ: 25–50 مجم/كجم/يوم (حوالي 8–12 كبسولة) مقسمة كل 4 أو 6 ساعات</td></tr><tr><td>Chloramphenicol شراب</td><td>Cidocetine syrup · Miphenicol syrup</td><td>رضيع حتى سنة: ملعقة صغيرة كل 4 أو 6 ساعات · أكبر من سنة: 1–2 ملعقة صغيرة كل 4 أو 6 ساعات</td></tr><tr><td>Chloramphenicol تحاميل 125/250/500</td><td>Cidocetine · Miphenicol</td><td>رضيع: تحميلة 125 مجم كل 6 أو 8 ساعات · طفل أكبر: 250 مجم كل 4 أو 6 ساعات · بالغ: 500 مجم كل 3 أو 4 ساعات</td></tr><tr><td>Chloramphenicol وريدي</td><td>Cidocetine 1 جم فيال</td><td>أطفال: 25 مجم/كجم كل 6 ساعات وريد · بالغ: فيال 1 جم وريد كل 6 ساعات</td></tr><tr><td>Ceftriaxone</td><td>Rocephin 1 جم فيال</td><td>المرجع: 4 جم مرة يومياً (راجع التحديث: الأشهر 2 جم كل 12 ساعة)</td></tr><tr><td>Trimethoprim-Sulfamethoxazole</td><td>Sutrim قرص · Septazol قرص · Septrin شراب</td><td>قرصين أو ملعقة كل 12 ساعة</td></tr></tbody></table><h4>ج) العلاج الداعم (Supportive)</h4><ul><li><b>إزالة الجفاف / علاج وذمة المخ (Cerebral edema) وورم الحلمة العصبية (Papilledema) والغيبوبة:</b> Mannitol 25% — 500 سم³ وريدي على مدى 15–20 دقيقة، أو Epidron فيال — 8 مجم وريدي كل 6 ساعات</li><li><b>الحرارة:</b> Vegaskine لبوس (بالغ أو أطفال) صباحاً ومساءً</li><li><b>التشنجات:</b> Neuril أمبول — بالغ: أمبول وريدي أو عضل عند اللزوم، أطفال: 0.25 مجم/كجم عند اللزوم</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>جرعة المانيتول المكتوبة (500 سم³ ثابتة) غير معيارية: الجرعة المعتادة 0.25–1 جم/كجم وبقرار طبيب المخ والأعصاب أو العناية مع متابعة الأسمولارية والكلى. كمان لازم نعرف الاسم العلمي على أمبول Neuril/Epidron من العبوة (غالباً مضاد تشنج بنزوديازيبيني وكورتيكوستيرويد) — ما نديش من غير ما نتأكد. الجرعة الثابتة 8 مجم كل 6 ساعات من الكورتيزون أكبر من الجرعة المعتمدة في السحايا (0.15 مجم/كجم).</p></div><h4>د) وقاية المخالطين (Prophylaxis of contacts)</h4><table><thead><tr><th>الدواء</th><th>الأسماء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Rifampicin 300 مجم كبسولة</td><td>Rifampicin · Rifadin</td><td>بالغ: كبسولتين (600 مجم) قبل الأكل كل 12 ساعة لمدة يومين · طفل: 10 مجم/كجم كل 12 ساعة لمدة يومين</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الوقاية للمخالطين اللصيقين في المكورات السحائية بتتم بقرار الصحة العامة: Rifampicin كما بالمرجع، أو Ciprofloxacin 500 مجم جرعة واحدة للبالغ، أو Ceftriaxone 250 مجم عضل جرعة واحدة (الحامل). المولود أقل من شهر: Rifampicin 5 مجم/كجم. الـ Rifampicin بيلوّن السوائل (البول والدموع) بلون برتقالي وبيقلل فاعلية موانع الحمل الهرمونية. المخالطين لـ H. influenzae غير المطعّمين كمان بياخدوا Rifampicin.</p></div><p>Minocycline كان بيُستخدم قديماً للتخلص من حمل المكورات السحائية.</p><h4>إضافات تكميلية</h4><ul><li><b>الفطري:</b> Amphotericin B وFluconazole وFlucytosine (Cryptococcus عند ضعيفي المناعة).</li><li>Dexamethasone يقلل الالتهاب في المكورات الرئوية وإعطاؤه قبل أو مع أول جرعة مضاد حيوي.</li><li>Ceftazidime للمصابين بسالبة الجرام والزائفة.</li><li>PCR للـCSF يعطي نتيجة خلال ساعات، والمزرعة قد تستغرق حتى 72 ساعة.</li><li>باراسيتامول للصداع وPhenytoin/Phenobarbital للتشنجات.</li><li>راحة بالسرير حتى يتحسن التهيج العصبي.</li></ul>",
+   "en": "<h4>A) Initial antibiotic until the culture result</h4><table><thead><tr><th>Condition</th><th>Drug of choice</th><th>Alternative</th></tr></thead><tbody><tr><td>Newborns</td><td>Ampicillin + Gentamicin or Ampicillin + Cefotaxime/Ceftriaxone*</td><td>Vancomycin + Gentamicin</td></tr><tr><td>Infants and children</td><td>Ampicillin + Chloramphenicol or Ceftriaxone</td><td>Erythromycin + Chloramphenicol</td></tr><tr><td>Adults</td><td>Ampicillin + Ceftriaxone</td><td>Erythromycin + Chloramphenicol</td></tr></tbody></table><h4>B) Treatment by organism after the culture</h4><table><thead><tr><th>Organism</th><th>Drug of choice</th><th>Alternative (if penicillin allergy)</th></tr></thead><tbody><tr><td>Strep. pneumoniae (pneumococcus)</td><td>Ceftriaxone + Vancomycin</td><td>Ceftriaxone + Rifampicin / Erythromycin</td></tr><tr><td>Streptococcus group A and B</td><td>Penicillin G</td><td>Erythromycin</td></tr><tr><td>Streptococcus group D (Enterococcus)</td><td>Penicillin + Gentamicin</td><td>Vancomycin + Gentamicin</td></tr><tr><td>Staphylococcus</td><td>Gentamicin / Vancomycin</td><td>Vancomycin + Penicillin G</td></tr><tr><td>Listeria monocytogenes</td><td>Ampicillin</td><td>Trimethoprim-Sulfamethoxazole / Chloramphenicol</td></tr><tr><td>Meningococcus</td><td>Penicillin G</td><td>Third-generation cephalosporin / Chloramphenicol</td></tr><tr><td>Haemophilus influenzae</td><td>Ampicillin or a third-generation cephalosporin</td><td>Chloramphenicol</td></tr><tr><td>Enteric Gram-negatives (E. coli, Proteus, Klebsiella)</td><td>Third-generation cephalosporin or Ticarcillin + Gentamicin</td><td>Gentamicin</td></tr><tr><td>Pseudomonas aeruginosa</td><td>Ticarcillin (or Ceftazidime) + Gentamicin</td><td>Gentamicin</td></tr></tbody></table><p>The antibiotic continues for <b>10 to 14 days</b> and until the CSF glucose returns to normal.</p><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Current practice: ampicillin, erythromycin, and chloramphenicol have become limited alternatives. The basis for adults is Ceftriaxone 2 g IV every 12 hours (or Cefotaxime) ± Vancomycin depending on the local penicillin-resistance area, and Ampicillin/Amoxicillin is added above 50 years of age or in immunocompromise to cover Listeria. The empiric treatment is decided by the intensive care/infectious disease physician according to the hospital protocol. Gentamicin does not penetrate the meninges well and is only an adjunct (in severe deficiency). Ceftriaxone is contraindicated in a newborn under 41 corrected weeks or one receiving IV calcium, so Cefotaxime is used instead. Dexamethasone 0.15 mg/kg every 6 hours (10 mg for an adult) for 4 days is usually given before or with the first antibiotic dose in adults and children (not newborns) to reduce deafness and complications.</p></div><h4>Doses and market names (Egyptian brands)</h4><table><thead><tr><th>Drug</th><th>Brand names</th><th>Dose</th></tr></thead><tbody><tr><td>Gentamicin</td><td>Garamycin 80 mg ampoule · Garamycin 20 mg ampoule (pediatric)</td><td>Adult: 80 mg ampoule IM every 8 hours · Children and infants: 2 mg/kg/8 hours IM</td></tr><tr><td>Chloramphenicol capsule</td><td>Cidocetine 250 · Mephenicol 250</td><td>Adult: 25–50 mg/kg/day (about 8–12 capsules) divided every 4 or 6 hours</td></tr><tr><td>Chloramphenicol syrup</td><td>Cidocetine syrup · Miphenicol syrup</td><td>Infant up to one year: one teaspoon every 4 or 6 hours · older than one year: 1–2 teaspoons every 4 or 6 hours</td></tr><tr><td>Chloramphenicol suppositories 125/250/500</td><td>Cidocetine · Miphenicol</td><td>Infant: 125 mg suppository every 6 or 8 hours · older child: 250 mg every 4 or 6 hours · adult: 500 mg every 3 or 4 hours</td></tr><tr><td>Chloramphenicol IV</td><td>Cidocetine 1 g vial</td><td>Children: 25 mg/kg every 6 hours IV · adult: 1 g vial IV every 6 hours</td></tr><tr><td>Ceftriaxone</td><td>Rocephin 1 g vial</td><td>Older dose: 4 g once daily (see the update: the most recent is 2 g every 12 hours)</td></tr><tr><td>Trimethoprim-Sulfamethoxazole</td><td>Sutrim tablet · Septazol tablet · Septrin syrup</td><td>Two tablets or a spoonful every 12 hours</td></tr></tbody></table><h4>C) Supportive treatment</h4><ul><li><b>Dehydration therapy / treating cerebral edema, papilledema, and coma:</b> Mannitol 25% — 500 cc IV over 15–20 minutes, or Epidron vial — 8 mg IV every 6 hours</li><li><b>Fever:</b> Vegaskine suppository (adult or pediatric) morning and evening</li><li><b>Seizures:</b> Neuril ampoule — adult: one ampoule IV or IM as needed, children: 0.25 mg/kg as needed</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The written mannitol dose (a fixed 500 cc) is non-standard: the usual dose is 0.25–1 g/kg and by the decision of the neurologist or intensivist with monitoring of osmolarity and the kidneys. We must also identify the generic name on the Neuril/Epidron ampoule from the package (usually a benzodiazepine anticonvulsant and a corticosteroid) — do not give without confirming. The fixed 8 mg every 6 hours of the corticosteroid is higher than the accepted meningitis dose (0.15 mg/kg).</p></div><h4>D) Prophylaxis of contacts</h4><table><thead><tr><th>Drug</th><th>Names</th><th>Dose</th></tr></thead><tbody><tr><td>Rifampicin 300 mg capsule</td><td>Rifampicin · Rifadin</td><td>Adult: two capsules (600 mg) before eating every 12 hours for two days · child: 10 mg/kg every 12 hours for two days</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Prophylaxis for close contacts in meningococcal disease is done by public health decision: Rifampicin as above, or Ciprofloxacin 500 mg single dose for adults, or Ceftriaxone 250 mg IM single dose (pregnant). A newborn under one month: Rifampicin 5 mg/kg. Rifampicin colors body fluids (urine and tears) orange and reduces the effectiveness of hormonal contraceptives. Unvaccinated contacts of H. influenzae also take Rifampicin.</p></div><p>Minocycline was used in the past to clear meningococcal carriage.</p><h4>Complementary additions</h4><ul><li><b>Fungal:</b> Amphotericin B, Fluconazole, and Flucytosine (Cryptococcus in the immunocompromised).</li><li>Dexamethasone reduces inflammation in pneumococcal meningitis and is given before or with the first antibiotic dose.</li><li>Ceftazidime for Gram-negative and Pseudomonas infection.</li><li>CSF PCR gives a result within hours, and the culture may take up to 72 hours.</li><li>Paracetamol for headache and Phenytoin/Phenobarbital for seizures.</li><li>Bed rest until the neurological irritation improves.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<p>التهاب السحايا طارئ، وأنت أول من يلاحظ التدهور.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تعرّف بسرعة وبلّغ</strong><p>حرارة + صداع + رقبة متيبسة / طفح لا يبهت بالضغط (Glass test) / تغيّر وعي = بلّغ الطبيب فوراً وفعّل بروتوكول Sepsis. الرضيع: خمول، رفض الرضاعة، يافوخ منتفخ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>عزل واحتياطات</strong><p>احتياطات القطيرات (Droplet): كمامة جراحية وغرفة منفردة لحد 24 ساعة من بداية المضاد المناسب (المكورات السحائية/H. influenzae). بلّغ مكافحة العدوى عن المخالطين للوقاية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>خط وريدي + سحب العينات</strong><p>كانيولا واسعة، مزرعة دم، سكر، لاكتات وCBC وتجلط. ساعد في البزل القطني: وضع جانبي منحني الظهر (Fetal) والركبتين للصدر، تعقيم تام، موافقة مكتوبة، سجل الضغط والعينات بالترتيب (1،2،3) وأرسلها للمعمل فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>المضاد الحيوي في أول ساعة</strong><p>بالأمر المكتوب بالجرعة والتوقيت. سجّل ساعة الإعطاء. Ceftriaxone: ما يتخلطش مع محاليل فيها كالسيوم (Ringer). Vancomycin: تسريب بطيء (ما يزيدش عن 10 مجم/دقيقة) لتجنب Red man syndrome، ومتابعة وظائف الكلى. Gentamicin: متابعة الكلى والسمع والمستوى. Chloramphenicol: تحاليل الدم (CBC) ولا يُعطى للمولودين بحذر (Gray baby).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مراقبة عصبية</strong><p>GCS والحدقة وحجمها ورد فعلها والعلامات الحيوية كل 15–30 دقيقة في البداية. راقب: صداع يزيد، قيء قذفي، بطء نبض مع ارتفاع ضغط (Cushing)، تشنجات، يافوخ منتفخ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وضع المريض والبيئة</strong><p>رأس السرير مرتفع 30°، رقبة في وضع محايد، غرفة هادئة قليلة الضوء (رهاب الضوء)، جوانب السرير مرفوعة واحتياطات التشنج (Seizure precautions) مع جهاز شفط وأكسجين جاهزين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>سوائل وتغذية</strong><p>سوائل وريدية بتوازن (تجنب زيادة السوائل لأنها تزيد الوذمة المخية) حسب أمر الطبيب. سجل مدخول/خارج وسكر الدم. تغذية أنبوبية لو الوعي ضعيف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تحكم في الحرارة والتشنج</strong><p>خافض حرارة (Vegaskine لبوس) + كمادات فاترة. إعطاء مضاد التشنج الأمر الطبي عند اللزوم مع مراقبة التنفس (خطر كبت التنفس مع البنزوديازيبينات).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>تسجيل ومتابعة</strong><p>نتائج CSF (خلايا/بروتين/سكر)، ساعة المضاد، الاستجابة، الصمم/الشلل. تأكد من اكتمال المدة 10–14 يوم وتقييم السمع قبل الخروج.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>تفاصيل تهمك</strong><ul><li>لو المريض فاقد الوعي: وضع الإفاقة، حماية مجرى الهواء.</li><li>في الأطفال: قياس محيط الرأس يومياً.</li><li>بعد البزل: متابعة صداع، ألم ظهر، ضعف الأطراف، نزف أو تسريب مكان الإبرة.</li><li>قسّم الأدوية الوريدية بدقة؛ الجرعات المتأخرة تقلل النجاة.</li></ul></div><h4>تفاصيل إضافية</h4><ul><li>العزل حسب الميكروب، وغرفة معتمة بسبب رهاب الضوء.</li><li>تقييم عصبي كل 2–4 ساعات على الأقل (وعي، حدقة، كلام، تماثل الوجه، علامات ارتفاع الضغط).</li><li>لقاح المكورات السحائية: نوعان MPSV4 (متعدد السكاريد) وMCV4 (مقترن)، وسكان السكن الجماعي (سجون، معسكرات، سكن جامعي) أعلى خطراً.</li></ul><h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-200-precautions|عزل الرذاذ والمحمول بالهواء — رسم من إعداد الموقع|/diseases/img/dis-200-precautions.svg]]<ul><li>الاحتياطات: عزل رذاذ فورًا (PPE أولًا)، غرفة مفردة، كمامة جراحية ونظارة</li><li>ترتيب لبس معدات الوقاية: عباءة، كمامة، نظارة، قفازات. ترتيب الخلع: قفازات، نظارة، عباءة، كمامة</li><li>بيئة هادئة منخفضة الضوء والضوضاء</li><li>تجنب السعال والعطس وثني الأطراف، ارفع الرأس 30 درجة على الأقل</li><li>سؤال امتحان: مريض بالتهاب سحايا بكتيري وضغطه 78/56: ابدأ بسوائل وريدية (محلول ملحي) بأمر الطبيب</li></ul><h4>التهاب السحايا عند الرضع والأطفال (تمريض)</h4><ul><li>علامات الرضيع (أقل من سنتين): بكاء حاد النبرة، يافوخ منتفخ وقت الراحة، تهيج، قيء وضعف رضاعة، نوبات، عيون الشمس الغاربة. الأولوية: <b>تقييم اليافوخ</b>.</li><li>مسار المرض: التهاب ← تورم الدماغ ← ارتفاع الضغط ← انضغاط جذع الدماغ ← وفاة. المضاعفة: استسقاء الدماغ (<a href=\"/diseases/dis-3022\">دليل الاستسقاء</a>).</li><li>الفحوص: أشعة مقطعية أولًا ثم بزل قطني؛ الفيروسي سائل صافٍ والبكتيري عكر، وكلاهما يرفع الكريات البيضاء. بعد البزل: راقب ضمادة الموضع وأبقِ الطفل مسطحًا 30 دقيقة إلى ساعة (الرضيع الصغير يُمسك بذقنه نحو صدره وركبتيه نحو بطنه أثناء الإجراء).</li><li>الرضيع (0-12 شهرًا) بسحايا بكتيري: <b>إعطاء المضاد الحيوي هو الأولوية</b> (مثال: سيبروفلوكساسين وريدي حسب الأمر).</li><li>غرفة هادئة معتمة وتقليل المنبهات، رأس السرير 30 درجة، احتياطات النوبات.</li><li>العزل الرذاذي (Droplet): قناع جراحي ونظارات وغرفة مفردة؛ ارتداء: رداء ← قناع ← نظارات ← قفازات، والخلع: قفازات ← نظارات ← رداء ← قناع. غير المرخّصين يرتدون قناعًا.</li></ul>[[slot:dis-3024-meningitis|التهاب السحايا عند الرضع — رسم من إعداد الموقع|/diseases/img/dis-3024-meningitis.svg]]<h4>مقارنة العزل: رذاذ مقابل محمول بالهواء</h4><table><thead><tr><th>النوع</th><th>أمثلة</th><th>الإجراءات</th></tr></thead><tbody><tr><td>عزل الرذاذ (Droplet)</td><td>السعال الديكي (Pertussis)، الإنفلونزا، التهاب السحايا، الالتهاب الرئوي</td><td>كمامة جراحية ونظارة واقية، غرفة منفردة، ويرتدي غير المرخّصين (الزوار/المساعدون) كمامة أيضًا</td></tr><tr><td>العزل الهوائي (Airborne)</td><td>الحصبة (Measles)، السل (TB)، الجدري المائي والهربس النطاقي (Varicella)</td><td>قناع N95 للطاقم، غرفة ضغط سالب، الباب مغلق، وعند نقل المريض يلبس هو كمامة جراحية</td></tr></tbody></table><p>عند الاشتباه ضع المريض على احتياطات الرذاذ فورًا (معدات الوقاية أولًا). ومن النقاط الخاصة: خذ مزارع الدم قبل أول جرعة مضاد حيوي ثم لا تؤخرها. هبوط الضغط الخطير (مثل 78/56) يُعالج أولًا ببلعة سوائل وريدية (محلول ملحي عادي) بأمر الطبيب.</p><!--aud0651-w--><h4>إضافات من صفحتي السحايا وارتفاع الضغط داخل الجمجمة</h4><ul><li>تقدم المرض: التهاب ← تورم دماغ ← ارتفاع ICP ← ضغط جذع الدماغ ← وفاة. قد تكون الأسباب عدوى أو رضوض رأس أو مناعة ذاتية (كالذئبة).</li><li>علامات الرضيع حتى سنتين: بكاء حاد عالي الطبقة، <strong>يافوخ منتفخ وهو في حالة راحة</strong> (أول علامة لارتفاع الضغط، أبلغ الطبيب)، تهيج، قيء وضعف رضاعة، نوبات متكررة، وعيون «غروب الشمس» (بياض ظاهر فوق القزحية). المضاعفة: الاستسقاء الدماغي. الأولوية: تقييم اليافوخ (طفل عمره 3 أشهر).</li><li>رضيع بالتهاب سحايا فيروسي: حمى، بكاء حاد، قيء، نوبات، ضعف رضاعة؛ واليافوخ مسطح ليس من العلامات.</li><li>قبل LP: CT أولًا. LP لطفل رضيع: ثنِ ذقنه نحو صدره وركبتيه نحو بطنه. بعد LP: اجعل الطفل مستلقيًا بشكل مسطح من 30 دقيقة إلى ساعة، وراقب الضمادة. فيروسي: سائل صافٍ جدًا، بكتيري: عكر، وكلاهما قد يرفع الكريات البيضاء.</li><li>الرضع 0–12 شهرًا بالتهاب سحايا بكتيري: <strong>إعطاء المضاد الحيوي هو الأولوية</strong> (قبل تقييم اليافوخ أو مراقبة الوعي، ويخطئ فيها أكثر من 35% من الطلاب).</li><li>ثلاث نصائح: بيئة خافتة هادئة، رفع رأس السرير 30 درجة، واحتياطات نوبات. احتياط الرذاذ: كمامة جراحية ونظارة وغرفة فردية؛ ويُعلَّم الزوار غير المرخصين ارتداء الكمامة. ترتيب الارتداء GMGG: رداء، كمامة، نظارة، قفازات؛ الخلع GGGM: قفازات، نظارة، رداء، كمامة. الهوائي (حصبة، سل، جدري مائي): N95، ضغط سالب، باب مغلق، ونقل المريض بكمامة جراحية. القطيرات: سعال ديكي، إنفلونزا، التهاب سحايا، التهاب رئوي.</li></ul>",
+   "en": "<p>Meningitis is an emergency, and you are the first to notice deterioration.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Recognize quickly and report</strong><p>Fever + headache + stiff neck / a rash that does not fade with pressure (Glass test) / altered consciousness = inform the physician immediately and activate the Sepsis protocol. Infant: lethargy, refusal to feed, bulging fontanelle.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Isolation and precautions</strong><p>Droplet precautions: surgical mask and a single room until 24 hours after starting the appropriate antibiotic (meningococcus/H. influenzae). Inform infection control about the contacts for prophylaxis.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>IV line + drawing samples</strong><p>Wide cannula, blood culture, glucose, lactate, CBC, and clotting. Assist with the lumbar puncture: lateral position with the back curved (Fetal) and knees to chest, full sterility, written consent, record the pressure and the samples in order (1, 2, 3) and send them to the lab immediately.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>The antibiotic in the first hour</strong><p>By written order with the dose and the timing. Record the time of administration. Ceftriaxone: do not mix with solutions that contain calcium (Ringer). Vancomycin: slow infusion (not faster than 10 mg/min) to avoid Red man syndrome, and monitor kidney function. Gentamicin: monitor kidneys, hearing, and the level. Chloramphenicol: blood tests (CBC) and give with caution to newborns (Gray baby).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Neurological monitoring</strong><p>GCS, pupil size and reaction, and vital signs every 15–30 minutes at first. Watch for: worsening headache, projectile vomiting, slow pulse with high blood pressure (Cushing), seizures, bulging fontanelle.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Patient position and environment</strong><p>Head of bed raised 30°, neck in a neutral position, a quiet dimly lit room (photophobia), bed sides up and Seizure precautions with suction and oxygen ready.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Fluids and nutrition</strong><p>Balanced IV fluids (avoid fluid overload because it increases cerebral edema) according to the physician's order. Record intake/output and blood glucose. Tube feeding if consciousness is poor.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Control fever and seizures</strong><p>Antipyretic (Vegaskine suppository) + tepid compresses. Give the anticonvulsant by physician order when needed with monitoring of breathing (risk of respiratory depression with benzodiazepines).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>Documentation and follow-up</strong><p>CSF results (cells/protein/glucose), the time of the antibiotic, the response, deafness/paralysis. Make sure the 10–14 day course is completed and assess hearing before discharge.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>Details that matter to you</strong><ul><li>If the patient is unconscious: recovery position, protect the airway.</li><li>In children: measure head circumference daily.</li><li>After the puncture: monitor headache, back pain, limb weakness, bleeding or leakage at the needle site.</li><li>Time the IV drugs precisely; delayed doses reduce survival.</li></ul></div><h4>Additional details</h4><ul><li>Isolation according to the organism, and a darkened room because of photophobia.</li><li>Neurological assessment at least every 2–4 hours (consciousness, pupils, speech, facial symmetry, signs of raised pressure).</li><li>Meningococcal vaccine: two types, MPSV4 (polysaccharide) and MCV4 (conjugate), and residents of group housing (prisons, camps, university dorms) are at higher risk.</li></ul><h4>Additions covering review points</h4>[[slot:dis-200-precautions|Droplet and airborne isolation — illustration|/diseases/img/dis-200-precautions.svg]]<ul><li>Precautions: droplet isolation immediately (PPE first), a single room, surgical mask and goggles</li><li>Order of putting on PPE: gown, mask, goggles, gloves. Order of removal: gloves, goggles, gown, mask</li><li>A quiet environment with low light and noise</li><li>Avoid coughing, sneezing, and limb flexion, raise the head at least 30 degrees</li><li>Exam question: a patient with bacterial meningitis whose pressure is 78/56: start IV fluids (saline) by physician order</li></ul><h4>Meningitis in infants and children (nursing)</h4><ul><li>Infant signs (under two years): sharp high-pitched cry, bulging fontanelle at rest, irritability, vomiting and poor feeding, seizures, setting-sun eyes. Priority: <b>assess the fontanelle</b>.</li><li>Course of the disease: inflammation → brain swelling → raised pressure → brainstem compression → death. Complication: hydrocephalus (<a href=\"/diseases/dis-3022\">hydrocephalus guide</a>).</li><li>Tests: CT scan first, then lumbar puncture; viral is clear fluid and bacterial is turbid, and both raise the white cells. After the puncture: monitor the site dressing and keep the child flat for 30 minutes to an hour (a small infant is held with his chin toward his chest and knees toward his abdomen during the procedure).</li><li>An infant (0-12 months) with bacterial meningitis: <b>giving the antibiotic is the priority</b> (example: IV ciprofloxacin as ordered).</li><li>A quiet dark room and reduced stimuli, head of bed 30 degrees, seizure precautions.</li><li>Droplet isolation: surgical mask, goggles, and a single room; donning: gown → mask → goggles → gloves, and removal: gloves → goggles → gown → mask. Unlicensed persons wear a mask.</li></ul>[[slot:dis-3024-meningitis|Meningitis in infants — illustration|/diseases/img/dis-3024-meningitis.svg]]<h4>Isolation comparison: droplet versus airborne</h4><table><thead><tr><th>Type</th><th>Examples</th><th>Measures</th></tr></thead><tbody><tr><td>Droplet isolation</td><td>Whooping cough (Pertussis), influenza, meningitis, pneumonia</td><td>Surgical mask and protective goggles, a single room, and unlicensed persons (visitors/assistants) also wear a mask</td></tr><tr><td>Airborne isolation</td><td>Measles, TB, chickenpox and shingles (Varicella)</td><td>N95 mask for staff, a negative-pressure room, door closed, and when the patient is transported he wears a surgical mask</td></tr></tbody></table><p>When suspected, place the patient on droplet precautions immediately (PPE first). Special points: take blood cultures before the first antibiotic dose, then do not delay it. Dangerous hypotension (such as 78/56) is treated first with an IV fluid bolus (normal saline) by physician order.</p><!--aud0651-w--><h4>Additions from the meningitis and raised intracranial pressure pages</h4><ul><li>Progression of the disease: inflammation → brain swelling → raised ICP → brainstem compression → death. Causes may be infection, head trauma, or autoimmunity (such as lupus).</li><li>Signs of an infant up to two years: sharp high-pitched cry, <strong>bulging fontanelle at rest</strong> (the first sign of raised pressure, inform the physician), irritability, vomiting and poor feeding, repeated seizures, and \"setting-sun\" eyes (white showing above the iris). Complication: hydrocephalus. Priority: assess the fontanelle (a child of 3 months).</li><li>An infant with viral meningitis: fever, sharp cry, vomiting, seizures, poor feeding; and a flat fontanelle is not one of the signs.</li><li>Before LP: CT first. LP for an infant: flex the chin toward the chest and the knees toward the abdomen. After LP: keep the child lying flat for 30 minutes to an hour, and watch the dressing. Viral: very clear fluid, bacterial: turbid, and both may raise the white cells.</li><li>Infants 0–12 months with bacterial meningitis: <strong>giving the antibiotic is the priority</strong> (before assessing the fontanelle or monitoring consciousness, and more than 35% of students get this wrong).</li><li>Three tips: a dim quiet environment, raise the head of the bed 30 degrees, and seizure precautions. Droplet precautions: surgical mask, goggles, and a single room; unlicensed visitors are taught to wear a mask. Order of donning GMGG: gown, mask, goggles, gloves; removal GGGM: gloves, goggles, gown, mask. Airborne (measles, TB, chickenpox): N95, negative pressure, door closed, and transporting the patient with a surgical mask. Droplet: whooping cough, influenza, meningitis, pneumonia.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>انخفاض الوعي أو GCS أقل بدرجتين</li><li>طفح نزفي ينتشر (Petechiae/Purpura) أو شحوب وبرودة أطراف أو ضغط واطي (صدمة/DIC)</li><li>تشنجات متكررة</li><li>حدقة غير متساوية أو بطء نبض مع ارتفاع ضغط</li><li>يافوخ منتفخ أو صراخ عالي في الرضيع</li><li>ضيق تنفس أو SpO2 منخفض</li><li>قلة بول أو علامات الجفاف</li><li>احمرار/ألم مكان تسريب الدواء الوريدي أو طفح بعد المضاد</li></ul></div><h4>إضافات تغطي نقاط المراجعة</h4><p>تذكر: انخفاض الضغط في التهاب السحايا يهدد الحياة؛ وأي تغير وعي أو تشنج يبلّغ فورًا.</p>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Inform the physician immediately if:</strong><ul><li>Decreased consciousness or GCS lower by two points</li><li>A spreading hemorrhagic rash (Petechiae/Purpura) or pallor and cold extremities or low blood pressure (shock/DIC)</li><li>Repeated seizures</li><li>Unequal pupils or slow pulse with high blood pressure</li><li>Bulging fontanelle or a high-pitched scream in an infant</li><li>Shortness of breath or low SpO2</li><li>Reduced urine or signs of dehydration</li><li>Redness/pain at the IV infusion site or a rash after the antibiotic</li></ul></div><h4>Additions covering review points</h4><p>Remember: low blood pressure in meningitis is life-threatening; and any change in consciousness or a seizure is reported immediately.</p>"
+  },
+  "teaching": {
+   "ar": "<ul><li>التطعيمات (المكورات السحائية، Hib، المكورات الرئوية) أفضل وقاية.</li><li>المخالطون اللصيقين (أسرة، زملاء سكن) يتواصلوا مع الصحة العامة لأخذ الوقاية.</li><li>كمّل المضاد الحيوي المدة كاملة (10–14 يوم) حتى لو اتحسنت.</li><li>اغسل إيدك، غطّي الكحة والعطس، ما تشاركش الأكواب.</li><li>بعد الشفاء: افحص السمع والتعلم عند الأطفال.</li><li>أي صداع شديد مع حرارة ورقبة متيبسة بعد الخروج = طوارئ.</li></ul>",
+   "en": "<ul><li>Vaccines (meningococcus, Hib, pneumococcus) are the best prevention.</li><li>Close contacts (family, housemates) should contact public health to receive prophylaxis.</li><li>Complete the antibiotic for the full duration (10–14 days) even if you improve.</li><li>Wash your hands, cover coughs and sneezes, and do not share cups.</li><li>After recovery: check hearing and learning in children.</li><li>Any severe headache with fever and a stiff neck after discharge = an emergency.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "السحايا البكتيري طارئ: المضاد الحيوي في أول ساعة بدون انتظار الأشعة",
+   "علامات التهيج: رقبة متيبسة، Kernig وBrudzinski، رهاب ضوء، Opisthotonos",
+   "CSF: القيحي = خلايا كتير (متعادلات) + بروتين عالي + سكر منخفض جداً",
+   "البزل القطني بعد التأكد من عدم وجود علامات ارتفاع ضغط المخ",
+   "الميكروب يختلف بالسن: E. coli وGBS للمولودين، مكورات سحائية ورئوية للأكبر، Listeria لكبار السن",
+   "احتياطات القطيرات + Rifampicin للمخالطين",
+   "المدة 10–14 يوم وراقب السمع والتشنجات",
+   "لقاحا المكورات السحائية: MPSV4 وMCV4، والمجتمعات المزدحمة أعلى خطراً.",
+   "علامة Kernig: ألم عند فرد الركبة؛ Brudzinski: ثني الرقبة يثني الوركين",
+   "CT ثم LP؛ سائل عكر = بكتيري",
+   "عزل الرذاذ: كمامة جراحية وغرفة مفردة",
+   "المضاد الحيوي بعد مزرعة الدم",
+   "بيئة هادئة ومعتمة ورأس 30 درجة"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>التهاب السحايا (Meningitis) هو التهاب الأغشية اللي بتغلّف المخ والحبل الشوكي، غالباً من بكتيريا أو فيروس أو سل (TB) أو فطريات. الالتهاب البكتيري <b>طارئ مهدد للحياة</b>: كل ساعة تأخير في المضاد الحيوي بتزوّد الوفاة والمضاعفات العصبية.</p><div class=\"cs-stats\"><div><b>3 أنواع</b><span>بكتيري (Pyogenic) · درني (TB) · فيروسي (Aseptic)</span></div><div><b>10–14 يوم</b><span>مدة المضاد الحيوي المعتادة في البكتيري</span></div><div><b>LP</b><span>البزل القطني + مزرعة CSF للتشخيص</span></div></div>[[slot:dis-200-rash|صورة الطفح الجلدي النزفي (Petechiae/Purpura) في التهاب السحايا بالمكورات السحائية]]<div class=\"cs-box cs-danger\"><strong>القاعدة الذهبية</strong><p>صداع + حرارة + رقبة متيبسة (أو تغيّر وعي / طفح لا يبهت بالضغط) = <b>اشتباه التهاب سحايا بكتيري</b>. ابدأ المضاد الحيوي فوراً بأمر الطبيب ولا تستنى نتيجة البزل أو الأشعة.</p></div><h4>من المراجعة الشاملة</h4>[[slot:dis-2626-meningitis|التهاب السحايا — رسم من إعداد الموقع|/diseases/img/dis-2626-meningitis.svg]][[slot:dis-2627-isolation|العزل واللبس والخلع — رسم من إعداد الموقع|/diseases/img/dis-2627-isolation.svg]]"
-    },
-    "causes": {
-      "ar": "<h4>أشهر الميكروبات حسب السن</h4><table><thead><tr><th>الفئة</th><th>الميكروبات الأشهر</th></tr></thead><tbody><tr><td>حديثو الولادة (Neonates)</td><td>E. coli · المكورات العقدية مجموعة B (Group B Streptococci)</td></tr><tr><td>أطفال أقل من 14 سنة</td><td>H. influenzae (لو أقل من 4 سنين وغير مطعّم) · المكورات السحائية (N. meningitidis) · المكورات الرئوية (Strep. pneumoniae) · السل TB (في المناطق الموبوءة)</td></tr><tr><td>البالغين والأطفال الأكبر</td><td>المكورات السحائية (Meningococcus) · المكورات الرئوية (Pneumococcus)</td></tr><tr><td>كبار السن ونقص المناعة</td><td>المكورات الرئوية · Listeria monocytogenes · السل TB · البكتيريا سالبة الجرام (Gram-negative) · Cryptococcus (فطر)</td></tr></tbody></table><h4>تصنيف حسب السبب</h4><ul><li><b>بكتيري/قيحي (Pyogenic):</b> الأخطر والأسرع</li><li><b>درني (T.B. meningitis):</b> أبطأ بداية، لمفاوي، بيحتاج علاج طويل</li><li><b>فيروسي/معقّم (Viral/Aseptic):</b> غالباً أخف ويتحسن غالباً بالعلاج الداعم</li></ul><div class=\"cs-box cs-info\"><strong>ملحوظة</strong><p>الـCryptococcus والـTB والـToxoplasma أسباب مهمة في مرضى نقص المناعة (مثلاً HIV).</p></div><p>من الأسباب الأخرى للالتهاب السحائي: إصابات الرأس، وأمراض المناعة الذاتية مثل الذئبة (Lupus). والالتهاب يسبب تورمًا شديدًا في المخ وارتفاعًا خطيرًا في ICP قد ينتهي بالوفاة.</p>"
-    },
-    "signs": {
-      "ar": "<h4>الأعراض والعلامات</h4><ul><li>صداع شديد، قيء، حرارة وقشعريرة (Rigors)</li><li>تخليط (Confusion) وهذيان (Delirium) وتشنجات (Convulsions)</li><li>طفح جلدي (Skin rash) — الطفح النزفي اللي لا يبهت بالضغط علامة مكورات سحائية</li><li><b>علامات تهيّج السحايا (Meningeal irritation):</b> رهاب الضوء (Photophobia)، تيبّس الرقبة (Neck rigidity)، تقوّس الجسم للخلف (Opisthotonos)، علامة كيرنج (Kernig) وبرودزنسكي (Brudzinski) إيجابية</li><li>صدمة (Shock) وتجلط منتشر داخل الأوعية (DIC) في الحالات الشديدة</li></ul><div class=\"cs-box cs-info\"><strong>إزاي تفحص كيرنج وبرودزنسكي (للمعرفة)</strong><p><b>برودزنسكي:</b> ثني رقبة المريض النايم على ظهره فتنثني الركبتان تلقائياً. <b>كيرنج:</b> المريض نايم، الفخذ والركبة مثنيتين 90° ومحاولة فرد الركبة بتسبب ألم ومقاومة. الأطفال الصغار قد لا تظهر عندهم، وبدلاً منها: اليافوخ منتفخ، بكاء عالي، رفض الرضاعة، خمول.</p></div><h4>تحليل السائل النخاعي (CSF)</h4><table><thead><tr><th>البند</th><th>قيحي (Pyogenic)</th><th>درني (T.B.)</th><th>فيروسي (Aseptic)</th><th>الطبيعي</th></tr></thead><tbody><tr><td>الخلايا /مم³</td><td>ارتفاع كبير 500–3000 أو أكتر (غالباً متعادلات)</td><td>50–500 غالباً ليمفاوية</td><td>50–500 غالباً ليمفاوية</td><td>0–5 وحيدة النواة</td></tr><tr><td>البروتين</td><td>↑↑</td><td>↑</td><td>طبيعي أو ↑</td><td>20–40 مجم%</td></tr><tr><td>السكر</td><td>أقل من نصف سكر الدم</td><td>↓</td><td>طبيعي</td><td>40–80 مجم%</td></tr><tr><td>الكلوريد</td><td>طبيعي</td><td>↓</td><td>طبيعي</td><td>690–720 مجم%</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الجدول في المرجع كتب الخلايا في القيحي «ليمفاوية»، والصحيح إن الخلايا الغالبة في الالتهاب البكتيري هي <b>المتعادلات (Polymorphs)</b>. الليمفاويات هي الغالبة في الفيروسي والدرني. ولاحظ إن ضغط البزل (Opening pressure) يكون مرتفعاً في البكتيري، والـCSF يكون عكراً.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>الأطفال: بكاء حاد عالي الطبقة وانتفاخ اليافوخ</li><li>البالغون: هياج وتغيّر وعي ثم تشنجات وغيبوبة وربما الوفاة</li><li>العلامات الثلاث: صداع مع رهاب الضوء، تيبّس الرقبة، حمى عالية</li><li>علامة <strong>Kernig</strong>: عند فرد الركبة والمريض مستلقٍ يحدث ألم شديد</li><li>علامة <strong>Brudzinski</strong>: ثني الرقبة يسبب ثني الوركين والركبتين تلقائيًا</li></ul>[[slot:dis-200-signs|علامات السحايا — رسم من إعداد الموقع|/diseases/img/dis-200-signs.svg]]"
-    },
-    "tests": {
-      "ar": "<ul><li><b>البزل القطني (LP):</b> ضغط CSF زائد، خلايا (متعادلات)، بروتين، وسكر منخفض (البكتيريا بتستهلكه)</li><li><b>مزرعة وحساسية</b> للدم وللـCSF</li><li><b>أشعة مقطعية CT</b> لمعرفة وجود خراج أو تورم عميق (قبل البزل لو في علامات ضغط مخ زايد أو تشنجات أو وعي متدني)</li><li>فحوصات الجلطات (DIC) وأملاح الدم والسكر وغازات الدم في الحالات الشديدة</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الحديثة: خُد مزرعة دم <b>قبل</b> أول جرعة مضاد حيوي، لكن لو البزل هيتأخر (CT أو مريض غير مستقر) <b>ابدأ المضاد الحيوي بدون انتظار</b>. ممنوع البزل لو في علامات ارتفاع ضغط المخ (وعي متدهور، حدقة متسعة، تشنج مستمر)، اضطراب تجلط، أو عدوى جلد مكان البزل.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>أشعة مقطعية CT أولًا ثم بزل قطني (LP)</li><li>السائل الشوكي: <strong>فيروسي صافٍ</strong> و<strong>بكتيري عكر</strong></li><li>بعد البزل: راقب ضمادة مكان الإبرة لتسرب سائل صافٍ</li><li>المضاد الحيوي يُعطى <strong>بعد</strong> سحب مزارع الدم</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>أ) المضاد الحيوي المبدئي لحين نتيجة المزرعة</h4><table><thead><tr><th>الحالة</th><th>الدواء المختار</th><th>البديل</th></tr></thead><tbody><tr><td>حديثو الولادة</td><td>Ampicillin + Gentamicin أو Ampicillin + Cefotaxime/Ceftriaxone*</td><td>Vancomycin + Gentamicin</td></tr><tr><td>رضع وأطفال</td><td>Ampicillin + Chloramphenicol أو Ceftriaxone</td><td>Erythromycin + Chloramphenicol</td></tr><tr><td>بالغين</td><td>Ampicillin + Ceftriaxone</td><td>Erythromycin + Chloramphenicol</td></tr></tbody></table><h4>ب) العلاج حسب الميكروب بعد المزرعة</h4><table><thead><tr><th>الميكروب</th><th>الدواء المختار</th><th>البديل (لو في حساسية بنسلين)</th></tr></thead><tbody><tr><td>Strep. pneumoniae (مكورات رئوية)</td><td>Ceftriaxone + Vancomycin</td><td>Ceftriaxone + Rifampicin / Erythromycin</td></tr><tr><td>Streptococcus مجموعة A و B</td><td>Penicillin G</td><td>Erythromycin</td></tr><tr><td>Streptococcus مجموعة D (Enterococcus)</td><td>Penicillin + Gentamicin</td><td>Vancomycin + Gentamicin</td></tr><tr><td>Staphylococcus</td><td>Gentamicin / Vancomycin</td><td>Vancomycin + Penicillin G</td></tr><tr><td>Listeria monocytogenes</td><td>Ampicillin</td><td>Trimethoprim-Sulfamethoxazole / Chloramphenicol</td></tr><tr><td>Meningococcus (مكورات سحائية)</td><td>Penicillin G</td><td>Cephalosporin جيل ثالث / Chloramphenicol</td></tr><tr><td>Haemophilus influenzae</td><td>Ampicillin أو سيفالوسبورين جيل ثالث</td><td>Chloramphenicol</td></tr><tr><td>سالبة الجرام المعوية (E. coli, Proteus, Klebsiella)</td><td>سيفالوسبورين جيل ثالث أو Ticarcillin + Gentamicin</td><td>Gentamicin</td></tr><tr><td>Pseudomonas aeruginosa</td><td>Ticarcillin (أو Ceftazidime) + Gentamicin</td><td>Gentamicin</td></tr></tbody></table><p>يستمر المضاد الحيوي <b>10 إلى 14 يوم</b> ولحد ما يرجع سكر السائل النخاعي لطبيعته.</p><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الممارسة الحالية (NICE/IDSA/ESCMID): الأمبيسيلين والأوريثرومايسين والكلورامفينيكول بقوا بدائل محدودة. الأساس للبالغين Ceftriaxone 2 جم وريدي كل 12 ساعة (أو Cefotaxime) ± Vancomycin حسب منطقة مقاومة البنيسلين، ويُضاف Ampicillin/Amoxicillin فوق عمر 50 سنة أو نقص مناعة لتغطية Listeria. العلاج التجريبي يحدده طبيب العناية/الأمراض المعدية حسب بروتوكول المستشفى. Gentamicin لا يخترق السحايا جيداً وهو مكمّل فقط (لو بالنقص الشديد). الـ Ceftriaxone ممنوع للمولود الأقل من 41 أسبوع تصحيحي أو اللي بياخد كالسيوم وريدي، فيستخدم Cefotaxime بدله. وعادة يُعطى Dexamethasone 0.15 مجم/كجم كل 6 ساعات (10 مجم للبالغ) 4 أيام قبل أو مع أول جرعة مضاد حيوي في البالغين والأطفال (غير حديثي الولادة) لتقليل الصمم والمضاعفات.</p></div><h4>جرعات وأسماء السوق (Egyptian brands)</h4><table><thead><tr><th>الدواء</th><th>الأسماء التجارية</th><th>الجرعة</th></tr></thead><tbody><tr><td>Gentamicin</td><td>Garamycin 80 مجم أمبول · Garamycin 20 مجم أمبول (للأطفال)</td><td>بالغ: أمبول 80 مجم عضل كل 8 ساعات · أطفال ورضع: 2 مجم/كجم/8 ساعات عضل</td></tr><tr><td>Chloramphenicol كبسول</td><td>Cidocetine 250 · Mephenicol 250</td><td>بالغ: 25–50 مجم/كجم/يوم (حوالي 8–12 كبسولة) مقسمة كل 4 أو 6 ساعات</td></tr><tr><td>Chloramphenicol شراب</td><td>Cidocetine syrup · Miphenicol syrup</td><td>رضيع حتى سنة: ملعقة صغيرة كل 4 أو 6 ساعات · أكبر من سنة: 1–2 ملعقة صغيرة كل 4 أو 6 ساعات</td></tr><tr><td>Chloramphenicol تحاميل 125/250/500</td><td>Cidocetine · Miphenicol</td><td>رضيع: تحميلة 125 مجم كل 6 أو 8 ساعات · طفل أكبر: 250 مجم كل 4 أو 6 ساعات · بالغ: 500 مجم كل 3 أو 4 ساعات</td></tr><tr><td>Chloramphenicol وريدي</td><td>Cidocetine 1 جم فيال</td><td>أطفال: 25 مجم/كجم كل 6 ساعات وريد · بالغ: فيال 1 جم وريد كل 6 ساعات</td></tr><tr><td>Ceftriaxone</td><td>Rocephin 1 جم فيال</td><td>المرجع: 4 جم مرة يومياً (راجع التحديث: الأشهر 2 جم كل 12 ساعة)</td></tr><tr><td>Trimethoprim-Sulfamethoxazole</td><td>Sutrim قرص · Septazol قرص · Septrin شراب</td><td>قرصين أو ملعقة كل 12 ساعة</td></tr></tbody></table><h4>ج) العلاج الداعم (Supportive)</h4><ul><li><b>إزالة الجفاف / علاج وذمة المخ (Cerebral edema) وورم الحلمة العصبية (Papilledema) والغيبوبة:</b> Mannitol 25% — 500 سم³ وريدي على مدى 15–20 دقيقة، أو Epidron فيال — 8 مجم وريدي كل 6 ساعات</li><li><b>الحرارة:</b> Vegaskine لبوس (بالغ أو أطفال) صباحاً ومساءً</li><li><b>التشنجات:</b> Neuril أمبول — بالغ: أمبول وريدي أو عضل عند اللزوم، أطفال: 0.25 مجم/كجم عند اللزوم</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>جرعة المانيتول المكتوبة (500 سم³ ثابتة) غير معيارية: الجرعة المعتادة 0.25–1 جم/كجم وبقرار طبيب المخ والأعصاب أو العناية مع متابعة الأسمولارية والكلى. كمان لازم نعرف الاسم العلمي على أمبول Neuril/Epidron من العبوة (غالباً مضاد تشنج بنزوديازيبيني وكورتيكوستيرويد) — ما نديش من غير ما نتأكد. الجرعة الثابتة 8 مجم كل 6 ساعات من الكورتيزون أكبر من الجرعة المعتمدة في السحايا (0.15 مجم/كجم).</p></div><h4>د) وقاية المخالطين (Prophylaxis of contacts)</h4><table><thead><tr><th>الدواء</th><th>الأسماء</th><th>الجرعة</th></tr></thead><tbody><tr><td>Rifampicin 300 مجم كبسولة</td><td>Rifampicin · Rifadin</td><td>بالغ: كبسولتين (600 مجم) قبل الأكل كل 12 ساعة لمدة يومين · طفل: 10 مجم/كجم كل 12 ساعة لمدة يومين</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الوقاية للمخالطين اللصيقين في المكورات السحائية بتتم بقرار الصحة العامة: Rifampicin كما بالمرجع، أو Ciprofloxacin 500 مجم جرعة واحدة للبالغ، أو Ceftriaxone 250 مجم عضل جرعة واحدة (الحامل). المولود أقل من شهر: Rifampicin 5 مجم/كجم. الـ Rifampicin بيلوّن السوائل (البول والدموع) بلون برتقالي وبيقلل فاعلية موانع الحمل الهرمونية. المخالطين لـ H. influenzae غير المطعّمين كمان بياخدوا Rifampicin.</p></div><p>Minocycline كان بيُستخدم قديماً للتخلص من حمل المكورات السحائية.</p><h4>إضافات تكميلية</h4><ul><li><b>الفطري:</b> Amphotericin B وFluconazole وFlucytosine (Cryptococcus عند ضعيفي المناعة).</li><li>Dexamethasone يقلل الالتهاب في المكورات الرئوية وإعطاؤه قبل أو مع أول جرعة مضاد حيوي.</li><li>Ceftazidime للمصابين بسالبة الجرام والزائفة.</li><li>PCR للـCSF يعطي نتيجة خلال ساعات، والمزرعة قد تستغرق حتى 72 ساعة.</li><li>باراسيتامول للصداع وPhenytoin/Phenobarbital للتشنجات.</li><li>راحة بالسرير حتى يتحسن التهيج العصبي.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<p>التهاب السحايا طارئ، وأنت أول من يلاحظ التدهور.</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تعرّف بسرعة وبلّغ</strong><p>حرارة + صداع + رقبة متيبسة / طفح لا يبهت بالضغط (Glass test) / تغيّر وعي = بلّغ الطبيب فوراً وفعّل بروتوكول Sepsis. الرضيع: خمول، رفض الرضاعة، يافوخ منتفخ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>عزل واحتياطات</strong><p>احتياطات القطيرات (Droplet): كمامة جراحية وغرفة منفردة لحد 24 ساعة من بداية المضاد المناسب (المكورات السحائية/H. influenzae). بلّغ مكافحة العدوى عن المخالطين للوقاية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>خط وريدي + سحب العينات</strong><p>كانيولا واسعة، مزرعة دم، سكر، لاكتات وCBC وتجلط. ساعد في البزل القطني: وضع جانبي منحني الظهر (Fetal) والركبتين للصدر، تعقيم تام، موافقة مكتوبة، سجل الضغط والعينات بالترتيب (1،2،3) وأرسلها للمعمل فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>المضاد الحيوي في أول ساعة</strong><p>بالأمر المكتوب بالجرعة والتوقيت. سجّل ساعة الإعطاء. Ceftriaxone: ما يتخلطش مع محاليل فيها كالسيوم (Ringer). Vancomycin: تسريب بطيء (ما يزيدش عن 10 مجم/دقيقة) لتجنب Red man syndrome، ومتابعة وظائف الكلى. Gentamicin: متابعة الكلى والسمع والمستوى. Chloramphenicol: تحاليل الدم (CBC) ولا يُعطى للمولودين بحذر (Gray baby).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مراقبة عصبية</strong><p>GCS والحدقة وحجمها ورد فعلها والعلامات الحيوية كل 15–30 دقيقة في البداية. راقب: صداع يزيد، قيء قذفي، بطء نبض مع ارتفاع ضغط (Cushing)، تشنجات، يافوخ منتفخ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وضع المريض والبيئة</strong><p>رأس السرير مرتفع 30°، رقبة في وضع محايد، غرفة هادئة قليلة الضوء (رهاب الضوء)، جوانب السرير مرفوعة واحتياطات التشنج (Seizure precautions) مع جهاز شفط وأكسجين جاهزين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>سوائل وتغذية</strong><p>سوائل وريدية بتوازن (تجنب زيادة السوائل لأنها تزيد الوذمة المخية) حسب أمر الطبيب. سجل مدخول/خارج وسكر الدم. تغذية أنبوبية لو الوعي ضعيف.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تحكم في الحرارة والتشنج</strong><p>خافض حرارة (Vegaskine لبوس) + كمادات فاترة. إعطاء مضاد التشنج الأمر الطبي عند اللزوم مع مراقبة التنفس (خطر كبت التنفس مع البنزوديازيبينات).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>تسجيل ومتابعة</strong><p>نتائج CSF (خلايا/بروتين/سكر)، ساعة المضاد، الاستجابة، الصمم/الشلل. تأكد من اكتمال المدة 10–14 يوم وتقييم السمع قبل الخروج.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>تفاصيل تهمك</strong><ul><li>لو المريض فاقد الوعي: وضع الإفاقة، حماية مجرى الهواء.</li><li>في الأطفال: قياس محيط الرأس يومياً.</li><li>بعد البزل: متابعة صداع، ألم ظهر، ضعف الأطراف، نزف أو تسريب مكان الإبرة.</li><li>قسّم الأدوية الوريدية بدقة؛ الجرعات المتأخرة تقلل النجاة.</li></ul></div><h4>تفاصيل إضافية</h4><ul><li>العزل حسب الميكروب، وغرفة معتمة بسبب رهاب الضوء.</li><li>تقييم عصبي كل 2–4 ساعات على الأقل (وعي، حدقة، كلام، تماثل الوجه، علامات ارتفاع الضغط).</li><li>لقاح المكورات السحائية: نوعان MPSV4 (متعدد السكاريد) وMCV4 (مقترن)، وسكان السكن الجماعي (سجون، معسكرات، سكن جامعي) أعلى خطراً.</li></ul><h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-200-precautions|عزل الرذاذ والمحمول بالهواء — رسم من إعداد الموقع|/diseases/img/dis-200-precautions.svg]]<ul><li>الاحتياطات: عزل رذاذ فورًا (PPE أولًا)، غرفة مفردة، كمامة جراحية ونظارة</li><li>ترتيب لبس معدات الوقاية: عباءة، كمامة، نظارة، قفازات. ترتيب الخلع: قفازات، نظارة، عباءة، كمامة</li><li>بيئة هادئة منخفضة الضوء والضوضاء</li><li>تجنب السعال والعطس وثني الأطراف، ارفع الرأس 30 درجة على الأقل</li><li>سؤال امتحان: مريض بالتهاب سحايا بكتيري وضغطه 78/56: ابدأ بسوائل وريدية (محلول ملحي) بأمر الطبيب</li></ul><h4>التهاب السحايا عند الرضع والأطفال (تمريض)</h4><ul><li>علامات الرضيع (أقل من سنتين): بكاء حاد النبرة، يافوخ منتفخ وقت الراحة، تهيج، قيء وضعف رضاعة، نوبات، عيون الشمس الغاربة. الأولوية: <b>تقييم اليافوخ</b>.</li><li>مسار المرض: التهاب ← تورم الدماغ ← ارتفاع الضغط ← انضغاط جذع الدماغ ← وفاة. المضاعفة: استسقاء الدماغ (<a href=\"/diseases/dis-3022\">دليل الاستسقاء</a>).</li><li>الفحوص: أشعة مقطعية أولًا ثم بزل قطني؛ الفيروسي سائل صافٍ والبكتيري عكر، وكلاهما يرفع الكريات البيضاء. بعد البزل: راقب ضمادة الموضع وأبقِ الطفل مسطحًا 30 دقيقة إلى ساعة (الرضيع الصغير يُمسك بذقنه نحو صدره وركبتيه نحو بطنه أثناء الإجراء).</li><li>الرضيع (0-12 شهرًا) بسحايا بكتيري: <b>إعطاء المضاد الحيوي هو الأولوية</b> (مثال: سيبروفلوكساسين وريدي حسب الأمر).</li><li>غرفة هادئة معتمة وتقليل المنبهات، رأس السرير 30 درجة، احتياطات النوبات.</li><li>العزل الرذاذي (Droplet): قناع جراحي ونظارات وغرفة مفردة؛ ارتداء: رداء ← قناع ← نظارات ← قفازات، والخلع: قفازات ← نظارات ← رداء ← قناع. غير المرخّصين يرتدون قناعًا.</li></ul>[[slot:dis-3024-meningitis|التهاب السحايا عند الرضع — رسم من إعداد الموقع|/diseases/img/dis-3024-meningitis.svg]]<h4>مقارنة العزل: رذاذ مقابل محمول بالهواء</h4><table><thead><tr><th>النوع</th><th>أمثلة</th><th>الإجراءات</th></tr></thead><tbody><tr><td>عزل الرذاذ (Droplet)</td><td>السعال الديكي (Pertussis)، الإنفلونزا، التهاب السحايا، الالتهاب الرئوي</td><td>كمامة جراحية ونظارة واقية، غرفة منفردة، ويرتدي غير المرخّصين (الزوار/المساعدون) كمامة أيضًا</td></tr><tr><td>العزل الهوائي (Airborne)</td><td>الحصبة (Measles)، السل (TB)، الجدري المائي والهربس النطاقي (Varicella)</td><td>قناع N95 للطاقم، غرفة ضغط سالب، الباب مغلق، وعند نقل المريض يلبس هو كمامة جراحية</td></tr></tbody></table><p>عند الاشتباه ضع المريض على احتياطات الرذاذ فورًا (معدات الوقاية أولًا). ومن النقاط الخاصة: خذ مزارع الدم قبل أول جرعة مضاد حيوي ثم لا تؤخرها. هبوط الضغط الخطير (مثل 78/56) يُعالج أولًا ببلعة سوائل وريدية (محلول ملحي عادي) بأمر الطبيب.</p><!--aud0651-w--><h4>إضافات من صفحتي السحايا وارتفاع الضغط داخل الجمجمة</h4><ul><li>تقدم المرض: التهاب ← تورم دماغ ← ارتفاع ICP ← ضغط جذع الدماغ ← وفاة. قد تكون الأسباب عدوى أو رضوض رأس أو مناعة ذاتية (كالذئبة).</li><li>علامات الرضيع حتى سنتين: بكاء حاد عالي الطبقة، <strong>يافوخ منتفخ وهو في حالة راحة</strong> (أول علامة لارتفاع الضغط، أبلغ الطبيب)، تهيج، قيء وضعف رضاعة، نوبات متكررة، وعيون «غروب الشمس» (بياض ظاهر فوق القزحية). المضاعفة: الاستسقاء الدماغي. الأولوية: تقييم اليافوخ (طفل عمره 3 أشهر).</li><li>رضيع بالتهاب سحايا فيروسي: حمى، بكاء حاد، قيء، نوبات، ضعف رضاعة؛ واليافوخ مسطح ليس من العلامات.</li><li>قبل LP: CT أولًا. LP لطفل رضيع: ثنِ ذقنه نحو صدره وركبتيه نحو بطنه. بعد LP: اجعل الطفل مستلقيًا بشكل مسطح من 30 دقيقة إلى ساعة، وراقب الضمادة. فيروسي: سائل صافٍ جدًا، بكتيري: عكر، وكلاهما قد يرفع الكريات البيضاء.</li><li>الرضع 0–12 شهرًا بالتهاب سحايا بكتيري: <strong>إعطاء المضاد الحيوي هو الأولوية</strong> (قبل تقييم اليافوخ أو مراقبة الوعي، ويخطئ فيها أكثر من 35% من الطلاب).</li><li>ثلاث نصائح: بيئة خافتة هادئة، رفع رأس السرير 30 درجة، واحتياطات نوبات. احتياط الرذاذ: كمامة جراحية ونظارة وغرفة فردية؛ ويُعلَّم الزوار غير المرخصين ارتداء الكمامة. ترتيب الارتداء GMGG: رداء، كمامة، نظارة، قفازات؛ الخلع GGGM: قفازات، نظارة، رداء، كمامة. الهوائي (حصبة، سل، جدري مائي): N95، ضغط سالب، باب مغلق، ونقل المريض بكمامة جراحية. القطيرات: سعال ديكي، إنفلونزا، التهاب سحايا، التهاب رئوي.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>انخفاض الوعي أو GCS أقل بدرجتين</li><li>طفح نزفي ينتشر (Petechiae/Purpura) أو شحوب وبرودة أطراف أو ضغط واطي (صدمة/DIC)</li><li>تشنجات متكررة</li><li>حدقة غير متساوية أو بطء نبض مع ارتفاع ضغط</li><li>يافوخ منتفخ أو صراخ عالي في الرضيع</li><li>ضيق تنفس أو SpO2 منخفض</li><li>قلة بول أو علامات الجفاف</li><li>احمرار/ألم مكان تسريب الدواء الوريدي أو طفح بعد المضاد</li></ul></div><h4>إضافات تغطي نقاط المراجعة</h4><p>تذكر: انخفاض الضغط في التهاب السحايا يهدد الحياة؛ وأي تغير وعي أو تشنج يبلّغ فورًا.</p>"
-    },
-    "teaching": {
-      "ar": "<ul><li>التطعيمات (المكورات السحائية، Hib، المكورات الرئوية) أفضل وقاية.</li><li>المخالطون اللصيقين (أسرة، زملاء سكن) يتواصلوا مع الصحة العامة لأخذ الوقاية.</li><li>كمّل المضاد الحيوي المدة كاملة (10–14 يوم) حتى لو اتحسنت.</li><li>اغسل إيدك، غطّي الكحة والعطس، ما تشاركش الأكواب.</li><li>بعد الشفاء: افحص السمع والتعلم عند الأطفال.</li><li>أي صداع شديد مع حرارة ورقبة متيبسة بعد الخروج = طوارئ.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "السحايا البكتيري طارئ: المضاد الحيوي في أول ساعة بدون انتظار الأشعة",
-      "علامات التهيج: رقبة متيبسة، Kernig وBrudzinski، رهاب ضوء، Opisthotonos",
-      "CSF: القيحي = خلايا كتير (متعادلات) + بروتين عالي + سكر منخفض جداً",
-      "البزل القطني بعد التأكد من عدم وجود علامات ارتفاع ضغط المخ",
-      "الميكروب يختلف بالسن: E. coli وGBS للمولودين، مكورات سحائية ورئوية للأكبر، Listeria لكبار السن",
-      "احتياطات القطيرات + Rifampicin للمخالطين",
-      "المدة 10–14 يوم وراقب السمع والتشنجات",
-      "لقاحا المكورات السحائية: MPSV4 وMCV4، والمجتمعات المزدحمة أعلى خطراً.",
-      "علامة Kernig: ألم عند فرد الركبة؛ Brudzinski: ثني الرقبة يثني الوركين",
-      "CT ثم LP؛ سائل عكر = بكتيري",
-      "عزل الرذاذ: كمامة جراحية وغرفة مفردة",
-      "المضاد الحيوي بعد مزرعة الدم",
-      "بيئة هادئة ومعتمة ورأس 30 درجة"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي نتيجة CSF أرجح لالتهاب سحايا بكتيري؟"
-      },
-      "options": [
-        {
-          "ar": "خلايا 3 مع سكر طبيعي"
-        },
-        {
-          "ar": "خلايا مرتفعة جداً، بروتين مرتفع، سكر أقل من نصف سكر الدم"
-        },
-        {
-          "ar": "خلايا ليمفاوية قليلة وسكر طبيعي"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الالتهاب القيحي يرفع الخلايا والبروتين ويستهلك البكتيريا السكر."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض حرارة وطفح لا يبهت وتغيّر وعي والـCT متأخر. التصرف؟"
-      },
-      "options": [
-        {
-          "ar": "ننتظر نتيجة CT"
-        },
-        {
-          "ar": "نبدأ المضاد الحيوي فوراً بعد مزرعة الدم لو أمكن"
-        },
-        {
-          "ar": "نعطي خافض حرارة فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التأخير يزيد الوفيات، فلا ننتظر الأشعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "لأي سبب يُمنع خلط Ceftriaxone مع Ringer؟"
-      },
-      "options": [
-        {
-          "ar": "يتفاعل مع الكالسيوم"
-        },
-        {
-          "ar": "يقل مفعوله"
-        },
-        {
-          "ar": "يسبب هبوط ضغط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الكالسيوم يكوّن راسب مع Ceftriaxone خصوصاً في المواليد."
-      }
-    },
-    {
-      "q": {
-        "ar": "Vancomycin يُعطى بتسريب بطيء لأن:"
-      },
-      "options": [
-        {
-          "ar": "يسبب Red man syndrome عند السرعة"
-        },
-        {
-          "ar": "يقل امتصاصه"
-        },
-        {
-          "ar": "يتحلل بالضوء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التسريب السريع يحرر الهستامين."
-      }
-    },
-    {
-      "q": {
-        "ar": "الوقاية للمخالطين اللصيقين بالمكورات السحائية:"
-      },
-      "options": [
-        {
-          "ar": "Rifampicin عن طريق الفم يومين"
-        },
-        {
-          "ar": "Ampicillin وريدي"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Rifampicin كل 12 ساعة لمدة يومين."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نوع من العزل لالتهاب السحايا؟"
-      },
-      "options": [
-        {
-          "ar": "رذاذ"
-        },
-        {
-          "ar": "محمول بالهواء"
-        },
-        {
-          "ar": "تلامس فقط"
-        },
-        {
-          "ar": "لا عزل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يُعامل عادةً بعزل الرذاذ مع كمامة جراحية."
-      }
-    },
-    {
-      "q": {
-        "ar": "السائل الشوكي في التهاب السحايا البكتيري يكون:"
-      },
-      "options": [
-        {
-          "ar": "صافيًا"
-        },
-        {
-          "ar": "عكرًا"
-        },
-        {
-          "ar": "أحمر"
-        },
-        {
-          "ar": "أخضر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "العكارة تدل على خلايا بيضاء وبكتيريا."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول إجراء لالتهاب سحايا بكتيري وضغط منخفض:"
-      },
-      "options": [
-        {
-          "ar": "سوائل وريدية بأمر الطبيب"
-        },
-        {
-          "ar": "مسكن"
-        },
-        {
-          "ar": "تقليل الضوء فقط"
-        },
-        {
-          "ar": "تقييد"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الضغط المنخفض خطر؛ يُبدأ بالسوائل مع معالجة الإنتان."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة Brudzinski:"
-      },
-      "options": [
-        {
-          "ar": "ثني الرقبة يسبب ثني الوركين والركبتين"
-        },
-        {
-          "ar": "ألم عند فرد الركبة"
-        },
-        {
-          "ar": "علامة عينية"
-        },
-        {
-          "ar": "تنميل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تدل على تهيج السحايا."
-      }
-    },
-    {
-      "q": {
-        "ar": "ترتيب لبس معدات الوقاية؟"
-      },
-      "options": [
-        {
-          "ar": "قفازات ثم رداء"
-        },
-        {
-          "ar": "رداء كمامة نظارة قفازات"
-        },
-        {
-          "ar": "نظارة ثم رداء"
-        },
-        {
-          "ar": "كمامة ثم قفازات"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "اللبس: رداء، كمامة، نظارة، قفازات."
-      }
-    },
-    {
-      "q": {
-        "ar": "رضيع بعمر 4 أشهر بسحايا بكتيري وصلته أوامر جديدة؛ ماذا تعطي أولوية؟"
-      },
-      "options": [
-        {
-          "ar": "إعطاء المضاد الحيوي الوريدي فورًا"
-        },
-        {
-          "ar": "قياس محيط الرأس"
-        },
-        {
-          "ar": "تقييم الوعي"
-        },
-        {
-          "ar": "احتياطات النوبات"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "المضاد الحيوي المبكر هو الأولوية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم تقييم لرضيع عمره 3 أشهر بالتهاب سحايا:"
-      },
-      "options": [
-        {
-          "ar": "تقييم اليافوخ"
-        },
-        {
-          "ar": "الحرارة"
-        },
-        {
-          "ar": "القيء"
-        },
-        {
-          "ar": "السوائل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "اليافوخ يدل على الضغط."
-      }
-    },
-    {
-      "q": {
-        "ar": "رضيع عمره 4 أشهر بالتهاب سحايا بكتيري وصلت أوامر جديدة. ما الأولوية؟"
-      },
-      "options": [
-        {
-          "ar": "تقييم اليافوخ"
-        },
-        {
-          "ar": "إعطاء المضاد الحيوي وريديًا فورًا"
-        },
-        {
-          "ar": "مراقبة الوعي"
-        },
-        {
-          "ar": "احتياطات النوبات"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "البدء بالمضاد الحيوي أولوية لأن التأخير يزيد الوفيات والمضاعفات."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد البزل القطني لطفل صغير، ما التعليمات الصحيحة للأهل؟"
-      },
-      "options": [
-        {
-          "ar": "رفع الطفل جالسًا"
-        },
-        {
-          "ar": "إبقاء الطفل مسطحًا من 30 دقيقة إلى ساعة"
-        },
-        {
-          "ar": "السماح بالركض"
-        },
-        {
-          "ar": "إزالة الضمادة فورًا"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الاستلقاء يقلل صداع ما بعد البزل."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "NICE NG240 Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management"
-    },
-    {
-      "title": "IDSA Guidelines for bacterial meningitis (Tunkel 2004) / ESCMID 2016"
-    },
-    {
-      "title": "CDC Meningococcal disease: clinical guidance and antibiotic chemoprophylaxis"
-    },
-    {
-      "title": "MSD Manual Professional: Acute bacterial meningitis"
-    }
+  "en": [
+   "Bacterial meningitis is an emergency: the antibiotic in the first hour without waiting for imaging",
+   "Signs of irritation: stiff neck, Kernig and Brudzinski, photophobia, Opisthotonos",
+   "CSF: pyogenic = many cells (neutrophils) + high protein + very low glucose",
+   "Lumbar puncture after making sure there are no signs of raised intracranial pressure",
+   "The organism differs by age: E. coli and GBS for newborns, meningococcus and pneumococcus for older people, Listeria for the elderly",
+   "Droplet precautions + Rifampicin for contacts",
+   "Duration 10–14 days and monitor hearing and seizures",
+   "The two meningococcal vaccines: MPSV4 and MCV4, and crowded communities are at higher risk.",
+   "Kernig sign: pain on straightening the knee; Brudzinski: neck flexion flexes the hips",
+   "CT then LP; turbid fluid = bacterial",
+   "Droplet isolation: surgical mask and a single room",
+   "The antibiotic after the blood culture",
+   "A quiet dark environment and head at 30 degrees"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي نتيجة CSF أرجح لالتهاب سحايا بكتيري؟",
+    "en": "Which CSF result is most likely in bacterial meningitis?"
+   },
+   "options": [
+    {
+     "ar": "خلايا 3 مع سكر طبيعي",
+     "en": "3 cells with normal glucose"
+    },
+    {
+     "ar": "خلايا مرتفعة جداً، بروتين مرتفع، سكر أقل من نصف سكر الدم",
+     "en": "Very high cells, high protein, glucose less than half the blood glucose"
+    },
+    {
+     "ar": "خلايا ليمفاوية قليلة وسكر طبيعي",
+     "en": "Few lymphocytes and normal glucose"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الالتهاب القيحي يرفع الخلايا والبروتين ويستهلك البكتيريا السكر.",
+    "en": "Pyogenic inflammation raises cells and protein, and bacteria consume glucose."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض حرارة وطفح لا يبهت وتغيّر وعي والـCT متأخر. التصرف؟",
+    "en": "A patient has fever, a non-blanching rash, and altered consciousness, and the CT is delayed. The action?"
+   },
+   "options": [
+    {
+     "ar": "ننتظر نتيجة CT",
+     "en": "Wait for the CT result"
+    },
+    {
+     "ar": "نبدأ المضاد الحيوي فوراً بعد مزرعة الدم لو أمكن",
+     "en": "Start the antibiotic immediately after the blood culture if possible"
+    },
+    {
+     "ar": "نعطي خافض حرارة فقط",
+     "en": "Give only an antipyretic"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التأخير يزيد الوفيات، فلا ننتظر الأشعة.",
+    "en": "Delay increases deaths, so we do not wait for imaging."
+   }
+  },
+  {
+   "q": {
+    "ar": "لأي سبب يُمنع خلط Ceftriaxone مع Ringer؟",
+    "en": "Why must Ceftriaxone not be mixed with Ringer?"
+   },
+   "options": [
+    {
+     "ar": "يتفاعل مع الكالسيوم",
+     "en": "It reacts with calcium"
+    },
+    {
+     "ar": "يقل مفعوله",
+     "en": "Its effect decreases"
+    },
+    {
+     "ar": "يسبب هبوط ضغط",
+     "en": "It causes low blood pressure"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الكالسيوم يكوّن راسب مع Ceftriaxone خصوصاً في المواليد.",
+    "en": "Calcium forms a precipitate with Ceftriaxone, especially in newborns."
+   }
+  },
+  {
+   "q": {
+    "ar": "Vancomycin يُعطى بتسريب بطيء لأن:",
+    "en": "Vancomycin is given by slow infusion because:"
+   },
+   "options": [
+    {
+     "ar": "يسبب Red man syndrome عند السرعة",
+     "en": "It causes Red man syndrome at speed"
+    },
+    {
+     "ar": "يقل امتصاصه",
+     "en": "Its absorption decreases"
+    },
+    {
+     "ar": "يتحلل بالضوء",
+     "en": "It breaks down in light"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التسريب السريع يحرر الهستامين.",
+    "en": "Rapid infusion releases histamine."
+   }
+  },
+  {
+   "q": {
+    "ar": "الوقاية للمخالطين اللصيقين بالمكورات السحائية:",
+    "en": "Prophylaxis for close contacts of meningococcus:"
+   },
+   "options": [
+    {
+     "ar": "Rifampicin عن طريق الفم يومين",
+     "en": "Oral Rifampicin for two days"
+    },
+    {
+     "ar": "Ampicillin وريدي",
+     "en": "IV Ampicillin"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Rifampicin كل 12 ساعة لمدة يومين.",
+    "en": "Rifampicin every 12 hours for two days."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نوع من العزل لالتهاب السحايا؟",
+    "en": "Which type of isolation for meningitis?"
+   },
+   "options": [
+    {
+     "ar": "رذاذ",
+     "en": "Droplet"
+    },
+    {
+     "ar": "محمول بالهواء",
+     "en": "Airborne"
+    },
+    {
+     "ar": "تلامس فقط",
+     "en": "Contact only"
+    },
+    {
+     "ar": "لا عزل",
+     "en": "No isolation"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يُعامل عادةً بعزل الرذاذ مع كمامة جراحية.",
+    "en": "It is usually managed with droplet isolation with a surgical mask."
+   }
+  },
+  {
+   "q": {
+    "ar": "السائل الشوكي في التهاب السحايا البكتيري يكون:",
+    "en": "The CSF in bacterial meningitis is:"
+   },
+   "options": [
+    {
+     "ar": "صافيًا",
+     "en": "Clear"
+    },
+    {
+     "ar": "عكرًا",
+     "en": "Turbid"
+    },
+    {
+     "ar": "أحمر",
+     "en": "Red"
+    },
+    {
+     "ar": "أخضر",
+     "en": "Green"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "العكارة تدل على خلايا بيضاء وبكتيريا.",
+    "en": "Turbidity indicates white cells and bacteria."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول إجراء لالتهاب سحايا بكتيري وضغط منخفض:",
+    "en": "The first action for bacterial meningitis with low blood pressure:"
+   },
+   "options": [
+    {
+     "ar": "سوائل وريدية بأمر الطبيب",
+     "en": "IV fluids by physician order"
+    },
+    {
+     "ar": "مسكن",
+     "en": "A painkiller"
+    },
+    {
+     "ar": "تقليل الضوء فقط",
+     "en": "Only reducing light"
+    },
+    {
+     "ar": "تقييد",
+     "en": "Restriction"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الضغط المنخفض خطر؛ يُبدأ بالسوائل مع معالجة الإنتان.",
+    "en": "Low blood pressure is dangerous; fluids are started while treating sepsis."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة Brudzinski:",
+    "en": "Brudzinski sign:"
+   },
+   "options": [
+    {
+     "ar": "ثني الرقبة يسبب ثني الوركين والركبتين",
+     "en": "Neck flexion causes flexion of the hips and knees"
+    },
+    {
+     "ar": "ألم عند فرد الركبة",
+     "en": "Pain on straightening the knee"
+    },
+    {
+     "ar": "علامة عينية",
+     "en": "An eye sign"
+    },
+    {
+     "ar": "تنميل",
+     "en": "Numbness"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تدل على تهيج السحايا.",
+    "en": "It indicates meningeal irritation."
+   }
+  },
+  {
+   "q": {
+    "ar": "ترتيب لبس معدات الوقاية؟",
+    "en": "The order of putting on PPE?"
+   },
+   "options": [
+    {
+     "ar": "قفازات ثم رداء",
+     "en": "Gloves then gown"
+    },
+    {
+     "ar": "رداء كمامة نظارة قفازات",
+     "en": "Gown, mask, goggles, gloves"
+    },
+    {
+     "ar": "نظارة ثم رداء",
+     "en": "Goggles then gown"
+    },
+    {
+     "ar": "كمامة ثم قفازات",
+     "en": "Mask then gloves"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "اللبس: رداء، كمامة، نظارة، قفازات.",
+    "en": "Donning: gown, mask, goggles, gloves."
+   }
+  },
+  {
+   "q": {
+    "ar": "رضيع بعمر 4 أشهر بسحايا بكتيري وصلته أوامر جديدة؛ ماذا تعطي أولوية؟",
+    "en": "A 4-month-old infant with bacterial meningitis has new orders; what is the priority?"
+   },
+   "options": [
+    {
+     "ar": "إعطاء المضاد الحيوي الوريدي فورًا",
+     "en": "Give the IV antibiotic immediately"
+    },
+    {
+     "ar": "قياس محيط الرأس",
+     "en": "Measure head circumference"
+    },
+    {
+     "ar": "تقييم الوعي",
+     "en": "Assess consciousness"
+    },
+    {
+     "ar": "احتياطات النوبات",
+     "en": "Seizure precautions"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "المضاد الحيوي المبكر هو الأولوية.",
+    "en": "Early antibiotic is the priority."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم تقييم لرضيع عمره 3 أشهر بالتهاب سحايا:",
+    "en": "The most important assessment for a 3-month-old infant with meningitis:"
+   },
+   "options": [
+    {
+     "ar": "تقييم اليافوخ",
+     "en": "Assess the fontanelle"
+    },
+    {
+     "ar": "الحرارة",
+     "en": "Temperature"
+    },
+    {
+     "ar": "القيء",
+     "en": "Vomiting"
+    },
+    {
+     "ar": "السوائل",
+     "en": "Fluids"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "اليافوخ يدل على الضغط.",
+    "en": "The fontanelle indicates pressure."
+   }
+  },
+  {
+   "q": {
+    "ar": "رضيع عمره 4 أشهر بالتهاب سحايا بكتيري وصلت أوامر جديدة. ما الأولوية؟",
+    "en": "A 4-month-old infant with bacterial meningitis has new orders. What is the priority?"
+   },
+   "options": [
+    {
+     "ar": "تقييم اليافوخ",
+     "en": "Assess the fontanelle"
+    },
+    {
+     "ar": "إعطاء المضاد الحيوي وريديًا فورًا",
+     "en": "Give the antibiotic IV immediately"
+    },
+    {
+     "ar": "مراقبة الوعي",
+     "en": "Monitor consciousness"
+    },
+    {
+     "ar": "احتياطات النوبات",
+     "en": "Seizure precautions"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "البدء بالمضاد الحيوي أولوية لأن التأخير يزيد الوفيات والمضاعفات.",
+    "en": "Starting the antibiotic is the priority because delay increases deaths and complications."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد البزل القطني لطفل صغير، ما التعليمات الصحيحة للأهل؟",
+    "en": "After a lumbar puncture in a young child, what is the correct instruction for the parents?"
+   },
+   "options": [
+    {
+     "ar": "رفع الطفل جالسًا",
+     "en": "Lift the child to a sitting position"
+    },
+    {
+     "ar": "إبقاء الطفل مسطحًا من 30 دقيقة إلى ساعة",
+     "en": "Keep the child flat for 30 minutes to an hour"
+    },
+    {
+     "ar": "السماح بالركض",
+     "en": "Allow running"
+    },
+    {
+     "ar": "إزالة الضمادة فورًا",
+     "en": "Remove the dressing immediately"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الاستلقاء يقلل صداع ما بعد البزل.",
+    "en": "Lying down reduces post-puncture headache."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "NICE NG240 Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management"
+  },
+  {
+   "title": "IDSA Guidelines for bacterial meningitis (Tunkel 2004) / ESCMID 2016"
+  },
+  {
+   "title": "CDC Meningococcal disease: clinical guidance and antibiotic chemoprophylaxis"
+  },
+  {
+   "title": "MSD Manual Professional: Acute bacterial meningitis"
+  }
+ ]
 }

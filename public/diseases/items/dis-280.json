@@ -1,349 +1,431 @@
 {
-  "num": 280,
-  "system": "gi",
-  "icon": "🩸",
-  "level": 3,
-  "target": "er-reception",
-  "teaser": {
-    "ar": "طارئ بيجي كتير في مصر: دوالي المريء أولاً وقرحة المعدة ثانياً. إزاي تقيّم الصدمة، تجهّز الخطين والدم، تدّي الأدوية بأمان، وتعرف الصح من القديم (التحديثات)."
+ "num": 280,
+ "system": "gi",
+ "icon": "🩸",
+ "level": 3,
+ "target": "er-reception",
+ "teaser": {
+  "ar": "طارئ بيجي كتير في مصر: دوالي المريء أولاً وقرحة المعدة ثانياً. إزاي تقيّم الصدمة، تجهّز الخطين والدم، تدّي الأدوية بأمان، وتعرف الصح من القديم (التحديثات).",
+  "en": "A common emergency in Egypt: esophageal varices first and gastric ulcer second. How to assess shock, prepare the two lines and blood, give drugs safely, and tell the right from the outdated (updates)."
+ },
+ "chips": [
+  {
+   "ar": "دوالي المريء",
+   "en": "Esophageal varices"
   },
-  "chips": [
-    {
-      "ar": "دوالي المريء"
-    },
-    {
-      "ar": "علامات الصدمة"
-    },
-    {
-      "ar": "Pantazol / Dycinone"
-    }
-  ],
-  "sections": {
-    "overview": {
-      "ar": "<p>القيء الدموي (Hematemesis) معناه إن المريض بيرجّع دم (أحمر طازة أو بني زي «تفل القهوة»)، وده معناه نزيف من الجهاز الهضمي العلوي (المريء، المعدة، الإثنى عشر). أول حاجة تتأكد منها <b>مش مصدر النزيف، لكن هل المريض في صدمة ولا لأ</b>.</p><div class=\"cs-stats\"><div><b>الأول</b><span>سبب شائع في مصر: دوالي المريء المتمزقة</span></div><div><b>التاني</b><span>قرحة المعدة/الإثنى عشر</span></div><div><b>5</b><span>علامات تدلك على الصدمة</span></div></div>[[slot:dis-280-algorithm|خطوات التعامل مع القيء الدموي — رسم من إعداد الموقع|/diseases/img/dis-280-algorithm.svg]]<div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>مريض بيرجّع دم + ضغط واطي أو نبض سريع أو جلد بارد = <b>طارئ</b>. أبلّغ الطبيب فوراً وابدأ الإنعاش بالتوازي: خطّين وريديين، سوائل، دم.</p></div><div class=\"cs-box cs-info\"><strong>قيء دموي ولا سعال دموي؟</strong><table><thead><tr><th>العلامة</th><th>قيء دموي (Hematemesis)</th><th>سعال دموي (Hemoptysis)</th></tr></thead><tbody><tr><td>الطريقة</td><td>بيرجّع بغثيان</td><td>بيكح</td></tr><tr><td>اللون</td><td>بني غامق أو أحمر مع بقايا أكل</td><td>أحمر فاتح رغوي</td></tr><tr><td>الحموضة (pH)</td><td>حمضي</td><td>قلوي</td></tr><tr><td>براز أسود بعده</td><td>شائع (Melena)</td><td>نادر</td></tr></tbody></table></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المقارنة بين القيء الدموي والسعال الدموي معلومة طبية عامة مؤكدة من مراجع الباطنة، وليست من المراجع الأساسي.</p></div><h4>تكملة: النزيف السفلي ومصطلحات</h4><table><thead><tr><th>المصطلح</th><th>المعنى</th></tr></thead><tbody><tr><td>Hematemesis</td><td>قيء دم أحمر أو كستنائي أو بشكل «تفل القهوة»</td></tr><tr><td>Melena</td><td>براز أسود قطراني (دم مهضوم، غالباً من العلوي)</td></tr><tr><td>Hematochezia</td><td>دم أحمر أو كستنائي من الشرج (غالباً سفلي، أو علوي غزير)</td></tr></tbody></table><ul><li><b>أسباب علوية:</b> قرحة، دوالي مريء، أورام، تشوهات شريانية وريدية (AVM)، تمزق مالوري-ويس بعد القيء، ومميعات الدم</li><li><b>أسباب سفلية:</b> شرخ شرجي، إصابة مستقيم، التهاب القولون، لحميات، سرطان القولون، التهاب الرتوج (Diverticulitis)، التهاب أوعية، تقرحات</li><li>المآل يعتمد على الكمية والسرعة والعمر والأمراض المصاحبة؛ نقل دم متعدد يزيد خطر ردود الفعل؛ اضطرابات التجلط تزيد الخطورة؛ الصدمة عند النزف الكبير</li></ul>\n<h4></h4>[[slot:dis-280-p148|نزف الجهاز الهضمي — رسم من إعداد الموقع|/diseases/img/dis-280-p148.svg]]<ul><li>العلوي: قيء تفل القهوة وبراز أسود. السفلي: دم أحمر زاهٍ.</li><li>المضاعفات: صدمة نقص حجم: هبوط ضغط وتسرع قلب وجلد شاحب بارد ورطب وإرهاق ودوخة وهيموجلوبين منخفض (أقل من 7 ينذر بخطر).</li><li>فحص الجوياك لدم البراز (Guaiac): جهّز المستلزمات واغسل اليدين بقفاز غير معقم، ضع عينات البراز بالمربعات، افتح الجهة الخلفية وضع قطرتين من المحلول، انتظر 30–60 ثانية، سجّل النتيجة.</li><li>الأولويات: خفض رأس السرير، ملح 0.9%، أكسجين، نقل دم إذا كان Hb أقل من 7. للنزف العلوي: غسيل أنفي معدي (NGT) لكن <strong>ممنوع NGT في دوالي المريء</strong>.</li><li>المناظير: علوي (Endoscopy) وسفلي (Colonoscopy). بعد المنظار: سوائل رائقة (عصير تفاح، مرق، شاي غير محلى، جيلي).</li></ul>\n<h4>مراجعة التمريض الباطني: نزف الجهاز الهضمي</h4><p>العلوي (التهاب المعدة، ارتجاع، قرحة، دوالي مريء): قيء دموي كتفل القهوة وبراز أسود قطراني. السفلي (بواسير، سرطان القولون والمستقيم، رتوج، قولون تقرحي): نزف أحمر زاهٍ. المضاعفة: صدمة نقص الحجم (هبوط ضغط، نبض >100، جلد بارد رطب، إرهاق، هيموجلوبين أقل من 7).</p>[[slot:dis-280-p302|نزف الجهاز الهضمي — رسم من إعداد الموقع|/diseases/img/dis-280-p302.svg]]<ul><li>الأولويات: اخفض رأس السرير، سوائل 0.9%، أكسجين، نقل دم إذا هيموجلوبين أقل من 7، وللعلوي غسيل معدة بأنبوب أنفي معدي إلا في دوالي المريء.</li><li>اختبار الدم الخفي (Guaiac): جمع الأدوات وغسل اليدين وقفاز غير معقم، وضع عينات البراز على الشريحة، فتح الخلف وقطرتان من المحلول، انتظار 30–60 ثانية، تدوين النتيجة.</li><li>التنظير: Endoscopy للعلوي وColonoscopy للسفلي، وبعده سوائل صافية (عصير تفاح، مرق، شاي بلا سكر، جيلي).</li></ul>"
-    },
-    "causes": {
-      "ar": "<h4>أسباب شائعة</h4><table><thead><tr><th>السبب</th><th>ملاحظة</th></tr></thead><tbody><tr><td>دوالي المريء المتمزقة (Ruptured esophageal varices)</td><td>أشهر سبب في مصر، مريض كبد/تليف/فيروس C أو B أو بلهارسيا</td></tr><tr><td>قرحة المعدة أو الإثنى عشر (Peptic ulcer)</td><td>تاني أشهر سبب، مرتبط بمسكنات (NSAIDs) أو جرثومة H. pylori</td></tr><tr><td>أسباب أقل شيوعاً (من المراجع)</td><td>التهاب المعدة الحاد/التآكلي، تمزق ملوري ويس (قيء عنيف)، ورم، التهاب المريء، اضطراب تجلط أو أدوية سيولة</td></tr></tbody></table><h4>اسأل بسرعة (Rapid history)</h4><ul><li>عندك قرحة في المعدة؟</li><li>عندك مرض في الكبد؟</li><li>بتاخد علاج لحاجة؟ بتاخد مسكنات كتير؟ (أسبرين، Voltaren، Brufen، كورتيزون)</li><li>جالك نزيف قبل كده أو عملت منظار؟</li><li>بتاخد سيولة (Warfarin/Plavix/أسبرين/Xarelto)؟ حبوب كحول؟</li></ul><div class=\"cs-box cs-tip\"><strong>ليه السؤال عن الأدوية مهم؟</strong><p>المسكنات (NSAIDs) والسيولة بتزوّد خطر النزيف، ومريض الكبد بيتعامل بخطة مختلفة (دوالي). المعلومة دي بتفرق في العلاج.</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>الفحص: افحص العلامات الحيوية أولاً</h4><p>أهم حاجة تشوفها هي الـ Vital signs عشان تتأكد إن مفيش صدمة (Shock):</p><table><thead><tr><th>العلامة</th><th>في الصدمة</th></tr></thead><tbody><tr><td>الضغط (Blood pressure)</td><td>هبوط</td></tr><tr><td>النبض (Pulse)</td><td>سريع وضعيف (Tachycardia)</td></tr><tr><td>الحرارة/الجلد (Temperature)</td><td>جلد بارد ورطب (cold clammy)</td></tr><tr><td>البول (Urine output)</td><td>قلة (Oliguria)</td></tr><tr><td>إعادة امتلاء الشعيرات (Capillary refill time)</td><td>متأخر</td></tr></tbody></table>[[slot:dis-280-shock|علامات الصدمة النزفية — رسم من إعداد الموقع|/diseases/img/dis-280-shock.svg]]<h4>علامات تانية تدور عليها</h4><ul><li>براز أسود لزج كريه الريحة (Melena)</li><li>شحوب، دوخة، زغللة، عرق بارد</li><li>علامات مرض كبد: اصفرار، استسقاء بالبطن، كبد/طحال، «نجمة عنكبوتية»، احمرار الكفين</li><li>ألم أعلى البطن (قرحة)</li></ul><h4>تكملة</h4><ul><li>تغيرات وضعية: هبوط ضغط ≥ 10 مم زئبق عند تغيير الوضع</li><li>تسارع نبض، شحوب، دوخة، عرق، غثيان</li></ul>"
-    },
-    "tests": {
-      "ar": "<h4>التحاليل المطلوبة (Investigations)</h4><table><thead><tr><th>التحليل</th><th>الغرض</th></tr></thead><tbody><tr><td>CBC (صورة دم كاملة)</td><td>الهيموجلوبين (ممكن ما ينزلش في الأول) والصفائح</td></tr><tr><td>ABG + الصوديوم والبوتاسيوم</td><td>الحموضة وخلل الأملاح</td></tr><tr><td>RBG (سكر عشوائي)</td><td>استبعاد هبوط/ارتفاع السكر</td></tr><tr><td>LFTs (وظائف الكبد) + INR</td><td>مريض كبد/تجلط</td></tr><tr><td>RFTs (وظائف الكلى)</td><td>اليوريا بتعلى مع نزيف الجهاز الهضمي العلوي</td></tr><tr><td>فصيلة الدم والتوافق (Blood group & cross-matching)</td><td>تجهيز كيس دم</td></tr></tbody></table><p>لو المريض مش مستقر: ما تستناش النتايج، ابدأ العلاج واسحب العينات مع تركيب الكانيولا.</p><h4>تكملة</h4><ul><li>دم خفي بالبراز إيجابي</li><li>هيموجلوبين وهيماتوكريت ينخفضان (وقد يتأخرا عن النزف الفعلي)</li><li>فقر دم نقص حديد عند النزف المزمن</li><li>شفط المعدة (NG aspirate) إيجابي في النزف العلوي</li><li>منظار شرجي أو سيني أو قولون لمصدر السفلي</li><li>تصوير شرياني أو مسح بكرات دم موسومة</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>علاج الطوارئ (ER management)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تركيب كانيولتين وتوفير كيس دم</strong><p>بعد معرفة الفصيلة واختبار التوافق (Cross-match).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>محلول ملح 0.9% — 500 سم</strong><p>يُضاف عليه: فيال Pantazol (Pantoprazole) + أمبول Dycinone (Ethamsylate) + أمبول Kapron (Tranexamic acid 500 مجم/5 مل).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أنبوبة رايل (Ryle tube)</strong><p>وغسيل بمحلول ملح لحد ما المحلول يطلع رايق (حسب الأمر).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اطلب نائب الباطنة</strong><p>تحويل للمستشفى/المناظير حسب الحالة.</p></div></div></div><table><thead><tr><th>الدواء (تجاري)</th><th>المادة الفعالة</th><th>الاستخدام في الطوارئ</th></tr></thead><tbody><tr><td>Pantazol فيال</td><td>Pantoprazole</td><td>يخفض حموضة المعدة، يُعطى وريدي (بأمر الطبيب)</td></tr><tr><td>Dycinone أمبول</td><td>Ethamsylate</td><td>مرقئ حسب العادة المحلية</td></tr><tr><td>Kapron أمبول 500 مجم/5 مل</td><td>Tranexamic acid (مؤكد من تركيب المنتج في السوق المصري)</td><td>مضاد تحلل الفبرين</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الحديثة (ACG 2021، ESGE) بتقول: <b>1)</b> الأولوية للإنعاش (ABC) والسوائل ثم الدم بنظام «مقيّد»: عتبة الهيموجلوبين حوالي 7 جم/دل (وأعلى قليلاً لمريض القلب). <b>2)</b> المنظار خلال 24 ساعة (أسرع لو غير مستقر). <b>3)</b> مثبط المضخة وريدي قبل المنظار مقبول وبعد المنظار الجرعة العالية 3 أيام حسب نتيجته. <b>4)</b> Erythromycin وريدي قبل المنظار بأمر الطبيب. <b>5)</b> حمض الترانيكساميك (Kapron) <b>لا يُنصح به</b> في نزيف الجهاز الهضمي (تجربة HALT-IT لم تقلل الوفاة وزادت الجلطات). Dycinone مفيش دليل قوي يدعمه كعلاج أساسي. <b>6)</b> غسيل المعدة بالأنبوبة (NG lavage) مش بيُنصح به روتينياً (ESGE). لذلك نفّذ ما في المراجع فقط بأمر الطبيب/بروتوكول المستشفى.</p></div><div class=\"cs-box cs-danger\"><strong>لو المريض مريض كبد (اشتباه دوالي)</strong><p>الطبيب غالباً يبدأ <b>Terlipressin أو Octreotide</b> فوراً، مع <b>مضاد حيوي وقائي</b> (Ceftriaxone غالباً)، ومنظار عاجل لربط الدوالي. الأكسجين حذر والدم بحذر (ما نزودش الحجم أكتر من اللازم لأنه يرفع ضغط البوابة). الجرعات بأمر الطبيب/البروتوكول.</p></div><div class=\"cs-box cs-info\"><strong>للتذكير</strong><p>جرعة Pantoprazole الوريدية الشائعة: 80 مجم دفعة ثم 8 مجم/ساعة، أو 40 مجم مرتين يومياً حسب بروتوكول المستشفى (لا تعطِ جرعة من عندك).</p></div><h4>تكملة</h4><ul><li>خط وريدي كبير (14–18 جيج)</li><li>محاليل متساوية التوتر (ملح 0.9%)</li><li>تحليل Hb/Hct متكرر</li><li>تجهيز دم (Cross-match) 3–6 وحدات حسب النزف</li><li>نقل كرات حمراء مطابقة للفصيلة، وO سالب عند الطوارئ إن لم يتوفر وقت</li><li>ألبومين أو بلازما مجمدة حسب الحاجة (تليّف، اضطراب تجلط)</li><li>علاج بالمنظار (حقن، ليزر)</li><li>بالون Blakemore-Sengstaken للدوالي</li><li>جراحة عند النزف غير المسيطر عليه</li></ul>"
-    },
-    "nursing": {
-      "ar": "<p>دورك سريع ومنظّم:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الصدمة فوراً</strong><p>ضغط ونبض وتنفس وSpO2 وحرارة وجلد وCapillary refill وبول. كرر القياس كل 5–15 دقيقة لحد الاستقرار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أمّن المجرى</strong><p>وضع جانبي أو نصف جالس، شفط الإفرازات، أكسجين، لا تعطِ شيئاً بالفم (NPO). خطر الاستنشاق عالي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>خطّين وريديين كبار</strong><p>واحد على كل ذراع، اسحب العينات (CBC, ABG, RBG, LFT, RFT, INR) والفصيلة والتوافق، وبلّغ المعمل إنها طارئة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>السوائل والدم</strong><p>ملح 0.9% بالمعدل المأمور. تأكد من الدم قبل التعليق: الاسم والفصيلة والرقم مع زميل. راقب 15 دقيقة الأولى (حرارة، قشعريرة، ضيق نفس).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأدوية بأمان</strong><p>Pantazol وريدي ببطء أو تنقيط حسب الأمر؛ Kapron وDycinone بعد التأكد من الأمر وتاريخ الجلطات (Kapron يُمنع/يحذر لو في تاريخ جلطات). اسأل عن الحساسية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أنبوبة رايل</strong><p>لو أمر بيها: تحقق من موضعها، سجّل لون وكمية المحتوى، اغسل بالملح بكميات صغيرة حسب الأمر ودوّن الداخل والخارج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>الداخل والخارج</strong><p>قسطرة بولية لو شديد: هدف بول 0.5 مل/كجم/ساعة. سجل القيء والبراز بالكمية واللون.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>بلّغ ووثّق</strong><p>وقت بداية القيء، الكمية، العلامات الحيوية، الأدوية، الدم المعطى، ووقت إبلاغ الباطنة/المناظير.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>تفاصيل مهمة</strong><ul><li>قس الهيموجلوبين الأول بحذر: ممكن يبقى طبيعي في أول ساعات النزيف.</li><li>مريض الكبد: راقب الوعي (خطر اعتلال مخي كبدي بعد النزيف) وسكر الدم.</li><li>جهّز الشفط وأمبو (Ambu) وجهاز مونيتور.</li><li>نظّف المريض وغيّر الملابس بسرعة، فالدم بيقلق المريض: طمّنه.</li></ul></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>كمية ولون القيء والبراز، العلامات الحيوية مع الوقت، السوائل والدم، الأدوية، البول، الوعي، ووقت التبليغ ومين استلم.</p></div><h4>تكملة</h4><ul><li>راقب العلامات الحيوية: هبوط ضغط وارتفاع نبض وتنفس</li><li>ميزان السوائل وعوّض الحجم</li><li>البطن: أصوات وألم وانتفاخ</li><li>خط وريدي واسع وفحص موضع الإبرة</li><li>تحاليل الدم قد تتأخر عن الفقد الحقيقي، فاعتمد على العلامات الحيوية والمظهر</li><li>أثناء نقل الدم: فحص الكيس والمريض وفق البروتوكول وتوقيت العلامات الحيوية والتوثيق</li><li>تشخيصات: نقص حجم السوائل، انخفاض النتاج القلبي، قلق</li></ul>"
-    },
-    "redflags": {
-      "ar": "<p>بلّغ فوراً لو:</p><ul><li>ضغط أقل من 90/60 أو نبض أكتر من 100 أو جلد بارد ورطب</li><li>قيء دموي غزير أو مستمر أو براز أسود غزير</li><li>تغيّر وعي أو نعاس أو تشوش (خصوصاً مريض كبد)</li><li>ألم شديد مفاجئ بالبطن مع بطن متخشبة (ثقب قرحة)</li><li>قلة بول شديدة</li><li>ضيق نفس أو ألم صدر</li><li>المريض بيتناول سيولة أو عنده اضطراب تجلط</li><li>النزيف رجع بعد توقفه</li></ul>"
-    },
-    "teaching": {
-      "ar": "<p>للمريض وأهله:</p><ul><li>ممنوع المسكنات (Voltaren، Brufen، أسبرين) إلا بأمر الطبيب</li><li>التزم بدواء المعدة (مثبطات المضخة) والمواعيد</li><li>لو مريض كبد: اتبع الخطة العلاجية والمتابعة بالمنظار لربط الدوالي</li><li>أي قيء دموي أو براز أسود = روح الطوارئ فوراً</li><li>قلل التدخين والكحول والبهارات الحارة</li><li>خد علاج جرثومة المعدة كاملاً لو اتشخصت</li></ul>"
-    }
+  {
+   "ar": "علامات الصدمة",
+   "en": "Signs of shock"
   },
-  "keyPoints": {
-    "ar": [
-      "أول حاجة: قيّم الصدمة (ضغط، نبض، جلد، بول، Capillary refill)",
-      "أشهر سبب في مصر: دوالي المريء ثم قرحة المعدة",
-      "خطّين وريديين + فصيلة وتوافق + سوائل + Pantazol",
-      "المريض NPO ووضع جانبي لمنع الاستنشاق",
-      "عتبة نقل الدم المقيّدة (حوالي 7 جم/دل) والمنظار خلال 24 ساعة",
-      "Kapron (Tranexamic acid) لا يُنصح به في نزيف الجهاز الهضمي الحديث",
-      "مريض الكبد: Terlipressin/Octreotide + مضاد حيوي بأمر الطبيب",
-      "Hct/Hb قد يتأخر في الظهور بعد النزف؛ اعتمد على الحالة السريرية"
-    ]
+  {
+   "ar": "Pantazol / Dycinone",
+   "en": "Pantazol / Dycinone"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>القيء الدموي (Hematemesis) معناه إن المريض بيرجّع دم (أحمر طازة أو بني زي «تفل القهوة»)، وده معناه نزيف من الجهاز الهضمي العلوي (المريء، المعدة، الإثنى عشر). أول حاجة تتأكد منها <b>مش مصدر النزيف، لكن هل المريض في صدمة ولا لأ</b>.</p><div class=\"cs-stats\"><div><b>الأول</b><span>سبب شائع في مصر: دوالي المريء المتمزقة</span></div><div><b>التاني</b><span>قرحة المعدة/الإثنى عشر</span></div><div><b>5</b><span>علامات تدلك على الصدمة</span></div></div>[[slot:dis-280-algorithm|خطوات التعامل مع القيء الدموي — رسم من إعداد الموقع|/diseases/img/dis-280-algorithm.svg]]<div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>مريض بيرجّع دم + ضغط واطي أو نبض سريع أو جلد بارد = <b>طارئ</b>. أبلّغ الطبيب فوراً وابدأ الإنعاش بالتوازي: خطّين وريديين، سوائل، دم.</p></div><div class=\"cs-box cs-info\"><strong>قيء دموي ولا سعال دموي؟</strong><table><thead><tr><th>العلامة</th><th>قيء دموي (Hematemesis)</th><th>سعال دموي (Hemoptysis)</th></tr></thead><tbody><tr><td>الطريقة</td><td>بيرجّع بغثيان</td><td>بيكح</td></tr><tr><td>اللون</td><td>بني غامق أو أحمر مع بقايا أكل</td><td>أحمر فاتح رغوي</td></tr><tr><td>الحموضة (pH)</td><td>حمضي</td><td>قلوي</td></tr><tr><td>براز أسود بعده</td><td>شائع (Melena)</td><td>نادر</td></tr></tbody></table></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المقارنة بين القيء الدموي والسعال الدموي معلومة طبية عامة مؤكدة من مراجع الباطنة، وليست من المراجع الأساسي.</p></div><h4>تكملة: النزيف السفلي ومصطلحات</h4><table><thead><tr><th>المصطلح</th><th>المعنى</th></tr></thead><tbody><tr><td>Hematemesis</td><td>قيء دم أحمر أو كستنائي أو بشكل «تفل القهوة»</td></tr><tr><td>Melena</td><td>براز أسود قطراني (دم مهضوم، غالباً من العلوي)</td></tr><tr><td>Hematochezia</td><td>دم أحمر أو كستنائي من الشرج (غالباً سفلي، أو علوي غزير)</td></tr></tbody></table><ul><li><b>أسباب علوية:</b> قرحة، دوالي مريء، أورام، تشوهات شريانية وريدية (AVM)، تمزق مالوري-ويس بعد القيء، ومميعات الدم</li><li><b>أسباب سفلية:</b> شرخ شرجي، إصابة مستقيم، التهاب القولون، لحميات، سرطان القولون، التهاب الرتوج (Diverticulitis)، التهاب أوعية، تقرحات</li><li>المآل يعتمد على الكمية والسرعة والعمر والأمراض المصاحبة؛ نقل دم متعدد يزيد خطر ردود الفعل؛ اضطرابات التجلط تزيد الخطورة؛ الصدمة عند النزف الكبير</li></ul>\n<h4></h4>[[slot:dis-280-p148|نزف الجهاز الهضمي — رسم من إعداد الموقع|/diseases/img/dis-280-p148.svg]]<ul><li>العلوي: قيء تفل القهوة وبراز أسود. السفلي: دم أحمر زاهٍ.</li><li>المضاعفات: صدمة نقص حجم: هبوط ضغط وتسرع قلب وجلد شاحب بارد ورطب وإرهاق ودوخة وهيموجلوبين منخفض (أقل من 7 ينذر بخطر).</li><li>فحص الجوياك لدم البراز (Guaiac): جهّز المستلزمات واغسل اليدين بقفاز غير معقم، ضع عينات البراز بالمربعات، افتح الجهة الخلفية وضع قطرتين من المحلول، انتظر 30–60 ثانية، سجّل النتيجة.</li><li>الأولويات: خفض رأس السرير، ملح 0.9%، أكسجين، نقل دم إذا كان Hb أقل من 7. للنزف العلوي: غسيل أنفي معدي (NGT) لكن <strong>ممنوع NGT في دوالي المريء</strong>.</li><li>المناظير: علوي (Endoscopy) وسفلي (Colonoscopy). بعد المنظار: سوائل رائقة (عصير تفاح، مرق، شاي غير محلى، جيلي).</li></ul>\n<h4>مراجعة التمريض الباطني: نزف الجهاز الهضمي</h4><p>العلوي (التهاب المعدة، ارتجاع، قرحة، دوالي مريء): قيء دموي كتفل القهوة وبراز أسود قطراني. السفلي (بواسير، سرطان القولون والمستقيم، رتوج، قولون تقرحي): نزف أحمر زاهٍ. المضاعفة: صدمة نقص الحجم (هبوط ضغط، نبض >100، جلد بارد رطب، إرهاق، هيموجلوبين أقل من 7).</p>[[slot:dis-280-p302|نزف الجهاز الهضمي — رسم من إعداد الموقع|/diseases/img/dis-280-p302.svg]]<ul><li>الأولويات: اخفض رأس السرير، سوائل 0.9%، أكسجين، نقل دم إذا هيموجلوبين أقل من 7، وللعلوي غسيل معدة بأنبوب أنفي معدي إلا في دوالي المريء.</li><li>اختبار الدم الخفي (Guaiac): جمع الأدوات وغسل اليدين وقفاز غير معقم، وضع عينات البراز على الشريحة، فتح الخلف وقطرتان من المحلول، انتظار 30–60 ثانية، تدوين النتيجة.</li><li>التنظير: Endoscopy للعلوي وColonoscopy للسفلي، وبعده سوائل صافية (عصير تفاح، مرق، شاي بلا سكر، جيلي).</li></ul>",
+   "en": "<p>Hematemesis means the patient is vomiting blood (fresh red or brown like \"coffee grounds\"), which means bleeding from the upper GI tract (esophagus, stomach, duodenum). The first thing to confirm is <b>not the source of bleeding, but whether the patient is in shock or not</b>.</p><div class=\"cs-stats\"><div><b>First</b><span>a common cause in Egypt: ruptured esophageal varices</span></div><div><b>Second</b><span>gastric/duodenal ulcer</span></div><div><b>5</b><span>signs that point to shock</span></div></div>[[slot:dis-280-algorithm|Steps for managing hematemesis — illustration|/diseases/img/dis-280-algorithm.svg]]<div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>A patient vomiting blood + low blood pressure or fast pulse or cold skin = <b>an emergency</b>. Inform the physician immediately and start resuscitation in parallel: two IV lines, fluids, blood.</p></div><div class=\"cs-box cs-info\"><strong>Hematemesis or hemoptysis?</strong><table><thead><tr><th>Sign</th><th>Hematemesis</th><th>Hemoptysis</th></tr></thead><tbody><tr><td>The way</td><td>Vomits with nausea</td><td>Coughs</td></tr><tr><td>Color</td><td>Dark brown or red with food remnants</td><td>Bright red and frothy</td></tr><tr><td>Acidity (pH)</td><td>Acidic</td><td>Alkaline</td></tr><tr><td>Black stool afterward</td><td>Common (Melena)</td><td>Rare</td></tr></tbody></table></div><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The comparison between hematemesis and hemoptysis is general medical information confirmed from internal medicine texts, and is not from the main material.</p></div><h4>More: lower bleeding and terms</h4><table><thead><tr><th>Term</th><th>Meaning</th></tr></thead><tbody><tr><td>Hematemesis</td><td>Vomiting red or maroon blood or \"coffee-ground\" material</td></tr><tr><td>Melena</td><td>Black tarry stool (digested blood, usually from the upper tract)</td></tr><tr><td>Hematochezia</td><td>Red or maroon blood from the anus (usually lower, or heavy upper)</td></tr></tbody></table><ul><li><b>Upper causes:</b> ulcer, esophageal varices, tumors, arteriovenous malformations (AVM), Mallory-Weiss tear after vomiting, and blood thinners</li><li><b>Lower causes:</b> anal fissure, rectal injury, colitis, polyps, colon cancer, diverticulitis, vasculitis, ulcerations</li><li>The outcome depends on the amount, speed, age, and accompanying diseases; multiple transfusions increase the risk of reactions; clotting disorders increase the danger; shock with major bleeding</li></ul>\n<h4></h4>[[slot:dis-280-p148|GI bleeding — illustration|/diseases/img/dis-280-p148.svg]]<ul><li>Upper: coffee-ground vomit and black stool. Lower: bright red blood.</li><li>Complications: hypovolemic shock: low blood pressure, fast heart rate, pale cold clammy skin, fatigue, dizziness, and low hemoglobin (below 7 is a warning).</li><li>Guaiac test for stool blood: prepare the supplies and wash hands with a non-sterile glove, place the stool samples in the squares, open the back and put two drops of the solution, wait 30–60 seconds, record the result.</li><li>Priorities: lower the head of the bed, 0.9% saline, oxygen, blood transfusion if Hb is below 7. For upper bleeding: nasogastric lavage (NGT) but <strong>NGT is contraindicated in esophageal varices</strong>.</li><li>Endoscopies: upper (Endoscopy) and lower (Colonoscopy). After the endoscopy: clear fluids (apple juice, broth, unsweetened tea, gelatin).</li></ul>\n<h4>Medical-surgical nursing review: GI bleeding</h4><p>Upper (gastritis, reflux, ulcer, esophageal varices): coffee-ground hematemesis and black tarry stool. Lower (hemorrhoids, colorectal cancer, diverticula, ulcerative colitis): bright red bleeding. Complication: hypovolemic shock (low blood pressure, pulse >100, cold clammy skin, fatigue, hemoglobin below 7).</p>[[slot:dis-280-p302|GI bleeding — illustration|/diseases/img/dis-280-p302.svg]]<ul><li>Priorities: lower the head of the bed, 0.9% fluids, oxygen, blood transfusion if hemoglobin is below 7, and for the upper tract gastric lavage with a nasogastric tube except in esophageal varices.</li><li>Occult blood test (Guaiac): gather the equipment, wash hands and put on a non-sterile glove, place the stool samples on the slide, open the back and apply two drops of the solution, wait 30–60 seconds, record the result.</li><li>Endoscopy: Endoscopy for the upper tract and Colonoscopy for the lower, and afterward clear fluids (apple juice, broth, unsweetened tea, gelatin).</li></ul>"
   },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أشهر سبب للقيء الدموي في مصر؟"
-      },
-      "options": [
-        {
-          "ar": "دوالي المريء المتمزقة"
-        },
-        {
-          "ar": "التهاب الزائدة"
-        },
-        {
-          "ar": "قرحة الفم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الدوالي أشهر سبب والقرحة تاني سبب."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض بيرجّع دم ونبضه 120 وضغطه 85/50. أول تصرف؟"
-      },
-      "options": [
-        {
-          "ar": "نديه ماء يشرب"
-        },
-        {
-          "ar": "نقيّمه كصدمة: كانيولتين وسوائل ونبلّغ الطبيب"
-        },
-        {
-          "ar": "ننتظر نتايج التحاليل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الصدمة تُعالج فوراً ولا ننتظر."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي من دول من علامات الصدمة؟"
-      },
-      "options": [
-        {
-          "ar": "جلد دافي وجاف"
-        },
-        {
-          "ar": "جلد بارد ورطب ونبض سريع"
-        },
-        {
-          "ar": "ضغط مرتفع"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الجلد البارد الرطب والنبض السريع من علامات الصدمة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أيهما صحيح حسب الإرشادات الحديثة؟"
-      },
-      "options": [
-        {
-          "ar": "Kapron أساسي لكل نزيف هضمي"
-        },
-        {
-          "ar": "عتبة نقل الدم المقيّدة حوالي 7 جم/دل"
-        },
-        {
-          "ar": "الغسيل بالأنبوبة روتيني"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "النقل المقيّد هو الموصى به."
-      }
-    },
-    {
-      "q": {
-        "ar": "ليه نسأل عن المسكنات والسيولة؟"
-      },
-      "options": [
-        {
-          "ar": "لأنها مش مهمة"
-        },
-        {
-          "ar": "لأنها بتزوّد خطر النزيف"
-        },
-        {
-          "ar": "لتحديد الفصيلة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "NSAIDs وأدوية السيولة تزيد النزيف."
-      }
-    },
-    {
-      "q": {
-        "ar": "Hematochezia تعني؟"
-      },
-      "options": [
-        {
-          "ar": "دم أحمر أو كستنائي من الشرج"
-        },
-        {
-          "ar": "قيء قهوة"
-        },
-        {
-          "ar": "براز أسود"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة: دم أحمر أو كستنائي من الشرج"
-      }
-    },
-    {
-      "q": {
-        "ar": "أي موقف يمنع فيه الأنبوب الأنفي المعدي؟"
-      },
-      "options": [
-        {
-          "ar": "دوالي المريء"
-        },
-        {
-          "ar": "قرحة بسيطة"
-        },
-        {
-          "ar": "التهاب معدة"
-        },
-        {
-          "ar": "ارتجاع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر تمزق الدوالي."
-      }
-    },
-    {
-      "q": {
-        "ar": "هيموجلوبين أقل من كذا ينذر ويستدعي نقل الدم؟"
-      },
-      "options": [
-        {
-          "ar": "أقل من 7"
-        },
-        {
-          "ar": "10"
-        },
-        {
-          "ar": "12"
-        },
-        {
-          "ar": "14"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "حسب الأوامر الطبية."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول إجراء تمريضي لمريض نزف هضمي بهبوط ضغط؟"
-      },
-      "options": [
-        {
-          "ar": "رفع الرأس"
-        },
-        {
-          "ar": "خفض رأس السرير وإعطاء سوائل وأكسجين"
-        },
-        {
-          "ar": "إعطاء ماء"
-        },
-        {
-          "ar": "المشي"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "وضع الصدمة والسوائل والأكسجين لتثبيت الدورة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي حالة لا يُدخل فيها أنبوب أنفي معدي أثناء نزف علوي؟"
-      },
-      "options": [
-        {
-          "ar": "قرحة"
-        },
-        {
-          "ar": "دوالي المريء"
-        },
-        {
-          "ar": "التهاب معدة"
-        },
-        {
-          "ar": "ارتجاع"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الأنبوب قد يمزق الدوالي."
-      }
-    },
-    {
-      "q": {
-        "ar": "عند أي مستوى هيموجلوبين يُنقل الدم في هذا المرجع؟"
-      },
-      "options": [
-        {
-          "ar": "أقل من 7"
-        },
-        {
-          "ar": "أقل من 12"
-        },
-        {
-          "ar": "أكثر من 14"
-        },
-        {
-          "ar": "10"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "هيموجلوبين دون 7 ينذر بنقل دم."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ACG Clinical Guideline: Upper Gastrointestinal and Ulcer Bleeding (2021)"
-    },
-    {
-      "title": "ESGE guideline: Non-variceal upper gastrointestinal hemorrhage"
-    },
-    {
-      "title": "HALT-IT trial (tranexamic acid in GI bleeding), Lancet 2020"
-    },
-    {
-      "title": "AASLD/Baveno guidance on variceal bleeding (ملخصات)"
-    },
-    {
-      "title": "نشرة Kapron (تركيب المنتج: Tranexamic acid 500 مجم/5 مل — صفحات صيدليات مصرية وSFDA)"
-    }
-  ],
-  "rx": [
-    {
-      "category": "الجهاز الهضمي",
-      "condition_ar": "القيء الدموي (طوارئ)",
-      "condition_en": "Hematemesis ER",
-      "items": [
-        {
-          "drug_name": "محلول ملح 0.9% 500 سم (Normal saline)",
-          "dose": "وريد، معدل حسب الحالة",
-          "note": "يُضاف إليه الأدوية التالية"
-        },
-        {
-          "drug_name": "Pantazol vial (Pantoprazole)",
-          "dose": "فيال يُضاف للمحلول",
-          "note": "الجرعة الدقيقة بأمر الطبيب"
-        },
-        {
-          "drug_name": "Dycinone amp (Ethamsylate)",
-          "dose": "أمبول يُضاف للمحلول",
-          "note": "مرقئ، دليله ضعيف"
-        },
-        {
-          "drug_name": "Kapron amp 500 mg/5 ml (Tranexamic acid)",
-          "dose": "أمبول يُضاف للمحلول",
-          "note": "غير موصى به حديثاً في نزيف الجهاز الهضمي"
-        }
-      ],
-      "clinical_note": "تركيب كانيولتين وتوفير كيس دم بعد الفصيلة والتوافق، ثم أنبوبة رايل وغسيل بالملح (حسب الأمر)، وبعدين نائب الباطنة."
-    }
-  ],
-  "id": "dis-280",
-  "title": {
-    "ar": "القيء الدموي (نزيف الجهاز الهضمي العلوي)",
-    "en": "Hematemesis (Upper GI Bleeding)"
+  "causes": {
+   "ar": "<h4>أسباب شائعة</h4><table><thead><tr><th>السبب</th><th>ملاحظة</th></tr></thead><tbody><tr><td>دوالي المريء المتمزقة (Ruptured esophageal varices)</td><td>أشهر سبب في مصر، مريض كبد/تليف/فيروس C أو B أو بلهارسيا</td></tr><tr><td>قرحة المعدة أو الإثنى عشر (Peptic ulcer)</td><td>تاني أشهر سبب، مرتبط بمسكنات (NSAIDs) أو جرثومة H. pylori</td></tr><tr><td>أسباب أقل شيوعاً (من المراجع)</td><td>التهاب المعدة الحاد/التآكلي، تمزق ملوري ويس (قيء عنيف)، ورم، التهاب المريء، اضطراب تجلط أو أدوية سيولة</td></tr></tbody></table><h4>اسأل بسرعة (Rapid history)</h4><ul><li>عندك قرحة في المعدة؟</li><li>عندك مرض في الكبد؟</li><li>بتاخد علاج لحاجة؟ بتاخد مسكنات كتير؟ (أسبرين، Voltaren، Brufen، كورتيزون)</li><li>جالك نزيف قبل كده أو عملت منظار؟</li><li>بتاخد سيولة (Warfarin/Plavix/أسبرين/Xarelto)؟ حبوب كحول؟</li></ul><div class=\"cs-box cs-tip\"><strong>ليه السؤال عن الأدوية مهم؟</strong><p>المسكنات (NSAIDs) والسيولة بتزوّد خطر النزيف، ومريض الكبد بيتعامل بخطة مختلفة (دوالي). المعلومة دي بتفرق في العلاج.</p></div>",
+   "en": "<h4>Common causes</h4><table><thead><tr><th>Cause</th><th>Note</th></tr></thead><tbody><tr><td>Ruptured esophageal varices</td><td>The most common cause in Egypt, a liver patient/cirrhosis/hepatitis C or B or schistosomiasis</td></tr><tr><td>Gastric or duodenal ulcer (Peptic ulcer)</td><td>The second most common cause, linked to painkillers (NSAIDs) or H. pylori</td></tr><tr><td>Less common causes</td><td>Acute/erosive gastritis, Mallory-Weiss tear (violent vomiting), tumor, esophagitis, a clotting disorder or blood-thinning drugs</td></tr></tbody></table><h4>Ask quickly (Rapid history)</h4><ul><li>Do you have a stomach ulcer?</li><li>Do you have a liver disease?</li><li>Do you take treatment for anything? Do you take a lot of painkillers? (aspirin, Voltaren, Brufen, cortisone)</li><li>Have you had bleeding before or had an endoscopy?</li><li>Do you take blood thinners (Warfarin/Plavix/aspirin/Xarelto)? Alcohol pills?</li></ul><div class=\"cs-box cs-tip\"><strong>Why is asking about drugs important?</strong><p>Painkillers (NSAIDs) and blood thinners increase the bleeding risk, and a liver patient is managed with a different plan (varices). This information makes a difference in treatment.</p></div>"
   },
-  "_m4": 1
+  "signs": {
+   "ar": "<h4>الفحص: افحص العلامات الحيوية أولاً</h4><p>أهم حاجة تشوفها هي الـ Vital signs عشان تتأكد إن مفيش صدمة (Shock):</p><table><thead><tr><th>العلامة</th><th>في الصدمة</th></tr></thead><tbody><tr><td>الضغط (Blood pressure)</td><td>هبوط</td></tr><tr><td>النبض (Pulse)</td><td>سريع وضعيف (Tachycardia)</td></tr><tr><td>الحرارة/الجلد (Temperature)</td><td>جلد بارد ورطب (cold clammy)</td></tr><tr><td>البول (Urine output)</td><td>قلة (Oliguria)</td></tr><tr><td>إعادة امتلاء الشعيرات (Capillary refill time)</td><td>متأخر</td></tr></tbody></table>[[slot:dis-280-shock|علامات الصدمة النزفية — رسم من إعداد الموقع|/diseases/img/dis-280-shock.svg]]<h4>علامات تانية تدور عليها</h4><ul><li>براز أسود لزج كريه الريحة (Melena)</li><li>شحوب، دوخة، زغللة، عرق بارد</li><li>علامات مرض كبد: اصفرار، استسقاء بالبطن، كبد/طحال، «نجمة عنكبوتية»، احمرار الكفين</li><li>ألم أعلى البطن (قرحة)</li></ul><h4>تكملة</h4><ul><li>تغيرات وضعية: هبوط ضغط ≥ 10 مم زئبق عند تغيير الوضع</li><li>تسارع نبض، شحوب، دوخة، عرق، غثيان</li></ul>",
+   "en": "<h4>Examination: check the vital signs first</h4><p>The most important thing is to see the vital signs to make sure there is no shock:</p><table><thead><tr><th>Sign</th><th>In shock</th></tr></thead><tbody><tr><td>Blood pressure</td><td>Low</td></tr><tr><td>Pulse</td><td>Fast and weak (Tachycardia)</td></tr><tr><td>Temperature/skin</td><td>Cold clammy skin</td></tr><tr><td>Urine output</td><td>Reduced (Oliguria)</td></tr><tr><td>Capillary refill time</td><td>Delayed</td></tr></tbody></table>[[slot:dis-280-shock|Signs of hemorrhagic shock — illustration|/diseases/img/dis-280-shock.svg]]<h4>Other signs to look for</h4><ul><li>Sticky, foul-smelling black stool (Melena)</li><li>Pallor, dizziness, blurred vision, cold sweat</li><li>Signs of liver disease: jaundice, ascites, liver/spleen enlargement, \"spider angioma\", palmar erythema</li><li>Upper abdominal pain (ulcer)</li></ul><h4>More</h4><ul><li>Postural changes: a blood pressure drop of ≥ 10 mmHg on changing position</li><li>Fast pulse, pallor, dizziness, sweating, nausea</li></ul>"
+  },
+  "tests": {
+   "ar": "<h4>التحاليل المطلوبة (Investigations)</h4><table><thead><tr><th>التحليل</th><th>الغرض</th></tr></thead><tbody><tr><td>CBC (صورة دم كاملة)</td><td>الهيموجلوبين (ممكن ما ينزلش في الأول) والصفائح</td></tr><tr><td>ABG + الصوديوم والبوتاسيوم</td><td>الحموضة وخلل الأملاح</td></tr><tr><td>RBG (سكر عشوائي)</td><td>استبعاد هبوط/ارتفاع السكر</td></tr><tr><td>LFTs (وظائف الكبد) + INR</td><td>مريض كبد/تجلط</td></tr><tr><td>RFTs (وظائف الكلى)</td><td>اليوريا بتعلى مع نزيف الجهاز الهضمي العلوي</td></tr><tr><td>فصيلة الدم والتوافق (Blood group & cross-matching)</td><td>تجهيز كيس دم</td></tr></tbody></table><p>لو المريض مش مستقر: ما تستناش النتايج، ابدأ العلاج واسحب العينات مع تركيب الكانيولا.</p><h4>تكملة</h4><ul><li>دم خفي بالبراز إيجابي</li><li>هيموجلوبين وهيماتوكريت ينخفضان (وقد يتأخرا عن النزف الفعلي)</li><li>فقر دم نقص حديد عند النزف المزمن</li><li>شفط المعدة (NG aspirate) إيجابي في النزف العلوي</li><li>منظار شرجي أو سيني أو قولون لمصدر السفلي</li><li>تصوير شرياني أو مسح بكرات دم موسومة</li></ul>",
+   "en": "<h4>Required investigations</h4><table><thead><tr><th>Test</th><th>Purpose</th></tr></thead><tbody><tr><td>CBC (complete blood count)</td><td>Hemoglobin (may not drop at first) and platelets</td></tr><tr><td>ABG + sodium and potassium</td><td>Acidity and electrolyte disturbance</td></tr><tr><td>RBG (random glucose)</td><td>Rule out low/high glucose</td></tr><tr><td>LFTs (liver function) + INR</td><td>Liver patient/clotting</td></tr><tr><td>RFTs (kidney function)</td><td>Urea rises with upper GI bleeding</td></tr><tr><td>Blood group & cross-matching</td><td>Preparing a blood unit</td></tr></tbody></table><p>If the patient is unstable: do not wait for the results, start treatment and draw the samples while placing the cannula.</p><h4>More</h4><ul><li>Positive occult blood in stool</li><li>Hemoglobin and hematocrit fall (and may lag behind the actual bleeding)</li><li>Iron deficiency anemia with chronic bleeding</li><li>Positive NG aspirate in upper bleeding</li><li>Proctoscopy, sigmoidoscopy, or colonoscopy for the source of lower bleeding</li><li>Angiography or a tagged red cell scan</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>علاج الطوارئ (ER management)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تركيب كانيولتين وتوفير كيس دم</strong><p>بعد معرفة الفصيلة واختبار التوافق (Cross-match).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>محلول ملح 0.9% — 500 سم</strong><p>يُضاف عليه: فيال Pantazol (Pantoprazole) + أمبول Dycinone (Ethamsylate) + أمبول Kapron (Tranexamic acid 500 مجم/5 مل).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أنبوبة رايل (Ryle tube)</strong><p>وغسيل بمحلول ملح لحد ما المحلول يطلع رايق (حسب الأمر).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>اطلب نائب الباطنة</strong><p>تحويل للمستشفى/المناظير حسب الحالة.</p></div></div></div><table><thead><tr><th>الدواء (تجاري)</th><th>المادة الفعالة</th><th>الاستخدام في الطوارئ</th></tr></thead><tbody><tr><td>Pantazol فيال</td><td>Pantoprazole</td><td>يخفض حموضة المعدة، يُعطى وريدي (بأمر الطبيب)</td></tr><tr><td>Dycinone أمبول</td><td>Ethamsylate</td><td>مرقئ حسب العادة المحلية</td></tr><tr><td>Kapron أمبول 500 مجم/5 مل</td><td>Tranexamic acid (مؤكد من تركيب المنتج في السوق المصري)</td><td>مضاد تحلل الفبرين</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الإرشادات الحديثة (ACG 2021، ESGE) بتقول: <b>1)</b> الأولوية للإنعاش (ABC) والسوائل ثم الدم بنظام «مقيّد»: عتبة الهيموجلوبين حوالي 7 جم/دل (وأعلى قليلاً لمريض القلب). <b>2)</b> المنظار خلال 24 ساعة (أسرع لو غير مستقر). <b>3)</b> مثبط المضخة وريدي قبل المنظار مقبول وبعد المنظار الجرعة العالية 3 أيام حسب نتيجته. <b>4)</b> Erythromycin وريدي قبل المنظار بأمر الطبيب. <b>5)</b> حمض الترانيكساميك (Kapron) <b>لا يُنصح به</b> في نزيف الجهاز الهضمي (تجربة HALT-IT لم تقلل الوفاة وزادت الجلطات). Dycinone مفيش دليل قوي يدعمه كعلاج أساسي. <b>6)</b> غسيل المعدة بالأنبوبة (NG lavage) مش بيُنصح به روتينياً (ESGE). لذلك نفّذ ما في المراجع فقط بأمر الطبيب/بروتوكول المستشفى.</p></div><div class=\"cs-box cs-danger\"><strong>لو المريض مريض كبد (اشتباه دوالي)</strong><p>الطبيب غالباً يبدأ <b>Terlipressin أو Octreotide</b> فوراً، مع <b>مضاد حيوي وقائي</b> (Ceftriaxone غالباً)، ومنظار عاجل لربط الدوالي. الأكسجين حذر والدم بحذر (ما نزودش الحجم أكتر من اللازم لأنه يرفع ضغط البوابة). الجرعات بأمر الطبيب/البروتوكول.</p></div><div class=\"cs-box cs-info\"><strong>للتذكير</strong><p>جرعة Pantoprazole الوريدية الشائعة: 80 مجم دفعة ثم 8 مجم/ساعة، أو 40 مجم مرتين يومياً حسب بروتوكول المستشفى (لا تعطِ جرعة من عندك).</p></div><h4>تكملة</h4><ul><li>خط وريدي كبير (14–18 جيج)</li><li>محاليل متساوية التوتر (ملح 0.9%)</li><li>تحليل Hb/Hct متكرر</li><li>تجهيز دم (Cross-match) 3–6 وحدات حسب النزف</li><li>نقل كرات حمراء مطابقة للفصيلة، وO سالب عند الطوارئ إن لم يتوفر وقت</li><li>ألبومين أو بلازما مجمدة حسب الحاجة (تليّف، اضطراب تجلط)</li><li>علاج بالمنظار (حقن، ليزر)</li><li>بالون Blakemore-Sengstaken للدوالي</li><li>جراحة عند النزف غير المسيطر عليه</li></ul>",
+   "en": "<h4>Emergency management (ER management)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Place two cannulas and secure a blood unit</strong><p>After knowing the blood group and doing the Cross-match.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>0.9% saline solution — 500 cc</strong><p>Add to it: a Pantazol (Pantoprazole) vial + a Dycinone (Ethamsylate) ampoule + a Kapron (Tranexamic acid 500 mg/5 ml) ampoule.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Ryle tube</strong><p>And lavage with saline until the fluid comes out clear (as ordered).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Call the medical resident</strong><p>Transfer to the hospital/endoscopy as the case requires.</p></div></div></div><table><thead><tr><th>Drug (brand)</th><th>Active ingredient</th><th>Use in the emergency</th></tr></thead><tbody><tr><td>Pantazol vial</td><td>Pantoprazole</td><td>Lowers stomach acid, given IV (by physician order)</td></tr><tr><td>Dycinone ampoule</td><td>Ethamsylate</td><td>A hemostatic by local habit</td></tr><tr><td>Kapron ampoule 500 mg/5 ml</td><td>Tranexamic acid (confirmed from the product composition in the Egyptian market)</td><td>Antifibrinolytic</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Current guidelines (2021) say: <b>1)</b> The priority is resuscitation (ABC) and fluids, then blood in a \"restrictive\" approach: a hemoglobin threshold of about 7 g/dL (slightly higher for a cardiac patient). <b>2)</b> Endoscopy within 24 hours (faster if unstable). <b>3)</b> An IV proton pump inhibitor before endoscopy is acceptable, and after endoscopy the high dose for 3 days depending on its result. <b>4)</b> IV Erythromycin before endoscopy by physician order. <b>5)</b> Tranexamic acid (Kapron) is <b>not recommended</b> in GI bleeding (a large trial did not reduce death and increased clots). There is no strong evidence supporting Dycinone as a primary treatment. <b>6)</b> Gastric lavage with a tube (NG lavage) is not routinely recommended. Therefore carry out the older treatments only by physician order/hospital protocol.</p></div><div class=\"cs-box cs-danger\"><strong>If the patient is a liver patient (suspected varices)</strong><p>The physician usually starts <b>Terlipressin or Octreotide</b> immediately, with a <b>prophylactic antibiotic</b> (usually Ceftriaxone), and urgent endoscopy to band the varices. Oxygen with caution and blood with caution (do not over-expand the volume because it raises portal pressure). Doses by physician order/protocol.</p></div><div class=\"cs-box cs-info\"><strong>Reminder</strong><p>The common IV Pantoprazole dose: 80 mg bolus then 8 mg/hour, or 40 mg twice daily according to the hospital protocol (do not give a dose on your own).</p></div><h4>More</h4><ul><li>A large IV line (14–18 gauge)</li><li>Isotonic solutions (0.9% saline)</li><li>Repeated Hb/Hct tests</li><li>Prepare blood (Cross-match) 3–6 units depending on the bleeding</li><li>Transfuse group-matched red cells, and O negative in an emergency if there is no time</li><li>Albumin or fresh frozen plasma as needed (cirrhosis, clotting disorder)</li><li>Endoscopic treatment (injection, laser)</li><li>Blakemore-Sengstaken balloon for varices</li><li>Surgery for uncontrolled bleeding</li></ul>"
+  },
+  "nursing": {
+   "ar": "<p>دورك سريع ومنظّم:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الصدمة فوراً</strong><p>ضغط ونبض وتنفس وSpO2 وحرارة وجلد وCapillary refill وبول. كرر القياس كل 5–15 دقيقة لحد الاستقرار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أمّن المجرى</strong><p>وضع جانبي أو نصف جالس، شفط الإفرازات، أكسجين، لا تعطِ شيئاً بالفم (NPO). خطر الاستنشاق عالي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>خطّين وريديين كبار</strong><p>واحد على كل ذراع، اسحب العينات (CBC, ABG, RBG, LFT, RFT, INR) والفصيلة والتوافق، وبلّغ المعمل إنها طارئة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>السوائل والدم</strong><p>ملح 0.9% بالمعدل المأمور. تأكد من الدم قبل التعليق: الاسم والفصيلة والرقم مع زميل. راقب 15 دقيقة الأولى (حرارة، قشعريرة، ضيق نفس).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأدوية بأمان</strong><p>Pantazol وريدي ببطء أو تنقيط حسب الأمر؛ Kapron وDycinone بعد التأكد من الأمر وتاريخ الجلطات (Kapron يُمنع/يحذر لو في تاريخ جلطات). اسأل عن الحساسية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>أنبوبة رايل</strong><p>لو أمر بيها: تحقق من موضعها، سجّل لون وكمية المحتوى، اغسل بالملح بكميات صغيرة حسب الأمر ودوّن الداخل والخارج.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>الداخل والخارج</strong><p>قسطرة بولية لو شديد: هدف بول 0.5 مل/كجم/ساعة. سجل القيء والبراز بالكمية واللون.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>بلّغ ووثّق</strong><p>وقت بداية القيء، الكمية، العلامات الحيوية، الأدوية، الدم المعطى، ووقت إبلاغ الباطنة/المناظير.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>تفاصيل مهمة</strong><ul><li>قس الهيموجلوبين الأول بحذر: ممكن يبقى طبيعي في أول ساعات النزيف.</li><li>مريض الكبد: راقب الوعي (خطر اعتلال مخي كبدي بعد النزيف) وسكر الدم.</li><li>جهّز الشفط وأمبو (Ambu) وجهاز مونيتور.</li><li>نظّف المريض وغيّر الملابس بسرعة، فالدم بيقلق المريض: طمّنه.</li></ul></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>كمية ولون القيء والبراز، العلامات الحيوية مع الوقت، السوائل والدم، الأدوية، البول، الوعي، ووقت التبليغ ومين استلم.</p></div><h4>تكملة</h4><ul><li>راقب العلامات الحيوية: هبوط ضغط وارتفاع نبض وتنفس</li><li>ميزان السوائل وعوّض الحجم</li><li>البطن: أصوات وألم وانتفاخ</li><li>خط وريدي واسع وفحص موضع الإبرة</li><li>تحاليل الدم قد تتأخر عن الفقد الحقيقي، فاعتمد على العلامات الحيوية والمظهر</li><li>أثناء نقل الدم: فحص الكيس والمريض وفق البروتوكول وتوقيت العلامات الحيوية والتوثيق</li><li>تشخيصات: نقص حجم السوائل، انخفاض النتاج القلبي، قلق</li></ul>",
+   "en": "<p>Your role is fast and organized:</p><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess shock immediately</strong><p>Blood pressure, pulse, breathing, SpO2, temperature, skin, capillary refill, and urine. Repeat the measurements every 5–15 minutes until stable.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Secure the airway</strong><p>Lateral or semi-sitting position, suction secretions, oxygen, give nothing by mouth (NPO). The aspiration risk is high.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Two large IV lines</strong><p>One on each arm, draw the samples (CBC, ABG, RBG, LFT, RFT, INR) and the blood group and cross-match, and tell the lab it is an emergency.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Fluids and blood</strong><p>0.9% saline at the ordered rate. Verify the blood before hanging it: the name, blood group, and number with a colleague. Monitor the first 15 minutes (temperature, chills, shortness of breath).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Drugs safely</strong><p>IV Pantazol slowly or by drip as ordered; Kapron and Dycinone after confirming the order and the history of clots (Kapron is contraindicated/cautioned if there is a history of clots). Ask about allergy.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Ryle tube</strong><p>If ordered: verify its position, record the color and amount of the contents, flush with saline in small amounts as ordered, and record intake and output.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Intake and output</strong><p>Urinary catheter if severe: target urine 0.5 ml/kg/hour. Record vomit and stool by amount and color.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Report and document</strong><p>Time the vomiting started, the amount, vital signs, drugs, blood given, and the time the medical team/endoscopy was informed.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>Important details</strong><ul><li>Interpret the first hemoglobin with caution: it may be normal in the first hours of bleeding.</li><li>Liver patient: monitor consciousness (risk of hepatic encephalopathy after bleeding) and blood glucose.</li><li>Prepare suction, an Ambu bag, and a monitor.</li><li>Clean the patient and change clothes quickly, because blood upsets the patient: reassure him.</li></ul></div><div class=\"cs-box cs-info\"><strong>Documentation</strong><p>The amount and color of vomit and stool, vital signs over time, fluids and blood, drugs, urine, consciousness, and the time of reporting and who received it.</p></div><h4>More</h4><ul><li>Monitor vital signs: falling blood pressure, rising pulse and breathing</li><li>Fluid balance and replace the volume</li><li>Abdomen: sounds, pain, and distension</li><li>A wide IV line and check the needle site</li><li>Blood tests may lag behind the true loss, so rely on vital signs and appearance</li><li>During blood transfusion: check the bag and the patient per protocol, time the vital signs, and document</li><li>Diagnoses: fluid volume deficit, decreased cardiac output, anxiety</li></ul>"
+  },
+  "redflags": {
+   "ar": "<p>بلّغ فوراً لو:</p><ul><li>ضغط أقل من 90/60 أو نبض أكتر من 100 أو جلد بارد ورطب</li><li>قيء دموي غزير أو مستمر أو براز أسود غزير</li><li>تغيّر وعي أو نعاس أو تشوش (خصوصاً مريض كبد)</li><li>ألم شديد مفاجئ بالبطن مع بطن متخشبة (ثقب قرحة)</li><li>قلة بول شديدة</li><li>ضيق نفس أو ألم صدر</li><li>المريض بيتناول سيولة أو عنده اضطراب تجلط</li><li>النزيف رجع بعد توقفه</li></ul>",
+   "en": "<p>Report immediately if:</p><ul><li>Blood pressure below 90/60 or pulse over 100 or cold clammy skin</li><li>Heavy or continuous hematemesis or heavy black stool</li><li>Altered consciousness, drowsiness, or confusion (especially a liver patient)</li><li>Sudden severe abdominal pain with a rigid abdomen (ulcer perforation)</li><li>Severely reduced urine</li><li>Shortness of breath or chest pain</li><li>The patient takes blood thinners or has a clotting disorder</li><li>The bleeding returned after stopping</li></ul>"
+  },
+  "teaching": {
+   "ar": "<p>للمريض وأهله:</p><ul><li>ممنوع المسكنات (Voltaren، Brufen، أسبرين) إلا بأمر الطبيب</li><li>التزم بدواء المعدة (مثبطات المضخة) والمواعيد</li><li>لو مريض كبد: اتبع الخطة العلاجية والمتابعة بالمنظار لربط الدوالي</li><li>أي قيء دموي أو براز أسود = روح الطوارئ فوراً</li><li>قلل التدخين والكحول والبهارات الحارة</li><li>خد علاج جرثومة المعدة كاملاً لو اتشخصت</li></ul>",
+   "en": "<p>For the patient and family:</p><ul><li>No painkillers (Voltaren, Brufen, aspirin) except by physician order</li><li>Stick to the stomach drug (proton pump inhibitors) and the schedule</li><li>If a liver patient: follow the treatment plan and the endoscopy follow-up for banding the varices</li><li>Any hematemesis or black stool = go to the emergency room immediately</li><li>Reduce smoking, alcohol, and hot spices</li><li>Complete the H. pylori treatment fully if diagnosed</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "أول حاجة: قيّم الصدمة (ضغط، نبض، جلد، بول، Capillary refill)",
+   "أشهر سبب في مصر: دوالي المريء ثم قرحة المعدة",
+   "خطّين وريديين + فصيلة وتوافق + سوائل + Pantazol",
+   "المريض NPO ووضع جانبي لمنع الاستنشاق",
+   "عتبة نقل الدم المقيّدة (حوالي 7 جم/دل) والمنظار خلال 24 ساعة",
+   "Kapron (Tranexamic acid) لا يُنصح به في نزيف الجهاز الهضمي الحديث",
+   "مريض الكبد: Terlipressin/Octreotide + مضاد حيوي بأمر الطبيب",
+   "Hct/Hb قد يتأخر في الظهور بعد النزف؛ اعتمد على الحالة السريرية"
+  ],
+  "en": [
+   "First: assess shock (blood pressure, pulse, skin, urine, capillary refill)",
+   "The most common cause in Egypt: esophageal varices, then gastric ulcer",
+   "Two IV lines + blood group and cross-match + fluids + Pantazol",
+   "The patient is NPO and in a lateral position to prevent aspiration",
+   "Restrictive transfusion threshold (about 7 g/dL) and endoscopy within 24 hours",
+   "Kapron (Tranexamic acid) is not recommended in current GI bleeding",
+   "Liver patient: Terlipressin/Octreotide + antibiotic by physician order",
+   "Hct/Hb may lag after bleeding; rely on the clinical condition"
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أشهر سبب للقيء الدموي في مصر؟",
+    "en": "The most common cause of hematemesis in Egypt?"
+   },
+   "options": [
+    {
+     "ar": "دوالي المريء المتمزقة",
+     "en": "Ruptured esophageal varices"
+    },
+    {
+     "ar": "التهاب الزائدة",
+     "en": "Appendicitis"
+    },
+    {
+     "ar": "قرحة الفم",
+     "en": "Mouth ulcer"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الدوالي أشهر سبب والقرحة تاني سبب.",
+    "en": "Varices are the most common cause and ulcer is the second."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض بيرجّع دم ونبضه 120 وضغطه 85/50. أول تصرف؟",
+    "en": "A patient is vomiting blood, his pulse is 120 and his pressure is 85/50. The first action?"
+   },
+   "options": [
+    {
+     "ar": "نديه ماء يشرب",
+     "en": "Give him water to drink"
+    },
+    {
+     "ar": "نقيّمه كصدمة: كانيولتين وسوائل ونبلّغ الطبيب",
+     "en": "Assess as shock: two cannulas, fluids, and inform the physician"
+    },
+    {
+     "ar": "ننتظر نتايج التحاليل",
+     "en": "Wait for the test results"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الصدمة تُعالج فوراً ولا ننتظر.",
+    "en": "Shock is treated immediately and we do not wait."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من دول من علامات الصدمة؟",
+    "en": "Which of these are signs of shock?"
+   },
+   "options": [
+    {
+     "ar": "جلد دافي وجاف",
+     "en": "Warm dry skin"
+    },
+    {
+     "ar": "جلد بارد ورطب ونبض سريع",
+     "en": "Cold clammy skin and fast pulse"
+    },
+    {
+     "ar": "ضغط مرتفع",
+     "en": "High blood pressure"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الجلد البارد الرطب والنبض السريع من علامات الصدمة.",
+    "en": "Cold clammy skin and a fast pulse are signs of shock."
+   }
+  },
+  {
+   "q": {
+    "ar": "أيهما صحيح حسب الإرشادات الحديثة؟",
+    "en": "Which is correct according to current guidelines?"
+   },
+   "options": [
+    {
+     "ar": "Kapron أساسي لكل نزيف هضمي",
+     "en": "Kapron is essential for every GI bleed"
+    },
+    {
+     "ar": "عتبة نقل الدم المقيّدة حوالي 7 جم/دل",
+     "en": "A restrictive transfusion threshold of about 7 g/dL"
+    },
+    {
+     "ar": "الغسيل بالأنبوبة روتيني",
+     "en": "Tube lavage is routine"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "النقل المقيّد هو الموصى به.",
+    "en": "Restrictive transfusion is the recommended approach."
+   }
+  },
+  {
+   "q": {
+    "ar": "ليه نسأل عن المسكنات والسيولة؟",
+    "en": "Why do we ask about painkillers and blood thinners?"
+   },
+   "options": [
+    {
+     "ar": "لأنها مش مهمة",
+     "en": "Because they are not important"
+    },
+    {
+     "ar": "لأنها بتزوّد خطر النزيف",
+     "en": "Because they increase the bleeding risk"
+    },
+    {
+     "ar": "لتحديد الفصيلة",
+     "en": "To determine the blood group"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "NSAIDs وأدوية السيولة تزيد النزيف.",
+    "en": "NSAIDs and blood-thinning drugs increase bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "Hematochezia تعني؟",
+    "en": "Hematochezia means?"
+   },
+   "options": [
+    {
+     "ar": "دم أحمر أو كستنائي من الشرج",
+     "en": "Red or maroon blood from the anus"
+    },
+    {
+     "ar": "قيء قهوة",
+     "en": "Coffee-ground vomit"
+    },
+    {
+     "ar": "براز أسود",
+     "en": "Black stool"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة: دم أحمر أو كستنائي من الشرج",
+    "en": "The correct answer: red or maroon blood from the anus"
+   }
+  },
+  {
+   "q": {
+    "ar": "أي موقف يمنع فيه الأنبوب الأنفي المعدي؟",
+    "en": "In which situation is a nasogastric tube contraindicated?"
+   },
+   "options": [
+    {
+     "ar": "دوالي المريء",
+     "en": "Esophageal varices"
+    },
+    {
+     "ar": "قرحة بسيطة",
+     "en": "A simple ulcer"
+    },
+    {
+     "ar": "التهاب معدة",
+     "en": "Gastritis"
+    },
+    {
+     "ar": "ارتجاع",
+     "en": "Reflux"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر تمزق الدوالي.",
+    "en": "Risk of rupturing the varices."
+   }
+  },
+  {
+   "q": {
+    "ar": "هيموجلوبين أقل من كذا ينذر ويستدعي نقل الدم؟",
+    "en": "A hemoglobin below what level is a warning and calls for blood transfusion?"
+   },
+   "options": [
+    {
+     "ar": "أقل من 7",
+     "en": "Below 7"
+    },
+    {
+     "ar": "10",
+     "en": "10"
+    },
+    {
+     "ar": "12",
+     "en": "12"
+    },
+    {
+     "ar": "14",
+     "en": "14"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "حسب الأوامر الطبية.",
+    "en": "By medical orders."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول إجراء تمريضي لمريض نزف هضمي بهبوط ضغط؟",
+    "en": "The first nursing action for a GI bleeding patient with low blood pressure?"
+   },
+   "options": [
+    {
+     "ar": "رفع الرأس",
+     "en": "Raise the head"
+    },
+    {
+     "ar": "خفض رأس السرير وإعطاء سوائل وأكسجين",
+     "en": "Lower the head of the bed and give fluids and oxygen"
+    },
+    {
+     "ar": "إعطاء ماء",
+     "en": "Give water"
+    },
+    {
+     "ar": "المشي",
+     "en": "Walking"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "وضع الصدمة والسوائل والأكسجين لتثبيت الدورة.",
+    "en": "Shock position, fluids, and oxygen to stabilize the circulation."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي حالة لا يُدخل فيها أنبوب أنفي معدي أثناء نزف علوي؟",
+    "en": "In which condition is a nasogastric tube not inserted during upper bleeding?"
+   },
+   "options": [
+    {
+     "ar": "قرحة",
+     "en": "Ulcer"
+    },
+    {
+     "ar": "دوالي المريء",
+     "en": "Esophageal varices"
+    },
+    {
+     "ar": "التهاب معدة",
+     "en": "Gastritis"
+    },
+    {
+     "ar": "ارتجاع",
+     "en": "Reflux"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الأنبوب قد يمزق الدوالي.",
+    "en": "The tube may rupture the varices."
+   }
+  },
+  {
+   "q": {
+    "ar": "عند أي مستوى هيموجلوبين يُنقل الدم في هذا المرجع؟",
+    "en": "At what hemoglobin level is blood transfused in this guide?"
+   },
+   "options": [
+    {
+     "ar": "أقل من 7",
+     "en": "Below 7"
+    },
+    {
+     "ar": "أقل من 12",
+     "en": "Below 12"
+    },
+    {
+     "ar": "أكثر من 14",
+     "en": "Above 14"
+    },
+    {
+     "ar": "10",
+     "en": "10"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "هيموجلوبين دون 7 ينذر بنقل دم.",
+    "en": "A hemoglobin below 7 is a warning for blood transfusion."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ACG Clinical Guideline: Upper Gastrointestinal and Ulcer Bleeding (2021)"
+  },
+  {
+   "title": "ESGE guideline: Non-variceal upper gastrointestinal hemorrhage"
+  },
+  {
+   "title": "HALT-IT trial (tranexamic acid in GI bleeding), Lancet 2020"
+  },
+  {
+   "title": "AASLD/Baveno guidance on variceal bleeding (ملخصات)"
+  },
+  {
+   "title": "نشرة Kapron (تركيب المنتج: Tranexamic acid 500 مجم/5 مل — صفحات صيدليات مصرية وSFDA)"
+  }
+ ],
+ "rx": [
+  {
+   "category": "الجهاز الهضمي",
+   "condition_ar": "القيء الدموي (طوارئ)",
+   "condition_en": "Hematemesis ER",
+   "items": [
+    {
+     "drug_name": "محلول ملح 0.9% 500 سم (Normal saline)",
+     "dose": "وريد، معدل حسب الحالة",
+     "note": "يُضاف إليه الأدوية التالية"
+    },
+    {
+     "drug_name": "Pantazol vial (Pantoprazole)",
+     "dose": "فيال يُضاف للمحلول",
+     "note": "الجرعة الدقيقة بأمر الطبيب"
+    },
+    {
+     "drug_name": "Dycinone amp (Ethamsylate)",
+     "dose": "أمبول يُضاف للمحلول",
+     "note": "مرقئ، دليله ضعيف"
+    },
+    {
+     "drug_name": "Kapron amp 500 mg/5 ml (Tranexamic acid)",
+     "dose": "أمبول يُضاف للمحلول",
+     "note": "غير موصى به حديثاً في نزيف الجهاز الهضمي"
+    }
+   ],
+   "clinical_note": "تركيب كانيولتين وتوفير كيس دم بعد الفصيلة والتوافق، ثم أنبوبة رايل وغسيل بالملح (حسب الأمر)، وبعدين نائب الباطنة."
+  }
+ ],
+ "id": "dis-280",
+ "title": {
+  "ar": "القيء الدموي (نزيف الجهاز الهضمي العلوي)",
+  "en": "Hematemesis (Upper GI Bleeding)"
+ },
+ "_m4": 1
 }

@@ -1,340 +1,398 @@
 {
-  "id": "dis-148",
-  "num": 148,
-  "system": "infect",
-  "icon": "🧫",
-  "level": 2,
-  "title": {
-    "ar": "عدوى الجلد البكتيرية",
-    "en": "Bacterial Skin Infections"
+ "id": "dis-148",
+ "num": 148,
+ "system": "infect",
+ "icon": "🧫",
+ "level": 2,
+ "title": {
+  "ar": "عدوى الجلد البكتيرية",
+  "en": "Bacterial Skin Infections"
+ },
+ "teaser": {
+  "ar": "من حبوب الحلاقة إلى الحمرة والجمرة: افهم العمق والبكتيريا والعلاج، ومتى تشك في جلطة وريدية أو تسمم.",
+  "en": "From shaving bumps to erysipelas and carbuncle: understand the depth, the bacteria, and the treatment, and when to suspect a venous clot or sepsis."
+ },
+ "chips": [
+  {
+   "ar": "Staph",
+   "en": "Staph"
   },
-  "teaser": {
-    "ar": "من حبوب الحلاقة إلى الحمرة والجمرة: افهم العمق والبكتيريا والعلاج، ومتى تشك في جلطة وريدية أو تسمم."
+  {
+   "ar": "Strept",
+   "en": "Strept"
   },
-  "chips": [
-    {
-      "ar": "Staph"
-    },
-    {
-      "ar": "Strept"
-    },
-    {
-      "ar": "Impetigo"
-    }
+  {
+   "ar": "Impetigo",
+   "en": "Impetigo"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>عدوى الجلد البكتيرية بتتقسم حسب البكتيريا المسببة: <b>المكورات العنقودية (Staph)</b> و<b>المكورات السبحية (Strept)</b> أو الاتنين مع بعض. الشكل والعمق يحددوا العلاج: من حبة سطحية بسيطة لحد التهاب نسيج عميق ممكن يسبب تسمم دم.</p>[[slot:dis-148-layers|عمق الإصابة في طبقات الجلد — رسم من إعداد الموقع|/diseases/img/dis-148-layers.svg]]<table><thead><tr><th>البكتيريا</th><th>الأمراض</th></tr></thead><tbody><tr><td><b>Staph</b></td><td>التهاب بصيلات الشعر (Folliculitis)، الدمل (Furunculosis)، الجمرة (Carbuncle)</td></tr><tr><td><b>Strept</b></td><td>الحمرة (Erysipelas)، التهاب النسيج الخلوي (Cellulitis)</td></tr><tr><td><b>Staph + Strept</b></td><td>القوباء المعدية (Impetigo contagiosum) والتقرح (Ecthyma)</td></tr></tbody></table><h4>إضافة: القوباء (Impetigo) — دليل الجلدية</h4><p>عدوى جلدية بكتيرية شديدة العدوى، شائعة عند الأطفال.</p><table><thead><tr><th>النوع</th><th>الشكل</th></tr></thead><tbody><tr><td>غير فقاعية (الأشهر — Non-bullous)</td><td>جرح أو حبة حمراء حوالين الفم أو الأنف بتنفتح أو بتتخدش وبينزل منها صديد أو سائل ويكوّن قشرة بلون العسل (honey-colored scab) ثم أثر أحمر بيخف بدون ندبة. الأم تقول: حباية أو جرح حول الفم أو الأنف فيه هرش وبينزل سائل وبيقشّر وفرش ومش بيسيب علامة</td></tr><tr><td>فقاعية (Bullous)</td><td>فقاقيع على الجلد جواها سائل بتفتح لوحدها أو مع الهرش وبتعمل قشرة</td></tr></tbody></table><p>راجع أيضاً: الهربس الشفوي مقابل القوباء في دليل الهربس (dis-146).</p>",
+   "en": "<p>Bacterial skin infections are classified by the causative bacteria: <b>Staphylococci (Staph)</b> and <b>Streptococci (Strept)</b>, or both together. The appearance and depth determine the treatment: from a simple superficial pimple to a deep tissue infection that can cause sepsis.</p>[[slot:dis-148-layers|Depth of involvement in the skin layers — illustration prepared by the site|/diseases/img/dis-148-layers.svg]]<table><thead><tr><th>Bacteria</th><th>Diseases</th></tr></thead><tbody><tr><td><b>Staph</b></td><td>Hair follicle inflammation (Folliculitis), boil (Furunculosis), carbuncle (Carbuncle)</td></tr><tr><td><b>Strept</b></td><td>Erysipelas, cellulitis (Cellulitis)</td></tr><tr><td><b>Staph + Strept</b></td><td>Impetigo contagiosum and ecthyma (Ecthyma)</td></tr></tbody></table><h4>Addition: Impetigo — a dermatology overview</h4><p>A highly contagious bacterial skin infection, common in children.</p><table><thead><tr><th>Type</th><th>Appearance</th></tr></thead><tbody><tr><td>Non-bullous (the most common)</td><td>A sore or red pimple around the mouth or nose that opens or is scratched and oozes pus or fluid and forms a honey-colored scab, then a red mark that fades without a scar. The mother says: a pimple or sore around the mouth or nose that is itchy, oozes fluid, peels and spreads, and does not leave a mark</td></tr><tr><td>Bullous</td><td>Blisters on the skin with fluid inside that open on their own or with scratching and form a crust</td></tr></tbody></table><p>See also: herpes labialis versus impetigo in the herpes guide (dis-146).</p>"
+  },
+  "causes": {
+   "ar": "<div class=\"cs-compare\"><ul><li><b>عوامل مهيئة عامة:</b> <b>نقص المناعة</b> (سكر!، سوء تغذية، أدوية مثبطة)، الجروح والخدوش، الحلاقة، الرطوبة والتعرق، قلة النظافة</li><li><b>Furunculosis و Carbuncle:</b> يُبحث عن <b>سبب لنقص المناعة</b> ويُعمل <b>تحليل سكر</b></li><li><b>Erysipelas / Cellulitis:</b> غالباً في <b>مريض سكر</b> في رجليه الاتنين: التهاب خلوي واحمرار وحرارة</li><li><b>Impetigo:</b> أطفال: الوجه — أو فروة الرأس مع <b>قمل (pediculosis)</b></li></ul></div><div class=\"cs-box cs-info\"><strong>السبب الشائع للبصيلات</strong><p>حبوب ما بعد <b>الحلاقة</b> = التهاب بصيلات (folliculitis).</p></div>",
+   "en": "<div class=\"cs-compare\"><ul><li><b>General predisposing factors:</b> <b>immune deficiency</b> (diabetes!, malnutrition, immunosuppressive drugs), wounds and scratches, shaving, moisture and sweating, poor hygiene</li><li><b>Furunculosis and Carbuncle:</b> look for a <b>cause of immune deficiency</b> and do a <b>blood sugar test</b></li><li><b>Erysipelas / Cellulitis:</b> often in a <b>diabetic patient</b> in both legs: cellulitis with redness and warmth</li><li><b>Impetigo:</b> children: the face — or the scalp with <b>lice (pediculosis)</b></li></ul></div><div class=\"cs-box cs-info\"><strong>The common cause of follicular infection</strong><p>Bumps after <b>shaving</b> = follicle inflammation (folliculitis).</p></div>"
+  },
+  "signs": {
+   "ar": "<table><thead><tr><th>الحالة</th><th>الوصف</th></tr></thead><tbody><tr><td><b>Folliculitis</b></td><td>حبوب صغيرة حول بصيلات الشعر (مثلاً بعد الحلاقة)</td></tr><tr><td><b>Furunculosis (دمل)</b></td><td>حبة <b>كبيرة</b> من منبت الشعر؛ ندور على سبب نقص مناعة ونعمل تحليل سكر ونفحص</td></tr><tr><td><b>Carbuncle (جمرة)</b></td><td>حبّتين أو أكتر <b>فاتحين على بعض</b> (فتحات متعددة)، غالباً في <b>الظهر</b>؛ بندور على نقص المناعة وغالباً المريض عيان سكر</td></tr><tr><td><b>Erysipelas</b></td><td>التهاب خلوي: <b>أحمر، ساخن، مؤلم</b> (red, hot, tender)</td></tr><tr><td><b>Cellulitis</b></td><td>نفس الشكل لكن أعمق وأقل حدوداً؛ حرارة</td></tr><tr><td><b>Impetigo contagiosum</b></td><td>قشور عسلية وفقاعات؛ على <b>الوجه عند الأطفال</b>، أو <b>فروة الرأس غالباً مع القمل</b></td></tr><tr><td><b>Ecthyma</b> (تُكتب أحياناً Erythma)</td><td>نسخة أعمق وأشد من القوباء مع تقرح</td></tr></tbody></table>[[slot:dis-148-folliculitis-photo|صورة: التهاب بصيلات الشعر / دمل / جمرة — تُرفع لاحقاً]][[slot:dis-148-erysipelas-photo|صورة: حمرة بالرجل (أحمر وساخن ولامع) — تُرفع لاحقاً]][[slot:dis-148-impetigo-photo|صورة: قوباء معدية حول الفم عند طفل — تُرفع لاحقاً]]<div class=\"cs-box cs-danger\"><strong>ملحوظة هامة جداً</strong><p>لو التهاب الجلد (Erysipelas / Cellulitis) في <b>رجل واحدة</b>، ممكن يكون <b>جلطة وريدية عميقة (DVT)</b> مش عدوى بس! لازم نطلب <b>دوبلر على الجهاز الوريدي (venous system)</b> ونطمّن على <b>النبض</b> (الدورة الدموية).</p></div><h4>إضافة: تفاصيل الأنواع</h4><table><thead><tr><th>الحالة</th><th>وصف إضافي</th></tr></thead><tbody><tr><td>Impetigo contagiosa</td><td>بقعة حمراء مسطحة ← حويصلة ← قشرة صفراء أو بنية؛ أشهر في الأطفال والرضّع. الأماكن: الوجه والأذنين والرقبة واليدين وفروة الرأس. أنواعها: حويصلية (vesicular)، حلقية (circinate)، فقاعية (bullous)، متقرحة (ulcerative)، وقوباء المواليد Impetigo neonatorum (في الإبط والأربية)</td></tr><tr><td>Erysipelas (الحمرة)</td><td>عدوى الأدمة (Dermis) بالمكورات السبحية الحالّة للدم (hemolytic streptococci): حمى وتوعك ورعشة + منطقة حمراء ساخنة ± حويصلات + زيادة كرات الدم البيضاء وارتفاع ESR</td></tr><tr><td>Furuncle (دمل/Boil)</td><td>عدوى عنقودية حادة مؤلمة لبصيلة الشعر</td></tr><tr><td>Carbuncle (جمرة)</td><td>تجمع دمامل متجاورة، شائع في مرضى السكر (خلف الرقبة)</td></tr></tbody></table><h4>إضافة: الحمرة والالتهاب الخلوي — الفرق السريع</h4><p>عدوى بكتيرية للجلد والنسيج تحت الجلد: <b>تورم + احمرار + سخونة</b>، غالباً في الرجل والقدم. <b>الحمرة (Erysipelas)</b> عدوى سطحية بحدود واضحة. <b>الالتهاب الخلوي (Cellulitis)</b> عدوى أعمق بحدود غير واضحة. التفرقة بينهم صعبة في كثير من الأحيان لكن <b>العلاج واحد</b>. وممكن تسبقها أعراض دور برد بأيام.</p>[[slot:dis-148-ery-cell|الحمرة مقابل الالتهاب الخلوي — رسم من إعداد الموقع|/diseases/img/dis-148-ery-cell.svg]]<h4>إضافة: نوعا القوباء (Impetigo)</h4><table><thead><tr><th>النوع</th><th>الوصف</th></tr></thead><tbody><tr><td>غير فقاعية (Non-bullous) — الأشهر</td><td>قرحة حمراء قرب الأنف أو الفم بتتفتح أو بتتخدش وبتنزف صديد أو سائل مصلي وبتكوّن قشرة بلون العسل، يتبعها علامة حمراء بتشفى من غير ندبة (حبابة أو جرح حول الفم أو الأنف هرش فيه الطفل ونزل سائل أو صديد، وفرش وعمل قشور وبيروح مش بيسيب علامة)</td></tr><tr><td>فقاعية (Bullous)</td><td>فقاقيع على الجلد جواها سائل بتتفتح لوحدها أو مع الهرش وبتعمل قشرة</td></tr></tbody></table><table><thead><tr><th></th><th>Herpes simplex</th><th>Impetigo</th></tr></thead><tbody><tr><td>الشكل</td><td>حبوب بتظهر بعد دور البرد (سائل شفاف)</td><td>حبايه هرش فيها الطفل وفرشت بعدها (صديد + قشور)</td></tr><tr><td>المكان</td><td>الملتقى المخاطي-الجلدي</td><td>الذقن غالباً</td></tr></tbody></table>[[slot:dis-148-impetigo-photo2|صورة: Impetigo على الذقن — تُرفع لاحقاً]]",
+   "en": "<table><thead><tr><th>Condition</th><th>Description</th></tr></thead><tbody><tr><td><b>Folliculitis</b></td><td>Small pimples around hair follicles (for example after shaving)</td></tr><tr><td><b>Furunculosis (boil)</b></td><td>A <b>large</b> bump from the hair root; we look for a cause of immune deficiency, do a blood sugar test, and examine</td></tr><tr><td><b>Carbuncle</b></td><td>Two or more bumps <b>open next to each other</b> (multiple openings), usually on the <b>back</b>; we look for immune deficiency and the patient is often diabetic</td></tr><tr><td><b>Erysipelas</b></td><td>Cellulitis: <b>red, hot, painful</b> (red, hot, tender)</td></tr><tr><td><b>Cellulitis</b></td><td>The same appearance but deeper and with less defined borders; fever</td></tr><tr><td><b>Impetigo contagiosum</b></td><td>Honey-colored crusts and blisters; on the <b>face in children</b>, or the <b>scalp often with lice</b></td></tr><tr><td><b>Ecthyma</b> (sometimes written Erythma)</td><td>A deeper and more severe version of impetigo with ulceration</td></tr></tbody></table>[[slot:dis-148-folliculitis-photo|Picture: folliculitis / boil / carbuncle — to be uploaded later]][[slot:dis-148-erysipelas-photo|Picture: erysipelas of the leg (red, hot, and shiny) — to be uploaded later]][[slot:dis-148-impetigo-photo|Picture: impetigo contagiosa around the mouth in a child — to be uploaded later]]<div class=\"cs-box cs-danger\"><strong>Very important note</strong><p>If the skin inflammation (Erysipelas / Cellulitis) is in <b>one leg</b>, it may be a <b>deep vein thrombosis (DVT)</b>, not just an infection! We must request a <b>Doppler of the venous system</b> and check the <b>pulse</b> (circulation).</p></div><h4>Addition: details of the types</h4><table><thead><tr><th>Condition</th><th>Additional description</th></tr></thead><tbody><tr><td>Impetigo contagiosa</td><td>A flat red spot → vesicle → yellow or brown crust; most common in children and infants. Sites: face, ears, neck, hands, and scalp. Its forms: vesicular, circinate, bullous, ulcerative, and Impetigo neonatorum of the newborn (in the axilla and groin)</td></tr><tr><td>Erysipelas</td><td>Infection of the dermis by hemolytic streptococci: fever, malaise, and chills + a hot red area ± vesicles + increased white blood cells and raised ESR</td></tr><tr><td>Furuncle (Boil)</td><td>An acute, painful staphylococcal infection of a hair follicle</td></tr><tr><td>Carbuncle</td><td>A cluster of adjacent boils, common in diabetic patients (back of the neck)</td></tr></tbody></table><h4>Addition: Erysipelas and cellulitis — the quick difference</h4><p>A bacterial infection of the skin and subcutaneous tissue: <b>swelling + redness + warmth</b>, usually in the leg and foot. <b>Erysipelas</b> is a superficial infection with clear borders. <b>Cellulitis</b> is a deeper infection with unclear borders. Telling them apart is often difficult but the <b>treatment is the same</b>. It may be preceded by cold symptoms by days.</p>[[slot:dis-148-ery-cell|Erysipelas versus cellulitis — illustration prepared by the site|/diseases/img/dis-148-ery-cell.svg]]<h4>Addition: the two types of impetigo</h4><table><thead><tr><th>Type</th><th>Description</th></tr></thead><tbody><tr><td>Non-bullous — the most common</td><td>A red sore near the nose or mouth that opens or is scratched and oozes pus or serous fluid and forms a honey-colored crust, followed by a red mark that heals without a scar (a pimple or sore around the mouth or nose that the child scratched and fluid or pus came out, and it spread and formed crusts and it goes without leaving a mark)</td></tr><tr><td>Bullous</td><td>Blisters on the skin with fluid inside that open on their own or with scratching and form a crust</td></tr></tbody></table><table><thead><tr><th></th><th>Herpes simplex</th><th>Impetigo</th></tr></thead><tbody><tr><td>Appearance</td><td>Bumps that appear after a cold (clear fluid)</td><td>A pimple the child scratched and then it spread (pus + crusts)</td></tr><tr><td>Site</td><td>The mucocutaneous junction</td><td>Usually the chin</td></tr></tbody></table>[[slot:dis-148-impetigo-photo2|Picture: Impetigo on the chin — to be uploaded later]]"
+  },
+  "tests": {
+   "ar": "<ul><li><b>تحليل سكر الدم</b> في الدمل والجمرة وأي التهاب متكرر</li><li>صورة دم كاملة ومؤشرات التهاب (CRP) في الالتهاب الخلوي</li><li>مزرعة وحساسية (من صديد/جرح) في الدمل المتكرر أو الجمرة أو عدم الاستجابة</li><li>دوبلر وريدي عند الاشتباه بجلطة وريدية</li><li>فحص النبض الطرفي (الدورة الدموية)</li><li>فحص فروة الرأس للقمل لو الإصابة هناك</li></ul>",
+   "en": "<ul><li><b>Blood sugar test</b> in boils, carbuncles, and any recurrent infection</li><li>Complete blood count and inflammation markers (CRP) in cellulitis</li><li>Culture and sensitivity (from pus/wound) in recurrent boils, carbuncle, or non-response</li><li>Venous Doppler when a venous clot is suspected</li><li>Checking the peripheral pulse (circulation)</li><li>Examining the scalp for lice if the involvement is there</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>أولاً: العنقودية (Staph)</h4><table><thead><tr><th>الحالة</th><th>الوصفة</th></tr></thead><tbody><tr><td><b>Folliculitis</b> (حبوب بعد الحلاقة)</td><td><b>Fucicort cream</b> دهان 3 مرات يومياً + <b>صابون Dettol</b> صباحاً ومساءً بماء دافئ وتُترك الرغوة 5 دقائق</td></tr><tr><td><b>Furunculosis</b> (دمل)</td><td>نفس علاج التهاب البصيلات + <b>مضاد حيوي جهازي</b>: <b>Hibiotic 460 مجم</b> قرص كل 12 ساعة</td></tr><tr><td><b>Carbuncle</b> (جمرة)</td><td>نفس علاج البصيلات (الموضعي) + <b>Cefotax 500 مجم</b> فيال حقنة كل 12 ساعة لمدة 3 أيام + <b>Vitplus</b> كبسولة مرة يومياً بعد الغداء</td></tr></tbody></table><h4>ثانياً: السبحية (Strept) — Erysipelas & Cellulitis</h4><table><thead><tr><th>الدواء</th><th>الطريقة</th></tr></thead><tbody><tr><td><b>Hibiotic 460 مجم</b></td><td>قرص كل 12 ساعة</td></tr><tr><td><b>Abimol</b> (باراسيتامول)</td><td>قرص كل 8 ساعات ثم عند اللزوم (للألم والحرارة)</td></tr></tbody></table><p><b>طريقة الفيار (غسيل الجرح/الموضع):</b> غسل بمحلول ملح ثم تنشيف، ثم استخدام <b>أميكاسين</b> أو <b>بيفيتراسين سبراي</b>، ثم كريم <b>Fusi</b> (فيوسي)، ويُكرَّر يومياً.</p><h4>ثالثاً: عنقودية و/أو سبحية — Impetigo / Ecthyma</h4><table><thead><tr><th>المكان</th><th>الوصفة</th></tr></thead><tbody><tr><td><b>الوجه</b> (غالباً الأطفال)</td><td><b>K Permanganate 1/8000</b>: 2 معلقة على نصف كوب ماء، كمادات 2–3 مرات يومياً 10 دقائق • <b>Fucicort cream</b> 3 مرات يومياً • <b>Hibiotic susp 600</b>: <b>25–45 مجم/كجم/يوم (من مكوّن الأموكسيسيلين) مقسومة على جرعتين</b></td></tr><tr><td><b>فروة الرأس</b> (غالباً مع القمل)</td><td><b>Betadine shampoo</b> غسيل للشعر مرتين يومياً • <b>Fucicort cream</b> 3 مرات يومياً • <b>Hibiotic susp 600</b>: 25–45 مجم/كجم/يوم مقسمة على جرعتين</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>الالتهابات السطحية المحدودة (قوباء، التهاب بصيلات): تكفي <b>المضادات الموضعية</b> (موبيروسين أو حمض الفيوسيديك) — وكريمات <b>Fucicort/Fusicort تحتوي كورتيزون (بيتاميثازون)</b> فلا تُستخدم على عدوى جلدية نشطة لمدة طويلة (أقصى ~14 يوماً)، ويُفضل مضاد حيوي موضعي بدون كورتيزون أولاً؛ راجع الطبيب.</li><li>الجرعة المعتمدة لـ amoxicillin/clavulanate معلق 457: 25–45 مجم/كجم/يوم مقسمة <b>على جرعتين</b> (وليس 60 مجم مقسمة على 3). اتبع الوصفة وسجّل الوزن.</li><li>الدمل الكبير: الشق والتصريف (incision & drainage) هو العلاج الأساسي، والمضاد الحيوي للمصابين بحمى أو التهاب خلوي حول الدمل أو نقص مناعة.</li><li>الالتهاب الخلوي/الحمرة: بنسلين أو سيفالوسبورين مناسب، ورفع الطرف وتغطية السكر. <b>MRSA</b> يحتاج بدائل.</li></ul></div><h4>إضافة: وصفات المرجع الثاني (الاسم التجاري)</h4><table><thead><tr><th>الحالة</th><th>الأدوية</th><th>التعليمات</th></tr></thead><tbody><tr><td>القوباء (Impetigo)</td><td>كمادات: Potassium permanganate 1/8000 أو Boric acid 4% • Terramycin skin oint. أو Fucidin cream • Flumox كبسولة أو Erythrocin قرص • Flumox شراب للرضع والأطفال</td><td>كمادات مرتين يومياً؛ الدهان مرتين يومياً؛ المضاد الفموي كل 6 ساعات</td></tr><tr><td>الحمرة (Erysipelas)</td><td>Flumox 500 فيال أو Flucamox 500 فيال • Paramol قرص (خافض حرارة ومسكن)</td><td>حقنة عضل كل 12 ساعة حسب العمر والوزن؛ Paramol 3 مرات يومياً؛ راحة تامة في السرير</td></tr><tr><td>الدمل والجمرة (Furuncle & Carbuncle)</td><td>Flumox 500 فيال أو Cefotax 1 جم فيال • أو Velosef 1 جم كبسولة أو Augmentin 1 جم • كريم Garamycin أو Fucidin أو Baneocin أو Ichthammol oint.</td><td>الحقن كل 12 ساعة؛ الفموي كل 12 ساعة؛ الدهان 2–3 مرات يومياً. + شق وتفريغ الصديد جراحياً وعلاج عوامل التهيؤ مثل السكر</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Flumox/Flucamox = Amoxicillin + Flucloxacillin (مضاد عنقودي). Cefotax/Velosef ممكن يكون بديل: لازم الاطمئنان لحساسية البنسلين. Paramol (باراسيتامول) حسب النشرة. Ichthammol يلوّن ويلطّخ، لا على جروح كبيرة. الأطفال: الجرعة بالوزن. الدمل المصاب بالحمى أو المتكرر أو الكبير يحتاج تقييم الطبيب. استخدم مضاد حيوي موضعي مناسب بدلاً من الكورتيزون المركب.</p></div><h4>إضافة: روشتة الحمرة والالتهاب الخلوي (مرجع ثالث)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>رفع الساقين</strong><p>ارفع الساقين بقدر الإمكان للتقليل من التورم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>مضاد حيوي موضعي</strong><p>Fucidin <b>أو</b> Mupirax مرهم صباحاً ومساءً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>مضاد حيوي جهازي</strong><p>Augmentin 1 جم قرص كل 12 ساعة لمدة أسبوع. في الحالات الشديدة: Ceporex 1 جم فيال حقنة كل 12 ساعة لمدة يومين، ثم أقراص كل 12 ساعة لمدة 10 أيام (الإجمالي حسب المراجع).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مضاد للتورم موضعي</strong><p>Ripari gel <b>أو</b> Hemoclar مرهم دهان صباحاً ومساءً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مضاد للتورم جهازي</strong><p>Alphintern قرص 3 مرات يومياً قبل الأكل بساعة.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>NICE NG141: مضاد حيوي فموي (فلوكلوكساسيلين 500 مجم–1 جم أربع مرات يومياً 5–7 أيام) أو بديل لمريض حساسية البنسلين (مثل كلاريثرومايسين)، وإعادة التقييم لو ما فيش تحسن خلال 2–3 أيام أو الحالة بتسوء بسرعة. من الخيارات الشائعة Augmentin وCeporex؛ نفّذ حسب الطبيب والمزرعة.</li><li>الأدلة على فائدة مضادات التورم (Alphintern, Hemoclar, Ripari) محدودة؛ الأساس هو المضاد الحيوي ورفع الطرف.</li><li>Ceporex تحقن/فيال بالجرعة بأمر الطبيب وبعد سؤال حساسية البنسلين.</li></ul></div><h4>إضافة: وصفة القوباء</h4><ol><li><b>ممنوع الهرش</b> في الحبايه أو القشور (لأنه بينشر التلوث أكتر)</li><li><b>مضاد حيوي موضعي</b> (صباحاً ومساءً): Garamycin ointment/cream (أرخصهم لكن أضعفهم) — Fusiderm / Fucidin cream/oint (أقوى من الجنتاميسين) — Mupirax ointment / Bactroban cream (أقوى من النوعين اللي فوق)</li><li><b>مطهّر:</b> أفضل مطهّر هو برمنجنات البوتاسيوم 1/8000: ملعقتين على نصف كوب ماء دافئ، كمادات لمدة ربع ساعة 3 مرات يومياً</li><li><b>مضاد حيوي جهازي:</b> سيفالوسبورينات الجيل الأول مثل Cefadroxil (من أفضل المضادات للعدوى الجلدية، قوي ضد Staph، ويؤخذ كل 12 ساعة)</li></ol><table><thead><tr><th>الشكل</th><th>المنتج</th><th>الجرعة</th></tr></thead><tbody><tr><td>معلق للأطفال</td><td>Duricef 125 / 250 / 500 susp • Ibidroxil 125 / 250 / 500 susp</td><td>تُعطى كل 12 ساعة: معلق 125 → الجرعة (مل) = وزن الطفل؛ معلق 250 → = الوزن ÷ 2؛ معلق 500 → = الوزن ÷ 4</td></tr><tr><td>كبسولات/أقراص</td><td>Duricef 250 و 500 caps و 1 جم (6 أقراص) • Ibidroxil 250 و 500 caps و 1 جم (8 أقراص)</td><td>كبسولة/قرص كل 12 ساعة لمدة أسبوع</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المعادلة الشائعة (مل = الوزن لمعلق 125 مجم/5 مل) تعطي نحو 25 مجم/كجم/جرعة أي ~50 مجم/كجم/يوم، وهي أعلى من الجرعة المرجعية المعتادة للـ Cefadroxil عند الأطفال (حوالي 30 مجم/كجم/يوم مقسمة على جرعتين، بحد أقصى حسب النشرة). لا تحسب الجرعة بنفسك: التزم بأمر الطبيب والنشرة. المضاد الحيوي الفموي يُستخدم في القوباء الواسعة أو الفقاعية أو غير المستجيبة للموضعي، أما المحدودة فتكفيها المضادات الموضعية.</p></div><h4>إضافة: وصفات القوباء (دليل الجلدية)</h4><ul><li>ممنوع الهرش في الحبوب أو القشور لأنه بينشر التلوث أكتر</li></ul><table><thead><tr><th>الفئة</th><th>الدواء (الاسم التجاري)</th><th>الملاحظة</th></tr></thead><tbody><tr><td>مضاد حيوي موضعي (الأضعف)</td><td>Garamycin ointment/cream (gentamicin)</td><td>دهان صباحاً ومساءً: الأرخص لكن أضعف</td></tr><tr><td>أقوى من الجنتاميسين</td><td>Fusiderm cream/oint • Fucidin cream/oint (fusidic acid)</td><td>دهان صباحاً ومساءً</td></tr><tr><td>الأقوى</td><td>Mupirax ointment • Bactroban cream (mupirocin)</td><td>دهان صباحاً ومساءً: أقوى من النوعين السابقين</td></tr><tr><td>مطهر</td><td>Potassium permanganate 1/8000</td><td>ملعقتين على نصف كوب ماء دافئ؛ كمادات ربع ساعة 3 مرات يومياً</td></tr><tr><td>مضاد حيوي جهازي (جيل أول سيفالوسبورين)</td><td>Duricef (cefadroxil) susp 125/250/500 • Ibidroxil susp 125/250/500</td><td>مضاد قوي للعنقوديات، كل 12 ساعة مع الدهان؛ من أفضل مضادات الجلد</td></tr><tr><td>كبسولات/أقراص</td><td>Duricef 250/500 caps و 1 جم tab • Ibidroxil 250/500 caps و 1 جم tab</td><td>قرص أو كبسولة كل 12 ساعة لمدة أسبوع</td></tr></tbody></table><h4>قاعدة الجرعة بالشراب حسب المراجع</h4><table><thead><tr><th>تركيز الشراب</th><th>الجرعة (مل) كل 12 ساعة</th></tr></thead><tbody><tr><td>125</td><td>تساوي الوزن (كجم)</td></tr><tr><td>250</td><td>تساوي نصف الوزن</td></tr><tr><td>500</td><td>تساوي ربع الوزن</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>هذه القاعدة تعطي نحو 25 مجم/كجم/جرعة (50 مجم/كجم/يوم)، وهي أعلى من الجرعة المعتادة المذكورة في المراجع: 30 مجم/كجم/يوم موزعة على جرعتين (بحد أقصى 1 جم/يوم في القوباء). اعتمد على أمر الطبيب/الصيدلي وحساب الوزن. القوباء المحدودة تكفيها المضادات الموضعية. الموبيروسين/الفيوسيديك يُستخدم لأقل مدة ممكنة لتجنب المقاومة.</p></div>",
+   "en": "<h4>First: Staphylococcal (Staph)</h4><table><thead><tr><th>Condition</th><th>Prescription</th></tr></thead><tbody><tr><td><b>Folliculitis</b> (bumps after shaving)</td><td><b>Fucicort cream</b> applied 3 times daily + <b>Dettol soap</b> morning and evening with warm water, leaving the lather for 5 minutes</td></tr><tr><td><b>Furunculosis</b> (boil)</td><td>The same treatment as folliculitis + a <b>systemic antibiotic</b>: <b>Hibiotic 460 mg</b> tablet every 12 hours</td></tr><tr><td><b>Carbuncle</b></td><td>The same (topical) treatment as folliculitis + <b>Cefotax 500 mg</b> vial injection every 12 hours for 3 days + <b>Vitplus</b> capsule once daily after lunch</td></tr></tbody></table><h4>Second: Streptococcal (Strept) — Erysipelas & Cellulitis</h4><table><thead><tr><th>Drug</th><th>Method</th></tr></thead><tbody><tr><td><b>Hibiotic 460 mg</b></td><td>Tablet every 12 hours</td></tr><tr><td><b>Abimol</b> (paracetamol)</td><td>Tablet every 8 hours then as needed (for pain and fever)</td></tr></tbody></table><p><b>Wound/site cleaning routine:</b> wash with saline solution then dry, then use <b>amikacin</b> or <b>bacitracin spray</b>, then <b>Fusi</b> cream, and repeat daily.</p><h4>Third: Staphylococcal and/or streptococcal — Impetigo / Ecthyma</h4><table><thead><tr><th>Site</th><th>Prescription</th></tr></thead><tbody><tr><td><b>Face</b> (usually children)</td><td><b>K Permanganate 1/8000</b>: 2 spoons in half a glass of water, compresses 2–3 times daily for 10 minutes • <b>Fucicort cream</b> 3 times daily • <b>Hibiotic susp 600</b>: <b>25–45 mg/kg/day (of the amoxicillin component) divided into two doses</b></td></tr><tr><td><b>Scalp</b> (usually with lice)</td><td><b>Betadine shampoo</b> hair wash twice daily • <b>Fucicort cream</b> 3 times daily • <b>Hibiotic susp 600</b>: 25–45 mg/kg/day divided into two doses</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li>Limited superficial infections (impetigo, folliculitis): <b>topical antibiotics</b> are enough (mupirocin or fusidic acid) — and <b>Fucicort/Fusicort creams contain a corticosteroid (betamethasone)</b> so they are not used on an active skin infection for a long time (maximum ~14 days), and a topical antibiotic without a corticosteroid is preferred first; consult the physician.</li><li>The accepted dose of amoxicillin/clavulanate suspension 457: 25–45 mg/kg/day divided <b>into two doses</b> (not 60 mg divided into 3). Follow the prescription and record the weight.</li><li>A large boil: incision and drainage is the main treatment, and the antibiotic is for those with fever, cellulitis around the boil, or immune deficiency.</li><li>Cellulitis/erysipelas: penicillin or a suitable cephalosporin, limb elevation, and sugar control. <b>MRSA</b> needs alternatives.</li></ul></div><h4>Addition: more prescriptions (trade names)</h4><table><thead><tr><th>Condition</th><th>Drugs</th><th>Instructions</th></tr></thead><tbody><tr><td>Impetigo</td><td>Compresses: Potassium permanganate 1/8000 or Boric acid 4% • Terramycin skin oint. or Fucidin cream • Flumox capsule or Erythrocin tablet • Flumox syrup for infants and children</td><td>Compresses twice daily; the ointment twice daily; the oral antibiotic every 6 hours</td></tr><tr><td>Erysipelas</td><td>Flumox 500 vial or Flucamox 500 vial • Paramol tablet (antipyretic and analgesic)</td><td>IM injection every 12 hours according to age and weight; Paramol 3 times daily; complete bed rest</td></tr><tr><td>Furuncle & Carbuncle</td><td>Flumox 500 vial or Cefotax 1 g vial • or Velosef 1 g capsule or Augmentin 1 g • Garamycin or Fucidin or Baneocin cream or Ichthammol oint.</td><td>Injections every 12 hours; oral every 12 hours; the ointment 2–3 times daily. + surgical incision and drainage of the pus and treating predisposing factors such as diabetes</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Flumox/Flucamox = Amoxicillin + Flucloxacillin (an anti-staphylococcal). Cefotax/Velosef may be an alternative: make sure about penicillin allergy. Paramol (paracetamol) per the package insert. Ichthammol stains and smears, not for large wounds. Children: the dose is by weight. A boil with fever, or recurrent or large, needs the physician's assessment. Use a suitable topical antibiotic instead of the combined corticosteroid.</p></div><h4>Addition: erysipelas and cellulitis prescription</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Elevate the legs</strong><p>Elevate the legs as much as possible to reduce swelling.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Topical antibiotic</strong><p>Fucidin <b>or</b> Mupirax ointment morning and evening.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Systemic antibiotic</strong><p>Augmentin 1 g tablet every 12 hours for a week. In severe cases: Ceporex 1 g vial injection every 12 hours for two days, then tablets every 12 hours for 10 days (the total per protocol).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Topical anti-swelling</strong><p>Ripari gel <b>or</b> Hemoclar ointment applied morning and evening.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Systemic anti-swelling</strong><p>Alphintern tablet 3 times daily one hour before meals.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>Update</strong><ul><li>An oral antibiotic (flucloxacillin 500 mg–1 g four times daily for 5–7 days) or an alternative for a penicillin-allergic patient (such as clarithromycin), and reassess if there is no improvement within 2–3 days or the condition worsens quickly. Common options are Augmentin and Ceporex; proceed per the physician and the culture.</li><li>Evidence for the benefit of anti-swelling drugs (Alphintern, Hemoclar, Ripari) is limited; the mainstay is the antibiotic and limb elevation.</li><li>Ceporex injectable/vial: the dose on the physician's order and after asking about penicillin allergy.</li></ul></div><h4>Addition: impetigo prescription</h4><ol><li><b>No scratching</b> the pimples or crusts (because it spreads the contamination more)</li><li><b>Topical antibiotic</b> (morning and evening): Garamycin ointment/cream (the cheapest but the weakest) — Fusiderm / Fucidin cream/oint (stronger than gentamicin) — Mupirax ointment / Bactroban cream (stronger than the two above)</li><li><b>Antiseptic:</b> the best antiseptic is potassium permanganate 1/8000: two spoons in half a glass of warm water, compresses for a quarter of an hour 3 times daily</li><li><b>Systemic antibiotic:</b> first-generation cephalosporins such as Cefadroxil (one of the best antibiotics for skin infection, strong against Staph, taken every 12 hours)</li></ol><table><thead><tr><th>Form</th><th>Product</th><th>Dose</th></tr></thead><tbody><tr><td>Suspension for children</td><td>Duricef 125 / 250 / 500 susp • Ibidroxil 125 / 250 / 500 susp</td><td>Given every 12 hours: suspension 125 → dose (mL) = the child's weight; suspension 250 → = weight ÷ 2; suspension 500 → = weight ÷ 4</td></tr><tr><td>Capsules/tablets</td><td>Duricef 250 and 500 caps and 1 g (6 tablets) • Ibidroxil 250 and 500 caps and 1 g (8 tablets)</td><td>A capsule/tablet every 12 hours for a week</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The common formula (mL = weight for the 125 mg/5 mL suspension) gives about 25 mg/kg/dose i.e. ~50 mg/kg/day, which is higher than the usual dose of Cefadroxil in children (about 30 mg/kg/day divided into two doses, with a maximum per the package insert). Do not calculate the dose yourself: follow the physician's order and the package insert. The oral antibiotic is used in extensive or bullous impetigo or impetigo not responding to topical treatment, while limited impetigo is covered by topical antibiotics.</p></div><h4>Addition: impetigo prescriptions (dermatology overview)</h4><ul><li>No scratching the pimples or crusts because it spreads the contamination more</li></ul><table><thead><tr><th>Category</th><th>Drug (trade name)</th><th>Note</th></tr></thead><tbody><tr><td>Topical antibiotic (the weakest)</td><td>Garamycin ointment/cream (gentamicin)</td><td>Applied morning and evening: the cheapest but weaker</td></tr><tr><td>Stronger than gentamicin</td><td>Fusiderm cream/oint • Fucidin cream/oint (fusidic acid)</td><td>Applied morning and evening</td></tr><tr><td>The strongest</td><td>Mupirax ointment • Bactroban cream (mupirocin)</td><td>Applied morning and evening: stronger than the two previous types</td></tr><tr><td>Antiseptic</td><td>Potassium permanganate 1/8000</td><td>Two spoons in half a glass of warm water; compresses for a quarter of an hour 3 times daily</td></tr><tr><td>Systemic antibiotic (first-generation cephalosporin)</td><td>Duricef (cefadroxil) susp 125/250/500 • Ibidroxil susp 125/250/500</td><td>A strong anti-staphylococcal, every 12 hours together with the ointment; one of the best skin antibiotics</td></tr><tr><td>Capsules/tablets</td><td>Duricef 250/500 caps and 1 g tab • Ibidroxil 250/500 caps and 1 g tab</td><td>A tablet or capsule every 12 hours for a week</td></tr></tbody></table><h4>The syrup dosing rule</h4><table><thead><tr><th>Syrup concentration</th><th>Dose (mL) every 12 hours</th></tr></thead><tbody><tr><td>125</td><td>Equals the weight (kg)</td></tr><tr><td>250</td><td>Equals half the weight</td></tr><tr><td>500</td><td>Equals a quarter of the weight</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>This rule gives about 25 mg/kg/dose (50 mg/kg/day), which is higher than the usual dose: 30 mg/kg/day divided into two doses (with a maximum of 1 g/day in impetigo). Rely on the physician's/pharmacist's order and the weight calculation. Limited impetigo is covered by topical antibiotics. Mupirocin/fusidic acid is used for the shortest possible time to avoid resistance.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الآفة</strong><p>حدد الحجم والحدود (علّم الحدود بقلم لمتابعة الانتشار)، الحرارة، الألم، الصديد، وهل هناك خط أحمر صاعد؟ سجّل بالصور (بإذن).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّم المريض</strong><p>حرارة، نبض، ضغط، سكر الدم، علامات تسمم دم (قشعريرة، هبوط ضغط، تشوش). اسأل عن السكر والمناعة والأدوية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>العناية المحلية</strong><p>اغسل بماء وصابون أو محلول ملح، جفّف برفق، طبّق الدواء الموضعي بقفاز ولا تلمس بيدك مباشرة. ممنوع الفقع والعصر (يزيد العدوى).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الأدوية</strong><p>المضاد الحيوي في ميعاده بالتمام، اسأل عن حساسية البنسلين قبل الجرعة الأولى (Hibiotic/Cefotax). الحقن: عضل عميق أو وريدي حسب الأمر، وراقب الحساسية 30 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الراحة والرفع</strong><p>في الأطراف: رفع الطرف لتقليل الوذمة وراحة، وعدم الضغط على المنطقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ارصد المضاعفات</strong><p>انتشار الاحمرار، الحرارة العالية، ألم شديد، تقرحات سوداء (نخر)، قلة بول = بلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ضبط السكر والعدوى</strong><p>سكر الدم داخل الحد، وعزل مواد التضميد في أكياس مخصصة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>سجّل</strong><p>المساحة، العلاجات، الاستجابة، والتثقيف.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>احمرار سريع الانتشار + <b>ألم أشد من شكل الجلد</b> أو فقاعات داكنة أو فرقعة تحت الجلد = احتمال <b>التهاب أنسجة نخري (necrotizing fasciitis)</b> طارئ جراحي. وحرارة عالية مع هبوط ضغط = تسمم دم. أبلّغ فوراً.</p></div><h4>إضافة: نصائح تمريضية</h4><ul><li>الحمرة: راحة تامة في السرير، ارفع الطرف المصاب، قيس الحرارة وراقب الاحمرار (ارسم حدوده بقلم وسجل الوقت).</li><li>القوباء معدية: عزل الأدوات، غسل اليدين، قص الأظافر، منع الحك، وغيّر الضمادات.</li><li>الدمل: لا تعصره أو تضغط عليه، ولا تتخلص من الصديد إلا بالطريقة المعقمة (شق وتفريغ بالطبيب).</li><li>حقن Flumox/Cefotax عضل: اسأل عن حساسية البنسلين، سجل الوقت.</li></ul><h4>إضافة: حمرة بالساق</h4><ul><li>ارفع الطرف المصاب فوق مستوى القلب قدر الإمكان، وسجّل حدود الاحمرار بقلم ووقتها كل وردية.</li><li>المضاد الحيوي الموضعي (Fucidin/Mupirax) بقفاز صباحاً ومساءً.</li><li>Alphintern قبل الأكل بساعة، 3 مرات يومياً.</li><li>Ceporex/Augmentin: اسأل عن حساسية البنسلين، والحقن كل 12 ساعة في مواعيدها.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess the lesion</strong><p>Determine the size and borders (mark the borders with a pen to follow the spread), warmth, pain, pus, and is there an ascending red streak? Document with photos (with permission).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Assess the patient</strong><p>Temperature, pulse, pressure, blood sugar, signs of sepsis (chills, hypotension, confusion). Ask about diabetes, immunity, and medications.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Local care</strong><p>Wash with soap and water or saline, dry gently, apply the topical drug with a glove and do not touch it directly with your hand. No popping and squeezing (it increases the infection).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Medications</strong><p>The antibiotic exactly on time, ask about penicillin allergy before the first dose (Hibiotic/Cefotax). Injections: deep IM or IV as ordered, and watch for allergy for 30 minutes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Rest and elevation</strong><p>In the limbs: elevate the limb to reduce edema and rest, and avoid pressure on the area.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Watch for complications</strong><p>Spreading redness, high fever, severe pain, black ulcers (necrosis), oliguria = report immediately.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Control sugar and infection</strong><p>Blood sugar within range, and isolate dressing materials in designated bags.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Document</strong><p>The area, treatments, response, and education.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Rapidly spreading redness + <b>pain worse than the look of the skin</b> or dark blisters or crepitus under the skin = possible <b>necrotizing fasciitis</b>, a surgical emergency. And high fever with hypotension = sepsis. Report immediately.</p></div><h4>Addition: nursing tips</h4><ul><li>Erysipelas: complete bed rest, elevate the affected limb, measure the temperature and watch the redness (draw its borders with a pen and record the time).</li><li>Impetigo is contagious: isolate utensils, wash hands, trim nails, prevent scratching, and change dressings.</li><li>A boil: do not squeeze or press it, and do not get rid of pus except by the sterile method (incision and drainage by the physician).</li><li>Flumox/Cefotax IM injections: ask about penicillin allergy, record the time.</li></ul><h4>Addition: erysipelas of the leg</h4><ul><li>Elevate the affected limb above heart level as much as possible, and record the borders of the redness with a pen and the time every shift.</li><li>The topical antibiotic (Fucidin/Mupirax) with a glove morning and evening.</li><li>Alphintern one hour before meals, 3 times daily.</li><li>Ceporex/Augmentin: ask about penicillin allergy, and give the injections every 12 hours on time.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>حمى مرتفعة أو قشعريرة أو هبوط ضغط أو تشوش</li><li>اتساع سريع للاحمرار أو خطوط حمراء صاعدة</li><li>ألم شديد غير متناسب أو فقاعات داكنة أو فرقعة</li><li>رجل واحدة متورمة بألم: ممكن جلطة وريدية (دوبلر)</li><li>دمل أو جمرة بالوجه (خصوصاً حول الأنف والعين) أو بالعمود الفقري</li><li>سكر دم مرتفع جداً</li><li>حساسية أو طفح بعد المضاد الحيوي</li><li>عدم تحسن بعد 48–72 ساعة من العلاج</li></ul></div>\n<div class=\"cs-box cs-danger\"><p>العدوى العقدية بالجلد قد تنتقل أثرها إلى الكلى: التهاب الكبيبات الكلوية بعد العدوى العقدية (Post-streptococcal glomerulonephritis). بلّغ عن بول بلون الكولا أو قلة البول أو تورم الوجه والجفون أو ارتفاع الضغط بعد القوباء.</p></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>High fever or chills or hypotension or confusion</li><li>Rapidly widening redness or ascending red streaks</li><li>Disproportionate severe pain or dark blisters or crepitus</li><li>One swollen painful leg: may be a venous clot (Doppler)</li><li>A boil or carbuncle on the face (especially around the nose and eye) or on the spine</li><li>Very high blood sugar</li><li>Allergy or rash after the antibiotic</li><li>No improvement after 48–72 hours of treatment</li></ul></div>\n<div class=\"cs-box cs-danger\"><p>A streptococcal skin infection may have its effect move to the kidneys: post-streptococcal glomerulonephritis. Report cola-colored urine, oliguria, swelling of the face and eyelids, or high blood pressure after impetigo.</p></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>نظافة الجلد وغسل اليدين، وتجفيف الثنيات.</li><li>لا تفقع الدمل ولا تعصره: بيدخل العدوى للدم ولأماكن أخرى.</li><li>الأدوات الشخصية لوحدك (منشفة، شفرة حلاقة، ملابس) وغسّلها بماء ساخن.</li><li>مرضى السكر: ضبط السكر وفحص القدمين يومياً ورعاية الجروح.</li><li>أنهِ المضاد الحيوي كاملاً.</li><li>القوباء معدية: عزل الطفل عن المدرسة 24 ساعة بعد بدء العلاج، ولا يلمس الحويصلات.</li><li>ارجع للطبيب لو ظهر احمرار ينتشر أو حمى.</li></ul><ul><li>ممنوع الهرش في الحبوب أو القشور.</li><li>الكمادات بالبرمنجنات المخففة 1/8000 فقط (ملعقتان لنصف كوب ماء دافئ).</li></ul>",
+   "en": "<ul><li>Skin hygiene and handwashing, and drying the skin folds.</li><li>Do not pop or squeeze a boil: it carries the infection into the blood and other places.</li><li>Keep personal items to yourself (towel, razor, clothes) and wash them in hot water.</li><li>Diabetic patients: control sugar, check the feet daily, and care for wounds.</li><li>Finish the antibiotic fully.</li><li>Impetigo is contagious: keep the child out of school for 24 hours after starting treatment, and he should not touch the vesicles.</li><li>Return to the physician if spreading redness or fever appears.</li></ul><ul><li>No scratching the pimples or crusts.</li><li>Compresses only with diluted permanganate 1/8000 (two spoons per half a glass of warm water).</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "عنقودية: بصيلات / دمل / جمرة؛ سبحية: حمرة وتهاب خلوي؛ مشتركة: قوباء وتقرح",
+   "الدمل والجمرة: ابحث عن السكر ونقص المناعة",
+   "التهاب خلوي في رجل واحدة: فكّر في جلطة وريدية (دوبلر) وافحص النبض",
+   "الوجه عند الأطفال: كمادات برمنجنات + Fucicort + مضاد حيوي بالوزن",
+   "فروة الرأس مع القمل: Betadine shampoo + Fucicort + مضاد",
+   "أي حمى أو احمرار ينتشر بسرعة أو ألم شديد: طوارئ",
+   "الحمرة سطحية بحدود واضحة والالتهاب الخلوي أعمق بحدود غير واضحة، والعلاج واحد"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>عدوى الجلد البكتيرية بتتقسم حسب البكتيريا المسببة: <b>المكورات العنقودية (Staph)</b> و<b>المكورات السبحية (Strept)</b> أو الاتنين مع بعض. الشكل والعمق يحددوا العلاج: من حبة سطحية بسيطة لحد التهاب نسيج عميق ممكن يسبب تسمم دم.</p>[[slot:dis-148-layers|عمق الإصابة في طبقات الجلد — رسم من إعداد الموقع|/diseases/img/dis-148-layers.svg]]<table><thead><tr><th>البكتيريا</th><th>الأمراض</th></tr></thead><tbody><tr><td><b>Staph</b></td><td>التهاب بصيلات الشعر (Folliculitis)، الدمل (Furunculosis)، الجمرة (Carbuncle)</td></tr><tr><td><b>Strept</b></td><td>الحمرة (Erysipelas)، التهاب النسيج الخلوي (Cellulitis)</td></tr><tr><td><b>Staph + Strept</b></td><td>القوباء المعدية (Impetigo contagiosum) والتقرح (Ecthyma)</td></tr></tbody></table><h4>إضافة: القوباء (Impetigo) — دليل الجلدية</h4><p>عدوى جلدية بكتيرية شديدة العدوى، شائعة عند الأطفال.</p><table><thead><tr><th>النوع</th><th>الشكل</th></tr></thead><tbody><tr><td>غير فقاعية (الأشهر — Non-bullous)</td><td>جرح أو حبة حمراء حوالين الفم أو الأنف بتنفتح أو بتتخدش وبينزل منها صديد أو سائل ويكوّن قشرة بلون العسل (honey-colored scab) ثم أثر أحمر بيخف بدون ندبة. الأم تقول: حباية أو جرح حول الفم أو الأنف فيه هرش وبينزل سائل وبيقشّر وفرش ومش بيسيب علامة</td></tr><tr><td>فقاعية (Bullous)</td><td>فقاقيع على الجلد جواها سائل بتفتح لوحدها أو مع الهرش وبتعمل قشرة</td></tr></tbody></table><p>راجع أيضاً: الهربس الشفوي مقابل القوباء في دليل الهربس (dis-146).</p>"
-    },
-    "causes": {
-      "ar": "<div class=\"cs-compare\"><ul><li><b>عوامل مهيئة عامة:</b> <b>نقص المناعة</b> (سكر!، سوء تغذية، أدوية مثبطة)، الجروح والخدوش، الحلاقة، الرطوبة والتعرق، قلة النظافة</li><li><b>Furunculosis و Carbuncle:</b> يُبحث عن <b>سبب لنقص المناعة</b> ويُعمل <b>تحليل سكر</b></li><li><b>Erysipelas / Cellulitis:</b> غالباً في <b>مريض سكر</b> في رجليه الاتنين: التهاب خلوي واحمرار وحرارة</li><li><b>Impetigo:</b> أطفال: الوجه — أو فروة الرأس مع <b>قمل (pediculosis)</b></li></ul></div><div class=\"cs-box cs-info\"><strong>السبب الشائع للبصيلات</strong><p>حبوب ما بعد <b>الحلاقة</b> = التهاب بصيلات (folliculitis).</p></div>"
-    },
-    "signs": {
-      "ar": "<table><thead><tr><th>الحالة</th><th>الوصف</th></tr></thead><tbody><tr><td><b>Folliculitis</b></td><td>حبوب صغيرة حول بصيلات الشعر (مثلاً بعد الحلاقة)</td></tr><tr><td><b>Furunculosis (دمل)</b></td><td>حبة <b>كبيرة</b> من منبت الشعر؛ ندور على سبب نقص مناعة ونعمل تحليل سكر ونفحص</td></tr><tr><td><b>Carbuncle (جمرة)</b></td><td>حبّتين أو أكتر <b>فاتحين على بعض</b> (فتحات متعددة)، غالباً في <b>الظهر</b>؛ بندور على نقص المناعة وغالباً المريض عيان سكر</td></tr><tr><td><b>Erysipelas</b></td><td>التهاب خلوي: <b>أحمر، ساخن، مؤلم</b> (red, hot, tender)</td></tr><tr><td><b>Cellulitis</b></td><td>نفس الشكل لكن أعمق وأقل حدوداً؛ حرارة</td></tr><tr><td><b>Impetigo contagiosum</b></td><td>قشور عسلية وفقاعات؛ على <b>الوجه عند الأطفال</b>، أو <b>فروة الرأس غالباً مع القمل</b></td></tr><tr><td><b>Ecthyma</b> (تُكتب أحياناً Erythma)</td><td>نسخة أعمق وأشد من القوباء مع تقرح</td></tr></tbody></table>[[slot:dis-148-folliculitis-photo|صورة: التهاب بصيلات الشعر / دمل / جمرة — تُرفع لاحقاً]][[slot:dis-148-erysipelas-photo|صورة: حمرة بالرجل (أحمر وساخن ولامع) — تُرفع لاحقاً]][[slot:dis-148-impetigo-photo|صورة: قوباء معدية حول الفم عند طفل — تُرفع لاحقاً]]<div class=\"cs-box cs-danger\"><strong>ملحوظة هامة جداً</strong><p>لو التهاب الجلد (Erysipelas / Cellulitis) في <b>رجل واحدة</b>، ممكن يكون <b>جلطة وريدية عميقة (DVT)</b> مش عدوى بس! لازم نطلب <b>دوبلر على الجهاز الوريدي (venous system)</b> ونطمّن على <b>النبض</b> (الدورة الدموية).</p></div><h4>إضافة: تفاصيل الأنواع</h4><table><thead><tr><th>الحالة</th><th>وصف إضافي</th></tr></thead><tbody><tr><td>Impetigo contagiosa</td><td>بقعة حمراء مسطحة ← حويصلة ← قشرة صفراء أو بنية؛ أشهر في الأطفال والرضّع. الأماكن: الوجه والأذنين والرقبة واليدين وفروة الرأس. أنواعها: حويصلية (vesicular)، حلقية (circinate)، فقاعية (bullous)، متقرحة (ulcerative)، وقوباء المواليد Impetigo neonatorum (في الإبط والأربية)</td></tr><tr><td>Erysipelas (الحمرة)</td><td>عدوى الأدمة (Dermis) بالمكورات السبحية الحالّة للدم (hemolytic streptococci): حمى وتوعك ورعشة + منطقة حمراء ساخنة ± حويصلات + زيادة كرات الدم البيضاء وارتفاع ESR</td></tr><tr><td>Furuncle (دمل/Boil)</td><td>عدوى عنقودية حادة مؤلمة لبصيلة الشعر</td></tr><tr><td>Carbuncle (جمرة)</td><td>تجمع دمامل متجاورة، شائع في مرضى السكر (خلف الرقبة)</td></tr></tbody></table><h4>إضافة: الحمرة والالتهاب الخلوي — الفرق السريع</h4><p>عدوى بكتيرية للجلد والنسيج تحت الجلد: <b>تورم + احمرار + سخونة</b>، غالباً في الرجل والقدم. <b>الحمرة (Erysipelas)</b> عدوى سطحية بحدود واضحة. <b>الالتهاب الخلوي (Cellulitis)</b> عدوى أعمق بحدود غير واضحة. التفرقة بينهم صعبة في كثير من الأحيان لكن <b>العلاج واحد</b>. وممكن تسبقها أعراض دور برد بأيام.</p>[[slot:dis-148-ery-cell|الحمرة مقابل الالتهاب الخلوي — رسم من إعداد الموقع|/diseases/img/dis-148-ery-cell.svg]]<h4>إضافة: نوعا القوباء (Impetigo)</h4><table><thead><tr><th>النوع</th><th>الوصف</th></tr></thead><tbody><tr><td>غير فقاعية (Non-bullous) — الأشهر</td><td>قرحة حمراء قرب الأنف أو الفم بتتفتح أو بتتخدش وبتنزف صديد أو سائل مصلي وبتكوّن قشرة بلون العسل، يتبعها علامة حمراء بتشفى من غير ندبة (حبابة أو جرح حول الفم أو الأنف هرش فيه الطفل ونزل سائل أو صديد، وفرش وعمل قشور وبيروح مش بيسيب علامة)</td></tr><tr><td>فقاعية (Bullous)</td><td>فقاقيع على الجلد جواها سائل بتتفتح لوحدها أو مع الهرش وبتعمل قشرة</td></tr></tbody></table><table><thead><tr><th></th><th>Herpes simplex</th><th>Impetigo</th></tr></thead><tbody><tr><td>الشكل</td><td>حبوب بتظهر بعد دور البرد (سائل شفاف)</td><td>حبايه هرش فيها الطفل وفرشت بعدها (صديد + قشور)</td></tr><tr><td>المكان</td><td>الملتقى المخاطي-الجلدي</td><td>الذقن غالباً</td></tr></tbody></table>[[slot:dis-148-impetigo-photo2|صورة: Impetigo على الذقن — تُرفع لاحقاً]]"
-    },
-    "tests": {
-      "ar": "<ul><li><b>تحليل سكر الدم</b> في الدمل والجمرة وأي التهاب متكرر</li><li>صورة دم كاملة ومؤشرات التهاب (CRP) في الالتهاب الخلوي</li><li>مزرعة وحساسية (من صديد/جرح) في الدمل المتكرر أو الجمرة أو عدم الاستجابة</li><li>دوبلر وريدي عند الاشتباه بجلطة وريدية</li><li>فحص النبض الطرفي (الدورة الدموية)</li><li>فحص فروة الرأس للقمل لو الإصابة هناك</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>أولاً: العنقودية (Staph)</h4><table><thead><tr><th>الحالة</th><th>الوصفة</th></tr></thead><tbody><tr><td><b>Folliculitis</b> (حبوب بعد الحلاقة)</td><td><b>Fucicort cream</b> دهان 3 مرات يومياً + <b>صابون Dettol</b> صباحاً ومساءً بماء دافئ وتُترك الرغوة 5 دقائق</td></tr><tr><td><b>Furunculosis</b> (دمل)</td><td>نفس علاج التهاب البصيلات + <b>مضاد حيوي جهازي</b>: <b>Hibiotic 460 مجم</b> قرص كل 12 ساعة</td></tr><tr><td><b>Carbuncle</b> (جمرة)</td><td>نفس علاج البصيلات (الموضعي) + <b>Cefotax 500 مجم</b> فيال حقنة كل 12 ساعة لمدة 3 أيام + <b>Vitplus</b> كبسولة مرة يومياً بعد الغداء</td></tr></tbody></table><h4>ثانياً: السبحية (Strept) — Erysipelas & Cellulitis</h4><table><thead><tr><th>الدواء</th><th>الطريقة</th></tr></thead><tbody><tr><td><b>Hibiotic 460 مجم</b></td><td>قرص كل 12 ساعة</td></tr><tr><td><b>Abimol</b> (باراسيتامول)</td><td>قرص كل 8 ساعات ثم عند اللزوم (للألم والحرارة)</td></tr></tbody></table><p><b>طريقة الفيار (غسيل الجرح/الموضع):</b> غسل بمحلول ملح ثم تنشيف، ثم استخدام <b>أميكاسين</b> أو <b>بيفيتراسين سبراي</b>، ثم كريم <b>Fusi</b> (فيوسي)، ويُكرَّر يومياً.</p><h4>ثالثاً: عنقودية و/أو سبحية — Impetigo / Ecthyma</h4><table><thead><tr><th>المكان</th><th>الوصفة</th></tr></thead><tbody><tr><td><b>الوجه</b> (غالباً الأطفال)</td><td><b>K Permanganate 1/8000</b>: 2 معلقة على نصف كوب ماء، كمادات 2–3 مرات يومياً 10 دقائق • <b>Fucicort cream</b> 3 مرات يومياً • <b>Hibiotic susp 600</b>: <b>25–45 مجم/كجم/يوم (من مكوّن الأموكسيسيلين) مقسومة على جرعتين</b></td></tr><tr><td><b>فروة الرأس</b> (غالباً مع القمل)</td><td><b>Betadine shampoo</b> غسيل للشعر مرتين يومياً • <b>Fucicort cream</b> 3 مرات يومياً • <b>Hibiotic susp 600</b>: 25–45 مجم/كجم/يوم مقسمة على جرعتين</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>الالتهابات السطحية المحدودة (قوباء، التهاب بصيلات): تكفي <b>المضادات الموضعية</b> (موبيروسين أو حمض الفيوسيديك) — وكريمات <b>Fucicort/Fusicort تحتوي كورتيزون (بيتاميثازون)</b> فلا تُستخدم على عدوى جلدية نشطة لمدة طويلة (أقصى ~14 يوماً)، ويُفضل مضاد حيوي موضعي بدون كورتيزون أولاً؛ راجع الطبيب.</li><li>الجرعة المعتمدة لـ amoxicillin/clavulanate معلق 457: 25–45 مجم/كجم/يوم مقسمة <b>على جرعتين</b> (وليس 60 مجم مقسمة على 3). اتبع الوصفة وسجّل الوزن.</li><li>الدمل الكبير: الشق والتصريف (incision & drainage) هو العلاج الأساسي، والمضاد الحيوي للمصابين بحمى أو التهاب خلوي حول الدمل أو نقص مناعة.</li><li>الالتهاب الخلوي/الحمرة: بنسلين أو سيفالوسبورين مناسب، ورفع الطرف وتغطية السكر. <b>MRSA</b> يحتاج بدائل.</li></ul></div><h4>إضافة: وصفات المرجع الثاني (الاسم التجاري)</h4><table><thead><tr><th>الحالة</th><th>الأدوية</th><th>التعليمات</th></tr></thead><tbody><tr><td>القوباء (Impetigo)</td><td>كمادات: Potassium permanganate 1/8000 أو Boric acid 4% • Terramycin skin oint. أو Fucidin cream • Flumox كبسولة أو Erythrocin قرص • Flumox شراب للرضع والأطفال</td><td>كمادات مرتين يومياً؛ الدهان مرتين يومياً؛ المضاد الفموي كل 6 ساعات</td></tr><tr><td>الحمرة (Erysipelas)</td><td>Flumox 500 فيال أو Flucamox 500 فيال • Paramol قرص (خافض حرارة ومسكن)</td><td>حقنة عضل كل 12 ساعة حسب العمر والوزن؛ Paramol 3 مرات يومياً؛ راحة تامة في السرير</td></tr><tr><td>الدمل والجمرة (Furuncle & Carbuncle)</td><td>Flumox 500 فيال أو Cefotax 1 جم فيال • أو Velosef 1 جم كبسولة أو Augmentin 1 جم • كريم Garamycin أو Fucidin أو Baneocin أو Ichthammol oint.</td><td>الحقن كل 12 ساعة؛ الفموي كل 12 ساعة؛ الدهان 2–3 مرات يومياً. + شق وتفريغ الصديد جراحياً وعلاج عوامل التهيؤ مثل السكر</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>Flumox/Flucamox = Amoxicillin + Flucloxacillin (مضاد عنقودي). Cefotax/Velosef ممكن يكون بديل: لازم الاطمئنان لحساسية البنسلين. Paramol (باراسيتامول) حسب النشرة. Ichthammol يلوّن ويلطّخ، لا على جروح كبيرة. الأطفال: الجرعة بالوزن. الدمل المصاب بالحمى أو المتكرر أو الكبير يحتاج تقييم الطبيب. استخدم مضاد حيوي موضعي مناسب بدلاً من الكورتيزون المركب.</p></div><h4>إضافة: روشتة الحمرة والالتهاب الخلوي (مرجع ثالث)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>رفع الساقين</strong><p>ارفع الساقين بقدر الإمكان للتقليل من التورم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>مضاد حيوي موضعي</strong><p>Fucidin <b>أو</b> Mupirax مرهم صباحاً ومساءً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>مضاد حيوي جهازي</strong><p>Augmentin 1 جم قرص كل 12 ساعة لمدة أسبوع. في الحالات الشديدة: Ceporex 1 جم فيال حقنة كل 12 ساعة لمدة يومين، ثم أقراص كل 12 ساعة لمدة 10 أيام (الإجمالي حسب المراجع).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مضاد للتورم موضعي</strong><p>Ripari gel <b>أو</b> Hemoclar مرهم دهان صباحاً ومساءً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مضاد للتورم جهازي</strong><p>Alphintern قرص 3 مرات يومياً قبل الأكل بساعة.</p></div></div></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><ul><li>NICE NG141: مضاد حيوي فموي (فلوكلوكساسيلين 500 مجم–1 جم أربع مرات يومياً 5–7 أيام) أو بديل لمريض حساسية البنسلين (مثل كلاريثرومايسين)، وإعادة التقييم لو ما فيش تحسن خلال 2–3 أيام أو الحالة بتسوء بسرعة. من الخيارات الشائعة Augmentin وCeporex؛ نفّذ حسب الطبيب والمزرعة.</li><li>الأدلة على فائدة مضادات التورم (Alphintern, Hemoclar, Ripari) محدودة؛ الأساس هو المضاد الحيوي ورفع الطرف.</li><li>Ceporex تحقن/فيال بالجرعة بأمر الطبيب وبعد سؤال حساسية البنسلين.</li></ul></div><h4>إضافة: وصفة القوباء</h4><ol><li><b>ممنوع الهرش</b> في الحبايه أو القشور (لأنه بينشر التلوث أكتر)</li><li><b>مضاد حيوي موضعي</b> (صباحاً ومساءً): Garamycin ointment/cream (أرخصهم لكن أضعفهم) — Fusiderm / Fucidin cream/oint (أقوى من الجنتاميسين) — Mupirax ointment / Bactroban cream (أقوى من النوعين اللي فوق)</li><li><b>مطهّر:</b> أفضل مطهّر هو برمنجنات البوتاسيوم 1/8000: ملعقتين على نصف كوب ماء دافئ، كمادات لمدة ربع ساعة 3 مرات يومياً</li><li><b>مضاد حيوي جهازي:</b> سيفالوسبورينات الجيل الأول مثل Cefadroxil (من أفضل المضادات للعدوى الجلدية، قوي ضد Staph، ويؤخذ كل 12 ساعة)</li></ol><table><thead><tr><th>الشكل</th><th>المنتج</th><th>الجرعة</th></tr></thead><tbody><tr><td>معلق للأطفال</td><td>Duricef 125 / 250 / 500 susp • Ibidroxil 125 / 250 / 500 susp</td><td>تُعطى كل 12 ساعة: معلق 125 → الجرعة (مل) = وزن الطفل؛ معلق 250 → = الوزن ÷ 2؛ معلق 500 → = الوزن ÷ 4</td></tr><tr><td>كبسولات/أقراص</td><td>Duricef 250 و 500 caps و 1 جم (6 أقراص) • Ibidroxil 250 و 500 caps و 1 جم (8 أقراص)</td><td>كبسولة/قرص كل 12 ساعة لمدة أسبوع</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المعادلة الشائعة (مل = الوزن لمعلق 125 مجم/5 مل) تعطي نحو 25 مجم/كجم/جرعة أي ~50 مجم/كجم/يوم، وهي أعلى من الجرعة المرجعية المعتادة للـ Cefadroxil عند الأطفال (حوالي 30 مجم/كجم/يوم مقسمة على جرعتين، بحد أقصى حسب النشرة). لا تحسب الجرعة بنفسك: التزم بأمر الطبيب والنشرة. المضاد الحيوي الفموي يُستخدم في القوباء الواسعة أو الفقاعية أو غير المستجيبة للموضعي، أما المحدودة فتكفيها المضادات الموضعية.</p></div><h4>إضافة: وصفات القوباء (دليل الجلدية)</h4><ul><li>ممنوع الهرش في الحبوب أو القشور لأنه بينشر التلوث أكتر</li></ul><table><thead><tr><th>الفئة</th><th>الدواء (الاسم التجاري)</th><th>الملاحظة</th></tr></thead><tbody><tr><td>مضاد حيوي موضعي (الأضعف)</td><td>Garamycin ointment/cream (gentamicin)</td><td>دهان صباحاً ومساءً: الأرخص لكن أضعف</td></tr><tr><td>أقوى من الجنتاميسين</td><td>Fusiderm cream/oint • Fucidin cream/oint (fusidic acid)</td><td>دهان صباحاً ومساءً</td></tr><tr><td>الأقوى</td><td>Mupirax ointment • Bactroban cream (mupirocin)</td><td>دهان صباحاً ومساءً: أقوى من النوعين السابقين</td></tr><tr><td>مطهر</td><td>Potassium permanganate 1/8000</td><td>ملعقتين على نصف كوب ماء دافئ؛ كمادات ربع ساعة 3 مرات يومياً</td></tr><tr><td>مضاد حيوي جهازي (جيل أول سيفالوسبورين)</td><td>Duricef (cefadroxil) susp 125/250/500 • Ibidroxil susp 125/250/500</td><td>مضاد قوي للعنقوديات، كل 12 ساعة مع الدهان؛ من أفضل مضادات الجلد</td></tr><tr><td>كبسولات/أقراص</td><td>Duricef 250/500 caps و 1 جم tab • Ibidroxil 250/500 caps و 1 جم tab</td><td>قرص أو كبسولة كل 12 ساعة لمدة أسبوع</td></tr></tbody></table><h4>قاعدة الجرعة بالشراب حسب المراجع</h4><table><thead><tr><th>تركيز الشراب</th><th>الجرعة (مل) كل 12 ساعة</th></tr></thead><tbody><tr><td>125</td><td>تساوي الوزن (كجم)</td></tr><tr><td>250</td><td>تساوي نصف الوزن</td></tr><tr><td>500</td><td>تساوي ربع الوزن</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>هذه القاعدة تعطي نحو 25 مجم/كجم/جرعة (50 مجم/كجم/يوم)، وهي أعلى من الجرعة المعتادة المذكورة في المراجع: 30 مجم/كجم/يوم موزعة على جرعتين (بحد أقصى 1 جم/يوم في القوباء). اعتمد على أمر الطبيب/الصيدلي وحساب الوزن. القوباء المحدودة تكفيها المضادات الموضعية. الموبيروسين/الفيوسيديك يُستخدم لأقل مدة ممكنة لتجنب المقاومة.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الآفة</strong><p>حدد الحجم والحدود (علّم الحدود بقلم لمتابعة الانتشار)، الحرارة، الألم، الصديد، وهل هناك خط أحمر صاعد؟ سجّل بالصور (بإذن).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>قيّم المريض</strong><p>حرارة، نبض، ضغط، سكر الدم، علامات تسمم دم (قشعريرة، هبوط ضغط، تشوش). اسأل عن السكر والمناعة والأدوية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>العناية المحلية</strong><p>اغسل بماء وصابون أو محلول ملح، جفّف برفق، طبّق الدواء الموضعي بقفاز ولا تلمس بيدك مباشرة. ممنوع الفقع والعصر (يزيد العدوى).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الأدوية</strong><p>المضاد الحيوي في ميعاده بالتمام، اسأل عن حساسية البنسلين قبل الجرعة الأولى (Hibiotic/Cefotax). الحقن: عضل عميق أو وريدي حسب الأمر، وراقب الحساسية 30 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الراحة والرفع</strong><p>في الأطراف: رفع الطرف لتقليل الوذمة وراحة، وعدم الضغط على المنطقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>ارصد المضاعفات</strong><p>انتشار الاحمرار، الحرارة العالية، ألم شديد، تقرحات سوداء (نخر)، قلة بول = بلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ضبط السكر والعدوى</strong><p>سكر الدم داخل الحد، وعزل مواد التضميد في أكياس مخصصة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>سجّل</strong><p>المساحة، العلاجات، الاستجابة، والتثقيف.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>احمرار سريع الانتشار + <b>ألم أشد من شكل الجلد</b> أو فقاعات داكنة أو فرقعة تحت الجلد = احتمال <b>التهاب أنسجة نخري (necrotizing fasciitis)</b> طارئ جراحي. وحرارة عالية مع هبوط ضغط = تسمم دم. أبلّغ فوراً.</p></div><h4>إضافة: نصائح تمريضية</h4><ul><li>الحمرة: راحة تامة في السرير، ارفع الطرف المصاب، قيس الحرارة وراقب الاحمرار (ارسم حدوده بقلم وسجل الوقت).</li><li>القوباء معدية: عزل الأدوات، غسل اليدين، قص الأظافر، منع الحك، وغيّر الضمادات.</li><li>الدمل: لا تعصره أو تضغط عليه، ولا تتخلص من الصديد إلا بالطريقة المعقمة (شق وتفريغ بالطبيب).</li><li>حقن Flumox/Cefotax عضل: اسأل عن حساسية البنسلين، سجل الوقت.</li></ul><h4>إضافة: حمرة بالساق</h4><ul><li>ارفع الطرف المصاب فوق مستوى القلب قدر الإمكان، وسجّل حدود الاحمرار بقلم ووقتها كل وردية.</li><li>المضاد الحيوي الموضعي (Fucidin/Mupirax) بقفاز صباحاً ومساءً.</li><li>Alphintern قبل الأكل بساعة، 3 مرات يومياً.</li><li>Ceporex/Augmentin: اسأل عن حساسية البنسلين، والحقن كل 12 ساعة في مواعيدها.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>حمى مرتفعة أو قشعريرة أو هبوط ضغط أو تشوش</li><li>اتساع سريع للاحمرار أو خطوط حمراء صاعدة</li><li>ألم شديد غير متناسب أو فقاعات داكنة أو فرقعة</li><li>رجل واحدة متورمة بألم: ممكن جلطة وريدية (دوبلر)</li><li>دمل أو جمرة بالوجه (خصوصاً حول الأنف والعين) أو بالعمود الفقري</li><li>سكر دم مرتفع جداً</li><li>حساسية أو طفح بعد المضاد الحيوي</li><li>عدم تحسن بعد 48–72 ساعة من العلاج</li></ul></div>\n<div class=\"cs-box cs-danger\"><p>العدوى العقدية بالجلد قد تنتقل أثرها إلى الكلى: التهاب الكبيبات الكلوية بعد العدوى العقدية (Post-streptococcal glomerulonephritis). بلّغ عن بول بلون الكولا أو قلة البول أو تورم الوجه والجفون أو ارتفاع الضغط بعد القوباء.</p></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>نظافة الجلد وغسل اليدين، وتجفيف الثنيات.</li><li>لا تفقع الدمل ولا تعصره: بيدخل العدوى للدم ولأماكن أخرى.</li><li>الأدوات الشخصية لوحدك (منشفة، شفرة حلاقة، ملابس) وغسّلها بماء ساخن.</li><li>مرضى السكر: ضبط السكر وفحص القدمين يومياً ورعاية الجروح.</li><li>أنهِ المضاد الحيوي كاملاً.</li><li>القوباء معدية: عزل الطفل عن المدرسة 24 ساعة بعد بدء العلاج، ولا يلمس الحويصلات.</li><li>ارجع للطبيب لو ظهر احمرار ينتشر أو حمى.</li></ul><ul><li>ممنوع الهرش في الحبوب أو القشور.</li><li>الكمادات بالبرمنجنات المخففة 1/8000 فقط (ملعقتان لنصف كوب ماء دافئ).</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "عنقودية: بصيلات / دمل / جمرة؛ سبحية: حمرة وتهاب خلوي؛ مشتركة: قوباء وتقرح",
-      "الدمل والجمرة: ابحث عن السكر ونقص المناعة",
-      "التهاب خلوي في رجل واحدة: فكّر في جلطة وريدية (دوبلر) وافحص النبض",
-      "الوجه عند الأطفال: كمادات برمنجنات + Fucicort + مضاد حيوي بالوزن",
-      "فروة الرأس مع القمل: Betadine shampoo + Fucicort + مضاد",
-      "أي حمى أو احمرار ينتشر بسرعة أو ألم شديد: طوارئ",
-      "الحمرة سطحية بحدود واضحة والالتهاب الخلوي أعمق بحدود غير واضحة، والعلاج واحد"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض سكر جاي بدمل كبير. ماذا تتأكد منه؟"
-      },
-      "options": [
-        {
-          "ar": "سكر الدم وسبب نقص المناعة"
-        },
-        {
-          "ar": "الوزن فقط"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الدمل والجمرة غالباً مع نقص مناعة أو سكر."
-      }
-    },
-    {
-      "q": {
-        "ar": "التهاب خلوي في رجل واحدة ورم وألم. أي فحص مهم يُطلب؟"
-      },
-      "options": [
-        {
-          "ar": "دوبلر وريدي"
-        },
-        {
-          "ar": "أشعة أسنان"
-        },
-        {
-          "ar": "تحليل بول فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قد يكون DVT وليس عدوى فقط."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء مذكور لتخفيف ألم وحرارة الحمرة؟"
-      },
-      "options": [
-        {
-          "ar": "Abimol"
-        },
-        {
-          "ar": "Brufen فقط"
-        },
-        {
-          "ar": "فيتامين C"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "باراسيتامول كل 8 ساعات ثم عند اللزوم."
-      }
-    },
-    {
-      "q": {
-        "ar": "قوباء الوجه عند طفل: ما التركيبة الموضعية؟"
-      },
-      "options": [
-        {
-          "ar": "كمادات برمنجنات 1/8000 + Fucicort + مضاد بالوزن"
-        },
-        {
-          "ar": "سكر وماء"
-        },
-        {
-          "ar": "لا علاج"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "كما ورد في الخطة."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة تدل على التهاب أنسجة نخري؟"
-      },
-      "options": [
-        {
-          "ar": "ألم شديد غير متناسب مع شكل الجلد"
-        },
-        {
-          "ar": "حكة"
-        },
-        {
-          "ar": "طفح بسيط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ألم غير متناسب وفقاعات داكنة طوارئ."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مفتاح لتقليل انتشار القوباء؟"
-      },
-      "options": [
-        {
-          "ar": "غسيل ملابس منفصل بماء ساخن وأظافر قصيرة"
-        },
-        {
-          "ar": "الذهاب للمدرسة"
-        },
-        {
-          "ar": "مشاركة المناشف"
-        },
-        {
-          "ar": "لا غسل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يقلل العدوى."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل بقوباء عقدية ظهر عنده بول داكن وتورم حول العينين. أي مضاعفة محتملة؟"
-      },
-      "options": [
-        {
-          "ar": "التهاب الكبيبات الكلوية بعد العدوى العقدية"
-        },
-        {
-          "ar": "التهاب الكبد A"
-        },
-        {
-          "ar": "انسداد معوي"
-        },
-        {
-          "ar": "التهاب الزائدة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "العقديات المسببة للقوباء قد تحفّز التهاب كبيبات كلوية مناعي بعد أسابيع، ويظهر ببول داكن وتورم وارتفاع ضغط."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "IDSA 2014 Practice Guidelines for Skin and Soft Tissue Infections"
-    },
-    {
-      "title": "NICE CKS: Impetigo, Cellulitis, Boils"
-    },
-    {
-      "title": "StatPearls: Folliculitis, Furuncle/Carbuncle, Erysipelas"
-    },
-    {
-      "title": "Augmentin 457 mg/5 ml SmPC dosing"
-    },
-    {
-      "title": "IDSA SSTI guideline (2014) / BNF: Skin infections, antibacterial therapy"
-    },
-    {
-      "title": "Augmentin dosing guide (Stanford Children's antimicrobial stewardship)",
-      "url": "https://www.stanfordchildrens.org/content-public/pdf/antimicrobial-stewardship-program/augmentin-dosing-guide.pdf"
-    },
-    {
-      "title": "BNF: Cefadroxil; NICE CKS: Impetigo"
-    }
-  ],
-  "rx": [
-    {
-      "category": "الجلدية",
-      "condition_ar": "الحمرة والالتهاب الخلوي",
-      "condition_en": "Erysipelas & cellulitis",
-      "items": [
-        {
-          "drug_name": "Fucidin oint (fusidic acid) أو Mupirax oint (mupirocin)",
-          "dose": "مرهم صباحاً ومساءً",
-          "note": "مضاد حيوي موضعي"
-        },
-        {
-          "drug_name": "Augmentin 1 gm tab (amoxicillin/clavulanate)",
-          "dose": "قرص كل 12 ساعة لمدة أسبوع",
-          "note": "مضاد حيوي جهازي"
-        },
-        {
-          "drug_name": "Ceporex 1 gm vial",
-          "dose": "حقنة كل 12 ساعة لمدة يومين ثم أقراص كل 12 ساعة لمدة 10 أيام",
-          "note": "للحالات الشديدة"
-        },
-        {
-          "drug_name": "Ripari gel أو Hemoclar oint",
-          "dose": "دهان صباحاً ومساءً",
-          "note": "مضاد للتورم موضعي"
-        },
-        {
-          "drug_name": "Alphintern tab",
-          "dose": "قرص 3 مرات يومياً قبل الأكل بساعة",
-          "note": "مضاد للتورم"
-        }
-      ],
-      "clinical_note": "ارفع الساقين بقدر الإمكان. رجل واحدة متورمة: استبعد جلطة وريدية."
-    },
-    {
-      "category": "الجلدية",
-      "condition_ar": "القوباء المعدية (Impetigo)",
-      "condition_en": "Impetigo",
-      "items": [
-        {
-          "drug_name": "Garamycin ointment/cream (gentamicin)",
-          "dose": "دهان صباحاً ومساءً",
-          "note": "أرخص وأضعف"
-        },
-        {
-          "drug_name": "Fusiderm / Fucidin cream/oint (fusidic acid)",
-          "dose": "دهان صباحاً ومساءً",
-          "note": "أقوى من الجنتاميسين"
-        },
-        {
-          "drug_name": "Mupirax ointment / Bactroban cream (mupirocin)",
-          "dose": "دهان صباحاً ومساءً",
-          "note": "الأقوى"
-        },
-        {
-          "drug_name": "برمنجنات البوتاسيوم 1/8000",
-          "dose": "ملعقتين على نصف كوب ماء دافئ؛ كمادات ربع ساعة 3 مرات يومياً",
-          "note": ""
-        },
-        {
-          "drug_name": "Duricef 125/250/500 susp أو Ibidroxil susp (cefadroxil)",
-          "dose": "كل 12 ساعة؛ الجرعة بالوزن حسب أمر الطبيب",
-          "note": "للأطفال"
-        },
-        {
-          "drug_name": "Duricef 250/500 caps و 1 جم / Ibidroxil caps",
-          "dose": "كبسولة أو قرص كل 12 ساعة لمدة أسبوع",
-          "note": "للكبار"
-        }
-      ],
-      "clinical_note": "ممنوع الهرش في الحبايه والقشور."
-    },
-    {
-      "category": "الجلدية",
-      "condition_ar": "قوباء",
-      "condition_en": "Impetigo",
-      "items": [
-        {
-          "drug_name": "Garamycin oint/cream",
-          "dose": "صباحاً ومساءً",
-          "note": ""
-        },
-        {
-          "drug_name": "Fusiderm / Fucidin cream-oint",
-          "dose": "صباحاً ومساءً",
-          "note": ""
-        },
-        {
-          "drug_name": "Mupirax oint / Bactroban cream",
-          "dose": "صباحاً ومساءً",
-          "note": "الأقوى"
-        },
-        {
-          "drug_name": "Duricef / Ibidroxil susp 125/250/500",
-          "dose": "كل 12 ساعة بالوزن",
-          "note": "راجع التحديث"
-        },
-        {
-          "drug_name": "Duricef / Ibidroxil 250/500 caps, 1 g tab",
-          "dose": "كل 12 ساعة × أسبوع",
-          "note": ""
-        }
-      ],
-      "clinical_note": ""
-    }
+  "en": [
+   "Staph: folliculitis / boil / carbuncle; Strept: erysipelas and cellulitis; mixed: impetigo and ecthyma",
+   "Boil and carbuncle: look for diabetes and immune deficiency",
+   "Cellulitis in one leg: think of a venous clot (Doppler) and check the pulse",
+   "Face in children: permanganate compresses + Fucicort + a weight-based antibiotic",
+   "Scalp with lice: Betadine shampoo + Fucicort + an antibiotic",
+   "Any fever or rapidly spreading redness or severe pain: emergency",
+   "Erysipelas is superficial with clear borders and cellulitis is deeper with unclear borders, and the treatment is the same"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض سكر جاي بدمل كبير. ماذا تتأكد منه؟",
+    "en": "A diabetic patient comes with a large boil. What do you make sure of?"
+   },
+   "options": [
+    {
+     "ar": "سكر الدم وسبب نقص المناعة",
+     "en": "Blood sugar and the cause of immune deficiency"
+    },
+    {
+     "ar": "الوزن فقط",
+     "en": "The weight only"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الدمل والجمرة غالباً مع نقص مناعة أو سكر.",
+    "en": "Boils and carbuncles are often with immune deficiency or diabetes."
+   }
+  },
+  {
+   "q": {
+    "ar": "التهاب خلوي في رجل واحدة ورم وألم. أي فحص مهم يُطلب؟",
+    "en": "Cellulitis in one leg with swelling and pain. Which important test is requested?"
+   },
+   "options": [
+    {
+     "ar": "دوبلر وريدي",
+     "en": "Venous Doppler"
+    },
+    {
+     "ar": "أشعة أسنان",
+     "en": "Dental X-ray"
+    },
+    {
+     "ar": "تحليل بول فقط",
+     "en": "Urinalysis only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قد يكون DVT وليس عدوى فقط.",
+    "en": "It may be DVT and not just infection."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء مذكور لتخفيف ألم وحرارة الحمرة؟",
+    "en": "Which drug is listed to relieve the pain and fever of erysipelas?"
+   },
+   "options": [
+    {
+     "ar": "Abimol",
+     "en": "Abimol"
+    },
+    {
+     "ar": "Brufen فقط",
+     "en": "Brufen only"
+    },
+    {
+     "ar": "فيتامين C",
+     "en": "Vitamin C"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "باراسيتامول كل 8 ساعات ثم عند اللزوم.",
+    "en": "Paracetamol every 8 hours then as needed."
+   }
+  },
+  {
+   "q": {
+    "ar": "قوباء الوجه عند طفل: ما التركيبة الموضعية؟",
+    "en": "Impetigo of the face in a child: what is the topical combination?"
+   },
+   "options": [
+    {
+     "ar": "كمادات برمنجنات 1/8000 + Fucicort + مضاد بالوزن",
+     "en": "Permanganate 1/8000 compresses + Fucicort + a weight-based antibiotic"
+    },
+    {
+     "ar": "سكر وماء",
+     "en": "Sugar and water"
+    },
+    {
+     "ar": "لا علاج",
+     "en": "No treatment"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "كما ورد في الخطة.",
+    "en": "As stated in the plan."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة تدل على التهاب أنسجة نخري؟",
+    "en": "A sign that indicates necrotizing fasciitis?"
+   },
+   "options": [
+    {
+     "ar": "ألم شديد غير متناسب مع شكل الجلد",
+     "en": "Severe pain disproportionate to the look of the skin"
+    },
+    {
+     "ar": "حكة",
+     "en": "Itching"
+    },
+    {
+     "ar": "طفح بسيط",
+     "en": "A mild rash"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ألم غير متناسب وفقاعات داكنة طوارئ.",
+    "en": "Disproportionate pain and dark blisters are an emergency."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مفتاح لتقليل انتشار القوباء؟",
+    "en": "Which key reduces the spread of impetigo?"
+   },
+   "options": [
+    {
+     "ar": "غسيل ملابس منفصل بماء ساخن وأظافر قصيرة",
+     "en": "Washing clothes separately in hot water and short nails"
+    },
+    {
+     "ar": "الذهاب للمدرسة",
+     "en": "Going to school"
+    },
+    {
+     "ar": "مشاركة المناشف",
+     "en": "Sharing towels"
+    },
+    {
+     "ar": "لا غسل",
+     "en": "No washing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يقلل العدوى.",
+    "en": "It reduces the infection."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل بقوباء عقدية ظهر عنده بول داكن وتورم حول العينين. أي مضاعفة محتملة؟",
+    "en": "A child with streptococcal impetigo developed dark urine and swelling around the eyes. Which complication is likely?"
+   },
+   "options": [
+    {
+     "ar": "التهاب الكبيبات الكلوية بعد العدوى العقدية",
+     "en": "Post-streptococcal glomerulonephritis"
+    },
+    {
+     "ar": "التهاب الكبد A",
+     "en": "Hepatitis A"
+    },
+    {
+     "ar": "انسداد معوي",
+     "en": "Intestinal obstruction"
+    },
+    {
+     "ar": "التهاب الزائدة",
+     "en": "Appendicitis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "العقديات المسببة للقوباء قد تحفّز التهاب كبيبات كلوية مناعي بعد أسابيع، ويظهر ببول داكن وتورم وارتفاع ضغط.",
+    "en": "The streptococci that cause impetigo may trigger an immune glomerulonephritis weeks later, appearing with dark urine, swelling, and high blood pressure."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "IDSA 2014 Practice Guidelines for Skin and Soft Tissue Infections"
+  },
+  {
+   "title": "NICE CKS: Impetigo, Cellulitis, Boils"
+  },
+  {
+   "title": "StatPearls: Folliculitis, Furuncle/Carbuncle, Erysipelas"
+  },
+  {
+   "title": "Augmentin 457 mg/5 ml SmPC dosing"
+  },
+  {
+   "title": "IDSA SSTI guideline (2014) / BNF: Skin infections, antibacterial therapy"
+  },
+  {
+   "title": "Augmentin dosing guide (Stanford Children's antimicrobial stewardship)",
+   "url": "https://www.stanfordchildrens.org/content-public/pdf/antimicrobial-stewardship-program/augmentin-dosing-guide.pdf"
+  },
+  {
+   "title": "BNF: Cefadroxil; NICE CKS: Impetigo"
+  }
+ ],
+ "rx": [
+  {
+   "category": "الجلدية",
+   "condition_ar": "الحمرة والالتهاب الخلوي",
+   "condition_en": "Erysipelas & cellulitis",
+   "items": [
+    {
+     "drug_name": "Fucidin oint (fusidic acid) أو Mupirax oint (mupirocin)",
+     "dose": "مرهم صباحاً ومساءً",
+     "note": "مضاد حيوي موضعي"
+    },
+    {
+     "drug_name": "Augmentin 1 gm tab (amoxicillin/clavulanate)",
+     "dose": "قرص كل 12 ساعة لمدة أسبوع",
+     "note": "مضاد حيوي جهازي"
+    },
+    {
+     "drug_name": "Ceporex 1 gm vial",
+     "dose": "حقنة كل 12 ساعة لمدة يومين ثم أقراص كل 12 ساعة لمدة 10 أيام",
+     "note": "للحالات الشديدة"
+    },
+    {
+     "drug_name": "Ripari gel أو Hemoclar oint",
+     "dose": "دهان صباحاً ومساءً",
+     "note": "مضاد للتورم موضعي"
+    },
+    {
+     "drug_name": "Alphintern tab",
+     "dose": "قرص 3 مرات يومياً قبل الأكل بساعة",
+     "note": "مضاد للتورم"
+    }
+   ],
+   "clinical_note": "ارفع الساقين بقدر الإمكان. رجل واحدة متورمة: استبعد جلطة وريدية."
+  },
+  {
+   "category": "الجلدية",
+   "condition_ar": "القوباء المعدية (Impetigo)",
+   "condition_en": "Impetigo",
+   "items": [
+    {
+     "drug_name": "Garamycin ointment/cream (gentamicin)",
+     "dose": "دهان صباحاً ومساءً",
+     "note": "أرخص وأضعف"
+    },
+    {
+     "drug_name": "Fusiderm / Fucidin cream/oint (fusidic acid)",
+     "dose": "دهان صباحاً ومساءً",
+     "note": "أقوى من الجنتاميسين"
+    },
+    {
+     "drug_name": "Mupirax ointment / Bactroban cream (mupirocin)",
+     "dose": "دهان صباحاً ومساءً",
+     "note": "الأقوى"
+    },
+    {
+     "drug_name": "برمنجنات البوتاسيوم 1/8000",
+     "dose": "ملعقتين على نصف كوب ماء دافئ؛ كمادات ربع ساعة 3 مرات يومياً",
+     "note": ""
+    },
+    {
+     "drug_name": "Duricef 125/250/500 susp أو Ibidroxil susp (cefadroxil)",
+     "dose": "كل 12 ساعة؛ الجرعة بالوزن حسب أمر الطبيب",
+     "note": "للأطفال"
+    },
+    {
+     "drug_name": "Duricef 250/500 caps و 1 جم / Ibidroxil caps",
+     "dose": "كبسولة أو قرص كل 12 ساعة لمدة أسبوع",
+     "note": "للكبار"
+    }
+   ],
+   "clinical_note": "ممنوع الهرش في الحبايه والقشور."
+  },
+  {
+   "category": "الجلدية",
+   "condition_ar": "قوباء",
+   "condition_en": "Impetigo",
+   "items": [
+    {
+     "drug_name": "Garamycin oint/cream",
+     "dose": "صباحاً ومساءً",
+     "note": ""
+    },
+    {
+     "drug_name": "Fusiderm / Fucidin cream-oint",
+     "dose": "صباحاً ومساءً",
+     "note": ""
+    },
+    {
+     "drug_name": "Mupirax oint / Bactroban cream",
+     "dose": "صباحاً ومساءً",
+     "note": "الأقوى"
+    },
+    {
+     "drug_name": "Duricef / Ibidroxil susp 125/250/500",
+     "dose": "كل 12 ساعة بالوزن",
+     "note": "راجع التحديث"
+    },
+    {
+     "drug_name": "Duricef / Ibidroxil 250/500 caps, 1 g tab",
+     "dose": "كل 12 ساعة × أسبوع",
+     "note": ""
+    }
+   ],
+   "clinical_note": ""
+  }
+ ]
 }

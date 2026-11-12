@@ -1,249 +1,315 @@
 {
-  "id": "dis-651",
-  "num": 651,
-  "system": "chest",
-  "icon": "🚨",
-  "level": 3,
-  "title": {
-    "ar": "الفشل التنفسي الحاد",
-    "en": "Acute Respiratory Failure"
+ "id": "dis-651",
+ "num": 651,
+ "system": "chest",
+ "icon": "🚨",
+ "level": 3,
+ "title": {
+  "ar": "الفشل التنفسي الحاد",
+  "en": "Acute Respiratory Failure"
+ },
+ "teaser": {
+  "ar": "نوعان: نقص أكسجة (نوع 1) واحتباس CO₂ (نوع 2): معايير ABG، العلاج بالأكسجين والتنفس الصناعي، وماذا تراقب لحظة بلحظة.",
+  "en": "Two types: hypoxemia (type 1) and CO₂ retention (type 2): ABG criteria, oxygen therapy and mechanical ventilation, and what to monitor moment by moment."
+ },
+ "chips": [
+  {
+   "ar": "PaO₂ < 60",
+   "en": "PaO₂ < 60"
   },
-  "teaser": {
-    "ar": "نوعان: نقص أكسجة (نوع 1) واحتباس CO₂ (نوع 2): معايير ABG، العلاج بالأكسجين والتنفس الصناعي، وماذا تراقب لحظة بلحظة."
+  {
+   "ar": "PaCO₂ > 50",
+   "en": "PaCO₂ > 50"
   },
-  "chips": [
-    {
-      "ar": "PaO₂ < 60"
-    },
-    {
-      "ar": "PaCO₂ > 50"
-    },
-    {
-      "ar": "تنبيب"
-    }
+  {
+   "ar": "تنبيب",
+   "en": "Intubation"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>الفشل التنفسي الحاد: الرئتين <b>غير قادرتين على تبادل الأكسجين وثاني أكسيد الكربون</b> بشكل كافٍ لسبب نقص التهوية، فلا يحصل الجسم على أكسجين كافٍ أو لا يتخلص من CO₂. قد يتطور من مرض تنفسي، أو من <b>كبت الجهاز العصبي</b> (إصابة، أدوية)، أو مرض عصبي.</p><table><thead><tr><th></th><th>النوع 1 (Hypoxemic)</th><th>النوع 2 (Hypercapnic)</th></tr></thead><tbody><tr><td>ABG</td><td>PaO₂ أقل من 60 مع PaCO₂ طبيعي/منخفض</td><td>PaCO₂ أكثر من 50 مع pH أقل من 7.35</td></tr><tr><td>الآلية</td><td>عدم توافق التهوية/التروية، شنت</td><td>نقص التهوية</td></tr><tr><td>أمثلة</td><td>التهاب رئوي، ARDS، وذمة رئوية، جلطة</td><td>COPD، مهدئات، ضعف عضلات تنفس</td></tr></tbody></table>[[slot:dis-651-types|نوعا الفشل التنفسي ومعايير غازات الدم|/diseases/img/dis-651-types.svg]]\n<p>يحدث فجأة أو كتدهور لحالة مزمنة (انتفاخ/التهاب شعبي). علاجه: دعم الأكسجة وموسعات الشعب + <b>علاج السبب</b>.</p><h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-651-types|نوعا الفشل — رسم من إعداد الموقع|/diseases/img/dis-651-types.svg]]<p>الفشل التنفسي: الشعيرات الدموية في الحويصلات لا تستطيع تبادل CO2 مع الأكسجين. من الأسباب أن تؤدي عدوى كالأنفلونزا إلى التهاب رئوي ثم ARDS. <strong>أول علامة لنقص الأكسجة:</strong> تغير الحالة الذهنية (هياج، قلق، ارتباك).</p><p>سؤال ABG للاشتباه في الفشل التنفسي الحاد: PaO2 47 وPaCO2 63 mmHg هي القيم المنسجمة (وليس 82 و22).</p>\n<h4>مراجعة NCLEX</h4><p>الفشل التنفسي: عدم قدرة الشعيرات في الحويصلات على تبادل CO₂ والأكسجين بكفاءة. تسببه العدوى (حويصلات متورمة ملتهبة مملوءة بمخاط أو سوائل تعيق التبادل)، وقد تتحول إنفلونزا شائعة إلى التهاب رئوي ثم ARDS.</p>[[slot:dis-651-p429|الفشل التنفسي وARDS — رسم من إعداد الموقع|/diseases/img/dis-651-p429.svg]]",
+   "en": "<p>Acute respiratory failure: the lungs are <b>unable to exchange oxygen and carbon dioxide</b> adequately because of hypoventilation, so the body does not get enough oxygen or does not get rid of CO₂. It may develop from a respiratory disease, or from <b>nervous system depression</b> (injury, drugs), or a neurologic disease.</p><table><thead><tr><th></th><th>Type 1 (Hypoxemic)</th><th>Type 2 (Hypercapnic)</th></tr></thead><tbody><tr><td>ABG</td><td>PaO₂ below 60 with normal/low PaCO₂</td><td>PaCO₂ above 50 with pH below 7.35</td></tr><tr><td>Mechanism</td><td>Ventilation/perfusion mismatch, shunt</td><td>Hypoventilation</td></tr><tr><td>Examples</td><td>Pneumonia, ARDS, pulmonary edema, embolism</td><td>COPD, sedatives, respiratory muscle weakness</td></tr></tbody></table>[[slot:dis-651-types|The two types of respiratory failure and blood gas criteria|/diseases/img/dis-651-types.svg]]\n<p>It happens suddenly or as a deterioration of a chronic condition (emphysema/bronchitis). Its treatment: support oxygenation and bronchodilators + <b>treat the cause</b>.</p><h4>Additions covering review points</h4>[[slot:dis-651-types|The two types of failure — illustration prepared by the site|/diseases/img/dis-651-types.svg]]<p>Respiratory failure: the capillaries in the alveoli cannot exchange CO2 with oxygen. Among the causes, an infection such as influenza leads to pneumonia then ARDS. <strong>The first sign of hypoxia:</strong> change in mental status (agitation, anxiety, confusion).</p><p>An ABG question for suspected acute respiratory failure: PaO2 47 and PaCO2 63 mmHg are the consistent values (not 82 and 22).</p>\n<h4>NCLEX review</h4><p>Respiratory failure: the inability of the capillaries in the alveoli to exchange CO₂ and oxygen efficiently. It is caused by infection (swollen, inflamed alveoli filled with mucus or fluid that impede exchange), and a common influenza may progress to pneumonia then ARDS.</p>[[slot:dis-651-p429|Respiratory failure and ARDS — illustration prepared by the site|/diseases/img/dis-651-p429.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li>رئوي: COPD، ربو شديد، التهاب رئوي، ARDS، جلطة، استرواح الصدر (Pneumothorax)، وذمة رئوية.</li><li>عصبي: إصابة رأس، جرعة زائدة من أدوية، سكتة، Guillain-Barré، وهن عضلي.</li><li>صدر وعضلات: كسور أضلاع، شلل الحجاب، سمنة.</li><li>انسداد المجرى الهوائي (جسم غريب، تورم، حساسية).</li><li>قلبي: فشل قلب حاد.</li></ul>",
+   "en": "<ul><li>Pulmonary: COPD, severe asthma, pneumonia, ARDS, embolism, pneumothorax, pulmonary edema.</li><li>Neurologic: head injury, drug overdose, stroke, Guillain-Barré, myasthenia.</li><li>Chest and muscles: rib fractures, diaphragm paralysis, obesity.</li><li>Airway obstruction (foreign body, swelling, allergy).</li><li>Cardiac: acute heart failure.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>استخدام عضلات التنفس المساعدة.</li><li>ضيق نفس ونفَس صعب أثناء الاستلقاء (Orthopnea).</li><li>إعياء.</li><li>سعال (التهاب، تشنج شعبي، سوائل).</li><li>دم في البلغم.</li><li>تنفس أكثر من 20/د.</li><li>تعرق.</li><li>زرقة، قلق وخوف (جوع هوائي).</li><li>طقطقة إذا في سوائل، وصفير إذا التهاب، وأصوات منخفضة إذا هواء قليل.</li><li>في CO₂: نعاس، صداع، رعاش.</li></ul>\n<p>نقص الأكسجة: <strong>أول علامة تغير الحالة العقلية</strong>: تهيّج، قلق، تشوش. ARDS: نقص أكسجة عنيد (PaO₂ منخفض رغم إعطاء الأكسجين). في الغازات: PaO₂ منخفض وCO₂ مرتفع.</p>",
+   "en": "<ul><li>Use of accessory respiratory muscles.</li><li>Shortness of breath and difficulty breathing while lying down (Orthopnea).</li><li>Exhaustion.</li><li>Cough (inflammation, bronchospasm, fluid).</li><li>Blood in the sputum.</li><li>Breathing more than 20/min.</li><li>Sweating.</li><li>Cyanosis, anxiety and fear (air hunger).</li><li>Crackles if there is fluid, wheezing if inflammation, and diminished sounds if there is little air.</li><li>With CO₂: drowsiness, headache, tremor.</li></ul>\n<p>Hypoxia: <strong>the first sign is a change in mental status</strong>: agitation, anxiety, confusion. ARDS: stubborn hypoxia (low PaO₂ despite oxygen). In the gases: low PaO₂ and high CO₂.</p>"
+  },
+  "tests": {
+   "ar": "<table><thead><tr><th>الفحص</th><th>القيمة</th></tr></thead><tbody><tr><td>ABG</td><td>PaO₂ أقل من 60 (بدون مرض مزمن)؛ PaCO₂ أكثر من 50 (بدون مرض مزمن)؛ SaO₂ أقل من 90%؛ pH أقل من 7.30 (حماض تنفسي)</td></tr><tr><td>مقياس الأكسجين</td><td>انخفاض التشبع</td></tr><tr><td>WBC</td><td>ارتفاع مع عدوى</td></tr><tr><td>أشعة صدر، ECG، كيمياء، BNP، D-dimer</td><td>لتحديد السبب</td></tr></tbody></table>\n<p>نوعا الفشل الحاد: <strong>نقص الأكسجة</strong> (PaO₂ 60 أو أقل) و<strong>احتباس CO₂</strong> (PaCO₂ أكثر من 50).</p>",
+   "en": "<table><thead><tr><th>Test</th><th>Value</th></tr></thead><tbody><tr><td>ABG</td><td>PaO₂ below 60 (without chronic disease); PaCO₂ above 50 (without chronic disease); SaO₂ below 90%; pH below 7.30 (respiratory acidosis)</td></tr><tr><td>Oximeter</td><td>Low saturation</td></tr><tr><td>WBC</td><td>Raised with infection</td></tr><tr><td>Chest X-ray, ECG, chemistry, BNP, D-dimer</td><td>To identify the cause</td></tr></tbody></table>\n<p>The two types of acute failure: <strong>hypoxia</strong> (PaO₂ 60 or less) and <strong>CO₂ retention</strong> (PaCO₂ above 50).</p>"
+  },
+  "treatment": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أكسجين</strong><p>قناة أنفية أو قناع حسب النقص؛ الهدف 94–98% عادة، و88–92% لو خطر CO₂.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>موسعات الشعب</strong><p>Albuterol, Levalbuterol, Metaproterenol, Terbutaline.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>مضادات الكولين</strong><p>Ipratropium لتشنج الشعب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>دعم متقدم</strong><p>NIV (BiPAP/CPAP) أولاً إن أمكن؛ ثم <b>تنبيب وتنفس صناعي</b> مع مخدر <b>Propofol</b> للتنبيب ومرخّي عضلات (Pancuronium, Vecuronium, Atracurium) لو يجب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أدوية داعمة</strong><p>كورتيزون: Hydrocortisone, Methylprednisolone, Prednisone؛ هيبارين/وارفارين لمنع الجلطات؛ Morphine؛ حماية المعدة H2/PPI: Famotidine, Ranitidine*, Nizatidine, Cimetidine, Omeprazole, Esomeprazole, Lansoprazole, Rabeprazole, Pantoprazole؛ مضادات حيوية حسب المزرعة. (*Ranitidine سُحب).</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Oxygen</strong><p>Nasal cannula or mask depending on the deficit; the target 94–98% usually, and 88–92% if there is a CO₂ risk.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Bronchodilators</strong><p>Albuterol, Levalbuterol, Metaproterenol, Terbutaline.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Anticholinergics</strong><p>Ipratropium for bronchospasm.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Advanced support</strong><p>NIV (BiPAP/CPAP) first if possible; then <b>intubation and mechanical ventilation</b> with the anesthetic <b>Propofol</b> for intubation and a muscle relaxant (Pancuronium, Vecuronium, Atracurium) if necessary.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Supportive drugs</strong><p>Corticosteroids: Hydrocortisone, Methylprednisolone, Prednisone; heparin/warfarin to prevent clots; Morphine; stomach protection H2/PPI: Famotidine, Ranitidine*, Nizatidine, Cimetidine, Omeprazole, Esomeprazole, Lansoprazole, Rabeprazole, Pantoprazole; antibiotics per culture. (*Ranitidine was withdrawn).</p></div></div></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم باستمرار</strong><p>المعدل والعمق والعضلات المساعدة والبلغم وأصوات الصدر. SpO₂ مستمر وABG حسب الأوامر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>وضعية</strong><p>High/Semi-Fowler مع الراحة لأفضل حركة للحجاب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>البلغم</strong><p>سجّل اللون والكمية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>علامات حيوية</strong><p>قيّم الضغط والنبض والحرارة بتكرار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الجهاز</strong><p>راجع الإعدادات (FiO₂, PEEP, TV, RR) ومنظومة الإنذارات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>تغيير الوضع كل ساعتين</strong><p>لمنع قرح الضغط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>مدخل ومخرج</strong><p>لمنع الفقد أو الزيادة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تثقيف</strong><p>السعال والتنفس العميق وأعراض الضيق.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>نمط تنفس غير فعال • عدم فعالية تنظيف الطرق الهوائية • قلق.</p></div>\n<h4>أولويات ARDS بالترتيب</h4><ol><li>رفع رأس السرير (Fowler العالي).</li><li>شفط فموي وأكسجين.</li><li>الاستماع لأصوات الرئة.</li><li>إبلاغ مقدم الرعاية (HCP).</li></ol>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess continuously</strong><p>Rate, depth, accessory muscles, sputum, and chest sounds. Continuous SpO₂ and ABG per orders.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Position</strong><p>High/Semi-Fowler with comfort for the best diaphragm movement.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Sputum</strong><p>Record the color and amount.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Vital signs</strong><p>Assess blood pressure, pulse, and temperature frequently.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>The ventilator</strong><p>Review the settings (FiO₂, PEEP, TV, RR) and the alarm system.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Reposition every two hours</strong><p>To prevent pressure ulcers.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Intake and output</strong><p>To prevent loss or excess.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Teaching</strong><p>Coughing, deep breathing, and symptoms of distress.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Nursing diagnoses</strong><p>Ineffective breathing pattern • ineffective airway clearance • anxiety.</p></div>\n<h4>ARDS priorities in order</h4><ol><li>Raise the head of the bed (high Fowler).</li><li>Oral suction and oxygen.</li><li>Listen to the lung sounds.</li><li>Notify the healthcare provider (HCP).</li></ol>"
+  },
+  "redflags": {
+   "ar": "<ul><li>تنفس أقل من 8 أو أكثر من 30، أو تنفس متثاقل مع تعب.</li><li>تدني الوعي أو تشوش.</li><li>SpO₂ أقل من 88–90% رغم الأكسجين.</li><li>pH أقل من 7.25.</li><li>هبوط ضغط أو اضطراب نظم.</li></ul>",
+   "en": "<ul><li>Breathing below 8 or above 30, or labored breathing with fatigue.</li><li>Decreased consciousness or confusion.</li><li>SpO₂ below 88–90% despite oxygen.</li><li>pH below 7.25.</li><li>Hypotension or arrhythmia.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>السعال والتنفس العميق لتوسيع الرئتين وطرد المخاط.</li><li>التعرف على علامات الضيق: ضيق نفس، زرقة، سرعة تنفس.</li><li>الالتزام بأدوية الربو/COPD والتطعيم.</li></ul>",
+   "en": "<ul><li>Coughing and deep breathing to expand the lungs and expel mucus.</li><li>Recognize signs of distress: shortness of breath, cyanosis, rapid breathing.</li><li>Adherence to asthma/COPD medications and vaccination.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "النوع 1 نقص أكسجة (PaO₂ < 60)، النوع 2 احتباس CO₂ (PaCO₂ > 50 وpH < 7.35).",
+   "العلاج: أكسجين + موسعات + علاج السبب + دعم تنفس.",
+   "NIV قبل التنبيب في COPD إن أمكن.",
+   "هدف التشبع: 94–98% عادة، و88–92% للمزمنين.",
+   "أي نعاس أو ارتباك = ABG.",
+   "تغيير الوضع كل ساعتين.",
+   "PaO2 60 أو أقل أو PaCO2 فوق 50 فشل",
+   "أول علامة: تغير ذهني"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>الفشل التنفسي الحاد: الرئتين <b>غير قادرتين على تبادل الأكسجين وثاني أكسيد الكربون</b> بشكل كافٍ لسبب نقص التهوية، فلا يحصل الجسم على أكسجين كافٍ أو لا يتخلص من CO₂. قد يتطور من مرض تنفسي، أو من <b>كبت الجهاز العصبي</b> (إصابة، أدوية)، أو مرض عصبي.</p><table><thead><tr><th></th><th>النوع 1 (Hypoxemic)</th><th>النوع 2 (Hypercapnic)</th></tr></thead><tbody><tr><td>ABG</td><td>PaO₂ أقل من 60 مع PaCO₂ طبيعي/منخفض</td><td>PaCO₂ أكثر من 50 مع pH أقل من 7.35</td></tr><tr><td>الآلية</td><td>عدم توافق التهوية/التروية، شنت</td><td>نقص التهوية</td></tr><tr><td>أمثلة</td><td>التهاب رئوي، ARDS، وذمة رئوية، جلطة</td><td>COPD، مهدئات، ضعف عضلات تنفس</td></tr></tbody></table>[[slot:dis-651-types|نوعا الفشل التنفسي ومعايير غازات الدم|/diseases/img/dis-651-types.svg]]\n<p>يحدث فجأة أو كتدهور لحالة مزمنة (انتفاخ/التهاب شعبي). علاجه: دعم الأكسجة وموسعات الشعب + <b>علاج السبب</b>.</p><h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-651-types|نوعا الفشل — رسم من إعداد الموقع|/diseases/img/dis-651-types.svg]]<p>الفشل التنفسي: الشعيرات الدموية في الحويصلات لا تستطيع تبادل CO2 مع الأكسجين. من الأسباب أن تؤدي عدوى كالأنفلونزا إلى التهاب رئوي ثم ARDS. <strong>أول علامة لنقص الأكسجة:</strong> تغير الحالة الذهنية (هياج، قلق، ارتباك).</p><p>سؤال ABG للاشتباه في الفشل التنفسي الحاد: PaO2 47 وPaCO2 63 mmHg هي القيم المنسجمة (وليس 82 و22).</p>\n<h4>مراجعة NCLEX</h4><p>الفشل التنفسي: عدم قدرة الشعيرات في الحويصلات على تبادل CO₂ والأكسجين بكفاءة. تسببه العدوى (حويصلات متورمة ملتهبة مملوءة بمخاط أو سوائل تعيق التبادل)، وقد تتحول إنفلونزا شائعة إلى التهاب رئوي ثم ARDS.</p>[[slot:dis-651-p429|الفشل التنفسي وARDS — رسم من إعداد الموقع|/diseases/img/dis-651-p429.svg]]"
-    },
-    "causes": {
-      "ar": "<ul><li>رئوي: COPD، ربو شديد، التهاب رئوي، ARDS، جلطة، استرواح الصدر (Pneumothorax)، وذمة رئوية.</li><li>عصبي: إصابة رأس، جرعة زائدة من أدوية، سكتة، Guillain-Barré، وهن عضلي.</li><li>صدر وعضلات: كسور أضلاع، شلل الحجاب، سمنة.</li><li>انسداد المجرى الهوائي (جسم غريب، تورم، حساسية).</li><li>قلبي: فشل قلب حاد.</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>استخدام عضلات التنفس المساعدة.</li><li>ضيق نفس ونفَس صعب أثناء الاستلقاء (Orthopnea).</li><li>إعياء.</li><li>سعال (التهاب، تشنج شعبي، سوائل).</li><li>دم في البلغم.</li><li>تنفس أكثر من 20/د.</li><li>تعرق.</li><li>زرقة، قلق وخوف (جوع هوائي).</li><li>طقطقة إذا في سوائل، وصفير إذا التهاب، وأصوات منخفضة إذا هواء قليل.</li><li>في CO₂: نعاس، صداع، رعاش.</li></ul>\n<p>نقص الأكسجة: <strong>أول علامة تغير الحالة العقلية</strong>: تهيّج، قلق، تشوش. ARDS: نقص أكسجة عنيد (PaO₂ منخفض رغم إعطاء الأكسجين). في الغازات: PaO₂ منخفض وCO₂ مرتفع.</p>"
-    },
-    "tests": {
-      "ar": "<table><thead><tr><th>الفحص</th><th>القيمة</th></tr></thead><tbody><tr><td>ABG</td><td>PaO₂ أقل من 60 (بدون مرض مزمن)؛ PaCO₂ أكثر من 50 (بدون مرض مزمن)؛ SaO₂ أقل من 90%؛ pH أقل من 7.30 (حماض تنفسي)</td></tr><tr><td>مقياس الأكسجين</td><td>انخفاض التشبع</td></tr><tr><td>WBC</td><td>ارتفاع مع عدوى</td></tr><tr><td>أشعة صدر، ECG، كيمياء، BNP، D-dimer</td><td>لتحديد السبب</td></tr></tbody></table>\n<p>نوعا الفشل الحاد: <strong>نقص الأكسجة</strong> (PaO₂ 60 أو أقل) و<strong>احتباس CO₂</strong> (PaCO₂ أكثر من 50).</p>"
-    },
-    "treatment": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أكسجين</strong><p>قناة أنفية أو قناع حسب النقص؛ الهدف 94–98% عادة، و88–92% لو خطر CO₂.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>موسعات الشعب</strong><p>Albuterol, Levalbuterol, Metaproterenol, Terbutaline.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>مضادات الكولين</strong><p>Ipratropium لتشنج الشعب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>دعم متقدم</strong><p>NIV (BiPAP/CPAP) أولاً إن أمكن؛ ثم <b>تنبيب وتنفس صناعي</b> مع مخدر <b>Propofol</b> للتنبيب ومرخّي عضلات (Pancuronium, Vecuronium, Atracurium) لو يجب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أدوية داعمة</strong><p>كورتيزون: Hydrocortisone, Methylprednisolone, Prednisone؛ هيبارين/وارفارين لمنع الجلطات؛ Morphine؛ حماية المعدة H2/PPI: Famotidine, Ranitidine*, Nizatidine, Cimetidine, Omeprazole, Esomeprazole, Lansoprazole, Rabeprazole, Pantoprazole؛ مضادات حيوية حسب المزرعة. (*Ranitidine سُحب).</p></div></div></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم باستمرار</strong><p>المعدل والعمق والعضلات المساعدة والبلغم وأصوات الصدر. SpO₂ مستمر وABG حسب الأوامر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>وضعية</strong><p>High/Semi-Fowler مع الراحة لأفضل حركة للحجاب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>البلغم</strong><p>سجّل اللون والكمية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>علامات حيوية</strong><p>قيّم الضغط والنبض والحرارة بتكرار.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الجهاز</strong><p>راجع الإعدادات (FiO₂, PEEP, TV, RR) ومنظومة الإنذارات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>تغيير الوضع كل ساعتين</strong><p>لمنع قرح الضغط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>مدخل ومخرج</strong><p>لمنع الفقد أو الزيادة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تثقيف</strong><p>السعال والتنفس العميق وأعراض الضيق.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>نمط تنفس غير فعال • عدم فعالية تنظيف الطرق الهوائية • قلق.</p></div>\n<h4>أولويات ARDS بالترتيب</h4><ol><li>رفع رأس السرير (Fowler العالي).</li><li>شفط فموي وأكسجين.</li><li>الاستماع لأصوات الرئة.</li><li>إبلاغ مقدم الرعاية (HCP).</li></ol>"
-    },
-    "redflags": {
-      "ar": "<ul><li>تنفس أقل من 8 أو أكثر من 30، أو تنفس متثاقل مع تعب.</li><li>تدني الوعي أو تشوش.</li><li>SpO₂ أقل من 88–90% رغم الأكسجين.</li><li>pH أقل من 7.25.</li><li>هبوط ضغط أو اضطراب نظم.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>السعال والتنفس العميق لتوسيع الرئتين وطرد المخاط.</li><li>التعرف على علامات الضيق: ضيق نفس، زرقة، سرعة تنفس.</li><li>الالتزام بأدوية الربو/COPD والتطعيم.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "النوع 1 نقص أكسجة (PaO₂ < 60)، النوع 2 احتباس CO₂ (PaCO₂ > 50 وpH < 7.35).",
-      "العلاج: أكسجين + موسعات + علاج السبب + دعم تنفس.",
-      "NIV قبل التنبيب في COPD إن أمكن.",
-      "هدف التشبع: 94–98% عادة، و88–92% للمزمنين.",
-      "أي نعاس أو ارتباك = ABG.",
-      "تغيير الوضع كل ساعتين.",
-      "PaO2 60 أو أقل أو PaCO2 فوق 50 فشل",
-      "أول علامة: تغير ذهني"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "النوع 2 من الفشل التنفسي يعني:"
-      },
-      "options": [
-        {
-          "ar": "PaCO₂ مرتفع"
-        },
-        {
-          "ar": "PaO₂ مرتفع"
-        },
-        {
-          "ar": "فقر دم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "سببه نقص التهوية."
-      }
-    },
-    {
-      "q": {
-        "ar": "العلاج الأول غير الباضع لمريض COPD في فشل حاد:"
-      },
-      "options": [
-        {
-          "ar": "NIV/BiPAP"
-        },
-        {
-          "ar": "أكسجين 100% دائماً"
-        },
-        {
-          "ar": "مهدئ"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يقلل التنبيب."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة جوع هوائي:"
-      },
-      "options": [
-        {
-          "ar": "قلق وتعرق وعضلات مساعدة"
-        },
-        {
-          "ar": "بطء نبض"
-        },
-        {
-          "ar": "ابتسامة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نقص أكسجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "مخدر التنبيب في المراجع:"
-      },
-      "options": [
-        {
-          "ar": "Propofol"
-        },
-        {
-          "ar": "Heparin"
-        },
-        {
-          "ar": "Furosemide"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "للراحة أثناء التنبيب."
-      }
-    },
-    {
-      "q": {
-        "ar": "قيم ABG تدعم الفشل التنفسي الحاد:"
-      },
-      "options": [
-        {
-          "ar": "PaO2 47 وPaCO2 63"
-        },
-        {
-          "ar": "PaO2 82 وPaCO2 22"
-        },
-        {
-          "ar": "PaO2 62 وPaCO2 32"
-        },
-        {
-          "ar": "PaO2 55 وPaCO2 47"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "PaO2 أقل من 60 وPaCO2 أعلى من 50."
-      }
-    },
-    {
-      "q": {
-        "ar": "معيار نقص الأكسجة في الفشل:"
-      },
-      "options": [
-        {
-          "ar": "PaO2 60 أو أقل"
-        },
-        {
-          "ar": "100"
-        },
-        {
-          "ar": "80 فقط"
-        },
-        {
-          "ar": "95"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التعريف."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي قيم غازات تدعم الفشل التنفسي الحاد؟"
-      },
-      "options": [
-        {
-          "ar": "PaO₂ 47 وPaCO₂ 63"
-        },
-        {
-          "ar": "PaO₂ 82 وPaCO₂ 22"
-        },
-        {
-          "ar": "PaO₂ 62 وPaCO₂ 32"
-        },
-        {
-          "ar": "PaO₂ 55 وPaCO₂ 47"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "PaO₂ ≤ 60 مع ارتفاع CO₂ فوق 50 تدل على فشل التنفس."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول علامة لنقص الأكسجة؟"
-      },
-      "options": [
-        {
-          "ar": "تغير الحالة العقلية (تهيّج وتشوش)"
-        },
-        {
-          "ar": "زرقة الأصابع"
-        },
-        {
-          "ar": "تسارع القلب فقط"
-        },
-        {
-          "ar": "سعال"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الدماغ حساس لنقص الأكسجين."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "StatPearls: Acute Respiratory Failure"
-    },
-    {
-      "title": "ERS/ATS guideline: NIV for acute respiratory failure (2017)"
-    },
-    {
-      "title": "BTS Oxygen Guideline 2017"
-    }
+  "en": [
+   "Type 1 hypoxemia (PaO₂ < 60), type 2 CO₂ retention (PaCO₂ > 50 and pH < 7.35).",
+   "Treatment: oxygen + bronchodilators + treat the cause + respiratory support.",
+   "NIV before intubation in COPD if possible.",
+   "Saturation target: 94–98% usually, and 88–92% for chronic patients.",
+   "Any drowsiness or confusion = ABG.",
+   "Reposition every two hours.",
+   "PaO2 60 or less or PaCO2 above 50 is failure",
+   "First sign: mental change"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "النوع 2 من الفشل التنفسي يعني:",
+    "en": "Type 2 respiratory failure means:"
+   },
+   "options": [
+    {
+     "ar": "PaCO₂ مرتفع",
+     "en": "High PaCO₂"
+    },
+    {
+     "ar": "PaO₂ مرتفع",
+     "en": "High PaO₂"
+    },
+    {
+     "ar": "فقر دم",
+     "en": "Anemia"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "سببه نقص التهوية.",
+    "en": "It is caused by hypoventilation."
+   }
+  },
+  {
+   "q": {
+    "ar": "العلاج الأول غير الباضع لمريض COPD في فشل حاد:",
+    "en": "The first noninvasive treatment for a COPD patient in acute failure:"
+   },
+   "options": [
+    {
+     "ar": "NIV/BiPAP",
+     "en": "NIV/BiPAP"
+    },
+    {
+     "ar": "أكسجين 100% دائماً",
+     "en": "100% oxygen always"
+    },
+    {
+     "ar": "مهدئ",
+     "en": "A sedative"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يقلل التنبيب.",
+    "en": "It reduces intubation."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة جوع هوائي:",
+    "en": "A sign of air hunger:"
+   },
+   "options": [
+    {
+     "ar": "قلق وتعرق وعضلات مساعدة",
+     "en": "Anxiety, sweating, and accessory muscles"
+    },
+    {
+     "ar": "بطء نبض",
+     "en": "Slow pulse"
+    },
+    {
+     "ar": "ابتسامة",
+     "en": "A smile"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نقص أكسجة.",
+    "en": "Hypoxia."
+   }
+  },
+  {
+   "q": {
+    "ar": "مخدر التنبيب في المراجع:",
+    "en": "The anesthetic for intubation:"
+   },
+   "options": [
+    {
+     "ar": "Propofol",
+     "en": "Propofol"
+    },
+    {
+     "ar": "Heparin",
+     "en": "Heparin"
+    },
+    {
+     "ar": "Furosemide",
+     "en": "Furosemide"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "للراحة أثناء التنبيب.",
+    "en": "For comfort during intubation."
+   }
+  },
+  {
+   "q": {
+    "ar": "قيم ABG تدعم الفشل التنفسي الحاد:",
+    "en": "Which ABG values support acute respiratory failure:"
+   },
+   "options": [
+    {
+     "ar": "PaO2 47 وPaCO2 63",
+     "en": "PaO2 47 and PaCO2 63"
+    },
+    {
+     "ar": "PaO2 82 وPaCO2 22",
+     "en": "PaO2 82 and PaCO2 22"
+    },
+    {
+     "ar": "PaO2 62 وPaCO2 32",
+     "en": "PaO2 62 and PaCO2 32"
+    },
+    {
+     "ar": "PaO2 55 وPaCO2 47",
+     "en": "PaO2 55 and PaCO2 47"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "PaO2 أقل من 60 وPaCO2 أعلى من 50.",
+    "en": "PaO2 below 60 and PaCO2 above 50."
+   }
+  },
+  {
+   "q": {
+    "ar": "معيار نقص الأكسجة في الفشل:",
+    "en": "The hypoxia criterion in failure:"
+   },
+   "options": [
+    {
+     "ar": "PaO2 60 أو أقل",
+     "en": "PaO2 60 or less"
+    },
+    {
+     "ar": "100",
+     "en": "100"
+    },
+    {
+     "ar": "80 فقط",
+     "en": "80 only"
+    },
+    {
+     "ar": "95",
+     "en": "95"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التعريف.",
+    "en": "The definition."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي قيم غازات تدعم الفشل التنفسي الحاد؟",
+    "en": "Which gas values support acute respiratory failure?"
+   },
+   "options": [
+    {
+     "ar": "PaO₂ 47 وPaCO₂ 63",
+     "en": "PaO₂ 47 and PaCO₂ 63"
+    },
+    {
+     "ar": "PaO₂ 82 وPaCO₂ 22",
+     "en": "PaO₂ 82 and PaCO₂ 22"
+    },
+    {
+     "ar": "PaO₂ 62 وPaCO₂ 32",
+     "en": "PaO₂ 62 and PaCO₂ 32"
+    },
+    {
+     "ar": "PaO₂ 55 وPaCO₂ 47",
+     "en": "PaO₂ 55 and PaCO₂ 47"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "PaO₂ ≤ 60 مع ارتفاع CO₂ فوق 50 تدل على فشل التنفس.",
+    "en": "PaO₂ ≤ 60 with CO₂ rising above 50 indicates respiratory failure."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول علامة لنقص الأكسجة؟",
+    "en": "The first sign of hypoxia?"
+   },
+   "options": [
+    {
+     "ar": "تغير الحالة العقلية (تهيّج وتشوش)",
+     "en": "Change in mental status (agitation and confusion)"
+    },
+    {
+     "ar": "زرقة الأصابع",
+     "en": "Cyanosis of the fingers"
+    },
+    {
+     "ar": "تسارع القلب فقط",
+     "en": "Fast heart rate only"
+    },
+    {
+     "ar": "سعال",
+     "en": "Cough"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الدماغ حساس لنقص الأكسجين.",
+    "en": "The brain is sensitive to lack of oxygen."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls: Acute Respiratory Failure"
+  },
+  {
+   "title": "ERS/ATS guideline: NIV for acute respiratory failure (2017)"
+  },
+  {
+   "title": "BTS Oxygen Guideline 2017"
+  }
+ ]
 }

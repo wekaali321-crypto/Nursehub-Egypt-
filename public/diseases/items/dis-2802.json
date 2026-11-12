@@ -1,159 +1,201 @@
 {
-  "id": "dis-2802",
-  "num": 2802,
-  "system": "chest",
-  "icon": "🫁",
-  "level": 2,
-  "title": {
-    "ar": "كدمة الرئة بعد إصابات الصدر",
-    "en": "Pulmonary Contusion (Chest Injury)"
+ "id": "dis-2802",
+ "num": 2802,
+ "system": "chest",
+ "icon": "🫁",
+ "level": 2,
+ "title": {
+  "ar": "كدمة الرئة بعد إصابات الصدر",
+  "en": "Pulmonary Contusion (Chest Injury)"
+ },
+ "teaser": {
+  "ar": "كدمة في نسيج الرئة بعد رضح الصدر: نزف وسوائل في الحويصلات تسبب نقص أكسجة، الأعراض، الأسباب، التدخلات التمريضية، وخطر ARDS.",
+  "en": "A bruise in lung tissue after chest trauma: bleeding and fluid in the alveoli cause hypoxia, symptoms, causes, nursing interventions, and the risk of ARDS."
+ },
+ "chips": [
+  {
+   "ar": "رضح الصدر",
+   "en": "Chest trauma"
   },
-  "teaser": {
-    "ar": "كدمة في نسيج الرئة بعد رضح الصدر: نزف وسوائل في الحويصلات تسبب نقص أكسجة، الأعراض، الأسباب، التدخلات التمريضية، وخطر ARDS."
+  {
+   "ar": "نقص الأكسجة",
+   "en": "Hypoxia"
   },
-  "chips": [
-    {
-      "ar": "رضح الصدر"
-    },
-    {
-      "ar": "نقص الأكسجة"
-    },
-    {
-      "ar": "خطر ARDS"
-    }
+  {
+   "ar": "خطر ARDS",
+   "en": "ARDS risk"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p><strong>كدمة الرئة (Pulmonary Contusion)</strong> هي «رضّة» في نسيج الرئة بسبب صدمة الصدر؛ تتضرر الشعيرات فيتجمع <strong>الدم والسوائل</strong> داخل نسيج الرئة، وهذا يعيق تبادل الغازات فيحدث <strong>نقص أكسجة (Hypoxia)</strong>.</p>[[slot:dis-2802-contusion|الحويصلة السليمة مقابل المكدومة — رسم من إعداد الموقع|/diseases/img/dis-2802-contusion.svg]]\n<p>انخفاض مرونة الرئة (Compliance) يعني <strong>خطراً متزايداً للإصابة بمتلازمة الضائقة التنفسية الحادة (ARDS)</strong> (انظر <a href=\"/diseases/dis-640\">دليل ARDS</a>). لإصابات الصدر الأخرى: <a href=\"/diseases/dis-1410\">الصدر الطافي وكسور الأضلاع</a>.</p>[[slot:dis-2802-ct-photo|أشعة مقطعية CT للصدر تظهر منطقة كدمة رئوية (سهم) — صورة سريرية للأدمن]]",
+   "en": "<p><strong>Pulmonary contusion</strong> is a \"bruise\" in lung tissue caused by chest trauma; the capillaries are damaged and <strong>blood and fluid</strong> collect inside the lung tissue, which impairs gas exchange and causes <strong>hypoxia</strong>.</p>[[slot:dis-2802-contusion|Healthy versus contused alveolus — illustration prepared by the site|/diseases/img/dis-2802-contusion.svg]]\n<p>Reduced lung compliance means an <strong>increased risk of acute respiratory distress syndrome (ARDS)</strong> (see the <a href=\"/diseases/dis-640\">ARDS guide</a>). For other chest injuries: <a href=\"/diseases/dis-1410\">flail chest and rib fractures</a>.</p>[[slot:dis-2802-ct-photo|Chest CT showing an area of pulmonary contusion (arrow) — clinical image for the admin]]"
+  },
+  "causes": {
+   "ar": "<ul><li>حوادث السيارات.</li><li>الرياضات الاحتكاكية.</li><li>العنف الأسري/العنف من الشريك.</li><li>عوامل مهيئة لهشاشة العظام وكسور الأضلاع المصاحبة: اضطرابات الغدد الجار درقية والغدد الصماء واضطرابات العظام (حسب المرجع).</li></ul>",
+   "en": "<ul><li>Car accidents.</li><li>Contact sports.</li><li>Domestic/intimate partner violence.</li><li>Factors predisposing to bone fragility and accompanying rib fractures: parathyroid and endocrine disorders and bone disorders.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>ضيق نفس (Dyspnea) ونقص أكسجة (Hypoxemia).</li><li>زيادة الإفرازات القصبية.</li><li>نفث دم (Hemoptysis).</li><li>تململ (Restlessness).</li><li>نقص أصوات التنفس.</li><li>خراخر (Crackles) وأزيز (Wheezes).</li></ul>",
+   "en": "<ul><li>Shortness of breath (Dyspnea) and hypoxemia.</li><li>Increased bronchial secretions.</li><li>Hemoptysis.</li><li>Restlessness.</li><li>Decreased breath sounds.</li><li>Crackles and wheezes.</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>أشعة الصدر والأشعة المقطعية (CT) لإظهار منطقة الكدمة (قد تتأخر ظهورها في الأشعة العادية بضع ساعات).</li><li>غازات الدم (ABG) وقياس SpO₂ المستمر.</li></ul>",
+   "en": "<ul><li>Chest X-ray and CT to show the area of contusion (it may take a few hours to appear on a plain X-ray).</li><li>Blood gases (ABG) and continuous SpO₂ measurement.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li>الحفاظ على المجرى الهوائي والتهوية الكافية.</li><li>أكسجين حسب الأمر الطبي.</li><li>تسكين الألم (يسمح بتنفس أعمق) بأمر الطبيب.</li><li>الاستعداد للتنفس الصناعي عند الفشل التنفسي (انظر <a href=\"/diseases/dis-2801\">دليل جهاز التنفس الصناعي</a>).</li></ul>",
+   "en": "<ul><li>Maintain the airway and adequate ventilation.</li><li>Oxygen per the medical order.</li><li>Pain relief (allows deeper breathing) on the physician's order.</li><li>Be ready for mechanical ventilation in respiratory failure (see the <a href=\"/diseases/dis-2801\">ventilator guide</a>).</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>المجرى الهوائي والتهوية</strong><p>حافظ على مجرى هوائي سالك وتهوية كافية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>وضع فاولر</strong><p>ضع المريض في وضع فاولر (Fowler's) وأعطِ الأكسجين بأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راقب الضائقة التنفسية</strong><p>معدل التنفس، SpO₂، التململ، الإفرازات ونفث الدم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>راحة تامة</strong><p>راحة بالفراش وتقليل النشاط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>جهّز للتنفس الصناعي</strong><p>إن ساء التنفس.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Airway and ventilation</strong><p>Maintain a patent airway and adequate ventilation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Fowler's position</strong><p>Place the patient in Fowler's position and give oxygen as ordered.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Monitor for respiratory distress</strong><p>Respiratory rate, SpO₂, restlessness, secretions, and hemoptysis.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Complete rest</strong><p>Bed rest and reduced activity.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Prepare for mechanical ventilation</strong><p>If breathing worsens.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>تزايد ضيق النفس أو هبوط SpO₂ أو التململ الجديد (نقص أكسجة).</li><li>نفث دم متزايد.</li><li>علامات ARDS: أكسجة تسوء رغم الأكسجين.</li></ul>",
+   "en": "<ul><li>Increasing shortness of breath, falling SpO₂, or new restlessness (hypoxia).</li><li>Increasing hemoptysis.</li><li>Signs of ARDS: oxygenation worsening despite oxygen.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>أهمية الراحة وعدم الحركة الزائدة أثناء التعافي.</li><li>الإبلاغ عن زيادة ضيق النفس أو نفث الدم أو ألم الصدر.</li><li>الإقلاع عن التدخين وتجنب الرياضات الاحتكاكية حتى إذن الطبيب.</li></ul>",
+   "en": "<ul><li>The importance of rest and not moving excessively during recovery.</li><li>Report any increase in shortness of breath, hemoptysis, or chest pain.</li><li>Stop smoking and avoid contact sports until the physician allows.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "كدمة الرئة: نزف وسوائل في الحويصلات بعد رضح الصدر ← نقص أكسجة",
+   "الأعراض: ضيق نفس، نفث دم، تململ، نقص أصوات التنفس، خراخر وأزيز",
+   "الأولوية: مجرى هوائي ثم وضع فاولر وأكسجين ومراقبة",
+   "خطر ARDS؛ جهّز للتنفس الصناعي"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p><strong>كدمة الرئة (Pulmonary Contusion)</strong> هي «رضّة» في نسيج الرئة بسبب صدمة الصدر؛ تتضرر الشعيرات فيتجمع <strong>الدم والسوائل</strong> داخل نسيج الرئة، وهذا يعيق تبادل الغازات فيحدث <strong>نقص أكسجة (Hypoxia)</strong>.</p>[[slot:dis-2802-contusion|الحويصلة السليمة مقابل المكدومة — رسم من إعداد الموقع|/diseases/img/dis-2802-contusion.svg]]\n<p>انخفاض مرونة الرئة (Compliance) يعني <strong>خطراً متزايداً للإصابة بمتلازمة الضائقة التنفسية الحادة (ARDS)</strong> (انظر <a href=\"/diseases/dis-640\">دليل ARDS</a>). لإصابات الصدر الأخرى: <a href=\"/diseases/dis-1410\">الصدر الطافي وكسور الأضلاع</a>.</p>[[slot:dis-2802-ct-photo|أشعة مقطعية CT للصدر تظهر منطقة كدمة رئوية (سهم) — صورة سريرية للأدمن]]"
-    },
-    "causes": {
-      "ar": "<ul><li>حوادث السيارات.</li><li>الرياضات الاحتكاكية.</li><li>العنف الأسري/العنف من الشريك.</li><li>عوامل مهيئة لهشاشة العظام وكسور الأضلاع المصاحبة: اضطرابات الغدد الجار درقية والغدد الصماء واضطرابات العظام (حسب المرجع).</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>ضيق نفس (Dyspnea) ونقص أكسجة (Hypoxemia).</li><li>زيادة الإفرازات القصبية.</li><li>نفث دم (Hemoptysis).</li><li>تململ (Restlessness).</li><li>نقص أصوات التنفس.</li><li>خراخر (Crackles) وأزيز (Wheezes).</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>أشعة الصدر والأشعة المقطعية (CT) لإظهار منطقة الكدمة (قد تتأخر ظهورها في الأشعة العادية بضع ساعات).</li><li>غازات الدم (ABG) وقياس SpO₂ المستمر.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li>الحفاظ على المجرى الهوائي والتهوية الكافية.</li><li>أكسجين حسب الأمر الطبي.</li><li>تسكين الألم (يسمح بتنفس أعمق) بأمر الطبيب.</li><li>الاستعداد للتنفس الصناعي عند الفشل التنفسي (انظر <a href=\"/diseases/dis-2801\">دليل جهاز التنفس الصناعي</a>).</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>المجرى الهوائي والتهوية</strong><p>حافظ على مجرى هوائي سالك وتهوية كافية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>وضع فاولر</strong><p>ضع المريض في وضع فاولر (Fowler's) وأعطِ الأكسجين بأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راقب الضائقة التنفسية</strong><p>معدل التنفس، SpO₂، التململ، الإفرازات ونفث الدم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>راحة تامة</strong><p>راحة بالفراش وتقليل النشاط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>جهّز للتنفس الصناعي</strong><p>إن ساء التنفس.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>تزايد ضيق النفس أو هبوط SpO₂ أو التململ الجديد (نقص أكسجة).</li><li>نفث دم متزايد.</li><li>علامات ARDS: أكسجة تسوء رغم الأكسجين.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>أهمية الراحة وعدم الحركة الزائدة أثناء التعافي.</li><li>الإبلاغ عن زيادة ضيق النفس أو نفث الدم أو ألم الصدر.</li><li>الإقلاع عن التدخين وتجنب الرياضات الاحتكاكية حتى إذن الطبيب.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "كدمة الرئة: نزف وسوائل في الحويصلات بعد رضح الصدر ← نقص أكسجة",
-      "الأعراض: ضيق نفس، نفث دم، تململ، نقص أصوات التنفس، خراخر وأزيز",
-      "الأولوية: مجرى هوائي ثم وضع فاولر وأكسجين ومراقبة",
-      "خطر ARDS؛ جهّز للتنفس الصناعي"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ما الوضع التمريضي المناسب لمريض كدمة الرئة؟"
-      },
-      "options": [
-        {
-          "ar": "Trendelenburg"
-        },
-        {
-          "ar": "وضع فاولر (Fowler)"
-        },
-        {
-          "ar": "الاستلقاء المسطح"
-        },
-        {
-          "ar": "الوضع الجانبي المنخفض الرأس"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "وضع فاولر يحسن التمدد الصدري والتنفس."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي من التالي أخطر مضاعفة محتملة لكدمة الرئة؟"
-      },
-      "options": [
-        {
-          "ar": "ARDS"
-        },
-        {
-          "ar": "التهاب اللوزتين"
-        },
-        {
-          "ar": "الصداع النصفي"
-        },
-        {
-          "ar": "قرحة الفراش فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نقص مرونة الرئة يرفع خطر ARDS."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة أبكر تنذر بنقص الأكسجة عند هذا المريض؟"
-      },
-      "options": [
-        {
-          "ar": "التململ (Restlessness)"
-        },
-        {
-          "ar": "ارتفاع الشهية"
-        },
-        {
-          "ar": "الإمساك"
-        },
-        {
-          "ar": "جفاف الفم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التململ علامة مبكرة لنقص الأكسجة قبل الزرقة."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما سبب نقص الأكسجة في كدمة الرئة؟"
-      },
-      "options": [
-        {
-          "ar": "تجمع دم وسوائل في الحويصلات يعيق تبادل الغازات"
-        },
-        {
-          "ar": "انسداد القلب"
-        },
-        {
-          "ar": "نقص الصوديوم"
-        },
-        {
-          "ar": "ارتفاع الحرارة فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السوائل في الحويصلات تمنع انتقال الأكسجين للدم."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "إرشادات وملخصات تمريضية جراحية باطنية عامة (مراجع مفتوحة)"
-    }
+  "en": [
+   "Pulmonary contusion: bleeding and fluid in the alveoli after chest trauma → hypoxia",
+   "Symptoms: shortness of breath, hemoptysis, restlessness, decreased breath sounds, crackles and wheezes",
+   "Priority: airway, then Fowler's position, oxygen, and monitoring",
+   "ARDS risk; prepare for mechanical ventilation"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ما الوضع التمريضي المناسب لمريض كدمة الرئة؟",
+    "en": "What is the appropriate nursing position for a patient with pulmonary contusion?"
+   },
+   "options": [
+    {
+     "ar": "Trendelenburg",
+     "en": "Trendelenburg"
+    },
+    {
+     "ar": "وضع فاولر (Fowler)",
+     "en": "Fowler's position"
+    },
+    {
+     "ar": "الاستلقاء المسطح",
+     "en": "Lying flat"
+    },
+    {
+     "ar": "الوضع الجانبي المنخفض الرأس",
+     "en": "Side-lying with the head low"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "وضع فاولر يحسن التمدد الصدري والتنفس.",
+    "en": "Fowler's position improves chest expansion and breathing."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من التالي أخطر مضاعفة محتملة لكدمة الرئة؟",
+    "en": "Which of the following is the most serious possible complication of pulmonary contusion?"
+   },
+   "options": [
+    {
+     "ar": "ARDS",
+     "en": "ARDS"
+    },
+    {
+     "ar": "التهاب اللوزتين",
+     "en": "Tonsillitis"
+    },
+    {
+     "ar": "الصداع النصفي",
+     "en": "Migraine"
+    },
+    {
+     "ar": "قرحة الفراش فقط",
+     "en": "Pressure ulcer only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نقص مرونة الرئة يرفع خطر ARDS.",
+    "en": "Reduced lung compliance raises the risk of ARDS."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة أبكر تنذر بنقص الأكسجة عند هذا المريض؟",
+    "en": "Which sign is an earlier warning of hypoxia in this patient?"
+   },
+   "options": [
+    {
+     "ar": "التململ (Restlessness)",
+     "en": "Restlessness"
+    },
+    {
+     "ar": "ارتفاع الشهية",
+     "en": "Increased appetite"
+    },
+    {
+     "ar": "الإمساك",
+     "en": "Constipation"
+    },
+    {
+     "ar": "جفاف الفم",
+     "en": "Dry mouth"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التململ علامة مبكرة لنقص الأكسجة قبل الزرقة.",
+    "en": "Restlessness is an early sign of hypoxia before cyanosis."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما سبب نقص الأكسجة في كدمة الرئة؟",
+    "en": "What is the cause of hypoxia in pulmonary contusion?"
+   },
+   "options": [
+    {
+     "ar": "تجمع دم وسوائل في الحويصلات يعيق تبادل الغازات",
+     "en": "Collection of blood and fluid in the alveoli that impairs gas exchange"
+    },
+    {
+     "ar": "انسداد القلب",
+     "en": "Heart block"
+    },
+    {
+     "ar": "نقص الصوديوم",
+     "en": "Low sodium"
+    },
+    {
+     "ar": "ارتفاع الحرارة فقط",
+     "en": "Fever only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السوائل في الحويصلات تمنع انتقال الأكسجين للدم.",
+    "en": "Fluid in the alveoli prevents oxygen from passing to the blood."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "إرشادات وملخصات تمريضية جراحية باطنية عامة (مراجع مفتوحة)"
+  }
+ ]
 }

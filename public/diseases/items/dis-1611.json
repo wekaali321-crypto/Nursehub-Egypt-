@@ -1,162 +1,204 @@
 {
-  "id": "dis-1611",
-  "num": 1611,
-  "system": "cardio",
-  "icon": "❤️",
-  "level": 1,
-  "target": "diseases",
-  "title": {
-    "ar": "مفاهيم القلب الأساسية: النتاج القلبي والحمل المسبق (Preload) والحمل البعدي (Afterload) وإنزيمات القلب",
-    "en": "Cardiovascular Key Terms"
+ "id": "dis-1611",
+ "num": 1611,
+ "system": "cardio",
+ "icon": "❤️",
+ "level": 1,
+ "target": "diseases",
+ "title": {
+  "ar": "مفاهيم القلب الأساسية: النتاج القلبي والحمل المسبق (Preload) والحمل البعدي (Afterload) وإنزيمات القلب",
+  "en": "Cardiovascular Key Terms"
+ },
+ "teaser": {
+  "ar": "النتاج القلبي، الحمل المسبق والبعدي، كسر القذف، الدورات الثلاث، التروبونين وROMI وBNP.",
+  "en": "Cardiac output, preload and afterload, ejection fraction, the three circulations, troponin, ROMI and BNP."
+ },
+ "chips": [
+  {
+   "ar": "CO = SV × HR",
+   "en": "CO = SV × HR"
   },
-  "teaser": {
-    "ar": "النتاج القلبي، الحمل المسبق والبعدي، كسر القذف، الدورات الثلاث، التروبونين وROMI وBNP."
+  {
+   "ar": "EF",
+   "en": "EF"
   },
-  "chips": [
-    {
-      "ar": "CO = SV × HR"
-    },
-    {
-      "ar": "EF"
-    },
-    {
-      "ar": "تروبونين"
-    }
+  {
+   "ar": "تروبونين",
+   "en": "Troponin"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>قبل أمراض القلب لازم نفهم لغتها: المضخة، النتاج القلبي، الحمل المسبق والبعدي، كسر القذف، الدورات الثلاث، والإنزيمات القلبية. أساس الدليل ده يُكمل <a href=\"/diseases/dis-616\">أساسيات القلب والأوعية</a> و<a href=\"/diseases/dis-617\">الفحوصات التشخيصية</a>.</p>[[slot:dis-1611-terms|مصطلحات القلب — رسم من إعداد الموقع|/diseases/img/dis-1611-terms.svg]]",
+   "en": "<p>Before heart diseases we need to understand their language: the pump, cardiac output, preload and afterload, ejection fraction, the three circulations, and cardiac enzymes. This guide complements <a href=\"/diseases/dis-616\">Heart and vessel basics</a> and <a href=\"/diseases/dis-617\">Diagnostic tests</a>.</p>[[slot:dis-1611-terms|Cardiac terms — illustration prepared by the site|/diseases/img/dis-1611-terms.svg]]"
+  },
+  "causes": {
+   "ar": "<table><thead><tr><th>المصطلح</th><th>المعنى</th><th>القيمة</th></tr></thead><tbody><tr><td>معدل القلب HR</td><td>عدد ضربات القلب في الدقيقة</td><td>60–100</td></tr><tr><td>حجم الضربة SV</td><td>كمية الدم التي يطردها البطين الأيسر في انقباضة</td><td>—</td></tr><tr><td>النتاج القلبي CO</td><td>كمية الدم في الدقيقة = SV × HR</td><td>4–8 لتر/دقيقة</td></tr><tr><td>الحمل المسبق Preload</td><td>امتلاء وتمدد البطينين قبل الانقباض</td><td>—</td></tr><tr><td>الحمل البعدي Afterload</td><td>المقاومة التي يتغلب عليها القلب لطرد الدم (المقاومة الوعائية الجهازية SVR)</td><td>—</td></tr><tr><td>كسر القذف EF</td><td>نسبة الدم المطرودة لكل انقباضة</td><td>55–70% طبيعي؛ 40% أو أقل سيئ (فشل قلب)</td></tr></tbody></table><p>تذكّر: Cardiac OUTput = دم مؤكسج يخرج للجسم.</p>",
+   "en": "<table><thead><tr><th>Term</th><th>Meaning</th><th>Value</th></tr></thead><tbody><tr><td>Heart rate HR</td><td>Number of heartbeats per minute</td><td>60–100</td></tr><tr><td>Stroke volume SV</td><td>Amount of blood the left ventricle ejects in one contraction</td><td>—</td></tr><tr><td>Cardiac output CO</td><td>Amount of blood per minute = SV × HR</td><td>4–8 L/min</td></tr><tr><td>Preload</td><td>Filling and stretch of the ventricles before contraction</td><td>—</td></tr><tr><td>Afterload</td><td>The resistance the heart must overcome to eject blood (systemic vascular resistance SVR)</td><td>—</td></tr><tr><td>Ejection fraction EF</td><td>Percentage of blood ejected with each contraction</td><td>55–70% normal; 40% or less is poor (heart failure)</td></tr></tbody></table><p>Remember: Cardiac OUTput = oxygenated blood going OUT to the body.</p>"
+  },
+  "signs": {
+   "ar": "<h4>الدورات</h4><ul><li><b>الرئوية:</b> دم غير مؤكسج من الجانب الأيمن للرئتين لامتصاص O₂ وطرد CO₂ ثم يعود للجانب الأيسر.</li><li><b>الجهازية:</b> دم مؤكسج من القلب عبر الشرايين لباقي الجسم، ويعود عبر الأوردة.</li><li><b>التاجية:</b> تغذي عضلة القلب نفسها عبر الشرايين التاجية.</li></ul>",
+   "en": "<h4>The circulations</h4><ul><li><b>Pulmonary:</b> deoxygenated blood from the right side to the lungs to take up O₂ and release CO₂, then back to the left side.</li><li><b>Systemic:</b> oxygenated blood from the heart through the arteries to the rest of the body, returning through the veins.</li><li><b>Coronary:</b> feeds the heart muscle itself through the coronary arteries.</li></ul>"
+  },
+  "tests": {
+   "ar": "[[slot:dis-1611-enzymes|الإنزيمات والتروبونين — رسم من إعداد الموقع|/diseases/img/dis-1611-enzymes.svg]]<table><thead><tr><th>المؤشر</th><th>المعنى</th></tr></thead><tbody><tr><td>التروبونين (Troponin)</td><td>بروتين في عضلة القلب والهيكلية ينظم الانقباض؛ أكبر من 0.5 ng/mL = المؤشر الأول للاحتشاء (T: Trauma)</td></tr><tr><td>الميوجلوبين (Myoglobin)</td><td>أي ضرر بالعضلة بما فيه القلب</td></tr><tr><td>CK/CK-MB</td><td>إنزيم كرياتين كيناز</td></tr><tr><td>ROMI</td><td>لوحة الإنزيمات بعد الاشتباه باحتشاء</td></tr><tr><td>BNP</td><td>ببتيد قوي تفرزه البطينات؛ يرتفع في فشل القلب الاحتقاني: 100 طبيعي، 300+ خفيف، 600+ متوسط، 900+ شديد</td></tr><tr><td>ANP</td><td>ببتيد ناتريوريتي أذيني</td></tr></tbody></table>",
+   "en": "[[slot:dis-1611-enzymes|Enzymes and troponin — illustration prepared by the site|/diseases/img/dis-1611-enzymes.svg]]<table><thead><tr><th>Marker</th><th>Meaning</th></tr></thead><tbody><tr><td>Troponin</td><td>A protein in heart and skeletal muscle that regulates contraction; more than 0.5 ng/mL = the first marker of infarction (T: Trauma)</td></tr><tr><td>Myoglobin</td><td>Any muscle damage including the heart</td></tr><tr><td>CK/CK-MB</td><td>Creatine kinase enzyme</td></tr><tr><td>ROMI</td><td>Enzyme panel after suspected infarction</td></tr><tr><td>BNP</td><td>A powerful peptide released by the ventricles; rises in congestive heart failure: 100 normal, 300+ mild, 600+ moderate, 900+ severe</td></tr><tr><td>ANP</td><td>Atrial natriuretic peptide</td></tr></tbody></table>"
+  },
+  "treatment": {
+   "ar": "<p>هذا دليل مفاهيم؛ العلاج في أدلة الأمراض: <a href=\"/diseases/dis-140\">الجلطة</a>، <a href=\"/diseases/dis-128\">فشل القلب</a>.</p>",
+   "en": "<p>This is a concepts guide; treatment is in the disease guides: <a href=\"/diseases/dis-140\">Infarction</a>, <a href=\"/diseases/dis-128\">Heart failure</a>.</p>"
+  },
+  "nursing": {
+   "ar": "<ol><li>اربط كل مصطلح بمظهر المريض: EF منخفض = ضيق نفس ووذمة.</li><li>تابع النبض والضغط والنتاج البولي كمؤشر للنتاج القلبي.</li><li>عند ألم صدر: ECG وتروبونين فوراً.</li><li>راجع BNP كمؤشر شدة فشل القلب.</li></ol>",
+   "en": "<ol><li>Link each term to the patient's appearance: low EF = shortness of breath and edema.</li><li>Follow pulse, pressure and urine output as indicators of cardiac output.</li><li>With chest pain: ECG and troponin immediately.</li><li>Review BNP as an indicator of heart failure severity.</li></ol>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ</strong><ul><li>تروبونين مرتفع مع ألم صدر</li><li>EF 40% أو أقل مع أعراض</li><li>BNP أعلى من 900</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report</strong><ul><li>Raised troponin with chest pain</li><li>EF 40% or less with symptoms</li><li>BNP above 900</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<p>اشرح للمريض أن القلب مضخة، وأن فحوص الدم والتخطيط تقيس عمله.</p>",
+   "en": "<p>Explain to the patient that the heart is a pump, and that blood tests and the tracing measure how it works.</p>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "CO = SV × HR، الطبيعي 4–8 لتر",
+   "EF 55–70% طبيعي و40% أو أقل سيئ",
+   "تروبونين فوق 0.5 = احتشاء",
+   "BNP فوق 900 فشل قلب شديد"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>قبل أمراض القلب لازم نفهم لغتها: المضخة، النتاج القلبي، الحمل المسبق والبعدي، كسر القذف، الدورات الثلاث، والإنزيمات القلبية. أساس الدليل ده يُكمل <a href=\"/diseases/dis-616\">أساسيات القلب والأوعية</a> و<a href=\"/diseases/dis-617\">الفحوصات التشخيصية</a>.</p>[[slot:dis-1611-terms|مصطلحات القلب — رسم من إعداد الموقع|/diseases/img/dis-1611-terms.svg]]"
-    },
-    "causes": {
-      "ar": "<table><thead><tr><th>المصطلح</th><th>المعنى</th><th>القيمة</th></tr></thead><tbody><tr><td>معدل القلب HR</td><td>عدد ضربات القلب في الدقيقة</td><td>60–100</td></tr><tr><td>حجم الضربة SV</td><td>كمية الدم التي يطردها البطين الأيسر في انقباضة</td><td>—</td></tr><tr><td>النتاج القلبي CO</td><td>كمية الدم في الدقيقة = SV × HR</td><td>4–8 لتر/دقيقة</td></tr><tr><td>الحمل المسبق Preload</td><td>امتلاء وتمدد البطينين قبل الانقباض</td><td>—</td></tr><tr><td>الحمل البعدي Afterload</td><td>المقاومة التي يتغلب عليها القلب لطرد الدم (المقاومة الوعائية الجهازية SVR)</td><td>—</td></tr><tr><td>كسر القذف EF</td><td>نسبة الدم المطرودة لكل انقباضة</td><td>55–70% طبيعي؛ 40% أو أقل سيئ (فشل قلب)</td></tr></tbody></table><p>تذكّر: Cardiac OUTput = دم مؤكسج يخرج للجسم.</p>"
-    },
-    "signs": {
-      "ar": "<h4>الدورات</h4><ul><li><b>الرئوية:</b> دم غير مؤكسج من الجانب الأيمن للرئتين لامتصاص O₂ وطرد CO₂ ثم يعود للجانب الأيسر.</li><li><b>الجهازية:</b> دم مؤكسج من القلب عبر الشرايين لباقي الجسم، ويعود عبر الأوردة.</li><li><b>التاجية:</b> تغذي عضلة القلب نفسها عبر الشرايين التاجية.</li></ul>"
-    },
-    "tests": {
-      "ar": "[[slot:dis-1611-enzymes|الإنزيمات والتروبونين — رسم من إعداد الموقع|/diseases/img/dis-1611-enzymes.svg]]<table><thead><tr><th>المؤشر</th><th>المعنى</th></tr></thead><tbody><tr><td>التروبونين (Troponin)</td><td>بروتين في عضلة القلب والهيكلية ينظم الانقباض؛ أكبر من 0.5 ng/mL = المؤشر الأول للاحتشاء (T: Trauma)</td></tr><tr><td>الميوجلوبين (Myoglobin)</td><td>أي ضرر بالعضلة بما فيه القلب</td></tr><tr><td>CK/CK-MB</td><td>إنزيم كرياتين كيناز</td></tr><tr><td>ROMI</td><td>لوحة الإنزيمات بعد الاشتباه باحتشاء</td></tr><tr><td>BNP</td><td>ببتيد قوي تفرزه البطينات؛ يرتفع في فشل القلب الاحتقاني: 100 طبيعي، 300+ خفيف، 600+ متوسط، 900+ شديد</td></tr><tr><td>ANP</td><td>ببتيد ناتريوريتي أذيني</td></tr></tbody></table>"
-    },
-    "treatment": {
-      "ar": "<p>هذا دليل مفاهيم؛ العلاج في أدلة الأمراض: <a href=\"/diseases/dis-140\">الجلطة</a>، <a href=\"/diseases/dis-128\">فشل القلب</a>.</p>"
-    },
-    "nursing": {
-      "ar": "<ol><li>اربط كل مصطلح بمظهر المريض: EF منخفض = ضيق نفس ووذمة.</li><li>تابع النبض والضغط والنتاج البولي كمؤشر للنتاج القلبي.</li><li>عند ألم صدر: ECG وتروبونين فوراً.</li><li>راجع BNP كمؤشر شدة فشل القلب.</li></ol>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>أبلغ</strong><ul><li>تروبونين مرتفع مع ألم صدر</li><li>EF 40% أو أقل مع أعراض</li><li>BNP أعلى من 900</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<p>اشرح للمريض أن القلب مضخة، وأن فحوص الدم والتخطيط تقيس عمله.</p>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "CO = SV × HR، الطبيعي 4–8 لتر",
-      "EF 55–70% طبيعي و40% أو أقل سيئ",
-      "تروبونين فوق 0.5 = احتشاء",
-      "BNP فوق 900 فشل قلب شديد"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "القانون الصحيح للنتاج القلبي:"
-      },
-      "options": [
-        {
-          "ar": "SV × HR"
-        },
-        {
-          "ar": "HR + SV"
-        },
-        {
-          "ar": "EF × HR"
-        },
-        {
-          "ar": "SV ÷ HR"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "CO = SV × HR."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي كسر قذف يعتبر سيئاً؟"
-      },
-      "options": [
-        {
-          "ar": "40% أو أقل"
-        },
-        {
-          "ar": "60%"
-        },
-        {
-          "ar": "55%"
-        },
-        {
-          "ar": "70%"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يدل على فشل القلب."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول مؤشر نوعي للاحتشاء:"
-      },
-      "options": [
-        {
-          "ar": "التروبونين"
-        },
-        {
-          "ar": "ALT"
-        },
-        {
-          "ar": "الكرياتينين"
-        },
-        {
-          "ar": "الصوديوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "التروبونين أولاً."
-      }
-    },
-    {
-      "q": {
-        "ar": "BNP 950 يعني:"
-      },
-      "options": [
-        {
-          "ar": "فشل قلب شديد"
-        },
-        {
-          "ar": "طبيعي"
-        },
-        {
-          "ar": "خفيف"
-        },
-        {
-          "ar": "جفاف"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "900+ شديد."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AHA — Cardiac Biomarkers"
-    },
-    {
-      "title": "مراجع عامة: Cardiovascular Physiology"
-    }
+  "en": [
+   "CO = SV × HR, normal 4–8 L",
+   "EF 55–70% is normal and 40% or less is poor",
+   "Troponin above 0.5 = infarction",
+   "BNP above 900 = severe heart failure"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "القانون الصحيح للنتاج القلبي:",
+    "en": "The correct formula for cardiac output:"
+   },
+   "options": [
+    {
+     "ar": "SV × HR",
+     "en": "SV × HR"
+    },
+    {
+     "ar": "HR + SV",
+     "en": "HR + SV"
+    },
+    {
+     "ar": "EF × HR",
+     "en": "EF × HR"
+    },
+    {
+     "ar": "SV ÷ HR",
+     "en": "SV ÷ HR"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "CO = SV × HR.",
+    "en": "CO = SV × HR."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي كسر قذف يعتبر سيئاً؟",
+    "en": "Which ejection fraction is considered poor?"
+   },
+   "options": [
+    {
+     "ar": "40% أو أقل",
+     "en": "40% or less"
+    },
+    {
+     "ar": "60%",
+     "en": "60%"
+    },
+    {
+     "ar": "55%",
+     "en": "55%"
+    },
+    {
+     "ar": "70%",
+     "en": "70%"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يدل على فشل القلب.",
+    "en": "It indicates heart failure."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول مؤشر نوعي للاحتشاء:",
+    "en": "The first specific marker of infarction:"
+   },
+   "options": [
+    {
+     "ar": "التروبونين",
+     "en": "Troponin"
+    },
+    {
+     "ar": "ALT",
+     "en": "ALT"
+    },
+    {
+     "ar": "الكرياتينين",
+     "en": "Creatinine"
+    },
+    {
+     "ar": "الصوديوم",
+     "en": "Sodium"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التروبونين أولاً.",
+    "en": "Troponin comes first."
+   }
+  },
+  {
+   "q": {
+    "ar": "BNP 950 يعني:",
+    "en": "A BNP of 950 means:"
+   },
+   "options": [
+    {
+     "ar": "فشل قلب شديد",
+     "en": "Severe heart failure"
+    },
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
+    },
+    {
+     "ar": "خفيف",
+     "en": "Mild"
+    },
+    {
+     "ar": "جفاف",
+     "en": "Dehydration"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "900+ شديد.",
+    "en": "900+ is severe."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AHA — Cardiac Biomarkers"
+  },
+  {
+   "title": "مراجع عامة: Cardiovascular Physiology"
+  }
+ ]
 }

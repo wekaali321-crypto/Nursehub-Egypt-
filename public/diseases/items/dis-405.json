@@ -1,192 +1,232 @@
 {
-  "id": "dis-405",
-  "num": 405,
-  "system": "ent",
-  "icon": "🌼",
-  "level": 1,
-  "target": "diseases",
-  "title": {
-    "ar": "حساسية الأنف الموسمية",
-    "en": "Allergic Rhinitis (Hay Fever)"
+ "id": "dis-405",
+ "num": 405,
+ "system": "ent",
+ "icon": "🌼",
+ "level": 1,
+ "target": "diseases",
+ "title": {
+  "ar": "حساسية الأنف الموسمية",
+  "en": "Allergic Rhinitis (Hay Fever)"
+ },
+ "teaser": {
+  "ar": "عطس ورشح وهرش في ربيع كل سنة: إزاي تفرّق وتعالج بمضادات الهستامين وبخاخات الكورتيزون والمثبّتات وغسيل الأنف، وروشتة جاهزة.",
+  "en": "Sneezing, runny nose, and itching every spring: how to tell it apart and treat it with antihistamines, steroid sprays, stabilizers, and nasal washing, plus a ready prescription."
+ },
+ "chips": [
+  {
+   "ar": "عطس ورشح وهرش",
+   "en": "Sneezing, runny nose, itching"
   },
-  "teaser": {
-    "ar": "عطس ورشح وهرش في ربيع كل سنة: إزاي تفرّق وتعالج بمضادات الهستامين وبخاخات الكورتيزون والمثبّتات وغسيل الأنف، وروشتة جاهزة."
+  {
+   "ar": "Zyrtec / Beclo",
+   "en": "Zyrtec / Beclo"
   },
-  "chips": [
-    {
-      "ar": "عطس ورشح وهرش"
-    },
-    {
-      "ar": "Zyrtec / Beclo"
-    },
-    {
-      "ar": "Nasotal وقاية"
-    }
+  {
+   "ar": "Nasotal وقاية",
+   "en": "Nasotal prevention"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الحساسية الموسمية للأنف (Seasonal allergic rhinitis) أشهر في <b>الربيع (مايو ويونيو)</b>، وبتحصل بعد التعرض لحاجة المريض عنده حساسية منها زي التراب وحبوب اللقاح.</p><p>غالباً بتلاقي مع بعض: <b>حساسية الأنف + التهاب الملتحمة + الربو + حساسية الجلد (Atopy)</b>؛ يعني المريض غالباً عنده حساسية في أماكن تانية زي عينه أو صدره أو جلده.</p>[[slot:dis-405-pathway|حساسية الأنف: من السبب للعلاج|/diseases/img/dis-405-pathway.svg]]",
+   "en": "<p>Seasonal allergic rhinitis is most common in <b>spring (May and June)</b>, and it happens after exposure to something the patient is allergic to, like dust and pollen.</p><p>You often find together: <b>allergic rhinitis + conjunctivitis + asthma + skin allergy (Atopy)</b>; meaning the patient often has allergy elsewhere like the eye, chest, or skin.</p>[[slot:dis-405-pathway|Allergic rhinitis: from cause to treatment|/diseases/img/dis-405-pathway.svg]]"
+  },
+  "signs": {
+   "ar": "<h4>الأعراض</h4><table><thead><tr><th>العَرَض</th><th>بالعربي</th></tr></thead><tbody><tr><td>Sneezing</td><td>عطس</td></tr><tr><td>Rhinorrhea</td><td>رشح من الأنف (سائل شفاف)</td></tr><tr><td>Itching in nose or eye</td><td>هرش في الأنف أو العين</td></tr><tr><td>Itchy throat</td><td>هرش في سقف الحلق</td></tr><tr><td>Nasal congestion</td><td>احتقان في الأنف</td></tr><tr><td>Symptoms of allergic conjunctivitis</td><td>هرش واحمرار ودموع في العين</td></tr></tbody></table>",
+   "en": "<h4>Symptoms</h4><table><thead><tr><th>Symptom</th><th>In plain words</th></tr></thead><tbody><tr><td>Sneezing</td><td>Sneezing</td></tr><tr><td>Rhinorrhea</td><td>Runny nose (clear fluid)</td></tr><tr><td>Itching in nose or eye</td><td>Itching in the nose or eye</td></tr><tr><td>Itchy throat</td><td>Itching in the roof of the mouth</td></tr><tr><td>Nasal congestion</td><td>Stuffy nose</td></tr><tr><td>Symptoms of allergic conjunctivitis</td><td>Itching, redness, and tears in the eye</td></tr></tbody></table>"
+  },
+  "causes": {
+   "ar": "<ul><li>التراب (Dust)، حبوب اللقاح (Pollen)، شعر الحيوانات، العفن</li><li>قابلية وراثية (Atopy)</li></ul>",
+   "en": "<ul><li>Dust, pollen, animal hair, mold</li><li>Genetic predisposition (Atopy)</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>تشخيص إكلينيكي (التاريخ الموسمي والأعراض)</li><li>اختبارات الحساسية (Skin prick / IgE) بأمر الطبيب للحالات المستمرة (إضافة)</li></ul>",
+   "en": "<ul><li>Clinical diagnosis (seasonal history and symptoms)</li><li>Allergy tests (Skin prick / IgE) by physician order for persistent cases (addition)</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>الوقاية (Prophylaxis)</h4><p>ممكن الوقاية من حدوث حساسية بالأنف أثناء موسم الحساسية عن طريق استخدام <b>مثبّت الخلايا البدينة (Mast cell stabilizer)</b>:</p><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td><b>Nasotal spray</b></td><td>بخة بكل فتحة أنف ٣ مرات يومياً أثناء مواسم الحساسية</td></tr></tbody></table><h4>العلاج</h4><ol><li><b>تجنب التعرض للمحفز (Avoid allergen):</b> يحاول يعرف هو عنده حساسية لايه ويبعد عنه</li><li><b>مضاد هستامين بالفم</b> يفضل استعمال المضادات التي لا تسبب النعاس: Lorano tab — Zyrtec tab — Alertam 120 (قرص قبل النوم لمدة أسبوع)</li><li><b>بخاخ كورتيزون للأنف:</b> Beclo spray — بختين بكل فتحة أنف مرتين يومياً</li><li><b>غسيل/استنشاق قلوي للأنف:</b> Alka-misr packs — Nasal clean packs: كيس على نص كوب ماء دافئ، يتم استنشاقه أو غسل الأنف به مرتين يومياً</li></ol><h4>روشتة Allergic Rhinitis</h4><table><thead><tr><th>Rx</th><th>الجرعة</th></tr></thead><tbody><tr><td>Zyrtec tab</td><td>قرص قبل النوم لمدة أسبوع</td></tr><tr><td>Beclo spray</td><td>بختين بكل فتحة أنف يومياً مرتين لمدة أسبوع</td></tr><tr><td>Nasal clean packs</td><td>كيس على نصف كوب ماء دافئ، يتم استنشاقه أو غسل الأنف به مرتين يومياً</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong></strong><p>مع كتابة التعليمات على ظهر الروشتة.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأسماء حسب المراجع: Lorano = Loratadine، Zyrtec = Cetirizine (ممكن يسبب نعاساً خفيفاً عند البعض؛ لذلك قبل النوم)، Alertam 120 = Fexofenadine 120 mg (عادة مرة يومياً)، Beclo = Beclomethasone، Nasotal = Sodium cromoglicate (يحتاج استمرار ٣–٤ مرات لتأثيره ويُبدأ قبل الموسم). الإرشادات الحديثة (ARIA) تعتبر <b>بخاخ الكورتيزون الأنفي</b> الأكثر فعالية للأعراض المتوسطة/المستمرة. غسيل الأنف: استخدم ماء مغلي ومبرد أو معقم فقط. الجرعة والمدة حسب الطبيب.</p></div>",
+   "en": "<h4>Prophylaxis</h4><p>Allergic rhinitis during the allergy season can be prevented by using a <b>mast cell stabilizer</b>:</p><table><thead><tr><th>Drug</th><th>Dose</th></tr></thead><tbody><tr><td><b>Nasotal spray</b></td><td>One puff in each nostril 3 times daily during allergy seasons</td></tr></tbody></table><h4>Treatment</h4><ol><li><b>Avoid the allergen:</b> try to find out what you are allergic to and stay away from it</li><li><b>Oral antihistamine</b>, preferably non-drowsy ones: Lorano tab — Zyrtec tab — Alertam 120 (a tablet before sleep for a week)</li><li><b>Nasal steroid spray:</b> Beclo spray — two puffs in each nostril twice daily</li><li><b>Alkaline nasal wash/inhalation:</b> Alka-misr packs — Nasal clean packs: one sachet in half a cup of warm water, inhaled or used to wash the nose twice daily</li></ol><h4>Allergic Rhinitis prescription</h4><table><thead><tr><th>Rx</th><th>Dose</th></tr></thead><tbody><tr><td>Zyrtec tab</td><td>A tablet before sleep for a week</td></tr><tr><td>Beclo spray</td><td>Two puffs in each nostril twice daily for a week</td></tr><tr><td>Nasal clean packs</td><td>One sachet in half a cup of warm water, inhaled or used to wash the nose twice daily</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong></strong><p>With the instructions written on the back of the prescription.</p></div><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The names: Lorano = Loratadine, Zyrtec = Cetirizine (may cause mild drowsiness in some people; therefore before sleep), Alertam 120 = Fexofenadine 120 mg (usually once daily), Beclo = Beclomethasone, Nasotal = Sodium cromoglicate (needs continued use 3–4 times a day for its effect and is started before the season). Current guidance considers the <b>nasal steroid spray</b> the most effective for moderate/persistent symptoms. Nasal washing: use only boiled and cooled or sterile water. The dose and duration are per the physician.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p>الأعراض (عطس/رشح/هرش/احتقان)، توقيتها (موسمية؟)، أمراض الحساسية المصاحبة (ربو/إكزيما)، المحفزات في البيت والشغل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اعطِ الدواء صح</strong><p>مضاد الهستامين قبل النوم. بخاخ الكورتيزون: رج الزجاجة، انفخ الأنف أولاً، رأس لقدام، وجّه البخاخ بعيداً عن الحاجز الأنفي، تنفس بهدوء. Nasotal ٣ مرات يومياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>غسيل الأنف</strong><p>كيس على نص كوب ماء دافئ (مغلي ومبرد)، مرتين يومياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>قلل المحفز</strong><p>إبعاد التراب والسجاد، غطاء مرتبة، تجنب فتح الشبابيك وقت ذروة حبوب اللقاح (الربيع).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب</strong><p>نعاس وجفاف فم (مضادات الهستامين)، رعاف أو جفاف أنف (الكورتيزون)، تفاقم الربو.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وثّق</strong><p>الأعراض، الأدوية وجرعاتها، التثقيف.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess</strong><p>Symptoms (sneezing/runny nose/itching/congestion), their timing (seasonal?), accompanying allergic diseases (asthma/eczema), triggers at home and work.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Give the drug correctly</strong><p>The antihistamine before sleep. Steroid spray: shake the bottle, blow the nose first, head forward, aim the spray away from the nasal septum, breathe gently. Nasotal 3 times daily.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Nasal washing</strong><p>A sachet in half a cup of warm water (boiled and cooled), twice daily.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Reduce the trigger</strong><p>Remove dust and carpets, a mattress cover, avoid opening windows at the peak of pollen (spring).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Monitor</strong><p>Drowsiness and dry mouth (antihistamines), nosebleed or nasal dryness (steroid), worsening asthma.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Document</strong><p>The symptoms, the drugs and their doses, the education.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>ارجع للطبيب لو</strong><ul><li>صفير أو ضيق نفس أو كحة (ربو)</li><li>تورم الوش أو الحلق أو صعوبة بلع (حساسية شديدة)</li><li>أعراض أنف من جهة واحدة، رعاف متكرر</li><li>حرارة وإفراز أخضر بعد أسبوع (التهاب جيوب)</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Return to the physician if</strong><ul><li>Wheezing, shortness of breath, or cough (asthma)</li><li>Swelling of the face or throat or difficulty swallowing (severe allergy)</li><li>One-sided nasal symptoms, repeated nosebleeds</li><li>Fever and green discharge after a week (sinusitis)</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اعرف اللي بيحسسك وابعد عنه.</li><li>مضاد الحساسية قبل النوم لمدة أسبوع.</li><li>البخاخ بختين بكل فتحة مرتين يومياً بانتظام (تأثيره بياخد أيام).</li><li>غسيل الأنف بالكيس في نص كوب ماء دافئ مرتين يومياً.</li><li>Nasotal قبل الموسم وفي المواسم ٣ مرات يومياً.</li><li>لا تقود عند النعاس.</li></ul>",
+   "en": "<ul><li>Know what triggers your allergy and stay away from it.</li><li>The allergy drug before sleep for a week.</li><li>The spray two puffs in each nostril twice daily regularly (its effect takes days).</li><li>Nasal washing with the sachet in half a cup of warm water twice daily.</li><li>Nasotal before the season and during seasons 3 times daily.</li><li>Do not drive if drowsy.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "أشهر في الربيع (مايو ويونيو)",
+   "غالباً مصاحبة بحساسية العين أو الصدر أو الجلد (Atopy)",
+   "الأعراض: عطس، رشح شفاف، هرش، احتقان",
+   "الوقاية: Nasotal spray (مثبّت الخلايا البدينة)",
+   "مضاد هستامين لا يسبب النعاس قبل النوم لمدة أسبوع",
+   "بخاخ الكورتيزون (Beclo) بختين بكل فتحة مرتين يومياً + غسيل الأنف القلوي"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الحساسية الموسمية للأنف (Seasonal allergic rhinitis) أشهر في <b>الربيع (مايو ويونيو)</b>، وبتحصل بعد التعرض لحاجة المريض عنده حساسية منها زي التراب وحبوب اللقاح.</p><p>غالباً بتلاقي مع بعض: <b>حساسية الأنف + التهاب الملتحمة + الربو + حساسية الجلد (Atopy)</b>؛ يعني المريض غالباً عنده حساسية في أماكن تانية زي عينه أو صدره أو جلده.</p>[[slot:dis-405-pathway|حساسية الأنف: من السبب للعلاج|/diseases/img/dis-405-pathway.svg]]"
-    },
-    "signs": {
-      "ar": "<h4>الأعراض</h4><table><thead><tr><th>العَرَض</th><th>بالعربي</th></tr></thead><tbody><tr><td>Sneezing</td><td>عطس</td></tr><tr><td>Rhinorrhea</td><td>رشح من الأنف (سائل شفاف)</td></tr><tr><td>Itching in nose or eye</td><td>هرش في الأنف أو العين</td></tr><tr><td>Itchy throat</td><td>هرش في سقف الحلق</td></tr><tr><td>Nasal congestion</td><td>احتقان في الأنف</td></tr><tr><td>Symptoms of allergic conjunctivitis</td><td>هرش واحمرار ودموع في العين</td></tr></tbody></table>"
-    },
-    "causes": {
-      "ar": "<ul><li>التراب (Dust)، حبوب اللقاح (Pollen)، شعر الحيوانات، العفن</li><li>قابلية وراثية (Atopy)</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>تشخيص إكلينيكي (التاريخ الموسمي والأعراض)</li><li>اختبارات الحساسية (Skin prick / IgE) بأمر الطبيب للحالات المستمرة (إضافة)</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>الوقاية (Prophylaxis)</h4><p>ممكن الوقاية من حدوث حساسية بالأنف أثناء موسم الحساسية عن طريق استخدام <b>مثبّت الخلايا البدينة (Mast cell stabilizer)</b>:</p><table><thead><tr><th>الدواء</th><th>الجرعة</th></tr></thead><tbody><tr><td><b>Nasotal spray</b></td><td>بخة بكل فتحة أنف ٣ مرات يومياً أثناء مواسم الحساسية</td></tr></tbody></table><h4>العلاج</h4><ol><li><b>تجنب التعرض للمحفز (Avoid allergen):</b> يحاول يعرف هو عنده حساسية لايه ويبعد عنه</li><li><b>مضاد هستامين بالفم</b> يفضل استعمال المضادات التي لا تسبب النعاس: Lorano tab — Zyrtec tab — Alertam 120 (قرص قبل النوم لمدة أسبوع)</li><li><b>بخاخ كورتيزون للأنف:</b> Beclo spray — بختين بكل فتحة أنف مرتين يومياً</li><li><b>غسيل/استنشاق قلوي للأنف:</b> Alka-misr packs — Nasal clean packs: كيس على نص كوب ماء دافئ، يتم استنشاقه أو غسل الأنف به مرتين يومياً</li></ol><h4>روشتة Allergic Rhinitis</h4><table><thead><tr><th>Rx</th><th>الجرعة</th></tr></thead><tbody><tr><td>Zyrtec tab</td><td>قرص قبل النوم لمدة أسبوع</td></tr><tr><td>Beclo spray</td><td>بختين بكل فتحة أنف يومياً مرتين لمدة أسبوع</td></tr><tr><td>Nasal clean packs</td><td>كيس على نصف كوب ماء دافئ، يتم استنشاقه أو غسل الأنف به مرتين يومياً</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong></strong><p>مع كتابة التعليمات على ظهر الروشتة.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الأسماء حسب المراجع: Lorano = Loratadine، Zyrtec = Cetirizine (ممكن يسبب نعاساً خفيفاً عند البعض؛ لذلك قبل النوم)، Alertam 120 = Fexofenadine 120 mg (عادة مرة يومياً)، Beclo = Beclomethasone، Nasotal = Sodium cromoglicate (يحتاج استمرار ٣–٤ مرات لتأثيره ويُبدأ قبل الموسم). الإرشادات الحديثة (ARIA) تعتبر <b>بخاخ الكورتيزون الأنفي</b> الأكثر فعالية للأعراض المتوسطة/المستمرة. غسيل الأنف: استخدم ماء مغلي ومبرد أو معقم فقط. الجرعة والمدة حسب الطبيب.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p>الأعراض (عطس/رشح/هرش/احتقان)، توقيتها (موسمية؟)، أمراض الحساسية المصاحبة (ربو/إكزيما)، المحفزات في البيت والشغل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اعطِ الدواء صح</strong><p>مضاد الهستامين قبل النوم. بخاخ الكورتيزون: رج الزجاجة، انفخ الأنف أولاً، رأس لقدام، وجّه البخاخ بعيداً عن الحاجز الأنفي، تنفس بهدوء. Nasotal ٣ مرات يومياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>غسيل الأنف</strong><p>كيس على نص كوب ماء دافئ (مغلي ومبرد)، مرتين يومياً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>قلل المحفز</strong><p>إبعاد التراب والسجاد، غطاء مرتبة، تجنب فتح الشبابيك وقت ذروة حبوب اللقاح (الربيع).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>راقب</strong><p>نعاس وجفاف فم (مضادات الهستامين)، رعاف أو جفاف أنف (الكورتيزون)، تفاقم الربو.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>وثّق</strong><p>الأعراض، الأدوية وجرعاتها، التثقيف.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>ارجع للطبيب لو</strong><ul><li>صفير أو ضيق نفس أو كحة (ربو)</li><li>تورم الوش أو الحلق أو صعوبة بلع (حساسية شديدة)</li><li>أعراض أنف من جهة واحدة، رعاف متكرر</li><li>حرارة وإفراز أخضر بعد أسبوع (التهاب جيوب)</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اعرف اللي بيحسسك وابعد عنه.</li><li>مضاد الحساسية قبل النوم لمدة أسبوع.</li><li>البخاخ بختين بكل فتحة مرتين يومياً بانتظام (تأثيره بياخد أيام).</li><li>غسيل الأنف بالكيس في نص كوب ماء دافئ مرتين يومياً.</li><li>Nasotal قبل الموسم وفي المواسم ٣ مرات يومياً.</li><li>لا تقود عند النعاس.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "أشهر في الربيع (مايو ويونيو)",
-      "غالباً مصاحبة بحساسية العين أو الصدر أو الجلد (Atopy)",
-      "الأعراض: عطس، رشح شفاف، هرش، احتقان",
-      "الوقاية: Nasotal spray (مثبّت الخلايا البدينة)",
-      "مضاد هستامين لا يسبب النعاس قبل النوم لمدة أسبوع",
-      "بخاخ الكورتيزون (Beclo) بختين بكل فتحة مرتين يومياً + غسيل الأنف القلوي"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "Nasotal spray من أي نوع؟"
-      },
-      "options": [
-        {
-          "ar": "مثبّت الخلايا البدينة"
-        },
-        {
-          "ar": "مضاد حيوي"
-        },
-        {
-          "ar": "كورتيزون"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Mast cell stabilizer للوقاية."
-      }
-    },
-    {
-      "q": {
-        "ar": "جرعة Beclo spray؟"
-      },
-      "options": [
-        {
-          "ar": "بختين بكل فتحة مرتين يومياً"
-        },
-        {
-          "ar": "مرة كل أسبوع"
-        },
-        {
-          "ar": "١٠ بخات"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "حسب المراجع."
-      }
-    },
-    {
-      "q": {
-        "ar": "أنسب مضادات الهستامين؟"
-      },
-      "options": [
-        {
-          "ar": "اللي ما بتسببش نعاس"
-        },
-        {
-          "ar": "اللي بتسبب نعاس"
-        },
-        {
-          "ar": "لا فرق"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يفضل غير المنومة."
-      }
-    },
-    {
-      "q": {
-        "ar": "غسيل الأنف بالكيس القلوي؟"
-      },
-      "options": [
-        {
-          "ar": "نصف كوب ماء دافئ مرتين يومياً"
-        },
-        {
-          "ar": "يومياً ١٠ مرات"
-        },
-        {
-          "ar": "عبر الفم فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "كيس على نص كوب ماء دافئ."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ARIA guidelines — allergic rhinitis (نُقلت من معرفة المرجع؛ لم تُفتح الصفحة)"
-    },
-    {
-      "title": "AAAAI/ACAAI practice parameter: Rhinitis"
-    }
-  ],
-  "rx": [
-    {
-      "category": "الجهاز التنفسي والحساسية",
-      "condition_ar": "حساسية الأنف الموسمية",
-      "condition_en": "Allergic rhinitis",
-      "items": [
-        {
-          "drug_name": "Nasotal spray (sodium cromoglicate)",
-          "dose": "بخة بكل فتحة أنف ٣ مرات يومياً أثناء مواسم الحساسية",
-          "note": "وقاية"
-        },
-        {
-          "drug_name": "Lorano (loratadine)",
-          "dose": "قرص قبل النوم لمدة أسبوع",
-          "note": "مضاد هستامين لا يسبب نعاساً"
-        },
-        {
-          "drug_name": "Zyrtec (cetirizine)",
-          "dose": "قرص قبل النوم لمدة أسبوع",
-          "note": "مضاد هستامين"
-        },
-        {
-          "drug_name": "Alertam 120 (fexofenadine)",
-          "dose": "قرص قبل النوم لمدة أسبوع",
-          "note": "مضاد هستامين"
-        },
-        {
-          "drug_name": "Beclo spray (beclomethasone)",
-          "dose": "بختين بكل فتحة أنف مرتين يومياً",
-          "note": "كورتيزون أنفي"
-        },
-        {
-          "drug_name": "Alka-misr packs / Nasal clean packs",
-          "dose": "كيس على نصف كوب ماء دافئ، استنشاق أو غسل الأنف مرتين يومياً",
-          "note": "غسيل قلوي"
-        }
-      ],
-      "clinical_note": "تجنب المحفز أولاً."
-    }
+  "en": [
+   "Most common in spring (May and June)",
+   "Often accompanied by eye, chest, or skin allergy (Atopy)",
+   "Symptoms: sneezing, clear runny nose, itching, congestion",
+   "Prevention: Nasotal spray (mast cell stabilizer)",
+   "A non-drowsy antihistamine before sleep for a week",
+   "Steroid spray (Beclo) two puffs in each nostril twice daily + alkaline nasal wash"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "Nasotal spray من أي نوع؟",
+    "en": "What type is Nasotal spray?"
+   },
+   "options": [
+    {
+     "ar": "مثبّت الخلايا البدينة",
+     "en": "Mast cell stabilizer"
+    },
+    {
+     "ar": "مضاد حيوي",
+     "en": "Antibiotic"
+    },
+    {
+     "ar": "كورتيزون",
+     "en": "Steroid"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Mast cell stabilizer للوقاية.",
+    "en": "A mast cell stabilizer for prevention."
+   }
+  },
+  {
+   "q": {
+    "ar": "جرعة Beclo spray؟",
+    "en": "The dose of Beclo spray?"
+   },
+   "options": [
+    {
+     "ar": "بختين بكل فتحة مرتين يومياً",
+     "en": "Two puffs in each nostril twice daily"
+    },
+    {
+     "ar": "مرة كل أسبوع",
+     "en": "Once a week"
+    },
+    {
+     "ar": "١٠ بخات",
+     "en": "10 puffs"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "حسب المراجع.",
+    "en": "As stated in the prescription."
+   }
+  },
+  {
+   "q": {
+    "ar": "أنسب مضادات الهستامين؟",
+    "en": "The most suitable antihistamines?"
+   },
+   "options": [
+    {
+     "ar": "اللي ما بتسببش نعاس",
+     "en": "The ones that do not cause drowsiness"
+    },
+    {
+     "ar": "اللي بتسبب نعاس",
+     "en": "The ones that cause drowsiness"
+    },
+    {
+     "ar": "لا فرق",
+     "en": "No difference"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يفضل غير المنومة.",
+    "en": "Non-sedating ones are preferred."
+   }
+  },
+  {
+   "q": {
+    "ar": "غسيل الأنف بالكيس القلوي؟",
+    "en": "Nasal washing with the alkaline sachet?"
+   },
+   "options": [
+    {
+     "ar": "نصف كوب ماء دافئ مرتين يومياً",
+     "en": "Half a cup of warm water twice daily"
+    },
+    {
+     "ar": "يومياً ١٠ مرات",
+     "en": "10 times daily"
+    },
+    {
+     "ar": "عبر الفم فقط",
+     "en": "By mouth only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "كيس على نص كوب ماء دافئ.",
+    "en": "A sachet in half a cup of warm water."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ARIA guidelines — allergic rhinitis (نُقلت من معرفة المرجع؛ لم تُفتح الصفحة)"
+  },
+  {
+   "title": "AAAAI/ACAAI practice parameter: Rhinitis"
+  }
+ ],
+ "rx": [
+  {
+   "category": "الجهاز التنفسي والحساسية",
+   "condition_ar": "حساسية الأنف الموسمية",
+   "condition_en": "Allergic rhinitis",
+   "items": [
+    {
+     "drug_name": "Nasotal spray (sodium cromoglicate)",
+     "dose": "بخة بكل فتحة أنف ٣ مرات يومياً أثناء مواسم الحساسية",
+     "note": "وقاية"
+    },
+    {
+     "drug_name": "Lorano (loratadine)",
+     "dose": "قرص قبل النوم لمدة أسبوع",
+     "note": "مضاد هستامين لا يسبب نعاساً"
+    },
+    {
+     "drug_name": "Zyrtec (cetirizine)",
+     "dose": "قرص قبل النوم لمدة أسبوع",
+     "note": "مضاد هستامين"
+    },
+    {
+     "drug_name": "Alertam 120 (fexofenadine)",
+     "dose": "قرص قبل النوم لمدة أسبوع",
+     "note": "مضاد هستامين"
+    },
+    {
+     "drug_name": "Beclo spray (beclomethasone)",
+     "dose": "بختين بكل فتحة أنف مرتين يومياً",
+     "note": "كورتيزون أنفي"
+    },
+    {
+     "drug_name": "Alka-misr packs / Nasal clean packs",
+     "dose": "كيس على نصف كوب ماء دافئ، استنشاق أو غسل الأنف مرتين يومياً",
+     "note": "غسيل قلوي"
+    }
+   ],
+   "clinical_note": "تجنب المحفز أولاً."
+  }
+ ]
 }

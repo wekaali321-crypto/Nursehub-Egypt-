@@ -1,298 +1,377 @@
 {
-  "id": "dis-823",
-  "num": 823,
-  "system": "neuro",
-  "icon": "⚡",
-  "level": 1,
-  "title": {
-    "ar": "أساسيات الألم (فسيولوجيا وتقييم): البوابة، الألم المنعكس، مقاييس الألم",
-    "en": "Pain Basics: Physiology & Assessment"
+ "id": "dis-823",
+ "num": 823,
+ "system": "neuro",
+ "icon": "⚡",
+ "level": 1,
+ "title": {
+  "ar": "أساسيات الألم (فسيولوجيا وتقييم): البوابة، الألم المنعكس، مقاييس الألم",
+  "en": "Pain Basics: Physiology & Assessment"
+ },
+ "teaser": {
+  "ar": "مسار الألم، المثبطات الطبيعية، نظرية البوابة، الألم الحشوي والمنعكس، ومقاييس الألم (Likert وWong ومفكرة الألم).",
+  "en": "The pain pathway, natural inhibitors, gate control theory, visceral and referred pain, and pain scales (Likert, Wong, and the pain diary)."
+ },
+ "chips": [
+  {
+   "ar": "نظرية البوابة",
+   "en": "Gate theory"
   },
-  "teaser": {
-    "ar": "مسار الألم، المثبطات الطبيعية، نظرية البوابة، الألم الحشوي والمنعكس، ومقاييس الألم (Likert وWong ومفكرة الألم)."
+  {
+   "ar": "مقياس 0-10",
+   "en": "0-10 scale"
   },
-  "chips": [
-    {
-      "ar": "نظرية البوابة"
-    },
-    {
-      "ar": "مقياس 0-10"
-    },
-    {
-      "ar": "Wong"
-    }
+  {
+   "ar": "Wong",
+   "en": "Wong"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>الألم يُحس عبر نهايات عصبية منتشرة في الأنسجة والجلد. <b>المخ هو العضو الوحيد بدون مستقبلات ألم.</b> التنبيه يدفع للتصرف لإزالة السبب. النبضة تسير عبر الألياف الحسية للأعصاب الشوكية إلى الحبل الشوكي ثم المخ، الذي يفسّر الدرجة والمصدر، ويقدر أن يأمر بإفراز مواد تثبط الألم: <b>إنكيفالين، سيروتونين، إندورفين</b>.</p>[[slot:dis-823-gate|مسار الألم|/diseases/img/dis-823-gate.svg]]\n<div class=\"cs-box cs-info\"><strong>روابط</strong><p><a href=\"/diseases/dis-824\">الألم الحاد</a> · <a href=\"/diseases/dis-825\">الألم المزمن</a> · <a href=\"/diseases/dis-831\">دليل المسكنات</a></p></div>",
+   "en": "<p>Pain is felt through nerve endings spread throughout the tissues and skin. <b>The brain is the only organ without pain receptors.</b> The alert drives action to remove the cause. The impulse travels through the sensory fibers of the spinal nerves to the spinal cord and then the brain, which interprets the degree and source, and can order the release of substances that inhibit pain: <b>enkephalin, serotonin, endorphin</b>.</p>[[slot:dis-823-gate|The pain pathway|/diseases/img/dis-823-gate.svg]]\n<div class=\"cs-box cs-info\"><strong>Links</strong><p><a href=\"/diseases/dis-824\">Acute pain</a> · <a href=\"/diseases/dis-825\">Chronic pain</a> · <a href=\"/diseases/dis-831\">Analgesics guide</a></p></div>"
+  },
+  "causes": {
+   "ar": "<h4>أنواع</h4><ul><li><b>الألم الحشوي (Visceral):</b> من عضو بسبب جراحة أو مغص أو نقص تروية أو شد أو تشنج</li><li><b>الألم المنعكس (Referred):</b> يُحس في مكان غير مصدره؛ ألم القلب في الذراع والفك والظهر لأن النبضات تسير في نفس الدائرة العصبية فيرتبك المخ</li><li>الألم العاطفي: له أعراض متنوعة</li></ul><h4>نظرية البوابة (Gate control)</h4><p>هناك «بوابة» في الحبل الشوكي تتحكم في الإشارات الصاعدة؛ والمخ يتحكم فيها لتمرير الإشارة كلياً أو جزئياً. والتفسير يتأثر بالانفعالات والذكريات والتوقعات والثقافة، فاشتغال العقل بشيء آخر (مثل تقنيات لاماز أثناء الولادة) يخفف الألم. أشخاص مختلفون يحسون شدة مختلفة لنفس الإصابة.</p><h4>فيزيولوجيا إضافية</h4><ul><li>مواد كيميائية في الجسم تزيد حساسية الألم (مثل البروستاغلاندين والمادة P) وأخرى تقلله (الإندورفين والإنكيفالين).</li><li><strong>Nociceptors:</strong> مستقبلات ألم على النهايات العصبية تستجيب انتقائياً للمنبهات المؤلمة، وانتقال الألم يسمى nociception.</li><li>COX-1: يشارك في تكوين البروستاغلاندين والصفائح ويحمي المعدة من القرحة.</li><li>COX-2: يظهر في الالتهاب والألم والحمى، وتثبيطه يقلل الأعراض.</li><li>الإندورفين والإنكيفالين أفيونات ذاتية تقلل الإحساس.</li></ul><p>تثبيط COX-2 يقلل أعراض الحمى والالتهاب والألم ويثبط المادة P (substance P).</p>",
+   "en": "<h4>Types</h4><ul><li><b>Visceral pain:</b> from an organ due to surgery, colic, ischemia, stretching, or spasm</li><li><b>Referred pain:</b> felt in a place other than its source; heart pain in the arm, jaw, and back because the impulses travel in the same nerve circuit so the brain gets confused</li><li>Emotional pain: it has varied symptoms</li></ul><h4>Gate control theory</h4><p>There is a \"gate\" in the spinal cord that controls the ascending signals; and the brain controls it to pass the signal fully or partially. The interpretation is affected by emotions, memories, expectations, and culture, so occupying the mind with something else (such as Lamaze techniques during labor) relieves the pain. Different people feel different intensity for the same injury.</p><h4>Additional physiology</h4><ul><li>Chemicals in the body increase pain sensitivity (such as prostaglandin and substance P) and others reduce it (endorphin and enkephalin).</li><li><strong>Nociceptors:</strong> pain receptors on the nerve endings that respond selectively to painful stimuli, and the transmission of pain is called nociception.</li><li>COX-1: takes part in forming prostaglandin and platelets and protects the stomach from ulcers.</li><li>COX-2: appears in inflammation, pain, and fever, and inhibiting it reduces the symptoms.</li><li>Endorphin and enkephalin are endogenous opioids that reduce sensation.</li></ul><p>Inhibiting COX-2 reduces the symptoms of fever, inflammation, and pain and inhibits substance P.</p>"
+  },
+  "signs": {
+   "ar": "<p>تقييم الألم يشمل: المكان، الشدة، النوع (حاد/خفقان/حرقان/تقلص)، المدة، المحفزات، المخففات، التأثير على النوم والنشاط.</p><h4>أنواع وتأثيرات</h4><ul><li>حاد: بداية مفاجئة مرتبطة بإصابة، يستمر من ثوانٍ إلى ستة أشهر، ويسبب زيادة النتاج القلبي وضعف استجابة الإنسولين وكبت المناعة وزيادة الكورتيزول واحتباس السوائل.</li><li>مزمن: يستمر أكثر من ستة أشهر، ويسبب كبت المناعة والاكتئاب والعجز والتعب والغضب وعدم القدرة على الأنشطة اليومية.</li></ul><h4>عوامل تؤثر على الألم</h4><ul><li>الخبرة السابقة</li><li>القلق والاكتئاب يخفضان عتبة الألم</li><li>العمر والجنس</li><li>الثقافة</li></ul>[[slot:dis-823-pain-factors|عوامل وتأثيرات الألم — رسم من إعداد الموقع|/diseases/img/dis-823-pain-factors.svg]]\n[[slot:dis-823-types|أنواع الألم وتقييمه — رسم من إعداد الموقع|/diseases/img/dis-823-types.svg]]<p>تذكير: <b>الألم الوهمي (Phantom)</b> يحس به المريض في عضو بتر وهو <b>حقيقي</b> وليس خيالاً. تقييم الألم يتبع OPQRST: البداية، المحرضات، الوصف، الانتشار، الشدة، الزمن. مظاهر الألم: شحوب، تعرق، سرعة نبض فوق 100، ضغط فوق 140، غثيان وقيء حاد، إغماء/دوخة، قلق/خوف (في المزمن أو الرضوض)، قبضة مشدودة، تململ.</p>",
+   "en": "<p>Pain assessment includes: location, intensity, type (sharp/throbbing/burning/cramping), duration, triggers, relievers, and the effect on sleep and activity.</p><h4>Types and effects</h4><ul><li>Acute: sudden onset related to an injury, lasts from seconds to six months, and causes increased cardiac output, weakened insulin response, immune suppression, increased cortisol, and fluid retention.</li><li>Chronic: lasts more than six months, and causes immune suppression, depression, disability, fatigue, anger, and inability to do daily activities.</li></ul><h4>Factors that affect pain</h4><ul><li>Previous experience</li><li>Anxiety and depression lower the pain threshold</li><li>Age and sex</li><li>Culture</li></ul>[[slot:dis-823-pain-factors|Factors and effects of pain — illustration prepared by the site|/diseases/img/dis-823-pain-factors.svg]]\n[[slot:dis-823-types|Types of pain and its assessment — illustration prepared by the site|/diseases/img/dis-823-types.svg]]<p>Reminder: <b>phantom pain</b> is felt by the patient in an amputated limb and it is <b>real</b>, not imaginary. Pain assessment follows OPQRST: onset, provocation, quality, radiation, severity, time. Manifestations of pain: pallor, sweating, pulse over 100, pressure over 140, acute nausea and vomiting, fainting/dizziness, anxiety/fear (in chronic pain or trauma), clenched fist, restlessness.</p>"
+  },
+  "tests": {
+   "ar": "<table><thead><tr><th>الأداة</th><th>الاستعمال</th></tr></thead><tbody><tr><td>مقياس Likert رقمي 0-10</td><td>0 لا ألم، 10 أسوأ ألم</td></tr><tr><td>مقياس Wong للأطفال (وجوه)</td><td>من وجه سعيد إلى باكٍ</td></tr><tr><td>مفكرة الألم (Pain diary)</td><td>يسجل المريض الشدة، المكان، النشاط وقتها، المحفزات، ما خففه؛ تفيد في متابعة تحسن/تدهور الألم واستجابة الأدوية</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>Tool</th><th>Use</th></tr></thead><tbody><tr><td>Numeric Likert scale 0-10</td><td>0 no pain, 10 the worst pain</td></tr><tr><td>Wong scale for children (faces)</td><td>From a happy face to a crying one</td></tr><tr><td>Pain diary</td><td>The patient records the intensity, location, activity at the time, triggers, and what relieved it; useful for following the improvement/worsening of pain and the response to drugs</td></tr></tbody></table>"
+  },
+  "treatment": {
+   "ar": "<p>العلاج حسب النوع والشدة: <a href=\"/diseases/dis-824\">حاد</a>، <a href=\"/diseases/dis-825\">مزمن</a>، <a href=\"/diseases/dis-826\">عصبي</a>. تذكر أن الألم «ما يقوله المريض».</p><h4>مسكنات أخرى بحسب الشدة</h4><ul><li>غير أفيونية: NSAIDs (ketorolac, ibuprofen) للألم الخفيف؛ acetaminophen وقد يسبب سمية كبدية ويمكن إعطاؤه مع NSAIDs؛ والـ acetaminophen الوريدي (IV) مصرح حديثاً لاستعمال قصير</li><li>أفيونية: tramadol، codeine، meperidine، oxycodone، fentanyl، morphine، hydromorphone</li><li>أخرى: PCA، أدوية عند اللزوم (PRN)، متعدد الأنماط، إعطاء منتظم على مدار الساعة، موضعي، تخدير موضعي، داخل القراب</li></ul><p>أسماء أدوية أفيونية متداولة في المراجع: tramadol، codeine مع acetaminophen (مثل Tylenol 3)، meperidine، oxycodone، fentanyl، morphine، hydromorphone (Dilaudid). أما propoxyphene مع acetaminophen فقد سُحب في كثير من الدول. الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p>",
+   "en": "<p>Treatment depends on the type and severity: <a href=\"/diseases/dis-824\">acute</a>, <a href=\"/diseases/dis-825\">chronic</a>, <a href=\"/diseases/dis-826\">neuropathic</a>. Remember that pain is \"what the patient says it is\".</p><h4>Other analgesics by severity</h4><ul><li>Non-opioid: NSAIDs (ketorolac, ibuprofen) for mild pain; acetaminophen may cause liver toxicity and can be given with NSAIDs; and IV acetaminophen is recently approved for short-term use</li><li>Opioid: tramadol, codeine, meperidine, oxycodone, fentanyl, morphine, hydromorphone</li><li>Other: PCA, as-needed drugs (PRN), multimodal, around-the-clock regular administration, topical, local anesthesia, intrathecal</li></ul><p>Commonly used opioid names: tramadol, codeine with acetaminophen (such as Tylenol 3), meperidine, oxycodone, fentanyl, morphine, hydromorphone (Dilaudid). Propoxyphene with acetaminophen has been withdrawn in many countries. Doses are for learning; always verify with the physician/pharmacist before giving.</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل</strong><p>متى بدأ؟ أين؟ كيف تصفه؟ الشدة 0-10؟ ما يزيده ويخففه؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اختر الأداة</strong><p>Wong للأطفال، مقياس رقمي للبالغين، علامات سلوكية لغير القادر على الكلام (تكشير، أنين، توتر).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>علامات حيوية</strong><p>ارتفاع النبض والضغط والتنفس قد يصاحب الألم الحاد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>عالج وأعد التقييم</strong><p>بعد المسكن بـ 30-60 دقيقة (حسب الطريق) سجّل مدى التحسن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>وثّق</strong><p>الشدة قبل وبعد، والدواء، والآثار الجانبية.</p></div></div></div><h4>علاجات غير دوائية</h4><ul><li>تنبيه جلدي (TENS)</li><li>تدليك</li><li>حرارة وبرودة</li><li>إلهاء واسترخاء وصور موجهة</li><li>تنويم إيحائي وموسيقى</li><li>الإبر الصينية</li></ul><h4>تقييم الألم المركّز</h4><ul><li>الشدة 0-10</li><li>التوقيت: متى بدأ وماذا كان يحدث؟</li><li>الموقع وهل ينتشر؟</li><li>المدة</li><li>الطبيعة: كليل أم حاد أم طاعن</li><li>ما يزيده وما يخففه</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Ask</strong><p>When did it start? Where? How do you describe it? Intensity 0-10? What increases and relieves it?</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Choose the tool</strong><p>Wong for children, the numeric scale for adults, behavioral signs for those who cannot speak (grimacing, moaning, tension).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Vital signs</strong><p>A rise in pulse, pressure, and respiration may accompany acute pain.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Treat and reassess</strong><p>30-60 minutes after the analgesic (depending on the route) record the extent of improvement.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Document</strong><p>The intensity before and after, the drug, and the side effects.</p></div></div></div><h4>Non-drug treatments</h4><ul><li>Skin stimulation (TENS)</li><li>Massage</li><li>Heat and cold</li><li>Distraction, relaxation, and guided imagery</li><li>Hypnosis and music</li><li>Acupuncture</li></ul><h4>Focused pain assessment</h4><ul><li>Intensity 0-10</li><li>Timing: when did it start and what was happening?</li><li>Location and does it radiate?</li><li>Duration</li><li>Nature: dull, sharp, or stabbing</li><li>What increases it and what relieves it</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ:</strong><ul><li>ألم صدر أو ألم بطن حاد مفاجئ</li><li>ألم لا يستجيب للمسكن الموصوف</li><li>ألم مع حمى أو خدر أو ضعف جديد</li><li>نعاس أو تنفس بطيء بعد مسكن أفيوني</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report:</strong><ul><li>Chest pain or sudden acute abdominal pain</li><li>Pain that does not respond to the prescribed analgesic</li><li>Pain with fever or numbness or new weakness</li><li>Drowsiness or slow breathing after an opioid analgesic</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>قولي مقدار ألمك من 0 إلى 10</li><li>سجّل مفكرة ألم</li><li>لا تنتظر الألم الشديد للعلاج</li><li>وسائل غير دوائية تساعد: دفء، استرخاء، إلهاء</li></ul>",
+   "en": "<ul><li>Tell us the amount of your pain from 0 to 10</li><li>Keep a pain diary</li><li>Do not wait for severe pain to treat it</li><li>Non-drug methods help: warmth, relaxation, distraction</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "المخ بلا مستقبلات ألم",
+   "الألم الحشوي من عضو والمنعكس يُحس بمكان آخر",
+   "البوابة تتحكم في الإشارات والمخ يفسر بحسب الانفعال والثقافة",
+   "المثبطات الطبيعية: إندورفين، إنكيفالين، سيروتونين",
+   "Likert 0-10 وWong للأطفال ومفكرة الألم",
+   "المريض هو أفضل من يصف ألمه",
+   "COX-1 يحمي المعدة وCOX-2 مرتبط بالالتهاب",
+   "القلق والاكتئاب يخفضان عتبة الألم",
+   "تقييم الألم المركّز: الشدة والتوقيت والموقع والمدة والطبيعة"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>الألم يُحس عبر نهايات عصبية منتشرة في الأنسجة والجلد. <b>المخ هو العضو الوحيد بدون مستقبلات ألم.</b> التنبيه يدفع للتصرف لإزالة السبب. النبضة تسير عبر الألياف الحسية للأعصاب الشوكية إلى الحبل الشوكي ثم المخ، الذي يفسّر الدرجة والمصدر، ويقدر أن يأمر بإفراز مواد تثبط الألم: <b>إنكيفالين، سيروتونين، إندورفين</b>.</p>[[slot:dis-823-gate|مسار الألم|/diseases/img/dis-823-gate.svg]]\n<div class=\"cs-box cs-info\"><strong>روابط</strong><p><a href=\"/diseases/dis-824\">الألم الحاد</a> · <a href=\"/diseases/dis-825\">الألم المزمن</a> · <a href=\"/diseases/dis-831\">دليل المسكنات</a></p></div>"
-    },
-    "causes": {
-      "ar": "<h4>أنواع</h4><ul><li><b>الألم الحشوي (Visceral):</b> من عضو بسبب جراحة أو مغص أو نقص تروية أو شد أو تشنج</li><li><b>الألم المنعكس (Referred):</b> يُحس في مكان غير مصدره؛ ألم القلب في الذراع والفك والظهر لأن النبضات تسير في نفس الدائرة العصبية فيرتبك المخ</li><li>الألم العاطفي: له أعراض متنوعة</li></ul><h4>نظرية البوابة (Gate control)</h4><p>هناك «بوابة» في الحبل الشوكي تتحكم في الإشارات الصاعدة؛ والمخ يتحكم فيها لتمرير الإشارة كلياً أو جزئياً. والتفسير يتأثر بالانفعالات والذكريات والتوقعات والثقافة، فاشتغال العقل بشيء آخر (مثل تقنيات لاماز أثناء الولادة) يخفف الألم. أشخاص مختلفون يحسون شدة مختلفة لنفس الإصابة.</p><h4>فيزيولوجيا إضافية</h4><ul><li>مواد كيميائية في الجسم تزيد حساسية الألم (مثل البروستاغلاندين والمادة P) وأخرى تقلله (الإندورفين والإنكيفالين).</li><li><strong>Nociceptors:</strong> مستقبلات ألم على النهايات العصبية تستجيب انتقائياً للمنبهات المؤلمة، وانتقال الألم يسمى nociception.</li><li>COX-1: يشارك في تكوين البروستاغلاندين والصفائح ويحمي المعدة من القرحة.</li><li>COX-2: يظهر في الالتهاب والألم والحمى، وتثبيطه يقلل الأعراض.</li><li>الإندورفين والإنكيفالين أفيونات ذاتية تقلل الإحساس.</li></ul><p>تثبيط COX-2 يقلل أعراض الحمى والالتهاب والألم ويثبط المادة P (substance P).</p>"
-    },
-    "signs": {
-      "ar": "<p>تقييم الألم يشمل: المكان، الشدة، النوع (حاد/خفقان/حرقان/تقلص)، المدة، المحفزات، المخففات، التأثير على النوم والنشاط.</p><h4>أنواع وتأثيرات</h4><ul><li>حاد: بداية مفاجئة مرتبطة بإصابة، يستمر من ثوانٍ إلى ستة أشهر، ويسبب زيادة النتاج القلبي وضعف استجابة الإنسولين وكبت المناعة وزيادة الكورتيزول واحتباس السوائل.</li><li>مزمن: يستمر أكثر من ستة أشهر، ويسبب كبت المناعة والاكتئاب والعجز والتعب والغضب وعدم القدرة على الأنشطة اليومية.</li></ul><h4>عوامل تؤثر على الألم</h4><ul><li>الخبرة السابقة</li><li>القلق والاكتئاب يخفضان عتبة الألم</li><li>العمر والجنس</li><li>الثقافة</li></ul>[[slot:dis-823-pain-factors|عوامل وتأثيرات الألم — رسم من إعداد الموقع|/diseases/img/dis-823-pain-factors.svg]]\n[[slot:dis-823-types|أنواع الألم وتقييمه — رسم من إعداد الموقع|/diseases/img/dis-823-types.svg]]<p>تذكير: <b>الألم الوهمي (Phantom)</b> يحس به المريض في عضو بتر وهو <b>حقيقي</b> وليس خيالاً. تقييم الألم يتبع OPQRST: البداية، المحرضات، الوصف، الانتشار، الشدة، الزمن. مظاهر الألم: شحوب، تعرق، سرعة نبض فوق 100، ضغط فوق 140، غثيان وقيء حاد، إغماء/دوخة، قلق/خوف (في المزمن أو الرضوض)، قبضة مشدودة، تململ.</p>"
-    },
-    "tests": {
-      "ar": "<table><thead><tr><th>الأداة</th><th>الاستعمال</th></tr></thead><tbody><tr><td>مقياس Likert رقمي 0-10</td><td>0 لا ألم، 10 أسوأ ألم</td></tr><tr><td>مقياس Wong للأطفال (وجوه)</td><td>من وجه سعيد إلى باكٍ</td></tr><tr><td>مفكرة الألم (Pain diary)</td><td>يسجل المريض الشدة، المكان، النشاط وقتها، المحفزات، ما خففه؛ تفيد في متابعة تحسن/تدهور الألم واستجابة الأدوية</td></tr></tbody></table>"
-    },
-    "treatment": {
-      "ar": "<p>العلاج حسب النوع والشدة: <a href=\"/diseases/dis-824\">حاد</a>، <a href=\"/diseases/dis-825\">مزمن</a>، <a href=\"/diseases/dis-826\">عصبي</a>. تذكر أن الألم «ما يقوله المريض».</p><h4>مسكنات أخرى بحسب الشدة</h4><ul><li>غير أفيونية: NSAIDs (ketorolac, ibuprofen) للألم الخفيف؛ acetaminophen وقد يسبب سمية كبدية ويمكن إعطاؤه مع NSAIDs؛ والـ acetaminophen الوريدي (IV) مصرح حديثاً لاستعمال قصير</li><li>أفيونية: tramadol، codeine، meperidine، oxycodone، fentanyl، morphine، hydromorphone</li><li>أخرى: PCA، أدوية عند اللزوم (PRN)، متعدد الأنماط، إعطاء منتظم على مدار الساعة، موضعي، تخدير موضعي، داخل القراب</li></ul><p>أسماء أدوية أفيونية متداولة في المراجع: tramadol، codeine مع acetaminophen (مثل Tylenol 3)، meperidine، oxycodone، fentanyl، morphine، hydromorphone (Dilaudid). أما propoxyphene مع acetaminophen فقد سُحب في كثير من الدول. الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل</strong><p>متى بدأ؟ أين؟ كيف تصفه؟ الشدة 0-10؟ ما يزيده ويخففه؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اختر الأداة</strong><p>Wong للأطفال، مقياس رقمي للبالغين، علامات سلوكية لغير القادر على الكلام (تكشير، أنين، توتر).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>علامات حيوية</strong><p>ارتفاع النبض والضغط والتنفس قد يصاحب الألم الحاد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>عالج وأعد التقييم</strong><p>بعد المسكن بـ 30-60 دقيقة (حسب الطريق) سجّل مدى التحسن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>وثّق</strong><p>الشدة قبل وبعد، والدواء، والآثار الجانبية.</p></div></div></div><h4>علاجات غير دوائية</h4><ul><li>تنبيه جلدي (TENS)</li><li>تدليك</li><li>حرارة وبرودة</li><li>إلهاء واسترخاء وصور موجهة</li><li>تنويم إيحائي وموسيقى</li><li>الإبر الصينية</li></ul><h4>تقييم الألم المركّز</h4><ul><li>الشدة 0-10</li><li>التوقيت: متى بدأ وماذا كان يحدث؟</li><li>الموقع وهل ينتشر؟</li><li>المدة</li><li>الطبيعة: كليل أم حاد أم طاعن</li><li>ما يزيده وما يخففه</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ:</strong><ul><li>ألم صدر أو ألم بطن حاد مفاجئ</li><li>ألم لا يستجيب للمسكن الموصوف</li><li>ألم مع حمى أو خدر أو ضعف جديد</li><li>نعاس أو تنفس بطيء بعد مسكن أفيوني</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>قولي مقدار ألمك من 0 إلى 10</li><li>سجّل مفكرة ألم</li><li>لا تنتظر الألم الشديد للعلاج</li><li>وسائل غير دوائية تساعد: دفء، استرخاء، إلهاء</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "المخ بلا مستقبلات ألم",
-      "الألم الحشوي من عضو والمنعكس يُحس بمكان آخر",
-      "البوابة تتحكم في الإشارات والمخ يفسر بحسب الانفعال والثقافة",
-      "المثبطات الطبيعية: إندورفين، إنكيفالين، سيروتونين",
-      "Likert 0-10 وWong للأطفال ومفكرة الألم",
-      "المريض هو أفضل من يصف ألمه",
-      "COX-1 يحمي المعدة وCOX-2 مرتبط بالالتهاب",
-      "القلق والاكتئاب يخفضان عتبة الألم",
-      "تقييم الألم المركّز: الشدة والتوقيت والموقع والمدة والطبيعة"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "العضو بدون مستقبلات ألم:"
-      },
-      "options": [
-        {
-          "ar": "المخ"
-        },
-        {
-          "ar": "الجلد"
-        },
-        {
-          "ar": "القلب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "بحسب الفسيولوجيا."
-      }
-    },
-    {
-      "q": {
-        "ar": "ألم القلب في الذراع يسمى:"
-      },
-      "options": [
-        {
-          "ar": "منعكس"
-        },
-        {
-          "ar": "حشوي فقط"
-        },
-        {
-          "ar": "عصبي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Referred pain."
-      }
-    },
-    {
-      "q": {
-        "ar": "مقياس للأطفال:"
-      },
-      "options": [
-        {
-          "ar": "Wong"
-        },
-        {
-          "ar": "CAGE"
-        },
-        {
-          "ar": "Aldrete"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "وجوه."
-      }
-    },
-    {
-      "q": {
-        "ar": "مفكرة الألم تسجل:"
-      },
-      "options": [
-        {
-          "ar": "الشدة والمكان والنشاط والمخفف"
-        },
-        {
-          "ar": "الوزن"
-        },
-        {
-          "ar": "الأكل فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تفيد المتابعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "تثبط الألم طبيعياً:"
-      },
-      "options": [
-        {
-          "ar": "إندورفين"
-        },
-        {
-          "ar": "أنسولين"
-        },
-        {
-          "ar": "كورتيزول"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مع إنكيفالين وسيروتونين."
-      }
-    },
-    {
-      "q": {
-        "ar": "تثبيط COX-2 يفيد في:"
-      },
-      "options": [
-        {
-          "ar": "تقليل الالتهاب والألم والحمى"
-        },
-        {
-          "ar": "حماية جدار المعدة"
-        },
-        {
-          "ar": "زيادة الصفائح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "COX-1 هو الحامي للمعدة، وCOX-2 موجود في الالتهاب."
-      }
-    },
-    {
-      "q": {
-        "ar": "الألم الذي يستمر أكثر من ستة أشهر:"
-      },
-      "options": [
-        {
-          "ar": "مزمن"
-        },
-        {
-          "ar": "حاد"
-        },
-        {
-          "ar": "عابر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يرتبط بالاكتئاب والإرهاق."
-      }
-    },
-    {
-      "q": {
-        "ar": "القلق والاكتئاب:"
-      },
-      "options": [
-        {
-          "ar": "يخفضان عتبة الألم"
-        },
-        {
-          "ar": "يرفعان العتبة"
-        },
-        {
-          "ar": "لا يؤثران"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يزيدان الإحساس بالألم."
-      }
-    },
-    {
-      "q": {
-        "ar": "ألم الفك أثناء الجلطة القلبية نوعه:"
-      },
-      "options": [
-        {
-          "ar": "منعكس"
-        },
-        {
-          "ar": "وهمي"
-        },
-        {
-          "ar": "مزمن"
-        },
-        {
-          "ar": "حاد فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يُحس في مكان بعيد عن المصدر."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي دواء مما يلي أفيوني؟"
-      },
-      "options": [
-        {
-          "ar": "hydromorphone"
-        },
-        {
-          "ar": "ibuprofen"
-        },
-        {
-          "ar": "acetaminophen"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "hydromorphone (Dilaudid) أفيوني قوي."
-      }
-    },
-    {
-      "q": {
-        "ar": "تثبيط COX-2 يؤدي إلى:"
-      },
-      "options": [
-        {
-          "ar": "خفض الالتهاب والألم والحمى"
-        },
-        {
-          "ar": "زيادة حماية المعدة"
-        },
-        {
-          "ar": "رفع الصفائح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "COX-2 يظهر في الالتهاب؛ المعدة يحميها COX-1."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "IASP definition of pain"
-    },
-    {
-      "title": "StatPearls: Physiology, Pain"
-    }
+  "en": [
+   "The brain has no pain receptors",
+   "Visceral pain is from an organ and referred pain is felt in another place",
+   "The gate controls the signals and the brain interprets according to emotion and culture",
+   "Natural inhibitors: endorphin, enkephalin, serotonin",
+   "Likert 0-10, Wong for children, and the pain diary",
+   "The patient is the best person to describe his pain",
+   "COX-1 protects the stomach and COX-2 is linked to inflammation",
+   "Anxiety and depression lower the pain threshold",
+   "Focused pain assessment: intensity, timing, location, duration, and nature"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "العضو بدون مستقبلات ألم:",
+    "en": "The organ without pain receptors:"
+   },
+   "options": [
+    {
+     "ar": "المخ",
+     "en": "The brain"
+    },
+    {
+     "ar": "الجلد",
+     "en": "The skin"
+    },
+    {
+     "ar": "القلب",
+     "en": "The heart"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "بحسب الفسيولوجيا.",
+    "en": "According to physiology."
+   }
+  },
+  {
+   "q": {
+    "ar": "ألم القلب في الذراع يسمى:",
+    "en": "Heart pain in the arm is called:"
+   },
+   "options": [
+    {
+     "ar": "منعكس",
+     "en": "Referred"
+    },
+    {
+     "ar": "حشوي فقط",
+     "en": "Visceral only"
+    },
+    {
+     "ar": "عصبي",
+     "en": "Neuropathic"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Referred pain.",
+    "en": "Referred pain."
+   }
+  },
+  {
+   "q": {
+    "ar": "مقياس للأطفال:",
+    "en": "A scale for children:"
+   },
+   "options": [
+    {
+     "ar": "Wong",
+     "en": "Wong"
+    },
+    {
+     "ar": "CAGE",
+     "en": "CAGE"
+    },
+    {
+     "ar": "Aldrete",
+     "en": "Aldrete"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "وجوه.",
+    "en": "Faces."
+   }
+  },
+  {
+   "q": {
+    "ar": "مفكرة الألم تسجل:",
+    "en": "The pain diary records:"
+   },
+   "options": [
+    {
+     "ar": "الشدة والمكان والنشاط والمخفف",
+     "en": "Intensity, location, activity, and reliever"
+    },
+    {
+     "ar": "الوزن",
+     "en": "Weight"
+    },
+    {
+     "ar": "الأكل فقط",
+     "en": "Eating only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تفيد المتابعة.",
+    "en": "Useful for follow-up."
+   }
+  },
+  {
+   "q": {
+    "ar": "تثبط الألم طبيعياً:",
+    "en": "Naturally inhibits pain:"
+   },
+   "options": [
+    {
+     "ar": "إندورفين",
+     "en": "Endorphin"
+    },
+    {
+     "ar": "أنسولين",
+     "en": "Insulin"
+    },
+    {
+     "ar": "كورتيزول",
+     "en": "Cortisol"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مع إنكيفالين وسيروتونين.",
+    "en": "Along with enkephalin and serotonin."
+   }
+  },
+  {
+   "q": {
+    "ar": "تثبيط COX-2 يفيد في:",
+    "en": "Inhibiting COX-2 helps in:"
+   },
+   "options": [
+    {
+     "ar": "تقليل الالتهاب والألم والحمى",
+     "en": "Reducing inflammation, pain, and fever"
+    },
+    {
+     "ar": "حماية جدار المعدة",
+     "en": "Protecting the stomach wall"
+    },
+    {
+     "ar": "زيادة الصفائح",
+     "en": "Increasing platelets"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "COX-1 هو الحامي للمعدة، وCOX-2 موجود في الالتهاب.",
+    "en": "COX-1 is the stomach protector, and COX-2 is present in inflammation."
+   }
+  },
+  {
+   "q": {
+    "ar": "الألم الذي يستمر أكثر من ستة أشهر:",
+    "en": "Pain that lasts more than six months:"
+   },
+   "options": [
+    {
+     "ar": "مزمن",
+     "en": "Chronic"
+    },
+    {
+     "ar": "حاد",
+     "en": "Acute"
+    },
+    {
+     "ar": "عابر",
+     "en": "Transient"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يرتبط بالاكتئاب والإرهاق.",
+    "en": "It is linked to depression and exhaustion."
+   }
+  },
+  {
+   "q": {
+    "ar": "القلق والاكتئاب:",
+    "en": "Anxiety and depression:"
+   },
+   "options": [
+    {
+     "ar": "يخفضان عتبة الألم",
+     "en": "Lower the pain threshold"
+    },
+    {
+     "ar": "يرفعان العتبة",
+     "en": "Raise the threshold"
+    },
+    {
+     "ar": "لا يؤثران",
+     "en": "Have no effect"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يزيدان الإحساس بالألم.",
+    "en": "They increase the sensation of pain."
+   }
+  },
+  {
+   "q": {
+    "ar": "ألم الفك أثناء الجلطة القلبية نوعه:",
+    "en": "Jaw pain during a heart attack is of the type:"
+   },
+   "options": [
+    {
+     "ar": "منعكس",
+     "en": "Referred"
+    },
+    {
+     "ar": "وهمي",
+     "en": "Phantom"
+    },
+    {
+     "ar": "مزمن",
+     "en": "Chronic"
+    },
+    {
+     "ar": "حاد فقط",
+     "en": "Acute only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يُحس في مكان بعيد عن المصدر.",
+    "en": "Felt in a place far from the source."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي دواء مما يلي أفيوني؟",
+    "en": "Which of the following drugs is an opioid?"
+   },
+   "options": [
+    {
+     "ar": "hydromorphone",
+     "en": "hydromorphone"
+    },
+    {
+     "ar": "ibuprofen",
+     "en": "ibuprofen"
+    },
+    {
+     "ar": "acetaminophen",
+     "en": "acetaminophen"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "hydromorphone (Dilaudid) أفيوني قوي.",
+    "en": "hydromorphone (Dilaudid) is a strong opioid."
+   }
+  },
+  {
+   "q": {
+    "ar": "تثبيط COX-2 يؤدي إلى:",
+    "en": "Inhibiting COX-2 leads to:"
+   },
+   "options": [
+    {
+     "ar": "خفض الالتهاب والألم والحمى",
+     "en": "Reducing inflammation, pain, and fever"
+    },
+    {
+     "ar": "زيادة حماية المعدة",
+     "en": "Increasing stomach protection"
+    },
+    {
+     "ar": "رفع الصفائح",
+     "en": "Raising platelets"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "COX-2 يظهر في الالتهاب؛ المعدة يحميها COX-1.",
+    "en": "COX-2 appears in inflammation; the stomach is protected by COX-1."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "IASP definition of pain"
+  },
+  {
+   "title": "StatPearls: Physiology, Pain"
+  }
+ ]
 }

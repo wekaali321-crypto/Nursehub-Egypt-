@@ -1,157 +1,199 @@
 {
-  "id": "dis-2801",
-  "num": 2801,
-  "system": "chest",
-  "icon": "🫁",
-  "level": 3,
-  "title": {
-    "ar": "جهاز التنفس الصناعي: الأوضاع والإعدادات والإنذارات",
-    "en": "Mechanical Ventilator: Modes, Settings, Monitoring & Alarms"
+ "id": "dis-2801",
+ "num": 2801,
+ "system": "chest",
+ "icon": "🫁",
+ "level": 3,
+ "title": {
+  "ar": "جهاز التنفس الصناعي: الأوضاع والإعدادات والإنذارات",
+  "en": "Mechanical Ventilator: Modes, Settings, Monitoring & Alarms"
+ },
+ "teaser": {
+  "ar": "أوضاع AC وSIMV، إعدادات VT وRR وFiO₂ وPEEP وPS، قياسات Ve وPIP وPplat، وكيف تفرّق بين إنذار الضغط المنخفض (تسرب) والمرتفع (انسداد) وماذا تفعل.",
+  "en": "AC and SIMV modes, VT, RR, FiO₂, PEEP, and PS settings, Ve, PIP, and Pplat measurements, and how to tell a low pressure alarm (leak) from a high one (obstruction) and what to do."
+ },
+ "chips": [
+  {
+   "ar": "AC / SIMV",
+   "en": "AC / SIMV"
   },
-  "teaser": {
-    "ar": "أوضاع AC وSIMV، إعدادات VT وRR وFiO₂ وPEEP وPS، قياسات Ve وPIP وPplat، وكيف تفرّق بين إنذار الضغط المنخفض (تسرب) والمرتفع (انسداد) وماذا تفعل."
+  {
+   "ar": "PEEP وFiO₂",
+   "en": "PEEP and FiO₂"
   },
-  "chips": [
-    {
-      "ar": "AC / SIMV"
-    },
-    {
-      "ar": "PEEP وFiO₂"
-    },
-    {
-      "ar": "إنذار الضغط المرتفع"
-    }
+  {
+   "ar": "إنذار الضغط المرتفع",
+   "en": "High pressure alarm"
+  }
+ ],
+ "target": "icu-nursing",
+ "sections": {
+  "overview": {
+   "ar": "<p>جهاز التنفس الصناعي يدفع الهواء إلى رئة المريض عبر أنبوب رغامي (ET tube) أو فغرة رغامية. ممرض العناية يحتاج أن يعرف: <strong>أي وضع يعمل (Mode)</strong>، <strong>ما الإعدادات</strong>، <strong>ما القياسات التي تراقبها</strong>، و<strong>ما معنى كل إنذار</strong>.</p>[[slot:dis-2802-vent-settings|أوضاع وإعدادات ومراقبة الجهاز — رسم من إعداد الموقع|/diseases/img/dis-2802-vent-settings.svg]]\n<h4>الأوضاع (Modes)</h4><table><thead><tr><th>الوضع</th><th>المعنى</th><th>الشرح</th></tr></thead><tbody><tr><td>AC (Assist Control)</td><td>تحكم كامل بالجهاز</td><td>الجهاز يعطي كل نفس بحجم محدد؛ يعمل حتى عند محاولة المريض التنفس</td></tr><tr><td>SIMV</td><td>وضع الفطام (Weaning)</td><td>المريض يتنفس بنفسه في الغالب، والجهاز يساعد بأنفاس مجدولة متزامنة مع المريض (Synchronized Intermittent Mandatory Ventilation)</td></tr></tbody></table>\n<h4>الإعدادات (Settings)</h4><table><thead><tr><th>الإعداد</th><th>المعنى</th><th>القيمة / ملاحظة</th></tr></thead><tbody><tr><td>VT (Tidal Volume)</td><td>حجم الهواء المضبوط لكل نفس</td><td>نحو ⁦500-800⁩ مل للبالغ حسب المرجع (والبروتوكولات الحديثة تحسبه ⁦6-8⁩ مل/كجم من الوزن المثالي: راجع بروتوكول الوحدة)</td></tr><tr><td>f / RR</td><td>عدد الأنفاس بالدقيقة</td><td>⁦12-20⁩</td></tr><tr><td>FiO₂</td><td>تركيز الأكسجين</td><td>35%–100%؛ كلما ارتفع دل على مرض أشد</td></tr><tr><td>PEEP</td><td>ضغط نهاية الزفير الموجب</td><td>يبقي الحويصلات مفتوحة بضغط موجب في نهاية الزفير. تنبيه: ارتفاعه الزائد يسبب Barotrauma (استرواح الصدر)</td></tr><tr><td>PS (Pressure Support)</td><td>دعم الضغط</td><td>دفعة هواء تساعد نفس المريض التلقائي</td></tr></tbody></table>\n<h4>القياسات (Monitoring)</h4><table><thead><tr><th>القياس</th><th>الاسم</th><th>المعنى</th></tr></thead><tbody><tr><td>Ve</td><td>الحجم الدقيقي (Minute Ventilation)</td><td>كمية الهواء الداخلة في الدقيقة (تقريباً VT × RR)</td></tr><tr><td>PIP</td><td>ضغط الذروة الشهيقي</td><td>أعلى ضغط أثناء الشهيق؛ يرتفع مع الانسداد وزيادة المقاومة</td></tr><tr><td>Pplat</td><td>ضغط الهضبة (Plateau)</td><td>الضغط عند إيقاف الشهيق لحظة قبل الزفير؛ يعكس الحويصلات والمجاري الصغيرة ومرونة الرئة (Compliance)</td></tr></tbody></table>",
+   "en": "<p>The ventilator pushes air into the patient's lungs through an endotracheal tube (ET tube) or a tracheostomy. The ICU nurse needs to know: <strong>which mode is running (Mode)</strong>, <strong>what the settings are</strong>, <strong>which measurements you monitor</strong>, and <strong>what each alarm means</strong>.</p>[[slot:dis-2802-vent-settings|Ventilator modes, settings, and monitoring — site illustration|/diseases/img/dis-2802-vent-settings.svg]]\n<h4>Modes</h4><table><thead><tr><th>Mode</th><th>Meaning</th><th>Explanation</th></tr></thead><tbody><tr><td>AC (Assist Control)</td><td>Full control by the ventilator</td><td>The ventilator gives every breath at a set volume; it works even when the patient tries to breathe</td></tr><tr><td>SIMV</td><td>Weaning mode</td><td>The patient breathes mostly on their own, and the ventilator helps with scheduled breaths synchronized with the patient (Synchronized Intermittent Mandatory Ventilation)</td></tr></tbody></table>\n<h4>Settings</h4><table><thead><tr><th>Setting</th><th>Meaning</th><th>Value / note</th></tr></thead><tbody><tr><td>VT (Tidal Volume)</td><td>The set volume of air for each breath</td><td>About ⁦500-800⁩ mL for an adult in traditional teaching (and modern protocols calculate it as ⁦6-8⁩ mL/kg of ideal weight: check the unit protocol)</td></tr><tr><td>f / RR</td><td>Number of breaths per minute</td><td>⁦12-20⁩</td></tr><tr><td>FiO₂</td><td>Oxygen concentration</td><td>35%–100%; the higher it is, the more severe the illness</td></tr><tr><td>PEEP</td><td>Positive end-expiratory pressure</td><td>Keeps the alveoli open with positive pressure at the end of expiration. Caution: excessive elevation causes Barotrauma (pneumothorax)</td></tr><tr><td>PS (Pressure Support)</td><td>Pressure support</td><td>A push of air that helps the patient's spontaneous breath</td></tr></tbody></table>\n<h4>Measurements (Monitoring)</h4><table><thead><tr><th>Measurement</th><th>Name</th><th>Meaning</th></tr></thead><tbody><tr><td>Ve</td><td>Minute Ventilation</td><td>The amount of air entering per minute (approximately VT × RR)</td></tr><tr><td>PIP</td><td>Peak inspiratory pressure</td><td>The highest pressure during inspiration; rises with obstruction and increased resistance</td></tr><tr><td>Pplat</td><td>Plateau pressure</td><td>The pressure when inspiration is paused for a moment before expiration; reflects the alveoli, small airways, and lung compliance (Compliance)</td></tr></tbody></table>"
+  },
+  "signs": {
+   "ar": "<h4>الإنذارات (Alarms)</h4>[[slot:dis-2801-vent-alarms|إنذار الضغط المنخفض مقابل المرتفع — رسم من إعداد الموقع|/diseases/img/dis-2801-vent-alarms.svg]]\n<div class=\"cs-box cs-danger\"><strong>ضغط مرتفع (High Pressure / High Peak Pressure)</strong><p>سببه <strong>انسداد أو مقاومة</strong> أمام الهواء: عض المريض الأنبوب، التواء الأنبوب (Kinks)، إفرازات زائدة، سدادة مخاط، سعال ومقاومة الجهاز، وذمة رئوية، استرواح الصدر.</p></div>\n<div class=\"cs-box cs-info\"><strong>ضغط منخفض (Low Pressure / Low Tidal Volume)</strong><p>سببه <strong>فقدان توصيل أو تسرب</strong>: تسرب بالون الأنبوب (Cuff leak)، انزياح الأنبوب الرغامي، انفصال الدائرة عن المريض.</p></div>\n<p>القاعدة: <strong>مرتفع = انسداد، منخفض = هروب هواء.</strong></p>",
+   "en": "<h4>Alarms</h4>[[slot:dis-2801-vent-alarms|Low versus high pressure alarm — site illustration|/diseases/img/dis-2801-vent-alarms.svg]]\n<div class=\"cs-box cs-danger\"><strong>High pressure (High Pressure / High Peak Pressure)</strong><p>Caused by <strong>obstruction or resistance</strong> to the air: the patient biting the tube, tube kinks (Kinks), excess secretions, a mucus plug, coughing and fighting the ventilator, pulmonary edema, pneumothorax.</p></div>\n<div class=\"cs-box cs-info\"><strong>Low pressure (Low Pressure / Low Tidal Volume)</strong><p>Caused by <strong>loss of delivery or a leak</strong>: a tube cuff leak (Cuff leak), displacement of the endotracheal tube, disconnection of the circuit from the patient.</p></div>\n<p>The rule: <strong>high = obstruction, low = air escaping.</strong></p>"
+  },
+  "tests": {
+   "ar": "<ul><li>غازات الدم الشرياني (ABG) لتقييم الأكسجة وCO₂ وضبط الإعدادات.</li><li>أشعة صدر لموضع الأنبوب ومضاعفات مثل استرواح الصدر.</li><li>مراقبة SpO₂ وEtCO₂ والقياسات الدورية (Ve, PIP, Pplat).</li></ul>",
+   "en": "<ul><li>Arterial blood gases (ABG) to assess oxygenation and CO₂ and adjust the settings.</li><li>Chest X-ray for tube position and complications such as pneumothorax.</li><li>Monitoring SpO₂ and EtCO₂ and periodic measurements (Ve, PIP, Pplat).</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li>الطبيب/المعالج التنفسي يضبط الوضع والإعدادات حسب حالة المريض وغازات الدم، ثم يبدأ <strong>الفطام</strong> تدريجياً (مثلاً بوضع SIMV ثم دعم الضغط PS).</li><li>الإنذار لا يُسكَت قبل معرفة سببه. عند العجز عن الحل السريع مع تدهور المريض: افصل المريض عن الجهاز وأعطِ أنفاساً يدوية بالأمبو (Ambu bag) واطلب المساعدة.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات والأسماء للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي والنشرة قبل الإعطاء.</p></div>",
+   "en": "<ul><li>The physician/respiratory therapist sets the mode and settings according to the patient's condition and blood gases, then begins <strong>weaning</strong> gradually (for example with the SIMV mode then pressure support PS).</li><li>An alarm is not silenced before its cause is known. If you cannot solve it quickly and the patient deteriorates: disconnect the patient from the ventilator, give manual breaths with the Ambu bag, and call for help.</li></ul><div class=\"cs-box cs-info\"><strong>Note</strong><p>Doses and names are for learning only; always verify with the physician/pharmacist and the leaflet before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>المريض أولاً</strong><p>عند أي إنذار: انظر للمريض: لون، SpO₂، حركة الصدر، أصوات الرئة، راحة التنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>حدد نوع الإنذار</strong><p>ضغط مرتفع: ابحث عن عض الأنبوب، الالتواء، الإفرازات (شفط)، الوذمة (سمع الرئتين)، استرواح الصدر. ضغط منخفض: افحص الوصلات، بالون الأنبوب، عمق الأنبوب (علامة الشفة)، الانفصال.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>عالج السبب</strong><p>شفط الإفرازات، تعديل وضع الأنبوب، إصلاح التسريب، مسكن/تهدئة بأمر الطبيب، إبلاغ الطبيب عند الاشتباه باسترواح الصدر.</p></div></div></div>\n<div class=\"cs-box cs-tip\"><strong>سؤال كابلان</strong><p>مريض انتفاخ رئوي (emphysema) على الجهاز، متململ ومهتاج، وانطلق إنذار الضغط المرتفع: الإجراء ذو الأولوية في المرجع أن تطلب من المريض أن <strong>يترك الجهاز يتنفس عنه</strong> (يسترخي ولا يقاوم)، مع استبعاد الأسباب القابلة للإصلاح مثل الإفرازات والأنبوب.</p></div>\n<ul><li>اعرف أن PEEP العالي مرتبط بـ <strong>Barotrauma (استرواح الصدر)</strong>.</li><li>سجل الإعدادات (الوضع، VT، RR، FiO₂، PEEP) في كل وردية وتحقق منها مع الأمر الطبي.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>The patient first</strong><p>At any alarm: look at the patient: color, SpO₂, chest movement, lung sounds, ease of breathing.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Identify the type of alarm</strong><p>High pressure: look for tube biting, kinking, secretions (suction), edema (listen to the lungs), pneumothorax. Low pressure: check the connections, the tube cuff, the tube depth (lip mark), disconnection.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Treat the cause</strong><p>Suction secretions, adjust the tube position, fix the leak, sedation/calming by physician's order, inform the physician when pneumothorax is suspected.</p></div></div></div>\n<div class=\"cs-box cs-tip\"><strong>Exam question</strong><p>An emphysema patient on the ventilator, restless and agitated, and the high pressure alarm sounds: the priority action is to ask the patient to <strong>let the ventilator breathe for them</strong> (relax and not fight it), while ruling out fixable causes such as secretions and the tube.</p></div>\n<ul><li>Know that high PEEP is linked to <strong>Barotrauma (pneumothorax)</strong>.</li><li>Record the settings (mode, VT, RR, FiO₂, PEEP) every shift and verify them against the medical order.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>نقص مفاجئ في أصوات التنفس من جانب مع ارتفاع الضغط وتدهور SpO₂ (استرواح صدر).</li><li>انفصال الدائرة أو انزياح الأنبوب الرغامي مع ضيق وزرقة.</li><li>عدم تحسن بعد الشفط وفحص الأنبوب: افصل المريض وأعطِ أنفاساً يدوية واستدعِ الفريق.</li></ul>",
+   "en": "<ul><li>A sudden decrease in breath sounds on one side with rising pressure and worsening SpO₂ (pneumothorax).</li><li>Circuit disconnection or displacement of the endotracheal tube with distress and cyanosis.</li><li>No improvement after suctioning and checking the tube: disconnect the patient, give manual breaths, and call the team.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>للمريض الواعي وأهله: الجهاز يساعد على التنفس مؤقتاً، والإنذارات صوتية للسلامة ولا تعني بالضرورة خطراً.</li><li>لا تحاول التكلم بقوة أو سحب الأنبوب؛ استعمل لوحة كتابة أو إشارات.</li></ul>",
+   "en": "<ul><li>For the conscious patient and their family: the ventilator helps breathing temporarily, and the alarms are audible for safety and do not necessarily mean danger.</li><li>Do not try to talk forcefully or pull out the tube; use a writing board or signals.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "ضغط مرتفع = انسداد (عض، التواء، إفرازات، سدادة مخاط، سعال، وذمة رئوية، استرواح)",
+   "ضغط منخفض = تسرب أو انفصال (بالون، انزياح الأنبوب، انفصال الدائرة)",
+   "AC: تحكم كامل؛ SIMV: وضع الفطام والمريض يتنفس في الغالب",
+   "PEEP يبقي الحويصلات مفتوحة وخطره Barotrauma",
+   "Pplat يعكس مرونة الرئة؛ Ve هو الحجم الدقيقي"
   ],
-  "target": "icu-nursing",
-  "sections": {
-    "overview": {
-      "ar": "<p>جهاز التنفس الصناعي يدفع الهواء إلى رئة المريض عبر أنبوب رغامي (ET tube) أو فغرة رغامية. ممرض العناية يحتاج أن يعرف: <strong>أي وضع يعمل (Mode)</strong>، <strong>ما الإعدادات</strong>، <strong>ما القياسات التي تراقبها</strong>، و<strong>ما معنى كل إنذار</strong>.</p>[[slot:dis-2802-vent-settings|أوضاع وإعدادات ومراقبة الجهاز — رسم من إعداد الموقع|/diseases/img/dis-2802-vent-settings.svg]]\n<h4>الأوضاع (Modes)</h4><table><thead><tr><th>الوضع</th><th>المعنى</th><th>الشرح</th></tr></thead><tbody><tr><td>AC (Assist Control)</td><td>تحكم كامل بالجهاز</td><td>الجهاز يعطي كل نفس بحجم محدد؛ يعمل حتى عند محاولة المريض التنفس</td></tr><tr><td>SIMV</td><td>وضع الفطام (Weaning)</td><td>المريض يتنفس بنفسه في الغالب، والجهاز يساعد بأنفاس مجدولة متزامنة مع المريض (Synchronized Intermittent Mandatory Ventilation)</td></tr></tbody></table>\n<h4>الإعدادات (Settings)</h4><table><thead><tr><th>الإعداد</th><th>المعنى</th><th>القيمة / ملاحظة</th></tr></thead><tbody><tr><td>VT (Tidal Volume)</td><td>حجم الهواء المضبوط لكل نفس</td><td>نحو ⁦500-800⁩ مل للبالغ حسب المرجع (والبروتوكولات الحديثة تحسبه ⁦6-8⁩ مل/كجم من الوزن المثالي: راجع بروتوكول الوحدة)</td></tr><tr><td>f / RR</td><td>عدد الأنفاس بالدقيقة</td><td>⁦12-20⁩</td></tr><tr><td>FiO₂</td><td>تركيز الأكسجين</td><td>35%–100%؛ كلما ارتفع دل على مرض أشد</td></tr><tr><td>PEEP</td><td>ضغط نهاية الزفير الموجب</td><td>يبقي الحويصلات مفتوحة بضغط موجب في نهاية الزفير. تنبيه: ارتفاعه الزائد يسبب Barotrauma (استرواح الصدر)</td></tr><tr><td>PS (Pressure Support)</td><td>دعم الضغط</td><td>دفعة هواء تساعد نفس المريض التلقائي</td></tr></tbody></table>\n<h4>القياسات (Monitoring)</h4><table><thead><tr><th>القياس</th><th>الاسم</th><th>المعنى</th></tr></thead><tbody><tr><td>Ve</td><td>الحجم الدقيقي (Minute Ventilation)</td><td>كمية الهواء الداخلة في الدقيقة (تقريباً VT × RR)</td></tr><tr><td>PIP</td><td>ضغط الذروة الشهيقي</td><td>أعلى ضغط أثناء الشهيق؛ يرتفع مع الانسداد وزيادة المقاومة</td></tr><tr><td>Pplat</td><td>ضغط الهضبة (Plateau)</td><td>الضغط عند إيقاف الشهيق لحظة قبل الزفير؛ يعكس الحويصلات والمجاري الصغيرة ومرونة الرئة (Compliance)</td></tr></tbody></table>"
-    },
-    "signs": {
-      "ar": "<h4>الإنذارات (Alarms)</h4>[[slot:dis-2801-vent-alarms|إنذار الضغط المنخفض مقابل المرتفع — رسم من إعداد الموقع|/diseases/img/dis-2801-vent-alarms.svg]]\n<div class=\"cs-box cs-danger\"><strong>ضغط مرتفع (High Pressure / High Peak Pressure)</strong><p>سببه <strong>انسداد أو مقاومة</strong> أمام الهواء: عض المريض الأنبوب، التواء الأنبوب (Kinks)، إفرازات زائدة، سدادة مخاط، سعال ومقاومة الجهاز، وذمة رئوية، استرواح الصدر.</p></div>\n<div class=\"cs-box cs-info\"><strong>ضغط منخفض (Low Pressure / Low Tidal Volume)</strong><p>سببه <strong>فقدان توصيل أو تسرب</strong>: تسرب بالون الأنبوب (Cuff leak)، انزياح الأنبوب الرغامي، انفصال الدائرة عن المريض.</p></div>\n<p>القاعدة: <strong>مرتفع = انسداد، منخفض = هروب هواء.</strong></p>"
-    },
-    "tests": {
-      "ar": "<ul><li>غازات الدم الشرياني (ABG) لتقييم الأكسجة وCO₂ وضبط الإعدادات.</li><li>أشعة صدر لموضع الأنبوب ومضاعفات مثل استرواح الصدر.</li><li>مراقبة SpO₂ وEtCO₂ والقياسات الدورية (Ve, PIP, Pplat).</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li>الطبيب/المعالج التنفسي يضبط الوضع والإعدادات حسب حالة المريض وغازات الدم، ثم يبدأ <strong>الفطام</strong> تدريجياً (مثلاً بوضع SIMV ثم دعم الضغط PS).</li><li>الإنذار لا يُسكَت قبل معرفة سببه. عند العجز عن الحل السريع مع تدهور المريض: افصل المريض عن الجهاز وأعطِ أنفاساً يدوية بالأمبو (Ambu bag) واطلب المساعدة.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات والأسماء للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي والنشرة قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>المريض أولاً</strong><p>عند أي إنذار: انظر للمريض: لون، SpO₂، حركة الصدر، أصوات الرئة، راحة التنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>حدد نوع الإنذار</strong><p>ضغط مرتفع: ابحث عن عض الأنبوب، الالتواء، الإفرازات (شفط)، الوذمة (سمع الرئتين)، استرواح الصدر. ضغط منخفض: افحص الوصلات، بالون الأنبوب، عمق الأنبوب (علامة الشفة)، الانفصال.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>عالج السبب</strong><p>شفط الإفرازات، تعديل وضع الأنبوب، إصلاح التسريب، مسكن/تهدئة بأمر الطبيب، إبلاغ الطبيب عند الاشتباه باسترواح الصدر.</p></div></div></div>\n<div class=\"cs-box cs-tip\"><strong>سؤال كابلان</strong><p>مريض انتفاخ رئوي (emphysema) على الجهاز، متململ ومهتاج، وانطلق إنذار الضغط المرتفع: الإجراء ذو الأولوية في المرجع أن تطلب من المريض أن <strong>يترك الجهاز يتنفس عنه</strong> (يسترخي ولا يقاوم)، مع استبعاد الأسباب القابلة للإصلاح مثل الإفرازات والأنبوب.</p></div>\n<ul><li>اعرف أن PEEP العالي مرتبط بـ <strong>Barotrauma (استرواح الصدر)</strong>.</li><li>سجل الإعدادات (الوضع، VT، RR، FiO₂، PEEP) في كل وردية وتحقق منها مع الأمر الطبي.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>نقص مفاجئ في أصوات التنفس من جانب مع ارتفاع الضغط وتدهور SpO₂ (استرواح صدر).</li><li>انفصال الدائرة أو انزياح الأنبوب الرغامي مع ضيق وزرقة.</li><li>عدم تحسن بعد الشفط وفحص الأنبوب: افصل المريض وأعطِ أنفاساً يدوية واستدعِ الفريق.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>للمريض الواعي وأهله: الجهاز يساعد على التنفس مؤقتاً، والإنذارات صوتية للسلامة ولا تعني بالضرورة خطراً.</li><li>لا تحاول التكلم بقوة أو سحب الأنبوب؛ استعمل لوحة كتابة أو إشارات.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "ضغط مرتفع = انسداد (عض، التواء، إفرازات، سدادة مخاط، سعال، وذمة رئوية، استرواح)",
-      "ضغط منخفض = تسرب أو انفصال (بالون، انزياح الأنبوب، انفصال الدائرة)",
-      "AC: تحكم كامل؛ SIMV: وضع الفطام والمريض يتنفس في الغالب",
-      "PEEP يبقي الحويصلات مفتوحة وخطره Barotrauma",
-      "Pplat يعكس مرونة الرئة؛ Ve هو الحجم الدقيقي"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي من التالي سبب لإنذار الضغط المرتفع على الجهاز؟"
-      },
-      "options": [
-        {
-          "ar": "انفصال الدائرة"
-        },
-        {
-          "ar": "عض المريض للأنبوب"
-        },
-        {
-          "ar": "تسرب بالون الأنبوب"
-        },
-        {
-          "ar": "انزياح الأنبوب الرغامي للخارج"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الضغط المرتفع يعني انسداداً أو مقاومة (عض، التواء، إفرازات)، أما الانفصال والتسرب والانزياح فتسبب إنذار الضغط المنخفض."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مضاعفة ترتبط بمستوى PEEP العالي جداً؟"
-      },
-      "options": [
-        {
-          "ar": "نقص الصوديوم"
-        },
-        {
-          "ar": "Barotrauma (استرواح الصدر)"
-        },
-        {
-          "ar": "قصور كلوي حاد"
-        },
-        {
-          "ar": "فرط بوتاسيوم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "PEEP الزائد يرفع ضغط الحويصلات فيزيد خطر تمزقها واسترواح الصدر."
-      }
-    },
-    {
-      "q": {
-        "ar": "الوضع الذي يُسمى وضع الفطام ويتنفس فيه المريض غالباً بنفسه؟"
-      },
-      "options": [
-        {
-          "ar": "AC"
-        },
-        {
-          "ar": "SIMV"
-        },
-        {
-          "ar": "FiO₂"
-        },
-        {
-          "ar": "Ve"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "SIMV يدعم المريض بأنفاس مجدولة متزامنة مع تنفسه التلقائي ويُستعمل للفطام، بينما AC تحكم كامل."
-      }
-    },
-    {
-      "q": {
-        "ar": "عند ضغط منخفض على الجهاز، أولاً تفحص:"
-      },
-      "options": [
-        {
-          "ar": "وصلات الدائرة وبالون الأنبوب وعمق الأنبوب"
-        },
-        {
-          "ar": "ارتفاع الصوديوم"
-        },
-        {
-          "ar": "لون البول"
-        },
-        {
-          "ar": "مخطط القلب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الضغط المنخفض يشير لتسرب أو انفصال أو انزياح، فتبدأ بفحص الوصلات والبالون وموضع الأنبوب."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "إرشادات وملخصات تمريضية جراحية باطنية عامة (مراجع مفتوحة)"
-    }
+  "en": [
+   "High pressure = obstruction (biting, kinking, secretions, mucus plug, cough, pulmonary edema, pneumothorax)",
+   "Low pressure = leak or disconnection (cuff, tube displacement, circuit disconnection)",
+   "AC: full control; SIMV: weaning mode and the patient mostly breathes",
+   "PEEP keeps the alveoli open and its risk is Barotrauma",
+   "Pplat reflects lung compliance; Ve is the minute ventilation"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي من التالي سبب لإنذار الضغط المرتفع على الجهاز؟",
+    "en": "Which of the following is a cause of a high pressure alarm on the ventilator?"
+   },
+   "options": [
+    {
+     "ar": "انفصال الدائرة",
+     "en": "Circuit disconnection"
+    },
+    {
+     "ar": "عض المريض للأنبوب",
+     "en": "The patient biting the tube"
+    },
+    {
+     "ar": "تسرب بالون الأنبوب",
+     "en": "A tube cuff leak"
+    },
+    {
+     "ar": "انزياح الأنبوب الرغامي للخارج",
+     "en": "Outward displacement of the endotracheal tube"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الضغط المرتفع يعني انسداداً أو مقاومة (عض، التواء، إفرازات)، أما الانفصال والتسرب والانزياح فتسبب إنذار الضغط المنخفض.",
+    "en": "High pressure means obstruction or resistance (biting, kinking, secretions), while disconnection, leak, and displacement cause the low pressure alarm."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مضاعفة ترتبط بمستوى PEEP العالي جداً؟",
+    "en": "Which complication is linked to a very high PEEP level?"
+   },
+   "options": [
+    {
+     "ar": "نقص الصوديوم",
+     "en": "Hyponatremia"
+    },
+    {
+     "ar": "Barotrauma (استرواح الصدر)",
+     "en": "Barotrauma (pneumothorax)"
+    },
+    {
+     "ar": "قصور كلوي حاد",
+     "en": "Acute renal failure"
+    },
+    {
+     "ar": "فرط بوتاسيوم",
+     "en": "Hyperkalemia"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "PEEP الزائد يرفع ضغط الحويصلات فيزيد خطر تمزقها واسترواح الصدر.",
+    "en": "Excess PEEP raises alveolar pressure, increasing the risk of rupture and pneumothorax."
+   }
+  },
+  {
+   "q": {
+    "ar": "الوضع الذي يُسمى وضع الفطام ويتنفس فيه المريض غالباً بنفسه؟",
+    "en": "The mode called the weaning mode, in which the patient mostly breathes on their own?"
+   },
+   "options": [
+    {
+     "ar": "AC",
+     "en": "AC"
+    },
+    {
+     "ar": "SIMV",
+     "en": "SIMV"
+    },
+    {
+     "ar": "FiO₂",
+     "en": "FiO₂"
+    },
+    {
+     "ar": "Ve",
+     "en": "Ve"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "SIMV يدعم المريض بأنفاس مجدولة متزامنة مع تنفسه التلقائي ويُستعمل للفطام، بينما AC تحكم كامل.",
+    "en": "SIMV supports the patient with scheduled breaths synchronized with their spontaneous breathing and is used for weaning, while AC is full control."
+   }
+  },
+  {
+   "q": {
+    "ar": "عند ضغط منخفض على الجهاز، أولاً تفحص:",
+    "en": "With a low pressure on the ventilator, you first check:"
+   },
+   "options": [
+    {
+     "ar": "وصلات الدائرة وبالون الأنبوب وعمق الأنبوب",
+     "en": "Circuit connections, tube cuff, and tube depth"
+    },
+    {
+     "ar": "ارتفاع الصوديوم",
+     "en": "High sodium"
+    },
+    {
+     "ar": "لون البول",
+     "en": "Urine color"
+    },
+    {
+     "ar": "مخطط القلب",
+     "en": "The heart tracing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الضغط المنخفض يشير لتسرب أو انفصال أو انزياح، فتبدأ بفحص الوصلات والبالون وموضع الأنبوب.",
+    "en": "Low pressure points to a leak, disconnection, or displacement, so you start by checking the connections, the cuff, and the tube position."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "إرشادات وملخصات تمريضية جراحية باطنية عامة (مراجع مفتوحة)"
+  }
+ ]
 }
