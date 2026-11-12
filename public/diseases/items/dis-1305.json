@@ -1,393 +1,496 @@
 {
-  "id": "dis-1305",
-  "num": 1305,
-  "system": "infect",
-  "icon": "🫁",
-  "level": 2,
-  "target": "diseases",
-  "title": {
-    "ar": "الالتهاب الرئوي: التمريض والمضاعفات",
-    "en": "Pneumonia: Nursing Care & Complications"
+ "id": "dis-1305",
+ "num": 1305,
+ "system": "infect",
+ "icon": "🫁",
+ "level": 2,
+ "target": "diseases",
+ "title": {
+  "ar": "الالتهاب الرئوي: التمريض والمضاعفات",
+  "en": "Pneumonia: Nursing Care & Complications"
+ },
+ "teaser": {
+  "ar": "تمريض الالتهاب الرئوي من الفرز والأولويات إلى التنفس والسعال والوضعية، والوقاية من VAP، ومضاعفات الانصباب الجنبي وARDS وتسمم الدم.",
+  "en": "Pneumonia nursing from triage and priorities to breathing, coughing, and positioning, preventing VAP, and the complications of pleural effusion, ARDS, and sepsis."
+ },
+ "chips": [
+  {
+   "ar": "أولويات التمريض",
+   "en": "Nursing priorities"
   },
-  "teaser": {
-    "ar": "تمريض الالتهاب الرئوي من الفرز والأولويات إلى التنفس والسعال والوضعية، والوقاية من VAP، ومضاعفات الانصباب الجنبي وARDS وتسمم الدم."
+  {
+   "ar": "VAP",
+   "en": "VAP"
   },
-  "chips": [
-    {
-      "ar": "أولويات التمريض"
-    },
-    {
-      "ar": "VAP"
-    },
-    {
-      "ar": "انصباب وARDS وتسمم"
-    }
+  {
+   "ar": "انصباب وARDS وتسمم",
+   "en": "Effusion, ARDS, and sepsis"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الالتهاب الرئوي عدوى في أنسجة الرئة تملأ الحويصلات بإفرازات وصديد، فيتعطل تبادل الغازات ويقل الأكسجين. دليل <a href=\"/diseases/dis-044\">الالتهاب الرئوي (الجانب الطبي)</a> بيشرح التشخيص والعلاج؛ ده دليل <b>التمريض والأولويات والمضاعفات</b>.</p>\n<table><thead><tr><th>النوع</th><th>المميزات</th></tr></thead><tbody><tr><td>فصّي (Lobar)</td><td>يصيب فصًا أو أكثر؛ غالبًا بالمكورات الرئوية؛ بداية مفاجئة وبلغم صدئي</td></tr><tr><td>قصبي رئوي (Bronchopneumonia)</td><td>موزّع على الرئتين؛ ميكروبات متعددة؛ بلغم أصفر أو أخضر</td></tr></tbody></table>\n[[slot:dis-1305-complications|مضاعفات الالتهاب الرئوي المتدرجة — رسم من إعداد الموقع|/diseases/img/dis-1305-complications.svg]]\n<h4>مراجعة NCLEX</h4><p>عدوى تسبب التهابًا شديدًا بالرئتين فتمتلئ الحويصلات بمخاط وسوائل وحطام فيضعف تبادل الغازات: لا يخرج CO₂ ولا يدخل الأكسجين فيحدث نقص أكسجة.</p>[[slot:dis-1305-p445|الالتهاب الرئوي ومضاعفاته — رسم من إعداد الموقع|/diseases/img/dis-1305-p445.svg]]\n<h4>عوامل الخطر والفحوصات (مراجعة)</h4><p>العامل الأول: العمر المتقدم (فوق 65). الالتهاب الرئوي المرتبط بجهاز التنفس (VAP): أفضل مؤشراته بلغم موجب الزرع، حمى، وارتشاح جديد بالأشعة. وطول عدم الحركة والتخدير بعد الجراحة يحبسان الإفرازات.</p>",
+   "en": "<p>Pneumonia is an infection of the lung tissue that fills the alveoli with secretions and pus, so gas exchange is disrupted and oxygen falls. The guide <a href=\"/diseases/dis-044\">Pneumonia (medical side)</a> explains diagnosis and treatment; this is the guide to <b>nursing, priorities, and complications</b>.</p>\n<table><thead><tr><th>Type</th><th>Features</th></tr></thead><tbody><tr><td>Lobar</td><td>Affects one or more lobes; often pneumococcus; sudden onset and rusty sputum</td></tr><tr><td>Bronchopneumonia</td><td>Spread across both lungs; multiple microbes; yellow or green sputum</td></tr></tbody></table>\n[[slot:dis-1305-complications|The stepwise complications of pneumonia — an illustration prepared by the site|/diseases/img/dis-1305-complications.svg]]\n<h4>Exam review</h4><p>An infection that causes severe lung inflammation, so the alveoli fill with mucus, fluid, and debris and gas exchange is impaired: CO₂ does not leave and oxygen does not enter, causing hypoxia.</p>[[slot:dis-1305-p445|Pneumonia and its complications — an illustration prepared by the site|/diseases/img/dis-1305-p445.svg]]\n<h4>Risk factors and tests (review)</h4><p>The first factor: advanced age (over 65). Ventilator-associated pneumonia (VAP): its best indicators are culture-positive sputum, fever, and a new infiltrate on X-ray. Prolonged immobility and anesthesia after surgery trap secretions.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>عمر أكبر من 65 سنة والأطفال الصغار</li><li>التدخين وأمراض الصدر المزمنة وضعف المناعة</li><li>السكتة والاضطراب في البلع (استنشاق)</li><li>بعد الجراحة والتخدير وقلة الحركة (احتباس الإفرازات)</li><li>التنفس الصناعي (التهاب رئوي مرتبط بالجهاز VAP)</li></ul>",
+   "en": "<ul><li>Age over 65 years and young children</li><li>Smoking, chronic chest diseases, and weak immunity</li><li>Stroke and swallowing disorders (aspiration)</li><li>After surgery and anesthesia and low mobility (retained secretions)</li><li>Mechanical ventilation (ventilator-associated pneumonia, VAP)</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>أهم 6 علامات</h4><ol><li><b>تغيّر الحالة الذهنية</b> (قلق، هياج، ارتباك) وهو من أبكر علامات نقص الأكسجين خصوصًا لدى كبار السن</li><li>حمى أكثر من 38 م (100.4 ف)</li><li>سعال منتج لبلغم أصفر أو صدئي</li><li>خراخر (Crackles)</li><li>ضيق نفس</li><li>ألم صدري جنبي يزيد بالشهيق والسعال</li></ol>\n<div class=\"cs-box cs-tip\"><strong>أولوية الفرز</strong><p>مريض بعد جراحة يُشتبه التهابًا رئويًا وبدأ يصبح <b>قلقًا ومضطربًا</b> رغم حرارة طبيعية وSpO2 94% هو الأولى بالمتابعة العاجلة، لأن هذا مؤشر مبكر على نقص الأكسجين.</p></div>\n<h4>مضاعفات خطيرة</h4><table><thead><tr><th>المضاعفة</th><th>العلامات</th><th>التدخل</th></tr></thead><tbody><tr><td>انصباب جنبي (Pleural effusion)</td><td>ألم بالشهيق، ضيق نفس، نقص صوت التنفس، رنين مكتوم بالقرع</td><td>بزل الصدر (Thoracentesis)؛ راقب عدم تماثل حركة الصدر وانخفاض صوت التنفس بعد الإجراء (احتمال استرواح الصدر (Pneumothorax) أو نزف)</td></tr><tr><td>ARDS</td><td>نقص أكسجين مقاوم (Refractory hypoxemia)، رئتان متيبستان، تغير وعي</td><td>رعاية مركزة وتهوية ميكانيكية</td></tr><tr><td>تسمم الدم والصدمة الإنتانية</td><td>ضغط انقباضي أقل من 90 أو MAP أقل من 65، نبض سريع، زمن امتلاء شعيري أكثر من 3 ثوانٍ، حرارة أو هبوط حرارة (علامة متأخرة أقل من 36)، WBC مرتفع أو منخفض، بول أقل من 30 مل/س</td><td>مزارع ثم مضاد حيوي خلال ساعة، سوائل وريدية بحسب الأمر، رفع ضغط، نقل للعناية المركزة</td></tr></tbody></table>\n<ol><li>تغير الحالة العقلية: قلق، تهيّج، تشوش.</li><li>حمى (أكثر من 38°م / 100.4°ف).</li><li>سعال منتج «بلغم أصفر».</li><li>خراخر دقيقة أو خشنة.</li><li>ضيق نفس.</li><li>ألم صدري جنبي حاد مع الشهيق أو السعال (احتكاك جنبي: صوت صرير/اهتزاز في الشهيق والزفير) — أبلغ الطبيب.</li></ol><p><strong>سؤال أولوية:</strong> أي مريض يُرى أولًا؟ مريض بعد جراحة يُشتبه التهاب رئوي، حرارته 36.8°م، وSpO₂ 94%، لكنه أصبح قلقًا ومهتاجًا (علامة نقص الأكسجة).</p>",
+   "en": "<h4>The 6 most important signs</h4><ol><li><b>Change in mental status</b> (anxiety, agitation, confusion), one of the earliest signs of low oxygen, especially in older adults</li><li>Fever above 38 C (100.4 F)</li><li>Productive cough with yellow or rusty sputum</li><li>Crackles</li><li>Shortness of breath</li><li>Pleuritic chest pain that worsens with inhalation and coughing</li></ol>\n<div class=\"cs-box cs-tip\"><strong>Triage priority</strong><p>A post-surgical patient suspected of pneumonia who has started to become <b>anxious and agitated</b> despite a normal temperature and SpO2 94% is the one to follow up urgently, because this is an early indicator of low oxygen.</p></div>\n<h4>Serious complications</h4><table><thead><tr><th>Complication</th><th>Signs</th><th>Intervention</th></tr></thead><tbody><tr><td>Pleural effusion</td><td>Pain on inhalation, shortness of breath, reduced breath sounds, dullness on percussion</td><td>Thoracentesis; watch for asymmetric chest movement and reduced breath sounds after the procedure (possible pneumothorax or bleeding)</td></tr><tr><td>ARDS</td><td>Refractory hypoxemia, stiff lungs, altered consciousness</td><td>Intensive care and mechanical ventilation</td></tr><tr><td>Sepsis and septic shock</td><td>Systolic pressure below 90 or MAP below 65, fast pulse, capillary refill more than 3 seconds, fever or low temperature (a late sign, below 36), high or low WBC, urine below 30 mL/h</td><td>Cultures then an antibiotic within an hour, IV fluids per the order, pressors, transfer to intensive care</td></tr></tbody></table>\n<ol><li>Change in mental status: anxiety, agitation, confusion.</li><li>Fever (above 38 C / 100.4 F).</li><li>Productive cough with \"yellow sputum.\"</li><li>Fine or coarse crackles.</li><li>Shortness of breath.</li><li>Sharp pleuritic chest pain with inhalation or coughing (pleural friction rub: a creaking/grating sound on inhalation and exhalation) — notify the physician.</li></ol><p><strong>Priority question:</strong> Which patient is seen first? A post-surgical patient suspected of pneumonia, temperature 36.8 C, and SpO₂ 94%, but who has become anxious and agitated (a sign of hypoxia).</p>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>أشعة صدر (CXR)</b> وتحاليل <b>CBC</b> (WBC فوق 10,000)</li><li><b>مزرعة بلغم</b>، و<b>مزرعة دم قبل أول جرعة مضاد حيوي</b> (تحدد الميكروب وتضبط العلاج)</li><li><b>غازات الدم (ABG)</b> وقياس الأكسجين</li><li><b>مؤشرات</b> مثل CRP وبروكالسيتونين حسب الحالة</li><li>أفضل مؤشر لنجاح العلاج الوريدي: تحسن الحرارة والأعراض وهبوط WBC</li></ul>\n<p>ارتفاع WBC (> 10,000)؛ مزرعة بلغم إيجابية. <strong>المزرعة دائمًا أولًا قبل المضاد الحيوي</strong> لتحديد البكتيريا. أفضل مؤشر مخبري لنجاح المضاد الوريدي: تحسن (انخفاض) تعداد الكريات البيض.</p>",
+   "en": "<ul><li><b>Chest X-ray (CXR)</b> and <b>CBC</b> tests (WBC above 10,000)</li><li><b>Sputum culture</b>, and <b>blood culture before the first antibiotic dose</b> (identifies the microbe and guides treatment)</li><li><b>Arterial blood gases (ABG)</b> and oxygen measurement</li><li><b>Markers</b> such as CRP and procalcitonin depending on the case</li><li>The best indicator of successful IV treatment: improved fever and symptoms and a falling WBC</li></ul>\n<p>Elevated WBC (> 10,000); positive sputum culture. <strong>The culture always comes first, before the antibiotic</strong>, to identify the bacteria. The best lab indicator of successful IV antibiotic: an improvement (decrease) in the white blood cell count.</p>"
+  },
+  "treatment": {
+   "ar": "<ul><li>مضادات حيوية حسب الميكروب والمنشأ (مجتمع أم مستشفى)؛ ولا يعطى مضاد للفيروسي منها.</li><li>أكسجين حسب SpO2، سوائل، خافض حرارة ومسكن، موسعات شعب عند الحاجة.</li><li>تجنّب مثبطات السعال (مثل الكوديين) مع البلغم لأن السعال يخرّج الإفرازات.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>\n<div class=\"cs-box cs-info\"><p><strong>مضاعفات وتفاصيل مكملة</strong></p><ul><li><strong>دبيلة جنبية (Pleural empyema):</strong> تجمع صديد في التجويف الجنبي، من مضاعفات الالتهاب الرئوي الفصي بالمكورات الرئوية.</li><li><strong>بعد بزل الصدر:</strong> أخطر مضاعفتين استرواح الصدر (Pneumothorax) وتجمع الدم بالتجويف الجنبي (Hemothorax)؛ أولوية البلاغ عدم تماثل حركة الصدر ونقص أصوات التنفس.</li><li><strong>الالتهاب الرئوي المرتبط بجهاز التنفس (VAP):</strong> غيّر وضع المريض كل ساعتين، واعتنِ بالفم وبالشفط كل ساعتين تقريبًا مع chlorhexidine حسب بروتوكول الوحدة.</li></ul></div>",
+   "en": "<ul><li>Antibiotics based on the microbe and origin (community or hospital); no antibiotic is given for viral pneumonia.</li><li>Oxygen based on SpO2, fluids, an antipyretic and pain reliever, bronchodilators when needed.</li><li>Avoid cough suppressants (such as codeine) with sputum because coughing clears secretions.</li></ul><div class=\"cs-box cs-info\"><strong>Note</strong><p>Doses are for learning; always verify with the physician/pharmacist.</p></div>\n<div class=\"cs-box cs-info\"><p><strong>Complications and supplementary details</strong></p><ul><li><strong>Pleural empyema:</strong> a collection of pus in the pleural cavity, a complication of lobar pneumococcal pneumonia.</li><li><strong>After thoracentesis:</strong> the two most dangerous complications are pneumothorax and blood collecting in the pleural cavity (hemothorax); the reporting priority is asymmetric chest movement and reduced breath sounds.</li><li><strong>Ventilator-associated pneumonia (VAP):</strong> reposition the patient every two hours, and provide mouth care and suctioning about every two hours with chlorhexidine per unit protocol.</li></ul></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>وضعية وتنفس</strong><p>رأس السرير مرتفع (فاولر العالي). مع التهاب رئة من جانب واحد ضع المريض على الجانب السليم (الرئة السليمة لأسفل) لتحسين الأكسجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>تحريك الإفرازات</strong><p>سعال وتنفس عميق (TCDB) مع تثبيت الجرح بوسادة، جهاز تنفس تحفيزي (IS) كل ساعة، علاج صدري، ترطيب بسوائل 2–3 لتر/يوم ما لم يمنع قلب أو كلى، مرطب بارد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>حركة مبكرة</strong><p>تحريك خلال 8 ساعات تقريبًا بعد الجراحة حسب الأمر، تغيير الوضع كل ساعتين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>منع VAP</strong><p>رفع الرأس 30–45 درجة، عناية فم دورية، شفط عند الحاجة، تقييم الاستغناء عن الجهاز يوميًا؛ الكلورهيكسيدين حسب بروتوكول المستشفى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مراقبة</strong><p>أكسجين، حرارة، وعي، نمط التنفس، بلغم؛ مؤشر VAP: مزرعة بلغم موجبة وحمى وارتشاح جديد بالأشعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>منع العودة</strong><p>إكمال المضاد الحيوي، لقاح المكورات الرئوية حسب الإرشادات الحالية للعمر والحالة، الإقلاع عن التدخين، متابعة وأشعة بعد العلاج.</p></div></div></div>\n<!-- g6-pn --><ul><li>تقنية <b>Huff coughing</b> وتجنب مثبطات السعال (كوديين).</li><li>مرطب بارد في الليل، سوائل 2–3 لتر، رعاية الفم كل 12 ساعة، وإعطاء مسكن قبل التمرين.</li><li>جهاز التنفس التحفيزي كل ساعة والتحريك المبكر خلال 8 ساعات بعد الجراحة.</li><li>VAP: تحريك الجانب كل ساعتين، عناية فم وشفط حسب الحاجة، أفضل مؤشر لتحسن العلاج الوريدي: عدد WBC.</li></ul>\n<h4>حرّك الإفرازات ووسّع الرئتين</h4><ul><li>علاج طبيعي للصدر، TCDB، وسعال الهف (huff)؛ <strong>تجنب مثبطات السعال</strong>.</li><li>السوائل 2–3 لتر يوميًا (يُوصى بـ3 لتر لتسهيل الإخراج).</li><li>الوضعية: رأس السرير مرتفع (Fowler العالي)؛ في التهاب رئوي أحادي الجانب مع نقص أكسجة: <strong>الرئة السليمة للأسفل</strong> (نقطة امتحان).</li></ul><h4>بعد الجراحة</h4><ul><li>مشي مبكر خلال 8 ساعات، سعال مع تثبيت الجرح، غسل اليدين، عناية فموية بـchlorhexidine كل 12 ساعة، مقياس التنفس الحافز كل ساعة، وأعطِ مسكنات الألم.</li></ul>[[slot:dis-1305-p446|الالتهاب الرئوي: الرعاية والتثقيف — رسم من إعداد الموقع|/diseases/img/dis-1305-p446.svg]]",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Position and breathing</strong><p>Head of bed elevated (high Fowler). With one-sided pneumonia, place the patient on the healthy side (healthy lung down) to improve oxygenation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Mobilize secretions</strong><p>Cough and deep breathing (TCDB) while splinting the wound with a pillow, incentive spirometer (IS) every hour, chest therapy, hydration with 2–3 liters/day unless heart or kidney disease prevents it, cool humidifier.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Early mobilization</strong><p>Mobilize within about 8 hours after surgery per the order, change position every two hours.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Prevent VAP</strong><p>Raise the head 30–45 degrees, periodic mouth care, suction when needed, daily assessment for weaning from the ventilator; chlorhexidine per hospital protocol.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Monitoring</strong><p>Oxygen, temperature, consciousness, breathing pattern, sputum; VAP indicator: positive sputum culture, fever, and a new infiltrate on X-ray.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Prevent recurrence</strong><p>Complete the antibiotic, pneumococcal vaccine per current guidelines for age and condition, quit smoking, follow-up and X-ray after treatment.</p></div></div></div>\n<!-- g6-pn --><ul><li><b>Huff coughing</b> technique and avoiding cough suppressants (codeine).</li><li>Cool humidifier at night, 2–3 liters of fluids, mouth care every 12 hours, and giving a pain reliever before exercise.</li><li>Incentive spirometer every hour and early mobilization within 8 hours after surgery.</li><li>VAP: turn side to side every two hours, mouth care and suction as needed; the best indicator of IV treatment improvement: the WBC count.</li></ul>\n<h4>Mobilize secretions and expand the lungs</h4><ul><li>Chest physiotherapy, TCDB, and huff coughing; <strong>avoid cough suppressants</strong>.</li><li>Fluids 2–3 liters daily (3 liters is recommended to ease expectoration).</li><li>Position: head of bed elevated (high Fowler); in one-sided pneumonia with hypoxia: <strong>the healthy lung down</strong> (an exam point).</li></ul><h4>After surgery</h4><ul><li>Early walking within 8 hours, coughing while splinting the wound, handwashing, oral care with chlorhexidine every 12 hours, incentive spirometer every hour, and give pain relievers.</li></ul>[[slot:dis-1305-p446|Pneumonia: care and education — an illustration prepared by the site|/diseases/img/dis-1305-p446.svg]]"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فورًا</strong><ul><li>هياج أو ارتباك جديد أو نعاس مفرط</li><li>SpO2 يهبط أو يحتاج أكسجين متزايد</li><li>ضغط منخفض ونبض سريع وبرودة أطراف وبول قليل</li><li>حمى مرتفعة مفاجئة أو ألم صدري حاد جديد</li><li>نقص صوت التنفس أو عدم تماثل حركة الصدر بعد بزل الصدر</li></ul></div>\n<h4>المضاعفات الحرجة</h4><ul><li><strong>الانصباب الجنبي:</strong> ألم شهيقي، ضيق نفس، نقص أصوات التنفس، كتامة بالقرع؛ أبلغ عن حركة صدر غير متماثلة ونقص الأصوات.</li><li><strong>ARDS:</strong> رئتان متيبستان؛ نقص أكسجة عنيد وأول علامة تغير الحالة العقلية (تشوش، قلق، تهيّج).</li><li><strong>الصدمة الإنتانية:</strong> انخفاض ضغط شديد والتهاب كامل بالجسم وفشل أعضاء (MODS). علامات: ضغط انقباضي < 90 وMAP < 65، تعبئة شعرية > 3–4 ثوان، تسارع قلب، حمى مبكرة وانخفاض الحرارة متأخرًا (< 36°م)، WBC مرتفع، ونتاج بول 30 مل/س أو أقل = ضائقة كلوية.</li></ul>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately</strong><ul><li>New agitation, confusion, or excessive drowsiness</li><li>SpO2 dropping or needing increasing oxygen</li><li>Low blood pressure, fast pulse, cold limbs, and low urine output</li><li>Sudden high fever or new sharp chest pain</li><li>Reduced breath sounds or asymmetric chest movement after thoracentesis</li></ul></div>\n<h4>Critical complications</h4><ul><li><strong>Pleural effusion:</strong> pain on inhalation, shortness of breath, reduced breath sounds, dullness on percussion; report asymmetric chest movement and reduced sounds.</li><li><strong>ARDS:</strong> stiff lungs; stubborn hypoxia, and the first sign is a change in mental status (confusion, anxiety, agitation).</li><li><strong>Septic shock:</strong> severe low blood pressure, whole-body inflammation, and organ failure (MODS). Signs: systolic pressure &lt; 90 and MAP &lt; 65, capillary refill &gt; 3–4 seconds, fast heart rate, early fever and late low temperature (&lt; 36 C), high WBC, and urine output of 30 mL/h or less = kidney distress.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>أكمل المضاد الحيوي للنهاية حتى لو تحسنت</li><li>اشرب سوائل وارتح، وتعلم استعمال جهاز التنفس التحفيزي كل ساعة</li><li>لا تستعمل مثبطات السعال مع البلغم</li><li>أقلع عن التدخين واسأل عن لقاح الرئة والإنفلونزا</li><li>ارجع فورًا لو عادت الحرارة أو زاد ضيق النفس أو الارتباك</li></ul>\n<ul><li>تجنب مثبطات السعال (مثل codeine)؛ مرطب بارد ليلًا؛ زد السوائل.</li><li>مقياس التنفس الحافز بالمنزل.</li><li>أكمل المضاد الفموي؛ لقاح الالتهاب الرئوي (حسب إرشادات التطعيم المحلية)؛ أقلع عن التدخين؛ اغسل يديك؛ حدد موعد متابعة وأشعة صدر.</li><li>أبلغ عن زيادة أو تفاقم: الحمى، التشوش، ضيق النفس، السعال والبلغم.</li></ul>",
+   "en": "<ul><li>Finish the antibiotic to the end even if you improve</li><li>Drink fluids and rest, and learn to use the incentive spirometer every hour</li><li>Do not use cough suppressants when you have sputum</li><li>Quit smoking and ask about the lung and flu vaccines</li><li>Return immediately if the fever returns or shortness of breath or confusion increases</li></ul>\n<ul><li>Avoid cough suppressants (such as codeine); use a cool humidifier at night; increase fluids.</li><li>Incentive spirometer at home.</li><li>Finish the oral antibiotic; pneumonia vaccine (per local vaccination guidelines); quit smoking; wash your hands; set a follow-up appointment and chest X-ray.</li><li>Report any increase or worsening of: fever, confusion, shortness of breath, cough and sputum.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الارتباك والهياج علامة مبكرة لنقص الأكسجين",
+   "مزرعة الدم قبل المضاد الحيوي",
+   "الرئة السليمة لأسفل في التهاب جانب واحد",
+   "مثبطات السعال تُتجنب مع البلغم",
+   "sepsis: ضغط أقل من 90 وMAP أقل من 65 وبول أقل من 30 مل/س"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الالتهاب الرئوي عدوى في أنسجة الرئة تملأ الحويصلات بإفرازات وصديد، فيتعطل تبادل الغازات ويقل الأكسجين. دليل <a href=\"/diseases/dis-044\">الالتهاب الرئوي (الجانب الطبي)</a> بيشرح التشخيص والعلاج؛ ده دليل <b>التمريض والأولويات والمضاعفات</b>.</p>\n<table><thead><tr><th>النوع</th><th>المميزات</th></tr></thead><tbody><tr><td>فصّي (Lobar)</td><td>يصيب فصًا أو أكثر؛ غالبًا بالمكورات الرئوية؛ بداية مفاجئة وبلغم صدئي</td></tr><tr><td>قصبي رئوي (Bronchopneumonia)</td><td>موزّع على الرئتين؛ ميكروبات متعددة؛ بلغم أصفر أو أخضر</td></tr></tbody></table>\n[[slot:dis-1305-complications|مضاعفات الالتهاب الرئوي المتدرجة — رسم من إعداد الموقع|/diseases/img/dis-1305-complications.svg]]\n<h4>مراجعة NCLEX</h4><p>عدوى تسبب التهابًا شديدًا بالرئتين فتمتلئ الحويصلات بمخاط وسوائل وحطام فيضعف تبادل الغازات: لا يخرج CO₂ ولا يدخل الأكسجين فيحدث نقص أكسجة.</p>[[slot:dis-1305-p445|الالتهاب الرئوي ومضاعفاته — رسم من إعداد الموقع|/diseases/img/dis-1305-p445.svg]]\n<h4>عوامل الخطر والفحوصات (مراجعة)</h4><p>العامل الأول: العمر المتقدم (فوق 65). الالتهاب الرئوي المرتبط بجهاز التنفس (VAP): أفضل مؤشراته بلغم موجب الزرع، حمى، وارتشاح جديد بالأشعة. وطول عدم الحركة والتخدير بعد الجراحة يحبسان الإفرازات.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>عمر أكبر من 65 سنة والأطفال الصغار</li><li>التدخين وأمراض الصدر المزمنة وضعف المناعة</li><li>السكتة والاضطراب في البلع (استنشاق)</li><li>بعد الجراحة والتخدير وقلة الحركة (احتباس الإفرازات)</li><li>التنفس الصناعي (التهاب رئوي مرتبط بالجهاز VAP)</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>أهم 6 علامات</h4><ol><li><b>تغيّر الحالة الذهنية</b> (قلق، هياج، ارتباك) وهو من أبكر علامات نقص الأكسجين خصوصًا لدى كبار السن</li><li>حمى أكثر من 38 م (100.4 ف)</li><li>سعال منتج لبلغم أصفر أو صدئي</li><li>خراخر (Crackles)</li><li>ضيق نفس</li><li>ألم صدري جنبي يزيد بالشهيق والسعال</li></ol>\n<div class=\"cs-box cs-tip\"><strong>أولوية الفرز</strong><p>مريض بعد جراحة يُشتبه التهابًا رئويًا وبدأ يصبح <b>قلقًا ومضطربًا</b> رغم حرارة طبيعية وSpO2 94% هو الأولى بالمتابعة العاجلة، لأن هذا مؤشر مبكر على نقص الأكسجين.</p></div>\n<h4>مضاعفات خطيرة</h4><table><thead><tr><th>المضاعفة</th><th>العلامات</th><th>التدخل</th></tr></thead><tbody><tr><td>انصباب جنبي (Pleural effusion)</td><td>ألم بالشهيق، ضيق نفس، نقص صوت التنفس، رنين مكتوم بالقرع</td><td>بزل الصدر (Thoracentesis)؛ راقب عدم تماثل حركة الصدر وانخفاض صوت التنفس بعد الإجراء (احتمال استرواح الصدر (Pneumothorax) أو نزف)</td></tr><tr><td>ARDS</td><td>نقص أكسجين مقاوم (Refractory hypoxemia)، رئتان متيبستان، تغير وعي</td><td>رعاية مركزة وتهوية ميكانيكية</td></tr><tr><td>تسمم الدم والصدمة الإنتانية</td><td>ضغط انقباضي أقل من 90 أو MAP أقل من 65، نبض سريع، زمن امتلاء شعيري أكثر من 3 ثوانٍ، حرارة أو هبوط حرارة (علامة متأخرة أقل من 36)، WBC مرتفع أو منخفض، بول أقل من 30 مل/س</td><td>مزارع ثم مضاد حيوي خلال ساعة، سوائل وريدية بحسب الأمر، رفع ضغط، نقل للعناية المركزة</td></tr></tbody></table>\n<ol><li>تغير الحالة العقلية: قلق، تهيّج، تشوش.</li><li>حمى (أكثر من 38°م / 100.4°ف).</li><li>سعال منتج «بلغم أصفر».</li><li>خراخر دقيقة أو خشنة.</li><li>ضيق نفس.</li><li>ألم صدري جنبي حاد مع الشهيق أو السعال (احتكاك جنبي: صوت صرير/اهتزاز في الشهيق والزفير) — أبلغ الطبيب.</li></ol><p><strong>سؤال أولوية:</strong> أي مريض يُرى أولًا؟ مريض بعد جراحة يُشتبه التهاب رئوي، حرارته 36.8°م، وSpO₂ 94%، لكنه أصبح قلقًا ومهتاجًا (علامة نقص الأكسجة).</p>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>أشعة صدر (CXR)</b> وتحاليل <b>CBC</b> (WBC فوق 10,000)</li><li><b>مزرعة بلغم</b>، و<b>مزرعة دم قبل أول جرعة مضاد حيوي</b> (تحدد الميكروب وتضبط العلاج)</li><li><b>غازات الدم (ABG)</b> وقياس الأكسجين</li><li><b>مؤشرات</b> مثل CRP وبروكالسيتونين حسب الحالة</li><li>أفضل مؤشر لنجاح العلاج الوريدي: تحسن الحرارة والأعراض وهبوط WBC</li></ul>\n<p>ارتفاع WBC (> 10,000)؛ مزرعة بلغم إيجابية. <strong>المزرعة دائمًا أولًا قبل المضاد الحيوي</strong> لتحديد البكتيريا. أفضل مؤشر مخبري لنجاح المضاد الوريدي: تحسن (انخفاض) تعداد الكريات البيض.</p>"
-    },
-    "treatment": {
-      "ar": "<ul><li>مضادات حيوية حسب الميكروب والمنشأ (مجتمع أم مستشفى)؛ ولا يعطى مضاد للفيروسي منها.</li><li>أكسجين حسب SpO2، سوائل، خافض حرارة ومسكن، موسعات شعب عند الحاجة.</li><li>تجنّب مثبطات السعال (مثل الكوديين) مع البلغم لأن السعال يخرّج الإفرازات.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>\n<div class=\"cs-box cs-info\"><p><strong>مضاعفات وتفاصيل مكملة</strong></p><ul><li><strong>دبيلة جنبية (Pleural empyema):</strong> تجمع صديد في التجويف الجنبي، من مضاعفات الالتهاب الرئوي الفصي بالمكورات الرئوية.</li><li><strong>بعد بزل الصدر:</strong> أخطر مضاعفتين استرواح الصدر (Pneumothorax) وتجمع الدم بالتجويف الجنبي (Hemothorax)؛ أولوية البلاغ عدم تماثل حركة الصدر ونقص أصوات التنفس.</li><li><strong>الالتهاب الرئوي المرتبط بجهاز التنفس (VAP):</strong> غيّر وضع المريض كل ساعتين، واعتنِ بالفم وبالشفط كل ساعتين تقريبًا مع chlorhexidine حسب بروتوكول الوحدة.</li></ul></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>وضعية وتنفس</strong><p>رأس السرير مرتفع (فاولر العالي). مع التهاب رئة من جانب واحد ضع المريض على الجانب السليم (الرئة السليمة لأسفل) لتحسين الأكسجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>تحريك الإفرازات</strong><p>سعال وتنفس عميق (TCDB) مع تثبيت الجرح بوسادة، جهاز تنفس تحفيزي (IS) كل ساعة، علاج صدري، ترطيب بسوائل 2–3 لتر/يوم ما لم يمنع قلب أو كلى، مرطب بارد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>حركة مبكرة</strong><p>تحريك خلال 8 ساعات تقريبًا بعد الجراحة حسب الأمر، تغيير الوضع كل ساعتين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>منع VAP</strong><p>رفع الرأس 30–45 درجة، عناية فم دورية، شفط عند الحاجة، تقييم الاستغناء عن الجهاز يوميًا؛ الكلورهيكسيدين حسب بروتوكول المستشفى.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>مراقبة</strong><p>أكسجين، حرارة، وعي، نمط التنفس، بلغم؛ مؤشر VAP: مزرعة بلغم موجبة وحمى وارتشاح جديد بالأشعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>منع العودة</strong><p>إكمال المضاد الحيوي، لقاح المكورات الرئوية حسب الإرشادات الحالية للعمر والحالة، الإقلاع عن التدخين، متابعة وأشعة بعد العلاج.</p></div></div></div>\n<!-- g6-pn --><ul><li>تقنية <b>Huff coughing</b> وتجنب مثبطات السعال (كوديين).</li><li>مرطب بارد في الليل، سوائل 2–3 لتر، رعاية الفم كل 12 ساعة، وإعطاء مسكن قبل التمرين.</li><li>جهاز التنفس التحفيزي كل ساعة والتحريك المبكر خلال 8 ساعات بعد الجراحة.</li><li>VAP: تحريك الجانب كل ساعتين، عناية فم وشفط حسب الحاجة، أفضل مؤشر لتحسن العلاج الوريدي: عدد WBC.</li></ul>\n<h4>حرّك الإفرازات ووسّع الرئتين</h4><ul><li>علاج طبيعي للصدر، TCDB، وسعال الهف (huff)؛ <strong>تجنب مثبطات السعال</strong>.</li><li>السوائل 2–3 لتر يوميًا (يُوصى بـ3 لتر لتسهيل الإخراج).</li><li>الوضعية: رأس السرير مرتفع (Fowler العالي)؛ في التهاب رئوي أحادي الجانب مع نقص أكسجة: <strong>الرئة السليمة للأسفل</strong> (نقطة امتحان).</li></ul><h4>بعد الجراحة</h4><ul><li>مشي مبكر خلال 8 ساعات، سعال مع تثبيت الجرح، غسل اليدين، عناية فموية بـchlorhexidine كل 12 ساعة، مقياس التنفس الحافز كل ساعة، وأعطِ مسكنات الألم.</li></ul>[[slot:dis-1305-p446|الالتهاب الرئوي: الرعاية والتثقيف — رسم من إعداد الموقع|/diseases/img/dis-1305-p446.svg]]"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فورًا</strong><ul><li>هياج أو ارتباك جديد أو نعاس مفرط</li><li>SpO2 يهبط أو يحتاج أكسجين متزايد</li><li>ضغط منخفض ونبض سريع وبرودة أطراف وبول قليل</li><li>حمى مرتفعة مفاجئة أو ألم صدري حاد جديد</li><li>نقص صوت التنفس أو عدم تماثل حركة الصدر بعد بزل الصدر</li></ul></div>\n<h4>المضاعفات الحرجة</h4><ul><li><strong>الانصباب الجنبي:</strong> ألم شهيقي، ضيق نفس، نقص أصوات التنفس، كتامة بالقرع؛ أبلغ عن حركة صدر غير متماثلة ونقص الأصوات.</li><li><strong>ARDS:</strong> رئتان متيبستان؛ نقص أكسجة عنيد وأول علامة تغير الحالة العقلية (تشوش، قلق، تهيّج).</li><li><strong>الصدمة الإنتانية:</strong> انخفاض ضغط شديد والتهاب كامل بالجسم وفشل أعضاء (MODS). علامات: ضغط انقباضي < 90 وMAP < 65، تعبئة شعرية > 3–4 ثوان، تسارع قلب، حمى مبكرة وانخفاض الحرارة متأخرًا (< 36°م)، WBC مرتفع، ونتاج بول 30 مل/س أو أقل = ضائقة كلوية.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>أكمل المضاد الحيوي للنهاية حتى لو تحسنت</li><li>اشرب سوائل وارتح، وتعلم استعمال جهاز التنفس التحفيزي كل ساعة</li><li>لا تستعمل مثبطات السعال مع البلغم</li><li>أقلع عن التدخين واسأل عن لقاح الرئة والإنفلونزا</li><li>ارجع فورًا لو عادت الحرارة أو زاد ضيق النفس أو الارتباك</li></ul>\n<ul><li>تجنب مثبطات السعال (مثل codeine)؛ مرطب بارد ليلًا؛ زد السوائل.</li><li>مقياس التنفس الحافز بالمنزل.</li><li>أكمل المضاد الفموي؛ لقاح الالتهاب الرئوي (حسب إرشادات التطعيم المحلية)؛ أقلع عن التدخين؛ اغسل يديك؛ حدد موعد متابعة وأشعة صدر.</li><li>أبلغ عن زيادة أو تفاقم: الحمى، التشوش، ضيق النفس، السعال والبلغم.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الارتباك والهياج علامة مبكرة لنقص الأكسجين",
-      "مزرعة الدم قبل المضاد الحيوي",
-      "الرئة السليمة لأسفل في التهاب جانب واحد",
-      "مثبطات السعال تُتجنب مع البلغم",
-      "sepsis: ضغط أقل من 90 وMAP أقل من 65 وبول أقل من 30 مل/س"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي علامة تُعد من أبكر علامات نقص الأكسجين في الالتهاب الرئوي؟"
-      },
-      "options": [
-        {
-          "ar": "تغير الحالة الذهنية"
-        },
-        {
-          "ar": "هبوط الحرارة"
-        },
-        {
-          "ar": "تورم القدم"
-        },
-        {
-          "ar": "فقدان الشم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "القلق والارتباك يسبقان غالبًا تغيرات القياسات الأخرى."
-      }
-    },
-    {
-      "q": {
-        "ar": "متى تؤخذ مزرعة الدم؟"
-      },
-      "options": [
-        {
-          "ar": "بعد المضاد الحيوي"
-        },
-        {
-          "ar": "قبل أول جرعة مضاد حيوي"
-        },
-        {
-          "ar": "عند الخروج"
-        },
-        {
-          "ar": "لا حاجة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "بعد المضاد قد تكون سلبية خطأ ولا تحدد الميكروب."
-      }
-    },
-    {
-      "q": {
-        "ar": "التهاب رئوي في الرئة اليمنى فقط ونقص أكسجين. الوضعية الأفضل؟"
-      },
-      "options": [
-        {
-          "ar": "الجانب الأيمن لأسفل"
-        },
-        {
-          "ar": "الجانب الأيسر لأسفل (الرئة السليمة لأسفل)"
-        },
-        {
-          "ar": "وضع الاستلقاء على البطن دائمًا"
-        },
-        {
-          "ar": "وضع الترندلنبرج"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الرئة السليمة تروّى وتهوّى أكثر عند وضعها لأسفل فتتحسن الأكسجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد بزل الصدر، أي نتيجة تُبلَّغ فورًا؟"
-      },
-      "options": [
-        {
-          "ar": "صوت تنفس متساوٍ"
-        },
-        {
-          "ar": "عدم تماثل حركة الصدر ونقص صوت التنفس"
-        },
-        {
-          "ar": "تحسن ضيق النفس"
-        },
-        {
-          "ar": "حرارة طبيعية"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "قد تدل على استرواح صدري أو نزف."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي إجراء يقلل خطر الالتهاب الرئوي المرتبط بالتنفس الصناعي؟"
-      },
-      "options": [
-        {
-          "ar": "إبقاء المريض مستلقيًا"
-        },
-        {
-          "ar": "رفع الرأس 30–45 درجة وعناية الفم"
-        },
-        {
-          "ar": "تجنب الشفط تمامًا"
-        },
-        {
-          "ar": "إيقاف التغذية للأبد"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "رفع الرأس وعناية الفم جزء من حزمة منع VAP."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مؤشر دم يدل على فاعلية علاج الالتهاب الرئوي؟"
-      },
-      "options": [
-        {
-          "ar": "انخفاض WBC نحو الطبيعي"
-        },
-        {
-          "ar": "ارتفاع الصفائح"
-        },
-        {
-          "ar": "ارتفاع الصوديوم"
-        },
-        {
-          "ar": "انخفاض Hb"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تراجع الالتهاب."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مريض تراه الممرضة أولًا؟"
-      },
-      "options": [
-        {
-          "ar": "بعد جراحة مع اشتباه التهاب رئوي، حرارة 36.8، SpO₂ 94%، وأصبح قلقًا ومهتاجًا"
-        },
-        {
-          "ar": "مريض ثابت بسعال"
-        },
-        {
-          "ar": "مريض ينتظر خروجه"
-        },
-        {
-          "ar": "مريض بصداع قديم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تغير الحالة العقلية أول علامة لنقص الأكسجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تدل على صدمة إنتانية؟"
-      },
-      "options": [
-        {
-          "ar": "ضغط انقباضي < 90 وMAP < 65"
-        },
-        {
-          "ar": "ضغط 130/80"
-        },
-        {
-          "ar": "نتاج بول 100 مل/س"
-        },
-        {
-          "ar": "حرارة 37"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "انخفاض الضغط مع نقص إرواء الأعضاء."
-      }
-    },
-    {
-      "q": {
-        "ar": "احتكاك جنبي هو؟"
-      },
-      "options": [
-        {
-          "ar": "صوت صرير يُسمع في الشهيق والزفير"
-        },
-        {
-          "ar": "صفير"
-        },
-        {
-          "ar": "خراخر"
-        },
-        {
-          "ar": "صوت قلب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يحدث من التهاب الجنبة (Pleurisy)."
-      }
-    },
-    {
-      "q": {
-        "ar": "أفضل مؤشرات الالتهاب الرئوي المرتبط بالتنفس الصناعي (VAP)؟"
-      },
-      "options": [
-        {
-          "ar": "بلغم موجب الزرع وحمى وارتشاح جديد بالأشعة"
-        },
-        {
-          "ar": "سعال جاف"
-        },
-        {
-          "ar": "وزن زائد"
-        },
-        {
-          "ar": "ألم عضلي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "هذه الثلاثة هي المؤشرات المعتمدة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أفضل قيمة مخبرية تُظهر فعالية العلاج الوريدي للالتهاب الرئوي؟"
-      },
-      "options": [
-        {
-          "ar": "تعداد الكريات البيض"
-        },
-        {
-          "ar": "الصفائح"
-        },
-        {
-          "ar": "الصوديوم"
-        },
-        {
-          "ar": "الكرياتينين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "WBC ينخفض مع السيطرة على العدوى."
-      }
-    },
-    {
-      "q": {
-        "ar": "في التهاب رئوي بالرئة اليمنى وانخفاض الأكسجة، أي وضعية تُحسّن؟"
-      },
-      "options": [
-        {
-          "ar": "الرئة السليمة للأسفل"
-        },
-        {
-          "ar": "الرئة المصابة للأسفل"
-        },
-        {
-          "ar": "الاستلقاء على البطن دائمًا"
-        },
-        {
-          "ar": "أي وضع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الرئة السليمة بالأسفل تتلقى دمًا أكثر فيتحسن تبادل الغازات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تعليمات عند الخروج مناسبة؟"
-      },
-      "options": [
-        {
-          "ar": "تجنب مثبطات السعال وزد السوائل"
-        },
-        {
-          "ar": "شراب مثبط سعال بانتظام"
-        },
-        {
-          "ar": "قلل السوائل"
-        },
-        {
-          "ar": "لا حاجة للمتابعة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السعال ضروري لتنظيف الإفرازات."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مضاعفتين يُخشى منهما بعد بزل الصدر (Thoracentesis) لانصباب جنبي؟"
-      },
-      "options": [
-        {
-          "ar": "استرواح الصدر وتجمع دم بالتجويف الجنبي"
-        },
-        {
-          "ar": "ذات الجنب الجاف وارتفاع الضغط"
-        },
-        {
-          "ar": "انخماص الرئة السليمة فقط"
-        },
-        {
-          "ar": "احتشاء عضلة القلب والسكتة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "إدخال الإبرة قد يثقب الرئة (استرواح) أو يصيب وعاء دمويًا (دم في التجويف الجنبي)، لذلك نراقب تماثل حركة الصدر وأصوات التنفس بعد الإجراء."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "ATS/IDSA Community-acquired Pneumonia Guideline (ملخص)"
-    },
-    {
-      "title": "Surviving Sepsis Campaign (ملخص)"
-    }
+  "en": [
+   "Confusion and agitation are an early sign of low oxygen",
+   "Blood culture before the antibiotic",
+   "Healthy lung down in one-sided pneumonia",
+   "Cough suppressants are avoided with sputum",
+   "Sepsis: pressure below 90, MAP below 65, and urine below 30 mL/h"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي علامة تُعد من أبكر علامات نقص الأكسجين في الالتهاب الرئوي؟",
+    "en": "Which sign is among the earliest signs of low oxygen in pneumonia?"
+   },
+   "options": [
+    {
+     "ar": "تغير الحالة الذهنية",
+     "en": "Change in mental status"
+    },
+    {
+     "ar": "هبوط الحرارة",
+     "en": "Drop in temperature"
+    },
+    {
+     "ar": "تورم القدم",
+     "en": "Foot swelling"
+    },
+    {
+     "ar": "فقدان الشم",
+     "en": "Loss of smell"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "القلق والارتباك يسبقان غالبًا تغيرات القياسات الأخرى.",
+    "en": "Anxiety and confusion often come before changes in other measurements."
+   }
+  },
+  {
+   "q": {
+    "ar": "متى تؤخذ مزرعة الدم؟",
+    "en": "When is the blood culture taken?"
+   },
+   "options": [
+    {
+     "ar": "بعد المضاد الحيوي",
+     "en": "After the antibiotic"
+    },
+    {
+     "ar": "قبل أول جرعة مضاد حيوي",
+     "en": "Before the first antibiotic dose"
+    },
+    {
+     "ar": "عند الخروج",
+     "en": "At discharge"
+    },
+    {
+     "ar": "لا حاجة",
+     "en": "Not needed"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "بعد المضاد قد تكون سلبية خطأ ولا تحدد الميكروب.",
+    "en": "After the antibiotic it may be falsely negative and will not identify the microbe."
+   }
+  },
+  {
+   "q": {
+    "ar": "التهاب رئوي في الرئة اليمنى فقط ونقص أكسجين. الوضعية الأفضل؟",
+    "en": "Pneumonia in the right lung only and low oxygen. The best position?"
+   },
+   "options": [
+    {
+     "ar": "الجانب الأيمن لأسفل",
+     "en": "Right side down"
+    },
+    {
+     "ar": "الجانب الأيسر لأسفل (الرئة السليمة لأسفل)",
+     "en": "Left side down (healthy lung down)"
+    },
+    {
+     "ar": "وضع الاستلقاء على البطن دائمًا",
+     "en": "Always lying on the stomach"
+    },
+    {
+     "ar": "وضع الترندلنبرج",
+     "en": "Trendelenburg position"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الرئة السليمة تروّى وتهوّى أكثر عند وضعها لأسفل فتتحسن الأكسجة.",
+    "en": "The healthy lung is better perfused and ventilated when placed down, so oxygenation improves."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد بزل الصدر، أي نتيجة تُبلَّغ فورًا؟",
+    "en": "After thoracentesis, which finding is reported immediately?"
+   },
+   "options": [
+    {
+     "ar": "صوت تنفس متساوٍ",
+     "en": "Equal breath sounds"
+    },
+    {
+     "ar": "عدم تماثل حركة الصدر ونقص صوت التنفس",
+     "en": "Asymmetric chest movement and reduced breath sounds"
+    },
+    {
+     "ar": "تحسن ضيق النفس",
+     "en": "Improved shortness of breath"
+    },
+    {
+     "ar": "حرارة طبيعية",
+     "en": "Normal temperature"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "قد تدل على استرواح صدري أو نزف.",
+    "en": "It may indicate pneumothorax or bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي إجراء يقلل خطر الالتهاب الرئوي المرتبط بالتنفس الصناعي؟",
+    "en": "Which action reduces the risk of ventilator-associated pneumonia?"
+   },
+   "options": [
+    {
+     "ar": "إبقاء المريض مستلقيًا",
+     "en": "Keeping the patient lying flat"
+    },
+    {
+     "ar": "رفع الرأس 30–45 درجة وعناية الفم",
+     "en": "Raising the head 30–45 degrees and mouth care"
+    },
+    {
+     "ar": "تجنب الشفط تمامًا",
+     "en": "Avoiding suction completely"
+    },
+    {
+     "ar": "إيقاف التغذية للأبد",
+     "en": "Stopping feeding forever"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "رفع الرأس وعناية الفم جزء من حزمة منع VAP.",
+    "en": "Raising the head and mouth care are part of the VAP prevention bundle."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مؤشر دم يدل على فاعلية علاج الالتهاب الرئوي؟",
+    "en": "Which blood marker shows that pneumonia treatment is effective?"
+   },
+   "options": [
+    {
+     "ar": "انخفاض WBC نحو الطبيعي",
+     "en": "WBC falling toward normal"
+    },
+    {
+     "ar": "ارتفاع الصفائح",
+     "en": "High platelets"
+    },
+    {
+     "ar": "ارتفاع الصوديوم",
+     "en": "High sodium"
+    },
+    {
+     "ar": "انخفاض Hb",
+     "en": "Low Hb"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تراجع الالتهاب.",
+    "en": "The inflammation is subsiding."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مريض تراه الممرضة أولًا؟",
+    "en": "Which patient does the nurse see first?"
+   },
+   "options": [
+    {
+     "ar": "بعد جراحة مع اشتباه التهاب رئوي، حرارة 36.8، SpO₂ 94%، وأصبح قلقًا ومهتاجًا",
+     "en": "A post-surgical patient with suspected pneumonia, temperature 36.8, SpO₂ 94%, who has become anxious and agitated"
+    },
+    {
+     "ar": "مريض ثابت بسعال",
+     "en": "A stable patient with a cough"
+    },
+    {
+     "ar": "مريض ينتظر خروجه",
+     "en": "A patient waiting for discharge"
+    },
+    {
+     "ar": "مريض بصداع قديم",
+     "en": "A patient with an old headache"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تغير الحالة العقلية أول علامة لنقص الأكسجة.",
+    "en": "A change in mental status is the first sign of hypoxia."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تدل على صدمة إنتانية؟",
+    "en": "Which sign indicates septic shock?"
+   },
+   "options": [
+    {
+     "ar": "ضغط انقباضي < 90 وMAP < 65",
+     "en": "Systolic pressure &lt; 90 and MAP &lt; 65"
+    },
+    {
+     "ar": "ضغط 130/80",
+     "en": "Pressure 130/80"
+    },
+    {
+     "ar": "نتاج بول 100 مل/س",
+     "en": "Urine output 100 mL/h"
+    },
+    {
+     "ar": "حرارة 37",
+     "en": "Temperature 37"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "انخفاض الضغط مع نقص إرواء الأعضاء.",
+    "en": "Low pressure with poor organ perfusion."
+   }
+  },
+  {
+   "q": {
+    "ar": "احتكاك جنبي هو؟",
+    "en": "A pleural friction rub is?"
+   },
+   "options": [
+    {
+     "ar": "صوت صرير يُسمع في الشهيق والزفير",
+     "en": "A creaking sound heard on inhalation and exhalation"
+    },
+    {
+     "ar": "صفير",
+     "en": "Wheezing"
+    },
+    {
+     "ar": "خراخر",
+     "en": "Crackles"
+    },
+    {
+     "ar": "صوت قلب",
+     "en": "A heart sound"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يحدث من التهاب الجنبة (Pleurisy).",
+    "en": "It results from inflammation of the pleura (pleurisy)."
+   }
+  },
+  {
+   "q": {
+    "ar": "أفضل مؤشرات الالتهاب الرئوي المرتبط بالتنفس الصناعي (VAP)؟",
+    "en": "The best indicators of ventilator-associated pneumonia (VAP)?"
+   },
+   "options": [
+    {
+     "ar": "بلغم موجب الزرع وحمى وارتشاح جديد بالأشعة",
+     "en": "Culture-positive sputum, fever, and a new infiltrate on X-ray"
+    },
+    {
+     "ar": "سعال جاف",
+     "en": "Dry cough"
+    },
+    {
+     "ar": "وزن زائد",
+     "en": "Excess weight"
+    },
+    {
+     "ar": "ألم عضلي",
+     "en": "Muscle pain"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "هذه الثلاثة هي المؤشرات المعتمدة.",
+    "en": "These three are the accepted indicators."
+   }
+  },
+  {
+   "q": {
+    "ar": "أفضل قيمة مخبرية تُظهر فعالية العلاج الوريدي للالتهاب الرئوي؟",
+    "en": "The best lab value showing the effectiveness of IV treatment for pneumonia?"
+   },
+   "options": [
+    {
+     "ar": "تعداد الكريات البيض",
+     "en": "White blood cell count"
+    },
+    {
+     "ar": "الصفائح",
+     "en": "Platelets"
+    },
+    {
+     "ar": "الصوديوم",
+     "en": "Sodium"
+    },
+    {
+     "ar": "الكرياتينين",
+     "en": "Creatinine"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "WBC ينخفض مع السيطرة على العدوى.",
+    "en": "WBC falls as the infection is controlled."
+   }
+  },
+  {
+   "q": {
+    "ar": "في التهاب رئوي بالرئة اليمنى وانخفاض الأكسجة، أي وضعية تُحسّن؟",
+    "en": "In pneumonia of the right lung with reduced oxygenation, which position improves it?"
+   },
+   "options": [
+    {
+     "ar": "الرئة السليمة للأسفل",
+     "en": "Healthy lung down"
+    },
+    {
+     "ar": "الرئة المصابة للأسفل",
+     "en": "Affected lung down"
+    },
+    {
+     "ar": "الاستلقاء على البطن دائمًا",
+     "en": "Always lying on the stomach"
+    },
+    {
+     "ar": "أي وضع",
+     "en": "Any position"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الرئة السليمة بالأسفل تتلقى دمًا أكثر فيتحسن تبادل الغازات.",
+    "en": "The healthy lung below receives more blood, so gas exchange improves."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تعليمات عند الخروج مناسبة؟",
+    "en": "Which discharge instructions are appropriate?"
+   },
+   "options": [
+    {
+     "ar": "تجنب مثبطات السعال وزد السوائل",
+     "en": "Avoid cough suppressants and increase fluids"
+    },
+    {
+     "ar": "شراب مثبط سعال بانتظام",
+     "en": "Cough suppressant syrup regularly"
+    },
+    {
+     "ar": "قلل السوائل",
+     "en": "Reduce fluids"
+    },
+    {
+     "ar": "لا حاجة للمتابعة",
+     "en": "No need for follow-up"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السعال ضروري لتنظيف الإفرازات.",
+    "en": "Coughing is necessary to clear secretions."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مضاعفتين يُخشى منهما بعد بزل الصدر (Thoracentesis) لانصباب جنبي؟",
+    "en": "Which two complications are feared after thoracentesis for a pleural effusion?"
+   },
+   "options": [
+    {
+     "ar": "استرواح الصدر وتجمع دم بالتجويف الجنبي",
+     "en": "Pneumothorax and blood collecting in the pleural cavity"
+    },
+    {
+     "ar": "ذات الجنب الجاف وارتفاع الضغط",
+     "en": "Dry pleurisy and high blood pressure"
+    },
+    {
+     "ar": "انخماص الرئة السليمة فقط",
+     "en": "Collapse of the healthy lung only"
+    },
+    {
+     "ar": "احتشاء عضلة القلب والسكتة",
+     "en": "Myocardial infarction and stroke"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "إدخال الإبرة قد يثقب الرئة (استرواح) أو يصيب وعاء دمويًا (دم في التجويف الجنبي)، لذلك نراقب تماثل حركة الصدر وأصوات التنفس بعد الإجراء.",
+    "en": "The needle may puncture the lung (pneumothorax) or injure a blood vessel (blood in the pleural cavity), so we monitor chest movement symmetry and breath sounds after the procedure."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "ATS/IDSA Community-acquired Pneumonia Guideline (ملخص)"
+  },
+  {
+   "title": "Surviving Sepsis Campaign (ملخص)"
+  }
+ ]
 }

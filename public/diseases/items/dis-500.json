@@ -1,327 +1,385 @@
 {
-  "id": "dis-500",
-  "num": 500,
-  "system": "infect",
-  "icon": "🪱",
-  "level": 1,
-  "target": "pediatrics",
-  "title": {
-    "ar": "الديدان والطفيليات المعوية عند الأطفال (علاج وأدوية)",
-    "en": "Intestinal Parasites in Children"
+ "id": "dis-500",
+ "num": 500,
+ "system": "infect",
+ "icon": "🪱",
+ "level": 1,
+ "target": "pediatrics",
+ "title": {
+  "ar": "الديدان والطفيليات المعوية عند الأطفال (علاج وأدوية)",
+  "en": "Intestinal Parasites in Children"
+ },
+ "teaser": {
+  "ar": "إسهال بتعنية؟ هرش شرجي بالليل؟ أنيميا من غير سبب؟ إزاي تشك في الديدان، ليه تحليل البراز أولاً، وجدول علاج كل طفيل بأسماء الأدوية المصرية وجرعاتها.",
+  "en": "Diarrhea with tenesmus? Anal itching at night? Anemia with no cause? How to suspect worms, why the stool test comes first, and a treatment table for each parasite with Egyptian drug names and doses."
+ },
+ "chips": [
+  {
+   "ar": "أميبا / جيارديا",
+   "en": "Amoeba / Giardia"
   },
-  "teaser": {
-    "ar": "إسهال بتعنية؟ هرش شرجي بالليل؟ أنيميا من غير سبب؟ إزاي تشك في الديدان، ليه تحليل البراز أولاً، وجدول علاج كل طفيل بأسماء الأدوية المصرية وجرعاتها."
+  {
+   "ar": "ميبيندازول / ألبيندازول",
+   "en": "Mebendazole / Albendazole"
   },
-  "chips": [
-    {
-      "ar": "أميبا / جيارديا"
-    },
-    {
-      "ar": "ميبيندازول / ألبيندازول"
-    },
-    {
-      "ar": "علاج الأسرة"
-    }
+  {
+   "ar": "علاج الأسرة",
+   "en": "Family treatment"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الديدان والطفيليات المعوية من أكتر أسباب شكاوى البطن والإسهال والأنيميا عند الأطفال في مصر. أغلب الأمهات بتيجي بشكوى «إسهال بتعنية» أو «بيهرش في الشرج بالليل» أو «بيصرّ على سنانه وهو نايم»، والتمريض بيلاحظ الأعراض ويجهّز عينة البراز ويشرح للأم إن <b>العلاج بيتحدد حسب نوع الطفيل</b> اللي بيبان في تحليل البراز.</p><div class=\"cs-stats\"><div><b>6</b><span>أعراض بتخليك تشك في الديدان</span></div><div><b>تحليل براز</b><span>الخطوة الأساسية قبل أي علاج</span></div><div><b>كل الأسرة</b><span>بتتعالج مع الطفل (أميبا / دودة دبوسية)</span></div></div><h4>أشهر أنواع الطفيليات اللي هتقابلها</h4><ul><li>الأميبا (Entamoeba histolytica)</li><li>الجيارديا (Giardia)</li><li>الدودة الدبوسية (Enterobius / Oxyuris)</li><li>الإسكارس (Ascaris)</li><li>الإنكلستوما (Ancylostoma / الدودة الخطافية)</li></ul><div class=\"cs-box cs-info\"><strong>ليه تحليل البراز؟</strong><p>مش كل إسهال بتعنية أميبا، ومش كل «ديدان» بنفس الدوا. العلاج بيتحدد بنوع الطفيل في تحليل البراز (Stool analysis)، فخد العينة قبل أول جرعة علاج.</p></div>[[slot:dis-500-chooser|خريطة اختيار علاج الطفيل حسب نوعه (رسم من إعداد الموقع)|/diseases/img/dis-500-chooser.svg]]\n",
+   "en": "<p>Intestinal worms and parasites are among the most common causes of abdominal complaints, diarrhea, and anemia in children in Egypt. Most mothers come with the complaint \"diarrhea with tenesmus\" or \"he scratches his anus at night\" or \"he grinds his teeth while asleep,\" and nursing observes the symptoms, prepares the stool sample, and explains to the mother that <b>treatment is determined by the type of parasite</b> that appears in the stool test.</p><div class=\"cs-stats\"><div><b>6</b><span>symptoms that make you suspect worms</span></div><div><b>Stool test</b><span>The essential step before any treatment</span></div><div><b>The whole family</b><span>is treated with the child (amoeba / pinworm)</span></div></div><h4>The best-known types of parasites you will meet</h4><ul><li>Amoeba (Entamoeba histolytica)</li><li>Giardia</li><li>Pinworm (Enterobius / Oxyuris)</li><li>Ascaris</li><li>Hookworm (Ancylostoma)</li></ul><div class=\"cs-box cs-info\"><strong>Why the stool test?</strong><p>Not every diarrhea with tenesmus is amoeba, and not every \"worm\" has the same drug. Treatment is determined by the type of parasite in the stool analysis, so take the sample before the first dose of treatment.</p></div>[[slot:dis-500-chooser|A map for choosing parasite treatment by type (an illustration prepared by the site)|/diseases/img/dis-500-chooser.svg]]\n"
+  },
+  "signs": {
+   "ar": "<h4>الأعراض اللي بتخلّي الأم (وأنت) تشك في الديدان</h4><table><thead><tr><th>العَرَض</th><th>التفسير للتمريض</th></tr></thead><tbody><tr><td>إسهال (Diarrhea) مع تعنية (Tenesmus)</td><td>الأشهر. الطفل بيدخل الحمام ويحرق ويحس إنه لسه عايز يتبرز وما بيطلعش حاجة</td></tr><tr><td>براز فيه دم أو مخاط</td><td>يرجّح الأميبا أو الشيجيلا؛ لازم يتحلل ويتفحص</td></tr><tr><td>مغص مستمر (Abdominal cramps)</td><td>شكوى شائعة مع أغلب الأنواع</td></tr><tr><td>سيلان اللعاب بالليل أثناء النوم (Drooling)</td><td>من الشكاوى المعروفة عند الأمهات</td></tr><tr><td>هرش حوالين فتحة الشرج بالليل (Perianal itching)</td><td>الأشهر مع الدودة الدبوسية (Oxyuris) — الإناث بتطلع تبيض ليلاً</td></tr><tr><td>أنيميا (Anemia)</td><td>من أشهر أسباب الأنيميا عند الأطفال، خصوصاً الإنكلستوما (نزف معوي بسيط مزمن)</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>إضافة تمريضية</strong><p>الطفل ممكن يكون عنده شحوب، قلة شهية، فقدان وزن أو بطن منتفخ. أي طفل أنيميا من غير سبب واضح = اطلب تحليل براز. لو في دم في البراز مع حرارة، ما تعتبرهاش ديدان بس، بلّغ الطبيب (احتمال شيجيلا أو غيرها).</p></div>\n<h4>الديدان الدبوسية (Pinworm / Enterobiasis) — إضافة تمريضية</h4><ul><li>حكة حول الشرج <b>تزيد ليلًا</b>، وقد تسبب تبللًا ليليًا وقلقًا وسوء نوم وخدوشًا والتهاب جلد</li><li><b>اختبار الشريط (Tape test):</b> يعلّم الأهل وضع شريط لاصق على فتحة الشرج صباحًا عند الاستيقاظ، والدود على الشريط يؤكد الإصابة</li><li>أدوية: ألبيندازول (ويُذكر تجاريًا Albenza)، ميبيندازول، بيرانتيل باموات</li></ul>[[slot:dis-500-pinworm|الدودة الدبوسية — رسم من إعداد الموقع|/diseases/img/dis-500-pinworm.svg]]<div class=\"cs-box cs-danger\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<h4>Symptoms that make the mother (and you) suspect worms</h4><table><thead><tr><th>Symptom</th><th>Explanation for nursing</th></tr></thead><tbody><tr><td>Diarrhea with tenesmus</td><td>The best known. The child goes to the bathroom with burning and feels he still wants to pass stool and nothing comes out</td></tr><tr><td>Stool with blood or mucus</td><td>Suggests amoeba or shigella; must be analyzed and examined</td></tr><tr><td>Persistent cramps (Abdominal cramps)</td><td>A common complaint with most types</td></tr><tr><td>Drooling at night during sleep</td><td>A complaint well known among mothers</td></tr><tr><td>Itching around the anus at night (Perianal itching)</td><td>Most typical of the pinworm (Oxyuris) — the females come out to lay eggs at night</td></tr><tr><td>Anemia</td><td>One of the best-known causes of anemia in children, especially hookworm (mild chronic intestinal bleeding)</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>Nursing addition</strong><p>The child may have pallor, poor appetite, weight loss, or a swollen belly. Any child with anemia and no clear cause = request a stool test. If there is blood in the stool with fever, do not think of it as worms only; report to the physician (possibly shigella or another cause).</p></div>\n<h4>Pinworms (Pinworm / Enterobiasis) — nursing addition</h4><ul><li>Itching around the anus that <b>worsens at night</b>, and it may cause night wetting, anxiety, poor sleep, scratches, and skin inflammation</li><li><b>Tape test:</b> teach the parents to place sticky tape on the anus in the morning on waking, and worms on the tape confirm the infection</li><li>Drugs: albendazole (also known by the brand Albenza), mebendazole, pyrantel pamoate</li></ul>[[slot:dis-500-pinworm|The pinworm — an illustration prepared by the site|/diseases/img/dis-500-pinworm.svg]]<div class=\"cs-box cs-danger\"><strong>Dose warning</strong><p>Doses are for learning; always verify with the physician/pharmacist before administration.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>تحليل براز (Stool analysis)</b> هو الأساس لمعرفة النوع (الأميبا الحية أو الأكياس، الجيارديا، البيض)</li><li>عينة جديدة في علبة نضيفة جافة، من غير بول أو مياه، وتتبعت للمعمل بسرعة (الأميبا النشطة بتموت لو العينة بردت)</li><li>لو النتيجة سلبية والأعراض مستمرة: ممكن يطلب الطبيب تكرار التحليل على أيام مختلفة</li><li>للدودة الدبوسية: الاختبار الأدق مسحة لاصق شفاف (Scotch tape test) من حوالين الشرج الصبح قبل الاستحمام (إضافة)</li><li>صورة دم (CBC) لو في شحوب أو أنيميا</li></ul>",
+   "en": "<ul><li><b>Stool analysis</b> is the basis for knowing the type (live amoeba or cysts, Giardia, eggs)</li><li>A fresh sample in a clean dry container, without urine or water, and sent to the lab quickly (active amoebae die if the sample cools)</li><li>If the result is negative and symptoms continue: the physician may request repeating the test on different days</li><li>For pinworm: the most accurate test is a clear adhesive tape swab (Scotch tape test) from around the anus in the morning before bathing (addition)</li><li>Blood count (CBC) if there is pallor or anemia</li></ul>"
+  },
+  "treatment": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>قاعدة مهمة</strong><p>الأميبا والدودة الدبوسية: <b>كل أفراد الأسرة بياخدوا نفس العلاج</b> في نفس الوقت، وإلا العدوى بترجع. الجرعات تحت من المراجع، والتنفيذ دايماً بأمر الطبيب وحسب وزن وسن الطفل.</p></div><h4>جدول العلاج حسب نوع الطفيل</h4><table><thead><tr><th>الطفيل</th><th>الاسم التجاري (السوق المصري)</th><th>الجرعة</th></tr></thead><tbody><tr><td>الأميبا — الشكل النشط (Vegetative)</td><td>Flagyl (Metronidazole) شراب 125 مجم/5 مل وأقراص 250 و500؛ Amrizole شراب 125 وأقراص 250 و500</td><td>50 مجم/كجم/يوم مقسمة كل 8 ساعات لمدة أسبوع. الشراب: 2 مل/كجم/يوم مقسومة على 3 جرعات. الأقراص: نص أو قرص 250 أو 500 كل 8 ساعات حسب الوزن</td></tr><tr><td>الأميبا — شكل الأكياس (Cyst)</td><td>Furazol شراب وأقراص، Dimetrol شراب (ميترونيدازول + ديلوكسانيد Diloxanide)</td><td>Furazol شراب: 2–5 سنين: ملعقة كبيرة (5 مل) 3 مرات يومياً؛ 5–10 سنين: ملعقتين (10 مل)؛ أكبر من 10 سنين: 3 ملاعق (15 مل)، كلها 3 مرات يومياً أسبوع. الأقراص: نص قرص أو قرص 3 مرات يومياً حسب السن، أسبوع. ممنوع أقل من سنتين</td></tr><tr><td>الجيارديا</td><td>Flagyl شراب وأقراص</td><td>25 مجم/كجم/يوم مقسمة كل 8 ساعات لمدة أسبوع. الشراب: 1 مل/كجم/يوم مقسمة. الأقراص: 250 أو 500 كل 8 ساعات حسب الوزن</td></tr><tr><td>الدودة الدبوسية (Oxyuris)</td><td>Mebendazole: Antiver 100 شراب/قرص. Flubendazole: Fluvermal شراب/قرص، Verm-all شراب/قرص. Albendazole: Bendax شراب 100/5 مل وقرص 200، Alzental شراب 100/5 مل وقرص 200</td><td>ميبيندازول/فلوبيندازول: ملعقة كبيرة (5 مل) أو قرص مرة واحدة أسبوعياً لمدة 3 أسابيع. ألبيندازول: 20 مل أو قرصين مرة أسبوعياً لمدة 3 أسابيع (أقل من سنتين: 10 مل)</td></tr><tr><td>الإسكارس والإنكلستوما</td><td>نفس الأدوية أعلاه</td><td>ميبيندازول أو فلوبيندازول: ملعقة كبيرة (5 مل) أو قرص صباحاً ومساءً لمدة 3 أيام. ألبيندازول: 20 مل أو قرصين مرة واحدة فقط ولا تتكرر (أقل من سنتين: 10 مل مرة واحدة)</td></tr></tbody></table><h4>لو الطفل أقل من سنتين أو Furazol مش متوفر وعنده أكياس أميبا</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أسبوع Flagyl</strong><p>الطفل ياخد Flagyl لمدة أسبوع (يقتل الشكل النشط).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أسبوع راحة</strong><p>وقف الدواء أسبوع عشان تنتظر الأميبا اللي هتطلع من الأكياس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أسبوع Flagyl تاني</strong><p>يتاخد أسبوع كمان لقتل اللي طلع من الأكياس.</p></div></div></div><h4>طرق التحضير والإعطاء (تمريضياً)</h4><ul><li>الأشربة: رجّ الزجاجة وقيس بالمكيال أو السرنجة المعايرة، مش بملعقة الأكل. 1 ملعقة كبيرة = 5 مل في هذه الجداول</li><li>Flagyl له طعم معدني؛ بعد الأكل لتقليل الغثيان، وممنوع الكحول أثناء العلاج (إضافة)</li><li>Albendazole يفضل مع وجبة فيها دهون لزيادة الامتصاص (إضافة)</li><li>متابعة: تحليل براز بعد انتهاء العلاج للتأكد من الشفاء (حسب الطبيب)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p><b>الإرشاد العالمي (WHO/CDC):</b> الدودة الدبوسية: جرعة واحدة من Mebendazole 100 مجم أو Albendazole 400 مجم وتتكرر بعد أسبوعين؛ نظام «أسبوعياً 3 أسابيع» في المراجع مقبول عملياً لتغطية دورة العدوى. Albendazole للإسكارس والخطافية: 400 مجم جرعة واحدة (200 مجم من 12–23 شهر). Mebendazole 100 مجم مرتين يومياً 3 أيام مقبول. Metronidazole للأميبا الغازية للأطفال 30–50 مجم/كجم/يوم مقسمة على 3 جرعات لمدة 7–10 أيام، ثم علاج «Luminal» لإزالة الأكياس (Diloxanide أو Paromomycin) وده نفس منطق Furazol. الجيارديا: Metronidazole 15 مجم/كجم/يوم لمدة 5–7 أيام (وفي بعض المراجع 25، وكلاهما بيستخدم). اتبع أمر الطبيب. ما لقيناش تأكيد لتركيز Furazol بالظبط، فاقرأ النشرة المرفقة.</p></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>An important rule</strong><p>Amoeba and pinworm: <b>all family members take the same treatment</b> at the same time, otherwise the infection returns. The doses below are for learning, and administration is always by the physician's order and by the child's weight and age.</p></div><h4>Treatment table by type of parasite</h4><table><thead><tr><th>Parasite</th><th>Brand name (Egyptian market)</th><th>Dose</th></tr></thead><tbody><tr><td>Amoeba — active form (Vegetative)</td><td>Flagyl (Metronidazole) syrup 125 mg/5 mL and tablets 250 and 500; Amrizole syrup 125 and tablets 250 and 500</td><td>50 mg/kg/day divided every 8 hours for a week. Syrup: 2 mL/kg/day divided into 3 doses. Tablets: half or one tablet of 250 or 500 every 8 hours depending on weight</td></tr><tr><td>Amoeba — cyst form</td><td>Furazol syrup and tablets, Dimetrol syrup (metronidazole + diloxanide)</td><td>Furazol syrup: 2–5 years: one tablespoon (5 mL) 3 times daily; 5–10 years: two spoons (10 mL); over 10 years: 3 spoons (15 mL), all 3 times daily for a week. Tablets: half a tablet or a tablet 3 times daily depending on age, for a week. Prohibited under two years</td></tr><tr><td>Giardia</td><td>Flagyl syrup and tablets</td><td>25 mg/kg/day divided every 8 hours for a week. Syrup: 1 mL/kg/day divided. Tablets: 250 or 500 every 8 hours depending on weight</td></tr><tr><td>Pinworm (Oxyuris)</td><td>Mebendazole: Antiver 100 syrup/tablet. Flubendazole: Fluvermal syrup/tablet, Verm-all syrup/tablet. Albendazole: Bendax syrup 100/5 mL and tablet 200, Alzental syrup 100/5 mL and tablet 200</td><td>Mebendazole/flubendazole: one tablespoon (5 mL) or a tablet once weekly for 3 weeks. Albendazole: 20 mL or two tablets once weekly for 3 weeks (under two years: 10 mL)</td></tr><tr><td>Ascaris and hookworm</td><td>The same drugs above</td><td>Mebendazole or flubendazole: one tablespoon (5 mL) or a tablet morning and evening for 3 days. Albendazole: 20 mL or two tablets once only and not repeated (under two years: 10 mL once)</td></tr></tbody></table><h4>If the child is under two years or Furazol is unavailable and he has amoeba cysts</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>A week of Flagyl</strong><p>The child takes Flagyl for a week (kills the active form).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>A week of rest</strong><p>Stop the drug for a week to wait for the amoebae that will emerge from the cysts.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Another week of Flagyl</strong><p>Taken for one more week to kill what emerged from the cysts.</p></div></div></div><h4>Preparation and administration (nursing)</h4><ul><li>Syrups: shake the bottle and measure with the measuring cup or the calibrated syringe, not a kitchen spoon. 1 tablespoon = 5 mL in these tables.</li><li>Flagyl has a metallic taste; give after food to reduce nausea, and alcohol is prohibited during treatment (addition)</li><li>Albendazole is preferably with a fatty meal to increase absorption (addition)</li><li>Follow-up: a stool test after the end of treatment to confirm cure (per the physician)</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p><b>Global guidance:</b> Pinworm: a single dose of Mebendazole 100 mg or Albendazole 400 mg repeated after two weeks; the \"weekly for 3 weeks\" regimen is practically acceptable to cover the infection cycle. Albendazole for ascaris and hookworm: 400 mg as a single dose (200 mg from 12–23 months). Mebendazole 100 mg twice daily for 3 days is acceptable. Metronidazole for invasive amoeba in children 30–50 mg/kg/day divided into 3 doses for 7–10 days, then \"Luminal\" treatment to eliminate cysts (Diloxanide or Paromomycin), which is the same logic as Furazol. Giardia: Metronidazole 15 mg/kg/day for 5–7 days (and in some sources 25, and both are used). Follow the physician's order. We could not confirm the exact concentration of Furazol, so read the enclosed leaflet.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم وسجّل</strong><p>الأعراض ومدتها (إسهال، دم/مخاط، مغص، هرش شرجي، لعاب بالليل)، الوزن، شحوب، وجود أفراد تانيين في الأسرة بنفس الأعراض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>جهّز عينة البراز</strong><p>علبة نضيفة، اسم الطفل ووقت العينة، تتبعت فوراً. اشرح للأم إن العلاج هيتحدد بنوع الطفيل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اعطِ الدواء بأمان</strong><p>تأكد من الاسم والتركيز (125 مقابل 250 مثلاً) والوزن والمدة (3 أيام / أسبوع / 3 أسابيع). قيس بسرنجة. لا تعطي Furazol لأقل من سنتين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>راقب</strong><p>عدد مرات الإسهال، الدم في البراز، علامات الجفاف (راجع دليل الجفاف)، الغثيان أو القيء بعد الدواء، الطفح أو الحساسية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>وقاية العدوى</strong><p>غسيل الأيدي بالماء والصابون بعد الحمام وقبل الأكل، تقليم الأظافر، تغيير الملابس الداخلية والفراش يومياً وغسلها بماء ساخن لو دبوسية، غسل الخضار والفاكهة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>علّم الأسرة وثّق</strong><p>كل أفراد الأسرة يتعالجوا، الجرعات والتواريخ، موعد تحليل البراز المتابع.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>للتمريض</strong><p>دودة دبوسية بالليل: الطفل ممكن يهرش ويلمس فمه، فالحل الأهم النظافة. ما تحطش الطفل في حضانة أو مدرسة لو إسهال بدم قبل رأي الطبيب.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess and record</strong><p>The symptoms and their duration (diarrhea, blood/mucus, cramps, anal itching, drooling at night), weight, pallor, whether other family members have the same symptoms.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Prepare the stool sample</strong><p>A clean container, the child's name and the time of the sample, sent immediately. Explain to the mother that treatment will be determined by the type of parasite.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Give the drug safely</strong><p>Confirm the name and concentration (125 versus 250 for example), the weight, and the duration (3 days / a week / 3 weeks). Measure with a syringe. Do not give Furazol to under two years.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Monitor</strong><p>The number of diarrhea episodes, blood in the stool, signs of dehydration (see the dehydration guide), nausea or vomiting after the drug, rash or allergy.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Infection prevention</strong><p>Handwashing with soap and water after the toilet and before eating, trimming nails, changing underwear and bedding daily and washing them in hot water for pinworm, washing vegetables and fruit.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Teach the family and document</strong><p>All family members are treated, the doses and dates, the date of the follow-up stool test.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>For nursing</strong><p>Pinworm at night: the child may scratch and touch his mouth, so the most important solution is hygiene. Do not send the child to a nursery or school with bloody diarrhea before the physician's opinion.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>إسهال بدم مع حرارة أو الطفل تعبان (Toxic)</li><li>علامات جفاف شديد: خمول، عين غائرة، رفض الشرب، قلة التبول</li><li>أنيميا واضحة (شحوب شديد، تعب، ضيق نفس) خصوصاً الإنكلستوما</li><li>ألم بطن شديد أو انتفاخ ثابت أو قيء متكرر (احتمال انسداد بالإسكارس)</li><li>قيء أو خروج دودة من الفم أو الأنف</li><li>لا تحسن بعد العلاج أو رجوع الأعراض بسرعة</li></ul>",
+   "en": "<ul><li>Bloody diarrhea with fever or the child looks unwell (toxic)</li><li>Signs of severe dehydration: lethargy, sunken eyes, refusing to drink, low urination</li><li>Obvious anemia (severe pallor, fatigue, shortness of breath), especially hookworm</li><li>Severe abdominal pain or persistent bloating or repeated vomiting (possible obstruction by ascaris)</li><li>Vomiting or a worm coming out of the mouth or nose</li><li>No improvement after treatment or symptoms returning quickly</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اغسلي أيدي الطفل بعد الحمام وقبل الأكل وقلّمي أظافره.</li><li>كل الأسرة تتعالج مع الطفل لو أميبا أو دودة دبوسية.</li><li>مواعيد وجرعات الدواء بالظبط وللنهاية.</li><li>غسّلي الخضار والفاكهة جيداً، وماء الشرب نضيف.</li><li>غيّري الملابس الداخلية والملايات يومياً وقت العلاج.</li><li>تحليل البراز بعد العلاج لو الطبيب طلب.</li></ul>",
+   "en": "<ul><li>Wash the child's hands after the toilet and before eating and trim his nails.</li><li>The whole family is treated with the child if it is amoeba or pinworm.</li><li>Follow the drug times and doses exactly and to the end.</li><li>Wash vegetables and fruit well, and keep the drinking water clean.</li><li>Change underwear and sheets daily during treatment.</li><li>A stool test after treatment if the physician requests it.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "اشتبه في الديدان عند الإسهال بتعنية، الدم أو المخاط في البراز، المغص المستمر، اللعاب بالليل، الهرش الشرجي، والأنيميا",
+   "تحليل البراز هو اللي بيحدد نوع الطفيل والعلاج",
+   "الأميبا النشطة: Metronidazole (Flagyl) 50 مجم/كجم/يوم على 3 جرعات أسبوع",
+   "أكياس الأميبا: Furazol (ميترونيدازول + ديلوكسانيد) وممنوع أقل من سنتين",
+   "الدودة الدبوسية: Mebendazole/Flubendazole/Albendazole أسبوعياً 3 أسابيع، وكل الأسرة تتعالج",
+   "الإسكارس والخطافية: ميبيندازول 3 أيام أو ألبيندازول جرعة واحدة",
+   "النظافة وغسل الأيدي أهم وقاية",
+   "اختبار الشريط صباحًا"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الديدان والطفيليات المعوية من أكتر أسباب شكاوى البطن والإسهال والأنيميا عند الأطفال في مصر. أغلب الأمهات بتيجي بشكوى «إسهال بتعنية» أو «بيهرش في الشرج بالليل» أو «بيصرّ على سنانه وهو نايم»، والتمريض بيلاحظ الأعراض ويجهّز عينة البراز ويشرح للأم إن <b>العلاج بيتحدد حسب نوع الطفيل</b> اللي بيبان في تحليل البراز.</p><div class=\"cs-stats\"><div><b>6</b><span>أعراض بتخليك تشك في الديدان</span></div><div><b>تحليل براز</b><span>الخطوة الأساسية قبل أي علاج</span></div><div><b>كل الأسرة</b><span>بتتعالج مع الطفل (أميبا / دودة دبوسية)</span></div></div><h4>أشهر أنواع الطفيليات اللي هتقابلها</h4><ul><li>الأميبا (Entamoeba histolytica)</li><li>الجيارديا (Giardia)</li><li>الدودة الدبوسية (Enterobius / Oxyuris)</li><li>الإسكارس (Ascaris)</li><li>الإنكلستوما (Ancylostoma / الدودة الخطافية)</li></ul><div class=\"cs-box cs-info\"><strong>ليه تحليل البراز؟</strong><p>مش كل إسهال بتعنية أميبا، ومش كل «ديدان» بنفس الدوا. العلاج بيتحدد بنوع الطفيل في تحليل البراز (Stool analysis)، فخد العينة قبل أول جرعة علاج.</p></div>[[slot:dis-500-chooser|خريطة اختيار علاج الطفيل حسب نوعه (رسم من إعداد الموقع)|/diseases/img/dis-500-chooser.svg]]\n"
-    },
-    "signs": {
-      "ar": "<h4>الأعراض اللي بتخلّي الأم (وأنت) تشك في الديدان</h4><table><thead><tr><th>العَرَض</th><th>التفسير للتمريض</th></tr></thead><tbody><tr><td>إسهال (Diarrhea) مع تعنية (Tenesmus)</td><td>الأشهر. الطفل بيدخل الحمام ويحرق ويحس إنه لسه عايز يتبرز وما بيطلعش حاجة</td></tr><tr><td>براز فيه دم أو مخاط</td><td>يرجّح الأميبا أو الشيجيلا؛ لازم يتحلل ويتفحص</td></tr><tr><td>مغص مستمر (Abdominal cramps)</td><td>شكوى شائعة مع أغلب الأنواع</td></tr><tr><td>سيلان اللعاب بالليل أثناء النوم (Drooling)</td><td>من الشكاوى المعروفة عند الأمهات</td></tr><tr><td>هرش حوالين فتحة الشرج بالليل (Perianal itching)</td><td>الأشهر مع الدودة الدبوسية (Oxyuris) — الإناث بتطلع تبيض ليلاً</td></tr><tr><td>أنيميا (Anemia)</td><td>من أشهر أسباب الأنيميا عند الأطفال، خصوصاً الإنكلستوما (نزف معوي بسيط مزمن)</td></tr></tbody></table><div class=\"cs-box cs-tip\"><strong>إضافة تمريضية</strong><p>الطفل ممكن يكون عنده شحوب، قلة شهية، فقدان وزن أو بطن منتفخ. أي طفل أنيميا من غير سبب واضح = اطلب تحليل براز. لو في دم في البراز مع حرارة، ما تعتبرهاش ديدان بس، بلّغ الطبيب (احتمال شيجيلا أو غيرها).</p></div>\n<h4>الديدان الدبوسية (Pinworm / Enterobiasis) — إضافة تمريضية</h4><ul><li>حكة حول الشرج <b>تزيد ليلًا</b>، وقد تسبب تبللًا ليليًا وقلقًا وسوء نوم وخدوشًا والتهاب جلد</li><li><b>اختبار الشريط (Tape test):</b> يعلّم الأهل وضع شريط لاصق على فتحة الشرج صباحًا عند الاستيقاظ، والدود على الشريط يؤكد الإصابة</li><li>أدوية: ألبيندازول (ويُذكر تجاريًا Albenza)، ميبيندازول، بيرانتيل باموات</li></ul>[[slot:dis-500-pinworm|الدودة الدبوسية — رسم من إعداد الموقع|/diseases/img/dis-500-pinworm.svg]]<div class=\"cs-box cs-danger\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>تحليل براز (Stool analysis)</b> هو الأساس لمعرفة النوع (الأميبا الحية أو الأكياس، الجيارديا، البيض)</li><li>عينة جديدة في علبة نضيفة جافة، من غير بول أو مياه، وتتبعت للمعمل بسرعة (الأميبا النشطة بتموت لو العينة بردت)</li><li>لو النتيجة سلبية والأعراض مستمرة: ممكن يطلب الطبيب تكرار التحليل على أيام مختلفة</li><li>للدودة الدبوسية: الاختبار الأدق مسحة لاصق شفاف (Scotch tape test) من حوالين الشرج الصبح قبل الاستحمام (إضافة)</li><li>صورة دم (CBC) لو في شحوب أو أنيميا</li></ul>"
-    },
-    "treatment": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>قاعدة مهمة</strong><p>الأميبا والدودة الدبوسية: <b>كل أفراد الأسرة بياخدوا نفس العلاج</b> في نفس الوقت، وإلا العدوى بترجع. الجرعات تحت من المراجع، والتنفيذ دايماً بأمر الطبيب وحسب وزن وسن الطفل.</p></div><h4>جدول العلاج حسب نوع الطفيل</h4><table><thead><tr><th>الطفيل</th><th>الاسم التجاري (السوق المصري)</th><th>الجرعة</th></tr></thead><tbody><tr><td>الأميبا — الشكل النشط (Vegetative)</td><td>Flagyl (Metronidazole) شراب 125 مجم/5 مل وأقراص 250 و500؛ Amrizole شراب 125 وأقراص 250 و500</td><td>50 مجم/كجم/يوم مقسمة كل 8 ساعات لمدة أسبوع. الشراب: 2 مل/كجم/يوم مقسومة على 3 جرعات. الأقراص: نص أو قرص 250 أو 500 كل 8 ساعات حسب الوزن</td></tr><tr><td>الأميبا — شكل الأكياس (Cyst)</td><td>Furazol شراب وأقراص، Dimetrol شراب (ميترونيدازول + ديلوكسانيد Diloxanide)</td><td>Furazol شراب: 2–5 سنين: ملعقة كبيرة (5 مل) 3 مرات يومياً؛ 5–10 سنين: ملعقتين (10 مل)؛ أكبر من 10 سنين: 3 ملاعق (15 مل)، كلها 3 مرات يومياً أسبوع. الأقراص: نص قرص أو قرص 3 مرات يومياً حسب السن، أسبوع. ممنوع أقل من سنتين</td></tr><tr><td>الجيارديا</td><td>Flagyl شراب وأقراص</td><td>25 مجم/كجم/يوم مقسمة كل 8 ساعات لمدة أسبوع. الشراب: 1 مل/كجم/يوم مقسمة. الأقراص: 250 أو 500 كل 8 ساعات حسب الوزن</td></tr><tr><td>الدودة الدبوسية (Oxyuris)</td><td>Mebendazole: Antiver 100 شراب/قرص. Flubendazole: Fluvermal شراب/قرص، Verm-all شراب/قرص. Albendazole: Bendax شراب 100/5 مل وقرص 200، Alzental شراب 100/5 مل وقرص 200</td><td>ميبيندازول/فلوبيندازول: ملعقة كبيرة (5 مل) أو قرص مرة واحدة أسبوعياً لمدة 3 أسابيع. ألبيندازول: 20 مل أو قرصين مرة أسبوعياً لمدة 3 أسابيع (أقل من سنتين: 10 مل)</td></tr><tr><td>الإسكارس والإنكلستوما</td><td>نفس الأدوية أعلاه</td><td>ميبيندازول أو فلوبيندازول: ملعقة كبيرة (5 مل) أو قرص صباحاً ومساءً لمدة 3 أيام. ألبيندازول: 20 مل أو قرصين مرة واحدة فقط ولا تتكرر (أقل من سنتين: 10 مل مرة واحدة)</td></tr></tbody></table><h4>لو الطفل أقل من سنتين أو Furazol مش متوفر وعنده أكياس أميبا</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>أسبوع Flagyl</strong><p>الطفل ياخد Flagyl لمدة أسبوع (يقتل الشكل النشط).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>أسبوع راحة</strong><p>وقف الدواء أسبوع عشان تنتظر الأميبا اللي هتطلع من الأكياس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>أسبوع Flagyl تاني</strong><p>يتاخد أسبوع كمان لقتل اللي طلع من الأكياس.</p></div></div></div><h4>طرق التحضير والإعطاء (تمريضياً)</h4><ul><li>الأشربة: رجّ الزجاجة وقيس بالمكيال أو السرنجة المعايرة، مش بملعقة الأكل. 1 ملعقة كبيرة = 5 مل في هذه الجداول</li><li>Flagyl له طعم معدني؛ بعد الأكل لتقليل الغثيان، وممنوع الكحول أثناء العلاج (إضافة)</li><li>Albendazole يفضل مع وجبة فيها دهون لزيادة الامتصاص (إضافة)</li><li>متابعة: تحليل براز بعد انتهاء العلاج للتأكد من الشفاء (حسب الطبيب)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p><b>الإرشاد العالمي (WHO/CDC):</b> الدودة الدبوسية: جرعة واحدة من Mebendazole 100 مجم أو Albendazole 400 مجم وتتكرر بعد أسبوعين؛ نظام «أسبوعياً 3 أسابيع» في المراجع مقبول عملياً لتغطية دورة العدوى. Albendazole للإسكارس والخطافية: 400 مجم جرعة واحدة (200 مجم من 12–23 شهر). Mebendazole 100 مجم مرتين يومياً 3 أيام مقبول. Metronidazole للأميبا الغازية للأطفال 30–50 مجم/كجم/يوم مقسمة على 3 جرعات لمدة 7–10 أيام، ثم علاج «Luminal» لإزالة الأكياس (Diloxanide أو Paromomycin) وده نفس منطق Furazol. الجيارديا: Metronidazole 15 مجم/كجم/يوم لمدة 5–7 أيام (وفي بعض المراجع 25، وكلاهما بيستخدم). اتبع أمر الطبيب. ما لقيناش تأكيد لتركيز Furazol بالظبط، فاقرأ النشرة المرفقة.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم وسجّل</strong><p>الأعراض ومدتها (إسهال، دم/مخاط، مغص، هرش شرجي، لعاب بالليل)، الوزن، شحوب، وجود أفراد تانيين في الأسرة بنفس الأعراض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>جهّز عينة البراز</strong><p>علبة نضيفة، اسم الطفل ووقت العينة، تتبعت فوراً. اشرح للأم إن العلاج هيتحدد بنوع الطفيل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اعطِ الدواء بأمان</strong><p>تأكد من الاسم والتركيز (125 مقابل 250 مثلاً) والوزن والمدة (3 أيام / أسبوع / 3 أسابيع). قيس بسرنجة. لا تعطي Furazol لأقل من سنتين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>راقب</strong><p>عدد مرات الإسهال، الدم في البراز، علامات الجفاف (راجع دليل الجفاف)، الغثيان أو القيء بعد الدواء، الطفح أو الحساسية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>وقاية العدوى</strong><p>غسيل الأيدي بالماء والصابون بعد الحمام وقبل الأكل، تقليم الأظافر، تغيير الملابس الداخلية والفراش يومياً وغسلها بماء ساخن لو دبوسية، غسل الخضار والفاكهة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>علّم الأسرة وثّق</strong><p>كل أفراد الأسرة يتعالجوا، الجرعات والتواريخ، موعد تحليل البراز المتابع.</p></div></div></div><div class=\"cs-box cs-tip\"><strong>للتمريض</strong><p>دودة دبوسية بالليل: الطفل ممكن يهرش ويلمس فمه، فالحل الأهم النظافة. ما تحطش الطفل في حضانة أو مدرسة لو إسهال بدم قبل رأي الطبيب.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>إسهال بدم مع حرارة أو الطفل تعبان (Toxic)</li><li>علامات جفاف شديد: خمول، عين غائرة، رفض الشرب، قلة التبول</li><li>أنيميا واضحة (شحوب شديد، تعب، ضيق نفس) خصوصاً الإنكلستوما</li><li>ألم بطن شديد أو انتفاخ ثابت أو قيء متكرر (احتمال انسداد بالإسكارس)</li><li>قيء أو خروج دودة من الفم أو الأنف</li><li>لا تحسن بعد العلاج أو رجوع الأعراض بسرعة</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اغسلي أيدي الطفل بعد الحمام وقبل الأكل وقلّمي أظافره.</li><li>كل الأسرة تتعالج مع الطفل لو أميبا أو دودة دبوسية.</li><li>مواعيد وجرعات الدواء بالظبط وللنهاية.</li><li>غسّلي الخضار والفاكهة جيداً، وماء الشرب نضيف.</li><li>غيّري الملابس الداخلية والملايات يومياً وقت العلاج.</li><li>تحليل البراز بعد العلاج لو الطبيب طلب.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "اشتبه في الديدان عند الإسهال بتعنية، الدم أو المخاط في البراز، المغص المستمر، اللعاب بالليل، الهرش الشرجي، والأنيميا",
-      "تحليل البراز هو اللي بيحدد نوع الطفيل والعلاج",
-      "الأميبا النشطة: Metronidazole (Flagyl) 50 مجم/كجم/يوم على 3 جرعات أسبوع",
-      "أكياس الأميبا: Furazol (ميترونيدازول + ديلوكسانيد) وممنوع أقل من سنتين",
-      "الدودة الدبوسية: Mebendazole/Flubendazole/Albendazole أسبوعياً 3 أسابيع، وكل الأسرة تتعالج",
-      "الإسكارس والخطافية: ميبيندازول 3 أيام أو ألبيندازول جرعة واحدة",
-      "النظافة وغسل الأيدي أهم وقاية",
-      "اختبار الشريط صباحًا"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أشهر شكوى هرش حوالين الشرج بالليل تدل غالباً على:"
-      },
-      "options": [
-        {
-          "ar": "الأميبا"
-        },
-        {
-          "ar": "الدودة الدبوسية"
-        },
-        {
-          "ar": "الجيارديا"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الدودة الدبوسية (Oxyuris) الأنثى بتبيض حوالين الشرج بالليل."
-      }
-    },
-    {
-      "q": {
-        "ar": "Furazol ممنوع لطفل عمره:"
-      },
-      "options": [
-        {
-          "ar": "أقل من سنتين"
-        },
-        {
-          "ar": "5 سنين"
-        },
-        {
-          "ar": "10 سنين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لأن الديلوكسانيد ممنوع تحت سنتين حسب المراجع."
-      }
-    },
-    {
-      "q": {
-        "ar": "الأميبا والدودة الدبوسية: مين يتعالج؟"
-      },
-      "options": [
-        {
-          "ar": "الطفل بس"
-        },
-        {
-          "ar": "الأم بس"
-        },
-        {
-          "ar": "كل أفراد الأسرة"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "لمنع إعادة العدوى."
-      }
-    },
-    {
-      "q": {
-        "ar": "جرعة Flagyl للأميبا النشطة عند الأطفال:"
-      },
-      "options": [
-        {
-          "ar": "50 مجم/كجم/يوم على 3 جرعات"
-        },
-        {
-          "ar": "5 مجم/كجم مرة واحدة"
-        },
-        {
-          "ar": "200 مجم/كجم/يوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تقسم كل 8 ساعات لمدة أسبوع."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول خطوة قبل علاج الطفيل:"
-      },
-      "options": [
-        {
-          "ar": "مضاد حيوي"
-        },
-        {
-          "ar": "تحليل براز"
-        },
-        {
-          "ar": "مسكن"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "نوع الدواء بيتحدد بنوع الطفيل."
-      }
-    },
-    {
-      "q": {
-        "ar": "متى يؤخذ اختبار الشريط؟"
-      },
-      "options": [
-        {
-          "ar": "صباحًا عند الاستيقاظ"
-        },
-        {
-          "ar": "قبل النوم"
-        },
-        {
-          "ar": "بعد الأكل"
-        },
-        {
-          "ar": "في أي وقت"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإناث تضع البيض ليلًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "عرض الدودة الدبوسية؟"
-      },
-      "options": [
-        {
-          "ar": "حكة شرجية تزيد ليلًا"
-        },
-        {
-          "ar": "إسهال دموي"
-        },
-        {
-          "ar": "قيء"
-        },
-        {
-          "ar": "حمى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نقطة امتحان."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "WHO: Guideline on preventive chemotherapy for soil-transmitted helminths"
-    },
-    {
-      "title": "CDC: Parasites – Enterobiasis, Ascariasis, Hookworm, Giardiasis, Amebiasis (treatment pages)"
-    },
-    {
-      "title": "BNFC: Metronidazole, Mebendazole, Albendazole, Diloxanide"
-    }
-  ],
-  "rx": [
-    {
-      "category": "أطفال",
-      "condition_ar": "الأميبا (الشكل النشط) عند الأطفال",
-      "condition_en": "Pediatric amoebiasis — vegetative form",
-      "items": [
-        {
-          "drug_name": "Flagyl (Metronidazole) 125 mg/5 ml susp, 250/500 tab",
-          "dose": "50 مجم/كجم/يوم مقسمة كل 8 ساعات لمدة أسبوع (الشراب 2 مل/كجم/يوم)",
-          "note": "علاج الأسرة كلها"
-        },
-        {
-          "drug_name": "Amrizole (Metronidazole) 125 mg/5 ml susp, 250/500 tab",
-          "dose": "نفس جرعة Flagyl",
-          "note": "بديل تجاري"
-        }
-      ],
-      "clinical_note": "يفضل علاج كل أفراد الأسرة بنفس العلاج."
-    },
-    {
-      "category": "أطفال",
-      "condition_ar": "الأميبا (الأكياس)",
-      "condition_en": "Amoebiasis — cyst form",
-      "items": [
-        {
-          "drug_name": "Furazol susp / tab (Metronidazole + Diloxanide)",
-          "dose": "2–5 سنين 5 مل، 5–10 سنين 10 مل، أكبر من 10 سنين 15 مل، 3 مرات يومياً لمدة أسبوع؛ الأقراص: نص أو قرص 3 مرات يومياً",
-          "note": "ممنوع أقل من سنتين"
-        },
-        {
-          "drug_name": "Dimetrol susp (Metronidazole + Diloxanide)",
-          "dose": "مثل Furazol",
-          "note": "بديل تجاري"
-        },
-        {
-          "drug_name": "Flagyl (للأقل من سنتين أو عند نقص Furazol)",
-          "dose": "أسبوع Flagyl ثم أسبوع راحة ثم أسبوع Flagyl",
-          "note": "بروتوكول بديل"
-        }
-      ],
-      "clinical_note": ""
-    },
-    {
-      "category": "أطفال",
-      "condition_ar": "الجيارديا",
-      "condition_en": "Giardiasis",
-      "items": [
-        {
-          "drug_name": "Flagyl (Metronidazole) susp / tab",
-          "dose": "25 مجم/كجم/يوم مقسمة كل 8 ساعات لمدة أسبوع (الشراب 1 مل/كجم/يوم)",
-          "note": ""
-        }
-      ],
-      "clinical_note": ""
-    },
-    {
-      "category": "أطفال",
-      "condition_ar": "الدودة الدبوسية",
-      "condition_en": "Enterobiasis (Pinworm)",
-      "items": [
-        {
-          "drug_name": "Antiver (Mebendazole) 100 mg/5 ml susp / 100 tab",
-          "dose": "5 مل أو قرص مرة واحدة أسبوعياً لمدة 3 أسابيع",
-          "note": "تعالج الأسرة كلها"
-        },
-        {
-          "drug_name": "Fluvermal (Flubendazole) 100 mg susp / tab",
-          "dose": "5 مل أو قرص مرة أسبوعياً لمدة 3 أسابيع",
-          "note": ""
-        },
-        {
-          "drug_name": "Verm-all (Flubendazole) 100 susp / tab",
-          "dose": "5 مل أو قرص مرة أسبوعياً لمدة 3 أسابيع",
-          "note": ""
-        },
-        {
-          "drug_name": "Bendax (Albendazole) 100 mg/5 ml susp / 200 tab",
-          "dose": "20 مل أو قرصين أسبوعياً لمدة 3 أسابيع (أقل من سنتين 10 مل)",
-          "note": ""
-        },
-        {
-          "drug_name": "Alzental (Albendazole) 100 mg/5 ml susp / 200 tab",
-          "dose": "20 مل أو قرصين أسبوعياً لمدة 3 أسابيع (أقل من سنتين 10 مل)",
-          "note": ""
-        }
-      ],
-      "clinical_note": ""
-    },
-    {
-      "category": "أطفال",
-      "condition_ar": "الإسكارس والإنكلستوما",
-      "condition_en": "Ascariasis & hookworm",
-      "items": [
-        {
-          "drug_name": "Antiver (Mebendazole) / Fluvermal (Flubendazole)",
-          "dose": "5 مل أو قرص صباحاً ومساءً لمدة 3 أيام",
-          "note": ""
-        },
-        {
-          "drug_name": "Bendax (Albendazole)",
-          "dose": "20 مل أو قرصين مرة واحدة فقط (أقل من سنتين 10 مل)",
-          "note": "لا تتكرر"
-        }
-      ],
-      "clinical_note": ""
-    }
+  "en": [
+   "Suspect worms with diarrhea with tenesmus, blood or mucus in the stool, persistent cramps, drooling at night, anal itching, and anemia",
+   "The stool test determines the type of parasite and the treatment",
+   "Active amoeba: Metronidazole (Flagyl) 50 mg/kg/day in 3 doses for a week",
+   "Amoeba cysts: Furazol (metronidazole + diloxanide) and prohibited under two years",
+   "Pinworm: Mebendazole/Flubendazole/Albendazole weekly for 3 weeks, and the whole family is treated",
+   "Ascaris and hookworm: mebendazole for 3 days or albendazole as a single dose",
+   "Hygiene and handwashing are the most important prevention",
+   "The tape test in the morning"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أشهر شكوى هرش حوالين الشرج بالليل تدل غالباً على:",
+    "en": "The best-known complaint: itching around the anus at night usually indicates:"
+   },
+   "options": [
+    {
+     "ar": "الأميبا",
+     "en": "Amoeba"
+    },
+    {
+     "ar": "الدودة الدبوسية",
+     "en": "Pinworm"
+    },
+    {
+     "ar": "الجيارديا",
+     "en": "Giardia"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الدودة الدبوسية (Oxyuris) الأنثى بتبيض حوالين الشرج بالليل.",
+    "en": "The female pinworm (Oxyuris) lays eggs around the anus at night."
+   }
+  },
+  {
+   "q": {
+    "ar": "Furazol ممنوع لطفل عمره:",
+    "en": "Furazol is prohibited for a child aged:"
+   },
+   "options": [
+    {
+     "ar": "أقل من سنتين",
+     "en": "Under two years"
+    },
+    {
+     "ar": "5 سنين",
+     "en": "5 years"
+    },
+    {
+     "ar": "10 سنين",
+     "en": "10 years"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لأن الديلوكسانيد ممنوع تحت سنتين حسب المراجع.",
+    "en": "Because diloxanide is prohibited under two years."
+   }
+  },
+  {
+   "q": {
+    "ar": "الأميبا والدودة الدبوسية: مين يتعالج؟",
+    "en": "Amoeba and pinworm: who is treated?"
+   },
+   "options": [
+    {
+     "ar": "الطفل بس",
+     "en": "The child only"
+    },
+    {
+     "ar": "الأم بس",
+     "en": "The mother only"
+    },
+    {
+     "ar": "كل أفراد الأسرة",
+     "en": "All family members"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "لمنع إعادة العدوى.",
+    "en": "To prevent reinfection."
+   }
+  },
+  {
+   "q": {
+    "ar": "جرعة Flagyl للأميبا النشطة عند الأطفال:",
+    "en": "The Flagyl dose for active amoeba in children:"
+   },
+   "options": [
+    {
+     "ar": "50 مجم/كجم/يوم على 3 جرعات",
+     "en": "50 mg/kg/day in 3 doses"
+    },
+    {
+     "ar": "5 مجم/كجم مرة واحدة",
+     "en": "5 mg/kg once"
+    },
+    {
+     "ar": "200 مجم/كجم/يوم",
+     "en": "200 mg/kg/day"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تقسم كل 8 ساعات لمدة أسبوع.",
+    "en": "Divided every 8 hours for a week."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول خطوة قبل علاج الطفيل:",
+    "en": "The first step before parasite treatment:"
+   },
+   "options": [
+    {
+     "ar": "مضاد حيوي",
+     "en": "An antibiotic"
+    },
+    {
+     "ar": "تحليل براز",
+     "en": "A stool test"
+    },
+    {
+     "ar": "مسكن",
+     "en": "A pain reliever"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "نوع الدواء بيتحدد بنوع الطفيل.",
+    "en": "The type of drug is determined by the type of parasite."
+   }
+  },
+  {
+   "q": {
+    "ar": "متى يؤخذ اختبار الشريط؟",
+    "en": "When is the tape test taken?"
+   },
+   "options": [
+    {
+     "ar": "صباحًا عند الاستيقاظ",
+     "en": "In the morning on waking"
+    },
+    {
+     "ar": "قبل النوم",
+     "en": "Before sleep"
+    },
+    {
+     "ar": "بعد الأكل",
+     "en": "After eating"
+    },
+    {
+     "ar": "في أي وقت",
+     "en": "At any time"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإناث تضع البيض ليلًا.",
+    "en": "Females lay eggs at night."
+   }
+  },
+  {
+   "q": {
+    "ar": "عرض الدودة الدبوسية؟",
+    "en": "A symptom of pinworm?"
+   },
+   "options": [
+    {
+     "ar": "حكة شرجية تزيد ليلًا",
+     "en": "Anal itching that worsens at night"
+    },
+    {
+     "ar": "إسهال دموي",
+     "en": "Bloody diarrhea"
+    },
+    {
+     "ar": "قيء",
+     "en": "Vomiting"
+    },
+    {
+     "ar": "حمى",
+     "en": "Fever"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نقطة امتحان.",
+    "en": "An exam point."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "WHO: Guideline on preventive chemotherapy for soil-transmitted helminths"
+  },
+  {
+   "title": "CDC: Parasites – Enterobiasis, Ascariasis, Hookworm, Giardiasis, Amebiasis (treatment pages)"
+  },
+  {
+   "title": "BNFC: Metronidazole, Mebendazole, Albendazole, Diloxanide"
+  }
+ ],
+ "rx": [
+  {
+   "category": "أطفال",
+   "condition_ar": "الأميبا (الشكل النشط) عند الأطفال",
+   "condition_en": "Pediatric amoebiasis — vegetative form",
+   "items": [
+    {
+     "drug_name": "Flagyl (Metronidazole) 125 mg/5 ml susp, 250/500 tab",
+     "dose": "50 مجم/كجم/يوم مقسمة كل 8 ساعات لمدة أسبوع (الشراب 2 مل/كجم/يوم)",
+     "note": "علاج الأسرة كلها"
+    },
+    {
+     "drug_name": "Amrizole (Metronidazole) 125 mg/5 ml susp, 250/500 tab",
+     "dose": "نفس جرعة Flagyl",
+     "note": "بديل تجاري"
+    }
+   ],
+   "clinical_note": "يفضل علاج كل أفراد الأسرة بنفس العلاج."
+  },
+  {
+   "category": "أطفال",
+   "condition_ar": "الأميبا (الأكياس)",
+   "condition_en": "Amoebiasis — cyst form",
+   "items": [
+    {
+     "drug_name": "Furazol susp / tab (Metronidazole + Diloxanide)",
+     "dose": "2–5 سنين 5 مل، 5–10 سنين 10 مل، أكبر من 10 سنين 15 مل، 3 مرات يومياً لمدة أسبوع؛ الأقراص: نص أو قرص 3 مرات يومياً",
+     "note": "ممنوع أقل من سنتين"
+    },
+    {
+     "drug_name": "Dimetrol susp (Metronidazole + Diloxanide)",
+     "dose": "مثل Furazol",
+     "note": "بديل تجاري"
+    },
+    {
+     "drug_name": "Flagyl (للأقل من سنتين أو عند نقص Furazol)",
+     "dose": "أسبوع Flagyl ثم أسبوع راحة ثم أسبوع Flagyl",
+     "note": "بروتوكول بديل"
+    }
+   ],
+   "clinical_note": ""
+  },
+  {
+   "category": "أطفال",
+   "condition_ar": "الجيارديا",
+   "condition_en": "Giardiasis",
+   "items": [
+    {
+     "drug_name": "Flagyl (Metronidazole) susp / tab",
+     "dose": "25 مجم/كجم/يوم مقسمة كل 8 ساعات لمدة أسبوع (الشراب 1 مل/كجم/يوم)",
+     "note": ""
+    }
+   ],
+   "clinical_note": ""
+  },
+  {
+   "category": "أطفال",
+   "condition_ar": "الدودة الدبوسية",
+   "condition_en": "Enterobiasis (Pinworm)",
+   "items": [
+    {
+     "drug_name": "Antiver (Mebendazole) 100 mg/5 ml susp / 100 tab",
+     "dose": "5 مل أو قرص مرة واحدة أسبوعياً لمدة 3 أسابيع",
+     "note": "تعالج الأسرة كلها"
+    },
+    {
+     "drug_name": "Fluvermal (Flubendazole) 100 mg susp / tab",
+     "dose": "5 مل أو قرص مرة أسبوعياً لمدة 3 أسابيع",
+     "note": ""
+    },
+    {
+     "drug_name": "Verm-all (Flubendazole) 100 susp / tab",
+     "dose": "5 مل أو قرص مرة أسبوعياً لمدة 3 أسابيع",
+     "note": ""
+    },
+    {
+     "drug_name": "Bendax (Albendazole) 100 mg/5 ml susp / 200 tab",
+     "dose": "20 مل أو قرصين أسبوعياً لمدة 3 أسابيع (أقل من سنتين 10 مل)",
+     "note": ""
+    },
+    {
+     "drug_name": "Alzental (Albendazole) 100 mg/5 ml susp / 200 tab",
+     "dose": "20 مل أو قرصين أسبوعياً لمدة 3 أسابيع (أقل من سنتين 10 مل)",
+     "note": ""
+    }
+   ],
+   "clinical_note": ""
+  },
+  {
+   "category": "أطفال",
+   "condition_ar": "الإسكارس والإنكلستوما",
+   "condition_en": "Ascariasis & hookworm",
+   "items": [
+    {
+     "drug_name": "Antiver (Mebendazole) / Fluvermal (Flubendazole)",
+     "dose": "5 مل أو قرص صباحاً ومساءً لمدة 3 أيام",
+     "note": ""
+    },
+    {
+     "drug_name": "Bendax (Albendazole)",
+     "dose": "20 مل أو قرصين مرة واحدة فقط (أقل من سنتين 10 مل)",
+     "note": "لا تتكرر"
+    }
+   ],
+   "clinical_note": ""
+  }
+ ]
 }

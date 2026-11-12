@@ -1,206 +1,261 @@
 {
-  "id": "dis-063",
-  "system": "renal",
-  "icon": "🫘",
-  "level": 3,
-  "teaser": {
-    "ar": "لما الكلى تفشل: أعراض اليوريميا من التخليط للقيء، الغسيل الكلوي بإيه ومتى، وتصحيح الحماض والبوتاسيوم من غير ما تخلط بيكربونات مع كالسيوم."
+ "id": "dis-063",
+ "system": "renal",
+ "icon": "🫘",
+ "level": 3,
+ "teaser": {
+  "ar": "لما الكلى تفشل: أعراض اليوريميا من التخليط للقيء، الغسيل الكلوي بإيه ومتى، وتصحيح الحماض والبوتاسيوم من غير ما تخلط بيكربونات مع كالسيوم.",
+  "en": "When the kidneys fail: uremia symptoms from confusion to vomiting, when and how dialysis is used, and correcting acidosis and potassium without mixing bicarbonate with calcium."
+ },
+ "chips": [
+  {
+   "ar": "غسيل كلوي",
+   "en": "Dialysis"
   },
-  "chips": [
-    {
-      "ar": "غسيل كلوي"
-    },
-    {
-      "ar": "فرط بوتاسيوم"
-    },
-    {
-      "ar": "تصحيح الحماض"
-    }
+  {
+   "ar": "فرط بوتاسيوم",
+   "en": "Hyperkalemia"
+  },
+  {
+   "ar": "تصحيح الحماض",
+   "en": "Correcting acidosis"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>اليوريميا (Uremia) هي تراكم اليوريا والفضلات في الدم لما الكلى تفشل، وبتأثر على المخ والقلب والمعدة والرئة والدم. الحالة طارئة غالباً بتحتاج مراقبة مكثفة وأحياناً غسيل كلوي.</p>[[slot:dis-063-dialysis|دواعي الغسيل الكلوي — رسم توضيحي من إعداد الموقع|/diseases/img/dis-063-dialysis.svg]]<div class=\"cs-box cs-info\"><strong>التاريخ المرضي اللي تسأل عنه</strong><p>سكر · ضغط · التهاب مسالك متكرر · حصوات · أمراض مناعة ذاتية.</p></div>\n<h4>مراجعة سريعة للمتلازمة اليوريمية</h4><p>تراكم الفضلات النيتروجينية في الدم لأن الكلى لا تقدر على ترشيحها، ما يسبب اختلالًا في الأملاح وتغيرًا في الوعي وقلة بول. من أسبابها: الفشل الكلوي المزمن (CKD)، الإصابة الكلوية الحادة (AKI)، السكري، رضوض الكلى.</p>[[slot:dis-063-p408|المتلازمة اليوريمية: الفيزيولوجيا والفحص والتدبير — رسم من إعداد الموقع|/diseases/img/dis-063-p408.svg]]",
+   "en": "<p>Uremia is the buildup of urea and waste products in the blood when the kidneys fail. It affects the brain, heart, stomach, lungs, and blood. It is usually an emergency that needs intensive monitoring and sometimes dialysis.</p>[[slot:dis-063-dialysis|Indications for dialysis — an illustration prepared by the site|/diseases/img/dis-063-dialysis.svg]]<div class=\"cs-box cs-info\"><strong>Medical history to ask about</strong><p>Diabetes · hypertension · recurrent urinary tract infections · stones · autoimmune diseases.</p></div>\n<h4>Quick review of the uremic syndrome</h4><p>Nitrogenous waste builds up in the blood because the kidneys cannot filter it, causing electrolyte imbalance, altered consciousness, and low urine output. Causes include chronic kidney disease (CKD), acute kidney injury (AKI), diabetes, and kidney trauma.</p>[[slot:dis-063-p408|Uremic syndrome: physiology, examination, and management — an illustration prepared by the site|/diseases/img/dis-063-p408.svg]]"
+  },
+  "causes": {
+   "ar": "<ul><li>السكري وارتفاع الضغط (أكتر سببين)</li><li>التهاب مسالك متكرر وحصوات (انسداد)</li><li>أمراض المناعة الذاتية</li><li>فشل كلوي حاد (جفاف، نزيف، أدوية)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المراجع تذكر الخلفيات فقط: التاريخ المرضي. الأسباب مضافة من مراجع الكلى.</p></div>",
+   "en": "<ul><li>Diabetes and hypertension (the two most common causes)</li><li>Recurrent urinary tract infections and stones (obstruction)</li><li>Autoimmune diseases</li><li>Acute kidney failure (dehydration, bleeding, drugs)</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The background is limited to the medical history. The causes listed here were added from kidney sources.</p></div>"
+  },
+  "signs": {
+   "ar": "<table><thead><tr><th>الجهاز</th><th>الأعراض والعلامات</th></tr></thead><tbody><tr><td>الجهاز العصبي (CNS)</td><td>تخليط ذهني وغيبوبة</td></tr><tr><td>الجهاز الهضمي (GIT)</td><td>قيء · زغطة (Hiccups) · ألم في الشرسوف</td></tr><tr><td>الصدر</td><td>ربو (ضيق نفس) · رائحة نفس حمضية (Acidotic breath)</td></tr><tr><td>الوجه</td><td>شحوب · انتفاخ (Puffy) · لون ترابي</td></tr><tr><td>الجهاز البولي</td><td>قلة بول (Oliguria) أو انقطاع (Anuria) أو كثرة بول (Polyuria)</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>علامات اليوريميا المتأخرة</strong><p>ألم صدر مع احتكاك التامور (التهاب غشاء القلب) = داعي غسيل عاجل، وسبب لتجنب الهيبارين.</p></div>\n<h4>التقييم حسب الجهاز</h4><table><thead><tr><th>الجهاز</th><th>العلامات</th></tr></thead><tbody><tr><td>الهضمي/البولي</td><td>قلة البول، دم بالبول، ارتفاع المغنيسيوم والبوتاسيوم وحمض اليوريك، التهاب الفم، غثيان وقيء، إسهال أو إمساك</td></tr><tr><td>القلب</td><td>هبوط أو ارتفاع الضغط، اضطراب نظم</td></tr><tr><td>الجهاز العصبي</td><td>تغير مستوى الوعي</td></tr><tr><td>الدم</td><td>أنيميا (الهيموغلوبين أقل من 8)</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>System</th><th>Symptoms and signs</th></tr></thead><tbody><tr><td>Nervous system (CNS)</td><td>Confusion and coma</td></tr><tr><td>Gastrointestinal (GIT)</td><td>Vomiting · hiccups · epigastric pain</td></tr><tr><td>Chest</td><td>Dyspnea (shortness of breath) · acidotic breath odor</td></tr><tr><td>Face</td><td>Pallor · puffiness · earthy color</td></tr><tr><td>Urinary system</td><td>Oliguria (low urine output), anuria (no urine), or polyuria (excess urine)</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>Late signs of uremia</strong><p>Chest pain with a pericardial friction rub (pericarditis) = an urgent indication for dialysis, and a reason to avoid heparin.</p></div>\n<h4>Assessment by system</h4><table><thead><tr><th>System</th><th>Signs</th></tr></thead><tbody><tr><td>Gastrointestinal/urinary</td><td>Low urine output, blood in the urine, high magnesium, potassium, and uric acid, stomatitis, nausea and vomiting, diarrhea or constipation</td></tr><tr><td>Heart</td><td>Low or high blood pressure, arrhythmia</td></tr><tr><td>Nervous system</td><td>Change in level of consciousness</td></tr><tr><td>Blood</td><td>Anemia (hemoglobin below 8)</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<ul><li>يوريا وكرياتينين</li><li>غازات الدم (ABG) + صوديوم وبوتاسيوم</li></ul><h4>تحاليل قبل الغسيل</h4><ul><li>PT ونسبة النشاط</li><li>فيروسات (HBsAg / HCV Ab / HIV Ab)</li><li>صورة دم كاملة CBC</li></ul><p>ويُجهَّز للمريض قسطرة بولية وخط مركزي (Central line) للغسيل.</p>\n<ul><li>تحليل بول: بروتين خفيف، كريات دم حمراء وأسطوانات خلوية.</li><li>ارتفاع BUN والكرياتينين والكهارل.</li><li>تقييم انحلال الدم: ارتفاع البيليروبين وLDH وانخفاض الهابتوغلوبين، مع فحص براز لـE. coli وShigella عند اشتباه المتلازمة اليوريمية الانحلالية.</li></ul>",
+   "en": "<ul><li>Urea and creatinine</li><li>Arterial blood gases (ABG) + sodium and potassium</li></ul><h4>Tests before dialysis</h4><ul><li>PT and activity percentage</li><li>Viruses (HBsAg / HCV Ab / HIV Ab)</li><li>Complete blood count (CBC)</li></ul><p>The patient is also prepared with a urinary catheter and a central line for dialysis.</p>\n<ul><li>Urinalysis: mild proteinuria, red blood cells, and cellular casts.</li><li>Elevated BUN, creatinine, and electrolytes.</li><li>Hemolysis assessment: high bilirubin and LDH and low haptoglobin, with a stool test for E. coli and Shigella when hemolytic uremic syndrome is suspected.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>1) تصحيح العلامات الحيوية والجفاف</h4><ul><li>أكسجين بمعدل منخفض لو في سرعة تنفس (Tachypnea)</li><li>موسّعات شعب لو في أزيز</li><li>محاليل وريدية لو المريض جافّ</li></ul><h4>2) دواعي الغسيل الكلوي (Dialysis)</h4><table><thead><tr><th>النوع</th><th>المؤشر</th></tr></thead><tbody><tr><td>إكلينيكي</td><td>اعتلال مخي بولي: وعي مضطرب لا يُفسَّر بسبب آخر</td></tr><tr><td></td><td>ربو بولي لا يستجيب للموسعات المعتادة</td></tr><tr><td></td><td>قيء بولي مستمر</td></tr><tr><td></td><td>التهاب غشاء القلب البولي (ألم صدر ± احتكاك). يتم الغسيل بدون هيبارين لتجنب تامبوناد القلب</td></tr><tr><td>معملي</td><td>تصفية الكرياتينين: أقل من 10 لغير السكري · أقل من 20 للسكري</td></tr><tr><td></td><td>يوريا أكتر من 200 · كرياتينين أكتر من 10 (غير سكري) · أكتر من 8 (سكري)</td></tr><tr><td></td><td>بوتاسيوم ≥ 7 ممول/لتر لا يستجيب للعلاج</td></tr><tr><td></td><td>حماض أيضي شديد لا يستجيب (pH الدم)</td></tr></tbody></table><h4>3) تصحيح الحماض (Na Bicarbonate)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>احسب العجز</strong><p>العجز = 22 − HCO3 للمريض</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>عدد الأمبولات</strong><p>= (العجز × ⅓ وزن الجسم) ÷ 25 (بحسب المرجع: تأكد من تركيز الأمبول)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>نص الكمية</strong><p>يعطى على 100 مل رينجر خلال ساعتين (30 نقطة/دقيقة)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>النص التاني</strong><p>يعطى على 12 ساعة</p></div></div></div><h4>4) علاج ارتفاع البوتاسيوم</h4><ul><li>أمبول كالسيوم على 100 مل رينجر ببطء</li><li>أو أمبول كالسيوم مخفف في 10 مل رينجر وريدياً على 5 دقائق</li></ul><div class=\"cs-box cs-danger\"><strong>قاعدة أمان</strong><p>كالسيوم في كانيولا، وبيكربونات الصوديوم في كانيولا تانية. إياك تعطيهم في نفس الخط لأنهم بيتحدوا ويكوّنوا مادة صلبة (راسب).</p></div><h4>5) تصحيح اضطرابات الدم عند اللزوم</h4><ul><li>نقل دم: وحدة كرات حمراء مكدسة من نفس الفصيلة بعد عمل التوافق (Cross-match)</li><li>بلازما طازجة مجمدة FFP: وحدة من نفس الفصيلة</li></ul><h4>6) أدوية أخرى مستخدمة</h4><table><thead><tr><th>الدواء</th><th>الاستخدام/الجرعة (من المرجع)</th></tr></thead><tbody><tr><td>Ketosteril</td><td>قرصين 3 مرات يومياً (بيخفض الكرياتينين ويقلل البروتين الضار)</td></tr><tr><td>One-Alpha</td><td>قرص مرة يومياً (فيتامين D النشط)</td></tr><tr><td>Deca-Durabolin</td><td>أمبول كل 3 أسابيع</td></tr><tr><td>Zantac</td><td>حقنة وريدية كل 12 ساعة</td></tr><tr><td>Vitamin K</td><td>أمبول كل 12 ساعة</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>1) Zantac (رانيتيدين) سُحب عالمياً 2020 بسبب شوائب NDMA، فالبديل المتاح فاموتيدين أو بانتوبرازول بجرعة مناسبة للكلى (حسب أمر الطبيب). 2) في علاج فرط البوتاسيوم الحاد المعتمد: كالسيوم جلوكونات 10% وريدي ببطء على 2–5 دقائق مع مراقبة ECG، ثم أنسولين + جلوكوز، سالبيوتامول رذاذ، بيكربونات لو حماض، ومدر (لازيكس) لو المريض بيتبول، ومثبتات/رابطات البوتاسيوم، والغسيل هو العلاج النهائي. المراجع تذكر الكالسيوم فقط. 3) بدء الغسيل في الإرشادات الحديثة (KDIGO) يعتمد على الأعراض والعلامات لا على رقم واحد، وأرقام المرجع قديمة وتقريبية. 4) أنابيب غسيل الكلى تتم بقسطرة غسيل خاصة (Dialysis catheter) يضعها الطبيب، وليس Central line عادية. 5) Deca-Durabolin علاج قديم لأنيميا الكلى، والإريثروبويتين EPO مع الحديد هو البديل المعتمد حالياً لعلاج أنيميا الكلى بأمر الطبيب. 6) لا تحدد الجرعات دون أمر الطبيب وبحسب وظائف الكلى.</p></div>\n<h4>مراجعة العلاج</h4><ul><li>الغسيل الدموي أو البريتوني أو الترشيح المستمر (CRRT) والعلاج البديل للكلى.</li><li>calcitriol وخافضات الفوسفات/الكالسيوم حسب الحاجة، وerythropoietin لعلاج الأنيميا.</li><li>زرع الكلية (<a href=\"/diseases/dis-2701\">دليل زرع الكلية</a>).</li></ul>",
+   "en": "<h4>1) Correct vital signs and dehydration</h4><ul><li>Low-flow oxygen if there is rapid breathing (tachypnea)</li><li>Bronchodilators if there is wheezing</li><li>IV fluids if the patient is dehydrated</li></ul><h4>2) Indications for dialysis</h4><table><thead><tr><th>Type</th><th>Indication</th></tr></thead><tbody><tr><td>Clinical</td><td>Uremic encephalopathy: disturbed consciousness not explained by another cause</td></tr><tr><td></td><td>Uremic dyspnea that does not respond to usual bronchodilators</td></tr><tr><td></td><td>Persistent uremic vomiting</td></tr><tr><td></td><td>Uremic pericarditis (chest pain ± rub). Dialysis is done without heparin to avoid cardiac tamponade</td></tr><tr><td>Laboratory</td><td>Creatinine clearance: below 10 for non-diabetics · below 20 for diabetics</td></tr><tr><td></td><td>Urea above 200 · creatinine above 10 (non-diabetic) · above 8 (diabetic)</td></tr><tr><td></td><td>Potassium ≥ 7 mmol/L not responding to treatment</td></tr><tr><td></td><td>Severe metabolic acidosis not responding (blood pH)</td></tr></tbody></table><h4>3) Correcting acidosis (Na Bicarbonate)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Calculate the deficit</strong><p>Deficit = 22 − the patient's HCO3</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Number of ampoules</strong><p>= (deficit × ⅓ body weight) ÷ 25 (confirm the ampoule concentration)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Half the amount</strong><p>Given in 100 mL Ringer over two hours (30 drops/minute)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>The other half</strong><p>Given over 12 hours</p></div></div></div><h4>4) Treating high potassium</h4><ul><li>A calcium ampoule in 100 mL Ringer, given slowly</li><li>Or a calcium ampoule diluted in 10 mL Ringer, given IV over 5 minutes</li></ul><div class=\"cs-box cs-danger\"><strong>Safety rule</strong><p>Calcium in one cannula, and sodium bicarbonate in another. Never give them in the same line because they combine and form a solid precipitate.</p></div><h4>5) Correcting blood disorders when needed</h4><ul><li>Blood transfusion: one unit of packed red cells of the same blood group after cross-matching</li><li>Fresh frozen plasma (FFP): one unit of the same blood group</li></ul><h4>6) Other drugs used</h4><table><thead><tr><th>Drug</th><th>Use/dose</th></tr></thead><tbody><tr><td>Ketosteril</td><td>Two tablets 3 times daily (lowers creatinine and reduces harmful protein)</td></tr><tr><td>One-Alpha</td><td>One tablet once daily (active vitamin D)</td></tr><tr><td>Deca-Durabolin</td><td>One ampoule every 3 weeks</td></tr><tr><td>Zantac</td><td>IV injection every 12 hours</td></tr><tr><td>Vitamin K</td><td>One ampoule every 12 hours</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>1) Zantac (ranitidine) was withdrawn worldwide in 2020 because of NDMA impurities, so the available alternative is famotidine or pantoprazole at a kidney-appropriate dose (per the physician's order). 2) For acute hyperkalemia, the accepted treatment is calcium gluconate 10% IV slowly over 2–5 minutes with ECG monitoring, then insulin + glucose, nebulized salbutamol, bicarbonate if there is acidosis, a diuretic (Lasix) if the patient is passing urine, and potassium binders; dialysis is the definitive treatment. Older sources mention calcium only. 3) Current guidelines base the start of dialysis on symptoms and signs, not a single number, and the older numbers are outdated and approximate. 4) Dialysis is done through a special dialysis catheter placed by the physician, not an ordinary central line. 5) Deca-Durabolin is an old treatment for renal anemia, and erythropoietin (EPO) with iron is now the accepted alternative for renal anemia, by the physician's order. 6) Do not set doses without a physician's order and based on kidney function.</p></div>\n<h4>Treatment review</h4><ul><li>Hemodialysis, peritoneal dialysis, or continuous renal replacement therapy (CRRT) and other renal replacement therapy.</li><li>Calcitriol and phosphate/calcium binders as needed, and erythropoietin to treat anemia.</li><li>Kidney transplant (<a href=\"/diseases/dis-2701\">kidney transplant guide</a>).</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الوعي والتنفس</strong><p>Glasgow، معدل التنفس، رائحة النفس، الأكسجين، الأزيز (Wheezing). أي تدهور = بلّغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اعمل مونيتور</strong><p>ECG مستمر لو بوتاسيوم عالي (موجات T عالية وQRS عريض)، ضغط ونبض كل ساعة أو حسب الحالة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>خطين وريديين</strong><p>واحد للكالسيوم وواحد للبيكربونات. اتأكد قبل كل حقنة إنها مش في نفس الخط وإن الكانيولا شغالة (الكالسيوم بيسبب نخر نسيجي لو تسرب).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>قسطرة بولية وI/O</strong><p>سجّل البول كل ساعة، الوزن يومياً، حساب السوائل (المحاليل بحذر في الوذمة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>نقل الدم والبلازما</strong><p>تأكد الفصيلة والتوافق، راقب ردود الفعل (حرارة، رعشة، ضيق نفس) أول 15 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>جهّز للغسيل</strong><p>فيروسات، PT، CBC، موافقة المريض، وضع القسطرة. التهاب التامور = غسيل بدون هيبارين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>الغذاء والسوائل</strong><p>قلّل البروتين والبوتاسيوم والملح والفوسفات حسب أمر الطبيب. سوائل = الخارج + كمية صغيرة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>راقب النزيف</strong><p>النزيف الهضمي واللثة، الكدمات (لذلك فيتامين K). اشرح للمريض.</p></div></div></div>\n<h4>تدخلات من مراجعة الامتحان</h4><ul><li>راقب العلامات الحيوية: تسارع القلب، ارتفاع/هبوط الضغط، اضطراب النظم.</li><li>راقب الكهارل والمأخوذ والمُخرَج.</li><li>الحمية: محدودة الصوديوم والنيتروجين والفوسفات والبوتاسيوم (البروتين يحدده الطبيب/الأخصائي بحسب كونه قبل الغسيل أو أثناءه).</li><li>التثقيف: إجراءات الغسيل، الالتزام بالخطة العلاجية، الحمية لتقليل تكرار المشكلة.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess consciousness and breathing</strong><p>Glasgow score, respiratory rate, breath odor, oxygen, wheezing. Any deterioration = report.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Set up monitoring</strong><p>Continuous ECG if potassium is high (tall T waves and wide QRS), blood pressure and pulse every hour or as the condition requires.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Two IV lines</strong><p>One for calcium and one for bicarbonate. Before each injection, make sure they are not in the same line and that the cannula is working (calcium causes tissue necrosis if it leaks).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Urinary catheter and I/O</strong><p>Record urine hourly, weight daily, and calculate fluids (give IV fluids carefully in edema).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Blood and plasma transfusion</strong><p>Confirm the blood group and compatibility, and watch for reactions (fever, chills, shortness of breath) in the first 15 minutes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Prepare for dialysis</strong><p>Viral tests, PT, CBC, patient consent, catheter placement. Pericarditis = dialysis without heparin.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Diet and fluids</strong><p>Reduce protein, potassium, salt, and phosphate as the physician orders. Fluids = output + a small amount.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Watch for bleeding</strong><p>GI and gum bleeding, bruising (hence vitamin K). Explain this to the patient.</p></div></div></div>\n<h4>Interventions for exam review</h4><ul><li>Monitor vital signs: rapid heart rate, high/low blood pressure, arrhythmia.</li><li>Monitor electrolytes and intake and output.</li><li>Diet: limited sodium, nitrogen, phosphate, and potassium (protein is set by the physician/specialist depending on whether the patient is before or during dialysis).</li><li>Education: dialysis procedures, adherence to the treatment plan, and diet to reduce recurrence of the problem.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>وعي مضطرب أو تخليط أو غيبوبة</li><li>موجات ECG مرتفعة T أو بطء النبض أو ضربات غير منتظمة</li><li>ضيق نفس شديد أو وذمة رئة</li><li>ألم صدر ينتشر مع احتكاك</li><li>قيء مستمر أو زغطة</li><li>انقطاع التبول</li><li>نزيف أو كدمات</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately if:</strong><ul><li>Disturbed consciousness, confusion, or coma</li><li>Tall T waves on ECG, a slow pulse, or irregular beats</li><li>Severe shortness of breath or pulmonary edema</li><li>Chest pain that spreads, with a rub</li><li>Persistent vomiting or hiccups</li><li>Stopped urination</li><li>Bleeding or bruising</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>التزم بالسوائل المسموح بها وبالغذاء الخالي من الملح والبوتاسيوم.</li><li>تناول الأدوية بانتظام وما تاخدش أدوية مسكنات (NSAID) من نفسك.</li><li>حافظ على ذراع الغسيل (الفستيولا) نظيف ولا تقيس ضغط عليه.</li><li>راقب وزنك وتورمك وكمية بولك.</li><li>قول للطبيب فوراً لو حسيت بتخليط أو ضيق نفس أو ضعف مفاجئ.</li></ul>",
+   "en": "<ul><li>Stick to the allowed fluids and a salt-free, low-potassium diet.</li><li>Take medicines regularly and do not take pain relievers (NSAIDs) on your own.</li><li>Keep the dialysis arm (fistula) clean and do not take blood pressure on it.</li><li>Monitor your weight, swelling, and amount of urine.</li><li>Tell the doctor immediately if you feel confused, short of breath, or suddenly weak.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الأعراض: تخليط، قيء، زغطة، ربو بولي، شحوب وانتفاخ، نقص بول",
+   "دواعي الغسيل: وعي، ربو، قيء، التهاب تامور، وبوتاسيوم ≥ 7 أو حماض عنيد",
+   "التهاب التامور: غسيل بدون هيبارين",
+   "الكالسيوم والبيكربونات في خطين مختلفين",
+   "الجهاز المراقب ECG للبوتاسيوم العالي",
+   "ما تغيّرش جرعات الدوية دون أمر الطبيب",
+   "اليوريميا: تراكم فضلات نيتروجينية",
+   "تؤثر على الهضمي والقلب والعصبي والدم",
+   "علاج: غسيل، EPO، calcitriol، زرع"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>اليوريميا (Uremia) هي تراكم اليوريا والفضلات في الدم لما الكلى تفشل، وبتأثر على المخ والقلب والمعدة والرئة والدم. الحالة طارئة غالباً بتحتاج مراقبة مكثفة وأحياناً غسيل كلوي.</p>[[slot:dis-063-dialysis|دواعي الغسيل الكلوي — رسم توضيحي من إعداد الموقع|/diseases/img/dis-063-dialysis.svg]]<div class=\"cs-box cs-info\"><strong>التاريخ المرضي اللي تسأل عنه</strong><p>سكر · ضغط · التهاب مسالك متكرر · حصوات · أمراض مناعة ذاتية.</p></div>\n<h4>مراجعة سريعة للمتلازمة اليوريمية</h4><p>تراكم الفضلات النيتروجينية في الدم لأن الكلى لا تقدر على ترشيحها، ما يسبب اختلالًا في الأملاح وتغيرًا في الوعي وقلة بول. من أسبابها: الفشل الكلوي المزمن (CKD)، الإصابة الكلوية الحادة (AKI)، السكري، رضوض الكلى.</p>[[slot:dis-063-p408|المتلازمة اليوريمية: الفيزيولوجيا والفحص والتدبير — رسم من إعداد الموقع|/diseases/img/dis-063-p408.svg]]"
+  "en": [
+   "Symptoms: confusion, vomiting, hiccups, uremic dyspnea, pallor and puffiness, low urine output",
+   "Indications for dialysis: consciousness, dyspnea, vomiting, pericarditis, and potassium ≥ 7 or stubborn acidosis",
+   "Pericarditis: dialysis without heparin",
+   "Calcium and bicarbonate go in two different lines",
+   "Monitor with ECG for high potassium",
+   "Do not change drug doses without a physician's order",
+   "Uremia: buildup of nitrogenous waste",
+   "It affects the GI tract, heart, nervous system, and blood",
+   "Treatment: dialysis, EPO, calcitriol, transplant"
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أمامك مريض يحتاج كالسيوم وبيكربونات. التصرف الصح؟",
+    "en": "In front of you is a patient who needs calcium and bicarbonate. The correct action?"
+   },
+   "options": [
+    {
+     "ar": "نفس الكانيولا بالتتابع",
+     "en": "The same cannula one after the other"
     },
-    "causes": {
-      "ar": "<ul><li>السكري وارتفاع الضغط (أكتر سببين)</li><li>التهاب مسالك متكرر وحصوات (انسداد)</li><li>أمراض المناعة الذاتية</li><li>فشل كلوي حاد (جفاف، نزيف، أدوية)</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>المراجع تذكر الخلفيات فقط: التاريخ المرضي. الأسباب مضافة من مراجع الكلى.</p></div>"
+    {
+     "ar": "كانيولا منفصلة لكل منهما",
+     "en": "A separate cannula for each"
     },
-    "signs": {
-      "ar": "<table><thead><tr><th>الجهاز</th><th>الأعراض والعلامات</th></tr></thead><tbody><tr><td>الجهاز العصبي (CNS)</td><td>تخليط ذهني وغيبوبة</td></tr><tr><td>الجهاز الهضمي (GIT)</td><td>قيء · زغطة (Hiccups) · ألم في الشرسوف</td></tr><tr><td>الصدر</td><td>ربو (ضيق نفس) · رائحة نفس حمضية (Acidotic breath)</td></tr><tr><td>الوجه</td><td>شحوب · انتفاخ (Puffy) · لون ترابي</td></tr><tr><td>الجهاز البولي</td><td>قلة بول (Oliguria) أو انقطاع (Anuria) أو كثرة بول (Polyuria)</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>علامات اليوريميا المتأخرة</strong><p>ألم صدر مع احتكاك التامور (التهاب غشاء القلب) = داعي غسيل عاجل، وسبب لتجنب الهيبارين.</p></div>\n<h4>التقييم حسب الجهاز</h4><table><thead><tr><th>الجهاز</th><th>العلامات</th></tr></thead><tbody><tr><td>الهضمي/البولي</td><td>قلة البول، دم بالبول، ارتفاع المغنيسيوم والبوتاسيوم وحمض اليوريك، التهاب الفم، غثيان وقيء، إسهال أو إمساك</td></tr><tr><td>القلب</td><td>هبوط أو ارتفاع الضغط، اضطراب نظم</td></tr><tr><td>الجهاز العصبي</td><td>تغير مستوى الوعي</td></tr><tr><td>الدم</td><td>أنيميا (الهيموغلوبين أقل من 8)</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<ul><li>يوريا وكرياتينين</li><li>غازات الدم (ABG) + صوديوم وبوتاسيوم</li></ul><h4>تحاليل قبل الغسيل</h4><ul><li>PT ونسبة النشاط</li><li>فيروسات (HBsAg / HCV Ab / HIV Ab)</li><li>صورة دم كاملة CBC</li></ul><p>ويُجهَّز للمريض قسطرة بولية وخط مركزي (Central line) للغسيل.</p>\n<ul><li>تحليل بول: بروتين خفيف، كريات دم حمراء وأسطوانات خلوية.</li><li>ارتفاع BUN والكرياتينين والكهارل.</li><li>تقييم انحلال الدم: ارتفاع البيليروبين وLDH وانخفاض الهابتوغلوبين، مع فحص براز لـE. coli وShigella عند اشتباه المتلازمة اليوريمية الانحلالية.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>1) تصحيح العلامات الحيوية والجفاف</h4><ul><li>أكسجين بمعدل منخفض لو في سرعة تنفس (Tachypnea)</li><li>موسّعات شعب لو في أزيز</li><li>محاليل وريدية لو المريض جافّ</li></ul><h4>2) دواعي الغسيل الكلوي (Dialysis)</h4><table><thead><tr><th>النوع</th><th>المؤشر</th></tr></thead><tbody><tr><td>إكلينيكي</td><td>اعتلال مخي بولي: وعي مضطرب لا يُفسَّر بسبب آخر</td></tr><tr><td></td><td>ربو بولي لا يستجيب للموسعات المعتادة</td></tr><tr><td></td><td>قيء بولي مستمر</td></tr><tr><td></td><td>التهاب غشاء القلب البولي (ألم صدر ± احتكاك). يتم الغسيل بدون هيبارين لتجنب تامبوناد القلب</td></tr><tr><td>معملي</td><td>تصفية الكرياتينين: أقل من 10 لغير السكري · أقل من 20 للسكري</td></tr><tr><td></td><td>يوريا أكتر من 200 · كرياتينين أكتر من 10 (غير سكري) · أكتر من 8 (سكري)</td></tr><tr><td></td><td>بوتاسيوم ≥ 7 ممول/لتر لا يستجيب للعلاج</td></tr><tr><td></td><td>حماض أيضي شديد لا يستجيب (pH الدم)</td></tr></tbody></table><h4>3) تصحيح الحماض (Na Bicarbonate)</h4><div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>احسب العجز</strong><p>العجز = 22 − HCO3 للمريض</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>عدد الأمبولات</strong><p>= (العجز × ⅓ وزن الجسم) ÷ 25 (بحسب المرجع: تأكد من تركيز الأمبول)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>نص الكمية</strong><p>يعطى على 100 مل رينجر خلال ساعتين (30 نقطة/دقيقة)</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>النص التاني</strong><p>يعطى على 12 ساعة</p></div></div></div><h4>4) علاج ارتفاع البوتاسيوم</h4><ul><li>أمبول كالسيوم على 100 مل رينجر ببطء</li><li>أو أمبول كالسيوم مخفف في 10 مل رينجر وريدياً على 5 دقائق</li></ul><div class=\"cs-box cs-danger\"><strong>قاعدة أمان</strong><p>كالسيوم في كانيولا، وبيكربونات الصوديوم في كانيولا تانية. إياك تعطيهم في نفس الخط لأنهم بيتحدوا ويكوّنوا مادة صلبة (راسب).</p></div><h4>5) تصحيح اضطرابات الدم عند اللزوم</h4><ul><li>نقل دم: وحدة كرات حمراء مكدسة من نفس الفصيلة بعد عمل التوافق (Cross-match)</li><li>بلازما طازجة مجمدة FFP: وحدة من نفس الفصيلة</li></ul><h4>6) أدوية أخرى مستخدمة</h4><table><thead><tr><th>الدواء</th><th>الاستخدام/الجرعة (من المرجع)</th></tr></thead><tbody><tr><td>Ketosteril</td><td>قرصين 3 مرات يومياً (بيخفض الكرياتينين ويقلل البروتين الضار)</td></tr><tr><td>One-Alpha</td><td>قرص مرة يومياً (فيتامين D النشط)</td></tr><tr><td>Deca-Durabolin</td><td>أمبول كل 3 أسابيع</td></tr><tr><td>Zantac</td><td>حقنة وريدية كل 12 ساعة</td></tr><tr><td>Vitamin K</td><td>أمبول كل 12 ساعة</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>1) Zantac (رانيتيدين) سُحب عالمياً 2020 بسبب شوائب NDMA، فالبديل المتاح فاموتيدين أو بانتوبرازول بجرعة مناسبة للكلى (حسب أمر الطبيب). 2) في علاج فرط البوتاسيوم الحاد المعتمد: كالسيوم جلوكونات 10% وريدي ببطء على 2–5 دقائق مع مراقبة ECG، ثم أنسولين + جلوكوز، سالبيوتامول رذاذ، بيكربونات لو حماض، ومدر (لازيكس) لو المريض بيتبول، ومثبتات/رابطات البوتاسيوم، والغسيل هو العلاج النهائي. المراجع تذكر الكالسيوم فقط. 3) بدء الغسيل في الإرشادات الحديثة (KDIGO) يعتمد على الأعراض والعلامات لا على رقم واحد، وأرقام المرجع قديمة وتقريبية. 4) أنابيب غسيل الكلى تتم بقسطرة غسيل خاصة (Dialysis catheter) يضعها الطبيب، وليس Central line عادية. 5) Deca-Durabolin علاج قديم لأنيميا الكلى، والإريثروبويتين EPO مع الحديد هو البديل المعتمد حالياً لعلاج أنيميا الكلى بأمر الطبيب. 6) لا تحدد الجرعات دون أمر الطبيب وبحسب وظائف الكلى.</p></div>\n<h4>مراجعة العلاج</h4><ul><li>الغسيل الدموي أو البريتوني أو الترشيح المستمر (CRRT) والعلاج البديل للكلى.</li><li>calcitriol وخافضات الفوسفات/الكالسيوم حسب الحاجة، وerythropoietin لعلاج الأنيميا.</li><li>زرع الكلية (<a href=\"/diseases/dis-2701\">دليل زرع الكلية</a>).</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الوعي والتنفس</strong><p>Glasgow، معدل التنفس، رائحة النفس، الأكسجين، الأزيز (Wheezing). أي تدهور = بلّغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>اعمل مونيتور</strong><p>ECG مستمر لو بوتاسيوم عالي (موجات T عالية وQRS عريض)، ضغط ونبض كل ساعة أو حسب الحالة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>خطين وريديين</strong><p>واحد للكالسيوم وواحد للبيكربونات. اتأكد قبل كل حقنة إنها مش في نفس الخط وإن الكانيولا شغالة (الكالسيوم بيسبب نخر نسيجي لو تسرب).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>قسطرة بولية وI/O</strong><p>سجّل البول كل ساعة، الوزن يومياً، حساب السوائل (المحاليل بحذر في الوذمة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>نقل الدم والبلازما</strong><p>تأكد الفصيلة والتوافق، راقب ردود الفعل (حرارة، رعشة، ضيق نفس) أول 15 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>جهّز للغسيل</strong><p>فيروسات، PT، CBC، موافقة المريض، وضع القسطرة. التهاب التامور = غسيل بدون هيبارين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>الغذاء والسوائل</strong><p>قلّل البروتين والبوتاسيوم والملح والفوسفات حسب أمر الطبيب. سوائل = الخارج + كمية صغيرة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>راقب النزيف</strong><p>النزيف الهضمي واللثة، الكدمات (لذلك فيتامين K). اشرح للمريض.</p></div></div></div>\n<h4>تدخلات من مراجعة الامتحان</h4><ul><li>راقب العلامات الحيوية: تسارع القلب، ارتفاع/هبوط الضغط، اضطراب النظم.</li><li>راقب الكهارل والمأخوذ والمُخرَج.</li><li>الحمية: محدودة الصوديوم والنيتروجين والفوسفات والبوتاسيوم (البروتين يحدده الطبيب/الأخصائي بحسب كونه قبل الغسيل أو أثناءه).</li><li>التثقيف: إجراءات الغسيل، الالتزام بالخطة العلاجية، الحمية لتقليل تكرار المشكلة.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>وعي مضطرب أو تخليط أو غيبوبة</li><li>موجات ECG مرتفعة T أو بطء النبض أو ضربات غير منتظمة</li><li>ضيق نفس شديد أو وذمة رئة</li><li>ألم صدر ينتشر مع احتكاك</li><li>قيء مستمر أو زغطة</li><li>انقطاع التبول</li><li>نزيف أو كدمات</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>التزم بالسوائل المسموح بها وبالغذاء الخالي من الملح والبوتاسيوم.</li><li>تناول الأدوية بانتظام وما تاخدش أدوية مسكنات (NSAID) من نفسك.</li><li>حافظ على ذراع الغسيل (الفستيولا) نظيف ولا تقيس ضغط عليه.</li><li>راقب وزنك وتورمك وكمية بولك.</li><li>قول للطبيب فوراً لو حسيت بتخليط أو ضيق نفس أو ضعف مفاجئ.</li></ul>"
+    {
+     "ar": "خلط في زجاجة واحدة",
+     "en": "Mix in one bottle"
     }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "مزجهم يكوّن راسب صلب.",
+    "en": "Mixing them forms a solid precipitate."
+   }
   },
-  "keyPoints": {
-    "ar": [
-      "الأعراض: تخليط، قيء، زغطة، ربو بولي، شحوب وانتفاخ، نقص بول",
-      "دواعي الغسيل: وعي، ربو، قيء، التهاب تامور، وبوتاسيوم ≥ 7 أو حماض عنيد",
-      "التهاب التامور: غسيل بدون هيبارين",
-      "الكالسيوم والبيكربونات في خطين مختلفين",
-      "الجهاز المراقب ECG للبوتاسيوم العالي",
-      "ما تغيّرش جرعات الدوية دون أمر الطبيب",
-      "اليوريميا: تراكم فضلات نيتروجينية",
-      "تؤثر على الهضمي والقلب والعصبي والدم",
-      "علاج: غسيل، EPO، calcitriol، زرع"
-    ]
-  },
-  "quiz": [
+  {
+   "q": {
+    "ar": "أي مؤشر يعتبر داعي غسيل كلوي إكلينيكي؟",
+    "en": "Which indicator is a clinical indication for dialysis?"
+   },
+   "options": [
     {
-      "q": {
-        "ar": "أمامك مريض يحتاج كالسيوم وبيكربونات. التصرف الصح؟"
-      },
-      "options": [
-        {
-          "ar": "نفس الكانيولا بالتتابع"
-        },
-        {
-          "ar": "كانيولا منفصلة لكل منهما"
-        },
-        {
-          "ar": "خلط في زجاجة واحدة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "مزجهم يكوّن راسب صلب."
-      }
+     "ar": "صداع خفيف",
+     "en": "Mild headache"
     },
     {
-      "q": {
-        "ar": "أي مؤشر يعتبر داعي غسيل كلوي إكلينيكي؟"
-      },
-      "options": [
-        {
-          "ar": "صداع خفيف"
-        },
-        {
-          "ar": "اعتلال مخي بولي"
-        },
-        {
-          "ar": "جفاف الفم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "اضطراب الوعي بدون سبب آخر داعي مباشر."
-      }
+     "ar": "اعتلال مخي بولي",
+     "en": "Uremic encephalopathy"
     },
     {
-      "q": {
-        "ar": "غسيل كلوي لمريض بالتهاب غشاء القلب البولي. ما الاحتياط؟"
-      },
-      "options": [
-        {
-          "ar": "بدون هيبارين"
-        },
-        {
-          "ar": "بجرعة زيادة من الهيبارين"
-        },
-        {
-          "ar": "تأجيله"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لتجنب نزف التامور (تامبوناد)."
-      }
-    },
-    {
-      "q": {
-        "ar": "بوتاسيوم 7.2 مع تغير في ECG. أول إجراء بأمر الطبيب؟"
-      },
-      "options": [
-        {
-          "ar": "كالسيوم وريدي ببطء مع مونيتور"
-        },
-        {
-          "ar": "إعطاء بوتاسيوم"
-        },
-        {
-          "ar": "منع السوائل فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الكالسيوم يحمي القلب مؤقتاً."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي علامة تدل على المتلازمة اليوريمية؟"
-      },
-      "options": [
-        {
-          "ar": "غثيان وقيء مع قلة بول وتغير وعي"
-        },
-        {
-          "ar": "سعال بلغم"
-        },
-        {
-          "ar": "ألم عضلات بعد الجهد"
-        },
-        {
-          "ar": "ارتفاع سكر فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تراكم الفضلات النيتروجينية يسبب أعراضًا هضمية وعصبية وقلة بول."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي حمية مناسبة لمريض يوريمي؟"
-      },
-      "options": [
-        {
-          "ar": "قليلة الصوديوم والفوسفات والبوتاسيوم"
-        },
-        {
-          "ar": "عالية البوتاسيوم"
-        },
-        {
-          "ar": "عالية الملح"
-        },
-        {
-          "ar": "غنية بالفوسفات"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الكلى لا تطرح هذه الأملاح فتتراكم وتضر القلب والعظام."
-      }
+     "ar": "جفاف الفم",
+     "en": "Dry mouth"
     }
-  ],
-  "refs": [
-    {
-      "title": "KDIGO Clinical Practice Guideline for Acute Kidney Injury / CKD 2024"
-    },
-    {
-      "title": "KDIGO Controversies Conference: Acute hyperkalemia in the emergency department"
-    },
-    {
-      "title": "StatPearls: Uremia; Hyperkalemia"
-    },
-    {
-      "title": "FDA/EMA: ranitidine market withdrawal 2020"
-    }
-  ],
-  "title": {
-    "ar": "اليوريميا (التسمم البولي)",
-    "en": "Uremia"
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "اضطراب الوعي بدون سبب آخر داعي مباشر.",
+    "en": "Disturbed consciousness with no other cause is a direct indication."
+   }
   },
-  "num": 63
+  {
+   "q": {
+    "ar": "غسيل كلوي لمريض بالتهاب غشاء القلب البولي. ما الاحتياط؟",
+    "en": "Dialysis for a patient with uremic pericarditis. What is the precaution?"
+   },
+   "options": [
+    {
+     "ar": "بدون هيبارين",
+     "en": "Without heparin"
+    },
+    {
+     "ar": "بجرعة زيادة من الهيبارين",
+     "en": "With an extra dose of heparin"
+    },
+    {
+     "ar": "تأجيله",
+     "en": "Postpone it"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لتجنب نزف التامور (تامبوناد).",
+    "en": "To avoid pericardial bleeding (tamponade)."
+   }
+  },
+  {
+   "q": {
+    "ar": "بوتاسيوم 7.2 مع تغير في ECG. أول إجراء بأمر الطبيب؟",
+    "en": "Potassium 7.2 with an ECG change. The first action by the physician's order?"
+   },
+   "options": [
+    {
+     "ar": "كالسيوم وريدي ببطء مع مونيتور",
+     "en": "IV calcium slowly with monitoring"
+    },
+    {
+     "ar": "إعطاء بوتاسيوم",
+     "en": "Give potassium"
+    },
+    {
+     "ar": "منع السوائل فقط",
+     "en": "Restrict fluids only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الكالسيوم يحمي القلب مؤقتاً.",
+    "en": "Calcium temporarily protects the heart."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تدل على المتلازمة اليوريمية؟",
+    "en": "Which sign indicates the uremic syndrome?"
+   },
+   "options": [
+    {
+     "ar": "غثيان وقيء مع قلة بول وتغير وعي",
+     "en": "Nausea and vomiting with low urine output and altered consciousness"
+    },
+    {
+     "ar": "سعال بلغم",
+     "en": "Cough with sputum"
+    },
+    {
+     "ar": "ألم عضلات بعد الجهد",
+     "en": "Muscle pain after exertion"
+    },
+    {
+     "ar": "ارتفاع سكر فقط",
+     "en": "High blood sugar only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تراكم الفضلات النيتروجينية يسبب أعراضًا هضمية وعصبية وقلة بول.",
+    "en": "Buildup of nitrogenous waste causes GI and neurological symptoms and low urine output."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي حمية مناسبة لمريض يوريمي؟",
+    "en": "Which diet is suitable for a uremic patient?"
+   },
+   "options": [
+    {
+     "ar": "قليلة الصوديوم والفوسفات والبوتاسيوم",
+     "en": "Low in sodium, phosphate, and potassium"
+    },
+    {
+     "ar": "عالية البوتاسيوم",
+     "en": "High in potassium"
+    },
+    {
+     "ar": "عالية الملح",
+     "en": "High in salt"
+    },
+    {
+     "ar": "غنية بالفوسفات",
+     "en": "Rich in phosphate"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الكلى لا تطرح هذه الأملاح فتتراكم وتضر القلب والعظام.",
+    "en": "The kidneys cannot excrete these salts, so they build up and harm the heart and bones."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "KDIGO Clinical Practice Guideline for Acute Kidney Injury / CKD 2024"
+  },
+  {
+   "title": "KDIGO Controversies Conference: Acute hyperkalemia in the emergency department"
+  },
+  {
+   "title": "StatPearls: Uremia; Hyperkalemia"
+  },
+  {
+   "title": "FDA/EMA: ranitidine market withdrawal 2020"
+  }
+ ],
+ "title": {
+  "ar": "اليوريميا (التسمم البولي)",
+  "en": "Uremia"
+ },
+ "num": 63
 }
