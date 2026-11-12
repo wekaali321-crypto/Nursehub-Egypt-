@@ -1,250 +1,317 @@
 {
-  "id": "dis-653",
-  "num": 653,
-  "system": "chest",
-  "icon": "🔬",
-  "level": 2,
-  "title": {
-    "ar": "الفحوصات التشخيصية — الجهاز التنفسي",
-    "en": "Respiratory Diagnostic Tests"
+ "id": "dis-653",
+ "num": 653,
+ "system": "chest",
+ "icon": "🔬",
+ "level": 2,
+ "title": {
+  "ar": "الفحوصات التشخيصية — الجهاز التنفسي",
+  "en": "Respiratory Diagnostic Tests"
+ },
+ "teaser": {
+  "ar": "منظار الشعب، أشعة الصدر، تصوير الشريان الرئوي، مزرعة البلغم، البزل الجنبي، وظائف الرئة، ABG، V/Q، Mantoux، وخزعة الرئة: التحضير والمتابعة التمريضية لكل فحص.",
+  "en": "Bronchoscopy, chest X-ray, pulmonary angiography, sputum culture, thoracentesis, pulmonary function tests, ABG, V/Q, Mantoux, and lung biopsy: preparation and nursing follow-up for each test."
+ },
+ "chips": [
+  {
+   "ar": "تحضير المريض",
+   "en": "Patient preparation"
   },
-  "teaser": {
-    "ar": "منظار الشعب، أشعة الصدر، تصوير الشريان الرئوي، مزرعة البلغم، البزل الجنبي، وظائف الرئة، ABG، V/Q، Mantoux، وخزعة الرئة: التحضير والمتابعة التمريضية لكل فحص."
+  {
+   "ar": "متابعة بعد الفحص",
+   "en": "Post-test follow-up"
   },
-  "chips": [
-    {
-      "ar": "تحضير المريض"
-    },
-    {
-      "ar": "متابعة بعد الفحص"
-    },
-    {
-      "ar": "جداول"
-    }
+  {
+   "ar": "جداول",
+   "en": "Tables"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>معرفة الفحوصات هي نصف شغل التمريض في قسم الصدر: تشرح للمريض، تجهزه، تراقب أثناء الفحص وبعده، وتلتقط المضاعفات بدري. الجدول ده بيجمع الفحوصات الأساسية.</p><table><thead><tr><th>الفحص</th><th>الغرض</th><th>ماذا يُظهر؟</th></tr></thead><tbody><tr><td>منظار الشعب (Bronchoscopy)</td><td>رؤية الشجرة الشعبية، إزالة جسم غريب، خزعة، شفط سوائل</td><td>ورم، سدادة، نزيف، عدوى</td></tr><tr><td>أشعة الصدر (CXR)</td><td>حجم القلب ووضعه وتشوهات الرئة</td><td>التهاب، ورم، سوائل، استرواح</td></tr><tr><td>تصوير الشريان الرئوي</td><td>حالة الدورة الدموية للرئتين</td><td>الجلطة الرئوية</td></tr><tr><td>مزرعة وحساسية البلغم</td><td>تحديد الجرثومة والمضاد</td><td>نمو بكتيري + حساسية</td></tr><tr><td>بزل الجنب (Thoracentesis)</td><td>سحب سائل أو تحليله</td><td>نوع السائل</td></tr><tr><td>وظائف الرئة (PFT)</td><td>قدرة الرئة على تحريك الهواء</td><td>انسدادي أم تقييدي</td></tr><tr><td>غازات الدم (ABG)</td><td>التهوية والأكسجة والتوازن الحمضي</td><td>pH, PaO₂, PaCO₂, HCO₃</td></tr><tr><td>مسح التهوية والتروية (V/Q)</td><td>تروية الرئة</td><td>عدم توافق = جلطة</td></tr><tr><td>اختبار Mantoux (PPD)</td><td>تعرض للسل</td><td>تصلّب بعد 48–72 س</td></tr><tr><td>خزعة الرئة</td><td>عينة نسيج للمجهر</td><td>ورم أو تليّف</td></tr></tbody></table>[[slot:dis-653-tests|جدول الفحوصات التنفسية والتحضير|/diseases/img/dis-653-tests.svg]]<h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-653-bronch|تنظير القصبات — رسم من إعداد الموقع|/diseases/img/dis-653-bronch.svg]]<p>قلق الإجراء الأكبر: منعكس التهوع وتشنج الحنجرة.</p>\n<h4>مراجعة NCLEX: منظار القصبات (Bronchoscopy)</h4><p>إجراء يسمح برؤية الحنجرة والقصبة والشعب والرئة العميقة بمنظار مرن يُدخل عبر الأنف أو الفم أو أنبوب القصبة، لذلك يقلق من منعكس التهوّع وتشنج الحنجرة.</p>[[slot:dis-653-p432|تنظير القصبات: الأسباب والرعاية — رسم من إعداد الموقع|/diseases/img/dis-653-p432.svg]]",
+   "en": "<p>Knowing the tests is half of nursing work in the chest unit: you explain to the patient, prepare him, monitor during the test and after it, and catch complications early. This table gathers the basic tests.</p><table><thead><tr><th>Test</th><th>Purpose</th><th>What does it show?</th></tr></thead><tbody><tr><td>Bronchoscopy (Bronchoscopy)</td><td>Seeing the bronchial tree, removing a foreign body, biopsy, suctioning fluids</td><td>Tumor, plug, bleeding, infection</td></tr><tr><td>Chest X-ray (CXR)</td><td>Heart size and position and lung abnormalities</td><td>Infection, tumor, fluid, pneumothorax</td></tr><tr><td>Pulmonary angiography</td><td>The state of the circulation to the lungs</td><td>Pulmonary embolism</td></tr><tr><td>Sputum culture and sensitivity</td><td>Identifying the germ and the antibiotic</td><td>Bacterial growth + sensitivity</td></tr><tr><td>Thoracentesis (Thoracentesis)</td><td>Withdrawing or analyzing fluid</td><td>The type of fluid</td></tr><tr><td>Pulmonary function tests (PFT)</td><td>The lung's ability to move air</td><td>Obstructive or restrictive</td></tr><tr><td>Blood gases (ABG)</td><td>Ventilation, oxygenation, and acid-base balance</td><td>pH, PaO₂, PaCO₂, HCO₃</td></tr><tr><td>Ventilation-perfusion scan (V/Q)</td><td>Lung perfusion</td><td>Mismatch = embolism</td></tr><tr><td>Mantoux test (PPD)</td><td>Exposure to tuberculosis</td><td>Induration after 48–72 h</td></tr><tr><td>Lung biopsy</td><td>A tissue sample for the microscope</td><td>Tumor or fibrosis</td></tr></tbody></table>[[slot:dis-653-tests|Table of respiratory tests and preparation|/diseases/img/dis-653-tests.svg]]<h4>Additions covering review points</h4>[[slot:dis-653-bronch|Bronchoscopy — illustration prepared by the site|/diseases/img/dis-653-bronch.svg]]<p>The biggest concern of the procedure: the gag reflex and laryngospasm.</p>\n<h4>NCLEX review: bronchoscopy (Bronchoscopy)</h4><p>A procedure that allows seeing the larynx, trachea, bronchi, and deep lung with a flexible scope inserted through the nose, mouth, or an endotracheal tube, so there is concern about the gag reflex and laryngospasm.</p>[[slot:dis-653-p432|Bronchoscopy: causes and care — illustration prepared by the site|/diseases/img/dis-653-p432.svg]]"
+  },
+  "causes": {
+   "ar": "<h4>قيم ABG الطبيعية</h4><div class=\"cs-stats\"><div><b>7.35–7.45</b><span>pH</span></div><div><b>80–100</b><span>PaO₂ (مم زئبق)</span></div><div><b>35–45</b><span>PaCO₂ (مم زئبق)</span></div><div><b>22–26</b><span>HCO₃ (mEq/L)</span></div></div><p>عينة 3–5 مل من شريان (عادة الكعبري) بسرنجة مُهَرَّنة (Heparinized)، تُوضع <b>على الثلج</b> إن لم تُحلل فوراً.</p>",
+   "en": "<h4>Normal ABG values</h4><div class=\"cs-stats\"><div><b>7.35–7.45</b><span>pH</span></div><div><b>80–100</b><span>PaO₂ (mmHg)</span></div><div><b>35–45</b><span>PaCO₂ (mmHg)</span></div><div><b>22–26</b><span>HCO₃ (mEq/L)</span></div></div><p>A 3–5 mL sample from an artery (usually the radial) in a heparinized syringe (Heparinized), placed <b>on ice</b> if not analyzed immediately.</p>"
+  },
+  "signs": {
+   "ar": "<h4>منظار الشعب (Bronchoscopy)</h4><table><thead><tr><th>المرحلة</th><th>ما يجب فعله</th></tr></thead><tbody><tr><td>قبل</td><td>قبول مستنير؛ صيام (NPO) 6–8 ساعات؛ تقييم الحساسية للمخدر الموضعي؛ تأكد من INR والصفائح؛ إزالة الأسنان الصناعية؛ تأكد من وجود الخطوط الوريدية</td></tr><tr><td>أثناء</td><td>المراقبة: العلامات الحيوية، جهد التنفس، لون الجلد، مراقب القلب وSpO₂</td></tr><tr><td>بعد</td><td><b>صيام حتى عودة منعكس البلع والسعال</b> لتجنب الشفط؛ تحقق من المنعكسين؛ راقب التنفس والعضلات المساعدة وأصوات الصدر؛ البلغم بالدم الخفيف طبيعي؛ ابحث عن علامات استرواح أو بحة مستمرة؛ أشعة بعد الخزعة</td></tr></tbody></table>\n<h4>أشعة الصدر</h4><table><thead><tr><th>المرحلة</th><th>ما يجب فعله</th></tr></thead><tbody><tr><td>قبل</td><td>اشرح الفحص وحبس النفس؛ أزل المعادن والحلي والسحابات؛ اسأل عن الحمل</td></tr><tr><td>أثناء</td><td>المريض يشهق ويحبس نفسه أثناء الصورة</td></tr></tbody></table>\n<h4>تصوير الشريان الرئوي</h4><table><thead><tr><th>المرحلة</th><th>ما يجب فعله</th></tr></thead><tbody><tr><td>قبل</td><td>تأكد من <b>عدم حساسية اليود أو الصبغة أو المحار</b>؛ إن وجدت: بديل أو Premedication (Diphenhydramine + Prednisone)؛ تقييم الكلى (BUN/Creatinine)؛ قبول مستنير؛ أخبره أن الإحساس بالحرارة عادي</td></tr><tr><td>أثناء</td><td>راقب التحمل وردود فعل الصبغة</td></tr><tr><td>بعد</td><td>موضع القسطرة: نزيف؟ ، تروية الطرف؛ شرب سوائل لتحسين طرد الصبغة</td></tr></tbody></table>\n<h4>مزرعة وحساسية البلغم</h4><ul><li>حاوية <b>معقمة</b>؛ بلغم <b>وليس لعاب</b> (فم مليء ببكتيريا طبيعية)؛ بعد مضمضة بماء؛ صباحاً؛ من سعال عميق أو شفط.</li><li>المضاد الحيوي: اجمع العينة <b>قبل</b> أول جرعة إن أمكن.</li><li>النتيجة بعد 48–72 ساعة.</li><li>أرسلها للمعمل فوراً.</li><li>علّم المريض كيف يأخذ العينة بشكل صحيح.</li></ul>",
+   "en": "<h4>Bronchoscopy (Bronchoscopy)</h4><table><thead><tr><th>Phase</th><th>What to do</th></tr></thead><tbody><tr><td>Before</td><td>Informed consent; fasting (NPO) 6–8 hours; assess allergy to the topical anesthetic; check INR and platelets; remove dentures; confirm IV lines are in place</td></tr><tr><td>During</td><td>Monitoring: vital signs, work of breathing, skin color, cardiac monitor and SpO₂</td></tr><tr><td>After</td><td><b>Fasting until the swallow and cough reflexes return</b> to avoid aspiration; check both reflexes; monitor breathing, accessory muscles, and chest sounds; slightly blood-tinged sputum is normal; look for signs of pneumothorax or persistent hoarseness; X-ray after a biopsy</td></tr></tbody></table>\n<h4>Chest X-ray</h4><table><thead><tr><th>Phase</th><th>What to do</th></tr></thead><tbody><tr><td>Before</td><td>Explain the test and breath-holding; remove metal, jewelry, and zippers; ask about pregnancy</td></tr><tr><td>During</td><td>The patient inhales and holds the breath during the picture</td></tr></tbody></table>\n<h4>Pulmonary angiography</h4><table><thead><tr><th>Phase</th><th>What to do</th></tr></thead><tbody><tr><td>Before</td><td>Confirm <b>no allergy to iodine, dye, or shellfish</b>; if present: an alternative or premedication (Diphenhydramine + Prednisone); assess the kidneys (BUN/Creatinine); informed consent; tell him that a feeling of warmth is normal</td></tr><tr><td>During</td><td>Monitor tolerance and dye reactions</td></tr><tr><td>After</td><td>Catheter site: bleeding? , limb perfusion; drink fluids to improve dye clearance</td></tr></tbody></table>\n<h4>Sputum culture and sensitivity</h4><ul><li>A <b>sterile</b> container; sputum <b>not saliva</b> (the mouth is full of normal bacteria); after rinsing with water; in the morning; from a deep cough or suction.</li><li>Antibiotic: collect the sample <b>before</b> the first dose if possible.</li><li>The result after 48–72 hours.</li><li>Send it to the lab immediately.</li><li>Teach the patient how to take the sample correctly.</li></ul>"
+  },
+  "tests": {
+   "ar": "<h4>بزل الجنب (Thoracentesis)</h4><ul><li>قبل: قبول مستنير، جلسة على حافة السرير أو نائماً على الجانب السليم ورأس السرير 30°.</li><li>أثناء: راقب التحمل والتنفس والعضلات المساعدة واللون.</li><li>بعد: النوم على الجانب المصاب ساعة، راقب التسرب وغيّر الضمادة، أشعة صدر للاستبعاد استرواح.</li></ul>\n<h4>وظائف الرئة (PFT)</h4><ul><li><b>لا تدخين</b> قبل الفحص (ساعات).</li><li>المريض يأخذ نفساً عميقاً ثم يزفر بكل قوته بالمقياس (Spirometer) 3 مرات؛ الحاسوب يحسب الحجم والسعة الحيوية وقوة الهواء وزمن الزفير.</li><li>بعد الفحص الأول: موسع شعب (Albuterol أو Levalbuterol) ثم إعادة الفحص لإظهار الاستجابة.</li><li>يفرّق بين المرض <b>الانسدادي</b> (FEV1/FVC منخفض) و<b>التقييدي</b> (FVC منخفض مع نسبة طبيعية).</li></ul>\n<h4>مسح V/Q</h4><ul><li>استنشاق غاز مشع مع الأكسجين (التهوية) + حقن نظير مشع بالوريد (التروية).</li><li>المريض يظل ساكناً ويحبس النفس حسب التعليمات.</li><li>اشرح أن الإشعاع قليل.</li></ul>\n<h4>اختبار Mantoux</h4><ul><li>حقن Tuberculin <b>داخل الجلد</b> بالساعد (يظهر ورم صغير شاحب)؛ العمق الخطأ يعطي قراءة خاطئة.</li><li>القراءة بعد <b>48–72 ساعة</b>: قياس <b>التصلب</b> (وليس الاحمرار).</li><li>اشرح: إيجابي = تعرض وليس مرضاً؛ احمرار بسيط في أول يوم ليس إيجابي.</li><li>يتلو الإيجابي: أشعة صدر ± مزرعة بلغم.</li></ul>\n<h4>خزعة الرئة</h4><ul><li>إبرة عبر الصدر أو بالمنظار أو جراحة مفتوحة.</li><li>قبل: قبول مستنير، NPO 8 ساعات، INR/صفائح.</li><li>أثناء: علامات حيوية ومراقب.</li><li>بعد: موضع الجرح (نزيف) + مراقبة التنفس، <b>احتمال استرواح</b>: أشعة بعد الإجراء، وشكوى ألم صدر أو ضيق نفس = بلّغ.</li></ul>\n<h4>غازات الدم (ABG)</h4><ul><li>قبل: اكتب على الطلب هل يتنفس <b>أكسجين</b> وكميته أو إعدادات الجهاز، ودرجة حرارته (الحرارة تغير النتائج). اختبار ألين (Allen test) قبل أخذ الكعبري.</li><li>بعد: <b>ضغط 5 دقائق</b> على الموضع (10 دقائق مع مميعات)، وضمادة ضاغطة 30 دقيقة، وراقب النزيف وتروية اليد (لون، دفء، نبض).</li><li>الشرايين: الكعبري، العضدي، الفخذي.</li></ul>",
+   "en": "<h4>Thoracentesis (Thoracentesis)</h4><ul><li>Before: informed consent, sitting at the edge of the bed or lying on the unaffected side with the head of the bed at 30°.</li><li>During: monitor tolerance, breathing, accessory muscles, and color.</li><li>After: lie on the affected side for an hour, watch for leakage and change the dressing, chest X-ray to exclude pneumothorax.</li></ul>\n<h4>Pulmonary function tests (PFT)</h4><ul><li><b>No smoking</b> before the test (hours).</li><li>The patient takes a deep breath then exhales with all his strength into the spirometer (Spirometer) 3 times; the computer calculates the volume, vital capacity, air force, and exhalation time.</li><li>After the first test: a bronchodilator (Albuterol or Levalbuterol) then the test is repeated to show the response.</li><li>It distinguishes <b>obstructive</b> disease (low FEV1/FVC) from <b>restrictive</b> (low FVC with a normal ratio).</li></ul>\n<h4>V/Q scan</h4><ul><li>Inhaling a radioactive gas with oxygen (ventilation) + injecting a radioactive tracer IV (perfusion).</li><li>The patient stays still and holds the breath as instructed.</li><li>Explain that the radiation is small.</li></ul>\n<h4>Mantoux test</h4><ul><li>Tuberculin is injected <b>intradermally</b> in the forearm (a small pale bump appears); the wrong depth gives a wrong reading.</li><li>Reading after <b>48–72 hours</b>: measure the <b>induration</b> (not the redness).</li><li>Explain: positive = exposure and not disease; slight redness on the first day is not positive.</li><li>A positive is followed by: chest X-ray ± sputum culture.</li></ul>\n<h4>Lung biopsy</h4><ul><li>A needle through the chest, by scope, or open surgery.</li><li>Before: informed consent, NPO 8 hours, INR/platelets.</li><li>During: vital signs and monitor.</li><li>After: the wound site (bleeding) + monitoring breathing, <b>possible pneumothorax</b>: X-ray after the procedure, and a complaint of chest pain or shortness of breath = report.</li></ul>\n<h4>Blood gases (ABG)</h4><ul><li>Before: write on the request whether he is breathing <b>oxygen</b> and its amount or the device settings, and his temperature (temperature changes the results). Allen test (Allen test) before taking the radial.</li><li>After: <b>pressure for 5 minutes</b> on the site (10 minutes with blood thinners), and a pressure dressing for 30 minutes, and watch for bleeding and hand perfusion (color, warmth, pulse).</li><li>Arteries: radial, brachial, femoral.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>أخطاء شائعة في الفحوصات</h4><ul><li>إرسال لعاب بدل بلغم للمزرعة.</li><li>عدم ذكر الأكسجين/الجهاز على طلب ABG.</li><li>نسيان صيام ما بعد المنظار حتى يعود منعكس البلع.</li><li>عدم سؤال الحساسية للصبغة اليودية.</li><li>ترك الجلد بعد Mantoux دون موعد قراءة محدد.</li></ul>\n<p>أسبابه الشائعة: خزعة، غسل رئوي، وشفط بلغم أو جسم غريب. قبله: تهدئة خفيفة، ومخدر موضعي (lidocaine) على الحلق.</p>",
+   "en": "<h4>Common mistakes in tests</h4><ul><li>Sending saliva instead of sputum for culture.</li><li>Not stating oxygen/the device on the ABG request.</li><li>Forgetting fasting after bronchoscopy until the swallow reflex returns.</li><li>Not asking about iodine dye allergy.</li><li>Leaving the skin after Mantoux without a set reading appointment.</li></ul>\n<p>Its common causes: biopsy, lung lavage, and suctioning sputum or a foreign body. Before it: light sedation, and a topical anesthetic (lidocaine) on the throat.</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الشرح</strong><p>اشرح الإجراء بلغة بسيطة، واذكر الأحاسيس المتوقعة، واحصل على الموافقة المستنيرة للإجراءات الباضعة (Invasive procedures).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>التحضير</strong><p>الصيام، التحاليل (INR, الصفائح، الكلى)، الحساسية، الأدوية (المميعات)، الحمل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>المراقبة أثناء الفحص</strong><p>العلامات الحيوية، التشبع، اللون، التحمل، ومراقب القلب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>المتابعة بعد الفحص</strong><p>ابحث عن المضاعفات الخاصة بكل فحص: نزيف، استرواح، تحسس، استنشاق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>التوثيق</strong><p>اسم الإجراء، الوقت، العلامات الحيوية قبل وبعد، العينات المرسلة، تعليمات المتابعة.</p></div></div></div>\n<h4>بعد المنظار</h4><ul><li>أبلغ فورًا: <strong>تشنج الحنجرة (صرير)</strong> وزيادة ضيق التنفس؛ <strong>بصاق مدمّم أحمر قانٍ</strong>.</li><li>متوقع طبيعيًا: بطء التنفس وانخفاض الأكسجة الخفيف (أثر التهدئة)، وغياب منعكس التهوّع (أثر المخدر).</li><li>NPO حتى يستيقظ المريض ويعود منعكس التهوّع.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Explanation</strong><p>Explain the procedure in simple language, mention the expected sensations, and obtain informed consent for invasive procedures (Invasive procedures).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Preparation</strong><p>Fasting, labs (INR, platelets, kidneys), allergy, medications (blood thinners), pregnancy.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Monitoring during the test</strong><p>Vital signs, saturation, color, tolerance, and the cardiac monitor.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Follow-up after the test</strong><p>Look for the complications specific to each test: bleeding, pneumothorax, allergy, aspiration.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Documentation</strong><p>The name of the procedure, the time, vital signs before and after, samples sent, follow-up instructions.</p></div></div></div>\n<h4>After bronchoscopy</h4><ul><li>Report immediately: <strong>laryngospasm (stridor)</strong> and increased shortness of breath; <strong>bright red bloody sputum</strong>.</li><li>Normally expected: slow breathing and mild lowered oxygenation (an effect of sedation), and absence of the gag reflex (an effect of the anesthetic).</li><li>NPO until the patient wakes and the gag reflex returns.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>ضيق نفس مفاجئ أو ألم صدر بعد خزعة أو بزل أو منظار.</li><li>نفث دم غزير بعد المنظار.</li><li>طفح أو تورم وجه أو هبوط ضغط بعد الصبغة اليودية.</li><li>نزيف أو برودة طرف بعد وخز شرياني.</li></ul>",
+   "en": "<ul><li>Sudden shortness of breath or chest pain after a biopsy, tap, or scope.</li><li>Heavy hemoptysis after bronchoscopy.</li><li>Rash, facial swelling, or hypotension after iodine dye.</li><li>Bleeding or a cold limb after an arterial puncture.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرح للمريض خطوات كل فحص ومدته.</li><li>كيف يجمع عينة بلغم صحيحة.</li><li>الرجوع لقراءة Mantoux بعد 48–72 ساعة.</li><li>متى يتصل بالفريق بعد الفحص.</li></ul>",
+   "en": "<ul><li>Explain to the patient the steps of each test and its duration.</li><li>How to collect a correct sputum sample.</li><li>Return for the Mantoux reading after 48–72 hours.</li><li>When to call the team after the test.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "منظار الشعب: صيام حتى عودة منعكس البلع.",
+   "ABG: اذكر الأكسجين، ضغط 5 دقائق + ضمادة 30 دقيقة.",
+   "البلغم لا اللعاب، في حاوية معقمة، قبل المضاد.",
+   "بزل الجنب: النوم على الجانب المصاب ساعة.",
+   "PFT: بلا تدخين + موسع بعد الفحص الأول.",
+   "Mantoux: قراءة التصلب بعد 48–72 ساعة.",
+   "صبغة اليود: اسأل عن الحساسية وافحص الكلى.",
+   "بعد التنظير: NPO حتى عودة منعكس التهوع",
+   "Stridor ودم أحمر يُبلَّغان"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>معرفة الفحوصات هي نصف شغل التمريض في قسم الصدر: تشرح للمريض، تجهزه، تراقب أثناء الفحص وبعده، وتلتقط المضاعفات بدري. الجدول ده بيجمع الفحوصات الأساسية.</p><table><thead><tr><th>الفحص</th><th>الغرض</th><th>ماذا يُظهر؟</th></tr></thead><tbody><tr><td>منظار الشعب (Bronchoscopy)</td><td>رؤية الشجرة الشعبية، إزالة جسم غريب، خزعة، شفط سوائل</td><td>ورم، سدادة، نزيف، عدوى</td></tr><tr><td>أشعة الصدر (CXR)</td><td>حجم القلب ووضعه وتشوهات الرئة</td><td>التهاب، ورم، سوائل، استرواح</td></tr><tr><td>تصوير الشريان الرئوي</td><td>حالة الدورة الدموية للرئتين</td><td>الجلطة الرئوية</td></tr><tr><td>مزرعة وحساسية البلغم</td><td>تحديد الجرثومة والمضاد</td><td>نمو بكتيري + حساسية</td></tr><tr><td>بزل الجنب (Thoracentesis)</td><td>سحب سائل أو تحليله</td><td>نوع السائل</td></tr><tr><td>وظائف الرئة (PFT)</td><td>قدرة الرئة على تحريك الهواء</td><td>انسدادي أم تقييدي</td></tr><tr><td>غازات الدم (ABG)</td><td>التهوية والأكسجة والتوازن الحمضي</td><td>pH, PaO₂, PaCO₂, HCO₃</td></tr><tr><td>مسح التهوية والتروية (V/Q)</td><td>تروية الرئة</td><td>عدم توافق = جلطة</td></tr><tr><td>اختبار Mantoux (PPD)</td><td>تعرض للسل</td><td>تصلّب بعد 48–72 س</td></tr><tr><td>خزعة الرئة</td><td>عينة نسيج للمجهر</td><td>ورم أو تليّف</td></tr></tbody></table>[[slot:dis-653-tests|جدول الفحوصات التنفسية والتحضير|/diseases/img/dis-653-tests.svg]]<h4>إضافات تغطي نقاط المراجعة</h4>[[slot:dis-653-bronch|تنظير القصبات — رسم من إعداد الموقع|/diseases/img/dis-653-bronch.svg]]<p>قلق الإجراء الأكبر: منعكس التهوع وتشنج الحنجرة.</p>\n<h4>مراجعة NCLEX: منظار القصبات (Bronchoscopy)</h4><p>إجراء يسمح برؤية الحنجرة والقصبة والشعب والرئة العميقة بمنظار مرن يُدخل عبر الأنف أو الفم أو أنبوب القصبة، لذلك يقلق من منعكس التهوّع وتشنج الحنجرة.</p>[[slot:dis-653-p432|تنظير القصبات: الأسباب والرعاية — رسم من إعداد الموقع|/diseases/img/dis-653-p432.svg]]"
-    },
-    "causes": {
-      "ar": "<h4>قيم ABG الطبيعية</h4><div class=\"cs-stats\"><div><b>7.35–7.45</b><span>pH</span></div><div><b>80–100</b><span>PaO₂ (مم زئبق)</span></div><div><b>35–45</b><span>PaCO₂ (مم زئبق)</span></div><div><b>22–26</b><span>HCO₃ (mEq/L)</span></div></div><p>عينة 3–5 مل من شريان (عادة الكعبري) بسرنجة مُهَرَّنة (Heparinized)، تُوضع <b>على الثلج</b> إن لم تُحلل فوراً.</p>"
-    },
-    "signs": {
-      "ar": "<h4>منظار الشعب (Bronchoscopy)</h4><table><thead><tr><th>المرحلة</th><th>ما يجب فعله</th></tr></thead><tbody><tr><td>قبل</td><td>قبول مستنير؛ صيام (NPO) 6–8 ساعات؛ تقييم الحساسية للمخدر الموضعي؛ تأكد من INR والصفائح؛ إزالة الأسنان الصناعية؛ تأكد من وجود الخطوط الوريدية</td></tr><tr><td>أثناء</td><td>المراقبة: العلامات الحيوية، جهد التنفس، لون الجلد، مراقب القلب وSpO₂</td></tr><tr><td>بعد</td><td><b>صيام حتى عودة منعكس البلع والسعال</b> لتجنب الشفط؛ تحقق من المنعكسين؛ راقب التنفس والعضلات المساعدة وأصوات الصدر؛ البلغم بالدم الخفيف طبيعي؛ ابحث عن علامات استرواح أو بحة مستمرة؛ أشعة بعد الخزعة</td></tr></tbody></table>\n<h4>أشعة الصدر</h4><table><thead><tr><th>المرحلة</th><th>ما يجب فعله</th></tr></thead><tbody><tr><td>قبل</td><td>اشرح الفحص وحبس النفس؛ أزل المعادن والحلي والسحابات؛ اسأل عن الحمل</td></tr><tr><td>أثناء</td><td>المريض يشهق ويحبس نفسه أثناء الصورة</td></tr></tbody></table>\n<h4>تصوير الشريان الرئوي</h4><table><thead><tr><th>المرحلة</th><th>ما يجب فعله</th></tr></thead><tbody><tr><td>قبل</td><td>تأكد من <b>عدم حساسية اليود أو الصبغة أو المحار</b>؛ إن وجدت: بديل أو Premedication (Diphenhydramine + Prednisone)؛ تقييم الكلى (BUN/Creatinine)؛ قبول مستنير؛ أخبره أن الإحساس بالحرارة عادي</td></tr><tr><td>أثناء</td><td>راقب التحمل وردود فعل الصبغة</td></tr><tr><td>بعد</td><td>موضع القسطرة: نزيف؟ ، تروية الطرف؛ شرب سوائل لتحسين طرد الصبغة</td></tr></tbody></table>\n<h4>مزرعة وحساسية البلغم</h4><ul><li>حاوية <b>معقمة</b>؛ بلغم <b>وليس لعاب</b> (فم مليء ببكتيريا طبيعية)؛ بعد مضمضة بماء؛ صباحاً؛ من سعال عميق أو شفط.</li><li>المضاد الحيوي: اجمع العينة <b>قبل</b> أول جرعة إن أمكن.</li><li>النتيجة بعد 48–72 ساعة.</li><li>أرسلها للمعمل فوراً.</li><li>علّم المريض كيف يأخذ العينة بشكل صحيح.</li></ul>"
-    },
-    "tests": {
-      "ar": "<h4>بزل الجنب (Thoracentesis)</h4><ul><li>قبل: قبول مستنير، جلسة على حافة السرير أو نائماً على الجانب السليم ورأس السرير 30°.</li><li>أثناء: راقب التحمل والتنفس والعضلات المساعدة واللون.</li><li>بعد: النوم على الجانب المصاب ساعة، راقب التسرب وغيّر الضمادة، أشعة صدر للاستبعاد استرواح.</li></ul>\n<h4>وظائف الرئة (PFT)</h4><ul><li><b>لا تدخين</b> قبل الفحص (ساعات).</li><li>المريض يأخذ نفساً عميقاً ثم يزفر بكل قوته بالمقياس (Spirometer) 3 مرات؛ الحاسوب يحسب الحجم والسعة الحيوية وقوة الهواء وزمن الزفير.</li><li>بعد الفحص الأول: موسع شعب (Albuterol أو Levalbuterol) ثم إعادة الفحص لإظهار الاستجابة.</li><li>يفرّق بين المرض <b>الانسدادي</b> (FEV1/FVC منخفض) و<b>التقييدي</b> (FVC منخفض مع نسبة طبيعية).</li></ul>\n<h4>مسح V/Q</h4><ul><li>استنشاق غاز مشع مع الأكسجين (التهوية) + حقن نظير مشع بالوريد (التروية).</li><li>المريض يظل ساكناً ويحبس النفس حسب التعليمات.</li><li>اشرح أن الإشعاع قليل.</li></ul>\n<h4>اختبار Mantoux</h4><ul><li>حقن Tuberculin <b>داخل الجلد</b> بالساعد (يظهر ورم صغير شاحب)؛ العمق الخطأ يعطي قراءة خاطئة.</li><li>القراءة بعد <b>48–72 ساعة</b>: قياس <b>التصلب</b> (وليس الاحمرار).</li><li>اشرح: إيجابي = تعرض وليس مرضاً؛ احمرار بسيط في أول يوم ليس إيجابي.</li><li>يتلو الإيجابي: أشعة صدر ± مزرعة بلغم.</li></ul>\n<h4>خزعة الرئة</h4><ul><li>إبرة عبر الصدر أو بالمنظار أو جراحة مفتوحة.</li><li>قبل: قبول مستنير، NPO 8 ساعات، INR/صفائح.</li><li>أثناء: علامات حيوية ومراقب.</li><li>بعد: موضع الجرح (نزيف) + مراقبة التنفس، <b>احتمال استرواح</b>: أشعة بعد الإجراء، وشكوى ألم صدر أو ضيق نفس = بلّغ.</li></ul>\n<h4>غازات الدم (ABG)</h4><ul><li>قبل: اكتب على الطلب هل يتنفس <b>أكسجين</b> وكميته أو إعدادات الجهاز، ودرجة حرارته (الحرارة تغير النتائج). اختبار ألين (Allen test) قبل أخذ الكعبري.</li><li>بعد: <b>ضغط 5 دقائق</b> على الموضع (10 دقائق مع مميعات)، وضمادة ضاغطة 30 دقيقة، وراقب النزيف وتروية اليد (لون، دفء، نبض).</li><li>الشرايين: الكعبري، العضدي، الفخذي.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>أخطاء شائعة في الفحوصات</h4><ul><li>إرسال لعاب بدل بلغم للمزرعة.</li><li>عدم ذكر الأكسجين/الجهاز على طلب ABG.</li><li>نسيان صيام ما بعد المنظار حتى يعود منعكس البلع.</li><li>عدم سؤال الحساسية للصبغة اليودية.</li><li>ترك الجلد بعد Mantoux دون موعد قراءة محدد.</li></ul>\n<p>أسبابه الشائعة: خزعة، غسل رئوي، وشفط بلغم أو جسم غريب. قبله: تهدئة خفيفة، ومخدر موضعي (lidocaine) على الحلق.</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الشرح</strong><p>اشرح الإجراء بلغة بسيطة، واذكر الأحاسيس المتوقعة، واحصل على الموافقة المستنيرة للإجراءات الباضعة (Invasive procedures).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>التحضير</strong><p>الصيام، التحاليل (INR, الصفائح، الكلى)، الحساسية، الأدوية (المميعات)، الحمل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>المراقبة أثناء الفحص</strong><p>العلامات الحيوية، التشبع، اللون، التحمل، ومراقب القلب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>المتابعة بعد الفحص</strong><p>ابحث عن المضاعفات الخاصة بكل فحص: نزيف، استرواح، تحسس، استنشاق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>التوثيق</strong><p>اسم الإجراء، الوقت، العلامات الحيوية قبل وبعد، العينات المرسلة، تعليمات المتابعة.</p></div></div></div>\n<h4>بعد المنظار</h4><ul><li>أبلغ فورًا: <strong>تشنج الحنجرة (صرير)</strong> وزيادة ضيق التنفس؛ <strong>بصاق مدمّم أحمر قانٍ</strong>.</li><li>متوقع طبيعيًا: بطء التنفس وانخفاض الأكسجة الخفيف (أثر التهدئة)، وغياب منعكس التهوّع (أثر المخدر).</li><li>NPO حتى يستيقظ المريض ويعود منعكس التهوّع.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>ضيق نفس مفاجئ أو ألم صدر بعد خزعة أو بزل أو منظار.</li><li>نفث دم غزير بعد المنظار.</li><li>طفح أو تورم وجه أو هبوط ضغط بعد الصبغة اليودية.</li><li>نزيف أو برودة طرف بعد وخز شرياني.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرح للمريض خطوات كل فحص ومدته.</li><li>كيف يجمع عينة بلغم صحيحة.</li><li>الرجوع لقراءة Mantoux بعد 48–72 ساعة.</li><li>متى يتصل بالفريق بعد الفحص.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "منظار الشعب: صيام حتى عودة منعكس البلع.",
-      "ABG: اذكر الأكسجين، ضغط 5 دقائق + ضمادة 30 دقيقة.",
-      "البلغم لا اللعاب، في حاوية معقمة، قبل المضاد.",
-      "بزل الجنب: النوم على الجانب المصاب ساعة.",
-      "PFT: بلا تدخين + موسع بعد الفحص الأول.",
-      "Mantoux: قراءة التصلب بعد 48–72 ساعة.",
-      "صبغة اليود: اسأل عن الحساسية وافحص الكلى.",
-      "بعد التنظير: NPO حتى عودة منعكس التهوع",
-      "Stridor ودم أحمر يُبلَّغان"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "بعد منظار الشعب لا يشرب المريض حتى:"
-      },
-      "options": [
-        {
-          "ar": "عودة منعكس البلع والسعال"
-        },
-        {
-          "ar": "بعد ساعة بالضبط"
-        },
-        {
-          "ar": "فوراً"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لمنع الشفط الرئوي."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل ABG من مريض على أكسجين:"
-      },
-      "options": [
-        {
-          "ar": "تسجل جرعة الأكسجين على الطلب"
-        },
-        {
-          "ar": "تتجاهلها"
-        },
-        {
-          "ar": "توقف الأكسجين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تؤثر في تفسير النتيجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "العينة المناسبة للمزرعة:"
-      },
-      "options": [
-        {
-          "ar": "بلغم من سعال عميق"
-        },
-        {
-          "ar": "لعاب"
-        },
-        {
-          "ar": "ماء الفم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "اللعاب يلوث."
-      }
-    },
-    {
-      "q": {
-        "ar": "قراءة Mantoux تعتمد على:"
-      },
-      "options": [
-        {
-          "ar": "قياس التصلب"
-        },
-        {
-          "ar": "قياس الاحمرار"
-        },
-        {
-          "ar": "الحرارة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "عند 48–72 ساعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد تنظير القصبات أي علامة تبلغ الطبيب؟"
-      },
-      "options": [
-        {
-          "ar": "Stridor وبصاق دموي أحمر فاتح"
-        },
-        {
-          "ar": "غياب منعكس التهوع مؤقتًا"
-        },
-        {
-          "ar": "انخفاض خفيف RR بسبب التهدئة"
-        },
-        {
-          "ar": "خدر الحلق"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تدل على تشنج حنجرة أو نزف."
-      }
-    },
-    {
-      "q": {
-        "ar": "لماذا NPO بعد التنظير؟"
-      },
-      "options": [
-        {
-          "ar": "لغياب منعكس التهوع"
-        },
-        {
-          "ar": "للتحليل"
-        },
-        {
-          "ar": "للألم"
-        },
-        {
-          "ar": "للنوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر الاستنشاق."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد المنظار، أي النتائج تُبلَّغ فورًا؟ (اختر ما ينطبق)"
-      },
-      "options": [
-        {
-          "ar": "بصاق مدمّم أحمر قانٍ وصرير مع زيادة ضيق النفس"
-        },
-        {
-          "ar": "غياب منعكس التهوّع"
-        },
-        {
-          "ar": "نعاس خفيف"
-        },
-        {
-          "ar": "بطء تنفس خفيف"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "النزف وتشنج الحنجرة مضاعفات خطيرة."
-      }
-    },
-    {
-      "q": {
-        "ar": "متى يُسمح بالأكل بعد المنظار؟"
-      },
-      "options": [
-        {
-          "ar": "بعد عودة منعكس التهوّع واليقظة"
-        },
-        {
-          "ar": "فورًا"
-        },
-        {
-          "ar": "بعد ساعة بغض النظر"
-        },
-        {
-          "ar": "في اليوم التالي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قبل عودة المنعكس يزداد خطر الاستنشاق."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "BTS Guideline for diagnostic flexible bronchoscopy in adults (2013)"
-    },
-    {
-      "title": "ATS/ERS Spirometry standards"
-    },
-    {
-      "title": "AACN: Arterial puncture"
-    }
+  "en": [
+   "Bronchoscopy: fasting until the swallow reflex returns.",
+   "ABG: state the oxygen, pressure for 5 minutes + a dressing for 30 minutes.",
+   "Sputum not saliva, in a sterile container, before the antibiotic.",
+   "Thoracentesis: lie on the affected side for an hour.",
+   "PFT: no smoking + a bronchodilator after the first test.",
+   "Mantoux: read the induration after 48–72 hours.",
+   "Iodine dye: ask about allergy and check the kidneys.",
+   "After endoscopy: NPO until the gag reflex returns",
+   "Stridor and red blood are reported"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "بعد منظار الشعب لا يشرب المريض حتى:",
+    "en": "After bronchoscopy the patient does not drink until:"
+   },
+   "options": [
+    {
+     "ar": "عودة منعكس البلع والسعال",
+     "en": "The swallow and cough reflexes return"
+    },
+    {
+     "ar": "بعد ساعة بالضبط",
+     "en": "Exactly after an hour"
+    },
+    {
+     "ar": "فوراً",
+     "en": "Immediately"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لمنع الشفط الرئوي.",
+    "en": "To prevent pulmonary aspiration."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل ABG من مريض على أكسجين:",
+    "en": "Before an ABG from a patient on oxygen:"
+   },
+   "options": [
+    {
+     "ar": "تسجل جرعة الأكسجين على الطلب",
+     "en": "Record the oxygen dose on the request"
+    },
+    {
+     "ar": "تتجاهلها",
+     "en": "Ignore it"
+    },
+    {
+     "ar": "توقف الأكسجين",
+     "en": "Stop the oxygen"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تؤثر في تفسير النتيجة.",
+    "en": "It affects the interpretation of the result."
+   }
+  },
+  {
+   "q": {
+    "ar": "العينة المناسبة للمزرعة:",
+    "en": "The suitable sample for culture:"
+   },
+   "options": [
+    {
+     "ar": "بلغم من سعال عميق",
+     "en": "Sputum from a deep cough"
+    },
+    {
+     "ar": "لعاب",
+     "en": "Saliva"
+    },
+    {
+     "ar": "ماء الفم",
+     "en": "Mouth water"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "اللعاب يلوث.",
+    "en": "Saliva contaminates."
+   }
+  },
+  {
+   "q": {
+    "ar": "قراءة Mantoux تعتمد على:",
+    "en": "The Mantoux reading depends on:"
+   },
+   "options": [
+    {
+     "ar": "قياس التصلب",
+     "en": "Measuring the induration"
+    },
+    {
+     "ar": "قياس الاحمرار",
+     "en": "Measuring the redness"
+    },
+    {
+     "ar": "الحرارة",
+     "en": "The temperature"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "عند 48–72 ساعة.",
+    "en": "At 48–72 hours."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد تنظير القصبات أي علامة تبلغ الطبيب؟",
+    "en": "After bronchoscopy, which sign do you report to the physician?"
+   },
+   "options": [
+    {
+     "ar": "Stridor وبصاق دموي أحمر فاتح",
+     "en": "Stridor and bright red bloody sputum"
+    },
+    {
+     "ar": "غياب منعكس التهوع مؤقتًا",
+     "en": "Temporary absence of the gag reflex"
+    },
+    {
+     "ar": "انخفاض خفيف RR بسبب التهدئة",
+     "en": "A mild drop in RR because of sedation"
+    },
+    {
+     "ar": "خدر الحلق",
+     "en": "Throat numbness"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تدل على تشنج حنجرة أو نزف.",
+    "en": "They indicate laryngospasm or bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "لماذا NPO بعد التنظير؟",
+    "en": "Why NPO after endoscopy?"
+   },
+   "options": [
+    {
+     "ar": "لغياب منعكس التهوع",
+     "en": "For the absent gag reflex"
+    },
+    {
+     "ar": "للتحليل",
+     "en": "For analysis"
+    },
+    {
+     "ar": "للألم",
+     "en": "For pain"
+    },
+    {
+     "ar": "للنوم",
+     "en": "For sleep"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر الاستنشاق.",
+    "en": "Risk of aspiration."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد المنظار، أي النتائج تُبلَّغ فورًا؟ (اختر ما ينطبق)",
+    "en": "After bronchoscopy, which findings are reported immediately? (choose what applies)"
+   },
+   "options": [
+    {
+     "ar": "بصاق مدمّم أحمر قانٍ وصرير مع زيادة ضيق النفس",
+     "en": "Bright red bloody sputum and stridor with increased shortness of breath"
+    },
+    {
+     "ar": "غياب منعكس التهوّع",
+     "en": "Absence of the gag reflex"
+    },
+    {
+     "ar": "نعاس خفيف",
+     "en": "Mild drowsiness"
+    },
+    {
+     "ar": "بطء تنفس خفيف",
+     "en": "Mild slow breathing"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "النزف وتشنج الحنجرة مضاعفات خطيرة.",
+    "en": "Bleeding and laryngospasm are serious complications."
+   }
+  },
+  {
+   "q": {
+    "ar": "متى يُسمح بالأكل بعد المنظار؟",
+    "en": "When is eating allowed after bronchoscopy?"
+   },
+   "options": [
+    {
+     "ar": "بعد عودة منعكس التهوّع واليقظة",
+     "en": "After the gag reflex returns and alertness"
+    },
+    {
+     "ar": "فورًا",
+     "en": "Immediately"
+    },
+    {
+     "ar": "بعد ساعة بغض النظر",
+     "en": "After an hour regardless"
+    },
+    {
+     "ar": "في اليوم التالي",
+     "en": "The next day"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قبل عودة المنعكس يزداد خطر الاستنشاق.",
+    "en": "Before the reflex returns, the risk of aspiration rises."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "BTS Guideline for diagnostic flexible bronchoscopy in adults (2013)"
+  },
+  {
+   "title": "ATS/ERS Spirometry standards"
+  },
+  {
+   "title": "AACN: Arterial puncture"
+  }
+ ]
 }
