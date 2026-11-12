@@ -43,9 +43,15 @@ jobs:
           echo "D1_ID=$ID" >> "$GITHUB_ENV"
           echo "D1 database nursehub ready"
 
-      - name: Create R2 bucket (if missing)
+      - name: Create R2 bucket (optional — needs R2 enabled on the account)
         run: |
-          npx --yes wrangler@3 r2 bucket create nursehub-media || echo "bucket already exists"
+          if npx --yes wrangler@3 r2 bucket list 2>/dev/null | grep -q "nursehub-media"; then
+            echo "R2_OK=yes" >> "$GITHUB_ENV"; echo "R2 bucket exists"
+          elif npx --yes wrangler@3 r2 bucket create nursehub-media; then
+            echo "R2_OK=yes" >> "$GITHUB_ENV"; echo "R2 bucket created"
+          else
+            echo "R2_OK=no" >> "$GITHUB_ENV"; echo "::warning::R2 is not enabled on this account - continuing WITHOUT the R2 binding (uploads from the admin panel stay disabled)"
+          fi
 
       - name: Apply schema
         run: npx --yes wrangler@3 d1 execute nursehub --remote --file=cloudflare/migrations/0001_init.sql
@@ -66,7 +72,7 @@ jobs:
               env_vars.VITE_SUPABASE_URL = { type: 'plain_text', value: 'self' };
               env_vars.VITE_SUPABASE_PUBLISHABLE_KEY = { type: 'plain_text', value: 'cloudflare-d1' };
             }
-            const cfg = { d1_databases: { DB: { id: process.env.D1_ID } }, r2_buckets: { MEDIA: { name: 'nursehub-media' } }, env_vars };
+            const cfg = { d1_databases: { DB: { id: process.env.D1_ID } }, r2_buckets: { MEDIA: process.env.R2_OK === 'yes' ? { name: 'nursehub-media' } : null }, env_vars };
             require('fs').writeFileSync('patch.json', JSON.stringify({ deployment_configs: { production: cfg, preview: cfg } }));
           "
           curl -fsS -X PATCH -H "$AUTH" -H "Content-Type: application/json" --data @patch.json "$API" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const j=JSON.parse(s);console.log('pages patch success:',j.success)})"
