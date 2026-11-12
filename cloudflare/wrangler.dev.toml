@@ -1,0 +1,11 @@
+# LOCAL TESTING ONLY (not used by the Cloudflare dashboard build). Bindings for production are added in the dashboard.
+name = "nursehub-egypt"
+compatibility_date = "2024-09-01"
+pages_build_output_dir = "../dist"
+[[d1_databases]]
+binding = "DB"
+database_name = "nursehub"
+database_id = "DB"
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "nursehub-media"

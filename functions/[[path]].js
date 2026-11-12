@@ -1,3 +1,4 @@
+import { internalRows } from './_lib/sb.js';
 // Server-side SEO injection (Cloudflare Pages Function).
 // The site is a single-page app: without JavaScript a crawler only sees the splash screen.
 // For content routes we take the static index.html and inject the real page text, title,
@@ -57,6 +58,7 @@ async function getJSON(env, request, path) {
 }
 
 async function sb(env, table, query) {
+  if (env.DB) return internalRows(env, table, query);
   if (!env.SUPABASE_URL || !env.SUPABASE_SERVICE_ROLE_KEY) return null;
   try {
     const r = await fetch(`${env.SUPABASE_URL}/rest/v1/${table}?${query}`, {

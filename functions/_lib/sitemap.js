@@ -1,3 +1,4 @@
+import { internalRows } from './sb.js';
 // Dynamic sitemap shared by /sitemap.xml and /api/sitemap (Cloudflare Pages Functions).
 const STATIC = [
   ['/', 1.0], ['/category/articles', 0.8], ['/category/summaries', 0.8], ['/category/drugs', 0.8],
@@ -11,6 +12,7 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const enc = encodeURIComponent;
 
 async function rows(env, table, columns, filter = '') {
+  if (env.DB) return (await internalRows(env, table, `select=${columns}${filter}&limit=5000`)) || [];
   const url = `${env.SUPABASE_URL}/rest/v1/${table}?select=${columns}${filter}&limit=5000`;
   const key = env.SUPABASE_SERVICE_ROLE_KEY;
   const r = await fetch(url, { headers: { apikey: key, Authorization: `Bearer ${key}` } });
