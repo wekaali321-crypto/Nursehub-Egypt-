@@ -1,214 +1,271 @@
 {
-  "id": "dis-1105",
-  "num": 1105,
-  "system": "renal",
-  "icon": "⚡",
-  "level": 2,
-  "title": {
-    "ar": "جدول مقارنة الأملاح: الصوديوم والبوتاسيوم والكلوريد والكالسيوم والمغنيسيوم والفوسفات",
-    "en": "Electrolytes Comparison Cheat Sheet"
+ "id": "dis-1105",
+ "num": 1105,
+ "system": "renal",
+ "icon": "⚡",
+ "level": 2,
+ "title": {
+  "ar": "جدول مقارنة الأملاح: الصوديوم والبوتاسيوم والكلوريد والكالسيوم والمغنيسيوم والفوسفات",
+  "en": "Electrolytes Comparison Cheat Sheet"
+ },
+ "teaser": {
+  "ar": "مقارنة شاملة: المدى والوظيفة والأسباب وعلامات الزيادة والنقص وتغيرات ECG والعلاج والأولويات.",
+  "en": "A full comparison: range, function, causes, signs of excess and deficit, ECG changes, treatment, and priorities."
+ },
+ "chips": [
+  {
+   "ar": "الأملاح",
+   "en": "Electrolytes"
   },
-  "teaser": {
-    "ar": "مقارنة شاملة: المدى والوظيفة والأسباب وعلامات الزيادة والنقص وتغيرات ECG والعلاج والأولويات."
+  {
+   "ar": "ارتفاع/نقص",
+   "en": "High/low"
   },
-  "chips": [
-    {
-      "ar": "الأملاح"
-    },
-    {
-      "ar": "ارتفاع/نقص"
-    },
-    {
-      "ar": "تروسو وشفوستك"
-    }
+  {
+   "ar": "تروسو وشفوستك",
+   "en": "Trousseau & Chvostek"
+  }
+ ],
+ "target": "new:lab-reference|التحاليل ودلالاتها",
+ "sections": {
+  "overview": {
+   "ar": "<p>الأملاح (الإلكتروليتات) هي اللي بتخلّي العضلات والقلب والأعصاب تشتغل صح. الصفحة دي <b>ورقة مقارنة</b> للامتحان: لكل ملح وظيفته ومداه وعلامات النقص والزيادة وتغيرات ECG. فكرة مساعدة: <b>الصوديوم يجمع الماء، البوتاسيوم يحرك القلب، الكالسيوم يقبض العضلة، المغنيسيوم يرخيها</b>.</p>[[slot:dis-1105-electrolytes|الأملاح الستة: المدى وما يميز النقص والزيادة — رسم من إعداد الموقع|/diseases/img/dis-1105-electrolytes.svg]]<h4>المدى والوظيفة</h4><table><thead><tr><th>الملح</th><th>المدى والوظيفة</th></tr></thead><tbody><tr><td>البوتاسيوم K⁺</td><td>3.5 – 5.0 mEq/L — يضخ القلب والعضلات؛ أولوية لأنه يهدد النظم</td></tr><tr><td>الصوديوم Na⁺</td><td>135 – 145 mEq/L — يحافظ على ضغط الدم وحجم الدم وتوازن pH</td></tr><tr><td>الكلوريد Cl⁻</td><td>97 – 107 mEq/L — رفيق الصوديوم؛ يحافظ على الضغط والحجم وpH</td></tr><tr><td>الكالسيوم Ca</td><td>9.0 – 10.5 mg/dL — ينقبض العضلات، ويقوّي العظام والدم والقلب</td></tr><tr><td>المغنيسيوم Mg</td><td>1.3 – 2.1 mEq/L — يرخي العضلات</td></tr><tr><td>الفوسفات PO₄</td><td>3.0 – 4.5 mg/dL — لتكوين العظام والأسنان؛ يعكس الكالسيوم (Ca عالي = فوسفات منخفض والعكس)</td></tr></tbody></table>",
+   "en": "<p>Electrolytes are what make the muscles, heart, and nerves work properly. This page is a <b>comparison sheet</b> for the exam: for each electrolyte, its function, range, signs of deficit and excess, and ECG changes. A helpful idea: <b>sodium holds water, potassium drives the heart, calcium contracts the muscle, magnesium relaxes it</b>.</p>[[slot:dis-1105-electrolytes|The six electrolytes: range and what distinguishes deficit and excess — illustration|/diseases/img/dis-1105-electrolytes.svg]]<h4>Range and function</h4><table><thead><tr><th>Electrolyte</th><th>Range and function</th></tr></thead><tbody><tr><td>Potassium K⁺</td><td>3.5 – 5.0 mEq/L — pumps the heart and muscles; a priority because it threatens the rhythm</td></tr><tr><td>Sodium Na⁺</td><td>135 – 145 mEq/L — maintains blood pressure, blood volume, and pH balance</td></tr><tr><td>Chloride Cl⁻</td><td>97 – 107 mEq/L — sodium's companion; maintains pressure, volume, and pH</td></tr><tr><td>Calcium Ca</td><td>9.0 – 10.5 mg/dL — contracts the muscles and strengthens bones, blood, and heart</td></tr><tr><td>Magnesium Mg</td><td>1.3 – 2.1 mEq/L — relaxes the muscles</td></tr><tr><td>Phosphate PO₄</td><td>3.0 – 4.5 mg/dL — for building bones and teeth; the inverse of calcium (high Ca = low phosphate and vice versa)</td></tr></tbody></table>"
+  },
+  "causes": {
+   "ar": "<h4>الأسباب الشائعة</h4><table><thead><tr><th>الاضطراب</th><th>الأسباب</th></tr></thead><tbody><tr><td>فرط بوتاسيوم</td><td>فشل كلوي، فقد دوائي (مدرّات حافظة، مثبطات ACE)، حروق وسحق أنسجة، إعطاء K زائد</td></tr><tr><td>نقص بوتاسيوم</td><td>قيء وإسهال، مدرّات، شفط معدي، نقص مغنيسيوم</td></tr><tr><td>فرط صوديوم</td><td>نقص سوائل (جفاف)، السكري الكاذب (Diabetes insipidus)، قلة شرب، ملح زائد</td></tr><tr><td>نقص صوديوم</td><td>زيادة ماء، قيء وإسهال وتعرّق شديد، مدرّات</td></tr><tr><td>فرط كالسيوم</td><td>فرط جارات الدرق، ورم، فيتامين D زائد، قلة حركة طويلة</td></tr><tr><td>نقص كالسيوم</td><td>نقص جارات الدرق، نقص فيتامين D، التهاب بنكرياس، نقل دم كبير</td></tr><tr><td>فرط مغنيسيوم</td><td>فشل كلوي، مسهلات أو مضادات حموضة تحتوي مغنيسيوم</td></tr><tr><td>نقص مغنيسيوم</td><td>كحول، إسهال، مدرّات</td></tr></tbody></table>",
+   "en": "<h4>Common causes</h4><table><thead><tr><th>Disorder</th><th>Causes</th></tr></thead><tbody><tr><td>Hyperkalemia</td><td>Kidney failure, drugs (potassium-sparing diuretics, ACE inhibitors), burns and crush injury, excess K administration</td></tr><tr><td>Hypokalemia</td><td>Vomiting and diarrhea, diuretics, gastric suction, low magnesium</td></tr><tr><td>Hypernatremia</td><td>Fluid deficit (dehydration), Diabetes insipidus, poor fluid intake, excess salt</td></tr><tr><td>Hyponatremia</td><td>Excess water, vomiting, diarrhea, and heavy sweating, diuretics</td></tr><tr><td>Hypercalcemia</td><td>Hyperparathyroidism, tumor, excess vitamin D, prolonged immobility</td></tr><tr><td>Hypocalcemia</td><td>Hypoparathyroidism, vitamin D deficiency, pancreatitis, massive blood transfusion</td></tr><tr><td>Hypermagnesemia</td><td>Kidney failure, laxatives or antacids containing magnesium</td></tr><tr><td>Hypomagnesemia</td><td>Alcohol, diarrhea, diuretics</td></tr></tbody></table>"
+  },
+  "signs": {
+   "ar": "<h4>علامات الارتفاع (Hyper)</h4><table><thead><tr><th>الملح</th><th>العلامات</th></tr></thead><tbody><tr><td>K⁺ مرتفع (>5.0)</td><td>ضعف، بطء نبض، هبوط ضغط، إسهال وفرط حركة معوية، T مدببة وQRS عريض، رجفان بطيني أو توقف قلب في الشديد</td></tr><tr><td>Na⁺ مرتفع (>145)</td><td>جلد محمر، وذمة، حمى خفيفة، عطش، لسان جاف ومنتفخ (متأخر)، زيادة التوتر العضلي، غثيان وقيء</td></tr><tr><td>Cl⁻ مرتفع (>107)</td><td>مشابه لارتفاع الصوديوم: غثيان وقيء ولسان جاف منتفخ وارتباك</td></tr><tr><td>Ca مرتفع (>10.5)</td><td>إمساك، ألم عظام، حصوات كلوية، ضعف عضلي شديد، منعكسات ضعيفة</td></tr><tr><td>Mg مرتفع (>2.1)</td><td>هدوء زائد: بطء قلب وحصار (طول PR)، هبوط ضغط، ضعف المنعكسات، تنفس ضحل، قلة حركة معوية</td></tr><tr><td>PO₄ مرتفع (>4.5)</td><td>علامات نقص الكالسيوم: تيتانوس وتشنج وتنميل</td></tr></tbody></table><h4>علامات النقص (Hypo)</h4><table><thead><tr><th>الملح</th><th>العلامات</th></tr></thead><tbody><tr><td>K⁺ منخفض (<3.5)</td><td>ضعف عضلي وثقل، شلل أطراف، إمساك وانتفاخ وشلل معوي (خطر في انسداد الأمعاء)، T مسطحة وST منخفض وموجة U</td></tr><tr><td>Na⁺ منخفض (<135)</td><td>تغير الحالة الذهنية، صداع، غثيان، ثم تشنج وغيبوبة وتوقف تنفس؛ يتشابه مع نقص الكلوريد</td></tr><tr><td>Cl⁻ منخفض (<97)</td><td>قيء وإسهال وتعرّق شديد</td></tr><tr><td>Ca منخفض (<9.0)</td><td>تنميل حول الفم وتشنجات، علامة تروسو (Trousseau: تقلص اليد عند نفخ الجهاز) وعلامة شفوستك (Chvostek: انقباض الوجه عند النقر)، إسهال، تسارع نبض ونبض ضعيف، تشنج وتوقف تنفس في الشديد، QT طويل</td></tr><tr><td>Mg منخفض (<1.3)</td><td>اهتياج وفرط منعكسات، تسارع نبض، رأرأة، إسهال، ST منخفض وT مقلوبة وتورسادس دي بوان (Torsades de pointes) ورجفان بطيني في الشديد</td></tr><tr><td>PO₄ منخفض (<3.0)</td><td>ضعف عضلات وضعف تنفس وارتباك (يحتاج لمتابعة)</td></tr></tbody></table>[[slot:dis-1105-signs|تروسو وشفوستك ورجفان بطيني وتورسادس — رسم من إعداد الموقع|/diseases/img/dis-1105-signs.svg]]<h4>تتمة العلامات</h4><table><thead><tr><th>الاضطراب</th><th>تفصيل إضافي</th></tr></thead><tbody><tr><td>Na منخفض</td><td>القلب: تسارع ونبض ضعيف خيطي؛ الجهاز العصبي: تشنج وغيبوبة؛ ثم توقف تنفس</td></tr><tr><td>K مرتفع</td><td>عضلات وأعصاب: ضعف وشلل في الأطراف وثقل عام؛ الجهاز الهضمي: إسهال وفرط حركة</td></tr><tr><td>K منخفض</td><td>شلل أطراف وتقلصات؛ الجهاز الهضمي: ضعف حركة وانتفاخ وشلل معوي (خطر انسداد أمعاء دقيقة)</td></tr><tr><td>Cl منخفض</td><td>قيء وإسهال وتعرّق شديد؛ الفرق عن نقص الصوديوم: الحمى قد تصاحب فقد الكلوريد</td></tr><tr><td>Ca منخفض</td><td>عظام ضعيفة وكسور، ميل للنزيف، اضطراب نظم (القوة الثلاثية: عظم ودم ونبض)</td></tr><tr><td>Ca مرتفع</td><td>إمساك، ألم عظام، حصوات، انخفاض المنعكسات وضعف عضلي شديد</td></tr><tr><td>PO₄ مرتفع</td><td>علامات نقص الكالسيوم: تروسو وشفوستك وإسهال وضعف العظام والتجلط والنظم</td></tr><tr><td>PO₄ منخفض</td><td>تذكر بعض المراجع: إمساك وضعف المنعكسات وضعف عضلي شديد وبطء القلب والتنفس وارتفاع الضغط؛ الأدق سريريًا ضعف عضلات وتنفس وارتباك، فاتبع مرجع مؤسستك</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه المراجع</strong><p>قيم الأملاح هنا حسب معايير الامتحان وقد تختلف المراجع والمستشفيات.</p></div>",
+   "en": "<h4>Signs of excess (Hyper)</h4><table><thead><tr><th>Electrolyte</th><th>Signs</th></tr></thead><tbody><tr><td>High K⁺ (>5.0)</td><td>Weakness, slow pulse, low blood pressure, diarrhea and hyperactive bowel, peaked T and wide QRS, ventricular fibrillation or cardiac arrest when severe</td></tr><tr><td>High Na⁺ (>145)</td><td>Flushed skin, edema, low-grade fever, thirst, dry swollen tongue (late), increased muscle tone, nausea and vomiting</td></tr><tr><td>High Cl⁻ (>107)</td><td>Similar to high sodium: nausea, vomiting, dry swollen tongue, and confusion</td></tr><tr><td>High Ca (>10.5)</td><td>Constipation, bone pain, kidney stones, severe muscle weakness, weak reflexes</td></tr><tr><td>High Mg (>2.1)</td><td>Excess calm: bradycardia and heart block (long PR), low blood pressure, weak reflexes, shallow breathing, reduced bowel motility</td></tr><tr><td>High PO₄ (>4.5)</td><td>Signs of low calcium: tetany, spasm, and tingling</td></tr></tbody></table><h4>Signs of deficit (Hypo)</h4><table><thead><tr><th>Electrolyte</th><th>Signs</th></tr></thead><tbody><tr><td>Low K⁺ (<3.5)</td><td>Muscle weakness and heaviness, limb paralysis, constipation, distension, and paralytic ileus (a risk for bowel obstruction), flat T, depressed ST, and U wave</td></tr><tr><td>Low Na⁺ (<135)</td><td>Altered mental status, headache, nausea, then seizures, coma, and respiratory arrest; similar to low chloride</td></tr><tr><td>Low Cl⁻ (<97)</td><td>Vomiting, diarrhea, and heavy sweating</td></tr><tr><td>Low Ca (<9.0)</td><td>Tingling around the mouth and spasms, Trousseau sign (hand spasm when the cuff is inflated) and Chvostek sign (facial twitch on tapping), diarrhea, fast weak pulse, seizures and respiratory arrest when severe, long QT</td></tr><tr><td>Low Mg (<1.3)</td><td>Agitation and hyperreflexia, fast pulse, nystagmus, diarrhea, depressed ST, inverted T, Torsades de pointes, and ventricular fibrillation when severe</td></tr><tr><td>Low PO₄ (<3.0)</td><td>Muscle weakness, weak breathing, and confusion (needs follow-up)</td></tr></tbody></table>[[slot:dis-1105-signs|Trousseau, Chvostek, ventricular fibrillation, and Torsades — illustration|/diseases/img/dis-1105-signs.svg]]<h4>More on the signs</h4><table><thead><tr><th>Disorder</th><th>Extra detail</th></tr></thead><tbody><tr><td>Low Na</td><td>Heart: fast, weak, thready pulse; nervous system: seizures and coma; then respiratory arrest</td></tr><tr><td>High K</td><td>Muscles and nerves: weakness and paralysis in the limbs and general heaviness; GI: diarrhea and hypermotility</td></tr><tr><td>Low K</td><td>Limb paralysis and cramps; GI: poor motility, distension, and paralytic ileus (risk of small bowel obstruction)</td></tr><tr><td>Low Cl</td><td>Vomiting, diarrhea, and heavy sweating; the difference from low sodium: fever may accompany chloride loss</td></tr><tr><td>Low Ca</td><td>Weak bones and fractures, bleeding tendency, arrhythmia (the triple strength: bone, blood, and beat)</td></tr><tr><td>High Ca</td><td>Constipation, bone pain, stones, decreased reflexes, and severe muscle weakness</td></tr><tr><td>High PO₄</td><td>Signs of low calcium: Trousseau, Chvostek, diarrhea, and weak bones, clotting, and rhythm</td></tr><tr><td>Low PO₄</td><td>Sometimes listed as: constipation, weak reflexes, severe muscle weakness, slow heart rate and breathing, and high blood pressure; clinically more accurate are muscle weakness, weak breathing, and confusion, so follow your institution's standard</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>Note on values</strong><p>The electrolyte values here follow exam standards and may differ between hospitals.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>أي اضطراب ملحي: ابدأ بـ <b>ECG ومراقبة قلب</b> خاصة K وCa وMg.</li><li>الكالسيوم يتأثر بالألبيومين: الألبيومين المنخفض يخفض الكالسيوم الكلي والمتأين قد يكون طبيعيًا.</li><li>اجمع مع BUN والكرياتينين وpH والغازات.</li><li><b>قاعدة الاستجواب:</b> نقص الصوديوم مع ارتباك أو تشنج أولوية قصوى.</li></ul><div class=\"cs-box cs-info\"><strong>Trousseau وChvostek</strong><p>Trousseau: نفخ جهاز الضغط فوق ضغط الدم فيحدث تقلص اليد. Chvostek: النقر على العصب الوجهي أمام الأذن فتنقبض عضلات الوجه. كلاهما يدلان على نقص كالسيوم.</p></div>",
+   "en": "<ul><li>Any electrolyte disorder: start with <b>ECG and cardiac monitoring</b>, especially for K, Ca, and Mg.</li><li>Calcium is affected by albumin: low albumin lowers total calcium while ionized calcium may be normal.</li><li>Combine with BUN, creatinine, pH, and blood gases.</li><li><b>Exam rule:</b> low sodium with confusion or seizures is top priority.</li></ul><div class=\"cs-box cs-info\"><strong>Trousseau and Chvostek</strong><p>Trousseau: inflating the blood pressure cuff above the blood pressure causes hand spasm. Chvostek: tapping the facial nerve in front of the ear makes the facial muscles twitch. Both indicate low calcium.</p></div>"
+  },
+  "treatment": {
+   "ar": "<h4>التصرف المتوقع (بأمر الطبيب)</h4><table><thead><tr><th>الاضطراب</th><th>التدخل</th></tr></thead><tbody><tr><td>فرط K</td><td>مراقبة قلب، كالسيوم جلوكونات، أنسولين وسكر، سلفونات البوليسترين الصوديوم، غسيل كلى</td></tr><tr><td>نقص K</td><td>تعويض فموي أو وريدي بمعدل محسوب مع مراقبة</td></tr><tr><td>نقص Na</td><td>تصحيح بطيء حسب السبب (تصحيح سريع جدًا يضر المخ)</td></tr><tr><td>فرط Na</td><td>تعويض سوائل وريدي مدروس</td></tr><tr><td>نقص Ca</td><td>كالسيوم وريدي أو فموي مع فيتامين D</td></tr><tr><td>فرط Ca</td><td>سوائل، أدوية خفض الكالسيوم حسب السبب</td></tr><tr><td>نقص Mg</td><td>تعويض مغنيسيوم</td></tr><tr><td>فرط Mg</td><td>إيقاف المصدر، كالسيوم جلوكونات في الشديد، غسيل في فشل كلوي</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>البوتاسيوم الوريدي</strong><p>لا يُدفع أبدًا؛ مضخة، مخفف، بطيء (غالبًا 10–20 mEq كحد أقصى في الساعة حسب البروتوكول). الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<h4>Expected management (by physician order)</h4><table><thead><tr><th>Disorder</th><th>Intervention</th></tr></thead><tbody><tr><td>High K</td><td>Cardiac monitoring, calcium gluconate, insulin and glucose, sodium polystyrene sulfonate, dialysis</td></tr><tr><td>Low K</td><td>Oral or IV replacement at a calculated rate with monitoring</td></tr><tr><td>Low Na</td><td>Slow correction according to the cause (very rapid correction harms the brain)</td></tr><tr><td>High Na</td><td>Carefully planned IV fluid replacement</td></tr><tr><td>Low Ca</td><td>IV or oral calcium with vitamin D</td></tr><tr><td>High Ca</td><td>Fluids, calcium-lowering drugs according to the cause</td></tr><tr><td>Low Mg</td><td>Magnesium replacement</td></tr><tr><td>High Mg</td><td>Stop the source, calcium gluconate when severe, dialysis in kidney failure</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>IV potassium</strong><p>Never pushed; pump, diluted, slow (usually 10–20 mEq maximum per hour according to protocol). Doses are for learning; always verify with the physician/pharmacist before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اعرف الوظيفة</strong><p>K للقلب، Na للماء والمخ، Ca وMg للعضلات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>تقييم القلب والعصب والعضلة</strong><p>النبض، ECG، المنعكسات، تشنج، حركة الأمعاء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ابدأ بالأخطر</strong><p>K وCa وMg والصوديوم المنخفض مع تغير وعي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أمّن المحاليل</strong><p>المحلول والسرعة والمضخة؛ لا تضف K لكيس معلّق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>قيّم الاستجابة</strong><p>أعد القراءة والعلامات حسب الأمر.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Know the function</strong><p>K for the heart, Na for water and the brain, Ca and Mg for the muscles.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Assess heart, nerve, and muscle</strong><p>Pulse, ECG, reflexes, seizures, bowel motility.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Start with the most dangerous</strong><p>K, Ca, Mg, and low sodium with altered consciousness.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Make the infusions safe</strong><p>The solution, the rate, and the pump; do not add K to a hanging bag.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Evaluate the response</strong><p>Repeat the level and the signs as ordered.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>K أعلى من 6 أو أقل من 3 مع تغيرات ECG</li><li>Na منخفض مع تغير وعي أو تشنج</li><li>Ca منخفض مع تشنج أو تيتانوس أو QT طويل</li><li>Mg مرتفع مع بطء نبض وضعف تنفس</li><li>Torsades أو رجفان بطيني</li></ul>",
+   "en": "<ul><li>K above 6 or below 3 with ECG changes</li><li>Low Na with altered consciousness or seizures</li><li>Low Ca with spasm, tetany, or long QT</li><li>High Mg with slow pulse and weak breathing</li><li>Torsades or ventricular fibrillation</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>وضّح الأطعمة الغنية بالبوتاسيوم لمريض الكلى (يتجنبها) وللمنخفض (يزيدها).</li><li>لا تأخذ مكملات كالسيوم أو مغنيسيوم أو بوتاسيوم بدون استشارة.</li><li>أبلغ عن تنميل أو تقلصات أو خفقان أو ضعف شديد.</li><li>تجنب الجفاف.</li></ul>",
+   "en": "<ul><li>Explain potassium-rich foods to the kidney patient (avoids them) and to the patient with low potassium (increases them).</li><li>Do not take calcium, magnesium, or potassium supplements without medical advice.</li><li>Report tingling, cramps, palpitations, or severe weakness.</li><li>Avoid dehydration.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "K⁺ 3.5–5.0 يحرك القلب",
+   "Na⁺ 135–145 يجمع الماء",
+   "Ca 9–10.5 يقبض العضلات",
+   "Mg 1.3–2.1 يرخي العضلات",
+   "Ca وPO₄ عكس بعض",
+   "الأولوية: القلب والوعي",
+   "K وريدي لا يُدفع"
   ],
-  "target": "new:lab-reference|التحاليل ودلالاتها",
-  "sections": {
-    "overview": {
-      "ar": "<p>الأملاح (الإلكتروليتات) هي اللي بتخلّي العضلات والقلب والأعصاب تشتغل صح. الصفحة دي <b>ورقة مقارنة</b> للامتحان: لكل ملح وظيفته ومداه وعلامات النقص والزيادة وتغيرات ECG. فكرة مساعدة: <b>الصوديوم يجمع الماء، البوتاسيوم يحرك القلب، الكالسيوم يقبض العضلة، المغنيسيوم يرخيها</b>.</p>[[slot:dis-1105-electrolytes|الأملاح الستة: المدى وما يميز النقص والزيادة — رسم من إعداد الموقع|/diseases/img/dis-1105-electrolytes.svg]]<h4>المدى والوظيفة</h4><table><thead><tr><th>الملح</th><th>المدى والوظيفة</th></tr></thead><tbody><tr><td>البوتاسيوم K⁺</td><td>3.5 – 5.0 mEq/L — يضخ القلب والعضلات؛ أولوية لأنه يهدد النظم</td></tr><tr><td>الصوديوم Na⁺</td><td>135 – 145 mEq/L — يحافظ على ضغط الدم وحجم الدم وتوازن pH</td></tr><tr><td>الكلوريد Cl⁻</td><td>97 – 107 mEq/L — رفيق الصوديوم؛ يحافظ على الضغط والحجم وpH</td></tr><tr><td>الكالسيوم Ca</td><td>9.0 – 10.5 mg/dL — ينقبض العضلات، ويقوّي العظام والدم والقلب</td></tr><tr><td>المغنيسيوم Mg</td><td>1.3 – 2.1 mEq/L — يرخي العضلات</td></tr><tr><td>الفوسفات PO₄</td><td>3.0 – 4.5 mg/dL — لتكوين العظام والأسنان؛ يعكس الكالسيوم (Ca عالي = فوسفات منخفض والعكس)</td></tr></tbody></table>"
-    },
-    "causes": {
-      "ar": "<h4>الأسباب الشائعة</h4><table><thead><tr><th>الاضطراب</th><th>الأسباب</th></tr></thead><tbody><tr><td>فرط بوتاسيوم</td><td>فشل كلوي، فقد دوائي (مدرّات حافظة، مثبطات ACE)، حروق وسحق أنسجة، إعطاء K زائد</td></tr><tr><td>نقص بوتاسيوم</td><td>قيء وإسهال، مدرّات، شفط معدي، نقص مغنيسيوم</td></tr><tr><td>فرط صوديوم</td><td>نقص سوائل (جفاف)، السكري الكاذب (Diabetes insipidus)، قلة شرب، ملح زائد</td></tr><tr><td>نقص صوديوم</td><td>زيادة ماء، قيء وإسهال وتعرّق شديد، مدرّات</td></tr><tr><td>فرط كالسيوم</td><td>فرط جارات الدرق، ورم، فيتامين D زائد، قلة حركة طويلة</td></tr><tr><td>نقص كالسيوم</td><td>نقص جارات الدرق، نقص فيتامين D، التهاب بنكرياس، نقل دم كبير</td></tr><tr><td>فرط مغنيسيوم</td><td>فشل كلوي، مسهلات أو مضادات حموضة تحتوي مغنيسيوم</td></tr><tr><td>نقص مغنيسيوم</td><td>كحول، إسهال، مدرّات</td></tr></tbody></table>"
-    },
-    "signs": {
-      "ar": "<h4>علامات الارتفاع (Hyper)</h4><table><thead><tr><th>الملح</th><th>العلامات</th></tr></thead><tbody><tr><td>K⁺ مرتفع (>5.0)</td><td>ضعف، بطء نبض، هبوط ضغط، إسهال وفرط حركة معوية، T مدببة وQRS عريض، رجفان بطيني أو توقف قلب في الشديد</td></tr><tr><td>Na⁺ مرتفع (>145)</td><td>جلد محمر، وذمة، حمى خفيفة، عطش، لسان جاف ومنتفخ (متأخر)، زيادة التوتر العضلي، غثيان وقيء</td></tr><tr><td>Cl⁻ مرتفع (>107)</td><td>مشابه لارتفاع الصوديوم: غثيان وقيء ولسان جاف منتفخ وارتباك</td></tr><tr><td>Ca مرتفع (>10.5)</td><td>إمساك، ألم عظام، حصوات كلوية، ضعف عضلي شديد، منعكسات ضعيفة</td></tr><tr><td>Mg مرتفع (>2.1)</td><td>هدوء زائد: بطء قلب وحصار (طول PR)، هبوط ضغط، ضعف المنعكسات، تنفس ضحل، قلة حركة معوية</td></tr><tr><td>PO₄ مرتفع (>4.5)</td><td>علامات نقص الكالسيوم: تيتانوس وتشنج وتنميل</td></tr></tbody></table><h4>علامات النقص (Hypo)</h4><table><thead><tr><th>الملح</th><th>العلامات</th></tr></thead><tbody><tr><td>K⁺ منخفض (<3.5)</td><td>ضعف عضلي وثقل، شلل أطراف، إمساك وانتفاخ وشلل معوي (خطر في انسداد الأمعاء)، T مسطحة وST منخفض وموجة U</td></tr><tr><td>Na⁺ منخفض (<135)</td><td>تغير الحالة الذهنية، صداع، غثيان، ثم تشنج وغيبوبة وتوقف تنفس؛ يتشابه مع نقص الكلوريد</td></tr><tr><td>Cl⁻ منخفض (<97)</td><td>قيء وإسهال وتعرّق شديد</td></tr><tr><td>Ca منخفض (<9.0)</td><td>تنميل حول الفم وتشنجات، علامة تروسو (Trousseau: تقلص اليد عند نفخ الجهاز) وعلامة شفوستك (Chvostek: انقباض الوجه عند النقر)، إسهال، تسارع نبض ونبض ضعيف، تشنج وتوقف تنفس في الشديد، QT طويل</td></tr><tr><td>Mg منخفض (<1.3)</td><td>اهتياج وفرط منعكسات، تسارع نبض، رأرأة، إسهال، ST منخفض وT مقلوبة وتورسادس دي بوان (Torsades de pointes) ورجفان بطيني في الشديد</td></tr><tr><td>PO₄ منخفض (<3.0)</td><td>ضعف عضلات وضعف تنفس وارتباك (يحتاج لمتابعة)</td></tr></tbody></table>[[slot:dis-1105-signs|تروسو وشفوستك ورجفان بطيني وتورسادس — رسم من إعداد الموقع|/diseases/img/dis-1105-signs.svg]]<h4>تتمة العلامات</h4><table><thead><tr><th>الاضطراب</th><th>تفصيل إضافي</th></tr></thead><tbody><tr><td>Na منخفض</td><td>القلب: تسارع ونبض ضعيف خيطي؛ الجهاز العصبي: تشنج وغيبوبة؛ ثم توقف تنفس</td></tr><tr><td>K مرتفع</td><td>عضلات وأعصاب: ضعف وشلل في الأطراف وثقل عام؛ الجهاز الهضمي: إسهال وفرط حركة</td></tr><tr><td>K منخفض</td><td>شلل أطراف وتقلصات؛ الجهاز الهضمي: ضعف حركة وانتفاخ وشلل معوي (خطر انسداد أمعاء دقيقة)</td></tr><tr><td>Cl منخفض</td><td>قيء وإسهال وتعرّق شديد؛ الفرق عن نقص الصوديوم: الحمى قد تصاحب فقد الكلوريد</td></tr><tr><td>Ca منخفض</td><td>عظام ضعيفة وكسور، ميل للنزيف، اضطراب نظم (القوة الثلاثية: عظم ودم ونبض)</td></tr><tr><td>Ca مرتفع</td><td>إمساك، ألم عظام، حصوات، انخفاض المنعكسات وضعف عضلي شديد</td></tr><tr><td>PO₄ مرتفع</td><td>علامات نقص الكالسيوم: تروسو وشفوستك وإسهال وضعف العظام والتجلط والنظم</td></tr><tr><td>PO₄ منخفض</td><td>تذكر بعض المراجع: إمساك وضعف المنعكسات وضعف عضلي شديد وبطء القلب والتنفس وارتفاع الضغط؛ الأدق سريريًا ضعف عضلات وتنفس وارتباك، فاتبع مرجع مؤسستك</td></tr></tbody></table><div class=\"cs-box cs-info\"><strong>تنبيه المراجع</strong><p>قيم الأملاح هنا حسب معايير الامتحان وقد تختلف المراجع والمستشفيات.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>أي اضطراب ملحي: ابدأ بـ <b>ECG ومراقبة قلب</b> خاصة K وCa وMg.</li><li>الكالسيوم يتأثر بالألبيومين: الألبيومين المنخفض يخفض الكالسيوم الكلي والمتأين قد يكون طبيعيًا.</li><li>اجمع مع BUN والكرياتينين وpH والغازات.</li><li><b>قاعدة الاستجواب:</b> نقص الصوديوم مع ارتباك أو تشنج أولوية قصوى.</li></ul><div class=\"cs-box cs-info\"><strong>Trousseau وChvostek</strong><p>Trousseau: نفخ جهاز الضغط فوق ضغط الدم فيحدث تقلص اليد. Chvostek: النقر على العصب الوجهي أمام الأذن فتنقبض عضلات الوجه. كلاهما يدلان على نقص كالسيوم.</p></div>"
-    },
-    "treatment": {
-      "ar": "<h4>التصرف المتوقع (بأمر الطبيب)</h4><table><thead><tr><th>الاضطراب</th><th>التدخل</th></tr></thead><tbody><tr><td>فرط K</td><td>مراقبة قلب، كالسيوم جلوكونات، أنسولين وسكر، سلفونات البوليسترين الصوديوم، غسيل كلى</td></tr><tr><td>نقص K</td><td>تعويض فموي أو وريدي بمعدل محسوب مع مراقبة</td></tr><tr><td>نقص Na</td><td>تصحيح بطيء حسب السبب (تصحيح سريع جدًا يضر المخ)</td></tr><tr><td>فرط Na</td><td>تعويض سوائل وريدي مدروس</td></tr><tr><td>نقص Ca</td><td>كالسيوم وريدي أو فموي مع فيتامين D</td></tr><tr><td>فرط Ca</td><td>سوائل، أدوية خفض الكالسيوم حسب السبب</td></tr><tr><td>نقص Mg</td><td>تعويض مغنيسيوم</td></tr><tr><td>فرط Mg</td><td>إيقاف المصدر، كالسيوم جلوكونات في الشديد، غسيل في فشل كلوي</td></tr></tbody></table><div class=\"cs-box cs-danger\"><strong>البوتاسيوم الوريدي</strong><p>لا يُدفع أبدًا؛ مضخة، مخفف، بطيء (غالبًا 10–20 mEq كحد أقصى في الساعة حسب البروتوكول). الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اعرف الوظيفة</strong><p>K للقلب، Na للماء والمخ، Ca وMg للعضلات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>تقييم القلب والعصب والعضلة</strong><p>النبض، ECG، المنعكسات، تشنج، حركة الأمعاء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>ابدأ بالأخطر</strong><p>K وCa وMg والصوديوم المنخفض مع تغير وعي.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أمّن المحاليل</strong><p>المحلول والسرعة والمضخة؛ لا تضف K لكيس معلّق.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>قيّم الاستجابة</strong><p>أعد القراءة والعلامات حسب الأمر.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>K أعلى من 6 أو أقل من 3 مع تغيرات ECG</li><li>Na منخفض مع تغير وعي أو تشنج</li><li>Ca منخفض مع تشنج أو تيتانوس أو QT طويل</li><li>Mg مرتفع مع بطء نبض وضعف تنفس</li><li>Torsades أو رجفان بطيني</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>وضّح الأطعمة الغنية بالبوتاسيوم لمريض الكلى (يتجنبها) وللمنخفض (يزيدها).</li><li>لا تأخذ مكملات كالسيوم أو مغنيسيوم أو بوتاسيوم بدون استشارة.</li><li>أبلغ عن تنميل أو تقلصات أو خفقان أو ضعف شديد.</li><li>تجنب الجفاف.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "K⁺ 3.5–5.0 يحرك القلب",
-      "Na⁺ 135–145 يجمع الماء",
-      "Ca 9–10.5 يقبض العضلات",
-      "Mg 1.3–2.1 يرخي العضلات",
-      "Ca وPO₄ عكس بعض",
-      "الأولوية: القلب والوعي",
-      "K وريدي لا يُدفع"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "علامة Trousseau الإيجابية تدل على:"
-      },
-      "options": [
-        {
-          "ar": "نقص صوديوم"
-        },
-        {
-          "ar": "نقص كالسيوم"
-        },
-        {
-          "ar": "فرط بوتاسيوم"
-        },
-        {
-          "ar": "نقص سكر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تقلص اليد بعد نفخ الجهاز يدل على فرط استثارة عصبية عضلية بسبب نقص الكالسيوم."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض لديه T مدببة وQRS عريض يدل على:"
-      },
-      "options": [
-        {
-          "ar": "نقص بوتاسيوم"
-        },
-        {
-          "ar": "فرط بوتاسيوم"
-        },
-        {
-          "ar": "نقص مغنيسيوم"
-        },
-        {
-          "ar": "فرط كالسيوم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "فرط K يغيّر استقطاب القلب فتظهر T مدببة ثم QRS عريض وقد ينتهي برجفان."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي اضطراب يسبب إمساكًا وحصوات وألم عظام؟"
-      },
-      "options": [
-        {
-          "ar": "نقص كالسيوم"
-        },
-        {
-          "ar": "فرط كالسيوم"
-        },
-        {
-          "ar": "فرط صوديوم"
-        },
-        {
-          "ar": "نقص مغنيسيوم"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "فرط الكالسيوم يبطئ العضلات الملساء (إمساك) ويرسب في الكلى (حصوات) ويضعف العظام (ألم)."
-      }
-    },
-    {
-      "q": {
-        "ar": "نقص صوديوم مع ارتباك وتشنج. التصرف:"
-      },
-      "options": [
-        {
-          "ar": "مراقبة روتينية"
-        },
-        {
-          "ar": "أولوية عالية: بلّغ فورًا وجهّز مراقبة"
-        },
-        {
-          "ar": "لا خطر"
-        },
-        {
-          "ar": "إعطاء ماء حر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تغير الحالة الذهنية مع نقص الصوديوم يعني وذمة مخية؛ حالة طارئة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي ملح يهدئ العضلات ويقل منعكساتها عند زيادته؟"
-      },
-      "options": [
-        {
-          "ar": "K"
-        },
-        {
-          "ar": "Mg"
-        },
-        {
-          "ar": "Na"
-        },
-        {
-          "ar": "Cl"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "المغنيسيوم يرخي العضلة والأعصاب فزيادته تضعف المنعكسات وتبطئ القلب وتثبط التنفس."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي إعطاء غير آمن للبوتاسيوم؟"
-      },
-      "options": [
-        {
-          "ar": "مخفف بمضخة"
-        },
-        {
-          "ar": "دفع وريدي سريع"
-        },
-        {
-          "ar": "معدل بطيء"
-        },
-        {
-          "ar": "مراقبة قلب"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الدفع السريع قد يوقف القلب."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Oxford Handbook of Clinical Medicine — electrolyte disorders"
-    },
-    {
-      "title": "UK Renal Association guidelines"
-    },
-    {
-      "title": "Endocrine Society calcium guidance"
-    }
+  "en": [
+   "K⁺ 3.5–5.0 drives the heart",
+   "Na⁺ 135–145 holds water",
+   "Ca 9–10.5 contracts the muscles",
+   "Mg 1.3–2.1 relaxes the muscles",
+   "Ca and PO₄ are opposites",
+   "Priority: the heart and consciousness",
+   "IV K is never pushed"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "علامة Trousseau الإيجابية تدل على:",
+    "en": "A positive Trousseau sign indicates:"
+   },
+   "options": [
+    {
+     "ar": "نقص صوديوم",
+     "en": "Hyponatremia"
+    },
+    {
+     "ar": "نقص كالسيوم",
+     "en": "Hypocalcemia"
+    },
+    {
+     "ar": "فرط بوتاسيوم",
+     "en": "Hyperkalemia"
+    },
+    {
+     "ar": "نقص سكر",
+     "en": "Hypoglycemia"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تقلص اليد بعد نفخ الجهاز يدل على فرط استثارة عصبية عضلية بسبب نقص الكالسيوم.",
+    "en": "Hand spasm after inflating the cuff indicates neuromuscular hyperexcitability due to low calcium."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض لديه T مدببة وQRS عريض يدل على:",
+    "en": "A patient with peaked T and wide QRS indicates:"
+   },
+   "options": [
+    {
+     "ar": "نقص بوتاسيوم",
+     "en": "Hypokalemia"
+    },
+    {
+     "ar": "فرط بوتاسيوم",
+     "en": "Hyperkalemia"
+    },
+    {
+     "ar": "نقص مغنيسيوم",
+     "en": "Hypomagnesemia"
+    },
+    {
+     "ar": "فرط كالسيوم",
+     "en": "Hypercalcemia"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "فرط K يغيّر استقطاب القلب فتظهر T مدببة ثم QRS عريض وقد ينتهي برجفان.",
+    "en": "High K changes cardiac polarization, so peaked T appears, then wide QRS, and it may end in fibrillation."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي اضطراب يسبب إمساكًا وحصوات وألم عظام؟",
+    "en": "Which disorder causes constipation, stones, and bone pain?"
+   },
+   "options": [
+    {
+     "ar": "نقص كالسيوم",
+     "en": "Hypocalcemia"
+    },
+    {
+     "ar": "فرط كالسيوم",
+     "en": "Hypercalcemia"
+    },
+    {
+     "ar": "فرط صوديوم",
+     "en": "Hypernatremia"
+    },
+    {
+     "ar": "نقص مغنيسيوم",
+     "en": "Hypomagnesemia"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "فرط الكالسيوم يبطئ العضلات الملساء (إمساك) ويرسب في الكلى (حصوات) ويضعف العظام (ألم).",
+    "en": "Hypercalcemia slows smooth muscle (constipation), deposits in the kidneys (stones), and weakens the bones (pain)."
+   }
+  },
+  {
+   "q": {
+    "ar": "نقص صوديوم مع ارتباك وتشنج. التصرف:",
+    "en": "Hyponatremia with confusion and seizures. The action:"
+   },
+   "options": [
+    {
+     "ar": "مراقبة روتينية",
+     "en": "Routine monitoring"
+    },
+    {
+     "ar": "أولوية عالية: بلّغ فورًا وجهّز مراقبة",
+     "en": "High priority: report immediately and set up monitoring"
+    },
+    {
+     "ar": "لا خطر",
+     "en": "No danger"
+    },
+    {
+     "ar": "إعطاء ماء حر",
+     "en": "Give free water"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تغير الحالة الذهنية مع نقص الصوديوم يعني وذمة مخية؛ حالة طارئة.",
+    "en": "Altered mental status with low sodium means cerebral edema; an emergency."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي ملح يهدئ العضلات ويقل منعكساتها عند زيادته؟",
+    "en": "Which electrolyte calms the muscles and reduces their reflexes when it is high?"
+   },
+   "options": [
+    {
+     "ar": "K",
+     "en": "K"
+    },
+    {
+     "ar": "Mg",
+     "en": "Mg"
+    },
+    {
+     "ar": "Na",
+     "en": "Na"
+    },
+    {
+     "ar": "Cl",
+     "en": "Cl"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "المغنيسيوم يرخي العضلة والأعصاب فزيادته تضعف المنعكسات وتبطئ القلب وتثبط التنفس.",
+    "en": "Magnesium relaxes muscle and nerves, so its excess weakens reflexes, slows the heart, and depresses breathing."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي إعطاء غير آمن للبوتاسيوم؟",
+    "en": "Which way of giving potassium is unsafe?"
+   },
+   "options": [
+    {
+     "ar": "مخفف بمضخة",
+     "en": "Diluted by pump"
+    },
+    {
+     "ar": "دفع وريدي سريع",
+     "en": "Rapid IV push"
+    },
+    {
+     "ar": "معدل بطيء",
+     "en": "Slow rate"
+    },
+    {
+     "ar": "مراقبة قلب",
+     "en": "Cardiac monitoring"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الدفع السريع قد يوقف القلب.",
+    "en": "A rapid push can stop the heart."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Oxford Handbook of Clinical Medicine — electrolyte disorders"
+  },
+  {
+   "title": "UK Renal Association guidelines"
+  },
+  {
+   "title": "Endocrine Society calcium guidance"
+  }
+ ]
 }

@@ -1,175 +1,220 @@
 {
-  "id": "dis-1003",
-  "num": 1003,
-  "system": "other",
-  "icon": "🦴",
-  "level": 1,
-  "title": {
-    "ar": "تشريح المفاصل: الأنواع والمواضع",
-    "en": "Joint Anatomy"
+ "id": "dis-1003",
+ "num": 1003,
+ "system": "other",
+ "icon": "🦴",
+ "level": 1,
+ "title": {
+  "ar": "تشريح المفاصل: الأنواع والمواضع",
+  "en": "Joint Anatomy"
+ },
+ "teaser": {
+  "ar": "تصنيف المفاصل حسب الحركة وحسب الشكل مع أمثلة وتركيب المفصل الزلالي.",
+  "en": "Classification of joints by movement and by shape, with examples and the structure of the synovial joint."
+ },
+ "chips": [
+  {
+   "ar": "مفاصل",
+   "en": "Joints"
   },
-  "teaser": {
-    "ar": "تصنيف المفاصل حسب الحركة وحسب الشكل مع أمثلة وتركيب المفصل الزلالي."
+  {
+   "ar": "عظام",
+   "en": "Bones"
   },
-  "chips": [
-    {
-      "ar": "مفاصل"
-    },
-    {
-      "ar": "عظام"
-    },
-    {
-      "ar": "تشريح"
-    }
+  {
+   "ar": "تشريح",
+   "en": "Anatomy"
+  }
+ ],
+ "target": "anatomy",
+ "sections": {
+  "overview": {
+   "ar": "<p>المفصل هو موضع التقاء عظمتين أو أكثر. يُصنَّف وظيفياً حسب مقدار الحركة، وشكلياً حسب نوع الحركة التي يسمح بها.</p>[[slot:dis-1003-joints|أنواع المفاصل ومواضعها — رسم من إعداد الموقع|/diseases/img/dis-1003-joints.svg]]",
+   "en": "<p>A joint is where two or more bones meet. It is classified functionally by the amount of movement, and structurally by the type of movement it allows.</p>[[slot:dis-1003-joints|Types of joints and their locations — site illustration|/diseases/img/dis-1003-joints.svg]]"
+  },
+  "causes": {
+   "ar": "<table><thead><tr><th>التصنيف</th><th>درجة الحركة</th><th>أمثلة</th></tr></thead><tbody><tr><td>Synarthrosis</td><td>ثابت لا يتحرك</td><td>الجمجمة والقص وعظام الحوض</td></tr><tr><td>Amphiarthrosis</td><td>حركة محدودة</td><td>الأقراص بين الفقرات والارتفاق العاني</td></tr><tr><td>Diarthrosis (زلالي)</td><td>حر الحركة</td><td>الكتف والمرفق والأصابع والورك والركبة</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>Classification</th><th>Degree of movement</th><th>Examples</th></tr></thead><tbody><tr><td>Synarthrosis</td><td>Fixed, immovable</td><td>Skull, sternum, and pelvic bones</td></tr><tr><td>Amphiarthrosis</td><td>Limited movement</td><td>Intervertebral discs and pubic symphysis</td></tr><tr><td>Diarthrosis (synovial)</td><td>Freely movable</td><td>Shoulder, elbow, fingers, hip, and knee</td></tr></tbody></table>"
+  },
+  "signs": {
+   "ar": "<p>طبقات المفصل الزلالي: الطبقة الخارجية محفظة ليفية تلتحم بسمحاق العظم (periosteum)؛ الطبقة الداخلية غشاء زلالي لا يحوي أوعية دموية أو لمفية، ويفرز السائل الزلالي الذي يمتص الصدمات ويزلق الحركة.</p><p>أمثلة المواضع: مفصلي (المرفق، الركبة)، انزلاقي (الرسغ وعظام القدم)، محوري (C1-C2)، لقمي (الرسغ بين عظمة الكعبرة (Radius) وعظام الرسغ)، سرجي (Saddle: قاعدة الإبهام)، كروي حقي (Ball and socket: الكتف والورك). وتذكر بعض المراجع الرسغ ضمن أمثلة المحوري بسبب دوران الكعبرة حول الزند (Ulna) عند الساعد.</p>",
+   "en": "<p>Layers of the synovial joint: the outer layer is a fibrous capsule that blends with the bone's periosteum; the inner layer is a synovial membrane that contains no blood or lymph vessels, and it secretes synovial fluid, which absorbs shock and lubricates movement.</p><p>Examples of locations: hinge (elbow, knee), gliding (wrist and foot bones), pivot (C1-C2), condyloid (the wrist between the Radius and the carpal bones), Saddle (base of the thumb), Ball and socket (shoulder and hip). Some classifications list the wrist among the pivot examples because the Radius rotates around the Ulna at the forearm.</p>"
+  },
+  "tests": {
+   "ar": "<p>تُقيَّم المفاصل بالفحص السريري (مدى الحركة، تورم، ألم) وبالأشعة، والرنين المغناطيسي للأربطة والغضاريف، وقد يُسحب السائل الزلالي للتحليل.</p>",
+   "en": "<p>Joints are assessed by clinical examination (range of motion, swelling, pain), X-ray, MRI for ligaments and cartilage, and synovial fluid may be aspirated for analysis.</p>"
+  },
+  "treatment": {
+   "ar": "<p>تعتمد على المرض (التهاب مفاصل، إصابة، خلع). المفاهيم هنا أساس فهم الجبائر ومدى الحركة وعلاج المفاصل.</p>",
+   "en": "<p>It depends on the disease (arthritis, injury, dislocation). The concepts here are the basis for understanding splints, range of motion, and joint treatment.</p>"
+  },
+  "nursing": {
+   "ar": "<ul><li>قيّم مدى الحركة والألم والتورم وحرارة الجلد فوق المفصل.</li><li>ادعم المفصل المصاب في وضع وظيفي وحافظ على الحركة الممكنة لمنع التيبس.</li><li>تأكد من الدورة الدموية والإحساس أسفل الجبيرة.</li></ul>",
+   "en": "<ul><li>Assess range of motion, pain, swelling, and skin temperature over the joint.</li><li>Support the affected joint in a functional position and maintain possible movement to prevent stiffness.</li><li>Check circulation and sensation below the splint.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ عند</strong><ul><li>مفصل ساخن أحمر متورم مع حمى</li><li>عدم القدرة على تحريك المفصل أو تشوّه مفاجئ</li><li>فقدان نبض أو برودة وتنميل بعد الإصابة</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report when</strong><ul><li>A hot, red, swollen joint with fever</li><li>Inability to move the joint or sudden deformity</li><li>Loss of pulse, or coldness and numbness after injury</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>الحركة المنتظمة اللطيفة تحافظ على صحة السائل الزلالي.</li><li>تجنّب الحمل الزائد على المفاصل واحمها أثناء الرياضة.</li></ul>",
+   "en": "<ul><li>Regular gentle movement keeps the synovial fluid healthy.</li><li>Avoid overloading the joints and protect them during sports.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "Synarthrosis ثابت، Amphiarthrosis محدود، Diarthrosis حر",
+   "المفصل المفصلي في المرفق والركبة",
+   "المحوري بين C1 وC2",
+   "المفصل الزلالي له محفظة ليفية وغشاء زلالي",
+   "السائل الزلالي يمتص الصدمات ويزلّق",
+   "السرجي في قاعدة الإبهام والكروي الحقي في الكتف والورك"
   ],
-  "target": "anatomy",
-  "sections": {
-    "overview": {
-      "ar": "<p>المفصل هو موضع التقاء عظمتين أو أكثر. يُصنَّف وظيفياً حسب مقدار الحركة، وشكلياً حسب نوع الحركة التي يسمح بها.</p>[[slot:dis-1003-joints|أنواع المفاصل ومواضعها — رسم من إعداد الموقع|/diseases/img/dis-1003-joints.svg]]"
-    },
-    "causes": {
-      "ar": "<table><thead><tr><th>التصنيف</th><th>درجة الحركة</th><th>أمثلة</th></tr></thead><tbody><tr><td>Synarthrosis</td><td>ثابت لا يتحرك</td><td>الجمجمة والقص وعظام الحوض</td></tr><tr><td>Amphiarthrosis</td><td>حركة محدودة</td><td>الأقراص بين الفقرات والارتفاق العاني</td></tr><tr><td>Diarthrosis (زلالي)</td><td>حر الحركة</td><td>الكتف والمرفق والأصابع والورك والركبة</td></tr></tbody></table>"
-    },
-    "signs": {
-      "ar": "<p>طبقات المفصل الزلالي: الطبقة الخارجية محفظة ليفية تلتحم بسمحاق العظم (periosteum)؛ الطبقة الداخلية غشاء زلالي لا يحوي أوعية دموية أو لمفية، ويفرز السائل الزلالي الذي يمتص الصدمات ويزلق الحركة.</p><p>أمثلة المواضع: مفصلي (المرفق، الركبة)، انزلاقي (الرسغ وعظام القدم)، محوري (C1-C2)، لقمي (الرسغ بين عظمة الكعبرة (Radius) وعظام الرسغ)، سرجي (Saddle: قاعدة الإبهام)، كروي حقي (Ball and socket: الكتف والورك). وتذكر بعض المراجع الرسغ ضمن أمثلة المحوري بسبب دوران الكعبرة حول الزند (Ulna) عند الساعد.</p>"
-    },
-    "tests": {
-      "ar": "<p>تُقيَّم المفاصل بالفحص السريري (مدى الحركة، تورم، ألم) وبالأشعة، والرنين المغناطيسي للأربطة والغضاريف، وقد يُسحب السائل الزلالي للتحليل.</p>"
-    },
-    "treatment": {
-      "ar": "<p>تعتمد على المرض (التهاب مفاصل، إصابة، خلع). المفاهيم هنا أساس فهم الجبائر ومدى الحركة وعلاج المفاصل.</p>"
-    },
-    "nursing": {
-      "ar": "<ul><li>قيّم مدى الحركة والألم والتورم وحرارة الجلد فوق المفصل.</li><li>ادعم المفصل المصاب في وضع وظيفي وحافظ على الحركة الممكنة لمنع التيبس.</li><li>تأكد من الدورة الدموية والإحساس أسفل الجبيرة.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ عند</strong><ul><li>مفصل ساخن أحمر متورم مع حمى</li><li>عدم القدرة على تحريك المفصل أو تشوّه مفاجئ</li><li>فقدان نبض أو برودة وتنميل بعد الإصابة</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>الحركة المنتظمة اللطيفة تحافظ على صحة السائل الزلالي.</li><li>تجنّب الحمل الزائد على المفاصل واحمها أثناء الرياضة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "Synarthrosis ثابت، Amphiarthrosis محدود، Diarthrosis حر",
-      "المفصل المفصلي في المرفق والركبة",
-      "المحوري بين C1 وC2",
-      "المفصل الزلالي له محفظة ليفية وغشاء زلالي",
-      "السائل الزلالي يمتص الصدمات ويزلّق",
-      "السرجي في قاعدة الإبهام والكروي الحقي في الكتف والورك"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مفصل ثابت لا يتحرك مثل الجمجمة:"
-      },
-      "options": [
-        {
-          "ar": "Synarthrosis"
-        },
-        {
-          "ar": "Diarthrosis"
-        },
-        {
-          "ar": "Amphiarthrosis"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الـ synarthrosis ثابت (جمجمة، قص، حوض)."
-      }
-    },
-    {
-      "q": {
-        "ar": "الركبة والمرفق من نوع:"
-      },
-      "options": [
-        {
-          "ar": "مفصلي (Hinge)"
-        },
-        {
-          "ar": "محوري"
-        },
-        {
-          "ar": "انزلاقي"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحركة في اتجاه واحد (ثني ومد)."
-      }
-    },
-    {
-      "q": {
-        "ar": "وظيفة الغشاء الزلالي:"
-      },
-      "options": [
-        {
-          "ar": "إفراز السائل الزلالي"
-        },
-        {
-          "ar": "تكوين خلايا الدم"
-        },
-        {
-          "ar": "تخزين الكالسيوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يفرز سائلاً يزلّق ويمتص الصدمات، ولا يحتوي أوعية دموية."
-      }
-    },
-    {
-      "q": {
-        "ar": "الأقراص بين الفقرات من نوع:"
-      },
-      "options": [
-        {
-          "ar": "Amphiarthrosis"
-        },
-        {
-          "ar": "Diarthrosis"
-        },
-        {
-          "ar": "Synarthrosis"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تسمح بحركة محدودة."
-      }
-    },
-    {
-      "q": {
-        "ar": "المفصل الذي يسمح بالحركة في كل الاتجاهات تقريباً كما في الكتف والورك هو:"
-      },
-      "options": [
-        {
-          "ar": "المفصلي (Hinge)"
-        },
-        {
-          "ar": "الكروي الحقي (Ball and socket)"
-        },
-        {
-          "ar": "الانزلاقي (Plane)"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الكروي الحقي (كرة داخل تجويف) يتيح حركة واسعة في عدة محاور مثل الكتف والورك، أما المفصلي فيتحرك في مستوى واحد كالمرفق والركبة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "Gray's Anatomy for Students"
-    },
-    {
-      "title": "Guyton and Hall Textbook of Medical Physiology"
-    },
-    {
-      "title": "OpenStax Anatomy and Physiology"
-    }
+  "en": [
+   "Synarthrosis fixed, Amphiarthrosis limited, Diarthrosis free",
+   "The hinge joint is in the elbow and knee",
+   "The pivot joint is between C1 and C2",
+   "The synovial joint has a fibrous capsule and a synovial membrane",
+   "Synovial fluid absorbs shock and lubricates",
+   "Saddle at the base of the thumb, and ball and socket in the shoulder and hip"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مفصل ثابت لا يتحرك مثل الجمجمة:",
+    "en": "A fixed, immovable joint such as the skull:"
+   },
+   "options": [
+    {
+     "ar": "Synarthrosis",
+     "en": "Synarthrosis"
+    },
+    {
+     "ar": "Diarthrosis",
+     "en": "Diarthrosis"
+    },
+    {
+     "ar": "Amphiarthrosis",
+     "en": "Amphiarthrosis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الـ synarthrosis ثابت (جمجمة، قص، حوض).",
+    "en": "Synarthrosis is fixed (skull, sternum, pelvis)."
+   }
+  },
+  {
+   "q": {
+    "ar": "الركبة والمرفق من نوع:",
+    "en": "The knee and elbow are of the type:"
+   },
+   "options": [
+    {
+     "ar": "مفصلي (Hinge)",
+     "en": "Hinge"
+    },
+    {
+     "ar": "محوري",
+     "en": "Pivot"
+    },
+    {
+     "ar": "انزلاقي",
+     "en": "Gliding"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحركة في اتجاه واحد (ثني ومد).",
+    "en": "Movement in one direction (flexion and extension)."
+   }
+  },
+  {
+   "q": {
+    "ar": "وظيفة الغشاء الزلالي:",
+    "en": "Function of the synovial membrane:"
+   },
+   "options": [
+    {
+     "ar": "إفراز السائل الزلالي",
+     "en": "Secreting synovial fluid"
+    },
+    {
+     "ar": "تكوين خلايا الدم",
+     "en": "Forming blood cells"
+    },
+    {
+     "ar": "تخزين الكالسيوم",
+     "en": "Storing calcium"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يفرز سائلاً يزلّق ويمتص الصدمات، ولا يحتوي أوعية دموية.",
+    "en": "It secretes a fluid that lubricates and absorbs shock, and it contains no blood vessels."
+   }
+  },
+  {
+   "q": {
+    "ar": "الأقراص بين الفقرات من نوع:",
+    "en": "The intervertebral discs are of the type:"
+   },
+   "options": [
+    {
+     "ar": "Amphiarthrosis",
+     "en": "Amphiarthrosis"
+    },
+    {
+     "ar": "Diarthrosis",
+     "en": "Diarthrosis"
+    },
+    {
+     "ar": "Synarthrosis",
+     "en": "Synarthrosis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تسمح بحركة محدودة.",
+    "en": "They allow limited movement."
+   }
+  },
+  {
+   "q": {
+    "ar": "المفصل الذي يسمح بالحركة في كل الاتجاهات تقريباً كما في الكتف والورك هو:",
+    "en": "The joint that allows movement in almost all directions, as in the shoulder and hip, is:"
+   },
+   "options": [
+    {
+     "ar": "المفصلي (Hinge)",
+     "en": "Hinge"
+    },
+    {
+     "ar": "الكروي الحقي (Ball and socket)",
+     "en": "Ball and socket"
+    },
+    {
+     "ar": "الانزلاقي (Plane)",
+     "en": "Gliding (Plane)"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الكروي الحقي (كرة داخل تجويف) يتيح حركة واسعة في عدة محاور مثل الكتف والورك، أما المفصلي فيتحرك في مستوى واحد كالمرفق والركبة.",
+    "en": "The ball and socket (a ball inside a cavity) allows wide movement in several axes, as in the shoulder and hip, while the hinge moves in one plane, as in the elbow and knee."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "Gray's Anatomy for Students"
+  },
+  {
+   "title": "Guyton and Hall Textbook of Medical Physiology"
+  },
+  {
+   "title": "OpenStax Anatomy and Physiology"
+  }
+ ]
 }
