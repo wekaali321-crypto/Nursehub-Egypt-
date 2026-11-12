@@ -1,309 +1,393 @@
 {
-  "id": "dis-704",
-  "num": 704,
-  "system": "neuro",
-  "icon": "🧠",
-  "level": 2,
-  "title": {
-    "ar": "مرض باركنسون",
-    "en": "Parkinson's Disease"
+ "id": "dis-704",
+ "num": 704,
+ "system": "neuro",
+ "icon": "🧠",
+ "level": 2,
+ "title": {
+  "ar": "مرض باركنسون",
+  "en": "Parkinson's Disease"
+ },
+ "teaser": {
+  "ar": "رعشة وتيبس وبطء: مواعيد Levodopa الدقيقة، السقوط، البلع، وهبوط الضغط الانتصابي.",
+  "en": "Tremor, rigidity, and slowness: precise Levodopa timing, falls, swallowing, and orthostatic hypotension."
+ },
+ "chips": [
+  {
+   "ar": "Levodopa",
+   "en": "Levodopa"
   },
-  "teaser": {
-    "ar": "رعشة وتيبس وبطء: مواعيد Levodopa الدقيقة، السقوط، البلع، وهبوط الضغط الانتصابي."
+  {
+   "ar": "Tremor / Rigidity",
+   "en": "Tremor / Rigidity"
   },
-  "chips": [
-    {
-      "ar": "Levodopa"
-    },
-    {
-      "ar": "Tremor / Rigidity"
-    },
-    {
-      "ar": "هبوط انتصابي"
-    }
+  {
+   "ar": "هبوط انتصابي",
+   "en": "Orthostatic drop"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>باركنسون تنكّس تدريجي في المادة السوداء (Substantia nigra) بالمخ المتوسط تنقص فيه خلايا تنتج <b>الدوبامين</b>، فيختل التوازن مع الأستيل كولين المثير، فيزداد توتر العضلات ويظهر التيبس والرعشة. يوجد أيضاً نقص نورإبينفرين في الجهاز الودي. يظهر عادة بعد الخمسين، وهناك استعداد وراثي وعوامل بيئية (ملوثات، مواد كيماوية).</p><div class=\"cs-box cs-info\"><strong>لا شفاء</strong><p>الأعراض تُدار بالأدوية وتعود عند انتهاء مفعولها، وتحتاج تعديل جرعات دورياً. يظهر الخرف عند بعض المرضى.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><p>اضطراب حركي بسبب موت تدريجي للخلايا العصبية فينخفض <strong>الدوبامين</strong> ويرتفع <strong>الأسيتيل كولين</strong> في العقد القاعدية (الجهاز خارج الهرمي)، فتتأثر الحركة والوضعية.</p>[[slot:dis-704-pd|ملخص باركنسون — رسم من إعداد الموقع|/diseases/img/dis-704-pd.svg]]<h4>من المراجعة الشاملة</h4>[[slot:dis-2630-parkinson|باركنسون — رسم من إعداد الموقع|/diseases/img/dis-2630-parkinson.svg]]<h4>مصطلحات</h4><ul><li><strong>الجهاز خارج الهرمي (Extrapyramidal system):</strong> يتحكم في الحركات اللاإرادية والوضعية؛ خلله يسبب اضطرابات الحركة.</li><li><strong>العقد القاعدية (Basal ganglia):</strong> اضطرابها وفرط تنبيه الأسيتيل كولين يؤثر على الحركة والوضعية. في باركنسون ينخفض الدوبامين ويرتفع الأسيتيل كولين (فيزيد اللعاب).</li></ul>",
+   "en": "<p>Parkinson's is a gradual degeneration of the substantia nigra in the midbrain, where the cells that make <b>dopamine</b> decrease, so the balance with the excitatory acetylcholine is disturbed, muscle tone increases, and rigidity and tremor appear. There is also a norepinephrine deficiency in the sympathetic system. It usually appears after age fifty, and there is a genetic predisposition and environmental factors (pollutants, chemicals).</p><div class=\"cs-box cs-info\"><strong>No cure</strong><p>The symptoms are managed with drugs and return when their effect ends, and the doses need periodic adjustment. Dementia appears in some patients.</p></div><h4>Additions covering review points</h4><p>A movement disorder caused by the gradual death of nerve cells so <strong>dopamine</strong> falls and <strong>acetylcholine</strong> rises in the basal ganglia (the extrapyramidal system), so movement and posture are affected.</p>[[slot:dis-704-pd|Parkinson's summary — illustration prepared by the site|/diseases/img/dis-704-pd.svg]]<h4>From the comprehensive review</h4>[[slot:dis-2630-parkinson|Parkinson's — illustration prepared by the site|/diseases/img/dis-2630-parkinson.svg]]<h4>Terms</h4><ul><li><strong>Extrapyramidal system:</strong> controls involuntary movements and posture; its disturbance causes movement disorders.</li><li><strong>Basal ganglia:</strong> their disturbance and the over-stimulation by acetylcholine affect movement and posture. In Parkinson's dopamine falls and acetylcholine rises (so saliva increases).</li></ul>"
+  },
+  "causes": {
+   "ar": "<p>فقدان خلايا الدوبامين لسبب مجهول غالباً، مع استعداد جيني وتعرض لسموم. وهناك باركنسونية ثانوية بسبب أدوية مضادة للذهان أو التهاب المخ.</p>",
+   "en": "<p>Loss of dopamine cells, usually for an unknown reason, with a genetic predisposition and exposure to toxins. There is also secondary parkinsonism caused by antipsychotic drugs or encephalitis.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li>وجه قناعي بلا تعبير.</li><li>مشية بطيئة مجرجرة.</li><li>حركات \"لف الحبوب\" باليد (Pill-rolling).</li><li>انحناء الظهر.</li><li>رعشة أثناء الراحة.</li><li>خط اليد يصغر تدريجياً (Micrographia).</li><li>بطء الحركة (Bradykinesia).</li><li>صعوبة مضغ وبلع وسيلان لعاب.</li><li>صعوبة بدء الحركة.</li><li>تيبس الأطراف: ترس مسنن (Cogwheel) أو أنبوب رصاص (Lead pipe).</li><li>هبوط الضغط الانتصابي.</li></ul><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>الثلاثي الأهم: رعشة الراحة، تيبّس العضلات، صعوبة بدء الحركة (مشية جرجرة)</li><li>صعوبة الكلام والمضغ والبلع مع سيلان اللعاب ووجه قناعي</li></ul>",
+   "en": "<ul><li>A masked, expressionless face.</li><li>A slow shuffling gait.</li><li>\"Pill-rolling\" movements of the hand.</li><li>Stooped back.</li><li>Tremor at rest.</li><li>Handwriting gradually gets smaller (Micrographia).</li><li>Slowness of movement (Bradykinesia).</li><li>Difficulty chewing and swallowing and drooling.</li><li>Difficulty starting movement.</li><li>Limb rigidity: cogwheel or lead pipe.</li><li>Orthostatic hypotension.</li></ul><h4>Additions covering review points</h4><ul><li>The most important triad: resting tremor, muscle rigidity, difficulty starting movement (shuffling gait)</li><li>Difficulty speaking, chewing, and swallowing with drooling and a masked face</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>التشخيص سريري غالباً.</li><li>DaTscan أو MRI لاستبعاد غيره.</li><li>مستوى الدوبامين في CSF قد يكون منخفضاً.</li><li>استجابة الأعراض لـLevodopa تدعم التشخيص.</li></ul><h4>سؤال HESI: الفحوص التشخيصية (اختر كل ما ينطبق)</h4><ul><li>CT للمخ: ضمور قشري (Cerebral atrophy) أو فقد نسيج المخ.</li><li>انخفاض حركة الجهاز الهضمي العلوي (Decreased motility).</li><li>استجابة إيجابية لجرعة منخفضة من carbidopa-levodopa (تدعم التشخيص).</li></ul>",
+   "en": "<ul><li>Diagnosis is usually clinical.</li><li>DaTscan or MRI to exclude others.</li><li>The dopamine level in CSF may be low.</li><li>Response of symptoms to levodopa supports the diagnosis.</li></ul><h4>Exam question: diagnostic tests (choose all that apply)</h4><ul><li>CT of the brain: cerebral atrophy or loss of brain tissue.</li><li>Decreased upper gastrointestinal motility.</li><li>A positive response to a low dose of carbidopa-levodopa (supports the diagnosis).</li></ul>"
+  },
+  "treatment": {
+   "ar": "<table><thead><tr><th>المجموعة</th><th>الأمثلة</th><th>ملاحظة</th></tr></thead><tbody><tr><td>Levodopa</td><td>Levodopa، Carbidopa-Levodopa</td><td>الأفضل على معدة فارغة؛ البروتين العالي يقلل الامتصاص</td></tr><tr><td>منبهات الدوبامين</td><td>Bromocriptine، Pramipexole، Ropinirole، Pergolide (سُحب)</td><td>نعاس مفاجئ وأرق وهلاوس</td></tr><tr><td>مثبط MAO-B</td><td>Selegiline، Rasagiline</td><td>يطيل تأثير Levodopa</td></tr><tr><td>مثبطات COMT</td><td>Entacapone، Tolcapone</td><td>يمنعان تكسر Levodopa</td></tr><tr><td>مضادات الكولين</td><td>Biperiden، Benztropine، Procyclidine، Orphenadrine، Trihexyphenidyl</td><td>تقلل الرعشة؛ حذر مع كبار السن (احتباس بول، جفاف، تشوش)</td></tr></tbody></table><ul><li>غذاء عالي البروتين والسعرات وقوام لين (بالتناوب مع مواعيد Levodopa).</li><li>علاج طبيعي.</li><li>تحفيز المخ العميق (DBS) في الحالات المتقدمة.</li></ul>",
+   "en": "<table><thead><tr><th>Group</th><th>Examples</th><th>Note</th></tr></thead><tbody><tr><td>Levodopa</td><td>Levodopa, Carbidopa-Levodopa</td><td>Best on an empty stomach; high protein reduces absorption</td></tr><tr><td>Dopamine agonists</td><td>Bromocriptine, Pramipexole, Ropinirole, Pergolide (withdrawn)</td><td>Sudden sleepiness, insomnia, and hallucinations</td></tr><tr><td>MAO-B inhibitor</td><td>Selegiline, Rasagiline</td><td>Prolongs the effect of levodopa</td></tr><tr><td>COMT inhibitors</td><td>Entacapone, Tolcapone</td><td>Prevent the breakdown of levodopa</td></tr><tr><td>Anticholinergics</td><td>Biperiden, Benztropine, Procyclidine, Orphenadrine, Trihexyphenidyl</td><td>Reduce tremor; caution with the elderly (urinary retention, dryness, confusion)</td></tr></tbody></table><ul><li>A diet high in protein and calories with a soft texture (alternating with levodopa times).</li><li>Physiotherapy.</li><li>Deep brain stimulation (DBS) in advanced cases.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>مواعيد الدواء</strong><p>التزم بالساعة بدقة؛ التأخير يعني عودة الأعراض (Off periods).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الحركة</strong><p>شجع الاعتماد على النفس وامنحه وقتاً إضافياً، حركة سلبية عند الحاجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>السقوط</strong><p>إزالة السجاد، إضاءة، حاجز بجانب السرير، تدريب المشي مع خطوات واسعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>البلع</strong><p>قوام لين، جلسة منتصبة، مراقبة الوزن وتسجيل الأكل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الضغط</strong><p>قس الضغط واقفاً وجالساً؛ علّم النهوض ببطء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>التنفس</strong><p>راقب التغيرات التنفسية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>عصبي</strong><p>قيّم تغيرات الحالة العصبية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تثقيف</strong><p>تأثير ذهاب مفعول الدواء وطرق تقليل السقوط.</p></div></div></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>الأولوية: المجرى الهوائي؛ جهّز الشفط بجانب السرير</li><li>طعام مهروس بقطع صغيرة، مناديل جاهزة، مكثف للسوائل، رأس مرفوع بوضعية جلوس</li><li>levodopa/carbidopa: تجنّب البروتين العالي مع الدواء (يقلل الامتصاص)</li><li>benztropine لعلاج الرعشة، pramipexole منبه لمستقبلات الدوبامين، وselegiline مثبط MAO-B يزيد الدوبامين</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div><h4>من المراجعة الشاملة</h4><p>Levodopa/Carbidopa: Carbidopa يحفظ دوبامين أكثر؛ تجنب البروتين الذي قد يعيق الامتصاص. العلامات الثلاث: جرجرة المشي وقلة تأرجح الذراع، رعشة راحة، وحركة الأصابع كلف حبة.</p><h4>من المراجعة الشاملة</h4><ul><li>أولوية: المجرى الهوائي؛ جهّز شفطًا؛ غذاء مهروس ولقيمات صغيرة؛ مُثخّن للسوائل؛ رأس مرتفع.</li><li>Kaplan: «الرعشة تقل عند الانشغال» = فهم صحيح. الهدف الواقعي الحفاظ على أفضل وظيفة.</li><li>«هذا العلاج سيشفي مرضي» = يحتاج تثقيفًا إضافيًا.</li><li>Selegiline مضاد اكتئاب من فئة MAOI يزيد توافر الدوبامين.</li><li>HESI: مريض يتناول carbidopa-levodopa وselegiline وpramipexole = باركنسون؛ علامات: مشية دفعية، سيلان لعاب، قلة تأرجح الذراع.</li></ul><!--g8anursing--><div class=\"cs-box cs-info\"><strong>إضافة: أدوية باركنسون</strong><p>التفاصيل في <a href=\"/diseases/dis-3534\">أدوية باركنسون (levodopa وCOMT ومنبّهات الدوبامين)</a> و<a href=\"/diseases/dis-3502\">مضادات الكولين</a>. نقاط الاختبار: بدء أثر levodopa بعد 2–6 أسابيع، بول أحمر-بني طبيعي، لا بروتين عالٍ، لا إيقاف مفاجئ.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Medication times</strong><p>Stick to the hour precisely; a delay means the symptoms return (Off periods).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Movement</strong><p>Encourage self-reliance and give extra time, passive movement when needed.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Falls</strong><p>Remove rugs, lighting, a rail beside the bed, walking training with wide steps.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Swallowing</strong><p>Soft texture, upright sitting, monitor weight and record eating.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Blood pressure</strong><p>Measure standing and sitting; teach rising slowly.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Breathing</strong><p>Watch for respiratory changes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Neurological</strong><p>Assess changes in neurological status.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Teaching</strong><p>The effect of the drug wearing off and ways to reduce falls.</p></div></div></div><h4>Additions covering review points</h4><ul><li>The priority: the airway; prepare suction beside the bed</li><li>Pureed food in small pieces, tissues ready, a thickener for liquids, head raised in a sitting position</li><li>levodopa/carbidopa: avoid high protein with the drug (it reduces absorption)</li><li>benztropine to treat tremor, pramipexole a dopamine receptor agonist, and selegiline an MAO-B inhibitor that increases dopamine</li></ul><div class=\"cs-box cs-info\"><strong>Dose alert</strong><p>Doses are for learning; always verify with the physician/pharmacist before giving.</p></div><h4>From the comprehensive review</h4><p>Levodopa/Carbidopa: carbidopa preserves more dopamine; avoid protein that may hinder absorption. The three signs: shuffling gait and reduced arm swing, resting tremor, and finger movement like rolling a pill.</p><h4>From the comprehensive review</h4><ul><li>Priority: the airway; prepare suction; pureed food and small bites; a thickener for liquids; head raised.</li><li>Exam question: \"The tremor decreases when I am busy\" = correct understanding. The realistic goal is to maintain the best function.</li><li>\"This treatment will cure my illness\" = needs additional teaching.</li><li>Selegiline is an MAOI-class antidepressant that increases dopamine availability.</li><li>Exam question: a patient taking carbidopa-levodopa, selegiline, and pramipexole = Parkinson's; signs: propulsive gait, drooling, reduced arm swing.</li></ul><!--g8anursing--><div class=\"cs-box cs-info\"><strong>Addition: Parkinson's drugs</strong><p>Details are in <a href=\"/diseases/dis-3534\">Parkinson's drugs (levodopa, COMT, and dopamine agonists)</a> and <a href=\"/diseases/dis-3502\">Anticholinergics</a>. Test points: levodopa's effect begins after 2–6 weeks, red-brown urine is normal, no high protein, no sudden stopping.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>سقوط</li><li>اختناق أو التهاب رئوي استنشاقي</li><li>هلاوس أو تشوش جديد</li><li>تيبس شديد مع حمى بعد إيقاف الدواء (متلازمة الذهان الخبيث)</li><li>غشي عند الوقوف</li></ul>",
+   "en": "<ul><li>A fall</li><li>Choking or aspiration pneumonia</li><li>New hallucinations or confusion</li><li>Severe rigidity with fever after stopping the drug (neuroleptic malignant syndrome)</li><li>Fainting on standing</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>لا تتوقف عن الدواء فجأة.</li><li>قم ببطء.</li><li>تمارين المشي والتوازن.</li><li>تجنب الأدوية المضادة للقيء من نوع Metoclopramide وهالوبيريدول بدون استشارة.</li></ul>",
+   "en": "<ul><li>Do not stop the drug suddenly.</li><li>Get up slowly.</li><li>Walking and balance exercises.</li><li>Avoid antiemetics such as metoclopramide and haloperidol without consultation.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "فقد دوبامين في المادة السوداء.",
+   "رعشة راحة + تيبس + بطء + عدم اتزان.",
+   "Levodopa على معدة فارغة وبمواعيد دقيقة.",
+   "تجنب المشاكل: سقوط وبلع وهبوط ضغط.",
+   "لا تتوقف عن الدواء فجأة.",
+   "تجنب Metoclopramide.",
+   "انخفاض الدوبامين وارتفاع ACh",
+   "رعشة راحة وتيبّس وبطء حركة",
+   "المجرى الهوائي أولًا ومكثف للسوائل",
+   "ليفودوبا: تجنب البروتين"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>باركنسون تنكّس تدريجي في المادة السوداء (Substantia nigra) بالمخ المتوسط تنقص فيه خلايا تنتج <b>الدوبامين</b>، فيختل التوازن مع الأستيل كولين المثير، فيزداد توتر العضلات ويظهر التيبس والرعشة. يوجد أيضاً نقص نورإبينفرين في الجهاز الودي. يظهر عادة بعد الخمسين، وهناك استعداد وراثي وعوامل بيئية (ملوثات، مواد كيماوية).</p><div class=\"cs-box cs-info\"><strong>لا شفاء</strong><p>الأعراض تُدار بالأدوية وتعود عند انتهاء مفعولها، وتحتاج تعديل جرعات دورياً. يظهر الخرف عند بعض المرضى.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><p>اضطراب حركي بسبب موت تدريجي للخلايا العصبية فينخفض <strong>الدوبامين</strong> ويرتفع <strong>الأسيتيل كولين</strong> في العقد القاعدية (الجهاز خارج الهرمي)، فتتأثر الحركة والوضعية.</p>[[slot:dis-704-pd|ملخص باركنسون — رسم من إعداد الموقع|/diseases/img/dis-704-pd.svg]]<h4>من المراجعة الشاملة</h4>[[slot:dis-2630-parkinson|باركنسون — رسم من إعداد الموقع|/diseases/img/dis-2630-parkinson.svg]]<h4>مصطلحات</h4><ul><li><strong>الجهاز خارج الهرمي (Extrapyramidal system):</strong> يتحكم في الحركات اللاإرادية والوضعية؛ خلله يسبب اضطرابات الحركة.</li><li><strong>العقد القاعدية (Basal ganglia):</strong> اضطرابها وفرط تنبيه الأسيتيل كولين يؤثر على الحركة والوضعية. في باركنسون ينخفض الدوبامين ويرتفع الأسيتيل كولين (فيزيد اللعاب).</li></ul>"
-    },
-    "causes": {
-      "ar": "<p>فقدان خلايا الدوبامين لسبب مجهول غالباً، مع استعداد جيني وتعرض لسموم. وهناك باركنسونية ثانوية بسبب أدوية مضادة للذهان أو التهاب المخ.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li>وجه قناعي بلا تعبير.</li><li>مشية بطيئة مجرجرة.</li><li>حركات \"لف الحبوب\" باليد (Pill-rolling).</li><li>انحناء الظهر.</li><li>رعشة أثناء الراحة.</li><li>خط اليد يصغر تدريجياً (Micrographia).</li><li>بطء الحركة (Bradykinesia).</li><li>صعوبة مضغ وبلع وسيلان لعاب.</li><li>صعوبة بدء الحركة.</li><li>تيبس الأطراف: ترس مسنن (Cogwheel) أو أنبوب رصاص (Lead pipe).</li><li>هبوط الضغط الانتصابي.</li></ul><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>الثلاثي الأهم: رعشة الراحة، تيبّس العضلات، صعوبة بدء الحركة (مشية جرجرة)</li><li>صعوبة الكلام والمضغ والبلع مع سيلان اللعاب ووجه قناعي</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>التشخيص سريري غالباً.</li><li>DaTscan أو MRI لاستبعاد غيره.</li><li>مستوى الدوبامين في CSF قد يكون منخفضاً.</li><li>استجابة الأعراض لـLevodopa تدعم التشخيص.</li></ul><h4>سؤال HESI: الفحوص التشخيصية (اختر كل ما ينطبق)</h4><ul><li>CT للمخ: ضمور قشري (Cerebral atrophy) أو فقد نسيج المخ.</li><li>انخفاض حركة الجهاز الهضمي العلوي (Decreased motility).</li><li>استجابة إيجابية لجرعة منخفضة من carbidopa-levodopa (تدعم التشخيص).</li></ul>"
-    },
-    "treatment": {
-      "ar": "<table><thead><tr><th>المجموعة</th><th>الأمثلة</th><th>ملاحظة</th></tr></thead><tbody><tr><td>Levodopa</td><td>Levodopa، Carbidopa-Levodopa</td><td>الأفضل على معدة فارغة؛ البروتين العالي يقلل الامتصاص</td></tr><tr><td>منبهات الدوبامين</td><td>Bromocriptine، Pramipexole، Ropinirole، Pergolide (سُحب)</td><td>نعاس مفاجئ وأرق وهلاوس</td></tr><tr><td>مثبط MAO-B</td><td>Selegiline، Rasagiline</td><td>يطيل تأثير Levodopa</td></tr><tr><td>مثبطات COMT</td><td>Entacapone، Tolcapone</td><td>يمنعان تكسر Levodopa</td></tr><tr><td>مضادات الكولين</td><td>Biperiden، Benztropine، Procyclidine، Orphenadrine، Trihexyphenidyl</td><td>تقلل الرعشة؛ حذر مع كبار السن (احتباس بول، جفاف، تشوش)</td></tr></tbody></table><ul><li>غذاء عالي البروتين والسعرات وقوام لين (بالتناوب مع مواعيد Levodopa).</li><li>علاج طبيعي.</li><li>تحفيز المخ العميق (DBS) في الحالات المتقدمة.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>مواعيد الدواء</strong><p>التزم بالساعة بدقة؛ التأخير يعني عودة الأعراض (Off periods).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الحركة</strong><p>شجع الاعتماد على النفس وامنحه وقتاً إضافياً، حركة سلبية عند الحاجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>السقوط</strong><p>إزالة السجاد، إضاءة، حاجز بجانب السرير، تدريب المشي مع خطوات واسعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>البلع</strong><p>قوام لين، جلسة منتصبة، مراقبة الوزن وتسجيل الأكل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الضغط</strong><p>قس الضغط واقفاً وجالساً؛ علّم النهوض ببطء.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>التنفس</strong><p>راقب التغيرات التنفسية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>عصبي</strong><p>قيّم تغيرات الحالة العصبية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تثقيف</strong><p>تأثير ذهاب مفعول الدواء وطرق تقليل السقوط.</p></div></div></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>الأولوية: المجرى الهوائي؛ جهّز الشفط بجانب السرير</li><li>طعام مهروس بقطع صغيرة، مناديل جاهزة، مكثف للسوائل، رأس مرفوع بوضعية جلوس</li><li>levodopa/carbidopa: تجنّب البروتين العالي مع الدواء (يقلل الامتصاص)</li><li>benztropine لعلاج الرعشة، pramipexole منبه لمستقبلات الدوبامين، وselegiline مثبط MAO-B يزيد الدوبامين</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div><h4>من المراجعة الشاملة</h4><p>Levodopa/Carbidopa: Carbidopa يحفظ دوبامين أكثر؛ تجنب البروتين الذي قد يعيق الامتصاص. العلامات الثلاث: جرجرة المشي وقلة تأرجح الذراع، رعشة راحة، وحركة الأصابع كلف حبة.</p><h4>من المراجعة الشاملة</h4><ul><li>أولوية: المجرى الهوائي؛ جهّز شفطًا؛ غذاء مهروس ولقيمات صغيرة؛ مُثخّن للسوائل؛ رأس مرتفع.</li><li>Kaplan: «الرعشة تقل عند الانشغال» = فهم صحيح. الهدف الواقعي الحفاظ على أفضل وظيفة.</li><li>«هذا العلاج سيشفي مرضي» = يحتاج تثقيفًا إضافيًا.</li><li>Selegiline مضاد اكتئاب من فئة MAOI يزيد توافر الدوبامين.</li><li>HESI: مريض يتناول carbidopa-levodopa وselegiline وpramipexole = باركنسون؛ علامات: مشية دفعية، سيلان لعاب، قلة تأرجح الذراع.</li></ul><!--g8anursing--><div class=\"cs-box cs-info\"><strong>إضافة: أدوية باركنسون</strong><p>التفاصيل في <a href=\"/diseases/dis-3534\">أدوية باركنسون (levodopa وCOMT ومنبّهات الدوبامين)</a> و<a href=\"/diseases/dis-3502\">مضادات الكولين</a>. نقاط الاختبار: بدء أثر levodopa بعد 2–6 أسابيع، بول أحمر-بني طبيعي، لا بروتين عالٍ، لا إيقاف مفاجئ.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>سقوط</li><li>اختناق أو التهاب رئوي استنشاقي</li><li>هلاوس أو تشوش جديد</li><li>تيبس شديد مع حمى بعد إيقاف الدواء (متلازمة الذهان الخبيث)</li><li>غشي عند الوقوف</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>لا تتوقف عن الدواء فجأة.</li><li>قم ببطء.</li><li>تمارين المشي والتوازن.</li><li>تجنب الأدوية المضادة للقيء من نوع Metoclopramide وهالوبيريدول بدون استشارة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "فقد دوبامين في المادة السوداء.",
-      "رعشة راحة + تيبس + بطء + عدم اتزان.",
-      "Levodopa على معدة فارغة وبمواعيد دقيقة.",
-      "تجنب المشاكل: سقوط وبلع وهبوط ضغط.",
-      "لا تتوقف عن الدواء فجأة.",
-      "تجنب Metoclopramide.",
-      "انخفاض الدوبامين وارتفاع ACh",
-      "رعشة راحة وتيبّس وبطء حركة",
-      "المجرى الهوائي أولًا ومكثف للسوائل",
-      "ليفودوبا: تجنب البروتين"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "الناقل العصبي الناقص:"
-      },
-      "options": [
-        {
-          "ar": "دوبامين"
-        },
-        {
-          "ar": "أستيل كولين"
-        },
-        {
-          "ar": "سيروتونين"
-        },
-        {
-          "ar": "GABA"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "المادة السوداء."
-      }
-    },
-    {
-      "q": {
-        "ar": "علامة مميزة:"
-      },
-      "options": [
-        {
-          "ar": "رعشة في الراحة"
-        },
-        {
-          "ar": "رعشة مع الحركة فقط"
-        },
-        {
-          "ar": "حمى"
-        },
-        {
-          "ar": "طفح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "Pill-rolling."
-      }
-    },
-    {
-      "q": {
-        "ar": "تأخير Levodopa:"
-      },
-      "options": [
-        {
-          "ar": "تعود الأعراض"
-        },
-        {
-          "ar": "لا يهم"
-        },
-        {
-          "ar": "تتحسن"
-        },
-        {
-          "ar": "تقل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مفعوله قصير."
-      }
-    },
-    {
-      "q": {
-        "ar": "النهوض:"
-      },
-      "options": [
-        {
-          "ar": "ببطء"
-        },
-        {
-          "ar": "بسرعة"
-        },
-        {
-          "ar": "لا فرق"
-        },
-        {
-          "ar": "بدون مساعدة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "هبوط انتصابي."
-      }
-    },
-    {
-      "q": {
-        "ar": "Levodopa يفضل:"
-      },
-      "options": [
-        {
-          "ar": "معدة فارغة"
-        },
-        {
-          "ar": "مع وجبة بروتين ضخمة"
-        },
-        {
-          "ar": "مع لبن فقط"
-        },
-        {
-          "ar": "لا فرق"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "البروتين يقلل الامتصاص."
-      }
-    },
-    {
-      "q": {
-        "ar": "الأولوية الأولى لمريض باركنسون مع سيلان اللعاب وصعوبة بلع:"
-      },
-      "options": [
-        {
-          "ar": "المجرى الهوائي والشفط"
-        },
-        {
-          "ar": "الألوان"
-        },
-        {
-          "ar": "المشي"
-        },
-        {
-          "ar": "النوم"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر الاستنشاق، ويجب تجهيز الشفط."
-      }
-    },
-    {
-      "q": {
-        "ar": "عند إعطاء ليفودوبا ينبغي:"
-      },
-      "options": [
-        {
-          "ar": "تجنب البروتين العالي"
-        },
-        {
-          "ar": "إعطاؤه مع لحم دائمًا"
-        },
-        {
-          "ar": "حجبه"
-        },
-        {
-          "ar": "زيادة الكالسيوم فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "البروتين ينافس امتصاص الدواء."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي عبارة من مريض باركنسون تستدعي تثقيفًا إضافيًا؟"
-      },
-      "options": [
-        {
-          "ar": "سأتناول الدواء بانتظام"
-        },
-        {
-          "ar": "هذا العلاج سيشفي مرضي"
-        },
-        {
-          "ar": "الرعشة تقل عند انشغالي"
-        },
-        {
-          "ar": "سأتجنب البروتين وقت الدواء"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "لا يوجد علاج شافٍ للمرض؛ العلاج يخفف الأعراض."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد كم يبدأ أثر levodopa عادة؟"
-      },
-      "options": [
-        {
-          "ar": "2–6 أسابيع"
-        },
-        {
-          "ar": "ساعة"
-        },
-        {
-          "ar": "يومان"
-        },
-        {
-          "ar": "سنة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الأثر بطيء الظهور."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مما يلي من الفحوص التي تدعم تشخيص باركنسون؟"
-      },
-      "options": [
-        {
-          "ar": "استجابة إيجابية لجرعة صغيرة من carbidopa-levodopa"
-        },
-        {
-          "ar": "ارتفاع الصوديوم"
-        },
-        {
-          "ar": "فحص بول إيجابي للكيتون"
-        },
-        {
-          "ar": "اختبار Tensilon"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تحسّن الأعراض بجرعة منخفضة من levodopa يدعم التشخيص؛ أما Tensilon فلتشخيص الوهن العضلي."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "StatPearls – Neurology topics (NCBI Bookshelf)"
-    },
-    {
-      "title": "MSD Manual Professional – Neurologic Disorders"
-    },
-    {
-      "title": "AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke (2019 update; 2026 revision)"
-    }
+  "en": [
+   "Loss of dopamine in the substantia nigra.",
+   "Resting tremor + rigidity + slowness + imbalance.",
+   "Levodopa on an empty stomach and at precise times.",
+   "Avoid problems: falls, swallowing, and low blood pressure.",
+   "Do not stop the drug suddenly.",
+   "Avoid metoclopramide.",
+   "Dopamine falls and ACh rises",
+   "Resting tremor, rigidity, and bradykinesia",
+   "Airway first and a thickener for liquids",
+   "Levodopa: avoid protein"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "الناقل العصبي الناقص:",
+    "en": "The deficient neurotransmitter:"
+   },
+   "options": [
+    {
+     "ar": "دوبامين",
+     "en": "Dopamine"
+    },
+    {
+     "ar": "أستيل كولين",
+     "en": "Acetylcholine"
+    },
+    {
+     "ar": "سيروتونين",
+     "en": "Serotonin"
+    },
+    {
+     "ar": "GABA",
+     "en": "GABA"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "المادة السوداء.",
+    "en": "The substantia nigra."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة مميزة:",
+    "en": "A characteristic sign:"
+   },
+   "options": [
+    {
+     "ar": "رعشة في الراحة",
+     "en": "Tremor at rest"
+    },
+    {
+     "ar": "رعشة مع الحركة فقط",
+     "en": "Tremor with movement only"
+    },
+    {
+     "ar": "حمى",
+     "en": "Fever"
+    },
+    {
+     "ar": "طفح",
+     "en": "Rash"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "Pill-rolling.",
+    "en": "Pill-rolling."
+   }
+  },
+  {
+   "q": {
+    "ar": "تأخير Levodopa:",
+    "en": "Delaying levodopa:"
+   },
+   "options": [
+    {
+     "ar": "تعود الأعراض",
+     "en": "Symptoms return"
+    },
+    {
+     "ar": "لا يهم",
+     "en": "It does not matter"
+    },
+    {
+     "ar": "تتحسن",
+     "en": "Improve"
+    },
+    {
+     "ar": "تقل",
+     "en": "Decrease"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مفعوله قصير.",
+    "en": "Its effect is short."
+   }
+  },
+  {
+   "q": {
+    "ar": "النهوض:",
+    "en": "Getting up:"
+   },
+   "options": [
+    {
+     "ar": "ببطء",
+     "en": "Slowly"
+    },
+    {
+     "ar": "بسرعة",
+     "en": "Quickly"
+    },
+    {
+     "ar": "لا فرق",
+     "en": "No difference"
+    },
+    {
+     "ar": "بدون مساعدة",
+     "en": "Without help"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "هبوط انتصابي.",
+    "en": "Orthostatic hypotension."
+   }
+  },
+  {
+   "q": {
+    "ar": "Levodopa يفضل:",
+    "en": "Levodopa is preferably taken:"
+   },
+   "options": [
+    {
+     "ar": "معدة فارغة",
+     "en": "On an empty stomach"
+    },
+    {
+     "ar": "مع وجبة بروتين ضخمة",
+     "en": "With a large protein meal"
+    },
+    {
+     "ar": "مع لبن فقط",
+     "en": "With milk only"
+    },
+    {
+     "ar": "لا فرق",
+     "en": "No difference"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "البروتين يقلل الامتصاص.",
+    "en": "Protein reduces absorption."
+   }
+  },
+  {
+   "q": {
+    "ar": "الأولوية الأولى لمريض باركنسون مع سيلان اللعاب وصعوبة بلع:",
+    "en": "The first priority for a Parkinson's patient with drooling and difficulty swallowing:"
+   },
+   "options": [
+    {
+     "ar": "المجرى الهوائي والشفط",
+     "en": "Airway and suction"
+    },
+    {
+     "ar": "الألوان",
+     "en": "Colors"
+    },
+    {
+     "ar": "المشي",
+     "en": "Walking"
+    },
+    {
+     "ar": "النوم",
+     "en": "Sleep"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر الاستنشاق، ويجب تجهيز الشفط.",
+    "en": "Risk of aspiration, and suction must be prepared."
+   }
+  },
+  {
+   "q": {
+    "ar": "عند إعطاء ليفودوبا ينبغي:",
+    "en": "When giving levodopa one should:"
+   },
+   "options": [
+    {
+     "ar": "تجنب البروتين العالي",
+     "en": "Avoid high protein"
+    },
+    {
+     "ar": "إعطاؤه مع لحم دائمًا",
+     "en": "Always give it with meat"
+    },
+    {
+     "ar": "حجبه",
+     "en": "Hold it"
+    },
+    {
+     "ar": "زيادة الكالسيوم فقط",
+     "en": "Increase calcium only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "البروتين ينافس امتصاص الدواء.",
+    "en": "Protein competes with the drug's absorption."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي عبارة من مريض باركنسون تستدعي تثقيفًا إضافيًا؟",
+    "en": "Which statement from a Parkinson's patient calls for additional teaching?"
+   },
+   "options": [
+    {
+     "ar": "سأتناول الدواء بانتظام",
+     "en": "I will take the medicine regularly"
+    },
+    {
+     "ar": "هذا العلاج سيشفي مرضي",
+     "en": "This treatment will cure my illness"
+    },
+    {
+     "ar": "الرعشة تقل عند انشغالي",
+     "en": "The tremor decreases when I am busy"
+    },
+    {
+     "ar": "سأتجنب البروتين وقت الدواء",
+     "en": "I will avoid protein at medicine time"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "لا يوجد علاج شافٍ للمرض؛ العلاج يخفف الأعراض.",
+    "en": "There is no curative treatment for the disease; the treatment relieves the symptoms."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد كم يبدأ أثر levodopa عادة؟",
+    "en": "After how long does the effect of levodopa usually begin?"
+   },
+   "options": [
+    {
+     "ar": "2–6 أسابيع",
+     "en": "2–6 weeks"
+    },
+    {
+     "ar": "ساعة",
+     "en": "An hour"
+    },
+    {
+     "ar": "يومان",
+     "en": "Two days"
+    },
+    {
+     "ar": "سنة",
+     "en": "A year"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الأثر بطيء الظهور.",
+    "en": "The effect is slow to appear."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مما يلي من الفحوص التي تدعم تشخيص باركنسون؟",
+    "en": "Which of the following is a test that supports the diagnosis of Parkinson's?"
+   },
+   "options": [
+    {
+     "ar": "استجابة إيجابية لجرعة صغيرة من carbidopa-levodopa",
+     "en": "A positive response to a small dose of carbidopa-levodopa"
+    },
+    {
+     "ar": "ارتفاع الصوديوم",
+     "en": "High sodium"
+    },
+    {
+     "ar": "فحص بول إيجابي للكيتون",
+     "en": "Positive urine ketones"
+    },
+    {
+     "ar": "اختبار Tensilon",
+     "en": "Tensilon test"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تحسّن الأعراض بجرعة منخفضة من levodopa يدعم التشخيص؛ أما Tensilon فلتشخيص الوهن العضلي.",
+    "en": "Improvement of symptoms with a low dose of levodopa supports the diagnosis; Tensilon is for diagnosing myasthenia gravis."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls – Neurology topics (NCBI Bookshelf)"
+  },
+  {
+   "title": "MSD Manual Professional – Neurologic Disorders"
+  },
+  {
+   "title": "AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke (2019 update; 2026 revision)"
+  }
+ ]
 }

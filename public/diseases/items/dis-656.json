@@ -1,152 +1,192 @@
 {
-  "id": "dis-656",
-  "num": 656,
-  "system": "blood",
-  "icon": "🟣",
-  "level": 2,
-  "title": {
-    "ar": "ساركوما كابوزي (Kaposi's Sarcoma)",
-    "en": "Kaposi's Sarcoma (KS)"
+ "id": "dis-656",
+ "num": 656,
+ "system": "blood",
+ "icon": "🟣",
+ "level": 2,
+ "title": {
+  "ar": "ساركوما كابوزي (Kaposi's Sarcoma)",
+  "en": "Kaposi's Sarcoma (KS)"
+ },
+ "teaser": {
+  "ar": "بقع حمراء/بنفسجية على الجلد والفم عند مريض إيدز: سببها HHV-8، العلاج بمضادات الفيروسات القهقرية أولاً، ورعاية الجلد والتغذية.",
+  "en": "Red/purple patches on the skin and mouth in an AIDS patient: caused by HHV-8, treated first with antiretrovirals, with skin care and nutrition."
+ },
+ "chips": [
+  {
+   "ar": "مرتبط بالإيدز",
+   "en": "AIDS-related"
   },
-  "teaser": {
-    "ar": "بقع حمراء/بنفسجية على الجلد والفم عند مريض إيدز: سببها HHV-8، العلاج بمضادات الفيروسات القهقرية أولاً، ورعاية الجلد والتغذية."
+  {
+   "ar": "HHV-8",
+   "en": "HHV-8"
   },
-  "chips": [
-    {
-      "ar": "مرتبط بالإيدز"
-    },
-    {
-      "ar": "HHV-8"
-    },
-    {
-      "ar": "آفات جلدية"
-    }
+  {
+   "ar": "آفات جلدية",
+   "en": "Skin lesions"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>ساركوما كابوزي نمو زائد للأوعية الدموية يتحول إلى أورام خبيثة تصيب الجلد والأنسجة اللمفاوية والأغشية المخاطية؛ تظهر عادة عند مرضى الإيدز المتقدم (CD4 منخفض). علاج الإيدز بمضادات الفيروسات القهقرية (ART) يحسّن الأعراض غالباً.</p>[[slot:dis-656-lesion|صورة آفات ساركوما كابوزي (حمراء/بنفسجية)]]<p>السبب المباشر: فيروس الهربس البشري 8 (HHV-8 / KSHV) مع كبت المناعة. أنواع: مرتبط بالإيدز، كلاسيكي في كبار السن، متوطن بأفريقيا، ومرتبط بزرع الأعضاء.</p>",
+   "en": "<p>Kaposi's sarcoma is an overgrowth of blood vessels that turns into malignant tumors affecting the skin, lymphatic tissue, and mucous membranes; it usually appears in patients with advanced AIDS (low CD4). Treating AIDS with antiretrovirals (ART) often improves the symptoms.</p>[[slot:dis-656-lesion|Photo of Kaposi's sarcoma lesions (red/purple)]]<p>The direct cause: human herpesvirus 8 (HHV-8 / KSHV) with immunosuppression. Types: AIDS-related, classic in the elderly, endemic in Africa, and transplant-related.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>عدوى HHV-8 + ضعف مناعة (HIV، أدوية مثبطة بعد الزرع).</li><li>غالباً CD4 أقل من 200–350.</li><li>يظهر أحياناً كأول علامة لإيدز غير مشخّص.</li></ul>",
+   "en": "<ul><li>HHV-8 infection + weak immunity (HIV, immunosuppressive drugs after transplant).</li><li>Often CD4 below 200–350.</li><li>Sometimes appears as the first sign of undiagnosed AIDS.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>بقع أو عقد <b>حمراء أو بنية أو بنفسجية</b> على الجلد، وعلى الغشاء المخاطي للفم: الخد، الشفاه، اللثة، اللسان، سقف الحلق.</li><li>ضيق نفس وسعال ونفث دم لو دخل الرئتين.</li><li>تورم الأرجل والوجه (انسداد لمفاوي)، ألم وتقرحات.</li><li>مشاكل هضمية ونزف لو في المعدة والأمعاء.</li></ul>",
+   "en": "<ul><li><b>Red, brown, or purple</b> patches or nodules on the skin, and on the mucous membrane of the mouth: cheek, lips, gums, tongue, roof of the mouth.</li><li>Shortness of breath, cough, and coughing blood if it enters the lungs.</li><li>Swelling of the legs and face (lymphatic obstruction), pain and ulcers.</li><li>Digestive problems and bleeding if in the stomach and intestines.</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>خزعة</b> من الآفة: تكشف خلايا مغزلية وأوعية؛ وتُجرى تلوين لـ HHV-8 (LANA)؛ المراجع تذكر البحث عن الفيروس والخلايا اللمفاوية B في الخزعة.</li><li><b>CT</b> لتحديد الانتشار وشدة المرض (رئة، كبد، عقد).</li><li>منظار هضمي/شعبي عند الأعراض.</li><li>فحص HIV وCD4 والحمل الفيروسي.</li></ul>",
+   "en": "<ul><li><b>Biopsy</b> of the lesion: shows spindle cells and vessels; staining for HHV-8 (LANA) is done; look for the virus and B lymphocytes in the biopsy.</li><li><b>CT</b> to determine spread and severity of the disease (lung, liver, nodes).</li><li>Digestive/bronchial endoscopy if there are symptoms.</li><li>HIV test, CD4, and viral load.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<p>العلاج الأول: <b>ART</b> لكل مريض (يقلص الورم). والعلاج الموضعي حسب الآفة.</p><ul><li><b>إشعاع موضعي</b> لتقليص الأورام؛ <b>جراحة ليزر</b> أو تجميد لإزالة بعض الآفات.</li><li><b>كيماوي</b> للمنتشر: Doxorubicin (ليبوزومي)، Etoposide، Vinblastine، Vincristine (والتحديث: Paclitaxel ليبوزومي كخط ثاني).</li><li><b>مضاد قيء</b> مثل Trimethobenzamide (و Ondansetron) لآثار الكيماوي والإشعاع.</li><li>علاج الإيدز يحسن حالة KS.</li></ul>",
+   "en": "<p>First treatment: <b>ART</b> for every patient (shrinks the tumor). And local treatment depending on the lesion.</p><ul><li><b>Local radiation</b> to shrink tumors; <b>laser surgery</b> or freezing to remove some lesions.</li><li><b>Chemotherapy</b> for widespread disease: Doxorubicin (liposomal), Etoposide, Vinblastine, Vincristine (and the update: liposomal Paclitaxel as second line).</li><li><b>Antiemetic</b> such as Trimethobenzamide (and Ondansetron) for chemotherapy and radiation effects.</li><li>Treating AIDS improves KS.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>مراقبة الجلد</strong><p>افحص الجلد والفم يومياً، قِس الآفات وصوّرها بإذن؛ آفات جديدة = بلّغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الوزن اليومي</strong><p>قارن بخط الأساس؛ فقدان وزن = سوء تغذية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>حماية من العدوى</strong><p>العلاج الكيماوي يخفض المناعة: حرارة ≥38 = طوارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>العناية بالفم</strong><p>فرشاة ناعمة ومضمضة؛ تفقد الآفات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الصورة الجسدية</strong><p>دعم نفسي لتغير المظهر؛ مكياج للآفات الظاهرة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الراحة والطاقة</strong><p>تنظيم النشاط لتوفير الطاقة.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>اضطراب صورة الجسم • ضعف الحماية • خطر العدوى.</p></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Skin monitoring</strong><p>Examine the skin and mouth daily, measure the lesions and photograph them with permission; new lesions = report.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Daily weight</strong><p>Compare with the baseline; weight loss = malnutrition.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Protect from infection</strong><p>Chemotherapy lowers immunity: fever ≥38 = emergency.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Mouth care</strong><p>Soft brush and rinsing; check the lesions.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Body image</strong><p>Psychological support for the change in appearance; makeup for visible lesions.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Rest and energy</strong><p>Organize activity to save energy.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Nursing diagnoses</strong><p>Disturbed body image • impaired protection • risk of infection.</p></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>ضيق نفس أو سعال دموي.</li><li>نزيف هضمي.</li><li>حرارة ≥38 أثناء الكيماوي.</li><li>آفات تتقرح وتتعفن.</li></ul>",
+   "en": "<ul><li>Shortness of breath or bloody cough.</li><li>Digestive bleeding.</li><li>Fever ≥38 during chemotherapy.</li><li>Lesions that ulcerate and become infected.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>نظام عالي البروتين والسعرات.</li><li>كيف توفر الطاقة وتوزع النشاط.</li><li>الالتزام بأدوية الإيدز وعدم التوقف.</li><li>الدعم والرعاية التلطيفية (Hospice) عند الحاجة.</li></ul>",
+   "en": "<ul><li>A high-protein, high-calorie diet.</li><li>How to save energy and spread out activity.</li><li>Adhere to AIDS drugs and do not stop.</li><li>Support and palliative care (Hospice) when needed.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "KS: أوعية متضخمة خبيثة، مرتبط بـ HHV-8 والإيدز.",
+   "بقع حمراء/بنفسجية على الجلد والفم.",
+   "العلاج الأول ART، ثم إشعاع/ليزر/كيماوي.",
+   "راقب الجلد والوزن والعدوى.",
+   "دعم نفسي لصورة الجسم.",
+   "الرئة والهضمي إصابات خطيرة."
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>ساركوما كابوزي نمو زائد للأوعية الدموية يتحول إلى أورام خبيثة تصيب الجلد والأنسجة اللمفاوية والأغشية المخاطية؛ تظهر عادة عند مرضى الإيدز المتقدم (CD4 منخفض). علاج الإيدز بمضادات الفيروسات القهقرية (ART) يحسّن الأعراض غالباً.</p>[[slot:dis-656-lesion|صورة آفات ساركوما كابوزي (حمراء/بنفسجية)]]<p>السبب المباشر: فيروس الهربس البشري 8 (HHV-8 / KSHV) مع كبت المناعة. أنواع: مرتبط بالإيدز، كلاسيكي في كبار السن، متوطن بأفريقيا، ومرتبط بزرع الأعضاء.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>عدوى HHV-8 + ضعف مناعة (HIV، أدوية مثبطة بعد الزرع).</li><li>غالباً CD4 أقل من 200–350.</li><li>يظهر أحياناً كأول علامة لإيدز غير مشخّص.</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>بقع أو عقد <b>حمراء أو بنية أو بنفسجية</b> على الجلد، وعلى الغشاء المخاطي للفم: الخد، الشفاه، اللثة، اللسان، سقف الحلق.</li><li>ضيق نفس وسعال ونفث دم لو دخل الرئتين.</li><li>تورم الأرجل والوجه (انسداد لمفاوي)، ألم وتقرحات.</li><li>مشاكل هضمية ونزف لو في المعدة والأمعاء.</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>خزعة</b> من الآفة: تكشف خلايا مغزلية وأوعية؛ وتُجرى تلوين لـ HHV-8 (LANA)؛ المراجع تذكر البحث عن الفيروس والخلايا اللمفاوية B في الخزعة.</li><li><b>CT</b> لتحديد الانتشار وشدة المرض (رئة، كبد، عقد).</li><li>منظار هضمي/شعبي عند الأعراض.</li><li>فحص HIV وCD4 والحمل الفيروسي.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<p>العلاج الأول: <b>ART</b> لكل مريض (يقلص الورم). والعلاج الموضعي حسب الآفة.</p><ul><li><b>إشعاع موضعي</b> لتقليص الأورام؛ <b>جراحة ليزر</b> أو تجميد لإزالة بعض الآفات.</li><li><b>كيماوي</b> للمنتشر: Doxorubicin (ليبوزومي)، Etoposide، Vinblastine، Vincristine (والتحديث: Paclitaxel ليبوزومي كخط ثاني).</li><li><b>مضاد قيء</b> مثل Trimethobenzamide (و Ondansetron) لآثار الكيماوي والإشعاع.</li><li>علاج الإيدز يحسن حالة KS.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>مراقبة الجلد</strong><p>افحص الجلد والفم يومياً، قِس الآفات وصوّرها بإذن؛ آفات جديدة = بلّغ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الوزن اليومي</strong><p>قارن بخط الأساس؛ فقدان وزن = سوء تغذية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>حماية من العدوى</strong><p>العلاج الكيماوي يخفض المناعة: حرارة ≥38 = طوارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>العناية بالفم</strong><p>فرشاة ناعمة ومضمضة؛ تفقد الآفات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الصورة الجسدية</strong><p>دعم نفسي لتغير المظهر؛ مكياج للآفات الظاهرة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الراحة والطاقة</strong><p>تنظيم النشاط لتوفير الطاقة.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>اضطراب صورة الجسم • ضعف الحماية • خطر العدوى.</p></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>ضيق نفس أو سعال دموي.</li><li>نزيف هضمي.</li><li>حرارة ≥38 أثناء الكيماوي.</li><li>آفات تتقرح وتتعفن.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>نظام عالي البروتين والسعرات.</li><li>كيف توفر الطاقة وتوزع النشاط.</li><li>الالتزام بأدوية الإيدز وعدم التوقف.</li><li>الدعم والرعاية التلطيفية (Hospice) عند الحاجة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "KS: أوعية متضخمة خبيثة، مرتبط بـ HHV-8 والإيدز.",
-      "بقع حمراء/بنفسجية على الجلد والفم.",
-      "العلاج الأول ART، ثم إشعاع/ليزر/كيماوي.",
-      "راقب الجلد والوزن والعدوى.",
-      "دعم نفسي لصورة الجسم.",
-      "الرئة والهضمي إصابات خطيرة."
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "ساركوما كابوزي مرتبطة بـ:"
-      },
-      "options": [
-        {
-          "ar": "HHV-8 وضعف المناعة"
-        },
-        {
-          "ar": "نقص حديد"
-        },
-        {
-          "ar": "سكر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "فيروس + إيدز."
-      }
-    },
-    {
-      "q": {
-        "ar": "لون الآفات:"
-      },
-      "options": [
-        {
-          "ar": "حمراء/بنفسجية"
-        },
-        {
-          "ar": "خضراء"
-        },
-        {
-          "ar": "بيضاء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نمو وعائي."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم علاج لتحسين المرض:"
-      },
-      "options": [
-        {
-          "ar": "ART"
-        },
-        {
-          "ar": "مضاد حيوي"
-        },
-        {
-          "ar": "مسكن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يرفع المناعة."
-      }
-    },
-    {
-      "q": {
-        "ar": "قبل الكيماوي أعطِ:"
-      },
-      "options": [
-        {
-          "ar": "مضاد قيء"
-        },
-        {
-          "ar": "لا شيء"
-        },
-        {
-          "ar": "مسهل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يمنع القيء."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "NCCN/ESMO guidelines: Kaposi sarcoma"
-    },
-    {
-      "title": "StatPearls: Kaposi Sarcoma"
-    }
+  "en": [
+   "KS: malignant overgrown vessels, linked to HHV-8 and AIDS.",
+   "Red/purple patches on the skin and mouth.",
+   "First treatment ART, then radiation/laser/chemotherapy.",
+   "Monitor skin, weight, and infection.",
+   "Psychological support for body image.",
+   "Lung and digestive involvement are serious."
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "ساركوما كابوزي مرتبطة بـ:",
+    "en": "Kaposi's sarcoma is linked to:"
+   },
+   "options": [
+    {
+     "ar": "HHV-8 وضعف المناعة",
+     "en": "HHV-8 and weak immunity"
+    },
+    {
+     "ar": "نقص حديد",
+     "en": "Iron deficiency"
+    },
+    {
+     "ar": "سكر",
+     "en": "Diabetes"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "فيروس + إيدز.",
+    "en": "A virus + AIDS."
+   }
+  },
+  {
+   "q": {
+    "ar": "لون الآفات:",
+    "en": "The color of the lesions:"
+   },
+   "options": [
+    {
+     "ar": "حمراء/بنفسجية",
+     "en": "Red/purple"
+    },
+    {
+     "ar": "خضراء",
+     "en": "Green"
+    },
+    {
+     "ar": "بيضاء",
+     "en": "White"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نمو وعائي.",
+    "en": "Vascular growth."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم علاج لتحسين المرض:",
+    "en": "The most important treatment to improve the disease:"
+   },
+   "options": [
+    {
+     "ar": "ART",
+     "en": "ART"
+    },
+    {
+     "ar": "مضاد حيوي",
+     "en": "An antibiotic"
+    },
+    {
+     "ar": "مسكن",
+     "en": "An analgesic"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يرفع المناعة.",
+    "en": "It raises immunity."
+   }
+  },
+  {
+   "q": {
+    "ar": "قبل الكيماوي أعطِ:",
+    "en": "Before chemotherapy give:"
+   },
+   "options": [
+    {
+     "ar": "مضاد قيء",
+     "en": "An antiemetic"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    },
+    {
+     "ar": "مسهل",
+     "en": "A laxative"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يمنع القيء.",
+    "en": "It prevents vomiting."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "NCCN/ESMO guidelines: Kaposi sarcoma"
+  },
+  {
+   "title": "StatPearls: Kaposi Sarcoma"
+  }
+ ]
 }
