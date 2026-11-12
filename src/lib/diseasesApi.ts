@@ -35,7 +35,7 @@ export interface Disease extends DiseaseIndexItem {
   quiz?: QuizItem[];
   refs?: { title: string; url?: string }[];
   /** optional per-guide section titles/icons (key → {t, i}) that replace the default disease headings */
-  labels?: Partial<Record<SectionKey, { t: string; i: string }>>;
+  labels?: Partial<Record<SectionKey, { t: string; i: string; en?: string }>>;
 }
 
 export const SYSTEMS: Record<string, { ar: string; en: string; icon: string; grad: string }> = {
@@ -100,7 +100,7 @@ export function sectionsFor(target: string | undefined, d?: Disease): typeof SEC
   return SECTIONS.map((sec) => {
     const t = tl?.[sec.key];
     const own = d?.labels?.[sec.key];
-    return { ...sec, ar: own?.t ?? t?.[0] ?? sec.ar, en: own?.t ?? t?.[1] ?? sec.en, icon: own?.i ?? t?.[2] ?? sec.icon };
+    return { ...sec, ar: own?.t ?? t?.[0] ?? sec.ar, en: own?.en ?? t?.[1] ?? sec.en, icon: own?.i ?? t?.[2] ?? sec.icon };
   });
 }
 

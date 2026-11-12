@@ -101,7 +101,7 @@ export function RxPrescriptionsHome() {
           <div className="grid sm:grid-cols-2 gap-3">
             {g.rx.map((r) => {
               const title = lang === "en" && r.condition_en ? r.condition_en : r.condition_ar;
-              const subtitle = lang === "en" ? r.condition_ar : r.condition_en;
+              const subtitle = lang === "en" ? null : r.condition_en;
               return (
                 <Link
                   key={r.id}
@@ -139,7 +139,7 @@ export default function RxPrescriptionDetail() {
   if (!rx) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
 
   const title = lang === "en" && rx.condition_en ? rx.condition_en : rx.condition_ar;
-  const subtitle = lang === "en" ? rx.condition_ar : rx.condition_en;
+  const subtitle = lang === "en" ? null : rx.condition_en;
   const displayItems = lang === "en" && rx.items_en && rx.items_en.length > 0 ? rx.items_en : rx.items;
 
   return (

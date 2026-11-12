@@ -68,7 +68,7 @@ function parseSection(html: string): Block[] {
       head: [heads[0], heads[1]],
       rows: trs.map((tr) => {
         const v = tr.children[1].textContent?.trim() || '';
-        return { name: tr.children[0].textContent?.trim() || '', value: v, variants: /القيمة|Value|BMI|الطبيعي/i.test(heads[1]) ? parseValue(v) : [] };
+        return { name: tr.children[0].textContent?.trim() || '', value: v, variants: /القيمة|Value|BMI|الطبيعي|Normal|Range|Reference|Cutoff/i.test(heads[1]) ? parseValue(v) : [] };
       }),
     };
   };
@@ -132,10 +132,10 @@ const panelStyle = (title: string) => {
 };
 
 type Status = 'low' | 'ok' | 'high';
-const STATUS_UI: Record<Status, { ar: string; cls: string; dot: string }> = {
-  low: { ar: 'أقل من الطبيعي', cls: 'bg-sky-100 text-sky-800 dark:bg-sky-500/20 dark:text-sky-200', dot: '#0ea5e9' },
-  ok: { ar: 'طبيعي', cls: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200', dot: '#10b981' },
-  high: { ar: 'أعلى من الطبيعي', cls: 'bg-rose-100 text-rose-800 dark:bg-rose-500/20 dark:text-rose-200', dot: '#f43f5e' },
+const STATUS_UI: Record<Status, { ar: string; en: string; cls: string; dot: string }> = {
+  low: { ar: 'أقل من الطبيعي', en: 'Below normal', cls: 'bg-sky-100 text-sky-800 dark:bg-sky-500/20 dark:text-sky-200', dot: '#0ea5e9' },
+  ok: { ar: 'طبيعي', en: 'Normal', cls: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200', dot: '#10b981' },
+  high: { ar: 'أعلى من الطبيعي', en: 'Above normal', cls: 'bg-rose-100 text-rose-800 dark:bg-rose-500/20 dark:text-rose-200', dot: '#f43f5e' },
 };
 const judge = (v: number, r: Variant): Status => (r.min !== undefined && v < r.min ? 'low' : r.max !== undefined && v > r.max ? 'high' : 'ok');
 
@@ -191,7 +191,7 @@ function LabRow({ row, color, ar }: { row: Row; color: string; ar: boolean }) {
             className="w-32 rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1 text-sm tabular-nums outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
             dir="ltr"
           />
-          {st && <span className={`rounded-full px-2.5 py-0.5 text-xs font-black ${STATUS_UI[st].cls}`}>{STATUS_UI[st].ar}</span>}
+          {st && <span className={`rounded-full px-2.5 py-0.5 text-xs font-black ${STATUS_UI[st].cls}`}>{ar ? STATUS_UI[st].ar : STATUS_UI[st].en}</span>}
         </div>
       )}
       {has && st && <Gauge v={variant} r={variant} value={num} />}
@@ -225,15 +225,15 @@ function Panel({ block, id, ar }: { block: Extract<Block, { kind: 'panel' }>; id
 // Tube guide (own drawing): cap colours and what each tube is for
 // ---------------------------------------------------------------------------
 const TUBES = [
-  { c: '#dc2626', t: 'أحمر / ذهبي', u: 'سيرم: كيمياء، كبد، كلى، هرمونات، مناعة', n: 'من غير مانع تجلط' },
-  { c: '#7c3aed', t: 'بنفسجي', u: 'EDTA: صورة دم CBC وفصيلة الدم', n: 'يتقلّب برفق' },
-  { c: '#60a5fa', t: 'أزرق فاتح', u: 'سترات: تحاليل التجلط PT / aPTT', n: 'لازم يتملي للخط بالظبط' },
-  { c: '#16a34a', t: 'أخضر', u: 'هيبارين: غازات وبعض الكيمياء', n: 'يتقلّب برفق' },
-  { c: '#6b7280', t: 'رمادي', u: 'فلوريد: سكر الدم (يوقف تكسير الجلوكوز)', n: 'للسكر واللاكتات' },
+  { c: '#dc2626', t: 'أحمر / ذهبي', u: 'سيرم: كيمياء، كبد، كلى، هرمونات، مناعة', n: 'من غير مانع تجلط', te: 'Red / gold', ue: 'Serum: chemistry, liver, kidney, hormones, immunology', ne: 'No anticoagulant' },
+  { c: '#7c3aed', t: 'بنفسجي', u: 'EDTA: صورة دم CBC وفصيلة الدم', n: 'يتقلّب برفق', te: 'Lavender', ue: 'EDTA: CBC and blood group', ne: 'Invert gently' },
+  { c: '#60a5fa', t: 'أزرق فاتح', u: 'سترات: تحاليل التجلط PT / aPTT', n: 'لازم يتملي للخط بالظبط', te: 'Light blue', ue: 'Citrate: coagulation tests PT / aPTT', ne: 'Must be filled exactly to the line' },
+  { c: '#16a34a', t: 'أخضر', u: 'هيبارين: غازات وبعض الكيمياء', n: 'يتقلّب برفق', te: 'Green', ue: 'Heparin: gases and some chemistry', ne: 'Invert gently' },
+  { c: '#6b7280', t: 'رمادي', u: 'فلوريد: سكر الدم (يوقف تكسير الجلوكوز)', n: 'للسكر واللاكتات', te: 'Grey', ue: 'Fluoride: blood glucose (stops glucose breakdown)', ne: 'For glucose and lactate' },
 ];
 function TubeRack() {
   return (
-    <svg viewBox="0 0 360 120" className="h-24 w-full max-w-sm" role="img" aria-label="أنابيب العينات">
+    <svg viewBox="0 0 360 120" className="h-24 w-full max-w-sm" role="img" aria-label="Sample tubes">
       {TUBES.map((t, i) => (
         <g key={i} transform={`translate(${24 + i * 66},6)`}>
           <rect x="0" y="0" width="26" height="14" rx="3" fill={t.c} />
@@ -267,10 +267,10 @@ export function LabHub() {
     if (!ref) return [] as { sec: string; block: Extract<Block, { kind: 'panel' }> }[];
     const out: { sec: string; block: Extract<Block, { kind: 'panel' }> }[] = [];
     for (const k of Object.keys(ref.sections)) {
-      for (const b of parseSection(ref.sections[k as keyof typeof ref.sections]?.ar || '')) if (b.kind === 'panel') out.push({ sec: k, block: b });
+      for (const b of parseSection(pick(ref.sections[k as keyof typeof ref.sections], ar) || '')) if (b.kind === 'panel') out.push({ sec: k, block: b });
     }
     return out;
-  }, [ref]);
+  }, [ref, ar]);
 
   const found = useMemo(() => {
     const s = q.trim().toLowerCase();
@@ -352,8 +352,8 @@ export function LabHub() {
             <div key={t.t} className="flex items-center gap-3 rounded-xl border border-slate-100 p-2.5 dark:border-slate-800">
               <span className="h-9 w-4 shrink-0 rounded-md" style={{ background: t.c }} />
               <div className="min-w-0">
-                <div className="text-sm font-black text-slate-800 dark:text-slate-100">{t.t}</div>
-                <div className="text-xs text-slate-500 dark:text-slate-400">{t.u} — {t.n}</div>
+                <div className="text-sm font-black text-slate-800 dark:text-slate-100">{ar ? t.t : t.te}</div>
+                <div className="text-xs text-slate-500 dark:text-slate-400">{ar ? t.u : t.ue} — {ar ? t.n : t.ne}</div>
               </div>
             </div>
           ))}
@@ -397,7 +397,7 @@ export function LabGuide({ d, ar }: { d: Disease; ar: boolean }) {
   useSEO({ title: `${pick(d.title, ar)} | NurseHub Egypt`, description: pick(d.teaser, ar) });
 
   const secs = sectionsFor('lab-reference', d).filter((s) => d.sections[s.key]);
-  const parsed = useMemo(() => secs.map((s) => ({ s, blocks: parseSection(d.sections[s.key]?.ar || '') })), [d]); // eslint-disable-line react-hooks/exhaustive-deps
+  const parsed = useMemo(() => secs.map((s) => ({ s, blocks: parseSection(pick(d.sections[s.key], ar) || '') })), [d, ar]); // eslint-disable-line react-hooks/exhaustive-deps
   const tabs: { id: string; label: string }[] = [];
   parsed.forEach(({ s, blocks }) => {
     blocks.forEach((b, i) => b.kind === 'panel' && b.title && tabs.push({ id: `${s.key}-${i}`, label: b.title.replace(/\s*[—(].*$/, '') }));
@@ -439,7 +439,7 @@ export function LabGuide({ d, ar }: { d: Disease; ar: boolean }) {
             <section key={s.key} id={s.key} className="scroll-mt-28">
               <h2 className="mb-3 flex items-center gap-2 text-lg font-black text-slate-900 dark:text-white">
                 <span className="grid h-8 w-8 place-items-center rounded-lg bg-teal-500/15 text-lg">{lab?.i ?? s.icon}</span>
-                {lab?.t ?? (ar ? s.ar : s.en)}
+                {ar ? (lab?.t ?? s.ar) : (lab?.en ?? s.en)}
               </h2>
               <div className="space-y-4">
                 {blocks.map((b, i) =>

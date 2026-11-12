@@ -20,7 +20,8 @@
   {
    "ar": "EOD",
    "en": "EOD"
-  }],
+  }
+ ],
  "sections": {
   "overview": {
    "ar": "<p>طوارئ ارتفاع الضغط (Hypertensive crisis) بتتقسم لنوعين حسب وجود <b>تلف في الأعضاء (End organ damage, EOD)</b>، مش حسب الرقم لوحده.</p><div class=\"cs-stats\"><div><b>180/110</b><span>حد المراجع القديمة (الحديث 180/120)</span></div><div><b>EOD</b><span>الفاصل بين النوعين</span></div><div><b>24–48 س</b><span>هدف الخفض في Urgency</span></div></div>[[slot:dis-282-triage|فرز طوارئ الضغط — رسم من إعداد الموقع|/diseases/img/dis-282-triage.svg]]<table><thead><tr><th></th><th>Urgency (ملحّة)</th><th>Emergency (طارئة)</th></tr></thead><tbody><tr><td>الضغط</td><td>180/110 فأكتر</td><td>180/110 فأكتر</td></tr><tr><td>تلف أعضاء</td><td>لا يوجد</td><td>موجود</td></tr><tr><td>الانتشار</td><td>معظم الحالات في الاستقبال</td><td>نادرة</td></tr><tr><td>المكان</td><td>العيادة الخارجية والمتابعة</td><td>تحويل لأقرب مستشفى / نائب القلب</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>بعض المراجع القديمة بتستخدم 180/110. الإرشادات الأمريكية (ACC/AHA 2017) بتستخدم <b>أكتر من 180/120</b> كحد. اتبع بروتوكول مستشفاك.</p></div>",
@@ -63,7 +64,8 @@
    "الخفض في الطارئ حد أقصى 25% (MAP) في أول ساعة",
    "Captopril 25 مجم وقياس الضغط بعد 15 دقيقة (حسب المراجع)",
    "Lasix مش روتيني في Urgency",
-   "اتأكد الضغط أقل من 160/100 قبل الخروج"],
+   "اتأكد الضغط أقل من 160/100 قبل الخروج"
+  ],
   "en": [
    "No limit",
    "Rapid lowering is dangerous.",
@@ -71,7 +73,8 @@
    "We make sure the pressure is below 160/100 and arrange a clinic appointment",
    "We always give him Lasix",
    "We do not measure",
-   "This is according to references, with follow-up."]
+   "This is according to references, with follow-up."
+  ]
  },
  "quiz": [
   {
@@ -91,7 +94,8 @@
     {
      "ar": "العمر",
      "en": "Lowering in an emergency is at most 25% (MAP) in the first hour"
-    }],
+    }
+   ],
    "answer": 1,
    "why": {
     "ar": "EOD هو الفاصل.",
@@ -115,7 +119,8 @@
     {
      "ar": "تنويم",
      "en": "The number only"
-    }],
+    }
+   ],
    "answer": 1,
    "why": {
     "ar": "Urgency تتعالج تدريجياً.",
@@ -139,7 +144,8 @@
     {
      "ar": "قلق",
      "en": "Immediate lowering with an IV drug"
-    }],
+    }
+   ],
    "answer": 1,
    "why": {
     "ar": "ألم الصدر والتشنج علامات تلف أعضاء.",
@@ -163,7 +169,8 @@
     {
      "ar": "لا حد",
      "en": "Which of the following is a sign of EOD?"
-    }],
+    }
+   ],
    "answer": 0,
    "why": {
     "ar": "الخفض السريع خطر.",
@@ -187,13 +194,15 @@
     {
      "ar": "لا نقيس",
      "en": "The maximum lowering in the first hour in an emergency?"
-    }],
+    }
+   ],
    "answer": 0,
    "why": {
     "ar": "ده حسب المراجع مع المتابعة.",
     "en": "25% of MAP"
    }
-  }],
+  }
+ ],
  "refs": [
   {
    "title": "2017 ACC/AHA High Blood Pressure Guideline (hypertensive crises)"
@@ -206,7 +215,8 @@
   },
   {
    "title": "Mayo Clinic EM: Acute blood pressure management"
-  }],
+  }
+ ],
  "rx": [
   {
    "category": "القلب والأوعية الدموية",
@@ -222,8 +232,22 @@
      "drug_name": "Lasix 20 amp (Furosemide)",
      "dose": "نصف أمبول أو أمبول عضل (أو وريد)",
      "note": "مدر بول: يدخل الحمام 3 مرات ثم قياس الضغط؛ ليس روتينياً"
-    }],
-   "clinical_note": "الهدف خفض الضغط خلال 24–48 ساعة من العيادة الخارجية بعد استبعاد تلف الأعضاء."
+    }
+   ],
+   "clinical_note": "الهدف خفض الضغط خلال 24–48 ساعة من العيادة الخارجية بعد استبعاد تلف الأعضاء.",
+   "items_en": [
+    {
+     "drug_name": "Capoten 25 mg tab / Capotril 25 mg tab (Captopril)",
+     "dose": "25 mg tablet sublingually and recheck blood pressure after 15 minutes; repeat up to twice if it does not fall",
+     "note": "If it falls below 160/100: send home and follow up at the internal medicine clinic"
+    },
+    {
+     "drug_name": "Lasix 20 amp (Furosemide)",
+     "dose": "Half an ampoule or 1 ampoule IM (or IV)",
+     "note": "Diuretic: the patient goes to the toilet 3 times, then recheck blood pressure; not routine"
+    }
+   ],
+   "clinical_note_en": "The goal is to lower blood pressure within 24–48 hours as an outpatient after excluding organ damage."
   },
   {
    "category": "القلب والأوعية الدموية",
@@ -234,9 +258,19 @@
      "drug_name": "Lasix 20/40 amp (Furosemide)",
      "dose": "أمبول 20 أو 40 وريد مع متابعة الضغط",
      "note": "أثناء التحويل لأقرب مستشفى أو استدعاء نائب القلب"
-    }],
-   "clinical_note": "حالة طوارئ طبية: خفض عاجل في مستشفى."
-  }],
+    }
+   ],
+   "clinical_note": "حالة طوارئ طبية: خفض عاجل في مستشفى.",
+   "items_en": [
+    {
+     "drug_name": "Lasix 20/40 amp (Furosemide)",
+     "dose": "20 or 40 ampoule IV with blood pressure monitoring",
+     "note": "During referral to the nearest hospital or while calling the cardiology resident"
+    }
+   ],
+   "clinical_note_en": "Medical emergency: urgent reduction in hospital."
+  }
+ ],
  "id": "dis-282",
  "title": {
   "ar": "طوارئ ارتفاع ضغط الدم (Urgency وEmergency)",
