@@ -1,219 +1,290 @@
 {
-  "id": "dis-691",
-  "num": 691,
-  "system": "neuro",
-  "icon": "🧠",
-  "level": 1,
-  "title": {
-    "ar": "أساسيات الجهاز العصبي (تشريح ووظيفة)",
-    "en": "Nervous System Basics (Anatomy & Physiology)"
+ "id": "dis-691",
+ "num": 691,
+ "system": "neuro",
+ "icon": "🧠",
+ "level": 1,
+ "title": {
+  "ar": "أساسيات الجهاز العصبي (تشريح ووظيفة)",
+  "en": "Nervous System Basics (Anatomy & Physiology)"
+ },
+ "teaser": {
+  "ar": "من الخلية العصبية للمخ والحبل الشوكي: خريطة بسيطة تفسر ليه عرض معين يدل على مكان معين.",
+  "en": "From the nerve cell to the brain and spinal cord: a simple map that explains why a particular symptom points to a particular location."
+ },
+ "chips": [
+  {
+   "ar": "الخلية العصبية",
+   "en": "Neuron"
   },
-  "teaser": {
-    "ar": "من الخلية العصبية للمخ والحبل الشوكي: خريطة بسيطة تفسر ليه عرض معين يدل على مكان معين."
+  {
+   "ar": "فصوص المخ",
+   "en": "Brain lobes"
   },
-  "chips": [
+  {
+   "ar": "الحبل الشوكي",
+   "en": "Spinal cord"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>ينقسم الجهاز العصبي إلى <b>مركزي (CNS)</b> ويشمل المخ والحبل الشوكي، و<b>محيطي (PNS)</b> ويشمل الأعصاب الشوكية والطرفية.</p>[[slot:dis-691-lobes|فصوص المخ ووظائفها|/diseases/img/dis-691-lobes.svg]]<h4>الخلية العصبية (Neuron)</h4><ul><li>جسم الخلية يحتوي النواة.</li><li>الزوائد الشجيرية (Dendrites) تستقبل الإشارة.</li><li>المحور (Axon) ينقل الإشارة للخلية التالية، ونهاياته تُفرغ الناقلات.</li><li>المشبك (Synapse): فراغ بين خليتين تعبره الناقلات العصبية (Neurotransmitters) التي يفرزها العصبون قبل المشبك وترتبط بمستقبلات خاصة.</li><li>غلاف الميالين (Myelin) يسرّع انتقال الإشارة ويعطي اللون الأبيض.</li><li>العصبونات الحسية الواردة (Afferent) تنقل الإحساس للمركز؛ والحركية الصادرة (Efferent) تنقل الأوامر للعضلات والغدد.</li></ul>\n[[slot:dis-691-ans|تقسيم الجهاز العصبي — رسم من إعداد الموقع|/diseases/img/dis-691-ans.svg]]\n<ul><li>CNS: المخ والحبل الشوكي (يتحكم بوظائف العقل والجسم). PNS: الأعصاب من المخ والحبل لباقي الجسم.</li><li>PNS: الجسدي (أعصاب حسية وحركية وأفعال منعكسة) واللاإرادي.</li><li><b>السمبثاوي:</b> استجابة قتال/هروب، ينشط الكاتيكولامينات (إبينفرين ونورإبينفرين) ويقوّي النبض والضغط. <b>الباراسمبثاوي:</b> راحة وهضم، يبطئ النبض والضغط ويزيد الإفرازات (كولينرجي).</li><li>جذع المخ يتحكم بنبض وتنفس القلب، لذلك مرضاه قد يحتاجون جهاز تنفس. انظر <a href=\"/diseases/dis-1313\">الوعي وغلاسكو</a>.</li></ul>",
+   "en": "<p>The nervous system is divided into the <b>central nervous system (CNS)</b>, which includes the brain and spinal cord, and the <b>peripheral nervous system (PNS)</b>, which includes the spinal and peripheral nerves.</p>[[slot:dis-691-lobes|The brain lobes and their functions|/diseases/img/dis-691-lobes.svg]]<h4>The nerve cell (Neuron)</h4><ul><li>The cell body contains the nucleus.</li><li>Dendrites receive the signal.</li><li>The axon carries the signal to the next cell, and its endings release neurotransmitters.</li><li>The synapse: a gap between two cells crossed by neurotransmitters, which are released by the presynaptic neuron and bind to specific receptors.</li><li>The myelin sheath speeds signal conduction and gives the white color.</li><li>Afferent sensory neurons carry sensation to the center; efferent motor neurons carry commands to muscles and glands.</li></ul>\n[[slot:dis-691-ans|Divisions of the nervous system — illustration prepared by the site|/diseases/img/dis-691-ans.svg]]\n<ul><li>CNS: the brain and spinal cord (controls mental and body functions). PNS: the nerves from the brain and cord to the rest of the body.</li><li>PNS: somatic (sensory and motor nerves and reflexes) and autonomic.</li><li><b>Sympathetic:</b> fight-or-flight response, activates catecholamines (epinephrine and norepinephrine) and strengthens pulse and blood pressure. <b>Parasympathetic:</b> rest and digest, slows pulse and blood pressure and increases secretions (cholinergic).</li><li>The brainstem controls heart rate and breathing, so its patients may need a ventilator. See <a href=\"/diseases/dis-1313\">Consciousness and Glasgow</a>.</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>المخ</h4><ul><li>القشرة المخية (Cerebral cortex) رمادية لأنها أجسام الخلايا؛ تنقسم إلى نصفين وأربعة فصوص.</li><li>الفص الجبهي: الحركة، ومنطقة بروكا للكلام، والسلوك والقرارات الأخلاقية والانفعالات.</li><li>الجداري: تفسير اللمس والألم والإحساس.</li><li>الصدغي: السمع، فهم اللغة (منطقة ورنيكه)، الذاكرة.</li><li>القفوي: الرؤية.</li><li>المهاد (Thalamus) محطة تمرير الإحساس للقشرة.</li><li>تحت المهاد (Hypothalamus): الغدد الصماء العصبية والتوازن الداخلي.</li><li>العقد القاعدية (Basal ganglia): الحركات الدقيقة التي لا نفكر فيها.</li><li>جذع المخ: الجسر والنخاع المستطيل والمخ المتوسط.</li></ul><h4>الحبل الشوكي</h4><ul><li>محمي داخل العمود الفقري.</li><li>الألياف الحركية في القرون الأمامية والحسية في الخلفية؛ لذلك الإصابة الخارجية للظهر تصيب الإحساس أولاً غالباً والحركة تحفظ نسبياً، وإذا زاد التلف فقدان الاثنين.</li><li>الأعصاب الطرفية تخرج منه لتنقل الأوامر وتعود بالمعلومات.</li></ul><div class=\"cs-box cs-pearl\"><strong>قاعدة سريرية</strong><p>العرض يدل على المكان: ضعف جانب + مشاكل كلام → المخ الجبهي؛ فقدان توازن → المخيخ؛ فقدان إحساس أسفل مستوى معين → الحبل الشوكي.</p></div>",
+   "en": "<h4>The brain</h4><ul><li>The cerebral cortex is gray because it consists of cell bodies; it is divided into two hemispheres and four lobes.</li><li>Frontal lobe: movement, Broca area for speech, behavior, moral decisions, and emotions.</li><li>Parietal: interpreting touch, pain, and sensation.</li><li>Temporal: hearing, language comprehension (Wernicke area), memory.</li><li>Occipital: vision.</li><li>The thalamus is the relay station that passes sensation to the cortex.</li><li>The hypothalamus: neuroendocrine glands and internal balance.</li><li>The basal ganglia: fine movements we do not think about.</li><li>The brainstem: pons, medulla oblongata, and midbrain.</li></ul><h4>The spinal cord</h4><ul><li>Protected inside the vertebral column.</li><li>Motor fibers are in the anterior horns and sensory fibers in the posterior; so an external injury to the back often affects sensation first while movement is relatively preserved, and if the damage increases, both are lost.</li><li>Peripheral nerves exit from it to carry commands and return with information.</li></ul><div class=\"cs-box cs-pearl\"><strong>Clinical rule</strong><p>The symptom points to the location: one-sided weakness + speech problems → frontal brain; loss of balance → cerebellum; loss of sensation below a certain level → spinal cord.</p></div>"
+  },
+  "treatment": {
+   "ar": "<p>هذا الدليل مرجع لفهم باقي الأدلة العصبية: <a href=\"/diseases/dis-706\">السكتة</a>، <a href=\"/diseases/dis-700\">غيلان باريه</a>، <a href=\"/diseases/dis-705\">إصابة الحبل الشوكي</a>، <a href=\"/diseases/dis-707\">الفحوصات العصبية</a>.</p>",
+   "en": "<p>This guide is a reference for understanding the other neurological guides: <a href=\"/diseases/dis-706\">Stroke</a>, <a href=\"/diseases/dis-700\">Guillain-Barré</a>, <a href=\"/diseases/dis-705\">Spinal cord injury</a>, <a href=\"/diseases/dis-707\">Neurological exams</a>.</p>"
+  },
+  "nursing": {
+   "ar": "<p>كممرض ممكن تطبق المعرفة في التقييم السريع (Neuro check):</p><ul><li>مستوى الوعي (GCS) أولاً: انظر <a href=\"/diseases/dis-692\">إصابات الرأس</a>.</li><li>حجم الحدقتين ورد فعلهما للضوء.</li><li>قوة العضلات وتماثل الجانبين.</li><li>الكلام (تلعثم، عدم فهم).</li><li>الإحساس والمشي والتوازن.</li><li>العلامات الحيوية: ارتفاع ضغط مع بطء نبض يعني ارتفاع الضغط داخل الجمجمة.</li></ul>",
+   "en": "<p>As a nurse you can apply this knowledge in a rapid assessment (neuro check):</p><ul><li>Level of consciousness (GCS) first: see <a href=\"/diseases/dis-692\">Head injuries</a>.</li><li>Pupil size and their reaction to light.</li><li>Muscle strength and symmetry of both sides.</li><li>Speech (slurring, not understanding).</li><li>Sensation, walking, and balance.</li><li>Vital signs: high blood pressure with a slow pulse means raised intracranial pressure.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>هبوط الوعي أو GCS ينقص نقطتين</li><li>حدقة واسعة غير متفاعلة</li><li>تشنج جديد</li><li>ضعف جانب مفاجئ أو كلام مضطرب</li></ul>",
+   "en": "<ul><li>Decreased consciousness or a GCS drop of two points</li><li>A dilated, nonreactive pupil</li><li>New seizure</li><li>Sudden one-sided weakness or impaired speech</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اشرح لعائلة المريض أن الجهاز العصبي لا يتجدد سريعاً وأن إعادة التأهيل مهمة.</li><li>الوقاية: حزام الأمان، خوذة، ضبط الضغط والسكر.</li></ul>",
+   "en": "<ul><li>Explain to the patient's family that the nervous system does not regenerate quickly and that rehabilitation is important.</li><li>Prevention: seat belt, helmet, controlling blood pressure and glucose.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "CNS مخ وحبل شوكي، PNS أعصاب طرفية.",
+   "العصبون: جسم، زوائد، محور، مشبك، ميالين.",
+   "أربعة فصوص: جبهي، جداري، صدغي، قفوي.",
+   "تحت المهاد توازن داخلي، المهاد تمرير الحس.",
+   "حركية القرون الأمامية، حسية الخلفية.",
+   "العرض يحدد المكان."
+  ],
+  "en": [
+   "CNS is brain and spinal cord; PNS is peripheral nerves.",
+   "Neuron: cell body, dendrites, axon, synapse, myelin.",
+   "Four lobes: frontal, parietal, temporal, occipital.",
+   "Hypothalamus is internal balance; thalamus relays sensation.",
+   "Motor is anterior horns, sensory is posterior.",
+   "The symptom determines the location."
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "فص مسؤول عن الرؤية:",
+    "en": "Lobe responsible for vision:"
+   },
+   "options": [
     {
-      "ar": "الخلية العصبية"
+     "ar": "الجبهي",
+     "en": "Frontal"
     },
     {
-      "ar": "فصوص المخ"
+     "ar": "القفوي",
+     "en": "Occipital"
     },
     {
-      "ar": "الحبل الشوكي"
-    }],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>ينقسم الجهاز العصبي إلى <b>مركزي (CNS)</b> ويشمل المخ والحبل الشوكي، و<b>محيطي (PNS)</b> ويشمل الأعصاب الشوكية والطرفية.</p>[[slot:dis-691-lobes|فصوص المخ ووظائفها|/diseases/img/dis-691-lobes.svg]]<h4>الخلية العصبية (Neuron)</h4><ul><li>جسم الخلية يحتوي النواة.</li><li>الزوائد الشجيرية (Dendrites) تستقبل الإشارة.</li><li>المحور (Axon) ينقل الإشارة للخلية التالية، ونهاياته تُفرغ الناقلات.</li><li>المشبك (Synapse): فراغ بين خليتين تعبره الناقلات العصبية (Neurotransmitters) التي يفرزها العصبون قبل المشبك وترتبط بمستقبلات خاصة.</li><li>غلاف الميالين (Myelin) يسرّع انتقال الإشارة ويعطي اللون الأبيض.</li><li>العصبونات الحسية الواردة (Afferent) تنقل الإحساس للمركز؛ والحركية الصادرة (Efferent) تنقل الأوامر للعضلات والغدد.</li></ul>\n[[slot:dis-691-ans|تقسيم الجهاز العصبي — رسم من إعداد الموقع|/diseases/img/dis-691-ans.svg]]\n<ul><li>CNS: المخ والحبل الشوكي (يتحكم بوظائف العقل والجسم). PNS: الأعصاب من المخ والحبل لباقي الجسم.</li><li>PNS: الجسدي (أعصاب حسية وحركية وأفعال منعكسة) واللاإرادي.</li><li><b>السمبثاوي:</b> استجابة قتال/هروب، ينشط الكاتيكولامينات (إبينفرين ونورإبينفرين) ويقوّي النبض والضغط. <b>الباراسمبثاوي:</b> راحة وهضم، يبطئ النبض والضغط ويزيد الإفرازات (كولينرجي).</li><li>جذع المخ يتحكم بنبض وتنفس القلب، لذلك مرضاه قد يحتاجون جهاز تنفس. انظر <a href=\"/diseases/dis-1313\">الوعي وغلاسكو</a>.</li></ul>"
+     "ar": "الصدغي",
+     "en": "Temporal"
     },
-    "signs": {
-      "ar": "<h4>المخ</h4><ul><li>القشرة المخية (Cerebral cortex) رمادية لأنها أجسام الخلايا؛ تنقسم إلى نصفين وأربعة فصوص.</li><li>الفص الجبهي: الحركة، ومنطقة بروكا للكلام، والسلوك والقرارات الأخلاقية والانفعالات.</li><li>الجداري: تفسير اللمس والألم والإحساس.</li><li>الصدغي: السمع، فهم اللغة (منطقة ورنيكه)، الذاكرة.</li><li>القفوي: الرؤية.</li><li>المهاد (Thalamus) محطة تمرير الإحساس للقشرة.</li><li>تحت المهاد (Hypothalamus): الغدد الصماء العصبية والتوازن الداخلي.</li><li>العقد القاعدية (Basal ganglia): الحركات الدقيقة التي لا نفكر فيها.</li><li>جذع المخ: الجسر والنخاع المستطيل والمخ المتوسط.</li></ul><h4>الحبل الشوكي</h4><ul><li>محمي داخل العمود الفقري.</li><li>الألياف الحركية في القرون الأمامية والحسية في الخلفية؛ لذلك الإصابة الخارجية للظهر تصيب الإحساس أولاً غالباً والحركة تحفظ نسبياً، وإذا زاد التلف فقدان الاثنين.</li><li>الأعصاب الطرفية تخرج منه لتنقل الأوامر وتعود بالمعلومات.</li></ul><div class=\"cs-box cs-pearl\"><strong>قاعدة سريرية</strong><p>العرض يدل على المكان: ضعف جانب + مشاكل كلام → المخ الجبهي؛ فقدان توازن → المخيخ؛ فقدان إحساس أسفل مستوى معين → الحبل الشوكي.</p></div>"
-    },
-    "treatment": {
-      "ar": "<p>هذا الدليل مرجع لفهم باقي الأدلة العصبية: <a href=\"/diseases/dis-706\">السكتة</a>، <a href=\"/diseases/dis-700\">غيلان باريه</a>، <a href=\"/diseases/dis-705\">إصابة الحبل الشوكي</a>، <a href=\"/diseases/dis-707\">الفحوصات العصبية</a>.</p>"
-    },
-    "nursing": {
-      "ar": "<p>كممرض ممكن تطبق المعرفة في التقييم السريع (Neuro check):</p><ul><li>مستوى الوعي (GCS) أولاً: انظر <a href=\"/diseases/dis-692\">إصابات الرأس</a>.</li><li>حجم الحدقتين ورد فعلهما للضوء.</li><li>قوة العضلات وتماثل الجانبين.</li><li>الكلام (تلعثم، عدم فهم).</li><li>الإحساس والمشي والتوازن.</li><li>العلامات الحيوية: ارتفاع ضغط مع بطء نبض يعني ارتفاع الضغط داخل الجمجمة.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>هبوط الوعي أو GCS ينقص نقطتين</li><li>حدقة واسعة غير متفاعلة</li><li>تشنج جديد</li><li>ضعف جانب مفاجئ أو كلام مضطرب</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اشرح لعائلة المريض أن الجهاز العصبي لا يتجدد سريعاً وأن إعادة التأهيل مهمة.</li><li>الوقاية: حزام الأمان، خوذة، ضبط الضغط والسكر.</li></ul>"
+    {
+     "ar": "الجداري",
+     "en": "Parietal"
     }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "القشرة البصرية بالفص القفوي.",
+    "en": "The visual cortex is in the occipital lobe."
+   }
   },
-  "keyPoints": {
-    "ar": [
-      "CNS مخ وحبل شوكي، PNS أعصاب طرفية.",
-      "العصبون: جسم، زوائد، محور، مشبك، ميالين.",
-      "أربعة فصوص: جبهي، جداري، صدغي، قفوي.",
-      "تحت المهاد توازن داخلي، المهاد تمرير الحس.",
-      "حركية القرون الأمامية، حسية الخلفية.",
-      "العرض يحدد المكان."]
+  {
+   "q": {
+    "ar": "منطقة بروكا في:",
+    "en": "Broca area is in:"
+   },
+   "options": [
+    {
+     "ar": "الجبهي",
+     "en": "Frontal"
+    },
+    {
+     "ar": "القفوي",
+     "en": "Occipital"
+    },
+    {
+     "ar": "الجداري",
+     "en": "Parietal"
+    },
+    {
+     "ar": "المخيخ",
+     "en": "Cerebellum"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تنتج الكلام.",
+    "en": "It produces speech."
+   }
   },
-  "quiz": [
+  {
+   "q": {
+    "ar": "الميالين وظيفته:",
+    "en": "Function of myelin:"
+   },
+   "options": [
     {
-      "q": {
-        "ar": "فص مسؤول عن الرؤية:"
-      },
-      "options": [
-        {
-          "ar": "الجبهي"
-        },
-        {
-          "ar": "القفوي"
-        },
-        {
-          "ar": "الصدغي"
-        },
-        {
-          "ar": "الجداري"
-        }],
-      "answer": 1,
-      "why": {
-        "ar": "القشرة البصرية بالفص القفوي."
-      }
+     "ar": "يحمي العظم",
+     "en": "Protects bone"
     },
     {
-      "q": {
-        "ar": "منطقة بروكا في:"
-      },
-      "options": [
-        {
-          "ar": "الجبهي"
-        },
-        {
-          "ar": "القفوي"
-        },
-        {
-          "ar": "الجداري"
-        },
-        {
-          "ar": "المخيخ"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "تنتج الكلام."
-      }
+     "ar": "يسرّع انتقال الإشارة",
+     "en": "Speeds signal conduction"
     },
     {
-      "q": {
-        "ar": "الميالين وظيفته:"
-      },
-      "options": [
-        {
-          "ar": "يحمي العظم"
-        },
-        {
-          "ar": "يسرّع انتقال الإشارة"
-        },
-        {
-          "ar": "ينتج الدم"
-        },
-        {
-          "ar": "يغذي العضلات"
-        }],
-      "answer": 1,
-      "why": {
-        "ar": "عازل يسرّع."
-      }
+     "ar": "ينتج الدم",
+     "en": "Makes blood"
     },
     {
-      "q": {
-        "ar": "العصبون الحسي:"
-      },
-      "options": [
-        {
-          "ar": "Efferent"
-        },
-        {
-          "ar": "Afferent"
-        },
-        {
-          "ar": "Motor"
-        },
-        {
-          "ar": "Basal"
-        }],
-      "answer": 1,
-      "why": {
-        "ar": "ينقل الحس للمركز."
-      }
+     "ar": "يغذي العضلات",
+     "en": "Feeds muscles"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "عازل يسرّع.",
+    "en": "An insulator that speeds conduction."
+   }
+  },
+  {
+   "q": {
+    "ar": "العصبون الحسي:",
+    "en": "The sensory neuron:"
+   },
+   "options": [
+    {
+     "ar": "Efferent",
+     "en": "Efferent"
     },
     {
-      "q": {
-        "ar": "الحركة في الحبل الشوكي:"
-      },
-      "options": [
-        {
-          "ar": "القرون الخلفية"
-        },
-        {
-          "ar": "القرون الأمامية"
-        },
-        {
-          "ar": "الأعصاب القحفية"
-        },
-        {
-          "ar": "المخيخ"
-        }],
-      "answer": 1,
-      "why": {
-        "ar": "الحركية أمامية."
-      }
+     "ar": "Afferent",
+     "en": "Afferent"
     },
     {
-      "q": {
-        "ar": "أي جهاز يزيد النبض والضغط في الإجهاد؟"
-      },
-      "options": [
-        {
-          "ar": "الباراسمبثاوي"
-        },
-        {
-          "ar": "السمبثاوي"
-        },
-        {
-          "ar": "الجسدي"
-        },
-        {
-          "ar": "الحسي"
-        }],
-      "answer": 1,
-      "why": {
-        "ar": "هو جهاز القتال أو الهروب."
-      }
+     "ar": "Motor",
+     "en": "Motor"
     },
     {
-      "q": {
-        "ar": "أي جزء يتحكم بالنبض والتنفس؟"
-      },
-      "options": [
-        {
-          "ar": "جذع المخ"
-        },
-        {
-          "ar": "المخيخ"
-        },
-        {
-          "ar": "القشرة فقط"
-        },
-        {
-          "ar": "الحبل الشوكي"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "جذع المخ."
-      }
-    }],
-  "refs": [
+     "ar": "Basal",
+     "en": "Basal"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "ينقل الحس للمركز.",
+    "en": "It carries sensation to the center."
+   }
+  },
+  {
+   "q": {
+    "ar": "الحركة في الحبل الشوكي:",
+    "en": "Movement in the spinal cord:"
+   },
+   "options": [
     {
-      "title": "StatPearls – Neurology topics (NCBI Bookshelf)"
+     "ar": "القرون الخلفية",
+     "en": "Posterior horns"
     },
     {
-      "title": "MSD Manual Professional – Neurologic Disorders"
+     "ar": "القرون الأمامية",
+     "en": "Anterior horns"
     },
     {
-      "title": "NICE guidelines (Head injury NG232) حسب الموضوع"
-    }]
+     "ar": "الأعصاب القحفية",
+     "en": "Cranial nerves"
+    },
+    {
+     "ar": "المخيخ",
+     "en": "Cerebellum"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الحركية أمامية.",
+    "en": "Motor fibers are anterior."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي جهاز يزيد النبض والضغط في الإجهاد؟",
+    "en": "Which system increases pulse and blood pressure during stress?"
+   },
+   "options": [
+    {
+     "ar": "الباراسمبثاوي",
+     "en": "Parasympathetic"
+    },
+    {
+     "ar": "السمبثاوي",
+     "en": "Sympathetic"
+    },
+    {
+     "ar": "الجسدي",
+     "en": "Somatic"
+    },
+    {
+     "ar": "الحسي",
+     "en": "Sensory"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "هو جهاز القتال أو الهروب.",
+    "en": "It is the fight-or-flight system."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي جزء يتحكم بالنبض والتنفس؟",
+    "en": "Which part controls heart rate and breathing?"
+   },
+   "options": [
+    {
+     "ar": "جذع المخ",
+     "en": "Brainstem"
+    },
+    {
+     "ar": "المخيخ",
+     "en": "Cerebellum"
+    },
+    {
+     "ar": "القشرة فقط",
+     "en": "Cortex only"
+    },
+    {
+     "ar": "الحبل الشوكي",
+     "en": "Spinal cord"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "جذع المخ.",
+    "en": "The brainstem."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls – Neurology topics (NCBI Bookshelf)"
+  },
+  {
+   "title": "MSD Manual Professional – Neurologic Disorders"
+  },
+  {
+   "title": "NICE guidelines (Head injury NG232) حسب الموضوع"
+  }
+ ]
 }
