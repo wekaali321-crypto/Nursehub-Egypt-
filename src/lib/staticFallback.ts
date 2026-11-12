@@ -97,17 +97,24 @@ async function answer(table: string, url: URL, method: string, headers: Headers)
 let localFiles: Promise<Set<string>> | null = null;
 const loadLocalFiles = () => (localFiles ??= fetch("/media/manifest.json").then((r) => (r.ok ? r.json() : [])).then((a: string[]) => new Set(a)).catch(() => new Set<string>()));
 
+/** Old Supabase project that the stored URLs may still point at (public info). */
+const LEGACY_HOSTS = ["https://vpgzbjbcbrbexpzoxrup.supabase.co"];
+
 async function rewriteMedia(res: Response, baseUrl: string): Promise<Response> {
   if (!(res.headers.get("content-type") || "").includes("json")) return res;
   const text = await res.clone().text();
-  const marker = `${baseUrl.replace(/\/$/, "")}/storage/v1/object/public/media/`;
-  if (!text.includes(marker)) return res;
+  const hosts = [baseUrl.replace(/\/$/, ""), ...LEGACY_HOSTS];
+  const markers = hosts.map((h) => `${h}/storage/v1/object/public/media/`);
+  if (!markers.some((m) => text.includes(m))) return res;
   const files = await loadLocalFiles();
-  const esc = marker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const out = text.replace(new RegExp(esc + "([^\"\\\\\\s)<>?]+)", "g"), (m, path: string) => {
-    let dec = path; try { dec = decodeURIComponent(path); } catch { /* keep */ }
-    return files.has(`media/${dec}`) ? `/media/media/${path}` : m;
-  });
+  let out = text;
+  for (const marker of markers) {
+    const esc = marker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    out = out.replace(new RegExp(esc + "([^\"\\\\\\s)<>?]+)", "g"), (m, path: string) => {
+      let dec = path; try { dec = decodeURIComponent(path); } catch { /* keep */ }
+      return files.has(`media/${dec}`) ? `/media/media/${path}` : m;
+    });
+  }
   if (out === text) return res;
   return new Response(out, { status: res.status, statusText: res.statusText, headers: res.headers });
 }
