@@ -961,3 +961,9 @@ CREATE TABLE IF NOT EXISTS media_objects (
   size INTEGER,
   created_at TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
 );
+CREATE TABLE IF NOT EXISTS media_chunks (
+  key TEXT NOT NULL,
+  idx INTEGER NOT NULL,
+  data BLOB NOT NULL,
+  PRIMARY KEY (key, idx)
+);

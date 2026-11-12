@@ -2,6 +2,8 @@
 import { respond, perr, CORS, identify, isAdmin } from './sb.js';
 
 const keyOf = (bucket, path) => `${bucket}/${path}`;
+const MAX_D1_FILE = 2 * 1024 * 1024; // D1 returns BLOBs as JS arrays, so keep files small (images are ~100-200KB)
+const CHUNK = 700 * 1024;
 
 /** workerd's formData() rejects supabase-js' unnamed part (append('', file)), so parse multipart by hand. */
 function parseMultipart(buf, ct) {
@@ -48,21 +50,39 @@ export async function handleStorage(request, env, path) {
         return new Response(request.method === 'HEAD' ? null : obj.body, { headers: h });
       }
     }
+    // files uploaded from the admin panel are stored in D1 (see below) when R2 is not enabled
+    if (env.DB) {
+      const key = keyOf(bucket, file);
+      const meta = await env.DB.prepare('SELECT content_type, size FROM media_objects WHERE path = ?').bind(key).first();
+      if (meta) {
+        const rows = (await env.DB.prepare('SELECT data FROM media_chunks WHERE key = ? ORDER BY idx').bind(key).all()).results;
+        const out = new Uint8Array(meta.size);
+        let off = 0;
+        for (const r of rows) { const u = new Uint8Array(r.data); out.set(u, off); off += u.length; }
+        return new Response(request.method === 'HEAD' ? null : out, { headers: { ...CORS, 'content-type': meta.content_type || 'application/octet-stream', 'content-length': String(meta.size), 'cache-control': 'public, max-age=31536000, immutable' } });
+      }
+    }
     // files copied from the old Supabase bucket live as static assets under /media/<bucket>/
-    if (env.ASSETS) return env.ASSETS.fetch(new Request(new URL(`/media/${bucket}/${file.split('/').map(encodeURIComponent).join('/')}`, request.url)));
+    if (env.ASSETS) {
+      const a = await env.ASSETS.fetch(new Request(new URL(`/media/${bucket}/${file.split('/').map(encodeURIComponent).join('/')}`, request.url)));
+      // the SPA fallback answers missing files with index.html → treat as not found
+      if (a.ok && !/text\/html/.test(a.headers.get('content-type') || '')) return a;
+    }
     return perr(404, 'not_found', 'Object not found');
   }
 
   const who = await identify(request, env);
   if (!who.uid || !(await isAdmin(env, who))) return perr(401, 'unauthorized', 'Admin only');
-  if (!env.MEDIA) return perr(503, 'unavailable', 'R2 binding MEDIA is not configured');
+  if (!env.MEDIA && !env.DB) return perr(503, 'unavailable', 'No storage binding (MEDIA or DB)');
 
   // upload: POST/PUT /storage/v1/object/<bucket>/<path...>
   if (path[0] === 'object' && ['POST', 'PUT'].includes(request.method) && path[1] !== 'list') {
     const [bucket, ...rest] = dec(path.slice(1));
     const file = rest.join('/');
     const upsert = request.headers.get('x-upsert') === 'true';
-    if (!upsert && (await env.MEDIA.head(keyOf(bucket, file)))) return perr(409, 'Duplicate', 'The resource already exists');
+    const key = keyOf(bucket, file);
+    const exists = env.MEDIA ? await env.MEDIA.head(key) : await env.DB.prepare('SELECT 1 FROM media_objects WHERE path = ?').bind(key).first();
+    if (!upsert && exists) return perr(409, 'Duplicate', 'The resource already exists');
     const ct = request.headers.get('content-type') || '';
     let blob, type = 'application/octet-stream';
     if (ct.includes('multipart/form-data')) {
@@ -70,24 +90,38 @@ export async function handleStorage(request, env, path) {
       if (part) { blob = part.body; type = part.type; }
     } else { blob = await request.arrayBuffer(); type = ct || type; }
     if (!blob) return perr(400, 'invalid', 'No file');
-    const put = await env.MEDIA.put(keyOf(bucket, file), blob, { httpMetadata: { contentType: type } });
-    await env.DB.prepare('INSERT INTO media_objects (path,bucket,content_type,size) VALUES (?,?,?,?) ON CONFLICT(path) DO UPDATE SET size=excluded.size, content_type=excluded.content_type').bind(file, bucket, type, put.size).run();
-    return respond({ Key: keyOf(bucket, file), Id: put.etag });
+    if (env.MEDIA) {
+      const put = await env.MEDIA.put(key, blob, { httpMetadata: { contentType: type } });
+      await env.DB.prepare('INSERT INTO media_objects (path,bucket,content_type,size) VALUES (?,?,?,?) ON CONFLICT(path) DO UPDATE SET size=excluded.size, content_type=excluded.content_type').bind(key, bucket, type, put.size).run();
+      return respond({ Key: key, Id: put.etag });
+    }
+    // D1 storage (no card needed): images are already compressed to ~100-200KB by the admin panel
+    const bytes = new Uint8Array(blob instanceof ArrayBuffer ? blob : blob.buffer ? blob.buffer : await blob.arrayBuffer());
+    if (bytes.length > MAX_D1_FILE) return perr(413, 'Payload too large', `الملف أكبر من ${MAX_D1_FILE / 1048576}MB. الملفات الكبيرة (PDF) تُضاف عبر المستودع أو يتم تفعيل R2.`);
+    const stmts = [env.DB.prepare('DELETE FROM media_chunks WHERE key = ?').bind(key)];
+    for (let i = 0, n = 0; i < bytes.length; i += CHUNK, n++) stmts.push(env.DB.prepare('INSERT INTO media_chunks (key, idx, data) VALUES (?,?,?)').bind(key, n, bytes.slice(i, i + CHUNK).buffer));
+    stmts.push(env.DB.prepare('INSERT INTO media_objects (path,bucket,content_type,size) VALUES (?,?,?,?) ON CONFLICT(path) DO UPDATE SET size=excluded.size, content_type=excluded.content_type').bind(key, bucket, type, bytes.length));
+    await env.DB.batch(stmts);
+    return respond({ Key: key, Id: String(bytes.length) });
   }
   // remove: DELETE /storage/v1/object/<bucket>  body {prefixes:[...]}
   if (path[0] === 'object' && request.method === 'DELETE') {
     const [bucket, ...rest] = dec(path.slice(1));
     const body = await request.json().catch(() => ({}));
     const list = body.prefixes || (rest.length ? [rest.join('/')] : []);
-    for (const p of list) { await env.MEDIA.delete(keyOf(bucket, p)); await env.DB.prepare('DELETE FROM media_objects WHERE path = ?').bind(p).run(); }
+    for (const p of list) {
+      const key = keyOf(bucket, p);
+      if (env.MEDIA) await env.MEDIA.delete(key);
+      await env.DB.batch([env.DB.prepare('DELETE FROM media_chunks WHERE key = ?').bind(key), env.DB.prepare('DELETE FROM media_objects WHERE path = ?').bind(key)]);
+    }
     return respond(list.map((name) => ({ name })));
   }
   // list: POST /storage/v1/object/list/<bucket>
   if (path[0] === 'object' && path[1] === 'list') {
     const bucket = dec(path.slice(2))[0];
     const body = await request.json().catch(() => ({}));
-    const rows = (await env.DB.prepare('SELECT path, size, created_at FROM media_objects WHERE bucket = ? AND path LIKE ? LIMIT ?').bind(bucket, `${body.prefix || ''}%`, body.limit || 100).all()).results;
-    return respond(rows.map((r) => ({ name: r.path, metadata: { size: r.size }, created_at: r.created_at })));
+    const rows = (await env.DB.prepare('SELECT path, size, created_at FROM media_objects WHERE bucket = ? AND path LIKE ? LIMIT ?').bind(bucket, `${bucket}/${body.prefix || ''}%`, body.limit || 100).all()).results;
+    return respond(rows.map((r) => ({ name: r.path.slice(bucket.length + 1), metadata: { size: r.size }, created_at: r.created_at })));
   }
   return perr(404, 'not_found', 'Unknown storage route');
 }
