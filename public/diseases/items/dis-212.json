@@ -1,181 +1,229 @@
 {
-  "id": "dis-212",
-  "num": 212,
-  "system": "infect",
-  "icon": "🦠",
-  "level": 2,
-  "title": {
-    "ar": "مضادات الفيروسات",
-    "en": "Antiviral Drugs"
+ "id": "dis-212",
+ "num": 212,
+ "system": "infect",
+ "icon": "🦠",
+ "level": 2,
+ "title": {
+  "ar": "مضادات الفيروسات",
+  "en": "Antiviral Drugs"
+ },
+ "teaser": {
+  "ar": "Acyclovir وRibavirin وGanciclovir وZidovudine وLamivudine وAmantadine: آلية كل دواء، أسمائها بالسوق، وإيه تراقبه.",
+  "en": "Acyclovir, Ribavirin, Ganciclovir, Zidovudine, Lamivudine, and Amantadine: how each drug works, its market names, and what to monitor."
+ },
+ "chips": [
+  {
+   "ar": "Acyclovir",
+   "en": "Acyclovir"
   },
-  "teaser": {
-    "ar": "Acyclovir وRibavirin وGanciclovir وZidovudine وLamivudine وAmantadine: آلية كل دواء، أسمائها بالسوق، وإيه تراقبه."
+  {
+   "ar": "Ribavirin",
+   "en": "Ribavirin"
   },
-  "chips": [
-    {
-      "ar": "Acyclovir"
-    },
-    {
-      "ar": "Ribavirin"
-    },
-    {
-      "ar": "HIV"
-    }
+  {
+   "ar": "HIV",
+   "en": "HIV"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>مضادات الفيروسات (Antiviral drugs) بتشتغل بطريقتين: <b>(1) منع التصاق/دخول الفيروس للخلية</b>، أو <b>(2) تثبيط تصنيع الأحماض النووية</b> للفيروس.</p><table><thead><tr><th>الآلية</th><th>الدواء</th><th>الاستخدام</th></tr></thead><tbody><tr><td>منع الدخول</td><td>Gamma globulin</td><td>عضل لمنع الحصبة والتهاب الكبد المعدي</td></tr><tr><td>منع الدخول</td><td>Amantadine</td><td>فموي: وقاية من الإنفلونزا A ومضاد باركنسون</td></tr><tr><td>تثبيط الأحماض النووية</td><td>Acyclovir</td><td>هربس وجديري</td></tr><tr><td></td><td>Ribavirin</td><td>فيروسات DNA وRNA</td></tr><tr><td></td><td>Ganciclovir</td><td>CMV</td></tr><tr><td></td><td>Zidovudine / Lamivudine</td><td>HIV</td></tr><tr><td></td><td>Methisoprinol</td><td>داعم</td></tr></tbody></table>\n<p>ملخص عملي بالأسماء التجارية وقواعد الأمان (الأطفال والحمل وG6PD): <a href=\"/diseases/dis-565\">دليل عملي للمضادات الحيوية</a>.</p>",
+   "en": "<p>Antiviral drugs work in two ways: <b>(1) preventing the virus from attaching to/entering the cell</b>, or <b>(2) inhibiting the synthesis of the virus's nucleic acids</b>.</p><table><thead><tr><th>Mechanism</th><th>Drug</th><th>Use</th></tr></thead><tbody><tr><td>Prevent entry</td><td>Gamma globulin</td><td>IM to prevent measles and infectious hepatitis</td></tr><tr><td>Prevent entry</td><td>Amantadine</td><td>Oral: prevention of influenza A and an anti-Parkinson drug</td></tr><tr><td>Inhibit nucleic acids</td><td>Acyclovir</td><td>Herpes and chickenpox</td></tr><tr><td></td><td>Ribavirin</td><td>DNA and RNA viruses</td></tr><tr><td></td><td>Ganciclovir</td><td>CMV</td></tr><tr><td></td><td>Zidovudine / Lamivudine</td><td>HIV</td></tr><tr><td></td><td>Methisoprinol</td><td>Supportive</td></tr></tbody></table>\n<p>A practical summary with trade names and safety rules (children, pregnancy, and G6PD): <a href=\"/diseases/dis-565\">practical antibiotic guide</a>.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>Acyclovir: Prodrug تنشطه خلايا مصابة فقط ← Triphosphate ← نظير Deoxyguanosine ← يثبط DNA polymerase الفيروسي</li><li>Zidovudine: Prodrug ← Phosphorylated ← يثبط إنزيم النسخ العكسي (Reverse transcriptase)</li><li>Ribavirin: نظير نيوكليوزيد بيورين يثبط تصنيع DNA وRNA الفيروسات</li></ul>",
+   "en": "<ul><li>Acyclovir: a prodrug activated only by infected cells → triphosphate → a deoxyguanosine analog → inhibits viral DNA polymerase</li><li>Zidovudine: a prodrug → phosphorylated → inhibits the reverse transcriptase enzyme</li><li>Ribavirin: a purine nucleoside analog that inhibits viral DNA and RNA synthesis</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>الآثار الجانبية الأبرز</h4><ul><li>Zidovudine: نقص الكرات المحببة (Granulocytopenia) وأنيميا</li><li>Ganciclovir: تثبيط نخاع العظام</li><li>Ribavirin: أنيميا انحلالية وتشوهات جنين</li><li>Acyclovir: غثيان، سمية كلوية بالجرعات الوريدية العالية</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>احذر: Ribavirin مسبب لتشوهات جنينية (ممنوع في الحمل للمريضة والشريك). Amantadine لم يعد يُنصح به لعلاج الإنفلونزا A بسبب المقاومة؛ المفضل Oseltamivir (Tamiflu). Methisoprinol (Isoprinosine) أدلته محدودة كمحفز مناعة. علاج التهاب الكبد C اليوم بأدوية DAAs مثل Sofosbuvir وليس Ribavirin وحده.</p></div>",
+   "en": "<h4>The most notable side effects</h4><ul><li>Zidovudine: granulocytopenia and anemia</li><li>Ganciclovir: bone marrow suppression</li><li>Ribavirin: hemolytic anemia and fetal malformations</li><li>Acyclovir: nausea, kidney toxicity with high IV doses</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Beware: Ribavirin causes fetal malformations (forbidden in pregnancy for the patient and her partner). Amantadine is no longer advised for treating influenza A because of resistance; oseltamivir (Tamiflu) is preferred. Methisoprinol (Isoprinosine) has limited evidence as an immune stimulant. Hepatitis C is treated today with DAAs such as sofosbuvir, not ribavirin alone.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>كرياتينين ووظائف كلى (Acyclovir وGanciclovir)</li><li>CBC (Zidovudine, Ganciclovir, Ribavirin)</li><li>وظائف الكبد</li><li>فحص الحمل قبل Ribavirin</li></ul>",
+   "en": "<ul><li>Creatinine and kidney function (Acyclovir and Ganciclovir)</li><li>CBC (Zidovudine, Ganciclovir, Ribavirin)</li><li>Liver function</li><li>Pregnancy test before Ribavirin</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>1) منع الالتصاق أو دخول الخلية</h4><ul><li><b>Gamma globulin:</b> يقلل الاختراق، يُعطى عضلياً لمنع الحصبة أو التهاب الكبد المعدي</li><li><b>Amantadine:</b> فموي لوقاية الإنفلونزا A ومضاد باركنسون. أسماء: Adamine كبسول 100 · Amantine كبسول 100</li></ul><h4>2) تثبيط تصنيع الأحماض النووية</h4><table><thead><tr><th>الدواء</th><th>الخصائص</th><th>الأسماء التجارية والأشكال</th></tr></thead><tbody><tr><td>Acyclovir</td><td>Prodrug تنشطه الخلايا المصابة فقط ← Triphosphate ← نظير Deoxyguanosine ← يثبط DNA polymerase. فموي ووريدي وموضعي في الهربس البسيط والجديري/الحزام (Varicella-zoster)</td><td>Zovirax قرص 200/400 · شراب 400 مجم/5 مل · وريدي 250 مجم/فيال · Novirus كبسول 200/400 · شراب 200 · Acylovir كريم</td></tr><tr><td>Ribavirin</td><td>نظير نيوكليوزيد بيورين يقلل DNA وRNA الفيروسات</td><td>Viracure كبسول 200/400 · Virin 200/400 · Ribavirin كبسول 200 · Panvirin كبسول 200</td></tr><tr><td>Ganciclovir</td><td>شبيه Acyclovir؛ وريدي في عدوى CMV المهددة للحياة أو للبصر لدى نقص المناعة مثل HIV</td><td>Cymevene كبسول 250 · وريدي 500</td></tr><tr><td>Zidovudine</td><td>Prodrug ← فسفرة ← يثبط إنزيم النسخ العكسي. فموي للإيدز. قد يسبب نقص الكرات المحببة وأنيميا</td><td>Retrovir كبسول 100</td></tr><tr><td>Lamivudine</td><td>مثل Zidovudine</td><td>Zeffix قرص 100 · Epivir قرص 150 · Lamidine قرص 150</td></tr><tr><td>Methisoprinol</td><td>—</td><td>Isoprinosine قرص 500 · شراب 250</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الجرعات الشائعة للبالغ (بأمر الطبيب): Acyclovir 200 مجم 5 مرات/يوم أو 400 مجم 3 مرات للهربس البسيط، و800 مجم 5 مرات للحزام، ووريدي 5–10 مجم/كجم كل 8 ساعات لعدوى شديدة/تهاب مخ (مع ترطيب جيد). Zidovudine 300 مجم مرتين. Lamivudine 150 مجم مرتين أو 300 مجم يومياً لـHIV (100 مجم يومياً لـHBV). تعديل الكلى للـAcyclovir وGanciclovir.</p></div><ul><li>إن كان الدواء بجدول متناوب (أيام معينة)، يُحدَّد للمريض أيام الجرعة ويُستعمل تقويم لتتبعها.</li><li>إيقاف أدوية التهاب الكبد B قد يسبب انتكاسة حادة، فتُراقب وظائف الكبد عن قرب.</li><li>الاستشارة قبل القيادة أو الأعمال الدقيقة إن أثّر الدواء على اليقظة، والقيام ببطء لتجنب دوخة الوقوف.</li></ul>",
+   "en": "<h4>1) Preventing attachment or cell entry</h4><ul><li><b>Gamma globulin:</b> reduces penetration, given IM to prevent measles or infectious hepatitis</li><li><b>Amantadine:</b> oral for prevention of influenza A and an anti-Parkinson drug. Names: Adamine capsule 100 · Amantine capsule 100</li></ul><h4>2) Inhibiting nucleic acid synthesis</h4><table><thead><tr><th>Drug</th><th>Properties</th><th>Trade names and forms</th></tr></thead><tbody><tr><td>Acyclovir</td><td>A prodrug activated only by infected cells → triphosphate → a deoxyguanosine analog → inhibits DNA polymerase. Oral, IV, and topical in herpes simplex and chickenpox/shingles (varicella-zoster)</td><td>Zovirax tablet 200/400 · syrup 400 mg/5 mL · IV 250 mg/vial · Novirus capsule 200/400 · syrup 200 · Acylovir cream</td></tr><tr><td>Ribavirin</td><td>A purine nucleoside analog that reduces viral DNA and RNA</td><td>Viracure capsule 200/400 · Virin 200/400 · Ribavirin capsule 200 · Panvirin capsule 200</td></tr><tr><td>Ganciclovir</td><td>Similar to Acyclovir; IV in life- or sight-threatening CMV infection in immunocompromised patients such as HIV</td><td>Cymevene capsule 250 · IV 500</td></tr><tr><td>Zidovudine</td><td>A prodrug → phosphorylation → inhibits the reverse transcriptase enzyme. Oral for AIDS. May cause granulocytopenia and anemia</td><td>Retrovir capsule 100</td></tr><tr><td>Lamivudine</td><td>Like Zidovudine</td><td>Zeffix tablet 100 · Epivir tablet 150 · Lamidine tablet 150</td></tr><tr><td>Methisoprinol</td><td>—</td><td>Isoprinosine tablet 500 · syrup 250</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>Common adult doses (by physician's order): Acyclovir 200 mg 5 times/day or 400 mg 3 times for herpes simplex, and 800 mg 5 times for shingles, and IV 5–10 mg/kg every 8 hours for severe infection/encephalitis (with good hydration). Zidovudine 300 mg twice. Lamivudine 150 mg twice or 300 mg daily for HIV (100 mg daily for HBV). Kidney dose adjustment for Acyclovir and Ganciclovir.</p></div><ul><li>If the drug is on an alternating schedule (certain days), the patient is told the dose days and a calendar is used to track them.</li><li>Stopping hepatitis B drugs may cause an acute flare, so liver function is monitored closely.</li><li>Consult before driving or doing precise work if the drug affects alertness, and rise slowly to avoid dizziness on standing.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل</strong><p>حمل؟ كلى؟ حساسية؟ نقص مناعة؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Acyclovir وريدي</strong><p>سرّب على ساعة (لا دفعة) بعد ترطيب المريض، راقب الكرياتينين، قلل السرعة لو قلة بول. تأكد من سلامة الكانيولا (المحلول قلوي وقد يسبب التهاب الوريد).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الفموي</strong><p>يؤخذ مع الماء، التزم بالمواعيد (قد يكون 5 مرات يومياً).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Zidovudine/Ganciclovir</strong><p>CBC أسبوعياً في البداية، بلّغ نقص الكرات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Ribavirin</strong><p>تأكد من منع الحمل، وراقب الهيموجلوبين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Gamma globulin</strong><p>عضل عميق، بعد التأكد من الحساسية (IgA).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>احتياطات</strong><p>الهربس: قفازات للتعامل مع الآفات، والحامل وناقصي المناعة بعيد.</p></div></div></div>\n<!--nclex-p796-798-->[[slot:dis-3217-antiviral-rules|قواعد مضادات الفيروسات — رسم من إعداد الموقع|/diseases/img/dis-3217-antiviral-rules.svg]]<h4>نقاط إضافية للتمريض</h4><ul><li>الآلية: تتدخل في قدرة الفيروس على التكاثر داخل الخلية؛ وقد تكون سامة للخلايا البشرية وقد تظهر مقاومة.</li><li>الاستعمال: CMV لدى متلقي الزرع، الهربس 1 و2 والحزام الناري، HIV، الإنفلونزا A وB، RSV، والتهاب الكبد B وC.</li><li>آثار: غثيان، قيء، إسهال، صداع، طفح، حمى، أرق.</li><li>موانع: تحسس؛ cidofovir (Vistide) لا يُعطى مع القصور الكلوي أو أدوية سامة للكلى كالأمينوجليكوزيدات؛ ribavirin لا يُعطى لمن لديه مرض قلبي غير مستقر وهو فئة X في الحمل.</li><li>تداخلات: probenecid يرفع مستوى مضاد الفيروس؛ cimetidine يرفع valacyclovir؛ ibuprofen يرفع adefovir؛ imipenem-cilastatin مع ganciclovir يزيد خطر التشنج؛ anticholinergics مع amantadine؛ theophylline مع acyclovir يرتفع.</li><li>الموضعي: لا تزيد عن المقرر، استعمل قفازًا، غطِّ الآفات، ولا علاقة جنسية أثناء الآفات؛ أبلغ عن حرقان أو وخز أو حكة أو تفاقم الطفح.</li><li>sildenafil مع بعض مضادات الفيروسات: خطر هبوط ضغط واضطراب رؤية وانتصاب مطول.</li><li>قم ببطء من الجلوس (دوخة)؛ أبلغ عن عصبية وارتجاف واضطراب كلام واكتئاب.</li><li>Zanamivir (Relenza): كل 12 ساعة 5 أيام بجهاز Diskhaler؛ إن وُصف موسّع شعب فقبله؛ قد يسبب دوخة؛ لا يقلل انتقال العدوى للآخرين.</li><li>أمثلة (للتعلّم، راجع النشرة): acyclovir (Zovirax) للهربس والحزام؛ oseltamivir (Tamiflu) 75 مغ مرتين يوميًا لمدة 5 أيام.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Ask</strong><p>Pregnancy? Kidneys? Allergy? Immunodeficiency?</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>IV Acyclovir</strong><p>Infuse over an hour (not as a push) after hydrating the patient, watch creatinine, slow the rate if urine output is low. Check the cannula is intact (the solution is alkaline and may cause phlebitis).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Oral</strong><p>Taken with water, keep to the times (it may be 5 times daily).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Zidovudine/Ganciclovir</strong><p>Weekly CBC at the start, report low blood cell counts.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Ribavirin</strong><p>Make sure pregnancy is prevented, and watch hemoglobin.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Gamma globulin</strong><p>Deep IM, after checking for allergy (IgA).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Precautions</strong><p>Herpes: gloves when handling lesions, and keep pregnant and immunocompromised people away.</p></div></div></div>\n<!--e-->[[slot:dis-3217-antiviral-rules|Antiviral rules — a diagram prepared by the site|/diseases/img/dis-3217-antiviral-rules.svg]]<h4>Additional nursing points</h4><ul><li>Mechanism: they interfere with the virus's ability to multiply inside the cell; they may be toxic to human cells and resistance may appear.</li><li>Use: CMV in transplant recipients, herpes 1 and 2 and shingles, HIV, influenza A and B, RSV, and hepatitis B and C.</li><li>Effects: nausea, vomiting, diarrhea, headache, rash, fever, insomnia.</li><li>Contraindications: hypersensitivity; cidofovir (Vistide) is not given with renal impairment or kidney-toxic drugs such as aminoglycosides; ribavirin is not given to someone with unstable heart disease and is category X in pregnancy.</li><li>Interactions: probenecid raises the antiviral level; cimetidine raises valacyclovir; ibuprofen raises adefovir; imipenem-cilastatin with ganciclovir increases seizure risk; anticholinergics with amantadine; theophylline rises with acyclovir.</li><li>Topical: do not exceed the prescribed amount, use a glove, cover the lesions, and no sexual contact during lesions; report burning, tingling, itching, or a worsening rash.</li><li>Sildenafil with some antivirals: risk of low blood pressure, visual disturbance, and prolonged erection.</li><li>Rise slowly from sitting (dizziness); report nervousness, tremor, speech disturbance, and depression.</li><li>Zanamivir (Relenza): every 12 hours for 5 days with a Diskhaler device; if a bronchodilator is prescribed, take it first; it may cause dizziness; it does not reduce transmission of infection to others.</li><li>Examples (for learning, check the leaflet): acyclovir (Zovirax) for herpes and shingles; oseltamivir (Tamiflu) 75 mg twice daily for 5 days.</li></ul><div class=\"cs-box cs-info\"><strong>Note:</strong> Doses and numbers are for learning; always verify with the physician/pharmacist (and the leaflet) before giving.</div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ لو:</strong><ul><li>قلة بول أو ارتفاع كرياتينين (Acyclovir/Ganciclovir)</li><li>حرارة وتقرح فم أو التهاب حلق (نقص كرات)</li><li>شحوب شديد أو كدمات</li><li>تخليط أو تشنج</li><li>حمل مع Ribavirin</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report if:</strong><ul><li>Low urine output or raised creatinine (Acyclovir/Ganciclovir)</li><li>Fever with mouth ulcers or sore throat (low blood cell counts)</li><li>Severe pallor or bruising</li><li>Confusion or seizure</li><li>Pregnancy with Ribavirin</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>كمل الدواء بالمواعيد حتى لو اتحسنت الأعراض.</li><li>اشرب سوائل كتير مع Acyclovir.</li><li>الأعراض الجديدة (حرارة، كدمات) بلغ بها.</li><li>Ribavirin ممنوع في الحمل: استخدم وسيلة منع حمل.</li><li>الوقاية: غسل اليدين والتطعيم.</li></ul>",
+   "en": "<ul><li>Complete the drug on schedule even if the symptoms improve.</li><li>Drink plenty of fluids with Acyclovir.</li><li>Report new symptoms (fever, bruising).</li><li>Ribavirin is forbidden in pregnancy: use a contraception method.</li><li>Prevention: hand washing and vaccination.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "مضادات الفيروسات: منع الدخول أو تثبيط الأحماض النووية",
+   "Acyclovir: هربس وجديري، فموي ووريدي وموضعي، ترطيب وكلى",
+   "Ribavirin: تشوهات جنينية وأنيميا",
+   "Ganciclovir: CMV في HIV، يثبط النخاع",
+   "Zidovudine وLamivudine: HIV (Retrovir، Zeffix، Epivir، Lamidine)",
+   "Amantadine الإنفلونزا A: لم يعد مفضلاً",
+   "Gamma globulin: وقاية الحصبة والتهاب الكبد"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>مضادات الفيروسات (Antiviral drugs) بتشتغل بطريقتين: <b>(1) منع التصاق/دخول الفيروس للخلية</b>، أو <b>(2) تثبيط تصنيع الأحماض النووية</b> للفيروس.</p><table><thead><tr><th>الآلية</th><th>الدواء</th><th>الاستخدام</th></tr></thead><tbody><tr><td>منع الدخول</td><td>Gamma globulin</td><td>عضل لمنع الحصبة والتهاب الكبد المعدي</td></tr><tr><td>منع الدخول</td><td>Amantadine</td><td>فموي: وقاية من الإنفلونزا A ومضاد باركنسون</td></tr><tr><td>تثبيط الأحماض النووية</td><td>Acyclovir</td><td>هربس وجديري</td></tr><tr><td></td><td>Ribavirin</td><td>فيروسات DNA وRNA</td></tr><tr><td></td><td>Ganciclovir</td><td>CMV</td></tr><tr><td></td><td>Zidovudine / Lamivudine</td><td>HIV</td></tr><tr><td></td><td>Methisoprinol</td><td>داعم</td></tr></tbody></table>\n<p>ملخص عملي بالأسماء التجارية وقواعد الأمان (الأطفال والحمل وG6PD): <a href=\"/diseases/dis-565\">دليل عملي للمضادات الحيوية</a>.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>Acyclovir: Prodrug تنشطه خلايا مصابة فقط ← Triphosphate ← نظير Deoxyguanosine ← يثبط DNA polymerase الفيروسي</li><li>Zidovudine: Prodrug ← Phosphorylated ← يثبط إنزيم النسخ العكسي (Reverse transcriptase)</li><li>Ribavirin: نظير نيوكليوزيد بيورين يثبط تصنيع DNA وRNA الفيروسات</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>الآثار الجانبية الأبرز</h4><ul><li>Zidovudine: نقص الكرات المحببة (Granulocytopenia) وأنيميا</li><li>Ganciclovir: تثبيط نخاع العظام</li><li>Ribavirin: أنيميا انحلالية وتشوهات جنين</li><li>Acyclovir: غثيان، سمية كلوية بالجرعات الوريدية العالية</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>احذر: Ribavirin مسبب لتشوهات جنينية (ممنوع في الحمل للمريضة والشريك). Amantadine لم يعد يُنصح به لعلاج الإنفلونزا A بسبب المقاومة؛ المفضل Oseltamivir (Tamiflu). Methisoprinol (Isoprinosine) أدلته محدودة كمحفز مناعة. علاج التهاب الكبد C اليوم بأدوية DAAs مثل Sofosbuvir وليس Ribavirin وحده.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>كرياتينين ووظائف كلى (Acyclovir وGanciclovir)</li><li>CBC (Zidovudine, Ganciclovir, Ribavirin)</li><li>وظائف الكبد</li><li>فحص الحمل قبل Ribavirin</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>1) منع الالتصاق أو دخول الخلية</h4><ul><li><b>Gamma globulin:</b> يقلل الاختراق، يُعطى عضلياً لمنع الحصبة أو التهاب الكبد المعدي</li><li><b>Amantadine:</b> فموي لوقاية الإنفلونزا A ومضاد باركنسون. أسماء: Adamine كبسول 100 · Amantine كبسول 100</li></ul><h4>2) تثبيط تصنيع الأحماض النووية</h4><table><thead><tr><th>الدواء</th><th>الخصائص</th><th>الأسماء التجارية والأشكال</th></tr></thead><tbody><tr><td>Acyclovir</td><td>Prodrug تنشطه الخلايا المصابة فقط ← Triphosphate ← نظير Deoxyguanosine ← يثبط DNA polymerase. فموي ووريدي وموضعي في الهربس البسيط والجديري/الحزام (Varicella-zoster)</td><td>Zovirax قرص 200/400 · شراب 400 مجم/5 مل · وريدي 250 مجم/فيال · Novirus كبسول 200/400 · شراب 200 · Acylovir كريم</td></tr><tr><td>Ribavirin</td><td>نظير نيوكليوزيد بيورين يقلل DNA وRNA الفيروسات</td><td>Viracure كبسول 200/400 · Virin 200/400 · Ribavirin كبسول 200 · Panvirin كبسول 200</td></tr><tr><td>Ganciclovir</td><td>شبيه Acyclovir؛ وريدي في عدوى CMV المهددة للحياة أو للبصر لدى نقص المناعة مثل HIV</td><td>Cymevene كبسول 250 · وريدي 500</td></tr><tr><td>Zidovudine</td><td>Prodrug ← فسفرة ← يثبط إنزيم النسخ العكسي. فموي للإيدز. قد يسبب نقص الكرات المحببة وأنيميا</td><td>Retrovir كبسول 100</td></tr><tr><td>Lamivudine</td><td>مثل Zidovudine</td><td>Zeffix قرص 100 · Epivir قرص 150 · Lamidine قرص 150</td></tr><tr><td>Methisoprinol</td><td>—</td><td>Isoprinosine قرص 500 · شراب 250</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الجرعات الشائعة للبالغ (بأمر الطبيب): Acyclovir 200 مجم 5 مرات/يوم أو 400 مجم 3 مرات للهربس البسيط، و800 مجم 5 مرات للحزام، ووريدي 5–10 مجم/كجم كل 8 ساعات لعدوى شديدة/تهاب مخ (مع ترطيب جيد). Zidovudine 300 مجم مرتين. Lamivudine 150 مجم مرتين أو 300 مجم يومياً لـHIV (100 مجم يومياً لـHBV). تعديل الكلى للـAcyclovir وGanciclovir.</p></div><ul><li>إن كان الدواء بجدول متناوب (أيام معينة)، يُحدَّد للمريض أيام الجرعة ويُستعمل تقويم لتتبعها.</li><li>إيقاف أدوية التهاب الكبد B قد يسبب انتكاسة حادة، فتُراقب وظائف الكبد عن قرب.</li><li>الاستشارة قبل القيادة أو الأعمال الدقيقة إن أثّر الدواء على اليقظة، والقيام ببطء لتجنب دوخة الوقوف.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اسأل</strong><p>حمل؟ كلى؟ حساسية؟ نقص مناعة؟</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Acyclovir وريدي</strong><p>سرّب على ساعة (لا دفعة) بعد ترطيب المريض، راقب الكرياتينين، قلل السرعة لو قلة بول. تأكد من سلامة الكانيولا (المحلول قلوي وقد يسبب التهاب الوريد).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الفموي</strong><p>يؤخذ مع الماء، التزم بالمواعيد (قد يكون 5 مرات يومياً).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Zidovudine/Ganciclovir</strong><p>CBC أسبوعياً في البداية، بلّغ نقص الكرات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Ribavirin</strong><p>تأكد من منع الحمل، وراقب الهيموجلوبين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Gamma globulin</strong><p>عضل عميق، بعد التأكد من الحساسية (IgA).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>احتياطات</strong><p>الهربس: قفازات للتعامل مع الآفات، والحامل وناقصي المناعة بعيد.</p></div></div></div>\n<!--nclex-p796-798-->[[slot:dis-3217-antiviral-rules|قواعد مضادات الفيروسات — رسم من إعداد الموقع|/diseases/img/dis-3217-antiviral-rules.svg]]<h4>نقاط إضافية للتمريض</h4><ul><li>الآلية: تتدخل في قدرة الفيروس على التكاثر داخل الخلية؛ وقد تكون سامة للخلايا البشرية وقد تظهر مقاومة.</li><li>الاستعمال: CMV لدى متلقي الزرع، الهربس 1 و2 والحزام الناري، HIV، الإنفلونزا A وB، RSV، والتهاب الكبد B وC.</li><li>آثار: غثيان، قيء، إسهال، صداع، طفح، حمى، أرق.</li><li>موانع: تحسس؛ cidofovir (Vistide) لا يُعطى مع القصور الكلوي أو أدوية سامة للكلى كالأمينوجليكوزيدات؛ ribavirin لا يُعطى لمن لديه مرض قلبي غير مستقر وهو فئة X في الحمل.</li><li>تداخلات: probenecid يرفع مستوى مضاد الفيروس؛ cimetidine يرفع valacyclovir؛ ibuprofen يرفع adefovir؛ imipenem-cilastatin مع ganciclovir يزيد خطر التشنج؛ anticholinergics مع amantadine؛ theophylline مع acyclovir يرتفع.</li><li>الموضعي: لا تزيد عن المقرر، استعمل قفازًا، غطِّ الآفات، ولا علاقة جنسية أثناء الآفات؛ أبلغ عن حرقان أو وخز أو حكة أو تفاقم الطفح.</li><li>sildenafil مع بعض مضادات الفيروسات: خطر هبوط ضغط واضطراب رؤية وانتصاب مطول.</li><li>قم ببطء من الجلوس (دوخة)؛ أبلغ عن عصبية وارتجاف واضطراب كلام واكتئاب.</li><li>Zanamivir (Relenza): كل 12 ساعة 5 أيام بجهاز Diskhaler؛ إن وُصف موسّع شعب فقبله؛ قد يسبب دوخة؛ لا يقلل انتقال العدوى للآخرين.</li><li>أمثلة (للتعلّم، راجع النشرة): acyclovir (Zovirax) للهربس والحزام؛ oseltamivir (Tamiflu) 75 مغ مرتين يوميًا لمدة 5 أيام.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ لو:</strong><ul><li>قلة بول أو ارتفاع كرياتينين (Acyclovir/Ganciclovir)</li><li>حرارة وتقرح فم أو التهاب حلق (نقص كرات)</li><li>شحوب شديد أو كدمات</li><li>تخليط أو تشنج</li><li>حمل مع Ribavirin</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>كمل الدواء بالمواعيد حتى لو اتحسنت الأعراض.</li><li>اشرب سوائل كتير مع Acyclovir.</li><li>الأعراض الجديدة (حرارة، كدمات) بلغ بها.</li><li>Ribavirin ممنوع في الحمل: استخدم وسيلة منع حمل.</li><li>الوقاية: غسل اليدين والتطعيم.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "مضادات الفيروسات: منع الدخول أو تثبيط الأحماض النووية",
-      "Acyclovir: هربس وجديري، فموي ووريدي وموضعي، ترطيب وكلى",
-      "Ribavirin: تشوهات جنينية وأنيميا",
-      "Ganciclovir: CMV في HIV، يثبط النخاع",
-      "Zidovudine وLamivudine: HIV (Retrovir، Zeffix، Epivir، Lamidine)",
-      "Amantadine الإنفلونزا A: لم يعد مفضلاً",
-      "Gamma globulin: وقاية الحصبة والتهاب الكبد"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "Acyclovir يُنشَّط بواسطة:"
-      },
-      "options": [
-        {
-          "ar": "الخلايا المصابة بالفيروس"
-        },
-        {
-          "ar": "الكبد"
-        },
-        {
-          "ar": "الكلى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لذلك سمية قليلة للخلايا السليمة."
-      }
-    },
-    {
-      "q": {
-        "ar": "الدواء المسبب لتشوهات الجنين:"
-      },
-      "options": [
-        {
-          "ar": "Ribavirin"
-        },
-        {
-          "ar": "Acyclovir"
-        },
-        {
-          "ar": "Gamma globulin"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "ممنوع في الحمل."
-      }
-    },
-    {
-      "q": {
-        "ar": "Zidovudine أثره الجانبي:"
-      },
-      "options": [
-        {
-          "ar": "نقص الكرات المحببة وأنيميا"
-        },
-        {
-          "ar": "سمية سمع"
-        },
-        {
-          "ar": "تشنج"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يحتاج CBC."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض يستعمل zanamivir ومعه موسّع شعب. الترتيب:"
-      },
-      "options": [
-        {
-          "ar": "موسّع الشعب أولًا"
-        },
-        {
-          "ar": "zanamivir أولًا"
-        },
-        {
-          "ar": "معًا في نفس الجهاز"
-        },
-        {
-          "ar": "لا فرق"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يُعطى موسّع الشعب قبل zanamivir."
-      }
-    },
-    {
-      "q": {
-        "ar": "acyclovir يُعطى لأجل:"
-      },
-      "options": [
-        {
-          "ar": "هربس وحزام ناري"
-        },
-        {
-          "ar": "التهاب رئوي بكتيري"
-        },
-        {
-          "ar": "فطريات الأظافر"
-        },
-        {
-          "ar": "ملاريا"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "-cyclovir لعلاج الهربس والحزام الناري."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "BNF: Antivirals; Aciclovir"
-    },
-    {
-      "title": "WHO/CDC: Influenza antiviral recommendations (oseltamivir)"
-    },
-    {
-      "title": "StatPearls: Acyclovir; Ganciclovir; Ribavirin"
-    }
+  "en": [
+   "Antivirals: prevent entry or inhibit nucleic acids",
+   "Acyclovir: herpes and chickenpox, oral, IV, and topical, hydration and kidneys",
+   "Ribavirin: fetal malformations and anemia",
+   "Ganciclovir: CMV in HIV, suppresses the marrow",
+   "Zidovudine and Lamivudine: HIV (Retrovir, Zeffix, Epivir, Lamidine)",
+   "Amantadine for influenza A: no longer preferred",
+   "Gamma globulin: prevention of measles and hepatitis"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "Acyclovir يُنشَّط بواسطة:",
+    "en": "Acyclovir is activated by:"
+   },
+   "options": [
+    {
+     "ar": "الخلايا المصابة بالفيروس",
+     "en": "Virus-infected cells"
+    },
+    {
+     "ar": "الكبد",
+     "en": "The liver"
+    },
+    {
+     "ar": "الكلى",
+     "en": "The kidneys"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لذلك سمية قليلة للخلايا السليمة.",
+    "en": "Hence little toxicity to healthy cells."
+   }
+  },
+  {
+   "q": {
+    "ar": "الدواء المسبب لتشوهات الجنين:",
+    "en": "The drug that causes fetal malformations:"
+   },
+   "options": [
+    {
+     "ar": "Ribavirin",
+     "en": "Ribavirin"
+    },
+    {
+     "ar": "Acyclovir",
+     "en": "Acyclovir"
+    },
+    {
+     "ar": "Gamma globulin",
+     "en": "Gamma globulin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ممنوع في الحمل.",
+    "en": "Forbidden in pregnancy."
+   }
+  },
+  {
+   "q": {
+    "ar": "Zidovudine أثره الجانبي:",
+    "en": "Zidovudine's side effect:"
+   },
+   "options": [
+    {
+     "ar": "نقص الكرات المحببة وأنيميا",
+     "en": "Granulocytopenia and anemia"
+    },
+    {
+     "ar": "سمية سمع",
+     "en": "Ototoxicity"
+    },
+    {
+     "ar": "تشنج",
+     "en": "Seizure"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يحتاج CBC.",
+    "en": "It needs a CBC."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض يستعمل zanamivir ومعه موسّع شعب. الترتيب:",
+    "en": "A patient uses zanamivir and also has a bronchodilator. The order:"
+   },
+   "options": [
+    {
+     "ar": "موسّع الشعب أولًا",
+     "en": "Bronchodilator first"
+    },
+    {
+     "ar": "zanamivir أولًا",
+     "en": "Zanamivir first"
+    },
+    {
+     "ar": "معًا في نفس الجهاز",
+     "en": "Together in the same device"
+    },
+    {
+     "ar": "لا فرق",
+     "en": "No difference"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يُعطى موسّع الشعب قبل zanamivir.",
+    "en": "The bronchodilator is given before zanamivir."
+   }
+  },
+  {
+   "q": {
+    "ar": "acyclovir يُعطى لأجل:",
+    "en": "Acyclovir is given for:"
+   },
+   "options": [
+    {
+     "ar": "هربس وحزام ناري",
+     "en": "Herpes and shingles"
+    },
+    {
+     "ar": "التهاب رئوي بكتيري",
+     "en": "Bacterial pneumonia"
+    },
+    {
+     "ar": "فطريات الأظافر",
+     "en": "Nail fungus"
+    },
+    {
+     "ar": "ملاريا",
+     "en": "Malaria"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "-cyclovir لعلاج الهربس والحزام الناري.",
+    "en": "-cyclovir treats herpes and shingles."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "BNF: Antivirals; Aciclovir"
+  },
+  {
+   "title": "WHO/CDC: Influenza antiviral recommendations (oseltamivir)"
+  },
+  {
+   "title": "StatPearls: Acyclovir; Ganciclovir; Ribavirin"
+  }
+ ]
 }

@@ -1,262 +1,333 @@
 {
-  "id": "dis-703",
-  "num": 703,
-  "system": "neuro",
-  "icon": "👁️",
-  "level": 3,
-  "title": {
-    "ar": "الوهن العضلي الوبيل (Myasthenia Gravis)",
-    "en": "Myasthenia Gravis"
+ "id": "dis-703",
+ "num": 703,
+ "system": "neuro",
+ "icon": "👁️",
+ "level": 3,
+ "title": {
+  "ar": "الوهن العضلي الوبيل (Myasthenia Gravis)",
+  "en": "Myasthenia Gravis"
+ },
+ "teaser": {
+  "ar": "ضعف يزيد آخر اليوم، تدلي جفن ومضغ وبلع: أزمة الوهن مقابل الأزمة الكولينية، وتوقيت الدواء والأكل.",
+  "en": "Weakness that worsens at the end of the day, ptosis, chewing and swallowing problems: myasthenic crisis versus cholinergic crisis, and the timing of medication and food."
+ },
+ "chips": [
+  {
+   "ar": "Pyridostigmine",
+   "en": "Pyridostigmine"
   },
-  "teaser": {
-    "ar": "ضعف يزيد آخر اليوم، تدلي جفن ومضغ وبلع: أزمة الوهن مقابل الأزمة الكولينية، وتوقيت الدواء والأكل."
+  {
+   "ar": "أزمة وهنية/كولينية",
+   "en": "Myasthenic/cholinergic crisis"
   },
-  "chips": [
-    {
-      "ar": "Pyridostigmine"
-    },
-    {
-      "ar": "أزمة وهنية/كولينية"
-    },
-    {
-      "ar": "Thymectomy"
-    }
+  {
+   "ar": "Thymectomy",
+   "en": "Thymectomy"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>الوهن العضلي (Myasthenia gravis) مرض مناعي ذاتي ينتج فيه الجسم أجساماً مضادة ترتبط بمستقبلات الأستيل كولين عند الوصلة العصبية العضلية، فتمنع انقباض العضلة. يصيب غالباً عضلات العين والوجه والشفتين واللسان والحلق والرقبة. أكثر عند الشابات، وأغلب المرضى لديهم تضخم في الغدة الزعترية (Thymus).</p>[[slot:dis-703-crisis|مقارنة بين الأزمة الوهنية والأزمة الكولينية|/diseases/img/dis-703-crisis.svg]]<p>الشكل الخفيف تدلي جفن فقط، والشديد ضعف عام يصل لعضلات التنفس والوفاة بفشل تنفسي.</p><h4>إضافات تغطي نقاط المراجعة</h4><p>مرض مناعي ذاتي يهاجم مستقبلات الأسيتيل كولين فتضعف العضلات. الأعراض: تدلي الجفن (Ptosis)، ازدواج الرؤية، صعوبة البلع والتنفس، وإرهاق مع أقل مجهود.</p>[[slot:dis-703-mg|ملخص MG — رسم من إعداد الموقع|/diseases/img/dis-703-mg.svg]]<h4>من المراجعة الشاملة</h4>[[slot:dis-2625-mg|الوهن العضلي — رسم من إعداد الموقع|/diseases/img/dis-2625-mg.svg]]",
+   "en": "<p>Myasthenia gravis is an autoimmune disease in which the body produces antibodies that bind to acetylcholine receptors at the neuromuscular junction, preventing muscle contraction. It usually affects the muscles of the eyes, face, lips, tongue, throat, and neck. It is more common in young women, and most patients have an enlarged thymus gland.</p>[[slot:dis-703-crisis|Comparison between myasthenic crisis and cholinergic crisis|/diseases/img/dis-703-crisis.svg]]<p>The mild form is ptosis only, and the severe form is generalized weakness reaching the breathing muscles and death from respiratory failure.</p><h4>Additions covering review points</h4><p>An autoimmune disease that attacks acetylcholine receptors so the muscles weaken. Symptoms: ptosis, double vision, difficulty swallowing and breathing, and fatigue with the slightest exertion.</p>[[slot:dis-703-mg|MG summary — illustration made for the site|/diseases/img/dis-703-mg.svg]]<h4>From the comprehensive review</h4>[[slot:dis-2625-mg|Myasthenia gravis — illustration made for the site|/diseases/img/dis-2625-mg.svg]]"
+  },
+  "causes": {
+   "ar": "<p>أجسام مضادة لمستقبلات الأستيل كولين (حوالي 80% من الحالات). الغدة الزعترية لها دور، وقد يوجد ورم زعتري (Thymoma). بعض الأدوية والعدوى تحرض النوبات.</p>",
+   "en": "<p>Antibodies against acetylcholine receptors (about 80% of cases). The thymus gland plays a role, and a thymoma may be present. Some drugs and infections trigger attacks.</p>"
+  },
+  "signs": {
+   "ar": "<ul><li>تدلي الجفن (Ptosis).</li><li>ازدواج الرؤية.</li><li>عدم إغلاق العين جيداً وجفافها.</li><li>صعوبة بلع (Dysphagia).</li><li>ضعف يزيد آخر النهار وبعد المجهود.</li><li>ضعف العضلات القريبة من الجذع.</li><li>إرهاق.</li><li>في المتقدم: فقدان تحكم بالبول والبراز وضيق نفس.</li></ul><h4>الأزمات</h4><table><thead><tr><th>الأزمة</th><th>السبب</th><th>الأعراض</th></tr></thead><tbody><tr><td>وهنية (Myasthenic)</td><td>نقص الدواء</td><td>نبض سريع، تنفس سريع، ضغط مرتفع، ازرقاق، قلة بول، سلس بول وبراز، فقدان منعكس البلع</td></tr><tr><td>كولينية (Cholinergic)</td><td>زيادة جرعة مثبطات الكولين</td><td>زغللة، غثيان وقيء وإسهال، مغص، شحوب، ارتعاش عضلات الوجه، حدقة ضيقة، ضغط منخفض</td></tr></tbody></table>",
+   "en": "<ul><li>Ptosis (drooping eyelid).</li><li>Double vision.</li><li>Incomplete eye closure and dryness.</li><li>Difficulty swallowing (dysphagia).</li><li>Weakness that worsens at the end of the day and after exertion.</li><li>Weakness of the muscles near the trunk.</li><li>Fatigue.</li><li>In advanced disease: loss of urine and stool control and shortness of breath.</li></ul><h4>Crises</h4><table><thead><tr><th>Crisis</th><th>Cause</th><th>Symptoms</th></tr></thead><tbody><tr><td>Myasthenic</td><td>Lack of the drug</td><td>Fast pulse, fast breathing, high blood pressure, cyanosis, low urine output, urinary and fecal incontinence, loss of the swallowing reflex</td></tr><tr><td>Cholinergic</td><td>Overdose of cholinesterase inhibitors</td><td>Blurred vision, nausea, vomiting and diarrhea, cramps, pallor, twitching of the facial muscles, small pupils, low blood pressure</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<ul><li>اختبار Tensilon (Edrophonium) أو Neostigmine: تحسن مؤقت لأنه يسمح للأستيل كولين بالارتباط. (اختبار Edrophonium توقف أو قلّ استعماله في كثير من الأماكن.)</li><li>أجسام مضادة لمستقبلات الأستيل كولين في أكثر من 80%.</li><li>EMG: ضعف الاستجابة مع التنبيه المتكرر.</li><li>CT الصدر لاستبعاد ورم زعتري.</li><li>اختبار الثلج (Ice pack) على الجفن اختبار سريع.</li></ul>",
+   "en": "<ul><li>Tensilon (Edrophonium) or Neostigmine test: temporary improvement because it lets acetylcholine bind. (The Edrophonium test has stopped or become less used in many places.)</li><li>Antibodies to acetylcholine receptors in more than 80%.</li><li>EMG: weak response with repeated stimulation.</li><li>Chest CT to exclude a thymoma.</li><li>Ice pack test on the eyelid is a quick test.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li>مثبطات كولين استريز: Pyridostigmine (الأكثر)، Neostigmine، Ambenonium؛ مفعولها قصير فتعطى عدة مرات يومياً.</li><li>مثبطات مناعة: Prednisone أو Dexamethasone في البداية، وAzathioprine وCyclophosphamide طويل الأمد (وأيضاً Mycophenolate).</li><li>دموع صناعية/مرهم ورقعة عين إن لم تُغلق.</li><li>تبديل البلازما أو IVIG.</li><li>BiPAP أو CPAP.</li><li>استئصال الغدة الزعترية (Thymectomy) خاصة مع الورم.</li><li>تجنب الأمينوجليكوزيدات (Gentamicin) والماكروليدات والكينولونات والمغنيسيوم الوريدي التي تفاقم الضعف.</li><li>غذاء عالي السعرات بقوام مناسب.</li></ul><p>ملاحظة: مثبطات الكولينستريز (مثل pyridostigmine وneostigmine) ترفع الأسيتيل كولين فتزيد الإفرازات اللعابية والقصبية، فراقب الإفرازات وخطر الاستنشاق. وتُعطى قبل الوجبات بوقت مناسب ليكون البلع أقوى.</p>",
+   "en": "<ul><li>Cholinesterase inhibitors: Pyridostigmine (the most used), Neostigmine, Ambenonium; their effect is short so they are given several times daily.</li><li>Immunosuppressants: Prednisone or Dexamethasone at first, and Azathioprine and Cyclophosphamide long term (and also Mycophenolate).</li><li>Artificial tears/ointment and an eye patch if the eye does not close.</li><li>Plasma exchange or IVIG.</li><li>BiPAP or CPAP.</li><li>Thymectomy especially with a tumor.</li><li>Avoid aminoglycosides (Gentamicin), macrolides, quinolones, and IV magnesium, which worsen weakness.</li><li>A high-calorie diet with a suitable texture.</li></ul><p>Note: cholinesterase inhibitors (such as pyridostigmine and neostigmine) raise acetylcholine and so increase salivary and bronchial secretions, so monitor secretions and the aspiration risk. They are given at a suitable time before meals so swallowing is stronger.</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الراحة</strong><p>فترات راحة متكررة وتنظيم الأنشطة في أول اليوم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>علامات حيوية</strong><p>قيّم التنفس: المعدل والجهد وعضلات مساعدة ولون الجلد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>منعكس البلع</strong><p>قبل الأكل والشرب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الدواء</strong><p>في موعده بالضبط (حتى 30 دقيقة قبل الأكل بحسب الأمر)؛ الوجبات بعد الدواء بساعة لتقليل خطر الاستنشاق بحسب المراجع، أو حسب بروتوكول القسم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>التواصل</strong><p>قد لا يستطيع المريض الضغط على الجرس أو يُسمع بالإنتركم: وفّر وسيلة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الوزن والتغذية</strong><p>سجّل الوزن والمدخول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>العين</strong><p>دموع صناعية، رقعة عند الحاجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تثقيف</strong><p>تجنب الحرارة الشديدة (الساونا)، الكحول يفاقم الأعراض، تعليم الشفط الفموي.</p></div></div></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>في الأزمة الوهنية: حماية المجرى الهوائي وجهّز التنبيب بجانب السرير، قدّم أطعمة شبه صلبة</li><li>أعطِ <strong>pyridostigmine قبل الوجبات</strong></li><li>تجنّب المحفزات (4 S): الإجهاد (Stress)، الشمس والحرارة (Sun)، المرض والعدوى (Sickness)، التدخين (Smoking)؛ تجنّب الزحام في موسم الإنفلونزا وخذ اللقاحات</li><li>سوار طبي للتنبيه</li><li>من تراه أولًا؟ مريض MG بصعوبة بلع وحرارة 38.7°م (100.7°F): خطر عدوى وفشل تنفسي.</li></ul><h4>من المراجعة الشاملة</h4><ul><li>Pyridostigmine قبل الوجبات؛ أغذية نصف صلبة؛ جهّز التنبيب.</li><li>الأولوية: مريض MG مع صعوبة بلع وحرارة 100.7°F.</li><li>تعليم: حماية المجرى عند البلع، سوار طبي، تجنب الزحام موسم الإنفلونزا، اللقاحات.</li></ul><p>من محفزات الأزمة (الضغوط): المجهود البدني والجراحة والحمل، والمرض أو العدوى (تجنب الزحام موسم الإنفلونزا وخذ اللقاحات)، والتدخين، والشمس. ويُنصح بارتداء سوار طبي (Medic alert).</p>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Rest</strong><p>Frequent rest periods and organizing activities early in the day.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Vital signs</strong><p>Assess breathing: rate, effort, accessory muscles, and skin color.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Swallowing reflex</strong><p>Before eating and drinking.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Medication</strong><p>Exactly on time (up to 30 minutes before eating per the order); meals an hour after the drug to reduce the aspiration risk, or per the unit protocol.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Communication</strong><p>The patient may be unable to press the call bell or be heard on the intercom: provide a means.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Weight and nutrition</strong><p>Record weight and intake.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Eyes</strong><p>Artificial tears, a patch when needed.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Education</strong><p>Avoid extreme heat (sauna), alcohol worsens symptoms, teach oral suctioning.</p></div></div></div><h4>Additions covering review points</h4><ul><li>In myasthenic crisis: protect the airway and prepare intubation at the bedside, offer semi-solid foods</li><li>Give <strong>pyridostigmine before meals</strong></li><li>Avoid triggers (4 S): stress, sun and heat, sickness and infection, smoking; avoid crowds in flu season and get vaccinated</li><li>A medical alert bracelet</li><li>Whom do you see first? An MG patient with difficulty swallowing and a temperature of 38.7°C (100.7°F): risk of infection and respiratory failure.</li></ul><h4>From the comprehensive review</h4><ul><li>Pyridostigmine before meals; semi-solid foods; prepare intubation.</li><li>Priority: an MG patient with difficulty swallowing and a temperature of 100.7°F.</li><li>Teaching: airway protection when swallowing, medical alert bracelet, avoid crowds in flu season, vaccines.</li></ul><p>Crisis triggers (stressors): physical exertion, surgery, pregnancy, illness or infection (avoid crowds in flu season and get vaccinated), smoking, and sun. Wearing a medical alert bracelet is advised.</p>"
+  },
+  "redflags": {
+   "ar": "<ul><li>ضيق نفس أو ضعف السعال</li><li>صعوبة بلع شديدة</li><li>تغير نمط الأعراض بعد الجرعة (كولينية)</li><li>حرارة وعدوى</li><li>دواء جديد (مضاد حيوي)</li></ul>",
+   "en": "<ul><li>Shortness of breath or weak cough</li><li>Severe difficulty swallowing</li><li>Change in the pattern of symptoms after a dose (cholinergic)</li><li>Fever and infection</li><li>A new drug (antibiotic)</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>التزم بمواعيد الدواء.</li><li>تجنب الحرارة الشديدة والكحول.</li><li>اسأل الصيدلي عن أي دواء جديد.</li><li>تعلم الشفط الفموي.</li></ul>",
+   "en": "<ul><li>Keep to the medication times.</li><li>Avoid extreme heat and alcohol.</li><li>Ask the pharmacist about any new drug.</li><li>Learn oral suctioning.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "أجسام مضادة لمستقبلات Ach.",
+   "ضعف يزيد آخر اليوم، تدلي جفن، بلع.",
+   "أزمة وهنية (نقص دواء) مقابل كولينية (زيادة).",
+   "Pyridostigmine الأساس.",
+   "تجنب الأمينوجليكوزيدات.",
+   "الدواء قبل الأكل بوقت.",
+   "أولوية الأزمة: المجرى الهوائي",
+   "البيريدوستجمين قبل الوجبات",
+   "المحفزات: الإجهاد والشمس والمرض والتدخين"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>الوهن العضلي (Myasthenia gravis) مرض مناعي ذاتي ينتج فيه الجسم أجساماً مضادة ترتبط بمستقبلات الأستيل كولين عند الوصلة العصبية العضلية، فتمنع انقباض العضلة. يصيب غالباً عضلات العين والوجه والشفتين واللسان والحلق والرقبة. أكثر عند الشابات، وأغلب المرضى لديهم تضخم في الغدة الزعترية (Thymus).</p>[[slot:dis-703-crisis|مقارنة بين الأزمة الوهنية والأزمة الكولينية|/diseases/img/dis-703-crisis.svg]]<p>الشكل الخفيف تدلي جفن فقط، والشديد ضعف عام يصل لعضلات التنفس والوفاة بفشل تنفسي.</p><h4>إضافات تغطي نقاط المراجعة</h4><p>مرض مناعي ذاتي يهاجم مستقبلات الأسيتيل كولين فتضعف العضلات. الأعراض: تدلي الجفن (Ptosis)، ازدواج الرؤية، صعوبة البلع والتنفس، وإرهاق مع أقل مجهود.</p>[[slot:dis-703-mg|ملخص MG — رسم من إعداد الموقع|/diseases/img/dis-703-mg.svg]]<h4>من المراجعة الشاملة</h4>[[slot:dis-2625-mg|الوهن العضلي — رسم من إعداد الموقع|/diseases/img/dis-2625-mg.svg]]"
-    },
-    "causes": {
-      "ar": "<p>أجسام مضادة لمستقبلات الأستيل كولين (حوالي 80% من الحالات). الغدة الزعترية لها دور، وقد يوجد ورم زعتري (Thymoma). بعض الأدوية والعدوى تحرض النوبات.</p>"
-    },
-    "signs": {
-      "ar": "<ul><li>تدلي الجفن (Ptosis).</li><li>ازدواج الرؤية.</li><li>عدم إغلاق العين جيداً وجفافها.</li><li>صعوبة بلع (Dysphagia).</li><li>ضعف يزيد آخر النهار وبعد المجهود.</li><li>ضعف العضلات القريبة من الجذع.</li><li>إرهاق.</li><li>في المتقدم: فقدان تحكم بالبول والبراز وضيق نفس.</li></ul><h4>الأزمات</h4><table><thead><tr><th>الأزمة</th><th>السبب</th><th>الأعراض</th></tr></thead><tbody><tr><td>وهنية (Myasthenic)</td><td>نقص الدواء</td><td>نبض سريع، تنفس سريع، ضغط مرتفع، ازرقاق، قلة بول، سلس بول وبراز، فقدان منعكس البلع</td></tr><tr><td>كولينية (Cholinergic)</td><td>زيادة جرعة مثبطات الكولين</td><td>زغللة، غثيان وقيء وإسهال، مغص، شحوب، ارتعاش عضلات الوجه، حدقة ضيقة، ضغط منخفض</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<ul><li>اختبار Tensilon (Edrophonium) أو Neostigmine: تحسن مؤقت لأنه يسمح للأستيل كولين بالارتباط. (اختبار Edrophonium توقف أو قلّ استعماله في كثير من الأماكن.)</li><li>أجسام مضادة لمستقبلات الأستيل كولين في أكثر من 80%.</li><li>EMG: ضعف الاستجابة مع التنبيه المتكرر.</li><li>CT الصدر لاستبعاد ورم زعتري.</li><li>اختبار الثلج (Ice pack) على الجفن اختبار سريع.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li>مثبطات كولين استريز: Pyridostigmine (الأكثر)، Neostigmine، Ambenonium؛ مفعولها قصير فتعطى عدة مرات يومياً.</li><li>مثبطات مناعة: Prednisone أو Dexamethasone في البداية، وAzathioprine وCyclophosphamide طويل الأمد (وأيضاً Mycophenolate).</li><li>دموع صناعية/مرهم ورقعة عين إن لم تُغلق.</li><li>تبديل البلازما أو IVIG.</li><li>BiPAP أو CPAP.</li><li>استئصال الغدة الزعترية (Thymectomy) خاصة مع الورم.</li><li>تجنب الأمينوجليكوزيدات (Gentamicin) والماكروليدات والكينولونات والمغنيسيوم الوريدي التي تفاقم الضعف.</li><li>غذاء عالي السعرات بقوام مناسب.</li></ul><p>ملاحظة: مثبطات الكولينستريز (مثل pyridostigmine وneostigmine) ترفع الأسيتيل كولين فتزيد الإفرازات اللعابية والقصبية، فراقب الإفرازات وخطر الاستنشاق. وتُعطى قبل الوجبات بوقت مناسب ليكون البلع أقوى.</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الراحة</strong><p>فترات راحة متكررة وتنظيم الأنشطة في أول اليوم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>علامات حيوية</strong><p>قيّم التنفس: المعدل والجهد وعضلات مساعدة ولون الجلد.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>منعكس البلع</strong><p>قبل الأكل والشرب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الدواء</strong><p>في موعده بالضبط (حتى 30 دقيقة قبل الأكل بحسب الأمر)؛ الوجبات بعد الدواء بساعة لتقليل خطر الاستنشاق بحسب المراجع، أو حسب بروتوكول القسم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>التواصل</strong><p>قد لا يستطيع المريض الضغط على الجرس أو يُسمع بالإنتركم: وفّر وسيلة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الوزن والتغذية</strong><p>سجّل الوزن والمدخول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>العين</strong><p>دموع صناعية، رقعة عند الحاجة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>تثقيف</strong><p>تجنب الحرارة الشديدة (الساونا)، الكحول يفاقم الأعراض، تعليم الشفط الفموي.</p></div></div></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>في الأزمة الوهنية: حماية المجرى الهوائي وجهّز التنبيب بجانب السرير، قدّم أطعمة شبه صلبة</li><li>أعطِ <strong>pyridostigmine قبل الوجبات</strong></li><li>تجنّب المحفزات (4 S): الإجهاد (Stress)، الشمس والحرارة (Sun)، المرض والعدوى (Sickness)، التدخين (Smoking)؛ تجنّب الزحام في موسم الإنفلونزا وخذ اللقاحات</li><li>سوار طبي للتنبيه</li><li>من تراه أولًا؟ مريض MG بصعوبة بلع وحرارة 38.7°م (100.7°F): خطر عدوى وفشل تنفسي.</li></ul><h4>من المراجعة الشاملة</h4><ul><li>Pyridostigmine قبل الوجبات؛ أغذية نصف صلبة؛ جهّز التنبيب.</li><li>الأولوية: مريض MG مع صعوبة بلع وحرارة 100.7°F.</li><li>تعليم: حماية المجرى عند البلع، سوار طبي، تجنب الزحام موسم الإنفلونزا، اللقاحات.</li></ul><p>من محفزات الأزمة (الضغوط): المجهود البدني والجراحة والحمل، والمرض أو العدوى (تجنب الزحام موسم الإنفلونزا وخذ اللقاحات)، والتدخين، والشمس. ويُنصح بارتداء سوار طبي (Medic alert).</p>"
-    },
-    "redflags": {
-      "ar": "<ul><li>ضيق نفس أو ضعف السعال</li><li>صعوبة بلع شديدة</li><li>تغير نمط الأعراض بعد الجرعة (كولينية)</li><li>حرارة وعدوى</li><li>دواء جديد (مضاد حيوي)</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>التزم بمواعيد الدواء.</li><li>تجنب الحرارة الشديدة والكحول.</li><li>اسأل الصيدلي عن أي دواء جديد.</li><li>تعلم الشفط الفموي.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "أجسام مضادة لمستقبلات Ach.",
-      "ضعف يزيد آخر اليوم، تدلي جفن، بلع.",
-      "أزمة وهنية (نقص دواء) مقابل كولينية (زيادة).",
-      "Pyridostigmine الأساس.",
-      "تجنب الأمينوجليكوزيدات.",
-      "الدواء قبل الأكل بوقت.",
-      "أولوية الأزمة: المجرى الهوائي",
-      "البيريدوستجمين قبل الوجبات",
-      "المحفزات: الإجهاد والشمس والمرض والتدخين"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أزمة وهنية سببها:"
-      },
-      "options": [
-        {
-          "ar": "نقص الدواء"
-        },
-        {
-          "ar": "زيادة الدواء"
-        },
-        {
-          "ar": "نقص السكر"
-        },
-        {
-          "ar": "برد"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نقص مثبطات الكولين."
-      }
-    },
-    {
-      "q": {
-        "ar": "أزمة كولينية علامتها:"
-      },
-      "options": [
-        {
-          "ar": "حدقة ضيقة"
-        },
-        {
-          "ar": "حدقة متسعة"
-        },
-        {
-          "ar": "جفاف"
-        },
-        {
-          "ar": "ضغط مرتفع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "زيادة الكولين."
-      }
-    },
-    {
-      "q": {
-        "ar": "أحد الأدوية المتجنبة:"
-      },
-      "options": [
-        {
-          "ar": "Gentamicin"
-        },
-        {
-          "ar": "Paracetamol"
-        },
-        {
-          "ar": "Vitamin"
-        },
-        {
-          "ar": "Iron"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تفاقم الضعف."
-      }
-    },
-    {
-      "q": {
-        "ar": "الورم الزعتري:"
-      },
-      "options": [
-        {
-          "ar": "Thymoma"
-        },
-        {
-          "ar": "Meningioma"
-        },
-        {
-          "ar": "Glioma"
-        },
-        {
-          "ar": "Adenoma"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يستأصل الزعتر."
-      }
-    },
-    {
-      "q": {
-        "ar": "الضعف يزيد:"
-      },
-      "options": [
-        {
-          "ar": "آخر اليوم"
-        },
-        {
-          "ar": "الصباح"
-        },
-        {
-          "ar": "فجراً"
-        },
-        {
-          "ar": "لا يتغير"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "مع الإجهاد."
-      }
-    },
-    {
-      "q": {
-        "ar": "وقت إعطاء pyridostigmine:"
-      },
-      "options": [
-        {
-          "ar": "قبل الوجبات"
-        },
-        {
-          "ar": "بعد الأكل"
-        },
-        {
-          "ar": "عند النوم فقط"
-        },
-        {
-          "ar": "لا يُعطى"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "لتقوية عضلات البلع أثناء الأكل."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي المرضى تراه أولًا؟"
-      },
-      "options": [
-        {
-          "ar": "MG مع صعوبة بلع وحمى"
-        },
-        {
-          "ar": "MG مستقر"
-        },
-        {
-          "ar": "MG بعد العلاج"
-        },
-        {
-          "ar": "لا أحد"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "العدوى وصعوبة البلع قد تسبب أزمة وفشلًا تنفسيًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مريض يُرى أولًا؟"
-      },
-      "options": [
-        {
-          "ar": "MG مع صعوبة بلع وحرارة 100.7"
-        },
-        {
-          "ar": "MG مع تعب"
-        },
-        {
-          "ar": "MG يتناول الدواء"
-        },
-        {
-          "ar": "MG بدون أعراض"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر استنشاق وعدوى وأزمة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "StatPearls – Neurology topics (NCBI Bookshelf)"
-    },
-    {
-      "title": "MSD Manual Professional – Neurologic Disorders"
-    },
-    {
-      "title": "AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke (2019 update; 2026 revision)"
-    }
+  "en": [
+   "Antibodies to ACh receptors.",
+   "Weakness worse at the end of the day, ptosis, swallowing.",
+   "Myasthenic crisis (lack of drug) versus cholinergic (excess).",
+   "Pyridostigmine is the mainstay.",
+   "Avoid aminoglycosides.",
+   "The drug is taken before eating.",
+   "Crisis priority: the airway",
+   "Pyridostigmine before meals",
+   "Triggers: stress, sun, sickness, and smoking"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أزمة وهنية سببها:",
+    "en": "A myasthenic crisis is caused by:"
+   },
+   "options": [
+    {
+     "ar": "نقص الدواء",
+     "en": "Lack of the drug"
+    },
+    {
+     "ar": "زيادة الدواء",
+     "en": "Excess of the drug"
+    },
+    {
+     "ar": "نقص السكر",
+     "en": "Low sugar"
+    },
+    {
+     "ar": "برد",
+     "en": "A cold"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نقص مثبطات الكولين.",
+    "en": "Lack of cholinesterase inhibitors."
+   }
+  },
+  {
+   "q": {
+    "ar": "أزمة كولينية علامتها:",
+    "en": "A sign of a cholinergic crisis:"
+   },
+   "options": [
+    {
+     "ar": "حدقة ضيقة",
+     "en": "Small pupils"
+    },
+    {
+     "ar": "حدقة متسعة",
+     "en": "Dilated pupils"
+    },
+    {
+     "ar": "جفاف",
+     "en": "Dryness"
+    },
+    {
+     "ar": "ضغط مرتفع",
+     "en": "High blood pressure"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "زيادة الكولين.",
+    "en": "Excess cholinergic activity."
+   }
+  },
+  {
+   "q": {
+    "ar": "أحد الأدوية المتجنبة:",
+    "en": "One of the drugs to avoid:"
+   },
+   "options": [
+    {
+     "ar": "Gentamicin",
+     "en": "Gentamicin"
+    },
+    {
+     "ar": "Paracetamol",
+     "en": "Paracetamol"
+    },
+    {
+     "ar": "Vitamin",
+     "en": "Vitamin"
+    },
+    {
+     "ar": "Iron",
+     "en": "Iron"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تفاقم الضعف.",
+    "en": "It worsens weakness."
+   }
+  },
+  {
+   "q": {
+    "ar": "الورم الزعتري:",
+    "en": "The thymus tumor:"
+   },
+   "options": [
+    {
+     "ar": "Thymoma",
+     "en": "Thymoma"
+    },
+    {
+     "ar": "Meningioma",
+     "en": "Meningioma"
+    },
+    {
+     "ar": "Glioma",
+     "en": "Glioma"
+    },
+    {
+     "ar": "Adenoma",
+     "en": "Adenoma"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يستأصل الزعتر.",
+    "en": "The thymus is removed."
+   }
+  },
+  {
+   "q": {
+    "ar": "الضعف يزيد:",
+    "en": "Weakness worsens:"
+   },
+   "options": [
+    {
+     "ar": "آخر اليوم",
+     "en": "At the end of the day"
+    },
+    {
+     "ar": "الصباح",
+     "en": "In the morning"
+    },
+    {
+     "ar": "فجراً",
+     "en": "At dawn"
+    },
+    {
+     "ar": "لا يتغير",
+     "en": "It does not change"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "مع الإجهاد.",
+    "en": "With exertion."
+   }
+  },
+  {
+   "q": {
+    "ar": "وقت إعطاء pyridostigmine:",
+    "en": "When to give pyridostigmine:"
+   },
+   "options": [
+    {
+     "ar": "قبل الوجبات",
+     "en": "Before meals"
+    },
+    {
+     "ar": "بعد الأكل",
+     "en": "After eating"
+    },
+    {
+     "ar": "عند النوم فقط",
+     "en": "At bedtime only"
+    },
+    {
+     "ar": "لا يُعطى",
+     "en": "It is not given"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "لتقوية عضلات البلع أثناء الأكل.",
+    "en": "To strengthen the swallowing muscles during eating."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي المرضى تراه أولًا؟",
+    "en": "Which patient do you see first?"
+   },
+   "options": [
+    {
+     "ar": "MG مع صعوبة بلع وحمى",
+     "en": "MG with difficulty swallowing and fever"
+    },
+    {
+     "ar": "MG مستقر",
+     "en": "Stable MG"
+    },
+    {
+     "ar": "MG بعد العلاج",
+     "en": "MG after treatment"
+    },
+    {
+     "ar": "لا أحد",
+     "en": "No one"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "العدوى وصعوبة البلع قد تسبب أزمة وفشلًا تنفسيًا.",
+    "en": "Infection and difficulty swallowing may cause a crisis and respiratory failure."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مريض يُرى أولًا؟",
+    "en": "Which patient is seen first?"
+   },
+   "options": [
+    {
+     "ar": "MG مع صعوبة بلع وحرارة 100.7",
+     "en": "MG with difficulty swallowing and a temperature of 100.7"
+    },
+    {
+     "ar": "MG مع تعب",
+     "en": "MG with fatigue"
+    },
+    {
+     "ar": "MG يتناول الدواء",
+     "en": "MG taking the drug"
+    },
+    {
+     "ar": "MG بدون أعراض",
+     "en": "MG without symptoms"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر استنشاق وعدوى وأزمة.",
+    "en": "Risk of aspiration, infection, and crisis."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "StatPearls – Neurology topics (NCBI Bookshelf)"
+  },
+  {
+   "title": "MSD Manual Professional – Neurologic Disorders"
+  },
+  {
+   "title": "AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke (2019 update; 2026 revision)"
+  }
+ ]
 }

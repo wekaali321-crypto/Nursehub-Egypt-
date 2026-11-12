@@ -1,176 +1,223 @@
 {
-  "id": "dis-658",
-  "num": 658,
-  "system": "infect",
-  "icon": "🤒",
-  "level": 1,
-  "title": {
-    "ar": "الحمى الغدية (كثرة الوحيدات / Mononucleosis)",
-    "en": "Infectious Mononucleosis"
+ "id": "dis-658",
+ "num": 658,
+ "system": "infect",
+ "icon": "🤒",
+ "level": 1,
+ "title": {
+  "ar": "الحمى الغدية (كثرة الوحيدات / Mononucleosis)",
+  "en": "Infectious Mononucleosis"
+ },
+ "teaser": {
+  "ar": "ألم حلق وحمى وغدد منتفخة عند شاب: EBV، اختبار Monospot، تجنب الأموكسيسيلين، ومنع الرياضة العنيفة بسبب الطحال.",
+  "en": "Sore throat, fever, and swollen glands in a young person: EBV, the Monospot test, avoiding amoxicillin, and banning strenuous sport because of the spleen."
+ },
+ "chips": [
+  {
+   "ar": "EBV",
+   "en": "EBV"
   },
-  "teaser": {
-    "ar": "ألم حلق وحمى وغدد منتفخة عند شاب: EBV، اختبار Monospot، تجنب الأموكسيسيلين، ومنع الرياضة العنيفة بسبب الطحال."
+  {
+   "ar": "Monospot",
+   "en": "Monospot"
   },
-  "chips": [
-    {
-      "ar": "EBV"
-    },
-    {
-      "ar": "Monospot"
-    },
-    {
-      "ar": "حماية الطحال"
-    }
+  {
+   "ar": "حماية الطحال",
+   "en": "Spleen protection"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>متلازمة فيروسية: التهاب حلق، تضخم غدد لمفاوية، وحمى، ويصاحبها أحياناً طفح. غالباً بسبب <b>فيروس إبشتاين–بار (EBV)</b> وأحياناً فيروسات أخرى (CMV). الطحال قد يتضخم بسبب احتباس الخلايا أثناء الاستجابة المناعية. ينتقل بالمخالطة (اللعاب — «مرض التقبيل»). الإنذار جيد والشفاء غالباً دون مضاعفات لأنه مرض شباب.</p><div class=\"cs-stats\"><div><b>2–4 أسابيع</b><span>مدة الأعراض</span></div><div><b>4–6 أسابيع</b><span>حظر الرياضة العنيفة</span></div><div><b>1–2 مم</b><span>تضخم الطحال محتمل</span></div></div>",
+   "en": "<p>A viral syndrome: sore throat, enlarged lymph nodes, and fever, sometimes accompanied by a rash. Usually caused by <b>Epstein–Barr virus (EBV)</b> and sometimes other viruses (CMV). The spleen may enlarge because of cell trapping during the immune response. It spreads by close contact (saliva — \"the kissing disease\"). The prognosis is good and recovery is usually without complications because it is a disease of young people.</p><div class=\"cs-stats\"><div><b>2–4 weeks</b><span>Duration of symptoms</span></div><div><b>4–6 weeks</b><span>Ban on strenuous sport</span></div><div><b>1–2 mm</b><span>Possible spleen enlargement</span></div></div>"
+  },
+  "causes": {
+   "ar": "<ul><li>EBV (الأشهر)، CMV، Toxoplasma.</li><li>انتقال اللعاب والمخالطة والأواني المشتركة.</li><li>التهاب بكتيري ثانوي بالعقدية (Streptococcus) شائع.</li></ul>",
+   "en": "<ul><li>EBV (the most common), CMV, Toxoplasma.</li><li>Transmission by saliva, contact, and shared utensils.</li><li>Secondary bacterial streptococcal infection is common.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>توعك عام (Malaise) وإجهاد شديد.</li><li>حمى.</li><li>آلام عضلية.</li><li>صداع.</li><li>التهاب حلق مع لوزتين متضخمتين ومفرزات.</li><li>عقد رقبة خلفية، تضخم طحال وأحياناً كبد، طفح (بالذات بعد الأموكسيسيلين).</li></ul>",
+   "en": "<ul><li>General malaise and severe fatigue.</li><li>Fever.</li><li>Muscle aches.</li><li>Headache.</li><li>Sore throat with enlarged tonsils and exudates.</li><li>Posterior cervical nodes, enlarged spleen and sometimes liver, rash (especially after amoxicillin).</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li><b>Monospot أو اختبار الأجسام المضادة غير المتجانسة (Heterophil)</b> للتأكد من EBV (قد يكون سلبياً في أول أسبوع).</li><li>CBC: كثرة لمفاويات غير نمطية (Atypical lymphocytes)، كيمياء ووظائف كبد.</li><li>مسحة حلق/مزرعة للعقدية.</li><li>EBV-VCA IgM إذا Monospot سلبي.</li></ul>",
+   "en": "<ul><li><b>Monospot or the heterophil antibody test</b> to confirm EBV (may be negative in the first week).</li><li>CBC: atypical lymphocytosis, chemistry and liver function.</li><li>Throat swab/culture for streptococcus.</li><li>EBV-VCA IgM if the Monospot is negative.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<p>داعم: راحة وسوائل ومسكنات (Paracetamol/NSAIDs).</p><ul><li><b>البنسلين أو الإريثروميسين</b> للالتهاب العقدي المصاحب.</li><li><b>تجنب الأموكسيسيلين/الأمبيسيلين</b>: يسبب طفح شديد في الحمى الغدية.</li><li>الكورتيزون في حالات الانسداد الشديد للمجرى الهوائي أو فقر الدم الانحلالي.</li><li>لا مضادات فيروسات روتينية.</li></ul>",
+   "en": "<p>Supportive: rest, fluids, and analgesics (Paracetamol/NSAIDs).</p><ul><li><b>Penicillin or erythromycin</b> for accompanying streptococcal infection.</li><li><b>Avoid amoxicillin/ampicillin</b>: it causes a severe rash in infectious mononucleosis.</li><li>Cortisone in cases of severe airway obstruction or hemolytic anemia.</li><li>No routine antivirals.</li></ul>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الراحة</strong><p>شجّع الراحة الكافية وتخفيف النشاط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>السوائل والتغذية</strong><p>سوائل كافية وأغذية لينة (التهاب حلق).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الحرارة</strong><p>قيس العلامات الحيوية، سيطر على الحرارة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مسحة حلق</strong><p>لو مطلوب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>المسكنات</strong><p>لألم الحلق والعضلات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>حماية الطحال</strong><p>تجنب الرياضات التصادمية ورفع الأثقال 4–6 أسابيع لتجنب تمزقه.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>إجهاد • عدم تحمل النشاط • ضعف الحركة.</p></div>\n<h4>مراجعة NCLEX</h4><ul><li>ينتقل باللعاب (مشاركة المشروبات والتقبيل) — يسمى مرض التقبيل</li><li>يسببه Epstein-Barr؛ ينتشر بالجهاز اللمفي وتبقى العدوى مدى الحياة مع إعادة تنشيط دورية</li><li>مضاعفات خطيرة: تضخم العقد وانسداد الهواء (صرير)، تضخم الطحال وألم بطن وتمزق الطحال، تضخم الكبد</li><li>لا مضادات حيوية (فيروس)، راحة وسوائل، تجنب المجهود والرياضات الاحتكاكية</li><li>فهم صحيح: \"أشرب سوائل كثيرة، أتجنب كرة القدم أثناء المرض، أرتاح كثيرًا\"</li></ul><!--aud0651-h--><h4>إضافة: المرض الخامس والتثقيف</h4><p>المرض الخامس (Erythema infectiosum) فيروسي سببه Parvovirus B19، أعراضه طفح أحمر بالخدين وألم مفاصل، ولا يُعطى فيه مضاد حيوي؛ يكفي الراحة والسوائل. بعد ظهور الطفح والأعراض لم يعد الطفل معديًا. تثقيف الـ Mono: اشرب سوائل كثيرة، تجنب كرة القدم والرياضات التصادمية، وارتح كثيرًا (يدل على فهم سليم).</p>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Rest</strong><p>Encourage adequate rest and reduced activity.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Fluids and nutrition</strong><p>Enough fluids and soft foods (sore throat).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Temperature</strong><p>Measure vital signs, control the fever.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Throat swab</strong><p>If required.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Analgesics</strong><p>For throat and muscle pain.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Protect the spleen</strong><p>Avoid contact sports and weight lifting for 4–6 weeks to avoid its rupture.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Nursing diagnoses</strong><p>Fatigue • activity intolerance • impaired mobility.</p></div>\n<h4>Review points</h4><ul><li>Transmitted by saliva (sharing drinks and kissing) — called the kissing disease</li><li>Caused by Epstein-Barr; spreads through the lymphatic system and the infection remains for life with periodic reactivation</li><li>Serious complications: enlarged nodes and airway obstruction (stridor), enlarged spleen with abdominal pain and splenic rupture, enlarged liver</li><li>No antibiotics (virus), rest and fluids, avoid exertion and contact sports</li><li>Correct understanding: \"I will drink plenty of fluids, avoid football while ill, and rest a lot\"</li></ul><!--aud0651-h--><h4>Addition: fifth disease and education</h4><p>Fifth disease (erythema infectiosum) is viral, caused by Parvovirus B19, with symptoms of a red rash on the cheeks and joint pain, and no antibiotic is given; rest and fluids are enough. After the rash and symptoms appear, the child is no longer contagious. Mono education: drink plenty of fluids, avoid football and contact sports, and rest a lot (shows correct understanding).</p>"
+  },
+  "redflags": {
+   "ar": "<ul><li><b>ألم شديد مفاجئ بالبطن أعلى اليسار أو الكتف (تمزق الطحال)</b> = طوارئ.</li><li>صعوبة بلع أو تنفس (تورم لوزتين).</li><li>اصفرار أو بول داكن.</li><li>حرارة عالية مستمرة أكثر من أسبوعين.</li></ul>",
+   "en": "<ul><li><b>Sudden severe upper left abdominal or shoulder pain (splenic rupture)</b> = emergency.</li><li>Difficulty swallowing or breathing (tonsil swelling).</li><li>Jaundice or dark urine.</li><li>High fever persisting more than two weeks.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>راحة وسوائل.</li><li>لا ممارسة رياضات عنيفة 4–6 أسابيع.</li><li>تجنب مشاركة الأواني والتقبيل خلال المرض.</li><li>لا تأخذ مضاد حيوي إلا بوصفة.</li></ul>",
+   "en": "<ul><li>Rest and fluids.</li><li>No strenuous sport for 4–6 weeks.</li><li>Avoid sharing utensils and kissing during the illness.</li><li>Do not take an antibiotic except by prescription.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "EBV: حلق + غدد + حمى + إجهاد.",
+   "Monospot أو Heterophil؛ كثرة لمفاويات غير نمطية.",
+   "داعم: راحة وسوائل وmسكنات.",
+   "تجنب الأموكسيسيلين (طفح).",
+   "حماية الطحال من الصدمات 4–6 أسابيع.",
+   "ألم بطن علوي أيسر مفاجئ = تمزق طحال.",
+   "لا مضادات حيوية في Mono"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>متلازمة فيروسية: التهاب حلق، تضخم غدد لمفاوية، وحمى، ويصاحبها أحياناً طفح. غالباً بسبب <b>فيروس إبشتاين–بار (EBV)</b> وأحياناً فيروسات أخرى (CMV). الطحال قد يتضخم بسبب احتباس الخلايا أثناء الاستجابة المناعية. ينتقل بالمخالطة (اللعاب — «مرض التقبيل»). الإنذار جيد والشفاء غالباً دون مضاعفات لأنه مرض شباب.</p><div class=\"cs-stats\"><div><b>2–4 أسابيع</b><span>مدة الأعراض</span></div><div><b>4–6 أسابيع</b><span>حظر الرياضة العنيفة</span></div><div><b>1–2 مم</b><span>تضخم الطحال محتمل</span></div></div>"
-    },
-    "causes": {
-      "ar": "<ul><li>EBV (الأشهر)، CMV، Toxoplasma.</li><li>انتقال اللعاب والمخالطة والأواني المشتركة.</li><li>التهاب بكتيري ثانوي بالعقدية (Streptococcus) شائع.</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>توعك عام (Malaise) وإجهاد شديد.</li><li>حمى.</li><li>آلام عضلية.</li><li>صداع.</li><li>التهاب حلق مع لوزتين متضخمتين ومفرزات.</li><li>عقد رقبة خلفية، تضخم طحال وأحياناً كبد، طفح (بالذات بعد الأموكسيسيلين).</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li><b>Monospot أو اختبار الأجسام المضادة غير المتجانسة (Heterophil)</b> للتأكد من EBV (قد يكون سلبياً في أول أسبوع).</li><li>CBC: كثرة لمفاويات غير نمطية (Atypical lymphocytes)، كيمياء ووظائف كبد.</li><li>مسحة حلق/مزرعة للعقدية.</li><li>EBV-VCA IgM إذا Monospot سلبي.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<p>داعم: راحة وسوائل ومسكنات (Paracetamol/NSAIDs).</p><ul><li><b>البنسلين أو الإريثروميسين</b> للالتهاب العقدي المصاحب.</li><li><b>تجنب الأموكسيسيلين/الأمبيسيلين</b>: يسبب طفح شديد في الحمى الغدية.</li><li>الكورتيزون في حالات الانسداد الشديد للمجرى الهوائي أو فقر الدم الانحلالي.</li><li>لا مضادات فيروسات روتينية.</li></ul>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>الراحة</strong><p>شجّع الراحة الكافية وتخفيف النشاط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>السوائل والتغذية</strong><p>سوائل كافية وأغذية لينة (التهاب حلق).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الحرارة</strong><p>قيس العلامات الحيوية، سيطر على الحرارة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>مسحة حلق</strong><p>لو مطلوب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>المسكنات</strong><p>لألم الحلق والعضلات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>حماية الطحال</strong><p>تجنب الرياضات التصادمية ورفع الأثقال 4–6 أسابيع لتجنب تمزقه.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>إجهاد • عدم تحمل النشاط • ضعف الحركة.</p></div>\n<h4>مراجعة NCLEX</h4><ul><li>ينتقل باللعاب (مشاركة المشروبات والتقبيل) — يسمى مرض التقبيل</li><li>يسببه Epstein-Barr؛ ينتشر بالجهاز اللمفي وتبقى العدوى مدى الحياة مع إعادة تنشيط دورية</li><li>مضاعفات خطيرة: تضخم العقد وانسداد الهواء (صرير)، تضخم الطحال وألم بطن وتمزق الطحال، تضخم الكبد</li><li>لا مضادات حيوية (فيروس)، راحة وسوائل، تجنب المجهود والرياضات الاحتكاكية</li><li>فهم صحيح: \"أشرب سوائل كثيرة، أتجنب كرة القدم أثناء المرض، أرتاح كثيرًا\"</li></ul><!--aud0651-h--><h4>إضافة: المرض الخامس والتثقيف</h4><p>المرض الخامس (Erythema infectiosum) فيروسي سببه Parvovirus B19، أعراضه طفح أحمر بالخدين وألم مفاصل، ولا يُعطى فيه مضاد حيوي؛ يكفي الراحة والسوائل. بعد ظهور الطفح والأعراض لم يعد الطفل معديًا. تثقيف الـ Mono: اشرب سوائل كثيرة، تجنب كرة القدم والرياضات التصادمية، وارتح كثيرًا (يدل على فهم سليم).</p>"
-    },
-    "redflags": {
-      "ar": "<ul><li><b>ألم شديد مفاجئ بالبطن أعلى اليسار أو الكتف (تمزق الطحال)</b> = طوارئ.</li><li>صعوبة بلع أو تنفس (تورم لوزتين).</li><li>اصفرار أو بول داكن.</li><li>حرارة عالية مستمرة أكثر من أسبوعين.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>راحة وسوائل.</li><li>لا ممارسة رياضات عنيفة 4–6 أسابيع.</li><li>تجنب مشاركة الأواني والتقبيل خلال المرض.</li><li>لا تأخذ مضاد حيوي إلا بوصفة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "EBV: حلق + غدد + حمى + إجهاد.",
-      "Monospot أو Heterophil؛ كثرة لمفاويات غير نمطية.",
-      "داعم: راحة وسوائل وmسكنات.",
-      "تجنب الأموكسيسيلين (طفح).",
-      "حماية الطحال من الصدمات 4–6 أسابيع.",
-      "ألم بطن علوي أيسر مفاجئ = تمزق طحال.",
-      "لا مضادات حيوية في Mono"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "الفيروس الأشهر:"
-      },
-      "options": [
-        {
-          "ar": "EBV"
-        },
-        {
-          "ar": "HIV"
-        },
-        {
-          "ar": "HPV"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "إبشتاين-بار."
-      }
-    },
-    {
-      "q": {
-        "ar": "علاج الحمى الغدية:"
-      },
-      "options": [
-        {
-          "ar": "راحة وسوائل"
-        },
-        {
-          "ar": "مضاد حيوي دائماً"
-        },
-        {
-          "ar": "جراحة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "داعم."
-      }
-    },
-    {
-      "q": {
-        "ar": "مضاد يسبب طفحاً هنا:"
-      },
-      "options": [
-        {
-          "ar": "Amoxicillin"
-        },
-        {
-          "ar": "Paracetamol"
-        },
-        {
-          "ar": "سوائل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تفاعل معروف."
-      }
-    },
-    {
-      "q": {
-        "ar": "خطر تحذير:"
-      },
-      "options": [
-        {
-          "ar": "ألم أيسر علوي مفاجئ"
-        },
-        {
-          "ar": "عطس"
-        },
-        {
-          "ar": "صداع بسيط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تمزق الطحال."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي تعليمات مناسبة لمرض EBV؟"
-      },
-      "options": [
-        {
-          "ar": "سوائل وراحة وتجنب كرة القدم"
-        },
-        {
-          "ar": "مضاد حيوي"
-        },
-        {
-          "ar": "رياضة"
-        },
-        {
-          "ar": "لا سوائل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "خطر تمزق الطحال."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CDC: Epstein-Barr Virus and Infectious Mononucleosis"
-    },
-    {
-      "title": "StatPearls: Infectious Mononucleosis"
-    }
+  "en": [
+   "EBV: throat + glands + fever + fatigue.",
+   "Monospot or heterophil; atypical lymphocytosis.",
+   "Supportive: rest, fluids, and analgesics.",
+   "Avoid amoxicillin (rash).",
+   "Protect the spleen from trauma for 4–6 weeks.",
+   "Sudden upper left abdominal pain = splenic rupture.",
+   "No antibiotics in mono"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "الفيروس الأشهر:",
+    "en": "The most common virus:"
+   },
+   "options": [
+    {
+     "ar": "EBV",
+     "en": "EBV"
+    },
+    {
+     "ar": "HIV",
+     "en": "HIV"
+    },
+    {
+     "ar": "HPV",
+     "en": "HPV"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "إبشتاين-بار.",
+    "en": "Epstein-Barr."
+   }
+  },
+  {
+   "q": {
+    "ar": "علاج الحمى الغدية:",
+    "en": "Treatment of infectious mononucleosis:"
+   },
+   "options": [
+    {
+     "ar": "راحة وسوائل",
+     "en": "Rest and fluids"
+    },
+    {
+     "ar": "مضاد حيوي دائماً",
+     "en": "Always an antibiotic"
+    },
+    {
+     "ar": "جراحة",
+     "en": "Surgery"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "داعم.",
+    "en": "Supportive."
+   }
+  },
+  {
+   "q": {
+    "ar": "مضاد يسبب طفحاً هنا:",
+    "en": "An antibiotic that causes a rash here:"
+   },
+   "options": [
+    {
+     "ar": "Amoxicillin",
+     "en": "Amoxicillin"
+    },
+    {
+     "ar": "Paracetamol",
+     "en": "Paracetamol"
+    },
+    {
+     "ar": "سوائل",
+     "en": "Fluids"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تفاعل معروف.",
+    "en": "A known reaction."
+   }
+  },
+  {
+   "q": {
+    "ar": "خطر تحذير:",
+    "en": "A warning danger sign:"
+   },
+   "options": [
+    {
+     "ar": "ألم أيسر علوي مفاجئ",
+     "en": "Sudden upper left pain"
+    },
+    {
+     "ar": "عطس",
+     "en": "Sneezing"
+    },
+    {
+     "ar": "صداع بسيط",
+     "en": "A mild headache"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تمزق الطحال.",
+    "en": "Splenic rupture."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي تعليمات مناسبة لمرض EBV؟",
+    "en": "Which instructions are appropriate for EBV disease?"
+   },
+   "options": [
+    {
+     "ar": "سوائل وراحة وتجنب كرة القدم",
+     "en": "Fluids, rest, and avoiding football"
+    },
+    {
+     "ar": "مضاد حيوي",
+     "en": "An antibiotic"
+    },
+    {
+     "ar": "رياضة",
+     "en": "Sport"
+    },
+    {
+     "ar": "لا سوائل",
+     "en": "No fluids"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "خطر تمزق الطحال.",
+    "en": "Risk of splenic rupture."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CDC: Epstein-Barr Virus and Infectious Mononucleosis"
+  },
+  {
+   "title": "StatPearls: Infectious Mononucleosis"
+  }
+ ]
 }
