@@ -1,249 +1,315 @@
 {
-  "id": "dis-760",
-  "num": 760,
-  "system": "renal",
-  "icon": "🫘",
-  "level": 2,
-  "title": {
-    "ar": "التهاب الكبيبات الكلوي الحاد",
-    "en": "Acute Glomerulonephritis (Nephritic Syndrome)"
+ "id": "dis-760",
+ "num": 760,
+ "system": "renal",
+ "icon": "🫘",
+ "level": 2,
+ "title": {
+  "ar": "التهاب الكبيبات الكلوي الحاد",
+  "en": "Acute Glomerulonephritis (Nephritic Syndrome)"
+ },
+ "teaser": {
+  "ar": "بول لون الكولا وورم وضغط عالي بعد التهاب حلق؟ ازاي تعرف المتلازمة النفريتية وتحسب سوائل المريض (مخرجات اليوم + 500) وتراقب الوزن والبوتاسيوم.",
+  "en": "Cola-colored urine, swelling, and high blood pressure after a sore throat? How to recognize nephritic syndrome, calculate the patient's fluids (the day's output + 500), and monitor weight and potassium."
+ },
+ "chips": [
+  {
+   "ar": "بول دموي",
+   "en": "Bloody urine"
   },
-  "teaser": {
-    "ar": "بول لون الكولا وورم وضغط عالي بعد التهاب حلق؟ ازاي تعرف المتلازمة النفريتية وتحسب سوائل المريض (مخرجات اليوم + 500) وتراقب الوزن والبوتاسيوم."
+  {
+   "ar": "وزن يومي",
+   "en": "Daily weight"
   },
-  "chips": [
-    {
-      "ar": "بول دموي"
-    },
-    {
-      "ar": "وزن يومي"
-    },
-    {
-      "ar": "تقييد سوائل"
-    }
+  {
+   "ar": "تقييد سوائل",
+   "en": "Fluid restriction"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>التهاب الكبيبات الحاد (Acute Glomerulonephritis) أو <b>المتلازمة النفريتية الحادة</b> هو التهاب في «مصافي» الكلى الدقيقة (الكبيبات Glomeruli). غالباً بييجي <b>بعد عدوى</b> في مكان تاني بالجسم (حلق أو جلد)، أو كجزء من مرض مناعي عام. النتيجة: الكلى تسرّب دم في البول وتحتبس ماء وملح، فيظهر ورم وارتفاع ضغط وقلة بول.</p><div class=\"cs-stats\"><div><b>1–3 أسابيع</b><span>بعد التهاب الحلق بالسبحيات</span></div><div><b>3–6 أسابيع</b><span>بعد عدوى الجلد</span></div><div><b>مخرجات 24 ساعة + 500</b><span>مجموع السوائل المسموح للمريض</span></div></div>[[slot:dis-760-pathway|مسار المرض من العدوى لاحتباس السوائل — رسم من إعداد الموقع|/diseases/img/dis-760-pathway.svg]]<h4>النفريتية (Nephritic) ≠ النفروزية (Nephrotic)</h4>[[slot:dis-760-urine|مقارنة المتلازمة النفريتية والنفروزية — رسم من إعداد الموقع|/diseases/img/dis-760-urine.svg]]<p><b>الإنذار (Prognosis):</b> حسب السبب. عند الأطفال بعد السبحيات غالباً يشفى تماماً خلال أسابيع. في الكبار أو مع أمراض مناعية قد يتحول لفشل كلوي سريع أو مزمن، ولذلك لازم متابعة وظائف الكلى طول فترة النوبة.</p><h4>إضافات تغطي نقاط المراجعة</h4><p>مقارنة سريعة بين التهاب الكبيبات و<a href=\"/diseases/dis-1406\">المتلازمة الكلوية</a>:</p>[[slot:dis-760-compare|مقارنة — رسم من إعداد الموقع|/diseases/img/dis-760-compare.svg]]<h4>من المراجعة الشاملة</h4>[[slot:dis-2647-agn-nephrosis|مقارنة — رسم من إعداد الموقع|/diseases/img/dis-2647-agn-nephrosis.svg]]",
+   "en": "<p>Acute glomerulonephritis, or <b>acute nephritic syndrome</b>, is inflammation of the kidney's tiny \"filters\" (the glomeruli). It usually comes <b>after an infection</b> elsewhere in the body (throat or skin), or as part of a general immune disease. The result: the kidneys leak blood into the urine and retain water and salt, so swelling, high blood pressure, and low urine output appear.</p><div class=\"cs-stats\"><div><b>1–3 weeks</b><span>After streptococcal sore throat</span></div><div><b>3–6 weeks</b><span>After skin infection</span></div><div><b>24-hour output + 500</b><span>Total fluids allowed for the patient</span></div></div>[[slot:dis-760-pathway|The disease pathway from infection to fluid retention — illustration made for the site|/diseases/img/dis-760-pathway.svg]]<h4>Nephritic ≠ Nephrotic</h4>[[slot:dis-760-urine|Comparison of nephritic and nephrotic syndromes — illustration made for the site|/diseases/img/dis-760-urine.svg]]<p><b>Prognosis:</b> depends on the cause. In children after streptococcal infection it usually heals completely within weeks. In adults or with immune diseases it may progress to rapid or chronic kidney failure, so kidney function must be followed throughout the episode.</p><h4>Additions covering review points</h4><p>A quick comparison between glomerulonephritis and <a href=\"/diseases/dis-1406\">nephrotic syndrome</a>:</p>[[slot:dis-760-compare|Comparison — illustration made for the site|/diseases/img/dis-760-compare.svg]]<h4>From the comprehensive review</h4>[[slot:dis-2647-agn-nephrosis|Comparison — illustration made for the site|/diseases/img/dis-2647-agn-nephrosis.svg]]"
+  },
+  "causes": {
+   "ar": "<h4>عدوى</h4><ul><li>مكورات سبحية بيتا الحالّة للدم من المجموعة A (Group A beta-hemolytic Streptococcus) — أشهر سبب</li><li>حصبة (Measles)، نكاف (Mumps)، فيروس مضخم للخلايا (CMV)، جديري مائي (Varicella)، فيروس كوكساكي</li><li>التهاب رئوي بالميكوبلازما أو كلاميديا سيتاسي أو المكورات الرئوية</li><li>التهاب كبد فيروسي B أو C</li></ul><h4>أمراض جهازية</h4><ul><li>الذئبة الحمراء (SLE)</li><li>نقص الصفائح التخثري (TTP)</li><li>المايلوما المتعددة (Multiple myeloma)</li><li>التهاب الأوعية (Vasculitis) ومتلازمة جودباستشر (Anti-GBM) — الكبار</li></ul><p>العدوى مش بتدخل الكلى نفسها في الغالب؛ المضاد الجسمي/المركبات المناعية هي اللي بتضر الكبيبة، عشان كده بتظهر الأعراض بعد أسابيع من العدوى.</p>",
+   "en": "<h4>Infection</h4><ul><li>Group A beta-hemolytic Streptococcus — the most common cause</li><li>Measles, mumps, cytomegalovirus (CMV), varicella, Coxsackie virus</li><li>Pneumonia from Mycoplasma, Chlamydia psittaci, or pneumococci</li><li>Viral hepatitis B or C</li></ul><h4>Systemic diseases</h4><ul><li>Systemic lupus erythematosus (SLE)</li><li>Thrombotic thrombocytopenic purpura (TTP)</li><li>Multiple myeloma</li><li>Vasculitis and Goodpasture syndrome (anti-GBM) — adults</li></ul><p>The infection usually does not enter the kidney itself; the antibodies/immune complexes are what damage the glomerulus, which is why symptoms appear weeks after the infection.</p>"
+  },
+  "signs": {
+   "ar": "<h4>العلامات الرئيسية</h4><ul><li><b>بول دموي (Hematuria)</b>: لون شاي غامق أو كولا (دم من الكبيبة)</li><li><b>ورم محيطي (Edema)</b> خصوصاً الوجه والجفون صباحاً والكاحلين</li><li><b>ارتفاع ضغط</b> مقارنةً بمعدل المريض الطبيعي</li><li><b>قلة بول (Oliguria)</b>: أقل من 400 مل/يوم تقريباً</li><li>غثيان وقيء وفقدان شهية مع نزول وظائف الكلى</li><li>لو احتباس سوائل شديد: ضيق نفس ورطوبة بالصدر (Crackles) وصوت قلب ثالث (S3) ووريد رقبة منتفخ</li></ul><div class=\"cs-box cs-warning\"><strong>مضاعفات لازم تتنبه لها</strong><ul><li>اعتلال مخي بارتفاع الضغط: صداع شديد، تشوش، تشنج</li><li>وذمة رئوية حادة وفشل قلب</li><li>ارتفاع بوتاسيوم الدم</li><li>تحول لفشل كلوي حاد (راجع <a href=\"/diseases/dis-764\">الفشل الكلوي</a>)</li></ul></div>",
+   "en": "<h4>Main signs</h4><ul><li><b>Bloody urine (hematuria)</b>: dark tea or cola color (blood from the glomerulus)</li><li><b>Peripheral edema</b> especially of the face and eyelids in the morning and the ankles</li><li><b>High blood pressure</b> compared with the patient's normal</li><li><b>Low urine output (oliguria)</b>: less than about 400 mL/day</li><li>Nausea, vomiting, and loss of appetite with falling kidney function</li><li>With severe fluid retention: shortness of breath, crackles in the chest, a third heart sound (S3), and distended neck veins</li></ul><div class=\"cs-box cs-warning\"><strong>Complications to watch for</strong><ul><li>Hypertensive encephalopathy: severe headache, confusion, seizure</li><li>Acute pulmonary edema and heart failure</li><li>High blood potassium</li><li>Progression to acute kidney failure (see <a href=\"/diseases/dis-764\">Kidney failure</a>)</li></ul></div>"
+  },
+  "tests": {
+   "ar": "<table><thead><tr><th>الفحص</th><th>النتيجة المتوقعة</th></tr></thead><tbody><tr><td>تحليل البول</td><td>كرات دم حمراء + أسطوانات كرات حمراء (RBC casts) + بروتين</td></tr><tr><td>معدل الترشيح (GFR)</td><td>منخفض</td></tr><tr><td>بول 24 ساعة</td><td>بروتين مرتفع</td></tr><tr><td>اليوريا (BUN) والكرياتينين</td><td>مرتفعان</td></tr><tr><td>ألبيومين الدم</td><td>منخفض</td></tr><tr><td>خزعة الكلى (Renal biopsy)</td><td>لتحديد السبب والنوع، خصوصاً لو الحالة شديدة أو غير نموذجية</td></tr></tbody></table><h4>فحوصات داعمة (مكمّلة)</h4><ul><li>ASO titer وزرعة مسحة حلق: دليل على عدوى سبحية سابقة</li><li>C3 منخفض (بعد السبحيات يرجع طبيعي خلال 6–8 أسابيع) — لو فضل منخفض يشك في سبب تاني</li><li>بوتاسيوم وصوديوم وبيكربونات</li><li>أشعة صوت على الكلى لاستبعاد الانسداد</li></ul><ul><li>من المراجعة الشاملة: مؤشرات تدعم العدوى: حمى وارتفاع كرات الدم البيضاء (WBC)، مع سؤال المريض عن عدوى عقدية حديثة (التقييم الأساسي)، وفقد البروتين هنا أقل منه في المتلازمة الكلوية.</li></ul>",
+   "en": "<table><thead><tr><th>Test</th><th>Expected result</th></tr></thead><tbody><tr><td>Urinalysis</td><td>Red blood cells + RBC casts + protein</td></tr><tr><td>Glomerular filtration rate (GFR)</td><td>Low</td></tr><tr><td>24-hour urine</td><td>High protein</td></tr><tr><td>Urea (BUN) and creatinine</td><td>Both raised</td></tr><tr><td>Blood albumin</td><td>Low</td></tr><tr><td>Renal biopsy</td><td>To determine the cause and type, especially if the case is severe or atypical</td></tr></tbody></table><h4>Supporting tests (supplementary)</h4><ul><li>ASO titer and throat swab culture: evidence of a previous streptococcal infection</li><li>Low C3 (after streptococcus it returns to normal within 6–8 weeks) — if it stays low, suspect another cause</li><li>Potassium, sodium, and bicarbonate</li><li>Kidney ultrasound to exclude obstruction</li></ul><ul><li>From the comprehensive review: indicators supporting infection: fever and high white blood cells (WBC), with asking the patient about a recent streptococcal infection (the basic assessment), and protein loss here is less than in nephrotic syndrome.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<p>العلاج داعم أساساً + علاج السبب. الهدف: التحكم في السوائل والضغط وحماية الكلى.</p><ul><li>متابعة وظائف الكلى والأملاح وعلامات حيوية بانتظام</li><li>مدرّات (Furosemide) لإخراج السوائل الزايدة</li><li>خافضات الضغط حسب الحالة (مثبطات ACE أو حاصرات الكالسيوم) بأمر الطبيب</li><li><b>تقييد السوائل:</b> المسموح = كمية البول في 24 ساعة + حوالي 500 مل (للفقد غير المحسوس)</li><li>تقليل الملح، وتقليل البروتين والبوتاسيوم لو في ارتفاع يوريا/بوتاسيوم</li><li>بنسلين أو مضاد مناسب لو في عدوى سبحية نشطة</li><li><b>تبادل البلازما (Plasmapheresis)</b> لو السبب مناعي (مثل Anti-GBM)، ومعاه كورتيزون ومثبطات مناعة بأمر المتخصص</li><li>غسيل كلوي لو فشل كلوي شديد، بوتاسيوم عالي مش بيستجيب، أو احتباس سوائل خطير</li></ul><div class=\"cs-box cs-info\"><strong>معلومة</strong><p>الكورتيزون ما بيفيدش في التهاب الكبيبات التالي للسبحيات عند الأطفال، لكنه جزء من علاج الأنواع المناعية السريعة التطور.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>إكمال المضادات الحيوية كاملة</li><li>تقليل البروتين</li><li>خافضات الضغط: ACEi/ARBs (مثل lisinopril وlosartan) وحاصرات بيتا وCCB ومدرّات (loop مثل furosemide وthiazide مثل hydrochlorothiazide)</li><li>المدرّات تهدر البوتاسيوم: راقب نقص البوتاسيوم (أقل من 3.5)</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<p>Treatment is mainly supportive + treating the cause. The goal: control fluids and blood pressure and protect the kidneys.</p><ul><li>Regular follow-up of kidney function, electrolytes, and vital signs</li><li>Diuretics (Furosemide) to remove excess fluid</li><li>Antihypertensives as the case requires (ACE inhibitors or calcium channel blockers) by the physician's order</li><li><b>Fluid restriction:</b> allowed = the 24-hour urine volume + about 500 mL (for insensible loss)</li><li>Reduce salt, and reduce protein and potassium if urea/potassium is high</li><li>Penicillin or a suitable antibiotic if there is active streptococcal infection</li><li><b>Plasma exchange (plasmapheresis)</b> if the cause is immune (such as anti-GBM), with cortisone and immunosuppressants by the specialist's order</li><li>Dialysis for severe kidney failure, high potassium not responding, or dangerous fluid retention</li></ul><div class=\"cs-box cs-info\"><strong>Information</strong><p>Cortisone does not help poststreptococcal glomerulonephritis in children, but it is part of the treatment of the rapidly progressive immune types.</p></div><h4>Additions covering review points</h4><ul><li>Complete the full course of antibiotics</li><li>Reduce protein</li><li>Antihypertensives: ACEi/ARBs (such as lisinopril and losartan), beta blockers, CCB, and diuretics (loop such as furosemide and thiazide such as hydrochlorothiazide)</li><li>Diuretics waste potassium: monitor for low potassium (below 3.5)</li></ul><div class=\"cs-box cs-info\"><strong>Dose warning</strong><p>Doses are for learning; always verify with the physician/pharmacist before administration.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الحالة وسجّل الأساس</strong><p>ضغط، نبض، تنفس، حرارة. وزن المريض صباحاً قبل الفطار بنفس الميزان والملابس. سجّل لون البول وكميته.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>حساب السوائل (Intake & Output)</strong><p>سجّل كل مدخول (فم + وريد) ومخرج (بول + قيء + إسهال). الحد اليومي: بول أمس + 500 مل. بلّغ لو البول أقل من 0.5 مل/كجم/ساعة لأكتر من 6 ساعات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راقب علامات زيادة السوائل</strong><p>سمّع الرئتين (Crackles)، قلب (S3)، وريد الرقبة، ورم الأطراف والوجه. زيادة الوزن أكتر من 1 كجم/يوم = احتباس سوائل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الضغط والأعراض العصبية</strong><p>قيس الضغط كل 4 ساعات (أو أكتر حسب الأمر). صداع شديد + تشوش + اضطراب رؤية = بلّغ فوراً (اعتلال بضغط الدم).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أمّن الدواء</strong><p>المدرّات: اسمح بالتبول، سجّل الاستجابة وراقب بوتاسيوم وصوديوم. خافضات الضغط: قيس قبل الجرعة. مضاد حيوي: جرعة كاملة المدة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راحة وتغذية</strong><p>راحة سرير في المرحلة الحادة، وجبات قليلة الملح (غالباً بدون ملح مضاف)، بروتين متوسط حسب اليوريا، مراعاة البوتاسيوم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تعليم المريض والأهل</strong><p>المرض، الدواء، وزن يومي، وتقييد السوائل وأهمية المتابعة بعد الخروج.</p></div></div></div><h4>تشخيصات تمريضية</h4><ul><li>اضطراب التبول (Impaired urinary elimination)</li><li>زيادة حجم السوائل (Excess fluid volume)</li></ul><h4>الطفل: مقارنة مع المتلازمة الكلوية</h4>[[slot:dis-3043-gn|الكبيبات والمتلازمة الكلوية — رسم من إعداد الموقع|/diseases/img/dis-3043-gn.svg]]<ul><li>بعد عدوى عقدية قد يلتهب الكبيبات؛ يشفى خلال 14 يومًا عادة. أعراض: وذمة وانخفاض البول وارتفاع الضغط.</li><li>أولوية المراقبة: <b>ضغط الدم</b>؛ وزن يومي لأن زيادة الوزن = ماء. كرياتينين 1.3 ملغ/دل يُبلغ.</li><li>الأعراض الخطرة للإبلاغ: صداع وتغير وعي، غثيان وقيء، قلة بول، زيادة وزن مفاجئة.</li><li>تثقيف: قلّل الزوار ولا تنظم لقاءات لعب.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess and record the baseline</strong><p>Blood pressure, pulse, breathing, temperature. Weigh the patient in the morning before breakfast on the same scale and in the same clothes. Record urine color and amount.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Fluid calculation (Intake & Output)</strong><p>Record every intake (oral + IV) and output (urine + vomiting + diarrhea). Daily limit: yesterday's urine + 500 mL. Report if urine is under 0.5 mL/kg/hour for more than 6 hours.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Monitor signs of fluid overload</strong><p>Auscultate the lungs (crackles), heart (S3), neck veins, and swelling of the limbs and face. Weight gain of more than 1 kg/day = fluid retention.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Blood pressure and neurological symptoms</strong><p>Measure blood pressure every 4 hours (or more per the order). Severe headache + confusion + visual disturbance = report immediately (hypertensive encephalopathy).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Give medication safely</strong><p>Diuretics: allow voiding, record the response, and monitor potassium and sodium. Antihypertensives: measure before the dose. Antibiotic: the full course.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Rest and nutrition</strong><p>Bed rest in the acute phase, low-salt meals (usually with no added salt), moderate protein according to urea, and attention to potassium.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Teach the patient and family</strong><p>The disease, the drugs, daily weight, fluid restriction, and the importance of follow-up after discharge.</p></div></div></div><h4>Nursing diagnoses</h4><ul><li>Impaired urinary elimination</li><li>Excess fluid volume</li></ul><h4>The child: comparison with nephrotic syndrome</h4>[[slot:dis-3043-gn|Glomeruli and nephrotic syndrome — illustration made for the site|/diseases/img/dis-3043-gn.svg]]<ul><li>After a streptococcal infection the glomeruli may become inflamed; it usually heals within 14 days. Symptoms: edema, decreased urine, and high blood pressure.</li><li>Monitoring priority: <b>blood pressure</b>; daily weight because weight gain = water. Creatinine 1.3 mg/dL is reported.</li><li>Dangerous symptoms to report: headache and altered consciousness, nausea and vomiting, low urine output, sudden weight gain.</li><li>Education: reduce visitors and do not organize play dates.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو</strong><ul><li>بول أقل من 400 مل/يوم أو لا يوجد بول</li><li>ضغط شديد الارتفاع أو صداع/تشنج/تشوش</li><li>ضيق نفس، سعال وردي، أو رطوبة بالرئتين</li><li>بوتاسيوم أعلى من 5.5 مل مكافئ/لتر أو تغيّر في ECG (T عالية مدببة)</li><li>غثيان وقيء متزايد مع نعاس (يوريميا)</li><li>زيادة وزن سريعة أكتر من 1 كجم في يوم</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report to the physician immediately if</strong><ul><li>Urine under 400 mL/day or no urine</li><li>Very high blood pressure or headache/seizure/confusion</li><li>Shortness of breath, pink cough, or crackles in the lungs</li><li>Potassium above 5.5 mEq/L or an ECG change (tall peaked T waves)</li><li>Increasing nausea and vomiting with drowsiness (uremia)</li><li>Rapid weight gain of more than 1 kg in a day</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اتحقق من علاج أي التهاب حلق أو جلد بسرعة وكمّل المضاد الحيوي للنهاية</li><li>اوزن نفسك كل صباح واكتب الرقم</li><li>التزم بكمية السوائل المحددة ولا تتخطاها</li><li>قلّل الملح واتبع نظام الأكل اللي الأخصائي كتبه</li><li>قيس الضغط في البيت وأبلغ عن أي ارتفاع</li><li>لو لون البول رجع دموي أو الورم زاد، ارجع للمستشفى</li><li>تجنب المسكنات من نوع NSAIDs من غير استشارة</li></ul>",
+   "en": "<ul><li>Make sure any sore throat or skin infection is treated quickly and finish the antibiotic to the end</li><li>Weigh yourself every morning and write down the number</li><li>Keep to the set fluid amount and do not exceed it</li><li>Reduce salt and follow the diet the specialist wrote</li><li>Measure blood pressure at home and report any rise</li><li>If the urine becomes bloody again or the swelling increases, return to the hospital</li><li>Avoid NSAID painkillers without consultation</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "التهاب الكبيبات الحاد غالباً بعد عدوى سبحية بـ 1–3 أسابيع (حلق) أو 3–6 أسابيع (جلد)",
+   "الثلاثي: بول دموي + ورم + ارتفاع ضغط مع قلة بول",
+   "تحليل البول: كرات حمراء وأسطوانات RBC، وC3 منخفض",
+   "تقييد السوائل = بول 24 ساعة + 500 مل",
+   "وزن يومي وسجل سوائل وضغط هما أهم أدوات التمريض",
+   "العلاج داعم؛ تبادل البلازما والكورتيزون في الأنواع المناعية الشديدة",
+   "GN غالبًا بعد عدوى ستربتوكوكية",
+   "تقليل البروتين وإكمال المضاد الحيوي",
+   "المدرّات تهدر K: راقب نقص K"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>التهاب الكبيبات الحاد (Acute Glomerulonephritis) أو <b>المتلازمة النفريتية الحادة</b> هو التهاب في «مصافي» الكلى الدقيقة (الكبيبات Glomeruli). غالباً بييجي <b>بعد عدوى</b> في مكان تاني بالجسم (حلق أو جلد)، أو كجزء من مرض مناعي عام. النتيجة: الكلى تسرّب دم في البول وتحتبس ماء وملح، فيظهر ورم وارتفاع ضغط وقلة بول.</p><div class=\"cs-stats\"><div><b>1–3 أسابيع</b><span>بعد التهاب الحلق بالسبحيات</span></div><div><b>3–6 أسابيع</b><span>بعد عدوى الجلد</span></div><div><b>مخرجات 24 ساعة + 500</b><span>مجموع السوائل المسموح للمريض</span></div></div>[[slot:dis-760-pathway|مسار المرض من العدوى لاحتباس السوائل — رسم من إعداد الموقع|/diseases/img/dis-760-pathway.svg]]<h4>النفريتية (Nephritic) ≠ النفروزية (Nephrotic)</h4>[[slot:dis-760-urine|مقارنة المتلازمة النفريتية والنفروزية — رسم من إعداد الموقع|/diseases/img/dis-760-urine.svg]]<p><b>الإنذار (Prognosis):</b> حسب السبب. عند الأطفال بعد السبحيات غالباً يشفى تماماً خلال أسابيع. في الكبار أو مع أمراض مناعية قد يتحول لفشل كلوي سريع أو مزمن، ولذلك لازم متابعة وظائف الكلى طول فترة النوبة.</p><h4>إضافات تغطي نقاط المراجعة</h4><p>مقارنة سريعة بين التهاب الكبيبات و<a href=\"/diseases/dis-1406\">المتلازمة الكلوية</a>:</p>[[slot:dis-760-compare|مقارنة — رسم من إعداد الموقع|/diseases/img/dis-760-compare.svg]]<h4>من المراجعة الشاملة</h4>[[slot:dis-2647-agn-nephrosis|مقارنة — رسم من إعداد الموقع|/diseases/img/dis-2647-agn-nephrosis.svg]]"
-    },
-    "causes": {
-      "ar": "<h4>عدوى</h4><ul><li>مكورات سبحية بيتا الحالّة للدم من المجموعة A (Group A beta-hemolytic Streptococcus) — أشهر سبب</li><li>حصبة (Measles)، نكاف (Mumps)، فيروس مضخم للخلايا (CMV)، جديري مائي (Varicella)، فيروس كوكساكي</li><li>التهاب رئوي بالميكوبلازما أو كلاميديا سيتاسي أو المكورات الرئوية</li><li>التهاب كبد فيروسي B أو C</li></ul><h4>أمراض جهازية</h4><ul><li>الذئبة الحمراء (SLE)</li><li>نقص الصفائح التخثري (TTP)</li><li>المايلوما المتعددة (Multiple myeloma)</li><li>التهاب الأوعية (Vasculitis) ومتلازمة جودباستشر (Anti-GBM) — الكبار</li></ul><p>العدوى مش بتدخل الكلى نفسها في الغالب؛ المضاد الجسمي/المركبات المناعية هي اللي بتضر الكبيبة، عشان كده بتظهر الأعراض بعد أسابيع من العدوى.</p>"
-    },
-    "signs": {
-      "ar": "<h4>العلامات الرئيسية</h4><ul><li><b>بول دموي (Hematuria)</b>: لون شاي غامق أو كولا (دم من الكبيبة)</li><li><b>ورم محيطي (Edema)</b> خصوصاً الوجه والجفون صباحاً والكاحلين</li><li><b>ارتفاع ضغط</b> مقارنةً بمعدل المريض الطبيعي</li><li><b>قلة بول (Oliguria)</b>: أقل من 400 مل/يوم تقريباً</li><li>غثيان وقيء وفقدان شهية مع نزول وظائف الكلى</li><li>لو احتباس سوائل شديد: ضيق نفس ورطوبة بالصدر (Crackles) وصوت قلب ثالث (S3) ووريد رقبة منتفخ</li></ul><div class=\"cs-box cs-warning\"><strong>مضاعفات لازم تتنبه لها</strong><ul><li>اعتلال مخي بارتفاع الضغط: صداع شديد، تشوش، تشنج</li><li>وذمة رئوية حادة وفشل قلب</li><li>ارتفاع بوتاسيوم الدم</li><li>تحول لفشل كلوي حاد (راجع <a href=\"/diseases/dis-764\">الفشل الكلوي</a>)</li></ul></div>"
-    },
-    "tests": {
-      "ar": "<table><thead><tr><th>الفحص</th><th>النتيجة المتوقعة</th></tr></thead><tbody><tr><td>تحليل البول</td><td>كرات دم حمراء + أسطوانات كرات حمراء (RBC casts) + بروتين</td></tr><tr><td>معدل الترشيح (GFR)</td><td>منخفض</td></tr><tr><td>بول 24 ساعة</td><td>بروتين مرتفع</td></tr><tr><td>اليوريا (BUN) والكرياتينين</td><td>مرتفعان</td></tr><tr><td>ألبيومين الدم</td><td>منخفض</td></tr><tr><td>خزعة الكلى (Renal biopsy)</td><td>لتحديد السبب والنوع، خصوصاً لو الحالة شديدة أو غير نموذجية</td></tr></tbody></table><h4>فحوصات داعمة (مكمّلة)</h4><ul><li>ASO titer وزرعة مسحة حلق: دليل على عدوى سبحية سابقة</li><li>C3 منخفض (بعد السبحيات يرجع طبيعي خلال 6–8 أسابيع) — لو فضل منخفض يشك في سبب تاني</li><li>بوتاسيوم وصوديوم وبيكربونات</li><li>أشعة صوت على الكلى لاستبعاد الانسداد</li></ul><ul><li>من المراجعة الشاملة: مؤشرات تدعم العدوى: حمى وارتفاع كرات الدم البيضاء (WBC)، مع سؤال المريض عن عدوى عقدية حديثة (التقييم الأساسي)، وفقد البروتين هنا أقل منه في المتلازمة الكلوية.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<p>العلاج داعم أساساً + علاج السبب. الهدف: التحكم في السوائل والضغط وحماية الكلى.</p><ul><li>متابعة وظائف الكلى والأملاح وعلامات حيوية بانتظام</li><li>مدرّات (Furosemide) لإخراج السوائل الزايدة</li><li>خافضات الضغط حسب الحالة (مثبطات ACE أو حاصرات الكالسيوم) بأمر الطبيب</li><li><b>تقييد السوائل:</b> المسموح = كمية البول في 24 ساعة + حوالي 500 مل (للفقد غير المحسوس)</li><li>تقليل الملح، وتقليل البروتين والبوتاسيوم لو في ارتفاع يوريا/بوتاسيوم</li><li>بنسلين أو مضاد مناسب لو في عدوى سبحية نشطة</li><li><b>تبادل البلازما (Plasmapheresis)</b> لو السبب مناعي (مثل Anti-GBM)، ومعاه كورتيزون ومثبطات مناعة بأمر المتخصص</li><li>غسيل كلوي لو فشل كلوي شديد، بوتاسيوم عالي مش بيستجيب، أو احتباس سوائل خطير</li></ul><div class=\"cs-box cs-info\"><strong>معلومة</strong><p>الكورتيزون ما بيفيدش في التهاب الكبيبات التالي للسبحيات عند الأطفال، لكنه جزء من علاج الأنواع المناعية السريعة التطور.</p></div><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>إكمال المضادات الحيوية كاملة</li><li>تقليل البروتين</li><li>خافضات الضغط: ACEi/ARBs (مثل lisinopril وlosartan) وحاصرات بيتا وCCB ومدرّات (loop مثل furosemide وthiazide مثل hydrochlorothiazide)</li><li>المدرّات تهدر البوتاسيوم: راقب نقص البوتاسيوم (أقل من 3.5)</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه الجرعات</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الحالة وسجّل الأساس</strong><p>ضغط، نبض، تنفس، حرارة. وزن المريض صباحاً قبل الفطار بنفس الميزان والملابس. سجّل لون البول وكميته.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>حساب السوائل (Intake & Output)</strong><p>سجّل كل مدخول (فم + وريد) ومخرج (بول + قيء + إسهال). الحد اليومي: بول أمس + 500 مل. بلّغ لو البول أقل من 0.5 مل/كجم/ساعة لأكتر من 6 ساعات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راقب علامات زيادة السوائل</strong><p>سمّع الرئتين (Crackles)، قلب (S3)، وريد الرقبة، ورم الأطراف والوجه. زيادة الوزن أكتر من 1 كجم/يوم = احتباس سوائل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الضغط والأعراض العصبية</strong><p>قيس الضغط كل 4 ساعات (أو أكتر حسب الأمر). صداع شديد + تشوش + اضطراب رؤية = بلّغ فوراً (اعتلال بضغط الدم).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أمّن الدواء</strong><p>المدرّات: اسمح بالتبول، سجّل الاستجابة وراقب بوتاسيوم وصوديوم. خافضات الضغط: قيس قبل الجرعة. مضاد حيوي: جرعة كاملة المدة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راحة وتغذية</strong><p>راحة سرير في المرحلة الحادة، وجبات قليلة الملح (غالباً بدون ملح مضاف)، بروتين متوسط حسب اليوريا، مراعاة البوتاسيوم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تعليم المريض والأهل</strong><p>المرض، الدواء، وزن يومي، وتقييد السوائل وأهمية المتابعة بعد الخروج.</p></div></div></div><h4>تشخيصات تمريضية</h4><ul><li>اضطراب التبول (Impaired urinary elimination)</li><li>زيادة حجم السوائل (Excess fluid volume)</li></ul><h4>الطفل: مقارنة مع المتلازمة الكلوية</h4>[[slot:dis-3043-gn|الكبيبات والمتلازمة الكلوية — رسم من إعداد الموقع|/diseases/img/dis-3043-gn.svg]]<ul><li>بعد عدوى عقدية قد يلتهب الكبيبات؛ يشفى خلال 14 يومًا عادة. أعراض: وذمة وانخفاض البول وارتفاع الضغط.</li><li>أولوية المراقبة: <b>ضغط الدم</b>؛ وزن يومي لأن زيادة الوزن = ماء. كرياتينين 1.3 ملغ/دل يُبلغ.</li><li>الأعراض الخطرة للإبلاغ: صداع وتغير وعي، غثيان وقيء، قلة بول، زيادة وزن مفاجئة.</li><li>تثقيف: قلّل الزوار ولا تنظم لقاءات لعب.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو</strong><ul><li>بول أقل من 400 مل/يوم أو لا يوجد بول</li><li>ضغط شديد الارتفاع أو صداع/تشنج/تشوش</li><li>ضيق نفس، سعال وردي، أو رطوبة بالرئتين</li><li>بوتاسيوم أعلى من 5.5 مل مكافئ/لتر أو تغيّر في ECG (T عالية مدببة)</li><li>غثيان وقيء متزايد مع نعاس (يوريميا)</li><li>زيادة وزن سريعة أكتر من 1 كجم في يوم</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اتحقق من علاج أي التهاب حلق أو جلد بسرعة وكمّل المضاد الحيوي للنهاية</li><li>اوزن نفسك كل صباح واكتب الرقم</li><li>التزم بكمية السوائل المحددة ولا تتخطاها</li><li>قلّل الملح واتبع نظام الأكل اللي الأخصائي كتبه</li><li>قيس الضغط في البيت وأبلغ عن أي ارتفاع</li><li>لو لون البول رجع دموي أو الورم زاد، ارجع للمستشفى</li><li>تجنب المسكنات من نوع NSAIDs من غير استشارة</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "التهاب الكبيبات الحاد غالباً بعد عدوى سبحية بـ 1–3 أسابيع (حلق) أو 3–6 أسابيع (جلد)",
-      "الثلاثي: بول دموي + ورم + ارتفاع ضغط مع قلة بول",
-      "تحليل البول: كرات حمراء وأسطوانات RBC، وC3 منخفض",
-      "تقييد السوائل = بول 24 ساعة + 500 مل",
-      "وزن يومي وسجل سوائل وضغط هما أهم أدوات التمريض",
-      "العلاج داعم؛ تبادل البلازما والكورتيزون في الأنواع المناعية الشديدة",
-      "GN غالبًا بعد عدوى ستربتوكوكية",
-      "تقليل البروتين وإكمال المضاد الحيوي",
-      "المدرّات تهدر K: راقب نقص K"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "مريض بعد أسبوعين من التهاب حلق عنده بول لون الكولا وورم في الوجه. أرجح تشخيص؟"
-      },
-      "options": [
-        {
-          "ar": "حصوة حالب"
-        },
-        {
-          "ar": "التهاب كبيبات حاد"
-        },
-        {
-          "ar": "التهاب مثانة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الثلاثي بول دموي + ورم + ضغط بعد عدوى سبحية يدل على المتلازمة النفريتية."
-      }
-    },
-    {
-      "q": {
-        "ar": "كمية السوائل اليومية المسموحة لمريض التهاب كبيبات حاد قليل البول؟"
-      },
-      "options": [
-        {
-          "ar": "حرية كاملة"
-        },
-        {
-          "ar": "مخرجات 24 ساعة + 500 مل تقريباً"
-        },
-        {
-          "ar": "نصف لتر فقط دائماً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تعويض البول + الفقد غير المحسوس."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم مؤشر تمريضي لاحتباس السوائل؟"
-      },
-      "options": [
-        {
-          "ar": "حرارة المريض"
-        },
-        {
-          "ar": "الوزن اليومي"
-        },
-        {
-          "ar": "لون الشعر"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "زيادة الوزن السريعة تعكس احتباس السوائل."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نتيجة تحليل بول تشير للالتهاب الكبيبي؟"
-      },
-      "options": [
-        {
-          "ar": "أسطوانات كرات حمراء (RBC casts)"
-        },
-        {
-          "ar": "سكر فقط"
-        },
-        {
-          "ar": "بلورات حمض اليوريك"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "RBC casts دليل على نزف كبيبي."
-      }
-    },
-    {
-      "q": {
-        "ar": "الحالة التي تستدعي تبادل البلازما؟"
-      },
-      "options": [
-        {
-          "ar": "سبب مناعي مثل Anti-GBM"
-        },
-        {
-          "ar": "عدوى جلدية بسيطة"
-        },
-        {
-          "ar": "حصوة صغيرة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تُزال الأجسام المضادة المسببة."
-      }
-    },
-    {
-      "q": {
-        "ar": "مدرّات اللوب والثيازيد قد تسبب:"
-      },
-      "options": [
-        {
-          "ar": "نقص البوتاسيوم"
-        },
-        {
-          "ar": "زيادة البوتاسيوم"
-        },
-        {
-          "ar": "زيادة الصوديوم"
-        },
-        {
-          "ar": "ارتفاع السكر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "تهدر البوتاسيوم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مما يلي يُنصح به في GN؟"
-      },
-      "options": [
-        {
-          "ar": "زيادة البروتين"
-        },
-        {
-          "ar": "تقليل البروتين وإكمال المضاد"
-        },
-        {
-          "ar": "إيقاف الدواء"
-        },
-        {
-          "ar": "زيادة الملح"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "للحد من عبء الكلى."
-      }
-    },
-    {
-      "q": {
-        "ar": "أولوية المراقبة عند طفل بتهاب كبيبات حاد:"
-      },
-      "options": [
-        {
-          "ar": "ضغط الدم"
-        },
-        {
-          "ar": "الوزن"
-        },
-        {
-          "ar": "البروتين"
-        },
-        {
-          "ar": "البول"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "قد ترتفع لحد الأزمة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "KDIGO Clinical Practice Guideline for Glomerular Diseases (2021)"
-    },
-    {
-      "title": "StatPearls: Acute Glomerulonephritis / Poststreptococcal GN"
-    },
-    {
-      "title": "MSD Manual Professional: Glomerular disease overview"
-    },
-    {
-      "title": "NICE CKS: Glomerulonephritis"
-    }
+  "en": [
+   "Acute glomerulonephritis usually comes 1–3 weeks (throat) or 3–6 weeks (skin) after a streptococcal infection",
+   "The triad: bloody urine + edema + high blood pressure with low urine output",
+   "Urinalysis: red cells and RBC casts, and low C3",
+   "Fluid restriction = 24-hour urine + 500 mL",
+   "Daily weight, fluid record, and blood pressure are the most important nursing tools",
+   "Treatment is supportive; plasma exchange and cortisone in severe immune types",
+   "GN is usually after a streptococcal infection",
+   "Reduce protein and complete the antibiotic",
+   "Diuretics waste K: monitor for low K"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "مريض بعد أسبوعين من التهاب حلق عنده بول لون الكولا وورم في الوجه. أرجح تشخيص؟",
+    "en": "A patient two weeks after a sore throat has cola-colored urine and facial swelling. The most likely diagnosis?"
+   },
+   "options": [
+    {
+     "ar": "حصوة حالب",
+     "en": "A ureteral stone"
+    },
+    {
+     "ar": "التهاب كبيبات حاد",
+     "en": "Acute glomerulonephritis"
+    },
+    {
+     "ar": "التهاب مثانة",
+     "en": "Cystitis"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الثلاثي بول دموي + ورم + ضغط بعد عدوى سبحية يدل على المتلازمة النفريتية.",
+    "en": "The triad of bloody urine + edema + blood pressure after a streptococcal infection indicates nephritic syndrome."
+   }
+  },
+  {
+   "q": {
+    "ar": "كمية السوائل اليومية المسموحة لمريض التهاب كبيبات حاد قليل البول؟",
+    "en": "The daily fluid allowed for an acute glomerulonephritis patient with low urine output?"
+   },
+   "options": [
+    {
+     "ar": "حرية كاملة",
+     "en": "Free intake"
+    },
+    {
+     "ar": "مخرجات 24 ساعة + 500 مل تقريباً",
+     "en": "24-hour output + about 500 mL"
+    },
+    {
+     "ar": "نصف لتر فقط دائماً",
+     "en": "Only half a liter always"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تعويض البول + الفقد غير المحسوس.",
+    "en": "Replace the urine + insensible loss."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم مؤشر تمريضي لاحتباس السوائل؟",
+    "en": "The most important nursing indicator of fluid retention?"
+   },
+   "options": [
+    {
+     "ar": "حرارة المريض",
+     "en": "Patient's temperature"
+    },
+    {
+     "ar": "الوزن اليومي",
+     "en": "Daily weight"
+    },
+    {
+     "ar": "لون الشعر",
+     "en": "Hair color"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "زيادة الوزن السريعة تعكس احتباس السوائل.",
+    "en": "Rapid weight gain reflects fluid retention."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نتيجة تحليل بول تشير للالتهاب الكبيبي؟",
+    "en": "Which urinalysis result indicates glomerular inflammation?"
+   },
+   "options": [
+    {
+     "ar": "أسطوانات كرات حمراء (RBC casts)",
+     "en": "RBC casts"
+    },
+    {
+     "ar": "سكر فقط",
+     "en": "Sugar only"
+    },
+    {
+     "ar": "بلورات حمض اليوريك",
+     "en": "Uric acid crystals"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "RBC casts دليل على نزف كبيبي.",
+    "en": "RBC casts are evidence of glomerular bleeding."
+   }
+  },
+  {
+   "q": {
+    "ar": "الحالة التي تستدعي تبادل البلازما؟",
+    "en": "The condition that calls for plasma exchange?"
+   },
+   "options": [
+    {
+     "ar": "سبب مناعي مثل Anti-GBM",
+     "en": "An immune cause such as anti-GBM"
+    },
+    {
+     "ar": "عدوى جلدية بسيطة",
+     "en": "A simple skin infection"
+    },
+    {
+     "ar": "حصوة صغيرة",
+     "en": "A small stone"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تُزال الأجسام المضادة المسببة.",
+    "en": "The causative antibodies are removed."
+   }
+  },
+  {
+   "q": {
+    "ar": "مدرّات اللوب والثيازيد قد تسبب:",
+    "en": "Loop and thiazide diuretics may cause:"
+   },
+   "options": [
+    {
+     "ar": "نقص البوتاسيوم",
+     "en": "Low potassium"
+    },
+    {
+     "ar": "زيادة البوتاسيوم",
+     "en": "High potassium"
+    },
+    {
+     "ar": "زيادة الصوديوم",
+     "en": "High sodium"
+    },
+    {
+     "ar": "ارتفاع السكر",
+     "en": "High sugar"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تهدر البوتاسيوم.",
+    "en": "They waste potassium."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مما يلي يُنصح به في GN؟",
+    "en": "Which of the following is advised in GN?"
+   },
+   "options": [
+    {
+     "ar": "زيادة البروتين",
+     "en": "Increase protein"
+    },
+    {
+     "ar": "تقليل البروتين وإكمال المضاد",
+     "en": "Reduce protein and complete the antibiotic"
+    },
+    {
+     "ar": "إيقاف الدواء",
+     "en": "Stop the drug"
+    },
+    {
+     "ar": "زيادة الملح",
+     "en": "Increase salt"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "للحد من عبء الكلى.",
+    "en": "To reduce the kidney's burden."
+   }
+  },
+  {
+   "q": {
+    "ar": "أولوية المراقبة عند طفل بتهاب كبيبات حاد:",
+    "en": "The monitoring priority in a child with acute glomerulonephritis:"
+   },
+   "options": [
+    {
+     "ar": "ضغط الدم",
+     "en": "Blood pressure"
+    },
+    {
+     "ar": "الوزن",
+     "en": "Weight"
+    },
+    {
+     "ar": "البروتين",
+     "en": "Protein"
+    },
+    {
+     "ar": "البول",
+     "en": "Urine"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "قد ترتفع لحد الأزمة.",
+    "en": "It may rise to crisis level."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "KDIGO Clinical Practice Guideline for Glomerular Diseases (2021)"
+  },
+  {
+   "title": "StatPearls: Acute Glomerulonephritis / Poststreptococcal GN"
+  },
+  {
+   "title": "MSD Manual Professional: Glomerular disease overview"
+  },
+  {
+   "title": "NICE CKS: Glomerulonephritis"
+  }
+ ]
 }
