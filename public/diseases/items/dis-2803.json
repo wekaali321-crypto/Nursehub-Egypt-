@@ -1,159 +1,201 @@
 {
-  "id": "dis-2803",
-  "num": 2803,
-  "system": "infect",
-  "icon": "😷",
-  "level": 2,
-  "title": {
-    "ar": "السارس (متلازمة الالتهاب الرئوي الحاد الوخيم SARS)",
-    "en": "Severe Acute Respiratory Syndrome (SARS-CoV)"
+ "id": "dis-2803",
+ "num": 2803,
+ "system": "infect",
+ "icon": "😷",
+ "level": 2,
+ "title": {
+  "ar": "السارس (متلازمة الالتهاب الرئوي الحاد الوخيم SARS)",
+  "en": "Severe Acute Respiratory Syndrome (SARS-CoV)"
+ },
+ "teaser": {
+  "ar": "عدوى فيروس كورونا (SARS-CoV): الحضانة والمرحلتان، الأعراض والفحوصات، الأدوية غير المؤكدة الفعالية، وعزل الهواء والتلامس بغرفة ضغط سالب وقناع N95.",
+  "en": "Coronavirus infection (SARS-CoV): incubation and the two phases, symptoms and tests, drugs of unproven effectiveness, and airborne and contact isolation in a negative-pressure room with an N95 mask."
+ },
+ "chips": [
+  {
+   "ar": "مرحلتان",
+   "en": "Two phases"
   },
-  "teaser": {
-    "ar": "عدوى فيروس كورونا (SARS-CoV): الحضانة والمرحلتان، الأعراض والفحوصات، الأدوية غير المؤكدة الفعالية، وعزل الهواء والتلامس بغرفة ضغط سالب وقناع N95."
+  {
+   "ar": "عزل الهواء",
+   "en": "Airborne isolation"
   },
-  "chips": [
-    {
-      "ar": "مرحلتان"
-    },
-    {
-      "ar": "عزل الهواء"
-    },
-    {
-      "ar": "N95"
-    }
+  {
+   "ar": "N95",
+   "en": "N95"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>السارس عدوى تنفسية فيروسية (خفيفة إلى وخيمة) يسببها <strong>فيروس كورونا مميز (SARS-associated coronavirus: SARS-CoV)</strong>. يُعتقد أنه أقل عدوى من الإنفلونزا؛ <strong>فترة الحضانة ⁦2-10⁩ أيام</strong>، وليس شديد العدوى عند اتباع وسائل الحماية. لا توجد حالياً حالات انتقال مسجلة عالمياً حسب المرجع.</p>[[slot:dis-2803-sars-stages|مراحل السارس والعزل — رسم من إعداد الموقع|/diseases/img/dis-2803-sars-stages.svg]]\n<h4>الفيزيولوجيا المرضية</h4><p>الفيروسات التاجية تصيب الخنازير والطيور وحيوانات أخرى، ويُفترض أن فيروساً تحوّر فانتقل للإنسان. تتلامس الأغشية المخاطية مع قطرات تنفسية معدية أو أسطح ملوثة، فيرتبط الفيروس بمستقبلات خلايا الإنسان ويبدأ إصابة رئوية حادة غير نوعية، تنتهي بـ<strong>تلف حويصلي منتشر وشديد</strong>.</p>\n<h4>المرحلتان</h4><table><thead><tr><th>المرحلة</th><th>الوصف</th></tr></thead><tbody><tr><td>1</td><td>أعراض شبيهة بالإنفلونزا تبدأ بعد ⁦2-7⁩ أيام من انتهاء الحضانة وتستمر ⁦3-7⁩ أيام</td></tr><tr><td>2</td><td>إصابة الجهاز التنفسي السفلي</td></tr></tbody></table>",
+   "en": "<p>SARS is a viral respiratory infection (mild to severe) caused by a distinct <strong>coronavirus (SARS-associated coronavirus: SARS-CoV)</strong>. It is believed to be less contagious than influenza; the <strong>incubation period is 2-10 days</strong>, and it is not highly contagious when protective measures are followed. There are currently no recorded cases of transmission worldwide.</p>[[slot:dis-2803-sars-stages|Stages of SARS and isolation — illustration prepared by the site|/diseases/img/dis-2803-sars-stages.svg]]\n<h4>Pathophysiology</h4><p>Coronaviruses infect pigs, birds, and other animals, and it is assumed that a virus mutated and crossed to humans. The mucous membranes come into contact with infectious respiratory droplets or contaminated surfaces, the virus binds to receptors on human cells and begins a nonspecific acute lung injury, ending in <strong>severe, diffuse alveolar damage</strong>.</p>\n<h4>The two phases</h4><table><thead><tr><th>Phase</th><th>Description</th></tr></thead><tbody><tr><td>1</td><td>Flu-like symptoms that begin 2-7 days after the incubation ends and last 3-7 days</td></tr><tr><td>2</td><td>Lower respiratory tract involvement</td></tr></tbody></table>"
+  },
+  "causes": {
+   "ar": "<ul><li>فيروس كورونا المسمى SARS-CoV.</li><li>الانتقال بقطرات تنفسية معدية أو بالتلامس غير المباشر مع الأسطح الملوثة (Fomites).</li><li>عوامل الخطر: مخالطة شخص مصاب، السفر إلى منطقة موبوءة.</li></ul>",
+   "en": "<ul><li>The coronavirus called SARS-CoV.</li><li>Transmission by infectious respiratory droplets or by indirect contact with contaminated surfaces (Fomites).</li><li>Risk factors: contact with an infected person, travel to an endemic area.</li></ul>"
+  },
+  "signs": {
+   "ar": "<table><thead><tr><th>الجهاز</th><th>العلامات</th></tr></thead><tbody><tr><td>تنفسي</td><td>سعال جاف، ضيق نفس، تسرع تنفس، سيلان أنف، خراخر، ضائقة تنفسية في المراحل المتأخرة</td></tr><tr><td>هضمي/بولي</td><td>إسهال، غثيان وقيء، التهاب حلق</td></tr><tr><td>عضلات</td><td>ألم عضلي (Myalgia)</td></tr><tr><td>جلد</td><td>طفح</td></tr><tr><td>عام</td><td>حمى وقشعريرة، صداع، إعياء، توعك، فقدان شهية</td></tr></tbody></table>\n<p>في البداية قد لا توجد أعراض تنفسية، ثم سعال غير منتج خلال ⁦3-7⁩ أيام.</p>",
+   "en": "<table><thead><tr><th>System</th><th>Signs</th></tr></thead><tbody><tr><td>Respiratory</td><td>Dry cough, shortness of breath, tachypnea, runny nose, crackles, respiratory distress in the late stages</td></tr><tr><td>GI/urinary</td><td>Diarrhea, nausea and vomiting, sore throat</td></tr><tr><td>Muscles</td><td>Muscle pain (Myalgia)</td></tr><tr><td>Skin</td><td>Rash</td></tr><tr><td>General</td><td>Fever and chills, headache, exhaustion, malaise, loss of appetite</td></tr></tbody></table>\n<p>At the beginning there may be no respiratory symptoms, then a nonproductive cough within 3-7 days.</p>"
+  },
+  "tests": {
+   "ar": "<ul><li>اختبار الأجسام المضادة (ELISA) والمناعة الفلورية: تؤكد التشخيص.</li><li>مزرعة البلغم لعزل الفيروس.</li><li>صورة الدم: قلة كريات بيضاء وقلة صفيحات.</li><li>ارتفاع إنزيمات الكبد وLDH وCK.</li><li>تفاعل PCR النوعي للـ SARS-CoV (RNA الفيروسي).</li><li>مزرعة الدم لتحديد العدوى.</li><li>أشعة الصدر: قد تكون طبيعية أو تظهر ارتشاحات (Infiltrates) خلالية منتشرة أو ارتشاحات محيطية ثنائية الجانب.</li><li>CT الصدر: ارتشاحات «زجاج مصنفر» أو تصلب واضح.</li></ul>",
+   "en": "<ul><li>Antibody testing (ELISA) and immunofluorescence: confirm the diagnosis.</li><li>Sputum culture to isolate the virus.</li><li>Blood count: leukopenia and thrombocytopenia.</li><li>Raised liver enzymes, LDH, and CK.</li><li>Specific PCR for SARS-CoV (viral RNA).</li><li>Blood culture to identify infection.</li><li>Chest X-ray: may be normal or show diffuse interstitial infiltrates or bilateral peripheral infiltrates.</li><li>Chest CT: \"ground-glass\" infiltrates or clear consolidation.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li>مضادات الفيروسات: ريبافيرين (Ribavirin) أو أوسيلتاميفير (Oseltamivir) — لم تثبت فعاليتها باستمرار.</li><li>تركيبة الستيرويدات مع مضادات ميكروبية — غير مثبتة باستمرار.</li><li>إنترفيرون ألفاكون-1 (Interferon alfacon-1) — غير مثبت.</li><li>العلاج بالأكسجين.</li><li>سوائل وريدية داعمة.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات والأسماء للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي والنشرة قبل الإعطاء.</p></div>",
+   "en": "<ul><li>Antivirals: ribavirin or oseltamivir — their effectiveness has not been consistently proven.</li><li>Steroids combined with antimicrobials — not consistently proven.</li><li>Interferon alfacon-1 — not proven.</li><li>Oxygen therapy.</li><li>Supportive IV fluids.</li></ul><div class=\"cs-box cs-info\"><strong>Alert</strong><p>Doses and names are for learning only; always verify with the physician/pharmacist and the package insert before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ul><li>علاج الأعراض (Symptomatic).</li><li><strong>احتياطات الهواء (Airborne) والتلامس (Contact)</strong>.</li><li><strong>غرفة مفردة بضغط سالب</strong> للمرضى المنومين.</li><li>احتياطات تنفسية وغشائية صارمة بما فيها <strong>قناع N95</strong>.</li><li>حجر المخالطين لمنع انتشار الفيروس.</li><li>الترصد العالمي والإبلاغ عن الحالات المشتبه بها للسلطات الصحية.</li><li>التنبيب والتهوية الميكانيكية عند اللزوم (<a href=\"/diseases/dis-2801\">دليل جهاز التنفس الصناعي</a>).</li><li>الوقاية من الجلطات الوريدية (VTE prophylaxis).</li></ul>",
+   "en": "<ul><li>Symptomatic treatment.</li><li><strong>Airborne and Contact precautions</strong>.</li><li><strong>A single negative-pressure room</strong> for admitted patients.</li><li>Strict respiratory and mucous membrane precautions including an <strong>N95 mask</strong>.</li><li>Quarantine of contacts to prevent spread of the virus.</li><li>Global surveillance and reporting of suspected cases to the health authorities.</li><li>Intubation and mechanical ventilation when needed (<a href=\"/diseases/dis-2801\">ventilator guide</a>).</li><li>Prevention of venous thromboembolism (VTE prophylaxis).</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>تدهور الأكسجة أو ضيق نفس شديد: تنبيه الفريق لاحتمال المرحلة 2 والتنبيب.</li><li>أي مشتبه به (سفر لمنطقة موبوءة + حمى وأعراض تنفسية): عزل فوري وإبلاغ مكافحة العدوى.</li></ul>",
+   "en": "<ul><li>Worsening oxygenation or severe shortness of breath: alert the team to possible phase 2 and intubation.</li><li>Any suspected case (travel to an endemic area + fever and respiratory symptoms): immediate isolation and notification of infection control.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>شرح مسار المرض.</li><li>إجراءات منع انتشار العدوى: غسل اليدين، وعدم مشاركة الأدوات.</li><li>الالتزام بخطة العلاج وأهمية المتابعة.</li></ul>",
+   "en": "<ul><li>Explain the course of the disease.</li><li>Infection-prevention measures: handwashing, and not sharing utensils.</li><li>Commitment to the treatment plan and the importance of follow-up.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "SARS-CoV: حضانة ⁦2-10⁩ أيام ومرحلتان (أنفلونزية ثم تنفسية سفلية)",
+   "عزل الهواء والتلامس + غرفة ضغط سالب + N95",
+   "الأدوية (ريبافيرين، أوسيلتاميفير، ستيرويد، إنترفيرون) لم تثبت فعاليتها باستمرار",
+   "تأكيد التشخيص: PCR وأجسام مضادة؛ CT زجاج مصنفر"
   ],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>السارس عدوى تنفسية فيروسية (خفيفة إلى وخيمة) يسببها <strong>فيروس كورونا مميز (SARS-associated coronavirus: SARS-CoV)</strong>. يُعتقد أنه أقل عدوى من الإنفلونزا؛ <strong>فترة الحضانة ⁦2-10⁩ أيام</strong>، وليس شديد العدوى عند اتباع وسائل الحماية. لا توجد حالياً حالات انتقال مسجلة عالمياً حسب المرجع.</p>[[slot:dis-2803-sars-stages|مراحل السارس والعزل — رسم من إعداد الموقع|/diseases/img/dis-2803-sars-stages.svg]]\n<h4>الفيزيولوجيا المرضية</h4><p>الفيروسات التاجية تصيب الخنازير والطيور وحيوانات أخرى، ويُفترض أن فيروساً تحوّر فانتقل للإنسان. تتلامس الأغشية المخاطية مع قطرات تنفسية معدية أو أسطح ملوثة، فيرتبط الفيروس بمستقبلات خلايا الإنسان ويبدأ إصابة رئوية حادة غير نوعية، تنتهي بـ<strong>تلف حويصلي منتشر وشديد</strong>.</p>\n<h4>المرحلتان</h4><table><thead><tr><th>المرحلة</th><th>الوصف</th></tr></thead><tbody><tr><td>1</td><td>أعراض شبيهة بالإنفلونزا تبدأ بعد ⁦2-7⁩ أيام من انتهاء الحضانة وتستمر ⁦3-7⁩ أيام</td></tr><tr><td>2</td><td>إصابة الجهاز التنفسي السفلي</td></tr></tbody></table>"
-    },
-    "causes": {
-      "ar": "<ul><li>فيروس كورونا المسمى SARS-CoV.</li><li>الانتقال بقطرات تنفسية معدية أو بالتلامس غير المباشر مع الأسطح الملوثة (Fomites).</li><li>عوامل الخطر: مخالطة شخص مصاب، السفر إلى منطقة موبوءة.</li></ul>"
-    },
-    "signs": {
-      "ar": "<table><thead><tr><th>الجهاز</th><th>العلامات</th></tr></thead><tbody><tr><td>تنفسي</td><td>سعال جاف، ضيق نفس، تسرع تنفس، سيلان أنف، خراخر، ضائقة تنفسية في المراحل المتأخرة</td></tr><tr><td>هضمي/بولي</td><td>إسهال، غثيان وقيء، التهاب حلق</td></tr><tr><td>عضلات</td><td>ألم عضلي (Myalgia)</td></tr><tr><td>جلد</td><td>طفح</td></tr><tr><td>عام</td><td>حمى وقشعريرة، صداع، إعياء، توعك، فقدان شهية</td></tr></tbody></table>\n<p>في البداية قد لا توجد أعراض تنفسية، ثم سعال غير منتج خلال ⁦3-7⁩ أيام.</p>"
-    },
-    "tests": {
-      "ar": "<ul><li>اختبار الأجسام المضادة (ELISA) والمناعة الفلورية: تؤكد التشخيص.</li><li>مزرعة البلغم لعزل الفيروس.</li><li>صورة الدم: قلة كريات بيضاء وقلة صفيحات.</li><li>ارتفاع إنزيمات الكبد وLDH وCK.</li><li>تفاعل PCR النوعي للـ SARS-CoV (RNA الفيروسي).</li><li>مزرعة الدم لتحديد العدوى.</li><li>أشعة الصدر: قد تكون طبيعية أو تظهر ارتشاحات (Infiltrates) خلالية منتشرة أو ارتشاحات محيطية ثنائية الجانب.</li><li>CT الصدر: ارتشاحات «زجاج مصنفر» أو تصلب واضح.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li>مضادات الفيروسات: ريبافيرين (Ribavirin) أو أوسيلتاميفير (Oseltamivir) — لم تثبت فعاليتها باستمرار.</li><li>تركيبة الستيرويدات مع مضادات ميكروبية — غير مثبتة باستمرار.</li><li>إنترفيرون ألفاكون-1 (Interferon alfacon-1) — غير مثبت.</li><li>العلاج بالأكسجين.</li><li>سوائل وريدية داعمة.</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات والأسماء للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي والنشرة قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ul><li>علاج الأعراض (Symptomatic).</li><li><strong>احتياطات الهواء (Airborne) والتلامس (Contact)</strong>.</li><li><strong>غرفة مفردة بضغط سالب</strong> للمرضى المنومين.</li><li>احتياطات تنفسية وغشائية صارمة بما فيها <strong>قناع N95</strong>.</li><li>حجر المخالطين لمنع انتشار الفيروس.</li><li>الترصد العالمي والإبلاغ عن الحالات المشتبه بها للسلطات الصحية.</li><li>التنبيب والتهوية الميكانيكية عند اللزوم (<a href=\"/diseases/dis-2801\">دليل جهاز التنفس الصناعي</a>).</li><li>الوقاية من الجلطات الوريدية (VTE prophylaxis).</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>تدهور الأكسجة أو ضيق نفس شديد: تنبيه الفريق لاحتمال المرحلة 2 والتنبيب.</li><li>أي مشتبه به (سفر لمنطقة موبوءة + حمى وأعراض تنفسية): عزل فوري وإبلاغ مكافحة العدوى.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>شرح مسار المرض.</li><li>إجراءات منع انتشار العدوى: غسل اليدين، وعدم مشاركة الأدوات.</li><li>الالتزام بخطة العلاج وأهمية المتابعة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "SARS-CoV: حضانة ⁦2-10⁩ أيام ومرحلتان (أنفلونزية ثم تنفسية سفلية)",
-      "عزل الهواء والتلامس + غرفة ضغط سالب + N95",
-      "الأدوية (ريبافيرين، أوسيلتاميفير، ستيرويد، إنترفيرون) لم تثبت فعاليتها باستمرار",
-      "تأكيد التشخيص: PCR وأجسام مضادة؛ CT زجاج مصنفر"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أنسب غرفة لمريض مصاب بالسارس المنوَّم؟"
-      },
-      "options": [
-        {
-          "ar": "غرفة مفردة بضغط سالب"
-        },
-        {
-          "ar": "غرفة مشتركة"
-        },
-        {
-          "ar": "غرفة بضغط موجب"
-        },
-        {
-          "ar": "لا عزل"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "السارس ينتقل عبر الهواء والرذاذ، فيحتاج غرفة ضغط سالب وقناع N95."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما مدة حضانة السارس التقريبية؟"
-      },
-      "options": [
-        {
-          "ar": "2 إلى 10 أيام"
-        },
-        {
-          "ar": "شهر"
-        },
-        {
-          "ar": "24 ساعة فقط"
-        },
-        {
-          "ar": "6 أشهر"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحضانة ⁦2-10⁩ أيام."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما أنسب احتياط لمقدّم الرعاية؟"
-      },
-      "options": [
-        {
-          "ar": "قناع جراحي فقط"
-        },
-        {
-          "ar": "احتياطات الهواء والتلامس مع قناع N95"
-        },
-        {
-          "ar": "لا شيء"
-        },
-        {
-          "ar": "قفازات فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يلزم N95 وعزل هواء وتلامس."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نتيجة صورة دم متوقعة؟"
-      },
-      "options": [
-        {
-          "ar": "قلة كريات بيضاء وقلة صفيحات"
-        },
-        {
-          "ar": "كثرة صفيحات فقط"
-        },
-        {
-          "ar": "ارتفاع الهيموجلوبين"
-        },
-        {
-          "ar": "تغير غير ممكن"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يحدث غالباً قلة كريات بيضاء وصفيحات."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "إرشادات وملخصات تمريضية جراحية باطنية عامة (مراجع مفتوحة)"
-    }
+  "en": [
+   "SARS-CoV: incubation 2-10 days and two phases (flu-like, then lower respiratory)",
+   "Airborne and contact isolation + negative-pressure room + N95",
+   "Drugs (ribavirin, oseltamivir, steroids, interferon) have not been consistently proven effective",
+   "Confirming the diagnosis: PCR and antibodies; ground-glass CT"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أنسب غرفة لمريض مصاب بالسارس المنوَّم؟",
+    "en": "What is the most appropriate room for an admitted SARS patient?"
+   },
+   "options": [
+    {
+     "ar": "غرفة مفردة بضغط سالب",
+     "en": "A single negative-pressure room"
+    },
+    {
+     "ar": "غرفة مشتركة",
+     "en": "A shared room"
+    },
+    {
+     "ar": "غرفة بضغط موجب",
+     "en": "A positive-pressure room"
+    },
+    {
+     "ar": "لا عزل",
+     "en": "No isolation"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السارس ينتقل عبر الهواء والرذاذ، فيحتاج غرفة ضغط سالب وقناع N95.",
+    "en": "SARS spreads by air and droplets, so it needs a negative-pressure room and an N95 mask."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما مدة حضانة السارس التقريبية؟",
+    "en": "What is the approximate incubation period of SARS?"
+   },
+   "options": [
+    {
+     "ar": "2 إلى 10 أيام",
+     "en": "2 to 10 days"
+    },
+    {
+     "ar": "شهر",
+     "en": "One month"
+    },
+    {
+     "ar": "24 ساعة فقط",
+     "en": "24 hours only"
+    },
+    {
+     "ar": "6 أشهر",
+     "en": "6 months"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحضانة ⁦2-10⁩ أيام.",
+    "en": "The incubation is 2-10 days."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما أنسب احتياط لمقدّم الرعاية؟",
+    "en": "What is the most appropriate precaution for the caregiver?"
+   },
+   "options": [
+    {
+     "ar": "قناع جراحي فقط",
+     "en": "A surgical mask only"
+    },
+    {
+     "ar": "احتياطات الهواء والتلامس مع قناع N95",
+     "en": "Airborne and contact precautions with an N95 mask"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "Nothing"
+    },
+    {
+     "ar": "قفازات فقط",
+     "en": "Gloves only"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يلزم N95 وعزل هواء وتلامس.",
+    "en": "N95 and airborne and contact isolation are required."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نتيجة صورة دم متوقعة؟",
+    "en": "Which blood count result is expected?"
+   },
+   "options": [
+    {
+     "ar": "قلة كريات بيضاء وقلة صفيحات",
+     "en": "Leukopenia and thrombocytopenia"
+    },
+    {
+     "ar": "كثرة صفيحات فقط",
+     "en": "Thrombocytosis only"
+    },
+    {
+     "ar": "ارتفاع الهيموجلوبين",
+     "en": "Raised hemoglobin"
+    },
+    {
+     "ar": "تغير غير ممكن",
+     "en": "An impossible change"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يحدث غالباً قلة كريات بيضاء وصفيحات.",
+    "en": "Leukopenia and low platelets usually occur."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "إرشادات وملخصات تمريضية جراحية باطنية عامة (مراجع مفتوحة)"
+  }
+ ]
 }

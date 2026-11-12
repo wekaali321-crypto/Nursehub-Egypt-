@@ -1,295 +1,376 @@
 {
-  "id": "dis-182",
-  "num": 182,
-  "system": "infect",
-  "icon": "🤧",
-  "level": 2,
-  "title": {
-    "ar": "الإنفلونزا",
-    "en": "Influenza (Flu)"
+ "id": "dis-182",
+ "num": 182,
+ "system": "infect",
+ "icon": "🤧",
+ "level": 2,
+ "title": {
+  "ar": "الإنفلونزا",
+  "en": "Influenza (Flu)"
+ },
+ "teaser": {
+  "ar": "الفرق بين الإنفلونزا ونزلة البرد، أنواع A/B/C وليه بتتكرر، التطعيم السنوي وموانعه، العلاج الحديث (Oseltamivir) ومضاعفاتها، وإيه اللي تراقبه كممرض.",
+  "en": "The difference between influenza and the common cold, types A/B/C and why it keeps coming back, the annual vaccine and its contraindications, modern treatment (Oseltamivir) and its complications, and what you monitor as a nurse."
+ },
+ "chips": [
+  {
+   "ar": "فيروس A/B/C",
+   "en": "Virus A/B/C"
   },
-  "teaser": {
-    "ar": "الفرق بين الإنفلونزا ونزلة البرد، أنواع A/B/C وليه بتتكرر، التطعيم السنوي وموانعه، العلاج الحديث (Oseltamivir) ومضاعفاتها، وإيه اللي تراقبه كممرض."
+  {
+   "ar": "تطعيم سنوي",
+   "en": "Annual vaccine"
   },
-  "chips": [
-    {
-      "ar": "فيروس A/B/C"
-    },
-    {
-      "ar": "تطعيم سنوي"
-    },
-    {
-      "ar": "Oseltamivir"
-    }
+  {
+   "ar": "Oseltamivir",
+   "en": "Oseltamivir"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p><b>الإنفلونزا (Influenza / Flu)</b> عدوى فيروسية <b>شديدة العدوى</b> في الجهاز التنفسي. بتسبب كل أعراض نزلة البرد (صداع، التهاب حلق، كحة جافة غالباً، رشح، عطس) وكمان أعراض عامة أشد. عادة بتخف خلال 5–7 أيام إلا لو اتعقدت بعدوى في الجهاز التنفسي السفلي.</p><div class=\"cs-stats\"><div><b>5–7</b><span>أيام للتحسن غالباً</span></div><div><b>A / B / C</b><span>أنواع الفيروس</span></div><div><b>3–5</b><span>أيام للحرارة والآلام</span></div><div><b>سنوي</b><span>التطعيم</span></div></div>[[slot:dis-182-coldflu|الفرق بين نزلة البرد والإنفلونزا|/diseases/img/dis-182-coldflu.svg]]<div class=\"cs-box cs-info\"><strong>الفرق بالتفصيل</strong><p>نزلة البرد (Cold) مرض خفيف نسبياً وبيروح لوحده وممكن يؤدي أحياناً لعدوى ثانوية زي التهاب الأذن. أما الإنفلونزا فممكن تسبب مضاعفات زي الالتهاب الرئوي وحتى الوفاة.</p></div>\n[[slot:dis-182-flu|الإنفلونزا بإيجاز — رسم من إعداد الموقع|/diseases/img/dis-182-flu.svg]]\n<ul><li>فيروس (أنواع A وB وC) يتحوّر باستمرار، فالتطعيم <b>سنوي</b>.</li><li>المضادات الحيوية لا تعالجه لأنه ليس بكتيريا.</li><li>الأعراض: حمى، تعب، آلام عضلات.</li><li>تنتقل بالقطرات: <a href=\"/diseases/dis-1304\">عزل القطرات</a>.</li></ul><h4>إضافات تغطي نقاط المراجعة</h4><p>الإنفلونزا سببها فيروس (ليس بكتيريا) لذا لا تنفع المضادات الحيوية. أنواعه A وB وC متحورة باستمرار، لذلك يوصى بالتطعيم السنوي. الأعراض: حمى، إرهاق، آلام جسم.</p>\n<h4>مراجعة تمريضية إضافية (أنواع فرعية ومسار العدوى)</h4>[[slot:dis-2874-influenza|الإنفلونزا: من العدوى إلى المضاعفات — رسم من إعداد الموقع|/diseases/img/dis-2874-influenza.svg]]<p>العدوى بفيروس أورثوميكسو (Orthomyxovirus) يُنقل بالقطرات التنفسية أو بالتلامس غير المباشر (مثل شرب من كوب ملوث). الفيروس يغزو ظهارة الجهاز التنفسي فيسبب التهاباً وتقشراً، ثم يدخل الخلية ويستعمل مكوناتها ليتكاثر، وتنفجر الخلايا لتصيب غيرها، فتضعف الدفاعات التنفسية (خصوصاً النقل المخاطي الهدبي) فتتهيأ لعدوى بكتيرية ثانوية.</p><ul><li><strong>إنفلونزا الطيور (Avian flu):</strong> لا تصيب البشر عادة وتصيب الطيور غالباً.</li><li><strong>إنفلونزا الخنازير (Swine flu):</strong> سلالة تحوي مواد وراثية من الخنازير والطيور والبشر.</li></ul>",
+   "en": "<p><b>Influenza (Flu)</b> is a <b>highly contagious</b> viral infection of the respiratory tract. It causes all the symptoms of the common cold (headache, sore throat, usually a dry cough, runny nose, sneezing) plus more severe general symptoms. It usually clears in 5–7 days unless complicated by a lower respiratory tract infection.</p><div class=\"cs-stats\"><div><b>5–7</b><span>days to improve, usually</span></div><div><b>A / B / C</b><span>virus types</span></div><div><b>3–5</b><span>days of fever and aches</span></div><div><b>Annual</b><span>vaccine</span></div></div>[[slot:dis-182-coldflu|The difference between the common cold and influenza|/diseases/img/dis-182-coldflu.svg]]<div class=\"cs-box cs-info\"><strong>The difference in detail</strong><p>The common cold (Cold) is a relatively mild illness that goes away on its own and may sometimes lead to a secondary infection such as an ear infection. Influenza, however, can cause complications such as pneumonia and even death.</p></div>\n[[slot:dis-182-flu|Influenza in brief — illustration prepared by the site|/diseases/img/dis-182-flu.svg]]\n<ul><li>The virus (types A, B and C) mutates constantly, so the vaccine is <b>annual</b>.</li><li>Antibiotics do not treat it because it is not a bacterium.</li><li>Symptoms: fever, fatigue, muscle aches.</li><li>It spreads by droplets: <a href=\"/diseases/dis-1304\">droplet precautions</a>.</li></ul><h4>Additional review points</h4><p>Influenza is caused by a virus (not a bacterium), so antibiotics do not help. Its types A, B and C mutate constantly, so the annual vaccine is recommended. Symptoms: fever, exhaustion, body aches.</p>\n<h4>Additional nursing review (subtypes and route of infection)</h4>[[slot:dis-2874-influenza|Influenza: from infection to complications — illustration prepared by the site|/diseases/img/dis-2874-influenza.svg]]<p>Infection with an orthomyxovirus (Orthomyxovirus) is spread by respiratory droplets or indirect contact (such as drinking from a contaminated cup). The virus invades the respiratory epithelium and causes inflammation and shedding, then enters the cell and uses its components to multiply, and the cells burst to infect others. This weakens the respiratory defenses (especially mucociliary clearance), preparing the way for a secondary bacterial infection.</p><ul><li><strong>Avian flu (Avian flu):</strong> does not usually infect humans and mostly infects birds.</li><li><strong>Swine flu (Swine flu):</strong> a strain containing genetic material from pigs, birds and humans.</li></ul>"
+  },
+  "causes": {
+   "ar": "<h4>أنواع الفيروس</h4><ul><li><b>النوعان A و B:</b> مسؤولان عن أوبئة الجهاز التنفسي اللي بتحصل تقريباً كل شتاء، وغالباً مرتبطة بزيادة حالات دخول المستشفى والوفيات. جهود التحكم بتركز عليهم.</li><li><b>النوع C:</b> غالباً بيسبب مرض تنفسي خفيف جداً أو من غير أعراض، ما بيعملش أوبئة ولا تأثيراً على الصحة العامة زي A وB.</li></ul><p>النوع A بينقسم لأنواع فرعية حسب بروتينين على سطح الفيروس: <b>الهيماجلوتينين (H)</b> والنيورامينيداز (N). الأنواع الفرعية الحالية للنوع A: A(H1N1) و A(H3N2). والمتداول عالمياً حالياً حسب المراجع: نوعين A ونوع B واحد (لقاح ثلاثي).</p><h4>ليه بنصاب أكتر من مرة؟</h4><p>الفيروس بيتحور باستمرار فيهرب من جهاز المناعة، وده يخلي الناس معرضة للعدوى طول حياتهم. الأجسام المضادة القديمة بتدي حماية جزئية فقط ضد العدوى الجديدة.</p>[[slot:dis-182-mutation|دورة تحور الفيروس وتكرار العدوى|/diseases/img/dis-182-mutation.svg]]<h4>طريقة العدوى</h4><ul><li><b>الرذاذ (Airborne droplets)</b> بالعطس والكحة.</li><li>لمس الأسطح الملوثة: الفيروس يعيش فترة قصيرة على الأشياء: مقابض الأبواب، الأقلام، لوحات المفاتيح، سماعات التليفون، أدوات الأكل والشرب، ثم لمس الفم أو الأنف أو العين.</li></ul>\n<h4>عوامل الخطر</h4><ul><li>ضعف المناعة، العمر (صغار جداً أو كبار السن).</li><li>المهنة: العاملون الصحيون والعاملون في الحضانات.</li><li>الأمراض المزمنة، الحمل.</li><li>العيش في أماكن مزدحمة، ورعاية أو معيشة مع مصاب.</li></ul>",
+   "en": "<h4>Virus types</h4><ul><li><b>Types A and B:</b> responsible for the respiratory epidemics that happen almost every winter, and usually linked to more hospitalizations and deaths. Control efforts focus on them.</li><li><b>Type C:</b> usually causes a very mild respiratory illness or no symptoms, and does not cause epidemics or an impact on public health like A and B.</li></ul><p>Type A is divided into subtypes according to two proteins on the surface of the virus: <b>hemagglutinin (H)</b> and neuraminidase (N). The current subtypes of type A: A(H1N1) and A(H3N2). The strains currently circulating worldwide: two type A strains and one type B strain (trivalent vaccine).</p><h4>Why do we get infected more than once?</h4><p>The virus mutates constantly and escapes the immune system, which keeps people susceptible to infection throughout their lives. Old antibodies give only partial protection against a new infection.</p>[[slot:dis-182-mutation|The virus mutation cycle and repeated infection|/diseases/img/dis-182-mutation.svg]]<h4>How it spreads</h4><ul><li><b>Droplets (Airborne droplets)</b> from sneezing and coughing.</li><li>Touching contaminated surfaces: the virus survives for a short time on objects: door handles, pens, keyboards, telephone receivers, eating and drinking utensils, then touching the mouth, nose or eyes.</li></ul>\n<h4>Risk factors</h4><ul><li>Weak immunity, age (very young or elderly).</li><li>Occupation: health care workers and nursery workers.</li><li>Chronic diseases, pregnancy.</li><li>Living in crowded places, and caring for or living with an infected person.</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>الأعراض</h4><p>نفس أعراض نزلة البرد (صداع، التهاب حلق، كحة جافة غالباً، رشح، عطس) وكمان:</p><ul><li>قشعريرة (Chills)</li><li>آلام عضلات (Myalgia) وآلام ظهر وآلام عظام</li><li>وهن وإعياء شديد (Prostration) وتعب عام (Malaise)</li><li>لسان مغطى (Flurred tongue)</li><li>فقدان شهية (Anorexia)</li><li>تعرق</li><li><b>حرارة مفاجئة</b> (قد تصل 38 درجة فأكتر)</li><li>قلة كرات الدم البيضاء (Leucopenia)</li><li>أحياناً وبشكل نادر: غثيان وقيء وإسهال</li></ul><p>الحرارة وآلام الجسم عادة تستمر 3 إلى 5 أيام، لكن الكحة والإرهاق ممكن يستمروا أسبوعين أو أكتر.</p><h4>المضاعفات</h4><ul><li>التهاب شعبي (Bronchitis)</li><li>التهاب رئوي (Pneumonia)</li><li>التهاب الجيوب (Sinusitis)</li><li>التهاب الأذن الوسطى (Otitis media)</li><li>التهاب الدماغ (Encephalitis)</li><li>التهاب التامور (Pericarditis)</li><li>متلازمة راي (Reye's syndrome) خصوصاً مع الأسبرين في الأطفال</li></ul><div class=\"cs-box cs-warning\"><strong>مين الأكتر خطورة؟</strong><p>كبار السن (أكتر من 65)، مرضى السكر وأمراض الصدر والقلب والكلى المزمنة، ضعاف المناعة، الحوامل، والأطفال الصغار: لازم متابعة دقيقة.</p></div><h4>الأعراض الشائعة والنادرة (مقارنة بنزلة البرد)</h4><ul><li>تبدأ سريعاً خلال ساعات</li><li>شائعة: سخونية (38–40)، ألم شديد بالعضلات، إرهاق شديد، صداع، رعشة، كحة ناشفة</li><li>نادرة: رشح، عطس، التهاب الحلق، احتقان الأنف</li><li>موسمية: الخريف والشتاء</li><li>ممكن ببعض المضاعفات الخطيرة مثل الالتهاب الرئوي</li></ul><p>الإنفلونزا ودور البرد ينتهيان عادة خلال أسبوع أو أسبوعين، لكن الكحة قد تستمر (Post-viral cough) خصوصاً في الأطفال. العلاج في الحالتين متقارب؛ تفاصيل أدوية البرد المركبة في دليل نزلة البرد وأدوية الكحة في دليل «أدوية الكحة».</p>\n<h4>الأعراض حسب الأجهزة وأعراض إضافية</h4><table><thead><tr><th>الجهاز</th><th>العلامات</th></tr></thead><tbody><tr><td>عصبي</td><td>صداع</td></tr><tr><td>عام</td><td>توعك وإعياء وخمول وضعف، حمى، جلد ساخن ومحمر، عيون دامعة</td></tr><tr><td>أنف وحلق</td><td>إفراز أنفي رائق، احمرار الأنف والحلق دون إفراز قيحي</td></tr><tr><td>عضلات</td><td>ألم عضلي، ألم عند حركة العين</td></tr><tr><td>تنفسي</td><td>التهاب حلق، سعال غير منتج، تسرع تنفس، ضيق نفس، زرقة</td></tr><tr><td>قلب</td><td>تسرع قلب</td></tr></tbody></table><h4>قائمة المضاعفات الكاملة</h4><ul><li>الالتهاب الرئوي، الخانوق (Croup)، التهابات الأذن.</li><li>التهاب العضلات (Myositis) وانحلال الربيدات (Rhabdomyolysis).</li><li>تفاقم الانسداد الرئوي المزمن (COPD)، متلازمة راي (Reye).</li><li>التهاب عضلة القلب (Myocarditis) والتامور (Pericarditis).</li><li>التهاب النخاع المستعرض (Transverse myelitis) والتهاب الدماغ (Encephalitis).</li><li>متلازمة الصدمة السامة (TSS)، متلازمة الضائقة التنفسية الحادة (ARDS)، والوفاة.</li></ul>",
+   "en": "<h4>Symptoms</h4><p>The same symptoms as the common cold (headache, sore throat, usually a dry cough, runny nose, sneezing) and also:</p><ul><li>Chills (Chills)</li><li>Muscle aches (Myalgia), back pain and bone pain</li><li>Severe weakness and exhaustion (Prostration) and general fatigue (Malaise)</li><li>Coated tongue (Flurred tongue)</li><li>Loss of appetite (Anorexia)</li><li>Sweating</li><li><b>Sudden fever</b> (may reach 38 degrees or more)</li><li>Low white blood cell count (Leucopenia)</li><li>Sometimes and rarely: nausea, vomiting and diarrhea</li></ul><p>Fever and body aches usually last 3 to 5 days, but the cough and fatigue may last two weeks or more.</p><h4>Complications</h4><ul><li>Bronchitis (Bronchitis)</li><li>Pneumonia (Pneumonia)</li><li>Sinusitis (Sinusitis)</li><li>Middle ear infection (Otitis media)</li><li>Encephalitis (Encephalitis)</li><li>Pericarditis (Pericarditis)</li><li>Reye's syndrome (Reye's syndrome), especially with aspirin in children</li></ul><div class=\"cs-box cs-warning\"><strong>Who is at highest risk?</strong><p>The elderly (over 65), patients with diabetes and chronic chest, heart and kidney disease, the immunocompromised, pregnant women, and young children: close monitoring is a must.</p></div><h4>Common and rare symptoms (compared with the common cold)</h4><ul><li>Starts quickly, within hours</li><li>Common: high fever (38–40), severe muscle pain, severe exhaustion, headache, chills, dry cough</li><li>Rare: runny nose, sneezing, sore throat, nasal congestion</li><li>Seasonal: autumn and winter</li><li>Can come with serious complications such as pneumonia</li></ul><p>Influenza and colds usually end within a week or two, but the cough may persist (Post-viral cough), especially in children. Treatment in both is similar; the details of combination cold drugs are in the common cold guide and cough drugs in the \"cough drugs\" guide.</p>\n<h4>Symptoms by system and additional symptoms</h4><table><thead><tr><th>System</th><th>Signs</th></tr></thead><tbody><tr><td>Neurologic</td><td>Headache</td></tr><tr><td>General</td><td>Malaise, exhaustion, lethargy and weakness, fever, hot flushed skin, watery eyes</td></tr><tr><td>Nose and throat</td><td>Clear nasal discharge, redness of the nose and throat without purulent discharge</td></tr><tr><td>Muscles</td><td>Muscle pain, pain on eye movement</td></tr><tr><td>Respiratory</td><td>Sore throat, nonproductive cough, tachypnea, shortness of breath, cyanosis</td></tr><tr><td>Heart</td><td>Tachycardia</td></tr></tbody></table><h4>Full list of complications</h4><ul><li>Pneumonia, croup (Croup), ear infections.</li><li>Muscle inflammation (Myositis) and rhabdomyolysis (Rhabdomyolysis).</li><li>Worsening of chronic obstructive pulmonary disease (COPD), Reye syndrome (Reye).</li><li>Myocarditis (Myocarditis) and pericarditis (Pericarditis).</li><li>Transverse myelitis (Transverse myelitis) and encephalitis (Encephalitis).</li><li>Toxic shock syndrome (TSS), acute respiratory distress syndrome (ARDS), and death.</li></ul>"
+  },
+  "tests": {
+   "ar": "<p>التشخيص غالباً إكلينيكي في موسم الإنفلونزا. الاختبارات (حسب الطبيب):</p><ul><li>مسحة أنف/حلق لاختبار سريع للإنفلونزا أو PCR (بتأكد النوع)</li><li>صورة دم: قلة كرات بيضاء</li><li>أشعة صدر لو شك في التهاب رئوي</li><li>أكسجين الدم (SpO2) للحالات المتوسطة والشديدة</li></ul><div class=\"cs-box cs-info\"><strong>ليه الاختبار مهم؟</strong><p>تأكيد الإنفلونزا بيوجّه استخدام المضاد الفيروسي ويفيد في العزل والتحكم في العدوى داخل المستشفى.</p></div>\n<ul><li>مسحة الحلق أو الأنف أو مزرعة البلغم لعزل الفيروس، وتقنيات مناعية تظهر مستضدات الفيروس في الخلايا المتقشرة.</li><li>اختبارات المستضد السريعة (إيجابية لنوع A أو B).</li><li>الكريات البيضاء ترتفع مع العدوى البكتيرية الثانوية وتنخفض مع العدوى الفيروسية الشديدة أو البكتيرية الغالبة.</li><li>أشعة الصدر لاستبعاد الالتهاب الرئوي.</li></ul>",
+   "en": "<p>Diagnosis is usually clinical during influenza season. Tests (per the physician):</p><ul><li>Nasal/throat swab for a rapid influenza test or PCR (confirms the type)</li><li>Blood count: low white cells</li><li>Chest X-ray if pneumonia is suspected</li><li>Blood oxygen (SpO2) for moderate and severe cases</li></ul><div class=\"cs-box cs-info\"><strong>Why is testing important?</strong><p>Confirming influenza guides the use of the antiviral and helps with isolation and infection control inside the hospital.</p></div>\n<ul><li>Throat or nasal swab or sputum culture to isolate the virus, and immunologic techniques that show viral antigens in shed cells.</li><li>Rapid antigen tests (positive for type A or B).</li><li>White blood cells rise with a secondary bacterial infection and fall with a severe viral infection or a predominant bacterial one.</li><li>Chest X-ray to rule out pneumonia.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>الوقاية: التطعيم (Prevention)</h4><p>الوقاية بلقاح ثلاثي من فيروسات مُثبَّطة (Inactivated) أو مجزّأة (Split).</p><ol><li>لقاح جديد بيتطور كل سنة لمواجهة السلالات الحالية، فلازم يتاخد كل سنة: <b>بين سبتمبر ومنتصف نوفمبر</b> (حسب المراجع)، وكتير بياخدوه قبل موسم الشتا بشهر (حوالي أكتوبر).</li><li><b>الفئات المستهدفة:</b> مرضى السكر، أمراض الرئة والقلب والكلى المزمنة، نقص المناعة، أمراض الهيموجلوبين (Haemoglobinopathies)، الفريق الطبي، وكل من تجاوز 65 سنة.</li><li><b>مانع الاستخدام:</b> أخطر أثر جانبي هو حساسية شديدة عند من عندهم حساسية شديدة للبيض (حسب المراجع). مرضى حساسية البيض الشديدة لا يتناولون اللقاح.</li><li>أعراض جانبية بسيطة: صداع أو حرارة خفيفة وألم مكان الحقن حوالي يوم.</li></ol><table><thead><tr><th>اللقاح (الاسم التجاري)</th><th>الإعطاء</th></tr></thead><tbody><tr><td>Influvac</td><td>تحت الجلد أو بالعضل، ويكرر بعد أسبوعين</td></tr><tr><td>Fluarix</td><td>نفس الطريقة</td></tr><tr><td>Vaxigrip</td><td>نفس الطريقة</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong>حساسية البيض لم تعد مانعاً مطلقاً حسب CDC الحديثة: حتى من عنده حساسية بيض يمكنه أخذ لقاح الإنفلونزا المناسب لعمره (ويُعطى في مكان مجهّز لو كان رد فعله سابقاً شديداً). المانع الحقيقي: حساسية شديدة سابقة لنفس اللقاح أو أحد مكوناته. التركيبة الحالية في كثير من الدول <b>ثلاثية</b> (A/H1N1 وA/H3N2 وB). الأطفال أقل من 9 سنين ياخدوا جرعتين في أول سنة. الحوامل ينصح لهم باللقاح.</div><h4>العلاج العام</h4><ul><li>راحة تامة بالسرير</li><li>سوائل دافئة كتير مع وجبات خفيفة</li></ul><h4>العلاج الدوائي حسب المراجع (الأعراض)</h4><table><thead><tr><th>الفئة</th><th>الدواء (بأمر الطبيب)</th><th>الجرعة</th></tr></thead><tbody><tr><td>مضاد فيروسات (حسب المراجع)</td><td><b>Adamine</b> كبسولة (Amantadine)</td><td>كبسولة مرتين يومياً لمدة 10 أيام</td></tr><tr><td>التهاب الأنف (Rhinitis) — كبار</td><td>Clarinase قرص</td><td>قرص كل 12 ساعة</td></tr><tr><td></td><td>أو Comtrex قرص</td><td>قرص كل 8 ساعات</td></tr><tr><td>عدوى بكتيرية ثانوية — كبار</td><td>Velosef 1 جم فيال، أو Cefazone 1 جم فيال</td><td>حقنة بالعضل كل 12 ساعة لمدة 4 أيام</td></tr><tr><td></td><td>أو Ibiamox 500 كبسولة / Ampiclox 500 كبسولة</td><td>كبسولة كل 6 ساعات</td></tr><tr><td>رضّع وأطفال — مضاد حيوي</td><td>Hiconcil شراب أو Amoxil شراب</td><td>ملعقة صغيرة كل 6 ساعات</td></tr><tr><td>كحة جافة — أطفال</td><td>Codipront شراب</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>كحة بلغمية — أطفال</td><td>Toplexil شراب</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>Amantadine</b> (Adamine) <b>لم يعد موصى به</b> لعلاج الإنفلونزا لأن معظم السلالات الحالية (H3N2 وH1N1) مقاومة له. المضاد الفيروسي المعتمد حالياً: <b>Oseltamivir</b> (Tamiflu) (كبسولات 75 مجم للكبار مرتين يومياً 5 أيام)، يفضل <b>خلال 48 ساعة</b> من بداية الأعراض، ويُعطى أيضاً للحالات الشديدة والمعرضين لمضاعفات ولو بعد 48 ساعة. بدائل: Zanamivir/Baloxavir. المضاد الحيوي <b>لا يلزم</b> إلا عند الشك في عدوى بكتيرية ثانوية (التهاب رئوي بكتيري، جيوب، أذن). جرعات الأطفال والكلى بأمر الطبيب.</div><div class=\"cs-box cs-danger\"><strong>لا أسبرين للأطفال</strong><p>الأسبرين وأي دواء يحتوي عليه ممنوع في الأطفال مع الأمراض الفيروسية (إنفلونزا، جدري) بسبب خطر متلازمة راي. الباراسيتامول هو الأمان.</p></div><div class=\"cs-box cs-pearl\"><strong>أدوية مضادة للفيروس (إضافات)</strong><p><ul><li>Zanamivir (استنشاق) وOseltamivir (Tamiflu) ابدأ خلال 48 ساعة من الأعراض.</li><li><b>Amantadine و Rimantadine</b> مذكورة في المراجع القديمة، لكن <b>الفيروسات الحالية مقاومة لها</b> ولا يوصى بها (CDC).</li><li>Acetaminophen خافض حرارة. تشخيص: مسحة بلعوم أنفي (مزرعة فيروسية) أو اختبار سريع.</li><li>تمريض: سوائل وإلكتروليتات لتعويض فقد العرق، علامات حيوية، تقييم تنفسي.</li><li>مضاعفات: التهاب جيوب، التهاب رئوي فيروسي أو بكتيري (يرفع الوفيات). بداية مفاجئة مع سعال جاف وقشعريرة وعرق وحرارة فوق 101°F وصداع وآلام عضلية وسيلان وألم حلق.</li></ul></p></div>\n<h4>العلاج حسب المراجعة</h4><ul><li>خافضات الحرارة: باراسيتامول (Tylenol) أو مضادات الالتهاب غير الستيرويدية مثل إيبوبروفين.</li><li>مقشع: غوايفينيسين (Guaifenesin).</li><li>مضادات الفيروسات: أوسيلتاميفير (Tamiflu) أو زاناميفير (Relenza) <strong>وقاية للمخالطين الذين لم يُطعَّموا</strong> حتى لو بلا أعراض.</li><li>لقاح الإنفلونزا للوقاية.</li><li>مضادات حيوية للعدوى البكتيرية الثانوية (التهاب رئوي، التهاب أذن، التهاب جيوب).</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات والأسماء للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي والنشرة قبل الإعطاء.</p></div>",
+   "en": "<h4>Prevention: the vaccine (Prevention)</h4><p>Prevention is with a trivalent vaccine made from inactivated (Inactivated) or split (Split) viruses.</p><ol><li>A new vaccine is developed every year to face the current strains, so it must be taken every year: <b>between September and mid-November</b>, and many take it a month before the winter season (about October).</li><li><b>Target groups:</b> patients with diabetes, chronic lung, heart and kidney disease, immunodeficiency, hemoglobin disorders (Haemoglobinopathies), the medical staff, and everyone over 65 years.</li><li><b>Contraindication:</b> the most serious side effect is a severe allergic reaction in those with a severe egg allergy. Patients with a severe egg allergy do not take the vaccine.</li><li>Mild side effects: headache or mild fever and pain at the injection site for about a day.</li></ol><table><thead><tr><th>Vaccine (brand name)</th><th>Administration</th></tr></thead><tbody><tr><td>Influvac</td><td>Subcutaneous or intramuscular, repeated after two weeks</td></tr><tr><td>Fluarix</td><td>Same method</td></tr><tr><td>Vaxigrip</td><td>Same method</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong>Egg allergy is no longer an absolute contraindication under current guidance: even someone with an egg allergy can take the influenza vaccine suitable for their age (given in a well-equipped setting if the earlier reaction was severe). The true contraindication: a previous severe allergic reaction to the same vaccine or one of its components. The current formulation in many countries is <b>trivalent</b> (A/H1N1, A/H3N2 and B). Children under 9 years get two doses in the first year. The vaccine is recommended for pregnant women.</div><h4>General treatment</h4><ul><li>Complete bed rest</li><li>Plenty of warm fluids with light meals</li></ul><h4>Drug treatment (symptoms)</h4><table><thead><tr><th>Category</th><th>Drug (by the physician's order)</th><th>Dose</th></tr></thead><tbody><tr><td>Antiviral</td><td><b>Adamine</b> capsule (Amantadine)</td><td>One capsule twice daily for 10 days</td></tr><tr><td>Rhinitis (Rhinitis) — adults</td><td>Clarinase tablet</td><td>One tablet every 12 hours</td></tr><tr><td></td><td>or Comtrex tablet</td><td>One tablet every 8 hours</td></tr><tr><td>Secondary bacterial infection — adults</td><td>Velosef 1 g vial, or Cefazone 1 g vial</td><td>Intramuscular injection every 12 hours for 4 days</td></tr><tr><td></td><td>or Ibiamox 500 capsule / Ampiclox 500 capsule</td><td>One capsule every 6 hours</td></tr><tr><td>Infants and children — antibiotic</td><td>Hiconcil syrup or Amoxil syrup</td><td>One teaspoon every 6 hours</td></tr><tr><td>Dry cough — children</td><td>Codipront syrup</td><td>One teaspoon 3 times daily</td></tr><tr><td>Productive cough — children</td><td>Toplexil syrup</td><td>One teaspoon 3 times daily</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><b>Amantadine</b> (Adamine) is <b>no longer recommended</b> for treating influenza because most current strains (H3N2 and H1N1) are resistant to it. The currently approved antiviral: <b>Oseltamivir</b> (Tamiflu) (75 mg capsules for adults twice daily for 5 days), preferably <b>within 48 hours</b> of symptom onset, and it is also given to severe cases and those at risk of complications even after 48 hours. Alternatives: Zanamivir/Baloxavir. An antibiotic is <b>not needed</b> unless a secondary bacterial infection is suspected (bacterial pneumonia, sinusitis, ear). Pediatric and renal doses are by the physician's order.</div><div class=\"cs-box cs-danger\"><strong>No aspirin for children</strong><p>Aspirin and any drug containing it is prohibited in children with viral illnesses (influenza, chickenpox) because of the risk of Reye's syndrome. Paracetamol is the safe choice.</p></div><div class=\"cs-box cs-pearl\"><strong>Antiviral drugs (additional points)</strong><p><ul><li>Zanamivir (inhaled) and Oseltamivir (Tamiflu): start within 48 hours of symptoms.</li><li><b>Amantadine and Rimantadine</b> are mentioned in older sources, but <b>current viruses are resistant to them</b> and they are not recommended.</li><li>Acetaminophen is an antipyretic. Diagnosis: nasopharyngeal swab (viral culture) or a rapid test.</li><li>Nursing: fluids and electrolytes to replace sweat loss, vital signs, respiratory assessment.</li><li>Complications: sinusitis, viral or bacterial pneumonia (raises mortality). Sudden onset with dry cough, chills, sweating, fever above 101°F, headache, muscle aches, runny nose and sore throat.</li></ul></p></div>\n<h4>Treatment per the review</h4><ul><li>Antipyretics: paracetamol (Tylenol) or nonsteroidal anti-inflammatory drugs such as ibuprofen.</li><li>Expectorant: guaifenesin (Guaifenesin).</li><li>Antivirals: oseltamivir (Tamiflu) or zanamivir (Relenza) <strong>as prophylaxis for unvaccinated contacts</strong> even without symptoms.</li><li>Influenza vaccine for prevention.</li><li>Antibiotics for secondary bacterial infection (pneumonia, ear infection, sinusitis).</li></ul><div class=\"cs-box cs-info\"><strong>Notice</strong><p>Doses and names are for learning only; always verify with the physician/pharmacist and the leaflet before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p>العلامات الحيوية (الحرارة والتنفس وSpO2)، شدة الأعراض، التعرض للمخالطين، حالة التطعيم، عوامل الخطورة (سكر، ربو، قلب، حمل، سن).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>عزل التنفس</strong><p>احتياطات الرذاذ: كمامة للمريض ولك، غرفة منفصلة أو تباعد، غسل اليدين قبل وبعد، تطهير الأسطح. مدة العزل حسب سياسة المستشفى (غالباً حتى زوال الأعراض/24 ساعة بدون حرارة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راحة وسوائل</strong><p>راحة بالسرير، سوائل دافئة كتير، رفع الرأس، تهوية جيدة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>خفض الحرارة بأمان</strong><p>باراسيتامول أو بروفين حسب الأمر. <b>لا أسبرين للأطفال والمراهقين</b>. كمادات فاترة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ الدواء بأمان</strong><p>Oseltamivir مع الأكل لتقليل الغثيان، المدة 5 أيام كاملة. مضاد حيوي فقط لو أمر. تأكد من الحساسية قبل Velosef/Cefazone/Ampiclox (بنسلين وسيفالوسبورين) وحاول تعطيها بالعضل حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب المضاعفات</strong><p>ضيق نفس، ألم صدر، بصاق ملون أو دم، حرارة بتزيد بعد التحسن، صداع شديد، تشوش وعي (التهاب دماغ)، قلة بول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف ووقّي</strong><p>تطعيم سنوي، غسل اليدين، تغطية الفم عند الكحة، تجنب الزحام وقت الموسم، الفريق الطبي يتطعم.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>أي مريض إنفلونزا مع <b>ضيق نفس أو SpO2 أقل من 94% أو ألم صدر أو تشوش وعي أو حرارة مستمرة أكتر من 3–4 أيام</b> = بلّغ الطبيب فوراً (احتمال التهاب رئوي أو التهاب دماغ).</p></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>العلامات الحيوية، بداية الأعراض، التطعيم السابق، الأدوية ووقتها، العزل، التوعية.</p></div>\n<ul><li>تشجيع الراحة والسوائل، ومراقبة أصوات الرئة، وإعطاء الأدوية بالوصفة.</li><li>تطبيق احتياطات الرذاذ (Droplet).</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess</strong><p>Vital signs (temperature, respirations and SpO2), symptom severity, exposure to contacts, vaccination status, risk factors (diabetes, asthma, heart disease, pregnancy, age).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Respiratory isolation</strong><p>Droplet precautions: a mask for the patient and for you, a separate room or distancing, hand washing before and after, disinfecting surfaces. Duration of isolation per hospital policy (usually until symptoms resolve/24 hours without fever).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Rest and fluids</strong><p>Bed rest, plenty of warm fluids, head elevation, good ventilation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Lower the fever safely</strong><p>Paracetamol or ibuprofen as ordered. <b>No aspirin for children and adolescents</b>. Tepid compresses.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Give the medication safely</strong><p>Oseltamivir with food to reduce nausea, for the full 5 days. An antibiotic only if ordered. Check for allergy before Velosef/Cefazone/Ampiclox (penicillin and cephalosporin) and try to give them intramuscularly as ordered.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Monitor for complications</strong><p>Shortness of breath, chest pain, colored sputum or blood, fever that rises after improvement, severe headache, altered consciousness (encephalitis), low urine output.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Teach and prevent</strong><p>Annual vaccine, hand washing, covering the mouth when coughing, avoiding crowds in season, and the medical staff gets vaccinated.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Safety priority</strong><p>Any influenza patient with <b>shortness of breath, SpO2 below 94%, chest pain, altered consciousness or fever lasting more than 3–4 days</b> = notify the physician immediately (possible pneumonia or encephalitis).</p></div><div class=\"cs-box cs-info\"><strong>Documentation</strong><p>Vital signs, onset of symptoms, previous vaccination, medications and their times, isolation, education.</p></div>\n<ul><li>Encourage rest and fluids, monitor lung sounds, and give medications as prescribed.</li><li>Apply droplet precautions (Droplet).</li></ul>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>ضيق نفس أو تنفس سريع أو زرقة أو SpO2 منخفض</li><li>ألم أو ضغط في الصدر</li><li>تشوش أو نعاس شديد أو تشنج أو صداع شديد</li><li>حرارة بتفضل أو بترجع بعد تحسن (التهاب رئوي بكتيري)</li><li>قيء مستمر وجفاف</li><li>طفل رضيع أو حامل أو سن 65+ أو مريض مزمن أو ضعف مناعة بأعراض</li><li>طفح أو أي علامة لمتلازمة راي (قيء مستمر، نعاس، تشوش) بعد أسبرين</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Notify the physician immediately if:</strong><ul><li>Shortness of breath, rapid breathing, cyanosis or low SpO2</li><li>Chest pain or pressure</li><li>Confusion, severe drowsiness, seizure or severe headache</li><li>Fever that persists or comes back after improvement (bacterial pneumonia)</li><li>Persistent vomiting and dehydration</li><li>An infant, a pregnant woman, age 65+, a chronic patient or an immunocompromised person with symptoms</li><li>Rash or any sign of Reye syndrome (persistent vomiting, drowsiness, confusion) after aspirin</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>خدّ لقاح الإنفلونزا كل سنة قبل الشتاء (خصوصاً مرضى السكر والصدر والقلب والكلى وكبار السن 65+ والعاملين بالصحة).</li><li>ارتاح في البيت واشرب سوائل دافئة كتير.</li><li>غطّي بقك وأنفك لما تكح أو تعطس واغسل إيدك بالصابون.</li><li>ما تدّيش طفلك أسبرين أبداً، استخدم باراسيتامول.</li><li>المضاد الحيوي ما بيعالجش الإنفلونزا (فيروس)، لا تطلبه من نفسك.</li><li>لو الأعراض بقت شديدة (ضيق نفس، ألم صدر، حرارة مستمرة) اذهب للطوارئ.</li><li>لا تروح الشغل أو المدرسة وأنت عندك حرارة.</li></ul>",
+   "en": "<ul><li>Get the influenza vaccine every year before winter (especially patients with diabetes, chest, heart and kidney disease, the elderly 65+ and health care workers).</li><li>Rest at home and drink plenty of warm fluids.</li><li>Cover your mouth and nose when you cough or sneeze and wash your hands with soap.</li><li>Never give your child aspirin; use paracetamol.</li><li>An antibiotic does not treat influenza (a virus); do not ask for it on your own.</li><li>If symptoms become severe (shortness of breath, chest pain, persistent fever) go to the emergency department.</li><li>Do not go to work or school while you have a fever.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "الإنفلونزا أشد من نزلة البرد: حرارة مفاجئة (حتى 38+) وآلام جسم وإرهاق",
+   "الأنواع A وB بتسبب الأوبئة الشتوية، والنوع C مرضه خفيف",
+   "الفيروس بيتحور كل سنة فالتطعيم لازم يتجدد سنوياً (أفضل سبتمبر–منتصف نوفمبر)",
+   "فئات التطعيم: السكر، أمراض الصدر/القلب/الكلى المزمنة، نقص المناعة، أمراض الهيموجلوبين، الفريق الطبي، فوق 65 سنة",
+   "الأسبرين ممنوع للأطفال في الأمراض الفيروسية (Reye syndrome)",
+   "العلاج المضاد للفيروسات (Oseltamivir) الأفضل خلال 48 ساعة، والمضاعفات: التهاب رئوي وشعبي وجيوب وأذن",
+   "بداية الإنفلونزا خلال ساعات، وبداية البرد تدريجية",
+   "الكحة بعد الإنفلونزا (Post-viral) قد تطول أسبوعين أو أكتر",
+   "الإنفلونزا فيروسية: لا مضاد حيوي",
+   "تطعيم سنوي",
+   "الفيروس يدمر الدفاع المخاطي الهدبي فيمهد لعدوى بكتيرية ثانوية",
+   "أوسيلتاميفير وقاية للمخالطين غير المطعمين حتى بلا أعراض"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p><b>الإنفلونزا (Influenza / Flu)</b> عدوى فيروسية <b>شديدة العدوى</b> في الجهاز التنفسي. بتسبب كل أعراض نزلة البرد (صداع، التهاب حلق، كحة جافة غالباً، رشح، عطس) وكمان أعراض عامة أشد. عادة بتخف خلال 5–7 أيام إلا لو اتعقدت بعدوى في الجهاز التنفسي السفلي.</p><div class=\"cs-stats\"><div><b>5–7</b><span>أيام للتحسن غالباً</span></div><div><b>A / B / C</b><span>أنواع الفيروس</span></div><div><b>3–5</b><span>أيام للحرارة والآلام</span></div><div><b>سنوي</b><span>التطعيم</span></div></div>[[slot:dis-182-coldflu|الفرق بين نزلة البرد والإنفلونزا|/diseases/img/dis-182-coldflu.svg]]<div class=\"cs-box cs-info\"><strong>الفرق بالتفصيل</strong><p>نزلة البرد (Cold) مرض خفيف نسبياً وبيروح لوحده وممكن يؤدي أحياناً لعدوى ثانوية زي التهاب الأذن. أما الإنفلونزا فممكن تسبب مضاعفات زي الالتهاب الرئوي وحتى الوفاة.</p></div>\n[[slot:dis-182-flu|الإنفلونزا بإيجاز — رسم من إعداد الموقع|/diseases/img/dis-182-flu.svg]]\n<ul><li>فيروس (أنواع A وB وC) يتحوّر باستمرار، فالتطعيم <b>سنوي</b>.</li><li>المضادات الحيوية لا تعالجه لأنه ليس بكتيريا.</li><li>الأعراض: حمى، تعب، آلام عضلات.</li><li>تنتقل بالقطرات: <a href=\"/diseases/dis-1304\">عزل القطرات</a>.</li></ul><h4>إضافات تغطي نقاط المراجعة</h4><p>الإنفلونزا سببها فيروس (ليس بكتيريا) لذا لا تنفع المضادات الحيوية. أنواعه A وB وC متحورة باستمرار، لذلك يوصى بالتطعيم السنوي. الأعراض: حمى، إرهاق، آلام جسم.</p>\n<h4>مراجعة تمريضية إضافية (أنواع فرعية ومسار العدوى)</h4>[[slot:dis-2874-influenza|الإنفلونزا: من العدوى إلى المضاعفات — رسم من إعداد الموقع|/diseases/img/dis-2874-influenza.svg]]<p>العدوى بفيروس أورثوميكسو (Orthomyxovirus) يُنقل بالقطرات التنفسية أو بالتلامس غير المباشر (مثل شرب من كوب ملوث). الفيروس يغزو ظهارة الجهاز التنفسي فيسبب التهاباً وتقشراً، ثم يدخل الخلية ويستعمل مكوناتها ليتكاثر، وتنفجر الخلايا لتصيب غيرها، فتضعف الدفاعات التنفسية (خصوصاً النقل المخاطي الهدبي) فتتهيأ لعدوى بكتيرية ثانوية.</p><ul><li><strong>إنفلونزا الطيور (Avian flu):</strong> لا تصيب البشر عادة وتصيب الطيور غالباً.</li><li><strong>إنفلونزا الخنازير (Swine flu):</strong> سلالة تحوي مواد وراثية من الخنازير والطيور والبشر.</li></ul>"
-    },
-    "causes": {
-      "ar": "<h4>أنواع الفيروس</h4><ul><li><b>النوعان A و B:</b> مسؤولان عن أوبئة الجهاز التنفسي اللي بتحصل تقريباً كل شتاء، وغالباً مرتبطة بزيادة حالات دخول المستشفى والوفيات. جهود التحكم بتركز عليهم.</li><li><b>النوع C:</b> غالباً بيسبب مرض تنفسي خفيف جداً أو من غير أعراض، ما بيعملش أوبئة ولا تأثيراً على الصحة العامة زي A وB.</li></ul><p>النوع A بينقسم لأنواع فرعية حسب بروتينين على سطح الفيروس: <b>الهيماجلوتينين (H)</b> والنيورامينيداز (N). الأنواع الفرعية الحالية للنوع A: A(H1N1) و A(H3N2). والمتداول عالمياً حالياً حسب المراجع: نوعين A ونوع B واحد (لقاح ثلاثي).</p><h4>ليه بنصاب أكتر من مرة؟</h4><p>الفيروس بيتحور باستمرار فيهرب من جهاز المناعة، وده يخلي الناس معرضة للعدوى طول حياتهم. الأجسام المضادة القديمة بتدي حماية جزئية فقط ضد العدوى الجديدة.</p>[[slot:dis-182-mutation|دورة تحور الفيروس وتكرار العدوى|/diseases/img/dis-182-mutation.svg]]<h4>طريقة العدوى</h4><ul><li><b>الرذاذ (Airborne droplets)</b> بالعطس والكحة.</li><li>لمس الأسطح الملوثة: الفيروس يعيش فترة قصيرة على الأشياء: مقابض الأبواب، الأقلام، لوحات المفاتيح، سماعات التليفون، أدوات الأكل والشرب، ثم لمس الفم أو الأنف أو العين.</li></ul>\n<h4>عوامل الخطر</h4><ul><li>ضعف المناعة، العمر (صغار جداً أو كبار السن).</li><li>المهنة: العاملون الصحيون والعاملون في الحضانات.</li><li>الأمراض المزمنة، الحمل.</li><li>العيش في أماكن مزدحمة، ورعاية أو معيشة مع مصاب.</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>الأعراض</h4><p>نفس أعراض نزلة البرد (صداع، التهاب حلق، كحة جافة غالباً، رشح، عطس) وكمان:</p><ul><li>قشعريرة (Chills)</li><li>آلام عضلات (Myalgia) وآلام ظهر وآلام عظام</li><li>وهن وإعياء شديد (Prostration) وتعب عام (Malaise)</li><li>لسان مغطى (Flurred tongue)</li><li>فقدان شهية (Anorexia)</li><li>تعرق</li><li><b>حرارة مفاجئة</b> (قد تصل 38 درجة فأكتر)</li><li>قلة كرات الدم البيضاء (Leucopenia)</li><li>أحياناً وبشكل نادر: غثيان وقيء وإسهال</li></ul><p>الحرارة وآلام الجسم عادة تستمر 3 إلى 5 أيام، لكن الكحة والإرهاق ممكن يستمروا أسبوعين أو أكتر.</p><h4>المضاعفات</h4><ul><li>التهاب شعبي (Bronchitis)</li><li>التهاب رئوي (Pneumonia)</li><li>التهاب الجيوب (Sinusitis)</li><li>التهاب الأذن الوسطى (Otitis media)</li><li>التهاب الدماغ (Encephalitis)</li><li>التهاب التامور (Pericarditis)</li><li>متلازمة راي (Reye's syndrome) خصوصاً مع الأسبرين في الأطفال</li></ul><div class=\"cs-box cs-warning\"><strong>مين الأكتر خطورة؟</strong><p>كبار السن (أكتر من 65)، مرضى السكر وأمراض الصدر والقلب والكلى المزمنة، ضعاف المناعة، الحوامل، والأطفال الصغار: لازم متابعة دقيقة.</p></div><h4>الأعراض الشائعة والنادرة (مقارنة بنزلة البرد)</h4><ul><li>تبدأ سريعاً خلال ساعات</li><li>شائعة: سخونية (38–40)، ألم شديد بالعضلات، إرهاق شديد، صداع، رعشة، كحة ناشفة</li><li>نادرة: رشح، عطس، التهاب الحلق، احتقان الأنف</li><li>موسمية: الخريف والشتاء</li><li>ممكن ببعض المضاعفات الخطيرة مثل الالتهاب الرئوي</li></ul><p>الإنفلونزا ودور البرد ينتهيان عادة خلال أسبوع أو أسبوعين، لكن الكحة قد تستمر (Post-viral cough) خصوصاً في الأطفال. العلاج في الحالتين متقارب؛ تفاصيل أدوية البرد المركبة في دليل نزلة البرد وأدوية الكحة في دليل «أدوية الكحة».</p>\n<h4>الأعراض حسب الأجهزة وأعراض إضافية</h4><table><thead><tr><th>الجهاز</th><th>العلامات</th></tr></thead><tbody><tr><td>عصبي</td><td>صداع</td></tr><tr><td>عام</td><td>توعك وإعياء وخمول وضعف، حمى، جلد ساخن ومحمر، عيون دامعة</td></tr><tr><td>أنف وحلق</td><td>إفراز أنفي رائق، احمرار الأنف والحلق دون إفراز قيحي</td></tr><tr><td>عضلات</td><td>ألم عضلي، ألم عند حركة العين</td></tr><tr><td>تنفسي</td><td>التهاب حلق، سعال غير منتج، تسرع تنفس، ضيق نفس، زرقة</td></tr><tr><td>قلب</td><td>تسرع قلب</td></tr></tbody></table><h4>قائمة المضاعفات الكاملة</h4><ul><li>الالتهاب الرئوي، الخانوق (Croup)، التهابات الأذن.</li><li>التهاب العضلات (Myositis) وانحلال الربيدات (Rhabdomyolysis).</li><li>تفاقم الانسداد الرئوي المزمن (COPD)، متلازمة راي (Reye).</li><li>التهاب عضلة القلب (Myocarditis) والتامور (Pericarditis).</li><li>التهاب النخاع المستعرض (Transverse myelitis) والتهاب الدماغ (Encephalitis).</li><li>متلازمة الصدمة السامة (TSS)، متلازمة الضائقة التنفسية الحادة (ARDS)، والوفاة.</li></ul>"
-    },
-    "tests": {
-      "ar": "<p>التشخيص غالباً إكلينيكي في موسم الإنفلونزا. الاختبارات (حسب الطبيب):</p><ul><li>مسحة أنف/حلق لاختبار سريع للإنفلونزا أو PCR (بتأكد النوع)</li><li>صورة دم: قلة كرات بيضاء</li><li>أشعة صدر لو شك في التهاب رئوي</li><li>أكسجين الدم (SpO2) للحالات المتوسطة والشديدة</li></ul><div class=\"cs-box cs-info\"><strong>ليه الاختبار مهم؟</strong><p>تأكيد الإنفلونزا بيوجّه استخدام المضاد الفيروسي ويفيد في العزل والتحكم في العدوى داخل المستشفى.</p></div>\n<ul><li>مسحة الحلق أو الأنف أو مزرعة البلغم لعزل الفيروس، وتقنيات مناعية تظهر مستضدات الفيروس في الخلايا المتقشرة.</li><li>اختبارات المستضد السريعة (إيجابية لنوع A أو B).</li><li>الكريات البيضاء ترتفع مع العدوى البكتيرية الثانوية وتنخفض مع العدوى الفيروسية الشديدة أو البكتيرية الغالبة.</li><li>أشعة الصدر لاستبعاد الالتهاب الرئوي.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>الوقاية: التطعيم (Prevention)</h4><p>الوقاية بلقاح ثلاثي من فيروسات مُثبَّطة (Inactivated) أو مجزّأة (Split).</p><ol><li>لقاح جديد بيتطور كل سنة لمواجهة السلالات الحالية، فلازم يتاخد كل سنة: <b>بين سبتمبر ومنتصف نوفمبر</b> (حسب المراجع)، وكتير بياخدوه قبل موسم الشتا بشهر (حوالي أكتوبر).</li><li><b>الفئات المستهدفة:</b> مرضى السكر، أمراض الرئة والقلب والكلى المزمنة، نقص المناعة، أمراض الهيموجلوبين (Haemoglobinopathies)، الفريق الطبي، وكل من تجاوز 65 سنة.</li><li><b>مانع الاستخدام:</b> أخطر أثر جانبي هو حساسية شديدة عند من عندهم حساسية شديدة للبيض (حسب المراجع). مرضى حساسية البيض الشديدة لا يتناولون اللقاح.</li><li>أعراض جانبية بسيطة: صداع أو حرارة خفيفة وألم مكان الحقن حوالي يوم.</li></ol><table><thead><tr><th>اللقاح (الاسم التجاري)</th><th>الإعطاء</th></tr></thead><tbody><tr><td>Influvac</td><td>تحت الجلد أو بالعضل، ويكرر بعد أسبوعين</td></tr><tr><td>Fluarix</td><td>نفس الطريقة</td></tr><tr><td>Vaxigrip</td><td>نفس الطريقة</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong>حساسية البيض لم تعد مانعاً مطلقاً حسب CDC الحديثة: حتى من عنده حساسية بيض يمكنه أخذ لقاح الإنفلونزا المناسب لعمره (ويُعطى في مكان مجهّز لو كان رد فعله سابقاً شديداً). المانع الحقيقي: حساسية شديدة سابقة لنفس اللقاح أو أحد مكوناته. التركيبة الحالية في كثير من الدول <b>ثلاثية</b> (A/H1N1 وA/H3N2 وB). الأطفال أقل من 9 سنين ياخدوا جرعتين في أول سنة. الحوامل ينصح لهم باللقاح.</div><h4>العلاج العام</h4><ul><li>راحة تامة بالسرير</li><li>سوائل دافئة كتير مع وجبات خفيفة</li></ul><h4>العلاج الدوائي حسب المراجع (الأعراض)</h4><table><thead><tr><th>الفئة</th><th>الدواء (بأمر الطبيب)</th><th>الجرعة</th></tr></thead><tbody><tr><td>مضاد فيروسات (حسب المراجع)</td><td><b>Adamine</b> كبسولة (Amantadine)</td><td>كبسولة مرتين يومياً لمدة 10 أيام</td></tr><tr><td>التهاب الأنف (Rhinitis) — كبار</td><td>Clarinase قرص</td><td>قرص كل 12 ساعة</td></tr><tr><td></td><td>أو Comtrex قرص</td><td>قرص كل 8 ساعات</td></tr><tr><td>عدوى بكتيرية ثانوية — كبار</td><td>Velosef 1 جم فيال، أو Cefazone 1 جم فيال</td><td>حقنة بالعضل كل 12 ساعة لمدة 4 أيام</td></tr><tr><td></td><td>أو Ibiamox 500 كبسولة / Ampiclox 500 كبسولة</td><td>كبسولة كل 6 ساعات</td></tr><tr><td>رضّع وأطفال — مضاد حيوي</td><td>Hiconcil شراب أو Amoxil شراب</td><td>ملعقة صغيرة كل 6 ساعات</td></tr><tr><td>كحة جافة — أطفال</td><td>Codipront شراب</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr><tr><td>كحة بلغمية — أطفال</td><td>Toplexil شراب</td><td>ملعقة صغيرة 3 مرات يومياً</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><b>Amantadine</b> (Adamine) <b>لم يعد موصى به</b> لعلاج الإنفلونزا لأن معظم السلالات الحالية (H3N2 وH1N1) مقاومة له. المضاد الفيروسي المعتمد حالياً: <b>Oseltamivir</b> (Tamiflu) (كبسولات 75 مجم للكبار مرتين يومياً 5 أيام)، يفضل <b>خلال 48 ساعة</b> من بداية الأعراض، ويُعطى أيضاً للحالات الشديدة والمعرضين لمضاعفات ولو بعد 48 ساعة. بدائل: Zanamivir/Baloxavir. المضاد الحيوي <b>لا يلزم</b> إلا عند الشك في عدوى بكتيرية ثانوية (التهاب رئوي بكتيري، جيوب، أذن). جرعات الأطفال والكلى بأمر الطبيب.</div><div class=\"cs-box cs-danger\"><strong>لا أسبرين للأطفال</strong><p>الأسبرين وأي دواء يحتوي عليه ممنوع في الأطفال مع الأمراض الفيروسية (إنفلونزا، جدري) بسبب خطر متلازمة راي. الباراسيتامول هو الأمان.</p></div><div class=\"cs-box cs-pearl\"><strong>أدوية مضادة للفيروس (إضافات)</strong><p><ul><li>Zanamivir (استنشاق) وOseltamivir (Tamiflu) ابدأ خلال 48 ساعة من الأعراض.</li><li><b>Amantadine و Rimantadine</b> مذكورة في المراجع القديمة، لكن <b>الفيروسات الحالية مقاومة لها</b> ولا يوصى بها (CDC).</li><li>Acetaminophen خافض حرارة. تشخيص: مسحة بلعوم أنفي (مزرعة فيروسية) أو اختبار سريع.</li><li>تمريض: سوائل وإلكتروليتات لتعويض فقد العرق، علامات حيوية، تقييم تنفسي.</li><li>مضاعفات: التهاب جيوب، التهاب رئوي فيروسي أو بكتيري (يرفع الوفيات). بداية مفاجئة مع سعال جاف وقشعريرة وعرق وحرارة فوق 101°F وصداع وآلام عضلية وسيلان وألم حلق.</li></ul></p></div>\n<h4>العلاج حسب المراجعة</h4><ul><li>خافضات الحرارة: باراسيتامول (Tylenol) أو مضادات الالتهاب غير الستيرويدية مثل إيبوبروفين.</li><li>مقشع: غوايفينيسين (Guaifenesin).</li><li>مضادات الفيروسات: أوسيلتاميفير (Tamiflu) أو زاناميفير (Relenza) <strong>وقاية للمخالطين الذين لم يُطعَّموا</strong> حتى لو بلا أعراض.</li><li>لقاح الإنفلونزا للوقاية.</li><li>مضادات حيوية للعدوى البكتيرية الثانوية (التهاب رئوي، التهاب أذن، التهاب جيوب).</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات والأسماء للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي والنشرة قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p>العلامات الحيوية (الحرارة والتنفس وSpO2)، شدة الأعراض، التعرض للمخالطين، حالة التطعيم، عوامل الخطورة (سكر، ربو، قلب، حمل، سن).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>عزل التنفس</strong><p>احتياطات الرذاذ: كمامة للمريض ولك، غرفة منفصلة أو تباعد، غسل اليدين قبل وبعد، تطهير الأسطح. مدة العزل حسب سياسة المستشفى (غالباً حتى زوال الأعراض/24 ساعة بدون حرارة).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>راحة وسوائل</strong><p>راحة بالسرير، سوائل دافئة كتير، رفع الرأس، تهوية جيدة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>خفض الحرارة بأمان</strong><p>باراسيتامول أو بروفين حسب الأمر. <b>لا أسبرين للأطفال والمراهقين</b>. كمادات فاترة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>أعطِ الدواء بأمان</strong><p>Oseltamivir مع الأكل لتقليل الغثيان، المدة 5 أيام كاملة. مضاد حيوي فقط لو أمر. تأكد من الحساسية قبل Velosef/Cefazone/Ampiclox (بنسلين وسيفالوسبورين) وحاول تعطيها بالعضل حسب الأمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب المضاعفات</strong><p>ضيق نفس، ألم صدر، بصاق ملون أو دم، حرارة بتزيد بعد التحسن، صداع شديد، تشوش وعي (التهاب دماغ)، قلة بول.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>ثقّف ووقّي</strong><p>تطعيم سنوي، غسل اليدين، تغطية الفم عند الكحة، تجنب الزحام وقت الموسم، الفريق الطبي يتطعم.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>أولوية الأمان</strong><p>أي مريض إنفلونزا مع <b>ضيق نفس أو SpO2 أقل من 94% أو ألم صدر أو تشوش وعي أو حرارة مستمرة أكتر من 3–4 أيام</b> = بلّغ الطبيب فوراً (احتمال التهاب رئوي أو التهاب دماغ).</p></div><div class=\"cs-box cs-info\"><strong>التوثيق</strong><p>العلامات الحيوية، بداية الأعراض، التطعيم السابق، الأدوية ووقتها، العزل، التوعية.</p></div>\n<ul><li>تشجيع الراحة والسوائل، ومراقبة أصوات الرئة، وإعطاء الأدوية بالوصفة.</li><li>تطبيق احتياطات الرذاذ (Droplet).</li></ul>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ الطبيب فوراً لو:</strong><ul><li>ضيق نفس أو تنفس سريع أو زرقة أو SpO2 منخفض</li><li>ألم أو ضغط في الصدر</li><li>تشوش أو نعاس شديد أو تشنج أو صداع شديد</li><li>حرارة بتفضل أو بترجع بعد تحسن (التهاب رئوي بكتيري)</li><li>قيء مستمر وجفاف</li><li>طفل رضيع أو حامل أو سن 65+ أو مريض مزمن أو ضعف مناعة بأعراض</li><li>طفح أو أي علامة لمتلازمة راي (قيء مستمر، نعاس، تشوش) بعد أسبرين</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>خدّ لقاح الإنفلونزا كل سنة قبل الشتاء (خصوصاً مرضى السكر والصدر والقلب والكلى وكبار السن 65+ والعاملين بالصحة).</li><li>ارتاح في البيت واشرب سوائل دافئة كتير.</li><li>غطّي بقك وأنفك لما تكح أو تعطس واغسل إيدك بالصابون.</li><li>ما تدّيش طفلك أسبرين أبداً، استخدم باراسيتامول.</li><li>المضاد الحيوي ما بيعالجش الإنفلونزا (فيروس)، لا تطلبه من نفسك.</li><li>لو الأعراض بقت شديدة (ضيق نفس، ألم صدر، حرارة مستمرة) اذهب للطوارئ.</li><li>لا تروح الشغل أو المدرسة وأنت عندك حرارة.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "الإنفلونزا أشد من نزلة البرد: حرارة مفاجئة (حتى 38+) وآلام جسم وإرهاق",
-      "الأنواع A وB بتسبب الأوبئة الشتوية، والنوع C مرضه خفيف",
-      "الفيروس بيتحور كل سنة فالتطعيم لازم يتجدد سنوياً (أفضل سبتمبر–منتصف نوفمبر)",
-      "فئات التطعيم: السكر، أمراض الصدر/القلب/الكلى المزمنة، نقص المناعة، أمراض الهيموجلوبين، الفريق الطبي، فوق 65 سنة",
-      "الأسبرين ممنوع للأطفال في الأمراض الفيروسية (Reye syndrome)",
-      "العلاج المضاد للفيروسات (Oseltamivir) الأفضل خلال 48 ساعة، والمضاعفات: التهاب رئوي وشعبي وجيوب وأذن",
-      "بداية الإنفلونزا خلال ساعات، وبداية البرد تدريجية",
-      "الكحة بعد الإنفلونزا (Post-viral) قد تطول أسبوعين أو أكتر",
-      "الإنفلونزا فيروسية: لا مضاد حيوي",
-      "تطعيم سنوي",
-      "الفيروس يدمر الدفاع المخاطي الهدبي فيمهد لعدوى بكتيرية ثانوية",
-      "أوسيلتاميفير وقاية للمخالطين غير المطعمين حتى بلا أعراض"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي نوع من الإنفلونزا هو المسؤول عن الأوبئة الشتوية؟"
-      },
-      "options": [
-        {
-          "ar": "A و B"
-        },
-        {
-          "ar": "C فقط"
-        },
-        {
-          "ar": "D"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "النوع C خفيف أو بدون أعراض ولا يسبب أوبئة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أنسب موعد للتطعيم السنوي في مصر؟"
-      },
-      "options": [
-        {
-          "ar": "قبل الشتاء (أكتوبر تقريباً)"
-        },
-        {
-          "ar": "في أي وقت بعد الإصابة"
-        },
-        {
-          "ar": "الصيف فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يؤخذ قبل موسم الشتاء بشهر تقريباً."
-      }
-    },
-    {
-      "q": {
-        "ar": "سبب تكرار الإصابة بالإنفلونزا؟"
-      },
-      "options": [
-        {
-          "ar": "الفيروس ثابت"
-        },
-        {
-          "ar": "تحور الفيروس فلا تتعرف عليه الأجسام المضادة القديمة"
-        },
-        {
-          "ar": "ضعف التطعيم دائماً"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التحور في بروتينات H و N."
-      }
-    },
-    {
-      "q": {
-        "ar": "طفل مصاب بإنفلونزا والأم تسأل عن الأسبرين؟"
-      },
-      "options": [
-        {
-          "ar": "يعطى كالمعتاد"
-        },
-        {
-          "ar": "لا: خطر متلازمة راي، استخدم الباراسيتامول"
-        },
-        {
-          "ar": "يعطى بنصف الجرعة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الأسبرين في الأطفال مع الفيروسات يسبب Reye syndrome."
-      }
-    },
-    {
-      "q": {
-        "ar": "أهم مانع لتطعيم الإنفلونزا حسب المراجع؟"
-      },
-      "options": [
-        {
-          "ar": "حساسية شديدة سابقة للقاح أو مكوناته"
-        },
-        {
-          "ar": "كحة خفيفة"
-        },
-        {
-          "ar": "سن 30 سنة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحساسية الشديدة لمكونات اللقاح هي المانع."
-      }
-    },
-    {
-      "q": {
-        "ar": "لماذا لا يوصف مضاد حيوي للإنفلونزا؟"
-      },
-      "options": [
-        {
-          "ar": "غالي"
-        },
-        {
-          "ar": "سببها فيروس"
-        },
-        {
-          "ar": "تضعف المناعة"
-        },
-        {
-          "ar": "لا تحتاج علاجًا"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "المضادات الحيوية لا تؤثر في الفيروسات."
-      }
-    },
-    {
-      "q": {
-        "ar": "هل تفيد المضادات الحيوية في الإنفلونزا؟"
-      },
-      "options": [
-        {
-          "ar": "لا لأنها فيروس"
-        },
-        {
-          "ar": "نعم دائمًا"
-        },
-        {
-          "ar": "للأطفال فقط"
-        },
-        {
-          "ar": "للمسنين فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "المضاد الحيوي للبكتيريا."
-      }
-    },
-    {
-      "q": {
-        "ar": "لماذا التطعيم سنويًا؟"
-      },
-      "options": [
-        {
-          "ar": "الفيروس يتحور"
-        },
-        {
-          "ar": "لا مناعة"
-        },
-        {
-          "ar": "لا أثر"
-        },
-        {
-          "ar": "رخيص"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يتغير سنويًا."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي نوع احتياط يُطبَّق لمريض الإنفلونزا المنوَّم؟"
-      },
-      "options": [
-        {
-          "ar": "احتياطات الرذاذ (Droplet)"
-        },
-        {
-          "ar": "احتياطات الهواء بغرفة ضغط سالب فقط"
-        },
-        {
-          "ar": "لا عزل"
-        },
-        {
-          "ar": "احتياطات تلامس فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الإنفلونزا تنتقل بقطرات تنفسية كبيرة، فيكفي عزل الرذاذ مع كمامة."
-      }
-    },
-    {
-      "q": {
-        "ar": "إنفلونزا الطيور (Avian flu) تصيب غالباً:"
-      },
-      "options": [
-        {
-          "ar": "الطيور وقلّما البشر"
-        },
-        {
-          "ar": "الخنازير فقط"
-        },
-        {
-          "ar": "الأطفال فقط"
-        },
-        {
-          "ar": "الكلاب"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "إنفلونزا الطيور لا تصيب البشر عادة."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "CDC — Influenza (Flu): Clinical signs and treatment; antiviral recommendations"
-    },
-    {
-      "title": "WHO — Influenza (Seasonal) fact sheet"
-    },
-    {
-      "title": "CDC — Prevention and Control of Seasonal Influenza with Vaccines (ACIP)"
-    }
+  "en": [
+   "Influenza is more severe than the common cold: sudden fever (up to 38+), body aches and exhaustion",
+   "Types A and B cause the winter epidemics, and type C causes mild illness",
+   "The virus mutates every year, so the vaccine must be renewed annually (best September–mid-November)",
+   "Vaccine groups: diabetes, chronic chest/heart/kidney disease, immunodeficiency, hemoglobin disorders, medical staff, over 65 years",
+   "Aspirin is prohibited for children with viral illnesses (Reye syndrome)",
+   "Antiviral treatment (Oseltamivir) is best within 48 hours, and complications: pneumonia, bronchitis, sinusitis and ear infection",
+   "Influenza starts within hours, and a cold starts gradually",
+   "The cough after influenza (Post-viral) may last two weeks or more",
+   "Influenza is viral: no antibiotic",
+   "Annual vaccine",
+   "The virus destroys the mucociliary defense, paving the way for a secondary bacterial infection",
+   "Oseltamivir as prophylaxis for unvaccinated contacts even without symptoms"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي نوع من الإنفلونزا هو المسؤول عن الأوبئة الشتوية؟",
+    "en": "Which type of influenza is responsible for the winter epidemics?"
+   },
+   "options": [
+    {
+     "ar": "A و B",
+     "en": "A and B"
+    },
+    {
+     "ar": "C فقط",
+     "en": "C only"
+    },
+    {
+     "ar": "D",
+     "en": "D"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "النوع C خفيف أو بدون أعراض ولا يسبب أوبئة.",
+    "en": "Type C is mild or without symptoms and does not cause epidemics."
+   }
+  },
+  {
+   "q": {
+    "ar": "أنسب موعد للتطعيم السنوي في مصر؟",
+    "en": "The best time for the annual vaccine in Egypt?"
+   },
+   "options": [
+    {
+     "ar": "قبل الشتاء (أكتوبر تقريباً)",
+     "en": "Before winter (about October)"
+    },
+    {
+     "ar": "في أي وقت بعد الإصابة",
+     "en": "Any time after infection"
+    },
+    {
+     "ar": "الصيف فقط",
+     "en": "Summer only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يؤخذ قبل موسم الشتاء بشهر تقريباً.",
+    "en": "It is taken about a month before the winter season."
+   }
+  },
+  {
+   "q": {
+    "ar": "سبب تكرار الإصابة بالإنفلونزا؟",
+    "en": "The reason for repeated influenza infection?"
+   },
+   "options": [
+    {
+     "ar": "الفيروس ثابت",
+     "en": "The virus is stable"
+    },
+    {
+     "ar": "تحور الفيروس فلا تتعرف عليه الأجسام المضادة القديمة",
+     "en": "The virus mutates, so old antibodies do not recognize it"
+    },
+    {
+     "ar": "ضعف التطعيم دائماً",
+     "en": "The vaccine is always weak"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التحور في بروتينات H و N.",
+    "en": "Mutation in the H and N proteins."
+   }
+  },
+  {
+   "q": {
+    "ar": "طفل مصاب بإنفلونزا والأم تسأل عن الأسبرين؟",
+    "en": "A child has influenza and the mother asks about aspirin?"
+   },
+   "options": [
+    {
+     "ar": "يعطى كالمعتاد",
+     "en": "Give it as usual"
+    },
+    {
+     "ar": "لا: خطر متلازمة راي، استخدم الباراسيتامول",
+     "en": "No: risk of Reye's syndrome, use paracetamol"
+    },
+    {
+     "ar": "يعطى بنصف الجرعة",
+     "en": "Give half the dose"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الأسبرين في الأطفال مع الفيروسات يسبب Reye syndrome.",
+    "en": "Aspirin in children with viruses causes Reye syndrome."
+   }
+  },
+  {
+   "q": {
+    "ar": "أهم مانع لتطعيم الإنفلونزا حسب المراجع؟",
+    "en": "The most important contraindication to the influenza vaccine?"
+   },
+   "options": [
+    {
+     "ar": "حساسية شديدة سابقة للقاح أو مكوناته",
+     "en": "A previous severe allergic reaction to the vaccine or its components"
+    },
+    {
+     "ar": "كحة خفيفة",
+     "en": "A mild cough"
+    },
+    {
+     "ar": "سن 30 سنة",
+     "en": "Age 30 years"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحساسية الشديدة لمكونات اللقاح هي المانع.",
+    "en": "A severe allergy to the vaccine components is the contraindication."
+   }
+  },
+  {
+   "q": {
+    "ar": "لماذا لا يوصف مضاد حيوي للإنفلونزا؟",
+    "en": "Why is an antibiotic not prescribed for influenza?"
+   },
+   "options": [
+    {
+     "ar": "غالي",
+     "en": "Expensive"
+    },
+    {
+     "ar": "سببها فيروس",
+     "en": "It is caused by a virus"
+    },
+    {
+     "ar": "تضعف المناعة",
+     "en": "It weakens immunity"
+    },
+    {
+     "ar": "لا تحتاج علاجًا",
+     "en": "It needs no treatment"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "المضادات الحيوية لا تؤثر في الفيروسات.",
+    "en": "Antibiotics do not affect viruses."
+   }
+  },
+  {
+   "q": {
+    "ar": "هل تفيد المضادات الحيوية في الإنفلونزا؟",
+    "en": "Do antibiotics help in influenza?"
+   },
+   "options": [
+    {
+     "ar": "لا لأنها فيروس",
+     "en": "No, because it is a virus"
+    },
+    {
+     "ar": "نعم دائمًا",
+     "en": "Yes, always"
+    },
+    {
+     "ar": "للأطفال فقط",
+     "en": "For children only"
+    },
+    {
+     "ar": "للمسنين فقط",
+     "en": "For the elderly only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "المضاد الحيوي للبكتيريا.",
+    "en": "Antibiotics are for bacteria."
+   }
+  },
+  {
+   "q": {
+    "ar": "لماذا التطعيم سنويًا؟",
+    "en": "Why is the vaccine annual?"
+   },
+   "options": [
+    {
+     "ar": "الفيروس يتحور",
+     "en": "The virus mutates"
+    },
+    {
+     "ar": "لا مناعة",
+     "en": "No immunity"
+    },
+    {
+     "ar": "لا أثر",
+     "en": "No effect"
+    },
+    {
+     "ar": "رخيص",
+     "en": "Cheap"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يتغير سنويًا.",
+    "en": "It changes every year."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي نوع احتياط يُطبَّق لمريض الإنفلونزا المنوَّم؟",
+    "en": "Which type of precautions is applied for a hospitalized influenza patient?"
+   },
+   "options": [
+    {
+     "ar": "احتياطات الرذاذ (Droplet)",
+     "en": "Droplet precautions (Droplet)"
+    },
+    {
+     "ar": "احتياطات الهواء بغرفة ضغط سالب فقط",
+     "en": "Airborne precautions in a negative pressure room only"
+    },
+    {
+     "ar": "لا عزل",
+     "en": "No isolation"
+    },
+    {
+     "ar": "احتياطات تلامس فقط",
+     "en": "Contact precautions only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإنفلونزا تنتقل بقطرات تنفسية كبيرة، فيكفي عزل الرذاذ مع كمامة.",
+    "en": "Influenza spreads by large respiratory droplets, so droplet isolation with a mask is enough."
+   }
+  },
+  {
+   "q": {
+    "ar": "إنفلونزا الطيور (Avian flu) تصيب غالباً:",
+    "en": "Avian flu (Avian flu) mostly infects:"
+   },
+   "options": [
+    {
+     "ar": "الطيور وقلّما البشر",
+     "en": "Birds and rarely humans"
+    },
+    {
+     "ar": "الخنازير فقط",
+     "en": "Pigs only"
+    },
+    {
+     "ar": "الأطفال فقط",
+     "en": "Children only"
+    },
+    {
+     "ar": "الكلاب",
+     "en": "Dogs"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "إنفلونزا الطيور لا تصيب البشر عادة.",
+    "en": "Avian flu does not usually infect humans."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "CDC — Influenza (Flu): Clinical signs and treatment; antiviral recommendations"
+  },
+  {
+   "title": "WHO — Influenza (Seasonal) fact sheet"
+  },
+  {
+   "title": "CDC — Prevention and Control of Seasonal Influenza with Vaccines (ACIP)"
+  }
+ ]
 }

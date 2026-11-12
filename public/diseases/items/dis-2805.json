@@ -1,160 +1,203 @@
 {
-  "id": "dis-2805",
-  "num": 2805,
-  "system": "gi",
-  "icon": "🧴",
-  "level": 3,
-  "title": {
-    "ar": "التغذية الوريدية الكاملة (TPN) والتغذية المعوية: الرعاية والمضاعفات",
-    "en": "Total Parenteral Nutrition (TPN) & Enteral Feeding"
+ "id": "dis-2805",
+ "num": 2805,
+ "system": "gi",
+ "icon": "🧴",
+ "level": 3,
+ "title": {
+  "ar": "التغذية الوريدية الكاملة (TPN) والتغذية المعوية: الرعاية والمضاعفات",
+  "en": "Total Parenteral Nutrition (TPN) & Enteral Feeding"
+ },
+ "teaser": {
+  "ar": "TPN عبر خط مركزي فقط: الاستطبابات، المتابعة اليومية للسكر والوزن، قواعد الإعطاء، ماذا تفعل عند فراغ الكيس، مضاعفات الأنابيب المعوية (استنشاق وانزياح) ومتلازمة إعادة التغذية.",
+  "en": "TPN through a central line only: indications, daily monitoring of glucose and weight, administration rules, what to do when the bag runs out, complications of enteral tubes (aspiration and dislodgement), and refeeding syndrome."
+ },
+ "chips": [
+  {
+   "ar": "خط مركزي",
+   "en": "Central line"
   },
-  "teaser": {
-    "ar": "TPN عبر خط مركزي فقط: الاستطبابات، المتابعة اليومية للسكر والوزن، قواعد الإعطاء، ماذا تفعل عند فراغ الكيس، مضاعفات الأنابيب المعوية (استنشاق وانزياح) ومتلازمة إعادة التغذية."
+  {
+   "ar": "سكر الدم",
+   "en": "Blood glucose"
   },
-  "chips": [
-    {
-      "ar": "خط مركزي"
-    },
-    {
-      "ar": "سكر الدم"
-    },
-    {
-      "ar": "Refeeding"
-    }
+  {
+   "ar": "Refeeding",
+   "en": "Refeeding"
+  }
+ ],
+ "target": "fundamentals",
+ "sections": {
+  "overview": {
+   "ar": "<p><strong>TPN (Total Parenteral Nutrition)</strong> هي <strong>تغذية كاملة في كيس وريدي</strong> تدخل الدم مباشرة وتتجاوز الجهاز الهضمي. المحلول سميك جداً، لذلك <strong>لا يُعطى إلا عبر خط مركزي (Central line)</strong>: قسطرة PICC، أو قسطرة تحت الترقوة (Subclavian CVC)، أو وريد وداجي داخلي.</p>[[slot:dis-2805-tpn-overview|TPN: الخط المركزي والاستطبابات والإعطاء — رسم من إعداد الموقع|/diseases/img/dis-2805-tpn-overview.svg]]\n<h4>الاستطبابات</h4><ul><li>التهاب البنكرياس أو داء كرون (NPO: لا شيء بالفم).</li><li>الحروق الشديدة والصدمات (حالة استقلاب مفرط/Hypercatabolic).</li><li>الأورام.</li><li>مشاكل سوء الامتصاص المزمنة.</li></ul><p>الفرق بين TPN والتغذية المعوية (Enteral: NGT وPEG وG-tube): <strong>المعوية تستعمل الجهاز الهضمي، وTPN تتجاوزه.</strong></p>",
+   "en": "<p><strong>TPN (Total Parenteral Nutrition)</strong> is <strong>complete nutrition in an IV bag</strong> that enters the blood directly and bypasses the digestive tract. The solution is very thick, so <strong>it is given only through a central line (Central line)</strong>: a PICC, a subclavian catheter (Subclavian CVC), or an internal jugular vein.</p>[[slot:dis-2805-tpn-overview|TPN: central line, indications, and administration — illustration prepared by the site|/diseases/img/dis-2805-tpn-overview.svg]]\n<h4>Indications</h4><ul><li>Pancreatitis or Crohn's disease (NPO: nothing by mouth).</li><li>Severe burns and trauma (hypermetabolic/Hypercatabolic state).</li><li>Tumors.</li><li>Chronic malabsorption problems.</li></ul><p>The difference between TPN and enteral feeding (Enteral: NGT, PEG, and G-tube): <strong>enteral uses the digestive tract, and TPN bypasses it.</strong></p>"
+  },
+  "causes": {
+   "ar": "<h4>متلازمة إعادة التغذية (Refeeding Syndrome)</h4><p>مضاعفة مميتة عند مرضى سوء التغذية الشديد: إعطاء <strong>تغذية كثيرة بسرعة كبيرة</strong> يسحب الأملاح من الدم إلى الأنسجة فتنخفض الأملاح بشدة.</p><ul><li>المعرضون: القهم العصبي (Anorexia nervosa)، إدمان الكحول المزمن.</li><li>تحدث خلال <strong>⁦24-48⁩ ساعة</strong> من بدء التغذية المعوية أو الوريدية.</li></ul><table><thead><tr><th>الملح</th><th>المدى الطبيعي</th></tr></thead><tbody><tr><td>البوتاسيوم (K)</td><td>⁦3.5-5.0⁩ mEq/L</td></tr><tr><td>المغنيسيوم (Mg)</td><td>⁦1.3-2.1⁩ mEq/L</td></tr><tr><td>الفوسفات (P)</td><td>⁦2.4-4.4⁩ mg/dL</td></tr></tbody></table>\n<div class=\"cs-box cs-tip\"><strong>نقطة امتحان</strong><p><strong>Torsades de Pointes</strong>: من أسبابه احتشاء عضلة القلب، نقص الأكسجة، ونقص المغنيسيوم؛ علاجه <strong>كبريتات المغنيسيوم</strong>. <strong>الرجفان البطيني وتوقف القلب</strong>: يحدثان عند نقص البوتاسيوم (أقل من 3.5).</p></div>",
+   "en": "<h4>Refeeding Syndrome</h4><p>A fatal complication in severely malnourished patients: giving <strong>a lot of nutrition too quickly</strong> pulls electrolytes from the blood into the tissues, so electrolytes drop severely.</p><ul><li>At risk: anorexia nervosa (Anorexia nervosa), chronic alcohol use disorder.</li><li>It occurs within <strong>24-48 hours</strong> of starting enteral or parenteral feeding.</li></ul><table><thead><tr><th>Electrolyte</th><th>Normal range</th></tr></thead><tbody><tr><td>Potassium (K)</td><td>3.5-5.0 mEq/L</td></tr><tr><td>Magnesium (Mg)</td><td>1.3-2.1 mEq/L</td></tr><tr><td>Phosphate (P)</td><td>2.4-4.4 mg/dL</td></tr></tbody></table>\n<div class=\"cs-box cs-tip\"><strong>Exam point</strong><p><strong>Torsades de Pointes</strong>: its causes include myocardial infarction, hypoxia, and hypomagnesemia; its treatment is <strong>magnesium sulfate</strong>. <strong>Ventricular fibrillation and cardiac arrest</strong>: occur with hypokalemia (below 3.5).</p></div>"
+  },
+  "signs": {
+   "ar": "<h4>فرط سكر الدم أثناء TPN (علامات)</h4><ul><li>كثرة التبول (Polyuria).</li><li>العطش الشديد (Polydipsia): نقطة امتحان.</li><li>غثيان وصداع وألم بطن.</li></ul><p>الجهاز يحوي سكراً عالياً، لذا القراءة فوق <strong>180</strong> تستوجب الإبلاغ (حسب بروتوكول الوحدة).</p>",
+   "en": "<h4>Hyperglycemia during TPN (signs)</h4><ul><li>Frequent urination (Polyuria).</li><li>Excessive thirst (Polydipsia): an exam point.</li><li>Nausea, headache, and abdominal pain.</li></ul><p>The solution contains a high amount of sugar, so a reading above <strong>180</strong> must be reported (per unit protocol).</p>"
+  },
+  "tests": {
+   "ar": "<ul><li>سكر الدم المتكرر، الإلكتروليتات (K, Mg, P) خصوصاً أول 48 ساعة.</li><li>وزن يومي.</li></ul>",
+   "en": "<ul><li>Frequent blood glucose, electrolytes (K, Mg, P), especially in the first 48 hours.</li><li>Daily weight.</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>قواعد الإعطاء</h4><ol><li><strong>لا تعطِ أي دواء وريدي</strong> عبر خط TPN (لا دفعة ولا Piggyback).</li><li>ابدأ وأوقف <strong>ببطء</strong>، ولا توقفه فجأة أبداً.</li><li>غيّر الكيس والأنابيب <strong>كل 24 ساعة</strong>.</li></ol><div class=\"cs-box cs-danger\"><strong>الكيس فرغ ولا يوجد كيس جديد؟</strong><p>الأولوية: علّق <strong>ديكستروز 10% في الماء (D10W)</strong> حتى يصل الكيس الجديد، لمنع نقص السكر المفاجئ.</p></div><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات والأسماء للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي والنشرة قبل الإعطاء.</p></div>",
+   "en": "<h4>Administration rules</h4><ol><li><strong>Do not give any IV medication</strong> through the TPN line (no push and no Piggyback).</li><li>Start and stop <strong>slowly</strong>, and never stop it abruptly.</li><li>Change the bag and tubing <strong>every 24 hours</strong>.</li></ol><div class=\"cs-box cs-danger\"><strong>The bag is empty and no new bag is available?</strong><p>Priority: hang <strong>dextrose 10% in water (D10W)</strong> until the new bag arrives, to prevent sudden hypoglycemia.</p></div><div class=\"cs-box cs-info\"><strong>Note</strong><p>Doses and names are for learning only; always verify with the physician/pharmacist and the package insert before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<ul><li><strong>وزن يومي</strong> (للحفاظ على العضلات ومتابعة التغذية).</li><li><strong>مراقبة سكر الدم</strong> بانتظام.</li><li>رعاية القسطرة المركزية بالتعقيم لمنع العدوى.</li></ul>\n<h4>مضاعفات TPN مقابل التغذية المعوية</h4>[[slot:dis-2805-tpn-complications|مضاعفات TPN والمعوية ومتلازمة إعادة التغذية — رسم من إعداد الموقع|/diseases/img/dis-2805-tpn-complications.svg]]<table><thead><tr><th>النوع</th><th>المضاعفات</th></tr></thead><tbody><tr><td>TPN</td><td>عدوى (من القسطرة المركزية)، قرح الإجهاد (Stress ulcers)</td></tr><tr><td>المعوية (NGT, PEG, G-tube)</td><td>انزياح الأنبوب، انتفاخ البطن، انسداد الأنبوب، <strong>الاستنشاق (Aspiration)</strong> / انسداد مجرى الهواء</td></tr></tbody></table>\n<ul><li><strong>لا تغذية دفعية (Bolus)</strong> عبر أنبوب أنفي معدي لمريض على جهاز تنفس صناعي.</li><li>لمنع الاستنشاق: <strong>اطلب تغذية مستمرة (Continuous)</strong>.</li><li>أنبوب PEG انزاح وعمره <strong>أقل من 7 أيام</strong>: أبلغ الطبيب الذي وضعه.</li></ul>",
+   "en": "<ul><li><strong>Daily weight</strong> (to preserve muscle and follow nutrition).</li><li><strong>Monitor blood glucose</strong> regularly.</li><li>Central catheter care with aseptic technique to prevent infection.</li></ul>\n<h4>Complications of TPN versus enteral feeding</h4>[[slot:dis-2805-tpn-complications|Complications of TPN and enteral feeding, and refeeding syndrome — illustration prepared by the site|/diseases/img/dis-2805-tpn-complications.svg]]<table><thead><tr><th>Type</th><th>Complications</th></tr></thead><tbody><tr><td>TPN</td><td>Infection (from the central catheter), stress ulcers (Stress ulcers)</td></tr><tr><td>Enteral (NGT, PEG, G-tube)</td><td>Tube dislodgement, abdominal distension, tube blockage, <strong>aspiration (Aspiration)</strong> / airway obstruction</td></tr></tbody></table>\n<ul><li><strong>No bolus feeding (Bolus)</strong> through a nasogastric tube for a patient on a mechanical ventilator.</li><li>To prevent aspiration: <strong>request continuous feeding (Continuous)</strong>.</li><li>A PEG tube that is dislodged and is <strong>less than 7 days</strong> old: notify the physician who placed it.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>حمى أو قشعريرة (عدوى القسطرة).</li><li>سكر مرتفع جداً (فوق 180) أو أعراض هبوط سكر عند توقف الكيس.</li><li>سعال مفاجئ أو ضيق نفس أثناء التغذية المعوية (استنشاق).</li><li>اضطراب النظم القلبي أو ضعف عضلي بعد بدء التغذية (نقص K/Mg/P).</li></ul>",
+   "en": "<ul><li>Fever or chills (catheter infection).</li><li>Very high glucose (above 180) or symptoms of hypoglycemia when the bag stops.</li><li>Sudden cough or shortness of breath during enteral feeding (aspiration).</li><li>Cardiac arrhythmia or muscle weakness after starting feeding (low K/Mg/P).</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>شرح سبب التغذية الوريدية والمعوية وأهمية الالتزام.</li><li>الإبلاغ عن الحمى أو ألم موضع القسطرة أو انسداد الأنبوب.</li></ul>",
+   "en": "<ul><li>Explain the reason for parenteral and enteral feeding and the importance of adherence.</li><li>Report fever, pain at the catheter site, or tube blockage.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "TPN عبر خط مركزي فقط: لأنه سميك",
+   "لا أدوية عبر خط TPN، وغيّر الكيس والأنبوب كل 24 ساعة",
+   "عند فراغ الكيس: D10W حتى يصل الكيس الجديد",
+   "المعوية: الاستنشاق أخطر مضاعفة؛ لا Bolus عبر NGT لمريض الجهاز؛ التغذية المستمرة",
+   "Refeeding بعد ⁦24-48⁩ ساعة: نقص K وMg وP"
   ],
-  "target": "fundamentals",
-  "sections": {
-    "overview": {
-      "ar": "<p><strong>TPN (Total Parenteral Nutrition)</strong> هي <strong>تغذية كاملة في كيس وريدي</strong> تدخل الدم مباشرة وتتجاوز الجهاز الهضمي. المحلول سميك جداً، لذلك <strong>لا يُعطى إلا عبر خط مركزي (Central line)</strong>: قسطرة PICC، أو قسطرة تحت الترقوة (Subclavian CVC)، أو وريد وداجي داخلي.</p>[[slot:dis-2805-tpn-overview|TPN: الخط المركزي والاستطبابات والإعطاء — رسم من إعداد الموقع|/diseases/img/dis-2805-tpn-overview.svg]]\n<h4>الاستطبابات</h4><ul><li>التهاب البنكرياس أو داء كرون (NPO: لا شيء بالفم).</li><li>الحروق الشديدة والصدمات (حالة استقلاب مفرط/Hypercatabolic).</li><li>الأورام.</li><li>مشاكل سوء الامتصاص المزمنة.</li></ul><p>الفرق بين TPN والتغذية المعوية (Enteral: NGT وPEG وG-tube): <strong>المعوية تستعمل الجهاز الهضمي، وTPN تتجاوزه.</strong></p>"
-    },
-    "causes": {
-      "ar": "<h4>متلازمة إعادة التغذية (Refeeding Syndrome)</h4><p>مضاعفة مميتة عند مرضى سوء التغذية الشديد: إعطاء <strong>تغذية كثيرة بسرعة كبيرة</strong> يسحب الأملاح من الدم إلى الأنسجة فتنخفض الأملاح بشدة.</p><ul><li>المعرضون: القهم العصبي (Anorexia nervosa)، إدمان الكحول المزمن.</li><li>تحدث خلال <strong>⁦24-48⁩ ساعة</strong> من بدء التغذية المعوية أو الوريدية.</li></ul><table><thead><tr><th>الملح</th><th>المدى الطبيعي</th></tr></thead><tbody><tr><td>البوتاسيوم (K)</td><td>⁦3.5-5.0⁩ mEq/L</td></tr><tr><td>المغنيسيوم (Mg)</td><td>⁦1.3-2.1⁩ mEq/L</td></tr><tr><td>الفوسفات (P)</td><td>⁦2.4-4.4⁩ mg/dL</td></tr></tbody></table>\n<div class=\"cs-box cs-tip\"><strong>نقطة امتحان</strong><p><strong>Torsades de Pointes</strong>: من أسبابه احتشاء عضلة القلب، نقص الأكسجة، ونقص المغنيسيوم؛ علاجه <strong>كبريتات المغنيسيوم</strong>. <strong>الرجفان البطيني وتوقف القلب</strong>: يحدثان عند نقص البوتاسيوم (أقل من 3.5).</p></div>"
-    },
-    "signs": {
-      "ar": "<h4>فرط سكر الدم أثناء TPN (علامات)</h4><ul><li>كثرة التبول (Polyuria).</li><li>العطش الشديد (Polydipsia): نقطة امتحان.</li><li>غثيان وصداع وألم بطن.</li></ul><p>الجهاز يحوي سكراً عالياً، لذا القراءة فوق <strong>180</strong> تستوجب الإبلاغ (حسب بروتوكول الوحدة).</p>"
-    },
-    "tests": {
-      "ar": "<ul><li>سكر الدم المتكرر، الإلكتروليتات (K, Mg, P) خصوصاً أول 48 ساعة.</li><li>وزن يومي.</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>قواعد الإعطاء</h4><ol><li><strong>لا تعطِ أي دواء وريدي</strong> عبر خط TPN (لا دفعة ولا Piggyback).</li><li>ابدأ وأوقف <strong>ببطء</strong>، ولا توقفه فجأة أبداً.</li><li>غيّر الكيس والأنابيب <strong>كل 24 ساعة</strong>.</li></ol><div class=\"cs-box cs-danger\"><strong>الكيس فرغ ولا يوجد كيس جديد؟</strong><p>الأولوية: علّق <strong>ديكستروز 10% في الماء (D10W)</strong> حتى يصل الكيس الجديد، لمنع نقص السكر المفاجئ.</p></div><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات والأسماء للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي والنشرة قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<ul><li><strong>وزن يومي</strong> (للحفاظ على العضلات ومتابعة التغذية).</li><li><strong>مراقبة سكر الدم</strong> بانتظام.</li><li>رعاية القسطرة المركزية بالتعقيم لمنع العدوى.</li></ul>\n<h4>مضاعفات TPN مقابل التغذية المعوية</h4>[[slot:dis-2805-tpn-complications|مضاعفات TPN والمعوية ومتلازمة إعادة التغذية — رسم من إعداد الموقع|/diseases/img/dis-2805-tpn-complications.svg]]<table><thead><tr><th>النوع</th><th>المضاعفات</th></tr></thead><tbody><tr><td>TPN</td><td>عدوى (من القسطرة المركزية)، قرح الإجهاد (Stress ulcers)</td></tr><tr><td>المعوية (NGT, PEG, G-tube)</td><td>انزياح الأنبوب، انتفاخ البطن، انسداد الأنبوب، <strong>الاستنشاق (Aspiration)</strong> / انسداد مجرى الهواء</td></tr></tbody></table>\n<ul><li><strong>لا تغذية دفعية (Bolus)</strong> عبر أنبوب أنفي معدي لمريض على جهاز تنفس صناعي.</li><li>لمنع الاستنشاق: <strong>اطلب تغذية مستمرة (Continuous)</strong>.</li><li>أنبوب PEG انزاح وعمره <strong>أقل من 7 أيام</strong>: أبلغ الطبيب الذي وضعه.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>حمى أو قشعريرة (عدوى القسطرة).</li><li>سكر مرتفع جداً (فوق 180) أو أعراض هبوط سكر عند توقف الكيس.</li><li>سعال مفاجئ أو ضيق نفس أثناء التغذية المعوية (استنشاق).</li><li>اضطراب النظم القلبي أو ضعف عضلي بعد بدء التغذية (نقص K/Mg/P).</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>شرح سبب التغذية الوريدية والمعوية وأهمية الالتزام.</li><li>الإبلاغ عن الحمى أو ألم موضع القسطرة أو انسداد الأنبوب.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "TPN عبر خط مركزي فقط: لأنه سميك",
-      "لا أدوية عبر خط TPN، وغيّر الكيس والأنبوب كل 24 ساعة",
-      "عند فراغ الكيس: D10W حتى يصل الكيس الجديد",
-      "المعوية: الاستنشاق أخطر مضاعفة؛ لا Bolus عبر NGT لمريض الجهاز؛ التغذية المستمرة",
-      "Refeeding بعد ⁦24-48⁩ ساعة: نقص K وMg وP"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "كيس TPN فرغ ولا يتوفر كيس جديد. الإجراء ذو الأولوية؟"
-      },
-      "options": [
-        {
-          "ar": "إيقاف الخط"
-        },
-        {
-          "ar": "ديكستروز 10% في الماء"
-        },
-        {
-          "ar": "إعطاء ملح وريدي"
-        },
-        {
-          "ar": "سحب القسطرة"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "D10W يمنع نقص السكر المفاجئ حتى يصل الكيس."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي مضاعفة تخص التغذية المعوية وليس TPN؟"
-      },
-      "options": [
-        {
-          "ar": "عدوى القسطرة"
-        },
-        {
-          "ar": "قرح الإجهاد"
-        },
-        {
-          "ar": "الاستنشاق"
-        },
-        {
-          "ar": "لا شيء"
-        }
-      ],
-      "answer": 2,
-      "why": {
-        "ar": "الاستنشاق وانزياح وانسداد الأنبوب مضاعفات معوية."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض كحولي مزمن بدأ تغذية معوية، ظهرت أعراض بعد 36 ساعة. أي خلل متوقع؟"
-      },
-      "options": [
-        {
-          "ar": "نقص K وMg وP"
-        },
-        {
-          "ar": "فرط كالسيوم"
-        },
-        {
-          "ar": "نقص حديد"
-        },
-        {
-          "ar": "ارتفاع الصوديوم فقط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "متلازمة إعادة التغذية تسحب الأملاح من الدم للأنسجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "علاج Torsades de Pointes؟"
-      },
-      "options": [
-        {
-          "ar": "كبريتات المغنيسيوم"
-        },
-        {
-          "ar": "أتروبين"
-        },
-        {
-          "ar": "فوروسيميد"
-        },
-        {
-          "ar": "هيبارين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "نقص المغنيسيوم سبب شائع؛ يعطى كبريتات المغنيسيوم."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "إرشادات وملخصات تمريضية جراحية باطنية عامة (مراجع مفتوحة)"
-    }
+  "en": [
+   "TPN through a central line only: because it is thick",
+   "No medications through the TPN line, and change the bag and tubing every 24 hours",
+   "When the bag runs out: D10W until the new bag arrives",
+   "Enteral: aspiration is the most dangerous complication; no Bolus through an NGT for a ventilated patient; continuous feeding",
+   "Refeeding after 24-48 hours: low K, Mg, and P"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "كيس TPN فرغ ولا يتوفر كيس جديد. الإجراء ذو الأولوية؟",
+    "en": "The TPN bag is empty and no new bag is available. The priority action?"
+   },
+   "options": [
+    {
+     "ar": "إيقاف الخط",
+     "en": "Stop the line"
+    },
+    {
+     "ar": "ديكستروز 10% في الماء",
+     "en": "Dextrose 10% in water"
+    },
+    {
+     "ar": "إعطاء ملح وريدي",
+     "en": "Give IV saline"
+    },
+    {
+     "ar": "سحب القسطرة",
+     "en": "Remove the catheter"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "D10W يمنع نقص السكر المفاجئ حتى يصل الكيس.",
+    "en": "D10W prevents sudden hypoglycemia until the bag arrives."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي مضاعفة تخص التغذية المعوية وليس TPN؟",
+    "en": "Which complication belongs to enteral feeding and not TPN?"
+   },
+   "options": [
+    {
+     "ar": "عدوى القسطرة",
+     "en": "Catheter infection"
+    },
+    {
+     "ar": "قرح الإجهاد",
+     "en": "Stress ulcers"
+    },
+    {
+     "ar": "الاستنشاق",
+     "en": "Aspiration"
+    },
+    {
+     "ar": "لا شيء",
+     "en": "None"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "الاستنشاق وانزياح وانسداد الأنبوب مضاعفات معوية.",
+    "en": "Aspiration, dislodgement, and tube blockage are enteral complications."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض كحولي مزمن بدأ تغذية معوية، ظهرت أعراض بعد 36 ساعة. أي خلل متوقع؟",
+    "en": "A patient with chronic alcohol use started enteral feeding, and symptoms appeared after 36 hours. Which imbalance is expected?"
+   },
+   "options": [
+    {
+     "ar": "نقص K وMg وP",
+     "en": "Low K, Mg, and P"
+    },
+    {
+     "ar": "فرط كالسيوم",
+     "en": "Hypercalcemia"
+    },
+    {
+     "ar": "نقص حديد",
+     "en": "Iron deficiency"
+    },
+    {
+     "ar": "ارتفاع الصوديوم فقط",
+     "en": "High sodium only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "متلازمة إعادة التغذية تسحب الأملاح من الدم للأنسجة.",
+    "en": "Refeeding syndrome pulls electrolytes from the blood into the tissues."
+   }
+  },
+  {
+   "q": {
+    "ar": "علاج Torsades de Pointes؟",
+    "en": "Treatment of Torsades de Pointes?"
+   },
+   "options": [
+    {
+     "ar": "كبريتات المغنيسيوم",
+     "en": "Magnesium sulfate"
+    },
+    {
+     "ar": "أتروبين",
+     "en": "Atropine"
+    },
+    {
+     "ar": "فوروسيميد",
+     "en": "Furosemide"
+    },
+    {
+     "ar": "هيبارين",
+     "en": "Heparin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نقص المغنيسيوم سبب شائع؛ يعطى كبريتات المغنيسيوم.",
+    "en": "Hypomagnesemia is a common cause; magnesium sulfate is given."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "إرشادات وملخصات تمريضية جراحية باطنية عامة (مراجع مفتوحة)"
+  }
+ ]
 }
