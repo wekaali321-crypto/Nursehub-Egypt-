@@ -1,160 +1,202 @@
 {
-  "id": "dis-3213",
-  "num": 3213,
-  "system": "infect",
-  "icon": "🦠",
-  "level": 3,
-  "title": {
-    "ar": "مضادات حيوية لعدوى مقاومة: daptomycin وlinezolid وspectinomycin وquinupristin-dalfopristin",
-    "en": "Newer Anti-Infectives: Daptomycin, Linezolid, Spectinomycin, Quinupristin/Dalfopristin"
+ "id": "dis-3213",
+ "num": 3213,
+ "system": "infect",
+ "icon": "🦠",
+ "level": 3,
+ "title": {
+  "ar": "مضادات حيوية لعدوى مقاومة: daptomycin وlinezolid وspectinomycin وquinupristin-dalfopristin",
+  "en": "Newer Anti-Infectives: Daptomycin, Linezolid, Spectinomycin, Quinupristin/Dalfopristin"
+ },
+ "teaser": {
+  "ar": "أدوية تعطل تصنيع البروتين أو الجدار وتستعمل لعدوى مقاومة مثل VREF وMRSA، مع موانعها وتداخلاتها (MAOI والتيرامين) وتنبيه الوريد.",
+  "en": "Drugs that block protein or cell wall synthesis and are used for resistant infections such as VREF and MRSA, with their contraindications and interactions (MAOIs and tyramine) and the vein warning."
+ },
+ "chips": [
+  {
+   "ar": "linezolid",
+   "en": "linezolid"
   },
-  "teaser": {
-    "ar": "أدوية تعطل تصنيع البروتين أو الجدار وتستعمل لعدوى مقاومة مثل VREF وMRSA، مع موانعها وتداخلاتها (MAOI والتيرامين) وتنبيه الوريد."
+  {
+   "ar": "daptomycin",
+   "en": "daptomycin"
   },
-  "chips": [
-    {
-      "ar": "linezolid"
-    },
-    {
-      "ar": "daptomycin"
-    },
-    {
-      "ar": "VREF"
-    },
-    {
-      "ar": "MAOI + tyramine"
-    }
+  {
+   "ar": "VREF",
+   "en": "VREF"
+  },
+  {
+   "ar": "MAOI + tyramine",
+   "en": "MAOI + tyramine"
+  }
+ ],
+ "target": "pharmacology",
+ "sections": {
+  "overview": {
+   "ar": "<p>هذه أدوية احتياطية لعدوى بكتيريا مقاومة. حافظ على قواعد كل المضادات: مزرعة وحساسية قبل الإعطاء، التزام المواعيد، وإكمال المدة (<a href=\"/diseases/dis-3210\">نصائح المضادات</a>). تفاصيل: <a href=\"/diseases/dis-210\">فانكومايسين</a> و<a href=\"/diseases/dis-206\">الأمينوجليكوزيدات</a>.</p>[[slot:dis-3213-newabx|مضادات حيوية أحدث — رسم من إعداد الموقع|/diseases/img/dis-3213-newabx.svg]]<div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div>",
+   "en": "<p>These are reserve drugs for resistant bacterial infections. Keep the rules for all antibiotics: culture and sensitivity before giving, stick to the schedule, and complete the course (<a href=\"/diseases/dis-3210\">antibiotic tips</a>). Details: <a href=\"/diseases/dis-210\">Vancomycin</a> and <a href=\"/diseases/dis-206\">Aminoglycosides</a>.</p>[[slot:dis-3213-newabx|Newer antibiotics — illustration prepared by the site|/diseases/img/dis-3213-newabx.svg]]<div class=\"cs-box cs-info\"><strong>Note:</strong> Doses and numbers are for learning; always verify with the physician/pharmacist (and the package insert) before giving.</div>"
+  },
+  "signs": {
+   "ar": "<ul><li>آثار شائعة: غثيان، قيء، إسهال أو إمساك، صداع ودوخة، أرق، طفح، قشعريرة، إعياء، اكتئاب، عصبية، حساسية ضوئية.</li><li>الأخطر مع linezolid: التهاب قولون غشائي كاذب وقلة صفيحات.</li></ul><div class=\"cs-box cs-danger\"><p>أخطر آثار linezolid: التهاب القولون الغشائي الكاذب وقلة الصفائح؛ راقب عدد الصفائح والإسهال الشديد.</p></div>",
+   "en": "<ul><li>Common effects: nausea, vomiting, diarrhea or constipation, headache and dizziness, insomnia, rash, chills, fatigue, depression, nervousness, photosensitivity.</li><li>The most serious with linezolid: pseudomembranous colitis and low platelets.</li></ul><div class=\"cs-box cs-danger\"><p>The most serious effects of linezolid: pseudomembranous colitis and low platelets; monitor the platelet count and severe diarrhea.</p></div>"
+  },
+  "treatment": {
+   "ar": "<table><thead><tr><th>البند</th><th>التفصيل</th></tr></thead><tbody><tr><td>الآلية</td><td>daptomycin ليبوببتيد حلقي؛ linezolid أول دواء من فئة oxazolidinones؛ spectinomycin قريب كيميائيًا من الأمينوجليكوزيدات؛ quinupristin/dalfopristin مبيد للمكورات العنقودية المقاومة وغير المقاومة للميثيسيلين</td></tr><tr><td>موانع</td><td>linezolid: فرط حساسية، PKU، حمل. الباقي: فرط حساسية للدواء، وتجنّب الحمل (فئة B) والرضاعة</td></tr><tr><td>تداخلات</td><td>مضادات الصفيحات (aspirin وNSAIDs) ← نزف وقلة صفيحات؛ MAOI (مضادات اكتئاب) ← يقلل الفعالية؛ كميات كبيرة من أطعمة التيرامين (جبن معتق، مشروبات بكافيين، زبادي، شوكولاتة، نبيذ أحمر، بيرة، pepperoni) ← ارتفاع ضغط شديد</td></tr><tr><td>تنبيه تمريضي</td><td>Synercid مهيّج للوريد: بعد التسريب المحيطي اغسل الوريد بـ D5W لأن الدواء لا يتوافق مع الملح ومحاليل الهيبارين</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>Item</th><th>Details</th></tr></thead><tbody><tr><td>Mechanism</td><td>daptomycin is a cyclic lipopeptide; linezolid is the first drug of the oxazolidinone class; spectinomycin is chemically related to the aminoglycosides; quinupristin/dalfopristin kills methicillin-resistant and methicillin-susceptible staphylococci</td></tr><tr><td>Contraindications</td><td>linezolid: hypersensitivity, PKU, pregnancy. The others: hypersensitivity to the drug, and avoid in pregnancy (category B) and breastfeeding</td></tr><tr><td>Interactions</td><td>Antiplatelets (aspirin and NSAIDs) ← bleeding and low platelets; MAOIs (antidepressants) ← reduce effectiveness; large amounts of tyramine-rich foods (aged cheese, caffeinated drinks, yogurt, chocolate, red wine, beer, pepperoni) ← severe hypertension</td></tr><tr><td>Nursing alert</td><td>Synercid irritates the vein: after peripheral infusion flush the vein with D5W because the drug is incompatible with saline and heparin solutions</td></tr></tbody></table>"
+  },
+  "nursing": {
+   "ar": "<ol><li>خذ المزرعة قبل أول جرعة.</li><li>اسأل عن PKU والحمل وأدوية MAOI.</li><li>علّم المريض الأطعمة الغنية بالتيرامين مع linezolid.</li><li>راقب الصفيحات والإسهال.</li><li>أكمل المدة واتبع الجدول.</li></ol>",
+   "en": "<ol><li>Obtain the culture before the first dose.</li><li>Ask about PKU, pregnancy, and MAOI drugs.</li><li>Teach the patient about tyramine-rich foods with linezolid.</li><li>Monitor platelets and diarrhea.</li><li>Complete the course and follow the schedule.</li></ol>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><ul><li>إسهال شديد أو دموي</li><li>نزف أو كدمات (قلة صفيحات)</li><li>ارتفاع ضغط مفاجئ وصداع شديد بعد أطعمة التيرامين</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><ul><li>Severe or bloody diarrhea</li><li>Bleeding or bruising (low platelets)</li><li>Sudden high blood pressure and severe headache after tyramine foods</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>تجنّب الجبن المعتق والنبيذ والبيرة مع linezolid</li><li>أكمل الدواء</li><li>أخبر الطبيب بأي مضاد اكتئاب تتناوله</li></ul>",
+   "en": "<ul><li>Avoid aged cheese, wine, and beer with linezolid</li><li>Complete the medication</li><li>Tell the doctor about any antidepressant you take</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "linezolid أول من فئة oxazolidinones؛ أخطر آثاره: التهاب قولون غشائي كاذب وقلة صفيحات",
+   "مع linezolid: تجنب الأطعمة الغنية بالتيرامين لخطر ارتفاع ضغط شديد",
+   "Synercid يُغسل بعده الوريد بـ D5W",
+   "أكمل المدة كلها وخذ المزرعة قبل البدء",
+   "مضادات الصفيحات مع linezolid تزيد النزف"
   ],
-  "target": "pharmacology",
-  "sections": {
-    "overview": {
-      "ar": "<p>هذه أدوية احتياطية لعدوى بكتيريا مقاومة. حافظ على قواعد كل المضادات: مزرعة وحساسية قبل الإعطاء، التزام المواعيد، وإكمال المدة (<a href=\"/diseases/dis-3210\">نصائح المضادات</a>). تفاصيل: <a href=\"/diseases/dis-210\">فانكومايسين</a> و<a href=\"/diseases/dis-206\">الأمينوجليكوزيدات</a>.</p>[[slot:dis-3213-newabx|مضادات حيوية أحدث — رسم من إعداد الموقع|/diseases/img/dis-3213-newabx.svg]]<div class=\"cs-box cs-info\"><strong>تنبيه:</strong> الجرعات والأرقام للتعلّم، وتُراجع مع الطبيب/الصيدلي (والنشرة) قبل الإعطاء.</div>"
-    },
-    "signs": {
-      "ar": "<ul><li>آثار شائعة: غثيان، قيء، إسهال أو إمساك، صداع ودوخة، أرق، طفح، قشعريرة، إعياء، اكتئاب، عصبية، حساسية ضوئية.</li><li>الأخطر مع linezolid: التهاب قولون غشائي كاذب وقلة صفيحات.</li></ul><div class=\"cs-box cs-danger\"><p>أخطر آثار linezolid: التهاب القولون الغشائي الكاذب وقلة الصفائح؛ راقب عدد الصفائح والإسهال الشديد.</p></div>"
-    },
-    "treatment": {
-      "ar": "<table><thead><tr><th>البند</th><th>التفصيل</th></tr></thead><tbody><tr><td>الآلية</td><td>daptomycin ليبوببتيد حلقي؛ linezolid أول دواء من فئة oxazolidinones؛ spectinomycin قريب كيميائيًا من الأمينوجليكوزيدات؛ quinupristin/dalfopristin مبيد للمكورات العنقودية المقاومة وغير المقاومة للميثيسيلين</td></tr><tr><td>موانع</td><td>linezolid: فرط حساسية، PKU، حمل. الباقي: فرط حساسية للدواء، وتجنّب الحمل (فئة B) والرضاعة</td></tr><tr><td>تداخلات</td><td>مضادات الصفيحات (aspirin وNSAIDs) ← نزف وقلة صفيحات؛ MAOI (مضادات اكتئاب) ← يقلل الفعالية؛ كميات كبيرة من أطعمة التيرامين (جبن معتق، مشروبات بكافيين، زبادي، شوكولاتة، نبيذ أحمر، بيرة، pepperoni) ← ارتفاع ضغط شديد</td></tr><tr><td>تنبيه تمريضي</td><td>Synercid مهيّج للوريد: بعد التسريب المحيطي اغسل الوريد بـ D5W لأن الدواء لا يتوافق مع الملح ومحاليل الهيبارين</td></tr></tbody></table>"
-    },
-    "nursing": {
-      "ar": "<ol><li>خذ المزرعة قبل أول جرعة.</li><li>اسأل عن PKU والحمل وأدوية MAOI.</li><li>علّم المريض الأطعمة الغنية بالتيرامين مع linezolid.</li><li>راقب الصفيحات والإسهال.</li><li>أكمل المدة واتبع الجدول.</li></ol>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><ul><li>إسهال شديد أو دموي</li><li>نزف أو كدمات (قلة صفيحات)</li><li>ارتفاع ضغط مفاجئ وصداع شديد بعد أطعمة التيرامين</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>تجنّب الجبن المعتق والنبيذ والبيرة مع linezolid</li><li>أكمل الدواء</li><li>أخبر الطبيب بأي مضاد اكتئاب تتناوله</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "linezolid أول من فئة oxazolidinones؛ أخطر آثاره: التهاب قولون غشائي كاذب وقلة صفيحات",
-      "مع linezolid: تجنب الأطعمة الغنية بالتيرامين لخطر ارتفاع ضغط شديد",
-      "Synercid يُغسل بعده الوريد بـ D5W",
-      "أكمل المدة كلها وخذ المزرعة قبل البدء",
-      "مضادات الصفيحات مع linezolid تزيد النزف"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي طعام يُتجنب مع linezolid؟"
-      },
-      "options": [
-        {
-          "ar": "الخبز"
-        },
-        {
-          "ar": "الجبن المعتق والنبيذ الأحمر"
-        },
-        {
-          "ar": "الأرز"
-        },
-        {
-          "ar": "الخضار"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التيرامين مع تثبيط MAO ضعيف يسبب ارتفاع ضغط شديد."
-      }
-    },
-    {
-      "q": {
-        "ar": "بعد تسريب Synercid المحيطي، يُغسل الوريد بـ:"
-      },
-      "options": [
-        {
-          "ar": "محلول ملح"
-        },
-        {
-          "ar": "D5W"
-        },
-        {
-          "ar": "هيبارين"
-        },
-        {
-          "ar": "ماء فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الدواء غير متوافق مع الملح والهيبارين، فيُستعمل D5W."
-      }
-    },
-    {
-      "q": {
-        "ar": "أخطر أثرين جانبيين لـ linezolid:"
-      },
-      "options": [
-        {
-          "ar": "التهاب قولون غشائي كاذب وقلة صفيحات"
-        },
-        {
-          "ar": "سعال وتورم"
-        },
-        {
-          "ar": "حروق شمس"
-        },
-        {
-          "ar": "فقدان سمع"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "يُراقب الإسهال الشديد وعدد الصفيحات."
-      }
-    },
-    {
-      "q": {
-        "ar": "Zyvox هو:"
-      },
-      "options": [
-        {
-          "ar": "daptomycin"
-        },
-        {
-          "ar": "linezolid"
-        },
-        {
-          "ar": "spectinomycin"
-        },
-        {
-          "ar": "vancomycin"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "Zyvox = linezolid."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "British National Formulary (BNF)"
-    },
-    {
-      "title": "Egyptian Drug Authority (EDA) drug information leaflets"
-    }
+  "en": [
+   "linezolid is the first of the oxazolidinone class; its most serious effects: pseudomembranous colitis and low platelets",
+   "With linezolid: avoid tyramine-rich foods because of the risk of severe hypertension",
+   "After Synercid, flush the vein with D5W",
+   "Complete the whole course and take the culture before starting",
+   "Antiplatelets with linezolid increase bleeding"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي طعام يُتجنب مع linezolid؟",
+    "en": "Which food should be avoided with linezolid?"
+   },
+   "options": [
+    {
+     "ar": "الخبز",
+     "en": "Bread"
+    },
+    {
+     "ar": "الجبن المعتق والنبيذ الأحمر",
+     "en": "Aged cheese and red wine"
+    },
+    {
+     "ar": "الأرز",
+     "en": "Rice"
+    },
+    {
+     "ar": "الخضار",
+     "en": "Vegetables"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التيرامين مع تثبيط MAO ضعيف يسبب ارتفاع ضغط شديد.",
+    "en": "Tyramine with weak MAO inhibition causes severe hypertension."
+   }
+  },
+  {
+   "q": {
+    "ar": "بعد تسريب Synercid المحيطي، يُغسل الوريد بـ:",
+    "en": "After a peripheral Synercid infusion, the vein is flushed with:"
+   },
+   "options": [
+    {
+     "ar": "محلول ملح",
+     "en": "Saline"
+    },
+    {
+     "ar": "D5W",
+     "en": "D5W"
+    },
+    {
+     "ar": "هيبارين",
+     "en": "Heparin"
+    },
+    {
+     "ar": "ماء فقط",
+     "en": "Water only"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الدواء غير متوافق مع الملح والهيبارين، فيُستعمل D5W.",
+    "en": "The drug is incompatible with saline and heparin, so D5W is used."
+   }
+  },
+  {
+   "q": {
+    "ar": "أخطر أثرين جانبيين لـ linezolid:",
+    "en": "The two most serious side effects of linezolid:"
+   },
+   "options": [
+    {
+     "ar": "التهاب قولون غشائي كاذب وقلة صفيحات",
+     "en": "Pseudomembranous colitis and low platelets"
+    },
+    {
+     "ar": "سعال وتورم",
+     "en": "Cough and swelling"
+    },
+    {
+     "ar": "حروق شمس",
+     "en": "Sunburn"
+    },
+    {
+     "ar": "فقدان سمع",
+     "en": "Hearing loss"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "يُراقب الإسهال الشديد وعدد الصفيحات.",
+    "en": "Monitor for severe diarrhea and the platelet count."
+   }
+  },
+  {
+   "q": {
+    "ar": "Zyvox هو:",
+    "en": "Zyvox is:"
+   },
+   "options": [
+    {
+     "ar": "daptomycin",
+     "en": "daptomycin"
+    },
+    {
+     "ar": "linezolid",
+     "en": "linezolid"
+    },
+    {
+     "ar": "spectinomycin",
+     "en": "spectinomycin"
+    },
+    {
+     "ar": "vancomycin",
+     "en": "vancomycin"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "Zyvox = linezolid.",
+    "en": "Zyvox = linezolid."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "British National Formulary (BNF)"
+  },
+  {
+   "title": "Egyptian Drug Authority (EDA) drug information leaflets"
+  }
+ ]
 }

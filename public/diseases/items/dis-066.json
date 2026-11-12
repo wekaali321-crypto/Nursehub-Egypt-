@@ -1,157 +1,197 @@
 {
-  "id": "dis-066",
-  "system": "gi",
-  "icon": "🧠",
-  "level": 3,
-  "teaser": {
-    "ar": "مريض الكبد اللي بدأ ينعس ويخلط: إيه اللي حرّك الحالة، علاجاته (لاكتيولوز، حقن شرجية، مضادات حيوية)، وإزاي تراقب الوعي وتحمي المريض."
+ "id": "dis-066",
+ "system": "gi",
+ "icon": "🧠",
+ "level": 3,
+ "teaser": {
+  "ar": "مريض الكبد اللي بدأ ينعس ويخلط: إيه اللي حرّك الحالة، علاجاته (لاكتيولوز، حقن شرجية، مضادات حيوية)، وإزاي تراقب الوعي وتحمي المريض.",
+  "en": "A liver patient who starts getting drowsy and confused: what triggered it, the treatments (lactulose, enemas, antibiotics), and how to monitor consciousness and protect the patient."
+ },
+ "chips": [
+  {
+   "ar": "لاكتيولوز",
+   "en": "Lactulose"
   },
-  "chips": [
-    {
-      "ar": "لاكتيولوز"
-    },
-    {
-      "ar": "محفزات"
-    },
-    {
-      "ar": "تقييم الوعي"
-    }
+  {
+   "ar": "محفزات",
+   "en": "Precipitants"
+  },
+  {
+   "ar": "تقييم الوعي",
+   "en": "Consciousness assessment"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>الاعتلال المخي الكبدي (Hepatic encephalopathy) متلازمة عصبية نفسية بتظهر كمضاعفات لمرض كبدي شديد. السبب الأساسي إن الكبد المريض مش قادر يخلص الجسم من الأمونيا وسموم الأمعاء، فبتوصل للمخ وتخلي المريض ينعس ويتخبط ويقع في غيبوبة.</p>[[slot:dis-066-precipitants|محفزات الاعتلال المخي الكبدي — رسم توضيحي من إعداد الموقع|/diseases/img/dis-066-precipitants.svg]]<div class=\"cs-box cs-warning\"><strong>أهم رسالة</strong><p>دايماً دوّر عن المحرك (Precipitant): نزيف، إمساك، عدوى، مدرات، مهدئات، جفاف. علاجه أهم من الدواء.</p></div>",
+   "en": "<p>Hepatic encephalopathy is a neuropsychiatric syndrome that appears as a complication of severe liver disease. The main cause is that the diseased liver cannot clear ammonia and gut toxins from the body, so they reach the brain and make the patient drowsy, unsteady, and eventually comatose.</p>[[slot:dis-066-precipitants|Precipitants of hepatic encephalopathy — illustration made for the site|/diseases/img/dis-066-precipitants.svg]]<div class=\"cs-box cs-warning\"><strong>Key message</strong><p>Always look for the precipitant: bleeding, constipation, infection, diuretics, sedatives, dehydration. Treating it matters more than the medication.</p></div>"
+  },
+  "causes": {
+   "ar": "<h4>العوامل المحفزة (Precipitating factors)</h4><table><thead><tr><th>الفئة</th><th>العامل</th></tr></thead><tbody><tr><td>حمل نيتروجيني زايد</td><td>بروتين كتير في الأكل (مهم) · إمساك (مهم) · ارتفاع اليوريا Azotemia · نزيف الجهاز الهضمي (مهم)</td></tr><tr><td>اضطراب أيضي</td><td>قلوية الدم (Alkalosis) · نقص البوتاسيوم · نقص الصوديوم · نقص حجم الدم (Hypovolemia)</td></tr><tr><td>أدوية</td><td>مسكنات أفيونية (مورفين) ومهدئات (بنزوديازيبين) (مهم) · مدرات مثل فروسيميد (مهم)</td></tr><tr><td>أخرى</td><td>التهاب الصفاق البكتيري التلقائي SBP (مهم جداً) · جراحة · قيء أو إسهال شديد (مهم جداً) · نقل دم مخزن · سحب الاستسقاء (Tapping) (مهم) · تركيب TIPS</td></tr></tbody></table>",
+   "en": "<h4>Precipitating factors</h4><table><thead><tr><th>Category</th><th>Factor</th></tr></thead><tbody><tr><td>Increased nitrogen load</td><td>Too much protein in the diet (important) · constipation (important) · high urea (azotemia) · GI bleeding (important)</td></tr><tr><td>Metabolic disturbance</td><td>Alkalosis · low potassium · low sodium · hypovolemia</td></tr><tr><td>Medications</td><td>Opioids (morphine) and sedatives (benzodiazepines) (important) · diuretics such as furosemide (important)</td></tr><tr><td>Others</td><td>Spontaneous bacterial peritonitis (SBP) (very important) · surgery · severe vomiting or diarrhea (very important) · stored blood transfusion · paracentesis (tapping ascites) (important) · TIPS placement</td></tr></tbody></table>"
+  },
+  "signs": {
+   "ar": "<h4>مرحلة ما قبل الغيبوبة (Precoma)</h4><ul><li>اضطراب النوم (Sleep disturbance)</li><li>اضطراب الكلام</li><li>لامبالاة (Apathy)</li><li>رعشة اليد الرفرفية (Asterixis / Flapping tremor)</li><li>اضطراب الشخصية والسلوك</li><li>تشوش في الزمان والمكان والأشخاص</li></ul><h4>مرحلة الغيبوبة (Coma)</h4><p>فقدان الوعي تدريجي لحد عدم الاستجابة.</p><div class=\"cs-box cs-tip\"><strong>اختبار Asterixis</strong><p>اطلب من المريض يمد ذراعيه ويرجع كفه للخلف وأصابعه مفتوحة 30 ثانية: لو الكف بيتهز ويرتخي بشكل إيقاعي فده Asterixis.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>التصنيف المعتمد لدرجة الاعتلال هو West Haven (1 تغير بسيط في المزاج/النوم، 2 نعاس وسلوك غير مناسب وAsterixis، 3 نعاس شديد وتخليط واضح، 4 غيبوبة). مستوى الأمونيا لا يلزم لتشخيص الحالة أو متابعتها.</p></div>",
+   "en": "<h4>Pre-coma stage (Precoma)</h4><ul><li>Sleep disturbance</li><li>Speech disturbance</li><li>Apathy</li><li>Flapping tremor (Asterixis)</li><li>Personality and behavior changes</li><li>Confusion about time, place, and people</li></ul><h4>Coma stage</h4><p>Gradual loss of consciousness until the patient is unresponsive.</p><div class=\"cs-box cs-tip\"><strong>Asterixis test</strong><p>Ask the patient to stretch out the arms with the wrists bent back and fingers spread for 30 seconds: if the hand shakes and drops rhythmically, that is asterixis.</p></div><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The accepted grading of encephalopathy is West Haven (1 mild change in mood/sleep, 2 drowsiness with inappropriate behavior and asterixis, 3 severe drowsiness with obvious confusion, 4 coma). An ammonia level is not needed to diagnose or follow the condition.</p></div>"
+  },
+  "tests": {
+   "ar": "<ul><li>وظائف الكبد</li><li>سونار على البطن والحوض</li><li>سكر عشوائي RBS (لاستبعاد هبوط السكر كسبب لتغير الوعي)</li><li>غازات الدم ABG</li><li>صوديوم وبوتاسيوم</li><li>تحليل سائل الاستسقاء (لاستبعاد SBP)</li><li>يوريا وكرياتينين</li></ul>",
+   "en": "<ul><li>Liver function tests</li><li>Abdominal and pelvic ultrasound</li><li>Random blood sugar RBS (to rule out hypoglycemia as the cause of altered consciousness)</li><li>Arterial blood gases ABG</li><li>Sodium and potassium</li><li>Ascitic fluid analysis (to rule out SBP)</li><li>Urea and creatinine</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>علاج المريض المنوَّم (بحسب أمر الطبيب)</h4><ol><li>تركيب كانيولات + سحب عينة دم + تركيب قسطرة بولية</li><li>غذاء كبدي قليل الملح والبروتين</li><li>حقنة شرجية كل 4 أو 6 ساعات (750 مل ماء دافئ + 250 مل لاكتيولوز)</li><li>4 أمبولات Hepamerz + 2 أمبول Nutrobil (اسم كما ورد، راجعه بالصيدلية) على 500 مل رينجر</li><li>لاكتيولوز شراب من 15 إلى 30 مل كل 8 ساعات</li><li>زجاجة Cipro وريدي كل 12 ساعة</li><li>زجاجة Flagyl وريدي كل 12 ساعة</li><li>زجاجة Aminosteril وريدي على مدار 24 ساعة ببطء شديد</li><li>زجاجة Perfalgan كل 12 ساعة أو عند ارتفاع الحرارة</li><li>بوتاسيوم شراب 3 مرات يومياً</li><li>Conadion قرص مرتين يومياً</li><li>Ligalon قرص 3 مرات يومياً</li></ol><h4>علاج المنزل (الوقاية من الانتكاس)</h4><table><thead><tr><th>الدواء</th><th>الاستخدام</th></tr></thead><tbody><tr><td>Hepamerz sachet</td><td>كيس في نص كوباية مياه مرتين يومياً</td></tr><tr><td>Lactulose syrup</td><td>15–30 مل مرتين أو 3 مرات يومياً</td></tr><tr><td>حقنة شرجية (Enema)</td><td>كل 4 أو 6 أو 8 ساعات حسب حالة المريض</td></tr><tr><td>Bional أقراص (داعم للكبد)</td><td>3 مرات يومياً</td></tr><tr><td>Serviflox 750 مجم</td><td>قرص مرة أسبوعياً (سيبروفلوكساسين، وقاية من SBP)</td></tr><tr><td>Inderal 40 مجم</td><td>نص قرص مرتين يومياً (لارتفاع ضغط الباب)</td></tr><tr><td>Betolvex أمبول</td><td>حقنة عضل مرة أسبوعياً (فيتامين B12)</td></tr><tr><td>Konakion 10 مجم أمبول</td><td>حقنة عضل مرة واحدة (فيتامين K)</td></tr><tr><td>Omepak 20 مجم</td><td>قرص مرة يومياً قبل الأكل بـ 15 دقيقة (أوميبرازول)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>1) البروتين: الإرشادات الحديثة (EASL/AASLD وACG 2026) <b>ما تنصحش بتقييد البروتين</b>، المطلوب 1.2–1.5 جم/كجم/يوم موزعة على وجبات متعددة + وجبة متأخرة بالليل، لأن التقييد بيزيد هدم العضلات من غير فايدة. 2) اللاكتيولوز الخط الأول: يتعدل حتى 2–3 مرات إخراج لين يومياً. وRifaximin 550 مجم مرتين يومياً يُضاف عند الانتكاس. 3) المضادات الحيوية الوريدية (Cipro/Flagyl) لا تُستخدم روتينياً إلا لو في عدوى؛ الأفضل Rifaximin. 4) Aminosteril Hepa أحماض أمينية متفرعة السلسلة للمرضى المتعبين. 5) Inderal (بروبرانولول) يوقف أو يقلل في الضغط المنخفض أو SBP أو HRS. 6) مثبطات المضخة (Omepak) تزيد خطر SBP والاعتلال، فتستخدم لسبب واضح. 7) المراجع تذكر اسم Nutrobil والمادة الفعالة غير مؤكدة، وConadion (فيتامين K غالباً) كذلك، وLigalon (سيليمارين) مكمّل داعم ولا يوجد دليل قوي على فائدته في الاعتلال: راجع أمر الطبيب. 8) علاج السبب (نزيف، SBP، تصحيح البوتاسيوم والسوائل) والأدوية المهدئة تُوقف.</p></div>",
+   "en": "<h4>Treatment of the admitted patient (per physician order)</h4><ol><li>Insert cannulas + draw blood sample + insert urinary catheter</li><li>Liver diet low in salt and protein</li><li>Enema every 4 or 6 hours (750 mL warm water + 250 mL lactulose)</li><li>4 ampoules Hepamerz + 2 ampoules Nutrobil (name as written, verify with the pharmacy) in 500 mL Ringer</li><li>Lactulose syrup 15 to 30 mL every 8 hours</li><li>Cipro bottle IV every 12 hours</li><li>Flagyl bottle IV every 12 hours</li><li>Aminosteril bottle IV over 24 hours, very slowly</li><li>Perfalgan bottle every 12 hours or when temperature rises</li><li>Potassium syrup 3 times daily</li><li>Conadion tablet twice daily</li><li>Ligalon tablet 3 times daily</li></ol><h4>Home treatment (preventing relapse)</h4><table><thead><tr><th>Drug</th><th>Use</th></tr></thead><tbody><tr><td>Hepamerz sachet</td><td>One sachet in half a glass of water twice daily</td></tr><tr><td>Lactulose syrup</td><td>15–30 mL twice or 3 times daily</td></tr><tr><td>Enema</td><td>Every 4, 6, or 8 hours depending on the patient's condition</td></tr><tr><td>Bional tablets (liver support)</td><td>3 times daily</td></tr><tr><td>Serviflox 750 mg</td><td>One tablet once weekly (ciprofloxacin, SBP prophylaxis)</td></tr><tr><td>Inderal 40 mg</td><td>Half a tablet twice daily (for portal hypertension)</td></tr><tr><td>Betolvex ampoule</td><td>IM injection once weekly (vitamin B12)</td></tr><tr><td>Konakion 10 mg ampoule</td><td>IM injection once (vitamin K)</td></tr><tr><td>Omepak 20 mg</td><td>One tablet once daily 15 minutes before food (omeprazole)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>Update</strong><p>1) Protein: current guidelines <b>do not advise restricting protein</b>; the target is 1.2–1.5 g/kg/day spread over multiple meals + a late evening snack, because restriction increases muscle breakdown for no benefit. 2) Lactulose is first line: adjust until 2–3 soft stools daily. Rifaximin 550 mg twice daily is added if relapse occurs. 3) IV antibiotics (Cipro/Flagyl) are not used routinely unless there is an infection; Rifaximin is preferred. 4) Aminosteril Hepa branched-chain amino acids are for debilitated patients. 5) Inderal (propranolol) is stopped or reduced with low blood pressure, SBP, or HRS. 6) Proton pump inhibitors (Omepak) increase the risk of SBP and encephalopathy, so use them only for a clear reason. 7) The active ingredient of Nutrobil is uncertain, and so is Conadion (probably vitamin K), and Ligalon (silymarin) is a supportive supplement with no strong evidence of benefit in encephalopathy: verify with the physician's order. 8) Treat the cause (bleeding, SBP, correcting potassium and fluids) and stop sedative drugs.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الوعي</strong><p>درجة West Haven وGlasgow كل ساعتين، تأكد من الاتجاه، لاحظ Asterixis، سجّل النوم والسلوك.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>حماية المريض</strong><p>حواجز السرير، منع السقوط، إشراف مستمر، وقاية من الشفط (Aspiration): الرأس مرفوع 30 درجة، ولا شيء بالفم لو الوعي منخفض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>دوّر على المحفز</strong><p>سكر الدم، نزيف (قيء دموي/براز أسود)، حرارة (SBP)، قلة بول، أدوية مهدئة. بلّغ الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>خلّي الأمعاء تشتغل</strong><p>سجل عدد مرات الإخراج. هدف اللاكتيولوز 2–3 مرات لين يومياً. الحقنة الشرجية: محلول دافئ، المريض على الجنب الأيسر، الاحتفاظ 15-30 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأدوية</strong><p>لاكتيولوز: لا تحبسه، زوّد لو أقل من 2 إخراج. Aminosteril ببطء شديد حسب المعدل المحدد، المضاد الوريدي في ميعاده.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الأكل والسوائل</strong><p>وجبات صغيرة متكررة بدون تقييد صارم للبروتين، ملح قليل. مراقبة السوائل وI/O، قسطرة بولية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تجنب المهدئات والمسكنات الأفيونية</strong><p>بلّغ الطبيب لو طلب مهدئ لأنه بيعمّق الغيبوبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>وزن وبطن</strong><p>وزن يومي ومحيط البطن لو في استسقاء. راقب الكهارل (K/Na).</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess consciousness</strong><p>West Haven grade and Glasgow score every 2 hours, check orientation, look for asterixis, record sleep and behavior.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Protect the patient</strong><p>Bed rails, fall prevention, continuous supervision, aspiration prevention: head raised 30 degrees, and nothing by mouth if consciousness is low.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Look for the trigger</strong><p>Blood sugar, bleeding (bloody vomit/black stool), temperature (SBP), low urine output, sedative drugs. Notify the physician.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Keep the bowels moving</strong><p>Record the number of stools. The lactulose goal is 2–3 soft stools daily. Enema: warm solution, patient on the left side, retain for 15-30 minutes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Medications</strong><p>Lactulose: do not hold it, increase it if fewer than 2 stools. Aminosteril very slowly at the ordered rate, IV antibiotic on time.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Food and fluids</strong><p>Small frequent meals without strict protein restriction, low salt. Monitor fluids and I/O, urinary catheter.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Avoid sedatives and opioids</strong><p>Notify the physician if a sedative is ordered, because it deepens the coma.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Weight and abdomen</strong><p>Daily weight and abdominal girth if there is ascites. Monitor electrolytes (K/Na).</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>نقص مستوى الوعي أو غيبوبة</li><li>قيء دموي أو براز أسود (نزيف)</li><li>حرارة وألم بطن (SBP)</li><li>تنفس بطيء أو ضعيف</li><li>قلة البول أو انقطاعه</li><li>سكر منخفض</li><li>إسهال شديد أو قيء مستمر</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately if:</strong><ul><li>Decreased level of consciousness or coma</li><li>Bloody vomit or black stool (bleeding)</li><li>Fever and abdominal pain (SBP)</li><li>Slow or weak breathing</li><li>Low urine output or none</li><li>Low blood sugar</li><li>Severe diarrhea or persistent vomiting</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>خد اللاكتيولوز كل يوم حتى لو مفيش إمساك، والهدف 2–3 مرات إخراج لين.</li><li>ابتعد عن المهدئات والمنومات والمسكنات القوية إلا بأمر الطبيب.</li><li>اشرب سوائل كفاية، ولا تحبس الإمساك.</li><li>كل متوازن: بروتين معتدل مقسم على وجبات (لا تقطعه نهائياً).</li><li>أهل المريض: لو قل تركيزه أو نعس أو بقى مختلف، روحوا الطوارئ.</li><li>تابع مواعيد الأدوية والتحاليل.</li></ul>",
+   "en": "<ul><li>Take lactulose every day even if you are not constipated; the goal is 2–3 soft stools.</li><li>Avoid sedatives, sleeping pills, and strong painkillers unless the physician orders them.</li><li>Drink enough fluids and do not let constipation build up.</li><li>Eat a balanced diet: moderate protein spread over meals (do not cut it out completely).</li><li>Family: if his concentration drops, he gets sleepy, or he acts differently, go to the emergency room.</li><li>Keep up with medication times and lab tests.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "دوّر عن المحرك: نزيف، إمساك، عدوى، مدرات، مهدئات",
+   "Asterixis علامة مميزة",
+   "لاكتيولوز + مضاد حيوي معوي (Rifaximin)",
+   "حقنة شرجية 750 ماء + 250 لاكتيولوز",
+   "تجنب المهدئات والأفيونات",
+   "المراجع القديمة تقيّد البروتين والحديثة لا"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>الاعتلال المخي الكبدي (Hepatic encephalopathy) متلازمة عصبية نفسية بتظهر كمضاعفات لمرض كبدي شديد. السبب الأساسي إن الكبد المريض مش قادر يخلص الجسم من الأمونيا وسموم الأمعاء، فبتوصل للمخ وتخلي المريض ينعس ويتخبط ويقع في غيبوبة.</p>[[slot:dis-066-precipitants|محفزات الاعتلال المخي الكبدي — رسم توضيحي من إعداد الموقع|/diseases/img/dis-066-precipitants.svg]]<div class=\"cs-box cs-warning\"><strong>أهم رسالة</strong><p>دايماً دوّر عن المحرك (Precipitant): نزيف، إمساك، عدوى، مدرات، مهدئات، جفاف. علاجه أهم من الدواء.</p></div>"
+  "en": [
+   "Look for the trigger: bleeding, constipation, infection, diuretics, sedatives",
+   "Asterixis is a characteristic sign",
+   "Lactulose + intestinal antibiotic (Rifaximin)",
+   "Enema 750 water + 250 lactulose",
+   "Avoid sedatives and opioids",
+   "Older sources restrict protein; current ones do not"
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي دواء من التالي يجب تجنبه في المريض ده؟",
+    "en": "Which of the following drugs should be avoided in this patient?"
+   },
+   "options": [
+    {
+     "ar": "لاكتيولوز",
+     "en": "Lactulose"
     },
-    "causes": {
-      "ar": "<h4>العوامل المحفزة (Precipitating factors)</h4><table><thead><tr><th>الفئة</th><th>العامل</th></tr></thead><tbody><tr><td>حمل نيتروجيني زايد</td><td>بروتين كتير في الأكل (مهم) · إمساك (مهم) · ارتفاع اليوريا Azotemia · نزيف الجهاز الهضمي (مهم)</td></tr><tr><td>اضطراب أيضي</td><td>قلوية الدم (Alkalosis) · نقص البوتاسيوم · نقص الصوديوم · نقص حجم الدم (Hypovolemia)</td></tr><tr><td>أدوية</td><td>مسكنات أفيونية (مورفين) ومهدئات (بنزوديازيبين) (مهم) · مدرات مثل فروسيميد (مهم)</td></tr><tr><td>أخرى</td><td>التهاب الصفاق البكتيري التلقائي SBP (مهم جداً) · جراحة · قيء أو إسهال شديد (مهم جداً) · نقل دم مخزن · سحب الاستسقاء (Tapping) (مهم) · تركيب TIPS</td></tr></tbody></table>"
+    {
+     "ar": "مورفين ومهدئات",
+     "en": "Morphine and sedatives"
     },
-    "signs": {
-      "ar": "<h4>مرحلة ما قبل الغيبوبة (Precoma)</h4><ul><li>اضطراب النوم (Sleep disturbance)</li><li>اضطراب الكلام</li><li>لامبالاة (Apathy)</li><li>رعشة اليد الرفرفية (Asterixis / Flapping tremor)</li><li>اضطراب الشخصية والسلوك</li><li>تشوش في الزمان والمكان والأشخاص</li></ul><h4>مرحلة الغيبوبة (Coma)</h4><p>فقدان الوعي تدريجي لحد عدم الاستجابة.</p><div class=\"cs-box cs-tip\"><strong>اختبار Asterixis</strong><p>اطلب من المريض يمد ذراعيه ويرجع كفه للخلف وأصابعه مفتوحة 30 ثانية: لو الكف بيتهز ويرتخي بشكل إيقاعي فده Asterixis.</p></div><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>التصنيف المعتمد لدرجة الاعتلال هو West Haven (1 تغير بسيط في المزاج/النوم، 2 نعاس وسلوك غير مناسب وAsterixis، 3 نعاس شديد وتخليط واضح، 4 غيبوبة). مستوى الأمونيا لا يلزم لتشخيص الحالة أو متابعتها.</p></div>"
-    },
-    "tests": {
-      "ar": "<ul><li>وظائف الكبد</li><li>سونار على البطن والحوض</li><li>سكر عشوائي RBS (لاستبعاد هبوط السكر كسبب لتغير الوعي)</li><li>غازات الدم ABG</li><li>صوديوم وبوتاسيوم</li><li>تحليل سائل الاستسقاء (لاستبعاد SBP)</li><li>يوريا وكرياتينين</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>علاج المريض المنوَّم (بحسب أمر الطبيب)</h4><ol><li>تركيب كانيولات + سحب عينة دم + تركيب قسطرة بولية</li><li>غذاء كبدي قليل الملح والبروتين</li><li>حقنة شرجية كل 4 أو 6 ساعات (750 مل ماء دافئ + 250 مل لاكتيولوز)</li><li>4 أمبولات Hepamerz + 2 أمبول Nutrobil (اسم كما ورد، راجعه بالصيدلية) على 500 مل رينجر</li><li>لاكتيولوز شراب من 15 إلى 30 مل كل 8 ساعات</li><li>زجاجة Cipro وريدي كل 12 ساعة</li><li>زجاجة Flagyl وريدي كل 12 ساعة</li><li>زجاجة Aminosteril وريدي على مدار 24 ساعة ببطء شديد</li><li>زجاجة Perfalgan كل 12 ساعة أو عند ارتفاع الحرارة</li><li>بوتاسيوم شراب 3 مرات يومياً</li><li>Conadion قرص مرتين يومياً</li><li>Ligalon قرص 3 مرات يومياً</li></ol><h4>علاج المنزل (الوقاية من الانتكاس)</h4><table><thead><tr><th>الدواء</th><th>الاستخدام</th></tr></thead><tbody><tr><td>Hepamerz sachet</td><td>كيس في نص كوباية مياه مرتين يومياً</td></tr><tr><td>Lactulose syrup</td><td>15–30 مل مرتين أو 3 مرات يومياً</td></tr><tr><td>حقنة شرجية (Enema)</td><td>كل 4 أو 6 أو 8 ساعات حسب حالة المريض</td></tr><tr><td>Bional أقراص (داعم للكبد)</td><td>3 مرات يومياً</td></tr><tr><td>Serviflox 750 مجم</td><td>قرص مرة أسبوعياً (سيبروفلوكساسين، وقاية من SBP)</td></tr><tr><td>Inderal 40 مجم</td><td>نص قرص مرتين يومياً (لارتفاع ضغط الباب)</td></tr><tr><td>Betolvex أمبول</td><td>حقنة عضل مرة أسبوعياً (فيتامين B12)</td></tr><tr><td>Konakion 10 مجم أمبول</td><td>حقنة عضل مرة واحدة (فيتامين K)</td></tr><tr><td>Omepak 20 مجم</td><td>قرص مرة يومياً قبل الأكل بـ 15 دقيقة (أوميبرازول)</td></tr></tbody></table><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>1) البروتين: الإرشادات الحديثة (EASL/AASLD وACG 2026) <b>ما تنصحش بتقييد البروتين</b>، المطلوب 1.2–1.5 جم/كجم/يوم موزعة على وجبات متعددة + وجبة متأخرة بالليل، لأن التقييد بيزيد هدم العضلات من غير فايدة. 2) اللاكتيولوز الخط الأول: يتعدل حتى 2–3 مرات إخراج لين يومياً. وRifaximin 550 مجم مرتين يومياً يُضاف عند الانتكاس. 3) المضادات الحيوية الوريدية (Cipro/Flagyl) لا تُستخدم روتينياً إلا لو في عدوى؛ الأفضل Rifaximin. 4) Aminosteril Hepa أحماض أمينية متفرعة السلسلة للمرضى المتعبين. 5) Inderal (بروبرانولول) يوقف أو يقلل في الضغط المنخفض أو SBP أو HRS. 6) مثبطات المضخة (Omepak) تزيد خطر SBP والاعتلال، فتستخدم لسبب واضح. 7) المراجع تذكر اسم Nutrobil والمادة الفعالة غير مؤكدة، وConadion (فيتامين K غالباً) كذلك، وLigalon (سيليمارين) مكمّل داعم ولا يوجد دليل قوي على فائدته في الاعتلال: راجع أمر الطبيب. 8) علاج السبب (نزيف، SBP، تصحيح البوتاسيوم والسوائل) والأدوية المهدئة تُوقف.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم الوعي</strong><p>درجة West Haven وGlasgow كل ساعتين، تأكد من الاتجاه، لاحظ Asterixis، سجّل النوم والسلوك.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>حماية المريض</strong><p>حواجز السرير، منع السقوط، إشراف مستمر، وقاية من الشفط (Aspiration): الرأس مرفوع 30 درجة، ولا شيء بالفم لو الوعي منخفض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>دوّر على المحفز</strong><p>سكر الدم، نزيف (قيء دموي/براز أسود)، حرارة (SBP)، قلة بول، أدوية مهدئة. بلّغ الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>خلّي الأمعاء تشتغل</strong><p>سجل عدد مرات الإخراج. هدف اللاكتيولوز 2–3 مرات لين يومياً. الحقنة الشرجية: محلول دافئ، المريض على الجنب الأيسر، الاحتفاظ 15-30 دقيقة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الأدوية</strong><p>لاكتيولوز: لا تحبسه، زوّد لو أقل من 2 إخراج. Aminosteril ببطء شديد حسب المعدل المحدد، المضاد الوريدي في ميعاده.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>الأكل والسوائل</strong><p>وجبات صغيرة متكررة بدون تقييد صارم للبروتين، ملح قليل. مراقبة السوائل وI/O، قسطرة بولية.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>تجنب المهدئات والمسكنات الأفيونية</strong><p>بلّغ الطبيب لو طلب مهدئ لأنه بيعمّق الغيبوبة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>وزن وبطن</strong><p>وزن يومي ومحيط البطن لو في استسقاء. راقب الكهارل (K/Na).</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>نقص مستوى الوعي أو غيبوبة</li><li>قيء دموي أو براز أسود (نزيف)</li><li>حرارة وألم بطن (SBP)</li><li>تنفس بطيء أو ضعيف</li><li>قلة البول أو انقطاعه</li><li>سكر منخفض</li><li>إسهال شديد أو قيء مستمر</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>خد اللاكتيولوز كل يوم حتى لو مفيش إمساك، والهدف 2–3 مرات إخراج لين.</li><li>ابتعد عن المهدئات والمنومات والمسكنات القوية إلا بأمر الطبيب.</li><li>اشرب سوائل كفاية، ولا تحبس الإمساك.</li><li>كل متوازن: بروتين معتدل مقسم على وجبات (لا تقطعه نهائياً).</li><li>أهل المريض: لو قل تركيزه أو نعس أو بقى مختلف، روحوا الطوارئ.</li><li>تابع مواعيد الأدوية والتحاليل.</li></ul>"
+    {
+     "ar": "فيتامين K",
+     "en": "Vitamin K"
     }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "المهدئات والأفيونات تحفز الغيبوبة.",
+    "en": "Sedatives and opioids precipitate coma."
+   }
   },
-  "keyPoints": {
-    "ar": [
-      "دوّر عن المحرك: نزيف، إمساك، عدوى، مدرات، مهدئات",
-      "Asterixis علامة مميزة",
-      "لاكتيولوز + مضاد حيوي معوي (Rifaximin)",
-      "حقنة شرجية 750 ماء + 250 لاكتيولوز",
-      "تجنب المهدئات والأفيونات",
-      "المراجع القديمة تقيّد البروتين والحديثة لا"
-    ]
-  },
-  "quiz": [
+  {
+   "q": {
+    "ar": "عرض مميز للاعتلال المخي الكبدي؟",
+    "en": "A characteristic sign of hepatic encephalopathy?"
+   },
+   "options": [
     {
-      "q": {
-        "ar": "أي دواء من التالي يجب تجنبه في المريض ده؟"
-      },
-      "options": [
-        {
-          "ar": "لاكتيولوز"
-        },
-        {
-          "ar": "مورفين ومهدئات"
-        },
-        {
-          "ar": "فيتامين K"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "المهدئات والأفيونات تحفز الغيبوبة."
-      }
+     "ar": "Asterixis",
+     "en": "Asterixis"
     },
     {
-      "q": {
-        "ar": "عرض مميز للاعتلال المخي الكبدي؟"
-      },
-      "options": [
-        {
-          "ar": "Asterixis"
-        },
-        {
-          "ar": "تسارع القلب فقط"
-        },
-        {
-          "ar": "طفح"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "رعشة الرفرفة علامة مميزة."
-      }
+     "ar": "تسارع القلب فقط",
+     "en": "Tachycardia only"
     },
     {
-      "q": {
-        "ar": "نزيف الجهاز الهضمي ليه خطر على مريض الكبد؟"
-      },
-      "options": [
-        {
-          "ar": "بيزود الأمونيا من هضم الدم"
-        },
-        {
-          "ar": "بيحسن الحالة"
-        },
-        {
-          "ar": "لا علاقة"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الدم في الأمعاء حمل نيتروجيني."
-      }
-    },
-    {
-      "q": {
-        "ar": "هدف اللاكتيولوز؟"
-      },
-      "options": [
-        {
-          "ar": "إسهال شديد"
-        },
-        {
-          "ar": "2–3 مرات إخراج لين يومياً"
-        },
-        {
-          "ar": "عدم إخراج"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يخفض الأمونيا دون جفاف."
-      }
+     "ar": "طفح",
+     "en": "Rash"
     }
-  ],
-  "refs": [
-    {
-      "title": "AASLD/EASL Practice Guideline: Hepatic encephalopathy in chronic liver disease (2014)"
-    },
-    {
-      "title": "ACG Clinical Guideline: Hepatic Encephalopathy (2026 summary reviewed)"
-    },
-    {
-      "title": "StatPearls: Hepatic Encephalopathy"
-    },
-    {
-      "title": "West Haven criteria"
-    }
-  ],
-  "title": {
-    "ar": "الاعتلال المخي الكبدي",
-    "en": "Hepatic Encephalopathy"
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "رعشة الرفرفة علامة مميزة.",
+    "en": "Flapping tremor is a characteristic sign."
+   }
   },
-  "num": 66
+  {
+   "q": {
+    "ar": "نزيف الجهاز الهضمي ليه خطر على مريض الكبد؟",
+    "en": "Why is GI bleeding dangerous for a liver patient?"
+   },
+   "options": [
+    {
+     "ar": "بيزود الأمونيا من هضم الدم",
+     "en": "Digesting blood increases ammonia"
+    },
+    {
+     "ar": "بيحسن الحالة",
+     "en": "It improves the condition"
+    },
+    {
+     "ar": "لا علاقة",
+     "en": "No relation"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الدم في الأمعاء حمل نيتروجيني.",
+    "en": "Blood in the gut is a nitrogen load."
+   }
+  },
+  {
+   "q": {
+    "ar": "هدف اللاكتيولوز؟",
+    "en": "The goal of lactulose?"
+   },
+   "options": [
+    {
+     "ar": "إسهال شديد",
+     "en": "Severe diarrhea"
+    },
+    {
+     "ar": "2–3 مرات إخراج لين يومياً",
+     "en": "2–3 soft stools daily"
+    },
+    {
+     "ar": "عدم إخراج",
+     "en": "No bowel movement"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يخفض الأمونيا دون جفاف.",
+    "en": "Lowers ammonia without dehydration."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AASLD/EASL Practice Guideline: Hepatic encephalopathy in chronic liver disease (2014)"
+  },
+  {
+   "title": "ACG Clinical Guideline: Hepatic Encephalopathy (2026 summary reviewed)"
+  },
+  {
+   "title": "StatPearls: Hepatic Encephalopathy"
+  },
+  {
+   "title": "West Haven criteria"
+  }
+ ],
+ "title": {
+  "ar": "الاعتلال المخي الكبدي",
+  "en": "Hepatic Encephalopathy"
+ },
+ "num": 66
 }

@@ -1,162 +1,204 @@
 {
-  "id": "dis-1501",
-  "num": 1501,
-  "system": "cardio",
-  "icon": "🫀",
-  "level": 2,
-  "target": "diseases",
-  "title": {
-    "ar": "اضطرابات الصمامات القلبية: التضيق والارتجاع (الأورطي والتاجي)",
-    "en": "Heart Valve Disorders: Stenosis & Regurgitation"
+ "id": "dis-1501",
+ "num": 1501,
+ "system": "cardio",
+ "icon": "🫀",
+ "level": 2,
+ "target": "diseases",
+ "title": {
+  "ar": "اضطرابات الصمامات القلبية: التضيق والارتجاع (الأورطي والتاجي)",
+  "en": "Heart Valve Disorders: Stenosis & Regurgitation"
+ },
+ "teaser": {
+  "ar": "الصمامات أبواب القلب: التضيق مقابل الارتجاع في الأورطي والتاجي، الأسباب، الأعراض، الأدوية، تبديل الصمام، ووارفارين مدى الحياة وتثقيف النزف.",
+  "en": "Valves are the doors of the heart: stenosis vs regurgitation in the aortic and mitral valves, causes, symptoms, medications, valve replacement, and lifelong warfarin with bleeding education."
+ },
+ "chips": [
+  {
+   "ar": "تضيق/ارتجاع",
+   "en": "Stenosis/regurgitation"
   },
-  "teaser": {
-    "ar": "الصمامات أبواب القلب: التضيق مقابل الارتجاع في الأورطي والتاجي، الأسباب، الأعراض، الأدوية، تبديل الصمام، ووارفارين مدى الحياة وتثقيف النزف."
+  {
+   "ar": "أورطي وتاجي",
+   "en": "Aortic and mitral"
   },
-  "chips": [
-    {
-      "ar": "تضيق/ارتجاع"
-    },
-    {
-      "ar": "أورطي وتاجي"
-    },
-    {
-      "ar": "وارفارين وINR"
-    }
+  {
+   "ar": "وارفارين وINR",
+   "en": "Warfarin and INR"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>تشبه حجرات القلب غرفاً، والصمامات أبواباً بينها. عندما لا تُغلق الصمامات جيداً أو تتصلب يحدث رجوع للدم وقصور في التدفق نحو الجسم. <strong>التضيق (Stenosis)</strong> صمام صلب ضيق لا يسمح بمرور كافٍ للدم، و<strong>الارتجاع/القصور (Regurgitation)</strong> رجوع الدم للخلف لأن الصمام لا يغلق تماماً. الأنواع الأربعة الرئيسية: تضيق أورطي، ارتجاع أورطي، تضيق تاجي، ارتجاع تاجي. المشكلة في النهاية قلة الأكسجين من ضعف الضخ.</p>[[slot:dis-1501-valves|اضطرابات الصمامات: الأنواع والأعراض والعلاج — رسم من إعداد الموقع|/diseases/img/dis-1501-valves.svg]]<p>للتشريح انظر <a href=\"/diseases/dis-616\">أساسيات القلب والأوعية</a>، وللعدوى <a href=\"/diseases/dis-125\">التهاب الشغاف</a>.</p>",
+   "en": "<p>The heart's chambers are like rooms, and the valves are the doors between them. When valves do not close well or become stiff, blood flows backward and flow to the body is reduced. <strong>Stenosis (Stenosis)</strong> is a stiff, narrowed valve that does not let enough blood through, and <strong>regurgitation/insufficiency (Regurgitation)</strong> is blood flowing backward because the valve does not close completely. The four main types: aortic stenosis, aortic regurgitation, mitral stenosis, mitral regurgitation. In the end the problem is low oxygen from poor pumping.</p>[[slot:dis-1501-valves|Valve disorders: types, symptoms, and treatment — illustration prepared by the site|/diseases/img/dis-1501-valves.svg]]<p>For anatomy see <a href=\"/diseases/dis-616\">Heart and Vessel Basics</a>, and for infection see <a href=\"/diseases/dis-125\">Endocarditis</a>.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li>أي شيء يؤذي القلب</li><li>عيب قلبي خلقي (خاصة الخدّج)</li><li>اعتلال عضلة القلب</li><li>جلطة قلبية تضر العضلة</li><li>عدوى: الحمى الروماتيزمية (تدمر القلب) والتهاب الشغاف</li></ul>",
+   "en": "<ul><li>Anything that injures the heart</li><li>Congenital heart defect (especially in premature infants)</li><li>Cardiomyopathy</li><li>Heart attack that damages the muscle</li><li>Infection: rheumatic fever (destroys the heart) and endocarditis</li></ul>"
+  },
+  "signs": {
+   "ar": "<h4>تذكر: نقص أكسجة بسبب ضعف الضخ</h4><table><thead><tr><th>الصمام</th><th>الارتجاع</th><th>التضيق</th></tr></thead><tbody><tr><td>الأورطي</td><td>تسرع قلب، ضيق نفس، إرهاق</td><td>ذبحة، لغط انقباضي، إغماء، إرهاق، ضيق نفس عند الاستلقاء</td></tr><tr><td>التاجي</td><td>وذمة، انصباب جنبي، تضخم أعضاء، استسقاء</td><td>زرقة، عدم تحمل المجهود، لغط انبساطي، علامات قصور أيمن، رئتان صافيتان</td></tr></tbody></table>",
+   "en": "<h4>Remember: hypoxia from poor pumping</h4><table><thead><tr><th>Valve</th><th>Regurgitation</th><th>Stenosis</th></tr></thead><tbody><tr><td>Aortic</td><td>Tachycardia, shortness of breath, fatigue</td><td>Angina, systolic murmur, fainting, fatigue, shortness of breath when lying down</td></tr><tr><td>Mitral</td><td>Edema, pleural effusion, organ enlargement, ascites</td><td>Cyanosis, exercise intolerance, diastolic murmur, signs of right-sided failure, clear lungs</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<ul><li>إيكو القلب وتخطيط القلب والإصغاء للغطات</li><li>أشعة الصدر وقسطرة القلب عند الحاجة</li></ul>",
+   "en": "<ul><li>Echocardiogram, ECG, and listening for murmurs</li><li>Chest X-ray and cardiac catheterization when needed</li></ul>"
+  },
+  "treatment": {
+   "ar": "<h4>الأدوية</h4><ul><li>مضادات تخثر: هيبارين ووارفارين.</li><li>مضادات صفائح: أسبرين وكلوبيدوجريل.</li><li>نيتروغليسرين لألم الصدر.</li></ul><h4>الجراحة</h4><ul><li>تبديل الصمام: وارفارين مدى الحياة</li><li>توسيع بالبالون (Valvuloplasty) للتضيق</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<h4>Medications</h4><ul><li>Anticoagulants: heparin and warfarin.</li><li>Antiplatelets: aspirin and clopidogrel.</li><li>Nitroglycerin for chest pain.</li></ul><h4>Surgery</h4><ul><li>Valve replacement: lifelong warfarin</li><li>Balloon dilation (Valvuloplasty) for stenosis</li></ul><div class=\"cs-box cs-info\"><strong>Note</strong><p>Doses are for learning; always verify with the physician/pharmacist before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p>العلامات الحيوية والتنفس والنبض والتروية ومعدل الأكسجة، ووزن وتورم وصوت الرئتين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الوارفارين</strong><p>تحاليل دم دورية، INR 2.5–3.5 لتبديل الصمام، وثبات كمية الخضرة الورقية (فيتامين K) فلا تزيد ولا تقل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الوقاية من النزف</strong><p>فرشاة أسنان ناعمة، موسى كهربائي فقط، منع السجاد في الممرات وإضاءة جيدة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الأسنان</strong><p>تجنب إجراءات الأسنان 6 أشهر بعد الجراحة، ومضاد حيوي قبل الفحوص.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Assess</strong><p>Vital signs, breathing, pulse, perfusion, and oxygen saturation, plus weight, swelling, and lung sounds.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Warfarin</strong><p>Periodic blood tests, INR 2.5–3.5 for valve replacement, and keep the amount of leafy greens (vitamin K) steady, neither more nor less.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Bleeding prevention</strong><p>Soft toothbrush, electric razor only, no throw rugs in hallways, and good lighting.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Dental care</strong><p>Avoid dental procedures for 6 months after surgery, and take an antibiotic before examinations.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>ضيق نفس مفاجئ أو وذمة رئة</li><li>إغماء أو ألم صدر</li><li>نزف أو INR خارج الهدف</li><li>حمى مع تبديل صمام (شبهة التهاب شغاف)</li><li>سكتة: ضعف وتغير وعي</li></ul>",
+   "en": "<ul><li>Sudden shortness of breath or pulmonary edema</li><li>Fainting or chest pain</li><li>Bleeding or INR outside the target</li><li>Fever with a replaced valve (suspected endocarditis)</li><li>Stroke: weakness and altered consciousness</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>وارفارين مدى الحياة مع فحوص دم دورية</li><li>نظام غذائي ثابت بفيتامين K</li><li>مضاد حيوي قبل الأسنان</li><li>راقب النزف: لثة أو بول أو براز</li><li>احمل بطاقة تعريف بالصمام الصناعي</li></ul>",
+   "en": "<ul><li>Lifelong warfarin with periodic blood tests</li><li>A steady vitamin K diet</li><li>Antibiotic before dental work</li><li>Watch for bleeding: gums, urine, or stool</li><li>Carry an ID card for the artificial valve</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "التضيق = صمام ضيق صلب؛ الارتجاع = رجوع الدم",
+   "تبديل الصمام = وارفارين مدى الحياة وINR 2.5–3.5",
+   "ثبّت كمية الخضرة الورقية",
+   "مضاد حيوي قبل الأسنان"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>تشبه حجرات القلب غرفاً، والصمامات أبواباً بينها. عندما لا تُغلق الصمامات جيداً أو تتصلب يحدث رجوع للدم وقصور في التدفق نحو الجسم. <strong>التضيق (Stenosis)</strong> صمام صلب ضيق لا يسمح بمرور كافٍ للدم، و<strong>الارتجاع/القصور (Regurgitation)</strong> رجوع الدم للخلف لأن الصمام لا يغلق تماماً. الأنواع الأربعة الرئيسية: تضيق أورطي، ارتجاع أورطي، تضيق تاجي، ارتجاع تاجي. المشكلة في النهاية قلة الأكسجين من ضعف الضخ.</p>[[slot:dis-1501-valves|اضطرابات الصمامات: الأنواع والأعراض والعلاج — رسم من إعداد الموقع|/diseases/img/dis-1501-valves.svg]]<p>للتشريح انظر <a href=\"/diseases/dis-616\">أساسيات القلب والأوعية</a>، وللعدوى <a href=\"/diseases/dis-125\">التهاب الشغاف</a>.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li>أي شيء يؤذي القلب</li><li>عيب قلبي خلقي (خاصة الخدّج)</li><li>اعتلال عضلة القلب</li><li>جلطة قلبية تضر العضلة</li><li>عدوى: الحمى الروماتيزمية (تدمر القلب) والتهاب الشغاف</li></ul>"
-    },
-    "signs": {
-      "ar": "<h4>تذكر: نقص أكسجة بسبب ضعف الضخ</h4><table><thead><tr><th>الصمام</th><th>الارتجاع</th><th>التضيق</th></tr></thead><tbody><tr><td>الأورطي</td><td>تسرع قلب، ضيق نفس، إرهاق</td><td>ذبحة، لغط انقباضي، إغماء، إرهاق، ضيق نفس عند الاستلقاء</td></tr><tr><td>التاجي</td><td>وذمة، انصباب جنبي، تضخم أعضاء، استسقاء</td><td>زرقة، عدم تحمل المجهود، لغط انبساطي، علامات قصور أيمن، رئتان صافيتان</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<ul><li>إيكو القلب وتخطيط القلب والإصغاء للغطات</li><li>أشعة الصدر وقسطرة القلب عند الحاجة</li></ul>"
-    },
-    "treatment": {
-      "ar": "<h4>الأدوية</h4><ul><li>مضادات تخثر: هيبارين ووارفارين.</li><li>مضادات صفائح: أسبرين وكلوبيدوجريل.</li><li>نيتروغليسرين لألم الصدر.</li></ul><h4>الجراحة</h4><ul><li>تبديل الصمام: وارفارين مدى الحياة</li><li>توسيع بالبالون (Valvuloplasty) للتضيق</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>قيّم</strong><p>العلامات الحيوية والتنفس والنبض والتروية ومعدل الأكسجة، ووزن وتورم وصوت الرئتين.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الوارفارين</strong><p>تحاليل دم دورية، INR 2.5–3.5 لتبديل الصمام، وثبات كمية الخضرة الورقية (فيتامين K) فلا تزيد ولا تقل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الوقاية من النزف</strong><p>فرشاة أسنان ناعمة، موسى كهربائي فقط، منع السجاد في الممرات وإضاءة جيدة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>الأسنان</strong><p>تجنب إجراءات الأسنان 6 أشهر بعد الجراحة، ومضاد حيوي قبل الفحوص.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>ضيق نفس مفاجئ أو وذمة رئة</li><li>إغماء أو ألم صدر</li><li>نزف أو INR خارج الهدف</li><li>حمى مع تبديل صمام (شبهة التهاب شغاف)</li><li>سكتة: ضعف وتغير وعي</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>وارفارين مدى الحياة مع فحوص دم دورية</li><li>نظام غذائي ثابت بفيتامين K</li><li>مضاد حيوي قبل الأسنان</li><li>راقب النزف: لثة أو بول أو براز</li><li>احمل بطاقة تعريف بالصمام الصناعي</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "التضيق = صمام ضيق صلب؛ الارتجاع = رجوع الدم",
-      "تبديل الصمام = وارفارين مدى الحياة وINR 2.5–3.5",
-      "ثبّت كمية الخضرة الورقية",
-      "مضاد حيوي قبل الأسنان"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "أي علامة تميز التضيق الأورطي؟"
-      },
-      "options": [
-        {
-          "ar": "وذمة وانصباب جنبي"
-        },
-        {
-          "ar": "ذبحة وإغماء ولغط انقباضي"
-        },
-        {
-          "ar": "زرقة ورئتان صافيتان"
-        },
-        {
-          "ar": "تسرع قلب فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "الأورطي الضيق يقلل ضخ الدم للمخ والقلب فيسبب ذبحة وإغماء."
-      }
-    },
-    {
-      "q": {
-        "ar": "مريض بصمام ميكانيكي على وارفارين. أي تثقيف صحيح؟"
-      },
-      "options": [
-        {
-          "ar": "زيادة الخضار الورقية فجأة"
-        },
-        {
-          "ar": "تثبيت كمية فيتامين K وإجراء تحاليل دورية"
-        },
-        {
-          "ar": "إيقاف الدواء عند الإحساس بالتحسن"
-        },
-        {
-          "ar": "موسى حلاقة عادي"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "ثبات فيتامين K يضبط INR، ولا يُوقف الدواء، والموسى الكهربائي أسلم."
-      }
-    },
-    {
-      "q": {
-        "ar": "ما الفرق بين الارتجاع والتضيق؟"
-      },
-      "options": [
-        {
-          "ar": "الارتجاع صمام ضيق"
-        },
-        {
-          "ar": "الارتجاع رجوع الدم لعدم إغلاق الصمام"
-        },
-        {
-          "ar": "لا فرق"
-        },
-        {
-          "ar": "التضيق وذمة فقط"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "التضيق ضيق وتصلب، والارتجاع رجوع للدم."
-      }
-    },
-    {
-      "q": {
-        "ar": "أي من الأسباب يُصنف سبباً معدياً للصمامات؟"
-      },
-      "options": [
-        {
-          "ar": "الحمى الروماتيزمية"
-        },
-        {
-          "ar": "حمل"
-        },
-        {
-          "ar": "سكر"
-        },
-        {
-          "ar": "ضغط"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "الحمى الروماتيزمية والتهاب الشغاف من العدوى."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AHA/ACC Valvular Heart Disease Guideline"
-    },
-    {
-      "title": "StatPearls Valvular Heart Disease"
-    }
+  "en": [
+   "Stenosis = narrow stiff valve; regurgitation = backflow of blood",
+   "Valve replacement = lifelong warfarin and INR 2.5–3.5",
+   "Keep the amount of leafy greens steady",
+   "Antibiotic before dental work"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أي علامة تميز التضيق الأورطي؟",
+    "en": "Which sign distinguishes aortic stenosis?"
+   },
+   "options": [
+    {
+     "ar": "وذمة وانصباب جنبي",
+     "en": "Edema and pleural effusion"
+    },
+    {
+     "ar": "ذبحة وإغماء ولغط انقباضي",
+     "en": "Angina, fainting, and systolic murmur"
+    },
+    {
+     "ar": "زرقة ورئتان صافيتان",
+     "en": "Cyanosis and clear lungs"
+    },
+    {
+     "ar": "تسرع قلب فقط",
+     "en": "Tachycardia only"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "الأورطي الضيق يقلل ضخ الدم للمخ والقلب فيسبب ذبحة وإغماء.",
+    "en": "A narrowed aortic valve reduces blood pumped to the brain and heart, causing angina and fainting."
+   }
+  },
+  {
+   "q": {
+    "ar": "مريض بصمام ميكانيكي على وارفارين. أي تثقيف صحيح؟",
+    "en": "A patient with a mechanical valve is on warfarin. Which education is correct?"
+   },
+   "options": [
+    {
+     "ar": "زيادة الخضار الورقية فجأة",
+     "en": "Suddenly increase leafy vegetables"
+    },
+    {
+     "ar": "تثبيت كمية فيتامين K وإجراء تحاليل دورية",
+     "en": "Keep vitamin K intake steady and have periodic tests"
+    },
+    {
+     "ar": "إيقاف الدواء عند الإحساس بالتحسن",
+     "en": "Stop the drug when feeling better"
+    },
+    {
+     "ar": "موسى حلاقة عادي",
+     "en": "Regular razor"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "ثبات فيتامين K يضبط INR، ولا يُوقف الدواء، والموسى الكهربائي أسلم.",
+    "en": "Steady vitamin K keeps the INR controlled, the drug is not stopped, and an electric razor is safer."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما الفرق بين الارتجاع والتضيق؟",
+    "en": "What is the difference between regurgitation and stenosis?"
+   },
+   "options": [
+    {
+     "ar": "الارتجاع صمام ضيق",
+     "en": "Regurgitation is a narrowed valve"
+    },
+    {
+     "ar": "الارتجاع رجوع الدم لعدم إغلاق الصمام",
+     "en": "Regurgitation is backflow of blood because the valve does not close"
+    },
+    {
+     "ar": "لا فرق",
+     "en": "No difference"
+    },
+    {
+     "ar": "التضيق وذمة فقط",
+     "en": "Stenosis is edema only"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "التضيق ضيق وتصلب، والارتجاع رجوع للدم.",
+    "en": "Stenosis is narrowing and stiffness, and regurgitation is backflow of blood."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من الأسباب يُصنف سبباً معدياً للصمامات؟",
+    "en": "Which cause is classified as an infectious cause of valve disease?"
+   },
+   "options": [
+    {
+     "ar": "الحمى الروماتيزمية",
+     "en": "Rheumatic fever"
+    },
+    {
+     "ar": "حمل",
+     "en": "Pregnancy"
+    },
+    {
+     "ar": "سكر",
+     "en": "Diabetes"
+    },
+    {
+     "ar": "ضغط",
+     "en": "Hypertension"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحمى الروماتيزمية والتهاب الشغاف من العدوى.",
+    "en": "Rheumatic fever and endocarditis are due to infection."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AHA/ACC Valvular Heart Disease Guideline"
+  },
+  {
+   "title": "StatPearls Valvular Heart Disease"
+  }
+ ]
 }

@@ -1,163 +1,206 @@
 {
-  "id": "dis-1112",
-  "num": 1112,
-  "system": "chest",
-  "icon": "🫁",
-  "level": 2,
-  "title": {
-    "ar": "فشل التنفس في غازات الدم: نقص الأكسجة مقابل احتباس CO₂",
-    "en": "Hypoxemic vs Hypercapnic Respiratory Failure on ABG"
+ "id": "dis-1112",
+ "num": 1112,
+ "system": "chest",
+ "icon": "🫁",
+ "level": 2,
+ "title": {
+  "ar": "فشل التنفس في غازات الدم: نقص الأكسجة مقابل احتباس CO₂",
+  "en": "Hypoxemic vs Hypercapnic Respiratory Failure on ABG"
+ },
+ "teaser": {
+  "ar": "متى تقول إن المريض في فشل تنفسي من الغازات، وما أول تصرف: أكسجين أم BiPAP، وأمثلة pH 6.9 وCO₂ 65.",
+  "en": "When to call it respiratory failure from the blood gas, and what the first action is: oxygen or BiPAP, with examples of pH 6.9 and CO₂ 65."
+ },
+ "chips": [
+  {
+   "ar": "PaO₂ ≤ 60",
+   "en": "PaO₂ ≤ 60"
   },
-  "teaser": {
-    "ar": "متى تقول إن المريض في فشل تنفسي من الغازات، وما أول تصرف: أكسجين أم BiPAP، وأمثلة pH 6.9 وCO₂ 65."
+  {
+   "ar": "PaCO₂ ≥ 50",
+   "en": "PaCO₂ ≥ 50"
   },
-  "chips": [
-    {
-      "ar": "PaO₂ ≤ 60"
-    },
-    {
-      "ar": "PaCO₂ ≥ 50"
-    },
-    {
-      "ar": "BiPAP"
-    }
+  {
+   "ar": "BiPAP",
+   "en": "BiPAP"
+  }
+ ],
+ "target": "icu-nursing",
+ "sections": {
+  "overview": {
+   "ar": "<p>من أهم ما تفعله الغازات الشريانية أنها بتحدد <b>نوع الفشل التنفسي</b>: <b>نقص أكسجة (Hypoxemic)</b> لما PaO₂ يهبط إلى 60 أو أقل، و<b>احتباس CO₂ (Hypercapnic)</b> لما PaCO₂ يرتفع إلى 50 أو أكثر. الفرق مهم لأن أول تصرف مختلف.</p>[[slot:dis-1112-failure|نقص الأكسجة مقابل احتباس CO₂ — رسم من إعداد الموقع|/diseases/img/dis-1112-failure.svg]]<h4>نوعا الفشل التنفسي</h4><table><thead><tr><th>النوع</th><th>القراءة والتصرف</th></tr></thead><tbody><tr><td>نقص أكسجة</td><td>PaO₂ 60 أو أقل (الطبيعي 80 – 100)</td></tr><tr><td>احتباس CO₂</td><td>PaCO₂ 50 أو أكثر (الطبيعي 35 – 45)</td></tr><tr><td>pH مع احتباس CO₂</td><td>pH منخفض يشير لحماض تنفسي</td></tr></tbody></table>",
+   "en": "<p>One of the most important things an arterial blood gas does is determine the <b>type of respiratory failure</b>: <b>hypoxemic (Hypoxemic)</b> when PaO₂ drops to 60 or below, and <b>hypercapnic (Hypercapnic)</b> when PaCO₂ rises to 50 or above. The difference matters because the first action is different.</p>[[slot:dis-1112-failure|Hypoxemic vs hypercapnic failure — illustration prepared by the site|/diseases/img/dis-1112-failure.svg]]<h4>The two types of respiratory failure</h4><table><thead><tr><th>Type</th><th>Reading and action</th></tr></thead><tbody><tr><td>Hypoxemic</td><td>PaO₂ 60 or below (normal 80 – 100)</td></tr><tr><td>Hypercapnic</td><td>PaCO₂ 50 or above (normal 35 – 45)</td></tr><tr><td>pH with CO₂ retention</td><td>Low pH indicates respiratory acidosis</td></tr></tbody></table>"
+  },
+  "causes": {
+   "ar": "<p>نقص الأكسجة: التهاب رئوي، وذمة رئة، ARDS، جلطة رئوية. الاحتباس: COPD، تثبيط التنفس بالأدوية، ضعف عضلات التنفس، إصابة رأس. للتفاصيل راجع <a href=\"/diseases/dis-651\">الفشل التنفسي الحاد</a> و<a href=\"/diseases/dis-649\">الحماض التنفسي</a>.</p>",
+   "en": "<p>Hypoxemia: pneumonia, pulmonary edema, ARDS, pulmonary embolism. Retention: COPD, drug-induced respiratory depression, weak respiratory muscles, head injury. For details see <a href=\"/diseases/dis-651\">Acute Respiratory Failure</a> and <a href=\"/diseases/dis-649\">Respiratory Acidosis</a>.</p>"
+  },
+  "signs": {
+   "ar": "<h4>العلامات</h4><table><thead><tr><th>الحالة</th><th>ما تراه</th></tr></thead><tbody><tr><td>نقص الأكسجة (أبكر علامة)</td><td>قلق، تهيج، ارتباك، اضطراب، ثم ازرقاق وتسارع نبض</td></tr><tr><td>احتباس CO₂ المتقدم</td><td>نعاس، صداع، ارتباك، جلد محمر ودافئ، ثم غيبوبة</td></tr><tr><td>حماض تنفسي شديد</td><td>تغير حالة ذهنية: عدم الاستقرار، ارتباك، اهتياج</td></tr></tbody></table>",
+   "en": "<h4>Signs</h4><table><thead><tr><th>Condition</th><th>What you see</th></tr></thead><tbody><tr><td>Hypoxemia (earliest sign)</td><td>Anxiety, irritability, confusion, restlessness, then cyanosis and rapid pulse</td></tr><tr><td>Advanced CO₂ retention</td><td>Drowsiness, headache, confusion, flushed warm skin, then coma</td></tr><tr><td>Severe respiratory acidosis</td><td>Altered mental status: instability, confusion, agitation</td></tr></tbody></table>"
+  },
+  "tests": {
+   "ar": "<ul><li>غازات شريانية: PaO₂ وPaCO₂ وpH.</li><li>لا تعتمد على الأوكسيمتر وحده؛ لا يكشف احتباس CO₂.</li><li>مثال: pH 6.9 وPaCO₂ 65 = حماض تنفسي شديد (فشل احتباسي).</li><li>أشعة صدر، لاكتات، أملاح.</li></ul><h4>جدول الغازات المبسط</h4><table><thead><tr><th>الاضطراب</th><th>HCO₃</th><th>pCO₂</th><th>pH</th></tr></thead><tbody><tr><td>حماض تنفسي</td><td>طبيعي</td><td>مرتفع</td><td>منخفض</td></tr><tr><td>قلاء تنفسي</td><td>طبيعي</td><td>منخفض</td><td>مرتفع</td></tr></tbody></table><p>PaO₂ الطبيعي 80 – 100 مم زئبق. أبكر علامة على نقص الأكسجة: قلق وتهيج؛ ثم ارتباك واضطراب؛ وجلد شاحب مزرق بارد ورطب.</p>",
+   "en": "<ul><li>Arterial blood gas: PaO₂, PaCO₂, and pH.</li><li>Do not rely on the oximeter alone; it does not detect CO₂ retention.</li><li>Example: pH 6.9 and PaCO₂ 65 = severe respiratory acidosis (hypercapnic failure).</li><li>Chest X-ray, lactate, electrolytes.</li></ul><h4>Simplified gas table</h4><table><thead><tr><th>Disorder</th><th>HCO₃</th><th>pCO₂</th><th>pH</th></tr></thead><tbody><tr><td>Respiratory acidosis</td><td>Normal</td><td>High</td><td>Low</td></tr><tr><td>Respiratory alkalosis</td><td>Normal</td><td>Low</td><td>High</td></tr></tbody></table><p>Normal PaO₂ is 80 – 100 mmHg. The earliest sign of hypoxemia: anxiety and irritability; then confusion and restlessness; and pale, bluish, cold, clammy skin.</p>"
+  },
+  "treatment": {
+   "ar": "<p>احتباس CO₂ الشديد:</p><ol><li>تهوية غير باضعة: <b>BiPAP</b>.</li><li>إن لم يتحسن أو ساءت حالة الوعي: تنبيب وتنفس صناعي.</li></ol><ul><li>نقص الأكسجة: أكسجين حسب الحاجة والسبب ومتابعة الغازات.</li><li>علاج السبب (بخاخات، مضاد حيوي، Naloxone...).</li></ul><div class=\"cs-box cs-danger\"><strong>COPD</strong><p>أكسجين عالٍ قد يثبط التنفس عند مريض يحتبس CO₂؛ اتبع الهدف الذي يحدده الطبيب. الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>",
+   "en": "<p>Severe CO₂ retention:</p><ol><li>Noninvasive ventilation: <b>BiPAP</b>.</li><li>If no improvement or level of consciousness worsens: intubation and mechanical ventilation.</li></ol><ul><li>Hypoxemia: oxygen as needed based on the cause, with follow-up gases.</li><li>Treat the cause (inhalers, antibiotic, Naloxone...).</li></ul><div class=\"cs-box cs-danger\"><strong>COPD</strong><p>High-flow oxygen may suppress breathing in a patient who retains CO₂; follow the target set by the physician. Doses are for learning; always verify with the physician/pharmacist before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>ABC أولًا</strong><p>المجرى والتنفس والدورة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الغازات الشريانية</strong><p>وليس النبض فقط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اربط بالوعي</strong><p>النعاس مع CO₂ عالٍ = طوارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>جهّز BiPAP أو التنبيب</strong><p>عند أمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>كرر الغازات</strong><p>وراقب الاستجابة.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>ABC first</strong><p>Airway, breathing, circulation.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Arterial blood gas</strong><p>Not the pulse oximeter alone.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Link it to consciousness</strong><p>Drowsiness with high CO₂ = emergency.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Prepare BiPAP or intubation</strong><p>When the physician orders it.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Repeat the gases</strong><p>And monitor the response.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<ul><li>PaO₂ أقل من 60</li><li>PaCO₂ 50 فأعلى مع نعاس</li><li>pH أقل من 7.25</li><li>تغير مفاجئ في الوعي</li><li>إرهاق عضلات التنفس</li></ul>",
+   "en": "<ul><li>PaO₂ below 60</li><li>PaCO₂ 50 or higher with drowsiness</li><li>pH below 7.25</li><li>Sudden change in consciousness</li><li>Respiratory muscle fatigue</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>لا ترفع الأكسجين من عندك.</li><li>أبلغ عن النعاس أو الصداع الصباحي أو ضيق النفس.</li><li>إقلاع عن التدخين.</li></ul>",
+   "en": "<ul><li>Do not raise the oxygen on your own.</li><li>Report drowsiness, morning headache, or shortness of breath.</li><li>Quit smoking.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "PaO₂ ≤ 60 = نقص أكسجة",
+   "PaCO₂ ≥ 50 = احتباس",
+   "BiPAP أولًا ثم التنبيب",
+   "النبض لا يكفي",
+   "قلق وتهيج أبكر علامة"
   ],
-  "target": "icu-nursing",
-  "sections": {
-    "overview": {
-      "ar": "<p>من أهم ما تفعله الغازات الشريانية أنها بتحدد <b>نوع الفشل التنفسي</b>: <b>نقص أكسجة (Hypoxemic)</b> لما PaO₂ يهبط إلى 60 أو أقل، و<b>احتباس CO₂ (Hypercapnic)</b> لما PaCO₂ يرتفع إلى 50 أو أكثر. الفرق مهم لأن أول تصرف مختلف.</p>[[slot:dis-1112-failure|نقص الأكسجة مقابل احتباس CO₂ — رسم من إعداد الموقع|/diseases/img/dis-1112-failure.svg]]<h4>نوعا الفشل التنفسي</h4><table><thead><tr><th>النوع</th><th>القراءة والتصرف</th></tr></thead><tbody><tr><td>نقص أكسجة</td><td>PaO₂ 60 أو أقل (الطبيعي 80 – 100)</td></tr><tr><td>احتباس CO₂</td><td>PaCO₂ 50 أو أكثر (الطبيعي 35 – 45)</td></tr><tr><td>pH مع احتباس CO₂</td><td>pH منخفض يشير لحماض تنفسي</td></tr></tbody></table>"
-    },
-    "causes": {
-      "ar": "<p>نقص الأكسجة: التهاب رئوي، وذمة رئة، ARDS، جلطة رئوية. الاحتباس: COPD، تثبيط التنفس بالأدوية، ضعف عضلات التنفس، إصابة رأس. للتفاصيل راجع <a href=\"/diseases/dis-651\">الفشل التنفسي الحاد</a> و<a href=\"/diseases/dis-649\">الحماض التنفسي</a>.</p>"
-    },
-    "signs": {
-      "ar": "<h4>العلامات</h4><table><thead><tr><th>الحالة</th><th>ما تراه</th></tr></thead><tbody><tr><td>نقص الأكسجة (أبكر علامة)</td><td>قلق، تهيج، ارتباك، اضطراب، ثم ازرقاق وتسارع نبض</td></tr><tr><td>احتباس CO₂ المتقدم</td><td>نعاس، صداع، ارتباك، جلد محمر ودافئ، ثم غيبوبة</td></tr><tr><td>حماض تنفسي شديد</td><td>تغير حالة ذهنية: عدم الاستقرار، ارتباك، اهتياج</td></tr></tbody></table>"
-    },
-    "tests": {
-      "ar": "<ul><li>غازات شريانية: PaO₂ وPaCO₂ وpH.</li><li>لا تعتمد على الأوكسيمتر وحده؛ لا يكشف احتباس CO₂.</li><li>مثال: pH 6.9 وPaCO₂ 65 = حماض تنفسي شديد (فشل احتباسي).</li><li>أشعة صدر، لاكتات، أملاح.</li></ul><h4>جدول الغازات المبسط</h4><table><thead><tr><th>الاضطراب</th><th>HCO₃</th><th>pCO₂</th><th>pH</th></tr></thead><tbody><tr><td>حماض تنفسي</td><td>طبيعي</td><td>مرتفع</td><td>منخفض</td></tr><tr><td>قلاء تنفسي</td><td>طبيعي</td><td>منخفض</td><td>مرتفع</td></tr></tbody></table><p>PaO₂ الطبيعي 80 – 100 مم زئبق. أبكر علامة على نقص الأكسجة: قلق وتهيج؛ ثم ارتباك واضطراب؛ وجلد شاحب مزرق بارد ورطب.</p>"
-    },
-    "treatment": {
-      "ar": "<p>احتباس CO₂ الشديد:</p><ol><li>تهوية غير باضعة: <b>BiPAP</b>.</li><li>إن لم يتحسن أو ساءت حالة الوعي: تنبيب وتنفس صناعي.</li></ol><ul><li>نقص الأكسجة: أكسجين حسب الحاجة والسبب ومتابعة الغازات.</li><li>علاج السبب (بخاخات، مضاد حيوي، Naloxone...).</li></ul><div class=\"cs-box cs-danger\"><strong>COPD</strong><p>أكسجين عالٍ قد يثبط التنفس عند مريض يحتبس CO₂؛ اتبع الهدف الذي يحدده الطبيب. الجرعات للتعلّم، وتُراجع مع الطبيب/الصيدلي قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>ABC أولًا</strong><p>المجرى والتنفس والدورة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>الغازات الشريانية</strong><p>وليس النبض فقط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>اربط بالوعي</strong><p>النعاس مع CO₂ عالٍ = طوارئ.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>جهّز BiPAP أو التنبيب</strong><p>عند أمر الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>كرر الغازات</strong><p>وراقب الاستجابة.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<ul><li>PaO₂ أقل من 60</li><li>PaCO₂ 50 فأعلى مع نعاس</li><li>pH أقل من 7.25</li><li>تغير مفاجئ في الوعي</li><li>إرهاق عضلات التنفس</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>لا ترفع الأكسجين من عندك.</li><li>أبلغ عن النعاس أو الصداع الصباحي أو ضيق النفس.</li><li>إقلاع عن التدخين.</li></ul>"
-    }
-  },
-  "keyPoints": {
-    "ar": [
-      "PaO₂ ≤ 60 = نقص أكسجة",
-      "PaCO₂ ≥ 50 = احتباس",
-      "BiPAP أولًا ثم التنبيب",
-      "النبض لا يكفي",
-      "قلق وتهيج أبكر علامة"
-    ]
-  },
-  "quiz": [
-    {
-      "q": {
-        "ar": "PaCO₂ 55 وpH 7.28 ونعاس. أول خطوة:"
-      },
-      "options": [
-        {
-          "ar": "إعطاء مهدئ"
-        },
-        {
-          "ar": "تجهيز BiPAP وبلاغ"
-        },
-        {
-          "ar": "تجاهل"
-        },
-        {
-          "ar": "تقليل الأكسجين تمامًا"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "احتباس CO₂ مع نعاس يحتاج تهوية مساعدة عاجلة غالبًا BiPAP."
-      }
-    },
-    {
-      "q": {
-        "ar": "PaO₂ 55 يدل على:"
-      },
-      "options": [
-        {
-          "ar": "فشل نقص أكسجة"
-        },
-        {
-          "ar": "فشل احتباسي"
-        },
-        {
-          "ar": "طبيعي"
-        },
-        {
-          "ar": "قلاء"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "PaO₂ 60 فأقل نقص أكسجة."
-      }
-    },
-    {
-      "q": {
-        "ar": "أبكر علامة لنقص الأكسجة:"
-      },
-      "options": [
-        {
-          "ar": "ازرقاق"
-        },
-        {
-          "ar": "قلق وتهيج"
-        },
-        {
-          "ar": "غيبوبة"
-        },
-        {
-          "ar": "بطء قلب"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "تغير السلوك قبل الازرقاق."
-      }
-    },
-    {
-      "q": {
-        "ar": "لماذا لا يكفي الأوكسيمتر؟"
-      },
-      "options": [
-        {
-          "ar": "لأنه غالي"
-        },
-        {
-          "ar": "لأنه لا يقيس CO₂"
-        },
-        {
-          "ar": "لأنه يحرق"
-        },
-        {
-          "ar": "لا يعمل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "يقيس تشبع الأكسجين فقط ولا يكشف احتباس CO₂."
-      }
-    }
-  ],
-  "refs": [
-    {
-      "title": "AARC guidelines"
-    },
-    {
-      "title": "BTS oxygen guideline"
-    }
+  "en": [
+   "PaO₂ ≤ 60 = hypoxemia",
+   "PaCO₂ ≥ 50 = retention",
+   "BiPAP first, then intubation",
+   "The pulse oximeter is not enough",
+   "Anxiety and irritability are the earliest sign"
   ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "PaCO₂ 55 وpH 7.28 ونعاس. أول خطوة:",
+    "en": "PaCO₂ 55, pH 7.28, and drowsiness. The first step:"
+   },
+   "options": [
+    {
+     "ar": "إعطاء مهدئ",
+     "en": "Give a sedative"
+    },
+    {
+     "ar": "تجهيز BiPAP وبلاغ",
+     "en": "Prepare BiPAP and notify"
+    },
+    {
+     "ar": "تجاهل",
+     "en": "Ignore it"
+    },
+    {
+     "ar": "تقليل الأكسجين تمامًا",
+     "en": "Stop oxygen completely"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "احتباس CO₂ مع نعاس يحتاج تهوية مساعدة عاجلة غالبًا BiPAP.",
+    "en": "CO₂ retention with drowsiness needs urgent assisted ventilation, usually BiPAP."
+   }
+  },
+  {
+   "q": {
+    "ar": "PaO₂ 55 يدل على:",
+    "en": "PaO₂ 55 indicates:"
+   },
+   "options": [
+    {
+     "ar": "فشل نقص أكسجة",
+     "en": "Hypoxemic failure"
+    },
+    {
+     "ar": "فشل احتباسي",
+     "en": "Hypercapnic failure"
+    },
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
+    },
+    {
+     "ar": "قلاء",
+     "en": "Alkalosis"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "PaO₂ 60 فأقل نقص أكسجة.",
+    "en": "PaO₂ of 60 or less is hypoxemia."
+   }
+  },
+  {
+   "q": {
+    "ar": "أبكر علامة لنقص الأكسجة:",
+    "en": "The earliest sign of hypoxemia:"
+   },
+   "options": [
+    {
+     "ar": "ازرقاق",
+     "en": "Cyanosis"
+    },
+    {
+     "ar": "قلق وتهيج",
+     "en": "Anxiety and irritability"
+    },
+    {
+     "ar": "غيبوبة",
+     "en": "Coma"
+    },
+    {
+     "ar": "بطء قلب",
+     "en": "Slow heart rate"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "تغير السلوك قبل الازرقاق.",
+    "en": "Behavior changes before cyanosis."
+   }
+  },
+  {
+   "q": {
+    "ar": "لماذا لا يكفي الأوكسيمتر؟",
+    "en": "Why is the oximeter not enough?"
+   },
+   "options": [
+    {
+     "ar": "لأنه غالي",
+     "en": "Because it is expensive"
+    },
+    {
+     "ar": "لأنه لا يقيس CO₂",
+     "en": "Because it does not measure CO₂"
+    },
+    {
+     "ar": "لأنه يحرق",
+     "en": "Because it burns"
+    },
+    {
+     "ar": "لا يعمل",
+     "en": "It does not work"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "يقيس تشبع الأكسجين فقط ولا يكشف احتباس CO₂.",
+    "en": "It measures only oxygen saturation and does not detect CO₂ retention."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AARC guidelines"
+  },
+  {
+   "title": "BTS oxygen guideline"
+  }
+ ]
 }

@@ -1,154 +1,194 @@
 {
-  "id": "dis-067",
-  "system": "gi",
-  "icon": "💧",
-  "level": 3,
-  "teaser": {
-    "ar": "عدوى سائل الاستسقاء (Ascitic fluid) عند مريض التشمع: هتشك فيه إمتى، تحليل السائل بيقول إيه (أكتر من 250)، والمضاد والوقاية."
+ "id": "dis-067",
+ "system": "gi",
+ "icon": "💧",
+ "level": 3,
+ "teaser": {
+  "ar": "عدوى سائل الاستسقاء (Ascitic fluid) عند مريض التشمع: هتشك فيه إمتى، تحليل السائل بيقول إيه (أكتر من 250)، والمضاد والوقاية.",
+  "en": "Infection of the ascitic fluid in a patient with cirrhosis: when to suspect it, what the fluid analysis shows (over 250), and the antibiotic and prevention."
+ },
+ "chips": [
+  {
+   "ar": "استسقاء (Ascites)",
+   "en": "Ascites"
   },
-  "chips": [
-    {
-      "ar": "استسقاء (Ascites)"
-    },
-    {
-      "ar": "PMN > 250"
-    },
-    {
-      "ar": "سيفوتاكسيم"
-    }
+  {
+   "ar": "PMN > 250",
+   "en": "PMN > 250"
+  },
+  {
+   "ar": "سيفوتاكسيم",
+   "en": "Cefotaxime"
+  }
+ ],
+ "sections": {
+  "overview": {
+   "ar": "<p>SBP هي عدوى بكتيرية في سائل الاستسقاء من غير سبب جراحي واضح (زي ثقب في الأمعاء)، وبتصيب مرضى فشل الكبد والاستسقاء. المرجع بيسميها Sub-acute، والاسم الشائع الأدق Spontaneous. تعتبر طارئة وتأخير المضاد بيرفع الوفيات بقوة.</p>[[slot:dis-067-diagnosis|تشخيص SBP من سائل الاستسقاء — رسم توضيحي من إعداد الموقع|/diseases/img/dis-067-diagnosis.svg]]<div class=\"cs-box cs-danger\"><strong>ليه خطيرة</strong><p>ممكن تشعل الاعتلال المخي الكبدي وفشل الكلى (HRS) وتوقع المريض بسرعة.</p></div>",
+   "en": "<p>SBP is a bacterial infection of the ascitic fluid with no obvious surgical cause (such as a perforated bowel). It affects patients with liver failure and ascites. It is sometimes called Sub-acute, but Spontaneous is the more accurate and common name. It is an emergency, and delaying the antibiotic greatly raises mortality.</p>[[slot:dis-067-diagnosis|Diagnosing SBP from ascitic fluid — an illustration prepared by the site|/diseases/img/dis-067-diagnosis.svg]]<div class=\"cs-box cs-danger\"><strong>Why is it dangerous?</strong><p>It can trigger hepatic encephalopathy and kidney failure (HRS) and make the patient deteriorate quickly.</p></div>"
+  },
+  "causes": {
+   "ar": "<p>البكتيريا بتعدي من الأمعاء لسائل البطن في مريض ضعيف المناعة، والسائل بيكون بيئة مناسبة. الجراثيم الأشهر: سلبية الجرام (زي E. coli).</p><ul><li>تشمع الكبد مع استسقاء</li><li>بروتين قليل في سائل الاستسقاء</li><li>نزيف دوالي</li><li>عدوى سابقة</li></ul>",
+   "en": "<p>Bacteria cross from the gut into the abdominal fluid in an immunocompromised patient, and the fluid is a suitable growth medium. The most common organisms are gram-negative (such as E. coli).</p><ul><li>Cirrhosis with ascites</li><li>Low protein in the ascitic fluid</li><li>Variceal bleeding</li><li>Previous infection</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>الصورة المعتادة لفشل الكبد المزمن (LCF)</li><li>تدهور مفاجئ لمريض التشمع واعتلال مخي بدون محرك واضح</li><li>بطن مؤلم عند اللمس (Tender abdomen)</li><li>حرارة</li></ul><div class=\"cs-box cs-warning\"><strong>قد تكون صامتة</strong><p>بعض المرضى مفيش عندهم ألم ولا حرارة، فأي مريض استسقاء داخل المستشفى لازم سائله يتحلل.</p></div>",
+   "en": "<ul><li>The usual picture of chronic liver failure (LCF)</li><li>Sudden deterioration of a cirrhotic patient and encephalopathy with no clear trigger</li><li>Tender abdomen</li><li>Fever</li></ul><div class=\"cs-box cs-warning\"><strong>It may be silent</strong><p>Some patients have no pain and no fever, so every patient with ascites admitted to hospital must have the fluid analyzed.</p></div>"
+  },
+  "tests": {
+   "ar": "<h4>تحليل سائل الاستسقاء (AFA)</h4><ul><li>عدد الخلايا متعددة النوى (PMN) عادة أكتر من 250 خلية/مم³ (المرجع كتبها 250 خلية/سم)</li><li>المزرعة عادة إيجابية لبكتيريا سلبية الجرام</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الوحدة الصحيحة: خلية/مم³ (ميكرولتر). تؤخذ المزرعة في زجاجتي مزرعة دم بجانب السرير قبل المضاد. أضف: بروتين وألبيومين السائل (حساب SAAG)، وعدّ الخلايا الكلي، وسيتولوجي عند الشك. أي مريض استسقاء داخل المستشفى لازم يعمل شفط تشخيصي.</p></div>",
+   "en": "<h4>Ascitic fluid analysis (AFA)</h4><ul><li>Polymorphonuclear (PMN) count is usually more than 250 cells/mm³ (sometimes written as 250 cells/cm)</li><li>Culture is usually positive for gram-negative bacteria</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>The correct unit is cells/mm³ (microliter). Take the culture into two blood-culture bottles at the bedside before the antibiotic. Add: fluid protein and albumin (to calculate SAAG), total cell count, and cytology if suspicion exists. Every patient with ascites admitted to hospital needs a diagnostic tap.</p></div>"
+  },
+  "treatment": {
+   "ar": "<h4>العلاج (من المرجع)</h4><ul><li>Cefotax 1 جم فيال (كل 12 ساعة لمدة 5 أيام)</li><li>Ciprofar 500 مجم قرص مرة يومياً للوقاية</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>1) الجرعة المعتمدة عالمياً: سيفوتاكسيم 2 جم وريدي كل 8–12 ساعة (بعد أخذ المزرعة) أو سيفترياكسون 1–2 جم يومياً، 5–7 أيام، وتقييم الاستجابة بعد 48 ساعة بشفط ثاني (انخفاض PMN أقل من 25%). 2) <b>ألبيومين وريدي</b> 1.5 جم/كجم في اليوم الأول و1 جم/كجم في اليوم الثالث يقلل خطر فشل الكلى والوفاة، خصوصاً لو الكرياتينين أكتر من 1 أو البيليروبين أكتر من 4. 3) الوقاية الثانوية بعد أول SBP: نورفلوكساسين 400 مجم أو سيبروفلوكساسين يومياً (الوقاية الأولية حسب بروتوكول المستشفى). في مصر يستخدم Serviflox 750 مجم أسبوعياً عند بعض الأطباء. 4) أوقف أو خفّف حاصرات بيتا (Inderal) والمدرات ومثبطات ACE لو الضغط انخفض أو الكلى تأثرت. الجرعات بأمر الطبيب فقط.</p></div><div class=\"cs-box cs-info\"><strong>المضادات السابقة بالأسماء</strong><p>Cefotax = سيفوتاكسيم (سيفالوسبورين جيل ثالث)، Ciprofar = سيبروفلوكساسين.</p></div>",
+   "en": "<h4>Treatment</h4><ul><li>Cefotax 1 g vial (every 12 hours for 5 days)</li><li>Ciprofar 500 mg tablet once daily for prophylaxis</li></ul><div class=\"cs-box cs-warning\"><strong>Update</strong><p>1) The internationally accepted dose: cefotaxime 2 g IV every 8–12 hours (after taking the culture) or ceftriaxone 1–2 g daily, for 5–7 days, and assess the response after 48 hours with a second tap (PMN falling below 25%). 2) <b>IV albumin</b> 1.5 g/kg on the first day and 1 g/kg on the third day lowers the risk of kidney failure and death, especially if creatinine is above 1 or bilirubin is above 4. 3) Secondary prophylaxis after the first SBP: norfloxacin 400 mg or ciprofloxacin daily (primary prophylaxis per hospital protocol). In Egypt some doctors use Serviflox 750 mg weekly. 4) Stop or reduce beta-blockers (Inderal), diuretics, and ACE inhibitors if blood pressure drops or the kidneys are affected. Doses are by physician order only.</p></div><div class=\"cs-box cs-info\"><strong>Earlier antibiotics by name</strong><p>Cefotax = cefotaxime (third-generation cephalosporin), Ciprofar = ciprofloxacin.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اشتبه</strong><p>أي مريض استسقاء + حرارة أو ألم بطن أو تدهور وعي أو قلة بول: بلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>جهّز الشفط التشخيصي</strong><p>أدوات معقمة، زجاجات مزرعة (هوائية/لاهوائية) وأنبوب تحليل (خلايا وبروتين وألبيومين). اتأكد من الموافقة وPT وصفائح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>المزرعة قبل المضاد</strong><p>لكن ما تأخّرش المضاد أكتر من اللازم: ابدأه بمجرد أخذ العينة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ السيفوتاكسيم في ميعاده</strong><p>وريدي، تخفيف حسب الصيدلية، راقب الحساسية. سجّل الجرعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الألبيومين</strong><p>لو أمر به الطبيب: اتأكد من التركيز والمعدل، راقب علامات زيادة السوائل (ضيق نفس، ضغط).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب</strong><p>نبض وضغط وحرارة كل 4 ساعات، وعي (West Haven)، كمية البول، الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>منع المضاعفات</strong><p>تحذير من المهدئات، ارتفاع الرأس، متابعة سكر وكهارل. حاصرات بيتا والمدرات بقرار الطبيب لو الضغط هبط.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Suspect it</strong><p>Any patient with ascites plus fever, abdominal pain, decreased consciousness, or low urine output: report immediately.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Prepare the diagnostic tap</strong><p>Sterile equipment, culture bottles (aerobic/anaerobic) and an analysis tube (cells, protein, albumin). Confirm consent, PT, and platelets.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Culture before the antibiotic</strong><p>But do not delay the antibiotic longer than necessary: start it as soon as the sample is taken.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Give cefotaxime on time</strong><p>IV, dilute per pharmacy, watch for allergy. Document the dose.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Albumin</strong><p>If the doctor orders it: check the concentration and rate, and watch for signs of fluid overload (shortness of breath, blood pressure).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Monitor</strong><p>Pulse, blood pressure, and temperature every 4 hours, consciousness (West Haven), urine output, weight.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Prevent complications</strong><p>Avoid sedatives, elevate the head, monitor glucose and electrolytes. Beta-blockers and diuretics are the doctor's decision if blood pressure falls.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>حرارة مع ألم بطن</li><li>نعاس أو تخليط</li><li>ضغط أقل من 90/60</li><li>قلة بول</li><li>نزيف</li><li>لا تحسن بعد 48 ساعة من المضاد</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Report immediately if:</strong><ul><li>Fever with abdominal pain</li><li>Drowsiness or confusion</li><li>Blood pressure below 90/60</li><li>Low urine output</li><li>Bleeding</li><li>No improvement after 48 hours of antibiotic</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>اتبع الوقاية بالمضاد الحيوي بانتظام لو الطبيب وصفها.</li><li>قلّل الملح في الأكل، وتابع وزنك وبطنك يومياً.</li><li>بلّغ بسرعة عند أي ألم بطن أو حرارة أو نعاس.</li><li>تجنب الكحول وأدوية الألم NSAIDs.</li></ul>",
+   "en": "<ul><li>Take the preventive antibiotic regularly if the doctor prescribed it.</li><li>Reduce salt in food, and track your weight and abdomen daily.</li><li>Report quickly any abdominal pain, fever, or drowsiness.</li><li>Avoid alcohol and NSAID pain medicines.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "SBP = PMN أكتر من 250 في سائل الاستسقاء",
+   "البكتيريا غالباً سلبية الجرام",
+   "سيفوتاكسيم 5 أيام، والجرعة العالمية 2 جم/8–12 ساعة",
+   "ألبيومين مع العلاج يقلل الوفاة",
+   "وقاية بمضاد يومي حسب الطبيب",
+   "أي مريض استسقاء يدخل المستشفى سائله يتحلل"
   ],
-  "sections": {
-    "overview": {
-      "ar": "<p>SBP هي عدوى بكتيرية في سائل الاستسقاء من غير سبب جراحي واضح (زي ثقب في الأمعاء)، وبتصيب مرضى فشل الكبد والاستسقاء. المرجع بيسميها Sub-acute، والاسم الشائع الأدق Spontaneous. تعتبر طارئة وتأخير المضاد بيرفع الوفيات بقوة.</p>[[slot:dis-067-diagnosis|تشخيص SBP من سائل الاستسقاء — رسم توضيحي من إعداد الموقع|/diseases/img/dis-067-diagnosis.svg]]<div class=\"cs-box cs-danger\"><strong>ليه خطيرة</strong><p>ممكن تشعل الاعتلال المخي الكبدي وفشل الكلى (HRS) وتوقع المريض بسرعة.</p></div>"
+  "en": [
+   "SBP = PMN above 250 in the ascitic fluid",
+   "The bacteria are usually gram-negative",
+   "Cefotaxime for 5 days, and the international dose is 2 g every 8–12 hours",
+   "Albumin with treatment lowers mortality",
+   "Preventive daily antibiotic as the doctor decides",
+   "Every patient with ascites admitted to hospital should have the fluid analyzed"
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "عدد PMN في سائل استسقاء 400/مم³. الاستنتاج؟",
+    "en": "PMN count in ascitic fluid is 400/mm³. The conclusion?"
+   },
+   "options": [
+    {
+     "ar": "طبيعي",
+     "en": "Normal"
     },
-    "causes": {
-      "ar": "<p>البكتيريا بتعدي من الأمعاء لسائل البطن في مريض ضعيف المناعة، والسائل بيكون بيئة مناسبة. الجراثيم الأشهر: سلبية الجرام (زي E. coli).</p><ul><li>تشمع الكبد مع استسقاء</li><li>بروتين قليل في سائل الاستسقاء</li><li>نزيف دوالي</li><li>عدوى سابقة</li></ul>"
+    {
+     "ar": "SBP",
+     "en": "SBP"
     },
-    "signs": {
-      "ar": "<ul><li>الصورة المعتادة لفشل الكبد المزمن (LCF)</li><li>تدهور مفاجئ لمريض التشمع واعتلال مخي بدون محرك واضح</li><li>بطن مؤلم عند اللمس (Tender abdomen)</li><li>حرارة</li></ul><div class=\"cs-box cs-warning\"><strong>قد تكون صامتة</strong><p>بعض المرضى مفيش عندهم ألم ولا حرارة، فأي مريض استسقاء داخل المستشفى لازم سائله يتحلل.</p></div>"
-    },
-    "tests": {
-      "ar": "<h4>تحليل سائل الاستسقاء (AFA)</h4><ul><li>عدد الخلايا متعددة النوى (PMN) عادة أكتر من 250 خلية/مم³ (المرجع كتبها 250 خلية/سم)</li><li>المزرعة عادة إيجابية لبكتيريا سلبية الجرام</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>الوحدة الصحيحة: خلية/مم³ (ميكرولتر). تؤخذ المزرعة في زجاجتي مزرعة دم بجانب السرير قبل المضاد. أضف: بروتين وألبيومين السائل (حساب SAAG)، وعدّ الخلايا الكلي، وسيتولوجي عند الشك. أي مريض استسقاء داخل المستشفى لازم يعمل شفط تشخيصي.</p></div>"
-    },
-    "treatment": {
-      "ar": "<h4>العلاج (من المرجع)</h4><ul><li>Cefotax 1 جم فيال (كل 12 ساعة لمدة 5 أيام)</li><li>Ciprofar 500 مجم قرص مرة يومياً للوقاية</li></ul><div class=\"cs-box cs-warning\"><strong>تحديث</strong><p>1) الجرعة المعتمدة عالمياً: سيفوتاكسيم 2 جم وريدي كل 8–12 ساعة (بعد أخذ المزرعة) أو سيفترياكسون 1–2 جم يومياً، 5–7 أيام، وتقييم الاستجابة بعد 48 ساعة بشفط ثاني (انخفاض PMN أقل من 25%). 2) <b>ألبيومين وريدي</b> 1.5 جم/كجم في اليوم الأول و1 جم/كجم في اليوم الثالث يقلل خطر فشل الكلى والوفاة، خصوصاً لو الكرياتينين أكتر من 1 أو البيليروبين أكتر من 4. 3) الوقاية الثانوية بعد أول SBP: نورفلوكساسين 400 مجم أو سيبروفلوكساسين يومياً (الوقاية الأولية حسب بروتوكول المستشفى). في مصر يستخدم Serviflox 750 مجم أسبوعياً عند بعض الأطباء. 4) أوقف أو خفّف حاصرات بيتا (Inderal) والمدرات ومثبطات ACE لو الضغط انخفض أو الكلى تأثرت. الجرعات بأمر الطبيب فقط.</p></div><div class=\"cs-box cs-info\"><strong>المضادات السابقة بالأسماء</strong><p>Cefotax = سيفوتاكسيم (سيفالوسبورين جيل ثالث)، Ciprofar = سيبروفلوكساسين.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>اشتبه</strong><p>أي مريض استسقاء + حرارة أو ألم بطن أو تدهور وعي أو قلة بول: بلّغ فوراً.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>جهّز الشفط التشخيصي</strong><p>أدوات معقمة، زجاجات مزرعة (هوائية/لاهوائية) وأنبوب تحليل (خلايا وبروتين وألبيومين). اتأكد من الموافقة وPT وصفائح.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>المزرعة قبل المضاد</strong><p>لكن ما تأخّرش المضاد أكتر من اللازم: ابدأه بمجرد أخذ العينة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>أعطِ السيفوتاكسيم في ميعاده</strong><p>وريدي، تخفيف حسب الصيدلية، راقب الحساسية. سجّل الجرعة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الألبيومين</strong><p>لو أمر به الطبيب: اتأكد من التركيز والمعدل، راقب علامات زيادة السوائل (ضيق نفس، ضغط).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>راقب</strong><p>نبض وضغط وحرارة كل 4 ساعات، وعي (West Haven)، كمية البول، الوزن.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>منع المضاعفات</strong><p>تحذير من المهدئات، ارتفاع الرأس، متابعة سكر وكهارل. حاصرات بيتا والمدرات بقرار الطبيب لو الضغط هبط.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>بلّغ فوراً لو:</strong><ul><li>حرارة مع ألم بطن</li><li>نعاس أو تخليط</li><li>ضغط أقل من 90/60</li><li>قلة بول</li><li>نزيف</li><li>لا تحسن بعد 48 ساعة من المضاد</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>اتبع الوقاية بالمضاد الحيوي بانتظام لو الطبيب وصفها.</li><li>قلّل الملح في الأكل، وتابع وزنك وبطنك يومياً.</li><li>بلّغ بسرعة عند أي ألم بطن أو حرارة أو نعاس.</li><li>تجنب الكحول وأدوية الألم NSAIDs.</li></ul>"
+    {
+     "ar": "سرطان",
+     "en": "Cancer"
     }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "أكتر من 250 يعني SBP.",
+    "en": "Above 250 means SBP."
+   }
   },
-  "keyPoints": {
-    "ar": [
-      "SBP = PMN أكتر من 250 في سائل الاستسقاء",
-      "البكتيريا غالباً سلبية الجرام",
-      "سيفوتاكسيم 5 أيام، والجرعة العالمية 2 جم/8–12 ساعة",
-      "ألبيومين مع العلاج يقلل الوفاة",
-      "وقاية بمضاد يومي حسب الطبيب",
-      "أي مريض استسقاء يدخل المستشفى سائله يتحلل"
-    ]
-  },
-  "quiz": [
+  {
+   "q": {
+    "ar": "البكتيريا الأكثر مسؤولية؟",
+    "en": "Which bacteria are most often responsible?"
+   },
+   "options": [
     {
-      "q": {
-        "ar": "عدد PMN في سائل استسقاء 400/مم³. الاستنتاج؟"
-      },
-      "options": [
-        {
-          "ar": "طبيعي"
-        },
-        {
-          "ar": "SBP"
-        },
-        {
-          "ar": "سرطان"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "أكتر من 250 يعني SBP."
-      }
+     "ar": "إيجابية الجرام فقط",
+     "en": "Gram-positive only"
     },
     {
-      "q": {
-        "ar": "البكتيريا الأكثر مسؤولية؟"
-      },
-      "options": [
-        {
-          "ar": "إيجابية الجرام فقط"
-        },
-        {
-          "ar": "سلبية الجرام"
-        },
-        {
-          "ar": "فطريات"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "مثل E. coli."
-      }
+     "ar": "سلبية الجرام",
+     "en": "Gram-negative"
     },
     {
-      "q": {
-        "ar": "ماذا يُضاف للمضاد في SBP لتقليل الوفاة وفشل الكلى؟"
-      },
-      "options": [
-        {
-          "ar": "ألبيومين وريدي"
-        },
-        {
-          "ar": "كورتيزون"
-        },
-        {
-          "ar": "هيبارين"
-        }
-      ],
-      "answer": 0,
-      "why": {
-        "ar": "حسب إرشادات AASLD/EASL."
-      }
-    },
-    {
-      "q": {
-        "ar": "أول إجراء عند الشك؟"
-      },
-      "options": [
-        {
-          "ar": "انتظار الأعراض"
-        },
-        {
-          "ar": "شفط تشخيصي + مزرعة ثم مضاد"
-        },
-        {
-          "ar": "تسريب سوائل"
-        }
-      ],
-      "answer": 1,
-      "why": {
-        "ar": "سرعة التشخيص والعلاج مهمة."
-      }
+     "ar": "فطريات",
+     "en": "Fungi"
     }
-  ],
-  "refs": [
-    {
-      "title": "AASLD Practice Guidance: Diagnosis, Evaluation and Management of Ascites, SBP and HRS (2021)"
-    },
-    {
-      "title": "EASL Clinical Practice Guidelines on decompensated cirrhosis (2018)"
-    },
-    {
-      "title": "StatPearls: Spontaneous Bacterial Peritonitis"
-    }
-  ],
-  "title": {
-    "ar": "الالتهاب البكتيري التلقائي للغشاء البريتوني (SBP)",
-    "en": "Spontaneous / Sub-acute Bacterial Peritonitis (SBP)"
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "مثل E. coli.",
+    "en": "Such as E. coli."
+   }
   },
-  "num": 67
+  {
+   "q": {
+    "ar": "ماذا يُضاف للمضاد في SBP لتقليل الوفاة وفشل الكلى؟",
+    "en": "What is added to the antibiotic in SBP to reduce death and kidney failure?"
+   },
+   "options": [
+    {
+     "ar": "ألبيومين وريدي",
+     "en": "IV albumin"
+    },
+    {
+     "ar": "كورتيزون",
+     "en": "Cortisone"
+    },
+    {
+     "ar": "هيبارين",
+     "en": "Heparin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "حسب إرشادات AASLD/EASL.",
+    "en": "IV albumin lowers the risk of kidney failure and death in SBP."
+   }
+  },
+  {
+   "q": {
+    "ar": "أول إجراء عند الشك؟",
+    "en": "The first action when SBP is suspected?"
+   },
+   "options": [
+    {
+     "ar": "انتظار الأعراض",
+     "en": "Wait for symptoms"
+    },
+    {
+     "ar": "شفط تشخيصي + مزرعة ثم مضاد",
+     "en": "Diagnostic tap + culture, then antibiotic"
+    },
+    {
+     "ar": "تسريب سوائل",
+     "en": "Fluid infusion"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "سرعة التشخيص والعلاج مهمة.",
+    "en": "Rapid diagnosis and treatment matter."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "AASLD Practice Guidance: Diagnosis, Evaluation and Management of Ascites, SBP and HRS (2021)"
+  },
+  {
+   "title": "EASL Clinical Practice Guidelines on decompensated cirrhosis (2018)"
+  },
+  {
+   "title": "StatPearls: Spontaneous Bacterial Peritonitis"
+  }
+ ],
+ "title": {
+  "ar": "الالتهاب البكتيري التلقائي للغشاء البريتوني (SBP)",
+  "en": "Spontaneous / Sub-acute Bacterial Peritonitis (SBP)"
+ },
+ "num": 67
 }
