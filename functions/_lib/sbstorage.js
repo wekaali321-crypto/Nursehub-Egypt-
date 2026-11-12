@@ -81,7 +81,7 @@ export async function handleStorage(request, env, path) {
     const file = rest.join('/');
     const upsert = request.headers.get('x-upsert') === 'true';
     const key = keyOf(bucket, file);
-    const exists = env.MEDIA ? await env.MEDIA.head(key) : await env.DB.prepare('SELECT 1 FROM media_objects WHERE path = ?').bind(key).first();
+    const exists = (await env.DB.prepare('SELECT 1 FROM media_objects WHERE path = ?').bind(key).first()) || (env.MEDIA && (await env.MEDIA.head(key)));
     if (!upsert && exists) return perr(409, 'Duplicate', 'The resource already exists');
     const ct = request.headers.get('content-type') || '';
     let blob, type = 'application/octet-stream';
@@ -90,14 +90,18 @@ export async function handleStorage(request, env, path) {
       if (part) { blob = part.body; type = part.type; }
     } else { blob = await request.arrayBuffer(); type = ct || type; }
     if (!blob) return perr(400, 'invalid', 'No file');
-    if (env.MEDIA) {
-      const put = await env.MEDIA.put(key, blob, { httpMetadata: { contentType: type } });
-      await env.DB.prepare('INSERT INTO media_objects (path,bucket,content_type,size) VALUES (?,?,?,?) ON CONFLICT(path) DO UPDATE SET size=excluded.size, content_type=excluded.content_type').bind(key, bucket, type, put.size).run();
-      return respond({ Key: key, Id: put.etag });
-    }
     // D1 storage (no card needed): images are already compressed to ~100-200KB by the admin panel
     const bytes = new Uint8Array(blob instanceof ArrayBuffer ? blob : blob.buffer ? blob.buffer : await blob.arrayBuffer());
-    if (bytes.length > MAX_D1_FILE) return perr(413, 'Payload too large', `الملف أكبر من ${MAX_D1_FILE / 1048576}MB. الملفات الكبيرة (PDF) تُضاف عبر المستودع أو يتم تفعيل R2.`);
+    if (bytes.length > MAX_D1_FILE) {
+      // large files (PDF, big images) go to R2 when it is enabled
+      if (env.MEDIA) {
+        const put = await env.MEDIA.put(key, bytes, { httpMetadata: { contentType: type } });
+        await env.DB.batch([env.DB.prepare('DELETE FROM media_chunks WHERE key = ?').bind(key), env.DB.prepare('INSERT INTO media_objects (path,bucket,content_type,size) VALUES (?,?,?,?) ON CONFLICT(path) DO UPDATE SET size=excluded.size, content_type=excluded.content_type').bind(key, bucket, type, put.size)]);
+        return respond({ Key: key, Id: put.etag });
+      }
+      return perr(413, 'Payload too large', `الملف أكبر من ${MAX_D1_FILE / 1048576}MB. الملفات الكبيرة (PDF) تُضاف عبر المستودع أو يتم تفعيل R2.`);
+    }
+    if (env.MEDIA) await env.MEDIA.delete(key); // small file now lives in D1; drop any older R2 copy
     const stmts = [env.DB.prepare('DELETE FROM media_chunks WHERE key = ?').bind(key)];
     for (let i = 0, n = 0; i < bytes.length; i += CHUNK, n++) stmts.push(env.DB.prepare('INSERT INTO media_chunks (key, idx, data) VALUES (?,?,?)').bind(key, n, bytes.slice(i, i + CHUNK).buffer));
     stmts.push(env.DB.prepare('INSERT INTO media_objects (path,bucket,content_type,size) VALUES (?,?,?,?) ON CONFLICT(path) DO UPDATE SET size=excluded.size, content_type=excluded.content_type').bind(key, bucket, type, bytes.length));
