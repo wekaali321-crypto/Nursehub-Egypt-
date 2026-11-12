@@ -1,0 +1,33 @@
+name: D1 backup (weekly + manual)
+
+# Exports the whole D1 database (all tables incl. users/orders and uploaded files) to a GitHub
+# Actions ARTIFACT (private to the repo collaborators, kept 90 days). Nothing is committed to the repo.
+# Needs the repo secrets already used by "Cloudflare setup": CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID.
+on:
+  schedule:
+    - cron: "17 2 * * 5"   # every Friday ~02:17 UTC
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Export D1
+        run: |
+          mkdir -p backup
+          npx --yes wrangler@3 d1 export nursehub --remote --output=backup/nursehub.sql
+          ls -l backup
+          grep -c "^INSERT" backup/nursehub.sql || true
+          gzip -9 backup/nursehub.sql
+          ls -l backup
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nursehub-d1-${{ github.run_id }}
+          path: backup/nursehub.sql.gz
+          retention-days: 90
