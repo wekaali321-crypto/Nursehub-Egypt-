@@ -1,0 +1,35 @@
+name: Cloudflare import (copy the data into D1)
+
+# Run AFTER "Cloudflare setup" has finished and the site redeployed.
+# Repository SECRETS:  ADMIN_PASSWORD (the same password as the Pages env var ADMIN_PASSWORD)
+#   optional: SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY  → pulls FRESH data incl. private tables
+#             (orders, subscribers, comments, bookmarks…). Without them the committed snapshot is used.
+on:
+  workflow_dispatch:
+    inputs:
+      site_url:
+        description: Site URL
+        default: https://nursehubegypt.com
+      admin_email:
+        description: Admin e-mail
+        required: true
+      track_days:
+        description: Days of visit tracking to carry over
+        default: "7"
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Import
+        env:
+          SITE_URL: ${{ inputs.site_url }}
+          ADMIN_EMAIL: ${{ inputs.admin_email }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          TRACK_DAYS: ${{ inputs.track_days }}
+        run: node cloudflare/import.mjs

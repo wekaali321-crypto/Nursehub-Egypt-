@@ -17,10 +17,12 @@ import { withStaticFallback } from "./staticFallback";
  */
 
 // Read environment variables (support both prefixed and non-prefixed names)
-const SUPABASE_URL =
+const RAW_SUPABASE_URL =
   (import.meta as any).env?.VITE_SUPABASE_URL ??
   (import.meta as any).env?.SUPABASE_URL ??
   undefined;
+// "self" = the Cloudflare D1 backend on the same origin (works on nursehubegypt.com and the old pages.dev address)
+const SUPABASE_URL = RAW_SUPABASE_URL === "self" && typeof window !== "undefined" ? window.location.origin : RAW_SUPABASE_URL;
 
 const SUPABASE_PUBLISHABLE_KEY =
   (import.meta as any).env?.VITE_SUPABASE_PUBLISHABLE_KEY ??

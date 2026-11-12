@@ -1,0 +1,77 @@
+name: Cloudflare setup (D1 + R2 + bindings)
+
+# Run by hand: Actions → "Cloudflare setup" → Run workflow.
+# Needs two repository SECRETS (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN   (token with: Account · D1 Edit, Workers R2 Storage Edit, Cloudflare Pages Edit)
+#   CLOUDFLARE_ACCOUNT_ID
+# Nothing secret is printed or committed.
+on:
+  workflow_dispatch:
+    inputs:
+      pages_project:
+        description: Cloudflare Pages project name
+        default: nursehub-egypt
+      admin_email:
+        description: Admin e-mail(s), comma separated (same as VITE_ADMIN_EMAIL)
+        required: true
+      cutover:
+        description: "Switch the site to the Cloudflare backend (set VITE_SUPABASE_URL=self) and redeploy. Run the data import FIRST."
+        type: boolean
+        default: false
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      PROJECT: ${{ inputs.pages_project }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+
+      - name: Create D1 database (if missing)
+        run: |
+          npx --yes wrangler@3 d1 list --json > d1.json
+          ID=$(node -e "const l=require('./d1.json');const d=l.find(x=>x.name==='nursehub');console.log(d?d.uuid:'')")
+          if [ -z "$ID" ]; then
+            npx --yes wrangler@3 d1 create nursehub
+            npx --yes wrangler@3 d1 list --json > d1.json
+            ID=$(node -e "const l=require('./d1.json');console.log(l.find(x=>x.name==='nursehub').uuid)")
+          fi
+          echo "D1_ID=$ID" >> "$GITHUB_ENV"
+          echo "D1 database nursehub ready"
+
+      - name: Create R2 bucket (if missing)
+        run: |
+          npx --yes wrangler@3 r2 bucket create nursehub-media || echo "bucket already exists"
+
+      - name: Apply schema
+        run: npx --yes wrangler@3 d1 execute nursehub --remote --file=cloudflare/migrations/0001_init.sql
+
+      - name: Bind D1/R2 and set secrets on the Pages project
+        env:
+          ADMIN_EMAIL: ${{ inputs.admin_email }}
+          CUTOVER: ${{ inputs.cutover }}
+        run: |
+          API="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROJECT"
+          AUTH="Authorization: Bearer $CLOUDFLARE_API_TOKEN"
+          curl -fsS -H "$AUTH" "$API" > project.json
+          HAS_JWT=$(node -e "const p=require('./project.json').result;console.log(p.deployment_configs?.production?.env_vars?.JWT_SECRET?'yes':'no')")
+          node -e "
+            const env_vars = { ADMIN_EMAIL: { type: 'plain_text', value: process.env.ADMIN_EMAIL } };
+            if ('$HAS_JWT' === 'no') env_vars.JWT_SECRET = { type: 'secret_text', value: require('crypto').randomBytes(32).toString('hex') };
+            if (process.env.CUTOVER === 'true') {
+              env_vars.VITE_SUPABASE_URL = { type: 'plain_text', value: 'self' };
+              env_vars.VITE_SUPABASE_PUBLISHABLE_KEY = { type: 'plain_text', value: 'cloudflare-d1' };
+            }
+            const cfg = { d1_databases: { DB: { id: process.env.D1_ID } }, r2_buckets: { MEDIA: { name: 'nursehub-media' } }, env_vars };
+            require('fs').writeFileSync('patch.json', JSON.stringify({ deployment_configs: { production: cfg, preview: cfg } }));
+          "
+          curl -fsS -X PATCH -H "$AUTH" -H "Content-Type: application/json" --data @patch.json "$API" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const j=JSON.parse(s);console.log('pages patch success:',j.success)})"
+
+      - name: Redeploy the site so the bindings take effect
+        run: |
+          curl -fsS -X POST -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" -F branch=main \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROJECT/deployments" | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log('deploy requested:',JSON.parse(s).success))"
