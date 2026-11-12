@@ -46,7 +46,8 @@ async function passwordLogin(env, email, password) {
   email = String(email || '').trim().toLowerCase();
   if (!email || !password) return null;
   // The site owner signs in with the existing ADMIN_PASSWORD secret (no hash to migrate, no CPU-heavy hashing).
-  if (env.ADMIN_EMAIL && env.ADMIN_PASSWORD && email === String(env.ADMIN_EMAIL).toLowerCase()) {
+  const adminEmails = String(env.ADMIN_EMAIL || '').toLowerCase().split(',').map((x) => x.trim()).filter(Boolean);
+  if (env.ADMIN_PASSWORD && adminEmails.includes(email)) {
     const a = enc.encode(password), b = enc.encode(env.ADMIN_PASSWORD);
     let d = a.length ^ b.length;
     for (let i = 0; i < Math.max(a.length, b.length); i++) d |= (a[i] ?? 0) ^ (b[i] ?? 0);
