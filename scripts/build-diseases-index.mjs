@@ -52,6 +52,8 @@ for (const f of readdirSync(dir).filter((x) => /^dis-\d{3,4}\.json$/.test(x)).so
       doctor_name: null,
       items: r.items.map((x) => ({ drug_name: x.drug_name, dose: x.dose, note: x.note })),
       clinical_note: r.clinical_note || null,
+      items_en: r.items_en?.length === r.items.length ? r.items_en.map((x) => ({ drug_name: x.drug_name, dose: x.dose, note: x.note })) : null,
+      clinical_note_en: r.clinical_note_en || null,
       guide: c.id,
     });
   });

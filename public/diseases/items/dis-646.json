@@ -1,240 +1,321 @@
 {
-  "id": "dis-646",
-  "num": 646,
-  "system": "chest",
-  "icon": "🎗️",
-  "level": 3,
-  "title": {
-    "ar": "سرطان الرئة",
-    "en": "Lung Cancer"
+ "id": "dis-646",
+ "num": 646,
+ "system": "chest",
+ "icon": "🎗️",
+ "level": 3,
+ "title": {
+  "ar": "سرطان الرئة",
+  "en": "Lung Cancer"
+ },
+ "teaser": {
+  "ar": "أول سبب للوفاة بالسرطان: الأنواع (صغير الخلايا وغير صغير)، أعراض متأخرة، العلاج الجراحي والكيماوي والإشعاعي، وكيف تتعامل كممرض مع الألم والغثيان والتنفس.",
+  "en": "The leading cause of cancer death: the types (small cell and non-small cell), late symptoms, surgical, chemotherapy and radiation treatment, and how to manage pain, nausea, and breathing as a nurse."
+ },
+ "chips": [
+  {
+   "ar": "Small / Non-small cell",
+   "en": "Small / Non-small cell"
   },
-  "teaser": {
-    "ar": "أول سبب للوفاة بالسرطان: الأنواع (صغير الخلايا وغير صغير)، أعراض متأخرة، العلاج الجراحي والكيماوي والإشعاعي، وكيف تتعامل كممرض مع الألم والغثيان والتنفس."
+  {
+   "ar": "كيماوي وإشعاع",
+   "en": "Chemotherapy and radiation"
   },
-  "chips": [
+  {
+   "ar": "رعاية تلطيفية",
+   "en": "Palliative care"
+  }
+ ],
+ "target": "diseases",
+ "sections": {
+  "overview": {
+   "ar": "<p>سرطان الرئة نمو غير منضبط للخلايا في نسيج الرئة يكوّن ورماً. قد يكون <b>أولياً</b> (من الرئة) أو <b>ثانوياً</b> (انتشار من الكبد أو المخ أو الكلى). السبب الأهم: التعرّض المتكرر للمهيجات المستنشقة: <b>دخان السجائر</b>، التعرض المهني، تلوث الهواء (Benzopyrenes والهيدروكربونات).</p><table><thead><tr><th>النوع</th><th>النمو</th><th>الانتشار</th></tr></thead><tbody><tr><td><b>صغير الخلايا (Small cell / Oat cell)</b></td><td>سريع جداً</td><td>مبكر</td></tr><tr><td><b>غير صغير: Adenocarcinoma</b></td><td>متوسط</td><td>مبكر</td></tr><tr><td><b>غير صغير: Squamous cell</b></td><td>بطيء</td><td>متأخر</td></tr><tr><td><b>غير صغير: Large cell</b></td><td>سريع</td><td>مبكر</td></tr></tbody></table>[[slot:dis-646-types|أنواع سرطان الرئة وسرعة نموها|/diseases/img/dis-646-types.svg]]\n<div class=\"cs-stats\"><div><b><20%</b><span>بقاء 5 سنوات (حسب المراجع)</span></div><div><b>#1</b><span>سبب وفاة بالسرطان</span></div><div><b>متأخر</b><span>معظم الحالات تُشخّص</span></div></div><p>التشخيص المتأخر هو سبب سوء النتيجة؛ كل ما اكتشف أبكر كل ما العلاج أحسن، وكلما طال بقاء الورم زاد خطر الانتشار.</p><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>سرطان الرئة ورم خبيث بنمو خلوي غير منضبط وقد ينتشر لأنسجة أخرى</li><li>أسباب: التدخين (نحو 90%)، التدخين السلبي، الأسبستوس ومسرطنات أخرى، تلوث الهواء، التاريخ العائلي</li><li>مبكرة: سعال منتج مستمر، بصاق دموي (Hemoptysis)، بحة صوت، صعوبة بلع</li><li>مضاعفات: متلازمات ما حول الورم (Paraneoplastic) وأورام ثانوية: ألم عظام</li></ul>\n<h4>مراجعة إضافية (الفيزيولوجيا والبقاء)</h4>[[slot:dis-2875-lung-cancer|سرطان الرئة: الأنواع والتشخيص والعلاج — رسم من إعداد الموقع|/diseases/img/dis-2875-lung-cancer.svg]]<p>أورام خبيثة تنشأ من ظهارة الجهاز التنفسي، تقسم إلى <strong>صغير الخلايا</strong> (الأقل شيوعاً) و<strong>غير صغير الخلايا</strong> (غدي، حرشفي (Squamous)، كبير الخلايا). أشيع موضع: جدار أو ظهارة الشعب الهوائية. الإنذار سيئ لمعظم المرضى: البقاء 5 سنوات نحو 13% فقط حسب المرجع.</p><p>تتحول ظهارة الشعب بالتدريج من تغيرات حرشفية أو حُرْشِفة (Metaplasia) إلى سرطان في موضعه (in situ). الأورام الشعبية تُفرز مخاطاً أكثر؛ والانسداد الجزئي أو الكامل للمجرى يسبب انخماصاً فصياً بعد الورم. تنتشر مبكراً إلى العقد اللمفاوية الصدرية (النقيرية والرئوية والمنصفية)، وبعيداً إلى الدماغ والكبد والعظام والغدد الكظرية.</p>",
+   "en": "<p>Lung cancer is uncontrolled growth of cells in lung tissue that forms a tumor. It may be <b>primary</b> (from the lung) or <b>secondary</b> (spread from the liver, brain, or kidney). The most important cause: repeated exposure to inhaled irritants: <b>cigarette smoke</b>, occupational exposure, air pollution (benzopyrenes and hydrocarbons).</p><table><thead><tr><th>Type</th><th>Growth</th><th>Spread</th></tr></thead><tbody><tr><td><b>Small cell (Small cell / Oat cell)</b></td><td>Very fast</td><td>Early</td></tr><tr><td><b>Non-small: Adenocarcinoma</b></td><td>Moderate</td><td>Early</td></tr><tr><td><b>Non-small: Squamous cell</b></td><td>Slow</td><td>Late</td></tr><tr><td><b>Non-small: Large cell</b></td><td>Fast</td><td>Early</td></tr></tbody></table>[[slot:dis-646-types|Types of lung cancer and their growth speed|/diseases/img/dis-646-types.svg]]\n<div class=\"cs-stats\"><div><b><20%</b><span>5-year survival (by estimates)</span></div><div><b>#1</b><span>cause of cancer death</span></div><div><b>Late</b><span>most cases are diagnosed</span></div></div><p>Late diagnosis is the reason for the poor outcome; the earlier it is found the better the treatment, and the longer the tumor stays the greater the risk of spread.</p><h4>Additions covering review points</h4><ul><li>Lung cancer is a malignant tumor with uncontrolled cell growth that may spread to other tissues</li><li>Causes: smoking (about 90%), secondhand smoke, asbestos and other carcinogens, air pollution, family history</li><li>Early: persistent productive cough, bloody sputum (hemoptysis), hoarseness, difficulty swallowing</li><li>Complications: paraneoplastic syndromes and secondary tumors: bone pain</li></ul>\n<h4>Additional review (physiology and survival)</h4>[[slot:dis-2875-lung-cancer|Lung cancer: types, diagnosis, and treatment — illustration prepared by the site|/diseases/img/dis-2875-lung-cancer.svg]]<p>Malignant tumors arising from the respiratory epithelium, divided into <strong>small cell</strong> (the less common) and <strong>non-small cell</strong> (adenocarcinoma, squamous, large cell). The most common site: the wall or epithelium of the bronchi. The outlook is poor for most patients: 5-year survival is only about 13%.</p><p>The bronchial epithelium gradually changes from squamous changes or metaplasia to carcinoma in situ. Bronchial tumors secrete more mucus; partial or complete obstruction of the airway causes lobar atelectasis beyond the tumor. They spread early to the thoracic lymph nodes (hilar, pulmonary, and mediastinal), and distantly to the brain, liver, bones, and adrenal glands.</p>"
+  },
+  "causes": {
+   "ar": "<ul><li><b>التدخين</b> (نشط وسلبي) — أكثر من 80% من الحالات.</li><li>الرادون في البيوت، الأسبستوس، الزرنيخ، الكروم، النيكل، المشعات.</li><li>تلوث الهواء والـ Hydrocarbons.</li><li>تاريخ عائلي، تليف رئوي سابق.</li><li>أمراض رئوية مزمنة (COPD).</li></ul>\n<h4>عوامل الخطر الكاملة</h4><ul><li>التدخين: السبب الرئيس (نحو 90%)؛ يضاعف الخطر 16 مرة.</li><li>الدخان السلبي وغاز الرادون.</li><li>ملوثات الهواء المهنية: الأسبستوس، الزرنيخ، الكروم، غبار الفحم، أكاسيد الحديد، النيكل، الغبار المشع، اليورانيوم.</li><li>الاستعداد الوراثي، تليف الرئة، العلاج الإشعاعي.</li></ul>",
+   "en": "<ul><li><b>Smoking</b> (active and passive) — more than 80% of cases.</li><li>Radon in homes, asbestos, arsenic, chromium, nickel, radioactive materials.</li><li>Air pollution and hydrocarbons.</li><li>Family history, previous pulmonary fibrosis.</li><li>Chronic lung diseases (COPD).</li></ul>\n<h4>Complete risk factors</h4><ul><li>Smoking: the main cause (about 90%); it multiplies the risk 16 times.</li><li>Secondhand smoke and radon gas.</li><li>Occupational air pollutants: asbestos, arsenic, chromium, coal dust, iron oxides, nickel, radioactive dust, uranium.</li><li>Genetic predisposition, pulmonary fibrosis, radiation therapy.</li></ul>"
+  },
+  "signs": {
+   "ar": "<ul><li>سعال مستمر (تهيج من الكتلة)؛ البلغم/الإفراز قد يتأخر.</li><li><b>نفث دم (Hemoptysis)</b>.</li><li>إجهاد وفقدان الشهية.</li><li>نقص وزن بسبب احتياج الورم للسعرات.</li><li>ضيق نفس (متأخر).</li><li>ألم صدر متأخر عند الضغط على الأنسجة.</li><li>إفرازات/بلغم، <b>انصباب جنبي</b>.</li><li>علامات الانتشار: ألم عظام، صداع/تشنج (مخ)، بحة صوت، ورم الوجه (SVC syndrome).</li></ul>\n<h4>التقييم</h4><ul><li>قد لا توجد أعراض. التعرض للمسرطنات، تغير السعال المزمن، نفث دم، ضيق نفس، ألم صدر أو بطن، بحة، إجهاد، فقدان شهية.</li><li>ضيق نفس مع الجهد واستعمال العضلات المساعدة وتوسع الأنف وتطبل الأصابع (Digital clubbing).</li><li>وذمة الوجه والعنق والجذع العلوي وتوسع أوردة الصدر والبطن = متلازمة الوريد الأجوف العلوي.</li><li>فقدان وزن، تضخم عقد، تضخم كبد (انتشار كبدي)، نقص أو غياب أصوات التنفس، أزيز، احتكاك جنب.</li></ul>",
+   "en": "<ul><li>Persistent cough (irritation from the mass); sputum/secretions may come later.</li><li><b>Coughing up blood (hemoptysis)</b>.</li><li>Fatigue and loss of appetite.</li><li>Weight loss because the tumor needs calories.</li><li>Shortness of breath (late).</li><li>Late chest pain when tissues are compressed.</li><li>Secretions/sputum, <b>pleural effusion</b>.</li><li>Signs of spread: bone pain, headache/seizure (brain), hoarseness, facial swelling (SVC syndrome).</li></ul>\n<h4>Assessment</h4><ul><li>There may be no symptoms. Exposure to carcinogens, a change in chronic cough, hemoptysis, shortness of breath, chest or abdominal pain, hoarseness, fatigue, loss of appetite.</li><li>Shortness of breath on exertion with use of accessory muscles, nasal flaring, and digital clubbing.</li><li>Swelling of the face, neck, and upper trunk and dilated chest and abdominal veins = superior vena cava syndrome.</li><li>Weight loss, enlarged nodes, enlarged liver (liver spread), decreased or absent breath sounds, wheezing, pleural friction rub.</li></ul>"
+  },
+  "tests": {
+   "ar": "<table><thead><tr><th>الفحص</th><th>الهدف</th></tr></thead><tbody><tr><td>أشعة صدر</td><td>كتلة في الرئة</td></tr><tr><td>CT</td><td>الكتلة وانتشار الغدد</td></tr><tr><td>منظار الشعب (Bronchoscopy)</td><td>غسيل شعبي لخلايا سرطانية + تحديد موقع الورم + خزعة</td></tr><tr><td>تحليل البلغم (Cytology)</td><td>خلايا سرطانية</td></tr><tr><td>خزعة</td><td>إبرة عبر الجدار للأورام الطرفية، أو خزعة نسيج للأورام العميقة: تحدد نوع الخلية</td></tr><tr><td>مسح عظام / CT / PET</td><td>الانتشار (Metastasis)</td></tr><tr><td>علامات جينية (EGFR, ALK, PD-L1)</td><td>تحدد العلاج الموجه والمناعي</td></tr></tbody></table>[[slot:dis-646-ct|CT صدر: كتلة رئوية]]<h4>إضافات تغطي نقاط المراجعة</h4><p>تصوير: أشعة مقطعية CT وMRI وأشعة صدر، وخزعة (Biopsy).</p>\n<table><thead><tr><th>الفحص</th><th>الفائدة</th></tr></thead><tbody><tr><td>تحليل البلغم الخلوي</td><td>دليل خلايا خبيثة</td></tr><tr><td>صورة الدم الكاملة</td><td>فقر دم، ارتفاع/نقص WBC، فرط تجلط</td></tr><tr><td>وظائف الكبد</td><td>تضطرب خصوصاً مع انتشار كبدي</td></tr><tr><td>كالسيوم الدم</td><td>قد يرتفع مع انتشار العظام</td></tr><tr><td>غازات الدم الشرياني</td><td>فرط CO₂ ونقص أكسجة وحماض</td></tr><tr><td>أشعة الصدر</td><td>قد تكشف آفة قبل الأعراض بسنتين ومكانها وانصباب جنبي</td></tr><tr><td>CT/تصوير الشعب بالصبغة</td><td>حجم الورم وموقعه وانتشاره، وانصباب جنبي خبيث ومخ</td></tr><tr><td>مسح العظام</td><td>انتشار العظام</td></tr><tr><td>PET</td><td>أورام أولية وانتقالية</td></tr><tr><td>MRI</td><td>غزو الورم</td></tr><tr><td>مسح الغاليوم</td><td>انتشار الكبد والطحال</td></tr><tr><td>قياس ذروة الزفير</td><td>انسداد مجرى الهواء</td></tr><tr><td>منظار الشعب</td><td>موقع الورم وغسيل شعبي لعينة</td></tr><tr><td>خزعة الرئة بالإبرة (بإرشاد الفلورسكوب)</td><td>تؤكد التشخيص في نحو 80% للأورام الطرفية</td></tr><tr><td>خزعة الأنسجة الانتقالية (العقد فوق الترقوة والمنصف والجنب)</td><td>تحديد مدى المرض والمرحلة</td></tr><tr><td>منظار المنصف</td><td>تقييم العقد الظاهرة بالـ CT</td></tr><tr><td>بزل الصدر (Thoracentesis)</td><td>فحص كيميائي وخلوي لسائل الجنب</td></tr><tr><td>فتح الصدر الاستكشافي</td><td>عينة خزعة عند الحاجة</td></tr></tbody></table>",
+   "en": "<table><thead><tr><th>Test</th><th>Purpose</th></tr></thead><tbody><tr><td>Chest X-ray</td><td>Mass in the lung</td></tr><tr><td>CT</td><td>The mass and spread to the nodes</td></tr><tr><td>Bronchoscopy</td><td>Bronchial washing for cancer cells + locating the tumor + biopsy</td></tr><tr><td>Sputum analysis (Cytology)</td><td>Cancer cells</td></tr><tr><td>Biopsy</td><td>A needle through the wall for peripheral tumors, or a tissue biopsy for deep tumors: determines the cell type</td></tr><tr><td>Bone scan / CT / PET</td><td>Spread (metastasis)</td></tr><tr><td>Genetic markers (EGFR, ALK, PD-L1)</td><td>Determine targeted and immune therapy</td></tr></tbody></table>[[slot:dis-646-ct|Chest CT: lung mass]]<h4>Additions covering review points</h4><p>Imaging: CT, MRI, and chest X-ray, and biopsy.</p>\n<table><thead><tr><th>Test</th><th>Benefit</th></tr></thead><tbody><tr><td>Sputum cytology</td><td>Evidence of malignant cells</td></tr><tr><td>Complete blood count</td><td>Anemia, high/low WBC, hypercoagulability</td></tr><tr><td>Liver function</td><td>Disturbed especially with liver spread</td></tr><tr><td>Blood calcium</td><td>May rise with bone spread</td></tr><tr><td>Arterial blood gases</td><td>High CO₂, hypoxia, and acidosis</td></tr><tr><td>Chest X-ray</td><td>May reveal a lesion two years before symptoms, its location, and pleural effusion</td></tr><tr><td>CT/bronchography with contrast</td><td>Tumor size, location, and spread, and malignant pleural effusion and brain</td></tr><tr><td>Bone scan</td><td>Bone spread</td></tr><tr><td>PET</td><td>Primary and metastatic tumors</td></tr><tr><td>MRI</td><td>Tumor invasion</td></tr><tr><td>Gallium scan</td><td>Liver and spleen spread</td></tr><tr><td>Peak expiratory flow</td><td>Airway obstruction</td></tr><tr><td>Bronchoscopy</td><td>Tumor location and bronchial washing for a sample</td></tr><tr><td>Needle lung biopsy (fluoroscopy-guided)</td><td>Confirms the diagnosis in about 80% of peripheral tumors</td></tr><tr><td>Biopsy of metastatic tissue (supraclavicular nodes, mediastinum, and pleura)</td><td>Determine the extent of disease and the stage</td></tr><tr><td>Mediastinoscopy</td><td>Evaluate nodes seen on CT</td></tr><tr><td>Thoracentesis</td><td>Chemical and cytological examination of pleural fluid</td></tr><tr><td>Exploratory thoracotomy</td><td>Biopsy sample when needed</td></tr></tbody></table>"
+  },
+  "treatment": {
+   "ar": "<p>الهدف علاج الورم، وتخفيف الأعراض، والتغذية، والتحكم في الألم.</p><ul><li><b>جراحة:</b> استئصال إسفيني (Wedge)، قطعي (Segmentectomy)، فص (Lobectomy)، أو الرئة كاملة (Pneumonectomy).</li><li><b>إشعاع</b> لتقليص الورم.</li><li><b>كيماوي</b> (غالباً مجموعة أدوية): Cyclophosphamide, Doxorubicin, Vincristine, Etoposide, Cisplatin — وقد يحدث انتكاس بعد العلاج.</li><li>أكسجين لتعويض الاحتياج لمن يحتاج.</li><li><b>تغذية عالية بروتين وسعرات.</b></li><li><b>مضادات القيء:</b> Ondansetron (Zofran), Prochlorperazine.</li><li><b>مسكنات:</b> Morphine, Fentanyl حسب الألم وبمعايرة فردية.</li></ul><div class=\"cs-box cs-info\"><strong>تحديث</strong><p>العلاج الحديث لغير صغير الخلايا يشمل <b>العلاج الموجه (EGFR/ALK) والعلاج المناعي (Pembrolizumab)</b> بحسب الفحص الجيني؛ الأدوية الكيماوية في المراجع (Cyclophosphamide, Doxorubicin, Vincristine) تُستخدم خصوصاً في صغير الخلايا، والبروتوكول الأساسي اليوم Platinum + Etoposide. القرار للطبيب والأورام.</p></div>\n<h4>مراجعة العلاجات</h4><ul><li>مجموعات كيماوية: لغير صغير الخلايا: كاربوبلاتين (Paraplatin) + سيسبلاتين (Platinol).</li><li>علاج موجه مع الكيماوي: أفاتينيب (Gilotrif)، بيفاسيزوماب (Avastin).</li><li>علاج مناعي: جيفيتينيب (Iressa)، إرلوتينيب (Tarceva)، كريزوتينيب (Xalkori)، مثبطات PD-1/PD-L1: نيفولوماب (Opdivo)، بيمبروليزوماب (Keytruda).</li><li>مضاد قيء: أوندانسيترون (Zofran).</li><li>كورتيكوستيرويدات للنقائل الدماغية وانضغاط النخاع (صغير الخلايا).</li><li>مسكنات ومضادات قلق، أكسجين تكميلي.</li><li>الجراحة: استئصال إسفيني، استئصال قطعي، استئصال فص، استئصال جذري للفص، أو استئصال الرئة كاملة (Pneumonectomy / Radical).</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات والأسماء للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي والنشرة قبل الإعطاء.</p></div>",
+   "en": "<p>The goal is treating the tumor, relieving symptoms, nutrition, and pain control.</p><ul><li><b>Surgery:</b> wedge resection, segmentectomy, lobectomy, or the whole lung (pneumonectomy).</li><li><b>Radiation</b> to shrink the tumor.</li><li><b>Chemotherapy</b> (often a combination of drugs): Cyclophosphamide, Doxorubicin, Vincristine, Etoposide, Cisplatin — and relapse may occur after treatment.</li><li>Oxygen to meet the need for those who require it.</li><li><b>High-protein, high-calorie nutrition.</b></li><li><b>Antiemetics:</b> Ondansetron (Zofran), Prochlorperazine.</li><li><b>Analgesics:</b> Morphine, Fentanyl according to the pain and with individual titration.</li></ul><div class=\"cs-box cs-info\"><strong>Update</strong><p>Modern treatment of non-small cell cancer includes <b>targeted therapy (EGFR/ALK) and immunotherapy (Pembrolizumab)</b> according to genetic testing; the chemotherapy drugs listed above (Cyclophosphamide, Doxorubicin, Vincristine) are used especially in small cell cancer, and the basic protocol today is Platinum + Etoposide. The decision belongs to the physician and oncology.</p></div>\n<h4>Treatment review</h4><ul><li>Chemotherapy combinations: for non-small cell: carboplatin (Paraplatin) + cisplatin (Platinol).</li><li>Targeted therapy with chemotherapy: afatinib (Gilotrif), bevacizumab (Avastin).</li><li>Immunotherapy: gefitinib (Iressa), erlotinib (Tarceva), crizotinib (Xalkori), PD-1/PD-L1 inhibitors: nivolumab (Opdivo), pembrolizumab (Keytruda).</li><li>Antiemetic: ondansetron (Zofran).</li><li>Corticosteroids for brain metastases and spinal cord compression (small cell).</li><li>Analgesics and anti-anxiety drugs, supplemental oxygen.</li><li>Surgery: wedge resection, segmental resection, lobectomy, radical lobectomy, or removal of the whole lung (Pneumonectomy / Radical).</li></ul><div class=\"cs-box cs-info\"><strong>Notice</strong><p>Doses and names are for learning only; verify with the physician/pharmacist and the leaflet before giving.</p></div>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تقييم تنفسي</strong><p>المعدل، الجهد، العضلات المساعدة، لون الجلد، سمع الصدر؛ SpO₂ مستمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>العلامات الحيوية</strong><p>زيادة النبض أو التنفس أو تغير الضغط، وحرارة مرتفعة (احتمال عدوى — خصوصاً مع نقص WBC بعد الكيماوي: حرارة ≥38 = طوارئ).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الألم</strong><p>قيّم بمقياس 0–10، سكّن حسب الجدول واستخدم Morphine/Fentanyl بالمعايرة مع مراقبة التنفس والتركيز، وأعطِ ملين مع الأفيونات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>وضعية</strong><p>Semi-Fowler لتسهيل التنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>السعال والتنفس العميق</strong><p>تقلب وسعال وتنفس عميق ومساعدة المريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>كيماوي</strong><p>تحقق من الهوية والجرعة مزدوجاً، حماية نفسك (قفازات/عباءة)، موضع الوريد، راقب التسرب (Extravasation)، تابع تعداد الدم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>القيء</strong><p>مضاد قيء قبل الكيماوي ومنتظم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>راحة</strong><p>فترات راحة والتخطيط للنشاط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>الجانب النفسي</strong><p>قلق وخوف: استمع وأشرك الأسرة وناقش الرعاية التلطيفية (Hospice) عند الحاجة.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>قلق • عدم تحمل النشاط • اضطراب تبادل الغازات.</p></div>\n<h4>تدخلات إضافية</h4><ul><li>مراقبة العلامات الحيوية والوضع التنفسي، وزن يومي، عناية دقيقة بالجلد.</li><li>دعم نفسي، تقليب المريض كثيراً.</li><li>تقديم وجبات صغيرة متكررة عالية السعرات.</li></ul>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Respiratory assessment</strong><p>Rate, effort, accessory muscles, skin color, chest auscultation; continuous SpO₂.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Vital signs</strong><p>Increased pulse or respirations or a change in blood pressure, and high temperature (possible infection — especially with low WBC after chemotherapy: temperature ≥38 = emergency).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Pain</strong><p>Assess on a 0–10 scale, relieve per the schedule and use Morphine/Fentanyl by titration while monitoring breathing and alertness, and give a stool softener with opioids.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Position</strong><p>Semi-Fowler to ease breathing.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Coughing and deep breathing</strong><p>Turn, cough, deep breathe, and assist the patient.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Chemotherapy</strong><p>Double-check identity and dose, protect yourself (gloves/gown), vein site, watch for extravasation, follow the blood count.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Vomiting</strong><p>Antiemetic before chemotherapy and regularly.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>Rest</strong><p>Rest periods and planning of activity.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>Psychological side</strong><p>Anxiety and fear: listen, involve the family, and discuss palliative care (hospice) when needed.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>Nursing diagnoses</strong><p>Anxiety • Activity intolerance • Impaired gas exchange.</p></div>\n<h4>Additional interventions</h4><ul><li>Monitor vital signs and respiratory status, daily weight, careful skin care.</li><li>Psychological support, turn the patient frequently.</li><li>Offer small frequent high-calorie meals.</li></ul>"
+  },
+  "redflags": {
+   "ar": "<ul><li>نفث دم غزير أو ضيق نفس مفاجئ.</li><li>حرارة ≥38° بعد الكيماوي (قلة العدلات).</li><li>تورم الوجه والرقبة مع ضيق نفس (SVC).</li><li>ألم عظام شديد أو ضعف ساق مفاجئ (انضغاط نخاع).</li><li>تسرب الكيماوي في الجلد.</li></ul>",
+   "en": "<ul><li>Heavy hemoptysis or sudden shortness of breath.</li><li>Temperature ≥38° after chemotherapy (neutropenia).</li><li>Facial and neck swelling with shortness of breath (SVC).</li><li>Severe bone pain or sudden leg weakness (cord compression).</li><li>Chemotherapy leaking into the skin.</li></ul>"
+  },
+  "teaching": {
+   "ar": "<ul><li>أهمية فترات الراحة وتوزيع النشاط.</li><li>التوقف عن التدخين نهائياً ومنع التدخين السلبي في البيت.</li><li>التغذية العالية بروتين وسعرات.</li><li>الأعراض اللي تستدعي الاتصال بالفريق.</li><li>الدعم النفسي والرعاية التلطيفية.</li></ul>",
+   "en": "<ul><li>The importance of rest periods and spreading out activity.</li><li>Stop smoking completely and prevent secondhand smoke at home.</li><li>High-protein, high-calorie nutrition.</li><li>Symptoms that call for contacting the team.</li><li>Psychological support and palliative care.</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "أنواع: صغير الخلايا (سريع ومبكر الانتشار) وغير صغير (ادينو، حرشفي، كبير الخلايا).",
+   "التدخين السبب الأول، والبقاء أقل من 20% لتأخر التشخيص.",
+   "العلاج: جراحة (Lobectomy…) + إشعاع + كيماوي + علاج موجه/مناعي حديثاً.",
+   "مضادات القيء (Ondansetron) والمسكنات (Morphine/Fentanyl) جزء أساسي.",
+   "حرارة بعد الكيماوي = طوارئ.",
+   "Semi-Fowler + تغذية عالية بروتين + دعم نفسي.",
+   "التدخين نحو 90%",
+   "سعال مستمر وبصاق دموي وبحة",
+   "خزعة وCT",
+   "خزعة الرئة بالإبرة تؤكد التشخيص نحو 80% للأورام الطرفية",
+   "التدخين يضاعف الخطر 16 مرة؛ سرطان الرئة ينتشر مبكراً للعقد والدماغ والعظام والكبد"
+  ],
+  "en": [
+   "Types: small cell (fast and early spread) and non-small (adeno, squamous, large cell).",
+   "Smoking is the first cause, and survival is below 20% because of late diagnosis.",
+   "Treatment: surgery (lobectomy…) + radiation + chemotherapy + targeted/immune therapy more recently.",
+   "Antiemetics (Ondansetron) and analgesics (Morphine/Fentanyl) are an essential part.",
+   "Fever after chemotherapy = emergency.",
+   "Semi-Fowler + high-protein nutrition + psychological support.",
+   "Smoking about 90%",
+   "Persistent cough, bloody sputum, and hoarseness",
+   "Biopsy and CT",
+   "Needle lung biopsy confirms the diagnosis in about 80% of peripheral tumors",
+   "Smoking multiplies the risk 16 times; lung cancer spreads early to nodes, brain, bones, and liver"
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "أقل نوع انتشاراً وأبطأ نمواً:",
+    "en": "The least spreading and slowest-growing type:"
+   },
+   "options": [
     {
-      "ar": "Small / Non-small cell"
+     "ar": "Squamous",
+     "en": "Squamous"
     },
     {
-      "ar": "كيماوي وإشعاع"
+     "ar": "Oat cell",
+     "en": "Oat cell"
     },
     {
-      "ar": "رعاية تلطيفية"
-    }],
-  "target": "diseases",
-  "sections": {
-    "overview": {
-      "ar": "<p>سرطان الرئة نمو غير منضبط للخلايا في نسيج الرئة يكوّن ورماً. قد يكون <b>أولياً</b> (من الرئة) أو <b>ثانوياً</b> (انتشار من الكبد أو المخ أو الكلى). السبب الأهم: التعرّض المتكرر للمهيجات المستنشقة: <b>دخان السجائر</b>، التعرض المهني، تلوث الهواء (Benzopyrenes والهيدروكربونات).</p><table><thead><tr><th>النوع</th><th>النمو</th><th>الانتشار</th></tr></thead><tbody><tr><td><b>صغير الخلايا (Small cell / Oat cell)</b></td><td>سريع جداً</td><td>مبكر</td></tr><tr><td><b>غير صغير: Adenocarcinoma</b></td><td>متوسط</td><td>مبكر</td></tr><tr><td><b>غير صغير: Squamous cell</b></td><td>بطيء</td><td>متأخر</td></tr><tr><td><b>غير صغير: Large cell</b></td><td>سريع</td><td>مبكر</td></tr></tbody></table>[[slot:dis-646-types|أنواع سرطان الرئة وسرعة نموها|/diseases/img/dis-646-types.svg]]\n<div class=\"cs-stats\"><div><b><20%</b><span>بقاء 5 سنوات (حسب المراجع)</span></div><div><b>#1</b><span>سبب وفاة بالسرطان</span></div><div><b>متأخر</b><span>معظم الحالات تُشخّص</span></div></div><p>التشخيص المتأخر هو سبب سوء النتيجة؛ كل ما اكتشف أبكر كل ما العلاج أحسن، وكلما طال بقاء الورم زاد خطر الانتشار.</p><h4>إضافات تغطي نقاط المراجعة</h4><ul><li>سرطان الرئة ورم خبيث بنمو خلوي غير منضبط وقد ينتشر لأنسجة أخرى</li><li>أسباب: التدخين (نحو 90%)، التدخين السلبي، الأسبستوس ومسرطنات أخرى، تلوث الهواء، التاريخ العائلي</li><li>مبكرة: سعال منتج مستمر، بصاق دموي (Hemoptysis)، بحة صوت، صعوبة بلع</li><li>مضاعفات: متلازمات ما حول الورم (Paraneoplastic) وأورام ثانوية: ألم عظام</li></ul>\n<h4>مراجعة إضافية (الفيزيولوجيا والبقاء)</h4>[[slot:dis-2875-lung-cancer|سرطان الرئة: الأنواع والتشخيص والعلاج — رسم من إعداد الموقع|/diseases/img/dis-2875-lung-cancer.svg]]<p>أورام خبيثة تنشأ من ظهارة الجهاز التنفسي، تقسم إلى <strong>صغير الخلايا</strong> (الأقل شيوعاً) و<strong>غير صغير الخلايا</strong> (غدي، حرشفي (Squamous)، كبير الخلايا). أشيع موضع: جدار أو ظهارة الشعب الهوائية. الإنذار سيئ لمعظم المرضى: البقاء 5 سنوات نحو 13% فقط حسب المرجع.</p><p>تتحول ظهارة الشعب بالتدريج من تغيرات حرشفية أو حُرْشِفة (Metaplasia) إلى سرطان في موضعه (in situ). الأورام الشعبية تُفرز مخاطاً أكثر؛ والانسداد الجزئي أو الكامل للمجرى يسبب انخماصاً فصياً بعد الورم. تنتشر مبكراً إلى العقد اللمفاوية الصدرية (النقيرية والرئوية والمنصفية)، وبعيداً إلى الدماغ والكبد والعظام والغدد الكظرية.</p>"
-    },
-    "causes": {
-      "ar": "<ul><li><b>التدخين</b> (نشط وسلبي) — أكثر من 80% من الحالات.</li><li>الرادون في البيوت، الأسبستوس، الزرنيخ، الكروم، النيكل، المشعات.</li><li>تلوث الهواء والـ Hydrocarbons.</li><li>تاريخ عائلي، تليف رئوي سابق.</li><li>أمراض رئوية مزمنة (COPD).</li></ul>\n<h4>عوامل الخطر الكاملة</h4><ul><li>التدخين: السبب الرئيس (نحو 90%)؛ يضاعف الخطر 16 مرة.</li><li>الدخان السلبي وغاز الرادون.</li><li>ملوثات الهواء المهنية: الأسبستوس، الزرنيخ، الكروم، غبار الفحم، أكاسيد الحديد، النيكل، الغبار المشع، اليورانيوم.</li><li>الاستعداد الوراثي، تليف الرئة، العلاج الإشعاعي.</li></ul>"
-    },
-    "signs": {
-      "ar": "<ul><li>سعال مستمر (تهيج من الكتلة)؛ البلغم/الإفراز قد يتأخر.</li><li><b>نفث دم (Hemoptysis)</b>.</li><li>إجهاد وفقدان الشهية.</li><li>نقص وزن بسبب احتياج الورم للسعرات.</li><li>ضيق نفس (متأخر).</li><li>ألم صدر متأخر عند الضغط على الأنسجة.</li><li>إفرازات/بلغم، <b>انصباب جنبي</b>.</li><li>علامات الانتشار: ألم عظام، صداع/تشنج (مخ)، بحة صوت، ورم الوجه (SVC syndrome).</li></ul>\n<h4>التقييم</h4><ul><li>قد لا توجد أعراض. التعرض للمسرطنات، تغير السعال المزمن، نفث دم، ضيق نفس، ألم صدر أو بطن، بحة، إجهاد، فقدان شهية.</li><li>ضيق نفس مع الجهد واستعمال العضلات المساعدة وتوسع الأنف وتطبل الأصابع (Digital clubbing).</li><li>وذمة الوجه والعنق والجذع العلوي وتوسع أوردة الصدر والبطن = متلازمة الوريد الأجوف العلوي.</li><li>فقدان وزن، تضخم عقد، تضخم كبد (انتشار كبدي)، نقص أو غياب أصوات التنفس، أزيز، احتكاك جنب.</li></ul>"
-    },
-    "tests": {
-      "ar": "<table><thead><tr><th>الفحص</th><th>الهدف</th></tr></thead><tbody><tr><td>أشعة صدر</td><td>كتلة في الرئة</td></tr><tr><td>CT</td><td>الكتلة وانتشار الغدد</td></tr><tr><td>منظار الشعب (Bronchoscopy)</td><td>غسيل شعبي لخلايا سرطانية + تحديد موقع الورم + خزعة</td></tr><tr><td>تحليل البلغم (Cytology)</td><td>خلايا سرطانية</td></tr><tr><td>خزعة</td><td>إبرة عبر الجدار للأورام الطرفية، أو خزعة نسيج للأورام العميقة: تحدد نوع الخلية</td></tr><tr><td>مسح عظام / CT / PET</td><td>الانتشار (Metastasis)</td></tr><tr><td>علامات جينية (EGFR, ALK, PD-L1)</td><td>تحدد العلاج الموجه والمناعي</td></tr></tbody></table>[[slot:dis-646-ct|CT صدر: كتلة رئوية]]<h4>إضافات تغطي نقاط المراجعة</h4><p>تصوير: أشعة مقطعية CT وMRI وأشعة صدر، وخزعة (Biopsy).</p>\n<table><thead><tr><th>الفحص</th><th>الفائدة</th></tr></thead><tbody><tr><td>تحليل البلغم الخلوي</td><td>دليل خلايا خبيثة</td></tr><tr><td>صورة الدم الكاملة</td><td>فقر دم، ارتفاع/نقص WBC، فرط تجلط</td></tr><tr><td>وظائف الكبد</td><td>تضطرب خصوصاً مع انتشار كبدي</td></tr><tr><td>كالسيوم الدم</td><td>قد يرتفع مع انتشار العظام</td></tr><tr><td>غازات الدم الشرياني</td><td>فرط CO₂ ونقص أكسجة وحماض</td></tr><tr><td>أشعة الصدر</td><td>قد تكشف آفة قبل الأعراض بسنتين ومكانها وانصباب جنبي</td></tr><tr><td>CT/تصوير الشعب بالصبغة</td><td>حجم الورم وموقعه وانتشاره، وانصباب جنبي خبيث ومخ</td></tr><tr><td>مسح العظام</td><td>انتشار العظام</td></tr><tr><td>PET</td><td>أورام أولية وانتقالية</td></tr><tr><td>MRI</td><td>غزو الورم</td></tr><tr><td>مسح الغاليوم</td><td>انتشار الكبد والطحال</td></tr><tr><td>قياس ذروة الزفير</td><td>انسداد مجرى الهواء</td></tr><tr><td>منظار الشعب</td><td>موقع الورم وغسيل شعبي لعينة</td></tr><tr><td>خزعة الرئة بالإبرة (بإرشاد الفلورسكوب)</td><td>تؤكد التشخيص في نحو 80% للأورام الطرفية</td></tr><tr><td>خزعة الأنسجة الانتقالية (العقد فوق الترقوة والمنصف والجنب)</td><td>تحديد مدى المرض والمرحلة</td></tr><tr><td>منظار المنصف</td><td>تقييم العقد الظاهرة بالـ CT</td></tr><tr><td>بزل الصدر (Thoracentesis)</td><td>فحص كيميائي وخلوي لسائل الجنب</td></tr><tr><td>فتح الصدر الاستكشافي</td><td>عينة خزعة عند الحاجة</td></tr></tbody></table>"
-    },
-    "treatment": {
-      "ar": "<p>الهدف علاج الورم، وتخفيف الأعراض، والتغذية، والتحكم في الألم.</p><ul><li><b>جراحة:</b> استئصال إسفيني (Wedge)، قطعي (Segmentectomy)، فص (Lobectomy)، أو الرئة كاملة (Pneumonectomy).</li><li><b>إشعاع</b> لتقليص الورم.</li><li><b>كيماوي</b> (غالباً مجموعة أدوية): Cyclophosphamide, Doxorubicin, Vincristine, Etoposide, Cisplatin — وقد يحدث انتكاس بعد العلاج.</li><li>أكسجين لتعويض الاحتياج لمن يحتاج.</li><li><b>تغذية عالية بروتين وسعرات.</b></li><li><b>مضادات القيء:</b> Ondansetron (Zofran), Prochlorperazine.</li><li><b>مسكنات:</b> Morphine, Fentanyl حسب الألم وبمعايرة فردية.</li></ul><div class=\"cs-box cs-info\"><strong>تحديث</strong><p>العلاج الحديث لغير صغير الخلايا يشمل <b>العلاج الموجه (EGFR/ALK) والعلاج المناعي (Pembrolizumab)</b> بحسب الفحص الجيني؛ الأدوية الكيماوية في المراجع (Cyclophosphamide, Doxorubicin, Vincristine) تُستخدم خصوصاً في صغير الخلايا، والبروتوكول الأساسي اليوم Platinum + Etoposide. القرار للطبيب والأورام.</p></div>\n<h4>مراجعة العلاجات</h4><ul><li>مجموعات كيماوية: لغير صغير الخلايا: كاربوبلاتين (Paraplatin) + سيسبلاتين (Platinol).</li><li>علاج موجه مع الكيماوي: أفاتينيب (Gilotrif)، بيفاسيزوماب (Avastin).</li><li>علاج مناعي: جيفيتينيب (Iressa)، إرلوتينيب (Tarceva)، كريزوتينيب (Xalkori)، مثبطات PD-1/PD-L1: نيفولوماب (Opdivo)، بيمبروليزوماب (Keytruda).</li><li>مضاد قيء: أوندانسيترون (Zofran).</li><li>كورتيكوستيرويدات للنقائل الدماغية وانضغاط النخاع (صغير الخلايا).</li><li>مسكنات ومضادات قلق، أكسجين تكميلي.</li><li>الجراحة: استئصال إسفيني، استئصال قطعي، استئصال فص، استئصال جذري للفص، أو استئصال الرئة كاملة (Pneumonectomy / Radical).</li></ul><div class=\"cs-box cs-info\"><strong>تنبيه</strong><p>الجرعات والأسماء للتعلّم فقط، وتُراجع مع الطبيب/الصيدلي والنشرة قبل الإعطاء.</p></div>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تقييم تنفسي</strong><p>المعدل، الجهد، العضلات المساعدة، لون الجلد، سمع الصدر؛ SpO₂ مستمر.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>العلامات الحيوية</strong><p>زيادة النبض أو التنفس أو تغير الضغط، وحرارة مرتفعة (احتمال عدوى — خصوصاً مع نقص WBC بعد الكيماوي: حرارة ≥38 = طوارئ).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الألم</strong><p>قيّم بمقياس 0–10، سكّن حسب الجدول واستخدم Morphine/Fentanyl بالمعايرة مع مراقبة التنفس والتركيز، وأعطِ ملين مع الأفيونات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>وضعية</strong><p>Semi-Fowler لتسهيل التنفس.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>السعال والتنفس العميق</strong><p>تقلب وسعال وتنفس عميق ومساعدة المريض.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>كيماوي</strong><p>تحقق من الهوية والجرعة مزدوجاً، حماية نفسك (قفازات/عباءة)، موضع الوريد، راقب التسرب (Extravasation)، تابع تعداد الدم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>القيء</strong><p>مضاد قيء قبل الكيماوي ومنتظم.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">8</span><div><strong>راحة</strong><p>فترات راحة والتخطيط للنشاط.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">9</span><div><strong>الجانب النفسي</strong><p>قلق وخوف: استمع وأشرك الأسرة وناقش الرعاية التلطيفية (Hospice) عند الحاجة.</p></div></div></div><div class=\"cs-box cs-danger\"><strong>تشخيصات التمريض</strong><p>قلق • عدم تحمل النشاط • اضطراب تبادل الغازات.</p></div>\n<h4>تدخلات إضافية</h4><ul><li>مراقبة العلامات الحيوية والوضع التنفسي، وزن يومي، عناية دقيقة بالجلد.</li><li>دعم نفسي، تقليب المريض كثيراً.</li><li>تقديم وجبات صغيرة متكررة عالية السعرات.</li></ul>"
-    },
-    "redflags": {
-      "ar": "<ul><li>نفث دم غزير أو ضيق نفس مفاجئ.</li><li>حرارة ≥38° بعد الكيماوي (قلة العدلات).</li><li>تورم الوجه والرقبة مع ضيق نفس (SVC).</li><li>ألم عظام شديد أو ضعف ساق مفاجئ (انضغاط نخاع).</li><li>تسرب الكيماوي في الجلد.</li></ul>"
-    },
-    "teaching": {
-      "ar": "<ul><li>أهمية فترات الراحة وتوزيع النشاط.</li><li>التوقف عن التدخين نهائياً ومنع التدخين السلبي في البيت.</li><li>التغذية العالية بروتين وسعرات.</li><li>الأعراض اللي تستدعي الاتصال بالفريق.</li><li>الدعم النفسي والرعاية التلطيفية.</li></ul>"
+     "ar": "Large cell",
+     "en": "Large cell"
     }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الحرشفي بطيء ومتأخر الانتشار.",
+    "en": "Squamous is slow and spreads late."
+   }
   },
-  "keyPoints": {
-    "ar": [
-      "أنواع: صغير الخلايا (سريع ومبكر الانتشار) وغير صغير (ادينو، حرشفي، كبير الخلايا).",
-      "التدخين السبب الأول، والبقاء أقل من 20% لتأخر التشخيص.",
-      "العلاج: جراحة (Lobectomy…) + إشعاع + كيماوي + علاج موجه/مناعي حديثاً.",
-      "مضادات القيء (Ondansetron) والمسكنات (Morphine/Fentanyl) جزء أساسي.",
-      "حرارة بعد الكيماوي = طوارئ.",
-      "Semi-Fowler + تغذية عالية بروتين + دعم نفسي.",
-      "التدخين نحو 90%",
-      "سعال مستمر وبصاق دموي وبحة",
-      "خزعة وCT",
-      "خزعة الرئة بالإبرة تؤكد التشخيص نحو 80% للأورام الطرفية",
-      "التدخين يضاعف الخطر 16 مرة؛ سرطان الرئة ينتشر مبكراً للعقد والدماغ والعظام والكبد"]
+  {
+   "q": {
+    "ar": "أهم عامل خطر:",
+    "en": "The most important risk factor:"
+   },
+   "options": [
+    {
+     "ar": "التدخين",
+     "en": "Smoking"
+    },
+    {
+     "ar": "البرد",
+     "en": "Cold"
+    },
+    {
+     "ar": "السكر",
+     "en": "Diabetes"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "السبب الأول.",
+    "en": "The first cause."
+   }
   },
-  "quiz": [
+  {
+   "q": {
+    "ar": "وضعية تخفف التنفس:",
+    "en": "A position that eases breathing:"
+   },
+   "options": [
     {
-      "q": {
-        "ar": "أقل نوع انتشاراً وأبطأ نمواً:"
-      },
-      "options": [
-        {
-          "ar": "Squamous"
-        },
-        {
-          "ar": "Oat cell"
-        },
-        {
-          "ar": "Large cell"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الحرشفي بطيء ومتأخر الانتشار."
-      }
+     "ar": "Semi-Fowler",
+     "en": "Semi-Fowler"
     },
     {
-      "q": {
-        "ar": "أهم عامل خطر:"
-      },
-      "options": [
-        {
-          "ar": "التدخين"
-        },
-        {
-          "ar": "البرد"
-        },
-        {
-          "ar": "السكر"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "السبب الأول."
-      }
+     "ar": "مسطح",
+     "en": "Flat"
     },
     {
-      "q": {
-        "ar": "وضعية تخفف التنفس:"
-      },
-      "options": [
-        {
-          "ar": "Semi-Fowler"
-        },
-        {
-          "ar": "مسطح"
-        },
-        {
-          "ar": "Trendelenburg"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "تحسن حركة الحجاب."
-      }
+     "ar": "Trendelenburg",
+     "en": "Trendelenburg"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تحسن حركة الحجاب.",
+    "en": "It improves diaphragm movement."
+   }
+  },
+  {
+   "q": {
+    "ar": "حرارة 38.5° بعد الكيماوي:",
+    "en": "Temperature 38.5° after chemotherapy:"
+   },
+   "options": [
+    {
+     "ar": "طوارئ (احتمال قلة عدلات)",
+     "en": "Emergency (possible neutropenia)"
     },
     {
-      "q": {
-        "ar": "حرارة 38.5° بعد الكيماوي:"
-      },
-      "options": [
-        {
-          "ar": "طوارئ (احتمال قلة عدلات)"
-        },
-        {
-          "ar": "طبيعي"
-        },
-        {
-          "ar": "تهدئة فقط"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "تحتاج مضاد حيوي سريع."
-      }
+     "ar": "طبيعي",
+     "en": "Normal"
     },
     {
-      "q": {
-        "ar": "أكبر عامل خطر لسرطان الرئة:"
-      },
-      "options": [
-        {
-          "ar": "التدخين"
-        },
-        {
-          "ar": "البرد"
-        },
-        {
-          "ar": "الرياضة"
-        },
-        {
-          "ar": "الماء"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "نحو 90% من الحالات."
-      }
+     "ar": "تهدئة فقط",
+     "en": "Reassurance only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "تحتاج مضاد حيوي سريع.",
+    "en": "It needs a quick antibiotic."
+   }
+  },
+  {
+   "q": {
+    "ar": "أكبر عامل خطر لسرطان الرئة:",
+    "en": "The biggest risk factor for lung cancer:"
+   },
+   "options": [
+    {
+     "ar": "التدخين",
+     "en": "Smoking"
     },
     {
-      "q": {
-        "ar": "ألم العظام في سرطان الرئة يدل على:"
-      },
-      "options": [
-        {
-          "ar": "انتشار"
-        },
-        {
-          "ar": "التهاب رئوي"
-        },
-        {
-          "ar": "حساسية"
-        },
-        {
-          "ar": "عدوى بسيطة"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "نقائل عظمية."
-      }
+     "ar": "البرد",
+     "en": "Cold"
     },
     {
-      "q": {
-        "ar": "أي علامة تدل على متلازمة الوريد الأجوف العلوي في مريض سرطان رئة؟"
-      },
-      "options": [
-        {
-          "ar": "تورم الوجه والعنق وتوسع أوردة الصدر"
-        },
-        {
-          "ar": "ارتفاع الضغط الانبساطي"
-        },
-        {
-          "ar": "سلس بول"
-        },
-        {
-          "ar": "طفح جلدي"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الورم يضغط على الوريد الأجوف العلوي فيحبس الدم في الجزء العلوي."
-      }
+     "ar": "الرياضة",
+     "en": "Exercise"
     },
     {
-      "q": {
-        "ar": "أكثر سبب لسرطان الرئة؟"
-      },
-      "options": [
-        {
-          "ar": "التدخين (نحو 90%)"
-        },
-        {
-          "ar": "نقص فيتامين C"
-        },
-        {
-          "ar": "السكر"
-        },
-        {
-          "ar": "الأسبرين"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "التدخين هو العامل الرئيسي."
-      }
-    }],
-  "refs": [
+     "ar": "الماء",
+     "en": "Water"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نحو 90% من الحالات.",
+    "en": "About 90% of cases."
+   }
+  },
+  {
+   "q": {
+    "ar": "ألم العظام في سرطان الرئة يدل على:",
+    "en": "Bone pain in lung cancer indicates:"
+   },
+   "options": [
     {
-      "title": "NCCN Guidelines: Non-Small Cell Lung Cancer / Small Cell Lung Cancer"
+     "ar": "انتشار",
+     "en": "Spread"
     },
     {
-      "title": "WHO Lung cancer fact sheet"
+     "ar": "التهاب رئوي",
+     "en": "Pneumonia"
     },
     {
-      "title": "StatPearls: Lung Cancer"
-    }]
+     "ar": "حساسية",
+     "en": "Allergy"
+    },
+    {
+     "ar": "عدوى بسيطة",
+     "en": "A minor infection"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "نقائل عظمية.",
+    "en": "Bone metastases."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي علامة تدل على متلازمة الوريد الأجوف العلوي في مريض سرطان رئة؟",
+    "en": "Which sign indicates superior vena cava syndrome in a lung cancer patient?"
+   },
+   "options": [
+    {
+     "ar": "تورم الوجه والعنق وتوسع أوردة الصدر",
+     "en": "Swelling of the face and neck and dilated chest veins"
+    },
+    {
+     "ar": "ارتفاع الضغط الانبساطي",
+     "en": "High diastolic pressure"
+    },
+    {
+     "ar": "سلس بول",
+     "en": "Urinary incontinence"
+    },
+    {
+     "ar": "طفح جلدي",
+     "en": "Skin rash"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الورم يضغط على الوريد الأجوف العلوي فيحبس الدم في الجزء العلوي.",
+    "en": "The tumor presses on the superior vena cava and traps blood in the upper part."
+   }
+  },
+  {
+   "q": {
+    "ar": "أكثر سبب لسرطان الرئة؟",
+    "en": "The most common cause of lung cancer?"
+   },
+   "options": [
+    {
+     "ar": "التدخين (نحو 90%)",
+     "en": "Smoking (about 90%)"
+    },
+    {
+     "ar": "نقص فيتامين C",
+     "en": "Vitamin C deficiency"
+    },
+    {
+     "ar": "السكر",
+     "en": "Diabetes"
+    },
+    {
+     "ar": "الأسبرين",
+     "en": "Aspirin"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "التدخين هو العامل الرئيسي.",
+    "en": "Smoking is the main factor."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "NCCN Guidelines: Non-Small Cell Lung Cancer / Small Cell Lung Cancer"
+  },
+  {
+   "title": "WHO Lung cancer fact sheet"
+  },
+  {
+   "title": "StatPearls: Lung Cancer"
+  }
+ ]
 }

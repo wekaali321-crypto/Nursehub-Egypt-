@@ -1,395 +1,525 @@
 {
-  "id": "dis-818",
-  "num": 818,
-  "system": "other",
-  "icon": "🤰",
-  "level": 1,
-  "title": {
-    "ar": "الحمل الطبيعي: الأثلاث والعلامات والمتابعة",
-    "en": "Normal Pregnancy"
+ "id": "dis-818",
+ "num": 818,
+ "system": "other",
+ "icon": "🤰",
+ "level": 1,
+ "title": {
+  "ar": "الحمل الطبيعي: الأثلاث والعلامات والمتابعة",
+  "en": "Normal Pregnancy"
+ },
+ "teaser": {
+  "ar": "عمر الحمل وارتفاع قاع الرحم، علامات الحمل المرجحة والمؤكدة، فحوص hCG، النصائح الغذائية والتحذيرات التي يجب أن تعرفها الحامل.",
+  "en": "Gestational age and fundal height, presumptive and positive signs of pregnancy, hCG tests, nutrition tips, and the warning signs every pregnant woman should know."
+ },
+ "chips": [
+  {
+   "ar": "LMP",
+   "en": "LMP"
   },
-  "teaser": {
-    "ar": "عمر الحمل وارتفاع قاع الرحم، علامات الحمل المرجحة والمؤكدة، فحوص hCG، النصائح الغذائية والتحذيرات التي يجب أن تعرفها الحامل."
+  {
+   "ar": "hCG",
+   "en": "hCG"
   },
-  "chips": [
+  {
+   "ar": "علامات تحذير",
+   "en": "Warning signs"
+  }
+ ],
+ "target": "obgyn",
+ "sections": {
+  "overview": {
+   "ar": "<p>العمر الحملي يُحسب من <b>أول يوم لآخر دورة (LMP)</b>. في كل زيارة يُقاس قاع الرحم (Fundus) لتقدير نمو الجنين. التوقع: طفل سليم بعد تسعة أشهر.</p>[[slot:dis-818-trim|أثلاث الحمل|/diseases/img/dis-818-trim.svg]]\n<div class=\"cs-box cs-info\"><strong>روابط</strong><p><a href=\"/diseases/dis-819\">مراحل الولادة</a> · <a href=\"/diseases/dis-486\">تسمم الحمل</a> · <a href=\"/diseases/dis-487\">قيء الحمل</a> · <a href=\"/diseases/dis-489\">اختبار الحمل</a> · <a href=\"/diseases/dis-481\">أدوية الحمل الآمنة</a> · <a href=\"/diseases/dis-821\">Rh</a></p></div><h4>تفصيل GTPAL</h4><table><thead><tr><th>الحرف</th><th>المعنى</th></tr></thead><tbody><tr><td>G (Gravidity)</td><td>عدد مرات الحمل بما فيها الإجهاض والحمل الحالي. Nulligravida: لم تحمل قط؛ Primigravida: أول حمل؛ Multigravida: حملت أكثر من مرة</td></tr><tr><td>P (Para)</td><td>عدد الولادات بعد أسبوع 20</td></tr><tr><td>T (Term)</td><td>عدد الولادات بعد أسبوع 37</td></tr><tr><td>P (Preterm)</td><td>عدد الولادات بين أسبوع 20 و37</td></tr><tr><td>A (Abortion)</td><td>الإجهاض أو فقد الحمل قبل 20 أسبوعاً</td></tr><tr><td>L (Living)</td><td>عدد الأطفال الأحياء</td></tr></tbody></table><p>مثال: G2 T1 P0 A1 L1 تعني أن الأم ولدت طفلاً واحداً تاماً، لا ولادة مبكرة، وإجهاضاً واحداً، ولها طفل حي واحد.</p>",
+   "en": "<p>Gestational age is calculated from the <b>first day of the last menstrual period (LMP)</b>. At every visit the fundus is measured to estimate fetal growth. Expected outcome: a healthy baby after nine months.</p>[[slot:dis-818-trim|Trimesters of pregnancy|/diseases/img/dis-818-trim.svg]]\n<div class=\"cs-box cs-info\"><strong>Links</strong><p><a href=\"/diseases/dis-819\">Stages of labor</a> · <a href=\"/diseases/dis-486\">Preeclampsia</a> · <a href=\"/diseases/dis-487\">Hyperemesis</a> · <a href=\"/diseases/dis-489\">Pregnancy test</a> · <a href=\"/diseases/dis-481\">Safe drugs in pregnancy</a> · <a href=\"/diseases/dis-821\">Rh</a></p></div><h4>GTPAL in detail</h4><table><thead><tr><th>Letter</th><th>Meaning</th></tr></thead><tbody><tr><td>G (Gravidity)</td><td>Number of pregnancies including miscarriages and the current pregnancy. Nulligravida: never pregnant; Primigravida: first pregnancy; Multigravida: pregnant more than once</td></tr><tr><td>P (Para)</td><td>Number of births after week 20</td></tr><tr><td>T (Term)</td><td>Number of births after week 37</td></tr><tr><td>P (Preterm)</td><td>Number of births between weeks 20 and 37</td></tr><tr><td>A (Abortion)</td><td>Miscarriage or pregnancy loss before 20 weeks</td></tr><tr><td>L (Living)</td><td>Number of living children</td></tr></tbody></table><p>Example: G2 T1 P0 A1 L1 means the mother delivered one term baby, no preterm birth, one miscarriage, and has one living child.</p>"
+  },
+  "causes": {
+   "ar": "<p>حالة طبيعية (ليس مرضاً).</p>",
+   "en": "<p>A normal condition (not a disease).</p>"
+  },
+  "signs": {
+   "ar": "<h4>الأعراض (Symptoms)</h4><ul><li>غثيان وقيء</li><li>تضخم الثدي وألمه</li><li>الإحساس بحركة الجنين (Quickening)</li><li>زيادة الوزن</li><li>انقطاع الطمث</li></ul><h4>العلامات (Signs)</h4><ul><li>تضخم البطن</li><li>تضخم الثدي</li><li>لين عنق الرحم</li><li>زيادة تصبغ وتضخم الهالة</li><li><b>علامة تشادويك (Chadwick)</b>: لون أزرق بالمهبل والعنق من زيادة الأوعية</li></ul><p>لا توجد علامة منها تشخيصية وحدها؛ التأكيد بـ hCG ونبض الجنين والسونار.</p><h4>تصنيف العلامات</h4><p>ذاتية (تُحكى مثل ألم الثدي) ثم محتملة (موضوعية مثل تغير عنق الرحم) ثم مؤكدة (نبض الجنين والسونار). التفصيل في <a href=\"/diseases/dis-1701\">الجهاز الذكري وأساس النمو</a> وتغيرات الأجهزة في <a href=\"/diseases/dis-1702\">التغيرات الجسمية والتغذية</a>.</p><h4>درجات علامات الحمل</h4>[[slot:dis-818-signs|علامات الحمل: مفترضة ومحتملة ومؤكدة — رسم من إعداد الموقع|/diseases/img/dis-818-signs.svg]]<ul><li><strong>مفترضة (ذاتية):</strong> انقطاع الطمث، غثيان وقيء، Quickening، تكرار تبول، ألم ثدي وإرهاق.</li><li><strong>محتملة (موضوعية):</strong> Goodell (لين العنق)، Chadwick (ازرقاق العنق/المهبل من 8-10 أسابيع)، Hegar (لين الجزء السفلي للرحم)، Ballottement، hCG إيجابي (وقد يظهر مع أمراض الأرومة الغاذية (Trophoblastic disease)).</li><li><strong>مؤكدة:</strong> نبض الجنين بالدوبلر عند 10-12 أسبوعاً، السونار، حركة الجنين المحسوسة بالفاحص.</li></ul><div class=\"cs-box cs-tip\"><strong>نقطة امتحان</strong><p>إن قالت المرأة إنها متأكدة من الحمل وتشعر بحركة الطفل، فالرد الأنسب: «استلقي لنسمع نبض الجنين بالدوبلر».</p></div><div class=\"cs-box cs-info\"><strong>اختبار الحمل المنزلي</strong><p>يُجرى أول بول في الصباح.</p></div><h4>ارتفاع قاع الرحم بالأسابيع</h4><ul><li>أسبوع 12: فوق عظم العانة</li><li>أسبوع 16: في منتصف المسافة بين العانة والسرة</li><li>أسبوع 20: عند السرة</li><li>أسبوع 36: عند النتوء الخنجري (Xiphoid)</li><li>أسبوع 38-40: ينزل الجنين في الحوض (Engagement) فينخفض قاع الرحم</li><li>قاعدة: الارتفاع بالسنتيمتر ≈ عمر الحمل بالأسابيع ± 2. مثال: أسبوع 24 فالمتوقع نحو 26 سم (± 2)</li></ul>",
+   "en": "<h4>Symptoms</h4><ul><li>Nausea and vomiting</li><li>Breast enlargement and tenderness</li><li>Feeling fetal movement (quickening)</li><li>Weight gain</li><li>Missed period</li></ul><h4>Signs</h4><ul><li>Abdominal enlargement</li><li>Breast enlargement</li><li>Softening of the cervix</li><li>Increased pigmentation and enlargement of the areola</li><li><b>Chadwick sign</b>: a bluish color of the vagina and cervix from increased blood vessels</li></ul><p>No single one of these is diagnostic alone; confirmation is with hCG, fetal heartbeat, and ultrasound.</p><h4>Classification of signs</h4><p>Subjective (reported, such as breast pain) then probable (objective, such as cervical change) then positive (fetal heartbeat and ultrasound). Details in <a href=\"/diseases/dis-1701\">The male reproductive system and the basis of growth</a> and body-system changes in <a href=\"/diseases/dis-1702\">Physical changes and nutrition</a>.</p><h4>Degrees of pregnancy signs</h4>[[slot:dis-818-signs|Signs of pregnancy: presumptive, probable, and positive — illustration prepared by the site|/diseases/img/dis-818-signs.svg]]<ul><li><strong>Presumptive (subjective):</strong> missed period, nausea and vomiting, quickening, frequent urination, breast tenderness and fatigue.</li><li><strong>Probable (objective):</strong> Goodell (softening of the cervix), Chadwick (bluish cervix/vagina from 8-10 weeks), Hegar (softening of the lower uterine segment), ballottement, positive hCG (which may also appear with trophoblastic disease).</li><li><strong>Positive:</strong> fetal heartbeat by Doppler at 10-12 weeks, ultrasound, fetal movement felt by the examiner.</li></ul><div class=\"cs-box cs-tip\"><strong>Exam point</strong><p>If a woman says she is sure she is pregnant and feels the baby move, the most appropriate reply: \"Lie down so we can listen for the fetal heartbeat with the Doppler.\"</p></div><div class=\"cs-box cs-info\"><strong>Home pregnancy test</strong><p>Done with the first urine of the morning.</p></div><h4>Fundal height by weeks</h4><ul><li>Week 12: above the pubic bone</li><li>Week 16: halfway between the pubis and the umbilicus</li><li>Week 20: at the umbilicus</li><li>Week 36: at the xiphoid process</li><li>Week 38-40: the fetus descends into the pelvis (engagement), so the fundus drops</li><li>Rule: height in centimeters ≈ gestational age in weeks ± 2. Example: week 24, so about 26 cm (± 2) is expected</li></ul>"
+  },
+  "tests": {
+   "ar": "<ul><li>hCG بالدم إيجابي بعد 3-4 أسابيع من LMP</li><li>hCG بالبول إيجابي بعد أسبوع من أول تأخير</li><li>يرتفع hCG أيضاً في الحمل خارج الرحم والأورام الغاذية</li><li>نبض الجنين إيجابي مؤكد</li><li>السونار يؤكد</li></ul><h4>موعد الولادة (EDB)</h4>[[slot:dis-818-naegele|قاعدة Nägele — رسم من إعداد الموقع|/diseases/img/dis-818-naegele.svg]]<p>الطريقة الذهبية لتحديد الموعد هي السونار. قاعدة Nägele: أول يوم من LMP − 3 أشهر + 7 أيام. أمثلة: 15 فبراير ← 22 نوفمبر؛ 1 يناير ← 8 أكتوبر؛ آخر دورة 7 أغسطس ← 14 مايو. سؤال امتحاني: حامل بعمر 12 أسبوعاً (آخر دورة 7 أغسطس واليوم 7 نوفمبر): موعد الولادة 14 مايو، ويمكن سماع نبض الجنين بالدوبلر، وتكرار التبول شائع.</p><h4>ارتفاع قاع الرحم</h4>[[slot:dis-818-fundal|ارتفاع قاع الرحم — رسم من إعداد الموقع|/diseases/img/dis-818-fundal.svg]]<h4>تسجيل الحمل (GTPAL)</h4>[[slot:dis-818-gtpal|GTPAL — رسم من إعداد الموقع|/diseases/img/dis-818-gtpal.svg]]<ul><li>G2 T1 P0 A1 L1 = حملان، ولادة تامة واحدة، لا ولادة مبكرة، إجهاض واحد، طفل حي واحد.</li><li>ثالث حمل ولها طفل حي وإجهاض واحد = G3 L1 A1.</li><li>حمل سابق إجهاض بعمر 3 أشهر والآن حمل جديد = G2 T0 P0 A1 L0.</li></ul><h4>أمثلة إضافية على قاعدة Nägele</h4><ul><li>LMP 1 أبريل ← EDB 8 يناير</li><li>LMP 1 أكتوبر ← EDB 8 يوليو</li><li>LMP 25 يونيو ← EDB 1 أبريل</li><li>تنبيه: لا تُخدع بأسئلة تُعطي تاريخ الجماع أو النزف الخفيف؛ المعتمد أول يوم من آخر دورة طبيعية</li></ul>",
+   "en": "<ul><li>Blood hCG is positive 3-4 weeks after the LMP</li><li>Urine hCG is positive one week after the first missed period</li><li>hCG also rises in ectopic pregnancy and trophoblastic tumors</li><li>A positive fetal heartbeat is confirmatory</li><li>Ultrasound confirms</li></ul><h4>Estimated date of birth (EDB)</h4>[[slot:dis-818-naegele|Nägele rule — illustration prepared by the site|/diseases/img/dis-818-naegele.svg]]<p>The gold standard for determining the due date is ultrasound. Nägele rule: first day of LMP − 3 months + 7 days. Examples: February 15 → November 22; January 1 → October 8; last period August 7 → May 14. Exam question: a pregnant woman at 12 weeks (last period August 7 and today is November 7): due date May 14, the fetal heartbeat can be heard by Doppler, and frequent urination is common.</p><h4>Fundal height</h4>[[slot:dis-818-fundal|Fundal height — illustration prepared by the site|/diseases/img/dis-818-fundal.svg]]<h4>Recording the pregnancy (GTPAL)</h4>[[slot:dis-818-gtpal|GTPAL — illustration prepared by the site|/diseases/img/dis-818-gtpal.svg]]<ul><li>G2 T1 P0 A1 L1 = two pregnancies, one term birth, no preterm birth, one miscarriage, one living child.</li><li>Third pregnancy with one living child and one miscarriage = G3 L1 A1.</li><li>Previous pregnancy a miscarriage at 3 months and now a new pregnancy = G2 T0 P0 A1 L0.</li></ul><h4>More examples of the Nägele rule</h4><ul><li>LMP April 1 → EDB January 8</li><li>LMP October 1 → EDB July 8</li><li>LMP June 25 → EDB April 1</li><li>Note: do not be fooled by questions that give the date of intercourse or light bleeding; the basis is the first day of the last normal period</li></ul>"
+  },
+  "treatment": {
+   "ar": "<ul><li>زيارات منتظمة</li><li>فيتامينات الحمل</li><li>تحاليل روتينية</li><li>سونار</li></ul><p><b>الأثلاث بالتفصيل:</b> الثلث الأول من 0 إلى 14 أسبوع ويبدأ بالانغراس، كثرة تعب وغثيان، وتتكوّن أغلب الأعضاء؛ عند أسبوع 9 يسمى جنيناً (حوالي بوصة). الثلث الثاني 14-28 أسبوع: أقل ألماً بالثدي وتعباً وغثياناً، لكن ألم ظهر وتشققات وحرقة وبواسير؛ عند 16 أسبوع قاع الرحم في منتصف الطريق بين العانة والسرة، وحركة الجنين تُحس بين 16 و18، وعند 27 أسبوع بإصبعين فوق السرة. الثلث الثالث من 28 حتى الولادة: حركة أقل لضيق المكان، صعوبة تنفس لضغط الرحم على الحجاب، وذمة، أرق، كثرة تبول، وانقباضات براكستون هيكس الخفيفة.</p>",
+   "en": "<ul><li>Regular visits</li><li>Prenatal vitamins</li><li>Routine tests</li><li>Ultrasound</li></ul><p><b>The trimesters in detail:</b> The first trimester is from 0 to 14 weeks and starts with implantation, lots of tiredness and nausea, and most organs form; at week 9 it is called a fetus (about an inch). The second trimester 14-28 weeks: less breast pain, tiredness, and nausea, but back pain, stretch marks, heartburn, and hemorrhoids; at 16 weeks the fundus is halfway between the pubis and the umbilicus, fetal movement is felt between 16 and 18, and at 27 weeks it is two fingerbreadths above the umbilicus. The third trimester from 28 weeks until birth: less movement because of limited space, difficulty breathing from the uterus pressing on the diaphragm, edema, insomnia, frequent urination, and mild Braxton Hicks contractions.</p>"
+  },
+  "nursing": {
+   "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تغيرات الجسم</strong><p>ناقش التغيرات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>فيتامينات</strong><p>أهمية فيتامينات الحمل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الغذاء والرياضة</strong><p>عزّز الحمية والرياضة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>المواعيد</strong><p>ذكّر بمواعيد الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الراحة</strong><p>نصائح للحرقة (تجنب الحار، وجبات صغيرة)، الإمساك (ألياف)، البواسير (مليّنات)، الدوالي (جوارب ضاغطة)، ألم الظهر (تجنب الكعب العالي والجلوس الطويل).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>المطاعيم</strong><p>تجنب MMR أثناء الحمل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>التحضير</strong><p>اقترح لاماز أو مجموعات دعم الولادة.</p></div></div></div>",
+   "en": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>Body changes</strong><p>Discuss the changes.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>Vitamins</strong><p>The importance of prenatal vitamins.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>Food and exercise</strong><p>Reinforce diet and exercise.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>Appointments</strong><p>Remind about physician appointments.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>Comfort</strong><p>Tips for heartburn (avoid spicy food, small meals), constipation (fiber), hemorrhoids (stool softeners), varicose veins (compression stockings), back pain (avoid high heels and long sitting).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>Vaccines</strong><p>Avoid MMR during pregnancy.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>Preparation</strong><p>Suggest Lamaze or childbirth support groups.</p></div></div></div>"
+  },
+  "redflags": {
+   "ar": "<div class=\"cs-box cs-danger\"><strong>اتصلي بالطبيب فوراً لو:</strong><ul><li>نزيف أو إفراز مهبلي غير طبيعي</li><li>تقلصات أو ألم لعدة ساعات</li><li>حمى</li><li>نقص حركة الجنين</li><li>قيء مستمر</li><li>صداع شديد أو زغللة (تسمم حمل)</li></ul></div>",
+   "en": "<div class=\"cs-box cs-danger\"><strong>Call the physician immediately if:</strong><ul><li>Bleeding or abnormal vaginal discharge</li><li>Contractions or pain for several hours</li><li>Fever</li><li>Decreased fetal movement</li><li>Persistent vomiting</li><li>Severe headache or blurred vision (preeclampsia)</li></ul></div>"
+  },
+  "teaching": {
+   "ar": "<ul><li>فيتامينات الحمل يومياً</li><li>وجبات صغيرة متكررة وسوائل</li><li>ألياف وسوائل لتجنب الإمساك</li><li>أخبري الطبيب قبل أي دواء</li><li>تجنبي MMR والتدخين والكحول</li></ul>",
+   "en": "<ul><li>Prenatal vitamins daily</li><li>Small frequent meals and fluids</li><li>Fiber and fluids to avoid constipation</li><li>Tell the physician before any medication</li><li>Avoid MMR, smoking, and alcohol</li></ul>"
+  }
+ },
+ "keyPoints": {
+  "ar": [
+   "العمر يحسب من LMP",
+   "الأثلاث: 0-14، 14-28، 28-ولادة",
+   "قاع الرحم: منتصف العانة والسرة عند 16، فوق السرة بإصبعين عند 27",
+   "Chadwick: لون أزرق بالمهبل والعنق",
+   "hCG بالبول بعد أسبوع من التأخير، وبالدم بعد 3-4 أسابيع من LMP",
+   "علامات تحذير: نزيف، حمى، نقص حركة، قيء مستمر",
+   "مفترضة ثم محتملة ثم مؤكدة؛ المؤكدة نبض الجنين والسونار وحركة الجنين",
+   "EDB = LMP − 3 أشهر + 7 أيام",
+   "الارتفاع بالسم ≈ الأسبوع ± 2؛ 12 أ فوق العانة، 20 السرة، 36 الخنجري",
+   "GTPAL"
+  ],
+  "en": [
+   "Age is counted from the LMP",
+   "Trimesters: 0-14, 14-28, 28-birth",
+   "Fundus: halfway between pubis and umbilicus at 16, two fingerbreadths above the umbilicus at 27",
+   "Chadwick: bluish color of the vagina and cervix",
+   "Urine hCG one week after the missed period, and blood hCG 3-4 weeks after the LMP",
+   "Warning signs: bleeding, fever, decreased movement, persistent vomiting",
+   "Presumptive then probable then positive; positive are fetal heartbeat, ultrasound, and fetal movement",
+   "EDB = LMP − 3 months + 7 days",
+   "Height in cm ≈ week ± 2; 12 w above the pubis, 20 umbilicus, 36 xiphoid",
+   "GTPAL"
+  ]
+ },
+ "quiz": [
+  {
+   "q": {
+    "ar": "يحسب العمر الحملي من:",
+    "en": "Gestational age is calculated from:"
+   },
+   "options": [
     {
-      "ar": "LMP"
+     "ar": "أول يوم لآخر دورة",
+     "en": "First day of the last period"
     },
     {
-      "ar": "hCG"
+     "ar": "يوم التبويض",
+     "en": "Day of ovulation"
     },
     {
-      "ar": "علامات تحذير"
-    }],
-  "target": "obgyn",
-  "sections": {
-    "overview": {
-      "ar": "<p>العمر الحملي يُحسب من <b>أول يوم لآخر دورة (LMP)</b>. في كل زيارة يُقاس قاع الرحم (Fundus) لتقدير نمو الجنين. التوقع: طفل سليم بعد تسعة أشهر.</p>[[slot:dis-818-trim|أثلاث الحمل|/diseases/img/dis-818-trim.svg]]\n<div class=\"cs-box cs-info\"><strong>روابط</strong><p><a href=\"/diseases/dis-819\">مراحل الولادة</a> · <a href=\"/diseases/dis-486\">تسمم الحمل</a> · <a href=\"/diseases/dis-487\">قيء الحمل</a> · <a href=\"/diseases/dis-489\">اختبار الحمل</a> · <a href=\"/diseases/dis-481\">أدوية الحمل الآمنة</a> · <a href=\"/diseases/dis-821\">Rh</a></p></div><h4>تفصيل GTPAL</h4><table><thead><tr><th>الحرف</th><th>المعنى</th></tr></thead><tbody><tr><td>G (Gravidity)</td><td>عدد مرات الحمل بما فيها الإجهاض والحمل الحالي. Nulligravida: لم تحمل قط؛ Primigravida: أول حمل؛ Multigravida: حملت أكثر من مرة</td></tr><tr><td>P (Para)</td><td>عدد الولادات بعد أسبوع 20</td></tr><tr><td>T (Term)</td><td>عدد الولادات بعد أسبوع 37</td></tr><tr><td>P (Preterm)</td><td>عدد الولادات بين أسبوع 20 و37</td></tr><tr><td>A (Abortion)</td><td>الإجهاض أو فقد الحمل قبل 20 أسبوعاً</td></tr><tr><td>L (Living)</td><td>عدد الأطفال الأحياء</td></tr></tbody></table><p>مثال: G2 T1 P0 A1 L1 تعني أن الأم ولدت طفلاً واحداً تاماً، لا ولادة مبكرة، وإجهاضاً واحداً، ولها طفل حي واحد.</p>"
-    },
-    "causes": {
-      "ar": "<p>حالة طبيعية (ليس مرضاً).</p>"
-    },
-    "signs": {
-      "ar": "<h4>الأعراض (Symptoms)</h4><ul><li>غثيان وقيء</li><li>تضخم الثدي وألمه</li><li>الإحساس بحركة الجنين (Quickening)</li><li>زيادة الوزن</li><li>انقطاع الطمث</li></ul><h4>العلامات (Signs)</h4><ul><li>تضخم البطن</li><li>تضخم الثدي</li><li>لين عنق الرحم</li><li>زيادة تصبغ وتضخم الهالة</li><li><b>علامة تشادويك (Chadwick)</b>: لون أزرق بالمهبل والعنق من زيادة الأوعية</li></ul><p>لا توجد علامة منها تشخيصية وحدها؛ التأكيد بـ hCG ونبض الجنين والسونار.</p><h4>تصنيف العلامات</h4><p>ذاتية (تُحكى مثل ألم الثدي) ثم محتملة (موضوعية مثل تغير عنق الرحم) ثم مؤكدة (نبض الجنين والسونار). التفصيل في <a href=\"/diseases/dis-1701\">الجهاز الذكري وأساس النمو</a> وتغيرات الأجهزة في <a href=\"/diseases/dis-1702\">التغيرات الجسمية والتغذية</a>.</p><h4>درجات علامات الحمل</h4>[[slot:dis-818-signs|علامات الحمل: مفترضة ومحتملة ومؤكدة — رسم من إعداد الموقع|/diseases/img/dis-818-signs.svg]]<ul><li><strong>مفترضة (ذاتية):</strong> انقطاع الطمث، غثيان وقيء، Quickening، تكرار تبول، ألم ثدي وإرهاق.</li><li><strong>محتملة (موضوعية):</strong> Goodell (لين العنق)، Chadwick (ازرقاق العنق/المهبل من 8-10 أسابيع)، Hegar (لين الجزء السفلي للرحم)، Ballottement، hCG إيجابي (وقد يظهر مع أمراض الأرومة الغاذية (Trophoblastic disease)).</li><li><strong>مؤكدة:</strong> نبض الجنين بالدوبلر عند 10-12 أسبوعاً، السونار، حركة الجنين المحسوسة بالفاحص.</li></ul><div class=\"cs-box cs-tip\"><strong>نقطة امتحان</strong><p>إن قالت المرأة إنها متأكدة من الحمل وتشعر بحركة الطفل، فالرد الأنسب: «استلقي لنسمع نبض الجنين بالدوبلر».</p></div><div class=\"cs-box cs-info\"><strong>اختبار الحمل المنزلي</strong><p>يُجرى أول بول في الصباح.</p></div><h4>ارتفاع قاع الرحم بالأسابيع</h4><ul><li>أسبوع 12: فوق عظم العانة</li><li>أسبوع 16: في منتصف المسافة بين العانة والسرة</li><li>أسبوع 20: عند السرة</li><li>أسبوع 36: عند النتوء الخنجري (Xiphoid)</li><li>أسبوع 38-40: ينزل الجنين في الحوض (Engagement) فينخفض قاع الرحم</li><li>قاعدة: الارتفاع بالسنتيمتر ≈ عمر الحمل بالأسابيع ± 2. مثال: أسبوع 24 فالمتوقع نحو 26 سم (± 2)</li></ul>"
-    },
-    "tests": {
-      "ar": "<ul><li>hCG بالدم إيجابي بعد 3-4 أسابيع من LMP</li><li>hCG بالبول إيجابي بعد أسبوع من أول تأخير</li><li>يرتفع hCG أيضاً في الحمل خارج الرحم والأورام الغاذية</li><li>نبض الجنين إيجابي مؤكد</li><li>السونار يؤكد</li></ul><h4>موعد الولادة (EDB)</h4>[[slot:dis-818-naegele|قاعدة Nägele — رسم من إعداد الموقع|/diseases/img/dis-818-naegele.svg]]<p>الطريقة الذهبية لتحديد الموعد هي السونار. قاعدة Nägele: أول يوم من LMP − 3 أشهر + 7 أيام. أمثلة: 15 فبراير ← 22 نوفمبر؛ 1 يناير ← 8 أكتوبر؛ آخر دورة 7 أغسطس ← 14 مايو. سؤال امتحاني: حامل بعمر 12 أسبوعاً (آخر دورة 7 أغسطس واليوم 7 نوفمبر): موعد الولادة 14 مايو، ويمكن سماع نبض الجنين بالدوبلر، وتكرار التبول شائع.</p><h4>ارتفاع قاع الرحم</h4>[[slot:dis-818-fundal|ارتفاع قاع الرحم — رسم من إعداد الموقع|/diseases/img/dis-818-fundal.svg]]<h4>تسجيل الحمل (GTPAL)</h4>[[slot:dis-818-gtpal|GTPAL — رسم من إعداد الموقع|/diseases/img/dis-818-gtpal.svg]]<ul><li>G2 T1 P0 A1 L1 = حملان، ولادة تامة واحدة، لا ولادة مبكرة، إجهاض واحد، طفل حي واحد.</li><li>ثالث حمل ولها طفل حي وإجهاض واحد = G3 L1 A1.</li><li>حمل سابق إجهاض بعمر 3 أشهر والآن حمل جديد = G2 T0 P0 A1 L0.</li></ul><h4>أمثلة إضافية على قاعدة Nägele</h4><ul><li>LMP 1 أبريل ← EDB 8 يناير</li><li>LMP 1 أكتوبر ← EDB 8 يوليو</li><li>LMP 25 يونيو ← EDB 1 أبريل</li><li>تنبيه: لا تُخدع بأسئلة تُعطي تاريخ الجماع أو النزف الخفيف؛ المعتمد أول يوم من آخر دورة طبيعية</li></ul>"
-    },
-    "treatment": {
-      "ar": "<ul><li>زيارات منتظمة</li><li>فيتامينات الحمل</li><li>تحاليل روتينية</li><li>سونار</li></ul><p><b>الأثلاث بالتفصيل:</b> الثلث الأول من 0 إلى 14 أسبوع ويبدأ بالانغراس، كثرة تعب وغثيان، وتتكوّن أغلب الأعضاء؛ عند أسبوع 9 يسمى جنيناً (حوالي بوصة). الثلث الثاني 14-28 أسبوع: أقل ألماً بالثدي وتعباً وغثياناً، لكن ألم ظهر وتشققات وحرقة وبواسير؛ عند 16 أسبوع قاع الرحم في منتصف الطريق بين العانة والسرة، وحركة الجنين تُحس بين 16 و18، وعند 27 أسبوع بإصبعين فوق السرة. الثلث الثالث من 28 حتى الولادة: حركة أقل لضيق المكان، صعوبة تنفس لضغط الرحم على الحجاب، وذمة، أرق، كثرة تبول، وانقباضات براكستون هيكس الخفيفة.</p>"
-    },
-    "nursing": {
-      "ar": "<div class=\"cs-flow\"><div class=\"cs-step\"><span class=\"cs-step-n\">1</span><div><strong>تغيرات الجسم</strong><p>ناقش التغيرات.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">2</span><div><strong>فيتامينات</strong><p>أهمية فيتامينات الحمل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">3</span><div><strong>الغذاء والرياضة</strong><p>عزّز الحمية والرياضة.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">4</span><div><strong>المواعيد</strong><p>ذكّر بمواعيد الطبيب.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">5</span><div><strong>الراحة</strong><p>نصائح للحرقة (تجنب الحار، وجبات صغيرة)، الإمساك (ألياف)، البواسير (مليّنات)، الدوالي (جوارب ضاغطة)، ألم الظهر (تجنب الكعب العالي والجلوس الطويل).</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">6</span><div><strong>المطاعيم</strong><p>تجنب MMR أثناء الحمل.</p></div></div><div class=\"cs-arrow\">↓</div><div class=\"cs-step\"><span class=\"cs-step-n\">7</span><div><strong>التحضير</strong><p>اقترح لاماز أو مجموعات دعم الولادة.</p></div></div></div>"
-    },
-    "redflags": {
-      "ar": "<div class=\"cs-box cs-danger\"><strong>اتصلي بالطبيب فوراً لو:</strong><ul><li>نزيف أو إفراز مهبلي غير طبيعي</li><li>تقلصات أو ألم لعدة ساعات</li><li>حمى</li><li>نقص حركة الجنين</li><li>قيء مستمر</li><li>صداع شديد أو زغللة (تسمم حمل)</li></ul></div>"
-    },
-    "teaching": {
-      "ar": "<ul><li>فيتامينات الحمل يومياً</li><li>وجبات صغيرة متكررة وسوائل</li><li>ألياف وسوائل لتجنب الإمساك</li><li>أخبري الطبيب قبل أي دواء</li><li>تجنبي MMR والتدخين والكحول</li></ul>"
+     "ar": "موعد الجماع",
+     "en": "Date of intercourse"
     }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «أول يوم لآخر دورة»؛ LMP.",
+    "en": "The correct answer is the first day of the last period; LMP."
+   }
   },
-  "keyPoints": {
-    "ar": [
-      "العمر يحسب من LMP",
-      "الأثلاث: 0-14، 14-28، 28-ولادة",
-      "قاع الرحم: منتصف العانة والسرة عند 16، فوق السرة بإصبعين عند 27",
-      "Chadwick: لون أزرق بالمهبل والعنق",
-      "hCG بالبول بعد أسبوع من التأخير، وبالدم بعد 3-4 أسابيع من LMP",
-      "علامات تحذير: نزيف، حمى، نقص حركة، قيء مستمر",
-      "مفترضة ثم محتملة ثم مؤكدة؛ المؤكدة نبض الجنين والسونار وحركة الجنين",
-      "EDB = LMP − 3 أشهر + 7 أيام",
-      "الارتفاع بالسم ≈ الأسبوع ± 2؛ 12 أ فوق العانة، 20 السرة، 36 الخنجري",
-      "GTPAL"]
+  {
+   "q": {
+    "ar": "علامة تشادويك:",
+    "en": "Chadwick sign:"
+   },
+   "options": [
+    {
+     "ar": "لون أزرق بالمهبل والعنق",
+     "en": "Bluish color of the vagina and cervix"
+    },
+    {
+     "ar": "غثيان",
+     "en": "Nausea"
+    },
+    {
+     "ar": "حركة الجنين",
+     "en": "Fetal movement"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «لون أزرق بالمهبل والعنق»؛ زيادة الأوعية.",
+    "en": "The correct answer is a bluish color of the vagina and cervix; increased blood vessels."
+   }
   },
-  "quiz": [
+  {
+   "q": {
+    "ar": "hCG بالبول يصبح إيجابياً:",
+    "en": "Urine hCG becomes positive:"
+   },
+   "options": [
     {
-      "q": {
-        "ar": "يحسب العمر الحملي من:"
-      },
-      "options": [
-        {
-          "ar": "أول يوم لآخر دورة"
-        },
-        {
-          "ar": "يوم التبويض"
-        },
-        {
-          "ar": "موعد الجماع"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «أول يوم لآخر دورة»؛ LMP."
-      }
+     "ar": "بعد أسبوع من تأخر الدورة",
+     "en": "One week after the missed period"
     },
     {
-      "q": {
-        "ar": "علامة تشادويك:"
-      },
-      "options": [
-        {
-          "ar": "لون أزرق بالمهبل والعنق"
-        },
-        {
-          "ar": "غثيان"
-        },
-        {
-          "ar": "حركة الجنين"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «لون أزرق بالمهبل والعنق»؛ زيادة الأوعية."
-      }
+     "ar": "قبل التأخر بشهر",
+     "en": "A month before the missed period"
     },
     {
-      "q": {
-        "ar": "hCG بالبول يصبح إيجابياً:"
-      },
-      "options": [
-        {
-          "ar": "بعد أسبوع من تأخر الدورة"
-        },
-        {
-          "ar": "قبل التأخر بشهر"
-        },
-        {
-          "ar": "بعد الولادة"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «بعد أسبوع من تأخر الدورة»؛ تقريباً."
-      }
+     "ar": "بعد الولادة",
+     "en": "After birth"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «بعد أسبوع من تأخر الدورة»؛ تقريباً.",
+    "en": "The correct answer is one week after the missed period; approximately."
+   }
+  },
+  {
+   "q": {
+    "ar": "ما يحدث في الثلث الثاني:",
+    "en": "What happens in the second trimester:"
+   },
+   "options": [
+    {
+     "ar": "يقل الغثيان وتظهر حركة الجنين",
+     "en": "Nausea decreases and fetal movement appears"
     },
     {
-      "q": {
-        "ar": "ما يحدث في الثلث الثاني:"
-      },
-      "options": [
-        {
-          "ar": "يقل الغثيان وتظهر حركة الجنين"
-        },
-        {
-          "ar": "تبدأ الولادة"
-        },
-        {
-          "ar": "الإجهاض فقط"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «يقل الغثيان وتظهر حركة الجنين»؛ 16-18 أسبوع."
-      }
+     "ar": "تبدأ الولادة",
+     "en": "Labor begins"
     },
     {
-      "q": {
-        "ar": "تجنب أثناء الحمل:"
-      },
-      "options": [
-        {
-          "ar": "MMR"
-        },
-        {
-          "ar": "فيتامينات"
-        },
-        {
-          "ar": "المشي"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «MMR»؛ مطعوم حي."
-      }
+     "ar": "الإجهاض فقط",
+     "en": "Miscarriage only"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «يقل الغثيان وتظهر حركة الجنين»؛ 16-18 أسبوع.",
+    "en": "The correct answer is that nausea decreases and fetal movement appears; 16-18 weeks."
+   }
+  },
+  {
+   "q": {
+    "ar": "تجنب أثناء الحمل:",
+    "en": "Avoid during pregnancy:"
+   },
+   "options": [
+    {
+     "ar": "MMR",
+     "en": "MMR"
     },
     {
-      "q": {
-        "ar": "العلامة المؤكدة للحمل:"
-      },
-      "options": [
-        {
-          "ar": "غثيان"
-        },
-        {
-          "ar": "تغير عنق الرحم"
-        },
-        {
-          "ar": "نبض الجنين"
-        }],
-      "answer": 2,
-      "why": {
-        "ar": "التأكيد القاطع بنبض الجنين أو السونار."
-      }
+     "ar": "فيتامينات",
+     "en": "Vitamins"
     },
     {
-      "q": {
-        "ar": "وفق قاعدة Nägele، LMP في 1 يناير يعني EDB:"
-      },
-      "options": [
-        {
-          "ar": "8 أكتوبر"
-        },
-        {
-          "ar": "1 أبريل"
-        },
-        {
-          "ar": "22 نوفمبر"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "1 يناير − 3 أشهر = 1 أكتوبر، + 7 أيام = 8 أكتوبر."
-      }
+     "ar": "المشي",
+     "en": "Walking"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «MMR»؛ مطعوم حي.",
+    "en": "The correct answer is MMR; a live vaccine."
+   }
+  },
+  {
+   "q": {
+    "ar": "العلامة المؤكدة للحمل:",
+    "en": "The positive sign of pregnancy:"
+   },
+   "options": [
+    {
+     "ar": "غثيان",
+     "en": "Nausea"
     },
     {
-      "q": {
-        "ar": "ارتفاع قاع الرحم المتوقع تقريباً عند الأسبوع 24:"
-      },
-      "options": [
-        {
-          "ar": "26 سم ± 2"
-        },
-        {
-          "ar": "12 سم"
-        },
-        {
-          "ar": "40 سم"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الارتفاع بالسم ≈ الأسبوع ± 2."
-      }
+     "ar": "تغير عنق الرحم",
+     "en": "Cervical change"
     },
     {
-      "q": {
-        "ar": "G2 T1 P0 A1 L1 تعني:"
-      },
-      "options": [
-        {
-          "ar": "ولادتان حيتان"
-        },
-        {
-          "ar": "ولادة تامة واحدة وإجهاض واحد وطفل حي"
-        },
-        {
-          "ar": "لا حمل سابق"
-        }],
-      "answer": 1,
-      "why": {
-        "ar": "T=تامة، P=مبكرة، A=إجهاض، L=أحياء."
-      }
+     "ar": "نبض الجنين",
+     "en": "Fetal heartbeat"
+    }
+   ],
+   "answer": 2,
+   "why": {
+    "ar": "التأكيد القاطع بنبض الجنين أو السونار.",
+    "en": "Definitive confirmation is by fetal heartbeat or ultrasound."
+   }
+  },
+  {
+   "q": {
+    "ar": "وفق قاعدة Nägele، LMP في 1 يناير يعني EDB:",
+    "en": "By the Nägele rule, an LMP of January 1 means an EDB of:"
+   },
+   "options": [
+    {
+     "ar": "8 أكتوبر",
+     "en": "October 8"
     },
     {
-      "q": {
-        "ar": "علامة Chadwick هي:"
-      },
-      "options": [
-        {
-          "ar": "لين العنق"
-        },
-        {
-          "ar": "ازرقاق العنق والمهبل"
-        },
-        {
-          "ar": "تدلي الجنين"
-        }],
-      "answer": 1,
-      "why": {
-        "ar": "ازرقاق من زيادة التروية، علامة محتملة."
-      }
+     "ar": "1 أبريل",
+     "en": "April 1"
     },
     {
-      "q": {
-        "ar": "أي من هذه علامة مفترضة للحمل؟"
-      },
-      "options": [
-        {
-          "ar": "انقطاع الطمث والغثيان والـQuickening"
-        },
-        {
-          "ar": "نبض الجنين"
-        },
-        {
-          "ar": "السونار"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «انقطاع الطمث والغثيان والـQuickening»؛ ذاتية."
-      }
+     "ar": "22 نوفمبر",
+     "en": "November 22"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "1 يناير − 3 أشهر = 1 أكتوبر، + 7 أيام = 8 أكتوبر.",
+    "en": "January 1 − 3 months = October 1, + 7 days = October 8."
+   }
+  },
+  {
+   "q": {
+    "ar": "ارتفاع قاع الرحم المتوقع تقريباً عند الأسبوع 24:",
+    "en": "The expected fundal height at about week 24:"
+   },
+   "options": [
+    {
+     "ar": "26 سم ± 2",
+     "en": "26 cm ± 2"
     },
     {
-      "q": {
-        "ar": "اختبار الحمل المنزلي يُجرى:"
-      },
-      "options": [
-        {
-          "ar": "أول بول في الصباح"
-        },
-        {
-          "ar": "آخر النهار"
-        },
-        {
-          "ar": "لا فرق"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «أول بول في الصباح»؛ أعلى تركيز hCG."
-      }
+     "ar": "12 سم",
+     "en": "12 cm"
     },
     {
-      "q": {
-        "ar": "Goodell:"
-      },
-      "options": [
-        {
-          "ar": "لين عنق الرحم"
-        },
-        {
-          "ar": "ازرقاق"
-        },
-        {
-          "ar": "هبوط الجنين"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «لين عنق الرحم»؛ علامة محتملة."
-      }
+     "ar": "40 سم",
+     "en": "40 cm"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الارتفاع بالسم ≈ الأسبوع ± 2.",
+    "en": "Height in cm ≈ week ± 2."
+   }
+  },
+  {
+   "q": {
+    "ar": "G2 T1 P0 A1 L1 تعني:",
+    "en": "G2 T1 P0 A1 L1 means:"
+   },
+   "options": [
+    {
+     "ar": "ولادتان حيتان",
+     "en": "Two live births"
     },
     {
-      "q": {
-        "ar": "LMP في 15 فبراير، منتظمة 28 يوماً: EDB؟"
-      },
-      "options": [
-        {
-          "ar": "22 نوفمبر"
-        },
-        {
-          "ar": "15 نوفمبر"
-        },
-        {
-          "ar": "1 ديسمبر"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «22 نوفمبر»؛ −3 أشهر +7 أيام."
-      }
+     "ar": "ولادة تامة واحدة وإجهاض واحد وطفل حي",
+     "en": "One term birth, one miscarriage, and a living child"
     },
     {
-      "q": {
-        "ar": "LMP 7 أغسطس واليوم 7 نوفمبر: أيها صحيح؟ (اختر)"
-      },
-      "options": [
-        {
-          "ar": "EDB 14 مايو وسماع النبض بالدوبلر وتكرار التبول شائع"
-        },
-        {
-          "ar": "لا يمكن سماع النبض"
-        },
-        {
-          "ar": "EDB 7 فبراير"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "الإجابة الصحيحة «EDB 14 مايو وسماع النبض بالدوبلر وتكرار التبول شائع»؛ 12 أسبوعاً تقريباً."
-      }
+     "ar": "لا حمل سابق",
+     "en": "No previous pregnancy"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "T=تامة، P=مبكرة، A=إجهاض، L=أحياء.",
+    "en": "T = term, P = preterm, A = abortion, L = living."
+   }
+  },
+  {
+   "q": {
+    "ar": "علامة Chadwick هي:",
+    "en": "Chadwick sign is:"
+   },
+   "options": [
+    {
+     "ar": "لين العنق",
+     "en": "Softening of the cervix"
     },
     {
-      "q": {
-        "ar": "LMP في 25 يونيو: ما EDB حسب Nägele؟"
-      },
-      "options": [
-        {
-          "ar": "1 أبريل"
-        },
-        {
-          "ar": "25 مارس"
-        },
-        {
-          "ar": "8 يوليو"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "ناقص 3 أشهر يعطي 25 مارس، ثم +7 أيام فيصبح 1 أبريل."
-      }
+     "ar": "ازرقاق العنق والمهبل",
+     "en": "Bluish color of the cervix and vagina"
     },
     {
-      "q": {
-        "ar": "حامل G3 L1 A1 تعني أنها:"
-      },
-      "options": [
-        {
-          "ar": "حملت ثلاث مرات ولها طفل حي واحد وإجهاض واحد"
-        },
-        {
-          "ar": "حملت مرتين"
-        },
-        {
-          "ar": "ولدت ثلاثة أطفال أحياء"
-        }],
-      "answer": 0,
-      "why": {
-        "ar": "G يحسب كل الحمل بما فيه الإجهاض والحمل الحالي."
-      }
-    }],
-  "refs": [
+     "ar": "تدلي الجنين",
+     "en": "Descent of the fetus"
+    }
+   ],
+   "answer": 1,
+   "why": {
+    "ar": "ازرقاق من زيادة التروية، علامة محتملة.",
+    "en": "A bluish color from increased blood flow, a probable sign."
+   }
+  },
+  {
+   "q": {
+    "ar": "أي من هذه علامة مفترضة للحمل؟",
+    "en": "Which of these is a presumptive sign of pregnancy?"
+   },
+   "options": [
     {
-      "title": "WHO antenatal care recommendations 2016"
+     "ar": "انقطاع الطمث والغثيان والـQuickening",
+     "en": "Missed period, nausea, and quickening"
     },
     {
-      "title": "ACOG prenatal care"
-    }]
+     "ar": "نبض الجنين",
+     "en": "Fetal heartbeat"
+    },
+    {
+     "ar": "السونار",
+     "en": "Ultrasound"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «انقطاع الطمث والغثيان والـQuickening»؛ ذاتية.",
+    "en": "The correct answer is missed period, nausea, and quickening; subjective."
+   }
+  },
+  {
+   "q": {
+    "ar": "اختبار الحمل المنزلي يُجرى:",
+    "en": "A home pregnancy test is done:"
+   },
+   "options": [
+    {
+     "ar": "أول بول في الصباح",
+     "en": "With the first urine of the morning"
+    },
+    {
+     "ar": "آخر النهار",
+     "en": "At the end of the day"
+    },
+    {
+     "ar": "لا فرق",
+     "en": "No difference"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «أول بول في الصباح»؛ أعلى تركيز hCG.",
+    "en": "The correct answer is the first urine of the morning; the highest hCG concentration."
+   }
+  },
+  {
+   "q": {
+    "ar": "Goodell:",
+    "en": "Goodell:"
+   },
+   "options": [
+    {
+     "ar": "لين عنق الرحم",
+     "en": "Softening of the cervix"
+    },
+    {
+     "ar": "ازرقاق",
+     "en": "Bluish color"
+    },
+    {
+     "ar": "هبوط الجنين",
+     "en": "Descent of the fetus"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «لين عنق الرحم»؛ علامة محتملة.",
+    "en": "The correct answer is softening of the cervix; a probable sign."
+   }
+  },
+  {
+   "q": {
+    "ar": "LMP في 15 فبراير، منتظمة 28 يوماً: EDB؟",
+    "en": "LMP on February 15, regular 28 days: EDB?"
+   },
+   "options": [
+    {
+     "ar": "22 نوفمبر",
+     "en": "November 22"
+    },
+    {
+     "ar": "15 نوفمبر",
+     "en": "November 15"
+    },
+    {
+     "ar": "1 ديسمبر",
+     "en": "December 1"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «22 نوفمبر»؛ −3 أشهر +7 أيام.",
+    "en": "The correct answer is November 22; −3 months +7 days."
+   }
+  },
+  {
+   "q": {
+    "ar": "LMP 7 أغسطس واليوم 7 نوفمبر: أيها صحيح؟ (اختر)",
+    "en": "LMP August 7 and today is November 7: which is correct? (choose)"
+   },
+   "options": [
+    {
+     "ar": "EDB 14 مايو وسماع النبض بالدوبلر وتكرار التبول شائع",
+     "en": "EDB May 14, the heartbeat can be heard by Doppler, and frequent urination is common"
+    },
+    {
+     "ar": "لا يمكن سماع النبض",
+     "en": "The heartbeat cannot be heard"
+    },
+    {
+     "ar": "EDB 7 فبراير",
+     "en": "EDB February 7"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "الإجابة الصحيحة «EDB 14 مايو وسماع النبض بالدوبلر وتكرار التبول شائع»؛ 12 أسبوعاً تقريباً.",
+    "en": "The correct answer is EDB May 14, the heartbeat can be heard by Doppler, and frequent urination is common; about 12 weeks."
+   }
+  },
+  {
+   "q": {
+    "ar": "LMP في 25 يونيو: ما EDB حسب Nägele؟",
+    "en": "LMP on June 25: what is the EDB by Nägele?"
+   },
+   "options": [
+    {
+     "ar": "1 أبريل",
+     "en": "April 1"
+    },
+    {
+     "ar": "25 مارس",
+     "en": "March 25"
+    },
+    {
+     "ar": "8 يوليو",
+     "en": "July 8"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "ناقص 3 أشهر يعطي 25 مارس، ثم +7 أيام فيصبح 1 أبريل.",
+    "en": "Minus 3 months gives March 25, then +7 days makes it April 1."
+   }
+  },
+  {
+   "q": {
+    "ar": "حامل G3 L1 A1 تعني أنها:",
+    "en": "A pregnant woman G3 L1 A1 means she:"
+   },
+   "options": [
+    {
+     "ar": "حملت ثلاث مرات ولها طفل حي واحد وإجهاض واحد",
+     "en": "Has been pregnant three times and has one living child and one miscarriage"
+    },
+    {
+     "ar": "حملت مرتين",
+     "en": "Has been pregnant twice"
+    },
+    {
+     "ar": "ولدت ثلاثة أطفال أحياء",
+     "en": "Delivered three living children"
+    }
+   ],
+   "answer": 0,
+   "why": {
+    "ar": "G يحسب كل الحمل بما فيه الإجهاض والحمل الحالي.",
+    "en": "G counts all pregnancies including miscarriages and the current pregnancy."
+   }
+  }
+ ],
+ "refs": [
+  {
+   "title": "WHO antenatal care recommendations 2016"
+  },
+  {
+   "title": "ACOG prenatal care"
+  }
+ ]
 }
