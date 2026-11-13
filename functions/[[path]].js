@@ -297,6 +297,14 @@ async function shell(request, env, status) {
 
 export async function onRequest({ request, env, next }) {
   const url = new URL(request.url);
+  // A real static file (png, jpg, json, xml, pdf...) that public/_routes.json does not exclude must still be served as is.
+  // Without this, a newly added file such as /og-image.png was treated as an unknown page and answered with a 404.
+  if ((request.method === 'GET' || request.method === 'HEAD') && /\.[A-Za-z0-9]{2,5}$/.test(url.pathname)) {
+    const a = await env.ASSETS.fetch(request);
+    if ((a.status >= 200 && a.status < 400) && !(a.headers.get('content-type') || '').includes('text/html')) return a;
+    if (a.status >= 300 && a.status < 400) return a;
+    return shell(request, env, 404); // unknown file (the SPA fallback would otherwise answer 200 with index.html)
+  }
   if (request.method === 'GET' || request.method === 'HEAD') {
     let verdict;
     try {
