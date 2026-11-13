@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import TopicBody from "../components/TopicBody";
 import { useStore } from "../lib/store";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import type { OTCCondition } from "../lib/types";
 import { useI18n, bilingual } from "../lib/i18n";
@@ -98,7 +98,6 @@ export function OTCGuideHome() {
         </div>
       </div>
 
-      <div className="mb-6"><AdSlot label="إعلان حالات شائعة" /></div>
 
       <input
         value={search}
@@ -262,7 +261,6 @@ export default function OTCConditionPage() {
         </span>
       </div>
 
-      <div className="mb-6"><AdSlot label="إعلان صفحة الحالة" /></div>
 
       <div className="space-y-4">
         <Section icon="📝" title={LABELS.summary[lang]}>{bilingual(condition.summary, condition.summaryEn, lang).text}</Section>

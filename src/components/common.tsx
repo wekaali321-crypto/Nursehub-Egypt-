@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { type Article, type Category } from "../lib/types";
@@ -17,17 +18,23 @@ export const CAT_ICON: Record<Category, IconName> = {
   careplans: "careplan", books: "book",
 };
 
-export function AdSlot({ label = "مساحة إعلانية", height = "h-28" }: { label?: string; height?: string }) {
+/**
+ * A Google AdSense ad unit. It renders NOTHING unless a real unit is configured:
+ * a valid publisher id (Site Settings → AdSense) AND a numeric ad-slot id passed as `slot`.
+ * (No placeholder boxes: visitors and Google reviewers must never see an "ad space" without an ad.)
+ * The AdSense loader script itself lives once in index.html.
+ */
+declare global { interface Window { adsbygoogle?: unknown[] } }
+export function AdSlot({ slot }: { slot?: string; label?: string; height?: string }) {
   const { settings } = useStore();
-  return (
-    <div className={`flex ${height} w-full items-center justify-center rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 text-center text-sm font-semibold text-slate-400 dark:border-slate-700 dark:bg-slate-800/50`}>
-      <div>
-        <div className="text-2xl">📢</div>
-        {label}
-        {settings.adsenseEnabled && <div className="text-[10px] text-emerald-500">AdSense: {settings.adsenseClient}</div>}
-      </div>
-    </div>
-  );
+  const client = (settings.adsenseClient || "").trim();
+  const valid = Boolean(settings.adsenseEnabled) && /^ca-pub-\d{16}$/.test(client) && !/^ca-pub-0+$/.test(client) && /^\d{6,}$/.test(slot || "");
+  useEffect(() => {
+    if (!valid) return;
+    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch { /* ad blockers / duplicate push */ }
+  }, [valid]);
+  if (!valid) return null;
+  return <ins className="adsbygoogle block" style={{ display: "block" }} data-ad-client={client} data-ad-slot={slot} data-ad-format="auto" data-full-width-responsive="true" />;
 }
 
 export function Breadcrumbs({ items }: { items: { label: string; path?: string }[] }) {

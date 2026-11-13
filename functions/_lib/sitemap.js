@@ -1,11 +1,11 @@
 import { internalRows } from './sb.js';
 // Dynamic sitemap shared by /sitemap.xml and /api/sitemap (Cloudflare Pages Functions).
 const STATIC = [
-  ['/', 1.0], ['/category/articles', 0.8], ['/category/summaries', 0.8], ['/category/drugs', 0.8],
-  ['/category/skills', 0.8], ['/category/careplans', 0.8], ['/category/books', 0.8],
+  ['/', 1.0],
+  // /category/<section> pages are added below, only for sections that contain published articles (never empty ones)
   ['/drugs', 0.8], ['/drugs/all', 0.8], ['/drugs/peds-medications', 0.7], ['/drugs/prescriptions', 0.7],
   ['/courses', 0.8], ['/diseases', 0.8], ['/tools', 0.7], ['/store', 0.7], ['/quizzes', 0.7], ['/travel-questions', 0.7],
-  ['/about', 0.5], ['/contact', 0.5], ['/faq', 0.5],
+  ['/about', 0.5], ['/contact', 0.5], ['/faq', 0.5], ['/privacy', 0.3], ['/terms', 0.3],
 ];
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -26,13 +26,14 @@ export async function sitemapResponse({ request, env }) {
   const urls = STATIC.map(([p, pr]) => [p, pr]);
   try {
     const [articles, drugs, courses, chapters, peds, rx] = await Promise.all([
-      rows(env, 'articles', 'slug,updated_date,publish_date', '&status=eq.published'),
+      rows(env, 'articles', 'slug,category,updated_date,publish_date', '&status=eq.published'),
       rows(env, 'drugs', 'slug'),
       rows(env, 'courses', 'id'),
       rows(env, 'course_chapters', 'id,course_id'),
       rows(env, 'peds_medications', 'id'),
       rows(env, 'rx_prescriptions', 'id'),
     ]);
+    [...new Set(articles.map((a) => a.category).filter(Boolean))].sort().forEach((c) => urls.push([`/category/${enc(c)}`, 0.8]));
     articles.forEach((a) => a.slug && urls.push([`/article/${enc(a.slug)}`, 0.7, a.updated_date || a.publish_date]));
     drugs.forEach((d) => d.slug && urls.push([`/drug/${enc(d.slug)}`, 0.6]));
     courses.forEach((c) => urls.push([`/courses/${enc(c.id)}`, 0.7]));

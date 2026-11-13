@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
@@ -94,7 +94,6 @@ export default function QuizzesPage() {
         ))}
       </div>
 
-      <div className="mb-6"><AdSlot label="إعلان قسم الاختبارات" /></div>
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((q) => {

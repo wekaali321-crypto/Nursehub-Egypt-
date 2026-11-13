@@ -1,8 +1,9 @@
+import { useSectionAvailability } from "../lib/sections";
 import { type ReactElement } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import type { HomeCategory } from "../lib/types";
-import { AdSlot, ArticleCard, SectionTitle } from "../components/common";
+import { ArticleCard, SectionTitle } from "../components/common";
 import Newsletter from "../components/Newsletter";
 import SmartSearch from "../components/SmartSearch";
 import StudyStrip from "../components/StudyStrip";
@@ -62,7 +63,8 @@ export default function Home() {
   // "أكثر المقالات قراءة": مقال واحد بس — الأعلى مشاهدات.
   const popular = [...published].sort((a, b) => b.views - a.views).slice(0, 1);
   const pdfArticles = published.filter((a) => a.category === "books" || a.attachments?.some((x) => x.type === "pdf")).slice(0, 4);
-  const visibleCards = [...homeCategories].filter((c) => c.visible).sort((a, b) => a.order - b.order);
+  const { pathAvailable, hasContent } = useSectionAvailability();
+  const visibleCards = [...homeCategories].filter((c) => c.visible && pathAvailable(c.link)).sort((a, b) => a.order - b.order);
   // "المتجر" على الرئيسية: أحدث منتج اتضاف بس. المنتجات الجديدة بتتحط أول المصفوفة
   // وقت الإضافة (زي باقي كيانات لوحة التحكم)، فأول عنصر = الأحدث.
   const latestProduct = products.slice(0, 1);
@@ -144,7 +146,6 @@ export default function Home() {
     ) : <div key="categories" />,
     latest: (
       <section key="latest" className="mx-auto max-w-7xl px-4 py-6">
-        <AdSlot label="إعلان (728x90) - أعلى المقالات" />
         <div className="py-8">
           <SectionTitle {...meta("latest", "home.latest", "home.latestSub")} link={{ label: t("common.viewAll"), to: "/category/articles" }} />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{latest.map((a) => <ArticleCard key={a.id} a={a} />)}</div>
@@ -161,7 +162,7 @@ export default function Home() {
     ) : <div key="popular" />,
     pdfs: pdfArticles.length > 0 ? (
       <section key="pdfs" className="mx-auto max-w-7xl px-4 py-10 md:py-12">
-        <SectionTitle {...meta("pdfs", "home.pdfs", "home.pdfsSub")} link={{ label: t("nav.books"), to: "/category/books" }} />
+        <SectionTitle {...meta("pdfs", "home.pdfs", "home.pdfsSub")} link={hasContent("books") ? { label: t("nav.books"), to: "/category/books" } : undefined} />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{pdfArticles.map((a) => <ArticleCard key={a.id} a={a} />)}</div>
       </section>
     ) : <div key="pdfs" />,

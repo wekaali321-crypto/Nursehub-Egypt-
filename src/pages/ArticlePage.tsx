@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useStore, readingTime } from "../lib/store";
 import { CATEGORY_LABELS, type Category } from "../lib/types";
-import { ArticleCard, Breadcrumbs, AdSlot, CAT_ICON, CAT_KEY } from "../components/common";
+import { ArticleCard, Breadcrumbs, CAT_ICON, CAT_KEY } from "../components/common";
 import { useSEO, breadcrumbSchema, extractFaqSchema, extractHowToSchema } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import { useToast } from "../components/Toast";
@@ -185,7 +185,8 @@ export default function ArticlePage() {
   const related = articles.filter((a) => a.category === article.category && a.id !== article.id && a.status === "published").slice(0, 3);
   const articleComments = comments.filter((c) => c.articleId === article.id && c.status === "approved");
   const ytEmbed = article.videoUrl?.replace("watch?v=", "embed/").replace("youtu.be/", "youtube.com/embed/");
-  const cats = Object.keys(CATEGORY_LABELS) as Category[];
+  // only sections that really contain published articles (an empty section is a hollow page)
+  const cats = (Object.keys(CATEGORY_LABELS) as Category[]).filter((c) => c === article.category || c === "drugs" || articles.some((a) => a.category === c && a.status === "published"));
 
   // Bookmark state: real DB when logged in, local favorites when a guest
   const bookmarked = loggedIn ? dbBookmarked : isFav(article.id);
@@ -300,7 +301,6 @@ export default function ArticlePage() {
             <OptimizedImage src={article.cover} alt={dispTitle.text} width={1000} ratio="16/9" />
           </div>
 
-          <div className="my-6 print:hidden"><AdSlot label={t("article.adInline")} /></div>
 
           {ytEmbed && (
             <div className="my-6 aspect-video w-full overflow-hidden rounded-2xl print:hidden">
@@ -430,7 +430,6 @@ export default function ArticlePage() {
             </div>
           </div>
 
-          <AdSlot label={t("article.adSidebar")} height="h-64" />
           <div className="rounded-2xl bg-gradient-to-br from-emerald-500 to-sky-500 p-5 text-white">
             <div className="text-2xl" aria-hidden="true">🎓</div>
             <h3 className="mt-2 font-bold">{settings.siteName} Premium</h3>

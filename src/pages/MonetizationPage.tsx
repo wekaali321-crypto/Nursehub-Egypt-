@@ -1,4 +1,4 @@
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 
 export default function MonetizationPage() {
   const channels = [
@@ -29,15 +29,6 @@ export default function MonetizationPage() {
             <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{c.d}</p>
           </div>
         ))}
-      </div>
-
-      <h2 className="mb-4 text-2xl font-bold dark:text-white">🖼️ نماذج المساحات الإعلانية</h2>
-      <div className="space-y-4">
-        <AdSlot label="إعلان أفقي (728×90)" />
-        <div className="grid gap-4 md:grid-cols-2">
-          <AdSlot label="إعلان مربع (300×250)" height="h-48" />
-          <AdSlot label="إعلان مربع (300×250)" height="h-48" />
-        </div>
       </div>
     </div>
   );

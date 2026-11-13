@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useStore } from "../lib/store";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import { useSEO, breadcrumbSchema } from "../lib/seo";
 import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
 import { useI18n, bilingual } from "../lib/i18n";
@@ -125,7 +125,6 @@ export default function DrugPage() {
         </div>
       )}
 
-      <div className="my-6 print:hidden"><AdSlot label={t("drug.adLabel")} /></div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {blocks.map((b) => (

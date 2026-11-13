@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import TopicBody from "../components/TopicBody";
 import { useStore } from "../lib/store";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
@@ -43,7 +43,6 @@ export function PharmacyFactsHome() {
         </div>
       </div>
 
-      <div className="mb-6"><AdSlot label={t("facts.adLabel")} /></div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {[1, 2, 3, 4, 5].map((ch) => {
@@ -115,7 +114,6 @@ export default function PharmacyFactsChapterPage() {
         <p className="mt-1 text-white/85">{chapterRange} — {chapterFacts.length} {t("facts.available")}</p>
       </div>
 
-      <div className="mb-6"><AdSlot label={t("facts.chapterAdLabel")} /></div>
 
       <input
         value={q}

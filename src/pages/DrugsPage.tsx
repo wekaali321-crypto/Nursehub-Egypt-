@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useStore } from "../lib/store";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
@@ -126,7 +126,6 @@ export default function DrugsListPage() {
         ⚠️ {highAlertOnly ? t("drugs.highAlertOnlyActive") : t("drugs.highAlertOnly")}
       </button>
 
-      <div className="mb-6"><AdSlot label={t("drugs.adLabel")} /></div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((d) => {
