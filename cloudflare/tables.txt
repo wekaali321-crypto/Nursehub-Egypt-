@@ -70,3 +70,4 @@ travel_categories|id|id:text!,order_num:int,name_ar:text!,name_en:text,icon:text
 travel_questions|id|id:text!,category_id:text!,order_num:int,question_en:text!,question_ar:text,choices:json,choices_ar:json,correct_letter:text!,rationale_ar:text!,rationale_en:text!,created_at:ts,image_url:text
 travel_review_sections|id|id:text!,category_id:text,order_num:int,title_ar:text,title_en:text,icon:text,content_ar:text,content_en:text,created_at:ts
 nh_settings|key|key:text!,value:json
+user_notifications|id|id:text,title:text!,body:text,title_en:text,body_en:text,link:text,kind:text,created_at:ts

@@ -399,7 +399,7 @@ export default function Editor() {
     // Notify subscribed visitors — only on the transition into "published", not on every later edit.
     const isNewlyPublished = finalStatus === "published" && editing?.status !== "published";
     if (isNewlyPublished) {
-      void triggerPush({ title: "📰 مقال جديد", body: article.title, link: `/article/${article.slug}`, tag: article.id, role: "visitor" }); // best-effort — never blocks saving
+      void triggerPush({ title: "📰 مقال جديد", body: article.title, link: `/article/${article.slug}`, tag: article.id, kind: "article", role: "visitor" }); // best-effort — never blocks saving
     }
     clearDraft(draftId); // committed to store — remove local auto-draft
     notify("تم الحفظ بنجاح!", "success");

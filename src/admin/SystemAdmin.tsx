@@ -164,17 +164,29 @@ function BroadcastToVisitors() {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [link, setLink] = useState("/");
+  const [titleEn, setTitleEn] = useState("");
+  const [bodyEn, setBodyEn] = useState("");
+  const [kind, setKind] = useState("broadcast");
   const [sending, setSending] = useState(false);
+
+  const useWelcome = () => {
+    setTitle("🩺 أهلاً بك في NurseHub Egypt");
+    setBody("زور منصتك الأولى للتمريض — مجانًا بالكامل: أدوية، أمراض، مصطلحات، اختبارات وأكتر.");
+    setTitleEn("🩺 Welcome to NurseHub Egypt");
+    setBodyEn("Visit your first nursing platform — completely free: drugs, diseases, terminology, quizzes and more.");
+    setLink("/");
+    setKind("welcome");
+  };
 
   const send = async () => {
     if (!title.trim() || !body.trim()) return notify("اكتب العنوان والنص", "error");
     if (!supabase) return notify("قاعدة البيانات غير متصلة", "error");
     setSending(true);
-    const { data, error } = await sendPushToAll({ title, body, link: link || "/", tag: "broadcast-" + Date.now(), role: "visitor" });
+    const { data, error } = await sendPushToAll({ title, body, title_en: titleEn || undefined, body_en: bodyEn || undefined, kind, link: link || "/", tag: "broadcast-" + Date.now(), role: "visitor" });
     setSending(false);
     if (error) return notify("فشل الإرسال: " + error.message, "error");
     notify(`تم الإرسال إلى ${data?.sent ?? 0} من أصل ${data?.total ?? 0} جهاز مشترك`, "success");
-    setTitle(""); setBody("");
+    setTitle(""); setBody(""); setTitleEn(""); setBodyEn(""); setKind("broadcast");
   };
 
   const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
@@ -182,8 +194,10 @@ function BroadcastToVisitors() {
     <div className={`${card} space-y-3 p-4`}>
       <h3 className="font-bold dark:text-white">📣 ابعت إشعار/عرض لكل الزوار المشتركين</h3>
       <p className="text-xs text-slate-500 dark:text-slate-400">بيوصل كإشعار حقيقي على شاشة الموبايل حتى لو الزائر مش فاتح الموقع.</p>
+      <button type="button" onClick={useWelcome} className="rounded-full border border-emerald-300 bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-100 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300">🩺 قالب: ترحيب «منصتك الأولى للتمريض مجانًا»</button>
       <input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="العنوان (مثال: 🎉 عرض خاص اليوم فقط)" className={inp} />
       <textarea value={body} onChange={(e) => setBody(e.target.value)} placeholder="نص الإشعار" rows={2} className={inp} />
+      {(titleEn || bodyEn) && <p className="text-xs text-slate-500 dark:text-slate-400" dir="ltr">EN: {titleEn} — {bodyEn}</p>}
       <input value={link} onChange={(e) => setLink(e.target.value)} placeholder="رابط يفتح عند الضغط (مثال: /store)" className={inp} />
       <button onClick={send} disabled={sending} className="w-full rounded-lg bg-gradient-to-l from-sky-500 to-emerald-500 py-2 font-bold text-white disabled:opacity-50">{sending ? "جارٍ الإرسال..." : "إرسال الآن لكل الزوار"}</button>
     </div>
