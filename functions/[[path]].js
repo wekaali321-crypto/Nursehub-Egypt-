@@ -1,4 +1,5 @@
 import { internalRows } from './_lib/sb.js';
+import { ROUTE_PATTERNS } from './_lib/routes.js';
 // Server-side SEO injection (Cloudflare Pages Function).
 // The site is a single-page app: without JavaScript a crawler only sees the splash screen.
 // For content routes we take the static index.html and inject the real page text, title,
@@ -130,7 +131,7 @@ async function pageFor(path, env, request) {
     return { title: `${c.title.ar} — حالة سريرية | ${SITE_NAME}`, description: clip(strip(c.teaser?.ar || c.story?.ar || ''), 300), body, type: 'Article' };
   }
   if ((m = /^\/article\/([^/]+)$/.exec(p))) {
-    const slug = decodeURIComponent(m[1]).replace(/[^\w\u0600-\u06FF-]/g, '');
+    const slug = dec(m[1]).replace(/[^\w\u0600-\u06FF-]/g, '');
     const r = await sb(env, 'articles', `select=title,excerpt,content,meta_title,meta_description&slug=eq.${encodeURIComponent(slug)}&status=eq.published&limit=1`);
     const a = r?.[0];
     if (!a) return null;
@@ -142,7 +143,7 @@ async function pageFor(path, env, request) {
     };
   }
   if ((m = /^\/drug\/([^/]+)$/.exec(p))) {
-    const slug = decodeURIComponent(m[1]).replace(/[^\w\u0600-\u06FF-]/g, '');
+    const slug = dec(m[1]).replace(/[^\w\u0600-\u06FF-]/g, '');
     const r = await sb(env, 'drugs', `select=name,generic_name,drug_class,dose,indications,side_effects,nursing_considerations,contraindications,storage&slug=eq.${encodeURIComponent(slug)}&limit=1`);
     const d = r?.[0];
     if (!d) return null;
@@ -188,9 +189,105 @@ function inject(html, page, url) {
 // otherwise parses a large index.json and slices a ~3MB HTML file on every page view.
 const BOT_RE = /bot|crawl|spider|slurp|mediapartners|adsbot|google-inspectiontool|googleother|facebookexternalhit|facebot|whatsapp|telegram|embedly|pinterest|applebot|duckduck|yandex|baidu|ahrefs|semrush|lighthouse|pagespeed|preview/i;
 
+// ---------------------------------------------------------------------------------------------------------------
+// Real HTTP 404 for URLs that are not pages. The SPA answers every path with index.html (HTTP 200), so crawlers
+// (Google) treated garbage URLs like /article/lib/utils/zlib/... as real pages ("soft 404"). Those strings come from
+// path-like text inside the inlined JS bundle (jszip internals) that crawlers resolve as relative links.
+// A URL is real when: it matches a route of src/App.tsx (functions/_lib/routes.js, generated at build time) AND, for
+// the content routes below, the item exists. Real pages keep status 200; an internal lookup failure is a 500.
+// ---------------------------------------------------------------------------------------------------------------
+const ROUTE_RE = new RegExp(ROUTE_PATTERNS.map((r) => r.source).join('|'));
+// /<section>/<id> topic pages backed by one table each (the page looks the topic up by its id)
+const TOPIC_TABLES = {
+  'icu-nursing': 'icu_topics', dialysis: 'dialysis_topics', radiology: 'radiology_topics', nicu: 'nicu_topics',
+  pharmacology: 'pharmacology_topics', terminology: 'terminology_topics', 'first-aid': 'first_aid_topics',
+  'er-reception': 'er_reception_topics', pediatrics: 'pediatric_topics', anatomy: 'anatomy_topics',
+  fundamentals: 'fundamentals_topics', 'operating-room': 'operating_room_topics', obgyn: 'obgyn_topics',
+};
+const SAFE_ID = /^[A-Za-z0-9_\u0600-\u06FF-]{1,120}$/;
+let sectionSlugs = null; // cached per isolate
+const dec = (x) => { try { return decodeURIComponent(x); } catch { return '\0'; } };
+
+async function assetExists(env, request, path) {
+  const r = await env.ASSETS.fetch(new Request(new URL(path, request.url), { method: 'GET' }));
+  const ct = r.headers.get('content-type') || '';
+  return r.ok && !ct.includes('text/html'); // SPA fallback answers missing files with index.html
+}
+
+async function rowExists(env, table, query) {
+  const rows = await sb(env, table, query);
+  if (rows === null) throw new Error('lookup failed');
+  return rows.length > 0;
+}
+
+/** 'ok' | 'missing' — throws on an internal failure */
+async function classify(path, env, request) {
+  const p = path.replace(/\/+$/, '') || '/';
+  if (p === '/' || p === '/sitemap.xml') return 'ok';
+  if (!ROUTE_RE.test(p)) {
+    // paths configured as redirects in the admin panel are served by the SPA (it performs the redirect)
+    if (env.DB) {
+      const r = await env.DB.prepare('SELECT 1 FROM redirects WHERE "from" = ? LIMIT 1').bind(p).first();
+      if (r) return 'ok';
+    }
+    return 'missing';
+  }
+  let m;
+  if ((m = /^\/(?:diseases|guide)\/([^/]+)$/.exec(p))) {
+    const id = dec(m[1]);
+    return SAFE_ID.test(id) && (await assetExists(env, request, `/diseases/items/${id}.json`)) ? 'ok' : 'missing';
+  }
+  if ((m = /^\/cases\/([^/]+)$/.exec(p))) {
+    const id = dec(m[1]);
+    return SAFE_ID.test(id) && (await assetExists(env, request, `/clinical-cases/cases/${id}.json`)) ? 'ok' : 'missing';
+  }
+  if ((m = /^\/section\/([^/]+)$/.exec(p))) {
+    if (!sectionSlugs) {
+      const idx = await getJSON(env, request, '/diseases/index.json');
+      if (!idx) throw new Error('index missing');
+      sectionSlugs = new Set(Object.keys(idx.sections || {}));
+    }
+    return sectionSlugs.has(dec(m[1])) ? 'ok' : 'missing';
+  }
+  if ((m = /^\/article\/([^/]+)$/.exec(p))) {
+    const slug = dec(m[1]);
+    if (!SAFE_ID.test(slug)) return 'missing';
+    return (await rowExists(env, 'articles', `select=id&slug=eq.${encodeURIComponent(slug)}&status=eq.published&limit=1`)) ? 'ok' : 'missing';
+  }
+  if ((m = /^\/drug\/([^/]+)$/.exec(p))) {
+    const slug = dec(m[1]);
+    if (!SAFE_ID.test(slug)) return 'missing';
+    return (await rowExists(env, 'drugs', `select=id&slug=eq.${encodeURIComponent(slug)}&limit=1`)) ? 'ok' : 'missing';
+  }
+  if ((m = /^\/([a-z-]+)\/([^/]+)$/.exec(p)) && TOPIC_TABLES[m[1]]) {
+    const id = dec(m[2]);
+    if (!SAFE_ID.test(id)) return 'missing';
+    return (await rowExists(env, TOPIC_TABLES[m[1]], `select=id&id=eq.${encodeURIComponent(id)}&limit=1`)) ? 'ok' : 'missing';
+  }
+  return 'ok';
+}
+
+/** The SPA shell with a real status code (the React app then shows its own 404 / error page). */
+async function shell(request, env, status) {
+  const wantsHtml = (request.headers.get('accept') || '').includes('text/html') || (request.headers.get('accept') || '') === '';
+  const headers = { 'cache-control': 'public, max-age=60', 'x-robots-tag': 'noindex' };
+  if (!wantsHtml) return new Response(request.method === 'HEAD' ? null : 'Not found', { status, headers: { ...headers, 'content-type': 'text/plain; charset=utf-8' } });
+  const res = await env.ASSETS.fetch(new Request(new URL('/', request.url), { method: 'GET' }));
+  return new Response(request.method === 'HEAD' ? null : res.body, { status, headers: { ...headers, 'content-type': 'text/html; charset=utf-8' } });
+}
+
 export async function onRequest({ request, env, next }) {
+  const url = new URL(request.url);
+  if (request.method === 'GET' || request.method === 'HEAD') {
+    let verdict;
+    try {
+      verdict = await classify(url.pathname, env, request);
+    } catch {
+      return shell(request, env, 500); // a real internal failure is not a "page not found"
+    }
+    if (verdict === 'missing') return shell(request, env, 404);
+  }
   try {
-    const url = new URL(request.url);
     const accept = request.headers.get('accept') || '';
     if (request.method !== 'GET' || (!accept.includes('text/html') && !accept.includes('*/*'))) return next();
     if (!BOT_RE.test(request.headers.get('user-agent') || '')) return next();
