@@ -1,5 +1,5 @@
 // NurseHub Egypt PWA Service Worker
-const CACHE_NAME = "nursehub-v6";
+const CACHE_NAME = "nursehub-v7";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
@@ -63,6 +63,24 @@ self.addEventListener("fetch", (event) => {
           return res;
         })
         .catch(() => caches.match(request))
+    );
+    return;
+  }
+
+  // Built JS/CSS chunks (/assets/<name>-<hash>.js): content-hashed, so cache-first is safe and keeps the app working offline
+  if (new URL(request.url).pathname.startsWith("/assets/")) {
+    event.respondWith(
+      caches.match(request).then(
+        (hit) =>
+          hit ||
+          fetch(request).then((res) => {
+            if (res.ok && !(res.headers.get("content-type") || "").includes("text/html")) {
+              const clone = res.clone();
+              caches.open(CACHE_NAME).then((c) => c.put(request, clone));
+            }
+            return res;
+          })
+      )
     );
     return;
   }

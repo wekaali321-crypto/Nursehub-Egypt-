@@ -76,6 +76,14 @@ async function bootstrap() {
     return;
   }
 
+  // After a new deploy the old hashed chunks are gone: a lazy page that fails to load triggers one reload to pick up the new build.
+  window.addEventListener("vite:preloadError", () => {
+    try {
+      if (sessionStorage.getItem("nh_chunk_reload") === "1") return;
+      sessionStorage.setItem("nh_chunk_reload", "1");
+    } catch { /* ignore */ }
+    window.location.reload();
+  });
   const root = createRoot(rootElement);
   root.render(
     <StrictMode>
