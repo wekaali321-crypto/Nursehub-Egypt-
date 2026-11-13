@@ -116,6 +116,47 @@ const trackable = () => {
 
 let lastPath = "";
 let appOpenSent = false;
+let interacted = false;
+let pendingPath: string | null = null;
+let pendingTimer: number | undefined;
+
+/** Crawlers/headless renderers rarely touch the page and leave within seconds, so a visit is counted only after the
+ *  first real interaction (touch / click / scroll / key) or after the page stayed open and visible for a few seconds. */
+const VISIT_DELAY_MS = 6000;
+
+function sendVisit(path: string) {
+  const app = runningAsApp();
+  void supabase!
+    .from("site_visits")
+    .insert({ visitor_id: getVisitorId(), session_id: getSessionId(), path: path.slice(0, 300), device_type: deviceType(), source: sourceOf(), is_app: app })
+    .then(() => undefined, () => undefined);
+  if (app && !appOpenSent) {
+    appOpenSent = true;
+    trackInstallEvent("app_open");
+  }
+}
+
+function flushPending() {
+  window.clearTimeout(pendingTimer);
+  const path = pendingPath;
+  pendingPath = null;
+  if (path && trackable()) sendVisit(path);
+}
+
+function onFirstInteraction() {
+  if (interacted) return;
+  interacted = true;
+  for (const ev of ["touchstart", "pointerdown", "mousedown", "keydown", "scroll", "wheel"]) window.removeEventListener(ev, onFirstInteraction, true);
+  flushPending();
+}
+
+try {
+  if (typeof window !== "undefined") {
+    for (const ev of ["touchstart", "pointerdown", "mousedown", "keydown", "scroll", "wheel"]) window.addEventListener(ev, onFirstInteraction, { capture: true, passive: true });
+  }
+} catch {
+  /* ignore */
+}
 
 /** Call on every route change. Skips the admin area. */
 export function trackPageview(path: string) {
@@ -129,18 +170,20 @@ export function trackPageview(path: string) {
 function trackPageviewUnsafe(path: string) {
   if (!trackable() || path.startsWith("/admin") || path === lastPath) return;
   lastPath = path;
-  const app = runningAsApp();
-  void supabase!
-    .from("site_visits")
-    .insert({ visitor_id: getVisitorId(), session_id: getSessionId(), path: path.slice(0, 300), device_type: deviceType(), source: sourceOf(), is_app: app })
-    .then(() => undefined, () => undefined);
-  if (app && !appOpenSent) {
-    appOpenSent = true;
-    trackInstallEvent("app_open");
+  if (interacted) {
+    sendVisit(path);
+    return;
   }
+  // not interacted yet: keep only the latest page and count it once the page has been open & visible for a few seconds
+  pendingPath = path;
+  window.clearTimeout(pendingTimer);
+  pendingTimer = window.setTimeout(() => {
+    if (document.visibilityState === "visible") flushPending();
+    else pendingPath = null;
+  }, VISIT_DELAY_MS);
 }
 
-/** Live presence: one lightweight ping per minute while the tab is visible. */
+/** Live presence: one lightweight ping every 3 minutes while the tab is visible. */
 export function startHeartbeat(getPath: () => string) {
   try {
     return startHeartbeatUnsafe(getPath);
@@ -159,7 +202,7 @@ function startHeartbeatUnsafe(getPath: () => string) {
       .then(() => undefined, () => undefined);
   };
   ping();
-  const id = window.setInterval(ping, 60_000);
+  const id = window.setInterval(ping, 180_000); // 3 min: D1 free plan allows 100k writes/day
   const onVis = () => document.visibilityState === "visible" && ping();
   document.addEventListener("visibilitychange", onVis);
   return () => {
