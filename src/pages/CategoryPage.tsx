@@ -156,7 +156,7 @@ export default function CategoryPage() {
                 <button key={tg} onClick={() => setTag(tg)} className={`rounded-full px-3 py-1.5 text-sm font-semibold ${tag === tg ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>#{tg}</button>
               ))}
             </div>
-            <select value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800">
+            <select aria-label="ترتيب النتائج" value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800">
               <option value="latest">{t("cat.sortLatest")}</option>
               <option value="popular">{t("cat.sortPopular")}</option>
             </select>

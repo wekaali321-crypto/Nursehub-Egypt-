@@ -26,14 +26,14 @@ export async function sitemapResponse({ request, env }) {
   const urls = STATIC.map(([p, pr]) => [p, pr]);
   try {
     const [articles, drugs, courses, chapters, peds, rx] = await Promise.all([
-      rows(env, 'articles', 'slug', '&status=eq.published'),
+      rows(env, 'articles', 'slug,updated_date,publish_date', '&status=eq.published'),
       rows(env, 'drugs', 'slug'),
       rows(env, 'courses', 'id'),
       rows(env, 'course_chapters', 'id,course_id'),
       rows(env, 'peds_medications', 'id'),
       rows(env, 'rx_prescriptions', 'id'),
     ]);
-    articles.forEach((a) => a.slug && urls.push([`/article/${enc(a.slug)}`, 0.7]));
+    articles.forEach((a) => a.slug && urls.push([`/article/${enc(a.slug)}`, 0.7, a.updated_date || a.publish_date]));
     drugs.forEach((d) => d.slug && urls.push([`/drug/${enc(d.slug)}`, 0.6]));
     courses.forEach((c) => urls.push([`/courses/${enc(c.id)}`, 0.7]));
     chapters.forEach((c) => urls.push([`/courses/${enc(c.course_id)}/chapter/${enc(c.id)}`, 0.6]));
@@ -60,7 +60,10 @@ export async function sitemapResponse({ request, env }) {
   const seen = new Set();
   const body = urls
     .filter(([p]) => !seen.has(p) && seen.add(p))
-    .map(([p, pr]) => `  <url><loc>${esc(site + p)}</loc><priority>${pr.toFixed(1)}</priority></url>`)
+    .map(([p, pr, mod]) => {
+      const d = /^\d{4}-\d{2}-\d{2}/.exec(String(mod || ''));
+      return `  <url><loc>${esc(site + p)}</loc>${d ? `<lastmod>${d[0]}</lastmod>` : ''}<priority>${pr.toFixed(1)}</priority></url>`;
+    })
     .join('\n');
   return new Response(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`, {
     headers: { 'content-type': 'application/xml; charset=utf-8', 'cache-control': 'public, max-age=3600' },
