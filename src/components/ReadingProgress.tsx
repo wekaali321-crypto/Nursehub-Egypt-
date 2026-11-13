@@ -15,7 +15,7 @@ export default function ReadingProgress() {
   }, []);
   return (
     <div className="fixed inset-x-0 top-0 z-[60] h-1 bg-transparent">
-      <div className="h-full bg-gradient-to-l from-sky-500 to-emerald-500 transition-[width] duration-150" style={{ width: `${pct}%` }} />
+      <div className="h-full bg-[#168C91] transition-[width] duration-150" style={{ width: `${pct}%` }} />
     </div>
   );
 }

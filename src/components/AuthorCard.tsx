@@ -2,12 +2,9 @@ import { useStore } from "../lib/store";
 import { useI18n } from "../lib/i18n";
 
 const GRADIENTS = [
-  "from-sky-500 to-blue-500",
-  "from-emerald-500 to-teal-500",
-  "from-violet-500 to-purple-500",
-  "from-rose-500 to-pink-500",
-  "from-amber-500 to-orange-500",
-  "from-cyan-500 to-sky-500",
+  "from-[#153448] to-[#168C91]",
+  "from-[#168C91] to-[#153448]",
+  "from-[#1b4a63] to-[#168C91]",
 ];
 
 function gradientFor(name: string) {
@@ -32,7 +29,7 @@ export default function AuthorCard({ name }: { name: string }) {
       <div className="min-w-0">
         <div className="flex items-center gap-1.5">
           <span className="truncate font-bold text-slate-800 dark:text-white">{name}</span>
-          <span title={lang === "ar" ? "موثّق" : "Verified"} className="text-sky-500">✔️</span>
+          <span title={lang === "ar" ? "موثّق" : "Verified"} className="text-[#168C91]">✔️</span>
         </div>
         <div className="text-xs text-slate-400">
           {user?.role === "admin"
@@ -42,6 +39,27 @@ export default function AuthorCard({ name }: { name: string }) {
         <div className="mt-1 text-xs text-slate-400">
           {lang === "ar" ? `${count.toLocaleString("ar-EG")} مقال منشور` : `${count} published articles`}
         </div>
+      </div>
+    </div>
+  );
+}
+
+/** Compact author line for the article header. Uses only data that exists: name + role from the user record. */
+export function AuthorChip({ name, fallback }: { name: string; fallback: string }) {
+  const { users } = useStore();
+  const { lang } = useI18n();
+  const shown = name.trim() || fallback;
+  const user = users.find((u) => u.name === name);
+  const initials = name.trim() ? shown.split(/\s+/).slice(0, 2).map((w) => w[0]).join("").toUpperCase() : "NH";
+  const role = !name.trim() || user?.role === "admin"
+    ? (lang === "ar" ? "فريق التحرير الطبي" : "Medical Editorial Team")
+    : (lang === "ar" ? "كاتب مساهم" : "Contributing Author");
+  return (
+    <div className="flex items-center gap-3">
+      <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${gradientFor(shown)} text-sm font-black text-white ring-2 ring-white/30`}>{initials}</div>
+      <div className="min-w-0">
+        <div className="truncate text-sm font-bold">{shown}</div>
+        <div className="text-xs opacity-75">{role}</div>
       </div>
     </div>
   );
