@@ -81,7 +81,7 @@ export default function SearchPage() {
 
       <form onSubmit={(e) => { e.preventDefault(); setParams({ q: query }); }} className="mb-4 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900 md:flex-row">
         <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t("search.placeholder")} className="flex-1 rounded-lg border border-slate-200 px-4 py-3 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" />
-        <select value={catFilter} onChange={(e) => setCatFilter(e.target.value)} className="rounded-lg border border-slate-200 px-3 py-3 dark:border-slate-700 dark:bg-slate-800">
+        <select aria-label="تصفية حسب القسم" value={catFilter} onChange={(e) => setCatFilter(e.target.value)} className="rounded-lg border border-slate-200 px-3 py-3 dark:border-slate-700 dark:bg-slate-800">
           <option value="">{t("search.allSections")}</option>
           {cats.map((c) => <option key={c} value={c}>{t(CAT_KEY[c])}</option>)}
         </select>

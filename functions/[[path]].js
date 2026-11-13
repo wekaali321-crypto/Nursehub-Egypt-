@@ -132,7 +132,7 @@ async function pageFor(path, env, request) {
   }
   if ((m = /^\/article\/([^/]+)$/.exec(p))) {
     const slug = dec(m[1]).replace(/[^\w\u0600-\u06FF-]/g, '');
-    const r = await sb(env, 'articles', `select=title,excerpt,content,meta_title,meta_description&slug=eq.${encodeURIComponent(slug)}&status=eq.published&limit=1`);
+    const r = await sb(env, 'articles', `select=title,excerpt,content,meta_title,meta_description,cover&slug=eq.${encodeURIComponent(slug)}&status=eq.published&limit=1`);
     const a = r?.[0];
     if (!a) return null;
     return {
@@ -140,6 +140,7 @@ async function pageFor(path, env, request) {
       description: clip(a.meta_description || strip(a.excerpt) || strip(a.content), 300),
       body: `<article><h1>${esc(a.title)}</h1>${clean(a.content)}</article>`,
       type: 'Article',
+      image: a.cover || null,
     };
   }
   if ((m = /^\/drug\/([^/]+)$/.exec(p))) {
@@ -158,20 +159,38 @@ async function pageFor(path, env, request) {
   return null;
 }
 
+const LEGACY_STORAGE = /^https:\/\/[a-z0-9]+\.supabase\.co\/storage\/v1\//;
+// absolute https URL usable by Facebook/WhatsApp/Twitter crawlers (old Supabase storage links now live on this domain)
+function absImage(img, origin) {
+  if (!img || typeof img !== 'string' || img.startsWith('data:')) return null;
+  if (img.startsWith('/')) return origin + img;
+  if (LEGACY_STORAGE.test(img)) return img.replace(LEGACY_STORAGE, origin + '/storage/v1/');
+  return /^https:\/\//.test(img) ? img : null;
+}
+
 function inject(html, page, url) {
   const canonical = `${url.origin.replace('https://nursehub-egypt.pages.dev', 'https://nursehubegypt.com')}${url.pathname.replace(/\/+$/, '') || '/'}`;
   const t = esc(page.title);
   const d = esc(page.description);
   let out = html;
   out = out.replace(/<title>[\s\S]*?<\/title>/i, () => `<title>${t}</title>`);
-  for (const [re, val] of [
+  const siteOrigin = 'https://nursehubegypt.com';
+  const img = absImage(page.image, siteOrigin);
+  const pairs = [
+    [/(<meta\s+property="og:url"\s+content=")[^"]*(")/i, esc(canonical)],
     [/(<meta\s+name="description"\s+content=")[^"]*(")/i, d],
     [/(<meta\s+property="og:title"\s+content=")[^"]*(")/i, t],
     [/(<meta\s+property="og:description"\s+content=")[^"]*(")/i, d],
     [/(<meta\s+name="twitter:title"\s+content=")[^"]*(")/i, t],
     [/(<meta\s+name="twitter:description"\s+content=")[^"]*(")/i, d],
-  ]) out = out.replace(re, (_m, a, c) => `${a}${val}${c}`);
+  ];
+  if (img) {
+    pairs.push([/(<meta\s+property="og:image"\s+content=")[^"]*(")/i, esc(img)], [/(<meta\s+name="twitter:image"\s+content=")[^"]*(")/i, esc(img)]);
+  }
+  if (page.type === 'Article' || page.type === 'MedicalWebPage') pairs.push([/(<meta\s+property="og:type"\s+content=")[^"]*(")/i, 'article']);
+  for (const [re, val] of pairs) out = out.replace(re, (_m, a, c) => `${a}${val}${c}`);
   const ld = { '@context': 'https://schema.org', '@type': page.type, name: page.title, description: page.description, url: canonical, inLanguage: 'ar', publisher: { '@type': 'Organization', name: SITE_NAME } };
+  if (img) ld.image = img;
   const head = `<link rel="canonical" href="${esc(canonical)}" /><script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`;
   // The bundle is inlined into index.html and may itself contain "</head>" / "<body" inside strings, so anchor on the
   // last root tag and the closest </head> before it. String slicing also avoids "$&" expansion in the page text.

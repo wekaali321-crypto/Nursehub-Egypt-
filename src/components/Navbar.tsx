@@ -10,6 +10,7 @@ import NotificationBell from "./NotificationBell";
 import { useI18n, type TKey } from "../lib/i18n";
 import { useFavorites } from "../lib/favorites";
 import { useFeatures } from "../admin/cms/useFeatures";
+import { useSectionAvailability } from "../lib/sections";
 import { enablePushNotifications, hasActivePushSubscription, isPushSupported } from "../lib/push";
 
 // Map known menu paths to i18n keys so nav is fully translatable.
@@ -155,6 +156,7 @@ export default function Navbar() {
   const { t, lang, setLang } = useI18n();
   const { favorites } = useFavorites();
   const { features } = useFeatures();
+  const { pathAvailable } = useSectionAvailability();
   const favCount = favorites.length;
   const label = (m: { label: string; path: string }) => (PATH_LABELS[m.path] ? t(PATH_LABELS[m.path]) : m.label);
   const featureAllowed = (m: { path: string }) => {
@@ -197,7 +199,7 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
-          {menu.slice(0, 8).filter(featureAllowed).map((m) => (
+          {menu.filter(featureAllowed).filter((m) => pathAvailable(m.path)).slice(0, 8).map((m) => (
             <Link
               key={m.path}
               to={m.path}
@@ -301,7 +303,7 @@ export default function Navbar() {
             )}
           </div>
           <div className="grid grid-cols-2 gap-1">
-            {menu.filter(featureAllowed).map((m) => (
+            {menu.filter(featureAllowed).filter((m) => pathAvailable(m.path)).map((m) => (
               <Link
                 key={m.path}
                 to={m.path}

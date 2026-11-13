@@ -1,3 +1,4 @@
+import { useSectionAvailability } from "../lib/sections";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { CATEGORY_LABELS, type Category } from "../lib/types";
@@ -34,7 +35,8 @@ const TelegramIcon = () => (
 export default function Footer() {
   const { settings } = useStore();
   const { t, lang } = useI18n();
-  const cats = Object.keys(CATEGORY_LABELS) as Category[];
+  const { hasContent } = useSectionAvailability();
+  const cats = (Object.keys(CATEGORY_LABELS) as Category[]).filter((c) => hasContent(c));
 
   // Facebook comes from the Site Settings field (/admin/settings → Social) so
   // it can be filled in later without touching code. WhatsApp and Telegram

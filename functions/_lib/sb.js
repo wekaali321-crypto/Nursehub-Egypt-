@@ -74,6 +74,8 @@ Object.assign(POLICY, {
   site_visits: { read: 'admin', write: 'none', insert: 'public' },
   subscribers: { read: 'admin', write: 'admin', insert: 'public' },
 });
+/** true when every anonymous GET of this table is public data (safe to cache at the edge) */
+export const isPublicTable = (t) => POLICY[t]?.read === 'public';
 const EMAIL_RE = /^[A-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?(?:\.[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?)+$/i;
 function publicInsertOk(table, row) {
   switch (table) {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { fetchAppliedPharmItems } from "../lib/appliedPharmApi";
 import { fetchICUMedications } from "../lib/icuMedApi";
@@ -289,7 +289,6 @@ export default function DrugsHubPage() {
         </div>
       </div>
 
-      <div className="mb-8"><AdSlot label="إعلان دليل الأدوية" /></div>
 
       <h2 className="mb-3 text-lg font-black text-slate-800 dark:text-white">{LABELS.mainSections[lang]}</h2>
       <div className="mb-10 grid gap-4 sm:grid-cols-2">

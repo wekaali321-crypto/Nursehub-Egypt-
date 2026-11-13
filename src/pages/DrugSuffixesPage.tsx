@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
@@ -53,7 +53,6 @@ export default function DrugSuffixesPage() {
         <p className="mt-1 text-cyan-50">{drugSuffixes.length} {LABELS.subtitle[lang]}</p>
       </div>
 
-      <div className="mb-6"><AdSlot label="إعلان لاحقات الأدوية" /></div>
 
       <input
         value={q}

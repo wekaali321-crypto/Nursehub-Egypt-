@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { CATEGORY_ICONS, type Category } from "../lib/types";
-import { ArticleCard, Breadcrumbs, AdSlot } from "../components/common";
+import { ArticleCard, Breadcrumbs } from "../components/common";
 import { useI18n, bilingual, type TKey } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
 
@@ -78,6 +78,16 @@ export default function CategoryPage() {
   const showFlatSection = Boolean(activeSub) || list.length > 0 || subcats.length === 0;
 
   const totalInSection = articles.filter((a) => a.category === category && a.status === "published").length;
+
+  // An empty section stays reachable by direct link but is kept out of search results.
+  useEffect(() => {
+    if (totalInSection > 0) return;
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex, follow";
+    document.head.appendChild(meta);
+    return () => { meta.remove(); };
+  }, [totalInSection]);
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
@@ -156,7 +166,7 @@ export default function CategoryPage() {
                 <button key={tg} onClick={() => setTag(tg)} className={`rounded-full px-3 py-1.5 text-sm font-semibold ${tag === tg ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>#{tg}</button>
               ))}
             </div>
-            <select value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800">
+            <select aria-label="ترتيب النتائج" value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800">
               <option value="latest">{t("cat.sortLatest")}</option>
               <option value="popular">{t("cat.sortPopular")}</option>
             </select>
@@ -170,7 +180,6 @@ export default function CategoryPage() {
         </>
       )}
 
-      <div className="mt-10"><AdSlot label="إعلان أسفل القسم" /></div>
     </div>
   );
 }

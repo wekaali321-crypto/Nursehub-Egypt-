@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
@@ -81,7 +81,6 @@ export default function DrugInteractionsPage() {
         <p className="mt-1 text-sky-50">{LABELS.subtitle[lang]}</p>
       </div>
 
-      <div className="mb-6"><AdSlot label="إعلان فحص التفاعلات" /></div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <DrugPicker label={LABELS.drugA[lang]} value={aId} onChange={setAId} drugs={sorted} lang={lang} />

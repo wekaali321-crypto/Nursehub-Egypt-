@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { useCart } from "../lib/cart";
 import { useToast } from "../components/Toast";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import OptimizedImage from "../components/OptimizedImage";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
@@ -84,7 +84,6 @@ export default function StorePage() {
         })}
       </div>
 
-      <div className="mt-10"><AdSlot label={t("store.adBelow")} /></div>
     </div>
   );
 }

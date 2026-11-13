@@ -23,3 +23,17 @@
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Static guide/case/table JSON: served from the edge, revalidated hourly (changes only with a deploy)
+/diseases/items/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/diseases/index.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/diseases/rx.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/clinical-cases/index.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/clinical-cases/cases/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+/diseases/img/*
+  Cache-Control: public, max-age=2592000

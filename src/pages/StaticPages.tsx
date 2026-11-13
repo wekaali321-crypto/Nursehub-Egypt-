@@ -1,13 +1,15 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Breadcrumbs } from "../components/common";
 import { useStore } from "../lib/store";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
 
-function Wrap({ titleAr, titleEn, children }: { titleAr: string; titleEn: string; children: React.ReactNode }) {
+function Wrap({ titleAr, titleEn, descAr, descEn, children }: { titleAr: string; titleEn: string; descAr?: string; descEn?: string; children: React.ReactNode }) {
   const { lang } = useI18n();
   const title = bilingual(titleAr, titleEn, lang).text;
+  useSEO({ title: `${title} | NurseHub Egypt`, description: descAr ? bilingual(descAr, descEn ?? descAr, lang).text : undefined });
   return (
     <div className="mx-auto max-w-4xl px-4 py-8">
       <Breadcrumbs items={[{ label: title }]} />
@@ -22,37 +24,53 @@ export function About() {
   const { settings } = useStore();
   const { lang } = useI18n();
   const isEn = lang === "en";
-  const stats: [string, string][] = isEn
-    ? [["12K+", "Learners"], ["150+", "Articles"], ["50+", "Files"]]
-    : [["12K+", "متعلم"], ["150+", "مقال"], ["50+", "ملف"]];
   return (
-    <Wrap titleAr="من نحن" titleEn="About Us">
+    <Wrap
+      titleAr="من نحن" titleEn="About Us"
+      descAr="تعرّف على منصة NurseHub Egypt: محتوى تعليمي عربي لطلاب وممارسي التمريض يشمل أدلة الأمراض والأدوية والحالات السريرية والتخصصات."
+      descEn="About NurseHub Egypt: Arabic educational content for nursing students and practitioners, including condition guides, drugs, clinical cases and specialties."
+    >
       {isEn ? (
         <>
-          <p>{settings.siteName} is a leading Arabic platform specialized in nursing education, aiming to empower nursing students and practitioners in Egypt and the Arab world through high-quality educational content.</p>
-          <h2>Our Vision</h2>
-          <p>To be the primary reference for nursing education in Arabic, and to contribute to raising the standard of healthcare.</p>
-          <h2>Our Mission</h2>
-          <p>Providing reliable, simplified content covering articles, summaries, drugs, clinical skills, and care plans, alongside smart calculators.</p>
-          <h2>Our Values</h2>
-          <ul><li>Scientific accuracy</li><li>Ease of access</li><li>Continuous improvement</li><li>Support for the nursing community</li></ul>
+          <p>{settings.siteName} is an Arabic educational platform for nursing students and practitioners. It explains nursing topics in simple Arabic, keeps the key English medical terms next to them, and organizes everything by clinical area so it is easy to find and study.</p>
+          <h2>What you will find here</h2>
+          <ul>
+            <li>Nursing guides for diseases and conditions: what it is, signs, investigations, treatment, nursing role and patient teaching</li>
+            <li>A drug guide with doses, indications, side effects and nursing considerations</li>
+            <li>Interactive clinical cases and practice quizzes</li>
+            <li>Specialty sections: ICU, emergency and reception, pediatrics and NICU, obstetrics and gynecology, operating room, dialysis, radiology, first aid, anatomy, pharmacology and medical terminology</li>
+            <li>Laboratory reference, medical calculators, courses and downloadable study files in the store</li>
+          </ul>
+          <h2>Our approach</h2>
+          <p>We write in plain language and try to keep every page clear, structured and easy to read on a phone. We review and improve content continuously, and we welcome corrections from readers.</p>
+          <h2>Our mission</h2>
+          <p>To make nursing education in Arabic easier to access and to support nursing students and practitioners in Egypt and the Arab world in their studies and daily work.</p>
+          <h2>Important note</h2>
+          <p>The content is for education only. It is not medical advice and does not replace your hospital's protocols, clinical judgment, or the instructions of the treating physician. Always verify drug doses and procedures against your institution's approved guidelines.</p>
+          <h2>Who runs the platform</h2>
+          <p>The platform is run by RN. Ali Ashour. For questions, suggestions or corrections please use the <Link to="/contact">Contact Us</Link> page.</p>
         </>
       ) : (
         <>
-          <p>{settings.siteName} هي منصة عربية رائدة متخصصة في تعليم التمريض، تهدف إلى تمكين طلاب وممارسي التمريض في مصر والعالم العربي من خلال محتوى تعليمي عالي الجودة.</p>
-          <h2>رؤيتنا</h2>
-          <p>أن نكون المرجع الأول لتعليم التمريض باللغة العربية، ونساهم في رفع مستوى الرعاية الصحية.</p>
+          <p>{settings.siteName} منصة تعليمية عربية لطلاب وممارسي التمريض. نشرح موضوعات التمريض بعربية مبسّطة مع إبقاء المصطلحات الطبية الإنجليزية الأساسية بجانبها، ونرتّب كل شيء حسب المجال الإكلينيكي ليسهل الوصول إليه ومذاكرته.</p>
+          <h2>ماذا ستجد هنا</h2>
+          <ul>
+            <li>أدلة تمريضية للأمراض والحالات: ما هو المرض، وعلاماته، وفحوصاته، وعلاجه، ودور التمريض، وتثقيف المريض</li>
+            <li>دليل أدوية بالجرعات ودواعي الاستعمال والأعراض الجانبية والاعتبارات التمريضية</li>
+            <li>حالات سريرية تفاعلية واختبارات تدريبية</li>
+            <li>أقسام تخصصية: العناية المركزة، الاستقبال والطوارئ، الأطفال والحضانة، النساء والتوليد، العمليات، الغسيل الكلوي، الأشعة، الإسعافات الأولية، التشريح، الفارماكولوجي، والمصطلحات الطبية</li>
+            <li>مرجع للتحاليل، وحاسبات طبية، وكورسات، وملفات مذاكرة قابلة للتحميل في المتجر</li>
+          </ul>
+          <h2>أسلوبنا</h2>
+          <p>نكتب بلغة بسيطة ونحاول أن تكون كل صفحة واضحة ومنظمة وسهلة القراءة على الموبايل. نراجع المحتوى ونطوّره باستمرار، ونرحّب بتصحيحات القرّاء.</p>
           <h2>رسالتنا</h2>
-          <p>تقديم محتوى موثوق ومبسط يشمل المقالات، الملخصات، الأدوية، المهارات السريرية، وخطط الرعاية، إلى جانب أدوات حسابية ذكية.</p>
-          <h2>قيمنا</h2>
-          <ul><li>الدقة العلمية</li><li>سهولة الوصول</li><li>التطوير المستمر</li><li>دعم المجتمع التمريضي</li></ul>
+          <p>تيسير الوصول إلى تعليم التمريض باللغة العربية، ودعم طلاب وممارسي التمريض في مصر والعالم العربي في دراستهم وعملهم اليومي.</p>
+          <h2>تنبيه مهم</h2>
+          <p>المحتوى لأغراض تعليمية فقط، وليس نصيحة طبية، ولا يغني عن بروتوكولات المستشفى والحكم الإكلينيكي وتعليمات الطبيب المعالج. تأكّد دائمًا من جرعات الأدوية والإجراءات وفق الإرشادات المعتمدة في مؤسستك.</p>
+          <h2>من يدير المنصة</h2>
+          <p>تُدار المنصة بواسطة RN. Ali Ashour. للأسئلة أو الاقتراحات أو التصحيحات يرجى استخدام صفحة <Link to="/contact">اتصل بنا</Link>.</p>
         </>
       )}
-      <div className="mt-6 grid grid-cols-3 gap-4 not-prose">
-        {stats.map(([n, l]) => (
-          <div key={l} className="rounded-2xl bg-sky-50 p-5 text-center dark:bg-sky-500/10"><div className="text-2xl font-black text-sky-600">{n}</div><div className="text-sm text-slate-500">{l}</div></div>
-        ))}
-      </div>
     </Wrap>
   );
 }
@@ -76,7 +94,7 @@ export function Contact() {
   };
   const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-800";
   return (
-    <Wrap titleAr="اتصل بنا" titleEn="Contact Us">
+    <Wrap titleAr="اتصل بنا" titleEn="Contact Us" descAr="تواصل مع فريق NurseHub Egypt لأي سؤال أو اقتراح أو تصحيح." descEn="Contact the NurseHub Egypt team with any question, suggestion or correction.">
       <p>{isEn ? "We'd love to hear from you! Fill out the form below, or email us directly, and we'll get back to you as soon as possible." : "نسعد بتواصلك معنا! املأ النموذج التالي أو راسلنا مباشرة على البريد وسنرد عليك في أقرب وقت."}</p>
       <div className="grid gap-6 not-prose md:grid-cols-2">
         <div className="space-y-3">
@@ -151,46 +169,86 @@ export function FAQ() {
 
 export function Privacy() {
   const { lang } = useI18n();
+  const { settings } = useStore();
   const isEn = lang === "en";
+  const email = settings.contactEmail || "wekaali321@gmail.com";
   return (
-    <Wrap titleAr="سياسة الخصوصية" titleEn="Privacy Policy">
+    <Wrap
+      titleAr="سياسة الخصوصية" titleEn="Privacy Policy"
+      descAr="كيف يجمع موقع NurseHub Egypt بياناتك ويستخدمها ويحميها، بما في ذلك الحسابات والإشعارات والإعلانات وملفات تعريف الارتباط."
+      descEn="How NurseHub Egypt collects, uses and protects your data, including accounts, notifications, advertising and cookies."
+    >
       {isEn ? (
         <>
-          <p>At NurseHub Egypt, we are committed to protecting our users' privacy. This policy explains how we collect and use your data.</p>
-          <h2>Information We Collect</h2>
-          <p>We may collect your email when you subscribe to the newsletter, and browsing information to improve your experience.</p>
-          <h2>Use of Information</h2>
-          <ul><li>Improving content and services</li><li>Sending updates and offers</li><li>Analyzing site performance</li></ul>
-          <h2>Cookies</h2>
-          <p>We use cookies to improve the browsing experience and display relevant ads.</p>
+          <p><strong>Last updated: November 13, 2026.</strong></p>
+          <p>At NurseHub Egypt we respect your privacy. This policy explains what data the website and the installed app collect, why, which services process it, and what choices you have.</p>
+          <h2>Who we are and how to contact us</h2>
+          <p>NurseHub Egypt is an Arabic nursing education website. For any privacy question or request, write to <a href={`mailto:${email}`}>{email}</a> or use the <Link to="/contact">Contact Us</Link> page.</p>
+          <h2>Information we collect</h2>
+          <ul>
+            <li><strong>Account:</strong> if you create an account we store your email, name and the sign-in method. With email sign-up your password is stored only as a one-way hash. With Google sign-in we receive your Google account name and email address; we never see your Google password. For signed-in users we also save bookmarks and reading history.</li>
+            <li><strong>Store orders:</strong> name, email, phone number (optional), payment method, payment reference and order amount. We do not collect or store payment card numbers.</li>
+            <li><strong>Comments:</strong> the name and text you submit; comments are shown only after moderation.</li>
+            <li><strong>Anonymous usage statistics:</strong> a random visitor identifier kept in your browser, the pages visited, device type (mobile, tablet or desktop), the type of referring source, and whether the installed app was used. This is not linked to your name or email, and we do not store your IP address in these statistics.</li>
+            <li><strong>Notifications:</strong> if you enable them, we store your browser's push-subscription address and keys so we can send notifications. You can turn them off at any time in your browser or device settings.</li>
+            <li><strong>Technical data:</strong> like any website, our hosting and security provider processes technical data such as IP address and browser type to deliver the site, prevent abuse and limit excessive requests. We also keep short security logs that include an IP address, such as failed administrator sign-in attempts and order-lookup requests, to prevent abuse.</li>
+            <li><strong>Messages:</strong> the contact form opens your own email app, so we receive only what you choose to send.</li>
+          </ul>
+          <h2>How we use information</h2>
+          <ul><li>To provide the site, accounts, store orders and notifications</li><li>To understand which content is useful and improve it</li><li>To secure the service and prevent abuse</li><li>To show advertising (see below)</li></ul>
+          <h2>Browser storage and cookies</h2>
+          <p>We use your browser's local storage, IndexedDB and cache to remember preferences (language, theme, display options), favorites, cart, study progress, cached content and the anonymous visitor identifier, and to let the app work with a weak connection. We use a session cookie only for administrator login. Advertising cookies are set by Google and its partners (see below). You can clear or block storage and cookies in your browser settings; some features may then stop working.</p>
           <h2>Advertising (Google AdSense)</h2>
           <p>We use Google AdSense to display ads. Third-party vendors, including Google, use cookies to serve ads based on your previous visits to this and other websites. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our site and/or other sites on the Internet.</p>
           <p>You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>. You can also opt out of third-party vendors' use of cookies for personalized advertising at <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer">aboutads.info</a>. To learn how Google uses data, see <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses data from sites that use its services</a>.</p>
-          <h2>Third-Party Services</h2>
-          <p>We use Supabase to store site data and Vercel for hosting. These providers process technical data (such as IP address) as needed to operate the service.</p>
-          <h2>Your Rights</h2>
-          <p>You may request access to or deletion of your personal data at any time through the Contact Us page.</p>
-          <h2>Data Security</h2>
-          <p>We apply advanced security measures to protect your data from unauthorized access.</p>
+          <h2>Services that process data for us</h2>
+          <ul>
+            <li><strong>Cloudflare:</strong> hosting, content delivery, security and bot protection, and the database and file storage that hold the site's content and accounts.</li>
+            <li><strong>Google:</strong> AdSense advertising, optional Google sign-in, and Google Fonts. Fonts are loaded from Google servers, which receive your IP address when the page loads.</li>
+            <li><strong>WhatsApp and Telegram:</strong> links to our community channels; they are used only if you click them and are governed by their own policies.</li>
+          </ul>
+          <h2>Your choices and rights</h2>
+          <p>You may ask us to access, correct or delete your personal data, or to delete your account, at any time by contacting us at the email above. You can also sign out, clear your browser storage, disable notifications, and opt out of personalized ads as described above.</p>
+          <h2>Data security</h2>
+          <p>We take reasonable technical and organizational measures to protect your data, but no online service can guarantee absolute security.</p>
+          <h2>Changes to this policy</h2>
+          <p>We may update this policy when our services change. The date at the top shows when it was last updated.</p>
         </>
       ) : (
         <>
-          <p>نحن في NurseHub Egypt نلتزم بحماية خصوصية مستخدمينا. توضح هذه السياسة كيفية جمع واستخدام بياناتك.</p>
+          <p><strong>آخر تحديث: 13 نوفمبر 2026.</strong></p>
+          <p>نحن في NurseHub Egypt نحترم خصوصيتك. توضح هذه السياسة ما البيانات التي يجمعها الموقع والتطبيق المثبّت، ولماذا، وما الخدمات التي تعالجها، وما الخيارات المتاحة لك.</p>
+          <h2>من نحن وكيف تتواصل معنا</h2>
+          <p>NurseHub Egypt موقع عربي لتعليم التمريض. لأي سؤال أو طلب يخص الخصوصية راسلنا على <a href={`mailto:${email}`}>{email}</a> أو استخدم صفحة <Link to="/contact">اتصل بنا</Link>.</p>
           <h2>المعلومات التي نجمعها</h2>
-          <p>قد نجمع بريدك الإلكتروني عند الاشتراك في النشرة، ومعلومات التصفح لتحسين تجربتك.</p>
-          <h2>استخدام المعلومات</h2>
-          <ul><li>تحسين المحتوى والخدمات</li><li>إرسال التحديثات والعروض</li><li>تحليل أداء الموقع</li></ul>
-          <h2>ملفات تعريف الارتباط (Cookies)</h2>
-          <p>نستخدم الكوكيز لتحسين تجربة التصفح وعرض إعلانات مناسبة.</p>
+          <ul>
+            <li><strong>الحساب:</strong> عند إنشاء حساب نحفظ بريدك الإلكتروني واسمك وطريقة تسجيل الدخول. عند التسجيل بالبريد تُحفظ كلمة المرور في صورة مشفّرة أحادية الاتجاه فقط. وعند الدخول بجوجل نستلم اسم حسابك وبريدك على جوجل ولا نرى كلمة مرور جوجل أبدًا. وللمستخدمين المسجّلين نحفظ أيضًا المفضّلة وسجل القراءة.</li>
+            <li><strong>طلبات المتجر:</strong> الاسم والبريد ورقم الهاتف (اختياري) وطريقة الدفع ومرجع الدفع ومبلغ الطلب. لا نجمع ولا نخزّن أرقام بطاقات الدفع.</li>
+            <li><strong>التعليقات:</strong> الاسم ونص التعليق الذي ترسله، ولا يظهر التعليق إلا بعد المراجعة.</li>
+            <li><strong>إحصاءات استخدام مجهولة:</strong> معرّف عشوائي للزائر محفوظ في متصفحك، والصفحات التي زرتها، ونوع الجهاز (موبايل أو تابلت أو كمبيوتر)، ونوع مصدر الزيارة، وهل استُخدم التطبيق المثبّت. هذه البيانات غير مرتبطة باسمك أو بريدك، ولا نحفظ عنوان IP الخاص بك ضمن هذه الإحصاءات.</li>
+            <li><strong>الإشعارات:</strong> إذا فعّلتها نحفظ عنوان اشتراك متصفحك في الإشعارات ومفاتيحه لنتمكن من إرسالها. يمكنك إيقافها في أي وقت من إعدادات المتصفح أو الجهاز.</li>
+            <li><strong>البيانات التقنية:</strong> كأي موقع، يعالج مزوّد الاستضافة والحماية لدينا بيانات تقنية مثل عنوان IP ونوع المتصفح لتقديم الموقع ومنع إساءة الاستخدام والحد من الطلبات الزائدة. كما نحتفظ بسجلات أمنية قصيرة تتضمن عنوان IP، مثل محاولات دخول المشرف الفاشلة وطلبات الاستعلام عن الطلبات، لمنع إساءة الاستخدام.</li>
+            <li><strong>الرسائل:</strong> نموذج الاتصال يفتح تطبيق البريد لديك، فلا نستلم إلا ما تختار إرساله.</li>
+          </ul>
+          <h2>كيف نستخدم المعلومات</h2>
+          <ul><li>لتشغيل الموقع والحسابات وطلبات المتجر والإشعارات</li><li>لمعرفة المحتوى المفيد وتحسينه</li><li>لتأمين الخدمة ومنع إساءة الاستخدام</li><li>لعرض الإعلانات (انظر أدناه)</li></ul>
+          <h2>تخزين المتصفح وملفات تعريف الارتباط</h2>
+          <p>نستخدم التخزين المحلي وIndexedDB وذاكرة التخزين المؤقت في متصفحك لتذكّر التفضيلات (اللغة والمظهر وخيارات العرض) والمفضّلة وسلة المشتريات وتقدّم المذاكرة والمحتوى المخزّن مؤقتًا والمعرّف المجهول للزائر، ولتمكين التطبيق من العمل مع الاتصال الضعيف. ونستخدم كوكي جلسة لتسجيل دخول المشرف فقط. أما كوكيز الإعلانات فتضعها Google وشركاؤها (انظر أدناه). يمكنك مسح أو حظر التخزين والكوكيز من إعدادات المتصفح، وقد تتوقف بعض المزايا عن العمل عندها.</p>
           <h2>الإعلانات (Google AdSense)</h2>
           <p>نستخدم خدمة Google AdSense لعرض الإعلانات. تستخدم أطراف ثالثة، ومنها Google، ملفات تعريف الارتباط لعرض إعلانات بناءً على زياراتك السابقة لموقعنا ولمواقع أخرى. ويتيح استخدام Google لكوكيز الإعلانات لها ولشركائها عرض إعلانات لك بناءً على زيارتك لموقعنا و/أو مواقع أخرى على الإنترنت.</p>
           <p>يمكنك إلغاء الاشتراك في الإعلانات المخصصة من خلال <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">إعدادات إعلانات Google</a>، كما يمكنك إلغاء استخدام الأطراف الثالثة للكوكيز في الإعلانات المخصصة عبر <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer">aboutads.info</a>. ولمعرفة كيف تستخدم Google البيانات راجع <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">كيف تستخدم Google البيانات من المواقع التي تستخدم خدماتها</a>.</p>
-          <h2>خدمات الأطراف الثالثة</h2>
-          <p>نستخدم Supabase لتخزين بيانات الموقع وVercel للاستضافة، وتعالج هذه الخدمات بيانات تقنية (مثل عنوان IP) بالقدر اللازم لتشغيل الخدمة.</p>
-          <h2>حقوقك</h2>
-          <p>يمكنك في أي وقت طلب الاطلاع على بياناتك الشخصية أو حذفها عبر صفحة اتصل بنا.</p>
+          <h2>الخدمات التي تعالج البيانات لصالحنا</h2>
+          <ul>
+            <li><strong>Cloudflare:</strong> الاستضافة وتسريع توصيل المحتوى والأمان وحماية الموقع من البوتات، وقاعدة البيانات وتخزين الملفات التي تحفظ محتوى الموقع والحسابات.</li>
+            <li><strong>Google:</strong> إعلانات AdSense، وتسجيل الدخول الاختياري بجوجل، وخطوط Google Fonts. تُحمَّل الخطوط من خوادم Google، وتستلم عنوان IP الخاص بك عند تحميل الصفحة.</li>
+            <li><strong>WhatsApp وTelegram:</strong> روابط لقنوات المجتمع لدينا، ولا تُستخدم إلا إذا ضغطت عليها، وتخضع لسياساتها الخاصة.</li>
+          </ul>
+          <h2>خياراتك وحقوقك</h2>
+          <p>يمكنك في أي وقت أن تطلب الاطلاع على بياناتك الشخصية أو تصحيحها أو حذفها، أو حذف حسابك، بالتواصل معنا على البريد أعلاه. ويمكنك أيضًا تسجيل الخروج ومسح تخزين المتصفح وإيقاف الإشعارات وإلغاء الإعلانات المخصصة كما هو موضح أعلاه.</p>
           <h2>أمان البيانات</h2>
-          <p>نطبق إجراءات أمنية متقدمة لحماية بياناتك من الوصول غير المصرح به.</p>
+          <p>نطبّق إجراءات تقنية وتنظيمية معقولة لحماية بياناتك، لكن لا توجد خدمة على الإنترنت تضمن الأمان المطلق.</p>
+          <h2>التغييرات على هذه السياسة</h2>
+          <p>قد نحدّث هذه السياسة عند تغيّر خدماتنا. يوضح التاريخ في أعلاها آخر مرة تم فيها التحديث.</p>
         </>
       )}
     </Wrap>
@@ -201,7 +259,7 @@ export function Terms() {
   const { lang } = useI18n();
   const isEn = lang === "en";
   return (
-    <Wrap titleAr="شروط الاستخدام" titleEn="Terms of Use">
+    <Wrap titleAr="شروط الاستخدام" titleEn="Terms of Use" descAr="شروط استخدام منصة NurseHub Egypt التعليمية." descEn="Terms of use for the NurseHub Egypt educational platform.">
       {isEn ? (
         <>
           <p>By using the NurseHub Egypt platform, you agree to the following terms.</p>

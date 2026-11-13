@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../lib/store";
 import ECGLearn from "./ECGLearn";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
@@ -2826,7 +2826,6 @@ export default function ECGPage() {
         </button>
       </div>
 
-      <div className="mb-6"><AdSlot label="إعلان مكتبة ECG" /></div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {list.map((p) => <ECGCard key={p.id} p={p} />)}

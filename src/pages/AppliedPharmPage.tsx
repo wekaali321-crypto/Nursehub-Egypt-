@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import TopicBody from "../components/TopicBody";
-import { Breadcrumbs, AdSlot } from "../components/common";
+import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { fetchAppliedPharmItems, type AppliedPharmItem } from "../lib/appliedPharmApi";
 import { useStore } from "../lib/store";
@@ -123,7 +123,6 @@ export function AppliedPharmHome() {
         </div>
       </div>
 
-      <div className="mb-6"><AdSlot label={LABELS.adBank[lang]} /></div>
 
       {loading && <div className="py-10 text-center text-slate-400">{LABELS.loading[lang]}</div>}
 
@@ -232,7 +231,6 @@ export function AppliedPharmTopicPage() {
         <p className="mt-1 text-white/85">{topicItems.length} {LABELS.itemCount[lang]}</p>
       </div>
 
-      <div className="mb-6"><AdSlot label={LABELS.adTopic[lang]} /></div>
 
       <input
         value={q}
@@ -319,7 +317,6 @@ export default function AppliedPharmPlanPage() {
         <p className="mt-1 text-white/90">{diseaseName}</p>
       </div>
 
-      <div className="mb-6"><AdSlot label={LABELS.adPlan[lang]} /></div>
 
       <div className="space-y-4">
         {lines.map((l, idx) => (
