@@ -94,7 +94,7 @@ export default function DashboardHome() {
                 نشطون الآن على الموقع
               </div>
               <div className="mt-1 text-5xl font-black">{tr ? nf(tr.online_now) : "…"}</div>
-              <div className="text-xs text-white/80">{tr && tr.online_app ? `منهم ${nf(tr.online_app)} من التطبيق · ` : ""}آخر دقيقتين</div>
+              <div className="text-xs text-white/80">{tr && tr.online_app ? `منهم ${nf(tr.online_app)} من التطبيق · ` : ""}آخر 5 دقايق</div>
             </div>
             <div className="grid flex-1 grid-cols-2 gap-2 text-center sm:max-w-2xl sm:grid-cols-5">
               {[

@@ -75,7 +75,7 @@ export function TrafficAdmin() {
           <div>
             <div className="flex items-center gap-2 text-sm font-bold text-white/90"><span className="relative flex h-3 w-3"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75" /><span className="relative inline-flex h-3 w-3 rounded-full bg-white" /></span>نشطون الآن على الموقع</div>
             <div className="mt-1 text-6xl font-black">{nf(stats.online_now)}</div>
-            <div className="text-sm text-white/85">زائر خلال آخر دقيقتين{stats.online_app ? ` · منهم ${nf(stats.online_app)} من التطبيق` : ""}</div>
+            <div className="text-sm text-white/85">زائر خلال آخر 5 دقايق{stats.online_app ? ` · منهم ${nf(stats.online_app)} من التطبيق` : ""}</div>
           </div>
           <div className="grid grid-cols-2 gap-3 text-center text-sm">
             <div className="rounded-2xl bg-white/15 px-5 py-3"><div className="text-2xl font-black">{nf(stats.totals.visitors)}</div><div className="text-white/85">إجمالي الزوار</div></div>

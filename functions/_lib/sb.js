@@ -88,6 +88,34 @@ function publicInsertOk(table, row) {
   }
 }
 
+
+// ---------------------------------------------------------------- tracking guard (protects the D1 free plan: 100k writes/day)
+const BOT_UA = /bot|crawl|spider|slurp|lighthouse|headless|facebookexternalhit|preview|pingdom|monitor|python|curl|wget|scrapy|httpclient|go-http|java\//i;
+const TRACK_TABLES = new Set(['site_visits', 'site_pings', 'site_installs']);
+const TRACK_PER_IP_PER_MIN = 90; // generous: mobile carriers put many users behind one IP
+async function overIpLimit(request) {
+  try {
+    const ip = request.headers.get('cf-connecting-ip') || 'x';
+    const key = new Request(`https://rl.internal/${encodeURIComponent(ip)}/${Math.floor(Date.now() / 60000)}`);
+    const cache = caches.default;
+    const hit = await cache.match(key);
+    const n = hit ? Number(await hit.text()) + 1 : 1;
+    await cache.put(key, new Response(String(n), { headers: { 'cache-control': 'max-age=90' } }));
+    return n > TRACK_PER_IP_PER_MIN;
+  } catch { return false; }
+}
+/** true → silently ignore this tracking insert (bot, malformed, duplicate or flood) without writing to D1 */
+async function skipTracking(env, request, table, rows) {
+  if (BOT_UA.test(request.headers.get('user-agent') || '')) return true;
+  if (rows.length !== 1) return true;
+  const r = rows[0], vid = String(r.visitor_id || '');
+  if (vid.length < 8 || vid.length > 64 || !/^[A-Za-z0-9_-]+$/.test(vid)) return true;
+  if (await overIpLimit(request)) return true;
+  if (table === 'site_pings') return !!(await env.DB.prepare("SELECT 1 FROM site_pings WHERE visitor_id = ? AND created_at > datetime('now','-150 seconds') LIMIT 1").bind(vid).first());
+  if (table === 'site_visits') return !!(await env.DB.prepare("SELECT 1 FROM site_visits WHERE visitor_id = ? AND path = ? AND created_at > datetime('now','-20 seconds') LIMIT 1").bind(vid, String(r.path || '')).first());
+  return false;
+}
+
 // ---------------------------------------------------------------- value conversion
 const qi = (n) => `"${String(n).replace(/"/g, '')}"`;
 function fromDb(table, row) {
@@ -259,6 +287,7 @@ export async function handleRest(request, env, path, forceAdmin = false) {
       const body = await request.json().catch(() => null);
       const rows = Array.isArray(body) ? body : body ? [body] : [];
       if (!rows.length) return respond([], 201);
+      if (!admin && TRACK_TABLES.has(table) && (await skipTracking(env, request, table, rows))) return new Response(null, { status: 201, headers: CORS });
       const allowed = admin || (pol.insert === 'public' && rows.every((r) => publicInsertOk(table, r))) || (pol.write === 'own' && who.uid && rows.every((r) => r.user_id === who.uid));
       if (!allowed) return perr(who.uid || pol.insert ? 403 : 401, '42501', `new row violates row-level security policy for table "${table}"`);
       if (wantRep && !admin && pol.read !== 'public' && !(pol.write === 'own')) return perr(403, '42501', 'permission denied (cannot return inserted rows)');
@@ -339,8 +368,8 @@ async function adminSiteStats(env) {
   const day = `date(${CAIRO_OFFSET_SQL})`;
   const today = (await one("SELECT date('now','+2 hours') d")).d;
   const yday = (await one("SELECT date('now','+2 hours','-1 day') d")).d;
-  const online = (await one("SELECT COUNT(DISTINCT visitor_id) n FROM (SELECT visitor_id FROM site_pings WHERE created_at > datetime('now','-2 minutes') UNION ALL SELECT visitor_id FROM site_visits WHERE created_at > datetime('now','-2 minutes'))")).n;
-  const onlineApp = (await one("SELECT COUNT(DISTINCT visitor_id) n FROM (SELECT visitor_id FROM site_pings WHERE is_app=1 AND created_at > datetime('now','-2 minutes') UNION ALL SELECT visitor_id FROM site_visits WHERE is_app=1 AND created_at > datetime('now','-2 minutes'))")).n;
+  const online = (await one("SELECT COUNT(DISTINCT visitor_id) n FROM (SELECT visitor_id FROM site_pings WHERE created_at > datetime('now','-5 minutes') UNION ALL SELECT visitor_id FROM site_visits WHERE created_at > datetime('now','-5 minutes'))")).n;
+  const onlineApp = (await one("SELECT COUNT(DISTINCT visitor_id) n FROM (SELECT visitor_id FROM site_pings WHERE is_app=1 AND created_at > datetime('now','-5 minutes') UNION ALL SELECT visitor_id FROM site_visits WHERE is_app=1 AND created_at > datetime('now','-5 minutes'))")).n;
   const sessions = await all(`SELECT ${day} dy, COUNT(*) c FROM (SELECT visitor_id, created_at, LAG(created_at) OVER (PARTITION BY visitor_id ORDER BY created_at) prev FROM site_visits) WHERE prev IS NULL OR (julianday(created_at) - julianday(prev)) > 0.0208333 GROUP BY 1`);
   const sess = Object.fromEntries(sessions.map((r) => [r.dy, r.c]));
   const dayStats = async (d) => ({

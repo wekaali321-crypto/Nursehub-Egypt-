@@ -140,7 +140,7 @@ function trackPageviewUnsafe(path: string) {
   }
 }
 
-/** Live presence: one lightweight ping per minute while the tab is visible. */
+/** Live presence: one lightweight ping every 3 minutes while the tab is visible. */
 export function startHeartbeat(getPath: () => string) {
   try {
     return startHeartbeatUnsafe(getPath);
@@ -159,7 +159,7 @@ function startHeartbeatUnsafe(getPath: () => string) {
       .then(() => undefined, () => undefined);
   };
   ping();
-  const id = window.setInterval(ping, 60_000);
+  const id = window.setInterval(ping, 180_000); // 3 min: D1 free plan allows 100k writes/day
   const onVis = () => document.visibilityState === "visible" && ping();
   document.addEventListener("visibilitychange", onVis);
   return () => {
