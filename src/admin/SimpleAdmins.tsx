@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useStore } from "../lib/store";
 import type { Comment, Product, User } from "../lib/types";
 import { ROLE_LABELS, ROLE_COLORS, ROLE_PERMISSIONS, PERMISSION_LABELS, type Role, type Permission } from "../lib/roles";
-import { supabase } from "../lib/supabase";
+import { triggerPush } from "../lib/push";
 import MediaPicker from "./MediaPicker";
 import type { MediaItem } from "../lib/types";
 
@@ -87,17 +87,7 @@ export function ProductsAdmin() {
     };
     setData((d) => ({ ...d, products: [p, ...d.products] }));
     // Notify subscribed visitors that a new product/book is available.
-    if (supabase) {
-      supabase.functions.invoke("send-push", {
-        body: {
-          title: "📚 جديد في المتجر",
-          body: p.title,
-          link: `/product/${p.id}`,
-          tag: p.id,
-          role: "visitor",
-        },
-      }).catch(() => {}); // best-effort — never block saving on this
-    }
+    void triggerPush({ title: "📚 جديد في المتجر", body: p.title, link: `/product/${p.id}`, tag: p.id, role: "visitor" }); // best-effort — never blocks saving
     resetForm();
   };
 

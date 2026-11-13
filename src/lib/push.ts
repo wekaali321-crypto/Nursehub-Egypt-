@@ -1,10 +1,16 @@
 import { supabase } from "./supabase";
 
-// Public VAPID key — safe to expose in the client bundle by design (this is
-// only the "public" half of the keypair; the private half stays server-side
-// inside the send-push Edge Function).
-export const VAPID_PUBLIC_KEY =
-  "BFmnRQ4pF0ZO1kka4q2wPsSF7oXLz8WxpVB0tc-VzzEhecKKMnVnKnh1wlXP5dbRrrrQpoYC5VTIXJUKkmPUuA4";
+// The PUBLIC VAPID key comes from the server (/api/vapid-key), so rotating keys needs no rebuild.
+// The private half lives only in the Cloudflare env (VAPID_PRIVATE_KEY).
+async function getVapidKey(): Promise<string | null> {
+  try {
+    const r = await fetch("/api/vapid-key");
+    const j = await r.json();
+    return j?.key || null;
+  } catch {
+    return null;
+  }
+}
 
 function urlBase64ToUint8Array(base64String: string) {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
@@ -46,12 +52,21 @@ export async function enablePushNotifications(role: PushRole = "visitor"): Promi
     const permission = await Notification.requestPermission();
     if (permission !== "granted") return { ok: false, reason: "لم يتم منح إذن الإشعارات" };
 
+    const vapid = await getVapidKey();
+    if (!vapid) return { ok: false, reason: "الإشعارات غير مفعّلة على الخادم بعد" };
+    const appKey = urlBase64ToUint8Array(vapid);
+
     let sub = await reg.pushManager.getSubscription();
+    // A subscription made with a different server key (e.g. before the move to Cloudflare) can never receive pushes: renew it.
+    if (sub) {
+      const cur = sub.options?.applicationServerKey ? new Uint8Array(sub.options.applicationServerKey) : null;
+      if (!cur || cur.length !== appKey.length || cur.some((b, i) => b !== appKey[i])) {
+        await sub.unsubscribe().catch(() => {});
+        sub = null;
+      }
+    }
     if (!sub) {
-      sub = await reg.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
-      });
+      sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: appKey });
     }
 
     const json = sub.toJSON() as any;
@@ -85,15 +100,27 @@ export async function hasPushSubscription(): Promise<boolean> {
 // Alias — some components (e.g. Navbar.tsx) import this under a different name.
 export const hasActivePushSubscription = hasPushSubscription;
 
-/**
- * Fires a push notification via the send-push Edge Function. Never throws —
- * failures are logged and swallowed so a notification hiccup can never break
- * the calling flow (e.g. checkout).
- */
-export async function triggerPush(opts: { title: string; body: string; link?: string; tag?: string; role?: PushRole }) {
-  if (!supabase) return;
+export type PushPayload = { title: string; body: string; link?: string; tag?: string; role?: PushRole };
+
+/** Sends a push to all subscribers; the server sends 40 at a time, so this keeps calling until `next` is null. */
+export async function sendPushToAll(opts: PushPayload): Promise<{ data: { total: number; sent: number } | null; error: { message: string } | null }> {
+  if (!supabase) return { data: null, error: { message: "قاعدة البيانات غير متصلة" } };
+  let offset = 0, sent = 0, total = 0;
+  for (let guard = 0; guard < 200; guard++) {
+    const { data, error } = await supabase.functions.invoke("send-push", { body: { ...opts, offset } });
+    if (error) return { data: guard ? { total, sent } : null, error: { message: error.message } };
+    sent += data?.sent ?? 0;
+    total = data?.total ?? total;
+    if (data?.next == null) break;
+    offset = data.next;
+  }
+  return { data: { total, sent }, error: null };
+}
+
+/** Fires a push notification. Never throws — a notification hiccup must never break the calling flow. */
+export async function triggerPush(opts: PushPayload) {
   try {
-    await supabase.functions.invoke("send-push", { body: opts });
+    await sendPushToAll(opts);
   } catch (e) {
     console.error("triggerPush failed:", e);
   }

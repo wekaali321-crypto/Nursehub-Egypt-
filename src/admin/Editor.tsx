@@ -23,7 +23,7 @@ import { useStore, slugify, readingTime } from "../lib/store";
 import { useToast } from "../components/Toast";
 import { compressToWebP } from "../lib/image";
 import { saveDraft, loadDraft, clearDraft, type EditorDraft } from "../lib/draft";
-import { supabase } from "../lib/supabase";
+import { triggerPush } from "../lib/push";
 import MediaPicker from "./MediaPicker";
 import { CATEGORY_LABELS, type Article, type Category, type MediaItem } from "../lib/types";
 import {
@@ -398,16 +398,8 @@ export default function Editor() {
     if (finalStatus === "published") pushNotification("system", `تم نشر مقال: ${article.title}`);
     // Notify subscribed visitors — only on the transition into "published", not on every later edit.
     const isNewlyPublished = finalStatus === "published" && editing?.status !== "published";
-    if (isNewlyPublished && supabase) {
-      supabase.functions.invoke("send-push", {
-        body: {
-          title: "📰 مقال جديد",
-          body: article.title,
-          link: `/article/${article.slug}`,
-          tag: article.id,
-          role: "visitor",
-        },
-      }).catch(() => {}); // best-effort — never block saving on this
+    if (isNewlyPublished) {
+      void triggerPush({ title: "📰 مقال جديد", body: article.title, link: `/article/${article.slug}`, tag: article.id, role: "visitor" }); // best-effort — never blocks saving
     }
     clearDraft(draftId); // committed to store — remove local auto-draft
     notify("تم الحفظ بنجاح!", "success");

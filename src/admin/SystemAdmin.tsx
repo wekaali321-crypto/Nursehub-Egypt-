@@ -4,7 +4,7 @@ import { useStore } from "../lib/store";
 import { useToast } from "../components/Toast";
 import { CATEGORY_LABELS } from "../lib/types";
 import { supabase } from "../lib/supabase";
-import { enablePushNotifications, hasPushSubscription } from "../lib/push";
+import { enablePushNotifications, hasPushSubscription, sendPushToAll } from "../lib/push";
 
 const card = "rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900";
 
@@ -170,9 +170,7 @@ function BroadcastToVisitors() {
     if (!title.trim() || !body.trim()) return notify("اكتب العنوان والنص", "error");
     if (!supabase) return notify("قاعدة البيانات غير متصلة", "error");
     setSending(true);
-    const { data, error } = await supabase.functions.invoke("send-push", {
-      body: { title, body, link: link || "/", tag: "broadcast-" + Date.now(), role: "visitor" },
-    });
+    const { data, error } = await sendPushToAll({ title, body, link: link || "/", tag: "broadcast-" + Date.now(), role: "visitor" });
     setSending(false);
     if (error) return notify("فشل الإرسال: " + error.message, "error");
     notify(`تم الإرسال إلى ${data?.sent ?? 0} من أصل ${data?.total ?? 0} جهاز مشترك`, "success");
