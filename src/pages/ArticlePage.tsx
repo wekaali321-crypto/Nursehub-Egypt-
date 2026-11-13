@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useStore, readingTime } from "../lib/store";
-import { CATEGORY_LABELS, type Article, type Category } from "../lib/types";
+import { CATEGORY_LABELS, type Category } from "../lib/types";
 import { CAT_ICON, CAT_KEY } from "../components/common";
 import { useSEO, breadcrumbSchema, extractFaqSchema, extractHowToSchema } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
@@ -12,6 +12,7 @@ import { supabase, isSupabaseConfigured } from "../lib/supabase";
 import ReadingProgress from "../components/ReadingProgress";
 import Icon from "../components/Icon";
 import OptimizedImage from "../components/OptimizedImage";
+import ArticleListCard from "../components/ArticleListCard";
 import TableOfContents, { type TocItem } from "../components/TableOfContents";
 import AuthorCard, { AuthorChip } from "../components/AuthorCard";
 import ArticleNav from "../components/ArticleNav";
@@ -126,43 +127,6 @@ function CoverPlaceholder({ category, icon, title, compact = false }: { category
       <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold ring-1 ring-white/20">{category}</span>
       <span className="text-sm font-black tracking-wide opacity-90">NurseHub Egypt</span>
     </div>
-  );
-}
-
-/** Related-article card, local to the article page (the shared ArticleCard is intentionally left untouched). */
-function RelatedCard({ a }: { a: Article }) {
-  const { t, lang } = useI18n();
-  const title = bilingual(a.title, a.titleEn, lang).text;
-  const excerpt = bilingual(a.excerpt, a.excerptEn, lang).text;
-  const mins = readingTime(a.content);
-  const cat = t(CAT_KEY[a.category]);
-  return (
-    <Link
-      to={`/article/${a.slug}`}
-      className="related-card group flex overflow-hidden rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900 md:flex-col"
-    >
-      <div className="relative w-32 shrink-0 self-stretch overflow-hidden sm:w-40 md:h-auto md:w-full md:self-auto">
-        <div className="h-full min-h-[8.5rem] transition-transform duration-500 group-hover:scale-105 max-md:[&>div]:!absolute max-md:[&>div]:inset-0 max-md:[&>div]:!aspect-auto md:h-auto md:min-h-0 md:aspect-[16/10]">
-          {a.cover
-            ? <OptimizedImage src={a.cover} alt={title} width={600} ratio="16/10" className="md:!h-full" />
-            : <CoverPlaceholder category={cat} icon={CAT_ICON[a.category]} title={title} compact />}
-        </div>
-        <span className="absolute start-2 top-2 hidden items-center gap-1 rounded-full bg-[#153448]/90 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur md:inline-flex">
-          <Icon name={CAT_ICON[a.category]} size={12} /> {cat}
-        </span>
-      </div>
-      <div className="flex min-w-0 flex-1 flex-col p-3.5 md:p-4">
-        <span className="mb-1 inline-flex w-fit items-center gap-1 text-[11px] font-bold text-[#168C91] dark:text-teal-300 md:hidden">
-          <Icon name={CAT_ICON[a.category]} size={12} /> {cat}
-        </span>
-        <h3 className="line-clamp-2 font-black leading-snug text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{title}</h3>
-        {excerpt && <p className="mt-1.5 line-clamp-2 flex-1 text-sm text-slate-500 dark:text-slate-400">{excerpt}</p>}
-        <div className="mt-3 flex items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
-          <span className="inline-flex items-center gap-1"><Icon name="clock" size={13} /> {mins.toLocaleString(lang === "ar" ? "ar-EG" : "en-US")} {t("article.readingTime")}</span>
-          <span className="font-bold text-[#168C91] dark:text-teal-300">{lang === "ar" ? "اقرأ المقال ←" : "Read →"}</span>
-        </div>
-      </div>
-    </Link>
   );
 }
 
@@ -635,7 +599,7 @@ export default function ArticlePage() {
       {related.length > 0 && (
         <section className="mt-12 print:hidden">
           <h2 className="mb-5 border-s-4 border-[#168C91] ps-3 text-2xl font-black text-[#153448] dark:text-white">{t("article.related")}</h2>
-          <div className="grid gap-4 md:grid-cols-3 md:gap-6">{related.map((a) => <RelatedCard key={a.id} a={a} />)}</div>
+          <div className="grid gap-4 md:grid-cols-3 md:gap-6">{related.map((a) => <ArticleListCard key={a.id} a={a} />)}</div>
         </section>
       )}
       </div>
