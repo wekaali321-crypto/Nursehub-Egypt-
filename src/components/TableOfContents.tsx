@@ -4,13 +4,15 @@ import { useI18n } from "../lib/i18n";
 export interface TocItem { id: string; level: number; text: string }
 
 /**
- * Sticky, scrollspy table of contents with active-section highlighting.
- * Supports h2–h6, is keyboard accessible, and announces the current
- * section via aria-current for screen readers.
+ * Table of contents with scrollspy highlighting.
+ * - `collapsible` (mobile): closed by default, shows the section count, opens/closes on tap.
+ * - otherwise (desktop sidebar): always open and sticky from the parent.
+ * Supports h2–h6, keyboard accessible, announces the current section via aria-current.
  */
-export default function TableOfContents({ items, className = "" }: { items: TocItem[]; className?: string }) {
-  const { t } = useI18n();
+export default function TableOfContents({ items, className = "", collapsible = false }: { items: TocItem[]; className?: string; collapsible?: boolean }) {
+  const { t, lang } = useI18n();
   const [active, setActive] = useState<string>("");
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (!items.length) return;
@@ -30,28 +32,58 @@ export default function TableOfContents({ items, className = "" }: { items: TocI
 
   if (!items.length) return null;
 
+  const count = items.length.toLocaleString(lang === "ar" ? "ar-EG" : "en-US");
+  const listId = collapsible ? "toc-list-mobile" : "toc-list-desktop";
+  const show = !collapsible || open;
+
+  const title = (
+    <>
+      <span aria-hidden="true">📑</span> {t("article.toc")}
+      <span className="rounded-full bg-[#168C91]/10 px-2 py-0.5 text-xs font-bold text-[#168C91] dark:bg-[#168C91]/20 dark:text-teal-300">
+        {count} {lang === "ar" ? "قسم" : "sections"}
+      </span>
+    </>
+  );
+
   return (
     <nav aria-label={t("article.toc")} className={className}>
-      <h3 className="mb-3 flex items-center gap-1.5 font-bold text-slate-800 dark:text-white">
-        <span aria-hidden="true">📑</span> {t("article.toc")}
-      </h3>
-      <ul className="max-h-[60vh] space-y-0.5 overflow-y-auto border-r-2 border-slate-100 pr-3 text-sm dark:border-slate-800">
-        {items.map((it) => (
-          <li key={it.id} style={{ marginInlineStart: `${Math.max(0, it.level - 2) * 12}px` }}>
-            <a
-              href={`#${it.id}`}
-              aria-current={active === it.id ? "location" : undefined}
-              className={`block truncate rounded-lg px-2 py-1.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 ${
-                active === it.id
-                  ? "bg-sky-50 font-bold text-sky-600 dark:bg-sky-500/10 dark:text-sky-400"
-                  : "text-slate-500 hover:bg-slate-50 hover:text-sky-500 dark:text-slate-400 dark:hover:bg-slate-800"
-              }`}
-            >
-              {it.text}
-            </a>
-          </li>
-        ))}
-      </ul>
+      {collapsible ? (
+        <button
+          type="button"
+          onClick={() => setOpen((o) => !o)}
+          aria-expanded={open}
+          aria-controls={listId}
+          className="flex w-full items-center justify-between gap-2 rounded-lg font-bold text-[#153448] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#168C91] dark:text-white"
+        >
+          <span className="flex flex-wrap items-center gap-2">{title}</span>
+          <span aria-hidden="true" className={`text-[#168C91] transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
+        </button>
+      ) : (
+        <h3 className="mb-3 flex flex-wrap items-center gap-2 font-bold text-[#153448] dark:text-white">{title}</h3>
+      )}
+      {show && (
+        <ul
+          id={listId}
+          className={`max-h-[60vh] space-y-0.5 overflow-y-auto border-s-2 border-slate-100 ps-3 text-sm dark:border-slate-800 ${collapsible ? "mt-3" : ""}`}
+        >
+          {items.map((it) => (
+            <li key={it.id} style={{ marginInlineStart: `${Math.max(0, it.level - 2) * 12}px` }}>
+              <a
+                href={`#${it.id}`}
+                onClick={() => collapsible && setOpen(false)}
+                aria-current={active === it.id ? "location" : undefined}
+                className={`block rounded-lg px-2 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#168C91] ${
+                  active === it.id
+                    ? "bg-[#168C91]/10 font-bold text-[#168C91] dark:bg-[#168C91]/20 dark:text-teal-300"
+                    : "text-slate-600 hover:bg-slate-50 hover:text-[#168C91] dark:text-slate-400 dark:hover:bg-slate-800"
+                } ${collapsible ? "" : "truncate"}`}
+              >
+                {it.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 }

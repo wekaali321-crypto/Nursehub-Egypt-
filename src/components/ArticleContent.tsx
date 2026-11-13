@@ -1,4 +1,5 @@
 // src/components/ArticleContent.tsx
+import { memo } from "react";
 import MCQQuiz from "./MCQQuiz";
 import TrueFalseQuiz from "./TrueFalseQuiz";
 import FillBlankQuiz from "./FillBlankQuiz";
@@ -34,7 +35,7 @@ export function wrapTables(html: string): string {
   return html.replace(/<table(\s|>)/gi, '<div class="nh-table-wrap"><table$1').replace(/<\/table>/gi, "</table></div>");
 }
 
-export default function ArticleContent({ html, slug, lang = "ar", className = "" }: Props) {
+function ArticleContent({ html, slug, lang = "ar", className = "" }: Props) {
   const dir = lang === "ar" ? "rtl" : "ltr";
   const parts: Array<{ type: PartType; value: string }> = [];
   let lastIndex = 0;
@@ -58,7 +59,7 @@ export default function ArticleContent({ html, slug, lang = "ar", className = ""
 
   // لو مفيش placeholders، نرجع HTML عادي
   if (parts.length === 1 && parts[0].type === "html") {
-    return <div dir={dir} className={className} dangerouslySetInnerHTML={{ __html: wrapTables(html) }} />;
+    return <div dir={dir} className={`${className} ac-html`} dangerouslySetInnerHTML={{ __html: wrapTables(html) }} />;
   }
 
   return (
@@ -66,7 +67,7 @@ export default function ArticleContent({ html, slug, lang = "ar", className = ""
       {parts.map((part, index) => {
         switch (part.type) {
           case "html":
-            return <div key={index} dangerouslySetInnerHTML={{ __html: wrapTables(part.value) }} />;
+            return <div key={index} className="ac-html" dangerouslySetInnerHTML={{ __html: wrapTables(part.value) }} />;
           case "mcq":
             return <MCQQuiz key={index} slug={part.value} lang={lang} />;
           case "tf":
@@ -82,3 +83,6 @@ export default function ArticleContent({ html, slug, lang = "ar", className = ""
     </div>
   );
 }
+
+// Memoised: the article page re-renders often (views, ratings…) and React would otherwise re-apply the HTML.
+export default memo(ArticleContent);
