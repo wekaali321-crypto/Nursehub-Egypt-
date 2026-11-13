@@ -967,3 +967,5 @@ CREATE TABLE IF NOT EXISTS media_chunks (
   data BLOB NOT NULL,
   PRIMARY KEY (key, idx)
 );
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_push_endpoint ON push_subscriptions(endpoint);
