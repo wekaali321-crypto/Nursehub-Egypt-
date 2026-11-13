@@ -11,6 +11,11 @@ const SEEN_KEY = "nh_notif_seen";
 const CACHE_KEY = "nh_notifs";
 const KIND_ICON: Record<string, string> = { article: "📰", product: "📚", welcome: "🩺", broadcast: "📣" };
 
+const HIDDEN_KEY = "nh_notif_hidden";
+const getHidden = (): string[] => {
+  try { return JSON.parse(localStorage.getItem(HIDDEN_KEY) || "[]"); } catch { return []; }
+};
+
 const getSeen = () => {
   try { return Number(localStorage.getItem(SEEN_KEY) || 0); } catch { return 0; }
 };
@@ -35,6 +40,7 @@ export default function NotificationBell() {
   const [seen, setSeen] = useState(getSeen());
   const [pushOn, setPushOn] = useState(true);
   const [busy, setBusy] = useState(false);
+  const [hidden, setHidden] = useState<string[]>(getHidden());
   const ref = useRef<HTMLDivElement>(null);
 
   const load = useCallback(async (force = false) => {
@@ -64,7 +70,15 @@ export default function NotificationBell() {
   }, [open]);
 
   const ts = (n: Notif) => new Date(n.created_at.includes("T") ? n.created_at : n.created_at.replace(" ", "T") + "Z").getTime();
-  const unread = items.filter((n) => ts(n) > seen).length;
+  const visible = items.filter((n) => !hidden.includes(n.id));
+  const unread = visible.filter((n) => ts(n) > seen).length;
+
+  const hide = (ids: string[]) => {
+    // per-device: the notification stays on the server for everyone else (keep the last 100 ids only)
+    const next = [...new Set([...hidden, ...ids])].slice(-100);
+    setHidden(next);
+    try { localStorage.setItem(HIDDEN_KEY, JSON.stringify(next)); } catch { /* ignore */ }
+  };
 
   const toggle = () => {
     const next = !open;
@@ -111,7 +125,12 @@ export default function NotificationBell() {
         >
           <div className="flex items-center justify-between border-b border-slate-100 bg-gradient-to-l from-sky-500 to-emerald-500 px-4 py-3 text-white dark:border-slate-800">
             <b>{ar ? "🔔 مركز الإشعارات" : "🔔 Notifications"}</b>
-            <button onClick={() => setOpen(false)} aria-label="Close" className="text-lg leading-none">✕</button>
+            <span className="flex items-center gap-3">
+              {visible.length > 0 && (
+                <button onClick={() => hide(visible.map((n) => n.id))} className="rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-bold hover:bg-white/30">{ar ? "مسح الكل" : "Clear all"}</button>
+              )}
+              <button onClick={() => setOpen(false)} aria-label="Close" className="text-lg leading-none">✕</button>
+            </span>
           </div>
           {isPushSupported() && !pushOn && (
             <button
@@ -123,14 +142,17 @@ export default function NotificationBell() {
             </button>
           )}
           <div className="max-h-[60vh] overflow-y-auto">
-            {items.length === 0 ? (
+            {visible.length === 0 ? (
               <p className="px-4 py-10 text-center text-sm text-slate-500 dark:text-slate-400">{ar ? "لا توجد إشعارات بعد." : "No notifications yet."}</p>
             ) : (
-              items.map((n) => (
-                <button
+              visible.map((n) => (
+                <div
                   key={n.id}
+                  role="button"
+                  tabIndex={0}
                   onClick={() => go(n)}
-                  className="flex w-full items-start gap-3 border-b border-slate-100 px-4 py-3 text-start hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800/60"
+                  onKeyDown={(e) => e.key === "Enter" && go(n)}
+                  className="flex w-full cursor-pointer items-start gap-3 border-b border-slate-100 px-4 py-3 text-start hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800/60"
                 >
                   <span className="mt-0.5 text-xl">{KIND_ICON[n.kind || ""] || "🔔"}</span>
                   <span className="min-w-0 flex-1">
@@ -138,7 +160,15 @@ export default function NotificationBell() {
                     {((!ar && n.body_en) || n.body) && <span className="mt-0.5 block text-xs leading-5 text-slate-600 dark:text-slate-300">{(!ar && n.body_en) || n.body}</span>}
                     <span className="mt-1 block text-[11px] text-slate-400">{ago(n.created_at, ar)}</span>
                   </span>
-                </button>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); hide([n.id]); }}
+                    aria-label={ar ? "حذف الإشعار" : "Delete notification"}
+                    title={ar ? "حذف" : "Delete"}
+                    className="-m-1 shrink-0 rounded-full p-2 text-sm text-slate-400 hover:bg-rose-50 hover:text-rose-500 dark:hover:bg-rose-500/10"
+                  >
+                    🗑
+                  </button>
+                </div>
               ))
             )}
           </div>
