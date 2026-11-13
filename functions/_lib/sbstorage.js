@@ -34,6 +34,15 @@ function parseMultipart(buf, ct) {
   }
   return best;
 }
+// Supabase forced a download when the URL had ?download (the order page uses it). Keep that behaviour on every storage backend.
+function asDownload(res, request, file) {
+  const u = new URL(request.url);
+  if (!u.searchParams.has('download') || !res.ok) return res;
+  const base = (u.searchParams.get('download') || file.split('/').pop() || 'download').replace(/^m\d{10,}-/, '');
+  const out = new Response(res.body, res);
+  out.headers.set('content-disposition', `attachment; filename*=UTF-8''${encodeURIComponent(base)}`);
+  return out;
+}
 const dec = (p) => p.map((x) => { try { return decodeURIComponent(x); } catch { return x; } });
 
 export async function handleStorage(request, env, path) {
@@ -47,7 +56,7 @@ export async function handleStorage(request, env, path) {
       if (obj) {
         const h = new Headers({ ...CORS, 'cache-control': 'public, max-age=31536000, immutable', etag: obj.httpEtag });
         obj.writeHttpMetadata(h);
-        return new Response(request.method === 'HEAD' ? null : obj.body, { headers: h });
+        return asDownload(new Response(request.method === 'HEAD' ? null : obj.body, { headers: h }), request, file);
       }
     }
     // files uploaded from the admin panel are stored in D1 (see below) when R2 is not enabled
@@ -59,14 +68,14 @@ export async function handleStorage(request, env, path) {
         const out = new Uint8Array(meta.size);
         let off = 0;
         for (const r of rows) { const u = new Uint8Array(r.data); out.set(u, off); off += u.length; }
-        return new Response(request.method === 'HEAD' ? null : out, { headers: { ...CORS, 'content-type': meta.content_type || 'application/octet-stream', 'content-length': String(meta.size), 'cache-control': 'public, max-age=31536000, immutable' } });
+        return asDownload(new Response(request.method === 'HEAD' ? null : out, { headers: { ...CORS, 'content-type': meta.content_type || 'application/octet-stream', 'content-length': String(meta.size), 'cache-control': 'public, max-age=31536000, immutable' } }), request, file);
       }
     }
     // files copied from the old Supabase bucket live as static assets under /media/<bucket>/
     if (env.ASSETS) {
       const a = await env.ASSETS.fetch(new Request(new URL(`/media/${bucket}/${file.split('/').map(encodeURIComponent).join('/')}`, request.url)));
       // the SPA fallback answers missing files with index.html → treat as not found
-      if (a.ok && !/text\/html/.test(a.headers.get('content-type') || '')) return a;
+      if (a.ok && !/text\/html/.test(a.headers.get('content-type') || '')) return asDownload(a, request, file);
     }
     return perr(404, 'not_found', 'Object not found');
   }
