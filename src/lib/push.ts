@@ -81,10 +81,30 @@ export async function enablePushNotifications(role: PushRole = "visitor"): Promi
       { onConflict: "endpoint" }
     );
     if (error) return { ok: false, reason: error.message };
+    try { localStorage.setItem("nh_push_role", role); } catch { /* ignore */ }
 
     return { ok: true };
   } catch (e: any) {
     return { ok: false, reason: e?.message ?? "حدث خطأ غير متوقع" };
+  }
+}
+
+/**
+ * Self-heal: devices that subscribed before the move to Cloudflare (old server key, never saved in the new database)
+ * look "enabled" locally but receive nothing. When permission is already granted, silently renew + re-save the
+ * subscription (no prompt is shown). Runs at most once a day per device and keeps the role the device chose.
+ */
+export async function syncPushSubscription(): Promise<void> {
+  try {
+    if (!isPushSupported() || Notification.permission !== "granted") return;
+    const last = Number(localStorage.getItem("nh_push_sync") || 0);
+    if (Date.now() - last < 24 * 3600 * 1000) return;
+    if (!(await hasPushSubscription())) return;
+    const role = (localStorage.getItem("nh_push_role") as PushRole) || "visitor";
+    const res = await enablePushNotifications(role);
+    if (res.ok) localStorage.setItem("nh_push_sync", String(Date.now()));
+  } catch {
+    /* never break the app */
   }
 }
 
