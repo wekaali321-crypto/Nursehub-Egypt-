@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { trackPageview, startHeartbeat } from "./lib/siteTracker";
+import { syncPushSubscription } from "./lib/push";
 import { ThemeProvider, AuthProvider, useAuth } from "./lib/theme";
 import { UserAuthProvider } from "./lib/userAuth";
 import { I18nProvider } from "./lib/i18n";
@@ -238,6 +239,7 @@ function SiteTracker() {
     trackPageview(pathname + search);
   }, [pathname, search]);
   useEffect(() => startHeartbeat(() => window.location.pathname), []);
+  useEffect(() => { const t = window.setTimeout(() => void syncPushSubscription(), 4000); return () => window.clearTimeout(t); }, []);
   return null;
 }
 

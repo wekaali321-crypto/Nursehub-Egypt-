@@ -37,16 +37,18 @@ export default function NotificationBell() {
   const [busy, setBusy] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  const load = useCallback(async () => {
-    const cached = await cacheGet<Notif[]>(CACHE_KEY, 5 * 60 * 1000);
-    if (cached) { setItems(cached); return; }
+  const load = useCallback(async (force = false) => {
+    if (!force) {
+      const cached = await cacheGet<Notif[]>(CACHE_KEY, 2 * 60 * 1000);
+      if (cached && cached.length) { setItems(cached); return; }
+    }
     if (!supabase) return;
     const { data } = await supabase
       .from("user_notifications")
       .select("id,title,body,title_en,body_en,link,kind,created_at")
       .order("created_at", { ascending: false })
       .limit(30);
-    if (data) { setItems(data as Notif[]); void cacheSet(CACHE_KEY, data); }
+    if (data) { setItems(data as Notif[]); if (data.length) void cacheSet(CACHE_KEY, data); }
   }, []);
 
   useEffect(() => {
@@ -68,7 +70,7 @@ export default function NotificationBell() {
     const next = !open;
     setOpen(next);
     if (next) {
-      void load();
+      void load(true); // always fresh when the panel is opened (one small request)
       const now = Date.now();
       try { localStorage.setItem(SEEN_KEY, String(now)); } catch { /* ignore */ }
       setSeen(now);
