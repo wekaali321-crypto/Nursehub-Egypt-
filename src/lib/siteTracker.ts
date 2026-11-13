@@ -21,18 +21,23 @@ function rand(): string {
   }
 }
 
+// In-memory fallback: when storage is blocked (Facebook/Messenger/Telegram in-app browsers) the id must still be
+// stable for the page's lifetime. A fresh id per call made every ping/pageview look like a new visitor.
+const memoryIds: Record<string, string> = {};
+
 function stored(kind: "local" | "session", key: string): string {
   // Merely touching window.localStorage can throw in some in-app browsers (blocked storage), so everything is guarded.
+  const mem = (memoryIds[kind + key] ||= rand());
   try {
     const storage = kind === "local" ? window.localStorage : window.sessionStorage;
     let v = storage.getItem(key) || "";
     if (!v) {
-      v = rand();
+      v = mem;
       storage.setItem(key, v);
     }
     return v;
   } catch {
-    return rand();
+    return mem;
   }
 }
 
