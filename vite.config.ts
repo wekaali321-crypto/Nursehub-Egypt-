@@ -3,7 +3,6 @@ import { fileURLToPath } from "url";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig, type Plugin } from "vite";
-import { viteSingleFile } from "vite-plugin-singlefile";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,8 +21,27 @@ const rootRelativePublicLinks = (): Plugin => ({
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), viteSingleFile(), rootRelativePublicLinks()],
-  base: "./",
+  plugins: [react(), tailwindcss(), rootRelativePublicLinks()],
+  base: "/",
+  build: {
+    chunkSizeWarningLimit: 700,
+    rollupOptions: {
+      output: {
+        // Stable vendor chunks: cached across deploys and only downloaded by the pages that need them.
+        manualChunks(id: string) {
+          const m = /node_modules\/((?:@[^/]+\/)?[^/]+)/.exec(id);
+          if (!m) return undefined;
+          const pkg = m[1];
+          if (/^(react|react-dom|scheduler|react-router|react-router-dom|@remix-run\/router)$/.test(pkg)) return "vendor-react";
+          if (pkg.startsWith("@supabase/")) return "vendor-supabase";
+          // admin-only rich-text editor and .docx/.pdf import tooling: grouped so they load as one request, only in the admin
+          if (pkg.startsWith("@tiptap/") || pkg.startsWith("prosemirror-") || /^(orderedmap|rope-sequence|w3c-keyname|linkifyjs|tippy\.js)$/.test(pkg)) return "vendor-editor";
+          if (/^(mammoth|jszip|bluebird|@xmldom\/xmldom|xmlbuilder|underscore|dingbat-to-unicode|lop|option|path-is-absolute|pako|lie|immediate|readable-stream|setimmediate|core-util-is|inherits|isarray|safe-buffer|string_decoder|process-nextick-args|util-deprecate)$/.test(pkg)) return "vendor-docs";
+          return undefined;
+        },
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
