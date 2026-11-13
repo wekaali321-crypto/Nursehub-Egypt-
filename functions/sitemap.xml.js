@@ -12,3 +12,9 @@ export const onRequestGet = async (ctx) => {
   try { ctx.waitUntil(caches.default.put(key, res.clone())); } catch { /* ignore */ }
   return res;
 };
+
+// HEAD (link checkers, some validators) must describe the XML, not fall through to the SPA page.
+export const onRequestHead = async (ctx) => {
+  const res = await onRequestGet(ctx);
+  return new Response(null, { status: res.status, headers: res.headers });
+};
