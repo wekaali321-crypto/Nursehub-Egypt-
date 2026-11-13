@@ -6,6 +6,7 @@ import { useUserAuth } from "../lib/userAuth";
 import { cn } from "../utils/cn";
 import SmartSearch from "./SmartSearch";
 import Logo from "./Logo";
+import NotificationBell from "./NotificationBell";
 import { useI18n, type TKey } from "../lib/i18n";
 import { useFavorites } from "../lib/favorites";
 import { useFeatures } from "../admin/cms/useFeatures";
@@ -245,9 +246,7 @@ export default function Navbar() {
               🔕
             </button>
           )}
-          {pushOn && (
-            <span title="الإشعارات مفعّلة" className="hidden h-10 w-10 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-lg sm:flex dark:border-emerald-500/30 dark:bg-emerald-500/10">🔔</span>
-          )}
+          <NotificationBell />
 
           <button
             onClick={toggle}

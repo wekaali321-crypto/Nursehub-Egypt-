@@ -923,6 +923,16 @@ CREATE TABLE IF NOT EXISTS "nh_settings" (
   "key" TEXT PRIMARY KEY,
   "value" TEXT
 );
+CREATE TABLE IF NOT EXISTS "user_notifications" (
+  "id" TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(16)))),
+  "title" TEXT NOT NULL,
+  "body" TEXT,
+  "title_en" TEXT,
+  "body_en" TEXT,
+  "link" TEXT,
+  "kind" TEXT,
+  "created_at" TEXT DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now'))
+);
 
 CREATE INDEX IF NOT EXISTS idx_site_visits_created ON site_visits(created_at);
 CREATE INDEX IF NOT EXISTS idx_site_visits_visitor ON site_visits(visitor_id, created_at);

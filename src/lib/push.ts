@@ -100,7 +100,7 @@ export async function hasPushSubscription(): Promise<boolean> {
 // Alias — some components (e.g. Navbar.tsx) import this under a different name.
 export const hasActivePushSubscription = hasPushSubscription;
 
-export type PushPayload = { title: string; body: string; link?: string; tag?: string; role?: PushRole };
+export type PushPayload = { title: string; body: string; link?: string; tag?: string; role?: PushRole; title_en?: string; body_en?: string; kind?: string };
 
 /** Sends a push to all subscribers; the server sends 40 at a time, so this keeps calling until `next` is null. */
 export async function sendPushToAll(opts: PushPayload): Promise<{ data: { total: number; sent: number } | null; error: { message: string } | null }> {

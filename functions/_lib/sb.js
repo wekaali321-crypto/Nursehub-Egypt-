@@ -57,7 +57,7 @@ export async function isAdmin(env, who) {
 const CONTENT = `ads affiliates anatomy_topics applied_pharm_items articles cardiac_med_groups categories clinical_protocols course_chapters course_questions courses dialysis_topics disease_images drug_antidotes drug_classifications drug_interactions drug_suffixes drugs er_medications er_reception_topics exam_categories exam_questions exams first_aid_topics fundamentals_topics high_alert_ref icu_medications icu_topics interview_categories interview_questions iv_compatibility lasa_pairs media nicu_topics obgyn_topics operating_room_topics organ_dose_adjustments otc_conditions pages pediatric_quiz_questions pediatric_topics peds_medications pharm_mnemonics pharmacology_topics pharmacy_facts pregnancy_lactation_safety products quiz_questions radiology_topics redirects rx_prescriptions site_settings tags terminology_quiz_questions terminology_topics travel_categories travel_questions travel_review_sections`.split(/\s+/);
 const READ_FILTER = { articles: "status = 'published'", pages: "status = 'published'", ads: 'active = 1', comments: "status = 'approved'" };
 const POLICY = {};
-CONTENT.push('nh_settings');
+CONTENT.push('nh_settings', 'user_notifications');
 for (const t of CONTENT) POLICY[t] = { read: 'public', write: 'admin' };
 Object.assign(POLICY, {
   activity_log: { read: 'admin', write: 'admin' },

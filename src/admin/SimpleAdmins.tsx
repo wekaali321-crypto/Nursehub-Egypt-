@@ -87,7 +87,7 @@ export function ProductsAdmin() {
     };
     setData((d) => ({ ...d, products: [p, ...d.products] }));
     // Notify subscribed visitors that a new product/book is available.
-    void triggerPush({ title: "📚 جديد في المتجر", body: p.title, link: `/product/${p.id}`, tag: p.id, role: "visitor" }); // best-effort — never blocks saving
+    void triggerPush({ title: "📚 جديد في المتجر", body: p.title, link: `/product/${p.id}`, tag: p.id, kind: "product", role: "visitor" }); // best-effort — never blocks saving
     resetForm();
   };
 
