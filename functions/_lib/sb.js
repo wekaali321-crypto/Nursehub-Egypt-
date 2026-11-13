@@ -1,5 +1,6 @@
 // Supabase-compatible backend on Cloudflare D1 (PostgREST subset + GoTrue subset + Storage subset).
 // The browser keeps using @supabase/supabase-js; only VITE_SUPABASE_URL changes to the site origin.
+import { pushToRole } from './push.js';
 import { SCHEMA } from './sbschema.js';
 
 const enc = new TextEncoder();
@@ -283,6 +284,11 @@ export async function handleRest(request, env, path, forceAdmin = false) {
       for (let i = 0; i < stmts.length; i += 90) {
         const res = await env.DB.batch(stmts.slice(i, i + 90));
         for (const r of res) for (const row of r.results || []) out.push(fromDb(table, row));
+      }
+      if (table === 'orders' && !admin) {
+        // new order → push to the admin's devices (replaces the old database trigger)
+        const o = out[0] || rows[0] || {};
+        try { await pushToRole(env, 'admin', { title: '🛒 طلب جديد', body: `${o.invoice_no || ''} — ${o.total ?? o.amount ?? ''}`.trim(), link: o.invoice_no ? `/admin/orders?inv=${encodeURIComponent(o.invoice_no)}` : '/admin/orders', id: 'order-' + (o.id || '') }); } catch { /* never block an order */ }
       }
       return wantRep ? (single ? respond(out[0] ?? null, 201) : respond(out, 201)) : new Response(null, { status: 201, headers: CORS });
     }

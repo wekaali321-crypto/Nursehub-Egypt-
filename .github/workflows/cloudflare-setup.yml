@@ -60,14 +60,31 @@ jobs:
         env:
           ADMIN_EMAIL: ${{ inputs.admin_email }}
           CUTOVER: ${{ inputs.cutover }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
         run: |
           API="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/$PROJECT"
           AUTH="Authorization: Bearer $CLOUDFLARE_API_TOKEN"
           curl -fsS -H "$AUTH" "$API" > project.json
           HAS_JWT=$(node -e "const p=require('./project.json').result;console.log(p.deployment_configs?.production?.env_vars?.JWT_SECRET?'yes':'no')")
+          HAS_VAPID=$(node -e "const p=require('./project.json').result;console.log(p.deployment_configs?.production?.env_vars?.VAPID_PRIVATE_KEY?'yes':'no')")
           node -e "
             const env_vars = { ADMIN_EMAIL: { type: 'plain_text', value: process.env.ADMIN_EMAIL } };
             if ('$HAS_JWT' === 'no') env_vars.JWT_SECRET = { type: 'secret_text', value: require('crypto').randomBytes(32).toString('hex') };
+            // Web Push keys: generated once (the private half never leaves Cloudflare; never printed)
+            if ('$HAS_VAPID' === 'no') {
+              const c = require('crypto'); const k = c.generateKeyPairSync('ec', { namedCurve: 'prime256v1' }); const j = k.privateKey.export({ format: 'jwk' });
+              env_vars.VAPID_PUBLIC_KEY = { type: 'plain_text', value: Buffer.concat([Buffer.from([4]), Buffer.from(j.x, 'base64url'), Buffer.from(j.y, 'base64url')]).toString('base64url') };
+              env_vars.VAPID_PRIVATE_KEY = { type: 'secret_text', value: j.d };
+              env_vars.VAPID_SUBJECT = { type: 'plain_text', value: 'mailto:' + process.env.ADMIN_EMAIL.split(',')[0].trim() };
+              console.log('Push keys generated');
+            }
+            // Google sign-in (only when both repo secrets exist)
+            if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
+              env_vars.GOOGLE_CLIENT_ID = { type: 'plain_text', value: process.env.GOOGLE_CLIENT_ID };
+              env_vars.GOOGLE_CLIENT_SECRET = { type: 'secret_text', value: process.env.GOOGLE_CLIENT_SECRET };
+              console.log('Google sign-in configured');
+            }
             if (process.env.CUTOVER === 'true') {
               env_vars.VITE_SUPABASE_URL = { type: 'plain_text', value: 'self' };
               env_vars.VITE_SUPABASE_PUBLISHABLE_KEY = { type: 'plain_text', value: 'cloudflare-d1' };
