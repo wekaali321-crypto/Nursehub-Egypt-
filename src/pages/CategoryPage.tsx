@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { CATEGORY_ICONS, type Category } from "../lib/types";
-import { ArticleCard, Breadcrumbs } from "../components/common";
+import ArticleListCard from "../components/ArticleListCard";
 import { useI18n, bilingual, type TKey } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
 
@@ -40,7 +40,6 @@ export default function CategoryPage() {
   const { articles, categories } = useStore();
   const { lang, t } = useI18n();
   const [sort, setSort] = useState("latest");
-  const [tag, setTag] = useState("");
 
   const category = (cat ?? "articles") as Category;
   const catLabel = t(CAT_KEY[category]);
@@ -64,12 +63,9 @@ export default function CategoryPage() {
   } else {
     list = list.filter((a) => !a.subcategory);
   }
-  if (tag) list = list.filter((a) => a.tags.includes(tag));
   list = [...list].sort((a, b) =>
     sort === "popular" ? b.views - a.views : b.publishDate.localeCompare(a.publishDate)
   );
-
-  const tags = Array.from(new Set(list.flatMap((a) => a.tags)));
 
   // At the top level, only render the tag bar / grid section when there's
   // something uncategorized to show, or when there are no folders at all
@@ -89,97 +85,110 @@ export default function CategoryPage() {
     return () => { meta.remove(); };
   }, [totalInSection]);
 
+  const heroCount = activeSub ? list.length : totalInSection;
+  const folderCount = (id: string) => articles.filter((a) => a.category === category && a.status === "published" && a.subcategory === id).length;
+
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8">
-      <Breadcrumbs
-        items={
-          activeSub
-            ? [{ label: catLabel, path: `/category/${category}` }, { label: activeSubName! }]
-            : [{ label: catLabel }]
-        }
-      />
-      <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-sky-500 to-emerald-500 p-8 text-white">
-        <div className="text-5xl">{activeSub ? "📁" : CATEGORY_ICONS[category]}</div>
-        <h1 className="mt-2 text-3xl font-black">{activeSub ? activeSubName : catLabel}</h1>
-        <p className="mt-1 text-sky-50">{(activeSub ? list.length : totalInSection)} {t("common.item")}</p>
-      </div>
-
-      {!activeSub && category === "skills" && (
-        <div className="mb-8">
-          <h2 className="mb-3 text-lg font-bold text-slate-800 dark:text-white">{t("cat.protocolChecklists")}</h2>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {SKILL_PROTOCOL_LINKS.map((s) => (
-              <Link
-                key={s.to}
-                to={s.to}
-                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal-600 to-cyan-700 p-5 text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                <div className="text-3xl mb-2">{s.icon}</div>
-                <div className="font-bold">{bilingual(s.title, s.titleEn, lang).text}</div>
-                <p className="mt-1 text-sm text-white/85">{bilingual(s.desc, s.descEn, lang).text}</p>
-                <span className="mt-3 inline-block text-sm font-bold text-white/90 group-hover:underline">{t("cat.open")}</span>
-              </Link>
-            ))}
+    <div className="bg-[#F1F4F6] pb-12 dark:bg-slate-950">
+      <header className="relative overflow-hidden bg-[#153448] text-white">
+        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
+        <div aria-hidden className="pointer-events-none absolute -top-20 end-[-5rem] h-64 w-64 rounded-full bg-[#168C91]/40 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl px-4 pb-8 pt-5 md:pb-10 md:pt-8">
+          <div className="flex items-start justify-between gap-3">
+            <nav aria-label="Breadcrumb" className="text-xs text-slate-300 sm:text-sm">
+              <ol className="flex flex-wrap items-center gap-1">
+                <li><Link to="/" className="hover:text-teal-200">{t("nav.home")}</Link></li>
+                <li aria-hidden="true">/</li>
+                {activeSub ? (
+                  <>
+                    <li><Link to={`/category/${category}`} className="hover:text-teal-200">{catLabel}</Link></li>
+                    <li aria-hidden="true">/</li>
+                    <li aria-current="page" className="font-semibold text-white">{activeSubName}</li>
+                  </>
+                ) : (
+                  <li aria-current="page" className="font-semibold text-white">{catLabel}</li>
+                )}
+              </ol>
+            </nav>
+            <InlineLangToggle light />
+          </div>
+          <div className="mt-5 flex items-center gap-4">
+            <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl" aria-hidden="true">{activeSub ? "📁" : CATEGORY_ICONS[category]}</span>
+            <div className="min-w-0">
+              <h1 className="text-2xl font-black leading-tight md:text-4xl">{activeSub ? activeSubName : catLabel}</h1>
+              <p className="mt-1 text-sm text-teal-200">{heroCount} {t("common.item")}</p>
+            </div>
           </div>
         </div>
-      )}
+      </header>
 
-      {/* Real sub-category folders — shown only at the top level of the section,
-          before the user has drilled into one. Clicking a folder navigates to
-          /category/:cat/:sub and shows only that folder's articles. */}
-      {!activeSub && subcats.length > 0 && (
-        <div className="mb-8">
-          <h2 className="mb-3 text-lg font-bold text-slate-800 dark:text-white">{t("cat.subcategories")}</h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {subcats.map((c) => {
-              const count = articles.filter(
-                (a) => a.category === category && a.status === "published" && a.subcategory === c.id
-              ).length;
-              return (
+      <div className="mx-auto max-w-7xl px-4 pt-6">
+        {!activeSub && category === "skills" && (
+          <section className="mb-8">
+            <h2 className="mb-3 border-s-4 border-[#168C91] ps-3 text-lg font-black text-[#153448] dark:text-white">{t("cat.protocolChecklists")}</h2>
+            <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
+              {SKILL_PROTOCOL_LINKS.map((s) => (
+                <Link
+                  key={s.to}
+                  to={s.to}
+                  className="group relative flex gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-[#153448] to-[#168C91] p-4 text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                >
+                  <span className="text-3xl" aria-hidden="true">{s.icon}</span>
+                  <span className="min-w-0">
+                    <span className="block font-bold">{bilingual(s.title, s.titleEn, lang).text}</span>
+                    <span className="mt-1 block text-sm text-white/85">{bilingual(s.desc, s.descEn, lang).text}</span>
+                    <span className="mt-2 inline-block text-sm font-bold text-teal-100 group-hover:underline">{t("cat.open")}</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Real sub-category folders (top level only). Clicking one goes to /category/:cat/:sub. */}
+        {!activeSub && subcats.length > 0 && (
+          <section className="mb-8">
+            <h2 className="mb-3 border-s-4 border-[#168C91] ps-3 text-lg font-black text-[#153448] dark:text-white">{t("cat.subcategories")}</h2>
+            <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+              {subcats.map((c) => (
                 <Link
                   key={c.id}
                   to={`/category/${category}/${c.slug}`}
-                  className="group flex items-center justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
+                  className="group flex items-center justify-between gap-3 rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900"
                 >
-                  <div>
-                    <div className="font-bold text-slate-800 group-hover:text-sky-600 dark:text-white">
-                      📁 {bilingual(c.name, c.nameEn, lang).text}
+                  <div className="flex min-w-0 items-center gap-3">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#168C91]/10 text-xl" aria-hidden="true">📁</span>
+                    <div className="min-w-0">
+                      <div className="truncate font-bold text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{bilingual(c.name, c.nameEn, lang).text}</div>
+                      <div className="text-xs text-slate-500 dark:text-slate-400">{folderCount(c.id)} {t("common.item")}</div>
                     </div>
-                    <div className="text-xs text-slate-400">{count} {t("common.item")}</div>
                   </div>
-                  <span className="text-slate-300 group-hover:text-sky-500" aria-hidden="true">←</span>
+                  <span className="text-[#168C91]" aria-hidden="true">←</span>
                 </Link>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {showFlatSection && (
-        <>
-          <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-            <div className="flex flex-wrap gap-2">
-              <button onClick={() => setTag("")} className={`rounded-full px-3 py-1.5 text-sm font-semibold ${!tag ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{t("cat.all")}</button>
-              {tags.map((tg) => (
-                <button key={tg} onClick={() => setTag(tg)} className={`rounded-full px-3 py-1.5 text-sm font-semibold ${tag === tg ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>#{tg}</button>
               ))}
             </div>
-            <select aria-label="ترتيب النتائج" value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800">
-              <option value="latest">{t("cat.sortLatest")}</option>
-              <option value="popular">{t("cat.sortPopular")}</option>
-            </select>
-          </div>
+          </section>
+        )}
 
-          {list.length === 0 ? (
-            <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">{t("common.noData")}</div>
-          ) : (
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">{list.map((a) => <ArticleCard key={a.id} a={a} />)}</div>
-          )}
-        </>
-      )}
+        {showFlatSection && (
+          <section>
+            {list.length > 1 && (
+              <div className="mb-4 flex justify-end">
+                <select aria-label="ترتيب النتائج" value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-[#153448] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">
+                  <option value="latest">{t("cat.sortLatest")}</option>
+                  <option value="popular">{t("cat.sortPopular")}</option>
+                </select>
+              </div>
+            )}
 
+            {list.length === 0 ? (
+              <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">{t("common.noData")}</div>
+            ) : (
+              <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">{list.map((a) => <ArticleListCard key={a.id} a={a} />)}</div>
+            )}
+          </section>
+        )}
+      </div>
     </div>
   );
 }
