@@ -23,6 +23,13 @@ export const SECTION_ART: Record<string, Record<string, string>> = {
     "icu-nursing-procedures/aw12": "anat-catheter", "icu-nursing-procedures/aw22": "icu-ecg-leads", "traumatic-brain-injury/t5": "icu-icp",
     "ecmo-support/ecmo1": "icu-ecmo",
   },
+  nicu: {
+    "nicu-fundamentals/f2": "nicu-temp-probe", "nicu-fundamentals/f4": "nicu-gestational-age", "nicu-fundamentals/f5": "nicu-birth-weight",
+    "newborn-examination/ex1": "nicu-fontanelles", "nicu-intubation-ventilation/iv2": "nicu-ett-size", "nicu-vitals-thermoregulation/s3": "nicu-heat-loss",
+    "nicu-basic-definitions-apgar/s3": "nicu-apgar", "nicu-fetal-circulation-adaptation/s1": "nicu-fetal-circulation",
+    "nicu-fetal-circulation-adaptation/s5": "nicu-birth-transition", "nicu-central-lines-access/cl1": "nicu-umbilical-lines",
+    "neonatal-cpr/cpr1": "nicu-bag-mask", "neonatal-cpr/cpr3": "nicu-two-thumb", "nicu-infection-control/s1": "dial-five-moments",
+  },
 };
 
 /** `sectionArt` prop for TopicSectionDetail (keys: "<section id>" or, where ids repeat, "<topic id>/<section id>"). */
