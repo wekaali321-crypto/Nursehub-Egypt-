@@ -33,7 +33,7 @@ import { useI18n } from '../lib/i18n';
 
 function LoadingBlock() {
   return (
-    <div className="flex items-center justify-center py-20 text-slate-500 dark:text-slate-400">
+    <div className="flex items-center justify-center py-20 text-slate-600 dark:text-slate-400">
       <span className="animate-pulse">جاري التحميل... (Loading...)</span>
     </div>
   );
@@ -43,7 +43,7 @@ function NotFoundBlock({ text, to, label }: { text: string; to: string; label: s
   return (
     <div className="mx-auto max-w-lg px-4 py-16 text-center">
       <div className="text-6xl">❓</div>
-      <p className="mt-3 text-slate-500 dark:text-slate-400">{text}</p>
+      <p className="mt-3 text-slate-600 dark:text-slate-400">{text}</p>
       <Link to={to} className="mt-4 inline-block rounded-full bg-blue-600 px-6 py-2 font-bold text-white">
         {label}
       </Link>
@@ -90,13 +90,13 @@ export function CoursesHome() {
   }, []);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8" dir={ar ? 'rtl' : 'ltr'}>
       <Breadcrumbs items={[{ label: ar ? 'الكورسات' : 'Courses' }]} />
 
-      <div className="mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-rose-600 via-red-600 to-orange-600 p-6 text-white shadow-lg sm:p-8">
+      <div className="mb-8 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">🎓</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{ar ? 'الكورسات' : 'Courses'}</h1>
         <p className="mt-1 text-rose-50">
@@ -119,13 +119,13 @@ export function CoursesHome() {
                 <div className="text-3xl">{c.icon || '🎓'}</div>
                 <div className="min-w-0">
                   <div className="font-bold text-slate-800 dark:text-white">{titleOf(c, ar)}</div>
-                  <div className="text-sm text-slate-500 dark:text-slate-400">{ar ? c.title_en : c.title_ar}</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">{ar ? c.title_en : c.title_ar}</div>
                 </div>
               </div>
               {(ar ? c.description_ar : c.description_en || c.description_ar) && (
                 <p className="mt-3 line-clamp-3 text-sm text-slate-600 dark:text-slate-300">{ar ? c.description_ar : c.description_en || c.description_ar}</p>
               )}
-              <div className="mt-3 flex flex-wrap gap-2 text-xs text-slate-500 dark:text-slate-400">
+              <div className="mt-3 flex flex-wrap gap-2 text-xs text-slate-600 dark:text-slate-400">
                 <span className="rounded-full bg-slate-100 px-2.5 py-1 dark:bg-slate-800">
                   📖 {chapterCounts[c.id] ?? 0} {ar ? 'فصل' : 'chapters'}
                 </span>
@@ -137,7 +137,7 @@ export function CoursesHome() {
           </Link>
         ))}
         {courses.length === 0 && (
-          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {ar ? 'المحتوى قيد الإضافة قريبًا' : 'Content coming soon'}
           </div>
         )}
@@ -184,7 +184,7 @@ export function CoursePage() {
   );
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
   if (!course) return <NotFoundBlock text={ar ? 'الكورس غير موجود' : 'Course not found'} to="/courses" label={ar ? 'الكورسات' : 'Courses'} />;
 
   const section = sectionOf(course);
@@ -194,7 +194,7 @@ export function CoursePage() {
     <div className="mx-auto max-w-4xl px-4 py-8" dir={ar ? 'rtl' : 'ltr'}>
       <Breadcrumbs items={[{ label: section.label(ar), path: section.path }, { label: titleOf(course, ar) }]} />
 
-      <div className="mb-6 overflow-hidden rounded-3xl bg-gradient-to-l from-rose-600 via-red-600 to-orange-600 p-6 text-white shadow-lg sm:p-8">
+      <div className="mb-6 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">{course.icon || '🎓'}</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{titleOf(course, ar)}</h1>
         <p className="mt-1 text-rose-50">{ar ? course.title_en : course.title_ar}</p>
@@ -206,7 +206,7 @@ export function CoursePage() {
             📖 {chapters.length} {ar ? 'فصل' : 'chapters'} · ✅ {doneCount}
           </span>
           {questionCount > 0 && (
-            <Link to={`/courses/${course.id}/quiz`} className="rounded-full bg-white px-4 py-1.5 text-sm font-bold text-rose-700 hover:bg-rose-50">
+            <Link to={`/courses/${course.id}/quiz`} className="rounded-full bg-white px-4 py-1.5 text-sm font-bold text-rose-700 dark:text-rose-300 hover:bg-rose-50">
               🧩 {ar ? `ابدأ الاختبار (${questionCount} سؤال)` : `Start quiz (${questionCount} questions)`}
             </Link>
           )}
@@ -233,13 +233,13 @@ export function CoursePage() {
             <span className="text-xl">{c.icon}</span>
             <span className="min-w-0 flex-1">
               <span className="block font-semibold text-slate-800 dark:text-white">{titleOf(c, ar)}</span>
-              <span className="block truncate text-xs text-slate-500 dark:text-slate-400">{ar ? c.title_en : c.title_ar}</span>
+              <span className="block truncate text-xs text-slate-600 dark:text-slate-400">{ar ? c.title_en : c.title_ar}</span>
             </span>
-            {done.includes(c.id) && <span className="text-emerald-500" title={ar ? 'تم' : 'Completed'}>✅</span>}
+            {done.includes(c.id) && <span className="text-emerald-700 dark:text-emerald-300" title={ar ? 'تم' : 'Completed'}>✅</span>}
           </Link>
         ))}
         {visible.length === 0 && (
-          <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+          <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {chapters.length === 0 ? (ar ? 'المحتوى قيد الإضافة قريبًا' : 'Content coming soon') : ar ? 'لا توجد نتائج' : 'No results'}
           </div>
         )}
@@ -284,7 +284,7 @@ export function ChapterPage() {
   }, [courseId, chapterId]);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
   if (!course || !chapter) {
     return <NotFoundBlock text={siteAr ? 'الفصل غير موجود' : 'Chapter not found'} to={`/courses/${courseId}`} label={siteAr ? 'الكورس' : 'Course'} />;
   }
@@ -323,7 +323,7 @@ export function ChapterPage() {
       <article className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900 sm:p-8">
         <div className="mb-4 flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <div className="text-xs font-bold text-rose-600 dark:text-rose-400">
+            <div className="text-xs font-bold text-rose-700 dark:text-rose-400">
               {siteAr ? 'الفصل' : 'Chapter'} {idx + 1} / {list.length}
             </div>
             <h1 className="mt-1 flex items-center gap-2 text-xl font-black text-slate-800 dark:text-white sm:text-2xl">
@@ -354,7 +354,7 @@ export function ChapterPage() {
             />
           </div>
         ) : (
-          <div className="py-12 text-center text-slate-400">{siteAr ? 'المحتوى قيد الإضافة قريبًا' : 'Content coming soon'}</div>
+          <div className="py-12 text-center text-slate-500 dark:text-slate-400">{siteAr ? 'المحتوى قيد الإضافة قريبًا' : 'Content coming soon'}</div>
         )}
 
         <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-slate-100 pt-4 dark:border-slate-800">
@@ -425,7 +425,7 @@ export function CourseQuiz() {
   }, [courseId, chapterId]);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
   if (!course) return <NotFoundBlock text="الكورس غير موجود" to="/courses" label="الكورسات" />;
 
   return (

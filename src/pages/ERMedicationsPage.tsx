@@ -8,13 +8,14 @@ import CrossRefBox from "../components/CrossRefBox";
 import SafetyLinksBox from "../components/SafetyLinksBox";
 import PrintButton from "../components/PrintButton";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "المسكنات ومضادات الالتهاب والتشنج (Analgesics & Antispasmodics)": "from-orange-500 to-amber-600",
   "الأدوية المخدرة (Narcotics)": "from-indigo-500 to-violet-600",
   "مضادات القيء والحموضة (Antiemetics & GI)": "from-lime-500 to-green-600",
   "الحساسية والكورتيزون ومضادات الهيستامين (Allergy & Corticosteroids)": "from-pink-500 to-rose-600",
-  "موسعات الشعب الهوائية (Bronchodilators)": "from-sky-500 to-cyan-600",
+  "موسعات الشعب الهوائية (Bronchodilators)": "from-teal-500 to-cyan-600",
   "أدوية القلب والأوعية الدموية (Cardiac & Vasoactive Drugs)": "from-red-600 to-rose-700",
   "الطوارئ السكرية (Diabetic Emergencies)": "from-purple-500 to-fuchsia-600",
   "المهدئات ومضادات الاختلاج (Sedatives & Anticonvulsants)": "from-slate-500 to-slate-700",
@@ -68,6 +69,7 @@ function CalcBlock({ dose, title }: { dose: Record<string, string> | null; title
 
 export function ERMedicationsHome() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [items, setItems] = useState<ERMedication[]>([]);
   const [loading, setLoading] = useState(true);
   const [q, setQ] = useState("");
@@ -76,7 +78,7 @@ export function ERMedicationsHome() {
     fetchERMedications().then(setItems).catch(() => setItems([])).finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
 
   const query = q.trim().toLowerCase();
   const filtered = !query
@@ -96,7 +98,7 @@ export function ERMedicationsHome() {
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-5xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-red-600 to-rose-700 text-white p-6 mb-6">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-6">
         <div className="flex items-start justify-between gap-2">
           <div>
             <h1 className="text-2xl font-bold mb-1">{LABELS.title[lang]}</h1>
@@ -114,11 +116,11 @@ export function ERMedicationsHome() {
           placeholder={LABELS.searchPlaceholder[lang]}
           className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-red-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
         />
-        <span className="absolute right-3 top-3 text-slate-400">🔍</span>
+        <span className="absolute right-3 top-3 text-slate-500 dark:text-slate-400">🔍</span>
       </div>
 
       {grouped.length === 0 && (
-        <div className="text-center text-slate-500 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
+        <div className="text-center text-slate-600 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
       )}
 
       {grouped.map((g) => (
@@ -152,6 +154,7 @@ export default function ERMedicationDetail() {
   const { lang } = useI18n();
   const [item, setItem] = useState<ERMedication | null>(null);
   const [loading, setLoading] = useState(true);
+  useSEO({ title: `${item ? bilingual(item.drug_name, item.drug_name_en, lang).text : ""}${item ? " | " : ""}NurseHub Egypt` });
 
   useEffect(() => {
     if (!id) return;
@@ -161,8 +164,8 @@ export default function ERMedicationDetail() {
       .finally(() => setLoading(false));
   }, [id]);
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
-  if (!item) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (!item) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
 
   const highAlertTypes = parseHighAlertTypes(item.high_alert_type);
   const showHighAlert = item.is_high_alert || highAlertTypes.length > 0;
@@ -173,14 +176,14 @@ export default function ERMedicationDetail() {
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-4 print:hidden">
-        <Link to="/drugs/er-medications" className="text-red-600 text-sm inline-block">{LABELS.back[lang]}</Link>
+        <Link to="/drugs/er-medications" className="text-red-700 dark:text-red-300 text-sm inline-block">{LABELS.back[lang]}</Link>
         <div className="flex items-center gap-2">
           <InlineLangToggle />
           <PrintButton label="طباعة بطاقة الدواء" />
         </div>
       </div>
 
-      <div className="rounded-2xl bg-gradient-to-l from-red-600 to-rose-700 text-white p-6 mb-6">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-6">
         <h1 className="text-xl font-bold mb-1">{drugName}</h1>
         {item.concentration && <p className="opacity-90 text-sm">{item.concentration}</p>}
         {item.drug_class && <p className="opacity-80 text-xs mt-1">{bilingual(item.drug_class, item.drug_class_en, lang).text}</p>}

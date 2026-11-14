@@ -29,14 +29,14 @@ export default function AuthorCard({ name }: { name: string }) {
       <div className="min-w-0">
         <div className="flex items-center gap-1.5">
           <span className="truncate font-bold text-slate-800 dark:text-white">{name}</span>
-          <span title={lang === "ar" ? "موثّق" : "Verified"} className="text-[#168C91]">✔️</span>
+          <span title={lang === "ar" ? "موثّق" : "Verified"} className="text-[#127378] dark:text-teal-300">✔️</span>
         </div>
-        <div className="text-xs text-slate-400">
+        <div className="text-xs text-slate-500 dark:text-slate-400">
           {user?.role === "admin"
             ? (lang === "ar" ? "فريق التحرير الطبي" : "Medical Editorial Team")
             : (lang === "ar" ? "كاتب مساهم" : "Contributing Author")}
         </div>
-        <div className="mt-1 text-xs text-slate-400">
+        <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">
           {lang === "ar" ? `${count.toLocaleString("ar-EG")} مقال منشور` : `${count} published articles`}
         </div>
       </div>

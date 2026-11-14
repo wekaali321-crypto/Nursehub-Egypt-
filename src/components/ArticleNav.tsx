@@ -14,7 +14,7 @@ export default function ArticleNav({ prev, next }: { prev?: Article; next?: Arti
           to={`/article/${prev.slug}`}
           className="group rounded-2xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-[#168C91] hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
         >
-          <div className="text-xs font-bold text-slate-400">◀ {t("article.prev")}</div>
+          <div className="text-xs font-bold text-slate-500 dark:text-slate-400">◀ {t("article.prev")}</div>
           <div className="mt-1.5 line-clamp-2 font-bold text-slate-800 group-hover:text-[#168C91] dark:text-white">{bilingual(prev.title, prev.titleEn, lang).text}</div>
         </Link>
       ) : <div />}
@@ -23,7 +23,7 @@ export default function ArticleNav({ prev, next }: { prev?: Article; next?: Arti
           to={`/article/${next.slug}`}
           className="group rounded-2xl border border-slate-200 bg-white p-4 text-left transition hover:-translate-y-0.5 hover:border-[#168C91] hover:shadow-md dark:border-slate-800 dark:bg-slate-900 sm:text-right"
         >
-          <div className="text-xs font-bold text-slate-400">{t("article.next")} ▶</div>
+          <div className="text-xs font-bold text-slate-500 dark:text-slate-400">{t("article.next")} ▶</div>
           <div className="mt-1.5 line-clamp-2 font-bold text-slate-800 group-hover:text-[#168C91] dark:text-white">{bilingual(next.title, next.titleEn, lang).text}</div>
         </Link>
       ) : <div />}

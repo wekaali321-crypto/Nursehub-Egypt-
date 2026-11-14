@@ -40,14 +40,14 @@ export function AdSlot({ slot }: { slot?: string; label?: string; height?: strin
 export function Breadcrumbs({ items }: { items: { label: string; path?: string }[] }) {
   const { t } = useI18n();
   return (
-    <nav aria-label="Breadcrumb" className="mb-4 flex flex-wrap items-center gap-1 text-sm text-slate-500 dark:text-slate-400">
+    <nav aria-label="Breadcrumb" className="mb-4 flex flex-wrap items-center gap-1 text-sm text-slate-600 dark:text-slate-400">
       <ol className="flex flex-wrap items-center gap-1">
-        <li><Link to="/" className="hover:text-sky-500" aria-label={t("nav.home")}>{t("nav.home")}</Link></li>
+        <li><Link to="/" className="hover:text-teal-500" aria-label={t("nav.home")}>{t("nav.home")}</Link></li>
         {items.map((it, i) => (
           <li key={i} className="flex items-center gap-1">
             <span className="text-slate-300" aria-hidden="true">/</span>
             {it.path
-              ? <Link to={it.path} className="hover:text-sky-500">{it.label}</Link>
+              ? <Link to={it.path} className="hover:text-teal-500">{it.label}</Link>
               : <span aria-current="page" className="font-semibold text-slate-700 dark:text-slate-200">{it.label}</span>}
           </li>
         ))}
@@ -69,14 +69,14 @@ export function ArticleCard({ a }: { a: Article }) {
         <div className="transition-transform duration-500 group-hover:scale-105">
           <OptimizedImage src={a.cover} alt={title} width={600} ratio="16/10" />
         </div>
-        <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-sky-600 backdrop-blur dark:bg-slate-900/90">
+        <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-teal-700 dark:text-teal-300 backdrop-blur dark:bg-slate-900/90">
           <Icon name={CAT_ICON[a.category]} size={13} /> {t(CAT_KEY[a.category])}
         </span>
       </div>
       <div className="flex flex-1 flex-col p-4">
-        <h3 className="mb-2 font-bold leading-snug text-slate-900 group-hover:text-sky-600 dark:text-white">{title}</h3>
-        <p className="mb-3 line-clamp-2 flex-1 text-sm text-slate-500 dark:text-slate-400">{excerpt}</p>
-        <div className="flex items-center justify-between text-xs text-slate-400">
+        <h3 className="mb-2 font-bold leading-snug text-slate-900 group-hover:text-teal-600 dark:text-white">{title}</h3>
+        <p className="mb-3 line-clamp-2 flex-1 text-sm text-slate-600 dark:text-slate-400">{excerpt}</p>
+        <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
           <span className="inline-flex items-center gap-1"><Icon name="user" size={12} /> {a.author}</span>
           <span className="inline-flex items-center gap-1"><Icon name="eye" size={13} /> {a.views.toLocaleString(lang === "ar" ? "ar-EG" : "en-US")}</span>
         </div>
@@ -90,9 +90,9 @@ export function SectionTitle({ title, subtitle, link }: { title: string; subtitl
     <div className="mb-6 flex items-end justify-between">
       <div>
         <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white md:text-3xl">{title}</h2>
-        {subtitle && <p className="mt-1 text-slate-500 dark:text-slate-400">{subtitle}</p>}
+        {subtitle && <p className="mt-1 text-slate-600 dark:text-slate-400">{subtitle}</p>}
       </div>
-      {link && <Link to={link.to} className="shrink-0 text-sm font-bold text-sky-500 hover:underline">{link.label} ←</Link>}
+      {link && <Link to={link.to} className="shrink-0 text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{link.label} ←</Link>}
     </div>
   );
 }

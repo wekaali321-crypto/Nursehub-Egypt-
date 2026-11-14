@@ -43,7 +43,7 @@ export default function DrugClassificationsPage() {
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="mx-auto max-w-4xl px-4 py-8">
       <Breadcrumbs items={[{ label: LABELS.drugsBreadcrumb[lang], path: "/drugs" }, { label: LABELS.breadcrumb[lang] }]} />
 
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-violet-600 to-fuchsia-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="flex items-start justify-between gap-2">
           <div className="text-4xl sm:text-5xl">🧬</div>
           <InlineLangToggle light />
@@ -64,19 +64,19 @@ export default function DrugClassificationsPage() {
         {filtered.map((c) => (
           <div key={c.id} className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
             <h3 className="font-bold text-slate-900 dark:text-white">{bilingual(c.name, c.nameEn, lang).text}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-slate-500 dark:text-slate-400">{bilingual(c.description, c.descriptionEn, lang).text}</p>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{bilingual(c.description, c.descriptionEn, lang).text}</p>
             <p className="mt-3 rounded-lg bg-violet-50 px-3 py-2 text-xs font-bold text-violet-600 dark:bg-violet-500/10">{LABELS.examples[lang]}{bilingual(c.examples, c.examplesEn, lang).text}</p>
           </div>
         ))}
         {filtered.length === 0 && (
-          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-400 dark:border-slate-700">
+          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {LABELS.noResults[lang]}
           </div>
         )}
       </div>
 
       <div className="mt-6 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">{LABELS.back[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{LABELS.back[lang]}</Link>
       </div>
     </div>
   );

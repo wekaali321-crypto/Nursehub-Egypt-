@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Breadcrumbs } from "../components/common";
 import { useI18n } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 /**
  * Accordion-style card: only the tool's title/icon show by default; tapping
@@ -24,15 +25,15 @@ function Card({ title, icon, children, defaultOpen = false }: { title: string; i
         <span className="flex items-center gap-2 text-lg font-bold dark:text-white">
           <span className="text-2xl" aria-hidden="true">{icon}</span>{title}
         </span>
-        <span className={`shrink-0 text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true">▼</span>
+        <span className={`shrink-0 text-slate-500 dark:text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true">▼</span>
       </button>
       {open && <div className="px-5 pb-5">{children}</div>}
     </div>
   );
 }
-const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800";
+const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800";
 const lbl = "mb-1 block text-sm font-semibold text-slate-600 dark:text-slate-300";
-const res = "mt-4 rounded-xl bg-sky-50 p-4 text-center font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300";
+const res = "mt-4 rounded-xl bg-teal-50 p-4 text-center font-bold text-teal-700 dark:bg-teal-500/10 dark:text-teal-300";
 
 const cardBg = {
   emerald: "bg-gradient-to-br from-emerald-500 to-emerald-600",
@@ -74,17 +75,17 @@ function ScoreField({ label, options, index, onChange }: { label: string; option
               onClick={() => onChange(i)}
               className={`flex w-full items-center justify-between gap-3 rounded-xl border-2 px-3 py-2.5 text-start text-sm transition ${
                 sel
-                  ? "border-sky-500 bg-sky-50 font-bold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300"
-                  : "border-slate-200 text-slate-600 hover:border-sky-300 dark:border-slate-700 dark:text-slate-300"
+                  ? "border-teal-500 bg-teal-50 font-bold text-teal-700 dark:bg-teal-500/10 dark:text-teal-300"
+                  : "border-slate-200 text-slate-600 hover:border-teal-300 dark:border-slate-700 dark:text-slate-300"
               }`}
             >
               <span className="flex items-center gap-2">
-                <span className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 ${sel ? "border-sky-500" : "border-slate-300 dark:border-slate-600"}`}>
-                  {sel && <span className="h-2 w-2 rounded-full bg-sky-500" />}
+                <span className={`flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 ${sel ? "border-teal-500" : "border-slate-300 dark:border-slate-600"}`}>
+                  {sel && <span className="h-2 w-2 rounded-full bg-teal-500" />}
                 </span>
                 {o.text}
               </span>
-              <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${sel ? "bg-sky-500 text-white" : "bg-slate-200 text-slate-500 dark:bg-slate-700"}`}>{o.pts}</span>
+              <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${sel ? "bg-teal-700 text-white" : "bg-slate-200 text-slate-600 dark:text-slate-400 dark:bg-slate-700"}`}>{o.pts}</span>
             </button>
           );
         })}
@@ -206,7 +207,7 @@ function GCS() {
     : (total >= 13 ? "إصابة دماغية خفيفة" : total >= 9 ? "إصابة دماغية متوسطة" : "إصابة دماغية شديدة");
   return (
     <Card title={isEn ? "Glasgow Coma Scale (GCS)" : "مقياس غلاسكو للوعي (GCS)"} icon="🧠">
-      <p className="mb-3 text-xs text-slate-400">{isEn ? "Evaluates the level of consciousness in patients with brain injury. Assesses three parameters: eye opening, verbal response, and motor response." : "يقيّم مستوى الوعي لدى مرضى إصابات الدماغ، من خلال 3 معايير: فتح العين، الاستجابة اللفظية، والاستجابة الحركية."}</p>
+      <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">{isEn ? "Evaluates the level of consciousness in patients with brain injury. Assesses three parameters: eye opening, verbal response, and motor response." : "يقيّم مستوى الوعي لدى مرضى إصابات الدماغ، من خلال 3 معايير: فتح العين، الاستجابة اللفظية، والاستجابة الحركية."}</p>
       <div className="grid gap-3 sm:grid-cols-3">
         <ScoreField label={isEn ? "Eye Opening" : "فتح العين"} options={fields.eye} index={idx.eye} onChange={(i) => setIdx((s) => ({ ...s, eye: i }))} />
         <ScoreField label={isEn ? "Verbal Response" : "الاستجابة اللفظية"} options={fields.verbal} index={idx.verbal} onChange={(i) => setIdx((s) => ({ ...s, verbal: i }))} />
@@ -259,7 +260,7 @@ function Norton() {
     : (total >= 18 ? "خطر ضئيل أو منعدم للإصابة بتقرحات الفراش" : total >= 15 ? "خطر منخفض للإصابة بتقرحات الفراش" : total >= 10 ? "خطر متوسط للإصابة بتقرحات الفراش" : "خطر مرتفع للإصابة بتقرحات الفراش");
   return (
     <Card title={isEn ? "Norton Scale" : "مقياس نورتون (Norton Scale)"} icon="🛏️">
-      <p className="mb-3 text-xs text-slate-400">{isEn ? "Evaluates the risk of developing pressure ulcers (PU) using 5 parameters." : "يقيّم خطر الإصابة بتقرحات الفراش باستخدام 5 معايير."}</p>
+      <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">{isEn ? "Evaluates the risk of developing pressure ulcers (PU) using 5 parameters." : "يقيّم خطر الإصابة بتقرحات الفراش باستخدام 5 معايير."}</p>
       <div className="grid gap-3 sm:grid-cols-2">
         <ScoreField label={isEn ? "General Physical Condition" : "الحالة الجسدية العامة"} options={fields.physical} index={idx.physical} onChange={(i) => setIdx((s) => ({ ...s, physical: i }))} />
         <ScoreField label={isEn ? "Mental State" : "الحالة الذهنية"} options={fields.mental} index={idx.mental} onChange={(i) => setIdx((s) => ({ ...s, mental: i }))} />
@@ -291,7 +292,7 @@ function Braden() {
     : (total >= 19 ? "لا يوجد خطر للإصابة بتقرحات الفراش" : total >= 15 ? "خطر خفيف للإصابة بتقرحات الفراش" : total >= 13 ? "خطر متوسط للإصابة بتقرحات الفراش" : total >= 10 ? "خطر مرتفع للإصابة بتقرحات الفراش" : "خطر مرتفع جدًا للإصابة بتقرحات الفراش");
   return (
     <Card title={isEn ? "Braden Scale" : "مقياس برادن (Braden Scale)"} icon="🩹">
-      <p className="mb-3 text-xs text-slate-400">{isEn ? "Evaluates pressure ulcer risk considering 6 subscales. More specific than Norton and widely used in hospitals." : "يقيّم خطر تقرحات الفراش بناءً على 6 معايير فرعية. أكثر دقة من مقياس نورتون وشائع الاستخدام في المستشفيات."}</p>
+      <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">{isEn ? "Evaluates pressure ulcer risk considering 6 subscales. More specific than Norton and widely used in hospitals." : "يقيّم خطر تقرحات الفراش بناءً على 6 معايير فرعية. أكثر دقة من مقياس نورتون وشائع الاستخدام في المستشفيات."}</p>
       <div className="grid gap-3 sm:grid-cols-2">
         <ScoreField label={isEn ? "Sensory Perception" : "الإدراك الحسي"} options={fields4.sensory} index={idx.sensory} onChange={(i) => setIdx((s) => ({ ...s, sensory: i }))} />
         <ScoreField label={isEn ? "Moisture Exposure" : "التعرض للرطوبة"} options={fields4.moisture} index={idx.moisture} onChange={(i) => setIdx((s) => ({ ...s, moisture: i }))} />
@@ -340,7 +341,7 @@ function Barthel() {
   };
   return (
     <Card title={isEn ? "Barthel Index" : "مؤشر بارثيل (Barthel Index)"} icon="🚶">
-      <p className="mb-3 text-xs text-slate-400">{isEn ? "Measures functional independence in 10 activities of daily living (0-100)." : "يقيس مدى استقلالية المريض في 10 أنشطة يومية أساسية (0-100)."}</p>
+      <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">{isEn ? "Measures functional independence in 10 activities of daily living (0-100)." : "يقيس مدى استقلالية المريض في 10 أنشطة يومية أساسية (0-100)."}</p>
       <div className="grid gap-3 sm:grid-cols-2">
         {(Object.keys(fields) as (keyof typeof fields)[]).map((k) => (
           <ScoreField key={k} label={labels[k]} options={fields[k]} index={idx[k]} onChange={(i) => setIdx((s) => ({ ...s, [k]: i }))} />
@@ -361,9 +362,9 @@ function VAS() {
     : (pain === 0 ? "لا يوجد ألم" : pain <= 3 ? "ألم خفيف" : pain <= 6 ? "ألم متوسط" : "ألم شديد");
   return (
     <Card title={isEn ? "Visual Analog Scale (VAS)" : "المقياس البصري التناظري للألم (VAS)"} icon="😣">
-      <p className="mb-3 text-xs text-slate-400">{isEn ? "Rate the patient's pain from 0 (no pain) to 10 (worst possible pain)." : "قيّم شدة ألم المريض من 0 (لا يوجد ألم) إلى 10 (أسوأ ألم ممكن)."}</p>
-      <input type="range" min={0} max={10} step={1} value={pain} onChange={(e) => setPain(+e.target.value)} className="w-full accent-sky-500" />
-      <div className="mt-1 flex justify-between text-[11px] text-slate-400">{Array.from({ length: 11 }, (_, i) => <span key={i}>{i}</span>)}</div>
+      <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">{isEn ? "Rate the patient's pain from 0 (no pain) to 10 (worst possible pain)." : "قيّم شدة ألم المريض من 0 (لا يوجد ألم) إلى 10 (أسوأ ألم ممكن)."}</p>
+      <input type="range" min={0} max={10} step={1} value={pain} onChange={(e) => setPain(+e.target.value)} className="w-full accent-teal-500" />
+      <div className="mt-1 flex justify-between text-[11px] text-slate-500 dark:text-slate-400">{Array.from({ length: 11 }, (_, i) => <span key={i}>{i}</span>)}</div>
       <ScoreResult color={color} title={isEn ? "Pain Level" : "مستوى الألم"} score={pain} max={10} label={label} />
     </Card>
   );
@@ -393,7 +394,7 @@ function News2() {
     : (total === 0 ? "خطر منخفض - مراقبة روتينية" : total <= 4 ? "خطر منخفض - تقييم تمريضي" : total <= 6 ? "خطر متوسط - استجابة عاجلة" : "خطر مرتفع - استجابة طوارئ");
   return (
     <Card title={isEn ? "NEWS2 (National Early Warning Score)" : "نيوز 2 (نظام الإنذار المبكر الوطني)"} icon="🚨">
-      <p className="mb-3 text-xs text-slate-400">{isEn ? "Early warning system that evaluates the risk of clinical deterioration. Considers vital signs and level of consciousness to activate medical response." : "نظام إنذار مبكر يقيّم خطر تدهور حالة المريض إكلينيكيًا، بناءً على العلامات الحيوية ومستوى الوعي، لتفعيل الاستجابة الطبية المناسبة."}</p>
+      <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">{isEn ? "Early warning system that evaluates the risk of clinical deterioration. Considers vital signs and level of consciousness to activate medical response." : "نظام إنذار مبكر يقيّم خطر تدهور حالة المريض إكلينيكيًا، بناءً على العلامات الحيوية ومستوى الوعي، لتفعيل الاستجابة الطبية المناسبة."}</p>
       <div className="grid gap-3 sm:grid-cols-2">
         <ScoreField label={isEn ? "Respiratory Rate (breaths/min)" : "معدل التنفس (نفس/دقيقة)"} options={fields.rr} index={idx.rr} onChange={(i) => setIdx((s) => ({ ...s, rr: i }))} />
         <ScoreField label={isEn ? "O₂ Saturation (%)" : "تشبع الأكسجين (%)"} options={fields.spo2} index={idx.spo2} onChange={(i) => setIdx((s) => ({ ...s, spo2: i }))} />
@@ -405,7 +406,7 @@ function News2() {
       </div>
       <ScoreResult color={color} title="NEWS2 Score" score={total} max={20} label={label} />
       <div className="mt-3 space-y-1 rounded-lg bg-slate-50 p-3 text-xs dark:bg-slate-800/50">
-        <div className="font-bold text-slate-500 dark:text-slate-400">{isEn ? "Suggested Clinical Response" : "الاستجابة السريرية المقترحة"}</div>
+        <div className="font-bold text-slate-600 dark:text-slate-400">{isEn ? "Suggested Clinical Response" : "الاستجابة السريرية المقترحة"}</div>
         <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />{isEn ? "0: Routine monitoring" : "0: مراقبة روتينية"}</div>
         <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-amber-500" />{isEn ? "1-4: Nursing assessment" : "1-4: تقييم تمريضي"}</div>
         <div className="flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-orange-500" />{isEn ? "5-6: Urgent response" : "5-6: استجابة عاجلة"}</div>
@@ -762,7 +763,7 @@ function ABGInterpreter() {
     rose: "bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-300",
     amber: "bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300",
     violet: "bg-violet-50 text-violet-700 dark:bg-violet-500/10 dark:text-violet-300",
-    sky: "bg-sky-50 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300",
+    sky: "bg-teal-50 text-teal-700 dark:bg-teal-500/10 dark:text-teal-300",
   };
 
   return (
@@ -788,7 +789,7 @@ function ABGInterpreter() {
         <input className={inp} type="number" step="0.1" value={hco3} onChange={(e) => setHco3(e.target.value)} placeholder="24" />
       </div>
 
-      <button type="button" onClick={() => setShowOptional((s) => !s)} className="mb-3 text-sm font-bold text-sky-600 dark:text-sky-400">
+      <button type="button" onClick={() => setShowOptional((s) => !s)} className="mb-3 text-sm font-bold text-teal-700 dark:text-teal-400">
         {isEn ? (showOptional ? "− Hide optional values" : "+ Optional values") : (showOptional ? "− إخفاء القيم الاختيارية" : "+ قيم اختيارية")}
       </button>
 
@@ -815,7 +816,7 @@ function ABGInterpreter() {
         type="button"
         onClick={run}
         disabled={!pH || !paco2 || !hco3}
-        className="w-full rounded-xl bg-sky-600 py-3 font-bold text-white disabled:opacity-40"
+        className="w-full rounded-xl bg-teal-600 py-3 font-bold text-white disabled:opacity-40"
       >
         {isEn ? "🔬 Interpret ABG" : "🔬 تفسير غازات الدم"}
       </button>
@@ -960,7 +961,7 @@ function DoseRateCalculator() {
             onClick={() => setDrug(d.ar)}
             className={`rounded-full border px-3 py-1 text-xs font-semibold ${
               drug === d.ar
-                ? "border-sky-400 bg-sky-500 text-white"
+                ? "border-teal-400 bg-teal-700 text-white"
                 : "border-slate-200 text-slate-600 dark:border-slate-700 dark:text-slate-300"
             }`}
           >
@@ -973,14 +974,14 @@ function DoseRateCalculator() {
         <button
           type="button"
           onClick={() => setMode("doseToRate")}
-          className={`rounded-lg px-3 py-2 text-sm font-bold ${mode === "doseToRate" ? "bg-sky-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
+          className={`rounded-lg px-3 py-2 text-sm font-bold ${mode === "doseToRate" ? "bg-teal-700 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
         >
           {isEn ? "Dose → Rate" : "جرعة → معدل"}
         </button>
         <button
           type="button"
           onClick={() => setMode("rateToDose")}
-          className={`rounded-lg px-3 py-2 text-sm font-bold ${mode === "rateToDose" ? "bg-sky-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
+          className={`rounded-lg px-3 py-2 text-sm font-bold ${mode === "rateToDose" ? "bg-teal-700 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
         >
           {isEn ? "Rate → Dose" : "معدل → جرعة"}
         </button>
@@ -1035,7 +1036,7 @@ function DoseRateCalculator() {
       )}
 
       {concMcgPerMl > 0 && (
-        <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">{isEn ? `Solution concentration: ${concMcgPerMl.toFixed(2)} mcg/mL` : `تركيز المحلول: ${concMcgPerMl.toFixed(2)} mcg/mL`}</div>
+        <div className="mt-2 text-xs text-slate-600 dark:text-slate-400">{isEn ? `Solution concentration: ${concMcgPerMl.toFixed(2)} mcg/mL` : `تركيز المحلول: ${concMcgPerMl.toFixed(2)} mcg/mL`}</div>
       )}
 
       {result !== null && !Number.isNaN(result) && (
@@ -1046,7 +1047,7 @@ function DoseRateCalculator() {
         </div>
       )}
       {needsWeight && !weight && (doseInput || rateInput) && (
-        <div className="mt-2 text-xs text-rose-500">{isEn ? "Enter the patient's weight to complete the calculation with this unit." : "أدخل وزن المريض لإتمام الحساب مع هذه الوحدة."}</div>
+        <div className="mt-2 text-xs text-rose-700 dark:text-rose-300">{isEn ? "Enter the patient's weight to complete the calculation with this unit." : "أدخل وزن المريض لإتمام الحساب مع هذه الوحدة."}</div>
       )}
     </Card>
   );
@@ -1101,7 +1102,7 @@ function AIAssistant() {
       <div className="mb-3 h-64 space-y-2 overflow-y-auto rounded-xl bg-slate-50 p-3 dark:bg-slate-800/50">
         <div className="ml-auto max-w-[85%] rounded-2xl bg-white px-3 py-2 text-sm dark:bg-slate-700 dark:text-white">{greeting}</div>
         {msgs.map((m, i) => (
-          <div key={i} className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm ${m.role === "user" ? "mr-auto bg-sky-500 text-white" : "ml-auto bg-white dark:bg-slate-700 dark:text-white"}`}>{m.text}</div>
+          <div key={i} className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm ${m.role === "user" ? "mr-auto bg-teal-700 text-white" : "ml-auto bg-white dark:bg-slate-700 dark:text-white"}`}>{m.text}</div>
         ))}
       </div>
       <form onSubmit={send} className="flex gap-2">
@@ -1114,13 +1115,14 @@ function AIAssistant() {
 
 export default function ToolsPage() {
   const { t } = useI18n();
+  useSEO({ title: `${t("tools.title").replace(/^[^\p{L}\p{N}]+/u, "")} | NurseHub Egypt` });
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("nav.tools") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <div className="mb-8 text-center">
-        <h1 className="text-3xl font-black dark:text-white">{t("tools.title")}</h1>
-        <p className="mt-2 text-slate-500 dark:text-slate-400">{t("tools.sub")}</p>
+      <div className="nh-hero mb-8 rounded-3xl px-6 py-8 text-center text-white">
+        <h1 className="text-3xl font-black">{t("tools.title")}</h1>
+        <p className="mt-2 text-white/80">{t("tools.sub")}</p>
       </div>
       <div className="grid gap-4 lg:grid-cols-2">
         <BMI /><IVDrip /><Dosage /><FluidBalance /><Pregnancy /><GCS /><PediatricDose /><DoseRateCalculator /><ABGInterpreter />

@@ -6,10 +6,12 @@ import { fetchOrganDoseAdjustments } from "../lib/organDoseApi";
 import { fetchPregnancyLactationSafety } from "../lib/pregnancyLactationApi";
 import { fetchIVCompatibility } from "../lib/ivCompatibilityApi";
 import { useStore } from "../lib/store";
+import { useSEO } from "../lib/seo";
 
 type Tile = { to: string; icon: string; title: string; desc: string; count?: string; gradient: string };
 
 export default function DrugSafetyCenterPage() {
+  useSEO({ title: "مركز أمان الأدوية | NurseHub Egypt" });
   const { drugAntidotes, drugInteractions } = useStore();
   const [highAlertCount, setHighAlertCount] = useState(0);
   const [lasaCount, setLasaCount] = useState(0);
@@ -88,7 +90,7 @@ export default function DrugSafetyCenterPage() {
 
   return (
     <div dir="rtl" className="mx-auto max-w-5xl px-4 py-8">
-      <div className="relative mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-slate-800 via-slate-700 to-slate-600 p-6 text-white shadow-lg sm:p-10">
+      <div className="relative mb-8 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-10">
         <span className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-white/10" />
         <span className="pointer-events-none absolute -bottom-16 -right-10 h-56 w-56 rounded-full bg-white/5" />
         <div className="relative">

@@ -20,7 +20,7 @@ export default class ErrorBoundary extends Component<{ children: ReactNode }, St
       return (
         <>
           <ServerError />
-          {this.state.detail && <p dir="ltr" className="mx-auto max-w-md px-4 pb-8 text-center text-[11px] text-slate-400">{this.state.detail}</p>}
+          {this.state.detail && <p dir="ltr" className="mx-auto max-w-md px-4 pb-8 text-center text-[11px] text-slate-500 dark:text-slate-400">{this.state.detail}</p>}
         </>
       );
     }

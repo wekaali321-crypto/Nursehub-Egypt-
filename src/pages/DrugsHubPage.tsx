@@ -239,9 +239,9 @@ export default function DrugsHubPage() {
       <span className="min-w-0 flex-1">
         <span className="flex items-start justify-between gap-2">
           <span className="font-black leading-snug text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{t.title[lang]}</span>
-          {t.count && <span className="shrink-0 rounded-full bg-[#168C91]/10 px-2.5 py-0.5 text-xs font-bold text-[#168C91] dark:bg-[#168C91]/20 dark:text-teal-300">{t.count[lang]}</span>}
+          {t.count && <span className="shrink-0 rounded-full bg-[#168C91]/10 px-2.5 py-0.5 text-xs font-bold text-[#127378] dark:bg-[#168C91]/20 dark:text-teal-300">{t.count[lang]}</span>}
         </span>
-        <span className="mt-1 block text-sm text-slate-500 dark:text-slate-400">{t.desc[lang]}</span>
+        <span className="mt-1 block text-sm text-slate-600 dark:text-slate-400">{t.desc[lang]}</span>
       </span>
     </Link>
   );
@@ -284,7 +284,7 @@ export default function DrugsHubPage() {
             <Link key={x.to} to={x.to} className={`group flex flex-col items-start gap-1 rounded-2xl border p-3.5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] ${x.danger ? "border-red-200 bg-red-50 dark:border-red-900 dark:bg-red-500/10" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"}`}>
               <span className="text-2xl" aria-hidden="true">{x.icon}</span>
               <span className={`text-sm font-black leading-snug ${x.danger ? "text-red-700 dark:text-red-300" : "text-[#153448] dark:text-white"}`}>{x.title[lang]}</span>
-              {x.count && <span className="text-xs font-bold text-slate-500 dark:text-slate-400">{x.count}</span>}
+              {x.count && <span className="text-xs font-bold text-slate-600 dark:text-slate-400">{x.count}</span>}
             </Link>
           ))}
         </section>

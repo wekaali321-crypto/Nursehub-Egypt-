@@ -14,7 +14,7 @@ import type { EcgLearnSource } from "../lib/ecgLearnData";
 
 function SourceTag({ s }: { s: EcgLearnSource }) {
   const map = {
-    thesis: { label: "من بحث ECG (جامعة السودان)", cls: "bg-sky-100 text-sky-700 dark:bg-sky-500/10 dark:text-sky-300" },
+    thesis: { label: "من بحث ECG (جامعة السودان)", cls: "bg-teal-100 text-teal-700 dark:bg-teal-500/10 dark:text-teal-300" },
     "simple-ecg": { label: "من Simple ECG (طب الأزهر)", cls: "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300" },
     both: { label: "مدمج من المصدرين", cls: "bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300" },
   }[s];
@@ -23,7 +23,7 @@ function SourceTag({ s }: { s: EcgLearnSource }) {
 
 const BOX_COLORS = ["sky", "emerald", "amber", "rose"] as const;
 const BOX_COLOR_CLASSES: Record<string, string> = {
-  sky: "border-sky-200 bg-sky-50 dark:border-sky-900 dark:bg-sky-500/10",
+  sky: "border-teal-200 bg-teal-50 dark:border-teal-900 dark:bg-teal-500/10",
   emerald: "border-emerald-200 bg-emerald-50 dark:border-emerald-900 dark:bg-emerald-500/10",
   amber: "border-amber-200 bg-amber-50 dark:border-amber-900 dark:bg-amber-500/10",
   rose: "border-rose-200 bg-rose-50 dark:border-rose-900 dark:bg-rose-500/10",
@@ -88,9 +88,9 @@ export default function ECGLearn() {
 
   return (
     <div className="space-y-4">
-      <div className="rounded-2xl bg-gradient-to-l from-sky-700 to-slate-800 p-5 text-white">
+      <div className="rounded-2xl nh-hero p-5 text-white">
         <h2 className="text-xl font-black sm:text-2xl">{state.intro.title}</h2>
-        <p className="mt-1 text-sm text-sky-100">{state.intro.titleEn}</p>
+        <p className="mt-1 text-sm text-teal-100">{state.intro.titleEn}</p>
       </div>
 
       {state.sections.map((section) => {
@@ -107,12 +107,12 @@ export default function ECGLearn() {
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-600 text-sm font-black text-white">{section.id}</span>
                 <div>
                   <div className="font-black text-slate-800 dark:text-white">{section.title}</div>
-                  <div className="text-xs text-slate-400">{section.titleEn}</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400">{section.titleEn}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <span className="hidden sm:inline"><SourceTag s={section.source} /></span>
-                <span className={`text-slate-400 transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
+                <span className={`text-slate-500 dark:text-slate-400 transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
               </div>
             </button>
             {open && (

@@ -5,6 +5,7 @@ import { CATEGORY_ICONS, type Category } from "../lib/types";
 import ArticleListCard from "../components/ArticleListCard";
 import { useI18n, bilingual, type TKey } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const CAT_KEY: Record<Category, TKey> = {
   articles: "nav.articles", summaries: "nav.summaries", drugs: "nav.drugs",
@@ -52,6 +53,8 @@ export default function CategoryPage() {
 
   const activeSub = sub ? categories.find((c) => c.slug === sub) : undefined;
   const activeSubName = activeSub ? bilingual(activeSub.name, activeSub.nameEn, lang).text : undefined;
+  const seoName = activeSubName ?? catLabel;
+  useSEO({ title: seoName ? `${seoName} | NurseHub Egypt` : "NurseHub Egypt" });
 
   // Top level: only show articles that are NOT tucked into a sub-category
   // folder — otherwise they'd appear twice (once loose, once inside their
@@ -160,10 +163,10 @@ export default function CategoryPage() {
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#168C91]/10 text-xl" aria-hidden="true">📁</span>
                     <div className="min-w-0">
                       <div className="truncate font-bold text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{bilingual(c.name, c.nameEn, lang).text}</div>
-                      <div className="text-xs text-slate-500 dark:text-slate-400">{folderCount(c.id)} {t("common.item")}</div>
+                      <div className="text-xs text-slate-600 dark:text-slate-400">{folderCount(c.id)} {t("common.item")}</div>
                     </div>
                   </div>
-                  <span className="text-[#168C91]" aria-hidden="true">←</span>
+                  <span className="text-[#127378] dark:text-teal-300" aria-hidden="true">←</span>
                 </Link>
               ))}
             </div>
@@ -182,7 +185,7 @@ export default function CategoryPage() {
             )}
 
             {list.length === 0 ? (
-              <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">{t("common.noData")}</div>
+              <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">{t("common.noData")}</div>
             ) : (
               <div className="grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">{list.map((a) => <ArticleListCard key={a.id} a={a} />)}</div>
             )}

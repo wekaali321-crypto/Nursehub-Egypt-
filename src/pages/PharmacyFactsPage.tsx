@@ -9,7 +9,7 @@ import InlineLangToggle from "../components/InlineLangToggle";
 
 const CHAPTER_META: Record<number, { title: string; titleEn: string; range: string; rangeEn: string; icon: string; gradient: string }> = {
   1: { title: "الفصل الأول", titleEn: "Chapter 1", range: "المعلومات 1 – 100", rangeEn: "Facts 1 – 100", icon: "📗", gradient: "from-emerald-600 to-teal-500" },
-  2: { title: "الفصل الثاني", titleEn: "Chapter 2", range: "المعلومات 101 – 200", rangeEn: "Facts 101 – 200", icon: "📘", gradient: "from-sky-600 to-blue-500" },
+  2: { title: "الفصل الثاني", titleEn: "Chapter 2", range: "المعلومات 101 – 200", rangeEn: "Facts 101 – 200", icon: "📘", gradient: "from-teal-600 to-blue-500" },
   3: { title: "الفصل الثالث", titleEn: "Chapter 3", range: "المعلومات 201 – 300", rangeEn: "Facts 201 – 300", icon: "📙", gradient: "from-amber-600 to-orange-500" },
   4: { title: "الفصل الرابع", titleEn: "Chapter 4", range: "المعلومات 301 – 400", rangeEn: "Facts 301 – 400", icon: "📕", gradient: "from-rose-600 to-red-500" },
   5: { title: "الفصل الخامس", titleEn: "Chapter 5", range: "المعلومات 401 – 500", rangeEn: "Facts 401 – 500", icon: "📓", gradient: "from-violet-600 to-purple-500" },
@@ -34,7 +34,7 @@ export function PharmacyFactsHome() {
       <Breadcrumbs items={[{ label: t("drugs.title"), path: "/drugs" }, { label: t("facts.pageTitle") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
 
-      <div className="mb-8 rounded-3xl bg-gradient-to-l from-teal-700 via-emerald-600 to-teal-500 p-6 text-white shadow-lg sm:p-10">
+      <div className="mb-8 rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-10">
         <div className="text-5xl sm:text-6xl">📚</div>
         <h1 className="mt-3 text-2xl font-black sm:text-4xl">{t("facts.pageTitle")}</h1>
         <p className="mt-2 max-w-xl text-teal-50">{t("facts.desc")}</p>
@@ -73,7 +73,7 @@ export function PharmacyFactsHome() {
       </div>
 
       <div className="mt-8 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">{t("mnemonics.backToDrugs")}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{t("mnemonics.backToDrugs")}</Link>
       </div>
     </div>
   );
@@ -133,15 +133,15 @@ export default function PharmacyFactsChapterPage() {
           </div>
         ))}
         {filtered.length === 0 && (
-          <div className="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-400 dark:border-slate-700">
+          <div className="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {chapterFacts.length === 0 ? t("facts.noneUploaded") : t("facts.noResults")}
           </div>
         )}
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/facts" className="text-sky-600 hover:underline">{t("facts.backToChapters")}</Link>
-        <Link to="/drugs" className="text-sky-600 hover:underline">{t("facts.toDrugsGuide")}</Link>
+        <Link to="/drugs/facts" className="text-teal-700 dark:text-teal-300 hover:underline">{t("facts.backToChapters")}</Link>
+        <Link to="/drugs" className="text-teal-700 dark:text-teal-300 hover:underline">{t("facts.toDrugsGuide")}</Link>
       </div>
     </div>
   );

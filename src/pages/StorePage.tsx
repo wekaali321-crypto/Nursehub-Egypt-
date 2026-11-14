@@ -7,6 +7,7 @@ import { Breadcrumbs } from "../components/common";
 import OptimizedImage from "../components/OptimizedImage";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 export default function StorePage() {
   const { products } = useStore();
@@ -14,6 +15,7 @@ export default function StorePage() {
   const { notify } = useToast();
   const nav = useNavigate();
   const { t, lang } = useI18n();
+  useSEO({ title: `${t("store.heroTitle").replace(/^[^\p{L}\p{N}]+/u, "")} | NurseHub Egypt` });
   const [coupon, setCoupon] = useState("");
   const [applied, setApplied] = useState<number>(0);
   const [filter, setFilter] = useState("all");
@@ -31,21 +33,21 @@ export default function StorePage() {
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: bilingual("المتجر الرقمي", "Digital Store", lang).text }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <div className="mb-6 flex items-center justify-between rounded-3xl bg-gradient-to-l from-emerald-500 to-sky-500 p-8 text-white">
+      <div className="mb-6 flex items-center justify-between rounded-3xl nh-hero p-8 text-white">
         <div>
           <h1 className="text-3xl font-black">{t("store.heroTitle")}</h1>
-          <p className="mt-1 text-sky-50">{t("store.heroDesc")}</p>
+          <p className="mt-1 text-teal-50">{t("store.heroDesc")}</p>
         </div>
         <Link to="/checkout" className="relative rounded-full bg-white/20 px-5 py-2.5 font-bold backdrop-blur hover:bg-white/30">
           {t("store.cart")}
-          {count > 0 && <span className="absolute -right-1 -top-1 flex h-6 min-w-6 items-center justify-center rounded-full bg-white px-1 text-xs font-black text-emerald-600">{count}</span>}
+          {count > 0 && <span className="absolute -right-1 -top-1 flex h-6 min-w-6 items-center justify-center rounded-full bg-white px-1 text-xs font-black text-emerald-700 dark:text-emerald-300">{count}</span>}
         </Link>
       </div>
 
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div className="flex gap-2">
           {["all", "pdf", "course", "subscription"].map((tp) => (
-            <button key={tp} onClick={() => setFilter(tp)} className={`rounded-full px-4 py-1.5 text-sm font-semibold ${filter === tp ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{tp === "all" ? t("cat.all") : typeLabels[tp]}</button>
+            <button key={tp} onClick={() => setFilter(tp)} className={`rounded-full px-4 py-1.5 text-sm font-semibold ${filter === tp ? "bg-teal-700 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{tp === "all" ? t("cat.all") : typeLabels[tp]}</button>
           ))}
         </div>
         <div className="flex gap-2">
@@ -53,7 +55,7 @@ export default function StorePage() {
           <button onClick={applyCoupon} className="rounded-lg bg-emerald-500 px-4 py-1.5 text-sm font-bold text-white">{t("store.apply")}</button>
         </div>
       </div>
-      {applied > 0 && <div className="mb-4 rounded-xl bg-emerald-50 p-3 text-center font-bold text-emerald-600 dark:bg-emerald-500/10">✅ {t("store.couponApplied")} {applied}%! {t("store.tryCodes")}</div>}
+      {applied > 0 && <div className="mb-4 rounded-xl bg-emerald-50 p-3 text-center font-bold text-emerald-700 dark:text-emerald-300 dark:bg-emerald-500/10">✅ {t("store.couponApplied")} {applied}%! {t("store.tryCodes")}</div>}
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {list.map((p) => {
@@ -64,19 +66,19 @@ export default function StorePage() {
             <div key={p.id} className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
               <Link to={`/product/${p.id}`} className="relative block">
                 <OptimizedImage src={p.cover} alt={title} width={600} ratio="16/10" />
-                <span className="absolute right-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-emerald-600 dark:bg-slate-900/90">{typeLabels[p.type]}</span>
+                <span className="absolute right-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-300 dark:bg-slate-900/90">{typeLabels[p.type]}</span>
               </Link>
               <div className="p-5">
-                <Link to={`/product/${p.id}`}><h3 className="font-bold hover:text-sky-600 dark:text-white">{title}</h3></Link>
-                <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{desc}</p>
+                <Link to={`/product/${p.id}`}><h3 className="font-bold hover:text-teal-600 dark:text-white">{title}</h3></Link>
+                <p className="mt-1 line-clamp-2 text-sm text-slate-600 dark:text-slate-400">{desc}</p>
                 <div className="mt-3 flex items-center gap-2">
-                  <span className="text-2xl font-black text-emerald-500">{finalPrice} {lang === "en" ? "EGP" : "ج.م"}</span>
-                  {(p.oldPrice || applied > 0) && <span className="text-sm text-slate-400 line-through">{p.oldPrice ?? p.price} {lang === "en" ? "EGP" : "ج.م"}</span>}
+                  <span className="text-2xl font-black text-emerald-700 dark:text-emerald-300">{finalPrice} {lang === "en" ? "EGP" : "ج.م"}</span>
+                  {(p.oldPrice || applied > 0) && <span className="text-sm text-slate-500 dark:text-slate-400 line-through">{p.oldPrice ?? p.price} {lang === "en" ? "EGP" : "ج.م"}</span>}
                 </div>
-                <div className="mt-1 text-xs text-slate-400">🛍 {p.sales} {t("store.purchases")}</div>
+                <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">🛍 {p.sales} {t("store.purchases")}</div>
                 <div className="mt-3 flex gap-2">
-                  <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); notify(t("store.addedToCart"), "success"); }} className="flex-1 rounded-full border border-sky-500 py-2.5 text-sm font-bold text-sky-500">{t("store.addToCart")}</button>
-                  <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); nav("/checkout"); }} className="flex-1 rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 py-2.5 text-sm font-bold text-white hover:opacity-90">{t("store.buyNow")}</button>
+                  <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); notify(t("store.addedToCart"), "success"); }} className="flex-1 rounded-full border border-teal-500 py-2.5 text-sm font-bold text-teal-700 dark:text-teal-300">{t("store.addToCart")}</button>
+                  <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); nav("/checkout"); }} className="flex-1 rounded-full bg-[#127378] hover:bg-[#0f6165] py-2.5 text-sm font-bold text-white hover:opacity-90">{t("store.buyNow")}</button>
                 </div>
               </div>
             </div>

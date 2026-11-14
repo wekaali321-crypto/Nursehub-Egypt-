@@ -84,7 +84,7 @@ export default function QuizRunner({ questions, storageKey, breadcrumbs, title, 
     return (
       <div className="mx-auto max-w-lg px-4 py-16 text-center">
         <div className="text-6xl">❓</div>
-        <p className="mt-3 text-slate-500 dark:text-slate-400">{emptyText ?? 'لا توجد أسئلة في هذا القسم بعد'}</p>
+        <p className="mt-3 text-slate-600 dark:text-slate-400">{emptyText ?? 'لا توجد أسئلة في هذا القسم بعد'}</p>
         <Link to={backTo.path} className="mt-4 inline-block rounded-full bg-blue-600 px-6 py-2 font-bold text-white">
           {backTo.label}
         </Link>
@@ -170,14 +170,14 @@ export default function QuizRunner({ questions, storageKey, breadcrumbs, title, 
         <h1 className="text-lg font-bold text-slate-800 dark:text-white">{title}</h1>
         <button
           onClick={handleReset}
-          className="text-xs text-slate-400 underline hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300"
+          className="text-xs text-slate-500 underline hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
         >
           إعادة تعيين التقدم (Reset progress)
         </button>
       </div>
 
       {/* Progress bar */}
-      <div className="mb-1 flex items-center justify-between text-xs text-slate-400 dark:text-slate-500">
+      <div className="mb-1 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
         <span className="flex items-center gap-2">
           سؤال {index + 1} من {questions.length}
           {hasArabicTranslation && (
@@ -259,7 +259,7 @@ export default function QuizRunner({ questions, storageKey, breadcrumbs, title, 
                 disabled={isAnswered || (isMulti && isThisSelected)}
                 className={`flex w-full items-start gap-3 rounded-xl border p-3 text-right transition-colors rtl:text-right ${stateClasses}`}
               >
-                <span className="font-semibold text-slate-500 dark:text-slate-400">{choice.letter}.</span>
+                <span className="font-semibold text-slate-600 dark:text-slate-400">{choice.letter}.</span>
                 <span className="text-slate-700 dark:text-slate-200">{choice.text}</span>
               </button>
             );
@@ -282,7 +282,7 @@ export default function QuizRunner({ questions, storageKey, breadcrumbs, title, 
                   : `❌ إجابة خاطئة — الصحيح هو (${q.correct_letter})`}
             </div>
             <div className="mb-2 text-slate-700 dark:text-slate-200">{q.rationale_ar}</div>
-            <div className="border-t border-slate-200 pt-2 text-xs text-slate-500 dark:border-slate-700 dark:text-slate-400">
+            <div className="border-t border-slate-200 pt-2 text-xs text-slate-600 dark:border-slate-700 dark:text-slate-400">
               {q.rationale_en}
             </div>
           </div>

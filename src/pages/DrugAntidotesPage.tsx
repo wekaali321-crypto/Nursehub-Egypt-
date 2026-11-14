@@ -43,7 +43,7 @@ export default function DrugAntidotesPage() {
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="mx-auto max-w-4xl px-4 py-8">
       <Breadcrumbs items={[{ label: LABELS.drugsBreadcrumb[lang], path: "/drugs" }, { label: LABELS.breadcrumb[lang] }]} />
 
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-emerald-600 to-teal-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="flex items-start justify-between gap-2">
           <div className="text-4xl sm:text-5xl">🧪</div>
           <InlineLangToggle light />
@@ -65,20 +65,20 @@ export default function DrugAntidotesPage() {
           <div key={a.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
             <div className="flex flex-wrap items-start justify-between gap-2">
               <h3 className="font-bold text-slate-900 dark:text-white">{bilingual(a.toxin, a.toxinEn, lang).text}</h3>
-              <span className="rounded-full bg-emerald-50 px-3 py-1 text-sm font-bold text-emerald-600 dark:bg-emerald-500/10">💊 {bilingual(a.antidotes, a.antidotesEn, lang).text}</span>
+              <span className="rounded-full bg-emerald-50 px-3 py-1 text-sm font-bold text-emerald-700 dark:text-emerald-300 dark:bg-emerald-500/10">💊 {bilingual(a.antidotes, a.antidotesEn, lang).text}</span>
             </div>
-            {a.notes && <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">{bilingual(a.notes, a.notesEn, lang).text}</p>}
+            {a.notes && <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">{bilingual(a.notes, a.notesEn, lang).text}</p>}
           </div>
         ))}
         {filtered.length === 0 && (
-          <div className="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-400 dark:border-slate-700">
+          <div className="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {LABELS.noResults[lang]}
           </div>
         )}
       </div>
 
       <div className="mt-4 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">{LABELS.back[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{LABELS.back[lang]}</Link>
       </div>
     </div>
   );

@@ -123,7 +123,7 @@ export default function DrugsListPage() {
   const chip = (active: boolean) =>
     `shrink-0 snap-start whitespace-nowrap rounded-full border px-3.5 py-2 text-sm font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] ${
       active
-        ? "border-[#168C91] bg-[#168C91] text-white"
+        ? "border-[#168C91] bg-[#127378] text-white"
         : "border-slate-200 bg-white text-[#153448] hover:border-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
     }`;
 
@@ -161,9 +161,9 @@ export default function DrugsListPage() {
               placeholder={L.searchPh[lang]}
               className="w-full rounded-2xl border-0 bg-white py-3 ps-11 pe-11 text-slate-800 shadow-lg outline-none ring-2 ring-white/30 focus:ring-[#168C91] placeholder:text-slate-400 dark:bg-slate-900 dark:text-white [&::-webkit-search-cancel-button]:hidden"
             />
-            <span aria-hidden="true" className="pointer-events-none absolute start-4 top-3 text-lg text-slate-400">🔍</span>
+            <span aria-hidden="true" className="pointer-events-none absolute start-4 top-3 text-lg text-slate-500 dark:text-slate-400">🔍</span>
             {q && (
-              <button type="button" aria-label={L.clear[lang]} onClick={() => { setQ(""); touch(); }} className="absolute end-2 top-2 flex h-8 w-8 items-center justify-center rounded-full text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800">✕</button>
+              <button type="button" aria-label={L.clear[lang]} onClick={() => { setQ(""); touch(); }} className="absolute end-2 top-2 flex h-8 w-8 items-center justify-center rounded-full text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">✕</button>
             )}
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function DrugsListPage() {
           <div className="flex items-center gap-3 text-sm text-slate-600 dark:text-slate-300" aria-live="polite">
             <span className="font-bold text-[#153448] dark:text-white">{list.length} {L.results[lang]}</span>
             {filtersActive && (
-              <button type="button" onClick={resetAll} className="font-bold text-[#168C91] underline-offset-2 hover:underline dark:text-teal-300">{L.reset[lang]}</button>
+              <button type="button" onClick={resetAll} className="font-bold text-[#127378] underline-offset-2 hover:underline dark:text-teal-300">{L.reset[lang]}</button>
             )}
           </div>
           <select aria-label={t("drugs.sortAZ")} value={sort} onChange={(e) => { setSort(e.target.value); touch(); }} className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-semibold text-[#153448] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">
@@ -206,7 +206,7 @@ export default function DrugsListPage() {
         {list.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-slate-300 bg-white px-4 py-14 text-center dark:border-slate-700 dark:bg-slate-900">
             <div className="font-bold text-[#153448] dark:text-white">{L.noRes[lang]}</div>
-            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{L.hint[lang]}</p>
+            <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{L.hint[lang]}</p>
           </div>
         ) : (
           <>

@@ -4,11 +4,13 @@ import { useUserAuth } from "../lib/userAuth";
 import { useI18n } from "../lib/i18n";
 import { supabase, isSupabaseConfigured } from "../lib/supabase";
 import { ArticleCard } from "../components/common";
+import { useSEO } from "../lib/seo";
 
 export default function StudentDashboard() {
   const { user, loggedIn, loading: authLoading } = useUserAuth();
   const { lang } = useI18n();
   const isRTL = lang === "ar";
+  useSEO({ title: `${isRTL ? "لوحتي" : "My Dashboard"} | NurseHub Egypt` });
 
   const [recentlyViewed, setRecentlyViewed] = useState<any[]>([]);
   const [savedArticles, setSavedArticles] = useState<any[]>([]);
@@ -82,10 +84,10 @@ export default function StudentDashboard() {
   if (!loggedIn || !user) {
     return (
       <div className="flex min-h-[60vh] flex-col items-center justify-center gap-3 text-center">
-        <p className="text-lg text-slate-500 dark:text-slate-400">
+        <p className="text-lg text-slate-600 dark:text-slate-400">
           {isRTL ? "يجب تسجيل الدخول لعرض حسابك." : "Please log in to view your dashboard."}
         </p>
-        <Link to="/login" className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white">
+        <Link to="/login" className="rounded-full bg-teal-500 px-6 py-2 font-bold text-white">
           {isRTL ? "تسجيل الدخول" : "Log in"}
         </Link>
       </div>
@@ -104,8 +106,8 @@ export default function StudentDashboard() {
           <img src={avatarUrl} alt="Avatar" className="h-20 w-20 rounded-full object-cover" />
           <div>
             <h1 className="text-2xl font-black dark:text-white">{displayName}</h1>
-            <p className="text-sm text-slate-500 dark:text-slate-400">{user.email}</p>
-            <p className="mt-1 text-xs text-slate-400">{isRTL ? "عضو منذ" : "Member since"} {joinedDate}</p>
+            <p className="text-sm text-slate-600 dark:text-slate-400">{user.email}</p>
+            <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{isRTL ? "عضو منذ" : "Member since"} {joinedDate}</p>
           </div>
         </div>
       </div>
@@ -128,7 +130,7 @@ export default function StudentDashboard() {
                       <img src={a.cover} alt={a.title} className="h-16 w-16 rounded-xl object-cover" />
                       <div className="min-w-0 flex-1">
                         <div className="line-clamp-2 text-sm font-semibold dark:text-white">{a.title}</div>
-                        <div className="mt-1 text-xs text-slate-400">{a.views} {isRTL ? "مشاهدة" : "views"}</div>
+                        <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">{a.views} {isRTL ? "مشاهدة" : "views"}</div>
                       </div>
                     </div>
                   </Link>
@@ -136,7 +138,7 @@ export default function StudentDashboard() {
               </div>
             ) : (
               <div className="rounded-2xl border border-dashed border-slate-300 p-8 text-center dark:border-slate-700">
-                <p className="text-slate-500 dark:text-slate-400">{isRTL ? "لم تقرأ أي مقال بعد." : "No articles viewed yet."}</p>
+                <p className="text-slate-600 dark:text-slate-400">{isRTL ? "لم تقرأ أي مقال بعد." : "No articles viewed yet."}</p>
               </div>
             )}
           </section>
@@ -152,7 +154,7 @@ export default function StudentDashboard() {
               </div>
             ) : (
               <div className="rounded-2xl border border-dashed border-slate-300 p-8 text-center dark:border-slate-700">
-                <p className="text-slate-500 dark:text-slate-400">{isRTL ? "لم تحفظ أي مقال بعد." : "You haven't saved any articles yet."}</p>
+                <p className="text-slate-600 dark:text-slate-400">{isRTL ? "لم تحفظ أي مقال بعد." : "You haven't saved any articles yet."}</p>
               </div>
             )}
           </section>
@@ -162,8 +164,8 @@ export default function StudentDashboard() {
             <h2 className="mb-4 text-xl font-bold dark:text-white">{isRTL ? "معلومات الحساب" : "Account Information"}</h2>
             <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
               <div className="grid gap-x-8 gap-y-4 text-sm sm:grid-cols-2">
-                <div><span className="text-slate-400">{isRTL ? "البريد الإلكتروني" : "Email"}:</span> {user.email}</div>
-                <div><span className="text-slate-400">{isRTL ? "تاريخ الانضمام" : "Joined"}:</span> {joinedDate}</div>
+                <div><span className="text-slate-500 dark:text-slate-400">{isRTL ? "البريد الإلكتروني" : "Email"}:</span> {user.email}</div>
+                <div><span className="text-slate-500 dark:text-slate-400">{isRTL ? "تاريخ الانضمام" : "Joined"}:</span> {joinedDate}</div>
               </div>
             </div>
           </section>

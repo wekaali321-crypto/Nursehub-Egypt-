@@ -36,10 +36,10 @@ export default function OrderStatusPage() {
   useSEO({ title: `${t("order.tracking")} ${invoiceNo ?? ""} | NurseHub Egypt` });
 
   const statusMeta: Record<Order["paymentStatus"], { label: string; color: string }> = {
-    pending: { label: t("order.status.pending"), color: "text-amber-600 bg-amber-50 dark:bg-amber-500/10" },
-    paid: { label: t("order.status.paid"), color: "text-emerald-600 bg-emerald-50 dark:bg-emerald-500/10" },
-    failed: { label: t("order.status.failed"), color: "text-red-600 bg-red-50 dark:bg-red-500/10" },
-    refunded: { label: t("order.status.refunded"), color: "text-slate-600 bg-slate-100 dark:bg-slate-800" },
+    pending: { label: t("order.status.pending"), color: "text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-500/10" },
+    paid: { label: t("order.status.paid"), color: "text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-500/10" },
+    failed: { label: t("order.status.failed"), color: "text-red-700 dark:text-red-300 bg-red-50 dark:bg-red-500/10" },
+    refunded: { label: t("order.status.refunded"), color: "text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800" },
   };
 
   const [order, setOrder] = useState<TrackedOrder | null | undefined>(undefined); // undefined = still loading
@@ -73,7 +73,7 @@ export default function OrderStatusPage() {
   }, [invoiceNo]);
 
   if (order === undefined) {
-    return <div className="mx-auto max-w-lg px-4 py-20 text-center text-slate-400">{t("common.loading")}</div>;
+    return <div className="mx-auto max-w-lg px-4 py-20 text-center text-slate-500 dark:text-slate-400">{t("common.loading")}</div>;
   }
 
   if (!order) {
@@ -82,8 +82,8 @@ export default function OrderStatusPage() {
         <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
         <div className="text-6xl">❓</div>
         <h1 className="mt-3 text-2xl font-black dark:text-white">{t("order.notFound")}</h1>
-        <p className="mt-2 text-slate-500 dark:text-slate-400">{t("order.checkInvoiceNote")}</p>
-        <Link to="/store" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("nav.store")}</Link>
+        <p className="mt-2 text-slate-600 dark:text-slate-400">{t("order.checkInvoiceNote")}</p>
+        <Link to="/store" className="mt-4 inline-block rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("nav.store")}</Link>
       </div>
     );
   }
@@ -95,11 +95,11 @@ export default function OrderStatusPage() {
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
       <div className="text-6xl">{order.paymentStatus === "paid" ? "🎉" : "🧾"}</div>
       <h1 className="mt-3 text-2xl font-black dark:text-white">{t("order.tracking")}</h1>
-      <p className="mt-2 text-slate-500 dark:text-slate-400">{t("order.invoiceNumber")} <b>{order.invoiceNo}</b></p>
+      <p className="mt-2 text-slate-600 dark:text-slate-400">{t("order.invoiceNumber")} <b>{order.invoiceNo}</b></p>
       <span className={`mt-3 inline-block rounded-full px-4 py-1.5 text-sm font-bold ${meta.color}`}>{meta.label}</span>
 
       {order.paymentStatus === "pending" && (
-        <div className="mt-5 rounded-xl bg-amber-50 p-4 text-sm text-amber-600 dark:bg-amber-500/10">
+        <div className="mt-5 rounded-xl bg-amber-50 p-4 text-sm text-amber-700 dark:text-amber-300 dark:bg-amber-500/10">
           <p>{t("order.pendingNote")}</p>
           <a
             href={`https://wa.me/${MANUAL_WHATSAPP}?text=${encodeURIComponent(isEn ? `Hello, I'm asking about the status of my order ${order.invoiceNo}` : `مرحباً، بستفسر عن حالة طلبي رقم ${order.invoiceNo}`)}`}
@@ -113,7 +113,7 @@ export default function OrderStatusPage() {
 
       {order.paymentStatus === "paid" && (
         <div className="mt-5 space-y-2 text-right">
-          <p className="text-sm font-bold text-emerald-600">{t("order.filesReady")}</p>
+          <p className="text-sm font-bold text-emerald-700 dark:text-emerald-300">{t("order.filesReady")}</p>
           {order.items.map((item) => {
             const isPrintAll = item.productId === "icu-print-all";
             const isPrintTopic = item.productId.startsWith("icu-print-") && !isPrintAll;
@@ -133,12 +133,12 @@ export default function OrderStatusPage() {
                   <a
                     href={`${product.fileUrl}${product.fileUrl.includes("?") ? "&" : "?"}download=`}
                     onClick={() => trackDownload()}
-                    className="shrink-0 rounded-full bg-sky-500 px-4 py-1.5 text-xs font-bold text-white"
+                    className="shrink-0 rounded-full bg-teal-500 px-4 py-1.5 text-xs font-bold text-white"
                   >
                     {t("order.download")}
                   </a>
                 ) : (
-                  <span className="shrink-0 text-xs text-slate-400">{t("order.fileNotAvailable")}</span>
+                  <span className="shrink-0 text-xs text-slate-500 dark:text-slate-400">{t("order.fileNotAvailable")}</span>
                 )}
               </div>
             );
@@ -147,10 +147,10 @@ export default function OrderStatusPage() {
       )}
 
       {order.paymentStatus === "failed" && (
-        <p className="mt-5 rounded-xl bg-red-50 p-4 text-sm text-red-600 dark:bg-red-500/10">{t("order.paymentFailed")}</p>
+        <p className="mt-5 rounded-xl bg-red-50 p-4 text-sm text-red-700 dark:text-red-300 dark:bg-red-500/10">{t("order.paymentFailed")}</p>
       )}
       {order.paymentStatus === "refunded" && (
-        <p className="mt-5 rounded-xl bg-slate-100 p-4 text-sm text-slate-600 dark:bg-slate-800">{t("order.refunded")}</p>
+        <p className="mt-5 rounded-xl bg-slate-100 p-4 text-sm text-slate-600 dark:text-slate-400 dark:bg-slate-800">{t("order.refunded")}</p>
       )}
 
       <div className="mt-6">

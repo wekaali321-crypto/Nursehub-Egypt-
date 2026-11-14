@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { fetchRxPrescriptions, RX_CATEGORY_ORDER, RX_CATEGORY_LABELS, type RxPrescription } from "../lib/rxApi";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const LABELS = {
   loading: { ar: "جارِ التحميل...", en: "Loading..." },
@@ -36,6 +37,7 @@ function DisclaimerBanner({ lang }: { lang: "ar" | "en" }) {
 
 export function RxPrescriptionsHome() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [items, setItems] = useState<RxPrescription[]>([]);
   const [loading, setLoading] = useState(true);
   const [q, setQ] = useState("");
@@ -44,7 +46,7 @@ export function RxPrescriptionsHome() {
     fetchRxPrescriptions().then(setItems).catch(() => setItems([])).finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
 
   const query = q.trim().toLowerCase();
   const filtered = !query
@@ -70,7 +72,7 @@ export function RxPrescriptionsHome() {
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-5xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-emerald-600 to-teal-700 text-white p-6 mb-6">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-6">
         <div className="flex items-start justify-between gap-2 mb-1">
           <h1 className="text-2xl font-bold">{LABELS.title[lang]}</h1>
           <InlineLangToggle light />
@@ -86,13 +88,13 @@ export function RxPrescriptionsHome() {
           placeholder={LABELS.searchPlaceholder[lang]}
           className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-emerald-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
         />
-        <span className="absolute right-3 top-3 text-slate-400">🔍</span>
+        <span className="absolute right-3 top-3 text-slate-500 dark:text-slate-400">🔍</span>
       </div>
 
       <DisclaimerBanner lang={lang} />
 
       {allGroups.length === 0 && (
-        <div className="text-center text-slate-500 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
+        <div className="text-center text-slate-600 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
       )}
 
       {allGroups.map((g) => (
@@ -109,7 +111,7 @@ export function RxPrescriptionsHome() {
                   className="rounded-xl p-4 bg-white border border-slate-200 hover:border-emerald-400 hover:shadow-sm transition dark:bg-slate-900 dark:border-slate-800"
                 >
                   <div className="font-bold text-slate-800 dark:text-white">{title}</div>
-                  {subtitle && <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{subtitle}</div>}
+                  {subtitle && <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">{subtitle}</div>}
                   <div className="text-xs text-emerald-700 dark:text-emerald-400 mt-2">{r.items.length} {LABELS.drugCount[lang]}</div>
                 </Link>
               );
@@ -126,6 +128,7 @@ export default function RxPrescriptionDetail() {
   const { lang } = useI18n();
   const [rx, setRx] = useState<RxPrescription | null>(null);
   const [loading, setLoading] = useState(true);
+  useSEO({ title: `${rx ? (lang === "en" && rx.condition_en ? rx.condition_en : rx.condition_ar) : ""}${rx ? " | " : ""}NurseHub Egypt` });
 
   useEffect(() => {
     if (!id) return;
@@ -135,8 +138,8 @@ export default function RxPrescriptionDetail() {
       .finally(() => setLoading(false));
   }, [id]);
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
-  if (!rx) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (!rx) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
 
   const title = lang === "en" && rx.condition_en ? rx.condition_en : rx.condition_ar;
   const subtitle = lang === "en" ? null : rx.condition_en;
@@ -158,7 +161,7 @@ export default function RxPrescriptionDetail() {
           <div>
             <div className="text-xs text-emerald-700 dark:text-emerald-400 font-semibold tracking-wide mb-1">{categoryLabel(rx.category, lang)}</div>
             <h1 className="text-xl font-bold text-slate-800 dark:text-white">{title}</h1>
-            {subtitle && <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">{subtitle}</p>}
+            {subtitle && <p className="text-sm text-slate-600 dark:text-slate-400 mt-0.5">{subtitle}</p>}
           </div>
           <div className="text-4xl text-emerald-700 dark:text-emerald-400 font-serif leading-none">℞</div>
         </div>
@@ -172,7 +175,7 @@ export default function RxPrescriptionDetail() {
                 <span className="font-semibold text-slate-800 dark:text-white">{it.drug_name}</span>
               </div>
               {it.dose && <p className="text-slate-600 dark:text-slate-400 text-sm mt-1 pr-5 leading-relaxed">{it.dose}</p>}
-              {it.note && <p className="text-slate-500 dark:text-slate-400 text-xs mt-1 pr-5 italic">{it.note}</p>}
+              {it.note && <p className="text-slate-600 dark:text-slate-400 text-xs mt-1 pr-5 italic">{it.note}</p>}
             </div>
           ))}
         </div>
@@ -180,14 +183,14 @@ export default function RxPrescriptionDetail() {
         {/* ملاحظات إكلينيكية */}
         {rx.clinical_note && (
           <div className="mx-5 mb-5 rounded-lg bg-slate-50 border border-slate-200 p-4 dark:bg-slate-800 dark:border-slate-700">
-            <div className="text-xs font-bold text-slate-500 dark:text-slate-400 mb-1">{LABELS.notes[lang]}</div>
+            <div className="text-xs font-bold text-slate-600 dark:text-slate-400 mb-1">{LABELS.notes[lang]}</div>
             <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{bilingual(rx.clinical_note, rx.clinical_note_en, lang).text}</p>
           </div>
         )}
 
         {/* توقيع الطبيب */}
         <div className="border-t-2 border-dashed border-emerald-700/30 dark:border-emerald-500/20 p-5 flex justify-between items-center bg-slate-50 dark:bg-slate-800">
-          <div className="text-xs text-slate-400 dark:text-slate-500">{LABELS.footerNote[lang]}</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400">{LABELS.footerNote[lang]}</div>
           {rx.doctor_name && (
             <div className="text-sm text-slate-600 dark:text-slate-300 font-serif italic">{rx.doctor_name}</div>
           )}

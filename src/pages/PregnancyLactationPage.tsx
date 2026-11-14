@@ -6,6 +6,7 @@ import {
 } from "../lib/pregnancyLactationApi";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const CATEGORY_ORDER = [
   "مسكنات ومضادات التهاب",
@@ -67,11 +68,11 @@ function DrugCard({
   return (
     <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden dark:bg-slate-900 dark:border-slate-800">
       <button onClick={onToggle} className="w-full flex items-center justify-between gap-3 p-4 text-right">
-        <span className="text-slate-400 dark:text-slate-500">{open ? "▲" : "▼"}</span>
+        <span className="text-slate-500 dark:text-slate-400">{open ? "▲" : "▼"}</span>
         <div className="flex-1">
           <div className="font-bold text-slate-800 dark:text-white">{bilingual(item.drug_name, item.drug_name_en, lang).text}</div>
           {item.drug_class && (
-            <div className="text-xs text-slate-400 dark:text-slate-500">{bilingual(item.drug_class, item.drug_class_en, lang).text}</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400">{bilingual(item.drug_class, item.drug_class_en, lang).text}</div>
           )}
         </div>
         <div className="flex flex-col gap-1 items-end">
@@ -122,6 +123,7 @@ function DrugCard({
 
 export default function PregnancyLactationPage() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<PregnancyLactationSafety[]>([]);
   const [loading, setLoading] = useState(true);
@@ -164,11 +166,11 @@ export default function PregnancyLactationPage() {
     });
   }
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-pink-600 to-fuchsia-700 text-white p-6 mb-4">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-4">
         <div className="flex items-start justify-between gap-2 mb-1">
           <div className="flex items-center gap-2">
             <span className="text-2xl">🤰</span>
@@ -187,7 +189,7 @@ export default function PregnancyLactationPage() {
           placeholder={LABELS.searchPlaceholder[lang]}
           className="w-full rounded-xl border border-slate-200 bg-white py-3 pr-11 pl-3 outline-none focus:border-pink-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
         />
-        <span className="absolute right-4 top-3.5 text-slate-400">🔍</span>
+        <span className="absolute right-4 top-3.5 text-slate-500 dark:text-slate-400">🔍</span>
       </div>
 
       <div className="rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs p-3 mb-6 leading-relaxed dark:bg-amber-500/10 dark:border-amber-500/20 dark:text-amber-300">
@@ -195,12 +197,12 @@ export default function PregnancyLactationPage() {
       </div>
 
       {grouped.length === 0 && (
-        <div className="text-center text-slate-500 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
+        <div className="text-center text-slate-600 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
       )}
 
       {grouped.map((g) => (
         <div key={g.category} className="mb-6">
-          <h2 className="text-sm font-bold text-slate-500 dark:text-slate-400 mb-2">
+          <h2 className="text-sm font-bold text-slate-600 dark:text-slate-400 mb-2">
             {bilingual(g.category, g.categoryEn, lang).text}
           </h2>
           <div className="space-y-3">

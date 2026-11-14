@@ -45,7 +45,7 @@ function Dots({ level }: { level: string }) {
 }
 
 function Loading() {
-  return <div className="flex items-center justify-center py-24 text-slate-500"><span className="animate-pulse">…</span></div>;
+  return <div className="flex items-center justify-center py-24 text-slate-600 dark:text-slate-400"><span className="animate-pulse">…</span></div>;
 }
 
 // ---------------------------------------------------------------------------
@@ -143,7 +143,7 @@ export function CasesHome() {
               <div className="text-4xl">📘</div>
               <div className="min-w-0">
                 <div className="font-black text-slate-900 dark:text-white">{pick(g.title, ar)}</div>
-                {g.teaser && <div className="mt-0.5 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{pick(g.teaser, ar)}</div>}
+                {g.teaser && <div className="mt-0.5 line-clamp-2 text-sm text-slate-600 dark:text-slate-400">{pick(g.teaser, ar)}</div>}
               </div>
             </Link>
           ))}
@@ -155,27 +155,27 @@ export function CasesHome() {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder={ar ? '🔎 ابحث بالعنوان أو الأعراض أو رقم الحالة…' : '🔎 Search by title, symptom or case number…'}
-          className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+          className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
         />
         <div className="flex gap-2 overflow-x-auto pb-1">
-          <button onClick={() => setSp('all')} className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold ${sp === 'all' ? 'bg-sky-500 text-white' : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>
+          <button onClick={() => setSp('all')} className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold ${sp === 'all' ? 'bg-teal-700 text-white' : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>
             {ar ? 'الكل' : 'All'} ({total})
           </button>
           {Object.keys(SPECIALTIES).filter((k) => counts[k]).map((k) => (
-            <button key={k} onClick={() => setSp(k)} className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold ${sp === k ? 'bg-sky-500 text-white' : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>
+            <button key={k} onClick={() => setSp(k)} className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold ${sp === k ? 'bg-teal-700 text-white' : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>
               {SPECIALTIES[k].icon} {ar ? SPECIALTIES[k].ar : SPECIALTIES[k].en} ({counts[k]})
             </button>
           ))}
         </div>
         <div className="flex flex-wrap gap-2 text-xs">
           {(['all', 'easy', 'medium', 'hard'] as const).map((d) => (
-            <button key={d} onClick={() => setDiff(d)} className={`rounded-full border px-3 py-1 font-bold ${diff === d ? 'border-sky-500 bg-sky-50 text-sky-700 dark:bg-sky-500/10' : 'border-slate-200 text-slate-500 dark:border-slate-700'}`}>
+            <button key={d} onClick={() => setDiff(d)} className={`rounded-full border px-3 py-1 font-bold ${diff === d ? 'border-teal-500 bg-teal-50 text-teal-700 dark:text-teal-300 dark:bg-teal-500/10' : 'border-slate-200 text-slate-600 dark:text-slate-400 dark:border-slate-700'}`}>
               {d === 'all' ? (ar ? 'كل المستويات' : 'All levels') : ar ? DIFFICULTY[d].ar : DIFFICULTY[d].en}
             </button>
           ))}
           <span className="mx-1 text-slate-300">|</span>
           {(['all', 'new', 'done'] as const).map((s) => (
-            <button key={s} onClick={() => setStatus(s)} className={`rounded-full border px-3 py-1 font-bold ${status === s ? 'border-emerald-500 bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10' : 'border-slate-200 text-slate-500 dark:border-slate-700'}`}>
+            <button key={s} onClick={() => setStatus(s)} className={`rounded-full border px-3 py-1 font-bold ${status === s ? 'border-emerald-500 bg-emerald-50 text-emerald-700 dark:text-emerald-300 dark:bg-emerald-500/10' : 'border-slate-200 text-slate-600 dark:text-slate-400 dark:border-slate-700'}`}>
               {s === 'all' ? (ar ? 'الكل' : 'Any') : s === 'new' ? (ar ? 'لم أبدأها' : 'Not done') : ar ? '✓ أنجزتها' : '✓ Done'}
             </button>
           ))}
@@ -185,7 +185,7 @@ export function CasesHome() {
       {cases === null ? (
         <Loading />
       ) : shown.length === 0 ? (
-        <div className="py-20 text-center text-slate-500">{total === 0 ? (ar ? 'الحالات قيد الإضافة… عُد قريبًا.' : 'Cases are being added… check back soon.') : ar ? 'لا توجد حالات مطابقة.' : 'No matching cases.'}</div>
+        <div className="py-20 text-center text-slate-600 dark:text-slate-400">{total === 0 ? (ar ? 'الحالات قيد الإضافة… عُد قريبًا.' : 'Cases are being added… check back soon.') : ar ? 'لا توجد حالات مطابقة.' : 'No matching cases.'}</div>
       ) : (
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((c) => {
@@ -200,9 +200,9 @@ export function CasesHome() {
                   {isDone && <span className="absolute start-3 top-3 rounded-full bg-emerald-400 px-2 py-0.5 text-[11px] font-black text-emerald-950">✓ {ar ? 'تمت' : 'Done'}</span>}
                 </div>
                 <div className="p-4">
-                  <h3 className="font-black leading-snug text-slate-900 group-hover:text-sky-600 dark:text-white">{pick(c.title, ar)}</h3>
-                  <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{pick(c.teaser, ar)}</p>
-                  <div className="mt-3 flex items-center justify-between text-xs text-slate-400">
+                  <h3 className="font-black leading-snug text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</h3>
+                  <p className="mt-1 line-clamp-2 text-sm text-slate-600 dark:text-slate-400">{pick(c.teaser, ar)}</p>
+                  <div className="mt-3 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
                     <span>{ar ? s.ar : s.en}</span>
                     <span className="inline-flex items-center gap-1.5">{ar ? DIFFICULTY[c.difficulty]?.ar : DIFFICULTY[c.difficulty]?.en} <Dots level={c.difficulty} /></span>
                   </div>
@@ -213,7 +213,7 @@ export function CasesHome() {
         </div>
       )}
 
-      <p className="mt-10 text-center text-xs text-slate-400">
+      <p className="mt-10 text-center text-xs text-slate-500 dark:text-slate-400">
         {ar ? 'حالات تعليمية بصياغة ورسوم أصلية من إعداد الموقع، مبنية على سيناريوهات الطب الإسعافي الشائعة. لا تغني عن التقييم الإكلينيكي ولا عن بروتوكولات مؤسستك.' : 'Educational cases with original wording and illustrations by the site, built on common acute-medicine scenarios. They do not replace clinical judgement or your institution’s protocols.'}
       </p>
     </div>
@@ -245,7 +245,7 @@ function KeyPoints({ items, ar }: { items: string[]; ar: boolean }) {
   return (
     <div className="mt-8">
       <h3 className="mb-1 text-xl font-black dark:text-white">🎯 {ar ? 'ما تحتاج أن تتذكره' : 'Take-home points'}</h3>
-      <p className="mb-3 text-xs text-slate-400">{ar ? 'اضغط على النقطة التي حفظتها لتعليمها ✓' : 'Tap a point once you have it down ✓'}</p>
+      <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">{ar ? 'اضغط على النقطة التي حفظتها لتعليمها ✓' : 'Tap a point once you have it down ✓'}</p>
       <div className="grid gap-3 sm:grid-cols-2">
         {items.map((k, i) => {
           const on = known.includes(i);
@@ -253,9 +253,9 @@ function KeyPoints({ items, ar }: { items: string[]; ar: boolean }) {
             <button
               key={i}
               onClick={() => setKnown((s) => (on ? s.filter((x) => x !== i) : [...s, i]))}
-              className={`cs-kp rounded-2xl border p-4 text-start transition ${on ? 'border-emerald-400 bg-emerald-50 dark:bg-emerald-500/10' : 'border-slate-200 bg-white hover:border-sky-300 dark:border-slate-700 dark:bg-slate-900'}`}
+              className={`cs-kp rounded-2xl border p-4 text-start transition ${on ? 'border-emerald-400 bg-emerald-50 dark:bg-emerald-500/10' : 'border-slate-200 bg-white hover:border-teal-300 dark:border-slate-700 dark:bg-slate-900'}`}
             >
-              <span className={`me-2 inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-black ${on ? 'bg-emerald-500 text-white' : 'bg-sky-100 text-sky-700 dark:bg-sky-500/20 dark:text-sky-300'}`}>{on ? '✓' : i + 1}</span>
+              <span className={`me-2 inline-flex h-6 w-6 items-center justify-center rounded-full text-xs font-black ${on ? 'bg-emerald-700 text-white' : 'bg-teal-100 text-teal-700 dark:bg-teal-500/20 dark:text-teal-300'}`}>{on ? '✓' : i + 1}</span>
               <span className="text-sm leading-7 text-slate-700 dark:text-slate-200">{k}</span>
             </button>
           );
@@ -311,8 +311,8 @@ export function CasePage() {
     return (
       <div className="mx-auto max-w-lg px-4 py-16 text-center">
         <div className="text-6xl">🔍</div>
-        <p className="mt-3 text-slate-500">{ar ? 'هذه الحالة غير موجودة.' : 'Case not found.'}</p>
-        <Link to="/cases" className="mt-4 inline-block rounded-full bg-sky-600 px-6 py-2 font-bold text-white">{ar ? 'كل الحالات' : 'All cases'}</Link>
+        <p className="mt-3 text-slate-600 dark:text-slate-400">{ar ? 'هذه الحالة غير موجودة.' : 'Case not found.'}</p>
+        <Link to="/cases" className="mt-4 inline-block rounded-full bg-teal-600 px-6 py-2 font-bold text-white">{ar ? 'كل الحالات' : 'All cases'}</Link>
       </div>
     );
   }
@@ -374,7 +374,7 @@ export function CasePage() {
             const active = st.k === step;
             const seen = visited.includes(st.k) && !active;
             return (
-              <button key={st.k} onClick={() => go(st.k)} className={`flex flex-1 flex-col items-center gap-0.5 rounded-xl px-1 py-1.5 text-[11px] font-bold transition ${active ? 'bg-sky-500 text-white shadow' : seen ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300' : 'bg-white text-slate-400 dark:bg-slate-800'}`}>
+              <button key={st.k} onClick={() => go(st.k)} className={`flex flex-1 flex-col items-center gap-0.5 rounded-xl px-1 py-1.5 text-[11px] font-bold transition ${active ? 'bg-teal-700 text-white shadow' : seen ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300' : 'bg-white text-slate-500 dark:text-slate-400 dark:bg-slate-800'}`}>
                 <span className="text-base leading-none">{seen ? '✓' : st.icon}</span>
                 <span>{st.label}</span>
               </button>
@@ -382,7 +382,7 @@ export function CasePage() {
           })}
         </div>
         <div className="mt-1.5 h-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
-          <div className="h-full rounded-full bg-gradient-to-l from-emerald-400 to-sky-500 transition-all" style={{ width: `${((idx + 1) / steps.length) * 100}%` }} />
+          <div className="h-full rounded-full bg-gradient-to-l from-emerald-400 to-teal-500 transition-all" style={{ width: `${((idx + 1) / steps.length) * 100}%` }} />
         </div>
       </div>
 
@@ -408,11 +408,11 @@ export function CasePage() {
         {step === 'think' && (
           <>
             <h2 className="cs-h">💭 {ar ? 'والآن… فكّر!' : 'Now… think!'}</h2>
-            <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">{ar ? 'جاوب بنفسك أولًا — الإجابة مش هتهرب 😉' : 'Answer for yourself first — the answer is not going anywhere 😉'}</p>
+            <p className="mb-4 text-sm text-slate-600 dark:text-slate-400">{ar ? 'جاوب بنفسك أولًا — الإجابة مش هتهرب 😉' : 'Answer for yourself first — the answer is not going anywhere 😉'}</p>
             <ol className="space-y-3">
               {c.questions.map((qq, i) => (
-                <li key={i} className="flex gap-3 rounded-2xl bg-sky-50 p-4 dark:bg-sky-500/10">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-sky-500 text-sm font-black text-white">{i + 1}</span>
+                <li key={i} className="flex gap-3 rounded-2xl bg-teal-50 p-4 dark:bg-teal-500/10">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-teal-500 text-sm font-black text-white">{i + 1}</span>
                   <span className="font-bold leading-8 text-slate-800 dark:text-slate-100">{pick(qq, ar)}</span>
                 </li>
               ))}
@@ -422,7 +422,7 @@ export function CasePage() {
               onChange={(e) => setGuess(e.target.value)}
               rows={4}
               placeholder={ar ? '✍️ اكتب تشخيصك وخطتك هنا (اختياري)…' : '✍️ Write your diagnosis and plan here (optional)…'}
-              className="mt-4 w-full rounded-2xl border border-slate-200 bg-white p-3 text-sm outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
+              className="mt-4 w-full rounded-2xl border border-slate-200 bg-white p-3 text-sm outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
             />
             <button onClick={() => go('answer')} className="cs-reveal mt-4 w-full rounded-2xl px-6 py-4 text-lg font-black text-white shadow-lg transition hover:scale-[1.02]">
               🔓 {ar ? 'اكشف التشخيص والإجابة' : 'Reveal the diagnosis & answer'}
@@ -436,7 +436,7 @@ export function CasePage() {
               <div className="mt-1 text-2xl font-black leading-snug sm:text-3xl">{pick(c.diagnosis, ar)}</div>
             </div>
             {guess.trim() && (
-              <div className="mt-4 rounded-2xl border border-dashed border-slate-300 p-3 text-sm text-slate-500 dark:border-slate-600">
+              <div className="mt-4 rounded-2xl border border-dashed border-slate-300 p-3 text-sm text-slate-600 dark:text-slate-400 dark:border-slate-600">
                 <b>{ar ? 'إجابتك كانت:' : 'Your answer:'}</b> {guess}
               </div>
             )}
@@ -453,13 +453,13 @@ export function CasePage() {
                 <summary className="cursor-pointer font-black text-slate-700 dark:text-slate-200">📚 {ar ? 'المراجع التي رُوجع عليها المحتوى' : 'References used to verify the content'}</summary>
                 <ul className="mt-3 list-disc space-y-1 ps-5 text-slate-600 dark:text-slate-300" dir="ltr">
                   {c.refs.map((r, i) => (
-                    <li key={i}>{r.url ? <a href={r.url} target="_blank" rel="noopener noreferrer nofollow" className="text-sky-600 underline">{r.title}</a> : r.title}</li>
+                    <li key={i}>{r.url ? <a href={r.url} target="_blank" rel="noopener noreferrer nofollow" className="text-teal-700 dark:text-teal-300 underline">{r.title}</a> : r.title}</li>
                   ))}
                 </ul>
-                <p className="mt-3 text-xs text-slate-400">{ar ? 'للتعليم فقط. تحقق دائمًا من بروتوكول مؤسستك والنشرة الدوائية الحالية قبل أي جرعة.' : 'For education only. Always check your institution’s protocol and the current drug label before any dose.'}</p>
+                <p className="mt-3 text-xs text-slate-500 dark:text-slate-400">{ar ? 'للتعليم فقط. تحقق دائمًا من بروتوكول مؤسستك والنشرة الدوائية الحالية قبل أي جرعة.' : 'For education only. Always check your institution’s protocol and the current drug label before any dose.'}</p>
               </details>
             )}
-            <button onClick={toggleDone} className={`mt-8 w-full rounded-2xl px-6 py-3.5 font-black transition ${isDone ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300' : 'bg-emerald-500 text-white shadow-lg hover:bg-emerald-600'}`}>
+            <button onClick={toggleDone} className={`mt-8 w-full rounded-2xl px-6 py-3.5 font-black transition ${isDone ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300' : 'bg-emerald-700 text-white shadow-lg hover:bg-emerald-600'}`}>
               {isDone ? (ar ? '✓ تم إنجاز هذه الحالة (اضغط للإلغاء)' : '✓ Case completed (tap to undo)') : ar ? '🏁 أنهيت هذه الحالة' : '🏁 Mark case as completed'}
             </button>
           </>
@@ -470,7 +470,7 @@ export function CasePage() {
             {ar ? '→ السابق' : '← Back'}
           </button>
           {step !== 'answer' && step !== 'think' && (
-            <button onClick={next} className="rounded-full bg-sky-500 px-6 py-2 text-sm font-black text-white shadow hover:bg-sky-600">
+            <button onClick={next} className="rounded-full bg-teal-500 px-6 py-2 text-sm font-black text-white shadow hover:bg-teal-600">
               {ar ? 'التالي ←' : 'Next →'}
             </button>
           )}
@@ -480,13 +480,13 @@ export function CasePage() {
       <div className="mt-6 grid grid-cols-2 gap-3">
         {prevCase ? (
           <button onClick={() => nav(`/cases/${prevCase.id}`)} className="rounded-2xl border border-slate-200 bg-white p-3 text-start text-sm dark:border-slate-700 dark:bg-slate-900">
-            <div className="text-xs text-slate-400">{ar ? '→ الحالة السابقة' : '← Previous case'}</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400">{ar ? '→ الحالة السابقة' : '← Previous case'}</div>
             <div className="line-clamp-1 font-bold dark:text-white">{prevCase.num}. {pick(prevCase.title, ar)}</div>
           </button>
         ) : <span />}
         {nextCase ? (
           <button onClick={() => nav(`/cases/${nextCase.id}`)} className="rounded-2xl border border-slate-200 bg-white p-3 text-start text-sm dark:border-slate-700 dark:bg-slate-900">
-            <div className="text-xs text-slate-400">{ar ? 'الحالة التالية ←' : 'Next case →'}</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400">{ar ? 'الحالة التالية ←' : 'Next case →'}</div>
             <div className="line-clamp-1 font-bold dark:text-white">{nextCase.num}. {pick(nextCase.title, ar)}</div>
           </button>
         ) : <span />}
@@ -515,7 +515,7 @@ export function CaseGuidePage() {
   if (g === null)
     return (
       <div className="py-24 text-center" dir={ar ? 'rtl' : 'ltr'}>
-        <Link to="/cases" className="font-bold text-sky-600">{ar ? '← الحالات السريرية' : '← Clinical Cases'}</Link>
+        <Link to="/cases" className="font-bold text-teal-700 dark:text-teal-300">{ar ? '← الحالات السريرية' : '← Clinical Cases'}</Link>
       </div>
     );
   return (

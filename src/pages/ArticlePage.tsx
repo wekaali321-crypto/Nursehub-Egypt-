@@ -137,11 +137,11 @@ function Stars({ value, count, onRate }: { value: number; count: number; onRate:
       <div className="flex items-center gap-1" role="radiogroup" aria-label="التقييم من 5 نجوم">
         {[1, 2, 3, 4, 5].map((n) => (
           <button key={n} role="radio" aria-checked={value >= n} onMouseEnter={() => setHover(n)} onMouseLeave={() => setHover(0)} onClick={() => onRate(n)} className="text-2xl transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#168C91] rounded" aria-label={`${n} نجوم`}>
-            <span className={(hover || value) >= n ? "text-amber-400" : "text-slate-300 dark:text-slate-600"}>★</span>
+            <span className={(hover || value) >= n ? "text-amber-400" : "text-slate-300 dark:text-slate-400"}>★</span>
           </button>
         ))}
       </div>
-      <span className="text-xs text-slate-400">{value.toFixed(1)} من 5 ({count} تقييم)</span>
+      <span className="text-xs text-slate-500 dark:text-slate-400">{value.toFixed(1)} من 5 ({count} تقييم)</span>
     </div>
   );
 }
@@ -467,7 +467,7 @@ export default function ArticlePage() {
 
           <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900 sm:p-6 md:p-8">
           {dispContent.missing && (
-            <div className="mb-4 rounded-xl bg-amber-50 p-3 text-center text-sm font-semibold text-amber-600 dark:bg-amber-500/10">
+            <div className="mb-4 rounded-xl bg-amber-50 p-3 text-center text-sm font-semibold text-amber-700 dark:text-amber-300 dark:bg-amber-500/10">
               {docLang === "en" ? t("common.comingSoon") : t("common.comingSoonAr")}
             </div>
           )}
@@ -486,7 +486,7 @@ export default function ArticlePage() {
                 <h3 className="text-sm font-bold text-[#153448] dark:text-white">
                   {docLang === "ar" ? "📥 حمل نسخة PDF احترافية" : "📥 Download Professional PDF"}
                 </h3>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
+                <p className="text-xs text-slate-600 dark:text-slate-400">
                   {docLang === "ar"
                     ? "نسخة PDF احترافية مصممة خصيصاً لهذا المقال — بسعر 50 ج.م"
                     : "Professional PDF version specially designed for this article — 50 EGP"}
@@ -537,7 +537,7 @@ export default function ArticlePage() {
           </div>
 
           <div className="mt-8">
-            <h3 className="mb-2 text-sm font-bold text-slate-400">{t("article.author")}</h3>
+            <h3 className="mb-2 text-sm font-bold text-slate-500 dark:text-slate-400">{t("article.author")}</h3>
             <AuthorCard name={article.author} />
           </div>
 
@@ -548,11 +548,11 @@ export default function ArticlePage() {
             <div className="space-y-3">
               {articleComments.map((c) => (
                 <div key={c.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-                  <div className="flex items-center gap-2"><div className="flex h-9 w-9 items-center justify-center rounded-full bg-teal-100 font-bold text-[#168C91]">{c.name[0]}</div><div><div className="font-bold dark:text-white">{c.name}</div><div className="text-xs text-slate-400">{c.date}</div></div></div>
+                  <div className="flex items-center gap-2"><div className="flex h-9 w-9 items-center justify-center rounded-full bg-teal-100 font-bold text-[#127378] dark:text-teal-300">{c.name[0]}</div><div><div className="font-bold dark:text-white">{c.name}</div><div className="text-xs text-slate-500 dark:text-slate-400">{c.date}</div></div></div>
                   <p className="mt-2 text-slate-600 dark:text-slate-300">{c.text}</p>
                 </div>
               ))}
-              {articleComments.length === 0 && <p className="text-slate-400">{t("article.beFirstComment")}</p>}
+              {articleComments.length === 0 && <p className="text-slate-500 dark:text-slate-400">{t("article.beFirstComment")}</p>}
             </div>
             <form onSubmit={submitComment} className="mt-5 space-y-3 rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-800 dark:bg-slate-800/50">
               <label htmlFor="comment-name" className="sr-only">{t("article.yourName")}</label>
@@ -578,7 +578,7 @@ export default function ArticlePage() {
                 <Link
                   key={c}
                   to={`/category/${c}`}
-                  className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold transition ${c === article.category ? "bg-[#168C91] text-white" : "bg-slate-100 text-slate-600 hover:bg-teal-100 hover:text-[#168C91] dark:bg-slate-800 dark:text-slate-300"}`}
+                  className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold transition ${c === article.category ? "bg-[#127378] text-white" : "bg-slate-100 text-slate-600 hover:bg-teal-100 hover:text-[#168C91] dark:bg-slate-800 dark:text-slate-300"}`}
                 >
                   <Icon name={CAT_ICON[c]} size={12} /> {t(CAT_KEY[c])}
                 </Link>

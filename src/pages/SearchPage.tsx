@@ -77,43 +77,43 @@ export default function SearchPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("search.title") }]} />
-      <h1 className="mb-6 text-3xl font-black dark:text-white">{t("search.title")}</h1>
+      <div className="nh-hero mb-6 rounded-3xl px-6 py-6 text-white"><h1 className="text-3xl font-black">{t("search.title")}</h1></div>
 
       <form onSubmit={(e) => { e.preventDefault(); setParams({ q: query }); }} className="mb-4 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900 md:flex-row">
-        <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t("search.placeholder")} className="flex-1 rounded-lg border border-slate-200 px-4 py-3 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" />
+        <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t("search.placeholder")} className="flex-1 rounded-lg border border-slate-200 px-4 py-3 outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800" />
         <select aria-label="تصفية حسب القسم" value={catFilter} onChange={(e) => setCatFilter(e.target.value)} className="rounded-lg border border-slate-200 px-3 py-3 dark:border-slate-700 dark:bg-slate-800">
           <option value="">{t("search.allSections")}</option>
           {cats.map((c) => <option key={c} value={c}>{t(CAT_KEY[c])}</option>)}
         </select>
-        <button className="rounded-lg bg-sky-500 px-8 py-3 font-bold text-white">{t("search.button")}</button>
+        <button className="rounded-lg bg-teal-500 px-8 py-3 font-bold text-white">{t("search.button")}</button>
       </form>
 
       <div className="mb-4 flex flex-wrap gap-2">
         {TABS.map(([tb, l]) => (
-          <button key={tb} onClick={() => setTab(tb)} className={`rounded-full px-4 py-1.5 text-sm font-semibold ${tab === tb ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{l}</button>
+          <button key={tb} onClick={() => setTab(tb)} className={`rounded-full px-4 py-1.5 text-sm font-semibold ${tab === tb ? "bg-teal-700 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{l}</button>
         ))}
       </div>
 
       {(popularTags.length > 0 || tagFilter) && (
         <div className="mb-4 flex flex-wrap items-center gap-2">
-          <span className="text-xs font-bold text-slate-400">🏷️ {t("search.tags")}</span>
+          <span className="text-xs font-bold text-slate-500 dark:text-slate-400">🏷️ {t("search.tags")}</span>
           {tagFilter && (
-            <button onClick={() => setTagFilter("")} className="rounded-full bg-sky-500 px-3 py-1 text-xs font-bold text-white">
+            <button onClick={() => setTagFilter("")} className="rounded-full bg-teal-500 px-3 py-1 text-xs font-bold text-white">
               {tagFilter} ✕
             </button>
           )}
           {popularTags.filter((tg) => tg !== tagFilter).map((tg) => (
-            <button key={tg} onClick={() => setTagFilter(tg)} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 hover:bg-sky-100 hover:text-sky-600 dark:bg-slate-800 dark:text-slate-300">
+            <button key={tg} onClick={() => setTagFilter(tg)} className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 hover:bg-teal-100 hover:text-teal-600 dark:bg-slate-800 dark:text-slate-300">
               {tg}
             </button>
           ))}
         </div>
       )}
 
-      {q && <p className="mb-4 text-slate-500 dark:text-slate-400">{t("search.resultsFor")} "<span className="font-bold text-sky-500">{q}</span>": {total} {t("search.resultWord")}</p>}
+      {q && <p className="mb-4 text-slate-600 dark:text-slate-400">{t("search.resultsFor")} "<span className="font-bold text-teal-700 dark:text-teal-300">{q}</span>": {total} {t("search.resultWord")}</p>}
 
       {total === 0 ? (
-        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">{t("search.noResultsTryOther")}</div>
+        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">{t("search.noResultsTryOther")}</div>
       ) : (
         <div className="space-y-8">
           {showDrugs && drugResults.length > 0 && (
@@ -125,9 +125,9 @@ export default function SearchPage() {
                   const genericName = bilingual(d.genericName, d.genericNameEn, lang).text;
                   const category = bilingual(d.category, d.categoryEn, lang).text;
                   return (
-                    <Link key={d.id} to={`/drug/${d.slug}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={d.id} to={`/drug/${d.slug}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-teal-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">💊 {name}</div>
-                      <div className="text-sm text-slate-400">{genericName} • {category}</div>
+                      <div className="text-sm text-slate-500 dark:text-slate-400">{genericName} • {category}</div>
                     </Link>
                   );
                 })}
@@ -142,9 +142,9 @@ export default function SearchPage() {
                   const title = bilingual(topic.title_ar, topic.title_en, lang).text;
                   const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
                   return (
-                    <Link key={topic.id} to={`/icu-nursing/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={topic.id} to={`/icu-nursing/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-teal-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🏥"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -159,9 +159,9 @@ export default function SearchPage() {
                   const title = bilingual(topic.title_ar, topic.title_en, lang).text;
                   const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
                   return (
-                    <Link key={topic.id} to={`/dialysis/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={topic.id} to={`/dialysis/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-teal-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "💧"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -178,7 +178,7 @@ export default function SearchPage() {
                   return (
                     <Link key={topic.id} to={`/radiology/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-indigo-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🩻"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -220,9 +220,9 @@ export default function SearchPage() {
                   const title = bilingual(topic.title_ar, topic.title_en, lang).text;
                   const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
                   return (
-                    <Link key={topic.id} to={`/nicu/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={topic.id} to={`/nicu/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-teal-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "👶"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -237,9 +237,9 @@ export default function SearchPage() {
                   const title = bilingual(topic.title_ar, topic.title_en, lang).text;
                   const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
                   return (
-                    <Link key={topic.id} to={`/pharmacology/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={topic.id} to={`/pharmacology/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-teal-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🧪"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -254,9 +254,9 @@ export default function SearchPage() {
                   const title = bilingual(topic.title_ar, topic.title_en, lang).text;
                   const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
                   return (
-                    <Link key={topic.id} to={`/terminology/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={topic.id} to={`/terminology/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-teal-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🔤"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -271,9 +271,9 @@ export default function SearchPage() {
                   const title = bilingual(topic.title_ar, topic.title_en, lang).text;
                   const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
                   return (
-                    <Link key={topic.id} to={`/first-aid/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={topic.id} to={`/first-aid/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-teal-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🩹"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -288,9 +288,9 @@ export default function SearchPage() {
                   const title = bilingual(topic.title_ar, topic.title_en, lang).text;
                   const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
                   return (
-                    <Link key={topic.id} to={`/er-reception/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={topic.id} to={`/er-reception/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-teal-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🚨"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -305,9 +305,9 @@ export default function SearchPage() {
                   const title = bilingual(topic.title_ar, topic.title_en, lang).text;
                   const summary = bilingual(topic.summary_ar, topic.summary_en, lang).text;
                   return (
-                    <Link key={topic.id} to={`/pediatrics/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={topic.id} to={`/pediatrics/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-teal-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🍼"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -324,7 +324,7 @@ export default function SearchPage() {
                   return (
                     <Link key={topic.id} to={`/anatomy/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-amber-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🦴"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -341,7 +341,7 @@ export default function SearchPage() {
                   return (
                     <Link key={topic.id} to={`/fundamentals/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-blue-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🛏️"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -358,7 +358,7 @@ export default function SearchPage() {
                   return (
                     <Link key={topic.id} to={`/operating-room/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-emerald-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🔪"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -375,7 +375,7 @@ export default function SearchPage() {
                   return (
                     <Link key={topic.id} to={`/obgyn/${topic.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-rose-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{topic.icon || "🤰"} {title}</div>
-                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{summary}</div>}
+                      {summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</div>}
                     </Link>
                   );
                 })}
@@ -389,9 +389,9 @@ export default function SearchPage() {
                 {protocolResults.map((p) => {
                   const title = bilingual(p.name_ar, p.name_en, lang).text;
                   return (
-                    <Link key={p.id} to={`/drugs/protocols/${p.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-sky-400 dark:border-slate-800 dark:bg-slate-900">
+                    <Link key={p.id} to={`/drugs/protocols/${p.id}`} className="rounded-xl border border-slate-200 bg-white p-4 hover:border-teal-400 dark:border-slate-800 dark:bg-slate-900">
                       <div className="font-bold dark:text-white">{p.icon || "📋"} {title}</div>
-                      {p.summary && <div className="mt-1 line-clamp-2 text-sm text-slate-400">{bilingual(p.summary, p.summary_en, lang).text}</div>}
+                      {p.summary && <div className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{bilingual(p.summary, p.summary_en, lang).text}</div>}
                     </Link>
                   );
                 })}

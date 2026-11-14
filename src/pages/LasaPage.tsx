@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { fetchLasaPairs, type LasaPair } from "../lib/lasaApi";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const SIMILARITY_LABELS: Record<string, { ar: string; en: string }> = {
   look_alike: { ar: "تشابه شكلي (الاسم المكتوب)", en: "Look-alike (written name)" },
@@ -33,6 +34,7 @@ function TallMan({ a, b }: { a: string | null; b: string | null }) {
 
 export default function LasaPage() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [searchParams] = useSearchParams();
   const [pairs, setPairs] = useState<LasaPair[]>([]);
   const [loading, setLoading] = useState(true);
@@ -50,11 +52,11 @@ export default function LasaPage() {
     );
   }, [pairs, query]);
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-green-600 to-emerald-700 text-white p-6 mb-8">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-8">
         <div className="flex items-start justify-between gap-2 mb-1">
           <h1 className="text-2xl font-bold">{LABELS.title[lang]}</h1>
           <InlineLangToggle light />
@@ -69,11 +71,11 @@ export default function LasaPage() {
           placeholder={LABELS.searchPlaceholder[lang]}
           className="w-full rounded-xl border border-slate-200 bg-white py-3 pr-11 pl-3 outline-none focus:border-green-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
         />
-        <span className="absolute right-4 top-3.5 text-slate-400">🔍</span>
+        <span className="absolute right-4 top-3.5 text-slate-500 dark:text-slate-400">🔍</span>
       </div>
 
       {filtered.length === 0 && (
-        <div className="text-center text-slate-500 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
+        <div className="text-center text-slate-600 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
       )}
 
       <div className="space-y-4">

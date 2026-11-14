@@ -9,9 +9,9 @@ import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
 
 const CATEGORY_GRADIENT: Record<string, string> = {
-  "تنفسي": "from-sky-600 to-blue-500",
+  "تنفسي": "from-teal-600 to-blue-500",
   "هضمي": "from-teal-600 to-emerald-500",
-  "جلدية": "from-cyan-600 to-sky-500",
+  "جلدية": "from-cyan-600 to-teal-500",
   "عظام ومفاصل": "from-slate-600 to-slate-800",
   "فم وأسنان": "from-blue-600 to-indigo-500",
   "مسالك بولية": "from-indigo-600 to-violet-500",
@@ -82,7 +82,7 @@ export function OTCGuideHome() {
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="mx-auto max-w-5xl px-4 py-8">
       <Breadcrumbs items={[{ label: LABELS.drugsBreadcrumb[lang], path: "/drugs" }, { label: LABELS.breadcrumb[lang] }]} />
 
-      <div className="relative mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-teal-700 via-emerald-600 to-green-500 p-6 text-white shadow-lg sm:p-10">
+      <div className="relative mb-8 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-10">
         <span className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-white/10" />
         <span className="pointer-events-none absolute -bottom-16 -right-10 h-56 w-56 rounded-full bg-white/5" />
         <div className="relative">
@@ -163,14 +163,14 @@ export function OTCGuideHome() {
           );
         })}
         {filtered.length === 0 && (
-          <div className="col-span-2 rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-400 dark:border-slate-700">
+          <div className="col-span-2 rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {otcConditions.length === 0 ? LABELS.noneUploaded[lang] : LABELS.noResults[lang]}
           </div>
         )}
       </div>
 
       <div className="mt-8 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">{LABELS.back[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{LABELS.back[lang]}</Link>
       </div>
     </div>
   );
@@ -191,7 +191,7 @@ function Section({
   const tones: Record<string, string> = {
     default: "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900",
     red: "border-red-200 bg-red-50 dark:border-red-900/50 dark:bg-red-950/30",
-    info: "border-sky-200 bg-sky-50 dark:border-sky-900/50 dark:bg-sky-950/30",
+    info: "border-teal-200 bg-teal-50 dark:border-teal-900/50 dark:bg-teal-950/30",
   };
   return (
     <div className={`rounded-2xl border p-5 shadow-sm ${tones[tone]}`}>
@@ -222,8 +222,8 @@ export default function OTCConditionPage() {
   if (!condition) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-16 text-center">
-        <p className="mb-4 text-slate-400">{LABELS.notFound[lang]}</p>
-        <Link to="/drugs/otc-guide" className="font-bold text-emerald-600 hover:underline">
+        <p className="mb-4 text-slate-500 dark:text-slate-400">{LABELS.notFound[lang]}</p>
+        <Link to="/drugs/otc-guide" className="font-bold text-emerald-700 dark:text-emerald-300 hover:underline">
           {LABELS.backToList[lang]}
         </Link>
       </div>
@@ -243,7 +243,7 @@ export default function OTCConditionPage() {
         ]}
       />
 
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-teal-700 via-emerald-600 to-green-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="flex items-start justify-between gap-2">
           <div className="flex items-center gap-4">
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-3xl">
@@ -272,8 +272,8 @@ export default function OTCConditionPage() {
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/otc-guide" className="text-sky-600 hover:underline">{LABELS.allConditions[lang]}</Link>
-        <Link to="/drugs" className="text-sky-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
+        <Link to="/drugs/otc-guide" className="text-teal-700 dark:text-teal-300 hover:underline">{LABELS.allConditions[lang]}</Link>
+        <Link to="/drugs" className="text-teal-700 dark:text-teal-300 hover:underline">{LABELS.drugsGuide[lang]}</Link>
       </div>
     </div>
   );

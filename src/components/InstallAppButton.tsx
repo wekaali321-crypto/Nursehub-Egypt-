@@ -20,7 +20,7 @@ const APK_URL = "/NurseHub-Egypt.apk";
 interface Guide { title: string; steps: ReactNode[]; note?: string }
 
 function guideFor(platform: InstallPlatform, ar: boolean): Guide {
-  const b = (text: string) => <b className="text-sky-700 dark:text-sky-300">{text}</b>;
+  const b = (text: string) => <b className="text-teal-700 dark:text-teal-300">{text}</b>;
   const t = (a: string, e: string) => (ar ? a : e);
   switch (platform) {
     case "ios-safari":
@@ -190,7 +190,7 @@ export default function InstallAppButton() {
       <button
         type="button"
         onClick={onClick}
-        className="mx-auto mt-5 flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-black text-sky-700 shadow-lg transition hover:scale-105 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-white/60 sm:text-base"
+        className="mx-auto mt-5 flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-black text-teal-700 dark:text-teal-300 shadow-lg transition hover:scale-105 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-white/60 sm:text-base"
       >
         <span className="text-xl" aria-hidden>📲</span>
         {ar ? "حمّل الموقع كتطبيق على موبايلك" : "Install the site as an app"}
@@ -208,16 +208,16 @@ export default function InstallAppButton() {
               <img src="/icon-192.png" alt="NurseHub" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl" />
               <div className="min-w-0 flex-1">
                 <div className="text-base font-black">{ar ? "ثبّت NurseHub Egypt كتطبيق" : "Install NurseHub Egypt as an app"}</div>
-                <div className="text-xs text-slate-500 dark:text-slate-400">{ar ? "بنفس الشكل والسرعة من شاشتك الرئيسية" : "Open it from your home screen like any app"}</div>
+                <div className="text-xs text-slate-600 dark:text-slate-400">{ar ? "بنفس الشكل والسرعة من شاشتك الرئيسية" : "Open it from your home screen like any app"}</div>
               </div>
-              <button type="button" onClick={() => setOpen(false)} className="shrink-0 rounded-full px-2 text-xl leading-none text-slate-400 hover:text-slate-600" aria-label={ar ? "إغلاق" : "Close"}>✕</button>
+              <button type="button" onClick={() => setOpen(false)} className="shrink-0 rounded-full px-2 text-xl leading-none text-slate-500 dark:text-slate-400 hover:text-slate-600" aria-label={ar ? "إغلاق" : "Close"}>✕</button>
             </div>
 
-            <div className="mb-2 text-sm font-bold text-sky-700 dark:text-sky-300">{guide.title}</div>
+            <div className="mb-2 text-sm font-bold text-teal-700 dark:text-teal-300">{guide.title}</div>
             <ol className="space-y-3">
               {guide.steps.map((s, i) => (
                 <li key={i} className="flex gap-3 text-sm leading-relaxed">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sky-500 text-xs font-black text-white">{i + 1}</span>
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-500 text-xs font-black text-white">{i + 1}</span>
                   <span className="min-w-0 flex-1">{s}</span>
                 </li>
               ))}
@@ -238,11 +238,11 @@ export default function InstallAppButton() {
             {guide.note && <p className="mt-3 rounded-xl bg-amber-50 p-3 text-xs text-amber-800 dark:bg-amber-900/20 dark:text-amber-200">{guide.note}</p>}
 
             <div className="mt-5 flex flex-wrap gap-2">
-              <button type="button" onClick={copyLink} className="flex-1 rounded-xl border border-sky-300 px-4 py-2 text-sm font-bold text-sky-700 hover:bg-sky-50 dark:border-sky-700 dark:text-sky-300 dark:hover:bg-sky-900/30">
+              <button type="button" onClick={copyLink} className="flex-1 rounded-xl border border-teal-300 px-4 py-2 text-sm font-bold text-teal-700 hover:bg-teal-50 dark:border-teal-700 dark:text-teal-300 dark:hover:bg-teal-900/30">
                 {copied ? (ar ? "✓ تم نسخ الرابط" : "✓ Link copied") : ar ? "📋 نسخ رابط الموقع" : "📋 Copy site link"}
               </button>
               {typeof navigator !== "undefined" && "share" in navigator && (
-                <button type="button" onClick={() => navigator.share({ title: "NurseHub Egypt", url }).catch(() => undefined)} className="flex-1 rounded-xl bg-sky-500 px-4 py-2 text-sm font-bold text-white hover:bg-sky-600">
+                <button type="button" onClick={() => navigator.share({ title: "NurseHub Egypt", url }).catch(() => undefined)} className="flex-1 rounded-xl bg-teal-500 px-4 py-2 text-sm font-bold text-white hover:bg-teal-600">
                   {ar ? "↗ مشاركة" : "↗ Share"}
                 </button>
               )}

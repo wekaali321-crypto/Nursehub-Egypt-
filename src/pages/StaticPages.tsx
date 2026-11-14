@@ -14,7 +14,7 @@ function Wrap({ titleAr, titleEn, descAr, descEn, children }: { titleAr: string;
     <div className="mx-auto max-w-4xl px-4 py-8">
       <Breadcrumbs items={[{ label: title }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <h1 className="mb-6 text-3xl font-black dark:text-white">{title}</h1>
+      <div className="nh-hero mb-6 rounded-3xl px-6 py-6 text-white"><h1 className="text-3xl font-black">{title}</h1></div>
       <div className="prose-content text-slate-700 dark:text-slate-300">{children}</div>
     </div>
   );
@@ -99,17 +99,17 @@ export function Contact() {
       <div className="grid gap-6 not-prose md:grid-cols-2">
         <div className="space-y-3">
           {details.map(([i, t, v]) => (
-            <div key={t} className="flex items-center gap-3 rounded-xl border border-slate-200 p-4 dark:border-slate-800"><span className="text-2xl">{i}</span><div><div className="font-bold dark:text-white">{t}</div><div className="text-sm text-slate-500">{v}</div></div></div>
+            <div key={t} className="flex items-center gap-3 rounded-xl border border-slate-200 p-4 dark:border-slate-800"><span className="text-2xl">{i}</span><div><div className="font-bold dark:text-white">{t}</div><div className="text-sm text-slate-600 dark:text-slate-400">{v}</div></div></div>
           ))}
         </div>
         {sent ? (
-          <div className="flex items-center justify-center rounded-2xl bg-emerald-50 p-8 text-center font-bold text-emerald-600 dark:bg-emerald-500/10">{isEn ? "✅ Your email app opened with the message. Press send there to deliver it." : "✅ تم فتح تطبيق البريد برسالتك، اضغط إرسال هناك لإتمام الإرسال."}</div>
+          <div className="flex items-center justify-center rounded-2xl bg-emerald-50 p-8 text-center font-bold text-emerald-700 dark:text-emerald-300 dark:bg-emerald-500/10">{isEn ? "✅ Your email app opened with the message. Press send there to deliver it." : "✅ تم فتح تطبيق البريد برسالتك، اضغط إرسال هناك لإتمام الإرسال."}</div>
         ) : (
           <form onSubmit={submit} className="space-y-3 rounded-2xl border border-slate-200 p-5 dark:border-slate-800">
             <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder={isEn ? "Name" : "الاسم"} className={inp} />
             <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder={isEn ? "Email" : "البريد الإلكتروني"} className={inp} />
             <textarea required value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder={isEn ? "Your message" : "رسالتك"} rows={4} className={inp} />
-            <button className="w-full rounded-full bg-sky-500 py-2.5 font-bold text-white">{isEn ? "Send" : "إرسال"}</button>
+            <button className="w-full rounded-full bg-teal-500 py-2.5 font-bold text-white">{isEn ? "Send" : "إرسال"}</button>
           </form>
         )}
       </div>

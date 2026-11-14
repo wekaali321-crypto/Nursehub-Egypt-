@@ -1,6 +1,8 @@
 import { Breadcrumbs } from "../components/common";
+import { useSEO } from "../lib/seo";
 
 export default function MonetizationPage() {
+  useSEO({ title: "مركز تحقيق الدخل | NurseHub Egypt" });
   const channels = [
     { i: "📢", t: "Google AdSense", d: "أماكن جاهزة ومُهيأة لإعلانات جوجل في كافة صفحات الموقع." },
     { i: "🖼️", t: "إعلانات Banner", d: "مساحات إعلانية مباشرة بأحجام قياسية (728×90, 300×250)." },
@@ -15,7 +17,7 @@ export default function MonetizationPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: "تحقيق الدخل" }]} />
-      <div className="mb-8 rounded-3xl bg-gradient-to-l from-amber-500 via-orange-500 to-emerald-500 p-8 text-white">
+      <div className="mb-8 rounded-3xl nh-hero p-8 text-white">
         <h1 className="text-3xl font-black">💵 مركز تحقيق الدخل</h1>
         <p className="mt-1 text-amber-50">كل قنوات الربح المدمجة في المنصة في مكان واحد</p>
       </div>
@@ -26,7 +28,7 @@ export default function MonetizationPage() {
           <div key={c.t} className="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
             <div className="text-3xl">{c.i}</div>
             <h3 className="mt-2 font-bold dark:text-white">{c.t}</h3>
-            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{c.d}</p>
+            <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{c.d}</p>
           </div>
         ))}
       </div>

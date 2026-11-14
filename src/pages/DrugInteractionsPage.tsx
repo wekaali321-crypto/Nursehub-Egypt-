@@ -72,13 +72,13 @@ export default function DrugInteractionsPage() {
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="mx-auto max-w-4xl px-4 py-8">
       <Breadcrumbs items={[{ label: LABELS.drugsBreadcrumb[lang], path: "/drugs" }, { label: LABELS.breadcrumb[lang] }]} />
 
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-violet-600 to-sky-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="flex items-start justify-between gap-2">
           <div className="text-4xl sm:text-5xl">🔄</div>
           <InlineLangToggle light />
         </div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{LABELS.title[lang]}</h1>
-        <p className="mt-1 text-sky-50">{LABELS.subtitle[lang]}</p>
+        <p className="mt-1 text-teal-50">{LABELS.subtitle[lang]}</p>
       </div>
 
 
@@ -89,7 +89,7 @@ export default function DrugInteractionsPage() {
 
       <div className="mt-6">
         {aId && bId && aId === bId && (
-          <div className="rounded-2xl border border-dashed border-slate-300 p-6 text-center text-slate-400 dark:border-slate-700">
+          <div className="rounded-2xl border border-dashed border-slate-300 p-6 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {LABELS.chooseDifferent[lang]}
           </div>
         )}
@@ -121,7 +121,7 @@ export default function DrugInteractionsPage() {
         )}
 
         {(!aId || !bId) && (
-          <div className="rounded-2xl border border-dashed border-slate-300 p-10 text-center text-slate-400 dark:border-slate-700">
+          <div className="rounded-2xl border border-dashed border-slate-300 p-10 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {LABELS.pickTwo[lang]}
           </div>
         )}
@@ -132,7 +132,7 @@ export default function DrugInteractionsPage() {
       </div>
 
       <div className="mt-4 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">{LABELS.back[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{LABELS.back[lang]}</Link>
       </div>
     </div>
   );
@@ -159,13 +159,13 @@ function DrugPicker({
 
   return (
     <div className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-      <div className="mb-2 text-sm font-black text-slate-500 dark:text-slate-400">{label}</div>
+      <div className="mb-2 text-sm font-black text-slate-600 dark:text-slate-400">{label}</div>
 
       {picked ? (
-        <div className="flex items-center justify-between gap-2 rounded-xl bg-sky-50 p-3 dark:bg-sky-500/10">
+        <div className="flex items-center justify-between gap-2 rounded-xl bg-teal-50 p-3 dark:bg-teal-500/10">
           <div className="min-w-0">
             <div className="truncate font-bold text-slate-900 dark:text-white">{bilingual(picked.name, picked.nameEn, lang).text}</div>
-            <div className="truncate text-xs text-slate-500 dark:text-slate-400">{picked.genericName}</div>
+            <div className="truncate text-xs text-slate-600 dark:text-slate-400">{picked.genericName}</div>
           </div>
           <button
             onClick={() => { onChange(""); setQ(""); }}
@@ -180,7 +180,7 @@ function DrugPicker({
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder={LABELS.searchPlaceholder[lang]}
-            className="w-full min-w-0 rounded-xl border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800"
+            className="w-full min-w-0 rounded-xl border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800"
           />
           {matches.length > 0 && (
             <div className="mt-2 max-h-56 overflow-y-auto rounded-xl border border-slate-100 dark:border-slate-800">
@@ -188,16 +188,16 @@ function DrugPicker({
                 <button
                   key={d.id}
                   onClick={() => { onChange(d.id); setQ(""); }}
-                  className="block w-full min-w-0 border-b border-slate-100 p-2.5 text-right last:border-0 hover:bg-sky-50 dark:border-slate-800 dark:hover:bg-sky-500/10"
+                  className="block w-full min-w-0 border-b border-slate-100 p-2.5 text-right last:border-0 hover:bg-teal-50 dark:border-slate-800 dark:hover:bg-teal-500/10"
                 >
                   <span className="block truncate text-sm font-bold text-slate-800 dark:text-white">{bilingual(d.name, d.nameEn, lang).text}</span>
-                  <span className="block truncate text-xs text-slate-400">{d.genericName}</span>
+                  <span className="block truncate text-xs text-slate-500 dark:text-slate-400">{d.genericName}</span>
                 </button>
               ))}
             </div>
           )}
           {q.trim() && matches.length === 0 && (
-            <p className="mt-2 text-xs text-slate-400">{LABELS.noMatch[lang]}</p>
+            <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">{LABELS.noMatch[lang]}</p>
           )}
         </>
       )}

@@ -53,12 +53,12 @@ export default function PediatricsQuizWidget() {
         <span className="text-xl">🍼</span>
         <h3 className="font-bold dark:text-white">{t("pediatrics.quizWidgetTitle")}</h3>
       </div>
-      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{qText}</p>
+      <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{qText}</p>
       <div className="mt-3 space-y-1.5">
         {options.map((o, oi) => {
           const isChosen = chosen === oi;
           const isCorrectOpt = oi === q.correct;
-          let cls = "border-slate-200 dark:border-slate-700 hover:border-sky-300";
+          let cls = "border-slate-200 dark:border-slate-700 hover:border-teal-300";
           if (chosen !== null) {
             if (isCorrectOpt) cls = "border-emerald-400 bg-emerald-50 dark:bg-emerald-500/10";
             else if (isChosen) cls = "border-rose-400 bg-rose-50 dark:bg-rose-500/10";
@@ -77,14 +77,14 @@ export default function PediatricsQuizWidget() {
         })}
       </div>
       {chosen !== null && explanation && (
-        <div className="mt-2 rounded-lg bg-sky-50 p-2 text-xs text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">💡 {explanation}</div>
+        <div className="mt-2 rounded-lg bg-teal-50 p-2 text-xs text-teal-700 dark:bg-teal-500/10 dark:text-teal-300">💡 {explanation}</div>
       )}
       {chosen !== null && (
         <div className="mt-3 flex items-center justify-between">
-          <span className={`text-xs font-bold ${chosen === q.correct ? "text-emerald-500" : "text-rose-500"}`}>
+          <span className={`text-xs font-bold ${chosen === q.correct ? "text-emerald-700 dark:text-emerald-300" : "text-rose-700 dark:text-rose-300"}`}>
             {chosen === q.correct ? t("quiz.qotdCorrect") : t("quiz.qotdIncorrect")}
           </span>
-          <button type="button" onClick={another} className="rounded-full bg-sky-500 px-3 py-1.5 text-xs font-bold text-white">
+          <button type="button" onClick={another} className="rounded-full bg-teal-500 px-3 py-1.5 text-xs font-bold text-white">
             {t("pediatrics.quizAnother")}
           </button>
         </div>

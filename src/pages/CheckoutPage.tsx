@@ -12,7 +12,7 @@ import type { Order } from "../lib/types";
 import { useI18n } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
 
-const inp = "w-full rounded-lg border border-slate-200 px-3 py-2.5 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800";
+const inp = "w-full rounded-lg border border-slate-200 px-3 py-2.5 outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800";
 
 // Manual payment details — no payment gateway / API required. The customer
 // transfers to these directly and sends a screenshot on WhatsApp to confirm.
@@ -112,8 +112,8 @@ export default function CheckoutPage() {
         <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
         <div className="text-6xl">🧾</div>
         <h1 className="mt-3 text-2xl font-black dark:text-white">{t("checkout.orderReceived")}</h1>
-        <p className="mt-2 text-slate-500 dark:text-slate-400">{t("checkout.invoiceNumber")} <b>{placed.invoiceNo}</b></p>
-        <p className="mt-1 rounded-xl bg-amber-50 p-3 text-sm text-amber-600 dark:bg-amber-500/10">
+        <p className="mt-2 text-slate-600 dark:text-slate-400">{t("checkout.invoiceNumber")} <b>{placed.invoiceNo}</b></p>
+        <p className="mt-1 rounded-xl bg-amber-50 p-3 text-sm text-amber-700 dark:text-amber-300 dark:bg-amber-500/10">
           {isEn
             ? <>Payment is being processed via {placed.gateway}. Your order will be confirmed and secure download links activated once payment succeeds.</>
             : <>الدفع قيد المعالجة عبر {placed.gateway}. سيتم تأكيد الطلب وتفعيل روابط التحميل الآمنة بعد نجاح الدفع.</>}
@@ -131,10 +131,10 @@ export default function CheckoutPage() {
             <a href={`https://wa.me/${MANUAL_WHATSAPP}?text=${encodeURIComponent(isEn ? `Hello, I've attached the transfer receipt for order ${placed.invoiceNo}` : `مرحباً، أرفقت إيصال تحويل الطلب رقم ${placed.invoiceNo}`)}`} target="_blank" rel="noreferrer" className="mt-3 inline-block rounded-full bg-emerald-500 px-6 py-2 text-sm font-bold text-white">{t("checkout.sendReceiptWhatsApp")}</a>
           </div>
         )}
-        <p className="mt-4 text-xs text-slate-400">{t("checkout.keepLinkNote")}</p>
+        <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">{t("checkout.keepLinkNote")}</p>
         <div className="mt-5 flex flex-wrap justify-center gap-2">
           <Link to={`/order/${placed.invoiceNo}`} className="rounded-full bg-emerald-500 px-6 py-2 font-bold text-white">{t("checkout.trackOrderPage")}</Link>
-          <button onClick={() => printInvoice(placed, cur, lang)} className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("checkout.downloadInvoice")}</button>
+          <button onClick={() => printInvoice(placed, cur, lang)} className="rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("checkout.downloadInvoice")}</button>
           <Link to="/store" className="rounded-full border border-slate-200 px-6 py-2 font-bold dark:border-slate-700 dark:text-white">{t("nav.store")}</Link>
         </div>
       </div>
@@ -147,7 +147,7 @@ export default function CheckoutPage() {
         <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
         <div className="text-6xl">🛒</div>
         <h1 className="mt-3 text-2xl font-black dark:text-white">{t("checkout.emptyCart")}</h1>
-        <Link to="/store" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("checkout.browseStore")}</Link>
+        <Link to="/store" className="mt-4 inline-block rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("checkout.browseStore")}</Link>
       </div>
     );
   }
@@ -156,7 +156,7 @@ export default function CheckoutPage() {
     <div className="mx-auto max-w-5xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("nav.store"), path: "/store" }, { label: t("checkout.pageTitle") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <h1 className="mb-6 text-2xl font-black dark:text-white">{t("checkout.heading")}</h1>
+      <div className="nh-hero mb-6 rounded-3xl px-6 py-5 text-white"><h1 className="text-2xl font-black">{t("checkout.heading")}</h1></div>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
         {/* Customer + payment */}
@@ -177,7 +177,7 @@ export default function CheckoutPage() {
                 <input type="radio" name="gw" checked={gateway === "manual"} onChange={() => setGateway("manual")} /> {t("checkout.manualMethod")}
               </label>
               {activeGateways.map((g) => (
-                <label key={g.id} className={`flex cursor-pointer items-center gap-2 rounded-xl border-2 p-3 text-sm font-semibold ${gateway === g.id ? "border-sky-500 bg-sky-50 dark:bg-sky-500/10" : "border-slate-200 dark:border-slate-700"}`}>
+                <label key={g.id} className={`flex cursor-pointer items-center gap-2 rounded-xl border-2 p-3 text-sm font-semibold ${gateway === g.id ? "border-teal-500 bg-teal-50 dark:bg-teal-500/10" : "border-slate-200 dark:border-slate-700"}`}>
                   <input type="radio" name="gw" checked={gateway === g.id} onChange={() => setGateway(g.id)} /> {g.name}
                 </label>
               ))}
@@ -201,15 +201,15 @@ export default function CheckoutPage() {
             )}
 
             {activeGateways.length === 0 && gateway !== "manual" && (
-              <p className="mt-2 text-xs text-slate-400">{t("checkout.noGatewaysNote")}</p>
+              <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">{t("checkout.noGatewaysNote")}</p>
             )}
           </div>
 
           <label className="flex items-center gap-2 text-sm dark:text-white">
-            <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} /> {t("checkout.agreeTo")} <Link to="/terms" className="text-sky-500 underline">{t("footer.terms")}</Link>
+            <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} /> {t("checkout.agreeTo")} <Link to="/terms" className="text-teal-700 dark:text-teal-300 underline">{t("footer.terms")}</Link>
           </label>
 
-          <button disabled={placing} className="w-full rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 py-3 font-bold text-white disabled:opacity-50">{placing ? t("checkout.placingOrder") : `${t("checkout.completePayment")} (${total} ${cur})`}</button>
+          <button disabled={placing} className="w-full rounded-full bg-[#127378] hover:bg-[#0f6165] py-3 font-bold text-white disabled:opacity-50">{placing ? t("checkout.placingOrder") : `${t("checkout.completePayment")} (${total} ${cur})`}</button>
         </form>
 
         {/* Order summary */}
@@ -219,9 +219,9 @@ export default function CheckoutPage() {
             <div className="space-y-3">
               {items.map((i) => (
                 <div key={i.productId} className="flex items-center gap-2">
-                  <div className="min-w-0 flex-1"><div className="truncate text-sm font-semibold dark:text-white">{i.title}</div><div className="text-xs text-slate-400">{i.price} {cur}</div></div>
+                  <div className="min-w-0 flex-1"><div className="truncate text-sm font-semibold dark:text-white">{i.title}</div><div className="text-xs text-slate-500 dark:text-slate-400">{i.price} {cur}</div></div>
                   <input type="number" min={1} value={i.qty} onChange={(e) => setQty(i.productId, +e.target.value)} className="w-14 rounded border border-slate-200 px-2 py-1 text-center text-sm dark:border-slate-700 dark:bg-slate-800" />
-                  <button onClick={() => remove(i.productId)} className="rounded bg-red-100 px-2 py-1 text-xs text-red-600 dark:bg-red-500/10">✕</button>
+                  <button onClick={() => remove(i.productId)} className="rounded bg-red-100 px-2 py-1 text-xs text-red-700 dark:text-red-300 dark:bg-red-500/10">✕</button>
                 </div>
               ))}
             </div>
@@ -231,10 +231,10 @@ export default function CheckoutPage() {
             </div>
             <div className="mt-4 space-y-1 border-t border-slate-100 pt-3 text-sm dark:border-slate-800">
               <div className="flex justify-between dark:text-slate-300"><span>{t("checkout.subtotal")}</span><span>{subtotal} {cur}</span></div>
-              {discount > 0 && <div className="flex justify-between text-emerald-500"><span>{t("checkout.discount")}</span><span>- {discount} {cur}</span></div>}
+              {discount > 0 && <div className="flex justify-between text-emerald-700 dark:text-emerald-300"><span>{t("checkout.discount")}</span><span>- {discount} {cur}</span></div>}
               {tax > 0 && <div className="flex justify-between dark:text-slate-300"><span>{t("checkout.tax")}</span><span>{tax} {cur}</span></div>}
               {commerce.serviceFee > 0 && <div className="flex justify-between dark:text-slate-300"><span>{t("checkout.serviceFee")}</span><span>{commerce.serviceFee} {cur}</span></div>}
-              <div className="flex justify-between border-t border-slate-200 pt-2 text-lg font-black text-sky-600 dark:border-slate-700"><span>{t("checkout.total")}</span><span>{total} {cur}</span></div>
+              <div className="flex justify-between border-t border-slate-200 pt-2 text-lg font-black text-teal-700 dark:text-teal-300 dark:border-slate-700"><span>{t("checkout.total")}</span><span>{total} {cur}</span></div>
             </div>
           </div>
         </aside>

@@ -34,7 +34,7 @@ function BackToTop() {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label={t("a11y.backToTop")}
-      className="nh-backtotop fixed bottom-6 left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-emerald-500 text-xl text-white shadow-lg hover:scale-110 transition-transform print:hidden"
+      className="nh-backtotop fixed bottom-6 left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#127378] hover:bg-[#0f6165] text-xl text-white shadow-lg hover:scale-110 transition-transform print:hidden"
     >
       ↑
     </button>

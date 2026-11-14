@@ -27,7 +27,7 @@ import { useSEO } from '../lib/seo';
 
 function LoadingBlock() {
   return (
-    <div className="flex items-center justify-center py-20 text-slate-500 dark:text-slate-400">
+    <div className="flex items-center justify-center py-20 text-slate-600 dark:text-slate-400">
       <span className="animate-pulse">جاري التحميل... (Loading...)</span>
     </div>
   );
@@ -59,7 +59,7 @@ export function TravelQuestionsHome() {
   }, []);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
 
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
   const reviewCats = categories.filter((c) => c.type === 'review');
@@ -69,7 +69,7 @@ export function TravelQuestionsHome() {
     <div className="mx-auto max-w-5xl px-4 py-8" dir="rtl">
       <Breadcrumbs items={[{ label: 'أسئلة السفر للخارج' }]} />
 
-      <div className="mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-cyan-600 via-blue-600 to-indigo-700 p-6 text-white shadow-lg sm:p-8">
+      <div className="mb-8 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">✈️</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">أسئلة السفر للخارج للتمريض</h1>
         <p className="mt-1 text-blue-50">
@@ -92,7 +92,7 @@ export function TravelQuestionsHome() {
             </div>
             {cat.name_en && <div className="text-sm text-amber-700/80 dark:text-amber-400/70">{cat.name_en}</div>}
           </div>
-          <div className="text-amber-600 dark:text-amber-400">←</div>
+          <div className="text-amber-700 dark:text-amber-400">←</div>
         </Link>
       ))}
 
@@ -116,10 +116,10 @@ export function TravelQuestionsHome() {
                 <div className="text-3xl">{cat.icon}</div>
                 <div>
                   <div className="font-bold text-slate-800 dark:text-white">{cat.name_ar}</div>
-                  <div className="text-sm text-slate-500 dark:text-slate-400">{cat.name_en}</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">{cat.name_en}</div>
                 </div>
               </div>
-              <div className="mt-3 text-xs text-slate-400 dark:text-slate-500">
+              <div className="mt-3 text-xs text-slate-500 dark:text-slate-400">
                 {total_q} سؤال{answered > 0 && ` — تم حل ${answered}`}
               </div>
               <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800">
@@ -129,7 +129,7 @@ export function TravelQuestionsHome() {
           );
         })}
         {categories.length === 0 && (
-          <div className="col-span-2 rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+          <div className="col-span-2 rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             المحتوى قيد الإضافة قريبًا
           </div>
         )}
@@ -163,7 +163,7 @@ function TravelReviewView({ category }: { category: TravelCategory }) {
   }, [category.id]);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
 
   const active = sections.find((s) => s.id === activeId) ?? sections[0];
 
@@ -171,7 +171,7 @@ function TravelReviewView({ category }: { category: TravelCategory }) {
     <div className="mx-auto max-w-6xl px-4 py-8" dir="rtl">
       <Breadcrumbs items={[{ label: 'أسئلة السفر للخارج', path: '/travel-questions' }, { label: category.name_ar }]} />
 
-      <div className="mb-6 mt-4 overflow-hidden rounded-3xl bg-gradient-to-l from-amber-500 via-orange-500 to-rose-500 p-6 text-white shadow-lg sm:p-8">
+      <div className="mb-6 mt-4 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">{category.icon}</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{category.name_ar}</h1>
         {category.name_en && <p className="mt-1 text-amber-50">{category.name_en}</p>}
@@ -179,7 +179,7 @@ function TravelReviewView({ category }: { category: TravelCategory }) {
       </div>
 
       {sections.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
           المحتوى قيد الإضافة قريبًا
         </div>
       ) : (
@@ -257,12 +257,12 @@ export default function TravelQuestionsStudy() {
   }, [categoryId]);
 
   if (catLoading) return <LoadingBlock />;
-  if (catError) return <div className="p-6 text-red-600">خطأ: {catError}</div>;
+  if (catError) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {catError}</div>;
   if (!category) {
     return (
       <div className="mx-auto max-w-lg px-4 py-16 text-center">
         <div className="text-6xl">❓</div>
-        <p className="mt-3 text-slate-500 dark:text-slate-400">القسم غير موجود</p>
+        <p className="mt-3 text-slate-600 dark:text-slate-400">القسم غير موجود</p>
         <Link to="/travel-questions" className="mt-4 inline-block rounded-full bg-blue-600 px-6 py-2 font-bold text-white">
           أسئلة السفر للخارج
         </Link>
@@ -297,7 +297,7 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
   }, [categoryId]);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
 
   return (
     <QuizRunner

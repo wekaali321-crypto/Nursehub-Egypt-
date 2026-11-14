@@ -130,7 +130,7 @@ export default function BuyButton({
           ============================================================ */}
       <div className="relative flex items-center py-2">
         <div className="flex-grow border-t border-slate-300 dark:border-slate-600"></div>
-        <span className="mx-4 text-sm text-slate-400 dark:text-slate-500">أو</span>
+        <span className="mx-4 text-sm text-slate-500 dark:text-slate-400">أو</span>
         <div className="flex-grow border-t border-slate-300 dark:border-slate-600"></div>
       </div>
 
@@ -145,7 +145,7 @@ export default function BuyButton({
         {directLoading ? 'جاري التحميل...' : '📥 تحميل PDF مباشر (30 ج.م)'}
       </button>
 
-      <p className="text-xs text-center text-slate-400 dark:text-slate-500">
+      <p className="text-xs text-center text-slate-500 dark:text-slate-400">
         بسعر تعريفي 30 ج.م بدلاً من 50 (لفترة محدودة)
       </p>
     </div>
