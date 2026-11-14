@@ -22,6 +22,22 @@ const ART: Record<string, string> = {
   "anat-pns-cranial-nerves": "nerves", "anat-endocrine": "endocrine", "anat-reproductive": "uterus", "anat-integumentary": "skin",
   "anat-eye-ear": "eyeEar", "anat-lymphatic-immune": "lymph", "anat-breast": "breast", "anat-surface-landmarks": "landmarks",
 };
+/** Built-in diagram per anatomy SECTION (scripts/build-anatomy-art.mjs) — only where a picture explains it, not decoration. */
+const SECTION_ART: Record<string, string> = {
+  tp1: "anat-position", tp2: "anat-planes", tp3: "anat-directions", tp4: "anat-patient-positions",
+  ax2: "body-skull", ax3: "anat-spine", ax4: "body-ribs", ap4: "anat-joint-movements",
+  mu3: "anat-im-deltoid-vastus", mu4: "anat-im-gluteal",
+  ht1: "anat-heart-chambers", ht2: "anat-heart-flow", ht4: "anat-heart-conduction",
+  bv1: "anat-vessel-types", bv2: "anat-arm-veins", bv3: "anat-pulse-points",
+  re1: "anat-upper-airway", re3: "anat-lungs-pleura", re4: "anat-breathing",
+  ur2: "anat-nephron", ur4: "anat-catheter", br1: "anat-brain-lobes", br3: "anat-meninges",
+  sc1: "anat-spinal-cord", sc3: "anat-reflex-arc", in1: "anat-skin-layers",
+  ee1: "anat-eye", ee2: "anat-ear-outer-middle", ee3: "anat-ear-inner", rp3: "anat-menstrual-cycle",
+  "breast-quadrants-drainage": "anat-breast-quadrants", "im-injection-sites": "anat-im-deltoid-vastus",
+  "iv-catheter-veins": "anat-arm-veins", "pulse-points": "anat-pulse-points", "lumbar-puncture-landmark": "anat-lumbar-puncture",
+  "lymph-node-groups": "body-lymph",
+};
+const sectionArt = (s: { id?: string }) => (s.id && SECTION_ART[s.id] ? `/cards/art/${SECTION_ART[s.id]}.svg` : null);
 const artFor = (id: string) => (ART[id] ? `/cards/art/body-${ART[id]}.svg` : null);
 
 export function AnatomyHome() {
@@ -89,6 +105,7 @@ export default function AnatomyTopicPage() {
       fallbackIcon="🦴"
       backLabel={{ en: "← Back to Anatomy", ar: "← رجوع لقسم التشريح" }}
       art={artFor(topic.id)}
+      sectionArt={sectionArt}
     />
   );
 }

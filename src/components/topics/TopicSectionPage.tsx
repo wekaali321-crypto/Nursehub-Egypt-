@@ -198,7 +198,7 @@ export function TopicSectionHome({
 
 /** Topic page of a topic section: header + one card per section + sources + back link. */
 export function TopicSectionDetail({
-  topic, sectionTitle, basePath, tint, fallbackIcon, backLabel, detailTop, renderBody, sectionNav, art,
+  topic, sectionTitle, basePath, tint, fallbackIcon, backLabel, detailTop, renderBody, sectionNav, art, sectionArt,
 }: {
   topic: SectionTopic;
   sectionTitle: string;
@@ -214,6 +214,8 @@ export function TopicSectionDetail({
   sectionNav?: boolean;
   /** Optional teaching drawing (public/cards/art) shown above the sections, e.g. where the organ / system is in the body. */
   art?: string | null;
+  /** Optional built-in diagram per section (the admin can still replace or hide it). */
+  sectionArt?: (section: TopicSectionItem, index: number) => string | null;
 }) {
   const { lang } = useI18n();
   const isEn = lang === "en";
@@ -265,8 +267,8 @@ export function TopicSectionDetail({
                   {sectionNav && <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#168C91] text-sm text-white">{i + 1}</span>}
                   {heading}
                 </h2>
-                <EditableImage block slot={`sec:${basePath}/${topic.id}:${s.id || i}`} src={s.image_url} label={heading}
-                  render={(u) => <img src={u} alt={heading} loading="lazy" decoding="async" className="mb-4 w-full rounded-xl border border-slate-200 bg-white object-contain dark:border-slate-700" />} />
+                <EditableImage block slot={`sec:${basePath}/${topic.id}:${s.id || i}`} src={s.image_url || sectionArt?.(s, i) || null} label={heading}
+                  render={(u) => <img src={u} alt={heading} loading="lazy" decoding="async" className="mx-auto mb-4 max-h-96 w-full rounded-xl border border-slate-200 bg-white object-contain p-2 dark:border-slate-700" />} />
                 {renderBody ? renderBody(body, isEn) : <TopicBody body={body} accent="teal" />}
               </section>
             );
