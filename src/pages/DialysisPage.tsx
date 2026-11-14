@@ -5,6 +5,7 @@ import { useI18n } from "../lib/i18n";
 import { fetchDialysisTopics, fetchDialysisTopic, type DialysisTopic } from "../lib/dialysisTopicsApi";
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
+import { sectionArtFor } from "../lib/sectionArt";
 
 // Light sky accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -77,6 +78,7 @@ export default function DialysisTopicPage() {
       tint={TINT}
       fallbackIcon="💧"
       backLabel={{ en: "← Back to Dialysis", ar: "← رجوع لقسم الغسيل الكلوي" }}
+      sectionArt={sectionArtFor("dialysis")}
     />
   );
 }
