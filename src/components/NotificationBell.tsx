@@ -143,7 +143,7 @@ export default function NotificationBell() {
           )}
           <div className="max-h-[60vh] overflow-y-auto">
             {visible.length === 0 ? (
-              <p className="px-4 py-10 text-center text-sm text-slate-500 dark:text-slate-400">{ar ? "لا توجد إشعارات بعد." : "No notifications yet."}</p>
+              <p className="px-4 py-10 text-center text-sm text-slate-600 dark:text-slate-400">{ar ? "لا توجد إشعارات بعد." : "No notifications yet."}</p>
             ) : (
               visible.map((n) => (
                 <div
@@ -158,13 +158,13 @@ export default function NotificationBell() {
                   <span className="min-w-0 flex-1">
                     <span className="block text-sm font-black text-slate-900 dark:text-white">{(!ar && n.title_en) || n.title}</span>
                     {((!ar && n.body_en) || n.body) && <span className="mt-0.5 block text-xs leading-5 text-slate-600 dark:text-slate-300">{(!ar && n.body_en) || n.body}</span>}
-                    <span className="mt-1 block text-[11px] text-slate-400">{ago(n.created_at, ar)}</span>
+                    <span className="mt-1 block text-[11px] text-slate-500 dark:text-slate-400">{ago(n.created_at, ar)}</span>
                   </span>
                   <button
                     onClick={(e) => { e.stopPropagation(); hide([n.id]); }}
                     aria-label={ar ? "حذف الإشعار" : "Delete notification"}
                     title={ar ? "حذف" : "Delete"}
-                    className="-m-1 shrink-0 rounded-full p-2 text-sm text-slate-400 hover:bg-rose-50 hover:text-rose-500 dark:hover:bg-rose-500/10"
+                    className="-m-1 shrink-0 rounded-full p-2 text-sm text-slate-500 dark:text-slate-400 hover:bg-rose-50 hover:text-rose-500 dark:hover:bg-rose-500/10"
                   >
                     🗑
                   </button>

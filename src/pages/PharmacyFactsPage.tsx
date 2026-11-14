@@ -73,7 +73,7 @@ export function PharmacyFactsHome() {
       </div>
 
       <div className="mt-8 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-teal-600 hover:underline">{t("mnemonics.backToDrugs")}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{t("mnemonics.backToDrugs")}</Link>
       </div>
     </div>
   );
@@ -133,15 +133,15 @@ export default function PharmacyFactsChapterPage() {
           </div>
         ))}
         {filtered.length === 0 && (
-          <div className="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-400 dark:border-slate-700">
+          <div className="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {chapterFacts.length === 0 ? t("facts.noneUploaded") : t("facts.noResults")}
           </div>
         )}
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/facts" className="text-teal-600 hover:underline">{t("facts.backToChapters")}</Link>
-        <Link to="/drugs" className="text-teal-600 hover:underline">{t("facts.toDrugsGuide")}</Link>
+        <Link to="/drugs/facts" className="text-teal-700 dark:text-teal-300 hover:underline">{t("facts.backToChapters")}</Link>
+        <Link to="/drugs" className="text-teal-700 dark:text-teal-300 hover:underline">{t("facts.toDrugsGuide")}</Link>
       </div>
     </div>
   );

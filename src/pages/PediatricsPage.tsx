@@ -58,7 +58,7 @@ export default function PediatricsTopicPage() {
   useSEO({ title: `${topic ? (isEn && topic.title_en ? topic.title_en : topic.title_ar) : ""} | ${t("nav.pediatrics")} | NurseHub Egypt` });
 
   if (topic === undefined) {
-    return <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-400">{t("common.loading")}</div>;
+    return <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-500 dark:text-slate-400">{t("common.loading")}</div>;
   }
   if (!topic) {
     return (

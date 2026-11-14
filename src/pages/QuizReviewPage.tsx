@@ -54,7 +54,7 @@ export default function QuizReviewPage() {
       </div>
 
       {questionLog.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
           <p>{t("quiz.reviewEmpty")}</p>
           <Link to="/quizzes" className="mt-4 inline-block rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("quiz.allQuizzes")}</Link>
         </div>
@@ -68,7 +68,7 @@ export default function QuizReviewPage() {
                 className={`rounded-xl border p-2.5 text-center transition ${filter === tab.key ? "border-teal-500 bg-teal-50 dark:bg-teal-500/10" : "border-slate-200 dark:border-slate-800"}`}
               >
                 <div className="text-lg font-black dark:text-white">{counts[tab.key]}</div>
-                <div className="text-[11px] text-slate-500 dark:text-slate-400">{tab.label}</div>
+                <div className="text-[11px] text-slate-600 dark:text-slate-400">{tab.label}</div>
               </button>
             ))}
           </div>
@@ -91,7 +91,7 @@ export default function QuizReviewPage() {
                 <div key={e.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
                   <button onClick={() => setOpenId(open ? null : e.id)} className="flex w-full items-start gap-3 text-start">
                     <div className="flex-1 min-w-0">
-                      <div className="text-xs font-bold text-teal-600 dark:text-teal-400">{catLabel}</div>
+                      <div className="text-xs font-bold text-teal-700 dark:text-teal-400">{catLabel}</div>
                       <div className="mt-1 line-clamp-2 text-sm font-semibold dark:text-white">{qText}</div>
                     </div>
                     <div className="flex shrink-0 items-center gap-2">
@@ -116,20 +116,20 @@ export default function QuizReviewPage() {
                               ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300"
                               : oi === e.chosenIndex
                               ? "bg-rose-100 text-rose-700 dark:bg-rose-500/10 dark:text-rose-300"
-                              : "text-slate-500"
+                              : "text-slate-600 dark:text-slate-400"
                           }`}
                         >
                           {oi === e.correctIndex ? "✅ " : oi === e.chosenIndex ? "❌ " : ""}{o}
                         </div>
                       ))}
                       {explanation && <div className="rounded-lg bg-teal-50 p-2 text-xs text-teal-700 dark:bg-teal-500/10 dark:text-teal-300">💡 {explanation}</div>}
-                      <div className="text-[11px] text-slate-400">{e.quizTitle} · {e.date}</div>
+                      <div className="text-[11px] text-slate-500 dark:text-slate-400">{e.quizTitle} · {e.date}</div>
                     </div>
                   )}
                 </div>
               );
             })}
-            {list.length === 0 && <div className="rounded-2xl border border-dashed border-slate-300 py-12 text-center text-slate-400 dark:border-slate-700">{t("common.noResults")}</div>}
+            {list.length === 0 && <div className="rounded-2xl border border-dashed border-slate-300 py-12 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">{t("common.noResults")}</div>}
           </div>
         </>
       )}

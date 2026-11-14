@@ -36,7 +36,7 @@ export default function DrugSectionNav({ items, title, variant }: { items: DrugN
                 aria-current={active === i.id ? "location" : undefined}
                 className={`block whitespace-nowrap rounded-full border px-3.5 py-1.5 text-sm font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] ${
                   active === i.id
-                    ? "border-[#168C91] bg-[#168C91] text-white"
+                    ? "border-[#168C91] bg-[#127378] text-white"
                     : "border-slate-200 bg-white text-[#153448] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
                 }`}
               >
@@ -59,7 +59,7 @@ export default function DrugSectionNav({ items, title, variant }: { items: DrugN
               href={`#${i.id}`}
               aria-current={active === i.id ? "location" : undefined}
               className={`block rounded-lg px-2 py-1.5 text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] ${
-                active === i.id ? "bg-[#168C91]/10 font-bold text-[#168C91] dark:bg-[#168C91]/20 dark:text-teal-300" : "text-slate-600 hover:bg-slate-50 hover:text-[#168C91] dark:text-slate-400 dark:hover:bg-slate-800"
+                active === i.id ? "bg-[#168C91]/10 font-bold text-[#127378] dark:bg-[#168C91]/20 dark:text-teal-300" : "text-slate-600 hover:bg-slate-50 hover:text-[#168C91] dark:text-slate-400 dark:hover:bg-slate-800"
               }`}
             >
               {i.label}

@@ -7,9 +7,9 @@ import InlineLangToggle from "../components/InlineLangToggle";
 import { computeAnalytics } from "../lib/quizStats";
 
 function pctColor(pct: number) {
-  if (pct >= 75) return "text-emerald-500 bg-emerald-500";
-  if (pct >= 50) return "text-amber-500 bg-amber-500";
-  return "text-rose-500 bg-rose-500";
+  if (pct >= 75) return "text-emerald-700 dark:text-emerald-300 bg-emerald-500";
+  if (pct >= 50) return "text-amber-700 dark:text-amber-300 bg-amber-500";
+  return "text-rose-700 dark:text-rose-300 bg-rose-500";
 }
 
 function LearningCurve({ points }: { points: { label: string; score: number }[] }) {
@@ -47,7 +47,7 @@ export default function QuizAnalyticsPage() {
       </div>
 
       {a.quizCount === 0 ? (
-        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+        <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
           <p>{t("quiz.analyticsNoData")}</p>
           <Link to="/quizzes" className="mt-4 inline-block rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("quiz.allQuizzes")}</Link>
         </div>
@@ -57,7 +57,7 @@ export default function QuizAnalyticsPage() {
             {[[t("quiz.analyticsQuizzes"), a.quizCount], [t("quiz.analyticsQuestions"), a.questionCount], [t("quiz.analyticsStudyTime"), `${a.studyMinutes} ${t("quiz.time")}`]].map(([l, v]) => (
               <div key={l as string} className="rounded-2xl border border-slate-200 bg-white p-4 text-center dark:border-slate-800 dark:bg-slate-900">
                 <div className="text-2xl font-black text-violet-500">{v}</div>
-                <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">{l}</div>
+                <div className="mt-1 text-xs text-slate-600 dark:text-slate-400">{l}</div>
               </div>
             ))}
           </div>
@@ -65,7 +65,7 @@ export default function QuizAnalyticsPage() {
           {a.learningCurve.length >= 2 && (
             <div className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
               <h2 className="font-bold dark:text-white">{t("quiz.analyticsLearningCurve")}</h2>
-              <p className="mb-3 text-xs text-slate-400">{t("quiz.analyticsLearningCurveSub")}</p>
+              <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">{t("quiz.analyticsLearningCurveSub")}</p>
               <LearningCurve points={a.learningCurve} />
             </div>
           )}

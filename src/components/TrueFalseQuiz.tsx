@@ -70,14 +70,14 @@ export default function TrueFalseQuiz({ slug, lang = "ar" }: Props) {
   }
 
   if (loading) {
-    return <p className="my-6 text-center text-sm text-slate-400">{t.loading}</p>;
+    return <p className="my-6 text-center text-sm text-slate-500 dark:text-slate-400">{t.loading}</p>;
   }
   if (questions.length === 0) return null;
 
   return (
     <div dir={dir} className="my-8 not-prose">
       <h3 className="mb-1 text-xl font-black dark:text-white">{t.title}</h3>
-      <p className="mb-4 text-sm text-slate-500 dark:text-slate-400">{t.sub}</p>
+      <p className="mb-4 text-sm text-slate-600 dark:text-slate-400">{t.sub}</p>
 
       <div className="space-y-4">
         {questions.map((q, i) => {

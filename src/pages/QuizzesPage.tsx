@@ -67,7 +67,7 @@ export default function QuizzesPage() {
         <div className="mb-3 flex items-center justify-between">
           <div>
             <h2 className="text-lg font-bold dark:text-white">{t("quiz.modesTitle")}</h2>
-            <p className="text-xs text-slate-500 dark:text-slate-400">{t("quiz.modesSubtitle")}</p>
+            <p className="text-xs text-slate-600 dark:text-slate-400">{t("quiz.modesSubtitle")}</p>
           </div>
           <div className="flex gap-2 text-xs font-bold">
             <Link to="/quizzes/review" className="rounded-full bg-slate-100 px-3 py-1.5 dark:bg-slate-800 dark:text-white">🗂️ {t("quiz.reviewTitle")}</Link>
@@ -90,7 +90,7 @@ export default function QuizzesPage() {
 
       <div className="mb-6 flex flex-wrap gap-2">
         {cats.map((c) => (
-          <button key={c} onClick={() => setCat(c)} className={`rounded-full px-4 py-1.5 text-sm font-semibold ${cat === c ? "bg-teal-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{c === "all" ? t("cat.all") : catLabels.get(c)}</button>
+          <button key={c} onClick={() => setCat(c)} className={`rounded-full px-4 py-1.5 text-sm font-semibold ${cat === c ? "bg-teal-700 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{c === "all" ? t("cat.all") : catLabels.get(c)}</button>
         ))}
       </div>
 
@@ -105,23 +105,23 @@ export default function QuizzesPage() {
           return (
             <div key={q.id} className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-teal-600 dark:bg-teal-500/10">{category}</span>
-                {q.demo && <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-600 dark:bg-amber-500/10">Demo</span>}
+                <span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-teal-700 dark:text-teal-300 dark:bg-teal-500/10">{category}</span>
+                {q.demo && <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700 dark:text-amber-300 dark:bg-amber-500/10">Demo</span>}
               </div>
               <h3 className="mt-3 text-lg font-bold dark:text-white">{title}</h3>
-              <p className="mt-1 flex-1 text-sm text-slate-500 dark:text-slate-400">{description}</p>
-              <div className="mt-3 flex flex-wrap gap-3 text-xs text-slate-400">
+              <p className="mt-1 flex-1 text-sm text-slate-600 dark:text-slate-400">{description}</p>
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-slate-500 dark:text-slate-400">
                 <span>❓ {q.questions.length} {t("quiz.numQuestions")}</span>
                 <span>⏱ {q.timeLimit ? `${q.timeLimit} ${t("quiz.time")}` : t("quiz.noTimeLimit")}</span>
                 <span>🎯 {t("quiz.passRate")} {q.passScore}%</span>
                 <span>📊 {difficulty}</span>
               </div>
-              {best && <div className="mt-2 text-xs font-bold text-emerald-500">{t("quiz.bestScore")}: {best.score}%</div>}
-              <Link to={`/quiz/${q.id}`} className="mt-4 rounded-full bg-[#168C91] hover:bg-[#127378] py-2.5 text-center font-bold text-white">{t("quiz.start")}</Link>
+              {best && <div className="mt-2 text-xs font-bold text-emerald-700 dark:text-emerald-300">{t("quiz.bestScore")}: {best.score}%</div>}
+              <Link to={`/quiz/${q.id}`} className="mt-4 rounded-full bg-[#127378] hover:bg-[#0f6165] py-2.5 text-center font-bold text-white">{t("quiz.start")}</Link>
             </div>
           );
         })}
-        {list.length === 0 && <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">{t("quiz.noQuizzesInCategory")}</div>}
+        {list.length === 0 && <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">{t("quiz.noQuizzesInCategory")}</div>}
       </div>
     </div>
   );

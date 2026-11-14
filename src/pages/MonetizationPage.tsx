@@ -28,7 +28,7 @@ export default function MonetizationPage() {
           <div key={c.t} className="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
             <div className="text-3xl">{c.i}</div>
             <h3 className="mt-2 font-bold dark:text-white">{c.t}</h3>
-            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{c.d}</p>
+            <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{c.d}</p>
           </div>
         ))}
       </div>

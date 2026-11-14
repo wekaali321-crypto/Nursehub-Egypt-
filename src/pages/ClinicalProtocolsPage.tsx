@@ -32,7 +32,7 @@ function ProgressBar({ done, total, lang, colorClass = "bg-teal-600" }: { done: 
   const pct = total > 0 ? Math.round((done / total) * 100) : 0;
   return (
     <div>
-      <div className="flex justify-between text-xs text-slate-500 dark:text-slate-400 mb-1">
+      <div className="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-1">
         <span>{lang === "ar" ? `${done} من ${total} ${LABELS.stepsOf.ar}` : `${done} of ${total} ${LABELS.stepsOf.en}`}</span>
         <span>{pct}%</span>
       </div>
@@ -89,8 +89,8 @@ export default function ClinicalProtocolDetail() {
     setProgress({});
   }
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
-  if (!protocol) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (!protocol) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
 
   const title = lang === "en" && protocol.name_en ? protocol.name_en : protocol.name_ar;
   const subtitle = lang === "en" ? protocol.name_ar : protocol.name_en;
@@ -124,7 +124,7 @@ export default function ClinicalProtocolDetail() {
       {/* شريط التقدم الكلي */}
       <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-4 mb-4">
         <ProgressBar done={done} total={total} lang={lang} />
-        <button onClick={handleReset} className="text-xs text-slate-400 dark:text-slate-500 hover:text-red-500 mt-2">{LABELS.resetProgress[lang]}</button>
+        <button onClick={handleReset} className="text-xs text-slate-500 dark:text-slate-400 hover:text-red-500 mt-2">{LABELS.resetProgress[lang]}</button>
       </div>
 
       {/* بطاقة القيم المرجعية السريعة */}
@@ -172,8 +172,8 @@ export default function ClinicalProtocolDetail() {
                   <span className="font-bold text-slate-800 dark:text-white">{phase.title}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-xs text-slate-400 dark:text-slate-500">{phaseDone}/{phase.items.length}</span>
-                  <span className="text-slate-400 dark:text-slate-500">{isOpen ? "▲" : "▼"}</span>
+                  <span className="text-xs text-slate-500 dark:text-slate-400">{phaseDone}/{phase.items.length}</span>
+                  <span className="text-slate-500 dark:text-slate-400">{isOpen ? "▲" : "▼"}</span>
                 </div>
               </button>
 
@@ -196,11 +196,11 @@ export default function ClinicalProtocolDetail() {
                       />
                       <div className="flex-1">
                         <div className={`text-sm text-slate-800 dark:text-slate-100 ${progress[item.id] ? "line-through" : ""}`}>
-                          {item.critical && <span className="text-red-600 dark:text-red-400 font-bold ml-1">⚠ </span>}
+                          {item.critical && <span className="text-red-700 dark:text-red-400 font-bold ml-1">⚠ </span>}
                           {item.text}
                         </div>
                         {item.detail && (
-                          <div className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">{item.detail}</div>
+                          <div className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">{item.detail}</div>
                         )}
                       </div>
                     </label>

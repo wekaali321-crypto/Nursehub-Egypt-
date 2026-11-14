@@ -46,7 +46,7 @@ function PairCard({ item, lang }: { item: IVCompatibilityPair; lang: "ar" | "en"
     <div className={`rounded-2xl border p-4 ${meta.tone}`}>
       <div className="flex items-center justify-between gap-2 mb-2">
         <div className="font-bold text-slate-800 dark:text-white text-sm leading-relaxed">
-          {bilingual(item.drug_a, item.drug_a_en, lang).text} <span className="text-slate-400 dark:text-slate-500">+</span> {bilingual(item.drug_b, item.drug_b_en, lang).text}
+          {bilingual(item.drug_a, item.drug_a_en, lang).text} <span className="text-slate-500 dark:text-slate-400">+</span> {bilingual(item.drug_b, item.drug_b_en, lang).text}
         </div>
         <span className="shrink-0 rounded-full bg-white/70 dark:bg-slate-900/60 px-3 py-1 text-xs font-bold text-slate-700 dark:text-slate-200">
           {meta.icon} {meta.label[lang]}
@@ -91,7 +91,7 @@ export default function IVCompatibilityPage() {
     );
   }, [items, query]);
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 py-8">
@@ -114,7 +114,7 @@ export default function IVCompatibilityPage() {
           placeholder={LABELS.searchPlaceholder[lang]}
           className="w-full rounded-xl border border-slate-200 bg-white py-3 pr-11 pl-3 outline-none focus:border-indigo-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
         />
-        <span className="absolute right-4 top-3.5 text-slate-400">🔍</span>
+        <span className="absolute right-4 top-3.5 text-slate-500 dark:text-slate-400">🔍</span>
       </div>
 
       <div className="rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs p-3 mb-6 leading-relaxed dark:bg-amber-500/10 dark:border-amber-500/20 dark:text-amber-300">
@@ -122,7 +122,7 @@ export default function IVCompatibilityPage() {
       </div>
 
       {filtered.length === 0 && (
-        <div className="text-center text-slate-500 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
+        <div className="text-center text-slate-600 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
       )}
 
       <div className="space-y-3">

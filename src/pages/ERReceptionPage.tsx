@@ -65,10 +65,10 @@ export function ERReceptionHome() {
         <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
           <div className="mb-2 font-black text-slate-700 dark:text-white">{isEn ? "Related sections" : "أقسام ذات صلة"}</div>
           <div className="flex flex-wrap gap-2">
-            <Link to="/first-aid" className="rounded-full bg-rose-50 px-4 py-1.5 text-sm font-bold text-rose-600 dark:bg-rose-500/10">
+            <Link to="/first-aid" className="rounded-full bg-rose-50 px-4 py-1.5 text-sm font-bold text-rose-700 dark:text-rose-300 dark:bg-rose-500/10">
               🩹 {isEn ? "First Aid (burns, CPR, bleeding & wounds)" : "الإسعافات الأولية (الحروق، الإنعاش، النزيف والجروح)"}
             </Link>
-            <Link to="/pharmacology" className="rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-bold text-emerald-600 dark:bg-emerald-500/10">
+            <Link to="/pharmacology" className="rounded-full bg-emerald-50 px-4 py-1.5 text-sm font-bold text-emerald-700 dark:text-emerald-300 dark:bg-emerald-500/10">
               🧪 {isEn ? "Pharmacology" : "الفارماكولوجي"}
             </Link>
             <Link to="/terminology" className="rounded-full bg-violet-50 px-4 py-1.5 text-sm font-bold text-violet-600 dark:bg-violet-500/10">
@@ -98,7 +98,7 @@ export default function ERReceptionTopicPage() {
   useSEO({ title: `${topic ? (isEn && topic.title_en ? topic.title_en : topic.title_ar) : ""} | ${t("nav.erReception")} | NurseHub Egypt` });
 
   if (topic === undefined) {
-    return <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-400">{t("common.loading")}</div>;
+    return <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-500 dark:text-slate-400">{t("common.loading")}</div>;
   }
   if (!topic) {
     return (

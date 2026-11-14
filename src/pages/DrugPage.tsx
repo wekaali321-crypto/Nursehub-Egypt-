@@ -203,7 +203,7 @@ export default function DrugPage() {
                     );
                   })}
                 </div>
-                <Link to="/drugs/interactions" className="mt-3 inline-block text-sm font-bold text-[#168C91] hover:underline dark:text-teal-300">{t("drug.checkOtherInteraction")}</Link>
+                <Link to="/drugs/interactions" className="mt-3 inline-block text-sm font-bold text-[#127378] hover:underline dark:text-teal-300">{t("drug.checkOtherInteraction")}</Link>
               </DrugSection>
             )}
 

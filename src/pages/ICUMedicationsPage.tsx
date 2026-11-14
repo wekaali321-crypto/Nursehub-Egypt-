@@ -76,7 +76,7 @@ export function ICUMedicationsHome() {
     fetchICUMedications().then(setItems).catch(() => setItems([])).finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
 
   const query = q.trim().toLowerCase();
   const filtered = !query
@@ -114,11 +114,11 @@ export function ICUMedicationsHome() {
           placeholder={LABELS.searchPlaceholder[lang]}
           className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-blue-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
         />
-        <span className="absolute right-3 top-3 text-slate-400">🔍</span>
+        <span className="absolute right-3 top-3 text-slate-500 dark:text-slate-400">🔍</span>
       </div>
 
       {grouped.length === 0 && (
-        <div className="text-center text-slate-500 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
+        <div className="text-center text-slate-600 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
       )}
 
       {grouped.map((g) => (
@@ -162,8 +162,8 @@ export default function ICUMedicationDetail() {
       .finally(() => setLoading(false));
   }, [id]);
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
-  if (!item) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (!item) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
 
   const highAlertTypes = parseHighAlertTypes(item.high_alert_type);
   const showHighAlert = item.is_high_alert || highAlertTypes.length > 0;

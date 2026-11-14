@@ -68,14 +68,14 @@ export default function ArticleAI({ articleHtml, articleTitle }: { articleHtml: 
         <span className="flex items-center gap-2 font-bold text-slate-800 dark:text-white">
           <span aria-hidden="true">🤖</span> {t("article.askAI")}
         </span>
-        <span className="text-slate-400" aria-hidden="true">{open ? "▲" : "▼"}</span>
+        <span className="text-slate-500 dark:text-slate-400" aria-hidden="true">{open ? "▲" : "▼"}</span>
       </button>
       {open && (
         <div className="border-t border-teal-100 p-4 dark:border-teal-900/50">
           <div className="max-h-72 space-y-3 overflow-y-auto pr-1" role="log" aria-live="polite">
             {msgs.map((m, i) => (
               <div key={i} className={m.role === "user" ? "text-left" : ""}>
-                <div className={`inline-block max-w-[92%] rounded-2xl px-3.5 py-2 text-sm ${m.role === "user" ? "bg-teal-500 text-white" : "bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200"}`}>
+                <div className={`inline-block max-w-[92%] rounded-2xl px-3.5 py-2 text-sm ${m.role === "user" ? "bg-teal-700 text-white" : "bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200"}`}>
                   {m.role === "bot" && m.source !== "info" && (
                     <div className="mb-1 text-[10px] font-bold uppercase tracking-wide opacity-60">{sourceLabel(m.source)}</div>
                   )}
@@ -83,7 +83,7 @@ export default function ArticleAI({ articleHtml, articleTitle }: { articleHtml: 
                   {m.source === "external" && (
                     <ul className="mt-2 space-y-0.5">
                       {EXTERNAL_SOURCES.map((s) => (
-                        <li key={s.url}><a href={s.url} target="_blank" rel="noreferrer" className="text-teal-500 underline">{s.name} ↗</a></li>
+                        <li key={s.url}><a href={s.url} target="_blank" rel="noreferrer" className="text-teal-700 dark:text-teal-300 underline">{s.name} ↗</a></li>
                       ))}
                     </ul>
                   )}
@@ -102,7 +102,7 @@ export default function ArticleAI({ articleHtml, articleTitle }: { articleHtml: 
             />
             <button className="shrink-0 rounded-full bg-teal-500 px-4 py-2 text-sm font-bold text-white">{lang === "ar" ? "إرسال" : "Send"}</button>
           </form>
-          <p className="mt-2 text-[11px] text-slate-400">
+          <p className="mt-2 text-[11px] text-slate-500 dark:text-slate-400">
             {lang === "ar" ? "إجابات تعليمية عامة — لا تُغني عن استشارة مختص." : "General educational answers — not a substitute for professional advice."}
           </p>
         </div>

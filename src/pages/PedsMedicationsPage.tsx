@@ -76,7 +76,7 @@ export function PedsMedicationsHome() {
     fetchPedsMedications().then(setItems).catch(() => setItems([])).finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
 
   const query = q.trim().toLowerCase();
   const filtered = !query
@@ -112,11 +112,11 @@ export function PedsMedicationsHome() {
           placeholder={LABELS.searchPlaceholder[lang]}
           className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
         />
-        <span className="absolute right-3 top-3 text-slate-400">🔍</span>
+        <span className="absolute right-3 top-3 text-slate-500 dark:text-slate-400">🔍</span>
       </div>
 
       {grouped.length === 0 && (
-        <div className="text-center text-slate-500 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
+        <div className="text-center text-slate-600 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
       )}
 
       {grouped.map((g) => (
@@ -160,8 +160,8 @@ export default function PedsMedicationDetail() {
       .finally(() => setLoading(false));
   }, [id]);
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
-  if (!item) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (!item) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.notFound[lang]}</div>;
 
   const highAlertTypes = parseHighAlertTypes(item.high_alert_type);
   const showHighAlert = item.is_high_alert || highAlertTypes.length > 0;
@@ -172,7 +172,7 @@ export default function PedsMedicationDetail() {
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-4 print:hidden">
-        <Link to="/drugs/peds-medications" className="text-teal-600 text-sm inline-block">{LABELS.back[lang]}</Link>
+        <Link to="/drugs/peds-medications" className="text-teal-700 dark:text-teal-300 text-sm inline-block">{LABELS.back[lang]}</Link>
         <div className="flex items-center gap-2">
           <InlineLangToggle />
           <PrintButton label="طباعة بطاقة الدواء" />

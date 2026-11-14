@@ -6,9 +6,9 @@ export function BarChart({ data, color = "#0ea5e9", height = 160 }: { data: { la
     <div className="flex items-end justify-between gap-2" style={{ height }}>
       {data.map((d, i) => (
         <div key={i} className="flex flex-1 flex-col items-center justify-end gap-1">
-          <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400">{d.value}</span>
+          <span className="text-[10px] font-bold text-slate-600 dark:text-slate-400">{d.value}</span>
           <div className="w-full rounded-t-lg transition-all" style={{ height: `${(d.value / max) * (height - 40)}px`, background: `linear-gradient(to top, ${color}, ${color}cc)`, minHeight: 4 }} />
-          <span className="text-[10px] text-slate-400">{d.label}</span>
+          <span className="text-[10px] text-slate-500 dark:text-slate-400">{d.label}</span>
         </div>
       ))}
     </div>

@@ -190,7 +190,7 @@ export default function InstallAppButton() {
       <button
         type="button"
         onClick={onClick}
-        className="mx-auto mt-5 flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-black text-teal-700 shadow-lg transition hover:scale-105 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-white/60 sm:text-base"
+        className="mx-auto mt-5 flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-black text-teal-700 dark:text-teal-300 shadow-lg transition hover:scale-105 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-white/60 sm:text-base"
       >
         <span className="text-xl" aria-hidden>📲</span>
         {ar ? "حمّل الموقع كتطبيق على موبايلك" : "Install the site as an app"}
@@ -208,9 +208,9 @@ export default function InstallAppButton() {
               <img src="/icon-192.png" alt="NurseHub" width={48} height={48} className="h-12 w-12 shrink-0 rounded-xl" />
               <div className="min-w-0 flex-1">
                 <div className="text-base font-black">{ar ? "ثبّت NurseHub Egypt كتطبيق" : "Install NurseHub Egypt as an app"}</div>
-                <div className="text-xs text-slate-500 dark:text-slate-400">{ar ? "بنفس الشكل والسرعة من شاشتك الرئيسية" : "Open it from your home screen like any app"}</div>
+                <div className="text-xs text-slate-600 dark:text-slate-400">{ar ? "بنفس الشكل والسرعة من شاشتك الرئيسية" : "Open it from your home screen like any app"}</div>
               </div>
-              <button type="button" onClick={() => setOpen(false)} className="shrink-0 rounded-full px-2 text-xl leading-none text-slate-400 hover:text-slate-600" aria-label={ar ? "إغلاق" : "Close"}>✕</button>
+              <button type="button" onClick={() => setOpen(false)} className="shrink-0 rounded-full px-2 text-xl leading-none text-slate-500 dark:text-slate-400 hover:text-slate-600" aria-label={ar ? "إغلاق" : "Close"}>✕</button>
             </div>
 
             <div className="mb-2 text-sm font-bold text-teal-700 dark:text-teal-300">{guide.title}</div>

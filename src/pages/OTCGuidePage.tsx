@@ -163,14 +163,14 @@ export function OTCGuideHome() {
           );
         })}
         {filtered.length === 0 && (
-          <div className="col-span-2 rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-400 dark:border-slate-700">
+          <div className="col-span-2 rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {otcConditions.length === 0 ? LABELS.noneUploaded[lang] : LABELS.noResults[lang]}
           </div>
         )}
       </div>
 
       <div className="mt-8 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-teal-600 hover:underline">{LABELS.back[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{LABELS.back[lang]}</Link>
       </div>
     </div>
   );
@@ -222,8 +222,8 @@ export default function OTCConditionPage() {
   if (!condition) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-16 text-center">
-        <p className="mb-4 text-slate-400">{LABELS.notFound[lang]}</p>
-        <Link to="/drugs/otc-guide" className="font-bold text-emerald-600 hover:underline">
+        <p className="mb-4 text-slate-500 dark:text-slate-400">{LABELS.notFound[lang]}</p>
+        <Link to="/drugs/otc-guide" className="font-bold text-emerald-700 dark:text-emerald-300 hover:underline">
           {LABELS.backToList[lang]}
         </Link>
       </div>
@@ -272,8 +272,8 @@ export default function OTCConditionPage() {
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/otc-guide" className="text-teal-600 hover:underline">{LABELS.allConditions[lang]}</Link>
-        <Link to="/drugs" className="text-teal-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
+        <Link to="/drugs/otc-guide" className="text-teal-700 dark:text-teal-300 hover:underline">{LABELS.allConditions[lang]}</Link>
+        <Link to="/drugs" className="text-teal-700 dark:text-teal-300 hover:underline">{LABELS.drugsGuide[lang]}</Link>
       </div>
     </div>
   );

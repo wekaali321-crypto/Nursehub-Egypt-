@@ -109,7 +109,7 @@ function UserMenu() {
         {avatarUrl ? (
           <img src={avatarUrl} alt={displayName} className="h-full w-full object-cover" referrerPolicy="no-referrer" />
         ) : (
-          <span className="flex h-full w-full items-center justify-center bg-[#168C91] hover:bg-[#127378] font-bold text-white">{initial}</span>
+          <span className="flex h-full w-full items-center justify-center bg-[#127378] hover:bg-[#0f6165] font-bold text-white">{initial}</span>
         )}
       </button>
 
@@ -122,7 +122,7 @@ function UserMenu() {
         >
           <div className="border-b border-slate-100 px-4 py-3 dark:border-slate-800">
             <div className="truncate font-bold text-slate-800 dark:text-white">{displayName}</div>
-            <div className="truncate text-xs text-slate-400">{user.email}</div>
+            <div className="truncate text-xs text-slate-500 dark:text-slate-400">{user.email}</div>
           </div>
           <Link
             to="/dashboard"
@@ -140,7 +140,7 @@ function UserMenu() {
           </Link>
           <button
             onClick={doLogout}
-            className="block w-full px-4 py-2.5 text-start text-sm font-semibold text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-500/10"
+            className="block w-full px-4 py-2.5 text-start text-sm font-semibold text-rose-700 dark:text-rose-300 hover:bg-rose-50 dark:hover:bg-rose-500/10"
           >
             🚪 {isRTL ? "تسجيل الخروج" : "Log out"}
           </button>
@@ -206,7 +206,7 @@ export default function Navbar() {
               className={cn(
                 "rounded-lg px-3 py-2 text-sm font-semibold transition-colors",
                 loc.pathname === m.path
-                  ? "bg-teal-50 text-teal-600 dark:bg-teal-500/10 dark:text-teal-400"
+                  ? "bg-teal-50 text-teal-700 dark:bg-teal-500/10 dark:text-teal-400"
                    : "text-slate-600 hover:bg-slate-100 hover:text-teal-600 dark:text-slate-300 dark:hover:bg-slate-800"
               )}
             >
@@ -262,7 +262,7 @@ export default function Navbar() {
 
           <Link
             to="/admin"
-            className="hidden rounded-full bg-[#168C91] hover:bg-[#127378] px-4 py-2 text-sm font-bold text-white shadow-lg shadow-[#168C91]/25 hover:opacity-90 sm:block"
+            className="hidden rounded-full bg-[#127378] hover:bg-[#0f6165] px-4 py-2 text-sm font-bold text-white shadow-lg shadow-[#168C91]/25 hover:opacity-90 sm:block"
           >
             {t("nav.admin")}
           </Link>

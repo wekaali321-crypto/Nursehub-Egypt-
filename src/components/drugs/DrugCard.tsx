@@ -20,8 +20,8 @@ export default function DrugCard({ d, onOpen }: { d: Drug; onOpen?: () => void }
           <span className="shrink-0 rounded-full border border-red-200 bg-red-50 px-2 py-0.5 text-[11px] font-bold text-red-700 dark:border-red-900 dark:bg-red-500/10 dark:text-red-300">⚠ {t("drugs.highAlertBadge")}</span>
         )}
       </div>
-      {generic && <p dir="ltr" className="break-words text-start text-sm text-slate-500 dark:text-slate-400">{generic}</p>}
-      <span className="mt-auto w-fit max-w-full truncate rounded-full bg-[#168C91]/10 px-2.5 py-0.5 text-xs font-bold text-[#168C91] dark:bg-[#168C91]/20 dark:text-teal-300">{category}</span>
+      {generic && <p dir="ltr" className="break-words text-start text-sm text-slate-600 dark:text-slate-400">{generic}</p>}
+      <span className="mt-auto w-fit max-w-full truncate rounded-full bg-[#168C91]/10 px-2.5 py-0.5 text-xs font-bold text-[#127378] dark:bg-[#168C91]/20 dark:text-teal-300">{category}</span>
     </Link>
   );
 }

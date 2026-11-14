@@ -50,7 +50,7 @@ function sectionInfo(target: string, ar: boolean) {
 }
 
 function Loading() {
-  return <div className="flex items-center justify-center py-24 text-slate-500"><span className="animate-pulse">…</span></div>;
+  return <div className="flex items-center justify-center py-24 text-slate-600 dark:text-slate-400"><span className="animate-pulse">…</span></div>;
 }
 
 // ---------------------------------------------------------------------------
@@ -175,18 +175,18 @@ function GuideHub({ target }: { target: string }) {
           className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm shadow-sm outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
         />
         <div className="flex gap-2 overflow-x-auto pb-1">
-          <button onClick={() => setSp('all')} className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold ${sp === 'all' ? 'bg-teal-500 text-white' : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>
+          <button onClick={() => setSp('all')} className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold ${sp === 'all' ? 'bg-teal-700 text-white' : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>
             {ar ? 'الكل' : 'All'} ({total})
           </button>
           {Object.keys(SYSTEMS).filter((k) => counts[k]).map((k) => (
-            <button key={k} onClick={() => setSp(k)} className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold ${sp === k ? 'bg-teal-500 text-white' : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>
+            <button key={k} onClick={() => setSp(k)} className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-bold ${sp === k ? 'bg-teal-700 text-white' : 'bg-white text-slate-600 dark:bg-slate-800 dark:text-slate-300'}`}>
               {SYSTEMS[k].icon} {ar ? SYSTEMS[k].ar : SYSTEMS[k].en} ({counts[k]})
             </button>
           ))}
         </div>
         <div className="flex flex-wrap gap-2 text-xs">
           {[0, 1, 2, 3].map((n) => (
-            <button key={n} onClick={() => setLvl(n)} className={`rounded-full border px-3 py-1 font-bold ${lvl === n ? 'border-teal-500 bg-teal-50 text-teal-700 dark:bg-teal-500/10' : 'border-slate-200 text-slate-500 dark:border-slate-700'}`}>
+            <button key={n} onClick={() => setLvl(n)} className={`rounded-full border px-3 py-1 font-bold ${lvl === n ? 'border-teal-500 bg-teal-50 text-teal-700 dark:text-teal-300 dark:bg-teal-500/10' : 'border-slate-200 text-slate-600 dark:text-slate-400 dark:border-slate-700'}`}>
               {n === 0 ? (ar ? 'كل الأنواع' : 'All') : ar ? LEVELS[n].ar : LEVELS[n].en}
             </button>
           ))}
@@ -200,14 +200,14 @@ function GuideHub({ target }: { target: string }) {
       ) : items === null ? (
         <Loading />
       ) : shown.length === 0 ? (
-        <div className="py-20 text-center text-slate-500">{total === 0 ? (ar ? 'الأمراض قيد الإضافة… عُد قريبًا.' : 'Diseases are being added… check back soon.') : ar ? 'لا توجد نتائج مطابقة.' : 'No matches.'}</div>
+        <div className="py-20 text-center text-slate-600 dark:text-slate-400">{total === 0 ? (ar ? 'الأمراض قيد الإضافة… عُد قريبًا.' : 'Diseases are being added… check back soon.') : ar ? 'لا توجد نتائج مطابقة.' : 'No matches.'}</div>
       ) : (
         <div className="mt-5">
-          <div className="mb-3 flex items-center justify-between gap-2 text-xs text-slate-500">
+          <div className="mb-3 flex items-center justify-between gap-2 text-xs text-slate-600 dark:text-slate-400">
             <span className="font-bold">{shown.length} {ar ? 'موضوع' : 'topics'}</span>
             <div className="inline-flex overflow-hidden rounded-full border border-slate-200 dark:border-slate-700">
               {(['compact', 'cards'] as const).map((m) => (
-                <button key={m} onClick={() => changeView(m)} className={`px-3 py-1 font-bold ${view === m ? 'bg-teal-500 text-white' : 'bg-white text-slate-600 dark:bg-slate-900 dark:text-slate-300'}`}>
+                <button key={m} onClick={() => changeView(m)} className={`px-3 py-1 font-bold ${view === m ? 'bg-teal-700 text-white' : 'bg-white text-slate-600 dark:bg-slate-900 dark:text-slate-300'}`}>
                   {m === 'compact' ? (ar ? '☰ مضغوط' : '☰ Compact') : ar ? '▦ كروت' : '▦ Cards'}
                 </button>
               ))}
@@ -234,11 +234,11 @@ function GuideHub({ target }: { target: string }) {
                             <span className="flex min-w-0 items-center gap-1.5">
                               <span className="line-clamp-2 text-sm font-black leading-5 text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</span>
                               {c.level === 3 && <span className="shrink-0 rounded-full bg-rose-100 px-1.5 text-[10px] font-black text-rose-700 dark:bg-rose-500/15 dark:text-rose-300">{ar ? 'طارئ' : 'ER'}</span>}
-                              {read.includes(c.id) && <span className="shrink-0 text-[11px] text-emerald-500">✓</span>}
+                              {read.includes(c.id) && <span className="shrink-0 text-[11px] text-emerald-700 dark:text-emerald-300">✓</span>}
                             </span>
                             {ar && c.title.en && <span dir="ltr" className="max-w-[40%] shrink-0 truncate text-[13px] font-black text-slate-600 dark:text-slate-300">{c.title.en}</span>}
                           </span>
-                          <span className="block overflow-hidden text-ellipsis whitespace-nowrap text-[11px] text-slate-400">{pick(c.teaser, ar)}</span>
+                          <span className="block overflow-hidden text-ellipsis whitespace-nowrap text-[11px] text-slate-500 dark:text-slate-400">{pick(c.teaser, ar)}</span>
                         </span>
                         <span className="shrink-0 text-slate-300 group-hover:text-teal-500">{ar ? '‹' : '›'}</span>
                       </Link>
@@ -262,7 +262,7 @@ function GuideHub({ target }: { target: string }) {
                             <h3 className="font-black leading-snug text-slate-900 group-hover:text-teal-600 dark:text-white">{pick(c.title, ar)}</h3>
                             {c.title.en && ar && <span className="max-w-[42%] shrink-0 truncate text-sm font-black text-slate-600 dark:text-slate-300" dir="ltr">{c.title.en}</span>}
                           </div>
-                          <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{pick(c.teaser, ar)}</p>
+                          <p className="mt-1 line-clamp-2 text-sm text-slate-600 dark:text-slate-400">{pick(c.teaser, ar)}</p>
                           <div className="mt-3"><span className={`rounded-full px-2.5 py-0.5 text-[11px] font-black ${lv.cls}`}>{ar ? lv.ar : lv.en}</span></div>
                         </div>
                       </Link>
@@ -275,7 +275,7 @@ function GuideHub({ target }: { target: string }) {
         </div>
       )}
 
-      <p className="mt-10 text-center text-xs text-slate-400">
+      <p className="mt-10 text-center text-xs text-slate-500 dark:text-slate-400">
         {ar ? 'محتوى تعليمي بصياغة ورسوم أصلية من إعداد الموقع. لا يغني عن تعليمات الطبيب ولا عن بروتوكولات مؤسستك.' : 'Educational content with original wording and illustrations. It does not replace physician orders or your institution’s protocols.'}
       </p>
     </div>
@@ -319,7 +319,7 @@ function Slot({ id, label, def, over, admin, ar, onSaved, onZoom }: { id: string
   // Admin: no picture yet -> a slim toggle bar instead of a big empty box
   if (showBar)
     return (
-      <div className="my-2 flex items-center justify-between gap-2 rounded-xl border border-dashed border-slate-300 px-3 py-1.5 text-xs text-slate-500 dark:border-slate-600">
+      <div className="my-2 flex items-center justify-between gap-2 rounded-xl border border-dashed border-slate-300 px-3 py-1.5 text-xs text-slate-600 dark:text-slate-400 dark:border-slate-600">
         <span>📷 {hidden ? (ar ? 'صورة مخفية: ' : 'Hidden picture: ') : ar ? 'مكان صورة: ' : 'Picture slot: '}{label}</span>
         <span className="flex gap-1">
           {hidden && <button disabled={busy} onClick={() => act(() => saveImageOverride(id, kept || null))} className="rounded-full bg-teal-600 px-3 py-1 font-bold text-white">{ar ? '👁 إظهار' : 'Show'}</button>}
@@ -333,7 +333,7 @@ function Slot({ id, label, def, over, admin, ar, onSaved, onZoom }: { id: string
       {url ? (
         <img src={url} alt={label} loading="lazy" onClick={() => onZoom(url)} />
       ) : (
-        <button type="button" onClick={() => file.current?.click()} className="flex w-full flex-col items-center justify-center gap-1 rounded-2xl border-2 border-dashed border-slate-300 px-4 py-6 text-slate-500 hover:border-teal-400 dark:border-slate-600">
+        <button type="button" onClick={() => file.current?.click()} className="flex w-full flex-col items-center justify-center gap-1 rounded-2xl border-2 border-dashed border-slate-300 px-4 py-6 text-slate-600 dark:text-slate-400 hover:border-teal-400 dark:border-slate-600">
           <span className="text-3xl">📷</span>
           <span className="text-sm font-bold">{label}</span>
           <span className="text-xs">{ar ? 'اضغط لرفع صورة' : 'Click to upload'}</span>
@@ -349,7 +349,7 @@ function Slot({ id, label, def, over, admin, ar, onSaved, onZoom }: { id: string
             <button onClick={() => setOpen(false)} className="rounded-full bg-slate-200 px-3 py-1 font-bold text-slate-700 dark:bg-slate-700 dark:text-slate-100">{ar ? '🙈 إخفاء الجزء' : 'Hide'}</button>
           )}
           {over !== undefined && !isHidden && <button disabled={busy} onClick={() => act(() => saveImageOverride(id, null))} className="rounded-full bg-slate-200 px-3 py-1 font-bold text-slate-700 disabled:opacity-50 dark:bg-slate-700 dark:text-slate-100">{ar ? '↩ الافتراضي' : 'Reset'}</button>}
-          {err && <span className="text-rose-500">{err}</span>}
+          {err && <span className="text-rose-700 dark:text-rose-300">{err}</span>}
         </div>
       )}
       {inp}
@@ -532,8 +532,8 @@ export function DiseasePage() {
   if (d === null)
     return (
       <div className="py-24 text-center" dir={ar ? 'rtl' : 'ltr'}>
-        <p className="text-slate-500">{ar ? 'المرض غير موجود.' : 'Not found.'}</p>
-        <Link to="/diseases" className="mt-3 inline-block font-bold text-teal-600">{ar ? '← كل الأمراض' : '← All diseases'}</Link>
+        <p className="text-slate-600 dark:text-slate-400">{ar ? 'المرض غير موجود.' : 'Not found.'}</p>
+        <Link to="/diseases" className="mt-3 inline-block font-bold text-teal-700 dark:text-teal-300">{ar ? '← كل الأمراض' : '← All diseases'}</Link>
       </div>
     );
 
@@ -606,7 +606,7 @@ export function DiseasePage() {
               <h2 className="cs-h flex items-center gap-2.5">
                 <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${heroGrad} text-lg text-white shadow`}>{x.icon}</span>
                 <span className="min-w-0 flex-1">{ar ? x.ar : x.en}</span>
-                <span className="text-xs font-black text-slate-300 dark:text-slate-600">{String(n + 1).padStart(2, '0')}</span>
+                <span className="text-xs font-black text-slate-300 dark:text-slate-400">{String(n + 1).padStart(2, '0')}</span>
               </h2>
               <Prose html={pick(d.sections[x.key], ar)} ar={ar} overrides={overrides} admin={loggedIn} onSaved={refreshImgs} onZoom={setZoom} />
             </section>
@@ -618,7 +618,7 @@ export function DiseasePage() {
             <h2 className="mb-3 text-xl font-black">⭐ {ar ? 'لو هتفتكر حاجات بس' : 'Remember these'}</h2>
             <ul className="space-y-2">
               {(ar ? d.keyPoints.ar : d.keyPoints.en?.length ? d.keyPoints.en : d.keyPoints.ar).map((k, i) => (
-                <li key={i} className="flex gap-2 rounded-xl bg-white/10 p-2.5 text-[15px] leading-7"><span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-xs font-black text-emerald-600">{i + 1}</span><span>{k}</span></li>
+                <li key={i} className="flex gap-2 rounded-xl bg-white/10 p-2.5 text-[15px] leading-7"><span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white text-xs font-black text-emerald-700 dark:text-emerald-300">{i + 1}</span><span>{k}</span></li>
               ))}
             </ul>
           </section>
@@ -627,10 +627,10 @@ export function DiseasePage() {
         <Quiz d={d} ar={ar} />
 
         {d.refs?.length ? (
-          <details className="rounded-2xl border border-slate-200 p-4 text-sm text-slate-500 dark:border-slate-800">
+          <details className="rounded-2xl border border-slate-200 p-4 text-sm text-slate-600 dark:text-slate-400 dark:border-slate-800">
             <summary className="cursor-pointer font-bold">📚 {ar ? 'المراجع التي رُوجع عليها المحتوى' : 'References'}</summary>
             <ul className="mt-2 list-disc ps-5">
-              {d.refs.map((r, i) => <li key={i}>{r.url ? <a href={r.url} target="_blank" rel="noopener noreferrer" className="text-teal-600 underline">{r.title}</a> : r.title}</li>)}
+              {d.refs.map((r, i) => <li key={i}>{r.url ? <a href={r.url} target="_blank" rel="noopener noreferrer" className="text-teal-700 dark:text-teal-300 underline">{r.title}</a> : r.title}</li>)}
             </ul>
           </details>
         ) : null}
@@ -640,7 +640,7 @@ export function DiseasePage() {
         {prev ? <Link to={guidePath(prev)} className="rounded-2xl border border-slate-200 p-3 text-sm font-bold hover:border-teal-400 dark:border-slate-800 dark:text-white">{ar ? '→' : '←'} {pick(prev.title, ar)}</Link> : <span />}
         {next ? <Link to={guidePath(next)} className="rounded-2xl border border-slate-200 p-3 text-end text-sm font-bold hover:border-teal-400 dark:border-slate-800 dark:text-white">{pick(next.title, ar)} {ar ? '←' : '→'}</Link> : <span />}
       </div>
-      <p className="mt-6 text-center text-xs text-slate-400">{ar ? 'للتعليم فقط — اتبع أوامر الطبيب وبروتوكول مؤسستك دائمًا.' : 'For education only — always follow physician orders and your institution’s protocol.'}</p>
+      <p className="mt-6 text-center text-xs text-slate-500 dark:text-slate-400">{ar ? 'للتعليم فقط — اتبع أوامر الطبيب وبروتوكول مؤسستك دائمًا.' : 'For education only — always follow physician orders and your institution’s protocol.'}</p>
       {zoom && <ImageLightbox src={zoom} onClose={() => setZoom(null)} />}
     </div>
   );
@@ -663,7 +663,7 @@ export function RoutedGuides({ target }: { target: string }) {
       <div className="mb-3 flex items-center gap-2">
         <span className="rounded-full bg-teal-500 px-3 py-1 text-xs font-black text-white">{ar ? 'جديد' : 'New'}</span>
         <h2 className="text-lg font-black text-slate-800 dark:text-white">{ar ? `مواضيع إضافية في ${host?.ar ?? ''}` : `More in ${host?.en ?? ''}`}</h2>
-        <span className="text-xs text-slate-400">({items.length})</span>
+        <span className="text-xs text-slate-500 dark:text-slate-400">({items.length})</span>
       </div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((c) => (
@@ -672,7 +672,7 @@ export function RoutedGuides({ target }: { target: string }) {
               <div className="text-3xl">{c.icon || '📘'}</div>
               <div className="min-w-0">
                 <h3 className="font-black leading-snug text-slate-900 dark:text-white">{pick(c.title, ar)}</h3>
-                <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{pick(c.teaser, ar)}</p>
+                <p className="mt-1 line-clamp-2 text-sm text-slate-600 dark:text-slate-400">{pick(c.teaser, ar)}</p>
               </div>
             </div>
           </Link>

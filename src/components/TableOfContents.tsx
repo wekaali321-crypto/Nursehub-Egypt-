@@ -39,7 +39,7 @@ export default function TableOfContents({ items, className = "", collapsible = f
   const title = (
     <>
       <span aria-hidden="true">📑</span> {t("article.toc")}
-      <span className="rounded-full bg-[#168C91]/10 px-2 py-0.5 text-xs font-bold text-[#168C91] dark:bg-[#168C91]/20 dark:text-teal-300">
+      <span className="rounded-full bg-[#168C91]/10 px-2 py-0.5 text-xs font-bold text-[#127378] dark:bg-[#168C91]/20 dark:text-teal-300">
         {count} {lang === "ar" ? "قسم" : "sections"}
       </span>
     </>
@@ -56,7 +56,7 @@ export default function TableOfContents({ items, className = "", collapsible = f
           className="flex w-full items-center justify-between gap-2 rounded-lg font-bold text-[#153448] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#168C91] dark:text-white"
         >
           <span className="flex flex-wrap items-center gap-2">{title}</span>
-          <span aria-hidden="true" className={`text-[#168C91] transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
+          <span aria-hidden="true" className={`text-[#127378] dark:text-teal-300 transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
         </button>
       ) : (
         <h3 className="mb-3 flex flex-wrap items-center gap-2 font-bold text-[#153448] dark:text-white">{title}</h3>
@@ -74,7 +74,7 @@ export default function TableOfContents({ items, className = "", collapsible = f
                 aria-current={active === it.id ? "location" : undefined}
                 className={`block rounded-lg px-2 py-2 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#168C91] ${
                   active === it.id
-                    ? "bg-[#168C91]/10 font-bold text-[#168C91] dark:bg-[#168C91]/20 dark:text-teal-300"
+                    ? "bg-[#168C91]/10 font-bold text-[#127378] dark:bg-[#168C91]/20 dark:text-teal-300"
                     : "text-slate-600 hover:bg-slate-50 hover:text-[#168C91] dark:text-slate-400 dark:hover:bg-slate-800"
                 } ${collapsible ? "" : "truncate"}`}
               >

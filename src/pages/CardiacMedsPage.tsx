@@ -42,7 +42,7 @@ export default function CardiacMedsPage() {
           const examplesText = bilingual(g.examples, g.examplesEn, lang).text || "";
           return (
             <div key={g.id} className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
-              <h3 className="font-bold text-rose-600">{bilingual(g.name, g.nameEn, lang).text}</h3>
+              <h3 className="font-bold text-rose-700 dark:text-rose-300">{bilingual(g.name, g.nameEn, lang).text}</h3>
               <ul className="mt-2 space-y-1 text-sm text-slate-600 dark:text-slate-300">
                 {examplesText.split(",").map((e, i) => (
                   <li key={i}>- {e.trim()}</li>
@@ -54,7 +54,7 @@ export default function CardiacMedsPage() {
       </div>
 
       <div className="mt-6 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-teal-600 hover:underline">{LABELS.back[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{LABELS.back[lang]}</Link>
       </div>
     </div>
   );

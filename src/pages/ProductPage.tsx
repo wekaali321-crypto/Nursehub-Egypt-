@@ -79,9 +79,9 @@ export default function ProductPage() {
 
         {/* Info */}
         <div>
-          <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-600 dark:bg-emerald-500/10">{typeLabels[product.type]}</span>
+          <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-300 dark:bg-emerald-500/10">{typeLabels[product.type]}</span>
           <h1 className="mt-3 text-2xl font-black text-slate-900 dark:text-white md:text-3xl">{title}</h1>
-          <div className="mt-2 flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400">
+          <div className="mt-2 flex flex-wrap gap-4 text-sm text-slate-600 dark:text-slate-400">
             {product.author && <span>✍️ {product.author}</span>}
             {product.pages ? <span>📄 {product.pages} {t("product.pages")}</span> : null}
             <span>🛍 {product.sales} {t("store.purchases")}</span>
@@ -89,14 +89,14 @@ export default function ProductPage() {
           <p className="mt-4 leading-relaxed text-slate-600 dark:text-slate-300">{desc}</p>
 
           <div className="mt-5 flex items-center gap-3">
-            <span className="text-3xl font-black text-emerald-500">{product.price} {cur}</span>
-            {product.oldPrice && <span className="text-lg text-slate-400 line-through">{product.oldPrice} {cur}</span>}
-            {product.oldPrice && <span className="rounded-full bg-rose-100 px-2 py-0.5 text-xs font-bold text-rose-600 dark:bg-rose-500/10">{lang === "en" ? `${Math.round((1 - product.price / product.oldPrice) * 100)}% ${t("product.discount")}` : `${t("product.discount")} ${Math.round((1 - product.price / product.oldPrice) * 100)}%`}</span>}
+            <span className="text-3xl font-black text-emerald-700 dark:text-emerald-300">{product.price} {cur}</span>
+            {product.oldPrice && <span className="text-lg text-slate-500 dark:text-slate-400 line-through">{product.oldPrice} {cur}</span>}
+            {product.oldPrice && <span className="rounded-full bg-rose-100 px-2 py-0.5 text-xs font-bold text-rose-700 dark:text-rose-300 dark:bg-rose-500/10">{lang === "en" ? `${Math.round((1 - product.price / product.oldPrice) * 100)}% ${t("product.discount")}` : `${t("product.discount")} ${Math.round((1 - product.price / product.oldPrice) * 100)}%`}</span>}
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <button onClick={() => { addToCart(); nav("/checkout"); }} className="rounded-full bg-[#168C91] hover:bg-[#127378] px-8 py-3 font-bold text-white">{t("store.buyNow")}</button>
-            <button onClick={addToCart} className="rounded-full border border-teal-500 px-6 py-3 font-bold text-teal-500">{t("store.addToCart")}</button>
+            <button onClick={() => { addToCart(); nav("/checkout"); }} className="rounded-full bg-[#127378] hover:bg-[#0f6165] px-8 py-3 font-bold text-white">{t("store.buyNow")}</button>
+            <button onClick={addToCart} className="rounded-full border border-teal-500 px-6 py-3 font-bold text-teal-700 dark:text-teal-300">{t("store.addToCart")}</button>
           </div>
 
           <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-800/50">
@@ -118,7 +118,7 @@ export default function ProductPage() {
               return (
                 <Link key={p.id} to={`/product/${p.id}`} className="overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
                   <img src={p.cover} alt={rTitle} loading="lazy" className="h-40 w-full object-cover" />
-                  <div className="p-4"><h3 className="font-bold dark:text-white">{rTitle}</h3><div className="mt-1 font-black text-emerald-500">{p.price} {cur}</div></div>
+                  <div className="p-4"><h3 className="font-bold dark:text-white">{rTitle}</h3><div className="mt-1 font-black text-emerald-700 dark:text-emerald-300">{p.price} {cur}</div></div>
                 </Link>
               );
             })}

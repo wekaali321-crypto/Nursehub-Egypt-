@@ -94,7 +94,7 @@ export function TopicSectionHome({
 
   const chip = (active: boolean) =>
     `shrink-0 whitespace-nowrap rounded-full border px-3.5 py-1.5 text-sm font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] ${
-      active ? "border-[#168C91] bg-[#168C91] text-white" : "border-slate-200 bg-white text-[#153448] hover:border-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+      active ? "border-[#168C91] bg-[#127378] text-white" : "border-slate-200 bg-white text-[#153448] hover:border-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
     }`;
 
   return (
@@ -122,15 +122,15 @@ export function TopicSectionHome({
         )}
 
         {topics === null ? (
-          <div className="py-16 text-center text-slate-400">{t("common.loading")}</div>
+          <div className="py-16 text-center text-slate-500 dark:text-slate-400">{t("common.loading")}</div>
         ) : list.length === 0 ? (
-          <div className={`${card} py-16 text-center text-slate-400`}>
+          <div className={`${card} py-16 text-center text-slate-500 dark:text-slate-400`}>
             <div className="text-4xl">🚧</div>
             <p className="mt-2">{isEn ? "Content coming soon." : "المحتوى قيد الإضافة قريبًا."}</p>
           </div>
         ) : (
           <>
-            <div className="mb-3 flex items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
+            <div className="mb-3 flex items-center justify-between gap-2 text-xs text-slate-600 dark:text-slate-400">
               <span className="font-bold">{list.length} {isEn ? "topics" : "موضوع"}</span>
               <div className="inline-flex overflow-hidden rounded-full border border-slate-200 dark:border-slate-700" role="group" aria-label={isEn ? "View" : "طريقة العرض"}>
                 {(["compact", "cards"] as const).map((m) => (
@@ -149,11 +149,11 @@ export function TopicSectionHome({
                     <span className="min-w-0 flex-1">
                       <span className="flex items-center justify-between gap-2">
                         <span className="line-clamp-2 text-sm font-black leading-5 text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{isEn && tp.title_en ? tp.title_en : tp.title_ar}</span>
-                        {!isEn && tp.title_en && <span dir="ltr" className="max-w-[40%] shrink-0 truncate text-[13px] font-black text-slate-500 dark:text-slate-300">{tp.title_en}</span>}
+                        {!isEn && tp.title_en && <span dir="ltr" className="max-w-[40%] shrink-0 truncate text-[13px] font-black text-slate-600 dark:text-slate-300">{tp.title_en}</span>}
                       </span>
-                      <span className="block truncate text-[11px] text-slate-500 dark:text-slate-400">{tp.category}{tp.category ? " · " : ""}{tp.sections.length} {isEn ? "sections" : "أقسام"}</span>
+                      <span className="block truncate text-[11px] text-slate-600 dark:text-slate-400">{tp.category}{tp.category ? " · " : ""}{tp.sections.length} {isEn ? "sections" : "أقسام"}</span>
                     </span>
-                    <span aria-hidden="true" className="shrink-0 text-[#168C91]">{isEn ? "›" : "‹"}</span>
+                    <span aria-hidden="true" className="shrink-0 text-[#127378] dark:text-teal-300">{isEn ? "›" : "‹"}</span>
                   </Link>
                 ))}
               </div>
@@ -170,9 +170,9 @@ export function TopicSectionHome({
                       <div className="p-4">
                         <div className="flex items-baseline justify-between gap-2">
                           <h3 className="font-black leading-snug text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{isEn && tp.title_en ? tp.title_en : tp.title_ar}</h3>
-                          {!isEn && tp.title_en && <span dir="ltr" className="max-w-[42%] shrink-0 truncate text-sm font-black text-slate-500 dark:text-slate-300">{tp.title_en}</span>}
+                          {!isEn && tp.title_en && <span dir="ltr" className="max-w-[42%] shrink-0 truncate text-sm font-black text-slate-600 dark:text-slate-300">{tp.title_en}</span>}
                         </div>
-                        {summary && <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{summary}</p>}
+                        {summary && <p className="mt-1 line-clamp-2 text-sm text-slate-600 dark:text-slate-400">{summary}</p>}
                         <div className={`mt-3 text-xs font-bold ${tint.text}`}>{tp.sections.length} {isEn ? "sections" : "أقسام"} {isEn ? "→" : "←"}</div>
                       </div>
                     </Link>
@@ -254,7 +254,7 @@ export function TopicSectionDetail({
         </div>
 
         {topic.sources && topic.sources.length > 0 && (
-          <div className={`${card} mt-4 p-4 text-xs text-slate-500 dark:text-slate-400`}>
+          <div className={`${card} mt-4 p-4 text-xs text-slate-600 dark:text-slate-400`}>
             <div className="mb-1 font-bold text-[#153448] dark:text-slate-200">{isEn ? "Sources" : "المصادر"}</div>
             <ul className="list-inside list-disc space-y-0.5">
               {topic.sources.map((src, i) => <li key={i}>{src}</li>)}

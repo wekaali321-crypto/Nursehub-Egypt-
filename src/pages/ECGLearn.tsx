@@ -107,12 +107,12 @@ export default function ECGLearn() {
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-600 text-sm font-black text-white">{section.id}</span>
                 <div>
                   <div className="font-black text-slate-800 dark:text-white">{section.title}</div>
-                  <div className="text-xs text-slate-400">{section.titleEn}</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400">{section.titleEn}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <span className="hidden sm:inline"><SourceTag s={section.source} /></span>
-                <span className={`text-slate-400 transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
+                <span className={`text-slate-500 dark:text-slate-400 transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
               </div>
             </button>
             {open && (

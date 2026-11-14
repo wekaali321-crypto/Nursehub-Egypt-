@@ -32,7 +32,7 @@ import { useSEO } from "../lib/seo";
 
 function LoadingBlock() {
   return (
-    <div className="flex items-center justify-center py-20 text-slate-500 dark:text-slate-400">
+    <div className="flex items-center justify-center py-20 text-slate-600 dark:text-slate-400">
       <span className="animate-pulse">جاري التحميل... (Loading...)</span>
     </div>
   );
@@ -72,7 +72,7 @@ export function LicensureExamsHome() {
 
   useSEO({ title: "قسم الاختبارات | NurseHub Egypt" });
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
 
   const topLevelCategories = categories.filter((cat) => !HIDDEN_FROM_HUB.has(cat.id));
 
@@ -93,15 +93,15 @@ export function LicensureExamsHome() {
             <div className="text-4xl">{cat.icon}</div>
             <div>
               <div className="font-semibold text-slate-800 dark:text-white">{cat.name_ar}</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400">{cat.name_en}</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400">{cat.name_en}</div>
               {cat.description_ar && (
-                <div className="text-xs text-slate-400 dark:text-slate-500 mt-1">{cat.description_ar}</div>
+                <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{cat.description_ar}</div>
               )}
             </div>
           </Link>
         ))}
         {topLevelCategories.length === 0 && (
-          <div className="text-slate-400 dark:text-slate-500 col-span-2 text-center py-10">
+          <div className="text-slate-500 dark:text-slate-400 col-span-2 text-center py-10">
             لا توجد اختبارات بعد (No exams yet)
           </div>
         )}
@@ -134,7 +134,7 @@ export function LicensureExamCategory() {
 
   useSEO({ title: `${category?.name_ar ?? "الامتحانات"} | NurseHub Egypt` });
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6" dir="rtl">
@@ -142,7 +142,7 @@ export function LicensureExamCategory() {
       <h1 className="text-2xl font-bold text-slate-800 dark:text-white mb-1">
         {category?.name_ar ?? 'الامتحانات'}
       </h1>
-      <p className="text-slate-500 dark:text-slate-400 mb-6">{category?.name_en}</p>
+      <p className="text-slate-600 dark:text-slate-400 mb-6">{category?.name_en}</p>
 
       <div className="grid grid-cols-1 gap-4">
         {exams.map((exam) => {
@@ -158,8 +158,8 @@ export function LicensureExamCategory() {
               className="rounded-2xl border border-cyan-100 dark:border-slate-800 bg-white hover:bg-cyan-50 dark:bg-slate-900 dark:hover:bg-slate-800 transition-colors p-5 shadow-sm"
             >
               <div className="font-semibold text-slate-800 dark:text-white">{exam.title_ar}</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400 mb-3">{exam.title_en}</div>
-              <div className="text-xs text-slate-400 dark:text-slate-500 mb-1">
+              <div className="text-sm text-slate-600 dark:text-slate-400 mb-3">{exam.title_en}</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mb-1">
                 {exam.question_count} سؤال (questions){answered > 0 && ` — تم حل ${answered}`}
               </div>
               <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
@@ -172,7 +172,7 @@ export function LicensureExamCategory() {
           );
         })}
         {exams.length === 0 && (
-          <div className="text-slate-400 dark:text-slate-500 text-center py-10">لا توجد امتحانات بعد</div>
+          <div className="text-slate-500 dark:text-slate-400 text-center py-10">لا توجد امتحانات بعد</div>
         )}
       </div>
     </div>
@@ -214,9 +214,9 @@ export default function LicensureExamStudy() {
 
   useSEO({ title: `${exam?.title_ar ?? "اختبار"} | NurseHub Egypt` });
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
   if (!exam || questions.length === 0) {
-    return <div className="p-6 text-slate-500 dark:text-slate-400">لا توجد أسئلة في هذا الامتحان بعد</div>;
+    return <div className="p-6 text-slate-600 dark:text-slate-400">لا توجد أسئلة في هذا الامتحان بعد</div>;
   }
 
   const q = questions[index];
@@ -283,14 +283,14 @@ export default function LicensureExamStudy() {
         <h1 className="text-lg font-bold text-slate-800 dark:text-white">{exam.title_ar}</h1>
         <button
           onClick={handleReset}
-          className="text-xs text-slate-400 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300 underline"
+          className="text-xs text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300 underline"
         >
           إعادة تعيين التقدم (Reset progress)
         </button>
       </div>
 
       {/* Progress bar */}
-      <div className="mb-1 flex justify-between items-center text-xs text-slate-400 dark:text-slate-500">
+      <div className="mb-1 flex justify-between items-center text-xs text-slate-500 dark:text-slate-400">
         <span className="flex items-center gap-2">
           سؤال {index + 1} من {questions.length}
           {hasArabicTranslation && (
@@ -342,7 +342,7 @@ export default function LicensureExamStudy() {
                 disabled={isAnswered}
                 className={`w-full text-right rtl:text-right rounded-xl border p-3 transition-colors flex gap-3 items-start ${stateClasses}`}
               >
-                <span className="font-semibold text-slate-500 dark:text-slate-400">{choice.letter}.</span>
+                <span className="font-semibold text-slate-600 dark:text-slate-400">{choice.letter}.</span>
                 <span className="text-slate-700 dark:text-slate-200">{choice.text}</span>
               </button>
             );
@@ -361,7 +361,7 @@ export default function LicensureExamStudy() {
               {isCorrect ? '✅ إجابة صحيحة (Correct)' : `❌ إجابة خاطئة — الصحيح هو (${q.correct_letter})`}
             </div>
             <div className="text-slate-700 dark:text-slate-200 mb-2">{q.rationale_ar}</div>
-            <div className="text-slate-500 dark:text-slate-400 text-xs border-t border-slate-200 dark:border-slate-700 pt-2">
+            <div className="text-slate-600 dark:text-slate-400 text-xs border-t border-slate-200 dark:border-slate-700 pt-2">
               {q.rationale_en}
             </div>
           </div>

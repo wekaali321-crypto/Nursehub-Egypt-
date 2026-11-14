@@ -99,11 +99,11 @@ export function Contact() {
       <div className="grid gap-6 not-prose md:grid-cols-2">
         <div className="space-y-3">
           {details.map(([i, t, v]) => (
-            <div key={t} className="flex items-center gap-3 rounded-xl border border-slate-200 p-4 dark:border-slate-800"><span className="text-2xl">{i}</span><div><div className="font-bold dark:text-white">{t}</div><div className="text-sm text-slate-500">{v}</div></div></div>
+            <div key={t} className="flex items-center gap-3 rounded-xl border border-slate-200 p-4 dark:border-slate-800"><span className="text-2xl">{i}</span><div><div className="font-bold dark:text-white">{t}</div><div className="text-sm text-slate-600 dark:text-slate-400">{v}</div></div></div>
           ))}
         </div>
         {sent ? (
-          <div className="flex items-center justify-center rounded-2xl bg-emerald-50 p-8 text-center font-bold text-emerald-600 dark:bg-emerald-500/10">{isEn ? "✅ Your email app opened with the message. Press send there to deliver it." : "✅ تم فتح تطبيق البريد برسالتك، اضغط إرسال هناك لإتمام الإرسال."}</div>
+          <div className="flex items-center justify-center rounded-2xl bg-emerald-50 p-8 text-center font-bold text-emerald-700 dark:text-emerald-300 dark:bg-emerald-500/10">{isEn ? "✅ Your email app opened with the message. Press send there to deliver it." : "✅ تم فتح تطبيق البريد برسالتك، اضغط إرسال هناك لإتمام الإرسال."}</div>
         ) : (
           <form onSubmit={submit} className="space-y-3 rounded-2xl border border-slate-200 p-5 dark:border-slate-800">
             <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder={isEn ? "Name" : "الاسم"} className={inp} />

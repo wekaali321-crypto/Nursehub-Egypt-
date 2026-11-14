@@ -210,7 +210,7 @@ function Panel({ block, id, ar }: { block: Extract<Block, { kind: 'panel' }>; id
           <span className="ms-auto rounded-full bg-black/20 px-2 py-0.5 text-[11px] font-bold">{block.rows.length} {ar ? 'تحليل' : 'tests'}</span>
         </header>
       )}
-      <div className="flex justify-between bg-slate-50 px-4 py-1.5 text-[11px] font-black uppercase tracking-wide text-slate-400 dark:bg-slate-800/60">
+      <div className="flex justify-between bg-slate-50 px-4 py-1.5 text-[11px] font-black uppercase tracking-wide text-slate-500 dark:text-slate-400 dark:bg-slate-800/60">
         <span>{block.head[0]}</span>
         <span>{block.head[1]}</span>
       </div>
@@ -311,11 +311,11 @@ export function LabHub() {
         {q.trim() && (
           <div className="mt-3 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700">
             {found.length === 0 ? (
-              <div className="p-4 text-sm text-slate-500">{ar ? 'مفيش تحليل بالاسم ده، جرّب اسم تاني أو الاختصار.' : 'No match.'}</div>
+              <div className="p-4 text-sm text-slate-600 dark:text-slate-400">{ar ? 'مفيش تحليل بالاسم ده، جرّب اسم تاني أو الاختصار.' : 'No match.'}</div>
             ) : (
               found.map((f, i) => (
                 <div key={i}>
-                  <div className="bg-slate-50 px-4 pt-2 text-[11px] font-bold text-slate-400 dark:bg-slate-800/50">{f.panel}</div>
+                  <div className="bg-slate-50 px-4 pt-2 text-[11px] font-bold text-slate-500 dark:text-slate-400 dark:bg-slate-800/50">{f.panel}</div>
                   <LabRow row={f.row} color={f.color} ar={ar} />
                 </div>
               ))
@@ -335,7 +335,7 @@ export function LabHub() {
                 <Link key={i} to={`/guide/dis-560#${p.sec}`} className="group rounded-2xl border border-slate-200 bg-white p-3 transition hover:-translate-y-0.5 hover:shadow-lg dark:border-slate-700 dark:bg-slate-900">
                   <div className="grid h-10 w-10 place-items-center rounded-xl text-xl text-white" style={{ background: st.color }}>{st.icon}</div>
                   <div className="mt-2 text-sm font-black leading-snug text-slate-800 group-hover:underline dark:text-slate-100">{p.block.title.replace(/\s*[—(].*$/, '')}</div>
-                  <div className="text-[11px] text-slate-400">{p.block.rows.length} {ar ? 'تحليل' : 'tests'}</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400">{p.block.rows.length} {ar ? 'تحليل' : 'tests'}</div>
                 </Link>
               );
             })}
@@ -346,14 +346,14 @@ export function LabHub() {
       {/* tubes */}
       <div className="lab-sheet mt-8 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-700 dark:bg-slate-900">
         <h2 className="mb-1 text-xl font-black text-slate-900 dark:text-white">🩸 {ar ? 'ألوان أنابيب الدم' : 'Blood tube colours'}</h2>
-        <p className="mb-3 text-xs text-slate-500">{ar ? 'القاعدة العامة المتعارف عليها؛ سياسة المعمل عندك هي المرجع.' : 'General convention; your laboratory’s policy is the reference.'}</p>
+        <p className="mb-3 text-xs text-slate-600 dark:text-slate-400">{ar ? 'القاعدة العامة المتعارف عليها؛ سياسة المعمل عندك هي المرجع.' : 'General convention; your laboratory’s policy is the reference.'}</p>
         <div className="grid gap-2 sm:grid-cols-2">
           {TUBES.map((t) => (
             <div key={t.t} className="flex items-center gap-3 rounded-xl border border-slate-100 p-2.5 dark:border-slate-800">
               <span className="h-9 w-4 shrink-0 rounded-md" style={{ background: t.c }} />
               <div className="min-w-0">
                 <div className="text-sm font-black text-slate-800 dark:text-slate-100">{ar ? t.t : t.te}</div>
-                <div className="text-xs text-slate-500 dark:text-slate-400">{ar ? t.u : t.ue} — {ar ? t.n : t.ne}</div>
+                <div className="text-xs text-slate-600 dark:text-slate-400">{ar ? t.u : t.ue} — {ar ? t.n : t.ne}</div>
               </div>
             </div>
           ))}
@@ -378,7 +378,7 @@ export function LabHub() {
         </div>
         {ref560 && <p className="sr-only">{ref560.id}</p>}
       </div>
-      <p className="mt-8 text-center text-xs text-slate-400">{ar ? 'القيم مرجعية تقريبية وتختلف حسب المعمل والجهاز والعمر والجنس؛ اعتمد على المدى المطبوع في التقرير.' : 'Values are approximate references; rely on the range printed in your lab report.'}</p>
+      <p className="mt-8 text-center text-xs text-slate-500 dark:text-slate-400">{ar ? 'القيم مرجعية تقريبية وتختلف حسب المعمل والجهاز والعمر والجنس؛ اعتمد على المدى المطبوع في التقرير.' : 'Values are approximate references; rely on the range printed in your lab report.'}</p>
     </div>
   );
 }
@@ -468,13 +468,13 @@ export function LabGuide({ d, ar }: { d: Disease; ar: boolean }) {
         )}
         <Quiz d={d} ar={ar} />
         {d.refs?.length ? (
-          <details className="rounded-2xl border border-slate-200 p-4 text-sm text-slate-500 dark:border-slate-800">
+          <details className="rounded-2xl border border-slate-200 p-4 text-sm text-slate-600 dark:text-slate-400 dark:border-slate-800">
             <summary className="cursor-pointer font-bold">📚 {ar ? 'المراجع' : 'References'}</summary>
             <ul className="mt-2 list-disc ps-5">{d.refs.map((r, i) => <li key={i}>{r.title}</li>)}</ul>
           </details>
         ) : null}
       </div>
-      <p className="mt-6 text-center text-xs text-slate-400">{ar ? 'للتعليم فقط — القرار للطبيب، والمدى المطبوع في تقرير المعمل هو المرجع.' : 'Education only — the physician decides; your lab’s printed range is the reference.'}</p>
+      <p className="mt-6 text-center text-xs text-slate-500 dark:text-slate-400">{ar ? 'للتعليم فقط — القرار للطبيب، والمدى المطبوع في تقرير المعمل هو المرجع.' : 'Education only — the physician decides; your lab’s printed range is the reference.'}</p>
       {zoom && <ImageLightbox src={zoom} onClose={() => setZoom(null)} />}
     </div>
   );

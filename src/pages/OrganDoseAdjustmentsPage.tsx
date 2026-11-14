@@ -62,11 +62,11 @@ function DrugCard({
   return (
     <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden dark:bg-slate-900 dark:border-slate-800">
       <button onClick={onToggle} className="w-full flex items-center justify-between gap-3 p-4 text-right">
-        <span className="text-slate-400 dark:text-slate-500">{open ? "▲" : "▼"}</span>
+        <span className="text-slate-500 dark:text-slate-400">{open ? "▲" : "▼"}</span>
         <div className="flex-1">
           <div className="font-bold text-slate-800 dark:text-white">{bilingual(item.drug_name, item.drug_name_en, lang).text}</div>
           {item.drug_class && (
-            <div className="text-xs text-slate-400 dark:text-slate-500">{bilingual(item.drug_class, item.drug_class_en, lang).text}</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400">{bilingual(item.drug_class, item.drug_class_en, lang).text}</div>
           )}
         </div>
       </button>
@@ -130,7 +130,7 @@ export default function OrganDoseAdjustmentsPage() {
     });
   }
 
-  if (loading) return <div className="p-8 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
+  if (loading) return <div className="p-8 text-center text-slate-600 dark:text-slate-400">{LABELS.loading[lang]}</div>;
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 py-8">
@@ -168,11 +168,11 @@ export default function OrganDoseAdjustmentsPage() {
           placeholder={LABELS.searchPlaceholder[lang]}
           className="w-full rounded-xl border border-slate-200 bg-white py-3 pr-11 pl-3 outline-none focus:border-amber-400 dark:border-slate-700 dark:bg-slate-800 dark:text-white"
         />
-        <span className="absolute right-4 top-3.5 text-slate-400">🔍</span>
+        <span className="absolute right-4 top-3.5 text-slate-500 dark:text-slate-400">🔍</span>
       </div>
 
       {filtered.length === 0 && (
-        <div className="text-center text-slate-500 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
+        <div className="text-center text-slate-600 dark:text-slate-400 py-10">{LABELS.noResults[lang]}</div>
       )}
 
       <div className="space-y-3">

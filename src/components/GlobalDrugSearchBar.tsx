@@ -62,13 +62,13 @@ export default function GlobalDrugSearchBar() {
           placeholder={lang === "en" ? "Search any drug across the whole drug guide at once..." : "ابحث عن أي دواء في كل أقسام دليل الأدوية دفعة واحدة..."}
           className="w-full rounded-2xl border-0 bg-white/95 py-3.5 pr-12 pl-4 text-slate-800 shadow-lg outline-none ring-2 ring-white/40 focus:ring-white placeholder:text-slate-400 dark:bg-slate-900/95 dark:text-white"
         />
-        <span className="absolute right-4 top-4 text-slate-400">🔍</span>
+        <span className="absolute right-4 top-4 text-slate-500 dark:text-slate-400">🔍</span>
       </div>
 
       {open && q.trim() && (
         <div className={`${SEARCH_DROPDOWN} w-full`}>
           {results.length === 0 ? (
-            <div className="p-4 text-center text-sm text-slate-400 dark:text-slate-500">
+            <div className="p-4 text-center text-sm text-slate-500 dark:text-slate-400">
               {data ? (lang === "en" ? "No matching results." : "لا توجد نتائج مطابقة.") : (lang === "en" ? "Loading search data..." : "جارِ تحميل بيانات البحث...")}
             </div>
           ) : (
@@ -83,9 +83,9 @@ export default function GlobalDrugSearchBar() {
                   <span className="text-xl shrink-0">{r.icon}</span>
                   <div className="flex-1 min-w-0">
                     <div className="font-bold text-sm text-slate-800 dark:text-white truncate">{r.title}</div>
-                    <div className="text-xs text-slate-400 dark:text-slate-500 truncate">{tr(r.subtitle)}</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400 truncate">{tr(r.subtitle)}</div>
                   </div>
-                  <span className="shrink-0 rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-bold text-slate-500 dark:bg-slate-800 dark:text-slate-400">
+                  <span className="shrink-0 rounded-full bg-slate-100 px-2.5 py-1 text-[10px] font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-400">
                     {tr(r.sourceLabel)}
                   </span>
                 </Link>

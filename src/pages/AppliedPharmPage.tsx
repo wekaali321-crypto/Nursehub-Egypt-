@@ -59,7 +59,7 @@ function ItemCard({ item, lang }: { item: AppliedPharmItem; lang: "ar" | "en" })
           <span>{meta.icon}</span>
           <span>{meta.label[lang]}</span>
         </span>
-        {title && <span className="text-xs font-bold text-slate-500 dark:text-slate-400">{title}</span>}
+        {title && <span className="text-xs font-bold text-slate-600 dark:text-slate-400">{title}</span>}
       </div>
 
       {item.item_type === "qa" ? (
@@ -124,13 +124,13 @@ export function AppliedPharmHome() {
       </div>
 
 
-      {loading && <div className="py-10 text-center text-slate-400">{LABELS.loading[lang]}</div>}
+      {loading && <div className="py-10 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>}
 
       {!loading && (
         <>
           <h2 className="mb-3 text-lg font-black text-slate-800 dark:text-white">{LABELS.topicsHeading[lang]}</h2>
           {part1Topics.length === 0 && (
-            <div className="mb-8 rounded-2xl border border-dashed border-slate-300 py-8 text-center text-slate-400 dark:border-slate-700">
+            <div className="mb-8 rounded-2xl border border-dashed border-slate-300 py-8 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
               {LABELS.noTopics[lang]}
             </div>
           )}
@@ -153,7 +153,7 @@ export function AppliedPharmHome() {
 
           <h2 className="mb-3 text-lg font-black text-slate-800 dark:text-white">{LABELS.plansHeading[lang]}</h2>
           {part2Plans.length === 0 && (
-            <div className="rounded-2xl border border-dashed border-slate-300 py-8 text-center text-slate-400 dark:border-slate-700">
+            <div className="rounded-2xl border border-dashed border-slate-300 py-8 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
               {LABELS.noPlans[lang]}
             </div>
           )}
@@ -176,7 +176,7 @@ export function AppliedPharmHome() {
       )}
 
       <div className="mt-8 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-teal-600 hover:underline">{LABELS.backToDrugs[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{LABELS.backToDrugs[lang]}</Link>
       </div>
     </div>
   );
@@ -239,22 +239,22 @@ export function AppliedPharmTopicPage() {
         className="mb-5 w-full rounded-full border border-slate-200 px-5 py-3 dark:border-slate-700 dark:bg-slate-800"
       />
 
-      {loading && <div className="py-10 text-center text-slate-400">{LABELS.loading[lang]}</div>}
+      {loading && <div className="py-10 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>}
 
       <div className="space-y-3">
         {topicItems.map((item) => (
           <ItemCard key={item.id} item={item} lang={lang} />
         ))}
         {!loading && topicItems.length === 0 && (
-          <div className="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-400 dark:border-slate-700">
+          <div className="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {LABELS.noResults[lang]}
           </div>
         )}
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/applied-pharm" className="text-teal-600 hover:underline">{LABELS.allTopics[lang]}</Link>
-        <Link to="/drugs" className="text-teal-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
+        <Link to="/drugs/applied-pharm" className="text-teal-700 dark:text-teal-300 hover:underline">{LABELS.allTopics[lang]}</Link>
+        <Link to="/drugs" className="text-teal-700 dark:text-teal-300 hover:underline">{LABELS.drugsGuide[lang]}</Link>
       </div>
     </div>
   );
@@ -280,14 +280,14 @@ export default function AppliedPharmPlanPage() {
   });
 
   if (loading) {
-    return <div className="mx-auto max-w-3xl px-4 py-16 text-center text-slate-400">{LABELS.loading[lang]}</div>;
+    return <div className="mx-auto max-w-3xl px-4 py-16 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
   }
 
   if (!plan) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-16 text-center">
-        <p className="mb-4 text-slate-400">{LABELS.planNotFound[lang]}</p>
-        <Link to="/drugs/applied-pharm" className="font-bold text-emerald-600 hover:underline">
+        <p className="mb-4 text-slate-500 dark:text-slate-400">{LABELS.planNotFound[lang]}</p>
+        <Link to="/drugs/applied-pharm" className="font-bold text-emerald-700 dark:text-emerald-300 hover:underline">
           {LABELS.backToList[lang]}
         </Link>
       </div>
@@ -338,8 +338,8 @@ export default function AppliedPharmPlanPage() {
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/applied-pharm" className="text-teal-600 hover:underline">{LABELS.allPlans[lang]}</Link>
-        <Link to="/drugs" className="text-teal-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
+        <Link to="/drugs/applied-pharm" className="text-teal-700 dark:text-teal-300 hover:underline">{LABELS.allPlans[lang]}</Link>
+        <Link to="/drugs" className="text-teal-700 dark:text-teal-300 hover:underline">{LABELS.drugsGuide[lang]}</Link>
       </div>
     </div>
   );

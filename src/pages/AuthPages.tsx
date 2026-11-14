@@ -12,11 +12,11 @@ function Shell({ title, children, footer }: { title: string; children: React.Rea
     <div className="mx-auto flex min-h-[70vh] max-w-md flex-col justify-center px-4 py-10">
       <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
         <div className="mb-6 text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[#168C91] hover:bg-[#127378] text-2xl text-white">🩺</div>
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[#127378] hover:bg-[#0f6165] text-2xl text-white">🩺</div>
           <h1 className="mt-3 text-2xl font-black dark:text-white">{title}</h1>
         </div>
         {children}
-        <div className="mt-5 text-center text-sm text-slate-500 dark:text-slate-400">{footer}</div>
+        <div className="mt-5 text-center text-sm text-slate-600 dark:text-slate-400">{footer}</div>
       </div>
     </div>
   );
@@ -26,7 +26,7 @@ function SocialButtons({ busy, onGoogle }: { busy: boolean; onGoogle: () => void
   const disabled = !isSupabaseConfigured() || busy;
   return (
     <div className="space-y-2">
-      <div className="my-4 flex items-center gap-3 text-xs text-slate-400"><span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />أو<span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" /></div>
+      <div className="my-4 flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400"><span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" />أو<span className="h-px flex-1 bg-slate-200 dark:bg-slate-700" /></div>
       <button type="button" onClick={onGoogle} disabled={disabled} className={`flex w-full items-center justify-center gap-2 rounded-lg border border-slate-200 py-2.5 font-semibold dark:border-slate-700 dark:text-white ${disabled ? "opacity-60" : "hover:bg-slate-50 dark:hover:bg-slate-800"}`}>
         <span>🔵</span> المتابعة عبر Google
       </button>
@@ -60,15 +60,15 @@ export function LoginPage() {
   };
 
   return (
-    <Shell title="تسجيل الدخول" footer={<>ليس لديك حساب؟ <Link to="/register" className="font-bold text-teal-500">أنشئ حساباً</Link></>}>
+    <Shell title="تسجيل الدخول" footer={<>ليس لديك حساب؟ <Link to="/register" className="font-bold text-teal-700 dark:text-teal-300">أنشئ حساباً</Link></>}>
       <form onSubmit={submit} className="space-y-3">
         <input type="email" required placeholder="البريد الإلكتروني" value={email} onChange={(e) => setEmail(e.target.value)} className={inp} />
         <input type="password" required placeholder="كلمة المرور" value={pass} onChange={(e) => setPass(e.target.value)} className={inp} />
-        <div className="text-left"><Link to="/forgot" className="text-xs font-semibold text-teal-500">نسيت كلمة المرور؟</Link></div>
-        <button disabled={busy} className="w-full rounded-lg bg-[#168C91] hover:bg-[#127378] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الدخول..." : "دخول"}</button>
+        <div className="text-left"><Link to="/forgot" className="text-xs font-semibold text-teal-700 dark:text-teal-300">نسيت كلمة المرور؟</Link></div>
+        <button disabled={busy} className="w-full rounded-lg bg-[#127378] hover:bg-[#0f6165] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الدخول..." : "دخول"}</button>
       </form>
       <SocialButtons busy={busy} onGoogle={google} />
-      {!isSupabaseConfigured() && <p className="mt-3 rounded-lg bg-amber-50 p-2 text-center text-xs text-amber-600 dark:bg-amber-500/10">نظام العضوية جاهز ويعمل عبر Supabase Auth بعد إضافة المفاتيح.</p>}
+      {!isSupabaseConfigured() && <p className="mt-3 rounded-lg bg-amber-50 p-2 text-center text-xs text-amber-700 dark:text-amber-300 dark:bg-amber-500/10">نظام العضوية جاهز ويعمل عبر Supabase Auth بعد إضافة المفاتيح.</p>}
     </Shell>
   );
 }
@@ -99,12 +99,12 @@ export function RegisterPage() {
   };
 
   return (
-    <Shell title="إنشاء حساب" footer={<>لديك حساب؟ <Link to="/login" className="font-bold text-teal-500">سجّل الدخول</Link></>}>
+    <Shell title="إنشاء حساب" footer={<>لديك حساب؟ <Link to="/login" className="font-bold text-teal-700 dark:text-teal-300">سجّل الدخول</Link></>}>
       <form onSubmit={submit} className="space-y-3">
         <input required placeholder="الاسم الكامل" value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} className={inp} />
         <input type="email" required placeholder="البريد الإلكتروني" value={f.email} onChange={(e) => setF({ ...f, email: e.target.value })} className={inp} />
         <input type="password" required minLength={6} placeholder="كلمة المرور" value={f.pass} onChange={(e) => setF({ ...f, pass: e.target.value })} className={inp} />
-        <button disabled={busy} className="w-full rounded-lg bg-[#168C91] hover:bg-[#127378] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الإنشاء..." : "إنشاء الحساب"}</button>
+        <button disabled={busy} className="w-full rounded-lg bg-[#127378] hover:bg-[#0f6165] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الإنشاء..." : "إنشاء الحساب"}</button>
       </form>
       <SocialButtons busy={busy} onGoogle={google} />
     </Shell>
@@ -129,14 +129,14 @@ export function ForgotPage() {
   };
 
   return (
-    <Shell title="استعادة كلمة المرور" footer={<Link to="/login" className="font-bold text-teal-500">العودة لتسجيل الدخول</Link>}>
+    <Shell title="استعادة كلمة المرور" footer={<Link to="/login" className="font-bold text-teal-700 dark:text-teal-300">العودة لتسجيل الدخول</Link>}>
       {sent ? (
-        <div className="rounded-xl bg-emerald-50 p-4 text-center font-bold text-emerald-600 dark:bg-emerald-500/10">✅ تم إرسال رابط الاستعادة إلى بريدك.</div>
+        <div className="rounded-xl bg-emerald-50 p-4 text-center font-bold text-emerald-700 dark:text-emerald-300 dark:bg-emerald-500/10">✅ تم إرسال رابط الاستعادة إلى بريدك.</div>
       ) : (
         <form onSubmit={submit} className="space-y-3">
-          <p className="text-sm text-slate-500 dark:text-slate-400">أدخل بريدك وسنرسل رابط إعادة تعيين كلمة المرور.</p>
+          <p className="text-sm text-slate-600 dark:text-slate-400">أدخل بريدك وسنرسل رابط إعادة تعيين كلمة المرور.</p>
           <input type="email" required placeholder="البريد الإلكتروني" value={email} onChange={(e) => setEmail(e.target.value)} className={inp} />
-          <button disabled={busy} className="w-full rounded-lg bg-[#168C91] hover:bg-[#127378] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الإرسال..." : "إرسال الرابط"}</button>
+          <button disabled={busy} className="w-full rounded-lg bg-[#127378] hover:bg-[#0f6165] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الإرسال..." : "إرسال الرابط"}</button>
         </form>
       )}
     </Shell>

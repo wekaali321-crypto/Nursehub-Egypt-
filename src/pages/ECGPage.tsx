@@ -88,9 +88,9 @@ type ECGPattern = {
 const CATEGORY_META: Record<Category, { label: string; labelEn: string; color: string; badge: string }> = {
   lethal: { label: "مميت", labelEn: "Lethal", color: "slate", badge: "bg-slate-700 text-white" },
   critical: { label: "حرج", labelEn: "Critical", color: "rose", badge: "bg-rose-600 text-white" },
-  urgent: { label: "عاجل", labelEn: "Urgent", color: "amber", badge: "bg-amber-500 text-white" },
-  watch: { label: "مراقبة", labelEn: "Watch", color: "sky", badge: "bg-teal-500 text-white" },
-  normal: { label: "طبيعي", labelEn: "Normal", color: "emerald", badge: "bg-emerald-500 text-white" },
+  urgent: { label: "عاجل", labelEn: "Urgent", color: "amber", badge: "bg-amber-700 text-white" },
+  watch: { label: "مراقبة", labelEn: "Watch", color: "sky", badge: "bg-teal-700 text-white" },
+  normal: { label: "طبيعي", labelEn: "Normal", color: "emerald", badge: "bg-emerald-700 text-white" },
 };
 
 const PATTERNS: ECGPattern[] = [
@@ -2018,13 +2018,13 @@ function AnnotationMark({ a }: { a: WaveAnnotation }) {
       <div className="absolute top-0 flex flex-col items-center" style={{ left: `${a.x}%`, transform: "translateX(-50%)" }}>
         {a.row === "top" ? (
           <>
-            {a.label && <span className="whitespace-nowrap text-[9px] font-bold leading-tight text-red-500">{a.label}</span>}
-            <span className="text-sm leading-none text-red-500">↓</span>
+            {a.label && <span className="whitespace-nowrap text-[9px] font-bold leading-tight text-red-700 dark:text-red-300">{a.label}</span>}
+            <span className="text-sm leading-none text-red-700 dark:text-red-300">↓</span>
           </>
         ) : (
           <>
-            <span className="text-sm leading-none text-red-500">↑</span>
-            {a.label && <span className="whitespace-nowrap text-[9px] font-bold leading-tight text-red-500">{a.label}</span>}
+            <span className="text-sm leading-none text-red-700 dark:text-red-300">↑</span>
+            {a.label && <span className="whitespace-nowrap text-[9px] font-bold leading-tight text-red-700 dark:text-red-300">{a.label}</span>}
           </>
         )}
       </div>
@@ -2042,13 +2042,13 @@ function AnnotationMark({ a }: { a: WaveAnnotation }) {
     <div className="absolute top-0 flex flex-col items-center" style={{ left: `${a.x1}%`, width: `${width}%` }}>
       {a.row === "top" ? (
         <>
-          <span className="whitespace-nowrap text-[9px] font-bold leading-tight text-slate-500 dark:text-slate-300">{a.label}</span>
+          <span className="whitespace-nowrap text-[9px] font-bold leading-tight text-slate-600 dark:text-slate-300">{a.label}</span>
           <span className="mt-0.5 h-1.5 w-full rounded-t border-l-2 border-r-2 border-t-2 border-slate-400 dark:border-slate-500" />
         </>
       ) : (
         <>
           <span className="h-1.5 w-full rounded-b border-b-2 border-l-2 border-r-2 border-slate-400 dark:border-slate-500" />
-          <span className="mt-0.5 whitespace-nowrap text-[9px] font-bold leading-tight text-slate-500 dark:text-slate-300">{a.label}</span>
+          <span className="mt-0.5 whitespace-nowrap text-[9px] font-bold leading-tight text-slate-600 dark:text-slate-300">{a.label}</span>
         </>
       )}
     </div>
@@ -2061,7 +2061,7 @@ function ECGWaveOrImage({ patternId, kind, colorClass, annotations }: { patternI
   if (override === "") {
     // الأدمن مسح الرسم ولسه ما رفعش صورة بدالها
     return (
-      <div className="flex h-40 items-center justify-center rounded-xl border-2 border-dashed border-slate-300 text-xs text-slate-400 dark:border-slate-600">
+      <div className="flex h-40 items-center justify-center rounded-xl border-2 border-dashed border-slate-300 text-xs text-slate-500 dark:text-slate-400 dark:border-slate-600">
         لا توجد صورة لهذا النمط حاليًا
       </div>
     );
@@ -2197,8 +2197,8 @@ function EmptyTab({ icon, title, subtitle }: { icon: string; title: string; subt
   return (
     <div className="py-8 text-center">
       <div className="text-4xl">{icon}</div>
-      <p className="mt-2 text-sm font-bold text-slate-500 dark:text-slate-400">{title}</p>
-      {subtitle && <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">{subtitle}</p>}
+      <p className="mt-2 text-sm font-bold text-slate-600 dark:text-slate-400">{title}</p>
+      {subtitle && <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{subtitle}</p>}
     </div>
   );
 }
@@ -2239,19 +2239,19 @@ function ECGDetailTabs({ p }: { p: ECGPattern }) {
       {criteria && (
         <div className="mb-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
           <div className="rounded-lg bg-slate-50 p-2 text-center dark:bg-slate-800/60">
-            <div className="text-[10px] font-bold text-slate-400">QRS</div>
+            <div className="text-[10px] font-bold text-slate-500 dark:text-slate-400">QRS</div>
             <div className="text-xs font-bold text-slate-700 dark:text-slate-200">{criteria.qrs}</div>
           </div>
           <div className="rounded-lg bg-slate-50 p-2 text-center dark:bg-slate-800/60">
-            <div className="text-[10px] font-bold text-slate-400">PR</div>
+            <div className="text-[10px] font-bold text-slate-500 dark:text-slate-400">PR</div>
             <div className="text-xs font-bold text-slate-700 dark:text-slate-200">{criteria.pr}</div>
           </div>
           <div className="rounded-lg bg-slate-50 p-2 text-center dark:bg-slate-800/60">
-            <div className="text-[10px] font-bold text-slate-400">{isEn ? "Regularity" : "الانتظام"}</div>
+            <div className="text-[10px] font-bold text-slate-500 dark:text-slate-400">{isEn ? "Regularity" : "الانتظام"}</div>
             <div className="text-xs font-bold text-slate-700 dark:text-slate-200">{criteria.rhythm}</div>
           </div>
           <div className="rounded-lg bg-slate-50 p-2 text-center dark:bg-slate-800/60">
-            <div className="text-[10px] font-bold text-slate-400">{isEn ? "Rate" : "المعدل"}</div>
+            <div className="text-[10px] font-bold text-slate-500 dark:text-slate-400">{isEn ? "Rate" : "المعدل"}</div>
             <div className="text-xs font-bold text-slate-700 dark:text-slate-200" dir="ltr">{rate} bpm</div>
           </div>
         </div>
@@ -2263,7 +2263,7 @@ function ECGDetailTabs({ p }: { p: ECGPattern }) {
             key={dt.id}
             type="button"
             onClick={() => setTab(dt.id)}
-            className={`rounded-full px-2.5 py-1 text-xs font-bold ${tab === dt.id ? "bg-slate-800 text-white dark:bg-white dark:text-slate-900" : "bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400"}`}
+            className={`rounded-full px-2.5 py-1 text-xs font-bold ${tab === dt.id ? "bg-slate-800 text-white dark:bg-white dark:text-slate-900" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400"}`}
           >
             {dt.icon} {isEn ? dt.labelEn : dt.label}
           </button>
@@ -2328,12 +2328,12 @@ function ECGDetailTabs({ p }: { p: ECGPattern }) {
             )}
             {criteria && (
               <div className="rounded-lg bg-slate-50 p-3 text-xs dark:bg-slate-800/60">
-                <div className="mb-2 font-bold text-slate-500 dark:text-slate-400">{isEn ? "ECG Criteria" : "معايير ECG"}</div>
+                <div className="mb-2 font-bold text-slate-600 dark:text-slate-400">{isEn ? "ECG Criteria" : "معايير ECG"}</div>
                 <div className="space-y-1.5">
-                  <div className="flex justify-between"><span className="text-slate-400">{isEn ? "P wave" : "موجة P"}</span><span className="font-semibold text-slate-700 dark:text-slate-200">{criteria.p}</span></div>
-                  <div className="flex justify-between"><span className="text-slate-400">PR</span><span className="font-semibold text-slate-700 dark:text-slate-200">{criteria.pr}</span></div>
-                  <div className="flex justify-between"><span className="text-slate-400">QRS</span><span className="font-semibold text-slate-700 dark:text-slate-200">{criteria.qrs}</span></div>
-                  <div className="flex justify-between"><span className="text-slate-400">{isEn ? "Regularity" : "الانتظام"}</span><span className="font-semibold text-slate-700 dark:text-slate-200">{criteria.rhythm}</span></div>
+                  <div className="flex justify-between"><span className="text-slate-500 dark:text-slate-400">{isEn ? "P wave" : "موجة P"}</span><span className="font-semibold text-slate-700 dark:text-slate-200">{criteria.p}</span></div>
+                  <div className="flex justify-between"><span className="text-slate-500 dark:text-slate-400">PR</span><span className="font-semibold text-slate-700 dark:text-slate-200">{criteria.pr}</span></div>
+                  <div className="flex justify-between"><span className="text-slate-500 dark:text-slate-400">QRS</span><span className="font-semibold text-slate-700 dark:text-slate-200">{criteria.qrs}</span></div>
+                  <div className="flex justify-between"><span className="text-slate-500 dark:text-slate-400">{isEn ? "Regularity" : "الانتظام"}</span><span className="font-semibold text-slate-700 dark:text-slate-200">{criteria.rhythm}</span></div>
                 </div>
               </div>
             )}
@@ -2431,19 +2431,19 @@ function ECGCard({ p }: { p: ECGPattern }) {
       <div className="mb-2 flex items-center justify-between">
         <span className={`rounded-full px-3 py-1 text-xs font-bold ${CATEGORY_META[p.category].badge}`}>{isEn ? CATEGORY_META[p.category].labelEn : CATEGORY_META[p.category].label}</span>
         <div className="flex items-center gap-2">
-          <span className="text-xs font-bold text-slate-400" dir="ltr">{rate} bpm</span>
+          <span className="text-xs font-bold text-slate-500 dark:text-slate-400" dir="ltr">{rate} bpm</span>
           <button
             type="button"
             onClick={() => toggleFav(p.id)}
             aria-label={saved ? (isEn ? "Remove from saved" : "إلغاء الحفظ") : (isEn ? "Save pattern" : "حفظ النمط")}
-            className={`text-base leading-none ${saved ? "text-amber-500" : "text-slate-300 hover:text-slate-400 dark:text-slate-600"}`}
+            className={`text-base leading-none ${saved ? "text-amber-700 dark:text-amber-300" : "text-slate-300 hover:text-slate-400 dark:text-slate-400"}`}
           >
             {saved ? "🔖" : "📑"}
           </button>
         </div>
       </div>
       <h3 className="text-lg font-bold text-slate-900 dark:text-white" dir="ltr">{p.nameEn}</h3>
-      <p className="text-sm font-semibold text-slate-500 dark:text-slate-400">{p.nameAr}</p>
+      <p className="text-sm font-semibold text-slate-600 dark:text-slate-400">{p.nameAr}</p>
 
       <div className="my-3 rounded-lg ecg-monitor-bg p-2">
         <ECGWaveOrImage patternId={p.id} kind={p.wave} colorClass={waveColor[p.category]} annotations={PATTERN_ANNOTATIONS[p.id]} />
@@ -2458,24 +2458,24 @@ function ECGCard({ p }: { p: ECGPattern }) {
       )}
 
       <div className="mt-3 flex flex-wrap items-center gap-2">
-        {p.needsCPR && <span className="rounded-full bg-rose-50 px-2.5 py-1 text-xs font-bold text-rose-600 dark:bg-rose-500/10 dark:text-rose-300">🫀 CPR</span>}
-        {p.shockable && <span className="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-600 dark:bg-amber-500/10 dark:text-amber-300">⚡ Shock</span>}
+        {p.needsCPR && <span className="rounded-full bg-rose-50 px-2.5 py-1 text-xs font-bold text-rose-700 dark:bg-rose-500/10 dark:text-rose-300">🫀 CPR</span>}
+        {p.shockable && <span className="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-bold text-amber-700 dark:bg-amber-500/10 dark:text-amber-300">⚡ Shock</span>}
         <button
           type="button"
           onClick={toggleSound}
-          className={`rounded-full px-2.5 py-1 text-xs font-bold ${playing ? "bg-emerald-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
+          className={`rounded-full px-2.5 py-1 text-xs font-bold ${playing ? "bg-emerald-700 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
         >
           {noPulse ? (playing ? t("ecg.monitorSoundPlaying") : t("ecg.monitorSound")) : playing ? t("ecg.stopSound") : t("ecg.listenPulse")}
         </button>
         {hasDetails && (
-          <button type="button" onClick={() => setOpen((s) => !s)} className="mr-auto text-xs font-bold text-teal-600 dark:text-teal-400">
+          <button type="button" onClick={() => setOpen((s) => !s)} className="mr-auto text-xs font-bold text-teal-700 dark:text-teal-400">
             {open ? t("ecg.hideDetails") : t("ecg.moreDetails")}
           </button>
         )}
       </div>
 
       {noPulse && playing && (
-        <div className="mt-2 text-xs font-semibold text-rose-500">{t("ecg.alarmOnlyNote")}</div>
+        <div className="mt-2 text-xs font-semibold text-rose-700 dark:text-rose-300">{t("ecg.alarmOnlyNote")}</div>
       )}
 
       {open && <ECGDetailTabs p={p} />}
@@ -2508,7 +2508,7 @@ function ComparisonPairCard({ aId, bId, note, noteEn }: { aId: string; bId: stri
           <div key={p.id}>
             <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${CATEGORY_META[p.category].badge}`}>{isEn ? CATEGORY_META[p.category].labelEn : CATEGORY_META[p.category].label}</span>
             <h4 className="mt-1 text-sm font-bold text-slate-900 dark:text-white" dir="ltr">{p.nameEn}</h4>
-            <p className="text-xs text-slate-500 dark:text-slate-400">{p.nameAr}</p>
+            <p className="text-xs text-slate-600 dark:text-slate-400">{p.nameAr}</p>
             <div className="my-2 rounded-lg ecg-monitor-bg p-1.5">
               <ECGWaveOrImage patternId={p.id} kind={p.wave} colorClass={waveColor[p.category]} />
             </div>
@@ -2527,7 +2527,7 @@ function ComparisonSection() {
     <div className="mb-6 rounded-2xl border border-slate-200 dark:border-slate-800">
       <button type="button" onClick={() => setOpen((s) => !s)} className="flex w-full items-center justify-between px-4 py-3 text-right">
         <span className="font-bold text-slate-800 dark:text-slate-100">{t("ecg.confusedPatterns")}</span>
-        <span className="text-slate-400">{open ? "−" : "+"}</span>
+        <span className="text-slate-500 dark:text-slate-400">{open ? "−" : "+"}</span>
       </button>
       {open && (
         <div className="space-y-3 border-t border-slate-100 p-4 dark:border-slate-800">
@@ -2642,17 +2642,17 @@ function QuizMode() {
           {typePill("mistakes", `${t("ecg.quizMistakes")}${mistakes.length > 0 ? ` (${mistakes.length})` : ""}`)}
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-sm font-bold text-slate-500 dark:text-slate-400">{t("ecg.score")} {score.correct} {t("ecg.of")} {score.total}</span>
-          <button type="button" onClick={() => setScore({ correct: 0, total: 0 })} className="text-xs font-bold text-teal-600 dark:text-teal-400">↺</button>
+          <span className="text-sm font-bold text-slate-600 dark:text-slate-400">{t("ecg.score")} {score.correct} {t("ecg.of")} {score.total}</span>
+          <button type="button" onClick={() => setScore({ correct: 0, total: 0 })} className="text-xs font-bold text-teal-700 dark:text-teal-400">↺</button>
         </div>
       </div>
 
       {mistakesEmpty ? (
-        <div className="py-10 text-center text-sm text-slate-400">{t("ecg.noMistakesYet")}</div>
+        <div className="py-10 text-center text-sm text-slate-500 dark:text-slate-400">{t("ecg.noMistakesYet")}</div>
       ) : (
         <>
           {quizType === "speed" && !picked && (
-            <div className={`mb-2 text-center text-sm font-black ${timeLeft <= 3 ? "text-rose-500" : "text-slate-500 dark:text-slate-400"}`}>⏱️ {timeLeft}</div>
+            <div className={`mb-2 text-center text-sm font-black ${timeLeft <= 3 ? "text-rose-700 dark:text-rose-300" : "text-slate-600 dark:text-slate-400"}`}>⏱️ {timeLeft}</div>
           )}
           <p className="mb-2 text-center text-sm font-semibold text-slate-600 dark:text-slate-300">{t("ecg.whatIsThisPattern")}</p>
           <div className="rounded-lg ecg-monitor-bg p-2">
@@ -2665,9 +2665,9 @@ function QuizMode() {
               const isPicked = opt.id === picked;
               let style = "bg-slate-100 text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700";
               if (picked) {
-                if (isCorrect) style = "bg-emerald-500 text-white";
-                else if (isPicked) style = "bg-rose-500 text-white";
-                else style = "bg-slate-100 text-slate-400 dark:bg-slate-800 dark:text-slate-500";
+                if (isCorrect) style = "bg-emerald-700 text-white";
+                else if (isPicked) style = "bg-rose-600 text-white";
+                else style = "bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400";
               }
               return (
                 <button key={opt.id} type="button" disabled={!!picked} onClick={() => pick(opt.id)} className={`rounded-xl px-3 py-2.5 text-right text-sm font-bold ${style}`}>
@@ -2680,7 +2680,7 @@ function QuizMode() {
 
           {picked && (
             <div className="mt-4 space-y-2 border-t border-slate-100 pt-3 dark:border-slate-800">
-              <div className={`text-sm font-bold ${picked === question.correct.id ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"}`}>
+              <div className={`text-sm font-bold ${picked === question.correct.id ? "text-emerald-700 dark:text-emerald-400" : "text-rose-700 dark:text-rose-400"}`}>
                 {picked === "__timeout__" ? t("ecg.timeUp") : picked === question.correct.id ? t("ecg.correctAnswer") : t("ecg.wrongAnswer")}
               </div>
               <p className="text-xs text-slate-600 dark:text-slate-300">{correctDesc}</p>
@@ -2764,14 +2764,14 @@ export default function ECGPage() {
             <button
               type="button"
               onClick={() => setMode((m) => (m === "learn" ? "library" : "learn"))}
-              className={`rounded-full px-4 py-2 text-sm font-bold ${mode === "learn" ? "bg-white text-rose-700" : "bg-white/15 text-white hover:bg-white/25"}`}
+              className={`rounded-full px-4 py-2 text-sm font-bold ${mode === "learn" ? "bg-white text-rose-700 dark:text-rose-300" : "bg-white/15 text-white hover:bg-white/25"}`}
             >
               {mode === "learn" ? t("ecg.backToLibrary") : t("ecg.learnToRead")}
             </button>
             <button
               type="button"
               onClick={() => setMode((m) => (m === "quiz" ? "library" : "quiz"))}
-              className={`rounded-full px-4 py-2 text-sm font-bold ${mode === "quiz" ? "bg-white text-rose-700" : "bg-white/15 text-white hover:bg-white/25"}`}
+              className={`rounded-full px-4 py-2 text-sm font-bold ${mode === "quiz" ? "bg-white text-rose-700 dark:text-rose-300" : "bg-white/15 text-white hover:bg-white/25"}`}
             >
               {mode === "quiz" ? t("ecg.backToLibrary") : t("ecg.testYourself")}
             </button>
@@ -2803,11 +2803,11 @@ export default function ECGPage() {
       <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_auto]">
         <div className="relative">
           <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t("common.search") + "..."} className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800" />
-          <span className="absolute right-3 top-3 text-slate-400">🔍</span>
+          <span className="absolute right-3 top-3 text-slate-500 dark:text-slate-400">🔍</span>
         </div>
         <div className="flex flex-wrap gap-2">
-          <span className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-500 dark:bg-slate-800 dark:text-slate-300">CPR {counts.cprCount}</span>
-          <span className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-500 dark:bg-slate-800 dark:text-slate-300">{t("ecg.shockable")} {counts.shockCount}</span>
+          <span className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">CPR {counts.cprCount}</span>
+          <span className="rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-600 dark:bg-slate-800 dark:text-slate-300">{t("ecg.shockable")} {counts.shockCount}</span>
         </div>
       </div>
 
@@ -2820,7 +2820,7 @@ export default function ECGPage() {
         ))}
         <button
           onClick={() => setSavedOnly((s) => !s)}
-          className={`mr-auto rounded-full px-3 py-1.5 text-sm font-bold ${savedOnly ? "bg-amber-500 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
+          className={`mr-auto rounded-full px-3 py-1.5 text-sm font-bold ${savedOnly ? "bg-amber-700 text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`}
         >
           {t("ecg.saved")} {favorites.length > 0 ? `(${favorites.length})` : ""}
         </button>
@@ -2830,7 +2830,7 @@ export default function ECGPage() {
       <div className="grid gap-4 sm:grid-cols-2">
         {list.map((p) => <ECGCard key={p.id} p={p} />)}
         {list.length === 0 && (
-          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+          <div className="col-span-full rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {savedOnly ? t("ecg.noneSavedYet") : t("common.noResults")}
           </div>
         )}

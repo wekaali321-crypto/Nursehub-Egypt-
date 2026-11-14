@@ -38,14 +38,14 @@ export default function ArticleListCard({ a }: { a: Article }) {
         </span>
       </div>
       <div className="flex min-w-0 flex-1 flex-col p-3.5 md:p-4">
-        <span className="mb-1 inline-flex w-fit items-center gap-1 text-[11px] font-bold text-[#168C91] dark:text-teal-300 md:hidden">
+        <span className="mb-1 inline-flex w-fit items-center gap-1 text-[11px] font-bold text-[#127378] dark:text-teal-300 md:hidden">
           <Icon name={CAT_ICON[a.category]} size={12} /> {cat}
         </span>
         <h3 className="line-clamp-2 font-black leading-snug text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{title}</h3>
-        {excerpt && <p className="mt-1.5 line-clamp-2 flex-1 text-sm text-slate-500 dark:text-slate-400">{excerpt}</p>}
-        <div className="mt-3 flex items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
+        {excerpt && <p className="mt-1.5 line-clamp-2 flex-1 text-sm text-slate-600 dark:text-slate-400">{excerpt}</p>}
+        <div className="mt-3 flex items-center justify-between gap-2 text-xs text-slate-600 dark:text-slate-400">
           <span className="inline-flex items-center gap-1"><Icon name="clock" size={13} /> {mins.toLocaleString(lang === "ar" ? "ar-EG" : "en-US")} {t("article.readingTime")}</span>
-          <span className="font-bold text-[#168C91] dark:text-teal-300">{lang === "ar" ? "اقرأ المقال ←" : "Read →"}</span>
+          <span className="font-bold text-[#127378] dark:text-teal-300">{lang === "ar" ? "اقرأ المقال ←" : "Read →"}</span>
         </div>
       </div>
     </Link>

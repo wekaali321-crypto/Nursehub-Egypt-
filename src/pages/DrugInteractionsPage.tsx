@@ -89,7 +89,7 @@ export default function DrugInteractionsPage() {
 
       <div className="mt-6">
         {aId && bId && aId === bId && (
-          <div className="rounded-2xl border border-dashed border-slate-300 p-6 text-center text-slate-400 dark:border-slate-700">
+          <div className="rounded-2xl border border-dashed border-slate-300 p-6 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {LABELS.chooseDifferent[lang]}
           </div>
         )}
@@ -121,7 +121,7 @@ export default function DrugInteractionsPage() {
         )}
 
         {(!aId || !bId) && (
-          <div className="rounded-2xl border border-dashed border-slate-300 p-10 text-center text-slate-400 dark:border-slate-700">
+          <div className="rounded-2xl border border-dashed border-slate-300 p-10 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {LABELS.pickTwo[lang]}
           </div>
         )}
@@ -132,7 +132,7 @@ export default function DrugInteractionsPage() {
       </div>
 
       <div className="mt-4 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-teal-600 hover:underline">{LABELS.back[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-700 dark:text-teal-300 hover:underline">{LABELS.back[lang]}</Link>
       </div>
     </div>
   );
@@ -159,13 +159,13 @@ function DrugPicker({
 
   return (
     <div className="min-w-0 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-      <div className="mb-2 text-sm font-black text-slate-500 dark:text-slate-400">{label}</div>
+      <div className="mb-2 text-sm font-black text-slate-600 dark:text-slate-400">{label}</div>
 
       {picked ? (
         <div className="flex items-center justify-between gap-2 rounded-xl bg-teal-50 p-3 dark:bg-teal-500/10">
           <div className="min-w-0">
             <div className="truncate font-bold text-slate-900 dark:text-white">{bilingual(picked.name, picked.nameEn, lang).text}</div>
-            <div className="truncate text-xs text-slate-500 dark:text-slate-400">{picked.genericName}</div>
+            <div className="truncate text-xs text-slate-600 dark:text-slate-400">{picked.genericName}</div>
           </div>
           <button
             onClick={() => { onChange(""); setQ(""); }}
@@ -191,13 +191,13 @@ function DrugPicker({
                   className="block w-full min-w-0 border-b border-slate-100 p-2.5 text-right last:border-0 hover:bg-teal-50 dark:border-slate-800 dark:hover:bg-teal-500/10"
                 >
                   <span className="block truncate text-sm font-bold text-slate-800 dark:text-white">{bilingual(d.name, d.nameEn, lang).text}</span>
-                  <span className="block truncate text-xs text-slate-400">{d.genericName}</span>
+                  <span className="block truncate text-xs text-slate-500 dark:text-slate-400">{d.genericName}</span>
                 </button>
               ))}
             </div>
           )}
           {q.trim() && matches.length === 0 && (
-            <p className="mt-2 text-xs text-slate-400">{LABELS.noMatch[lang]}</p>
+            <p className="mt-2 text-xs text-slate-500 dark:text-slate-400">{LABELS.noMatch[lang]}</p>
           )}
         </>
       )}

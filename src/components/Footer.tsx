@@ -54,7 +54,7 @@ export default function Footer() {
           <div className="mb-3">
             <Logo size={40} />
           </div>
-          <p className="text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+          <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
             {lang === "ar"
               ? `${settings.tagline}. منصة عربية متخصصة في تقديم محتوى تعليمي عالي الجودة لطلاب وممارسي التمريض.`
               : "A specialized platform delivering high-quality educational content for nursing students and practitioners."}
@@ -79,7 +79,7 @@ export default function Footer() {
 
         <div>
           <h4 className="mb-3 font-bold dark:text-white">{t("footer.sections")}</h4>
-          <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
             {cats.map((c) => (
               <li key={c}><Link to={c === "drugs" ? "/drugs" : `/category/${c}`} className="hover:text-teal-500">{t(CAT_KEYS[c])}</Link></li>
             ))}
@@ -88,7 +88,7 @@ export default function Footer() {
 
         <div>
           <h4 className="mb-3 font-bold dark:text-white">{t("footer.important")}</h4>
-          <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
             <li><Link to="/about" className="hover:text-teal-500">{t("footer.about")}</Link></li>
             <li><Link to="/contact" className="hover:text-teal-500">{t("footer.contact")}</Link></li>
             <li><Link to="/faq" className="hover:text-teal-500">{t("footer.faq")}</Link></li>
@@ -101,7 +101,7 @@ export default function Footer() {
 
         <div>
           <h4 className="mb-3 font-bold dark:text-white">{t("footer.legal")}</h4>
-          <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+          <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
             <li><Link to="/privacy" className="hover:text-teal-500">{t("footer.privacy")}</Link></li>
             <li><Link to="/terms" className="hover:text-teal-500">{t("footer.terms")}</Link></li>
             <li><Link to="/monetization" className="hover:text-teal-500">{lang === "ar" ? "الإعلان معنا" : "Advertise"}</Link></li>
@@ -109,9 +109,9 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-slate-200 py-5 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
+      <div className="border-t border-slate-200 py-5 text-center text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400">
         <div>© {new Date().getFullYear()} {settings.siteName}. {t("footer.rights")} {t("footer.madeWith")}</div>
-        <div className="mt-1 text-xs font-semibold text-slate-400">Designed &amp; Developed by <span className="text-teal-500">RN. Ali Ashour</span></div>
+        <div className="mt-1 text-xs font-semibold text-slate-500 dark:text-slate-400">Designed &amp; Developed by <span className="text-teal-700 dark:text-teal-300">RN. Ali Ashour</span></div>
       </div>
     </footer>
   );

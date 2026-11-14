@@ -64,12 +64,12 @@ export default function InterviewQuestionsPage() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center py-24 text-slate-500 dark:text-slate-400">
+      <div className="flex items-center justify-center py-24 text-slate-600 dark:text-slate-400">
         <span className="animate-pulse">جاري التحميل... (Loading...)</span>
       </div>
     );
   }
-  if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
+  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
@@ -149,14 +149,14 @@ export default function InterviewQuestionsPage() {
                   </span>
                 )}
                 <span className="flex-1 font-semibold text-slate-800 dark:text-white">{question}</span>
-                <span className="mt-1 shrink-0 text-slate-400 transition-transform group-open:rotate-180">▾</span>
+                <span className="mt-1 shrink-0 text-slate-500 dark:text-slate-400 transition-transform group-open:rotate-180">▾</span>
               </summary>
               <div className="border-t border-slate-100 px-4 pb-4 pt-3 dark:border-slate-800">
                 <TopicBody body={answer} accent="emerald" />
                 {relatedLabel && q.related_path && (
                   <Link
                     to={q.related_path}
-                    className="mt-3 inline-flex items-center gap-1 rounded-full bg-[#168C91] hover:bg-[#127378] px-4 py-1.5 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md"
+                    className="mt-3 inline-flex items-center gap-1 rounded-full bg-[#127378] hover:bg-[#0f6165] px-4 py-1.5 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md"
                   >
                     {LABELS.learnMorePrefix[lang]} {relatedLabel} {LABELS.learnMoreSuffix[lang]} ←
                   </Link>
@@ -166,7 +166,7 @@ export default function InterviewQuestionsPage() {
           );
         })}
         {filtered.length === 0 && (
-          <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
+          <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {LABELS.noResults[lang]}
           </div>
         )}

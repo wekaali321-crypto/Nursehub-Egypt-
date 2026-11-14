@@ -53,7 +53,7 @@ export default function PediatricsQuizWidget() {
         <span className="text-xl">🍼</span>
         <h3 className="font-bold dark:text-white">{t("pediatrics.quizWidgetTitle")}</h3>
       </div>
-      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{qText}</p>
+      <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{qText}</p>
       <div className="mt-3 space-y-1.5">
         {options.map((o, oi) => {
           const isChosen = chosen === oi;
@@ -81,7 +81,7 @@ export default function PediatricsQuizWidget() {
       )}
       {chosen !== null && (
         <div className="mt-3 flex items-center justify-between">
-          <span className={`text-xs font-bold ${chosen === q.correct ? "text-emerald-500" : "text-rose-500"}`}>
+          <span className={`text-xs font-bold ${chosen === q.correct ? "text-emerald-700 dark:text-emerald-300" : "text-rose-700 dark:text-rose-300"}`}>
             {chosen === q.correct ? t("quiz.qotdCorrect") : t("quiz.qotdIncorrect")}
           </span>
           <button type="button" onClick={another} className="rounded-full bg-teal-500 px-3 py-1.5 text-xs font-bold text-white">

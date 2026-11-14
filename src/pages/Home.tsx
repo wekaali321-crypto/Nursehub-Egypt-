@@ -40,7 +40,7 @@ function CategoryCardLink({ card }: { card: HomeCategory }) {
         <div className={`mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${card.color} text-2xl text-white transition-transform group-hover:scale-110 sm:h-14 sm:w-14 sm:text-3xl`}>{card.icon}</div>
       )}
       <div className="text-xs font-bold dark:text-white sm:text-sm">{title}</div>
-      {description && <div className="mt-0.5 line-clamp-1 text-[11px] text-slate-400">{description}</div>}
+      {description && <div className="mt-0.5 line-clamp-1 text-[11px] text-slate-500 dark:text-slate-400">{description}</div>}
     </>
   );
   const cls = "group rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white p-4 text-center transition-all hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900 sm:p-5";
@@ -183,9 +183,9 @@ export default function Home() {
             const qDifficulty = DIFFICULTY_LABEL[q.difficulty]?.[lang] ?? q.difficulty;
             return (
               <Link key={q.id} to={`/quiz/${q.id}`} className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-[#F1F4F6] p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
-                <div className="flex items-center justify-between"><span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-[#168C91] dark:bg-sky-500/10">{qCategory}</span><span className="text-2xl">📝</span></div>
+                <div className="flex items-center justify-between"><span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-[#127378] dark:text-teal-300 dark:bg-sky-500/10">{qCategory}</span><span className="text-2xl">📝</span></div>
                 <h3 className="mt-2 font-bold dark:text-white">{qTitle}</h3>
-                <div className="mt-1 text-xs text-slate-400">{q.questions.length} {t("quiz.numQuestions")} · {qDifficulty}</div>
+                <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">{q.questions.length} {t("quiz.numQuestions")} · {qDifficulty}</div>
               </Link>
             );
           })}
@@ -200,7 +200,7 @@ export default function Home() {
             <Link key={tool.t} to="/tools" className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-[#F1F4F6] p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
               <div className="text-3xl">{tool.i}</div>
               <div className="mt-2 font-bold dark:text-white">{lang === "en" ? tool.tEn : tool.t}</div>
-              <div className="text-sm text-slate-500 dark:text-slate-400">{lang === "en" ? tool.dEn : tool.d}</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400">{lang === "en" ? tool.dEn : tool.d}</div>
             </Link>
           ))}
         </div>
@@ -220,8 +220,8 @@ export default function Home() {
                   <div className="p-4">
                     <h3 className="font-bold dark:text-white">{pTitle}</h3>
                     <div className="mt-2 flex items-center gap-2">
-                      <span className="text-xl font-black text-[#168C91]">{p.price} {cur}</span>
-                      {p.oldPrice && <span className="text-sm text-slate-400 line-through">{p.oldPrice}</span>}
+                      <span className="text-xl font-black text-[#127378] dark:text-teal-300">{p.price} {cur}</span>
+                      {p.oldPrice && <span className="text-sm text-slate-500 dark:text-slate-400 line-through">{p.oldPrice}</span>}
                     </div>
                   </div>
                 </Link>

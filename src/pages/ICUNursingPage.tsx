@@ -78,7 +78,7 @@ export function ICUNursingHome() {
         </p>
         <Link
           to="/drugs/icu-medications"
-          className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-bold text-[#168C91] shadow hover:bg-teal-50"
+          className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-bold text-[#127378] dark:text-teal-300 shadow hover:bg-teal-50"
         >
           💊 {isEn ? "ICU Medications" : "أدوية العناية المركزة"}
         </Link>
@@ -89,7 +89,7 @@ export function ICUNursingHome() {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setCategory("all")}
-              className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === "all" ? "bg-[#168C91] text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
+              className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === "all" ? "bg-[#127378] text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
             >
               {isEn ? "All" : "الكل"}
             </button>
@@ -97,7 +97,7 @@ export function ICUNursingHome() {
               <button
                 key={c}
                 onClick={() => setCategory(c)}
-                className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === c ? "bg-[#168C91] text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
+                className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === c ? "bg-[#127378] text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
               >
                 {c}
               </button>
@@ -106,16 +106,16 @@ export function ICUNursingHome() {
         ) : <div />}
         <button
           onClick={() => { setSelectMode((v) => !v); setSelected(new Set()); }}
-          className={`rounded-full px-4 py-1.5 text-sm font-bold ${selectMode ? "bg-slate-800 text-white dark:bg-slate-700" : "border border-teal-300 text-[#168C91] hover:bg-teal-50 dark:border-[#168C91]/40 dark:hover:bg-[#168C91]/10"}`}
+          className={`rounded-full px-4 py-1.5 text-sm font-bold ${selectMode ? "bg-slate-800 text-white dark:bg-slate-700" : "border border-teal-300 text-[#127378] dark:text-teal-300 hover:bg-teal-50 dark:border-[#168C91]/40 dark:hover:bg-[#168C91]/10"}`}
         >
           {selectMode ? `✕ ${t("icuPrint.cancelSelect")}` : `🖨️ ${t("icuPrint.selectMode")}`}
         </button>
       </div>
 
       {topics === null ? (
-        <div className="py-16 text-center text-slate-400">{t("common.loading")}</div>
+        <div className="py-16 text-center text-slate-500 dark:text-slate-400">{t("common.loading")}</div>
       ) : list.length === 0 ? (
-        <div className={`${card} py-16 text-center text-slate-400`}>
+        <div className={`${card} py-16 text-center text-slate-500 dark:text-slate-400`}>
           <div className="text-4xl">🚧</div>
           <p className="mt-2">{isEn ? "Content coming soon." : "المحتوى قيد الإضافة قريبًا."}</p>
         </div>
@@ -128,17 +128,17 @@ export function ICUNursingHome() {
                 <div className="flex items-start justify-between">
                   <div className="text-3xl">{tp.icon || "🏥"}</div>
                   {selectMode && (
-                    <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${isSelected ? "border-[#168C91] bg-[#168C91] text-white" : "border-slate-300 text-transparent dark:border-slate-600"}`}>✓</span>
+                    <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${isSelected ? "border-[#168C91] bg-[#127378] text-white" : "border-slate-300 text-transparent dark:border-slate-600"}`}>✓</span>
                   )}
                 </div>
                 <h3 className="mt-2 font-black text-slate-800 group-hover:text-[#168C91] dark:text-white">
                   {isEn && tp.title_en ? tp.title_en : tp.title_ar}
                 </h3>
-                {tp.category && <span className="mt-1 inline-block rounded-full bg-teal-50 px-2 py-0.5 text-[11px] font-bold text-[#168C91] dark:bg-[#168C91]/10">{tp.category}</span>}
+                {tp.category && <span className="mt-1 inline-block rounded-full bg-teal-50 px-2 py-0.5 text-[11px] font-bold text-[#127378] dark:text-teal-300 dark:bg-[#168C91]/10">{tp.category}</span>}
                 {(isEn ? tp.summary_en : tp.summary_ar) && (
-                  <p className="mt-2 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{isEn ? tp.summary_en : tp.summary_ar}</p>
+                  <p className="mt-2 line-clamp-2 text-sm text-slate-600 dark:text-slate-400">{isEn ? tp.summary_en : tp.summary_ar}</p>
                 )}
-                <div className="mt-3 text-xs font-bold text-[#168C91]">
+                <div className="mt-3 text-xs font-bold text-[#127378] dark:text-teal-300">
                   {selectMode ? (isSelected ? (isEn ? "Selected for print" : "مُختار للطباعة") : (isEn ? "Tap to select" : "اضغط للاختيار")) : <>{tp.sections.length} {isEn ? "sections" : "أقسام"} ←</>}
                 </div>
               </>
@@ -164,7 +164,7 @@ export function ICUNursingHome() {
       {/* Pay-to-print section */}
       <div className={`${card} mt-8 p-6`}>
         <h2 className="text-lg font-black text-slate-800 dark:text-white">{t("icuPrint.sectionTitle")}</h2>
-        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{t("icuPrint.sectionDesc")}</p>
+        <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{t("icuPrint.sectionDesc")}</p>
 
         {selectMode && (
           <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-teal-50 p-4 dark:bg-[#168C91]/10">
@@ -183,7 +183,7 @@ export function ICUNursingHome() {
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4 dark:border-slate-800">
           <span className="text-sm font-semibold text-slate-600 dark:text-slate-300">{t("icuPrint.printAllBanner")}</span>
-          <button onClick={addPrintAllToCart} className="rounded-full bg-[#168C91] hover:bg-[#127378] px-6 py-2.5 text-sm font-bold text-white shadow">
+          <button onClick={addPrintAllToCart} className="rounded-full bg-[#127378] hover:bg-[#0f6165] px-6 py-2.5 text-sm font-bold text-white shadow">
             {t("icuPrint.printAllBtn")}
           </button>
         </div>
@@ -224,7 +224,7 @@ export default function ICUNursingTopicPage() {
   useSEO({ title: `${topic ? (isEn && topic.title_en ? topic.title_en : topic.title_ar) : ""} | ${t("nav.icuNursing")} | NurseHub Egypt` });
 
   if (topic === undefined) {
-    return <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-400">{t("common.loading")}</div>;
+    return <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-500 dark:text-slate-400">{t("common.loading")}</div>;
   }
   if (!topic) {
     return (
@@ -246,7 +246,7 @@ export default function ICUNursingTopicPage() {
       <div className="mb-6 text-center print:hidden">
         <div className="text-5xl">{topic.icon || "🏥"}</div>
         <h1 className="mt-3 text-3xl font-black dark:text-white">{title}</h1>
-        {summary && <p className="mt-2 text-slate-500 dark:text-slate-400">{summary}</p>}
+        {summary && <p className="mt-2 text-slate-600 dark:text-slate-400">{summary}</p>}
       </div>
 
       <div className="mb-6 hidden text-center print:block">
@@ -279,7 +279,7 @@ export default function ICUNursingTopicPage() {
           const body = isEn && s.body_en ? s.body_en : s.body_ar;
           return (
             <section key={s.id || i} className={`${card} p-5`}>
-              <h2 className="mb-3 text-lg font-black text-[#168C91]">{heading}</h2>
+              <h2 className="mb-3 text-lg font-black text-[#127378] dark:text-teal-300">{heading}</h2>
               {s.image_url && (
                 <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
               )}
@@ -290,8 +290,8 @@ export default function ICUNursingTopicPage() {
       </div>
 
       {topic.sources && topic.sources.length > 0 && (
-        <div className={`${card} mt-6 p-4 text-xs text-slate-400`}>
-          <div className="mb-1 font-bold text-slate-500 dark:text-slate-400">{isEn ? "Sources" : "المصادر"}</div>
+        <div className={`${card} mt-6 p-4 text-xs text-slate-500 dark:text-slate-400`}>
+          <div className="mb-1 font-bold text-slate-600 dark:text-slate-400">{isEn ? "Sources" : "المصادر"}</div>
           <ul className="list-inside list-disc space-y-0.5">
             {topic.sources.map((src, i) => <li key={i}>{src}</li>)}
           </ul>
@@ -332,7 +332,7 @@ export function ICUPrintAllPage() {
   };
 
   if (topics === null) {
-    return <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-400">{t("common.loading")}</div>;
+    return <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-500 dark:text-slate-400">{t("common.loading")}</div>;
   }
 
   return (
@@ -342,7 +342,7 @@ export function ICUPrintAllPage() {
       <div className="mb-6 text-center print:hidden">
         <div className="text-5xl">🖨️</div>
         <h1 className="mt-3 text-3xl font-black dark:text-white">{isEn ? "Print All ICU Nursing Topics" : "طباعة كل مواضيع العناية المركزة"}</h1>
-        <p className="mt-2 text-slate-500 dark:text-slate-400">
+        <p className="mt-2 text-slate-600 dark:text-slate-400">
           {isEn ? `All ${topics.length} topics, print-ready.` : `كل الـ ${topics.length} موضوعًا، جاهزين للطباعة.`}
         </p>
       </div>
@@ -360,7 +360,7 @@ export function ICUPrintAllPage() {
             <span className="text-sm font-semibold text-slate-600 dark:text-slate-300">
               {isEn ? "Unlock a print-ready copy of the entire ICU Nursing section." : "افتح نسخة قابلة للطباعة من قسم العناية المركزة كله."}
             </span>
-            <button onClick={buyPrintAll} className="rounded-full bg-[#168C91] hover:bg-[#127378] px-6 py-2.5 text-sm font-bold text-white shadow">
+            <button onClick={buyPrintAll} className="rounded-full bg-[#127378] hover:bg-[#0f6165] px-6 py-2.5 text-sm font-bold text-white shadow">
               {t("icuPrint.printAllBtn")}
             </button>
           </>
@@ -386,7 +386,7 @@ export function ICUPrintAllPage() {
                   <div className="text-4xl">{tp.icon || "🏥"}</div>
                   <h2 className="mt-2 text-2xl font-black dark:text-white">{title}</h2>
                   {(isEn ? tp.summary_en : tp.summary_ar) && (
-                    <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">{isEn ? tp.summary_en : tp.summary_ar}</p>
+                    <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{isEn ? tp.summary_en : tp.summary_ar}</p>
                   )}
                 </div>
                 <div className="space-y-6">
@@ -395,15 +395,15 @@ export function ICUPrintAllPage() {
                     const body = isEn && s.body_en ? s.body_en : s.body_ar;
                     return (
                       <section key={s.id || i} className={`${card} p-5`}>
-                        <h3 className="mb-3 text-lg font-black text-[#168C91]">{heading}</h3>
+                        <h3 className="mb-3 text-lg font-black text-[#127378] dark:text-teal-300">{heading}</h3>
                         <TopicBody body={body} accent="sky" />
                       </section>
                     );
                   })}
                 </div>
                 {tp.sources && tp.sources.length > 0 && (
-                  <div className={`${card} mt-6 p-4 text-xs text-slate-400`}>
-                    <div className="mb-1 font-bold text-slate-500 dark:text-slate-400">{isEn ? "Sources" : "المصادر"}</div>
+                  <div className={`${card} mt-6 p-4 text-xs text-slate-500 dark:text-slate-400`}>
+                    <div className="mb-1 font-bold text-slate-600 dark:text-slate-400">{isEn ? "Sources" : "المصادر"}</div>
                     <ul className="list-inside list-disc space-y-0.5">
                       {tp.sources.map((src, i) => <li key={i}>{src}</li>)}
                     </ul>
