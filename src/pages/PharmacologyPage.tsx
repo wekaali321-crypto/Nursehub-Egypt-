@@ -1,78 +1,41 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import HubGrid from "../components/HubGrid";
-import TopicBody from "../components/TopicBody";
-import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchPharmacologyTopics, type PharmacologyTopic } from "../lib/pharmacologyTopicsApi";
+import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
-const card = "rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900";
+// Light emerald accent on top of the shared Navy/Teal section layout.
+const TINT: TopicTint = {
+  glow: "bg-emerald-400/25",
+  iconBg: "bg-emerald-400/35",
+  tile: "bg-emerald-50 text-emerald-800 dark:bg-emerald-500/15 dark:text-emerald-200",
+  text: "text-emerald-700 dark:text-emerald-300",
+};
 
 export function PharmacologyHome() {
-  const { t, lang } = useI18n();
-  const isEn = lang === "en";
+  const { t } = useI18n();
   useSEO({ title: `${t("nav.pharmacology")} | NurseHub Egypt` });
 
   const [topics, setTopics] = useState<PharmacologyTopic[] | null>(null);
-  const [category, setCategory] = useState("all");
 
   useEffect(() => {
     fetchPharmacologyTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
   }, []);
 
-  const categories = Array.from(new Set((topics || []).map((tp) => tp.category).filter(Boolean))) as string[];
-  const list = category === "all" ? topics || [] : (topics || []).filter((tp) => tp.category === category);
-
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8">
-      <Breadcrumbs items={[{ label: t("nav.pharmacology") }]} />
-
-      <div className="mb-6 overflow-hidden rounded-3xl bg-gradient-to-l from-emerald-600 via-teal-500 to-cyan-500 p-8 text-white shadow-lg">
-        <div className="text-5xl">🧪</div>
-        <h1 className="mt-3 text-3xl font-black">{t("nav.pharmacology")}</h1>
-        <p className="mt-2 max-w-2xl text-white/90">
-          {isEn
-            ? "A complete, structured reference for nursing pharmacology: general principles, dosage calculations, antibiotics, autonomic drugs, cardiovascular and respiratory medications, GIT drugs, anticoagulants, and clinical case scenarios."
-            : "مرجع شامل ومنظّم لعلم الأدوية التمريضي: المبادئ العامة، حسابات الجرعات، المضادات الحيوية، أدوية الجهاز العصبي الذاتي، أدوية القلب والجهاز التنفسي، أدوية الجهاز الهضمي، مضادات التخثر، وحالات سريرية تطبيقية."}
-        </p>
-      </div>
-
-      {categories.length > 1 && (
-        <div className="mb-5 flex flex-wrap gap-2">
-          <button
-            onClick={() => setCategory("all")}
-            className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === "all" ? "bg-emerald-600 text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
-          >
-            {isEn ? "All" : "الكل"}
-          </button>
-          {categories.map((c) => (
-            <button
-              key={c}
-              onClick={() => setCategory(c)}
-              className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === c ? "bg-emerald-600 text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
-            >
-              {c}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {topics === null ? (
-        <div className="py-16 text-center text-slate-400">{t("common.loading")}</div>
-      ) : list.length === 0 ? (
-        <div className={`${card} py-16 text-center text-slate-400`}>
-          <div className="text-4xl">🚧</div>
-          <p className="mt-2">{isEn ? "Content coming soon." : "المحتوى قيد الإضافة قريبًا."}</p>
-        </div>
-      ) : (
-        <HubGrid
-          isEn={isEn}
-          accent="emerald"
-          items={list.map((tp) => ({ id: tp.id, to: (tp as { href?: string }).href ?? `/pharmacology/${tp.id}`, icon: tp.icon || "🧪", title: tp.title_ar, titleEn: tp.title_en, category: tp.category, summary: isEn ? tp.summary_en : tp.summary_ar, count: tp.sections.length }))}
-        />
-      )}
-    </div>
+    <TopicSectionHome
+      title={t("nav.pharmacology")}
+      icon="🧪"
+      fallbackIcon="🧪"
+      tint={TINT}
+      description={{
+        en: "A complete, structured reference for nursing pharmacology: general principles, dosage calculations, antibiotics, autonomic drugs, cardiovascular and respiratory medications, GIT drugs, anticoagulants, and clinical case scenarios.",
+        ar: "مرجع شامل ومنظّم لعلم الأدوية التمريضي: المبادئ العامة، حسابات الجرعات، المضادات الحيوية، أدوية الجهاز العصبي الذاتي، أدوية القلب والجهاز التنفسي، أدوية الجهاز الهضمي، مضادات التخثر، وحالات سريرية تطبيقية.",
+      }}
+      topics={topics}
+      hrefFor={(tp) => (tp as { href?: string }).href ?? `/pharmacology/${tp.id}`}
+    />
   );
 }
 
@@ -100,54 +63,19 @@ export default function PharmacologyTopicPage() {
       <div className="mx-auto max-w-lg px-4 py-16 text-center">
         <div className="text-6xl">❓</div>
         <h1 className="mt-3 text-2xl font-black dark:text-white">{isEn ? "Topic not found" : "الموضوع غير موجود"}</h1>
-        <Link to="/pharmacology" className="mt-4 inline-block rounded-full bg-emerald-600 px-6 py-2 font-bold text-white">{t("nav.pharmacology")}</Link>
+        <Link to="/pharmacology" className="mt-4 inline-block rounded-full bg-[#153448] px-6 py-2 font-bold text-white">{t("nav.pharmacology")}</Link>
       </div>
     );
   }
 
-  const title = isEn && topic.title_en ? topic.title_en : topic.title_ar;
-  const summary = isEn ? topic.summary_en : topic.summary_ar;
-
   return (
-    <div className="mx-auto max-w-3xl px-4 py-8">
-      <Breadcrumbs items={[{ label: t("nav.pharmacology"), path: "/pharmacology" }, { label: title }]} />
-
-      <div className="mb-6 text-center">
-        <div className="text-5xl">{topic.icon || "🧪"}</div>
-        <h1 className="mt-3 text-3xl font-black dark:text-white">{title}</h1>
-        {summary && <p className="mt-2 text-slate-500 dark:text-slate-400">{summary}</p>}
-      </div>
-
-      <div className="space-y-6">
-        {topic.sections.map((s, i) => {
-          const heading = isEn && s.heading_en ? s.heading_en : s.heading_ar;
-          const body = isEn && s.body_en ? s.body_en : s.body_ar;
-          return (
-            <section key={s.id || i} className={`${card} p-5`}>
-              <h2 className="mb-3 text-lg font-black text-emerald-600">{heading}</h2>
-              {s.image_url && (
-                <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
-              )}
-              <TopicBody body={body} accent="violet" />
-            </section>
-          );
-        })}
-      </div>
-
-      {topic.sources && topic.sources.length > 0 && (
-        <div className={`${card} mt-6 p-4 text-xs text-slate-400`}>
-          <div className="mb-1 font-bold text-slate-500 dark:text-slate-400">{isEn ? "Sources" : "المصادر"}</div>
-          <ul className="list-inside list-disc space-y-0.5">
-            {topic.sources.map((src, i) => <li key={i}>{src}</li>)}
-          </ul>
-        </div>
-      )}
-
-      <div className="mt-6 flex justify-center">
-        <Link to="/pharmacology" className="rounded-full border border-slate-200 px-6 py-2 font-bold dark:border-slate-700 dark:text-white">
-          {isEn ? "← Back to Pharmacology" : "← رجوع لقسم الفارماكولوجي"}
-        </Link>
-      </div>
-    </div>
+    <TopicSectionDetail
+      topic={topic}
+      sectionTitle={t("nav.pharmacology")}
+      basePath="/pharmacology"
+      tint={TINT}
+      fallbackIcon="🧪"
+      backLabel={{ en: "← Back to Pharmacology", ar: "← رجوع لقسم الفارماكولوجي" }}
+    />
   );
 }

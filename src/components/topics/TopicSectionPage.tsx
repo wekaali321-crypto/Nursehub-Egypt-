@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import TopicBody from "../TopicBody";
 import { useHubView } from "../HubGrid";
@@ -70,7 +70,7 @@ function Header({ crumbs, tint, children }: { crumbs: { label: string; to?: stri
 
 /** Hub page of a topic section: header, category chips, compact/cards list. */
 export function TopicSectionHome({
-  title, description, icon, tint, topics, hrefFor, fallbackIcon,
+  title, description, icon, tint, topics, hrefFor, fallbackIcon, hubTop, hubBottom,
 }: {
   title: string;
   description: { ar: string; en: string };
@@ -79,6 +79,10 @@ export function TopicSectionHome({
   topics: SectionTopic[] | null;
   hrefFor: (tp: SectionTopic) => string;
   fallbackIcon: string;
+  /** Optional section-specific content shown above the category chips (e.g. a quiz widget or a banner). */
+  hubTop?: ReactNode;
+  /** Optional section-specific content shown below the topic list (e.g. related sections). */
+  hubBottom?: ReactNode;
 }) {
   const { t, lang } = useI18n();
   const isEn = lang === "en";
@@ -107,6 +111,7 @@ export function TopicSectionHome({
       </Header>
 
       <div className="mx-auto max-w-6xl px-4 pt-5">
+        {hubTop}
         {categories.length > 1 && (
           <div className="-mx-4 mb-3 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:thin]" role="group" aria-label={isEn ? "Filter by category" : "تصفية حسب التصنيف"}>
             <button type="button" onClick={() => setCategory("all")} aria-pressed={category === "all"} className={chip(category === "all")}>{isEn ? "All" : "الكل"}</button>
@@ -177,6 +182,7 @@ export function TopicSectionHome({
             )}
           </>
         )}
+        {hubBottom}
       </div>
     </div>
   );
@@ -184,7 +190,7 @@ export function TopicSectionHome({
 
 /** Topic page of a topic section: header + one card per section + sources + back link. */
 export function TopicSectionDetail({
-  topic, sectionTitle, basePath, tint, fallbackIcon, backLabel,
+  topic, sectionTitle, basePath, tint, fallbackIcon, backLabel, detailTop, renderBody, sectionNav,
 }: {
   topic: SectionTopic;
   sectionTitle: string;
@@ -192,6 +198,12 @@ export function TopicSectionDetail({
   tint: TopicTint;
   fallbackIcon: string;
   backLabel: { ar: string; en: string };
+  /** Optional section-specific content shown above the section cards (e.g. a cross-link banner). */
+  detailTop?: ReactNode;
+  /** Optional custom renderer for a section body (defaults to TopicBody). */
+  renderBody?: (body: string, isEn: boolean) => ReactNode;
+  /** Numbered section headings + a sticky in-page navigation (anchors #tsec-N), for long multi-section topics. */
+  sectionNav?: boolean;
 }) {
   const { lang } = useI18n();
   const isEn = lang === "en";
@@ -212,17 +224,30 @@ export function TopicSectionDetail({
       </Header>
 
       <div className="mx-auto max-w-3xl px-4 pt-6">
+        {detailTop}
+        {sectionNav && topic.sections.length > 1 && (
+          <div className="sticky top-14 z-10 -mx-4 mb-4 flex gap-2 overflow-x-auto bg-[#F1F4F6]/90 px-4 py-2 backdrop-blur dark:bg-slate-950/90">
+            {topic.sections.map((s, i) => (
+              <a key={s.id || i} href={`#tsec-${i}`} className="shrink-0 rounded-full border border-[#168C91]/30 bg-white px-3 py-1 text-xs font-bold text-[#153448] transition hover:border-[#168C91] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">
+                {i + 1}. {isEn && s.heading_en ? s.heading_en : s.heading_ar}
+              </a>
+            ))}
+          </div>
+        )}
         <div className="space-y-4">
           {topic.sections.map((s, i) => {
             const heading = isEn && s.heading_en ? s.heading_en : s.heading_ar;
             const body = isEn && s.body_en ? s.body_en : s.body_ar;
             return (
-              <section key={s.id || i} className={`${card} border-s-4 border-s-[#168C91] p-4 sm:p-5`}>
-                <h2 className="mb-3 text-lg font-black text-[#153448] dark:text-white">{heading}</h2>
+              <section key={s.id || i} id={sectionNav ? `tsec-${i}` : undefined} className={`${card} border-s-4 border-s-[#168C91] p-4 sm:p-5 ${sectionNav ? "scroll-mt-28" : ""}`}>
+                <h2 className={`mb-3 text-lg font-black text-[#153448] dark:text-white ${sectionNav ? "flex items-center gap-2" : ""}`}>
+                  {sectionNav && <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#168C91] text-sm text-white">{i + 1}</span>}
+                  {heading}
+                </h2>
                 {s.image_url && (
                   <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
                 )}
-                <TopicBody body={body} accent="teal" />
+                {renderBody ? renderBody(body, isEn) : <TopicBody body={body} accent="teal" />}
               </section>
             );
           })}
