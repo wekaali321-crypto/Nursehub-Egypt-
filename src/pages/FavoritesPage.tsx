@@ -16,7 +16,7 @@ export default function FavoritesPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: lang === "ar" ? "المفضلة" : "Favorites" }]} />
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-rose-500 to-pink-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="text-4xl sm:text-5xl">❤️</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{lang === "ar" ? "مقالاتي المحفوظة" : "My Saved Articles"}</h1>
         <p className="mt-1 text-rose-50">{saved.length} {lang === "ar" ? "عنصر محفوظ" : "saved items"}</p>

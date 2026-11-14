@@ -31,7 +31,7 @@ export default function StorePage() {
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: bilingual("المتجر الرقمي", "Digital Store", lang).text }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <div className="mb-6 flex items-center justify-between rounded-3xl bg-gradient-to-l from-emerald-500 to-sky-500 p-8 text-white">
+      <div className="mb-6 flex items-center justify-between rounded-3xl nh-hero p-8 text-white">
         <div>
           <h1 className="text-3xl font-black">{t("store.heroTitle")}</h1>
           <p className="mt-1 text-sky-50">{t("store.heroDesc")}</p>
@@ -76,7 +76,7 @@ export default function StorePage() {
                 <div className="mt-1 text-xs text-slate-400">🛍 {p.sales} {t("store.purchases")}</div>
                 <div className="mt-3 flex gap-2">
                   <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); notify(t("store.addedToCart"), "success"); }} className="flex-1 rounded-full border border-sky-500 py-2.5 text-sm font-bold text-sky-500">{t("store.addToCart")}</button>
-                  <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); nav("/checkout"); }} className="flex-1 rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 py-2.5 text-sm font-bold text-white hover:opacity-90">{t("store.buyNow")}</button>
+                  <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); nav("/checkout"); }} className="flex-1 rounded-full bg-[#168C91] hover:bg-[#127378] py-2.5 text-sm font-bold text-white hover:opacity-90">{t("store.buyNow")}</button>
                 </div>
               </div>
             </div>

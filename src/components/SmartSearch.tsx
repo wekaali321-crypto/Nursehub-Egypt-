@@ -142,7 +142,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
         <form onSubmit={submit} className="flex items-center gap-2 rounded-full bg-white p-1.5 shadow-2xl shadow-sky-900/20">
           <span className="pr-3 text-xl text-slate-400">🔍</span>
           <input {...inputProps} placeholder={t("common.searchPlaceholder")} className="flex-1 bg-transparent text-slate-800 outline-none placeholder:text-slate-400" />
-          <button className="rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-5 py-2.5 font-bold text-white sm:px-7">{t("common.search")}</button>
+          <button className="rounded-full bg-[#168C91] hover:bg-[#127378] px-5 py-2.5 font-bold text-white sm:px-7">{t("common.search")}</button>
         </form>
       ) : (
         <form onSubmit={submit}>

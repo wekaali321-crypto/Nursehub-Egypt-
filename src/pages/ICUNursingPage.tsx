@@ -68,7 +68,7 @@ export function ICUNursingHome() {
     <div className="mx-auto max-w-6xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("nav.icuNursing") }]} />
 
-      <div className="mb-6 overflow-hidden rounded-3xl bg-gradient-to-l from-rose-600 via-red-500 to-orange-500 p-8 text-white shadow-lg">
+      <div className="mb-6 overflow-hidden rounded-3xl nh-hero p-8 text-white shadow-lg">
         <div className="text-5xl">🏥</div>
         <h1 className="mt-3 text-3xl font-black">{t("nav.icuNursing")}</h1>
         <p className="mt-2 max-w-2xl text-white/90">

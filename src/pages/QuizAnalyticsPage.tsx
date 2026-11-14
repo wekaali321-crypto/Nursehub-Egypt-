@@ -40,7 +40,7 @@ export default function QuizAnalyticsPage() {
     <div className="mx-auto max-w-4xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("nav.quizzes"), path: "/quizzes" }, { label: t("quiz.analyticsTitle") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-violet-500 to-purple-600 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="text-4xl sm:text-5xl">📊</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{t("quiz.analyticsTitle")}</h1>
         <p className="mt-1 text-violet-50">{t("quiz.analyticsSubtitle")}</p>

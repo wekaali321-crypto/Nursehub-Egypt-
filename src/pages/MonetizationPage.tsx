@@ -15,7 +15,7 @@ export default function MonetizationPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: "تحقيق الدخل" }]} />
-      <div className="mb-8 rounded-3xl bg-gradient-to-l from-amber-500 via-orange-500 to-emerald-500 p-8 text-white">
+      <div className="mb-8 rounded-3xl nh-hero p-8 text-white">
         <h1 className="text-3xl font-black">💵 مركز تحقيق الدخل</h1>
         <p className="mt-1 text-amber-50">كل قنوات الربح المدمجة في المنصة في مكان واحد</p>
       </div>

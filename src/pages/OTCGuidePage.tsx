@@ -82,7 +82,7 @@ export function OTCGuideHome() {
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="mx-auto max-w-5xl px-4 py-8">
       <Breadcrumbs items={[{ label: LABELS.drugsBreadcrumb[lang], path: "/drugs" }, { label: LABELS.breadcrumb[lang] }]} />
 
-      <div className="relative mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-teal-700 via-emerald-600 to-green-500 p-6 text-white shadow-lg sm:p-10">
+      <div className="relative mb-8 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-10">
         <span className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-white/10" />
         <span className="pointer-events-none absolute -bottom-16 -right-10 h-56 w-56 rounded-full bg-white/5" />
         <div className="relative">
@@ -243,7 +243,7 @@ export default function OTCConditionPage() {
         ]}
       />
 
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-teal-700 via-emerald-600 to-green-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="flex items-start justify-between gap-2">
           <div className="flex items-center gap-4">
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/15 text-3xl">

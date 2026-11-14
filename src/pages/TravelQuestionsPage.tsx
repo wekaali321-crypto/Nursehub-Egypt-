@@ -69,7 +69,7 @@ export function TravelQuestionsHome() {
     <div className="mx-auto max-w-5xl px-4 py-8" dir="rtl">
       <Breadcrumbs items={[{ label: 'أسئلة السفر للخارج' }]} />
 
-      <div className="mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-cyan-600 via-blue-600 to-indigo-700 p-6 text-white shadow-lg sm:p-8">
+      <div className="mb-8 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">✈️</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">أسئلة السفر للخارج للتمريض</h1>
         <p className="mt-1 text-blue-50">
@@ -171,7 +171,7 @@ function TravelReviewView({ category }: { category: TravelCategory }) {
     <div className="mx-auto max-w-6xl px-4 py-8" dir="rtl">
       <Breadcrumbs items={[{ label: 'أسئلة السفر للخارج', path: '/travel-questions' }, { label: category.name_ar }]} />
 
-      <div className="mb-6 mt-4 overflow-hidden rounded-3xl bg-gradient-to-l from-amber-500 via-orange-500 to-rose-500 p-6 text-white shadow-lg sm:p-8">
+      <div className="mb-6 mt-4 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">{category.icon}</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{category.name_ar}</h1>
         {category.name_en && <p className="mt-1 text-amber-50">{category.name_en}</p>}

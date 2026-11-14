@@ -458,7 +458,7 @@ export function Quiz({ d, ar }: { d: Disease; ar: boolean }) {
         ))}
       </div>
       {answered === d.quiz.length && (
-        <div className="mt-5 rounded-2xl bg-gradient-to-r from-teal-500 to-sky-500 p-4 text-center font-black text-white">
+        <div className="mt-5 rounded-2xl nh-hero p-4 text-center font-black text-white">
           {ar ? `نتيجتك: ${score} من ${d.quiz.length}` : `Your score: ${score}/${d.quiz.length}`} {score === d.quiz.length ? '🏆' : '👏'}
         </div>
       )}
@@ -614,7 +614,7 @@ export function DiseasePage() {
         })}
 
         {d.keyPoints && (
-          <section className="rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-600 p-5 text-white shadow-lg">
+          <section className="rounded-3xl nh-hero p-5 text-white shadow-lg">
             <h2 className="mb-3 text-xl font-black">⭐ {ar ? 'لو هتفتكر حاجات بس' : 'Remember these'}</h2>
             <ul className="space-y-2">
               {(ar ? d.keyPoints.ar : d.keyPoints.en?.length ? d.keyPoints.en : d.keyPoints.ar).map((k, i) => (

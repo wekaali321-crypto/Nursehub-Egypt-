@@ -70,7 +70,7 @@ export function RxPrescriptionsHome() {
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-5xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-emerald-600 to-teal-700 text-white p-6 mb-6">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-6">
         <div className="flex items-start justify-between gap-2 mb-1">
           <h1 className="text-2xl font-bold">{LABELS.title[lang]}</h1>
           <InlineLangToggle light />

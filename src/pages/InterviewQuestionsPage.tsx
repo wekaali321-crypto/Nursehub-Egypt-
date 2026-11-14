@@ -76,7 +76,7 @@ export default function InterviewQuestionsPage() {
       <Breadcrumbs items={[{ label: LABELS.breadcrumb[lang] }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
 
-      <div className="mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow-lg sm:p-8">
+      <div className="mb-8 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">🎙️</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{LABELS.heroTitle[lang]}</h1>
         <p className="mt-1 text-indigo-50">
@@ -156,7 +156,7 @@ export default function InterviewQuestionsPage() {
                 {relatedLabel && q.related_path && (
                   <Link
                     to={q.related_path}
-                    className="mt-3 inline-flex items-center gap-1 rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-4 py-1.5 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md"
+                    className="mt-3 inline-flex items-center gap-1 rounded-full bg-[#168C91] hover:bg-[#127378] px-4 py-1.5 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md"
                   >
                     {LABELS.learnMorePrefix[lang]} {relatedLabel} {LABELS.learnMoreSuffix[lang]} ←
                   </Link>

@@ -96,7 +96,7 @@ export function ERMedicationsHome() {
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-5xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-red-600 to-rose-700 text-white p-6 mb-6">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-6">
         <div className="flex items-start justify-between gap-2">
           <div>
             <h1 className="text-2xl font-bold mb-1">{LABELS.title[lang]}</h1>
@@ -180,7 +180,7 @@ export default function ERMedicationDetail() {
         </div>
       </div>
 
-      <div className="rounded-2xl bg-gradient-to-l from-red-600 to-rose-700 text-white p-6 mb-6">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-6">
         <h1 className="text-xl font-bold mb-1">{drugName}</h1>
         {item.concentration && <p className="opacity-90 text-sm">{item.concentration}</p>}
         {item.drug_class && <p className="opacity-80 text-xs mt-1">{bilingual(item.drug_class, item.drug_class_en, lang).text}</p>}

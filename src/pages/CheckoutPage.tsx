@@ -209,7 +209,7 @@ export default function CheckoutPage() {
             <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} /> {t("checkout.agreeTo")} <Link to="/terms" className="text-sky-500 underline">{t("footer.terms")}</Link>
           </label>
 
-          <button disabled={placing} className="w-full rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 py-3 font-bold text-white disabled:opacity-50">{placing ? t("checkout.placingOrder") : `${t("checkout.completePayment")} (${total} ${cur})`}</button>
+          <button disabled={placing} className="w-full rounded-full bg-[#168C91] hover:bg-[#127378] py-3 font-bold text-white disabled:opacity-50">{placing ? t("checkout.placingOrder") : `${t("checkout.completePayment")} (${total} ${cur})`}</button>
         </form>
 
         {/* Order summary */}

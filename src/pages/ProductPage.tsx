@@ -95,7 +95,7 @@ export default function ProductPage() {
           </div>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <button onClick={() => { addToCart(); nav("/checkout"); }} className="rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-8 py-3 font-bold text-white">{t("store.buyNow")}</button>
+            <button onClick={() => { addToCart(); nav("/checkout"); }} className="rounded-full bg-[#168C91] hover:bg-[#127378] px-8 py-3 font-bold text-white">{t("store.buyNow")}</button>
             <button onClick={addToCart} className="rounded-full border border-sky-500 px-6 py-3 font-bold text-sky-500">{t("store.addToCart")}</button>
           </div>
 

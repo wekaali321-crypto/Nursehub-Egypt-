@@ -96,7 +96,7 @@ export function CoursesHome() {
     <div className="mx-auto max-w-5xl px-4 py-8" dir={ar ? 'rtl' : 'ltr'}>
       <Breadcrumbs items={[{ label: ar ? 'الكورسات' : 'Courses' }]} />
 
-      <div className="mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-rose-600 via-red-600 to-orange-600 p-6 text-white shadow-lg sm:p-8">
+      <div className="mb-8 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">🎓</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{ar ? 'الكورسات' : 'Courses'}</h1>
         <p className="mt-1 text-rose-50">
@@ -194,7 +194,7 @@ export function CoursePage() {
     <div className="mx-auto max-w-4xl px-4 py-8" dir={ar ? 'rtl' : 'ltr'}>
       <Breadcrumbs items={[{ label: section.label(ar), path: section.path }, { label: titleOf(course, ar) }]} />
 
-      <div className="mb-6 overflow-hidden rounded-3xl bg-gradient-to-l from-rose-600 via-red-600 to-orange-600 p-6 text-white shadow-lg sm:p-8">
+      <div className="mb-6 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-8">
         <div className="text-4xl sm:text-5xl">{course.icon || '🎓'}</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{titleOf(course, ar)}</h1>
         <p className="mt-1 text-rose-50">{ar ? course.title_en : course.title_ar}</p>

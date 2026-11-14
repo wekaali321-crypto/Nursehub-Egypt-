@@ -123,7 +123,7 @@ export default function NotificationBell() {
           dir={ar ? "rtl" : "ltr"}
           className="fixed inset-x-3 top-16 z-[70] max-h-[75vh] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl sm:absolute sm:inset-x-auto sm:end-0 sm:top-12 sm:w-96 dark:border-slate-700 dark:bg-slate-900"
         >
-          <div className="flex items-center justify-between border-b border-slate-100 bg-gradient-to-l from-sky-500 to-emerald-500 px-4 py-3 text-white dark:border-slate-800">
+          <div className="flex items-center justify-between border-b border-slate-100 bg-[#153448] px-4 py-3 text-white dark:border-slate-800">
             <b>{ar ? "🔔 مركز الإشعارات" : "🔔 Notifications"}</b>
             <span className="flex items-center gap-3">
               {visible.length > 0 && (

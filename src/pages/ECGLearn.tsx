@@ -88,7 +88,7 @@ export default function ECGLearn() {
 
   return (
     <div className="space-y-4">
-      <div className="rounded-2xl bg-gradient-to-l from-sky-700 to-slate-800 p-5 text-white">
+      <div className="rounded-2xl nh-hero p-5 text-white">
         <h2 className="text-xl font-black sm:text-2xl">{state.intro.title}</h2>
         <p className="mt-1 text-sm text-sky-100">{state.intro.titleEn}</p>
       </div>

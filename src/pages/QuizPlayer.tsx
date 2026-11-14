@@ -170,7 +170,7 @@ export default function QuizPlayer() {
             ))}
           </div>
           <input value={userName} onChange={(e) => setUserName(e.target.value)} placeholder={t("quiz.namePlaceholder")} className="mx-auto mt-5 block w-full max-w-md rounded-lg border border-slate-200 px-3 py-2.5 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" />
-          <button onClick={start} className="mt-4 rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-10 py-3 font-bold text-white">{t("quiz.startBtn")}</button>
+          <button onClick={start} className="mt-4 rounded-full bg-[#168C91] hover:bg-[#127378] px-10 py-3 font-bold text-white">{t("quiz.startBtn")}</button>
         </div>
       </div>
     );
@@ -245,7 +245,7 @@ export default function QuizPlayer() {
         </div>
       </div>
       <div className="mb-4 h-2 w-full overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800">
-        <div className="h-full bg-gradient-to-l from-sky-500 to-emerald-500 transition-all" style={{ width: `${((current + 1) / quiz.questions.length) * 100}%` }} />
+        <div className="h-full bg-[#168C91] hover:bg-[#127378] transition-all" style={{ width: `${((current + 1) / quiz.questions.length) * 100}%` }} />
       </div>
 
       <div className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">

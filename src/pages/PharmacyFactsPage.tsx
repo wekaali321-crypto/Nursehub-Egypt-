@@ -34,7 +34,7 @@ export function PharmacyFactsHome() {
       <Breadcrumbs items={[{ label: t("drugs.title"), path: "/drugs" }, { label: t("facts.pageTitle") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
 
-      <div className="mb-8 rounded-3xl bg-gradient-to-l from-teal-700 via-emerald-600 to-teal-500 p-6 text-white shadow-lg sm:p-10">
+      <div className="mb-8 rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-10">
         <div className="text-5xl sm:text-6xl">📚</div>
         <h1 className="mt-3 text-2xl font-black sm:text-4xl">{t("facts.pageTitle")}</h1>
         <p className="mt-2 max-w-xl text-teal-50">{t("facts.desc")}</p>

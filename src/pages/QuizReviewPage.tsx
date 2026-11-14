@@ -47,7 +47,7 @@ export default function QuizReviewPage() {
     <div className="mx-auto max-w-3xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("nav.quizzes"), path: "/quizzes" }, { label: t("quiz.reviewTitle") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-amber-500 to-orange-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="text-4xl sm:text-5xl">🗂️</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{t("quiz.reviewTitle")}</h1>
         <p className="mt-1 text-amber-50">{t("quiz.reviewSubtitle")}</p>

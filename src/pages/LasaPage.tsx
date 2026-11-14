@@ -54,7 +54,7 @@ export default function LasaPage() {
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-green-600 to-emerald-700 text-white p-6 mb-8">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-8">
         <div className="flex items-start justify-between gap-2 mb-1">
           <h1 className="text-2xl font-bold">{LABELS.title[lang]}</h1>
           <InlineLangToggle light />

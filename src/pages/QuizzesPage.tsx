@@ -30,7 +30,7 @@ export default function QuizzesPage() {
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("nav.quizzes") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-sky-500 to-emerald-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="text-4xl sm:text-5xl">📝</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{t("quiz.pageTitle")}</h1>
         <p className="mt-1 text-sky-50">{t("quiz.pageDesc")}</p>
@@ -38,7 +38,7 @@ export default function QuizzesPage() {
 
       <Link
         to="/tests/licensure"
-        className="mb-6 flex items-center gap-4 rounded-2xl border border-indigo-100 bg-gradient-to-l from-sky-700 to-indigo-600 p-5 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-indigo-900"
+        className="mb-6 flex items-center gap-4 rounded-2xl border border-indigo-100 nh-hero p-5 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-indigo-900"
       >
         <div className="text-4xl">📜</div>
         <div className="flex-1">
@@ -50,7 +50,7 @@ export default function QuizzesPage() {
 
       <Link
         to="/tests/licensure/nursing-practice-exams"
-        className="mb-6 flex items-center gap-4 rounded-2xl border border-teal-100 bg-gradient-to-l from-teal-600 to-emerald-500 p-5 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-teal-900"
+        className="mb-6 flex items-center gap-4 rounded-2xl border border-teal-100 bg-[#168C91] p-5 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-teal-900"
       >
         <div className="text-4xl">📝</div>
         <div className="flex-1">
@@ -117,7 +117,7 @@ export default function QuizzesPage() {
                 <span>📊 {difficulty}</span>
               </div>
               {best && <div className="mt-2 text-xs font-bold text-emerald-500">{t("quiz.bestScore")}: {best.score}%</div>}
-              <Link to={`/quiz/${q.id}`} className="mt-4 rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 py-2.5 text-center font-bold text-white">{t("quiz.start")}</Link>
+              <Link to={`/quiz/${q.id}`} className="mt-4 rounded-full bg-[#168C91] hover:bg-[#127378] py-2.5 text-center font-bold text-white">{t("quiz.start")}</Link>
             </div>
           );
         })}

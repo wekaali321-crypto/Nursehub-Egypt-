@@ -105,7 +105,7 @@ export default function ClinicalProtocolDetail() {
       </div>
 
       {/* رأس البروتوكول */}
-      <div className="rounded-2xl bg-gradient-to-l from-teal-600 to-cyan-700 text-white p-6 mb-4">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-4">
         <div className="flex items-center gap-2 mb-1">
           <span className="text-3xl">{protocol.icon}</span>
           <div>

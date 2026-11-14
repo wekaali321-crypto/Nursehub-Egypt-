@@ -132,7 +132,7 @@ export default function OrganDoseAdjustmentsPage() {
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="max-w-3xl mx-auto px-4 py-8">
-      <div className="rounded-2xl bg-gradient-to-l from-amber-600 to-orange-700 text-white p-6 mb-4">
+      <div className="rounded-2xl nh-hero text-white p-6 mb-4">
         <div className="flex items-start justify-between gap-2 mb-1">
           <div className="flex items-center gap-2">
             <span className="text-2xl">🫘</span>

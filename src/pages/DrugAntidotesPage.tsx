@@ -43,7 +43,7 @@ export default function DrugAntidotesPage() {
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="mx-auto max-w-4xl px-4 py-8">
       <Breadcrumbs items={[{ label: LABELS.drugsBreadcrumb[lang], path: "/drugs" }, { label: LABELS.breadcrumb[lang] }]} />
 
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-emerald-600 to-teal-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="flex items-start justify-between gap-2">
           <div className="text-4xl sm:text-5xl">🧪</div>
           <InlineLangToggle light />

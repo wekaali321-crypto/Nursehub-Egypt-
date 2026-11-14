@@ -457,7 +457,7 @@ export function LabGuide({ d, ar }: { d: Disease; ar: boolean }) {
         })}
 
         {d.keyPoints && (
-          <section className="rounded-2xl bg-gradient-to-br from-teal-600 to-cyan-700 p-5 text-white shadow-lg">
+          <section className="rounded-2xl nh-hero p-5 text-white shadow-lg">
             <h2 className="mb-3 text-lg font-black">⭐ {ar ? 'خلاصة سريعة' : 'Quick summary'}</h2>
             <ul className="space-y-2">
               {(ar ? d.keyPoints.ar : d.keyPoints.en?.length ? d.keyPoints.en : d.keyPoints.ar).map((k, i) => (

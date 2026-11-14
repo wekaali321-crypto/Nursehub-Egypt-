@@ -109,7 +109,7 @@ function UserMenu() {
         {avatarUrl ? (
           <img src={avatarUrl} alt={displayName} className="h-full w-full object-cover" referrerPolicy="no-referrer" />
         ) : (
-          <span className="flex h-full w-full items-center justify-center bg-gradient-to-br from-sky-500 to-emerald-500 font-bold text-white">{initial}</span>
+          <span className="flex h-full w-full items-center justify-center bg-[#168C91] hover:bg-[#127378] font-bold text-white">{initial}</span>
         )}
       </button>
 
@@ -262,7 +262,7 @@ export default function Navbar() {
 
           <Link
             to="/admin"
-            className="hidden rounded-full bg-gradient-to-l from-sky-500 to-emerald-500 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-sky-500/25 hover:opacity-90 sm:block"
+            className="hidden rounded-full bg-[#168C91] hover:bg-[#127378] px-4 py-2 text-sm font-bold text-white shadow-lg shadow-[#168C91]/25 hover:opacity-90 sm:block"
           >
             {t("nav.admin")}
           </Link>

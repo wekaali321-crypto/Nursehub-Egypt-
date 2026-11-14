@@ -110,7 +110,7 @@ export function AppliedPharmHome() {
     <div className="mx-auto max-w-5xl px-4 py-8">
       <Breadcrumbs items={[{ label: LABELS.drugsCrumb[lang], path: "/drugs" }, { label: LABELS.bankCrumb[lang] }]} />
 
-      <div className="relative mb-8 overflow-hidden rounded-3xl bg-gradient-to-l from-indigo-700 via-violet-600 to-purple-500 p-6 text-white shadow-lg sm:p-10">
+      <div className="relative mb-8 overflow-hidden rounded-3xl nh-hero p-6 text-white shadow-lg sm:p-10">
         <span className="pointer-events-none absolute -left-10 -top-10 h-40 w-40 rounded-full bg-white/10" />
         <span className="pointer-events-none absolute -bottom-16 -right-10 h-56 w-56 rounded-full bg-white/5" />
         <div className="relative">
@@ -223,7 +223,7 @@ export function AppliedPharmTopicPage() {
         ]}
       />
 
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-indigo-700 via-violet-600 to-purple-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="flex items-start justify-between gap-2">
           <h1 className="text-2xl font-black sm:text-3xl">{topicTitle}</h1>
           <InlineLangToggle light />
@@ -308,7 +308,7 @@ export default function AppliedPharmPlanPage() {
         ]}
       />
 
-      <div className="mb-6 rounded-3xl bg-gradient-to-l from-blue-700 via-indigo-600 to-violet-500 p-6 text-white sm:p-8">
+      <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="flex items-start justify-between gap-2">
           <div className="text-4xl sm:text-5xl">🩺</div>
           <InlineLangToggle light />
