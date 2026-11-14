@@ -63,7 +63,8 @@ export default function DrugsListPage() {
     let tries = 0;
     let raf = 0;
     const go = () => {
-      window.scrollTo(0, saved.y);
+      // "instant": the site sets scroll-behavior:smooth, which would animate (and be restarted by) every retry.
+      window.scrollTo({ top: saved.y, left: 0, behavior: "instant" });
       const reached = Math.abs(window.scrollY - saved.y) < 4;
       if (!reached && tries++ < 40) raf = requestAnimationFrame(go);
       else clearSaved();
