@@ -65,6 +65,23 @@ export const SECTION_ART: Record<string, Record<string, string>> = {
     gi3: "peds-intussusception", ca3: "peds-ddh", nd4: "peds-hydrocephalus", pm2: "fun-pain-scale", pr2: "icu-ngt-measure",
     pr4: "fun-isolation", cpr2: "fa-child-infant-cpr", cpr3: "fa-choking",
   },
+  radiology: {
+    "chest-xray-normal-features/s1": "rad-cxr-normal", "chest-xray-pleural-abnormalities/s1": "rad-cxr-effusion",
+    "chest-xray-pleural-abnormalities/s2": "rad-cxr-pneumothorax", "chest-xray-pleural-abnormalities/s3": "rad-cxr-air-fluid",
+    "chest-xray-mediastinum-cardiac-diaphragm/s1": "rad-mediastinal-shift", "chest-xray-mediastinum-cardiac-diaphragm/s3": "rad-cxr-cardiomegaly",
+    "ct-brain-basics/s2": "rad-hounsfield", "radiation-safety/s1": "or-radiation",
+  },
+  "er-reception": {
+    t1: "er-triage-levels", su2: "or-needles", su6: "er-suture-techniques", su7: "fun-suture-removal",
+    f3: "er-fluid-compartments", st4: "icu-rule-of-nines",
+  },
+  pharmacology: {
+    "pharm-general-principles/g2": "pharm-adme", "pharm-general-principles/g5": "pharm-therapeutic-index",
+    "pharm-autonomic-adrenergic/ad1": "pharm-adrenergic-receptors", "pharm-autonomic-cholinergic/ch1": "pharm-cholinergic-receptors",
+    "pharm-diuretics/di1": "pharm-diuretic-sites", "pharm-antibiotics-protein-synthesis/ps1": "pharm-ribosome-targets",
+    "pharm-git-drugs/gi1": "pharm-acid-secretion", "pharm-mnemonics-memory-aids/mn23": "pharm-agonist-antagonist",
+    "pharm-routes-detailed/rd4": "fun-injection-angles", "pharm-dosage-calculations/d2": "icu-drip-rate",
+  },
 };
 
 /** `sectionArt` prop for TopicSectionDetail (keys: "<section id>" or, where ids repeat, "<topic id>/<section id>"). */

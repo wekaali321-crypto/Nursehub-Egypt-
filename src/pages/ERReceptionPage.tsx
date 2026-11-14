@@ -4,6 +4,7 @@ import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchERReceptionTopics, fetchERReceptionTopic, type ERReceptionTopic } from "../lib/erReceptionTopicsApi";
 import { cachedQuery, TTL } from "../lib/remoteCache";
+import { sectionArtFor } from "../lib/sectionArt";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Light red accent on top of the shared Navy/Teal section layout.
@@ -119,6 +120,7 @@ export default function ERReceptionTopicPage() {
       tint={TINT}
       fallbackIcon="🚨"
       backLabel={{ en: "← Back to Reception & Emergency", ar: "← رجوع لقسم الاستقبال والطوارئ" }}
+      sectionArt={sectionArtFor("er-reception")}
       detailTop={
         <Link
           to="/drugs/er-medications"

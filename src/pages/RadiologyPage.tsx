@@ -4,6 +4,7 @@ import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchRadiologyTopics, fetchRadiologyTopic, type RadiologyTopic } from "../lib/radiologyTopicsApi";
 import { cachedQuery, TTL } from "../lib/remoteCache";
+import { sectionArtFor } from "../lib/sectionArt";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Light indigo accent on top of the shared Navy/Teal section layout.
@@ -77,6 +78,7 @@ export default function RadiologyTopicPage() {
       tint={TINT}
       fallbackIcon="🩻"
       backLabel={{ en: "← Back to Radiology", ar: "← رجوع لقسم الأشعة" }}
+      sectionArt={sectionArtFor("radiology")}
     />
   );
 }

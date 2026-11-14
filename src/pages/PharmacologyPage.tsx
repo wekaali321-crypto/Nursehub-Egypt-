@@ -4,6 +4,7 @@ import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { fetchPharmacologyTopics, fetchPharmacologyTopic, type PharmacologyTopic } from "../lib/pharmacologyTopicsApi";
 import { cachedQuery, TTL } from "../lib/remoteCache";
+import { sectionArtFor } from "../lib/sectionArt";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Light emerald accent on top of the shared Navy/Teal section layout.
@@ -77,6 +78,7 @@ export default function PharmacologyTopicPage() {
       tint={TINT}
       fallbackIcon="🧪"
       backLabel={{ en: "← Back to Pharmacology", ar: "← رجوع لقسم الفارماكولوجي" }}
+      sectionArt={sectionArtFor("pharmacology")}
     />
   );
 }
