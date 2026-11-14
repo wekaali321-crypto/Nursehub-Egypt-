@@ -14,6 +14,7 @@ import PublicLayout from "./components/PublicLayout";
 import AdminLayout from "./admin/AdminLayout";
 import Login from "./admin/Login";
 import { SkeletonGrid } from "./components/Skeleton";
+import { useMaintenance } from "./lib/maintenance";
 
 // Public pages — code-split (default exports)
 const Home = lazy(() => import("./pages/Home"));
@@ -207,14 +208,14 @@ function Loader() {
   );
 }
 
-function MaintenanceScreen() {
+function MaintenanceScreen({ message, until: untilRaw }: { message?: string; until?: string }) {
   const { settings } = useStore();
-  const until = settings.maintenanceUntil ? new Date(settings.maintenanceUntil) : null;
+  const until = untilRaw ? new Date(untilRaw) : null;
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-sky-600 to-emerald-600 p-6 text-center text-white">
       <div className="text-7xl">🛠️</div>
       <h1 className="mt-4 text-3xl font-black md:text-4xl">{settings.siteName}</h1>
-      <p className="mt-3 max-w-lg text-lg text-sky-50">{settings.maintenanceMessage || "الموقع تحت الصيانة حالياً، سنعود قريباً."}</p>
+      <p className="mt-3 max-w-lg text-lg text-sky-50">{message || "الموقع تحت الصيانة حالياً، سنعود قريباً."}</p>
       {until && <p className="mt-4 rounded-full bg-white/15 px-5 py-2 text-sm font-bold backdrop-blur">العودة المتوقعة: {until.toLocaleString("ar-EG")}</p>}
       <a href="/admin" className="mt-6 text-sm underline opacity-80">دخول المشرفين</a>
     </div>
@@ -249,9 +250,19 @@ function PageSkeleton() {
  */
 function HydrationGate({ children, admin = false }: { children: ReactNode; admin?: boolean }) {
   const { loading, settings } = useStore();
-  const { loggedIn } = useAuth();
+  const { loggedIn, checking } = useAuth();
   const { pathname } = useLocation();
-  if (!loading && settings.maintenanceMode && !loggedIn) return <MaintenanceScreen />;
+  const maint = useMaintenance(); // own one-row check, started at boot: never waits for the store bundle
+  if (!admin && !loggedIn) {
+    // Remote flag (nh_settings) or, in local preview mode, the store's own settings.
+    const on = maint?.on || (!loading && settings.maintenanceMode);
+    if (on) {
+      if (checking) return <PageSkeleton />; // an admin's session may still be restoring: show nothing yet, not the page
+      return <MaintenanceScreen message={maint?.on ? maint.message : settings.maintenanceMessage} until={maint?.on ? maint.until : settings.maintenanceUntil} />;
+    }
+    // Until the flag is known, no page content (store-free pages included) is rendered: the shell + skeleton only.
+    if (maint === null) return <PageSkeleton />;
+  }
   if (loading) {
     const free = !admin && STORE_FREE_ROUTES.some((r) => matchPath({ path: r, end: true }, pathname));
     if (!free) return <PageSkeleton />;

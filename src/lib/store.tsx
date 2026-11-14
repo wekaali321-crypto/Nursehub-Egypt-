@@ -73,6 +73,7 @@ import { seedOTCConditions } from "./seedOTC";
 import { isSupabaseEnabled, supabase } from "./supabase";
 import { loadAllFromSupabase, failedTables, syncEntity, syncSettings, seedSupabase } from "./dataApi";
 import { cacheGet, cacheSet } from "./remoteCache";
+import { fetchMaintenance, saveMaintenance } from "./maintenance";
 
 const KEY = "nursehub_data_v1";
 
@@ -363,13 +364,17 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         /* ignore */
       }
       let remote: Awaited<ReturnType<typeof loadAllFromSupabase>> | null = isAdmin ? null : await cacheGet("public_bundle_v1", 3 * 3600 * 1000);
+      // Admin: the maintenance switch lives in nh_settings (not in the bundle); read it fresh so the admin panel shows the real state.
+      const maintP = isAdmin ? fetchMaintenance() : null;
       if (!remote) {
         remote = await loadAllFromSupabase(!isAdmin);
         if (!isAdmin && failedTables(remote).length === 0) void cacheSet("public_bundle_v1", remote); // never cache a partial bundle
       }
+      const maint = maintP ? await maintP : null;
       setDataState((prev) => {
         const merged = { ...prev, ...remote, ...loadUiConfig() } as DataShape;
         if (!remote.settings) merged.settings = prev.settings;
+        if (maint) merged.settings = { ...merged.settings, maintenanceMode: maint.on, maintenanceMessage: maint.message, maintenanceUntil: maint.until };
         prevRef.current = merged;
         return merged;
       });
@@ -424,6 +429,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         }
         if (data.settings !== prev.settings) {
           try { await syncSettings(data.settings); } catch (e) { console.error("sync settings failed", e); }
+          const a = data.settings, b = prev.settings;
+          if (!!a.maintenanceMode !== !!b.maintenanceMode || a.maintenanceMessage !== b.maintenanceMessage || a.maintenanceUntil !== b.maintenanceUntil) {
+            try { await saveMaintenance({ on: !!a.maintenanceMode, message: a.maintenanceMessage, until: a.maintenanceUntil }); }
+            catch (e) { console.error("sync maintenance failed", e); }
+          }
         }
         prevRef.current = data;
       })();
