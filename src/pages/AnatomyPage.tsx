@@ -14,6 +14,16 @@ const TINT: TopicTint = {
   text: "text-amber-700 dark:text-amber-300",
 };
 
+/** Teaching drawing per anatomy topic (public/cards/art, scripts/build-term-art.mjs): where the system is in the body. */
+const ART: Record<string, string> = {
+  "anat-terminology-planes": "planes", "anat-axial-skeleton": "axial", "anat-appendicular-joints": "appendicular",
+  "anat-muscular-system": "muscle", "anat-heart": "heart", "anat-blood-vessels": "vessels", "anat-respiratory": "respiratory",
+  "anat-digestive": "digestive", "anat-urinary": "urinary", "anat-brain": "brain", "anat-spinal-cord": "spine",
+  "anat-pns-cranial-nerves": "nerves", "anat-endocrine": "endocrine", "anat-reproductive": "uterus", "anat-integumentary": "skin",
+  "anat-eye-ear": "eyeEar", "anat-lymphatic-immune": "lymph", "anat-breast": "breast", "anat-surface-landmarks": "landmarks",
+};
+const artFor = (id: string) => (ART[id] ? `/cards/art/body-${ART[id]}.svg` : null);
+
 export function AnatomyHome() {
   const { t } = useI18n();
   useSEO({ title: `${t("nav.anatomy")} | NurseHub Egypt` });
@@ -36,6 +46,7 @@ export function AnatomyHome() {
       }}
       topics={topics}
       hrefFor={(tp) => (tp as { href?: string }).href ?? `/anatomy/${tp.id}`}
+      artFor={(tp) => artFor(tp.id)}
     />
   );
 }
@@ -77,6 +88,7 @@ export default function AnatomyTopicPage() {
       tint={TINT}
       fallbackIcon="🦴"
       backLabel={{ en: "← Back to Anatomy", ar: "← رجوع لقسم التشريح" }}
+      art={artFor(topic.id)}
     />
   );
 }

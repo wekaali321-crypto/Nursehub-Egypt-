@@ -33,3 +33,11 @@ test('every drawing a rule can return exists on disk', async () => {
   for (const n of new Set(names)) assert.ok(files.has(n), `missing public/cards/art/${n}.svg`);
   assert.ok(existsSync(join(ROOT, 'scripts/build-term-art.mjs')));
 });
+
+test('every Anatomy topic drawing exists on disk', async () => {
+  const src = (await import('node:fs')).readFileSync(join(ROOT, 'src/pages/AnatomyPage.tsx'), 'utf8');
+  const block = src.slice(src.indexOf('const ART'), src.indexOf('};', src.indexOf('const ART')));
+  const names = [...block.matchAll(/:\s*"(\w+)"/g)].map((m) => m[1]);
+  assert.ok(names.length >= 19, 'all 19 anatomy topics mapped');
+  for (const n of names) assert.ok(existsSync(join(ROOT, `public/cards/art/body-${n}.svg`)), `missing body-${n}.svg`);
+});

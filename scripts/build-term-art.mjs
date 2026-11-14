@@ -72,9 +72,25 @@ const organs = {
   mouthTeeth: `<path d="M71 39 H89 V44 Q80 48 71 44Z" fill="#fff" stroke="$T" stroke-width="2"/><path d="M75 39 V44 M80 39 V45 M85 39 V44" stroke="$T" stroke-width="1.2"/>`,
   throat: `<path d="M76 40 Q80 44 84 40 L84 60 L76 60Z" fill="$T" stroke="$N" stroke-width="1.2"/>`,
 };
+// Whole systems for the Anatomy section (several organs together) and a few anatomy-only drawings.
+const RED_ = RED;
+Object.assign(organs, {
+  respiratory: organs.trachea + organs.lungs,
+  digestive: organs.liver + organs.stomach + organs.intestine + `<path d="M80 46 V104" stroke="$T" stroke-width="3"/>`,
+  urinary: organs.kidneys + `<path d="M62 132 Q66 142 76 150 M98 132 Q94 142 84 150" stroke="$T" stroke-width="3"/>` + organs.bladder,
+  axial: organs.skull + organs.spine + organs.ribs,
+  appendicular: organs.bones + organs.joint,
+  endocrine: organs.thyroid + `<path d="M54 114 L60 104 L68 114Z M92 114 L100 104 L106 114Z" fill="$T" stroke="$N" stroke-width="1.2"/>` + `<path d="M76 120 Q90 116 100 120" stroke="$T" stroke-width="5"/>` + `<circle cx="80" cy="22" r="3.5" fill="$T"/>`,
+  eyeEar: organs.eye + organs.ear,
+  nerves: `<path d="M80 18 V150" stroke="$T" stroke-width="4"/><path d="M80 66 Q60 66 44 76 L32 140 M80 66 Q100 66 116 76 L128 140 M80 150 L62 236 M80 150 L98 236 M80 90 L56 98 M80 90 L104 98 M80 120 L58 126 M80 120 L102 126" stroke="$T" stroke-width="2"/><circle cx="80" cy="26" r="9" fill="$T"/>`,
+  lymph: `<path d="M80 58 V150" stroke="$T" stroke-width="1.6" stroke-dasharray="3 3"/>` + [[72, 56], [88, 56], [50, 72], [110, 72], [66, 148], [94, 148], [80, 100]].map(([x, y]) => `<circle cx="${x}" cy="${y}" r="4.5" fill="$T" stroke="$N" stroke-width="1.2"/>`).join('') + `<ellipse cx="108" cy="112" rx="4" ry="8" fill="$T" stroke="$N" stroke-width="1.2" transform="rotate(20 108 112)"/>`,
+  landmarks: [[42, 70, 'D'], [118, 70, 'D'], [33, 104, 'A'], [127, 104, 'A'], [56, 148, 'G'], [104, 148, 'G'], [56, 178, 'V'], [104, 178, 'V']]
+    .map(([x, y]) => `<circle cx="${x}" cy="${y}" r="5" fill="${RED_}" stroke="#fff" stroke-width="1.5"/>`).join(''),
+  planes: `<path d="M80 2 V248" stroke="$T" stroke-width="3" stroke-dasharray="8 5"/><path d="M14 120 H146" stroke="$N" stroke-width="3" stroke-dasharray="8 5"/><circle cx="80" cy="120" r="4" fill="$N"/>`,
+});
 // Small head / neck structures are drawn on the same body but shown zoomed on the head (still recognisable, readable on a card).
 const HEAD = [44, 2, 72, 66], NECK = [52, 8, 56, 64];
-const ZOOM = { brain: HEAD, eye: HEAD, ear: HEAD, nose: HEAD, mouth: HEAD, face: HEAD, skull: HEAD, mouthTeeth: HEAD, throat: NECK, thyroid: NECK, neck: NECK };
+const ZOOM = { brain: HEAD, eye: HEAD, ear: HEAD, nose: HEAD, mouth: HEAD, face: HEAD, skull: HEAD, mouthTeeth: HEAD, eyeEar: HEAD, throat: NECK, thyroid: NECK, neck: NECK };
 for (const [name, part] of Object.entries(organs)) {
   const z = ZOOM[name];
   const out = z
