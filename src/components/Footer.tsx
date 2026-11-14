@@ -94,6 +94,7 @@ export default function Footer() {
             <li><Link to="/faq" className="hover:text-teal-500">{t("footer.faq")}</Link></li>
             <li><Link to="/tools" className="hover:text-teal-500">{t("nav.tools")}</Link></li>
             <li><Link to="/shift" className="hover:text-teal-500">{t("nav.shift")}</Link></li>
+            <li><Link to="/cards" className="hover:text-teal-500">{t("nav.cards")}</Link></li>
             <li><Link to="/quizzes" className="hover:text-teal-500">{t("nav.quizzes")}</Link></li>
             <li><Link to="/login" className="hover:text-teal-500">{t("nav.login")}</Link></li>
             <li><Link to="/store" className="hover:text-teal-500">{t("nav.store")}</Link></li>

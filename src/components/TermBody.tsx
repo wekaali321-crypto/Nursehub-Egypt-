@@ -35,14 +35,14 @@ function enAr(head: string): { en: string; ar: string } {
   return m ? { en: m[1].trim(), ar: m[2].trim() } : { en: head.trim(), ar: "" };
 }
 
-type Item =
+export type TermItem =
   | { k: "term"; abbr?: string; en: string; ar: string; def: string }
   | { k: "chips"; label: string; pairs: { en: string; ar: string }[] }
   | { k: "note"; head: string; text: string }
   | { k: "p"; text: string };
 
-function parse(body: string): Item[] {
-  const out: Item[] = [];
+export function parseTermBody(body: string): TermItem[] {
+  const out: TermItem[] = [];
   for (const raw of body.split("\n")) {
     const line = raw.trim();
     if (!line) continue;
@@ -78,13 +78,13 @@ function parse(body: string): Item[] {
 const ltr = { direction: "ltr" as const, unicodeBidi: "isolate" as const };
 
 export default function TermBody({ body, isEn }: { body: string; isEn: boolean }) {
-  const items = useMemo(() => parse(body || ""), [body]);
+  const items = useMemo(() => parseTermBody(body || ""), [body]);
   const [hide, setHide] = useState(false);
   const [shown, setShown] = useState<Record<number, boolean>>({});
   const [q, setQ] = useState("");
   const terms = items.filter((i) => i.k === "term" || i.k === "chips").length;
   const ql = q.trim().toLowerCase();
-  const match = (i: Item) => {
+  const match = (i: TermItem) => {
     if (!ql) return true;
     return JSON.stringify(i).toLowerCase().includes(ql);
   };

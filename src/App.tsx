@@ -199,6 +199,7 @@ const ProductPage = lazy(() => import("./pages/ProductPage"));
 const FavoritesPage = lazy(() => import("./pages/FavoritesPage"));
 const OrderStatusPage = lazy(() => import("./pages/OrderStatusPage"));
 const ShiftPage = lazy(() => import("./pages/ShiftPage"));
+const CardsPage = lazy(() => import("./pages/CardsPage"));
 import { LoginPage, RegisterPage, ForgotPage } from "./pages/AuthPages";
 
 function Loader() {
@@ -225,7 +226,7 @@ function MaintenanceScreen({ message, until: untilRaw }: { message?: string; unt
 
 /** Public pages that fetch their own data (own API + static snapshot) and never read the store bundle. They render immediately. */
 const STORE_FREE_ROUTES = [
-  '/shift', '/anatomy', '/anatomy/:id', '/cases', '/courses', '/diseases', '/tools', '/interview-questions', '/travel-questions', '/travel-questions/:categoryId',
+  '/shift', '/cards', '/anatomy', '/anatomy/:id', '/cases', '/courses', '/diseases', '/tools', '/interview-questions', '/travel-questions', '/travel-questions/:categoryId',
   '/dialysis', '/dialysis/:id', '/er-reception', '/er-reception/:id', '/first-aid', '/first-aid/:id', '/fundamentals', '/fundamentals/:id',
   '/icu-nursing', '/icu-nursing/:id', '/obgyn', '/obgyn/:id', '/operating-room', '/operating-room/:id', '/pediatrics', '/pediatrics/:id',
   '/pharmacology', '/pharmacology/:id', '/radiology', '/radiology/:id', '/terminology', '/terminology/:id',
@@ -413,6 +414,7 @@ export default function App() {
                   <Route path="/search" element={<Public><SearchPage /></Public>} />
                   <Route path="/tools" element={<Public><ToolsPage /></Public>} />
                   <Route path="/shift" element={<Public><ShiftPage /></Public>} />
+                  <Route path="/cards" element={<Public><CardsPage /></Public>} />
                   <Route path="/ecg" element={<Public><ECGPage /></Public>} />
                   <Route path="/store" element={<Public><StorePage /></Public>} />
                   <Route path="/checkout" element={<Public><CheckoutPage /></Public>} />

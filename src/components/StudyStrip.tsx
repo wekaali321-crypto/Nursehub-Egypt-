@@ -4,23 +4,9 @@ import { fetchDiseaseIndex, loadRead, pick, type DiseaseIndexItem } from "../lib
 import { useI18n } from "../lib/i18n";
 import { Flame } from "lucide-react";
 import EmojiIcon from "./EmojiIcon";
+import { touchStreak } from "../lib/streak";
 
 const path = (i: DiseaseIndexItem) => (!i.target || i.target === "diseases" ? `/diseases/${i.id}` : `/guide/${i.id}`);
-
-/** Study streak kept on-device only (no server calls). */
-function touchStreak(): number {
-  try {
-    const today = new Date().toISOString().slice(0, 10);
-    const raw = JSON.parse(localStorage.getItem("nh_streak") || "null") as { last: string; n: number } | null;
-    if (raw?.last === today) return raw.n;
-    const y = new Date(Date.now() - 864e5).toISOString().slice(0, 10);
-    const n = raw?.last === y ? raw.n + 1 : 1;
-    localStorage.setItem("nh_streak", JSON.stringify({ last: today, n }));
-    return n;
-  } catch {
-    return 1;
-  }
-}
 
 export default function StudyStrip() {
   const { lang } = useI18n();
@@ -66,13 +52,13 @@ export default function StudyStrip() {
         </div>
       </div>
 
-      <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-3 text-white backdrop-blur">
+      <Link to="/cards" className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-3 text-white backdrop-blur transition hover:bg-white/15">
         <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#168C91]/40 text-amber-300"><Flame size={32} aria-hidden="true" /></div>
         <div>
           <div className="text-lg font-black">{streak} {ar ? (streak === 1 ? "يوم" : "أيام متتالية") : streak === 1 ? "day" : "days in a row"}</div>
-          <div className="text-xs font-bold text-slate-300">{ar ? "ادخل كل يوم وماتكسرش السلسلة" : "Come back daily to keep it going"}</div>
+          <div className="text-xs font-bold text-slate-300">{ar ? "راجع بطاقات النهارده وماتكسرش السلسلة ←" : "Review today's flashcards to keep it going →"}</div>
         </div>
-      </div>
+      </Link>
 
       {daily || last ? (
         <Link to={path(daily || last!)} className="group flex items-center gap-3 rounded-2xl bg-[#168C91] p-3 text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1aa0a6]">
