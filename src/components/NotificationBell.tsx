@@ -1,4 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { Bell, Trash2 } from "lucide-react";
+import EmojiIcon from "./EmojiIcon";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import { cacheGet, cacheSet } from "../lib/remoteCache";
@@ -113,7 +115,7 @@ export default function NotificationBell() {
         title={ar ? "الإشعارات" : "Notifications"}
         className="relative flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 sm:h-10 sm:w-10 dark:border-slate-700 dark:hover:bg-slate-800"
       >
-        🔔
+        <Bell size={18} aria-hidden="true" />
         {unread > 0 && (
           <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-500 px-1 text-[10px] font-bold text-white">{unread > 9 ? "9+" : unread}</span>
         )}
@@ -124,7 +126,7 @@ export default function NotificationBell() {
           className="fixed inset-x-3 top-16 z-[70] max-h-[75vh] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl sm:absolute sm:inset-x-auto sm:end-0 sm:top-12 sm:w-96 dark:border-slate-700 dark:bg-slate-900"
         >
           <div className="flex items-center justify-between border-b border-slate-100 bg-[#153448] px-4 py-3 text-white dark:border-slate-800">
-            <b>{ar ? "🔔 مركز الإشعارات" : "🔔 Notifications"}</b>
+            <b className="inline-flex items-center gap-1.5"><Bell size={16} aria-hidden="true" />{ar ? "مركز الإشعارات" : "Notifications"}</b>
             <span className="flex items-center gap-3">
               {visible.length > 0 && (
                 <button onClick={() => hide(visible.map((n) => n.id))} className="rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-bold hover:bg-white/30">{ar ? "مسح الكل" : "Clear all"}</button>
@@ -154,7 +156,7 @@ export default function NotificationBell() {
                   onKeyDown={(e) => e.key === "Enter" && go(n)}
                   className="flex w-full cursor-pointer items-start gap-3 border-b border-slate-100 px-4 py-3 text-start hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800/60"
                 >
-                  <span className="mt-0.5 text-xl">{KIND_ICON[n.kind || ""] || "🔔"}</span>
+                  <span className="mt-0.5 text-[#168C91]"><EmojiIcon emoji={KIND_ICON[n.kind || ""]} fallback="🔔" size={20} /></span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-sm font-black text-slate-900 dark:text-white">{(!ar && n.title_en) || n.title}</span>
                     {((!ar && n.body_en) || n.body) && <span className="mt-0.5 block text-xs leading-5 text-slate-600 dark:text-slate-300">{(!ar && n.body_en) || n.body}</span>}
@@ -166,7 +168,7 @@ export default function NotificationBell() {
                     title={ar ? "حذف" : "Delete"}
                     className="-m-1 shrink-0 rounded-full p-2 text-sm text-slate-500 dark:text-slate-400 hover:bg-rose-50 hover:text-rose-500 dark:hover:bg-rose-500/10"
                   >
-                    🗑
+                    <Trash2 size={16} aria-hidden="true" />
                   </button>
                 </div>
               ))

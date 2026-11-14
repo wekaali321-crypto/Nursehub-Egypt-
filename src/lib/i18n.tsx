@@ -60,7 +60,7 @@ const dict = {
   "nav.menu": { ar: "القائمة", en: "Menu" },
 
   // Home sections
-  "home.badge": { ar: "🏆 المنصة العربية الأولى لتعليم التمريض", en: "🏆 The #1 Nursing Education Platform" },
+  "home.badge": { ar: "المنصة العربية الأولى لتعليم التمريض", en: "The #1 Nursing Education Platform" },
   "home.heroDesc": { ar: "مقالات، ملخصات، أدوية، مهارات وأدوات حسابية في مكان واحد.", en: "Articles, summaries, drugs, skills & medical calculators in one place." },
   "home.browse": { ar: "تصفح المحتوى", en: "Browse Content" },
   "home.drugGuide": { ar: "دليل الأدوية", en: "Drug Guide" },
@@ -70,11 +70,11 @@ const dict = {
   "home.categoriesSub": { ar: "محتوى منظم حسب التخصص", en: "Content organized by specialty" },
   "home.latest": { ar: "أحدث المقالات", en: "Latest Articles" },
   "home.latestSub": { ar: "آخر ما تم نشره على المنصة", en: "Recently published" },
-  "home.popular": { ar: "🔥 أكثر المقالات قراءة", en: "🔥 Most Read" },
+  "home.popular": { ar: "أكثر المقالات قراءة", en: "Most Read" },
   "home.popularSub": { ar: "الأكثر مشاهدة بين القراء", en: "Most viewed by readers" },
-  "home.pdfs": { ar: "📄 آخر ملفات PDF والكتب", en: "📄 Latest PDFs & Books" },
+  "home.pdfs": { ar: "آخر ملفات PDF والكتب", en: "Latest PDFs & Books" },
   "home.pdfsSub": { ar: "حمّل أحدث الكتب والملخصات", en: "Download the newest books" },
-  "home.quizzes": { ar: "🧠 اختبر معلوماتك", en: "🧠 Test Your Knowledge" },
+  "home.quizzes": { ar: "اختبر معلوماتك", en: "Test Your Knowledge" },
   "home.quizzesSub": { ar: "اختبارات NCLEX و Prometric وبنوك أسئلة", en: "NCLEX, Prometric & MCQ banks" },
   "home.tools": { ar: "أدوات حسابية طبية", en: "Medical Calculators" },
   "home.toolsSub": { ar: "حاسبات احترافية تساعدك في عملك", en: "Professional calculators for your work" },
@@ -192,8 +192,8 @@ const dict = {
   "search.resultsFor": { ar: "نتائج البحث عن", en: "Search results for" },
   "search.resultWord": { ar: "نتيجة", en: "results" },
   "search.noResultsTryOther": { ar: "لا توجد نتائج مطابقة. جرب كلمات أخرى.", en: "No matching results. Try other keywords." },
-  "search.drugsHeading": { ar: "💊 الأدوية", en: "💊 Drugs" },
-  "search.articlesHeading": { ar: "📚 المقالات والكتب", en: "📚 Articles & Books" },
+  "search.drugsHeading": { ar: "الأدوية", en: "Drugs" },
+  "search.articlesHeading": { ar: "المقالات والكتب", en: "Articles & Books" },
   "search.viewAllResultsFor": { ar: "عرض كل النتائج عن", en: "View all results for" },
   "search.drugBadge": { ar: "دواء", en: "Drug" },
   "search.protocolBadge": { ar: "بروتوكول إكلينيكي", en: "Clinical Protocol" },
@@ -335,7 +335,7 @@ const dict = {
   "ecg.moreDetails": { ar: "+ تفاصيل أكتر", en: "+ More details" },
 
   // Store
-  "store.heroTitle": { ar: "🛒 المتجر الرقمي", en: "🛒 Digital Store" },
+  "store.heroTitle": { ar: "المتجر الرقمي", en: "Digital Store" },
   "store.heroDesc": { ar: "كتب، ملخصات، كورسات واشتراكات بأفضل الأسعار", en: "Books, summaries, courses & subscriptions at the best prices" },
   "store.cart": { ar: "🛒 السلة", en: "🛒 Cart" },
   "store.type.pdf": { ar: "ملف PDF", en: "PDF File" },
@@ -361,7 +361,7 @@ const dict = {
 
   // Checkout
   "checkout.pageTitle": { ar: "إتمام الشراء", en: "Checkout" },
-  "checkout.heading": { ar: "🛒 إتمام الشراء", en: "🛒 Checkout" },
+  "checkout.heading": { ar: "إتمام الشراء", en: "Checkout" },
   "checkout.customerData": { ar: "بيانات العميل", en: "Customer Details" },
   "checkout.fullName": { ar: "الاسم الكامل", en: "Full name" },
   "checkout.email": { ar: "البريد الإلكتروني", en: "Email address" },
@@ -463,7 +463,7 @@ const dict = {
   "lang.switch": { ar: "English", en: "العربية" },
 
   // Tools page
-  "tools.title": { ar: "🧮 الأدوات والحاسبات الطبية", en: "🧮 Medical Tools & Calculators" },
+  "tools.title": { ar: "الأدوات والحاسبات الطبية", en: "Medical Tools & Calculators" },
   "tools.sub": { ar: "حاسبات احترافية ومساعد ذكي لمساعدتك في عملك التمريضي", en: "Professional calculators & an AI assistant for your nursing work" },
   "tools.calc": { ar: "احسب", en: "Calculate" },
 
@@ -474,7 +474,7 @@ const dict = {
   "cat.protocolChecklists": { ar: "قوائم تحقق تفاعلية", en: "Interactive Checklists" },
   "cat.subcategories": { ar: "التصنيفات الفرعية", en: "Subcategories" },
   "cat.open": { ar: "افتح ←", en: "Open →" },
-  "search.title": { ar: "🔍 البحث المتقدم", en: "🔍 Advanced Search" },
+  "search.title": { ar: "البحث المتقدم", en: "Advanced Search" },
   "search.placeholder": { ar: "ابحث في المقالات، الكتب، الأدوية، المهارات...", en: "Search articles, books, drugs, skills..." },
   "search.results": { ar: "نتيجة", en: "results" },
 

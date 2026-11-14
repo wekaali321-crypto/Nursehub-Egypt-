@@ -1,4 +1,5 @@
 import { useState, type ReactNode } from "react";
+import EmojiIcon from "../EmojiIcon";
 import { Link } from "react-router-dom";
 import TopicBody from "../TopicBody";
 import { useHubView } from "../HubGrid";
@@ -101,7 +102,7 @@ export function TopicSectionHome({
     <div className="bg-[#F1F4F6] pb-12 dark:bg-slate-950">
       <Header crumbs={[{ label: title }]} tint={tint}>
         <div className="mt-4 flex items-center gap-4">
-          <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true">{icon}</span>
+          <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true"><EmojiIcon emoji={icon} size={30} /></span>
           <div className="min-w-0">
             <h1 className="text-2xl font-black leading-tight md:text-4xl">{title}</h1>
             {topics && <p className="mt-1 text-sm text-teal-200">{topics.length} {isEn ? "topics" : "موضوع"}</p>}
@@ -145,7 +146,7 @@ export function TopicSectionHome({
               <div className="grid grid-cols-[minmax(0,1fr)] gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {list.map((tp) => (
                   <Link key={tp.id} to={hrefFor(tp)} className="group flex items-center gap-3 rounded-xl border border-slate-200 border-s-4 border-s-[#168C91] bg-white px-3 py-2.5 transition hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-s-[#168C91] dark:bg-slate-900">
-                    <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg text-xl ${tint.tile}`} aria-hidden="true">{tp.icon || fallbackIcon}</span>
+                    <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg text-xl ${tint.tile}`} aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={20} /></span>
                     <span className="min-w-0 flex-1">
                       <span className="flex items-center justify-between gap-2">
                         <span className="line-clamp-2 text-sm font-black leading-5 text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{isEn && tp.title_en ? tp.title_en : tp.title_ar}</span>
@@ -164,7 +165,7 @@ export function TopicSectionHome({
                   return (
                     <Link key={tp.id} to={hrefFor(tp)} className="group overflow-hidden rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900">
                       <div className={`flex h-20 items-end justify-between p-4 ${tint.tile}`}>
-                        <span className="text-4xl" aria-hidden="true">{tp.icon || fallbackIcon}</span>
+                        <span className="text-4xl" aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={36} strokeWidth={1.75} /></span>
                         {tp.category && <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-black text-[#153448] dark:bg-slate-900/70 dark:text-slate-100">{tp.category}</span>}
                       </div>
                       <div className="p-4">
@@ -214,7 +215,7 @@ export function TopicSectionDetail({
     <div className="bg-[#F1F4F6] pb-12 dark:bg-slate-950">
       <Header crumbs={[{ label: sectionTitle, to: basePath }, { label: title }]} tint={tint}>
         <div className="mt-4 flex items-start gap-4">
-          <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true">{topic.icon || fallbackIcon}</span>
+          <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true"><EmojiIcon emoji={topic.icon} fallback={fallbackIcon} size={30} /></span>
           <div className="min-w-0">
             <h1 className="text-2xl font-black leading-tight md:text-4xl">{title}</h1>
             {summary && <p className="mt-2 text-sm leading-7 text-slate-200 md:text-base">{summary}</p>}

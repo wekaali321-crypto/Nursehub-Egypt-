@@ -1,4 +1,5 @@
 import { useI18n } from "../lib/i18n";
+import { Globe } from "lucide-react";
 
 export default function InlineLangToggle({ light = false }: { light?: boolean }) {
   const { lang, setLang } = useI18n();
@@ -9,7 +10,7 @@ export default function InlineLangToggle({ light = false }: { light?: boolean })
     : `${base} border border-slate-200 bg-white text-slate-600 hover:border-teal-300 hover:text-teal-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300`;
   return (
     <button onClick={() => setLang(lang === "ar" ? "en" : "ar")} className={cls}>
-      🌍 {lang === "ar" ? "EN" : "عربي"}
+      <Globe size={14} aria-hidden="true" /> {lang === "ar" ? "EN" : "عربي"}
     </button>
   );
 }

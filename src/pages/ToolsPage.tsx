@@ -3,6 +3,7 @@ import { Breadcrumbs } from "../components/common";
 import { useI18n } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
 import { useSEO } from "../lib/seo";
+import EmojiIcon from "../components/EmojiIcon";
 
 /**
  * Accordion-style card: only the tool's title/icon show by default; tapping
@@ -23,7 +24,7 @@ function Card({ title, icon, children, defaultOpen = false }: { title: string; i
         className="flex w-full items-center justify-between gap-2 p-5 text-right"
       >
         <span className="flex items-center gap-2 text-lg font-bold dark:text-white">
-          <span className="text-2xl" aria-hidden="true">{icon}</span>{title}
+          <span className="text-[#168C91] dark:text-teal-300" aria-hidden="true"><EmojiIcon emoji={icon} size={24} /></span>{title}
         </span>
         <span className={`shrink-0 text-slate-500 dark:text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true">▼</span>
       </button>

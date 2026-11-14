@@ -10,6 +10,7 @@ import StudyStrip from "../components/StudyStrip";
 import InstallAppButton from "../components/InstallAppButton";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
+import EmojiIcon from "../components/EmojiIcon";
 
 const DIFFICULTY_LABEL: Record<string, { ar: string; en: string }> = {
   "سهل": { ar: "سهل", en: "Easy" },
@@ -198,7 +199,7 @@ export default function Home() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {TOOL_PREVIEWS.map((tool) => (
             <Link key={tool.t} to="/tools" className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-[#F1F4F6] p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
-              <div className="text-3xl">{tool.i}</div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#168C91]/10 text-[#127378] dark:text-teal-300"><EmojiIcon emoji={tool.i} size={26} /></div>
               <div className="mt-2 font-bold dark:text-white">{lang === "en" ? tool.tEn : tool.t}</div>
               <div className="text-sm text-slate-600 dark:text-slate-400">{lang === "en" ? tool.dEn : tool.d}</div>
             </Link>

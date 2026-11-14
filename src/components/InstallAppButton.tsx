@@ -2,6 +2,7 @@ import { trackInstallEvent } from "../lib/siteTracker";
 import { useEffect, useState, type ReactNode } from "react";
 import { useI18n } from "../lib/i18n";
 import { detectInstallPlatform, isStandalone, usePwaInstall, type InstallPlatform } from "../lib/pwaInstall";
+import { Smartphone } from "lucide-react";
 
 const ShareIcon = () => (
   <svg viewBox="0 0 24 24" className="inline h-5 w-5 align-text-bottom" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
@@ -192,7 +193,7 @@ export default function InstallAppButton() {
         onClick={onClick}
         className="mx-auto mt-5 flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-black text-teal-700 dark:text-teal-300 shadow-lg transition hover:scale-105 hover:shadow-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-white/60 sm:text-base"
       >
-        <span className="text-xl" aria-hidden>📲</span>
+        <Smartphone size={20} aria-hidden="true" />
         {ar ? "حمّل الموقع كتطبيق على موبايلك" : "Install the site as an app"}
       </button>
       {isAndroid && <div className="mx-auto flex max-w-xs justify-center">{apkLink}</div>}
