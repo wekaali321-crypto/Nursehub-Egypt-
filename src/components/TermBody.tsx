@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { termArt } from "../lib/termArt";
 
 /** Splits at the first separator that is outside parentheses. */
 function splitTop(s: string, sep: string): [string, string] | null {
@@ -139,6 +140,7 @@ export default function TermBody({ body, isEn }: { body: string; isEn: boolean }
               </div>
             );
           const covered = hide && !shown[idx];
+          const art = it.abbr ? null : termArt(it.en);
           return (
             <div key={idx} onClick={() => hide && setShown((s) => ({ ...s, [idx]: !s[idx] }))}
               className={`flex gap-3 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition dark:border-slate-700 dark:bg-slate-900 ${hide ? "cursor-pointer" : ""}`}>
@@ -154,6 +156,7 @@ export default function TermBody({ body, isEn }: { body: string; isEn: boolean }
                 </div>
                 {it.def && <p className={`mt-1 text-[13px] leading-6 text-slate-600 transition dark:text-slate-400 ${covered ? "select-none blur-sm" : ""}`}>{it.def}</p>}
               </div>
+              {art && <img src={art} alt="" loading="lazy" decoding="async" onError={(e) => { e.currentTarget.style.display = "none"; }} className={`${/\/body-(?!brain|eye|ear|nose|mouth|face|skull|throat|thyroid|neck)/.test(art) ? "h-28 w-[4.5rem]" : "h-16 w-20"} shrink-0 self-center rounded-xl bg-white object-contain p-1 ring-1 ring-slate-200 transition dark:ring-slate-700 ${covered ? "blur-sm" : ""}`} />}
             </div>
           );
         })}

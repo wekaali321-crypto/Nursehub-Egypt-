@@ -7,6 +7,7 @@ import { loadOfflineJson } from "../lib/offlineFile";
 import { parseTermBody } from "../components/TermBody";
 import { buildSession, DAILY_GOAL, deckStats, doneToday, rate, type Rating } from "../lib/srs";
 import { touchStreak } from "../lib/streak";
+import { termArt } from "../lib/termArt";
 
 /**
  * Flashcards with spaced repetition (/cards). Decks are built in the browser from static files (no D1 / Supabase):
@@ -14,7 +15,7 @@ import { touchStreak } from "../lib/streak";
  * /shift/drugs-lite.json, look-alike names from /data/lasa_pairs.json. Progress, daily goal and streak stay on the device.
  */
 
-type Card = { id: string; front: string; frontSub?: string; back: string; backSub?: string; ltrFront?: boolean };
+type Card = { id: string; front: string; frontSub?: string; back: string; backSub?: string; ltrFront?: boolean; art?: string | null };
 type DeckId = "terms" | "abbr" | "drugs" | "lasa";
 type Deck = { id: DeckId; title: string; titleEn: string; icon: typeof Pill; cards: Card[] };
 
@@ -34,13 +35,13 @@ function buildDecks(terms: TermTopic[], drugs: LiteDrug[], lasa: Lasa[]): Deck[]
         if (it.k === "term" && it.en && it.ar) {
           const key = (it.abbr || it.en).toLowerCase();
           if (seen.has(key)) continue; seen.add(key);
-          const card: Card = { id: `t:${topic.id}:${key}`, front: it.abbr || it.en, frontSub: it.abbr ? it.en : undefined, back: it.ar, backSub: clip(it.def, 220), ltrFront: true };
+          const card: Card = { id: `t:${topic.id}:${key}`, front: it.abbr || it.en, frontSub: it.abbr ? it.en : undefined, back: it.ar, backSub: clip(it.def, 220), ltrFront: true, art: it.abbr ? null : termArt(it.en) };
           (it.abbr ? a : t).push(card);
         } else if (it.k === "chips") {
           for (const p of it.pairs) {
             const key = p.en.toLowerCase();
             if (!p.en || !p.ar || seen.has(key)) continue; seen.add(key);
-            t.push({ id: `t:${topic.id}:${key}`, front: p.en, back: p.ar, backSub: it.label, ltrFront: true });
+            t.push({ id: `t:${topic.id}:${key}`, front: p.en, back: p.ar, backSub: it.label, ltrFront: true, art: termArt(p.en) });
           }
         }
       }
@@ -177,6 +178,7 @@ function Session({ deck, ar, onExit }: { deck: Deck; ar: boolean; onExit: () => 
             ) : (
               <>
                 <div className="text-sm font-bold text-slate-500" dir={card.ltrFront ? "ltr" : "auto"}>{card.front}</div>
+                {card.art && <img key={card.art} src={card.art} alt="" decoding="async" onError={(e) => { e.currentTarget.style.display = "none"; }} className="mt-3 h-36 w-auto max-w-full rounded-2xl bg-white object-contain p-2 ring-1 ring-slate-200 dark:ring-slate-700" />}
                 <div className="mt-2 text-2xl font-black leading-snug text-[#153448] dark:text-white" dir="auto">{card.back}</div>
                 {card.backSub && <div className="mt-3 whitespace-pre-line text-sm leading-7 text-slate-700 dark:text-slate-300" dir="auto">{card.backSub}</div>}
               </>
