@@ -44,6 +44,14 @@ export const SECTION_ART: Record<string, Record<string, string>> = {
     ch1: "fa-choking", bc2: "fa-seep", bc3: "fa-pressure-points", bd2: "fa-burn-degrees", bd3: "icu-rule-of-nines", cs3: "fa-fast",
     sh2: "fa-shock-position", ni1: "fa-nosebleed", fr3: "fa-splint",
   },
+  fundamentals: {
+    "pressure-injury-causes-sites": "fun-pressure-sites", "body-positions": "anat-patient-positions", pulse: "anat-pulse-points",
+    "intradermal-subcutaneous": "fun-injection-angles", "intramuscular-intravenous": "anat-im-deltoid-vastus", "iv-cannula-basics": "fun-cannula-sizes",
+    "suture-removal-timing": "fun-suture-removal", "lumbar-puncture-procedure": "anat-lumbar-puncture", "oxygen-indications-delivery": "icu-oxygen-devices",
+    "transfusion-indications-blood-groups": "fun-blood-groups", "urinary-catheterization": "anat-catheter", "ng-tube-basics": "icu-ngt-measure",
+    "nursing-process-overview": "fun-adpie", "maslow-hierarchy-nursing": "fun-maslow", "hand-hygiene": "dial-five-moments",
+    "isolation-precaution-types": "fun-isolation", "pain-types-assessment": "fun-pain-scale", "immobility-risks-rom-exercises": "anat-joint-movements",
+  },
 };
 
 /** `sectionArt` prop for TopicSectionDetail (keys: "<section id>" or, where ids repeat, "<topic id>/<section id>"). */

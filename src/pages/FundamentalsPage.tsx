@@ -5,6 +5,7 @@ import { useI18n } from "../lib/i18n";
 import { fetchFundamentalsTopics, fetchFundamentalsTopic, type FundamentalsTopic } from "../lib/fundamentalsTopicsApi";
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
+import { sectionArtFor } from "../lib/sectionArt";
 
 // Light blue accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -77,6 +78,7 @@ export default function FundamentalsTopicPage() {
       tint={TINT}
       fallbackIcon="🛏️"
       backLabel={{ en: "← Back to Fundamentals of Nursing", ar: "← رجوع لقسم أسس التمريض" }}
+      sectionArt={sectionArtFor("fundamentals")}
     />
   );
 }
