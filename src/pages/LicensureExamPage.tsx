@@ -25,6 +25,7 @@ import {
   type ExamQuestion,
 } from '../lib/examLicensureApi';
 import { useSEO } from "../lib/seo";
+import ExamSimulator, { ExamProgressPanel, useExamMode } from "../components/ExamSimulator";
 
 // ---------------------------------------------------------------------------
 // Shared bits
@@ -82,6 +83,8 @@ export function LicensureExamsHome() {
         <h1 className="text-2xl font-bold mb-1">قسم الاختبارات</h1>
         <p className="text-white/80">Tests Section</p>
       </div>
+
+      <ExamProgressPanel group="licensure" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {topLevelCategories.map((cat) => (
@@ -196,6 +199,7 @@ export default function LicensureExamStudy() {
   const [answeredCorrectly, setAnsweredCorrectly] = useState<string[]>([]);
   const [answeredWrong, setAnsweredWrong] = useState<string[]>([]);
   const [showArabic, setShowArabic] = useState(false);
+  const { exam: examMode, switcher } = useExamMode();
 
   useEffect(() => {
     if (!examId) return;
@@ -217,6 +221,18 @@ export default function LicensureExamStudy() {
   if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
   if (!exam || questions.length === 0) {
     return <div className="p-6 text-slate-600 dark:text-slate-400">لا توجد أسئلة في هذا الامتحان بعد</div>;
+  }
+  if (examMode) {
+    return (
+      <div className="max-w-3xl mx-auto p-4 md:p-6" dir="rtl">
+        <BackLink to={`/tests/licensure/${categoryId ?? ''}`} label={exam.title_ar} />
+        {switcher}
+        <ExamSimulator
+          questions={questions.map((x) => ({ ...x, question_ar: x.question_ar ?? null, choices_ar: x.choices_ar ?? null }))}
+          bankKey={exam.id} group="licensure" title={exam.title_ar} path={`/tests/licensure/${categoryId ?? ''}/${exam.id}?mode=exam`}
+        />
+      </div>
+    );
   }
 
   const q = questions[index];
@@ -278,6 +294,7 @@ export default function LicensureExamStudy() {
   return (
     <div className="max-w-3xl mx-auto p-4 md:p-6" dir="rtl">
       <BackLink to={`/tests/licensure/${categoryId ?? ''}`} label={exam.title_ar} />
+      {switcher}
 
       <div className="flex items-center justify-between mb-2">
         <h1 className="text-lg font-bold text-slate-800 dark:text-white">{exam.title_ar}</h1>
