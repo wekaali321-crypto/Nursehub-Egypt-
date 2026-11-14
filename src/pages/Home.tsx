@@ -88,11 +88,13 @@ export default function Home() {
 
   const sections: Record<string, ReactElement> = {
     hero: (
-      <section key="hero" className="relative overflow-hidden bg-[#153448] text-white">
-        {/* خلفية: توهج تيل + شبكة خفيفة (بدون صور خارجية) */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.07] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
-        <div aria-hidden className="pointer-events-none absolute -top-24 end-[-6rem] h-80 w-80 rounded-full bg-[#168C91]/40 blur-3xl" />
-        <div aria-hidden className="pointer-events-none absolute bottom-0 start-[-6rem] h-64 w-64 rounded-full bg-[#168C91]/20 blur-3xl" />
+      <section key="hero" className="relative z-20 bg-[#153448] text-white">
+        {/* خلفية: توهج تيل + شبكة خفيفة (بدون صور خارجية). تُقصّ في غلافها الخاص حتى لا يُقصّ معها منسدل البحث. */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
+          <div className="absolute -top-24 end-[-6rem] h-80 w-80 rounded-full bg-[#168C91]/40 blur-3xl" />
+          <div className="absolute bottom-0 start-[-6rem] h-64 w-64 rounded-full bg-[#168C91]/20 blur-3xl" />
+        </div>
         <div className="relative mx-auto max-w-7xl px-4 pb-8 pt-8 sm:pt-12 md:pt-16">
           <div className="grid items-center gap-6 lg:grid-cols-[1.25fr_1fr] lg:gap-10">
             <div className="text-start">
