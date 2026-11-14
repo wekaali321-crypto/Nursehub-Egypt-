@@ -161,8 +161,19 @@ export async function loadAllFromSupabase(light = false): Promise<Partial<DataSh
     qq(TABLES.drugSuffixes), qq(TABLES.cardiacMedGroups), qq(TABLES.pharmMnemonics), qq(TABLES.pharmacyFacts), qq(TABLES.otcConditions), qq(TABLES.settings), qq(TABLES.orders),
   ]);
 
+  // A table whose query failed is left out of the result (the store keeps what it already has) and the bundle is marked partial,
+  // so one failing table neither blanks the site nor gets an empty list cached as if it were real data.
+  const named: Array<[string, any]> = [
+    ["articles", articles], ["comments", comments], ["media", media], ["products", products], ["users", users], ["pages", pages],
+    ["categories", categories], ["tags", tags], ["subscribers", subscribers], ["ads", ads], ["affiliates", affiliates], ["redirects", redirects],
+    ["activity", activity], ["drugs", drugs], ["drugInteractions", drugInteractions], ["drugAntidotes", drugAntidotes],
+    ["drugClassifications", drugClassifications], ["drugSuffixes", drugSuffixes], ["cardiacMedGroups", cardiacMedGroups],
+    ["pharmMnemonics", pharmMnemonics], ["pharmacyFacts", pharmacyFacts], ["otcConditions", otcConditions], ["settings", settings], ["orders", orders],
+  ];
+  const failed = named.filter(([, r]) => r && r.error).map(([k]) => k);
+
   const s = settings.data?.[0];
-  return {
+  const full = {
     articles: (articles.data ?? []).map(fromArticle),
     comments: (comments.data ?? []).map(fromComment),
     media: (media.data ?? []).map(fromMedia),
@@ -190,7 +201,14 @@ export async function loadAllFromSupabase(light = false): Promise<Partial<DataSh
       ? { siteName: s.site_name, tagline: s.tagline, metaDescription: s.meta_description, adsenseEnabled: s.adsense_enabled, adsenseClient: s.adsense_client }
       : undefined,
   };
+  const out: Record<string, unknown> = { ...full };
+  for (const k of failed) delete out[k];
+  if (failed.length) Object.defineProperty(out, "__failed", { value: failed, enumerable: false });
+  return out as Partial<DataShape>;
 }
+
+/** Tables that failed to load in the last bundle (empty when it was complete). */
+export const failedTables = (b: unknown): string[] => ((b as any)?.__failed as string[] | undefined) ?? [];
 
 /* ---------- Upsert helpers used by the store on every change ---------- */
 type Entity = keyof DataShape;

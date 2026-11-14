@@ -71,7 +71,7 @@ import {
 import { seedQuizzes, seedCustomTypes, seedHomeCategories, seedGateways, seedCoupons, defaultCommerce } from "./seed3";
 import { seedOTCConditions } from "./seedOTC";
 import { isSupabaseEnabled, supabase } from "./supabase";
-import { loadAllFromSupabase, syncEntity, syncSettings, seedSupabase } from "./dataApi";
+import { loadAllFromSupabase, failedTables, syncEntity, syncSettings, seedSupabase } from "./dataApi";
 import { cacheGet, cacheSet } from "./remoteCache";
 
 const KEY = "nursehub_data_v1";
@@ -365,7 +365,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       let remote: Awaited<ReturnType<typeof loadAllFromSupabase>> | null = isAdmin ? null : await cacheGet("public_bundle_v1", 3 * 3600 * 1000);
       if (!remote) {
         remote = await loadAllFromSupabase(!isAdmin);
-        if (!isAdmin) void cacheSet("public_bundle_v1", remote);
+        if (!isAdmin && failedTables(remote).length === 0) void cacheSet("public_bundle_v1", remote); // never cache a partial bundle
       }
       setDataState((prev) => {
         const merged = { ...prev, ...remote, ...loadUiConfig() } as DataShape;
