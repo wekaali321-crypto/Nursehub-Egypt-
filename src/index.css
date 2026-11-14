@@ -423,11 +423,9 @@ body {
 /* ============================================================
    Clinical Cases (الحالات السريرية)
    ============================================================ */
-.cs-hero { background: radial-gradient(1200px 400px at 90% -10%, rgba(255,255,255,.25), transparent), linear-gradient(135deg, #0ea5e9 0%, #6366f1 55%, #a855f7 100%); }
-.dz-hero { background: radial-gradient(1200px 400px at 90% -10%, rgba(255,255,255,.25), transparent), linear-gradient(135deg, #0d9488 0%, #0ea5e9 55%, #6366f1 100%); }
 
 /* Shared page hero (Navy/Teal identity). Pure CSS so any hero container can adopt it by class name. */
-.nh-hero {
+.nh-hero, .cs-hero, .dz-hero {
   position: relative;
   background-color: #153448;
   background-image:
