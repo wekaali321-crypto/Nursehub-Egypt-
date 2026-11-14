@@ -250,9 +250,12 @@ export default function DrugsHubPage() {
 
   return (
     <div dir={lang === "ar" ? "rtl" : "ltr"} className="bg-[#F1F4F6] pb-12 dark:bg-slate-950">
-      <header className="relative overflow-hidden bg-[#153448] text-white">
-        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
-        <div aria-hidden className="pointer-events-none absolute -top-20 end-[-5rem] h-64 w-64 rounded-full bg-[#168C91]/40 blur-3xl" />
+      {/* No overflow-hidden on the header itself: the search dropdown must be able to extend below it. The decorative layers are clipped in their own wrapper. */}
+      <header className="relative z-20 bg-[#153448] text-white">
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
+          <div className="absolute -top-20 end-[-5rem] h-64 w-64 rounded-full bg-[#168C91]/40 blur-3xl" />
+        </div>
         <div className="relative mx-auto max-w-5xl px-4 pb-6 pt-4 md:pb-8 md:pt-6">
           <div className="flex items-start justify-between gap-3">
             <nav aria-label="Breadcrumb" className="text-xs text-slate-300 sm:text-sm">
