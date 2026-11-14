@@ -4,6 +4,7 @@ import { Calculator, CircleCheck, CircleHelp, CircleX, CloudOff, Droplet, Pill, 
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { normalizeSearch } from "../lib/drugsListSearch";
+import { drugPhoneticKeys, phoneticKey, phoneticScore } from "../lib/phonetic";
 import { loadOfflineJson } from "../lib/offlineFile";
 import { DoseRateCalculator, Dosage, IVDrip, PediatricDose } from "./ToolsPage";
 import EmojiIcon from "../components/EmojiIcon";
@@ -109,7 +110,7 @@ export default function ShiftPage() {
         <nav className="mx-auto flex max-w-3xl gap-2 overflow-x-auto px-4 py-2.5" aria-label={tx(L.title)}>
           {tabs.map(({ id, icon: I }) => (
             <button key={id} onClick={() => setTab(id)} aria-pressed={tab === id}
-              className={`flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-4 text-sm font-black transition ${tab === id ? "bg-[#153448] text-white" : "bg-white text-[#153448] ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700"}`}>
+              className={`flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-4 text-sm font-black transition ${tab === id ? "bg-[#153448] text-white dark:bg-[#168C91]" : "bg-white text-[#153448] ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700"}`}>
               <I size={18} aria-hidden="true" />{tx(L.tabs[id])}
             </button>
           ))}
@@ -154,12 +155,17 @@ function SearchBox({ value, onChange, placeholder }: { value: string; onChange: 
 function DrugsTab({ drugs, ar, tx }: { drugs: LiteDrug[] | null; ar: boolean; tx: (o: { ar: string; en: string }) => string }) {
   const [q, setQ] = useState("");
   const [open, setOpen] = useState<string | null>(null);
-  const index = useMemo(() => (drugs ?? []).map((d) => ({ d, key: normalizeSearch([d.n, d.ne, d.g, d.ge, d.c, d.ce].filter(Boolean).join(" | ")), name: normalizeSearch([d.n, d.ne].filter(Boolean).join(" ")) })), [drugs]);
+  const index = useMemo(() => (drugs ?? []).map((d) => ({ d, key: normalizeSearch([d.n, d.ne, d.g, d.ge, d.c, d.ce].filter(Boolean).join(" | ")), name: normalizeSearch([d.n, d.ne].filter(Boolean).join(" ")), phon: drugPhoneticKeys([d.n, d.ne, d.g, d.ge]) })), [drugs]);
   const results = useMemo(() => {
     const n = normalizeSearch(q);
     if (!n) return index.filter((x) => x.d.h).map((x) => x.d).slice(0, 12); // nothing typed: show the high-alert drugs first
     const starts = index.filter((x) => x.name.split(" ").some((w) => w.startsWith(n)));
     const rest = index.filter((x) => !starts.includes(x) && x.key.includes(n));
+    if (starts.length + rest.length === 0) {
+      // sound-alike: "باراسيتامول" → Paracetamol, "ceftriaxon" → Ceftriaxone
+      const qk = phoneticKey(q);
+      return index.map((x) => ({ x, s: phoneticScore(qk, x.phon) })).filter((h) => h.s > 0).sort((a, b) => b.s - a.s).slice(0, 30).map((h) => h.x.d);
+    }
     return [...starts, ...rest].slice(0, 30).map((x) => x.d);
   }, [index, q]);
 

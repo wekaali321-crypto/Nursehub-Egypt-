@@ -8,6 +8,7 @@ import { CAT_KEY } from "./common";
 import { useI18n, bilingual } from "../lib/i18n";
 import { logSearch } from "../lib/analytics";
 import { useExtraSearchIndex } from "../lib/searchIndex";
+import { drugPhoneticKeys, phoneticKey, phoneticScore } from "../lib/phonetic";
 
 interface Suggestion {
   label: string;
@@ -37,8 +38,11 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
       .filter((a) => a.status === "published" && [a.title, a.titleEn, a.excerpt, a.content, a.contentEn, ...a.tags].filter(Boolean).join(" ").toLowerCase().includes(lower))
       .slice(0, 5)
       .map((a) => ({ label: bilingual(a.title, a.titleEn, lang).text, sub: t(CAT_KEY[a.category]), to: `/article/${a.slug}`, icon: a.category === "books" ? "📖" : "📝" }));
-    const fromDrugs: Suggestion[] = drugs
-      .filter((d) => (d.name + d.genericName + d.drugClass + d.indications).toLowerCase().includes(lower))
+    const direct = drugs.filter((d) => (d.name + d.genericName + d.drugClass + d.indications).toLowerCase().includes(lower));
+    const qk = direct.length ? "" : phoneticKey(q);
+    const fromDrugs: Suggestion[] = (direct.length ? direct : drugs
+      .map((d) => ({ d, s: phoneticScore(qk, drugPhoneticKeys([d.name, d.nameEn, d.genericName, d.genericNameEn])) }))
+      .filter((h) => h.s > 0).sort((a, b) => b.s - a.s).map((h) => h.d))
       .slice(0, 3)
       .map((d) => ({ label: bilingual(d.name, d.nameEn, lang).text, sub: `${t("search.drugBadge")} • ${bilingual(d.category, d.categoryEn, lang).text}`, to: `/drug/${d.slug}`, icon: "💊" }));
     const fromIcu: Suggestion[] = icuTopics

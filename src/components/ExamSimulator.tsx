@@ -90,7 +90,7 @@ function Setup({ total, saved, onResume, onDiscard, onStart }: { total: number; 
         <div className="mt-4 text-sm font-black text-slate-700 dark:text-slate-300">عدد الأسئلة</div>
         <div className="mt-2 flex flex-wrap gap-2">
           {[...options, total].map((v) => (
-            <button key={v} onClick={() => setN(v)} aria-pressed={n === v} className={`min-h-11 rounded-full px-4 text-sm font-black ${n === v ? "bg-[#153448] text-white" : "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200"}`}>
+            <button key={v} onClick={() => setN(v)} aria-pressed={n === v} className={`min-h-11 rounded-full px-4 text-sm font-black ${n === v ? "bg-[#153448] text-white dark:bg-[#168C91]" : "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200"}`}>
               {v === total ? `الكل (${total})` : v}
             </button>
           ))}
@@ -136,7 +136,7 @@ function ExamRun({ s, byId, onChange, onFinish }: { s: Session; byId: Map<string
     <div className="space-y-3">
       <div className="sticky top-16 z-20 -mx-4 flex items-center justify-between gap-2 border-b border-slate-200 bg-[#F1F4F6]/95 px-4 py-2 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95">
         <span className="text-sm font-black text-[#153448] dark:text-white">سؤال {s.index + 1} / {s.order.length}</span>
-        {left !== null && <span className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-black tabular-nums ${left < 60 ? "bg-red-600 text-white" : "bg-[#153448] text-white"}`} role="timer" aria-live="off"><Clock size={16} aria-hidden="true" />{fmt(Math.max(0, left))}</span>}
+        {left !== null && <span className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-black tabular-nums ${left < 60 ? "bg-red-600 text-white" : "bg-[#153448] text-white dark:bg-[#168C91]"}`} role="timer" aria-live="off"><Clock size={16} aria-hidden="true" />{fmt(Math.max(0, left))}</span>}
         <button onClick={() => setGrid((g) => !g)} className="inline-flex min-h-10 items-center gap-1 rounded-full bg-white px-3 text-xs font-black text-[#153448] ring-1 ring-slate-200 dark:bg-slate-900 dark:text-white dark:ring-slate-700" aria-expanded={grid}><ListChecks size={16} aria-hidden="true" />{answered}/{s.order.length}</button>
       </div>
       <div className="h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"><div className="h-full bg-[#168C91] transition-all" style={{ width: `${(answered / s.order.length) * 100}%` }} /></div>
@@ -295,7 +295,7 @@ export function useExamMode() {
   const switcher = (
     <div className="mb-4 grid grid-cols-2 gap-1 rounded-full bg-slate-200/70 p-1 dark:bg-slate-800" role="tablist" aria-label="طريقة المذاكرة">
       <button role="tab" aria-selected={!exam} onClick={() => set(false)} className={`min-h-11 rounded-full text-sm font-black ${!exam ? "bg-white text-[#153448] shadow dark:bg-slate-900 dark:text-white" : "text-slate-600 dark:text-slate-300"}`}>مذاكرة (إجابة فورية)</button>
-      <button role="tab" aria-selected={exam} onClick={() => set(true)} className={`inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full text-sm font-black ${exam ? "bg-[#153448] text-white shadow" : "text-slate-600 dark:text-slate-300"}`}><Timer size={16} aria-hidden="true" />محاكي امتحان</button>
+      <button role="tab" aria-selected={exam} onClick={() => set(true)} className={`inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full text-sm font-black ${exam ? "bg-[#153448] text-white shadow dark:bg-[#168C91]" : "text-slate-600 dark:text-slate-300"}`}><Timer size={16} aria-hidden="true" />محاكي امتحان</button>
     </div>
   );
   return { exam, switcher };

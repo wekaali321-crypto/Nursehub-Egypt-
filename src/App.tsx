@@ -15,6 +15,7 @@ import AdminLayout from "./admin/AdminLayout";
 import Login from "./admin/Login";
 import { SkeletonGrid } from "./components/Skeleton";
 import { useMaintenance } from "./lib/maintenance";
+import { installLinkPrefetch } from "./lib/prefetch";
 
 // Public pages — code-split (default exports)
 const Home = lazy(() => import("./pages/Home"));
@@ -304,6 +305,7 @@ function SiteTracker() {
     trackPageview(pathname + search);
   }, [pathname, search]);
   useEffect(() => startHeartbeat(() => window.location.pathname), []);
+  useEffect(() => installLinkPrefetch(), []);
   useEffect(() => { const t = window.setTimeout(() => void syncPushSubscription(), 4000); return () => window.clearTimeout(t); }, []);
   return null;
 }
