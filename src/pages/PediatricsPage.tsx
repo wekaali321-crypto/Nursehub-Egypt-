@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchPediatricTopics, type PediatricTopic } from "../lib/pediatricTopicsApi";
+import { fetchPediatricTopics, fetchPediatricTopic, type PediatricTopic } from "../lib/pediatricTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 import PediatricsQuizWidget from "../components/PediatricsQuizWidget";
 
@@ -21,7 +22,7 @@ export function PediatricsHome() {
   const [topics, setTopics] = useState<PediatricTopic[] | null>(null);
 
   useEffect(() => {
-    fetchPediatricTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_pediatric_routed", TTL.topics, () => fetchPediatricTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -49,8 +50,8 @@ export default function PediatricsTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchPediatricTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchPediatricTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);

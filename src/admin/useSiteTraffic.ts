@@ -19,8 +19,8 @@ export type TrafficStats = {
   top_pages_30d: { path: string; views: number; visitors: number }[];
 };
 
-/** Real visitor numbers from admin_site_stats(), refreshed every few seconds while the tab is visible. */
-export function useSiteTraffic(intervalMs = 10_000) {
+/** Real visitor numbers from admin_site_stats(), refreshed every minute while the tab is visible (each refresh runs several D1 queries). */
+export function useSiteTraffic(intervalMs = 60_000) {
   const [stats, setStats] = useState<TrafficStats | null>(null);
   const [error, setError] = useState("");
 

@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchDialysisTopics, type DialysisTopic } from "../lib/dialysisTopicsApi";
+import { fetchDialysisTopics, fetchDialysisTopic, type DialysisTopic } from "../lib/dialysisTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Light sky accent on top of the shared Navy/Teal section layout.
@@ -20,7 +21,7 @@ export function DialysisHome() {
   const [topics, setTopics] = useState<DialysisTopic[] | null>(null);
 
   useEffect(() => {
-    fetchDialysisTopics().then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_dialysis", TTL.topics, () => fetchDialysisTopics()).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -47,8 +48,8 @@ export default function DialysisTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchDialysisTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchDialysisTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);

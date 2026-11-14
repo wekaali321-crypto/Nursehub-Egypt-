@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchFundamentalsTopics, type FundamentalsTopic } from "../lib/fundamentalsTopicsApi";
+import { fetchFundamentalsTopics, fetchFundamentalsTopic, type FundamentalsTopic } from "../lib/fundamentalsTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Light blue accent on top of the shared Navy/Teal section layout.
@@ -20,7 +21,7 @@ export function FundamentalsHome() {
   const [topics, setTopics] = useState<FundamentalsTopic[] | null>(null);
 
   useEffect(() => {
-    fetchFundamentalsTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_fundamentals_routed", TTL.topics, () => fetchFundamentalsTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -47,8 +48,8 @@ export default function FundamentalsTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchFundamentalsTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchFundamentalsTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);

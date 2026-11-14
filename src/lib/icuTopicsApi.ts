@@ -30,6 +30,14 @@ export async function fetchIcuTopics(opts?: { withRouted?: boolean }): Promise<I
   return opts?.withRouted ? [...rows, ...(await routedAsTopics<IcuTopic>("icu-nursing"))] : rows;
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchIcuTopic(id: string): Promise<IcuTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("icu_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as IcuTopic | null) ?? null;
+}
+
 export async function upsertIcuTopic(item: IcuTopic) {
   const { error } = await supabase.from("icu_topics").upsert(item);
   if (error) throw error;

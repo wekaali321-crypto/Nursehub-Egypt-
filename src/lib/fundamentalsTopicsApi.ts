@@ -30,6 +30,14 @@ export async function fetchFundamentalsTopics(opts?: { withRouted?: boolean }): 
   return opts?.withRouted ? [...rows, ...(await routedAsTopics<FundamentalsTopic>("fundamentals"))] : rows;
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchFundamentalsTopic(id: string): Promise<FundamentalsTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("fundamentals_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as FundamentalsTopic | null) ?? null;
+}
+
 export async function upsertFundamentalsTopic(item: FundamentalsTopic) {
   const { error } = await supabase.from("fundamentals_topics").upsert(item);
   if (error) throw error;

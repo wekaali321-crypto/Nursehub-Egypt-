@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchFirstAidTopics, type FirstAidTopic } from "../lib/firstAidTopicsApi";
+import { fetchFirstAidTopics, fetchFirstAidTopic, type FirstAidTopic } from "../lib/firstAidTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Light rose accent on top of the shared Navy/Teal section layout.
@@ -20,7 +21,7 @@ export function FirstAidHome() {
   const [topics, setTopics] = useState<FirstAidTopic[] | null>(null);
 
   useEffect(() => {
-    fetchFirstAidTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_first_aid_routed", TTL.topics, () => fetchFirstAidTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -47,8 +48,8 @@ export default function FirstAidTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchFirstAidTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchFirstAidTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);

@@ -28,6 +28,14 @@ export async function fetchNicuTopics(): Promise<NicuTopic[]> {
   return data as NicuTopic[];
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchNicuTopic(id: string): Promise<NicuTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("nicu_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as NicuTopic | null) ?? null;
+}
+
 export async function upsertNicuTopic(item: NicuTopic) {
   const { error } = await supabase.from("nicu_topics").upsert(item);
   if (error) throw error;

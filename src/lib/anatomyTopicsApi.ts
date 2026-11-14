@@ -30,6 +30,14 @@ export async function fetchAnatomyTopics(opts?: { withRouted?: boolean }): Promi
   return opts?.withRouted ? [...rows, ...(await routedAsTopics<AnatomyTopic>("anatomy"))] : rows;
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchAnatomyTopic(id: string): Promise<AnatomyTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("anatomy_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as AnatomyTopic | null) ?? null;
+}
+
 export async function upsertAnatomyTopic(item: AnatomyTopic) {
   const { error } = await supabase.from("anatomy_topics").upsert(item);
   if (error) throw error;

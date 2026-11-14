@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchAnatomyTopics, type AnatomyTopic } from "../lib/anatomyTopicsApi";
+import { fetchAnatomyTopics, fetchAnatomyTopic, type AnatomyTopic } from "../lib/anatomyTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Anatomy keeps a light warm (amber) accent on top of the shared Navy/Teal section layout.
@@ -20,7 +21,7 @@ export function AnatomyHome() {
   const [topics, setTopics] = useState<AnatomyTopic[] | null>(null);
 
   useEffect(() => {
-    fetchAnatomyTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_anatomy_routed", TTL.topics, () => fetchAnatomyTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -47,8 +48,8 @@ export default function AnatomyTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchAnatomyTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchAnatomyTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);

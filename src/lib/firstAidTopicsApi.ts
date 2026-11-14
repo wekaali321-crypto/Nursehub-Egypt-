@@ -30,6 +30,14 @@ export async function fetchFirstAidTopics(opts?: { withRouted?: boolean }): Prom
   return opts?.withRouted ? [...rows, ...(await routedAsTopics<FirstAidTopic>("first-aid"))] : rows;
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchFirstAidTopic(id: string): Promise<FirstAidTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("first_aid_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as FirstAidTopic | null) ?? null;
+}
+
 export async function upsertFirstAidTopic(item: FirstAidTopic) {
   const { error } = await supabase.from("first_aid_topics").upsert(item);
   if (error) throw error;

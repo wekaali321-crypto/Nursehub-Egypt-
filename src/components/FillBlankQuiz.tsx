@@ -1,6 +1,7 @@
 // src/components/FillBlankQuiz.tsx
 import { useEffect, useState } from "react";
 import { supabase, isSupabaseConfigured } from "../lib/supabase";
+import { fetchArticleIdBySlug } from "../lib/articleId";
 
 type Question = {
   id: string;
@@ -33,13 +34,9 @@ export default function FillBlankQuiz({ slug, lang = "ar" }: Props) {
         setLoading(false);
         return;
       }
-      const { data: article } = await supabase
-        .from("articles")
-        .select("id")
-        .eq("slug", slug)
-        .maybeSingle();
+      const articleId = await fetchArticleIdBySlug(slug);
 
-      if (!article) {
+      if (!articleId) {
         if (!cancelled) setLoading(false);
         return;
       }
@@ -47,7 +44,7 @@ export default function FillBlankQuiz({ slug, lang = "ar" }: Props) {
       const { data, error } = await supabase
         .from("quiz_questions")
         .select("*")
-        .eq("article_id", article.id)
+        .eq("article_id", articleId)
         .eq("type", "fill_blank")
         .eq("lang", lang)
         .order("order_index", { ascending: true });

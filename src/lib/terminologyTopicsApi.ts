@@ -28,6 +28,14 @@ export async function fetchTerminologyTopics(): Promise<TerminologyTopic[]> {
   return data as TerminologyTopic[];
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchTerminologyTopic(id: string): Promise<TerminologyTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("terminology_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as TerminologyTopic | null) ?? null;
+}
+
 export async function upsertTerminologyTopic(item: TerminologyTopic) {
   const { error } = await supabase.from("terminology_topics").upsert(item);
   if (error) throw error;

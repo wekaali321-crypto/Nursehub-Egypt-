@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchPharmacologyTopics, type PharmacologyTopic } from "../lib/pharmacologyTopicsApi";
+import { fetchPharmacologyTopics, fetchPharmacologyTopic, type PharmacologyTopic } from "../lib/pharmacologyTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Light emerald accent on top of the shared Navy/Teal section layout.
@@ -20,7 +21,7 @@ export function PharmacologyHome() {
   const [topics, setTopics] = useState<PharmacologyTopic[] | null>(null);
 
   useEffect(() => {
-    fetchPharmacologyTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_pharmacology_routed", TTL.topics, () => fetchPharmacologyTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -47,8 +48,8 @@ export default function PharmacologyTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchPharmacologyTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchPharmacologyTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);

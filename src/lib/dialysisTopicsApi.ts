@@ -28,6 +28,14 @@ export async function fetchDialysisTopics(): Promise<DialysisTopic[]> {
   return data as DialysisTopic[];
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchDialysisTopic(id: string): Promise<DialysisTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("dialysis_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as DialysisTopic | null) ?? null;
+}
+
 export async function upsertDialysisTopic(item: DialysisTopic) {
   const { error } = await supabase.from("dialysis_topics").upsert(item);
   if (error) throw error;

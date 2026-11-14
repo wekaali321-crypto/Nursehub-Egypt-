@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchERReceptionTopics, type ERReceptionTopic } from "../lib/erReceptionTopicsApi";
+import { fetchERReceptionTopics, fetchERReceptionTopic, type ERReceptionTopic } from "../lib/erReceptionTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Light red accent on top of the shared Navy/Teal section layout.
@@ -21,7 +22,7 @@ export function ERReceptionHome() {
   const [topics, setTopics] = useState<ERReceptionTopic[] | null>(null);
 
   useEffect(() => {
-    fetchERReceptionTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_er_reception_routed", TTL.topics, () => fetchERReceptionTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -89,8 +90,8 @@ export default function ERReceptionTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchERReceptionTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchERReceptionTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);

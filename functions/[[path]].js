@@ -1,4 +1,4 @@
-import { internalRows } from './_lib/sb.js';
+import { internalRows, isD1QuotaError } from './_lib/sb.js';
 import { ROUTE_PATTERNS } from './_lib/routes.js';
 // Server-side SEO injection (Cloudflare Pages Function).
 // The site is a single-page app: without JavaScript a crawler only sees the splash screen.
@@ -309,8 +309,12 @@ export async function onRequest({ request, env, next }) {
     let verdict;
     try {
       verdict = await classify(url.pathname, env, request);
-    } catch {
-      return shell(request, env, 500); // a real internal failure is not a "page not found"
+    } catch (e) {
+      // D1 daily quota exhausted: the existence check cannot run, so serve the SPA (200) and let its static fallback render the page,
+      // instead of a 500 that leaves visitors on an error screen. Any other internal failure is still not a "page not found".
+      const msg = String((e && e.message) || e);
+      if (msg === 'lookup failed' || isD1QuotaError(msg)) verdict = 'ok';
+      else return shell(request, env, 500);
     }
     if (verdict === 'missing') return shell(request, env, 404);
   }

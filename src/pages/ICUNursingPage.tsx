@@ -5,7 +5,8 @@ import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { useCart } from "../lib/cart";
-import { fetchIcuTopics, type IcuTopic } from "../lib/icuTopicsApi";
+import { fetchIcuTopics, fetchIcuTopic, type IcuTopic } from "../lib/icuTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 
 const card = "rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900";
 const PER_TOPIC_PRINT_PRICE = 10;
@@ -24,7 +25,7 @@ export function ICUNursingHome() {
   const [selected, setSelected] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    fetchIcuTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_icu_routed", TTL.topics, () => fetchIcuTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const toggleSelected = (id: string) => {
@@ -215,8 +216,8 @@ export default function ICUNursingTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchIcuTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchIcuTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);
@@ -318,7 +319,7 @@ export function ICUPrintAllPage() {
   useSEO({ title: `${t("nav.icuNursing")} | ${isEn ? "Print All" : "طباعة الكل"} | NurseHub Egypt` });
 
   useEffect(() => {
-    fetchIcuTopics().then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_icu", TTL.topics, () => fetchIcuTopics()).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const buyPrintAll = () => {

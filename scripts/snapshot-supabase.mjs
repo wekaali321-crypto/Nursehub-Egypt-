@@ -3,6 +3,7 @@
 // Usage:  SUPABASE_URL=... SUPABASE_PUBLISHABLE_KEY=... node scripts/snapshot-supabase.mjs
 // Only the public key is used (same as the browser) — never a service key.
 import { mkdirSync, writeFileSync } from 'node:fs';
+import { deriveExtras } from './derive-snapshot-extras.mjs';
 const URL_ = process.env.SUPABASE_URL;
 const KEY = process.env.SUPABASE_PUBLISHABLE_KEY;
 if (!URL_ || !KEY) { console.error('Set SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY'); process.exit(1); }
@@ -23,3 +24,4 @@ for (const t of TABLES) {
   console.log(t, rows.length);
 }
 writeFileSync('public/data/manifest.json', JSON.stringify({ updated: new Date().toISOString().slice(0, 10), tables: manifest }));
+try { console.log('derived', deriveExtras()); } catch (e) { console.error('derive extras failed', e.message); }

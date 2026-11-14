@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchOperatingRoomTopics, type OperatingRoomTopic } from "../lib/operatingRoomTopicsApi";
+import { fetchOperatingRoomTopics, fetchOperatingRoomTopic, type OperatingRoomTopic } from "../lib/operatingRoomTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Light cyan accent on top of the shared Navy/Teal section layout.
@@ -20,7 +21,7 @@ export function OperatingRoomHome() {
   const [topics, setTopics] = useState<OperatingRoomTopic[] | null>(null);
 
   useEffect(() => {
-    fetchOperatingRoomTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_operating_room_routed", TTL.topics, () => fetchOperatingRoomTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -47,8 +48,8 @@ export default function OperatingRoomTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchOperatingRoomTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchOperatingRoomTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);
