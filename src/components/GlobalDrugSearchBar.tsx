@@ -1,3 +1,4 @@
+import { SEARCH_DROPDOWN } from "../lib/searchDropdown";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
@@ -65,7 +66,7 @@ export default function GlobalDrugSearchBar() {
       </div>
 
       {open && q.trim() && (
-        <div className="absolute z-30 mt-2 max-h-96 w-full overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900">
+        <div className={`${SEARCH_DROPDOWN} w-full`}>
           {results.length === 0 ? (
             <div className="p-4 text-center text-sm text-slate-400 dark:text-slate-500">
               {data ? (lang === "en" ? "No matching results." : "لا توجد نتائج مطابقة.") : (lang === "en" ? "Loading search data..." : "جارِ تحميل بيانات البحث...")}
