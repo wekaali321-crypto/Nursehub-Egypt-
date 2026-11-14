@@ -1,3 +1,4 @@
+import { SEARCH_DROPDOWN } from "../lib/searchDropdown";
 import { useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../lib/store";
@@ -155,7 +156,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
       {open && suggestions.length > 0 && (
         <div
           onMouseDown={() => window.clearTimeout(blurTimer.current)}
-          className={`absolute z-50 mt-2 overflow-hidden rounded-2xl border border-slate-200 bg-white text-right shadow-2xl dark:border-slate-700 dark:bg-slate-900 ${isHero ? "inset-x-0" : "right-0 w-72"}`}
+          className={`${SEARCH_DROPDOWN} text-right ${isHero ? "inset-x-0" : "right-0 w-72"}`}
         >
           {suggestions.map((s, i) => (
             <button
