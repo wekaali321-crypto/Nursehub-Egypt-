@@ -463,6 +463,8 @@ const dict = {
   "lang.switch": { ar: "English", en: "العربية" },
 
   // Tools page
+  "nav.shift": { ar: "وضع الشيفت", en: "Shift mode" },
+  "shift.cta": { ar: "الجرعات والمحاليل والحاسبات في صفحة واحدة — بتشتغل من غير نت", en: "Doses, IV compatibility and calculators on one page — works offline" },
   "tools.title": { ar: "الأدوات والحاسبات الطبية", en: "Medical Tools & Calculators" },
   "tools.sub": { ar: "حاسبات احترافية ومساعد ذكي لمساعدتك في عملك التمريضي", en: "Professional calculators & an AI assistant for your nursing work" },
   "tools.calc": { ar: "احسب", en: "Calculate" },

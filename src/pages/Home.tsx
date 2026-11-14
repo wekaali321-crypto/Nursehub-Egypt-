@@ -11,6 +11,7 @@ import InstallAppButton from "../components/InstallAppButton";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import EmojiIcon from "../components/EmojiIcon";
+import { Zap } from "lucide-react";
 
 const DIFFICULTY_LABEL: Record<string, { ar: string; en: string }> = {
   "سهل": { ar: "سهل", en: "Easy" },
@@ -205,6 +206,13 @@ export default function Home() {
             </Link>
           ))}
         </div>
+        <Link to="/shift" className="nh-hero mt-4 flex items-center gap-4 rounded-2xl p-4 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
+          <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#168C91]"><Zap size={24} aria-hidden="true" /></span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-base font-black">{t("nav.shift")}</span>
+            <span className="block text-sm text-teal-50">{t("shift.cta")}</span>
+          </span>
+        </Link>
       </section>
     ),
     store: (

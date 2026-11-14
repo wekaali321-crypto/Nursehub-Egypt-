@@ -4,6 +4,8 @@ import { useI18n } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
 import { useSEO } from "../lib/seo";
 import EmojiIcon from "../components/EmojiIcon";
+import { Link } from "react-router-dom";
+import { Zap } from "lucide-react";
 
 /**
  * Accordion-style card: only the tool's title/icon show by default; tapping
@@ -114,7 +116,7 @@ function BMI() {
   );
 }
 
-function IVDrip() {
+export function IVDrip() {
   const { lang } = useI18n();
   const isEn = lang === "en";
   const [vol, setVol] = useState(""); const [time, setTime] = useState(""); const [factor, setFactor] = useState("20");
@@ -131,7 +133,7 @@ function IVDrip() {
   );
 }
 
-function Dosage() {
+export function Dosage() {
   const { lang } = useI18n();
   const isEn = lang === "en";
   const [dose, setDose] = useState(""); const [weight, setWeight] = useState(""); const [conc, setConc] = useState("");
@@ -226,7 +228,7 @@ function GCS() {
   );
 }
 
-function PediatricDose() {
+export function PediatricDose() {
   const { lang } = useI18n();
   const isEn = lang === "en";
   const [adult, setAdult] = useState(""); const [weight, setWeight] = useState("");
@@ -909,7 +911,7 @@ const commonDrugs: { ar: string; en: string }[] = [
   { ar: "نيتروجليسرين", en: "Nitroglycerin" },
 ];
 
-function DoseRateCalculator() {
+export function DoseRateCalculator() {
   const { lang } = useI18n();
   const isEn = lang === "en";
   const [mode, setMode] = useState<"doseToRate" | "rateToDose">("doseToRate");
@@ -1125,6 +1127,13 @@ export default function ToolsPage() {
         <h1 className="text-3xl font-black">{t("tools.title")}</h1>
         <p className="mt-2 text-white/80">{t("tools.sub")}</p>
       </div>
+      <Link to="/shift" className="mb-6 flex items-center gap-4 rounded-2xl border border-[#168C91]/30 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-teal-500/30 dark:bg-slate-900">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#168C91] text-white"><Zap size={24} aria-hidden="true" /></span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-base font-black text-[#153448] dark:text-white">{t("nav.shift")}</span>
+          <span className="block text-sm text-slate-600 dark:text-slate-400">{t("shift.cta")}</span>
+        </span>
+      </Link>
       <div className="grid gap-4 lg:grid-cols-2">
         <BMI /><IVDrip /><Dosage /><FluidBalance /><Pregnancy /><GCS /><PediatricDose /><DoseRateCalculator /><ABGInterpreter />
         <Norton /><Braden /><Barthel /><VAS /><News2 />
