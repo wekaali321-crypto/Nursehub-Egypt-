@@ -85,7 +85,7 @@ export default function StudentDashboard() {
         <p className="text-lg text-slate-500 dark:text-slate-400">
           {isRTL ? "يجب تسجيل الدخول لعرض حسابك." : "Please log in to view your dashboard."}
         </p>
-        <Link to="/login" className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white">
+        <Link to="/login" className="rounded-full bg-teal-500 px-6 py-2 font-bold text-white">
           {isRTL ? "تسجيل الدخول" : "Log in"}
         </Link>
       </div>

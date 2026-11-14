@@ -89,7 +89,7 @@ const CATEGORY_META: Record<Category, { label: string; labelEn: string; color: s
   lethal: { label: "مميت", labelEn: "Lethal", color: "slate", badge: "bg-slate-700 text-white" },
   critical: { label: "حرج", labelEn: "Critical", color: "rose", badge: "bg-rose-600 text-white" },
   urgent: { label: "عاجل", labelEn: "Urgent", color: "amber", badge: "bg-amber-500 text-white" },
-  watch: { label: "مراقبة", labelEn: "Watch", color: "sky", badge: "bg-sky-500 text-white" },
+  watch: { label: "مراقبة", labelEn: "Watch", color: "sky", badge: "bg-teal-500 text-white" },
   normal: { label: "طبيعي", labelEn: "Normal", color: "emerald", badge: "bg-emerald-500 text-white" },
 };
 
@@ -2135,7 +2135,7 @@ const waveColor: Record<Category, string> = {
   lethal: "text-slate-300",
   critical: "text-rose-400",
   urgent: "text-amber-400",
-  watch: "text-sky-400",
+  watch: "text-teal-400",
   normal: "text-emerald-400",
 };
 
@@ -2286,12 +2286,12 @@ function ECGDetailTabs({ p }: { p: ECGPattern }) {
               {causes.map((c) => <li key={c}>{c}</li>)}
             </ul>
             {hAndT && (
-              <div className="rounded-lg bg-sky-50 p-3 dark:bg-sky-500/10">
-                <div className="mb-2 text-xs font-bold text-sky-700 dark:text-sky-300">5Hs & 5Ts</div>
+              <div className="rounded-lg bg-teal-50 p-3 dark:bg-teal-500/10">
+                <div className="mb-2 text-xs font-bold text-teal-700 dark:text-teal-300">5Hs & 5Ts</div>
                 <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-xs text-slate-600 dark:text-slate-300">
                   {hAndT.h.map((h, i) => (
                     <div key={"h" + i} className="flex items-center gap-1.5">
-                      <span className="rounded-full bg-sky-600 px-1.5 text-[10px] font-bold text-white">H{i + 1}</span>
+                      <span className="rounded-full bg-teal-600 px-1.5 text-[10px] font-bold text-white">H{i + 1}</span>
                       {h}
                     </div>
                   ))}
@@ -2468,7 +2468,7 @@ function ECGCard({ p }: { p: ECGPattern }) {
           {noPulse ? (playing ? t("ecg.monitorSoundPlaying") : t("ecg.monitorSound")) : playing ? t("ecg.stopSound") : t("ecg.listenPulse")}
         </button>
         {hasDetails && (
-          <button type="button" onClick={() => setOpen((s) => !s)} className="mr-auto text-xs font-bold text-sky-600 dark:text-sky-400">
+          <button type="button" onClick={() => setOpen((s) => !s)} className="mr-auto text-xs font-bold text-teal-600 dark:text-teal-400">
             {open ? t("ecg.hideDetails") : t("ecg.moreDetails")}
           </button>
         )}
@@ -2515,7 +2515,7 @@ function ComparisonPairCard({ aId, bId, note, noteEn }: { aId: string; bId: stri
           </div>
         ))}
       </div>
-      <div className="mt-2 rounded-lg bg-sky-50 px-3 py-2 text-xs font-semibold text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">🔑 {isEn ? noteEn : note}</div>
+      <div className="mt-2 rounded-lg bg-teal-50 px-3 py-2 text-xs font-semibold text-teal-700 dark:bg-teal-500/10 dark:text-teal-300">🔑 {isEn ? noteEn : note}</div>
     </div>
   );
 }
@@ -2643,7 +2643,7 @@ function QuizMode() {
         </div>
         <div className="flex items-center gap-2">
           <span className="text-sm font-bold text-slate-500 dark:text-slate-400">{t("ecg.score")} {score.correct} {t("ecg.of")} {score.total}</span>
-          <button type="button" onClick={() => setScore({ correct: 0, total: 0 })} className="text-xs font-bold text-sky-600 dark:text-sky-400">↺</button>
+          <button type="button" onClick={() => setScore({ correct: 0, total: 0 })} className="text-xs font-bold text-teal-600 dark:text-teal-400">↺</button>
         </div>
       </div>
 
@@ -2802,7 +2802,7 @@ export default function ECGPage() {
 
       <div className="mb-4 grid gap-3 sm:grid-cols-[1fr_auto]">
         <div className="relative">
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t("common.search") + "..."} className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" />
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t("common.search") + "..."} className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pr-10 pl-3 outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800" />
           <span className="absolute right-3 top-3 text-slate-400">🔍</span>
         </div>
         <div className="flex flex-wrap gap-2">

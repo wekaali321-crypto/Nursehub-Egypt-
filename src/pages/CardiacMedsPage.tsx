@@ -54,7 +54,7 @@ export default function CardiacMedsPage() {
       </div>
 
       <div className="mt-6 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">{LABELS.back[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-600 hover:underline">{LABELS.back[lang]}</Link>
       </div>
     </div>
   );

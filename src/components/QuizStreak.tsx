@@ -104,11 +104,11 @@ export default function QuizStreak() {
                 !d.dayOfMonth
                   ? ""
                   : d.studied
-                  ? "bg-slate-800 text-white dark:bg-sky-500"
+                  ? "bg-slate-800 text-white dark:bg-teal-500"
                   : d.isFuture
                   ? "text-slate-300 dark:text-slate-700"
                   : "bg-slate-100 text-slate-400 dark:bg-slate-800"
-              } ${d.isToday ? "ring-2 ring-sky-400 ring-offset-1 dark:ring-offset-slate-900" : ""}`}
+              } ${d.isToday ? "ring-2 ring-teal-400 ring-offset-1 dark:ring-offset-slate-900" : ""}`}
             >
               {d.dayOfMonth ?? ""}
             </div>
@@ -129,7 +129,7 @@ export default function QuizStreak() {
             {qOptions.map((o, oi) => {
               const isChosen = chosenIndex === oi;
               const isCorrectOpt = oi === qotd.question.correct;
-              let cls = "border-slate-200 dark:border-slate-700 hover:border-sky-300";
+              let cls = "border-slate-200 dark:border-slate-700 hover:border-teal-300";
               if (showResult || chosen !== null) {
                 if (isCorrectOpt) cls = "border-emerald-400 bg-emerald-50 dark:bg-emerald-500/10";
                 else if (isChosen) cls = "border-rose-400 bg-rose-50 dark:bg-rose-500/10";
@@ -148,7 +148,7 @@ export default function QuizStreak() {
             })}
           </div>
           {(showResult || chosen !== null) && explanation && (
-            <div className="mt-2 rounded-lg bg-sky-50 p-2 text-xs text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">💡 {explanation}</div>
+            <div className="mt-2 rounded-lg bg-teal-50 p-2 text-xs text-teal-700 dark:bg-teal-500/10 dark:text-teal-300">💡 {explanation}</div>
           )}
           {(showResult || chosen !== null) && (
             <div className={`mt-2 text-xs font-bold ${(answeredToday ? answeredToday.isCorrect : chosenIndex === qotd.question.correct) ? "text-emerald-500" : "text-rose-500"}`}>

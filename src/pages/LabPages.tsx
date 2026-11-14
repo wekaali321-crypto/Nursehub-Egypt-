@@ -133,7 +133,7 @@ const panelStyle = (title: string) => {
 
 type Status = 'low' | 'ok' | 'high';
 const STATUS_UI: Record<Status, { ar: string; en: string; cls: string; dot: string }> = {
-  low: { ar: 'أقل من الطبيعي', en: 'Below normal', cls: 'bg-sky-100 text-sky-800 dark:bg-sky-500/20 dark:text-sky-200', dot: '#0ea5e9' },
+  low: { ar: 'أقل من الطبيعي', en: 'Below normal', cls: 'bg-teal-100 text-teal-800 dark:bg-teal-500/20 dark:text-teal-200', dot: '#0ea5e9' },
   ok: { ar: 'طبيعي', en: 'Normal', cls: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-200', dot: '#10b981' },
   high: { ar: 'أعلى من الطبيعي', en: 'Above normal', cls: 'bg-rose-100 text-rose-800 dark:bg-rose-500/20 dark:text-rose-200', dot: '#f43f5e' },
 };

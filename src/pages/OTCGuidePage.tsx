@@ -9,9 +9,9 @@ import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
 
 const CATEGORY_GRADIENT: Record<string, string> = {
-  "تنفسي": "from-sky-600 to-blue-500",
+  "تنفسي": "from-teal-600 to-blue-500",
   "هضمي": "from-teal-600 to-emerald-500",
-  "جلدية": "from-cyan-600 to-sky-500",
+  "جلدية": "from-cyan-600 to-teal-500",
   "عظام ومفاصل": "from-slate-600 to-slate-800",
   "فم وأسنان": "from-blue-600 to-indigo-500",
   "مسالك بولية": "from-indigo-600 to-violet-500",
@@ -170,7 +170,7 @@ export function OTCGuideHome() {
       </div>
 
       <div className="mt-8 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">{LABELS.back[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-600 hover:underline">{LABELS.back[lang]}</Link>
       </div>
     </div>
   );
@@ -191,7 +191,7 @@ function Section({
   const tones: Record<string, string> = {
     default: "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900",
     red: "border-red-200 bg-red-50 dark:border-red-900/50 dark:bg-red-950/30",
-    info: "border-sky-200 bg-sky-50 dark:border-sky-900/50 dark:bg-sky-950/30",
+    info: "border-teal-200 bg-teal-50 dark:border-teal-900/50 dark:bg-teal-950/30",
   };
   return (
     <div className={`rounded-2xl border p-5 shadow-sm ${tones[tone]}`}>
@@ -272,8 +272,8 @@ export default function OTCConditionPage() {
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/otc-guide" className="text-sky-600 hover:underline">{LABELS.allConditions[lang]}</Link>
-        <Link to="/drugs" className="text-sky-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
+        <Link to="/drugs/otc-guide" className="text-teal-600 hover:underline">{LABELS.allConditions[lang]}</Link>
+        <Link to="/drugs" className="text-teal-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
       </div>
     </div>
   );

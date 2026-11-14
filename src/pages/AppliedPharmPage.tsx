@@ -39,7 +39,7 @@ const LABELS = {
 };
 
 const TYPE_META: Record<string, { label: { ar: string; en: string }; icon: string; classes: string }> = {
-  fact: { label: { ar: "معلومة", en: "Fact" }, icon: "📌", classes: "border-sky-200 bg-sky-50 dark:border-sky-900/50 dark:bg-sky-950/30" },
+  fact: { label: { ar: "معلومة", en: "Fact" }, icon: "📌", classes: "border-teal-200 bg-teal-50 dark:border-teal-900/50 dark:bg-teal-950/30" },
   qa: { label: { ar: "سؤال وجواب", en: "Q&A" }, icon: "💬", classes: "border-violet-200 bg-violet-50 dark:border-violet-900/50 dark:bg-violet-950/30" },
   alert: { label: { ar: "تنبيه صيدلاني", en: "Pharmacist Alert" }, icon: "⚠️", classes: "border-red-200 bg-red-50 dark:border-red-900/50 dark:bg-red-950/30" },
   trivia: { label: { ar: "هل تعلم؟", en: "Did You Know?" }, icon: "💡", classes: "border-yellow-200 bg-yellow-50 dark:border-yellow-900/50 dark:bg-yellow-950/30" },
@@ -176,7 +176,7 @@ export function AppliedPharmHome() {
       )}
 
       <div className="mt-8 text-center">
-        <Link to="/drugs" className="text-sm font-bold text-sky-600 hover:underline">{LABELS.backToDrugs[lang]}</Link>
+        <Link to="/drugs" className="text-sm font-bold text-teal-600 hover:underline">{LABELS.backToDrugs[lang]}</Link>
       </div>
     </div>
   );
@@ -253,8 +253,8 @@ export function AppliedPharmTopicPage() {
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/applied-pharm" className="text-sky-600 hover:underline">{LABELS.allTopics[lang]}</Link>
-        <Link to="/drugs" className="text-sky-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
+        <Link to="/drugs/applied-pharm" className="text-teal-600 hover:underline">{LABELS.allTopics[lang]}</Link>
+        <Link to="/drugs" className="text-teal-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
       </div>
     </div>
   );
@@ -338,8 +338,8 @@ export default function AppliedPharmPlanPage() {
       </div>
 
       <div className="mt-6 flex items-center justify-between text-sm font-bold">
-        <Link to="/drugs/applied-pharm" className="text-sky-600 hover:underline">{LABELS.allPlans[lang]}</Link>
-        <Link to="/drugs" className="text-sky-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
+        <Link to="/drugs/applied-pharm" className="text-teal-600 hover:underline">{LABELS.allPlans[lang]}</Link>
+        <Link to="/drugs" className="text-teal-600 hover:underline">{LABELS.drugsGuide[lang]}</Link>
       </div>
     </div>
   );

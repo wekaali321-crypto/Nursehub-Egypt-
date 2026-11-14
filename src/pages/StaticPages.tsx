@@ -109,7 +109,7 @@ export function Contact() {
             <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder={isEn ? "Name" : "الاسم"} className={inp} />
             <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder={isEn ? "Email" : "البريد الإلكتروني"} className={inp} />
             <textarea required value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder={isEn ? "Your message" : "رسالتك"} rows={4} className={inp} />
-            <button className="w-full rounded-full bg-sky-500 py-2.5 font-bold text-white">{isEn ? "Send" : "إرسال"}</button>
+            <button className="w-full rounded-full bg-teal-500 py-2.5 font-bold text-white">{isEn ? "Send" : "إرسال"}</button>
           </form>
         )}
       </div>

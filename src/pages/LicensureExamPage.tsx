@@ -41,7 +41,7 @@ function BackLink({ to, label }: { to: string; label: string }) {
   return (
     <Link
       to={to}
-      className="inline-flex items-center gap-1 text-sm text-sky-700 hover:text-sky-900 dark:text-sky-400 dark:hover:text-sky-300 mb-4"
+      className="inline-flex items-center gap-1 text-sm text-teal-700 hover:text-teal-900 dark:text-teal-400 dark:hover:text-teal-300 mb-4"
     >
       ← {label}
     </Link>
@@ -84,7 +84,7 @@ export function LicensureExamsHome() {
           <Link
             key={cat.id}
             to={`/tests/licensure/${cat.id}`}
-            className="rounded-2xl border border-sky-100 dark:border-sky-900 bg-gradient-to-br from-sky-50 to-teal-50 hover:from-sky-100 hover:to-teal-100 dark:from-slate-800 dark:to-slate-800 dark:hover:from-slate-700 dark:hover:to-slate-700 transition-colors p-5 shadow-sm flex items-center gap-4"
+            className="rounded-2xl border border-teal-100 dark:border-teal-900 bg-gradient-to-br from-teal-50 to-teal-50 hover:from-teal-100 hover:to-teal-100 dark:from-slate-800 dark:to-slate-800 dark:hover:from-slate-700 dark:hover:to-slate-700 transition-colors p-5 shadow-sm flex items-center gap-4"
           >
             <div className="text-4xl">{cat.icon}</div>
             <div>
@@ -159,7 +159,7 @@ export function LicensureExamCategory() {
               </div>
               <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-l from-teal-400 to-sky-400"
+                  className="h-full bg-gradient-to-l from-teal-400 to-teal-400"
                   style={{ width: `${pct}%` }}
                 />
               </div>
@@ -292,8 +292,8 @@ export default function LicensureExamStudy() {
               onClick={() => setShowArabic((v) => !v)}
               className={`rounded-full px-2.5 py-1 text-[11px] font-bold transition ${
                 showArabic
-                  ? 'bg-sky-600 text-white'
-                  : 'bg-sky-50 text-sky-700 hover:bg-sky-100 dark:bg-slate-800 dark:text-sky-300 dark:hover:bg-slate-700'
+                  ? 'bg-teal-600 text-white'
+                  : 'bg-teal-50 text-teal-700 hover:bg-teal-100 dark:bg-slate-800 dark:text-teal-300 dark:hover:bg-slate-700'
               }`}
             >
               🌐 {showArabic ? 'English' : 'ترجمة'}
@@ -306,7 +306,7 @@ export default function LicensureExamStudy() {
       </div>
       <div className="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden mb-6">
         <div
-          className="h-full bg-gradient-to-l from-sky-400 to-indigo-400"
+          className="h-full bg-gradient-to-l from-teal-400 to-indigo-400"
           style={{ width: `${progressPct}%` }}
         />
       </div>
@@ -320,7 +320,7 @@ export default function LicensureExamStudy() {
             const isThisSelected = selected === choice.letter;
             const isThisCorrect = choice.letter === q.correct_letter;
 
-            let stateClasses = 'border-slate-200 hover:border-sky-300 hover:bg-sky-50 dark:border-slate-700 dark:hover:border-sky-700 dark:hover:bg-slate-800';
+            let stateClasses = 'border-slate-200 hover:border-teal-300 hover:bg-teal-50 dark:border-slate-700 dark:hover:border-teal-700 dark:hover:bg-slate-800';
             if (isAnswered && isThisCorrect) {
               stateClasses = 'border-emerald-400 bg-emerald-50 dark:border-emerald-700 dark:bg-emerald-950/40';
             } else if (isAnswered && isThisSelected && !isThisCorrect) {
@@ -374,7 +374,7 @@ export default function LicensureExamStudy() {
         <button
           onClick={() => goTo(index + 1)}
           disabled={index === questions.length - 1}
-          className="px-4 py-2 rounded-lg bg-sky-600 text-white disabled:opacity-30 hover:bg-sky-700"
+          className="px-4 py-2 rounded-lg bg-teal-600 text-white disabled:opacity-30 hover:bg-teal-700"
         >
           التالي (Next) ←
         </button>

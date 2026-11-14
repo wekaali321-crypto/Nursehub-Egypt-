@@ -33,7 +33,7 @@ export default function QuizzesPage() {
       <div className="mb-6 rounded-3xl nh-hero p-6 text-white sm:p-8">
         <div className="text-4xl sm:text-5xl">📝</div>
         <h1 className="mt-2 text-2xl font-black sm:text-3xl">{t("quiz.pageTitle")}</h1>
-        <p className="mt-1 text-sky-50">{t("quiz.pageDesc")}</p>
+        <p className="mt-1 text-teal-50">{t("quiz.pageDesc")}</p>
       </div>
 
       <Link
@@ -43,7 +43,7 @@ export default function QuizzesPage() {
         <div className="text-4xl">📜</div>
         <div className="flex-1">
           <h2 className="text-lg font-bold">اختبارات مزاولة المهنة</h2>
-          <p className="text-sm text-sky-50">Professional Licensure Exams — بنك أسئلة شامل مع شرح تفصيلي ثنائي اللغة لكل سؤال</p>
+          <p className="text-sm text-teal-50">Professional Licensure Exams — بنك أسئلة شامل مع شرح تفصيلي ثنائي اللغة لكل سؤال</p>
         </div>
         <span className="text-2xl">←</span>
       </Link>
@@ -90,7 +90,7 @@ export default function QuizzesPage() {
 
       <div className="mb-6 flex flex-wrap gap-2">
         {cats.map((c) => (
-          <button key={c} onClick={() => setCat(c)} className={`rounded-full px-4 py-1.5 text-sm font-semibold ${cat === c ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{c === "all" ? t("cat.all") : catLabels.get(c)}</button>
+          <button key={c} onClick={() => setCat(c)} className={`rounded-full px-4 py-1.5 text-sm font-semibold ${cat === c ? "bg-teal-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{c === "all" ? t("cat.all") : catLabels.get(c)}</button>
         ))}
       </div>
 
@@ -105,7 +105,7 @@ export default function QuizzesPage() {
           return (
             <div key={q.id} className="flex flex-col rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900">
               <div className="flex items-center justify-between">
-                <span className="rounded-full bg-sky-50 px-3 py-1 text-xs font-bold text-sky-600 dark:bg-sky-500/10">{category}</span>
+                <span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-teal-600 dark:bg-teal-500/10">{category}</span>
                 {q.demo && <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-600 dark:bg-amber-500/10">Demo</span>}
               </div>
               <h3 className="mt-3 text-lg font-bold dark:text-white">{title}</h3>

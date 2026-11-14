@@ -5,7 +5,7 @@ import { useToast } from "../components/Toast";
 import { isSupabaseConfigured } from "../lib/supabase";
 import { useUserAuth } from "../lib/userAuth";
 
-const inp = "w-full rounded-lg border border-slate-200 px-3 py-2.5 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800";
+const inp = "w-full rounded-lg border border-slate-200 px-3 py-2.5 outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800";
 
 function Shell({ title, children, footer }: { title: string; children: React.ReactNode; footer: React.ReactNode }) {
   return (
@@ -60,11 +60,11 @@ export function LoginPage() {
   };
 
   return (
-    <Shell title="تسجيل الدخول" footer={<>ليس لديك حساب؟ <Link to="/register" className="font-bold text-sky-500">أنشئ حساباً</Link></>}>
+    <Shell title="تسجيل الدخول" footer={<>ليس لديك حساب؟ <Link to="/register" className="font-bold text-teal-500">أنشئ حساباً</Link></>}>
       <form onSubmit={submit} className="space-y-3">
         <input type="email" required placeholder="البريد الإلكتروني" value={email} onChange={(e) => setEmail(e.target.value)} className={inp} />
         <input type="password" required placeholder="كلمة المرور" value={pass} onChange={(e) => setPass(e.target.value)} className={inp} />
-        <div className="text-left"><Link to="/forgot" className="text-xs font-semibold text-sky-500">نسيت كلمة المرور؟</Link></div>
+        <div className="text-left"><Link to="/forgot" className="text-xs font-semibold text-teal-500">نسيت كلمة المرور؟</Link></div>
         <button disabled={busy} className="w-full rounded-lg bg-[#168C91] hover:bg-[#127378] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الدخول..." : "دخول"}</button>
       </form>
       <SocialButtons busy={busy} onGoogle={google} />
@@ -99,7 +99,7 @@ export function RegisterPage() {
   };
 
   return (
-    <Shell title="إنشاء حساب" footer={<>لديك حساب؟ <Link to="/login" className="font-bold text-sky-500">سجّل الدخول</Link></>}>
+    <Shell title="إنشاء حساب" footer={<>لديك حساب؟ <Link to="/login" className="font-bold text-teal-500">سجّل الدخول</Link></>}>
       <form onSubmit={submit} className="space-y-3">
         <input required placeholder="الاسم الكامل" value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} className={inp} />
         <input type="email" required placeholder="البريد الإلكتروني" value={f.email} onChange={(e) => setF({ ...f, email: e.target.value })} className={inp} />
@@ -129,7 +129,7 @@ export function ForgotPage() {
   };
 
   return (
-    <Shell title="استعادة كلمة المرور" footer={<Link to="/login" className="font-bold text-sky-500">العودة لتسجيل الدخول</Link>}>
+    <Shell title="استعادة كلمة المرور" footer={<Link to="/login" className="font-bold text-teal-500">العودة لتسجيل الدخول</Link>}>
       {sent ? (
         <div className="rounded-xl bg-emerald-50 p-4 text-center font-bold text-emerald-600 dark:bg-emerald-500/10">✅ تم إرسال رابط الاستعادة إلى بريدك.</div>
       ) : (

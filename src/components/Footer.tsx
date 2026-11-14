@@ -68,7 +68,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 title={label}
                 aria-label={label}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 transition-transform hover:scale-110 hover:bg-sky-100 dark:bg-slate-800"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 transition-transform hover:scale-110 hover:bg-teal-100 dark:bg-slate-800"
                 style={{ color }}
               >
                 <Icon />
@@ -81,7 +81,7 @@ export default function Footer() {
           <h4 className="mb-3 font-bold dark:text-white">{t("footer.sections")}</h4>
           <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
             {cats.map((c) => (
-              <li key={c}><Link to={c === "drugs" ? "/drugs" : `/category/${c}`} className="hover:text-sky-500">{t(CAT_KEYS[c])}</Link></li>
+              <li key={c}><Link to={c === "drugs" ? "/drugs" : `/category/${c}`} className="hover:text-teal-500">{t(CAT_KEYS[c])}</Link></li>
             ))}
           </ul>
         </div>
@@ -89,29 +89,29 @@ export default function Footer() {
         <div>
           <h4 className="mb-3 font-bold dark:text-white">{t("footer.important")}</h4>
           <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-            <li><Link to="/about" className="hover:text-sky-500">{t("footer.about")}</Link></li>
-            <li><Link to="/contact" className="hover:text-sky-500">{t("footer.contact")}</Link></li>
-            <li><Link to="/faq" className="hover:text-sky-500">{t("footer.faq")}</Link></li>
-            <li><Link to="/tools" className="hover:text-sky-500">{t("nav.tools")}</Link></li>
-            <li><Link to="/quizzes" className="hover:text-sky-500">{t("nav.quizzes")}</Link></li>
-            <li><Link to="/login" className="hover:text-sky-500">{t("nav.login")}</Link></li>
-            <li><Link to="/store" className="hover:text-sky-500">{t("nav.store")}</Link></li>
+            <li><Link to="/about" className="hover:text-teal-500">{t("footer.about")}</Link></li>
+            <li><Link to="/contact" className="hover:text-teal-500">{t("footer.contact")}</Link></li>
+            <li><Link to="/faq" className="hover:text-teal-500">{t("footer.faq")}</Link></li>
+            <li><Link to="/tools" className="hover:text-teal-500">{t("nav.tools")}</Link></li>
+            <li><Link to="/quizzes" className="hover:text-teal-500">{t("nav.quizzes")}</Link></li>
+            <li><Link to="/login" className="hover:text-teal-500">{t("nav.login")}</Link></li>
+            <li><Link to="/store" className="hover:text-teal-500">{t("nav.store")}</Link></li>
           </ul>
         </div>
 
         <div>
           <h4 className="mb-3 font-bold dark:text-white">{t("footer.legal")}</h4>
           <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-            <li><Link to="/privacy" className="hover:text-sky-500">{t("footer.privacy")}</Link></li>
-            <li><Link to="/terms" className="hover:text-sky-500">{t("footer.terms")}</Link></li>
-            <li><Link to="/monetization" className="hover:text-sky-500">{lang === "ar" ? "الإعلان معنا" : "Advertise"}</Link></li>
-            <li><Link to="/admin" className="hover:text-sky-500">{t("nav.admin")}</Link></li>
+            <li><Link to="/privacy" className="hover:text-teal-500">{t("footer.privacy")}</Link></li>
+            <li><Link to="/terms" className="hover:text-teal-500">{t("footer.terms")}</Link></li>
+            <li><Link to="/monetization" className="hover:text-teal-500">{lang === "ar" ? "الإعلان معنا" : "Advertise"}</Link></li>
+            <li><Link to="/admin" className="hover:text-teal-500">{t("nav.admin")}</Link></li>
           </ul>
         </div>
       </div>
       <div className="border-t border-slate-200 py-5 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
         <div>© {new Date().getFullYear()} {settings.siteName}. {t("footer.rights")} {t("footer.madeWith")}</div>
-        <div className="mt-1 text-xs font-semibold text-slate-400">Designed &amp; Developed by <span className="text-sky-500">RN. Ali Ashour</span></div>
+        <div className="mt-1 text-xs font-semibold text-slate-400">Designed &amp; Developed by <span className="text-teal-500">RN. Ali Ashour</span></div>
       </div>
     </footer>
   );

@@ -14,7 +14,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   "الأدوية المخدرة (Narcotics)": "from-indigo-500 to-violet-600",
   "مضادات القيء والحموضة (Antiemetics & GI)": "from-lime-500 to-green-600",
   "الحساسية والكورتيزون ومضادات الهيستامين (Allergy & Corticosteroids)": "from-pink-500 to-rose-600",
-  "موسعات الشعب الهوائية (Bronchodilators)": "from-sky-500 to-cyan-600",
+  "موسعات الشعب الهوائية (Bronchodilators)": "from-teal-500 to-cyan-600",
   "أدوية القلب والأوعية الدموية (Cardiac & Vasoactive Drugs)": "from-red-600 to-rose-700",
   "الطوارئ السكرية (Diabetic Emergencies)": "from-purple-500 to-fuchsia-600",
   "المهدئات ومضادات الاختلاج (Sedatives & Anticonvulsants)": "from-slate-500 to-slate-700",

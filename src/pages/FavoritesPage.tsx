@@ -26,7 +26,7 @@ export default function FavoritesPage() {
         <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
           <div className="text-5xl">🤍</div>
           <p className="mt-3">{lang === "ar" ? "لم تحفظ أي مقال بعد. اضغط زر «حفظ» في أي مقال." : "No saved articles yet. Tap “Save” on any article."}</p>
-          <Link to="/category/articles" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{lang === "ar" ? "تصفح المقالات" : "Browse Articles"}</Link>
+          <Link to="/category/articles" className="mt-4 inline-block rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{lang === "ar" ? "تصفح المقالات" : "Browse Articles"}</Link>
         </div>
       ) : (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">{saved.map((a) => <ArticleCard key={a.id} a={a} />)}</div>

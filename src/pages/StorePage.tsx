@@ -34,7 +34,7 @@ export default function StorePage() {
       <div className="mb-6 flex items-center justify-between rounded-3xl nh-hero p-8 text-white">
         <div>
           <h1 className="text-3xl font-black">{t("store.heroTitle")}</h1>
-          <p className="mt-1 text-sky-50">{t("store.heroDesc")}</p>
+          <p className="mt-1 text-teal-50">{t("store.heroDesc")}</p>
         </div>
         <Link to="/checkout" className="relative rounded-full bg-white/20 px-5 py-2.5 font-bold backdrop-blur hover:bg-white/30">
           {t("store.cart")}
@@ -45,7 +45,7 @@ export default function StorePage() {
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <div className="flex gap-2">
           {["all", "pdf", "course", "subscription"].map((tp) => (
-            <button key={tp} onClick={() => setFilter(tp)} className={`rounded-full px-4 py-1.5 text-sm font-semibold ${filter === tp ? "bg-sky-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{tp === "all" ? t("cat.all") : typeLabels[tp]}</button>
+            <button key={tp} onClick={() => setFilter(tp)} className={`rounded-full px-4 py-1.5 text-sm font-semibold ${filter === tp ? "bg-teal-500 text-white" : "bg-slate-100 dark:bg-slate-800"}`}>{tp === "all" ? t("cat.all") : typeLabels[tp]}</button>
           ))}
         </div>
         <div className="flex gap-2">
@@ -67,7 +67,7 @@ export default function StorePage() {
                 <span className="absolute right-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-emerald-600 dark:bg-slate-900/90">{typeLabels[p.type]}</span>
               </Link>
               <div className="p-5">
-                <Link to={`/product/${p.id}`}><h3 className="font-bold hover:text-sky-600 dark:text-white">{title}</h3></Link>
+                <Link to={`/product/${p.id}`}><h3 className="font-bold hover:text-teal-600 dark:text-white">{title}</h3></Link>
                 <p className="mt-1 line-clamp-2 text-sm text-slate-500 dark:text-slate-400">{desc}</p>
                 <div className="mt-3 flex items-center gap-2">
                   <span className="text-2xl font-black text-emerald-500">{finalPrice} {lang === "en" ? "EGP" : "ج.م"}</span>
@@ -75,7 +75,7 @@ export default function StorePage() {
                 </div>
                 <div className="mt-1 text-xs text-slate-400">🛍 {p.sales} {t("store.purchases")}</div>
                 <div className="mt-3 flex gap-2">
-                  <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); notify(t("store.addedToCart"), "success"); }} className="flex-1 rounded-full border border-sky-500 py-2.5 text-sm font-bold text-sky-500">{t("store.addToCart")}</button>
+                  <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); notify(t("store.addedToCart"), "success"); }} className="flex-1 rounded-full border border-teal-500 py-2.5 text-sm font-bold text-teal-500">{t("store.addToCart")}</button>
                   <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); nav("/checkout"); }} className="flex-1 rounded-full bg-[#168C91] hover:bg-[#127378] py-2.5 text-sm font-bold text-white hover:opacity-90">{t("store.buyNow")}</button>
                 </div>
               </div>

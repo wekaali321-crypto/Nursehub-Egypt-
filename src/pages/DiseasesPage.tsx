@@ -41,12 +41,12 @@ export const guidePath = (i: { id: string; target?: string }) => (!i.target || i
 
 /** Title / icon / gradient / hub path of a target (diseases, an existing section or a new section). */
 function sectionInfo(target: string, ar: boolean) {
-  if (target === 'diseases') return { name: ar ? 'الأمراض للتمريض' : 'Diseases for Nurses', icon: '🫀', grad: 'from-teal-500 via-sky-500 to-indigo-500', path: '/diseases' };
+  if (target === 'diseases') return { name: ar ? 'الأمراض للتمريض' : 'Diseases for Nurses', icon: '🫀', grad: 'from-teal-500 via-teal-500 to-indigo-500', path: '/diseases' };
   const host = HOST_SECTIONS[target];
   if (host) return { name: ar ? host.ar : host.en, icon: host.icon, grad: host.grad, path: host.path };
   const st = NEW_SECTION_STYLE[target];
   const ns = newSections()[target];
-  return { name: ar ? ns?.ar || target : st?.en || ns?.ar || target, icon: st?.icon || '📚', grad: st?.grad || 'from-teal-500 to-sky-600', path: `/section/${target}` };
+  return { name: ar ? ns?.ar || target : st?.en || ns?.ar || target, icon: st?.icon || '📚', grad: st?.grad || 'from-teal-500 to-teal-600', path: `/section/${target}` };
 }
 
 function Loading() {

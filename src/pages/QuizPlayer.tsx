@@ -67,7 +67,7 @@ export default function QuizPlayer() {
       <div className="mx-auto max-w-3xl px-4 py-20 text-center">
         <div className="text-6xl">🔍</div>
         <h1 className="mt-4 text-2xl font-bold dark:text-white">{mode ? t("quiz.modeNotReady") : t("quiz.notFound")}</h1>
-        <Link to="/quizzes" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("quiz.allQuizzes")}</Link>
+        <Link to="/quizzes" className="mt-4 inline-block rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("quiz.allQuizzes")}</Link>
       </div>
     );
   }
@@ -166,10 +166,10 @@ export default function QuizPlayer() {
           <p className="mt-2 text-slate-500 dark:text-slate-400">{description}</p>
           <div className="mx-auto mt-5 grid max-w-md grid-cols-2 gap-3 text-sm">
             {[[t("quiz.numQuestionsLabel"), quiz.questions.length], [t("quiz.duration"), quiz.timeLimit ? `${quiz.timeLimit} ${t("quiz.time")}` : t("quiz.notSpecified")], [t("quiz.passScoreLabel"), `${quiz.passScore}%`], [t("quiz.level"), difficulty]].map(([l, v]) => (
-              <div key={l as string} className="rounded-xl bg-slate-50 p-3 dark:bg-slate-800"><div className="font-black text-sky-600">{v}</div><div className="text-xs text-slate-500">{l}</div></div>
+              <div key={l as string} className="rounded-xl bg-slate-50 p-3 dark:bg-slate-800"><div className="font-black text-teal-600">{v}</div><div className="text-xs text-slate-500">{l}</div></div>
             ))}
           </div>
-          <input value={userName} onChange={(e) => setUserName(e.target.value)} placeholder={t("quiz.namePlaceholder")} className="mx-auto mt-5 block w-full max-w-md rounded-lg border border-slate-200 px-3 py-2.5 outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-800" />
+          <input value={userName} onChange={(e) => setUserName(e.target.value)} placeholder={t("quiz.namePlaceholder")} className="mx-auto mt-5 block w-full max-w-md rounded-lg border border-slate-200 px-3 py-2.5 outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800" />
           <button onClick={start} className="mt-4 rounded-full bg-[#168C91] hover:bg-[#127378] px-10 py-3 font-bold text-white">{t("quiz.startBtn")}</button>
         </div>
       </div>
@@ -188,20 +188,20 @@ export default function QuizPlayer() {
           <p className={`mt-2 font-bold ${result.passed ? "text-emerald-500" : "text-amber-500"}`}>{result.passed ? t("quiz.passed") : t("quiz.failed")}</p>
 
           {result.passed && (
-            <div className="mx-auto mt-6 max-w-md rounded-2xl border-4 border-double border-sky-400 bg-white p-6 text-center dark:bg-slate-900">
+            <div className="mx-auto mt-6 max-w-md rounded-2xl border-4 border-double border-teal-400 bg-white p-6 text-center dark:bg-slate-900">
               <div className="text-3xl">🏅</div>
               <div className="mt-1 text-xs font-bold uppercase tracking-widest text-slate-400">{t("quiz.certificate")}</div>
               <div className="mt-2 text-lg font-black dark:text-white">{userName || t("quiz.trainee")}</div>
               <div className="text-sm text-slate-500">{t("quiz.certifiedPassed")}: {title}</div>
               <div className="mt-2 text-xs text-slate-400">{t("quiz.by")} {result.score}% — {settings.siteName}</div>
               <div className="mt-1 text-[10px] text-slate-300">Created by RN. Ali Ashour</div>
-              <button onClick={printCertificate} className="mt-3 rounded-full bg-sky-500 px-5 py-1.5 text-sm font-bold text-white">{t("quiz.printCert")}</button>
+              <button onClick={printCertificate} className="mt-3 rounded-full bg-teal-500 px-5 py-1.5 text-sm font-bold text-white">{t("quiz.printCert")}</button>
             </div>
           )}
 
           <div className="mt-6 flex flex-wrap justify-center gap-2">
-            <button onClick={() => { setStarted(false); setFinished(false); setAnswers({}); setCurrent(0); }} className="rounded-full border border-sky-500 px-6 py-2 font-bold text-sky-500">{t("quiz.retry")}</button>
-            <Link to="/quizzes" className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("quiz.otherQuizzes")}</Link>
+            <button onClick={() => { setStarted(false); setFinished(false); setAnswers({}); setCurrent(0); }} className="rounded-full border border-teal-500 px-6 py-2 font-bold text-teal-500">{t("quiz.retry")}</button>
+            <Link to="/quizzes" className="rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("quiz.otherQuizzes")}</Link>
           </div>
         </div>
 
@@ -224,7 +224,7 @@ export default function QuizPlayer() {
                     </div>
                   ))}
                 </div>
-                {qqExplanation && <div className="mt-2 rounded-lg bg-sky-50 p-2 text-xs text-sky-700 dark:bg-sky-500/10 dark:text-sky-300">💡 {qqExplanation}</div>}
+                {qqExplanation && <div className="mt-2 rounded-lg bg-teal-50 p-2 text-xs text-teal-700 dark:bg-teal-500/10 dark:text-teal-300">💡 {qqExplanation}</div>}
                 {!ok && ua === undefined && <div className="mt-1 text-xs text-amber-500">{t("quiz.notAnswered")}</div>}
               </div>
             );
@@ -240,7 +240,7 @@ export default function QuizPlayer() {
       <div className="mb-4 flex items-center justify-between">
         <span className="text-sm font-bold text-slate-500 dark:text-slate-400">{t("quiz.questionLabel")} {current + 1} {t("quiz.of")} {quiz.questions.length}</span>
         <div className="flex items-center gap-2">
-          {quiz.timeLimit > 0 && <span className={`rounded-full px-4 py-1 text-sm font-black ${secondsLeft < 30 ? "bg-rose-100 text-rose-600" : "bg-sky-100 text-sky-600 dark:bg-sky-500/10"}`}>⏱ {mm}:{ss}</span>}
+          {quiz.timeLimit > 0 && <span className={`rounded-full px-4 py-1 text-sm font-black ${secondsLeft < 30 ? "bg-rose-100 text-rose-600" : "bg-teal-100 text-teal-600 dark:bg-teal-500/10"}`}>⏱ {mm}:{ss}</span>}
           <InlineLangToggle />
         </div>
       </div>
@@ -253,8 +253,8 @@ export default function QuizPlayer() {
         <div className="mt-4 space-y-2">
           {qOptions.map((o, oi) => (
             <button key={oi} onClick={() => setAnswers((a) => ({ ...a, [q.id]: oi }))}
-              className={`flex w-full items-center gap-3 rounded-xl border-2 px-4 py-3 text-right transition ${answers[q.id] === oi ? "border-sky-500 bg-sky-50 dark:bg-sky-500/10" : "border-slate-200 hover:border-sky-300 dark:border-slate-700"}`}>
-              <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${answers[q.id] === oi ? "bg-sky-500 text-white" : "bg-slate-200 dark:bg-slate-700"}`}>{optionLetters[oi]}</span>
+              className={`flex w-full items-center gap-3 rounded-xl border-2 px-4 py-3 text-right transition ${answers[q.id] === oi ? "border-teal-500 bg-teal-50 dark:bg-teal-500/10" : "border-slate-200 hover:border-teal-300 dark:border-slate-700"}`}>
+              <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold ${answers[q.id] === oi ? "bg-teal-500 text-white" : "bg-slate-200 dark:bg-slate-700"}`}>{optionLetters[oi]}</span>
               <span className="dark:text-white">{o}</span>
             </button>
           ))}
@@ -265,7 +265,7 @@ export default function QuizPlayer() {
         <button onClick={() => setCurrent((c) => Math.max(0, c - 1))} disabled={current === 0} className="rounded-full border border-slate-200 px-6 py-2 font-bold disabled:opacity-40 dark:border-slate-700 dark:text-white">{t("quiz.prev")}</button>
         <span className="text-xs text-slate-400">{t("quiz.answered")} {answered}/{quiz.questions.length}</span>
         {current < quiz.questions.length - 1 ? (
-          <button onClick={() => setCurrent((c) => c + 1)} className="rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("quiz.next")}</button>
+          <button onClick={() => setCurrent((c) => c + 1)} className="rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("quiz.next")}</button>
         ) : (
           <button onClick={finish} className="rounded-full bg-emerald-500 px-6 py-2 font-bold text-white">{t("quiz.finish")}</button>
         )}

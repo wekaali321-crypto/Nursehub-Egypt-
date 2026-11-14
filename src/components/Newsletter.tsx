@@ -8,10 +8,10 @@ export default function Newsletter() {
 
   return (
     <section className="mx-auto my-12 max-w-5xl px-4">
-      <div className="overflow-hidden rounded-3xl bg-gradient-to-l from-sky-600 to-emerald-500 p-8 text-center text-white md:p-12">
+      <div className="overflow-hidden rounded-3xl bg-gradient-to-l from-teal-600 to-emerald-500 p-8 text-center text-white md:p-12">
         <div className="text-4xl">📧</div>
         <h2 className="mt-3 text-2xl font-black md:text-3xl">{t("news.title")}</h2>
-        <p className="mx-auto mt-2 max-w-lg text-sky-50">{t("news.desc")}</p>
+        <p className="mx-auto mt-2 max-w-lg text-teal-50">{t("news.desc")}</p>
         {done ? (
           <div className="mx-auto mt-6 max-w-md rounded-xl bg-white/20 py-3 font-bold">{t("news.done")}</div>
         ) : (

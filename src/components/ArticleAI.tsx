@@ -59,7 +59,7 @@ export default function ArticleAI({ articleHtml, articleTitle }: { articleHtml: 
     : "";
 
   return (
-    <div className="rounded-2xl border border-sky-200 bg-gradient-to-br from-sky-50 to-emerald-50 dark:border-sky-900/60 dark:from-sky-500/5 dark:to-emerald-500/5 print:hidden">
+    <div className="rounded-2xl border border-teal-200 bg-gradient-to-br from-teal-50 to-emerald-50 dark:border-teal-900/60 dark:from-teal-500/5 dark:to-emerald-500/5 print:hidden">
       <button
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
@@ -71,11 +71,11 @@ export default function ArticleAI({ articleHtml, articleTitle }: { articleHtml: 
         <span className="text-slate-400" aria-hidden="true">{open ? "▲" : "▼"}</span>
       </button>
       {open && (
-        <div className="border-t border-sky-100 p-4 dark:border-sky-900/50">
+        <div className="border-t border-teal-100 p-4 dark:border-teal-900/50">
           <div className="max-h-72 space-y-3 overflow-y-auto pr-1" role="log" aria-live="polite">
             {msgs.map((m, i) => (
               <div key={i} className={m.role === "user" ? "text-left" : ""}>
-                <div className={`inline-block max-w-[92%] rounded-2xl px-3.5 py-2 text-sm ${m.role === "user" ? "bg-sky-500 text-white" : "bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200"}`}>
+                <div className={`inline-block max-w-[92%] rounded-2xl px-3.5 py-2 text-sm ${m.role === "user" ? "bg-teal-500 text-white" : "bg-white text-slate-700 dark:bg-slate-800 dark:text-slate-200"}`}>
                   {m.role === "bot" && m.source !== "info" && (
                     <div className="mb-1 text-[10px] font-bold uppercase tracking-wide opacity-60">{sourceLabel(m.source)}</div>
                   )}
@@ -83,7 +83,7 @@ export default function ArticleAI({ articleHtml, articleTitle }: { articleHtml: 
                   {m.source === "external" && (
                     <ul className="mt-2 space-y-0.5">
                       {EXTERNAL_SOURCES.map((s) => (
-                        <li key={s.url}><a href={s.url} target="_blank" rel="noreferrer" className="text-sky-500 underline">{s.name} ↗</a></li>
+                        <li key={s.url}><a href={s.url} target="_blank" rel="noreferrer" className="text-teal-500 underline">{s.name} ↗</a></li>
                       ))}
                     </ul>
                   )}
@@ -98,9 +98,9 @@ export default function ArticleAI({ articleHtml, articleTitle }: { articleHtml: 
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={lang === "ar" ? "اكتب سؤالك..." : "Type your question..."}
-              className="flex-1 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm outline-none focus:border-sky-400 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+              className="flex-1 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
             />
-            <button className="shrink-0 rounded-full bg-sky-500 px-4 py-2 text-sm font-bold text-white">{lang === "ar" ? "إرسال" : "Send"}</button>
+            <button className="shrink-0 rounded-full bg-teal-500 px-4 py-2 text-sm font-bold text-white">{lang === "ar" ? "إرسال" : "Send"}</button>
           </form>
           <p className="mt-2 text-[11px] text-slate-400">
             {lang === "ar" ? "إجابات تعليمية عامة — لا تُغني عن استشارة مختص." : "General educational answers — not a substitute for professional advice."}

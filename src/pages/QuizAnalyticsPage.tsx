@@ -49,7 +49,7 @@ export default function QuizAnalyticsPage() {
       {a.quizCount === 0 ? (
         <div className="rounded-2xl border border-dashed border-slate-300 py-16 text-center text-slate-400 dark:border-slate-700">
           <p>{t("quiz.analyticsNoData")}</p>
-          <Link to="/quizzes" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("quiz.allQuizzes")}</Link>
+          <Link to="/quizzes" className="mt-4 inline-block rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("quiz.allQuizzes")}</Link>
         </div>
       ) : (
         <>

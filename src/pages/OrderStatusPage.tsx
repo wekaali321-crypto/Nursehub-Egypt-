@@ -83,7 +83,7 @@ export default function OrderStatusPage() {
         <div className="text-6xl">❓</div>
         <h1 className="mt-3 text-2xl font-black dark:text-white">{t("order.notFound")}</h1>
         <p className="mt-2 text-slate-500 dark:text-slate-400">{t("order.checkInvoiceNote")}</p>
-        <Link to="/store" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("nav.store")}</Link>
+        <Link to="/store" className="mt-4 inline-block rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("nav.store")}</Link>
       </div>
     );
   }
@@ -133,7 +133,7 @@ export default function OrderStatusPage() {
                   <a
                     href={`${product.fileUrl}${product.fileUrl.includes("?") ? "&" : "?"}download=`}
                     onClick={() => trackDownload()}
-                    className="shrink-0 rounded-full bg-sky-500 px-4 py-1.5 text-xs font-bold text-white"
+                    className="shrink-0 rounded-full bg-teal-500 px-4 py-1.5 text-xs font-bold text-white"
                   >
                     {t("order.download")}
                   </a>

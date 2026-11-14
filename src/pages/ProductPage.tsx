@@ -46,7 +46,7 @@ export default function ProductPage() {
       <div className="mx-auto max-w-3xl px-4 py-20 text-center">
         <div className="text-6xl">🔍</div>
         <h1 className="mt-4 text-2xl font-bold dark:text-white">{t("product.notFound")}</h1>
-        <Link to="/store" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("product.backToStore")}</Link>
+        <Link to="/store" className="mt-4 inline-block rounded-full bg-teal-500 px-6 py-2 font-bold text-white">{t("product.backToStore")}</Link>
       </div>
     );
   }
@@ -69,7 +69,7 @@ export default function ProductPage() {
           {images.length > 1 && (
             <div className="mt-3 flex gap-2 overflow-x-auto">
               {images.map((img, i) => (
-                <button key={i} onClick={() => setActiveImg(i)} className={`h-16 w-16 shrink-0 overflow-hidden rounded-lg border-2 ${activeImg === i ? "border-sky-500" : "border-transparent"}`}>
+                <button key={i} onClick={() => setActiveImg(i)} className={`h-16 w-16 shrink-0 overflow-hidden rounded-lg border-2 ${activeImg === i ? "border-teal-500" : "border-transparent"}`}>
                   <img src={img} alt="" className="h-full w-full object-cover" />
                 </button>
               ))}
@@ -96,7 +96,7 @@ export default function ProductPage() {
 
           <div className="mt-6 flex flex-wrap gap-3">
             <button onClick={() => { addToCart(); nav("/checkout"); }} className="rounded-full bg-[#168C91] hover:bg-[#127378] px-8 py-3 font-bold text-white">{t("store.buyNow")}</button>
-            <button onClick={addToCart} className="rounded-full border border-sky-500 px-6 py-3 font-bold text-sky-500">{t("store.addToCart")}</button>
+            <button onClick={addToCart} className="rounded-full border border-teal-500 px-6 py-3 font-bold text-teal-500">{t("store.addToCart")}</button>
           </div>
 
           <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm dark:border-slate-800 dark:bg-slate-800/50">

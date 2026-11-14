@@ -96,7 +96,7 @@ export default function TrueFalseQuiz({ slug, lang = "ar" }: Props) {
                   const isCorrect = opt === q.correct_answer;
                   const isSelected = opt === selected;
                   let cls =
-                    "border-slate-200 bg-slate-50 hover:bg-sky-50 dark:border-slate-700 dark:bg-slate-800";
+                    "border-slate-200 bg-slate-50 hover:bg-teal-50 dark:border-slate-700 dark:bg-slate-800";
                   if (answered && isSelected && isCorrect)
                     cls = "border-emerald-400 bg-emerald-50 dark:bg-emerald-500/10";
                   else if (answered && isSelected && !isCorrect)
@@ -120,7 +120,7 @@ export default function TrueFalseQuiz({ slug, lang = "ar" }: Props) {
                 })}
               </div>
               {answered && q.explanation && (
-                <p className="mt-3 rounded-lg bg-sky-50 p-2 text-xs font-semibold text-sky-700 dark:bg-sky-500/10 dark:text-sky-400">
+                <p className="mt-3 rounded-lg bg-teal-50 p-2 text-xs font-semibold text-teal-700 dark:bg-teal-500/10 dark:text-teal-400">
                   💡 {q.explanation}
                 </p>
               )}

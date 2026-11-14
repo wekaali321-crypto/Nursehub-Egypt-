@@ -8,7 +8,7 @@ import PrintButton from "../components/PrintButton";
 import InlineLangToggle from "../components/InlineLangToggle";
 
 const CATEGORY_COLORS: Record<string, string> = {
-  "الجهاز التنفسي (Respiratory)": "from-sky-500 to-cyan-600",
+  "الجهاز التنفسي (Respiratory)": "from-teal-500 to-cyan-600",
   "أمراض القلب (Cardiology)": "from-rose-500 to-red-600",
   "أمراض الكبد (Hepatology)": "from-amber-600 to-orange-600",
   "الكلى والمسالك البولية (Nephrology)": "from-teal-500 to-emerald-600",
