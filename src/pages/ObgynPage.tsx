@@ -5,6 +5,7 @@ import { useI18n } from "../lib/i18n";
 import { fetchObgynTopics, fetchObgynTopic, type ObgynTopic } from "../lib/obgynTopicsApi";
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
+import { sectionArtFor } from "../lib/sectionArt";
 
 // Light pink accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -77,6 +78,7 @@ export default function ObgynTopicPage() {
       tint={TINT}
       fallbackIcon="🤰"
       backLabel={{ en: "← Back to Obstetrics & Gynecology", ar: "← رجوع لقسم النساء والتوليد" }}
+      sectionArt={sectionArtFor("obgyn")}
     />
   );
 }

@@ -52,6 +52,13 @@ export const SECTION_ART: Record<string, Record<string, string>> = {
     "nursing-process-overview": "fun-adpie", "maslow-hierarchy-nursing": "fun-maslow", "hand-hygiene": "dial-five-moments",
     "isolation-precaution-types": "fun-isolation", "pain-types-assessment": "fun-pain-scale", "immobility-risks-rom-exercises": "anat-joint-movements",
   },
+  obgyn: {
+    "gestational-age-edd-estimation": "ob-fundal-height", "leopold-four-steps": "ob-leopold", "fetal-heart-tone-location": "ob-fetal-heart",
+    "supine-hypotension-syndrome": "ob-supine-hypotension", "placenta-previa-features": "ob-placenta-previa", "abruptio-placentae-features": "ob-abruptio",
+    "labor-stage-one": "ob-cervix-dilation", "labor-stages-two-three-four": "ob-labor-stages", "fhr-baseline-patterns": "ob-fhr-decels",
+    "involution-lochia": "ob-involution", "umbilical-cord-prolapse": "ob-cord-prolapse", "pelvis-types-classification": "ob-pelvis-types",
+    "fertilization-implantation": "ob-fertilization", "apgar-scoring": "nicu-apgar",
+  },
 };
 
 /** `sectionArt` prop for TopicSectionDetail (keys: "<section id>" or, where ids repeat, "<topic id>/<section id>"). */
