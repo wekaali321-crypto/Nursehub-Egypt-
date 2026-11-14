@@ -6,6 +6,7 @@ import {
 } from "../lib/pregnancyLactationApi";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const CATEGORY_ORDER = [
   "مسكنات ومضادات التهاب",
@@ -122,6 +123,7 @@ function DrugCard({
 
 export default function PregnancyLactationPage() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<PregnancyLactationSafety[]>([]);
   const [loading, setLoading] = useState(true);

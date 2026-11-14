@@ -24,6 +24,7 @@ import {
   type Exam,
   type ExamQuestion,
 } from '../lib/examLicensureApi';
+import { useSEO } from "../lib/seo";
 
 // ---------------------------------------------------------------------------
 // Shared bits
@@ -69,6 +70,7 @@ export function LicensureExamsHome() {
       .finally(() => setLoading(false));
   }, []);
 
+  useSEO({ title: "قسم الاختبارات | NurseHub Egypt" });
   if (loading) return <LoadingBlock />;
   if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
 
@@ -76,8 +78,10 @@ export function LicensureExamsHome() {
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6" dir="rtl">
-      <h1 className="text-2xl font-bold text-slate-800 dark:text-white mb-1">قسم الاختبارات</h1>
-      <p className="text-slate-500 dark:text-slate-400 mb-6">Tests Section</p>
+      <div className="nh-hero mb-6 rounded-3xl px-6 py-6 text-white">
+        <h1 className="text-2xl font-bold mb-1">قسم الاختبارات</h1>
+        <p className="text-white/80">Tests Section</p>
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {topLevelCategories.map((cat) => (
@@ -128,6 +132,7 @@ export function LicensureExamCategory() {
       .finally(() => setLoading(false));
   }, [categoryId]);
 
+  useSEO({ title: `${category?.name_ar ?? "الامتحانات"} | NurseHub Egypt` });
   if (loading) return <LoadingBlock />;
   if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
 
@@ -207,6 +212,7 @@ export default function LicensureExamStudy() {
       .finally(() => setLoading(false));
   }, [examId]);
 
+  useSEO({ title: `${exam?.title_ar ?? "اختبار"} | NurseHub Egypt` });
   if (loading) return <LoadingBlock />;
   if (error) return <div className="p-6 text-red-600">خطأ: {error}</div>;
   if (!exam || questions.length === 0) {

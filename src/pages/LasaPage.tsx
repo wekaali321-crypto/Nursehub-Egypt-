@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { fetchLasaPairs, type LasaPair } from "../lib/lasaApi";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const SIMILARITY_LABELS: Record<string, { ar: string; en: string }> = {
   look_alike: { ar: "تشابه شكلي (الاسم المكتوب)", en: "Look-alike (written name)" },
@@ -33,6 +34,7 @@ function TallMan({ a, b }: { a: string | null; b: string | null }) {
 
 export default function LasaPage() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [searchParams] = useSearchParams();
   const [pairs, setPairs] = useState<LasaPair[]>([]);
   const [loading, setLoading] = useState(true);

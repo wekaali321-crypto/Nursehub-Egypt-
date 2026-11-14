@@ -6,6 +6,7 @@ import { HighAlertBadges, parseHighAlertTypes } from "../lib/highAlert";
 import { useI18n, bilingual } from "../lib/i18n";
 import PrintButton from "../components/PrintButton";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "الجهاز التنفسي (Respiratory)": "from-teal-500 to-cyan-600",
@@ -66,6 +67,7 @@ function CalcBlock({ dose, title }: { dose: Record<string, string> | null; title
 
 export function PedsMedicationsHome() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [items, setItems] = useState<PedsMedication[]>([]);
   const [loading, setLoading] = useState(true);
   const [q, setQ] = useState("");
@@ -148,6 +150,7 @@ export default function PedsMedicationDetail() {
   const { lang } = useI18n();
   const [item, setItem] = useState<PedsMedication | null>(null);
   const [loading, setLoading] = useState(true);
+  useSEO({ title: `${item ? bilingual(item.drug_name, item.drug_name_en, lang).text : ""}${item ? " | " : ""}NurseHub Egypt` });
 
   useEffect(() => {
     if (!id) return;

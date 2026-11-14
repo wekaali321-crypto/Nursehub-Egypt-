@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { fetchHighAlertRef, type HighAlertRefCategory } from "../lib/highAlertRefApi";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const LABELS = {
   loading: { ar: "جارِ التحميل...", en: "Loading..." },
@@ -83,6 +84,7 @@ function CategoryCard({
 
 export default function HighAlertRefPage() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<HighAlertRefCategory[]>([]);
   const [loading, setLoading] = useState(true);

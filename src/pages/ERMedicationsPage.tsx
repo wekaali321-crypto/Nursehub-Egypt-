@@ -8,6 +8,7 @@ import CrossRefBox from "../components/CrossRefBox";
 import SafetyLinksBox from "../components/SafetyLinksBox";
 import PrintButton from "../components/PrintButton";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "المسكنات ومضادات الالتهاب والتشنج (Analgesics & Antispasmodics)": "from-orange-500 to-amber-600",
@@ -68,6 +69,7 @@ function CalcBlock({ dose, title }: { dose: Record<string, string> | null; title
 
 export function ERMedicationsHome() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [items, setItems] = useState<ERMedication[]>([]);
   const [loading, setLoading] = useState(true);
   const [q, setQ] = useState("");
@@ -152,6 +154,7 @@ export default function ERMedicationDetail() {
   const { lang } = useI18n();
   const [item, setItem] = useState<ERMedication | null>(null);
   const [loading, setLoading] = useState(true);
+  useSEO({ title: `${item ? bilingual(item.drug_name, item.drug_name_en, lang).text : ""}${item ? " | " : ""}NurseHub Egypt` });
 
   useEffect(() => {
     if (!id) return;

@@ -8,6 +8,7 @@ import CrossRefBox from "../components/CrossRefBox";
 import SafetyLinksBox from "../components/SafetyLinksBox";
 import PrintButton from "../components/PrintButton";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "أدوية الثلاجة": "from-cyan-500 to-blue-600",
@@ -66,6 +67,7 @@ function CalcBlock({ dose, title }: { dose: Record<string, string> | null; title
 
 export function ICUMedicationsHome() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [items, setItems] = useState<ICUMedication[]>([]);
   const [loading, setLoading] = useState(true);
   const [q, setQ] = useState("");
@@ -150,6 +152,7 @@ export default function ICUMedicationDetail() {
   const { lang } = useI18n();
   const [item, setItem] = useState<ICUMedication | null>(null);
   const [loading, setLoading] = useState(true);
+  useSEO({ title: `${item ? bilingual(item.drug_name, item.drug_name_en, lang).text : ""}${item ? " | " : ""}NurseHub Egypt` });
 
   useEffect(() => {
     if (!id) return;

@@ -7,6 +7,7 @@ import {
 } from "../lib/organDoseApi";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const TABS: { key: OrganAdjustmentType; label: { ar: string; en: string }; icon: string }[] = [
   { key: "renal", label: { ar: "الفشل الكلوي", en: "Renal Failure" }, icon: "🫘" },
@@ -94,6 +95,7 @@ function DrugCard({
 
 export default function OrganDoseAdjustmentsPage() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<OrganDoseAdjustment[]>([]);
   const [loading, setLoading] = useState(true);

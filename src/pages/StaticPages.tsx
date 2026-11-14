@@ -14,7 +14,7 @@ function Wrap({ titleAr, titleEn, descAr, descEn, children }: { titleAr: string;
     <div className="mx-auto max-w-4xl px-4 py-8">
       <Breadcrumbs items={[{ label: title }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <h1 className="mb-6 text-3xl font-black dark:text-white">{title}</h1>
+      <div className="nh-hero mb-6 rounded-3xl px-6 py-6 text-white"><h1 className="text-3xl font-black">{title}</h1></div>
       <div className="prose-content text-slate-700 dark:text-slate-300">{children}</div>
     </div>
   );

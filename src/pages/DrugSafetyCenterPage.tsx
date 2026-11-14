@@ -6,10 +6,12 @@ import { fetchOrganDoseAdjustments } from "../lib/organDoseApi";
 import { fetchPregnancyLactationSafety } from "../lib/pregnancyLactationApi";
 import { fetchIVCompatibility } from "../lib/ivCompatibilityApi";
 import { useStore } from "../lib/store";
+import { useSEO } from "../lib/seo";
 
 type Tile = { to: string; icon: string; title: string; desc: string; count?: string; gradient: string };
 
 export default function DrugSafetyCenterPage() {
+  useSEO({ title: "مركز أمان الأدوية | NurseHub Egypt" });
   const { drugAntidotes, drugInteractions } = useStore();
   const [highAlertCount, setHighAlertCount] = useState(0);
   const [lasaCount, setLasaCount] = useState(0);

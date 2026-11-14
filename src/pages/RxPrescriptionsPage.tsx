@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { fetchRxPrescriptions, RX_CATEGORY_ORDER, RX_CATEGORY_LABELS, type RxPrescription } from "../lib/rxApi";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const LABELS = {
   loading: { ar: "جارِ التحميل...", en: "Loading..." },
@@ -36,6 +37,7 @@ function DisclaimerBanner({ lang }: { lang: "ar" | "en" }) {
 
 export function RxPrescriptionsHome() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [items, setItems] = useState<RxPrescription[]>([]);
   const [loading, setLoading] = useState(true);
   const [q, setQ] = useState("");
@@ -126,6 +128,7 @@ export default function RxPrescriptionDetail() {
   const { lang } = useI18n();
   const [rx, setRx] = useState<RxPrescription | null>(null);
   const [loading, setLoading] = useState(true);
+  useSEO({ title: `${rx ? (lang === "en" && rx.condition_en ? rx.condition_en : rx.condition_ar) : ""}${rx ? " | " : ""}NurseHub Egypt` });
 
   useEffect(() => {
     if (!id) return;

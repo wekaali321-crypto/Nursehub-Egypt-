@@ -156,7 +156,7 @@ export default function CheckoutPage() {
     <div className="mx-auto max-w-5xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("nav.store"), path: "/store" }, { label: t("checkout.pageTitle") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <h1 className="mb-6 text-2xl font-black dark:text-white">{t("checkout.heading")}</h1>
+      <div className="nh-hero mb-6 rounded-3xl px-6 py-5 text-white"><h1 className="text-2xl font-black">{t("checkout.heading")}</h1></div>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
         {/* Customer + payment */}

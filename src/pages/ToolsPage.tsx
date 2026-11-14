@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Breadcrumbs } from "../components/common";
 import { useI18n } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 /**
  * Accordion-style card: only the tool's title/icon show by default; tapping
@@ -1114,13 +1115,14 @@ function AIAssistant() {
 
 export default function ToolsPage() {
   const { t } = useI18n();
+  useSEO({ title: `${t("tools.title").replace(/^[^\p{L}\p{N}]+/u, "")} | NurseHub Egypt` });
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("nav.tools") }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
-      <div className="mb-8 text-center">
-        <h1 className="text-3xl font-black dark:text-white">{t("tools.title")}</h1>
-        <p className="mt-2 text-slate-500 dark:text-slate-400">{t("tools.sub")}</p>
+      <div className="nh-hero mb-8 rounded-3xl px-6 py-8 text-center text-white">
+        <h1 className="text-3xl font-black">{t("tools.title")}</h1>
+        <p className="mt-2 text-white/80">{t("tools.sub")}</p>
       </div>
       <div className="grid gap-4 lg:grid-cols-2">
         <BMI /><IVDrip /><Dosage /><FluidBalance /><Pregnancy /><GCS /><PediatricDose /><DoseRateCalculator /><ABGInterpreter />

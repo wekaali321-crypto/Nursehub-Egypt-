@@ -10,6 +10,7 @@ import {
 } from "../lib/clinicalProtocolsApi";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const LABELS = {
   loading: { ar: "جارِ التحميل...", en: "Loading..." },
@@ -49,6 +50,7 @@ export default function ClinicalProtocolDetail() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState<Record<string, boolean>>({});
   const [openPhase, setOpenPhase] = useState<string | null>(null);
+  useSEO({ title: `${protocol ? (lang === "en" && protocol.name_en ? protocol.name_en : protocol.name_ar) : ""}${protocol ? " | " : ""}NurseHub Egypt` });
 
   useEffect(() => {
     if (!id) return;

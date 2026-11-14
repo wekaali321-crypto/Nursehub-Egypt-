@@ -7,6 +7,7 @@ import { Breadcrumbs } from "../components/common";
 import OptimizedImage from "../components/OptimizedImage";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 export default function StorePage() {
   const { products } = useStore();
@@ -14,6 +15,7 @@ export default function StorePage() {
   const { notify } = useToast();
   const nav = useNavigate();
   const { t, lang } = useI18n();
+  useSEO({ title: `${t("store.heroTitle").replace(/^[^\p{L}\p{N}]+/u, "")} | NurseHub Egypt` });
   const [coupon, setCoupon] = useState("");
   const [applied, setApplied] = useState<number>(0);
   const [filter, setFilter] = useState("all");

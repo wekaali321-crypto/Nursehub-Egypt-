@@ -4,11 +4,13 @@ import { useUserAuth } from "../lib/userAuth";
 import { useI18n } from "../lib/i18n";
 import { supabase, isSupabaseConfigured } from "../lib/supabase";
 import { ArticleCard } from "../components/common";
+import { useSEO } from "../lib/seo";
 
 export default function StudentDashboard() {
   const { user, loggedIn, loading: authLoading } = useUserAuth();
   const { lang } = useI18n();
   const isRTL = lang === "ar";
+  useSEO({ title: `${isRTL ? "لوحتي" : "My Dashboard"} | NurseHub Egypt` });
 
   const [recentlyViewed, setRecentlyViewed] = useState<any[]>([]);
   const [savedArticles, setSavedArticles] = useState<any[]>([]);

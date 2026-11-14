@@ -5,6 +5,7 @@ import { CATEGORY_ICONS, type Category } from "../lib/types";
 import ArticleListCard from "../components/ArticleListCard";
 import { useI18n, bilingual, type TKey } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const CAT_KEY: Record<Category, TKey> = {
   articles: "nav.articles", summaries: "nav.summaries", drugs: "nav.drugs",
@@ -52,6 +53,8 @@ export default function CategoryPage() {
 
   const activeSub = sub ? categories.find((c) => c.slug === sub) : undefined;
   const activeSubName = activeSub ? bilingual(activeSub.name, activeSub.nameEn, lang).text : undefined;
+  const seoName = activeSubName ?? catLabel;
+  useSEO({ title: seoName ? `${seoName} | NurseHub Egypt` : "NurseHub Egypt" });
 
   // Top level: only show articles that are NOT tucked into a sub-category
   // folder — otherwise they'd appear twice (once loose, once inside their

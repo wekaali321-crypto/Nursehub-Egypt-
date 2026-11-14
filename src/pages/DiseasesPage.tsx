@@ -149,7 +149,7 @@ function GuideHub({ target }: { target: string }) {
       <Breadcrumbs items={[{ label: info.name }]} />
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
 
-      <div className={`${isDis ? 'dz-hero' : `bg-gradient-to-br ${info.grad}`} relative overflow-hidden rounded-3xl p-6 text-white sm:p-10`}>
+      <div className="nh-hero relative overflow-hidden rounded-3xl p-6 text-white sm:p-10">
         <div className="relative z-10 grid items-center gap-6 sm:grid-cols-[1fr_auto]">
           <div>
             <div className="text-sm font-bold text-white/80">{isDis ? (ar ? '🩺 اتعلّم المرض… واتعلّم تتعامل معاه' : '🩺 Know the disease — know how to nurse it') : `${info.icon} ${ar ? 'قسم جديد' : 'New section'}`}</div>
@@ -555,7 +555,7 @@ export function DiseasePage() {
       <div className="mb-3 flex justify-end"><InlineLangToggle /></div>
 
       <div className="fixed inset-x-0 top-0 z-50 h-1 bg-transparent"><div className={`h-full bg-gradient-to-r ${heroGrad} transition-[width] duration-150`} style={{ width: `${progress}%` }} /></div>
-      <header className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${heroGrad} p-6 text-white shadow-xl sm:p-8`}>
+      <header className="nh-hero relative overflow-hidden rounded-3xl p-6 text-white shadow-xl sm:p-8">
         <div aria-hidden className="pointer-events-none absolute -end-8 -top-10 select-none text-[11rem] leading-none opacity-15">{d.icon || s.icon}</div>
         <div aria-hidden className="pointer-events-none absolute -bottom-16 -start-10 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
         <div className="relative">

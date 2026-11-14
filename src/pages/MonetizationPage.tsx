@@ -1,6 +1,8 @@
 import { Breadcrumbs } from "../components/common";
+import { useSEO } from "../lib/seo";
 
 export default function MonetizationPage() {
+  useSEO({ title: "مركز تحقيق الدخل | NurseHub Egypt" });
   const channels = [
     { i: "📢", t: "Google AdSense", d: "أماكن جاهزة ومُهيأة لإعلانات جوجل في كافة صفحات الموقع." },
     { i: "🖼️", t: "إعلانات Banner", d: "مساحات إعلانية مباشرة بأحجام قياسية (728×90, 300×250)." },

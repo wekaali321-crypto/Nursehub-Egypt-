@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { fetchIVCompatibility, type IVCompatibilityPair, type IVCompatibilityStatus } from "../lib/ivCompatibilityApi";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import { useSEO } from "../lib/seo";
 
 const STATUS_META: Record<IVCompatibilityStatus, { label: { ar: string; en: string }; icon: string; tone: string }> = {
   compatible: {
@@ -68,6 +69,7 @@ function PairCard({ item, lang }: { item: IVCompatibilityPair; lang: "ar" | "en"
 
 export default function IVCompatibilityPage() {
   const { lang } = useI18n();
+  useSEO({ title: `${LABELS.title[lang]} | NurseHub Egypt` });
   const [searchParams] = useSearchParams();
   const [items, setItems] = useState<IVCompatibilityPair[]>([]);
   const [loading, setLoading] = useState(true);

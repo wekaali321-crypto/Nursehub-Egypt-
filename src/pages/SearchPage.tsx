@@ -77,7 +77,7 @@ export default function SearchPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8">
       <Breadcrumbs items={[{ label: t("search.title") }]} />
-      <h1 className="mb-6 text-3xl font-black dark:text-white">{t("search.title")}</h1>
+      <div className="nh-hero mb-6 rounded-3xl px-6 py-6 text-white"><h1 className="text-3xl font-black">{t("search.title")}</h1></div>
 
       <form onSubmit={(e) => { e.preventDefault(); setParams({ q: query }); }} className="mb-4 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900 md:flex-row">
         <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder={t("search.placeholder")} className="flex-1 rounded-lg border border-slate-200 px-4 py-3 outline-none focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800" />
