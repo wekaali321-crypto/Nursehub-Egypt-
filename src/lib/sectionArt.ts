@@ -39,6 +39,11 @@ export const SECTION_ART: Record<string, Record<string, string>> = {
     "fire-triad-prevention": "or-fire-triad", "radiation-safety-principles": "or-radiation", "pneumatic-compression-device-use": "or-ipc",
     "ppe-hand-hygiene": "dial-five-moments",
   },
+  "first-aid": {
+    f2: "fa-drsabc", rc2: "fa-recovery-position", rc3: "fa-avpu", ca2: "icu-cpr", ca3: "icu-aed-pads", ci1: "fa-child-infant-cpr",
+    ch1: "fa-choking", bc2: "fa-seep", bc3: "fa-pressure-points", bd2: "fa-burn-degrees", bd3: "icu-rule-of-nines", cs3: "fa-fast",
+    sh2: "fa-shock-position", ni1: "fa-nosebleed", fr3: "fa-splint",
+  },
 };
 
 /** `sectionArt` prop for TopicSectionDetail (keys: "<section id>" or, where ids repeat, "<topic id>/<section id>"). */
