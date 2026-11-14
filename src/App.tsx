@@ -255,10 +255,12 @@ function HydrationGate({ children, admin = false }: { children: ReactNode; admin
   const maint = useMaintenance(); // own one-row check, started at boot: never waits for the store bundle
   if (!admin && !loggedIn) {
     // Remote flag (nh_settings) or, in local preview mode, the store's own settings.
-    const on = maint?.on || (!loading && settings.maintenanceMode);
+    // 'unknown' (read failed / timed out) fails open; a late answer of 'on' re-renders this gate into the maintenance screen.
+    const remoteOn = maint?.status === "on";
+    const on = remoteOn || (!loading && settings.maintenanceMode);
     if (on) {
       if (checking) return <PageSkeleton />; // an admin's session may still be restoring: show nothing yet, not the page
-      return <MaintenanceScreen message={maint?.on ? maint.message : settings.maintenanceMessage} until={maint?.on ? maint.until : settings.maintenanceUntil} />;
+      return <MaintenanceScreen message={remoteOn ? maint!.message : settings.maintenanceMessage} until={remoteOn ? maint!.until : settings.maintenanceUntil} />;
     }
     // Until the flag is known, no page content (store-free pages included) is rendered: the shell + skeleton only.
     if (maint === null) return <PageSkeleton />;

@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { useToast } from "../components/Toast";
+import { useMaintenance, saveMaintenance, refreshMaintenance } from "../lib/maintenance";
 import { CATEGORY_LABELS } from "../lib/types";
 import { supabase } from "../lib/supabase";
 import { enablePushNotifications, hasPushSubscription, sendPushToAll } from "../lib/push";
@@ -77,38 +78,74 @@ export function VersionsAdmin() {
 }
 
 /* ---------------- Maintenance Mode ---------------- */
+// The switch is read from / written to nh_settings directly (saveMaintenance); the store then mirrors the result.
+// While the server state is unknown (read failed or still running) the switch is disabled: a failed read must never be saved as OFF.
+// The message can still be saved: saveMaintenance re-reads the live switch and keeps it, or saves nothing if that read fails.
 export function MaintenanceAdmin() {
-  const { settings, setData, logActivity } = useStore();
+  const { settings, logActivity } = useStore();
   const { notify } = useToast();
-  const [msg, setMsg] = useState(settings.maintenanceMessage ?? "الموقع تحت الصيانة حالياً، سنعود قريباً 🛠️");
-  const [until, setUntil] = useState(settings.maintenanceUntil ?? "");
+  const maint = useMaintenance();
+  const known = !!maint && maint.status !== "unknown";
+  const isOn = known ? maint!.status === "on" : !!settings.maintenanceMode;
+  const [msg, setMsg] = useState(maint?.message || settings.maintenanceMessage || "الموقع تحت الصيانة حالياً، سنعود قريباً 🛠️");
+  const [until, setUntil] = useState(maint?.until ?? settings.maintenanceUntil ?? "");
+  const [busy, setBusy] = useState(false);
+  const touched = useRef(false);
+  // Show the server's message once it is known (unless the admin already started editing).
+  useEffect(() => {
+    if (!known || touched.current) return;
+    if (maint!.message) setMsg(maint!.message);
+    setUntil(maint!.until ?? "");
+  }, [known, maint]);
 
-  const toggle = (on: boolean) => {
-    setData((d) => ({ ...d, settings: { ...d.settings, maintenanceMode: on, maintenanceMessage: msg, maintenanceUntil: until } }));
-    logActivity(on ? "تفعيل وضع الصيانة" : "إيقاف وضع الصيانة", "الموقع");
-    notify(on ? "تم تفعيل وضع الصيانة" : "تم إيقاف وضع الصيانة");
+  const toggle = async (on: boolean) => {
+    if (!known || busy) return;
+    setBusy(true);
+    try {
+      await saveMaintenance({ on, message: msg, until });
+      logActivity(on ? "تفعيل وضع الصيانة" : "إيقاف وضع الصيانة", "الموقع");
+      notify(on ? "تم تفعيل وضع الصيانة" : "تم إيقاف وضع الصيانة");
+    } catch {
+      notify("تعذّر حفظ حالة الصيانة — لم يتغيّر شيء", "error");
+    } finally { setBusy(false); }
   };
-  const saveCfg = () => { setData((d) => ({ ...d, settings: { ...d.settings, maintenanceMessage: msg, maintenanceUntil: until } })); notify("تم الحفظ"); };
+  const saveCfg = async () => {
+    if (busy) return;
+    setBusy(true);
+    try {
+      await saveMaintenance({ message: msg, until }); // keeps the current ON/OFF as stored on the server
+      notify("تم الحفظ");
+    } catch {
+      notify("تعذّر الحفظ: لم نتمكن من قراءة حالة الصيانة الحالية، فلم يُحفظ شيء", "error");
+    } finally { setBusy(false); }
+  };
+  const retry = async () => { setBusy(true); try { await refreshMaintenance(); } finally { setBusy(false); } };
 
   const inp = "w-full rounded-lg border border-slate-200 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800";
   return (
     <div className="max-w-2xl space-y-4">
+      {!known && (
+        <div role="alert" data-testid="maint-unknown" className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm font-bold text-amber-700 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-300">
+          <span>⚠️ {maint === null ? "جارٍ قراءة حالة الصيانة..." : "تعذّرت قراءة حالة الصيانة من الخادم. زر التشغيل/الإيقاف معطّل حتى تنجح القراءة."}</span>
+          {maint !== null && <button onClick={retry} disabled={busy} className="rounded-lg bg-amber-500 px-4 py-1.5 text-white disabled:opacity-60">إعادة المحاولة</button>}
+        </div>
+      )}
       <div className={`flex items-center justify-between ${card}`}>
         <div>
           <h3 className="font-bold dark:text-white">🛠️ وضع الصيانة</h3>
           <p className="text-sm text-slate-500">عند التفعيل يرى الزوار صفحة صيانة. يبقى للمشرفين وصول كامل للوحة التحكم.</p>
         </div>
-        <label className="relative inline-flex cursor-pointer items-center">
-          <input type="checkbox" checked={!!settings.maintenanceMode} onChange={(e) => toggle(e.target.checked)} className="peer sr-only" />
+        <label className={`relative inline-flex items-center ${known && !busy ? "cursor-pointer" : "cursor-not-allowed opacity-50"}`}>
+          <input type="checkbox" checked={isOn} disabled={!known || busy} onChange={(e) => void toggle(e.target.checked)} className="peer sr-only" aria-label="وضع الصيانة" />
           <div className="h-7 w-12 rounded-full bg-slate-300 after:absolute after:right-0.5 after:top-0.5 after:h-6 after:w-6 after:rounded-full after:bg-white after:transition-all peer-checked:bg-emerald-500 peer-checked:after:-translate-x-5 dark:bg-slate-600" />
         </label>
       </div>
       <div className={`space-y-3 ${card}`}>
-        <div><label className="mb-1 block text-xs font-semibold text-slate-500">رسالة الصيانة</label><textarea value={msg} onChange={(e) => setMsg(e.target.value)} rows={3} className={inp} /></div>
-        <div><label className="mb-1 block text-xs font-semibold text-slate-500">العودة المتوقعة (عداد تنازلي)</label><input type="datetime-local" value={until} onChange={(e) => setUntil(e.target.value)} className={inp} /></div>
-        <button onClick={saveCfg} className="rounded-lg bg-sky-500 px-6 py-2 font-bold text-white">حفظ الإعدادات</button>
+        <div><label className="mb-1 block text-xs font-semibold text-slate-500">رسالة الصيانة</label><textarea value={msg} onChange={(e) => { touched.current = true; setMsg(e.target.value); }} rows={3} className={inp} /></div>
+        <div><label className="mb-1 block text-xs font-semibold text-slate-500">العودة المتوقعة (عداد تنازلي)</label><input type="datetime-local" value={until} onChange={(e) => { touched.current = true; setUntil(e.target.value); }} className={inp} /></div>
+        <button onClick={() => void saveCfg()} disabled={busy} className="rounded-lg bg-sky-500 px-6 py-2 font-bold text-white disabled:opacity-60">حفظ الإعدادات</button>
       </div>
-      {settings.maintenanceMode && <div className="rounded-xl bg-amber-50 p-3 text-center text-sm font-bold text-amber-600 dark:bg-amber-500/10">⚠️ وضع الصيانة مفعّل حالياً — الزوار يرون صفحة الصيانة.</div>}
+      {known && isOn && <div className="rounded-xl bg-amber-50 p-3 text-center text-sm font-bold text-amber-600 dark:bg-amber-500/10">⚠️ وضع الصيانة مفعّل حالياً — الزوار يرون صفحة الصيانة.</div>}
     </div>
   );
 }

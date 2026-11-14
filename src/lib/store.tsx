@@ -73,7 +73,7 @@ import { seedOTCConditions } from "./seedOTC";
 import { isSupabaseEnabled, supabase } from "./supabase";
 import { loadAllFromSupabase, failedTables, syncEntity, syncSettings, seedSupabase } from "./dataApi";
 import { cacheGet, cacheSet } from "./remoteCache";
-import { fetchMaintenance, saveMaintenance } from "./maintenance";
+import { getMaintenance, onMaintenance, saveMaintenance, type MaintenanceState } from "./maintenance";
 
 const KEY = "nursehub_data_v1";
 
@@ -364,17 +364,15 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         /* ignore */
       }
       let remote: Awaited<ReturnType<typeof loadAllFromSupabase>> | null = isAdmin ? null : await cacheGet("public_bundle_v1", 3 * 3600 * 1000);
-      // Admin: the maintenance switch lives in nh_settings (not in the bundle); read it fresh so the admin panel shows the real state.
-      const maintP = isAdmin ? fetchMaintenance() : null;
       if (!remote) {
         remote = await loadAllFromSupabase(!isAdmin);
         if (!isAdmin && failedTables(remote).length === 0) void cacheSet("public_bundle_v1", remote); // never cache a partial bundle
       }
-      const maint = maintP ? await maintP : null;
       setDataState((prev) => {
         const merged = { ...prev, ...remote, ...loadUiConfig() } as DataShape;
         if (!remote.settings) merged.settings = prev.settings;
-        if (maint) merged.settings = { ...merged.settings, maintenanceMode: maint.on, maintenanceMessage: maint.message, maintenanceUntil: maint.until };
+        // The maintenance fields are not in the bundle (they live in nh_settings): keep what the store already holds.
+        merged.settings = { ...merged.settings, maintenanceMode: prev.settings.maintenanceMode, maintenanceMessage: prev.settings.maintenanceMessage, maintenanceUntil: prev.settings.maintenanceUntil };
         prevRef.current = merged;
         return merged;
       });
@@ -384,6 +382,24 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       setLoading(false);
     }
   };
+
+  // Mirror the server maintenance flag into settings ONLY when it is known ('on'/'off'); a failed or timed-out read leaves
+  // the settings untouched. The baseline (prevRef) is moved too, so mirroring never triggers a write back.
+  useEffect(() => {
+    if (!isSupabaseEnabled) return;
+    const apply = (m: MaintenanceState | null) => {
+      if (!m || m.status === "unknown") return;
+      setDataState((prev) => {
+        const s = prev.settings;
+        if (!!s.maintenanceMode === (m.status === "on") && s.maintenanceMessage === m.message && s.maintenanceUntil === m.until) return prev;
+        const settings = { ...s, maintenanceMode: m.status === "on", maintenanceMessage: m.message, maintenanceUntil: m.until };
+        if (prevRef.current.settings === s) prevRef.current = { ...prevRef.current, settings };
+        return { ...prev, settings };
+      });
+    };
+    apply(getMaintenance());
+    return onMaintenance(apply);
+  }, []);
 
   useEffect(() => {
     if (isSupabaseEnabled) void reload();
@@ -429,10 +445,20 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         }
         if (data.settings !== prev.settings) {
           try { await syncSettings(data.settings); } catch (e) { console.error("sync settings failed", e); }
-          const a = data.settings, b = prev.settings;
-          if (!!a.maintenanceMode !== !!b.maintenanceMode || a.maintenanceMessage !== b.maintenanceMessage || a.maintenanceUntil !== b.maintenanceUntil) {
-            try { await saveMaintenance({ on: !!a.maintenanceMode, message: a.maintenanceMessage, until: a.maintenanceUntil }); }
-            catch (e) { console.error("sync maintenance failed", e); }
+          // Maintenance fields (other editors, e.g. Website Settings). Never write a switch derived from an unknown state:
+          // the switch is written only when the server state is known and it really changed; otherwise only message/until
+          // are saved, and saveMaintenance re-reads the live switch first (nothing is written if that read fails).
+          const a = data.settings, b = prev.settings, srv = getMaintenance();
+          const msgChanged = (a.maintenanceMessage ?? "") !== (b.maintenanceMessage ?? "") || (a.maintenanceUntil ?? "") !== (b.maintenanceUntil ?? "");
+          const switchChanged = !!a.maintenanceMode !== !!b.maintenanceMode;
+          const known = !!srv && srv.status !== "unknown";
+          const sameAsServer = known && (srv!.status === "on") === !!a.maintenanceMode && (srv!.message ?? "") === (a.maintenanceMessage ?? "") && (srv!.until ?? "") === (a.maintenanceUntil ?? "");
+          if ((switchChanged || msgChanged) && !sameAsServer) {
+            try {
+              if (switchChanged && known) await saveMaintenance({ on: !!a.maintenanceMode, message: a.maintenanceMessage, until: a.maintenanceUntil });
+              else if (msgChanged) await saveMaintenance({ message: a.maintenanceMessage, until: a.maintenanceUntil });
+              else console.warn("maintenance switch not saved: server state unknown");
+            } catch (e) { console.error("sync maintenance failed", e); }
           }
         }
         prevRef.current = data;
