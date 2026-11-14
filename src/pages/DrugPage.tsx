@@ -64,7 +64,7 @@ export default function DrugPage() {
       <div className="mx-auto max-w-3xl px-4 py-20 text-center">
         <div className="text-6xl">🔍</div>
         <h1 className="mt-4 text-2xl font-bold dark:text-white">{t("drug.notFound")}</h1>
-        <Link to="/drugs" className="mt-4 inline-block rounded-full bg-sky-500 px-6 py-2 font-bold text-white">{t("drug.backToGuide")}</Link>
+        <Link to="/drugs" className="mt-4 inline-block rounded-full bg-[#168C91] hover:bg-[#127378] px-6 py-2 font-bold text-white">{t("drug.backToGuide")}</Link>
       </div>
     );
   }

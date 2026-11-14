@@ -183,7 +183,7 @@ export default function Home() {
             const qDifficulty = DIFFICULTY_LABEL[q.difficulty]?.[lang] ?? q.difficulty;
             return (
               <Link key={q.id} to={`/quiz/${q.id}`} className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-[#F1F4F6] p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
-                <div className="flex items-center justify-between"><span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-[#127378] dark:text-teal-300 dark:bg-sky-500/10">{qCategory}</span><span className="text-2xl">📝</span></div>
+                <div className="flex items-center justify-between"><span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-[#127378] dark:text-teal-300 dark:bg-teal-500/10">{qCategory}</span><span className="text-2xl">📝</span></div>
                 <h3 className="mt-2 font-bold dark:text-white">{qTitle}</h3>
                 <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">{q.questions.length} {t("quiz.numQuestions")} · {qDifficulty}</div>
               </Link>

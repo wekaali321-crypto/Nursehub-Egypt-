@@ -88,7 +88,7 @@ export default function FillBlankQuiz({ slug, lang = "ar" }: Props) {
                 <button
                   type="button"
                   onClick={() => setRevealed((prev) => ({ ...prev, [q.id]: true }))}
-                  className="mt-2 rounded-full bg-sky-500 px-4 py-1.5 text-xs font-bold text-white hover:bg-sky-600"
+                  className="mt-2 rounded-full bg-[#168C91] px-4 py-1.5 text-xs font-bold text-white hover:bg-[#127378]"
                 >
                   {t.reveal}
                 </button>

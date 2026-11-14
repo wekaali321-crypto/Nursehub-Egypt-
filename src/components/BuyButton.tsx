@@ -140,7 +140,7 @@ export default function BuyButton({
       <button
         onClick={handleDirectDownload}
         disabled={directLoading}
-        className="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-4 rounded-xl text-lg disabled:opacity-60 transition"
+        className="w-full bg-[#168C91] hover:bg-[#127378] text-white font-bold py-4 rounded-xl text-lg disabled:opacity-60 transition"
       >
         {directLoading ? 'جاري التحميل...' : '📥 تحميل PDF مباشر (30 ج.م)'}
       </button>

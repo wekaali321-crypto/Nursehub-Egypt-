@@ -21,7 +21,7 @@ export default function InstallPrompt() {
           <div className="text-sm font-bold dark:text-white">{lang === "ar" ? "ثبّت تطبيق NurseHub Egypt" : "Install NurseHub Egypt"}</div>
           <div className="text-xs text-slate-600 dark:text-slate-400">{lang === "ar" ? "وصول أسرع وعمل دون اتصال" : "Faster access & offline-ready"}</div>
         </div>
-        <button onClick={install} className="shrink-0 rounded-full bg-sky-500 px-4 py-1.5 text-sm font-bold text-white">{lang === "ar" ? "تثبيت" : "Install"}</button>
+        <button onClick={install} className="shrink-0 rounded-full bg-[#168C91] hover:bg-[#127378] px-4 py-1.5 text-sm font-bold text-white">{lang === "ar" ? "تثبيت" : "Install"}</button>
         <button onClick={dismiss} className="shrink-0 rounded-full px-2 text-slate-500 dark:text-slate-400 hover:text-slate-600">✕</button>
       </div>
     </div>

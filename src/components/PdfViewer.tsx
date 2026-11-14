@@ -12,7 +12,7 @@ export default function PdfViewer({ url, title, onClose }: { url: string; title:
               href={url} 
               target="_blank" 
               rel="noreferrer" 
-              className="rounded-lg bg-sky-500 px-3 py-1 text-sm font-bold text-white hover:bg-sky-600 transition"
+              className="rounded-lg bg-[#168C91] px-3 py-1 text-sm font-bold text-white hover:bg-[#127378] transition"
             >
               📥 تحميل
             </a>

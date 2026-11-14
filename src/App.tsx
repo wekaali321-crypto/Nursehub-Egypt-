@@ -212,10 +212,10 @@ function MaintenanceScreen({ message, until: untilRaw }: { message?: string; unt
   const { settings } = useStore();
   const until = untilRaw ? new Date(untilRaw) : null;
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-sky-600 to-emerald-600 p-6 text-center text-white">
+    <div className="nh-hero flex min-h-screen flex-col items-center justify-center p-6 text-center text-white">
       <div className="text-7xl">🛠️</div>
       <h1 className="mt-4 text-3xl font-black md:text-4xl">{settings.siteName}</h1>
-      <p className="mt-3 max-w-lg text-lg text-sky-50">{message || "الموقع تحت الصيانة حالياً، سنعود قريباً."}</p>
+      <p className="mt-3 max-w-lg text-lg text-teal-50">{message || "الموقع تحت الصيانة حالياً، سنعود قريباً."}</p>
       {until && <p className="mt-4 rounded-full bg-white/15 px-5 py-2 text-sm font-bold backdrop-blur">العودة المتوقعة: {until.toLocaleString("ar-EG")}</p>}
       <a href="/admin" className="mt-6 text-sm underline opacity-80">دخول المشرفين</a>
     </div>

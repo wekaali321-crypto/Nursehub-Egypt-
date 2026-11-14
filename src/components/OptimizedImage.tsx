@@ -25,7 +25,7 @@ export default function OptimizedImage({
   const [loaded, setLoaded] = useState(false);
   if (!src) {
     return (
-      <div className={`flex items-center justify-center bg-gradient-to-br from-sky-100 to-emerald-100 text-5xl dark:from-slate-800 dark:to-slate-700 ${rounded}`} style={{ aspectRatio: ratio }} aria-hidden="true">
+      <div className={`flex items-center justify-center bg-gradient-to-br from-teal-100 to-emerald-100 text-5xl dark:from-slate-800 dark:to-slate-700 ${rounded}`} style={{ aspectRatio: ratio }} aria-hidden="true">
         🩺
       </div>
     );
