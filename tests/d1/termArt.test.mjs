@@ -63,7 +63,7 @@ test('every department section diagram (src/lib/sectionArt.ts) exists and belong
     obgyn: 'obgyn', pediatrics: 'pediatric', radiology: 'radiology', 'er-reception': 'er_reception', pharmacology: 'pharmacology' };
   for (const [dept, map] of Object.entries(SECTION_ART)) {
     const rows = JSON.parse(fs.readFileSync(join(ROOT, `public/data/${TABLE[dept]}_topics.json`), 'utf8'));
-    const ids = new Set(rows.flatMap((t) => (typeof t.sections === 'string' ? JSON.parse(t.sections) : t.sections).map((s) => s.id)));
+    const ids = new Set(rows.flatMap((t) => (typeof t.sections === 'string' ? JSON.parse(t.sections) : t.sections).flatMap((s) => [s.id, `${t.id}/${s.id}`])));
     for (const [sec, art] of Object.entries(map)) {
       assert.ok(ids.has(sec), `${dept}: unknown section ${sec}`);
       assert.ok(existsSync(join(ROOT, `public/cards/art/${art}.svg`)), `${dept}: missing ${art}.svg`);
