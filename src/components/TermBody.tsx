@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { termArt } from "../lib/termArt";
+import EditableImage from "./EditableImage";
 
 /** Splits at the first separator that is outside parentheses. */
 function splitTop(s: string, sep: string): [string, string] | null {
@@ -156,7 +157,7 @@ export default function TermBody({ body, isEn }: { body: string; isEn: boolean }
                 </div>
                 {it.def && <p className={`mt-1 text-[13px] leading-6 text-slate-600 transition dark:text-slate-400 ${covered ? "select-none blur-sm" : ""}`}>{it.def}</p>}
               </div>
-              {art && <img src={art} alt="" loading="lazy" decoding="async" onError={(e) => { e.currentTarget.style.display = "none"; }} className={`${/\/body-(?!brain|eye|ear|nose|mouth|face|skull|throat|thyroid|neck)/.test(art) ? "h-28 w-[4.5rem]" : "h-16 w-20"} shrink-0 self-center rounded-xl bg-white object-contain p-1 ring-1 ring-slate-200 transition dark:ring-slate-700 ${covered ? "blur-sm" : ""}`} />}
+              {art && <EditableImage slot={`art:${art.split("/").pop()!.replace(".svg", "")}`} src={art} label={it.en} emptyHint={false} render={(u) => <img src={u} alt="" loading="lazy" decoding="async" className={`${/\/body-(?!brain|eye|ear|nose|mouth|face|skull|throat|thyroid|neck)/.test(art) ? "h-28 w-[4.5rem]" : "h-16 w-20"} shrink-0 self-center rounded-xl bg-white object-contain p-1 ring-1 ring-slate-200 transition dark:ring-slate-700 ${covered ? "blur-sm" : ""}`} />} />}
             </div>
           );
         })}

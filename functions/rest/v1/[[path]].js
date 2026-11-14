@@ -4,7 +4,7 @@ import { handleRest, isPublicTable } from '../../_lib/sb.js';
 // fewer D1 reads and faster pages. Logged-in users and the admin (Authorization: Bearer <JWT>) always get live data,
 // so the admin panel never shows stale rows; visitors see an edit within the table's TTL.
 // Content tables that change rarely are kept longer (fewer D1 reads); tables that drive money/settings/moderation stay short.
-const SHORT_TTL_TABLES = new Set(['ads', 'products', 'site_settings', 'redirects', 'pages', 'comments', 'user_notifications', 'nh_settings', 'affiliates']);
+const SHORT_TTL_TABLES = new Set(['ads', 'products', 'site_settings', 'redirects', 'pages', 'comments', 'user_notifications', 'nh_settings', 'affiliates', 'disease_images']);
 const EDGE_TTL_SHORT = 60;
 const EDGE_TTL_CONTENT = 600;
 const edgeTtl = (table) => (SHORT_TTL_TABLES.has(table) ? EDGE_TTL_SHORT : EDGE_TTL_CONTENT);

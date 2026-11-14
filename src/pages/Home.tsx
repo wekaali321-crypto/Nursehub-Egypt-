@@ -12,6 +12,7 @@ import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import EmojiIcon from "../components/EmojiIcon";
 import { Zap } from "lucide-react";
+import EditableImage from "../components/EditableImage";
 
 const DIFFICULTY_LABEL: Record<string, { ar: string; en: string }> = {
   "سهل": { ar: "سهل", en: "Easy" },
@@ -116,13 +117,8 @@ export default function Home() {
             </div>
             <div className="relative mx-auto flex w-full max-w-xs flex-col items-center sm:max-w-sm">
               <div aria-hidden className="absolute inset-x-6 bottom-6 top-10 rounded-[2rem] border border-white/10 bg-gradient-to-b from-[#168C91]/30 to-white/5" />
-              <img
-                src="/male-nurse-mascot.webp"
-                alt={t("home.mascotAlt")}
-                width={320}
-                height={465}
-                className="relative w-44 drop-shadow-2xl sm:w-60 lg:w-72"
-              />
+              <EditableImage slot="home:mascot" src="/male-nurse-mascot.webp" label={t("home.mascotAlt")}
+                render={(u) => <img src={u} alt={t("home.mascotAlt")} width={320} height={465} className="relative w-44 drop-shadow-2xl sm:w-60 lg:w-72" />} />
               <div className="relative mt-3 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-center backdrop-blur">
                 <h2 className="text-sm font-black sm:text-base">{t("home.mascotTitle")}</h2>
                 <p className="mt-1 text-xs leading-6 text-slate-200">{t("home.mascotDesc")}</p>

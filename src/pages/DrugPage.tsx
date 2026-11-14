@@ -10,6 +10,7 @@ import InlineLangToggle from "../components/InlineLangToggle";
 import DrugSection, { DrugText } from "../components/drugs/DrugSection";
 import DrugSectionNav from "../components/drugs/DrugSectionNav";
 import DrugCard from "../components/drugs/DrugCard";
+import EditableImage from "../components/EditableImage";
 
 const BLOCK_LABELS = {
   dose: { ar: "الجرعة", en: "Dosage" },
@@ -156,11 +157,12 @@ export default function DrugPage() {
             <div className="print:hidden"><CrossRefBox table="drugs" id={drug.id} /></div>
             <div className="print:hidden"><SafetyLinksBox table="drugs" id={drug.id} /></div>
 
-            {drug.showImage && drug.imageUrl && (
-              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
-                <img src={drug.imageUrl} alt={drug.name} className="mx-auto max-h-80 w-auto rounded-xl object-contain" />
-              </div>
-            )}
+            <EditableImage block slot={`drug:${drug.slug}`} src={drug.showImage ? drug.imageUrl : null} label={`صورة الدواء: ${drug.name}`}
+              render={(u) => (
+                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
+                  <img src={u} alt={drug.name} className="mx-auto max-h-80 w-auto rounded-xl object-contain" />
+                </div>
+              )} />
 
             {hasWarnings && (
               <DrugSection id="warnings" icon="⚠️" title={t("drug.highAlertWarningsHeading")} tone="danger">

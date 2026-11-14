@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight, CircleCheck, CircleX, Clock, Flag, Languages, ListChecks, RotateCcw, Timer, TrendingDown, Trophy } from "lucide-react";
 import type { RunnerQuestion } from "./QuizRunner";
 import { addAttempt, statsByBank, type ExamGroup } from "../lib/examHistory";
+import EditableImage from "./EditableImage";
 
 /**
  * Exam simulator on top of an already-loaded question bank (no extra requests):
@@ -158,7 +159,7 @@ function ExamRun({ s, byId, onChange, onFinish }: { s: Session; byId: Map<string
             <button onClick={() => onChange({ ...s, flagged: flagged ? s.flagged.filter((x) => x !== q.id) : [...s.flagged, q.id] })} aria-pressed={flagged} className={`inline-flex min-h-10 items-center gap-1 rounded-full px-3 text-xs font-black ${flagged ? "bg-amber-400 text-amber-950" : "border border-slate-200 dark:border-slate-700 dark:text-white"}`}><Flag size={14} aria-hidden="true" />{flagged ? "متعلّم للمراجعة" : "علّم للمراجعة"}</button>
           </div>
         </div>
-        {q.image_url && <img src={q.image_url} alt="" className="mb-3 max-h-64 w-full rounded-xl object-contain" loading="lazy" />}
+        <EditableImage block emptyHint={false} slot={`q:${q.id}`} src={q.image_url} label="صورة السؤال" render={(u) => <img src={u} alt="" className="mb-3 max-h-64 w-full rounded-xl object-contain" loading="lazy" />} />
         <p className="text-lg font-bold leading-8 text-slate-900 dark:text-white" dir={ar && q.question_ar ? "rtl" : "ltr"}>{ar && q.question_ar ? q.question_ar : q.question_en}</p>
         <div className="mt-4 space-y-2" role={multi ? "group" : "radiogroup"}>
           {q.choices.map((c) => {
@@ -236,7 +237,7 @@ function ReviewView({ r, byId, onBack }: { r: Result; byId: Map<string, RunnerQu
         return (
           <article key={id} className={card}>
             <div className="text-xs font-black text-slate-500">{i + 1} / {wrong.length}</div>
-            {q.image_url && <img src={q.image_url} alt="" className="my-2 max-h-56 w-full rounded-xl object-contain" loading="lazy" />}
+            <EditableImage block emptyHint={false} slot={`q:${q.id}`} src={q.image_url} label="صورة السؤال" render={(u) => <img src={u} alt="" className="my-2 max-h-56 w-full rounded-xl object-contain" loading="lazy" />} />
             <p className="mt-1 font-bold leading-7 text-slate-900 dark:text-white" dir="ltr">{q.question_en}</p>
             <ul className="mt-3 space-y-1.5" dir="ltr">
               {q.choices.map((c) => {

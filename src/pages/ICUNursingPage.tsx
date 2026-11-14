@@ -7,6 +7,7 @@ import { useI18n } from "../lib/i18n";
 import { useCart } from "../lib/cart";
 import { fetchIcuTopics, fetchIcuTopic, type IcuTopic } from "../lib/icuTopicsApi";
 import { cachedQuery, TTL } from "../lib/remoteCache";
+import EditableImage from "../components/EditableImage";
 
 const card = "rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900";
 const PER_TOPIC_PRINT_PRICE = 10;
@@ -281,9 +282,8 @@ export default function ICUNursingTopicPage() {
           return (
             <section key={s.id || i} className={`${card} p-5`}>
               <h2 className="mb-3 text-lg font-black text-[#127378] dark:text-teal-300">{heading}</h2>
-              {s.image_url && (
-                <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
-              )}
+              <EditableImage block slot={`icu-topic:${topic.id}:${s.id || i}`} src={s.image_url} label={heading}
+                render={(u) => <img src={u} alt={heading} loading="lazy" className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />} />
               <TopicBody body={body} accent="sky" />
             </section>
           );

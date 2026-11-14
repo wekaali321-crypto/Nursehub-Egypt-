@@ -8,6 +8,7 @@ import { parseTermBody } from "../components/TermBody";
 import { buildSession, DAILY_GOAL, deckStats, doneToday, rate, type Rating } from "../lib/srs";
 import { touchStreak } from "../lib/streak";
 import { termArt } from "../lib/termArt";
+import EditableImage from "../components/EditableImage";
 
 /**
  * Flashcards with spaced repetition (/cards). Decks are built in the browser from static files (no D1 / Supabase):
@@ -178,7 +179,7 @@ function Session({ deck, ar, onExit }: { deck: Deck; ar: boolean; onExit: () => 
             ) : (
               <>
                 <div className="text-sm font-bold text-slate-500" dir={card.ltrFront ? "ltr" : "auto"}>{card.front}</div>
-                {card.art && <img key={card.art} src={card.art} alt="" decoding="async" onError={(e) => { e.currentTarget.style.display = "none"; }} className="mt-3 h-36 w-auto max-w-full rounded-2xl bg-white object-contain p-2 ring-1 ring-slate-200 dark:ring-slate-700" />}
+                {card.art && <EditableImage key={card.art} slot={`art:${card.art.split("/").pop()!.replace(".svg", "")}`} src={card.art} label={card.front} emptyHint={false} render={(u) => <img src={u} alt="" decoding="async" className="mt-3 h-36 w-auto max-w-full rounded-2xl bg-white object-contain p-2 ring-1 ring-slate-200 dark:ring-slate-700" />} />}
                 <div className="mt-2 text-2xl font-black leading-snug text-[#153448] dark:text-white" dir="auto">{card.back}</div>
                 {card.backSub && <div className="mt-3 whitespace-pre-line text-sm leading-7 text-slate-700 dark:text-slate-300" dir="auto">{card.backSub}</div>}
               </>

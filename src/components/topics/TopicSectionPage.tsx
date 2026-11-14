@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import TopicBody from "../TopicBody";
 import { useHubView } from "../HubGrid";
 import { useI18n } from "../../lib/i18n";
+import EditableImage from "../EditableImage";
 
 /**
  * Shared Navy/Teal layout for the specialty "topic" sections (hub page + topic page).
@@ -148,8 +149,8 @@ export function TopicSectionHome({
               <div className="grid grid-cols-[minmax(0,1fr)] gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {list.map((tp) => (
                   <Link key={tp.id} to={hrefFor(tp)} className="group flex items-center gap-3 rounded-xl border border-slate-200 border-s-4 border-s-[#168C91] bg-white px-3 py-2.5 transition hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-s-[#168C91] dark:bg-slate-900">
-                    {artFor?.(tp)
-                      ? <img src={artFor(tp)!} alt="" loading="lazy" decoding="async" className="h-14 w-11 shrink-0 rounded-lg bg-white object-contain p-0.5 ring-1 ring-slate-200 dark:ring-slate-700" />
+                    {artFor?.(tp) !== undefined && artFor?.(tp) !== null
+                      ? <EditableImage slot={`topic:${hrefFor(tp)}`} src={artFor!(tp)} label={isEn && tp.title_en ? tp.title_en : tp.title_ar} emptyHint={false} fallback={<span className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg text-xl ${tint.tile}`} aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={20} /></span>} render={(u) => <img src={u} alt="" loading="lazy" decoding="async" className="h-14 w-11 shrink-0 rounded-lg bg-white object-contain p-0.5 ring-1 ring-slate-200 dark:ring-slate-700" />} />
                       : <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg text-xl ${tint.tile}`} aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={20} /></span>}
                     <span className="min-w-0 flex-1">
                       <span className="flex items-center justify-between gap-2">
@@ -170,7 +171,7 @@ export function TopicSectionHome({
                     <Link key={tp.id} to={hrefFor(tp)} className="group overflow-hidden rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900">
                       <div className={`flex ${artFor?.(tp) ? "h-32" : "h-20"} items-end justify-between p-4 ${tint.tile}`}>
                         {artFor?.(tp)
-                          ? <img src={artFor(tp)!} alt="" loading="lazy" decoding="async" className="h-24 w-auto rounded-xl bg-white object-contain p-1 shadow-sm" />
+                          ? <EditableImage slot={`topic:${hrefFor(tp)}`} src={artFor(tp)} label={isEn && tp.title_en ? tp.title_en : tp.title_ar} emptyHint={false} fallback={<span className="text-4xl" aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={36} strokeWidth={1.75} /></span>} render={(u) => <img src={u} alt="" loading="lazy" decoding="async" className="h-24 w-auto rounded-xl bg-white object-contain p-1 shadow-sm" />} />
                           : <span className="text-4xl" aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={36} strokeWidth={1.75} /></span>}
                         {tp.category && <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-black text-[#153448] dark:bg-slate-900/70 dark:text-slate-100">{tp.category}</span>}
                       </div>
@@ -235,13 +236,15 @@ export function TopicSectionDetail({
       <div className="mx-auto max-w-3xl px-4 pt-6">
         {detailTop}
         {art && (
-          <figure className="mb-4 flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-            <img src={art} alt="" decoding="async" className="h-48 w-auto shrink-0 rounded-xl bg-white object-contain p-1 ring-1 ring-slate-200 sm:h-56 dark:ring-slate-700" onError={(e) => { (e.currentTarget.closest("figure") as HTMLElement).style.display = "none"; }} />
+          <EditableImage block emptyHint={false} slot={`topic:${basePath}/${topic.id}`} src={art} label={title} render={(u) => (
+            <figure className="mb-4 flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+              <img src={u} alt="" decoding="async" className="h-48 w-auto shrink-0 rounded-xl bg-white object-contain p-1 ring-1 ring-slate-200 sm:h-56 dark:ring-slate-700" />
             <figcaption className="text-sm leading-7 text-slate-700 dark:text-slate-300">
               <b className="block text-base font-black text-[#153448] dark:text-white">{isEn ? "Where it is in the body" : "مكانه في الجسم"}</b>
               {isEn ? "The highlighted part shows the organs covered in this topic." : "الجزء الملوّن هو الأعضاء اللي بيشرحها الموضوع ده."}
             </figcaption>
-          </figure>
+            </figure>
+          )} />
         )}
         {sectionNav && topic.sections.length > 1 && (
           <div className="sticky top-14 z-10 -mx-4 mb-4 flex gap-2 overflow-x-auto bg-[#F1F4F6]/90 px-4 py-2 backdrop-blur dark:bg-slate-950/90">
@@ -262,9 +265,8 @@ export function TopicSectionDetail({
                   {sectionNav && <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#168C91] text-sm text-white">{i + 1}</span>}
                   {heading}
                 </h2>
-                {s.image_url && (
-                  <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
-                )}
+                <EditableImage block slot={`sec:${basePath}/${topic.id}:${s.id || i}`} src={s.image_url} label={heading}
+                  render={(u) => <img src={u} alt={heading} loading="lazy" decoding="async" className="mb-4 w-full rounded-xl border border-slate-200 bg-white object-contain dark:border-slate-700" />} />
                 {renderBody ? renderBody(body, isEn) : <TopicBody body={body} accent="teal" />}
               </section>
             );
