@@ -6,6 +6,7 @@ import { fetchPediatricTopics, fetchPediatricTopic, type PediatricTopic } from "
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 import PediatricsQuizWidget from "../components/PediatricsQuizWidget";
+import { sectionArtFor } from "../lib/sectionArt";
 
 // Light yellow accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -79,6 +80,7 @@ export default function PediatricsTopicPage() {
       tint={TINT}
       fallbackIcon="🍼"
       backLabel={{ en: "← Back to Pediatrics", ar: "← رجوع لقسم الأطفال" }}
+      sectionArt={sectionArtFor("pediatrics")}
     />
   );
 }

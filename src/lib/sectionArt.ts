@@ -59,6 +59,12 @@ export const SECTION_ART: Record<string, Record<string, string>> = {
     "involution-lochia": "ob-involution", "umbilical-cord-prolapse": "ob-cord-prolapse", "pelvis-types-classification": "ob-pelvis-types",
     "fertilization-implantation": "ob-fertilization", "apgar-scoring": "nicu-apgar",
   },
+  pediatrics: {
+    g6: "peds-growth-percentiles", v1: "peds-pulse-by-age", v3: "peds-rr-by-age", v6: "nicu-gestational-age", dt1: "peds-erikson",
+    na2: "nicu-apgar", na3: "peds-reflexes", na5: "nicu-heat-loss", cd2: "peds-acyanotic", cd3: "peds-tof", gi2: "peds-pyloric-stenosis",
+    gi3: "peds-intussusception", ca3: "peds-ddh", nd4: "peds-hydrocephalus", pm2: "fun-pain-scale", pr2: "icu-ngt-measure",
+    pr4: "fun-isolation", cpr2: "fa-child-infant-cpr", cpr3: "fa-choking",
+  },
 };
 
 /** `sectionArt` prop for TopicSectionDetail (keys: "<section id>" or, where ids repeat, "<topic id>/<section id>"). */
