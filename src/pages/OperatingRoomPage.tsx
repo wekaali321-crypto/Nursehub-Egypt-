@@ -5,6 +5,7 @@ import { useI18n } from "../lib/i18n";
 import { fetchOperatingRoomTopics, fetchOperatingRoomTopic, type OperatingRoomTopic } from "../lib/operatingRoomTopicsApi";
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
+import { sectionArtFor } from "../lib/sectionArt";
 
 // Light cyan accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -77,6 +78,7 @@ export default function OperatingRoomTopicPage() {
       tint={TINT}
       fallbackIcon="🔪"
       backLabel={{ en: "← Back to Operating Room Nursing", ar: "← رجوع لقسم العمليات" }}
+      sectionArt={sectionArtFor("operating-room")}
     />
   );
 }

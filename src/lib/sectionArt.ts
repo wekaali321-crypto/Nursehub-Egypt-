@@ -30,6 +30,15 @@ export const SECTION_ART: Record<string, Record<string, string>> = {
     "nicu-fetal-circulation-adaptation/s5": "nicu-birth-transition", "nicu-central-lines-access/cl1": "nicu-umbilical-lines",
     "neonatal-cpr/cpr1": "nicu-bag-mask", "neonatal-cpr/cpr3": "nicu-two-thumb", "nicu-infection-control/s1": "dial-five-moments",
   },
+  "operating-room": {
+    "or-team-members": "or-team-layout", "sterile-field-maintenance": "or-sterile-field", "scrub-technique-steps": "or-scrub",
+    "cssd-layout": "or-cssd-flow", "positioning-goals-common-types": "or-positions", "operating-table-parts": "or-table-parts",
+    "scalpel-blade-handle-types": "or-scalpel", "surgical-needle-classification": "or-needles", "monopolar-vs-bipolar": "or-electrosurgery",
+    "tourniquet-purpose-use": "or-tourniquet", "surgical-safety-checklist": "or-safety-checklist", "laparoscopic-principle": "or-laparoscopy",
+    "anesthesia-types": "or-anesthesia-types", "wound-contamination-classification": "or-wound-classes", "wound-healing-stages": "or-wound-healing",
+    "fire-triad-prevention": "or-fire-triad", "radiation-safety-principles": "or-radiation", "pneumatic-compression-device-use": "or-ipc",
+    "ppe-hand-hygiene": "dial-five-moments",
+  },
 };
 
 /** `sectionArt` prop for TopicSectionDetail (keys: "<section id>" or, where ids repeat, "<topic id>/<section id>"). */
