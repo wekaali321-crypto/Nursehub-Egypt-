@@ -24,6 +24,7 @@ import ArticleContent from "../components/ArticleContent";
 import ShareBar from "../components/ShareBar";
 import { startArticleView, endArticleView, trackScrollDepth, tickActiveReadingTime, logArticleEvent } from "../lib/analytics";
 import "./ArticlePage.css";
+import ContentQuality from "../components/ContentQuality";
 
 function buildToc(html: string): TocItem[] {
   const matches = [...html.matchAll(/<h([2-6])[^>]*>(.*?)<\/h[2-6]>/g)];
@@ -530,6 +531,7 @@ export default function ArticlePage() {
           {!article.partial && <div className="mt-8"><RelatedDrugs text={`${article.title} ${article.content}`} /></div>}
 
           <MedicalDisclaimer lang={docLang} className="mt-6" />
+          <ContentQuality />
 
           <div className="mt-6">
             <ArticleAI articleHtml={dispContent.text} articleTitle={dispTitle.text} />

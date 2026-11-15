@@ -12,6 +12,7 @@ import DrugSectionNav from "../components/drugs/DrugSectionNav";
 import DrugCard from "../components/drugs/DrugCard";
 import DrugGallery from "../components/DrugGallery";
 import MedicalDisclaimer from "../components/MedicalDisclaimer";
+import ContentQuality from "../components/ContentQuality";
 
 const BLOCK_LABELS = {
   dose: { ar: "الجرعة", en: "Dosage" },
@@ -209,6 +210,7 @@ export default function DrugPage() {
             {drug.references && has(text.refs) && <DrugSection id="references" icon="📚" title={BLOCK_LABELS.references[lang]}><DrugText>{text.refs}</DrugText></DrugSection>}
 
             <MedicalDisclaimer />
+            <ContentQuality />
 
             {related.length > 0 && (
               <section className="pt-2 print:hidden">

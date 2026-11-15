@@ -8,6 +8,7 @@ import EditableImage from "../EditableImage";
 import LoadError, { LOAD_FAILED } from "../LoadError";
 import MedicalDisclaimer from "../MedicalDisclaimer";
 import RelatedDrugs from "../RelatedDrugs";
+import ContentQuality from "../ContentQuality";
 
 /**
  * Shared Navy/Teal layout for the specialty "topic" sections (hub page + topic page).
@@ -291,6 +292,7 @@ export function TopicSectionDetail({
 
         <div className="mt-4"><RelatedDrugs text={[topic.title_ar, topic.title_en, ...topic.sections.map((x) => `${x.body_ar ?? ""} ${x.body_en ?? ""}`)].join(" ")} /></div>
         <MedicalDisclaimer className="mt-4" />
+        <ContentQuality />
 
         <div className="mt-6 flex justify-center">
           <Link to={basePath} className="rounded-full border border-[#153448]/20 bg-white px-6 py-2 font-bold text-[#153448] transition hover:border-[#168C91] hover:text-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-white">
