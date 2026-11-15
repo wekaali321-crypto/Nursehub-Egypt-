@@ -1,7 +1,7 @@
 import { SEARCH_DROPDOWN } from "../lib/searchDropdown";
 import { Search } from "lucide-react";
 import EmojiIcon from "./EmojiIcon";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { CAT_KEY } from "./common";
@@ -18,8 +18,9 @@ interface Suggestion {
 }
 
 export default function SmartSearch({ onNavigate, variant = "compact" }: { onNavigate?: () => void; variant?: "compact" | "hero" }) {
-  const { articles, drugs } = useStore();
+  const { articles, drugs, ensureLoaded } = useStore();
   const [searchActive, setSearchActive] = useState(false);
+  useEffect(() => { if (searchActive) ensureLoaded(); }, [searchActive]); // eslint-disable-line react-hooks/exhaustive-deps
   const { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters } = useExtraSearchIndex(searchActive);
   const { t, lang } = useI18n();
   const [q, setQ] = useState("");

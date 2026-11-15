@@ -71,7 +71,7 @@ import {
 import { seedQuizzes, seedCustomTypes, seedHomeCategories, seedGateways, seedCoupons, defaultCommerce } from "./seed3";
 import { seedOTCConditions } from "./seedOTC";
 import { isSupabaseEnabled, supabase } from "./supabase";
-import { loadAllFromSupabase, failedTables, syncEntity, syncSettings, seedSupabase } from "./dataApi";
+import { loadAllFromSupabase, loadPublicSettings, failedTables, syncEntity, syncSettings, seedSupabase } from "./dataApi";
 import { cacheGet, cacheSet } from "./remoteCache";
 import { getMaintenance, onMaintenance, saveMaintenance, type MaintenanceState } from "./maintenance";
 
@@ -309,6 +309,8 @@ interface StoreCtx extends DataShape {
   loading: boolean;
   seedRemote: () => Promise<void>;
   reload: () => Promise<void>;
+  /** Load the store bundle (articles, drugs, …) if it has not been requested yet. Pages that read it call this; section pages never do. */
+  ensureLoaded: () => void;
   pushNotification: (type: AppNotification["type"], message: string, link?: string) => void;
   markAllRead: () => void;
   markRead: (id: string) => void;
@@ -351,9 +353,12 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState<boolean>(isSupabaseEnabled);
   const prevRef = useRef<DataShape>(data);
 
-  // Hydrate from Supabase on mount (production)
+  // Hydrate from Supabase on demand (production): the bundle is ~3 MB (articles + drugs), so it is only fetched when a page
+  // that reads it is opened (HydrationGate / search). Section and reference pages load their own small data and never trigger it.
+  const requested = useRef(false);
   const reload = async () => {
     if (!isSupabaseEnabled) return;
+    requested.current = true;
     setLoading(true);
     try {
       // Anonymous visitors: light bundle (public tables only) cached for 3 hours. Admin (signed in): always the full, fresh load.
@@ -401,8 +406,30 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     return onMaintenance(apply);
   }, []);
 
+  const ensureLoaded = () => {
+    if (isSupabaseEnabled && !requested.current) void reload();
+  };
+
+  // At boot: a bundle already cached on this device is applied at once (no network); otherwise only the small public
+  // settings row is read, so the header/footer/ads are right on every page without downloading the bundle.
   useEffect(() => {
-    if (isSupabaseEnabled) void reload();
+    if (!isSupabaseEnabled) return;
+    let cancelled = false;
+    (async () => {
+      let isAdmin = false;
+      try { isAdmin = !!(await supabase?.auth.getSession())?.data?.session; } catch { /* ignore */ }
+      if (cancelled || requested.current) return;
+      if (isAdmin || (await cacheGet("public_bundle_v1", 3 * 3600 * 1000))) { ensureLoaded(); return; }
+      let s = await cacheGet<Partial<DataShape["settings"]>>("public_settings_v1", 3 * 3600 * 1000);
+      if (!s) { try { s = await loadPublicSettings(); } catch { s = null; } if (s) void cacheSet("public_settings_v1", s); }
+      if (!s || cancelled || requested.current) return;
+      setDataState((prev) => {
+        const settings = { ...prev.settings, ...s };
+        if (prevRef.current.settings === prev.settings) prevRef.current = { ...prevRef.current, settings }; // never written back
+        return { ...prev, settings };
+      });
+    })();
+    return () => { cancelled = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -596,6 +623,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         loading,
         seedRemote,
         reload,
+        ensureLoaded,
         pushNotification,
         markAllRead,
         markRead,

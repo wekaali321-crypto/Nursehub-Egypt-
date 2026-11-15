@@ -20,7 +20,7 @@ Merge into `main` only after the user says "اعمل دمج" (CLAUDE.md). Error 
 ## Open risks / next steps
 1. Run the migration on D1 yourself (existing prod indexes unverified).
 2. Snapshot is dated 2026-11-12; regenerate after content changes (`node scripts/snapshot-supabase.mjs`).
-3. Bundle-dependent pages (home, articles, drugs) still wait for all 17 queries (now with skeleton). Idea: split the bundle per page.
+3. DONE (fix/notes-followup): the bundle is fetched only by pages that read it (HydrationGate / search); section pages read only the small public settings row.
 4. DONE (local commit): maintenance flag now lives in `nh_settings` key `maintenance` (it was never persisted before, so visitors never saw maintenance).
    `src/lib/maintenance.ts` checks it at boot (one row, edge/browser cached 60 s, 2.5 s timeout, fail-open); public pages show only shell + skeleton until known.
    Test: `node --no-warnings tests/d1/e2e/e2e-maintenance.mjs` (3 checks, same local build).
