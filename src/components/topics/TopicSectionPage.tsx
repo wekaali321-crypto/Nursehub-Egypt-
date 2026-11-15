@@ -6,6 +6,8 @@ import { useHubView } from "../HubGrid";
 import { useI18n } from "../../lib/i18n";
 import EditableImage from "../EditableImage";
 import LoadError, { LOAD_FAILED } from "../LoadError";
+import MedicalDisclaimer from "../MedicalDisclaimer";
+import RelatedDrugs from "../RelatedDrugs";
 
 /**
  * Shared Navy/Teal layout for the specialty "topic" sections (hub page + topic page).
@@ -286,6 +288,9 @@ export function TopicSectionDetail({
             </ul>
           </div>
         )}
+
+        <div className="mt-4"><RelatedDrugs text={[topic.title_ar, topic.title_en, ...topic.sections.map((x) => `${x.body_ar ?? ""} ${x.body_en ?? ""}`)].join(" ")} /></div>
+        <MedicalDisclaimer className="mt-4" />
 
         <div className="mt-6 flex justify-center">
           <Link to={basePath} className="rounded-full border border-[#153448]/20 bg-white px-6 py-2 font-bold text-[#153448] transition hover:border-[#168C91] hover:text-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-white">

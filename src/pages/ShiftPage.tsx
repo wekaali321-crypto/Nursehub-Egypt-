@@ -203,7 +203,10 @@ function DrugsTab({ drugs, ar, tx }: { drugs: LiteDrug[] | null; ar: boolean; tx
                   {dose && <Field title={tx(L.dose)} tone="teal" body={dose} />}
                   {contra && <Field title={tx(L.contra)} tone="amber" body={contra} />}
                   {nurse && <Field title={tx(L.nursing)} tone="slate" body={nurse} />}
-                  <Link to={`/drug/${d.s}`} className="inline-flex min-h-11 items-center rounded-full bg-[#168C91] px-5 text-sm font-black text-white hover:bg-[#127378]">{tx(L.full)}</Link>
+                  <div className="flex flex-wrap gap-2">
+                    <Link to={`/drug/${d.s}`} className="inline-flex min-h-11 items-center rounded-full bg-[#168C91] px-5 text-sm font-black text-white hover:bg-[#127378]">{tx(L.full)}</Link>
+                    {d.h && <Link to="/drugs/high-alert-ref" className="inline-flex min-h-11 items-center rounded-full border border-red-300 px-5 text-sm font-black text-red-700 hover:bg-red-50 dark:border-red-800 dark:text-red-300 dark:hover:bg-red-500/10">{ar ? "إرشادات السلامة" : "Safety guidance"}</Link>}
+                  </div>
                 </div>
               )}
             </li>
@@ -262,6 +265,8 @@ function IVTab({ rows, ar, tx }: TabProps<IVRow>) {
 function HighAlertTab({ rows, ar, tx }: TabProps<HARow>) {
   if (!rows) return <Loading />;
   return (
+    <>
+    <Link to="/drugs/high-alert-ref" className="mb-3 inline-flex min-h-11 items-center rounded-full border border-red-300 px-5 text-sm font-black text-red-700 hover:bg-red-50 dark:border-red-800 dark:text-red-300">{ar ? "المرجع الكامل للأدوية عالية الخطورة ←" : "Full high-alert reference →"}</Link>
     <div className="grid gap-3 sm:grid-cols-2">
       {rows.map((r) => (
         <article key={r.id} className="rounded-2xl border border-red-200 bg-white p-4 dark:border-red-900 dark:bg-slate-900">
@@ -277,6 +282,7 @@ function HighAlertTab({ rows, ar, tx }: TabProps<HARow>) {
         </article>
       ))}
     </div>
+    </>
   );
 }
 

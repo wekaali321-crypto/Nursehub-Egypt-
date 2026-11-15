@@ -27,3 +27,9 @@ mkdirSync(join(ROOT, 'public/shift'), { recursive: true });
 const body = JSON.stringify({ v: 1, built: new Date().toISOString().slice(0, 10), drugs: out });
 writeFileSync(join(ROOT, 'public/shift/drugs-lite.json'), body);
 console.log(`drugs-lite.json: ${out.length} drugs, ${(body.length / 1024).toFixed(0)} KB`);
+
+// Small names-only index for "related drugs" on articles/topics (slug, names, generic, high-alert flag): a few KB instead of the full file.
+const names = out.map((d) => [d.s, d.n || '', d.ne || '', d.ge || d.g || '', d.h ? 1 : 0]);
+const nb = JSON.stringify({ v: 1, drugs: names });
+writeFileSync(join(ROOT, 'public/shift/drug-names.json'), nb);
+console.log(`drug-names.json: ${names.length} drugs, ${(nb.length / 1024).toFixed(0)} KB`);
