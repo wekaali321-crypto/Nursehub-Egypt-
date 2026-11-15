@@ -61,7 +61,7 @@ const dict = {
 
   // Home sections
   "home.badge": { ar: "المنصة العربية الأولى لتعليم التمريض", en: "The #1 Nursing Education Platform" },
-  "home.heroDesc": { ar: "مقالات، ملخصات، أدوية، مهارات وأدوات حسابية في مكان واحد.", en: "Articles, summaries, drugs, skills & medical calculators in one place." },
+  "home.heroDesc": { ar: "كل ما يحتاجه الممرض في مكان واحد: أدوية، أمراض، مهارات، تخصصات ومصطلحات طبية.", en: "Everything a nurse needs in one place: drugs, diseases, skills, specialties and medical terminology." },
   "home.browse": { ar: "تصفح المحتوى", en: "Browse Content" },
   "home.drugGuide": { ar: "دليل الأدوية", en: "Drug Guide" },
   "home.featured": { ar: "محتوى مميز", en: "Featured Content" },

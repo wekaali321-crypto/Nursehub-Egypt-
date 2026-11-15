@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchDiseaseIndex, loadRead, pick, type DiseaseIndexItem } from "../lib/diseasesApi";
 import { useI18n } from "../lib/i18n";
-import { Flame, Zap, Layers, ClipboardCheck } from "lucide-react";
+import { Flame } from "lucide-react";
 import EmojiIcon from "./EmojiIcon";
 import { touchStreak } from "../lib/streak";
 
@@ -71,23 +71,6 @@ export default function StudyStrip() {
       ) : (
         <div className="flex items-center justify-center rounded-2xl bg-white/20 p-3 text-sm font-bold text-white">{ar ? "تحدي النهارده جاي…" : "Today's challenge…"}</div>
       )}
-
-      {/* Quick tools: always visible at the top of the home page (they are also in the menu). */}
-      <div className="sm:col-span-3 grid grid-cols-3 gap-2">
-        {[
-          { to: "/shift", icon: <Zap size={20} aria-hidden="true" />, ar: "وضع الشيفت", en: "Shift mode", subAr: "أدوية وحاسبات بدون نت", subEn: "Drugs & calculators offline" },
-          { to: "/cards", icon: <Layers size={20} aria-hidden="true" />, ar: "بطاقات المذاكرة", en: "Flashcards", subAr: "مصطلحات وأدوية", subEn: "Terms & drugs" },
-          { to: "/tests/licensure", icon: <ClipboardCheck size={20} aria-hidden="true" />, ar: "محاكي الامتحان", en: "Exam simulator", subAr: "ترخيص وسفر", subEn: "Licensure & travel" },
-        ].map((x) => (
-          <Link key={x.to} to={x.to} className="flex flex-col items-center gap-1 rounded-2xl border border-white/15 bg-white/10 px-2 py-3 text-center text-white backdrop-blur transition hover:bg-white/20 sm:flex-row sm:gap-3 sm:text-start">
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#168C91] text-white">{x.icon}</span>
-            <span className="min-w-0">
-              <span className="block text-sm font-black leading-5">{ar ? x.ar : x.en}</span>
-              <span className="hidden text-xs font-semibold text-slate-300 sm:block">{ar ? x.subAr : x.subEn}</span>
-            </span>
-          </Link>
-        ))}
-      </div>
 
       {last && daily && last.id !== daily.id && (
         <Link to={path(last)} className="sm:col-span-3 flex items-center justify-between gap-3 rounded-2xl bg-white/15 px-4 py-3 text-sm font-bold text-white backdrop-blur transition hover:bg-white/25">
