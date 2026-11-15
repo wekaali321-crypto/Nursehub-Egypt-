@@ -1,6 +1,6 @@
 // Cloudflare Pages Function: POST /api/admin-login (port of api/admin-login.js)
 import { createToken, sessionCookie, clientIp, safeEqual, json, readJson } from '../_lib/auth.js';
-import { lockedFor, count, reset } from '../_lib/ratelimit.js';
+import { lockedFor, count, reset, bindOrigin } from '../_lib/ratelimit.js';
 
 const MAX_ATTEMPTS = 5;
 const WINDOW_MS = 5 * 60 * 1000;
@@ -11,6 +11,7 @@ export async function onRequestPost({ request, env }) {
   }
   const db = env.DB || null;
   const ip = clientIp(request);
+  bindOrigin(request);
   // Cache-API lock first: a flood is refused without touching D1 (no read, no write).
   const wait = await lockedFor(`al:${ip}`);
   if (wait) return json({ error: `محاولات كثيرة جداً. حاول بعد ${Math.ceil(wait / 60)} دقيقة.` }, 429, { 'retry-after': String(wait) });

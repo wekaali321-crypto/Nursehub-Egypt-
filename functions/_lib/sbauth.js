@@ -1,6 +1,6 @@
 // GoTrue-compatible auth subset on D1 (email/password, Google OAuth, PKCE, refresh tokens).
 import { respond, perr, CORS, signJwt, verifyJwt, identify } from './sb.js';
-import { lockedFor, count, reset, ipOf, LIMITS as RL } from './ratelimit.js';
+import { lockedFor, count, reset, ipOf, bindOrigin, LIMITS as RL } from './ratelimit.js';
 
 const enc = new TextEncoder();
 const hex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
@@ -91,6 +91,7 @@ export async function handleAuth(request, env, path) {
   const bad = (code, msg, status = 400) => respond({ code: status, error_code: code, msg }, status);
   const tooMany = (sec) => respond({ code: 429, error_code: 'over_request_rate_limit', msg: `Too many attempts. Try again in ${Math.max(1, Math.ceil(sec / 60))} minute(s).`, retry_after: sec }, 429, { 'retry-after': String(sec) });
   const ip = ipOf(request);
+  bindOrigin(request);
 
   if (route === 'token') {
     const grant = url.searchParams.get('grant_type');

@@ -1,7 +1,11 @@
 // Auth rate limits (login / signup / password reset) kept in the Cloudflare Cache API: no D1 reads or writes, and checked
 // BEFORE any password hashing, so a flood of wrong passwords costs almost no CPU. Counters live per data centre (an attacker
 // from one IP lands on one), which is enough here; a Cloudflare WAF rate-limit rule can add a global layer on top.
-const KEY = (k) => new Request(`https://rl.internal/auth/${encodeURIComponent(k)}`);
+// Cache keys must live on the site's own hostname: Cloudflare's Cache API ignores keys on hosts outside the zone
+// (an `rl.internal` key was silently never stored in production). bindOrigin() is called once per request.
+let ORIGIN = 'https://nursehubegypt.com';
+export function bindOrigin(request) { try { ORIGIN = new URL(request.url).origin; } catch { /* keep */ } }
+const KEY = (k) => new Request(`${ORIGIN}/__rl/auth/${encodeURIComponent(k)}`);
 
 async function read(k) {
   try { const h = await caches.default.match(KEY(k)); return h ? await h.json() : null; } catch { return null; }

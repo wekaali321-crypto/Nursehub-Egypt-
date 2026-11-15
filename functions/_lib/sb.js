@@ -115,7 +115,7 @@ const TRACK_PER_IP_PER_MIN = 90; // generous: mobile carriers put many users beh
 async function overIpLimit(request) {
   try {
     const ip = request.headers.get('cf-connecting-ip') || 'x';
-    const key = new Request(`https://rl.internal/${encodeURIComponent(ip)}/${Math.floor(Date.now() / 60000)}`);
+    const key = new Request(`${new URL(request.url).origin}/__rl/track/${encodeURIComponent(ip)}/${Math.floor(Date.now() / 60000)}`); // same-zone key (see ratelimit.js)
     const cache = caches.default;
     const hit = await cache.match(key);
     const n = hit ? Number(await hit.text()) + 1 : 1;
@@ -313,7 +313,8 @@ export async function handleRest(request, env, path, forceAdmin = false) {
       if (!allowed) return perr(who.uid || pol.insert ? 403 : 401, '42501', `new row violates row-level security policy for table "${table}"`);
       // Visitor-writable tables (comments, orders, newsletter, push): per-IP cap so nobody can flood D1 writes or the inbox.
       if (!admin && PUBLIC_INSERT_LIMIT[table]) {
-        const { lockedFor, count, ipOf } = await import('./ratelimit.js');
+        const { lockedFor, count, ipOf, bindOrigin } = await import('./ratelimit.js');
+        bindOrigin(request);
         const k = `pi:${table}:${ipOf(request)}`, [max, win, lock] = PUBLIC_INSERT_LIMIT[table];
         const w = (await lockedFor(k)) || (await count(k, max, win, lock));
         if (w) return respond({ code: 'PGRST429', message: `Too many attempts. Try again in ${Math.ceil(w / 60)} minute(s).`, details: null, hint: null }, 429, { 'retry-after': String(w) });
@@ -420,7 +421,7 @@ async function memoTier(slot, ttl, compute) {
 }
 async function edgeMemo(key, ttlSec, compute) {
   let cache = null;
-  const req = new Request(`https://stats.internal/${key}`);
+  const req = new Request(`https://nursehubegypt.com/__memo/stats/${key}`); // same-zone key: the Cache API ignores foreign hosts
   try { cache = caches.default; const hit = await cache.match(req); if (hit) return await hit.json(); } catch { cache = null; }
   const v = await compute();
   try { if (cache) await cache.put(req, new Response(JSON.stringify(v), { headers: { 'cache-control': `max-age=${ttlSec}`, 'content-type': 'application/json' } })); } catch { /* best effort */ }

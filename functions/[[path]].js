@@ -392,7 +392,7 @@ export async function onRequest({ request, env, next }) {
     if (request.method !== 'GET' || (!accept.includes('text/html') && !accept.includes('*/*'))) return next();
     if (!BOT_RE.test(request.headers.get('user-agent') || '')) return next();
     // Crawlers fetch the same pages again and again: keep the rendered page at the edge for 6 h (no D1 read on a hit).
-    const ck = new Request(`https://seo.internal${url.pathname}`);
+    const ck = new Request(`${url.origin}/__seo${url.pathname}`); // same-zone key: the Cache API ignores foreign hosts
     try { const hit = await caches.default.match(ck); if (hit) return new Response(hit.body, hit); } catch { /* no cache */ }
     const page = await pageFor(url.pathname, env, request);
     if (!page) return next();
