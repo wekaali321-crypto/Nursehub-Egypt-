@@ -31,11 +31,24 @@ jobs:
           awk '/^-- check/{exit} {print}' "$FIX" > update.sql
           awk 'f{print} /^-- check/{f=1}' "$FIX" > check.sql
           if grep -viE '^(--|UPDATE "[a-z_]+" SET "sections" = REPLACE\(|$)' update.sql; then echo "only REPLACE updates are allowed"; exit 1; fi
+          # one SELECT per line, run separately so wrangler prints each result (--file only prints a summary)
+          cat > check.sh <<'SH'
+          set -eo pipefail
+          bad=0
+          while IFS= read -r q; do
+            [ -z "$q" ] && continue
+            line=$(npx --yes wrangler@3 d1 execute nursehub --remote --json --command "$q" 2>/dev/null </dev/null \
+              | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const r=JSON.parse(s)[0].results[0]||{};console.log(`old_left=${r.old_left??0} new_present=${r.new_present??0}  ${r.fix??""}`)})')
+            echo "$line"
+            case "$line" in old_left=0\ new_present=1*) ;; *) bad=1;; esac
+          done < check.sql
+          if [ "$1" = strict ] && [ $bad = 1 ]; then echo "some fixes are not applied"; exit 1; fi
+          SH
       - name: Before (old_left = 1 means the wrong sentence is still there)
-        run: npx --yes wrangler@3 d1 execute nursehub --remote --file=check.sql
+        run: bash check.sh
       - name: Apply
         if: inputs.mode == 'apply'
         run: npx --yes wrangler@3 d1 execute nursehub --remote --file=update.sql
       - name: After (expect old_left = 0, new_present = 1)
         if: inputs.mode == 'apply'
-        run: npx --yes wrangler@3 d1 execute nursehub --remote --file=check.sql
+        run: bash check.sh strict
