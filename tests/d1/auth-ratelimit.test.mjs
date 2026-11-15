@@ -92,3 +92,12 @@ test('admin password reset: admin only, members only, old sessions dropped, temp
   assert.equal((await rpc(owner.access_token, 'owner@test.local')).body.error, 'staff_account');
   assert.equal((await rpc(owner.access_token, 'nobody@test.local')).body.error, 'not_found');
 });
+
+test('visitor inserts (newsletter) are capped per IP; other visitors unaffected', async () => {
+  fakeCaches(); clock = 0; const e = env();
+  const { loadSb } = await import('./helpers.mjs'); const sb = await loadSb();
+  const sub = (i, ip = '7.7.7.7') => sb.handleRest(new Request('https://x.test/rest/v1/subscribers', { method: 'POST', headers: { 'content-type': 'application/json', 'cf-connecting-ip': ip }, body: JSON.stringify({ id: `s${i}`, email: `s${i}@test.local`, status: 'active' }) }), e, ['subscribers']);
+  const codes = []; for (let i = 0; i < 7; i++) codes.push((await sub(i)).status);
+  assert.ok(codes.slice(0, 5).every((c) => c === 201), JSON.stringify(codes)); assert.equal(codes[6], 429);
+  assert.equal((await sub(99, '8.8.8.8')).status, 201, 'other visitors unaffected');
+});

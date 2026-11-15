@@ -32,6 +32,11 @@ export function mockD1(db, { failWith = null } = {}) {
       });
       return { bind: bound, ...bound() };
     },
+    // like the real binding: run several statements in one transaction (statements must come from prepare().bind())
+    async batch(stmts) {
+      db.exec('BEGIN');
+      try { const out = []; for (const st of stmts) out.push(await st.all()); db.exec('COMMIT'); return out; } catch (e) { db.exec('ROLLBACK'); throw e; }
+    },
   };
 }
 
