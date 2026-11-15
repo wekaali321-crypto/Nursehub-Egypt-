@@ -74,6 +74,8 @@ Object.assign(POLICY, {
   site_visits: { read: 'admin', write: 'none', insert: 'public' },
   subscribers: { read: 'admin', write: 'admin', insert: 'public' },
 });
+/** Columns only the admin may read, even on public tables. */
+const PRIVATE_COLUMNS = { products: ['file_url'] };
 // [max per window, window s, lock s] for tables visitors may insert into (tracking tables have their own guard)
 const PUBLIC_INSERT_LIMIT = { comments: { max: 10, windowSec: 3600 }, orders: { max: 10, windowSec: 3600 }, subscribers: { max: 6, windowSec: 3600 }, push_subscriptions: { max: 10, windowSec: 3600 } };
 /** true when every anonymous GET of this table is public data (safe to cache at the edge) */
@@ -290,6 +292,8 @@ export async function handleRest(request, env, path, forceAdmin = false) {
       if (range && /^\d+-\d+$/.test(range)) { const [a, b] = range.split('-').map(Number); off = a; lim = b - a + 1; }
       if (lim != null) sql += ` LIMIT ${Math.max(0, lim | 0)} OFFSET ${Math.max(0, off | 0)}`;
       const rows = (await env.DB.prepare(sql).bind(...fullParams).all()).results.map((r) => fromDb(table, r));
+      // paid files: the download link of a product is never public (it is handed out by /api/order-lookup for a paid order)
+      if (!admin && PRIVATE_COLUMNS[table]) for (const r of rows) for (const c of PRIVATE_COLUMNS[table]) delete r[c];
       let total = rows.length;
       if (wantCount || method === 'HEAD') {
         const c = await env.DB.prepare(`SELECT COUNT(*) n FROM ${qi(table)}${where}`).bind(...fullParams).first();
