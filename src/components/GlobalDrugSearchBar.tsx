@@ -38,9 +38,12 @@ export default function GlobalDrugSearchBar() {
   const [open, setOpen] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
 
+  // The 9 reference tables (~1 MB) are only needed once the visitor actually searches: load them on first focus/typing.
+  const [wanted, setWanted] = useState(false);
   useEffect(() => {
+    if (!wanted) return;
     loadGlobalSearchData().then(setData).catch(() => {});
-  }, []);
+  }, [wanted]);
 
   useEffect(() => {
     function onClickOutside(e: MouseEvent) {
@@ -57,8 +60,8 @@ export default function GlobalDrugSearchBar() {
       <div className="relative">
         <input
           value={q}
-          onChange={(e) => { setQ(e.target.value); setOpen(true); }}
-          onFocus={() => setOpen(true)}
+          onChange={(e) => { setQ(e.target.value); setOpen(true); setWanted(true); }}
+          onFocus={() => { setOpen(true); setWanted(true); }}
           placeholder={lang === "en" ? "Search any drug across the whole drug guide at once..." : "ابحث عن أي دواء في كل أقسام دليل الأدوية دفعة واحدة..."}
           className="w-full rounded-2xl border-0 bg-white/95 py-3.5 pr-12 pl-4 text-slate-800 shadow-lg outline-none ring-2 ring-white/40 focus:ring-white placeholder:text-slate-400 dark:bg-slate-900/95 dark:text-white"
         />

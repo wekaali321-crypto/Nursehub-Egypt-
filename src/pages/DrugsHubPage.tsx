@@ -2,12 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { useSEO } from "../lib/seo";
-import { fetchAppliedPharmItems } from "../lib/appliedPharmApi";
-import { fetchICUMedications } from "../lib/icuMedApi";
-import { fetchERMedications } from "../lib/erMedApi";
-import { fetchPedsMedications } from "../lib/pedsMedApi";
 import { fetchHighAlertRef } from "../lib/highAlertRefApi";
-import { fetchRxPrescriptions } from "../lib/rxApi";
+import { countRows } from "../lib/countRows";
 import GlobalDrugSearchBar from "../components/GlobalDrugSearchBar";
 import { useI18n } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
@@ -77,26 +73,16 @@ export default function DrugsHubPage() {
   const [highAlertRefDrugCount, setHighAlertRefDrugCount] = useState(0);
   const [rxCount, setRxCount] = useState(0);
   useEffect(() => {
-    fetchAppliedPharmItems()
-      .then((items) => {
-        setAppliedPharmCount(items.length);
-        setDosageCount(items.filter((i: any) => i.topic === DOSAGE_TOPIC).length);
-      })
-      .catch(() => {});
-    fetchICUMedications()
-      .then((items) => setIcuMedCount(items.length))
-      .catch(() => {});
-    fetchERMedications()
-      .then((items) => setErMedCount(items.length))
-      .catch(() => {});
-    fetchPedsMedications()
-      .then((items) => setPedsMedCount(items.length))
-      .catch(() => {});
-    fetchHighAlertRef()
+    // Counts only (no rows downloaded): these tables are up to 1 MB each and the hub only shows how many items they hold.
+    const set = (f: (n: number) => void) => (n: number | null) => { if (n != null) f(n); };
+    void countRows("applied_pharm_items").then(set(setAppliedPharmCount));
+    void countRows("applied_pharm_items", ["topic", DOSAGE_TOPIC]).then(set(setDosageCount));
+    void countRows("icu_medications").then(set(setIcuMedCount));
+    void countRows("er_medications").then(set(setErMedCount));
+    void countRows("peds_medications").then(set(setPedsMedCount));
+    void countRows("rx_prescriptions").then(set(setRxCount));
+    fetchHighAlertRef() // small table (19 rows): the drug count is the sum of each category's list
       .then((cats) => setHighAlertRefDrugCount(cats.reduce((sum, c) => sum + c.drugs.length, 0)))
-      .catch(() => {});
-    fetchRxPrescriptions()
-      .then((items) => setRxCount(items.length))
       .catch(() => {});
   }, []);
 
