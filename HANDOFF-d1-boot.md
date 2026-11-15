@@ -18,7 +18,7 @@ Merge into `main` only after the user says "اعمل دمج" (CLAUDE.md). Error 
 - tsc: 98 errors (baseline 99).
 
 ## Open risks / next steps
-1. Run the migration on D1 yourself (existing prod indexes unverified).
+1. Read indexes: run Actions → "D1 read indexes" (check → apply; rollback available). Indexes only, no data change.
 2. Snapshot is dated 2026-11-12; regenerate after content changes (`node scripts/snapshot-supabase.mjs`).
 3. DONE (fix/notes-followup): the bundle is fetched only by pages that read it (HydrationGate / search); section pages read only the small public settings row.
 4. DONE (local commit): maintenance flag now lives in `nh_settings` key `maintenance` (it was never persisted before, so visitors never saw maintenance).

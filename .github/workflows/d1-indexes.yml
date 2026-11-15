@@ -1,0 +1,48 @@
+name: D1 read indexes
+# Manual only. Adds (or removes) the 12 read indexes of cloudflare/migrations/0002_read_indexes.sql on the production D1.
+# Indexes only: no table or row is changed. "check" lists which of them exist (read-only).
+# One-time cost of "apply": building the indexes writes about as many index entries as the tables have rows (~15k), well
+# under the free plan's 100k writes/day; afterwards these pages read far fewer rows on every visit.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: check (read only) / apply / rollback
+        required: true
+        default: check
+        type: choice
+        options: [check, apply, rollback]
+
+jobs:
+  indexes:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate files (indexes only)
+        run: |
+          if grep -vE '^\s*(--|$|CREATE INDEX IF NOT EXISTS idx_[a-z_]+ ON [a-z_]+\([a-z_, ]+\);)' cloudflare/migrations/0002_read_indexes.sql; then echo "unexpected statement"; exit 1; fi
+          if grep -vE '^\s*(--|$|DROP INDEX IF EXISTS idx_[a-z_]+;)' cloudflare/migrations/0002_read_indexes_rollback.sql; then echo "unexpected statement"; exit 1; fi
+          grep -oE 'idx_[a-z_]+' cloudflare/migrations/0002_read_indexes.sql | sort -u > wanted.txt
+          cat > list.sh <<'SH'
+          set -eo pipefail
+          npx --yes wrangler@3 d1 execute nursehub --remote --json --command "SELECT name FROM sqlite_master WHERE type='index' AND name LIKE 'idx_%' ORDER BY name" </dev/null 2>/dev/null \
+            | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const have=new Set(JSON.parse(s)[0].results.map(r=>r.name));const want=require("fs").readFileSync("wanted.txt","utf8").trim().split("\n");let n=0;for(const w of want){const ok=have.has(w);n+=ok;console.log((ok?"present ":"MISSING ")+w)}console.log(`${n} of ${want.length} read indexes present`);require("fs").writeFileSync("present.txt",String(n))})'
+          SH
+      - name: Before
+        run: bash list.sh
+      - name: Apply
+        if: inputs.mode == 'apply'
+        run: npx --yes wrangler@3 d1 execute nursehub --remote --file=cloudflare/migrations/0002_read_indexes.sql
+      - name: Rollback
+        if: inputs.mode == 'rollback'
+        run: npx --yes wrangler@3 d1 execute nursehub --remote --file=cloudflare/migrations/0002_read_indexes_rollback.sql
+      - name: After
+        if: inputs.mode != 'check'
+        run: |
+          bash list.sh
+          n=$(cat present.txt); total=$(wc -l < wanted.txt)
+          if [ "${{ inputs.mode }}" = apply ] && [ "$n" != "$total" ]; then echo "not all indexes were created"; exit 1; fi
+          if [ "${{ inputs.mode }}" = rollback ] && [ "$n" != 0 ]; then echo "some indexes are still there"; exit 1; fi
