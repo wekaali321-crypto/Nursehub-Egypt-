@@ -2,7 +2,7 @@
  * Exam-simulator results, kept on this device only (localStorage) — no server writes, no D1 reads.
  * Used to show "your progress / weak areas" per question bank (travel category or licensure exam).
  */
-export type ExamGroup = "travel" | "licensure";
+export type ExamGroup = "travel" | "licensure" | "oral";
 export interface ExamAttempt {
   key: string;        // question-bank id (travel category id / licensure exam id)
   group: ExamGroup;

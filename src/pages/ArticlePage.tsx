@@ -25,6 +25,7 @@ import ShareBar from "../components/ShareBar";
 import { startArticleView, endArticleView, trackScrollDepth, tickActiveReadingTime, logArticleEvent } from "../lib/analytics";
 import "./ArticlePage.css";
 import ContentQuality from "../components/ContentQuality";
+import OralExamCTA from "../components/oral/OralExamCTA";
 import ArticleReferences from "../components/ArticleReferences";
 
 function buildToc(html: string): TocItem[] {
@@ -534,6 +535,8 @@ export default function ArticlePage() {
 
           <MedicalDisclaimer lang={docLang} className="mt-6" />
           <ContentQuality />
+
+          <OralExamCTA className="mt-6" preset={{ source: "page" }} title={docLang === "en" ? "Quiz me on this article" : "اختبرني شفوي على المقال ده"} />
 
           <div className="mt-6">
             <ArticleAI articleHtml={dispContent.text} articleTitle={dispTitle.text} />
