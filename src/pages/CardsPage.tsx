@@ -143,7 +143,8 @@ function Session({ deck, ar, onExit }: { deck: Deck; ar: boolean; onExit: () => 
       if (e.key === " " || e.key === "Enter") { e.preventDefault(); setFlipped((f) => !f); }
       else if (flipped && e.key === "1") answer("again");
       else if (flipped && e.key === "2") answer("hard");
-      else if (flipped && e.key === "3") answer("easy");
+      else if (flipped && e.key === "3") answer("good");
+      else if (flipped && e.key === "4") answer("easy");
     };
     window.addEventListener("keydown", k);
     return () => window.removeEventListener("keydown", k);
@@ -186,10 +187,11 @@ function Session({ deck, ar, onExit }: { deck: Deck; ar: boolean; onExit: () => 
             )}
           </button>
           {flipped ? (
-            <div className="mt-4 grid grid-cols-3 gap-2">
+            <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
               <button onClick={() => answer("again")} className="min-h-14 rounded-2xl bg-red-600 font-black text-white hover:bg-red-700">{ar ? "مش فاكر" : "Again"}<span className="block text-[10px] font-bold opacity-80">{ar ? "تاني دلوقتي" : "now"}</span></button>
               <button onClick={() => answer("hard")} className="min-h-14 rounded-2xl bg-amber-500 font-black text-white hover:bg-amber-600">{ar ? "صعب" : "Hard"}<span className="block text-[10px] font-bold opacity-80">{ar ? "بكرة" : "tomorrow"}</span></button>
-              <button onClick={() => answer("easy")} className="min-h-14 rounded-2xl bg-emerald-600 font-black text-white hover:bg-emerald-700">{ar ? "سهل" : "Easy"}<span className="block text-[10px] font-bold opacity-80">{ar ? "بعد أيام" : "in days"}</span></button>
+              <button onClick={() => answer("good")} className="min-h-14 rounded-2xl bg-[#127378] font-black text-white hover:bg-[#0f6165]">{ar ? "فاكر" : "Good"}<span className="block text-[10px] font-bold opacity-80">{ar ? "بعد أيام" : "in days"}</span></button>
+              <button onClick={() => answer("easy")} className="min-h-14 rounded-2xl bg-emerald-600 font-black text-white hover:bg-emerald-700">{ar ? "سهل" : "Easy"}<span className="block text-[10px] font-bold opacity-80">{ar ? "بعد مدة أطول" : "much later"}</span></button>
             </div>
           ) : (
             <button onClick={() => setFlipped(true)} className="mt-4 min-h-14 w-full rounded-2xl bg-[#153448] font-black text-white">{ar ? "اعرض الإجابة" : "Show answer"}</button>

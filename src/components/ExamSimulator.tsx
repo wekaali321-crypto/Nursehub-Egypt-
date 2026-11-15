@@ -209,6 +209,11 @@ function ResultView({ r, byId, onReview, onNew, onRetakeWrong, bankKey, group }:
           <div className="rounded-xl bg-slate-100 p-3 font-black text-slate-700 dark:bg-slate-800 dark:text-slate-200"><Clock size={18} className="mx-auto mb-1" aria-hidden="true" />{fmt(r.seconds)}</div>
         </div>
         {unanswered > 0 && <p className="mt-2 text-xs font-bold text-slate-500">{unanswered} سؤال من غير إجابة اتحسبوا غلط</p>}
+        {total > 0 && correct / total < PASS / 100 && (
+          <p className="mt-3 text-sm font-bold text-slate-700 dark:text-slate-300">
+            نصيحة: راجع شرح الأسئلة الغلط تحت، وبعدين ثبّت المعلومات في <Link to="/cards" className="text-[#127378] underline dark:text-teal-300">بطاقات المذاكرة</Link> قبل ما تعيد الامتحان.
+          </p>
+        )}
         {prev && prev.attempts > 1 && <p className="mt-2 text-xs font-bold text-slate-500">متوسطك في البنك ده: {prev.avg}% · أحسن نتيجة: {prev.best}% · {prev.attempts} محاولات</p>}
         <p className="mt-1 text-[11px] text-slate-500">نسبة النجاح الحقيقية بتختلف حسب الهيئة (DHA / Prometric / SNLE) — دي للتقييم بس.</p>
       </div>
