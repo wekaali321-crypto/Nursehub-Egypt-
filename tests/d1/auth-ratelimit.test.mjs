@@ -102,3 +102,14 @@ test('visitor inserts (newsletter) are capped per IP; other visitors unaffected'
   assert.ok(codes.slice(0, 5).every((c) => c === 201), JSON.stringify(codes)); assert.equal(codes[6], 429);
   assert.equal((await sub(99, '8.8.8.8')).status, 201, 'other visitors unaffected');
 });
+
+test('user metadata is merged (saving progress keeps the name), null removes a key, size is capped', async () => {
+  fakeCaches(); clock = 0; const e = env();
+  const s = await (await handleAuth(req('signup', { email: 'p@test.local', password: 'secret12', data: { name: 'Mona' } }, '7.1.1.1'), e, ['signup'])).json();
+  const put = (data) => handleAuth(new Request('https://x.test/auth/v1/user', { method: 'PUT', headers: { 'content-type': 'application/json', authorization: `Bearer ${s.access_token}` }, body: JSON.stringify({ data }) }), e, ['user']);
+  let u = await (await put({ nh_progress: { v: 1, cards: { a: [2, 1, 3, 2, 1] } } })).json();
+  assert.equal(u.user_metadata.name, 'Mona', 'name kept'); assert.deepEqual(u.user_metadata.nh_progress.cards.a, [2, 1, 3, 2, 1]);
+  u = await (await put({ nh_progress: null })).json();
+  assert.equal(u.user_metadata.nh_progress, undefined); assert.equal(u.user_metadata.name, 'Mona');
+  assert.equal((await put({ blob: 'x'.repeat(310_000) })).status, 413);
+});

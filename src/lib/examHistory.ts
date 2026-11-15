@@ -80,3 +80,8 @@ export function weakTopics(min = 5): { topic: string; correct: number; total: nu
   for (const a of loadHistory()) for (const [t, [c, n]] of Object.entries(a.topics ?? {})) { const cur = m[t] ?? [0, 0]; m[t] = [cur[0] + c, cur[1] + n]; }
   return Object.entries(m).filter(([t, [, n]]) => t !== "general" && n >= min).map(([topic, [correct, total]]) => ({ topic, correct, total, pct: Math.round((correct / total) * 100) })).sort((a, b) => a.pct - b.pct);
 }
+
+/** Replace this device's history (used by account sync after merging). */
+export function replaceHistory(list: ExamAttempt[]): void {
+  try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, MAX))); } catch { /* ignore */ }
+}
