@@ -2,6 +2,7 @@ import { useFeatures } from "./useFeatures";
 import { useToast } from "../../components/Toast";
 import { PageHeader, cardCls, Toggle } from "./ui";
 import type { FeatureToggles } from "../../lib/types";
+import OralAiAdmin from "./OralAiAdmin";
 
 const FEATURE_META: { key: keyof FeatureToggles; label: string; description: string; icon: string }[] = [
   { key: "premiumPlans", label: "خطط Premium", description: "تفعيل الاشتراكات المدفوعة والمحتوى المميز", icon: "⭐" },
@@ -10,6 +11,7 @@ const FEATURE_META: { key: keyof FeatureToggles; label: string; description: str
   { key: "exams", label: "الاختبارات", description: "نظام الاختبارات و NCLEX و Prometric", icon: "🎯" },
   { key: "drugGuide", label: "دليل الأدوية", description: "قاعدة بيانات الأدوية والجرعات", icon: "💊" },
   { key: "carePlans", label: "خطط الرعاية", description: "خطط الرعاية التمريضية NANDA", icon: "📋" },
+  { key: "oralExam", label: "الامتحان الشفوي مع علي", description: "زرار علي عاشور في كل صفحات الموقع: امتحان شفوي ذكي (AI) أو مجاني", icon: "🎙️" },
   { key: "aiAssistant", label: "المساعد الذكي", description: "مساعد AI للإجابة على أسئلة التمريض", icon: "🤖" },
   { key: "community", label: "المجتمع", description: "التعليقات والتقييمات والتفاعل", icon: "💬" },
   { key: "newsletter", label: "النشرة البريدية", description: "الاشتراك في القائمة البريدية", icon: "📧" },
@@ -63,6 +65,8 @@ export default function FeatureTogglesAdmin() {
           </div>
         ))}
       </div>
+
+      <OralAiAdmin />
 
       <p className="mt-6 rounded-xl bg-amber-50 p-4 text-sm text-amber-700 dark:bg-amber-500/10 dark:text-amber-400">
         💡 التغييرات تُحفظ فوراً في قاعدة البيانات وتؤثر على الموقع مباشرة لجميع الزوار.

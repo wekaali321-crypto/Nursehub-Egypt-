@@ -321,6 +321,8 @@ export interface FeatureToggles {
   newsletter: boolean;
   carePlans: boolean;
   courses: boolean;
+  /** "Ali" oral exam button on every page (smart AI mode + free mode) */
+  oralExam: boolean;
 }
 
 export const DEFAULT_FEATURES: FeatureToggles = {
@@ -336,6 +338,7 @@ export const DEFAULT_FEATURES: FeatureToggles = {
   newsletter: true,
   carePlans: true,
   courses: false,
+  oralExam: true,
 };
 
 export interface TrashEntry {

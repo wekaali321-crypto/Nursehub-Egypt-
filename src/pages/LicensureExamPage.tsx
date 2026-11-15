@@ -11,6 +11,7 @@
 // Red is used ONLY as a genuine "wrong answer" feedback color (a real safety/correctness alert use case).
 
 import { useEffect, useState } from 'react';
+import OralExamCTA from "../components/oral/OralExamCTA";
 import { useParams, Link } from 'react-router-dom';
 import {
   fetchExamCategories,
@@ -86,6 +87,7 @@ export function LicensureExamsHome() {
       </div>
 
       <ExamProgressPanel group="licensure" />
+      <OralExamCTA className="mb-6" preset={{ source: "topic", topic: "mixed" }} />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {topLevelCategories.map((cat) => (

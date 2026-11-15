@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import InstallPrompt from "./InstallPrompt";
 import MobileBottomNav from "./MobileBottomNav";
+import OralLauncher from "./oral/OralLauncher";
 import { useI18n } from "../lib/i18n";
 
 /** Open every new page from the top (SPA navigation otherwise keeps the previous scroll position). Back/forward and #anchors are left alone. */
@@ -53,6 +54,7 @@ export default function PublicLayout({ children }: { children: ReactNode }) {
       <ScrollToTop />
       <BackToTop />
       <div className="print:hidden"><InstallPrompt /></div>
+      <OralLauncher />
       <MobileBottomNav />
     </div>
   );

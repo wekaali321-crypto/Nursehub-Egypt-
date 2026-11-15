@@ -9,6 +9,7 @@
 //   - default (TravelQuestionsStudy): question-by-question quiz screen for one category
 
 import { useEffect, useState } from 'react';
+import OralExamCTA from "../components/oral/OralExamCTA";
 import { useParams, Link } from 'react-router-dom';
 import {
   fetchTravelCategories,
@@ -80,6 +81,7 @@ export function TravelQuestionsHome() {
       </div>
 
       <ExamProgressPanel group="travel" />
+      <OralExamCTA className="mb-6" preset={{ source: "topic", topic: "mixed" }} />
 
       {/* Highlighted review folders (e.g. "مراجعة سريعة NCLEX/بروميتريك") — distinct from quiz tiles */}
       {reviewCats.map((cat) => (
