@@ -127,6 +127,7 @@ const SubscribersAdmin = lazy(() => import("./admin/AdminExtras").then((m) => ({
 const RedirectsAdmin = lazy(() => import("./admin/AdminExtras").then((m) => ({ default: m.RedirectsAdmin })));
 const ActivityAdmin = lazy(() => import("./admin/AdminExtras").then((m) => ({ default: m.ActivityAdmin })));
 const DrugsAdmin = lazy(() => import("./admin/DrugsAdmin").then((m) => ({ default: m.DrugsAdmin })));
+const DrugImagesAdmin = lazy(() => import("./admin/DrugImagesAdmin").then((m) => ({ default: m.DrugImagesAdmin })));
 const DrugInteractionsAdmin = lazy(() => import("./admin/DrugsAdmin").then((m) => ({ default: m.DrugInteractionsAdmin })));
 const DrugAntidotesAdmin = lazy(() => import("./admin/DrugsAdmin").then((m) => ({ default: m.DrugAntidotesAdmin })));
 const DrugClassificationsAdmin = lazy(() => import("./admin/DrugsAdmin").then((m) => ({ default: m.DrugClassificationsAdmin })));
@@ -449,6 +450,7 @@ export default function App() {
                   <Route path="/admin/import-wizard" element={<Admin><ImportWizard /></Admin>} />
                   <Route path="/admin/recovery" element={<Admin><RecoveryCenter /></Admin>} />
                   <Route path="/admin/drugs" element={<Admin><DrugsAdmin /></Admin>} />
+                  <Route path="/admin/drug-images" element={<Admin><DrugImagesAdmin /></Admin>} />
                   <Route path="/admin/drug-interactions" element={<Admin><DrugInteractionsAdmin /></Admin>} />
                   <Route path="/admin/drug-antidotes" element={<Admin><DrugAntidotesAdmin /></Admin>} />
                   <Route path="/admin/drug-classifications" element={<Admin><DrugClassificationsAdmin /></Admin>} />

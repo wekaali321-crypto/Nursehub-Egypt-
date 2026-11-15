@@ -24,7 +24,11 @@ export default function DrugGallery({ slug, name, defaultUrl }: { slug: string; 
   const slots = useImageSlots();
   const keys = [`drug:${slug}`, `drug:${slug}:2`, `drug:${slug}:3`];
   const defs = [defaultUrl, null, null];
-  const shown = keys.filter((k, i) => resolveSlot(slots[k], defs[i]).url);
+  // admin switch "verified pictures only": visitors then see only pictures whose identity was checked
+  const verifiedOnly = slots["setting:drug-images-verified-only"] === "1";
+  const isChecked = (k: string) => parseMeta(slots[`meta:${k}`]).verified === true;
+  const visibleToVisitors = (k: string, i: number) => !!resolveSlot(slots[k], defs[i]).url && (!verifiedOnly || isChecked(k));
+  const shown = keys.filter((k, i) => (admin ? !!resolveSlot(slots[k], defs[i]).url : visibleToVisitors(k, i)));
   const [edit, setEdit] = useState<string | null>(null);
 
   if (!admin && shown.length === 0) {
@@ -42,7 +46,7 @@ export default function DrugGallery({ slug, name, defaultUrl }: { slug: string; 
         {keys.map((k, i) => {
           const meta = parseMeta(slots[`meta:${k}`]);
           const has = !!resolveSlot(slots[k], defs[i]).url;
-          if (!has && !admin) return null;
+          if (!admin && !visibleToVisitors(k, i)) return null;
           return (
             <figure key={k} className="overflow-hidden rounded-2xl border border-nh-line bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
               <EditableImage block slot={k} src={defs[i]} label={`${ar ? "صورة الدواء" : "Drug picture"} ${i + 1}: ${name}`}
@@ -56,6 +60,7 @@ export default function DrugGallery({ slug, name, defaultUrl }: { slug: string; 
                   )}
                 </figcaption>
               )}
+              {admin && has && verifiedOnly && !meta.verified && <p className="mt-2 text-xs font-bold text-amber-700 dark:text-amber-300">غير مراجَعة — مخفية عن الزوار حاليًا</p>}
               {admin && has && (
                 <button type="button" onClick={() => setEdit(k)} className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-nh-teal-dark hover:underline dark:text-teal-300">
                   <Pencil size={12} aria-hidden="true" />{ar ? "الوصف والمصدر" : "Caption & source"}
