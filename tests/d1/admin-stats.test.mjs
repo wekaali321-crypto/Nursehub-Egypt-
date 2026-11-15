@@ -1,5 +1,5 @@
 // admin_site_stats: the dashboard polls it, so it must (1) return the same numbers as before and (2) stop rescanning site_visits on every poll.
-// Old implementation = functions/_lib/sb.js from `main` (read with git), new = the working tree. Data is SYNTHETIC (clearly not production).
+// Old implementation = functions/_lib/sb.js before the read-reduction change (c5eaf3d, read with git), new = the working tree. Data is SYNTHETIC (clearly not production).
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { execSync } from 'node:child_process';
@@ -11,7 +11,7 @@ import { ROOT, newDb, mockD1, loadSb, rowsRead } from './helpers.mjs';
 
 const dir = mkdtempSync(join(tmpdir(), 'nh-oldsb-'));
 for (const f of ['push.js', 'sbschema.js', 'webpush.js']) copyFileSync(join(ROOT, 'functions/_lib', f), join(dir, f));
-writeFileSync(join(dir, 'sb.js'), execSync('git show main:functions/_lib/sb.js', { cwd: ROOT, maxBuffer: 1e8 }));
+writeFileSync(join(dir, 'sb.js'), execSync('git show c5eaf3d:functions/_lib/sb.js', { cwd: ROOT, maxBuffer: 1e8 }));
 const oldSb = await import(pathToFileURL(join(dir, 'sb.js')).href);
 const newSb = await loadSb();
 

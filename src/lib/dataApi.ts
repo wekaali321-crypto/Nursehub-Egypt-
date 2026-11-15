@@ -207,6 +207,15 @@ export async function loadAllFromSupabase(light = false): Promise<Partial<DataSh
   return out as Partial<DataShape>;
 }
 
+/** The few site settings the shell needs on every page (name, tagline, AdSense) — one small row, no store bundle. */
+export async function loadPublicSettings(): Promise<Partial<DataShape["settings"]> | null> {
+  if (!isSupabaseEnabled || !supabase) return null;
+  const { data, error } = await supabase.from(TABLES.settings).select("site_name,tagline,meta_description,adsense_enabled,adsense_client").limit(1);
+  const s = !error && data?.[0];
+  if (!s) return null;
+  return { siteName: s.site_name, tagline: s.tagline, metaDescription: s.meta_description, adsenseEnabled: s.adsense_enabled, adsenseClient: s.adsense_client };
+}
+
 /** Tables that failed to load in the last bundle (empty when it was complete). */
 export const failedTables = (b: unknown): string[] => ((b as any)?.__failed as string[] | undefined) ?? [];
 
