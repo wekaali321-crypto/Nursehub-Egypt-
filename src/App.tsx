@@ -252,13 +252,15 @@ function PageSkeleton() {
  * The admin area still waits for the full bundle (it edits it).
  */
 function HydrationGate({ children, admin = false }: { children: ReactNode; admin?: boolean }) {
-  const { loading, settings, ensureLoaded } = useStore();
+  const { loading, settings, ensureLoaded, drugsReady } = useStore();
   const { loggedIn, checking } = useAuth();
   const { pathname } = useLocation();
   const maint = useMaintenance(); // own one-row check, started at boot: never waits for the store bundle
   // The store bundle (articles, drugs, …) is fetched only for pages that read it; store-free pages never download it.
   const free = !admin && STORE_FREE_ROUTES.some((r) => matchPath({ path: r, end: true }, pathname));
-  useEffect(() => { if (!free) ensureLoaded(); }, [free]); // eslint-disable-line react-hooks/exhaustive-deps
+  // Drug tables (~0.7 MB) only for the drug pages and the search page; the admin's full load always includes them.
+  const needDrugs = !free && (admin || pathname.startsWith("/drug") || pathname === "/search");
+  useEffect(() => { if (!free) ensureLoaded({ drugs: needDrugs }); }, [free, needDrugs]); // eslint-disable-line react-hooks/exhaustive-deps
   if (!admin && !loggedIn) {
     // Remote flag (nh_settings) or, in local preview mode, the store's own settings.
     // 'unknown' (read failed / timed out) fails open; a late answer of 'on' re-renders this gate into the maintenance screen.
@@ -271,7 +273,7 @@ function HydrationGate({ children, admin = false }: { children: ReactNode; admin
     // Until the flag is known, no page content (store-free pages included) is rendered: the shell + skeleton only.
     if (maint === null) return <PageSkeleton />;
   }
-  if (loading && !free) return <PageSkeleton />;
+  if (!free && (loading || (needDrugs && !drugsReady))) return <PageSkeleton />;
   return <>{children}</>;
 }
 

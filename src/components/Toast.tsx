@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useRef, useState, type ReactNode } from "react";
 
 type ToastType = "success" | "error" | "info";
 interface ToastItem {
@@ -12,10 +12,16 @@ const Ctx = createContext<{ notify: (msg: string, type?: ToastType) => void } | 
 export function ToastProvider({ children }: { children: ReactNode }) {
   const [toasts, setToasts] = useState<ToastItem[]>([]);
 
+  const timers = useRef(new Map<number, number>());
+  // The same message is never stacked: repeating it (e.g. pressing "login" again) just keeps the one toast on screen longer.
   const notify = useCallback((message: string, type: ToastType = "success") => {
-    const id = Date.now() + Math.random();
-    setToasts((t) => [...t, { id, type, message }]);
-    setTimeout(() => setToasts((t) => t.filter((x) => x.id !== id)), 3500);
+    setToasts((t) => {
+      const same = t.find((x) => x.message === message && x.type === type);
+      const id = same ? same.id : Date.now() + Math.random();
+      window.clearTimeout(timers.current.get(id));
+      timers.current.set(id, window.setTimeout(() => { timers.current.delete(id); setToasts((l) => l.filter((x) => x.id !== id)); }, 3500));
+      return same ? t : [...t.slice(-2), { id, type, message }];
+    });
   }, []);
 
   const styles: Record<ToastType, string> = {
@@ -28,7 +34,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   return (
     <Ctx.Provider value={{ notify }}>
       {children}
-      <div className="pointer-events-none fixed bottom-6 right-6 z-[100] flex flex-col gap-2">
+      <div role="status" aria-live="polite" className="pointer-events-none fixed bottom-6 left-4 right-4 z-[100] flex flex-col items-end gap-2 sm:left-auto sm:right-6">
         {toasts.map((t) => (
           <div
             key={t.id}

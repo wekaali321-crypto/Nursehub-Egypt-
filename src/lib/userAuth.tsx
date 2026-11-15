@@ -89,6 +89,8 @@ export function UserAuthProvider({ children }: { children: ReactNode }) {
 
 function translateAuthError(message: string): string {
   if (message.includes("Invalid login credentials")) return "البريد الإلكتروني أو كلمة المرور غير صحيحة.";
+  const wait = /Too many attempts\. Try again in (\d+) minute/.exec(message);
+  if (wait) return `محاولات كتير غلط. استنى ${wait[1]} ${Number(wait[1]) > 10 ? "دقيقة" : Number(wait[1]) > 2 ? "دقايق" : Number(wait[1]) === 2 ? "دقيقتين" : "دقيقة"} وجرّب تاني.`;
   if (message.includes("User already registered")) return "هذا البريد الإلكتروني مسجل بالفعل.";
   if (message.includes("Password should be at least")) return "كلمة المرور يجب أن تكون 6 أحرف على الأقل.";
   if (message.includes("Email not confirmed")) return "يرجى تأكيد بريدك الإلكتروني أولاً (راجع صندوق الوارد).";

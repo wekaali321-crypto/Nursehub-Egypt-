@@ -1,3 +1,4 @@
+import { LOAD_FAILED } from "./loadFailed";
 // src/lib/casesApi.ts
 // "الحالات السريرية" (Clinical Cases): static JSON files shipped with the site
 // (public/clinical-cases/index.json + public/clinical-cases/cases/<id>.json), no database.
@@ -63,11 +64,11 @@ const caseCache = new Map<string, Promise<ClinicalCase | null>>();
 export function fetchCaseIndex(): Promise<CaseIndexItem[]> {
   if (!indexCache) {
     indexCache = fetch('/clinical-cases/index.json', { cache: 'no-cache' })
-      .then((r) => (r.ok ? r.json() : { cases: [] }))
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then((j) => ((j.cases ?? []) as CaseIndexItem[]).sort((a, b) => a.num - b.num))
       .catch(() => {
         indexCache = null;
-        return [];
+        return LOAD_FAILED; // offline / failed: the page says so instead of "being added"
       });
   }
   return indexCache;

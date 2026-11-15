@@ -71,7 +71,7 @@ import {
 import { seedQuizzes, seedCustomTypes, seedHomeCategories, seedGateways, seedCoupons, defaultCommerce } from "./seed3";
 import { seedOTCConditions } from "./seedOTC";
 import { isSupabaseEnabled, supabase } from "./supabase";
-import { loadAllFromSupabase, loadPublicSettings, failedTables, syncEntity, syncSettings, seedSupabase } from "./dataApi";
+import { loadAllFromSupabase, loadPublicSettings, loadDrugTables, failedTables, syncEntity, syncSettings, seedSupabase } from "./dataApi";
 import { cacheGet, cacheSet } from "./remoteCache";
 import { getMaintenance, onMaintenance, saveMaintenance, type MaintenanceState } from "./maintenance";
 
@@ -309,8 +309,11 @@ interface StoreCtx extends DataShape {
   loading: boolean;
   seedRemote: () => Promise<void>;
   reload: () => Promise<void>;
-  /** Load the store bundle (articles, drugs, …) if it has not been requested yet. Pages that read it call this; section pages never do. */
-  ensureLoaded: () => void;
+  /** Load the store bundle (articles, pages, …) if it has not been requested yet; `drugs` also loads the drug tables.
+   *  Pages that read the store call this; section pages never do. */
+  ensureLoaded: (opts?: { drugs?: boolean }) => void;
+  /** true once the drug tables are in the store (always true for the admin's full load and in local preview). */
+  drugsReady: boolean;
   pushNotification: (type: AppNotification["type"], message: string, link?: string) => void;
   markAllRead: () => void;
   markRead: (id: string) => void;
@@ -356,6 +359,36 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   // Hydrate from Supabase on demand (production): the bundle is ~3 MB (articles + drugs), so it is only fetched when a page
   // that reads it is opened (HydrationGate / search). Section and reference pages load their own small data and never trigger it.
   const requested = useRef(false);
+  const drugsRequested = useRef(false);
+  const [drugsReady, setDrugsReady] = useState<boolean>(!isSupabaseEnabled);
+  /** Merge a loaded slice into the store and move the sync baseline with it (loaded data is never written back). */
+  const mergeLoaded = (remote: Partial<DataShape>) =>
+    setDataState((prev) => {
+      const merged = { ...prev, ...remote, ...loadUiConfig() } as DataShape;
+      if (!remote.settings) merged.settings = prev.settings;
+      // The maintenance fields are not in the bundle (they live in nh_settings): keep what the store already holds.
+      merged.settings = { ...merged.settings, maintenanceMode: prev.settings.maintenanceMode, maintenanceMessage: prev.settings.maintenanceMessage, maintenanceUntil: prev.settings.maintenanceUntil };
+      const base = { ...prevRef.current } as Record<string, unknown>;
+      for (const k of Object.keys(remote)) base[k] = (merged as unknown as Record<string, unknown>)[k];
+      base.settings = merged.settings;
+      prevRef.current = base as unknown as DataShape;
+      return merged;
+    });
+  const loadDrugs = async () => {
+    drugsRequested.current = true;
+    try {
+      let d = await cacheGet<Partial<DataShape>>("public_drugs_v1", 3 * 3600 * 1000);
+      if (!d) {
+        d = await loadDrugTables();
+        if (failedTables(d).length === 0) void cacheSet("public_drugs_v1", d);
+      }
+      mergeLoaded(d);
+    } catch (e) {
+      console.error("drug tables load failed:", e);
+    } finally {
+      setDrugsReady(true);
+    }
+  };
   const reload = async () => {
     if (!isSupabaseEnabled) return;
     requested.current = true;
@@ -368,19 +401,25 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       } catch {
         /* ignore */
       }
-      let remote: Awaited<ReturnType<typeof loadAllFromSupabase>> | null = isAdmin ? null : await cacheGet("public_bundle_v1", 3 * 3600 * 1000);
+      // Visitors: core tables only (the drug tables come with loadDrugs when a drug page / search needs them).
+      let remote: Awaited<ReturnType<typeof loadAllFromSupabase>> | null = isAdmin ? null : await cacheGet("public_bundle_v3", 3 * 3600 * 1000);
       if (!remote) {
-        remote = await loadAllFromSupabase(!isAdmin);
-        if (!isAdmin && failedTables(remote).length === 0) void cacheSet("public_bundle_v1", remote); // never cache a partial bundle
+        remote = await loadAllFromSupabase(!isAdmin, { drugs: isAdmin });
+        if (!isAdmin && failedTables(remote).length === 0) void cacheSet("public_bundle_v3", remote); // never cache a partial bundle
       }
-      setDataState((prev) => {
-        const merged = { ...prev, ...remote, ...loadUiConfig() } as DataShape;
-        if (!remote.settings) merged.settings = prev.settings;
-        // The maintenance fields are not in the bundle (they live in nh_settings): keep what the store already holds.
-        merged.settings = { ...merged.settings, maintenanceMode: prev.settings.maintenanceMode, maintenanceMessage: prev.settings.maintenanceMessage, maintenanceUntil: prev.settings.maintenanceUntil };
-        prevRef.current = merged;
-        return merged;
-      });
+      if (isAdmin) { drugsRequested.current = true; setDrugsReady(true); }
+      // The admin's full load replaces the whole baseline (it is the reference for the admin's edits).
+      if (isAdmin) {
+        setDataState((prev) => {
+          const merged = { ...prev, ...remote, ...loadUiConfig() } as DataShape;
+          if (!remote!.settings) merged.settings = prev.settings;
+          merged.settings = { ...merged.settings, maintenanceMode: prev.settings.maintenanceMode, maintenanceMessage: prev.settings.maintenanceMessage, maintenanceUntil: prev.settings.maintenanceUntil };
+          prevRef.current = merged;
+          return merged;
+        });
+      } else {
+        mergeLoaded(remote);
+      }
     } catch (e) {
       console.error("Supabase load failed:", e);
     } finally {
@@ -406,8 +445,18 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     return onMaintenance(apply);
   }, []);
 
-  const ensureLoaded = () => {
-    if (isSupabaseEnabled && !requested.current) void reload();
+  const ensureLoaded = (opts: { drugs?: boolean } = {}) => {
+    if (!isSupabaseEnabled) return;
+    if (!requested.current) void reload();
+    if (opts.drugs && !drugsRequested.current) {
+      drugsRequested.current = true;
+      // the admin's full load already brings the drug tables: only visitors load them separately
+      void (async () => {
+        let isAdmin = false;
+        try { isAdmin = !!(await supabase?.auth.getSession())?.data?.session; } catch { /* ignore */ }
+        if (!isAdmin) await loadDrugs();
+      })();
+    }
   };
 
   // At boot: a bundle already cached on this device is applied at once (no network); otherwise only the small public
@@ -419,7 +468,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
       let isAdmin = false;
       try { isAdmin = !!(await supabase?.auth.getSession())?.data?.session; } catch { /* ignore */ }
       if (cancelled || requested.current) return;
-      if (isAdmin || (await cacheGet("public_bundle_v1", 3 * 3600 * 1000))) { ensureLoaded(); return; }
+      if (isAdmin || (await cacheGet("public_bundle_v3", 3 * 3600 * 1000))) { ensureLoaded(); return; }
       let s = await cacheGet<Partial<DataShape["settings"]>>("public_settings_v1", 3 * 3600 * 1000);
       if (!s) { try { s = await loadPublicSettings(); } catch { s = null; } if (s) void cacheSet("public_settings_v1", s); }
       if (!s || cancelled || requested.current) return;
@@ -624,6 +673,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         seedRemote,
         reload,
         ensureLoaded,
+        drugsReady,
         pushNotification,
         markAllRead,
         markRead,

@@ -24,3 +24,6 @@ export const supabase = {
   rpc: async (name, args) => { calls.push({ rpc: name, args }); const a = rpcAnswers.get(name); if (a instanceof Error) throw a; return a ?? { data: null, error: { message: 'missing' } }; },
 };
 export const reset = () => { calls.length = 0; answers.clear(); rpcAnswers.clear(); };
+// for modules that also import these from ./supabase (dataApi): enabled, table names = the camelCase key in snake_case
+export const isSupabaseEnabled = true;
+export const TABLES = new Proxy({ settings: 'site_settings' }, { get: (t, k) => t[k] ?? String(k).replace(/[A-Z]/g, (c) => '_' + c.toLowerCase()) });

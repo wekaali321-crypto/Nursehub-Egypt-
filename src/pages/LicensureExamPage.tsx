@@ -26,6 +26,7 @@ import {
 } from '../lib/examLicensureApi';
 import { useSEO } from "../lib/seo";
 import ExamSimulator, { ExamProgressPanel, useExamMode } from "../components/ExamSimulator";
+import LoadError from "../components/LoadError";
 
 // ---------------------------------------------------------------------------
 // Shared bits
@@ -73,7 +74,7 @@ export function LicensureExamsHome() {
 
   useSEO({ title: "قسم الاختبارات | NurseHub Egypt" });
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
 
   const topLevelCategories = categories.filter((cat) => !HIDDEN_FROM_HUB.has(cat.id));
 
@@ -137,7 +138,7 @@ export function LicensureExamCategory() {
 
   useSEO({ title: `${category?.name_ar ?? "الامتحانات"} | NurseHub Egypt` });
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-6" dir="rtl">
@@ -218,7 +219,7 @@ export default function LicensureExamStudy() {
 
   useSEO({ title: `${exam?.title_ar ?? "اختبار"} | NurseHub Egypt` });
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
   if (!exam || questions.length === 0) {
     return <div className="p-6 text-slate-600 dark:text-slate-400">لا توجد أسئلة في هذا الامتحان بعد</div>;
   }

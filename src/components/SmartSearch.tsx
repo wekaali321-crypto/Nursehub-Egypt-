@@ -20,7 +20,7 @@ interface Suggestion {
 export default function SmartSearch({ onNavigate, variant = "compact" }: { onNavigate?: () => void; variant?: "compact" | "hero" }) {
   const { articles, drugs, ensureLoaded } = useStore();
   const [searchActive, setSearchActive] = useState(false);
-  useEffect(() => { if (searchActive) ensureLoaded(); }, [searchActive]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { if (searchActive) ensureLoaded({ drugs: true }); }, [searchActive]); // eslint-disable-line react-hooks/exhaustive-deps
   const { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters } = useExtraSearchIndex(searchActive);
   const { t, lang } = useI18n();
   const [q, setQ] = useState("");

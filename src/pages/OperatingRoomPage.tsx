@@ -6,6 +6,7 @@ import { fetchOperatingRoomTopics, fetchOperatingRoomTopic, type OperatingRoomTo
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 import { sectionArtFor } from "../lib/sectionArt";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Light cyan accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -22,7 +23,7 @@ export function OperatingRoomHome() {
   const [topics, setTopics] = useState<OperatingRoomTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_operating_room_routed", TTL.topics, () => fetchOperatingRoomTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_operating_room_routed", TTL.topics, () => fetchOperatingRoomTopics({ withRouted: true })).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (

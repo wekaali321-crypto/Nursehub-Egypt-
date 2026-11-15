@@ -6,6 +6,7 @@ import { fetchERReceptionTopics, fetchERReceptionTopic, type ERReceptionTopic } 
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { sectionArtFor } from "../lib/sectionArt";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Light red accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -23,7 +24,7 @@ export function ERReceptionHome() {
   const [topics, setTopics] = useState<ERReceptionTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_er_reception_routed", TTL.topics, () => fetchERReceptionTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_er_reception_routed", TTL.topics, () => fetchERReceptionTopics({ withRouted: true })).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (

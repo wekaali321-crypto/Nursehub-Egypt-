@@ -14,6 +14,7 @@ import { Breadcrumbs } from '../components/common';
 import { useSEO } from '../lib/seo';
 import { useI18n, bilingual } from '../lib/i18n';
 import InlineLangToggle from '../components/InlineLangToggle';
+import LoadError from "../components/LoadError";
 
 const LABELS = {
   breadcrumb: { ar: 'أسئلة المقابلات الشخصية', en: 'Interview Questions' },
@@ -69,7 +70,7 @@ export default function InterviewQuestionsPage() {
       </div>
     );
   }
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8" dir={lang === 'ar' ? 'rtl' : 'ltr'}>

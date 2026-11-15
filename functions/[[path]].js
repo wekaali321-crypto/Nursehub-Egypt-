@@ -75,6 +75,44 @@ function list(items) {
   return `<ul>${items.map(([href, title, d]) => `<li><a href="${esc(href)}">${esc(title)}</a>${d ? ' — ' + esc(d) : ''}</li>`).join('')}</ul>`;
 }
 
+// Department hubs and their topic pages (/<dept> and /<dept>/<id>): Arabic + English names and the words people search with.
+const DEPTS = {
+  'icu-nursing': ['icu_topics', 'تمريض العناية المركزة', 'ICU Nursing', 'شرح تمريض العناية المركزة للممرضين: أجهزة التنفس الصناعي، رسم القلب، الشاشات، الأدوية والإجراءات خطوة بخطوة.'],
+  dialysis: ['dialysis_topics', 'تمريض الغسيل الكلوي', 'Dialysis Nursing', 'تمريض الغسيل الكلوي: الفيستيولا والقسطرة، ماكينة الغسيل، مضاعفات الجلسة، الوزن الجاف وحسابات Kt/V.'],
+  radiology: ['radiology_topics', 'الأشعة للتمريض', 'Radiology for Nurses', 'قراءة أشعة الصدر والمقطعية للممرضين: الانصباب، الاسترواح، تضخم القلب، الهاونسفيلد والسلامة من الإشعاع.'],
+  nicu: ['nicu_topics', 'تمريض الحضّانات', 'NICU Nursing', 'تمريض حديثي الولادة والحضّانات: الإنعاش، أبجار، الصفراء، التغذية، الحرارة والقسطرة السرية.'],
+  pharmacology: ['pharmacology_topics', 'الفارماكولوجي للتمريض', 'Pharmacology for Nurses', 'علم الأدوية للممرضين: طرق الإعطاء، حساب الجرعات، المضادات الحيوية، أدوية الضغط والقلب ومدرات البول.'],
+  terminology: ['terminology_topics', 'المصطلحات الطبية', 'Medical Terminology', 'المصطلحات الطبية والاختصارات للتمريض بالعربي والإنجليزي، مع بطاقات مذاكرة.'],
+  'first-aid': ['first_aid_topics', 'الإسعافات الأولية', 'First Aid', 'الإسعافات الأولية: الإنعاش القلبي الرئوي، الاختناق، النزيف، الحروق، الكسور والصدمة.'],
+  'er-reception': ['er_reception_topics', 'الاستقبال والطوارئ', 'Emergency Department Nursing', 'تمريض الاستقبال والطوارئ: الفرز، الجروح والخياطة، المحاليل، الطوارئ الباطنة والجراحية.'],
+  pediatrics: ['pediatric_topics', 'تمريض الأطفال', 'Pediatric Nursing', 'تمريض الأطفال: النمو والتطور، العلامات الحيوية حسب السن، أمراض القلب والجهاز الهضمي، جرعات الأطفال.'],
+  anatomy: ['anatomy_topics', 'التشريح للتمريض', 'Anatomy for Nurses', 'التشريح ووظائف الأعضاء للممرضين برسومات توضيحية: القلب، الرئة، الكلى، الجهاز العصبي ومواضع الحقن.'],
+  fundamentals: ['fundamentals_topics', 'أساسيات التمريض', 'Fundamentals of Nursing', 'أساسيات التمريض: العملية التمريضية، العلامات الحيوية، الحقن والكانيولا، مكافحة العدوى ومهارات التمريض.'],
+  'operating-room': ['operating_room_topics', 'تمريض العمليات', 'Operating Room Nursing', 'تمريض غرفة العمليات: التعقيم، الأدوات والإبر، أوضاع المريض، التخدير وقائمة السلامة الجراحية.'],
+  obgyn: ['obgyn_topics', 'تمريض النساء والتوليد', 'Obstetric & Gynecologic Nursing', 'تمريض النساء والتوليد: متابعة الحمل، مراحل الولادة، مراقبة نبض الجنين، النزيف ورعاية ما بعد الولادة.'],
+};
+// Pages without their own data lookup: title + description + a short intro for crawlers.
+const STATIC_PAGES = {
+  '/shift': ['وضع الشيفت — أدوات الممرض السريعة', 'أدوات سريعة للشيفت تعمل بدون إنترنت: الأدوية، توافق المحاليل، الأدوية عالية الخطورة، الأدوية المتشابهة وحاسبات الجرعات.'],
+  '/cards': ['بطاقات مذاكرة التمريض', 'بطاقات مذاكرة بالتكرار المتباعد: المصطلحات الطبية والاختصارات والأدوية والأسماء المتشابهة.'],
+  '/tests/licensure': ['امتحانات التمريض — ترخيص وسفر', 'بنك أسئلة وامتحانات للتمريض: امتحانات الترخيص والسفر (البرومترك، الهيئة السعودية، DHA، MOH) مع محاكي امتحان.'],
+  '/travel-questions': ['أسئلة امتحانات السفر للتمريض', 'أسئلة امتحانات سفر التمريض للخليج: البرومترك والهيئة السعودية وDHA وMOH مع الإجابات.'],
+  '/interview-questions': ['أسئلة مقابلات التمريض', 'أسئلة مقابلات العمل للممرضين وإجاباتها النموذجية بالعربي والإنجليزي.'],
+  '/tools': ['حاسبات وأدوات التمريض', 'حاسبات التمريض: الجرعات، معدل التنقيط، مؤشر كتلة الجسم، السوائل وأدوات سريرية أخرى.'],
+  '/drugs': ['دليل الأدوية للتمريض', 'دليل أدوية للممرضين: الجرعات، دواعي الاستعمال، الأعراض الجانبية، الاعتبارات التمريضية، التداخلات والأدوية عالية الخطورة.'],
+  '/drugs/high-alert-ref': ['الأدوية عالية الخطورة', 'قائمة الأدوية عالية الخطورة (High Alert Medications) واستراتيجيات السلامة للتمريض.'],
+  '/drugs/lasa': ['الأدوية المتشابهة في الاسم والشكل (LASA)', 'أدوية متشابهة في الاسم أو الشكل وكيف يتجنب الممرض الخطأ في إعطائها.'],
+  '/drugs/iv-compatibility': ['توافق المحاليل والأدوية الوريدية', 'جدول توافق الأدوية الوريدية مع المحاليل لتمريض العناية والطوارئ.'],
+  '/drugs/er-medications': ['أدوية الطوارئ', 'أدوية الاستقبال والطوارئ: الجرعات وطريقة الإعطاء والتمريض.'],
+  '/drugs/icu-medications': ['أدوية العناية المركزة', 'أدوية العناية المركزة والمحاليل المستمرة: الجرعات والتخفيف والمراقبة.'],
+  '/drugs/peds-medications': ['أدوية الأطفال وجرعاتها', 'جرعات أدوية الأطفال بالوزن وملاحظات التمريض.'],
+  '/drugs/pregnancy-lactation': ['الأدوية أثناء الحمل والرضاعة', 'سلامة الأدوية أثناء الحمل والرضاعة للتمريض.'],
+  '/drugs/prescriptions': ['روشتات شائعة حسب الحالة', 'نماذج روشتات شائعة للحالات اليومية في الاستقبال والعيادات.'],
+  '/ecg': ['تعلم رسم القلب ECG', 'مكتبة رسم القلب للممرضين: قراءة الـ ECG واضطرابات النظم خطوة بخطوة.'],
+};
+const textBlock = (t) => String(t ?? '').split(/\n+/).map((l) => l.trim()).filter(Boolean).map((l) => `<p>${esc(l.replace(/\*\*/g, ''))}</p>`).join('');
+const parseSections = (v) => { try { return Array.isArray(v) ? v : JSON.parse(v || '[]'); } catch { return []; } };
+
 // -> { title, description, body, type } or null (let the SPA render as usual)
 async function pageFor(path, env, request) {
   const p = path.replace(/\/+$/, '') || '/';
@@ -155,6 +193,37 @@ async function pageFor(path, env, request) {
       body: `<article><h1>${esc(d.name)}</h1>${d.generic_name ? `<p>${esc(d.generic_name)}${d.drug_class ? ' — ' + esc(d.drug_class) : ''}</p>` : ''}${row('الجرعة', d.dose)}${row('دواعي الاستعمال', d.indications)}${row('الأعراض الجانبية', d.side_effects)}${row('الاعتبارات التمريضية', d.nursing_considerations)}${row('موانع الاستعمال', d.contraindications)}${row('التخزين', d.storage)}</article>`,
       type: 'Article',
     };
+  }
+  if ((m = /^\/([a-z-]+)$/.exec(p)) && DEPTS[m[1]]) {
+    const [table, ar, en, desc] = DEPTS[m[1]];
+    const rows = await sb(env, table, 'select=id,title_ar,title_en,summary_ar&order=order_num.asc');
+    if (!rows) return null;
+    return {
+      title: `${ar} (${en}) — شرح مبسّط للممرضين | ${SITE_NAME}`,
+      description: desc,
+      body: `<h1>${esc(ar)} — ${esc(en)}</h1><p>${esc(desc)}</p>${list(rows.map((r) => [`/${m[1]}/${r.id}`, r.title_ar + (r.title_en ? ` (${r.title_en})` : ''), r.summary_ar || '']))}`,
+      type: 'CollectionPage',
+    };
+  }
+  if ((m = /^\/([a-z-]+)\/([^/]+)$/.exec(p)) && DEPTS[m[1]]) {
+    const id = dec(m[2]);
+    if (!SAFE_ID.test(id)) return null;
+    const [table, ar, en] = DEPTS[m[1]];
+    const r = (await sb(env, table, `select=id,title_ar,title_en,summary_ar,summary_en,sections&id=eq.${encodeURIComponent(id)}&limit=1`))?.[0];
+    if (!r) return null;
+    const secs = parseSections(r.sections);
+    const body = `<article><h1>${esc(r.title_ar)}</h1>${r.title_en ? `<p lang="en">${esc(r.title_en)}</p>` : ''}<p>${esc(r.summary_ar || '')}</p>` +
+      secs.map((x) => `<section>${x.heading_ar ? `<h2>${esc(x.heading_ar)}</h2>` : ''}${textBlock(x.body_ar)}</section>`).join('') +
+      `<p><a href="/${m[1]}">${esc(ar)}</a></p></article>`;
+    return {
+      title: `${r.title_ar}${r.title_en ? ` (${r.title_en})` : ''} | ${ar} | ${SITE_NAME}`,
+      description: clip(strip(r.summary_ar || '') || strip(secs[0]?.body_ar || ''), 300),
+      body, type: 'MedicalWebPage',
+    };
+  }
+  if (STATIC_PAGES[p]) {
+    const [t, d] = STATIC_PAGES[p];
+    return { title: `${t} | ${SITE_NAME}`, description: d, body: `<h1>${esc(t)}</h1><p>${esc(d)}</p>${list(HOME_LINKS)}`, type: 'WebPage' };
   }
   return null;
 }
@@ -322,15 +391,20 @@ export async function onRequest({ request, env, next }) {
     const accept = request.headers.get('accept') || '';
     if (request.method !== 'GET' || (!accept.includes('text/html') && !accept.includes('*/*'))) return next();
     if (!BOT_RE.test(request.headers.get('user-agent') || '')) return next();
+    // Crawlers fetch the same pages again and again: keep the rendered page at the edge for 6 h (no D1 read on a hit).
+    const ck = new Request(`https://seo.internal${url.pathname}`);
+    try { const hit = await caches.default.match(ck); if (hit) return new Response(hit.body, hit); } catch { /* no cache */ }
     const page = await pageFor(url.pathname, env, request);
     if (!page) return next();
     const res = await env.ASSETS.fetch(new URL('/', request.url));
     if (!res.ok) return next();
     const html = await res.text();
-    return new Response(inject(html, page, url), {
+    const out = new Response(inject(html, page, url), {
       status: 200,
       headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'public, max-age=300', 'x-seo-injected': '1' },
     });
+    try { await caches.default.put(ck, new Response(out.clone().body, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'public, max-age=21600', 'x-seo-injected': '1' } })); } catch { /* best effort */ }
+    return out;
   } catch {
     return next();
   }

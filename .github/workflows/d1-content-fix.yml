@@ -23,7 +23,7 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       FIX: cloudflare/content-fixes/${{ inputs.file }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Validate file
         run: |
           case "${{ inputs.file }}" in *[!A-Za-z0-9._-]*|*..*) echo "bad file name"; exit 1;; esac
@@ -37,7 +37,7 @@ jobs:
           bad=0
           while IFS= read -r q; do
             [ -z "$q" ] && continue
-            line=$(npx --yes wrangler@3 d1 execute nursehub --remote --json --command "$q" 2>/dev/null </dev/null \
+            line=$(npx --yes wrangler@4 d1 execute nursehub --remote --json --command "$q" 2>/dev/null </dev/null \
               | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const r=JSON.parse(s)[0].results[0]||{};console.log(`old_left=${r.old_left??0} new_present=${r.new_present??0}  ${r.fix??""}`)})')
             echo "$line"
             case "$line" in old_left=0\ new_present=1*) ;; *) bad=1;; esac
@@ -48,7 +48,7 @@ jobs:
         run: bash check.sh
       - name: Apply
         if: inputs.mode == 'apply'
-        run: npx --yes wrangler@3 d1 execute nursehub --remote --file=update.sql
+        run: npx --yes wrangler@4 d1 execute nursehub --remote --file=update.sql
       - name: After (expect old_left = 0, new_present = 1)
         if: inputs.mode == 'apply'
         run: bash check.sh strict

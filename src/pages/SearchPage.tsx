@@ -7,6 +7,7 @@ import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
 import { logSearch } from "../lib/analytics";
 import { useExtraSearchIndex } from "../lib/searchIndex";
+import { searchArticleText } from "../lib/dataApi";
 
 type Tab = "all" | "content" | "drugs";
 
@@ -23,6 +24,17 @@ export default function SearchPage() {
 
   useSEO({ title: q ? `${t("search.pageTitleResults")} ${q}` : t("search.title"), description: t("search.seoDesc") });
 
+  // Visitors' articles have no full text in memory: the text itself is searched on the server (one small query, debounced).
+  const [textHits, setTextHits] = useState<Set<string> | null>(null);
+  const needServerText = articles.some((a) => a.partial);
+  useEffect(() => {
+    setTextHits(null);
+    if (!needServerText || q.trim().length < 2) return;
+    let alive = true;
+    const tm = window.setTimeout(() => { searchArticleText(q).then((ids) => { if (alive) setTextHits(ids); }).catch(() => {}); }, 350);
+    return () => { alive = false; window.clearTimeout(tm); };
+  }, [q, needServerText]);
+
   const cats = Object.keys(CATEGORY_LABELS) as Category[];
   const lower = q.toLowerCase();
 
@@ -31,6 +43,7 @@ export default function SearchPage() {
   let articleResults = articles.filter((a) => a.status === "published");
   if (q) {
     articleResults = articleResults.filter((a) =>
+      (textHits?.has(a.id) ?? false) ||
       [a.title, a.titleEn, a.excerpt, a.excerptEn, a.content, a.contentEn, ...a.tags].filter(Boolean).join(" ").toLowerCase().includes(lower)
     );
   }

@@ -131,6 +131,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // either way so no non-admin session lingers.
     if (!error) await supabase.auth.signOut().catch(() => {});
 
+    const serverWait = /Too many attempts\. Try again in (\d+) minute/.exec(error?.message || "");
+    if (serverWait) return { ok: false, error: `تم تجاوز عدد المحاولات. حاول بعد ${serverWait[1]} دقيقة.` };
     const count = att.count + 1;
     const locked = count >= MAX_ATTEMPTS;
     writeAttempts({ count: locked ? 0 : count, until: locked ? Date.now() + LOCK_MS : 0 });

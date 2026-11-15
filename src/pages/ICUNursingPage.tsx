@@ -9,6 +9,7 @@ import { fetchIcuTopics, fetchIcuTopic, type IcuTopic } from "../lib/icuTopicsAp
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import EditableImage from "../components/EditableImage";
 import { sectionArtFor } from "../lib/sectionArt";
+import LoadError, { LOAD_FAILED } from "../components/LoadError";
 
 const ICU_ART = sectionArtFor("icu");
 
@@ -29,7 +30,7 @@ export function ICUNursingHome() {
   const [selected, setSelected] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    cachedQuery("topics_v1_icu_routed", TTL.topics, () => fetchIcuTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_icu_routed", TTL.topics, () => fetchIcuTopics({ withRouted: true })).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   const toggleSelected = (id: string) => {
@@ -119,6 +120,8 @@ export function ICUNursingHome() {
 
       {topics === null ? (
         <div className="py-16 text-center text-slate-500 dark:text-slate-400">{t("common.loading")}</div>
+      ) : topics === LOAD_FAILED ? (
+        <LoadError />
       ) : list.length === 0 ? (
         <div className={`${card} py-16 text-center text-slate-500 dark:text-slate-400`}>
           <div className="text-4xl">🚧</div>
@@ -322,7 +325,7 @@ export function ICUPrintAllPage() {
   useSEO({ title: `${t("nav.icuNursing")} | ${isEn ? "Print All" : "طباعة الكل"} | NurseHub Egypt` });
 
   useEffect(() => {
-    cachedQuery("topics_v1_icu", TTL.topics, () => fetchIcuTopics()).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_icu", TTL.topics, () => fetchIcuTopics()).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   const buyPrintAll = () => {

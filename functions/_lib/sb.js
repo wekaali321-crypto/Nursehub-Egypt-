@@ -74,6 +74,8 @@ Object.assign(POLICY, {
   site_visits: { read: 'admin', write: 'none', insert: 'public' },
   subscribers: { read: 'admin', write: 'admin', insert: 'public' },
 });
+// [max per window, window s, lock s] for tables visitors may insert into (tracking tables have their own guard)
+const PUBLIC_INSERT_LIMIT = { comments: [11, 3600, 3600], orders: [11, 3600, 3600], subscribers: [6, 3600, 3600], push_subscriptions: [11, 3600, 3600] };
 /** true when every anonymous GET of this table is public data (safe to cache at the edge) */
 export const isPublicTable = (t) => POLICY[t]?.read === 'public';
 const EMAIL_RE = /^[A-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?(?:\.[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?)+$/i;
@@ -309,6 +311,13 @@ export async function handleRest(request, env, path, forceAdmin = false) {
       if (!admin && TRACK_TABLES.has(table) && (await skipTracking(env, request, table, rows))) return new Response(null, { status: 201, headers: CORS });
       const allowed = admin || (pol.insert === 'public' && rows.every((r) => publicInsertOk(table, r))) || (pol.write === 'own' && who.uid && rows.every((r) => r.user_id === who.uid));
       if (!allowed) return perr(who.uid || pol.insert ? 403 : 401, '42501', `new row violates row-level security policy for table "${table}"`);
+      // Visitor-writable tables (comments, orders, newsletter, push): per-IP cap so nobody can flood D1 writes or the inbox.
+      if (!admin && PUBLIC_INSERT_LIMIT[table]) {
+        const { lockedFor, count, ipOf } = await import('./ratelimit.js');
+        const k = `pi:${table}:${ipOf(request)}`, [max, win, lock] = PUBLIC_INSERT_LIMIT[table];
+        const w = (await lockedFor(k)) || (await count(k, max, win, lock));
+        if (w) return respond({ code: 'PGRST429', message: `Too many attempts. Try again in ${Math.ceil(w / 60)} minute(s).`, details: null, hint: null }, 429, { 'retry-after': String(w) });
+      }
       if (wantRep && !admin && pol.read !== 'public' && !(pol.write === 'own')) return perr(403, '42501', 'permission denied (cannot return inserted rows)');
       const upsert = prefer.some((p) => p.startsWith('resolution=merge-duplicates') || p.startsWith('resolution=ignore-duplicates'));
       const ignore = prefer.includes('resolution=ignore-duplicates');
@@ -371,6 +380,12 @@ export async function handleRest(request, env, path, forceAdmin = false) {
 
 // ---------------------------------------------------------------- RPC
 async function handleRpc(request, env, name, who) {
+  if (name === 'admin_set_user_password') {
+    if (!(await isAdmin(env, who))) return perr(403, 'P0001', 'not allowed');
+    const body = await request.json().catch(() => ({}));
+    const { adminSetPassword } = await import('./sbauth.js');
+    return respond(await adminSetPassword(env, body.email));
+  }
   if (name === 'admin_site_stats') {
     if (!(await isAdmin(env, who))) return perr(403, 'P0001', 'not allowed');
     return respond(await adminSiteStats(env));

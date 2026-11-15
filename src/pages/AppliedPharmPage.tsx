@@ -7,6 +7,7 @@ import { fetchAppliedPharmItems, type AppliedPharmItem } from "../lib/appliedPha
 import { useStore } from "../lib/store";
 import { useI18n, bilingual } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import LoadError from "../components/LoadError";
 
 const LABELS = {
   drugsCrumb: { ar: "الأدوية", en: "Drugs" },
@@ -19,10 +20,10 @@ const LABELS = {
   adBank: { ar: "إعلان بنك الصيدلية التعليمي", en: "Applied pharmacy bank ad" },
   loading: { ar: "جارٍ التحميل...", en: "Loading..." },
   topicsHeading: { ar: "📚 ملخصات حسب الموضوع", en: "📚 Summaries by Topic" },
-  noTopics: { ar: "لسه معملتش رفع محتوى — قريبًا.", en: "No content uploaded yet - coming soon." },
+  noTopics: { ar: "المحتوى ده بيتجهز وهيتضاف قريب.", en: "This content is being prepared." },
   open: { ar: "افتح ←", en: "Open ←" },
   plansHeading: { ar: "🩺 خطط علاجية كاملة", en: "🩺 Complete Treatment Plans" },
-  noPlans: { ar: "لسه معملتش رفع خطط علاجية — قريبًا.", en: "No treatment plans uploaded yet - coming soon." },
+  noPlans: { ar: "الخطط العلاجية بتتجهز وهتتضاف قريب.", en: "Treatment plans are being prepared." },
   showPlan: { ar: "عرض الخطة ←", en: "View plan ←" },
   backToDrugs: { ar: "← العودة لدليل الأدوية", en: "← Back to the drugs guide" },
   itemCount: { ar: "عنصر", en: "items" },
@@ -79,6 +80,7 @@ export function AppliedPharmHome() {
   const { lang } = useI18n();
   const [items, setItems] = useState<AppliedPharmItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [failed, setFailed] = useState(false);
 
   useSEO({
     title: `بنك الصيدلية التعليمي | ${settings.siteName}`,
@@ -87,7 +89,7 @@ export function AppliedPharmHome() {
   });
 
   useEffect(() => {
-    fetchAppliedPharmItems().then(setItems).finally(() => setLoading(false));
+    fetchAppliedPharmItems().then(setItems).catch(() => setFailed(true)).finally(() => setLoading(false));
   }, []);
 
   const part1Topics = useMemo(() => {
@@ -126,7 +128,8 @@ export function AppliedPharmHome() {
 
       {loading && <div className="py-10 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>}
 
-      {!loading && (
+      {!loading && failed && <LoadError />}
+      {!loading && !failed && (
         <>
           <h2 className="mb-3 text-lg font-black text-slate-800 dark:text-white">{LABELS.topicsHeading[lang]}</h2>
           {part1Topics.length === 0 && (
@@ -189,6 +192,7 @@ export function AppliedPharmTopicPage() {
   const decodedTopic = decodeURIComponent(topic || "");
   const [items, setItems] = useState<AppliedPharmItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [failed, setFailed] = useState(false);
   const [q, setQ] = useState("");
 
   useSEO({
@@ -198,7 +202,7 @@ export function AppliedPharmTopicPage() {
   });
 
   useEffect(() => {
-    fetchAppliedPharmItems(1).then(setItems).finally(() => setLoading(false));
+    fetchAppliedPharmItems(1).then(setItems).catch(() => setFailed(true)).finally(() => setLoading(false));
   }, []);
 
   const topicItems = useMemo(
@@ -245,7 +249,8 @@ export function AppliedPharmTopicPage() {
         {topicItems.map((item) => (
           <ItemCard key={item.id} item={item} lang={lang} />
         ))}
-        {!loading && topicItems.length === 0 && (
+        {!loading && failed && <LoadError />}
+        {!loading && !failed && topicItems.length === 0 && (
           <div className="rounded-2xl border border-dashed border-slate-300 py-10 text-center text-slate-500 dark:text-slate-400 dark:border-slate-700">
             {LABELS.noResults[lang]}
           </div>
@@ -266,9 +271,10 @@ export default function AppliedPharmPlanPage() {
   const { lang } = useI18n();
   const [items, setItems] = useState<AppliedPharmItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
-    fetchAppliedPharmItems(2).then(setItems).finally(() => setLoading(false));
+    fetchAppliedPharmItems(2).then(setItems).catch(() => setFailed(true)).finally(() => setLoading(false));
   }, []);
 
   const plan = useMemo(() => items.find((i) => i.id === id), [items, id]);
@@ -283,6 +289,7 @@ export default function AppliedPharmPlanPage() {
     return <div className="mx-auto max-w-3xl px-4 py-16 text-center text-slate-500 dark:text-slate-400">{LABELS.loading[lang]}</div>;
   }
 
+  if (failed) return <LoadError />;
   if (!plan) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-16 text-center">

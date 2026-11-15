@@ -30,6 +30,7 @@ import { wrapTables } from '../components/ArticleContent';
 import { sanitizeHtml } from '../utils/sanitizeHtml';
 import { useSEO } from '../lib/seo';
 import { useI18n } from '../lib/i18n';
+import LoadError, { LOAD_FAILED } from '../components/LoadError';
 
 const spec = (k: string) => SPECIALTIES[k] ?? SPECIALTIES.other;
 
@@ -185,7 +186,7 @@ export function CasesHome() {
       {cases === null ? (
         <Loading />
       ) : shown.length === 0 ? (
-        <div className="py-20 text-center text-slate-600 dark:text-slate-400">{total === 0 ? (ar ? 'الحالات قيد الإضافة… عُد قريبًا.' : 'Cases are being added… check back soon.') : ar ? 'لا توجد حالات مطابقة.' : 'No matching cases.'}</div>
+        cases === LOAD_FAILED ? <LoadError /> : <div className="py-20 text-center text-slate-600 dark:text-slate-400">{total === 0 ? (ar ? 'الحالات قيد الإضافة… عُد قريبًا.' : 'Cases are being added… check back soon.') : ar ? 'لا توجد حالات مطابقة.' : 'No matching cases.'}</div>
       ) : (
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((c) => {

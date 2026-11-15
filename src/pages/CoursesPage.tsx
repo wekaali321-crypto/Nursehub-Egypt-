@@ -31,6 +31,7 @@ import { sanitizeHtml } from '../utils/sanitizeHtml';
 import { useSEO } from '../lib/seo';
 import { useI18n } from '../lib/i18n';
 import EditableImage from "../components/EditableImage";
+import LoadError from "../components/LoadError";
 
 function LoadingBlock() {
   return (
@@ -91,7 +92,7 @@ export function CoursesHome() {
   }, []);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
 
   return (
     <div className="mx-auto max-w-5xl px-4 py-8" dir={ar ? 'rtl' : 'ltr'}>
@@ -186,7 +187,7 @@ export function CoursePage() {
   );
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
   if (!course) return <NotFoundBlock text={ar ? 'الكورس غير موجود' : 'Course not found'} to="/courses" label={ar ? 'الكورسات' : 'Courses'} />;
 
   const section = sectionOf(course);
@@ -286,7 +287,7 @@ export function ChapterPage() {
   }, [courseId, chapterId]);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
   if (!course || !chapter) {
     return <NotFoundBlock text={siteAr ? 'الفصل غير موجود' : 'Chapter not found'} to={`/courses/${courseId}`} label={siteAr ? 'الكورس' : 'Course'} />;
   }
@@ -427,7 +428,7 @@ export function CourseQuiz() {
   }, [courseId, chapterId]);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
   if (!course) return <NotFoundBlock text="الكورس غير موجود" to="/courses" label="الكورسات" />;
 
   return (

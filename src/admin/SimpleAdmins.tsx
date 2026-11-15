@@ -4,6 +4,7 @@ import type { Comment, Product, User } from "../lib/types";
 import { ROLE_LABELS, ROLE_COLORS, ROLE_PERMISSIONS, PERMISSION_LABELS, type Role, type Permission } from "../lib/roles";
 import { triggerPush } from "../lib/push";
 import MediaPicker from "./MediaPicker";
+import { supabase } from "../lib/supabase";
 import type { MediaItem } from "../lib/types";
 
 export function CommentsAdmin() {
@@ -244,6 +245,8 @@ export function UsersAdmin() {
         </div>
       </div>
 
+      <MemberPasswordReset />
+
       {/* Permissions matrix */}
       <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
         <h3 className="mb-3 font-bold dark:text-white">🔐 مصفوفة الصلاحيات</h3>
@@ -261,6 +264,45 @@ export function UsersAdmin() {
           </tbody>
         </table>
       </div>
+    </div>
+  );
+}
+
+/** Members forget passwords and the free plan sends no e-mail: the admin gives them a temporary password (server side, admin only). */
+function MemberPasswordReset() {
+  const [email, setEmail] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [out, setOut] = useState<{ ok: boolean; text: string; temp?: string } | null>(null);
+  const run = async () => {
+    if (!supabase || !email.trim()) return;
+    if (!confirm(`إعادة تعيين كلمة مرور ${email.trim()}؟ سيتم تسجيل خروجه من كل الأجهزة.`)) return;
+    setBusy(true); setOut(null);
+    const { data, error } = await supabase.rpc("admin_set_user_password", { email: email.trim() });
+    setBusy(false);
+    if (error) return setOut({ ok: false, text: "تعذّر التنفيذ، حاول مرة أخرى." });
+    const r = data as { ok: boolean; error?: string; temp_password?: string };
+    if (r.ok) return setOut({ ok: true, text: "تم. ابعت كلمة المرور المؤقتة للعضو، ويقدر يغيرها من حسابه.", temp: r.temp_password });
+    setOut({ ok: false, text: r.error === "not_found" ? "مفيش عضو مسجل بالبريد ده." : r.error === "staff_account" ? "ده حساب إدارة، ما ينفعش يتغير من هنا." : "تعذّر التنفيذ." });
+  };
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+      <h3 className="mb-1 font-bold dark:text-white">🔑 إعادة تعيين كلمة مرور عضو</h3>
+      <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">لما عضو ينسى كلمة المرور ويتواصل معاك: اكتب بريده، وابعتله كلمة المرور المؤقتة اللي هتظهر.</p>
+      <div className="flex flex-col gap-2 sm:flex-row">
+        <input type="email" dir="ltr" placeholder="member@email.com" value={email} onChange={(e) => setEmail(e.target.value)} className="flex-1 rounded-lg border border-slate-200 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800 dark:text-white" />
+        <button onClick={run} disabled={busy || !email.trim()} className="rounded-lg bg-[#127378] px-4 py-2 text-sm font-bold text-white disabled:opacity-60">{busy ? "جارٍ التنفيذ..." : "إنشاء كلمة مرور مؤقتة"}</button>
+      </div>
+      {out && (
+        <div className={`mt-3 rounded-lg p-3 text-sm ${out.ok ? "bg-emerald-50 text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-300"}`}>
+          {out.text}
+          {out.temp && (
+            <div className="mt-2 flex items-center gap-2">
+              <code dir="ltr" className="rounded bg-white px-2 py-1 font-mono text-base font-bold text-slate-900 dark:bg-slate-800 dark:text-white">{out.temp}</code>
+              <button onClick={() => navigator.clipboard?.writeText(out.temp!)} className="rounded bg-white px-2 py-1 text-xs font-bold text-slate-700 dark:bg-slate-800 dark:text-slate-200">نسخ</button>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

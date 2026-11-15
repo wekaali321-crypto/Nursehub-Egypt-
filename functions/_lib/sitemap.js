@@ -10,7 +10,7 @@ const STATIC = [
 
 // Educational hub pages that exist as routes (src/App.tsx) and have real content
 const HUBS = [
-  ['/ecg', 0.7], ['/interview-questions', 0.6], ['/tests/licensure', 0.6],
+  ['/ecg', 0.7], ['/interview-questions', 0.6], ['/tests/licensure', 0.6], ['/shift', 0.7], ['/cards', 0.6],
   ['/drugs/antidotes', 0.7], ['/drugs/classifications', 0.7], ['/drugs/suffixes', 0.6], ['/drugs/interactions', 0.6],
   ['/drugs/cardiac', 0.6], ['/drugs/er-medications', 0.7], ['/drugs/icu-medications', 0.7], ['/drugs/otc-guide', 0.7],
   ['/drugs/applied-pharm', 0.7], ['/drugs/safety-center', 0.6], ['/drugs/iv-compatibility', 0.6], ['/drugs/lasa', 0.6],
