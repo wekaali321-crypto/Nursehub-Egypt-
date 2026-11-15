@@ -25,6 +25,7 @@ import ShareBar from "../components/ShareBar";
 import { startArticleView, endArticleView, trackScrollDepth, tickActiveReadingTime, logArticleEvent } from "../lib/analytics";
 import "./ArticlePage.css";
 import ContentQuality from "../components/ContentQuality";
+import ArticleReferences from "../components/ArticleReferences";
 
 function buildToc(html: string): TocItem[] {
   const matches = [...html.matchAll(/<h([2-6])[^>]*>(.*?)<\/h[2-6]>/g)];
@@ -528,6 +529,7 @@ export default function ArticlePage() {
             </Link>
           </div>
 
+          <ArticleReferences slug={article.slug} />
           {!article.partial && <div className="mt-8"><RelatedDrugs text={`${article.title} ${article.content}`} /></div>}
 
           <MedicalDisclaimer lang={docLang} className="mt-6" />
