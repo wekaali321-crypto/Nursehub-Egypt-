@@ -203,6 +203,7 @@ function DrugsTab({ drugs, ar, tx }: { drugs: LiteDrug[] | null; ar: boolean; tx
                   {dose && <Field title={tx(L.dose)} tone="teal" body={dose} />}
                   {contra && <Field title={tx(L.contra)} tone="amber" body={contra} />}
                   {nurse && <Field title={tx(L.nursing)} tone="slate" body={nurse} />}
+                  {d.h && <p className="rounded-xl bg-red-50 p-2 text-xs font-bold text-red-800 dark:bg-red-500/10 dark:text-red-200">{ar ? "تحقق مستقل مزدوج مع ممرض تاني قبل التحضير والإعطاء." : "Independent double check with a second nurse before preparing and giving."}</p>}
                   <div className="flex flex-wrap gap-2">
                     <Link to={`/drug/${d.s}`} className="inline-flex min-h-11 items-center rounded-full bg-[#168C91] px-5 text-sm font-black text-white hover:bg-[#127378]">{tx(L.full)}</Link>
                     {d.h && <Link to="/drugs/high-alert-ref" className="inline-flex min-h-11 items-center rounded-full border border-red-300 px-5 text-sm font-black text-red-700 hover:bg-red-50 dark:border-red-800 dark:text-red-300 dark:hover:bg-red-500/10">{ar ? "إرشادات السلامة" : "Safety guidance"}</Link>}

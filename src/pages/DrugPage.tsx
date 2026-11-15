@@ -13,6 +13,7 @@ import DrugCard from "../components/drugs/DrugCard";
 import DrugGallery from "../components/DrugGallery";
 import MedicalDisclaimer from "../components/MedicalDisclaimer";
 import ContentQuality from "../components/ContentQuality";
+import HighAlertBox from "../components/HighAlertBox";
 
 const BLOCK_LABELS = {
   dose: { ar: "الجرعة", en: "Dosage" },
@@ -26,7 +27,7 @@ const BLOCK_LABELS = {
 
 export default function DrugPage() {
   const { slug } = useParams();
-  const { drugs, drugInteractions } = useStore();
+  const { drugs, drugInteractions, drugAntidotes } = useStore();
   const { lang, t } = useI18n();
   const navigate = useNavigate();
   const location = useLocation();
@@ -160,6 +161,8 @@ export default function DrugPage() {
             <div className="print:hidden"><SafetyLinksBox table="drugs" id={drug.id} /></div>
 
             <DrugGallery slug={drug.slug} name={drug.name} defaultUrl={drug.showImage ? drug.imageUrl || null : null} />
+
+            {showHighAlert && <HighAlertBox names={[drug.name, drug.nameEn ?? "", drug.genericName, drug.genericNameEn ?? ""]} antidotes={drugAntidotes} />}
 
             {hasWarnings && (
               <DrugSection id="warnings" icon="⚠️" title={t("drug.highAlertWarningsHeading")} tone="danger">

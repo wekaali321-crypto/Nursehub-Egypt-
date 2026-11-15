@@ -31,6 +31,7 @@ import { sanitizeHtml } from '../utils/sanitizeHtml';
 import { useSEO } from '../lib/seo';
 import { useI18n } from '../lib/i18n';
 import LoadError, { LOAD_FAILED } from '../components/LoadError';
+import RelatedDrugs from '../components/RelatedDrugs';
 
 const spec = (k: string) => SPECIALTIES[k] ?? SPECIALTIES.other;
 
@@ -449,6 +450,11 @@ export function CasePage() {
               </div>
             )}
             <KeyPoints items={pickList(c.keyPoints, ar)} ar={ar} />
+            {/* from the case to study: drugs named in it (static names index) + flashcards — no database read */}
+            <div className="mt-6"><RelatedDrugs text={[c.title?.en, c.diagnosis?.en, c.answer?.en, c.title?.ar, c.diagnosis?.ar, c.answer?.ar].filter(Boolean).join(' ')} /></div>
+            <Link to="/cards" className="mt-3 flex items-center justify-between rounded-2xl border border-nh-line bg-white px-4 py-3 text-sm font-bold text-nh-navy hover:border-nh-teal dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
+              {ar ? '🧠 ثبّت اللي اتعلمته: راجع بطاقات المصطلحات والأدوية' : '🧠 Lock it in: review the terminology and drug flashcards'}<span aria-hidden="true">{ar ? '←' : '→'}</span>
+            </Link>
             {c.refs && c.refs.length > 0 && (
               <details className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm dark:border-slate-700 dark:bg-slate-800/50">
                 <summary className="cursor-pointer font-black text-slate-700 dark:text-slate-200">📚 {ar ? 'المراجع التي رُوجع عليها المحتوى' : 'References used to verify the content'}</summary>
