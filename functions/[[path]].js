@@ -398,7 +398,9 @@ export async function onRequest({ request, env, next }) {
     if (request.method !== 'GET' || (!accept.includes('text/html') && !accept.includes('*/*'))) return next();
     if (!BOT_RE.test(request.headers.get('user-agent') || '')) return next();
     // Crawlers fetch the same pages again and again: keep the rendered page at the edge for 6 h (no D1 read on a hit).
-    const ck = new Request(`${url.origin}/__seo${url.pathname}`); // same-zone key: the Cache API ignores foreign hosts
+    // per deployment: the cached page embeds this deployment's index.html (asset file names), so a new deploy never serves
+    // crawlers an old copy pointing at JS files that no longer exist
+    const ck = new Request(`${url.origin}/__seo/${encodeURIComponent(env.CF_PAGES_COMMIT_SHA || 'dev')}${url.pathname}`);
     try { const hit = await caches.default.match(ck); if (hit) return new Response(hit.body, hit); } catch { /* no cache */ }
     const page = await pageFor(url.pathname, env, request);
     if (!page) return next();

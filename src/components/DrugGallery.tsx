@@ -52,7 +52,7 @@ export default function DrugGallery({ slug, name, defaultUrl }: { slug: string; 
                   {meta.caption && <div className="font-semibold text-slate-800 dark:text-slate-200">{meta.caption}</div>}
                   {meta.verified && <div className="inline-flex items-center gap-1 font-bold text-nh-success"><ShieldCheck size={14} aria-hidden="true" />{ar ? "تمت مراجعة الاسم والتركيز والشكل الدوائي" : "Name, strength and dosage form checked"}</div>}
                   {meta.source && (
-                    <div>{ar ? "المصدر: " : "Source: "}{meta.sourceUrl ? <a href={meta.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="underline">{meta.source}</a> : meta.source}</div>
+                    <div>{ar ? "المصدر: " : "Source: "}{meta.sourceUrl && /^https:\/\//i.test(meta.sourceUrl) ? <a href={meta.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="underline">{meta.source}</a> : meta.source}</div>
                   )}
                 </figcaption>
               )}
