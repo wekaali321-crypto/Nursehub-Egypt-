@@ -1,0 +1,41 @@
+name: D1 content fix
+# Manual only. Runs one reviewed file from cloudflare/content-fixes/ on the production D1 database.
+# The file only REPLACEs exact old sentences (safe to re-run). "check-only" shows what would change without writing.
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: SQL file in cloudflare/content-fixes/
+        required: true
+        default: 2026-11-15-ecg-neonatal-cpr.sql
+      mode:
+        description: check-only (read) or apply (write)
+        required: true
+        default: check-only
+        type: choice
+        options: [check-only, apply]
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      FIX: cloudflare/content-fixes/${{ inputs.file }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate file
+        run: |
+          case "${{ inputs.file }}" in *[!A-Za-z0-9._-]*|*..*) echo "bad file name"; exit 1;; esac
+          test -f "$FIX"
+          awk '/^-- check/{exit} {print}' "$FIX" > update.sql
+          awk 'f{print} /^-- check/{f=1}' "$FIX" > check.sql
+          if grep -viE '^(--|UPDATE "[a-z_]+" SET "sections" = REPLACE\(|$)' update.sql; then echo "only REPLACE updates are allowed"; exit 1; fi
+      - name: Before (old_left = 1 means the wrong sentence is still there)
+        run: npx --yes wrangler@3 d1 execute nursehub --remote --file=check.sql
+      - name: Apply
+        if: inputs.mode == 'apply'
+        run: npx --yes wrangler@3 d1 execute nursehub --remote --file=update.sql
+      - name: After (expect old_left = 0, new_present = 1)
+        if: inputs.mode == 'apply'
+        run: npx --yes wrangler@3 d1 execute nursehub --remote --file=check.sql

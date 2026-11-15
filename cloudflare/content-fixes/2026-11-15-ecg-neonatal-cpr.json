@@ -1,0 +1,13 @@
+{
+  "note": "Medical text corrections. ECG: V3 sits midway between V2 and V4; aVF is the LEFT leg, the RIGHT leg is the ground; leads II/III use the left leg. Neonatal CPR: 3:1 compression-to-breath ratio (about 90 compressions + 30 breaths per minute), compressions when HR stays < 60/min after 30 s of effective ventilation.",
+  "fixes": [
+    { "table": "icu_topics", "id": "icu-nursing-procedures", "from": "V3 between V1 and V2", "to": "V3 midway between V2 and V4" },
+    { "table": "icu_topics", "id": "icu-nursing-procedures", "from": "aVF (right leg), and Lead I (right arm with left arm), Lead II (right arm with leg), Lead III (left arm with leg) — the left leg electrode is a ground connection only", "to": "aVF (left leg), and Lead I (right arm with left arm), Lead II (right arm with left leg), Lead III (left arm with left leg) — the right leg electrode is a ground (neutral) connection only" },
+    { "table": "icu_topics", "id": "icu-nursing-procedures", "from": "V3 بين V1 وV2", "to": "V3 في المنتصف بين V2 وV4" },
+    { "table": "icu_topics", "id": "icu-nursing-procedures", "from": "aVF (الرجل اليمنى)، وLead I (اليد اليمنى مع اليسرى)، Lead II (اليد اليمنى مع الرجل)، Lead III (اليد اليسرى مع الرجل) — أما القطب عند الرجل اليسرى فهو توصيل أرضي", "to": "aVF (الرجل اليسرى)، وLead I (اليد اليمنى مع اليسرى)، Lead II (اليد اليمنى مع الرجل اليسرى)، Lead III (اليد اليسرى مع الرجل اليسرى) — أما القطب عند الرجل اليمنى فهو توصيل أرضي" },
+    { "table": "nicu_topics", "id": "neonatal-cpr", "from": "If heart rate keeps decreasing (↓↓) despite good ventilation", "to": "If heart rate stays below 60/min despite 30 seconds of good ventilation" },
+    { "table": "nicu_topics", "id": "neonatal-cpr", "from": "at a ratio of 3:2 or 4:1, per protocol.", "to": "at a ratio of 3 compressions to 1 breath (3:1) — about 90 compressions and 30 breaths per minute." },
+    { "table": "nicu_topics", "id": "neonatal-cpr", "from": "إذا استمر معدل ضربات القلب في الانخفاض (↓↓) رغم التهوية الجيدة", "to": "إذا ظل معدل ضربات القلب أقل من 60/دقيقة رغم 30 ثانية من التهوية الجيدة" },
+    { "table": "nicu_topics", "id": "neonatal-cpr", "from": "بمعدل نسبة 3 ضغطات إلى نفَس واحد (3:2) أو (4:1) حسب البروتوكول.", "to": "بنسبة 3 ضغطات إلى نفَس واحد (3:1) — حوالي 90 ضغطة و30 نفَسًا في الدقيقة." }
+  ]
+}
