@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { BookOpen, ClipboardCheck, History, Layers, Target } from "lucide-react";
 import { useI18n } from "../lib/i18n";
 import { srsSummary } from "../lib/srs";
-import { loadHistory, statsByBank } from "../lib/examHistory";
+import { loadHistory, statsByBank, weakTopics } from "../lib/examHistory";
+import { TOPIC_INFO, type TopicCode } from "../lib/examTopics";
 import { loadVisits } from "../lib/recentVisits";
 import { cardClass, ButtonLink, SectionHeader } from "./ui";
 
@@ -19,10 +20,12 @@ export default function LearningOverview() {
   const attempts = useMemo(() => loadHistory().slice(0, 5), []);
   const visits = useMemo(loadVisits, []);
   const weak = banks.filter((b) => b.avg < 60).slice(0, 3);
+  const weakT = useMemo(() => weakTopics().filter((x) => x.pct < 60).slice(0, 3), []);
   const dateFmt = (t: number) => new Date(t).toLocaleDateString(ar ? "ar-EG" : "en-GB", { day: "numeric", month: "short" });
 
   const next: { to: string; text: string }[] = [];
   if (cards.due > 0) next.push({ to: "/cards", text: ar ? `راجع ${cards.due} بطاقة مستحقة النهارده` : `Review ${cards.due} due flashcards today` });
+  for (const w of weakT) { const i = TOPIC_INFO[w.topic as TopicCode]; if (i?.to) next.push({ to: i.to, text: ar ? `ذاكر «${i.ar}» (صح ${w.pct}% في امتحاناتك)` : `Study “${i.en}” (${w.pct}% correct in your exams)` }); }
   for (const w of weak) next.push({ to: w.path, text: ar ? `تدرّب تاني على «${w.title}» (متوسطك ${w.avg}%)` : `Practise “${w.title}” again (average ${w.avg}%)` });
   if (visits[0]) next.push({ to: visits[0].path, text: ar ? `كمّل: ${visits[0].title}` : `Continue: ${visits[0].title}` });
   if (next.length === 0) next.push({ to: "/cards", text: ar ? "ابدأ أول جلسة بطاقات مذاكرة" : "Start your first flashcard session" }, { to: "/tests/licensure", text: ar ? "جرّب محاكي الامتحان" : "Try the exam simulator" });
@@ -59,6 +62,7 @@ export default function LearningOverview() {
               ))}
             </ul>
           )}
+          {weakT.length > 0 && <p className="mt-3 text-xs font-bold text-nh-danger">{ar ? "أضعف المواضيع: " : "Weakest topics: "}{weakT.map((w) => `${ar ? TOPIC_INFO[w.topic as TopicCode]?.ar : TOPIC_INFO[w.topic as TopicCode]?.en} ${w.pct}%`).join("، ")}</p>}
           {weak.length > 0 && <p className="mt-3 text-xs font-bold text-nh-danger">{ar ? "محتاج تركيز: " : "Needs focus: "}{weak.map((w) => w.title).join("، ")}</p>}
         </div>
 

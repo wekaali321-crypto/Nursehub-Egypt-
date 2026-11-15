@@ -2,7 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight, CircleCheck, CircleX, Clock, Flag, Languages, ListChecks, RotateCcw, Timer, TrendingDown, Trophy } from "lucide-react";
 import type { RunnerQuestion } from "./QuizRunner";
-import { addAttempt, statsByBank, type ExamGroup } from "../lib/examHistory";
+import { addAttempt, attachTopics, statsByBank, type ExamGroup } from "../lib/examHistory";
+import { loadQuestionTopics, topicBreakdown, TOPIC_INFO, type TopicCode } from "../lib/examTopics";
 import EditableImage from "./EditableImage";
 
 /**
@@ -26,7 +27,7 @@ type Session = {
   endsAt: number | null; // null = untimed
   startedAt: number;
 };
-type Result = { order: string[]; answers: Record<string, string[]>; seconds: number };
+type Result = { order: string[]; answers: Record<string, string[]>; seconds: number; date?: number };
 
 const correctSet = (q: RunnerQuestion) => q.correct_letter.split(",").map((x) => x.trim()).filter(Boolean);
 const isRight = (q: RunnerQuestion, picked: string[] = []) => {
@@ -56,10 +57,11 @@ export default function ExamSimulator({ questions, bankKey, group, title, path }
     write(SKEY, s); setSaved(null); setSession(s); setPhase("exam"); toTop();
   };
   const finish = (s: Session) => {
-    const r: Result = { order: s.order, answers: s.answers, seconds: Math.round((Date.now() - s.startedAt) / 1000) };
+    const date = Date.now();
+    const r: Result = { order: s.order, answers: s.answers, seconds: Math.round((date - s.startedAt) / 1000), date };
     write(SKEY, null); setSession(null); setResult(r); setPhase("result"); toTop();
     const correct = r.order.filter((id) => isRight(byId.get(id)!, r.answers[id])).length;
-    addAttempt({ key: bankKey, group, title, path, date: Date.now(), correct, total: r.order.length, seconds: r.seconds });
+    addAttempt({ key: bankKey, group, title, path, date, correct, total: r.order.length, seconds: r.seconds });
   };
 
   if (phase === "exam" && session) return <ExamRun s={session} byId={byId} onChange={(s) => { setSession(s); write(SKEY, s); }} onFinish={finish} />;
@@ -217,6 +219,7 @@ function ResultView({ r, byId, onReview, onNew, onRetakeWrong, bankKey, group }:
         {prev && prev.attempts > 1 && <p className="mt-2 text-xs font-bold text-slate-500">متوسطك في البنك ده: {prev.avg}% · أحسن نتيجة: {prev.best}% · {prev.attempts} محاولات</p>}
         <p className="mt-1 text-[11px] text-slate-500">نسبة النجاح الحقيقية بتختلف حسب الهيئة (DHA / Prometric / SNLE) — دي للتقييم بس.</p>
       </div>
+      <TopicResults r={r} byId={byId} bankKey={bankKey} group={group} />
       <div className="flex flex-wrap justify-center gap-2">
         {wrong.length > 0 && <button className={btnPrimary} onClick={onReview}><ListChecks size={18} aria-hidden="true" />راجع أخطائك ({wrong.length})</button>}
         {wrong.length > 0 && <button className={btnGhost} onClick={() => onRetakeWrong(wrong)}><RotateCcw size={18} aria-hidden="true" />امتحن في الغلط بس</button>}
@@ -305,4 +308,46 @@ export function useExamMode() {
     </div>
   );
   return { exam, switcher };
+}
+
+/** Score per topic for this attempt (approximate automatic topics), weakest first, with where to review. Saved with the attempt. */
+function TopicResults({ r, byId, bankKey, group }: { r: Result; byId: Map<string, RunnerQuestion>; bankKey: string; group: ExamGroup }) {
+  const [rows, setRows] = useState<{ t: TopicCode; c: number; n: number }[] | null>(null);
+  useEffect(() => {
+    let alive = true;
+    void loadQuestionTopics(group, bankKey).then((topics) => {
+      if (!alive || !topics) return;
+      const b = topicBreakdown(r.order, (id) => isRight(byId.get(id)!, r.answers[id]), topics);
+      if (r.date) attachTopics(bankKey, r.date, b);
+      setRows(Object.entries(b).map(([t, [c, n]]) => ({ t: t as TopicCode, c, n })).filter((x) => x.t !== "general").sort((a, b2) => a.c / a.n - b2.c / b2.n));
+    });
+    return () => { alive = false; };
+  }, [r, byId, bankKey, group]);
+  if (!rows || rows.length < 2) return null;
+  return (
+    <div className={card}>
+      <h3 className="mb-1 font-black text-[#153448] dark:text-white">نتيجتك حسب الموضوع</h3>
+      <p className="mb-3 text-[11px] text-slate-500">تصنيف تلقائي تقريبي للأسئلة — الأضعف فوق.</p>
+      <ul className="space-y-2">
+        {rows.map(({ t, c, n }) => {
+          const pct = Math.round((c / n) * 100);
+          const info = TOPIC_INFO[t];
+          return (
+            <li key={t} className="text-sm">
+              <div className="flex items-center justify-between gap-2">
+                <span className="font-bold text-slate-800 dark:text-slate-100">{info.ar}</span>
+                <span className="flex items-center gap-2">
+                  <span className={`font-black tabular-nums ${pct >= PASS ? "text-emerald-700 dark:text-emerald-300" : "text-red-700 dark:text-red-300"}`}>{c}/{n}</span>
+                  {pct < PASS && info.to && <Link to={info.to} className="text-xs font-bold text-[#127378] underline dark:text-teal-300">ذاكر الموضوع</Link>}
+                </span>
+              </div>
+              <div className="mt-1 h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800" aria-hidden="true">
+                <div className={`h-full ${pct >= PASS ? "bg-emerald-500" : "bg-red-500"}`} style={{ width: `${pct}%` }} />
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
