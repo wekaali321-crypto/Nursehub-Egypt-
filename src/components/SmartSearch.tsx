@@ -9,6 +9,7 @@ import { useI18n, bilingual } from "../lib/i18n";
 import { logSearch } from "../lib/analytics";
 import { useExtraSearchIndex } from "../lib/searchIndex";
 import { drugPhoneticKeys, phoneticKey, phoneticScore } from "../lib/phonetic";
+import { loadDrugNames, type Row } from "../lib/drugMatch";
 
 interface Suggestion {
   label: string;
@@ -18,9 +19,11 @@ interface Suggestion {
 }
 
 export default function SmartSearch({ onNavigate, variant = "compact" }: { onNavigate?: () => void; variant?: "compact" | "hero" }) {
-  const { articles, drugs, ensureLoaded } = useStore();
+  const { articles, ensureLoaded } = useStore();
+  // drug suggestions come from the small static names index (≈30 KB), not the full drug tables (≈0.8 MB)
+  const [drugRows, setDrugRows] = useState<Row[]>([]);
   const [searchActive, setSearchActive] = useState(false);
-  useEffect(() => { if (searchActive) ensureLoaded({ drugs: true }); }, [searchActive]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { if (searchActive) { ensureLoaded(); void loadDrugNames().then(setDrugRows); } }, [searchActive]); // eslint-disable-line react-hooks/exhaustive-deps
   const { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters } = useExtraSearchIndex(searchActive);
   const { t, lang } = useI18n();
   const [q, setQ] = useState("");
@@ -39,13 +42,13 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
       .filter((a) => a.status === "published" && [a.title, a.titleEn, a.excerpt, a.content, a.contentEn, ...a.tags].filter(Boolean).join(" ").toLowerCase().includes(lower))
       .slice(0, 5)
       .map((a) => ({ label: bilingual(a.title, a.titleEn, lang).text, sub: t(CAT_KEY[a.category]), to: `/article/${a.slug}`, icon: a.category === "books" ? "📖" : "📝" }));
-    const direct = drugs.filter((d) => (d.name + d.genericName + d.drugClass + d.indications).toLowerCase().includes(lower));
+    const direct = drugRows.filter((d) => [d[1], d[2], d[3], d[5], d[6]].filter(Boolean).join(" ").toLowerCase().includes(lower));
     const qk = direct.length ? "" : phoneticKey(q);
-    const fromDrugs: Suggestion[] = (direct.length ? direct : drugs
-      .map((d) => ({ d, s: phoneticScore(qk, drugPhoneticKeys([d.name, d.nameEn, d.genericName, d.genericNameEn])) }))
+    const fromDrugs: Suggestion[] = (direct.length ? direct : drugRows
+      .map((d) => ({ d, s: phoneticScore(qk, drugPhoneticKeys([d[1], d[2], d[3]])) }))
       .filter((h) => h.s > 0).sort((a, b) => b.s - a.s).map((h) => h.d))
       .slice(0, 3)
-      .map((d) => ({ label: bilingual(d.name, d.nameEn, lang).text, sub: `${t("search.drugBadge")} • ${bilingual(d.category, d.categoryEn, lang).text}`, to: `/drug/${d.slug}`, icon: "💊" }));
+      .map((d) => ({ label: lang === "en" ? d[2] || d[1] : d[1] || d[2], sub: [t("search.drugBadge"), lang === "en" ? d[6] || d[5] : d[5] || d[6]].filter(Boolean).join(" • "), to: `/drug/${d[0]}`, icon: "💊" }));
     const fromIcu: Suggestion[] = icuTopics
       .filter((topic) => [topic.title_ar, topic.title_en, topic.summary_ar, topic.summary_en].filter(Boolean).join(" ").toLowerCase().includes(lower))
       .slice(0, 3)
@@ -118,7 +121,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
       logSearch(q.trim(), results.length, "instant", lang);
     }
     return results;
-  }, [q, articles, drugs, icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters, lang]);
+  }, [q, articles, drugRows, icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters, lang]);
 
   const go = (to: string) => {
     setQ(""); setOpen(false); onNavigate?.();
