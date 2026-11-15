@@ -3,6 +3,7 @@ import { useLocation, useNavigationType } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import InstallPrompt from "./InstallPrompt";
+import MobileBottomNav from "./MobileBottomNav";
 import { useI18n } from "../lib/i18n";
 
 /** Open every new page from the top (SPA navigation otherwise keeps the previous scroll position). Back/forward and #anchors are left alone. */
@@ -34,7 +35,7 @@ function BackToTop() {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label={t("a11y.backToTop")}
-      className="nh-backtotop fixed bottom-6 left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#127378] hover:bg-[#0f6165] text-xl text-white shadow-lg hover:scale-110 transition-transform print:hidden"
+      className="nh-backtotop fixed bottom-24 left-4 md:bottom-6 md:left-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#127378] hover:bg-[#0f6165] text-xl text-white shadow-lg hover:scale-110 transition-transform print:hidden"
     >
       ↑
     </button>
@@ -44,7 +45,7 @@ function BackToTop() {
 export default function PublicLayout({ children }: { children: ReactNode }) {
   const { t } = useI18n();
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0">
       <a href="#main-content" className="skip-link">{t("a11y.skipToContent")}</a>
       <Navbar />
       <main id="main-content" className="flex-1">{children}</main>
@@ -52,6 +53,7 @@ export default function PublicLayout({ children }: { children: ReactNode }) {
       <ScrollToTop />
       <BackToTop />
       <div className="print:hidden"><InstallPrompt /></div>
+      <MobileBottomNav />
     </div>
   );
 }

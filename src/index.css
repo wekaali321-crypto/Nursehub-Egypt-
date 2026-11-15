@@ -2,14 +2,37 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* NurseHub Egypt design tokens (official identity: Navy #153448, Teal #168C91, White, Light Gray #F1F4F6).
+   Usable as Tailwind classes: bg-nh-navy, text-nh-teal, border-nh-line, bg-nh-surface, … (see src/components/ui). */
+@theme {
+  --color-nh-navy: #153448;
+  --color-nh-navy-2: #1d4560;
+  --color-nh-teal: #168C91;
+  --color-nh-teal-dark: #127378;
+  --color-nh-teal-darker: #0f6165;
+  --color-nh-teal-soft: #E3F2F2;
+  --color-nh-surface: #F1F4F6;
+  --color-nh-line: #DCE3E8;
+  --color-nh-success: #15803d;
+  --color-nh-warning: #b45309;
+  --color-nh-danger: #b91c1c;
+  --color-nh-info: #1d4ed8;
+  --color-nh-alert: #c2410c; /* high-alert medication */
+}
+
 :root {
   /* Design tokens — single source of truth */
-  --brand: #0284c7;
-  --brand-2: #14b8a6;
+  --brand: #127378;
+  --brand-2: #168C91;
+  --brand-navy: #153448;
   --brand-green: #10b981;
   --radius-card: 1rem;
   --radius-pill: 9999px;
-  --ring: 0 0 0 3px rgba(2, 132, 199, 0.35);
+  --ring: 0 0 0 3px rgba(22, 140, 145, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
 
 /* Accessibility: skip-to-content link */
