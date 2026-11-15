@@ -136,6 +136,8 @@ const defaultMenu = [
   { label: "المقالات", path: "/category/articles" },
   { label: "الملخصات", path: "/category/summaries" },
   { label: "الأدوية", path: "/drugs" },
+  { label: "وضع الشيفت", path: "/shift" },
+  { label: "بطاقات المذاكرة", path: "/cards" },
   { label: "المهارات", path: "/category/skills" },
   { label: "مكافحة العدوى", path: "/category/infection-control" },
   { label: "خطط الرعاية", path: "/category/careplans" },
@@ -250,7 +252,20 @@ function mergeNewDefaults<T, K extends keyof T>(stored: T[] | undefined, fallbac
   if (!stored) return fallback;
   const existingKeys = new Set(stored.map((item) => item[key]));
   const missing = fallback.filter((item) => !existingKeys.has(item[key]));
-  return missing.length > 0 ? [...stored, ...missing] : stored;
+  if (missing.length === 0) return stored;
+  // A new default goes right after the item that precedes it in the defaults (not at the end), so e.g. a new menu
+  // link shows where it was designed to — inside the first entries of the desktop bar — for returning visitors too.
+  const out = [...stored];
+  for (const item of missing) {
+    const at = fallback.indexOf(item);
+    let pos = out.length;
+    for (let i = at - 1; i >= 0; i--) {
+      const j = out.findIndex((x) => x[key] === fallback[i][key]);
+      if (j >= 0) { pos = j + 1; break; }
+    }
+    out.splice(pos, 0, item);
+  }
+  return out;
 }
 
 function loadPreview(): DataShape {
