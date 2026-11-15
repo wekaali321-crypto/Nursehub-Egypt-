@@ -23,11 +23,15 @@ import { seedOTCConditions } from "./seedOTC";
  */
 
 /* ---------- Row <-> App mappers ---------- */
+// Visitors' bundle: every article column except the two full texts (~98% of the table). The text is fetched per article
+// (loadArticleFull) when one is opened. Such rows carry `partial: true` and are NEVER written back (see syncEntity).
+const ARTICLE_LIGHT_COLS = "id,title,slug,category,excerpt,cover,tags,author,status,publish_date,updated_date,views,featured,video_url,attachments,meta_title,meta_description,rating,rating_count,created_at,title_en,excerpt_en,subcategory";
 const fromArticle = (r: any) => ({
+  ...(r.content === undefined ? { partial: true } : {}),
   id: r.id, title: r.title, slug: r.slug, category: r.category,
   subcategory: r.subcategory ?? undefined, // real sub-folder within `category`, links to Taxonomy.id
   excerpt: r.excerpt,
-  content: r.content, cover: r.cover, tags: r.tags ?? [], author: r.author,
+  content: r.content ?? "", cover: r.cover, tags: r.tags ?? [], author: r.author,
   status: r.status, publishDate: r.publish_date, updatedDate: r.updated_date,
   views: r.views ?? 0, featured: r.featured, videoUrl: r.video_url,
   attachments: r.attachments ?? [], metaTitle: r.meta_title, metaDescription: r.meta_description,
@@ -143,12 +147,26 @@ export const toOrder = (o: any) => ({
 /* ---------- Load everything from Supabase ---------- */
 // `light` = anonymous visitors: skip the admin-only tables (users, activity, orders, subscribers, affiliates, redirects, media)
 // so a public page view does not pull them down.
-export async function loadAllFromSupabase(light = false): Promise<Partial<DataShape>> {
+/** Drug reference tables: only the drug pages and search use them, so visitors load them separately (loadDrugTables). */
+export const DRUG_KEYS = ["drugs", "drugInteractions", "drugAntidotes", "drugClassifications", "drugSuffixes", "cardiacMedGroups", "pharmMnemonics", "pharmacyFacts", "otcConditions"] as const;
+
+/** Visitors: just the drug tables (same mapping as the bundle). */
+export const loadDrugTables = (): Promise<Partial<DataShape>> => loadAllFromSupabase(true, { only: "drugs" });
+
+export async function loadAllFromSupabase(light = false, opts: { only?: "drugs"; drugs?: boolean } = {}): Promise<Partial<DataShape>> {
   if (!isSupabaseEnabled || !supabase) throw new Error("Supabase not configured");
 
   const q = (t: string) => supabase!.from(t).select("*");
   const adminOnly = new Set<string>([TABLES.users, TABLES.activity, TABLES.orders, TABLES.subscribers, TABLES.affiliates, TABLES.redirects, TABLES.media]);
-  const qq = (t: string) => (light && adminOnly.has(t) ? Promise.resolve({ data: [] as any[] }) : q(t));
+  const drugTables = new Set<string>([TABLES.drugs, TABLES.drugInteractions, TABLES.drugAntidotes, TABLES.drugClassifications, TABLES.drugSuffixes, TABLES.cardiacMedGroups, TABLES.pharmMnemonics, TABLES.pharmacyFacts, TABLES.otcConditions]);
+  const wantDrugs = opts.only === "drugs" || opts.drugs !== false;
+  const skip = (t: string) => (opts.only === "drugs" ? !drugTables.has(t) : !wantDrugs && drugTables.has(t));
+  const SKIPPED = { data: null, skipped: true } as const;
+  const qq = (t: string) =>
+    skip(t) ? Promise.resolve(SKIPPED)
+    : light && adminOnly.has(t) ? Promise.resolve({ data: [] as any[] })
+      : light && t === TABLES.articles ? supabase!.from(t).select(ARTICLE_LIGHT_COLS)
+      : q(t);
   const [
     articles, comments, media, products, users, pages, categories, tags,
     subscribers, ads, affiliates, redirects, activity, drugs, drugInteractions, drugAntidotes, drugClassifications,
@@ -202,9 +220,26 @@ export async function loadAllFromSupabase(light = false): Promise<Partial<DataSh
       : undefined,
   };
   const out: Record<string, unknown> = { ...full };
+  for (const [k, r] of named) if (r && (r as any).skipped) delete out[k]; // not requested: the store keeps what it has
+  if (out.settings === undefined) delete out.settings;
   for (const k of failed) delete out[k];
   if (failed.length) Object.defineProperty(out, "__failed", { value: failed, enumerable: false });
   return out as Partial<DataShape>;
+}
+
+/** One published article with its full text (the visitors' bundle only has the light columns). */
+export async function loadArticleFull(slug: string): Promise<ReturnType<typeof fromArticle> | null> {
+  if (!isSupabaseEnabled || !supabase) return null;
+  const { data, error } = await supabase.from(TABLES.articles).select("*").eq("slug", slug).eq("status", "published").maybeSingle();
+  return error || !data ? null : fromArticle(data);
+}
+
+/** Ids of published articles whose full text (AR or EN) contains `q` — searched on the server, nothing large downloaded. */
+export async function searchArticleText(q: string): Promise<Set<string> | null> {
+  const term = q.replace(/[,()*%\\]/g, " ").trim();
+  if (!isSupabaseEnabled || !supabase || term.length < 2) return null;
+  const { data, error } = await supabase.from(TABLES.articles).select("id").eq("status", "published").or(`content.ilike.*${term}*,content_en.ilike.*${term}*`).limit(100);
+  return error ? null : new Set((data ?? []).map((r: { id: string }) => r.id));
 }
 
 /** The few site settings the shell needs on every page (name, tagline, AdSense) — one small row, no store bundle. */
@@ -263,7 +298,8 @@ export async function syncEntity(entity: Entity, current: any[], previous: any[]
   }
   // Upserts (only changed/new rows to reduce writes)
   const prevById = new Map(previous.map((x) => [x.id, JSON.stringify(x)]));
-  const changed = current.filter((x) => prevById.get(x.id) !== JSON.stringify(x));
+  // A light row (no full text, `partial`) must never be upserted: it would erase the article's content in the database.
+  const changed = current.filter((x) => !x.partial && prevById.get(x.id) !== JSON.stringify(x));
   if (changed.length) {
     await supabase.from(cfg.table).upsert(changed.map(cfg.to));
   }

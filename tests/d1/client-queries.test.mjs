@@ -112,3 +112,25 @@ test('static lite search file keeps the database order (ORDER BY order_num, id) 
     assert.ok(a < b || (a === b && lite[i - 1].id < lite[i].id), `row ${i}`);
   }
 });
+
+test('articles: visitors get light rows (no text); a light row is never written back; the text loads per article', async () => {
+  const { mod, sup } = await env('src/lib/dataApi.ts');
+  const light = await mod.loadAllFromSupabase(true);
+  const artCall = sup.calls.find((c) => c.table === 'articles');
+  const sel = artCall.steps.find((s) => s[0] === 'select')[1];
+  assert.ok(!/\bcontent\b|content_en/.test(sel), `light select has no text columns: ${sel}`);
+  assert.equal(light.articles.length, 0);
+
+  sup.reset();
+  const partial = { id: 'a1', title: 'T', slug: 's', content: '', partial: true, views: 1, tags: [] };
+  await mod.syncEntity('articles', [{ ...partial, views: 2 }], [partial]);
+  assert.equal(sup.calls.length, 0, 'a changed light row is NOT upserted (would erase the text)');
+  await mod.syncEntity('articles', [{ ...partial, partial: undefined, content: '<p>x</p>', views: 2 }], [partial]);
+  assert.equal(sup.calls.filter((c) => c.steps.some((s) => s[0] === 'upsert')).length, 1, 'a full row is saved normally');
+
+  sup.reset();
+  sup.answers.set('articles', { data: { id: 'a1', slug: 's', title: 'T', content: '<p>full</p>', tags: [] }, error: null });
+  const full = await mod.loadArticleFull('s');
+  assert.equal(full.content, '<p>full</p>'); assert.equal(full.partial, undefined);
+  assert.deepEqual(sup.calls[0].steps.map((s) => s[0]), ['select', 'eq', 'eq', 'maybeSingle']);
+});

@@ -9,6 +9,7 @@ import { useToast } from "../components/Toast";
 import { useFavorites } from "../lib/favorites";
 import { useUserAuth } from "../lib/userAuth";
 import { supabase, isSupabaseConfigured } from "../lib/supabase";
+import { loadArticleFull } from "../lib/dataApi";
 import ReadingProgress from "../components/ReadingProgress";
 import Icon from "../components/Icon";
 import OptimizedImage from "../components/OptimizedImage";
@@ -151,6 +152,19 @@ export default function ArticlePage() {
   const { articles, comments, setData, settings, logActivity, pushNotification, trackView, trackDownload } = useStore();
   const { notify } = useToast();
   const article = articles.find((a) => a.slug === slug);
+  // Visitors' bundle rows have no text yet (`partial`): fetch this one article in full and swap it in.
+  const [fullFailed, setFullFailed] = useState(false);
+  useEffect(() => {
+    if (!article?.partial || !slug) return;
+    let alive = true;
+    setFullFailed(false);
+    loadArticleFull(slug).then((full) => {
+      if (!alive) return;
+      if (!full) { setFullFailed(true); return; }
+      setData((d) => ({ ...d, articles: d.articles.map((a) => (a.id === full.id ? { ...a, ...full, partial: undefined, views: Math.max(a.views, full.views ?? 0) } : a)) }));
+    }).catch(() => alive && setFullFailed(true));
+    return () => { alive = false; };
+  }, [article?.id, article?.partial, slug]); // eslint-disable-line react-hooks/exhaustive-deps
   const { lang, t } = useI18n();
   const { isFav, toggleFav } = useFavorites();
   const { user, loggedIn } = useUserAuth();
@@ -472,7 +486,20 @@ export default function ArticlePage() {
             </div>
           )}
           <div ref={proseRef}>
-            <ArticleContent html={displayContentWithIds} slug={article.slug} lang={docLang} className="prose-content article-prose reading-measure max-w-none" />
+            {article.partial ? (
+              fullFailed ? (
+                <div className="rounded-xl bg-amber-50 p-4 text-sm font-semibold text-amber-800 dark:bg-amber-500/10 dark:text-amber-300">
+                  {lang === "en" ? "Could not load the article. Check your connection and try again." : "تعذّر تحميل المقال. تأكد من الاتصال وحاول مرة أخرى."}{" "}
+                  <button onClick={() => window.location.reload()} className="underline">{lang === "en" ? "Retry" : "إعادة المحاولة"}</button>
+                </div>
+              ) : (
+                <div className="space-y-3" role="status" aria-busy="true" aria-label={lang === "en" ? "Loading" : "جارٍ التحميل"}>
+                  {[100, 92, 97, 85, 95, 70].map((w, i) => <div key={i} className="h-4 animate-pulse rounded bg-slate-200 dark:bg-slate-800" style={{ width: `${w}%` }} />)}
+                </div>
+              )
+            ) : (
+              <ArticleContent html={displayContentWithIds} slug={article.slug} lang={docLang} className="prose-content article-prose reading-measure max-w-none" />
+            )}
           </div>
           </div>
 

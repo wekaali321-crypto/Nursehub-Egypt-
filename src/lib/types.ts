@@ -14,7 +14,9 @@ export interface Article {
   category: Category;
   subcategory?: string; // Links to Taxonomy.id in `categories` — real clickable folder within a Category
   excerpt: string;
-  content: string; // HTML
+  content: string; // HTML ("" with partial: true in the visitors' light bundle)
+  /** Light bundle row: full text not loaded yet. Never saved back to the database. */
+  partial?: boolean;
   cover: string;
   tags: string[];
   author: string;
