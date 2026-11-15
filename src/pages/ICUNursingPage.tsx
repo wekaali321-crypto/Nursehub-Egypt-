@@ -5,7 +5,12 @@ import { Breadcrumbs } from "../components/common";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
 import { useCart } from "../lib/cart";
-import { fetchIcuTopics, type IcuTopic } from "../lib/icuTopicsApi";
+import { fetchIcuTopics, fetchIcuTopic, type IcuTopic } from "../lib/icuTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
+import EditableImage from "../components/EditableImage";
+import { sectionArtFor } from "../lib/sectionArt";
+
+const ICU_ART = sectionArtFor("icu");
 
 const card = "rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900";
 const PER_TOPIC_PRINT_PRICE = 10;
@@ -24,7 +29,7 @@ export function ICUNursingHome() {
   const [selected, setSelected] = useState<Set<string>>(new Set());
 
   useEffect(() => {
-    fetchIcuTopics({ withRouted: true }).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_icu_routed", TTL.topics, () => fetchIcuTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const toggleSelected = (id: string) => {
@@ -215,8 +220,8 @@ export default function ICUNursingTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchIcuTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchIcuTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);
@@ -280,9 +285,8 @@ export default function ICUNursingTopicPage() {
           return (
             <section key={s.id || i} className={`${card} p-5`}>
               <h2 className="mb-3 text-lg font-black text-[#127378] dark:text-teal-300">{heading}</h2>
-              {s.image_url && (
-                <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
-              )}
+              <EditableImage block slot={`icu-topic:${topic.id}:${s.id || i}`} src={s.image_url || ICU_ART(s, i, topic.id)} label={heading}
+                render={(u) => <img src={u} alt={heading} loading="lazy" className="mx-auto mb-4 max-h-96 w-full rounded-xl border border-slate-200 bg-white object-contain p-2 dark:border-slate-700" />} />
               <TopicBody body={body} accent="sky" />
             </section>
           );
@@ -318,7 +322,7 @@ export function ICUPrintAllPage() {
   useSEO({ title: `${t("nav.icuNursing")} | ${isEn ? "Print All" : "طباعة الكل"} | NurseHub Egypt` });
 
   useEffect(() => {
-    fetchIcuTopics().then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_icu", TTL.topics, () => fetchIcuTopics()).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   const buyPrintAll = () => {

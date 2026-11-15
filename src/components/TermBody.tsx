@@ -1,4 +1,6 @@
 import { useMemo, useState } from "react";
+import { termArt } from "../lib/termArt";
+import EditableImage from "./EditableImage";
 
 /** Splits at the first separator that is outside parentheses. */
 function splitTop(s: string, sep: string): [string, string] | null {
@@ -35,14 +37,14 @@ function enAr(head: string): { en: string; ar: string } {
   return m ? { en: m[1].trim(), ar: m[2].trim() } : { en: head.trim(), ar: "" };
 }
 
-type Item =
+export type TermItem =
   | { k: "term"; abbr?: string; en: string; ar: string; def: string }
   | { k: "chips"; label: string; pairs: { en: string; ar: string }[] }
   | { k: "note"; head: string; text: string }
   | { k: "p"; text: string };
 
-function parse(body: string): Item[] {
-  const out: Item[] = [];
+export function parseTermBody(body: string): TermItem[] {
+  const out: TermItem[] = [];
   for (const raw of body.split("\n")) {
     const line = raw.trim();
     if (!line) continue;
@@ -78,13 +80,13 @@ function parse(body: string): Item[] {
 const ltr = { direction: "ltr" as const, unicodeBidi: "isolate" as const };
 
 export default function TermBody({ body, isEn }: { body: string; isEn: boolean }) {
-  const items = useMemo(() => parse(body || ""), [body]);
+  const items = useMemo(() => parseTermBody(body || ""), [body]);
   const [hide, setHide] = useState(false);
   const [shown, setShown] = useState<Record<number, boolean>>({});
   const [q, setQ] = useState("");
   const terms = items.filter((i) => i.k === "term" || i.k === "chips").length;
   const ql = q.trim().toLowerCase();
-  const match = (i: Item) => {
+  const match = (i: TermItem) => {
     if (!ql) return true;
     return JSON.stringify(i).toLowerCase().includes(ql);
   };
@@ -139,6 +141,7 @@ export default function TermBody({ body, isEn }: { body: string; isEn: boolean }
               </div>
             );
           const covered = hide && !shown[idx];
+          const art = it.abbr ? null : termArt(it.en);
           return (
             <div key={idx} onClick={() => hide && setShown((s) => ({ ...s, [idx]: !s[idx] }))}
               className={`flex gap-3 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm transition dark:border-slate-700 dark:bg-slate-900 ${hide ? "cursor-pointer" : ""}`}>
@@ -154,6 +157,7 @@ export default function TermBody({ body, isEn }: { body: string; isEn: boolean }
                 </div>
                 {it.def && <p className={`mt-1 text-[13px] leading-6 text-slate-600 transition dark:text-slate-400 ${covered ? "select-none blur-sm" : ""}`}>{it.def}</p>}
               </div>
+              {art && <EditableImage slot={`art:${art.split("/").pop()!.replace(".svg", "")}`} src={art} label={it.en} emptyHint={false} render={(u) => <img src={u} alt="" loading="lazy" decoding="async" className={`${/\/body-(?!brain|eye|ear|nose|mouth|face|skull|throat|thyroid|neck)/.test(art) ? "h-28 w-[4.5rem]" : "h-16 w-20"} shrink-0 self-center rounded-xl bg-white object-contain p-1 ring-1 ring-slate-200 transition dark:ring-slate-700 ${covered ? "blur-sm" : ""}`} />} />}
             </div>
           );
         })}

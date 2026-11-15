@@ -11,6 +11,8 @@ import { fetchRxPrescriptions } from "../lib/rxApi";
 import GlobalDrugSearchBar from "../components/GlobalDrugSearchBar";
 import { useI18n } from "../lib/i18n";
 import InlineLangToggle from "../components/InlineLangToggle";
+import EmojiIcon from "../components/EmojiIcon";
+import { Brain, Pill, TriangleAlert } from "lucide-react";
 
 type Tile = {
   to: string;
@@ -235,7 +237,7 @@ export default function DrugsHubPage() {
       to={t.to}
       className="group flex gap-3 rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white p-4 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900"
     >
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#168C91]/10 text-xl" aria-hidden="true">{t.icon}</span>
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#168C91]/10 text-xl text-[#127378] dark:text-teal-300" aria-hidden="true"><EmojiIcon emoji={t.icon} size={22} /></span>
       <span className="min-w-0 flex-1">
         <span className="flex items-start justify-between gap-2">
           <span className="font-black leading-snug text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{t.title[lang]}</span>
@@ -271,9 +273,9 @@ export default function DrugsHubPage() {
           <p className="mt-1.5 max-w-2xl text-sm text-slate-200 md:text-base">{LABELS.heroSub[lang]}</p>
           <div className="mt-4 max-w-2xl"><GlobalDrugSearchBar /></div>
           <div className="mt-3 flex flex-wrap gap-2 text-xs font-bold text-teal-100">
-            <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">💊 {drugs.length} {LABELS.drugCount[lang]}</span>
-            <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">⚠️ {highAlertRefDrugCount} {LABELS.highAlert[lang]}</span>
-            <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1">🧠 {appliedPharmCount} {LABELS.appliedInfo[lang]}</span>
+            <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 inline-flex items-center gap-1.5"><Pill size={14} aria-hidden="true" /> {drugs.length} {LABELS.drugCount[lang]}</span>
+            <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 inline-flex items-center gap-1.5"><TriangleAlert size={14} aria-hidden="true" /> {highAlertRefDrugCount} {LABELS.highAlert[lang]}</span>
+            <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 inline-flex items-center gap-1.5"><Brain size={14} aria-hidden="true" /> {appliedPharmCount} {LABELS.appliedInfo[lang]}</span>
           </div>
         </div>
       </header>
@@ -282,7 +284,7 @@ export default function DrugsHubPage() {
         <section aria-label={LABELS.shortcuts[lang]} className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           {shortcuts.map((x) => (
             <Link key={x.to} to={x.to} className={`group flex flex-col items-start gap-1 rounded-2xl border p-3.5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] ${x.danger ? "border-red-200 bg-red-50 dark:border-red-900 dark:bg-red-500/10" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"}`}>
-              <span className="text-2xl" aria-hidden="true">{x.icon}</span>
+              <span className={x.danger ? "text-red-600 dark:text-red-300" : "text-[#168C91] dark:text-teal-300"} aria-hidden="true"><EmojiIcon emoji={x.icon} size={24} /></span>
               <span className={`text-sm font-black leading-snug ${x.danger ? "text-red-700 dark:text-red-300" : "text-[#153448] dark:text-white"}`}>{x.title[lang]}</span>
               {x.count && <span className="text-xs font-bold text-slate-600 dark:text-slate-400">{x.count}</span>}
             </Link>

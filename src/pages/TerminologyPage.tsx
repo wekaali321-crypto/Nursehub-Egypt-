@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchTerminologyTopics, type TerminologyTopic } from "../lib/terminologyTopicsApi";
+import { fetchTerminologyTopics, fetchTerminologyTopic, type TerminologyTopic } from "../lib/terminologyTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 import TermBody from "../components/TermBody";
 import TerminologyQuizWidget from "../components/TerminologyQuizWidget";
@@ -22,7 +23,7 @@ export function TerminologyHome() {
   const [topics, setTopics] = useState<TerminologyTopic[] | null>(null);
 
   useEffect(() => {
-    fetchTerminologyTopics().then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_terminology", TTL.topics, () => fetchTerminologyTopics()).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -50,8 +51,8 @@ export default function TerminologyTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchTerminologyTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchTerminologyTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);

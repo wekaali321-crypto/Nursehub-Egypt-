@@ -30,6 +30,14 @@ export async function fetchPediatricTopics(opts?: { withRouted?: boolean }): Pro
   return opts?.withRouted ? [...rows, ...(await routedAsTopics<PediatricTopic>("pediatrics"))] : rows;
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchPediatricTopic(id: string): Promise<PediatricTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("pediatric_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as PediatricTopic | null) ?? null;
+}
+
 export async function upsertPediatricTopic(item: PediatricTopic) {
   const { error } = await supabase.from("pediatric_topics").upsert(item);
   if (error) throw error;

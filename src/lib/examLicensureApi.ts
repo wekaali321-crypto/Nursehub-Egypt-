@@ -2,6 +2,7 @@
 // API layer for the "مزاولة المهنة" (Professional Licensure Exams) section.
 // Standalone table pattern (same as OTC / applied-pharm / icu_medications) — NOT wired into the global store.
 import { supabase } from './supabase';
+import { cachedQuery, TTL } from './remoteCache';
 
 export interface ExamCategory {
   id: string;
@@ -46,13 +47,15 @@ export interface ExamQuestion {
 // ---------- Categories ----------
 
 export async function fetchExamCategories(): Promise<ExamCategory[]> {
-  if (!supabase) return [];
-  const { data, error } = await supabase
-    .from('exam_categories')
-    .select('*')
-    .order('order_num', { ascending: true });
-  if (error) throw error;
-  return data ?? [];
+  return cachedQuery('exam_categories_v1', TTL.content, async () => {
+    if (!supabase) return [];
+    const { data, error } = await supabase
+      .from('exam_categories')
+      .select('*')
+      .order('order_num', { ascending: true });
+    if (error) throw error;
+    return data ?? [];
+  });
 }
 
 export async function upsertExamCategory(cat: ExamCategory): Promise<void> {
@@ -70,12 +73,14 @@ export async function deleteExamCategory(id: string): Promise<void> {
 // ---------- Exams ----------
 
 export async function fetchExams(categoryId?: string): Promise<Exam[]> {
-  if (!supabase) return [];
-  let query = supabase.from('exams').select('*').order('order_num', { ascending: true });
-  if (categoryId) query = query.eq('category_id', categoryId);
-  const { data, error } = await query;
-  if (error) throw error;
-  return data ?? [];
+  return cachedQuery(`exams_v1_${categoryId ?? 'all'}`, TTL.content, async () => {
+    if (!supabase) return [];
+    let query = supabase.from('exams').select('*').order('order_num', { ascending: true });
+    if (categoryId) query = query.eq('category_id', categoryId);
+    const { data, error } = await query;
+    if (error) throw error;
+    return data ?? [];
+  });
 }
 
 export async function fetchExamById(id: string): Promise<Exam | null> {
@@ -100,14 +105,17 @@ export async function deleteExam(id: string): Promise<void> {
 // ---------- Questions ----------
 
 export async function fetchExamQuestions(examId: string): Promise<ExamQuestion[]> {
-  if (!supabase) return [];
-  const { data, error } = await supabase
-    .from('exam_questions')
-    .select('*')
-    .eq('exam_id', examId)
-    .order('order_num', { ascending: true });
-  if (error) throw error;
-  return (data ?? []) as ExamQuestion[];
+  // served by idx_exam_q_exam_order; cached on the client (signed-in admin sessions always read live)
+  return cachedQuery(`exam_q_v1_${examId}`, TTL.content, async () => {
+    if (!supabase) return [];
+    const { data, error } = await supabase
+      .from('exam_questions')
+      .select('*')
+      .eq('exam_id', examId)
+      .order('order_num', { ascending: true });
+    if (error) throw error;
+    return (data ?? []) as ExamQuestion[];
+  });
 }
 
 export async function upsertExamQuestion(q: ExamQuestion): Promise<void> {

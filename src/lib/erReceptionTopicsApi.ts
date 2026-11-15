@@ -30,6 +30,14 @@ export async function fetchERReceptionTopics(opts?: { withRouted?: boolean }): P
   return opts?.withRouted ? [...rows, ...(await routedAsTopics<ERReceptionTopic>("er-reception"))] : rows;
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchERReceptionTopic(id: string): Promise<ERReceptionTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("er_reception_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as ERReceptionTopic | null) ?? null;
+}
+
 export async function upsertERReceptionTopic(item: ERReceptionTopic) {
   const { error } = await supabase.from("er_reception_topics").upsert(item);
   if (error) throw error;

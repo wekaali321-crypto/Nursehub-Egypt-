@@ -23,6 +23,7 @@ import {
 import { Breadcrumbs } from '../components/common';
 import ArticleContent from '../components/ArticleContent';
 import QuizRunner from '../components/QuizRunner';
+import ExamSimulator, { ExamProgressPanel, useExamMode } from '../components/ExamSimulator';
 import { useSEO } from '../lib/seo';
 
 function LoadingBlock() {
@@ -76,6 +77,8 @@ export function TravelQuestionsHome() {
           {total} سؤال اختيار من متعدد لمساعدتك تستعد لاختبارات الترخيص والتوظيف كممرض/ة بالخارج، مُراجعة إكلينيكيًا ومترجمة بالكامل.
         </p>
       </div>
+
+      <ExamProgressPanel group="travel" />
 
       {/* Highlighted review folders (e.g. "مراجعة سريعة NCLEX/بروميتريك") — distinct from quiz tiles */}
       {reviewCats.map((cat) => (
@@ -286,6 +289,7 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
   const [questions, setQuestions] = useState<TravelQuestion[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { exam, switcher } = useExamMode();
 
   useSEO({ title: `${category.name_ar} | أسئلة السفر للخارج | NurseHub Egypt` });
 
@@ -299,7 +303,20 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
   if (loading) return <LoadingBlock />;
   if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
 
+  if (exam) {
+    return (
+      <div className="mx-auto max-w-3xl px-4 py-8" dir="rtl">
+        <Breadcrumbs items={[{ label: 'أسئلة السفر للخارج', path: '/travel-questions' }, { label: category.name_ar }]} />
+        <h1 className="mb-4 text-2xl font-black text-[#153448] dark:text-white">{category.name_ar}</h1>
+        {switcher}
+        <ExamSimulator questions={questions} bankKey={categoryId} group="travel" title={category.name_ar} path={`/travel-questions/${categoryId}?mode=exam`} />
+      </div>
+    );
+  }
+
   return (
+    <>
+    <div className="mx-auto max-w-3xl px-4 pt-6" dir="rtl">{switcher}</div>
     <QuizRunner
       key={categoryId}
       questions={questions}
@@ -308,5 +325,6 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
       title={`${category.icon} ${category.name_ar}`}
       backTo={{ path: '/travel-questions', label: 'أسئلة السفر للخارج' }}
     />
+    </>
   );
 }

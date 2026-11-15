@@ -14,7 +14,7 @@ import { fetchOperatingRoomTopics, type OperatingRoomTopic } from "./operatingRo
 import { fetchObgynTopics, type ObgynTopic } from "./obgynTopicsApi";
 import { fetchClinicalProtocols, type ClinicalProtocol } from "./clinicalProtocolsApi";
 import { fetchLasaPairs, type LasaPair } from "./lasaApi";
-import { cacheGet, cacheSet } from "./remoteCache";
+import { cacheGet, cacheSet, cachedQuery, TTL } from "./remoteCache";
 import { fetchTravelQuestionsLite, type TravelQuestionLite } from "./travelQuestionsApi";
 import { fetchCourseChaptersLite, type CourseChapterLite } from "./coursesApi";
 
@@ -44,19 +44,19 @@ let inFlight: Promise<ExtraSearchIndex> | null = null;
 
 async function loadIndex(): Promise<ExtraSearchIndex> {
   const [icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, lasaPairs, travelQuestions, courseChapters] = await Promise.all([
-    fetchIcuTopics().catch(() => []),
-    fetchDialysisTopics().catch(() => []),
-    fetchRadiologyTopics().catch(() => []),
-    fetchNicuTopics().catch(() => []),
-    fetchPharmacologyTopics().catch(() => []),
-    fetchTerminologyTopics().catch(() => []),
-    fetchFirstAidTopics().catch(() => []),
-    fetchERReceptionTopics().catch(() => []),
-    fetchPediatricTopics().catch(() => []),
-    fetchAnatomyTopics().catch(() => []),
-    fetchFundamentalsTopics().catch(() => []),
-    fetchOperatingRoomTopics().catch(() => []),
-    fetchObgynTopics().catch(() => []),
+    cachedQuery("topics_v1_icu", TTL.topics, () => fetchIcuTopics()).catch(() => []),
+    cachedQuery("topics_v1_dialysis", TTL.topics, () => fetchDialysisTopics()).catch(() => []),
+    cachedQuery("topics_v1_radiology", TTL.topics, () => fetchRadiologyTopics()).catch(() => []),
+    cachedQuery("topics_v1_nicu", TTL.topics, () => fetchNicuTopics()).catch(() => []),
+    cachedQuery("topics_v1_pharmacology", TTL.topics, () => fetchPharmacologyTopics()).catch(() => []),
+    cachedQuery("topics_v1_terminology", TTL.topics, () => fetchTerminologyTopics()).catch(() => []),
+    cachedQuery("topics_v1_first_aid", TTL.topics, () => fetchFirstAidTopics()).catch(() => []),
+    cachedQuery("topics_v1_er_reception", TTL.topics, () => fetchERReceptionTopics()).catch(() => []),
+    cachedQuery("topics_v1_pediatric", TTL.topics, () => fetchPediatricTopics()).catch(() => []),
+    cachedQuery("topics_v1_anatomy", TTL.topics, () => fetchAnatomyTopics()).catch(() => []),
+    cachedQuery("topics_v1_fundamentals", TTL.topics, () => fetchFundamentalsTopics()).catch(() => []),
+    cachedQuery("topics_v1_operating_room", TTL.topics, () => fetchOperatingRoomTopics()).catch(() => []),
+    cachedQuery("topics_v1_obgyn", TTL.topics, () => fetchObgynTopics()).catch(() => []),
     fetchClinicalProtocols().catch(() => []),
     fetchLasaPairs().catch(() => []),
     fetchTravelQuestionsLite().catch(() => []),

@@ -1,4 +1,5 @@
 import { supabase } from './supabase';
+import { cachedQuery, TTL } from './remoteCache';
 
 export interface TreatmentLine {
   line_no: string;
@@ -29,11 +30,15 @@ export interface AppliedPharmItem {
 }
 
 export async function fetchAppliedPharmItems(part?: 1 | 2): Promise<AppliedPharmItem[]> {
-  let q = supabase.from('applied_pharm_items').select('*').order('order_num', { ascending: true });
-  if (part) q = q.eq('part', part);
-  const { data, error } = await q;
-  if (error) throw error;
-  return (data as AppliedPharmItem[]) || [];
+  // 985 rows / 1.3 MB: cached on the client (signed-in admin sessions always read live); served by idx_applied_pharm_part_order
+  return cachedQuery(`applied_pharm_v1_${part ?? 'all'}`, TTL.content, async () => {
+    if (!supabase) return [];
+    let q = supabase.from('applied_pharm_items').select('*').order('order_num', { ascending: true });
+    if (part) q = q.eq('part', part);
+    const { data, error } = await q;
+    if (error) throw error;
+    return (data as AppliedPharmItem[]) || [];
+  });
 }
 
 export async function upsertAppliedPharmItem(row: AppliedPharmItem): Promise<void> {

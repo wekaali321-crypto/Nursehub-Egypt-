@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchRadiologyTopics, type RadiologyTopic } from "../lib/radiologyTopicsApi";
+import { fetchRadiologyTopics, fetchRadiologyTopic, type RadiologyTopic } from "../lib/radiologyTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
+import { sectionArtFor } from "../lib/sectionArt";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 
 // Light indigo accent on top of the shared Navy/Teal section layout.
@@ -20,7 +22,7 @@ export function RadiologyHome() {
   const [topics, setTopics] = useState<RadiologyTopic[] | null>(null);
 
   useEffect(() => {
-    fetchRadiologyTopics().then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_radiology", TTL.topics, () => fetchRadiologyTopics()).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -47,8 +49,8 @@ export default function RadiologyTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchRadiologyTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchRadiologyTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);
@@ -76,6 +78,7 @@ export default function RadiologyTopicPage() {
       tint={TINT}
       fallbackIcon="🩻"
       backLabel={{ en: "← Back to Radiology", ar: "← رجوع لقسم الأشعة" }}
+      sectionArt={sectionArtFor("radiology")}
     />
   );
 }

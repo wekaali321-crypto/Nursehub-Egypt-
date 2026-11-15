@@ -1,8 +1,10 @@
 import { useState, type ReactNode } from "react";
+import EmojiIcon from "../EmojiIcon";
 import { Link } from "react-router-dom";
 import TopicBody from "../TopicBody";
 import { useHubView } from "../HubGrid";
 import { useI18n } from "../../lib/i18n";
+import EditableImage from "../EditableImage";
 
 /**
  * Shared Navy/Teal layout for the specialty "topic" sections (hub page + topic page).
@@ -70,7 +72,7 @@ function Header({ crumbs, tint, children }: { crumbs: { label: string; to?: stri
 
 /** Hub page of a topic section: header, category chips, compact/cards list. */
 export function TopicSectionHome({
-  title, description, icon, tint, topics, hrefFor, fallbackIcon, hubTop, hubBottom,
+  title, description, icon, tint, topics, hrefFor, fallbackIcon, hubTop, hubBottom, artFor,
 }: {
   title: string;
   description: { ar: string; en: string };
@@ -83,6 +85,8 @@ export function TopicSectionHome({
   hubTop?: ReactNode;
   /** Optional section-specific content shown below the topic list (e.g. related sections). */
   hubBottom?: ReactNode;
+  /** Optional teaching drawing per topic (public/cards/art), shown instead of the icon (e.g. Anatomy: where it is in the body). */
+  artFor?: (tp: SectionTopic) => string | null;
 }) {
   const { t, lang } = useI18n();
   const isEn = lang === "en";
@@ -101,7 +105,7 @@ export function TopicSectionHome({
     <div className="bg-[#F1F4F6] pb-12 dark:bg-slate-950">
       <Header crumbs={[{ label: title }]} tint={tint}>
         <div className="mt-4 flex items-center gap-4">
-          <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true">{icon}</span>
+          <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true"><EmojiIcon emoji={icon} size={30} /></span>
           <div className="min-w-0">
             <h1 className="text-2xl font-black leading-tight md:text-4xl">{title}</h1>
             {topics && <p className="mt-1 text-sm text-teal-200">{topics.length} {isEn ? "topics" : "موضوع"}</p>}
@@ -145,7 +149,9 @@ export function TopicSectionHome({
               <div className="grid grid-cols-[minmax(0,1fr)] gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {list.map((tp) => (
                   <Link key={tp.id} to={hrefFor(tp)} className="group flex items-center gap-3 rounded-xl border border-slate-200 border-s-4 border-s-[#168C91] bg-white px-3 py-2.5 transition hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-s-[#168C91] dark:bg-slate-900">
-                    <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg text-xl ${tint.tile}`} aria-hidden="true">{tp.icon || fallbackIcon}</span>
+                    {artFor?.(tp) !== undefined && artFor?.(tp) !== null
+                      ? <EditableImage slot={`topic:${hrefFor(tp)}`} src={artFor!(tp)} label={isEn && tp.title_en ? tp.title_en : tp.title_ar} emptyHint={false} fallback={<span className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg text-xl ${tint.tile}`} aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={20} /></span>} render={(u) => <img src={u} alt="" loading="lazy" decoding="async" className="h-14 w-11 shrink-0 rounded-lg bg-white object-contain p-0.5 ring-1 ring-slate-200 dark:ring-slate-700" />} />
+                      : <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg text-xl ${tint.tile}`} aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={20} /></span>}
                     <span className="min-w-0 flex-1">
                       <span className="flex items-center justify-between gap-2">
                         <span className="line-clamp-2 text-sm font-black leading-5 text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{isEn && tp.title_en ? tp.title_en : tp.title_ar}</span>
@@ -163,8 +169,10 @@ export function TopicSectionHome({
                   const summary = isEn ? tp.summary_en : tp.summary_ar;
                   return (
                     <Link key={tp.id} to={hrefFor(tp)} className="group overflow-hidden rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900">
-                      <div className={`flex h-20 items-end justify-between p-4 ${tint.tile}`}>
-                        <span className="text-4xl" aria-hidden="true">{tp.icon || fallbackIcon}</span>
+                      <div className={`flex ${artFor?.(tp) ? "h-32" : "h-20"} items-end justify-between p-4 ${tint.tile}`}>
+                        {artFor?.(tp)
+                          ? <EditableImage slot={`topic:${hrefFor(tp)}`} src={artFor(tp)} label={isEn && tp.title_en ? tp.title_en : tp.title_ar} emptyHint={false} fallback={<span className="text-4xl" aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={36} strokeWidth={1.75} /></span>} render={(u) => <img src={u} alt="" loading="lazy" decoding="async" className="h-24 w-auto rounded-xl bg-white object-contain p-1 shadow-sm" />} />
+                          : <span className="text-4xl" aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={36} strokeWidth={1.75} /></span>}
                         {tp.category && <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-black text-[#153448] dark:bg-slate-900/70 dark:text-slate-100">{tp.category}</span>}
                       </div>
                       <div className="p-4">
@@ -190,7 +198,7 @@ export function TopicSectionHome({
 
 /** Topic page of a topic section: header + one card per section + sources + back link. */
 export function TopicSectionDetail({
-  topic, sectionTitle, basePath, tint, fallbackIcon, backLabel, detailTop, renderBody, sectionNav,
+  topic, sectionTitle, basePath, tint, fallbackIcon, backLabel, detailTop, renderBody, sectionNav, art, sectionArt,
 }: {
   topic: SectionTopic;
   sectionTitle: string;
@@ -204,6 +212,10 @@ export function TopicSectionDetail({
   renderBody?: (body: string, isEn: boolean) => ReactNode;
   /** Numbered section headings + a sticky in-page navigation (anchors #tsec-N), for long multi-section topics. */
   sectionNav?: boolean;
+  /** Optional teaching drawing (public/cards/art) shown above the sections, e.g. where the organ / system is in the body. */
+  art?: string | null;
+  /** Optional built-in diagram per section (the admin can still replace or hide it). */
+  sectionArt?: (section: TopicSectionItem, index: number, topicId: string) => string | null;
 }) {
   const { lang } = useI18n();
   const isEn = lang === "en";
@@ -214,7 +226,7 @@ export function TopicSectionDetail({
     <div className="bg-[#F1F4F6] pb-12 dark:bg-slate-950">
       <Header crumbs={[{ label: sectionTitle, to: basePath }, { label: title }]} tint={tint}>
         <div className="mt-4 flex items-start gap-4">
-          <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true">{topic.icon || fallbackIcon}</span>
+          <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true"><EmojiIcon emoji={topic.icon} fallback={fallbackIcon} size={30} /></span>
           <div className="min-w-0">
             <h1 className="text-2xl font-black leading-tight md:text-4xl">{title}</h1>
             {summary && <p className="mt-2 text-sm leading-7 text-slate-200 md:text-base">{summary}</p>}
@@ -225,6 +237,17 @@ export function TopicSectionDetail({
 
       <div className="mx-auto max-w-3xl px-4 pt-6">
         {detailTop}
+        {art && (
+          <EditableImage block emptyHint={false} slot={`topic:${basePath}/${topic.id}`} src={art} label={title} render={(u) => (
+            <figure className="mb-4 flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+              <img src={u} alt="" decoding="async" className="h-48 w-auto shrink-0 rounded-xl bg-white object-contain p-1 ring-1 ring-slate-200 sm:h-56 dark:ring-slate-700" />
+            <figcaption className="text-sm leading-7 text-slate-700 dark:text-slate-300">
+              <b className="block text-base font-black text-[#153448] dark:text-white">{isEn ? "Where it is in the body" : "مكانه في الجسم"}</b>
+              {isEn ? "The highlighted part shows the organs covered in this topic." : "الجزء الملوّن هو الأعضاء اللي بيشرحها الموضوع ده."}
+            </figcaption>
+            </figure>
+          )} />
+        )}
         {sectionNav && topic.sections.length > 1 && (
           <div className="sticky top-14 z-10 -mx-4 mb-4 flex gap-2 overflow-x-auto bg-[#F1F4F6]/90 px-4 py-2 backdrop-blur dark:bg-slate-950/90">
             {topic.sections.map((s, i) => (
@@ -244,9 +267,8 @@ export function TopicSectionDetail({
                   {sectionNav && <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#168C91] text-sm text-white">{i + 1}</span>}
                   {heading}
                 </h2>
-                {s.image_url && (
-                  <img src={s.image_url} alt={heading} className="mb-4 w-full rounded-xl border border-slate-200 object-cover dark:border-slate-700" />
-                )}
+                <EditableImage block slot={`sec:${basePath}/${topic.id}:${s.id || i}`} src={s.image_url || sectionArt?.(s, i, topic.id) || null} label={heading}
+                  render={(u) => <img src={u} alt={heading} loading="lazy" decoding="async" className="mx-auto mb-4 max-h-96 w-full rounded-xl border border-slate-200 bg-white object-contain p-2 dark:border-slate-700" />} />
                 {renderBody ? renderBody(body, isEn) : <TopicBody body={body} accent="teal" />}
               </section>
             );

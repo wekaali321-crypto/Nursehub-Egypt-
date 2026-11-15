@@ -28,6 +28,14 @@ export async function fetchRadiologyTopics(): Promise<RadiologyTopic[]> {
   return data as RadiologyTopic[];
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchRadiologyTopic(id: string): Promise<RadiologyTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("radiology_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as RadiologyTopic | null) ?? null;
+}
+
 export async function upsertRadiologyTopic(item: RadiologyTopic) {
   const { error } = await supabase.from("radiology_topics").upsert(item);
   if (error) throw error;

@@ -30,6 +30,14 @@ export async function fetchOperatingRoomTopics(opts?: { withRouted?: boolean }):
   return opts?.withRouted ? [...rows, ...(await routedAsTopics<OperatingRoomTopic>("operating-room"))] : rows;
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchOperatingRoomTopic(id: string): Promise<OperatingRoomTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("operating_room_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as OperatingRoomTopic | null) ?? null;
+}
+
 export async function upsertOperatingRoomTopic(item: OperatingRoomTopic) {
   const { error } = await supabase.from("operating_room_topics").upsert(item);
   if (error) throw error;

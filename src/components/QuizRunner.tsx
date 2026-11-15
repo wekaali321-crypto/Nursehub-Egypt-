@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Breadcrumbs } from './common';
 import { ImageLightbox } from './Lightbox';
+import EditableImage from "./EditableImage";
 
 export interface RunnerChoice {
   letter: string;
@@ -78,7 +79,7 @@ export default function QuizRunner({ questions, storageKey, breadcrumbs, title, 
   const [answeredCorrectly, setAnsweredCorrectly] = useState<string[]>(() => loadRunnerProgress(storageKey).answeredCorrectly);
   const [answeredWrong, setAnsweredWrong] = useState<string[]>(() => loadRunnerProgress(storageKey).answeredWrong);
   const [showArabic, setShowArabic] = useState(true);
-  const [zoomed, setZoomed] = useState(false);
+  const [zoomed, setZoomed] = useState<string | false>(false);
 
   if (questions.length === 0) {
     return (
@@ -214,19 +215,19 @@ export default function QuizRunner({ questions, storageKey, breadcrumbs, title, 
               : '⚠️ Note: this is a multiple-response question — select ALL correct answers. The remaining results appear once you have found all the correct ones.'}
           </div>
         )}
-        {q.image_url && (
+        <EditableImage block emptyHint={false} slot={`q:${q.id}`} src={q.image_url} label={`صورة السؤال`} render={(u) => (
           <div className="mb-4 overflow-hidden rounded-xl border border-slate-200 bg-white p-2 dark:border-slate-700">
             <img
-              src={q.image_url}
+              src={u}
               alt={q.question_en.slice(0, 80)}
               loading="lazy"
-              onClick={() => setZoomed(true)}
+              onClick={() => setZoomed(u)}
               className="mx-auto max-h-[420px] w-full cursor-zoom-in object-contain"
               dir="ltr"
             />
           </div>
-        )}
-        {zoomed && q.image_url && <ImageLightbox src={q.image_url} alt={q.question_en.slice(0, 80)} onClose={() => setZoomed(false)} />}
+        )} />
+        {zoomed && <ImageLightbox src={zoomed} alt={q.question_en.slice(0, 80)} onClose={() => setZoomed(false)} />}
 
         <div className="space-y-2">
           {displayedChoices.map((choice) => {

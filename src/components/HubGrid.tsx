@@ -1,4 +1,5 @@
 import { useState } from "react";
+import EmojiIcon from "./EmojiIcon";
 import { Link } from "react-router-dom";
 
 /**
@@ -67,7 +68,7 @@ export default function HubGrid({ items, accent = "teal", isEn }: { items: HubIt
         <div className="grid grid-cols-[minmax(0,1fr)] gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => (
             <Link key={it.id} to={it.to} className="group flex items-center gap-2.5 rounded-xl border border-slate-200 bg-white px-2.5 py-2 transition hover:border-teal-400 hover:shadow-sm dark:border-slate-800 dark:bg-slate-900">
-              <span className={`grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-gradient-to-br ${a.grad} text-lg text-white`}>{it.icon}</span>
+              <span className={`grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-gradient-to-br ${a.grad} text-lg text-white`}><EmojiIcon emoji={it.icon} size={18} /></span>
               <span className="min-w-0 flex-1">
                 <span className="flex items-center justify-between gap-2">
                   <span className={`line-clamp-2 text-sm font-black leading-5 text-slate-900 dark:text-white ${a.hover}`}>{isEn && it.titleEn ? it.titleEn : it.title}</span>
@@ -86,7 +87,7 @@ export default function HubGrid({ items, accent = "teal", isEn }: { items: HubIt
           {items.map((it) => (
             <Link key={it.id} to={it.to} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900">
               <div className={`flex h-20 items-end justify-between bg-gradient-to-br ${a.grad} p-4 text-white`}>
-                <span className="text-4xl drop-shadow">{it.icon}</span>
+                <span className="text-4xl text-white drop-shadow"><EmojiIcon emoji={it.icon} size={36} strokeWidth={1.75} /></span>
                 {it.category && <span className="rounded-full bg-black/25 px-3 py-1 text-xs font-black backdrop-blur">{it.category}</span>}
               </div>
               <div className="p-4">

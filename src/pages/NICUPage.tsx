@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useSEO } from "../lib/seo";
 import { useI18n } from "../lib/i18n";
-import { fetchNicuTopics, type NicuTopic } from "../lib/nicuTopicsApi";
+import { fetchNicuTopics, fetchNicuTopic, type NicuTopic } from "../lib/nicuTopicsApi";
+import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
+import { sectionArtFor } from "../lib/sectionArt";
 
 // Light orange accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -20,7 +22,7 @@ export function NicuHome() {
   const [topics, setTopics] = useState<NicuTopic[] | null>(null);
 
   useEffect(() => {
-    fetchNicuTopics().then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_nicu", TTL.topics, () => fetchNicuTopics()).then(setTopics).catch(() => setTopics([]));
   }, []);
 
   return (
@@ -47,8 +49,8 @@ export default function NicuTopicPage() {
 
   useEffect(() => {
     let cancelled = false;
-    fetchNicuTopics().then((all) => {
-      if (!cancelled) setTopic(all.find((tp) => tp.id === id) || null);
+    fetchNicuTopic(id ?? "").then((tp) => {
+      if (!cancelled) setTopic(tp);
     }).catch(() => { if (!cancelled) setTopic(null); });
     return () => { cancelled = true; };
   }, [id]);
@@ -76,6 +78,7 @@ export default function NicuTopicPage() {
       tint={TINT}
       fallbackIcon="👶"
       backLabel={{ en: "← Back to NICU", ar: "← رجوع لقسم الحضانة" }}
+      sectionArt={sectionArtFor("nicu")}
     />
   );
 }

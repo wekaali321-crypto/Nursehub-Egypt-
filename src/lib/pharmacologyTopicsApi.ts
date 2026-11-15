@@ -30,6 +30,14 @@ export async function fetchPharmacologyTopics(opts?: { withRouted?: boolean }): 
   return opts?.withRouted ? [...rows, ...(await routedAsTopics<PharmacologyTopic>("pharmacology"))] : rows;
 }
 
+/** One topic by primary key (1 row read) — topic pages must not download the whole section table to show one topic. */
+export async function fetchPharmacologyTopic(id: string): Promise<PharmacologyTopic | null> {
+  if (!supabase || !id) return null;
+  const { data, error } = await supabase.from("pharmacology_topics").select("*").eq("id", id).maybeSingle();
+  if (error) throw error;
+  return (data as PharmacologyTopic | null) ?? null;
+}
+
 export async function upsertPharmacologyTopic(item: PharmacologyTopic) {
   const { error } = await supabase.from("pharmacology_topics").upsert(item);
   if (error) throw error;

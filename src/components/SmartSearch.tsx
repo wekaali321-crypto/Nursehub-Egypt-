@@ -1,4 +1,6 @@
 import { SEARCH_DROPDOWN } from "../lib/searchDropdown";
+import { Search } from "lucide-react";
+import EmojiIcon from "./EmojiIcon";
 import { useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../lib/store";
@@ -6,6 +8,7 @@ import { CAT_KEY } from "./common";
 import { useI18n, bilingual } from "../lib/i18n";
 import { logSearch } from "../lib/analytics";
 import { useExtraSearchIndex } from "../lib/searchIndex";
+import { drugPhoneticKeys, phoneticKey, phoneticScore } from "../lib/phonetic";
 
 interface Suggestion {
   label: string;
@@ -35,8 +38,11 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
       .filter((a) => a.status === "published" && [a.title, a.titleEn, a.excerpt, a.content, a.contentEn, ...a.tags].filter(Boolean).join(" ").toLowerCase().includes(lower))
       .slice(0, 5)
       .map((a) => ({ label: bilingual(a.title, a.titleEn, lang).text, sub: t(CAT_KEY[a.category]), to: `/article/${a.slug}`, icon: a.category === "books" ? "📖" : "📝" }));
-    const fromDrugs: Suggestion[] = drugs
-      .filter((d) => (d.name + d.genericName + d.drugClass + d.indications).toLowerCase().includes(lower))
+    const direct = drugs.filter((d) => (d.name + d.genericName + d.drugClass + d.indications).toLowerCase().includes(lower));
+    const qk = direct.length ? "" : phoneticKey(q);
+    const fromDrugs: Suggestion[] = (direct.length ? direct : drugs
+      .map((d) => ({ d, s: phoneticScore(qk, drugPhoneticKeys([d.name, d.nameEn, d.genericName, d.genericNameEn])) }))
+      .filter((h) => h.s > 0).sort((a, b) => b.s - a.s).map((h) => h.d))
       .slice(0, 3)
       .map((d) => ({ label: bilingual(d.name, d.nameEn, lang).text, sub: `${t("search.drugBadge")} • ${bilingual(d.category, d.categoryEn, lang).text}`, to: `/drug/${d.slug}`, icon: "💊" }));
     const fromIcu: Suggestion[] = icuTopics
@@ -140,7 +146,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
     <div className={isHero ? "relative mx-auto mt-6 max-w-xl" : "relative w-full"}>
       {isHero ? (
         <form onSubmit={submit} className="flex items-center gap-2 rounded-full bg-white p-1.5 shadow-2xl shadow-teal-900/20">
-          <span className="pr-3 text-xl text-slate-500 dark:text-slate-400">🔍</span>
+          <span className="pr-3 text-slate-500 dark:text-slate-400"><Search size={20} aria-hidden="true" /></span>
           <input {...inputProps} placeholder={t("common.searchPlaceholder")} className="flex-1 bg-transparent text-slate-800 outline-none placeholder:text-slate-400" />
           <button className="rounded-full bg-[#127378] hover:bg-[#0f6165] px-5 py-2.5 font-bold text-white sm:px-7">{t("common.search")}</button>
         </form>
@@ -148,7 +154,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
         <form onSubmit={submit}>
           <div className="relative">
             <input {...inputProps} placeholder={t("common.search") + "..."} className="w-full rounded-full border border-slate-200 bg-slate-50 py-2 pr-9 pl-3 text-sm outline-none transition-all focus:border-teal-400 dark:border-slate-700 dark:bg-slate-800" />
-            <span className="absolute right-3 top-2.5 text-slate-500 dark:text-slate-400">🔍</span>
+            <span className="absolute right-3 top-2.5 text-slate-500 dark:text-slate-400"><Search size={16} aria-hidden="true" /></span>
           </div>
         </form>
       )}
@@ -164,7 +170,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
               onClick={() => go(s.to)}
               className={`flex w-full items-center gap-3 px-4 py-2.5 text-right ${i === active ? "bg-teal-50 dark:bg-slate-800" : "hover:bg-slate-50 dark:hover:bg-slate-800"}`}
             >
-              <span className="text-lg">{s.icon}</span>
+              <span className="text-[#168C91] dark:text-teal-300"><EmojiIcon emoji={s.icon} fallback="🔍" size={18} /></span>
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-sm font-semibold dark:text-white">{s.label}</span>
                 <span className="block text-xs text-slate-500 dark:text-slate-400">{s.sub}</span>

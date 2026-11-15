@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Bell, BellOff, Globe, Heart, LogOut, Menu, Moon, Sun, User, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTheme } from "../lib/theme";
 import { useStore } from "../lib/store";
@@ -25,6 +26,8 @@ const PATH_LABELS: Record<string, TKey> = {
   "/category/books": "nav.books",
   "/quizzes": "nav.quizzes",
   "/tools": "nav.tools",
+  "/shift": "nav.shift",
+  "/cards": "nav.cards",
   "/ecg": "nav.ecg",
   "/icu-nursing": "nav.icuNursing",
   "/dialysis": "nav.dialysis",
@@ -129,20 +132,20 @@ function UserMenu() {
             onClick={() => setOpen(false)}
             className="block px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800"
           >
-            👤 {isRTL ? "حسابي" : "My Account"}
+            <User size={16} className="inline-block -mt-0.5 me-1.5" aria-hidden="true" />{isRTL ? "حسابي" : "My Account"}
           </Link>
           <Link
             to="/favorites"
             onClick={() => setOpen(false)}
             className="block px-4 py-2.5 text-sm font-semibold text-slate-600 hover:bg-slate-50 dark:text-slate-200 dark:hover:bg-slate-800"
           >
-            ❤️ {isRTL ? "المفضلة" : "Favorites"}
+            <Heart size={16} className="inline-block -mt-0.5 me-1.5" aria-hidden="true" />{isRTL ? "المفضلة" : "Favorites"}
           </Link>
           <button
             onClick={doLogout}
             className="block w-full px-4 py-2.5 text-start text-sm font-semibold text-rose-700 dark:text-rose-300 hover:bg-rose-50 dark:hover:bg-rose-500/10"
           >
-            🚪 {isRTL ? "تسجيل الخروج" : "Log out"}
+            <LogOut size={16} className="inline-block -mt-0.5 me-1.5" aria-hidden="true" />{isRTL ? "تسجيل الخروج" : "Log out"}
           </button>
         </div>
       )}
@@ -224,7 +227,7 @@ export default function Navbar() {
             title={t("lang.switch")}
             className="flex h-9 items-center justify-center gap-1 rounded-full border border-slate-200 px-2.5 text-sm font-bold hover:bg-slate-100 sm:h-10 sm:px-3 dark:border-slate-700 dark:hover:bg-slate-800 dark:text-white"
           >
-            🌍 {lang === "ar" ? "EN" : "ع"}
+            <Globe size={16} aria-hidden="true" /> {lang === "ar" ? "EN" : "ع"}
           </button>
 
           <Link
@@ -233,7 +236,7 @@ export default function Navbar() {
             title="المفضلة"
             className="relative hidden h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 sm:flex dark:border-slate-700 dark:hover:bg-slate-800"
           >
-            ❤️
+            <Heart size={18} className="text-rose-500" aria-hidden="true" />
             {favCount > 0 && <span className="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-rose-500 px-1 text-[10px] font-bold text-white">{favCount}</span>}
           </Link>
 
@@ -245,7 +248,7 @@ export default function Navbar() {
               title="فعّل الإشعارات — استقبل تنبيه بمقالات وكتب جديدة"
               className="hidden h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 disabled:opacity-50 sm:flex dark:border-slate-700 dark:hover:bg-slate-800"
             >
-              🔕
+              <BellOff size={18} aria-hidden="true" />
             </button>
           )}
           <NotificationBell />
@@ -255,7 +258,7 @@ export default function Navbar() {
             aria-label="Theme"
             className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 text-lg hover:bg-slate-100 sm:h-10 sm:w-10 dark:border-slate-700 dark:hover:bg-slate-800"
           >
-            {theme === "dark" ? "☀️" : "🌙"}
+            {theme === "dark" ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
           </button>
 
           <UserMenu />
@@ -272,7 +275,7 @@ export default function Navbar() {
             className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 sm:h-10 sm:w-10 lg:hidden dark:border-slate-700"
             aria-label="القائمة"
           >
-            {open ? "✕" : "☰"}
+            {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
           </button>
         </div>
       </div>
@@ -289,16 +292,16 @@ export default function Navbar() {
           </form>
           <div className="mb-2 flex gap-2 sm:hidden">
             <Link to="/favorites" onClick={() => setOpen(false)} className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 dark:border-slate-700 dark:text-slate-200">
-              ❤️ {lang === "ar" ? "المفضلة" : "Favorites"}{favCount > 0 ? ` (${favCount})` : ""}
+              <Heart size={16} className="text-rose-500" aria-hidden="true" /> {lang === "ar" ? "المفضلة" : "Favorites"}{favCount > 0 ? ` (${favCount})` : ""}
             </Link>
             {isPushSupported() && !pushOn && (
               <button onClick={handleSubscribe} disabled={pushBusy} className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 disabled:opacity-50 dark:border-slate-700 dark:text-slate-200">
-                🔕 {lang === "ar" ? "فعّل الإشعارات" : "Enable alerts"}
+                <BellOff size={16} aria-hidden="true" /> {lang === "ar" ? "فعّل الإشعارات" : "Enable alerts"}
               </button>
             )}
             {pushOn && (
               <span className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:text-emerald-300">
-                🔔 {lang === "ar" ? "الإشعارات مفعّلة" : "Alerts on"}
+                <Bell size={16} aria-hidden="true" /> {lang === "ar" ? "الإشعارات مفعّلة" : "Alerts on"}
               </span>
             )}
           </div>

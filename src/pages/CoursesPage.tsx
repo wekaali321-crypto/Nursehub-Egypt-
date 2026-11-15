@@ -30,6 +30,7 @@ import { ImageLightbox } from '../components/Lightbox';
 import { sanitizeHtml } from '../utils/sanitizeHtml';
 import { useSEO } from '../lib/seo';
 import { useI18n } from '../lib/i18n';
+import EditableImage from "../components/EditableImage";
 
 function LoadingBlock() {
   return (
@@ -113,7 +114,8 @@ export function CoursesHome() {
             to={`/courses/${c.id}`}
             className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900"
           >
-            {c.image_url && <img src={c.image_url} alt="" loading="lazy" className="h-36 w-full object-cover" />}
+            <EditableImage block emptyHint={false} slot={`course:${c.id}`} src={c.image_url} label={`صورة الكورس: ${c.title_ar}`}
+              render={(u) => <img src={u} alt="" loading="lazy" className="h-36 w-full object-cover" />} />
             <div className="p-5">
               <div className="flex items-center gap-3">
                 <div className="text-3xl">{c.icon || '🎓'}</div>

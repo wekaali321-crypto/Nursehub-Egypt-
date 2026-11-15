@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, type ReactNode } from "react";
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation, matchPath } from "react-router-dom";
 import { trackPageview, startHeartbeat } from "./lib/siteTracker";
 import { syncPushSubscription } from "./lib/push";
 import { ThemeProvider, AuthProvider, useAuth } from "./lib/theme";
@@ -14,7 +14,8 @@ import PublicLayout from "./components/PublicLayout";
 import AdminLayout from "./admin/AdminLayout";
 import Login from "./admin/Login";
 import { SkeletonGrid } from "./components/Skeleton";
-import Logo from "./components/Logo";
+import { useMaintenance } from "./lib/maintenance";
+import { installLinkPrefetch } from "./lib/prefetch";
 
 // Public pages — code-split (default exports)
 const Home = lazy(() => import("./pages/Home"));
@@ -198,6 +199,8 @@ const CheckoutPage = lazy(() => import("./pages/CheckoutPage"));
 const ProductPage = lazy(() => import("./pages/ProductPage"));
 const FavoritesPage = lazy(() => import("./pages/FavoritesPage"));
 const OrderStatusPage = lazy(() => import("./pages/OrderStatusPage"));
+const ShiftPage = lazy(() => import("./pages/ShiftPage"));
+const CardsPage = lazy(() => import("./pages/CardsPage"));
 import { LoginPage, RegisterPage, ForgotPage } from "./pages/AuthPages";
 
 function Loader() {
@@ -208,32 +211,66 @@ function Loader() {
   );
 }
 
-function MaintenanceScreen() {
+function MaintenanceScreen({ message, until: untilRaw }: { message?: string; until?: string }) {
   const { settings } = useStore();
-  const until = settings.maintenanceUntil ? new Date(settings.maintenanceUntil) : null;
+  const until = untilRaw ? new Date(untilRaw) : null;
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-sky-600 to-emerald-600 p-6 text-center text-white">
+    <div className="nh-hero flex min-h-screen flex-col items-center justify-center p-6 text-center text-white">
       <div className="text-7xl">🛠️</div>
       <h1 className="mt-4 text-3xl font-black md:text-4xl">{settings.siteName}</h1>
-      <p className="mt-3 max-w-lg text-lg text-sky-50">{settings.maintenanceMessage || "الموقع تحت الصيانة حالياً، سنعود قريباً."}</p>
+      <p className="mt-3 max-w-lg text-lg text-teal-50">{message || "الموقع تحت الصيانة حالياً، سنعود قريباً."}</p>
       {until && <p className="mt-4 rounded-full bg-white/15 px-5 py-2 text-sm font-bold backdrop-blur">العودة المتوقعة: {until.toLocaleString("ar-EG")}</p>}
       <a href="/admin" className="mt-6 text-sm underline opacity-80">دخول المشرفين</a>
     </div>
   );
 }
 
-function HydrationGate({ children }: { children: ReactNode }) {
+/** Public pages that fetch their own data (own API + static snapshot) and never read the store bundle. They render immediately. */
+const STORE_FREE_ROUTES = [
+  '/shift', '/cards', '/anatomy', '/anatomy/:id', '/cases', '/courses', '/diseases', '/tools', '/interview-questions', '/travel-questions', '/travel-questions/:categoryId',
+  '/dialysis', '/dialysis/:id', '/er-reception', '/er-reception/:id', '/first-aid', '/first-aid/:id', '/fundamentals', '/fundamentals/:id',
+  '/icu-nursing', '/icu-nursing/:id', '/obgyn', '/obgyn/:id', '/operating-room', '/operating-room/:id', '/pediatrics', '/pediatrics/:id',
+  '/pharmacology', '/pharmacology/:id', '/radiology', '/radiology/:id', '/terminology', '/terminology/:id',
+  '/tests/licensure', '/tests/licensure/:categoryId', '/tests/licensure/:categoryId/:examId',
+  '/drugs/er-medications', '/drugs/high-alert-ref', '/drugs/icu-medications', '/drugs/iv-compatibility', '/drugs/lasa',
+  '/drugs/organ-dose', '/drugs/peds-medications', '/drugs/pregnancy-lactation', '/drugs/prescriptions',
+];
+
+/** Layout-stable placeholder shown while the store bundle loads (same container + grid as the real pages: no jump when content arrives). */
+function PageSkeleton() {
+  return (
+    <div className="mx-auto max-w-7xl px-4 py-8" role="status" aria-busy="true" aria-label="جارٍ التحميل">
+      <div className="mb-8 h-40 w-full animate-pulse rounded-3xl bg-slate-200 dark:bg-slate-800 sm:h-48" />
+      <SkeletonGrid count={6} />
+    </div>
+  );
+}
+
+/**
+ * The header/footer (PublicLayout) are always visible. Pages that need the store bundle show a skeleton until it is ready;
+ * pages that load their own data render at once, so a slow or failed bundle never blocks them.
+ * The admin area still waits for the full bundle (it edits it).
+ */
+function HydrationGate({ children, admin = false }: { children: ReactNode; admin?: boolean }) {
   const { loading, settings } = useStore();
-  const { loggedIn } = useAuth();
-  if (!loading && settings.maintenanceMode && !loggedIn) return <MaintenanceScreen />;
+  const { loggedIn, checking } = useAuth();
+  const { pathname } = useLocation();
+  const maint = useMaintenance(); // own one-row check, started at boot: never waits for the store bundle
+  if (!admin && !loggedIn) {
+    // Remote flag (nh_settings) or, in local preview mode, the store's own settings.
+    // 'unknown' (read failed / timed out) fails open; a late answer of 'on' re-renders this gate into the maintenance screen.
+    const remoteOn = maint?.status === "on";
+    const on = remoteOn || (!loading && settings.maintenanceMode);
+    if (on) {
+      if (checking) return <PageSkeleton />; // an admin's session may still be restoring: show nothing yet, not the page
+      return <MaintenanceScreen message={remoteOn ? maint!.message : settings.maintenanceMessage} until={remoteOn ? maint!.until : settings.maintenanceUntil} />;
+    }
+    // Until the flag is known, no page content (store-free pages included) is rendered: the shell + skeleton only.
+    if (maint === null) return <PageSkeleton />;
+  }
   if (loading) {
-    return (
-      <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4 px-4 text-center">
-        <div className="animate-pulse"><Logo size={56} /></div>
-        <div className="h-8 w-8 animate-spin rounded-full border-4 border-sky-500 border-t-transparent" />
-        <p className="font-semibold text-slate-500 dark:text-slate-400">جارٍ التحميل...</p>
-      </div>
-    );
+    const free = !admin && STORE_FREE_ROUTES.some((r) => matchPath({ path: r, end: true }, pathname));
+    if (!free) return <PageSkeleton />;
   }
   return <>{children}</>;
 }
@@ -254,7 +291,7 @@ function Admin({ children }: { children: ReactNode }) {
   if (!loggedIn) return <Login />;
   return (
     <AdminLayout>
-      <HydrationGate>
+      <HydrationGate admin>
         <Suspense fallback={<Loader />}>{children}</Suspense>
       </HydrationGate>
     </AdminLayout>
@@ -268,6 +305,7 @@ function SiteTracker() {
     trackPageview(pathname + search);
   }, [pathname, search]);
   useEffect(() => startHeartbeat(() => window.location.pathname), []);
+  useEffect(() => installLinkPrefetch(), []);
   useEffect(() => { const t = window.setTimeout(() => void syncPushSubscription(), 4000); return () => window.clearTimeout(t); }, []);
   return null;
 }
@@ -377,6 +415,8 @@ export default function App() {
                   <Route path="/forgot" element={<Public><ForgotPage /></Public>} />
                   <Route path="/search" element={<Public><SearchPage /></Public>} />
                   <Route path="/tools" element={<Public><ToolsPage /></Public>} />
+                  <Route path="/shift" element={<Public><ShiftPage /></Public>} />
+                  <Route path="/cards" element={<Public><CardsPage /></Public>} />
                   <Route path="/ecg" element={<Public><ECGPage /></Public>} />
                   <Route path="/store" element={<Public><StorePage /></Public>} />
                   <Route path="/checkout" element={<Public><CheckoutPage /></Public>} />

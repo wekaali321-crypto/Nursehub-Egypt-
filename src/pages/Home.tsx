@@ -10,6 +10,9 @@ import StudyStrip from "../components/StudyStrip";
 import InstallAppButton from "../components/InstallAppButton";
 import { useSEO } from "../lib/seo";
 import { useI18n, bilingual } from "../lib/i18n";
+import EmojiIcon from "../components/EmojiIcon";
+import { Zap } from "lucide-react";
+import EditableImage from "../components/EditableImage";
 
 const DIFFICULTY_LABEL: Record<string, { ar: string; en: string }> = {
   "سهل": { ar: "سهل", en: "Easy" },
@@ -114,13 +117,8 @@ export default function Home() {
             </div>
             <div className="relative mx-auto flex w-full max-w-xs flex-col items-center sm:max-w-sm">
               <div aria-hidden className="absolute inset-x-6 bottom-6 top-10 rounded-[2rem] border border-white/10 bg-gradient-to-b from-[#168C91]/30 to-white/5" />
-              <img
-                src="/male-nurse-mascot.webp"
-                alt={t("home.mascotAlt")}
-                width={320}
-                height={465}
-                className="relative w-44 drop-shadow-2xl sm:w-60 lg:w-72"
-              />
+              <EditableImage slot="home:mascot" src="/male-nurse-mascot.webp" label={t("home.mascotAlt")}
+                render={(u) => <img src={u} alt={t("home.mascotAlt")} width={320} height={465} className="relative w-44 drop-shadow-2xl sm:w-60 lg:w-72" />} />
               <div className="relative mt-3 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-center backdrop-blur">
                 <h2 className="text-sm font-black sm:text-base">{t("home.mascotTitle")}</h2>
                 <p className="mt-1 text-xs leading-6 text-slate-200">{t("home.mascotDesc")}</p>
@@ -183,7 +181,7 @@ export default function Home() {
             const qDifficulty = DIFFICULTY_LABEL[q.difficulty]?.[lang] ?? q.difficulty;
             return (
               <Link key={q.id} to={`/quiz/${q.id}`} className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-[#F1F4F6] p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
-                <div className="flex items-center justify-between"><span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-[#127378] dark:text-teal-300 dark:bg-sky-500/10">{qCategory}</span><span className="text-2xl">📝</span></div>
+                <div className="flex items-center justify-between"><span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-[#127378] dark:text-teal-300 dark:bg-teal-500/10">{qCategory}</span><span className="text-2xl">📝</span></div>
                 <h3 className="mt-2 font-bold dark:text-white">{qTitle}</h3>
                 <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">{q.questions.length} {t("quiz.numQuestions")} · {qDifficulty}</div>
               </Link>
@@ -198,12 +196,19 @@ export default function Home() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {TOOL_PREVIEWS.map((tool) => (
             <Link key={tool.t} to="/tools" className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-[#F1F4F6] p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
-              <div className="text-3xl">{tool.i}</div>
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#168C91]/10 text-[#127378] dark:text-teal-300"><EmojiIcon emoji={tool.i} size={26} /></div>
               <div className="mt-2 font-bold dark:text-white">{lang === "en" ? tool.tEn : tool.t}</div>
               <div className="text-sm text-slate-600 dark:text-slate-400">{lang === "en" ? tool.dEn : tool.d}</div>
             </Link>
           ))}
         </div>
+        <Link to="/shift" className="nh-hero mt-4 flex items-center gap-4 rounded-2xl p-4 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
+          <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#168C91]"><Zap size={24} aria-hidden="true" /></span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-base font-black">{t("nav.shift")}</span>
+            <span className="block text-sm text-teal-50">{t("shift.cta")}</span>
+          </span>
+        </Link>
       </section>
     ),
     store: (

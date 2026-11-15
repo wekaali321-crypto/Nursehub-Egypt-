@@ -8,6 +8,7 @@ import { fetchRxPrescriptions, type RxPrescription } from "./rxApi";
 import { fetchOrganDoseAdjustments, type OrganDoseAdjustment } from "./organDoseApi";
 import { fetchPregnancyLactationSafety, type PregnancyLactationSafety } from "./pregnancyLactationApi";
 import { fetchIVCompatibility, type IVCompatibilityPair } from "./ivCompatibilityApi";
+import { drugPhoneticKeys, phoneticKey, phoneticScore } from "./phonetic";
 
 export interface GlobalSearchData {
   icu: ICUMedication[];
@@ -54,6 +55,16 @@ export function searchGlobalDrugs(query: string, drugs: Drug[], data: GlobalSear
     if (d.name.toLowerCase().includes(q) || d.genericName.toLowerCase().includes(q) || d.drugClass.toLowerCase().includes(q)) {
       results.push({ id: `d-${d.id}`, title: d.name, subtitle: d.genericName, icon: "💊", sourceLabel: "الأدوية الرئيسية", to: `/drug/${d.slug}` });
     }
+  }
+  if (results.length === 0) {
+    // sound-alike names: Arabic spelling of an English drug name, or a small typo
+    const qk = phoneticKey(query);
+    drugs
+      .map((d) => ({ d, s: phoneticScore(qk, drugPhoneticKeys([d.name, d.nameEn, d.genericName, d.genericNameEn])) }))
+      .filter((h) => h.s > 0)
+      .sort((a, b) => b.s - a.s)
+      .slice(0, 8)
+      .forEach(({ d }) => results.push({ id: `d-${d.id}`, title: d.name, subtitle: d.genericName, icon: "💊", sourceLabel: "الأدوية الرئيسية", to: `/drug/${d.slug}` }));
   }
   for (const i of data.icu) {
     if (i.drug_name.toLowerCase().includes(q) || (i.drug_class || "").toLowerCase().includes(q)) {

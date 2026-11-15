@@ -7,6 +7,7 @@ import { useI18n, bilingual } from "../lib/i18n";
 import PrintButton from "../components/PrintButton";
 import InlineLangToggle from "../components/InlineLangToggle";
 import { useSEO } from "../lib/seo";
+import EditableImage from "../components/EditableImage";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "الجهاز التنفسي (Respiratory)": "from-teal-500 to-cyan-600",
@@ -192,11 +193,12 @@ export default function PedsMedicationDetail() {
         )}
       </div>
 
-      {item.show_image && item.image_url && (
-        <div className="mb-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
-          <img src={item.image_url} alt={drugName} className="mx-auto max-h-80 w-auto rounded-2xl object-contain" />
-        </div>
-      )}
+      <EditableImage block slot={`peds:${item.id}`} src={item.show_image ? item.image_url : null} label={`صورة الدواء: ${drugName}`}
+        render={(u) => (
+          <div className="mb-6 overflow-hidden rounded-3xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
+            <img src={u} alt={drugName} className="mx-auto max-h-80 w-auto rounded-2xl object-contain" />
+          </div>
+        )} />
 
       <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 dark:bg-slate-900 dark:border-slate-800">
         <InfoBlock title={LABELS.uses[lang]} content={bilingual(item.uses, item.uses_en, lang).text} />

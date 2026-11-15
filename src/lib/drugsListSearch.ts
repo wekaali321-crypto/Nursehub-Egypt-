@@ -1,4 +1,5 @@
 import type { Drug } from "./types";
+import { drugPhoneticKeys, phoneticKey, phoneticScore } from "./phonetic";
 
 /** Light, dictionary-free normalisation so Arabic spelling variants and Latin case match: strips diacritics/tatweel, unifies alef/ya/ta-marbuta. */
 export function normalizeSearch(s: string): string {
@@ -19,12 +20,15 @@ export interface IndexedDrug {
   /** class (English), category and indications — matched as a secondary group only */
   indText: string;
   nameNorm: string;
+  /** sound-alike keys of the names (Arabic spelling / typos), see lib/phonetic */
+  phon: string[];
 }
 
 export function indexDrugs(drugs: Drug[]): IndexedDrug[] {
   return drugs.map((d) => ({
     drug: d,
     nameNorm: normalizeSearch(d.name),
+    phon: drugPhoneticKeys([d.name, d.nameEn, d.genericName, d.genericNameEn]),
     nameText: normalizeSearch([d.name, d.nameEn, d.genericName, d.genericNameEn, d.drugClass].filter(Boolean).join(" | ")),
     indText: normalizeSearch([d.drugClassEn, d.category, d.categoryEn, d.indications, d.indicationsEn].filter(Boolean).join(" | ")),
   }));
@@ -55,6 +59,13 @@ export function searchDrugs(index: IndexedDrug[], query: string, accept: (d: Dru
     if (!accept(x.drug)) continue;
     if (matches(x.nameText, tokens)) byName.push(x.drug);
     else if (q.length >= minLen && matches(x.indText, tokens)) byIndication.push(x.drug);
+  }
+  // Nothing by name: try sound-alike names ("باراسيتامول" → Paracetamol, "ceftriaxon" → Ceftriaxone), best first.
+  if (byName.length === 0) {
+    const qk = phoneticKey(query);
+    const hits = index.filter((x) => accept(x.drug)).map((x) => ({ d: x.drug, s: phoneticScore(qk, x.phon) })).filter((h) => h.s > 0);
+    hits.sort((a, b) => b.s - a.s);
+    for (const h of hits) if (!byIndication.includes(h.d)) byName.push(h.d);
   }
   return { byName, byIndication };
 }

@@ -91,6 +91,21 @@ function publicInsertOk(table, row) {
 }
 
 
+// ---------------------------------------------------------------- D1 error classification
+/** True when D1 refuses queries because the account quota (free-tier daily rows read / written) is exhausted. */
+export const isD1QuotaError = (msg) => {
+  const m = String(msg || '');
+  return /exceeded|free tier|daily (row|rows)? ?(read|write|written)? ?limit|quota/i.test(m) && /D1|free tier|rows? (read|written)|quota/i.test(m);
+};
+/** Quota exhaustion answers 429 + Retry-After so clients can switch to the static snapshot (NOT 503/520: postgrest-js retries those with
+ *  1s/2s/4s back-off, which delays every page by ~7 s and repeats the doomed D1 query);
+ *  every other exception (bad filter, SQL error, ...) stays a 400 so real application errors are never masked. */
+export function d1ErrorResponse(e) {
+  const msg = String((e && e.message) || e);
+  if (isD1QuotaError(msg)) return respond({ code: 'PGRST000', message: msg, details: null, hint: null }, 429, { 'retry-after': '3600', 'x-d1-quota': '1' });
+  return perr(400, 'PGRST100', msg);
+}
+
 // ---------------------------------------------------------------- tracking guard (protects the D1 free plan: 100k writes/day)
 const BOT_UA = /bot|crawl|spider|slurp|lighthouse|headless|facebookexternalhit|preview|pingdom|monitor|python|curl|wget|scrapy|httpclient|go-http|java\//i;
 const TRACK_TABLES = new Set(['site_visits', 'site_pings', 'site_installs']);
@@ -235,7 +250,9 @@ export async function handleRest(request, env, path, forceAdmin = false) {
   const method = request.method;
   const [first, ...restPath] = path;
 
-  if (first === 'rpc') return handleRpc(request, env, restPath[0], who);
+  if (first === 'rpc') {
+    try { return await handleRpc(request, env, restPath[0], who); } catch (e) { return d1ErrorResponse(e); }
+  }
 
   const table = first;
   if (!table || !SCHEMA[table]) return perr(404, 'PGRST205', `Could not find the table 'public.${table}'`);
@@ -348,7 +365,7 @@ export async function handleRest(request, env, path, forceAdmin = false) {
     }
     return perr(405, 'PGRST000', 'Method not allowed');
   } catch (e) {
-    return perr(400, 'PGRST100', String(e.message || e));
+    return d1ErrorResponse(e);
   }
 }
 
@@ -358,60 +375,114 @@ async function handleRpc(request, env, name, who) {
     if (!(await isAdmin(env, who))) return perr(403, 'P0001', 'not allowed');
     return respond(await adminSiteStats(env));
   }
+  if (name === 'travel_question_counts') {
+    // one grouped query (served by idx_travel_q_cat_order) instead of one COUNT per category; public table, public result
+    const rows = (await env.DB.prepare('SELECT category_id, COUNT(*) n FROM travel_questions GROUP BY category_id').bind().all()).results;
+    return respond(Object.fromEntries(rows.map((r) => [r.category_id, r.n])));
+  }
   return perr(404, 'PGRST202', `Could not find the function public.${name}`);
 }
 
 const CAIRO_OFFSET_SQL = "datetime(created_at, '+2 hours')"; // Egypt (UTC+2; DST ignored in dashboard buckets)
+const ISO = "'%Y-%m-%dT%H:%M:%S.000Z'"; // .000Z keeps created_at values with fractional seconds on the right side of a day boundary
+
+// The admin dashboard polls this RPC. To keep it from rescanning site_visits on every poll it is split in tiers:
+//   A (every call)   : online now, today / yesterday, new visitors today  -> index range scans only
+//   B (5 minutes)    : 31-day windows (sessions, daily, devices, sources, top pages) and 12-month totals
+//   C (24 hours)     : all-time totals (visitors, views, sessions, installers, since)
+// Tier B/C are memoised per isolate; tier C is also kept in the edge Cache API under an internal key
+// (aggregated counts only, written after the admin check, never served for any public URL).
+const STATS_TTL_B = 5 * 60 * 1000;
+const STATS_TTL_C = 24 * 3600 * 1000;
+const statsMemo = { b: null, c: null };
+export const __statsMemoReset = () => { statsMemo.b = null; statsMemo.c = null; };
+async function memoTier(slot, ttl, compute) {
+  const m = statsMemo[slot];
+  if (m && Date.now() - m.ts < ttl) return m.v;
+  const v = await compute();
+  statsMemo[slot] = { ts: Date.now(), v };
+  return v;
+}
+async function edgeMemo(key, ttlSec, compute) {
+  let cache = null;
+  const req = new Request(`https://stats.internal/${key}`);
+  try { cache = caches.default; const hit = await cache.match(req); if (hit) return await hit.json(); } catch { cache = null; }
+  const v = await compute();
+  try { if (cache) await cache.put(req, new Response(JSON.stringify(v), { headers: { 'cache-control': `max-age=${ttlSec}`, 'content-type': 'application/json' } })); } catch { /* best effort */ }
+  return v;
+}
+const cairoDay = (offsetDays = 0) => new Date(Date.now() + 2 * 3600e3 - offsetDays * 864e5).toISOString().slice(0, 10);
+const cairoMonth = (offsetMonths = 0) => { const n = new Date(Date.now() + 2 * 3600e3); const d = new Date(Date.UTC(n.getUTCFullYear(), n.getUTCMonth() - offsetMonths, 1)); return d.toISOString().slice(0, 7); };
+
 async function adminSiteStats(env) {
   const db = env.DB;
   const one = async (sql, ...b) => (await db.prepare(sql).bind(...b).first()) || {};
   const all = async (sql, ...b) => (await db.prepare(sql).bind(...b).all()).results;
-  await db.prepare("DELETE FROM site_pings WHERE created_at < datetime('now','-3 days')").run();
   const day = `date(${CAIRO_OFFSET_SQL})`;
-  const today = (await one("SELECT date('now','+2 hours') d")).d;
-  const yday = (await one("SELECT date('now','+2 hours','-1 day') d")).d;
+  const today = cairoDay(0), yday = cairoDay(1);
+  // UTC bounds of a Cairo calendar day as ISO strings (plain created_at range -> uses idx_site_visits_created)
+  const range = async (d) => { const r = await one(`SELECT strftime(${ISO}, datetime(? || ' 00:00:00', '-2 hours')) s, strftime(${ISO}, datetime(? || ' 00:00:00', '+22 hours')) e`, d, d); return [r.s, r.e]; };
+
+  // ---- tier A: live
   const online = (await one("SELECT COUNT(DISTINCT visitor_id) n FROM (SELECT visitor_id FROM site_pings WHERE created_at > datetime('now','-5 minutes') UNION ALL SELECT visitor_id FROM site_visits WHERE created_at > datetime('now','-5 minutes'))")).n;
   const onlineApp = (await one("SELECT COUNT(DISTINCT visitor_id) n FROM (SELECT visitor_id FROM site_pings WHERE is_app=1 AND created_at > datetime('now','-5 minutes') UNION ALL SELECT visitor_id FROM site_visits WHERE is_app=1 AND created_at > datetime('now','-5 minutes'))")).n;
-  const sessions = await all(`SELECT ${day} dy, COUNT(*) c FROM (SELECT visitor_id, created_at, LAG(created_at) OVER (PARTITION BY visitor_id ORDER BY created_at) prev FROM site_visits) WHERE prev IS NULL OR (julianday(created_at) - julianday(prev)) > 0.0208333 GROUP BY 1`);
-  const sess = Object.fromEntries(sessions.map((r) => [r.dy, r.c]));
-  const dayStats = async (d) => ({
-    ...(await one(`SELECT COUNT(DISTINCT visitor_id) visitors, COUNT(*) views FROM site_visits WHERE ${day} = ?`, d)),
-    sessions: sess[d] || 0,
+  const [ts, te] = await range(today), [ys, ye] = await range(yday);
+  const dayStats = (s, e) => one('SELECT COUNT(DISTINCT visitor_id) visitors, COUNT(*) views FROM site_visits WHERE created_at >= ? AND created_at < ?', s, e);
+  const t = await dayStats(ts, te);
+  const y = await dayStats(ys, ye);
+  t.new_visitors = (await one('SELECT COUNT(*) n FROM (SELECT DISTINCT visitor_id FROM site_visits WHERE created_at >= ? AND created_at < ?) v WHERE NOT EXISTS (SELECT 1 FROM site_visits p WHERE p.visitor_id = v.visitor_id AND p.created_at < ?)', ts, te, ts)).n;
+  t.installs = (await one(`SELECT COUNT(DISTINCT visitor_id) n FROM site_installs WHERE kind IN ('installed','apk_download') AND created_at >= ? AND created_at < ?`, ts, te)).n;
+  t.app_users = (await one('SELECT COUNT(DISTINCT visitor_id) n FROM site_visits WHERE is_app=1 AND created_at >= ? AND created_at < ?', ts, te)).n;
+
+  // ---- tier B: windows
+  const B = await memoTier('b', STATS_TTL_B, async () => {
+    await db.prepare("DELETE FROM site_pings WHERE created_at < datetime('now','-3 days')").run();
+    const sessions = await all(`SELECT ${day} dy, COUNT(*) c FROM (SELECT visitor_id, created_at, LAG(created_at) OVER (PARTITION BY visitor_id ORDER BY created_at) prev FROM site_visits WHERE created_at > datetime('now','-32 days')) WHERE prev IS NULL OR (julianday(created_at) - julianday(prev)) > 0.0208333 GROUP BY 1`);
+    const dv = await all(`SELECT ${day} dy, COUNT(DISTINCT visitor_id) visitors, COUNT(*) views FROM site_visits WHERE created_at > datetime('now','-31 days') GROUP BY 1`);
+    const di = await all(`SELECT ${day} dy, COUNT(DISTINCT visitor_id) installs FROM site_installs WHERE kind IN ('installed','apk_download') AND created_at > datetime('now','-31 days') GROUP BY 1`);
+    const mv = await all("SELECT strftime('%Y-%m', datetime(created_at,'+2 hours')) mo, COUNT(DISTINCT visitor_id) visitors, COUNT(*) views, COUNT(DISTINCT CASE WHEN is_app=1 THEN visitor_id END) app_users FROM site_visits WHERE created_at > datetime('now','-13 months') GROUP BY 1");
+    const mi = await all("SELECT strftime('%Y-%m', datetime(created_at,'+2 hours')) mo, COUNT(DISTINCT visitor_id) installs FROM site_installs WHERE kind IN ('installed','apk_download') GROUP BY 1");
+    const obj = (rows, k) => Object.fromEntries(rows.map((r) => [r[k] ?? 'unknown', r.c]));
+    return {
+      sessions, dv, di, mv, mi,
+      installs_by_kind: obj(await all('SELECT kind, COUNT(*) c FROM site_installs GROUP BY kind'), 'kind'),
+      installs_by_platform: obj(await all("SELECT platform, COUNT(DISTINCT visitor_id) c FROM site_installs WHERE kind IN ('installed','apk_download') GROUP BY platform"), 'platform'),
+      devices_30d: obj(await all("SELECT device_type, COUNT(DISTINCT visitor_id) c FROM site_visits WHERE created_at > datetime('now','-30 days') GROUP BY 1"), 'device_type'),
+      sources_30d: Object.fromEntries((await all("SELECT COALESCE(source,'direct') s, COUNT(DISTINCT visitor_id) c FROM site_visits WHERE created_at > datetime('now','-30 days') GROUP BY 1")).map((r) => [r.s, r.c])),
+      top_pages_30d: await all("SELECT path, COUNT(*) views, COUNT(DISTINCT visitor_id) visitors FROM site_visits WHERE created_at > datetime('now','-30 days') GROUP BY path ORDER BY views DESC LIMIT 15"),
+    };
   });
-  const t = await dayStats(today);
-  const y = await dayStats(yday);
-  t.new_visitors = (await one(`SELECT COUNT(*) n FROM (SELECT visitor_id, MIN(created_at) f FROM site_visits GROUP BY visitor_id) WHERE date(datetime(f,'+2 hours')) = ?`, today)).n;
-  t.installs = (await one(`SELECT COUNT(DISTINCT visitor_id) n FROM site_installs WHERE kind IN ('installed','apk_download') AND ${day} = ?`, today)).n;
-  t.app_users = (await one(`SELECT COUNT(DISTINCT visitor_id) n FROM site_visits WHERE is_app=1 AND ${day} = ?`, today)).n;
-  const tot = await one('SELECT COUNT(DISTINCT visitor_id) visitors, COUNT(*) views, MIN(created_at) since FROM site_visits');
-  const installers = (await one("SELECT COUNT(DISTINCT visitor_id) n FROM site_installs WHERE kind IN ('installed','apk_download')")).n;
-  const dv = await all(`SELECT ${day} dy, COUNT(DISTINCT visitor_id) visitors, COUNT(*) views FROM site_visits WHERE created_at > datetime('now','-31 days') GROUP BY 1`);
-  const di = await all(`SELECT ${day} dy, COUNT(DISTINCT visitor_id) installs FROM site_installs WHERE kind IN ('installed','apk_download') AND created_at > datetime('now','-31 days') GROUP BY 1`);
+  const sess = Object.fromEntries(B.sessions.map((r) => [r.dy, r.c]));
+  t.sessions = sess[today] || 0;
+  const yesterday = { visitors: y.visitors, views: y.views, sessions: sess[yday] || 0 };
+
+  // ---- tier C: all-time totals (rarely recomputed)
+  const C = await memoTier('c', STATS_TTL_C, () => edgeMemo('alltime-v1', 24 * 3600, async () => {
+    const tot = await one('SELECT COUNT(DISTINCT visitor_id) visitors, COUNT(*) views, MIN(created_at) since FROM site_visits');
+    const sessionsAll = (await one('SELECT COUNT(*) n FROM (SELECT created_at, LAG(created_at) OVER (PARTITION BY visitor_id ORDER BY created_at) prev FROM site_visits) WHERE prev IS NULL OR (julianday(created_at) - julianday(prev)) > 0.0208333')).n;
+    const installers = (await one("SELECT COUNT(DISTINCT visitor_id) n FROM site_installs WHERE kind IN ('installed','apk_download')")).n;
+    return { visitors: tot.visitors, views: tot.views, sessions: sessionsAll, installers, since: tot.since };
+  }));
+
   const daily = [];
   for (let i = 29; i >= 0; i--) {
-    const d = (await one("SELECT date('now','+2 hours',?) d", `-${i} days`)).d;
-    const v = dv.find((r) => r.dy === d) || {}, ins = di.find((r) => r.dy === d) || {};
+    const d = cairoDay(i);
+    const v = B.dv.find((r) => r.dy === d) || {}, ins = B.di.find((r) => r.dy === d) || {};
     daily.push({ day: d, visitors: v.visitors || 0, views: v.views || 0, sessions: sess[d] || 0, installs: ins.installs || 0 });
   }
-  const mv = await all("SELECT strftime('%Y-%m', datetime(created_at,'+2 hours')) mo, COUNT(DISTINCT visitor_id) visitors, COUNT(*) views, COUNT(DISTINCT CASE WHEN is_app=1 THEN visitor_id END) app_users FROM site_visits GROUP BY 1");
-  const mi = await all("SELECT strftime('%Y-%m', datetime(created_at,'+2 hours')) mo, COUNT(DISTINCT visitor_id) installs FROM site_installs WHERE kind IN ('installed','apk_download') GROUP BY 1");
   const monthly = [];
   for (let i = 0; i < 12; i++) {
-    const mo = (await one("SELECT strftime('%Y-%m', date('now','+2 hours','start of month',?)) m", `-${i} months`)).m;
-    const v = mv.find((r) => r.mo === mo) || {}, ins = mi.find((r) => r.mo === mo) || {};
+    const mo = cairoMonth(i);
+    const v = B.mv.find((r) => r.mo === mo) || {}, ins = B.mi.find((r) => r.mo === mo) || {};
     monthly.push({ month: mo, visitors: v.visitors || 0, views: v.views || 0, installs: ins.installs || 0, app_users: v.app_users || 0 });
   }
-  const obj = (rows, k) => Object.fromEntries(rows.map((r) => [r[k] ?? 'unknown', r.c]));
   return {
     generated_at: new Date().toISOString(), online_now: online, online_app: onlineApp,
-    today: t, yesterday: { visitors: y.visitors, views: y.views, sessions: y.sessions },
-    totals: { visitors: tot.visitors, views: tot.views, sessions: Object.values(sess).reduce((a, b) => a + b, 0), installers, since: tot.since },
+    today: t, yesterday,
+    totals: { visitors: C.visitors, views: C.views, sessions: C.sessions, installers: C.installers, since: C.since },
     daily, monthly,
-    installs_by_kind: obj(await all('SELECT kind, COUNT(*) c FROM site_installs GROUP BY kind'), 'kind'),
-    installs_by_platform: obj(await all("SELECT platform, COUNT(DISTINCT visitor_id) c FROM site_installs WHERE kind IN ('installed','apk_download') GROUP BY platform"), 'platform'),
-    devices_30d: obj(await all("SELECT device_type, COUNT(DISTINCT visitor_id) c FROM site_visits WHERE created_at > datetime('now','-30 days') GROUP BY 1"), 'device_type'),
-    sources_30d: Object.fromEntries((await all("SELECT COALESCE(source,'direct') s, COUNT(DISTINCT visitor_id) c FROM site_visits WHERE created_at > datetime('now','-30 days') GROUP BY 1")).map((r) => [r.s, r.c])),
-    top_pages_30d: (await all("SELECT path, COUNT(*) views, COUNT(DISTINCT visitor_id) visitors FROM site_visits WHERE created_at > datetime('now','-30 days') GROUP BY path ORDER BY views DESC LIMIT 15")),
+    installs_by_kind: B.installs_by_kind, installs_by_platform: B.installs_by_platform,
+    devices_30d: B.devices_30d, sources_30d: B.sources_30d, top_pages_30d: B.top_pages_30d,
   };
 }
 
