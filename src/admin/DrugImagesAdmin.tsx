@@ -49,7 +49,7 @@ export function DrugImagesAdmin() {
   return (
     <div className="space-y-4">
       <div className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-        <h2 className="text-lg font-black text-[#153448] dark:text-white">صور الأدوية</h2>
+        <h2 className="text-lg font-black text-nh-navy dark:text-white">صور الأدوية</h2>
         <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">ارفع صورة العبوة/الأمبول من مصدر مسموح (موقع الشركة المصنعة مثلًا)، واكتب المصدر، وعلّم "راجعت" بعد ما تتأكد إن الصورة لنفس المادة الفعالة والتركيز والشكل الدوائي.</p>
         <div className="mt-3 flex flex-wrap gap-2 text-xs font-bold">
           {(["none", "unchecked", "checked", "hidden"] as Status[]).map((s) => <span key={s} className={`rounded-full px-2.5 py-1 ${LABEL[s][1]}`}>{LABEL[s][0]}: {count(s)}</span>)}
@@ -60,8 +60,8 @@ export function DrugImagesAdmin() {
         </label>
       </div>
       <div className="flex gap-2">
-        <button onClick={() => setFilter("todo")} className={`rounded-full px-4 py-1.5 text-sm font-bold ${filter === "todo" ? "bg-[#127378] text-white" : "border border-slate-200 dark:border-slate-700 dark:text-white"}`}>محتاجة شغل ({count("none") + count("unchecked")})</button>
-        <button onClick={() => setFilter("all")} className={`rounded-full px-4 py-1.5 text-sm font-bold ${filter === "all" ? "bg-[#127378] text-white" : "border border-slate-200 dark:border-slate-700 dark:text-white"}`}>الكل ({rows.length})</button>
+        <button onClick={() => setFilter("todo")} className={`rounded-full px-4 py-1.5 text-sm font-bold ${filter === "todo" ? "bg-nh-teal-dark text-white" : "border border-slate-200 dark:border-slate-700 dark:text-white"}`}>محتاجة شغل ({count("none") + count("unchecked")})</button>
+        <button onClick={() => setFilter("all")} className={`rounded-full px-4 py-1.5 text-sm font-bold ${filter === "all" ? "bg-nh-teal-dark text-white" : "border border-slate-200 dark:border-slate-700 dark:text-white"}`}>الكل ({rows.length})</button>
       </div>
       <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
         <table className="w-full text-right text-sm">
@@ -72,7 +72,7 @@ export function DrugImagesAdmin() {
                 <td className="p-3 font-semibold dark:text-white">{d.name}{d.isHighAlert && <span className="ms-2 rounded-full bg-orange-100 px-2 py-0.5 text-[10px] font-black text-orange-800">عالي الخطورة</span>}</td>
                 <td className="p-3 text-slate-500" dir="ltr">{d.genericNameEn || d.genericName}</td>
                 <td className="p-3"><span className={`rounded-full px-2.5 py-1 text-xs font-bold ${LABEL[st][1]}`}>{LABEL[st][0]}</span></td>
-                <td className="p-3"><Link to={`/drug/${d.slug}`} target="_blank" className="rounded-lg bg-[#127378] px-3 py-1 text-xs font-bold text-white">فتح</Link></td>
+                <td className="p-3"><Link to={`/drug/${d.slug}`} target="_blank" className="rounded-lg bg-nh-teal-dark px-3 py-1 text-xs font-bold text-white">فتح</Link></td>
               </tr>
             ))}
           </tbody>

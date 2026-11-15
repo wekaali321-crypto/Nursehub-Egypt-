@@ -152,7 +152,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
         <form onSubmit={submit} className="flex items-center gap-2 rounded-full bg-white p-1.5 shadow-2xl shadow-teal-900/20">
           <span className="shrink-0 ps-3 text-slate-500 dark:text-slate-400"><Search size={20} aria-hidden="true" /></span>
           <input {...inputProps} placeholder={t("common.searchPlaceholder")} className="min-w-0 flex-1 bg-transparent text-slate-800 outline-none placeholder:text-slate-400" />
-          <button className="shrink-0 rounded-full bg-[#127378] hover:bg-[#0f6165] px-5 py-2.5 font-bold text-white sm:px-7">{t("common.search")}</button>
+          <button className="shrink-0 rounded-full bg-nh-teal-dark hover:bg-nh-teal-darker px-5 py-2.5 font-bold text-white sm:px-7">{t("common.search")}</button>
         </form>
       ) : (
         <form onSubmit={submit}>
@@ -174,7 +174,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
               onClick={() => go(s.to)}
               className={`flex w-full items-center gap-3 px-4 py-2.5 text-right ${i === active ? "bg-teal-50 dark:bg-slate-800" : "hover:bg-slate-50 dark:hover:bg-slate-800"}`}
             >
-              <span className="text-[#168C91] dark:text-teal-300"><EmojiIcon emoji={s.icon} fallback="🔍" size={18} /></span>
+              <span className="text-nh-teal dark:text-teal-300"><EmojiIcon emoji={s.icon} fallback="🔍" size={18} /></span>
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-sm font-semibold dark:text-white">{s.label}</span>
                 <span className="block text-xs text-slate-500 dark:text-slate-400">{s.sub}</span>

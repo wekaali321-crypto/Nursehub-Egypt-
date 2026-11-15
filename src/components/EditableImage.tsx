@@ -40,7 +40,7 @@ export default function EditableImage({
       <span className="relative inline-block">
         {fallback}
         <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpen(true); }} aria-label={`تعديل الصورة: ${label}`}
-          className="absolute -end-1 -top-1 grid h-6 w-6 place-items-center rounded-full bg-[#153448]/85 text-white shadow ring-1 ring-white/40 hover:bg-[#168C91]">
+          className="absolute -end-1 -top-1 grid h-6 w-6 place-items-center rounded-full bg-nh-navy/85 text-white shadow ring-1 ring-white/40 hover:bg-nh-teal">
           {st.hidden ? <EyeOff size={12} aria-hidden="true" /> : <Pencil size={12} aria-hidden="true" />}
         </button>
         {open && <Editor slot={slot} label={label} st={st} def={src} onClose={() => setOpen(false)} />}
@@ -52,7 +52,7 @@ export default function EditableImage({
     if (!emptyHint && !st.hidden) return null;
     return (
       <>
-        <button type="button" onClick={() => setOpen(true)} className="my-2 flex w-full items-center gap-2 rounded-xl border border-dashed border-slate-300 px-3 py-1.5 text-start text-xs font-bold text-slate-600 hover:border-[#168C91] hover:text-[#127378] dark:border-slate-600 dark:text-slate-300">
+        <button type="button" onClick={() => setOpen(true)} className="my-2 flex w-full items-center gap-2 rounded-xl border border-dashed border-slate-300 px-3 py-1.5 text-start text-xs font-bold text-slate-600 hover:border-nh-teal hover:text-nh-teal-dark dark:border-slate-600 dark:text-slate-300">
           {st.hidden ? <EyeOff size={14} aria-hidden="true" /> : <ImagePlus size={14} aria-hidden="true" />}
           <span className="truncate">{st.hidden ? "صورة مخفية: " : "إضافة صورة: "}{label}</span>
         </button>
@@ -66,7 +66,7 @@ export default function EditableImage({
       {render ? render(st.url) : <img src={st.url} alt={label} loading="lazy" decoding="async" className={className} />}
       {loggedIn && (
         <button type="button" onClick={(e) => { e.preventDefault(); e.stopPropagation(); setOpen(true); }} aria-label={`تعديل الصورة: ${label}`}
-          className="absolute end-1 top-1 grid h-7 w-7 place-items-center rounded-full bg-[#153448]/85 text-white shadow ring-1 ring-white/40 hover:bg-[#168C91]">
+          className="absolute end-1 top-1 grid h-7 w-7 place-items-center rounded-full bg-nh-navy/85 text-white shadow ring-1 ring-white/40 hover:bg-nh-teal">
           <Pencil size={14} aria-hidden="true" />
         </button>
       )}
@@ -95,14 +95,14 @@ function Editor({ slot, label, st, def, onClose }: { slot: string; label: string
       <div className="w-full max-w-sm rounded-2xl bg-white p-4 text-start shadow-2xl dark:bg-slate-900" onClick={(e) => e.stopPropagation()}>
         <div className="mb-3 flex items-start justify-between gap-2">
           <div className="min-w-0">
-            <div className="text-sm font-black text-[#153448] dark:text-white">{ar ? "تعديل الصورة" : "Edit picture"}</div>
+            <div className="text-sm font-black text-nh-navy dark:text-white">{ar ? "تعديل الصورة" : "Edit picture"}</div>
             <div className="truncate text-xs text-slate-500">{label}</div>
           </div>
           <button onClick={onClose} aria-label={ar ? "إغلاق" : "Close"} className="grid h-9 w-9 place-items-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800"><X size={18} aria-hidden="true" /></button>
         </div>
         {(st.url || def) && <img src={st.url || def || ""} alt="" className={`mb-3 max-h-40 w-full rounded-xl bg-slate-50 object-contain p-2 ${st.hidden ? "opacity-40 grayscale" : ""}`} />}
         <div className="space-y-2">
-          <button disabled={busy} onClick={() => file.current?.click()} className={`${btn} bg-[#168C91] text-white hover:bg-[#127378]`}>
+          <button disabled={busy} onClick={() => file.current?.click()} className={`${btn} bg-nh-teal text-white hover:bg-nh-teal-dark`}>
             <Camera size={18} aria-hidden="true" />{busy ? "…" : st.url ? (ar ? "رفع صورة بدلها (جودة أعلى)" : "Upload a replacement") : (ar ? "رفع صورة" : "Upload a picture")}
           </button>
           {st.url && (

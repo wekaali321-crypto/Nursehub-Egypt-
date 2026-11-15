@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 type Tone = "default" | "dose" | "danger";
 
 const TONE: Record<Tone, string> = {
-  default: "border-slate-200 border-s-[#168C91] bg-white dark:border-slate-800 dark:border-s-[#168C91] dark:bg-slate-900",
-  dose: "border-[#168C91]/40 border-s-[#168C91] bg-[#168C91]/[0.06] dark:border-[#168C91]/40 dark:border-s-[#168C91] dark:bg-[#168C91]/10",
+  default: "border-slate-200 border-s-nh-teal bg-white dark:border-slate-800 dark:border-s-nh-teal dark:bg-slate-900",
+  dose: "border-nh-teal/40 border-s-nh-teal bg-nh-teal/[0.06] dark:border-nh-teal/40 dark:border-s-nh-teal dark:bg-nh-teal/10",
   danger: "border-red-200 border-s-red-600 bg-red-50 dark:border-red-900 dark:border-s-red-600 dark:bg-red-500/10",
 };
 
@@ -12,7 +12,7 @@ const TONE: Record<Tone, string> = {
 export default function DrugSection({ id, icon, title, tone = "default", children }: { id: string; icon: string; title: string; tone?: Tone; children: ReactNode }) {
   return (
     <section id={id} className={`scroll-mt-32 rounded-2xl border border-s-4 p-4 sm:p-5 ${TONE[tone]}`}>
-      <h2 className={`mb-2 flex items-center gap-2 text-base font-black sm:text-lg ${tone === "danger" ? "text-red-800 dark:text-red-300" : "text-[#153448] dark:text-white"}`}>
+      <h2 className={`mb-2 flex items-center gap-2 text-base font-black sm:text-lg ${tone === "danger" ? "text-red-800 dark:text-red-300" : "text-nh-navy dark:text-white"}`}>
         <span aria-hidden="true" className="text-xl">{icon}</span>
         {title}
       </h2>

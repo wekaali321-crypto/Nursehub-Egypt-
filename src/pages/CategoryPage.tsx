@@ -92,10 +92,10 @@ export default function CategoryPage() {
   const folderCount = (id: string) => articles.filter((a) => a.category === category && a.status === "published" && a.subcategory === id).length;
 
   return (
-    <div className="bg-[#F1F4F6] pb-12 dark:bg-slate-950">
-      <header className="relative overflow-hidden bg-[#153448] text-white">
+    <div className="bg-nh-surface pb-12 dark:bg-slate-950">
+      <header className="relative overflow-hidden bg-nh-navy text-white">
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
-        <div aria-hidden className="pointer-events-none absolute -top-20 end-[-5rem] h-64 w-64 rounded-full bg-[#168C91]/40 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -top-20 end-[-5rem] h-64 w-64 rounded-full bg-nh-teal/40 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-4 pb-8 pt-5 md:pb-10 md:pt-8">
           <div className="flex items-start justify-between gap-3">
             <nav aria-label="Breadcrumb" className="text-xs text-slate-300 sm:text-sm">
@@ -128,13 +128,13 @@ export default function CategoryPage() {
       <div className="mx-auto max-w-7xl px-4 pt-6">
         {!activeSub && category === "skills" && (
           <section className="mb-8">
-            <h2 className="mb-3 border-s-4 border-[#168C91] ps-3 text-lg font-black text-[#153448] dark:text-white">{t("cat.protocolChecklists")}</h2>
+            <h2 className="mb-3 border-s-4 border-nh-teal ps-3 text-lg font-black text-nh-navy dark:text-white">{t("cat.protocolChecklists")}</h2>
             <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
               {SKILL_PROTOCOL_LINKS.map((s) => (
                 <Link
                   key={s.to}
                   to={s.to}
-                  className="group relative flex gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-[#153448] to-[#168C91] p-4 text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                  className="group relative flex gap-3 overflow-hidden rounded-2xl bg-gradient-to-br from-nh-navy to-nh-teal p-4 text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 >
                   <span className="text-3xl" aria-hidden="true">{s.icon}</span>
                   <span className="min-w-0">
@@ -151,22 +151,22 @@ export default function CategoryPage() {
         {/* Real sub-category folders (top level only). Clicking one goes to /category/:cat/:sub. */}
         {!activeSub && subcats.length > 0 && (
           <section className="mb-8">
-            <h2 className="mb-3 border-s-4 border-[#168C91] ps-3 text-lg font-black text-[#153448] dark:text-white">{t("cat.subcategories")}</h2>
+            <h2 className="mb-3 border-s-4 border-nh-teal ps-3 text-lg font-black text-nh-navy dark:text-white">{t("cat.subcategories")}</h2>
             <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
               {subcats.map((c) => (
                 <Link
                   key={c.id}
                   to={`/category/${category}/${c.slug}`}
-                  className="group flex items-center justify-between gap-3 rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900"
+                  className="group flex items-center justify-between gap-3 rounded-2xl border border-slate-200 border-b-4 border-b-nh-teal bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-nh-teal dark:border-slate-800 dark:border-b-nh-teal dark:bg-slate-900"
                 >
                   <div className="flex min-w-0 items-center gap-3">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#168C91]/10 text-xl" aria-hidden="true">📁</span>
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-nh-teal/10 text-xl" aria-hidden="true">📁</span>
                     <div className="min-w-0">
-                      <div className="truncate font-bold text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{bilingual(c.name, c.nameEn, lang).text}</div>
+                      <div className="truncate font-bold text-nh-navy group-hover:text-nh-teal dark:text-white dark:group-hover:text-teal-300">{bilingual(c.name, c.nameEn, lang).text}</div>
                       <div className="text-xs text-slate-600 dark:text-slate-400">{folderCount(c.id)} {t("common.item")}</div>
                     </div>
                   </div>
-                  <span className="text-[#127378] dark:text-teal-300" aria-hidden="true">←</span>
+                  <span className="text-nh-teal-dark dark:text-teal-300" aria-hidden="true">←</span>
                 </Link>
               ))}
             </div>
@@ -177,7 +177,7 @@ export default function CategoryPage() {
           <section>
             {list.length > 1 && (
               <div className="mb-4 flex justify-end">
-                <select aria-label="ترتيب النتائج" value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-[#153448] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">
+                <select aria-label="ترتيب النتائج" value={sort} onChange={(e) => setSort(e.target.value)} className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-nh-navy focus:outline-none focus-visible:ring-2 focus-visible:ring-nh-teal dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">
                   <option value="latest">{t("cat.sortLatest")}</option>
                   <option value="popular">{t("cat.sortPopular")}</option>
                 </select>

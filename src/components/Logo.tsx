@@ -39,7 +39,7 @@ export default function Logo({ size = 40, showSubtitle = true, variant = "auto",
       <LogoMark size={size} />
       <span className={`leading-none ${hideWordmarkOnTiny ? "max-[380px]:hidden" : ""}`}>
         <span className="block font-extrabold tracking-tight" style={{ fontSize: size * 0.42 }}>
-          <span className={nurseColor}>Nurse</span><span className="text-[#168C91]" style={variant === "light" ? { color: "#e0f2fe" } : undefined}>Hub</span>
+          <span className={nurseColor}>Nurse</span><span className="text-nh-teal" style={variant === "light" ? { color: "#e0f2fe" } : undefined}>Hub</span>
         </span>
         {showSubtitle && (
           <span className="mt-0.5 block font-bold tracking-[0.25em] text-teal-700 dark:text-teal-300" style={{ fontSize: size * 0.2, color: variant === "light" ? "rgba(255,255,255,0.85)" : undefined }}>

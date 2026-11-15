@@ -15,7 +15,7 @@ export default function LoadError({ detail, onRetry, className = "" }: { detail?
       <div className="text-3xl" aria-hidden="true">📶</div>
       <p className="mt-2 font-bold text-amber-900 dark:text-amber-200">{en ? "We couldn't load this content right now." : "مقدرناش نحمّل المحتوى دلوقتي."}</p>
       <p className="mt-1 text-sm text-amber-800/80 dark:text-amber-200/80">{en ? "Check your connection and try again in a moment." : "اتأكد من الإنترنت وجرّب تاني بعد شوية."}</p>
-      <button type="button" onClick={onRetry ?? (() => window.location.reload())} className="mt-4 rounded-full bg-[#127378] px-5 py-2 text-sm font-bold text-white hover:bg-[#0f6165]">
+      <button type="button" onClick={onRetry ?? (() => window.location.reload())} className="mt-4 rounded-full bg-nh-teal-dark px-5 py-2 text-sm font-bold text-white hover:bg-nh-teal-darker">
         {en ? "Try again" : "حاول تاني"}
       </button>
     </div>

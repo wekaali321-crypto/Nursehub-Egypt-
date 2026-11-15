@@ -113,7 +113,7 @@ function UserMenu() {
         {avatarUrl ? (
           <img src={avatarUrl} alt={displayName} className="h-full w-full object-cover" referrerPolicy="no-referrer" />
         ) : (
-          <span className="flex h-full w-full items-center justify-center bg-[#127378] hover:bg-[#0f6165] font-bold text-white">{initial}</span>
+          <span className="flex h-full w-full items-center justify-center bg-nh-teal-dark hover:bg-nh-teal-darker font-bold text-white">{initial}</span>
         )}
       </button>
 

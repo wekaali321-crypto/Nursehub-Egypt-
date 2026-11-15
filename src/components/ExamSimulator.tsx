@@ -72,8 +72,8 @@ export default function ExamSimulator({ questions, bankKey, group, title, path }
 }
 
 const card = "rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900";
-const btnPrimary = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#168C91] px-6 text-base font-black text-white hover:bg-[#127378] disabled:opacity-50";
-const btnGhost = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-5 text-sm font-black text-[#153448] hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800";
+const btnPrimary = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-nh-teal px-6 text-base font-black text-white hover:bg-nh-teal-dark disabled:opacity-50";
+const btnGhost = "inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-5 text-sm font-black text-nh-navy hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-white dark:hover:bg-slate-800";
 
 function Setup({ total, saved, onResume, onDiscard, onStart }: { total: number; saved: Session | null; onResume: () => void; onDiscard: () => void; onStart: (n: number, timed: boolean) => void }) {
   const options = [10, 25, 50, 100].filter((n) => n < total);
@@ -88,18 +88,18 @@ function Setup({ total, saved, onResume, onDiscard, onStart }: { total: number; 
         </div>
       )}
       <div className={card}>
-        <h2 className="text-lg font-black text-[#153448] dark:text-white">محاكي الامتحان</h2>
+        <h2 className="text-lg font-black text-nh-navy dark:text-white">محاكي الامتحان</h2>
         <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">زي الامتحان الحقيقي: أسئلة عشوائية، وقت محدد، ومن غير ما تعرف الإجابة غير في الآخر.</p>
         <div className="mt-4 text-sm font-black text-slate-700 dark:text-slate-300">عدد الأسئلة</div>
         <div className="mt-2 flex flex-wrap gap-2">
           {[...options, total].map((v) => (
-            <button key={v} onClick={() => setN(v)} aria-pressed={n === v} className={`min-h-11 rounded-full px-4 text-sm font-black ${n === v ? "bg-[#153448] text-white dark:bg-[#168C91]" : "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200"}`}>
+            <button key={v} onClick={() => setN(v)} aria-pressed={n === v} className={`min-h-11 rounded-full px-4 text-sm font-black ${n === v ? "bg-nh-navy text-white dark:bg-nh-teal" : "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200"}`}>
               {v === total ? `الكل (${total})` : v}
             </button>
           ))}
         </div>
         <label className="mt-4 flex min-h-11 items-center gap-3 text-sm font-bold text-slate-700 dark:text-slate-300">
-          <input type="checkbox" checked={timed} onChange={(e) => setTimed(e.target.checked)} className="h-5 w-5 accent-[#168C91]" />
+          <input type="checkbox" checked={timed} onChange={(e) => setTimed(e.target.checked)} className="h-5 w-5 accent-nh-teal" />
           بوقت حقيقي — {fmt(n * SECONDS_PER_Q)} دقيقة ({SECONDS_PER_Q} ثانية للسؤال)
         </label>
         <button className={`${btnPrimary} mt-4 w-full sm:w-auto`} onClick={() => onStart(n, timed)}><Timer size={20} aria-hidden="true" />ابدأ الامتحان</button>
@@ -137,18 +137,18 @@ function ExamRun({ s, byId, onChange, onFinish }: { s: Session; byId: Map<string
 
   return (
     <div className="space-y-3">
-      <div className="sticky top-16 z-20 -mx-4 flex items-center justify-between gap-2 border-b border-slate-200 bg-[#F1F4F6]/95 px-4 py-2 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95">
-        <span className="text-sm font-black text-[#153448] dark:text-white">سؤال {s.index + 1} / {s.order.length}</span>
-        {left !== null && <span className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-black tabular-nums ${left < 60 ? "bg-red-600 text-white" : "bg-[#153448] text-white dark:bg-[#168C91]"}`} role="timer" aria-live="off"><Clock size={16} aria-hidden="true" />{fmt(Math.max(0, left))}</span>}
-        <button onClick={() => setGrid((g) => !g)} className="inline-flex min-h-10 items-center gap-1 rounded-full bg-white px-3 text-xs font-black text-[#153448] ring-1 ring-slate-200 dark:bg-slate-900 dark:text-white dark:ring-slate-700" aria-expanded={grid}><ListChecks size={16} aria-hidden="true" />{answered}/{s.order.length}</button>
+      <div className="sticky top-16 z-20 -mx-4 flex items-center justify-between gap-2 border-b border-slate-200 bg-nh-surface/95 px-4 py-2 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95">
+        <span className="text-sm font-black text-nh-navy dark:text-white">سؤال {s.index + 1} / {s.order.length}</span>
+        {left !== null && <span className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-sm font-black tabular-nums ${left < 60 ? "bg-red-600 text-white" : "bg-nh-navy text-white dark:bg-nh-teal"}`} role="timer" aria-live="off"><Clock size={16} aria-hidden="true" />{fmt(Math.max(0, left))}</span>}
+        <button onClick={() => setGrid((g) => !g)} className="inline-flex min-h-10 items-center gap-1 rounded-full bg-white px-3 text-xs font-black text-nh-navy ring-1 ring-slate-200 dark:bg-slate-900 dark:text-white dark:ring-slate-700" aria-expanded={grid}><ListChecks size={16} aria-hidden="true" />{answered}/{s.order.length}</button>
       </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"><div className="h-full bg-[#168C91] transition-all" style={{ width: `${(answered / s.order.length) * 100}%` }} /></div>
+      <div className="h-1.5 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"><div className="h-full bg-nh-teal transition-all" style={{ width: `${(answered / s.order.length) * 100}%` }} /></div>
 
       {grid && (
         <div className={`${card} grid grid-cols-8 gap-1.5 sm:grid-cols-12`}>
           {s.order.map((id, i) => {
             const a = (s.answers[id] ?? []).length > 0, f = s.flagged.includes(id);
-            return <button key={id} onClick={() => go(i)} className={`h-9 rounded-lg text-xs font-black ${i === s.index ? "ring-2 ring-[#153448] dark:ring-white" : ""} ${f ? "bg-amber-400 text-amber-950" : a ? "bg-[#168C91] text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`} aria-label={`سؤال ${i + 1}`}>{i + 1}</button>;
+            return <button key={id} onClick={() => go(i)} className={`h-9 rounded-lg text-xs font-black ${i === s.index ? "ring-2 ring-nh-navy dark:ring-white" : ""} ${f ? "bg-amber-400 text-amber-950" : a ? "bg-nh-teal text-white" : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"}`} aria-label={`سؤال ${i + 1}`}>{i + 1}</button>;
           })}
         </div>
       )}
@@ -168,9 +168,9 @@ function ExamRun({ s, byId, onChange, onFinish }: { s: Session; byId: Map<string
             const on = picked.includes(c.letter);
             return (
               <button key={c.letter} onClick={() => pick(c.letter)} role={multi ? "checkbox" : "radio"} aria-checked={on}
-                className={`flex min-h-14 w-full items-center gap-3 rounded-xl border p-3 text-start transition ${on ? "border-[#168C91] bg-[#168C91]/10 ring-1 ring-[#168C91]" : "border-slate-200 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800"}`}
+                className={`flex min-h-14 w-full items-center gap-3 rounded-xl border p-3 text-start transition ${on ? "border-nh-teal bg-nh-teal/10 ring-1 ring-nh-teal" : "border-slate-200 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800"}`}
                 dir={ar && q.question_ar ? "rtl" : "ltr"}>
-                <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-sm font-black ${on ? "bg-[#168C91] text-white" : "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200"}`}>{c.letter}</span>
+                <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full text-sm font-black ${on ? "bg-nh-teal text-white" : "bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200"}`}>{c.letter}</span>
                 <span className="text-base text-slate-800 dark:text-slate-100">{ar ? arMap.get(c.letter) || c.text : c.text}</span>
               </button>
             );
@@ -203,7 +203,7 @@ function ResultView({ r, byId, onReview, onNew, onRetakeWrong, bankKey, group }:
         <div className={`mx-auto grid h-20 w-20 place-items-center rounded-full ${passed ? "bg-emerald-100 text-emerald-600 dark:bg-emerald-500/15 dark:text-emerald-300" : "bg-red-100 text-red-600 dark:bg-red-500/15 dark:text-red-300"}`}>
           {passed ? <Trophy size={40} aria-hidden="true" /> : <TrendingDown size={40} aria-hidden="true" />}
         </div>
-        <div className="mt-3 text-5xl font-black tabular-nums text-[#153448] dark:text-white">{pct}%</div>
+        <div className="mt-3 text-5xl font-black tabular-nums text-nh-navy dark:text-white">{pct}%</div>
         <div className={`mt-1 text-base font-black ${passed ? "text-emerald-700 dark:text-emerald-300" : "text-red-700 dark:text-red-300"}`}>{passed ? "ناجح — كمّل كده" : `محتاج مذاكرة — النجاح التقريبي ${PASS}%`}</div>
         <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
           <div className="rounded-xl bg-emerald-50 p-3 font-black text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-200"><CircleCheck size={18} className="mx-auto mb-1" aria-hidden="true" />{correct} صح</div>
@@ -213,7 +213,7 @@ function ResultView({ r, byId, onReview, onNew, onRetakeWrong, bankKey, group }:
         {unanswered > 0 && <p className="mt-2 text-xs font-bold text-slate-500">{unanswered} سؤال من غير إجابة اتحسبوا غلط</p>}
         {total > 0 && correct / total < PASS / 100 && (
           <p className="mt-3 text-sm font-bold text-slate-700 dark:text-slate-300">
-            نصيحة: راجع شرح الأسئلة الغلط تحت، وبعدين ثبّت المعلومات في <Link to="/cards" className="text-[#127378] underline dark:text-teal-300">بطاقات المذاكرة</Link> قبل ما تعيد الامتحان.
+            نصيحة: راجع شرح الأسئلة الغلط تحت، وبعدين ثبّت المعلومات في <Link to="/cards" className="text-nh-teal-dark underline dark:text-teal-300">بطاقات المذاكرة</Link> قبل ما تعيد الامتحان.
           </p>
         )}
         {prev && prev.attempts > 1 && <p className="mt-2 text-xs font-bold text-slate-500">متوسطك في البنك ده: {prev.avg}% · أحسن نتيجة: {prev.best}% · {prev.attempts} محاولات</p>}
@@ -259,7 +259,7 @@ function ReviewView({ r, byId, onBack }: { r: Result; byId: Map<string, RunnerQu
             </ul>
             {!mine.length && <p className="mt-2 text-xs font-black text-slate-500">ما جاوبتش السؤال ده</p>}
             {(ar ? q.rationale_ar || q.rationale_en : q.rationale_en || q.rationale_ar) && (
-              <p className="mt-3 whitespace-pre-line rounded-xl bg-[#F1F4F6] p-3 text-sm leading-7 text-slate-800 dark:bg-slate-800 dark:text-slate-200" dir={ar && q.rationale_ar ? "rtl" : "ltr"}>
+              <p className="mt-3 whitespace-pre-line rounded-xl bg-nh-surface p-3 text-sm leading-7 text-slate-800 dark:bg-slate-800 dark:text-slate-200" dir={ar && q.rationale_ar ? "rtl" : "ltr"}>
                 {ar ? q.rationale_ar || q.rationale_en : q.rationale_en || q.rationale_ar}
               </p>
             )}
@@ -277,7 +277,7 @@ export function ExamProgressPanel({ group }: { group?: ExamGroup }) {
   const weakest = stats[0];
   return (
     <section className={`${card} mb-6`} aria-label="تقدّمك">
-      <h2 className="flex items-center gap-2 text-lg font-black text-[#153448] dark:text-white"><TrendingDown size={20} className="text-[#168C91]" aria-hidden="true" />تقدّمك ونقاط ضعفك</h2>
+      <h2 className="flex items-center gap-2 text-lg font-black text-nh-navy dark:text-white"><TrendingDown size={20} className="text-nh-teal" aria-hidden="true" />تقدّمك ونقاط ضعفك</h2>
       {weakest.avg < PASS && <p className="mt-1 text-sm font-bold text-red-700 dark:text-red-300">ركّز على: <Link to={weakest.path} className="underline">{weakest.title}</Link> (متوسطك {weakest.avg}%)</p>}
       <ul className="mt-3 space-y-2">
         {stats.slice(0, 6).map((b) => (
@@ -303,8 +303,8 @@ export function useExamMode() {
   const set = (v: boolean) => { const p = new URLSearchParams(params); if (v) p.set("mode", "exam"); else p.delete("mode"); setParams(p, { replace: true }); };
   const switcher = (
     <div className="mb-4 grid grid-cols-2 gap-1 rounded-full bg-slate-200/70 p-1 dark:bg-slate-800" role="tablist" aria-label="طريقة المذاكرة">
-      <button role="tab" aria-selected={!exam} onClick={() => set(false)} className={`min-h-11 rounded-full text-sm font-black ${!exam ? "bg-white text-[#153448] shadow dark:bg-slate-900 dark:text-white" : "text-slate-600 dark:text-slate-300"}`}>مذاكرة (إجابة فورية)</button>
-      <button role="tab" aria-selected={exam} onClick={() => set(true)} className={`inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full text-sm font-black ${exam ? "bg-[#153448] text-white shadow dark:bg-[#168C91]" : "text-slate-600 dark:text-slate-300"}`}><Timer size={16} aria-hidden="true" />محاكي امتحان</button>
+      <button role="tab" aria-selected={!exam} onClick={() => set(false)} className={`min-h-11 rounded-full text-sm font-black ${!exam ? "bg-white text-nh-navy shadow dark:bg-slate-900 dark:text-white" : "text-slate-600 dark:text-slate-300"}`}>مذاكرة (إجابة فورية)</button>
+      <button role="tab" aria-selected={exam} onClick={() => set(true)} className={`inline-flex min-h-11 items-center justify-center gap-1.5 rounded-full text-sm font-black ${exam ? "bg-nh-navy text-white shadow dark:bg-nh-teal" : "text-slate-600 dark:text-slate-300"}`}><Timer size={16} aria-hidden="true" />محاكي امتحان</button>
     </div>
   );
   return { exam, switcher };
@@ -326,7 +326,7 @@ function TopicResults({ r, byId, bankKey, group }: { r: Result; byId: Map<string
   if (!rows || rows.length < 2) return null;
   return (
     <div className={card}>
-      <h3 className="mb-1 font-black text-[#153448] dark:text-white">نتيجتك حسب الموضوع</h3>
+      <h3 className="mb-1 font-black text-nh-navy dark:text-white">نتيجتك حسب الموضوع</h3>
       <p className="mb-3 text-[11px] text-slate-500">تصنيف تلقائي تقريبي للأسئلة — الأضعف فوق.</p>
       <ul className="space-y-2">
         {rows.map(({ t, c, n }) => {
@@ -338,7 +338,7 @@ function TopicResults({ r, byId, bankKey, group }: { r: Result; byId: Map<string
                 <span className="font-bold text-slate-800 dark:text-slate-100">{info.ar}</span>
                 <span className="flex items-center gap-2">
                   <span className={`font-black tabular-nums ${pct >= PASS ? "text-emerald-700 dark:text-emerald-300" : "text-red-700 dark:text-red-300"}`}>{c}/{n}</span>
-                  {pct < PASS && info.to && <Link to={info.to} className="text-xs font-bold text-[#127378] underline dark:text-teal-300">ذاكر الموضوع</Link>}
+                  {pct < PASS && info.to && <Link to={info.to} className="text-xs font-bold text-nh-teal-dark underline dark:text-teal-300">ذاكر الموضوع</Link>}
                 </span>
               </div>
               <div className="mt-1 h-2 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800" aria-hidden="true">

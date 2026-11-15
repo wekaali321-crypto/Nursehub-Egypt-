@@ -221,28 +221,28 @@ export default function DrugsHubPage() {
   const Card = ({ t }: { t: Tile }) => (
     <Link
       to={t.to}
-      className="group flex gap-3 rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white p-4 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900"
+      className="group flex gap-3 rounded-2xl border border-slate-200 border-b-4 border-b-nh-teal bg-white p-4 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-nh-teal dark:border-slate-800 dark:border-b-nh-teal dark:bg-slate-900"
     >
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#168C91]/10 text-xl text-[#127378] dark:text-teal-300" aria-hidden="true"><EmojiIcon emoji={t.icon} size={22} /></span>
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-nh-teal/10 text-xl text-nh-teal-dark dark:text-teal-300" aria-hidden="true"><EmojiIcon emoji={t.icon} size={22} /></span>
       <span className="min-w-0 flex-1">
         <span className="flex items-start justify-between gap-2">
-          <span className="font-black leading-snug text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{t.title[lang]}</span>
-          {t.count && <span className="shrink-0 rounded-full bg-[#168C91]/10 px-2.5 py-0.5 text-xs font-bold text-[#127378] dark:bg-[#168C91]/20 dark:text-teal-300">{t.count[lang]}</span>}
+          <span className="font-black leading-snug text-nh-navy group-hover:text-nh-teal dark:text-white dark:group-hover:text-teal-300">{t.title[lang]}</span>
+          {t.count && <span className="shrink-0 rounded-full bg-nh-teal/10 px-2.5 py-0.5 text-xs font-bold text-nh-teal-dark dark:bg-nh-teal/20 dark:text-teal-300">{t.count[lang]}</span>}
         </span>
         <span className="mt-1 block text-sm text-slate-600 dark:text-slate-400">{t.desc[lang]}</span>
       </span>
     </Link>
   );
 
-  const h2 = "mb-3 border-s-4 border-[#168C91] ps-3 text-lg font-black text-[#153448] dark:text-white";
+  const h2 = "mb-3 border-s-4 border-nh-teal ps-3 text-lg font-black text-nh-navy dark:text-white";
 
   return (
-    <div dir={lang === "ar" ? "rtl" : "ltr"} className="bg-[#F1F4F6] pb-12 dark:bg-slate-950">
+    <div dir={lang === "ar" ? "rtl" : "ltr"} className="bg-nh-surface pb-12 dark:bg-slate-950">
       {/* No overflow-hidden on the header itself: the search dropdown must be able to extend below it. The decorative layers are clipped in their own wrapper. */}
-      <header className="relative z-20 bg-[#153448] text-white">
+      <header className="relative z-20 bg-nh-navy text-white">
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
-          <div className="absolute -top-20 end-[-5rem] h-64 w-64 rounded-full bg-[#168C91]/40 blur-3xl" />
+          <div className="absolute -top-20 end-[-5rem] h-64 w-64 rounded-full bg-nh-teal/40 blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-5xl px-4 pb-6 pt-4 md:pb-8 md:pt-6">
           <div className="flex items-start justify-between gap-3">
@@ -269,9 +269,9 @@ export default function DrugsHubPage() {
       <div className="mx-auto max-w-5xl px-4 pt-6">
         <section aria-label={LABELS.shortcuts[lang]} className="grid grid-cols-2 gap-3 lg:grid-cols-4">
           {shortcuts.map((x) => (
-            <Link key={x.to} to={x.to} className={`group flex flex-col items-start gap-1 rounded-2xl border p-3.5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] ${x.danger ? "border-red-200 bg-red-50 dark:border-red-900 dark:bg-red-500/10" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"}`}>
-              <span className={x.danger ? "text-red-600 dark:text-red-300" : "text-[#168C91] dark:text-teal-300"} aria-hidden="true"><EmojiIcon emoji={x.icon} size={24} /></span>
-              <span className={`text-sm font-black leading-snug ${x.danger ? "text-red-700 dark:text-red-300" : "text-[#153448] dark:text-white"}`}>{x.title[lang]}</span>
+            <Link key={x.to} to={x.to} className={`group flex flex-col items-start gap-1 rounded-2xl border p-3.5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-nh-teal ${x.danger ? "border-red-200 bg-red-50 dark:border-red-900 dark:bg-red-500/10" : "border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900"}`}>
+              <span className={x.danger ? "text-red-600 dark:text-red-300" : "text-nh-teal dark:text-teal-300"} aria-hidden="true"><EmojiIcon emoji={x.icon} size={24} /></span>
+              <span className={`text-sm font-black leading-snug ${x.danger ? "text-red-700 dark:text-red-300" : "text-nh-navy dark:text-white"}`}>{x.title[lang]}</span>
               {x.count && <span className="text-xs font-bold text-slate-600 dark:text-slate-400">{x.count}</span>}
             </Link>
           ))}
@@ -281,7 +281,7 @@ export default function DrugsHubPage() {
           <h2 className={h2}>{LABELS.byCategory[lang]}</h2>
           <div className="flex flex-wrap gap-2">
             {categories.map(([c, info]) => (
-              <Link key={c} to={`/drugs/all?cat=${encodeURIComponent(c)}`} className="rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-bold text-[#153448] transition hover:border-[#168C91] hover:text-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:text-teal-300">
+              <Link key={c} to={`/drugs/all?cat=${encodeURIComponent(c)}`} className="rounded-full border border-slate-200 bg-white px-3.5 py-2 text-sm font-bold text-nh-navy transition hover:border-nh-teal hover:text-nh-teal dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:text-teal-300">
                 {lang === "en" && info.en ? info.en : c} <span className="text-xs font-semibold opacity-60">{info.n}</span>
               </Link>
             ))}
@@ -289,13 +289,13 @@ export default function DrugsHubPage() {
         </section>
 
         <section className="mt-8 rounded-2xl border border-red-200 border-s-4 border-s-red-600 bg-white p-4 shadow-sm dark:border-red-900 dark:border-s-red-600 dark:bg-slate-900">
-          <h2 className="flex items-center gap-2 text-lg font-black text-[#153448] dark:text-white"><span aria-hidden="true">🛡️</span> {LABELS.safetyTitle[lang]}</h2>
+          <h2 className="flex items-center gap-2 text-lg font-black text-nh-navy dark:text-white"><span aria-hidden="true">🛡️</span> {LABELS.safetyTitle[lang]}</h2>
           <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{LABELS.safetyDesc[lang]}</p>
           <div className="mt-3 flex flex-wrap gap-2">
             {safetyLinks.map((x) => (
               <Link key={x.to} to={x.to} className="rounded-full border border-red-200 bg-red-50 px-3.5 py-1.5 text-sm font-bold text-red-700 transition hover:bg-red-100 dark:border-red-900 dark:bg-red-500/10 dark:text-red-300">{x.title[lang]}</Link>
             ))}
-            <Link to="/drugs/safety-center" className="rounded-full bg-[#153448] px-3.5 py-1.5 text-sm font-bold text-white hover:bg-[#168C91]">{LABELS.open[lang]}</Link>
+            <Link to="/drugs/safety-center" className="rounded-full bg-nh-navy px-3.5 py-1.5 text-sm font-bold text-white hover:bg-nh-teal">{LABELS.open[lang]}</Link>
           </div>
         </section>
 

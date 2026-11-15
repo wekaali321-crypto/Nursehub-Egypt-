@@ -157,7 +157,7 @@ export default function InterviewQuestionsPage() {
                 {relatedLabel && q.related_path && (
                   <Link
                     to={q.related_path}
-                    className="mt-3 inline-flex items-center gap-1 rounded-full bg-[#127378] hover:bg-[#0f6165] px-4 py-1.5 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md"
+                    className="mt-3 inline-flex items-center gap-1 rounded-full bg-nh-teal-dark hover:bg-nh-teal-darker px-4 py-1.5 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:shadow-md"
                   >
                     {LABELS.learnMorePrefix[lang]} {relatedLabel} {LABELS.learnMoreSuffix[lang]} ←
                   </Link>

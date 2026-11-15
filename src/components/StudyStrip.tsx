@@ -53,7 +53,7 @@ export default function StudyStrip() {
       </div>
 
       <Link to="/cards" className="flex items-center gap-3 rounded-2xl border border-white/15 bg-white/10 p-3 text-white backdrop-blur transition hover:bg-white/15">
-        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#168C91]/40 text-amber-300"><Flame size={32} aria-hidden="true" /></div>
+        <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-nh-teal/40 text-amber-300"><Flame size={32} aria-hidden="true" /></div>
         <div>
           <div className="text-lg font-black">{streak} {ar ? (streak === 1 ? "يوم" : "أيام متتالية") : streak === 1 ? "day" : "days in a row"}</div>
           <div className="text-xs font-bold text-slate-300">{ar ? "راجع بطاقات النهارده وماتكسرش السلسلة ←" : "Review today's flashcards to keep it going →"}</div>
@@ -61,7 +61,7 @@ export default function StudyStrip() {
       </Link>
 
       {daily || last ? (
-        <Link to={path(daily || last!)} className="group flex items-center gap-3 rounded-2xl bg-[#168C91] p-3 text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1aa0a6]">
+        <Link to={path(daily || last!)} className="group flex items-center gap-3 rounded-2xl bg-nh-teal p-3 text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#1aa0a6]">
           <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/20"><EmojiIcon emoji={daily?.icon} fallback="🎯" size={30} /></div>
           <div className="min-w-0">
             <div className="text-[11px] font-black uppercase tracking-wide text-teal-50">{ar ? "تحدي النهارده" : "Today's challenge"}</div>

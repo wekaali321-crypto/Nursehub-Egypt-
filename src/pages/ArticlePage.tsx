@@ -111,7 +111,7 @@ function BackToArticleTop({ label }: { label: string }) {
     <button
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed bottom-5 end-4 z-40 flex items-center gap-2 rounded-full bg-[#153448] px-4 py-3 text-sm font-bold text-white shadow-xl ring-2 ring-[#168C91] transition hover:bg-[#168C91] focus:outline-none focus-visible:ring-4 print:hidden"
+      className="fixed bottom-5 end-4 z-40 flex items-center gap-2 rounded-full bg-nh-navy px-4 py-3 text-sm font-bold text-white shadow-xl ring-2 ring-nh-teal transition hover:bg-nh-teal focus:outline-none focus-visible:ring-4 print:hidden"
     >
       <span aria-hidden="true">↑</span> {label}
     </button>
@@ -141,7 +141,7 @@ function Stars({ value, count, onRate }: { value: number; count: number; onRate:
     <div className="flex flex-col items-start gap-1">
       <div className="flex items-center gap-1" role="radiogroup" aria-label="التقييم من 5 نجوم">
         {[1, 2, 3, 4, 5].map((n) => (
-          <button key={n} role="radio" aria-checked={value >= n} onMouseEnter={() => setHover(n)} onMouseLeave={() => setHover(0)} onClick={() => onRate(n)} className="text-2xl transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#168C91] rounded" aria-label={`${n} نجوم`}>
+          <button key={n} role="radio" aria-checked={value >= n} onMouseEnter={() => setHover(n)} onMouseLeave={() => setHover(0)} onClick={() => onRate(n)} className="text-2xl transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-nh-teal rounded" aria-label={`${n} نجوم`}>
             <span className={(hover || value) >= n ? "text-amber-400" : "text-slate-300 dark:text-slate-400"}>★</span>
           </button>
         ))}
@@ -316,7 +316,7 @@ export default function ArticlePage() {
       <div className="mx-auto max-w-3xl px-4 py-20 text-center">
         <div className="text-6xl">🔍</div>
         <h1 className="mt-4 text-2xl font-bold dark:text-white">{t("article.notFound")}</h1>
-        <Link to="/" className="mt-4 inline-block rounded-full bg-[#168C91] px-6 py-2 font-bold text-white">{t("article.backHome")}</Link>
+        <Link to="/" className="mt-4 inline-block rounded-full bg-nh-teal px-6 py-2 font-bold text-white">{t("article.backHome")}</Link>
       </div>
     );
   }
@@ -403,9 +403,9 @@ export default function ArticlePage() {
       <ReadingProgress />
       <BackToArticleTop label={lang === "ar" ? "أعلى المقال" : "Back to top"} />
 
-      <header className="relative overflow-hidden bg-[#153448] text-white">
+      <header className="relative overflow-hidden bg-nh-navy text-white">
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.06] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
-        <div aria-hidden className="pointer-events-none absolute -top-20 end-[-5rem] h-72 w-72 rounded-full bg-[#168C91]/40 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -top-20 end-[-5rem] h-72 w-72 rounded-full bg-nh-teal/40 blur-3xl" />
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-5 md:pb-24 md:pt-8">
           <nav aria-label="Breadcrumb" className="text-xs text-slate-300 sm:text-sm">
             <ol className="flex flex-wrap items-center gap-1">
@@ -418,7 +418,7 @@ export default function ArticlePage() {
           </nav>
 
           <div className="mt-4 flex items-center justify-between gap-3">
-            <Link to={`/category/${article.category}`} className="inline-flex items-center gap-1.5 rounded-full border border-[#168C91]/60 bg-[#168C91]/20 px-3 py-1 text-xs font-bold text-teal-100 sm:text-sm">
+            <Link to={`/category/${article.category}`} className="inline-flex items-center gap-1.5 rounded-full border border-nh-teal/60 bg-nh-teal/20 px-3 py-1 text-xs font-bold text-teal-100 sm:text-sm">
               <Icon name={CAT_ICON[article.category]} size={14} /> {catLabel}
             </Link>
             <div className="flex items-center gap-2 print:hidden">
@@ -463,7 +463,7 @@ export default function ArticlePage() {
       </header>
 
       <div className="mx-auto max-w-6xl px-4">
-        <div className="relative -mt-10 overflow-hidden rounded-2xl shadow-xl shadow-[#153448]/25 ring-1 ring-black/5 md:-mt-16">
+        <div className="relative -mt-10 overflow-hidden rounded-2xl shadow-xl shadow-nh-navy/25 ring-1 ring-black/5 md:-mt-16">
           {article.cover
             ? <OptimizedImage src={article.cover} alt={dispTitle.text} width={1000} ratio="16/9" />
             : <CoverPlaceholder category={catLabel} icon={CAT_ICON[article.category]} title={dispTitle.text} />}
@@ -510,11 +510,11 @@ export default function ArticlePage() {
           {/* ============================================================
               🟢 رابط المتجر الرقمي (بدلاً من المعاينة والتحميل المباشر)
               ============================================================ */}
-          <div className="mt-6 flex flex-col gap-3 rounded-2xl border border-[#168C91]/30 bg-white p-4 dark:border-[#168C91]/40 dark:bg-slate-900 sm:flex-row sm:items-center sm:justify-between print:hidden">
+          <div className="mt-6 flex flex-col gap-3 rounded-2xl border border-nh-teal/30 bg-white p-4 dark:border-nh-teal/40 dark:bg-slate-900 sm:flex-row sm:items-center sm:justify-between print:hidden">
             <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#168C91]/10 text-2xl" aria-hidden="true">📄</span>
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-nh-teal/10 text-2xl" aria-hidden="true">📄</span>
               <div className="min-w-0">
-                <h3 className="text-sm font-bold text-[#153448] dark:text-white">
+                <h3 className="text-sm font-bold text-nh-navy dark:text-white">
                   {docLang === "ar" ? "📥 حمل نسخة PDF احترافية" : "📥 Download Professional PDF"}
                 </h3>
                 <p className="text-xs text-slate-600 dark:text-slate-400">
@@ -524,7 +524,7 @@ export default function ArticlePage() {
                 </p>
               </div>
             </div>
-            <Link to="/store" className="shrink-0 rounded-full bg-[#168C91] px-5 py-2 text-center text-sm font-bold text-white transition hover:bg-[#127a7f]">
+            <Link to="/store" className="shrink-0 rounded-full bg-nh-teal px-5 py-2 text-center text-sm font-bold text-white transition hover:bg-[#127a7f]">
               🛒 {docLang === "ar" ? "اشتري الآن من المتجر الرقمي" : "Buy Now from Digital Store"}
             </Link>
           </div>
@@ -545,7 +545,7 @@ export default function ArticlePage() {
               {article.attachments.map((f) => (
                 <a key={f.name} href={f.url} onClick={() => downloadAttachment(f.name)} className="flex items-center justify-between rounded-lg bg-white p-3 hover:bg-teal-50 dark:bg-slate-900">
                   <span className="font-semibold dark:text-white">📄 {f.name}</span>
-                  <span className="rounded-full bg-[#168C91] px-4 py-1 text-sm font-bold text-white">تحميل</span>
+                  <span className="rounded-full bg-nh-teal px-4 py-1 text-sm font-bold text-white">تحميل</span>
                 </a>
               ))}
             </div>
@@ -578,7 +578,7 @@ export default function ArticlePage() {
             <div className="space-y-3">
               {articleComments.map((c) => (
                 <div key={c.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-                  <div className="flex items-center gap-2"><div className="flex h-9 w-9 items-center justify-center rounded-full bg-teal-100 font-bold text-[#127378] dark:text-teal-300">{c.name[0]}</div><div><div className="font-bold dark:text-white">{c.name}</div><div className="text-xs text-slate-500 dark:text-slate-400">{c.date}</div></div></div>
+                  <div className="flex items-center gap-2"><div className="flex h-9 w-9 items-center justify-center rounded-full bg-teal-100 font-bold text-nh-teal-dark dark:text-teal-300">{c.name[0]}</div><div><div className="font-bold dark:text-white">{c.name}</div><div className="text-xs text-slate-500 dark:text-slate-400">{c.date}</div></div></div>
                   <p className="mt-2 text-slate-600 dark:text-slate-300">{c.text}</p>
                 </div>
               ))}
@@ -589,7 +589,7 @@ export default function ArticlePage() {
               <input id="comment-name" value={name} onChange={(e) => setName(e.target.value)} placeholder={t("article.yourName")} className="w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-900" />
               <label htmlFor="comment-text" className="sr-only">{t("article.yourComment")}</label>
               <textarea id="comment-text" value={text} onChange={(e) => setText(e.target.value)} placeholder={t("article.writeComment")} rows={3} className="w-full rounded-lg border border-slate-200 px-3 py-2 dark:border-slate-700 dark:bg-slate-900" />
-              <button className="rounded-full bg-[#168C91] px-6 py-2 font-bold text-white">{t("article.submitComment")}</button>
+              <button className="rounded-full bg-nh-teal px-6 py-2 font-bold text-white">{t("article.submitComment")}</button>
             </form>
           </section>
         </article>
@@ -608,7 +608,7 @@ export default function ArticlePage() {
                 <Link
                   key={c}
                   to={`/category/${c}`}
-                  className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold transition ${c === article.category ? "bg-[#127378] text-white" : "bg-slate-100 text-slate-600 hover:bg-teal-100 hover:text-[#168C91] dark:bg-slate-800 dark:text-slate-300"}`}
+                  className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold transition ${c === article.category ? "bg-nh-teal-dark text-white" : "bg-slate-100 text-slate-600 hover:bg-teal-100 hover:text-nh-teal dark:bg-slate-800 dark:text-slate-300"}`}
                 >
                   <Icon name={CAT_ICON[c]} size={12} /> {t(CAT_KEY[c])}
                 </Link>
@@ -616,19 +616,19 @@ export default function ArticlePage() {
             </div>
           </div>
 
-          <div className="flex items-center justify-between gap-3 rounded-2xl bg-[#153448] p-4 text-white">
+          <div className="flex items-center justify-between gap-3 rounded-2xl bg-nh-navy p-4 text-white">
             <div className="min-w-0">
               <h3 className="text-sm font-bold"><span aria-hidden="true">🎓</span> {settings.siteName} Premium</h3>
               <p className="mt-0.5 text-xs text-slate-300">وصول غير محدود لكل المحتوى الحصري.</p>
             </div>
-            <Link to="/store" className="shrink-0 rounded-full bg-[#168C91] px-3.5 py-1.5 text-xs font-bold text-white hover:bg-[#1aa0a6]">اشترك الآن</Link>
+            <Link to="/store" className="shrink-0 rounded-full bg-nh-teal px-3.5 py-1.5 text-xs font-bold text-white hover:bg-[#1aa0a6]">اشترك الآن</Link>
           </div>
         </aside>
         </div>
 
       {related.length > 0 && (
         <section className="mt-12 print:hidden">
-          <h2 className="mb-5 border-s-4 border-[#168C91] ps-3 text-2xl font-black text-[#153448] dark:text-white">{t("article.related")}</h2>
+          <h2 className="mb-5 border-s-4 border-nh-teal ps-3 text-2xl font-black text-nh-navy dark:text-white">{t("article.related")}</h2>
           <div className="grid gap-4 md:grid-cols-3 md:gap-6">{related.map((a) => <ArticleListCard key={a.id} a={a} />)}</div>
         </section>
       )}

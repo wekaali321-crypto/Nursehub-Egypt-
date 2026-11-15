@@ -46,7 +46,7 @@ function CategoryCardLink({ card }: { card: HomeCategory }) {
       {description && <div className="mt-0.5 line-clamp-1 text-[11px] text-slate-500 dark:text-slate-400">{description}</div>}
     </>
   );
-  const cls = "group rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white p-4 text-center transition-all hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900 sm:p-5";
+  const cls = "group rounded-2xl border border-slate-200 border-b-4 border-b-nh-teal bg-white p-4 text-center transition-all hover:-translate-y-1 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-nh-teal dark:border-slate-800 dark:border-b-nh-teal dark:bg-slate-900 sm:p-5";
   return external
     ? <a href={card.link} target="_blank" rel="noopener noreferrer" className={cls}>{inner}</a>
     : <Link to={card.link} className={cls}>{inner}</Link>;
@@ -91,17 +91,17 @@ export default function Home() {
 
   const sections: Record<string, ReactElement> = {
     hero: (
-      <section key="hero" className="relative z-20 bg-[#153448] text-white">
+      <section key="hero" className="relative z-20 bg-nh-navy text-white">
         {/* خلفية: توهج تيل + شبكة خفيفة (بدون صور خارجية). تُقصّ في غلافها الخاص حتى لا يُقصّ معها منسدل البحث. */}
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
-          <div className="absolute -top-24 end-[-6rem] h-80 w-80 rounded-full bg-[#168C91]/40 blur-3xl" />
-          <div className="absolute bottom-0 start-[-6rem] h-64 w-64 rounded-full bg-[#168C91]/20 blur-3xl" />
+          <div className="absolute -top-24 end-[-6rem] h-80 w-80 rounded-full bg-nh-teal/40 blur-3xl" />
+          <div className="absolute bottom-0 start-[-6rem] h-64 w-64 rounded-full bg-nh-teal/20 blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 pb-8 pt-8 sm:pt-12 md:pt-16">
           <div className="grid items-center gap-6 lg:grid-cols-[1.25fr_1fr] lg:gap-10">
             <div className="text-start">
-              <span className="inline-flex items-center gap-2 rounded-full border border-[#168C91]/50 bg-[#168C91]/15 px-3.5 py-1.5 text-xs font-bold text-teal-100 sm:text-sm">
+              <span className="inline-flex items-center gap-2 rounded-full border border-nh-teal/50 bg-nh-teal/15 px-3.5 py-1.5 text-xs font-bold text-teal-100 sm:text-sm">
                 <span className="h-2 w-2 rounded-full bg-teal-300" />{t("home.badge")}
               </span>
               <h1 className="mt-4 text-4xl font-black leading-[1.15] sm:text-5xl md:text-6xl">{settings.siteName}</h1>
@@ -116,7 +116,7 @@ export default function Home() {
               </ul>
             </div>
             <div className="relative mx-auto flex w-full max-w-xs flex-col items-center sm:max-w-sm">
-              <div aria-hidden className="absolute inset-x-6 bottom-6 top-10 rounded-[2rem] border border-white/10 bg-gradient-to-b from-[#168C91]/30 to-white/5" />
+              <div aria-hidden className="absolute inset-x-6 bottom-6 top-10 rounded-[2rem] border border-white/10 bg-gradient-to-b from-nh-teal/30 to-white/5" />
               <EditableImage slot="home:mascot" src="/male-nurse-mascot.webp" label={t("home.mascotAlt")}
                 render={(u) => <img src={u} alt={t("home.mascotAlt")} width={320} height={465} className="relative w-44 drop-shadow-2xl sm:w-60 lg:w-72" />} />
               <div className="relative mt-3 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-center backdrop-blur">
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
           <StudyStrip />
         </div>
-        <svg aria-hidden viewBox="0 0 1440 40" preserveAspectRatio="none" className="relative block h-6 w-full text-[#F1F4F6] dark:text-slate-950"><path fill="currentColor" d="M0 40V18C240 0 480 36 720 22s480-22 720-4v22z" /></svg>
+        <svg aria-hidden viewBox="0 0 1440 40" preserveAspectRatio="none" className="relative block h-6 w-full text-nh-surface dark:text-slate-950"><path fill="currentColor" d="M0 40V18C240 0 480 36 720 22s480-22 720-4v22z" /></svg>
       </section>
     ),
     search: <div key="search" />,
@@ -138,7 +138,7 @@ export default function Home() {
     featured: <div key="featured" />,
     // "استكشف الأقسام" — رجّعناها لشكلها الأصلي (كروت التنقل بين الأقسام).
     categories: visibleCards.length > 0 ? (
-      <section key="categories" className="bg-[#F1F4F6] py-10 dark:bg-slate-950 md:py-12">
+      <section key="categories" className="bg-nh-surface py-10 dark:bg-slate-950 md:py-12">
         <div className="mx-auto max-w-7xl px-4">
           <SectionTitle {...meta("categories", "home.categories", "home.categoriesSub")} />
           <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-6">
@@ -158,7 +158,7 @@ export default function Home() {
       </section>
     ),
     popular: popular.length > 0 ? (
-      <section key="popular" className="bg-[#F1F4F6] py-10 dark:bg-slate-950 md:py-12">
+      <section key="popular" className="bg-nh-surface py-10 dark:bg-slate-950 md:py-12">
         <div className="mx-auto max-w-7xl px-4">
           <SectionTitle {...meta("popular", "home.popular", "home.popularSub")} link={{ label: t("common.more"), to: "/category/articles" }} />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{popular.map((a) => <ArticleCard key={a.id} a={a} />)}</div>
@@ -180,8 +180,8 @@ export default function Home() {
             const qCategory = bilingual(q.category, q.categoryEn, lang).text;
             const qDifficulty = DIFFICULTY_LABEL[q.difficulty]?.[lang] ?? q.difficulty;
             return (
-              <Link key={q.id} to={`/quiz/${q.id}`} className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-[#F1F4F6] p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
-                <div className="flex items-center justify-between"><span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-[#127378] dark:text-teal-300 dark:bg-teal-500/10">{qCategory}</span><span className="text-2xl">📝</span></div>
+              <Link key={q.id} to={`/quiz/${q.id}`} className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-nh-surface p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
+                <div className="flex items-center justify-between"><span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-nh-teal-dark dark:text-teal-300 dark:bg-teal-500/10">{qCategory}</span><span className="text-2xl">📝</span></div>
                 <h3 className="mt-2 font-bold dark:text-white">{qTitle}</h3>
                 <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">{q.questions.length} {t("quiz.numQuestions")} · {qDifficulty}</div>
               </Link>
@@ -195,8 +195,8 @@ export default function Home() {
         <SectionTitle {...meta("tools", "home.tools", "home.toolsSub")} link={{ label: t("nav.tools"), to: "/tools" }} />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {TOOL_PREVIEWS.map((tool) => (
-            <Link key={tool.t} to="/tools" className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-[#F1F4F6] p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#168C91]/10 text-[#127378] dark:text-teal-300"><EmojiIcon emoji={tool.i} size={26} /></div>
+            <Link key={tool.t} to="/tools" className="rounded-2xl border border-slate-200 bg-gradient-to-br from-white to-nh-surface p-5 transition hover:shadow-lg dark:border-slate-800 dark:from-slate-900 dark:to-slate-800">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-nh-teal/10 text-nh-teal-dark dark:text-teal-300"><EmojiIcon emoji={tool.i} size={26} /></div>
               <div className="mt-2 font-bold dark:text-white">{lang === "en" ? tool.tEn : tool.t}</div>
               <div className="text-sm text-slate-600 dark:text-slate-400">{lang === "en" ? tool.dEn : tool.d}</div>
             </Link>
@@ -205,7 +205,7 @@ export default function Home() {
       </section>
     ),
     store: (
-      <section key="store" className="bg-[#F1F4F6] py-10 dark:bg-slate-950 md:py-12">
+      <section key="store" className="bg-nh-surface py-10 dark:bg-slate-950 md:py-12">
         <div className="mx-auto max-w-7xl px-4">
           <SectionTitle {...meta("store", "home.store", "home.storeSub")} link={{ label: t("home.visitStore"), to: "/store" }} />
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -218,7 +218,7 @@ export default function Home() {
                   <div className="p-4">
                     <h3 className="font-bold dark:text-white">{pTitle}</h3>
                     <div className="mt-2 flex items-center gap-2">
-                      <span className="text-xl font-black text-[#127378] dark:text-teal-300">{p.price} {cur}</span>
+                      <span className="text-xl font-black text-nh-teal-dark dark:text-teal-300">{p.price} {cur}</span>
                       {p.oldPrice && <span className="text-sm text-slate-500 dark:text-slate-400 line-through">{p.oldPrice}</span>}
                     </div>
                   </div>
