@@ -32,7 +32,8 @@ test('3 wrong passwords → locked 5 minutes (even the right one is refused); un
   assert.equal(third.status, 429); assert.ok(Number(third.headers.get('retry-after')) > 250);
   const queries = e.DB.log.length;
   assert.equal((await login(e, 'u@test.local', 'secret12')).status, 429, 'locked even with the right password');
-  assert.equal(e.DB.log.length, queries, 'a locked attempt reads nothing from D1 (and hashes nothing)');
+  const during = e.DB.log.slice(queries).map((q) => q.sql);
+  assert.ok(during.every((q) => /^SELECT COUNT\(\*\) n, MIN\(created_at\) first FROM admin_login_attempts/.test(q)), 'a locked attempt only checks the lock: no user lookup, no hashing, no write');
   assert.equal((await login(e, 'u@test.local', 'secret12', '2.2.2.2')).status, 200, 'another IP is not affected');
   clock += 5 * 60 * 1000 + 1000;
   assert.equal((await login(e, 'u@test.local', 'secret12')).status, 200, 'unlocked after 5 minutes');

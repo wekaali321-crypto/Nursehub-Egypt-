@@ -75,7 +75,7 @@ Object.assign(POLICY, {
   subscribers: { read: 'admin', write: 'admin', insert: 'public' },
 });
 // [max per window, window s, lock s] for tables visitors may insert into (tracking tables have their own guard)
-const PUBLIC_INSERT_LIMIT = { comments: [11, 3600, 3600], orders: [11, 3600, 3600], subscribers: [6, 3600, 3600], push_subscriptions: [11, 3600, 3600] };
+const PUBLIC_INSERT_LIMIT = { comments: { max: 10, windowSec: 3600 }, orders: { max: 10, windowSec: 3600 }, subscribers: { max: 6, windowSec: 3600 }, push_subscriptions: { max: 10, windowSec: 3600 } };
 /** true when every anonymous GET of this table is public data (safe to cache at the edge) */
 export const isPublicTable = (t) => POLICY[t]?.read === 'public';
 const EMAIL_RE = /^[A-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?(?:\.[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?)+$/i;
@@ -313,11 +313,11 @@ export async function handleRest(request, env, path, forceAdmin = false) {
       if (!allowed) return perr(who.uid || pol.insert ? 403 : 401, '42501', `new row violates row-level security policy for table "${table}"`);
       // Visitor-writable tables (comments, orders, newsletter, push): per-IP cap so nobody can flood D1 writes or the inbox.
       if (!admin && PUBLIC_INSERT_LIMIT[table]) {
-        const { lockedFor, count, ipOf, bindOrigin } = await import('./ratelimit.js');
-        bindOrigin(request);
-        const k = `pi:${table}:${ipOf(request)}`, [max, win, lock] = PUBLIC_INSERT_LIMIT[table];
-        const w = (await lockedFor(k)) || (await count(k, max, win, lock));
+        const { lockedFor, hit, ipOf } = await import('./ratelimit.js');
+        const k = `pi:${table}:${ipOf(request)}`, rule = PUBLIC_INSERT_LIMIT[table];
+        const w = await lockedFor(env, k, rule);
         if (w) return respond({ code: 'PGRST429', message: `Too many attempts. Try again in ${Math.ceil(w / 60)} minute(s).`, details: null, hint: null }, 429, { 'retry-after': String(w) });
+        await hit(env, k, rule);
       }
       if (wantRep && !admin && pol.read !== 'public' && !(pol.write === 'own')) return perr(403, '42501', 'permission denied (cannot return inserted rows)');
       const upsert = prefer.some((p) => p.startsWith('resolution=merge-duplicates') || p.startsWith('resolution=ignore-duplicates'));
