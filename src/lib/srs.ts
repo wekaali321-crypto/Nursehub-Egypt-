@@ -1,10 +1,11 @@
 /**
  * Spaced repetition for the flashcards (Leitner boxes), kept on this device only (localStorage) — no server calls.
- * "again" → back to box 0 and seen again this session; "hard" → same box, back tomorrow; "easy" → next box, the gap grows
- * (1, 3, 7, 14, 30, 60 days). Cards you know drift away; the ones you miss keep coming back.
+ * "again" → back to box 0, seen again this session; "hard" → same box, back tomorrow; "good" → next box;
+ * "easy" → two boxes up. Gaps grow 1, 3, 7, 14, 30, 60 days: cards you know drift away, the ones you miss keep coming back.
+ * Per card it also keeps the number of reviews, how many were remembered and when it was last reviewed.
  */
-export type Rating = "again" | "hard" | "easy";
-type CardState = { b: number; due: number };
+export type Rating = "again" | "hard" | "good" | "easy";
+type CardState = { b: number; due: number; n?: number; ok?: number; last?: number };
 type Store = { cards: Record<string, CardState>; day: string; done: number };
 
 const KEY = "nh_srs_v1";
@@ -40,10 +41,11 @@ export function rate(id: string, r: Rating): void {
   const cur = s.cards[id] ?? { b: 0, due: 0 };
   const now = Date.now();
   let next: CardState;
+  const stats = { n: (cur.n ?? 0) + 1, ok: (cur.ok ?? 0) + (r === "again" ? 0 : 1), last: now };
   if (r === "again") next = { b: 0, due: now };
   else if (r === "hard") next = { b: cur.b, due: now + DAY };
-  else { const b = Math.min(cur.b + 1, GAPS.length - 1); next = { b, due: now + GAPS[b] * DAY }; }
-  s.cards[id] = next;
+  else { const b = Math.min(cur.b + (r === "easy" ? 2 : 1), GAPS.length - 1); next = { b, due: now + GAPS[b] * DAY }; }
+  s.cards[id] = { ...next, ...stats };
   s.done += 1;
   save(s);
 }
@@ -63,3 +65,17 @@ export function deckStats(ids: string[]) {
 }
 
 export const doneToday = () => load().done;
+
+/** Whole-device summary for the dashboard: due now, learned (box ≥ 2), still learning, reviews done, last review time. */
+export function srsSummary() {
+  const s = load();
+  const now = Date.now();
+  let due = 0, learned = 0, learning = 0, reviews = 0, last = 0;
+  for (const c of Object.values(s.cards)) {
+    if (c.due <= now) due++;
+    if (c.b >= 2) learned++; else learning++;
+    reviews += c.n ?? 0;
+    if ((c.last ?? 0) > last) last = c.last!;
+  }
+  return { due, learned, learning, reviews, last, today: s.done };
+}

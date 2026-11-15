@@ -203,6 +203,7 @@ async function pageFor(path, env, request) {
       description: desc,
       body: `<h1>${esc(ar)} — ${esc(en)}</h1><p>${esc(desc)}</p>${list(rows.map((r) => [`/${m[1]}/${r.id}`, r.title_ar + (r.title_en ? ` (${r.title_en})` : ''), r.summary_ar || '']))}`,
       type: 'CollectionPage',
+      crumbs: [['الرئيسية', '/'], [ar, `/${m[1]}`]],
     };
   }
   if ((m = /^\/([a-z-]+)\/([^/]+)$/.exec(p)) && DEPTS[m[1]]) {
@@ -219,6 +220,7 @@ async function pageFor(path, env, request) {
       title: `${r.title_ar}${r.title_en ? ` (${r.title_en})` : ''} | ${ar} | ${SITE_NAME}`,
       description: clip(strip(r.summary_ar || '') || strip(secs[0]?.body_ar || ''), 300),
       body, type: 'MedicalWebPage',
+      crumbs: [['الرئيسية', '/'], [ar, `/${m[1]}`], [r.title_ar, `/${m[1]}/${r.id}`]],
     };
   }
   if (STATIC_PAGES[p]) {
@@ -260,7 +262,11 @@ function inject(html, page, url) {
   for (const [re, val] of pairs) out = out.replace(re, (_m, a, c) => `${a}${val}${c}`);
   const ld = { '@context': 'https://schema.org', '@type': page.type, name: page.title, description: page.description, url: canonical, inLanguage: 'ar', publisher: { '@type': 'Organization', name: SITE_NAME } };
   if (img) ld.image = img;
-  const head = `<link rel="canonical" href="${esc(canonical)}" /><script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`;
+  let head = `<link rel="canonical" href="${esc(canonical)}" /><script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`;
+  if (page.crumbs) {
+    const bc = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: page.crumbs.map(([name, path], i) => ({ '@type': 'ListItem', position: i + 1, name, item: siteOrigin + path })) };
+    head += `<script type="application/ld+json">${JSON.stringify(bc).replace(/</g, '\\u003c')}</script>`;
+  }
   // The bundle is inlined into index.html and may itself contain "</head>" / "<body" inside strings, so anchor on the
   // last root tag and the closest </head> before it. String slicing also avoids "$&" expansion in the page text.
   const rootTag = '<div id="root">';
@@ -392,7 +398,9 @@ export async function onRequest({ request, env, next }) {
     if (request.method !== 'GET' || (!accept.includes('text/html') && !accept.includes('*/*'))) return next();
     if (!BOT_RE.test(request.headers.get('user-agent') || '')) return next();
     // Crawlers fetch the same pages again and again: keep the rendered page at the edge for 6 h (no D1 read on a hit).
-    const ck = new Request(`${url.origin}/__seo${url.pathname}`); // same-zone key: the Cache API ignores foreign hosts
+    // per deployment: the cached page embeds this deployment's index.html (asset file names), so a new deploy never serves
+    // crawlers an old copy pointing at JS files that no longer exist
+    const ck = new Request(`${url.origin}/__seo/${encodeURIComponent(env.CF_PAGES_COMMIT_SHA || 'dev')}${url.pathname}`);
     try { const hit = await caches.default.match(ck); if (hit) return new Response(hit.body, hit); } catch { /* no cache */ }
     const page = await pageFor(url.pathname, env, request);
     if (!page) return next();

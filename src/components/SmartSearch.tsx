@@ -147,9 +147,9 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
     <div className={isHero ? "relative mx-auto mt-6 max-w-xl" : "relative w-full"}>
       {isHero ? (
         <form onSubmit={submit} className="flex items-center gap-2 rounded-full bg-white p-1.5 shadow-2xl shadow-teal-900/20">
-          <span className="pr-3 text-slate-500 dark:text-slate-400"><Search size={20} aria-hidden="true" /></span>
-          <input {...inputProps} placeholder={t("common.searchPlaceholder")} className="flex-1 bg-transparent text-slate-800 outline-none placeholder:text-slate-400" />
-          <button className="rounded-full bg-[#127378] hover:bg-[#0f6165] px-5 py-2.5 font-bold text-white sm:px-7">{t("common.search")}</button>
+          <span className="shrink-0 ps-3 text-slate-500 dark:text-slate-400"><Search size={20} aria-hidden="true" /></span>
+          <input {...inputProps} placeholder={t("common.searchPlaceholder")} className="min-w-0 flex-1 bg-transparent text-slate-800 outline-none placeholder:text-slate-400" />
+          <button className="shrink-0 rounded-full bg-[#127378] hover:bg-[#0f6165] px-5 py-2.5 font-bold text-white sm:px-7">{t("common.search")}</button>
         </form>
       ) : (
         <form onSubmit={submit}>

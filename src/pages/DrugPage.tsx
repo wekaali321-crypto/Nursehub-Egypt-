@@ -10,7 +10,8 @@ import InlineLangToggle from "../components/InlineLangToggle";
 import DrugSection, { DrugText } from "../components/drugs/DrugSection";
 import DrugSectionNav from "../components/drugs/DrugSectionNav";
 import DrugCard from "../components/drugs/DrugCard";
-import EditableImage from "../components/EditableImage";
+import DrugGallery from "../components/DrugGallery";
+import MedicalDisclaimer from "../components/MedicalDisclaimer";
 
 const BLOCK_LABELS = {
   dose: { ar: "الجرعة", en: "Dosage" },
@@ -157,12 +158,7 @@ export default function DrugPage() {
             <div className="print:hidden"><CrossRefBox table="drugs" id={drug.id} /></div>
             <div className="print:hidden"><SafetyLinksBox table="drugs" id={drug.id} /></div>
 
-            <EditableImage block slot={`drug:${drug.slug}`} src={drug.showImage ? drug.imageUrl : null} label={`صورة الدواء: ${drug.name}`}
-              render={(u) => (
-                <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900">
-                  <img src={u} alt={drug.name} className="mx-auto max-h-80 w-auto rounded-xl object-contain" />
-                </div>
-              )} />
+            <DrugGallery slug={drug.slug} name={drug.name} defaultUrl={drug.showImage ? drug.imageUrl || null : null} />
 
             {hasWarnings && (
               <DrugSection id="warnings" icon="⚠️" title={t("drug.highAlertWarningsHeading")} tone="danger">
@@ -212,9 +208,7 @@ export default function DrugPage() {
             {drug.storage && has(text.storage) && <DrugSection id="storage" icon="🧊" title={BLOCK_LABELS.storage[lang]}><DrugText>{text.storage}</DrugText></DrugSection>}
             {drug.references && has(text.refs) && <DrugSection id="references" icon="📚" title={BLOCK_LABELS.references[lang]}><DrugText>{text.refs}</DrugText></DrugSection>}
 
-            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800 dark:border-amber-900 dark:bg-amber-500/5 dark:text-amber-300">
-              ⚠️ {t("drug.disclaimer")}
-            </div>
+            <MedicalDisclaimer />
 
             {related.length > 0 && (
               <section className="pt-2 print:hidden">

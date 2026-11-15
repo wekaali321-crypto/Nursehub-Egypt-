@@ -5,6 +5,7 @@ import { useI18n } from "../lib/i18n";
 import { supabase, isSupabaseConfigured } from "../lib/supabase";
 import { ArticleCard } from "../components/common";
 import { useSEO } from "../lib/seo";
+import LearningOverview from "../components/LearningOverview";
 
 export default function StudentDashboard() {
   const { user, loggedIn, loading: authLoading } = useUserAuth();
@@ -83,19 +84,23 @@ export default function StudentDashboard() {
 
   if (!loggedIn || !user) {
     return (
-      <div className="flex min-h-[60vh] flex-col items-center justify-center gap-3 text-center">
-        <p className="text-lg text-slate-600 dark:text-slate-400">
-          {isRTL ? "يجب تسجيل الدخول لعرض حسابك." : "Please log in to view your dashboard."}
-        </p>
-        <Link to="/login" className="rounded-full bg-teal-500 px-6 py-2 font-bold text-white">
-          {isRTL ? "تسجيل الدخول" : "Log in"}
-        </Link>
+      <div className="mx-auto max-w-7xl px-4 py-8" dir={isRTL ? "rtl" : "ltr"}>
+        <LearningOverview />
+        <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-nh-line bg-white p-6 text-center dark:border-slate-800 dark:bg-slate-900">
+          <p className="text-slate-600 dark:text-slate-400">
+            {isRTL ? "سجّل دخولك علشان تشوف المقالات المحفوظة وسجل القراءة على أي جهاز." : "Log in to see your saved articles and reading history on any device."}
+          </p>
+          <Link to="/login" className="rounded-full bg-nh-teal-dark px-6 py-2 font-bold text-white hover:bg-nh-teal-darker">
+            {isRTL ? "تسجيل الدخول" : "Log in"}
+          </Link>
+        </div>
       </div>
     );
   }
 
   const displayName = (user.user_metadata as any)?.full_name || (user.user_metadata as any)?.name || user.email?.split("@")[0] || "User";
-  const avatarUrl = (user.user_metadata as any)?.avatar_url || (user.user_metadata as any)?.picture || `https://i.pravatar.cc/80?u=${user.id}`;
+  // the user's own picture (Google) when there is one; otherwise an initial — never a third-party avatar service (privacy)
+  const avatarUrl = (user.user_metadata as any)?.avatar_url || (user.user_metadata as any)?.picture || "";
   const joinedDate = user.created_at ? user.created_at.slice(0, 10) : "";
 
   return (
@@ -103,7 +108,9 @@ export default function StudentDashboard() {
       {/* Welcome Card */}
       <div className="mb-8 rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
         <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <img src={avatarUrl} alt="Avatar" className="h-20 w-20 rounded-full object-cover" />
+          {avatarUrl
+            ? <img src={avatarUrl} alt="" className="h-20 w-20 rounded-full object-cover" referrerPolicy="no-referrer" />
+            : <span aria-hidden="true" className="grid h-20 w-20 place-items-center rounded-full bg-nh-navy text-3xl font-black text-white">{String(displayName).trim().charAt(0).toUpperCase()}</span>}
           <div>
             <h1 className="text-2xl font-black dark:text-white">{displayName}</h1>
             <p className="text-sm text-slate-600 dark:text-slate-400">{user.email}</p>
@@ -111,6 +118,8 @@ export default function StudentDashboard() {
           </div>
         </div>
       </div>
+
+      <LearningOverview />
 
       {loading ? (
         <div className="animate-pulse space-y-6">

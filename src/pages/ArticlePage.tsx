@@ -17,6 +17,8 @@ import ArticleListCard from "../components/ArticleListCard";
 import TableOfContents, { type TocItem } from "../components/TableOfContents";
 import AuthorCard, { AuthorChip } from "../components/AuthorCard";
 import ArticleNav from "../components/ArticleNav";
+import MedicalDisclaimer from "../components/MedicalDisclaimer";
+import RelatedDrugs from "../components/RelatedDrugs";
 import ArticleAI from "../components/ArticleAI";
 import ArticleContent from "../components/ArticleContent";
 import ShareBar from "../components/ShareBar";
@@ -525,12 +527,9 @@ export default function ArticlePage() {
             </Link>
           </div>
 
-          <div className="mt-8 flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-700 dark:border-amber-900 dark:bg-amber-500/5 dark:text-amber-400">
-            <span className="text-xl" aria-hidden="true">⚕️</span>
-            <p>{docLang === "ar"
-              ? "إخلاء مسؤولية طبي: هذا المحتوى لأغراض تعليمية فقط ولا يُغني عن استشارة الطبيب أو المختص. راجع دائماً البروتوكولات المعتمدة في مؤسستك."
-              : "Medical disclaimer: This content is for educational purposes only and is not a substitute for professional medical advice. Always follow your institution's approved protocols."}</p>
-          </div>
+          {!article.partial && <div className="mt-8"><RelatedDrugs text={`${article.title} ${article.content}`} /></div>}
+
+          <MedicalDisclaimer lang={docLang} className="mt-6" />
 
           <div className="mt-6">
             <ArticleAI articleHtml={dispContent.text} articleTitle={dispTitle.text} />

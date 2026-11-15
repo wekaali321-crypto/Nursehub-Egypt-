@@ -202,6 +202,7 @@ const OrderStatusPage = lazy(() => import("./pages/OrderStatusPage"));
 const ShiftPage = lazy(() => import("./pages/ShiftPage"));
 const CardsPage = lazy(() => import("./pages/CardsPage"));
 import { LoginPage, RegisterPage, ForgotPage } from "./pages/AuthPages";
+import { recordVisit } from "./lib/recentVisits";
 
 function Loader() {
   return (
@@ -305,6 +306,9 @@ function SiteTracker() {
   const { pathname, search } = useLocation();
   useEffect(() => {
     trackPageview(pathname + search);
+    // remember learning pages opened on this device (dashboard "recently opened"); local only, once the page title is set
+    const tm = window.setTimeout(() => recordVisit(pathname, document.title), 1500);
+    return () => window.clearTimeout(tm);
   }, [pathname, search]);
   useEffect(() => startHeartbeat(() => window.location.pathname), []);
   useEffect(() => installLinkPrefetch(), []);

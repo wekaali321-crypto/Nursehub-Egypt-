@@ -14,7 +14,7 @@ export default function InstallPrompt() {
   const dismiss = () => { setDismissed(true); localStorage.setItem("nursehub_pwa_dismissed", "1"); };
 
   return (
-    <div className="fixed bottom-4 left-1/2 z-[70] w-[92%] max-w-md -translate-x-1/2 rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl dark:border-slate-700 dark:bg-slate-900">
+    <div className="fixed bottom-20 md:bottom-4 left-1/2 z-[70] w-[92%] max-w-md -translate-x-1/2 rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl dark:border-slate-700 dark:bg-slate-900">
       <div className="flex items-center gap-3">
         <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#127378] hover:bg-[#0f6165] text-xl text-white">🩺</div>
         <div className="min-w-0 flex-1">
