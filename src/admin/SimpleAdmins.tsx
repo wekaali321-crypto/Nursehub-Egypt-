@@ -8,13 +8,38 @@ import { supabase } from "../lib/supabase";
 import type { MediaItem } from "../lib/types";
 
 export function CommentsAdmin() {
-  const { comments, articles, setData } = useStore();
+  const { comments: all, articles, setData } = useStore();
+  // error reports ("report:<path>") have their own list and can never be approved (that would make them public)
+  const comments = all.filter((c) => !c.articleId.startsWith("report:"));
+  const reports = all.filter((c) => c.articleId.startsWith("report:"));
   const setStatus = (id: string, status: Comment["status"]) => setData((d) => ({ ...d, comments: d.comments.map((c) => (c.id === id ? { ...c, status } : c)) }));
   const del = (id: string) => setData((d) => ({ ...d, comments: d.comments.filter((c) => c.id !== id) }));
   const title = (aid: string) => articles.find((a) => a.id === aid)?.title ?? "—";
 
   return (
     <div className="space-y-3">
+      <section className="rounded-2xl border border-amber-200 bg-amber-50/60 p-4 dark:border-amber-500/30 dark:bg-amber-500/5">
+        <h2 className="mb-3 font-black text-nh-navy dark:text-white">🚩 بلاغات الأخطاء ({reports.filter((r) => r.status !== "resolved").length} مفتوح)</h2>
+        {reports.length === 0 && <p className="text-sm text-slate-500">مفيش بلاغات.</p>}
+        <div className="space-y-2">
+          {[...reports].sort((a, b) => (a.status === "resolved" ? 1 : 0) - (b.status === "resolved" ? 1 : 0) || b.date.localeCompare(a.date)).map((r) => {
+            const path = r.articleId.slice("report:".length);
+            return (
+              <div key={r.id} className={`rounded-xl border bg-white p-3 dark:bg-slate-900 ${r.status === "resolved" ? "border-slate-200 opacity-60 dark:border-slate-800" : "border-amber-300 dark:border-amber-500/40"}`}>
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500">
+                  <a href={path} target="_blank" rel="noreferrer" className="font-bold text-nh-teal-dark underline" dir="ltr">{path}</a>
+                  <span>{r.date}{r.status === "resolved" ? " • تم الحل" : ""}</span>
+                </div>
+                <p className="mt-1 whitespace-pre-wrap text-sm text-slate-700 dark:text-slate-200">{r.text}</p>
+                <div className="mt-2 flex gap-2">
+                  {r.status !== "resolved" && <button onClick={() => setStatus(r.id, "resolved")} className="rounded-lg bg-emerald-500 px-3 py-1 text-xs font-bold text-white">تم الحل</button>}
+                  <button onClick={() => del(r.id)} className="rounded-lg bg-red-100 px-3 py-1 text-xs font-bold text-red-600 dark:bg-red-500/10">حذف</button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
       {comments.length === 0 && <div className="rounded-2xl border border-dashed border-slate-300 py-12 text-center text-slate-400 dark:border-slate-700">لا توجد تعليقات</div>}
       {comments.map((c) => (
         <div key={c.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
@@ -290,7 +315,7 @@ function MemberPasswordReset() {
       <p className="mb-3 text-xs text-slate-500 dark:text-slate-400">لما عضو ينسى كلمة المرور ويتواصل معاك: اكتب بريده، وابعتله كلمة المرور المؤقتة اللي هتظهر.</p>
       <div className="flex flex-col gap-2 sm:flex-row">
         <input type="email" dir="ltr" placeholder="member@email.com" value={email} onChange={(e) => setEmail(e.target.value)} className="flex-1 rounded-lg border border-slate-200 px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-800 dark:text-white" />
-        <button onClick={run} disabled={busy || !email.trim()} className="rounded-lg bg-[#127378] px-4 py-2 text-sm font-bold text-white disabled:opacity-60">{busy ? "جارٍ التنفيذ..." : "إنشاء كلمة مرور مؤقتة"}</button>
+        <button onClick={run} disabled={busy || !email.trim()} className="rounded-lg bg-nh-teal-dark px-4 py-2 text-sm font-bold text-white disabled:opacity-60">{busy ? "جارٍ التنفيذ..." : "إنشاء كلمة مرور مؤقتة"}</button>
       </div>
       {out && (
         <div className={`mt-3 rounded-lg p-3 text-sm ${out.ok ? "bg-emerald-50 text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-300" : "bg-rose-50 text-rose-700 dark:bg-rose-500/10 dark:text-rose-300"}`}>

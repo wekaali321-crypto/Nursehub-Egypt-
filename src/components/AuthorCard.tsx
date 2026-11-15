@@ -2,9 +2,9 @@ import { useStore } from "../lib/store";
 import { useI18n } from "../lib/i18n";
 
 const GRADIENTS = [
-  "from-[#153448] to-[#168C91]",
-  "from-[#168C91] to-[#153448]",
-  "from-[#1b4a63] to-[#168C91]",
+  "from-nh-navy to-nh-teal",
+  "from-nh-teal to-nh-navy",
+  "from-[#1b4a63] to-nh-teal",
 ];
 
 function gradientFor(name: string) {
@@ -29,7 +29,7 @@ export default function AuthorCard({ name }: { name: string }) {
       <div className="min-w-0">
         <div className="flex items-center gap-1.5">
           <span className="truncate font-bold text-slate-800 dark:text-white">{name}</span>
-          <span title={lang === "ar" ? "موثّق" : "Verified"} className="text-[#127378] dark:text-teal-300">✔️</span>
+          <span title={lang === "ar" ? "موثّق" : "Verified"} className="text-nh-teal-dark dark:text-teal-300">✔️</span>
         </div>
         <div className="text-xs text-slate-500 dark:text-slate-400">
           {user?.role === "admin"

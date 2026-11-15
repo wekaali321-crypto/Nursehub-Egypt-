@@ -308,7 +308,7 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-8" dir="rtl">
         <Breadcrumbs items={[{ label: 'أسئلة السفر للخارج', path: '/travel-questions' }, { label: category.name_ar }]} />
-        <h1 className="mb-4 text-2xl font-black text-[#153448] dark:text-white">{category.name_ar}</h1>
+        <h1 className="mb-4 text-2xl font-black text-nh-navy dark:text-white">{category.name_ar}</h1>
         {switcher}
         <ExamSimulator questions={questions} bankKey={categoryId} group="travel" title={category.name_ar} path={`/travel-questions/${categoryId}?mode=exam`} />
       </div>

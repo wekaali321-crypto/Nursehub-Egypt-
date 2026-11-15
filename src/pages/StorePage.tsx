@@ -78,7 +78,7 @@ export default function StorePage() {
                 <div className="mt-1 text-xs text-slate-500 dark:text-slate-400">🛍 {p.sales} {t("store.purchases")}</div>
                 <div className="mt-3 flex gap-2">
                   <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); notify(t("store.addedToCart"), "success"); }} className="flex-1 rounded-full border border-teal-500 py-2.5 text-sm font-bold text-teal-700 dark:text-teal-300">{t("store.addToCart")}</button>
-                  <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); nav("/checkout"); }} className="flex-1 rounded-full bg-[#127378] hover:bg-[#0f6165] py-2.5 text-sm font-bold text-white hover:opacity-90">{t("store.buyNow")}</button>
+                  <button onClick={() => { add({ productId: p.id, title, price: finalPrice, qty: 1, cover: p.cover }); nav("/checkout"); }} className="flex-1 rounded-full bg-nh-teal-dark hover:bg-nh-teal-darker py-2.5 text-sm font-bold text-white hover:opacity-90">{t("store.buyNow")}</button>
                 </div>
               </div>
             </div>

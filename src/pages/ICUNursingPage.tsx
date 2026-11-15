@@ -84,7 +84,7 @@ export function ICUNursingHome() {
         </p>
         <Link
           to="/drugs/icu-medications"
-          className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-bold text-[#127378] dark:text-teal-300 shadow hover:bg-teal-50"
+          className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-2.5 text-sm font-bold text-nh-teal-dark dark:text-teal-300 shadow hover:bg-teal-50"
         >
           💊 {isEn ? "ICU Medications" : "أدوية العناية المركزة"}
         </Link>
@@ -95,7 +95,7 @@ export function ICUNursingHome() {
           <div className="flex flex-wrap gap-2">
             <button
               onClick={() => setCategory("all")}
-              className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === "all" ? "bg-[#127378] text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
+              className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === "all" ? "bg-nh-teal-dark text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
             >
               {isEn ? "All" : "الكل"}
             </button>
@@ -103,7 +103,7 @@ export function ICUNursingHome() {
               <button
                 key={c}
                 onClick={() => setCategory(c)}
-                className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === c ? "bg-[#127378] text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
+                className={`rounded-full px-4 py-1.5 text-sm font-semibold ${category === c ? "bg-nh-teal-dark text-white" : "bg-slate-100 dark:bg-slate-800 dark:text-slate-200"}`}
               >
                 {c}
               </button>
@@ -112,7 +112,7 @@ export function ICUNursingHome() {
         ) : <div />}
         <button
           onClick={() => { setSelectMode((v) => !v); setSelected(new Set()); }}
-          className={`rounded-full px-4 py-1.5 text-sm font-bold ${selectMode ? "bg-slate-800 text-white dark:bg-slate-700" : "border border-teal-300 text-[#127378] dark:text-teal-300 hover:bg-teal-50 dark:border-[#168C91]/40 dark:hover:bg-[#168C91]/10"}`}
+          className={`rounded-full px-4 py-1.5 text-sm font-bold ${selectMode ? "bg-slate-800 text-white dark:bg-slate-700" : "border border-teal-300 text-nh-teal-dark dark:text-teal-300 hover:bg-teal-50 dark:border-nh-teal/40 dark:hover:bg-nh-teal/10"}`}
         >
           {selectMode ? `✕ ${t("icuPrint.cancelSelect")}` : `🖨️ ${t("icuPrint.selectMode")}`}
         </button>
@@ -136,17 +136,17 @@ export function ICUNursingHome() {
                 <div className="flex items-start justify-between">
                   <div className="text-3xl">{tp.icon || "🏥"}</div>
                   {selectMode && (
-                    <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${isSelected ? "border-[#168C91] bg-[#127378] text-white" : "border-slate-300 text-transparent dark:border-slate-600"}`}>✓</span>
+                    <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold ${isSelected ? "border-nh-teal bg-nh-teal-dark text-white" : "border-slate-300 text-transparent dark:border-slate-600"}`}>✓</span>
                   )}
                 </div>
-                <h3 className="mt-2 font-black text-slate-800 group-hover:text-[#168C91] dark:text-white">
+                <h3 className="mt-2 font-black text-slate-800 group-hover:text-nh-teal dark:text-white">
                   {isEn && tp.title_en ? tp.title_en : tp.title_ar}
                 </h3>
-                {tp.category && <span className="mt-1 inline-block rounded-full bg-teal-50 px-2 py-0.5 text-[11px] font-bold text-[#127378] dark:text-teal-300 dark:bg-[#168C91]/10">{tp.category}</span>}
+                {tp.category && <span className="mt-1 inline-block rounded-full bg-teal-50 px-2 py-0.5 text-[11px] font-bold text-nh-teal-dark dark:text-teal-300 dark:bg-nh-teal/10">{tp.category}</span>}
                 {(isEn ? tp.summary_en : tp.summary_ar) && (
                   <p className="mt-2 line-clamp-2 text-sm text-slate-600 dark:text-slate-400">{isEn ? tp.summary_en : tp.summary_ar}</p>
                 )}
-                <div className="mt-3 text-xs font-bold text-[#127378] dark:text-teal-300">
+                <div className="mt-3 text-xs font-bold text-nh-teal-dark dark:text-teal-300">
                   {selectMode ? (isSelected ? (isEn ? "Selected for print" : "مُختار للطباعة") : (isEn ? "Tap to select" : "اضغط للاختيار")) : <>{tp.sections.length} {isEn ? "sections" : "أقسام"} ←</>}
                 </div>
               </>
@@ -156,7 +156,7 @@ export function ICUNursingHome() {
                 key={tp.id}
                 type="button"
                 onClick={() => toggleSelected(tp.id)}
-                className={`${card} group p-5 text-start transition hover:-translate-y-0.5 hover:shadow-lg ${isSelected ? "ring-2 ring-[#168C91]" : ""}`}
+                className={`${card} group p-5 text-start transition hover:-translate-y-0.5 hover:shadow-lg ${isSelected ? "ring-2 ring-nh-teal" : ""}`}
               >
                 {cardInner}
               </button>
@@ -175,14 +175,14 @@ export function ICUNursingHome() {
         <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{t("icuPrint.sectionDesc")}</p>
 
         {selectMode && (
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-teal-50 p-4 dark:bg-[#168C91]/10">
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-teal-50 p-4 dark:bg-nh-teal/10">
             <span className="text-sm font-bold text-teal-700 dark:text-teal-300">
               {selected.size} {t("icuPrint.selectedCount")} — {selected.size * PER_TOPIC_PRINT_PRICE} {isEn ? "EGP" : "جنيه"}
             </span>
             <button
               onClick={addSelectedToCart}
               disabled={selected.size === 0}
-              className="rounded-full bg-[#168C91] px-6 py-2 text-sm font-bold text-white disabled:opacity-40"
+              className="rounded-full bg-nh-teal px-6 py-2 text-sm font-bold text-white disabled:opacity-40"
             >
               {t("icuPrint.addSelectedToCart")}
             </button>
@@ -191,7 +191,7 @@ export function ICUNursingHome() {
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 pt-4 dark:border-slate-800">
           <span className="text-sm font-semibold text-slate-600 dark:text-slate-300">{t("icuPrint.printAllBanner")}</span>
-          <button onClick={addPrintAllToCart} className="rounded-full bg-[#127378] hover:bg-[#0f6165] px-6 py-2.5 text-sm font-bold text-white shadow">
+          <button onClick={addPrintAllToCart} className="rounded-full bg-nh-teal-dark hover:bg-nh-teal-darker px-6 py-2.5 text-sm font-bold text-white shadow">
             {t("icuPrint.printAllBtn")}
           </button>
         </div>
@@ -239,7 +239,7 @@ export default function ICUNursingTopicPage() {
       <div className="mx-auto max-w-lg px-4 py-16 text-center">
         <div className="text-6xl">❓</div>
         <h1 className="mt-3 text-2xl font-black dark:text-white">{isEn ? "Topic not found" : "الموضوع غير موجود"}</h1>
-        <Link to="/icu-nursing" className="mt-4 inline-block rounded-full bg-[#168C91] px-6 py-2 font-bold text-white">{t("nav.icuNursing")}</Link>
+        <Link to="/icu-nursing" className="mt-4 inline-block rounded-full bg-nh-teal px-6 py-2 font-bold text-white">{t("nav.icuNursing")}</Link>
       </div>
     );
   }
@@ -274,7 +274,7 @@ export default function ICUNursingTopicPage() {
             <span className="text-sm font-semibold text-slate-600 dark:text-slate-300">
               {isEn ? "Want a clean, print-ready copy of this topic?" : "عايز نسخة قابلة للطباعة من الموضوع ده؟"}
             </span>
-            <button onClick={buyPrint} className="rounded-full bg-[#168C91] px-6 py-2 text-sm font-bold text-white">
+            <button onClick={buyPrint} className="rounded-full bg-nh-teal px-6 py-2 text-sm font-bold text-white">
               {t("icuPrint.perTopicBtn")}
             </button>
           </>
@@ -287,7 +287,7 @@ export default function ICUNursingTopicPage() {
           const body = isEn && s.body_en ? s.body_en : s.body_ar;
           return (
             <section key={s.id || i} className={`${card} p-5`}>
-              <h2 className="mb-3 text-lg font-black text-[#127378] dark:text-teal-300">{heading}</h2>
+              <h2 className="mb-3 text-lg font-black text-nh-teal-dark dark:text-teal-300">{heading}</h2>
               <EditableImage block slot={`icu-topic:${topic.id}:${s.id || i}`} src={s.image_url || ICU_ART(s, i, topic.id)} label={heading}
                 render={(u) => <img src={u} alt={heading} loading="lazy" className="mx-auto mb-4 max-h-96 w-full rounded-xl border border-slate-200 bg-white object-contain p-2 dark:border-slate-700" />} />
               <TopicBody body={body} accent="sky" />
@@ -367,7 +367,7 @@ export function ICUPrintAllPage() {
             <span className="text-sm font-semibold text-slate-600 dark:text-slate-300">
               {isEn ? "Unlock a print-ready copy of the entire ICU Nursing section." : "افتح نسخة قابلة للطباعة من قسم العناية المركزة كله."}
             </span>
-            <button onClick={buyPrintAll} className="rounded-full bg-[#127378] hover:bg-[#0f6165] px-6 py-2.5 text-sm font-bold text-white shadow">
+            <button onClick={buyPrintAll} className="rounded-full bg-nh-teal-dark hover:bg-nh-teal-darker px-6 py-2.5 text-sm font-bold text-white shadow">
               {t("icuPrint.printAllBtn")}
             </button>
           </>
@@ -402,7 +402,7 @@ export function ICUPrintAllPage() {
                     const body = isEn && s.body_en ? s.body_en : s.body_ar;
                     return (
                       <section key={s.id || i} className={`${card} p-5`}>
-                        <h3 className="mb-3 text-lg font-black text-[#127378] dark:text-teal-300">{heading}</h3>
+                        <h3 className="mb-3 text-lg font-black text-nh-teal-dark dark:text-teal-300">{heading}</h3>
                         <TopicBody body={body} accent="sky" />
                       </section>
                     );

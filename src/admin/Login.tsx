@@ -47,7 +47,7 @@ export default function Login() {
             <input value={cap} onChange={(e) => setCap(e.target.value)} className={inputCls} />
           </div>
           {err && <div className="rounded-lg bg-red-50 p-2 text-center text-sm font-semibold text-red-600 dark:bg-red-500/10">{err}</div>}
-          <button disabled={busy} className="w-full rounded-lg bg-[#168C91] hover:bg-[#127378] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ التحقق..." : "دخول"}</button>
+          <button disabled={busy} className="w-full rounded-lg bg-nh-teal hover:bg-nh-teal-dark py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ التحقق..." : "دخول"}</button>
         </form>
       </div>
     </div>
@@ -67,7 +67,7 @@ function SetupRequired() {
       <div className="w-full max-w-lg rounded-3xl bg-white p-8 shadow-2xl dark:bg-slate-900">
         <div className="mb-4 text-center">
           <div className="flex justify-center"><Logo size={48} /></div>
-          <div className="mx-auto mt-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#168C91] text-xl text-white">🔐</div>
+          <div className="mx-auto mt-3 flex h-10 w-10 items-center justify-center rounded-xl bg-nh-teal text-xl text-white">🔐</div>
           <h1 className="mt-3 text-2xl font-black dark:text-white">إعداد المدير مطلوب</h1>
         </div>
         <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">

@@ -125,7 +125,7 @@ export default function NotificationBell() {
           dir={ar ? "rtl" : "ltr"}
           className="fixed inset-x-3 top-16 z-[70] max-h-[75vh] overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl sm:absolute sm:inset-x-auto sm:end-0 sm:top-12 sm:w-96 dark:border-slate-700 dark:bg-slate-900"
         >
-          <div className="flex items-center justify-between border-b border-slate-100 bg-[#153448] px-4 py-3 text-white dark:border-slate-800">
+          <div className="flex items-center justify-between border-b border-slate-100 bg-nh-navy px-4 py-3 text-white dark:border-slate-800">
             <b className="inline-flex items-center gap-1.5"><Bell size={16} aria-hidden="true" />{ar ? "مركز الإشعارات" : "Notifications"}</b>
             <span className="flex items-center gap-3">
               {visible.length > 0 && (
@@ -156,7 +156,7 @@ export default function NotificationBell() {
                   onKeyDown={(e) => e.key === "Enter" && go(n)}
                   className="flex w-full cursor-pointer items-start gap-3 border-b border-slate-100 px-4 py-3 text-start hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800/60"
                 >
-                  <span className="mt-0.5 text-[#168C91]"><EmojiIcon emoji={KIND_ICON[n.kind || ""]} fallback="🔔" size={20} /></span>
+                  <span className="mt-0.5 text-nh-teal"><EmojiIcon emoji={KIND_ICON[n.kind || ""]} fallback="🔔" size={20} /></span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-sm font-black text-slate-900 dark:text-white">{(!ar && n.title_en) || n.title}</span>
                     {((!ar && n.body_en) || n.body) && <span className="mt-0.5 block text-xs leading-5 text-slate-600 dark:text-slate-300">{(!ar && n.body_en) || n.body}</span>}

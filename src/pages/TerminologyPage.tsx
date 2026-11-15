@@ -68,7 +68,7 @@ export default function TerminologyTopicPage() {
       <div className="mx-auto max-w-lg px-4 py-16 text-center">
         <div className="text-6xl">❓</div>
         <h1 className="mt-3 text-2xl font-black dark:text-white">{isEn ? "Topic not found" : "الموضوع غير موجود"}</h1>
-        <Link to="/terminology" className="mt-4 inline-block rounded-full bg-[#153448] px-6 py-2 font-bold text-white">{t("nav.terminology")}</Link>
+        <Link to="/terminology" className="mt-4 inline-block rounded-full bg-nh-navy px-6 py-2 font-bold text-white">{t("nav.terminology")}</Link>
       </div>
     );
   }

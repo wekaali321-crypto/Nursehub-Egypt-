@@ -1,5 +1,7 @@
+import { loadOfflineJson } from "./offlineFile";
+
 /** Finding drug names in a text (articles, topics) — pure function, tested in tests/d1/drugMatch.test.mjs. */
-export type Row = [slug: string, ar: string, en: string, generic: string, highAlert: 0 | 1];
+export type Row = [slug: string, ar: string, en: string, generic: string, highAlert: 0 | 1, cls?: string, clsEn?: string];
 const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 export type Hit = { kind: "brand"; row: Row } | { kind: "generic"; name: string; highAlert: boolean };
@@ -30,3 +32,7 @@ export function matchDrugs(text: string, rows: Row[], limit = 8): Hit[] {
     .map((h) => (h.kind === "generic" ? { ...h, highAlert: generics.get(h.name.toLowerCase()) ?? h.highAlert } : h));
 }
 
+
+/** The static names index (public/shift/drug-names.json, ~45 KB), loaded once and kept on the device. */
+let index: Promise<Row[]> | null = null;
+export const loadDrugNames = (): Promise<Row[]> => (index ??= loadOfflineJson<{ drugs: Row[] }>("/shift/drug-names.json", "drug_names_v2").then((r) => r.data.drugs).catch(() => { index = null; return []; }));

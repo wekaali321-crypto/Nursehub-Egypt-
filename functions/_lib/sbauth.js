@@ -150,7 +150,17 @@ export async function handleAuth(request, env, path) {
         if (String(body.password).length < 6) return bad('weak_password', 'Password too short', 422);
         await env.DB.prepare('UPDATE auth_users SET password_hash = ? WHERE id = ?').bind(await hashPassword(env, body.password), u.id).run();
       }
-      if (body.data) await env.DB.prepare('UPDATE auth_users SET meta = ?, name = COALESCE(?, name) WHERE id = ?').bind(JSON.stringify(body.data), body.data.name || null, u.id).run();
+      if (body.data && typeof body.data === 'object') {
+        // merge into the existing metadata (like GoTrue): a key set to null is removed; other keys are kept, so saving study
+        // progress never erases the name, and vice versa. Capped so one account row cannot grow without limit.
+        let old = {};
+        try { old = u.meta ? JSON.parse(u.meta) : {}; } catch { old = {}; }
+        const merged = { ...old, ...body.data };
+        for (const [k, v] of Object.entries(body.data)) if (v === null) delete merged[k];
+        const json = JSON.stringify(merged);
+        if (json.length > 300_000) return bad('payload_too_large', 'User metadata too large', 413);
+        await env.DB.prepare('UPDATE auth_users SET meta = ?, name = COALESCE(?, name) WHERE id = ?').bind(json, body.data.name || null, u.id).run();
+      }
       return respond(userJson(await env.DB.prepare('SELECT * FROM auth_users WHERE id = ?').bind(u.id).first()));
     }
     return respond(userJson(u));

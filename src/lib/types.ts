@@ -43,7 +43,8 @@ export interface Comment {
   name: string;
   text: string;
   date: string;
-  status: "approved" | "pending";
+  /** "resolved" is used for error reports (articleId "report:<path>"), which are never public */
+  status: "approved" | "pending" | "resolved";
 }
 
 export interface MediaItem {

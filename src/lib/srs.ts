@@ -79,3 +79,17 @@ export function srsSummary() {
   }
   return { due, learned, learning, reviews, last, today: s.done };
 }
+
+/** Compact form of all cards for account sync: id → [box, due, reviews, remembered, last]. */
+export type PackedCards = Record<string, [number, number, number, number, number]>;
+export function exportCards(): PackedCards {
+  const out: PackedCards = {};
+  for (const [id, c] of Object.entries(load().cards)) out[id] = [c.b, c.due, c.n ?? 0, c.ok ?? 0, c.last ?? 0];
+  return out;
+}
+/** Replace this device's cards (today's counter is kept). */
+export function importCards(p: PackedCards): void {
+  const s = load();
+  s.cards = Object.fromEntries(Object.entries(p).map(([id, [b, due, n, ok, last]]) => [id, { b, due, n, ok, last }]));
+  save(s);
+}

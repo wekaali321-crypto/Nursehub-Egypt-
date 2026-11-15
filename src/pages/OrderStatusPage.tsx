@@ -16,6 +16,8 @@ const POLL_MS = 20000;
 interface TrackedOrder {
   invoiceNo: string;
   paymentStatus: Order["paymentStatus"];
+  /** productId → file link, only for a paid order (from /api/order-lookup; product files are not public) */
+  downloads?: Record<string, string>;
   items: OrderItem[];
 }
 
@@ -30,7 +32,7 @@ interface TrackedOrder {
 // without a manual refresh.
 export default function OrderStatusPage() {
   const { invoiceNo } = useParams<{ invoiceNo: string }>();
-  const { products, trackDownload } = useStore();
+  const { trackDownload } = useStore();
   const { t, lang } = useI18n();
   const isEn = lang === "en";
   useSEO({ title: `${t("order.tracking")} ${invoiceNo ?? ""} | NurseHub Egypt` });
@@ -58,7 +60,7 @@ export default function OrderStatusPage() {
         if (cancelled) return;
         if (!res.ok) { setOrder(null); return; }
         const json = await res.json();
-        setOrder({ invoiceNo: json.invoiceNo, paymentStatus: json.paymentStatus, items: json.items ?? [] });
+        setOrder({ invoiceNo: json.invoiceNo, paymentStatus: json.paymentStatus, items: json.items ?? [], downloads: json.downloads ?? {} });
       } catch {
         if (!cancelled) setOrder(null);
       }
@@ -117,7 +119,6 @@ export default function OrderStatusPage() {
           {order.items.map((item) => {
             const isPrintAll = item.productId === "icu-print-all";
             const isPrintTopic = item.productId.startsWith("icu-print-") && !isPrintAll;
-            const product = products.find((p) => p.id === item.productId);
             return (
               <div key={item.productId} className="flex items-center justify-between gap-3 rounded-xl border border-slate-200 p-3 dark:border-slate-700">
                 <span className="text-sm font-semibold dark:text-white">{item.title}</span>
@@ -129,9 +130,9 @@ export default function OrderStatusPage() {
                   <a href={`/icu-nursing/${item.productId.replace("icu-print-", "")}?unlocked=1`} target="_blank" rel="noreferrer" className="shrink-0 rounded-full bg-emerald-500 px-4 py-1.5 text-xs font-bold text-white">
                     {t("order.printSection")}
                   </a>
-                ) : product?.fileUrl ? (
+                ) : order.downloads?.[item.productId] ? (
                   <a
-                    href={`${product.fileUrl}${product.fileUrl.includes("?") ? "&" : "?"}download=`}
+                    href={`${order.downloads[item.productId]}${order.downloads[item.productId].includes("?") ? "&" : "?"}download=`}
                     onClick={() => trackDownload()}
                     className="shrink-0 rounded-full bg-teal-500 px-4 py-1.5 text-xs font-bold text-white"
                   >

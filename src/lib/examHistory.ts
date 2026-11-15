@@ -12,6 +12,8 @@ export interface ExamAttempt {
   correct: number;
   total: number;
   seconds: number;
+  /** per topic [correct, total] (approximate topics, added once the results screen has loaded them) */
+  topics?: Record<string, [number, number]>;
 }
 
 const KEY = "nh_exam_history_v1";
@@ -61,4 +63,25 @@ export function statsByBank(group?: ExamGroup): BankStats[] {
       lastDate: list[0].date,
     }))
     .sort((a, b) => a.avg - b.avg);
+}
+
+/** Add the per-topic breakdown to an attempt already saved (matched by bank + date). */
+export function attachTopics(key: string, date: number, topics: Record<string, [number, number]>): void {
+  const list = loadHistory();
+  const a = list.find((x) => x.key === key && x.date === date);
+  if (!a || a.topics) return;
+  a.topics = topics;
+  try { localStorage.setItem(KEY, JSON.stringify(list)); } catch { /* ignore */ }
+}
+
+/** Topics across all attempts on this device, weakest first (only topics with at least `min` questions). */
+export function weakTopics(min = 5): { topic: string; correct: number; total: number; pct: number }[] {
+  const m: Record<string, [number, number]> = {};
+  for (const a of loadHistory()) for (const [t, [c, n]] of Object.entries(a.topics ?? {})) { const cur = m[t] ?? [0, 0]; m[t] = [cur[0] + c, cur[1] + n]; }
+  return Object.entries(m).filter(([t, [, n]]) => t !== "general" && n >= min).map(([topic, [correct, total]]) => ({ topic, correct, total, pct: Math.round((correct / total) * 100) })).sort((a, b) => a.pct - b.pct);
+}
+
+/** Replace this device's history (used by account sync after merging). */
+export function replaceHistory(list: ExamAttempt[]): void {
+  try { localStorage.setItem(KEY, JSON.stringify(list.slice(0, MAX))); } catch { /* ignore */ }
 }

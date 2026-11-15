@@ -106,11 +106,11 @@ export default function ShiftPage() {
         </div>
       </section>
 
-      <div className="sticky top-16 z-20 border-b border-slate-200 bg-[#F1F4F6]/95 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95">
+      <div className="sticky top-16 z-20 border-b border-slate-200 bg-nh-surface/95 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95">
         <nav className="mx-auto flex max-w-3xl gap-2 overflow-x-auto px-4 py-2.5" aria-label={tx(L.title)}>
           {tabs.map(({ id, icon: I }) => (
             <button key={id} onClick={() => setTab(id)} aria-pressed={tab === id}
-              className={`flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-4 text-sm font-black transition ${tab === id ? "bg-[#153448] text-white dark:bg-[#168C91]" : "bg-white text-[#153448] ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700"}`}>
+              className={`flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-4 text-sm font-black transition ${tab === id ? "bg-nh-navy text-white dark:bg-nh-teal" : "bg-white text-nh-navy ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700"}`}>
               <I size={18} aria-hidden="true" />{tx(L.tabs[id])}
             </button>
           ))}
@@ -185,12 +185,12 @@ function DrugsTab({ drugs, ar, tx }: { drugs: LiteDrug[] | null; ar: boolean; tx
           return (
             <li key={d.s} className={`overflow-hidden rounded-2xl border bg-white dark:bg-slate-900 ${d.h ? "border-red-200 dark:border-red-900" : "border-slate-200 dark:border-slate-800"}`}>
               <button onClick={() => setOpen(isOpen ? null : d.s)} aria-expanded={isOpen} className="flex min-h-16 w-full items-center gap-3 p-3 text-start">
-                <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl ${d.h ? "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300" : "bg-[#168C91]/10 text-[#127378] dark:text-teal-300"}`}>
+                <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-xl ${d.h ? "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300" : "bg-nh-teal/10 text-nh-teal-dark dark:text-teal-300"}`}>
                   {d.h ? <TriangleAlert size={22} aria-hidden="true" /> : <Pill size={22} aria-hidden="true" />}
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="flex flex-wrap items-baseline gap-x-2">
-                    <span className="text-base font-black text-[#153448] dark:text-white">{ar ? d.n || d.ne : d.ne || d.n}</span>
+                    <span className="text-base font-black text-nh-navy dark:text-white">{ar ? d.n || d.ne : d.ne || d.n}</span>
                     {d.n && d.ne && d.n !== d.ne && <span className="text-sm font-bold text-slate-500 dark:text-slate-400" dir="auto">{ar ? d.ne : d.n}</span>}
                   </span>
                   <span className="block truncate text-xs font-semibold text-slate-600 dark:text-slate-400">{[ar ? d.c || d.ce : d.ce || d.c, ar ? d.g : d.ge || d.g].filter(Boolean).join(" · ")}</span>
@@ -203,8 +203,9 @@ function DrugsTab({ drugs, ar, tx }: { drugs: LiteDrug[] | null; ar: boolean; tx
                   {dose && <Field title={tx(L.dose)} tone="teal" body={dose} />}
                   {contra && <Field title={tx(L.contra)} tone="amber" body={contra} />}
                   {nurse && <Field title={tx(L.nursing)} tone="slate" body={nurse} />}
+                  {d.h && <p className="rounded-xl bg-red-50 p-2 text-xs font-bold text-red-800 dark:bg-red-500/10 dark:text-red-200">{ar ? "تحقق مستقل مزدوج مع ممرض تاني قبل التحضير والإعطاء." : "Independent double check with a second nurse before preparing and giving."}</p>}
                   <div className="flex flex-wrap gap-2">
-                    <Link to={`/drug/${d.s}`} className="inline-flex min-h-11 items-center rounded-full bg-[#168C91] px-5 text-sm font-black text-white hover:bg-[#127378]">{tx(L.full)}</Link>
+                    <Link to={`/drug/${d.s}`} className="inline-flex min-h-11 items-center rounded-full bg-nh-teal px-5 text-sm font-black text-white hover:bg-nh-teal-dark">{tx(L.full)}</Link>
                     {d.h && <Link to="/drugs/high-alert-ref" className="inline-flex min-h-11 items-center rounded-full border border-red-300 px-5 text-sm font-black text-red-700 hover:bg-red-50 dark:border-red-800 dark:text-red-300 dark:hover:bg-red-500/10">{ar ? "إرشادات السلامة" : "Safety guidance"}</Link>}
                   </div>
                 </div>
@@ -218,7 +219,7 @@ function DrugsTab({ drugs, ar, tx }: { drugs: LiteDrug[] | null; ar: boolean; tx
 }
 
 function Field({ title, body, tone }: { title: string; body: string; tone: "teal" | "red" | "amber" | "slate" }) {
-  const c = { teal: "text-[#127378] dark:text-teal-300", red: "text-red-700 dark:text-red-300", amber: "text-amber-700 dark:text-amber-300", slate: "text-slate-700 dark:text-slate-300" }[tone];
+  const c = { teal: "text-nh-teal-dark dark:text-teal-300", red: "text-red-700 dark:text-red-300", amber: "text-amber-700 dark:text-amber-300", slate: "text-slate-700 dark:text-slate-300" }[tone];
   return (
     <div>
       <div className={`text-xs font-black ${c}`}>{title}</div>
@@ -248,12 +249,12 @@ function IVTab({ rows, ar, tx }: TabProps<IVRow>) {
         return (
           <article key={r.id} className={`rounded-2xl border bg-white p-4 dark:bg-slate-900 ${t.box}`}>
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <h3 className="text-base font-black text-[#153448] dark:text-white">{ar ? r.drug_a : r.drug_a_en || r.drug_a} <span className="text-slate-400">+</span> {ar ? r.drug_b : r.drug_b_en || r.drug_b}</h3>
+              <h3 className="text-base font-black text-nh-navy dark:text-white">{ar ? r.drug_a : r.drug_a_en || r.drug_a} <span className="text-slate-400">+</span> {ar ? r.drug_b : r.drug_b_en || r.drug_b}</h3>
               <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-black text-white ${t.pill}`}><t.I size={14} aria-hidden="true" />{tx(L.status[r.status] ?? L.status.consult)}</span>
             </div>
             {(ar ? r.reason : r.reason_en || r.reason) && <p className="mt-2 text-sm leading-7 text-slate-700 dark:text-slate-300">{ar ? r.reason : r.reason_en || r.reason}</p>}
             {(ar ? r.nursing_action : r.nursing_action_en || r.nursing_action) && (
-              <p className="mt-2 rounded-xl bg-[#F1F4F6] p-3 text-sm leading-7 text-slate-800 dark:bg-slate-800 dark:text-slate-200"><b className="text-[#127378] dark:text-teal-300">{tx(L.action)}: </b>{ar ? r.nursing_action : r.nursing_action_en || r.nursing_action}</p>
+              <p className="mt-2 rounded-xl bg-nh-surface p-3 text-sm leading-7 text-slate-800 dark:bg-slate-800 dark:text-slate-200"><b className="text-nh-teal-dark dark:text-teal-300">{tx(L.action)}: </b>{ar ? r.nursing_action : r.nursing_action_en || r.nursing_action}</p>
             )}
           </article>
         );
@@ -277,7 +278,7 @@ function HighAlertTab({ rows, ar, tx }: TabProps<HARow>) {
             {(ar ? r.drugs : r.drugs_en?.length ? r.drugs_en : r.drugs).map((d) => <li key={d} className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-bold text-red-800 dark:bg-red-500/10 dark:text-red-200" dir="auto">{d}</li>)}
           </ul>
           {(ar ? r.safety_strategy : r.safety_strategy_en || r.safety_strategy) && (
-            <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-300"><b className="text-[#127378] dark:text-teal-300">{tx(L.strategy)}: </b>{ar ? r.safety_strategy : r.safety_strategy_en || r.safety_strategy}</p>
+            <p className="mt-3 text-sm leading-7 text-slate-700 dark:text-slate-300"><b className="text-nh-teal-dark dark:text-teal-300">{tx(L.strategy)}: </b>{ar ? r.safety_strategy : r.safety_strategy_en || r.safety_strategy}</p>
           )}
         </article>
       ))}
@@ -292,7 +293,7 @@ function LasaTab({ rows, ar }: { rows: LasaRow[] | null; ar: boolean }) {
     <div className="space-y-3">
       {rows.map((r) => (
         <article key={r.id} className="rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
-          <div className="flex flex-wrap items-center justify-center gap-3 text-xl font-black tracking-wide text-[#153448] dark:text-white" dir="ltr">
+          <div className="flex flex-wrap items-center justify-center gap-3 text-xl font-black tracking-wide text-nh-navy dark:text-white" dir="ltr">
             <span>{r.tall_man_a || r.drug_a}</span><Shuffle size={18} className="text-amber-500" aria-hidden="true" /><span>{r.tall_man_b || r.drug_b}</span>
           </div>
           {(ar ? r.notes : r.notes_en || r.notes) && <p className="mt-2 text-center text-sm leading-7 text-slate-700 dark:text-slate-300">{ar ? r.notes : r.notes_en || r.notes}</p>}

@@ -26,7 +26,7 @@ function Card({ title, icon, children, defaultOpen = false }: { title: string; i
         className="flex w-full items-center justify-between gap-2 p-5 text-right"
       >
         <span className="flex items-center gap-2 text-lg font-bold dark:text-white">
-          <span className="text-[#168C91] dark:text-teal-300" aria-hidden="true"><EmojiIcon emoji={icon} size={24} /></span>{title}
+          <span className="text-nh-teal dark:text-teal-300" aria-hidden="true"><EmojiIcon emoji={icon} size={24} /></span>{title}
         </span>
         <span className={`shrink-0 text-slate-500 dark:text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true">▼</span>
       </button>
@@ -1127,10 +1127,10 @@ export default function ToolsPage() {
         <h1 className="text-3xl font-black">{t("tools.title")}</h1>
         <p className="mt-2 text-white/80">{t("tools.sub")}</p>
       </div>
-      <Link to="/shift" className="mb-6 flex items-center gap-4 rounded-2xl border border-[#168C91]/30 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-teal-500/30 dark:bg-slate-900">
-        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#168C91] text-white"><Zap size={24} aria-hidden="true" /></span>
+      <Link to="/shift" className="mb-6 flex items-center gap-4 rounded-2xl border border-nh-teal/30 bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-teal-500/30 dark:bg-slate-900">
+        <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-nh-teal text-white"><Zap size={24} aria-hidden="true" /></span>
         <span className="min-w-0 flex-1">
-          <span className="block text-base font-black text-[#153448] dark:text-white">{t("nav.shift")}</span>
+          <span className="block text-base font-black text-nh-navy dark:text-white">{t("nav.shift")}</span>
           <span className="block text-sm text-slate-600 dark:text-slate-400">{t("shift.cta")}</span>
         </span>
       </Link>

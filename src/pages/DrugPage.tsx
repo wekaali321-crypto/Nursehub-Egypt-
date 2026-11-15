@@ -12,6 +12,8 @@ import DrugSectionNav from "../components/drugs/DrugSectionNav";
 import DrugCard from "../components/drugs/DrugCard";
 import DrugGallery from "../components/DrugGallery";
 import MedicalDisclaimer from "../components/MedicalDisclaimer";
+import ContentQuality from "../components/ContentQuality";
+import HighAlertBox from "../components/HighAlertBox";
 
 const BLOCK_LABELS = {
   dose: { ar: "الجرعة", en: "Dosage" },
@@ -25,7 +27,7 @@ const BLOCK_LABELS = {
 
 export default function DrugPage() {
   const { slug } = useParams();
-  const { drugs, drugInteractions } = useStore();
+  const { drugs, drugInteractions, drugAntidotes } = useStore();
   const { lang, t } = useI18n();
   const navigate = useNavigate();
   const location = useLocation();
@@ -66,7 +68,7 @@ export default function DrugPage() {
       <div className="mx-auto max-w-3xl px-4 py-20 text-center">
         <div className="text-6xl">🔍</div>
         <h1 className="mt-4 text-2xl font-bold dark:text-white">{t("drug.notFound")}</h1>
-        <Link to="/drugs" className="mt-4 inline-block rounded-full bg-[#168C91] hover:bg-[#127378] px-6 py-2 font-bold text-white">{t("drug.backToGuide")}</Link>
+        <Link to="/drugs" className="mt-4 inline-block rounded-full bg-nh-teal hover:bg-nh-teal-dark px-6 py-2 font-bold text-white">{t("drug.backToGuide")}</Link>
       </div>
     );
   }
@@ -110,8 +112,8 @@ export default function DrugPage() {
   const goBack = () => (location.key !== "default" ? navigate(-1) : navigate("/drugs/all"));
 
   return (
-    <div className="bg-[#F1F4F6] pb-12 dark:bg-slate-950 print:bg-white">
-      <header className="relative z-20 bg-[#153448] text-white print:bg-white print:text-black">
+    <div className="bg-nh-surface pb-12 dark:bg-slate-950 print:bg-white">
+      <header className="relative z-20 bg-nh-navy text-white print:bg-white print:text-black">
         {showHighAlert && (
           <div className="relative bg-red-700 text-white">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-1 px-4 py-2 text-sm font-black">
@@ -122,7 +124,7 @@ export default function DrugPage() {
         )}
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden print:hidden">
           <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
-          <div className="absolute -top-20 end-[-5rem] h-60 w-60 rounded-full bg-[#168C91]/40 blur-3xl" />
+          <div className="absolute -top-20 end-[-5rem] h-60 w-60 rounded-full bg-nh-teal/40 blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-6xl px-4 pb-5 pt-4 md:pb-7 md:pt-5">
           <div className="flex flex-wrap items-center justify-between gap-2 print:hidden">
@@ -146,7 +148,7 @@ export default function DrugPage() {
           <h1 className="mt-4 break-words text-3xl font-black leading-tight md:text-4xl">{name}</h1>
           <p className="mt-1 text-base text-teal-100 print:text-black md:text-lg">{genericName}{drugClass ? <> • {drugClass}</> : null}</p>
           <div className="mt-3 flex flex-wrap items-center gap-2">
-            <span className="rounded-full border border-[#168C91]/60 bg-[#168C91]/20 px-3 py-1 text-xs font-bold text-teal-100 sm:text-sm">{category}</span>
+            <span className="rounded-full border border-nh-teal/60 bg-nh-teal/20 px-3 py-1 text-xs font-bold text-teal-100 sm:text-sm">{category}</span>
           </div>
         </div>
       </header>
@@ -159,6 +161,8 @@ export default function DrugPage() {
             <div className="print:hidden"><SafetyLinksBox table="drugs" id={drug.id} /></div>
 
             <DrugGallery slug={drug.slug} name={drug.name} defaultUrl={drug.showImage ? drug.imageUrl || null : null} />
+
+            {showHighAlert && <HighAlertBox names={[drug.name, drug.nameEn ?? "", drug.genericName, drug.genericNameEn ?? ""]} antidotes={drugAntidotes} />}
 
             {hasWarnings && (
               <DrugSection id="warnings" icon="⚠️" title={t("drug.highAlertWarningsHeading")} tone="danger">
@@ -201,7 +205,7 @@ export default function DrugPage() {
                     );
                   })}
                 </div>
-                <Link to="/drugs/interactions" className="mt-3 inline-block text-sm font-bold text-[#127378] hover:underline dark:text-teal-300">{t("drug.checkOtherInteraction")}</Link>
+                <Link to="/drugs/interactions" className="mt-3 inline-block text-sm font-bold text-nh-teal-dark hover:underline dark:text-teal-300">{t("drug.checkOtherInteraction")}</Link>
               </DrugSection>
             )}
 
@@ -209,10 +213,11 @@ export default function DrugPage() {
             {drug.references && has(text.refs) && <DrugSection id="references" icon="📚" title={BLOCK_LABELS.references[lang]}><DrugText>{text.refs}</DrugText></DrugSection>}
 
             <MedicalDisclaimer />
+            <ContentQuality />
 
             {related.length > 0 && (
               <section className="pt-2 print:hidden">
-                <h2 className="mb-3 border-s-4 border-[#168C91] ps-3 text-lg font-black text-[#153448] dark:text-white">{t("drug.similarInCategory")}</h2>
+                <h2 className="mb-3 border-s-4 border-nh-teal ps-3 text-lg font-black text-nh-navy dark:text-white">{t("drug.similarInCategory")}</h2>
                 <div className="grid gap-3 sm:grid-cols-2">
                   {related.map((d) => <DrugCard key={d.id} d={d} />)}
                 </div>

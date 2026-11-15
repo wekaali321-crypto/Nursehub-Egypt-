@@ -19,7 +19,16 @@ export async function onRequestPost({ request, env }) {
   const row = await env.DB.prepare('SELECT invoice_no, status, items FROM orders WHERE invoice_no = ?').bind(invoiceNo).first();
   if (!row) return json({ error: 'لم يتم العثور على الطلب' }, 404);
   let items = []; try { items = row.items ? JSON.parse(row.items) : []; } catch { /* keep empty */ }
-  return json({ invoiceNo: row.invoice_no, paymentStatus: row.status, items });
+  // download links only for a PAID order and only for the products in it (products.file_url is never public)
+  const downloads = {};
+  if (row.status === 'paid') {
+    const ids = [...new Set((Array.isArray(items) ? items : []).map((i) => String(i?.productId ?? '')).filter(Boolean))].slice(0, 20);
+    if (ids.length) {
+      const rs = await env.DB.prepare(`SELECT id, file_url FROM products WHERE id IN (${ids.map(() => '?').join(',')})`).bind(...ids).all();
+      for (const p of rs.results || []) if (p.file_url) downloads[p.id] = p.file_url;
+    }
+  }
+  return json({ invoiceNo: row.invoice_no, paymentStatus: row.status, items, downloads });
 }
 
 export const onRequest = () => json({ error: 'Method not allowed' }, 405);

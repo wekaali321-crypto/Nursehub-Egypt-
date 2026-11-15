@@ -104,9 +104,9 @@ export default function CardsPage() {
             return (
               <button key={d.id} onClick={() => setActive(d)} className="rounded-2xl border border-slate-200 bg-white p-4 text-start shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
                 <div className="flex items-center gap-3">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#168C91]/10 text-[#127378] dark:text-teal-300"><d.icon size={24} aria-hidden="true" /></span>
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-nh-teal/10 text-nh-teal-dark dark:text-teal-300"><d.icon size={24} aria-hidden="true" /></span>
                   <div className="min-w-0 flex-1">
-                    <div className="font-black text-[#153448] dark:text-white">{ar ? d.title : d.titleEn}</div>
+                    <div className="font-black text-nh-navy dark:text-white">{ar ? d.title : d.titleEn}</div>
                     <div className="text-xs font-bold text-slate-500 dark:text-slate-400">{st.total} {ar ? "بطاقة" : "cards"} · {ar ? "حافظ" : "known"} {st.known}{st.due ? ` · ${ar ? "مستحق" : "due"} ${st.due}` : ""}</div>
                   </div>
                   {st.due > 0 && <span className="rounded-full bg-amber-500 px-2 py-0.5 text-xs font-black text-white">{st.due}</span>}
@@ -153,24 +153,24 @@ function Session({ deck, ar, onExit }: { deck: Deck; ar: boolean; onExit: () => 
   return (
     <div className="mx-auto max-w-xl px-4 py-5">
       <div className="mb-3 flex items-center justify-between gap-2">
-        <button onClick={onExit} className="inline-flex min-h-11 items-center gap-1 rounded-full px-2 text-sm font-black text-[#127378] dark:text-teal-300"><ChevronRight size={18} aria-hidden="true" />{ar ? "البطاقات" : "Decks"}</button>
-        <span className="text-sm font-black text-[#153448] dark:text-white">{ar ? deck.title : deck.titleEn}</span>
+        <button onClick={onExit} className="inline-flex min-h-11 items-center gap-1 rounded-full px-2 text-sm font-black text-nh-teal-dark dark:text-teal-300"><ChevronRight size={18} aria-hidden="true" />{ar ? "البطاقات" : "Decks"}</button>
+        <span className="text-sm font-black text-nh-navy dark:text-white">{ar ? deck.title : deck.titleEn}</span>
         <span className="text-xs font-bold tabular-nums text-slate-500">{reviewed} ✓ · {queue.length} {ar ? "باقي" : "left"}</span>
       </div>
 
       {!card ? (
         <div className="rounded-3xl border border-slate-200 bg-white p-8 text-center dark:border-slate-800 dark:bg-slate-900">
-          <div className="text-2xl font-black text-[#153448] dark:text-white">{ar ? "خلصت بطاقات النهارده" : "Done for today"}</div>
+          <div className="text-2xl font-black text-nh-navy dark:text-white">{ar ? "خلصت بطاقات النهارده" : "Done for today"}</div>
           <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">{ar ? `راجعت ${reviewed} بطاقة. البطاقات هترجعلك في ميعادها.` : `You reviewed ${reviewed} cards. They'll come back when due.`}</p>
           <div className="mt-5 flex justify-center gap-2">
-            <button onClick={onExit} className="min-h-12 rounded-full bg-[#168C91] px-6 font-black text-white hover:bg-[#127378]">{ar ? "رجوع للبطاقات" : "Back to decks"}</button>
-            <Link to="/" className="inline-flex min-h-12 items-center rounded-full border border-slate-200 px-5 font-black text-[#153448] dark:border-slate-700 dark:text-white">{ar ? "الرئيسية" : "Home"}</Link>
+            <button onClick={onExit} className="min-h-12 rounded-full bg-nh-teal px-6 font-black text-white hover:bg-nh-teal-dark">{ar ? "رجوع للبطاقات" : "Back to decks"}</button>
+            <Link to="/" className="inline-flex min-h-12 items-center rounded-full border border-slate-200 px-5 font-black text-nh-navy dark:border-slate-700 dark:text-white">{ar ? "الرئيسية" : "Home"}</Link>
           </div>
         </div>
       ) : (
         <>
           <button onClick={() => setFlipped((f) => !f)} aria-label={ar ? "اقلب البطاقة" : "Flip card"}
-            className={`flex min-h-[320px] w-full flex-col items-center justify-center rounded-3xl border p-6 text-center shadow-sm ${flipped ? "border-[#168C91] bg-white dark:bg-slate-900" : "nh-hero border-transparent text-white"}`}>
+            className={`flex min-h-[320px] w-full flex-col items-center justify-center rounded-3xl border p-6 text-center shadow-sm ${flipped ? "border-nh-teal bg-white dark:bg-slate-900" : "nh-hero border-transparent text-white"}`}>
             {!flipped ? (
               <>
                 <div className="text-3xl font-black leading-tight" dir={card.ltrFront ? "ltr" : "auto"}>{card.front}</div>
@@ -181,7 +181,7 @@ function Session({ deck, ar, onExit }: { deck: Deck; ar: boolean; onExit: () => 
               <>
                 <div className="text-sm font-bold text-slate-500" dir={card.ltrFront ? "ltr" : "auto"}>{card.front}</div>
                 {card.art && <EditableImage key={card.art} slot={`art:${card.art.split("/").pop()!.replace(".svg", "")}`} src={card.art} label={card.front} emptyHint={false} render={(u) => <img src={u} alt="" decoding="async" className="mt-3 h-36 w-auto max-w-full rounded-2xl bg-white object-contain p-2 ring-1 ring-slate-200 dark:ring-slate-700" />} />}
-                <div className="mt-2 text-2xl font-black leading-snug text-[#153448] dark:text-white" dir="auto">{card.back}</div>
+                <div className="mt-2 text-2xl font-black leading-snug text-nh-navy dark:text-white" dir="auto">{card.back}</div>
                 {card.backSub && <div className="mt-3 whitespace-pre-line text-sm leading-7 text-slate-700 dark:text-slate-300" dir="auto">{card.backSub}</div>}
               </>
             )}
@@ -190,11 +190,11 @@ function Session({ deck, ar, onExit }: { deck: Deck; ar: boolean; onExit: () => 
             <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
               <button onClick={() => answer("again")} className="min-h-14 rounded-2xl bg-red-600 font-black text-white hover:bg-red-700">{ar ? "مش فاكر" : "Again"}<span className="block text-[10px] font-bold opacity-80">{ar ? "تاني دلوقتي" : "now"}</span></button>
               <button onClick={() => answer("hard")} className="min-h-14 rounded-2xl bg-amber-500 font-black text-white hover:bg-amber-600">{ar ? "صعب" : "Hard"}<span className="block text-[10px] font-bold opacity-80">{ar ? "بكرة" : "tomorrow"}</span></button>
-              <button onClick={() => answer("good")} className="min-h-14 rounded-2xl bg-[#127378] font-black text-white hover:bg-[#0f6165]">{ar ? "فاكر" : "Good"}<span className="block text-[10px] font-bold opacity-80">{ar ? "بعد أيام" : "in days"}</span></button>
+              <button onClick={() => answer("good")} className="min-h-14 rounded-2xl bg-nh-teal-dark font-black text-white hover:bg-nh-teal-darker">{ar ? "فاكر" : "Good"}<span className="block text-[10px] font-bold opacity-80">{ar ? "بعد أيام" : "in days"}</span></button>
               <button onClick={() => answer("easy")} className="min-h-14 rounded-2xl bg-emerald-600 font-black text-white hover:bg-emerald-700">{ar ? "سهل" : "Easy"}<span className="block text-[10px] font-bold opacity-80">{ar ? "بعد مدة أطول" : "much later"}</span></button>
             </div>
           ) : (
-            <button onClick={() => setFlipped(true)} className="mt-4 min-h-14 w-full rounded-2xl bg-[#153448] font-black text-white">{ar ? "اعرض الإجابة" : "Show answer"}</button>
+            <button onClick={() => setFlipped(true)} className="mt-4 min-h-14 w-full rounded-2xl bg-nh-navy font-black text-white">{ar ? "اعرض الإجابة" : "Show answer"}</button>
           )}
         </>
       )}

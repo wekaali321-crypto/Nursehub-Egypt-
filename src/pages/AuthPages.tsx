@@ -12,7 +12,7 @@ function Shell({ title, children, footer }: { title: string; children: React.Rea
     <div className="mx-auto flex min-h-[70vh] max-w-md flex-col justify-center px-4 py-10">
       <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-800 dark:bg-slate-900">
         <div className="mb-6 text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-[#127378] hover:bg-[#0f6165] text-2xl text-white">🩺</div>
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-nh-teal-dark hover:bg-nh-teal-darker text-2xl text-white">🩺</div>
           <h1 className="mt-3 text-2xl font-black dark:text-white">{title}</h1>
         </div>
         {children}
@@ -65,7 +65,7 @@ export function LoginPage() {
         <input type="email" required placeholder="البريد الإلكتروني" value={email} onChange={(e) => setEmail(e.target.value)} className={inp} />
         <input type="password" required placeholder="كلمة المرور" value={pass} onChange={(e) => setPass(e.target.value)} className={inp} />
         <div className="text-left"><Link to="/forgot" className="text-xs font-semibold text-teal-700 dark:text-teal-300">نسيت كلمة المرور؟</Link></div>
-        <button disabled={busy} className="w-full rounded-lg bg-[#127378] hover:bg-[#0f6165] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الدخول..." : "دخول"}</button>
+        <button disabled={busy} className="w-full rounded-lg bg-nh-teal-dark hover:bg-nh-teal-darker py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الدخول..." : "دخول"}</button>
       </form>
       <SocialButtons busy={busy} onGoogle={google} />
       {!isSupabaseConfigured() && <p className="mt-3 rounded-lg bg-amber-50 p-2 text-center text-xs text-amber-700 dark:text-amber-300 dark:bg-amber-500/10">نظام العضوية جاهز ويعمل عبر Supabase Auth بعد إضافة المفاتيح.</p>}
@@ -104,7 +104,7 @@ export function RegisterPage() {
         <input required placeholder="الاسم الكامل" value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} className={inp} />
         <input type="email" required placeholder="البريد الإلكتروني" value={f.email} onChange={(e) => setF({ ...f, email: e.target.value })} className={inp} />
         <input type="password" required minLength={6} placeholder="كلمة المرور" value={f.pass} onChange={(e) => setF({ ...f, pass: e.target.value })} className={inp} />
-        <button disabled={busy} className="w-full rounded-lg bg-[#127378] hover:bg-[#0f6165] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الإنشاء..." : "إنشاء الحساب"}</button>
+        <button disabled={busy} className="w-full rounded-lg bg-nh-teal-dark hover:bg-nh-teal-darker py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الإنشاء..." : "إنشاء الحساب"}</button>
       </form>
       <SocialButtons busy={busy} onGoogle={google} />
     </Shell>

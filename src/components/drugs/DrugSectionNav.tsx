@@ -27,17 +27,17 @@ export default function DrugSectionNav({ items, title, variant }: { items: DrugN
 
   if (variant === "chips") {
     return (
-      <nav aria-label={title} className="sticky top-[65px] z-30 -mx-4 bg-[#F1F4F6]/95 px-4 py-2 backdrop-blur dark:bg-slate-950/95 lg:hidden print:hidden">
+      <nav aria-label={title} className="sticky top-[65px] z-30 -mx-4 bg-nh-surface/95 px-4 py-2 backdrop-blur dark:bg-slate-950/95 lg:hidden print:hidden">
         <ul className="flex snap-x gap-2 overflow-x-auto pb-0.5 [scrollbar-width:none]">
           {items.map((i) => (
             <li key={i.id} className="shrink-0 snap-start">
               <a
                 href={`#${i.id}`}
                 aria-current={active === i.id ? "location" : undefined}
-                className={`block whitespace-nowrap rounded-full border px-3.5 py-1.5 text-sm font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] ${
+                className={`block whitespace-nowrap rounded-full border px-3.5 py-1.5 text-sm font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-nh-teal ${
                   active === i.id
-                    ? "border-[#168C91] bg-[#127378] text-white"
-                    : "border-slate-200 bg-white text-[#153448] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+                    ? "border-nh-teal bg-nh-teal-dark text-white"
+                    : "border-slate-200 bg-white text-nh-navy dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
                 }`}
               >
                 {i.label}
@@ -51,15 +51,15 @@ export default function DrugSectionNav({ items, title, variant }: { items: DrugN
 
   return (
     <nav aria-label={title} className="sticky top-24 hidden rounded-2xl border border-slate-200 bg-white p-3 dark:border-slate-800 dark:bg-slate-900 lg:block print:hidden">
-      <h2 className="mb-2 px-2 text-sm font-black text-[#153448] dark:text-white">{title}</h2>
+      <h2 className="mb-2 px-2 text-sm font-black text-nh-navy dark:text-white">{title}</h2>
       <ul className="space-y-0.5 border-s-2 border-slate-100 ps-2 dark:border-slate-800">
         {items.map((i) => (
           <li key={i.id}>
             <a
               href={`#${i.id}`}
               aria-current={active === i.id ? "location" : undefined}
-              className={`block rounded-lg px-2 py-1.5 text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] ${
-                active === i.id ? "bg-[#168C91]/10 font-bold text-[#127378] dark:bg-[#168C91]/20 dark:text-teal-300" : "text-slate-600 hover:bg-slate-50 hover:text-[#168C91] dark:text-slate-400 dark:hover:bg-slate-800"
+              className={`block rounded-lg px-2 py-1.5 text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-nh-teal ${
+                active === i.id ? "bg-nh-teal/10 font-bold text-nh-teal-dark dark:bg-nh-teal/20 dark:text-teal-300" : "text-slate-600 hover:bg-slate-50 hover:text-nh-teal dark:text-slate-400 dark:hover:bg-slate-800"
               }`}
             >
               {i.label}

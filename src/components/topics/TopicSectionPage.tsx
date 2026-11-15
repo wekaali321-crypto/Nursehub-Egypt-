@@ -8,6 +8,7 @@ import EditableImage from "../EditableImage";
 import LoadError, { LOAD_FAILED } from "../LoadError";
 import MedicalDisclaimer from "../MedicalDisclaimer";
 import RelatedDrugs from "../RelatedDrugs";
+import ContentQuality from "../ContentQuality";
 
 /**
  * Shared Navy/Teal layout for the specialty "topic" sections (hub page + topic page).
@@ -49,11 +50,11 @@ const card = "rounded-2xl border border-slate-200 bg-white dark:border-slate-800
 function Header({ crumbs, tint, children }: { crumbs: { label: string; to?: string }[]; tint: TopicTint; children: React.ReactNode }) {
   const { t } = useI18n();
   return (
-    <header className="relative bg-[#153448] text-white">
+    <header className="relative bg-nh-navy text-white">
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.06] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]" />
         <div className={`absolute -top-20 end-[-5rem] h-60 w-60 rounded-full blur-3xl ${tint.glow}`} />
-        <div className="absolute -bottom-24 start-[-5rem] h-56 w-56 rounded-full bg-[#168C91]/25 blur-3xl" />
+        <div className="absolute -bottom-24 start-[-5rem] h-56 w-56 rounded-full bg-nh-teal/25 blur-3xl" />
       </div>
       <div className="relative mx-auto max-w-6xl px-4 pb-6 pt-4 md:pb-8 md:pt-6">
         <nav aria-label="Breadcrumb" className="text-xs text-slate-300 sm:text-sm">
@@ -100,12 +101,12 @@ export function TopicSectionHome({
   const list = category === "all" ? topics || [] : (topics || []).filter((tp) => tp.category === category);
 
   const chip = (active: boolean) =>
-    `shrink-0 whitespace-nowrap rounded-full border px-3.5 py-1.5 text-sm font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] ${
-      active ? "border-[#168C91] bg-[#127378] text-white" : "border-slate-200 bg-white text-[#153448] hover:border-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+    `shrink-0 whitespace-nowrap rounded-full border px-3.5 py-1.5 text-sm font-bold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-nh-teal ${
+      active ? "border-nh-teal bg-nh-teal-dark text-white" : "border-slate-200 bg-white text-nh-navy hover:border-nh-teal dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
     }`;
 
   return (
-    <div className="bg-[#F1F4F6] pb-12 dark:bg-slate-950">
+    <div className="bg-nh-surface pb-12 dark:bg-slate-950">
       <Header crumbs={[{ label: title }]} tint={tint}>
         <div className="mt-4 flex items-center gap-4">
           <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true"><EmojiIcon emoji={icon} size={30} /></span>
@@ -143,7 +144,7 @@ export function TopicSectionHome({
               <span className="font-bold">{list.length} {isEn ? "topics" : "موضوع"}</span>
               <div className="inline-flex overflow-hidden rounded-full border border-slate-200 dark:border-slate-700" role="group" aria-label={isEn ? "View" : "طريقة العرض"}>
                 {(["compact", "cards"] as const).map((m) => (
-                  <button key={m} type="button" onClick={() => setView(m)} aria-pressed={view === m} className={`px-3 py-1 font-bold ${view === m ? "bg-[#153448] text-white" : "bg-white text-slate-600 dark:bg-slate-900 dark:text-slate-300"}`}>
+                  <button key={m} type="button" onClick={() => setView(m)} aria-pressed={view === m} className={`px-3 py-1 font-bold ${view === m ? "bg-nh-navy text-white" : "bg-white text-slate-600 dark:bg-slate-900 dark:text-slate-300"}`}>
                     {m === "compact" ? (isEn ? "☰ Compact" : "☰ مضغوط") : isEn ? "▦ Cards" : "▦ كروت"}
                   </button>
                 ))}
@@ -153,18 +154,18 @@ export function TopicSectionHome({
             {view === "compact" ? (
               <div className="grid grid-cols-[minmax(0,1fr)] gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {list.map((tp) => (
-                  <Link key={tp.id} to={hrefFor(tp)} className="group flex items-center gap-3 rounded-xl border border-slate-200 border-s-4 border-s-[#168C91] bg-white px-3 py-2.5 transition hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-s-[#168C91] dark:bg-slate-900">
+                  <Link key={tp.id} to={hrefFor(tp)} className="group flex items-center gap-3 rounded-xl border border-slate-200 border-s-4 border-s-nh-teal bg-white px-3 py-2.5 transition hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-nh-teal dark:border-slate-800 dark:border-s-nh-teal dark:bg-slate-900">
                     {artFor?.(tp) !== undefined && artFor?.(tp) !== null
                       ? <EditableImage slot={`topic:${hrefFor(tp)}`} src={artFor!(tp)} label={isEn && tp.title_en ? tp.title_en : tp.title_ar} emptyHint={false} fallback={<span className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg text-xl ${tint.tile}`} aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={20} /></span>} render={(u) => <img src={u} alt="" loading="lazy" decoding="async" className="h-14 w-11 shrink-0 rounded-lg bg-white object-contain p-0.5 ring-1 ring-slate-200 dark:ring-slate-700" />} />
                       : <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-lg text-xl ${tint.tile}`} aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={20} /></span>}
                     <span className="min-w-0 flex-1">
                       <span className="flex items-center justify-between gap-2">
-                        <span className="line-clamp-2 text-sm font-black leading-5 text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{isEn && tp.title_en ? tp.title_en : tp.title_ar}</span>
+                        <span className="line-clamp-2 text-sm font-black leading-5 text-nh-navy group-hover:text-nh-teal dark:text-white dark:group-hover:text-teal-300">{isEn && tp.title_en ? tp.title_en : tp.title_ar}</span>
                         {!isEn && tp.title_en && <span dir="ltr" className="max-w-[40%] shrink-0 truncate text-[13px] font-black text-slate-600 dark:text-slate-300">{tp.title_en}</span>}
                       </span>
                       <span className="block truncate text-[11px] text-slate-600 dark:text-slate-400">{tp.category}{tp.category ? " · " : ""}{tp.sections.length} {isEn ? "sections" : "أقسام"}</span>
                     </span>
-                    <span aria-hidden="true" className="shrink-0 text-[#127378] dark:text-teal-300">{isEn ? "›" : "‹"}</span>
+                    <span aria-hidden="true" className="shrink-0 text-nh-teal-dark dark:text-teal-300">{isEn ? "›" : "‹"}</span>
                   </Link>
                 ))}
               </div>
@@ -173,16 +174,16 @@ export function TopicSectionHome({
                 {list.map((tp) => {
                   const summary = isEn ? tp.summary_en : tp.summary_ar;
                   return (
-                    <Link key={tp.id} to={hrefFor(tp)} className="group overflow-hidden rounded-2xl border border-slate-200 border-b-4 border-b-[#168C91] bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-800 dark:border-b-[#168C91] dark:bg-slate-900">
+                    <Link key={tp.id} to={hrefFor(tp)} className="group overflow-hidden rounded-2xl border border-slate-200 border-b-4 border-b-nh-teal bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-nh-teal dark:border-slate-800 dark:border-b-nh-teal dark:bg-slate-900">
                       <div className={`flex ${artFor?.(tp) ? "h-32" : "h-20"} items-end justify-between p-4 ${tint.tile}`}>
                         {artFor?.(tp)
                           ? <EditableImage slot={`topic:${hrefFor(tp)}`} src={artFor(tp)} label={isEn && tp.title_en ? tp.title_en : tp.title_ar} emptyHint={false} fallback={<span className="text-4xl" aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={36} strokeWidth={1.75} /></span>} render={(u) => <img src={u} alt="" loading="lazy" decoding="async" className="h-24 w-auto rounded-xl bg-white object-contain p-1 shadow-sm" />} />
                           : <span className="text-4xl" aria-hidden="true"><EmojiIcon emoji={tp.icon} fallback={fallbackIcon} size={36} strokeWidth={1.75} /></span>}
-                        {tp.category && <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-black text-[#153448] dark:bg-slate-900/70 dark:text-slate-100">{tp.category}</span>}
+                        {tp.category && <span className="rounded-full bg-white/80 px-3 py-1 text-xs font-black text-nh-navy dark:bg-slate-900/70 dark:text-slate-100">{tp.category}</span>}
                       </div>
                       <div className="p-4">
                         <div className="flex items-baseline justify-between gap-2">
-                          <h3 className="font-black leading-snug text-[#153448] group-hover:text-[#168C91] dark:text-white dark:group-hover:text-teal-300">{isEn && tp.title_en ? tp.title_en : tp.title_ar}</h3>
+                          <h3 className="font-black leading-snug text-nh-navy group-hover:text-nh-teal dark:text-white dark:group-hover:text-teal-300">{isEn && tp.title_en ? tp.title_en : tp.title_ar}</h3>
                           {!isEn && tp.title_en && <span dir="ltr" className="max-w-[42%] shrink-0 truncate text-sm font-black text-slate-600 dark:text-slate-300">{tp.title_en}</span>}
                         </div>
                         {summary && <p className="mt-1 line-clamp-2 text-sm text-slate-600 dark:text-slate-400">{summary}</p>}
@@ -228,14 +229,14 @@ export function TopicSectionDetail({
   const summary = isEn ? topic.summary_en : topic.summary_ar;
 
   return (
-    <div className="bg-[#F1F4F6] pb-12 dark:bg-slate-950">
+    <div className="bg-nh-surface pb-12 dark:bg-slate-950">
       <Header crumbs={[{ label: sectionTitle, to: basePath }, { label: title }]} tint={tint}>
         <div className="mt-4 flex items-start gap-4">
           <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true"><EmojiIcon emoji={topic.icon} fallback={fallbackIcon} size={30} /></span>
           <div className="min-w-0">
             <h1 className="text-2xl font-black leading-tight md:text-4xl">{title}</h1>
             {summary && <p className="mt-2 text-sm leading-7 text-slate-200 md:text-base">{summary}</p>}
-            {topic.category && <span className="mt-3 inline-block rounded-full border border-[#168C91]/60 bg-[#168C91]/20 px-3 py-1 text-xs font-bold text-teal-100 sm:text-sm">{topic.category}</span>}
+            {topic.category && <span className="mt-3 inline-block rounded-full border border-nh-teal/60 bg-nh-teal/20 px-3 py-1 text-xs font-bold text-teal-100 sm:text-sm">{topic.category}</span>}
           </div>
         </div>
       </Header>
@@ -247,16 +248,16 @@ export function TopicSectionDetail({
             <figure className="mb-4 flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-slate-800 dark:bg-slate-900">
               <img src={u} alt="" decoding="async" className="h-48 w-auto shrink-0 rounded-xl bg-white object-contain p-1 ring-1 ring-slate-200 sm:h-56 dark:ring-slate-700" />
             <figcaption className="text-sm leading-7 text-slate-700 dark:text-slate-300">
-              <b className="block text-base font-black text-[#153448] dark:text-white">{isEn ? "Where it is in the body" : "مكانه في الجسم"}</b>
+              <b className="block text-base font-black text-nh-navy dark:text-white">{isEn ? "Where it is in the body" : "مكانه في الجسم"}</b>
               {isEn ? "The highlighted part shows the organs covered in this topic." : "الجزء الملوّن هو الأعضاء اللي بيشرحها الموضوع ده."}
             </figcaption>
             </figure>
           )} />
         )}
         {sectionNav && topic.sections.length > 1 && (
-          <div className="sticky top-14 z-10 -mx-4 mb-4 flex gap-2 overflow-x-auto bg-[#F1F4F6]/90 px-4 py-2 backdrop-blur dark:bg-slate-950/90">
+          <div className="sticky top-14 z-10 -mx-4 mb-4 flex gap-2 overflow-x-auto bg-nh-surface/90 px-4 py-2 backdrop-blur dark:bg-slate-950/90">
             {topic.sections.map((s, i) => (
-              <a key={s.id || i} href={`#tsec-${i}`} className="shrink-0 rounded-full border border-[#168C91]/30 bg-white px-3 py-1 text-xs font-bold text-[#153448] transition hover:border-[#168C91] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">
+              <a key={s.id || i} href={`#tsec-${i}`} className="shrink-0 rounded-full border border-nh-teal/30 bg-white px-3 py-1 text-xs font-bold text-nh-navy transition hover:border-nh-teal focus-visible:outline focus-visible:outline-2 focus-visible:outline-nh-teal dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200">
                 {i + 1}. {isEn && s.heading_en ? s.heading_en : s.heading_ar}
               </a>
             ))}
@@ -267,9 +268,9 @@ export function TopicSectionDetail({
             const heading = isEn && s.heading_en ? s.heading_en : s.heading_ar;
             const body = isEn && s.body_en ? s.body_en : s.body_ar;
             return (
-              <section key={s.id || i} id={sectionNav ? `tsec-${i}` : undefined} className={`${card} border-s-4 border-s-[#168C91] p-4 sm:p-5 ${sectionNav ? "scroll-mt-28" : ""}`}>
-                <h2 className={`mb-3 text-lg font-black text-[#153448] dark:text-white ${sectionNav ? "flex items-center gap-2" : ""}`}>
-                  {sectionNav && <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#168C91] text-sm text-white">{i + 1}</span>}
+              <section key={s.id || i} id={sectionNav ? `tsec-${i}` : undefined} className={`${card} border-s-4 border-s-nh-teal p-4 sm:p-5 ${sectionNav ? "scroll-mt-28" : ""}`}>
+                <h2 className={`mb-3 text-lg font-black text-nh-navy dark:text-white ${sectionNav ? "flex items-center gap-2" : ""}`}>
+                  {sectionNav && <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-nh-teal text-sm text-white">{i + 1}</span>}
                   {heading}
                 </h2>
                 <EditableImage block slot={`sec:${basePath}/${topic.id}:${s.id || i}`} src={s.image_url || sectionArt?.(s, i, topic.id) || null} label={heading}
@@ -282,7 +283,7 @@ export function TopicSectionDetail({
 
         {topic.sources && topic.sources.length > 0 && (
           <div className={`${card} mt-4 p-4 text-xs text-slate-600 dark:text-slate-400`}>
-            <div className="mb-1 font-bold text-[#153448] dark:text-slate-200">{isEn ? "Sources" : "المصادر"}</div>
+            <div className="mb-1 font-bold text-nh-navy dark:text-slate-200">{isEn ? "Sources" : "المصادر"}</div>
             <ul className="list-inside list-disc space-y-0.5">
               {topic.sources.map((src, i) => <li key={i}>{src}</li>)}
             </ul>
@@ -291,9 +292,10 @@ export function TopicSectionDetail({
 
         <div className="mt-4"><RelatedDrugs text={[topic.title_ar, topic.title_en, ...topic.sections.map((x) => `${x.body_ar ?? ""} ${x.body_en ?? ""}`)].join(" ")} /></div>
         <MedicalDisclaimer className="mt-4" />
+        <ContentQuality />
 
         <div className="mt-6 flex justify-center">
-          <Link to={basePath} className="rounded-full border border-[#153448]/20 bg-white px-6 py-2 font-bold text-[#153448] transition hover:border-[#168C91] hover:text-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-white">
+          <Link to={basePath} className="rounded-full border border-nh-navy/20 bg-white px-6 py-2 font-bold text-nh-navy transition hover:border-nh-teal hover:text-nh-teal dark:border-slate-700 dark:bg-slate-900 dark:text-white">
             {isEn ? backLabel.en : backLabel.ar}
           </Link>
         </div>

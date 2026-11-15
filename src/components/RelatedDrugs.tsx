@@ -1,18 +1,15 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { AlertTriangle, Pill } from "lucide-react";
-import { loadOfflineJson } from "../lib/offlineFile";
 import { useI18n } from "../lib/i18n";
 import { Chip } from "./ui";
-import { matchDrugs, type Row } from "../lib/drugMatch";
+import { loadDrugNames as loadIndex, matchDrugs, type Row } from "../lib/drugMatch";
 
 /**
  * Drugs mentioned in a text (article, topic), linked to their drug pages — from the static 25 KB names index
  * (public/shift/drug-names.json, built by scripts/build-shift-data.mjs): no database read. A name must appear as a whole
  * word (Latin) or as the full Arabic name; names shorter than 5 letters are ignored to avoid false matches.
  */
-let index: Promise<Row[]> | null = null;
-const loadIndex = () => (index ??= loadOfflineJson<{ drugs: Row[] }>("/shift/drug-names.json", "drug_names_v1").then((r) => r.data.drugs).catch(() => { index = null; return []; }));
 
 export default function RelatedDrugs({ text, excludeSlug }: { text: string; excludeSlug?: string }) {
   const { lang } = useI18n();

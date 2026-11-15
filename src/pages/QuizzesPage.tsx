@@ -50,7 +50,7 @@ export default function QuizzesPage() {
 
       <Link
         to="/tests/licensure/nursing-practice-exams"
-        className="mb-6 flex items-center gap-4 rounded-2xl border border-teal-100 bg-[#168C91] p-5 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-teal-900"
+        className="mb-6 flex items-center gap-4 rounded-2xl border border-teal-100 bg-nh-teal p-5 text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-teal-900"
       >
         <div className="text-4xl">📝</div>
         <div className="flex-1">
@@ -117,7 +117,7 @@ export default function QuizzesPage() {
                 <span>📊 {difficulty}</span>
               </div>
               {best && <div className="mt-2 text-xs font-bold text-emerald-700 dark:text-emerald-300">{t("quiz.bestScore")}: {best.score}%</div>}
-              <Link to={`/quiz/${q.id}`} className="mt-4 rounded-full bg-[#127378] hover:bg-[#0f6165] py-2.5 text-center font-bold text-white">{t("quiz.start")}</Link>
+              <Link to={`/quiz/${q.id}`} className="mt-4 rounded-full bg-nh-teal-dark hover:bg-nh-teal-darker py-2.5 text-center font-bold text-white">{t("quiz.start")}</Link>
             </div>
           );
         })}

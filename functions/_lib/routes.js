@@ -24,6 +24,7 @@ export const ROUTE_PATTERNS = [
   /^\/admin\/dialysis$/,
   /^\/admin\/drug-antidotes$/,
   /^\/admin\/drug-classifications$/,
+  /^\/admin\/drug-images$/,
   /^\/admin\/drug-interactions$/,
   /^\/admin\/drug-suffixes$/,
   /^\/admin\/drugs$/,
