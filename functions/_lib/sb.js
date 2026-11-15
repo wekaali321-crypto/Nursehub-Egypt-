@@ -371,6 +371,12 @@ export async function handleRest(request, env, path, forceAdmin = false) {
 
 // ---------------------------------------------------------------- RPC
 async function handleRpc(request, env, name, who) {
+  if (name === 'admin_set_user_password') {
+    if (!(await isAdmin(env, who))) return perr(403, 'P0001', 'not allowed');
+    const body = await request.json().catch(() => ({}));
+    const { adminSetPassword } = await import('./sbauth.js');
+    return respond(await adminSetPassword(env, body.email));
+  }
   if (name === 'admin_site_stats') {
     if (!(await isAdmin(env, who))) return perr(403, 'P0001', 'not allowed');
     return respond(await adminSiteStats(env));

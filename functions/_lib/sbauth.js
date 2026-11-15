@@ -1,5 +1,6 @@
 // GoTrue-compatible auth subset on D1 (email/password, Google OAuth, PKCE, refresh tokens).
 import { respond, perr, CORS, signJwt, verifyJwt, identify } from './sb.js';
+import { lockedFor, count, reset, ipOf, LIMITS as RL } from './ratelimit.js';
 
 const enc = new TextEncoder();
 const hex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
@@ -66,6 +67,21 @@ async function passwordLogin(env, email, password) {
   return u;
 }
 
+/** Admin-only (checked by the caller): give a member a new temporary password and sign them out everywhere.
+ *  Staff accounts (admin / superadmin) are refused: the owner signs in with ADMIN_PASSWORD, not a stored hash. */
+export async function adminSetPassword(env, emailIn) {
+  const email = String(emailIn || '').trim().toLowerCase();
+  const u = email ? await getUserByEmail(env, email) : null;
+  if (!u) return { ok: false, error: 'not_found' };
+  const p = await env.DB.prepare('SELECT role FROM profiles WHERE id = ?').bind(u.id).first();
+  if (p && ['admin', 'superadmin'].includes(p.role)) return { ok: false, error: 'staff_account' };
+  const abc = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  const temp = [...crypto.getRandomValues(new Uint8Array(10))].map((b) => abc[b % abc.length]).join('');
+  await env.DB.prepare('UPDATE auth_users SET password_hash = ? WHERE id = ?').bind(await hashPassword(env, temp), u.id).run();
+  await env.DB.prepare('DELETE FROM auth_refresh WHERE user_id = ?').bind(u.id).run();
+  return { ok: true, email, temp_password: temp };
+}
+
 export async function handleAuth(request, env, path) {
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
   if (!env.DB || !env.JWT_SECRET) return perr(503, 'unexpected_failure', 'Auth is not configured (DB / JWT_SECRET)');
@@ -73,12 +89,24 @@ export async function handleAuth(request, env, path) {
   const route = path.join('/');
   const body = ['POST', 'PUT'].includes(request.method) ? await request.json().catch(() => ({})) : {};
   const bad = (code, msg, status = 400) => respond({ code: status, error_code: code, msg }, status);
+  const tooMany = (sec) => respond({ code: 429, error_code: 'over_request_rate_limit', msg: `Too many attempts. Try again in ${Math.max(1, Math.ceil(sec / 60))} minute(s).`, retry_after: sec }, 429, { 'retry-after': String(sec) });
+  const ip = ipOf(request);
 
   if (route === 'token') {
     const grant = url.searchParams.get('grant_type');
     if (grant === 'password') {
+      // Limits are checked before any hashing: a locked IP/e-mail costs no CPU and no D1 read.
+      const kFail = `lf:${ip}:${String(body.email || '').trim().toLowerCase()}`, kIp = `li:${ip}`;
+      const wait = Math.max(await lockedFor(kFail), await lockedFor(kIp));
+      if (wait) return tooMany(wait);
+      const ipWait = await count(kIp, RL.loginIp.max, RL.loginIp.windowSec, RL.loginIp.lockSec);
+      if (ipWait) return tooMany(ipWait);
       const u = await passwordLogin(env, body.email, body.password);
-      if (!u) return bad('invalid_credentials', 'Invalid login credentials');
+      if (!u) {
+        const w = await count(kFail, RL.loginFail.max, RL.loginFail.windowSec, RL.loginFail.lockSec);
+        return w ? tooMany(w) : bad('invalid_credentials', 'Invalid login credentials');
+      }
+      await reset(kFail);
       return respond(await session(env, u));
     }
     if (grant === 'refresh_token') {
@@ -101,6 +129,8 @@ export async function handleAuth(request, env, path) {
   }
 
   if (route === 'signup') {
+    const sWait = (await lockedFor(`su:${ip}`)) || (await count(`su:${ip}`, RL.signupIp.max, RL.signupIp.windowSec, RL.signupIp.lockSec));
+    if (sWait) return tooMany(sWait);
     const email = String(body.email || '').trim().toLowerCase();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || String(body.password || '').length < 6) return bad('validation_failed', 'Invalid email or password (min 6 chars)', 422);
     if (await getUserByEmail(env, email)) return bad('user_already_exists', 'User already registered', 422);
@@ -133,7 +163,16 @@ export async function handleAuth(request, env, path) {
     return new Response(null, { status: 204, headers: CORS });
   }
 
-  if (route === 'recover') return respond({}); // no outbound e-mail on the free plan; reset is done by the site owner (see cloudflare/README.md)
+  if (route === 'recover') {
+    // No outbound e-mail on the free plan (reset is done by the site owner, see cloudflare/README.md). Still limited, so wiring
+    // a mailer later can never be used to burn its daily quota.
+    const em = String(body.email || '').trim().toLowerCase();
+    const rWait = Math.max(await lockedFor(`rc:${ip}`), await lockedFor(`rce:${em}`));
+    if (rWait) return tooMany(rWait);
+    await count(`rc:${ip}`, RL.recoverIp.max, RL.recoverIp.windowSec, RL.recoverIp.lockSec);
+    if (em) await count(`rce:${em}`, RL.recoverEmail.max, RL.recoverEmail.windowSec, RL.recoverEmail.lockSec);
+    return respond({});
+  }
 
   if (route === 'settings') return respond({ external: { google: !!env.GOOGLE_CLIENT_ID, email: true }, disable_signup: false, mailer_autoconfirm: true });
 

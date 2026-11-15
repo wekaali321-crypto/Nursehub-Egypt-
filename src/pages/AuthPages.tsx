@@ -49,14 +49,14 @@ export function LoginPage() {
     const res = await signInWithEmail(email, pass);
     setBusy(false);
     if (res.ok) { notify("تم تسجيل الدخول بنجاح", "success"); nav("/dashboard"); }
-    else notify(res.error || "تعذّر تسجيل الدخول", "info");
+    else notify(res.error || "تعذّر تسجيل الدخول", "error");
   };
 
   const google = async () => {
     setBusy(true);
     const res = await signInWithGoogle();
     setBusy(false);
-    if (!res.ok) notify(res.error || "تعذّر الدخول عبر Google", "info");
+    if (!res.ok) notify(res.error || "تعذّر الدخول عبر Google", "error");
   };
 
   return (
@@ -88,14 +88,14 @@ export function RegisterPage() {
     const res = await signUpWithEmail(f.name, f.email, f.pass);
     setBusy(false);
     if (res.ok) { notify("تم إنشاء الحساب بنجاح", "success"); nav("/dashboard"); }
-    else notify(res.error || "تعذّر إنشاء الحساب", "info");
+    else notify(res.error || "تعذّر إنشاء الحساب", "error");
   };
 
   const google = async () => {
     setBusy(true);
     const res = await signInWithGoogle();
     setBusy(false);
-    if (!res.ok) notify(res.error || "تعذّر الدخول عبر Google", "info");
+    if (!res.ok) notify(res.error || "تعذّر الدخول عبر Google", "error");
   };
 
   return (
@@ -112,33 +112,29 @@ export function RegisterPage() {
 }
 
 export function ForgotPage() {
+  // The site sends no e-mail (free hosting plan), so this page must not promise a reset link: it tells the member how a reset
+  // really happens (the team sets a temporary password from the admin panel) and offers Google sign-in, which needs no password.
   useSEO({ title: "استعادة كلمة المرور | NurseHub Egypt" });
   const { notify } = useToast();
-  const { resetPassword } = useUserAuth();
-  const [email, setEmail] = useState(""); const [sent, setSent] = useState(false);
+  const { signInWithGoogle } = useUserAuth();
   const [busy, setBusy] = useState(false);
-
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!isSupabaseConfigured()) { notify("استعادة كلمة المرور تعمل بعد ربط Supabase Auth", "info"); return; }
+  const google = async () => {
     setBusy(true);
-    const res = await resetPassword(email);
+    const res = await signInWithGoogle();
     setBusy(false);
-    if (res.ok) setSent(true);
-    else notify(res.error || "تعذّر إرسال رابط الاستعادة", "info");
+    if (!res.ok) notify(res.error || "تعذّر الدخول عبر Google", "error");
   };
-
   return (
-    <Shell title="استعادة كلمة المرور" footer={<Link to="/login" className="font-bold text-teal-700 dark:text-teal-300">العودة لتسجيل الدخول</Link>}>
-      {sent ? (
-        <div className="rounded-xl bg-emerald-50 p-4 text-center font-bold text-emerald-700 dark:text-emerald-300 dark:bg-emerald-500/10">✅ تم إرسال رابط الاستعادة إلى بريدك.</div>
-      ) : (
-        <form onSubmit={submit} className="space-y-3">
-          <p className="text-sm text-slate-600 dark:text-slate-400">أدخل بريدك وسنرسل رابط إعادة تعيين كلمة المرور.</p>
-          <input type="email" required placeholder="البريد الإلكتروني" value={email} onChange={(e) => setEmail(e.target.value)} className={inp} />
-          <button disabled={busy} className="w-full rounded-lg bg-[#127378] hover:bg-[#0f6165] py-2.5 font-bold text-white disabled:opacity-60">{busy ? "جارٍ الإرسال..." : "إرسال الرابط"}</button>
-        </form>
-      )}
+    <Shell title="نسيت كلمة المرور؟" footer={<Link to="/login" className="font-bold text-teal-700 dark:text-teal-300">العودة لتسجيل الدخول</Link>}>
+      <div className="space-y-3 text-sm leading-7 text-slate-700 dark:text-slate-300">
+        <p>إعادة تعيين كلمة المرور بتتم عن طريق فريق الموقع:</p>
+        <ol className="list-decimal space-y-1 pr-5">
+          <li>تواصل معانا من صفحة <Link to="/contact" className="font-bold text-teal-700 dark:text-teal-300">تواصل معنا</Link> واكتب البريد اللي سجّلت بيه.</li>
+          <li>هنبعتلك كلمة مرور مؤقتة، ادخل بيها وغيّرها من حسابك.</li>
+        </ol>
+        <p className="rounded-lg bg-slate-50 p-3 text-xs text-slate-600 dark:bg-slate-800 dark:text-slate-400">لو حسابك على Gmail، تقدر تدخل فورًا من غير كلمة مرور:</p>
+      </div>
+      <SocialButtons busy={busy} onGoogle={google} />
     </Shell>
   );
 }
