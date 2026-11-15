@@ -35,3 +35,6 @@ CREATE INDEX IF NOT EXISTS idx_site_pings_visitor ON site_pings(visitor_id, crea
 
 -- admin dashboard: installs per day / per month  WHERE created_at >= ? AND created_at < ?  (site_installs only had a visitor_id index)
 CREATE INDEX IF NOT EXISTS idx_site_installs_created ON site_installs(created_at);
+
+-- auth / form rate limits (functions/_lib/ratelimit.js)  WHERE ip=? AND success=0 AND created_at >= ?
+CREATE INDEX IF NOT EXISTS idx_login_attempts_key ON admin_login_attempts(ip, created_at);

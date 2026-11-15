@@ -11,3 +11,4 @@ DROP INDEX IF EXISTS idx_interview_q_cat_order;
 DROP INDEX IF EXISTS idx_exams_cat_order;
 DROP INDEX IF EXISTS idx_site_pings_visitor;
 DROP INDEX IF EXISTS idx_site_installs_created;
+DROP INDEX IF EXISTS idx_login_attempts_key;

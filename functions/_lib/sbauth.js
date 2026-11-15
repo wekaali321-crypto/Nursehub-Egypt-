@@ -1,6 +1,6 @@
 // GoTrue-compatible auth subset on D1 (email/password, Google OAuth, PKCE, refresh tokens).
 import { respond, perr, CORS, signJwt, verifyJwt, identify } from './sb.js';
-import { lockedFor, count, reset, ipOf, bindOrigin, LIMITS as RL } from './ratelimit.js';
+import { lockedFor, hit, reset, ipOf, LIMITS as RL } from './ratelimit.js';
 
 const enc = new TextEncoder();
 const hex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
@@ -91,23 +91,20 @@ export async function handleAuth(request, env, path) {
   const bad = (code, msg, status = 400) => respond({ code: status, error_code: code, msg }, status);
   const tooMany = (sec) => respond({ code: 429, error_code: 'over_request_rate_limit', msg: `Too many attempts. Try again in ${Math.max(1, Math.ceil(sec / 60))} minute(s).`, retry_after: sec }, 429, { 'retry-after': String(sec) });
   const ip = ipOf(request);
-  bindOrigin(request);
 
   if (route === 'token') {
     const grant = url.searchParams.get('grant_type');
     if (grant === 'password') {
-      // Limits are checked before any hashing: a locked IP/e-mail costs no CPU and no D1 read.
+      // Limits are checked before any hashing: a locked IP/e-mail costs one small read, no CPU-heavy work, no write.
       const kFail = `lf:${ip}:${String(body.email || '').trim().toLowerCase()}`, kIp = `li:${ip}`;
-      const wait = Math.max(await lockedFor(kFail), await lockedFor(kIp));
+      const wait = Math.max(await lockedFor(env, kFail, RL.loginFail), await lockedFor(env, kIp, RL.loginIp));
       if (wait) return tooMany(wait);
-      const ipWait = await count(kIp, RL.loginIp.max, RL.loginIp.windowSec, RL.loginIp.lockSec);
-      if (ipWait) return tooMany(ipWait);
       const u = await passwordLogin(env, body.email, body.password);
       if (!u) {
-        const w = await count(kFail, RL.loginFail.max, RL.loginFail.windowSec, RL.loginFail.lockSec);
+        const w = Math.max(await hit(env, kFail, RL.loginFail), await hit(env, kIp, RL.loginIp));
         return w ? tooMany(w) : bad('invalid_credentials', 'Invalid login credentials');
       }
-      await reset(kFail);
+      await reset(env, kFail);
       return respond(await session(env, u));
     }
     if (grant === 'refresh_token') {
@@ -130,8 +127,9 @@ export async function handleAuth(request, env, path) {
   }
 
   if (route === 'signup') {
-    const sWait = (await lockedFor(`su:${ip}`)) || (await count(`su:${ip}`, RL.signupIp.max, RL.signupIp.windowSec, RL.signupIp.lockSec));
+    const sWait = await lockedFor(env, `su:${ip}`, RL.signupIp);
     if (sWait) return tooMany(sWait);
+    await hit(env, `su:${ip}`, RL.signupIp);
     const email = String(body.email || '').trim().toLowerCase();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || String(body.password || '').length < 6) return bad('validation_failed', 'Invalid email or password (min 6 chars)', 422);
     if (await getUserByEmail(env, email)) return bad('user_already_exists', 'User already registered', 422);
@@ -168,10 +166,10 @@ export async function handleAuth(request, env, path) {
     // No outbound e-mail on the free plan (reset is done by the site owner, see cloudflare/README.md). Still limited, so wiring
     // a mailer later can never be used to burn its daily quota.
     const em = String(body.email || '').trim().toLowerCase();
-    const rWait = Math.max(await lockedFor(`rc:${ip}`), await lockedFor(`rce:${em}`));
+    const rWait = Math.max(await lockedFor(env, `rc:${ip}`, RL.recoverIp), em ? await lockedFor(env, `rce:${em}`, RL.recoverEmail) : 0);
     if (rWait) return tooMany(rWait);
-    await count(`rc:${ip}`, RL.recoverIp.max, RL.recoverIp.windowSec, RL.recoverIp.lockSec);
-    if (em) await count(`rce:${em}`, RL.recoverEmail.max, RL.recoverEmail.windowSec, RL.recoverEmail.lockSec);
+    await hit(env, `rc:${ip}`, RL.recoverIp);
+    if (em) await hit(env, `rce:${em}`, RL.recoverEmail);
     return respond({});
   }
 
