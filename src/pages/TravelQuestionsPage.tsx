@@ -25,6 +25,7 @@ import ArticleContent from '../components/ArticleContent';
 import QuizRunner from '../components/QuizRunner';
 import ExamSimulator, { ExamProgressPanel, useExamMode } from '../components/ExamSimulator';
 import { useSEO } from '../lib/seo';
+import LoadError from "../components/LoadError";
 
 function LoadingBlock() {
   return (
@@ -60,7 +61,7 @@ export function TravelQuestionsHome() {
   }, []);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
 
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
   const reviewCats = categories.filter((c) => c.type === 'review');
@@ -166,7 +167,7 @@ function TravelReviewView({ category }: { category: TravelCategory }) {
   }, [category.id]);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
 
   const active = sections.find((s) => s.id === activeId) ?? sections[0];
 
@@ -260,7 +261,7 @@ export default function TravelQuestionsStudy() {
   }, [categoryId]);
 
   if (catLoading) return <LoadingBlock />;
-  if (catError) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {catError}</div>;
+  if (catError) return <LoadError detail={catError} />;
   if (!category) {
     return (
       <div className="mx-auto max-w-lg px-4 py-16 text-center">
@@ -301,7 +302,7 @@ function TravelQuestionsQuiz({ category }: { category: TravelCategory }) {
   }, [categoryId]);
 
   if (loading) return <LoadingBlock />;
-  if (error) return <div className="p-6 text-red-700 dark:text-red-300">خطأ: {error}</div>;
+  if (error) return <LoadError detail={error} />;
 
   if (exam) {
     return (

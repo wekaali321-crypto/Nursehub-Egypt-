@@ -5,6 +5,7 @@ import { useI18n } from "../lib/i18n";
 import { fetchAnatomyTopics, fetchAnatomyTopic, type AnatomyTopic } from "../lib/anatomyTopicsApi";
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Anatomy keeps a light warm (amber) accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -47,7 +48,7 @@ export function AnatomyHome() {
   const [topics, setTopics] = useState<AnatomyTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_anatomy_routed", TTL.topics, () => fetchAnatomyTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_anatomy_routed", TTL.topics, () => fetchAnatomyTopics({ withRouted: true })).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (

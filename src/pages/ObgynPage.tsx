@@ -6,6 +6,7 @@ import { fetchObgynTopics, fetchObgynTopic, type ObgynTopic } from "../lib/obgyn
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 import { sectionArtFor } from "../lib/sectionArt";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Light pink accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -22,7 +23,7 @@ export function ObgynHome() {
   const [topics, setTopics] = useState<ObgynTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_obgyn_routed", TTL.topics, () => fetchObgynTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_obgyn_routed", TTL.topics, () => fetchObgynTopics({ withRouted: true })).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (

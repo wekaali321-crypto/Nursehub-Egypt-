@@ -6,6 +6,7 @@ import { fetchFundamentalsTopics, fetchFundamentalsTopic, type FundamentalsTopic
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 import { sectionArtFor } from "../lib/sectionArt";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Light blue accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -22,7 +23,7 @@ export function FundamentalsHome() {
   const [topics, setTopics] = useState<FundamentalsTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_fundamentals_routed", TTL.topics, () => fetchFundamentalsTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_fundamentals_routed", TTL.topics, () => fetchFundamentalsTopics({ withRouted: true })).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (

@@ -5,6 +5,7 @@ import TopicBody from "../TopicBody";
 import { useHubView } from "../HubGrid";
 import { useI18n } from "../../lib/i18n";
 import EditableImage from "../EditableImage";
+import LoadError, { LOAD_FAILED } from "../LoadError";
 
 /**
  * Shared Navy/Teal layout for the specialty "topic" sections (hub page + topic page).
@@ -108,7 +109,7 @@ export function TopicSectionHome({
           <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-3xl ring-1 ring-white/20 md:h-16 md:w-16 md:text-4xl ${tint.iconBg}`} aria-hidden="true"><EmojiIcon emoji={icon} size={30} /></span>
           <div className="min-w-0">
             <h1 className="text-2xl font-black leading-tight md:text-4xl">{title}</h1>
-            {topics && <p className="mt-1 text-sm text-teal-200">{topics.length} {isEn ? "topics" : "موضوع"}</p>}
+            {topics && topics !== LOAD_FAILED && <p className="mt-1 text-sm text-teal-200">{topics.length} {isEn ? "topics" : "موضوع"}</p>}
           </div>
         </div>
         <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-200 md:text-base">{isEn ? description.en : description.ar}</p>
@@ -127,6 +128,8 @@ export function TopicSectionHome({
 
         {topics === null ? (
           <div className="py-16 text-center text-slate-500 dark:text-slate-400">{t("common.loading")}</div>
+        ) : topics === LOAD_FAILED ? (
+          <LoadError />
         ) : list.length === 0 ? (
           <div className={`${card} py-16 text-center text-slate-500 dark:text-slate-400`}>
             <div className="text-4xl">🚧</div>

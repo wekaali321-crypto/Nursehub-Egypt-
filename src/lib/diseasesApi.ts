@@ -1,3 +1,4 @@
+import { LOAD_FAILED } from "./loadFailed";
 // src/lib/diseasesApi.ts
 // "الأمراض للتمريض" (Diseases for Nurses): static JSON shipped with the site
 // (public/diseases/index.json + public/diseases/items/<id>.json), no database.
@@ -143,14 +144,14 @@ const itemCache = new Map<string, Promise<Disease | null>>();
 export function fetchDiseaseIndex(): Promise<DiseaseIndexItem[]> {
   if (!indexCache) {
     indexCache = fetch('/diseases/index.json', { cache: 'no-cache' })
-      .then((r) => (r.ok ? r.json() : { items: [] }))
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then((j) => {
         sectionsCache = (j.sections ?? {}) as Record<string, NewSection>;
         return ((j.items ?? []) as DiseaseIndexItem[]).map((i) => ({ ...i, target: i.target || 'diseases' })).sort((a, b) => a.num - b.num);
       })
       .catch(() => {
         indexCache = null;
-        return [];
+        return LOAD_FAILED; // offline / failed: the page says so instead of "being added"
       });
   }
   return indexCache;

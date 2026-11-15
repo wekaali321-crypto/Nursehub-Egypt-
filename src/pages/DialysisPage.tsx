@@ -6,6 +6,7 @@ import { fetchDialysisTopics, fetchDialysisTopic, type DialysisTopic } from "../
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 import { sectionArtFor } from "../lib/sectionArt";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Light sky accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -22,7 +23,7 @@ export function DialysisHome() {
   const [topics, setTopics] = useState<DialysisTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_dialysis", TTL.topics, () => fetchDialysisTopics()).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_dialysis", TTL.topics, () => fetchDialysisTopics()).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (

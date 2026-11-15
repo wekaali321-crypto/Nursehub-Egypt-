@@ -7,6 +7,7 @@ import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 import TermBody from "../components/TermBody";
 import TerminologyQuizWidget from "../components/TerminologyQuizWidget";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Light violet accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -23,7 +24,7 @@ export function TerminologyHome() {
   const [topics, setTopics] = useState<TerminologyTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_terminology", TTL.topics, () => fetchTerminologyTopics()).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_terminology", TTL.topics, () => fetchTerminologyTopics()).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (

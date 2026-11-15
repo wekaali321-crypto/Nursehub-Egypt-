@@ -6,6 +6,7 @@ import { fetchPharmacologyTopics, fetchPharmacologyTopic, type PharmacologyTopic
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { sectionArtFor } from "../lib/sectionArt";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Light emerald accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -22,7 +23,7 @@ export function PharmacologyHome() {
   const [topics, setTopics] = useState<PharmacologyTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_pharmacology_routed", TTL.topics, () => fetchPharmacologyTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_pharmacology_routed", TTL.topics, () => fetchPharmacologyTopics({ withRouted: true })).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (

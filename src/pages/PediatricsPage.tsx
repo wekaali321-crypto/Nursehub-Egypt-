@@ -7,6 +7,7 @@ import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 import PediatricsQuizWidget from "../components/PediatricsQuizWidget";
 import { sectionArtFor } from "../lib/sectionArt";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Light yellow accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -23,7 +24,7 @@ export function PediatricsHome() {
   const [topics, setTopics] = useState<PediatricTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_pediatric_routed", TTL.topics, () => fetchPediatricTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_pediatric_routed", TTL.topics, () => fetchPediatricTopics({ withRouted: true })).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (

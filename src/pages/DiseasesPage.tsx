@@ -33,6 +33,7 @@ import { useI18n } from '../lib/i18n';
 import { useAuth } from '../lib/theme';
 import { LabHub, LabGuide } from './LabPages';
 import { uploadFile } from '../lib/storage';
+import LoadError, { LOAD_FAILED } from '../components/LoadError';
 
 const sys = (k: string) => SYSTEMS[k] ?? SYSTEMS.other;
 
@@ -72,6 +73,7 @@ function GuideHub({ target }: { target: string }) {
   const { lang } = useI18n();
   const ar = lang === 'ar';
   const [items, setItems] = useState<DiseaseIndexItem[] | null>(null);
+  const [failed, setFailed] = useState(false);
   const [read] = useState<string[]>(() => loadRead());
   const [q, setQ] = useState('');
   const [sp, setSp] = useState(() => {
@@ -112,6 +114,7 @@ function GuideHub({ target }: { target: string }) {
 
   useEffect(() => {
     void fetchDiseaseIndex().then((all) => {
+      setFailed(all === LOAD_FAILED);
       setItems(all.filter((i) => i.target === target));
       setReady(true);
     });
@@ -195,12 +198,12 @@ function GuideHub({ target }: { target: string }) {
 
       {!ready && target !== 'diseases' && items === null ? (
         <Loading />
-      ) : ready && target !== 'diseases' && items !== null && items.length === 0 ? (
+      ) : ready && !failed && target !== 'diseases' && items !== null && items.length === 0 ? (
         <Navigate to="/" replace />
       ) : items === null ? (
         <Loading />
       ) : shown.length === 0 ? (
-        <div className="py-20 text-center text-slate-600 dark:text-slate-400">{total === 0 ? (ar ? 'الأمراض قيد الإضافة… عُد قريبًا.' : 'Diseases are being added… check back soon.') : ar ? 'لا توجد نتائج مطابقة.' : 'No matches.'}</div>
+        failed ? <LoadError /> : <div className="py-20 text-center text-slate-600 dark:text-slate-400">{total === 0 ? (ar ? 'الأمراض قيد الإضافة… عُد قريبًا.' : 'Diseases are being added… check back soon.') : ar ? 'لا توجد نتائج مطابقة.' : 'No matches.'}</div>
       ) : (
         <div className="mt-5">
           <div className="mb-3 flex items-center justify-between gap-2 text-xs text-slate-600 dark:text-slate-400">

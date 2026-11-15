@@ -6,6 +6,7 @@ import { fetchFirstAidTopics, fetchFirstAidTopic, type FirstAidTopic } from "../
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
 import { sectionArtFor } from "../lib/sectionArt";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Light rose accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -22,7 +23,7 @@ export function FirstAidHome() {
   const [topics, setTopics] = useState<FirstAidTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_first_aid_routed", TTL.topics, () => fetchFirstAidTopics({ withRouted: true })).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_first_aid_routed", TTL.topics, () => fetchFirstAidTopics({ withRouted: true })).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (

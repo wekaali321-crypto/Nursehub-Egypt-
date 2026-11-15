@@ -6,6 +6,7 @@ import { fetchRadiologyTopics, fetchRadiologyTopic, type RadiologyTopic } from "
 import { cachedQuery, TTL } from "../lib/remoteCache";
 import { sectionArtFor } from "../lib/sectionArt";
 import { TopicSectionDetail, TopicSectionHome, type TopicTint } from "../components/topics/TopicSectionPage";
+import { LOAD_FAILED } from "../components/LoadError";
 
 // Light indigo accent on top of the shared Navy/Teal section layout.
 const TINT: TopicTint = {
@@ -22,7 +23,7 @@ export function RadiologyHome() {
   const [topics, setTopics] = useState<RadiologyTopic[] | null>(null);
 
   useEffect(() => {
-    cachedQuery("topics_v1_radiology", TTL.topics, () => fetchRadiologyTopics()).then(setTopics).catch(() => setTopics([]));
+    cachedQuery("topics_v1_radiology", TTL.topics, () => fetchRadiologyTopics()).then(setTopics).catch(() => setTopics(LOAD_FAILED));
   }, []);
 
   return (
