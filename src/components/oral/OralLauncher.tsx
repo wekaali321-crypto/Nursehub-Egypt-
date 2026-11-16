@@ -35,6 +35,14 @@ export default function OralLauncher() {
   const [preset, setPreset] = useState<OralPreset | undefined>();
   const [hint, setHint] = useState(false);
 
+  // the page reader's player sits in the same corner on phones: hide this button while it is open
+  const [readerOpen, setReaderOpen] = useState(false);
+  useEffect(() => {
+    const on = (e: Event) => setReaderOpen(!!(e as CustomEvent<{ open: boolean }>).detail?.open);
+    window.addEventListener("nh:reader", on);
+    return () => window.removeEventListener("nh:reader", on);
+  }, []);
+
   useEffect(() => {
     const on = (e: Event) => { setPreset((e as CustomEvent<OralPreset>).detail || {}); setOpen(true); };
     window.addEventListener("nh:oral", on);
@@ -57,7 +65,7 @@ export default function OralLauncher() {
 
   return (
     <>
-      {!hidden && !open && (
+      {!hidden && !open && !readerOpen && (
         <div className="fixed bottom-24 right-4 z-40 flex items-end gap-2 md:bottom-6 md:right-6 print:hidden">
           {hint && (
             <button type="button" onClick={() => { setHint(false); setOpen(true); }} className="mb-2 max-w-[13rem] rounded-2xl rounded-br-sm bg-white px-3 py-2 text-start text-xs font-bold text-nh-navy shadow-xl dark:bg-slate-800 dark:text-white">

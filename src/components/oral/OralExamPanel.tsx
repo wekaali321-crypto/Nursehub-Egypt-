@@ -6,7 +6,7 @@ import { Button } from "../ui";
 import { useI18n } from "../../lib/i18n";
 import { TOPIC_INFO, type TopicCode } from "../../lib/examTopics";
 import { addAttempt } from "../../lib/examHistory";
-import { canListen, getTtsStatus, listen, prefetchSpeech, setCloudVoice, speak, unlockAudio, type Gender, type Lang, type ListenHandle, type SpeakHandle } from "../../lib/oral/voice";
+import { canListen, getTtsStatus, listen, prefetchSpeech, setTarekVoice, speak, unlockAudio, type Gender, type Lang, type ListenHandle, type SpeakHandle } from "../../lib/oral/voice";
 import { matchChoice } from "../../lib/oral/match";
 import { aiGenerate, aiGrade, getAiStatus, isFallback, loadPool, pageContext, pickQuestions, topicForPath, type AiQuestion, type AiStatus, type PoolQuestion } from "../../lib/oral/api";
 
@@ -65,18 +65,21 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
   useEffect(() => { try { localStorage.setItem(PREFS, JSON.stringify(prefs)); } catch { /* ignore */ } }, [prefs]);
 
-  // Egyptian voice (Azure via /api/tts) when this month's budget allows; otherwise the phone's own voice
+  // The voice is always Tarek (ElevenLabs via /api/tts). If it cannot speak, nothing else speaks: the text stays on screen
+  // and a notice says why (never pretending Tarek is talking).
   const [egVoice, setEgVoice] = useState<boolean | undefined>(undefined);
+  const voiceNotice = (reason: string) => (reason === "monthly_limit"
+    ? T("رصيد صوت Tarek للشهر ده خلص، فالامتحان هيكمل مكتوب من غير صوت. الرصيد بيتجدد أول الشهر.", "Tarek's voice budget for this month is used up, so the exam continues as text without sound. It renews next month.")
+    : T("صوت Tarek مش متاح دلوقتي، فالامتحان هيكمل مكتوب من غير صوت.", "Tarek's voice isn't available right now, so the exam continues as text without sound."));
   useEffect(() => {
     getTtsStatus().then((s) => {
       if (!alive.current) return;
       setEgVoice(!!s?.tts);
-      setCloudVoice(!!s?.tts, (reason) => {
+      if (!s?.tts) setNotice(voiceNotice(s ? (s.enabled ? "monthly_limit" : "tts_off") : "tts_unavailable"));
+      setTarekVoice(!!s?.tts, (reason: string) => {
         if (!alive.current) return;
         setEgVoice(false);
-        setNotice(reason === "monthly_limit"
-          ? T(`رصيد الصوت المصري للشهر ده خلص، ف${P.ar} ${G("هيكمل", "هتكمل")} بصوت الموبايل. الرصيد بيتجدد أول الشهر.`, `This month's Egyptian-voice budget is used up, so ${P.en} continues with your phone's voice.`)
-          : T(`الصوت المصري مش متاح دلوقتي، ف${P.ar} ${G("هيكمل", "هتكمل")} بصوت الموبايل.`, `The Egyptian voice isn't available right now, so ${P.en} uses your phone's voice.`));
+        setNotice(voiceNotice(reason));
       });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -104,8 +107,12 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
   const say = useCallback(async (text: string, l: Lang = prefs.lang) => {
     speaking.current?.stop();
-    setMood((m) => (m === "happy" || m === "sad" ? m : "speaking"));
-    const h = speak(text, { lang: l, gender: prefs.gender, onLevel: (v) => alive.current && setLevel(v) });
+    // "speaking" only while Tarek's audio actually plays
+    const h = speak(text, {
+      lang: l, gender: prefs.gender,
+      onLevel: (v) => alive.current && setLevel(v),
+      onPlaying: (on) => alive.current && setMood((m) => (m === "happy" || m === "sad" ? m : on ? "speaking" : "idle")),
+    });
     speaking.current = h;
     await h.done;
     if (speaking.current === h) speaking.current = null;
@@ -152,12 +159,12 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
     if (!it) return;
     const my = ++turn.current;
     const live = () => alive.current && turn.current === my;
-    setI(k); setHeard(""); setTyped(""); tries.current = 0; setMood("speaking"); setPhase("asking");
+    setI(k); setHeard(""); setTyped(""); tries.current = 0; setMood("idle"); setPhase("asking");
     if (it.kind === "mcq") {
       const qLang: Lang = ar && it.pq.ar ? "ar" : "en";
       const cLang: Lang = ar && it.pq.ca ? "ar" : "en";
       const choicesSpeech = choiceTexts(it).map((c, j) => `${cLang === "ar" ? AR_LETTERS[j] : LETTERS[j]}. ${c}.`).join(" ");
-      prefetchSpeech(choicesSpeech, { lang: cLang, gender: prefs.gender });
+      prefetchSpeech(choicesSpeech, { lang: cLang });
       await say(`${T("سؤال", "Question")} ${k + 1}. ${questionText(it)}`, qLang);
       if (!live()) return;
       await say(choicesSpeech, cLang);
@@ -488,7 +495,7 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
           </div>
           {egVoice !== undefined && (
             <p className={`mt-1 text-[11px] font-bold ${egVoice ? "text-emerald-300" : "text-slate-400"}`}>
-              {egVoice ? (prefs.lang === "ar" ? `✓ صوت مصري طبيعي (${prefs.gender === "female" ? "سلمى" : "شاكر"})` : `✓ Natural voice (${prefs.gender === "female" ? "Jenny" : "Guy"})`) : T("صوت الموبايل", "Your phone's voice")}
+              {egVoice ? T("✓ الصوت: Tarek", "✓ Voice: Tarek") : T("صوت Tarek مش متاح — الأسئلة هتظهر مكتوبة", "Tarek's voice unavailable — questions shown as text")}
             </p>
           )}
         </fieldset>
@@ -515,7 +522,7 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
       </div>
 
       <Button size="lg" className="w-full" onClick={onStart} icon={<Mic size={18} aria-hidden="true" />}>{T("ابدأ الامتحان", "Start")}</Button>
-      <p className="text-center text-[11px] leading-5 text-slate-400">{T("الصوت بيتسمع ويتحول لكلام على جهازك عن طريق المتصفح. الامتحان للتدريب ومش بديل عن المصادر المعتمدة.", "Speech is handled by your browser. For practice only, not a substitute for approved references.")}</p>
+      <p className="text-center text-[11px] leading-5 text-slate-400">{T("صوت الممتحن: Tarek (ElevenLabs). إجابتك بتتسمع وتتحول لكلام على جهازك عن طريق المتصفح. الامتحان للتدريب ومش بديل عن المصادر المعتمدة.", "Examiner voice: Tarek (ElevenLabs). Your spoken answers are recognised by your browser. For practice only, not a substitute for approved references.")}</p>
     </div>
   );
 }
