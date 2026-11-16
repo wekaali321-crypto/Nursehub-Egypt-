@@ -306,7 +306,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
           {step === "loading" && (
             <div className="flex flex-col items-center gap-3 px-4 py-10">
-              <AliAvatar mood="thinking" size={190} />
+              <AliAvatar label={ar ? P.arFull : P.en} mood="thinking" size={190} />
               <p className="text-sm font-bold text-slate-200">{T(`${P.ar} ${G("بيجهّز", "بتجهّز")} الأسئلة…`, `${P.en} is preparing your questions…`)}</p>
             </div>
           )}
@@ -315,7 +315,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
             <div className="px-4 pb-4">
               <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/10" aria-hidden="true"><div className="h-full rounded-full bg-teal-400 transition-all" style={{ width: `${(done.length / items.length) * 100}%` }} /></div>
               <p className="mt-1 text-center text-[11px] font-bold text-slate-300">{T(`${done.length} من ${items.length} أسئلة`, `${done.length} of ${items.length} questions covered`)}</p>
-              <div className="flex justify-center"><AliAvatar mood={mood} level={level} size={200} /></div>
+              <div className="flex justify-center"><AliAvatar label={ar ? P.arFull : P.en} mood={mood} level={level} size={200} /></div>
               <p className="-mt-1 mb-2 text-center text-xs font-bold text-teal-200" aria-live="polite">
                 {mood === "speaking" ? T(`${P.ar} ${G("بيتكلم", "بتتكلم")}…`, `${P.en} is speaking…`) : phase === "listening" && mood === "listening" ? T("بسمعك…", "Listening…") : phase === "grading" ? T(`${P.ar} ${G("بيقيّم", "بتقيّم")} إجابتك…`, `${P.en} is marking your answer…`) : " "}
               </p>
@@ -387,7 +387,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
           {step === "done" && (
             <div className="px-4 pb-5">
-              <div className="flex justify-center"><AliAvatar mood={mood} level={level} size={170} /></div>
+              <div className="flex justify-center"><AliAvatar label={ar ? P.arFull : P.en} mood={mood} level={level} size={170} /></div>
               <div className="text-center">
                 <div className="text-4xl font-black">{pctNow}%</div>
                 <p className="text-sm text-slate-300">{T(`${correct} إجابة صح من ${done.length}`, `${correct} correct out of ${done.length}`)}{done.some((r) => r.score === 1) ? T(` و${done.filter((r) => r.score === 1).length} ناقصة`, `, ${done.filter((r) => r.score === 1).length} partly right`) : ""}</p>
@@ -441,7 +441,7 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
   return (
     <div className="space-y-4 px-4 pb-5 pt-3">
       <div className="flex items-center gap-3">
-        <AliAvatar mood="idle" size={92} crop="face" className="shrink-0 overflow-hidden rounded-full bg-[#173a5a]" />
+        <AliAvatar label={ar ? P.arFull : P.en} mood="idle" size={92} crop="face" className="shrink-0 overflow-hidden rounded-full bg-[#173a5a]" />
         <p className="text-sm leading-6 text-slate-200">{T(`أهلًا، أنا ${P.arFull}. هسألك بصوتي وانت تجاوب بصوتك، زي الامتحان الشفوي الحقيقي.`, `Hi, I'm ${P.en}. I'll ask out loud and you answer out loud, like a real oral exam.`)}</p>
       </div>
 

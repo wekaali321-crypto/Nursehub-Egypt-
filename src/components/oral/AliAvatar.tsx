@@ -18,12 +18,15 @@ export default function AliAvatar({
   size = 240,
   crop = "bust",
   className = "",
+  label = "Ali Ashour",
 }: {
   mood: AvatarMood;
   level?: number;
   size?: number;
   crop?: "bust" | "face";
   className?: string;
+  /** name read by screen readers: the examiner shown (Ali Ashour / Donia) */
+  label?: string;
 }) {
   const id = useId().replace(/:/g, "");
   const jaw = useRef<SVGGElement>(null);
@@ -115,7 +118,7 @@ export default function AliAvatar({
         height={size * ratio}
         className={`relative ${motion}`}
         role="img"
-        aria-label="Ali Ashour"
+        aria-label={label}
       >
         <defs>
           <clipPath id={`jaw-${id}`} clipPathUnits="userSpaceOnUse">
