@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useI18n } from "../../lib/i18n";
 import { useFeatures } from "../../admin/cms/useFeatures";
-import { MASCOT_SRC } from "./avatarSrc";
+import NurseHubAvatar from "../avatar/NurseHubAvatar";
 
 const OralExamPanel = lazy(() => import("./OralExamPanel"));
 
@@ -80,8 +80,8 @@ export default function OralLauncher() {
             className="group relative grid h-14 w-14 place-items-center rounded-full bg-nh-navy shadow-lg ring-2 ring-nh-teal transition hover:scale-105"
           >
             <span className="absolute inset-0 overflow-hidden rounded-full">
-              <img src={MASCOT_SRC} alt="" width={56} height={56} loading="lazy" decoding="async"
-                className="absolute max-w-none" style={{ width: 160, left: -40, top: -14 }} />
+              {/* still picture on every page (no animation loop); the animated assistant lives in the exam panel */}
+              <NurseHubAvatar framing="head" size={56} animated={false} label={ar ? "مساعد NurseHub" : "NurseHub assistant"} />
             </span>
             <span className="absolute -bottom-1 -end-1 grid h-5 w-5 place-items-center rounded-full bg-nh-teal text-[10px] text-white shadow" aria-hidden="true">🎙</span>
           </button>

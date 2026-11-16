@@ -125,6 +125,30 @@ export class TarekPlayer {
     this.raf = requestAnimationFrame(tick);
   }
 
+  private timeBuf: Uint8Array<ArrayBuffer> | null = null;
+  private freqBuf: Uint8Array<ArrayBuffer> | null = null;
+  /**
+   * One frame of REAL audio analysis for lip-sync, or null when nothing is playing / analysis is unavailable.
+   * level: loudness 0..1 (jaw opening). wide: spectral centre 0..1 (higher = brighter vowels like "ee", lower = "oo").
+   */
+  frame(): { level: number; wide: number } | null {
+    if (!this.el || this.el.paused || !this.finish || !this.synced || !this.analyser) return null;
+    const a = this.analyser;
+    if (!this.timeBuf || this.timeBuf.length !== a.fftSize) this.timeBuf = new Uint8Array(a.fftSize);
+    if (!this.freqBuf || this.freqBuf.length !== a.frequencyBinCount) this.freqBuf = new Uint8Array(a.frequencyBinCount);
+    a.getByteTimeDomainData(this.timeBuf);
+    let sum = 0; for (const b of this.timeBuf) { const x = (b - 128) / 128; sum += x * x; }
+    const level = Math.min(1, Math.sqrt(sum / this.timeBuf.length) * 5);
+    a.getByteFrequencyData(this.freqBuf);
+    // spectral centroid over the voice band (~80 Hz – 5 kHz)
+    const hz = (this.ctx?.sampleRate ?? 44100) / 2 / this.freqBuf.length;
+    let num = 0, den = 0;
+    for (let i = Math.floor(80 / hz); i < Math.min(this.freqBuf.length, Math.ceil(5000 / hz)); i++) { num += i * hz * this.freqBuf[i]; den += this.freqBuf[i]; }
+    const centroid = den ? num / den : 0;
+    const wide = Math.max(0, Math.min(1, (centroid - 500) / 2000));
+    return { level, wide };
+  }
+
   pause() { if (this.el && this.finish) { this.el.pause(); this.levelCb?.(0); } }
   resume() { if (this.el && this.finish && this.el.paused) { void this.ctx?.resume(); void this.el.play().then(() => this.loop()).catch(() => this.finish?.("error")); } }
   stop() { if (this.el) { this.el.pause(); } this.finish?.("stopped"); }

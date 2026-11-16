@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Headphones, Pause, Play, RotateCcw, Square } from "lucide-react";
-import AliAvatar, { type AvatarMood } from "../oral/AliAvatar";
+import NurseHubAvatar, { type AvatarState } from "../avatar/NurseHubAvatar";
 import { useI18n } from "../../lib/i18n";
 import { TarekPlayer, getTarekStatus } from "../../lib/tarekAudio";
 import { extractParagraphs, langOf, READER_MAX, splitChunks } from "./readerText";
@@ -31,6 +31,9 @@ function readerAvailable(): Promise<boolean> {
   return configured;
 }
 
+/** real audio analysis of the reader voice for the avatar's lip-sync (null when not playing / not analysable) */
+const readerFrame = () => player?.frame() ?? null;
+
 const player = typeof window !== "undefined" ? new TarekPlayer("/api/ali-reader", READER_MAX) : (null as unknown as TarekPlayer);
 
 export default function AliSiteReader() {
@@ -41,7 +44,6 @@ export default function AliSiteReader() {
   const [state, setState] = useState<State>("idle");
   const [chunks, setChunks] = useState<string[]>([]);
   const [idx, setIdx] = useState(0);
-  const [level, setLevel] = useState(0);
   const [msg, setMsg] = useState("");
   const run = useRef(0); // bumps on stop / new start: older async steps see it changed and quit
   const [available, setAvailable] = useState(false);
@@ -59,7 +61,6 @@ export default function AliSiteReader() {
   const stop = useCallback(() => {
     run.current++;
     player?.stop();
-    setLevel(0);
     setState("idle"); setChunks([]); setIdx(0); setMsg("");
     window.dispatchEvent(new CustomEvent("nh:reader", { detail: { open: false } }));
   }, []);
@@ -73,13 +74,13 @@ export default function AliSiteReader() {
       if (i + 1 < list.length) void player.fetchClip(list[i + 1], langOf(list[i + 1])); // next part ready in time
       const clip = await current;
       if (run.current !== my) return;
-      if ("error" in clip) { setState("error"); setMsg(errorText(clip.error)); setLevel(0); return; }
+      if ("error" in clip) { setState("error"); setMsg(errorText(clip.error)); return; }
       setState("playing");
-      const r = await player.play(clip.url, (v) => run.current === my && setLevel(v));
+      const r = await player.play(clip.url); // the avatar reads player.frame() itself (no re-render per frame)
       if (run.current !== my || r === "stopped") return;
       if (r === "error") { setState("error"); setMsg(errorText("play_error")); return; }
     }
-    if (run.current === my) { setState("done"); setLevel(0); }
+    if (run.current === my) setState("done");
   }, [errorText]);
 
   const start = useCallback(() => {
@@ -94,7 +95,7 @@ export default function AliSiteReader() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [playFrom, ar]);
 
-  const pause = () => { player.pause(); setLevel(0); setState("paused"); };
+  const pause = () => { player.pause(); setState("paused"); };
   const resume = () => { player.resume(); setState("playing"); };
   const restart = () => { const my = ++run.current; player.stop(); void playFrom(chunks, 0, my); };
 
@@ -109,7 +110,8 @@ export default function AliSiteReader() {
   if (HIDE.test(pathname) || !available) return null;
   const open = state !== "idle";
   const pct = chunks.length ? Math.round(((idx + (state === "done" ? 1 : 0)) / chunks.length) * 100) : 0;
-  const mood: AvatarMood = state === "playing" ? "speaking" : state === "loading" ? "thinking" : state === "done" ? "happy" : "idle";
+  // paused / stopped → idle at once (mouth closed); speaking only while audio actually plays
+  const mood: AvatarState = state === "playing" ? "speaking" : state === "loading" ? "thinking" : state === "done" ? "happy" : state === "error" ? "sad" : "idle";
 
   return (
     <>
@@ -127,7 +129,7 @@ export default function AliSiteReader() {
           className="fixed inset-x-2 bottom-[calc(4.5rem+env(safe-area-inset-bottom))] z-[45] mx-auto max-w-xl rounded-2xl border border-white/10 bg-nh-navy p-3 text-white shadow-2xl md:bottom-4 print:hidden">
           <div className="flex items-center gap-3">
             <span className="shrink-0 overflow-hidden rounded-full bg-[#173a5a]">
-              <AliAvatar mood={mood} level={level} size={52} crop="face" label={T("علي عاشور", "Ali Ashour")} />
+              <NurseHubAvatar state={mood} frame={readerFrame} size={56} framing="head" label={T("مساعد NurseHub", "NurseHub assistant")} />
             </span>
             <div className="min-w-0 flex-1">
               <div className="flex items-center justify-between gap-2 text-[11px] font-bold text-teal-200">

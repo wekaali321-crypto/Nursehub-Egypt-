@@ -38,8 +38,10 @@ export const phoneVoiceOn = () => tarek === "phone";
 export const tarekOn = () => tarek === "on";
 /** Call inside the tap that starts the exam (mobile autoplay rules; also sets up the real lip-sync). */
 export const unlockAudio = () => player.unlock();
-/** true when Ali's mouth follows the real audio level. */
+/** true when the avatar's mouth follows the real audio level. */
 export const lipSynced = () => player.synced;
+/** Real audio-analysis frame of the examiner's voice (Tarek), or null (nothing playing / phone voice / no analyser). */
+export const voiceFrame = () => player.frame();
 
 function splitParts(clean: string): string[] {
   if (clean.length <= MAX) return [clean];
