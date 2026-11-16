@@ -36,6 +36,8 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
   const [prefs, setPrefs] = useState<Prefs>(() => ({ ...loadPrefs(siteLang === "en" ? "en" : "ar"), ...(preset || {}) }));
   const ar = prefs.lang === "ar";
   const T = (a: string, e: string) => (ar ? a : e);
+  const P = persona(prefs.gender);
+  const G = (m: string, f: string) => (P.female ? f : m); // Arabic verb for a male / female examiner
   const pageTopic = topicForPath(loc.pathname, loc.search);
   const [status, setStatus] = useState<AiStatus | null | undefined>(undefined);
   const [step, setStep] = useState<"setup" | "loading" | "run" | "done">("setup");
@@ -73,8 +75,8 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
         if (!alive.current) return;
         setEgVoice(false);
         setNotice(reason === "monthly_limit"
-          ? T("رصيد الصوت المصري للشهر ده خلص، فعلي هيكمل بصوت الموبايل. الرصيد بيتجدد أول الشهر.", "This month's Egyptian-voice budget is used up, so Ali continues with your phone's voice.")
-          : T("الصوت المصري مش متاح دلوقتي، فعلي هيكمل بصوت الموبايل.", "The Egyptian voice isn't available right now, so Ali uses your phone's voice."));
+          ? T(`رصيد الصوت المصري للشهر ده خلص، ف${P.ar} ${G("هيكمل", "هتكمل")} بصوت الموبايل. الرصيد بيتجدد أول الشهر.`, `This month's Egyptian-voice budget is used up, so ${P.en} continues with your phone's voice.`)
+          : T(`الصوت المصري مش متاح دلوقتي، ف${P.ar} ${G("هيكمل", "هتكمل")} بصوت الموبايل.`, `The Egyptian voice isn't available right now, so ${P.en} uses your phone's voice.`));
       });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -129,7 +131,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
     let list: Item[] = [];
     let m: Mode = prefs.mode;
     if (m === "ai") {
-      const r = await aiGenerate({ lang: prefs.lang, title: page.title, text: prefs.source === "page" ? page.text : "", topic: topicName, count: prefs.count });
+      const r = await aiGenerate({ gender: prefs.gender, lang: prefs.lang, title: page.title, text: prefs.source === "page" ? page.text : "", topic: topicName, count: prefs.count });
       if (isFallback(r)) { m = "free"; setNotice(fallbackText(r.reason, ar)); getAiStatus().then((s) => alive.current && setStatus(s)); }
       else list = r.questions.map((q) => ({ kind: "open" as const, q }));
     }
@@ -137,7 +139,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
     if (!alive.current) return;
     if (!list.length) { setStep("setup"); setNotice(T("مقدرناش نجهّز الأسئلة دلوقتي، جرّب تاني.", "Could not prepare the questions, try again.")); setMood("idle"); return; }
     setMode(m); setItems(list); setStep("run");
-    await say(T(`أهلًا! أنا علي عاشور. هسألك ${list.length} أسئلة. جاوب بصوتك بعد ما أخلص السؤال.`, `Hi! I'm Ali Ashour. I'll ask you ${list.length} questions. Answer out loud when I finish each one.`));
+    await say(T(`أهلًا! أنا ${P.arFull}. هسألك ${list.length} أسئلة. جاوب بصوتك بعد ما أخلص السؤال.`, `Hi! I'm ${P.en}. I'll ask you ${list.length} questions. Answer out loud when I finish each one.`));
     if (alive.current) ask(0, list);
   };
 
@@ -189,7 +191,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
       const idx = matchChoice(answer, [0, 1, 2, 3, 4].slice(0, it.pq.c.length).map((j) => [it.pq.c[j], it.pq.ca?.[j] ?? ""]));
       if (idx < 0) {
         const n = ++tries.current;
-        await say(T("مش متأكد أنا فهمت. قول حرف الإجابة، أو اضغط عليها.", "I didn't quite get that. Say the letter of your answer, or tap it."));
+        await say(T(`مش ${G("متأكد", "متأكدة")} إني فهمت. قول حرف الإجابة، أو اضغط عليها.`, "I didn't quite get that. Say the letter of your answer, or tap it."));
         if (alive.current && n < 2 && canListen()) startListening(k, list); else setPhase("listening");
         return;
       }
@@ -197,7 +199,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
     }
     // open question → AI marks it
     setPhase("grading"); setMood("thinking");
-    const r = await aiGrade({ lang: prefs.lang, q: it.q.q, points: it.q.points, answer });
+    const r = await aiGrade({ gender: prefs.gender, lang: prefs.lang, q: it.q.q, points: it.q.points, answer });
     if (!alive.current) return;
     if (isFallback(r)) {
       // the budget ran out mid-exam: the learner marks this answer against the key points, the rest becomes the free exam
@@ -283,13 +285,13 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
   /* ---------- UI ---------- */
   return (
-    <div role="dialog" aria-modal="true" aria-label={T("الامتحان الشفوي مع علي", "Oral exam with Ali")} dir={ar ? "rtl" : "ltr"}
+    <div role="dialog" aria-modal="true" aria-label={T(`الامتحان الشفوي مع ${P.ar}`, `Oral exam with ${P.en}`)} dir={ar ? "rtl" : "ltr"}
       className="fixed inset-0 z-[95] flex items-end justify-center bg-nh-navy/70 backdrop-blur-sm sm:items-center sm:p-4" onClick={close}>
       <div className="relative flex max-h-[100dvh] w-full max-w-lg flex-col overflow-hidden rounded-t-3xl bg-[#0f2236] text-white shadow-2xl sm:rounded-3xl" onClick={(e) => e.stopPropagation()}>
         {/* header */}
         <div className="flex items-center gap-2 border-b border-white/10 px-4 py-3">
           <Bot size={18} className="text-teal-300" aria-hidden="true" />
-          <h2 className="flex-1 truncate text-sm font-black">{step === "run" || step === "done" ? ctx.current.title : T("امتحان شفوي مع علي عاشور", "Oral exam with Ali Ashour")}</h2>
+          <h2 className="flex-1 truncate text-sm font-black">{step === "run" || step === "done" ? ctx.current.title : T(`امتحان شفوي مع ${P.arFull}`, `Oral exam with ${P.en}`)}</h2>
           {step === "run" && <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${mode === "ai" ? "bg-teal-400/20 text-teal-200" : "bg-white/10 text-slate-200"}`}>{mode === "ai" ? T("ذكي", "Smart") : T("مجاني", "Free")}</span>}
           {step === "run" && <button type="button" onClick={() => finish()} className="inline-flex items-center gap-1 rounded-full bg-rose-600 px-3 py-1.5 text-xs font-bold hover:bg-rose-700"><PhoneOff size={14} aria-hidden="true" />{T("إنهاء", "End exam")}</button>}
           <button type="button" onClick={close} aria-label={T("إغلاق", "Close")} className="rounded-full p-1.5 text-slate-300 hover:bg-white/10"><X size={18} /></button>
@@ -305,7 +307,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
           {step === "loading" && (
             <div className="flex flex-col items-center gap-3 px-4 py-10">
               <AliAvatar mood="thinking" size={190} />
-              <p className="text-sm font-bold text-slate-200">{T("علي بيجهّز الأسئلة…", "Ali is preparing your questions…")}</p>
+              <p className="text-sm font-bold text-slate-200">{T(`${P.ar} ${G("بيجهّز", "بتجهّز")} الأسئلة…`, `${P.en} is preparing your questions…`)}</p>
             </div>
           )}
 
@@ -315,7 +317,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
               <p className="mt-1 text-center text-[11px] font-bold text-slate-300">{T(`${done.length} من ${items.length} أسئلة`, `${done.length} of ${items.length} questions covered`)}</p>
               <div className="flex justify-center"><AliAvatar mood={mood} level={level} size={200} /></div>
               <p className="-mt-1 mb-2 text-center text-xs font-bold text-teal-200" aria-live="polite">
-                {mood === "speaking" ? T("علي بيتكلم…", "Ali is speaking…") : phase === "listening" && mood === "listening" ? T("بسمعك…", "Listening…") : phase === "grading" ? T("علي بيقيّم إجابتك…", "Ali is marking your answer…") : " "}
+                {mood === "speaking" ? T(`${P.ar} ${G("بيتكلم", "بتتكلم")}…`, `${P.en} is speaking…`) : phase === "listening" && mood === "listening" ? T("بسمعك…", "Listening…") : phase === "grading" ? T(`${P.ar} ${G("بيقيّم", "بتقيّم")} إجابتك…`, `${P.en} is marking your answer…`) : " "}
               </p>
 
               <div className="rounded-2xl bg-white/[0.06] p-4">
@@ -431,6 +433,8 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
   T: (a: string, e: string) => string; ar: boolean; onStart: () => void;
 }) {
   const set = <K extends keyof Prefs>(k: K, v: Prefs[K]) => setPrefs((p) => ({ ...p, [k]: v }));
+  const P = persona(prefs.gender);
+  const G = (m: string, f: string) => (P.female ? f : m);
   const opt = (on: boolean) => `flex w-full items-center gap-3 rounded-2xl border p-3 text-start transition ${on ? "border-teal-300 bg-teal-300/10" : "border-white/10 bg-white/[0.04] hover:border-white/25"}`;
   const pill = (on: boolean) => `flex-1 rounded-xl border px-3 py-2.5 text-sm font-bold transition ${on ? "border-teal-300 bg-teal-300/15 text-teal-100" : "border-white/10 bg-white/[0.04] text-slate-200 hover:border-white/25"}`;
   const pageName = pageTopic === "mixed" ? T("الصفحة الحالية", "This page") : `${T("الصفحة الحالية", "This page")} (${ar ? TOPIC_INFO[pageTopic].ar : TOPIC_INFO[pageTopic].en})`;
@@ -438,7 +442,7 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
     <div className="space-y-4 px-4 pb-5 pt-3">
       <div className="flex items-center gap-3">
         <AliAvatar mood="idle" size={92} crop="face" className="shrink-0 overflow-hidden rounded-full bg-[#173a5a]" />
-        <p className="text-sm leading-6 text-slate-200">{T("أهلًا، أنا علي عاشور. هسألك بصوتي وانت تجاوب بصوتك، زي الامتحان الشفوي الحقيقي.", "Hi, I'm Ali Ashour. I'll ask out loud and you answer out loud, like a real oral exam.")}</p>
+        <p className="text-sm leading-6 text-slate-200">{T(`أهلًا، أنا ${P.arFull}. هسألك بصوتي وانت تجاوب بصوتك، زي الامتحان الشفوي الحقيقي.`, `Hi, I'm ${P.en}. I'll ask out loud and you answer out loud, like a real oral exam.`)}</p>
       </div>
 
       <fieldset className="space-y-2">
@@ -447,7 +451,7 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-teal-400/20 text-teal-200"><Sparkles size={20} aria-hidden="true" /></span>
           <span className="min-w-0 flex-1">
             <span className="block font-black">{T("ذكي (ذكاء اصطناعي)", "Smart (AI)")}</span>
-            <span className="block text-xs text-slate-300">{T("أسئلة مفتوحة من الصفحة اللي بتذاكرها، وعلي بيقيّم كلامك ويقولك الناقص.", "Open questions from the page you're studying; Ali marks what you say and tells you what's missing.")}</span>
+            <span className="block text-xs text-slate-300">{T(`أسئلة مفتوحة من الصفحة اللي بتذاكرها، و${P.ar} ${G("بيقيّم", "بتقيّم")} كلامك ${G("ويقولك", "وتقولك")} الناقص.`, `Open questions from the page you're studying; ${P.en} marks what you say and tells you what's missing.`)}</span>
             <AiMeter status={status} T={T} />
           </span>
         </button>
@@ -455,7 +459,7 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/10 text-slate-100"><Zap size={20} aria-hidden="true" /></span>
           <span className="min-w-0 flex-1">
             <span className="block font-black">{T("مجاني (بنك الأسئلة)", "Free (question bank)")}</span>
-            <span className="block text-xs text-slate-300">{T("اختيار من متعدد بيتقري بصوت علي، وانت تقول الحرف أو الإجابة. متاح دايمًا.", "Multiple choice read by Ali; say the letter or the answer. Always available.")}</span>
+            <span className="block text-xs text-slate-300">{T(`اختيار من متعدد بيتقري بصوت ${P.ar}، وانت تقول الحرف أو الإجابة. متاح دايمًا.`, `Multiple choice read by ${P.en}; say the letter or the answer. Always available.`)}</span>
           </span>
         </button>
         {prefs.mode === "ai" && !aiOk && <p className="text-xs font-bold text-amber-200">{T("رصيد اليوم خلص — هيشتغل الامتحان المجاني تلقائيًا لحد ما الرصيد يتجدد.", "Today's budget is used up — the free exam will run until it renews.")}</p>}
@@ -477,10 +481,10 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
 
       <div className="grid grid-cols-2 gap-3">
         <fieldset>
-          <legend className="mb-1 text-xs font-black text-slate-300">{T("صوت علي", "Voice")}</legend>
+          <legend className="mb-1 text-xs font-black text-slate-300">{T("المُمتحِن", "Examiner")}</legend>
           <div className="flex gap-2">
-            <button type="button" className={pill(prefs.gender === "male")} onClick={() => set("gender", "male")}>{T("ذكر", "Male")}</button>
-            <button type="button" className={pill(prefs.gender === "female")} onClick={() => set("gender", "female")}>{T("أنثى", "Female")}</button>
+            <button type="button" className={pill(prefs.gender === "male")} onClick={() => set("gender", "male")}>{T("علي (ذكر)", "Ali (male)")}</button>
+            <button type="button" className={pill(prefs.gender === "female")} onClick={() => set("gender", "female")}>{T("دنيا (أنثى)", "Donia (female)")}</button>
           </div>
           {egVoice !== undefined && (
             <p className={`mt-1 text-[11px] font-bold ${egVoice ? "text-emerald-300" : "text-slate-400"}`}>
@@ -530,4 +534,11 @@ export function AiMeter({ status, T }: { status: AiStatus | null | undefined; T:
       </span>
     </span>
   );
+}
+
+/** The examiner: Ali Ashour (male voice) or Donia (female voice). */
+export function persona(gender: Gender) {
+  return gender === "female"
+    ? { female: true, ar: "دنيا", arFull: "دنيا", en: "Donia" }
+    : { female: false, ar: "علي", arFull: "علي عاشور", en: "Ali Ashour" };
 }

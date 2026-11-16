@@ -80,6 +80,11 @@ const langName = (l) => (l === 'en'
   ? 'English'
   : 'Egyptian colloquial Arabic (العامية المصرية), the way an experienced Egyptian nurse talks to a younger colleague on the ward: friendly and short, e.g. "طيب قولّي…", "إيه أول حاجة هتعملها؟", "ليه؟", "تمام كده", "بص يا سيدي". Write it in Arabic letters, NOT Modern Standard Arabic (no "ماذا", "لماذا", "يجب"). Keep drug, disease, lab and procedure names in English as nurses say them (e.g. "heart failure", "Lasix", "CVP")');
 
+// the examiner the learner chose: Ali Ashour (male voice) or Donia (female voice); Arabic verbs follow the gender
+const who = (b) => (b?.gender === 'female'
+  ? 'Donia, a friendly female registered-nurse examiner (in Arabic she speaks of herself in the feminine, e.g. "أنا متأكدة", "هسألك")'
+  : 'Ali Ashour, a friendly male registered-nurse examiner');
+
 export function buildGenerate(b) {
   const count = Math.min(6, Math.max(3, Number(b.count) || 5));
   const text = clean(b.text, MAX_TEXT);
@@ -91,7 +96,7 @@ export function buildGenerate(b) {
   return {
     count,
     messages: [
-      { role: 'system', content: `You are Ali Ashour, a friendly registered-nurse examiner on NurseHub Egypt. You run short ORAL exams for nursing students and nurses. Questions must be answerable out loud in one to three sentences, clinically safe and accurate. Never ask for patient-identifying data. Reply with JSON only.` },
+      { role: 'system', content: `You are ${who(b)} on NurseHub Egypt. You run short ORAL exams for nursing students and nurses. Questions must be answerable out loud in one to three sentences, clinically safe and accurate. Never ask for patient-identifying data. Reply with JSON only.` },
       { role: 'user', content: `${source}\nWrite exactly ${count} oral questions in ${langName(b.lang)}, from easy to harder (recall, then understanding, then a nursing action / priority). For each question give 2-4 short key points a good answer must mention (the marking guide), in the same language.\nJSON shape: {"questions":[{"q":"question","points":["key point","key point"]}]}` },
     ],
   };
@@ -104,8 +109,8 @@ export function buildGrade(b) {
   return {
     q, points, answer,
     messages: [
-      { role: 'system', content: `You are Ali Ashour, a kind but exact nurse examiner marking a spoken answer (it came from speech-to-text, so ignore spelling, grammar, filler words and Egyptian colloquial wording). Judge ONLY against the marking guide. Score 2 = covers the main points correctly; 1 = partly right or vague; 0 = wrong, unsafe, empty or off-topic. Never praise an unsafe answer. Reply with JSON only.` },
-      { role: 'user', content: `Question: ${q}\nMarking guide: ${points.map((p, i) => `(${i + 1}) ${p}`).join(' ')}\nStudent answer: "${answer || '(no answer)'}"\nWrite the feedback in ${langName(b.lang)} as Ali speaking to the student: 1-2 short sentences, start by saying if it is right, then give the missing or correct point. List the key points the answer missed.\nJSON shape: {"score":0,"feedback":"...","missing":["..."]}` },
+      { role: 'system', content: `You are ${who(b)}, kind but exact, marking a spoken answer (it came from speech-to-text, so ignore spelling, grammar, filler words and Egyptian colloquial wording). Judge ONLY against the marking guide. Score 2 = covers the main points correctly; 1 = partly right or vague; 0 = wrong, unsafe, empty or off-topic. Never praise an unsafe answer. Reply with JSON only.` },
+      { role: 'user', content: `Question: ${q}\nMarking guide: ${points.map((p, i) => `(${i + 1}) ${p}`).join(' ')}\nStudent answer: "${answer || '(no answer)'}"\nWrite the feedback in ${langName(b.lang)} as ${b?.gender === 'female' ? 'Donia' : 'Ali'} speaking to the student: 1-2 short sentences, start by saying if it is right, then give the missing or correct point. List the key points the answer missed.\nJSON shape: {"score":0,"feedback":"...","missing":["..."]}` },
     ],
   };
 }

@@ -25,9 +25,9 @@ async function post<T>(body: unknown): Promise<T | Fallback> {
 }
 export const isFallback = (x: unknown): x is Fallback => !!x && typeof x === "object" && (x as Fallback).fallback === true;
 
-export const aiGenerate = (a: { lang: Lang; title: string; text: string; topic: string; count: number }) =>
+export const aiGenerate = (a: { gender?: "male" | "female"; lang: Lang; title: string; text: string; topic: string; count: number }) =>
   post<{ questions: AiQuestion[] }>({ action: "generate", ...a });
-export const aiGrade = (a: { lang: Lang; q: string; points: string[]; answer: string }) => post<AiGrade>({ action: "grade", ...a });
+export const aiGrade = (a: { gender?: "male" | "female"; lang: Lang; q: string; points: string[]; answer: string }) => post<AiGrade>({ action: "grade", ...a });
 
 /** Free exam: a static question pool (public/exams/oral/<topic>.json — no D1). */
 export interface PoolQuestion { id: string; en: string; ar?: string; c: string[]; ca?: string[]; a: number; r?: string; ra?: string }
