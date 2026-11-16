@@ -2,85 +2,149 @@ import { useEffect, useId, useRef } from "react";
 import { MASCOT_SRC } from "./avatarSrc";
 
 /**
- * "Ali Ashour" — the home-page caricature (/male-nurse-mascot.webp, 700×1019), animated in SVG on top of the same picture:
- *  - jaw: the chin / lower lip is cut out (clipPath) and moved down with the voice level, a dark mouth shows behind it
- *  - eyelids blink every few seconds; head bob while talking; teal pulse while listening; bounce / shake on right / wrong
- * Coordinates are pixels of the original picture. No extra download (the browser already caches the home image).
+ * "Ali Ashour" — the original home-page mascot, animated with a lightweight SVG overlay.
+ * The source image and its appearance remain unchanged.
  */
 export type AvatarMood = "idle" | "speaking" | "listening" | "thinking" | "happy" | "sad";
 
-// eyelids: almond shapes over each eye opening (measured on the picture), skin colour + a dark lash line
 const LID_L = "M240 213 Q268 190 299 208 Q270 229 240 213 Z";
 const LID_R = "M340 205 Q366 182 394 199 Q368 219 340 205 Z";
 const LASH_L = "M240 213 Q270 229 299 208";
 const LASH_R = "M340 205 Q368 219 394 199";
 
-export default function AliAvatar({ mood, level = 0, size = 240, crop = "bust", className = "" }: { mood: AvatarMood; level?: number; size?: number; crop?: "bust" | "face"; className?: string }) {
+export default function AliAvatar({
+  mood,
+  level = 0,
+  size = 240,
+  crop = "bust",
+  className = "",
+  label = "Ali Ashour",
+}: {
+  mood: AvatarMood;
+  level?: number;
+  size?: number;
+  crop?: "bust" | "face";
+  className?: string;
+  /** name read by screen readers: the examiner shown (Ali Ashour / Donia) */
+  label?: string;
+}) {
   const id = useId().replace(/:/g, "");
   const jaw = useRef<SVGGElement>(null);
   const mouth = useRef<SVGEllipseElement>(null);
   const lids = useRef<SVGGElement>(null);
   const cur = useRef(0);
-  const target = useRef(0);
-  target.current = mood === "speaking" ? level : 0;
+  const raf = useRef<number | null>(null);
 
-  // smooth jaw movement (one rAF loop; stops when the component unmounts)
+  // Animate only when the voice level changes; do not keep an idle rAF loop running.
   useEffect(() => {
-    let raf = 0;
+    const nextTarget = mood === "speaking" ? Math.max(0, Math.min(1, level)) : 0;
+    if (raf.current !== null) cancelAnimationFrame(raf.current);
+
     const tick = () => {
-      cur.current += (target.current - cur.current) * 0.35;
-      const d = cur.current * 9;
-      jaw.current?.setAttribute("transform", `translate(0 ${d.toFixed(2)})`);
-      mouth.current?.setAttribute("cy", (304 + d * 0.5).toFixed(2));
-      mouth.current?.setAttribute("ry", Math.max(0, d * 0.62).toFixed(2));
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, []);
+      const delta = nextTarget - cur.current;
+      cur.current = Math.abs(delta) < 0.008
+        ? nextTarget
+        : cur.current + delta * 0.22;
 
-  // blink every 2.5–5.5 s (and a double blink now and then)
-  useEffect(() => {
-    let t = 0;
-    const blink = (again: boolean) => {
-      lids.current?.classList.add("nh-ali-blink");
-      window.setTimeout(() => lids.current?.classList.remove("nh-ali-blink"), 140);
-      t = window.setTimeout(() => blink(Math.random() < 0.2), again ? 260 : 2500 + Math.random() * 3000);
+      const d = cur.current * 7.5;
+      jaw.current?.setAttribute("transform", `translate(0 ${d.toFixed(2)})`);
+      mouth.current?.setAttribute("cy", (304 + d * 0.42).toFixed(2));
+      mouth.current?.setAttribute("ry", Math.max(0, d * 0.52).toFixed(2));
+
+      if (Math.abs(nextTarget - cur.current) >= 0.008) {
+        raf.current = requestAnimationFrame(tick);
+      } else {
+        cur.current = nextTarget;
+        raf.current = null;
+      }
     };
-    t = window.setTimeout(() => blink(false), 1800);
-    return () => clearTimeout(t);
+
+    raf.current = requestAnimationFrame(tick);
+    return () => {
+      if (raf.current !== null) cancelAnimationFrame(raf.current);
+      raf.current = null;
+    };
+  }, [mood, level]);
+
+  // Blinks use tracked timers so neither timeout survives component unmount.
+  useEffect(() => {
+    let nextBlink: number | null = null;
+    let closeLids: number | null = null;
+    let cancelled = false;
+
+    const schedule = (delay: number) => {
+      nextBlink = window.setTimeout(() => {
+        if (cancelled) return;
+        lids.current?.classList.add("nh-ali-blink");
+        closeLids = window.setTimeout(() => {
+          lids.current?.classList.remove("nh-ali-blink");
+          closeLids = null;
+          if (!cancelled) {
+            const doubleBlink = Math.random() < 0.16;
+            schedule(doubleBlink ? 180 : 2800 + Math.random() * 2600);
+          }
+        }, 125);
+      }, delay);
+    };
+
+    schedule(1500);
+    return () => {
+      cancelled = true;
+      if (nextBlink !== null) window.clearTimeout(nextBlink);
+      if (closeLids !== null) window.clearTimeout(closeLids);
+      lids.current?.classList.remove("nh-ali-blink");
+    };
   }, []);
 
   const vb = crop === "face" ? "205 95 250 250" : "110 0 480 640";
   const ratio = crop === "face" ? 1 : 640 / 480;
-  const ring = mood === "listening" ? "nh-ali-listen" : mood === "happy" ? "nh-ali-happy" : mood === "sad" ? "nh-ali-sad" : "";
-  const motion = mood === "speaking" ? "nh-ali-talk" : mood === "happy" ? "nh-ali-bounce" : mood === "sad" ? "nh-ali-shake" : mood === "thinking" ? "nh-ali-think" : "nh-ali-breathe";
+  const ring =
+    mood === "listening" ? "nh-ali-listen" :
+    mood === "happy" ? "nh-ali-happy" :
+    mood === "sad" ? "nh-ali-sad" : "";
+  const motion =
+    mood === "speaking" ? "nh-ali-talk" :
+    mood === "happy" ? "nh-ali-bounce" :
+    mood === "sad" ? "nh-ali-shake" :
+    mood === "thinking" ? "nh-ali-think" : "nh-ali-breathe";
 
   return (
     <div className={`relative inline-block ${className}`} style={{ width: size, height: size * ratio }}>
       <style>{CSS}</style>
       {ring && <span aria-hidden="true" className={`absolute inset-[6%] rounded-full ${ring}`} />}
-      <svg viewBox={vb} width={size} height={size * ratio} className={`relative ${motion}`} role="img" aria-label="Ali Ashour">
+      <svg
+        viewBox={vb}
+        width={size}
+        height={size * ratio}
+        className={`relative ${motion}`}
+        role="img"
+        aria-label={label}
+      >
         <defs>
           <clipPath id={`jaw-${id}`} clipPathUnits="userSpaceOnUse">
-            {/* from the lower edge of the teeth (top of the lower lip) down around the chin */}
             <path d="M282 299 Q330 312 378 297 L392 322 Q384 356 360 372 Q330 382 300 372 Q276 356 270 322 Z" />
           </clipPath>
         </defs>
         <image href={MASCOT_SRC} x="0" y="0" width="700" height="1019" />
-        {/* inside of the mouth, shows when the jaw drops */}
         <ellipse ref={mouth} cx="330" cy="304" rx="40" ry="0" fill="#4a1512" />
         <g ref={jaw} clipPath={`url(#jaw-${id})`}>
           <image href={MASCOT_SRC} x="0" y="0" width="700" height="1019" />
         </g>
-        {/* eyelids */}
         <g ref={lids} className="nh-ali-lids">
-          <g><path d={LID_L} fill="#d48857" /><path d={LASH_L} fill="none" stroke="#2b1308" strokeWidth="3" strokeLinecap="round" /></g>
-          <g><path d={LID_R} fill="#dd9262" /><path d={LASH_R} fill="none" stroke="#2b1308" strokeWidth="3" strokeLinecap="round" /></g>
+          <g>
+            <path d={LID_L} fill="#d48857" />
+            <path d={LASH_L} fill="none" stroke="#2b1308" strokeWidth="3" strokeLinecap="round" />
+          </g>
+          <g>
+            <path d={LID_R} fill="#dd9262" />
+            <path d={LASH_R} fill="none" stroke="#2b1308" strokeWidth="3" strokeLinecap="round" />
+          </g>
         </g>
         {mood === "thinking" && (
           <g className="nh-ali-dots" fill="#14b8a6">
-            <circle cx="470" cy="120" r="9" /><circle cx="500" cy="95" r="12" /><circle cx="535" cy="65" r="15" />
+            <circle cx="470" cy="120" r="9" />
+            <circle cx="500" cy="95" r="12" />
+            <circle cx="535" cy="65" r="15" />
           </g>
         )}
       </svg>

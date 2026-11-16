@@ -12,6 +12,13 @@ export function openOralExam(preset: OralPreset = {}) {
   window.dispatchEvent(new CustomEvent("nh:oral", { detail: preset }));
 }
 
+/** The examiner the visitor chose last time (Ali = male voice, Donia = female voice). */
+export function examinerName(ar: boolean): string {
+  let female = false;
+  try { female = JSON.parse(localStorage.getItem("nh_oral_prefs_v1") || "{}").gender === "female"; } catch { /* ignore */ }
+  return female ? (ar ? "دنيا" : "Donia") : (ar ? "علي" : "Ali");
+}
+
 // pages where a floating button would get in the way (checkout, sign-in, an exam already running)
 const HIDE = /^\/(checkout|login|register|forgot|order\/|buy)/;
 
@@ -45,6 +52,7 @@ export default function OralLauncher() {
   }, []);
 
   if (features.oralExam === false) return null;
+  const name = examinerName(ar);
   const hidden = HIDE.test(pathname);
 
   return (
@@ -59,8 +67,8 @@ export default function OralLauncher() {
           <button
             type="button"
             onClick={() => { setPreset(undefined); setOpen(true); setHint(false); try { localStorage.setItem("nh_oral_hint", "1"); } catch { /* ignore */ } }}
-            aria-label={ar ? "امتحان شفوي مع علي عاشور" : "Oral exam with Ali Ashour"}
-            title={ar ? "امتحان شفوي مع علي" : "Oral exam with Ali"}
+            aria-label={ar ? `امتحان شفوي مع ${name}` : `Oral exam with ${name}`}
+            title={ar ? `امتحان شفوي مع ${name}` : `Oral exam with ${name}`}
             className="group relative grid h-14 w-14 place-items-center rounded-full bg-nh-navy shadow-lg ring-2 ring-nh-teal transition hover:scale-105"
           >
             <span className="absolute inset-0 overflow-hidden rounded-full">

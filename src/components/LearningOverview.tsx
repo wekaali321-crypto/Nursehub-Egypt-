@@ -103,7 +103,7 @@ export default function LearningOverview() {
       </div>
 
       <OralExamCTA className="mt-4" preset={weakT[0] ? { source: "topic", topic: weakT[0].topic } : { source: "topic", topic: "mixed" }}
-        text={weakT[0] ? (ar ? `علي هيسألك شفوي في أضعف موضوع عندك: ${TOPIC_INFO[weakT[0].topic as TopicCode]?.ar ?? ""}` : `Ali quizzes you out loud on your weakest topic: ${TOPIC_INFO[weakT[0].topic as TopicCode]?.en ?? ""}`) : undefined} />
+        text={weakT[0] ? (ar ? `هتتسأل شفوي في أضعف موضوع عندك: ${TOPIC_INFO[weakT[0].topic as TopicCode]?.ar ?? ""}` : `An oral quiz on your weakest topic: ${TOPIC_INFO[weakT[0].topic as TopicCode]?.en ?? ""}`) : undefined} />
 
       <div className={cardClass(false, "mt-4 p-5")}>
         <h3 className="mb-3 flex items-center gap-2 font-black text-nh-navy dark:text-white"><Target size={18} className="text-nh-teal" aria-hidden="true" />{ar ? "الخطوة الجاية" : "Next steps"}</h3>

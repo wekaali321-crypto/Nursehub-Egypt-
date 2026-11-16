@@ -87,8 +87,16 @@ test('grade: clamps the score, reads JSON wrapped in prose, rejects a missing qu
 
 test('study text is cut to 3500 characters; short pages fall back to the topic', () => {
   const long = oral.buildGenerate({ lang: 'ar', title: 'T', text: 'a '.repeat(5000) });
-  assert.ok(long.messages[1].content.length < 4200);
+  const studied = long.messages[1].content.split('"""')[1];
+  assert.ok(studied.length <= 3500, String(studied.length));
+  assert.match(oral.buildGenerate({ lang: 'ar', text: '' }).messages[1].content, /Egyptian colloquial Arabic/, 'Arabic questions are in Egyptian colloquial');
   assert.match(long.messages[1].content, /Study text/);
   const short = oral.buildGenerate({ lang: 'en', title: 'Home', text: 'short', topic: 'Cardiovascular' });
   assert.match(short.messages[1].content, /Topic: "Cardiovascular"/);
+});
+
+test('female voice → the examiner is Donia (feminine Arabic), male → Ali Ashour', () => {
+  assert.match(oral.buildGenerate({ lang: 'ar', gender: 'female' }).messages[0].content, /Donia/);
+  assert.match(oral.buildGrade({ lang: 'ar', gender: 'female', q: 'q', points: ['p'], answer: 'a' }).messages[1].content, /as Donia speaking/);
+  assert.match(oral.buildGenerate({ lang: 'ar', gender: 'male' }).messages[0].content, /Ali Ashour/);
 });
