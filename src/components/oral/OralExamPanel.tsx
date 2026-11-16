@@ -6,7 +6,7 @@ import { Button } from "../ui";
 import { useI18n } from "../../lib/i18n";
 import { TOPIC_INFO, type TopicCode } from "../../lib/examTopics";
 import { addAttempt } from "../../lib/examHistory";
-import { canListen, getTtsStatus, listen, prefetchSpeech, setTarekVoice, speak, unlockAudio, type Gender, type Lang, type ListenHandle, type SpeakHandle } from "../../lib/oral/voice";
+import { canListen, getTtsStatus, listen, prefetchSpeech, setTarekVoice, speak, usePhoneVoice, unlockAudio, type Gender, type Lang, type ListenHandle, type SpeakHandle } from "../../lib/oral/voice";
 import { matchChoice } from "../../lib/oral/match";
 import { aiGenerate, aiGrade, getAiStatus, isFallback, loadPool, pageContext, pickQuestions, topicForPath, type AiQuestion, type AiStatus, type PoolQuestion } from "../../lib/oral/api";
 
@@ -67,18 +67,20 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
   // The voice is always Tarek (ElevenLabs via /api/tts). If it cannot speak, nothing else speaks: the text stays on screen
   // and a notice says why (never pretending Tarek is talking).
-  const [egVoice, setEgVoice] = useState<boolean | undefined>(undefined);
+  // Temporary: while the server has no ElevenLabs key at all, the phone's own voice speaks (and is labelled as such).
+  const [egVoice, setEgVoice] = useState<"tarek" | "phone" | "off" | undefined>(undefined);
   const voiceNotice = (reason: string) => (reason === "monthly_limit"
     ? T("رصيد صوت Tarek للشهر ده خلص، فالامتحان هيكمل مكتوب من غير صوت. الرصيد بيتجدد أول الشهر.", "Tarek's voice budget for this month is used up, so the exam continues as text without sound. It renews next month.")
     : T("صوت Tarek مش متاح دلوقتي، فالامتحان هيكمل مكتوب من غير صوت.", "Tarek's voice isn't available right now, so the exam continues as text without sound."));
   useEffect(() => {
     getTtsStatus().then((s) => {
       if (!alive.current) return;
-      setEgVoice(!!s?.tts);
-      if (!s?.tts) setNotice(voiceNotice(s ? (s.enabled ? "monthly_limit" : "tts_off") : "tts_unavailable"));
-      setTarekVoice(!!s?.tts, (reason: string) => {
+      if (!s || !s.configured) { usePhoneVoice(); setEgVoice("phone"); return; }
+      setEgVoice(s.tts ? "tarek" : "off");
+      if (!s.tts) setNotice(voiceNotice(s.enabled ? "monthly_limit" : "tts_off"));
+      setTarekVoice(s.tts, (reason: string) => {
         if (!alive.current) return;
-        setEgVoice(false);
+        setEgVoice("off");
         setNotice(voiceNotice(reason));
       });
     });
@@ -435,7 +437,7 @@ function fallbackText(reason: string, ar: boolean): string {
 
 /* ---------- setup screen ---------- */
 function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onStart }: {
-  egVoice: boolean | undefined;
+  egVoice: "tarek" | "phone" | "off" | undefined;
   prefs: Prefs; setPrefs: (f: (p: Prefs) => Prefs) => void; status: AiStatus | null | undefined; aiOk: boolean; pageTopic: TopicCode | "mixed";
   T: (a: string, e: string) => string; ar: boolean; onStart: () => void;
 }) {
@@ -494,8 +496,8 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
             <button type="button" className={pill(prefs.gender === "female")} onClick={() => set("gender", "female")}>{T("دنيا (أنثى)", "Donia (female)")}</button>
           </div>
           {egVoice !== undefined && (
-            <p className={`mt-1 text-[11px] font-bold ${egVoice ? "text-emerald-300" : "text-slate-400"}`}>
-              {egVoice ? T("✓ الصوت: Tarek", "✓ Voice: Tarek") : T("صوت Tarek مش متاح — الأسئلة هتظهر مكتوبة", "Tarek's voice unavailable — questions shown as text")}
+            <p className={`mt-1 text-[11px] font-bold ${egVoice === "tarek" ? "text-emerald-300" : "text-slate-400"}`}>
+              {egVoice === "tarek" ? T("✓ الصوت: Tarek", "✓ Voice: Tarek") : egVoice === "phone" ? T("الصوت: صوت الموبايل", "Voice: your phone's voice") : T("صوت Tarek مش متاح — الأسئلة هتظهر مكتوبة", "Tarek's voice unavailable — questions shown as text")}
             </p>
           )}
         </fieldset>
@@ -522,7 +524,7 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
       </div>
 
       <Button size="lg" className="w-full" onClick={onStart} icon={<Mic size={18} aria-hidden="true" />}>{T("ابدأ الامتحان", "Start")}</Button>
-      <p className="text-center text-[11px] leading-5 text-slate-400">{T("صوت الممتحن: Tarek (ElevenLabs). إجابتك بتتسمع وتتحول لكلام على جهازك عن طريق المتصفح. الامتحان للتدريب ومش بديل عن المصادر المعتمدة.", "Examiner voice: Tarek (ElevenLabs). Your spoken answers are recognised by your browser. For practice only, not a substitute for approved references.")}</p>
+      <p className="text-center text-[11px] leading-5 text-slate-400">{T("صوت الممتحن: Tarek (ElevenLabs)، أو صوت الموبايل مؤقتًا لحد ما يتفعّل. إجابتك بتتسمع وتتحول لكلام على جهازك عن طريق المتصفح. الامتحان للتدريب ومش بديل عن المصادر المعتمدة.", "Examiner voice: Tarek (ElevenLabs), or your phone's voice until it is set up. Your spoken answers are recognised by your browser. For practice only, not a substitute for approved references.")}</p>
     </div>
   );
 }

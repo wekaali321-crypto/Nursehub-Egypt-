@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { Headphones, Pause, Play, RotateCcw, Square } from "lucide-react";
 import AliAvatar, { type AvatarMood } from "../oral/AliAvatar";
 import { useI18n } from "../../lib/i18n";
-import { TarekPlayer } from "../../lib/tarekAudio";
+import { TarekPlayer, getTarekStatus } from "../../lib/tarekAudio";
 import { extractParagraphs, langOf, READER_MAX, splitChunks } from "./readerText";
 
 /**
@@ -14,6 +14,22 @@ import { extractParagraphs, langOf, READER_MAX, splitChunks } from "./readerText
  */
 type State = "idle" | "loading" | "playing" | "paused" | "done" | "error";
 const HIDE = /^\/(checkout|login|register|forgot|order\/|buy|admin|dashboard)/;
+
+/**
+ * Shown only once the server has an ElevenLabs key and the reader is switched on (checked once per visit, kept 10 minutes in
+ * sessionStorage: one small cached GET, not one per page). Until then there is no button at all.
+ */
+let configured: Promise<boolean> | null = null;
+function readerAvailable(): Promise<boolean> {
+  if (!configured) configured = (async () => {
+    try { const c = JSON.parse(sessionStorage.getItem("nh_reader_ok") || "null"); if (c && Date.now() - c.at < 600000) return !!c.ok; } catch { /* ignore */ }
+    const s = await getTarekStatus("/api/ali-reader");
+    const ok = !!s && s.configured && s.enabled;
+    try { sessionStorage.setItem("nh_reader_ok", JSON.stringify({ ok, at: Date.now() })); } catch { /* ignore */ }
+    return ok;
+  })();
+  return configured;
+}
 
 const player = typeof window !== "undefined" ? new TarekPlayer("/api/ali-reader", READER_MAX) : (null as unknown as TarekPlayer);
 
@@ -28,6 +44,8 @@ export default function AliSiteReader() {
   const [level, setLevel] = useState(0);
   const [msg, setMsg] = useState("");
   const run = useRef(0); // bumps on stop / new start: older async steps see it changed and quit
+  const [available, setAvailable] = useState(false);
+  useEffect(() => { let alive = true; void readerAvailable().then((ok) => alive && setAvailable(ok)); return () => { alive = false; }; }, []);
 
   const errorText = useCallback((reason: string) => {
     if (reason === "monthly_limit") return T("رصيد قارئ الموقع للشهر ده خلص. هيرجع أول الشهر الجاي.", "The site reader's monthly budget is used up. It renews next month.");
@@ -88,7 +106,7 @@ export default function AliSiteReader() {
     return () => { window.removeEventListener("nh:oral", onOral); run.current++; player?.stop(); };
   }, [stop]);
 
-  if (HIDE.test(pathname)) return null;
+  if (HIDE.test(pathname) || !available) return null;
   const open = state !== "idle";
   const pct = chunks.length ? Math.round(((idx + (state === "done" ? 1 : 0)) / chunks.length) * 100) : 0;
   const mood: AvatarMood = state === "playing" ? "speaking" : state === "loading" ? "thinking" : state === "done" ? "happy" : "idle";

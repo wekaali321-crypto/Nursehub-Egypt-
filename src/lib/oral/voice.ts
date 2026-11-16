@@ -1,8 +1,10 @@
 /**
  * The oral exam's voice and ears.
- *  - speak(): always Tarek (ElevenLabs via /api/tts, see lib/tarekAudio). Arabic and English, whichever examiner (Ali / Donia)
- *    is shown. If Tarek cannot speak (monthly limit, service off, network), NOTHING else speaks instead: the exam goes on with
- *    the text on screen, a clear notice is shown (onUnavailable), and Ali's mouth stays still.
+ *  - speak(): Tarek (ElevenLabs via /api/tts, see lib/tarekAudio), Arabic and English, whichever examiner (Ali / Donia) is shown.
+ *    If Tarek cannot speak (monthly limit, service off, network), NOTHING else speaks instead: the exam goes on with the text on
+ *    screen, a clear notice is shown (onUnavailable), and Ali's mouth stays still.
+ *  - Temporary: while NO ElevenLabs key is configured on the server (status.configured === false), the phone's own voice is used,
+ *    and the page labels it as the phone's voice. Once the key is added, Tarek takes over by itself.
  *  - listen(): the browser's SpeechRecognition (Chrome / Edge / Android / Safari 14.5+) for the learner's spoken answers.
  */
 import { TarekPlayer, getTarekStatus, type TarekStatus } from "../tarekAudio";
@@ -22,13 +24,17 @@ export interface SpeakHandle { done: Promise<void>; stop: () => void }
 
 const MAX = 700; // = /api/tts limit per part
 const player = new TarekPlayer("/api/tts", MAX);
-// "on" once /api/tts reports Tarek available this month; "off" for the rest of the visit after any failure answer.
-let tarek: "unknown" | "on" | "off" = "unknown";
+// "on" once /api/tts reports Tarek available this month; "off" for the rest of the visit after any failure answer;
+// "phone" while the server has no ElevenLabs key at all (temporary: the device's own voice).
+let tarek: "unknown" | "on" | "off" | "phone" = "unknown";
 let onUnavailable: ((reason: string) => void) | null = null;
 
 export const getTtsStatus = () => getTarekStatus("/api/tts");
 /** Set from the status check; `onOff` is told why Tarek stopped (so the page can say so). */
 export function setTarekVoice(on: boolean, onOff?: (reason: string) => void) { tarek = on ? "on" : "off"; onUnavailable = onOff ?? null; }
+/** No ElevenLabs key on the server yet → use the phone's own voice until it is added. */
+export function usePhoneVoice() { tarek = canPhoneSpeak() ? "phone" : "off"; }
+export const phoneVoiceOn = () => tarek === "phone";
 export const tarekOn = () => tarek === "on";
 /** Call inside the tap that starts the exam (mobile autoplay rules; also sets up the real lip-sync). */
 export const unlockAudio = () => player.unlock();
@@ -84,11 +90,56 @@ export function speak(text: string, opts: { lang: Lang; gender?: Gender; onLevel
         if (r === "error") { turnOff("play_error"); break; }
         if (n + 1 === parts.length) return; // all spoken
       }
+    } else if (tarek === "phone") {
+      await phoneSpeak(clean, opts, () => stopped, (f) => { wake = f; });
+      return;
     }
     // Tarek unavailable: no other voice — leave time to read the text on screen
     if (!stopped) await silentWait(readingMs(clean));
   })();
   return { done, stop };
+}
+
+/* ---------- temporary: the phone's own voice (only while no ElevenLabs key is configured) ---------- */
+const canPhoneSpeak = () => typeof window !== "undefined" && "speechSynthesis" in window;
+const FEMALE = /female|woman|zira|hoda|salma|laila|layla|mariam|amira|zariyah|hala|samantha|karen|moira|tessa|victoria|susan|hazel|libby|sonia|jenny|aria/i;
+const MALE = /\bmale\b|david|mark|naayf|shakir|hamed|maged|tarik|tarek|daniel|alex|fred|george|ryan|guy|thomas/i;
+let voicesReady: Promise<SpeechSynthesisVoice[]> | null = null;
+function phoneVoices(): Promise<SpeechSynthesisVoice[]> {
+  if (!voicesReady) voicesReady = new Promise((res) => {
+    const now = speechSynthesis.getVoices();
+    if (now.length) return res(now);
+    const done = () => res(speechSynthesis.getVoices());
+    speechSynthesis.addEventListener?.("voiceschanged", done, { once: true });
+    setTimeout(done, 1500);
+  });
+  return voicesReady;
+}
+async function phoneSpeak(clean: string, opts: { lang: Lang; gender?: Gender; onPlaying?: (on: boolean) => void }, stopped: () => boolean, setWake: (f: () => void) => void) {
+  const all = (await phoneVoices()).filter((v) => v.lang?.toLowerCase().startsWith(opts.lang));
+  const sorted = [...all].sort((a, b) => (opts.lang === "ar" && /eg/i.test(b.lang) ? 1 : 0) - (opts.lang === "ar" && /eg/i.test(a.lang) ? 1 : 0));
+  const want = opts.gender === "female" ? FEMALE : MALE;
+  const voice = sorted.find((v) => want.test(v.name)) ?? sorted[0] ?? null;
+  const exact = !!voice && want.test(voice.name);
+  const chunks = clean.match(/[^.!?؟\n]+[.!?؟]?/g)?.map((x) => x.trim()).filter(Boolean) ?? [clean];
+  for (const chunk of chunks) {
+    if (stopped()) return;
+    await new Promise<void>((res) => {
+      const u = new SpeechSynthesisUtterance(chunk);
+      u.lang = voice?.lang || (opts.lang === "ar" ? "ar-EG" : "en-US");
+      if (voice) u.voice = voice;
+      u.rate = opts.lang === "ar" ? 0.95 : 1;
+      u.pitch = exact ? 1 : opts.gender === "female" ? 1.35 : 0.8;
+      let t = 0;
+      // no audio level is available from the phone voice: Ali shows "speaking" only, no pretend lip-sync
+      const end = () => { clearTimeout(t); opts.onPlaying?.(false); res(); };
+      u.onstart = () => opts.onPlaying?.(true);
+      u.onend = end; u.onerror = end;
+      setWake(() => { speechSynthesis.cancel(); end(); });
+      speechSynthesis.speak(u);
+      t = window.setTimeout(end, 2500 + chunk.length * 120); // engines that never fire onend
+    });
+  }
 }
 
 export interface ListenHandle { result: Promise<string>; stop: () => void }

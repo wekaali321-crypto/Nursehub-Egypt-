@@ -97,6 +97,31 @@ const LISTEN = 'button:has-text("استمع للمحتوى")';
 try {
   console.log('\nE2E — Tarek voice: site reader + oral exam (local)\n');
 
+  // 0. no ElevenLabs key yet (temporary mode): no reader button; the oral exam speaks with the phone's voice, labelled as such
+  {
+    env.ELEVENLABS_API_KEY = '';
+    const c = await ctx();
+    await c.addInitScript(() => {
+      window.SpeechSynthesisUtterance = function (t) { this.text = t; };
+      Object.defineProperty(window, 'speechSynthesis', { configurable: true, value: { getVoices: () => [], cancel() {}, addEventListener() {},
+        speak(u) { window.__phoneVoice++; setTimeout(() => { u.onstart && u.onstart(); setTimeout(() => u.onend && u.onend(), 150); }, 10); } } });
+    });
+    const p = await c.newPage(); const n0 = elevenCalls.length;
+    await p.goto(`${U}/article/${article.slug}`); await p.waitForSelector('main h1', { timeout: 30000 }); await p.waitForTimeout(1500);
+    assert.equal(await p.locator(LISTEN).count(), 0, 'no reader button without a key');
+    await p.click('button[aria-label^="امتحان شفوي مع"]');
+    await p.waitForSelector('text=الصوت: صوت الموبايل', { timeout: 15000 });
+    await p.click('text=مجاني (بنك الأسئلة)'); await p.click('text=ابدأ الامتحان');
+    await p.waitForSelector('text=/سؤال 1 من/', { timeout: 20000 }); await p.waitForTimeout(1500);
+    assert.ok(await p.evaluate(() => window.__phoneVoice) > 0, 'phone voice used');
+    assert.equal(elevenCalls.length, n0, 'ElevenLabs never called');
+    assert.equal(await p.locator('text=/صوت Tarek مش متاح|رصيد صوت Tarek/').count(), 0, 'no alarming notice in the temporary mode');
+    ok('no key yet: reader button hidden, exam uses the phone voice (labelled), ElevenLabs not called');
+    await c.close();
+    env.ELEVENLABS_API_KEY = 'local-test-key';
+    edge.clear(); // the "not configured" status answers were cached at the edge stand-in
+  }
+
   // 1. no autoplay: a page sits open, nothing is fetched or played
   {
     const c = await ctx(); const p = await c.newPage();
