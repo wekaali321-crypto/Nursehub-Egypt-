@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Bot, CheckCircle2, Keyboard, Mic, MicOff, PhoneOff, RotateCcw, Sparkles, Volume2, X, XCircle, Zap } from "lucide-react";
-import AliAvatar, { type AvatarMood } from "./AliAvatar";
+import NurseHubAvatar, { type AvatarState as AvatarMood } from "../avatar/NurseHubAvatar";
 import { Button } from "../ui";
 import { useI18n } from "../../lib/i18n";
 import { TOPIC_INFO, type TopicCode } from "../../lib/examTopics";
 import { addAttempt } from "../../lib/examHistory";
-import { canListen, getTtsStatus, listen, prefetchSpeech, setCloudVoice, speak, unlockAudio, type Gender, type Lang, type ListenHandle, type SpeakHandle } from "../../lib/oral/voice";
+import { canListen, getTtsStatus, listen, prefetchSpeech, setTarekVoice, speak, usePhoneVoice, unlockAudio, voiceFrame, type Gender, type Lang, type ListenHandle, type SpeakHandle } from "../../lib/oral/voice";
 import { matchChoice } from "../../lib/oral/match";
 import { aiGenerate, aiGrade, getAiStatus, isFallback, loadPool, pageContext, pickQuestions, topicForPath, type AiQuestion, type AiStatus, type PoolQuestion } from "../../lib/oral/api";
 
@@ -49,7 +49,6 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
   const setPhase = (p: Phase) => { phaseRef.current = p; setPhaseState(p); };
   const [results, setResults] = useState<Result[]>([]);
   const [mood, setMood] = useState<AvatarMood>("idle");
-  const [level, setLevel] = useState(0);
   const [heard, setHeard] = useState("");
   const [typed, setTyped] = useState("");
   const [showType, setShowType] = useState(!canListen());
@@ -65,18 +64,23 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
   useEffect(() => { try { localStorage.setItem(PREFS, JSON.stringify(prefs)); } catch { /* ignore */ } }, [prefs]);
 
-  // Egyptian voice (Azure via /api/tts) when this month's budget allows; otherwise the phone's own voice
-  const [egVoice, setEgVoice] = useState<boolean | undefined>(undefined);
+  // The voice is always Tarek (ElevenLabs via /api/tts). If it cannot speak, nothing else speaks: the text stays on screen
+  // and a notice says why (never pretending Tarek is talking).
+  // Temporary: while the server has no ElevenLabs key at all, the phone's own voice speaks (and is labelled as such).
+  const [egVoice, setEgVoice] = useState<"tarek" | "phone" | "off" | undefined>(undefined);
+  const voiceNotice = (reason: string) => (reason === "monthly_limit"
+    ? T("رصيد صوت Tarek للشهر ده خلص، فالامتحان هيكمل مكتوب من غير صوت. الرصيد بيتجدد أول الشهر.", "Tarek's voice budget for this month is used up, so the exam continues as text without sound. It renews next month.")
+    : T("صوت Tarek مش متاح دلوقتي، فالامتحان هيكمل مكتوب من غير صوت.", "Tarek's voice isn't available right now, so the exam continues as text without sound."));
   useEffect(() => {
     getTtsStatus().then((s) => {
       if (!alive.current) return;
-      setEgVoice(!!s?.tts);
-      setCloudVoice(!!s?.tts, (reason) => {
+      if (!s || !s.configured) { usePhoneVoice(); setEgVoice("phone"); return; }
+      setEgVoice(s.tts ? "tarek" : "off");
+      if (!s.tts) setNotice(voiceNotice(s.enabled ? "monthly_limit" : "tts_off"));
+      setTarekVoice(s.tts, (reason: string) => {
         if (!alive.current) return;
-        setEgVoice(false);
-        setNotice(reason === "monthly_limit"
-          ? T(`رصيد الصوت المصري للشهر ده خلص، ف${P.ar} ${G("هيكمل", "هتكمل")} بصوت الموبايل. الرصيد بيتجدد أول الشهر.`, `This month's Egyptian-voice budget is used up, so ${P.en} continues with your phone's voice.`)
-          : T(`الصوت المصري مش متاح دلوقتي، ف${P.ar} ${G("هيكمل", "هتكمل")} بصوت الموبايل.`, `The Egyptian voice isn't available right now, so ${P.en} uses your phone's voice.`));
+        setEgVoice("off");
+        setNotice(voiceNotice(reason));
       });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -91,7 +95,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
     return () => clearInterval(t);
   }, [prefs.mode]);
 
-  const stopAll = useCallback(() => { speaking.current?.stop(); listening.current?.stop(); speaking.current = null; listening.current = null; setLevel(0); }, []);
+  const stopAll = useCallback(() => { speaking.current?.stop(); listening.current?.stop(); speaking.current = null; listening.current = null; }, []);
   useEffect(() => { alive.current = true; return () => { alive.current = false; stopAll(); }; }, [stopAll]);
   useEffect(() => {
     const esc = (e: KeyboardEvent) => { if (e.key === "Escape") close(); };
@@ -104,8 +108,11 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
   const say = useCallback(async (text: string, l: Lang = prefs.lang) => {
     speaking.current?.stop();
-    setMood((m) => (m === "happy" || m === "sad" ? m : "speaking"));
-    const h = speak(text, { lang: l, gender: prefs.gender, onLevel: (v) => alive.current && setLevel(v) });
+    // "speaking" only while Tarek's audio actually plays
+    const h = speak(text, {
+      lang: l, gender: prefs.gender,
+      onPlaying: (on) => alive.current && setMood((m) => (m === "happy" || m === "sad" ? m : on ? "speaking" : "idle")),
+    });
     speaking.current = h;
     await h.done;
     if (speaking.current === h) speaking.current = null;
@@ -152,12 +159,12 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
     if (!it) return;
     const my = ++turn.current;
     const live = () => alive.current && turn.current === my;
-    setI(k); setHeard(""); setTyped(""); tries.current = 0; setMood("speaking"); setPhase("asking");
+    setI(k); setHeard(""); setTyped(""); tries.current = 0; setMood("idle"); setPhase("asking");
     if (it.kind === "mcq") {
       const qLang: Lang = ar && it.pq.ar ? "ar" : "en";
       const cLang: Lang = ar && it.pq.ca ? "ar" : "en";
       const choicesSpeech = choiceTexts(it).map((c, j) => `${cLang === "ar" ? AR_LETTERS[j] : LETTERS[j]}. ${c}.`).join(" ");
-      prefetchSpeech(choicesSpeech, { lang: cLang, gender: prefs.gender });
+      prefetchSpeech(choicesSpeech, { lang: cLang });
       await say(`${T("سؤال", "Question")} ${k + 1}. ${questionText(it)}`, qLang);
       if (!live()) return;
       await say(choicesSpeech, cLang);
@@ -306,7 +313,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
           {step === "loading" && (
             <div className="flex flex-col items-center gap-3 px-4 py-10">
-              <AliAvatar label={ar ? P.arFull : P.en} mood="thinking" size={190} />
+              <NurseHubAvatar label={ar ? P.arFull : P.en} state="thinking" size={190} />
               <p className="text-sm font-bold text-slate-200">{T(`${P.ar} ${G("بيجهّز", "بتجهّز")} الأسئلة…`, `${P.en} is preparing your questions…`)}</p>
             </div>
           )}
@@ -315,7 +322,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
             <div className="px-4 pb-4">
               <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/10" aria-hidden="true"><div className="h-full rounded-full bg-teal-400 transition-all" style={{ width: `${(done.length / items.length) * 100}%` }} /></div>
               <p className="mt-1 text-center text-[11px] font-bold text-slate-300">{T(`${done.length} من ${items.length} أسئلة`, `${done.length} of ${items.length} questions covered`)}</p>
-              <div className="flex justify-center"><AliAvatar label={ar ? P.arFull : P.en} mood={mood} level={level} size={200} /></div>
+              <div className="flex justify-center"><NurseHubAvatar label={ar ? P.arFull : P.en} state={mood} frame={voiceFrame} size={200} /></div>
               <p className="-mt-1 mb-2 text-center text-xs font-bold text-teal-200" aria-live="polite">
                 {mood === "speaking" ? T(`${P.ar} ${G("بيتكلم", "بتتكلم")}…`, `${P.en} is speaking…`) : phase === "listening" && mood === "listening" ? T("بسمعك…", "Listening…") : phase === "grading" ? T(`${P.ar} ${G("بيقيّم", "بتقيّم")} إجابتك…`, `${P.en} is marking your answer…`) : " "}
               </p>
@@ -387,7 +394,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
           {step === "done" && (
             <div className="px-4 pb-5">
-              <div className="flex justify-center"><AliAvatar label={ar ? P.arFull : P.en} mood={mood} level={level} size={170} /></div>
+              <div className="flex justify-center"><NurseHubAvatar label={ar ? P.arFull : P.en} state={mood} frame={voiceFrame} size={170} /></div>
               <div className="text-center">
                 <div className="text-4xl font-black">{pctNow}%</div>
                 <p className="text-sm text-slate-300">{T(`${correct} إجابة صح من ${done.length}`, `${correct} correct out of ${done.length}`)}{done.some((r) => r.score === 1) ? T(` و${done.filter((r) => r.score === 1).length} ناقصة`, `, ${done.filter((r) => r.score === 1).length} partly right`) : ""}</p>
@@ -428,7 +435,7 @@ function fallbackText(reason: string, ar: boolean): string {
 
 /* ---------- setup screen ---------- */
 function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onStart }: {
-  egVoice: boolean | undefined;
+  egVoice: "tarek" | "phone" | "off" | undefined;
   prefs: Prefs; setPrefs: (f: (p: Prefs) => Prefs) => void; status: AiStatus | null | undefined; aiOk: boolean; pageTopic: TopicCode | "mixed";
   T: (a: string, e: string) => string; ar: boolean; onStart: () => void;
 }) {
@@ -441,7 +448,7 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
   return (
     <div className="space-y-4 px-4 pb-5 pt-3">
       <div className="flex items-center gap-3">
-        <AliAvatar label={ar ? P.arFull : P.en} mood="idle" size={92} crop="face" className="shrink-0 overflow-hidden rounded-full bg-[#173a5a]" />
+        <NurseHubAvatar label={ar ? P.arFull : P.en} state="idle" size={92} framing="head" className="shrink-0 overflow-hidden rounded-full bg-[#173a5a]" />
         <p className="text-sm leading-6 text-slate-200">{T(`أهلًا، أنا ${P.arFull}. هسألك بصوتي وانت تجاوب بصوتك، زي الامتحان الشفوي الحقيقي.`, `Hi, I'm ${P.en}. I'll ask out loud and you answer out loud, like a real oral exam.`)}</p>
       </div>
 
@@ -487,8 +494,8 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
             <button type="button" className={pill(prefs.gender === "female")} onClick={() => set("gender", "female")}>{T("دنيا (أنثى)", "Donia (female)")}</button>
           </div>
           {egVoice !== undefined && (
-            <p className={`mt-1 text-[11px] font-bold ${egVoice ? "text-emerald-300" : "text-slate-400"}`}>
-              {egVoice ? (prefs.lang === "ar" ? `✓ صوت مصري طبيعي (${prefs.gender === "female" ? "سلمى" : "شاكر"})` : `✓ Natural voice (${prefs.gender === "female" ? "Jenny" : "Guy"})`) : T("صوت الموبايل", "Your phone's voice")}
+            <p className={`mt-1 text-[11px] font-bold ${egVoice === "tarek" ? "text-emerald-300" : "text-slate-400"}`}>
+              {egVoice === "tarek" ? T("✓ الصوت: Tarek", "✓ Voice: Tarek") : egVoice === "phone" ? T("الصوت: صوت الموبايل", "Voice: your phone's voice") : T("صوت Tarek مش متاح — الأسئلة هتظهر مكتوبة", "Tarek's voice unavailable — questions shown as text")}
             </p>
           )}
         </fieldset>
@@ -515,7 +522,7 @@ function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onSta
       </div>
 
       <Button size="lg" className="w-full" onClick={onStart} icon={<Mic size={18} aria-hidden="true" />}>{T("ابدأ الامتحان", "Start")}</Button>
-      <p className="text-center text-[11px] leading-5 text-slate-400">{T("الصوت بيتسمع ويتحول لكلام على جهازك عن طريق المتصفح. الامتحان للتدريب ومش بديل عن المصادر المعتمدة.", "Speech is handled by your browser. For practice only, not a substitute for approved references.")}</p>
+      <p className="text-center text-[11px] leading-5 text-slate-400">{T("صوت الممتحن: Tarek (ElevenLabs)، أو صوت الموبايل مؤقتًا لحد ما يتفعّل. إجابتك بتتسمع وتتحول لكلام على جهازك عن طريق المتصفح. الامتحان للتدريب ومش بديل عن المصادر المعتمدة.", "Examiner voice: Tarek (ElevenLabs), or your phone's voice until it is set up. Your spoken answers are recognised by your browser. For practice only, not a substitute for approved references.")}</p>
     </div>
   );
 }

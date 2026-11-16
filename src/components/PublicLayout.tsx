@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import InstallPrompt from "./InstallPrompt";
 import MobileBottomNav from "./MobileBottomNav";
 import OralLauncher from "./oral/OralLauncher";
+import AliSiteReader from "./ali-reader/AliSiteReader";
 import { useI18n } from "../lib/i18n";
 
 /** Open every new page from the top (SPA navigation otherwise keeps the previous scroll position). Back/forward and #anchors are left alone. */
@@ -49,6 +50,8 @@ export default function PublicLayout({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen flex-col pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0">
       <a href="#main-content" className="skip-link">{t("a11y.skipToContent")}</a>
       <Navbar />
+      {/* outside #main-content so the reader never reads its own controls */}
+      <AliSiteReader />
       <main id="main-content" className="flex-1">{children}</main>
       <Footer />
       <ScrollToTop />

@@ -23,18 +23,27 @@
 - الاستهلاك: صف واحد في `nh_settings` لكل يوم (`ai_usage:YYYY-MM-DD`)، وكتابة واحدة لكل طلب AI. الصوت (كلام وسماع) من المتصفح نفسه ومجاني.
 - أسئلة الوضع المجاني ملفات ثابتة في `public/exams/oral/` (مش من D1). بعد تحديث لقطة البيانات شغّل: `node scripts/build-oral-pools.mjs`.
 
-## صوت علي المصري (Microsoft Azure Speech — شاكر / سلمى)
-من غيره، علي بيتكلم بصوت موبايل الزائر. لتشغيل الصوت المصري الطبيعي (مجاني لحد 500,000 حرف في الشهر):
-1. اعمل حساب على https://portal.azure.com (ممكن يطلب كارت للتحقق، والخطة المجانية مش بتسحب فلوس).
-2. **Create a resource** ← ابحث عن **Speech service** ← Create:
-   - Resource group: جديد (مثلًا `nursehub`)
-   - Region: **West Europe** (أو أي منطقة تانية فيها أصوات ar-EG)
-   - Name: أي اسم (مثلًا `nursehub-voice`)
-   - Pricing tier: **Free F0** ← لازم يبقى F0 عشان مفيش أي فلوس
-3. بعد ما يخلص: افتح المورد ← **Keys and Endpoint** ← انسخ **KEY 1** وخد اسم المنطقة **Location/Region** (مثلًا `westeurope`).
-4. في Cloudflare ← Workers & Pages ← `nursehub-egypt` ← Settings ← **Variables and Secrets** ← Production:
-   - `AZURE_SPEECH_KEY` = KEY 1، ونوعه **Secret**
-   - `AZURE_SPEECH_REGION` = `westeurope` (Text)
-5. **Retry deployment** لآخر نشر.
-- العدّاد والتشغيل والحد الشهري: لوحة التحكم ← مفاتيح الميزات ← «صوت علي المصري». الحد الافتراضي 450,000 (هامش أمان).
-- الجمل المتكررة (الترحيب، «صح! برافو»، أسئلة البنك) بتتخزن على Cloudflare ومش بتتحسب تاني. لما الحد يخلص، علي بيتكلم بصوت الموبايل لحد أول الشهر.
+## صوت الموقع الموحّد: Tarek (ElevenLabs)
+صوت واحد لكل الموقع: جمل الممتحن في الامتحان الشفوي (علي أو دنيا) وقارئ الصفحات «استمع للمحتوى».
+- Voice: **Tarek - Pleasant and Professional** — Voice ID `ckGEQg6YnSVooU5uDRsF` — Model `eleven_multilingual_v2` — MP3.
+- المفتاح على السيرفر بس (Pages Function)، عمره ما بيوصل للمتصفح.
+
+**الإعداد** (Cloudflare ← Workers & Pages ← `nursehub-egypt` ← Settings ← **Variables and Secrets** ← Production):
+| الاسم | النوع | القيمة |
+|---|---|---|
+| `ELEVENLABS_API_KEY` | **Secret** | مفتاح ElevenLabs (Profile ← API Keys)، بصلاحية Text to Speech |
+| `ELEVENLABS_TTS_MONTHLY_CHARS` | Text (اختياري) | حد الامتحان الشفوي في الشهر. الافتراضي **20000** |
+| `SITE_READER_MONTHLY_CHARS` | Text (اختياري) | حد قارئ الموقع في الشهر. الافتراضي **8000** |
+
+بعدها **Retry deployment** لآخر نشر.
+
+**الحصص منفصلة:**
+- الامتحان الشفوي: `/api/tts`، عدّاد `tts_usage:YYYY-MM`، إعداد اللوحة `oral_tts`، 150 جزء/ساعة لكل IP، 700 حرف للجزء.
+- قارئ الموقع: `/api/ali-reader`، عدّاد `reader_usage:YYYY-MM`، إعداد اللوحة `site_reader`، 60 جزء/ساعة لكل IP، 1000 حرف للجزء.
+- قراءة الصفحات عمرها ما تاكل من رصيد الامتحان. الافتراضي (20000 + 8000) أقل من 30,000 حرف (خطة Starter)؛ زوّدهم لو خطتك أكبر.
+- حروف الجملة بتتحسب بس لما ElevenLabs يرجّع صوت فعلًا. الجمل المتكررة بتتخزن على Cloudflare ومش بتتحسب تاني.
+- لوحة التحكم ← مفاتيح الميزات: عدّاد مباشر وتشغيل/إيقاف وحد أقل اختياري لكل واحد منهم.
+
+**لما الصوت يقف** (الحد خلص، المفتاح غلط، ElevenLabs واقع): مفيش صوت تاني بيتكلم بداله. الامتحان بيكمل مكتوب مع تنبيه واضح، والقارئ بيقول إن الصوت مش متاح.
+- مهم: الخطة المجانية في ElevenLabs ممنوع استخدامها تجاريًا (والموقع فيه إعلانات ومتجر)، فاستخدم خطة مدفوعة (Starter أو أعلى).
+- Azure اتشال: متغيرات `AZURE_SPEECH_KEY` / `AZURE_SPEECH_REGION` مش مستخدمة تاني وتقدر تمسحها لو كنت ضفتها.
