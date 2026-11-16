@@ -75,7 +75,10 @@ async function lockedFor(env, key, rule) {
 const hitStmt = (env, key) => env.DB.prepare('INSERT INTO admin_login_attempts (ip, success, created_at) VALUES (?, 0, ?)').bind(key, new Date().toISOString());
 
 const clean = (s, n) => String(s ?? '').replace(/[\u0000-\u0008\u000b-\u001f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, n);
-const langName = (l) => (l === 'en' ? 'English' : 'Arabic (clear Modern Standard Arabic that an Egyptian nurse understands; keep drug and disease names in English)');
+// Arabic = Egyptian colloquial, the way an Egyptian nurse talks to a colleague on the ward (medical terms stay in English)
+const langName = (l) => (l === 'en'
+  ? 'English'
+  : 'Egyptian colloquial Arabic (العامية المصرية), the way an experienced Egyptian nurse talks to a younger colleague on the ward: friendly and short, e.g. "طيب قولّي…", "إيه أول حاجة هتعملها؟", "ليه؟", "تمام كده", "بص يا سيدي". Write it in Arabic letters, NOT Modern Standard Arabic (no "ماذا", "لماذا", "يجب"). Keep drug, disease, lab and procedure names in English as nurses say them (e.g. "heart failure", "Lasix", "CVP")');
 
 export function buildGenerate(b) {
   const count = Math.min(6, Math.max(3, Number(b.count) || 5));

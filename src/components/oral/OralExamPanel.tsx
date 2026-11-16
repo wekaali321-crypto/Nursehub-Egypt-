@@ -6,7 +6,7 @@ import { Button } from "../ui";
 import { useI18n } from "../../lib/i18n";
 import { TOPIC_INFO, type TopicCode } from "../../lib/examTopics";
 import { addAttempt } from "../../lib/examHistory";
-import { canListen, listen, speak, type Gender, type Lang, type ListenHandle, type SpeakHandle } from "../../lib/oral/voice";
+import { canListen, getTtsStatus, listen, prefetchSpeech, setCloudVoice, speak, unlockAudio, type Gender, type Lang, type ListenHandle, type SpeakHandle } from "../../lib/oral/voice";
 import { matchChoice } from "../../lib/oral/match";
 import { aiGenerate, aiGrade, getAiStatus, isFallback, loadPool, pageContext, pickQuestions, topicForPath, type AiQuestion, type AiStatus, type PoolQuestion } from "../../lib/oral/api";
 
@@ -63,6 +63,23 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
 
   useEffect(() => { try { localStorage.setItem(PREFS, JSON.stringify(prefs)); } catch { /* ignore */ } }, [prefs]);
 
+  // Egyptian voice (Azure via /api/tts) when this month's budget allows; otherwise the phone's own voice
+  const [egVoice, setEgVoice] = useState<boolean | undefined>(undefined);
+  useEffect(() => {
+    getTtsStatus().then((s) => {
+      if (!alive.current) return;
+      setEgVoice(!!s?.tts);
+      setCloudVoice(!!s?.tts, (reason) => {
+        if (!alive.current) return;
+        setEgVoice(false);
+        setNotice(reason === "monthly_limit"
+          ? T("رصيد الصوت المصري للشهر ده خلص، فعلي هيكمل بصوت الموبايل. الرصيد بيتجدد أول الشهر.", "This month's Egyptian-voice budget is used up, so Ali continues with your phone's voice.")
+          : T("الصوت المصري مش متاح دلوقتي، فعلي هيكمل بصوت الموبايل.", "The Egyptian voice isn't available right now, so Ali uses your phone's voice."));
+      });
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // live AI budget: on open, then every 30 s while the smart mode is chosen / running
   useEffect(() => {
     let t = 0;
@@ -102,6 +119,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
   };
 
   const start = async () => {
+    unlockAudio(); // inside the tap: lets Ali's voice play on phones without another tap
     stopAll();
     setStep("loading"); setNotice(""); setResults([]); resRef.current = []; setI(0); setMood("thinking"); started.current = Date.now();
     const page = pageContext();
@@ -136,9 +154,11 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
     if (it.kind === "mcq") {
       const qLang: Lang = ar && it.pq.ar ? "ar" : "en";
       const cLang: Lang = ar && it.pq.ca ? "ar" : "en";
+      const choicesSpeech = choiceTexts(it).map((c, j) => `${cLang === "ar" ? AR_LETTERS[j] : LETTERS[j]}. ${c}.`).join(" ");
+      prefetchSpeech(choicesSpeech, { lang: cLang, gender: prefs.gender });
       await say(`${T("سؤال", "Question")} ${k + 1}. ${questionText(it)}`, qLang);
       if (!live()) return;
-      await say(choiceTexts(it).map((c, j) => `${cLang === "ar" ? AR_LETTERS[j] : LETTERS[j]}. ${c}.`).join(" "), cLang);
+      await say(choicesSpeech, cLang);
     } else {
       await say(`${T("سؤال", "Question")} ${k + 1}. ${it.q.q}`);
     }
@@ -279,7 +299,7 @@ export default function OralExamPanel({ onClose, preset }: { onClose: () => void
           {notice && <p role="status" className="mx-4 mt-3 rounded-xl bg-amber-400/15 px-3 py-2 text-xs font-bold text-amber-200">{notice}</p>}
 
           {step === "setup" && (
-            <Setup prefs={prefs} setPrefs={setPrefs} status={status} aiOk={aiOk} pageTopic={pageTopic} T={T} ar={ar} onStart={start} />
+            <Setup egVoice={egVoice} prefs={prefs} setPrefs={setPrefs} status={status} aiOk={aiOk} pageTopic={pageTopic} T={T} ar={ar} onStart={start} />
           )}
 
           {step === "loading" && (
@@ -405,7 +425,8 @@ function fallbackText(reason: string, ar: boolean): string {
 }
 
 /* ---------- setup screen ---------- */
-function Setup({ prefs, setPrefs, status, aiOk, pageTopic, T, ar, onStart }: {
+function Setup({ egVoice, prefs, setPrefs, status, aiOk, pageTopic, T, ar, onStart }: {
+  egVoice: boolean | undefined;
   prefs: Prefs; setPrefs: (f: (p: Prefs) => Prefs) => void; status: AiStatus | null | undefined; aiOk: boolean; pageTopic: TopicCode | "mixed";
   T: (a: string, e: string) => string; ar: boolean; onStart: () => void;
 }) {
@@ -461,6 +482,11 @@ function Setup({ prefs, setPrefs, status, aiOk, pageTopic, T, ar, onStart }: {
             <button type="button" className={pill(prefs.gender === "male")} onClick={() => set("gender", "male")}>{T("ذكر", "Male")}</button>
             <button type="button" className={pill(prefs.gender === "female")} onClick={() => set("gender", "female")}>{T("أنثى", "Female")}</button>
           </div>
+          {egVoice !== undefined && (
+            <p className={`mt-1 text-[11px] font-bold ${egVoice ? "text-emerald-300" : "text-slate-400"}`}>
+              {egVoice ? (prefs.lang === "ar" ? `✓ صوت مصري طبيعي (${prefs.gender === "female" ? "سلمى" : "شاكر"})` : `✓ Natural voice (${prefs.gender === "female" ? "Jenny" : "Guy"})`) : T("صوت الموبايل", "Your phone's voice")}
+            </p>
+          )}
         </fieldset>
         <fieldset>
           <legend className="mb-1 text-xs font-black text-slate-300">{T("اللغة", "Language")}</legend>

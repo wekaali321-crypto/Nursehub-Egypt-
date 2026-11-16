@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { supabase } from "../../lib/supabase";
 import { useToast } from "../../components/Toast";
 import { getAiStatus, type AiStatus } from "../../lib/oral/api";
+import { getTtsStatus, type TtsStatus } from "../../lib/oral/voice";
 import { cardCls, Toggle } from "./ui";
 
 /**
@@ -38,6 +39,7 @@ export default function OralAiAdmin() {
   const pct = s?.pct ?? 0;
   const bar = !s ? "bg-slate-300" : !s.ai ? "bg-rose-500" : pct >= 80 ? "bg-amber-500" : "bg-emerald-500";
   return (
+    <>
     <section className={`${cardCls} mt-6 p-5`} aria-labelledby="oral-ai-title">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
@@ -69,6 +71,60 @@ export default function OralAiAdmin() {
           className="w-28 rounded-lg border border-slate-200 px-2 py-1 dark:border-slate-700 dark:bg-slate-800" />
         <button type="button" disabled={saving} onClick={() => save({ ...cfg, dailyLimit: Math.min(10000, Math.max(500, cfg.dailyLimit || 9000)) })} className="rounded-lg bg-sky-500 px-3 py-1 text-xs font-bold text-white disabled:opacity-50">حفظ الحد</button>
         <span className="text-xs text-slate-500">سيب 9000 عشان يفضل هامش أمان تحت الـ 10,000 المجانية.</span>
+      </label>
+    </section>
+    <OralVoiceAdmin />
+    </>
+  );
+}
+
+/** Egyptian voice (Azure Speech via /api/tts): this month's characters, on/off and a monthly cap (nh_settings 'oral_tts'). */
+function OralVoiceAdmin() {
+  const { notify } = useToast();
+  const [s, setS] = useState<TtsStatus | null | undefined>(undefined);
+  const [cfg, setCfg] = useState<{ enabled: boolean; monthlyLimit: number }>({ enabled: true, monthlyLimit: 450000 });
+  const [saving, setSaving] = useState(false);
+  useEffect(() => {
+    let alive = true;
+    const load = async () => { const x = await getTtsStatus(); if (alive) setS(x); };
+    load();
+    const t = window.setInterval(load, 60000);
+    supabase?.from("nh_settings").select("value").eq("key", "oral_tts").maybeSingle().then(({ data }) => {
+      const v = (data?.value ?? null) as { enabled?: boolean; monthlyLimit?: number } | null;
+      if (alive && v) setCfg({ enabled: v.enabled !== false, monthlyLimit: Number(v.monthlyLimit) || 450000 });
+    });
+    return () => { alive = false; clearInterval(t); };
+  }, []);
+  const save = async (next: { enabled: boolean; monthlyLimit: number }) => {
+    setCfg(next); setSaving(true);
+    const { error } = (await supabase?.from("nh_settings").upsert({ key: "oral_tts", value: next })) ?? { error: null };
+    setSaving(false);
+    notify(error ? "تعذّر الحفظ" : "تم الحفظ", error ? "error" : "success");
+  };
+  const pct = s?.pct ?? 0;
+  const bar = !s ? "bg-slate-300" : !s.tts ? "bg-rose-500" : pct >= 80 ? "bg-amber-500" : "bg-emerald-500";
+  return (
+    <section className={`${cardCls} mt-4 p-5`} aria-labelledby="oral-tts-title">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <h3 id="oral-tts-title" className="font-black text-slate-800 dark:text-white">🗣️ صوت علي المصري (Microsoft Azure — شاكر / سلمى)</h3>
+          <p className="text-xs text-slate-500 dark:text-slate-400">المجاني 500,000 حرف في الشهر. الجمل المتكررة بتتخزن ومش بتتحسب تاني. لما الحد يخلص، علي بيتكلم بصوت موبايل الزائر لوحده.</p>
+        </div>
+        <Toggle checked={cfg.enabled} disabled={saving} onChange={(v) => save({ ...cfg, enabled: v })} label={cfg.enabled ? "شغّال" : "متوقف"} />
+      </div>
+      <div className="mt-4">
+        <div className="mb-1 flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-300">
+          <span>الشهر {s?.month ?? ""}</span>
+          <span>{s ? `${s.used.toLocaleString("en")} / ${s.limit.toLocaleString("en")} حرف (${pct}%) — ${s.calls} جملة` : s === null ? "مش متاح" : "…"}</span>
+        </div>
+        <div className="h-3 overflow-hidden rounded-full bg-slate-100 dark:bg-slate-800"><div className={`h-full rounded-full ${bar} transition-all`} style={{ width: `${pct}%` }} /></div>
+        {s && !s.enabled && cfg.enabled && <p className="mt-2 text-xs font-bold text-rose-600">مفتاح Azure مش متضاف لسه: ضيف AZURE_SPEECH_KEY (Secret) و AZURE_SPEECH_REGION في إعدادات Cloudflare Pages — الخطوات في DEPLOY-CLOUDFLARE.md.</p>}
+      </div>
+      <label className="mt-4 flex flex-wrap items-center gap-2 text-sm text-slate-700 dark:text-slate-200">
+        الحد الشهري (حرف):
+        <input type="number" min={10000} max={500000} step={10000} value={cfg.monthlyLimit} onChange={(e) => setCfg({ ...cfg, monthlyLimit: Number(e.target.value) })}
+          className="w-32 rounded-lg border border-slate-200 px-2 py-1 dark:border-slate-700 dark:bg-slate-800" />
+        <button type="button" disabled={saving} onClick={() => save({ ...cfg, monthlyLimit: Math.min(500000, Math.max(10000, cfg.monthlyLimit || 450000)) })} className="rounded-lg bg-sky-500 px-3 py-1 text-xs font-bold text-white disabled:opacity-50">حفظ الحد</button>
       </label>
     </section>
   );

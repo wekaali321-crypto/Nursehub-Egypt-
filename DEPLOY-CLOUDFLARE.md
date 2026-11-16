@@ -22,3 +22,19 @@
 - لما الحد يخلص (أو Workers AI يرفض)، الموقع بيحوّل للامتحان المجاني لوحده لحد 00:00 UTC (2 الفجر بتوقيت القاهرة).
 - الاستهلاك: صف واحد في `nh_settings` لكل يوم (`ai_usage:YYYY-MM-DD`)، وكتابة واحدة لكل طلب AI. الصوت (كلام وسماع) من المتصفح نفسه ومجاني.
 - أسئلة الوضع المجاني ملفات ثابتة في `public/exams/oral/` (مش من D1). بعد تحديث لقطة البيانات شغّل: `node scripts/build-oral-pools.mjs`.
+
+## صوت علي المصري (Microsoft Azure Speech — شاكر / سلمى)
+من غيره، علي بيتكلم بصوت موبايل الزائر. لتشغيل الصوت المصري الطبيعي (مجاني لحد 500,000 حرف في الشهر):
+1. اعمل حساب على https://portal.azure.com (ممكن يطلب كارت للتحقق، والخطة المجانية مش بتسحب فلوس).
+2. **Create a resource** ← ابحث عن **Speech service** ← Create:
+   - Resource group: جديد (مثلًا `nursehub`)
+   - Region: **West Europe** (أو أي منطقة تانية فيها أصوات ar-EG)
+   - Name: أي اسم (مثلًا `nursehub-voice`)
+   - Pricing tier: **Free F0** ← لازم يبقى F0 عشان مفيش أي فلوس
+3. بعد ما يخلص: افتح المورد ← **Keys and Endpoint** ← انسخ **KEY 1** وخد اسم المنطقة **Location/Region** (مثلًا `westeurope`).
+4. في Cloudflare ← Workers & Pages ← `nursehub-egypt` ← Settings ← **Variables and Secrets** ← Production:
+   - `AZURE_SPEECH_KEY` = KEY 1، ونوعه **Secret**
+   - `AZURE_SPEECH_REGION` = `westeurope` (Text)
+5. **Retry deployment** لآخر نشر.
+- العدّاد والتشغيل والحد الشهري: لوحة التحكم ← مفاتيح الميزات ← «صوت علي المصري». الحد الافتراضي 450,000 (هامش أمان).
+- الجمل المتكررة (الترحيب، «صح! برافو»، أسئلة البنك) بتتخزن على Cloudflare ومش بتتحسب تاني. لما الحد يخلص، علي بيتكلم بصوت الموبايل لحد أول الشهر.

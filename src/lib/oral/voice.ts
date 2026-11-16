@@ -49,12 +49,121 @@ export function speakable(text: string): string {
 
 export interface SpeakHandle { done: Promise<void>; stop: () => void }
 
+/* ---------- Egyptian voice from the server (/api/tts → Azure ar-EG neural voices) ---------- */
+// "on" once /api/tts says the month's budget is available; "off" for the rest of the visit after any fallback answer.
+let cloud: "unknown" | "on" | "off" = "unknown";
+let onCloudOff: ((reason: string) => void) | null = null;
+export interface TtsStatus { tts: boolean; enabled: boolean; used: number; limit: number; pct: number; calls: number; month: string }
+export async function getTtsStatus(): Promise<TtsStatus | null> {
+  try {
+    const r = await fetch("/api/tts", { headers: { accept: "application/json" } });
+    if (!r.ok || !(r.headers.get("content-type") || "").includes("json")) return null;
+    return (await r.json()) as TtsStatus;
+  } catch { return null; }
+}
+export function setCloudVoice(on: boolean, onOff?: (reason: string) => void) { cloud = on ? "on" : "off"; onCloudOff = onOff ?? null; }
+export const cloudVoiceOn = () => cloud === "on";
+
+let audioEl: HTMLAudioElement | null = null;
+/** 0.05 s of silence as a WAV data URL (a real, playable file — used to unlock audio on the first tap). */
+function silentWav(): string {
+  const n = 400, b = new Uint8Array(44 + n), v = new DataView(b.buffer);
+  const w = (o: number, t: string) => [...t].forEach((c, i) => v.setUint8(o + i, c.charCodeAt(0)));
+  w(0, "RIFF"); v.setUint32(4, 36 + n, true); w(8, "WAVE"); w(12, "fmt "); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+  v.setUint32(24, 8000, true); v.setUint32(28, 8000, true); v.setUint16(32, 1, true); v.setUint16(34, 8, true); w(36, "data"); v.setUint32(40, n, true);
+  b.fill(128, 44);
+  let bin = ""; b.forEach((x) => { bin += String.fromCharCode(x); });
+  return `data:audio/wav;base64,${btoa(bin)}`;
+}
+let actx: AudioContext | null = null;
+let analyser: AnalyserNode | null = null;
+/** Call from a click handler: lets later audio play without another tap (mobile autoplay rules) and sets up lip-sync. */
+export function unlockAudio() {
+  try {
+    if (!audioEl) { audioEl = new Audio(); audioEl.preload = "auto"; }
+    audioEl.src = silentWav();
+    void audioEl.play().catch(() => {});
+    const AC = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+    if (AC && !actx) {
+      actx = new AC();
+      analyser = actx.createAnalyser(); analyser.fftSize = 512;
+      actx.createMediaElementSource(audioEl).connect(analyser);
+      analyser.connect(actx.destination);
+    }
+    void actx?.resume();
+  } catch { /* plain audio still works, the mouth then uses a fake rhythm */ }
+}
+
+const clips = new Map<string, Promise<string | null>>(); // text|voice → blob URL (or null = server said no)
+function clipKey(text: string, lang: Lang, gender: Gender) { return `${lang}|${gender}|${text}`; }
+/** Start fetching a sentence early (e.g. the choices while the question is still being read). */
+export function prefetchSpeech(text: string, opts: { lang: Lang; gender: Gender }) {
+  if (cloud !== "on") return;
+  const clean = speakable(text);
+  if (clean) void fetchClip(clean, opts.lang, opts.gender);
+}
+function fetchClip(text: string, lang: Lang, gender: Gender): Promise<string | null> {
+  const k = clipKey(text, lang, gender);
+  if (!clips.has(k)) {
+    if (clips.size > 40) { const first = clips.keys().next().value as string; clips.get(first)?.then((u) => u && URL.revokeObjectURL(u)); clips.delete(first); }
+    clips.set(k, (async () => {
+      try {
+        const r = await fetch("/api/tts", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text: text.slice(0, 700), lang, gender }) });
+        if (r.ok && (r.headers.get("content-type") || "").startsWith("audio/")) return URL.createObjectURL(await r.blob());
+        const j = await r.json().catch(() => null);
+        if (cloud === "on") { cloud = "off"; onCloudOff?.(j?.reason || `http_${r.status}`); }
+        return null;
+      } catch { return null; }
+    })());
+  }
+  return clips.get(k)!;
+}
+
+/** Play one clip on the shared audio element; the mouth follows the real loudness. false = could not play. */
+async function playClip(url: string, onLevel: ((v: number) => void) | undefined, stopped: () => boolean, setStop: (f: () => void) => void): Promise<boolean> {
+  if (!audioEl) audioEl = new Audio();
+  const el = audioEl;
+  el.src = url;
+  const buf = analyser ? new Uint8Array(analyser.fftSize) : null;
+  let raf = 0;
+  const loop = () => {
+    if (analyser && buf) {
+      analyser.getByteTimeDomainData(buf);
+      let sum = 0; for (const b of buf) { const x = (b - 128) / 128; sum += x * x; }
+      onLevel?.(Math.min(1, Math.sqrt(sum / buf.length) * 5));
+    } else onLevel?.(el.paused ? 0 : 0.3 + Math.random() * 0.5);
+    raf = requestAnimationFrame(loop);
+  };
+  return new Promise<boolean>((res) => {
+    const end = (ok: boolean) => { cancelAnimationFrame(raf); onLevel?.(0); el.onended = null; el.onerror = null; res(ok); };
+    setStop(() => { el.pause(); end(true); });
+    el.onended = () => end(true);
+    el.onerror = () => end(false);
+    if (stopped()) return end(true);
+    el.play().then(() => { raf = requestAnimationFrame(loop); }).catch(() => end(false));
+  });
+}
+
 export function speak(text: string, opts: { lang: Lang; gender: Gender; rate?: number; onLevel?: (v: number) => void }): SpeakHandle {
   let stopped = false;
   let timer = 0;
-  const stop = () => { stopped = true; clearInterval(timer); opts.onLevel?.(0); if (canSpeak()) speechSynthesis.cancel(); };
+  let stopClip: () => void = () => {};
+  const stop = () => { stopped = true; clearInterval(timer); stopClip(); opts.onLevel?.(0); if (canSpeak()) speechSynthesis.cancel(); };
   const done = (async () => {
     const clean = speakable(text);
+    // 1) Egyptian voice from the server, when available this month
+    if (cloud === "on" && clean) {
+      const parts = clean.length <= 700 ? [clean] : (clean.match(/[^.!?؟\n]+[.!?؟]?/g) ?? [clean]).reduce<string[]>((a, s) => { const last = a[a.length - 1]; if (last && (last + s).length <= 700) a[a.length - 1] = last + s; else a.push(s.slice(0, 700)); return a; }, []);
+      let ok = true;
+      for (let n = 0; n < parts.length && !stopped && ok; n++) {
+        if (n + 1 < parts.length) void fetchClip(parts[n + 1], opts.lang, opts.gender);
+        const url = await fetchClip(parts[n], opts.lang, opts.gender);
+        if (stopped) return;
+        ok = !!url && (await playClip(url, opts.onLevel, () => stopped, (f) => { stopClip = f; }));
+      }
+      if (ok || stopped) return;
+      // could not fetch / play → the phone's voice says it instead
+    }
     if (!canSpeak() || !clean) { // no TTS: keep the rhythm so the avatar still "talks"
       await mouthOnly(clean, opts.onLevel, () => stopped);
       return;
