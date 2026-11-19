@@ -113,6 +113,44 @@ const STATIC_PAGES = {
 const textBlock = (t) => String(t ?? '').split(/\n+/).map((l) => l.trim()).filter(Boolean).map((l) => `<p>${esc(l.replace(/\*\*/g, ''))}</p>`).join('');
 const parseSections = (v) => { try { return Array.isArray(v) ? v : JSON.parse(v || '[]'); } catch { return []; } };
 
+// /drugs/<list>/<id> medication detail pages (ER / ICU / pediatrics), one table each
+const MED_LISTS = {
+  'er-medications': ['er_medications', 'أدوية الطوارئ'],
+  'icu-medications': ['icu_medications', 'أدوية العناية المركزة'],
+  'peds-medications': ['peds_medications', 'أدوية الأطفال'],
+};
+const MED_RE = /^\/drugs\/(er-medications|icu-medications|peds-medications)\/([^/]+)$/;
+
+// Other detail pages that crawlers used to receive with the home page's title / description and no canonical.
+// Each: path pattern → table, columns, how to name / describe it, and which text blocks form the page body.
+const asList = (v) => {
+  if (Array.isArray(v)) return v;
+  try { const j = JSON.parse(v); return Array.isArray(j) ? j : []; } catch { return []; }
+};
+const listText = (v) => asList(v).map((x) => (typeof x === 'string' ? x : x?.text || [x?.drug_name, x?.dose].filter(Boolean).join(' — '))).filter(Boolean).join('\n') || (typeof v === 'string' && !v.trim().startsWith('[') ? v : '');
+const DETAIL_PAGES = [
+  { re: /^\/drugs\/otc-guide\/([^/]+)$/, table: 'otc_conditions', select: 'id,name_ar,name_en,summary,symptoms,red_flags,treatment,patient_advice',
+    hub: ['/drugs/otc-guide', 'دليل الحالات البسيطة بدون روشتة'], name: (r) => r.name_ar, en: (r) => r.name_en, desc: (r) => r.summary,
+    blocks: (r) => [['الأعراض', r.symptoms], ['علامات الخطر', r.red_flags], ['العلاج', r.treatment], ['نصائح للمريض', r.patient_advice]] },
+  { re: /^\/drugs\/protocols\/([^/]+)$/, table: 'clinical_protocols', select: 'id,name_ar,name_en,summary,guideline_source,red_flags',
+    hub: ['/drugs/protocols', 'البروتوكولات السريرية'], name: (r) => r.name_ar, en: (r) => r.name_en, desc: (r) => r.summary,
+    blocks: (r) => [['المرجع', r.guideline_source], ['علامات الخطر', listText(r.red_flags)]] },
+  { re: /^\/drugs\/prescriptions\/([^/]+)$/, table: 'rx_prescriptions', select: 'id,condition_ar,condition_en,items,clinical_note',
+    hub: ['/drugs/prescriptions', 'روشتات شائعة حسب الحالة'], name: (r) => `روشتة ${r.condition_ar || r.condition_en || ''}`.trim(), en: (r) => r.condition_en,
+    desc: (r) => `روشتة شائعة لـ ${r.condition_ar || r.condition_en}: ${listText(r.items).split('\n').slice(0, 4).join('، ')}`,
+    blocks: (r) => [['الأدوية', listText(r.items)], ['ملاحظة', r.clinical_note]] },
+  { re: /^\/courses\/([^/]+)$/, table: 'courses', select: 'id,title_ar,title_en,description_ar',
+    hub: ['/courses', 'الكورسات'], name: (r) => r.title_ar, en: (r) => r.title_en, desc: (r) => r.description_ar, blocks: () => [] },
+  { re: /^\/courses\/([^/]+)\/chapter\/([^/]+)$/, table: 'course_chapters', select: 'id,course_id,title_ar,title_en,content_ar', twoKeys: true,
+    hub: ['/courses', 'الكورسات'], name: (r) => r.title_ar, en: (r) => r.title_en, desc: (r) => strip(r.content_ar),
+    blocks: (r) => [['', clip(strip(r.content_ar), 6000)]] },
+];
+const detailQuery = (d, m, cols) => {
+  const id = dec(m[d.twoKeys ? 2 : 1]);
+  if (!SAFE_ID.test(id) || (d.twoKeys && !SAFE_ID.test(dec(m[1])))) return null;
+  return `select=${cols}&id=eq.${encodeURIComponent(id)}${d.twoKeys ? `&course_id=eq.${encodeURIComponent(dec(m[1]))}` : ''}&limit=1`;
+};
+
 // -> { title, description, body, type } or null (let the SPA render as usual)
 async function pageFor(path, env, request) {
   const p = path.replace(/\/+$/, '') || '/';
@@ -221,6 +259,44 @@ async function pageFor(path, env, request) {
       description: clip(strip(r.summary_ar || '') || strip(secs[0]?.body_ar || ''), 300),
       body, type: 'MedicalWebPage',
       crumbs: [['الرئيسية', '/'], [ar, `/${m[1]}`], [r.title_ar, `/${m[1]}/${r.id}`]],
+    };
+  }
+  if ((m = MED_RE.exec(p))) {
+    // without this, crawlers got the home page's title / description and no canonical on hundreds of medication pages
+    // → Search Console reported them as duplicates / "crawled, not indexed"
+    const id = dec(m[2]);
+    if (!SAFE_ID.test(id)) return null;
+    const [table, listName] = MED_LISTS[m[1]];
+    const r = (await sb(env, table, `select=id,drug_name,drug_name_en,drug_class,concentration,uses,warnings,nursing_considerations&id=eq.${encodeURIComponent(id)}&limit=1`))?.[0];
+    if (!r) return null;
+    const name = strip(r.drug_name || r.drug_name_en || id);
+    const block = (h, t) => (t ? `<h2>${h}</h2>${textBlock(t)}` : '');
+    return {
+      title: `${clip(name, 70)} | ${listName} | ${SITE_NAME}`,
+      description: clip(strip([r.drug_class, r.uses].filter(Boolean).join(' — ')) || `${name}: الجرعة وطريقة الإعطاء والاعتبارات التمريضية.`, 300),
+      body: `<article><h1>${esc(name)}</h1>${r.drug_name_en && r.drug_name_en !== r.drug_name ? `<p lang="en">${esc(r.drug_name_en)}</p>` : ''}` +
+        (r.drug_class ? `<p>${esc(r.drug_class)}</p>` : '') + (r.concentration ? `<p>${esc(r.concentration)}</p>` : '') +
+        block('دواعي الاستعمال', r.uses) + block('تحذيرات', r.warnings) + block('الاعتبارات التمريضية', r.nursing_considerations) +
+        `<p><a href="/drugs/${m[1]}">${esc(listName)}</a></p></article>`,
+      type: 'MedicalWebPage',
+      crumbs: [['الرئيسية', '/'], ['الأدوية', '/drugs'], [listName, `/drugs/${m[1]}`], [name, p]],
+    };
+  }
+  for (const d of DETAIL_PAGES) {
+    if (!(m = d.re.exec(p))) continue;
+    const q = detailQuery(d, m, d.select);
+    if (!q) return null;
+    const r = (await sb(env, d.table, q))?.[0];
+    if (!r) return null;
+    const name = strip(d.name(r) || r.id);
+    const en = d.en(r) && d.en(r) !== d.name(r) ? strip(d.en(r)) : '';
+    const blocks = d.blocks(r).filter(([, t]) => t).map(([h, t]) => `${h ? `<h2>${esc(h)}</h2>` : ''}${textBlock(t)}`).join('');
+    return {
+      title: `${clip(name, 70)}${en ? ` (${clip(en, 40)})` : ''} | ${d.hub[1]} | ${SITE_NAME}`,
+      description: clip(strip(d.desc(r) || '') || `${name} — ${d.hub[1]}`, 300),
+      body: `<article><h1>${esc(name)}</h1>${en ? `<p lang="en">${esc(en)}</p>` : ''}${d.desc(r) ? `<p>${esc(clip(strip(d.desc(r)), 600))}</p>` : ''}${blocks}<p><a href="${d.hub[0]}">${esc(d.hub[1])}</a></p></article>`,
+      type: 'MedicalWebPage',
+      crumbs: [['الرئيسية', '/'], [d.hub[1], d.hub[0]], [name, p]],
     };
   }
   if (STATIC_PAGES[p]) {
@@ -352,6 +428,16 @@ async function classify(path, env, request) {
     const slug = dec(m[1]);
     if (!SAFE_ID.test(slug)) return 'missing';
     return (await rowExists(env, 'drugs', `select=id&slug=eq.${encodeURIComponent(slug)}&limit=1`)) ? 'ok' : 'missing';
+  }
+  for (const d of DETAIL_PAGES) {
+    if (!(m = d.re.exec(p))) continue;
+    const q = detailQuery(d, m, 'id');
+    return q && (await rowExists(env, d.table, q)) ? 'ok' : 'missing';
+  }
+  if ((m = MED_RE.exec(p))) {
+    const id = dec(m[2]);
+    if (!SAFE_ID.test(id)) return 'missing';
+    return (await rowExists(env, MED_LISTS[m[1]][0], `select=id&id=eq.${encodeURIComponent(id)}&limit=1`)) ? 'ok' : 'missing';
   }
   if ((m = /^\/([a-z-]+)\/([^/]+)$/.exec(p)) && TOPIC_TABLES[m[1]]) {
     const id = dec(m[2]);
