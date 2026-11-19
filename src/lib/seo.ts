@@ -52,7 +52,8 @@ export function useSEO(opts: SEOOptions) {
       upsertMeta("name", "twitter:image", image);
     }
 
-    const canonHref = toCanon(url ?? window.location.href);
+    // canonical = the page itself without ?query / #hash (otherwise every tracking / filter variant looks like a new page)
+    const canonHref = toCanon(url ?? window.location.origin + (window.location.pathname.replace(/\/+$/, "") || "/"));
     upsertMeta("property", "og:url", canonHref);
     let canon = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
     if (!canon) {
