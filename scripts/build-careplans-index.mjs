@@ -36,6 +36,10 @@ const plans = readdirSync(join(DIR, 'plans')).filter((f) => f.endsWith('.json'))
   return { id: p.id, icon: p.icon, system: p.system, title: p.title, summary: p.summary, diagnoses: p.student?.length || 0, rows: p.hospital?.length || 0 };
 });
 
+const ORDER = ['cardiology', 'respiratory', 'neurology', 'endocrine', 'gastro', 'renal', 'hematology', 'surgery', 'orthopedics', 'obstetrics', 'womens-health', 'pediatrics', 'integumentary', 'infection', 'general'];
+const rank = (s) => (ORDER.includes(s) ? ORDER.indexOf(s) : ORDER.length);
+plans.sort((a, b) => rank(a.system) - rank(b.system) || a.title.en.localeCompare(b.title.en));
+
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 writeFileSync(join(DIR, 'index.json'), JSON.stringify({ plans }, null, 1) + '\n');
 console.log(`${plans.length} care plans indexed`);
