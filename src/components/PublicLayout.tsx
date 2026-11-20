@@ -48,7 +48,7 @@ export default function PublicLayout({ children }: { children: ReactNode }) {
   const { t } = useI18n();
   return (
     <div className="flex min-h-screen flex-col pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0">
-      <a href="#main-content" className="skip-link">{t("a11y.skipToContent")}</a>
+      <a href="#main-content" className="skip-link print:hidden">{t("a11y.skipToContent")}</a>
       <Navbar />
       {/* outside #main-content so the reader never reads its own controls */}
       <AliSiteReader />

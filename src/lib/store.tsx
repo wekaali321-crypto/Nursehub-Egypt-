@@ -140,7 +140,7 @@ const defaultMenu = [
   { label: "بطاقات المذاكرة", path: "/cards" },
   { label: "المهارات", path: "/category/skills" },
   { label: "مكافحة العدوى", path: "/category/infection-control" },
-  { label: "خطط الرعاية", path: "/category/careplans" },
+  { label: "خطط الرعاية", path: "/care-plans" },
   { label: "الكتب", path: "/category/books" },
   { label: "الاختبارات", path: "/quizzes" },
   { label: "الأدوات", path: "/tools" },

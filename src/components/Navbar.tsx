@@ -48,6 +48,7 @@ const PATH_LABELS: Record<string, TKey> = {
   "/travel-questions": "nav.travelQuestions",
   "/courses": "nav.courses",
   "/cases": "nav.cases",
+  "/care-plans": "nav.careplans",
   "/diseases": "nav.diseases",
   "/store": "nav.store",
 };
@@ -59,6 +60,7 @@ const PATH_FEATURE: Record<string, keyof import("../lib/types").FeatureToggles> 
   "/store": "store",
   "/category/books": "store",
   "/category/careplans": "carePlans",
+  "/care-plans": "carePlans",
 };
 
 function UserMenu() {

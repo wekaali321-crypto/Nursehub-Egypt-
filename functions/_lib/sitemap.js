@@ -85,6 +85,14 @@ export async function sitemapResponse({ request, env }) {
     } catch {
       /* optional */
     }
+    try {
+      const r = await fetch(`${site}/careplans/index.json`);
+      const j = r.ok ? await r.json() : { plans: [] };
+      urls.push(['/care-plans', 0.8]);
+      (j.plans || []).forEach((c) => urls.push([`/care-plans/${enc(c.id)}`, 0.7]));
+    } catch {
+      /* optional */
+    }
     peds.forEach((p) => urls.push([`/drugs/peds-medications/${enc(p.id)}`, 0.6]));
     rx.forEach((p) => urls.push([`/drugs/prescriptions/${enc(p.id)}`, 0.6]));
   } catch {
