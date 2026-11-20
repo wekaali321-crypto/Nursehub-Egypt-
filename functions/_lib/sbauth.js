@@ -1,6 +1,8 @@
 // GoTrue-compatible auth subset on D1 (email/password, Google OAuth, PKCE, refresh tokens).
 import { respond, perr, CORS, signJwt, verifyJwt, identify } from './sb.js';
 import { lockedFor, hit, reset, ipOf, LIMITS as RL } from './ratelimit.js';
+import { sendGmail, mailConfigured } from './mailer.js';
+import { resetEmail } from './resetEmail.js';
 
 const enc = new TextEncoder();
 const hex = (buf) => [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
@@ -82,7 +84,152 @@ export async function adminSetPassword(env, emailIn) {
   return { ok: true, email, temp_password: temp };
 }
 
-export async function handleAuth(request, env, path) {
+/* ---------- e-mail OTP password reset ---------- */
+const OTP = { ttlMs: 10 * 60e3, resendMs: 60e3, maxAttempts: 5, maxSends: 3, lifeMs: 30 * 60e3, resetTtlMs: 15 * 60e3, minPassword: 8 };
+const sha256Hex = async (s) => hex(await crypto.subtle.digest('SHA-256', enc.encode(s)));
+async function otpHash(env, id, code) {
+  const k = await crypto.subtle.importKey('raw', enc.encode(`password-reset-otp:${env.JWT_SECRET}`), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+  return hex(await crypto.subtle.sign('HMAC', k, enc.encode(`${id}:${code}`)));
+}
+const sameText = (a, b) => {
+  a = String(a || ''); b = String(b || '');
+  let d = a.length ^ b.length;
+  for (let i = 0; i < Math.max(a.length, b.length); i++) d |= (a.charCodeAt(i) || 0) ^ (b.charCodeAt(i) || 0);
+  return d === 0;
+};
+/** 6 digits, uniform (rejection sampling over crypto.getRandomValues). */
+export function newOtp() {
+  const buf = new Uint32Array(1);
+  const lim = 2 ** 32 - (2 ** 32 % 1e6);
+  for (;;) { crypto.getRandomValues(buf); if (buf[0] < lim) return String(buf[0] % 1e6).padStart(6, '0'); }
+}
+const adminEmailList = (env) => String(env.ADMIN_EMAIL || '').toLowerCase().split(',').map((x) => x.trim()).filter(Boolean);
+/** Owner / admin / superadmin accounts never change their password through the e-mail flow. */
+async function isStaff(env, u) {
+  if (adminEmailList(env).includes(String(u.email).toLowerCase())) return true;
+  const p = await env.DB.prepare('SELECT role FROM profiles WHERE id = ?').bind(u.id).first();
+  return !!p && ['admin', 'superadmin'].includes(p.role);
+}
+/** Send the code; in the background when the platform allows it (same answer time whether or not an e-mail goes out). */
+function deliverOtp(env, ctx, email, code) {
+  const mail = resetEmail(code, { siteUrl: env.SITE_URL || 'https://nursehubegypt.com' });
+  const job = (ctx.mailer || sendGmail)(env, { to: email, ...mail })
+    .catch((e) => console.error('password reset e-mail not sent:', String(e?.message || 'error').slice(0, 60))); // never the code / password
+  if (ctx.waitUntil) ctx.waitUntil(job); else return job;
+}
+
+async function handleOtp(route, env, body, ip, ctx, { bad, tooMany }) {
+  const now = Date.now();
+  const T = 'password_resets';
+  const fail = (code, msg, status = 400, extra = {}) => respond({ code: status, error_code: code, msg, ...extra }, status);
+  const email = String(body.email || '').trim().toLowerCase();
+  const id = String(body.request_id || '');
+  const row = async () => (/^[0-9a-f]{32}$/.test(id) ? env.DB.prepare(`SELECT * FROM ${T} WHERE id = ?`).bind(id).first() : null);
+
+  if (route === 'otp/request') {
+    if (!mailConfigured(env) && !ctx.mailer) return fail('email_not_configured', 'Password reset by e-mail is not available yet', 503);
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || email.length > 254) return bad('validation_failed', 'Invalid email', 422);
+    const wait = Math.max(await lockedFor(env, `otpr:${ip}`, RL.otpRequestIp), await lockedFor(env, `otps:${email}`, RL.otpSendEmail));
+    if (wait) return tooMany(wait);
+    if (await lockedFor(env, 'otp:daily', RL.otpDaily)) return fail('email_daily_limit', 'Daily e-mail limit reached', 503);
+    await hit(env, `otpr:${ip}`, RL.otpRequestIp);
+    await hit(env, `otps:${email}`, RL.otpSendEmail);
+    // a new request replaces every older one for this address (their codes / reset tokens stop working)
+    await env.DB.prepare(`UPDATE ${T} SET status = 'cancelled', reset_hash = NULL WHERE email = ? AND status IN ('pending','verified')`).bind(email).run();
+    if (Math.random() < 0.05) await env.DB.prepare(`DELETE FROM ${T} WHERE created_at < ?`).bind(now - 7 * 86400e3).run();
+    const u = await getUserByEmail(env, email);
+    const eligible = !!u && !(await isStaff(env, u));
+    const rqId = rid();
+    const code = newOtp();
+    // no eligible account: the same row and answer, but the stored hash is of a code nobody ever receives
+    await env.DB.prepare(`INSERT INTO ${T} (id,email,user_id,otp_hash,status,attempts,sends,created_at,expires_at,last_sent_at) VALUES (?,?,?,?, 'pending',0,1,?,?,?)`)
+      .bind(rqId, email, eligible ? u.id : null, await otpHash(env, rqId, eligible ? code : newOtp() + rid()), now, now + OTP.ttlMs, now).run();
+    if (eligible) { await hit(env, 'otp:daily', RL.otpDaily); await deliverOtp(env, ctx, email, code); }
+    return respond({ ok: true, request_id: rqId, expires_in: OTP.ttlMs / 1000, resend_after: OTP.resendMs / 1000 });
+  }
+
+  if (route === 'otp/resend') {
+    const r = await row();
+    if (!r || r.email !== email || r.status !== 'pending') return fail('otp_request_invalid', 'Start again');
+    if (now - r.created_at > OTP.lifeMs) {
+      await env.DB.prepare(`UPDATE ${T} SET status = 'cancelled' WHERE id = ?`).bind(r.id).run();
+      return fail('otp_request_expired', 'Start again');
+    }
+    const gap = r.last_sent_at + OTP.resendMs - now;
+    if (gap > 0) return respond({ code: 429, error_code: 'otp_resend_wait', msg: 'Wait before asking again', retry_after: Math.ceil(gap / 1000) }, 429, { 'retry-after': String(Math.ceil(gap / 1000)) });
+    if (r.sends >= OTP.maxSends) return fail('otp_resend_limit', 'Start again', 429);
+    const wait = await lockedFor(env, `otps:${email}`, RL.otpSendEmail);
+    if (wait) return tooMany(wait);
+    if (r.user_id && await lockedFor(env, 'otp:daily', RL.otpDaily)) return fail('email_daily_limit', 'Daily e-mail limit reached', 503);
+    await hit(env, `otps:${email}`, RL.otpSendEmail);
+    const code = newOtp();
+    // the previous code stops working; attempts are NOT reset (5 in total per request)
+    const up = await env.DB.prepare(`UPDATE ${T} SET otp_hash = ?, expires_at = ?, last_sent_at = ?, sends = sends + 1 WHERE id = ? AND status = 'pending' AND last_sent_at = ?`)
+      .bind(await otpHash(env, r.id, r.user_id ? code : newOtp() + rid()), now + OTP.ttlMs, now, r.id, r.last_sent_at).run();
+    if (!up.meta?.changes) return fail('otp_resend_wait', 'Wait before asking again', 429);
+    if (r.user_id) { await hit(env, 'otp:daily', RL.otpDaily); await deliverOtp(env, ctx, email, code); }
+    return respond({ ok: true, expires_in: OTP.ttlMs / 1000, resend_after: OTP.resendMs / 1000, resends_left: OTP.maxSends - r.sends - 1 });
+  }
+
+  if (route === 'otp/verify') {
+    const vWait = await lockedFor(env, `otpv:${ip}`, RL.otpVerifyIp);
+    if (vWait) return tooMany(vWait);
+    const code = String(body.code || '').trim();
+    if (!/^\d{6}$/.test(code)) return bad('validation_failed', 'The code is 6 digits', 422);
+    const r = await row();
+    if (!r || r.email !== email) { await hit(env, `otpv:${ip}`, RL.otpVerifyIp); return fail('otp_request_invalid', 'Start again'); }
+    if (r.status === 'locked') return fail('otp_locked', 'Too many wrong codes. Start again');
+    if (r.status !== 'pending') return fail('otp_request_invalid', 'Start again');
+    if (now > r.expires_at) return fail('otp_expired', 'The code has expired');
+    // count the attempt first (atomic), so parallel guesses cannot go past the limit
+    const inc = await env.DB.prepare(`UPDATE ${T} SET attempts = attempts + 1 WHERE id = ? AND status = 'pending' AND attempts < ?`).bind(r.id, OTP.maxAttempts).run();
+    if (!inc.meta?.changes) {
+      await env.DB.prepare(`UPDATE ${T} SET status = 'locked' WHERE id = ? AND status = 'pending'`).bind(r.id).run();
+      return fail('otp_locked', 'Too many wrong codes. Start again');
+    }
+    const fresh = await env.DB.prepare(`SELECT otp_hash, attempts FROM ${T} WHERE id = ?`).bind(r.id).first();
+    const given = await otpHash(env, r.id, code);
+    const ok = sameText(given, fresh.otp_hash) && !!r.user_id;
+    if (!ok) {
+      await hit(env, `otpv:${ip}`, RL.otpVerifyIp);
+      const left = OTP.maxAttempts - fresh.attempts;
+      if (left <= 0) {
+        await env.DB.prepare(`UPDATE ${T} SET status = 'locked' WHERE id = ? AND status = 'pending'`).bind(r.id).run();
+        return fail('otp_locked', 'Too many wrong codes. Start again');
+      }
+      return fail('otp_invalid', 'Wrong code', 400, { attempts_left: left });
+    }
+    const token = rid() + rid();
+    const v = await env.DB.prepare(`UPDATE ${T} SET status = 'verified', otp_hash = '', verified_at = ?, reset_hash = ?, reset_expires_at = ? WHERE id = ? AND status = 'pending'`)
+      .bind(now, await sha256Hex(token), now + OTP.resetTtlMs, r.id).run();
+    if (!v.meta?.changes) return fail('otp_request_invalid', 'Start again');
+    return respond({ ok: true, reset_token: token, expires_in: OTP.resetTtlMs / 1000 });
+  }
+
+  if (route === 'otp/reset') {
+    const vWait = await lockedFor(env, `otpv:${ip}`, RL.otpVerifyIp);
+    if (vWait) return tooMany(vWait);
+    const password = String(body.password ?? '');
+    if (password.length < OTP.minPassword || password.length > 128) return bad('weak_password', `Password must be at least ${OTP.minPassword} characters`, 422);
+    const r = await row();
+    const valid = r && r.status === 'verified' && r.user_id && r.reset_hash && now <= r.reset_expires_at
+      && sameText(await sha256Hex(String(body.reset_token || '')), r.reset_hash);
+    if (!valid) { await hit(env, `otpv:${ip}`, RL.otpVerifyIp); return fail('reset_invalid', 'Start again'); }
+    const u = await env.DB.prepare('SELECT * FROM auth_users WHERE id = ?').bind(r.user_id).first();
+    if (!u || String(u.email).toLowerCase() !== r.email || await isStaff(env, u)) return fail('reset_invalid', 'Start again');
+    const newHash = await hashPassword(env, password);
+    // single use: only the request that flips verified → used may change the password
+    const claim = await env.DB.prepare(`UPDATE ${T} SET status = 'used', used_at = ?, reset_hash = NULL WHERE id = ? AND status = 'verified'`).bind(now, r.id).run();
+    if (!claim.meta?.changes) return fail('reset_invalid', 'Start again');
+    await env.DB.prepare('UPDATE auth_users SET password_hash = ? WHERE id = ?').bind(newHash, u.id).run();
+    await env.DB.prepare('DELETE FROM auth_refresh WHERE user_id = ?').bind(u.id).run(); // signed out on every device
+    await env.DB.prepare(`UPDATE ${T} SET status = 'cancelled', reset_hash = NULL WHERE email = ? AND status IN ('pending','verified')`).bind(r.email).run();
+    return respond({ ok: true });
+  }
+  return null;
+}
+
+export async function handleAuth(request, env, path, ctx = {}) {
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
   if (!env.DB || !env.JWT_SECRET) return perr(503, 'unexpected_failure', 'Auth is not configured (DB / JWT_SECRET)');
   const url = new URL(request.url);
@@ -181,6 +328,17 @@ export async function handleAuth(request, env, path) {
     await hit(env, `rc:${ip}`, RL.recoverIp);
     if (em) await hit(env, `rce:${em}`, RL.recoverEmail);
     return respond({});
+  }
+
+  if (route.startsWith('otp/') && request.method === 'POST') {
+    try {
+      const res = await handleOtp(route, env, body, ip, ctx, { bad, tooMany });
+      if (res) return res;
+    } catch (e) {
+      // table not created yet (migration 0003 not applied): same honest answer as "no mailer configured"
+      if (/no such table: password_resets/.test(String(e?.message))) return respond({ code: 503, error_code: 'email_not_configured', msg: 'Password reset by e-mail is not available yet' }, 503);
+      throw e;
+    }
   }
 
   if (route === 'settings') return respond({ external: { google: !!env.GOOGLE_CLIENT_ID, email: true }, disable_signup: false, mailer_autoconfirm: true });
