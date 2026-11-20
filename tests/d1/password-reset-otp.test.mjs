@@ -291,3 +291,18 @@ test('table not created yet (migration not applied) → 503 email_not_configured
   assert.equal(r.status, 503);
   assert.equal((await r.json()).error_code, 'email_not_configured');
 });
+
+test('mail status row: "sent" or the error category only (no address, code or password)', async () => {
+  const t = setup(); await t.signup('m@test.local');
+  await t.call('otp/request', { email: 'm@test.local' });
+  let row = t.db.prepare("SELECT * FROM password_resets WHERE id = 'mail_status'").get();
+  assert.equal(row.otp_hash, 'sent'); assert.equal(row.email, '-'); assert.equal(row.user_id, null);
+  const { MailError } = await imp('functions/_lib/mailer.js');
+  const keep = console.error; console.error = () => {};
+  try {
+    await handleAuth(new Request('https://x.test/auth/v1/otp/request', { method: 'POST', headers: { 'content-type': 'application/json', 'cf-connecting-ip': '77.0.0.1' }, body: JSON.stringify({ email: 'm@test.local' }) }), t.env, ['otp', 'request'], { mailer: async () => { throw new MailError('auth', 535); } });
+  } finally { console.error = keep; }
+  row = t.db.prepare("SELECT * FROM password_resets WHERE id = 'mail_status'").get();
+  assert.equal(row.otp_hash, 'smtp_auth_535');
+  assert.equal(t.db.prepare("SELECT COUNT(*) n FROM password_resets WHERE email = 'm@test.local' AND status = 'pending'").get().n, 1, 'the diag row never mixes with requests');
+});

@@ -111,10 +111,29 @@ async function isStaff(env, u) {
   return !!p && ['admin', 'superadmin'].includes(p.role);
 }
 /** Send the code; in the background when the platform allows it (same answer time whether or not an e-mail goes out). */
+/** Result of the latest send, for the owner's "mail status" check (GitHub workflow). Only a short category and a time:
+ *  never the address, the code or a password. Kept in the private password_resets table (row id 'mail_status'). */
+async function noteMail(env, result) {
+  const now = Date.now();
+  try {
+    await env.DB.prepare(`INSERT INTO password_resets (id,email,otp_hash,status,attempts,sends,created_at,expires_at,last_sent_at) VALUES ('mail_status','-',?, 'diag',0,1,?,?,?)
+      ON CONFLICT(id) DO UPDATE SET otp_hash = excluded.otp_hash, created_at = excluded.created_at, last_sent_at = excluded.last_sent_at, sends = sends + 1`)
+      .bind(String(result).slice(0, 60), now, now, now).run();
+  } catch { /* diagnostics only */ }
+}
 function deliverOtp(env, ctx, email, code) {
   const mail = resetEmail(code, { siteUrl: env.SITE_URL || 'https://nursehubegypt.com' });
-  const job = (ctx.mailer || sendGmail)(env, { to: email, ...mail })
-    .catch((e) => console.error('password reset e-mail not sent:', String(e?.message || 'error').slice(0, 60))); // never the code / password
+  const job = (async () => {
+    await noteMail(env, 'sending');
+    try {
+      await (ctx.mailer || sendGmail)(env, { to: email, ...mail });
+      await noteMail(env, 'sent');
+    } catch (e) {
+      const why = String(e?.message || 'error').slice(0, 60);
+      console.error('password reset e-mail not sent:', why); // never the code / password
+      await noteMail(env, why);
+    }
+  })();
   if (ctx.waitUntil) ctx.waitUntil(job); else return job;
 }
 
@@ -136,7 +155,7 @@ async function handleOtp(route, env, body, ip, ctx, { bad, tooMany }) {
     await hit(env, `otps:${email}`, RL.otpSendEmail);
     // a new request replaces every older one for this address (their codes / reset tokens stop working)
     await env.DB.prepare(`UPDATE ${T} SET status = 'cancelled', reset_hash = NULL WHERE email = ? AND status IN ('pending','verified')`).bind(email).run();
-    if (Math.random() < 0.05) await env.DB.prepare(`DELETE FROM ${T} WHERE created_at < ?`).bind(now - 7 * 86400e3).run();
+    if (Math.random() < 0.05) await env.DB.prepare(`DELETE FROM ${T} WHERE created_at < ? AND id != 'mail_status'`).bind(now - 7 * 86400e3).run();
     const u = await getUserByEmail(env, email);
     const eligible = !!u && !(await isStaff(env, u));
     const rqId = rid();

@@ -1,0 +1,20 @@
+name: Mail status (password reset)
+# Manual only, read-only. Shows the result of the latest password-reset e-mail ("sent", or why Gmail refused it, e.g.
+# smtp_auth_535 = wrong GMAIL_USER / GMAIL_APP_PASSWORD) and the last 5 reset requests (time, state, counts).
+# Never prints an e-mail address, a code or a password (none of them is stored in plain form anyway).
+on:
+  workflow_dispatch:
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Latest e-mail result
+        run: |
+          npx --yes wrangler@4 d1 execute nursehub --remote --command "SELECT otp_hash AS result, datetime(created_at/1000,'unixepoch') AS at_utc, sends AS total_sends FROM password_resets WHERE id = 'mail_status'"
+      - name: Last 5 reset requests (no addresses)
+        run: |
+          npx --yes wrangler@4 d1 execute nursehub --remote --command "SELECT datetime(created_at/1000,'unixepoch') AS created_utc, status, sends, attempts, CASE WHEN user_id IS NULL THEN 'no account / staff (no e-mail sent)' ELSE 'member (e-mail sent)' END AS kind FROM password_resets WHERE id != 'mail_status' ORDER BY created_at DESC LIMIT 5"
