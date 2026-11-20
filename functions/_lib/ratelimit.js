@@ -45,4 +45,9 @@ export const LIMITS = {
   recoverIp: { max: 3, windowSec: 60 * 60 },        // reset requests per IP per hour
   recoverEmail: { max: 2, windowSec: 60 * 60 },     // reset requests per e-mail per hour
   adminLogin: { max: 3, windowSec: 15 * 60 },       // /api/admin-login per IP
+  // e-mail OTP password reset (sbauth.js otp/*)
+  otpRequestIp: { max: 6, windowSec: 60 * 60 },     // new reset requests per IP per hour
+  otpSendEmail: { max: 5, windowSec: 60 * 60 },     // codes e-mailed to one address per hour (requests + resends)
+  otpVerifyIp: { max: 30, windowSec: 60 * 60 },     // wrong codes / bad reset tokens per IP per hour
+  otpDaily: { max: 450, windowSec: 24 * 60 * 60 },  // all reset e-mails per day (Gmail allows about 500)
 };
