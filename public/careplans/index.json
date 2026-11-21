@@ -762,6 +762,113 @@
    "group": "icu"
   },
   {
+   "id": "anemia",
+   "icon": "🩸",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "الأنيميا (ضعف عام لانخفاض الهيموجلوبين)",
+    "en": "Anemia"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض الأنيميا: الإرهاق وحفظ الطاقة، التغذية الغنية بالحديد، والوقاية من السقوط.",
+    "en": "Care plan for anemia: fatigue and energy conservation, iron-rich nutrition and fall prevention."
+   },
+   "diagnoses": [
+    {
+     "id": "fatigue-anemia",
+     "title": {
+      "ar": "الإرهاق وعدم تحمّل النشاط",
+      "en": "Fatigue / Activity Intolerance"
+     }
+    },
+    {
+     "id": "imbalanced-nutrition-iron",
+     "title": {
+      "ar": "خلل التغذية: أقل من احتياج الجسم (نقص الحديد)",
+      "en": "Imbalanced Nutrition: Less Than Body Requirements (Iron)"
+     }
+    },
+    {
+     "id": "risk-for-falls-anemia",
+     "title": {
+      "ar": "خطر السقوط",
+      "en": "Risk for Falls"
+     }
+    }
+   ],
+   "group": "symptoms"
+  },
+  {
+   "id": "chest-pain",
+   "icon": "💢",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "آلام الصدر",
+    "en": "Chest Pain"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض يشتكي من ألم في الصدر: تقييم الألم، رسم القلب خلال 10 دقائق، الأكسجين والعلاج، ومتابعة العلامات الحيوية.",
+    "en": "Care plan for chest pain: pain assessment, ECG within 10 minutes, oxygen and treatment, vital-sign monitoring."
+   },
+   "diagnoses": [
+    {
+     "id": "acute-chest-pain",
+     "title": {
+      "ar": "ألم حاد في الصدر",
+      "en": "Acute Chest Pain"
+     }
+    },
+    {
+     "id": "risk-decreased-cardiac-output-cp",
+     "title": {
+      "ar": "خطر انخفاض نتاج القلب",
+      "en": "Risk for Decreased Cardiac Output"
+     }
+    },
+    {
+     "id": "anxiety-chest-pain",
+     "title": {
+      "ar": "القلق والخوف",
+      "en": "Anxiety / Fear"
+     }
+    }
+   ],
+   "group": "symptoms"
+  },
+  {
+   "id": "constipation",
+   "icon": "🚽",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "الإمساك",
+    "en": "Constipation"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض يعاني من الإمساك: تقييم الإخراج، الحركة والسوائل والألياف، والملينات حسب الأمر.",
+    "en": "Care plan for constipation: bowel assessment, mobility, fluids and fibre, and laxatives as ordered."
+   },
+   "diagnoses": [
+    {
+     "id": "constipation",
+     "title": {
+      "ar": "الإمساك",
+      "en": "Constipation"
+     }
+    },
+    {
+     "id": "acute-pain-constipation",
+     "title": {
+      "ar": "عدم الراحة/ألم البطن",
+      "en": "Abdominal Discomfort"
+     }
+    }
+   ],
+   "group": "symptoms"
+  },
+  {
    "id": "cough-sputum",
    "icon": "🤧",
    "system": "general",
@@ -787,6 +894,75 @@
      "title": {
       "ar": "عدم الراحة بسبب الكحة",
       "en": "Impaired Comfort (Cough)"
+     }
+    }
+   ],
+   "group": "symptoms"
+  },
+  {
+   "id": "dehydration",
+   "icon": "🥤",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "الجفاف",
+    "en": "Dehydration"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض يعاني من الجفاف: علامات الجفاف، خريطة السوائل، التعويض بالفم أو الوريد، والوقاية من السقوط.",
+    "en": "Care plan for dehydration: signs, fluid chart, oral or IV replacement, and fall prevention."
+   },
+   "diagnoses": [
+    {
+     "id": "deficient-fluid-volume",
+     "title": {
+      "ar": "نقص حجم السوائل (الجفاف)",
+      "en": "Deficient Fluid Volume (Dehydration)"
+     }
+    },
+    {
+     "id": "risk-for-falls-dehydration",
+     "title": {
+      "ar": "خطر السقوط",
+      "en": "Risk for Falls"
+     }
+    }
+   ],
+   "group": "vitals"
+  },
+  {
+   "id": "diarrhea",
+   "icon": "💧",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "الإسهال",
+    "en": "Diarrhea"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض يعاني من الإسهال: متابعة البراز، تعويض السوائل، التغذية المناسبة، وحماية الجلد.",
+    "en": "Care plan for diarrhea: stool monitoring, fluid replacement, suitable diet and skin protection."
+   },
+   "diagnoses": [
+    {
+     "id": "diarrhea",
+     "title": {
+      "ar": "الإسهال",
+      "en": "Diarrhea"
+     }
+    },
+    {
+     "id": "risk-deficient-fluid-volume-diarrhea",
+     "title": {
+      "ar": "خطر نقص حجم السوائل",
+      "en": "Risk for Deficient Fluid Volume"
+     }
+    },
+    {
+     "id": "risk-impaired-skin-perianal",
+     "title": {
+      "ar": "خطر تلف الجلد حول فتحة الشرج",
+      "en": "Risk for Impaired Skin Integrity (Perianal)"
      }
     }
    ],

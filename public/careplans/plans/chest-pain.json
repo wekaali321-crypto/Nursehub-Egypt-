@@ -1,0 +1,723 @@
+{
+ "id": "chest-pain",
+ "icon": "💢",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "آلام الصدر",
+  "en": "Chest Pain"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض يشتكي من ألم في الصدر: تقييم الألم، رسم القلب خلال 10 دقائق، الأكسجين والعلاج، ومتابعة العلامات الحيوية.",
+  "en": "Care plan for chest pain: pain assessment, ECG within 10 minutes, oxygen and treatment, vital-sign monitoring."
+ },
+ "diagnoses": [
+  {
+   "id": "acute-chest-pain",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد في الصدر",
+    "en": "Acute Chest Pain"
+   },
+   "definition": {
+    "ar": "ألم مفاجئ في منطقة الصدر قد يكون سببه نقص تروية القلب أو أسباب رئوية أو عضلية أو هضمية، ويحتاج تقييمًا عاجلًا.",
+    "en": "Sudden pain in the chest that may be cardiac (ischemic), pulmonary, musculoskeletal or gastrointestinal, requiring urgent assessment."
+   },
+   "relatedTo": {
+    "ar": [
+     "نقص تروية عضلة القلب (ذبحة/جلطة)",
+     "التهاب الغشاء البلوري أو الانسداد الرئوي",
+     "أسباب عضلية أو هضمية (ارتجاع)"
+    ],
+    "en": [
+     "Myocardial ischemia (angina/infarction)",
+     "Pleuritic or pulmonary embolic causes",
+     "Musculoskeletal or gastrointestinal (reflux) causes"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "شكوى من ألم ضاغط أو حارق بالصدر",
+     "شدة الألم ≥ 5/10",
+     "عرق، سرعة نبض، تغير الضغط",
+     "تعبير ألم ووضع اليد على الصدر"
+    ],
+    "en": [
+     "Report of pressing or burning chest pain",
+     "Pain ≥ 5/10",
+     "Sweating, tachycardia, BP change",
+     "Grimacing, hand on chest"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"صدري واجعني جامد والوجع رايح لدراعي.\"",
+      "\"بدأ وأنا طالع السلم.\""
+     ],
+     "en": [
+      "\"My chest hurts badly and it goes to my arm.\"",
+      "\"It started while climbing the stairs.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ألم 7/10 خلف عظمة القص مدته 20 دقيقة.",
+      "النبض 106، الضغط 150/95، التشبع 93%.",
+      "عرق بارد وشحوب."
+     ],
+     "en": [
+      "Retrosternal pain 7/10 for 20 minutes.",
+      "Pulse 106, BP 150/95, SpO₂ 93%.",
+      "Cold sweat and pallor."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 10 دقائق: رسم قلب 12 توصيلة مسجل وإبلاغ الطبيب.",
+      "خلال 30 دقيقة: الألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 10 minutes: 12-lead ECG recorded and physician informed.",
+      "Within 30 minutes: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يعرف المريض متى يطلب الإسعاف لألم الصدر."
+     ],
+     "en": [
+      "Before discharge: knows when to call an ambulance for chest pain."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم نوع الألم وشدته ومكانه وامتداده ومدته وما يزيده (OPQRST).",
+      "en": "Assess pain type, severity, site, radiation, duration and triggers (OPQRST)."
+     },
+     "rationale": {
+      "ar": "يساعد في التفرقة بين الأسباب القلبية وغيرها.",
+      "en": "Helps distinguish cardiac from other causes."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة العلامات الحيوية والتشبع ومونيتور القلب.",
+      "en": "Monitor vital signs, SpO₂ and cardiac rhythm."
+     },
+     "rationale": {
+      "ar": "تكشف عدم الاستقرار واضطرابات النظم.",
+      "en": "Detects instability and dysrhythmias."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عمل رسم قلب 12 توصيلة فورًا (خلال 10 دقائق) وأثناء الألم.",
+      "en": "Obtain a 12-lead ECG immediately (within 10 minutes) and during pain."
+     },
+     "rationale": {
+      "ar": "يكشف الجلطة القلبية التي تحتاج تدخلًا عاجلًا.",
+      "en": "Identifies MI needing urgent treatment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "سحب التحاليل المطلوبة (التروبونين) حسب الأمر.",
+      "en": "Draw ordered labs (troponin)."
+     },
+     "rationale": {
+      "ar": "يؤكد أو يستبعد إصابة القلب.",
+      "en": "Confirms or excludes myocardial injury."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع المريض في وضع جالس أو نصف جالس وراحة تامة.",
+      "en": "Position upright or semi-sitting; complete rest."
+     },
+     "rationale": {
+      "ar": "يقلل مجهود القلب ويسهل التنفس.",
+      "en": "Reduces cardiac workload and eases breathing."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأكسجين حسب أوامر الطبيب (إذا التشبع < 90–94%).",
+      "en": "Give oxygen as ordered (if SpO₂ < 90–94%)."
+     },
+     "rationale": {
+      "ar": "يحسن إمداد القلب بالأكسجين.",
+      "en": "Improves myocardial oxygen supply."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء العلاج حسب إرشادات الطبيب (أسبرين، نيتروجلسرين، مسكن) ومتابعة الضغط.",
+      "en": "Give prescribed treatment (aspirin, nitroglycerin, analgesia) and monitor BP."
+     },
+     "rationale": {
+      "ar": "يخفف الألم ويحسن التروية؛ النيترات قد تخفض الضغط.",
+      "en": "Relieves pain and perfusion; nitrates may lower BP."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "إعادة تقييم الألم بعد كل تدخل.",
+      "en": "Reassess pain after each intervention."
+     },
+     "rationale": {
+      "ar": "يقيس الاستجابة.",
+      "en": "Measures response."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض: ألم الصدر الذي يستمر أكثر من 5 دقائق أو لا يتحسن يحتاج الإسعاف فورًا.",
+      "en": "Teach: chest pain lasting > 5 minutes or not improving needs emergency help."
+     },
+     "rationale": {
+      "ar": "التأخير يزيد تلف عضلة القلب.",
+      "en": "Delay increases heart damage."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "رسم القلب خلال 6 دقائق وإبلاغ الطبيب — تحقق.",
+      "en": "ECG within 6 minutes and physician informed — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 2/10 بعد 25 دقيقة — تحقق.",
+      "en": "Pain 2/10 after 25 minutes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الألم واستقرار المريض",
+      "en": "Assess pain and stability"
+     },
+     "actions": {
+      "ar": [
+       "تقييم نوع الألم وشدته ومكانه وامتداده ومدته وما يزيده (OPQRST).",
+       "ملاحظة العلامات الحيوية والتشبع ومونيتور القلب.",
+       "إعادة تقييم الألم بعد كل تدخل."
+      ],
+      "en": [
+       "Assess pain type, severity, site, radiation, duration and triggers (OPQRST).",
+       "Monitor vital signs, SpO₂ and cardiac rhythm.",
+       "Reassess pain after each intervention."
+      ]
+     },
+     "outcome": {
+      "ar": "الألم مقيم ومعاد تقييمه، والعلامات الحيوية مستقرة على المونيتور.",
+      "en": "Pain assessed and reassessed; vitals stable on monitor."
+     },
+     "timeframe": {
+      "ar": "كل 5–15 دقيقة أثناء الألم",
+      "en": "Every 5–15 min during pain"
+     }
+    },
+    {
+     "need": {
+      "ar": "تشخيص سريع",
+      "en": "Rapid diagnosis"
+     },
+     "actions": {
+      "ar": [
+       "عمل رسم قلب 12 توصيلة فورًا (خلال 10 دقائق) وأثناء الألم.",
+       "سحب التحاليل المطلوبة (التروبونين) حسب الأمر."
+      ],
+      "en": [
+       "Obtain a 12-lead ECG immediately (within 10 minutes) and during pain.",
+       "Draw ordered labs (troponin)."
+      ]
+     },
+     "outcome": {
+      "ar": "رسم قلب خلال 10 دقائق وتحاليل مسحوبة.",
+      "en": "ECG within 10 min and labs drawn."
+     },
+     "timeframe": {
+      "ar": "10 دقائق",
+      "en": "10 minutes"
+     }
+    },
+    {
+     "need": {
+      "ar": "تخفيف الألم",
+      "en": "Relieve pain"
+     },
+     "actions": {
+      "ar": [
+       "وضع المريض في وضع جالس أو نصف جالس وراحة تامة.",
+       "إعطاء الأكسجين حسب أوامر الطبيب (إذا التشبع < 90–94%).",
+       "إعطاء العلاج حسب إرشادات الطبيب (أسبرين، نيتروجلسرين، مسكن) ومتابعة الضغط."
+      ],
+      "en": [
+       "Position upright or semi-sitting; complete rest.",
+       "Give oxygen as ordered (if SpO₂ < 90–94%).",
+       "Give prescribed treatment (aspirin, nitroglycerin, analgesia) and monitor BP."
+      ]
+     },
+     "outcome": {
+      "ar": "الألم ≤ 3/10 والضغط مستقر.",
+      "en": "Pain ≤ 3/10 with stable BP."
+     },
+     "timeframe": {
+      "ar": "30 دقيقة",
+      "en": "30 minutes"
+     }
+    },
+    {
+     "need": {
+      "ar": "التثقيف",
+      "en": "Teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم المريض: ألم الصدر الذي يستمر أكثر من 5 دقائق أو لا يتحسن يحتاج الإسعاف فورًا."
+      ],
+      "en": [
+       "Teach: chest pain lasting > 5 minutes or not improving needs emergency help."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يعرف متى يطلب الإسعاف.",
+      "en": "Patient knows when to call emergency services."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-decreased-cardiac-output-cp",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر انخفاض نتاج القلب",
+    "en": "Risk for Decreased Cardiac Output"
+   },
+   "definition": {
+    "ar": "قابلية لعدم كفاية الدم الذي يضخه القلب لاحتياجات الجسم.",
+    "en": "Susceptible to inadequate blood pumped by the heart to meet metabolic demands."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "نقص تروية عضلة القلب",
+     "اضطرابات النظم",
+     "آثار الأدوية الموسعة للأوعية"
+    ],
+    "en": [
+     "Myocardial ischemia",
+     "Dysrhythmias",
+     "Effects of vasodilating drugs"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس بدوخة خفيفة.\""
+     ],
+     "en": [
+      "\"I feel slightly dizzy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ضربات مبكرة على المونيتور.",
+      "الضغط 105/65 بعد النيتروجلسرين."
+     ],
+     "en": [
+      "Ectopic beats on the monitor.",
+      "BP 105/65 after nitroglycerin."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء الإقامة: ضغط انقباضي ≥ 90 ونبض 60–100 دون اضطرابات نظم خطيرة."
+     ],
+     "en": [
+      "During the stay: systolic BP ≥ 90 and pulse 60–100 without dangerous dysrhythmias."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: علامات حيوية مستقرة ونشاط بسيط بدون أعراض."
+     ],
+     "en": [
+      "Before discharge: stable vital signs and light activity without symptoms."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "مونيتور قلب مستمر وضبط الإنذارات.",
+      "en": "Continuous cardiac monitoring with alarms set."
+     },
+     "rationale": {
+      "ar": "اكتشاف فوري لاضطرابات النظم.",
+      "en": "Immediate detection of dysrhythmias."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الضغط قبل وبعد النيترات والمسكنات.",
+      "en": "Measure BP before and after nitrates and analgesics."
+     },
+     "rationale": {
+      "ar": "تجنب هبوط الضغط.",
+      "en": "Avoids hypotension."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة كمية البول والوعي ولون الجلد.",
+      "en": "Monitor urine output, consciousness and skin colour."
+     },
+     "rationale": {
+      "ar": "مؤشرات تروية الأعضاء.",
+      "en": "Indicators of perfusion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "راحة في السرير وتقليل المجهود والزيارات.",
+      "en": "Bed rest; limit exertion and visits."
+     },
+     "rationale": {
+      "ar": "يقلل احتياج القلب للأكسجين.",
+      "en": "Lowers oxygen demand."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تجهيز جهاز الصدمات وأدوية الطوارئ.",
+      "en": "Keep defibrillator and emergency drugs ready."
+     },
+     "rationale": {
+      "ar": "تدخل فوري عند توقف القلب.",
+      "en": "Immediate response to arrest."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة البوتاسيوم والماغنيسيوم وتصحيحهما حسب الأمر.",
+      "en": "Monitor and correct potassium and magnesium as ordered."
+     },
+     "rationale": {
+      "ar": "اختلالهما يزيد اضطرابات النظم.",
+      "en": "Imbalances increase dysrhythmias."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا اضطرابات خطيرة والضغط 115/70 — تحقق.",
+      "en": "No dangerous dysrhythmia; BP 115/70 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "مراقبة القلب",
+      "en": "Cardiac monitoring"
+     },
+     "actions": {
+      "ar": [
+       "مونيتور قلب مستمر وضبط الإنذارات.",
+       "قياس الضغط قبل وبعد النيترات والمسكنات.",
+       "متابعة كمية البول والوعي ولون الجلد."
+      ],
+      "en": [
+       "Continuous cardiac monitoring with alarms set.",
+       "Measure BP before and after nitrates and analgesics.",
+       "Monitor urine output, consciousness and skin colour."
+      ]
+     },
+     "outcome": {
+      "ar": "نبض 60–100 وضغط ≥ 90 وبول كافٍ.",
+      "en": "Pulse 60–100, BP ≥ 90, adequate urine."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    },
+    {
+     "need": {
+      "ar": "تقليل المجهود والاستعداد للطوارئ",
+      "en": "Reduce workload, be ready for emergencies"
+     },
+     "actions": {
+      "ar": [
+       "راحة في السرير وتقليل المجهود والزيارات.",
+       "تجهيز جهاز الصدمات وأدوية الطوارئ.",
+       "متابعة البوتاسيوم والماغنيسيوم وتصحيحهما حسب الأمر."
+      ],
+      "en": [
+       "Bed rest; limit exertion and visits.",
+       "Keep defibrillator and emergency drugs ready.",
+       "Monitor and correct potassium and magnesium as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "راحة وجهاز الصدمات جاهز وأملاح طبيعية.",
+      "en": "Rest, defibrillator ready, normal electrolytes."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-chest-pain",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق والخوف",
+    "en": "Anxiety / Fear"
+   },
+   "definition": {
+    "ar": "شعور بعدم الارتياح والخوف مصحوب باستجابة جسدية بسبب تهديد متوقع.",
+    "en": "Feeling of unease and fear with an autonomic response to a perceived threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "الخوف من الموت أو من مرض القلب",
+     "بيئة الطوارئ"
+    ],
+    "en": [
+     "Fear of death or heart disease",
+     "Emergency environment"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "سرعة النبض والتنفس"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Tachycardia and tachypnea"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هو أنا عندي جلطة؟ هموت؟\""
+     ],
+     "en": [
+      "\"Am I having a heart attack? Will I die?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "المريض متوتر وممسك بيد المرافق."
+     ],
+     "en": [
+      "Patient tense, holding his companion's hand."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 30 دقيقة: المريض أهدأ ويعبر عن مخاوفه."
+     ],
+     "en": [
+      "Within 30 minutes: calmer and voicing fears."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يفهم حالته وخطة العلاج."
+     ],
+     "en": [
+      "Before discharge: understands his condition and plan."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "البقاء مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient and speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "يقلل الخوف ومن ثم مجهود القلب.",
+      "en": "Reduces fear and cardiac workload."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شرح كل إجراء (رسم القلب، المونيتور، التحاليل) قبل عمله.",
+      "en": "Explain each procedure (ECG, monitor, labs) beforehand."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد القلق.",
+      "en": "The unknown increases anxiety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود مرافق إن أمكن.",
+      "en": "Allow a companion when possible."
+     },
+     "rationale": {
+      "ar": "الدعم يهدئ المريض.",
+      "en": "Support calms the patient."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق.",
+      "en": "Teach slow deep breathing."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الحالة ونتائج الفحوصات بكلام بسيط بعد ظهورها.",
+      "en": "Explain the condition and results simply once available."
+     },
+     "rationale": {
+      "ar": "الفهم يقلل الخوف.",
+      "en": "Understanding reduces fear."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المهدئ حسب الأمر عند الحاجة.",
+      "en": "Give an anxiolytic as ordered if needed."
+     },
+     "rationale": {
+      "ar": "يقلل القلق الشديد.",
+      "en": "Reduces severe anxiety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ والنبض 90 بعد الشرح — تحقق.",
+      "en": "Calmer, pulse 90 after explanation — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف القلق",
+      "en": "Relieve anxiety"
+     },
+     "actions": {
+      "ar": [
+       "البقاء مع المريض والتحدث بهدوء وثقة.",
+       "شرح كل إجراء (رسم القلب، المونيتور، التحاليل) قبل عمله.",
+       "السماح بوجود مرافق إن أمكن.",
+       "تعليم التنفس البطيء العميق.",
+       "إعطاء المهدئ حسب الأمر عند الحاجة."
+      ],
+      "en": [
+       "Stay with the patient and speak calmly and confidently.",
+       "Explain each procedure (ECG, monitor, labs) beforehand.",
+       "Allow a companion when possible.",
+       "Teach slow deep breathing.",
+       "Give an anxiolytic as ordered if needed."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض هادئ ويعبر عن مخاوفه.",
+      "en": "Calm and voicing fears."
+     },
+     "timeframe": {
+      "ar": "30 دقيقة",
+      "en": "30 minutes"
+     }
+    },
+    {
+     "need": {
+      "ar": "فهم الحالة",
+      "en": "Understanding the condition"
+     },
+     "actions": {
+      "ar": [
+       "شرح الحالة ونتائج الفحوصات بكلام بسيط بعد ظهورها."
+      ],
+      "en": [
+       "Explain the condition and results simply once available."
+      ]
+     },
+     "outcome": {
+      "ar": "يشرح حالته وخطة العلاج.",
+      "en": "Explains condition and plan."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "ESC Guidelines for the management of acute coronary syndromes 2023"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "symptoms"
+}
