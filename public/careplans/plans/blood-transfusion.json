@@ -1,0 +1,488 @@
+{
+ "id": "blood-transfusion",
+ "icon": "🩸",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "نقل الدم",
+  "en": "Blood Transfusion"
+ },
+ "summary": {
+  "ar": "خطة رعاية للمريض أثناء نقل الدم: التحقق المزدوج، مراقبة العلامات الحيوية، التصرف عند التفاعل، والوقاية من زيادة السوائل.",
+  "en": "Care plan for blood transfusion: double check, vital-sign monitoring, reaction management and overload prevention."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-transfusion-reaction",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر حدوث مضاعفات نقل الدم",
+    "en": "Risk for Transfusion Reaction"
+   },
+   "definition": {
+    "ar": "قابلية لحدوث تفاعل مناعي أو تحسسي أو زيادة سوائل أو عدوى بسبب نقل الدم أو مشتقاته.",
+    "en": "Susceptible to immune, allergic, circulatory-overload or infectious complications of blood transfusion."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "عدم توافق الفصيلة (خطأ في التعرف على المريض أو الكيس)",
+     "حساسية لمكونات الدم",
+     "سرعة النقل الزائدة",
+     "أمراض القلب أو كبر السن"
+    ],
+    "en": [
+     "ABO incompatibility (patient or unit misidentification)",
+     "Allergy to blood components",
+     "Rapid transfusion",
+     "Cardiac disease or older age"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أول مرة آخد دم وخايف.\""
+     ],
+     "en": [
+      "\"It's my first transfusion and I'm scared.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الهيموجلوبين 6.8 جم/دل، أمر بنقل وحدة كرات حمراء.",
+      "العلامات الحيوية قبل النقل: حرارة 36.9، نبض 98، ضغط 115/70."
+     ],
+     "en": [
+      "Hemoglobin 6.8 g/dL; one unit of red cells ordered.",
+      "Pre-transfusion: temperature 36.9, pulse 98, BP 115/70."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء النقل: لا علامات تفاعل، ويتوقف النقل فورًا عند أي تغير."
+     ],
+     "en": [
+      "During transfusion: no reaction signs; stopped immediately on any change."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد النقل: ارتفاع الهيموجلوبين دون مضاعفات."
+     ],
+     "en": [
+      "After transfusion: hemoglobin rises without complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "مراجعة كيس الدم مع ممرض آخر: سلامة الكيس، تاريخ الصلاحية، نتيجة الفيروسات، الفصيلة، واسم ورقم المريض بجانب السرير.",
+      "en": "Double-check the unit with a second nurse: bag integrity, expiry, viral screen, blood group, and patient name/ID at the bedside."
+     },
+     "rationale": {
+      "ar": "التحقق المزدوج يمنع أخطر مضاعفات النقل (عدم التوافق).",
+      "en": "Double-checking prevents ABO-incompatible transfusion."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة العلامات الحيوية قبل إعطاء الدم، وبعد أول ربع ساعة، ثم كل نصف ساعة، وفي النهاية.",
+      "en": "Record vitals before, after the first 15 minutes, every 30 minutes, and at the end."
+     },
+     "rationale": {
+      "ar": "معظم التفاعلات الخطيرة تبدأ في أول 15 دقيقة.",
+      "en": "Most severe reactions start in the first 15 minutes."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "البدء ببطء في أول 15 دقيقة والبقاء بجانب المريض.",
+      "en": "Start slowly for the first 15 minutes and stay with the patient."
+     },
+     "rationale": {
+      "ar": "يقلل كمية الدم لو حدث تفاعل.",
+      "en": "Limits exposure if a reaction occurs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام جهاز نقل دم بفلتر وكانيولا مناسبة وعدم إضافة أدوية للكيس، وإنهاء الوحدة خلال 4 ساعات.",
+      "en": "Use a filtered blood set and suitable cannula, add no drugs to the bag, and finish within 4 hours."
+     },
+     "rationale": {
+      "ar": "يمنع التلوث والتجلط وانحلال الدم.",
+      "en": "Prevents contamination, clotting and hemolysis."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة حدوث حساسية: رعشة، احمرار، حكة، ضيق تنفس، ألم بالجسم أو الظهر، حرارة.",
+      "en": "Watch for reactions: chills, flushing, itching, dyspnea, body/back pain, fever."
+     },
+     "rationale": {
+      "ar": "التعرف المبكر.",
+      "en": "Early recognition."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إيقاف الدم فورًا عند حدوث أي تغيرات، والإبقاء على الوريد مفتوحًا بمحلول ملح بجهاز جديد.",
+      "en": "Stop the transfusion immediately on any change; keep the vein open with saline via a new set."
+     },
+     "rationale": {
+      "ar": "إيقاف التعرض والحفاظ على وصول وريدي للعلاج.",
+      "en": "Stops exposure; keeps IV access for treatment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "سرعة إبلاغ الطبيب وبنك الدم، وإرسال الكيس وعينات الدم والبول حسب السياسة.",
+      "en": "Notify the physician and blood bank promptly; return the unit and send samples per policy."
+     },
+     "rationale": {
+      "ar": "التحقيق في سبب التفاعل.",
+      "en": "Investigates the reaction."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التسجيل في الملف الطبي: رقم الوحدة، الوقت، العلامات الحيوية، وأي تفاعل.",
+      "en": "Document unit number, times, vitals and any reaction."
+     },
+     "rationale": {
+      "ar": "تتبع وسلامة.",
+      "en": "Traceability and safety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض الإبلاغ فورًا عن أي رعشة أو حكة أو ضيق.",
+      "en": "Teach the patient to report chills, itching or breathlessness at once."
+     },
+     "rationale": {
+      "ar": "المريض أول من يحس بالتفاعل.",
+      "en": "The patient often notices first."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تم النقل خلال 3 ساعات بدون تفاعل والعلامات مستقرة — تحقق.",
+      "en": "Transfused over 3 hours without reaction; stable vitals — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "الهيموجلوبين 7.9 بعد النقل — تحقق.",
+      "en": "Post-transfusion hemoglobin 7.9 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التحقق قبل النقل",
+      "en": "Pre-transfusion check"
+     },
+     "actions": {
+      "ar": [
+       "مراجعة كيس الدم مع ممرض آخر: سلامة الكيس، تاريخ الصلاحية، نتيجة الفيروسات، الفصيلة، واسم ورقم المريض بجانب السرير."
+      ],
+      "en": [
+       "Double-check the unit with a second nurse: bag integrity, expiry, viral screen, blood group, and patient name/ID at the bedside."
+      ]
+     },
+     "outcome": {
+      "ar": "تحقق مزدوج مسجل والكيس سليم ومطابق.",
+      "en": "Documented double check; intact matching unit."
+     },
+     "timeframe": {
+      "ar": "قبل التركيب",
+      "en": "Before starting"
+     }
+    },
+    {
+     "need": {
+      "ar": "مراقبة أثناء النقل",
+      "en": "Monitoring during transfusion"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة العلامات الحيوية قبل إعطاء الدم، وبعد أول ربع ساعة، ثم كل نصف ساعة، وفي النهاية.",
+       "البدء ببطء في أول 15 دقيقة والبقاء بجانب المريض.",
+       "استخدام جهاز نقل دم بفلتر وكانيولا مناسبة وعدم إضافة أدوية للكيس، وإنهاء الوحدة خلال 4 ساعات.",
+       "ملاحظة حدوث حساسية: رعشة، احمرار، حكة، ضيق تنفس، ألم بالجسم أو الظهر، حرارة."
+      ],
+      "en": [
+       "Record vitals before, after the first 15 minutes, every 30 minutes, and at the end.",
+       "Start slowly for the first 15 minutes and stay with the patient.",
+       "Use a filtered blood set and suitable cannula, add no drugs to the bag, and finish within 4 hours.",
+       "Watch for reactions: chills, flushing, itching, dyspnea, body/back pain, fever."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مستقرة ولا تفاعل.",
+      "en": "Stable vitals; no reaction."
+     },
+     "timeframe": {
+      "ar": "أول 15 دقيقة ثم كل 30 دقيقة",
+      "en": "First 15 min, then every 30 min"
+     }
+    },
+    {
+     "need": {
+      "ar": "التصرف عند التفاعل",
+      "en": "Reaction management"
+     },
+     "actions": {
+      "ar": [
+       "إيقاف الدم فورًا عند حدوث أي تغيرات، والإبقاء على الوريد مفتوحًا بمحلول ملح بجهاز جديد.",
+       "سرعة إبلاغ الطبيب وبنك الدم، وإرسال الكيس وعينات الدم والبول حسب السياسة."
+      ],
+      "en": [
+       "Stop the transfusion immediately on any change; keep the vein open with saline via a new set.",
+       "Notify the physician and blood bank promptly; return the unit and send samples per policy."
+      ]
+     },
+     "outcome": {
+      "ar": "إيقاف فوري وإبلاغ الطبيب وبنك الدم.",
+      "en": "Immediate stop; physician and blood bank informed."
+     },
+     "timeframe": {
+      "ar": "فورًا",
+      "en": "Immediately"
+     }
+    },
+    {
+     "need": {
+      "ar": "التسجيل والتثقيف",
+      "en": "Documentation and teaching"
+     },
+     "actions": {
+      "ar": [
+       "التسجيل في الملف الطبي: رقم الوحدة، الوقت، العلامات الحيوية، وأي تفاعل.",
+       "تعليم المريض الإبلاغ فورًا عن أي رعشة أو حكة أو ضيق."
+      ],
+      "en": [
+       "Document unit number, times, vitals and any reaction.",
+       "Teach the patient to report chills, itching or breathlessness at once."
+      ]
+     },
+     "outcome": {
+      "ar": "ملف كامل والمريض يعرف ما يبلغ عنه.",
+      "en": "Complete record; patient knows what to report."
+     },
+     "timeframe": {
+      "ar": "أثناء وبعد النقل",
+      "en": "During and after"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-fluid-overload-transfusion",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر زيادة حجم السوائل (TACO)",
+    "en": "Risk for Fluid Overload (TACO)"
+   },
+   "definition": {
+    "ar": "قابلية لزيادة السوائل في الدورة الدموية بسبب نقل الدم.",
+    "en": "Susceptible to circulatory overload associated with transfusion."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "نقل أكثر من وحدة أو بسرعة",
+     "هبوط القلب أو الفشل الكلوي",
+     "كبر السن"
+    ],
+    "en": [
+     "Multiple or rapid units",
+     "Heart or renal failure",
+     "Older age"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بتعب بسرعة ونفسي بيتقطع مع المجهود.\""
+     ],
+     "en": [
+      "\"I tire quickly and get breathless on exertion.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "سن 76، هبوط قلب، أمر بنقل وحدتين."
+     ],
+     "en": [
+      "Age 76, heart failure, two units ordered."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء النقل: لا ضيق نفس أو خرخرة جديدة، والتشبع ≥ 94%."
+     ],
+     "en": [
+      "During transfusion: no new dyspnea or crackles; SpO₂ ≥ 94%."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد النقل: توازن سوائل مناسب."
+     ],
+     "en": [
+      "After transfusion: appropriate fluid balance."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "سماع الرئة وقياس التشبع قبل وأثناء النقل.",
+      "en": "Auscultate lungs and check SpO₂ before and during."
+     },
+     "rationale": {
+      "ar": "يكشف زيادة السوائل مبكرًا.",
+      "en": "Detects overload early."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "نقل الدم بمعدل أبطأ حسب الأمر لكبار السن ومرضى القلب.",
+      "en": "Transfuse more slowly as ordered in elderly/cardiac patients."
+     },
+     "rationale": {
+      "ar": "يقلل الحمل على القلب.",
+      "en": "Reduces cardiac load."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء مدر البول بين الوحدات حسب الأمر.",
+      "en": "Give a diuretic between units as ordered."
+     },
+     "rationale": {
+      "ar": "يمنع تراكم السوائل.",
+      "en": "Prevents accumulation."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل الداخل والخارج.",
+      "en": "Record intake and output."
+     },
+     "rationale": {
+      "ar": "يتابع التوازن.",
+      "en": "Tracks balance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع رأس السرير أثناء النقل.",
+      "en": "Raise the head of the bed during transfusion."
+     },
+     "rationale": {
+      "ar": "يسهل التنفس.",
+      "en": "Eases breathing."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إيقاف النقل وإبلاغ الطبيب عند ضيق النفس أو هبوط التشبع.",
+      "en": "Stop and report dyspnea or desaturation."
+     },
+     "rationale": {
+      "ar": "TACO قد يكون خطيرًا.",
+      "en": "TACO can be dangerous."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا ضيق نفس والتشبع 96% طوال النقل — تحقق.",
+      "en": "No dyspnea; SpO₂ 96% throughout — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "منع زيادة السوائل",
+      "en": "Prevent overload"
+     },
+     "actions": {
+      "ar": [
+       "سماع الرئة وقياس التشبع قبل وأثناء النقل.",
+       "نقل الدم بمعدل أبطأ حسب الأمر لكبار السن ومرضى القلب.",
+       "إعطاء مدر البول بين الوحدات حسب الأمر.",
+       "تسجيل الداخل والخارج.",
+       "رفع رأس السرير أثناء النقل.",
+       "إيقاف النقل وإبلاغ الطبيب عند ضيق النفس أو هبوط التشبع."
+      ],
+      "en": [
+       "Auscultate lungs and check SpO₂ before and during.",
+       "Transfuse more slowly as ordered in elderly/cardiac patients.",
+       "Give a diuretic between units as ordered.",
+       "Record intake and output.",
+       "Raise the head of the bed during transfusion.",
+       "Stop and report dyspnea or desaturation."
+      ]
+     },
+     "outcome": {
+      "ar": "لا ضيق نفس أو خرخرة جديدة.",
+      "en": "No new dyspnea or crackles."
+     },
+     "timeframe": {
+      "ar": "أثناء النقل",
+      "en": "During transfusion"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "BSH Guideline on the administration of blood components (2017, updated)"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "devices"
+}

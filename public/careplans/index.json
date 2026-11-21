@@ -800,6 +800,37 @@
    "group": "symptoms"
   },
   {
+   "id": "blood-transfusion",
+   "icon": "🩸",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "نقل الدم",
+    "en": "Blood Transfusion"
+   },
+   "summary": {
+    "ar": "خطة رعاية للمريض أثناء نقل الدم: التحقق المزدوج، مراقبة العلامات الحيوية، التصرف عند التفاعل، والوقاية من زيادة السوائل.",
+    "en": "Care plan for blood transfusion: double check, vital-sign monitoring, reaction management and overload prevention."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-transfusion-reaction",
+     "title": {
+      "ar": "خطر حدوث مضاعفات نقل الدم",
+      "en": "Risk for Transfusion Reaction"
+     }
+    },
+    {
+     "id": "risk-fluid-overload-transfusion",
+     "title": {
+      "ar": "خطر زيادة حجم السوائل (TACO)",
+      "en": "Risk for Fluid Overload (TACO)"
+     }
+    }
+   ],
+   "group": "devices"
+  },
+  {
    "id": "chest-pain",
    "icon": "💢",
    "system": "general",
@@ -1152,6 +1183,68 @@
    "group": "metabolic"
   },
   {
+   "id": "urinary-catheter",
+   "icon": "🧪",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "المريض بقسطرة بولية",
+    "en": "Indwelling Urinary Catheter"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض بقسطرة بولية: الوقاية من عدوى المسالك (CAUTI)، الحفاظ على النظام المغلق، ومتابعة التصريف.",
+    "en": "Care plan for an indwelling urinary catheter: CAUTI prevention, closed system, and drainage monitoring."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-infection-cauti",
+     "title": {
+      "ar": "خطر عدوى المسالك البولية المرتبطة بالقسطرة",
+      "en": "Risk for Infection (Catheter-Associated UTI)"
+     }
+    },
+    {
+     "id": "impaired-urinary-elimination-catheter",
+     "title": {
+      "ar": "اضطراب الإخراج البولي",
+      "en": "Impaired Urinary Elimination"
+     }
+    }
+   ],
+   "group": "devices"
+  },
+  {
+   "id": "oxygen-therapy",
+   "icon": "🫧",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "العلاج بالأكسجين وتسمم الأكسجين",
+    "en": "Oxygen Therapy & Oxygen Toxicity"
+   },
+   "summary": {
+    "ar": "خطة رعاية للمريض على الأكسجين: إعطاء آمن بأقل تركيز فعال، متابعة التشبع، والوقاية من تسمم الأكسجين.",
+    "en": "Care plan for oxygen therapy: safe lowest-effective dosing, saturation monitoring and toxicity prevention."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-oxygen-toxicity",
+     "title": {
+      "ar": "خطر تسمم الأكسجين",
+      "en": "Risk for Oxygen Toxicity"
+     }
+    },
+    {
+     "id": "impaired-gas-exchange-oxygen",
+     "title": {
+      "ar": "ضعف تبادل الغازات",
+      "en": "Impaired Gas Exchange"
+     }
+    }
+   ],
+   "group": "devices"
+  },
+  {
    "id": "pain",
    "icon": "🤕",
    "system": "general",
@@ -1264,6 +1357,37 @@
     }
    ],
    "group": "metabolic"
+  },
+  {
+   "id": "suctioning-artificial-airway",
+   "icon": "🫁",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "الشفط والأنبوبة الحنجرية / الشق الحنجري",
+    "en": "Suctioning & Artificial Airway"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض بأنبوبة حنجرية أو شق حنجري: الشفط الآمن، العناية بالأنبوبة، والتواصل.",
+    "en": "Care plan for a patient with an endotracheal or tracheostomy tube: safe suctioning, tube care and communication."
+   },
+   "diagnoses": [
+    {
+     "id": "ineffective-airway-clearance-artificial",
+     "title": {
+      "ar": "عدم فعالية تنظيف مجرى الهواء (أنبوبة حنجرية / شق حنجري)",
+      "en": "Ineffective Airway Clearance (Artificial Airway)"
+     }
+    },
+    {
+     "id": "impaired-verbal-communication",
+     "title": {
+      "ar": "ضعف التواصل اللفظي",
+      "en": "Impaired Verbal Communication"
+     }
+    }
+   ],
+   "group": "devices"
   }
  ]
 }

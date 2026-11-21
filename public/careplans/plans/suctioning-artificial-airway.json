@@ -1,0 +1,486 @@
+{
+ "id": "suctioning-artificial-airway",
+ "icon": "🫁",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "الشفط والأنبوبة الحنجرية / الشق الحنجري",
+  "en": "Suctioning & Artificial Airway"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض بأنبوبة حنجرية أو شق حنجري: الشفط الآمن، العناية بالأنبوبة، والتواصل.",
+  "en": "Care plan for a patient with an endotracheal or tracheostomy tube: safe suctioning, tube care and communication."
+ },
+ "diagnoses": [
+  {
+   "id": "ineffective-airway-clearance-artificial",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية تنظيف مجرى الهواء (أنبوبة حنجرية / شق حنجري)",
+    "en": "Ineffective Airway Clearance (Artificial Airway)"
+   },
+   "definition": {
+    "ar": "عدم القدرة على إزالة الإفرازات من مجرى الهواء بسبب وجود أنبوبة حنجرية أو شق حنجري.",
+    "en": "Inability to clear secretions due to an endotracheal or tracheostomy tube."
+   },
+   "relatedTo": {
+    "ar": [
+     "وجود أنبوبة حنجرية أو شق حنجري",
+     "ضعف أو غياب الكحة",
+     "زيادة الإفرازات وسماكتها"
+    ],
+    "en": [
+     "Endotracheal or tracheostomy tube",
+     "Weak or absent cough",
+     "Excess, thick secretions"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "خرخرة أو أصوات إفرازات مسموعة",
+     "هبوط التشبع",
+     "ارتفاع ضغط الجهاز أو صعوبة التنفس",
+     "تململ"
+    ],
+    "en": [
+     "Audible secretions or coarse crackles",
+     "Falling SpO₂",
+     "High ventilator pressure or respiratory distress",
+     "Restlessness"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "المريض لا يستطيع الكلام بسبب الأنبوبة؛ يشير لصدره."
+     ],
+     "en": [
+      "Patient cannot speak due to the tube; points to his chest."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "إفرازات مسموعة في الأنبوبة، التشبع 91%.",
+      "خرخرة خشنة على الجانبين.",
+      "التنفس 26/دقيقة."
+     ],
+     "en": [
+      "Audible secretions in the tube; SpO₂ 91%.",
+      "Bilateral coarse crackles.",
+      "RR 26/min."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "بعد الشفط مباشرة: صوت صدر أوضح، والتشبع ≥ 94%، والتنفس ≤ 22/دقيقة."
+     ],
+     "en": [
+      "Right after suctioning: clearer breath sounds, SpO₂ ≥ 94%, RR ≤ 22/min."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال الإقامة: مجرى هواء مفتوح بدون انسداد للأنبوبة."
+     ],
+     "en": [
+      "Throughout the stay: patent airway without tube occlusion."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة دخول وخروج الهواء (سماع الصدر بالسماعة)، ومعدل التنفس، ولون المريض.",
+      "en": "Assess air entry (auscultation), respiratory rate and colour."
+     },
+     "rationale": {
+      "ar": "يحدد الحاجة للشفط ويقيس فعاليته.",
+      "en": "Indicates the need for suction and its effect."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة لون وكمية ورائحة الإفرازات.",
+      "en": "Monitor secretion colour, amount and odour."
+     },
+     "rationale": {
+      "ar": "يكشف العدوى.",
+      "en": "Detects infection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل الأيدي قبل وبعد الشفط ولبس القفازات المعقمة.",
+      "en": "Hand hygiene before and after suctioning; sterile gloves."
+     },
+     "rationale": {
+      "ar": "يمنع إدخال العدوى للرئة.",
+      "en": "Prevents introducing infection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تحضير الأدوات اللازمة لإجراء الشفط (قسطرة معقمة بحجم مناسب، جهاز شفط بضغط مناسب، أكسجين).",
+      "en": "Prepare equipment (sterile catheter of correct size, suction at proper pressure, oxygen)."
+     },
+     "rationale": {
+      "ar": "التحضير الجيد يقلل مدة الإجراء ومضاعفاته.",
+      "en": "Good preparation shortens the procedure and limits complications."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شرح الخطوات للمريض إذا كان واعيًا.",
+      "en": "Explain the steps to the patient if conscious."
+     },
+     "rationale": {
+      "ar": "يقلل القلق ويحسن التعاون.",
+      "en": "Reduces anxiety and improves cooperation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إعطاء أكسجين قبل وبعد الشفط، واستخدام جهاز التشفيط لشفط الإفرازات لمدة لا تزيد عن 10–15 ثانية في المرة.",
+      "en": "Pre- and post-oxygenate; suction for no more than 10–15 seconds per pass."
+     },
+     "rationale": {
+      "ar": "يمنع نقص الأكسجين وإصابة الأغشية.",
+      "en": "Prevents hypoxemia and mucosal injury."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التشفيط من الفم في حالة وجود إفرازات به (بقسطرة منفصلة بعد الأنبوبة).",
+      "en": "Suction the mouth if secretions are present (separate catheter, after the tube)."
+     },
+     "rationale": {
+      "ar": "يقلل الإفرازات المتجمعة التي قد تنزل للرئة.",
+      "en": "Reduces pooled secretions that may be aspirated."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تسجيل كمية الإفرازات التي تم شفطها ولونها ومحتوياتها.",
+      "en": "Record the amount, colour and nature of suctioned secretions."
+     },
+     "rationale": {
+      "ar": "متابعة التطور.",
+      "en": "Tracks progress."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم والأنف ووضع مرطبات حسب أوامر الطبيب، والعناية بالشق الحنجري وتغيير الغيار.",
+      "en": "Mouth and nose care with moisturizers as ordered; tracheostomy care and dressing changes."
+     },
+     "rationale": {
+      "ar": "يمنع العدوى وجفاف الأغشية.",
+      "en": "Prevents infection and mucosal dryness."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "ترطيب الهواء وجلسات البخار حسب الأمر، والتأكد من تثبيت الأنبوبة.",
+      "en": "Humidification and nebulization as ordered; ensure the tube is secured."
+     },
+     "rationale": {
+      "ar": "يمنع سماكة الإفرازات وخروج الأنبوبة.",
+      "en": "Prevents thick secretions and dislodgement."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "بعد الشفط: صدر أوضح، التشبع 96%، التنفس 20 — تحقق.",
+      "en": "After suction: clearer chest, SpO₂ 96%, RR 20 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الحاجة للشفط",
+      "en": "Assess need for suctioning"
+     },
+     "actions": {
+      "ar": [
+       "متابعة دخول وخروج الهواء (سماع الصدر بالسماعة)، ومعدل التنفس، ولون المريض.",
+       "متابعة لون وكمية ورائحة الإفرازات."
+      ],
+      "en": [
+       "Assess air entry (auscultation), respiratory rate and colour.",
+       "Monitor secretion colour, amount and odour."
+      ]
+     },
+     "outcome": {
+      "ar": "دخول الهواء ولون المريض والإفرازات مقيمة.",
+      "en": "Air entry, colour and secretions assessed."
+     },
+     "timeframe": {
+      "ar": "كل ساعة وعند الحاجة",
+      "en": "Hourly and as needed"
+     }
+    },
+    {
+     "need": {
+      "ar": "الشفط الآمن",
+      "en": "Safe suctioning"
+     },
+     "actions": {
+      "ar": [
+       "غسل الأيدي قبل وبعد الشفط ولبس القفازات المعقمة.",
+       "تحضير الأدوات اللازمة لإجراء الشفط (قسطرة معقمة بحجم مناسب، جهاز شفط بضغط مناسب، أكسجين).",
+       "شرح الخطوات للمريض إذا كان واعيًا.",
+       "إعطاء أكسجين قبل وبعد الشفط، واستخدام جهاز التشفيط لشفط الإفرازات لمدة لا تزيد عن 10–15 ثانية في المرة.",
+       "التشفيط من الفم في حالة وجود إفرازات به (بقسطرة منفصلة بعد الأنبوبة).",
+       "تسجيل كمية الإفرازات التي تم شفطها ولونها ومحتوياتها."
+      ],
+      "en": [
+       "Hand hygiene before and after suctioning; sterile gloves.",
+       "Prepare equipment (sterile catheter of correct size, suction at proper pressure, oxygen).",
+       "Explain the steps to the patient if conscious.",
+       "Pre- and post-oxygenate; suction for no more than 10–15 seconds per pass.",
+       "Suction the mouth if secretions are present (separate catheter, after the tube).",
+       "Record the amount, colour and nature of suctioned secretions."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع ≥ 94% بعد الشفط وإفرازات مسجلة.",
+      "en": "SpO₂ ≥ 94% after suction; secretions recorded."
+     },
+     "timeframe": {
+      "ar": "عند الحاجة",
+      "en": "As needed"
+     }
+    },
+    {
+     "need": {
+      "ar": "العناية بالأنبوبة والفم",
+      "en": "Tube and mouth care"
+     },
+     "actions": {
+      "ar": [
+       "العناية بالفم والأنف ووضع مرطبات حسب أوامر الطبيب، والعناية بالشق الحنجري وتغيير الغيار.",
+       "ترطيب الهواء وجلسات البخار حسب الأمر، والتأكد من تثبيت الأنبوبة."
+      ],
+      "en": [
+       "Mouth and nose care with moisturizers as ordered; tracheostomy care and dressing changes.",
+       "Humidification and nebulization as ordered; ensure the tube is secured."
+      ]
+     },
+     "outcome": {
+      "ar": "أنبوبة مثبتة ونظيفة وفم رطب.",
+      "en": "Secure, clean tube and moist mouth."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-verbal-communication",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف التواصل اللفظي",
+    "en": "Impaired Verbal Communication"
+   },
+   "definition": {
+    "ar": "نقص أو تأخر أو غياب القدرة على استقبال أو استخدام اللغة المنطوقة.",
+    "en": "Decreased, delayed or absent ability to use spoken language."
+   },
+   "relatedTo": {
+    "ar": [
+     "الأنبوبة الحنجرية أو الشق الحنجري"
+    ],
+    "en": [
+     "Endotracheal tube or tracheostomy"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "عدم القدرة على الكلام",
+     "إحباط عند محاولة التواصل"
+    ],
+    "en": [
+     "Inability to speak",
+     "Frustration when trying to communicate"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "المريض يحاول الكلام ويشير بإحباط."
+     ],
+     "en": [
+      "Patient tries to talk and gestures in frustration."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "واعٍ ويستجيب بهز الرأس."
+     ],
+     "en": [
+      "Alert; responds by nodding."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن احتياجاته بطريقة بديلة."
+     ],
+     "en": [
+      "Within the shift: expresses needs by an alternative method."
+     ]
+    },
+    "long": {
+     "ar": [
+      "أثناء وجود الأنبوبة: لا إحباط في التواصل."
+     ],
+     "en": [
+      "While intubated: communication without frustration."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام أسئلة إجابتها نعم/لا وإشارات متفق عليها.",
+      "en": "Use yes/no questions and agreed signals."
+     },
+     "rationale": {
+      "ar": "تواصل سريع.",
+      "en": "Quick communication."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "توفير لوحة كتابة أو صور للاحتياجات (ألم، عطش، حمام).",
+      "en": "Provide a writing board or picture chart (pain, thirst, toilet)."
+     },
+     "rationale": {
+      "ar": "وسيلة بديلة للتعبير.",
+      "en": "Alternative expression."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع جرس الاستدعاء في يد المريض.",
+      "en": "Place the call bell in the patient's hand."
+     },
+     "rationale": {
+      "ar": "يطلب المساعدة.",
+      "en": "Can summon help."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التحدث مع المريض وشرح الإجراءات حتى لو لم يستطع الرد.",
+      "en": "Talk to the patient and explain procedures even if he cannot reply."
+     },
+     "rationale": {
+      "ar": "يقلل القلق والعزلة.",
+      "en": "Reduces anxiety and isolation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إشراك الأسرة في فهم إشارات المريض.",
+      "en": "Involve family in understanding his signals."
+     },
+     "rationale": {
+      "ar": "دعم وتواصل أفضل.",
+      "en": "Support and better communication."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التنسيق مع الفريق لاستخدام صمام الكلام (Speaking valve) عند مناسبة الحالة في الشق الحنجري.",
+      "en": "Coordinate use of a speaking valve when appropriate for tracheostomy."
+     },
+     "rationale": {
+      "ar": "يسمح بالكلام.",
+      "en": "Allows speech."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض يستخدم اللوحة والإشارات بدون إحباط — تحقق.",
+      "en": "Uses the board and signals without frustration — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تواصل بديل",
+      "en": "Alternative communication"
+     },
+     "actions": {
+      "ar": [
+       "استخدام أسئلة إجابتها نعم/لا وإشارات متفق عليها.",
+       "توفير لوحة كتابة أو صور للاحتياجات (ألم، عطش، حمام).",
+       "وضع جرس الاستدعاء في يد المريض.",
+       "التحدث مع المريض وشرح الإجراءات حتى لو لم يستطع الرد.",
+       "إشراك الأسرة في فهم إشارات المريض.",
+       "التنسيق مع الفريق لاستخدام صمام الكلام (Speaking valve) عند مناسبة الحالة في الشق الحنجري."
+      ],
+      "en": [
+       "Use yes/no questions and agreed signals.",
+       "Provide a writing board or picture chart (pain, thirst, toilet).",
+       "Place the call bell in the patient's hand.",
+       "Talk to the patient and explain procedures even if he cannot reply.",
+       "Involve family in understanding his signals.",
+       "Coordinate use of a speaking valve when appropriate for tracheostomy."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يعبر عن احتياجاته.",
+      "en": "Patient expresses needs."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "AARC Clinical Practice Guideline: Endotracheal Suctioning of Mechanically Ventilated Patients"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "devices"
+}

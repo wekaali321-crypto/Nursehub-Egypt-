@@ -1,0 +1,500 @@
+{
+ "id": "urinary-catheter",
+ "icon": "🧪",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "المريض بقسطرة بولية",
+  "en": "Indwelling Urinary Catheter"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض بقسطرة بولية: الوقاية من عدوى المسالك (CAUTI)، الحفاظ على النظام المغلق، ومتابعة التصريف.",
+  "en": "Care plan for an indwelling urinary catheter: CAUTI prevention, closed system, and drainage monitoring."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-infection-cauti",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدوى المسالك البولية المرتبطة بالقسطرة",
+    "en": "Risk for Infection (Catheter-Associated UTI)"
+   },
+   "definition": {
+    "ar": "قابلية لدخول الميكروبات للمثانة عن طريق القسطرة البولية.",
+    "en": "Susceptible to bladder infection introduced via the urinary catheter."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "وجود قسطرة بولية دائمة",
+     "فك وصلة القسطرة أو ملامسة الكيس للأرض",
+     "بقاء القسطرة مدة طويلة",
+     "السكري وضعف المناعة"
+    ],
+    "en": [
+     "Indwelling urinary catheter",
+     "Breaking the closed system or bag touching the floor",
+     "Prolonged catheterization",
+     "Diabetes and impaired immunity"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس بحرقان مكان القسطرة.\""
+     ],
+     "en": [
+      "\"I feel burning around the catheter.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قسطرة فولي منذ 4 أيام.",
+      "البول صافٍ أصفر فاتح، الحرارة 37.1°."
+     ],
+     "en": [
+      "Foley catheter for 4 days.",
+      "Clear pale urine; temperature 37.1 °C."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "طوال وجود القسطرة: بول صافٍ بدون رائحة كريهة، وحرارة طبيعية، ولا إفرازات حول مكان القسطرة."
+     ],
+     "en": [
+      "While catheterized: clear urine without foul odour, normal temperature, no discharge at the meatus."
+     ]
+    },
+    "long": {
+     "ar": [
+      "إزالة القسطرة في أقرب وقت دون حدوث عدوى."
+     ],
+     "en": [
+      "Catheter removed as early as possible without infection."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة لون البول وكميته ورائحته، وأعراض العدوى: تعكر البول، بول دموي، حرارة، قشعريرة، فقدان شهية، تعب.",
+      "en": "Observe urine colour, amount and odour, and infection signs: cloudy or bloody urine, fever, chills, anorexia, fatigue."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر للعدوى.",
+      "en": "Early detection of infection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة المنطقة حول فتحة البول لظهور إفرازات تقيحية أو التهابات.",
+      "en": "Inspect the meatus for purulent discharge or inflammation."
+     },
+     "rationale": {
+      "ar": "علامة موضعية للعدوى.",
+      "en": "Local sign of infection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العمل على الحد من انتشار العدوى: غسل اليدين قبل وبعد التعامل مع القسطرة.",
+      "en": "Limit infection spread: hand hygiene before and after handling the catheter."
+     },
+     "rationale": {
+      "ar": "الأيدي أشهر ناقل للعدوى.",
+      "en": "Hands are the main route."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عدم فك أو حل القسطرة من أنبوبة كيس البول (نظام مغلق).",
+      "en": "Never disconnect the catheter from the drainage tubing (closed system)."
+     },
+     "rationale": {
+      "ar": "الفك يسمح بدخول الميكروبات.",
+      "en": "Disconnection lets organisms in."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التأكد من عدم ملامسة كيس البول للأرض، وبقائه أسفل مستوى المثانة.",
+      "en": "Keep the bag off the floor and below bladder level."
+     },
+     "rationale": {
+      "ar": "يمنع رجوع البول والتلوث.",
+      "en": "Prevents reflux and contamination."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية اليومية بالقسطرة والمنطقة التناسلية بالماء والصابون.",
+      "en": "Daily catheter and perineal care with soap and water."
+     },
+     "rationale": {
+      "ar": "تقلل الميكروبات حول القسطرة.",
+      "en": "Reduces organisms around the catheter."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تسجيل السوائل الداخلة والخارجة بدقة وتشجيع الشرب ما لم يُمنع.",
+      "en": "Record I&O accurately and encourage fluids unless restricted."
+     },
+     "rationale": {
+      "ar": "تدفق البول يغسل المثانة.",
+      "en": "Urine flow flushes the bladder."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير كيس البول بعناية فائقة عند تراكم الرواسب، وتفريغه بانتظام دون لمس فتحة التفريغ.",
+      "en": "Change the bag carefully when sediment builds up; empty regularly without touching the outlet."
+     },
+     "rationale": {
+      "ar": "يمنع دخول الجراثيم للمثانة.",
+      "en": "Prevents organisms entering the bladder."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مزرعة البول حسب تعليمات الطبيب عند الاشتباه في عدوى.",
+      "en": "Urine culture as ordered when infection is suspected."
+     },
+     "rationale": {
+      "ar": "يحدد الميكروب والعلاج.",
+      "en": "Identifies organism and treatment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مراجعة الحاجة للقسطرة يوميًا مع الطبيب؛ ويجب ألا تُترك أكثر من المدة الضرورية (عادة لا تتجاوز أسبوعًا دون مراجعة).",
+      "en": "Review catheter need daily with the physician; do not leave it longer than necessary (usually reviewed within a week)."
+     },
+     "rationale": {
+      "ar": "كل يوم إضافي يزيد خطر العدوى.",
+      "en": "Each extra day raises infection risk."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "البول صافٍ والحرارة طبيعية وأزيلت القسطرة يوم 5 — تحقق.",
+      "en": "Clear urine, normal temperature, catheter removed on day 5 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة علامات العدوى",
+      "en": "Monitor for infection"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة لون البول وكميته ورائحته، وأعراض العدوى: تعكر البول، بول دموي، حرارة، قشعريرة، فقدان شهية، تعب.",
+       "ملاحظة المنطقة حول فتحة البول لظهور إفرازات تقيحية أو التهابات.",
+       "مزرعة البول حسب تعليمات الطبيب عند الاشتباه في عدوى."
+      ],
+      "en": [
+       "Observe urine colour, amount and odour, and infection signs: cloudy or bloody urine, fever, chills, anorexia, fatigue.",
+       "Inspect the meatus for purulent discharge or inflammation.",
+       "Urine culture as ordered when infection is suspected."
+      ]
+     },
+     "outcome": {
+      "ar": "بول صافٍ وحرارة طبيعية ولا إفرازات.",
+      "en": "Clear urine, normal temperature, no discharge."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "الحفاظ على النظام المغلق والنظافة",
+      "en": "Closed system and hygiene"
+     },
+     "actions": {
+      "ar": [
+       "العمل على الحد من انتشار العدوى: غسل اليدين قبل وبعد التعامل مع القسطرة.",
+       "عدم فك أو حل القسطرة من أنبوبة كيس البول (نظام مغلق).",
+       "التأكد من عدم ملامسة كيس البول للأرض، وبقائه أسفل مستوى المثانة.",
+       "العناية اليومية بالقسطرة والمنطقة التناسلية بالماء والصابون.",
+       "تغيير كيس البول بعناية فائقة عند تراكم الرواسب، وتفريغه بانتظام دون لمس فتحة التفريغ."
+      ],
+      "en": [
+       "Limit infection spread: hand hygiene before and after handling the catheter.",
+       "Never disconnect the catheter from the drainage tubing (closed system).",
+       "Keep the bag off the floor and below bladder level.",
+       "Daily catheter and perineal care with soap and water.",
+       "Change the bag carefully when sediment builds up; empty regularly without touching the outlet."
+      ]
+     },
+     "outcome": {
+      "ar": "نظام مغلق والكيس أسفل المثانة وبعيد عن الأرض.",
+      "en": "Closed system; bag below bladder and off the floor."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    },
+    {
+     "need": {
+      "ar": "السوائل وإزالة القسطرة مبكرًا",
+      "en": "Fluids and early removal"
+     },
+     "actions": {
+      "ar": [
+       "تسجيل السوائل الداخلة والخارجة بدقة وتشجيع الشرب ما لم يُمنع.",
+       "مراجعة الحاجة للقسطرة يوميًا مع الطبيب؛ ويجب ألا تُترك أكثر من المدة الضرورية (عادة لا تتجاوز أسبوعًا دون مراجعة)."
+      ],
+      "en": [
+       "Record I&O accurately and encourage fluids unless restricted.",
+       "Review catheter need daily with the physician; do not leave it longer than necessary (usually reviewed within a week)."
+      ]
+     },
+     "outcome": {
+      "ar": "داخل/خارج مسجل والقسطرة مراجعة يوميًا.",
+      "en": "I&O recorded; catheter reviewed daily."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-urinary-elimination-catheter",
+   "kind": "actual",
+   "title": {
+    "ar": "اضطراب الإخراج البولي",
+    "en": "Impaired Urinary Elimination"
+   },
+   "definition": {
+    "ar": "خلل في وظيفة إخراج البول.",
+    "en": "Dysfunction in urine elimination."
+   },
+   "relatedTo": {
+    "ar": [
+     "وجود القسطرة وتهيج المثانة",
+     "انسداد أو التواء القسطرة"
+    ],
+    "en": [
+     "Catheter and bladder irritation",
+     "Catheter blockage or kinking"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "شكوى من ألم أو تقلصات بالمثانة",
+     "تسريب البول حول القسطرة",
+     "قلة البول في الكيس"
+    ],
+    "en": [
+     "Bladder pain or spasms",
+     "Leakage around the catheter",
+     "Low drainage"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس إني عايز أعمل حمام وفيه وجع تحت.\""
+     ],
+     "en": [
+      "\"I feel the urge to pee and pain down below.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بول في الكيس 50 مل في 3 ساعات مع انتفاخ أسفل البطن."
+     ],
+     "en": [
+      "50 mL drained in 3 hours with lower abdominal fullness."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: تصريف بول منتظم (≥ 0.5 مل/كجم/ساعة) وزوال الألم."
+     ],
+     "en": [
+      "Within an hour: regular drainage (≥ 0.5 mL/kg/h) and pain relieved."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد إزالة القسطرة: يتبول المريض تلقائيًا خلال 6–8 ساعات."
+     ],
+     "en": [
+      "After removal: voids spontaneously within 6–8 hours."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص الأنبوب للالتواء أو الضغط والتأكد من وضع الكيس.",
+      "en": "Check tubing for kinks or compression and bag position."
+     },
+     "rationale": {
+      "ar": "أشهر سبب لتوقف التصريف.",
+      "en": "Commonest cause of no drainage."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "جس المثانة أو استخدام جهاز قياس حجم المثانة.",
+      "en": "Palpate the bladder or use a bladder scanner."
+     },
+     "rationale": {
+      "ar": "يكشف الاحتباس.",
+      "en": "Detects retention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تثبيت القسطرة على الفخذ لمنع الشد.",
+      "en": "Secure the catheter to the thigh to prevent traction."
+     },
+     "rationale": {
+      "ar": "يقلل الألم والتهيج.",
+      "en": "Reduces pain and irritation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عند الانسداد أو الدم أو التقلصات الشديدة.",
+      "en": "Report blockage, hematuria or severe spasms."
+     },
+     "rationale": {
+      "ar": "قد تحتاج غسيل أو تغيير القسطرة.",
+      "en": "May need flushing or replacement."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "بعد الإزالة: متابعة أول تبول وكميته خلال 6–8 ساعات.",
+      "en": "After removal: monitor first void and volume within 6–8 hours."
+     },
+     "rationale": {
+      "ar": "يكشف الاحتباس بعد الإزالة.",
+      "en": "Detects post-removal retention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض عدم شد القسطرة والإبلاغ عن الألم أو التسريب.",
+      "en": "Teach not to pull the catheter and to report pain or leakage."
+     },
+     "rationale": {
+      "ar": "أمان وراحة.",
+      "en": "Safety and comfort."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تم فك التواء الأنبوب والتصريف 80 مل/ساعة — تحقق.",
+      "en": "Kink relieved; drainage 80 mL/h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تصريف منتظم",
+      "en": "Regular drainage"
+     },
+     "actions": {
+      "ar": [
+       "فحص الأنبوب للالتواء أو الضغط والتأكد من وضع الكيس.",
+       "جس المثانة أو استخدام جهاز قياس حجم المثانة.",
+       "تثبيت القسطرة على الفخذ لمنع الشد.",
+       "إبلاغ الطبيب عند الانسداد أو الدم أو التقلصات الشديدة."
+      ],
+      "en": [
+       "Check tubing for kinks or compression and bag position.",
+       "Palpate the bladder or use a bladder scanner.",
+       "Secure the catheter to the thigh to prevent traction.",
+       "Report blockage, hematuria or severe spasms."
+      ]
+     },
+     "outcome": {
+      "ar": "بول ≥ 0.5 مل/كجم/ساعة وبدون ألم.",
+      "en": "Urine ≥ 0.5 mL/kg/h, no pain."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    },
+    {
+     "need": {
+      "ar": "بعد الإزالة",
+      "en": "After removal"
+     },
+     "actions": {
+      "ar": [
+       "بعد الإزالة: متابعة أول تبول وكميته خلال 6–8 ساعات.",
+       "تعليم المريض عدم شد القسطرة والإبلاغ عن الألم أو التسريب."
+      ],
+      "en": [
+       "After removal: monitor first void and volume within 6–8 hours.",
+       "Teach not to pull the catheter and to report pain or leakage."
+      ]
+     },
+     "outcome": {
+      "ar": "تبول تلقائي خلال 6–8 ساعات.",
+      "en": "Spontaneous void within 6–8 h."
+     },
+     "timeframe": {
+      "ar": "6–8 ساعات",
+      "en": "6–8 hours"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "CDC/HICPAC Guideline for Prevention of Catheter-Associated Urinary Tract Infections"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "devices"
+}

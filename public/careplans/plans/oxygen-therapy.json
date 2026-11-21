@@ -1,0 +1,481 @@
+{
+ "id": "oxygen-therapy",
+ "icon": "🫧",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "العلاج بالأكسجين وتسمم الأكسجين",
+  "en": "Oxygen Therapy & Oxygen Toxicity"
+ },
+ "summary": {
+  "ar": "خطة رعاية للمريض على الأكسجين: إعطاء آمن بأقل تركيز فعال، متابعة التشبع، والوقاية من تسمم الأكسجين.",
+  "en": "Care plan for oxygen therapy: safe lowest-effective dosing, saturation monitoring and toxicity prevention."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-oxygen-toxicity",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر تسمم الأكسجين",
+    "en": "Risk for Oxygen Toxicity"
+   },
+   "definition": {
+    "ar": "قابلية لإصابة الرئة والجهاز العصبي بسبب التعرض لتركيز عالٍ من الأكسجين لفترة طويلة أو خلل في التركيز والرطوبة.",
+    "en": "Susceptible to lung and CNS injury from prolonged high-concentration oxygen or imbalanced concentration/humidity."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "تركيز أكسجين عالٍ (> 60%) لأكثر من 24–48 ساعة",
+     "خلل في تركيز الأكسجين والرطوبة المعطاة",
+     "مرضى السدة الرئوية (احتباس ثاني أكسيد الكربون)"
+    ],
+    "en": [
+     "High FiO₂ (> 60%) for > 24–48 h",
+     "Imbalanced oxygen concentration and humidity",
+     "COPD with CO₂ retention"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"صدري بيحرقني ومزوري ناشف.\""
+     ],
+     "en": [
+      "\"My chest burns and my throat is dry.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "على قناع عالي التركيز منذ 36 ساعة.",
+      "التشبع 99%."
+     ],
+     "en": [
+      "On a high-concentration mask for 36 hours.",
+      "SpO₂ 99%."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء العلاج: أقل تركيز أكسجين يحقق التشبع المستهدف (94–98%، أو 88–92% في السدة الرئوية)."
+     ],
+     "en": [
+      "During therapy: the lowest oxygen concentration that achieves the target (94–98%, or 88–92% in COPD)."
+     ]
+    },
+    "long": {
+     "ar": [
+      "إيقاف الأكسجين تدريجيًا عند استقرار التشبع على هواء الغرفة."
+     ],
+     "en": [
+      "Gradual weaning once saturation is stable on room air."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة توقف أو بطء التنفس، والنبض والضغط والحرارة، وألم خلف عظمة القص، والدوخة.",
+      "en": "Watch for apnea or slow breathing, pulse, BP, temperature, retrosternal pain and dizziness."
+     },
+     "rationale": {
+      "ar": "علامات تسمم الأكسجين أو احتباس ثاني أكسيد الكربون.",
+      "en": "Signs of oxygen toxicity or CO₂ retention."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة تركيز الأكسجين في الدم (التشبع وغازات الدم).",
+      "en": "Monitor blood oxygen (SpO₂ and blood gases)."
+     },
+     "rationale": {
+      "ar": "تجنب الزيادة أو النقص.",
+      "en": "Avoids excess or deficit."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة درجة الوعي وصوت الصدر وزيادة سرعة النبض وارتفاع الحرارة.",
+      "en": "Observe consciousness, breath sounds, rising pulse and fever."
+     },
+     "rationale": {
+      "ar": "تغيرات مبكرة.",
+      "en": "Early changes."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "المحافظة على الممرات الهوائية مفتوحة.",
+      "en": "Maintain a patent airway."
+     },
+     "rationale": {
+      "ar": "أساس فعالية الأكسجين.",
+      "en": "Basis of effective oxygenation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع مستوى السرير 45–90 درجة.",
+      "en": "Raise the head of the bed 45–90°."
+     },
+     "rationale": {
+      "ar": "يحسن التهوية.",
+      "en": "Improves ventilation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم والأنف وترطيب الأكسجين.",
+      "en": "Mouth and nose care; humidify oxygen."
+     },
+     "rationale": {
+      "ar": "الأكسجين الجاف يجفف الأغشية.",
+      "en": "Dry oxygen dries the mucosa."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأكسجين بالتركيز الذي حدده الطبيب، وتقليله تدريجيًا حسب التشبع.",
+      "en": "Give oxygen at the prescribed concentration and wean by saturation."
+     },
+     "rationale": {
+      "ar": "أقل جرعة فعالة.",
+      "en": "Lowest effective dose."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ملاحظة الحالة النفسية للمريض وإبلاغ الطبيب عند ظهور أي من الأعراض.",
+      "en": "Observe the patient's mood and report any symptoms to the physician."
+     },
+     "rationale": {
+      "ar": "التدخل المبكر.",
+      "en": "Early intervention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض والأسرة عدم تغيير معدل الأكسجين وعدم التدخين قربه (خطر الحريق).",
+      "en": "Teach not to change the flow and no smoking near oxygen (fire risk)."
+     },
+     "rationale": {
+      "ar": "أمان.",
+      "en": "Safety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تم تقليل التركيز إلى 2 لتر مع تشبع 95% — تحقق.",
+      "en": "Weaned to 2 L with SpO₂ 95% — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "مراقبة الأكسجين",
+      "en": "Oxygen monitoring"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة توقف أو بطء التنفس، والنبض والضغط والحرارة، وألم خلف عظمة القص، والدوخة.",
+       "متابعة تركيز الأكسجين في الدم (التشبع وغازات الدم).",
+       "ملاحظة درجة الوعي وصوت الصدر وزيادة سرعة النبض وارتفاع الحرارة."
+      ],
+      "en": [
+       "Watch for apnea or slow breathing, pulse, BP, temperature, retrosternal pain and dizziness.",
+       "Monitor blood oxygen (SpO₂ and blood gases).",
+       "Observe consciousness, breath sounds, rising pulse and fever."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع في المدى المستهدف بدون أعراض تسمم.",
+      "en": "SpO₂ in target without toxicity signs."
+     },
+     "timeframe": {
+      "ar": "كل 2–4 ساعات",
+      "en": "Every 2–4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "إعطاء آمن",
+      "en": "Safe administration"
+     },
+     "actions": {
+      "ar": [
+       "المحافظة على الممرات الهوائية مفتوحة.",
+       "رفع مستوى السرير 45–90 درجة.",
+       "العناية بالفم والأنف وترطيب الأكسجين.",
+       "إعطاء الأكسجين بالتركيز الذي حدده الطبيب، وتقليله تدريجيًا حسب التشبع."
+      ],
+      "en": [
+       "Maintain a patent airway.",
+       "Raise the head of the bed 45–90°.",
+       "Mouth and nose care; humidify oxygen.",
+       "Give oxygen at the prescribed concentration and wean by saturation."
+      ]
+     },
+     "outcome": {
+      "ar": "أقل تركيز فعال ومجرى هواء مفتوح وأغشية رطبة.",
+      "en": "Lowest effective FiO₂, patent airway, moist mucosa."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    },
+    {
+     "need": {
+      "ar": "الإبلاغ والتثقيف",
+      "en": "Reporting and teaching"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة الحالة النفسية للمريض وإبلاغ الطبيب عند ظهور أي من الأعراض.",
+       "تعليم المريض والأسرة عدم تغيير معدل الأكسجين وعدم التدخين قربه (خطر الحريق)."
+      ],
+      "en": [
+       "Observe the patient's mood and report any symptoms to the physician.",
+       "Teach not to change the flow and no smoking near oxygen (fire risk)."
+      ]
+     },
+     "outcome": {
+      "ar": "أي عرض مبلغ والأسرة تعرف قواعد الأمان.",
+      "en": "Symptoms reported; family knows safety rules."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-gas-exchange-oxygen",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف تبادل الغازات",
+    "en": "Impaired Gas Exchange"
+   },
+   "definition": {
+    "ar": "زيادة أو نقص في الأكسجة أو التخلص من ثاني أكسيد الكربون.",
+    "en": "Excess or deficit in oxygenation and/or CO₂ elimination."
+   },
+   "relatedTo": {
+    "ar": [
+     "مرض رئوي أو قلبي"
+    ],
+    "en": [
+     "Pulmonary or cardiac disease"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تشبع < 92% على هواء الغرفة",
+     "ضيق نفس وزرقة"
+    ],
+    "en": [
+     "SpO₂ < 92% on room air",
+     "Dyspnea and cyanosis"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"نفسي قصير.\""
+     ],
+     "en": [
+      "\"I'm short of breath.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "التشبع 88% على هواء الغرفة، التنفس 26."
+     ],
+     "en": [
+      "SpO₂ 88% on room air, RR 26."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 30 دقيقة من الأكسجين: تشبع في المدى المستهدف."
+     ],
+     "en": [
+      "Within 30 minutes of oxygen: SpO₂ in target range."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: تشبع مستقر بدون أكسجين أو خطة أكسجين منزلي."
+     ],
+     "en": [
+      "Before discharge: stable SpO₂ off oxygen or a home-oxygen plan."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس التشبع والتنفس قبل وبعد بدء الأكسجين.",
+      "en": "Check SpO₂ and breathing before and after starting oxygen."
+     },
+     "rationale": {
+      "ar": "يقيس الاستجابة.",
+      "en": "Measures response."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "اختيار وسيلة الأكسجين المناسبة حسب الأمر (أنبوب أنفي، قناع، فنتوري).",
+      "en": "Use the ordered device (nasal cannula, mask, Venturi)."
+     },
+     "rationale": {
+      "ar": "كل وسيلة تعطي تركيزًا مختلفًا.",
+      "en": "Each delivers a different FiO₂."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع شبه جالس وتشجيع التنفس العميق.",
+      "en": "Semi-sitting; encourage deep breathing."
+     },
+     "rationale": {
+      "ar": "يحسن التهوية.",
+      "en": "Improves ventilation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التأكد من وضع الوسيلة بإحكام وعدم وجود تسريب، وحماية الجلد خلف الأذن من الضغط.",
+      "en": "Ensure proper fit without leaks; pad behind the ears."
+     },
+     "rationale": {
+      "ar": "فعالية وراحة.",
+      "en": "Effectiveness and comfort."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عمل غازات الدم حسب الأمر.",
+      "en": "Obtain blood gases as ordered."
+     },
+     "rationale": {
+      "ar": "تقييم دقيق.",
+      "en": "Accurate assessment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عند عدم التحسن.",
+      "en": "Report lack of improvement."
+     },
+     "rationale": {
+      "ar": "قد يحتاج دعمًا أكبر.",
+      "en": "May need more support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 95% على 3 لتر خلال 20 دقيقة — تحقق.",
+      "en": "SpO₂ 95% on 3 L within 20 minutes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تحسين الأكسجين",
+      "en": "Improve oxygenation"
+     },
+     "actions": {
+      "ar": [
+       "قياس التشبع والتنفس قبل وبعد بدء الأكسجين.",
+       "اختيار وسيلة الأكسجين المناسبة حسب الأمر (أنبوب أنفي، قناع، فنتوري).",
+       "وضع شبه جالس وتشجيع التنفس العميق.",
+       "التأكد من وضع الوسيلة بإحكام وعدم وجود تسريب، وحماية الجلد خلف الأذن من الضغط."
+      ],
+      "en": [
+       "Check SpO₂ and breathing before and after starting oxygen.",
+       "Use the ordered device (nasal cannula, mask, Venturi).",
+       "Semi-sitting; encourage deep breathing.",
+       "Ensure proper fit without leaks; pad behind the ears."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع في المدى المستهدف.",
+      "en": "SpO₂ in target."
+     },
+     "timeframe": {
+      "ar": "30 دقيقة",
+      "en": "30 minutes"
+     }
+    },
+    {
+     "need": {
+      "ar": "متابعة وإبلاغ",
+      "en": "Monitor and report"
+     },
+     "actions": {
+      "ar": [
+       "عمل غازات الدم حسب الأمر.",
+       "إبلاغ الطبيب عند عدم التحسن."
+      ],
+      "en": [
+       "Obtain blood gases as ordered.",
+       "Report lack of improvement."
+      ]
+     },
+     "outcome": {
+      "ar": "غازات دم متحسنة وأي تدهور مبلغ.",
+      "en": "Improving gases; deterioration reported."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "BTS Guideline for oxygen use in healthcare and emergency settings (2017)"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "devices"
+}
