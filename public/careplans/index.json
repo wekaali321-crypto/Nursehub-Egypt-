@@ -538,30 +538,58 @@
   },
   {
    "id": "mechanical-ventilation",
-   "icon": "🫧",
+   "icon": "🫁",
    "system": "respiratory",
    "folder": "disease",
    "title": {
     "ar": "المريض على جهاز التنفس الصناعي",
-    "en": "Mechanically Ventilated Patient"
+    "en": "Patient on Mechanical Ventilation"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض على التنفس الصناعي: الحفاظ على مجرى الهواء، الوقاية من الالتهاب الرئوي المرتبط بالجهاز (VAP)، والتواصل.",
-    "en": "Care plan for a ventilated patient: airway maintenance, ventilator-associated pneumonia (VAP) prevention and communication."
+    "ar": "خطة رعاية المريض على جهاز التنفس: متابعة المريض والجهاز والإنذارات، الشفط والعناية بالأنبوبة، الوقاية من الالتهاب الرئوي، التغذية بالأنبوبة، الفطام، والتواصل.",
+    "en": "Mechanical ventilation care plan: patient/ventilator and alarm monitoring, suction and tube care, VAP prevention, enteral feeding, weaning and communication."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "impaired-spontaneous-ventilation",
      "title": {
-      "ar": "عدم فعالية تنظيف مجرى الهواء",
-      "en": "Ineffective airway clearance"
+      "ar": "ضعف التنفس التلقائي",
+      "en": "Impaired Spontaneous Ventilation"
      }
     },
     {
-     "id": "dx-2",
+     "id": "ineffective-airway-clearance-mv",
      "title": {
-      "ar": "خطر العدوى",
-      "en": "Risk for infection"
+      "ar": "عدم فعالية تنظيف مجرى الهواء",
+      "en": "Ineffective Airway Clearance"
+     }
+    },
+    {
+     "id": "risk-vap-mv",
+     "title": {
+      "ar": "خطر الالتهاب الرئوي المرتبط بجهاز التنفس",
+      "en": "Risk for Ventilator-Associated Pneumonia"
+     }
+    },
+    {
+     "id": "imbalanced-nutrition-mv",
+     "title": {
+      "ar": "خطر نقص التغذية (التغذية بالأنبوبة)",
+      "en": "Risk for Imbalanced Nutrition (Enteral Feeding)"
+     }
+    },
+    {
+     "id": "dysfunctional-weaning-response",
+     "title": {
+      "ar": "خطر عدم الاستجابة للفطام من جهاز التنفس",
+      "en": "Risk for Dysfunctional Ventilatory Weaning Response"
+     }
+    },
+    {
+     "id": "impaired-verbal-communication-mv",
+     "title": {
+      "ar": "ضعف التواصل اللفظي",
+      "en": "Impaired Verbal Communication"
      }
     }
    ]
@@ -630,26 +658,54 @@
    "system": "respiratory",
    "folder": "disease",
    "title": {
-    "ar": "استرواح الصدر وأنبوبة الصدر",
-    "en": "Pneumothorax & Chest Tube Care"
+    "ar": "الاسترواح الصدري وأنبوبة الصدر",
+    "en": "Pneumothorax & Chest Tube"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض استرواح صدري بأنبوبة صدر: تمدد الرئة، العناية بنظام التصريف المائي، والألم.",
-    "en": "Care plan for pneumothorax with a chest drain: lung re-expansion, underwater-seal care and pain."
+    "ar": "خطة رعاية الاسترواح الصدري: نمط التنفس والاسترواح الضاغط، العناية بأنبوبة الصدر ومضاعفاتها، الألم، العدوى، القلق، والتثقيف.",
+    "en": "Pneumothorax care plan: breathing pattern and tension pneumothorax, chest drain care and complications, pain, infection, anxiety and teaching."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "ineffective-breathing-pattern-pneumothorax",
      "title": {
       "ar": "عدم فعالية نمط التنفس",
-      "en": "Ineffective breathing pattern"
+      "en": "Ineffective Breathing Pattern"
      }
     },
     {
-     "id": "dx-2",
+     "id": "risk-injury-chest-drain",
      "title": {
-      "ar": "ألم حاد",
-      "en": "Acute pain"
+      "ar": "خطر الإصابة (مضاعفات أنبوبة الصدر)",
+      "en": "Risk for Injury (Chest Drain Complications)"
+     }
+    },
+    {
+     "id": "acute-pain-chest-tube",
+     "title": {
+      "ar": "ألم حاد (مكان أنبوبة الصدر)",
+      "en": "Acute Pain (Chest Tube Site)"
+     }
+    },
+    {
+     "id": "risk-infection-chest-tube",
+     "title": {
+      "ar": "خطر العدوى (مكان الأنبوبة والتجويف البلوري)",
+      "en": "Risk for Infection (Chest Tube Site / Empyema)"
+     }
+    },
+    {
+     "id": "anxiety-pneumothorax",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "deficient-knowledge-pneumothorax",
+     "title": {
+      "ar": "نقص المعرفة (الاسترواح الصدري)",
+      "en": "Deficient Knowledge (Pneumothorax)"
      }
     }
    ]
@@ -664,22 +720,50 @@
     "en": "Pulmonary Tuberculosis"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض درن رئوي: منع العدوى، الالتزام بالعلاج الطويل، والتغذية.",
-    "en": "Care plan for pulmonary TB: infection control, long-term treatment adherence and nutrition."
+    "ar": "خطة رعاية الدرن الرئوي: العزل الهوائي ومنع العدوى، الالتزام بالعلاج الطويل وأعراضه الجانبية، الكحة والبلغم الدموي، التغذية، الوصمة والعزلة، والحمى والعرق الليلي.",
+    "en": "Pulmonary TB care plan: airborne isolation, adherence and drug side effects, cough and hemoptysis, nutrition, stigma and isolation, fever and night sweats."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "risk-infection-transmission-tb",
      "title": {
-      "ar": "خطر انتقال العدوى للآخرين",
-      "en": "Risk for infection transmission"
+      "ar": "خطر انتقال العدوى (الدرن)",
+      "en": "Risk for Infection Transmission (Tuberculosis)"
      }
     },
     {
-     "id": "dx-2",
+     "id": "ineffective-health-management-tb",
      "title": {
       "ar": "خطر عدم الالتزام بالعلاج",
-      "en": "Risk for ineffective health self-management"
+      "en": "Risk for Nonadherence (Anti-TB Therapy)"
+     }
+    },
+    {
+     "id": "ineffective-airway-clearance-tb",
+     "title": {
+      "ar": "عدم فعالية تنظيف مجرى الهواء",
+      "en": "Ineffective Airway Clearance"
+     }
+    },
+    {
+     "id": "imbalanced-nutrition-tb",
+     "title": {
+      "ar": "تغذية أقل من احتياج الجسم",
+      "en": "Imbalanced Nutrition: Less Than Body Requirements"
+     }
+    },
+    {
+     "id": "social-isolation-tb",
+     "title": {
+      "ar": "العزلة الاجتماعية والوصمة",
+      "en": "Social Isolation and Stigma"
+     }
+    },
+    {
+     "id": "hyperthermia-tb",
+     "title": {
+      "ar": "ارتفاع الحرارة والعرق الليلي",
+      "en": "Hyperthermia and Night Sweats"
      }
     }
    ]

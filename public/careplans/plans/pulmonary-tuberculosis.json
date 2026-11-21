@@ -2,274 +2,1189 @@
  "id": "pulmonary-tuberculosis",
  "icon": "🦠",
  "system": "respiratory",
+ "folder": "disease",
  "title": {
   "ar": "الدرن الرئوي (السل)",
   "en": "Pulmonary Tuberculosis"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض درن رئوي: منع العدوى، الالتزام بالعلاج الطويل، والتغذية.",
-  "en": "Care plan for pulmonary TB: infection control, long-term treatment adherence and nutrition."
+  "ar": "خطة رعاية الدرن الرئوي: العزل الهوائي ومنع العدوى، الالتزام بالعلاج الطويل وأعراضه الجانبية، الكحة والبلغم الدموي، التغذية، الوصمة والعزلة، والحمى والعرق الليلي.",
+  "en": "Pulmonary TB care plan: airborne isolation, adherence and drug side effects, cough and hemoptysis, nutrition, stigma and isolation, fever and night sweats."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "خطر انتقال العدوى للآخرين (Risk for infection – transmission) مرتبط بوجود ميكروب الدرن في البلغم وانتقاله عن طريق الرذاذ الهوائي.",
-    "en": "Risk for infection transmission related to Mycobacterium tuberculosis in sputum spread by airborne droplets."
+   "id": "risk-infection-transmission-tb",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر انتقال العدوى (الدرن)",
+    "en": "Risk for Infection Transmission (Tuberculosis)"
+   },
+   "definition": {
+    "ar": "قابلية لانتقال ميكروب الدرن للآخرين عن طريق الرذاذ المتطاير في الهواء.",
+    "en": "Susceptibility to airborne spread of Mycobacterium tuberculosis to others."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "درن رئوي نشط بمسحة بلغم إيجابية",
+     "الكحة والعطس",
+     "أماكن مزدحمة وسيئة التهوية"
+    ],
+    "en": [
+     "Active pulmonary TB, smear positive",
+     "Coughing and sneezing",
+     "Crowded, poorly ventilated spaces"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"بكح من 3 شهور وبعرق بالليل ووزني نزل.\""
+      "\"يعني ولادي ممكن يتعدوا؟\""
      ],
      "en": [
-      "\"I've been coughing for 3 months, sweating at night and losing weight.\""
+      "\"Could my children catch it?\""
      ]
     },
     "objective": {
      "ar": [
-      "عينة بلغم إيجابية للميكروب (AFB / GeneXpert).",
-      "أشعة: تجويف في قمة الرئة اليمنى.",
-      "يعيش مع زوجته و3 أطفال."
+      "مسحة بلغم إيجابية +2.",
+      "تجويف في الفص العلوي الأيمن."
      ],
      "en": [
-      "Sputum positive (AFB smear / GeneXpert).",
-      "Chest X-ray: right apical cavity.",
-      "Lives with his wife and 3 children."
+      "Sputum smear 2+.",
+      "Right upper lobe cavity."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء العزل لا تنتقل العدوى لأي شخص، ويطبق المريض آداب الكحة صحيحًا خلال 24 ساعة."
-    ],
-    "en": [
-     "During isolation no transmission occurs, and the patient practices cough etiquette correctly within 24 hours."
-    ]
-   },
-   "interventions": [
-    {
-     "action": {
-      "ar": "وضع المريض في غرفة عزل تنفسي (ضغط سلبي أو تهوية جيدة) مع غلق الباب.",
-      "en": "Place the patient in airborne isolation (negative pressure or well-ventilated room) with the door closed."
-     },
-     "rationale": {
-      "ar": "الميكروب ينتقل في الهواء لمسافات.",
-      "en": "The organism is airborne."
-     }
-    },
-    {
-     "action": {
-      "ar": "لبس قناع N95 للفريق والزوار، وقناع جراحي للمريض عند خروجه من الغرفة.",
-      "en": "Staff and visitors wear N95 respirators; the patient wears a surgical mask outside the room."
-     },
-     "rationale": {
-      "ar": "يمنع استنشاق الرذاذ الحامل للميكروب.",
-      "en": "Prevents inhalation of infectious droplets."
-     }
-    },
-    {
-     "action": {
-      "ar": "تعليم المريض تغطية الفم بمنديل عند الكحة والعطس والتخلص منه في كيس مغلق وغسل اليدين.",
-      "en": "Teach covering coughs with tissues, disposing of them in a sealed bag and hand washing."
-     },
-     "rationale": {
-      "ar": "يقلل انتشار الرذاذ.",
-      "en": "Reduces droplet spread."
-     }
-    },
-    {
-     "action": {
-      "ar": "التنسيق لفحص المخالطين (الأسرة) ببرنامج مكافحة الدرن.",
-      "en": "Coordinate contact tracing of household members with the TB program."
-     },
-     "rationale": {
-      "ar": "اكتشاف وعلاج المصابين المخالطين مبكرًا.",
-      "en": "Finds and treats infected contacts early."
-     }
-    }
-   ],
-   "evaluation": {
-    "ar": [
-     "المريض يلتزم بالكمامة وآداب الكحة، والأسرة اتحولت للفحص. — تحقق الهدف."
-    ],
-    "en": [
-     "Patient wears a mask and follows cough etiquette; family referred for screening. — Goal met."
-    ]
-   }
-  },
-  {
-   "diagnosis": {
-    "ar": "خطر عدم الالتزام بالعلاج (Risk for ineffective health self-management) مرتبط بطول مدة العلاج (6 شهور) والآثار الجانبية للأدوية.",
-    "en": "Risk for ineffective health self-management related to long treatment duration (6 months) and drug side effects."
-   },
-   "assessment": {
-    "subjective": {
+    "short": {
      "ar": [
-      "\"لو حسيت إني كويس ممكن أوقف الدوا؟\""
+      "من الدخول: عزل هوائي والتزام كامل بالاحتياطات."
      ],
      "en": [
-      "\"Can I stop the pills once I feel better?\""
+      "From admission: airborne isolation with full compliance."
      ]
     },
-    "objective": {
+    "long": {
      "ar": [
-      "بدأ العلاج الرباعي (Rifampicin, Isoniazid, Pyrazinamide, Ethambutol)."
+      "لا عدوى للمخالطين، ومسحة سلبية بعد أسبوعين إلى شهرين من العلاج."
      ],
      "en": [
-      "Started on 4-drug therapy (rifampicin, isoniazid, pyrazinamide, ethambutol)."
+      "No transmission to contacts; smear negative after 2 weeks to 2 months of treatment."
      ]
     }
    },
-   "goals": {
-    "ar": [
-     "قبل الخروج يشرح المريض مدة العلاج وأهمية عدم الإيقاف، ويذكر 3 آثار جانبية يبلغ عنها."
-    ],
-    "en": [
-     "Before discharge the patient explains the treatment length and not stopping, and names 3 side effects to report."
-    ]
-   },
    "interventions": [
     {
+     "type": "independent",
      "action": {
-      "ar": "شرح أن العلاج 6 شهور على الأقل وأن الإيقاف المبكر يسبب درن مقاوم للأدوية.",
-      "en": "Explain at least 6 months of treatment and that stopping early causes drug-resistant TB."
+      "ar": "عزل المريض في غرفة ضغط سالب أو غرفة فردية بنافذة مفتوحة وباب مغلق.",
+      "en": "Isolate in a negative-pressure room or single room with open window and closed door."
      },
      "rationale": {
-      "ar": "المقاومة تجعل العلاج أطول وأصعب.",
-      "en": "Resistance makes treatment longer and harder."
+      "ar": "يمنع انتشار الرذاذ.",
+      "en": "Prevents droplet-nuclei spread."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "تطبيق العلاج تحت الملاحظة المباشرة (DOT) حسب البرنامج.",
-      "en": "Use directly observed therapy (DOT) per the program."
+      "ar": "لبس الفريق كمامة N95 مختبرة الإحكام.",
+      "en": "Staff wear fit-tested N95 respirators."
      },
      "rationale": {
-      "ar": "يضمن تناول كل الجرعات.",
-      "en": "Ensures every dose is taken."
+      "ar": "الكمامة الجراحية لا تحمي من الدرن.",
+      "en": "Surgical masks do not protect against TB."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "شرح الآثار الجانبية: لون البول البرتقالي مع الريفامبيسين (طبيعي)، صفار العين، تنميل الأطراف، تغير الإبصار.",
-      "en": "Explain side effects: orange urine with rifampicin (harmless), jaundice, numbness, vision changes."
+      "ar": "لبس المريض كمامة جراحية عند الخروج من الغرفة.",
+      "en": "Patient wears a surgical mask outside the room."
      },
      "rationale": {
-      "ar": "الإبلاغ المبكر عن التهاب الكبد أو العصب يمنع المضاعفات.",
-      "en": "Early reporting of hepatitis or neuropathy prevents harm."
+      "ar": "يقلل خروج الرذاذ.",
+      "en": "Reduces droplet release."
      }
     },
     {
+     "type": "teach",
      "action": {
-      "ar": "متابعة وظائف الكبد وإعطاء فيتامين B6 مع الأيزونيازيد حسب الأمر.",
-      "en": "Monitor liver tests and give pyridoxine (B6) with isoniazid as ordered."
+      "ar": "تغطية الفم والأنف بمنديل عند الكحة والتخلص منه في كيس مغلق، وعدم البصق على الأرض.",
+      "en": "Cover mouth/nose with a tissue when coughing, dispose in a sealed bag; no spitting."
      },
      "rationale": {
-      "ar": "B6 يمنع التهاب الأعصاب الطرفية.",
-      "en": "Pyridoxine prevents peripheral neuropathy."
+      "ar": "يقلل العدوى.",
+      "en": "Reduces transmission."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ مكتب الصحة وفحص المخالطين (اختبار الجلد أو الدم والأشعة).",
+      "en": "Notify public health; screen contacts (skin/blood test and X-ray)."
+     },
+     "rationale": {
+      "ar": "اكتشاف وعلاج المصابين.",
+      "en": "Detect and treat contacts."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "جمع عينات البلغم الصباحية لمتابعة التحول للسلبية.",
+      "en": "Collect early-morning sputum samples to document conversion."
+     },
+     "rationale": {
+      "ar": "تحدد موعد رفع العزل.",
+      "en": "Determines when isolation ends."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تهوية البيت والتعرض للشمس وتقليل الزوار في أول أسبوعين من العلاج.",
+      "en": "Ventilate the home, sunlight, limit visitors in the first 2 weeks."
+     },
+     "rationale": {
+      "ar": "يقلل الانتقال.",
+      "en": "Reduces spread."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "المريض شرح مدة العلاج وذكر 4 آثار جانبية واتسجل في برنامج DOT. — تحقق الهدف."
-    ],
-    "en": [
-     "Patient explained duration, named 4 side effects and enrolled in DOT. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "خطر انتقال العدوى",
-    "en": "Risk for transmission"
-   },
-   "need": {
-    "ar": "العزل التنفسي",
-    "en": "Airborne isolation"
-   },
-   "actions": {
-    "ar": [
-     "غرفة عزل",
-     "N95 للفريق وكمامة للمريض",
-     "آداب الكحة"
-    ],
-    "en": [
-     "Isolation room",
-     "N95 for staff, mask for patient",
-     "Cough etiquette"
-    ]
-   },
-   "outcome": {
-    "ar": "لا انتقال للعدوى",
-    "en": "No transmission"
-   },
-   "timeframe": {
-    "ar": "حتى 3 عينات سلبية أو حسب السياسة",
-    "en": "Until negative smears / per policy"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التزام بالعزل ولا عدوى بين المخالطين، المسحة سلبية بعد 6 أسابيع — تحقق.",
+      "en": "Isolation adhered to, no contact infected, smear negative at 6 weeks — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "العزل الهوائي",
+      "en": "Airborne isolation"
+     },
+     "actions": {
+      "ar": [
+       "عزل المريض في غرفة ضغط سالب أو غرفة فردية بنافذة مفتوحة وباب مغلق.",
+       "لبس الفريق كمامة N95 مختبرة الإحكام.",
+       "لبس المريض كمامة جراحية عند الخروج من الغرفة.",
+       "تغطية الفم والأنف بمنديل عند الكحة والتخلص منه في كيس مغلق، وعدم البصق على الأرض."
+      ],
+      "en": [
+       "Isolate in a negative-pressure room or single room with open window and closed door.",
+       "Staff wear fit-tested N95 respirators.",
+       "Patient wears a surgical mask outside the room.",
+       "Cover mouth/nose with a tissue when coughing, dispose in a sealed bag; no spitting."
+      ]
+     },
+     "outcome": {
+      "ar": "التزام كامل.",
+      "en": "Full compliance."
+     },
+     "timeframe": {
+      "ar": "حتى المسحة السلبية",
+      "en": "Until smear negative"
+     }
+    },
+    {
+     "need": {
+      "ar": "الصحة العامة والمتابعة",
+      "en": "Public health and follow-up"
+     },
+     "actions": {
+      "ar": [
+       "إبلاغ مكتب الصحة وفحص المخالطين (اختبار الجلد أو الدم والأشعة).",
+       "جمع عينات البلغم الصباحية لمتابعة التحول للسلبية.",
+       "تهوية البيت والتعرض للشمس وتقليل الزوار في أول أسبوعين من العلاج."
+      ],
+      "en": [
+       "Notify public health; screen contacts (skin/blood test and X-ray).",
+       "Collect early-morning sputum samples to document conversion.",
+       "Ventilate the home, sunlight, limit visitors in the first 2 weeks."
+      ]
+     },
+     "outcome": {
+      "ar": "مخالطون مفحوصون.",
+      "en": "Contacts screened."
+     },
+     "timeframe": {
+      "ar": "أول أسبوعين",
+      "en": "First 2 weeks"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خلل التغذية: أقل من الاحتياج",
-    "en": "Imbalanced nutrition: less than requirements"
-   },
-   "need": {
-    "ar": "تحسين التغذية",
-    "en": "Improve nutrition"
-   },
-   "actions": {
-    "ar": [
-     "وزن أسبوعي",
-     "أكل غني بالبروتين والسعرات",
-     "وجبات صغيرة متكررة"
-    ],
-    "en": [
-     "Weekly weight",
-     "High-protein, high-calorie diet",
-     "Small frequent meals"
-    ]
-   },
-   "outcome": {
-    "ar": "ثبات أو زيادة الوزن",
-    "en": "Stable or rising weight"
-   },
-   "timeframe": {
-    "ar": "أسبوعين",
-    "en": "2 weeks"
-   }
-  },
-  {
-   "diagnosis": {
+   "id": "ineffective-health-management-tb",
+   "kind": "risk",
+   "title": {
     "ar": "خطر عدم الالتزام بالعلاج",
-    "en": "Risk for non-adherence"
+    "en": "Risk for Nonadherence (Anti-TB Therapy)"
    },
-   "need": {
-    "ar": "الالتزام 6 شهور",
-    "en": "6-month adherence"
+   "definition": {
+    "ar": "قابلية لعدم اتباع خطة العلاج الطويلة.",
+    "en": "Susceptibility to not following the long treatment plan."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "شرح خطورة الإيقاف",
-     "علاج تحت الملاحظة (DOT)",
-     "متابعة وظائف الكبد"
+     "علاج طويل (6 أشهر على الأقل) بأدوية متعددة",
+     "تحسن الأعراض مبكرًا",
+     "الأعراض الجانبية"
     ],
     "en": [
-     "Explain the risk of stopping",
-     "DOT",
-     "Liver tests"
+     "Long (≥ 6 months) multi-drug regimen",
+     "Early symptom relief",
+     "Side effects"
     ]
    },
-   "outcome": {
-    "ar": "المريض ملتزم بالجرعات",
-    "en": "Patient adherent"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لو بقيت كويس بعد شهر أقدر أبطل؟\""
+     ],
+     "en": [
+      "\"If I feel well after a month, can I stop?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بدأ العلاج الرباعي."
+     ],
+     "en": [
+      "Started four-drug therapy."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "قبل الخروج ثم شهريًا",
-    "en": "Before discharge, then monthly"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يذكر المريض مدة العلاج وخطورة إيقافه."
+     ],
+     "en": [
+      "Before discharge: states treatment duration and danger of stopping."
+     ]
+    },
+    "long": {
+     "ar": [
+      "إكمال العلاج كاملًا وتحويل المسحة للسلبية."
+     ],
+     "en": [
+      "Completes therapy; smear conversion."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح أن الإيقاف المبكر يسبب درنًا مقاومًا للأدوية.",
+      "en": "Explain early stopping causes drug-resistant TB."
+     },
+     "rationale": {
+      "ar": "الدافع للالتزام.",
+      "en": "Motivates adherence."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "العلاج تحت الملاحظة المباشرة (DOTS).",
+      "en": "Directly observed therapy (DOTS)."
+     },
+     "rationale": {
+      "ar": "يضمن أخذ الجرعات.",
+      "en": "Ensures doses are taken."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "أخذ الأدوية على معدة فارغة في وقت ثابت.",
+      "en": "Take drugs on an empty stomach at a fixed time."
+     },
+     "rationale": {
+      "ar": "أفضل امتصاص.",
+      "en": "Best absorption."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "الأعراض الجانبية: تلون البول والدموع بالبرتقالي (ريفامبيسين - طبيعي)، صفراء أو غثيان (الكبد)، تنميل الأطراف (أيزونيازيد)، ضعف النظر (إيثامبيوتول).",
+      "en": "Side effects: orange urine/tears (rifampicin — harmless), jaundice or nausea (liver), tingling (isoniazid), visual changes (ethambutol)."
+     },
+     "rationale": {
+      "ar": "يعرف ما يُبلغ عنه.",
+      "en": "Knows what to report."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة وظائف الكبد والنظر، وإعطاء فيتامين B6 مع الأيزونيازيد حسب الأمر.",
+      "en": "Monitor LFTs and vision; give vitamin B6 with isoniazid as ordered."
+     },
+     "rationale": {
+      "ar": "وقاية من السمية.",
+      "en": "Prevents toxicity."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "ريفامبيسين يقلل فاعلية حبوب منع الحمل.",
+      "en": "Rifampicin reduces oral contraceptive efficacy."
+     },
+     "rationale": {
+      "ar": "تجنب الحمل غير المخطط.",
+      "en": "Avoid unplanned pregnancy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إشراك الأسرة وتحديد موعد المتابعة.",
+      "en": "Involve family; schedule follow-up."
+     },
+     "rationale": {
+      "ar": "دعم واستمرارية.",
+      "en": "Support and continuity."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يذكر أن العلاج 6 أشهر ويعرف الأعراض الجانبية — تحقق.",
+      "en": "States 6-month duration and side effects — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف عن العلاج",
+      "en": "Treatment teaching"
+     },
+     "actions": {
+      "ar": [
+       "شرح أن الإيقاف المبكر يسبب درنًا مقاومًا للأدوية.",
+       "أخذ الأدوية على معدة فارغة في وقت ثابت.",
+       "الأعراض الجانبية: تلون البول والدموع بالبرتقالي (ريفامبيسين - طبيعي)، صفراء أو غثيان (الكبد)، تنميل الأطراف (أيزونيازيد)، ضعف النظر (إيثامبيوتول).",
+       "ريفامبيسين يقلل فاعلية حبوب منع الحمل."
+      ],
+      "en": [
+       "Explain early stopping causes drug-resistant TB.",
+       "Take drugs on an empty stomach at a fixed time.",
+       "Side effects: orange urine/tears (rifampicin — harmless), jaundice or nausea (liver), tingling (isoniazid), visual changes (ethambutol).",
+       "Rifampicin reduces oral contraceptive efficacy."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يعرف خطته.",
+      "en": "Patient knows the plan."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    },
+    {
+     "need": {
+      "ar": "الالتزام والمتابعة",
+      "en": "Adherence and monitoring"
+     },
+     "actions": {
+      "ar": [
+       "العلاج تحت الملاحظة المباشرة (DOTS).",
+       "متابعة وظائف الكبد والنظر، وإعطاء فيتامين B6 مع الأيزونيازيد حسب الأمر.",
+       "إشراك الأسرة وتحديد موعد المتابعة."
+      ],
+      "en": [
+       "Directly observed therapy (DOTS).",
+       "Monitor LFTs and vision; give vitamin B6 with isoniazid as ordered.",
+       "Involve family; schedule follow-up."
+      ]
+     },
+     "outcome": {
+      "ar": "إكمال العلاج.",
+      "en": "Therapy completed."
+     },
+     "timeframe": {
+      "ar": "6 أشهر",
+      "en": "6 months"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ineffective-airway-clearance-tb",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية تنظيف مجرى الهواء",
+    "en": "Ineffective Airway Clearance"
+   },
+   "definition": {
+    "ar": "عدم القدرة على إزالة الإفرازات أو الانسداد من مجرى الهواء للحفاظ عليه مفتوحًا.",
+    "en": "Inability to clear secretions or obstructions from the airway to maintain patency."
+   },
+   "relatedTo": {
+    "ar": [
+     "إفرازات تجويفية ونزيف بسيط"
+    ],
+    "en": [
+     "Cavity secretions and minor bleeding"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "كحة غير فعالة",
+     "أصوات تنفس غير طبيعية (خرخرة، صفير)",
+     "بلغم كثير"
+    ],
+    "en": [
+     "Ineffective cough",
+     "Adventitious breath sounds (crackles, wheeze)",
+     "Excess sputum"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بكح من شهرين وأحيانًا في دم.\""
+     ],
+     "en": [
+      "\"I've been coughing for 2 months, sometimes with blood.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بلغم مخلوط بخيوط دم."
+     ],
+     "en": [
+      "Blood-streaked sputum."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24–48 ساعة: كحة فعالة وصدر أوضح وتنفس 12–20."
+     ],
+     "en": [
+      "Within 24–48 h: effective cough, clearer chest, RR 12–20."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: مجرى هواء مفتوح وإخراج الإفرازات بسهولة."
+     ],
+     "en": [
+      "Before discharge: patent airway and easy secretion clearance."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة سرعة التنفس وعمقه واستخدام العضلات المساعدة ولون المريض (زرقة الشفاه).",
+      "en": "Assess respiratory rate, depth, accessory muscle use and colour (lip cyanosis)."
+     },
+     "rationale": {
+      "ar": "يقيم شدة الضيق.",
+      "en": "Assesses severity."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "سماع الصدر قبل وبعد التدخلات.",
+      "en": "Auscultate before and after interventions."
+     },
+     "rationale": {
+      "ar": "يقيس الفعالية.",
+      "en": "Measures effect."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة الكحة والبلغم: اللون والكمية والقوام والرائحة، وعمل مزرعة بلغم إذا كان غير طبيعي حسب الأمر.",
+      "en": "Observe cough and sputum: colour, amount, consistency, odour; send culture if abnormal as ordered."
+     },
+     "rationale": {
+      "ar": "يكشف العدوى ويوجه العلاج.",
+      "en": "Detects infection and guides therapy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع شبه جالس أو جالس (45–90 درجة).",
+      "en": "Semi-Fowler or high-Fowler position (45–90°)."
+     },
+     "rationale": {
+      "ar": "يحسن تمدد الرئة.",
+      "en": "Improves lung expansion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تمارين التنفس العميق والكحة الفعالة كل 2 ساعة.",
+      "en": "Deep breathing and effective coughing every 2 h."
+     },
+     "rationale": {
+      "ar": "تخرج الإفرازات.",
+      "en": "Mobilizes secretions."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "سوائل دافئة 2–3 لتر يوميًا إلا إذا مُنعت.",
+      "en": "Warm fluids 2–3 L/day unless restricted."
+     },
+     "rationale": {
+      "ar": "تخفف الإفرازات.",
+      "en": "Thins secretions."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "جلسات البخار وموسعات الشعب وطاردات البلغم حسب الأمر.",
+      "en": "Nebulized bronchodilators and mucolytics as ordered."
+     },
+     "rationale": {
+      "ar": "توسع الشعب وتسهل الإخراج.",
+      "en": "Dilate airways and ease clearance."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب فورًا عن كحة دم غزيرة (> 100 مل) ووضع المريض على الجانب المصاب.",
+      "en": "Report massive hemoptysis (> 100 mL) immediately; position affected side down."
+     },
+     "rationale": {
+      "ar": "يحمي الرئة السليمة.",
+      "en": "Protects the healthy lung."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الكحة فعالة، الخرخرة أقل، التنفس 20 — تحقق.",
+      "en": "Effective cough, fewer crackles, RR 20 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم التنفس والإفرازات",
+      "en": "Assess breathing and secretions"
+     },
+     "actions": {
+      "ar": [
+       "متابعة سرعة التنفس وعمقه واستخدام العضلات المساعدة ولون المريض (زرقة الشفاه).",
+       "سماع الصدر قبل وبعد التدخلات.",
+       "ملاحظة الكحة والبلغم: اللون والكمية والقوام والرائحة، وعمل مزرعة بلغم إذا كان غير طبيعي حسب الأمر."
+      ],
+      "en": [
+       "Assess respiratory rate, depth, accessory muscle use and colour (lip cyanosis).",
+       "Auscultate before and after interventions.",
+       "Observe cough and sputum: colour, amount, consistency, odour; send culture if abnormal as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "تنفس أهدأ وإفرازات موثقة.",
+      "en": "Calmer breathing, secretions documented."
+     },
+     "timeframe": {
+      "ar": "كل 2–4 ساعات",
+      "en": "Every 2–4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تنظيف مجرى الهواء",
+      "en": "Clear the airway"
+     },
+     "actions": {
+      "ar": [
+       "وضع شبه جالس أو جالس (45–90 درجة).",
+       "تمارين التنفس العميق والكحة الفعالة كل 2 ساعة.",
+       "سوائل دافئة 2–3 لتر يوميًا إلا إذا مُنعت.",
+       "جلسات البخار وموسعات الشعب وطاردات البلغم حسب الأمر.",
+       "إبلاغ الطبيب فورًا عن كحة دم غزيرة (> 100 مل) ووضع المريض على الجانب المصاب."
+      ],
+      "en": [
+       "Semi-Fowler or high-Fowler position (45–90°).",
+       "Deep breathing and effective coughing every 2 h.",
+       "Warm fluids 2–3 L/day unless restricted.",
+       "Nebulized bronchodilators and mucolytics as ordered.",
+       "Report massive hemoptysis (> 100 mL) immediately; position affected side down."
+      ]
+     },
+     "outcome": {
+      "ar": "صدر أوضح.",
+      "en": "Clearer chest."
+     },
+     "timeframe": {
+      "ar": "24–48 ساعة",
+      "en": "24–48 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "imbalanced-nutrition-tb",
+   "kind": "actual",
+   "title": {
+    "ar": "تغذية أقل من احتياج الجسم",
+    "en": "Imbalanced Nutrition: Less Than Body Requirements"
+   },
+   "definition": {
+    "ar": "تناول غذاء غير كافٍ لاحتياجات الجسم.",
+    "en": "Intake insufficient for metabolic needs."
+   },
+   "relatedTo": {
+    "ar": [
+     "زيادة الاحتياج بسبب العدوى المزمنة وفقد الشهية"
+    ],
+    "en": [
+     "Increased demand from chronic infection; anorexia"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "نقص الوزن 8 كجم",
+     "ضعف عام"
+    ],
+    "en": [
+     "8 kg weight loss",
+     "General weakness"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"خسيت كتير ومليش نفس.\""
+     ],
+     "en": [
+      "\"I've lost a lot of weight and have no appetite.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مؤشر كتلة الجسم 17.2، ألبومين 3.0."
+     ],
+     "en": [
+      "BMI 17.2, albumin 3.0."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوعين: يأكل 75% من الوجبات."
+     ],
+     "en": [
+      "Within 2 weeks: eats 75% of meals."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال شهرين: زيادة الوزن."
+     ],
+     "en": [
+      "Within 2 months: weight gain."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "وزن أسبوعي وتسجيل الأكل.",
+      "en": "Weekly weight; intake chart."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وجبات صغيرة متكررة غنية بالبروتين والسعرات.",
+      "en": "Small frequent high-protein, high-calorie meals."
+     },
+     "rationale": {
+      "ar": "تعوض الاحتياج.",
+      "en": "Meet demand."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم قبل الأكل.",
+      "en": "Oral care before meals."
+     },
+     "rationale": {
+      "ar": "تحسن الشهية.",
+      "en": "Improves appetite."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إحالة لأخصائي التغذية ومكملات حسب الأمر.",
+      "en": "Dietitian referral; supplements as ordered."
+     },
+     "rationale": {
+      "ar": "دعم متخصص.",
+      "en": "Specialist support."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تجنب الكحول.",
+      "en": "Avoid alcohol."
+     },
+     "rationale": {
+      "ar": "يزيد سمية الكبد.",
+      "en": "Increases hepatotoxicity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "متابعة الغثيان وتنسيق مواعيد الأدوية مع الأكل حسب الطبيب.",
+      "en": "Manage nausea; coordinate drug timing per physician."
+     },
+     "rationale": {
+      "ar": "يقلل فقد الشهية.",
+      "en": "Reduces anorexia."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "يأكل 60% والوزن ثابت — تحقق جزئيًا.",
+      "en": "Eats 60%; weight stable — partially met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التغذية",
+      "en": "Nutrition"
+     },
+     "actions": {
+      "ar": [
+       "وزن أسبوعي وتسجيل الأكل.",
+       "وجبات صغيرة متكررة غنية بالبروتين والسعرات.",
+       "العناية بالفم قبل الأكل.",
+       "إحالة لأخصائي التغذية ومكملات حسب الأمر.",
+       "تجنب الكحول.",
+       "متابعة الغثيان وتنسيق مواعيد الأدوية مع الأكل حسب الطبيب."
+      ],
+      "en": [
+       "Weekly weight; intake chart.",
+       "Small frequent high-protein, high-calorie meals.",
+       "Oral care before meals.",
+       "Dietitian referral; supplements as ordered.",
+       "Avoid alcohol.",
+       "Manage nausea; coordinate drug timing per physician."
+      ]
+     },
+     "outcome": {
+      "ar": "أكل كافٍ وزيادة الوزن.",
+      "en": "Adequate intake, weight gain."
+     },
+     "timeframe": {
+      "ar": "أسبوعيًا",
+      "en": "Weekly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "social-isolation-tb",
+   "kind": "actual",
+   "title": {
+    "ar": "العزلة الاجتماعية والوصمة",
+    "en": "Social Isolation and Stigma"
+   },
+   "definition": {
+    "ar": "وحدة يشعر بها الشخص ويعتبرها مفروضة عليه.",
+    "en": "Aloneness experienced as imposed by others."
+   },
+   "relatedTo": {
+    "ar": [
+     "العزل الطبي والوصمة الاجتماعية للدرن"
+    ],
+    "en": [
+     "Medical isolation and TB stigma"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "حزن وانسحاب",
+     "خوف من رد فعل الناس"
+    ],
+    "en": [
+     "Sadness and withdrawal",
+     "Fear of others' reactions"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش عايز حد يعرف إن عندي سل.\""
+     ],
+     "en": [
+      "\"I don't want anyone to know I have TB.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قليل الكلام، يرفض الزيارات."
+     ],
+     "en": [
+      "Quiet, refuses visits."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوع: يعبر المريض عن مشاعره ويفهم أن المرض قابل للشفاء."
+     ],
+     "en": [
+      "Within a week: expresses feelings and understands TB is curable."
+     ]
+    },
+    "long": {
+     "ar": [
+      "العودة لحياته الاجتماعية بعد انتهاء فترة العدوى."
+     ],
+     "en": [
+      "Returns to social life after the infectious period."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم المشاعر والدعم المتاح.",
+      "en": "Assess feelings and support."
+     },
+     "rationale": {
+      "ar": "يحدد الاحتياج.",
+      "en": "Identifies need."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح أن الدرن مرض قابل للشفاء تمامًا وأن العدوى تقل كثيرًا بعد أسبوعين من العلاج.",
+      "en": "Explain TB is fully curable and infectiousness drops after ~2 weeks of therapy."
+     },
+     "rationale": {
+      "ar": "يقلل الوصمة والخوف.",
+      "en": "Reduces stigma and fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الحفاظ على سرية التشخيص.",
+      "en": "Maintain confidentiality."
+     },
+     "rationale": {
+      "ar": "يحمي المريض.",
+      "en": "Protects the patient."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواصل بالهاتف مع الأسرة وزيارات قصيرة آمنة.",
+      "en": "Phone contact and short safe visits."
+     },
+     "rationale": {
+      "ar": "يحافظ على الروابط.",
+      "en": "Maintains bonds."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الزيارات المتكررة من الفريق للحديث.",
+      "en": "Frequent staff visits to talk."
+     },
+     "rationale": {
+      "ar": "تقلل الوحدة.",
+      "en": "Reduce loneliness."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إحالة للأخصائي الاجتماعي عند الحاجة (العمل، الدعم المادي).",
+      "en": "Social worker referral as needed (work, financial)."
+     },
+     "rationale": {
+      "ar": "دعم عملي.",
+      "en": "Practical support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يتحدث عن مخاوفه ويقبل مكالمات أسرته — تحقق.",
+      "en": "Discusses fears, accepts family calls — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "دعم نفسي واجتماعي",
+      "en": "Psychosocial support"
+     },
+     "actions": {
+      "ar": [
+       "تقييم المشاعر والدعم المتاح.",
+       "شرح أن الدرن مرض قابل للشفاء تمامًا وأن العدوى تقل كثيرًا بعد أسبوعين من العلاج.",
+       "الحفاظ على سرية التشخيص.",
+       "التواصل بالهاتف مع الأسرة وزيارات قصيرة آمنة.",
+       "الزيارات المتكررة من الفريق للحديث.",
+       "إحالة للأخصائي الاجتماعي عند الحاجة (العمل، الدعم المادي)."
+      ],
+      "en": [
+       "Assess feelings and support.",
+       "Explain TB is fully curable and infectiousness drops after ~2 weeks of therapy.",
+       "Maintain confidentiality.",
+       "Phone contact and short safe visits.",
+       "Frequent staff visits to talk.",
+       "Social worker referral as needed (work, financial)."
+      ]
+     },
+     "outcome": {
+      "ar": "إحساس أقل بالعزلة.",
+      "en": "Less isolation."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "hyperthermia-tb",
+   "kind": "actual",
+   "title": {
+    "ar": "ارتفاع الحرارة والعرق الليلي",
+    "en": "Hyperthermia and Night Sweats"
+   },
+   "definition": {
+    "ar": "ارتفاع حرارة الجسم بسبب العدوى.",
+    "en": "Raised body temperature due to infection."
+   },
+   "relatedTo": {
+    "ar": [
+     "العدوى المزمنة"
+    ],
+    "en": [
+     "Chronic infection"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "حرارة مسائية 38.4",
+     "عرق ليلي غزير"
+    ],
+    "en": [
+     "Evening fever 38.4",
+     "Drenching night sweats"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بصحى هدومي مبلولة عرق.\""
+     ],
+     "en": [
+      "\"I wake up with my clothes soaked in sweat.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الحرارة 38.4 مساءً."
+     ],
+     "en": [
+      "T 38.4 in the evening."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: راحة ليلية وتغيير الملابس عند الحاجة."
+     ],
+     "en": [
+      "During the stay: restful nights; clothes changed as needed."
+     ]
+    },
+    "long": {
+     "ar": [
+      "اختفاء الحمى مع العلاج خلال أسابيع."
+     ],
+     "en": [
+      "Fever resolves within weeks of treatment."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الحرارة كل 4 ساعات خاصة مساءً.",
+      "en": "T every 4 h, especially evenings."
+     },
+     "rationale": {
+      "ar": "نمط الحمى.",
+      "en": "Fever pattern."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "خافض حرارة حسب الأمر.",
+      "en": "Antipyretic as ordered."
+     },
+     "rationale": {
+      "ar": "راحة.",
+      "en": "Comfort."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ملابس قطنية خفيفة وتغيير المفارش المبللة.",
+      "en": "Light cotton clothes; change damp linen."
+     },
+     "rationale": {
+      "ar": "راحة ومنع البرد.",
+      "en": "Comfort; prevents chill."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "زيادة السوائل.",
+      "en": "Increase fluids."
+     },
+     "rationale": {
+      "ar": "تعويض العرق.",
+      "en": "Replace sweat losses."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تهوية الغرفة.",
+      "en": "Ventilate the room."
+     },
+     "rationale": {
+      "ar": "يقلل الحرارة والعدوى.",
+      "en": "Cooler and safer."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الاستمرار في العلاج المضاد للدرن.",
+      "en": "Continue anti-TB therapy."
+     },
+     "rationale": {
+      "ar": "علاج السبب.",
+      "en": "Treat the cause."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحمى أقل والنوم أفضل بعد أسبوعين — تحقق.",
+      "en": "Less fever and better sleep at 2 weeks — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الراحة من الحمى",
+      "en": "Fever comfort"
+     },
+     "actions": {
+      "ar": [
+       "قياس الحرارة كل 4 ساعات خاصة مساءً.",
+       "خافض حرارة حسب الأمر.",
+       "ملابس قطنية خفيفة وتغيير المفارش المبللة.",
+       "زيادة السوائل.",
+       "تهوية الغرفة.",
+       "الاستمرار في العلاج المضاد للدرن."
+      ],
+      "en": [
+       "T every 4 h, especially evenings.",
+       "Antipyretic as ordered.",
+       "Light cotton clothes; change damp linen.",
+       "Increase fluids.",
+       "Ventilate the room.",
+       "Continue anti-TB therapy."
+      ]
+     },
+     "outcome": {
+      "ar": "حرارة أقل ونوم مريح.",
+      "en": "Lower T, restful sleep."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -277,10 +1192,10 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "WHO Consolidated Guidelines on Tuberculosis: Module 4 — Treatment (2022)"
   },
   {
-   "title": "WHO Consolidated Guidelines on Tuberculosis — Module 4: Treatment"
+   "title": "CDC — Guidelines for Preventing the Transmission of M. tuberculosis in Health-Care Settings (2005)"
   }
  ]
 }

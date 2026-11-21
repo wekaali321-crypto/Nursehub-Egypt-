@@ -1,297 +1,1164 @@
 {
  "id": "mechanical-ventilation",
- "icon": "🫧",
+ "icon": "🫁",
  "system": "respiratory",
+ "folder": "disease",
  "title": {
   "ar": "المريض على جهاز التنفس الصناعي",
-  "en": "Mechanically Ventilated Patient"
+  "en": "Patient on Mechanical Ventilation"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض على التنفس الصناعي: الحفاظ على مجرى الهواء، الوقاية من الالتهاب الرئوي المرتبط بالجهاز (VAP)، والتواصل.",
-  "en": "Care plan for a ventilated patient: airway maintenance, ventilator-associated pneumonia (VAP) prevention and communication."
+  "ar": "خطة رعاية المريض على جهاز التنفس: متابعة المريض والجهاز والإنذارات، الشفط والعناية بالأنبوبة، الوقاية من الالتهاب الرئوي، التغذية بالأنبوبة، الفطام، والتواصل.",
+  "en": "Mechanical ventilation care plan: patient/ventilator and alarm monitoring, suction and tube care, VAP prevention, enteral feeding, weaning and communication."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "عدم فعالية تنظيف مجرى الهواء (Ineffective airway clearance) مرتبطة بوجود الأنبوبة الحنجرية وضعف الكحة وتظهر في إفرازات وخرخرة وارتفاع ضغط المجرى الهوائي.",
-    "en": "Ineffective airway clearance related to the endotracheal tube and impaired cough as evidenced by secretions, coarse crackles and high airway pressures."
+   "id": "impaired-spontaneous-ventilation",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف التنفس التلقائي",
+    "en": "Impaired Spontaneous Ventilation"
+   },
+   "definition": {
+    "ar": "عدم القدرة على بدء أو الحفاظ على تنفس مستقل كافٍ للحياة.",
+    "en": "Inability to initiate and/or maintain independent breathing adequate to support life."
+   },
+   "relatedTo": {
+    "ar": [
+     "فشل تنفسي",
+     "إرهاق عضلات التنفس",
+     "التخدير والمهدئات"
+    ],
+    "en": [
+     "Respiratory failure",
+     "Respiratory muscle fatigue",
+     "Sedation"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "يحتاج تنفسًا صناعيًا",
+     "غازات دم غير طبيعية"
+    ],
+    "en": [
+     "Requires mechanical ventilation",
+     "Abnormal blood gases"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "المريض على مهدئ ولا يتكلم."
+      "المريض على جهاز التنفس، مهدأ."
      ],
      "en": [
-      "Patient sedated and unable to speak."
+      "Ventilated and sedated."
      ]
     },
     "objective": {
      "ar": [
-      "أنبوبة حنجرية (ETT) على جهاز تنفس، إفرازات كثيفة.",
-      "إنذار ارتفاع الضغط (High pressure alarm) متكرر.",
-      "التشبع 92% على FiO₂ ‏50%."
+      "وضع SIMV، حجم الهواء 450 مل، تنفس 16، PEEP 5، FiO₂ 40%.",
+      "pH 7.38، PaO₂ 85، PaCO₂ 42."
      ],
      "en": [
-      "Endotracheal tube on ventilator; thick secretions.",
-      "Frequent high-pressure alarms.",
-      "SpO₂ 92% on FiO₂ 50%."
+      "SIMV, Vt 450 mL, RR 16, PEEP 5, FiO₂ 40%.",
+      "pH 7.38, PaO₂ 85, PaCO₂ 42."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال الوردية: مجرى هواء مفتوح، إنذارات أقل، وتشبع ≥ 94% (أو حسب هدف الطبيب)."
-    ],
-    "en": [
-     "During the shift: patent airway, fewer alarms and SpO₂ ≥ 94% (or physician target)."
-    ]
+    "short": {
+     "ar": [
+      "كل وردية: غازات دم في المدى المستهدف وضغط المجرى الهوائي آمن."
+     ],
+     "en": [
+      "Every shift: blood gases at target; safe airway pressures."
+     ]
+    },
+    "long": {
+     "ar": [
+      "فطام ناجح ونزع الأنبوبة."
+     ],
+     "en": [
+      "Successful weaning and extubation."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "شفط الإفرازات عند الحاجة فقط (وليس بموعد ثابت) بطريقة معقمة وأكسجين 100% قبلها، ومدة الشفط ≤ 10–15 ثانية.",
-      "en": "Suction only when needed (not routinely), aseptically, with pre-oxygenation and ≤ 10–15 seconds per pass."
+      "ar": "ملاحظة العلامات الحيوية والمونيتور ولون المريض (زرقة أو تغير لون).",
+      "en": "Observe vitals, ECG and colour (cyanosis or colour change)."
      },
      "rationale": {
-      "ar": "يزيل الإفرازات مع تقليل نقص الأكسجين وإصابة الأغشية.",
-      "en": "Clears secretions while limiting hypoxemia and mucosal injury."
+      "ar": "تقييم عام للتهوية والدورة.",
+      "en": "Overall ventilation and circulation assessment."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "التأكد من مكان الأنبوبة (العلامة عند الأسنان) وتثبيتها وضغط البالونة (Cuff) ‏20–30 سم ماء.",
-      "en": "Check tube position (mark at the teeth), security and cuff pressure 20–30 cmH₂O."
+      "ar": "سماع الصدر وملاحظة حركة الصدر متساوية في الرئتين.",
+      "en": "Auscultate and check equal bilateral chest movement."
      },
      "rationale": {
-      "ar": "يمنع خروج الأنبوبة وتسرب الإفرازات للرئة وإصابة القصبة.",
-      "en": "Prevents dislodgement, aspiration and tracheal injury."
+      "ar": "عدم التساوي يدل على دخول الأنبوبة في شعبة واحدة أو استرواح.",
+      "en": "Inequality suggests endobronchial tube or pneumothorax."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "سماع الصدر ومتابعة ضغط المجرى الهوائي والتشبع وغازات الدم.",
-      "en": "Auscultate the chest and monitor airway pressures, SpO₂ and ABGs."
+      "ar": "متابعة إعدادات الجهاز: حجم الهواء في كل نفس (5–7 مل/كجم من الوزن المثالي)، معدل التنفس (16–24 حسب الإعداد)، وضغط الهواء الداخل والخارج.",
+      "en": "Check settings: tidal volume (5–7 mL/kg ideal weight), rate (16–24 as set), and inspiratory/expiratory pressures."
      },
      "rationale": {
-      "ar": "يكشف الانسداد أو الاسترواح أو انزلاق الأنبوبة.",
-      "en": "Detects obstruction, pneumothorax or tube displacement."
+      "ar": "حجم صغير يحمي الرئة من الإصابة.",
+      "en": "Low tidal volume protects the lung."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "ترطيب الهواء المستنشق حسب البروتوكول.",
-      "en": "Ensure humidification per protocol."
+      "ar": "ملاحظة أي ارتفاع في ضغط الهواء: تجمع إفرازات، يقظة المريض ومقاومته للجهاز، التواء أو ضغط على أنابيب الجهاز، أو تشنج الشعب.",
+      "en": "Respond to high-pressure alarms: secretions, patient waking/fighting the ventilator, kinked or compressed tubing, bronchospasm."
      },
      "rationale": {
-      "ar": "يمنع جفاف وسماكة الإفرازات.",
-      "en": "Prevents thick, dry secretions."
+      "ar": "ارتفاع الضغط مؤشر لمشكلة تحتاج حلًا فوريًا.",
+      "en": "High pressure signals a problem needing immediate action."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "عند الإنذار: فحص المريض أولًا ثم الجهاز (DOPE: Displacement, Obstruction, Pneumothorax, Equipment).",
-      "en": "On alarm: assess the patient first, then the machine (DOPE: displacement, obstruction, pneumothorax, equipment)."
+      "ar": "ملاحظة إنذارات انخفاض الضغط: انفصال الدائرة أو تسرب البالونة.",
+      "en": "Respond to low-pressure alarms: circuit disconnection or cuff leak."
      },
      "rationale": {
-      "ar": "طريقة منظمة لاكتشاف السبب بسرعة.",
-      "en": "A structured way to find the cause fast."
+      "ar": "يمنع فقد التهوية.",
+      "en": "Prevents loss of ventilation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وجود جهاز أمبو بقناع وأكسجين بجانب السرير دائمًا، وعند تعطل الجهاز: فصل المريض والتنفس بالأمبو.",
+      "en": "Keep a bag-valve-mask with oxygen at the bedside; if the ventilator fails, disconnect and bag the patient."
+     },
+     "rationale": {
+      "ar": "خطة طوارئ.",
+      "en": "Emergency backup."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ملاحظة المرطب: مستوى الماء ودرجة الحرارة.",
+      "en": "Check the humidifier: water level and temperature."
+     },
+     "rationale": {
+      "ar": "الهواء الجاف يجفف الإفرازات ويسد الأنبوبة.",
+      "en": "Dry gas thickens secretions and blocks the tube."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عمل غازات الدم حسب الأمر وبعد تغيير الإعدادات بـ 20–30 دقيقة.",
+      "en": "ABG as ordered and 20–30 minutes after setting changes."
+     },
+     "rationale": {
+      "ar": "يقيم الاستجابة.",
+      "en": "Evaluates response."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "الإفرازات قلت بعد الشفط، الإنذارات اختفت، التشبع 96%. — تحقق الهدف."
-    ],
-    "en": [
-     "Secretions reduced after suctioning, alarms resolved, SpO₂ 96%. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "غازات الدم مستقرة وضغط الذروة 24 سم ماء — تحقق.",
+      "en": "Stable ABGs; peak pressure 24 cmH₂O — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة المريض والجهاز",
+      "en": "Monitor patient and ventilator"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة العلامات الحيوية والمونيتور ولون المريض (زرقة أو تغير لون).",
+       "سماع الصدر وملاحظة حركة الصدر متساوية في الرئتين.",
+       "متابعة إعدادات الجهاز: حجم الهواء في كل نفس (5–7 مل/كجم من الوزن المثالي)، معدل التنفس (16–24 حسب الإعداد)، وضغط الهواء الداخل والخارج.",
+       "ملاحظة أي ارتفاع في ضغط الهواء: تجمع إفرازات، يقظة المريض ومقاومته للجهاز، التواء أو ضغط على أنابيب الجهاز، أو تشنج الشعب.",
+       "ملاحظة إنذارات انخفاض الضغط: انفصال الدائرة أو تسرب البالونة.",
+       "ملاحظة المرطب: مستوى الماء ودرجة الحرارة.",
+       "عمل غازات الدم حسب الأمر وبعد تغيير الإعدادات بـ 20–30 دقيقة."
+      ],
+      "en": [
+       "Observe vitals, ECG and colour (cyanosis or colour change).",
+       "Auscultate and check equal bilateral chest movement.",
+       "Check settings: tidal volume (5–7 mL/kg ideal weight), rate (16–24 as set), and inspiratory/expiratory pressures.",
+       "Respond to high-pressure alarms: secretions, patient waking/fighting the ventilator, kinked or compressed tubing, bronchospasm.",
+       "Respond to low-pressure alarms: circuit disconnection or cuff leak.",
+       "Check the humidifier: water level and temperature.",
+       "ABG as ordered and 20–30 minutes after setting changes."
+      ]
+     },
+     "outcome": {
+      "ar": "غازات في المدى وإنذارات معالجة.",
+      "en": "ABGs at target; alarms resolved."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    },
+    {
+     "need": {
+      "ar": "الجاهزية للطوارئ",
+      "en": "Emergency readiness"
+     },
+     "actions": {
+      "ar": [
+       "وجود جهاز أمبو بقناع وأكسجين بجانب السرير دائمًا، وعند تعطل الجهاز: فصل المريض والتنفس بالأمبو."
+      ],
+      "en": [
+       "Keep a bag-valve-mask with oxygen at the bedside; if the ventilator fails, disconnect and bag the patient."
+      ]
+     },
+     "outcome": {
+      "ar": "أمبو جاهز.",
+      "en": "Bag ready."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر العدوى (Risk for infection – VAP) مرتبط بالأنبوبة الحنجرية وتجاوزها لدفاعات مجرى الهواء الطبيعية.",
-    "en": "Risk for infection (ventilator-associated pneumonia) related to the endotracheal tube bypassing normal airway defenses."
-   },
-   "assessment": {
-    "subjective": {
-     "ar": [
-      "المريض على مهدئ ولا يستطيع الكلام؛ الأسرة: \"هو بيشرب سجاير من 20 سنة.\""
-     ],
-     "en": [
-      "Patient sedated and unable to speak; family: \"He has smoked for 20 years.\""
-     ]
-    },
-    "objective": {
-     "ar": [
-      "على الجهاز منذ 3 أيام.",
-      "أنبوبة معدية (NGT) للتغذية."
-     ],
-     "en": [
-      "Ventilated for 3 days.",
-      "Nasogastric tube for feeding."
-     ]
-    }
-   },
-   "goals": {
-    "ar": [
-     "أثناء فترة التنفس الصناعي: لا علامات التهاب رئوي جديد (حرارة، إفرازات صديدية، ارتشاح جديد بالأشعة)."
-    ],
-    "en": [
-     "While ventilated: no new pneumonia (fever, purulent secretions, new infiltrate)."
-    ]
-   },
-   "interventions": [
-    {
-     "action": {
-      "ar": "رفع رأس السرير 30–45° طوال الوقت ما لم يُمنع.",
-      "en": "Keep the head of bed at 30–45° unless contraindicated."
-     },
-     "rationale": {
-      "ar": "يقلل رجوع محتويات المعدة والشرقة.",
-      "en": "Reduces reflux and aspiration."
-     }
-    },
-    {
-     "action": {
-      "ar": "عناية الفم بالفرشاة والمطهر حسب البروتوكول.",
-      "en": "Oral care with toothbrushing and antiseptic per protocol."
-     },
-     "rationale": {
-      "ar": "يقلل البكتيريا التي تنزل للرئة.",
-      "en": "Reduces bacteria that migrate to the lungs."
-     }
-    },
-    {
-     "action": {
-      "ar": "إيقاف المهدئ يوميًا وتقييم الاستعداد لفصل الجهاز (Sedation hold / SBT) حسب الأمر.",
-      "en": "Daily sedation interruption and assessment of readiness to wean (SBT) as ordered."
-     },
-     "rationale": {
-      "ar": "كل يوم أقل على الجهاز يقلل خطر الالتهاب.",
-      "en": "Fewer ventilator days lower VAP risk."
-     }
-    },
-    {
-     "action": {
-      "ar": "غسل اليدين والتعامل المعقم مع دائرة الجهاز وعدم فتحها بلا داعٍ.",
-      "en": "Hand hygiene and aseptic handling of the circuit; avoid unnecessary disconnections."
-     },
-     "rationale": {
-      "ar": "يمنع دخول الميكروبات.",
-      "en": "Prevents contamination."
-     }
-    },
-    {
-     "action": {
-      "ar": "متابعة الحرارة ولون وكمية الإفرازات والأشعة.",
-      "en": "Monitor temperature, secretion colour/volume and chest X-ray."
-     },
-     "rationale": {
-      "ar": "اكتشاف مبكر للالتهاب.",
-      "en": "Early detection of VAP."
-     }
-    }
-   ],
-   "evaluation": {
-    "ar": [
-     "لا حرارة، والإفرازات بيضاء، والأشعة بدون ارتشاح جديد. — تحقق الهدف."
-    ],
-    "en": [
-     "Afebrile, white secretions, no new infiltrate. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
+   "id": "ineffective-airway-clearance-mv",
+   "kind": "actual",
+   "title": {
     "ar": "عدم فعالية تنظيف مجرى الهواء",
-    "en": "Ineffective airway clearance"
+    "en": "Ineffective Airway Clearance"
    },
-   "need": {
-    "ar": "مجرى هواء مفتوح",
-    "en": "Patent airway"
+   "definition": {
+    "ar": "عدم القدرة على إزالة الإفرازات من مجرى الهواء.",
+    "en": "Inability to clear secretions from the airway."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "شفط عند الحاجة بطريقة معقمة",
-     "ضغط البالونة 20–30",
-     "تثبيت الأنبوبة"
+     "الأنبوبة الحنجرية وغياب الكحة الفعالة"
     ],
     "en": [
-     "Aseptic suction as needed",
-     "Cuff pressure 20–30",
-     "Secure tube"
+     "Endotracheal tube and absent effective cough"
     ]
    },
-   "outcome": {
-    "ar": "تشبع ≥ 94% وإنذارات أقل",
-    "en": "SpO₂ ≥ 94%, fewer alarms"
-   },
-   "timeframe": {
-    "ar": "كل ساعة",
-    "en": "Hourly"
-   }
-  },
-  {
-   "diagnosis": {
-    "ar": "خطر الالتهاب الرئوي المرتبط بالجهاز",
-    "en": "Risk for VAP"
-   },
-   "need": {
-    "ar": "حزمة الوقاية (VAP bundle)",
-    "en": "VAP bundle"
-   },
-   "actions": {
+   "evidencedBy": {
     "ar": [
-     "رأس السرير 30–45°",
-     "عناية بالفم",
-     "إيقاف المهدئ يوميًا"
+     "إفرازات مسموعة",
+     "ارتفاع ضغط الذروة",
+     "هبوط التشبع"
     ],
     "en": [
-     "Head of bed 30–45°",
-     "Oral care",
-     "Daily sedation hold"
+     "Audible secretions",
+     "Rising peak pressure",
+     "Desaturation"
     ]
    },
-   "outcome": {
-    "ar": "لا التهاب رئوي جديد",
-    "en": "No new pneumonia"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "لا يستطيع الكلام."
+     ],
+     "en": [
+      "Unable to speak."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "خرخرة خشنة، ضغط الذروة ارتفع من 24 إلى 32."
+     ],
+     "en": [
+      "Coarse crackles; peak pressure rose from 24 to 32."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "يوميًا",
-    "en": "Daily"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "بعد الشفط: ضغط الذروة يعود لمستواه وصدر أوضح."
+     ],
+     "en": [
+      "After suction: peak pressure returns to baseline; clearer chest."
+     ]
+    },
+    "long": {
+     "ar": [
+      "مجرى هواء مفتوح طوال التنفس الصناعي."
+     ],
+     "en": [
+      "Patent airway throughout ventilation."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الحاجة للشفط (إفرازات مسموعة، ارتفاع الضغط، هبوط التشبع) وليس بشكل روتيني.",
+      "en": "Suction on need (audible secretions, rising pressure, desaturation), not routinely."
+     },
+     "rationale": {
+      "ar": "الشفط غير الضروري يؤذي الأغشية.",
+      "en": "Unnecessary suction injures mucosa."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الشفط من الأنبوبة الحنجرية ثم الفم والأنف حسب احتياج المريض بتقنية معقمة أو نظام مغلق مع أكسجين قبل وبعد.",
+      "en": "Suction the ETT, then mouth and nose as needed, aseptically or closed system, with pre/post oxygenation."
+     },
+     "rationale": {
+      "ar": "يزيل الإفرازات بأمان.",
+      "en": "Clears secretions safely."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تقليب المريض وتغيير وضعه كل ساعتين لتحريك الإفرازات وتسهيل شفطها وتجنب قرح الفراش.",
+      "en": "Turn every 2 h to mobilize secretions, ease suction and prevent pressure injury."
+     },
+     "rationale": {
+      "ar": "يحرك الإفرازات ويحمي الجلد.",
+      "en": "Mobilizes secretions and protects skin."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تمرينات الصدر (العلاج الطبيعي التنفسي) والأطراف باستمرار.",
+      "en": "Chest physiotherapy and limb exercises regularly."
+     },
+     "rationale": {
+      "ar": "تخرج الإفرازات وتمنع التيبس.",
+      "en": "Clears secretions; prevents stiffness."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بأنبوبة القصبة الهوائية: تثبيتها وتسجيل العمق عند الأسنان كل وردية.",
+      "en": "ETT care: secure it and record depth at the teeth every shift."
+     },
+     "rationale": {
+      "ar": "يمنع الخروج أو الانزلاق.",
+      "en": "Prevents dislodgement."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة لون وكمية ورائحة الإفرازات.",
+      "en": "Note secretion colour, amount and odour."
+     },
+     "rationale": {
+      "ar": "كشف العدوى.",
+      "en": "Detects infection."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "بعد الشفط عاد ضغط الذروة 25 والتشبع 96% — تحقق.",
+      "en": "After suction peak 25, SpO₂ 96% — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الشفط والعناية بالأنبوبة",
+      "en": "Suction and tube care"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الحاجة للشفط (إفرازات مسموعة، ارتفاع الضغط، هبوط التشبع) وليس بشكل روتيني.",
+       "الشفط من الأنبوبة الحنجرية ثم الفم والأنف حسب احتياج المريض بتقنية معقمة أو نظام مغلق مع أكسجين قبل وبعد.",
+       "العناية بأنبوبة القصبة الهوائية: تثبيتها وتسجيل العمق عند الأسنان كل وردية.",
+       "ملاحظة لون وكمية ورائحة الإفرازات."
+      ],
+      "en": [
+       "Suction on need (audible secretions, rising pressure, desaturation), not routinely.",
+       "Suction the ETT, then mouth and nose as needed, aseptically or closed system, with pre/post oxygenation.",
+       "ETT care: secure it and record depth at the teeth every shift.",
+       "Note secretion colour, amount and odour."
+      ]
+     },
+     "outcome": {
+      "ar": "مجرى هواء مفتوح.",
+      "en": "Patent airway."
+     },
+     "timeframe": {
+      "ar": "عند الحاجة / كل وردية",
+      "en": "As needed / every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تحريك الإفرازات",
+      "en": "Mobilize secretions"
+     },
+     "actions": {
+      "ar": [
+       "تقليب المريض وتغيير وضعه كل ساعتين لتحريك الإفرازات وتسهيل شفطها وتجنب قرح الفراش.",
+       "تمرينات الصدر (العلاج الطبيعي التنفسي) والأطراف باستمرار."
+      ],
+      "en": [
+       "Turn every 2 h to mobilize secretions, ease suction and prevent pressure injury.",
+       "Chest physiotherapy and limb exercises regularly."
+      ]
+     },
+     "outcome": {
+      "ar": "صدر أوضح.",
+      "en": "Clearer chest."
+     },
+     "timeframe": {
+      "ar": "كل ساعتين",
+      "en": "Every 2 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
+   "id": "risk-vap-mv",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الالتهاب الرئوي المرتبط بجهاز التنفس",
+    "en": "Risk for Ventilator-Associated Pneumonia"
+   },
+   "definition": {
+    "ar": "قابلية لحدوث التهاب رئوي بعد 48 ساعة من التنفس الصناعي.",
+    "en": "Susceptibility to pneumonia after 48 h of mechanical ventilation."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "الأنبوبة الحنجرية",
+     "الرقاد على الظهر",
+     "شفط الإفرازات"
+    ],
+    "en": [
+     "Endotracheal tube",
+     "Supine position",
+     "Aspiration of secretions"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "لا يستطيع الكلام."
+     ],
+     "en": [
+      "Unable to speak."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يوم 3 على الجهاز."
+     ],
+     "en": [
+      "Ventilator day 3."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "تطبيق حزمة الوقاية بالكامل كل وردية."
+     ],
+     "en": [
+      "Full VAP bundle every shift."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا التهاب رئوي طوال التنفس الصناعي."
+     ],
+     "en": [
+      "No VAP during ventilation."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع رأس السرير 30–45 درجة.",
+      "en": "HOB 30–45°."
+     },
+     "rationale": {
+      "ar": "يقلل الشفط.",
+      "en": "Reduces aspiration."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم والأسنان كل 4–6 ساعات.",
+      "en": "Oral and dental care every 4–6 h."
+     },
+     "rationale": {
+      "ar": "يقلل البكتيريا.",
+      "en": "Reduces bacteria."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ضغط البالونة 20–30 سم ماء.",
+      "en": "Cuff pressure 20–30 cmH₂O."
+     },
+     "rationale": {
+      "ar": "يمنع التسرب.",
+      "en": "Prevents leakage."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إيقاف المهدئات يوميًا وتقييم الاستعداد للفطام.",
+      "en": "Daily sedation hold and spontaneous breathing trial."
+     },
+     "rationale": {
+      "ar": "يقلل مدة الجهاز.",
+      "en": "Shortens ventilation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تصريف الماء المتكثف في الدائرة بعيدًا عن المريض.",
+      "en": "Drain circuit condensate away from the patient."
+     },
+     "rationale": {
+      "ar": "الماء الملوث يدخل الرئة.",
+      "en": "Contaminated condensate can enter the lungs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل الأيدي قبل وبعد أي تعامل مع الدائرة أو الأنبوبة.",
+      "en": "Hand hygiene before and after circuit or tube contact."
+     },
+     "rationale": {
+      "ar": "وقاية أساسية.",
+      "en": "Basic prevention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحزمة مطبقة ولا علامات التهاب — تحقق.",
+      "en": "Bundle applied; no VAP signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حزمة الوقاية",
+      "en": "VAP bundle"
+     },
+     "actions": {
+      "ar": [
+       "رفع رأس السرير 30–45 درجة.",
+       "العناية بالفم والأسنان كل 4–6 ساعات.",
+       "ضغط البالونة 20–30 سم ماء.",
+       "إيقاف المهدئات يوميًا وتقييم الاستعداد للفطام.",
+       "تصريف الماء المتكثف في الدائرة بعيدًا عن المريض.",
+       "غسل الأيدي قبل وبعد أي تعامل مع الدائرة أو الأنبوبة."
+      ],
+      "en": [
+       "HOB 30–45°.",
+       "Oral and dental care every 4–6 h.",
+       "Cuff pressure 20–30 cmH₂O.",
+       "Daily sedation hold and spontaneous breathing trial.",
+       "Drain circuit condensate away from the patient.",
+       "Hand hygiene before and after circuit or tube contact."
+      ]
+     },
+     "outcome": {
+      "ar": "لا التهاب رئوي.",
+      "en": "No VAP."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "imbalanced-nutrition-mv",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص التغذية (التغذية بالأنبوبة)",
+    "en": "Risk for Imbalanced Nutrition (Enteral Feeding)"
+   },
+   "definition": {
+    "ar": "قابلية لتناول غذاء أقل من احتياج الجسم.",
+    "en": "Susceptibility to intake below metabolic needs."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "عدم القدرة على الأكل بالفم",
+     "زيادة الاحتياج مع المرض الحرج"
+    ],
+    "en": [
+     "Unable to eat orally",
+     "Hypermetabolism of critical illness"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "لا يستطيع الكلام."
+     ],
+     "en": [
+      "Unable to speak."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "أنبوبة أنفية معدية، تغذية 40 مل/ساعة."
+     ],
+     "en": [
+      "NG tube; feed at 40 mL/h."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48–72 ساعة: الوصول لهدف السعرات."
+     ],
+     "en": [
+      "Within 48–72 h: reach calorie target."
+     ]
+    },
+    "long": {
+     "ar": [
+      "الحفاظ على الوزن والألبومين."
+     ],
+     "en": [
+      "Maintain weight and albumin."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغذية المريض من الأنبوبة المعدية بالكميات التي يحددها الطبيب أو أخصائي التغذية.",
+      "en": "Feed via NG tube in amounts set by the physician/dietitian."
+     },
+     "rationale": {
+      "ar": "يحافظ على التغذية والأمعاء.",
+      "en": "Maintains nutrition and gut."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "التأكد من مكان الأنبوبة قبل التغذية (أشعة أول مرة، ثم قياس الحموضة أو العلامة).",
+      "en": "Confirm tube position before feeding (X-ray first, then pH/mark)."
+     },
+     "rationale": {
+      "ar": "يمنع التغذية في الرئة.",
+      "en": "Prevents feeding into the lung."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة تحمل التغذية: انتفاخ، قيء، إسهال.",
+      "en": "Monitor tolerance: distension, vomiting, diarrhea."
+     },
+     "rationale": {
+      "ar": "تعديل المعدل.",
+      "en": "Rate adjustment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شطف الأنبوبة بـ 30 مل ماء كل 4 ساعات وقبل وبعد الأدوية.",
+      "en": "Flush with 30 mL water every 4 h and before/after drugs."
+     },
+     "rationale": {
+      "ar": "يمنع الانسداد.",
+      "en": "Prevents blockage."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة السكر والأملاح والوزن.",
+      "en": "Monitor glucose, electrolytes and weight."
+     },
+     "rationale": {
+      "ar": "مضاعفات التغذية.",
+      "en": "Feeding complications."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بنظافة المريض وفتحة الأنف.",
+      "en": "Patient hygiene and nostril care."
+     },
+     "rationale": {
+      "ar": "يمنع قرح الأنف.",
+      "en": "Prevents nasal ulcers."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "وصل للهدف 70 مل/ساعة يوم 3 بدون انتفاخ — تحقق.",
+      "en": "Reached 70 mL/h target on day 3 without distension — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التغذية بالأنبوبة",
+      "en": "Enteral feeding"
+     },
+     "actions": {
+      "ar": [
+       "تغذية المريض من الأنبوبة المعدية بالكميات التي يحددها الطبيب أو أخصائي التغذية.",
+       "التأكد من مكان الأنبوبة قبل التغذية (أشعة أول مرة، ثم قياس الحموضة أو العلامة).",
+       "متابعة تحمل التغذية: انتفاخ، قيء، إسهال.",
+       "شطف الأنبوبة بـ 30 مل ماء كل 4 ساعات وقبل وبعد الأدوية.",
+       "متابعة السكر والأملاح والوزن.",
+       "العناية بنظافة المريض وفتحة الأنف."
+      ],
+      "en": [
+       "Feed via NG tube in amounts set by the physician/dietitian.",
+       "Confirm tube position before feeding (X-ray first, then pH/mark).",
+       "Monitor tolerance: distension, vomiting, diarrhea.",
+       "Flush with 30 mL water every 4 h and before/after drugs.",
+       "Monitor glucose, electrolytes and weight.",
+       "Patient hygiene and nostril care."
+      ]
+     },
+     "outcome": {
+      "ar": "هدف السعرات بدون مضاعفات.",
+      "en": "Calorie target without complications."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "dysfunctional-weaning-response",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدم الاستجابة للفطام من جهاز التنفس",
+    "en": "Risk for Dysfunctional Ventilatory Weaning Response"
+   },
+   "definition": {
+    "ar": "قابلية لعدم القدرة على التكيف مع تقليل دعم الجهاز.",
+    "en": "Susceptibility to inability to adjust to reduced ventilator support."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ضعف العضلات وطول مدة الجهاز",
+     "القلق",
+     "سوء التغذية"
+    ],
+    "en": [
+     "Muscle weakness and prolonged ventilation",
+     "Anxiety",
+     "Malnutrition"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "يومئ بالموافقة على المحاولة."
+     ],
+     "en": [
+      "Nods agreement to the trial."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "FiO₂ 35%، PEEP 5، يستجيب للأوامر."
+     ],
+     "en": [
+      "FiO₂ 35%, PEEP 5, follows commands."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "اجتياز محاولة التنفس التلقائي 30–120 دقيقة."
+     ],
+     "en": [
+      "Pass a 30–120 minute spontaneous breathing trial."
+     ]
+    },
+    "long": {
+     "ar": [
+      "نزع الأنبوبة بدون إعادة تركيب خلال 48 ساعة."
+     ],
+     "en": [
+      "Extubation without reintubation within 48 h."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الاستعداد يوميًا: سبب الفشل التنفسي يتحسن، FiO₂ ≤ 40%، PEEP ≤ 8، استقرار الدورة، والوعي.",
+      "en": "Daily readiness screen: improving cause, FiO₂ ≤ 40%, PEEP ≤ 8, hemodynamic stability, alertness."
+     },
+     "rationale": {
+      "ar": "معايير الفطام.",
+      "en": "Weaning criteria."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شرح خطوات الفطام وطمأنة المريض والبقاء بجانبه.",
+      "en": "Explain weaning, reassure and stay with the patient."
+     },
+     "rationale": {
+      "ar": "القلق يفشل الفطام.",
+      "en": "Anxiety causes failure."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "أثناء المحاولة: متابعة التنفس (< 35)، التشبع (≥ 90%)، النبض، الضغط، العرق والقلق، وإيقافها عند علامات الفشل.",
+      "en": "During the trial: RR (< 35), SpO₂ (≥ 90%), HR, BP, sweating and distress; stop at failure signs."
+     },
+     "rationale": {
+      "ar": "سلامة المريض.",
+      "en": "Patient safety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع جالس وتوقيت المحاولة صباحًا بعد الراحة.",
+      "en": "Upright position; trial in the morning after rest."
+     },
+     "rationale": {
+      "ar": "أفضل فرصة للنجاح.",
+      "en": "Best chance of success."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "بعد النزع: أكسجين مرطب، تشجيع الكحة، ومتابعة صرير الحنجرة.",
+      "en": "After extubation: humidified oxygen, encourage cough, watch for stridor."
+     },
+     "rationale": {
+      "ar": "كشف الوذمة الحنجرية.",
+      "en": "Detects laryngeal edema."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التحريك المبكر والعلاج الطبيعي.",
+      "en": "Early mobilization and physiotherapy."
+     },
+     "rationale": {
+      "ar": "يقوي العضلات.",
+      "en": "Strengthens muscles."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "اجتاز محاولة 60 دقيقة ونُزعت الأنبوبة بنجاح — تحقق.",
+      "en": "Passed a 60-minute trial; extubated successfully — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التقييم والمحاولة",
+      "en": "Screen and trial"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الاستعداد يوميًا: سبب الفشل التنفسي يتحسن، FiO₂ ≤ 40%، PEEP ≤ 8، استقرار الدورة، والوعي.",
+       "أثناء المحاولة: متابعة التنفس (< 35)، التشبع (≥ 90%)، النبض، الضغط، العرق والقلق، وإيقافها عند علامات الفشل.",
+       "وضع جالس وتوقيت المحاولة صباحًا بعد الراحة."
+      ],
+      "en": [
+       "Daily readiness screen: improving cause, FiO₂ ≤ 40%, PEEP ≤ 8, hemodynamic stability, alertness.",
+       "During the trial: RR (< 35), SpO₂ (≥ 90%), HR, BP, sweating and distress; stop at failure signs.",
+       "Upright position; trial in the morning after rest."
+      ]
+     },
+     "outcome": {
+      "ar": "اجتياز المحاولة.",
+      "en": "Trial passed."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "الدعم وما بعد النزع",
+      "en": "Support and post-extubation"
+     },
+     "actions": {
+      "ar": [
+       "شرح خطوات الفطام وطمأنة المريض والبقاء بجانبه.",
+       "بعد النزع: أكسجين مرطب، تشجيع الكحة، ومتابعة صرير الحنجرة.",
+       "التحريك المبكر والعلاج الطبيعي."
+      ],
+      "en": [
+       "Explain weaning, reassure and stay with the patient.",
+       "After extubation: humidified oxygen, encourage cough, watch for stridor.",
+       "Early mobilization and physiotherapy."
+      ]
+     },
+     "outcome": {
+      "ar": "لا إعادة تركيب.",
+      "en": "No reintubation."
+     },
+     "timeframe": {
+      "ar": "48 ساعة",
+      "en": "48 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-verbal-communication-mv",
+   "kind": "actual",
+   "title": {
     "ar": "ضعف التواصل اللفظي",
-    "en": "Impaired verbal communication"
+    "en": "Impaired Verbal Communication"
    },
-   "need": {
-    "ar": "التواصل مع المريض",
-    "en": "Communication"
+   "definition": {
+    "ar": "نقص أو غياب القدرة على استخدام اللغة المنطوقة.",
+    "en": "Decreased or absent ability to use spoken language."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "لوحة صور/كتابة",
-     "أسئلة إجابتها نعم/لا",
-     "شرح كل إجراء"
+     "الأنبوبة الحنجرية"
     ],
     "en": [
-     "Picture/writing board",
-     "Yes/no questions",
-     "Explain every procedure"
+     "Endotracheal tube"
     ]
    },
-   "outcome": {
-    "ar": "المريض يعبر عن احتياجاته",
-    "en": "Patient expresses needs"
+   "evidencedBy": {
+    "ar": [
+     "عدم القدرة على الكلام",
+     "إحباط"
+    ],
+    "en": [
+     "Inability to speak",
+     "Frustration"
+    ]
    },
-   "timeframe": {
-    "ar": "كل وردية",
-    "en": "Every shift"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "يحاول الكلام ويشير بإحباط."
+     ],
+     "en": [
+      "Tries to talk, gestures in frustration."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "واعٍ، يحرك يديه."
+     ],
+     "en": [
+      "Awake, moving hands."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر عن احتياجاته بطريقة بديلة."
+     ],
+     "en": [
+      "Within the shift: expresses needs by alternative means."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تواصل بدون إحباط حتى نزع الأنبوبة."
+     ],
+     "en": [
+      "Communication without frustration until extubation."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "أسئلة نعم/لا وإشارات متفق عليها.",
+      "en": "Yes/no questions and agreed signals."
+     },
+     "rationale": {
+      "ar": "تواصل سريع.",
+      "en": "Quick communication."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "لوحة صور أو كتابة.",
+      "en": "Picture or writing board."
+     },
+     "rationale": {
+      "ar": "وسيلة بديلة.",
+      "en": "Alternative method."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الجرس في يد المريض.",
+      "en": "Call bell in hand."
+     },
+     "rationale": {
+      "ar": "طلب المساعدة.",
+      "en": "Summon help."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شرح كل إجراء والتحدث مع المريض حتى لو مهدأ.",
+      "en": "Explain every procedure; talk even if sedated."
+     },
+     "rationale": {
+      "ar": "يقلل القلق.",
+      "en": "Reduces anxiety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "توفير الراحة الجسمانية والنفسية وإشراك الأسرة.",
+      "en": "Provide physical and emotional comfort; involve family."
+     },
+     "rationale": {
+      "ar": "دعم.",
+      "en": "Support."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح أن الصوت سيعود بعد نزع الأنبوبة.",
+      "en": "Explain the voice returns after extubation."
+     },
+     "rationale": {
+      "ar": "طمأنة.",
+      "en": "Reassurance."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يستخدم اللوحة بدون إحباط — تحقق.",
+      "en": "Uses the board without frustration — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تواصل بديل",
+      "en": "Alternative communication"
+     },
+     "actions": {
+      "ar": [
+       "أسئلة نعم/لا وإشارات متفق عليها.",
+       "لوحة صور أو كتابة.",
+       "الجرس في يد المريض.",
+       "شرح كل إجراء والتحدث مع المريض حتى لو مهدأ.",
+       "توفير الراحة الجسمانية والنفسية وإشراك الأسرة.",
+       "شرح أن الصوت سيعود بعد نزع الأنبوبة."
+      ],
+      "en": [
+       "Yes/no questions and agreed signals.",
+       "Picture or writing board.",
+       "Call bell in hand.",
+       "Explain every procedure; talk even if sedated.",
+       "Provide physical and emotional comfort; involve family.",
+       "Explain the voice returns after extubation."
+      ]
+     },
+     "outcome": {
+      "ar": "يعبر عن احتياجاته.",
+      "en": "Expresses needs."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -299,10 +1166,13 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "AARC Clinical Practice Guidelines (ventilator liberation, endotracheal suctioning)"
   },
   {
-   "title": "SHEA/IDSA/APIC Strategies to prevent ventilator-associated events 2022"
+   "title": "ATS/CHEST — Liberation from Mechanical Ventilation in Critically Ill Adults (2017)"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
   }
  ]
 }
