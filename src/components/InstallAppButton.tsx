@@ -16,6 +16,9 @@ const DotsIcon = () => (
   </svg>
 );
 
+// The APK download is switched off while the site is under AdSense review (direct APK downloads can be flagged as
+// unwanted software). Set to true, and move the file back to public/, to offer it again.
+const SHOW_APK = false;
 const APK_URL = "/NurseHub-Egypt.apk";
 
 interface Guide { title: string; steps: ReactNode[]; note?: string }
@@ -173,7 +176,7 @@ export default function InstallAppButton() {
   };
 
   const guide = guideFor(platform, ar);
-  const isAndroid = platform.startsWith("android");
+  const isAndroid = SHOW_APK && platform.startsWith("android");
   const apkLink = (
     <a
       href={APK_URL}
