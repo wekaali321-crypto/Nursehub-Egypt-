@@ -1,16 +1,16 @@
 /**
  * خطط الرعاية التمريضية — Nursing Care Plans (static JSON in public/careplans, no database).
- *  - /care-plans          : list of ready-made plans (search + body-system filter, shared HubGrid)
- *  - /care-plans/:id      : one plan, two tabs (?type=student | hospital)
- *      student : Assessment (S/O) → Nursing Diagnosis → Goals → Interventions (each with its Rationale) → Evaluation
+ *  - /care-plans                 : two folders — plans by disease, and general plans (symptoms, vital signs, ICU complications)
+ *  - /care-plans/:id/:dx         : ONE nursing diagnosis = one form, two tabs (?type=student | hospital); /care-plans/:id shows the first
+ *      student : Assessment (S/O) → Nursing Diagnosis (definition, related to, evidenced by / risk factors) → Goals (short / long)
+ *                → Interventions with rationale (grouped by type) → Evaluation (met / partial / not met)
  *      hospital: Date/Time · Nursing Diagnosis · Patient Needs · Actions · Expected Outcomes · Timeframe · Signature
- * Every screen shows the same sheet as the paper forms (header, blank patient fields, the table, footer band);
- * on phones the sheet keeps its width and scrolls sideways. Printed A4 landscape.
+ * Every screen shows the same sheet as the paper forms; phones scroll it sideways. Printed A4 landscape, one diagnosis per print.
  */
 import { useEffect, useMemo, useState } from "react";
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import {
-  Activity, BedDouble, BriefcaseMedical, CircleCheck, ClipboardCheck, ClipboardList, Clock, GraduationCap, HeartPulse, Hospital, Lightbulb,
+  Activity, BedDouble, BriefcaseMedical, CircleCheck, ClipboardCheck, ClipboardList, Clock, FolderHeart, FolderOpen, GraduationCap, HeartPulse, Hospital, Lightbulb,
   PenLine, Printer, Search, Settings, Stethoscope, Syringe, Target, TrendingUp, TriangleAlert, Trophy, UserRound,
 } from "lucide-react";
 import { useI18n } from "../lib/i18n";
@@ -21,8 +21,8 @@ import HubGrid from "../components/HubGrid";
 import { LogoMark } from "../components/Logo";
 import { LOAD_FAILED } from "../lib/loadFailed";
 import {
-  SYSTEMS, fetchCarePlan, fetchCarePlanIndex, pick, pickList,
-  type CarePlan, type CarePlanIndexItem, type HospitalRow, type StudentDiagnosis,
+  GROUPS, SYSTEMS, fetchCarePlan, fetchCarePlanIndex, pick, pickList,
+  type CarePlan, type CarePlanIndexItem, type Diagnosis, type EvalStatus, type InterventionType,
 } from "../lib/carePlansApi";
 
 type Kind = "student" | "hospital";
@@ -32,17 +32,25 @@ const T = {
   sheet: { ar: "خطة الرعاية التمريضية", en: "Nursing Care Plan" },
   student: { ar: "خطة الطلاب", en: "Student plan" },
   hospital: { ar: "خطة المستشفى", en: "Hospital plan" },
-  studentHint: { ar: "التقييم (ذاتي وموضوعي) ← التشخيص ← الأهداف ← التدخلات ومبرراتها ← التقييم النهائي", en: "Assessment (S/O) → Diagnosis → Goals → Interventions with rationale → Evaluation" },
-  hospitalHint: { ar: "التشخيص ← احتياجات المريض ← الإجراءات ← النتائج المرجوة ← الإطار الزمني", en: "Diagnosis → Patient needs → Actions → Expected outcomes → Timeframe" },
+  byDisease: { ar: "خطط حسب المرض", en: "Plans by disease" },
+  general: { ar: "خطط عامة", en: "General plans" },
+  byDiseaseHint: { ar: "كل مرض فيه عدة تشخيصات تمريضية، وكل تشخيص في نموذج مستقل.", en: "Each disease has several nursing diagnoses, each in its own form." },
+  generalHint: { ar: "الأعراض الشائعة، والعلامات الحيوية، ومضاعفات الرعاية المركزة.", en: "Common symptoms, vital signs and ICU complications." },
+  diagnoses: { ar: "التشخيصات التمريضية", en: "Nursing diagnoses" },
   assessment: { ar: "التقييم (Assessment)", en: "Assessment (Data)" },
   subjective: { ar: "بيانات ذاتية (Subjective)", en: "Subjective data" },
   objective: { ar: "بيانات موضوعية (Objective)", en: "Objective data" },
   diagnosis: { ar: "التشخيص التمريضي", en: "Nursing Diagnosis" },
+  definition: { ar: "التعريف", en: "Definition" },
+  relatedTo: { ar: "مرتبط بـ (Related to)", en: "Related to" },
+  evidencedBy: { ar: "ويظهر في (As evidenced by)", en: "As evidenced by" },
+  riskFactors: { ar: "عوامل الخطورة (Risk factors)", en: "Risk factors" },
   goals: { ar: "الأهداف / النتائج المتوقعة", en: "Goals / Expected Outcomes" },
+  shortTerm: { ar: "قصيرة المدى", en: "Short-term" },
+  longTerm: { ar: "طويلة المدى", en: "Long-term" },
   interventions: { ar: "التدخلات التمريضية والمبررات", en: "Nursing Interventions & Rationale" },
   rationale: { ar: "المبرر", en: "Rationale" },
   evaluation: { ar: "التقييم النهائي (Evaluation)", en: "Evaluation (Results)" },
-  problem: { ar: "مشكلة", en: "Problem" },
   dateTime: { ar: "الوقت / التاريخ", en: "Date / Time" },
   needs: { ar: "احتياجات المريض", en: "Patient Needs" },
   actions: { ar: "الإجراءات", en: "Actions" },
@@ -51,7 +59,7 @@ const T = {
   signature: { ar: "التوقيع", en: "Signature" },
   notes: { ar: "ملاحظات الخطة", en: "Plan Notes" },
   date: { ar: "التاريخ", en: "Date" },
-  print: { ar: "طباعة", en: "Print" },
+  print: { ar: "طباعة النموذج", en: "Print this form" },
   disclaimer: {
     ar: "خطة نموذجية للتعلم والاسترشاد: عدّلها حسب تقييمك للمريض وأوامر الطبيب وسياسة المستشفى.",
     en: "A model plan for learning and guidance: adapt it to your own patient assessment, the physician's orders and hospital policy.",
@@ -60,10 +68,24 @@ const T = {
 } as const;
 const tr = (k: keyof typeof T, ar: boolean) => (ar ? T[k].ar : T[k].en);
 
+const TYPE_LABEL: Record<InterventionType, { ar: string; en: string }> = {
+  assess: { ar: "تقييم ومتابعة", en: "Assessment & monitoring" },
+  independent: { ar: "تدخلات تمريضية مستقلة", en: "Independent" },
+  collab: { ar: "بالتعاون مع الفريق الطبي", en: "Collaborative" },
+  teach: { ar: "تثقيف المريض والأسرة", en: "Patient & family teaching" },
+};
+const STATUS: Record<EvalStatus, { ar: string; en: string; cls: string; mark: string }> = {
+  met: { ar: "تحقق", en: "Met", cls: "bg-emerald-50 text-emerald-800 ring-emerald-200", mark: "✓" },
+  partial: { ar: "تحقق جزئيًا", en: "Partially met", cls: "bg-amber-50 text-amber-800 ring-amber-200", mark: "◐" },
+  not: { ar: "لم يتحقق", en: "Not met", cls: "bg-rose-50 text-rose-800 ring-rose-200", mark: "✗" },
+};
+
 /* ---------------- list ---------------- */
 export function CarePlansHome() {
   const { lang } = useI18n();
   const ar = lang === "ar";
+  const [params, setParams] = useSearchParams();
+  const folder = params.get("folder") === "general" ? "general" : "disease";
   const [plans, setPlans] = useState<CarePlanIndexItem[] | null>(null);
   const [q, setQ] = useState("");
   const [sys, setSys] = useState("all");
@@ -71,16 +93,26 @@ export function CarePlansHome() {
   useSEO({
     title: ar ? "خطط الرعاية التمريضية جاهزة | NurseHub Egypt" : "Nursing Care Plans | NurseHub Egypt",
     description: ar
-      ? "خطط رعاية تمريضية جاهزة بالعربي والإنجليزي لأشهر الأمراض: خطة الطلاب (Assessment، Diagnosis، Goals، Interventions & Rationale، Evaluation) وخطة المستشفى، قابلة للطباعة."
-      : "Ready-made bilingual nursing care plans for common conditions: student format (assessment, diagnosis, goals, interventions & rationale, evaluation) and hospital format, printable.",
+      ? "خطط رعاية تمريضية جاهزة بالعربي والإنجليزي: كل تشخيص تمريضي في نموذج مستقل (Assessment، Nursing Diagnosis، Goals، Interventions & Rationale، Evaluation) وخطة المستشفى، قابلة للطباعة."
+      : "Ready-made bilingual nursing care plans: every nursing diagnosis in its own form (assessment, diagnosis, goals, interventions & rationale, evaluation) plus the hospital format, printable.",
   });
   useEffect(() => { void fetchCarePlanIndex().then(setPlans); }, []);
+  useEffect(() => { setSys("all"); }, [folder]);
 
-  const systems = useMemo(() => [...new Set((plans ?? []).map((p) => p.system))], [plans]);
+  const inFolder = useMemo(() => (plans ?? []).filter((p) => (p.folder || "disease") === folder), [plans, folder]);
+  const facets = useMemo(() => [...new Set(inFolder.map((p) => (folder === "general" ? p.group || "other" : p.system)))], [inFolder, folder]);
   const shown = useMemo(() => {
     const s = q.trim().toLowerCase();
-    return (plans ?? []).filter((p) => (sys === "all" || p.system === sys) && (!s || `${p.title.ar} ${p.title.en} ${p.summary.ar} ${p.summary.en}`.toLowerCase().includes(s)));
-  }, [plans, q, sys]);
+    return inFolder.filter((p) => {
+      const facet = folder === "general" ? p.group || "other" : p.system;
+      if (sys !== "all" && facet !== sys) return false;
+      if (!s) return true;
+      return `${p.title.ar} ${p.title.en} ${p.summary.ar} ${p.summary.en} ${p.diagnoses.map((d) => `${d.title.ar} ${d.title.en}`).join(" ")}`.toLowerCase().includes(s);
+    });
+  }, [inFolder, q, sys, folder]);
+  const facetLabel = (f: string) => (folder === "general" ? (ar ? GROUPS[f]?.ar : GROUPS[f]?.en) : ar ? SYSTEMS[f]?.ar : SYSTEMS[f]?.en) ?? f;
+  const setFolder = (f: "disease" | "general") => { const p = new URLSearchParams(params); if (f === "disease") p.delete("folder"); else p.set("folder", f); setParams(p, { replace: true }); };
+  const count = (f: "disease" | "general") => (plans ?? []).filter((p) => (p.folder || "disease") === f).length;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8" dir={ar ? "rtl" : "ltr"}>
@@ -89,36 +121,42 @@ export function CarePlansHome() {
 
       <div className="cs-hero relative overflow-hidden rounded-3xl p-6 text-white sm:p-10">
         <div className="relative z-10">
-          <div className="flex items-center gap-2 text-sm font-bold text-white/80"><ClipboardList className="h-4 w-4" />{ar ? "جاهزة للمذاكرة والطباعة" : "Ready to study and print"}</div>
+          <div className="flex items-center gap-2 text-sm font-bold text-white/80"><ClipboardList className="h-4 w-4" />{ar ? "كل تشخيص تمريضي في نموذج مستقل" : "One form per nursing diagnosis"}</div>
           <h1 className="mt-2 text-2xl font-black sm:text-4xl">{tr("section", ar)}</h1>
           {ar && <div dir="ltr" className="mt-1 text-right text-sm font-bold text-teal-200">Nursing Care Plans</div>}
           <p className="mt-3 max-w-2xl text-sm leading-7 text-white/85 sm:text-base">
-            {ar ? "كل خطة فيها شكلين: خطة الطلاب بالتفصيل زي ما بتتطلب في الكلية، وخطة المستشفى المختصرة زي اللي بتتكتب في القسم." : "Every plan comes in two formats: the detailed student plan used in nursing school, and the short hospital plan used on the ward."}
+            {ar ? "اختار المرض أو الموضوع، وبعدين اختار التشخيص التمريضي: هتلاقي نموذج الطلاب بالتفصيل (التعريف، Related to، As evidenced by، أهداف قصيرة وطويلة، تدخلات بمبرراتها، والتقييم) ونموذج المستشفى، وكل نموذج بيتطبع لوحده." : "Pick a disease or topic, then a nursing diagnosis: the detailed student form (definition, related to, evidenced by, short and long goals, interventions with rationale, evaluation) and the hospital form, each printable on its own."}
           </p>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
-            {([["student", GraduationCap, "studentHint"], ["hospital", Hospital, "hospitalHint"]] as const).map(([k, Icon, hint]) => (
-              <div key={k} className="rounded-2xl bg-white/10 p-4 ring-1 ring-white/15">
-                <div className="flex items-center gap-2 font-black"><Icon className="h-5 w-5 text-teal-200" />{tr(k, ar)}</div>
-                <p className="mt-1 text-xs leading-6 text-white/80">{tr(hint, ar)}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
-      <div className="mt-6 space-y-3">
+      <div role="tablist" className="mt-6 grid gap-3 sm:grid-cols-2">
+        {([["disease", FolderHeart, "byDisease", "byDiseaseHint"], ["general", FolderOpen, "general", "generalHint"]] as const).map(([f, Icon, label, hint]) => (
+          <button key={f} role="tab" aria-selected={folder === f} onClick={() => setFolder(f)} className={`flex items-start gap-3 rounded-2xl border p-4 text-start transition ${folder === f ? "border-[#168C91] bg-[#153448] text-white shadow" : "border-slate-200 bg-white text-slate-700 hover:border-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"}`}>
+            <Icon className={`mt-0.5 h-7 w-7 shrink-0 ${folder === f ? "text-[#7fdde1]" : "text-[#168C91]"}`} />
+            <span>
+              <span className="block font-black">{tr(label, ar)} <span className="text-xs font-bold opacity-70">({count(f)})</span></span>
+              <span className={`mt-0.5 block text-xs leading-5 ${folder === f ? "text-white/75" : "text-slate-500 dark:text-slate-400"}`}>{tr(hint, ar)}</span>
+            </span>
+          </button>
+        ))}
+      </div>
+
+      <div className="mt-4 space-y-3">
         <label className="relative block">
           <Search className="pointer-events-none absolute top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400 start-3" />
-          <span className="sr-only">{ar ? "ابحث عن خطة" : "Search plans"}</span>
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={ar ? "ابحث: سكر، ضغط، Pneumonia…" : "Search: diabetes, stroke…"} className="w-full rounded-xl border border-slate-200 bg-white py-2.5 text-sm outline-none focus:border-teal-400 ps-9 pe-3 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
+          <span className="sr-only">{ar ? "ابحث عن خطة أو تشخيص" : "Search plans or diagnoses"}</span>
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={ar ? "ابحث: سكر، ألم، Excess fluid volume…" : "Search: diabetes, pain, excess fluid volume…"} className="w-full rounded-xl border border-slate-200 bg-white py-2.5 text-sm outline-none focus:border-teal-400 ps-9 pe-3 dark:border-slate-700 dark:bg-slate-900 dark:text-white" />
         </label>
-        <div className="flex flex-wrap gap-1.5">
-          {["all", ...systems].map((s) => (
-            <button key={s} onClick={() => setSys(s)} className={`rounded-full px-3 py-1 text-xs font-bold ${sys === s ? "bg-teal-700 text-white" : "bg-white text-slate-600 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-300 dark:ring-slate-700"}`}>
-              {s === "all" ? (ar ? "الكل" : "All") : ar ? SYSTEMS[s]?.ar ?? s : SYSTEMS[s]?.en ?? s}
-            </button>
-          ))}
-        </div>
+        {facets.length > 1 && (
+          <div className="flex flex-wrap gap-1.5">
+            {["all", ...facets].map((s) => (
+              <button key={s} onClick={() => setSys(s)} className={`rounded-full px-3 py-1 text-xs font-bold ${sys === s ? "bg-teal-700 text-white" : "bg-white text-slate-600 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-300 dark:ring-slate-700"}`}>
+                {s === "all" ? (ar ? "الكل" : "All") : facetLabel(s)}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="mt-4">
@@ -127,11 +165,11 @@ export function CarePlansHome() {
         ) : plans === LOAD_FAILED ? (
           <p className="rounded-xl bg-rose-50 p-4 text-sm text-rose-800 dark:bg-rose-500/10 dark:text-rose-300">{ar ? "تعذّر تحميل الخطط. تأكد من الإنترنت وحدّث الصفحة." : "Could not load the plans. Check your connection and refresh."}</p>
         ) : shown.length === 0 ? (
-          <p className="rounded-xl bg-slate-50 p-4 text-sm text-slate-600 dark:bg-slate-800 dark:text-slate-300">{ar ? "لا توجد خطة بهذا الاسم." : "No plan matches your search."}</p>
+          <p className="rounded-xl bg-slate-50 p-4 text-sm text-slate-600 dark:bg-slate-800 dark:text-slate-300">{inFolder.length ? (ar ? "لا توجد خطة بهذا الاسم." : "No plan matches your search.") : ar ? "الخطط العامة بتتضاف قريب." : "General plans are being added."}</p>
         ) : (
           <HubGrid isEn={!ar} accent="teal" items={shown.map((p) => ({
             id: p.id, to: `/care-plans/${p.id}`, icon: p.icon, title: p.title.ar, titleEn: p.title.en,
-            category: ar ? SYSTEMS[p.system]?.ar : SYSTEMS[p.system]?.en, summary: pick(p.summary, ar),
+            category: `${facetLabel(folder === "general" ? p.group || "other" : p.system)} · ${p.diagnoses.length} ${ar ? "تشخيصات" : "diagnoses"}`, summary: pick(p.summary, ar),
           }))} />
         )}
       </div>
@@ -139,11 +177,12 @@ export function CarePlansHome() {
   );
 }
 
-/* ---------------- one plan ---------------- */
+/* ---------------- one diagnosis form ---------------- */
 export function CarePlanPage() {
-  const { id = "" } = useParams();
+  const { id = "", dx: dxId } = useParams();
   const { lang } = useI18n();
   const ar = lang === "ar";
+  const nav = useNavigate();
   const [params, setParams] = useSearchParams();
   const kind: Kind = params.get("type") === "hospital" ? "hospital" : "student";
   const [plan, setPlan] = useState<CarePlan | null | undefined>(undefined);
@@ -154,37 +193,56 @@ export function CarePlanPage() {
     fetchCarePlan(id).then(setPlan).catch(() => setFailed(true));
   }, [id]);
 
-  const title = plan ? pick(plan.title, ar) : "";
+  const dx = plan ? plan.diagnoses.find((d) => d.id === dxId) ?? (dxId ? undefined : plan.diagnoses[0]) : undefined;
+  const dxIndex = plan && dx ? plan.diagnoses.indexOf(dx) : -1;
   useSEO({
-    title: plan ? (ar ? `خطة رعاية تمريضية: ${plan.title.ar} | NurseHub Egypt` : `Nursing Care Plan: ${plan.title.en} | NurseHub Egypt`) : "خطط الرعاية التمريضية | NurseHub Egypt",
-    description: plan ? pick(plan.summary, ar) : "",
+    title: plan && dx
+      ? (ar ? `${dx.title.ar} — خطة رعاية تمريضية ${plan.title.ar} | NurseHub Egypt` : `${dx.title.en} — ${plan.title.en} Nursing Care Plan | NurseHub Egypt`)
+      : "خطط الرعاية التمريضية | NurseHub Egypt",
+    description: plan && dx ? pick(dx.definition ?? dx.statement, ar) || pick(plan.summary, ar) : "",
     type: "article",
   });
 
   // print the sheet A4 landscape (this page only)
   useEffect(() => {
     const st = document.createElement("style");
-    st.textContent = "@media print { @page { size: A4 landscape; margin: 8mm; } }";
+    st.textContent = "@media print { @page { size: A4 landscape; margin: 6mm; } .cp-sheet table, .cp-sheet tbody, .cp-sheet tr, .cp-sheet td { break-inside: auto !important; } }";
     document.head.appendChild(st);
     return () => st.remove();
   }, []);
 
-  if (failed || plan === null) {
+  if (failed || plan === null || (plan && !dx)) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-16 text-center" dir={ar ? "rtl" : "ltr"}>
-        <p className="text-lg font-bold text-slate-700 dark:text-slate-200">{failed ? (ar ? "تعذّر تحميل الخطة. تأكد من الإنترنت." : "Could not load this plan. Check your connection.") : ar ? "الخطة غير موجودة." : "Plan not found."}</p>
-        <Link to="/care-plans" className="mt-4 inline-block rounded-full bg-teal-700 px-6 py-2 font-bold text-white">{ar ? "كل الخطط" : "All plans"}</Link>
+        <p className="text-lg font-bold text-slate-700 dark:text-slate-200">{failed ? (ar ? "تعذّر تحميل الخطة. تأكد من الإنترنت." : "Could not load this plan. Check your connection.") : ar ? "الخطة أو التشخيص غير موجود." : "Plan or diagnosis not found."}</p>
+        <Link to={plan ? `/care-plans/${plan.id}` : "/care-plans"} className="mt-4 inline-block rounded-full bg-teal-700 px-6 py-2 font-bold text-white">{ar ? "رجوع" : "Back"}</Link>
       </div>
     );
   }
-  if (plan === undefined) return <div className="mx-auto max-w-6xl px-4 py-8"><div className="h-96 animate-pulse rounded-3xl bg-slate-100 dark:bg-slate-800" /></div>;
+  if (plan === undefined || !dx) return <div className="mx-auto max-w-6xl px-4 py-8"><div className="h-96 animate-pulse rounded-3xl bg-slate-100 dark:bg-slate-800" /></div>;
 
   const setKind = (k: Kind) => { const p = new URLSearchParams(params); if (k === "student") p.delete("type"); else p.set("type", k); setParams(p, { replace: true }); };
+  const goDx = (d: Diagnosis) => nav(`/care-plans/${plan.id}/${d.id}${kind === "hospital" ? "?type=hospital" : ""}`);
+  const folderLink = plan.folder === "general" ? "/care-plans?folder=general" : "/care-plans";
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6 print:max-w-none print:p-0" dir={ar ? "rtl" : "ltr"}>
       <div className="print:hidden">
-        <Breadcrumbs items={[{ label: tr("section", ar), path: "/care-plans" }, { label: title }]} />
+        <Breadcrumbs items={[{ label: tr("section", ar), path: folderLink }, { label: pick(plan.title, ar), path: `/care-plans/${plan.id}` }, { label: pick(dx.title, ar) }]} />
+        <div className="mb-3 rounded-2xl border border-slate-200 bg-white p-3 dark:border-slate-700 dark:bg-slate-900">
+          <div className="mb-2 flex items-baseline justify-between gap-2">
+            <h1 className="text-lg font-black text-[#153448] dark:text-white">{pick(plan.title, ar)}</h1>
+            <span className="text-xs font-bold text-slate-500 dark:text-slate-400">{tr("diagnoses", ar)} ({plan.diagnoses.length})</span>
+          </div>
+          <div className="flex flex-wrap gap-1.5" role="tablist" aria-label={tr("diagnoses", ar)}>
+            {plan.diagnoses.map((d, i) => (
+              <button key={d.id} role="tab" aria-selected={d === dx} onClick={() => goDx(d)} className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-bold transition ${d === dx ? "bg-[#168C91] text-white shadow" : "bg-slate-100 text-slate-700 hover:bg-teal-50 dark:bg-slate-800 dark:text-slate-200"}`}>
+                <span className={`grid h-5 w-5 place-items-center rounded-full text-[11px] ${d === dx ? "bg-white/25" : "bg-white dark:bg-slate-700"}`}>{i + 1}</span>
+                {pick(d.title, ar)}{d.kind === "risk" && <span className="text-[10px] opacity-70">({ar ? "خطر" : "risk"})</span>}
+              </button>
+            ))}
+          </div>
+        </div>
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           <div role="tablist" aria-label={tr("section", ar)} className="inline-flex rounded-full bg-slate-100 p-1 dark:bg-slate-800">
             {(["student", "hospital"] as const).map((k) => {
@@ -205,19 +263,19 @@ export function CarePlanPage() {
         </div>
       </div>
 
-      <p className="mb-2 flex items-center gap-1.5 text-xs font-bold text-slate-500 lg:hidden print:hidden">↔ {ar ? "اسحب الجدول يمين وشمال لقراءة كل الأعمدة" : "Swipe the sheet sideways to see every column"}</p>
+      <p className="mb-2 flex items-center gap-1.5 text-xs font-bold text-slate-500 lg:hidden print:hidden">↔ {ar ? "اسحب النموذج يمين وشمال لقراءة كل الأعمدة" : "Swipe the form sideways to see every column"}</p>
       <div className="overflow-x-auto rounded-3xl border border-[#168C91]/30 shadow-sm print:overflow-visible print:rounded-none print:border-0 print:shadow-none">
-        <article className="cp-sheet min-w-[1040px] bg-[#f7fbfc] text-slate-800 lg:min-w-0 print:min-w-0" style={{ printColorAdjust: "exact", WebkitPrintColorAdjust: "exact" }}>
-          <SheetHeader ar={ar} kind={kind} title={title} titleOther={ar ? plan.title.en : plan.title.ar} />
+        <article className="cp-sheet min-w-[1100px] bg-[#f7fbfc] text-slate-800 lg:min-w-0 print:min-w-0" style={{ printColorAdjust: "exact", WebkitPrintColorAdjust: "exact" }}>
+          <SheetHeader ar={ar} kind={kind} plan={plan} dx={dx} n={dxIndex + 1} />
           <div className="space-y-4 px-5 pb-5 print:space-y-2 print:px-3 print:pb-2">
             <PatientFields ar={ar} kind={kind} />
-            {kind === "student" ? <StudentPlan ar={ar} dx={plan.student} /> : <HospitalPlan ar={ar} rows={plan.hospital} />}
+            {kind === "student" ? <StudentForm ar={ar} dx={dx} /> : <HospitalForm ar={ar} dx={dx} />}
             {kind === "student" && (
-              <div className="grid grid-cols-[2fr_1fr] gap-4">
+              <div className="grid grid-cols-[2fr_1fr] gap-4 break-inside-avoid">
                 <div className="min-h-[80px] rounded-2xl border border-[#168C91]/50 bg-white p-3 print:min-h-[56px] print:p-2">
                   <span className="inline-flex items-center gap-2 rounded-full bg-[#168C91] px-4 py-1 text-sm font-black text-white"><ClipboardList className="h-4 w-4" />{tr("notes", ar)}:</span>
                 </div>
-                <div className="min-h-[80px] rounded-2xl border border-[#168C91]/50 bg-white p-3 print:min-h-[56px] print:p-2 text-sm font-black text-[#153448]">
+                <div className="min-h-[80px] rounded-2xl border border-[#168C91]/50 bg-white p-3 text-sm font-black text-[#153448] print:min-h-[56px] print:p-2">
                   <span className="inline-flex items-center gap-2 rounded-full bg-[#168C91] px-4 py-1 text-white"><PenLine className="h-4 w-4" />{tr("signature", ar)}:</span>
                   <div className="mt-4">{tr("date", ar)}: ______________________</div>
                 </div>
@@ -229,20 +287,24 @@ export function CarePlanPage() {
       </div>
 
       <div className="mt-4 space-y-3 print:hidden">
+        <div className="flex flex-wrap justify-between gap-2">
+          {dxIndex > 0 ? <button onClick={() => goDx(plan.diagnoses[dxIndex - 1])} className="rounded-full bg-slate-100 px-4 py-2 text-sm font-bold text-slate-700 dark:bg-slate-800 dark:text-slate-200">{ar ? "→ التشخيص السابق" : "← Previous diagnosis"}</button> : <span />}
+          {dxIndex < plan.diagnoses.length - 1 && <button onClick={() => goDx(plan.diagnoses[dxIndex + 1])} className="rounded-full bg-[#168C91] px-4 py-2 text-sm font-bold text-white">{ar ? "التشخيص التالي ←" : "Next diagnosis →"}</button>}
+        </div>
         <p className="rounded-xl bg-amber-50 p-3 text-sm leading-7 text-amber-900 dark:bg-amber-500/10 dark:text-amber-200">{tr("disclaimer", ar)}</p>
         {!!plan.refs?.length && (
           <details className="rounded-xl border border-slate-200 p-3 text-sm dark:border-slate-700">
             <summary className="cursor-pointer font-bold text-slate-700 dark:text-slate-200">{tr("refs", ar)}</summary>
-            <ul dir="ltr" className="mt-2 list-disc space-y-1 pl-5 text-left text-slate-600 dark:text-slate-400">{plan.refs.map((r) => <li key={r.title}>{r.title}</li>)}</ul>
+            <ul className="mt-2 list-disc space-y-1 ps-5 text-slate-600 dark:text-slate-400">{plan.refs.map((r) => <li key={r.title}>{r.title}</li>)}</ul>
           </details>
         )}
-        <Link to="/care-plans" className="inline-block font-bold text-teal-700 dark:text-teal-300">{ar ? "← كل خطط الرعاية" : "← All care plans"}</Link>
+        <Link to={folderLink} className="inline-block font-bold text-teal-700 dark:text-teal-300">{ar ? "← كل خطط الرعاية" : "← All care plans"}</Link>
       </div>
     </div>
   );
 }
 
-function SheetHeader({ ar, kind, title, titleOther }: { ar: boolean; kind: Kind; title: string; titleOther: string }) {
+function SheetHeader({ ar, kind, plan, dx, n }: { ar: boolean; kind: Kind; plan: CarePlan; dx: Diagnosis; n: number }) {
   return (
     <header dir="ltr" className="flex items-center justify-between gap-6 p-5 print:p-3">
       <div className="flex items-center gap-3">
@@ -252,12 +314,12 @@ function SheetHeader({ ar, kind, title, titleOther }: { ar: boolean; kind: Kind;
           <div dir="rtl" className="mt-1 text-xs font-bold text-[#153448]">— كل ما يحتاجه الممرض في مكان واحد —</div>
         </div>
       </div>
-      <div dir={ar ? "rtl" : "ltr"} className="flex min-w-[520px] items-center gap-4 rounded-full bg-[#153448] py-3 ps-4 pe-8 text-white print:py-2">
+      <div dir={ar ? "rtl" : "ltr"} className="flex min-w-[560px] items-center gap-4 rounded-full bg-[#153448] py-3 ps-4 pe-8 text-white print:py-2">
         <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-[#153448]"><Stethoscope className="h-8 w-8" /></span>
         <div className="min-w-0 flex-1">
           <div className="text-2xl font-black leading-8">{ar ? T.sheet.ar : T.sheet.en}</div>
           <div className="text-sm font-bold italic text-[#7fdde1]">{ar ? T.sheet.en : T.sheet.ar} · {ar ? T[kind].ar : T[kind].en}</div>
-          <div className="mt-1 flex flex-wrap items-baseline gap-x-3 text-sm"><span className="font-black text-white">{title}</span><span dir={ar ? "ltr" : "rtl"} className="text-xs font-bold text-white/70">{titleOther}</span></div>
+          <div className="mt-1 text-sm"><span className="font-black text-white">{pick(plan.title, ar)}</span><span className="mx-2 text-white/40">|</span><span className="font-bold text-white/85">{ar ? "التشخيص" : "Diagnosis"} {n}: {pick(dx.title, ar)}</span></div>
         </div>
         <Activity className="h-10 w-10 shrink-0 text-[#5fd3d8]" />
       </div>
@@ -331,68 +393,106 @@ function PatientFields({ ar, kind }: { ar: boolean; kind: Kind }) {
 }
 
 const List = ({ items, className = "" }: { items: string[]; className?: string }) => (
-  <ul className={`list-disc space-y-1 ps-4 ${className}`}>{items.map((x) => <li key={x}>{x}</li>)}</ul>
+  <ul className={`list-disc space-y-1 ps-4 ${className}`}>{items.map((x, i) => <li key={i}>{x}</li>)}</ul>
 );
 const thCls = "border-x border-white/25 bg-[#153448] px-2 py-3 print:py-1.5 text-center align-middle text-[14px] font-black leading-5 text-white print:text-[11px]";
-const tdCls = "border border-[#168C91]/45 bg-white p-2.5 align-top text-[13px] leading-6 text-slate-800 print:text-[10.5px] print:leading-[1.45]";
+const tdCls = "border border-[#168C91]/45 bg-white p-2.5 align-top text-[13px] leading-6 text-slate-800 print:text-[10px] print:leading-[1.4]";
 const Head = ({ icon: Icon, label }: { icon: typeof Clock; label: string }) => (
   <span className="flex flex-col items-center gap-1.5"><Icon className="h-6 w-6 text-[#7fdde1] print:h-4 print:w-4" strokeWidth={2.2} /><span>{label}</span></span>
 );
+const Sub = ({ children }: { children: React.ReactNode }) => <div className="mb-0.5 mt-2 text-[11px] font-black text-[#168C91] first:mt-0">{children}</div>;
 
-function Interventions({ d, ar }: { d: StudentDiagnosis; ar: boolean }) {
+function DiagnosisCell({ dx, ar }: { dx: Diagnosis; ar: boolean }) {
   return (
-    <ol className="space-y-2">
-      {d.interventions.map((x, i) => (
-        <li key={i} className="flex gap-2">
-          <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#168C91] text-[11px] font-black text-white">{i + 1}</span>
-          <div>
-            <div className="font-bold">{pick(x.action, ar)}</div>
-            <div className="mt-0.5 text-[#0f6b70]"><span className="font-black">{tr("rationale", ar)}: </span>{pick(x.rationale, ar)}</div>
-          </div>
-        </li>
-      ))}
-    </ol>
+    <div>
+      <div className="text-[14px] font-black leading-6 text-[#153448]">{pick(dx.title, ar)}</div>
+      {dx.statement && !dx.definition && <p className="mt-1 font-bold">{pick(dx.statement, ar)}</p>}
+      {dx.definition && <><Sub>{tr("definition", ar)}</Sub><p className="text-slate-600">{pick(dx.definition, ar)}</p></>}
+      {!!dx.relatedTo?.ar.length && <><Sub>{tr("relatedTo", ar)}</Sub><List items={pickList(dx.relatedTo, ar)} /></>}
+      {dx.kind === "risk"
+        ? !!dx.riskFactors?.ar.length && <><Sub>{tr("riskFactors", ar)}</Sub><List items={pickList(dx.riskFactors, ar)} /></>
+        : !!dx.evidencedBy?.ar.length && <><Sub>{tr("evidencedBy", ar)}</Sub><List items={pickList(dx.evidencedBy, ar)} /></>}
+    </div>
   );
 }
 
-function StudentPlan({ ar, dx }: { ar: boolean; dx: StudentDiagnosis[] }) {
+function Interventions({ dx, ar }: { dx: Diagnosis; ar: boolean }) {
+  const groups = (["assess", "independent", "collab", "teach"] as const).map((t) => [t, dx.interventions.filter((x) => x.type === t)] as const).filter(([, l]) => l.length);
+  let n = 0;
+  return (
+    <div className="space-y-2">
+      {groups.map(([t, list]) => (
+        <div key={t}>
+          {groups.length > 1 && <div className="mb-1 rounded-md bg-[#168C91]/10 px-2 py-0.5 text-[11px] font-black text-[#0f6b70]">{ar ? TYPE_LABEL[t].ar : TYPE_LABEL[t].en}</div>}
+          <ol className="space-y-1.5">
+            {list.map((x) => {
+              n += 1;
+              return (
+                <li key={n} className="flex gap-2 break-inside-avoid">
+                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#168C91] text-[11px] font-black text-white">{n}</span>
+                  <div>
+                    <div className="font-bold">{pick(x.action, ar)}</div>
+                    <div className="mt-0.5 text-[#0f6b70]"><span className="font-black">{tr("rationale", ar)}: </span>{pick(x.rationale, ar)}</div>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function StudentForm({ ar, dx }: { ar: boolean; dx: Diagnosis }) {
   const cols = [[ClipboardList, "assessment"], [TriangleAlert, "diagnosis"], [Trophy, "goals"], [Settings, "interventions"], [CircleCheck, "evaluation"]] as const;
   return (
     <div className="overflow-hidden rounded-2xl border border-[#168C91]/60 print:overflow-visible">
       <table className="w-full table-fixed border-collapse">
-        <colgroup><col className="w-[20%]" /><col className="w-[15%]" /><col className="w-[15%]" /><col className="w-[34%]" /><col className="w-[16%]" /></colgroup>
+        <colgroup><col className="w-[18%]" /><col className="w-[19%]" /><col className="w-[15%]" /><col className="w-[33%]" /><col className="w-[15%]" /></colgroup>
         <thead><tr>{cols.map(([I, k]) => <th key={k} className={thCls}><Head icon={I} label={tr(k, ar)} /></th>)}</tr></thead>
         <tbody>
-          {dx.map((d, n) => (
-            <tr key={n} className="break-inside-avoid">
-              <td className={tdCls}>
-                <div className="text-[11px] font-black text-[#168C91]">{tr("subjective", ar)}</div><List items={pickList(d.assessment.subjective, ar)} />
-                <div className="mt-2 text-[11px] font-black text-[#168C91]">{tr("objective", ar)}</div><List items={pickList(d.assessment.objective, ar)} />
-              </td>
-              <td className={`${tdCls} font-bold`}>{pick(d.diagnosis, ar)}</td>
-              <td className={tdCls}><List items={pickList(d.goals, ar)} /></td>
-              <td className={tdCls}><Interventions d={d} ar={ar} /></td>
-              <td className={tdCls}><List items={pickList(d.evaluation, ar)} /></td>
-            </tr>
-          ))}
+          <tr>
+            <td className={tdCls}>
+              <Sub>{tr("subjective", ar)}</Sub><List items={pickList(dx.assessment.subjective, ar)} />
+              <Sub>{tr("objective", ar)}</Sub><List items={pickList(dx.assessment.objective, ar)} />
+            </td>
+            <td className={tdCls}><DiagnosisCell dx={dx} ar={ar} /></td>
+            <td className={tdCls}>
+              <Sub>{tr("shortTerm", ar)}</Sub><List items={pickList(dx.goals.short, ar)} />
+              {!!dx.goals.long.ar.length && <><Sub>{tr("longTerm", ar)}</Sub><List items={pickList(dx.goals.long, ar)} /></>}
+            </td>
+            <td className={tdCls}><Interventions dx={dx} ar={ar} /></td>
+            <td className={tdCls}>
+              <ul className="space-y-2">
+                {dx.evaluation.map((e, i) => (
+                  <li key={i}>
+                    <span className={`mb-0.5 inline-block rounded-full px-2 text-[11px] font-black ring-1 ${STATUS[e.status].cls}`}>{STATUS[e.status].mark} {ar ? STATUS[e.status].ar : STATUS[e.status].en}</span>
+                    <div>{pick(e.text, ar)}</div>
+                  </li>
+                ))}
+              </ul>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
   );
 }
 
-function HospitalPlan({ ar, rows }: { ar: boolean; rows: HospitalRow[] }) {
+function HospitalForm({ ar, dx }: { ar: boolean; dx: Diagnosis }) {
   const cols = [[Target, "dateTime"], [UserRound, "diagnosis"], [ClipboardCheck, "needs"], [Lightbulb, "actions"], [CircleCheck, "outcomes"], [TrendingUp, "timeframe"], [PenLine, "signature"]] as const;
+  const rows = dx.hospital.length ? dx.hospital : [];
   return (
     <div className="overflow-hidden rounded-2xl border border-[#168C91]/60 print:overflow-visible">
       <table className="w-full table-fixed border-collapse">
-        <colgroup><col className="w-[11%]" /><col className="w-[15%]" /><col className="w-[15%]" /><col className="w-[23%]" /><col className="w-[15%]" /><col className="w-[11%]" /><col className="w-[10%]" /></colgroup>
+        <colgroup><col className="w-[10%]" /><col className="w-[16%]" /><col className="w-[16%]" /><col className="w-[22%]" /><col className="w-[15%]" /><col className="w-[11%]" /><col className="w-[10%]" /></colgroup>
         <thead><tr>{cols.map(([I, k]) => <th key={k} className={thCls}><Head icon={I} label={tr(k, ar)} /></th>)}</tr></thead>
         <tbody>
           {rows.map((r, n) => (
             <tr key={n} className="break-inside-avoid">
               <td className={tdCls} />
-              <td className={`${tdCls} font-bold`}>{pick(r.diagnosis, ar)}</td>
+              {n === 0 && <td rowSpan={rows.length} className={`${tdCls} font-black text-[#153448]`}>{pick(dx.title, ar)}{dx.kind === "risk" && <div className="mt-1 text-[11px] font-bold text-slate-500">({ar ? "تشخيص خطر" : "risk diagnosis"})</div>}</td>}
               <td className={tdCls}>{pick(r.need, ar)}</td>
               <td className={tdCls}><List items={pickList(r.actions, ar)} /></td>
               <td className={tdCls}>{pick(r.outcome, ar)}</td>
@@ -406,3 +506,4 @@ function HospitalPlan({ ar, rows }: { ar: boolean; rows: HospitalRow[] }) {
     </div>
   );
 }
+

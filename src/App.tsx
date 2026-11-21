@@ -231,7 +231,7 @@ function MaintenanceScreen({ message, until: untilRaw }: { message?: string; unt
 
 /** Public pages that fetch their own data (own API + static snapshot) and never read the store bundle. They render immediately. */
 const STORE_FREE_ROUTES = [
-  '/shift', '/cards', '/anatomy', '/anatomy/:id', '/cases', '/care-plans', '/care-plans/:id', '/courses', '/diseases', '/tools', '/interview-questions', '/travel-questions', '/travel-questions/:categoryId',
+  '/shift', '/cards', '/anatomy', '/anatomy/:id', '/cases', '/care-plans', '/care-plans/:id', '/care-plans/:id/:dx', '/courses', '/diseases', '/tools', '/interview-questions', '/travel-questions', '/travel-questions/:categoryId',
   '/dialysis', '/dialysis/:id', '/er-reception', '/er-reception/:id', '/first-aid', '/first-aid/:id', '/fundamentals', '/fundamentals/:id',
   '/icu-nursing', '/icu-nursing/:id', '/obgyn', '/obgyn/:id', '/operating-room', '/operating-room/:id', '/pediatrics', '/pediatrics/:id',
   '/pharmacology', '/pharmacology/:id', '/radiology', '/radiology/:id', '/terminology', '/terminology/:id',
@@ -413,6 +413,7 @@ export default function App() {
                   <Route path="/cases/:id" element={<Public><CasePage /></Public>} />
                   <Route path="/care-plans" element={<Public><CarePlansHome /></Public>} />
                   <Route path="/care-plans/:id" element={<Public><CarePlanPage /></Public>} />
+                  <Route path="/care-plans/:id/:dx" element={<Public><CarePlanPage /></Public>} />
                   <Route path="/diseases" element={<Public><DiseasesHome /></Public>} />
                   <Route path="/diseases/:id" element={<Public><DiseasePage /></Public>} />
                   <Route path="/guide/:id" element={<Public><DiseasePage /></Public>} />

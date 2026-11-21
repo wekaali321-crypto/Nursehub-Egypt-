@@ -2,290 +2,2139 @@
  "id": "heart-failure",
  "icon": "💔",
  "system": "cardiology",
+ "folder": "disease",
  "title": {
   "ar": "هبوط القلب (فشل القلب)",
   "en": "Heart Failure"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض هبوط قلب مع احتباس سوائل وضيق نفس: الوزن اليومي، تقييد السوائل، وتحمّل النشاط.",
-  "en": "Care plan for heart failure with fluid overload and dyspnea: daily weights, fluid restriction and activity tolerance."
+  "ar": "خطط رعاية لمريض هبوط القلب: 7 تشخيصات تمريضية، كل تشخيص في نموذج مستقل للطالب والمستشفى.",
+  "en": "Heart failure care plans: 7 nursing diagnoses, each in its own student and hospital form."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "زيادة حجم السوائل (Excess fluid volume) مرتبطة بضعف آلية تنظيم السوائل بسبب ضعف عضلة القلب وتظهر في ورم القدمين وزيادة الوزن وخرخرة في الرئة.",
-    "en": "Excess fluid volume related to compromised regulatory mechanism (reduced cardiac pumping) as evidenced by leg edema, weight gain and lung crackles."
+   "id": "decreased-cardiac-output",
+   "kind": "actual",
+   "title": {
+    "ar": "انخفاض نتاج القلب",
+    "en": "Decreased Cardiac Output"
+   },
+   "definition": {
+    "ar": "عدم كفاية كمية الدم التي يضخها القلب لتلبية احتياجات الجسم الأيضية.",
+    "en": "Inadequate blood pumped by the heart to meet the metabolic demands of the body."
+   },
+   "relatedTo": {
+    "ar": [
+     "ضعف انقباض عضلة القلب (Altered contractility)",
+     "زيادة الحمل القبلي بسبب احتباس السوائل (Increased preload)",
+     "زيادة الحمل البعدي (Increased afterload)",
+     "تغير سرعة ونظم القلب"
+    ],
+    "en": [
+     "Altered myocardial contractility",
+     "Increased preload from fluid retention",
+     "Increased afterload",
+     "Altered heart rate and rhythm"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "سرعة النبض 112/دقيقة ونبض طرفي ضعيف",
+     "برودة الأطراف وتأخر امتلاء الشعيرات (> 3 ثوانٍ)",
+     "قلة البول (25 مل/ساعة)",
+     "نسبة القذف (Ejection fraction) ‏30% بالإيكو",
+     "صوت قلب ثالث (S3 gallop)"
+    ],
+    "en": [
+     "Tachycardia 112/min with weak peripheral pulses",
+     "Cool extremities; capillary refill > 3 seconds",
+     "Oliguria (25 mL/h)",
+     "Ejection fraction 30% on echocardiography",
+     "S3 gallop"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بتعب من أقل مجهود وحاسس إني دايخ.\"",
+      "\"قلبي بيدق بسرعة.\""
+     ],
+     "en": [
+      "\"I get exhausted with the least effort and feel dizzy.\"",
+      "\"My heart is racing.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الضغط 98/60 مم زئبق، النبض 112، التنفس 24/دقيقة.",
+      "برودة الأطراف وامتلاء الشعيرات 4 ثوانٍ.",
+      "كمية البول 25 مل/ساعة.",
+      "BNP مرتفع (1200 بيكوجرام/مل).",
+      "الإيكو: نسبة القذف 30%."
+     ],
+     "en": [
+      "BP 98/60 mmHg, pulse 112, RR 24/min.",
+      "Cool limbs; capillary refill 4 seconds.",
+      "Urine output 25 mL/h.",
+      "Raised BNP (1200 pg/mL).",
+      "Echo: ejection fraction 30%."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: نبض 60–100/دقيقة، ضغط انقباضي ≥ 100، وبول ≥ 0.5 مل/كجم/ساعة.",
+      "خلال 48 ساعة: أطراف دافئة وامتلاء شعيرات < 3 ثوانٍ."
+     ],
+     "en": [
+      "Within 24 hours: pulse 60–100/min, systolic BP ≥ 100 and urine ≥ 0.5 mL/kg/h.",
+      "Within 48 hours: warm extremities and capillary refill < 3 seconds."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يمارس المريض أنشطته اليومية البسيطة دون دوخة أو ألم صدر."
+     ],
+     "en": [
+      "Before discharge: the patient performs simple daily activities without dizziness or chest pain."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الضغط والنبض (القمي لمدة دقيقة) والتنفس كل 2–4 ساعات وحسب الحالة.",
+      "en": "Measure BP, apical pulse (full minute) and respirations every 2–4 hours and as needed."
+     },
+     "rationale": {
+      "ar": "يكشف تدهور الدورة الدموية واضطرابات النظم مبكرًا.",
+      "en": "Detects hemodynamic deterioration and dysrhythmias early."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم التروية الطرفية: لون وحرارة الجلد، النبض الطرفي، وامتلاء الشعيرات.",
+      "en": "Assess peripheral perfusion: skin colour and temperature, pulses, capillary refill."
+     },
+     "rationale": {
+      "ar": "ضعف التروية علامة على انخفاض ما يضخه القلب.",
+      "en": "Poor perfusion reflects low cardiac output."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس كمية البول كل ساعة (قسطرة عند الحاجة).",
+      "en": "Measure hourly urine output (catheter if needed)."
+     },
+     "rationale": {
+      "ar": "نقص البول من أول علامات ضعف تروية الكلى.",
+      "en": "Falling urine output is an early sign of renal hypoperfusion."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "مونيتور قلب مستمر وملاحظة اضطرابات النظم.",
+      "en": "Continuous cardiac monitoring for dysrhythmias."
+     },
+     "rationale": {
+      "ar": "الرجفان الأذيني والبطيني شائعان مع ضعف القلب ويقللان كفاءته.",
+      "en": "Atrial and ventricular dysrhythmias are common and reduce output."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع المريض نصف جالس أو جالس مع ساقين مدلاتين عند ضيق النفس.",
+      "en": "Position semi- or high-Fowler's with legs dependent when dyspneic."
+     },
+     "rationale": {
+      "ar": "يقلل رجوع الدم للقلب (Preload) ويحسن التنفس.",
+      "en": "Reduces venous return (preload) and eases breathing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "راحة في السرير أو كرسي في المرحلة الحادة مع تجميع الرعاية.",
+      "en": "Bed or chair rest during the acute phase with clustered care."
+     },
+     "rationale": {
+      "ar": "يقلل احتياج القلب للأكسجين ومجهوده.",
+      "en": "Reduces myocardial oxygen demand and workload."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "بيئة هادئة وتقليل الزيارات المجهدة.",
+      "en": "Provide a quiet environment and limit tiring visits."
+     },
+     "rationale": {
+      "ar": "التوتر يرفع النبض والضغط عن طريق الجهاز السمبثاوي.",
+      "en": "Stress raises heart rate and BP via sympathetic stimulation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأدوية حسب الأمر: مدرات البول، موسعات الأوعية (ACE-I/ARNI)، حاصرات بيتا، الديجوكسين.",
+      "en": "Give prescribed drugs: diuretics, vasodilators (ACE-I/ARNI), beta-blockers, digoxin."
+     },
+     "rationale": {
+      "ar": "تقلل الحمل القبلي والبعدي وتحسن كفاءة القلب على المدى الطويل.",
+      "en": "Reduce preload and afterload and improve long-term cardiac function."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "قياس النبض قبل الديجوكسين وحاصرات بيتا وتأجيل الجرعة وإبلاغ الطبيب إذا كان أقل من 60.",
+      "en": "Check pulse before digoxin or beta-blockers; withhold and report if below 60."
+     },
+     "rationale": {
+      "ar": "تبطئ القلب وقد تسبب بطء شديد أو تسمم ديجوكسين.",
+      "en": "They slow the heart and may cause severe bradycardia or digoxin toxicity."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأكسجين حسب الأمر لهدف تشبع ≥ 94%.",
+      "en": "Give oxygen as ordered to keep SpO₂ ≥ 94%."
+     },
+     "rationale": {
+      "ar": "يزيد الأكسجين المتاح لعضلة القلب والأنسجة.",
+      "en": "Increases oxygen available to the myocardium and tissues."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة البوتاسيوم والصوديوم ووظائف الكلى وBNP.",
+      "en": "Monitor potassium, sodium, renal function and BNP."
+     },
+     "rationale": {
+      "ar": "المدرات تسبب اختلال أملاح، وBNP يعكس شدة الهبوط.",
+      "en": "Diuretics disturb electrolytes; BNP reflects HF severity."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض الإبلاغ عن الدوخة، ألم الصدر، أو زيادة ضيق النفس فورًا.",
+      "en": "Teach the patient to report dizziness, chest pain or worsening dyspnea immediately."
+     },
+     "rationale": {
+      "ar": "يسمح بالتدخل المبكر قبل التدهور.",
+      "en": "Allows early intervention before deterioration."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "النبض 88 والضغط 110/70 والبول 50 مل/ساعة بعد 24 ساعة — الهدف قصير المدى تحقق.",
+      "en": "Pulse 88, BP 110/70, urine 50 mL/h after 24 hours — short-term goal met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "الأطراف دافئة وامتلاء الشعيرات ثانيتين في اليوم الثاني — تحقق.",
+      "en": "Warm limbs, capillary refill 2 seconds on day 2 — met."
+     }
+    },
+    {
+     "status": "partial",
+     "text": {
+      "ar": "يمشي للحمام مع ضيق نفس بسيط — الهدف طويل المدى تحقق جزئيًا؛ يستمر برنامج النشاط المتدرج.",
+      "en": "Walks to the bathroom with mild dyspnea — long-term goal partially met; continue graded activity."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "ضبط ضربات القلب والضغط",
+      "en": "Stabilize heart rate and BP"
+     },
+     "actions": {
+      "ar": [
+       "قياس العلامات كل 2–4 ساعات",
+       "مونيتور مستمر"
+      ],
+      "en": [
+       "Vitals every 2–4 h",
+       "Continuous monitor"
+      ]
+     },
+     "outcome": {
+      "ar": "نبض 60–100 وضغط ≥ 100/60",
+      "en": "Pulse 60–100, BP ≥ 100/60"
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "تحسين تروية الأعضاء",
+      "en": "Improve organ perfusion"
+     },
+     "actions": {
+      "ar": [
+       "البول كل ساعة",
+       "تقييم الأطراف"
+      ],
+      "en": [
+       "Hourly urine",
+       "Assess extremities"
+      ]
+     },
+     "outcome": {
+      "ar": "بول ≥ 0.5 مل/كجم/ساعة",
+      "en": "Urine ≥ 0.5 mL/kg/h"
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تقليل مجهود القلب",
+      "en": "Reduce cardiac workload"
+     },
+     "actions": {
+      "ar": [
+       "وضع نصف جالس",
+       "راحة وبيئة هادئة"
+      ],
+      "en": [
+       "Semi-Fowler's",
+       "Rest, quiet room"
+      ]
+     },
+     "outcome": {
+      "ar": "المريض مرتاح بدون ضيق شديد",
+      "en": "Comfortable, no marked dyspnea"
+     },
+     "timeframe": {
+      "ar": "طوال الإقامة",
+      "en": "Throughout stay"
+     }
+    },
+    {
+     "need": {
+      "ar": "إعطاء أدوية القلب بأمان",
+      "en": "Give cardiac drugs safely"
+     },
+     "actions": {
+      "ar": [
+       "نبض قبل الديجوكسين وحاصرات بيتا",
+       "متابعة البوتاسيوم"
+      ],
+      "en": [
+       "Pulse before digoxin/beta-blockers",
+       "Monitor potassium"
+      ]
+     },
+     "outcome": {
+      "ar": "لا بطء أو تسمم",
+      "en": "No bradycardia or toxicity"
+     },
+     "timeframe": {
+      "ar": "مع كل جرعة",
+      "en": "Each dose"
+     }
+    }
+   ]
+  },
+  {
+   "id": "excess-fluid-volume",
+   "kind": "actual",
+   "title": {
+    "ar": "زيادة حجم السوائل",
+    "en": "Excess Fluid Volume"
+   },
+   "definition": {
+    "ar": "زيادة احتباس السوائل في الأوعية والأنسجة.",
+    "en": "Increased retention of isotonic fluid in the vascular and interstitial spaces."
+   },
+   "relatedTo": {
+    "ar": [
+     "ضعف آليات تنظيم السوائل بسبب انخفاض ضخ القلب",
+     "تنشيط نظام الرينين-أنجيوتنسين-ألدوستيرون واحتباس الصوديوم",
+     "زيادة الملح والسوائل في الأكل"
+    ],
+    "en": [
+     "Compromised regulatory mechanisms from low cardiac output",
+     "Activation of the renin–angiotensin–aldosterone system with sodium retention",
+     "Excess dietary sodium and fluid intake"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "زيادة الوزن 3 كجم في 4 أيام",
+     "ورم في القدمين ينطبع بالضغط +3",
+     "خرخرة في قاعدة الرئتين",
+     "انتفاخ الوريد الوداجي (JVD)",
+     "ضيق نفس عند الاستلقاء (Orthopnea)"
+    ],
+    "en": [
+     "Weight gain of 3 kg in 4 days",
+     "+3 pitting edema of both legs",
+     "Bibasal crackles",
+     "Jugular venous distension (JVD)",
+     "Orthopnea"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
       "\"رجلي وارمة والجزمة بقت ضيقة.\"",
-      "\"بنام على 3 مخدات عشان أعرف أتنفس.\""
+      "\"بنام على 3 مخدات عشان أعرف أتنفس.\"",
+      "\"بقيت أدخل الحمام قليل.\""
      ],
      "en": [
-      "\"My legs are swollen and my shoes feel tight.\"",
-      "\"I sleep on 3 pillows to breathe.\""
+      "\"My legs are swollen and my shoes are tight.\"",
+      "\"I sleep on 3 pillows to breathe.\"",
+      "\"I pass urine less than before.\""
      ]
     },
     "objective": {
      "ar": [
-      "زيادة الوزن 3 كجم في 4 أيام.",
-      "ورم في القدمين ينطبع بالضغط درجة +3 (Pitting edema).",
-      "خرخرة (Crackles) في قاعدة الرئتين، وتشبع الأكسجين 91% على هواء الغرفة.",
-      "ارتفاع ضغط الوريد الوداجي (JVD)."
+      "الوزن 84 كجم (كان 81 كجم قبل 4 أيام).",
+      "ورم +3 بالقدمين والساقين.",
+      "خرخرة في قاعدة الرئتين وانتفاخ الوريد الوداجي.",
+      "الداخل 2400 مل والخارج 1100 مل في 24 ساعة.",
+      "الصوديوم 132، والأشعة تظهر احتقان رئوي."
      ],
      "en": [
-      "Weight gain of 3 kg in 4 days.",
-      "+3 pitting edema of both legs.",
-      "Bibasal crackles; SpO₂ 91% on room air.",
-      "Jugular venous distension (JVD)."
+      "Weight 84 kg (81 kg four days ago).",
+      "+3 pitting edema of feet and legs.",
+      "Bibasal crackles and JVD.",
+      "Intake 2400 mL, output 1100 mL in 24 hours.",
+      "Sodium 132; chest X-ray shows pulmonary congestion."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال 72 ساعة: نقص الوزن 0.5–1 كجم يوميًا، تقل الخرخرة، وتشبع الأكسجين ≥ 94%."
-    ],
-    "en": [
-     "Within 72 hours: weight falls 0.5–1 kg per day, crackles decrease and SpO₂ ≥ 94%."
-    ]
+    "short": {
+     "ar": [
+      "خلال 72 ساعة: نقص الوزن 0.5–1 كجم يوميًا وتوازن سالب للسوائل.",
+      "خلال 72 ساعة: يقل الورم إلى +1 وتقل الخرخرة."
+     ],
+     "en": [
+      "Within 72 hours: weight falls 0.5–1 kg/day with a negative fluid balance.",
+      "Within 72 hours: edema decreases to +1 and crackles lessen."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يشرح المريض الوزن اليومي وحدود الملح والسوائل، ومتى يتصل بالطبيب (زيادة > 2 كجم في 3 أيام)."
+     ],
+     "en": [
+      "Before discharge: the patient explains daily weighing, salt and fluid limits, and when to call (gain > 2 kg in 3 days)."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "وزن المريض يوميًا صباحًا بنفس الميزان وبعد التبول وقبل الإفطار.",
-      "en": "Weigh daily in the morning, same scale, after voiding and before breakfast."
+      "ar": "الوزن اليومي صباحًا بنفس الميزان والملابس بعد التبول وقبل الإفطار.",
+      "en": "Weigh daily in the morning: same scale and clothing, after voiding, before breakfast."
      },
      "rationale": {
-      "ar": "الوزن هو أدق مؤشر لاحتباس أو فقد السوائل (1 كجم ≈ 1 لتر).",
-      "en": "Weight is the most accurate indicator of fluid gain or loss (1 kg ≈ 1 L)."
+      "ar": "أدق مؤشر للسوائل؛ 1 كجم ≈ 1 لتر.",
+      "en": "The most accurate fluid indicator; 1 kg ≈ 1 L."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "تسجيل الداخل والخارج بدقة وتقييد السوائل حسب الأمر (مثلًا 1.5 لتر/يوم).",
-      "en": "Record intake and output accurately and restrict fluids as ordered (e.g. 1.5 L/day)."
+      "ar": "تسجيل الداخل والخارج بدقة وحساب التوازن كل 24 ساعة.",
+      "en": "Record intake and output accurately and calculate 24-hour balance."
      },
      "rationale": {
-      "ar": "يقلل الحمل على القلب ويقيس استجابة العلاج.",
-      "en": "Reduces cardiac workload and measures treatment response."
+      "ar": "يقيس استجابة المدرات واحتباس السوائل.",
+      "en": "Measures diuretic response and fluid retention."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "إعطاء مدر البول (Furosemide) حسب الأمر ومتابعة البوتاسيوم والضغط.",
-      "en": "Give diuretics (e.g. furosemide) as ordered and monitor potassium and BP."
+      "ar": "تقييم الورم (الدرجة والمكان) وسماع الرئة مرتين يوميًا على الأقل.",
+      "en": "Assess edema (grade and site) and auscultate lungs at least twice daily."
      },
      "rationale": {
-      "ar": "المدر يخرج السوائل الزائدة لكن قد يسبب نقص بوتاسيوم وهبوط ضغط.",
-      "en": "Diuretics remove excess fluid but may cause hypokalemia and hypotension."
+      "ar": "يتابع التحسن أو ظهور وذمة الرئة.",
+      "en": "Tracks improvement or developing pulmonary edema."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "وضع المريض في وضع نصف جالس أو جالس (Fowler).",
-      "en": "Position the patient in semi- or high-Fowler's position."
+      "ar": "تقييد السوائل حسب الأمر (مثلًا 1.5 لتر/يوم) وتوزيعها على اليوم.",
+      "en": "Restrict fluids as ordered (e.g. 1.5 L/day), spread across the day."
      },
      "rationale": {
-      "ar": "يقلل رجوع الدم للقلب ويحسن تمدد الرئة.",
-      "en": "Reduces venous return and improves lung expansion."
+      "ar": "يقلل الحمل على القلب، والتوزيع يقلل العطش.",
+      "en": "Lowers cardiac load; spacing reduces thirst."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "سماع الرئة وتقييم الورم مرتين يوميًا على الأقل.",
-      "en": "Auscultate lungs and assess edema at least twice daily."
+      "ar": "رفع الساقين أثناء الجلوس وتغيير الوضع كل ساعتين.",
+      "en": "Elevate legs when sitting and reposition every 2 hours."
      },
      "rationale": {
-      "ar": "يقيس تحسن أو زيادة احتباس السوائل.",
-      "en": "Tracks improvement or worsening of congestion."
+      "ar": "يساعد رجوع السوائل ويحمي الجلد المتورم من القرح.",
+      "en": "Promotes fluid return and protects oedematous skin."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عناية بالفم وقطع ثلج صغيرة لتقليل العطش.",
+      "en": "Mouth care and small ice chips to relieve thirst."
+     },
+     "rationale": {
+      "ar": "يساعد على الالتزام بتقييد السوائل.",
+      "en": "Helps adherence to fluid restriction."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء مدر البول (Furosemide) حسب الأمر وتسجيل البول بعدها.",
+      "en": "Give furosemide as ordered and record the diuresis that follows."
+     },
+     "rationale": {
+      "ar": "يخرج السوائل الزائدة؛ الاستجابة تحدد الجرعة.",
+      "en": "Removes excess fluid; response guides dosing."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة البوتاسيوم والماغنيسيوم والكرياتينين.",
+      "en": "Monitor potassium, magnesium and creatinine."
+     },
+     "rationale": {
+      "ar": "المدرات تفقد الأملاح وقد تؤثر على الكلى.",
+      "en": "Diuretics waste electrolytes and may affect renal function."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تطبيق نظام قليل الملح (أقل من 2 جم صوديوم/يوم) مع أخصائي التغذية.",
+      "en": "Provide a low-sodium diet (< 2 g sodium/day) with the dietitian."
+     },
+     "rationale": {
+      "ar": "الصوديوم يزيد احتباس الماء.",
+      "en": "Sodium promotes water retention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الوزن اليومي بالبيت وتسجيله.",
+      "en": "Teach daily home weighing and recording."
+     },
+     "rationale": {
+      "ar": "يكشف تراكم السوائل قبل ظهور الأعراض.",
+      "en": "Detects fluid build-up before symptoms."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأطعمة عالية الملح (المخلل، الجبن القديمة، المعلبات، الشوربة الجاهزة).",
+      "en": "Teach high-salt foods (pickles, aged cheese, canned food, instant soups)."
+     },
+     "rationale": {
+      "ar": "تجنبها أساس منع الانتكاس.",
+      "en": "Avoiding them is key to preventing relapse."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "نقص الوزن 2.5 كجم في 3 أيام، الخرخرة في القاعدة اليمنى فقط، وتشبع الأكسجين 95%. — تحقق الهدف."
-    ],
-    "en": [
-     "Weight down 2.5 kg in 3 days, crackles only at the right base, SpO₂ 95%. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "نقص الوزن 2.5 كجم في 3 أيام وتوازن سالب 900 مل/يوم — تحقق.",
+      "en": "Weight down 2.5 kg in 3 days with −900 mL/day balance — met."
+     }
+    },
+    {
+     "status": "partial",
+     "text": {
+      "ar": "الورم +1 والخرخرة في القاعدة اليمنى فقط — تحقق جزئيًا؛ يستمر المدر.",
+      "en": "Edema +1, crackles only at the right base — partially met; continue diuretic."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض شرح الوزن اليومي وحدود الملح ومتى يتصل — تحقق.",
+      "en": "Patient explained daily weighing, salt limits and when to call — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التخلص من السوائل الزائدة",
+      "en": "Remove excess fluid"
+     },
+     "actions": {
+      "ar": [
+       "الوزن اليومي",
+       "مدر البول حسب الأمر",
+       "الداخل والخارج"
+      ],
+      "en": [
+       "Daily weight",
+       "Diuretic as ordered",
+       "Intake & output"
+      ]
+     },
+     "outcome": {
+      "ar": "نقص 0.5–1 كجم/يوم",
+      "en": "Loss of 0.5–1 kg/day"
+     },
+     "timeframe": {
+      "ar": "72 ساعة",
+      "en": "72 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "تقييد السوائل والملح",
+      "en": "Fluid and salt restriction"
+     },
+     "actions": {
+      "ar": [
+       "1.5 لتر/يوم",
+       "أكل قليل الملح"
+      ],
+      "en": [
+       "1.5 L/day",
+       "Low-salt diet"
+      ]
+     },
+     "outcome": {
+      "ar": "التزام بالحدود",
+      "en": "Limits respected"
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "متابعة الأملاح",
+      "en": "Electrolyte monitoring"
+     },
+     "actions": {
+      "ar": [
+       "بوتاسيوم وكرياتينين"
+      ],
+      "en": [
+       "Potassium and creatinine"
+      ]
+     },
+     "outcome": {
+      "ar": "بوتاسيوم 3.5–5.0",
+      "en": "Potassium 3.5–5.0"
+     },
+     "timeframe": {
+      "ar": "كل 24 ساعة",
+      "en": "Every 24 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "حماية الجلد المتورم",
+      "en": "Protect oedematous skin"
+     },
+     "actions": {
+      "ar": [
+       "تغيير الوضع كل ساعتين",
+       "رفع الساقين"
+      ],
+      "en": [
+       "Turn every 2 h",
+       "Elevate legs"
+      ]
+     },
+     "outcome": {
+      "ar": "جلد سليم",
+      "en": "Intact skin"
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "عدم تحمّل النشاط (Activity intolerance) مرتبط بعدم التوازن بين احتياج الأكسجين والإمداد به ويظهر في ضيق النفس والتعب مع المجهود البسيط.",
-    "en": "Activity intolerance related to imbalance between oxygen supply and demand as evidenced by dyspnea and fatigue on minimal exertion."
+   "id": "impaired-gas-exchange",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف تبادل الغازات",
+    "en": "Impaired Gas Exchange"
+   },
+   "definition": {
+    "ar": "زيادة أو نقص في الأكسجة أو التخلص من ثاني أكسيد الكربون عند الغشاء الحويصلي الشعيري.",
+    "en": "Excess or deficit in oxygenation and/or carbon dioxide elimination at the alveolar–capillary membrane."
+   },
+   "relatedTo": {
+    "ar": [
+     "احتقان الرئة وتسرب السوائل للحويصلات",
+     "تغير في الغشاء الحويصلي الشعيري"
+    ],
+    "en": [
+     "Pulmonary congestion with fluid in the alveoli",
+     "Alveolar–capillary membrane changes"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تشبع الأكسجين 89% على هواء الغرفة",
+     "PaO₂ ‏62 مم زئبق",
+     "ضيق نفس وسرعة تنفس 28/دقيقة",
+     "قلق وعدم راحة"
+    ],
+    "en": [
+     "SpO₂ 89% on room air",
+     "PaO₂ 62 mmHg",
+     "Dyspnea, RR 28/min",
+     "Restlessness"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"بتعب ونفَسي بيتقطع لما أروح الحمام.\""
+      "\"مش قادر آخد نفس وأنا نايم.\"",
+      "\"بصحى بالليل مخنوق.\""
      ],
      "en": [
-      "\"I get tired and breathless walking to the bathroom.\""
+      "\"I can't breathe lying down.\"",
+      "\"I wake up at night gasping.\""
      ]
     },
     "objective": {
      "ar": [
-      "زيادة النبض من 88 إلى 118/دقيقة مع المشي 10 أمتار.",
-      "سرعة التنفس 28/دقيقة مع المجهود."
+      "التشبع 89% على هواء الغرفة.",
+      "غازات الدم: PaO₂ ‏62، PaCO₂ ‏34، pH ‏7.46.",
+      "خرخرة رطبة في القاعدتين.",
+      "شحوب خفيف حول الفم."
      ],
      "en": [
-      "Heart rate rises from 88 to 118/min after walking 10 m.",
-      "Respiratory rate 28/min on exertion."
+      "SpO₂ 89% on room air.",
+      "ABG: PaO₂ 62, PaCO₂ 34, pH 7.46.",
+      "Moist bibasal crackles.",
+      "Mild circumoral pallor."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال 5 أيام يمشي المريض داخل الغرفة مع زيادة النبض أقل من 20 نبضة عن الراحة ودون ضيق نفس شديد."
-    ],
-    "en": [
-     "Within 5 days the patient walks in the room with heart rate rising less than 20 beats above rest and without marked dyspnea."
-    ]
+    "short": {
+     "ar": [
+      "خلال ساعة من التدخل: تشبع ≥ 94% وسرعة تنفس ≤ 24/دقيقة.",
+      "خلال 48 ساعة: يقدر ينام بمخدتين بدون استيقاظ مخنوق."
+     ],
+     "en": [
+      "Within an hour: SpO₂ ≥ 94% and RR ≤ 24/min.",
+      "Within 48 hours: sleeps on two pillows without waking breathless."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: تشبع ≥ 94% على هواء الغرفة وغازات دم طبيعية."
+     ],
+     "en": [
+      "Before discharge: SpO₂ ≥ 94% on room air with normal ABG."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "قياس النبض والضغط والتنفس قبل النشاط وبعده.",
-      "en": "Measure pulse, BP and respirations before and after activity."
+      "ar": "متابعة التشبع وسرعة وعمق التنفس واستخدام العضلات المساعدة كل ساعتين.",
+      "en": "Monitor SpO₂, respiratory rate, depth and accessory-muscle use every 2 hours."
      },
      "rationale": {
-      "ar": "يحدد مدى تحمّل المريض للمجهود ومتى يجب التوقف.",
-      "en": "Determines tolerance and when to stop."
+      "ar": "يكشف نقص الأكسجين مبكرًا.",
+      "en": "Detects hypoxemia early."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "زيادة النشاط تدريجيًا (الجلوس، ثم الوقوف، ثم المشي القصير).",
-      "en": "Increase activity gradually (sitting, standing, then short walks)."
+      "ar": "سماع الرئة وملاحظة البلغم الوردي الرغوي.",
+      "en": "Auscultate lungs and watch for pink frothy sputum."
      },
      "rationale": {
-      "ar": "التدرج يحسن التحمل دون إجهاد القلب.",
-      "en": "Gradual progression builds tolerance without overloading the heart."
+      "ar": "البلغم الرغوي علامة وذمة رئوية حادة طارئة.",
+      "en": "Frothy sputum signals acute pulmonary edema."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "تنظيم فترات راحة بين الأنشطة والرعاية.",
-      "en": "Schedule rest periods between activities and care."
+      "ar": "تقييم الوعي (قلق، تشوش، نعاس).",
+      "en": "Assess mental status (anxiety, confusion, drowsiness)."
      },
      "rationale": {
-      "ar": "يقلل استهلاك الأكسجين ويمنع التعب الشديد.",
-      "en": "Reduces oxygen demand and prevents exhaustion."
+      "ar": "التغير في الوعي قد يكون أول علامة لنقص الأكسجين.",
+      "en": "Altered mentation may be the first sign of hypoxia."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "إعطاء الأكسجين حسب الأمر أثناء النشاط إذا انخفض التشبع.",
-      "en": "Give oxygen as ordered during activity if saturation falls."
+      "ar": "وضع جالس أو نصف جالس مع سند الذراعين.",
+      "en": "Upright or semi-Fowler's with arms supported."
      },
      "rationale": {
-      "ar": "يحسن إمداد الأنسجة بالأكسجين.",
-      "en": "Improves tissue oxygen delivery."
+      "ar": "يزيد تمدد الرئة ويقلل احتقانها.",
+      "en": "Maximizes lung expansion and reduces congestion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع التنفس العميق والكحة الفعالة.",
+      "en": "Encourage deep breathing and effective coughing."
+     },
+     "rationale": {
+      "ar": "يفتح الحويصلات ويحسن التهوية.",
+      "en": "Opens alveoli and improves ventilation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تجميع الرعاية وفترات راحة.",
+      "en": "Cluster care with rest periods."
+     },
+     "rationale": {
+      "ar": "يقلل استهلاك الأكسجين.",
+      "en": "Reduces oxygen consumption."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأكسجين حسب الأمر وتعديله حسب التشبع.",
+      "en": "Give oxygen as ordered and titrate to saturation."
+     },
+     "rationale": {
+      "ar": "يعالج نقص الأكسجة.",
+      "en": "Corrects hypoxemia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة غازات الدم وأشعة الصدر.",
+      "en": "Monitor ABGs and chest X-ray."
+     },
+     "rationale": {
+      "ar": "تقيس الاستجابة وتحدد الحاجة لـ CPAP أو تنفس صناعي.",
+      "en": "Measure response and the need for CPAP or ventilation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المدرات وموسعات الأوعية حسب الأمر.",
+      "en": "Give diuretics and vasodilators as ordered."
+     },
+     "rationale": {
+      "ar": "تقليل السوائل في الرئة يحسن تبادل الغازات.",
+      "en": "Reducing lung fluid improves gas exchange."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض النوم بوضع مرتفع والإبلاغ عن الاستيقاظ مخنوقًا.",
+      "en": "Teach sleeping propped up and reporting night-time breathlessness."
+     },
+     "rationale": {
+      "ar": "الاستيقاظ المخنوق (PND) علامة تفاقم.",
+      "en": "Paroxysmal nocturnal dyspnea signals worsening."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "المريض مشى للحمام مع زيادة النبض 14 نبضة وضيق نفس بسيط. — تحقق الهدف."
-    ],
-    "en": [
-     "Patient walked to the bathroom with a 14-beat rise and mild dyspnea. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "زيادة حجم السوائل",
-    "en": "Excess fluid volume"
-   },
-   "need": {
-    "ar": "التخلص من السوائل الزائدة",
-    "en": "Remove excess fluid"
-   },
-   "actions": {
-    "ar": [
-     "الوزن اليومي",
-     "تقييد السوائل وتسجيل الداخل والخارج",
-     "إعطاء مدر البول ومتابعة البوتاسيوم"
-    ],
-    "en": [
-     "Daily weight",
-     "Fluid restriction and I&O",
-     "Diuretic and potassium monitoring"
-    ]
-   },
-   "outcome": {
-    "ar": "نقص الوزن وتقل الأورام والخرخرة",
-    "en": "Weight falls, less edema and crackles"
-   },
-   "timeframe": {
-    "ar": "72 ساعة",
-    "en": "72 hours"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 95% على 2 لتر أكسجين والتنفس 20 خلال ساعة — تحقق.",
+      "en": "SpO₂ 95% on 2 L oxygen, RR 20 within an hour — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "نام بمخدتين دون استيقاظ في الليلة الثانية — تحقق.",
+      "en": "Slept on two pillows without waking on night 2 — met."
+     }
+    },
+    {
+     "status": "partial",
+     "text": {
+      "ar": "التشبع 93% على هواء الغرفة يوم 4 — تحقق جزئيًا؛ يستمر الأكسجين وقت المجهود.",
+      "en": "SpO₂ 93% on room air on day 4 — partially met; oxygen on exertion continues."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تحسين الأكسجين",
+      "en": "Improve oxygenation"
+     },
+     "actions": {
+      "ar": [
+       "أكسجين حسب الأمر",
+       "متابعة التشبع"
+      ],
+      "en": [
+       "Oxygen as ordered",
+       "Monitor SpO₂"
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع ≥ 94%",
+      "en": "SpO₂ ≥ 94%"
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 hour"
+     }
+    },
+    {
+     "need": {
+      "ar": "تسهيل التنفس",
+      "en": "Ease breathing"
+     },
+     "actions": {
+      "ar": [
+       "وضع جالس",
+       "تنفس عميق"
+      ],
+      "en": [
+       "Upright position",
+       "Deep breathing"
+      ]
+     },
+     "outcome": {
+      "ar": "تنفس ≤ 24/دقيقة",
+      "en": "RR ≤ 24/min"
+     },
+     "timeframe": {
+      "ar": "كل 2 ساعة",
+      "en": "Every 2 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "اكتشاف وذمة الرئة",
+      "en": "Detect pulmonary edema"
+     },
+     "actions": {
+      "ar": [
+       "سماع الرئة",
+       "ملاحظة البلغم"
+      ],
+      "en": [
+       "Lung auscultation",
+       "Observe sputum"
+      ]
+     },
+     "outcome": {
+      "ar": "لا وذمة حادة",
+      "en": "No acute pulmonary edema"
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "ضعف تبادل الغازات",
-    "en": "Impaired gas exchange"
-   },
-   "need": {
-    "ar": "تحسين الأكسجين",
-    "en": "Improve oxygenation"
-   },
-   "actions": {
-    "ar": [
-     "وضع نصف جالس",
-     "أكسجين حسب الأمر",
-     "متابعة التشبع"
-    ],
-    "en": [
-     "Semi-Fowler's position",
-     "Oxygen as ordered",
-     "Monitor SpO₂"
-    ]
-   },
-   "outcome": {
-    "ar": "تشبع ≥ 94%",
-    "en": "SpO₂ ≥ 94%"
-   },
-   "timeframe": {
-    "ar": "24–48 ساعة",
-    "en": "24–48 hours"
-   }
-  },
-  {
-   "diagnosis": {
+   "id": "activity-intolerance",
+   "kind": "actual",
+   "title": {
     "ar": "عدم تحمّل النشاط",
-    "en": "Activity intolerance"
+    "en": "Activity Intolerance"
    },
-   "need": {
-    "ar": "زيادة النشاط بأمان",
-    "en": "Safe activity progression"
+   "definition": {
+    "ar": "عدم كفاية الطاقة الجسدية أو النفسية لإكمال الأنشطة اليومية المطلوبة أو المرغوبة.",
+    "en": "Insufficient physiological or psychological energy to complete required or desired daily activities."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "قياس العلامات قبل وبعد النشاط",
-     "نشاط متدرج",
-     "فترات راحة"
+     "عدم التوازن بين إمداد الأكسجين واحتياجه",
+     "ضعف عضلة القلب",
+     "الراحة الطويلة في السرير وضعف العضلات"
     ],
     "en": [
-     "Vitals before/after activity",
-     "Graded activity",
-     "Rest periods"
+     "Imbalance between oxygen supply and demand",
+     "Reduced myocardial function",
+     "Prolonged bed rest and deconditioning"
     ]
    },
-   "outcome": {
-    "ar": "المشي داخل الغرفة دون إجهاد",
-    "en": "Walks in room without distress"
+   "evidencedBy": {
+    "ar": [
+     "زيادة النبض أكثر من 20 نبضة مع النشاط",
+     "ضيق نفس وتعب مع المجهود البسيط",
+     "انخفاض التشبع أثناء المشي"
+    ],
+    "en": [
+     "Heart-rate rise > 20 beats with activity",
+     "Exertional dyspnea and fatigue",
+     "Desaturation on walking"
+    ]
    },
-   "timeframe": {
-    "ar": "5 أيام",
-    "en": "5 days"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بتعب ونفسي بيتقطع لما أروح الحمام.\"",
+      "\"مش قادر أستحمى لوحدي.\""
+     ],
+     "en": [
+      "\"I get tired and breathless walking to the bathroom.\"",
+      "\"I can't shower on my own.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "النبض 88 في الراحة و118 بعد المشي 10 أمتار.",
+      "التنفس 28 والتشبع 90% مع المجهود.",
+      "يحتاج مساعدة في الاستحمام واللبس."
+     ],
+     "en": [
+      "Pulse 88 at rest, 118 after walking 10 m.",
+      "RR 28 and SpO₂ 90% on exertion.",
+      "Needs help with bathing and dressing."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 3 أيام: يجلس على الكرسي 30 دقيقة 3 مرات يوميًا مع زيادة نبض < 20.",
+      "خلال 5 أيام: يمشي داخل الغرفة دون ضيق شديد أو هبوط تشبع < 92%."
+     ],
+     "en": [
+      "Within 3 days: sits out 30 minutes three times daily with a heart-rate rise < 20.",
+      "Within 5 days: walks in the room without marked dyspnea or SpO₂ < 92%."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يؤدي رعايته الذاتية بمساعدة بسيطة ويشرح خطة النشاط المتدرج بالبيت."
+     ],
+     "en": [
+      "Before discharge: performs self-care with minimal help and explains a graded home activity plan."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس النبض والضغط والتنفس والتشبع قبل النشاط وبعده وبعد 3 دقائق راحة.",
+      "en": "Measure pulse, BP, RR and SpO₂ before, after and 3 minutes after activity."
+     },
+     "rationale": {
+      "ar": "استجابة غير طبيعية (زيادة > 20 نبضة، هبوط ضغط، تشبع < 90%) تعني إيقاف النشاط.",
+      "en": "An abnormal response (rise > 20 beats, BP drop, SpO₂ < 90%) means stop."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات عدم التحمل: ألم صدر، دوخة، شحوب، عرق، ضيق شديد.",
+      "en": "Watch for intolerance: chest pain, dizziness, pallor, sweating, severe dyspnea."
+     },
+     "rationale": {
+      "ar": "تدل على نقص تروية القلب أو الأنسجة.",
+      "en": "Indicate myocardial or tissue hypoxia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "برنامج نشاط متدرج: تمارين في السرير ← الجلوس ← الوقوف ← المشي القصير.",
+      "en": "Graded activity: bed exercises → sitting → standing → short walks."
+     },
+     "rationale": {
+      "ar": "التدرج يبني التحمل دون إجهاد القلب.",
+      "en": "Progression builds tolerance without overloading the heart."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيم فترات راحة قبل وبعد الأنشطة، وتجنب النشاط بعد الأكل مباشرة.",
+      "en": "Schedule rest before and after activities; avoid exertion right after meals."
+     },
+     "rationale": {
+      "ar": "الهضم يزيد احتياج الأكسجين.",
+      "en": "Digestion increases oxygen demand."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "المساعدة في الرعاية الذاتية مع تشجيع ما يستطيعه المريض.",
+      "en": "Assist with self-care while encouraging what the patient can do."
+     },
+     "rationale": {
+      "ar": "يحافظ على الاستقلالية دون إجهاد.",
+      "en": "Maintains independence without exhaustion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام كرسي للاستحمام ووضع الأدوات قريبة.",
+      "en": "Use a shower chair and keep items within reach."
+     },
+     "rationale": {
+      "ar": "تقلل المجهود غير الضروري.",
+      "en": "Reduce unnecessary energy expenditure."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأكسجين أثناء النشاط حسب الأمر.",
+      "en": "Give oxygen during activity as ordered."
+     },
+     "rationale": {
+      "ar": "يمنع هبوط التشبع مع المجهود.",
+      "en": "Prevents exertional desaturation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التنسيق مع العلاج الطبيعي وبرنامج التأهيل القلبي.",
+      "en": "Coordinate with physiotherapy and cardiac rehabilitation."
+     },
+     "rationale": {
+      "ar": "التأهيل المنظم يحسن القدرة وجودة الحياة.",
+      "en": "Structured rehab improves capacity and quality of life."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم طرق حفظ الطاقة (الجلوس أثناء الأنشطة، توزيع المهام على اليوم).",
+      "en": "Teach energy conservation (sit for tasks, spread chores across the day)."
+     },
+     "rationale": {
+      "ar": "يسمح بأداء الأنشطة بأقل مجهود.",
+      "en": "Enables activities with less effort."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم إيقاف النشاط عند ضيق النفس أو ألم الصدر أو الدوخة.",
+      "en": "Teach stopping activity with dyspnea, chest pain or dizziness."
+     },
+     "rationale": {
+      "ar": "الأمان أثناء النشاط بالبيت.",
+      "en": "Safety during home activity."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "جلس على الكرسي 3 مرات يوميًا وزيادة النبض 12 نبضة — تحقق.",
+      "en": "Sat out three times daily with a 12-beat rise — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "مشى للحمام يوم 5 والتشبع 94% — تحقق.",
+      "en": "Walked to the bathroom on day 5, SpO₂ 94% — met."
+     }
+    },
+    {
+     "status": "partial",
+     "text": {
+      "ar": "يحتاج مساعدة في الاستحمام فقط — تحقق جزئيًا؛ تحويل للتأهيل القلبي.",
+      "en": "Needs help only with bathing — partially met; referred to cardiac rehab."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "زيادة النشاط بأمان",
+      "en": "Safe activity progression"
+     },
+     "actions": {
+      "ar": [
+       "علامات قبل وبعد النشاط",
+       "نشاط متدرج"
+      ],
+      "en": [
+       "Vitals before/after activity",
+       "Graded activity"
+      ]
+     },
+     "outcome": {
+      "ar": "زيادة نبض < 20",
+      "en": "Pulse rise < 20"
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "حفظ الطاقة",
+      "en": "Energy conservation"
+     },
+     "actions": {
+      "ar": [
+       "فترات راحة",
+       "مساعدة في الرعاية الذاتية"
+      ],
+      "en": [
+       "Rest periods",
+       "Help with self-care"
+      ]
+     },
+     "outcome": {
+      "ar": "بدون إجهاد شديد",
+      "en": "No exhaustion"
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تأهيل",
+      "en": "Rehabilitation"
+     },
+     "actions": {
+      "ar": [
+       "علاج طبيعي",
+       "خطة نشاط بالبيت"
+      ],
+      "en": [
+       "Physiotherapy",
+       "Home activity plan"
+      ]
+     },
+     "outcome": {
+      "ar": "المشي داخل الغرفة",
+      "en": "Walks in room"
+     },
+     "timeframe": {
+      "ar": "5 أيام",
+      "en": "5 days"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-electrolyte-imbalance",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر اختلال الأملاح",
+    "en": "Risk for Electrolyte Imbalance"
+   },
+   "definition": {
+    "ar": "قابلية لتغير مستويات الأملاح في الدم قد تضر بالصحة.",
+    "en": "Susceptible to changes in serum electrolyte levels that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [
+     "العلاج بمدرات البول",
+     "تقييد الملح والسوائل",
+     "ضعف وظائف الكلى"
+    ],
+    "en": [
+     "Diuretic therapy",
+     "Sodium and fluid restriction",
+     "Impaired renal function"
+    ]
+   },
+   "riskFactors": {
+    "ar": [
+     "استخدام Furosemide بجرعات عالية",
+     "استخدام Spironolactone ومثبطات ACE معًا",
+     "كرياتينين 1.6 مجم/دل",
+     "العلاج بالديجوكسين"
+    ],
+    "en": [
+     "High-dose furosemide",
+     "Spironolactone combined with ACE inhibitors",
+     "Creatinine 1.6 mg/dL",
+     "Digoxin therapy"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بحس بتقلصات في رجلي بالليل.\""
+     ],
+     "en": [
+      "\"I get leg cramps at night.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "البوتاسيوم 3.6 والصوديوم 133 والماغنيسيوم 1.7.",
+      "الكرياتينين 1.6 مجم/دل.",
+      "يأخذ Furosemide وSpironolactone وDigoxin."
+     ],
+     "en": [
+      "Potassium 3.6, sodium 133, magnesium 1.7.",
+      "Creatinine 1.6 mg/dL.",
+      "On furosemide, spironolactone and digoxin."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء الإقامة: البوتاسيوم 3.5–5.0 والصوديوم 135–145 والماغنيسيوم ≥ 2.",
+      "لا اضطرابات نظم مرتبطة بالأملاح."
+     ],
+     "en": [
+      "During the stay: potassium 3.5–5.0, sodium 135–145 and magnesium ≥ 2.",
+      "No electrolyte-related dysrhythmias."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يذكر المريض أعراض نقص وزيادة البوتاسيوم ومواعيد التحاليل."
+     ],
+     "en": [
+      "Before discharge: the patient names symptoms of low and high potassium and the lab follow-up schedule."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة البوتاسيوم والصوديوم والماغنيسيوم والكرياتينين يوميًا أثناء المدرات الوريدية.",
+      "en": "Check potassium, sodium, magnesium and creatinine daily on IV diuretics."
+     },
+     "rationale": {
+      "ar": "التغير سريع مع المدرات الوريدية.",
+      "en": "Changes are rapid with IV diuretics."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة أعراض نقص البوتاسيوم: ضعف العضلات، تقلصات، ضربات مبكرة؛ وزيادته: موجة T مدببة، بطء.",
+      "en": "Watch for hypokalemia (weakness, cramps, ectopics) and hyperkalemia (peaked T waves, bradycardia)."
+     },
+     "rationale": {
+      "ar": "كلاهما يسبب اضطرابات نظم خطيرة.",
+      "en": "Both cause dangerous dysrhythmias."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات تسمم الديجوكسين (غثيان، رؤية صفراء، بطء) خاصة مع نقص البوتاسيوم.",
+      "en": "Watch for digoxin toxicity (nausea, yellow vision, bradycardia), especially with hypokalemia."
+     },
+     "rationale": {
+      "ar": "نقص البوتاسيوم يزيد سمية الديجوكسين.",
+      "en": "Hypokalemia potentiates digoxin toxicity."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "مونيتور قلب لملاحظة تغيرات ECG المرتبطة بالأملاح.",
+      "en": "Cardiac monitoring for electrolyte-related ECG changes."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر قبل اضطراب النظم الخطير.",
+      "en": "Early detection before serious dysrhythmia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تسجيل الداخل والخارج والوزن.",
+      "en": "Record intake, output and weight."
+     },
+     "rationale": {
+      "ar": "الفقد السريع للسوائل يصاحبه فقد أملاح.",
+      "en": "Rapid fluid loss is accompanied by electrolyte loss."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تعويض البوتاسيوم أو الماغنيسيوم حسب الأمر (البوتاسيوم الوريدي بمضخة وبتركيز آمن).",
+      "en": "Replace potassium or magnesium as ordered (IV potassium by pump at a safe concentration)."
+     },
+     "rationale": {
+      "ar": "التعويض السريع أو المركز للبوتاسيوم قد يوقف القلب.",
+      "en": "Rapid or concentrated IV potassium can cause cardiac arrest."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مراجعة الأدوية التي ترفع البوتاسيوم (Spironolactone، ACE-I) مع الطبيب عند ارتفاعه.",
+      "en": "Review potassium-raising drugs (spironolactone, ACE-I) with the physician if potassium rises."
+     },
+     "rationale": {
+      "ar": "تعديل الجرعة يمنع فرط البوتاسيوم.",
+      "en": "Dose adjustment prevents hyperkalemia."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم أعراض نقص وزيادة البوتاسيوم ومتى يتصل بالطبيب.",
+      "en": "Teach symptoms of low/high potassium and when to call."
+     },
+     "rationale": {
+      "ar": "الإبلاغ المبكر يمنع المضاعفات.",
+      "en": "Early reporting prevents complications."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم عدم استخدام بدائل الملح التي تحتوي بوتاسيوم إلا بإذن الطبيب.",
+      "en": "Teach avoiding potassium-based salt substitutes unless approved."
+     },
+     "rationale": {
+      "ar": "قد ترفع البوتاسيوم بشدة مع Spironolactone.",
+      "en": "They may cause severe hyperkalemia with spironolactone."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "البوتاسيوم 3.9–4.6 والصوديوم 136 والماغنيسيوم 2.1 طوال الإقامة — تحقق.",
+      "en": "Potassium 3.9–4.6, sodium 136, magnesium 2.1 throughout — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا اضطرابات نظم على المونيتور — تحقق.",
+      "en": "No dysrhythmias on monitoring — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض ذكر الأعراض وموعد التحليل بعد أسبوع — تحقق.",
+      "en": "Patient named symptoms and the one-week lab check — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "أملاح طبيعية",
+      "en": "Normal electrolytes"
+     },
+     "actions": {
+      "ar": [
+       "تحليل يومي",
+       "تعويض حسب الأمر بمضخة"
+      ],
+      "en": [
+       "Daily labs",
+       "Replacement by pump as ordered"
+      ]
+     },
+     "outcome": {
+      "ar": "بوتاسيوم 3.5–5.0",
+      "en": "Potassium 3.5–5.0"
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "الأمان مع الديجوكسين",
+      "en": "Digoxin safety"
+     },
+     "actions": {
+      "ar": [
+       "نبض قبل الجرعة",
+       "ملاحظة التسمم"
+      ],
+      "en": [
+       "Pulse before dose",
+       "Watch toxicity"
+      ]
+     },
+     "outcome": {
+      "ar": "لا تسمم",
+      "en": "No toxicity"
+     },
+     "timeframe": {
+      "ar": "مع كل جرعة",
+      "en": "Each dose"
+     }
+    },
+    {
+     "need": {
+      "ar": "مراقبة القلب",
+      "en": "Cardiac monitoring"
+     },
+     "actions": {
+      "ar": [
+       "مونيتور مستمر"
+      ],
+      "en": [
+       "Continuous monitor"
+      ]
+     },
+     "outcome": {
+      "ar": "لا اضطراب نظم",
+      "en": "No dysrhythmia"
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "شعور غامض بعدم الارتياح أو الخوف مصحوب باستجابة جسدية، ناتج عن توقع خطر.",
+    "en": "Vague feeling of unease or dread with an autonomic response, from anticipation of danger."
+   },
+   "relatedTo": {
+    "ar": [
+     "ضيق النفس والإحساس بالاختناق",
+     "الخوف من الموت أو تدهور الحالة",
+     "بيئة المستشفى غير المألوفة"
+    ],
+    "en": [
+     "Dyspnea and fear of suffocation",
+     "Fear of death or deterioration",
+     "Unfamiliar hospital environment"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "قلق وتململ وأسئلة متكررة",
+     "صعوبة النوم",
+     "سرعة النبض والتنفس"
+    ],
+    "en": [
+     "Restlessness and repeated questions",
+     "Difficulty sleeping",
+     "Increased pulse and respiration"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"خايف أموت وأنا نايم من الخنقة.\"",
+      "\"مش عارف أنام.\""
+     ],
+     "en": [
+      "\"I'm afraid I'll die in my sleep from breathlessness.\"",
+      "\"I can't sleep.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "المريض متوتر ويسأل كثيرًا عن حالته.",
+      "النبض 104 والتنفس 26.",
+      "نوم متقطع 3 ساعات."
+     ],
+     "en": [
+      "Patient tense, asking repeatedly about his condition.",
+      "Pulse 104, RR 26.",
+      "Broken sleep, 3 hours."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: يعبر المريض عن مخاوفه ويبدو أهدأ (تنفس ≤ 22، نبض ≤ 100 في الراحة).",
+      "خلال 48 ساعة: ينام 5–6 ساعات متواصلة."
+     ],
+     "en": [
+      "Within 24 hours: the patient voices fears and appears calmer (RR ≤ 22, resting pulse ≤ 100).",
+      "Within 48 hours: sleeps 5–6 uninterrupted hours."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يستخدم طريقتين للاسترخاء ويعرف خطة التعامل مع ضيق النفس بالبيت."
+     ],
+     "en": [
+      "Before discharge: uses two relaxation methods and knows the home plan for breathlessness."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق وأسبابه ومصادر الدعم.",
+      "en": "Assess anxiety level, causes and support sources."
+     },
+     "rationale": {
+      "ar": "يحدد التدخل المناسب.",
+      "en": "Guides appropriate intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "البقاء مع المريض أثناء نوبات ضيق النفس والكلام بهدوء.",
+      "en": "Stay with the patient during dyspneic episodes and speak calmly."
+     },
+     "rationale": {
+      "ar": "وجود الممرض يقلل الخوف ويخفض استهلاك الأكسجين.",
+      "en": "Presence reduces fear and oxygen consumption."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة والإنذارات بكلام بسيط.",
+      "en": "Explain procedures, equipment and alarms in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد القلق.",
+      "en": "The unknown increases anxiety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق وتمارين الاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "تقلل النشاط السمبثاوي.",
+      "en": "Reduce sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود مرافق من الأسرة وتشجيع التعبير عن المشاعر.",
+      "en": "Allow a family companion and encourage expression of feelings."
+     },
+     "rationale": {
+      "ar": "الدعم الاجتماعي يخفف القلق.",
+      "en": "Social support relieves anxiety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تهيئة بيئة مناسبة للنوم (إضاءة خافتة، تقليل الإزعاج، تجميع الرعاية الليلية).",
+      "en": "Promote sleep (dim light, less noise, clustered night care)."
+     },
+     "rationale": {
+      "ar": "النوم الكافي يقلل القلق والتعب.",
+      "en": "Adequate sleep reduces anxiety and fatigue."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المهدئ الخفيف حسب الأمر بحذر مع مراقبة التنفس.",
+      "en": "Give mild anxiolytics as ordered with caution, monitoring respiration."
+     },
+     "rationale": {
+      "ar": "قد تثبط التنفس.",
+      "en": "They may depress respiration."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التحويل للدعم النفسي عند الحاجة.",
+      "en": "Refer for psychological support if needed."
+     },
+     "rationale": {
+      "ar": "القلق والاكتئاب شائعان مع الأمراض المزمنة.",
+      "en": "Anxiety and depression are common in chronic illness."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم خطة التصرف عند ضيق النفس بالبيت (جلوس، تنفس بطيء، دواء، طلب مساعدة).",
+      "en": "Teach a home plan for breathlessness (sit up, slow breathing, medication, call for help)."
+     },
+     "rationale": {
+      "ar": "معرفة ما يفعله تقلل الذعر.",
+      "en": "Knowing what to do reduces panic."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض عبّر عن مخاوفه وأصبح أهدأ والنبض 92 — تحقق.",
+      "en": "Patient voiced fears, calmer, pulse 92 — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "نام 6 ساعات في الليلة الثانية — تحقق.",
+      "en": "Slept 6 hours on night 2 — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "طبق التنفس البطيء وشرح خطة البيت — تحقق.",
+      "en": "Used slow breathing and explained the home plan — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف القلق",
+      "en": "Relieve anxiety"
+     },
+     "actions": {
+      "ar": [
+       "البقاء مع المريض",
+       "شرح الإجراءات"
+      ],
+      "en": [
+       "Stay with patient",
+       "Explain procedures"
+      ]
+     },
+     "outcome": {
+      "ar": "المريض أهدأ",
+      "en": "Patient calmer"
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "نوم كافٍ",
+      "en": "Adequate sleep"
+     },
+     "actions": {
+      "ar": [
+       "بيئة هادئة ليلًا",
+       "وضع مرتفع"
+      ],
+      "en": [
+       "Quiet night environment",
+       "Propped position"
+      ]
+     },
+     "outcome": {
+      "ar": "نوم 5–6 ساعات",
+      "en": "Sleeps 5–6 h"
+     },
+     "timeframe": {
+      "ar": "48 ساعة",
+      "en": "48 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "دعم الأسرة",
+      "en": "Family support"
+     },
+     "actions": {
+      "ar": [
+       "مرافق",
+       "إشراك الأسرة"
+      ],
+      "en": [
+       "Companion",
+       "Involve family"
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشعر بالأمان",
+      "en": "Patient feels safe"
+     },
+     "timeframe": {
+      "ar": "طوال الإقامة",
+      "en": "Throughout stay"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ineffective-health-self-management",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية إدارة الصحة الذاتية",
+    "en": "Ineffective Health Self-Management"
+   },
+   "definition": {
+    "ar": "عدم كفاية إدارة الأعراض ونظام العلاج والعواقب الجسدية والنفسية لمرض مزمن.",
+    "en": "Unsatisfactory management of symptoms, treatment regimen and consequences of a chronic condition."
+   },
+   "relatedTo": {
+    "ar": [
+     "تعقيد نظام العلاج وكثرة الأدوية",
+     "نقص المعرفة عن المرض",
+     "صعوبة تغيير عادات الأكل"
+    ],
+    "en": [
+     "Complex regimen with multiple drugs",
+     "Insufficient knowledge of the condition",
+     "Difficulty changing eating habits"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "دخول متكرر للمستشفى بسبب احتباس السوائل",
+     "عدم الالتزام بالدواء والملح",
+     "لا يعرف أسماء أدويته أو سبب كل دواء"
+    ],
+    "en": [
+     "Repeated admissions with fluid overload",
+     "Non-adherence to drugs and salt limits",
+     "Cannot name his drugs or their purposes"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بوقف دوا البول لما أخرج كتير.\"",
+      "\"مبوزنش نفسي خالص.\""
+     ],
+     "en": [
+      "\"I stop the water pill when I pass too much urine.\"",
+      "\"I never weigh myself.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الدخول الثالث خلال 6 شهور.",
+      "يأخذ 6 أدوية مختلفة.",
+      "الأسرة تطبخ بملح كثير."
+     ],
+     "en": [
+      "Third admission in 6 months.",
+      "Takes 6 different medicines.",
+      "Family cooks with a lot of salt."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: يذكر المريض اسم وسبب ووقت كل دواء.",
+      "قبل الخروج: يذكر 5 علامات إنذار تستدعي الاتصال بالطبيب."
+     ],
+     "en": [
+      "Within 48 hours: the patient states the name, purpose and time of each drug.",
+      "Before discharge: names 5 warning signs needing a call to the doctor."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال شهر بعد الخروج: يلتزم بالوزن اليومي والدواء ولا يحتاج دخولًا جديدًا."
+     ],
+     "en": [
+      "Within a month after discharge: adheres to daily weighing and medication with no readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة، ومستوى القراءة، والعوائق (تكلفة، نسيان، معتقدات).",
+      "en": "Assess patient and family knowledge, literacy and barriers (cost, forgetfulness, beliefs)."
+     },
+     "rationale": {
+      "ar": "يجعل التعليم مناسبًا وواقعيًا.",
+      "en": "Makes teaching relevant and realistic."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح بسيط لهبوط القلب وسبب الأعراض.",
+      "en": "Explain heart failure and its symptoms simply."
+     },
+     "rationale": {
+      "ar": "الفهم يزيد الالتزام.",
+      "en": "Understanding increases adherence."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "عمل جدول أدوية مكتوب (الاسم، السبب، الجرعة، الوقت) وعلبة أدوية أسبوعية.",
+      "en": "Provide a written medication chart (name, purpose, dose, time) and a weekly pill box."
+     },
+     "rationale": {
+      "ar": "يقلل النسيان والأخطاء.",
+      "en": "Reduces missed doses and errors."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الوزن اليومي والاتصال عند زيادة > 2 كجم في 3 أيام أو 1 كجم في يوم.",
+      "en": "Teach daily weighing and calling if > 2 kg gain in 3 days or 1 kg in a day."
+     },
+     "rationale": {
+      "ar": "الإنذار المبكر يمنع دخول المستشفى.",
+      "en": "Early warning prevents admission."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم علامات التفاقم: زيادة ضيق النفس، ورم، كحة ليلية، نوم على مخدات أكثر.",
+      "en": "Teach worsening signs: more dyspnea, swelling, night cough, needing more pillows."
+     },
+     "rationale": {
+      "ar": "التصرف المبكر.",
+      "en": "Early action."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأسرة الطبخ قليل الملح وبدائل التتبيل (ليمون، أعشاب، ثوم).",
+      "en": "Teach the family low-salt cooking and flavour substitutes (lemon, herbs, garlic)."
+     },
+     "rationale": {
+      "ar": "الأسرة شريك أساسي في الأكل.",
+      "en": "The family controls most meals."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح أهمية عدم إيقاف الأدوية (خاصة حاصرات بيتا وموسعات الأوعية) حتى لو تحسن.",
+      "en": "Explain not stopping drugs (especially beta-blockers and vasodilators) when feeling better."
+     },
+     "rationale": {
+      "ar": "الإيقاف يسبب تدهورًا سريعًا.",
+      "en": "Stopping causes rapid deterioration."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "التحذير من مسكنات NSAIDs (مثل Ibuprofen).",
+      "en": "Warn against NSAIDs (e.g. ibuprofen)."
+     },
+     "rationale": {
+      "ar": "تسبب احتباس سوائل وتضعف الكلى.",
+      "en": "They cause fluid retention and renal impairment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام الشرح العكسي (Teach-back) بعد كل جلسة.",
+      "en": "Use teach-back after each session."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم الحقيقي.",
+      "en": "Confirms real understanding."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التحويل لعيادة هبوط القلب والمتابعة الهاتفية بعد الخروج.",
+      "en": "Refer to the heart-failure clinic and arrange phone follow-up."
+     },
+     "rationale": {
+      "ar": "المتابعة المنظمة تقلل إعادة الدخول.",
+      "en": "Structured follow-up reduces readmissions."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض شرح كل دواء وسببه بالجدول — تحقق.",
+      "en": "Patient explained each drug using the chart — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "ذكر 6 علامات إنذار وطبق الوزن — تحقق.",
+      "en": "Named 6 warning signs and demonstrated weighing — met."
+     }
+    },
+    {
+     "status": "partial",
+     "text": {
+      "ar": "الهدف طويل المدى يُقيَّم في عيادة المتابعة بعد شهر.",
+      "en": "Long-term goal to be evaluated at the 1-month clinic visit."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "فهم الأدوية",
+      "en": "Medication understanding"
+     },
+     "actions": {
+      "ar": [
+       "جدول أدوية مكتوب",
+       "شرح عكسي"
+      ],
+      "en": [
+       "Written drug chart",
+       "Teach-back"
+      ]
+     },
+     "outcome": {
+      "ar": "يشرح كل دواء",
+      "en": "Explains each drug"
+     },
+     "timeframe": {
+      "ar": "48 ساعة",
+      "en": "48 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "مراقبة ذاتية",
+      "en": "Self-monitoring"
+     },
+     "actions": {
+      "ar": [
+       "الوزن اليومي",
+       "علامات الإنذار"
+      ],
+      "en": [
+       "Daily weight",
+       "Warning signs"
+      ]
+     },
+     "outcome": {
+      "ar": "يذكر 5 علامات",
+      "en": "States 5 signs"
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    },
+    {
+     "need": {
+      "ar": "أكل قليل الملح",
+      "en": "Low-salt eating"
+     },
+     "actions": {
+      "ar": [
+       "تثقيف الأسرة"
+      ],
+      "en": [
+       "Family teaching"
+      ]
+     },
+     "outcome": {
+      "ar": "خطة أكل مناسبة",
+      "en": "Suitable meal plan"
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    },
+    {
+     "need": {
+      "ar": "متابعة بعد الخروج",
+      "en": "Post-discharge follow-up"
+     },
+     "actions": {
+      "ar": [
+       "عيادة هبوط القلب",
+       "اتصال هاتفي"
+      ],
+      "en": [
+       "HF clinic",
+       "Phone call"
+      ]
+     },
+     "outcome": {
+      "ar": "لا دخول جديد",
+      "en": "No readmission"
+     },
+     "timeframe": {
+      "ar": "شهر",
+      "en": "1 month"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -293,10 +2142,10 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "ESC Guidelines for acute and chronic heart failure 2021 (2023 focused update)"
   },
   {
-   "title": "ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure 2021 (2023 update)"
+   "title": "AHA/ACC/HFSA Guideline for the Management of Heart Failure 2022"
   }
  ]
 }

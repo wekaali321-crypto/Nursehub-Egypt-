@@ -97,6 +97,7 @@ export const ROUTE_PATTERNS = [
   /^\/cards$/,
   /^\/care-plans$/,
   /^\/care-plans\/[^\/]+$/,
+  /^\/care-plans\/[^\/]+\/[^\/]+$/,
   /^\/cases$/,
   /^\/cases\/[^\/]+$/,
   /^\/cases\/guide\/[^\/]+$/,

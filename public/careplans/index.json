@@ -4,6 +4,7 @@
    "id": "myocardial-infarction",
    "icon": "❤️‍🩹",
    "system": "cardiology",
+   "folder": "disease",
    "title": {
     "ar": "الجلطة القلبية (احتشاء عضلة القلب)",
     "en": "Acute Myocardial Infarction"
@@ -12,13 +13,28 @@
     "ar": "خطة رعاية لمريض جلطة قلبية حادة: تسكين ألم الصدر، متابعة رسم القلب، والوقاية من المضاعفات.",
     "en": "Care plan for acute MI: chest-pain relief, ECG monitoring and complication prevention."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "ألم حاد",
+      "en": "Acute pain"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر انخفاض نتاج القلب",
+      "en": "Risk for decreased cardiac output"
+     }
+    }
+   ]
   },
   {
    "id": "angina-acs",
    "icon": "🫀",
    "system": "cardiology",
+   "folder": "disease",
    "title": {
     "ar": "الذبحة الصدرية ومتلازمة الشريان التاجي الحادة",
     "en": "Angina & Acute Coronary Syndrome"
@@ -27,13 +43,28 @@
     "ar": "خطة رعاية لمريض ذبحة صدرية غير مستقرة: تسكين الألم، تقليل احتياج القلب للأكسجين، والتثقيف عن النيتروجلسرين وعوامل الخطورة.",
     "en": "Care plan for unstable angina: pain relief, lowering myocardial oxygen demand, and teaching about nitroglycerin and risk factors."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "ألم حاد",
+      "en": "Acute pain"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "نقص المعرفة (Deficient knowledge) عن المرض والعلاج وتعديل عوامل الخطورة",
+      "en": "Deficient knowledge about the condition, treatment and risk-factor modification"
+     }
+    }
+   ]
   },
   {
    "id": "dvt-pulmonary-embolism",
    "icon": "🦵",
    "system": "cardiology",
+   "folder": "disease",
    "title": {
     "ar": "جلطة الأوردة العميقة والانسداد الرئوي",
     "en": "Deep Vein Thrombosis & Pulmonary Embolism"
@@ -42,13 +73,28 @@
     "ar": "خطة رعاية لمريض جلطة في وريد الساق: مضادات التجلط بأمان، تخفيف الألم والورم، وملاحظة علامات الانسداد الرئوي.",
     "en": "Care plan for DVT: safe anticoagulation, relief of pain and swelling, and watching for pulmonary embolism."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "ضعف التروية الطرفية",
+      "en": "Ineffective peripheral tissue perfusion"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر ضعف تبادل الغازات",
+      "en": "Risk for impaired gas exchange"
+     }
+    }
+   ]
   },
   {
    "id": "atrial-fibrillation",
    "icon": "💓",
    "system": "cardiology",
+   "folder": "disease",
    "title": {
     "ar": "اضطرابات نظم القلب (الرجفان الأذيني)",
     "en": "Dysrhythmias (Atrial Fibrillation)"
@@ -57,28 +103,93 @@
     "ar": "خطة رعاية لمريض رجفان أذيني سريع: ضبط سرعة القلب، الوقاية من الجلطات، والأمان مع مضادات التجلط.",
     "en": "Care plan for rapid atrial fibrillation: rate control, stroke prevention and anticoagulant safety."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "انخفاض نتاج القلب",
+      "en": "Decreased cardiac output"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر النزيف",
+      "en": "Risk for bleeding"
+     }
+    }
+   ]
   },
   {
    "id": "heart-failure",
    "icon": "💔",
    "system": "cardiology",
+   "folder": "disease",
    "title": {
     "ar": "هبوط القلب (فشل القلب)",
     "en": "Heart Failure"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض هبوط قلب مع احتباس سوائل وضيق نفس: الوزن اليومي، تقييد السوائل، وتحمّل النشاط.",
-    "en": "Care plan for heart failure with fluid overload and dyspnea: daily weights, fluid restriction and activity tolerance."
+    "ar": "خطط رعاية لمريض هبوط القلب: 7 تشخيصات تمريضية، كل تشخيص في نموذج مستقل للطالب والمستشفى.",
+    "en": "Heart failure care plans: 7 nursing diagnoses, each in its own student and hospital form."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "decreased-cardiac-output",
+     "title": {
+      "ar": "انخفاض نتاج القلب",
+      "en": "Decreased Cardiac Output"
+     }
+    },
+    {
+     "id": "excess-fluid-volume",
+     "title": {
+      "ar": "زيادة حجم السوائل",
+      "en": "Excess Fluid Volume"
+     }
+    },
+    {
+     "id": "impaired-gas-exchange",
+     "title": {
+      "ar": "ضعف تبادل الغازات",
+      "en": "Impaired Gas Exchange"
+     }
+    },
+    {
+     "id": "activity-intolerance",
+     "title": {
+      "ar": "عدم تحمّل النشاط",
+      "en": "Activity Intolerance"
+     }
+    },
+    {
+     "id": "risk-electrolyte-imbalance",
+     "title": {
+      "ar": "خطر اختلال الأملاح",
+      "en": "Risk for Electrolyte Imbalance"
+     }
+    },
+    {
+     "id": "anxiety",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "ineffective-health-self-management",
+     "title": {
+      "ar": "عدم فعالية إدارة الصحة الذاتية",
+      "en": "Ineffective Health Self-Management"
+     }
+    }
+   ]
   },
   {
    "id": "hypertension",
    "icon": "🫀",
    "system": "cardiology",
+   "folder": "disease",
    "title": {
     "ar": "ارتفاع ضغط الدم",
     "en": "Hypertension"
@@ -87,13 +198,28 @@
     "ar": "خطة رعاية لمريض ضغط مرتفع غير منضبط: متابعة الضغط، الالتزام بالعلاج، وتعديل نمط الحياة.",
     "en": "Care plan for uncontrolled hypertension: BP monitoring, medication adherence and lifestyle change."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "خطر انخفاض نتاج القلب",
+      "en": "Risk for decreased cardiac output"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "عدم فعالية إدارة الصحة الذاتية",
+      "en": "Ineffective health self-management"
+     }
+    }
+   ]
   },
   {
    "id": "cardiac-surgery-postop",
    "icon": "🩺",
    "system": "cardiology",
+   "folder": "disease",
    "title": {
     "ar": "ما بعد جراحة القلب المفتوح (تحويل مسار الشرايين وتغيير الصمامات)",
     "en": "Post-operative Cardiac Surgery (CABG / Valve Replacement)"
@@ -102,13 +228,28 @@
     "ar": "خطة رعاية لمريض بعد جراحة قلب مفتوح: نتاج القلب والنزيف، التنفس، والألم والوقاية من عدوى جرح القص.",
     "en": "Care plan after open-heart surgery: cardiac output and bleeding, breathing, pain and sternal-wound infection prevention."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "خطر انخفاض نتاج القلب",
+      "en": "Risk for decreased cardiac output"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر العدوى",
+      "en": "Risk for infection"
+     }
+    }
+   ]
   },
   {
    "id": "asthma",
    "icon": "🌬️",
    "system": "respiratory",
+   "folder": "disease",
    "title": {
     "ar": "أزمة الربو الشعبي",
     "en": "Acute Asthma Exacerbation"
@@ -117,13 +258,28 @@
     "ar": "خطة رعاية لمريض في أزمة ربو: فتح الشعب الهوائية، الأكسجين، وتعليم البخاخة وتجنب المحفزات.",
     "en": "Care plan for an asthma attack: bronchodilation, oxygen, inhaler technique and trigger avoidance."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "عدم فعالية تنظيف مجرى الهواء",
+      "en": "Ineffective airway clearance"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "عدم فعالية إدارة الصحة الذاتية",
+      "en": "Ineffective health self-management"
+     }
+    }
+   ]
   },
   {
    "id": "copd",
    "icon": "🌬️",
    "system": "respiratory",
+   "folder": "disease",
    "title": {
     "ar": "السدة الرئوية المزمنة",
     "en": "Chronic Obstructive Pulmonary Disease (COPD)"
@@ -132,13 +288,28 @@
     "ar": "خطة رعاية لمريض سدة رئوية في نوبة تفاقم: تبادل الغازات، أكسجين محسوب، وتمارين التنفس.",
     "en": "Care plan for a COPD exacerbation: gas exchange, controlled oxygen and breathing exercises."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "ضعف تبادل الغازات",
+      "en": "Impaired gas exchange"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "عدم فعالية نمط التنفس",
+      "en": "Ineffective breathing pattern"
+     }
+    }
+   ]
   },
   {
    "id": "mechanical-ventilation",
    "icon": "🫧",
    "system": "respiratory",
+   "folder": "disease",
    "title": {
     "ar": "المريض على جهاز التنفس الصناعي",
     "en": "Mechanically Ventilated Patient"
@@ -147,13 +318,28 @@
     "ar": "خطة رعاية لمريض على التنفس الصناعي: الحفاظ على مجرى الهواء، الوقاية من الالتهاب الرئوي المرتبط بالجهاز (VAP)، والتواصل.",
     "en": "Care plan for a ventilated patient: airway maintenance, ventilator-associated pneumonia (VAP) prevention and communication."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "عدم فعالية تنظيف مجرى الهواء",
+      "en": "Ineffective airway clearance"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر العدوى",
+      "en": "Risk for infection"
+     }
+    }
+   ]
   },
   {
    "id": "pneumonia",
    "icon": "🫁",
    "system": "respiratory",
+   "folder": "disease",
    "title": {
     "ar": "الالتهاب الرئوي",
     "en": "Pneumonia"
@@ -162,13 +348,28 @@
     "ar": "خطة رعاية لمريض التهاب رئوي: تنظيف مجرى الهواء، تحسين الأكسجين، وخفض الحرارة.",
     "en": "Care plan for pneumonia: airway clearance, oxygenation and fever control."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "عدم فعالية تنظيف مجرى الهواء",
+      "en": "Ineffective airway clearance"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "ارتفاع درجة الحرارة",
+      "en": "Hyperthermia"
+     }
+    }
+   ]
   },
   {
    "id": "pneumothorax-chest-tube",
    "icon": "🫁",
    "system": "respiratory",
+   "folder": "disease",
    "title": {
     "ar": "استرواح الصدر وأنبوبة الصدر",
     "en": "Pneumothorax & Chest Tube Care"
@@ -177,13 +378,28 @@
     "ar": "خطة رعاية لمريض استرواح صدري بأنبوبة صدر: تمدد الرئة، العناية بنظام التصريف المائي، والألم.",
     "en": "Care plan for pneumothorax with a chest drain: lung re-expansion, underwater-seal care and pain."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "عدم فعالية نمط التنفس",
+      "en": "Ineffective breathing pattern"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "ألم حاد",
+      "en": "Acute pain"
+     }
+    }
+   ]
   },
   {
    "id": "pulmonary-tuberculosis",
    "icon": "🦠",
    "system": "respiratory",
+   "folder": "disease",
    "title": {
     "ar": "الدرن الرئوي (السل)",
     "en": "Pulmonary Tuberculosis"
@@ -192,13 +408,28 @@
     "ar": "خطة رعاية لمريض درن رئوي: منع العدوى، الالتزام بالعلاج الطويل، والتغذية.",
     "en": "Care plan for pulmonary TB: infection control, long-term treatment adherence and nutrition."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "خطر انتقال العدوى للآخرين",
+      "en": "Risk for infection transmission"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر عدم الالتزام بالعلاج",
+      "en": "Risk for ineffective health self-management"
+     }
+    }
+   ]
   },
   {
    "id": "seizure-disorders",
    "icon": "⚡",
    "system": "neurology",
+   "folder": "disease",
    "title": {
     "ar": "الصرع ونوبات التشنج",
     "en": "Seizure Disorders (Epilepsy)"
@@ -207,13 +438,28 @@
     "ar": "خطة رعاية لمريض صرع: الأمان أثناء النوبة، الحفاظ على مجرى الهواء، والالتزام بالعلاج.",
     "en": "Care plan for epilepsy: safety during seizures, airway protection and medication adherence."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "خطر الإصابة",
+      "en": "Risk for injury"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "عدم فعالية إدارة الصحة الذاتية",
+      "en": "Ineffective health self-management"
+     }
+    }
+   ]
   },
   {
    "id": "stroke",
    "icon": "🧠",
    "system": "neurology",
+   "folder": "disease",
    "title": {
     "ar": "السكتة الدماغية (جلطة المخ)",
     "en": "Stroke (Cerebrovascular Accident)"
@@ -222,13 +468,28 @@
     "ar": "خطة رعاية لمريض سكتة دماغية: تروية المخ، الوقاية من الشرقة، والحركة والوقاية من قرح الفراش.",
     "en": "Care plan for stroke: cerebral perfusion, aspiration prevention, mobility and pressure-injury prevention."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "خطر الشرقة",
+      "en": "Risk for aspiration"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "ضعف الحركة الجسدية",
+      "en": "Impaired physical mobility"
+     }
+    }
+   ]
   },
   {
    "id": "head-injury",
    "icon": "🤕",
    "system": "neurology",
+   "folder": "disease",
    "title": {
     "ar": "إصابات الرأس (ارتجاج ونزيف المخ)",
     "en": "Traumatic Brain Injury"
@@ -237,13 +498,28 @@
     "ar": "خطة رعاية لمريض إصابة رأس: متابعة الوعي وضغط المخ، الحفاظ على مجرى الهواء، والوقاية من الإصابة.",
     "en": "Care plan for traumatic brain injury: neuro observation and intracranial pressure, airway protection and injury prevention."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "خطر ضعف تروية المخ",
+      "en": "Risk for ineffective cerebral tissue perfusion"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر الإصابة/السقوط",
+      "en": "Risk for injury/falls"
+     }
+    }
+   ]
   },
   {
    "id": "diabetes-type2",
    "icon": "🩸",
    "system": "endocrine",
+   "folder": "disease",
    "title": {
     "ar": "السكري من النوع الثاني",
     "en": "Type 2 Diabetes Mellitus"
@@ -252,13 +528,28 @@
     "ar": "خطة رعاية لمريض سكر غير منتظم: ضبط السكر، الوقاية من الهبوط، والتثقيف عن العناية بالقدم.",
     "en": "Care plan for a patient with poorly controlled diabetes: glucose control, hypoglycemia prevention and foot-care teaching."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "خطر عدم استقرار مستوى سكر الدم",
+      "en": "Risk for unstable blood glucose level"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "نقص المعرفة (Deficient knowledge) عن العناية بالقدم",
+      "en": "Deficient knowledge regarding diabetic foot care"
+     }
+    }
+   ]
   },
   {
    "id": "liver-cirrhosis",
    "icon": "🟤",
    "system": "gastro",
+   "folder": "disease",
    "title": {
     "ar": "تليف الكبد",
     "en": "Liver Cirrhosis"
@@ -267,13 +558,28 @@
     "ar": "خطة رعاية لمريض تليف كبد مع استسقاء: السوائل، الوقاية من الغيبوبة الكبدية، والنزيف.",
     "en": "Care plan for cirrhosis with ascites: fluid balance, hepatic encephalopathy and bleeding prevention."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "زيادة حجم السوائل",
+      "en": "Excess fluid volume"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر التشوش الحاد",
+      "en": "Risk for acute confusion"
+     }
+    }
+   ]
   },
   {
    "id": "chronic-kidney-disease",
    "icon": "🫘",
    "system": "renal",
+   "folder": "disease",
    "title": {
     "ar": "الفشل الكلوي المزمن",
     "en": "Chronic Kidney Disease (CKD)"
@@ -282,13 +588,28 @@
     "ar": "خطة رعاية لمريض فشل كلوي مزمن: ضبط السوائل والبوتاسيوم، والتغذية، والعناية بالوصلة (الفيستيولا).",
     "en": "Care plan for CKD: fluid and potassium control, nutrition and AV fistula care."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "زيادة حجم السوائل",
+      "en": "Excess fluid volume"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر اختلال الأملاح",
+      "en": "Risk for electrolyte imbalance"
+     }
+    }
+   ]
   },
   {
    "id": "post-operative-care",
    "icon": "🏥",
    "system": "surgery",
+   "folder": "disease",
    "title": {
     "ar": "رعاية ما بعد العمليات الجراحية (البطن)",
     "en": "Post-operative Care (Abdominal Surgery)"
@@ -297,13 +618,28 @@
     "ar": "خطة رعاية لمريض بعد عملية بالبطن: تسكين الألم، الوقاية من عدوى الجرح، وتنشيط الحركة والتنفس.",
     "en": "Care plan after abdominal surgery: pain relief, wound-infection prevention, early mobility and breathing."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "ألم حاد",
+      "en": "Acute pain"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر العدوى",
+      "en": "Risk for infection"
+     }
+    }
+   ]
   },
   {
    "id": "preeclampsia",
    "icon": "🤰",
    "system": "obstetrics",
+   "folder": "disease",
    "title": {
     "ar": "تسمم الحمل (ما قبل الإرجاج)",
     "en": "Pre-eclampsia"
@@ -312,13 +648,28 @@
     "ar": "خطة رعاية لحامل مصابة بتسمم الحمل: متابعة الضغط وحالة الجنين، والوقاية من التشنجات بالماغنسيوم.",
     "en": "Care plan for pre-eclampsia: BP and fetal monitoring and seizure prevention with magnesium sulfate."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "خطر الإصابة (Risk for injury) للأم",
+      "en": "Maternal risk for injury"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "خطر اضطراب الثنائي الأم والجنين",
+      "en": "Risk for disturbed maternal–fetal dyad"
+     }
+    }
+   ]
   },
   {
    "id": "gastroenteritis-dehydration-child",
    "icon": "👶",
    "system": "pediatrics",
+   "folder": "disease",
    "title": {
     "ar": "النزلة المعوية والجفاف عند الأطفال",
     "en": "Gastroenteritis with Dehydration (Child)"
@@ -327,8 +678,60 @@
     "ar": "خطة رعاية لطفل عنده إسهال وقيء وجفاف: تعويض السوائل، متابعة العلامات، وتثقيف الأم عن محلول الجفاف.",
     "en": "Care plan for a child with diarrhea, vomiting and dehydration: rehydration, monitoring and teaching the mother about ORS."
    },
-   "diagnoses": 2,
-   "rows": 3
+   "diagnoses": [
+    {
+     "id": "dx-1",
+     "title": {
+      "ar": "نقص حجم السوائل",
+      "en": "Deficient fluid volume"
+     }
+    },
+    {
+     "id": "dx-2",
+     "title": {
+      "ar": "نقص المعرفة (Deficient knowledge) لدى الأم عن تحضير محلول الجفاف ورعاية الطفل بالبيت",
+      "en": "Deficient knowledge (mother) regarding ORS preparation and home care"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ventilator-associated-pneumonia",
+   "icon": "🫧",
+   "system": "respiratory",
+   "folder": "general",
+   "title": {
+    "ar": "الالتهاب الرئوي المرتبط بجهاز التنفس الصناعي (VAP)",
+    "en": "Ventilator-Associated Pneumonia (VAP)"
+   },
+   "summary": {
+    "ar": "من مضاعفات الرعاية المركزة: عدوى في الرئة تحدث للمرضى على جهاز التنفس الصناعي. الوقاية بحزمة (Bundle) والرعاية التمريضية للمريض المصاب.",
+    "en": "An ICU complication: lung infection in mechanically ventilated patients. Prevention bundle and nursing care of the affected patient."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-for-infection-vap",
+     "title": {
+      "ar": "خطر العدوى (الالتهاب الرئوي المرتبط بجهاز التنفس – VAP)",
+      "en": "Risk for Infection (Ventilator-Associated Pneumonia)"
+     }
+    },
+    {
+     "id": "ineffective-airway-clearance-vap",
+     "title": {
+      "ar": "عدم فعالية تنظيف مجرى الهواء",
+      "en": "Ineffective Airway Clearance"
+     }
+    },
+    {
+     "id": "hyperthermia-vap",
+     "title": {
+      "ar": "ارتفاع درجة الحرارة",
+      "en": "Hyperthermia"
+     }
+    }
+   ],
+   "group": "icu"
   }
  ]
 }

@@ -116,10 +116,14 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
       .filter((c) => [c.title_ar, c.title_en].filter(Boolean).join(" ").toLowerCase().includes(lower))
       .slice(0, 3)
       .map((c) => ({ label: bilingual(c.title_ar, c.title_en, lang).text, sub: t("search.coursesHeading"), to: `/courses/${c.course_id}/chapter/${c.id}`, icon: c.icon || "🎓" }));
-    const fromCarePlans: Suggestion[] = carePlans
-      .filter((c) => `${c.title.ar} ${c.title.en} care plan خطة رعاية`.toLowerCase().includes(lower))
-      .slice(0, 3)
-      .map((c) => ({ label: bilingual(c.title.ar, c.title.en, lang).text, sub: lang === "ar" ? "خطة رعاية تمريضية" : "Nursing care plan", to: `/care-plans/${c.id}`, icon: c.icon || "📋" }));
+    const fromCarePlans: Suggestion[] = [
+      ...carePlans
+        .filter((c) => `${c.title.ar} ${c.title.en} care plan خطة رعاية`.toLowerCase().includes(lower))
+        .map((c) => ({ label: bilingual(c.title.ar, c.title.en, lang).text, sub: lang === "ar" ? "خطة رعاية تمريضية" : "Nursing care plan", to: `/care-plans/${c.id}`, icon: c.icon || "📋" })),
+      ...carePlans.flatMap((c) => (c.diagnoses ?? [])
+        .filter((d) => `${d.title.ar} ${d.title.en}`.toLowerCase().includes(lower))
+        .map((d) => ({ label: bilingual(d.title.ar, d.title.en, lang).text, sub: `${lang === "ar" ? "تشخيص تمريضي ·" : "Nursing diagnosis ·"} ${bilingual(c.title.ar, c.title.en, lang).text}`, to: `/care-plans/${c.id}/${d.id}`, icon: c.icon || "📋" }))),
+    ].slice(0, 3);
     const results = [...fromDrugs, ...fromCarePlans, ...fromIcu, ...fromDialysis, ...fromRadiology, ...fromNicu, ...fromPharmacology, ...fromTerminology, ...fromFirstAid, ...fromERReception, ...fromPediatrics, ...fromAnatomy, ...fromFundamentals, ...fromOperatingRoom, ...fromObgyn, ...fromProtocols, ...fromTravel, ...fromCourses, ...fromArticles].slice(0, 8);
 
     // Log real search analytics once per distinct query (debounced by ref, not per keystroke render).
