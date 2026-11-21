@@ -486,21 +486,25 @@ function HospitalForm({ ar, dx }: { ar: boolean; dx: Diagnosis }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-[#168C91]/60 print:overflow-visible">
       <table className="w-full table-fixed border-collapse">
-        <colgroup><col className="w-[10%]" /><col className="w-[16%]" /><col className="w-[16%]" /><col className="w-[22%]" /><col className="w-[15%]" /><col className="w-[11%]" /><col className="w-[10%]" /></colgroup>
+        <colgroup><col className="w-[8%]" /><col className="w-[15%]" /><col className="w-[13%]" /><col className="w-[31%]" /><col className="w-[17%]" /><col className="w-[9%]" /><col className="w-[7%]" /></colgroup>
         <thead><tr>{cols.map(([I, k]) => <th key={k} className={thCls}><Head icon={I} label={tr(k, ar)} /></th>)}</tr></thead>
         <tbody>
           {rows.map((r, n) => (
-            <tr key={n} className="break-inside-avoid">
-              <td className={tdCls} />
-              {n === 0 && <td rowSpan={rows.length} className={`${tdCls} font-black text-[#153448]`}>{pick(dx.title, ar)}{dx.kind === "risk" && <div className="mt-1 text-[11px] font-bold text-slate-500">({ar ? "تشخيص خطر" : "risk diagnosis"})</div>}</td>}
-              <td className={tdCls}>{pick(r.need, ar)}</td>
+            <tr key={n}>
+              {n === 0 && <td rowSpan={rows.length} className={tdCls} />}
+              {n === 0 && (
+                <td rowSpan={rows.length} className={`${tdCls} font-black text-[#153448]`}>
+                  {pick(dx.title, ar)}{dx.kind === "risk" && <div className="mt-1 text-[11px] font-bold text-slate-500">({ar ? "تشخيص خطر" : "risk diagnosis"})</div>}
+                  {dx.definition && <p className="mt-2 text-[12px] font-normal leading-5 text-slate-600">{pick(dx.definition, ar)}</p>}
+                </td>
+              )}
+              <td className={`${tdCls} font-bold`}>{pick(r.need, ar)}</td>
               <td className={tdCls}><List items={pickList(r.actions, ar)} /></td>
               <td className={tdCls}>{pick(r.outcome, ar)}</td>
               <td className={`${tdCls} text-center font-bold`}>{pick(r.timeframe, ar)}</td>
-              <td className={tdCls} />
+              {n === 0 && <td rowSpan={rows.length} className={tdCls} />}
             </tr>
           ))}
-          {[0, 1].map((i) => <tr key={`blank${i}`} className="h-14 print:h-8">{cols.map(([, k]) => <td key={k} className={tdCls} />)}</tr>)}
         </tbody>
       </table>
     </div>
