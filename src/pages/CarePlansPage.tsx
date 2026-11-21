@@ -4,12 +4,15 @@
  *  - /care-plans/:id      : one plan, two tabs (?type=student | hospital)
  *      student : Assessment (S/O) → Nursing Diagnosis → Goals → Interventions (each with its Rationale) → Evaluation
  *      hospital: Date/Time · Nursing Diagnosis · Patient Needs · Actions · Expected Outcomes · Timeframe · Signature
- * Phones get stacked cards (a 5–7 column table is unreadable at 390 px); wide screens and print get the sheet table,
- * printed A4 landscape with the blank patient fields, like the paper forms.
+ * Every screen shows the same sheet as the paper forms (header, blank patient fields, the table, footer band);
+ * on phones the sheet keeps its width and scrolls sideways. Printed A4 landscape.
  */
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
-import { ClipboardList, GraduationCap, Hospital, Printer, Search } from "lucide-react";
+import {
+  Activity, BedDouble, BriefcaseMedical, CircleCheck, ClipboardCheck, ClipboardList, Clock, GraduationCap, HeartPulse, Hospital, Lightbulb,
+  PenLine, Printer, Search, Settings, Stethoscope, Syringe, Target, TrendingUp, TriangleAlert, Trophy, UserRound,
+} from "lucide-react";
 import { useI18n } from "../lib/i18n";
 import { useSEO } from "../lib/seo";
 import { Breadcrumbs } from "../components/common";
@@ -202,25 +205,28 @@ export function CarePlanPage() {
         </div>
       </div>
 
-      <article className="cp-sheet overflow-hidden rounded-3xl border border-[#168C91]/30 bg-white shadow-sm dark:border-slate-700 dark:bg-slate-900 print:rounded-none print:border-0 print:shadow-none" style={{ printColorAdjust: "exact", WebkitPrintColorAdjust: "exact" }}>
-        <SheetHeader ar={ar} kind={kind} title={title} titleOther={ar ? plan.title.en : plan.title.ar} />
-        <div className="space-y-4 p-3 sm:p-5">
-          <PatientFields ar={ar} kind={kind} />
-          {kind === "student" ? <StudentPlan ar={ar} dx={plan.student} /> : <HospitalPlan ar={ar} rows={plan.hospital} />}
-          {kind === "student" && (
-            <div className="grid gap-3 sm:grid-cols-[2fr_1fr] print:grid-cols-[2fr_1fr]">
-              <div className="min-h-[72px] rounded-2xl border border-[#168C91]/40 p-3"><div className="text-sm font-black text-[#153448] dark:text-teal-200">{tr("notes", ar)}:</div></div>
-              <div className="min-h-[72px] rounded-2xl border border-[#168C91]/40 p-3 text-sm font-black text-[#153448] dark:text-teal-200">
-                <div>{tr("signature", ar)}:</div><div className="mt-5">{tr("date", ar)}: ____________</div>
+      <p className="mb-2 flex items-center gap-1.5 text-xs font-bold text-slate-500 lg:hidden print:hidden">↔ {ar ? "اسحب الجدول يمين وشمال لقراءة كل الأعمدة" : "Swipe the sheet sideways to see every column"}</p>
+      <div className="overflow-x-auto rounded-3xl border border-[#168C91]/30 shadow-sm print:overflow-visible print:rounded-none print:border-0 print:shadow-none">
+        <article className="cp-sheet min-w-[1040px] bg-[#f7fbfc] text-slate-800 lg:min-w-0 print:min-w-0" style={{ printColorAdjust: "exact", WebkitPrintColorAdjust: "exact" }}>
+          <SheetHeader ar={ar} kind={kind} title={title} titleOther={ar ? plan.title.en : plan.title.ar} />
+          <div className="space-y-4 px-5 pb-5 print:space-y-2 print:px-3 print:pb-2">
+            <PatientFields ar={ar} kind={kind} />
+            {kind === "student" ? <StudentPlan ar={ar} dx={plan.student} /> : <HospitalPlan ar={ar} rows={plan.hospital} />}
+            {kind === "student" && (
+              <div className="grid grid-cols-[2fr_1fr] gap-4">
+                <div className="min-h-[80px] rounded-2xl border border-[#168C91]/50 bg-white p-3 print:min-h-[56px] print:p-2">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#168C91] px-4 py-1 text-sm font-black text-white"><ClipboardList className="h-4 w-4" />{tr("notes", ar)}:</span>
+                </div>
+                <div className="min-h-[80px] rounded-2xl border border-[#168C91]/50 bg-white p-3 print:min-h-[56px] print:p-2 text-sm font-black text-[#153448]">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#168C91] px-4 py-1 text-white"><PenLine className="h-4 w-4" />{tr("signature", ar)}:</span>
+                  <div className="mt-4">{tr("date", ar)}: ______________________</div>
+                </div>
               </div>
-            </div>
-          )}
-        </div>
-        <div className="flex items-center justify-between gap-2 bg-[#153448] px-4 py-2 text-xs font-bold text-white sm:px-6">
-          <span dir="ltr">NurseHub Egypt — Your Nursing Knowledge Hub</span>
-          <span className="hidden sm:inline" dir="ltr">nursehubegypt.com</span>
-        </div>
-      </article>
+            )}
+          </div>
+          <SheetFooter />
+        </article>
+      </div>
 
       <div className="mt-4 space-y-3 print:hidden">
         <p className="rounded-xl bg-amber-50 p-3 text-sm leading-7 text-amber-900 dark:bg-amber-500/10 dark:text-amber-200">{tr("disclaimer", ar)}</p>
@@ -238,43 +244,100 @@ export function CarePlanPage() {
 
 function SheetHeader({ ar, kind, title, titleOther }: { ar: boolean; kind: Kind; title: string; titleOther: string }) {
   return (
-    <header className="flex flex-col gap-3 border-b border-[#168C91]/20 p-3 sm:flex-row sm:items-center sm:justify-between sm:p-5 print:flex-row print:items-center print:justify-between">
+    <header dir="ltr" className="flex items-center justify-between gap-6 p-5 print:p-3">
       <div className="flex items-center gap-3">
-        <LogoMark size={44} className="shadow-none" />
+        <LogoMark size={56} className="shadow-none" />
         <div>
-          <div dir="ltr" className="text-xl font-black text-[#153448] dark:text-white">NurseHub <span className="text-[#168C91]">Egypt</span></div>
-          <div className="text-[11px] font-bold text-slate-500 dark:text-slate-400">كل ما يحتاجه الممرض في مكان واحد</div>
+          <div className="text-[28px] font-black leading-8 text-[#153448]">NurseHub <span className="text-[#168C91]">Egypt</span></div>
+          <div dir="rtl" className="mt-1 text-xs font-bold text-[#153448]">— كل ما يحتاجه الممرض في مكان واحد —</div>
         </div>
       </div>
-      <div className="rounded-2xl bg-[#153448] px-5 py-3 text-white sm:min-w-[340px]">
-        <div className="text-lg font-black sm:text-xl">{ar ? T.sheet.ar : T.sheet.en} — {ar ? T[kind].ar : T[kind].en}</div>
-        <div className="mt-0.5 flex flex-wrap items-baseline justify-between gap-x-3 text-sm">
-          <span className="font-black text-[#7fdde1]">{title}</span>
-          <span dir={ar ? "ltr" : "rtl"} className="text-xs font-bold text-white/75">{titleOther}</span>
+      <div dir={ar ? "rtl" : "ltr"} className="flex min-w-[520px] items-center gap-4 rounded-full bg-[#153448] py-3 ps-4 pe-8 text-white print:py-2">
+        <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-[#153448]"><Stethoscope className="h-8 w-8" /></span>
+        <div className="min-w-0 flex-1">
+          <div className="text-2xl font-black leading-8">{ar ? T.sheet.ar : T.sheet.en}</div>
+          <div className="text-sm font-bold italic text-[#7fdde1]">{ar ? T.sheet.en : T.sheet.ar} · {ar ? T[kind].ar : T[kind].en}</div>
+          <div className="mt-1 flex flex-wrap items-baseline gap-x-3 text-sm"><span className="font-black text-white">{title}</span><span dir={ar ? "ltr" : "rtl"} className="text-xs font-bold text-white/70">{titleOther}</span></div>
         </div>
+        <Activity className="h-10 w-10 shrink-0 text-[#5fd3d8]" />
       </div>
     </header>
   );
 }
 
-/** Blank lines to fill by hand (printed sheet), like the paper forms. */
+function SheetFooter() {
+  return (
+    <footer dir="ltr" className="relative mt-2 overflow-hidden bg-[#153448] text-white break-inside-avoid print:mt-0">
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" className="block h-6 w-full bg-[#f7fbfc]" aria-hidden="true"><path d="M0 40 C300 0 700 50 1200 10 L1200 40 Z" fill="#168C91" /><path d="M0 40 C350 15 750 55 1200 25 L1200 40 Z" fill="#153448" /></svg>
+      <div className="flex items-center justify-between gap-4 px-6 py-3 print:py-1.5">
+        <div className="text-base font-black italic">NurseHub Egypt <span className="mx-2 text-white/50">—</span> <span className="font-bold">Your Nursing Knowledge Hub</span></div>
+        <div className="flex items-center gap-2">
+          {[Stethoscope, BriefcaseMedical, Syringe, HeartPulse].map((I, i) => <span key={i} className="grid h-8 w-8 place-items-center rounded-full bg-[#168C91]"><I className="h-4 w-4" /></span>)}
+          <span className="ms-2 text-xs font-bold text-white/80">nursehubegypt.com</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+/** Blank lines to fill by hand, laid out like the paper forms. */
 function PatientFields({ ar, kind }: { ar: boolean; kind: Kind }) {
-  const f = (k: string) => (
-    <div key={k} className="flex items-end gap-2 text-sm font-bold text-[#153448] dark:text-slate-200">
-      <span className="shrink-0">{k}:</span><span className="mb-1 h-px flex-1 border-b border-dotted border-slate-400" />
+  const line = (label: string, extra = "") => (
+    <div key={label} className={`flex items-end gap-2 text-[15px] font-black text-[#153448] ${extra}`}>
+      <span className="shrink-0">{label}:</span><span className="mb-1 h-px flex-1 border-b border-dotted border-[#153448]/50" />
     </div>
   );
-  const fields = kind === "hospital"
-    ? (ar ? ["التاريخ", "القسم", "اسم المريض رباعي", "الرقم القومي الموحد"] : ["Date", "Department", "Patient full name", "National ID"])
-    : (ar ? ["اسم المريض", "السن", "النوع", "التشخيص الطبي", "تاريخ الدخول", "تاريخ الخطة", "اسم الممرض/ة"] : ["Patient name", "Age", "Gender", "Medical diagnosis", "Date of admission", "Date of care plan", "Nurse's name"]);
-  return <div className="grid gap-x-6 gap-y-3 rounded-2xl border border-[#168C91]/40 p-3 sm:grid-cols-2 print:grid-cols-3 lg:grid-cols-3">{fields.map(f)}</div>;
+  const box = "grid grid-cols-[1fr_auto_1fr] gap-x-6 rounded-2xl border border-[#168C91]/60 bg-white p-4 print:p-2.5 print:[&_.space-y-3]:space-y-1.5 print:[&_.space-y-4]:space-y-2";
+  const divider = <span className="w-[2px] rounded-full bg-[#168C91]" />;
+  if (kind === "hospital") {
+    return (
+      <div className={box}>
+        <div className="space-y-4">
+          <div className="flex items-end gap-2 text-[15px] font-black text-[#153448]"><span>{ar ? "التاريخ" : "Date"}:</span><span className="tracking-[0.6em] text-slate-400">/ /</span></div>
+          {line(ar ? "القسم" : "Department")}
+        </div>
+        {divider}
+        <div className="space-y-4">
+          {line(ar ? "اسم المريض رباعي" : "Patient full name")}
+          {line(ar ? "الرقم القومي الموحد" : "National ID")}
+        </div>
+      </div>
+    );
+  }
+  const box2 = (
+    <span className="flex items-center gap-4 text-[15px] font-black text-[#153448]">
+      <span>{ar ? "النوع" : "Gender"}:</span>
+      {(ar ? ["ذكر", "أنثى"] : ["Male", "Female"]).map((g) => <span key={g} className="inline-flex items-center gap-1.5"><span className="h-4 w-4 rounded-[4px] border-2 border-[#153448]" />{g}</span>)}
+    </span>
+  );
+  return (
+    <div className={box}>
+      <div className="space-y-3">
+        {line(ar ? "اسم المريض" : "Patient Name")}
+        <div className="flex items-end gap-6">{line(ar ? "السن" : "Age", "w-40")}{box2}</div>
+        {line(ar ? "التشخيص الطبي" : "Medical Diagnosis")}
+      </div>
+      {divider}
+      <div className="flex items-center gap-4">
+        <div className="flex-1 space-y-3">
+          {line(ar ? "تاريخ الدخول" : "Date of Admission")}
+          {line(ar ? "تاريخ الخطة" : "Date of Care Plan")}
+          {line(ar ? "اسم الممرض/ة" : "Nurse's Name")}
+        </div>
+        <BedDouble className="h-16 w-16 shrink-0 text-[#168C91]/40" />
+      </div>
+    </div>
+  );
 }
 
 const List = ({ items, className = "" }: { items: string[]; className?: string }) => (
   <ul className={`list-disc space-y-1 ps-4 ${className}`}>{items.map((x) => <li key={x}>{x}</li>)}</ul>
 );
-const thCls = "border border-[#168C91]/50 bg-[#153448] px-2 py-2 text-center text-[13px] font-black text-white print:text-[11px]";
-const tdCls = "border border-[#168C91]/40 p-2 align-top text-[13px] leading-6 text-slate-800 dark:text-slate-200 print:text-[10.5px] print:leading-[1.45]";
+const thCls = "border-x border-white/25 bg-[#153448] px-2 py-3 print:py-1.5 text-center align-middle text-[14px] font-black leading-5 text-white print:text-[11px]";
+const tdCls = "border border-[#168C91]/45 bg-white p-2.5 align-top text-[13px] leading-6 text-slate-800 print:text-[10.5px] print:leading-[1.45]";
+const Head = ({ icon: Icon, label }: { icon: typeof Clock; label: string }) => (
+  <span className="flex flex-col items-center gap-1.5"><Icon className="h-6 w-6 text-[#7fdde1] print:h-4 print:w-4" strokeWidth={2.2} /><span>{label}</span></span>
+);
 
 function Interventions({ d, ar }: { d: StudentDiagnosis; ar: boolean }) {
   return (
@@ -284,7 +347,7 @@ function Interventions({ d, ar }: { d: StudentDiagnosis; ar: boolean }) {
           <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[#168C91] text-[11px] font-black text-white">{i + 1}</span>
           <div>
             <div className="font-bold">{pick(x.action, ar)}</div>
-            <div className="mt-0.5 text-[#0f6b70] dark:text-teal-300"><span className="font-black">{tr("rationale", ar)}: </span>{pick(x.rationale, ar)}</div>
+            <div className="mt-0.5 text-[#0f6b70]"><span className="font-black">{tr("rationale", ar)}: </span>{pick(x.rationale, ar)}</div>
           </div>
         </li>
       ))}
@@ -293,102 +356,53 @@ function Interventions({ d, ar }: { d: StudentDiagnosis; ar: boolean }) {
 }
 
 function StudentPlan({ ar, dx }: { ar: boolean; dx: StudentDiagnosis[] }) {
+  const cols = [[ClipboardList, "assessment"], [TriangleAlert, "diagnosis"], [Trophy, "goals"], [Settings, "interventions"], [CircleCheck, "evaluation"]] as const;
   return (
-    <>
-      {/* phones / tablets: one card per problem, steps in the right order */}
-      <div className="space-y-4 lg:hidden print:hidden">
-        {dx.map((d, n) => {
-          const steps: [string, React.ReactNode][] = [
-            [tr("assessment", ar), (
-              <div className="space-y-2">
-                <div><div className="text-xs font-black text-slate-500">{tr("subjective", ar)}</div><List items={pickList(d.assessment.subjective, ar)} /></div>
-                <div><div className="text-xs font-black text-slate-500">{tr("objective", ar)}</div><List items={pickList(d.assessment.objective, ar)} /></div>
-              </div>
-            )],
-            [tr("diagnosis", ar), <p className="font-bold">{pick(d.diagnosis, ar)}</p>],
-            [tr("goals", ar), <List items={pickList(d.goals, ar)} />],
-            [tr("interventions", ar), <Interventions d={d} ar={ar} />],
-            [tr("evaluation", ar), <List items={pickList(d.evaluation, ar)} />],
-          ];
-          return (
-            <section key={n} className="overflow-hidden rounded-2xl border border-[#168C91]/40">
-              <h2 className="bg-[#153448] px-3 py-2 text-sm font-black text-white">{tr("problem", ar)} {n + 1}</h2>
-              <div className="divide-y divide-[#168C91]/20">
-                {steps.map(([label, body], i) => (
-                  <div key={label} className="p-3 text-sm leading-7 text-slate-800 dark:text-slate-200">
-                    <div className="mb-1 flex items-center gap-2 text-[13px] font-black text-[#153448] dark:text-teal-200">
-                      <span className="grid h-5 w-5 place-items-center rounded-md bg-[#168C91]/15 text-[11px] text-[#0f6b70] dark:text-teal-300">{i + 1}</span>{label}
-                    </div>
-                    {body}
-                  </div>
-                ))}
-              </div>
-            </section>
-          );
-        })}
-      </div>
-      {/* wide screens and print: the sheet table */}
-      <div className="hidden lg:block print:block">
-        <table className="w-full table-fixed border-collapse">
-          <colgroup><col className="w-[20%]" /><col className="w-[15%]" /><col className="w-[15%]" /><col className="w-[34%]" /><col className="w-[16%]" /></colgroup>
-          <thead><tr>{(["assessment", "diagnosis", "goals", "interventions", "evaluation"] as const).map((k) => <th key={k} className={thCls}>{tr(k, ar)}</th>)}</tr></thead>
-          <tbody>
-            {dx.map((d, n) => (
-              <tr key={n} className="break-inside-avoid">
-                <td className={tdCls}>
-                  <div className="text-[11px] font-black text-slate-500">{tr("subjective", ar)}</div><List items={pickList(d.assessment.subjective, ar)} />
-                  <div className="mt-2 text-[11px] font-black text-slate-500">{tr("objective", ar)}</div><List items={pickList(d.assessment.objective, ar)} />
-                </td>
-                <td className={`${tdCls} font-bold`}>{pick(d.diagnosis, ar)}</td>
-                <td className={tdCls}><List items={pickList(d.goals, ar)} /></td>
-                <td className={tdCls}><Interventions d={d} ar={ar} /></td>
-                <td className={tdCls}><List items={pickList(d.evaluation, ar)} /></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </>
+    <div className="overflow-hidden rounded-2xl border border-[#168C91]/60 print:overflow-visible">
+      <table className="w-full table-fixed border-collapse">
+        <colgroup><col className="w-[20%]" /><col className="w-[15%]" /><col className="w-[15%]" /><col className="w-[34%]" /><col className="w-[16%]" /></colgroup>
+        <thead><tr>{cols.map(([I, k]) => <th key={k} className={thCls}><Head icon={I} label={tr(k, ar)} /></th>)}</tr></thead>
+        <tbody>
+          {dx.map((d, n) => (
+            <tr key={n} className="break-inside-avoid">
+              <td className={tdCls}>
+                <div className="text-[11px] font-black text-[#168C91]">{tr("subjective", ar)}</div><List items={pickList(d.assessment.subjective, ar)} />
+                <div className="mt-2 text-[11px] font-black text-[#168C91]">{tr("objective", ar)}</div><List items={pickList(d.assessment.objective, ar)} />
+              </td>
+              <td className={`${tdCls} font-bold`}>{pick(d.diagnosis, ar)}</td>
+              <td className={tdCls}><List items={pickList(d.goals, ar)} /></td>
+              <td className={tdCls}><Interventions d={d} ar={ar} /></td>
+              <td className={tdCls}><List items={pickList(d.evaluation, ar)} /></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
 function HospitalPlan({ ar, rows }: { ar: boolean; rows: HospitalRow[] }) {
-  const cols = ["dateTime", "diagnosis", "needs", "actions", "outcomes", "timeframe", "signature"] as const;
+  const cols = [[Target, "dateTime"], [UserRound, "diagnosis"], [ClipboardCheck, "needs"], [Lightbulb, "actions"], [CircleCheck, "outcomes"], [TrendingUp, "timeframe"], [PenLine, "signature"]] as const;
   return (
-    <>
-      <div className="space-y-3 lg:hidden print:hidden">
-        {rows.map((r, n) => (
-          <section key={n} className="overflow-hidden rounded-2xl border border-[#168C91]/40 text-sm leading-7 text-slate-800 dark:text-slate-200">
-            <h2 className="bg-[#153448] px-3 py-2 font-black text-white">{pick(r.diagnosis, ar)}</h2>
-            <dl className="divide-y divide-[#168C91]/20">
-              <div className="p-3"><dt className="text-[13px] font-black text-[#153448] dark:text-teal-200">{tr("needs", ar)}</dt><dd>{pick(r.need, ar)}</dd></div>
-              <div className="p-3"><dt className="text-[13px] font-black text-[#153448] dark:text-teal-200">{tr("actions", ar)}</dt><dd><List items={pickList(r.actions, ar)} /></dd></div>
-              <div className="p-3"><dt className="text-[13px] font-black text-[#153448] dark:text-teal-200">{tr("outcomes", ar)}</dt><dd>{pick(r.outcome, ar)}</dd></div>
-              <div className="flex items-center justify-between gap-2 p-3"><dt className="text-[13px] font-black text-[#153448] dark:text-teal-200">{tr("timeframe", ar)}</dt><dd className="rounded-full bg-[#168C91]/10 px-3 text-[13px] font-bold text-[#0f6b70] dark:text-teal-300">{pick(r.timeframe, ar)}</dd></div>
-            </dl>
-          </section>
-        ))}
-      </div>
-      <div className="hidden lg:block print:block">
-        <table className="w-full table-fixed border-collapse">
-          <colgroup><col className="w-[10%]" /><col className="w-[15%]" /><col className="w-[15%]" /><col className="w-[24%]" /><col className="w-[16%]" /><col className="w-[10%]" /><col className="w-[10%]" /></colgroup>
-          <thead><tr>{cols.map((k) => <th key={k} className={thCls}>{tr(k, ar)}</th>)}</tr></thead>
-          <tbody>
-            {rows.map((r, n) => (
-              <tr key={n} className="break-inside-avoid">
-                <td className={tdCls} />
-                <td className={`${tdCls} font-bold`}>{pick(r.diagnosis, ar)}</td>
-                <td className={tdCls}>{pick(r.need, ar)}</td>
-                <td className={tdCls}><List items={pickList(r.actions, ar)} /></td>
-                <td className={tdCls}>{pick(r.outcome, ar)}</td>
-                <td className={`${tdCls} text-center font-bold`}>{pick(r.timeframe, ar)}</td>
-                <td className={tdCls} />
-              </tr>
-            ))}
-            {[0, 1].map((i) => <tr key={`blank${i}`} className="h-12">{cols.map((k) => <td key={k} className={tdCls} />)}</tr>)}
-          </tbody>
-        </table>
-      </div>
-    </>
+    <div className="overflow-hidden rounded-2xl border border-[#168C91]/60 print:overflow-visible">
+      <table className="w-full table-fixed border-collapse">
+        <colgroup><col className="w-[11%]" /><col className="w-[15%]" /><col className="w-[15%]" /><col className="w-[23%]" /><col className="w-[15%]" /><col className="w-[11%]" /><col className="w-[10%]" /></colgroup>
+        <thead><tr>{cols.map(([I, k]) => <th key={k} className={thCls}><Head icon={I} label={tr(k, ar)} /></th>)}</tr></thead>
+        <tbody>
+          {rows.map((r, n) => (
+            <tr key={n} className="break-inside-avoid">
+              <td className={tdCls} />
+              <td className={`${tdCls} font-bold`}>{pick(r.diagnosis, ar)}</td>
+              <td className={tdCls}>{pick(r.need, ar)}</td>
+              <td className={tdCls}><List items={pickList(r.actions, ar)} /></td>
+              <td className={tdCls}>{pick(r.outcome, ar)}</td>
+              <td className={`${tdCls} text-center font-bold`}>{pick(r.timeframe, ar)}</td>
+              <td className={tdCls} />
+            </tr>
+          ))}
+          {[0, 1].map((i) => <tr key={`blank${i}`} className="h-14 print:h-8">{cols.map(([, k]) => <td key={k} className={tdCls} />)}</tr>)}
+        </tbody>
+      </table>
+    </div>
   );
 }
