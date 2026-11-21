@@ -118,30 +118,58 @@
   },
   {
    "id": "dvt-pulmonary-embolism",
-   "icon": "🦵",
+   "icon": "🩸",
    "system": "cardiology",
    "folder": "disease",
    "title": {
-    "ar": "جلطة الأوردة العميقة والانسداد الرئوي",
-    "en": "Deep Vein Thrombosis & Pulmonary Embolism"
+    "ar": "الجلطات الوريدية العميقة وجلطة الرئة",
+    "en": "DVT & Pulmonary Embolism"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض جلطة في وريد الساق: مضادات التجلط بأمان، تخفيف الألم والورم، وملاحظة علامات الانسداد الرئوي.",
-    "en": "Care plan for DVT: safe anticoagulation, relief of pain and swelling, and watching for pulmonary embolism."
+    "ar": "خطة رعاية الجلطات الوريدية وجلطة الرئة: تروية الساق، تبادل الغازات، النزيف مع مضادات التجلط، الألم، القلق، والتثقيف.",
+    "en": "DVT/PE care plan: leg perfusion, gas exchange, anticoagulant bleeding, pain, anxiety and teaching."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "ineffective-peripheral-perfusion-dvt",
      "title": {
-      "ar": "ضعف التروية الطرفية",
-      "en": "Ineffective peripheral tissue perfusion"
+      "ar": "عدم فعالية تروية الأنسجة الطرفية (جلطة الساق)",
+      "en": "Ineffective Peripheral Tissue Perfusion (DVT)"
      }
     },
     {
-     "id": "dx-2",
+     "id": "impaired-gas-exchange-pe",
      "title": {
-      "ar": "خطر ضعف تبادل الغازات",
-      "en": "Risk for impaired gas exchange"
+      "ar": "ضعف تبادل الغازات (جلطة الرئة)",
+      "en": "Impaired Gas Exchange (Pulmonary Embolism)"
+     }
+    },
+    {
+     "id": "risk-bleeding-vte",
+     "title": {
+      "ar": "خطر النزيف",
+      "en": "Risk for Bleeding"
+     }
+    },
+    {
+     "id": "acute-pain-pe",
+     "title": {
+      "ar": "ألم حاد (ألم الصدر الجنبي والساق)",
+      "en": "Acute Pain (Pleuritic Chest and Leg Pain)"
+     }
+    },
+    {
+     "id": "anxiety-pe",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "deficient-knowledge-vte",
+     "title": {
+      "ar": "نقص المعرفة (الجلطات ومضادات التجلط)",
+      "en": "Deficient Knowledge (VTE and anticoagulation)"
      }
     }
    ]
@@ -336,30 +364,58 @@
   },
   {
    "id": "cardiac-surgery-postop",
-   "icon": "🩺",
+   "icon": "🫀",
    "system": "cardiology",
    "folder": "disease",
    "title": {
-    "ar": "ما بعد جراحة القلب المفتوح (تحويل مسار الشرايين وتغيير الصمامات)",
-    "en": "Post-operative Cardiac Surgery (CABG / Valve Replacement)"
+    "ar": "ما بعد جراحة القلب (تحويل مسار الشرايين)",
+    "en": "Post Cardiac Surgery (CABG)"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض بعد جراحة قلب مفتوح: نتاج القلب والنزيف، التنفس، والألم والوقاية من عدوى جرح القص.",
-    "en": "Care plan after open-heart surgery: cardiac output and bleeding, breathing, pain and sternal-wound infection prevention."
+    "ar": "خطة رعاية ما بعد جراحة القلب: النتاج القلبي والانصباب التاموري، النزيف والدرنقات، ألم القص واحتياطاته، التنفس، عدوى الجرح، والهذيان.",
+    "en": "Post cardiac surgery care plan: cardiac output and tamponade, bleeding and drains, sternotomy pain and precautions, breathing, wound infection and delirium."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "decreased-cardiac-output-cabg",
      "title": {
-      "ar": "خطر انخفاض نتاج القلب",
-      "en": "Risk for decreased cardiac output"
+      "ar": "خطر نقص النتاج القلبي بعد جراحة القلب",
+      "en": "Risk for Decreased Cardiac Output (Post Cardiac Surgery)"
      }
     },
     {
-     "id": "dx-2",
+     "id": "risk-bleeding-cabg",
      "title": {
-      "ar": "خطر العدوى",
-      "en": "Risk for infection"
+      "ar": "خطر النزيف بعد جراحة القلب",
+      "en": "Risk for Bleeding (Post Cardiac Surgery)"
+     }
+    },
+    {
+     "id": "acute-pain-sternotomy",
+     "title": {
+      "ar": "ألم حاد (شق عظمة القص)",
+      "en": "Acute Pain (Sternotomy)"
+     }
+    },
+    {
+     "id": "impaired-gas-exchange-cabg",
+     "title": {
+      "ar": "خطر ضعف تبادل الغازات بعد جراحة القلب",
+      "en": "Risk for Impaired Gas Exchange (Post Cardiac Surgery)"
+     }
+    },
+    {
+     "id": "risk-infection-sternal",
+     "title": {
+      "ar": "خطر عدوى جرح القص والساق",
+      "en": "Risk for Sternal and Leg Wound Infection"
+     }
+    },
+    {
+     "id": "risk-acute-confusion-cabg",
+     "title": {
+      "ar": "خطر الهذيان (التشوش الحاد)",
+      "en": "Risk for Acute Confusion (Delirium)"
      }
     }
    ]

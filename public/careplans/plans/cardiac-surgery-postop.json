@@ -1,289 +1,1186 @@
 {
  "id": "cardiac-surgery-postop",
- "icon": "🩺",
+ "icon": "🫀",
  "system": "cardiology",
+ "folder": "disease",
  "title": {
-  "ar": "ما بعد جراحة القلب المفتوح (تحويل مسار الشرايين وتغيير الصمامات)",
-  "en": "Post-operative Cardiac Surgery (CABG / Valve Replacement)"
+  "ar": "ما بعد جراحة القلب (تحويل مسار الشرايين)",
+  "en": "Post Cardiac Surgery (CABG)"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض بعد جراحة قلب مفتوح: نتاج القلب والنزيف، التنفس، والألم والوقاية من عدوى جرح القص.",
-  "en": "Care plan after open-heart surgery: cardiac output and bleeding, breathing, pain and sternal-wound infection prevention."
+  "ar": "خطة رعاية ما بعد جراحة القلب: النتاج القلبي والانصباب التاموري، النزيف والدرنقات، ألم القص واحتياطاته، التنفس، عدوى الجرح، والهذيان.",
+  "en": "Post cardiac surgery care plan: cardiac output and tamponade, bleeding and drains, sternotomy pain and precautions, breathing, wound infection and delirium."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "خطر انخفاض نتاج القلب (Risk for decreased cardiac output) مرتبط بالنزيف ونقص الحجم واضطرابات النظم وضعف انقباض القلب بعد الجراحة.",
-    "en": "Risk for decreased cardiac output related to bleeding, hypovolemia, dysrhythmias and depressed contractility after surgery."
+   "id": "decreased-cardiac-output-cabg",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص النتاج القلبي بعد جراحة القلب",
+    "en": "Risk for Decreased Cardiac Output (Post Cardiac Surgery)"
+   },
+   "definition": {
+    "ar": "قابلية لعدم كفاية ضخ الدم بعد الجراحة.",
+    "en": "Susceptibility to inadequate cardiac output after surgery."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ضعف العضلة بعد جهاز القلب والرئة الصناعي",
+     "النزيف ونقص السوائل",
+     "اضطرابات النظم والانصباب التاموري (Tamponade)",
+     "انخفاض الحرارة"
+    ],
+    "en": [
+     "Myocardial stunning after bypass",
+     "Bleeding and hypovolemia",
+     "Dysrhythmias and tamponade",
+     "Hypothermia"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "المريض لسه تحت تأثير التخدير ولا يتكلم."
+      "المريض على جهاز التنفس بعد العملية مباشرة."
      ],
      "en": [
-      "Patient still sedated and not speaking."
+      "Ventilated immediately post-op."
      ]
     },
     "objective": {
      "ar": [
-      "أول 6 ساعات بعد العملية، أنبوبة الصدر نزلت 150 مل في الساعة الأولى.",
-      "الضغط 95/60، النبض 110، الضغط الوريدي المركزي (CVP) منخفض.",
-      "أسلاك منظم ضربات مؤقت (Pacing wires)."
+      "الضغط الشرياني 92/58، CVP 6.",
+      "على نوريبينفرين جرعة صغيرة.",
+      "أسلاك منظم مؤقت موصلة."
      ],
      "en": [
-      "First 6 hours post-op; chest drain 150 mL in the first hour.",
-      "BP 95/60, pulse 110, low CVP.",
-      "Temporary pacing wires in place."
+      "Arterial BP 92/58, CVP 6.",
+      "Low-dose norepinephrine.",
+      "Temporary pacing wires attached."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء أول 24 ساعة: متوسط الضغط الشرياني ≥ 65، البول ≥ 0.5 مل/كجم/ساعة، ونزيف الأنبوبة أقل من 100 مل/ساعة بعد الساعات الأولى."
-    ],
-    "en": [
-     "During the first 24 hours: MAP ≥ 65, urine ≥ 0.5 mL/kg/h, and chest-drain loss under 100 mL/h after the first hours."
-    ]
+    "short": {
+     "ar": [
+      "أول 24 ساعة: متوسط الضغط ≥ 65، بول ≥ 0.5 مل/كجم/ساعة، أطراف دافئة."
+     ],
+     "en": [
+      "First 24 h: MAP ≥ 65, urine ≥ 0.5 mL/kg/h, warm peripheries."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج من الرعاية: دورة مستقرة بدون أدوية رافعة."
+     ],
+     "en": [
+      "Before ICU discharge: stable circulation off vasopressors."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "قياس العلامات الحيوية والضغط الشرياني والوريدي المركزي كل 15 دقيقة ثم كل ساعة.",
-      "en": "Record vital signs, arterial and CVP pressures every 15 minutes, then hourly."
+      "ar": "مراقبة الضغط الشرياني والوريدي المركزي والمونيتور كل 15 دقيقة حتى الاستقرار.",
+      "en": "Monitor arterial BP, CVP and ECG every 15 minutes until stable."
      },
      "rationale": {
-      "ar": "يكشف هبوط الدورة الدموية مبكرًا.",
-      "en": "Detects hemodynamic deterioration early."
+      "ar": "التغيرات سريعة بعد الجراحة.",
+      "en": "Changes are rapid post-op."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "قياس نزيف أنبوبة الصدر كل ساعة وإبلاغ الطبيب إذا زاد عن الحد المحدد أو توقف فجأة.",
-      "en": "Measure chest-drain output hourly; report if above the set limit or if it stops suddenly."
+      "ar": "ملاحظة علامات الانصباب التاموري: هبوط الضغط، ارتفاع الضغط الوريدي، توقف مفاجئ لإفرازات الدرنقة، أصوات قلب خافتة.",
+      "en": "Watch for tamponade: hypotension, rising CVP, sudden stop of chest-drain output, muffled heart sounds."
      },
      "rationale": {
-      "ar": "الزيادة تعني نزيف، والتوقف المفاجئ مع هبوط الضغط قد يعني انحشار تاموري (Tamponade).",
-      "en": "An increase means bleeding; a sudden stop with hypotension may mean cardiac tamponade."
+      "ar": "طوارئ تحتاج فتح الصدر.",
+      "en": "Emergency needing re-exploration."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "تعويض السوائل ومشتقات الدم حسب الأمر ومتابعة الهيموجلوبين وعوامل التجلط.",
-      "en": "Replace fluids and blood products as ordered and monitor hemoglobin and clotting."
+      "ar": "البول كل ساعة ودرجة حرارة الأطراف ورجوع الدم.",
+      "en": "Hourly urine; peripheral warmth and capillary refill."
      },
      "rationale": {
-      "ar": "يحافظ على حجم الدم وكفاءة القلب.",
-      "en": "Maintains circulating volume and cardiac output."
+      "ar": "مؤشرات التروية.",
+      "en": "Perfusion indicators."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "مونيتور مستمر وتجهيز منظم الضربات المؤقت حسب الأمر.",
-      "en": "Continuous monitoring with the temporary pacemaker ready as ordered."
+      "ar": "تدفئة المريض تدريجيًا حتى 36.5 درجة.",
+      "en": "Rewarm gradually to 36.5 °C."
      },
      "rationale": {
-      "ar": "اضطرابات النظم وبطء القلب شائعة بعد جراحات القلب.",
-      "en": "Dysrhythmias and bradycardia are common after cardiac surgery."
+      "ar": "البرودة تسبب انقباض الأوعية واضطراب التجلط.",
+      "en": "Hypothermia causes vasoconstriction and coagulopathy."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "قياس كمية البول كل ساعة.",
-      "en": "Measure urine output hourly."
+      "ar": "معايرة الأدوية الرافعة والموسعة حسب الأمر والأهداف.",
+      "en": "Titrate vasoactive drugs to ordered targets."
      },
      "rationale": {
-      "ar": "البول من أهم مؤشرات تروية الأعضاء.",
-      "en": "Urine output reflects organ perfusion."
+      "ar": "يحافظ على الضغط والتروية.",
+      "en": "Maintains pressure and perfusion."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة البوتاسيوم (4–5) والماغنسيوم وتعويضهما حسب البروتوكول.",
+      "en": "Keep K⁺ 4–5 and Mg²⁺ replete per protocol."
+     },
+     "rationale": {
+      "ar": "يمنع اضطرابات النظم.",
+      "en": "Prevents dysrhythmias."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التأكد من سلامة أسلاك المنظم المؤقت وإعداداته وتغطية الأطراف المكشوفة.",
+      "en": "Check temporary pacing wires and settings; insulate exposed ends."
+     },
+     "rationale": {
+      "ar": "جاهزية لعلاج البطء.",
+      "en": "Ready to treat bradycardia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الرجفان الأذيني (يحدث في 20–40% بعد الجراحة).",
+      "en": "Watch for post-op AF (20–40%)."
+     },
+     "rationale": {
+      "ar": "أشهر اضطراب بعد الجراحة.",
+      "en": "Most common post-op dysrhythmia."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "الضغط المتوسط 70–80، البول 60 مل/ساعة، والنزيف قل إلى 40 مل/ساعة. — تحقق الهدف."
-    ],
-    "en": [
-     "MAP 70–80, urine 60 mL/h, drain loss down to 40 mL/h. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "متوسط الضغط 75 بعد إيقاف النوريبينفرين، البول 60 مل/ساعة — تحقق.",
+      "en": "MAP 75 off norepinephrine; urine 60 mL/h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "المراقبة الهيموديناميكية",
+      "en": "Hemodynamic monitoring"
+     },
+     "actions": {
+      "ar": [
+       "مراقبة الضغط الشرياني والوريدي المركزي والمونيتور كل 15 دقيقة حتى الاستقرار.",
+       "ملاحظة علامات الانصباب التاموري: هبوط الضغط، ارتفاع الضغط الوريدي، توقف مفاجئ لإفرازات الدرنقة، أصوات قلب خافتة.",
+       "البول كل ساعة ودرجة حرارة الأطراف ورجوع الدم.",
+       "متابعة الرجفان الأذيني (يحدث في 20–40% بعد الجراحة)."
+      ],
+      "en": [
+       "Monitor arterial BP, CVP and ECG every 15 minutes until stable.",
+       "Watch for tamponade: hypotension, rising CVP, sudden stop of chest-drain output, muffled heart sounds.",
+       "Hourly urine; peripheral warmth and capillary refill.",
+       "Watch for post-op AF (20–40%)."
+      ]
+     },
+     "outcome": {
+      "ar": "متوسط ضغط ≥ 65 ولا انصباب.",
+      "en": "MAP ≥ 65, no tamponade."
+     },
+     "timeframe": {
+      "ar": "كل 15 دقيقة ثم كل ساعة",
+      "en": "Every 15 min then hourly"
+     }
+    },
+    {
+     "need": {
+      "ar": "دعم الدورة",
+      "en": "Circulatory support"
+     },
+     "actions": {
+      "ar": [
+       "تدفئة المريض تدريجيًا حتى 36.5 درجة.",
+       "معايرة الأدوية الرافعة والموسعة حسب الأمر والأهداف.",
+       "متابعة البوتاسيوم (4–5) والماغنسيوم وتعويضهما حسب البروتوكول.",
+       "التأكد من سلامة أسلاك المنظم المؤقت وإعداداته وتغطية الأطراف المكشوفة."
+      ],
+      "en": [
+       "Rewarm gradually to 36.5 °C.",
+       "Titrate vasoactive drugs to ordered targets.",
+       "Keep K⁺ 4–5 and Mg²⁺ replete per protocol.",
+       "Check temporary pacing wires and settings; insulate exposed ends."
+      ]
+     },
+     "outcome": {
+      "ar": "دورة مستقرة.",
+      "en": "Stable circulation."
+     },
+     "timeframe": {
+      "ar": "أول 24 ساعة",
+      "en": "First 24 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر العدوى (Risk for infection) مرتبط بجرح القص وجرح أخذ الوريد من الساق والقساطر المتعددة.",
-    "en": "Risk for infection related to sternal and leg (vein-harvest) incisions and multiple invasive lines."
+   "id": "risk-bleeding-cabg",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر النزيف بعد جراحة القلب",
+    "en": "Risk for Bleeding (Post Cardiac Surgery)"
+   },
+   "definition": {
+    "ar": "قابلية لنقص حجم الدم قد يؤثر على الصحة.",
+    "en": "Susceptibility to decreased blood volume that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "الهيبارين أثناء الجراحة",
+     "خلل الصفائح بعد جهاز القلب والرئة",
+     "خطوط الجراحة"
+    ],
+    "en": [
+     "Intra-op heparin",
+     "Platelet dysfunction after bypass",
+     "Suture lines"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"الجرح بيشد لما أكح.\""
+      "لا يستطيع الكلام (على جهاز التنفس)."
      ],
      "en": [
-      "\"The wound pulls when I cough.\""
+      "Unable to speak (ventilated)."
      ]
     },
     "objective": {
      "ar": [
-      "جرح في منتصف القص وجرح في الساق اليسرى.",
-      "قسطرة شريانية ووريدية مركزية وقسطرة بولية.",
-      "مريض سكر."
+      "الدرنقة 180 مل في الساعة الأولى.",
+      "ACT 140."
      ],
      "en": [
-      "Median sternotomy and left-leg incision.",
-      "Arterial line, central line and urinary catheter.",
-      "Diabetic patient."
+      "Chest drain 180 mL in the first hour.",
+      "ACT 140."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "حتى الخروج: الجروح تلتئم دون علامات عدوى، والحرارة طبيعية، وسكر الدم أقل من 180."
-    ],
-    "en": [
-     "Until discharge: wounds heal without signs of infection, temperature is normal and glucose stays below 180."
-    ]
+    "short": {
+     "ar": [
+      "الدرنقة < 100 مل/ساعة بعد الساعة الثالثة."
+     ],
+     "en": [
+      "Drain < 100 mL/h after the third hour."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا حاجة للعودة لغرفة العمليات بسبب النزيف."
+     ],
+     "en": [
+      "No return to theatre for bleeding."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "العناية المعقمة بالجروح والقساطر وملاحظتها يوميًا.",
-      "en": "Aseptic care and daily inspection of wounds and lines."
+      "ar": "قياس الدرنقات كل 15 دقيقة أول ساعة ثم كل ساعة، والإبلاغ إذا > 200 مل/ساعة لساعتين أو > 400 مل في ساعة.",
+      "en": "Measure chest drains every 15 min for 1 h then hourly; report > 200 mL/h for 2 h or > 400 mL in 1 h."
      },
      "rationale": {
-      "ar": "يمنع العدوى ويكشفها مبكرًا.",
-      "en": "Prevents and detects infection early."
+      "ar": "حدود العودة للعمليات.",
+      "en": "Re-exploration thresholds."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "ضبط السكر بالأنسولين حسب البروتوكول (أقل من 180 مجم/دل).",
-      "en": "Control glucose with insulin per protocol (below 180 mg/dL)."
+      "ar": "الحفاظ على الدرنقات مفتوحة بدون التواء.",
+      "en": "Keep drains patent and unkinked."
      },
      "rationale": {
-      "ar": "ارتفاع السكر يزيد عدوى جرح القص.",
-      "en": "Hyperglycemia increases sternal-wound infection."
+      "ar": "الانسداد يسبب انصبابًا تاموريًا.",
+      "en": "Blockage causes tamponade."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "تعليم احتياطات القص: احتضان وسادة عند الكحة، عدم رفع أكثر من 2–4 كجم، وعدم الاستناد على الذراعين للقيام.",
-      "en": "Teach sternal precautions: hug a pillow when coughing, lift no more than 2–4 kg, and do not push up with the arms."
+      "ar": "متابعة الهيموجلوبين والصفائح والتجلط (ACT، INR، الفيبرينوجين).",
+      "en": "Monitor Hb, platelets and coagulation (ACT, INR, fibrinogen)."
      },
      "rationale": {
-      "ar": "يمنع انفصال عظمة القص الذي يزيد العدوى.",
-      "en": "Prevents sternal instability, which raises infection risk."
+      "ar": "يوجه التعويض.",
+      "en": "Guides replacement."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "إزالة القساطر في أقرب وقت يسمح به الفريق.",
-      "en": "Remove lines and catheters as early as the team allows."
+      "ar": "إعطاء البروتامين والدم ومشتقاته حسب الأمر.",
+      "en": "Give protamine and blood products as ordered."
      },
      "rationale": {
-      "ar": "كل يوم إضافي يزيد خطر العدوى.",
-      "en": "Each extra day increases infection risk."
+      "ar": "يعكس الهيبارين ويعوض الفقد.",
+      "en": "Reverses heparin and replaces losses."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التحكم في الضغط المرتفع حسب الأمر.",
+      "en": "Control hypertension as ordered."
+     },
+     "rationale": {
+      "ar": "الضغط العالي يزيد النزيف من الخيوط.",
+      "en": "High BP stresses suture lines."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تدفئة المريض.",
+      "en": "Keep the patient warm."
+     },
+     "rationale": {
+      "ar": "البرودة تضعف التجلط.",
+      "en": "Cold impairs clotting."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "الجروح نظيفة، الحرارة طبيعية، والسكر 130–170. — تحقق الهدف."
-    ],
-    "en": [
-     "Wounds clean, afebrile, glucose 130–170. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "خطر انخفاض نتاج القلب",
-    "en": "Risk for decreased cardiac output"
-   },
-   "need": {
-    "ar": "استقرار الدورة الدموية",
-    "en": "Hemodynamic stability"
-   },
-   "actions": {
-    "ar": [
-     "الضغط والوريد المركزي كل ساعة",
-     "نزيف الأنبوبة كل ساعة",
-     "البول كل ساعة"
-    ],
-    "en": [
-     "Hourly arterial pressure and CVP",
-     "Hourly chest-drain output",
-     "Hourly urine output"
-    ]
-   },
-   "outcome": {
-    "ar": "ضغط متوسط ≥ 65 وبول كافٍ",
-    "en": "MAP ≥ 65, adequate urine"
-   },
-   "timeframe": {
-    "ar": "أول 24 ساعة",
-    "en": "First 24 hours"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الدرنقة 60 مل/ساعة بعد 3 ساعات — تحقق.",
+      "en": "Drain 60 mL/h at 3 hours — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة النزيف",
+      "en": "Monitor bleeding"
+     },
+     "actions": {
+      "ar": [
+       "قياس الدرنقات كل 15 دقيقة أول ساعة ثم كل ساعة، والإبلاغ إذا > 200 مل/ساعة لساعتين أو > 400 مل في ساعة.",
+       "الحفاظ على الدرنقات مفتوحة بدون التواء.",
+       "متابعة الهيموجلوبين والصفائح والتجلط (ACT، INR، الفيبرينوجين)."
+      ],
+      "en": [
+       "Measure chest drains every 15 min for 1 h then hourly; report > 200 mL/h for 2 h or > 400 mL in 1 h.",
+       "Keep drains patent and unkinked.",
+       "Monitor Hb, platelets and coagulation (ACT, INR, fibrinogen)."
+      ]
+     },
+     "outcome": {
+      "ar": "درنقة < 100 مل/ساعة.",
+      "en": "Drain < 100 mL/h."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    },
+    {
+     "need": {
+      "ar": "التحكم في النزيف",
+      "en": "Control bleeding"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء البروتامين والدم ومشتقاته حسب الأمر.",
+       "التحكم في الضغط المرتفع حسب الأمر.",
+       "تدفئة المريض."
+      ],
+      "en": [
+       "Give protamine and blood products as ordered.",
+       "Control hypertension as ordered.",
+       "Keep the patient warm."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عودة للعمليات.",
+      "en": "No re-exploration."
+     },
+     "timeframe": {
+      "ar": "أول 24 ساعة",
+      "en": "First 24 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "ضعف تبادل الغازات",
-    "en": "Impaired gas exchange"
+   "id": "acute-pain-sternotomy",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (شق عظمة القص)",
+    "en": "Acute Pain (Sternotomy)"
    },
-   "need": {
-    "ar": "تنفس فعال بعد إزالة الأنبوبة",
-    "en": "Effective breathing after extubation"
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف الأنسجة.",
+    "en": "Unpleasant sensory and emotional experience associated with tissue damage."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "جهاز التنفس التحفيزي كل ساعة وأنت صاحي",
-     "كحة مع سند القص",
-     "حركة مبكرة"
+     "شق عظمة القص والدرنقات وجرح الساق (مكان الوريد)"
     ],
     "en": [
-     "Incentive spirometer hourly while awake",
-     "Cough with sternal splinting",
-     "Early mobility"
+     "Sternotomy, drains and leg harvest wound"
     ]
    },
-   "outcome": {
-    "ar": "رئة سليمة وتشبع ≥ 94%",
-    "en": "Clear lungs, SpO₂ ≥ 94%"
+   "evidencedBy": {
+    "ar": [
+     "ألم 7/10 مع الكحة والتنفس العميق",
+     "تنفس سطحي"
+    ],
+    "en": [
+     "Pain 7/10 with coughing and deep breathing",
+     "Shallow breathing"
+    ]
    },
-   "timeframe": {
-    "ar": "48 ساعة",
-    "en": "48 hours"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"صدري بيوجعني لما أكح.\""
+     ],
+     "en": [
+      "\"My chest hurts when I cough.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ألم 7/10، يتجنب الكحة."
+     ],
+     "en": [
+      "Pain 7/10, avoiding cough."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10 ويكح بفعالية."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10 and effective cough."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: ألم محتمل بمسكنات فموية."
+     ],
+     "en": [
+      "Before discharge: controlled with oral analgesics."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الألم بمقياس مناسب (CPOT للمريض على الجهاز، 0–10 بعد نزع الأنبوبة).",
+      "en": "Assess pain with a suitable tool (CPOT when ventilated, 0–10 after extubation)."
+     },
+     "rationale": {
+      "ar": "تقييم دقيق.",
+      "en": "Accurate assessment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المسكنات المنتظمة (باراسيتامول + أفيون) حسب الأمر.",
+      "en": "Regular analgesia (paracetamol + opioid) as ordered."
+     },
+     "rationale": {
+      "ar": "تسكين متعدد الوسائل.",
+      "en": "Multimodal analgesia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعليم احتضان وسادة على الصدر عند الكحة (Cough pillow).",
+      "en": "Teach hugging a pillow when coughing."
+     },
+     "rationale": {
+      "ar": "يثبت عظمة القص ويقلل الألم.",
+      "en": "Splints the sternum and reduces pain."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "احتياطات عظمة القص: عدم الدفع أو الشد بالذراعين وعدم رفع > 2–5 كجم لمدة 6–8 أسابيع.",
+      "en": "Sternal precautions: no pushing/pulling with arms; no lifting > 2–5 kg for 6–8 weeks."
+     },
+     "rationale": {
+      "ar": "تمنع انفصال عظمة القص.",
+      "en": "Prevent sternal dehiscence."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إعطاء المسكن قبل جلسة العلاج التنفسي والتحريك.",
+      "en": "Analgesia before physiotherapy and mobilization."
+     },
+     "rationale": {
+      "ar": "يسمح بالمشاركة.",
+      "en": "Enables participation."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "التفريق بين ألم الجرح وألم الذبحة أو التهاب التامور.",
+      "en": "Differentiate incision pain from angina or pericarditis."
+     },
+     "rationale": {
+      "ar": "تختلف المعالجة.",
+      "en": "Management differs."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 ويكح بالوسادة — تحقق.",
+      "en": "Pain 3/10, coughs with pillow — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تسكين الألم",
+      "en": "Pain relief"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الألم بمقياس مناسب (CPOT للمريض على الجهاز، 0–10 بعد نزع الأنبوبة).",
+       "إعطاء المسكنات المنتظمة (باراسيتامول + أفيون) حسب الأمر.",
+       "إعطاء المسكن قبل جلسة العلاج التنفسي والتحريك.",
+       "التفريق بين ألم الجرح وألم الذبحة أو التهاب التامور."
+      ],
+      "en": [
+       "Assess pain with a suitable tool (CPOT when ventilated, 0–10 after extubation).",
+       "Regular analgesia (paracetamol + opioid) as ordered.",
+       "Analgesia before physiotherapy and mobilization.",
+       "Differentiate incision pain from angina or pericarditis."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "خلال ساعة",
+      "en": "Within 1 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "حماية عظمة القص",
+      "en": "Sternal protection"
+     },
+     "actions": {
+      "ar": [
+       "تعليم احتضان وسادة على الصدر عند الكحة (Cough pillow).",
+       "احتياطات عظمة القص: عدم الدفع أو الشد بالذراعين وعدم رفع > 2–5 كجم لمدة 6–8 أسابيع."
+      ],
+      "en": [
+       "Teach hugging a pillow when coughing.",
+       "Sternal precautions: no pushing/pulling with arms; no lifting > 2–5 kg for 6–8 weeks."
+      ]
+     },
+     "outcome": {
+      "ar": "كحة فعالة بدون ضرر.",
+      "en": "Effective cough without harm."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر العدوى",
-    "en": "Risk for infection"
+   "id": "impaired-gas-exchange-cabg",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر ضعف تبادل الغازات بعد جراحة القلب",
+    "en": "Risk for Impaired Gas Exchange (Post Cardiac Surgery)"
    },
-   "need": {
-    "ar": "حماية الجروح",
-    "en": "Wound protection"
+   "definition": {
+    "ar": "قابلية لاضطراب الأكسجة أو التخلص من ثاني أكسيد الكربون.",
+    "en": "Susceptibility to impaired oxygenation or CO₂ elimination."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "غيار معقم",
-     "ضبط السكر",
-     "احتياطات القص"
+     "التخدير والتنفس الصناعي",
+     "الانخماص وانصباب البلورا",
+     "ألم الصدر يمنع التنفس العميق"
     ],
     "en": [
-     "Aseptic dressing",
-     "Glucose control",
-     "Sternal precautions"
+     "Anesthesia and ventilation",
+     "Atelectasis and pleural effusion",
+     "Pain limiting deep breathing"
     ]
    },
-   "outcome": {
-    "ar": "لا علامات عدوى",
-    "en": "No signs of infection"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش قادر آخد نفس عميق.\""
+     ],
+     "en": [
+      "\"I can't take a deep breath.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بعد نزع الأنبوبة: التشبع 92% على 4 لتر.",
+      "أصوات ضعيفة في القاعدة اليسرى."
+     ],
+     "en": [
+      "After extubation: SpO₂ 92% on 4 L.",
+      "Reduced left base."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "حتى الخروج",
-    "en": "Until discharge"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة من نزع الأنبوبة: تشبع ≥ 94% وصدر أوضح."
+     ],
+     "en": [
+      "Within 24 h of extubation: SpO₂ ≥ 94%, clearer chest."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: لا انخماص أو التهاب رئوي."
+     ],
+     "en": [
+      "Before discharge: no atelectasis or pneumonia."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة التشبع وغازات الدم وسماع الصدر كل 2–4 ساعات.",
+      "en": "Monitor SpO₂, ABGs and chest sounds every 2–4 h."
+     },
+     "rationale": {
+      "ar": "كشف المضاعفات.",
+      "en": "Detects complications."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الفطام المبكر من جهاز التنفس حسب البروتوكول (خلال 6 ساعات عادة).",
+      "en": "Early weaning per protocol (usually within 6 h)."
+     },
+     "rationale": {
+      "ar": "يقلل الالتهاب الرئوي.",
+      "en": "Reduces pneumonia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "جهاز التنفس التحفيزي 10 مرات كل ساعة والتنفس العميق والكحة.",
+      "en": "Incentive spirometer 10×/hour, deep breathing and coughing."
+     },
+     "rationale": {
+      "ar": "يفتح الحويصلات.",
+      "en": "Recruits alveoli."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الجلوس على الكرسي يوم 1 والمشي تدريجيًا.",
+      "en": "Sit out on day 1; progressive walking."
+     },
+     "rationale": {
+      "ar": "يحسن التهوية.",
+      "en": "Improves ventilation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "العلاج الطبيعي التنفسي.",
+      "en": "Chest physiotherapy."
+     },
+     "rationale": {
+      "ar": "يخرج الإفرازات.",
+      "en": "Clears secretions."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة أشعة الصدر.",
+      "en": "Follow chest X-rays."
+     },
+     "rationale": {
+      "ar": "يكشف الانخماص والانصباب.",
+      "en": "Detects atelectasis and effusion."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 95% على 2 لتر يوم 2 — تحقق.",
+      "en": "SpO₂ 95% on 2 L on day 2 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تحسين التنفس",
+      "en": "Improve breathing"
+     },
+     "actions": {
+      "ar": [
+       "متابعة التشبع وغازات الدم وسماع الصدر كل 2–4 ساعات.",
+       "الفطام المبكر من جهاز التنفس حسب البروتوكول (خلال 6 ساعات عادة).",
+       "جهاز التنفس التحفيزي 10 مرات كل ساعة والتنفس العميق والكحة.",
+       "الجلوس على الكرسي يوم 1 والمشي تدريجيًا.",
+       "العلاج الطبيعي التنفسي.",
+       "متابعة أشعة الصدر."
+      ],
+      "en": [
+       "Monitor SpO₂, ABGs and chest sounds every 2–4 h.",
+       "Early weaning per protocol (usually within 6 h).",
+       "Incentive spirometer 10×/hour, deep breathing and coughing.",
+       "Sit out on day 1; progressive walking.",
+       "Chest physiotherapy.",
+       "Follow chest X-rays."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع ≥ 94%.",
+      "en": "SpO₂ ≥ 94%."
+     },
+     "timeframe": {
+      "ar": "كل 2–4 ساعات",
+      "en": "Every 2–4 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-infection-sternal",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدوى جرح القص والساق",
+    "en": "Risk for Sternal and Leg Wound Infection"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة للجروح الجراحية.",
+    "en": "Susceptibility to pathogen invasion of surgical wounds."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "شق القص وجرح الساق",
+     "السكري والسمنة",
+     "الأجهزة المتعددة"
+    ],
+    "en": [
+     "Sternotomy and leg wound",
+     "Diabetes and obesity",
+     "Multiple invasive devices"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الجرح بيهرشني.\""
+     ],
+     "en": [
+      "\"The wound itches.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "سكر 230 بعد العملية."
+     ],
+     "en": [
+      "Post-op glucose 230."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "يوميًا: جروح نظيفة بدون احمرار أو إفرازات وسكر < 180."
+     ],
+     "en": [
+      "Daily: clean wounds without redness or discharge; glucose < 180."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا التهاب في عظمة القص (Mediastinitis)."
+     ],
+     "en": [
+      "No mediastinitis."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص جرح القص والساق يوميًا وثبات عظمة القص (طقطقة أو حركة).",
+      "en": "Inspect sternal and leg wounds daily; check sternal stability (clicking or movement)."
+     },
+     "rationale": {
+      "ar": "عدم الثبات علامة عدوى أو انفصال.",
+      "en": "Instability indicates infection or dehiscence."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "ضبط السكر < 180 بالأنسولين حسب البروتوكول.",
+      "en": "Keep glucose < 180 with insulin per protocol."
+     },
+     "rationale": {
+      "ar": "السكر العالي أهم عامل لعدوى القص.",
+      "en": "Hyperglycemia is a major risk factor."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غيار معقم والحفاظ على الجرح جافًا.",
+      "en": "Aseptic dressings; keep wounds dry."
+     },
+     "rationale": {
+      "ar": "يمنع العدوى.",
+      "en": "Prevents infection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "المضاد الحيوي الوقائي في موعده (لا يزيد عن 48 ساعة).",
+      "en": "Prophylactic antibiotics on time (≤ 48 h)."
+     },
+     "rationale": {
+      "ar": "وقاية بدون مقاومة.",
+      "en": "Prophylaxis without resistance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إزالة الخطوط والقسطرة مبكرًا.",
+      "en": "Remove lines and catheter early."
+     },
+     "rationale": {
+      "ar": "تقلل مصادر العدوى.",
+      "en": "Reduce infection sources."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "رفع الساق عند الجلوس، والإبلاغ عن الإفرازات أو الحرارة.",
+      "en": "Elevate the leg when sitting; report drainage or fever."
+     },
+     "rationale": {
+      "ar": "يقلل التورم ويكشف العدوى.",
+      "en": "Reduces swelling and detects infection."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الجروح نظيفة، السكر 150–170 — تحقق.",
+      "en": "Clean wounds; glucose 150–170 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "العناية بالجرح",
+      "en": "Wound care"
+     },
+     "actions": {
+      "ar": [
+       "فحص جرح القص والساق يوميًا وثبات عظمة القص (طقطقة أو حركة).",
+       "غيار معقم والحفاظ على الجرح جافًا.",
+       "إزالة الخطوط والقسطرة مبكرًا.",
+       "رفع الساق عند الجلوس، والإبلاغ عن الإفرازات أو الحرارة."
+      ],
+      "en": [
+       "Inspect sternal and leg wounds daily; check sternal stability (clicking or movement).",
+       "Aseptic dressings; keep wounds dry.",
+       "Remove lines and catheter early.",
+       "Elevate the leg when sitting; report drainage or fever."
+      ]
+     },
+     "outcome": {
+      "ar": "جروح نظيفة.",
+      "en": "Clean wounds."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "الوقاية",
+      "en": "Prevention"
+     },
+     "actions": {
+      "ar": [
+       "ضبط السكر < 180 بالأنسولين حسب البروتوكول.",
+       "المضاد الحيوي الوقائي في موعده (لا يزيد عن 48 ساعة)."
+      ],
+      "en": [
+       "Keep glucose < 180 with insulin per protocol.",
+       "Prophylactic antibiotics on time (≤ 48 h)."
+      ]
+     },
+     "outcome": {
+      "ar": "سكر < 180 ومضاد حيوي في موعده.",
+      "en": "Glucose < 180, antibiotics on time."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-acute-confusion-cabg",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الهذيان (التشوش الحاد)",
+    "en": "Risk for Acute Confusion (Delirium)"
+   },
+   "definition": {
+    "ar": "قابلية لاضطراب مفاجئ في الوعي والانتباه والإدراك.",
+    "en": "Susceptibility to sudden disturbance of consciousness, attention and cognition."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "السن > 70",
+     "جهاز القلب والرئة الصناعي",
+     "قلة النوم وبيئة الرعاية المركزة",
+     "المهدئات"
+    ],
+    "en": [
+     "Age > 70",
+     "Cardiopulmonary bypass",
+     "Sleep deprivation and ICU environment",
+     "Sedatives"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الابنة: \"بابا بيقول كلام مش مفهوم بالليل.\""
+     ],
+     "en": [
+      "Daughter: \"Dad talks nonsense at night.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يوم 2، تقييم CAM-ICU سلبي حاليًا."
+     ],
+     "en": [
+      "Day 2; CAM-ICU currently negative."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: CAM-ICU سلبي."
+     ],
+     "en": [
+      "Every shift: CAM-ICU negative."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا هذيان طوال الإقامة."
+     ],
+     "en": [
+      "No delirium during the stay."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الهذيان بـ CAM-ICU كل وردية.",
+      "en": "Screen with CAM-ICU every shift."
+     },
+     "rationale": {
+      "ar": "الهذيان يزيد الوفيات ومدة الإقامة.",
+      "en": "Delirium increases mortality and length of stay."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التوجيه المتكرر (الوقت، المكان، السبب) وساعة وتقويم ظاهرين.",
+      "en": "Frequent reorientation; visible clock and calendar."
+     },
+     "rationale": {
+      "ar": "يحافظ على الإدراك.",
+      "en": "Maintains cognition."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "حماية النوم ليلًا: تقليل الإضاءة والضوضاء وتجميع الرعاية.",
+      "en": "Protect night sleep: dim light, less noise, clustered care."
+     },
+     "rationale": {
+      "ar": "قلة النوم من أهم الأسباب.",
+      "en": "Sleep loss is a major cause."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "النظارة والسماعة والتحريك المبكر ووجود الأسرة.",
+      "en": "Glasses, hearing aids, early mobilization, family presence."
+     },
+     "rationale": {
+      "ar": "تقلل الهذيان.",
+      "en": "Reduce delirium."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تقليل المهدئات (خاصة البنزوديازيبين) ومراجعة الأدوية.",
+      "en": "Minimize sedatives (especially benzodiazepines); review drugs."
+     },
+     "rationale": {
+      "ar": "تسبب الهذيان.",
+      "en": "Cause delirium."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "البحث عن الأسباب: نقص الأكسجين، العدوى، الأملاح، الألم، احتباس البول.",
+      "en": "Look for causes: hypoxia, infection, electrolytes, pain, retention."
+     },
+     "rationale": {
+      "ar": "علاج السبب.",
+      "en": "Treat the cause."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "CAM-ICU سلبي حتى الخروج — تحقق.",
+      "en": "CAM-ICU negative until transfer — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من الهذيان",
+      "en": "Delirium prevention"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الهذيان بـ CAM-ICU كل وردية.",
+       "التوجيه المتكرر (الوقت، المكان، السبب) وساعة وتقويم ظاهرين.",
+       "حماية النوم ليلًا: تقليل الإضاءة والضوضاء وتجميع الرعاية.",
+       "النظارة والسماعة والتحريك المبكر ووجود الأسرة.",
+       "تقليل المهدئات (خاصة البنزوديازيبين) ومراجعة الأدوية.",
+       "البحث عن الأسباب: نقص الأكسجين، العدوى، الأملاح، الألم، احتباس البول."
+      ],
+      "en": [
+       "Screen with CAM-ICU every shift.",
+       "Frequent reorientation; visible clock and calendar.",
+       "Protect night sleep: dim light, less noise, clustered care.",
+       "Glasses, hearing aids, early mobilization, family presence.",
+       "Minimize sedatives (especially benzodiazepines); review drugs.",
+       "Look for causes: hypoxia, infection, electrolytes, pain, retention."
+      ]
+     },
+     "outcome": {
+      "ar": "لا هذيان.",
+      "en": "No delirium."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -291,10 +1188,10 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "EACTS/EACTA/EBCP Guidelines on cardiopulmonary bypass in adult cardiac surgery (2019)"
   },
   {
-   "title": "AHA Scientific Statement: Secondary Prevention After Coronary Artery Bypass Graft Surgery"
+   "title": "ERAS Cardiac Society — Guidelines for perioperative care in cardiac surgery (2019)"
   }
  ]
 }

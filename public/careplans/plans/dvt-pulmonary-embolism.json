@@ -1,275 +1,1177 @@
 {
  "id": "dvt-pulmonary-embolism",
- "icon": "🦵",
+ "icon": "🩸",
  "system": "cardiology",
+ "folder": "disease",
  "title": {
-  "ar": "جلطة الأوردة العميقة والانسداد الرئوي",
-  "en": "Deep Vein Thrombosis & Pulmonary Embolism"
+  "ar": "الجلطات الوريدية العميقة وجلطة الرئة",
+  "en": "DVT & Pulmonary Embolism"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض جلطة في وريد الساق: مضادات التجلط بأمان، تخفيف الألم والورم، وملاحظة علامات الانسداد الرئوي.",
-  "en": "Care plan for DVT: safe anticoagulation, relief of pain and swelling, and watching for pulmonary embolism."
+  "ar": "خطة رعاية الجلطات الوريدية وجلطة الرئة: تروية الساق، تبادل الغازات، النزيف مع مضادات التجلط، الألم، القلق، والتثقيف.",
+  "en": "DVT/PE care plan: leg perfusion, gas exchange, anticoagulant bleeding, pain, anxiety and teaching."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "ضعف التروية الطرفية (Ineffective peripheral tissue perfusion) مرتبط بانسداد الوريد بالجلطة ويظهر في ورم وألم وسخونة بسمانة الساق اليسرى.",
-    "en": "Ineffective peripheral tissue perfusion related to venous obstruction by thrombus as evidenced by swelling, pain and warmth of the left calf."
+   "id": "ineffective-peripheral-perfusion-dvt",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية تروية الأنسجة الطرفية (جلطة الساق)",
+    "en": "Ineffective Peripheral Tissue Perfusion (DVT)"
+   },
+   "definition": {
+    "ar": "نقص الدورة الدموية في الأطراف قد يؤثر على الصحة.",
+    "en": "Decreased peripheral circulation that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [
+     "انسداد الوريد العميق بجلطة"
+    ],
+    "en": [
+     "Deep vein obstruction by thrombus"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تورم وألم وسخونة في الساق",
+     "فرق محيط > 3 سم"
+    ],
+    "en": [
+     "Leg swelling, pain and warmth",
+     "Circumference difference > 3 cm"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"رجلي الشمال وارمة وبتوجعني لما أمشي.\""
+      "\"رجلي اليمين وارمة وبتوجعني لما أمشي.\""
      ],
      "en": [
-      "\"My left leg is swollen and hurts when I walk.\""
+      "\"My right leg is swollen and hurts when I walk.\""
      ]
     },
     "objective": {
      "ar": [
-      "محيط السمانة اليسرى أكبر بـ 3 سم من اليمنى.",
-      "سونار دوبلر: جلطة في الوريد الفخذي الأيسر.",
-      "بعد عملية عظام منذ 6 أيام."
+      "محيط الساق اليمنى أكبر بـ 4 سم.",
+      "دوبلر: جلطة في الوريد الفخذي."
      ],
      "en": [
-      "Left calf 3 cm larger than the right.",
-      "Doppler ultrasound: left femoral vein thrombosis.",
-      "Six days after orthopedic surgery."
+      "Right calf 4 cm larger.",
+      "Doppler: femoral DVT."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال 72 ساعة يقل الورم والألم، ولا يحدث امتداد للجلطة أو انسداد رئوي."
-    ],
-    "en": [
-     "Within 72 hours swelling and pain decrease, with no extension or pulmonary embolism."
-    ]
+    "short": {
+     "ar": [
+      "خلال 72 ساعة: نقص التورم والألم."
+     ],
+     "en": [
+      "Within 72 h: less swelling and pain."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا امتداد للجلطة أو انتقالها للرئة."
+     ],
+     "en": [
+      "No extension or embolization."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "إعطاء مضاد التجلط (Enoxaparin أو Heparin أو DOAC) حسب الأمر ومتابعة التحاليل.",
-      "en": "Give anticoagulant (enoxaparin, heparin or a DOAC) as ordered and monitor labs."
+      "ar": "قياس محيط الساقين يوميًا في نفس النقطة وتقييم اللون والحرارة والنبض.",
+      "en": "Measure both calves daily at the same point; assess colour, warmth and pulses."
      },
      "rationale": {
-      "ar": "يمنع كبر الجلطة وتكوين جلطات جديدة.",
-      "en": "Prevents clot extension and new clots."
+      "ar": "يتابع التحسن أو الامتداد.",
+      "en": "Tracks improvement or extension."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "رفع الساق المصابة فوق مستوى القلب أثناء الراحة.",
-      "en": "Elevate the affected leg above heart level at rest."
+      "ar": "رفع الساق فوق مستوى القلب أثناء الراحة.",
+      "en": "Elevate the leg above heart level at rest."
      },
      "rationale": {
-      "ar": "يساعد رجوع الدم الوريدي ويقلل الورم.",
-      "en": "Promotes venous return and reduces swelling."
+      "ar": "يقلل التورم.",
+      "en": "Reduces swelling."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "عدم تدليك الساق.",
-      "en": "Do not massage the leg."
+      "ar": "بدء مضاد التجلط (هيبارين منخفض الوزن أو ريفاروكسابان) حسب الأمر فورًا.",
+      "en": "Start anticoagulation (LMWH or rivaroxaban) promptly as ordered."
      },
      "rationale": {
-      "ar": "التدليك قد يفك الجلطة فتنتقل للرئة.",
-      "en": "Massage may dislodge the clot to the lungs."
+      "ar": "يمنع امتداد الجلطة.",
+      "en": "Prevents extension."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "قياس محيط الساق يوميًا عند نفس النقطة.",
-      "en": "Measure calf circumference daily at the same point."
+      "ar": "الحركة المبكرة بعد بدء مضاد التجلط حسب الأمر (لا يلزم الراحة التامة).",
+      "en": "Early ambulation after anticoagulation as ordered (strict bed rest not required)."
      },
      "rationale": {
-      "ar": "يتابع تحسن أو زيادة الورم.",
-      "en": "Tracks improvement or worsening."
+      "ar": "لا يزيد خطر جلطة الرئة ويحسن الأعراض.",
+      "en": "Does not raise PE risk and improves symptoms."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "تشجيع المشي حسب الأمر بعد بدء مضاد التجلط.",
-      "en": "Encourage walking as ordered once anticoagulation has started."
+      "ar": "عدم تدليك الساق المصابة.",
+      "en": "Never massage the affected leg."
      },
      "rationale": {
-      "ar": "المشي المبكر مع العلاج آمن ويقلل الورم.",
-      "en": "Early ambulation with anticoagulation is safe and reduces swelling."
+      "ar": "قد يفصل الجلطة.",
+      "en": "May dislodge the clot."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "جوارب ضاغطة بعد زوال الألم الحاد حسب الأمر.",
+      "en": "Compression stockings after acute pain settles, as ordered."
+     },
+     "rationale": {
+      "ar": "تقلل التورم.",
+      "en": "Reduce swelling."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مسكن مناسب (تجنب المسكنات المضادة للالتهاب مع مضاد التجلط).",
+      "en": "Appropriate analgesia (avoid NSAIDs with anticoagulants)."
+     },
+     "rationale": {
+      "ar": "تقلل خطر النزيف.",
+      "en": "Reduces bleeding risk."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "محيط الساق قل 1.5 سم والألم 2/10، ولا أعراض صدرية. — تحقق الهدف."
-    ],
-    "en": [
-     "Calf circumference down 1.5 cm, pain 2/10, no chest symptoms. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "نقص المحيط 2 سم والألم 2/10 يوم 3 — تحقق.",
+      "en": "Circumference down 2 cm, pain 2/10 on day 3 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة الساق",
+      "en": "Leg monitoring"
+     },
+     "actions": {
+      "ar": [
+       "قياس محيط الساقين يوميًا في نفس النقطة وتقييم اللون والحرارة والنبض.",
+       "عدم تدليك الساق المصابة."
+      ],
+      "en": [
+       "Measure both calves daily at the same point; assess colour, warmth and pulses.",
+       "Never massage the affected leg."
+      ]
+     },
+     "outcome": {
+      "ar": "لا امتداد.",
+      "en": "No extension."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "العلاج",
+      "en": "Treatment"
+     },
+     "actions": {
+      "ar": [
+       "رفع الساق فوق مستوى القلب أثناء الراحة.",
+       "بدء مضاد التجلط (هيبارين منخفض الوزن أو ريفاروكسابان) حسب الأمر فورًا.",
+       "الحركة المبكرة بعد بدء مضاد التجلط حسب الأمر (لا يلزم الراحة التامة).",
+       "جوارب ضاغطة بعد زوال الألم الحاد حسب الأمر.",
+       "مسكن مناسب (تجنب المسكنات المضادة للالتهاب مع مضاد التجلط)."
+      ],
+      "en": [
+       "Elevate the leg above heart level at rest.",
+       "Start anticoagulation (LMWH or rivaroxaban) promptly as ordered.",
+       "Early ambulation after anticoagulation as ordered (strict bed rest not required).",
+       "Compression stockings after acute pain settles, as ordered.",
+       "Appropriate analgesia (avoid NSAIDs with anticoagulants)."
+      ]
+     },
+     "outcome": {
+      "ar": "تورم وألم أقل.",
+      "en": "Less swelling and pain."
+     },
+     "timeframe": {
+      "ar": "72 ساعة",
+      "en": "72 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر ضعف تبادل الغازات (Risk for impaired gas exchange) مرتبط بانتقال الجلطة للرئة (Pulmonary embolism).",
-    "en": "Risk for impaired gas exchange related to embolization of the thrombus to the lungs."
+   "id": "impaired-gas-exchange-pe",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف تبادل الغازات (جلطة الرئة)",
+    "en": "Impaired Gas Exchange (Pulmonary Embolism)"
+   },
+   "definition": {
+    "ar": "نقص الأكسجة بسبب انسداد الدورة الدموية الرئوية.",
+    "en": "Hypoxemia due to obstruction of pulmonary circulation."
+   },
+   "relatedTo": {
+    "ar": [
+     "انسداد شريان رئوي بجلطة وعدم توافق التهوية والتروية"
+    ],
+    "en": [
+     "Pulmonary artery obstruction; V/Q mismatch"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ضيق نفس مفاجئ",
+     "هبوط التشبع",
+     "ألم صدر مع التنفس"
+    ],
+    "en": [
+     "Sudden dyspnea",
+     "Desaturation",
+     "Pleuritic chest pain"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "المريض لا يشكو من أعراض صدرية حاليًا."
+      "\"فجأة مقدرتش آخد نفسي وصدري وجعني.\""
      ],
      "en": [
-      "Patient currently has no chest complaints."
+      "\"Suddenly I couldn't breathe and my chest hurt.\""
      ]
     },
     "objective": {
      "ar": [
-      "تشبع الأكسجين 97%، التنفس 18/دقيقة."
+      "التشبع 88%، التنفس 30، النبض 118.",
+      "أشعة مقطعية: جلطة في الشريان الرئوي."
      ],
      "en": [
-      "SpO₂ 97%, RR 18/min."
+      "SpO₂ 88%, RR 30, HR 118.",
+      "CTPA: pulmonary embolus."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء الإقامة تُكتشف أي علامة انسداد رئوي فورًا ويُبلّغ الطبيب خلال دقائق."
-    ],
-    "en": [
-     "During the stay any sign of PE is detected immediately and reported within minutes."
-    ]
+    "short": {
+     "ar": [
+      "خلال ساعة: تشبع ≥ 94% وتنفس < 24."
+     ],
+     "en": [
+      "Within 1 h: SpO₂ ≥ 94%, RR < 24."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: تشبع طبيعي على هواء الغرفة."
+     ],
+     "en": [
+      "Before discharge: normal SpO₂ on room air."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "ملاحظة ضيق النفس المفاجئ، ألم الصدر مع التنفس، سرعة النبض، الكحة بدم، والقلق.",
-      "en": "Watch for sudden dyspnea, pleuritic chest pain, tachycardia, hemoptysis and anxiety."
+      "ar": "متابعة التشبع والتنفس والنبض والضغط باستمرار.",
+      "en": "Continuous SpO₂, RR, HR and BP."
      },
      "rationale": {
-      "ar": "هي العلامات الكلاسيكية للانسداد الرئوي.",
-      "en": "Classic signs of pulmonary embolism."
+      "ar": "الجلطة الكبيرة قد تسبب صدمة.",
+      "en": "Massive PE may cause shock."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "متابعة تشبع الأكسجين والعلامات الحيوية كل 4 ساعات.",
-      "en": "Monitor SpO₂ and vital signs every 4 hours."
+      "ar": "أكسجين للوصول لتشبع ≥ 94%.",
+      "en": "Oxygen to SpO₂ ≥ 94%."
      },
      "rationale": {
-      "ar": "الهبوط المفاجئ في التشبع إنذار مبكر.",
-      "en": "A sudden fall in saturation is an early warning."
+      "ar": "يعالج نقص الأكسجين.",
+      "en": "Treats hypoxemia."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "عند الاشتباه: رفع رأس السرير، إعطاء أكسجين، وإبلاغ الطبيب فورًا.",
-      "en": "If suspected: raise the head of bed, give oxygen and call the physician at once."
+      "ar": "وضع شبه جالس والراحة.",
+      "en": "Semi-Fowler and rest."
      },
      "rationale": {
-      "ar": "يحسن الأكسجين ويسرّع التشخيص (أشعة مقطعية بالصبغة) والعلاج.",
-      "en": "Improves oxygenation and speeds diagnosis (CT pulmonary angiography) and treatment."
+      "ar": "يحسن التنفس.",
+      "en": "Eases breathing."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مضاد التجلط فورًا حسب الأمر، والتحضير لمذيب الجلطة في الجلطة الكبيرة مع هبوط الضغط.",
+      "en": "Immediate anticoagulation; prepare for thrombolysis in massive PE with hypotension."
+     },
+     "rationale": {
+      "ar": "إنقاذ الحياة.",
+      "en": "Life-saving."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات هبوط البطين الأيمن: انتفاخ أوردة الرقبة، هبوط الضغط.",
+      "en": "Watch for RV failure: distended neck veins, hypotension."
+     },
+     "rationale": {
+      "ar": "مؤشر خطورة.",
+      "en": "Severity marker."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عمل غازات الدم ورسم القلب والتروبونين حسب الأمر.",
+      "en": "Obtain ABG, ECG and troponin as ordered."
+     },
+     "rationale": {
+      "ar": "تقييم الشدة.",
+      "en": "Severity assessment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "طمأنة المريض والبقاء معه.",
+      "en": "Reassure and stay with the patient."
+     },
+     "rationale": {
+      "ar": "القلق يزيد سرعة التنفس.",
+      "en": "Anxiety increases RR."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "لم تظهر علامات انسداد رئوي، والتشبع 96–98%. — تحقق الهدف."
-    ],
-    "en": [
-     "No signs of PE; SpO₂ 96–98%. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "ضعف التروية الطرفية",
-    "en": "Ineffective peripheral perfusion"
-   },
-   "need": {
-    "ar": "تقليل الجلطة والورم",
-    "en": "Limit clot and swelling"
-   },
-   "actions": {
-    "ar": [
-     "مضاد تجلط حسب الأمر",
-     "رفع الساق",
-     "قياس محيط الساق يوميًا"
-    ],
-    "en": [
-     "Anticoagulant as ordered",
-     "Leg elevation",
-     "Daily calf measurement"
-    ]
-   },
-   "outcome": {
-    "ar": "نقص الورم والألم",
-    "en": "Less swelling and pain"
-   },
-   "timeframe": {
-    "ar": "72 ساعة",
-    "en": "72 hours"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 95% على 4 لتر بعد 45 دقيقة — تحقق.",
+      "en": "SpO₂ 95% on 4 L at 45 minutes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الأكسجة",
+      "en": "Oxygenation"
+     },
+     "actions": {
+      "ar": [
+       "متابعة التشبع والتنفس والنبض والضغط باستمرار.",
+       "أكسجين للوصول لتشبع ≥ 94%.",
+       "وضع شبه جالس والراحة.",
+       "طمأنة المريض والبقاء معه."
+      ],
+      "en": [
+       "Continuous SpO₂, RR, HR and BP.",
+       "Oxygen to SpO₂ ≥ 94%.",
+       "Semi-Fowler and rest.",
+       "Reassure and stay with the patient."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع ≥ 94%.",
+      "en": "SpO₂ ≥ 94%."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "علاج الجلطة ومتابعة الخطورة",
+      "en": "Treat PE and monitor severity"
+     },
+     "actions": {
+      "ar": [
+       "مضاد التجلط فورًا حسب الأمر، والتحضير لمذيب الجلطة في الجلطة الكبيرة مع هبوط الضغط.",
+       "ملاحظة علامات هبوط البطين الأيمن: انتفاخ أوردة الرقبة، هبوط الضغط.",
+       "عمل غازات الدم ورسم القلب والتروبونين حسب الأمر."
+      ],
+      "en": [
+       "Immediate anticoagulation; prepare for thrombolysis in massive PE with hypotension.",
+       "Watch for RV failure: distended neck veins, hypotension.",
+       "Obtain ABG, ECG and troponin as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "لا صدمة.",
+      "en": "No shock."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر الانسداد الرئوي",
-    "en": "Risk for pulmonary embolism"
-   },
-   "need": {
-    "ar": "اكتشاف مبكر",
-    "en": "Early detection"
-   },
-   "actions": {
-    "ar": [
-     "ملاحظة ضيق النفس وألم الصدر",
-     "التشبع كل 4 ساعات",
-     "أكسجين وإبلاغ فوري عند الاشتباه"
-    ],
-    "en": [
-     "Watch dyspnea and chest pain",
-     "SpO₂ every 4 h",
-     "Oxygen and urgent report if suspected"
-    ]
-   },
-   "outcome": {
-    "ar": "لا علامات انسداد رئوي",
-    "en": "No PE signs"
-   },
-   "timeframe": {
-    "ar": "كل وردية",
-    "en": "Every shift"
-   }
-  },
-  {
-   "diagnosis": {
+   "id": "risk-bleeding-vte",
+   "kind": "risk",
+   "title": {
     "ar": "خطر النزيف",
-    "en": "Risk for bleeding"
+    "en": "Risk for Bleeding"
    },
-   "need": {
-    "ar": "أمان مضادات التجلط",
-    "en": "Anticoagulant safety"
+   "definition": {
+    "ar": "قابلية لنقص حجم الدم قد يؤثر على الصحة.",
+    "en": "Susceptibility to a decrease in blood volume that may compromise health."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "متابعة التحاليل",
-     "ملاحظة النزيف",
-     "تثقيف المريض"
+     "العلاج بـ مضادات التجلط (هيبارين / ريفاروكسابان / وارفارين)"
     ],
     "en": [
-     "Monitor labs",
-     "Observe for bleeding",
-     "Patient teaching"
+     "anticoagulants (heparin / rivaroxaban / warfarin) therapy"
     ]
    },
-   "outcome": {
-    "ar": "لا نزيف",
-    "en": "No bleeding"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"اللثة بتنزف شوية لما أغسل سناني.\""
+     ],
+     "en": [
+      "\"My gums bleed a little when I brush.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "على علاج مضاد للتجلط."
+     ],
+     "en": [
+      "On anticoagulant/antithrombotic therapy."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "كل وردية",
-    "en": "Every shift"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: لا علامات نزيف وتحاليل التجلط في المدى المطلوب."
+     ],
+     "en": [
+      "Every shift: no bleeding signs; coagulation within target."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال العلاج: لا نزيف كبير، ويعرف المريض الاحتياطات."
+     ],
+     "en": [
+      "Throughout therapy: no major bleeding; patient knows precautions."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات النزيف: اللثة، الأنف، البول، البراز الأسود، القيء الدموي، الكدمات، مكان الكانيولا.",
+      "en": "Watch for bleeding: gums, nose, urine, black stools, hematemesis, bruises, cannula site."
+     },
+     "rationale": {
+      "ar": "اكتشاف النزيف مبكرًا.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة تحاليل التجلط والهيموجلوبين والصفائح حسب الأمر.",
+      "en": "Monitor coagulation tests, hemoglobin and platelets as ordered."
+     },
+     "rationale": {
+      "ar": "ضبط الجرعة وكشف النزيف الخفي.",
+      "en": "Dose titration and occult bleeding detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة صداع شديد مفاجئ أو تغير الوعي.",
+      "en": "Watch for sudden severe headache or altered consciousness."
+     },
+     "rationale": {
+      "ar": "قد يدل على نزيف بالمخ.",
+      "en": "May indicate intracranial bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الضغط على أماكن الحقن والسحب 5–10 دقائق، وتقليل الحقن العضلي.",
+      "en": "Apply pressure to puncture sites 5–10 minutes; minimize IM injections."
+     },
+     "rationale": {
+      "ar": "يمنع النزيف من الأماكن.",
+      "en": "Prevents site bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "فرشاة أسنان ناعمة وماكينة حلاقة كهربائية.",
+      "en": "Soft toothbrush and electric razor."
+     },
+     "rationale": {
+      "ar": "يمنع الجروح.",
+      "en": "Prevents injury."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض عن مضادات التجلط (هيبارين / ريفاروكسابان / وارفارين): الالتزام بالجرعة، التحاليل الدورية، تجنب المسكنات مثل الأسبرين والإيبوبروفين بدون استشارة، وإبلاغ أي طبيب أو طبيب أسنان.",
+      "en": "Teach about anticoagulants (heparin / rivaroxaban / warfarin): exact dosing, regular tests, avoid NSAIDs/aspirin unless prescribed, inform any doctor or dentist."
+     },
+     "rationale": {
+      "ar": "الاستخدام الآمن للدواء.",
+      "en": "Safe drug use."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات نزيف والتحاليل في المدى — تحقق.",
+      "en": "No bleeding; labs in range — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة النزيف",
+      "en": "Monitor bleeding"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة علامات النزيف: اللثة، الأنف، البول، البراز الأسود، القيء الدموي، الكدمات، مكان الكانيولا.",
+       "متابعة تحاليل التجلط والهيموجلوبين والصفائح حسب الأمر.",
+       "ملاحظة صداع شديد مفاجئ أو تغير الوعي."
+      ],
+      "en": [
+       "Watch for bleeding: gums, nose, urine, black stools, hematemesis, bruises, cannula site.",
+       "Monitor coagulation tests, hemoglobin and platelets as ordered.",
+       "Watch for sudden severe headache or altered consciousness."
+      ]
+     },
+     "outcome": {
+      "ar": "لا نزيف.",
+      "en": "No bleeding."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "الوقاية والتثقيف",
+      "en": "Prevention and teaching"
+     },
+     "actions": {
+      "ar": [
+       "الضغط على أماكن الحقن والسحب 5–10 دقائق، وتقليل الحقن العضلي.",
+       "فرشاة أسنان ناعمة وماكينة حلاقة كهربائية.",
+       "تعليم المريض عن مضادات التجلط (هيبارين / ريفاروكسابان / وارفارين): الالتزام بالجرعة، التحاليل الدورية، تجنب المسكنات مثل الأسبرين والإيبوبروفين بدون استشارة، وإبلاغ أي طبيب أو طبيب أسنان."
+      ],
+      "en": [
+       "Apply pressure to puncture sites 5–10 minutes; minimize IM injections.",
+       "Soft toothbrush and electric razor.",
+       "Teach about anticoagulants (heparin / rivaroxaban / warfarin): exact dosing, regular tests, avoid NSAIDs/aspirin unless prescribed, inform any doctor or dentist."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يعرف الاحتياطات.",
+      "en": "Patient knows precautions."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-pe",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (ألم الصدر الجنبي والساق)",
+    "en": "Acute Pain (Pleuritic Chest and Leg Pain)"
+   },
+   "definition": {
+    "ar": "تجربة حسية غير مريحة مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory experience lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "التهاب البلورا من احتشاء الرئة والتهاب الوريد"
+    ],
+    "en": [
+     "Pleural irritation from infarction and venous inflammation"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم يزيد مع الشهيق 6/10"
+    ],
+    "en": [
+     "Pain worse on inspiration 6/10"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"صدري بيوجعني لما آخد نفس.\""
+     ],
+     "en": [
+      "\"My chest hurts when I breathe in.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ألم 6/10 في الجانب الأيمن."
+     ],
+     "en": [
+      "Right-sided pain 6/10."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ألم محتمل يسمح بالتنفس والحركة."
+     ],
+     "en": [
+      "Tolerable pain allowing breathing and movement."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الألم 0–10 قبل وبعد المسكن.",
+      "en": "Assess pain 0–10 before and after analgesia."
+     },
+     "rationale": {
+      "ar": "قياس الفعالية.",
+      "en": "Measures effect."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "باراسيتامول أو أفيون حسب الأمر وتجنب المضادات غير الستيرويدية.",
+      "en": "Paracetamol or opioid as ordered; avoid NSAIDs."
+     },
+     "rationale": {
+      "ar": "تسكين بدون نزيف.",
+      "en": "Analgesia without bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع مريح ودعم الجانب المصاب بوسادة.",
+      "en": "Comfortable position; splint the side with a pillow."
+     },
+     "rationale": {
+      "ar": "يقلل الألم مع التنفس.",
+      "en": "Reduces pain with breathing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع التنفس العميق بعد المسكن.",
+      "en": "Encourage deep breathing after analgesia."
+     },
+     "rationale": {
+      "ar": "يمنع الانخماص.",
+      "en": "Prevents atelectasis."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع الساق المصابة لتقليل ألمها.",
+      "en": "Elevate the affected leg."
+     },
+     "rationale": {
+      "ar": "يقلل ألم الساق.",
+      "en": "Reduces leg pain."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عن ألم يزيد فجأة مع ضيق نفس.",
+      "en": "Report sudden worsening pain with dyspnea."
+     },
+     "rationale": {
+      "ar": "قد تكون جلطة جديدة.",
+      "en": "May be a new embolus."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 2/10 بعد 40 دقيقة — تحقق.",
+      "en": "Pain 2/10 at 40 minutes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تسكين الألم",
+      "en": "Pain relief"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الألم 0–10 قبل وبعد المسكن.",
+       "باراسيتامول أو أفيون حسب الأمر وتجنب المضادات غير الستيرويدية.",
+       "وضع مريح ودعم الجانب المصاب بوسادة.",
+       "تشجيع التنفس العميق بعد المسكن.",
+       "رفع الساق المصابة لتقليل ألمها.",
+       "إبلاغ الطبيب عن ألم يزيد فجأة مع ضيق نفس."
+      ],
+      "en": [
+       "Assess pain 0–10 before and after analgesia.",
+       "Paracetamol or opioid as ordered; avoid NSAIDs.",
+       "Comfortable position; splint the side with a pillow.",
+       "Encourage deep breathing after analgesia.",
+       "Elevate the affected leg.",
+       "Report sudden worsening pain with dyspnea."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-pe",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "ضيق النفس المفاجئ والخوف من الموت"
+    ],
+    "en": [
+     "Sudden breathlessness and fear of death"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حسيت إني هموت.\""
+     ],
+     "en": [
+      "\"I felt like I was dying.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قلق، التنفس 28."
+     ],
+     "en": [
+      "Anxious, RR 28."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواجد مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق والاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+       "التواجد مع المريض والتحدث بهدوء وثقة.",
+       "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "تعليم التنفس البطيء العميق والاسترخاء.",
+       "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-vte",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (الجلطات ومضادات التجلط)",
+    "en": "Deficient Knowledge (VTE and anticoagulation)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "تشخيص جديد"
+    ],
+    "en": [
+     "New diagnosis"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هفضل على الدوا ده قد إيه؟\""
+     ],
+     "en": [
+      "\"How long will I be on this drug?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "أول جلطة."
+     ],
+     "en": [
+      "First VTE."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "مدة العلاج (3 أشهر على الأقل) وأهمية عدم إيقافه.",
+      "en": "Duration (at least 3 months) and not stopping early."
+     },
+     "rationale": {
+      "ar": "الإيقاف المبكر يزيد التكرار.",
+      "en": "Early cessation increases recurrence."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "حقن الهيبارين تحت الجلد في البطن (إن وجد) بالطريقة الصحيحة.",
+      "en": "Correct subcutaneous heparin injection technique in the abdomen (if used)."
+     },
+     "rationale": {
+      "ar": "استخدام آمن.",
+      "en": "Safe use."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "الحركة وتجنب الجلوس الطويل في السفر (التحرك كل ساعة وشرب الماء).",
+      "en": "Mobility; avoid prolonged sitting when travelling (move hourly, drink water)."
+     },
+     "rationale": {
+      "ar": "تمنع جلطة جديدة.",
+      "en": "Prevents recurrence."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "علامات جلطة جديدة (تورم الساق، ضيق نفس مفاجئ) وعلامات النزيف — التوجه للطوارئ.",
+      "en": "Signs of new VTE (leg swelling, sudden dyspnea) and bleeding — go to the ED."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "للسيدات: مناقشة حبوب منع الحمل الهرمونية مع الطبيب.",
+      "en": "For women: discuss hormonal contraception with the doctor."
+     },
+     "rationale": {
+      "ar": "تزيد خطر الجلطات.",
+      "en": "Raise VTE risk."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف صحي",
+      "en": "Health teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "مدة العلاج (3 أشهر على الأقل) وأهمية عدم إيقافه.",
+       "حقن الهيبارين تحت الجلد في البطن (إن وجد) بالطريقة الصحيحة.",
+       "الحركة وتجنب الجلوس الطويل في السفر (التحرك كل ساعة وشرب الماء).",
+       "علامات جلطة جديدة (تورم الساق، ضيق نفس مفاجئ) وعلامات النزيف — التوجه للطوارئ.",
+       "للسيدات: مناقشة حبوب منع الحمل الهرمونية مع الطبيب.",
+       "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Duration (at least 3 months) and not stopping early.",
+       "Correct subcutaneous heparin injection technique in the abdomen (if used).",
+       "Mobility; avoid prolonged sitting when travelling (move hourly, drink water).",
+       "Signs of new VTE (leg swelling, sudden dyspnea) and bleeding — go to the ED.",
+       "For women: discuss hormonal contraception with the doctor.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -277,10 +1179,10 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "ESC Guidelines for the diagnosis and management of acute pulmonary embolism (2019)"
   },
   {
-   "title": "ESC Guidelines on acute pulmonary embolism 2019; ASH 2020 Guidelines for treatment of VTE"
+   "title": "NICE NG158 — Venous thromboembolic diseases: diagnosis, management and thrombophilia testing (2020, updated 2023)"
   }
  ]
 }
