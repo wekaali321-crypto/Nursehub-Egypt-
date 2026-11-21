@@ -1,0 +1,486 @@
+{
+ "id": "dehydration",
+ "icon": "🥤",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "الجفاف",
+  "en": "Dehydration"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض يعاني من الجفاف: علامات الجفاف، خريطة السوائل، التعويض بالفم أو الوريد، والوقاية من السقوط.",
+  "en": "Care plan for dehydration: signs, fluid chart, oral or IV replacement, and fall prevention."
+ },
+ "diagnoses": [
+  {
+   "id": "deficient-fluid-volume",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص حجم السوائل (الجفاف)",
+    "en": "Deficient Fluid Volume (Dehydration)"
+   },
+   "definition": {
+    "ar": "نقص في السوائل داخل الأوعية والأنسجة والخلايا، خاصة فقد الماء دون تغير كبير في الصوديوم.",
+    "en": "Decreased intravascular, interstitial and/or intracellular fluid; dehydration—water loss alone without change in sodium."
+   },
+   "relatedTo": {
+    "ar": [
+     "فقد سوائل زائد (قيء، إسهال، حرارة، كثرة تبول)",
+     "قلة الشرب"
+    ],
+    "en": [
+     "Active fluid loss (vomiting, diarrhea, fever, polyuria)",
+     "Insufficient intake"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "عدم مرونة الجلد",
+     "جفاف الأغشية المخاطية",
+     "نبض ضعيف وسريع",
+     "عطش شديد",
+     "هبوط الضغط",
+     "قلة كمية البول وتركيزه"
+    ],
+    "en": [
+     "Poor skin turgor",
+     "Dry mucous membranes",
+     "Weak, rapid pulse",
+     "Severe thirst",
+     "Hypotension",
+     "Low, concentrated urine"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عطشان جدًا ودايخ.\""
+     ],
+     "en": [
+      "\"I'm very thirsty and dizzy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الجلد يرجع ببطء بعد قرصه، والفم جاف.",
+      "النبض 118 ضعيف، الضغط 95/60.",
+      "البول 20 مل/ساعة داكن.",
+      "نقص الوزن 2 كجم."
+     ],
+     "en": [
+      "Slow skin recoil, dry mouth.",
+      "Pulse 118 weak, BP 95/60.",
+      "Urine 20 mL/h, dark.",
+      "Weight down 2 kg."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: نبض < 100، ضغط ≥ 100/60، وبول ≥ 0.5 مل/كجم/ساعة فاتح اللون."
+     ],
+     "en": [
+      "Within 24 hours: pulse < 100, BP ≥ 100/60, pale urine ≥ 0.5 mL/kg/h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 48 ساعة: جلد مرن وأغشية رطبة ووزن يعود لطبيعته."
+     ],
+     "en": [
+      "Within 48 hours: good skin turgor, moist mucosa and weight back to baseline."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات الجفاف: مرونة الجلد، الأغشية المخاطية، النبض، العطش، الضغط، كمية البول.",
+      "en": "Observe dehydration signs: skin turgor, mucosa, pulse, thirst, BP, urine output."
+     },
+     "rationale": {
+      "ar": "تحدد الشدة وتتابع التحسن.",
+      "en": "Grades severity and tracks recovery."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل كمية السوائل الداخلة والخارجة (خريطة السوائل).",
+      "en": "Record fluid intake and output (fluid chart)."
+     },
+     "rationale": {
+      "ar": "يقيس التوازن بدقة.",
+      "en": "Measures balance accurately."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة العلامات الحيوية ووزن المريض يوميًا.",
+      "en": "Monitor vital signs and daily weight."
+     },
+     "rationale": {
+      "ar": "الوزن أدق مؤشر للسوائل.",
+      "en": "Weight is the best fluid indicator."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على تناول السوائل بكثرة (ماء، عصائر طبيعية، شوربة، محلول الجفاف).",
+      "en": "Encourage plenty of fluids (water, natural juices, soup, ORS)."
+     },
+     "rationale": {
+      "ar": "يعوض الفقد.",
+      "en": "Replaces losses."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء السوائل عن طريق الوريد في الحالات الشديدة حسب أوامر الطبيب.",
+      "en": "Give IV fluids in severe cases as ordered."
+     },
+     "rationale": {
+      "ar": "تعويض سريع للحجم.",
+      "en": "Rapid volume replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الأملاح ووظائف الكلى.",
+      "en": "Monitor electrolytes and renal function."
+     },
+     "rationale": {
+      "ar": "الجفاف يسبب اختلال الأملاح وإصابة الكلى.",
+      "en": "Dehydration disturbs electrolytes and kidneys."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم وترطيب الشفايف.",
+      "en": "Mouth care and lip moisturizing."
+     },
+     "rationale": {
+      "ar": "الراحة ومنع التشقق.",
+      "en": "Comfort; prevents cracking."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "علاج السبب (القيء، الإسهال، الحرارة) حسب الأمر.",
+      "en": "Treat the cause (vomiting, diarrhea, fever) as ordered."
+     },
+     "rationale": {
+      "ar": "يمنع استمرار الفقد.",
+      "en": "Stops ongoing loss."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "النبض 92 والضغط 110/70 والبول 50 مل/ساعة فاتح خلال 24 ساعة — تحقق.",
+      "en": "Pulse 92, BP 110/70, pale urine 50 mL/h within 24 hours — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "الجلد مرن والوزن عاد لطبيعته يوم 2 — تحقق.",
+      "en": "Good turgor and baseline weight on day 2 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الجفاف",
+      "en": "Assess dehydration"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة علامات الجفاف: مرونة الجلد، الأغشية المخاطية، النبض، العطش، الضغط، كمية البول.",
+       "تسجيل كمية السوائل الداخلة والخارجة (خريطة السوائل).",
+       "ملاحظة العلامات الحيوية ووزن المريض يوميًا."
+      ],
+      "en": [
+       "Observe dehydration signs: skin turgor, mucosa, pulse, thirst, BP, urine output.",
+       "Record fluid intake and output (fluid chart).",
+       "Monitor vital signs and daily weight."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات الجفاف وخريطة السوائل والوزن مسجلة.",
+      "en": "Dehydration signs, fluid chart and weight documented."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تعويض السوائل",
+      "en": "Fluid replacement"
+     },
+     "actions": {
+      "ar": [
+       "تشجيع المريض على تناول السوائل بكثرة (ماء، عصائر طبيعية، شوربة، محلول الجفاف).",
+       "إعطاء السوائل عن طريق الوريد في الحالات الشديدة حسب أوامر الطبيب.",
+       "متابعة الأملاح ووظائف الكلى."
+      ],
+      "en": [
+       "Encourage plenty of fluids (water, natural juices, soup, ORS).",
+       "Give IV fluids in severe cases as ordered.",
+       "Monitor electrolytes and renal function."
+      ]
+     },
+     "outcome": {
+      "ar": "نبض < 100 وضغط ≥ 100/60 وبول كافٍ وأملاح طبيعية.",
+      "en": "Pulse < 100, BP ≥ 100/60, adequate urine, normal electrolytes."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "الراحة وعلاج السبب",
+      "en": "Comfort and cause"
+     },
+     "actions": {
+      "ar": [
+       "العناية بالفم وترطيب الشفايف.",
+       "علاج السبب (القيء، الإسهال، الحرارة) حسب الأمر."
+      ],
+      "en": [
+       "Mouth care and lip moisturizing.",
+       "Treat the cause (vomiting, diarrhea, fever) as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "فم رطب والسبب معالج.",
+      "en": "Moist mouth; cause treated."
+     },
+     "timeframe": {
+      "ar": "48 ساعة",
+      "en": "48 hours"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-for-falls-dehydration",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر السقوط",
+    "en": "Risk for Falls"
+   },
+   "definition": {
+    "ar": "قابلية متزايدة للسقوط قد تسبب ضررًا جسديًا.",
+    "en": "Susceptible to falling, which may cause physical harm."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "دوخة وهبوط الضغط عند الوقوف",
+     "ضعف عام",
+     "كبر السن"
+    ],
+    "en": [
+     "Dizziness and orthostatic hypotension",
+     "General weakness",
+     "Older age"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لما بقوم بحس إني هقع.\""
+     ],
+     "en": [
+      "\"When I stand up I feel I'll fall.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "هبوط الضغط الانقباضي 25 مم زئبق عند الوقوف."
+     ],
+     "en": [
+      "Systolic BP falls 25 mmHg on standing."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء الإقامة: لا سقوط."
+     ],
+     "en": [
+      "During the stay: no falls."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يقف بدون دوخة."
+     ],
+     "en": [
+      "Before discharge: stands without dizziness."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الضغط وهو نائم ثم جالس ثم واقف.",
+      "en": "Measure BP lying, sitting and standing."
+     },
+     "rationale": {
+      "ar": "يكشف هبوط الضغط الوضعي.",
+      "en": "Detects orthostatic hypotension."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "سرير منخفض وجرس قريب ومساعدة عند الحركة.",
+      "en": "Low bed, call bell within reach, help with mobility."
+     },
+     "rationale": {
+      "ar": "بيئة آمنة.",
+      "en": "Safe environment."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم النهوض التدريجي وطلب المساعدة.",
+      "en": "Teach gradual rising and asking for help."
+     },
+     "rationale": {
+      "ar": "يمنع السقوط.",
+      "en": "Prevents falls."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع الأدوات والماء في متناول اليد.",
+      "en": "Keep items and water within reach."
+     },
+     "rationale": {
+      "ar": "يقلل الحركة غير الآمنة.",
+      "en": "Reduces unsafe movement."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إنارة ليلية للحمام.",
+      "en": "Night light to the bathroom."
+     },
+     "rationale": {
+      "ar": "رؤية أفضل.",
+      "en": "Better visibility."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "لبس حذاء غير زلق.",
+      "en": "Wear non-slip footwear."
+     },
+     "rationale": {
+      "ar": "يقلل الانزلاق.",
+      "en": "Reduces slipping."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا سقوط والضغط الوضعي تحسن — تحقق.",
+      "en": "No falls; orthostatic BP improved — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من السقوط",
+      "en": "Fall prevention"
+     },
+     "actions": {
+      "ar": [
+       "قياس الضغط وهو نائم ثم جالس ثم واقف.",
+       "سرير منخفض وجرس قريب ومساعدة عند الحركة.",
+       "وضع الأدوات والماء في متناول اليد.",
+       "إنارة ليلية للحمام."
+      ],
+      "en": [
+       "Measure BP lying, sitting and standing.",
+       "Low bed, call bell within reach, help with mobility.",
+       "Keep items and water within reach.",
+       "Night light to the bathroom."
+      ]
+     },
+     "outcome": {
+      "ar": "لا سقوط.",
+      "en": "No falls."
+     },
+     "timeframe": {
+      "ar": "طوال الإقامة",
+      "en": "Throughout the stay"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف",
+      "en": "Teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم النهوض التدريجي وطلب المساعدة.",
+       "لبس حذاء غير زلق."
+      ],
+      "en": [
+       "Teach gradual rising and asking for help.",
+       "Wear non-slip footwear."
+      ]
+     },
+     "outcome": {
+      "ar": "ينهض تدريجيًا ويطلب المساعدة.",
+      "en": "Rises gradually and asks for help."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "vitals"
+}

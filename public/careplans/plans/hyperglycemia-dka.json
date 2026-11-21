@@ -1,0 +1,510 @@
+{
+ "id": "hyperglycemia-dka",
+ "icon": "📈",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "ارتفاع سكر الدم والحماض الكيتوني",
+  "en": "Hyperglycemia & Diabetic Ketoacidosis"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض ارتفاع السكر أو الحماض الكيتوني: المحاليل والأنسولين الوريدي، متابعة البوتاسيوم، والتثقيف.",
+  "en": "Care plan for hyperglycemia/DKA: IV fluids and insulin, potassium monitoring and teaching."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-unstable-glucose-hyper",
+   "kind": "actual",
+   "title": {
+    "ar": "ارتفاع سكر الدم (عدم استقرار الجلوكوز)",
+    "en": "Hyperglycemia (Unstable Blood Glucose)"
+   },
+   "definition": {
+    "ar": "ارتفاع جلوكوز الدم فوق المعدل المستهدف، وقد يتطور لحماض كيتوني أو غيبوبة سكر.",
+    "en": "Blood glucose above target, which may progress to ketoacidosis or hyperosmolar coma."
+   },
+   "relatedTo": {
+    "ar": [
+     "نقص الأنسولين أو عدم أخذه",
+     "عدوى أو ضغط نفسي",
+     "أكل زائد في النشويات"
+    ],
+    "en": [
+     "Insulin deficiency or missed doses",
+     "Infection or stress",
+     "Excess carbohydrate intake"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "سكر > 250 مجم/دل",
+     "زيادة التبول والعطش",
+     "قيء وإجهاد شديد",
+     "رائحة الأسيتون من الفم وتنفس سريع عميق",
+     "جفاف اللسان والفم، نبض سريع ضعيف وضغط منخفض"
+    ],
+    "en": [
+     "Glucose > 250 mg/dL",
+     "Polyuria and polydipsia",
+     "Vomiting and severe fatigue",
+     "Acetone breath and deep rapid breathing",
+     "Dry tongue and mouth, rapid weak pulse, low BP"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عطشان جدًا وبدخل الحمام كتير ورجّعت مرتين.\""
+     ],
+     "en": [
+      "\"I'm very thirsty, urinating a lot and vomited twice.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "سكر الدم 420 مجم/دل، كيتونات البول +3.",
+      "pH ‏7.22، بيكربونات 12.",
+      "تنفس كوسماول 28/دقيقة ورائحة أسيتون.",
+      "النبض 120، الضغط 95/60."
+     ],
+     "en": [
+      "Glucose 420 mg/dL, urine ketones +3.",
+      "pH 7.22, bicarbonate 12.",
+      "Kussmaul breathing 28/min, acetone odour.",
+      "Pulse 120, BP 95/60."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 6–12 ساعة: انخفاض السكر تدريجيًا (50–75 مجم/دل/ساعة) واختفاء الكيتونات وتحسن الحموضة."
+     ],
+     "en": [
+      "Within 6–12 hours: gradual glucose fall (50–75 mg/dL/h), ketones clearing and pH improving."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يعرف المريض أعراض ارتفاع السكر وقواعد أيام المرض."
+     ],
+     "en": [
+      "Before discharge: knows hyperglycemia symptoms and sick-day rules."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس سكر الدم كل ساعة أثناء الأنسولين الوريدي، والكيتونات والأملاح وغازات الدم حسب البروتوكول.",
+      "en": "Check glucose hourly on IV insulin; ketones, electrolytes and blood gases per protocol."
+     },
+     "rationale": {
+      "ar": "ضبط العلاج ومنع الهبوط أو نقص البوتاسيوم.",
+      "en": "Guides therapy; prevents hypoglycemia and hypokalemia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة العلامات الحيوية ومستوى الوعي ورائحة الفم ونمط التنفس.",
+      "en": "Monitor vitals, consciousness, breath odour and breathing pattern."
+     },
+     "rationale": {
+      "ar": "تعكس شدة الحماض وتحسنه.",
+      "en": "Reflect acidosis severity and improvement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المحاليل الوريدية حسب البروتوكول.",
+      "en": "Give IV fluids per protocol."
+     },
+     "rationale": {
+      "ar": "تعوض الجفاف الشديد وتخفض السكر.",
+      "en": "Correct severe dehydration and lower glucose."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأنسولين الوريدي بمضخة حسب البروتوكول، ومعرفة نوع الأنسولين وتركيزه وجرعته.",
+      "en": "Give IV insulin by pump per protocol; know insulin type, concentration and dose."
+     },
+     "rationale": {
+      "ar": "يوقف تكوين الكيتونات.",
+      "en": "Stops ketogenesis."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة البوتاسيوم وتعويضه حسب الأمر قبل وأثناء الأنسولين.",
+      "en": "Monitor and replace potassium as ordered before and during insulin."
+     },
+     "rationale": {
+      "ar": "الأنسولين يدخل البوتاسيوم للخلايا فيسبب نقصًا خطيرًا.",
+      "en": "Insulin shifts potassium into cells, risking hypokalemia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل الداخل والخارج بدقة.",
+      "en": "Record intake and output accurately."
+     },
+     "rationale": {
+      "ar": "يتابع الجفاف والكلى.",
+      "en": "Tracks hydration and kidneys."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "حفظ الأنسولين في الثلاجة (ليس في الفريزر) وعدم حقنه مثلجًا تحت الجلد، وتجهيز الطعام قبل الأنسولين في الوقت المحدد.",
+      "en": "Store insulin in the fridge (not freezer), never inject it ice-cold, and have food ready before insulin."
+     },
+     "rationale": {
+      "ar": "يحافظ على فعالية الأنسولين ويمنع الهبوط.",
+      "en": "Keeps insulin effective and prevents hypoglycemia."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "إرشاد المريض عن أعراض ارتفاع السكر: كثرة التبول والشرب، القيء، الإجهاد، جفاف الفم، رائحة الأسيتون، التنفس السريع العميق.",
+      "en": "Teach hyperglycemia signs: polyuria, polydipsia, vomiting, fatigue, dry mouth, acetone breath, deep rapid breathing."
+     },
+     "rationale": {
+      "ar": "التعرف المبكر يمنع الغيبوبة.",
+      "en": "Early recognition prevents coma."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "التثقيف الصحي: رياضة أو مشي يومي، التحكم في الانفعالات، وعدم إيقاف الأنسولين في أيام المرض.",
+      "en": "Health teaching: daily exercise or walking, stress control, never stopping insulin on sick days."
+     },
+     "rationale": {
+      "ar": "يمنع تكرار الارتفاع.",
+      "en": "Prevents recurrence."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "السكر 210 بعد 8 ساعات والكيتونات اختفت وpH ‏7.34 — تحقق.",
+      "en": "Glucose 210 after 8 hours, ketones cleared, pH 7.34 — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "ذكر المريض أعراض الارتفاع وقواعد أيام المرض — تحقق.",
+      "en": "Patient named symptoms and sick-day rules — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة دقيقة",
+      "en": "Close monitoring"
+     },
+     "actions": {
+      "ar": [
+       "قياس سكر الدم كل ساعة أثناء الأنسولين الوريدي، والكيتونات والأملاح وغازات الدم حسب البروتوكول.",
+       "ملاحظة العلامات الحيوية ومستوى الوعي ورائحة الفم ونمط التنفس.",
+       "تسجيل الداخل والخارج بدقة."
+      ],
+      "en": [
+       "Check glucose hourly on IV insulin; ketones, electrolytes and blood gases per protocol.",
+       "Monitor vitals, consciousness, breath odour and breathing pattern.",
+       "Record intake and output accurately."
+      ]
+     },
+     "outcome": {
+      "ar": "سكر كل ساعة وأملاح وغازات وداخل وخارج مسجلة.",
+      "en": "Hourly glucose; electrolytes, gases and I&O documented."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    },
+    {
+     "need": {
+      "ar": "علاج الحماض الكيتوني",
+      "en": "Treat ketoacidosis"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء المحاليل الوريدية حسب البروتوكول.",
+       "إعطاء الأنسولين الوريدي بمضخة حسب البروتوكول، ومعرفة نوع الأنسولين وتركيزه وجرعته.",
+       "متابعة البوتاسيوم وتعويضه حسب الأمر قبل وأثناء الأنسولين."
+      ],
+      "en": [
+       "Give IV fluids per protocol.",
+       "Give IV insulin by pump per protocol; know insulin type, concentration and dose.",
+       "Monitor and replace potassium as ordered before and during insulin."
+      ]
+     },
+     "outcome": {
+      "ar": "انخفاض السكر تدريجيًا واختفاء الكيتونات وبوتاسيوم 3.5–5.0.",
+      "en": "Gradual glucose fall, ketones cleared, potassium 3.5–5.0."
+     },
+     "timeframe": {
+      "ar": "6–12 ساعة",
+      "en": "6–12 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "التعامل الآمن مع الأنسولين والتثقيف",
+      "en": "Safe insulin handling and teaching"
+     },
+     "actions": {
+      "ar": [
+       "حفظ الأنسولين في الثلاجة (ليس في الفريزر) وعدم حقنه مثلجًا تحت الجلد، وتجهيز الطعام قبل الأنسولين في الوقت المحدد.",
+       "إرشاد المريض عن أعراض ارتفاع السكر: كثرة التبول والشرب، القيء، الإجهاد، جفاف الفم، رائحة الأسيتون، التنفس السريع العميق.",
+       "التثقيف الصحي: رياضة أو مشي يومي، التحكم في الانفعالات، وعدم إيقاف الأنسولين في أيام المرض."
+      ],
+      "en": [
+       "Store insulin in the fridge (not freezer), never inject it ice-cold, and have food ready before insulin.",
+       "Teach hyperglycemia signs: polyuria, polydipsia, vomiting, fatigue, dry mouth, acetone breath, deep rapid breathing.",
+       "Health teaching: daily exercise or walking, stress control, never stopping insulin on sick days."
+      ]
+     },
+     "outcome": {
+      "ar": "أنسولين محفوظ صح والمريض يعرف الأعراض وقواعد أيام المرض.",
+      "en": "Insulin stored correctly; patient knows symptoms and sick-day rules."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-fluid-volume-dka",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص حجم السوائل",
+    "en": "Deficient Fluid Volume"
+   },
+   "definition": {
+    "ar": "نقص السوائل داخل الأوعية والخلايا بسبب كثرة التبول الناتجة عن ارتفاع السكر.",
+    "en": "Fluid deficit from osmotic diuresis caused by hyperglycemia."
+   },
+   "relatedTo": {
+    "ar": [
+     "كثرة التبول (Osmotic diuresis)",
+     "القيء"
+    ],
+    "en": [
+     "Osmotic diuresis",
+     "Vomiting"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "جفاف الأغشية المخاطية",
+     "سرعة النبض وانخفاض الضغط",
+     "ارتفاع الكرياتينين"
+    ],
+    "en": [
+     "Dry mucous membranes",
+     "Tachycardia and hypotension",
+     "Raised creatinine"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لساني ناشف.\""
+     ],
+     "en": [
+      "\"My tongue is dry.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الفم واللسان جافان، النبض 120، الضغط 95/60.",
+      "كرياتينين 1.6."
+     ],
+     "en": [
+      "Dry mouth and tongue, pulse 120, BP 95/60.",
+      "Creatinine 1.6."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 12 ساعة: نبض < 100، ضغط ≥ 100/60، وبول ≥ 0.5 مل/كجم/ساعة."
+     ],
+     "en": [
+      "Within 12 hours: pulse < 100, BP ≥ 100/60, urine ≥ 0.5 mL/kg/h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 48 ساعة: كرياتينين طبيعي وأغشية رطبة."
+     ],
+     "en": [
+      "Within 48 hours: normal creatinine and moist mucosa."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل الداخل والخارج كل ساعة والوزن.",
+      "en": "Hourly intake/output and weight."
+     },
+     "rationale": {
+      "ar": "يتابع التعويض.",
+      "en": "Tracks replacement."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات الجفاف والعلامات الحيوية.",
+      "en": "Observe dehydration signs and vital signs."
+     },
+     "rationale": {
+      "ar": "يقيس الاستجابة.",
+      "en": "Measures response."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المحاليل الوريدية بالمعدل المحدد ومراقبة علامات زيادة السوائل.",
+      "en": "Give IV fluids at the set rate; watch for overload."
+     },
+     "rationale": {
+      "ar": "تعويض آمن خاصة لكبار السن ومرضى القلب.",
+      "en": "Safe replacement, especially in elderly/cardiac patients."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الكرياتينين والأملاح.",
+      "en": "Monitor creatinine and electrolytes."
+     },
+     "rationale": {
+      "ar": "الجفاف يؤثر على الكلى.",
+      "en": "Dehydration affects the kidneys."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم وترطيب الشفايف.",
+      "en": "Mouth care and lip moisturizer."
+     },
+     "rationale": {
+      "ar": "الراحة.",
+      "en": "Comfort."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع الشرب بالفم عند السماح وتوقف القيء.",
+      "en": "Encourage oral fluids once allowed and vomiting stops."
+     },
+     "rationale": {
+      "ar": "يكمل التعويض.",
+      "en": "Completes replacement."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "النبض 94 والضغط 115/70 والبول 60 مل/ساعة خلال 10 ساعات — تحقق.",
+      "en": "Pulse 94, BP 115/70, urine 60 mL/h within 10 hours — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تعويض السوائل",
+      "en": "Fluid replacement"
+     },
+     "actions": {
+      "ar": [
+       "تسجيل الداخل والخارج كل ساعة والوزن.",
+       "ملاحظة علامات الجفاف والعلامات الحيوية.",
+       "إعطاء المحاليل الوريدية بالمعدل المحدد ومراقبة علامات زيادة السوائل.",
+       "متابعة الكرياتينين والأملاح."
+      ],
+      "en": [
+       "Hourly intake/output and weight.",
+       "Observe dehydration signs and vital signs.",
+       "Give IV fluids at the set rate; watch for overload.",
+       "Monitor creatinine and electrolytes."
+      ]
+     },
+     "outcome": {
+      "ar": "نبض < 100 وبول كافٍ وكرياتينين يتحسن.",
+      "en": "Pulse < 100, adequate urine, improving creatinine."
+     },
+     "timeframe": {
+      "ar": "12 ساعة",
+      "en": "12 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "الراحة",
+      "en": "Comfort"
+     },
+     "actions": {
+      "ar": [
+       "العناية بالفم وترطيب الشفايف.",
+       "تشجيع الشرب بالفم عند السماح وتوقف القيء."
+      ],
+      "en": [
+       "Mouth care and lip moisturizer.",
+       "Encourage oral fluids once allowed and vomiting stops."
+      ]
+     },
+     "outcome": {
+      "ar": "فم رطب ويشرب بالفم.",
+      "en": "Moist mouth; drinking orally."
+     },
+     "timeframe": {
+      "ar": "48 ساعة",
+      "en": "48 hours"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "ADA Consensus Report: Hyperglycemic Crises in Adults with Diabetes (2024)"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "metabolic"
+}
