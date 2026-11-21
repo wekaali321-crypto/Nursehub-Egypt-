@@ -785,6 +785,27 @@
       "ar": "ارتفاع درجة الحرارة",
       "en": "Hyperthermia"
      }
+    },
+    {
+     "id": "impaired-gas-exchange-vap",
+     "title": {
+      "ar": "ضعف تبادل الغازات",
+      "en": "Impaired Gas Exchange"
+     }
+    },
+    {
+     "id": "risk-aspiration-vap",
+     "title": {
+      "ar": "خطر الشفط (دخول الإفرازات للرئة)",
+      "en": "Risk for Aspiration"
+     }
+    },
+    {
+     "id": "impaired-oral-mucous-membrane-vap",
+     "title": {
+      "ar": "ضعف سلامة الغشاء المخاطي للفم",
+      "en": "Impaired Oral Mucous Membrane Integrity"
+     }
     }
    ],
    "group": "icu"
@@ -960,6 +981,68 @@
     }
    ],
    "group": "maternal"
+  },
+  {
+   "id": "central-line-clabsi",
+   "icon": "💉",
+   "system": "infection",
+   "folder": "general",
+   "title": {
+    "ar": "القسطرة الوريدية المركزية وعدوى الدم (CLABSI)",
+    "en": "Central Line & CLABSI Prevention"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض بقسطرة وريدية مركزية: حزمة الوقاية من عدوى الدم، والوقاية من الانسداد والجلطة والهواء.",
+    "en": "Care plan for a central venous catheter: CLABSI prevention bundle and prevention of occlusion, thrombosis and air embolism."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-infection-clabsi",
+     "title": {
+      "ar": "خطر عدوى الدم المرتبطة بالقسطرة الوريدية المركزية (CLABSI)",
+      "en": "Risk for Infection (Central Line-Associated Bloodstream Infection)"
+     }
+    },
+    {
+     "id": "risk-vascular-trauma-cvc",
+     "title": {
+      "ar": "خطر مضاعفات القسطرة المركزية (انسداد، جلطة، هواء في الدم)",
+      "en": "Risk for Central Line Complications (Occlusion, Thrombosis, Air Embolism)"
+     }
+    }
+   ],
+   "group": "icu"
+  },
+  {
+   "id": "mrsa-isolation",
+   "icon": "🦠",
+   "system": "infection",
+   "folder": "general",
+   "title": {
+    "ar": "عدوى MRSA واحتياطات العزل",
+    "en": "MRSA & Contact Isolation"
+   },
+   "summary": {
+    "ar": "خطة رعاية مريض MRSA: احتياطات التلامس، تنظيف البيئة، إزالة الاستعمار، والدعم النفسي أثناء العزل.",
+    "en": "MRSA care plan: contact precautions, environmental cleaning, decolonization and psychosocial support in isolation."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-infection-transmission-mrsa",
+     "title": {
+      "ar": "خطر انتقال العدوى (MRSA)",
+      "en": "Risk for Infection Transmission (MRSA)"
+     }
+    },
+    {
+     "id": "social-isolation-contact-precautions",
+     "title": {
+      "ar": "العزلة الاجتماعية (العزل الطبي)",
+      "en": "Social Isolation (Contact Precautions)"
+     }
+    }
+   ],
+   "group": "icu"
   },
   {
    "id": "anemia",

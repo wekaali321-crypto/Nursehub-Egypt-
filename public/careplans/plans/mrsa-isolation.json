@@ -1,0 +1,466 @@
+{
+ "id": "mrsa-isolation",
+ "icon": "🦠",
+ "system": "infection",
+ "folder": "general",
+ "title": {
+  "ar": "عدوى MRSA واحتياطات العزل",
+  "en": "MRSA & Contact Isolation"
+ },
+ "summary": {
+  "ar": "خطة رعاية مريض MRSA: احتياطات التلامس، تنظيف البيئة، إزالة الاستعمار، والدعم النفسي أثناء العزل.",
+  "en": "MRSA care plan: contact precautions, environmental cleaning, decolonization and psychosocial support in isolation."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-infection-transmission-mrsa",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر انتقال العدوى (MRSA)",
+    "en": "Risk for Infection Transmission (MRSA)"
+   },
+   "definition": {
+    "ar": "قابلية لانتقال المكورات العنقودية المقاومة للميثيسيلين لمرضى آخرين أو للفريق.",
+    "en": "Susceptibility to spread of methicillin-resistant Staphylococcus aureus to other patients or staff."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "مريض مستعمر أو مصاب بـ MRSA",
+     "التلامس المباشر وغير المباشر",
+     "أجهزة وأدوات مشتركة"
+    ],
+    "en": [
+     "Colonized or infected patient",
+     "Direct and indirect contact",
+     "Shared equipment"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"يعني إيه عزل؟ أنا خطر على حد؟\""
+     ],
+     "en": [
+      "\"What does isolation mean? Am I a danger to others?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مسحة أنف إيجابية لـ MRSA.",
+      "جرح ساق به صديد."
+     ],
+     "en": [
+      "Nasal swab positive for MRSA.",
+      "Leg wound with pus."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "من اليوم الأول: تطبيق احتياطات التلامس بنسبة 100%."
+     ],
+     "en": [
+      "From day 1: contact precautions applied 100%."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال الإقامة: لا انتقال للعدوى لمرضى آخرين."
+     ],
+     "en": [
+      "Throughout the stay: no cross-transmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع المريض في غرفة فردية أو مع مريض بنفس الميكروب، وعلامة \"عزل تلامس\" على الباب.",
+      "en": "Single room or cohort; \"Contact isolation\" sign on the door."
+     },
+     "rationale": {
+      "ar": "يقلل التعرض.",
+      "en": "Reduces exposure."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "لبس الجاون والقفازات عند دخول الغرفة وخلعهما قبل الخروج.",
+      "en": "Gown and gloves on entering; remove before leaving."
+     },
+     "rationale": {
+      "ar": "يمنع نقل الميكروب على الملابس والأيدي.",
+      "en": "Prevents carriage on clothes and hands."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل الأيدي أو استخدام الكحول قبل وبعد لمس المريض وبيئته (اللحظات الخمس).",
+      "en": "Hand hygiene before and after patient/environment contact (5 moments)."
+     },
+     "rationale": {
+      "ar": "أهم وسيلة لمنع الانتقال.",
+      "en": "Key to preventing transmission."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تخصيص أدوات للمريض (سماعة، جهاز ضغط، ترمومتر).",
+      "en": "Dedicated equipment (stethoscope, BP cuff, thermometer)."
+     },
+     "rationale": {
+      "ar": "الأدوات المشتركة تنقل العدوى.",
+      "en": "Shared equipment spreads infection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيف الأسطح القريبة من المريض يوميًا بمطهر معتمد.",
+      "en": "Clean high-touch surfaces daily with an approved disinfectant."
+     },
+     "rationale": {
+      "ar": "الميكروب يعيش على الأسطح.",
+      "en": "MRSA survives on surfaces."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تقليل نقل المريض خارج الغرفة وإبلاغ القسم المستقبل.",
+      "en": "Limit transport; inform the receiving unit."
+     },
+     "rationale": {
+      "ar": "يمنع الانتشار.",
+      "en": "Prevents spread."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تطبيق بروتوكول إزالة الاستعمار حسب الأمر (مرهم موبيروسين للأنف وحمام كلورهيكسيدين).",
+      "en": "Decolonization protocol as ordered (nasal mupirocin, chlorhexidine bathing)."
+     },
+     "rationale": {
+      "ar": "يقلل الحمل الميكروبي.",
+      "en": "Reduces bacterial load."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المضاد الحيوي المناسب حسب المزرعة (فانكومايسين أو لينزوليد) ومتابعة مستوى الدواء.",
+      "en": "Give culture-guided antibiotics (vancomycin or linezolid); monitor levels."
+     },
+     "rationale": {
+      "ar": "علاج العدوى الفعلية.",
+      "en": "Treats active infection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الزوار والأسرة غسل الأيدي ولبس الجاون.",
+      "en": "Teach visitors hand hygiene and gowning."
+     },
+     "rationale": {
+      "ar": "منع الانتقال للمجتمع.",
+      "en": "Prevents community spread."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لم تظهر حالات جديدة في القسم، والالتزام بالاحتياطات 100% — تحقق.",
+      "en": "No new cases on the unit; full compliance — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "احتياطات التلامس",
+      "en": "Contact precautions"
+     },
+     "actions": {
+      "ar": [
+       "وضع المريض في غرفة فردية أو مع مريض بنفس الميكروب، وعلامة \"عزل تلامس\" على الباب.",
+       "لبس الجاون والقفازات عند دخول الغرفة وخلعهما قبل الخروج.",
+       "غسل الأيدي أو استخدام الكحول قبل وبعد لمس المريض وبيئته (اللحظات الخمس).",
+       "تخصيص أدوات للمريض (سماعة، جهاز ضغط، ترمومتر)."
+      ],
+      "en": [
+       "Single room or cohort; \"Contact isolation\" sign on the door.",
+       "Gown and gloves on entering; remove before leaving.",
+       "Hand hygiene before and after patient/environment contact (5 moments).",
+       "Dedicated equipment (stethoscope, BP cuff, thermometer)."
+      ]
+     },
+     "outcome": {
+      "ar": "التزام كامل.",
+      "en": "Full compliance."
+     },
+     "timeframe": {
+      "ar": "عند كل دخول",
+      "en": "Every entry"
+     }
+    },
+    {
+     "need": {
+      "ar": "البيئة والنقل",
+      "en": "Environment and transport"
+     },
+     "actions": {
+      "ar": [
+       "تنظيف الأسطح القريبة من المريض يوميًا بمطهر معتمد.",
+       "تقليل نقل المريض خارج الغرفة وإبلاغ القسم المستقبل."
+      ],
+      "en": [
+       "Clean high-touch surfaces daily with an approved disinfectant.",
+       "Limit transport; inform the receiving unit."
+      ]
+     },
+     "outcome": {
+      "ar": "أسطح نظيفة ونقل آمن.",
+      "en": "Clean surfaces, safe transport."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "العلاج والتثقيف",
+      "en": "Treatment and teaching"
+     },
+     "actions": {
+      "ar": [
+       "تطبيق بروتوكول إزالة الاستعمار حسب الأمر (مرهم موبيروسين للأنف وحمام كلورهيكسيدين).",
+       "إعطاء المضاد الحيوي المناسب حسب المزرعة (فانكومايسين أو لينزوليد) ومتابعة مستوى الدواء.",
+       "تعليم الزوار والأسرة غسل الأيدي ولبس الجاون."
+      ],
+      "en": [
+       "Decolonization protocol as ordered (nasal mupirocin, chlorhexidine bathing).",
+       "Give culture-guided antibiotics (vancomycin or linezolid); monitor levels.",
+       "Teach visitors hand hygiene and gowning."
+      ]
+     },
+     "outcome": {
+      "ar": "علاج فعال وأسرة ملتزمة.",
+      "en": "Effective treatment, compliant family."
+     },
+     "timeframe": {
+      "ar": "حسب الأمر",
+      "en": "As ordered"
+     }
+    }
+   ]
+  },
+  {
+   "id": "social-isolation-contact-precautions",
+   "kind": "actual",
+   "title": {
+    "ar": "العزلة الاجتماعية (العزل الطبي)",
+    "en": "Social Isolation (Contact Precautions)"
+   },
+   "definition": {
+    "ar": "وحدة يشعر بها الشخص ويعتبرها مفروضة عليه من الآخرين.",
+    "en": "Aloneness experienced as imposed by others."
+   },
+   "relatedTo": {
+    "ar": [
+     "غرفة عزل",
+     "قلة الزيارات وتعامل الفريق بالجاون"
+    ],
+    "en": [
+     "Isolation room",
+     "Fewer visits; staff in gowns"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "التعبير عن الوحدة",
+     "حزن وانسحاب"
+    ],
+    "en": [
+     "Expressed loneliness",
+     "Sadness and withdrawal"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"محدش بيدخلي غير للعلاج، حاسس إني منبوذ.\""
+     ],
+     "en": [
+      "\"Nobody comes in except for treatment; I feel rejected.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قليل الكلام، يرفض الأكل أحيانًا."
+     ],
+     "en": [
+      "Quiet, sometimes refuses meals."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال يومين: يعبر المريض عن فهمه لسبب العزل وإحساس أقل بالوحدة."
+     ],
+     "en": [
+      "Within 2 days: understands the reason for isolation; feels less lonely."
+     ]
+    },
+    "long": {
+     "ar": [
+      "حتى رفع العزل: لا اكتئاب أو رفض للعلاج."
+     ],
+     "en": [
+      "Until isolation ends: no depression or treatment refusal."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مشاعر المريض ومزاجه يوميًا.",
+      "en": "Assess feelings and mood daily."
+     },
+     "rationale": {
+      "ar": "يكشف الاكتئاب مبكرًا.",
+      "en": "Detects depression early."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح سبب العزل وأنه لحماية الآخرين وليس عقابًا، ومدته المتوقعة.",
+      "en": "Explain isolation protects others, is not punishment, and its expected duration."
+     },
+     "rationale": {
+      "ar": "الفهم يقلل الرفض.",
+      "en": "Understanding reduces resentment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "زيارات قصيرة متكررة للحديث وليس للإجراءات فقط.",
+      "en": "Brief frequent visits to talk, not only for procedures."
+     },
+     "rationale": {
+      "ar": "تواصل إنساني.",
+      "en": "Human contact."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع الأسرة على الزيارة مع اتباع الاحتياطات، والتواصل بالهاتف أو الفيديو.",
+      "en": "Encourage family visits with precautions, and phone/video calls."
+     },
+     "rationale": {
+      "ar": "يحافظ على الروابط.",
+      "en": "Maintains bonds."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "توفير وسائل تسلية (راديو، قرآن، كتب، تلفاز).",
+      "en": "Provide diversion (radio, Quran, books, TV)."
+     },
+     "rationale": {
+      "ar": "يشغل الوقت.",
+      "en": "Occupies time."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التعريف بالنفس عند الدخول لأن الجاون والكمامة يخفيان الوجه.",
+      "en": "Introduce yourself on entry since gown and mask hide identity."
+     },
+     "rationale": {
+      "ar": "يحافظ على الثقة.",
+      "en": "Maintains trust."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يتحدث مع الفريق ويستقبل مكالمات أسرته يوميًا — تحقق.",
+      "en": "Talks with staff and receives daily family calls — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "دعم نفسي واجتماعي",
+      "en": "Psychosocial support"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مشاعر المريض ومزاجه يوميًا.",
+       "شرح سبب العزل وأنه لحماية الآخرين وليس عقابًا، ومدته المتوقعة.",
+       "زيارات قصيرة متكررة للحديث وليس للإجراءات فقط.",
+       "تشجيع الأسرة على الزيارة مع اتباع الاحتياطات، والتواصل بالهاتف أو الفيديو.",
+       "توفير وسائل تسلية (راديو، قرآن، كتب، تلفاز).",
+       "التعريف بالنفس عند الدخول لأن الجاون والكمامة يخفيان الوجه."
+      ],
+      "en": [
+       "Assess feelings and mood daily.",
+       "Explain isolation protects others, is not punishment, and its expected duration.",
+       "Brief frequent visits to talk, not only for procedures.",
+       "Encourage family visits with precautions, and phone/video calls.",
+       "Provide diversion (radio, Quran, books, TV).",
+       "Introduce yourself on entry since gown and mask hide identity."
+      ]
+     },
+     "outcome": {
+      "ar": "إحساس أقل بالوحدة.",
+      "en": "Less loneliness."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "CDC — Guideline for Isolation Precautions: Preventing Transmission of Infectious Agents in Healthcare Settings (2007, updated 2023)"
+  },
+  {
+   "title": "WHO Guidelines on Hand Hygiene in Health Care (2009)"
+  },
+  {
+   "title": "دليل الرعاية التمريضية للمضاعفات المحتمل حدوثها لمرضى الرعاية المركزة (NurseHub Egypt)"
+  }
+ ],
+ "group": "icu"
+}

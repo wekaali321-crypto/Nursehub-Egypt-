@@ -1,0 +1,499 @@
+{
+ "id": "central-line-clabsi",
+ "icon": "💉",
+ "system": "infection",
+ "folder": "general",
+ "title": {
+  "ar": "القسطرة الوريدية المركزية وعدوى الدم (CLABSI)",
+  "en": "Central Line & CLABSI Prevention"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض بقسطرة وريدية مركزية: حزمة الوقاية من عدوى الدم، والوقاية من الانسداد والجلطة والهواء.",
+  "en": "Care plan for a central venous catheter: CLABSI prevention bundle and prevention of occlusion, thrombosis and air embolism."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-infection-clabsi",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدوى الدم المرتبطة بالقسطرة الوريدية المركزية (CLABSI)",
+    "en": "Risk for Infection (Central Line-Associated Bloodstream Infection)"
+   },
+   "definition": {
+    "ar": "قابلية لدخول الميكروبات إلى الدم عن طريق القسطرة الوريدية المركزية.",
+    "en": "Susceptibility to bloodstream invasion by organisms via a central venous catheter."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "قسطرة وريدية مركزية لأكثر من يومين",
+     "كثرة فتح الوصلات",
+     "تغذية وريدية كاملة (TPN)",
+     "ضعف المناعة"
+    ],
+    "en": [
+     "Central line in place > 2 days",
+     "Frequent hub access",
+     "Parenteral nutrition (TPN)",
+     "Immunosuppression"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مكان القسطرة في رقبتي مش بيوجعني.\""
+     ],
+     "en": [
+      "\"The line site in my neck doesn't hurt.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قسطرة وريد وداجي يمين يوم 5.",
+      "غيار شفاف سليم وجاف، لا احمرار.",
+      "على تغذية وريدية."
+     ],
+     "en": [
+      "Right internal jugular line, day 5.",
+      "Transparent dressing intact and dry; no redness.",
+      "On TPN."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: مكان القسطرة نظيف بدون احمرار أو إفرازات، والغيار سليم."
+     ],
+     "en": [
+      "Every shift: clean site, no redness or discharge; intact dressing."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال وجود القسطرة: لا عدوى في الدم، وإزالتها بمجرد انتهاء الحاجة."
+     ],
+     "en": [
+      "While in place: no bloodstream infection; removed as soon as not needed."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص مكان القسطرة كل وردية: احمرار، ألم، تورم، صديد.",
+      "en": "Inspect the site every shift: redness, tenderness, swelling, pus."
+     },
+     "rationale": {
+      "ar": "اكتشاف العدوى الموضعية مبكرًا.",
+      "en": "Early detection of local infection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الحرارة والرعشة خاصة أثناء أو بعد استخدام القسطرة، وتحاليل الالتهاب.",
+      "en": "Monitor fever and rigors, especially during or after line use, and inflammatory markers."
+     },
+     "rationale": {
+      "ar": "علامات عدوى الدم.",
+      "en": "Signs of bacteremia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل الأيدي ولبس قفازات قبل أي تعامل مع القسطرة.",
+      "en": "Hand hygiene and gloves before any line handling."
+     },
+     "rationale": {
+      "ar": "الأيدي أهم مصدر للعدوى.",
+      "en": "Hands are the main source of infection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تطهير الوصلة (Scrub the hub) بالكحول أو الكلورهيكسيدين 15 ثانية قبل كل استخدام.",
+      "en": "Scrub the hub with alcohol/chlorhexidine for 15 seconds before each access."
+     },
+     "rationale": {
+      "ar": "يقتل البكتيريا على سطح الوصلة.",
+      "en": "Kills bacteria on the hub surface."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير الغيار الشفاف كل 7 أيام أو الشاش كل يومين، وفورًا إذا اتسخ أو انفك، مع تطهير الجلد بكلورهيكسيدين 2%.",
+      "en": "Change transparent dressing every 7 days or gauze every 2 days, sooner if soiled/loose; clean skin with 2% chlorhexidine."
+     },
+     "rationale": {
+      "ar": "يحافظ على حاجز معقم.",
+      "en": "Maintains a sterile barrier."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير خطوط المحاليل حسب السياسة (كل 96 ساعة، وخطوط الدم والدهون كل 24 ساعة).",
+      "en": "Change administration sets per policy (96 h; blood and lipid sets every 24 h)."
+     },
+     "rationale": {
+      "ar": "الخطوط القديمة مصدر للعدوى.",
+      "en": "Old sets harbour organisms."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تقليل فتح الخط وتخصيص فتحة للتغذية الوريدية.",
+      "en": "Minimize line access; dedicate a lumen to TPN."
+     },
+     "rationale": {
+      "ar": "كل فتح فرصة لدخول الميكروب.",
+      "en": "Each access is an entry chance."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مراجعة الحاجة للقسطرة يوميًا مع الطبيب وإزالتها في أقرب وقت.",
+      "en": "Review line necessity daily with the physician; remove promptly."
+     },
+     "rationale": {
+      "ar": "المدة أهم عامل خطر.",
+      "en": "Duration is the key risk factor."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "سحب مزارع دم من القسطرة ومن وريد طرفي عند الحمى حسب الأمر.",
+      "en": "Draw paired blood cultures (line and peripheral) for fever as ordered."
+     },
+     "rationale": {
+      "ar": "يؤكد مصدر العدوى.",
+      "en": "Confirms the source."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض عدم لمس القسطرة والإبلاغ عن الألم أو البلل.",
+      "en": "Teach not to touch the line and to report pain or wet dressing."
+     },
+     "rationale": {
+      "ar": "مشاركة المريض.",
+      "en": "Patient involvement."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يوم 9: مكان القسطرة نظيف، لا حمى، أزيلت القسطرة عند انتهاء التغذية — تحقق.",
+      "en": "Day 9: clean site, afebrile; line removed after TPN ended — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة العدوى",
+      "en": "Monitor for infection"
+     },
+     "actions": {
+      "ar": [
+       "فحص مكان القسطرة كل وردية: احمرار، ألم، تورم، صديد.",
+       "متابعة الحرارة والرعشة خاصة أثناء أو بعد استخدام القسطرة، وتحاليل الالتهاب.",
+       "سحب مزارع دم من القسطرة ومن وريد طرفي عند الحمى حسب الأمر."
+      ],
+      "en": [
+       "Inspect the site every shift: redness, tenderness, swelling, pus.",
+       "Monitor fever and rigors, especially during or after line use, and inflammatory markers.",
+       "Draw paired blood cultures (line and peripheral) for fever as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "لا علامات عدوى.",
+      "en": "No infection signs."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "حزمة الصيانة (Maintenance bundle)",
+      "en": "Maintenance bundle"
+     },
+     "actions": {
+      "ar": [
+       "غسل الأيدي ولبس قفازات قبل أي تعامل مع القسطرة.",
+       "تطهير الوصلة (Scrub the hub) بالكحول أو الكلورهيكسيدين 15 ثانية قبل كل استخدام.",
+       "تغيير الغيار الشفاف كل 7 أيام أو الشاش كل يومين، وفورًا إذا اتسخ أو انفك، مع تطهير الجلد بكلورهيكسيدين 2%.",
+       "تغيير خطوط المحاليل حسب السياسة (كل 96 ساعة، وخطوط الدم والدهون كل 24 ساعة).",
+       "تقليل فتح الخط وتخصيص فتحة للتغذية الوريدية."
+      ],
+      "en": [
+       "Hand hygiene and gloves before any line handling.",
+       "Scrub the hub with alcohol/chlorhexidine for 15 seconds before each access.",
+       "Change transparent dressing every 7 days or gauze every 2 days, sooner if soiled/loose; clean skin with 2% chlorhexidine.",
+       "Change administration sets per policy (96 h; blood and lipid sets every 24 h).",
+       "Minimize line access; dedicate a lumen to TPN."
+      ]
+     },
+     "outcome": {
+      "ar": "غيار سليم ووصلات مطهرة.",
+      "en": "Intact dressing, disinfected hubs."
+     },
+     "timeframe": {
+      "ar": "كل استخدام / حسب السياسة",
+      "en": "Each access / per policy"
+     }
+    },
+    {
+     "need": {
+      "ar": "مراجعة الحاجة",
+      "en": "Review necessity"
+     },
+     "actions": {
+      "ar": [
+       "مراجعة الحاجة للقسطرة يوميًا مع الطبيب وإزالتها في أقرب وقت.",
+       "تعليم المريض عدم لمس القسطرة والإبلاغ عن الألم أو البلل."
+      ],
+      "en": [
+       "Review line necessity daily with the physician; remove promptly.",
+       "Teach not to touch the line and to report pain or wet dressing."
+      ]
+     },
+     "outcome": {
+      "ar": "إزالة القسطرة عند عدم الحاجة.",
+      "en": "Line removed when not needed."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-vascular-trauma-cvc",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر مضاعفات القسطرة المركزية (انسداد، جلطة، هواء في الدم)",
+    "en": "Risk for Central Line Complications (Occlusion, Thrombosis, Air Embolism)"
+   },
+   "definition": {
+    "ar": "قابلية لحدوث ضرر في الوعاء الدموي أو انسداد القسطرة أو دخول هواء.",
+    "en": "Susceptibility to vessel damage, catheter occlusion or air entry."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "وجود قسطرة كبيرة في وريد مركزي",
+     "عدم الشطف المنتظم",
+     "فتح الخط بدون غلق"
+    ],
+    "en": [
+     "Large-bore central catheter",
+     "Inadequate flushing",
+     "Open line without clamping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس إيدي اليمين تقيلة.\""
+     ],
+     "en": [
+      "\"My right arm feels heavy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بطء تدفق في الفتحة الثانية."
+     ],
+     "en": [
+      "Sluggish flow in the second lumen."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: كل فتحات القسطرة تعمل بدون مقاومة."
+     ],
+     "en": [
+      "Every shift: all lumens flush without resistance."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال وجود القسطرة: لا جلطة أو هواء في الدم."
+     ],
+     "en": [
+      "While in place: no thrombosis or air embolism."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة تورم الذراع أو الرقبة أو ظهور أوردة بارزة في الصدر.",
+      "en": "Watch for arm/neck swelling or prominent chest veins."
+     },
+     "rationale": {
+      "ar": "علامات جلطة مرتبطة بالقسطرة.",
+      "en": "Signs of catheter-related thrombosis."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شطف كل فتحة بمحلول ملحي بطريقة الدفع والتوقف (Push-pause) قبل وبعد كل استخدام.",
+      "en": "Flush each lumen with saline using push-pause before and after each use."
+     },
+     "rationale": {
+      "ar": "يمنع الانسداد.",
+      "en": "Prevents occlusion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غلق المشابك وتركيب أغطية على كل الفتحات غير المستخدمة.",
+      "en": "Clamp and cap all unused lumens."
+     },
+     "rationale": {
+      "ar": "يمنع دخول الهواء.",
+      "en": "Prevents air entry."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع المريض على ظهره مع خفض الرأس وطلب حبس النفس عند فتح أو إزالة القسطرة.",
+      "en": "Supine/Trendelenburg with breath-hold when opening or removing the line."
+     },
+     "rationale": {
+      "ar": "يرفع الضغط في الوريد ويمنع سحب الهواء.",
+      "en": "Raises venous pressure, preventing air entry."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عند الاشتباه في هواء بالدم: إغلاق الخط، ووضع المريض على جانبه الأيسر مع خفض الرأس، وإعطاء أكسجين 100%، وإبلاغ الطبيب.",
+      "en": "If air embolism suspected: clamp, left lateral head-down, 100% oxygen, call physician."
+     },
+     "rationale": {
+      "ar": "يحبس الهواء في القلب الأيمن.",
+      "en": "Traps air in the right heart."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عدم استخدام القوة مع الانسداد وإبلاغ الطبيب لاستخدام مذيب الجلطات حسب البروتوكول.",
+      "en": "Never force a blocked lumen; report for thrombolytic per protocol."
+     },
+     "rationale": {
+      "ar": "القوة قد تكسر القسطرة أو تدفع جلطة.",
+      "en": "Force may rupture the catheter or push a clot."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "كل الفتحات تعمل، لا تورم — تحقق.",
+      "en": "All lumens patent, no swelling — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "سلامة القسطرة",
+      "en": "Line patency"
+     },
+     "actions": {
+      "ar": [
+       "متابعة تورم الذراع أو الرقبة أو ظهور أوردة بارزة في الصدر.",
+       "شطف كل فتحة بمحلول ملحي بطريقة الدفع والتوقف (Push-pause) قبل وبعد كل استخدام.",
+       "عدم استخدام القوة مع الانسداد وإبلاغ الطبيب لاستخدام مذيب الجلطات حسب البروتوكول."
+      ],
+      "en": [
+       "Watch for arm/neck swelling or prominent chest veins.",
+       "Flush each lumen with saline using push-pause before and after each use.",
+       "Never force a blocked lumen; report for thrombolytic per protocol."
+      ]
+     },
+     "outcome": {
+      "ar": "فتحات مفتوحة بدون جلطة.",
+      "en": "Patent lumens, no thrombosis."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "منع الهواء",
+      "en": "Prevent air embolism"
+     },
+     "actions": {
+      "ar": [
+       "غلق المشابك وتركيب أغطية على كل الفتحات غير المستخدمة.",
+       "وضع المريض على ظهره مع خفض الرأس وطلب حبس النفس عند فتح أو إزالة القسطرة.",
+       "عند الاشتباه في هواء بالدم: إغلاق الخط، ووضع المريض على جانبه الأيسر مع خفض الرأس، وإعطاء أكسجين 100%، وإبلاغ الطبيب."
+      ],
+      "en": [
+       "Clamp and cap all unused lumens.",
+       "Supine/Trendelenburg with breath-hold when opening or removing the line.",
+       "If air embolism suspected: clamp, left lateral head-down, 100% oxygen, call physician."
+      ]
+     },
+     "outcome": {
+      "ar": "لا هواء في الدم.",
+      "en": "No air embolism."
+     },
+     "timeframe": {
+      "ar": "عند كل فتح",
+      "en": "Each access"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "SHEA/IDSA/APIC — Strategies to prevent CLABSI in acute-care hospitals (2022 update)"
+  },
+  {
+   "title": "Infusion Nurses Society — Infusion Therapy Standards of Practice (2024)"
+  },
+  {
+   "title": "دليل الرعاية التمريضية للمضاعفات المحتمل حدوثها لمرضى الرعاية المركزة (NurseHub Egypt)"
+  }
+ ],
+ "group": "icu"
+}
