@@ -2,292 +2,1214 @@
  "id": "hypertension",
  "icon": "🫀",
  "system": "cardiology",
+ "folder": "disease",
  "title": {
   "ar": "ارتفاع ضغط الدم",
   "en": "Hypertension"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض ضغط مرتفع غير منضبط: متابعة الضغط، الالتزام بالعلاج، وتعديل نمط الحياة.",
-  "en": "Care plan for uncontrolled hypertension: BP monitoring, medication adherence and lifestyle change."
+  "ar": "خطة رعاية مريض الضغط: متابعة الضغط وتلف الأعضاء، الصداع، الالتزام بالعلاج، نمط الحياة (DASH والملح)، هبوط الضغط الوضعي، والقلق.",
+  "en": "Hypertension care plan: BP and target-organ monitoring, headache, adherence, lifestyle (DASH, salt), orthostatic hypotension and anxiety."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "خطر انخفاض نتاج القلب (Risk for decreased cardiac output) مرتبط بزيادة المقاومة الطرفية للأوعية (Afterload).",
-    "en": "Risk for decreased cardiac output related to increased afterload (increased peripheral vascular resistance)."
+   "id": "risk-decreased-cardiac-output-htn",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص النتاج القلبي",
+    "en": "Risk for Decreased Cardiac Output"
+   },
+   "definition": {
+    "ar": "قابلية لعدم كفاية الدم الذي يضخه القلب لتلبية احتياجات الجسم.",
+    "en": "Susceptibility to inadequate blood pumped by the heart to meet metabolic demands."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "زيادة المقاومة الطرفية (Afterload)",
+     "تضخم البطين الأيسر",
+     "تصلب الشرايين"
+    ],
+    "en": [
+     "Increased afterload",
+     "Left ventricular hypertrophy",
+     "Atherosclerosis"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"عندي صداع في مؤخرة الراس الصبح.\"",
-      "\"بحس بزغللة ساعات.\""
+      "\"عندي صداع في مؤخرة راسي الصبح.\""
      ],
      "en": [
-      "\"I have a headache at the back of my head in the morning.\"",
-      "\"Sometimes my vision is blurred.\""
+      "\"I have a morning headache at the back of my head.\""
      ]
     },
     "objective": {
      "ar": [
-      "ضغط الدم 170/105 مم زئبق في قراءتين بينهما 15 دقيقة.",
-      "النبض 92/دقيقة منتظم.",
-      "رسم القلب يظهر تضخم البطين الأيسر (LVH)."
+      "الضغط 172/104 على قراءتين.",
+      "النبض 88 منتظم.",
+      "رسم القلب: تضخم البطين الأيسر."
      ],
      "en": [
-      "BP 170/105 mmHg on two readings 15 minutes apart.",
-      "Pulse 92/min, regular.",
-      "ECG shows left ventricular hypertrophy (LVH)."
+      "BP 172/104 on two readings.",
+      "HR 88, regular.",
+      "ECG: LVH."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال 24–48 ساعة ينخفض الضغط تدريجيًا للهدف الذي يحدده الطبيب دون هبوط مفاجئ.",
-     "لا تظهر علامات تأثر أعضاء (ألم صدر، ضعف طرف، تغير وعي) أثناء الإقامة."
-    ],
-    "en": [
-     "Within 24–48 hours BP decreases gradually toward the physician-set target without sudden drops.",
-     "No signs of target-organ damage (chest pain, limb weakness, altered consciousness) during the stay."
-    ]
+    "short": {
+     "ar": [
+      "خلال 24–48 ساعة: الضغط < 160/100 بدون أعراض."
+     ],
+     "en": [
+      "Within 24–48 h: BP < 160/100 without symptoms."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 3 أشهر: الضغط < 130/80 (أو حسب هدف الطبيب)."
+     ],
+     "en": [
+      "Within 3 months: BP < 130/80 (or individual target)."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "قياس الضغط بالطريقة الصحيحة (المريض جالس، المقاس المناسب للكُم) كل 4 ساعات أو حسب الحالة.",
-      "en": "Measure BP correctly (patient seated, correct cuff size) every 4 hours or as condition requires."
+      "ar": "قياس الضغط في الذراعين بالمقاس المناسب للكفة بعد راحة 5 دقائق، مرتين أو 3 مرات يوميًا على الأقل.",
+      "en": "Measure BP in both arms with the correct cuff after 5 min rest, at least 2–3 times daily."
      },
      "rationale": {
-      "ar": "القياس الصحيح يعطي قراءة دقيقة ويكشف التغير مبكرًا.",
-      "en": "Correct technique gives accurate readings and detects changes early."
+      "ar": "القياس الصحيح يمنع التشخيص والعلاج الخاطئ.",
+      "en": "Correct technique prevents misdiagnosis and wrong treatment."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "إعطاء أدوية الضغط حسب الأمر ومتابعة الضغط بعدها.",
-      "en": "Give antihypertensives as prescribed and monitor BP afterwards."
+      "ar": "ملاحظة علامات تلف الأعضاء: ألم صدر، ضيق نفس، تشوش رؤية، ضعف طرف، قلة البول.",
+      "en": "Watch for target-organ damage: chest pain, dyspnea, blurred vision, limb weakness, low urine."
      },
      "rationale": {
-      "ar": "يقيّم فعالية الدواء ويكشف الهبوط الزائد.",
-      "en": "Evaluates drug effect and detects excessive hypotension."
+      "ar": "قد تدل على أزمة ضغط طارئة.",
+      "en": "May indicate a hypertensive emergency."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "ملاحظة أعراض الأزمة (صداع شديد، ألم صدر، ضعف أو تنميل، تغيّر الكلام).",
-      "en": "Observe for crisis symptoms (severe headache, chest pain, weakness or numbness, speech change)."
+      "ar": "توفير بيئة هادئة وتقليل الأنشطة المرهقة أثناء ارتفاع الضغط.",
+      "en": "Provide a calm environment and limit strenuous activity while BP is high."
      },
      "rationale": {
-      "ar": "تدل على تأثر القلب أو المخ وتحتاج تدخل عاجل.",
-      "en": "Indicate cardiac or cerebral involvement needing urgent action."
+      "ar": "يقلل إفراز الأدرينالين.",
+      "en": "Reduces sympathetic stimulation."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "توفير بيئة هادئة وتقليل الضوضاء والتوتر.",
-      "en": "Provide a calm, quiet environment and reduce stress."
+      "ar": "رفع رأس السرير عند الصداع أو ضيق النفس.",
+      "en": "Raise the head of bed for headache or dyspnea."
      },
      "rationale": {
-      "ar": "التوتر يرفع الضغط عن طريق الجهاز العصبي السمبثاوي.",
-      "en": "Stress raises BP through sympathetic stimulation."
+      "ar": "يحسن الراحة.",
+      "en": "Improves comfort."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "تعليم المريض النهوض ببطء من النوم أو الجلوس.",
-      "en": "Teach the patient to rise slowly from lying or sitting."
+      "ar": "إعطاء أدوية الضغط حسب الأمر في مواعيدها ومتابعة الضغط بعدها.",
+      "en": "Give antihypertensives on schedule; recheck BP after."
      },
      "rationale": {
-      "ar": "يمنع هبوط الضغط الوضعي مع الأدوية.",
-      "en": "Prevents orthostatic hypotension caused by medication."
+      "ar": "يقيس الاستجابة.",
+      "en": "Measures response."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "في الأزمة: خفض الضغط تدريجيًا (لا يزيد عن 25% في الساعة الأولى) حسب الأمر.",
+      "en": "In crisis: lower BP gradually (≤ 25% in the first hour) as ordered."
+     },
+     "rationale": {
+      "ar": "الخفض السريع يسبب نقص تروية المخ والقلب.",
+      "en": "Rapid lowering causes cerebral/coronary ischemia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة وظائف الكلى والبوتاسيوم والسوائل الداخلة والخارجة.",
+      "en": "Monitor renal function, potassium and intake/output."
+     },
+     "rationale": {
+      "ar": "الكلى عضو مستهدف وتتأثر بالأدوية.",
+      "en": "Kidneys are a target organ and drug-affected."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "الضغط انخفض إلى 145/90 مم زئبق خلال 48 ساعة دون أعراض أزمة. — تحقق الهدف جزئيًا ويستمر التقييم."
-    ],
-    "en": [
-     "BP fell to 145/90 mmHg within 48 hours without crisis symptoms. — Goal partially met; continue monitoring."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الضغط 148/92 بعد 24 ساعة بدون صداع — تحقق.",
+      "en": "BP 148/92 at 24 h without headache — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة الضغط",
+      "en": "Monitor BP"
+     },
+     "actions": {
+      "ar": [
+       "قياس الضغط في الذراعين بالمقاس المناسب للكفة بعد راحة 5 دقائق، مرتين أو 3 مرات يوميًا على الأقل.",
+       "ملاحظة علامات تلف الأعضاء: ألم صدر، ضيق نفس، تشوش رؤية، ضعف طرف، قلة البول.",
+       "متابعة وظائف الكلى والبوتاسيوم والسوائل الداخلة والخارجة."
+      ],
+      "en": [
+       "Measure BP in both arms with the correct cuff after 5 min rest, at least 2–3 times daily.",
+       "Watch for target-organ damage: chest pain, dyspnea, blurred vision, limb weakness, low urine.",
+       "Monitor renal function, potassium and intake/output."
+      ]
+     },
+     "outcome": {
+      "ar": "ضغط يقل بدون تلف أعضاء.",
+      "en": "Falling BP without organ damage."
+     },
+     "timeframe": {
+      "ar": "2–3 مرات يوميًا",
+      "en": "2–3 times daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "خفض الضغط",
+      "en": "Lower BP"
+     },
+     "actions": {
+      "ar": [
+       "توفير بيئة هادئة وتقليل الأنشطة المرهقة أثناء ارتفاع الضغط.",
+       "رفع رأس السرير عند الصداع أو ضيق النفس.",
+       "إعطاء أدوية الضغط حسب الأمر في مواعيدها ومتابعة الضغط بعدها.",
+       "في الأزمة: خفض الضغط تدريجيًا (لا يزيد عن 25% في الساعة الأولى) حسب الأمر."
+      ],
+      "en": [
+       "Provide a calm environment and limit strenuous activity while BP is high.",
+       "Raise the head of bed for headache or dyspnea.",
+       "Give antihypertensives on schedule; recheck BP after.",
+       "In crisis: lower BP gradually (≤ 25% in the first hour) as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "< 160/100 خلال 48 ساعة.",
+      "en": "< 160/100 within 48 h."
+     },
+     "timeframe": {
+      "ar": "48 ساعة",
+      "en": "48 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "عدم فعالية إدارة الصحة الذاتية (Ineffective health self-management) مرتبطة بصعوبة تقبل العلاج طويل المدى وتظهر في إيقاف الدواء وكثرة الملح في الأكل.",
-    "en": "Ineffective health self-management related to difficulty accepting long-term therapy as evidenced by stopping medication and high salt intake."
+   "id": "acute-pain-headache-htn",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (صداع)",
+    "en": "Acute Pain (Headache)"
+   },
+   "definition": {
+    "ar": "تجربة حسية غير مريحة مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory experience lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "ارتفاع الضغط داخل الأوعية الدماغية"
+    ],
+    "en": [
+     "Raised cerebral vascular pressure"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "صداع خلفي 6/10",
+     "تجنب الضوء والحركة"
+    ],
+    "en": [
+     "Occipital headache 6/10",
+     "Avoiding light and movement"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"بوقف الدوا لما الضغط يظبط.\"",
-      "\"مقدرش آكل من غير ملح ومخلل.\""
+      "\"راسي تقيلة ومصدعة من ورا.\""
      ],
      "en": [
-      "\"I stop the medicine when my pressure is normal.\"",
-      "\"I can't eat without salt and pickles.\""
+      "\"My head feels heavy and aches at the back.\""
      ]
     },
     "objective": {
      "ar": [
-      "المريض لا يعرف اسم دوائه ولا جرعته.",
-      "مدخن 20 سيجارة يوميًا."
+      "ألم 6/10، يمسك رأسه.",
+      "الضغط 170/100."
      ],
      "en": [
-      "Patient cannot name his medication or dose.",
-      "Smokes 20 cigarettes a day."
+      "Pain 6/10, holding his head.",
+      "BP 170/100."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "قبل الخروج يشرح المريض أهمية الاستمرار في الدواء، ويذكر 3 أطعمة عالية الملح يتجنبها، ويضع خطة لتقليل التدخين."
-    ],
-    "en": [
-     "Before discharge the patient explains why medication must be continued, names 3 high-salt foods to avoid, and makes a plan to cut down smoking."
-    ]
+    "short": {
+     "ar": [
+      "خلال ساعتين: صداع ≤ 2/10."
+     ],
+     "en": [
+      "Within 2 h: headache ≤ 2/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "مع ضبط الضغط: اختفاء الصداع."
+     ],
+     "en": [
+      "With BP control: headache resolves."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "شرح أن الضغط مرض مزمن والدواء يستمر حتى لو القراءات طبيعية.",
-      "en": "Explain that hypertension is chronic and medication continues even when readings are normal."
+      "ar": "تقييم الصداع (المكان والشدة) والضغط معًا.",
+      "en": "Assess headache (site, severity) with BP."
      },
      "rationale": {
-      "ar": "الإيقاف المفاجئ يسبب ارتفاع ارتدادي (Rebound) في الضغط.",
-      "en": "Abrupt stopping can cause rebound hypertension."
+      "ar": "الصداع يرتبط بالضغط.",
+      "en": "Headache correlates with BP."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "تعليم نظام قليل الملح (أقل من 5 جم ملح يوميًا) وتجنب المخللات والأطعمة المصنعة.",
-      "en": "Teach a low-salt diet (under 5 g salt daily), avoiding pickles and processed foods."
+      "ar": "غرفة هادئة بإضاءة خافتة.",
+      "en": "Quiet, dim room."
      },
      "rationale": {
-      "ar": "تقليل الصوديوم يخفض الضغط ويقلل احتباس السوائل.",
-      "en": "Reducing sodium lowers BP and fluid retention."
+      "ar": "يقلل المنبهات.",
+      "en": "Reduces stimuli."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "تشجيع الإقلاع عن التدخين وتوجيهه لعيادة الإقلاع.",
-      "en": "Encourage smoking cessation and refer to a cessation clinic."
+      "ar": "كمادات باردة على الجبهة أو الرقبة وتدليك خفيف للرقبة والكتفين.",
+      "en": "Cool compress to forehead/neck; gentle neck and shoulder massage."
      },
      "rationale": {
-      "ar": "النيكوتين يضيّق الأوعية ويرفع الضغط وخطر الجلطات.",
-      "en": "Nicotine constricts vessels and raises BP and stroke risk."
+      "ar": "يقلل التوتر العضلي.",
+      "en": "Reduces muscle tension."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "تعليم القياس المنزلي للضغط وتسجيل القراءات.",
+      "ar": "تجنب الانحناء والكحة والحزق.",
+      "en": "Avoid bending, straining and coughing."
+     },
+     "rationale": {
+      "ar": "تزيد الضغط داخل الرأس.",
+      "en": "Raise intracranial pressure."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تمارين الاسترخاء والتنفس.",
+      "en": "Relaxation and breathing exercises."
+     },
+     "rationale": {
+      "ar": "تخفض النشاط العصبي.",
+      "en": "Reduce sympathetic activity."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المسكن وأدوية الضغط حسب الأمر.",
+      "en": "Give analgesic and antihypertensives as ordered."
+     },
+     "rationale": {
+      "ar": "يعالج العرض والسبب.",
+      "en": "Treats symptom and cause."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عن صداع شديد مفاجئ مع قيء أو تشوش.",
+      "en": "Report sudden severe headache with vomiting or confusion."
+     },
+     "rationale": {
+      "ar": "قد يكون نزيفًا بالمخ.",
+      "en": "May be intracranial haemorrhage."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الصداع 1/10 بعد ساعة ونصف — تحقق.",
+      "en": "Headache 1/10 after 90 minutes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الصداع",
+      "en": "Relieve headache"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الصداع (المكان والشدة) والضغط معًا.",
+       "غرفة هادئة بإضاءة خافتة.",
+       "كمادات باردة على الجبهة أو الرقبة وتدليك خفيف للرقبة والكتفين.",
+       "تجنب الانحناء والكحة والحزق.",
+       "تمارين الاسترخاء والتنفس.",
+       "إعطاء المسكن وأدوية الضغط حسب الأمر.",
+       "إبلاغ الطبيب عن صداع شديد مفاجئ مع قيء أو تشوش."
+      ],
+      "en": [
+       "Assess headache (site, severity) with BP.",
+       "Quiet, dim room.",
+       "Cool compress to forehead/neck; gentle neck and shoulder massage.",
+       "Avoid bending, straining and coughing.",
+       "Relaxation and breathing exercises.",
+       "Give analgesic and antihypertensives as ordered.",
+       "Report sudden severe headache with vomiting or confusion."
+      ]
+     },
+     "outcome": {
+      "ar": "صداع ≤ 2/10.",
+      "en": "Headache ≤ 2/10."
+     },
+     "timeframe": {
+      "ar": "ساعتين",
+      "en": "2 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ineffective-health-management-htn",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية إدارة الصحة",
+    "en": "Ineffective Health Self-Management"
+   },
+   "definition": {
+    "ar": "صعوبة في تنظيم علاج المرض المزمن ودمجه في الحياة اليومية.",
+    "en": "Difficulty managing treatment of a chronic illness within daily living."
+   },
+   "relatedTo": {
+    "ar": [
+     "مرض بدون أعراض",
+     "تعقيد العلاج والأعراض الجانبية",
+     "نقص المعرفة"
+    ],
+    "en": [
+     "Asymptomatic disease",
+     "Complex regimen and side effects",
+     "Knowledge deficit"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "عدم الانتظام في الدواء",
+     "ضغط غير منضبط"
+    ],
+    "en": [
+     "Irregular medication",
+     "Uncontrolled BP"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بوقف الدوا لما أكون كويس.\""
+     ],
+     "en": [
+      "\"I stop the pills when I feel fine.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ضغط غير منضبط منذ سنة.",
+      "لا يقيس الضغط في المنزل."
+     ],
+     "en": [
+      "Uncontrolled BP for a year.",
+      "No home BP monitoring."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يذكر المريض اسم وجرعة وموعد أدويته وخطورة إيقافها."
+     ],
+     "en": [
+      "Before discharge: states drug names, doses, times and risk of stopping."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 3 أشهر: التزام بالعلاج وقياس الضغط في البيت."
+     ],
+     "en": [
+      "Within 3 months: adherence and home BP monitoring."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض وأسباب عدم الالتزام.",
+      "en": "Assess knowledge and reasons for non-adherence."
+     },
+     "rationale": {
+      "ar": "العلاج يستهدف السبب الحقيقي.",
+      "en": "Targets the real barrier."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "إعطاء فكرة مبسطة عن الضغط وتأثيره على القلب والكلى والأوعية والمخ، وأنه غالبًا بلا أعراض.",
+      "en": "Explain BP simply and its effects on heart, kidney, vessels and brain; it is often silent."
+     },
+     "rationale": {
+      "ar": "الفهم يزيد الالتزام.",
+      "en": "Understanding increases adherence."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "عدم إيقاف الدواء بدون الطبيب حتى لو انضبط الضغط.",
+      "en": "Never stop drugs without the doctor, even when BP is normal."
+     },
+     "rationale": {
+      "ar": "الإيقاف المفاجئ يرفع الضغط بشدة.",
+      "en": "Abrupt stopping causes rebound hypertension."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم قياس الضغط في المنزل وتسجيله.",
       "en": "Teach home BP measurement and recording."
      },
      "rationale": {
-      "ar": "يشرك المريض في المتابعة ويكشف عدم الانضباط مبكرًا.",
-      "en": "Involves the patient in follow-up and detects poor control early."
+      "ar": "يتابع الاستجابة.",
+      "en": "Tracks response."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ربط الدواء بعادة يومية أو منبه في الموبايل.",
+      "en": "Link pills to a daily habit or phone alarm."
+     },
+     "rationale": {
+      "ar": "يقلل النسيان.",
+      "en": "Reduces forgetting."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "الأعراض الجانبية الشائعة (دوخة عند الوقوف، كحة جافة، تورم القدم) وما يفعله.",
+      "en": "Common side effects (postural dizziness, dry cough, ankle swelling) and actions."
+     },
+     "rationale": {
+      "ar": "يمنع الإيقاف بسببها.",
+      "en": "Prevents stopping because of them."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة دورية في العيادة.",
+      "en": "Regular clinic follow-up."
+     },
+     "rationale": {
+      "ar": "ضبط الجرعات.",
+      "en": "Dose adjustment."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "المريض شرح أهمية الاستمرار في الدواء وذكر 4 أطعمة يتجنبها ووافق على موعد عيادة الإقلاع. — تحقق الهدف."
-    ],
-    "en": [
-     "Patient explained adherence, listed 4 foods to avoid and accepted a cessation-clinic appointment. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "خطر انخفاض نتاج القلب",
-    "en": "Risk for decreased cardiac output"
-   },
-   "need": {
-    "ar": "ضبط ضغط الدم",
-    "en": "Control blood pressure"
-   },
-   "actions": {
-    "ar": [
-     "قياس الضغط كل 4 ساعات",
-     "إعطاء الأدوية حسب الأمر",
-     "بيئة هادئة"
-    ],
-    "en": [
-     "BP every 4 hours",
-     "Give medications as ordered",
-     "Quiet environment"
-    ]
-   },
-   "outcome": {
-    "ar": "انخفاض الضغط تدريجيًا للهدف دون أعراض",
-    "en": "Gradual BP fall to target, no symptoms"
-   },
-   "timeframe": {
-    "ar": "48 ساعة",
-    "en": "48 hours"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يذكر أدويته ويقيس الضغط بشكل صحيح — تحقق.",
+      "en": "States medications and measures BP correctly — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف عن المرض والعلاج",
+      "en": "Disease and drug teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض وأسباب عدم الالتزام.",
+       "إعطاء فكرة مبسطة عن الضغط وتأثيره على القلب والكلى والأوعية والمخ، وأنه غالبًا بلا أعراض.",
+       "عدم إيقاف الدواء بدون الطبيب حتى لو انضبط الضغط.",
+       "الأعراض الجانبية الشائعة (دوخة عند الوقوف، كحة جافة، تورم القدم) وما يفعله."
+      ],
+      "en": [
+       "Assess knowledge and reasons for non-adherence.",
+       "Explain BP simply and its effects on heart, kidney, vessels and brain; it is often silent.",
+       "Never stop drugs without the doctor, even when BP is normal.",
+       "Common side effects (postural dizziness, dry cough, ankle swelling) and actions."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يذكر أدويته وخطورة إيقافها.",
+      "en": "Patient states drugs and risk of stopping."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    },
+    {
+     "need": {
+      "ar": "المتابعة الذاتية",
+      "en": "Self-monitoring"
+     },
+     "actions": {
+      "ar": [
+       "تعليم قياس الضغط في المنزل وتسجيله.",
+       "ربط الدواء بعادة يومية أو منبه في الموبايل.",
+       "متابعة دورية في العيادة."
+      ],
+      "en": [
+       "Teach home BP measurement and recording.",
+       "Link pills to a daily habit or phone alarm.",
+       "Regular clinic follow-up."
+      ]
+     },
+     "outcome": {
+      "ar": "سجل ضغط منزلي.",
+      "en": "Home BP log."
+     },
+     "timeframe": {
+      "ar": "3 أشهر",
+      "en": "3 months"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر السقوط",
-    "en": "Risk for falls"
+   "id": "readiness-lifestyle-htn",
+   "kind": "health-promotion",
+   "title": {
+    "ar": "الاستعداد لتحسين نمط الحياة (غذاء ونشاط)",
+    "en": "Readiness for Enhanced Health Management (Diet & Activity)"
    },
-   "need": {
-    "ar": "الأمان مع أدوية الضغط",
-    "en": "Safety with antihypertensives"
+   "definition": {
+    "ar": "رغبة في تعديل العادات الغذائية والنشاط لتحسين الضغط.",
+    "en": "Desire to change diet and activity habits to improve blood pressure."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "النهوض ببطء",
-     "جرس الاستدعاء قريب",
-     "رفع جوانب السرير عند الحاجة"
+     "الرغبة في تجنب المضاعفات"
     ],
     "en": [
-     "Rise slowly",
-     "Call bell within reach",
-     "Side rails as needed"
+     "Desire to avoid complications"
     ]
    },
-   "outcome": {
-    "ar": "لا يحدث سقوط",
-    "en": "No falls"
+   "evidencedBy": {
+    "ar": [
+     "يسأل عن الأكل المناسب",
+     "زيادة الوزن ونمط حياة خامل"
+    ],
+    "en": [
+     "Asks about suitable foods",
+     "Overweight, sedentary"
+    ]
    },
-   "timeframe": {
-    "ar": "طوال الإقامة",
-    "en": "Throughout stay"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عايز أعرف آكل إيه عشان الضغط.\""
+     ],
+     "en": [
+      "\"I want to know what to eat for my blood pressure.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مؤشر كتلة الجسم 31، يدخن 10 سجائر يوميًا.",
+      "يأكل مخللات وجبن مالح يوميًا."
+     ],
+     "en": [
+      "BMI 31; smokes 10 cigarettes/day.",
+      "Daily pickles and salty cheese."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يضع المريض خطة غذاء قليل الملح ويختار 5 أطعمة مناسبة."
+     ],
+     "en": [
+      "Before discharge: makes a low-salt plan and picks 5 suitable foods."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 6 أشهر: نقص الوزن 5% ومشي 30 دقيقة 5 أيام أسبوعيًا والإقلاع عن التدخين."
+     ],
+     "en": [
+      "Within 6 months: 5% weight loss, 30-min walks 5 days/week, stopped smoking."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم النظام الغذائي والنشاط والتدخين والوزن.",
+      "en": "Assess diet, activity, smoking and weight."
+     },
+     "rationale": {
+      "ar": "نقطة البداية.",
+      "en": "Baseline."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تقليل الملح < 5 جم يوميًا وتجنب المخللات والجبن المالح والأكل المحفوظ والشوربة الجاهزة.",
+      "en": "Salt < 5 g/day; avoid pickles, salty cheese, processed food, instant soups."
+     },
+     "rationale": {
+      "ar": "الصوديوم يرفع الضغط.",
+      "en": "Sodium raises BP."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "نظام DASH: خضار وفاكهة وحبوب كاملة وألبان قليلة الدسم، وتقليل الدهون والكوليسترول.",
+      "en": "DASH diet: vegetables, fruit, whole grains, low-fat dairy; less fat and cholesterol."
+     },
+     "rationale": {
+      "ar": "يخفض الضغط 8–14 مم.",
+      "en": "Lowers BP by 8–14 mmHg."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تقليل الكافيين (الشاي والقهوة والكولا والشوكولاتة).",
+      "en": "Limit caffeine (tea, coffee, cola, chocolate)."
+     },
+     "rationale": {
+      "ar": "يرفع الضغط مؤقتًا.",
+      "en": "Raises BP transiently."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "المشي 30 دقيقة معظم أيام الأسبوع حسب الحالة.",
+      "en": "Walk 30 minutes most days as tolerated."
+     },
+     "rationale": {
+      "ar": "يخفض الضغط والوزن.",
+      "en": "Lowers BP and weight."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "الإقلاع عن التدخين وتجنب التدخين السلبي.",
+      "en": "Stop smoking; avoid passive smoke."
+     },
+     "rationale": {
+      "ar": "يضيق الأوعية ويزيد الخطر.",
+      "en": "Constricts vessels; raises risk."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "التحكم في الانفعالات والضغوط بالاسترخاء والنوم الكافي.",
+      "en": "Manage stress with relaxation and adequate sleep."
+     },
+     "rationale": {
+      "ar": "التوتر يرفع الضغط.",
+      "en": "Stress raises BP."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إحالة لأخصائي التغذية وبرنامج الإقلاع عن التدخين.",
+      "en": "Refer to dietitian and smoking cessation."
+     },
+     "rationale": {
+      "ar": "دعم متخصص.",
+      "en": "Specialist support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "وضع خطة غذاء واختار الأطعمة المناسبة — تحقق.",
+      "en": "Made a diet plan and chose suitable foods — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تعديل الغذاء",
+      "en": "Diet change"
+     },
+     "actions": {
+      "ar": [
+       "تقييم النظام الغذائي والنشاط والتدخين والوزن.",
+       "تقليل الملح < 5 جم يوميًا وتجنب المخللات والجبن المالح والأكل المحفوظ والشوربة الجاهزة.",
+       "نظام DASH: خضار وفاكهة وحبوب كاملة وألبان قليلة الدسم، وتقليل الدهون والكوليسترول.",
+       "تقليل الكافيين (الشاي والقهوة والكولا والشوكولاتة).",
+       "إحالة لأخصائي التغذية وبرنامج الإقلاع عن التدخين."
+      ],
+      "en": [
+       "Assess diet, activity, smoking and weight.",
+       "Salt < 5 g/day; avoid pickles, salty cheese, processed food, instant soups.",
+       "DASH diet: vegetables, fruit, whole grains, low-fat dairy; less fat and cholesterol.",
+       "Limit caffeine (tea, coffee, cola, chocolate).",
+       "Refer to dietitian and smoking cessation."
+      ]
+     },
+     "outcome": {
+      "ar": "خطة غذاء قليل الملح.",
+      "en": "Low-salt plan."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    },
+    {
+     "need": {
+      "ar": "النشاط والعادات",
+      "en": "Activity and habits"
+     },
+     "actions": {
+      "ar": [
+       "المشي 30 دقيقة معظم أيام الأسبوع حسب الحالة.",
+       "الإقلاع عن التدخين وتجنب التدخين السلبي.",
+       "التحكم في الانفعالات والضغوط بالاسترخاء والنوم الكافي."
+      ],
+      "en": [
+       "Walk 30 minutes most days as tolerated.",
+       "Stop smoking; avoid passive smoke.",
+       "Manage stress with relaxation and adequate sleep."
+      ]
+     },
+     "outcome": {
+      "ar": "نشاط منتظم وإقلاع عن التدخين.",
+      "en": "Regular activity, quit smoking."
+     },
+     "timeframe": {
+      "ar": "6 أشهر",
+      "en": "6 months"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "عدم فعالية إدارة الصحة الذاتية",
-    "en": "Ineffective health self-management"
+   "id": "risk-injury-orthostatic-htn",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الإصابة (هبوط الضغط الوضعي من الأدوية)",
+    "en": "Risk for Injury (Orthostatic Hypotension from Drugs)"
    },
-   "need": {
-    "ar": "تثقيف عن الدواء والملح والتدخين",
-    "en": "Teaching: drugs, salt, smoking"
+   "definition": {
+    "ar": "قابلية للإصابة بسبب الدوخة أو الإغماء عند الوقوف.",
+    "en": "Susceptibility to injury from dizziness or fainting on standing."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "شرح الاستمرار على الدواء",
-     "نظام قليل الملح",
-     "قياس الضغط بالبيت"
+     "أدوية الضغط والمدرات",
+     "كبر السن",
+     "الجفاف"
     ],
     "en": [
-     "Explain adherence",
-     "Low-salt diet",
-     "Home BP monitoring"
+     "Antihypertensives and diuretics",
+     "Older age",
+     "Dehydration"
     ]
    },
-   "outcome": {
-    "ar": "المريض يشرح خطة العلاج بنفسه",
-    "en": "Patient explains the plan himself"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بحس بدوخة لما أقوم بسرعة.\""
+     ],
+     "en": [
+      "\"I feel dizzy when I get up quickly.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الضغط نائمًا 140/86 وواقفًا 116/74."
+     ],
+     "en": [
+      "BP lying 140/86, standing 116/74."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "قبل الخروج",
-    "en": "Before discharge"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: يقوم المريض ببطء ولا يسقط."
+     ],
+     "en": [
+      "During the stay: rises slowly, no falls."
+     ]
+    },
+    "long": {
+     "ar": [
+      "في البيت: لا إصابات بسبب الدوخة."
+     ],
+     "en": [
+      "At home: no dizziness-related injury."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الضغط نائمًا وواقفًا بعد بدء أو زيادة الدواء.",
+      "en": "Lying and standing BP after starting or increasing drugs."
+     },
+     "rationale": {
+      "ar": "يكشف الهبوط الوضعي.",
+      "en": "Detects orthostasis."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعليم القيام على مراحل والجلوس على حافة السرير قبل الوقوف.",
+      "en": "Teach rising in stages, sitting on the bed edge first."
+     },
+     "rationale": {
+      "ar": "يعطي وقتًا للتكيف.",
+      "en": "Allows adjustment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إجراءات الوقاية من السقوط (سرير منخفض، جرس قريب).",
+      "en": "Fall precautions (low bed, bell in reach)."
+     },
+     "rationale": {
+      "ar": "يقلل الإصابة.",
+      "en": "Reduces injury."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تجنب الحمام الساخن الطويل والوقوف الطويل.",
+      "en": "Avoid long hot baths and prolonged standing."
+     },
+     "rationale": {
+      "ar": "يوسعان الأوعية.",
+      "en": "Cause vasodilation."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرب سوائل كافية إلا إذا مُنع.",
+      "en": "Adequate fluids unless restricted."
+     },
+     "rationale": {
+      "ar": "الجفاف يزيد الهبوط.",
+      "en": "Dehydration worsens it."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عن هبوط > 20 مم أو إغماء لتعديل الجرعة.",
+      "en": "Report a drop > 20 mmHg or syncope for dose review."
+     },
+     "rationale": {
+      "ar": "قد تحتاج الجرعة تعديلًا.",
+      "en": "Dose may need adjustment."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يقوم ببطء ولا دوخة — تحقق.",
+      "en": "Rises slowly, no dizziness — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من الهبوط والسقوط",
+      "en": "Prevent orthostasis and falls"
+     },
+     "actions": {
+      "ar": [
+       "قياس الضغط نائمًا وواقفًا بعد بدء أو زيادة الدواء.",
+       "تعليم القيام على مراحل والجلوس على حافة السرير قبل الوقوف.",
+       "إجراءات الوقاية من السقوط (سرير منخفض، جرس قريب).",
+       "تجنب الحمام الساخن الطويل والوقوف الطويل.",
+       "شرب سوائل كافية إلا إذا مُنع.",
+       "إبلاغ الطبيب عن هبوط > 20 مم أو إغماء لتعديل الجرعة."
+      ],
+      "en": [
+       "Lying and standing BP after starting or increasing drugs.",
+       "Teach rising in stages, sitting on the bed edge first.",
+       "Fall precautions (low bed, bell in reach).",
+       "Avoid long hot baths and prolonged standing.",
+       "Adequate fluids unless restricted.",
+       "Report a drop > 20 mmHg or syncope for dose review."
+      ]
+     },
+     "outcome": {
+      "ar": "لا سقوط أو إغماء.",
+      "en": "No falls or syncope."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-htn",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح مع استجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "تشخيص مرض مزمن والخوف من الجلطة",
+     "العلاج طول العمر"
+    ],
+    "en": [
+     "Chronic diagnosis and fear of stroke",
+     "Lifelong treatment"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension, repeated questions",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أبويا مات بجلطة في المخ من الضغط، خايف أكون زيه.\""
+     ],
+     "en": [
+      "\"My father died of a stroke from high BP; I'm afraid I'll be like him.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "متوتر، يقيس الضغط كل ساعة بنفسه."
+     ],
+     "en": [
+      "Tense; checks his own BP hourly."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن مخاوفه ويستخدم وسيلة للاسترخاء."
+     ],
+     "en": [
+      "Within the shift: expresses fears and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: قلق أقل وثقة في القدرة على التحكم في المرض."
+     ],
+     "en": [
+      "Before discharge: less anxiety and confidence in controlling the disease."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق ومصادره.",
+      "en": "Assess anxiety level and sources."
+     },
+     "rationale": {
+      "ar": "يحدد التدخل.",
+      "en": "Guides intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الاستماع للمريض وتشجيعه على التعبير.",
+      "en": "Listen and encourage expression."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر.",
+      "en": "Relieves tension."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح أن الضغط المنضبط يقلل خطر الجلطة كثيرًا.",
+      "en": "Explain controlled BP greatly reduces stroke risk."
+     },
+     "rationale": {
+      "ar": "معلومة مطمئنة صحيحة.",
+      "en": "Accurate reassurance."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم تمارين التنفس العميق والاسترخاء.",
+      "en": "Teach deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "تقلل القلق والضغط.",
+      "en": "Reduce anxiety and BP."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تحديد أوقات معينة لقياس الضغط بدل القياس المتكرر.",
+      "en": "Set specific BP-check times instead of constant checking."
+     },
+     "rationale": {
+      "ar": "يقلل الانشغال الزائد.",
+      "en": "Reduces preoccupation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إشراك الأسرة في الدعم.",
+      "en": "Involve family in support."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يمارس التنفس العميق ويقول \"اطمنت\" — تحقق.",
+      "en": "Practises deep breathing, says \"I feel reassured\" — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق ومصادره.",
+       "الاستماع للمريض وتشجيعه على التعبير.",
+       "شرح أن الضغط المنضبط يقلل خطر الجلطة كثيرًا.",
+       "تعليم تمارين التنفس العميق والاسترخاء.",
+       "تحديد أوقات معينة لقياس الضغط بدل القياس المتكرر.",
+       "إشراك الأسرة في الدعم."
+      ],
+      "en": [
+       "Assess anxiety level and sources.",
+       "Listen and encourage expression.",
+       "Explain controlled BP greatly reduces stroke risk.",
+       "Teach deep breathing and relaxation.",
+       "Set specific BP-check times instead of constant checking.",
+       "Involve family in support."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل.",
+      "en": "Less anxiety."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -295,10 +1217,13 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "ESC/ESH Guidelines for the management of arterial hypertension (2023/2024)"
   },
   {
-   "title": "ESC/ESH Guidelines for the management of arterial hypertension 2024"
+   "title": "ACC/AHA Guideline for the Prevention, Detection, Evaluation and Management of High Blood Pressure in Adults"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
   }
  ]
 }

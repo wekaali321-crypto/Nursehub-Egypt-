@@ -64,7 +64,9 @@ test('crawlers: list, each diagnosis as its own page with title and canonical; u
   assert.ok(h.includes('<link rel="canonical" href="https://nursehubegypt.com/care-plans/heart-failure/excess-fluid-volume" />'));
   assert.ok(h.includes('التدخلات التمريضية والمبررات') && h.includes('مرتبط بـ'));
   assert.equal((await get('/care-plans/heart-failure')).status, 200, 'plan page = first diagnosis');
-  assert.equal((await get('/care-plans/hypertension/dx-1')).status, 200, 'older plans get diagnosis pages too');
+  const old = await get('/care-plans/hypertension/dx-3');
+  assert.equal(old.status, 301, 'numbered pages of rewritten plans move to the plan');
+  assert.match(old.headers.get('location') || '', /\/care-plans\/hypertension$/);
   assert.equal((await get('/care-plans/not-a-plan')).status, 404);
   assert.equal((await get('/care-plans/heart-failure/not-a-diagnosis')).status, 404);
 });

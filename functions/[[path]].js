@@ -528,6 +528,14 @@ export async function onRequest({ request, env, next }) {
     if (a.status >= 300 && a.status < 400) return a;
     return shell(request, env, 404); // unknown file (the SPA fallback would otherwise answer 200 with index.html)
   }
+  // Plans rewritten into the new format lost their old numbered diagnosis pages (/care-plans/<id>/dx-2): send those to the plan.
+  const legacyDx = /^\/care-plans\/([a-z0-9-]+)\/dx-\d+$/.exec(url.pathname);
+  if (legacyDx && (request.method === 'GET' || request.method === 'HEAD')) {
+    const raw = await getJSON(env, request, `/careplans/plans/${legacyDx[1]}.json`).catch(() => null);
+    if (raw && Array.isArray(raw.diagnoses) && !raw.diagnoses.some((x) => `/care-plans/${legacyDx[1]}/${x.id}` === url.pathname)) {
+      return Response.redirect(`${url.origin}/care-plans/${legacyDx[1]}`, 301);
+    }
+  }
   if (request.method === 'GET' || request.method === 'HEAD') {
     let verdict;
     try {

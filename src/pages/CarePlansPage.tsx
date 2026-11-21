@@ -193,7 +193,7 @@ export function CarePlanPage() {
     fetchCarePlan(id).then(setPlan).catch(() => setFailed(true));
   }, [id]);
 
-  const dx = plan ? plan.diagnoses.find((d) => d.id === dxId) ?? (dxId ? undefined : plan.diagnoses[0]) : undefined;
+  const dx = plan ? plan.diagnoses.find((d) => d.id === dxId) ?? (dxId && !/^dx-\d+$/.test(dxId) ? undefined : plan.diagnoses[0]) : undefined;
   const dxIndex = plan && dx ? plan.diagnoses.indexOf(dx) : -1;
   useSEO({
     title: plan && dx
