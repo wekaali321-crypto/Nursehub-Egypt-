@@ -1,0 +1,539 @@
+{
+ "id": "puerperium",
+ "icon": "🤱",
+ "system": "obstetrics",
+ "folder": "general",
+ "title": {
+  "ar": "رعاية النفاس",
+  "en": "Puerperium (Postpartum) Care"
+ },
+ "summary": {
+  "ar": "خطة رعاية الأم بعد الولادة: الوقاية من حمى النفاس ومتابعة الرحم والهلابة والجرح، ودعم الرضاعة الطبيعية.",
+  "en": "Postpartum care plan: preventing puerperal infection, monitoring uterus, lochia and wound, and supporting breastfeeding."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-infection-puerperal",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى (حمى النفاس)",
+    "en": "Risk for Infection (Puerperal)"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة للرحم أو الجرح أو مجرى البول أو الثدي بعد الولادة.",
+    "en": "Susceptibility to invasion of the uterus, wound, urinary tract or breast by pathogens after birth."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "مكان المشيمة المفتوح في الرحم",
+     "جرح العجان أو القيصرية",
+     "طول مدة الولادة أو تمزق الأغشية المبكر",
+     "الأنيميا"
+    ],
+    "en": [
+     "Open placental site",
+     "Perineal or cesarean wound",
+     "Prolonged labour or prolonged rupture of membranes",
+     "Anemia"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عندي وجع خفيف تحت.\""
+     ],
+     "en": [
+      "\"I have mild pain down below.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يوم 2 بعد ولادة طبيعية مع شق العجان.",
+      "الحرارة 37.4، الرحم متماسك عند السرة −2.",
+      "الهلابة حمراء بدون رائحة."
+     ],
+     "en": [
+      "Day 2 after vaginal birth with episiotomy.",
+      "T 37.4 °C; firm uterus 2 cm below the umbilicus.",
+      "Lochia rubra, no odour."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل يوم: حرارة < 38، هلابة بدون رائحة، جرح نظيف."
+     ],
+     "en": [
+      "Daily: T < 38 °C, non-offensive lochia, clean wound."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال فترة النفاس: لا عدوى."
+     ],
+     "en": [
+      "During the puerperium: no infection."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الحرارة والنبض كل 4 ساعات أول 24 ساعة ثم كل وردية.",
+      "en": "Temperature and pulse every 4 h for 24 h, then every shift."
+     },
+     "rationale": {
+      "ar": "حرارة ≥ 38 لمدة يومين بعد أول 24 ساعة تدل على حمى النفاس.",
+      "en": "T ≥ 38 °C on 2 days after the first 24 h indicates puerperal fever."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص قاع الرحم يوميًا (الارتفاع والتماسك والألم).",
+      "en": "Check fundus daily (height, tone, tenderness)."
+     },
+     "rationale": {
+      "ar": "الرحم الطري المؤلم أو بطء نزوله علامة التهاب.",
+      "en": "A soft tender or subinvoluted uterus suggests endometritis."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة الهلابة: اللون والكمية والرائحة.",
+      "en": "Observe lochia: colour, amount, odour."
+     },
+     "rationale": {
+      "ar": "الرائحة الكريهة علامة عدوى.",
+      "en": "Foul odour indicates infection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص جرح العجان أو القيصرية بمقياس REEDA (احمرار، تورم، كدمة، إفرازات، تقارب الحواف).",
+      "en": "Inspect perineal/cesarean wound using REEDA (redness, edema, ecchymosis, discharge, approximation)."
+     },
+     "rationale": {
+      "ar": "تقييم منظم للجرح.",
+      "en": "Structured wound assessment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل الأيدي والعناية بالعجان بالماء الدافئ من الأمام للخلف بعد كل حمام.",
+      "en": "Hand hygiene; perineal care with warm water front to back after each toilet."
+     },
+     "rationale": {
+      "ar": "يمنع نقل البكتيريا من الشرج.",
+      "en": "Prevents transfer of bowel bacteria."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير الفوطة الصحية كل 4 ساعات على الأقل.",
+      "en": "Change pads at least every 4 h."
+     },
+     "rationale": {
+      "ar": "الدم بيئة لنمو البكتيريا.",
+      "en": "Blood supports bacterial growth."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع التبول المنتظم كل 3–4 ساعات.",
+      "en": "Encourage voiding every 3–4 h."
+     },
+     "rationale": {
+      "ar": "احتباس البول يزيد التهاب المسالك ويمنع انقباض الرحم.",
+      "en": "Retention raises UTI risk and impairs uterine contraction."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المضاد الحيوي والحديد حسب الأمر.",
+      "en": "Give antibiotics and iron as ordered."
+     },
+     "rationale": {
+      "ar": "يعالج/يقي العدوى ويعوض الأنيميا.",
+      "en": "Treats/prevents infection; corrects anemia."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأم العناية بالعجان وعلامات الخطر: حرارة، رائحة كريهة، ألم بطن، احمرار الثدي.",
+      "en": "Teach perineal care and danger signs: fever, foul lochia, abdominal pain, breast redness."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر في البيت.",
+      "en": "Early detection at home."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحرارة 37.0، الهلابة بدون رائحة، الجرح REEDA = 1 — تحقق.",
+      "en": "T 37.0, non-offensive lochia, REEDA 1 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة علامات العدوى",
+      "en": "Monitor for infection"
+     },
+     "actions": {
+      "ar": [
+       "قياس الحرارة والنبض كل 4 ساعات أول 24 ساعة ثم كل وردية.",
+       "فحص قاع الرحم يوميًا (الارتفاع والتماسك والألم).",
+       "ملاحظة الهلابة: اللون والكمية والرائحة.",
+       "فحص جرح العجان أو القيصرية بمقياس REEDA (احمرار، تورم، كدمة، إفرازات، تقارب الحواف)."
+      ],
+      "en": [
+       "Temperature and pulse every 4 h for 24 h, then every shift.",
+       "Check fundus daily (height, tone, tenderness).",
+       "Observe lochia: colour, amount, odour.",
+       "Inspect perineal/cesarean wound using REEDA (redness, edema, ecchymosis, discharge, approximation)."
+      ]
+     },
+     "outcome": {
+      "ar": "لا حمى ولا رائحة ولا التهاب جرح.",
+      "en": "No fever, odour or wound inflammation."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "النظافة والوقاية",
+      "en": "Hygiene and prevention"
+     },
+     "actions": {
+      "ar": [
+       "غسل الأيدي والعناية بالعجان بالماء الدافئ من الأمام للخلف بعد كل حمام.",
+       "تغيير الفوطة الصحية كل 4 ساعات على الأقل.",
+       "تشجيع التبول المنتظم كل 3–4 ساعات.",
+       "إعطاء المضاد الحيوي والحديد حسب الأمر."
+      ],
+      "en": [
+       "Hand hygiene; perineal care with warm water front to back after each toilet.",
+       "Change pads at least every 4 h.",
+       "Encourage voiding every 3–4 h.",
+       "Give antibiotics and iron as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "عجان نظيف وتبول منتظم.",
+      "en": "Clean perineum, regular voiding."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف",
+      "en": "Teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم الأم العناية بالعجان وعلامات الخطر: حرارة، رائحة كريهة، ألم بطن، احمرار الثدي."
+      ],
+      "en": [
+       "Teach perineal care and danger signs: fever, foul lochia, abdominal pain, breast redness."
+      ]
+     },
+     "outcome": {
+      "ar": "الأم تذكر علامات الخطر.",
+      "en": "Mother states danger signs."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ineffective-breastfeeding",
+   "kind": "actual",
+   "title": {
+    "ar": "رضاعة طبيعية غير فعالة",
+    "en": "Ineffective Breastfeeding"
+   },
+   "definition": {
+    "ar": "صعوبة في إرضاع الطفل من الثدي قد تؤثر على تغذيته.",
+    "en": "Difficulty feeding the infant at the breast that may compromise nutrition."
+   },
+   "relatedTo": {
+    "ar": [
+     "وضع والتقام غير صحيح",
+     "أول ولادة وقلة الخبرة",
+     "ألم الحلمة"
+    ],
+    "en": [
+     "Poor positioning and latch",
+     "First baby, inexperience",
+     "Nipple pain"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم وتشقق الحلمة",
+     "الطفل يبكي بعد الرضعة",
+     "بلل أقل من 6 حفاضات يوميًا بعد اليوم الخامس"
+    ],
+    "en": [
+     "Sore, cracked nipples",
+     "Infant cries after feeds",
+     "< 6 wet nappies/day after day 5"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الرضاعة بتوجعني والبيبي مش بيشبع.\""
+     ],
+     "en": [
+      "\"Feeding hurts and baby isn't satisfied.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الطفل يلتقم الحلمة فقط.",
+      "تشقق الحلمة اليمنى."
+     ],
+     "en": [
+      "Infant latches on the nipple only.",
+      "Right nipple cracked."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: التقام صحيح وألم أقل أثناء الرضاعة."
+     ],
+     "en": [
+      "Within 24 h: correct latch and less pain."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال أسبوعين: رضاعة طبيعية فعالة والطفل يزيد وزنه."
+     ],
+     "en": [
+      "Within 2 weeks: effective breastfeeding and infant gaining weight."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة رضعة كاملة (الوضع، الالتقام، البلع المسموع).",
+      "en": "Observe a full feed (position, latch, audible swallowing)."
+     },
+     "rationale": {
+      "ar": "يحدد سبب المشكلة.",
+      "en": "Identifies the problem."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "مساعدة الأم على الوضع الصحيح: بطن الطفل لبطن الأم، الأنف أمام الحلمة.",
+      "en": "Help with positioning: tummy to tummy, nose to nipple."
+     },
+     "rationale": {
+      "ar": "أساس الالتقام الصحيح.",
+      "en": "Basis of correct latch."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعليم الالتقام الصحيح: الفم مفتوح واسعًا ويشمل الهالة.",
+      "en": "Teach correct latch: wide mouth covering the areola."
+     },
+     "rationale": {
+      "ar": "يمنع ألم الحلمة ويحسن تدفق اللبن.",
+      "en": "Prevents nipple pain and improves milk transfer."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع الرضاعة عند الطلب 8–12 مرة يوميًا وملامسة الجلد للجلد.",
+      "en": "Encourage on-demand feeding 8–12 times/day and skin-to-skin contact."
+     },
+     "rationale": {
+      "ar": "يزيد إدرار اللبن.",
+      "en": "Increases milk supply."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "دهن الحلمة بقطرات من لبن الأم بعد الرضاعة وتجفيفها بالهواء.",
+      "en": "Apply expressed breast milk to nipples after feeds and air-dry."
+     },
+     "rationale": {
+      "ar": "يساعد التئام التشققات.",
+      "en": "Aids healing of cracks."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة عدد الحفاضات المبللة والبراز ووزن الطفل.",
+      "en": "Track wet nappies, stools and infant weight."
+     },
+     "rationale": {
+      "ar": "مؤشر كفاية الرضاعة.",
+      "en": "Indicates adequate intake."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إحالة لاستشارية رضاعة عند استمرار المشكلة.",
+      "en": "Refer to a lactation consultant if problems persist."
+     },
+     "rationale": {
+      "ar": "دعم متخصص.",
+      "en": "Specialist support."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأم شفط اللبن وحفظه وتغذية متوازنة وشرب السوائل.",
+      "en": "Teach milk expression and storage, balanced diet and fluids."
+     },
+     "rationale": {
+      "ar": "يحافظ على الإدرار.",
+      "en": "Maintains supply."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التقام صحيح، الألم 2/10، الطفل يبلل 7 حفاضات — تحقق.",
+      "en": "Correct latch, pain 2/10, 7 wet nappies — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الرضاعة",
+      "en": "Assess feeding"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة رضعة كاملة (الوضع، الالتقام، البلع المسموع).",
+       "متابعة عدد الحفاضات المبللة والبراز ووزن الطفل."
+      ],
+      "en": [
+       "Observe a full feed (position, latch, audible swallowing).",
+       "Track wet nappies, stools and infant weight."
+      ]
+     },
+     "outcome": {
+      "ar": "رضاعة كافية.",
+      "en": "Adequate intake."
+     },
+     "timeframe": {
+      "ar": "كل رضعة أول يومين",
+      "en": "Each feed for 2 days"
+     }
+    },
+    {
+     "need": {
+      "ar": "وضع والتقام صحيح",
+      "en": "Positioning and latch"
+     },
+     "actions": {
+      "ar": [
+       "مساعدة الأم على الوضع الصحيح: بطن الطفل لبطن الأم، الأنف أمام الحلمة.",
+       "تعليم الالتقام الصحيح: الفم مفتوح واسعًا ويشمل الهالة.",
+       "تشجيع الرضاعة عند الطلب 8–12 مرة يوميًا وملامسة الجلد للجلد.",
+       "دهن الحلمة بقطرات من لبن الأم بعد الرضاعة وتجفيفها بالهواء."
+      ],
+      "en": [
+       "Help with positioning: tummy to tummy, nose to nipple.",
+       "Teach correct latch: wide mouth covering the areola.",
+       "Encourage on-demand feeding 8–12 times/day and skin-to-skin contact.",
+       "Apply expressed breast milk to nipples after feeds and air-dry."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم أقل ورضاعة فعالة.",
+      "en": "Less pain, effective feeding."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "دعم واستمرار",
+      "en": "Support and continuity"
+     },
+     "actions": {
+      "ar": [
+       "إحالة لاستشارية رضاعة عند استمرار المشكلة.",
+       "تعليم الأم شفط اللبن وحفظه وتغذية متوازنة وشرب السوائل."
+      ],
+      "en": [
+       "Refer to a lactation consultant if problems persist.",
+       "Teach milk expression and storage, balanced diet and fluids."
+      ]
+     },
+     "outcome": {
+      "ar": "الأم واثقة.",
+      "en": "Mother confident."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "WHO recommendations on maternal and newborn care for a positive postnatal experience (2022)"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "maternal"
+}

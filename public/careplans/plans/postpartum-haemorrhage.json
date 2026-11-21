@@ -1,0 +1,506 @@
+{
+ "id": "postpartum-haemorrhage",
+ "icon": "🩸",
+ "system": "obstetrics",
+ "folder": "general",
+ "title": {
+  "ar": "نزيف ما بعد الولادة",
+  "en": "Postpartum Haemorrhage"
+ },
+ "summary": {
+  "ar": "خطة رعاية نزيف ما بعد الولادة: الأسباب الأربعة (Tone, Trauma, Tissue, Thrombin)، تدليك الرحم والإنعاش، والإرهاق والأنيميا بعد النزيف.",
+  "en": "PPH care plan: the 4 Ts, fundal massage and resuscitation, and postpartum fatigue and anemia."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-bleeding-pph",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر النزيف (نزيف ما بعد الولادة)",
+    "en": "Risk for Bleeding (Postpartum Haemorrhage)"
+   },
+   "definition": {
+    "ar": "قابلية لفقد دم ≥ 500 مل بعد الولادة الطبيعية أو ≥ 1000 مل بعد القيصرية.",
+    "en": "Susceptibility to blood loss ≥ 500 mL after vaginal or ≥ 1000 mL after cesarean birth."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ارتخاء الرحم (Tone)",
+     "تمزقات (Trauma)",
+     "بقايا مشيمة (Tissue)",
+     "اضطراب التجلط (Thrombin)",
+     "ولادة متعددة أو طفل كبير أو ولادة طويلة"
+    ],
+    "en": [
+     "Uterine atony (Tone)",
+     "Lacerations (Trauma)",
+     "Retained placenta (Tissue)",
+     "Coagulopathy (Thrombin)",
+     "Multiple pregnancy, large baby or prolonged labour"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسة إني دايخة.\""
+     ],
+     "en": [
+      "\"I feel dizzy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ولادة طفل 4.2 كجم بعد ولادة 18 ساعة.",
+      "الرحم طري فوق السرة.",
+      "الفوطة تمتلئ في 15 دقيقة.",
+      "النبض 112، الضغط 98/60."
+     ],
+     "en": [
+      "4.2 kg baby after an 18-hour labour.",
+      "Boggy uterus above the umbilicus.",
+      "Pad saturated in 15 minutes.",
+      "HR 112, BP 98/60."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 15 دقيقة: رحم متماسك تحت السرة ونزيف معتدل."
+     ],
+     "en": [
+      "Within 15 minutes: firm uterus below the umbilicus and moderate bleeding."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 24 ساعة: علامات حيوية مستقرة وهيموجلوبين ≥ 9."
+     ],
+     "en": [
+      "Within 24 h: stable vitals and Hb ≥ 9 g/dL."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص قاع الرحم والهلابة كل 15 دقيقة في الساعة الأولى ثم كل 30 دقيقة في الثانية.",
+      "en": "Check fundus and lochia every 15 min in hour 1, every 30 min in hour 2."
+     },
+     "rationale": {
+      "ar": "أغلب النزيف يحدث في أول ساعتين.",
+      "en": "Most PPH occurs in the first 2 hours."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "وزن الفوط أو قياس كمية الدم بدقة.",
+      "en": "Weigh pads or measure blood loss accurately."
+     },
+     "rationale": {
+      "ar": "التقدير بالعين أقل من الحقيقي.",
+      "en": "Visual estimates underestimate."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس النبض والضغط ومؤشر الصدمة (النبض ÷ الضغط الانقباضي).",
+      "en": "Monitor HR, BP and shock index (HR ÷ SBP)."
+     },
+     "rationale": {
+      "ar": "مؤشر > 0.9 يدل على فقد دم كبير.",
+      "en": "Index > 0.9 indicates significant loss."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تدليك قاع الرحم عند ارتخائه حتى يتماسك.",
+      "en": "Massage the fundus when boggy until firm."
+     },
+     "rationale": {
+      "ar": "يحفز انقباض الرحم ويوقف النزيف.",
+      "en": "Stimulates contraction and controls bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إفراغ المثانة (تشجيع التبول أو قسطرة).",
+      "en": "Empty the bladder (void or catheterize)."
+     },
+     "rationale": {
+      "ar": "المثانة الممتلئة تمنع انقباض الرحم.",
+      "en": "A full bladder prevents contraction."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "طلب المساعدة فورًا وتركيب كانيولتين كبيرتين وسحب عينات (صورة دم، تجلط، فصيلة وتوافق).",
+      "en": "Call for help; insert two large-bore cannulas; send CBC, clotting, group and crossmatch."
+     },
+     "rationale": {
+      "ar": "الاستجابة السريعة تنقذ الحياة.",
+      "en": "Rapid response saves lives."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأوكسيتوسين وأدوية انقباض الرحم وحمض الترانيكساميك حسب البروتوكول.",
+      "en": "Give oxytocin, uterotonics and tranexamic acid per protocol."
+     },
+     "rationale": {
+      "ar": "العلاج الأول لارتخاء الرحم.",
+      "en": "First-line for atony."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء السوائل والدم حسب الأمر ومتابعة البول بقسطرة.",
+      "en": "Give fluids and blood as ordered; monitor urine via catheter."
+     },
+     "rationale": {
+      "ar": "يعوض الحجم ويقيس التروية.",
+      "en": "Restores volume and monitors perfusion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع الرضاعة الطبيعية المبكرة.",
+      "en": "Encourage early breastfeeding."
+     },
+     "rationale": {
+      "ar": "تفرز الأوكسيتوسين الطبيعي.",
+      "en": "Releases natural oxytocin."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الرحم متماسك تحت السرة بعد التدليك والأوكسيتوسين، الدم المفقود 650 مل، النبض 92 — تحقق.",
+      "en": "Uterus firm after massage and oxytocin; EBL 650 mL; HR 92 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة النزيف",
+      "en": "Monitor bleeding"
+     },
+     "actions": {
+      "ar": [
+       "فحص قاع الرحم والهلابة كل 15 دقيقة في الساعة الأولى ثم كل 30 دقيقة في الثانية.",
+       "وزن الفوط أو قياس كمية الدم بدقة.",
+       "قياس النبض والضغط ومؤشر الصدمة (النبض ÷ الضغط الانقباضي)."
+      ],
+      "en": [
+       "Check fundus and lochia every 15 min in hour 1, every 30 min in hour 2.",
+       "Weigh pads or measure blood loss accurately.",
+       "Monitor HR, BP and shock index (HR ÷ SBP)."
+      ]
+     },
+     "outcome": {
+      "ar": "فقد دم مقاس ومؤشر صدمة < 0.9.",
+      "en": "Measured loss; shock index < 0.9."
+     },
+     "timeframe": {
+      "ar": "كل 15 دقيقة",
+      "en": "Every 15 min"
+     }
+    },
+    {
+     "need": {
+      "ar": "إيقاف النزيف",
+      "en": "Control bleeding"
+     },
+     "actions": {
+      "ar": [
+       "تدليك قاع الرحم عند ارتخائه حتى يتماسك.",
+       "إفراغ المثانة (تشجيع التبول أو قسطرة).",
+       "إعطاء الأوكسيتوسين وأدوية انقباض الرحم وحمض الترانيكساميك حسب البروتوكول.",
+       "تشجيع الرضاعة الطبيعية المبكرة."
+      ],
+      "en": [
+       "Massage the fundus when boggy until firm.",
+       "Empty the bladder (void or catheterize).",
+       "Give oxytocin, uterotonics and tranexamic acid per protocol.",
+       "Encourage early breastfeeding."
+      ]
+     },
+     "outcome": {
+      "ar": "رحم متماسك.",
+      "en": "Firm uterus."
+     },
+     "timeframe": {
+      "ar": "فوري",
+      "en": "Immediate"
+     }
+    },
+    {
+     "need": {
+      "ar": "الإنعاش",
+      "en": "Resuscitation"
+     },
+     "actions": {
+      "ar": [
+       "طلب المساعدة فورًا وتركيب كانيولتين كبيرتين وسحب عينات (صورة دم، تجلط، فصيلة وتوافق).",
+       "إعطاء السوائل والدم حسب الأمر ومتابعة البول بقسطرة."
+      ],
+      "en": [
+       "Call for help; insert two large-bore cannulas; send CBC, clotting, group and crossmatch.",
+       "Give fluids and blood as ordered; monitor urine via catheter."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مستقرة وبول ≥ 30 مل/ساعة.",
+      "en": "Stable vitals; urine ≥ 30 mL/h."
+     },
+     "timeframe": {
+      "ar": "حسب الحالة",
+      "en": "As needed"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fatigue-anemia-postpartum",
+   "kind": "actual",
+   "title": {
+    "ar": "الإرهاق (أنيميا بعد الولادة)",
+    "en": "Fatigue (Postpartum Anemia)"
+   },
+   "definition": {
+    "ar": "إحساس مستمر بالتعب ونقص القدرة على العمل البدني والذهني.",
+    "en": "Overwhelming sustained exhaustion and decreased physical and mental capacity."
+   },
+   "relatedTo": {
+    "ar": [
+     "فقد الدم ونقص الهيموجلوبين",
+     "قلة النوم ورعاية الطفل"
+    ],
+    "en": [
+     "Blood loss and low hemoglobin",
+     "Sleep loss and infant care"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تعب ودوخة عند الوقوف",
+     "شحوب",
+     "هيموجلوبين < 10"
+    ],
+    "en": [
+     "Tiredness and dizziness on standing",
+     "Pallor",
+     "Hb < 10 g/dL"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"تعبانة جدًا ومش قادرة أشيل البيبي.\""
+     ],
+     "en": [
+      "\"I'm exhausted and can't hold the baby.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "هيموجلوبين 8.4، شحوب، نبض 100."
+     ],
+     "en": [
+      "Hb 8.4, pale, HR 100."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: تقوم الأم برعاية نفسها وطفلها بمساعدة بسيطة."
+     ],
+     "en": [
+      "Within 48 h: performs self and infant care with minimal help."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 6 أسابيع: هيموجلوبين ≥ 11 وطاقة طبيعية."
+     ],
+     "en": [
+      "Within 6 weeks: Hb ≥ 11 and normal energy."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى التعب والدوخة والهيموجلوبين.",
+      "en": "Assess fatigue, dizziness and hemoglobin."
+     },
+     "rationale": {
+      "ar": "يحدد الشدة.",
+      "en": "Defines severity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيم فترات الراحة والنوم وقت نوم الطفل.",
+      "en": "Plan rest periods; sleep when the baby sleeps."
+     },
+     "rationale": {
+      "ar": "يعوض قلة النوم.",
+      "en": "Compensates sleep loss."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "القيام من السرير ببطء وبمساعدة أول مرة.",
+      "en": "Rise slowly with help the first time."
+     },
+     "rationale": {
+      "ar": "يمنع السقوط بسبب الدوخة.",
+      "en": "Prevents falls from dizziness."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إشراك الأسرة في رعاية الطفل والمنزل.",
+      "en": "Involve family in baby and home care."
+     },
+     "rationale": {
+      "ar": "يقلل الحمل على الأم.",
+      "en": "Reduces maternal load."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الحديد الفموي أو الوريدي حسب الأمر، ونقل الدم عند الحاجة.",
+      "en": "Give oral or IV iron as ordered; transfuse if needed."
+     },
+     "rationale": {
+      "ar": "يعالج الأنيميا.",
+      "en": "Treats anemia."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم تناول الحديد مع فيتامين C وبعيدًا عن الشاي، وأكل غني بالحديد.",
+      "en": "Take iron with vitamin C, away from tea; iron-rich foods."
+     },
+     "rationale": {
+      "ar": "يحسن الامتصاص.",
+      "en": "Improves absorption."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح أن البراز يصبح داكنًا مع الحديد.",
+      "en": "Explain iron darkens stools."
+     },
+     "rationale": {
+      "ar": "يقلل القلق.",
+      "en": "Reduces worry."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "تقوم بالرعاية بمساعدة، الهيموجلوبين 8.9 — تحقق جزئيًا، متابعة بعد أسبوعين.",
+      "en": "Self-care with help; Hb 8.9 — partially met, follow up in 2 weeks."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل الإرهاق",
+      "en": "Reduce fatigue"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى التعب والدوخة والهيموجلوبين.",
+       "تنظيم فترات الراحة والنوم وقت نوم الطفل.",
+       "القيام من السرير ببطء وبمساعدة أول مرة.",
+       "إشراك الأسرة في رعاية الطفل والمنزل."
+      ],
+      "en": [
+       "Assess fatigue, dizziness and hemoglobin.",
+       "Plan rest periods; sleep when the baby sleeps.",
+       "Rise slowly with help the first time.",
+       "Involve family in baby and home care."
+      ]
+     },
+     "outcome": {
+      "ar": "رعاية ذاتية بمساعدة بسيطة.",
+      "en": "Self-care with minimal help."
+     },
+     "timeframe": {
+      "ar": "48 ساعة",
+      "en": "48 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "علاج الأنيميا",
+      "en": "Treat anemia"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء الحديد الفموي أو الوريدي حسب الأمر، ونقل الدم عند الحاجة.",
+       "تعليم تناول الحديد مع فيتامين C وبعيدًا عن الشاي، وأكل غني بالحديد.",
+       "شرح أن البراز يصبح داكنًا مع الحديد."
+      ],
+      "en": [
+       "Give oral or IV iron as ordered; transfuse if needed.",
+       "Take iron with vitamin C, away from tea; iron-rich foods.",
+       "Explain iron darkens stools."
+      ]
+     },
+     "outcome": {
+      "ar": "هيموجلوبين يرتفع.",
+      "en": "Rising Hb."
+     },
+     "timeframe": {
+      "ar": "6 أسابيع",
+      "en": "6 weeks"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "WHO recommendations for the prevention and treatment of postpartum haemorrhage (2012, updated 2023)"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "maternal"
+}
