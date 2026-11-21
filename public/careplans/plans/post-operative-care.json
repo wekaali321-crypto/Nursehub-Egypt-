@@ -2,19 +2,48 @@
  "id": "post-operative-care",
  "icon": "🏥",
  "system": "surgery",
+ "folder": "disease",
  "title": {
-  "ar": "رعاية ما بعد العمليات الجراحية (البطن)",
-  "en": "Post-operative Care (Abdominal Surgery)"
+  "ar": "الرعاية بعد العمليات الجراحية",
+  "en": "Post-operative Care"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض بعد عملية بالبطن: تسكين الألم، الوقاية من عدوى الجرح، وتنشيط الحركة والتنفس.",
-  "en": "Care plan after abdominal surgery: pain relief, wound-infection prevention, early mobility and breathing."
+  "ar": "خطة رعاية لمريض ما بعد العملية: الألم، مجرى الهواء بعد التخدير، عدوى الجرح، النزيف والسوائل، الجلطات، وحركة الأمعاء.",
+  "en": "Post-operative care plan: pain, post-anesthesia airway, wound infection, bleeding and fluids, VTE, and bowel motility."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "ألم حاد (Acute pain) مرتبط بالجرح الجراحي ويظهر في شدة ألم 7/10 وحماية مكان الجرح.",
-    "en": "Acute pain related to surgical incision as evidenced by pain 7/10 and guarding of the wound."
+   "id": "acute-pain-postop",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد بعد العملية",
+    "en": "Acute Pain (Post-operative)"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف فعلي في الأنسجة، مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory and emotional experience associated with actual tissue damage, lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "الجرح الجراحي",
+     "تشنج العضلات والأنابيب (درنقة، أنبوبة أنفية)"
+    ],
+    "en": [
+     "Surgical incision",
+     "Muscle spasm and tubes (drain, NG tube)"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم 7/10",
+     "حماية مكان الجرح",
+     "تغير العلامات الحيوية (نبض وضغط مرتفع)"
+    ],
+    "en": [
+     "Pain 7/10",
+     "Guarding of the incision",
+     "Raised pulse and BP"
+    ]
    },
    "assessment": {
     "subjective": {
@@ -22,278 +51,1388 @@
       "\"الجرح بيوجعني جامد لما أتحرك أو أكح.\""
      ],
      "en": [
-      "\"The wound hurts a lot when I move or cough.\""
+      "\"The wound hurts badly when I move or cough.\""
      ]
     },
     "objective": {
      "ar": [
-      "ألم 7/10، تعبير ألم على الوجه.",
-      "النبض 100، الضغط 140/85.",
-      "يرفض الحركة من السرير."
+      "ألم 7/10 في مكان جرح البطن.",
+      "النبض 108، الضغط 150/90.",
+      "يرفض التحرك من السرير."
      ],
      "en": [
-      "Pain 7/10; facial grimacing.",
-      "Pulse 100, BP 140/85.",
+      "Pain 7/10 at the abdominal incision.",
+      "HR 108, BP 150/90.",
       "Refuses to get out of bed."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال ساعة من المسكن يقل الألم إلى ≤ 3/10، ويستطيع المريض الكحة والمشي بمساعدة في اليوم الأول."
-    ],
-    "en": [
-     "Within an hour of analgesia pain is ≤ 3/10 and the patient can cough and walk with help on day 1."
-    ]
+    "short": {
+     "ar": [
+      "خلال ساعة من المسكن: ألم ≤ 3/10 ويستطيع الكحة والتحرك."
+     ],
+     "en": [
+      "Within 1 hour of analgesia: pain ≤ 3/10; able to cough and move."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: ألم محتمل بالمسكنات الفموية."
+     ],
+     "en": [
+      "Before discharge: pain controlled with oral analgesics."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "تقييم الألم بمقياس رقمي قبل المسكن وبعده بـ 30–60 دقيقة.",
-      "en": "Assess pain on a numeric scale before and 30–60 minutes after analgesia."
+      "ar": "تقييم الألم (المكان، الشدة 0–10، النوع) كل 2–4 ساعات وقبل وبعد المسكن.",
+      "en": "Assess pain (site, 0–10 score, character) every 2–4 h and before/after analgesia."
      },
      "rationale": {
-      "ar": "يقيس فعالية التسكين ويحدد الحاجة لتعديله.",
-      "en": "Evaluates analgesia and the need to adjust it."
+      "ar": "يوجه العلاج ويقيس فعاليته.",
+      "en": "Guides treatment and measures effect."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "إعطاء المسكنات بانتظام حسب الأمر (قبل أن يشتد الألم).",
-      "en": "Give analgesics regularly as ordered (before pain becomes severe)."
+      "ar": "التفريق بين ألم الجرح المتوقع والألم غير المعتاد (انتفاخ شديد، ألم بطن منتشر، ألم في الساق أو الصدر).",
+      "en": "Differentiate expected incision pain from unusual pain (marked distension, diffuse abdominal pain, calf or chest pain)."
      },
      "rationale": {
-      "ar": "التسكين المنتظم أكثر فعالية ويسمح بالحركة والتنفس العميق.",
-      "en": "Regular analgesia is more effective and enables mobility and deep breathing."
+      "ar": "قد يدل على مضاعفات كالتسريب أو الجلطة.",
+      "en": "May signal complications such as leak or thrombosis."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "تعليم سند الجرح بوسادة أثناء الكحة والحركة.",
-      "en": "Teach splinting the wound with a pillow when coughing and moving."
+      "ar": "إعطاء المسكنات في مواعيدها ومتابعة جهاز التسكين المتحكم فيه بالمريض (PCA) إن وجد.",
+      "en": "Give scheduled analgesia; monitor patient-controlled analgesia (PCA) if used."
+     },
+     "rationale": {
+      "ar": "التسكين المنتظم يمنع اشتداد الألم.",
+      "en": "Regular analgesia prevents peaks."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة معدل التنفس ومستوى الوعي مع المسكنات الأفيونية.",
+      "en": "Monitor respiratory rate and sedation level with opioids."
+     },
+     "rationale": {
+      "ar": "الأفيونات قد تثبط التنفس.",
+      "en": "Opioids may depress breathing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعليم المريض سند الجرح بوسادة عند الكحة والحركة.",
+      "en": "Teach splinting the incision with a pillow when coughing or moving."
      },
      "rationale": {
       "ar": "يقلل الشد على الجرح والألم.",
-      "en": "Reduces tension on the incision and pain."
+      "en": "Reduces tension and pain."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "وضع مريح ووسائل غير دوائية (تنفس هادئ، تقليل الضوضاء).",
-      "en": "Comfortable positioning and non-drug measures (relaxed breathing, quiet room)."
+      "ar": "وضع مريح (شبه جالس مع ثني الركبتين في جراحة البطن).",
+      "en": "Comfortable position (semi-Fowler with knees flexed after abdominal surgery)."
      },
      "rationale": {
-      "ar": "تقلل الإحساس بالألم والقلق.",
-      "en": "Reduce pain perception and anxiety."
+      "ar": "يرخي عضلات البطن.",
+      "en": "Relaxes abdominal muscles."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "متابعة الآثار الجانبية للمورفين (تنفس بطيء، نعاس، إمساك).",
-      "en": "Monitor opioid side effects (slow breathing, sedation, constipation)."
+      "ar": "إعطاء المسكن قبل التحريك أو تغيير الغيار بـ 30 دقيقة.",
+      "en": "Give analgesia 30 minutes before mobilization or dressing changes."
      },
      "rationale": {
-      "ar": "السلامة أثناء استخدام المسكنات القوية.",
-      "en": "Safety during strong analgesic use."
+      "ar": "يسمح بالمشاركة في الأنشطة.",
+      "en": "Allows participation in activities."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وسائل غير دوائية: التنفس العميق، الاسترخاء، الإلهاء.",
+      "en": "Non-drug measures: deep breathing, relaxation, distraction."
+     },
+     "rationale": {
+      "ar": "تكمل المسكن.",
+      "en": "Complements analgesia."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "الألم 3/10 بعد المسكن، والمريض كحّ مع سند الجرح ومشى في الممر بمساعدة. — تحقق الهدف."
-    ],
-    "en": [
-     "Pain 3/10 after analgesia; patient coughed with splinting and walked the corridor with help. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 بعد ساعة، يكح بسند الجرح ويتحرك للكرسي — تحقق.",
+      "en": "Pain 3/10 at 1 hour; coughs with splinting and moves to chair — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الألم",
+      "en": "Pain assessment"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الألم (المكان، الشدة 0–10، النوع) كل 2–4 ساعات وقبل وبعد المسكن.",
+       "التفريق بين ألم الجرح المتوقع والألم غير المعتاد (انتفاخ شديد، ألم بطن منتشر، ألم في الساق أو الصدر).",
+       "متابعة معدل التنفس ومستوى الوعي مع المسكنات الأفيونية."
+      ],
+      "en": [
+       "Assess pain (site, 0–10 score, character) every 2–4 h and before/after analgesia.",
+       "Differentiate expected incision pain from unusual pain (marked distension, diffuse abdominal pain, calf or chest pain).",
+       "Monitor respiratory rate and sedation level with opioids."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم موثق وأي ألم غير معتاد مبلغ.",
+      "en": "Pain documented; unusual pain reported."
+     },
+     "timeframe": {
+      "ar": "كل 2–4 ساعات",
+      "en": "Every 2–4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تسكين فعال",
+      "en": "Effective analgesia"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء المسكنات في مواعيدها ومتابعة جهاز التسكين المتحكم فيه بالمريض (PCA) إن وجد.",
+       "إعطاء المسكن قبل التحريك أو تغيير الغيار بـ 30 دقيقة."
+      ],
+      "en": [
+       "Give scheduled analgesia; monitor patient-controlled analgesia (PCA) if used.",
+       "Give analgesia 30 minutes before mobilization or dressing changes."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "خلال ساعة",
+      "en": "Within 1 hour"
+     }
+    },
+    {
+     "need": {
+      "ar": "راحة وحماية الجرح",
+      "en": "Comfort and wound protection"
+     },
+     "actions": {
+      "ar": [
+       "تعليم المريض سند الجرح بوسادة عند الكحة والحركة.",
+       "وضع مريح (شبه جالس مع ثني الركبتين في جراحة البطن).",
+       "وسائل غير دوائية: التنفس العميق، الاسترخاء، الإلهاء."
+      ],
+      "en": [
+       "Teach splinting the incision with a pillow when coughing or moving.",
+       "Comfortable position (semi-Fowler with knees flexed after abdominal surgery).",
+       "Non-drug measures: deep breathing, relaxation, distraction."
+      ]
+     },
+     "outcome": {
+      "ar": "يكح ويتحرك بألم محتمل.",
+      "en": "Coughs and moves with tolerable pain."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر العدوى (Risk for infection) مرتبط بالجرح الجراحي والإجراءات التداخلية (قسطرة بولية، كانيولا).",
-    "en": "Risk for infection related to surgical incision and invasive devices (urinary catheter, cannula)."
+   "id": "ineffective-airway-clearance-postop",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدم فعالية تنظيف مجرى الهواء بعد التخدير",
+    "en": "Risk for Ineffective Airway Clearance (Post-anesthesia)"
+   },
+   "definition": {
+    "ar": "قابلية لعدم القدرة على إزالة الإفرازات أو انسداد مجرى الهواء بعد التخدير العام.",
+    "en": "Susceptibility to inability to clear secretions or airway obstruction after general anesthesia."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "أثر التخدير والأفيونات",
+     "ألم الجرح يمنع الكحة",
+     "قلة الحركة",
+     "التدخين"
+    ],
+    "en": [
+     "Residual anesthesia and opioids",
+     "Incision pain limiting cough",
+     "Immobility",
+     "Smoking"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"حاسس الجرح بيشد.\""
+      "\"مش قادر آخد نفس عميق من الجرح.\""
      ],
      "en": [
-      "\"The wound feels tight.\""
+      "\"I can't breathe deeply because of the wound.\""
      ]
     },
     "objective": {
      "ar": [
-      "جرح بطن 12 سم مغلق بغرز ونظيف.",
-      "قسطرة بولية وكانيولا وريدية.",
-      "مريض سكر (عامل خطورة)."
+      "نعسان بعد الإفاقة، التنفس 14 سطحي.",
+      "التشبع 93% على 2 لتر أكسجين.",
+      "أصوات ضعيفة في القاعدتين."
      ],
      "en": [
-      "Closed, clean 12 cm abdominal incision with sutures.",
-      "Urinary catheter and IV cannula in place.",
-      "Diabetic (risk factor)."
+      "Drowsy after recovery; RR 14, shallow.",
+      "SpO₂ 93% on 2 L O₂.",
+      "Diminished bases."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "حتى الخروج: الجرح يلتئم دون احمرار أو صديد، والحرارة طبيعية."
-    ],
-    "en": [
-     "Until discharge: the wound heals without redness or pus and temperature stays normal."
-    ]
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: صدر واضح وتشبع ≥ 95% واستخدام جهاز التنفس التحفيزي 10 مرات/ساعة."
+     ],
+     "en": [
+      "Within 24 h: clear chest, SpO₂ ≥ 95%, incentive spirometer 10 times/hour."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال الإقامة: لا انخماص رئوي أو التهاب رئوي بعد العملية."
+     ],
+     "en": [
+      "Throughout the stay: no atelectasis or post-op pneumonia."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "غسل اليدين وتغيير الغيار بطريقة معقمة حسب السياسة.",
-      "en": "Hand hygiene and aseptic dressing changes per policy."
+      "ar": "في الإفاقة: متابعة مجرى الهواء والتنفس والتشبع كل 15 دقيقة حتى يستقر.",
+      "en": "In recovery: airway, breathing and SpO₂ every 15 minutes until stable."
      },
      "rationale": {
-      "ar": "يمنع نقل الميكروبات للجرح.",
-      "en": "Prevents transfer of organisms to the wound."
+      "ar": "أعلى خطر لانسداد مجرى الهواء بعد التخدير مباشرة.",
+      "en": "Airway obstruction risk peaks right after anesthesia."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "ملاحظة الجرح يوميًا (احمرار، سخونة، ورم، إفرازات، فتح).",
-      "en": "Inspect the wound daily (redness, warmth, swelling, discharge, dehiscence)."
+      "ar": "وضع المريض غير الواعي على جانبه أو رفع الذقن، وتوفير جهاز الشفط.",
+      "en": "Place the unconscious patient on his side or use chin lift; keep suction ready."
      },
      "rationale": {
-      "ar": "يكشف العدوى مبكرًا.",
-      "en": "Detects infection early."
+      "ar": "يمنع سقوط اللسان والشفط للرئة.",
+      "en": "Prevents tongue obstruction and aspiration."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "قياس الحرارة كل 4 ساعات.",
-      "en": "Check temperature every 4 hours."
+      "ar": "سماع الصدر كل 4 ساعات أول يومين.",
+      "en": "Auscultate the chest every 4 h for 2 days."
      },
      "rationale": {
-      "ar": "الحرارة بعد اليوم الثالث قد تدل على عدوى.",
+      "ar": "يكشف الانخماص مبكرًا.",
+      "en": "Detects atelectasis early."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التنفس العميق والكحة مع سند الجرح كل ساعة أثناء الاستيقاظ.",
+      "en": "Deep breathing and splinted coughing hourly while awake."
+     },
+     "rationale": {
+      "ar": "يفتح الحويصلات ويخرج الإفرازات.",
+      "en": "Opens alveoli and clears secretions."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام جهاز التنفس التحفيزي 10 مرات كل ساعة.",
+      "en": "Incentive spirometer 10 times per hour."
+     },
+     "rationale": {
+      "ar": "يمنع الانخماص.",
+      "en": "Prevents atelectasis."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع رأس السرير 30–45 درجة والتحريك المبكر.",
+      "en": "Head of bed 30–45° and early mobilization."
+     },
+     "rationale": {
+      "ar": "يحسن تمدد الرئة.",
+      "en": "Improves lung expansion."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "أكسجين حسب الأمر حتى يستقر التشبع على هواء الغرفة.",
+      "en": "Oxygen as ordered until SpO₂ is stable on room air."
+     },
+     "rationale": {
+      "ar": "يعالج نقص الأكسجين.",
+      "en": "Treats hypoxemia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شرب السوائل عند السماح بالأكل.",
+      "en": "Encourage fluids when oral intake is allowed."
+     },
+     "rationale": {
+      "ar": "يخفف الإفرازات.",
+      "en": "Thins secretions."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الصدر واضح يوم 2، التشبع 96% على هواء الغرفة — تحقق.",
+      "en": "Chest clear on day 2; SpO₂ 96% on room air — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "مجرى هواء مفتوح",
+      "en": "Patent airway"
+     },
+     "actions": {
+      "ar": [
+       "في الإفاقة: متابعة مجرى الهواء والتنفس والتشبع كل 15 دقيقة حتى يستقر.",
+       "وضع المريض غير الواعي على جانبه أو رفع الذقن، وتوفير جهاز الشفط.",
+       "أكسجين حسب الأمر حتى يستقر التشبع على هواء الغرفة."
+      ],
+      "en": [
+       "In recovery: airway, breathing and SpO₂ every 15 minutes until stable.",
+       "Place the unconscious patient on his side or use chin lift; keep suction ready.",
+       "Oxygen as ordered until SpO₂ is stable on room air."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع ≥ 95%.",
+      "en": "SpO₂ ≥ 95%."
+     },
+     "timeframe": {
+      "ar": "كل 15 دقيقة في الإفاقة",
+      "en": "Every 15 min in recovery"
+     }
+    },
+    {
+     "need": {
+      "ar": "تمارين التنفس",
+      "en": "Breathing exercises"
+     },
+     "actions": {
+      "ar": [
+       "سماع الصدر كل 4 ساعات أول يومين.",
+       "التنفس العميق والكحة مع سند الجرح كل ساعة أثناء الاستيقاظ.",
+       "استخدام جهاز التنفس التحفيزي 10 مرات كل ساعة.",
+       "رفع رأس السرير 30–45 درجة والتحريك المبكر.",
+       "شرب السوائل عند السماح بالأكل."
+      ],
+      "en": [
+       "Auscultate the chest every 4 h for 2 days.",
+       "Deep breathing and splinted coughing hourly while awake.",
+       "Incentive spirometer 10 times per hour.",
+       "Head of bed 30–45° and early mobilization.",
+       "Encourage fluids when oral intake is allowed."
+      ]
+     },
+     "outcome": {
+      "ar": "صدر واضح بدون انخماص.",
+      "en": "Clear chest without atelectasis."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-surgical-site-infection",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدوى الجرح الجراحي",
+    "en": "Risk for Surgical Site Infection"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة لمكان الجراحة.",
+    "en": "Susceptibility to invasion of the surgical site by pathogenic organisms."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "الجرح الجراحي",
+     "الدرنقات والقسطرة والكانيولا",
+     "السكري أو السمنة أو التدخين",
+     "سوء التغذية"
+    ],
+    "en": [
+     "Surgical incision",
+     "Drains, catheter and cannula",
+     "Diabetes, obesity or smoking",
+     "Malnutrition"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الجرح بيشد عليا شوية.\""
+     ],
+     "en": [
+      "\"The wound feels a little tight.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "جرح بطن 12 سم مغطى بغيار جاف.",
+      "درنقة بها 80 مل سائل مدمم.",
+      "سكر عشوائي 210."
+     ],
+     "en": [
+      "12 cm abdominal incision with a dry dressing.",
+      "Drain with 80 mL serosanguinous fluid.",
+      "Random glucose 210."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل يوم: الجرح نظيف وجاف وحوافه ملتئمة، الحرارة < 38."
+     ],
+     "en": [
+      "Daily: wound clean, dry, edges approximated; T < 38 °C."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: لا عدوى في الجرح."
+     ],
+     "en": [
+      "Before discharge: no wound infection."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص الجرح يوميًا: احمرار، تورم، سخونة، إفرازات، رائحة، تباعد الحواف.",
+      "en": "Inspect the wound daily: redness, swelling, heat, drainage, odour, dehiscence."
+     },
+     "rationale": {
+      "ar": "اكتشاف العدوى مبكرًا.",
+      "en": "Early infection detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الحرارة كل 4 ساعات ومتابعة كرات الدم البيضاء.",
+      "en": "Temperature every 4 h; monitor WBC."
+     },
+     "rationale": {
+      "ar": "الحمى بعد اليوم الثالث قد تدل على عدوى.",
       "en": "Fever after day 3 may indicate infection."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "إزالة القسطرة والكانيولا في أقرب وقت يسمح به الطبيب.",
-      "en": "Remove catheter and cannula as early as the physician allows."
+      "ar": "غسل الأيدي قبل وبعد التعامل مع الجرح.",
+      "en": "Hand hygiene before and after wound contact."
      },
      "rationale": {
-      "ar": "كل يوم إضافي يزيد خطر العدوى.",
-      "en": "Each extra day increases infection risk."
+      "ar": "أهم وسيلة لمنع العدوى.",
+      "en": "The most important prevention measure."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "متابعة سكر الدم وتشجيع تغذية غنية بالبروتين.",
-      "en": "Monitor blood glucose and encourage protein-rich nutrition."
+      "ar": "تغيير الغيار بتقنية معقمة حسب البروتوكول وعدم فتحه أول 48 ساعة إلا عند الحاجة.",
+      "en": "Aseptic dressing changes per protocol; keep the initial dressing for 48 h unless needed."
      },
      "rationale": {
-      "ar": "ارتفاع السكر وسوء التغذية يؤخران الالتئام.",
-      "en": "Hyperglycemia and malnutrition delay healing."
+      "ar": "يحمي الجرح أثناء الالتئام الأولي.",
+      "en": "Protects the wound during initial healing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "متابعة كمية ونوع إفرازات الدرنقة وتفريغها بطريقة معقمة.",
+      "en": "Record drain output and type; empty aseptically."
+     },
+     "rationale": {
+      "ar": "التغير في الإفرازات يدل على مضاعفات.",
+      "en": "Changing output indicates complications."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المضاد الحيوي في مواعيده حسب الأمر.",
+      "en": "Give antibiotics on time as ordered."
+     },
+     "rationale": {
+      "ar": "يحافظ على مستوى فعال.",
+      "en": "Maintains effective levels."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "ضبط السكر < 180 مجم/دل حسب البروتوكول.",
+      "en": "Keep glucose < 180 mg/dL per protocol."
+     },
+     "rationale": {
+      "ar": "ارتفاع السكر يضعف المناعة والالتئام.",
+      "en": "Hyperglycemia impairs immunity and healing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إزالة القسطرة والكانيولا بمجرد عدم الحاجة.",
+      "en": "Remove catheter and cannula as soon as not needed."
+     },
+     "rationale": {
+      "ar": "كل جهاز مدخل للعدوى.",
+      "en": "Every device is a route for infection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض عدم لمس الجرح والإبلاغ عن الاحمرار أو الإفرازات، والعناية بالجرح في البيت.",
+      "en": "Teach not to touch the wound, to report redness/drainage, and home wound care."
+     },
+     "rationale": {
+      "ar": "الوقاية تستمر بعد الخروج.",
+      "en": "Prevention continues after discharge."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "الجرح نظيف وملتئم، الحرارة طبيعية، وأزيلت القسطرة في اليوم الثاني. — تحقق الهدف."
-    ],
-    "en": [
-     "Wound clean and healing, temperature normal, catheter removed on day 2. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "ألم حاد بعد العملية",
-    "en": "Acute post-operative pain"
-   },
-   "need": {
-    "ar": "تسكين الألم",
-    "en": "Pain relief"
-   },
-   "actions": {
-    "ar": [
-     "تقييم الألم قبل وبعد المسكن",
-     "مسكنات منتظمة حسب الأمر",
-     "سند الجرح بوسادة"
-    ],
-    "en": [
-     "Assess pain before/after analgesia",
-     "Regular analgesia as ordered",
-     "Splint wound with pillow"
-    ]
-   },
-   "outcome": {
-    "ar": "ألم ≤ 3/10",
-    "en": "Pain ≤ 3/10"
-   },
-   "timeframe": {
-    "ar": "كل 4 ساعات",
-    "en": "Every 4 hours"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الجرح نظيف وجاف، الحرارة 37.2، الدرنقة أزيلت يوم 3 — تحقق.",
+      "en": "Wound clean and dry, T 37.2, drain removed on day 3 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة الجرح",
+      "en": "Wound monitoring"
+     },
+     "actions": {
+      "ar": [
+       "فحص الجرح يوميًا: احمرار، تورم، سخونة، إفرازات، رائحة، تباعد الحواف.",
+       "قياس الحرارة كل 4 ساعات ومتابعة كرات الدم البيضاء.",
+       "متابعة كمية ونوع إفرازات الدرنقة وتفريغها بطريقة معقمة."
+      ],
+      "en": [
+       "Inspect the wound daily: redness, swelling, heat, drainage, odour, dehiscence.",
+       "Temperature every 4 h; monitor WBC.",
+       "Record drain output and type; empty aseptically."
+      ]
+     },
+     "outcome": {
+      "ar": "لا علامات عدوى.",
+      "en": "No infection signs."
+     },
+     "timeframe": {
+      "ar": "يوميًا / كل 4 ساعات",
+      "en": "Daily / every 4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تقنية معقمة",
+      "en": "Aseptic technique"
+     },
+     "actions": {
+      "ar": [
+       "غسل الأيدي قبل وبعد التعامل مع الجرح.",
+       "تغيير الغيار بتقنية معقمة حسب البروتوكول وعدم فتحه أول 48 ساعة إلا عند الحاجة.",
+       "إزالة القسطرة والكانيولا بمجرد عدم الحاجة."
+      ],
+      "en": [
+       "Hand hygiene before and after wound contact.",
+       "Aseptic dressing changes per protocol; keep the initial dressing for 48 h unless needed.",
+       "Remove catheter and cannula as soon as not needed."
+      ]
+     },
+     "outcome": {
+      "ar": "غيار سليم وأجهزة أقل.",
+      "en": "Intact dressing, fewer devices."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "علاج ووقاية",
+      "en": "Treatment and prevention"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء المضاد الحيوي في مواعيده حسب الأمر.",
+       "ضبط السكر < 180 مجم/دل حسب البروتوكول.",
+       "تعليم المريض عدم لمس الجرح والإبلاغ عن الاحمرار أو الإفرازات، والعناية بالجرح في البيت."
+      ],
+      "en": [
+       "Give antibiotics on time as ordered.",
+       "Keep glucose < 180 mg/dL per protocol.",
+       "Teach not to touch the wound, to report redness/drainage, and home wound care."
+      ]
+     },
+     "outcome": {
+      "ar": "مضاد حيوي في موعده وسكر منضبط.",
+      "en": "Antibiotics on time, glucose controlled."
+     },
+     "timeframe": {
+      "ar": "حسب الأمر",
+      "en": "As ordered"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر العدوى",
-    "en": "Risk for infection"
+   "id": "risk-deficient-fluid-volume-postop",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص حجم السوائل (نزيف / فقد سوائل)",
+    "en": "Risk for Deficient Fluid Volume (Bleeding / Fluid Loss)"
    },
-   "need": {
-    "ar": "جرح نظيف",
-    "en": "Clean wound"
+   "definition": {
+    "ar": "قابلية لنقص السوائل داخل الأوعية أو الأنسجة أو الخلايا.",
+    "en": "Susceptibility to decreased intravascular, interstitial or intracellular fluid."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "غيار معقم",
-     "ملاحظة الجرح والحرارة",
-     "إزالة القسطرة مبكرًا"
+     "النزيف أثناء وبعد العملية",
+     "الصيام وعدم الأكل",
+     "القيء وسحب الأنبوبة الأنفية والدرنقات"
     ],
     "en": [
-     "Aseptic dressing",
-     "Wound and temperature checks",
-     "Early catheter removal"
+     "Intra- and post-op bleeding",
+     "NPO status",
+     "Vomiting, NG suction and drains"
     ]
    },
-   "outcome": {
-    "ar": "لا علامات عدوى",
-    "en": "No signs of infection"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عطشان جدًا.\""
+     ],
+     "en": [
+      "\"I'm very thirsty.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الضغط 104/68، النبض 102.",
+      "البول 30 مل/ساعة.",
+      "غيار به بقعة دم 4 سم."
+     ],
+     "en": [
+      "BP 104/68, HR 102.",
+      "Urine 30 mL/h.",
+      "Dressing with a 4 cm blood spot."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "حتى الخروج",
-    "en": "Until discharge"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "كل ساعة: البول ≥ 0.5 مل/كجم/ساعة والضغط والنبض مستقران."
+     ],
+     "en": [
+      "Hourly: urine ≥ 0.5 mL/kg/h; stable BP and HR."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 48 ساعة: توازن سوائل طبيعي وأكل وشرب بالفم."
+     ],
+     "en": [
+      "Within 48 h: normal fluid balance and oral intake."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "العلامات الحيوية كل 15 دقيقة ×4 ثم كل 30 دقيقة ×2 ثم كل ساعة ×4 ثم كل 4 ساعات.",
+      "en": "Vitals every 15 min ×4, 30 min ×2, hourly ×4, then every 4 h."
+     },
+     "rationale": {
+      "ar": "الجدول القياسي يكشف النزيف والصدمة مبكرًا.",
+      "en": "Standard schedule detects bleeding and shock early."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص الغيار والدرنقات للنزيف وتحديد حدود البقعة بقلم.",
+      "en": "Check dressing and drains for bleeding; mark the spot's edge."
+     },
+     "rationale": {
+      "ar": "يقيس زيادة النزيف.",
+      "en": "Measures bleeding progression."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل دقيق للداخل والخارج (سوائل وريدية، بول، درنقات، قيء، أنبوبة أنفية).",
+      "en": "Accurate intake/output (IV, urine, drains, vomitus, NG)."
+     },
+     "rationale": {
+      "ar": "يحدد التوازن.",
+      "en": "Defines balance."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء السوائل الوريدية حسب الأمر ومتابعة الكانيولا.",
+      "en": "Give IV fluids as ordered; monitor the cannula."
+     },
+     "rationale": {
+      "ar": "يعوض الفقد أثناء الصيام.",
+      "en": "Replaces losses while NPO."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الهيموجلوبين والأملاح.",
+      "en": "Monitor hemoglobin and electrolytes."
+     },
+     "rationale": {
+      "ar": "يكشف النزيف وخلل الأملاح.",
+      "en": "Detects bleeding and imbalance."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب فورًا عن: ضغط < 90، نبض > 120، بول < 30 مل/ساعة لساعتين، أو نزيف نشط.",
+      "en": "Report immediately: SBP < 90, HR > 120, urine < 30 mL/h ×2 h, or active bleeding."
+     },
+     "rationale": {
+      "ar": "علامات صدمة نزفية.",
+      "en": "Signs of hemorrhagic shock."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "البدء بالسوائل الفموية تدريجيًا عند السماح وعودة الحركة المعوية.",
+      "en": "Start oral fluids gradually when allowed and bowel sounds return."
+     },
+     "rationale": {
+      "ar": "يعيد التوازن طبيعيًا.",
+      "en": "Restores balance naturally."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "البول 50 مل/ساعة، الضغط 118/74، لا زيادة في البقعة — تحقق.",
+      "en": "Urine 50 mL/h, BP 118/74, no spread of the spot — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "كشف النزيف",
+      "en": "Detect bleeding"
+     },
+     "actions": {
+      "ar": [
+       "العلامات الحيوية كل 15 دقيقة ×4 ثم كل 30 دقيقة ×2 ثم كل ساعة ×4 ثم كل 4 ساعات.",
+       "فحص الغيار والدرنقات للنزيف وتحديد حدود البقعة بقلم.",
+       "إبلاغ الطبيب فورًا عن: ضغط < 90، نبض > 120، بول < 30 مل/ساعة لساعتين، أو نزيف نشط."
+      ],
+      "en": [
+       "Vitals every 15 min ×4, 30 min ×2, hourly ×4, then every 4 h.",
+       "Check dressing and drains for bleeding; mark the spot's edge.",
+       "Report immediately: SBP < 90, HR > 120, urine < 30 mL/h ×2 h, or active bleeding."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مستقرة ولا نزيف نشط.",
+      "en": "Stable vitals, no active bleeding."
+     },
+     "timeframe": {
+      "ar": "حسب الجدول",
+      "en": "Per schedule"
+     }
+    },
+    {
+     "need": {
+      "ar": "توازن السوائل",
+      "en": "Fluid balance"
+     },
+     "actions": {
+      "ar": [
+       "تسجيل دقيق للداخل والخارج (سوائل وريدية، بول، درنقات، قيء، أنبوبة أنفية).",
+       "إعطاء السوائل الوريدية حسب الأمر ومتابعة الكانيولا.",
+       "متابعة الهيموجلوبين والأملاح.",
+       "البدء بالسوائل الفموية تدريجيًا عند السماح وعودة الحركة المعوية."
+      ],
+      "en": [
+       "Accurate intake/output (IV, urine, drains, vomitus, NG).",
+       "Give IV fluids as ordered; monitor the cannula.",
+       "Monitor hemoglobin and electrolytes.",
+       "Start oral fluids gradually when allowed and bowel sounds return."
+      ]
+     },
+     "outcome": {
+      "ar": "بول كافٍ وأملاح طبيعية.",
+      "en": "Adequate urine, normal electrolytes."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر مضاعفات عدم الحركة",
-    "en": "Risk for immobility complications"
+   "id": "risk-dvt-postop",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الجلطات الوريدية العميقة",
+    "en": "Risk for Venous Thromboembolism"
    },
-   "need": {
-    "ar": "حركة وتنفس مبكر",
-    "en": "Early mobility and breathing"
+   "definition": {
+    "ar": "قابلية لتكون جلطة في وريد عميق قد تنفصل وتسد الشريان الرئوي.",
+    "en": "Susceptibility to a deep-vein clot that may embolize to the lungs."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "المشي من اليوم الأول",
-     "جهاز التنفس التحفيزي (Spirometer)",
-     "جوارب ضاغطة/مضاد تجلط حسب الأمر"
+     "الجراحة الكبرى",
+     "قلة الحركة",
+     "السن > 60 أو السمنة",
+     "تاريخ جلطات أو أدوية هرمونية"
     ],
     "en": [
-     "Walk from day 1",
-     "Incentive spirometer",
-     "Stockings/anticoagulant as ordered"
+     "Major surgery",
+     "Immobility",
+     "Age > 60 or obesity",
+     "Previous VTE or hormonal therapy"
     ]
    },
-   "outcome": {
-    "ar": "رئة سليمة ولا جلطة بالساق",
-    "en": "Clear lungs, no DVT"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"رجلي مش بتوجعني.\""
+     ],
+     "en": [
+      "\"My legs don't hurt.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "عملية بطن كبرى، سن 66، مؤشر كتلة الجسم 33.",
+      "لا تورم أو ألم في الساقين."
+     ],
+     "en": [
+      "Major abdominal surgery, age 66, BMI 33.",
+      "No calf swelling or pain."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "يوميًا",
-    "en": "Daily"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: يتحرك المريض خارج السرير ويحرك الساقين بانتظام."
+     ],
+     "en": [
+      "Within 24 h: out of bed and doing regular leg exercises."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال الإقامة: لا جلطة في الساق أو الرئة."
+     ],
+     "en": [
+      "Throughout the stay: no DVT or PE."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص الساقين يوميًا: ألم، تورم، احمرار، سخونة، فرق في المحيط.",
+      "en": "Check legs daily: pain, swelling, redness, warmth, circumference difference."
+     },
+     "rationale": {
+      "ar": "علامات الجلطة.",
+      "en": "DVT signs."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة ضيق نفس مفاجئ أو ألم صدر أو هبوط التشبع.",
+      "en": "Watch for sudden dyspnea, chest pain or desaturation."
+     },
+     "rationale": {
+      "ar": "علامات جلطة الرئة — طوارئ.",
+      "en": "PE signs — an emergency."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تمارين الكاحل والساق كل ساعة أثناء الاستيقاظ.",
+      "en": "Ankle and leg exercises hourly while awake."
+     },
+     "rationale": {
+      "ar": "تنشط مضخة عضلات الساق.",
+      "en": "Activates the calf-muscle pump."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التحريك المبكر خلال 24 ساعة.",
+      "en": "Early ambulation within 24 h."
+     },
+     "rationale": {
+      "ar": "أقوى وسيلة وقاية.",
+      "en": "Most effective prevention."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الجوارب الضاغطة أو جهاز الضغط المتقطع حسب الأمر.",
+      "en": "Compression stockings or intermittent pneumatic compression as ordered."
+     },
+     "rationale": {
+      "ar": "يمنع الركود الوريدي.",
+      "en": "Prevents venous stasis."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الهيبارين حسب الأمر ومتابعة النزيف والصفائح.",
+      "en": "Give heparin as ordered; monitor bleeding and platelets."
+     },
+     "rationale": {
+      "ar": "يمنع التجلط مع متابعة الأعراض الجانبية.",
+      "en": "Prevents clotting; monitor side effects."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عدم وضع وسادة تحت الركبة وعدم تقاطع الساقين.",
+      "en": "No pillow under the knee; avoid crossing legs."
+     },
+     "rationale": {
+      "ar": "يمنع الضغط على الأوردة.",
+      "en": "Avoids venous compression."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض الحركة وشرب السوائل والإبلاغ عن ألم الساق أو ضيق النفس.",
+      "en": "Teach mobility, fluids, and reporting calf pain or breathlessness."
+     },
+     "rationale": {
+      "ar": "اكتشاف ووقاية بعد الخروج.",
+      "en": "Detection and prevention after discharge."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يمشي في الممر يوم 1، لا علامات جلطة — تحقق.",
+      "en": "Walking in the corridor on day 1; no VTE signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "كشف الجلطة",
+      "en": "Detect VTE"
+     },
+     "actions": {
+      "ar": [
+       "فحص الساقين يوميًا: ألم، تورم، احمرار، سخونة، فرق في المحيط.",
+       "ملاحظة ضيق نفس مفاجئ أو ألم صدر أو هبوط التشبع."
+      ],
+      "en": [
+       "Check legs daily: pain, swelling, redness, warmth, circumference difference.",
+       "Watch for sudden dyspnea, chest pain or desaturation."
+      ]
+     },
+     "outcome": {
+      "ar": "لا علامات جلطة.",
+      "en": "No VTE signs."
+     },
+     "timeframe": {
+      "ar": "يوميًا / مستمر",
+      "en": "Daily / continuous"
+     }
+    },
+    {
+     "need": {
+      "ar": "وقاية ميكانيكية وحركة",
+      "en": "Mechanical prevention and mobility"
+     },
+     "actions": {
+      "ar": [
+       "تمارين الكاحل والساق كل ساعة أثناء الاستيقاظ.",
+       "التحريك المبكر خلال 24 ساعة.",
+       "الجوارب الضاغطة أو جهاز الضغط المتقطع حسب الأمر.",
+       "عدم وضع وسادة تحت الركبة وعدم تقاطع الساقين."
+      ],
+      "en": [
+       "Ankle and leg exercises hourly while awake.",
+       "Early ambulation within 24 h.",
+       "Compression stockings or intermittent pneumatic compression as ordered.",
+       "No pillow under the knee; avoid crossing legs."
+      ]
+     },
+     "outcome": {
+      "ar": "يتحرك ويستخدم الجوارب.",
+      "en": "Mobile, wearing stockings."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    },
+    {
+     "need": {
+      "ar": "وقاية دوائية وتثقيف",
+      "en": "Drug prevention and teaching"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء الهيبارين حسب الأمر ومتابعة النزيف والصفائح.",
+       "تعليم المريض الحركة وشرب السوائل والإبلاغ عن ألم الساق أو ضيق النفس."
+      ],
+      "en": [
+       "Give heparin as ordered; monitor bleeding and platelets.",
+       "Teach mobility, fluids, and reporting calf pain or breathlessness."
+      ]
+     },
+     "outcome": {
+      "ar": "هيبارين في موعده بدون نزيف.",
+      "en": "Heparin on time without bleeding."
+     },
+     "timeframe": {
+      "ar": "حسب الأمر",
+      "en": "As ordered"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-dysfunctional-gi-motility-postop",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر اضطراب حركة الجهاز الهضمي (شلل الأمعاء بعد العملية)",
+    "en": "Risk for Dysfunctional Gastrointestinal Motility (Post-operative Ileus)"
+   },
+   "definition": {
+    "ar": "قابلية لزيادة أو نقص أو عدم فعالية حركة الجهاز الهضمي.",
+    "en": "Susceptibility to increased, decreased or ineffective GI peristalsis."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "جراحة البطن والتعامل مع الأمعاء",
+     "الأفيونات والتخدير",
+     "قلة الحركة",
+     "خلل الأملاح (نقص البوتاسيوم)"
+    ],
+    "en": [
+     "Abdominal surgery and bowel handling",
+     "Opioids and anesthesia",
+     "Immobility",
+     "Electrolyte imbalance (hypokalemia)"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بطني منفوخة شوية ومطلعتش ريح.\""
+     ],
+     "en": [
+      "\"My belly is a bit bloated; no wind yet.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "أصوات الأمعاء ضعيفة.",
+      "الأنبوبة الأنفية بها 200 مل.",
+      "البوتاسيوم 3.4."
+     ],
+     "en": [
+      "Hypoactive bowel sounds.",
+      "NG output 200 mL.",
+      "K⁺ 3.4."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48–72 ساعة: عودة أصوات الأمعاء وخروج الريح."
+     ],
+     "en": [
+      "Within 48–72 h: bowel sounds return and flatus passed."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يأكل أكلًا عاديًا بدون قيء أو انتفاخ."
+     ],
+     "en": [
+      "Before discharge: tolerates a normal diet without vomiting or distension."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "سماع أصوات الأمعاء وقياس محيط البطن وسؤال المريض عن الريح كل وردية.",
+      "en": "Auscultate bowel sounds, measure abdominal girth and ask about flatus every shift."
+     },
+     "rationale": {
+      "ar": "يتابع عودة الحركة.",
+      "en": "Tracks return of motility."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة الغثيان والقيء وكمية الأنبوبة الأنفية.",
+      "en": "Monitor nausea, vomiting and NG output."
+     },
+     "rationale": {
+      "ar": "زيادتها تدل على شلل الأمعاء.",
+      "en": "Increase suggests ileus."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الحفاظ على الأنبوبة الأنفية مفتوحة ومثبتة حسب الأمر.",
+      "en": "Keep the NG tube patent and secured as ordered."
+     },
+     "rationale": {
+      "ar": "يمنع الانتفاخ والقيء.",
+      "en": "Prevents distension and vomiting."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التحريك المبكر والمشي.",
+      "en": "Early mobilization and walking."
+     },
+     "rationale": {
+      "ar": "الحركة تنشط الأمعاء.",
+      "en": "Movement stimulates the bowel."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "البدء بالسوائل ثم الأكل تدريجيًا حسب الأمر عند خروج الريح.",
+      "en": "Advance from fluids to diet as ordered once flatus passes."
+     },
+     "rationale": {
+      "ar": "يمنع القيء.",
+      "en": "Prevents vomiting."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تصحيح البوتاسيوم والأملاح حسب الأمر.",
+      "en": "Correct potassium and electrolytes as ordered."
+     },
+     "rationale": {
+      "ar": "نقص البوتاسيوم يبطئ الأمعاء.",
+      "en": "Hypokalemia slows the bowel."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تقليل الأفيونات قدر الإمكان واستخدام مسكنات بديلة حسب الأمر.",
+      "en": "Minimize opioids; use alternative analgesics as ordered."
+     },
+     "rationale": {
+      "ar": "الأفيونات تبطئ الأمعاء.",
+      "en": "Opioids slow the bowel."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح أن مضغ العلكة (إذا سمح الطبيب) والمشي يساعدان على عودة الأمعاء.",
+      "en": "Explain that chewing gum (if allowed) and walking help bowel recovery."
+     },
+     "rationale": {
+      "ar": "مشاركة المريض.",
+      "en": "Patient involvement."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "خرج الريح يوم 2 وأزيلت الأنبوبة، يأكل سوائل بدون قيء — تحقق.",
+      "en": "Flatus on day 2, NG removed, tolerating fluids — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة الأمعاء",
+      "en": "Bowel monitoring"
+     },
+     "actions": {
+      "ar": [
+       "سماع أصوات الأمعاء وقياس محيط البطن وسؤال المريض عن الريح كل وردية.",
+       "ملاحظة الغثيان والقيء وكمية الأنبوبة الأنفية.",
+       "الحفاظ على الأنبوبة الأنفية مفتوحة ومثبتة حسب الأمر."
+      ],
+      "en": [
+       "Auscultate bowel sounds, measure abdominal girth and ask about flatus every shift.",
+       "Monitor nausea, vomiting and NG output.",
+       "Keep the NG tube patent and secured as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "أصوات أمعاء وريح بدون انتفاخ.",
+      "en": "Bowel sounds and flatus without distension."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تنشيط الأمعاء",
+      "en": "Stimulate motility"
+     },
+     "actions": {
+      "ar": [
+       "التحريك المبكر والمشي.",
+       "البدء بالسوائل ثم الأكل تدريجيًا حسب الأمر عند خروج الريح.",
+       "تصحيح البوتاسيوم والأملاح حسب الأمر.",
+       "تقليل الأفيونات قدر الإمكان واستخدام مسكنات بديلة حسب الأمر.",
+       "شرح أن مضغ العلكة (إذا سمح الطبيب) والمشي يساعدان على عودة الأمعاء."
+      ],
+      "en": [
+       "Early mobilization and walking.",
+       "Advance from fluids to diet as ordered once flatus passes.",
+       "Correct potassium and electrolytes as ordered.",
+       "Minimize opioids; use alternative analgesics as ordered.",
+       "Explain that chewing gum (if allowed) and walking help bowel recovery."
+      ]
+     },
+     "outcome": {
+      "ar": "يأكل بدون قيء.",
+      "en": "Eats without vomiting."
+     },
+     "timeframe": {
+      "ar": "48–72 ساعة",
+      "en": "48–72 h"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -301,10 +1440,13 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "WHO Global Guidelines for the Prevention of Surgical Site Infection (2018)"
   },
   {
-   "title": "WHO Global Guidelines for the Prevention of Surgical Site Infection"
+   "title": "NICE NG89 — Venous thromboembolism in over 16s (2018, updated 2019)"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
   }
  ]
 }

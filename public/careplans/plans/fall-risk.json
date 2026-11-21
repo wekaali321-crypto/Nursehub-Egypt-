@@ -1,0 +1,580 @@
+{
+ "id": "fall-risk",
+ "icon": "🚶",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "خطر السقوط",
+  "en": "Fall Risk"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض معرض للسقوط: التقييم بمقياس مورس، البيئة الآمنة، الحركة الآمنة، والتعامل مع الخوف من السقوط.",
+  "en": "Care plan for a patient at risk of falling: Morse assessment, safe environment, safe mobility and fear of falling."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-for-falls",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر السقوط",
+    "en": "Risk for Falls"
+   },
+   "definition": {
+    "ar": "قابلية متزايدة للسقوط قد تسبب إصابة جسدية وتؤثر على الصحة.",
+    "en": "Increased susceptibility to falling, which may cause physical harm and compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "السن أكبر من 65 سنة",
+     "دوخة أو هبوط ضغط عند الوقوف",
+     "أدوية مهدئة أو مدرة للبول أو خافضة للضغط",
+     "ضعف العضلات أو اضطراب المشي",
+     "ضعف النظر أو التشوش",
+     "بيئة غير مألوفة وأرضية مبللة"
+    ],
+    "en": [
+     "Age over 65",
+     "Dizziness or orthostatic hypotension",
+     "Sedatives, diuretics or antihypertensives",
+     "Muscle weakness or gait disturbance",
+     "Poor vision or confusion",
+     "Unfamiliar environment, wet floor"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بدوخ لما أقوم من السرير.\"",
+      "\"وقعت مرة في البيت الشهر اللي فات.\""
+     ],
+     "en": [
+      "\"I get dizzy when I get out of bed.\"",
+      "\"I fell once at home last month.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "سن 74 سنة، يمشي بخطوات غير ثابتة.",
+      "مقياس مورس للسقوط 55 (خطر عالٍ).",
+      "هبوط الضغط الانقباضي 20 مم زئبق عند الوقوف.",
+      "يتناول مدرًا للبول ومنومًا."
+     ],
+     "en": [
+      "Age 74, unsteady gait.",
+      "Morse Fall Scale 55 (high risk).",
+      "Systolic drop of 20 mmHg on standing.",
+      "On a diuretic and a hypnotic."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يطلب المريض المساعدة قبل القيام من السرير.",
+      "يذكر المريض أو الأسرة 3 إجراءات للوقاية من السقوط."
+     ],
+     "en": [
+      "Within the shift: patient calls for help before getting up.",
+      "Patient or family states 3 fall-prevention measures."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال الإقامة: لا يحدث سقوط أو إصابة."
+     ],
+     "en": [
+      "Throughout the stay: no falls or injury."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم خطر السقوط بمقياس معتمد (مثل مورس) عند الدخول وكل وردية وبعد أي تغيير في الحالة أو الأدوية.",
+      "en": "Assess fall risk with a validated tool (e.g. Morse) on admission, every shift and after any change in condition or drugs."
+     },
+     "rationale": {
+      "ar": "يحدد مستوى الخطر ويوجه شدة الإجراءات.",
+      "en": "Determines the risk level and guides the intensity of precautions."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الضغط نائمًا ثم جالسًا ثم واقفًا.",
+      "en": "Check lying, sitting and standing blood pressure."
+     },
+     "rationale": {
+      "ar": "يكشف هبوط الضغط الوضعي سبب الدوخة.",
+      "en": "Detects orthostatic hypotension causing dizziness."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "مراجعة الأدوية التي تزيد خطر السقوط (منومات، مدرات، خافضات ضغط، أنسولين).",
+      "en": "Review drugs that raise fall risk (hypnotics, diuretics, antihypertensives, insulin)."
+     },
+     "rationale": {
+      "ar": "الأدوية من أهم أسباب السقوط القابلة للتعديل.",
+      "en": "Medications are a major modifiable cause of falls."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع السرير في أدنى مستوى مع تثبيت الفرامل ورفع الحواجز حسب سياسة المستشفى.",
+      "en": "Keep the bed at its lowest position, brakes locked, rails per hospital policy."
+     },
+     "rationale": {
+      "ar": "يقلل ارتفاع السقوط وشدة الإصابة.",
+      "en": "Reduces fall height and injury severity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع جرس الاستدعاء والأشياء الشخصية في متناول يد المريض.",
+      "en": "Keep the call bell and personal items within reach."
+     },
+     "rationale": {
+      "ar": "يمنع المريض من الوقوف أو الانحناء بمفرده.",
+      "en": "Prevents reaching or standing alone."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إضاءة ليلية كافية، أرضية جافة، وإزالة العوائق من طريق الحمام.",
+      "en": "Adequate night light, dry floor, clear path to the bathroom."
+     },
+     "rationale": {
+      "ar": "البيئة الآمنة تمنع التعثر.",
+      "en": "A safe environment prevents tripping."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "مساعدة المريض في القيام على مراحل (الجلوس على حافة السرير دقيقة قبل الوقوف).",
+      "en": "Help the patient rise in stages (sit on the bed edge for a minute before standing)."
+     },
+     "rationale": {
+      "ar": "يعطي الدورة الدموية وقتًا للتكيف ويمنع الدوخة.",
+      "en": "Allows circulation to adjust and prevents dizziness."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التأكد من حذاء مغلق غير زلق ونظارة وسماعة المريض إن وجدت.",
+      "en": "Ensure non-slip closed footwear, glasses and hearing aid."
+     },
+     "rationale": {
+      "ar": "يحسن الثبات والإدراك.",
+      "en": "Improves stability and perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "جدول منتظم لدخول الحمام كل 2–3 ساعات خاصة مع المدرات.",
+      "en": "Scheduled toileting every 2–3 hours, especially with diuretics."
+     },
+     "rationale": {
+      "ar": "الاستعجال للحمام سبب شائع للسقوط الليلي.",
+      "en": "Urgency is a common cause of night falls."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع علامة \"خطر سقوط\" على السرير والسوار وإبلاغ الفريق في التسليم.",
+      "en": "Place a fall-risk sign and wristband; hand over to the team."
+     },
+     "rationale": {
+      "ar": "يضمن أن الكل يطبق الاحتياطات.",
+      "en": "Ensures everyone applies the precautions."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إحالة للعلاج الطبيعي لتقييم المشي وأداة المساعدة المناسبة (عكاز، مشاية).",
+      "en": "Refer to physiotherapy for gait assessment and the right aid (cane, walker)."
+     },
+     "rationale": {
+      "ar": "أداة مناسبة تقلل الخطر.",
+      "en": "A suitable aid reduces risk."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض والأسرة طلب المساعدة وعدم القيام فجأة، والوقاية في المنزل (سجاد، إضاءة، مقابض في الحمام).",
+      "en": "Teach to ask for help, rise slowly, and home safety (rugs, lighting, bathroom grab bars)."
+     },
+     "rationale": {
+      "ar": "يستمر الأمان بعد الخروج.",
+      "en": "Safety continues after discharge."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لم يحدث سقوط طوال الإقامة، والمريض يطلب المساعدة قبل القيام — تحقق.",
+      "en": "No falls during the stay; patient calls before getting up — met."
+     }
+    },
+    {
+     "status": "partial",
+     "text": {
+      "ar": "قام بمفرده ليلًا مرة واحدة بدون سقوط — يُعاد التعليم ويُستخدم جدول الحمام.",
+      "en": "Got up alone once at night without falling — re-teach and use toileting schedule."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الخطر",
+      "en": "Risk assessment"
+     },
+     "actions": {
+      "ar": [
+       "تقييم خطر السقوط بمقياس معتمد (مثل مورس) عند الدخول وكل وردية وبعد أي تغيير في الحالة أو الأدوية.",
+       "قياس الضغط نائمًا ثم جالسًا ثم واقفًا.",
+       "مراجعة الأدوية التي تزيد خطر السقوط (منومات، مدرات، خافضات ضغط، أنسولين)."
+      ],
+      "en": [
+       "Assess fall risk with a validated tool (e.g. Morse) on admission, every shift and after any change in condition or drugs.",
+       "Check lying, sitting and standing blood pressure.",
+       "Review drugs that raise fall risk (hypnotics, diuretics, antihypertensives, insulin)."
+      ]
+     },
+     "outcome": {
+      "ar": "درجة الخطر مسجلة وأسبابها معروفة.",
+      "en": "Risk score recorded and causes identified."
+     },
+     "timeframe": {
+      "ar": "عند الدخول وكل وردية",
+      "en": "On admission and every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "بيئة آمنة",
+      "en": "Safe environment"
+     },
+     "actions": {
+      "ar": [
+       "وضع السرير في أدنى مستوى مع تثبيت الفرامل ورفع الحواجز حسب سياسة المستشفى.",
+       "وضع جرس الاستدعاء والأشياء الشخصية في متناول يد المريض.",
+       "إضاءة ليلية كافية، أرضية جافة، وإزالة العوائق من طريق الحمام.",
+       "وضع علامة \"خطر سقوط\" على السرير والسوار وإبلاغ الفريق في التسليم."
+      ],
+      "en": [
+       "Keep the bed at its lowest position, brakes locked, rails per hospital policy.",
+       "Keep the call bell and personal items within reach.",
+       "Adequate night light, dry floor, clear path to the bathroom.",
+       "Place a fall-risk sign and wristband; hand over to the team."
+      ]
+     },
+     "outcome": {
+      "ar": "سرير منخفض وجرس في المتناول وعلامة خطر.",
+      "en": "Low bed, bell in reach, risk sign."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    },
+    {
+     "need": {
+      "ar": "حركة آمنة",
+      "en": "Safe mobility"
+     },
+     "actions": {
+      "ar": [
+       "مساعدة المريض في القيام على مراحل (الجلوس على حافة السرير دقيقة قبل الوقوف).",
+       "التأكد من حذاء مغلق غير زلق ونظارة وسماعة المريض إن وجدت.",
+       "جدول منتظم لدخول الحمام كل 2–3 ساعات خاصة مع المدرات.",
+       "إحالة للعلاج الطبيعي لتقييم المشي وأداة المساعدة المناسبة (عكاز، مشاية)."
+      ],
+      "en": [
+       "Help the patient rise in stages (sit on the bed edge for a minute before standing).",
+       "Ensure non-slip closed footwear, glasses and hearing aid.",
+       "Scheduled toileting every 2–3 hours, especially with diuretics.",
+       "Refer to physiotherapy for gait assessment and the right aid (cane, walker)."
+      ]
+     },
+     "outcome": {
+      "ar": "يتحرك بمساعدة وبدون دوخة.",
+      "en": "Moves with help without dizziness."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف",
+      "en": "Teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم المريض والأسرة طلب المساعدة وعدم القيام فجأة، والوقاية في المنزل (سجاد، إضاءة، مقابض في الحمام)."
+      ],
+      "en": [
+       "Teach to ask for help, rise slowly, and home safety (rugs, lighting, bathroom grab bars)."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض والأسرة يذكرون إجراءات الوقاية.",
+      "en": "Patient and family state prevention measures."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fear-of-falling",
+   "kind": "actual",
+   "title": {
+    "ar": "الخوف (من السقوط)",
+    "en": "Fear (of Falling)"
+   },
+   "definition": {
+    "ar": "استجابة عاطفية لتهديد يدركه الشخص بوضوح، تقلل نشاطه وحركته.",
+    "en": "Emotional response to a clearly perceived threat that limits activity and mobility."
+   },
+   "relatedTo": {
+    "ar": [
+     "سقوط سابق",
+     "ضعف الثقة في القدرة على المشي"
+    ],
+    "en": [
+     "Previous fall",
+     "Low confidence in walking ability"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تجنب الحركة والمشي",
+     "التعبير عن الخوف",
+     "الاعتماد على الآخرين في أنشطة يقدر عليها"
+    ],
+    "en": [
+     "Avoidance of walking",
+     "Verbalized fear",
+     "Dependence for activities he can do"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"خايف أقوم أقع تاني.\""
+     ],
+     "en": [
+      "\"I'm afraid I'll fall again.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يرفض المشي في الممر.",
+      "يمسك بالممرضة بقوة عند الوقوف."
+     ],
+     "en": [
+      "Refuses to walk in the corridor.",
+      "Grips the nurse tightly when standing."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال يومين: يمشي المريض مسافة قصيرة بمساعدة ويعبر عن خوف أقل."
+     ],
+     "en": [
+      "Within 2 days: walks a short distance with help and reports less fear."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يمشي بثقة مع أداة المساعدة المناسبة."
+     ],
+     "en": [
+      "Before discharge: walks confidently with the appropriate aid."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "سؤال المريض عن مصدر خوفه وتجربة السقوط السابقة.",
+      "en": "Ask about the source of fear and the previous fall."
+     },
+     "rationale": {
+      "ar": "فهم الخوف أول خطوة لتقليله.",
+      "en": "Understanding fear is the first step in reducing it."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الاستماع للمريض وتقبل مشاعره دون التقليل منها.",
+      "en": "Listen and accept his feelings without dismissing them."
+     },
+     "rationale": {
+      "ar": "يبني الثقة.",
+      "en": "Builds trust."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "المشي التدريجي بمسافات قصيرة تزيد يوميًا مع وجود الممرضة.",
+      "en": "Graded walking, short distances increasing daily, with the nurse present."
+     },
+     "rationale": {
+      "ar": "النجاح المتكرر يعيد الثقة.",
+      "en": "Repeated success restores confidence."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شرح الاحتياطات المتخذة لحمايته (سرير منخفض، جرس، مساعدة).",
+      "en": "Explain the precautions protecting him (low bed, bell, assistance)."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل الخوف.",
+      "en": "Feeling safe reduces fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "مدح كل تقدم يحققه المريض.",
+      "en": "Praise every progress made."
+     },
+     "rationale": {
+      "ar": "تعزيز إيجابي.",
+      "en": "Positive reinforcement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تمارين التوازن والتقوية مع العلاج الطبيعي.",
+      "en": "Balance and strengthening exercises with physiotherapy."
+     },
+     "rationale": {
+      "ar": "القوة والتوازن يقللان الخطر الفعلي والخوف.",
+      "en": "Strength and balance reduce actual risk and fear."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأسرة تشجيع الاستقلالية الآمنة بدلًا من منع الحركة.",
+      "en": "Teach family to encourage safe independence rather than restricting movement."
+     },
+     "rationale": {
+      "ar": "قلة الحركة تزيد الضعف والسقوط.",
+      "en": "Immobility increases weakness and falls."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "مشى 20 مترًا بالمشاية ويقول \"أنا أحسن\" — تحقق.",
+      "en": "Walked 20 m with a walker and says \"I feel better\" — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "دعم نفسي",
+      "en": "Emotional support"
+     },
+     "actions": {
+      "ar": [
+       "سؤال المريض عن مصدر خوفه وتجربة السقوط السابقة.",
+       "الاستماع للمريض وتقبل مشاعره دون التقليل منها.",
+       "شرح الاحتياطات المتخذة لحمايته (سرير منخفض، جرس، مساعدة).",
+       "مدح كل تقدم يحققه المريض."
+      ],
+      "en": [
+       "Ask about the source of fear and the previous fall.",
+       "Listen and accept his feelings without dismissing them.",
+       "Explain the precautions protecting him (low bed, bell, assistance).",
+       "Praise every progress made."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يعبر عن خوف أقل.",
+      "en": "Reports less fear."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "استعادة الحركة",
+      "en": "Regain mobility"
+     },
+     "actions": {
+      "ar": [
+       "المشي التدريجي بمسافات قصيرة تزيد يوميًا مع وجود الممرضة.",
+       "تمارين التوازن والتقوية مع العلاج الطبيعي.",
+       "تعليم الأسرة تشجيع الاستقلالية الآمنة بدلًا من منع الحركة."
+      ],
+      "en": [
+       "Graded walking, short distances increasing daily, with the nurse present.",
+       "Balance and strengthening exercises with physiotherapy.",
+       "Teach family to encourage safe independence rather than restricting movement."
+      ]
+     },
+     "outcome": {
+      "ar": "يمشي بثقة بأداة مساعدة.",
+      "en": "Walks confidently with an aid."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "AHRQ — Preventing Falls in Hospitals: A Toolkit for Improving Quality of Care"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "mobility"
+}

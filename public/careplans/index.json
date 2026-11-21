@@ -639,26 +639,54 @@
    "system": "surgery",
    "folder": "disease",
    "title": {
-    "ar": "رعاية ما بعد العمليات الجراحية (البطن)",
-    "en": "Post-operative Care (Abdominal Surgery)"
+    "ar": "الرعاية بعد العمليات الجراحية",
+    "en": "Post-operative Care"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض بعد عملية بالبطن: تسكين الألم، الوقاية من عدوى الجرح، وتنشيط الحركة والتنفس.",
-    "en": "Care plan after abdominal surgery: pain relief, wound-infection prevention, early mobility and breathing."
+    "ar": "خطة رعاية لمريض ما بعد العملية: الألم، مجرى الهواء بعد التخدير، عدوى الجرح، النزيف والسوائل، الجلطات، وحركة الأمعاء.",
+    "en": "Post-operative care plan: pain, post-anesthesia airway, wound infection, bleeding and fluids, VTE, and bowel motility."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "acute-pain-postop",
      "title": {
-      "ar": "ألم حاد",
-      "en": "Acute pain"
+      "ar": "ألم حاد بعد العملية",
+      "en": "Acute Pain (Post-operative)"
      }
     },
     {
-     "id": "dx-2",
+     "id": "ineffective-airway-clearance-postop",
      "title": {
-      "ar": "خطر العدوى",
-      "en": "Risk for infection"
+      "ar": "خطر عدم فعالية تنظيف مجرى الهواء بعد التخدير",
+      "en": "Risk for Ineffective Airway Clearance (Post-anesthesia)"
+     }
+    },
+    {
+     "id": "risk-surgical-site-infection",
+     "title": {
+      "ar": "خطر عدوى الجرح الجراحي",
+      "en": "Risk for Surgical Site Infection"
+     }
+    },
+    {
+     "id": "risk-deficient-fluid-volume-postop",
+     "title": {
+      "ar": "خطر نقص حجم السوائل (نزيف / فقد سوائل)",
+      "en": "Risk for Deficient Fluid Volume (Bleeding / Fluid Loss)"
+     }
+    },
+    {
+     "id": "risk-dvt-postop",
+     "title": {
+      "ar": "خطر الجلطات الوريدية العميقة",
+      "en": "Risk for Venous Thromboembolism"
+     }
+    },
+    {
+     "id": "risk-dysfunctional-gi-motility-postop",
+     "title": {
+      "ar": "خطر اضطراب حركة الجهاز الهضمي (شلل الأمعاء بعد العملية)",
+      "en": "Risk for Dysfunctional Gastrointestinal Motility (Post-operative Ileus)"
      }
     }
    ]
@@ -1038,6 +1066,37 @@
    "group": "symptoms"
   },
   {
+   "id": "fall-risk",
+   "icon": "🚶",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "خطر السقوط",
+    "en": "Fall Risk"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض معرض للسقوط: التقييم بمقياس مورس، البيئة الآمنة، الحركة الآمنة، والتعامل مع الخوف من السقوط.",
+    "en": "Care plan for a patient at risk of falling: Morse assessment, safe environment, safe mobility and fear of falling."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-for-falls",
+     "title": {
+      "ar": "خطر السقوط",
+      "en": "Risk for Falls"
+     }
+    },
+    {
+     "id": "fear-of-falling",
+     "title": {
+      "ar": "الخوف (من السقوط)",
+      "en": "Fear (of Falling)"
+     }
+    }
+   ],
+   "group": "mobility"
+  },
+  {
    "id": "fever",
    "icon": "🌡️",
    "system": "general",
@@ -1074,6 +1133,44 @@
     }
    ],
    "group": "vitals"
+  },
+  {
+   "id": "fracture-cast",
+   "icon": "🦴",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "الكسور والجبس",
+    "en": "Fracture & Cast Care"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض الكسر والجبس: الفحص العصبي الوعائي والوقاية من متلازمة الحيز، تسكين الألم، والتثقيف عن العناية بالجبس.",
+    "en": "Care plan for fracture and cast: neurovascular checks and compartment-syndrome prevention, pain relief, and cast-care teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-neurovascular-dysfunction",
+     "title": {
+      "ar": "خطر خلل وظيفي عصبي وعائي طرفي",
+      "en": "Risk for Peripheral Neurovascular Dysfunction"
+     }
+    },
+    {
+     "id": "acute-pain-fracture",
+     "title": {
+      "ar": "ألم حاد (كسر)",
+      "en": "Acute Pain (Fracture)"
+     }
+    },
+    {
+     "id": "deficient-knowledge-cast-care",
+     "title": {
+      "ar": "نقص المعرفة (العناية بالجبس)",
+      "en": "Deficient Knowledge (Cast Care)"
+     }
+    }
+   ],
+   "group": "mobility"
   },
   {
    "id": "hemodialysis",
@@ -1181,6 +1278,44 @@
     }
    ],
    "group": "metabolic"
+  },
+  {
+   "id": "immobility-pressure-injury",
+   "icon": "🛏️",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "المريض طريح الفراش وقرحة الفراش",
+    "en": "Immobilized Patient & Pressure Injury"
+   },
+   "summary": {
+    "ar": "خطة رعاية للمريض قليل الحركة: الوقاية من قرحة الفراش بمقياس برادن، العناية بالقرحة، والحركة والتأهيل.",
+    "en": "Care plan for the immobilized patient: Braden-based pressure-injury prevention, wound care, mobility and rehabilitation."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-pressure-injury",
+     "title": {
+      "ar": "خطر قرحة الفراش (إصابة الضغط)",
+      "en": "Risk for Pressure Injury"
+     }
+    },
+    {
+     "id": "impaired-skin-integrity-pressure",
+     "title": {
+      "ar": "تلف سلامة الجلد (قرحة فراش)",
+      "en": "Impaired Skin Integrity (Pressure Injury)"
+     }
+    },
+    {
+     "id": "impaired-physical-mobility",
+     "title": {
+      "ar": "ضعف الحركة الجسدية",
+      "en": "Impaired Physical Mobility"
+     }
+    }
+   ],
+   "group": "mobility"
   },
   {
    "id": "urinary-catheter",

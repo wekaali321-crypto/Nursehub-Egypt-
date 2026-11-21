@@ -1,0 +1,816 @@
+{
+ "id": "immobility-pressure-injury",
+ "icon": "🛏️",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "المريض طريح الفراش وقرحة الفراش",
+  "en": "Immobilized Patient & Pressure Injury"
+ },
+ "summary": {
+  "ar": "خطة رعاية للمريض قليل الحركة: الوقاية من قرحة الفراش بمقياس برادن، العناية بالقرحة، والحركة والتأهيل.",
+  "en": "Care plan for the immobilized patient: Braden-based pressure-injury prevention, wound care, mobility and rehabilitation."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-pressure-injury",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر قرحة الفراش (إصابة الضغط)",
+    "en": "Risk for Pressure Injury"
+   },
+   "definition": {
+    "ar": "قابلية لتلف موضعي في الجلد أو الأنسجة تحته نتيجة الضغط أو الضغط مع الاحتكاك.",
+    "en": "Susceptibility to localized damage to skin/underlying tissue from pressure, or pressure with shear."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "عدم الحركة أو الحركة المحدودة",
+     "سلس البول أو البراز (رطوبة)",
+     "سوء التغذية ونقص الألبومين",
+     "ضعف الإحساس أو الوعي",
+     "احتكاك وانزلاق في السرير"
+    ],
+    "en": [
+     "Immobility or limited mobility",
+     "Urinary or fecal incontinence (moisture)",
+     "Malnutrition, low albumin",
+     "Reduced sensation or consciousness",
+     "Friction and shear in bed"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش قادر أتحرك لوحدي في السرير.\""
+     ],
+     "en": [
+      "\"I can't move in bed on my own.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مقياس برادن 12 (خطر عالٍ).",
+      "الجلد فوق العجز سليم بدون احمرار مستمر.",
+      "ألبومين 2.9 جم/دل.",
+      "سلس بول."
+     ],
+     "en": [
+      "Braden score 12 (high risk).",
+      "Sacral skin intact, no non-blanching redness.",
+      "Albumin 2.9 g/dL.",
+      "Urinary incontinence."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: الجلد فوق النتوءات العظمية سليم بدون احمرار مستمر."
+     ],
+     "en": [
+      "Every shift: skin over bony prominences intact without persistent redness."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال الإقامة: لا تحدث قرحة فراش."
+     ],
+     "en": [
+      "Throughout the stay: no pressure injury develops."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الخطر بمقياس برادن عند الدخول ويوميًا.",
+      "en": "Assess risk with the Braden scale on admission and daily."
+     },
+     "rationale": {
+      "ar": "يحدد مستوى الخطر والإجراءات المطلوبة.",
+      "en": "Defines risk level and required measures."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص الجلد كل وردية خاصة العجز والكعبين والوركين والكوعين وخلف الرأس وتحت الأجهزة الطبية.",
+      "en": "Inspect skin every shift: sacrum, heels, hips, elbows, occiput and under medical devices."
+     },
+     "rationale": {
+      "ar": "الاكتشاف المبكر للمرحلة الأولى يمنع تطورها.",
+      "en": "Early detection of stage 1 prevents progression."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير وضع المريض كل ساعتين على الأقل (جدول تقليب) بزاوية 30 درجة.",
+      "en": "Reposition at least every 2 hours (turning schedule) using a 30° tilt."
+     },
+     "rationale": {
+      "ar": "يخفف الضغط ويعيد تدفق الدم للأنسجة.",
+      "en": "Relieves pressure and restores tissue perfusion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع الكعبين عن السرير بوسادة تحت الساق.",
+      "en": "Float heels with a pillow under the calves."
+     },
+     "rationale": {
+      "ar": "الكعب من أكثر الأماكن إصابة.",
+      "en": "Heels are among the most affected sites."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام مرتبة توزيع الضغط (هوائية أو فوم) حسب الخطر.",
+      "en": "Use a pressure-redistributing mattress (air or foam) per risk."
+     },
+     "rationale": {
+      "ar": "يقلل الضغط على النتوءات العظمية.",
+      "en": "Reduces pressure on bony prominences."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع رأس السرير ≤ 30 درجة إلا إذا لزم غير ذلك، واستخدام ملاءة لرفع المريض بدل سحبه.",
+      "en": "Keep head of bed ≤ 30° unless contraindicated; lift with a draw sheet rather than dragging."
+     },
+     "rationale": {
+      "ar": "يقلل الانزلاق والاحتكاك.",
+      "en": "Reduces shear and friction."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيف الجلد فورًا بعد التبول أو التبرز ووضع كريم حاجز.",
+      "en": "Clean skin promptly after incontinence and apply a barrier cream."
+     },
+     "rationale": {
+      "ar": "الرطوبة تضعف الجلد.",
+      "en": "Moisture weakens the skin."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عدم تدليك الأماكن المحمرة فوق النتوءات العظمية.",
+      "en": "Do not massage reddened areas over bony prominences."
+     },
+     "rationale": {
+      "ar": "التدليك يزيد تلف الأنسجة العميقة.",
+      "en": "Massage increases deep tissue damage."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إحالة لأخصائي التغذية لتعويض البروتين والسعرات والسوائل.",
+      "en": "Refer to the dietitian for protein, calories and fluids."
+     },
+     "rationale": {
+      "ar": "التغذية الجيدة تحافظ على سلامة الجلد.",
+      "en": "Good nutrition maintains skin integrity."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأسرة التقليب وعلامات الاحمرار المبكر.",
+      "en": "Teach family turning and early redness signs."
+     },
+     "rationale": {
+      "ar": "تستمر الوقاية في المنزل.",
+      "en": "Prevention continues at home."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الجلد سليم بعد 5 أيام وجدول التقليب ملتزم به — تحقق.",
+      "en": "Skin intact after 5 days; turning schedule followed — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الجلد والخطر",
+      "en": "Skin and risk assessment"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الخطر بمقياس برادن عند الدخول ويوميًا.",
+       "فحص الجلد كل وردية خاصة العجز والكعبين والوركين والكوعين وخلف الرأس وتحت الأجهزة الطبية."
+      ],
+      "en": [
+       "Assess risk with the Braden scale on admission and daily.",
+       "Inspect skin every shift: sacrum, heels, hips, elbows, occiput and under medical devices."
+      ]
+     },
+     "outcome": {
+      "ar": "برادن مسجل والجلد مفحوص.",
+      "en": "Braden recorded, skin inspected."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تخفيف الضغط",
+      "en": "Pressure relief"
+     },
+     "actions": {
+      "ar": [
+       "تغيير وضع المريض كل ساعتين على الأقل (جدول تقليب) بزاوية 30 درجة.",
+       "رفع الكعبين عن السرير بوسادة تحت الساق.",
+       "استخدام مرتبة توزيع الضغط (هوائية أو فوم) حسب الخطر.",
+       "رفع رأس السرير ≤ 30 درجة إلا إذا لزم غير ذلك، واستخدام ملاءة لرفع المريض بدل سحبه.",
+       "عدم تدليك الأماكن المحمرة فوق النتوءات العظمية."
+      ],
+      "en": [
+       "Reposition at least every 2 hours (turning schedule) using a 30° tilt.",
+       "Float heels with a pillow under the calves.",
+       "Use a pressure-redistributing mattress (air or foam) per risk.",
+       "Keep head of bed ≤ 30° unless contraindicated; lift with a draw sheet rather than dragging.",
+       "Do not massage reddened areas over bony prominences."
+      ]
+     },
+     "outcome": {
+      "ar": "لا احمرار مستمر.",
+      "en": "No persistent redness."
+     },
+     "timeframe": {
+      "ar": "كل ساعتين",
+      "en": "Every 2 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "العناية بالجلد والتغذية",
+      "en": "Skin care and nutrition"
+     },
+     "actions": {
+      "ar": [
+       "تنظيف الجلد فورًا بعد التبول أو التبرز ووضع كريم حاجز.",
+       "إحالة لأخصائي التغذية لتعويض البروتين والسعرات والسوائل.",
+       "تعليم الأسرة التقليب وعلامات الاحمرار المبكر."
+      ],
+      "en": [
+       "Clean skin promptly after incontinence and apply a barrier cream.",
+       "Refer to the dietitian for protein, calories and fluids.",
+       "Teach family turning and early redness signs."
+      ]
+     },
+     "outcome": {
+      "ar": "جلد جاف ونظيف وتغذية كافية.",
+      "en": "Clean dry skin, adequate nutrition."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-skin-integrity-pressure",
+   "kind": "actual",
+   "title": {
+    "ar": "تلف سلامة الجلد (قرحة فراش)",
+    "en": "Impaired Skin Integrity (Pressure Injury)"
+   },
+   "definition": {
+    "ar": "تغير في البشرة و/أو الأدمة نتيجة الضغط المستمر.",
+    "en": "Altered epidermis and/or dermis due to sustained pressure."
+   },
+   "relatedTo": {
+    "ar": [
+     "ضغط مستمر وقلة الحركة",
+     "رطوبة",
+     "سوء تغذية"
+    ],
+    "en": [
+     "Sustained pressure and immobility",
+     "Moisture",
+     "Malnutrition"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "قرحة مرحلة 2 على العجز",
+     "ألم في مكان الجرح"
+    ],
+    "en": [
+     "Stage 2 sacral ulcer",
+     "Pain at the site"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"ظهري بيحرقني من تحت.\""
+     ],
+     "en": [
+      "\"My lower back burns.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قرحة 3×2 سم على العجز، فقد جزئي للجلد، قاع وردي، بدون رائحة.",
+      "الحرارة 37.1."
+     ],
+     "en": [
+      "3×2 cm sacral ulcer, partial thickness, pink base, no odour.",
+      "T 37.1 °C."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوع: نقص حجم القرحة وعدم وجود علامات عدوى."
+     ],
+     "en": [
+      "Within a week: reduced wound size, no infection signs."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 2–4 أسابيع: التئام القرحة."
+     ],
+     "en": [
+      "Within 2–4 weeks: wound healed."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس القرحة (الطول × العرض × العمق) وتصنيف مرحلتها وتوثيقها بالصور أسبوعيًا.",
+      "en": "Measure (L × W × D), stage and document the wound weekly (with photos per policy)."
+     },
+     "rationale": {
+      "ar": "يتابع الالتئام بدقة.",
+      "en": "Tracks healing precisely."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات العدوى: احمرار حول الجرح، صديد، رائحة، حرارة.",
+      "en": "Watch for infection: surrounding redness, pus, odour, fever."
+     },
+     "rationale": {
+      "ar": "العدوى تؤخر الالتئام.",
+      "en": "Infection delays healing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إبعاد الضغط تمامًا عن مكان القرحة بتغيير الوضع.",
+      "en": "Keep all pressure off the wound by positioning."
+     },
+     "rationale": {
+      "ar": "لا يلتئم الجرح تحت الضغط.",
+      "en": "A wound will not heal under pressure."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيف الجرح بمحلول ملحي وتغيير الغيار بتقنية نظيفة/معقمة حسب البروتوكول.",
+      "en": "Clean with saline and change dressing using clean/aseptic technique per protocol."
+     },
+     "rationale": {
+      "ar": "بيئة رطبة نظيفة تساعد الالتئام.",
+      "en": "A clean moist environment supports healing."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "استخدام الغيار المناسب حسب الأمر (هيدروكولويد، فوم).",
+      "en": "Use the ordered dressing (hydrocolloid, foam)."
+     },
+     "rationale": {
+      "ar": "يحافظ على الرطوبة المناسبة ويحمي الجرح.",
+      "en": "Maintains proper moisture and protects."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء مسكن قبل الغيار عند الحاجة.",
+      "en": "Give analgesia before dressing changes as needed."
+     },
+     "rationale": {
+      "ar": "يقلل الألم ويحسن التعاون.",
+      "en": "Reduces pain and improves cooperation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تغذية غنية بالبروتين وفيتامين C والزنك حسب أخصائي التغذية.",
+      "en": "Protein, vitamin C and zinc rich diet per dietitian."
+     },
+     "rationale": {
+      "ar": "لازمة لبناء الأنسجة.",
+      "en": "Needed for tissue building."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إحالة لفريق الجروح عند المرحلة 3 أو 4 أو عدم التحسن.",
+      "en": "Refer to the wound team for stage 3–4 or no improvement."
+     },
+     "rationale": {
+      "ar": "يحتاج تدخلًا متخصصًا.",
+      "en": "Needs specialist intervention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "القرحة 2.5×1.5 سم بعد أسبوع، لا عدوى — تحقق جزئيًا، يستمر الخطة.",
+      "en": "Ulcer 2.5×1.5 cm after a week, no infection — partially met, continue plan."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة الجرح",
+      "en": "Wound monitoring"
+     },
+     "actions": {
+      "ar": [
+       "قياس القرحة (الطول × العرض × العمق) وتصنيف مرحلتها وتوثيقها بالصور أسبوعيًا.",
+       "ملاحظة علامات العدوى: احمرار حول الجرح، صديد، رائحة، حرارة."
+      ],
+      "en": [
+       "Measure (L × W × D), stage and document the wound weekly (with photos per policy).",
+       "Watch for infection: surrounding redness, pus, odour, fever."
+      ]
+     },
+     "outcome": {
+      "ar": "قياسات موثقة ولا عدوى.",
+      "en": "Measurements documented, no infection."
+     },
+     "timeframe": {
+      "ar": "كل غيار وأسبوعيًا",
+      "en": "Each dressing and weekly"
+     }
+    },
+    {
+     "need": {
+      "ar": "العناية بالجرح",
+      "en": "Wound care"
+     },
+     "actions": {
+      "ar": [
+       "إبعاد الضغط تمامًا عن مكان القرحة بتغيير الوضع.",
+       "تنظيف الجرح بمحلول ملحي وتغيير الغيار بتقنية نظيفة/معقمة حسب البروتوكول.",
+       "استخدام الغيار المناسب حسب الأمر (هيدروكولويد، فوم).",
+       "إعطاء مسكن قبل الغيار عند الحاجة."
+      ],
+      "en": [
+       "Keep all pressure off the wound by positioning.",
+       "Clean with saline and change dressing using clean/aseptic technique per protocol.",
+       "Use the ordered dressing (hydrocolloid, foam).",
+       "Give analgesia before dressing changes as needed."
+      ]
+     },
+     "outcome": {
+      "ar": "جرح نظيف ويتحسن.",
+      "en": "Clean, improving wound."
+     },
+     "timeframe": {
+      "ar": "حسب البروتوكول",
+      "en": "Per protocol"
+     }
+    },
+    {
+     "need": {
+      "ar": "دعم الالتئام",
+      "en": "Support healing"
+     },
+     "actions": {
+      "ar": [
+       "تغذية غنية بالبروتين وفيتامين C والزنك حسب أخصائي التغذية.",
+       "إحالة لفريق الجروح عند المرحلة 3 أو 4 أو عدم التحسن."
+      ],
+      "en": [
+       "Protein, vitamin C and zinc rich diet per dietitian.",
+       "Refer to the wound team for stage 3–4 or no improvement."
+      ]
+     },
+     "outcome": {
+      "ar": "تغذية كافية وإحالة عند الحاجة.",
+      "en": "Adequate nutrition, referral as needed."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-physical-mobility",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف الحركة الجسدية",
+    "en": "Impaired Physical Mobility"
+   },
+   "definition": {
+    "ar": "محدودية الحركة المستقلة الهادفة للجسم أو لطرف أو أكثر.",
+    "en": "Limitation in independent, purposeful movement of the body or one or more extremities."
+   },
+   "relatedTo": {
+    "ar": [
+     "ضعف عام أو شلل",
+     "ألم",
+     "أوامر الراحة في السرير"
+    ],
+    "en": [
+     "General weakness or paralysis",
+     "Pain",
+     "Prescribed bed rest"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "عدم القدرة على التقلب في السرير بمفرده",
+     "محدودية مدى حركة المفاصل"
+    ],
+    "en": [
+     "Unable to turn in bed alone",
+     "Limited range of motion"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"رجلي تقيلة ومش قادر أحركها.\""
+     ],
+     "en": [
+      "\"My legs feel heavy; I can't move them.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قوة العضلات 3/5 في الطرفين السفليين.",
+      "يحتاج مساعدة شخصين للانتقال."
+     ],
+     "en": [
+      "Lower-limb power 3/5.",
+      "Needs two-person assist to transfer."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 3 أيام: يتقلب في السرير بمساعدة بسيطة ويؤدي تمارين المفاصل."
+     ],
+     "en": [
+      "Within 3 days: turns with minimal help and performs ROM exercises."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: ينتقل من السرير للكرسي بأقل مساعدة ودون مضاعفات عدم الحركة."
+     ],
+     "en": [
+      "Before discharge: transfers bed-to-chair with minimal help, without immobility complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم قوة العضلات ومدى حركة المفاصل والقدرة على الانتقال.",
+      "en": "Assess muscle power, ROM and transfer ability."
+     },
+     "rationale": {
+      "ar": "أساس خطة الحركة.",
+      "en": "Baseline for the mobility plan."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة مضاعفات عدم الحركة: الجلطات (ألم وتورم الساق)، الالتهاب الرئوي، الإمساك، قرحة الفراش.",
+      "en": "Monitor immobility complications: DVT (calf pain, swelling), pneumonia, constipation, pressure injury."
+     },
+     "rationale": {
+      "ar": "عدم الحركة يؤثر على كل أجهزة الجسم.",
+      "en": "Immobility affects every body system."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تمارين المدى الحركي السلبية أو الإيجابية 3 مرات يوميًا.",
+      "en": "Passive or active ROM exercises three times daily."
+     },
+     "rationale": {
+      "ar": "تمنع تيبس المفاصل وضمور العضلات.",
+      "en": "Prevents contractures and atrophy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع المريض في أوضاع صحيحة مع دعم المفاصل.",
+      "en": "Position in correct alignment with joint support."
+     },
+     "rationale": {
+      "ar": "يمنع التشوهات وسقوط القدم.",
+      "en": "Prevents deformities and foot drop."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع التنفس العميق والكحة كل ساعتين.",
+      "en": "Encourage deep breathing and coughing every 2 hours."
+     },
+     "rationale": {
+      "ar": "يمنع الالتهاب الرئوي الناتج عن الرقاد.",
+      "en": "Prevents hypostatic pneumonia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التحريك المبكر التدريجي: الجلوس ثم الوقوف ثم المشي.",
+      "en": "Early progressive mobilization: sitting, standing, walking."
+     },
+     "rationale": {
+      "ar": "يعيد القوة ويقلل المضاعفات.",
+      "en": "Restores strength and reduces complications."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الوقاية من الجلطات حسب الأمر (جوارب ضاغطة، هيبارين).",
+      "en": "DVT prophylaxis as ordered (stockings, heparin)."
+     },
+     "rationale": {
+      "ar": "الركود الوريدي يسبب الجلطات.",
+      "en": "Venous stasis causes clots."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التنسيق مع العلاج الطبيعي لخطة تأهيل.",
+      "en": "Coordinate a rehabilitation plan with physiotherapy."
+     },
+     "rationale": {
+      "ar": "تأهيل متخصص.",
+      "en": "Specialist rehabilitation."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض والأسرة التمارين وطرق الانتقال الآمن.",
+      "en": "Teach exercises and safe transfer techniques."
+     },
+     "rationale": {
+      "ar": "استمرارية التأهيل.",
+      "en": "Continuity of rehabilitation."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يتقلب بمساعدة بسيطة وينتقل للكرسي بمساعدة شخص — تحقق.",
+      "en": "Turns with minimal help and transfers with one assist — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم ومتابعة",
+      "en": "Assess and monitor"
+     },
+     "actions": {
+      "ar": [
+       "تقييم قوة العضلات ومدى حركة المفاصل والقدرة على الانتقال.",
+       "متابعة مضاعفات عدم الحركة: الجلطات (ألم وتورم الساق)، الالتهاب الرئوي، الإمساك، قرحة الفراش."
+      ],
+      "en": [
+       "Assess muscle power, ROM and transfer ability.",
+       "Monitor immobility complications: DVT (calf pain, swelling), pneumonia, constipation, pressure injury."
+      ]
+     },
+     "outcome": {
+      "ar": "لا مضاعفات عدم حركة.",
+      "en": "No immobility complications."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تمارين ووضعية",
+      "en": "Exercises and positioning"
+     },
+     "actions": {
+      "ar": [
+       "تمارين المدى الحركي السلبية أو الإيجابية 3 مرات يوميًا.",
+       "وضع المريض في أوضاع صحيحة مع دعم المفاصل.",
+       "تشجيع التنفس العميق والكحة كل ساعتين."
+      ],
+      "en": [
+       "Passive or active ROM exercises three times daily.",
+       "Position in correct alignment with joint support.",
+       "Encourage deep breathing and coughing every 2 hours."
+      ]
+     },
+     "outcome": {
+      "ar": "مفاصل مرنة وصدر سليم.",
+      "en": "Flexible joints, clear chest."
+     },
+     "timeframe": {
+      "ar": "3 مرات يوميًا",
+      "en": "Three times daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "تحريك وتأهيل",
+      "en": "Mobilize and rehabilitate"
+     },
+     "actions": {
+      "ar": [
+       "التحريك المبكر التدريجي: الجلوس ثم الوقوف ثم المشي.",
+       "الوقاية من الجلطات حسب الأمر (جوارب ضاغطة، هيبارين).",
+       "التنسيق مع العلاج الطبيعي لخطة تأهيل.",
+       "تعليم المريض والأسرة التمارين وطرق الانتقال الآمن."
+      ],
+      "en": [
+       "Early progressive mobilization: sitting, standing, walking.",
+       "DVT prophylaxis as ordered (stockings, heparin).",
+       "Coordinate a rehabilitation plan with physiotherapy.",
+       "Teach exercises and safe transfer techniques."
+      ]
+     },
+     "outcome": {
+      "ar": "ينتقل بأقل مساعدة.",
+      "en": "Transfers with minimal help."
+     },
+     "timeframe": {
+      "ar": "يوميًا حتى الخروج",
+      "en": "Daily until discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "EPUAP/NPIAP/PPPIA — Prevention and Treatment of Pressure Ulcers/Injuries: Clinical Practice Guideline (2019)"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "mobility"
+}

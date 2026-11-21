@@ -57,6 +57,7 @@ export const GROUPS: Record<string, { ar: string; en: string }> = {
   vitals: { ar: "العلامات الحيوية", en: "Vital signs" },
   metabolic: { ar: "السكر والكلى", en: "Diabetes & kidney" },
   devices: { ar: "الأجهزة والإجراءات", en: "Devices & procedures" },
+  mobility: { ar: "الحركة والسلامة", en: "Mobility & safety" },
   maternal: { ar: "الأم والوليد", en: "Mother & newborn" },
   icu: { ar: "مضاعفات الرعاية المركزة", en: "ICU complications" },
   other: { ar: "أخرى", en: "Other" },
