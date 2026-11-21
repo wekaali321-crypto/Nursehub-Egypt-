@@ -306,22 +306,21 @@ export function CarePlanPage() {
 
 function SheetHeader({ ar, kind, plan, dx, n }: { ar: boolean; kind: Kind; plan: CarePlan; dx: Diagnosis; n: number }) {
   return (
-    <header dir="ltr" className="flex items-center justify-between gap-6 p-5 print:p-3">
+    <header dir="ltr" className="flex items-center justify-between gap-6 p-5 print:gap-3 print:px-3 print:py-1.5">
       <div className="flex items-center gap-3">
-        <LogoMark size={56} className="shadow-none" />
+        <LogoMark size={56} className="shadow-none print:!h-8 print:!w-8" />
         <div>
-          <div className="text-[28px] font-black leading-8 text-[#153448]">NurseHub <span className="text-[#168C91]">Egypt</span></div>
-          <div dir="rtl" className="mt-1 text-xs font-bold text-[#153448]">— كل ما يحتاجه الممرض في مكان واحد —</div>
+          <div className="whitespace-nowrap text-[28px] font-black leading-8 text-[#153448] print:text-[15px] print:leading-5">NurseHub <span className="text-[#168C91]">Egypt</span></div>
+          <div dir="rtl" className="mt-1 whitespace-nowrap text-xs font-bold text-[#153448] print:mt-0 print:text-[8px]">— كل ما يحتاجه الممرض في مكان واحد —</div>
         </div>
       </div>
-      <div dir={ar ? "rtl" : "ltr"} className="flex min-w-[560px] items-center gap-4 rounded-full bg-[#153448] py-3 ps-4 pe-8 text-white print:py-2">
-        <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-[#153448]"><Stethoscope className="h-8 w-8" /></span>
+      <div dir={ar ? "rtl" : "ltr"} className="flex min-w-[560px] items-center gap-4 rounded-full bg-[#153448] py-3 ps-4 pe-8 text-white print:min-w-0 print:flex-1 print:gap-2 print:py-1 print:ps-2 print:pe-4">
+        <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white text-[#153448] print:h-7 print:w-7"><Stethoscope className="h-8 w-8 print:h-4 print:w-4" /></span>
         <div className="min-w-0 flex-1">
-          <div className="text-2xl font-black leading-8">{ar ? T.sheet.ar : T.sheet.en}</div>
-          <div className="text-sm font-bold italic text-[#7fdde1]">{ar ? T.sheet.en : T.sheet.ar} · {ar ? T[kind].ar : T[kind].en}</div>
-          <div className="mt-1 text-sm"><span className="font-black text-white">{pick(plan.title, ar)}</span><span className="mx-2 text-white/40">|</span><span className="font-bold text-white/85">{ar ? "التشخيص" : "Diagnosis"} {n}: {pick(dx.title, ar)}</span></div>
+          <div className="flex flex-wrap items-baseline gap-x-3"><span className="text-2xl font-black leading-8 print:text-[13px] print:leading-5">{ar ? T.sheet.ar : T.sheet.en}</span><span className="text-sm font-bold italic text-[#7fdde1] print:text-[9px]">{ar ? T.sheet.en : T.sheet.ar} · {ar ? T[kind].ar : T[kind].en}</span></div>
+          <div className="mt-1 text-sm print:mt-0 print:text-[9px]"><span className="font-black text-white">{pick(plan.title, ar)}</span><span className="mx-2 text-white/40">|</span><span className="font-bold text-white/85">{ar ? "التشخيص" : "Diagnosis"} {n}: {pick(dx.title, ar)}</span></div>
         </div>
-        <Activity className="h-10 w-10 shrink-0 text-[#5fd3d8]" />
+        <Activity className="h-10 w-10 shrink-0 text-[#5fd3d8] print:hidden" />
       </div>
     </header>
   );
@@ -330,9 +329,9 @@ function SheetHeader({ ar, kind, plan, dx, n }: { ar: boolean; kind: Kind; plan:
 function SheetFooter() {
   return (
     <footer dir="ltr" className="relative mt-2 overflow-hidden bg-[#153448] text-white break-inside-avoid print:mt-0">
-      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" className="block h-6 w-full bg-[#f7fbfc]" aria-hidden="true"><path d="M0 40 C300 0 700 50 1200 10 L1200 40 Z" fill="#168C91" /><path d="M0 40 C350 15 750 55 1200 25 L1200 40 Z" fill="#153448" /></svg>
-      <div className="flex items-center justify-between gap-4 px-6 py-3 print:py-1.5">
-        <div className="text-base font-black italic">NurseHub Egypt <span className="mx-2 text-white/50">—</span> <span className="font-bold">Your Nursing Knowledge Hub</span></div>
+      <svg viewBox="0 0 1200 40" preserveAspectRatio="none" className="block h-6 w-full bg-[#f7fbfc] print:hidden" aria-hidden="true"><path d="M0 40 C300 0 700 50 1200 10 L1200 40 Z" fill="#168C91" /><path d="M0 40 C350 15 750 55 1200 25 L1200 40 Z" fill="#153448" /></svg>
+      <div className="flex items-center justify-between gap-4 px-6 py-3 print:px-3 print:py-0.5 print:text-[9px] print:[&_span.grid]:hidden">
+        <div className="text-base font-black italic print:text-[9px]">NurseHub Egypt <span className="mx-2 text-white/50">—</span> <span className="font-bold">Your Nursing Knowledge Hub</span></div>
         <div className="flex items-center gap-2">
           {[Stethoscope, BriefcaseMedical, Syringe, HeartPulse].map((I, i) => <span key={i} className="grid h-8 w-8 place-items-center rounded-full bg-[#168C91]"><I className="h-4 w-4" /></span>)}
           <span className="ms-2 text-xs font-bold text-white/80">nursehubegypt.com</span>
@@ -349,7 +348,7 @@ function PatientFields({ ar, kind }: { ar: boolean; kind: Kind }) {
       <span className="shrink-0">{label}:</span><span className="mb-1 h-px flex-1 border-b border-dotted border-[#153448]/50" />
     </div>
   );
-  const box = "grid grid-cols-[1fr_auto_1fr] gap-x-6 rounded-2xl border border-[#168C91]/60 bg-white p-4 print:p-2.5 print:[&_.space-y-3]:space-y-1.5 print:[&_.space-y-4]:space-y-2";
+  const box = "grid grid-cols-[1fr_auto_1fr] gap-x-6 rounded-2xl border border-[#168C91]/60 bg-white p-4 print:rounded-lg print:p-1.5 print:[&_div]:text-[10px] print:[&_svg]:hidden print:[&_.space-y-3]:space-y-1.5 print:[&_.space-y-4]:space-y-2";
   const divider = <span className="w-[2px] rounded-full bg-[#168C91]" />;
   if (kind === "hospital") {
     return (
