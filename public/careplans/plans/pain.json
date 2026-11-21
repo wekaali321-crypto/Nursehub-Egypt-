@@ -1,0 +1,768 @@
+{
+ "id": "pain",
+ "icon": "🤕",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "الألم",
+  "en": "Pain"
+ },
+ "summary": {
+  "ar": "خطة رعاية للمريض الذي يعاني من الألم: تقييم الألم بالمقياس، التسكين وإعادة التقييم، والوسائل غير الدوائية.",
+  "en": "Care plan for a patient in pain: scale-based assessment, analgesia and reassessment, and non-drug methods."
+ },
+ "diagnoses": [
+  {
+   "id": "acute-pain",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد",
+    "en": "Acute Pain"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف فعلي أو محتمل في الأنسجة، تبدأ فجأة وتستمر أقل من 3 شهور.",
+    "en": "Unpleasant sensory and emotional experience associated with actual or potential tissue damage, of sudden onset and lasting under 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "مسببات جسدية (جرح، التهاب، عملية، إصابة)",
+     "نقص التروية"
+    ],
+    "en": [
+     "Physical agents (wound, inflammation, surgery, injury)",
+     "Ischemia"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "شكوى لفظية من الألم وشدته على المقياس ≥ 4/10",
+     "تعبير ألم على الوجه وحماية المكان المصاب",
+     "تغير العلامات الحيوية (سرعة النبض، ارتفاع الضغط)",
+     "تجنب الحركة"
+    ],
+    "en": [
+     "Verbal report of pain ≥ 4/10",
+     "Facial grimacing and guarding",
+     "Vital-sign changes (tachycardia, raised BP)",
+     "Avoidance of movement"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الوجع شديد ومش قادر أتحرك.\"",
+      "\"الوجع بيزيد لما أكح أو أقوم.\""
+     ],
+     "en": [
+      "\"The pain is severe and I can't move.\"",
+      "\"It gets worse when I cough or get up.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "شدة الألم 7/10 على المقياس الرقمي.",
+      "النبض 104، الضغط 145/90.",
+      "تعبير ألم وحماية المكان المصاب."
+     ],
+     "en": [
+      "Pain 7/10 on the numeric scale.",
+      "Pulse 104, BP 145/90.",
+      "Grimacing and guarding."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 30–45 دقيقة من المسكن: الألم ≤ 3/10 أو حسب هدف المريض.",
+      "خلال 24 ساعة: يتحرك ويتنفس بعمق مع ألم محتمل."
+     ],
+     "en": [
+      "Within 30–45 minutes of analgesia: pain ≤ 3/10 or the patient's goal.",
+      "Within 24 hours: moves and breathes deeply with tolerable pain."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يشرح المريض طرق التحكم في الألم واستخدام المسكن بأمان."
+     ],
+     "en": [
+      "Before discharge: the patient explains pain-control methods and safe analgesic use."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الألم باستخدام نموذج تقييم الألم: المكان، الشدة (0–10)، النوع، المدة، وما يزيده أو يقلله، ومدى تحمل المريض.",
+      "en": "Assess pain with the pain-assessment tool: site, intensity (0–10), character, duration, aggravating/relieving factors and tolerance."
+     },
+     "rationale": {
+      "ar": "التقييم المنظم أساس اختيار العلاج.",
+      "en": "Structured assessment guides treatment."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "إعادة تقييم الألم بعد 30–45 دقيقة من المسكن لمعرفة الاستجابة.",
+      "en": "Reassess 30–45 minutes after analgesia to judge response."
+     },
+     "rationale": {
+      "ar": "يقيس الفعالية ويحدد الحاجة لتعديل العلاج.",
+      "en": "Measures effect and need for adjustment."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة العلامات الحيوية والآثار الجانبية للمسكنات (نعاس، بطء تنفس، غثيان، إمساك).",
+      "en": "Monitor vital signs and analgesic side effects (sedation, slow breathing, nausea, constipation)."
+     },
+     "rationale": {
+      "ar": "سلامة المريض مع المسكنات القوية.",
+      "en": "Safety with strong analgesics."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب بنوع الألم ومكانه ومدى تحمل المريض له.",
+      "en": "Report pain type, site and tolerance to the physician."
+     },
+     "rationale": {
+      "ar": "لتحديد السبب والعلاج المناسب.",
+      "en": "To find the cause and right treatment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء العلاج المسكن الموصوف في مواعيده (قبل اشتداد الألم).",
+      "en": "Give prescribed analgesia on schedule (before pain becomes severe)."
+     },
+     "rationale": {
+      "ar": "التسكين المنتظم أكثر فعالية.",
+      "en": "Regular analgesia is more effective."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير وضع المريض لوضع مريح وسند المكان المصاب بالوسائد.",
+      "en": "Reposition comfortably and support the painful area with pillows."
+     },
+     "rationale": {
+      "ar": "يقلل الشد والضغط على المكان المؤلم.",
+      "en": "Reduces strain and pressure."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عمل مساج خفيف مكان الألم (إن لم يكن ممنوعًا) وكمادات حسب نوع الألم.",
+      "en": "Gentle massage of the area (if not contraindicated) and compresses as appropriate."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر العضلي ويقلل الإحساس بالألم.",
+      "en": "Relaxes muscles and reduces pain perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيم النشاط (زيادته أو تقليله حسب الحالة) مع فترات راحة.",
+      "en": "Adjust activity (increase or reduce as appropriate) with rest periods."
+     },
+     "rationale": {
+      "ar": "يمنع زيادة الألم مع المجهود.",
+      "en": "Prevents activity-related pain."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام وسائل غير دوائية: التنفس العميق، الاسترخاء، صرف الانتباه.",
+      "en": "Use non-drug methods: deep breathing, relaxation, distraction."
+     },
+     "rationale": {
+      "ar": "تكمّل مفعول المسكن.",
+      "en": "Complement analgesics."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تثقيف المريض: الإبلاغ عن الألم مبكرًا، وطريقة استخدام المقياس، وسند الجرح عند الكحة والحركة.",
+      "en": "Teach: report pain early, use the pain scale, splint wounds when coughing and moving."
+     },
+     "rationale": {
+      "ar": "إشراك المريض يحسن التحكم في الألم.",
+      "en": "Involvement improves pain control."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 2/10 بعد 40 دقيقة من المسكن — تحقق.",
+      "en": "Pain 2/10 forty minutes after analgesia — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "يتحرك ويكح مع سند الجرح والألم 3/10 — تحقق.",
+      "en": "Moves and coughs with splinting, pain 3/10 — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض شرح طرق التحكم في الألم — تحقق.",
+      "en": "Patient explained pain-control methods — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الألم وإعادة تقييمه",
+      "en": "Pain assessment and reassessment"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الألم باستخدام نموذج تقييم الألم: المكان، الشدة (0–10)، النوع، المدة، وما يزيده أو يقلله، ومدى تحمل المريض.",
+       "إعادة تقييم الألم بعد 30–45 دقيقة من المسكن لمعرفة الاستجابة.",
+       "ملاحظة العلامات الحيوية والآثار الجانبية للمسكنات (نعاس، بطء تنفس، غثيان، إمساك)."
+      ],
+      "en": [
+       "Assess pain with the pain-assessment tool: site, intensity (0–10), character, duration, aggravating/relieving factors and tolerance.",
+       "Reassess 30–45 minutes after analgesia to judge response.",
+       "Monitor vital signs and analgesic side effects (sedation, slow breathing, nausea, constipation)."
+      ]
+     },
+     "outcome": {
+      "ar": "الألم مقيم بالمقياس ومعاد تقييمه بعد 30–45 دقيقة، والآثار الجانبية متابعة.",
+      "en": "Pain scored and reassessed after 30–45 min; side effects monitored."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات وبعد كل مسكن",
+      "en": "Every 4 h and after each analgesic"
+     }
+    },
+    {
+     "need": {
+      "ar": "تسكين الألم",
+      "en": "Pain relief"
+     },
+     "actions": {
+      "ar": [
+       "إبلاغ الطبيب بنوع الألم ومكانه ومدى تحمل المريض له.",
+       "إعطاء العلاج المسكن الموصوف في مواعيده (قبل اشتداد الألم)."
+      ],
+      "en": [
+       "Report pain type, site and tolerance to the physician.",
+       "Give prescribed analgesia on schedule (before pain becomes severe)."
+      ]
+     },
+     "outcome": {
+      "ar": "الألم ≤ 3/10 والمسكن في موعده.",
+      "en": "Pain ≤ 3/10 with analgesia on time."
+     },
+     "timeframe": {
+      "ar": "30–45 دقيقة",
+      "en": "30–45 minutes"
+     }
+    },
+    {
+     "need": {
+      "ar": "الراحة والتدخلات غير الدوائية",
+      "en": "Comfort and non-drug measures"
+     },
+     "actions": {
+      "ar": [
+       "تغيير وضع المريض لوضع مريح وسند المكان المصاب بالوسائد.",
+       "عمل مساج خفيف مكان الألم (إن لم يكن ممنوعًا) وكمادات حسب نوع الألم.",
+       "تنظيم النشاط (زيادته أو تقليله حسب الحالة) مع فترات راحة.",
+       "استخدام وسائل غير دوائية: التنفس العميق، الاسترخاء، صرف الانتباه."
+      ],
+      "en": [
+       "Reposition comfortably and support the painful area with pillows.",
+       "Gentle massage of the area (if not contraindicated) and compresses as appropriate.",
+       "Adjust activity (increase or reduce as appropriate) with rest periods.",
+       "Use non-drug methods: deep breathing, relaxation, distraction."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض في وضع مريح ويستخدم الاسترخاء والتنفس العميق.",
+      "en": "Patient comfortable and using relaxation and deep breathing."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف المريض",
+      "en": "Patient teaching"
+     },
+     "actions": {
+      "ar": [
+       "تثقيف المريض: الإبلاغ عن الألم مبكرًا، وطريقة استخدام المقياس، وسند الجرح عند الكحة والحركة."
+      ],
+      "en": [
+       "Teach: report pain early, use the pain scale, splint wounds when coughing and moving."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يستخدم المقياس ويبلغ عن الألم مبكرًا.",
+      "en": "Patient uses the scale and reports pain early."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "chronic-pain",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم مزمن",
+    "en": "Chronic Pain"
+   },
+   "definition": {
+    "ar": "ألم مستمر أو متكرر لأكثر من 3 شهور يؤثر على الوظائف اليومية.",
+    "en": "Constant or recurring pain for more than 3 months that affects daily function."
+   },
+   "relatedTo": {
+    "ar": [
+     "مرض مزمن (خشونة، روماتويد، أورام، اعتلال أعصاب)",
+     "إصابة قديمة"
+    ],
+    "en": [
+     "Chronic condition (osteoarthritis, rheumatoid arthritis, cancer, neuropathy)",
+     "Old injury"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم أكثر من 3 شهور",
+     "تغير في النوم والنشاط والمزاج",
+     "الاعتماد المتكرر على المسكنات"
+    ],
+    "en": [
+     "Pain > 3 months",
+     "Altered sleep, activity and mood",
+     "Frequent analgesic use"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الوجع معايا من سنة ومأثر على شغلي ونومي.\""
+     ],
+     "en": [
+      "\"I've had this pain for a year; it affects my work and sleep.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ألم 5/10 أغلب اليوم.",
+      "نوم متقطع وقلة نشاط."
+     ],
+     "en": [
+      "Pain 5/10 most of the day.",
+      "Broken sleep and reduced activity."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوع: يحدد المريض مع الفريق هدفًا واقعيًا للألم (مثلًا ≤ 3/10) ويطبق وسيلتين غير دوائيتين."
+     ],
+     "en": [
+      "Within a week: sets a realistic pain goal (e.g. ≤ 3/10) and uses two non-drug methods."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال شهر: تحسن النوم والقدرة على الأنشطة اليومية."
+     ],
+     "en": [
+      "Within a month: improved sleep and daily function."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم شامل للألم وتأثيره على النوم والعمل والمزاج.",
+      "en": "Comprehensive assessment of pain and its effect on sleep, work and mood."
+     },
+     "rationale": {
+      "ar": "الألم المزمن يؤثر على كل جوانب الحياة.",
+      "en": "Chronic pain affects every aspect of life."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم استخدام المسكنات وآثارها الجانبية والاعتماد عليها.",
+      "en": "Assess analgesic use, side effects and dependence."
+     },
+     "rationale": {
+      "ar": "الاستخدام الآمن للأدوية.",
+      "en": "Safe medication use."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع هدف واقعي للألم مع المريض.",
+      "en": "Set a realistic pain goal with the patient."
+     },
+     "rationale": {
+      "ar": "الهدف الواقعي يقلل الإحباط.",
+      "en": "Realistic goals reduce frustration."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع النشاط المنتظم المتدرج والتمارين المناسبة.",
+      "en": "Encourage regular graded activity and suitable exercise."
+     },
+     "rationale": {
+      "ar": "يحسن الوظيفة ويقلل الألم مع الوقت.",
+      "en": "Improves function and reduces pain over time."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعليم وسائل غير دوائية: كمادات دافئة، استرخاء، تنظيم النشاط.",
+      "en": "Teach non-drug methods: warm compresses, relaxation, pacing."
+     },
+     "rationale": {
+      "ar": "تقلل الاعتماد على الأدوية.",
+      "en": "Reduce reliance on drugs."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المسكنات المنتظمة حسب الأمر والتحويل لعيادة الألم أو العلاج الطبيعي.",
+      "en": "Give regular analgesia as ordered; refer to pain clinic or physiotherapy."
+     },
+     "rationale": {
+      "ar": "رعاية متعددة التخصصات.",
+      "en": "Multidisciplinary care."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التحويل للدعم النفسي عند وجود اكتئاب أو قلق.",
+      "en": "Refer for psychological support if depressed or anxious."
+     },
+     "rationale": {
+      "ar": "المزاج يؤثر على الإحساس بالألم.",
+      "en": "Mood influences pain perception."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض طبق الكمادات الدافئة والاسترخاء والألم 3/10 — تحقق.",
+      "en": "Patient uses warm compresses and relaxation; pain 3/10 — met."
+     }
+    },
+    {
+     "status": "partial",
+     "text": {
+      "ar": "تحسن النوم جزئيًا — يستمر المتابعة في العيادة.",
+      "en": "Sleep partly improved — continue clinic follow-up."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الألم المزمن",
+      "en": "Chronic pain assessment"
+     },
+     "actions": {
+      "ar": [
+       "تقييم شامل للألم وتأثيره على النوم والعمل والمزاج.",
+       "تقييم استخدام المسكنات وآثارها الجانبية والاعتماد عليها."
+      ],
+      "en": [
+       "Comprehensive assessment of pain and its effect on sleep, work and mood.",
+       "Assess analgesic use, side effects and dependence."
+      ]
+     },
+     "outcome": {
+      "ar": "تقييم كامل للألم والأدوية وتأثيرها.",
+      "en": "Full assessment of pain, drugs and impact."
+     },
+     "timeframe": {
+      "ar": "عند الدخول ثم يوميًا",
+      "en": "On admission, then daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "خطة التحكم في الألم",
+      "en": "Pain-control plan"
+     },
+     "actions": {
+      "ar": [
+       "وضع هدف واقعي للألم مع المريض.",
+       "تشجيع النشاط المنتظم المتدرج والتمارين المناسبة.",
+       "تعليم وسائل غير دوائية: كمادات دافئة، استرخاء، تنظيم النشاط.",
+       "إعطاء المسكنات المنتظمة حسب الأمر والتحويل لعيادة الألم أو العلاج الطبيعي.",
+       "التحويل للدعم النفسي عند وجود اكتئاب أو قلق."
+      ],
+      "en": [
+       "Set a realistic pain goal with the patient.",
+       "Encourage regular graded activity and suitable exercise.",
+       "Teach non-drug methods: warm compresses, relaxation, pacing.",
+       "Give regular analgesia as ordered; refer to pain clinic or physiotherapy.",
+       "Refer for psychological support if depressed or anxious."
+      ]
+     },
+     "outcome": {
+      "ar": "هدف ألم واقعي متفق عليه ووسيلتين غير دوائيتين وتحويل مناسب.",
+      "en": "Agreed realistic goal, two non-drug methods and appropriate referral."
+     },
+     "timeframe": {
+      "ar": "أسبوع",
+      "en": "1 week"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disturbed-sleep-pattern",
+   "kind": "actual",
+   "title": {
+    "ar": "اضطراب نمط النوم",
+    "en": "Disturbed Sleep Pattern"
+   },
+   "definition": {
+    "ar": "استيقاظ لفترات محدودة بسبب عوامل خارجية.",
+    "en": "Time-limited awakenings due to external factors."
+   },
+   "relatedTo": {
+    "ar": [
+     "الألم",
+     "بيئة المستشفى (ضوضاء، إضاءة، إجراءات ليلية)"
+    ],
+    "en": [
+     "Pain",
+     "Hospital environment (noise, light, night procedures)"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "صعوبة بدء النوم أو الاستيقاظ المتكرر",
+     "شكوى من عدم الراحة بعد النوم",
+     "نعاس أثناء النهار"
+    ],
+    "en": [
+     "Difficulty falling asleep or frequent waking",
+     "Not feeling rested",
+     "Daytime sleepiness"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بصحى كل شوية من الوجع.\""
+     ],
+     "en": [
+      "\"I keep waking up from the pain.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "نوم 3–4 ساعات متقطعة.",
+      "هالات سوداء ونعاس نهاري."
+     ],
+     "en": [
+      "3–4 hours of broken sleep.",
+      "Dark circles and daytime drowsiness."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: ينام 5–6 ساعات متواصلة."
+     ],
+     "en": [
+      "Within 48 hours: sleeps 5–6 uninterrupted hours."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يشرح عادتين تساعدان على النوم."
+     ],
+     "en": [
+      "Before discharge: names two habits that aid sleep."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم نمط النوم المعتاد وأسباب الاستيقاظ.",
+      "en": "Assess usual sleep pattern and causes of waking."
+     },
+     "rationale": {
+      "ar": "يحدد التدخل المناسب.",
+      "en": "Guides intervention."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المسكن قبل النوم حسب الأمر.",
+      "en": "Give analgesia at bedtime as ordered."
+     },
+     "rationale": {
+      "ar": "الألم أهم سبب للاستيقاظ هنا.",
+      "en": "Pain is the main cause of waking here."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تقليل الضوضاء والإضاءة ليلًا وغلق الباب إن أمكن.",
+      "en": "Reduce night noise and light; close the door if possible."
+     },
+     "rationale": {
+      "ar": "بيئة مناسبة للنوم.",
+      "en": "Sleep-friendly environment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تجميع الإجراءات الليلية لتوفير فترات نوم متواصلة.",
+      "en": "Cluster night procedures to allow uninterrupted sleep."
+     },
+     "rationale": {
+      "ar": "نوم أعمق.",
+      "en": "Deeper sleep."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الحفاظ على روتين النوم المعتاد للمريض (وقت ثابت، مشروب دافئ).",
+      "en": "Keep the patient's usual bedtime routine (fixed time, warm drink)."
+     },
+     "rationale": {
+      "ar": "العادات المألوفة تسهل النوم.",
+      "en": "Familiar routines ease sleep."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم تقليل الكافيين بعد العصر وتقليل النوم النهاري.",
+      "en": "Teach limiting afternoon caffeine and daytime naps."
+     },
+     "rationale": {
+      "ar": "يحسن نوم الليل.",
+      "en": "Improves night sleep."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "نام 6 ساعات في الليلة الثانية — تحقق.",
+      "en": "Slept 6 hours on night 2 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تحسين النوم",
+      "en": "Improve sleep"
+     },
+     "actions": {
+      "ar": [
+       "تقييم نمط النوم المعتاد وأسباب الاستيقاظ.",
+       "إعطاء المسكن قبل النوم حسب الأمر.",
+       "تقليل الضوضاء والإضاءة ليلًا وغلق الباب إن أمكن.",
+       "تجميع الإجراءات الليلية لتوفير فترات نوم متواصلة.",
+       "الحفاظ على روتين النوم المعتاد للمريض (وقت ثابت، مشروب دافئ)."
+      ],
+      "en": [
+       "Assess usual sleep pattern and causes of waking.",
+       "Give analgesia at bedtime as ordered.",
+       "Reduce night noise and light; close the door if possible.",
+       "Cluster night procedures to allow uninterrupted sleep.",
+       "Keep the patient's usual bedtime routine (fixed time, warm drink)."
+      ]
+     },
+     "outcome": {
+      "ar": "نوم 5–6 ساعات متواصلة.",
+      "en": "Sleeps 5–6 uninterrupted hours."
+     },
+     "timeframe": {
+      "ar": "48 ساعة",
+      "en": "48 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف عن النوم",
+      "en": "Sleep teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم تقليل الكافيين بعد العصر وتقليل النوم النهاري."
+      ],
+      "en": [
+       "Teach limiting afternoon caffeine and daytime naps."
+      ]
+     },
+     "outcome": {
+      "ar": "يشرح عادتين صحيتين للنوم.",
+      "en": "States two healthy sleep habits."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "symptoms"
+}
