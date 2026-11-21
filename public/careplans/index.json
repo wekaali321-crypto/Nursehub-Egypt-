@@ -1045,6 +1045,51 @@
    "group": "vitals"
   },
   {
+   "id": "hemodialysis",
+   "icon": "🩻",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "الغسيل الكلوي الدموي (الوصلة)",
+    "en": "Hemodialysis & Vascular Access"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض الغسيل الدموي: العناية بالوصلة، الوقاية من العدوى والنزيف، ومضاعفات الجلسة.",
+    "en": "Care plan for hemodialysis: access care, infection and bleeding prevention, and intradialytic complications."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-infection-av-access",
+     "title": {
+      "ar": "خطر العدوى (مكان الوصلة / القسطرة)",
+      "en": "Risk for Infection (Vascular Access)"
+     }
+    },
+    {
+     "id": "risk-for-bleeding-hd",
+     "title": {
+      "ar": "خطر النزيف",
+      "en": "Risk for Bleeding"
+     }
+    },
+    {
+     "id": "risk-for-injury-dialysis",
+     "title": {
+      "ar": "خطر مضاعفات الغسيل (هبوط الضغط)",
+      "en": "Risk for Injury: Dialysis Complications"
+     }
+    },
+    {
+     "id": "risk-access-dysfunction",
+     "title": {
+      "ar": "خطر تلف أو انسداد الوصلة",
+      "en": "Risk for Vascular Access Dysfunction"
+     }
+    }
+   ],
+   "group": "metabolic"
+  },
+  {
    "id": "hyperglycemia-dka",
    "icon": "📈",
    "system": "general",
@@ -1143,6 +1188,82 @@
     }
    ],
    "group": "symptoms"
+  },
+  {
+   "id": "peritoneal-dialysis",
+   "icon": "🫙",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "الغسيل الكلوي البريتوني",
+    "en": "Peritoneal Dialysis"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض الغسيل البريتوني: الوقاية من التهاب البريتون، متابعة الداخل والخارج، وتخفيف الألم.",
+    "en": "Care plan for peritoneal dialysis: peritonitis prevention, inflow/outflow monitoring and pain relief."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-infection-peritonitis",
+     "title": {
+      "ar": "خطر العدوى (التهاب الغشاء البريتوني)",
+      "en": "Risk for Infection (Peritonitis)"
+     }
+    },
+    {
+     "id": "risk-imbalanced-fluid-pd",
+     "title": {
+      "ar": "خطر اختلال حجم السوائل",
+      "en": "Risk for Imbalanced Fluid Volume"
+     }
+    },
+    {
+     "id": "acute-pain-pd",
+     "title": {
+      "ar": "ألم حاد أثناء الغسيل البريتوني",
+      "en": "Acute Pain During Peritoneal Dialysis"
+     }
+    }
+   ],
+   "group": "metabolic"
+  },
+  {
+   "id": "renal-failure",
+   "icon": "🫘",
+   "system": "general",
+   "folder": "general",
+   "title": {
+    "ar": "الفشل الكلوي",
+    "en": "Renal Failure"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض الفشل الكلوي: ضبط السوائل والوزن اليومي، البوتاسيوم، والتغذية المناسبة.",
+    "en": "Care plan for renal failure: fluid control and daily weight, potassium, and suitable nutrition."
+   },
+   "diagnoses": [
+    {
+     "id": "excess-fluid-volume-renal",
+     "title": {
+      "ar": "زيادة حجم السوائل",
+      "en": "Excess Fluid Volume"
+     }
+    },
+    {
+     "id": "risk-electrolyte-imbalance-renal",
+     "title": {
+      "ar": "خطر اختلال الأملاح (ارتفاع البوتاسيوم)",
+      "en": "Risk for Electrolyte Imbalance (Hyperkalemia)"
+     }
+    },
+    {
+     "id": "imbalanced-nutrition-renal",
+     "title": {
+      "ar": "خلل التغذية: أقل من احتياج الجسم",
+      "en": "Imbalanced Nutrition: Less Than Body Requirements"
+     }
+    }
+   ],
+   "group": "metabolic"
   }
  ]
 }

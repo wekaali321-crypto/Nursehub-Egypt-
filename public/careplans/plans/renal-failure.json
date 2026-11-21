@@ -1,0 +1,646 @@
+{
+ "id": "renal-failure",
+ "icon": "🫘",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "الفشل الكلوي",
+  "en": "Renal Failure"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض الفشل الكلوي: ضبط السوائل والوزن اليومي، البوتاسيوم، والتغذية المناسبة.",
+  "en": "Care plan for renal failure: fluid control and daily weight, potassium, and suitable nutrition."
+ },
+ "diagnoses": [
+  {
+   "id": "excess-fluid-volume-renal",
+   "kind": "actual",
+   "title": {
+    "ar": "زيادة حجم السوائل",
+    "en": "Excess Fluid Volume"
+   },
+   "definition": {
+    "ar": "زيادة احتباس السوائل في الأوعية والأنسجة.",
+    "en": "Increased retention of fluid in the vascular and interstitial spaces."
+   },
+   "relatedTo": {
+    "ar": [
+     "ضعف وظائف الكلى وقلة البول",
+     "زيادة الملح والسوائل في الأكل والشرب"
+    ],
+    "en": [
+     "Compromised renal function with oliguria",
+     "Excess salt and fluid intake"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ورم (Oedema) في القدمين والوجه",
+     "زيادة الوزن السريعة",
+     "ضيق نفس وخرخرة",
+     "ارتفاع الضغط"
+    ],
+    "en": [
+     "Oedema of feet and face",
+     "Rapid weight gain",
+     "Dyspnea and crackles",
+     "Hypertension"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"وشي وارم الصبح ورجلي تقيلة.\""
+     ],
+     "en": [
+      "\"My face is puffy in the morning and my legs feel heavy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "زيادة الوزن 3 كجم في 3 أيام.",
+      "ورم +2 بالقدمين، الضغط 165/100.",
+      "البول 350 مل/يوم، الكرياتينين 6.8."
+     ],
+     "en": [
+      "Weight gain of 3 kg in 3 days.",
+      "+2 leg oedema, BP 165/100.",
+      "Urine 350 mL/day, creatinine 6.8."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 72 ساعة: نقص الوزن وتقل الأورام والضغط < 140/90."
+     ],
+     "en": [
+      "Within 72 hours: weight and oedema decrease, BP < 140/90."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يلتزم المريض بحد السوائل والملح ويشرح الوزن اليومي."
+     ],
+     "en": [
+      "Before discharge: adheres to fluid and salt limits and explains daily weighing."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل كمية السوائل الداخلة والخارجة بدقة.",
+      "en": "Record intake and output accurately."
+     },
+     "rationale": {
+      "ar": "يحدد التوازن والكمية المسموحة.",
+      "en": "Defines balance and allowance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "وزن المريض يوميًا في نفس الوقت، وبنفس الميزان، ونفس الملابس.",
+      "en": "Weigh daily at the same time, same scale, same clothes."
+     },
+     "rationale": {
+      "ar": "أدق مؤشر لاحتباس السوائل.",
+      "en": "Most accurate fluid indicator."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة أماكن التورم وسماع الرئة ومتابعة الضغط.",
+      "en": "Observe oedema sites, auscultate lungs and monitor BP."
+     },
+     "rationale": {
+      "ar": "يكشف زيادة السوائل ووذمة الرئة.",
+      "en": "Detects overload and pulmonary oedema."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الدقة في إعطاء كمية السوائل الموصوفة (مثلًا 500 مل + بول اليوم السابق).",
+      "en": "Give exactly the prescribed fluid allowance (e.g. 500 mL + previous day's urine)."
+     },
+     "rationale": {
+      "ar": "الكلى لا تخرج الزائد.",
+      "en": "The kidneys cannot excrete the excess."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تقليل الملح في الأكل وتعليم طرق تقليل العطش (ثلج، علكة، أكواب صغيرة).",
+      "en": "Limit salt and teach thirst control (ice chips, gum, small cups)."
+     },
+     "rationale": {
+      "ar": "الملح يزيد العطش والاحتباس.",
+      "en": "Salt increases thirst and retention."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأدوية (مدرات، أدوية الضغط) حسب إرشادات الطبيب.",
+      "en": "Give medications (diuretics, antihypertensives) as directed."
+     },
+     "rationale": {
+      "ar": "تقلل السوائل والضغط.",
+      "en": "Reduce fluid and BP."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عند ضيق النفس أو زيادة الوزن السريعة (قد يحتاج غسيل).",
+      "en": "Report dyspnea or rapid weight gain (may need dialysis)."
+     },
+     "rationale": {
+      "ar": "التدخل المبكر يمنع وذمة الرئة.",
+      "en": "Early action prevents pulmonary oedema."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "نقص الوزن 1.8 كجم والضغط 138/88 في 3 أيام — تحقق.",
+      "en": "Weight down 1.8 kg, BP 138/88 in 3 days — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة السوائل",
+      "en": "Fluid monitoring"
+     },
+     "actions": {
+      "ar": [
+       "تسجيل كمية السوائل الداخلة والخارجة بدقة.",
+       "وزن المريض يوميًا في نفس الوقت، وبنفس الميزان، ونفس الملابس.",
+       "ملاحظة أماكن التورم وسماع الرئة ومتابعة الضغط."
+      ],
+      "en": [
+       "Record intake and output accurately.",
+       "Weigh daily at the same time, same scale, same clothes.",
+       "Observe oedema sites, auscultate lungs and monitor BP."
+      ]
+     },
+     "outcome": {
+      "ar": "وزن يومي وداخل/خارج مسجل وأماكن التورم متابعة.",
+      "en": "Daily weight, I&O and oedema documented."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "تقليل السوائل الزائدة",
+      "en": "Reduce excess fluid"
+     },
+     "actions": {
+      "ar": [
+       "الدقة في إعطاء كمية السوائل الموصوفة (مثلًا 500 مل + بول اليوم السابق).",
+       "تقليل الملح في الأكل وتعليم طرق تقليل العطش (ثلج، علكة، أكواب صغيرة).",
+       "إعطاء الأدوية (مدرات، أدوية الضغط) حسب إرشادات الطبيب.",
+       "إبلاغ الطبيب عند ضيق النفس أو زيادة الوزن السريعة (قد يحتاج غسيل)."
+      ],
+      "en": [
+       "Give exactly the prescribed fluid allowance (e.g. 500 mL + previous day's urine).",
+       "Limit salt and teach thirst control (ice chips, gum, small cups).",
+       "Give medications (diuretics, antihypertensives) as directed.",
+       "Report dyspnea or rapid weight gain (may need dialysis)."
+      ]
+     },
+     "outcome": {
+      "ar": "نقص الوزن والأورام وضغط < 140/90.",
+      "en": "Less weight and oedema; BP < 140/90."
+     },
+     "timeframe": {
+      "ar": "72 ساعة",
+      "en": "72 hours"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-electrolyte-imbalance-renal",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر اختلال الأملاح (ارتفاع البوتاسيوم)",
+    "en": "Risk for Electrolyte Imbalance (Hyperkalemia)"
+   },
+   "definition": {
+    "ar": "قابلية لتغير مستويات الأملاح في الدم مما قد يضر بالصحة.",
+    "en": "Susceptible to changes in serum electrolytes that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ضعف إخراج البوتاسيوم عن طريق الكلى",
+     "أكل غني بالبوتاسيوم",
+     "الحماض الأيضي"
+    ],
+    "en": [
+     "Reduced renal potassium excretion",
+     "High-potassium diet",
+     "Metabolic acidosis"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"باكل موز وبرتقال كتير.\""
+     ],
+     "en": [
+      "\"I eat lots of bananas and oranges.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "البوتاسيوم 5.9، رسم القلب: موجة T مدببة."
+     ],
+     "en": [
+      "Potassium 5.9; ECG: peaked T waves."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: البوتاسيوم 3.5–5.0 بدون تغيرات في رسم القلب."
+     ],
+     "en": [
+      "Within 24 hours: potassium 3.5–5.0 without ECG changes."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يذكر المريض 5 أطعمة غنية بالبوتاسيوم يتجنبها."
+     ],
+     "en": [
+      "Before discharge: names 5 high-potassium foods to avoid."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة البوتاسيوم ورسم القلب.",
+      "en": "Monitor potassium and ECG."
+     },
+     "rationale": {
+      "ar": "ارتفاع البوتاسيوم يسبب اضطرابات نظم قاتلة.",
+      "en": "Hyperkalemia causes fatal dysrhythmias."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "منع المريض من تناول الأطعمة الغنية بالبوتاسيوم (موز، برتقال، طماطم، بطاطس، بلح، عصائر).",
+      "en": "Restrict high-potassium foods (banana, orange, tomato, potato, dates, juices)."
+     },
+     "rationale": {
+      "ar": "يقلل نسبة البوتاسيوم المرتفعة في الدم.",
+      "en": "Lowers high serum potassium."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء علاج خفض البوتاسيوم حسب الأمر (كالسيوم جلوكونات، أنسولين مع جلوكوز، رابط البوتاسيوم، غسيل).",
+      "en": "Give potassium-lowering treatment as ordered (calcium gluconate, insulin-glucose, binders, dialysis)."
+     },
+     "rationale": {
+      "ar": "يحمي القلب ويخفض البوتاسيوم.",
+      "en": "Protects the heart and lowers potassium."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تجنب بدائل الملح والأدوية التي ترفع البوتاسيوم إلا بأمر.",
+      "en": "Avoid potassium salt substitutes and potassium-raising drugs unless ordered."
+     },
+     "rationale": {
+      "ar": "ترفع البوتاسيوم بدون ملاحظة.",
+      "en": "They raise potassium unnoticed."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم طريقة نقع وسلق الخضار لتقليل البوتاسيوم.",
+      "en": "Teach soaking and boiling vegetables to reduce potassium."
+     },
+     "rationale": {
+      "ar": "تقلل البوتاسيوم في الأكل.",
+      "en": "Reduces dietary potassium."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم أعراض ارتفاع البوتاسيوم (ضعف عضلات، خفقان).",
+      "en": "Teach hyperkalemia symptoms (muscle weakness, palpitations)."
+     },
+     "rationale": {
+      "ar": "الإبلاغ المبكر.",
+      "en": "Early reporting."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "البوتاسيوم 4.8 ورسم القلب طبيعي — تحقق.",
+      "en": "Potassium 4.8, normal ECG — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "ضبط البوتاسيوم",
+      "en": "Potassium control"
+     },
+     "actions": {
+      "ar": [
+       "متابعة البوتاسيوم ورسم القلب.",
+       "منع المريض من تناول الأطعمة الغنية بالبوتاسيوم (موز، برتقال، طماطم، بطاطس، بلح، عصائر).",
+       "إعطاء علاج خفض البوتاسيوم حسب الأمر (كالسيوم جلوكونات، أنسولين مع جلوكوز، رابط البوتاسيوم، غسيل).",
+       "تجنب بدائل الملح والأدوية التي ترفع البوتاسيوم إلا بأمر."
+      ],
+      "en": [
+       "Monitor potassium and ECG.",
+       "Restrict high-potassium foods (banana, orange, tomato, potato, dates, juices).",
+       "Give potassium-lowering treatment as ordered (calcium gluconate, insulin-glucose, binders, dialysis).",
+       "Avoid potassium salt substitutes and potassium-raising drugs unless ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "بوتاسيوم 3.5–5.0 بدون تغيرات ECG.",
+      "en": "Potassium 3.5–5.0 without ECG changes."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف غذائي",
+      "en": "Diet teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم طريقة نقع وسلق الخضار لتقليل البوتاسيوم.",
+       "تعليم أعراض ارتفاع البوتاسيوم (ضعف عضلات، خفقان)."
+      ],
+      "en": [
+       "Teach soaking and boiling vegetables to reduce potassium.",
+       "Teach hyperkalemia symptoms (muscle weakness, palpitations)."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يذكر الأطعمة الممنوعة وطريقة تحضير الخضار.",
+      "en": "Patient names foods to avoid and vegetable preparation."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "imbalanced-nutrition-renal",
+   "kind": "actual",
+   "title": {
+    "ar": "خلل التغذية: أقل من احتياج الجسم",
+    "en": "Imbalanced Nutrition: Less Than Body Requirements"
+   },
+   "definition": {
+    "ar": "تناول عناصر غذائية غير كافٍ لاحتياجات الجسم.",
+    "en": "Intake of nutrients insufficient to meet metabolic needs."
+   },
+   "relatedTo": {
+    "ar": [
+     "فقد الشهية والغثيان بسبب تراكم البولينا",
+     "قيود غذائية"
+    ],
+    "en": [
+     "Anorexia and nausea from uremia",
+     "Dietary restrictions"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "نقص الوزن الجاف",
+     "ألبومين منخفض",
+     "رائحة نشادر من الفم"
+    ],
+    "en": [
+     "Loss of dry weight",
+     "Low albumin",
+     "Uremic (ammonia) breath"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مليش نفس للأكل وطعم بقي وحش.\""
+     ],
+     "en": [
+      "\"I have no appetite and a bad taste in my mouth.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ألبومين 3.0 جم/دل.",
+      "نقص الوزن الجاف 2 كجم في شهر."
+     ],
+     "en": [
+      "Albumin 3.0 g/dL.",
+      "Dry weight down 2 kg in a month."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوع: يتناول 75% من الوجبات الموصوفة."
+     ],
+     "en": [
+      "Within a week: eats 75% of prescribed meals."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال شهر: ثبات الوزن الجاف وتحسن الألبومين."
+     ],
+     "en": [
+      "Within a month: stable dry weight and better albumin."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الوزن الجاف والألبومين وكمية الأكل.",
+      "en": "Monitor dry weight, albumin and food intake."
+     },
+     "rationale": {
+      "ar": "تقيس الحالة الغذائية.",
+      "en": "Measure nutritional status."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "نظام غذائي بكمية بروتين مناسبة حسب الحالة (أقل قبل الغسيل، وأكثر مع الغسيل) مع أخصائي التغذية.",
+      "en": "Protein intake tailored to stage (lower before dialysis, higher on dialysis) with the dietitian."
+     },
+     "rationale": {
+      "ar": "تقليل البولينا مع الحفاظ على العضلات.",
+      "en": "Limits uremia while preserving muscle."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وجبات صغيرة متكررة وعناية بالفم قبل الأكل.",
+      "en": "Small frequent meals and mouth care before eating."
+     },
+     "rationale": {
+      "ar": "تحسن الشهية والطعم.",
+      "en": "Improve appetite and taste."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء مضادات القيء والفيتامينات حسب الأمر.",
+      "en": "Give antiemetics and vitamins as ordered."
+     },
+     "rationale": {
+      "ar": "تقلل الغثيان وتعوض النقص.",
+      "en": "Reduce nausea and correct deficits."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأطعمة المناسبة: قليلة الملح والبوتاسيوم والفوسفور مع بروتين عالي الجودة.",
+      "en": "Teach suitable foods: low salt, potassium and phosphate with high-quality protein."
+     },
+     "rationale": {
+      "ar": "تغذية آمنة للكلى.",
+      "en": "Kidney-safe nutrition."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "التوقف عن التدخين.",
+      "en": "Stop smoking."
+     },
+     "rationale": {
+      "ar": "يضر الأوعية والكلى.",
+      "en": "Harms vessels and kidneys."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "يأكل 60% من الوجبات — تحقق جزئيًا؛ يستمر مع أخصائي التغذية.",
+      "en": "Eats 60% of meals — partially met; dietitian follow-up continues."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تحسين التغذية",
+      "en": "Improve nutrition"
+     },
+     "actions": {
+      "ar": [
+       "متابعة الوزن الجاف والألبومين وكمية الأكل.",
+       "نظام غذائي بكمية بروتين مناسبة حسب الحالة (أقل قبل الغسيل، وأكثر مع الغسيل) مع أخصائي التغذية.",
+       "وجبات صغيرة متكررة وعناية بالفم قبل الأكل.",
+       "إعطاء مضادات القيء والفيتامينات حسب الأمر."
+      ],
+      "en": [
+       "Monitor dry weight, albumin and food intake.",
+       "Protein intake tailored to stage (lower before dialysis, higher on dialysis) with the dietitian.",
+       "Small frequent meals and mouth care before eating.",
+       "Give antiemetics and vitamins as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "يأكل 75% من الوجبات.",
+      "en": "Eats 75% of meals."
+     },
+     "timeframe": {
+      "ar": "أسبوع",
+      "en": "1 week"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف غذائي",
+      "en": "Diet teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم الأطعمة المناسبة: قليلة الملح والبوتاسيوم والفوسفور مع بروتين عالي الجودة.",
+       "التوقف عن التدخين."
+      ],
+      "en": [
+       "Teach suitable foods: low salt, potassium and phosphate with high-quality protein.",
+       "Stop smoking."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يختار الأطعمة المناسبة.",
+      "en": "Patient chooses suitable foods."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "KDIGO 2024 Clinical Practice Guideline for CKD"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "metabolic"
+}

@@ -1,0 +1,812 @@
+{
+ "id": "hemodialysis",
+ "icon": "🩻",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "الغسيل الكلوي الدموي (الوصلة)",
+  "en": "Hemodialysis & Vascular Access"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض الغسيل الدموي: العناية بالوصلة، الوقاية من العدوى والنزيف، ومضاعفات الجلسة.",
+  "en": "Care plan for hemodialysis: access care, infection and bleeding prevention, and intradialytic complications."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-infection-av-access",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى (مكان الوصلة / القسطرة)",
+    "en": "Risk for Infection (Vascular Access)"
+   },
+   "definition": {
+    "ar": "قابلية لدخول الميكروبات من مكان الوصلة الشريانية الوريدية أو قسطرة الغسيل.",
+    "en": "Susceptible to infection through the AV fistula/graft or dialysis catheter."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ثقب الجلد المتكرر في الوصلة",
+     "قسطرة الغسيل المركزية",
+     "ضعف المناعة مع الفشل الكلوي"
+    ],
+    "en": [
+     "Repeated needling of the access",
+     "Central dialysis catheter",
+     "Uremic immune impairment"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مكان الوصلة بيوجعني شوية.\""
+     ],
+     "en": [
+      "\"The fistula site is a little sore.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "وصلة شريانية وريدية بالذراع الأيسر.",
+      "الحرارة 37°، لا احمرار."
+     ],
+     "en": [
+      "Left-arm AV fistula.",
+      "Temperature 37 °C; no redness."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء الإقامة: مكان الوصلة نظيف بدون احمرار أو صديد، والحرارة طبيعية."
+     ],
+     "en": [
+      "During the stay: clean access site without redness or pus; normal temperature."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يعتني المريض بالوصلة بنفسه بطريقة صحيحة."
+     ],
+     "en": [
+      "Before discharge: the patient cares for the access correctly."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص مكان الوصلة قبل وبعد كل جلسة (احمرار، سخونة، ورم، صديد).",
+      "en": "Inspect the access before and after each session (redness, warmth, swelling, pus)."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر للعدوى.",
+      "en": "Early detection of infection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة العلامات الحيوية باستمرار، خاصة الحرارة.",
+      "en": "Monitor vital signs, especially temperature."
+     },
+     "rationale": {
+      "ar": "الحرارة أثناء الغسيل قد تعني عدوى بالدم.",
+      "en": "Fever on dialysis may mean bacteremia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيف مكان الوصلة يوميًا وقبل الثقب بطريقة معقمة، ووضع المضاد الحيوي الموضعي حسب الأمر.",
+      "en": "Clean the access daily and before cannulation aseptically; apply topical antibiotic as ordered."
+     },
+     "rationale": {
+      "ar": "يقلل الميكروبات على الجلد.",
+      "en": "Reduces skin organisms."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل اليدين ولبس القفازات وتغيير أماكن الثقب بالتناوب.",
+      "en": "Hand hygiene, gloves, and rotating needling sites."
+     },
+     "rationale": {
+      "ar": "يمنع العدوى وتلف الوصلة.",
+      "en": "Prevents infection and access damage."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية المعقمة بقسطرة الغسيل وتغيير الغيار حسب السياسة.",
+      "en": "Aseptic catheter care and dressing changes per policy."
+     },
+     "rationale": {
+      "ar": "القسطرة أعلى خطر للعدوى.",
+      "en": "Catheters carry the highest infection risk."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض غسل الذراع قبل الجلسة والإبلاغ عن أي علامة عدوى.",
+      "en": "Teach washing the arm before sessions and reporting infection signs."
+     },
+     "rationale": {
+      "ar": "رعاية ذاتية.",
+      "en": "Self-care."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الوصلة نظيفة والحرارة طبيعية — تحقق.",
+      "en": "Clean access and normal temperature — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "العناية بالوصلة",
+      "en": "Access care"
+     },
+     "actions": {
+      "ar": [
+       "فحص مكان الوصلة قبل وبعد كل جلسة (احمرار، سخونة، ورم، صديد).",
+       "تنظيف مكان الوصلة يوميًا وقبل الثقب بطريقة معقمة، ووضع المضاد الحيوي الموضعي حسب الأمر.",
+       "غسل اليدين ولبس القفازات وتغيير أماكن الثقب بالتناوب.",
+       "العناية المعقمة بقسطرة الغسيل وتغيير الغيار حسب السياسة."
+      ],
+      "en": [
+       "Inspect the access before and after each session (redness, warmth, swelling, pus).",
+       "Clean the access daily and before cannulation aseptically; apply topical antibiotic as ordered.",
+       "Hand hygiene, gloves, and rotating needling sites.",
+       "Aseptic catheter care and dressing changes per policy."
+      ]
+     },
+     "outcome": {
+      "ar": "مكان الوصلة نظيف بدون علامات عدوى.",
+      "en": "Access site clean without infection signs."
+     },
+     "timeframe": {
+      "ar": "كل جلسة ويوميًا",
+      "en": "Each session and daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "اكتشاف العدوى والتثقيف",
+      "en": "Detect infection and teach"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة العلامات الحيوية باستمرار، خاصة الحرارة.",
+       "تعليم المريض غسل الذراع قبل الجلسة والإبلاغ عن أي علامة عدوى."
+      ],
+      "en": [
+       "Monitor vital signs, especially temperature.",
+       "Teach washing the arm before sessions and reporting infection signs."
+      ]
+     },
+     "outcome": {
+      "ar": "حرارة طبيعية والمريض يعرف العلامات.",
+      "en": "Normal temperature; patient knows the signs."
+     },
+     "timeframe": {
+      "ar": "كل جلسة",
+      "en": "Each session"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-for-bleeding-hd",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر النزيف",
+    "en": "Risk for Bleeding"
+   },
+   "definition": {
+    "ar": "قابلية لنقص حجم الدم بسبب النزيف.",
+    "en": "Susceptible to a decrease in blood volume from bleeding."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "الهيبارين أثناء الغسيل",
+     "ضعف الصفائح مع البولينا",
+     "ثقب الوصلة"
+    ],
+    "en": [
+     "Heparin during dialysis",
+     "Uremic platelet dysfunction",
+     "Access needling"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مكان الإبرة بينزف كتير بعد الجلسة.\""
+     ],
+     "en": [
+      "\"The needle site bleeds a lot after the session.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "نزيف مكان الإبرة 15 دقيقة بعد الجلسة السابقة."
+     ],
+     "en": [
+      "Needle-site bleeding for 15 minutes after the previous session."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء الإقامة: يتوقف نزيف مكان الإبرة خلال 10 دقائق بالضغط، ولا نزيف آخر."
+     ],
+     "en": [
+      "During the stay: needle-site bleeding stops within 10 minutes of pressure; no other bleeding."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يعرف المريض علامات النزيف."
+     ],
+     "en": [
+      "Before discharge: knows bleeding signs."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "اختبار وقت التجلط باستمرار أثناء الغسيل حسب البروتوكول.",
+      "en": "Check clotting time regularly during dialysis per protocol."
+     },
+     "rationale": {
+      "ar": "ضبط جرعة الهيبارين.",
+      "en": "Guides heparin dosing."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة النزيف من مكان الإبر واللثة والبراز.",
+      "en": "Watch for bleeding from needle sites, gums and stool."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الضغط على مكان الإبرة بعد سحبها 10 دقائق بدون رفع.",
+      "en": "Apply pressure for 10 minutes after needle removal without lifting."
+     },
+     "rationale": {
+      "ar": "يوقف النزيف.",
+      "en": "Stops bleeding."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تعديل جرعة الهيبارين حسب الأمر عند وجود خطر نزيف.",
+      "en": "Adjust heparin as ordered when bleeding risk is high."
+     },
+     "rationale": {
+      "ar": "يقلل النزيف.",
+      "en": "Reduces bleeding."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الهيموجلوبين والصفائح.",
+      "en": "Monitor hemoglobin and platelets."
+     },
+     "rationale": {
+      "ar": "يكشف النزيف الخفي.",
+      "en": "Detects occult bleeding."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض علامات النزيف وتجنب الحقن العضلي بعد الجلسة مباشرة.",
+      "en": "Teach bleeding signs and avoiding IM injections right after dialysis."
+     },
+     "rationale": {
+      "ar": "أمان.",
+      "en": "Safety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "النزيف توقف خلال 8 دقائق — تحقق.",
+      "en": "Bleeding stopped within 8 minutes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة التجلط",
+      "en": "Monitor clotting"
+     },
+     "actions": {
+      "ar": [
+       "اختبار وقت التجلط باستمرار أثناء الغسيل حسب البروتوكول.",
+       "ملاحظة النزيف من مكان الإبر واللثة والبراز.",
+       "متابعة الهيموجلوبين والصفائح."
+      ],
+      "en": [
+       "Check clotting time regularly during dialysis per protocol.",
+       "Watch for bleeding from needle sites, gums and stool.",
+       "Monitor hemoglobin and platelets."
+      ]
+     },
+     "outcome": {
+      "ar": "وقت التجلط في المدى ولا نزيف.",
+      "en": "Clotting time in range; no bleeding."
+     },
+     "timeframe": {
+      "ar": "أثناء كل جلسة",
+      "en": "During each session"
+     }
+    },
+    {
+     "need": {
+      "ar": "إيقاف النزيف",
+      "en": "Stop bleeding"
+     },
+     "actions": {
+      "ar": [
+       "الضغط على مكان الإبرة بعد سحبها 10 دقائق بدون رفع.",
+       "تعديل جرعة الهيبارين حسب الأمر عند وجود خطر نزيف.",
+       "تعليم المريض علامات النزيف وتجنب الحقن العضلي بعد الجلسة مباشرة."
+      ],
+      "en": [
+       "Apply pressure for 10 minutes after needle removal without lifting.",
+       "Adjust heparin as ordered when bleeding risk is high.",
+       "Teach bleeding signs and avoiding IM injections right after dialysis."
+      ]
+     },
+     "outcome": {
+      "ar": "توقف النزيف خلال 10 دقائق.",
+      "en": "Bleeding stops within 10 minutes."
+     },
+     "timeframe": {
+      "ar": "بعد كل جلسة",
+      "en": "After each session"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-for-injury-dialysis",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر مضاعفات الغسيل (هبوط الضغط)",
+    "en": "Risk for Injury: Dialysis Complications"
+   },
+   "definition": {
+    "ar": "قابلية لحدوث مضاعفات أثناء الغسيل مثل هبوط الضغط والتقلصات ومتلازمة عدم التوازن.",
+    "en": "Susceptible to intradialytic complications such as hypotension, cramps and disequilibrium."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "سحب سوائل كبير وسريع",
+     "أدوية الضغط قبل الجلسة",
+     "البولينا العالية"
+    ],
+    "en": [
+     "Large, rapid fluid removal",
+     "Antihypertensives before the session",
+     "High urea"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بدوخ وبتشنج في آخر الجلسة.\""
+     ],
+     "en": [
+      "\"I get dizzy and cramp at the end of the session.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "هبوط الضغط إلى 85/50 في الجلسة السابقة.",
+      "زيادة الوزن بين الجلستين 4 كجم."
+     ],
+     "en": [
+      "BP fell to 85/50 last session.",
+      "Interdialytic weight gain 4 kg."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء الجلسة: ضغط انقباضي > 90 بدون أعراض."
+     ],
+     "en": [
+      "During the session: systolic BP > 90 without symptoms."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال شهر: زيادة الوزن بين الجلسات ≤ 2 كجم."
+     ],
+     "en": [
+      "Within a month: interdialytic gain ≤ 2 kg."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة العلامات الحيوية قبل الجلسة وكل 30–60 دقيقة أثناءها، ودرجة الوعي ورائحة الفم.",
+      "en": "Monitor vitals before and every 30–60 minutes during dialysis, plus consciousness and breath odour."
+     },
+     "rationale": {
+      "ar": "اكتشاف الهبوط والمضاعفات مبكرًا.",
+      "en": "Early detection of hypotension and complications."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "وزن المريض قبل وبعد الجلسة.",
+      "en": "Weigh before and after dialysis."
+     },
+     "rationale": {
+      "ar": "يحدد كمية السحب.",
+      "en": "Sets fluid removal."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الكرياتينين والبولينا والأملاح.",
+      "en": "Monitor creatinine, urea and electrolytes."
+     },
+     "rationale": {
+      "ar": "تقيس كفاءة الغسيل.",
+      "en": "Measure dialysis adequacy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عند الهبوط: رفع الرجلين، وتقليل سرعة السحب، وإبلاغ الطبيب وإعطاء محلول حسب الأمر.",
+      "en": "For hypotension: raise the legs, reduce ultrafiltration, inform the physician, give saline as ordered."
+     },
+     "rationale": {
+      "ar": "يرفع الضغط بسرعة.",
+      "en": "Restores BP quickly."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إمداد المريض بالطعام خلال الغسيل حسب السياسة.",
+      "en": "Offer food during dialysis per policy."
+     },
+     "rationale": {
+      "ar": "يمنع الهبوط ونقص السكر.",
+      "en": "Prevents hypotension and hypoglycemia."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "إرشاد المريض عن النظام الغذائي بتقليل الملح والسوائل والبروتين حسب الأمر، وتأجيل أدوية الضغط قبل الجلسة حسب الطبيب.",
+      "en": "Teach limiting salt, fluids and protein as ordered, and holding antihypertensives before dialysis per physician."
+     },
+     "rationale": {
+      "ar": "يقلل زيادة الوزن والهبوط.",
+      "en": "Reduces weight gain and hypotension."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الضغط 110/70 طوال الجلسة بدون تقلصات — تحقق.",
+      "en": "BP 110/70 throughout, no cramps — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة أثناء الجلسة",
+      "en": "Intradialytic monitoring"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة العلامات الحيوية قبل الجلسة وكل 30–60 دقيقة أثناءها، ودرجة الوعي ورائحة الفم.",
+       "وزن المريض قبل وبعد الجلسة.",
+       "متابعة الكرياتينين والبولينا والأملاح."
+      ],
+      "en": [
+       "Monitor vitals before and every 30–60 minutes during dialysis, plus consciousness and breath odour.",
+       "Weigh before and after dialysis.",
+       "Monitor creatinine, urea and electrolytes."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مستقرة ووزن مسجل.",
+      "en": "Stable vitals; weights documented."
+     },
+     "timeframe": {
+      "ar": "كل 30–60 دقيقة",
+      "en": "Every 30–60 min"
+     }
+    },
+    {
+     "need": {
+      "ar": "علاج ومنع الهبوط",
+      "en": "Treat and prevent hypotension"
+     },
+     "actions": {
+      "ar": [
+       "عند الهبوط: رفع الرجلين، وتقليل سرعة السحب، وإبلاغ الطبيب وإعطاء محلول حسب الأمر.",
+       "إمداد المريض بالطعام خلال الغسيل حسب السياسة.",
+       "إرشاد المريض عن النظام الغذائي بتقليل الملح والسوائل والبروتين حسب الأمر، وتأجيل أدوية الضغط قبل الجلسة حسب الطبيب."
+      ],
+      "en": [
+       "For hypotension: raise the legs, reduce ultrafiltration, inform the physician, give saline as ordered.",
+       "Offer food during dialysis per policy.",
+       "Teach limiting salt, fluids and protein as ordered, and holding antihypertensives before dialysis per physician."
+      ]
+     },
+     "outcome": {
+      "ar": "ضغط > 90 بدون أعراض.",
+      "en": "BP > 90 without symptoms."
+     },
+     "timeframe": {
+      "ar": "كل جلسة",
+      "en": "Each session"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-access-dysfunction",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر تلف أو انسداد الوصلة",
+    "en": "Risk for Vascular Access Dysfunction"
+   },
+   "definition": {
+    "ar": "قابلية لانسداد الوصلة الشريانية الوريدية أو تلفها.",
+    "en": "Susceptible to thrombosis or damage of the AV fistula."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "الضغط على ذراع الوصلة",
+     "هبوط الضغط",
+     "الثقب المتكرر في نفس المكان"
+    ],
+    "en": [
+     "Pressure on the access arm",
+     "Hypotension",
+     "Repeated needling in one spot"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بنام على دراعي اللي فيه الوصلة.\""
+     ],
+     "en": [
+      "\"I sleep on the fistula arm.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "رعشة (Thrill) وصوت (Bruit) واضحين."
+     ],
+     "en": [
+      "Clear thrill and bruit."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "يوميًا: وجود الرعشة والصوت في الوصلة."
+     ],
+     "en": [
+      "Daily: thrill and bruit present."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يطبق المريض قواعد حماية الوصلة."
+     ],
+     "en": [
+      "Before discharge: follows access-protection rules."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "جس الرعشة وسماع الصوت في الوصلة كل وردية.",
+      "en": "Palpate thrill and auscultate bruit every shift."
+     },
+     "rationale": {
+      "ar": "غيابهما يعني انسدادًا يحتاج تدخلًا عاجلًا.",
+      "en": "Absence means thrombosis needing urgent action."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "حماية مكان الوصلة من الضغط: لا قياس ضغط ولا سحب دم ولا كانيولا في ذراعها.",
+      "en": "Protect the access: no BP cuff, blood draws or cannula on that arm."
+     },
+     "rationale": {
+      "ar": "يمنع الانسداد والتلف.",
+      "en": "Prevents thrombosis and damage."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعليق لافتة \"ذراع الوصلة\" على السرير.",
+      "en": "Post an \"access arm\" sign at the bedside."
+     },
+     "rationale": {
+      "ar": "تنبيه للفريق.",
+      "en": "Alerts staff."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض: عدم النوم على الذراع، وعدم لبس ساعة أو أساور ضيقة، وعدم حمل أشياء ثقيلة.",
+      "en": "Teach: no sleeping on the arm, no tight watches/bracelets, no heavy carrying."
+     },
+     "rationale": {
+      "ar": "يحافظ على الوصلة.",
+      "en": "Preserves the access."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض جس الرعشة يوميًا والإبلاغ فورًا عند غيابها.",
+      "en": "Teach daily thrill check and urgent reporting if absent."
+     },
+     "rationale": {
+      "ar": "إنقاذ الوصلة مبكرًا.",
+      "en": "Early salvage."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير أماكن الثقب بالتناوب.",
+      "en": "Rotate needling sites."
+     },
+     "rationale": {
+      "ar": "يمنع التمدد والتلف.",
+      "en": "Prevents aneurysm and damage."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الرعشة والصوت موجودان والمريض طبق القواعد — تحقق.",
+      "en": "Thrill and bruit present; rules followed — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية الوصلة",
+      "en": "Protect the access"
+     },
+     "actions": {
+      "ar": [
+       "جس الرعشة وسماع الصوت في الوصلة كل وردية.",
+       "حماية مكان الوصلة من الضغط: لا قياس ضغط ولا سحب دم ولا كانيولا في ذراعها.",
+       "تعليق لافتة \"ذراع الوصلة\" على السرير.",
+       "تغيير أماكن الثقب بالتناوب."
+      ],
+      "en": [
+       "Palpate thrill and auscultate bruit every shift.",
+       "Protect the access: no BP cuff, blood draws or cannula on that arm.",
+       "Post an \"access arm\" sign at the bedside.",
+       "Rotate needling sites."
+      ]
+     },
+     "outcome": {
+      "ar": "رعشة وصوت موجودين.",
+      "en": "Thrill and bruit present."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف",
+      "en": "Teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم المريض: عدم النوم على الذراع، وعدم لبس ساعة أو أساور ضيقة، وعدم حمل أشياء ثقيلة.",
+       "تعليم المريض جس الرعشة يوميًا والإبلاغ فورًا عند غيابها."
+      ],
+      "en": [
+       "Teach: no sleeping on the arm, no tight watches/bracelets, no heavy carrying.",
+       "Teach daily thrill check and urgent reporting if absent."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يطبق قواعد الحماية.",
+      "en": "Patient follows protection rules."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "KDOQI Clinical Practice Guideline for Vascular Access: 2019 Update"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "metabolic"
+}

@@ -1,0 +1,643 @@
+{
+ "id": "peritoneal-dialysis",
+ "icon": "🫙",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "الغسيل الكلوي البريتوني",
+  "en": "Peritoneal Dialysis"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض الغسيل البريتوني: الوقاية من التهاب البريتون، متابعة الداخل والخارج، وتخفيف الألم.",
+  "en": "Care plan for peritoneal dialysis: peritonitis prevention, inflow/outflow monitoring and pain relief."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-infection-peritonitis",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى (التهاب الغشاء البريتوني)",
+    "en": "Risk for Infection (Peritonitis)"
+   },
+   "definition": {
+    "ar": "قابلية لدخول الميكروبات للغشاء البريتوني عن طريق القسطرة أو سائل الغسيل.",
+    "en": "Susceptible to peritoneal infection via the catheter or dialysate."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "قسطرة بطنية دائمة",
+     "توصيل وفصل الأكياس المتكرر",
+     "ضعف المناعة"
+    ],
+    "en": [
+     "Indwelling peritoneal catheter",
+     "Frequent bag connections",
+     "Impaired immunity"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مكان القسطرة نضيف بس بخاف من العدوى.\""
+     ],
+     "en": [
+      "\"The catheter site is clean but I worry about infection.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مكان خروج القسطرة سليم.",
+      "السائل الخارج رائق."
+     ],
+     "en": [
+      "Intact catheter exit site.",
+      "Clear effluent."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء الإقامة: السائل الخارج رائق، ومكان القسطرة نظيف، والحرارة طبيعية."
+     ],
+     "en": [
+      "During the stay: clear effluent, clean exit site, normal temperature."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يطبق المريض تغيير الأكياس بطريقة معقمة."
+     ],
+     "en": [
+      "Before discharge: performs exchanges aseptically."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة درجة الحرارة والنبض والتنفس والضغط، ولون السائل الخارج (العكارة علامة عدوى).",
+      "en": "Monitor temperature, pulse, respiration, BP and effluent colour (cloudy = infection)."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر لالتهاب البريتون.",
+      "en": "Early detection of peritonitis."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل اليدين ولبس الكمامة والتقنية المعقمة أثناء التوصيل والفصل.",
+      "en": "Hand hygiene, mask and aseptic technique for connections."
+     },
+     "rationale": {
+      "ar": "يمنع دخول الميكروبات.",
+      "en": "Prevents contamination."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "حفظ الغيار جافًا ونظيفًا والعناية بمكان خروج القسطرة يوميًا.",
+      "en": "Keep the dressing clean and dry; daily exit-site care."
+     },
+     "rationale": {
+      "ar": "يمنع عدوى مكان الخروج.",
+      "en": "Prevents exit-site infection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير مكان الكانيولا (الوريدية) على الأقل حسب السياسة.",
+      "en": "Change any peripheral cannula per policy."
+     },
+     "rationale": {
+      "ar": "يقلل عدوى الدم.",
+      "en": "Reduces bloodstream infection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب فورًا عند عكارة السائل أو ألم البطن أو الحرارة وأخذ عينة للمزرعة.",
+      "en": "Report cloudy effluent, abdominal pain or fever immediately; send effluent culture."
+     },
+     "rationale": {
+      "ar": "العلاج المبكر بالمضاد يحمي الغشاء.",
+      "en": "Early antibiotics protect the membrane."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض خطوات التغيير المعقم وعلامات العدوى.",
+      "en": "Teach aseptic exchange steps and infection signs."
+     },
+     "rationale": {
+      "ar": "رعاية ذاتية آمنة بالبيت.",
+      "en": "Safe home self-care."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "السائل رائق والحرارة طبيعية — تحقق.",
+      "en": "Clear effluent and normal temperature — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "منع العدوى",
+      "en": "Prevent infection"
+     },
+     "actions": {
+      "ar": [
+       "غسل اليدين ولبس الكمامة والتقنية المعقمة أثناء التوصيل والفصل.",
+       "حفظ الغيار جافًا ونظيفًا والعناية بمكان خروج القسطرة يوميًا.",
+       "تغيير مكان الكانيولا (الوريدية) على الأقل حسب السياسة."
+      ],
+      "en": [
+       "Hand hygiene, mask and aseptic technique for connections.",
+       "Keep the dressing clean and dry; daily exit-site care.",
+       "Change any peripheral cannula per policy."
+      ]
+     },
+     "outcome": {
+      "ar": "تقنية معقمة ومكان القسطرة نظيف.",
+      "en": "Aseptic technique; clean exit site."
+     },
+     "timeframe": {
+      "ar": "كل تغيير",
+      "en": "Each exchange"
+     }
+    },
+    {
+     "need": {
+      "ar": "اكتشاف العدوى",
+      "en": "Detect infection"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة درجة الحرارة والنبض والتنفس والضغط، ولون السائل الخارج (العكارة علامة عدوى).",
+       "إبلاغ الطبيب فورًا عند عكارة السائل أو ألم البطن أو الحرارة وأخذ عينة للمزرعة."
+      ],
+      "en": [
+       "Monitor temperature, pulse, respiration, BP and effluent colour (cloudy = infection).",
+       "Report cloudy effluent, abdominal pain or fever immediately; send effluent culture."
+      ]
+     },
+     "outcome": {
+      "ar": "سائل رائق وحرارة طبيعية.",
+      "en": "Clear effluent, normal temperature."
+     },
+     "timeframe": {
+      "ar": "كل تغيير",
+      "en": "Each exchange"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف",
+      "en": "Teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم المريض خطوات التغيير المعقم وعلامات العدوى."
+      ],
+      "en": [
+       "Teach aseptic exchange steps and infection signs."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يغير الأكياس بطريقة معقمة.",
+      "en": "Patient performs aseptic exchanges."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-imbalanced-fluid-pd",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر اختلال حجم السوائل",
+    "en": "Risk for Imbalanced Fluid Volume"
+   },
+   "definition": {
+    "ar": "قابلية لزيادة أو نقص السوائل بسبب احتباس سائل الغسيل أو السحب الزائد.",
+    "en": "Susceptible to fluid excess or deficit from dialysate retention or excessive removal."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "احتباس سائل الغسيل داخل البطن",
+     "انسداد أو سوء وضع القسطرة",
+     "استخدام محاليل عالية التركيز"
+    ],
+    "en": [
+     "Retention of dialysate",
+     "Catheter blockage or malposition",
+     "Hypertonic solutions"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بطني تقيلة ونفسي ضاق شوية.\""
+     ],
+     "en": [
+      "\"My belly feels heavy and I'm a bit breathless.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "السائل الخارج أقل من الداخل بـ 400 مل.",
+      "زيادة الوزن 1 كجم."
+     ],
+     "en": [
+      "Outflow 400 mL less than inflow.",
+      "Weight up 1 kg."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل تغيير: يتم تسجيل الداخل والخارج، وإبلاغ أي احتباس > 300 مل."
+     ],
+     "en": [
+      "Each exchange: inflow/outflow recorded; retention > 300 mL reported."
+     ]
+    },
+    "long": {
+     "ar": [
+      "أثناء الإقامة: وزن ثابت وتنفس مريح وضغط مضبوط."
+     ],
+     "en": [
+      "During the stay: stable weight, comfortable breathing and controlled BP."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل الداخل والخارج لكل تغيير ووزن المريض يوميًا.",
+      "en": "Record inflow/outflow per exchange and daily weight."
+     },
+     "rationale": {
+      "ar": "يحدد التوازن.",
+      "en": "Defines balance."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تبليغ الطبيب إذا حدث تجمع للسائل داخل بطن المريض أكثر من 300 مل.",
+      "en": "Report retained dialysate > 300 mL to the physician."
+     },
+     "rationale": {
+      "ar": "الاحتباس يسبب زيادة سوائل وضيق نفس.",
+      "en": "Retention causes overload and dyspnea."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير وضع المريض والتأكد من عدم التواء الأنبوب وتفريغ الأمعاء.",
+      "en": "Reposition, check for kinks and ensure bowels are open."
+     },
+     "rationale": {
+      "ar": "يحسن تصريف السائل.",
+      "en": "Improves drainage."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة الضغط وضيق النفس والأورام.",
+      "en": "Monitor BP, dyspnea and oedema."
+     },
+     "rationale": {
+      "ar": "علامات زيادة السوائل.",
+      "en": "Signs of overload."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات الجفاف عند استخدام محاليل عالية التركيز.",
+      "en": "Watch for dehydration with hypertonic solutions."
+     },
+     "rationale": {
+      "ar": "السحب الزائد يسبب هبوط ضغط.",
+      "en": "Excess removal causes hypotension."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض تسجيل الأوزان والكميات.",
+      "en": "Teach recording weights and volumes."
+     },
+     "rationale": {
+      "ar": "متابعة بالبيت.",
+      "en": "Home monitoring."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التوازن مسجل والاحتباس اتبلغ واتعالج بتغيير الوضع — تحقق.",
+      "en": "Balance recorded; retention reported and resolved by repositioning — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة التوازن",
+      "en": "Monitor balance"
+     },
+     "actions": {
+      "ar": [
+       "تسجيل الداخل والخارج لكل تغيير ووزن المريض يوميًا.",
+       "تبليغ الطبيب إذا حدث تجمع للسائل داخل بطن المريض أكثر من 300 مل.",
+       "ملاحظة الضغط وضيق النفس والأورام.",
+       "ملاحظة علامات الجفاف عند استخدام محاليل عالية التركيز."
+      ],
+      "en": [
+       "Record inflow/outflow per exchange and daily weight.",
+       "Report retained dialysate > 300 mL to the physician.",
+       "Monitor BP, dyspnea and oedema.",
+       "Watch for dehydration with hypertonic solutions."
+      ]
+     },
+     "outcome": {
+      "ar": "داخل وخارج مسجل وأي احتباس > 300 مل مبلغ.",
+      "en": "I/O recorded; retention > 300 mL reported."
+     },
+     "timeframe": {
+      "ar": "كل تغيير",
+      "en": "Each exchange"
+     }
+    },
+    {
+     "need": {
+      "ar": "تحسين التصريف",
+      "en": "Improve drainage"
+     },
+     "actions": {
+      "ar": [
+       "تغيير وضع المريض والتأكد من عدم التواء الأنبوب وتفريغ الأمعاء.",
+       "تعليم المريض تسجيل الأوزان والكميات."
+      ],
+      "en": [
+       "Reposition, check for kinks and ensure bowels are open.",
+       "Teach recording weights and volumes."
+      ]
+     },
+     "outcome": {
+      "ar": "تصريف كامل والمريض يسجل الكميات.",
+      "en": "Full drainage; patient records volumes."
+     },
+     "timeframe": {
+      "ar": "كل تغيير",
+      "en": "Each exchange"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-pd",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد أثناء الغسيل البريتوني",
+    "en": "Acute Pain During Peritoneal Dialysis"
+   },
+   "definition": {
+    "ar": "ألم في البطن أو الكتف أثناء دخول أو خروج سائل الغسيل.",
+    "en": "Abdominal or shoulder pain during dialysate inflow or outflow."
+   },
+   "relatedTo": {
+    "ar": [
+     "دخول السائل بسرعة أو بارد",
+     "انتفاخ البطن بالسائل",
+     "دخول هواء"
+    ],
+    "en": [
+     "Rapid or cold inflow",
+     "Abdominal distension with fluid",
+     "Air entry"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "شكوى من ألم 5/10 أثناء الدخول",
+     "ألم بالكتف"
+    ],
+    "en": [
+     "Pain 5/10 during inflow",
+     "Shoulder pain"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بطني بتوجعني لما السائل يدخل.\""
+     ],
+     "en": [
+      "\"My belly hurts when the fluid goes in.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ألم 5/10 مع بداية التغيير."
+     ],
+     "en": [
+      "Pain 5/10 at the start of exchange."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الجلسة: الألم ≤ 2/10."
+     ],
+     "en": [
+      "During the session: pain ≤ 2/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "أثناء الإقامة: تغييرات بدون ألم."
+     ],
+     "en": [
+      "During the stay: painless exchanges."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الألم ووقته (مع الدخول أم الخروج).",
+      "en": "Assess pain and timing (inflow or outflow)."
+     },
+     "rationale": {
+      "ar": "يحدد السبب.",
+      "en": "Identifies the cause."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تخفيف الألم بتقليل معدل دخول سائل الغسيل البريتوني.",
+      "en": "Slow the dialysate inflow rate."
+     },
+     "rationale": {
+      "ar": "الدخول البطيء أقل إيلامًا.",
+      "en": "Slower inflow is less painful."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تدفئة السائل لدرجة حرارة الجسم بالطريقة المعتمدة (ليس بالميكروويف).",
+      "en": "Warm dialysate to body temperature by the approved method (not microwave)."
+     },
+     "rationale": {
+      "ar": "السائل البارد يسبب تقلصات.",
+      "en": "Cold fluid causes cramps."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تفريغ الهواء من الخطوط قبل التوصيل.",
+      "en": "Prime lines to remove air."
+     },
+     "rationale": {
+      "ar": "الهواء يسبب ألم الكتف.",
+      "en": "Air causes shoulder pain."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المسكن حسب الأمر وإبلاغ الطبيب إذا استمر الألم أو صاحبه عكارة.",
+      "en": "Give analgesia as ordered; report persistent pain or cloudy fluid."
+     },
+     "rationale": {
+      "ar": "قد يكون التهابًا.",
+      "en": "May indicate peritonitis."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع مريح وتغيير الوضع أثناء التصريف.",
+      "en": "Comfortable position; reposition during drainage."
+     },
+     "rationale": {
+      "ar": "يقلل الضغط.",
+      "en": "Reduces pressure."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 1/10 بعد تقليل المعدل وتدفئة السائل — تحقق.",
+      "en": "Pain 1/10 after slower, warmed inflow — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الألم",
+      "en": "Relieve pain"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الألم ووقته (مع الدخول أم الخروج).",
+       "تخفيف الألم بتقليل معدل دخول سائل الغسيل البريتوني.",
+       "تدفئة السائل لدرجة حرارة الجسم بالطريقة المعتمدة (ليس بالميكروويف).",
+       "تفريغ الهواء من الخطوط قبل التوصيل.",
+       "وضع مريح وتغيير الوضع أثناء التصريف."
+      ],
+      "en": [
+       "Assess pain and timing (inflow or outflow).",
+       "Slow the dialysate inflow rate.",
+       "Warm dialysate to body temperature by the approved method (not microwave).",
+       "Prime lines to remove air.",
+       "Comfortable position; reposition during drainage."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 2/10.",
+      "en": "Pain ≤ 2/10."
+     },
+     "timeframe": {
+      "ar": "كل تغيير",
+      "en": "Each exchange"
+     }
+    },
+    {
+     "need": {
+      "ar": "اكتشاف المضاعفات",
+      "en": "Detect complications"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء المسكن حسب الأمر وإبلاغ الطبيب إذا استمر الألم أو صاحبه عكارة."
+      ],
+      "en": [
+       "Give analgesia as ordered; report persistent pain or cloudy fluid."
+      ]
+     },
+     "outcome": {
+      "ar": "أي ألم مستمر مبلغ.",
+      "en": "Persistent pain reported."
+     },
+     "timeframe": {
+      "ar": "كل تغيير",
+      "en": "Each exchange"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "ISPD Peritonitis Guideline Recommendations: 2022 Update"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "metabolic"
+}
