@@ -1,277 +1,1186 @@
 {
  "id": "atrial-fibrillation",
- "icon": "💓",
+ "icon": "💗",
  "system": "cardiology",
+ "folder": "disease",
  "title": {
-  "ar": "اضطرابات نظم القلب (الرجفان الأذيني)",
-  "en": "Dysrhythmias (Atrial Fibrillation)"
+  "ar": "الرجفان الأذيني",
+  "en": "Atrial Fibrillation"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض رجفان أذيني سريع: ضبط سرعة القلب، الوقاية من الجلطات، والأمان مع مضادات التجلط.",
-  "en": "Care plan for rapid atrial fibrillation: rate control, stroke prevention and anticoagulant safety."
+  "ar": "خطة رعاية الرجفان الأذيني: التحكم في سرعة القلب، الوقاية من السكتة بمضادات التجلط، خطر النزيف، عدم تحمل النشاط، القلق، والتثقيف.",
+  "en": "AF care plan: rate control, stroke prevention with anticoagulation, bleeding risk, activity intolerance, anxiety and teaching."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "انخفاض نتاج القلب (Decreased cardiac output) مرتبط بتغير سرعة ونظم القلب ويظهر في نبض غير منتظم 140/دقيقة ودوخة.",
-    "en": "Decreased cardiac output related to altered heart rate and rhythm as evidenced by irregular pulse 140/min and dizziness."
+   "id": "decreased-cardiac-output-af",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص النتاج القلبي",
+    "en": "Decreased Cardiac Output"
+   },
+   "definition": {
+    "ar": "عدم كفاية الدم الذي يضخه القلب لتلبية احتياجات الجسم.",
+    "en": "Inadequate blood pumped by the heart to meet metabolic demands."
+   },
+   "relatedTo": {
+    "ar": [
+     "فقد انقباض الأذين وسرعة البطين غير المنتظمة"
+    ],
+    "en": [
+     "Loss of atrial kick and rapid irregular ventricular rate"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "نبض غير منتظم 140",
+     "دوخة وضيق نفس",
+     "فرق بين النبض القلبي والطرفي"
+    ],
+    "en": [
+     "Irregular pulse 140",
+     "Dizziness and dyspnea",
+     "Apical–radial pulse deficit"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"قلبي بيدق بسرعة ومش منتظم، وبدوخ.\""
+      "\"قلبي بيدق بسرعة ومش منتظم وحاسس بدوخة.\""
      ],
      "en": [
-      "\"My heart is racing and irregular, and I feel dizzy.\""
+      "\"My heart is racing irregularly and I feel dizzy.\""
      ]
     },
     "objective": {
      "ar": [
-      "رسم القلب: رجفان أذيني، سرعة البطين 140/دقيقة.",
-      "الضغط 100/65، نقص النبض (Pulse deficit) 20 نبضة.",
-      "ضيق نفس مع المجهود."
+      "نبض قمي 142 وكعبري 118.",
+      "الضغط 98/62.",
+      "رسم القلب: رجفان أذيني سريع."
      ],
      "en": [
-      "ECG: atrial fibrillation, ventricular rate 140/min.",
-      "BP 100/65; pulse deficit of 20 beats.",
-      "Dyspnea on exertion."
+      "Apical 142, radial 118.",
+      "BP 98/62.",
+      "ECG: AF with rapid ventricular response."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال 24 ساعة تكون سرعة القلب في الراحة أقل من 110/دقيقة والضغط الانقباضي > 100 دون دوخة."
-    ],
-    "en": [
-     "Within 24 hours resting heart rate is below 110/min and systolic BP > 100 without dizziness."
-    ]
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: نبض الراحة < 110 والضغط مستقر."
+     ],
+     "en": [
+      "Within 24 h: resting HR < 110 and stable BP."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: تحكم في سرعة القلب بدون أعراض."
+     ],
+     "en": [
+      "Before discharge: rate controlled without symptoms."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "مونيتور قلب مستمر وقياس النبض القمي والطرفي معًا لمدة دقيقة كاملة.",
-      "en": "Continuous cardiac monitoring; measure apical and radial pulse together for a full minute."
+      "ar": "قياس النبض القمي دقيقة كاملة مع الكعبري في نفس الوقت (Pulse deficit).",
+      "en": "Count apical pulse for a full minute simultaneously with radial (pulse deficit)."
      },
      "rationale": {
-      "ar": "النبض غير المنتظم يحتاج عدًّا كاملًا، وفرق النبضين يدل على ضعف كفاءة الضربات.",
-      "en": "An irregular pulse needs a full count; the deficit shows ineffective beats."
+      "ar": "النبض غير المنتظم يحتاج عد دقيقة كاملة.",
+      "en": "Irregular pulses need a full-minute count."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "إعطاء أدوية ضبط السرعة (حاصرات بيتا، ديلتيازيم، ديجوكسين) حسب الأمر مع قياس النبض والضغط قبلها.",
-      "en": "Give rate-control drugs (beta-blockers, diltiazem, digoxin) as ordered, checking pulse and BP first."
+      "ar": "مراقبة المونيتور والضغط وعلامات نقص التروية (دوخة، تشوش، قلة البول).",
+      "en": "Monitor ECG, BP and hypoperfusion (dizziness, confusion, low urine)."
      },
      "rationale": {
-      "ar": "تبطئ التوصيل في العقدة الأذينية البطينية؛ وقد تسبب بطء أو هبوط ضغط.",
-      "en": "Slow AV-node conduction; may cause bradycardia or hypotension."
+      "ar": "سرعة القلب الشديدة تقلل النتاج.",
+      "en": "Rapid rates reduce output."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "متابعة البوتاسيوم والماغنيسيوم ومستوى الديجوكسين عند استخدامه.",
-      "en": "Monitor potassium, magnesium and digoxin level if used."
+      "ar": "إعطاء أدوية التحكم في السرعة (حاصرات بيتا، ديلتيازيم، ديجوكسين) حسب الأمر.",
+      "en": "Give rate-control drugs (beta-blockers, diltiazem, digoxin) as ordered."
      },
      "rationale": {
-      "ar": "اختلال الأملاح يزيد اضطرابات النظم وتسمم الديجوكسين.",
-      "en": "Electrolyte imbalance worsens dysrhythmias and digoxin toxicity."
+      "ar": "إبطاء البطين يحسن الامتلاء.",
+      "en": "Slowing the ventricle improves filling."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "ملاحظة علامات عدم استقرار (ألم صدر، هبوط ضغط، تغير وعي) وتجهيز جهاز الصدمات.",
-      "en": "Watch for instability (chest pain, hypotension, altered consciousness) and keep the defibrillator ready."
+      "ar": "قبل الديجوكسين: عد النبض القمي وعدم إعطائه إذا < 60، ومتابعة أعراض التسمم (غثيان، رؤية صفراء) والبوتاسيوم.",
+      "en": "Before digoxin: apical pulse; hold if < 60; watch toxicity (nausea, yellow vision) and potassium."
      },
      "rationale": {
-      "ar": "عدم الاستقرار قد يحتاج صدمة كهربائية متزامنة (Cardioversion).",
-      "en": "Instability may require synchronized cardioversion."
+      "ar": "هامش أمان ضيق.",
+      "en": "Narrow therapeutic index."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التحضير لتنظيم النظم الكهربي (Cardioversion) عند عدم الاستقرار حسب الأمر.",
+      "en": "Prepare for synchronized cardioversion if unstable, as ordered."
+     },
+     "rationale": {
+      "ar": "العلاج الطارئ للحالة غير المستقرة.",
+      "en": "Emergency treatment for instability."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة البوتاسيوم والماغنسيوم ووظائف الغدة الدرقية.",
+      "en": "Monitor K⁺, Mg²⁺ and thyroid function."
+     },
+     "rationale": {
+      "ar": "أسباب قابلة للعلاج.",
+      "en": "Treatable causes."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "راحة وتقليل المنبهات (الكافيين).",
+      "en": "Rest; limit stimulants (caffeine)."
+     },
+     "rationale": {
+      "ar": "تقلل سرعة القلب.",
+      "en": "Reduce heart rate."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "سرعة القلب 92–104 بعد العلاج، والضغط 115/70، ولا دوخة. — تحقق الهدف."
-    ],
-    "en": [
-     "Heart rate 92–104 after treatment, BP 115/70, no dizziness. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "النبض 92، لا فرق نبض، الضغط 118/72 — تحقق.",
+      "en": "HR 92, no pulse deficit, BP 118/72 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة النظم والتروية",
+      "en": "Rhythm and perfusion monitoring"
+     },
+     "actions": {
+      "ar": [
+       "قياس النبض القمي دقيقة كاملة مع الكعبري في نفس الوقت (Pulse deficit).",
+       "مراقبة المونيتور والضغط وعلامات نقص التروية (دوخة، تشوش، قلة البول).",
+       "متابعة البوتاسيوم والماغنسيوم ووظائف الغدة الدرقية."
+      ],
+      "en": [
+       "Count apical pulse for a full minute simultaneously with radial (pulse deficit).",
+       "Monitor ECG, BP and hypoperfusion (dizziness, confusion, low urine).",
+       "Monitor K⁺, Mg²⁺ and thyroid function."
+      ]
+     },
+     "outcome": {
+      "ar": "نبض < 110 وتروية كافية.",
+      "en": "HR < 110, adequate perfusion."
+     },
+     "timeframe": {
+      "ar": "كل 1–4 ساعات",
+      "en": "Every 1–4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "التحكم في السرعة",
+      "en": "Rate control"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء أدوية التحكم في السرعة (حاصرات بيتا، ديلتيازيم، ديجوكسين) حسب الأمر.",
+       "قبل الديجوكسين: عد النبض القمي وعدم إعطائه إذا < 60، ومتابعة أعراض التسمم (غثيان، رؤية صفراء) والبوتاسيوم.",
+       "التحضير لتنظيم النظم الكهربي (Cardioversion) عند عدم الاستقرار حسب الأمر.",
+       "راحة وتقليل المنبهات (الكافيين)."
+      ],
+      "en": [
+       "Give rate-control drugs (beta-blockers, diltiazem, digoxin) as ordered.",
+       "Before digoxin: apical pulse; hold if < 60; watch toxicity (nausea, yellow vision) and potassium.",
+       "Prepare for synchronized cardioversion if unstable, as ordered.",
+       "Rest; limit stimulants (caffeine)."
+      ]
+     },
+     "outcome": {
+      "ar": "سرعة منضبطة بدون أعراض.",
+      "en": "Controlled rate without symptoms."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر النزيف (Risk for bleeding) مرتبط بالعلاج بمضادات التجلط.",
-    "en": "Risk for bleeding related to anticoagulant therapy."
+   "id": "risk-ineffective-cerebral-perfusion-af",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص تروية المخ (السكتة الدماغية)",
+    "en": "Risk for Ineffective Cerebral Tissue Perfusion (Stroke)"
+   },
+   "definition": {
+    "ar": "قابلية لنقص الدورة الدموية في المخ.",
+    "en": "Susceptibility to a decrease in cerebral circulation."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ركود الدم وتكون جلطات في الأذين الأيسر",
+     "درجة CHA₂DS₂-VASc مرتفعة"
+    ],
+    "en": [
+     "Stasis and left atrial thrombus",
+     "High CHA₂DS₂-VASc score"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"هاخد دوا سيولة طول عمري؟\""
+      "\"أخويا جاله شلل من نفس المرض.\""
      ],
      "en": [
-      "\"Will I take a blood thinner for life?\""
+      "\"My brother had a stroke from the same disease.\""
      ]
     },
     "objective": {
      "ar": [
-      "بدأ وارفارين أو مضاد تجلط فموي مباشر (DOAC).",
-      "سن 72، ومقياس خطر الجلطة CHA₂DS₂-VASc ‏4."
+      "CHA₂DS₂-VASc = 4.",
+      "الوعي كامل، لا ضعف في الأطراف."
      ],
      "en": [
-      "Started on warfarin or a direct oral anticoagulant (DOAC).",
-      "Age 72; CHA₂DS₂-VASc score 4."
+      "CHA₂DS₂-VASc = 4.",
+      "Fully alert, no limb weakness."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء الإقامة لا يحدث نزيف، وقبل الخروج يذكر المريض 4 علامات نزيف ومتى يراجع."
-    ],
-    "en": [
-     "No bleeding during the stay; before discharge the patient names 4 bleeding signs and when to seek care."
-    ]
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا علامات سكتة وبدء مضاد التجلط المناسب."
+     ],
+     "en": [
+      "During the stay: no stroke signs; appropriate anticoagulation started."
+     ]
+    },
+    "long": {
+     "ar": [
+      "على المدى الطويل: لا سكتة دماغية."
+     ],
+     "en": [
+      "Long term: no stroke."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "متابعة زمن التجلط INR (مع الوارفارين) والهيموجلوبين.",
-      "en": "Monitor INR (with warfarin) and hemoglobin."
+      "ar": "الفحص العصبي كل وردية ومعرفة علامات FAST (الوجه، الذراع، الكلام، الوقت).",
+      "en": "Neuro checks every shift using FAST (face, arm, speech, time)."
      },
      "rationale": {
-      "ar": "INR العالي يزيد خطر النزيف، والمنخفض لا يمنع الجلطة.",
-      "en": "High INR raises bleeding risk; low INR fails to prevent stroke."
+      "ar": "اكتشاف السكتة فورًا.",
+      "en": "Immediate stroke recognition."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "ملاحظة النزيف: اللثة، البول، البراز الأسود، الكدمات.",
-      "en": "Observe for bleeding: gums, urine, black stools, bruising."
+      "ar": "إعطاء مضاد التجلط (وارفارين أو أبيكسابان/ريفاروكسابان) حسب الأمر.",
+      "en": "Give anticoagulant (warfarin or apixaban/rivaroxaban) as ordered."
      },
      "rationale": {
-      "ar": "الاكتشاف المبكر يمنع النزيف الخطير.",
-      "en": "Early detection prevents serious bleeding."
+      "ar": "يقلل السكتة بحوالي الثلثين.",
+      "en": "Reduces stroke by about two-thirds."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "تعليم استخدام فرشاة ناعمة وماكينة حلاقة كهربائية وتجنب الحقن العضلي.",
-      "en": "Teach a soft toothbrush, electric razor and avoiding IM injections."
+      "ar": "متابعة INR (الهدف 2–3) مع الوارفارين ووظائف الكلى مع الأدوية الحديثة.",
+      "en": "Monitor INR (target 2–3) with warfarin; renal function with DOACs."
      },
      "rationale": {
-      "ar": "تقلل الإصابات الصغيرة التي تنزف.",
-      "en": "Reduce minor trauma that can bleed."
+      "ar": "ضبط الجرعة.",
+      "en": "Dose adjustment."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "مراجعة التداخلات: المسكنات (Ibuprofen/Aspirin) والأعشاب والأكل الغني بفيتامين K مع الوارفارين.",
-      "en": "Review interactions: NSAIDs/aspirin, herbal products, and vitamin-K-rich foods with warfarin."
+      "ar": "عند ظهور علامات سكتة: تسجيل الوقت وطلب فريق السكتة فورًا.",
+      "en": "If stroke signs: note the time and call the stroke team immediately."
      },
      "rationale": {
-      "ar": "تغيّر مفعول مضاد التجلط.",
-      "en": "They alter anticoagulant effect."
+      "ar": "العلاج مرتبط بالوقت.",
+      "en": "Treatment is time-dependent."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأسرة علامات FAST وطلب الإسعاف فورًا.",
+      "en": "Teach family FAST and to call an ambulance at once."
+     },
+     "rationale": {
+      "ar": "سرعة الوصول للمستشفى.",
+      "en": "Rapid arrival."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض عدم إيقاف مضاد التجلط بنفسه.",
+      "en": "Never stop the anticoagulant on his own."
+     },
+     "rationale": {
+      "ar": "الإيقاف يرفع خطر السكتة.",
+      "en": "Stopping raises stroke risk."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "لا نزيف، INR ‏2.4، والمريض ذكر 5 علامات نزيف. — تحقق الهدف."
-    ],
-    "en": [
-     "No bleeding, INR 2.4, patient named 5 bleeding signs. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "انخفاض نتاج القلب",
-    "en": "Decreased cardiac output"
-   },
-   "need": {
-    "ar": "ضبط سرعة القلب",
-    "en": "Rate control"
-   },
-   "actions": {
-    "ar": [
-     "مونيتور مستمر",
-     "نبض قمي ودقيق",
-     "أدوية ضبط السرعة حسب الأمر"
-    ],
-    "en": [
-     "Continuous monitor",
-     "Apical pulse, full minute",
-     "Rate-control drugs as ordered"
-    ]
-   },
-   "outcome": {
-    "ar": "سرعة < 110 في الراحة",
-    "en": "Resting rate < 110"
-   },
-   "timeframe": {
-    "ar": "24 ساعة",
-    "en": "24 hours"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات سكتة وبدأ أبيكسابان — تحقق.",
+      "en": "No stroke signs; apixaban started — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "كشف السكتة",
+      "en": "Detect stroke"
+     },
+     "actions": {
+      "ar": [
+       "الفحص العصبي كل وردية ومعرفة علامات FAST (الوجه، الذراع، الكلام، الوقت).",
+       "عند ظهور علامات سكتة: تسجيل الوقت وطلب فريق السكتة فورًا.",
+       "تعليم الأسرة علامات FAST وطلب الإسعاف فورًا."
+      ],
+      "en": [
+       "Neuro checks every shift using FAST (face, arm, speech, time).",
+       "If stroke signs: note the time and call the stroke team immediately.",
+       "Teach family FAST and to call an ambulance at once."
+      ]
+     },
+     "outcome": {
+      "ar": "لا علامات عصبية.",
+      "en": "No neuro signs."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "الوقاية بمضاد التجلط",
+      "en": "Anticoagulant prevention"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء مضاد التجلط (وارفارين أو أبيكسابان/ريفاروكسابان) حسب الأمر.",
+       "متابعة INR (الهدف 2–3) مع الوارفارين ووظائف الكلى مع الأدوية الحديثة.",
+       "تعليم المريض عدم إيقاف مضاد التجلط بنفسه."
+      ],
+      "en": [
+       "Give anticoagulant (warfarin or apixaban/rivaroxaban) as ordered.",
+       "Monitor INR (target 2–3) with warfarin; renal function with DOACs.",
+       "Never stop the anticoagulant on his own."
+      ]
+     },
+     "outcome": {
+      "ar": "علاج منتظم ومتابعة.",
+      "en": "Regular therapy and monitoring."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر ضعف تروية المخ (جلطة)",
-    "en": "Risk for ineffective cerebral perfusion (stroke)"
-   },
-   "need": {
-    "ar": "الوقاية من الجلطة",
-    "en": "Stroke prevention"
-   },
-   "actions": {
-    "ar": [
-     "مضاد التجلط في موعده",
-     "ملاحظة علامات السكتة (FAST)",
-     "متابعة INR"
-    ],
-    "en": [
-     "Anticoagulant on time",
-     "Watch FAST signs",
-     "Monitor INR"
-    ]
-   },
-   "outcome": {
-    "ar": "لا علامات سكتة",
-    "en": "No stroke signs"
-   },
-   "timeframe": {
-    "ar": "طوال الإقامة",
-    "en": "Throughout stay"
-   }
-  },
-  {
-   "diagnosis": {
+   "id": "risk-bleeding-af",
+   "kind": "risk",
+   "title": {
     "ar": "خطر النزيف",
-    "en": "Risk for bleeding"
+    "en": "Risk for Bleeding"
    },
-   "need": {
-    "ar": "أمان مضادات التجلط",
-    "en": "Anticoagulant safety"
+   "definition": {
+    "ar": "قابلية لنقص حجم الدم قد يؤثر على الصحة.",
+    "en": "Susceptibility to a decrease in blood volume that may compromise health."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "ملاحظة النزيف",
-     "تجنب الحقن العضلي",
-     "تثقيف عن التداخلات"
+     "العلاج بـ مضادات التجلط (وارفارين / أبيكسابان)",
+     "السن > 65"
     ],
     "en": [
-     "Observe for bleeding",
-     "Avoid IM injections",
-     "Teach interactions"
+     "anticoagulants (warfarin / apixaban) therapy",
+     "Age > 65"
     ]
    },
-   "outcome": {
-    "ar": "لا نزيف",
-    "en": "No bleeding"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"اللثة بتنزف شوية لما أغسل سناني.\""
+     ],
+     "en": [
+      "\"My gums bleed a little when I brush.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "INR 3.4 على وارفارين."
+     ],
+     "en": [
+      "INR 3.4 on warfarin."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "كل وردية",
-    "en": "Every shift"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: لا علامات نزيف وتحاليل التجلط في المدى المطلوب."
+     ],
+     "en": [
+      "Every shift: no bleeding signs; coagulation within target."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال العلاج: لا نزيف كبير، ويعرف المريض الاحتياطات."
+     ],
+     "en": [
+      "Throughout therapy: no major bleeding; patient knows precautions."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات النزيف: اللثة، الأنف، البول، البراز الأسود، القيء الدموي، الكدمات، مكان الكانيولا.",
+      "en": "Watch for bleeding: gums, nose, urine, black stools, hematemesis, bruises, cannula site."
+     },
+     "rationale": {
+      "ar": "اكتشاف النزيف مبكرًا.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة تحاليل التجلط والهيموجلوبين والصفائح حسب الأمر.",
+      "en": "Monitor coagulation tests, hemoglobin and platelets as ordered."
+     },
+     "rationale": {
+      "ar": "ضبط الجرعة وكشف النزيف الخفي.",
+      "en": "Dose titration and occult bleeding detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة صداع شديد مفاجئ أو تغير الوعي.",
+      "en": "Watch for sudden severe headache or altered consciousness."
+     },
+     "rationale": {
+      "ar": "قد يدل على نزيف بالمخ.",
+      "en": "May indicate intracranial bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الضغط على أماكن الحقن والسحب 5–10 دقائق، وتقليل الحقن العضلي.",
+      "en": "Apply pressure to puncture sites 5–10 minutes; minimize IM injections."
+     },
+     "rationale": {
+      "ar": "يمنع النزيف من الأماكن.",
+      "en": "Prevents site bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "فرشاة أسنان ناعمة وماكينة حلاقة كهربائية.",
+      "en": "Soft toothbrush and electric razor."
+     },
+     "rationale": {
+      "ar": "يمنع الجروح.",
+      "en": "Prevents injury."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض عن مضادات التجلط (وارفارين / أبيكسابان): الالتزام بالجرعة، التحاليل الدورية، تجنب المسكنات مثل الأسبرين والإيبوبروفين بدون استشارة، وإبلاغ أي طبيب أو طبيب أسنان.",
+      "en": "Teach about anticoagulants (warfarin / apixaban): exact dosing, regular tests, avoid NSAIDs/aspirin unless prescribed, inform any doctor or dentist."
+     },
+     "rationale": {
+      "ar": "الاستخدام الآمن للدواء.",
+      "en": "Safe drug use."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "مع الوارفارين: ثبات كمية الخضار الورقية الخضراء (فيتامين K) وعدم تغييرها فجأة.",
+      "en": "With warfarin: keep green leafy vegetable (vitamin K) intake consistent."
+     },
+     "rationale": {
+      "ar": "فيتامين K يقلل مفعول الوارفارين.",
+      "en": "Vitamin K counteracts warfarin."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات نزيف والتحاليل في المدى — تحقق.",
+      "en": "No bleeding; labs in range — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة النزيف",
+      "en": "Monitor bleeding"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة علامات النزيف: اللثة، الأنف، البول، البراز الأسود، القيء الدموي، الكدمات، مكان الكانيولا.",
+       "متابعة تحاليل التجلط والهيموجلوبين والصفائح حسب الأمر.",
+       "ملاحظة صداع شديد مفاجئ أو تغير الوعي."
+      ],
+      "en": [
+       "Watch for bleeding: gums, nose, urine, black stools, hematemesis, bruises, cannula site.",
+       "Monitor coagulation tests, hemoglobin and platelets as ordered.",
+       "Watch for sudden severe headache or altered consciousness."
+      ]
+     },
+     "outcome": {
+      "ar": "لا نزيف.",
+      "en": "No bleeding."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "الوقاية والتثقيف",
+      "en": "Prevention and teaching"
+     },
+     "actions": {
+      "ar": [
+       "الضغط على أماكن الحقن والسحب 5–10 دقائق، وتقليل الحقن العضلي.",
+       "فرشاة أسنان ناعمة وماكينة حلاقة كهربائية.",
+       "تعليم المريض عن مضادات التجلط (وارفارين / أبيكسابان): الالتزام بالجرعة، التحاليل الدورية، تجنب المسكنات مثل الأسبرين والإيبوبروفين بدون استشارة، وإبلاغ أي طبيب أو طبيب أسنان.",
+       "مع الوارفارين: ثبات كمية الخضار الورقية الخضراء (فيتامين K) وعدم تغييرها فجأة."
+      ],
+      "en": [
+       "Apply pressure to puncture sites 5–10 minutes; minimize IM injections.",
+       "Soft toothbrush and electric razor.",
+       "Teach about anticoagulants (warfarin / apixaban): exact dosing, regular tests, avoid NSAIDs/aspirin unless prescribed, inform any doctor or dentist.",
+       "With warfarin: keep green leafy vegetable (vitamin K) intake consistent."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يعرف الاحتياطات.",
+      "en": "Patient knows precautions."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "activity-intolerance-af",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم تحمل النشاط",
+    "en": "Activity Intolerance"
+   },
+   "definition": {
+    "ar": "نقص الطاقة الجسدية أو النفسية لتحمل أو إكمال الأنشطة اليومية المطلوبة.",
+    "en": "Insufficient physiological or psychological energy to endure or complete required daily activities."
+   },
+   "relatedTo": {
+    "ar": [
+     "نقص النتاج القلبي بسبب سرعة القلب"
+    ],
+    "en": [
+     "Reduced output from rapid rate"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تعب وضيق نفس عند المجهود",
+     "تغير غير طبيعي في النبض أو الضغط مع النشاط"
+    ],
+    "en": [
+     "Fatigue and exertional dyspnea",
+     "Abnormal HR or BP response to activity"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بتنهج من أقل مجهود.\""
+     ],
+     "en": [
+      "\"I get breathless with the least effort.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "النبض يرتفع لـ 150 مع المشي."
+     ],
+     "en": [
+      "HR rises to 150 walking."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 3 أيام: يؤدي المريض العناية الذاتية مع بقاء النبض والضغط في الحدود المقبولة."
+     ],
+     "en": [
+      "Within 3 days: performs self-care with HR and BP within acceptable limits."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يمشي في الممر بدون أعراض ويعرف خطة النشاط في البيت."
+     ],
+     "en": [
+      "Before discharge: walks the corridor without symptoms and knows the home activity plan."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+      "en": "Check pulse, BP and SpO₂ before, during and 3 minutes after activity."
+     },
+     "rationale": {
+      "ar": "يحدد تحمل المريض.",
+      "en": "Determines tolerance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة.",
+      "en": "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+     },
+     "rationale": {
+      "ar": "علامات عدم التحمل.",
+      "en": "Signs of intolerance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+      "en": "Progress activity: sitting in bed, chair, walking in room then corridor."
+     },
+     "rationale": {
+      "ar": "التدرج يبني التحمل بأمان.",
+      "en": "Gradual progression builds tolerance safely."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+      "en": "Plan rest between activities; cluster care."
+     },
+     "rationale": {
+      "ar": "يحافظ على الطاقة.",
+      "en": "Conserves energy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+      "en": "Assist with ADLs as needed while encouraging independence."
+     },
+     "rationale": {
+      "ar": "يوازن بين الراحة والنشاط.",
+      "en": "Balances rest and activity."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود).",
+      "en": "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+     },
+     "rationale": {
+      "ar": "يقلل الحمل على القلب.",
+      "en": "Reduces cardiac workload."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "مشى في الممر 50 مترًا، زاد النبض 12 فقط بدون ضيق نفس — تحقق.",
+      "en": "Walked 50 m; HR rose by only 12, no dyspnea — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم التحمل",
+      "en": "Assess tolerance"
+     },
+     "actions": {
+      "ar": [
+       "قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+       "إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة."
+      ],
+      "en": [
+       "Check pulse, BP and SpO₂ before, during and 3 minutes after activity.",
+       "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مقبولة مع النشاط.",
+      "en": "Acceptable vitals with activity."
+     },
+     "timeframe": {
+      "ar": "مع كل نشاط",
+      "en": "With each activity"
+     }
+    },
+    {
+     "need": {
+      "ar": "زيادة النشاط تدريجيًا",
+      "en": "Progress activity"
+     },
+     "actions": {
+      "ar": [
+       "التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+       "تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+       "المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+       "تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود)."
+      ],
+      "en": [
+       "Progress activity: sitting in bed, chair, walking in room then corridor.",
+       "Plan rest between activities; cluster care.",
+       "Assist with ADLs as needed while encouraging independence.",
+       "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+      ]
+     },
+     "outcome": {
+      "ar": "عناية ذاتية ومشي بدون أعراض.",
+      "en": "Self-care and walking without symptoms."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-af",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "خفقان وإحساس بعدم انتظام القلب"
+    ],
+    "en": [
+     "Palpitations and awareness of irregular beat"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"إحساس الرفرفة في صدري بيخوفني.\""
+     ],
+     "en": [
+      "\"The fluttering in my chest scares me.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قلق، يمسك صدره."
+     ],
+     "en": [
+      "Anxious, holding his chest."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواجد مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق والاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+       "التواجد مع المريض والتحدث بهدوء وثقة.",
+       "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "تعليم التنفس البطيء العميق والاسترخاء.",
+       "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-af",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (الرجفان الأذيني ومضادات التجلط)",
+    "en": "Deficient Knowledge (AF and anticoagulation)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "تشخيص جديد وأدوية جديدة"
+    ],
+    "en": [
+     "New diagnosis and drugs"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الدوا ده هاخده طول عمري؟\""
+     ],
+     "en": [
+      "\"Will I take this drug for life?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "لا يعرف سبب مضاد التجلط."
+     ],
+     "en": [
+      "Unaware of the reason for anticoagulation."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح المرض وسبب مضاد التجلط (منع جلطة المخ).",
+      "en": "Explain AF and why anticoagulation (stroke prevention)."
+     },
+     "rationale": {
+      "ar": "الفهم يزيد الالتزام.",
+      "en": "Understanding improves adherence."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "قياس النبض في البيت دقيقة كاملة والإبلاغ إذا > 110 أو < 50.",
+      "en": "Check pulse at home for a full minute; report > 110 or < 50."
+     },
+     "rationale": {
+      "ar": "متابعة السرعة.",
+      "en": "Rate monitoring."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "علامات النزيف وعلامات السكتة ومتى يتوجه للطوارئ.",
+      "en": "Bleeding and stroke signs and when to go to the ED."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تقليل الكافيين والكحول والتحكم في الوزن والنوم (توقف التنفس أثناء النوم).",
+      "en": "Limit caffeine/alcohol; weight control; treat sleep apnea."
+     },
+     "rationale": {
+      "ar": "تقلل نوبات الرجفان.",
+      "en": "Reduce AF episodes."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف صحي",
+      "en": "Health teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "شرح المرض وسبب مضاد التجلط (منع جلطة المخ).",
+       "قياس النبض في البيت دقيقة كاملة والإبلاغ إذا > 110 أو < 50.",
+       "علامات النزيف وعلامات السكتة ومتى يتوجه للطوارئ.",
+       "تقليل الكافيين والكحول والتحكم في الوزن والنوم (توقف التنفس أثناء النوم).",
+       "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Explain AF and why anticoagulation (stroke prevention).",
+       "Check pulse at home for a full minute; report > 110 or < 50.",
+       "Bleeding and stroke signs and when to go to the ED.",
+       "Limit caffeine/alcohol; weight control; treat sleep apnea.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -279,10 +1188,7 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
-  },
-  {
-   "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation"
+   "title": "ESC Guidelines for the management of atrial fibrillation (2024)"
   }
  ]
 }

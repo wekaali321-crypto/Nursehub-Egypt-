@@ -2,7 +2,7 @@
  "plans": [
   {
    "id": "angina-acs",
-   "icon": "🫀",
+   "icon": "💓",
    "system": "cardiology",
    "folder": "disease",
    "title": {
@@ -10,22 +10,108 @@
     "en": "Angina & Acute Coronary Syndrome"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض ذبحة صدرية غير مستقرة: تسكين الألم، تقليل احتياج القلب للأكسجين، والتثقيف عن النيتروجلسرين وعوامل الخطورة.",
-    "en": "Care plan for unstable angina: pain relief, lowering myocardial oxygen demand, and teaching about nitroglycerin and risk factors."
+    "ar": "خطة رعاية الذبحة الصدرية: نوبة الألم والنترات، نقص تروية القلب، عدم تحمل النشاط، النزيف مع مضادات التجلط، القلق، والتثقيف.",
+    "en": "Angina/ACS care plan: pain episodes and nitrates, cardiac perfusion, activity intolerance, anticoagulant bleeding, anxiety and teaching."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "acute-pain-angina",
      "title": {
-      "ar": "ألم حاد",
-      "en": "Acute pain"
+      "ar": "ألم حاد (ذبحة صدرية)",
+      "en": "Acute Pain (Angina)"
      }
     },
     {
-     "id": "dx-2",
+     "id": "risk-decreased-cardiac-tissue-perfusion",
      "title": {
-      "ar": "نقص المعرفة (Deficient knowledge) عن المرض والعلاج وتعديل عوامل الخطورة",
-      "en": "Deficient knowledge about the condition, treatment and risk-factor modification"
+      "ar": "خطر نقص تروية أنسجة القلب",
+      "en": "Risk for Decreased Cardiac Tissue Perfusion"
+     }
+    },
+    {
+     "id": "activity-intolerance-angina",
+     "title": {
+      "ar": "عدم تحمل النشاط",
+      "en": "Activity Intolerance"
+     }
+    },
+    {
+     "id": "risk-bleeding-angina",
+     "title": {
+      "ar": "خطر النزيف",
+      "en": "Risk for Bleeding"
+     }
+    },
+    {
+     "id": "anxiety-angina",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "deficient-knowledge-angina",
+     "title": {
+      "ar": "نقص المعرفة (الذبحة الصدرية)",
+      "en": "Deficient Knowledge (Angina)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "atrial-fibrillation",
+   "icon": "💗",
+   "system": "cardiology",
+   "folder": "disease",
+   "title": {
+    "ar": "الرجفان الأذيني",
+    "en": "Atrial Fibrillation"
+   },
+   "summary": {
+    "ar": "خطة رعاية الرجفان الأذيني: التحكم في سرعة القلب، الوقاية من السكتة بمضادات التجلط، خطر النزيف، عدم تحمل النشاط، القلق، والتثقيف.",
+    "en": "AF care plan: rate control, stroke prevention with anticoagulation, bleeding risk, activity intolerance, anxiety and teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "decreased-cardiac-output-af",
+     "title": {
+      "ar": "نقص النتاج القلبي",
+      "en": "Decreased Cardiac Output"
+     }
+    },
+    {
+     "id": "risk-ineffective-cerebral-perfusion-af",
+     "title": {
+      "ar": "خطر نقص تروية المخ (السكتة الدماغية)",
+      "en": "Risk for Ineffective Cerebral Tissue Perfusion (Stroke)"
+     }
+    },
+    {
+     "id": "risk-bleeding-af",
+     "title": {
+      "ar": "خطر النزيف",
+      "en": "Risk for Bleeding"
+     }
+    },
+    {
+     "id": "activity-intolerance-af",
+     "title": {
+      "ar": "عدم تحمل النشاط",
+      "en": "Activity Intolerance"
+     }
+    },
+    {
+     "id": "anxiety-af",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "deficient-knowledge-af",
+     "title": {
+      "ar": "نقص المعرفة (الرجفان الأذيني ومضادات التجلط)",
+      "en": "Deficient Knowledge (AF and anticoagulation)"
      }
     }
    ]
@@ -56,36 +142,6 @@
      "title": {
       "ar": "خطر ضعف تبادل الغازات",
       "en": "Risk for impaired gas exchange"
-     }
-    }
-   ]
-  },
-  {
-   "id": "atrial-fibrillation",
-   "icon": "💓",
-   "system": "cardiology",
-   "folder": "disease",
-   "title": {
-    "ar": "اضطرابات نظم القلب (الرجفان الأذيني)",
-    "en": "Dysrhythmias (Atrial Fibrillation)"
-   },
-   "summary": {
-    "ar": "خطة رعاية لمريض رجفان أذيني سريع: ضبط سرعة القلب، الوقاية من الجلطات، والأمان مع مضادات التجلط.",
-    "en": "Care plan for rapid atrial fibrillation: rate control, stroke prevention and anticoagulant safety."
-   },
-   "diagnoses": [
-    {
-     "id": "dx-1",
-     "title": {
-      "ar": "انخفاض نتاج القلب",
-      "en": "Decreased cardiac output"
-     }
-    },
-    {
-     "id": "dx-2",
-     "title": {
-      "ar": "خطر النزيف",
-      "en": "Risk for bleeding"
      }
     }
    ]
