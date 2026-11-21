@@ -2,286 +2,1485 @@
  "id": "myocardial-infarction",
  "icon": "❤️‍🩹",
  "system": "cardiology",
+ "folder": "disease",
  "title": {
   "ar": "الجلطة القلبية (احتشاء عضلة القلب)",
-  "en": "Acute Myocardial Infarction"
+  "en": "Myocardial Infarction"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض جلطة قلبية حادة: تسكين ألم الصدر، متابعة رسم القلب، والوقاية من المضاعفات.",
-  "en": "Care plan for acute MI: chest-pain relief, ECG monitoring and complication prevention."
+  "ar": "خطة رعاية مريض الجلطة القلبية: ألم الصدر والتدخل الفوري، النتاج القلبي واضطرابات النظم، النزيف مع مذيبات الجلطة، عدم تحمل النشاط، الإمساك، القلق، والتثقيف بعد الجلطة.",
+  "en": "MI care plan: chest pain and immediate care, cardiac output and dysrhythmias, bleeding with thrombolytics, activity intolerance, constipation, anxiety and post-MI teaching."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "ألم حاد (Acute pain) مرتبط بنقص تروية عضلة القلب ويظهر في ألم ضاغط بالصدر شدته 8/10 وعرق وتعبير بالوجه.",
-    "en": "Acute pain related to myocardial ischemia as evidenced by crushing chest pain rated 8/10, diaphoresis and facial grimacing."
+   "id": "acute-pain-mi",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (ألم الصدر القلبي)",
+    "en": "Acute Pain (Ischemic Chest Pain)"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف الأنسجة، مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory and emotional experience associated with tissue damage, lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "نقص تروية عضلة القلب وموت الخلايا"
+    ],
+    "en": [
+     "Myocardial ischemia and necrosis"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم ضاغط خلف القص ينتشر للذراع الأيسر أو الفك 8/10",
+     "عرق وقلق",
+     "ارتفاع النبض والضغط"
+    ],
+    "en": [
+     "Crushing retrosternal pain radiating to the left arm or jaw, 8/10",
+     "Sweating and restlessness",
+     "Raised HR and BP"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"حاسس بتقل على صدري زي حجر وبيروح لدراعي الشمال.\""
+      "\"حاسس إن في حاجة تقيلة قاعدة على صدري ودراعي الشمال بيوجعني.\""
      ],
      "en": [
-      "\"It feels like a heavy stone on my chest spreading to my left arm.\""
+      "\"It feels like something heavy is sitting on my chest, and my left arm hurts.\""
      ]
     },
     "objective": {
      "ar": [
-      "ألم 8/10 على مقياس الألم.",
-      "عرق بارد، النبض 104، الضغط 150/95.",
-      "ارتفاع مقطع ST في رسم القلب وارتفاع إنزيم التروبونين."
+      "ألم 8/10 منذ 40 دقيقة لم يتحسن بالراحة.",
+      "عرق غزير، النبض 110، الضغط 150/95.",
+      "رسم القلب: ارتفاع ST في II, III, aVF."
      ],
      "en": [
-      "Pain 8/10 on the numeric scale.",
-      "Cold sweat, pulse 104, BP 150/95.",
-      "ST elevation on ECG and raised troponin."
+      "Pain 8/10 for 40 minutes, not relieved by rest.",
+      "Diaphoresis, HR 110, BP 150/95.",
+      "ECG: ST elevation in II, III, aVF."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال 30 دقيقة من التدخل يقل الألم إلى ≤ 3/10 ويبدو المريض مرتاحًا."
-    ],
-    "en": [
-     "Within 30 minutes of intervention pain falls to ≤ 3/10 and the patient appears comfortable."
-    ]
+    "short": {
+     "ar": [
+      "خلال 30 دقيقة: ألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 30 minutes: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال الإقامة: لا ألم صدر متكرر."
+     ],
+     "en": [
+      "During the stay: no recurrent chest pain."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "تقييم الألم (المكان، الشدة، الامتداد، المدة) كل 5–10 دقائق أثناء النوبة.",
-      "en": "Assess pain (site, severity, radiation, duration) every 5–10 minutes during the episode."
+      "ar": "تقييم الألم (المكان، الانتشار، الشدة 0–10، المدة) وعمل رسم قلب خلال 10 دقائق مع كل نوبة ألم.",
+      "en": "Assess pain (site, radiation, 0–10, duration) and obtain a 12-lead ECG within 10 minutes with each episode."
      },
      "rationale": {
-      "ar": "يقيس شدة نقص التروية واستجابة العلاج.",
-      "en": "Measures ischemia severity and treatment response."
+      "ar": "يفرق بين الأنواع ويكشف تطور الجلطة.",
+      "en": "Differentiates causes and detects evolving infarction."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "إعطاء النيتروجلسرين تحت اللسان والمسكن (Morphine) حسب الأمر مع متابعة الضغط.",
-      "en": "Give sublingual nitroglycerin and analgesia (morphine) as ordered, monitoring BP."
+      "ar": "توصيل المريض على المونيتور وأخذ العلامات الحيوية فورًا، وتركيب كانيولا وسحب عينات (إنزيمات القلب Troponin).",
+      "en": "Attach to the monitor, take vitals immediately, insert a cannula and draw labs (troponin)."
      },
      "rationale": {
-      "ar": "النيترات توسع الشرايين التاجية، والمورفين يقلل الألم واحتياج القلب للأكسجين؛ وكلاهما قد يخفض الضغط.",
-      "en": "Nitrates dilate coronary arteries; morphine relieves pain and reduces oxygen demand; both can lower BP."
+      "ar": "التقييم الفوري أساس العلاج.",
+      "en": "Immediate assessment is the basis of care."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "إعطاء الأكسجين إذا كان التشبع أقل من 90%.",
-      "en": "Give oxygen if SpO₂ is below 90%."
+      "ar": "راحة تامة في السرير في وضع شبه جالس وبيئة هادئة.",
+      "en": "Strict bed rest, semi-Fowler position, calm environment."
      },
      "rationale": {
-      "ar": "يحسن إمداد عضلة القلب؛ ولا يُعطى روتينيًا إذا كان التشبع طبيعيًا.",
-      "en": "Improves myocardial oxygen supply; not routine when saturation is normal."
+      "ar": "يقلل استهلاك القلب للأكسجين.",
+      "en": "Reduces myocardial oxygen demand."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "عمل رسم قلب 12 توصيلة أثناء الألم وإبلاغ الطبيب فورًا.",
-      "en": "Obtain a 12-lead ECG during pain and inform the physician immediately."
+      "ar": "إعطاء الأكسجين إذا كان التشبع < 90%.",
+      "en": "Give oxygen if SpO₂ < 90%."
      },
      "rationale": {
-      "ar": "يوثق التغيرات ويساعد في قرار القسطرة العاجلة.",
-      "en": "Documents changes and supports the urgent reperfusion decision."
+      "ar": "يزيد الأكسجين للعضلة (لا يُعطى روتينيًا مع تشبع طبيعي).",
+      "en": "Improves myocardial oxygen (not routine with normal saturation)."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "راحة تامة في السرير وتهدئة المريض.",
-      "en": "Maintain bed rest and reassure the patient."
+      "ar": "إعطاء الأسبرين والنترات تحت اللسان والمورفين حسب الأمر.",
+      "en": "Give aspirin, sublingual nitrate and morphine as ordered."
      },
      "rationale": {
-      "ar": "يقلل احتياج القلب للأكسجين والقلق.",
-      "en": "Reduces myocardial oxygen demand and anxiety."
+      "ar": "تقلل التجلط وتوسع الشرايين وتسكن الألم.",
+      "en": "Reduce clotting, dilate coronaries and relieve pain."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الأعراض الجانبية: هبوط الضغط، بطء النبض، بطء التنفس، والصداع (خاصة مع النترات والمورفين).",
+      "en": "Monitor side effects: hypotension, bradycardia, respiratory depression and headache (nitrates, morphine)."
+     },
+     "rationale": {
+      "ar": "الأدوية قد تهبط الضغط والتنفس.",
+      "en": "Drugs may lower BP and breathing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عدم إعطاء النترات إذا الضغط الانقباضي < 90 أو مع أدوية الضعف الجنسي خلال 24–48 ساعة.",
+      "en": "Withhold nitrates if SBP < 90 or after PDE-5 inhibitors within 24–48 h."
+     },
+     "rationale": {
+      "ar": "خطر هبوط شديد في الضغط.",
+      "en": "Risk of profound hypotension."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التحضير للقسطرة الطارئة أو مذيبات الجلطة حسب قرار الطبيب.",
+      "en": "Prepare for primary PCI or thrombolysis per physician decision."
+     },
+     "rationale": {
+      "ar": "فتح الشريان بسرعة ينقذ عضلة القلب (\"الوقت عضلة\").",
+      "en": "Rapid reperfusion saves muscle (\"time is muscle\")."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "الألم انخفض إلى 2/10 خلال 20 دقيقة والمريض مرتاح. — تحقق الهدف."
-    ],
-    "en": [
-     "Pain fell to 2/10 within 20 minutes; patient comfortable. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 2/10 بعد المورفين والنترات خلال 20 دقيقة — تحقق.",
+      "en": "Pain 2/10 at 20 minutes after morphine and nitrate — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الألم ورسم القلب",
+      "en": "Pain and ECG assessment"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الألم (المكان، الانتشار، الشدة 0–10، المدة) وعمل رسم قلب خلال 10 دقائق مع كل نوبة ألم.",
+       "توصيل المريض على المونيتور وأخذ العلامات الحيوية فورًا، وتركيب كانيولا وسحب عينات (إنزيمات القلب Troponin)."
+      ],
+      "en": [
+       "Assess pain (site, radiation, 0–10, duration) and obtain a 12-lead ECG within 10 minutes with each episode.",
+       "Attach to the monitor, take vitals immediately, insert a cannula and draw labs (troponin)."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم موثق ورسم قلب خلال 10 دقائق.",
+      "en": "Pain documented; ECG within 10 minutes."
+     },
+     "timeframe": {
+      "ar": "فوري ومع كل نوبة",
+      "en": "Immediately and each episode"
+     }
+    },
+    {
+     "need": {
+      "ar": "تسكين وتقليل حمل القلب",
+      "en": "Relieve pain, reduce workload"
+     },
+     "actions": {
+      "ar": [
+       "راحة تامة في السرير في وضع شبه جالس وبيئة هادئة.",
+       "إعطاء الأكسجين إذا كان التشبع < 90%.",
+       "إعطاء الأسبرين والنترات تحت اللسان والمورفين حسب الأمر.",
+       "متابعة الأعراض الجانبية: هبوط الضغط، بطء النبض، بطء التنفس، والصداع (خاصة مع النترات والمورفين).",
+       "عدم إعطاء النترات إذا الضغط الانقباضي < 90 أو مع أدوية الضعف الجنسي خلال 24–48 ساعة."
+      ],
+      "en": [
+       "Strict bed rest, semi-Fowler position, calm environment.",
+       "Give oxygen if SpO₂ < 90%.",
+       "Give aspirin, sublingual nitrate and morphine as ordered.",
+       "Monitor side effects: hypotension, bradycardia, respiratory depression and headache (nitrates, morphine).",
+       "Withhold nitrates if SBP < 90 or after PDE-5 inhibitors within 24–48 h."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10 وضغط مستقر.",
+      "en": "Pain ≤ 3/10, stable BP."
+     },
+     "timeframe": {
+      "ar": "30 دقيقة",
+      "en": "30 minutes"
+     }
+    },
+    {
+     "need": {
+      "ar": "إعادة فتح الشريان",
+      "en": "Reperfusion"
+     },
+     "actions": {
+      "ar": [
+       "التحضير للقسطرة الطارئة أو مذيبات الجلطة حسب قرار الطبيب."
+      ],
+      "en": [
+       "Prepare for primary PCI or thrombolysis per physician decision."
+      ]
+     },
+     "outcome": {
+      "ar": "مريض جاهز للقسطرة أو المذيب.",
+      "en": "Patient ready for PCI or lysis."
+     },
+     "timeframe": {
+      "ar": "خلال 90 دقيقة (قسطرة) / 30 دقيقة (مذيب)",
+      "en": "Within 90 min (PCI) / 30 min (lysis)"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر انخفاض نتاج القلب (Risk for decreased cardiac output) مرتبط باضطراب نظم القلب وضعف انقباض العضلة المصابة.",
-    "en": "Risk for decreased cardiac output related to dysrhythmias and impaired contractility of the infarcted muscle."
+   "id": "decreased-cardiac-output-mi",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص النتاج القلبي",
+    "en": "Risk for Decreased Cardiac Output"
+   },
+   "definition": {
+    "ar": "قابلية لعدم كفاية الدم الذي يضخه القلب لتلبية احتياجات الجسم.",
+    "en": "Susceptibility to inadequate blood pumped by the heart to meet metabolic demands."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ضعف انقباض العضلة المصابة",
+     "اضطرابات النظم",
+     "صدمة قلبية"
+    ],
+    "en": [
+     "Impaired contractility of infarcted muscle",
+     "Dysrhythmias",
+     "Cardiogenic shock"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"قلبي بيدق بسرعة ساعات.\""
+      "\"حاسس بدوخة شوية.\""
      ],
      "en": [
-      "\"Sometimes I feel my heart racing.\""
+      "\"I feel a little dizzy.\""
      ]
     },
     "objective": {
      "ar": [
-      "ضربات بطينية مبكرة (PVCs) متكررة على المونيتور.",
-      "كمية البول 40 مل/ساعة."
+      "ضربات بطينية مبكرة على المونيتور.",
+      "الضغط 100/64، البول 35 مل/ساعة.",
+      "خرخرة في القاعدتين."
      ],
      "en": [
-      "Frequent premature ventricular contractions (PVCs) on the monitor.",
-      "Urine output 40 mL/hour."
+      "PVCs on the monitor.",
+      "BP 100/64, urine 35 mL/h.",
+      "Basal crackles."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال الإقامة في الرعاية: ضغط انقباضي > 90، كمية بول ≥ 0.5 مل/كجم/ساعة، ولا اضطرابات نظم خطيرة دون اكتشاف وعلاج فوري."
-    ],
-    "en": [
-     "During CCU stay: systolic BP > 90, urine output ≥ 0.5 mL/kg/h, and no dangerous dysrhythmia left undetected or untreated."
-    ]
+    "short": {
+     "ar": [
+      "كل ساعة: ضغط انقباضي ≥ 90، نظم مستقر، بول ≥ 0.5 مل/كجم/ساعة."
+     ],
+     "en": [
+      "Hourly: SBP ≥ 90, stable rhythm, urine ≥ 0.5 mL/kg/h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال الإقامة: لا صدمة قلبية أو هبوط قلب."
+     ],
+     "en": [
+      "During the stay: no cardiogenic shock or heart failure."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "متابعة مستمرة لرسم القلب على المونيتور وضبط الإنذارات.",
-      "en": "Continuous cardiac monitoring with alarms set."
+      "ar": "مراقبة المونيتور باستمرار لأي تغير في الضربات (ضربات مبكرة، تسارع بطيني، إحصار).",
+      "en": "Continuous ECG monitoring for dysrhythmias (ectopics, VT, heart block)."
      },
      "rationale": {
-      "ar": "اضطرابات النظم أشهر سبب للوفاة المبكرة بعد الجلطة.",
-      "en": "Dysrhythmias are the commonest cause of early death after MI."
+      "ar": "الاضطرابات أشهر سبب للوفاة المبكرة.",
+      "en": "Dysrhythmias are the leading cause of early death."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "قياس العلامات الحيوية وكمية البول كل ساعة.",
-      "en": "Measure vital signs and urine output hourly."
+      "ar": "العلامات الحيوية كل 15 دقيقة في المرحلة الحادة، ولون الجلد ودفء الأطراف ورجوع الدم.",
+      "en": "Vitals every 15 minutes in the acute phase; skin colour, warmth and capillary refill."
      },
      "rationale": {
-      "ar": "نقص البول والضغط من أول علامات صدمة قلبية.",
-      "en": "Falling urine output and BP are early signs of cardiogenic shock."
+      "ar": "تكشف نقص التروية.",
+      "en": "Detect hypoperfusion."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "متابعة البوتاسيوم والماغنيسيوم وتصحيحهما حسب الأمر.",
-      "en": "Monitor potassium and magnesium and correct as ordered."
+      "ar": "سماع الصدر والقلب (خرخرة، صوت ثالث، لغط جديد).",
+      "en": "Auscultate lungs and heart (crackles, S3, new murmur)."
      },
      "rationale": {
-      "ar": "اختلالهما يزيد خطر اضطرابات النظم.",
-      "en": "Imbalances increase dysrhythmia risk."
+      "ar": "علامات هبوط القلب أو تمزق الصمام.",
+      "en": "Signs of heart failure or papillary muscle rupture."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "تجهيز جهاز الصدمات (Defibrillator) وأدوية الطوارئ بجوار المريض.",
-      "en": "Keep the defibrillator and emergency drugs at the bedside."
+      "ar": "تسجيل كمية السوائل الداخلة والخارجة والبول كل ساعة.",
+      "en": "Record intake/output and hourly urine."
      },
      "rationale": {
-      "ar": "يسمح بالتدخل الفوري عند حدوث رجفان بطيني.",
-      "en": "Allows immediate action if ventricular fibrillation occurs."
+      "ar": "البول مؤشر تروية الكلى.",
+      "en": "Urine reflects renal perfusion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تجهيز جهاز الصدمات (Defibrillator) وعربة الطوارئ بجانب المريض.",
+      "en": "Keep the defibrillator and crash cart at the bedside."
+     },
+     "rationale": {
+      "ar": "الاستجابة الفورية للرجفان البطيني.",
+      "en": "Immediate response to VF."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء أدوية القلب حسب الأمر (حاصرات بيتا، مثبطات ACE، الستاتين) ومتابعة النبض والضغط.",
+      "en": "Give cardiac drugs as ordered (beta-blockers, ACE inhibitors, statins); monitor HR and BP."
+     },
+     "rationale": {
+      "ar": "تحمي العضلة وتقلل إعادة التشكل.",
+      "en": "Protect myocardium and limit remodelling."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة البوتاسيوم والماغنسيوم.",
+      "en": "Monitor potassium and magnesium."
+     },
+     "rationale": {
+      "ar": "نقصها يسبب اضطرابات نظم.",
+      "en": "Deficits cause dysrhythmias."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب فورًا عن: ضغط < 90، نبض < 50 أو > 120، اضطراب نظم جديد، ألم صدر متكرر.",
+      "en": "Report immediately: SBP < 90, HR < 50 or > 120, new dysrhythmia, recurrent pain."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early intervention."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "العلامات الحيوية مستقرة، البول 45–60 مل/ساعة، وPVCs قلّت بعد تصحيح البوتاسيوم. — تحقق الهدف."
-    ],
-    "en": [
-     "Vitals stable, urine 45–60 mL/h, PVCs reduced after potassium correction. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "ألم حاد في الصدر",
-    "en": "Acute chest pain"
-   },
-   "need": {
-    "ar": "تسكين الألم",
-    "en": "Pain relief"
-   },
-   "actions": {
-    "ar": [
-     "تقييم الألم كل 5–10 دقائق",
-     "نيتروجلسرين ومورفين حسب الأمر",
-     "رسم قلب أثناء الألم"
-    ],
-    "en": [
-     "Assess pain every 5–10 min",
-     "Nitroglycerin and morphine as ordered",
-     "ECG during pain"
-    ]
-   },
-   "outcome": {
-    "ar": "الألم ≤ 3/10",
-    "en": "Pain ≤ 3/10"
-   },
-   "timeframe": {
-    "ar": "30 دقيقة",
-    "en": "30 minutes"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "نظم جيبي منتظم، الضغط 112/70، البول 50 مل/ساعة — تحقق.",
+      "en": "Sinus rhythm, BP 112/70, urine 50 mL/h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "مراقبة القلب والدورة",
+      "en": "Cardiac and circulatory monitoring"
+     },
+     "actions": {
+      "ar": [
+       "مراقبة المونيتور باستمرار لأي تغير في الضربات (ضربات مبكرة، تسارع بطيني، إحصار).",
+       "العلامات الحيوية كل 15 دقيقة في المرحلة الحادة، ولون الجلد ودفء الأطراف ورجوع الدم.",
+       "سماع الصدر والقلب (خرخرة، صوت ثالث، لغط جديد).",
+       "تسجيل كمية السوائل الداخلة والخارجة والبول كل ساعة."
+      ],
+      "en": [
+       "Continuous ECG monitoring for dysrhythmias (ectopics, VT, heart block).",
+       "Vitals every 15 minutes in the acute phase; skin colour, warmth and capillary refill.",
+       "Auscultate lungs and heart (crackles, S3, new murmur).",
+       "Record intake/output and hourly urine."
+      ]
+     },
+     "outcome": {
+      "ar": "نظم مستقر وتروية كافية.",
+      "en": "Stable rhythm, adequate perfusion."
+     },
+     "timeframe": {
+      "ar": "مستمر / كل 15 دقيقة",
+      "en": "Continuous / every 15 min"
+     }
+    },
+    {
+     "need": {
+      "ar": "الجاهزية والعلاج",
+      "en": "Readiness and treatment"
+     },
+     "actions": {
+      "ar": [
+       "تجهيز جهاز الصدمات (Defibrillator) وعربة الطوارئ بجانب المريض.",
+       "إعطاء أدوية القلب حسب الأمر (حاصرات بيتا، مثبطات ACE، الستاتين) ومتابعة النبض والضغط.",
+       "متابعة البوتاسيوم والماغنسيوم.",
+       "إبلاغ الطبيب فورًا عن: ضغط < 90، نبض < 50 أو > 120، اضطراب نظم جديد، ألم صدر متكرر."
+      ],
+      "en": [
+       "Keep the defibrillator and crash cart at the bedside.",
+       "Give cardiac drugs as ordered (beta-blockers, ACE inhibitors, statins); monitor HR and BP.",
+       "Monitor potassium and magnesium.",
+       "Report immediately: SBP < 90, HR < 50 or > 120, new dysrhythmia, recurrent pain."
+      ]
+     },
+     "outcome": {
+      "ar": "لا صدمة قلبية.",
+      "en": "No cardiogenic shock."
+     },
+     "timeframe": {
+      "ar": "حسب الأمر",
+      "en": "As ordered"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر انخفاض نتاج القلب",
-    "en": "Risk for decreased cardiac output"
+   "id": "risk-bleeding-mi",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر النزيف",
+    "en": "Risk for Bleeding"
    },
-   "need": {
-    "ar": "متابعة النظم والدورة الدموية",
-    "en": "Monitor rhythm and perfusion"
+   "definition": {
+    "ar": "قابلية لنقص حجم الدم قد يؤثر على الصحة.",
+    "en": "Susceptibility to a decrease in blood volume that may compromise health."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "مونيتور مستمر",
-     "العلامات والبول كل ساعة",
-     "تجهيز جهاز الصدمات"
+     "العلاج بـ مذيبات الجلطة ومضادات التجلط",
+     "مضادات الصفائح المزدوجة",
+     "قسطرة شريانية"
     ],
     "en": [
-     "Continuous monitor",
-     "Hourly vitals and urine",
-     "Defibrillator ready"
+     "thrombolytics and anticoagulants therapy",
+     "Dual antiplatelet therapy",
+     "Arterial puncture site"
     ]
    },
-   "outcome": {
-    "ar": "علامات حيوية مستقرة",
-    "en": "Stable vital signs"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"اللثة بتنزف شوية لما أغسل سناني.\""
+     ],
+     "en": [
+      "\"My gums bleed a little when I brush.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "أعطي ستربتوكاينيز منذ ساعتين.",
+      "على أسبرين وكلوبيدوجريل وهيبارين."
+     ],
+     "en": [
+      "Streptokinase given 2 hours ago.",
+      "On aspirin, clopidogrel and heparin."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "كل وردية",
-    "en": "Every shift"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: لا علامات نزيف وتحاليل التجلط في المدى المطلوب."
+     ],
+     "en": [
+      "Every shift: no bleeding signs; coagulation within target."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال العلاج: لا نزيف كبير، ويعرف المريض الاحتياطات."
+     ],
+     "en": [
+      "Throughout therapy: no major bleeding; patient knows precautions."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات النزيف: اللثة، الأنف، البول، البراز الأسود، القيء الدموي، الكدمات، مكان الكانيولا.",
+      "en": "Watch for bleeding: gums, nose, urine, black stools, hematemesis, bruises, cannula site."
+     },
+     "rationale": {
+      "ar": "اكتشاف النزيف مبكرًا.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة تحاليل التجلط والهيموجلوبين والصفائح حسب الأمر.",
+      "en": "Monitor coagulation tests, hemoglobin and platelets as ordered."
+     },
+     "rationale": {
+      "ar": "ضبط الجرعة وكشف النزيف الخفي.",
+      "en": "Dose titration and occult bleeding detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة صداع شديد مفاجئ أو تغير الوعي.",
+      "en": "Watch for sudden severe headache or altered consciousness."
+     },
+     "rationale": {
+      "ar": "قد يدل على نزيف بالمخ.",
+      "en": "May indicate intracranial bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الضغط على أماكن الحقن والسحب 5–10 دقائق، وتقليل الحقن العضلي.",
+      "en": "Apply pressure to puncture sites 5–10 minutes; minimize IM injections."
+     },
+     "rationale": {
+      "ar": "يمنع النزيف من الأماكن.",
+      "en": "Prevents site bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "فرشاة أسنان ناعمة وماكينة حلاقة كهربائية.",
+      "en": "Soft toothbrush and electric razor."
+     },
+     "rationale": {
+      "ar": "يمنع الجروح.",
+      "en": "Prevents injury."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض عن مذيبات الجلطة ومضادات التجلط: الالتزام بالجرعة، التحاليل الدورية، تجنب المسكنات مثل الأسبرين والإيبوبروفين بدون استشارة، وإبلاغ أي طبيب أو طبيب أسنان.",
+      "en": "Teach about thrombolytics and anticoagulants: exact dosing, regular tests, avoid NSAIDs/aspirin unless prescribed, inform any doctor or dentist."
+     },
+     "rationale": {
+      "ar": "الاستخدام الآمن للدواء.",
+      "en": "Safe drug use."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "احتياطات مذيب الجلطة (الستربتوكاينيز): إعطاؤه في الساعات الأولى من الجلطة، عدم رج الأمبول، وملاحظة الحساسية (رعشة، احمرار، هبوط الضغط) والنزيف من الأغشية المخاطية.",
+      "en": "Thrombolytic (streptokinase) precautions: give within the first hours, do not shake the vial, watch for allergy (rigors, flushing, hypotension) and mucosal bleeding."
+     },
+     "rationale": {
+      "ar": "الرج يقلل فاعلية الدواء، والحساسية والنزيف أهم أعراضه الجانبية.",
+      "en": "Shaking reduces efficacy; allergy and bleeding are its main adverse effects."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص مكان القسطرة (الفخذ أو الرسغ) والنبض بعده كل 15 دقيقة أول ساعة.",
+      "en": "Check the puncture site (femoral/radial) and distal pulse every 15 minutes for the first hour."
+     },
+     "rationale": {
+      "ar": "نزيف أو ورم دموي مكان القسطرة.",
+      "en": "Detects bleeding or hematoma at the access site."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات نزيف والتحاليل في المدى — تحقق.",
+      "en": "No bleeding; labs in range — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة النزيف",
+      "en": "Monitor bleeding"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة علامات النزيف: اللثة، الأنف، البول، البراز الأسود، القيء الدموي، الكدمات، مكان الكانيولا.",
+       "متابعة تحاليل التجلط والهيموجلوبين والصفائح حسب الأمر.",
+       "ملاحظة صداع شديد مفاجئ أو تغير الوعي."
+      ],
+      "en": [
+       "Watch for bleeding: gums, nose, urine, black stools, hematemesis, bruises, cannula site.",
+       "Monitor coagulation tests, hemoglobin and platelets as ordered.",
+       "Watch for sudden severe headache or altered consciousness."
+      ]
+     },
+     "outcome": {
+      "ar": "لا نزيف.",
+      "en": "No bleeding."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "الوقاية والتثقيف",
+      "en": "Prevention and teaching"
+     },
+     "actions": {
+      "ar": [
+       "الضغط على أماكن الحقن والسحب 5–10 دقائق، وتقليل الحقن العضلي.",
+       "فرشاة أسنان ناعمة وماكينة حلاقة كهربائية.",
+       "تعليم المريض عن مذيبات الجلطة ومضادات التجلط: الالتزام بالجرعة، التحاليل الدورية، تجنب المسكنات مثل الأسبرين والإيبوبروفين بدون استشارة، وإبلاغ أي طبيب أو طبيب أسنان.",
+       "احتياطات مذيب الجلطة (الستربتوكاينيز): إعطاؤه في الساعات الأولى من الجلطة، عدم رج الأمبول، وملاحظة الحساسية (رعشة، احمرار، هبوط الضغط) والنزيف من الأغشية المخاطية.",
+       "فحص مكان القسطرة (الفخذ أو الرسغ) والنبض بعده كل 15 دقيقة أول ساعة."
+      ],
+      "en": [
+       "Apply pressure to puncture sites 5–10 minutes; minimize IM injections.",
+       "Soft toothbrush and electric razor.",
+       "Teach about thrombolytics and anticoagulants: exact dosing, regular tests, avoid NSAIDs/aspirin unless prescribed, inform any doctor or dentist.",
+       "Thrombolytic (streptokinase) precautions: give within the first hours, do not shake the vial, watch for allergy (rigors, flushing, hypotension) and mucosal bleeding.",
+       "Check the puncture site (femoral/radial) and distal pulse every 15 minutes for the first hour."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يعرف الاحتياطات.",
+      "en": "Patient knows precautions."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
+   "id": "activity-intolerance-mi",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم تحمل النشاط",
+    "en": "Activity Intolerance"
+   },
+   "definition": {
+    "ar": "نقص الطاقة الجسدية أو النفسية لتحمل أو إكمال الأنشطة اليومية المطلوبة.",
+    "en": "Insufficient physiological or psychological energy to endure or complete required daily activities."
+   },
+   "relatedTo": {
+    "ar": [
+     "نقص تروية عضلة القلب",
+     "عدم توازن بين احتياج وإمداد الأكسجين"
+    ],
+    "en": [
+     "Myocardial ischemia",
+     "Oxygen supply/demand imbalance"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تعب وضيق نفس عند المجهود",
+     "تغير غير طبيعي في النبض أو الضغط مع النشاط"
+    ],
+    "en": [
+     "Fatigue and exertional dyspnea",
+     "Abnormal HR or BP response to activity"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بتعب لما أقوم الحمام.\""
+     ],
+     "en": [
+      "\"I get tired going to the bathroom.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "النبض يرتفع من 78 إلى 108 عند الجلوس على الكرسي."
+     ],
+     "en": [
+      "HR rises from 78 to 108 when sitting in the chair."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 3 أيام: يؤدي المريض العناية الذاتية مع بقاء النبض والضغط في الحدود المقبولة."
+     ],
+     "en": [
+      "Within 3 days: performs self-care with HR and BP within acceptable limits."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يمشي في الممر بدون أعراض ويعرف خطة النشاط في البيت."
+     ],
+     "en": [
+      "Before discharge: walks the corridor without symptoms and knows the home activity plan."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+      "en": "Check pulse, BP and SpO₂ before, during and 3 minutes after activity."
+     },
+     "rationale": {
+      "ar": "يحدد تحمل المريض.",
+      "en": "Determines tolerance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة.",
+      "en": "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+     },
+     "rationale": {
+      "ar": "علامات عدم التحمل.",
+      "en": "Signs of intolerance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+      "en": "Progress activity: sitting in bed, chair, walking in room then corridor."
+     },
+     "rationale": {
+      "ar": "التدرج يبني التحمل بأمان.",
+      "en": "Gradual progression builds tolerance safely."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+      "en": "Plan rest between activities; cluster care."
+     },
+     "rationale": {
+      "ar": "يحافظ على الطاقة.",
+      "en": "Conserves energy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+      "en": "Assist with ADLs as needed while encouraging independence."
+     },
+     "rationale": {
+      "ar": "يوازن بين الراحة والنشاط.",
+      "en": "Balances rest and activity."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود).",
+      "en": "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+     },
+     "rationale": {
+      "ar": "يقلل الحمل على القلب.",
+      "en": "Reduces cardiac workload."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "البدء في برنامج التأهيل القلبي (المرحلة الأولى) والإحالة للمرحلة الثانية بعد الخروج.",
+      "en": "Start phase I cardiac rehabilitation and refer to phase II after discharge."
+     },
+     "rationale": {
+      "ar": "التأهيل يقلل الوفيات ويحسن جودة الحياة.",
+      "en": "Rehabilitation reduces mortality and improves quality of life."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "مشى في الممر 50 مترًا، زاد النبض 12 فقط بدون ضيق نفس — تحقق.",
+      "en": "Walked 50 m; HR rose by only 12, no dyspnea — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم التحمل",
+      "en": "Assess tolerance"
+     },
+     "actions": {
+      "ar": [
+       "قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+       "إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة."
+      ],
+      "en": [
+       "Check pulse, BP and SpO₂ before, during and 3 minutes after activity.",
+       "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مقبولة مع النشاط.",
+      "en": "Acceptable vitals with activity."
+     },
+     "timeframe": {
+      "ar": "مع كل نشاط",
+      "en": "With each activity"
+     }
+    },
+    {
+     "need": {
+      "ar": "زيادة النشاط تدريجيًا",
+      "en": "Progress activity"
+     },
+     "actions": {
+      "ar": [
+       "التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+       "تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+       "المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+       "تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود).",
+       "البدء في برنامج التأهيل القلبي (المرحلة الأولى) والإحالة للمرحلة الثانية بعد الخروج."
+      ],
+      "en": [
+       "Progress activity: sitting in bed, chair, walking in room then corridor.",
+       "Plan rest between activities; cluster care.",
+       "Assist with ADLs as needed while encouraging independence.",
+       "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort).",
+       "Start phase I cardiac rehabilitation and refer to phase II after discharge."
+      ]
+     },
+     "outcome": {
+      "ar": "عناية ذاتية ومشي بدون أعراض.",
+      "en": "Self-care and walking without symptoms."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "constipation-risk-mi",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الإمساك",
+    "en": "Risk for Constipation"
+   },
+   "definition": {
+    "ar": "قابلية لقلة عدد مرات التبرز مع صعوبة أو عدم اكتمال خروج البراز.",
+    "en": "Susceptibility to infrequent, difficult or incomplete passage of stool."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "الراحة في السرير",
+     "المورفين",
+     "تغير الأكل"
+    ],
+    "en": [
+     "Bed rest",
+     "Morphine",
+     "Diet change"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"معملتش حمام من يومين.\""
+     ],
+     "en": [
+      "\"I haven't opened my bowels for two days.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "أصوات الأمعاء ضعيفة."
+     ],
+     "en": [
+      "Hypoactive bowel sounds."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: إخراج لين بدون حزق."
+     ],
+     "en": [
+      "Within 48 h: soft stool without straining."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال الإقامة: لا حزق (مناورة فالسالفا)."
+     ],
+     "en": [
+      "Throughout the stay: no straining (Valsalva)."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة مرات التبرز وقوامه وأصوات الأمعاء.",
+      "en": "Track bowel frequency, consistency and sounds."
+     },
+     "rationale": {
+      "ar": "كشف الإمساك مبكرًا.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء ملين للبراز حسب الأمر بشكل روتيني.",
+      "en": "Give stool softener routinely as ordered."
+     },
+     "rationale": {
+      "ar": "يمنع الحزق.",
+      "en": "Prevents straining."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تجنب الحزق وحبس النفس أثناء التبرز.",
+      "en": "Avoid straining and breath-holding during defecation."
+     },
+     "rationale": {
+      "ar": "مناورة فالسالفا تبطئ القلب ثم تزيد حمله وقد تسبب اضطرابات نظم.",
+      "en": "Valsalva causes bradycardia then increased load and may trigger dysrhythmias."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام كرسي الحمام بجانب السرير بدل القصرية عندما يسمح الطبيب.",
+      "en": "Use a bedside commode rather than a bedpan when allowed."
+     },
+     "rationale": {
+      "ar": "أقل مجهودًا على القلب.",
+      "en": "Less cardiac effort."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "زيادة الألياف (خضار وفاكهة) والسوائل حسب الحالة.",
+      "en": "Increase fiber (vegetables, fruit) and fluids as allowed."
+     },
+     "rationale": {
+      "ar": "يلين البراز.",
+      "en": "Softens stool."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "توفير الخصوصية ووقت ثابت للحمام.",
+      "en": "Provide privacy and a regular time."
+     },
+     "rationale": {
+      "ar": "يساعد الإخراج.",
+      "en": "Promotes defecation."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تبرز لين يوم 2 بدون حزق — تحقق.",
+      "en": "Soft stool on day 2 without straining — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من الإمساك",
+      "en": "Prevent constipation"
+     },
+     "actions": {
+      "ar": [
+       "متابعة مرات التبرز وقوامه وأصوات الأمعاء.",
+       "إعطاء ملين للبراز حسب الأمر بشكل روتيني.",
+       "تجنب الحزق وحبس النفس أثناء التبرز.",
+       "استخدام كرسي الحمام بجانب السرير بدل القصرية عندما يسمح الطبيب.",
+       "زيادة الألياف (خضار وفاكهة) والسوائل حسب الحالة.",
+       "توفير الخصوصية ووقت ثابت للحمام."
+      ],
+      "en": [
+       "Track bowel frequency, consistency and sounds.",
+       "Give stool softener routinely as ordered.",
+       "Avoid straining and breath-holding during defecation.",
+       "Use a bedside commode rather than a bedpan when allowed.",
+       "Increase fiber (vegetables, fruit) and fluids as allowed.",
+       "Provide privacy and a regular time."
+      ]
+     },
+     "outcome": {
+      "ar": "إخراج لين بدون حزق.",
+      "en": "Soft stool without straining."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-mi",
+   "kind": "actual",
+   "title": {
     "ar": "القلق",
     "en": "Anxiety"
    },
-   "need": {
-    "ar": "الدعم النفسي",
-    "en": "Emotional support"
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "شرح الإجراءات ببساطة",
-     "السماح بوجود مرافق",
-     "الإجابة عن الأسئلة"
+     "الخوف من الموت ومن جلطة أخرى",
+     "بيئة الرعاية المركزة"
     ],
     "en": [
-     "Explain procedures simply",
-     "Allow a companion",
-     "Answer questions"
+     "Fear of death or another heart attack",
+     "Coronary care environment"
     ]
    },
-   "outcome": {
-    "ar": "المريض هادئ ويعبر عن مخاوفه",
-    "en": "Patient calm and expresses concerns"
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
    },
-   "timeframe": {
-    "ar": "24 ساعة",
-    "en": "24 hours"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هو أنا هموت؟ قلبي هيقف تاني؟\""
+     ],
+     "en": [
+      "\"Am I going to die? Will my heart stop again?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "متوتر، يراقب المونيتور، النبض 104."
+     ],
+     "en": [
+      "Tense, watching the monitor, HR 104."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواجد مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق والاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء مهدئ خفيف حسب الأمر عند القلق الشديد.",
+      "en": "Give a mild anxiolytic as ordered for severe anxiety."
+     },
+     "rationale": {
+      "ar": "القلق يزيد حمل القلب.",
+      "en": "Anxiety increases cardiac workload."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+       "التواجد مع المريض والتحدث بهدوء وثقة.",
+       "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "تعليم التنفس البطيء العميق والاسترخاء.",
+       "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+       "إعطاء مهدئ خفيف حسب الأمر عند القلق الشديد."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy.",
+       "Give a mild anxiolytic as ordered for severe anxiety."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-mi",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (بعد الجلطة)",
+    "en": "Deficient Knowledge (After MI)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "أول جلطة",
+     "نقص المعلومات عن عوامل الخطر"
+    ],
+    "en": [
+     "First MI",
+     "Unfamiliar with risk factors"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"إمتى أرجع شغلي؟ وأقدر أعمل إيه؟\""
+     ],
+     "en": [
+      "\"When can I go back to work? What am I allowed to do?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يدخن 20 سيجارة يوميًا، كوليسترول مرتفع."
+     ],
+     "en": [
+      "Smokes 20/day; high cholesterol."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الأدوية: الأسبرين ومضاد الصفائح الثاني (عدم إيقافه بدون طبيب القلب)، الستاتين، حاصر بيتا، والنترات تحت اللسان عند الألم.",
+      "en": "Explain drugs: aspirin and second antiplatelet (never stop without cardiologist), statin, beta-blocker, and sublingual nitrate for pain."
+     },
+     "rationale": {
+      "ar": "إيقاف مضاد الصفائح مبكرًا يسبب انسداد الدعامة.",
+      "en": "Early antiplatelet withdrawal causes stent thrombosis."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "ماذا يفعل عند ألم الصدر: راحة، نترات تحت اللسان كل 5 دقائق حتى 3 مرات، وطلب الإسعاف إذا لم يتحسن خلال 5 دقائق.",
+      "en": "Chest pain action: rest, sublingual nitrate every 5 minutes up to 3 doses, call an ambulance if not better after 5 minutes."
+     },
+     "rationale": {
+      "ar": "التصرف السريع ينقذ الحياة.",
+      "en": "Prompt action saves lives."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "طعام قليل الملح والدهون، والتحكم في الوزن.",
+      "en": "Low-salt, low-fat diet and weight control."
+     },
+     "rationale": {
+      "ar": "يقلل تصلب الشرايين.",
+      "en": "Slows atherosclerosis."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "الإقلاع عن التدخين والتعرض له.",
+      "en": "Stop smoking and avoid exposure."
+     },
+     "rationale": {
+      "ar": "أهم عامل خطر قابل للتعديل.",
+      "en": "The most important modifiable risk factor."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "رياضة المشي تدريجيًا، والابتعاد عن الضغوط النفسية والعصبية، والعودة للعمل والعلاقة الزوجية حسب تعليمات الطبيب (عادة بعد 2–6 أسابيع).",
+      "en": "Gradual walking, avoiding emotional stress, and return to work and sexual activity per physician (usually 2–6 weeks)."
+     },
+     "rationale": {
+      "ar": "نشاط آمن وتأهيل.",
+      "en": "Safe activity and rehabilitation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف صحي",
+      "en": "Health teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "شرح الأدوية: الأسبرين ومضاد الصفائح الثاني (عدم إيقافه بدون طبيب القلب)، الستاتين، حاصر بيتا، والنترات تحت اللسان عند الألم.",
+       "ماذا يفعل عند ألم الصدر: راحة، نترات تحت اللسان كل 5 دقائق حتى 3 مرات، وطلب الإسعاف إذا لم يتحسن خلال 5 دقائق.",
+       "طعام قليل الملح والدهون، والتحكم في الوزن.",
+       "الإقلاع عن التدخين والتعرض له.",
+       "رياضة المشي تدريجيًا، والابتعاد عن الضغوط النفسية والعصبية، والعودة للعمل والعلاقة الزوجية حسب تعليمات الطبيب (عادة بعد 2–6 أسابيع).",
+       "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Explain drugs: aspirin and second antiplatelet (never stop without cardiologist), statin, beta-blocker, and sublingual nitrate for pain.",
+       "Chest pain action: rest, sublingual nitrate every 5 minutes up to 3 doses, call an ambulance if not better after 5 minutes.",
+       "Low-salt, low-fat diet and weight control.",
+       "Stop smoking and avoid exposure.",
+       "Gradual walking, avoiding emotional stress, and return to work and sexual activity per physician (usually 2–6 weeks).",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -289,10 +1488,10 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "ESC Guidelines for the management of acute coronary syndromes (2023)"
   },
   {
-   "title": "ESC Guidelines for the management of acute coronary syndromes 2023"
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
   }
  ]
 }

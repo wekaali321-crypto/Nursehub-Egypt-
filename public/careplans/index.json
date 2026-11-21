@@ -1,36 +1,6 @@
 {
  "plans": [
   {
-   "id": "myocardial-infarction",
-   "icon": "❤️‍🩹",
-   "system": "cardiology",
-   "folder": "disease",
-   "title": {
-    "ar": "الجلطة القلبية (احتشاء عضلة القلب)",
-    "en": "Acute Myocardial Infarction"
-   },
-   "summary": {
-    "ar": "خطة رعاية لمريض جلطة قلبية حادة: تسكين ألم الصدر، متابعة رسم القلب، والوقاية من المضاعفات.",
-    "en": "Care plan for acute MI: chest-pain relief, ECG monitoring and complication prevention."
-   },
-   "diagnoses": [
-    {
-     "id": "dx-1",
-     "title": {
-      "ar": "ألم حاد",
-      "en": "Acute pain"
-     }
-    },
-    {
-     "id": "dx-2",
-     "title": {
-      "ar": "خطر انخفاض نتاج القلب",
-      "en": "Risk for decreased cardiac output"
-     }
-    }
-   ]
-  },
-  {
    "id": "angina-acs",
    "icon": "🫀",
    "system": "cardiology",
@@ -239,6 +209,71 @@
      "title": {
       "ar": "القلق",
       "en": "Anxiety"
+     }
+    }
+   ]
+  },
+  {
+   "id": "myocardial-infarction",
+   "icon": "❤️‍🩹",
+   "system": "cardiology",
+   "folder": "disease",
+   "title": {
+    "ar": "الجلطة القلبية (احتشاء عضلة القلب)",
+    "en": "Myocardial Infarction"
+   },
+   "summary": {
+    "ar": "خطة رعاية مريض الجلطة القلبية: ألم الصدر والتدخل الفوري، النتاج القلبي واضطرابات النظم، النزيف مع مذيبات الجلطة، عدم تحمل النشاط، الإمساك، القلق، والتثقيف بعد الجلطة.",
+    "en": "MI care plan: chest pain and immediate care, cardiac output and dysrhythmias, bleeding with thrombolytics, activity intolerance, constipation, anxiety and post-MI teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "acute-pain-mi",
+     "title": {
+      "ar": "ألم حاد (ألم الصدر القلبي)",
+      "en": "Acute Pain (Ischemic Chest Pain)"
+     }
+    },
+    {
+     "id": "decreased-cardiac-output-mi",
+     "title": {
+      "ar": "خطر نقص النتاج القلبي",
+      "en": "Risk for Decreased Cardiac Output"
+     }
+    },
+    {
+     "id": "risk-bleeding-mi",
+     "title": {
+      "ar": "خطر النزيف",
+      "en": "Risk for Bleeding"
+     }
+    },
+    {
+     "id": "activity-intolerance-mi",
+     "title": {
+      "ar": "عدم تحمل النشاط",
+      "en": "Activity Intolerance"
+     }
+    },
+    {
+     "id": "constipation-risk-mi",
+     "title": {
+      "ar": "خطر الإمساك",
+      "en": "Risk for Constipation"
+     }
+    },
+    {
+     "id": "anxiety-mi",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "deficient-knowledge-mi",
+     "title": {
+      "ar": "نقص المعرفة (بعد الجلطة)",
+      "en": "Deficient Knowledge (After MI)"
      }
     }
    ]
