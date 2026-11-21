@@ -2,286 +2,1202 @@
  "id": "preeclampsia",
  "icon": "🤰",
  "system": "obstetrics",
+ "folder": "disease",
  "title": {
-  "ar": "تسمم الحمل (ما قبل الإرجاج)",
-  "en": "Pre-eclampsia"
+  "ar": "تسمم الحمل (ما قبل وأثناء التشنجات)",
+  "en": "Pre-eclampsia & Eclampsia"
  },
  "summary": {
-  "ar": "خطة رعاية لحامل مصابة بتسمم الحمل: متابعة الضغط وحالة الجنين، والوقاية من التشنجات بالماغنسيوم.",
-  "en": "Care plan for pre-eclampsia: BP and fetal monitoring and seizure prevention with magnesium sulfate."
+  "ar": "خطة رعاية تسمم الحمل: ارتفاع الضغط الشديد والماغنسيوم، التشنجات وبيئة المريضة، حالة الجنين، السوائل والتورم، القلق، والتثقيف.",
+  "en": "Pre-eclampsia/eclampsia care plan: severe hypertension and magnesium, seizures and environment, fetal well-being, fluids and edema, anxiety and teaching."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "خطر الإصابة (Risk for injury) للأم مرتبط بالتشنجات (الإرجاج) وارتفاع الضغط الشديد.",
-    "en": "Maternal risk for injury related to seizures (eclampsia) and severe hypertension."
+   "id": "risk-maternal-injury-preeclampsia",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر إصابة الأم (ارتفاع الضغط الحاد وتسمم الحمل)",
+    "en": "Risk for Maternal Injury (Severe Hypertension / Eclampsia)"
+   },
+   "definition": {
+    "ar": "قابلية لمضاعفات خطيرة للأم بسبب ارتفاع ضغط الحمل.",
+    "en": "Susceptibility to serious maternal complications from hypertensive disorder of pregnancy."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ضغط ≥ 160/110",
+     "بروتين في البول",
+     "أعراض شديدة: صداع، زغللة، ألم أعلى البطن"
+    ],
+    "en": [
+     "BP ≥ 160/110",
+     "Proteinuria",
+     "Severe features: headache, visual disturbance, epigastric pain"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"عندي صداع شديد وبشوف نقط قدام عيني.\""
+      "\"عندي صداع جامد ونور قدام عيني.\""
      ],
      "en": [
-      "\"I have a severe headache and see spots before my eyes.\""
+      "\"I have a bad headache and see flashing lights.\""
      ]
     },
     "objective": {
      "ar": [
-      "حامل 34 أسبوعًا، الضغط 165/110.",
-      "زلال في البول +3.",
-      "زيادة في الانعكاسات العصبية (Hyperreflexia +3)."
+      "حامل 34 أسبوع، الضغط 164/112.",
+      "بروتين +3، تورم الوجه واليدين.",
+      "ردود فعل عصبية زائدة."
      ],
      "en": [
-      "34 weeks pregnant, BP 165/110.",
-      "Proteinuria +3.",
-      "Hyperreflexia +3."
+      "34 weeks pregnant, BP 164/112.",
+      "Proteinuria 3+, facial and hand edema.",
+      "Hyperreflexia."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء الإقامة: لا تحدث تشنجات، وينخفض الضغط إلى أقل من 160/110 خلال ساعة من العلاج، دون علامات تسمم بالماغنسيوم."
-    ],
-    "en": [
-     "During the stay: no seizures; BP below 160/110 within an hour of treatment; no signs of magnesium toxicity."
-    ]
+    "short": {
+     "ar": [
+      "خلال ساعة: ضغط < 160/110."
+     ],
+     "en": [
+      "Within 1 h: BP < 160/110."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا تشنجات أو نزيف بالمخ أو انفصال مشيمة."
+     ],
+     "en": [
+      "No eclampsia, stroke or abruption."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "إعطاء سلفات الماغنسيوم بمضخة حسب البروتوكول.",
-      "en": "Give magnesium sulfate by infusion pump per protocol."
+      "ar": "قياس الضغط كل 15 دقيقة في المرحلة الحادة ثم كل ساعة (وعلى الأقل 2–3 مرات يوميًا في الحالات الخفيفة).",
+      "en": "BP every 15 minutes in the acute phase, then hourly (at least 2–3 times daily in mild cases)."
      },
      "rationale": {
-      "ar": "يمنع التشنجات؛ والمضخة تمنع الجرعة الزائدة.",
-      "en": "Prevents seizures; the pump prevents overdose."
+      "ar": "يكشف الارتفاع الشديد.",
+      "en": "Detects severe hypertension."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "متابعة علامات تسمم الماغنسيوم كل ساعة: الانعكاسات، سرعة التنفس (≥ 12)، كمية البول (≥ 30 مل/ساعة).",
-      "en": "Hourly checks for magnesium toxicity: reflexes, respiratory rate (≥ 12), urine output (≥ 30 mL/h)."
+      "ar": "متابعة الأعراض الشديدة: صداع، زغللة، ألم أعلى البطن، ضيق نفس، وردود الفعل العصبية.",
+      "en": "Monitor severe features: headache, visual change, epigastric pain, dyspnea and reflexes."
      },
      "rationale": {
-      "ar": "غياب الانعكاسات أو بطء التنفس أو قلة البول علامات تسمم.",
-      "en": "Absent reflexes, slow breathing or low urine output signal toxicity."
+      "ar": "تنذر بالتشنج.",
+      "en": "Herald eclampsia."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "تجهيز الكالسيوم جلوكونات بجانب السرير.",
-      "en": "Keep calcium gluconate at the bedside."
+      "ar": "إعطاء أدوية الضغط حسب الأمر (لابيتالول، هيدرالازين، نيفيديبين) خلال 30–60 دقيقة من الضغط الشديد.",
+      "en": "Give antihypertensives as ordered (labetalol, hydralazine, nifedipine) within 30–60 minutes of severe BP."
      },
      "rationale": {
-      "ar": "هو الترياق (Antidote) لتسمم الماغنسيوم.",
-      "en": "It is the antidote for magnesium toxicity."
+      "ar": "يمنع النزيف بالمخ.",
+      "en": "Prevents cerebral haemorrhage."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "إعطاء أدوية خفض الضغط حسب الأمر (Labetalol / Hydralazine / Nifedipine) ومتابعة الضغط كل 15 دقيقة.",
-      "en": "Give antihypertensives as ordered (labetalol / hydralazine / nifedipine) and check BP every 15 minutes."
+      "ar": "إعطاء سلفات الماغنسيوم حسب البروتوكول للوقاية من التشنجات.",
+      "en": "Give magnesium sulphate per protocol for seizure prophylaxis."
      },
      "rationale": {
-      "ar": "الضغط الشديد يعرض الأم لنزيف المخ.",
-      "en": "Severe hypertension risks maternal cerebral hemorrhage."
+      "ar": "أفضل وقاية من التشنج.",
+      "en": "Best seizure prophylaxis."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "غرفة هادئة بإضاءة خافتة، ورفع جوانب السرير، وتجهيز الشفط والأكسجين.",
-      "en": "Quiet, dimly lit room, padded side rails, suction and oxygen ready."
+      "ar": "مع الماغنسيوم: متابعة ردود الفعل وسرعة التنفس (> 12) والبول (> 30 مل/ساعة) وتوفير جلوكونات الكالسيوم كترياق.",
+      "en": "With magnesium: check reflexes, RR (> 12) and urine (> 30 mL/h); keep calcium gluconate as antidote."
      },
      "rationale": {
-      "ar": "تقليل المنبهات يقلل التشنجات، والتجهيز يحمي الأم عند حدوثها.",
-      "en": "Fewer stimuli reduce seizures; preparation protects the mother if one occurs."
+      "ar": "علامات التسمم بالماغنسيوم.",
+      "en": "Signs of magnesium toxicity."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة التورم وتدوينه، ووزن الحالة كل 24 ساعة، وقياس البول خلال 24 ساعة، وخريطة السوائل الداخلة والخارجة.",
+      "en": "Monitor and document edema, daily weight, 24-hour urine, and an intake/output chart."
+     },
+     "rationale": {
+      "ar": "تقييم الكلى والسوائل؛ تقييد السوائل يمنع وذمة الرئة.",
+      "en": "Assesses kidneys and fluids; restriction prevents pulmonary edema."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تحاليل وظائف الكبد والصفائح والكلى (متلازمة HELLP).",
+      "en": "LFTs, platelets and renal function (HELLP syndrome)."
+     },
+     "rationale": {
+      "ar": "مضاعفة خطيرة.",
+      "en": "Serious complication."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إبلاغ الطبيب فورًا ومتابعة الحالة جيدًا.",
+      "en": "Inform the doctor immediately and observe closely."
+     },
+     "rationale": {
+      "ar": "تدخل سريع.",
+      "en": "Rapid intervention."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "لم تحدث تشنجات، الضغط 150/100 بعد 45 دقيقة، والانعكاسات +2 والتنفس 16. — تحقق الهدف."
-    ],
-    "en": [
-     "No seizures; BP 150/100 after 45 minutes; reflexes +2, RR 16. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الضغط 148/96 بعد ساعة من اللابيتالول، لا أعراض عصبية — تحقق.",
+      "en": "BP 148/96 one hour after labetalol; no neuro symptoms — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة الضغط والأعراض",
+      "en": "Monitor BP and symptoms"
+     },
+     "actions": {
+      "ar": [
+       "قياس الضغط كل 15 دقيقة في المرحلة الحادة ثم كل ساعة (وعلى الأقل 2–3 مرات يوميًا في الحالات الخفيفة).",
+       "متابعة الأعراض الشديدة: صداع، زغللة، ألم أعلى البطن، ضيق نفس، وردود الفعل العصبية.",
+       "متابعة التورم وتدوينه، ووزن الحالة كل 24 ساعة، وقياس البول خلال 24 ساعة، وخريطة السوائل الداخلة والخارجة.",
+       "تحاليل وظائف الكبد والصفائح والكلى (متلازمة HELLP).",
+       "إبلاغ الطبيب فورًا ومتابعة الحالة جيدًا."
+      ],
+      "en": [
+       "BP every 15 minutes in the acute phase, then hourly (at least 2–3 times daily in mild cases).",
+       "Monitor severe features: headache, visual change, epigastric pain, dyspnea and reflexes.",
+       "Monitor and document edema, daily weight, 24-hour urine, and an intake/output chart.",
+       "LFTs, platelets and renal function (HELLP syndrome).",
+       "Inform the doctor immediately and observe closely."
+      ]
+     },
+     "outcome": {
+      "ar": "ضغط < 160/110 بدون أعراض.",
+      "en": "BP < 160/110 without symptoms."
+     },
+     "timeframe": {
+      "ar": "كل 15 دقيقة ثم كل ساعة",
+      "en": "Every 15 min then hourly"
+     }
+    },
+    {
+     "need": {
+      "ar": "العلاج الدوائي",
+      "en": "Drug therapy"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء أدوية الضغط حسب الأمر (لابيتالول، هيدرالازين، نيفيديبين) خلال 30–60 دقيقة من الضغط الشديد.",
+       "إعطاء سلفات الماغنسيوم حسب البروتوكول للوقاية من التشنجات.",
+       "مع الماغنسيوم: متابعة ردود الفعل وسرعة التنفس (> 12) والبول (> 30 مل/ساعة) وتوفير جلوكونات الكالسيوم كترياق."
+      ],
+      "en": [
+       "Give antihypertensives as ordered (labetalol, hydralazine, nifedipine) within 30–60 minutes of severe BP.",
+       "Give magnesium sulphate per protocol for seizure prophylaxis.",
+       "With magnesium: check reflexes, RR (> 12) and urine (> 30 mL/h); keep calcium gluconate as antidote."
+      ]
+     },
+     "outcome": {
+      "ar": "لا تشنجات أو تسمم ماغنسيوم.",
+      "en": "No seizures or Mg toxicity."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر اضطراب الثنائي الأم والجنين (Risk for disturbed maternal–fetal dyad) مرتبط بنقص تروية المشيمة.",
-    "en": "Risk for disturbed maternal–fetal dyad related to reduced placental perfusion."
+   "id": "risk-injury-eclampsia",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الإصابة أثناء التشنجات (تسمم الحمل)",
+    "en": "Risk for Injury (Eclamptic Seizure)"
+   },
+   "definition": {
+    "ar": "قابلية لإصابة الأم والجنين أثناء التشنج.",
+    "en": "Susceptibility to maternal and fetal injury during a seizure."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "تهيج المخ من ارتفاع الضغط",
+     "المنبهات (الضوء والضوضاء)"
+    ],
+    "en": [
+     "Cerebral irritability from hypertension",
+     "Stimuli (light, noise)"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"حاسة إن البيبي حركته قلت النهارده.\""
+      "\"حاسة بتنميل في وشي.\""
      ],
      "en": [
-      "\"I feel the baby is moving less today.\""
+      "\"My face feels numb.\""
      ]
     },
     "objective": {
      "ar": [
-      "نبض الجنين 135/دقيقة.",
-      "السونار: نمو الجنين أقل من المتوقع."
+      "ضغط 170/115، ردود فعل +4."
      ],
      "en": [
-      "Fetal heart rate 135/min.",
-      "Ultrasound: fetal growth below expected."
+      "BP 170/115, reflexes 4+."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء الإقامة يظل نبض الجنين 110–160 مع تذبذب طبيعي، وتُكتشف أي علامات خطر فورًا."
-    ],
-    "en": [
-     "During the stay fetal heart rate stays 110–160 with normal variability, and any warning signs are detected immediately."
-    ]
+    "short": {
+     "ar": [
+      "أثناء أي تشنج: مجرى هواء مفتوح ولا إصابة."
+     ],
+     "en": [
+      "During any seizure: patent airway, no injury."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ولادة آمنة للأم والجنين."
+     ],
+     "en": [
+      "Safe delivery for mother and baby."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "independent",
      "action": {
-      "ar": "متابعة نبض الجنين بجهاز المراقبة (CTG) حسب البروتوكول.",
-      "en": "Monitor the fetal heart with CTG per protocol."
+      "ar": "وضع المريضة في غرفة هادئة مظلمة وعازلة للصوت وتقليل الزيارات.",
+      "en": "Quiet, darkened, sound-insulated room; limit visitors."
      },
      "rationale": {
-      "ar": "يكشف معاناة الجنين بسبب نقص التروية.",
-      "en": "Detects fetal distress from poor perfusion."
+      "ar": "المنبهات تحفز التشنج.",
+      "en": "Stimuli trigger seizures."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "نوم الأم على الجانب الأيسر.",
-      "en": "Position the mother in left lateral."
+      "ar": "سرير بحواجز مبطنة من الجانبين.",
+      "en": "Bed with padded side rails."
      },
      "rationale": {
-      "ar": "يزيد رجوع الدم للقلب وتروية المشيمة.",
-      "en": "Improves venous return and placental perfusion."
+      "ar": "يمنع السقوط والإصابة.",
+      "en": "Prevents falls and injury."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "تعليم الأم عد حركات الجنين والإبلاغ عن قلتها.",
-      "en": "Teach fetal-movement counting and reporting reduced movements."
+      "ar": "تجهيز ممر هوائي وجهاز الشفط والأكسجين المرطب بجانب المريضة باستمرار.",
+      "en": "Keep an airway, suction and humidified oxygen at the bedside at all times."
      },
      "rationale": {
-      "ar": "قلة الحركة علامة إنذار مبكرة.",
-      "en": "Reduced movement is an early warning sign."
+      "ar": "جاهزية للتشنج.",
+      "en": "Seizure readiness."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "إعطاء الكورتيزون لنضج رئة الجنين حسب الأمر إذا كان الحمل أقل من 34–37 أسبوعًا.",
-      "en": "Give antenatal corticosteroids for fetal lung maturity as ordered if preterm."
+      "ar": "أثناء التشنج: وضع ممر هوائي إذا أمكن بأمان، وضع المريضة على جانبها الأيسر، الشفط باستمرار، وإعطاء الأكسجين.",
+      "en": "During a seizure: insert an airway if safe, left lateral position, continuous suction, oxygen."
      },
      "rationale": {
-      "ar": "يقلل مضاعفات التنفس إذا لزمت الولادة المبكرة.",
-      "en": "Reduces respiratory complications if early delivery is needed."
+      "ar": "حماية مجرى الهواء والمشيمة.",
+      "en": "Protects airway and placental flow."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تحضير أدوية الضغط والتشنجات (سلفات الماغنسيوم) واستدعاء الطبيب فورًا.",
+      "en": "Prepare antihypertensives and anticonvulsant (magnesium sulphate); call the doctor at once."
+     },
+     "rationale": {
+      "ar": "علاج فوري.",
+      "en": "Immediate treatment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "أخذ العلامات الحيوية وتفريغ المثانة حسب أمر الطبيب.",
+      "en": "Take vital signs; empty the bladder as ordered."
+     },
+     "rationale": {
+      "ar": "متابعة وقياس البول.",
+      "en": "Monitoring and urine measurement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ قسم عمليات النساء والعناية المركزة.",
+      "en": "Notify obstetric theatre and ICU."
+     },
+     "rationale": {
+      "ar": "التحضير للولادة والرعاية المركزة.",
+      "en": "Prepare for delivery and critical care."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة نبض الجنين بعد التشنج.",
+      "en": "Monitor fetal heart after the seizure."
+     },
+     "rationale": {
+      "ar": "نقص أكسجين الجنين.",
+      "en": "Fetal hypoxia."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "CTG طبيعي ونبض الجنين 130–145 والأم تعد الحركات بشكل صحيح. — تحقق الهدف."
-    ],
-    "en": [
-     "Normal CTG, FHR 130–145, mother counts movements correctly. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "خطر الإصابة (تشنجات)",
-    "en": "Risk for injury (seizures)"
-   },
-   "need": {
-    "ar": "الوقاية من التشنجات",
-    "en": "Seizure prevention"
-   },
-   "actions": {
-    "ar": [
-     "سلفات الماغنسيوم بمضخة",
-     "الانعكاسات والتنفس والبول كل ساعة",
-     "كالسيوم جلوكونات جاهز"
-    ],
-    "en": [
-     "Magnesium sulfate by pump",
-     "Hourly reflexes, RR, urine",
-     "Calcium gluconate ready"
-    ]
-   },
-   "outcome": {
-    "ar": "لا تشنجات ولا تسمم ماغنسيوم",
-    "en": "No seizures, no Mg toxicity"
-   },
-   "timeframe": {
-    "ar": "كل ساعة",
-    "en": "Hourly"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لم تحدث تشنجات حتى الولادة القيصرية — تحقق.",
+      "en": "No seizures until cesarean delivery — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "بيئة آمنة وجاهزية",
+      "en": "Safe environment and readiness"
+     },
+     "actions": {
+      "ar": [
+       "وضع المريضة في غرفة هادئة مظلمة وعازلة للصوت وتقليل الزيارات.",
+       "سرير بحواجز مبطنة من الجانبين.",
+       "تجهيز ممر هوائي وجهاز الشفط والأكسجين المرطب بجانب المريضة باستمرار."
+      ],
+      "en": [
+       "Quiet, darkened, sound-insulated room; limit visitors.",
+       "Bed with padded side rails.",
+       "Keep an airway, suction and humidified oxygen at the bedside at all times."
+      ]
+     },
+     "outcome": {
+      "ar": "غرفة هادئة وأدوات جاهزة.",
+      "en": "Quiet room, equipment ready."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    },
+    {
+     "need": {
+      "ar": "التعامل مع التشنج",
+      "en": "Seizure management"
+     },
+     "actions": {
+      "ar": [
+       "أثناء التشنج: وضع ممر هوائي إذا أمكن بأمان، وضع المريضة على جانبها الأيسر، الشفط باستمرار، وإعطاء الأكسجين.",
+       "تحضير أدوية الضغط والتشنجات (سلفات الماغنسيوم) واستدعاء الطبيب فورًا.",
+       "أخذ العلامات الحيوية وتفريغ المثانة حسب أمر الطبيب.",
+       "إبلاغ قسم عمليات النساء والعناية المركزة.",
+       "متابعة نبض الجنين بعد التشنج."
+      ],
+      "en": [
+       "During a seizure: insert an airway if safe, left lateral position, continuous suction, oxygen.",
+       "Prepare antihypertensives and anticonvulsant (magnesium sulphate); call the doctor at once.",
+       "Take vital signs; empty the bladder as ordered.",
+       "Notify obstetric theatre and ICU.",
+       "Monitor fetal heart after the seizure."
+      ]
+     },
+     "outcome": {
+      "ar": "مجرى هواء مفتوح ولا إصابة.",
+      "en": "Patent airway, no injury."
+     },
+     "timeframe": {
+      "ar": "فوري",
+      "en": "Immediate"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "ارتفاع ضغط الدم الشديد",
-    "en": "Severe hypertension"
+   "id": "risk-disturbed-fetal-wellbeing",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر اضطراب حالة الجنين",
+    "en": "Risk for Disturbed Maternal–Fetal Dyad"
    },
-   "need": {
-    "ar": "خفض الضغط بأمان",
-    "en": "Lower BP safely"
+   "definition": {
+    "ar": "قابلية لاضطراب العلاقة التكافلية بين الأم والجنين بسبب المرض.",
+    "en": "Susceptibility to disruption of the symbiotic maternal–fetal relationship."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "ضغط كل 15 دقيقة",
-     "أدوية الضغط حسب الأمر",
-     "ملاحظة الصداع والزغللة"
+     "نقص تروية المشيمة",
+     "تأخر النمو",
+     "انفصال المشيمة"
     ],
     "en": [
-     "BP every 15 min",
-     "Antihypertensives as ordered",
-     "Watch headache and visual change"
+     "Placental insufficiency",
+     "Growth restriction",
+     "Abruption"
     ]
    },
-   "outcome": {
-    "ar": "ضغط أقل من 160/110",
-    "en": "BP below 160/110"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"البيبي بيتحرك أقل.\""
+     ],
+     "en": [
+      "\"The baby is moving less.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "موجات صوتية: تأخر نمو، دوبلر الشريان السري مرتفع."
+     ],
+     "en": [
+      "Ultrasound: growth restriction, raised umbilical artery Doppler."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "ساعة واحدة",
-    "en": "1 hour"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: نبض جنين 110–160 مع تغير طبيعي."
+     ],
+     "en": [
+      "Every shift: FHR 110–160 with normal variability."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ولادة طفل حي بدون نقص أكسجين."
+     ],
+     "en": [
+      "Live birth without hypoxia."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس نبض الجنين بانتظام وتخطيط القلب (CTG) حسب الأمر.",
+      "en": "Regular fetal heart monitoring and CTG as ordered."
+     },
+     "rationale": {
+      "ar": "كشف نقص الأكسجين.",
+      "en": "Detects hypoxia."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تسجيل حركات الجنين يوميًا والإبلاغ عن نقصها.",
+      "en": "Daily fetal movement count; report reduction."
+     },
+     "rationale": {
+      "ar": "علامة مبكرة.",
+      "en": "Early sign."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الراحة على الجانب الأيسر.",
+      "en": "Left lateral rest."
+     },
+     "rationale": {
+      "ar": "يحسن تروية المشيمة.",
+      "en": "Improves placental perfusion."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة النزيف المهبلي وتصلب الرحم والألم.",
+      "en": "Watch for vaginal bleeding, rigid uterus and pain."
+     },
+     "rationale": {
+      "ar": "علامات انفصال المشيمة.",
+      "en": "Signs of abruption."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الكورتيزون لإنضاج رئة الجنين قبل 34 أسبوعًا حسب الأمر.",
+      "en": "Antenatal corticosteroids before 34 weeks as ordered."
+     },
+     "rationale": {
+      "ar": "يقلل مشاكل تنفس المولود.",
+      "en": "Reduces neonatal respiratory distress."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التحضير للولادة عند تدهور الأم أو الجنين.",
+      "en": "Prepare for delivery if mother or fetus deteriorates."
+     },
+     "rationale": {
+      "ar": "الولادة هي العلاج النهائي.",
+      "en": "Delivery is the definitive treatment."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "CTG طبيعي وولادة طفل 2.1 كجم بحالة جيدة — تحقق.",
+      "en": "Normal CTG; 2.1 kg baby in good condition — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة الجنين",
+      "en": "Fetal monitoring"
+     },
+     "actions": {
+      "ar": [
+       "قياس نبض الجنين بانتظام وتخطيط القلب (CTG) حسب الأمر.",
+       "تسجيل حركات الجنين يوميًا والإبلاغ عن نقصها.",
+       "ملاحظة النزيف المهبلي وتصلب الرحم والألم."
+      ],
+      "en": [
+       "Regular fetal heart monitoring and CTG as ordered.",
+       "Daily fetal movement count; report reduction.",
+       "Watch for vaginal bleeding, rigid uterus and pain."
+      ]
+     },
+     "outcome": {
+      "ar": "نبض جنين طبيعي.",
+      "en": "Normal FHR."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "حماية الجنين",
+      "en": "Fetal protection"
+     },
+     "actions": {
+      "ar": [
+       "الراحة على الجانب الأيسر.",
+       "الكورتيزون لإنضاج رئة الجنين قبل 34 أسبوعًا حسب الأمر.",
+       "التحضير للولادة عند تدهور الأم أو الجنين."
+      ],
+      "en": [
+       "Left lateral rest.",
+       "Antenatal corticosteroids before 34 weeks as ordered.",
+       "Prepare for delivery if mother or fetus deteriorates."
+      ]
+     },
+     "outcome": {
+      "ar": "ولادة آمنة.",
+      "en": "Safe birth."
+     },
+     "timeframe": {
+      "ar": "حسب الحالة",
+      "en": "As needed"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر على الجنين",
-    "en": "Fetal risk"
+   "id": "excess-fluid-volume-preeclampsia",
+   "kind": "actual",
+   "title": {
+    "ar": "زيادة حجم السوائل في الأنسجة (التورم)",
+    "en": "Excess Fluid Volume (Edema)"
    },
-   "need": {
-    "ar": "متابعة الجنين",
-    "en": "Fetal monitoring"
+   "definition": {
+    "ar": "احتباس السوائل في الأنسجة مع نقص الحجم داخل الأوعية.",
+    "en": "Interstitial fluid retention with intravascular depletion."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "CTG حسب البروتوكول",
-     "الجانب الأيسر",
-     "عد الحركات"
+     "تسرب السوائل من الأوعية ونقص الألبومين"
     ],
     "en": [
-     "CTG per protocol",
-     "Left lateral position",
-     "Kick counts"
+     "Capillary leak and hypoalbuminemia"
     ]
    },
-   "outcome": {
-    "ar": "نبض جنين 110–160",
-    "en": "FHR 110–160"
+   "evidencedBy": {
+    "ar": [
+     "تورم الوجه واليدين",
+     "زيادة الوزن > 1 كجم أسبوعيًا"
+    ],
+    "en": [
+     "Facial and hand edema",
+     "Weight gain > 1 kg/week"
+    ]
    },
-   "timeframe": {
-    "ar": "كل وردية",
-    "en": "Every shift"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الخاتم مش راضي يخرج من صباعي.\""
+     ],
+     "en": [
+      "\"I can't get my ring off.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "تورم +3، زيادة 2 كجم في أسبوع."
+     ],
+     "en": [
+      "3+ edema; 2 kg gain in a week."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "لا وذمة رئة."
+     ],
+     "en": [
+      "No pulmonary edema."
+     ]
+    },
+    "long": {
+     "ar": [
+      "زوال التورم بعد الولادة."
+     ],
+     "en": [
+      "Edema resolves after delivery."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "الوزن يوميًا ومتابعة التورم.",
+      "en": "Daily weight and edema."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تقييد السوائل الوريدية حسب البروتوكول (عادة ≤ 80 مل/ساعة).",
+      "en": "Restrict IV fluids per protocol (often ≤ 80 mL/h)."
+     },
+     "rationale": {
+      "ar": "يمنع وذمة الرئة.",
+      "en": "Prevents pulmonary edema."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "سماع الصدر والتشبع وضيق النفس.",
+      "en": "Auscultate lungs; SpO₂ and dyspnea."
+     },
+     "rationale": {
+      "ar": "كشف وذمة الرئة.",
+      "en": "Detects pulmonary edema."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس البول كل ساعة بقسطرة في الحالات الشديدة.",
+      "en": "Hourly urine by catheter in severe cases."
+     },
+     "rationale": {
+      "ar": "تقييم الكلى.",
+      "en": "Renal assessment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع الأطراف وخلع الخواتم.",
+      "en": "Elevate limbs; remove rings."
+     },
+     "rationale": {
+      "ar": "راحة وأمان.",
+      "en": "Comfort and safety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالجلد المتورم.",
+      "en": "Care for edematous skin."
+     },
+     "rationale": {
+      "ar": "يمنع التلف.",
+      "en": "Prevents breakdown."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "صدر واضح والبول 40 مل/ساعة — تحقق.",
+      "en": "Clear chest; urine 40 mL/h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة السوائل",
+      "en": "Fluid monitoring"
+     },
+     "actions": {
+      "ar": [
+       "الوزن يوميًا ومتابعة التورم.",
+       "تقييد السوائل الوريدية حسب البروتوكول (عادة ≤ 80 مل/ساعة).",
+       "سماع الصدر والتشبع وضيق النفس.",
+       "قياس البول كل ساعة بقسطرة في الحالات الشديدة.",
+       "رفع الأطراف وخلع الخواتم.",
+       "العناية بالجلد المتورم."
+      ],
+      "en": [
+       "Daily weight and edema.",
+       "Restrict IV fluids per protocol (often ≤ 80 mL/h).",
+       "Auscultate lungs; SpO₂ and dyspnea.",
+       "Hourly urine by catheter in severe cases.",
+       "Elevate limbs; remove rings.",
+       "Care for edematous skin."
+      ]
+     },
+     "outcome": {
+      "ar": "لا وذمة رئة.",
+      "en": "No pulmonary edema."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-preeclampsia",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "الخوف على الجنين وعلى حياتها",
+     "احتمال الولادة المبكرة"
+    ],
+    "en": [
+     "Fear for the baby and herself",
+     "Possible preterm delivery"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هو البيبي هيعيش لو اتولد دلوقتي؟\""
+     ],
+     "en": [
+      "\"Will the baby survive if born now?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "تبكي، النبض 104."
+     ],
+     "en": [
+      "Tearful, HR 104."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواجد مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق والاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "ترتيب زيارة أو حديث مع فريق حضانة الأطفال المبتسرين.",
+      "en": "Arrange a visit or talk with the neonatal team."
+     },
+     "rationale": {
+      "ar": "يقلل الخوف من المجهول.",
+      "en": "Reduces fear of the unknown."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+       "التواجد مع المريض والتحدث بهدوء وثقة.",
+       "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "تعليم التنفس البطيء العميق والاسترخاء.",
+       "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+       "ترتيب زيارة أو حديث مع فريق حضانة الأطفال المبتسرين."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy.",
+       "Arrange a visit or talk with the neonatal team."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-preeclampsia",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (تسمم الحمل)",
+    "en": "Deficient Knowledge (Pre-eclampsia)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "أول حمل"
+    ],
+    "en": [
+     "First pregnancy"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هيحصل تاني في الحمل الجاي؟\""
+     ],
+     "en": [
+      "\"Will it happen again next pregnancy?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "لا تعرف علامات الخطر."
+     ],
+     "en": [
+      "Unaware of danger signs."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "علامات الخطر: صداع شديد، زغللة، ألم أعلى البطن، تورم مفاجئ، ضيق نفس، نقص حركة الجنين — التوجه فورًا للمستشفى.",
+      "en": "Danger signs: severe headache, visual changes, epigastric pain, sudden swelling, dyspnea, reduced fetal movement — go to hospital at once."
+     },
+     "rationale": {
+      "ar": "علاج مبكر.",
+      "en": "Early treatment."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "قياس الضغط في البيت بعد الولادة (قد يرتفع أول 6 أسابيع) والاستمرار في الدواء.",
+      "en": "Home BP checks after birth (may rise in the first 6 weeks) and continue medication."
+     },
+     "rationale": {
+      "ar": "التسمم قد يحدث بعد الولادة.",
+      "en": "Eclampsia can occur postpartum."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "في الحمل القادم: متابعة مبكرة والأسبرين بجرعة صغيرة من الأسبوع 12 حسب الطبيب.",
+      "en": "Next pregnancy: early care and low-dose aspirin from 12 weeks as advised."
+     },
+     "rationale": {
+      "ar": "يقلل التكرار.",
+      "en": "Reduces recurrence."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "زيادة خطر أمراض القلب والضغط مستقبلًا: متابعة سنوية.",
+      "en": "Higher future cardiovascular risk: annual check."
+     },
+     "rationale": {
+      "ar": "وقاية طويلة المدى.",
+      "en": "Long-term prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف صحي",
+      "en": "Health teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "علامات الخطر: صداع شديد، زغللة، ألم أعلى البطن، تورم مفاجئ، ضيق نفس، نقص حركة الجنين — التوجه فورًا للمستشفى.",
+       "قياس الضغط في البيت بعد الولادة (قد يرتفع أول 6 أسابيع) والاستمرار في الدواء.",
+       "في الحمل القادم: متابعة مبكرة والأسبرين بجرعة صغيرة من الأسبوع 12 حسب الطبيب.",
+       "زيادة خطر أمراض القلب والضغط مستقبلًا: متابعة سنوية.",
+       "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Danger signs: severe headache, visual changes, epigastric pain, sudden swelling, dyspnea, reduced fetal movement — go to hospital at once.",
+       "Home BP checks after birth (may rise in the first 6 weeks) and continue medication.",
+       "Next pregnancy: early care and low-dose aspirin from 12 weeks as advised.",
+       "Higher future cardiovascular risk: annual check.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -289,13 +1205,13 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "NICE NG133 — Hypertension in pregnancy: diagnosis and management (2019, updated 2023)"
   },
   {
-   "title": "ACOG Practice Bulletin No. 222: Gestational Hypertension and Preeclampsia"
+   "title": "WHO recommendations for prevention and treatment of pre-eclampsia and eclampsia (2011)"
   },
   {
-   "title": "NICE NG133: Hypertension in pregnancy"
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
   }
  ]
 }

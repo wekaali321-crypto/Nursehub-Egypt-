@@ -1187,56 +1187,112 @@
    "system": "obstetrics",
    "folder": "disease",
    "title": {
-    "ar": "تسمم الحمل (ما قبل الإرجاج)",
-    "en": "Pre-eclampsia"
+    "ar": "تسمم الحمل (ما قبل وأثناء التشنجات)",
+    "en": "Pre-eclampsia & Eclampsia"
    },
    "summary": {
-    "ar": "خطة رعاية لحامل مصابة بتسمم الحمل: متابعة الضغط وحالة الجنين، والوقاية من التشنجات بالماغنسيوم.",
-    "en": "Care plan for pre-eclampsia: BP and fetal monitoring and seizure prevention with magnesium sulfate."
+    "ar": "خطة رعاية تسمم الحمل: ارتفاع الضغط الشديد والماغنسيوم، التشنجات وبيئة المريضة، حالة الجنين، السوائل والتورم، القلق، والتثقيف.",
+    "en": "Pre-eclampsia/eclampsia care plan: severe hypertension and magnesium, seizures and environment, fetal well-being, fluids and edema, anxiety and teaching."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "risk-maternal-injury-preeclampsia",
      "title": {
-      "ar": "خطر الإصابة (Risk for injury) للأم",
-      "en": "Maternal risk for injury"
+      "ar": "خطر إصابة الأم (ارتفاع الضغط الحاد وتسمم الحمل)",
+      "en": "Risk for Maternal Injury (Severe Hypertension / Eclampsia)"
      }
     },
     {
-     "id": "dx-2",
+     "id": "risk-injury-eclampsia",
      "title": {
-      "ar": "خطر اضطراب الثنائي الأم والجنين",
-      "en": "Risk for disturbed maternal–fetal dyad"
+      "ar": "خطر الإصابة أثناء التشنجات (تسمم الحمل)",
+      "en": "Risk for Injury (Eclamptic Seizure)"
+     }
+    },
+    {
+     "id": "risk-disturbed-fetal-wellbeing",
+     "title": {
+      "ar": "خطر اضطراب حالة الجنين",
+      "en": "Risk for Disturbed Maternal–Fetal Dyad"
+     }
+    },
+    {
+     "id": "excess-fluid-volume-preeclampsia",
+     "title": {
+      "ar": "زيادة حجم السوائل في الأنسجة (التورم)",
+      "en": "Excess Fluid Volume (Edema)"
+     }
+    },
+    {
+     "id": "anxiety-preeclampsia",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "deficient-knowledge-preeclampsia",
+     "title": {
+      "ar": "نقص المعرفة (تسمم الحمل)",
+      "en": "Deficient Knowledge (Pre-eclampsia)"
      }
     }
    ]
   },
   {
    "id": "gastroenteritis-dehydration-child",
-   "icon": "👶",
+   "icon": "🧒",
    "system": "pediatrics",
    "folder": "disease",
    "title": {
     "ar": "النزلة المعوية والجفاف عند الأطفال",
-    "en": "Gastroenteritis with Dehydration (Child)"
+    "en": "Gastroenteritis & Dehydration in Children"
    },
    "summary": {
-    "ar": "خطة رعاية لطفل عنده إسهال وقيء وجفاف: تعويض السوائل، متابعة العلامات، وتثقيف الأم عن محلول الجفاف.",
-    "en": "Care plan for a child with diarrhea, vomiting and dehydration: rehydration, monitoring and teaching the mother about ORS."
+    "ar": "خطة رعاية النزلة المعوية عند الأطفال: تقييم الجفاف ومحلول الإرواء، الإسهال، التهاب الحفاض، الحمى، التغذية، وتثقيف الأم.",
+    "en": "Pediatric gastroenteritis care plan: dehydration assessment and ORS, diarrhea, diaper dermatitis, fever, nutrition and mother teaching."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "deficient-fluid-volume-gastro-child",
      "title": {
-      "ar": "نقص حجم السوائل",
-      "en": "Deficient fluid volume"
+      "ar": "نقص حجم السوائل (الجفاف)",
+      "en": "Deficient Fluid Volume (Dehydration)"
      }
     },
     {
-     "id": "dx-2",
+     "id": "diarrhea-child",
      "title": {
-      "ar": "نقص المعرفة (Deficient knowledge) لدى الأم عن تحضير محلول الجفاف ورعاية الطفل بالبيت",
-      "en": "Deficient knowledge (mother) regarding ORS preparation and home care"
+      "ar": "الإسهال",
+      "en": "Diarrhea"
+     }
+    },
+    {
+     "id": "impaired-skin-diaper",
+     "title": {
+      "ar": "خطر تلف الجلد (التهاب منطقة الحفاض)",
+      "en": "Risk for Impaired Skin Integrity (Diaper Dermatitis)"
+     }
+    },
+    {
+     "id": "hyperthermia-child",
+     "title": {
+      "ar": "ارتفاع درجة الحرارة",
+      "en": "Hyperthermia"
+     }
+    },
+    {
+     "id": "risk-imbalanced-nutrition-child",
+     "title": {
+      "ar": "خطر نقص التغذية",
+      "en": "Risk for Imbalanced Nutrition: Less Than Body Requirements"
+     }
+    },
+    {
+     "id": "deficient-knowledge-gastro-child",
+     "title": {
+      "ar": "نقص المعرفة (الإسهال والجفاف عند الأطفال)",
+      "en": "Deficient Knowledge (Childhood diarrhea and dehydration)"
      }
     }
    ]

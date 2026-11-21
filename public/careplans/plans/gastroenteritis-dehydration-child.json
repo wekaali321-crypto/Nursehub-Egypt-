@@ -1,307 +1,1148 @@
 {
  "id": "gastroenteritis-dehydration-child",
- "icon": "👶",
+ "icon": "🧒",
  "system": "pediatrics",
+ "folder": "disease",
  "title": {
   "ar": "النزلة المعوية والجفاف عند الأطفال",
-  "en": "Gastroenteritis with Dehydration (Child)"
+  "en": "Gastroenteritis & Dehydration in Children"
  },
  "summary": {
-  "ar": "خطة رعاية لطفل عنده إسهال وقيء وجفاف: تعويض السوائل، متابعة العلامات، وتثقيف الأم عن محلول الجفاف.",
-  "en": "Care plan for a child with diarrhea, vomiting and dehydration: rehydration, monitoring and teaching the mother about ORS."
+  "ar": "خطة رعاية النزلة المعوية عند الأطفال: تقييم الجفاف ومحلول الإرواء، الإسهال، التهاب الحفاض، الحمى، التغذية، وتثقيف الأم.",
+  "en": "Pediatric gastroenteritis care plan: dehydration assessment and ORS, diarrhea, diaper dermatitis, fever, nutrition and mother teaching."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "نقص حجم السوائل (Deficient fluid volume) مرتبط بالفقد الزائد عن طريق الإسهال والقيء ويظهر في جفاف الفم وغور العينين وقلة البول.",
-    "en": "Deficient fluid volume related to active losses through diarrhea and vomiting as evidenced by dry mouth, sunken eyes and decreased urine output."
+   "id": "deficient-fluid-volume-gastro-child",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص حجم السوائل (الجفاف)",
+    "en": "Deficient Fluid Volume (Dehydration)"
+   },
+   "definition": {
+    "ar": "نقص السوائل داخل الأوعية والأنسجة والخلايا.",
+    "en": "Decreased intravascular, interstitial and intracellular fluid."
+   },
+   "relatedTo": {
+    "ar": [
+     "الإسهال والقيء",
+     "قلة الشرب"
+    ],
+    "en": [
+     "Diarrhea and vomiting",
+     "Poor intake"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "عيون غائرة",
+     "جفاف الفم",
+     "قلة البول",
+     "رجوع الجلد ببطء"
+    ],
+    "en": [
+     "Sunken eyes",
+     "Dry mouth",
+     "Reduced urine",
+     "Slow skin pinch"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "الأم: \"عنده إسهال 8 مرات وترجيع من امبارح، وبيشرب بلهفة.\"",
-      "الأم: \"الحفاضة بقالها 8 ساعات ناشفة.\""
+      "الأم: \"عنده إسهال 8 مرات وبيرجّع كل حاجة، وحفاضته ناشفة من الصبح.\""
      ],
      "en": [
-      "Mother: \"He has had diarrhea 8 times and vomiting since yesterday, and drinks eagerly.\"",
-      "Mother: \"The nappy has been dry for 8 hours.\""
+      "Mother: \"He has had 8 stools and vomits everything; his nappy has been dry since morning.\""
      ]
     },
     "objective": {
      "ar": [
-      "طفل عمره سنة ووزنه 9 كجم (كان 9.6 كجم).",
-      "غور العينين، فم جاف، ارتداد الجلد ببطء.",
-      "النبض 150/دقيقة، الطفل متضايق وعصبي."
+      "طفل 14 شهرًا، وزن 9 كجم (كان 9.6).",
+      "عيون غائرة، يافوخ منخفض، رجوع الجلد بطيء.",
+      "النبض 150."
      ],
      "en": [
-      "1-year-old child weighing 9 kg (previously 9.6 kg).",
-      "Sunken eyes, dry mouth, slow skin-pinch return.",
-      "Pulse 150/min; child restless and irritable."
+      "14-month-old, 9 kg (was 9.6).",
+      "Sunken eyes and fontanelle; slow skin pinch.",
+      "HR 150."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال 4–6 ساعات تختفي علامات الجفاف، ويتبول الطفل، ويقل النبض للطبيعي حسب السن."
-    ],
-    "en": [
-     "Within 4–6 hours signs of dehydration resolve, the child passes urine and pulse returns to normal for age."
-    ]
-   },
-   "interventions": [
-    {
-     "action": {
-      "ar": "تقييم درجة الجفاف حسب بروتوكول منظمة الصحة العالمية (IMCI) ووزن الطفل.",
-      "en": "Assess dehydration severity using the WHO/IMCI protocol and weigh the child."
-     },
-     "rationale": {
-      "ar": "يحدد كمية وطريقة التعويض المناسبة.",
-      "en": "Determines the right amount and route of rehydration."
-     }
-    },
-    {
-     "action": {
-      "ar": "إعطاء محلول الجفاف (ORS) 75 مل/كجم خلال 4 ساعات بالملعقة أو السرنجة ببطء (خطة ب).",
-      "en": "Give ORS 75 mL/kg over 4 hours slowly by spoon or syringe (Plan B)."
-     },
-     "rationale": {
-      "ar": "التعويض بالفم آمن وفعال في الجفاف المتوسط.",
-      "en": "Oral rehydration is safe and effective in some dehydration."
-     }
-    },
-    {
-     "action": {
-      "ar": "إذا قاء الطفل: الانتظار 10 دقائق ثم الإعطاء أبطأ.",
-      "en": "If the child vomits, wait 10 minutes then give more slowly."
-     },
-     "rationale": {
-      "ar": "الكميات الصغيرة المتكررة يتحملها المعدة.",
-      "en": "Small frequent amounts are tolerated."
-     }
-    },
-    {
-     "action": {
-      "ar": "تسجيل الداخل والخارج (وزن الحفاضات) والوزن.",
-      "en": "Record intake and output (weigh nappies) and weight."
-     },
-     "rationale": {
-      "ar": "يقيس الاستجابة للتعويض.",
-      "en": "Measures response to rehydration."
-     }
-    },
-    {
-     "action": {
-      "ar": "التجهيز للمحاليل الوريدية إذا ظهرت علامات جفاف شديد (خمول، عدم القدرة على الشرب).",
-      "en": "Prepare IV fluids if severe signs appear (lethargy, unable to drink)."
-     },
-     "rationale": {
-      "ar": "الجفاف الشديد يحتاج تعويض وريدي سريع (خطة ج).",
-      "en": "Severe dehydration needs rapid IV replacement (Plan C)."
-     }
-    }
-   ],
-   "evaluation": {
-    "ar": [
-     "بعد 4 ساعات: الطفل تبول مرتين، الفم رطب، النبض 120، والوزن 9.5 كجم. — تحقق الهدف."
-    ],
-    "en": [
-     "After 4 hours: passed urine twice, moist mouth, pulse 120, weight 9.5 kg. — Goal met."
-    ]
-   }
-  },
-  {
-   "diagnosis": {
-    "ar": "نقص المعرفة (Deficient knowledge) لدى الأم عن تحضير محلول الجفاف ورعاية الطفل بالبيت مرتبط بعدم التعرض للمعلومة.",
-    "en": "Deficient knowledge (mother) regarding ORS preparation and home care related to lack of exposure to information."
-   },
-   "assessment": {
-    "subjective": {
+    "short": {
      "ar": [
-      "الأم: \"بديله عصير وأوقف الرضاعة لما يكون عنده إسهال.\""
+      "خلال 4 ساعات: علامات الجفاف تتحسن ويتبول."
      ],
      "en": [
-      "Mother: \"I give juice and stop breastfeeding when he has diarrhea.\""
+      "Within 4 h: improving signs and passing urine."
      ]
     },
-    "objective": {
+    "long": {
      "ar": [
-      "الأم لا تعرف طريقة تحضير محلول الجفاف."
+      "خلال 24 ساعة: ترطيب طبيعي واستعادة الوزن."
      ],
      "en": [
-      "Mother does not know how to prepare ORS."
+      "Within 24 h: normal hydration and weight regained."
      ]
     }
    },
-   "goals": {
-    "ar": [
-     "قبل الخروج تحضّر الأم محلول الجفاف بشكل صحيح، وتذكر 3 علامات خطر تستدعي الرجوع للمستشفى."
-    ],
-    "en": [
-     "Before discharge the mother prepares ORS correctly and states 3 danger signs requiring return."
-    ]
-   },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "شرح وتطبيق تحضير المحلول: الكيس كاملًا في الكمية المكتوبة من ماء نظيف، واستخدامه خلال 24 ساعة.",
-      "en": "Demonstrate ORS preparation: whole sachet in the stated volume of clean water, used within 24 hours."
+      "ar": "تقييم درجة الجفاف (خفيف/متوسط/شديد) حسب WHO: الوعي، العيون، الشرب، رجوع الجلد.",
+      "en": "Assess dehydration grade (WHO): consciousness, eyes, thirst, skin pinch."
      },
      "rationale": {
-      "ar": "التركيز الخاطئ قد يزيد الإسهال أو يسبب اختلال أملاح.",
-      "en": "Wrong concentration can worsen diarrhea or cause electrolyte imbalance."
+      "ar": "يحدد خطة العلاج (أ، ب، ج).",
+      "en": "Determines Plan A/B/C."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "التأكيد على الاستمرار في الرضاعة الطبيعية والأكل المعتاد.",
-      "en": "Stress continuing breastfeeding and usual feeding."
+      "ar": "محلول الإرواء الفموي (ORS) 75 مل/كجم خلال 4 ساعات للجفاف المتوسط بملعقة أو سرنجة بكميات صغيرة متكررة.",
+      "en": "ORS 75 mL/kg over 4 h for some dehydration, by spoon/syringe in small frequent amounts."
      },
      "rationale": {
-      "ar": "التغذية تساعد على التعافي ولا تزيد الإسهال.",
-      "en": "Feeding aids recovery and does not worsen diarrhea."
+      "ar": "الإرواء الفموي فعال في معظم الحالات.",
+      "en": "Oral rehydration works in most cases."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "تجنب العصائر والمشروبات الغازية.",
-      "en": "Avoid juices and soft drinks."
+      "ar": "محاليل وريدية (رينجر) للجفاف الشديد أو فشل الإرواء الفموي حسب الأمر.",
+      "en": "IV fluids (Ringer's) for severe dehydration or failed ORS as ordered."
      },
      "rationale": {
-      "ar": "السكر العالي يسحب الماء للأمعاء ويزيد الإسهال.",
-      "en": "High sugar draws water into the gut and worsens diarrhea."
+      "ar": "تعويض سريع.",
+      "en": "Rapid replacement."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "إعطاء الزنك حسب الأمر لمدة 10–14 يومًا.",
-      "en": "Give zinc as ordered for 10–14 days."
+      "ar": "وزن يومي وعد الحفاضات وتسجيل الإسهال والقيء.",
+      "en": "Daily weight; count nappies; record stools and vomits."
+     },
+     "rationale": {
+      "ar": "يقيس الفقد والتعويض.",
+      "en": "Measures loss and replacement."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الأملاح والسكر في الجفاف المتوسط والشديد.",
+      "en": "Monitor electrolytes and glucose in moderate/severe dehydration."
+     },
+     "rationale": {
+      "ar": "خلل الصوديوم والبوتاسيوم شائع.",
+      "en": "Na/K disturbances are common."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الزنك لمدة 10–14 يومًا حسب الأمر.",
+      "en": "Zinc for 10–14 days as ordered."
      },
      "rationale": {
       "ar": "يقلل مدة وشدة الإسهال.",
-      "en": "Reduces duration and severity of diarrhea."
+      "en": "Reduces duration and severity."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "شرح علامات الخطر: عدم القدرة على الشرب، خمول، دم في البراز، قلة البول، حرارة عالية.",
-      "en": "Explain danger signs: unable to drink, lethargy, blood in stool, little urine, high fever."
+      "ar": "تعويض كل إسهال بـ 50–100 مل محلول (أقل من سنتين).",
+      "en": "Replace each stool with 50–100 mL ORS (under 2 years)."
      },
      "rationale": {
-      "ar": "تمكّن الأم من طلب المساعدة مبكرًا.",
-      "en": "Enables the mother to seek help early."
-     }
-    },
-    {
-     "action": {
-      "ar": "غسل اليدين بعد تغيير الحفاضة وقبل تحضير الأكل.",
-      "en": "Hand washing after nappy changes and before preparing food."
-     },
-     "rationale": {
-      "ar": "يمنع انتقال العدوى لباقي الأسرة.",
-      "en": "Prevents spread to the family."
+      "ar": "يعوض الفقد المستمر.",
+      "en": "Replaces ongoing losses."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "الأم حضّرت المحلول بشكل صحيح وذكرت 4 علامات خطر. — تحقق الهدف."
-    ],
-    "en": [
-     "Mother prepared ORS correctly and named 4 danger signs. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "نقص حجم السوائل",
-    "en": "Deficient fluid volume"
-   },
-   "need": {
-    "ar": "تعويض السوائل",
-    "en": "Rehydration"
-   },
-   "actions": {
-    "ar": [
-     "تقييم درجة الجفاف والوزن",
-     "محلول جفاف 75 مل/كجم خلال 4 ساعات",
-     "تسجيل الداخل والخارج"
-    ],
-    "en": [
-     "Assess dehydration and weight",
-     "ORS 75 mL/kg over 4 h",
-     "Record I&O"
-    ]
-   },
-   "outcome": {
-    "ar": "اختفاء علامات الجفاف وتبول الطفل",
-    "en": "Dehydration signs resolved, child voiding"
-   },
-   "timeframe": {
-    "ar": "4–6 ساعات",
-    "en": "4–6 hours"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تبول بعد 3 ساعات، العيون أفضل، النبض 120 — تحقق.",
+      "en": "Passed urine at 3 h; eyes better; HR 120 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم الجفاف",
+      "en": "Assess dehydration"
+     },
+     "actions": {
+      "ar": [
+       "تقييم درجة الجفاف (خفيف/متوسط/شديد) حسب WHO: الوعي، العيون، الشرب، رجوع الجلد.",
+       "وزن يومي وعد الحفاضات وتسجيل الإسهال والقيء.",
+       "متابعة الأملاح والسكر في الجفاف المتوسط والشديد."
+      ],
+      "en": [
+       "Assess dehydration grade (WHO): consciousness, eyes, thirst, skin pinch.",
+       "Daily weight; count nappies; record stools and vomits.",
+       "Monitor electrolytes and glucose in moderate/severe dehydration."
+      ]
+     },
+     "outcome": {
+      "ar": "درجة الجفاف تتحسن.",
+      "en": "Improving grade."
+     },
+     "timeframe": {
+      "ar": "كل ساعة ثم كل 4 ساعات",
+      "en": "Hourly then every 4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "التعويض",
+      "en": "Rehydration"
+     },
+     "actions": {
+      "ar": [
+       "محلول الإرواء الفموي (ORS) 75 مل/كجم خلال 4 ساعات للجفاف المتوسط بملعقة أو سرنجة بكميات صغيرة متكررة.",
+       "محاليل وريدية (رينجر) للجفاف الشديد أو فشل الإرواء الفموي حسب الأمر.",
+       "إعطاء الزنك لمدة 10–14 يومًا حسب الأمر.",
+       "تعويض كل إسهال بـ 50–100 مل محلول (أقل من سنتين)."
+      ],
+      "en": [
+       "ORS 75 mL/kg over 4 h for some dehydration, by spoon/syringe in small frequent amounts.",
+       "IV fluids (Ringer's) for severe dehydration or failed ORS as ordered.",
+       "Zinc for 10–14 days as ordered.",
+       "Replace each stool with 50–100 mL ORS (under 2 years)."
+      ]
+     },
+     "outcome": {
+      "ar": "ترطيب طبيعي.",
+      "en": "Normal hydration."
+     },
+     "timeframe": {
+      "ar": "4–24 ساعة",
+      "en": "4–24 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر تهيج الجلد",
-    "en": "Risk for impaired skin integrity"
+   "id": "diarrhea-child",
+   "kind": "actual",
+   "title": {
+    "ar": "الإسهال",
+    "en": "Diarrhea"
    },
-   "need": {
-    "ar": "حماية منطقة الحفاضة",
-    "en": "Protect the nappy area"
+   "definition": {
+    "ar": "خروج براز سائل أو غير متماسك 3 مرات أو أكثر في 24 ساعة.",
+    "en": "Passage of 3 or more loose or liquid stools in 24 h."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "تغيير الحفاضة فورًا",
-     "تنظيف بماء فاتر وتجفيف",
-     "كريم حاجز"
+     "عدوى فيروسية أو بكتيرية في الأمعاء"
     ],
     "en": [
-     "Change nappy promptly",
-     "Clean with lukewarm water and dry",
-     "Barrier cream"
+     "Viral or bacterial gut infection"
     ]
    },
-   "outcome": {
-    "ar": "جلد سليم",
-    "en": "Intact skin"
+   "evidencedBy": {
+    "ar": [
+     "8 مرات إسهال مائي",
+     "مغص"
+    ],
+    "en": [
+     "8 watery stools",
+     "Cramps"
+    ]
    },
-   "timeframe": {
-    "ar": "كل تغيير حفاضة",
-    "en": "Every nappy change"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الأم: \"البراز مية.\""
+     ],
+     "en": [
+      "Mother: \"The stool is like water.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "إسهال مائي بدون دم، أصوات أمعاء زائدة."
+     ],
+     "en": [
+      "Watery stool without blood; hyperactive bowel sounds."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: نقص عدد مرات الإسهال."
+     ],
+     "en": [
+      "Within 48 h: fewer stools."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 5–7 أيام: براز طبيعي."
+     ],
+     "en": [
+      "Within 5–7 days: normal stools."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل عدد وقوام ولون البراز ووجود دم أو مخاط.",
+      "en": "Record number, consistency, colour, blood or mucus."
+     },
+     "rationale": {
+      "ar": "الدم يحتاج تقييمًا آخر.",
+      "en": "Blood needs different management."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الاستمرار في الرضاعة الطبيعية والأكل المعتاد للسن.",
+      "en": "Continue breastfeeding and age-appropriate diet."
+     },
+     "rationale": {
+      "ar": "يسرع التعافي ويمنع سوء التغذية.",
+      "en": "Speeds recovery and prevents malnutrition."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تجنب العصائر المحلاة والمشروبات الغازية.",
+      "en": "Avoid sugary juices and soft drinks."
+     },
+     "rationale": {
+      "ar": "تزيد الإسهال.",
+      "en": "Worsen diarrhea."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل الأيدي وعزل الطفل عن الأطفال الآخرين.",
+      "en": "Hand hygiene; separate from other children."
+     },
+     "rationale": {
+      "ar": "يمنع العدوى.",
+      "en": "Prevents spread."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عدم إعطاء أدوية وقف الإسهال للأطفال؛ مضاد حيوي فقط حسب الأمر (دوسنتاريا، كوليرا).",
+      "en": "No antidiarrheals in children; antibiotics only as ordered (dysentery, cholera)."
+     },
+     "rationale": {
+      "ar": "أدوية وقف الإسهال خطرة.",
+      "en": "Antimotility drugs are dangerous."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عينة براز عند وجود دم أو حمى عالية حسب الأمر.",
+      "en": "Stool sample if blood or high fever as ordered."
+     },
+     "rationale": {
+      "ar": "تحديد السبب.",
+      "en": "Identify cause."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "نقص الإسهال إلى 3 مرات يوم 2 — تحقق.",
+      "en": "Down to 3 stools on day 2 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التحكم في الإسهال",
+      "en": "Manage diarrhea"
+     },
+     "actions": {
+      "ar": [
+       "تسجيل عدد وقوام ولون البراز ووجود دم أو مخاط.",
+       "الاستمرار في الرضاعة الطبيعية والأكل المعتاد للسن.",
+       "تجنب العصائر المحلاة والمشروبات الغازية.",
+       "عدم إعطاء أدوية وقف الإسهال للأطفال؛ مضاد حيوي فقط حسب الأمر (دوسنتاريا، كوليرا).",
+       "عينة براز عند وجود دم أو حمى عالية حسب الأمر."
+      ],
+      "en": [
+       "Record number, consistency, colour, blood or mucus.",
+       "Continue breastfeeding and age-appropriate diet.",
+       "Avoid sugary juices and soft drinks.",
+       "No antidiarrheals in children; antibiotics only as ordered (dysentery, cholera).",
+       "Stool sample if blood or high fever as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "إسهال أقل.",
+      "en": "Fewer stools."
+     },
+     "timeframe": {
+      "ar": "48 ساعة",
+      "en": "48 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "منع العدوى",
+      "en": "Infection control"
+     },
+     "actions": {
+      "ar": [
+       "غسل الأيدي وعزل الطفل عن الأطفال الآخرين."
+      ],
+      "en": [
+       "Hand hygiene; separate from other children."
+      ]
+     },
+     "outcome": {
+      "ar": "لا انتقال.",
+      "en": "No spread."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "نقص معرفة الأم",
-    "en": "Deficient knowledge (mother)"
+   "id": "impaired-skin-diaper",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر تلف الجلد (التهاب منطقة الحفاض)",
+    "en": "Risk for Impaired Skin Integrity (Diaper Dermatitis)"
    },
-   "need": {
-    "ar": "تثقيف الأم",
-    "en": "Teach the mother"
+   "definition": {
+    "ar": "قابلية لتلف الجلد.",
+    "en": "Susceptibility to skin damage."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "تحضير محلول الجفاف",
-     "الاستمرار في الرضاعة",
-     "علامات الخطر"
+     "الإسهال المتكرر",
+     "الرطوبة المستمرة"
     ],
     "en": [
-     "ORS preparation",
-     "Continue breastfeeding",
-     "Danger signs"
+     "Frequent diarrhea",
+     "Constant moisture"
     ]
    },
-   "outcome": {
-    "ar": "الأم تحضّر المحلول وتعرف علامات الخطر",
-    "en": "Mother prepares ORS and knows danger signs"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الأم: \"مؤخرته احمرت.\""
+     ],
+     "en": [
+      "Mother: \"His bottom is red.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "احمرار خفيف حول الشرج."
+     ],
+     "en": [
+      "Mild perianal redness."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "قبل الخروج",
-    "en": "Before discharge"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال يومين: لا تشقق ولا زيادة الاحمرار."
+     ],
+     "en": [
+      "Within 2 days: no breakdown or spreading redness."
+     ]
+    },
+    "long": {
+     "ar": [
+      "جلد سليم."
+     ],
+     "en": [
+      "Intact skin."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص منطقة الحفاض مع كل تغيير.",
+      "en": "Inspect the area at each change."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير الحفاض فورًا بعد كل إسهال.",
+      "en": "Change immediately after each stool."
+     },
+     "rationale": {
+      "ar": "يقلل التلامس.",
+      "en": "Reduces contact."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التنظيف بالماء الفاتر والتجفيف بالتربيت (بدون مناديل بها كحول أو عطر).",
+      "en": "Clean with lukewarm water; pat dry (no alcohol/fragrance wipes)."
+     },
+     "rationale": {
+      "ar": "لطيف على الجلد.",
+      "en": "Gentle on skin."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "كريم حاجز (أكسيد الزنك).",
+      "en": "Barrier cream (zinc oxide)."
+     },
+     "rationale": {
+      "ar": "يحمي الجلد.",
+      "en": "Protects skin."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ترك المنطقة مكشوفة للهواء لفترات.",
+      "en": "Air exposure periods."
+     },
+     "rationale": {
+      "ar": "يجفف الجلد.",
+      "en": "Dries the skin."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "علاج الفطريات إذا ظهرت بقع حمراء لامعة متفرقة حسب الأمر.",
+      "en": "Antifungal if satellite lesions appear, as ordered."
+     },
+     "rationale": {
+      "ar": "عدوى ثانوية.",
+      "en": "Secondary infection."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الاحمرار أقل بدون تشقق — تحقق.",
+      "en": "Less redness, no breakdown — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "العناية بالجلد",
+      "en": "Skin care"
+     },
+     "actions": {
+      "ar": [
+       "فحص منطقة الحفاض مع كل تغيير.",
+       "تغيير الحفاض فورًا بعد كل إسهال.",
+       "التنظيف بالماء الفاتر والتجفيف بالتربيت (بدون مناديل بها كحول أو عطر).",
+       "كريم حاجز (أكسيد الزنك).",
+       "ترك المنطقة مكشوفة للهواء لفترات.",
+       "علاج الفطريات إذا ظهرت بقع حمراء لامعة متفرقة حسب الأمر."
+      ],
+      "en": [
+       "Inspect the area at each change.",
+       "Change immediately after each stool.",
+       "Clean with lukewarm water; pat dry (no alcohol/fragrance wipes).",
+       "Barrier cream (zinc oxide).",
+       "Air exposure periods.",
+       "Antifungal if satellite lesions appear, as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "جلد سليم.",
+      "en": "Intact skin."
+     },
+     "timeframe": {
+      "ar": "كل تغيير",
+      "en": "Each change"
+     }
+    }
+   ]
+  },
+  {
+   "id": "hyperthermia-child",
+   "kind": "actual",
+   "title": {
+    "ar": "ارتفاع درجة الحرارة",
+    "en": "Hyperthermia"
+   },
+   "definition": {
+    "ar": "ارتفاع حرارة الجسم عن المعدل الطبيعي.",
+    "en": "Body temperature above normal."
+   },
+   "relatedTo": {
+    "ar": [
+     "العدوى والجفاف"
+    ],
+    "en": [
+     "Infection and dehydration"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "حرارة 38.8",
+     "سخونة الجلد",
+     "تهيج"
+    ],
+    "en": [
+     "T 38.8 °C",
+     "Warm skin",
+     "Irritability"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الأم: \"سخن من امبارح.\""
+     ],
+     "en": [
+      "Mother: \"He has been hot since yesterday.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الحرارة 38.8 إبطية."
+     ],
+     "en": [
+      "Axillary T 38.8."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: حرارة < 38 والطفل أهدأ."
+     ],
+     "en": [
+      "Within 1 h: T < 38 °C; calmer."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا حمى خلال 48 ساعة."
+     ],
+     "en": [
+      "Afebrile within 48 h."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الحرارة كل 4 ساعات وبعد خافض الحرارة.",
+      "en": "T every 4 h and after antipyretic."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "باراسيتامول 15 مجم/كجم حسب الأمر (لا أسبرين للأطفال).",
+      "en": "Paracetamol 15 mg/kg as ordered (no aspirin in children)."
+     },
+     "rationale": {
+      "ar": "آمن للأطفال.",
+      "en": "Safe in children."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ملابس خفيفة وتهوية.",
+      "en": "Light clothing and ventilation."
+     },
+     "rationale": {
+      "ar": "تقلل الحرارة.",
+      "en": "Reduce heat."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "زيادة السوائل (ORS والرضاعة).",
+      "en": "Increase fluids (ORS, breastfeeding)."
+     },
+     "rationale": {
+      "ar": "تعوض الفقد.",
+      "en": "Replace losses."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات التشنج الحراري (6 أشهر – 5 سنوات).",
+      "en": "Watch for febrile seizures (6 months – 5 years)."
+     },
+     "rationale": {
+      "ar": "سلامة.",
+      "en": "Safety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأم قياس الحرارة وجرعة الخافض الصحيحة حسب الوزن.",
+      "en": "Teach mother to measure T and weight-based dosing."
+     },
+     "rationale": {
+      "ar": "استخدام آمن.",
+      "en": "Safe use."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحرارة 37.6 بعد ساعة — تحقق.",
+      "en": "T 37.6 at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "خفض الحرارة",
+      "en": "Reduce fever"
+     },
+     "actions": {
+      "ar": [
+       "قياس الحرارة كل 4 ساعات وبعد خافض الحرارة.",
+       "باراسيتامول 15 مجم/كجم حسب الأمر (لا أسبرين للأطفال).",
+       "ملابس خفيفة وتهوية.",
+       "زيادة السوائل (ORS والرضاعة).",
+       "ملاحظة علامات التشنج الحراري (6 أشهر – 5 سنوات).",
+       "تعليم الأم قياس الحرارة وجرعة الخافض الصحيحة حسب الوزن."
+      ],
+      "en": [
+       "T every 4 h and after antipyretic.",
+       "Paracetamol 15 mg/kg as ordered (no aspirin in children).",
+       "Light clothing and ventilation.",
+       "Increase fluids (ORS, breastfeeding).",
+       "Watch for febrile seizures (6 months – 5 years).",
+       "Teach mother to measure T and weight-based dosing."
+      ]
+     },
+     "outcome": {
+      "ar": "حرارة < 38.",
+      "en": "T < 38 °C."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-imbalanced-nutrition-child",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص التغذية",
+    "en": "Risk for Imbalanced Nutrition: Less Than Body Requirements"
+   },
+   "definition": {
+    "ar": "قابلية لتناول غذاء أقل من الاحتياج.",
+    "en": "Susceptibility to intake below needs."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "القيء وفقد الشهية",
+     "فقد العناصر بالإسهال"
+    ],
+    "en": [
+     "Vomiting and anorexia",
+     "Losses through diarrhea"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الأم: \"مش راضي ياكل.\""
+     ],
+     "en": [
+      "Mother: \"He refuses to eat.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "نقص 6% من الوزن."
+     ],
+     "en": [
+      "6% weight loss."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: يتقبل الأكل الخفيف."
+     ],
+     "en": [
+      "Within 48 h: accepts light food."
+     ]
+    },
+    "long": {
+     "ar": [
+      "استعادة الوزن خلال أسبوعين."
+     ],
+     "en": [
+      "Regains weight within 2 weeks."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الاستمرار في الرضاعة وإعادة الأكل خلال 4 ساعات من الإرواء.",
+      "en": "Continue breastfeeding; reintroduce food within 4 h of rehydration."
+     },
+     "rationale": {
+      "ar": "يمنع سوء التغذية.",
+      "en": "Prevents malnutrition."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وجبات صغيرة متكررة سهلة الهضم (أرز، بطاطس، زبادي، موز).",
+      "en": "Small frequent easily digested meals (rice, potato, yogurt, banana)."
+     },
+     "rationale": {
+      "ar": "تتحملها الأمعاء.",
+      "en": "Well tolerated."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "وجبة إضافية يوميًا لمدة أسبوعين بعد الشفاء.",
+      "en": "An extra meal daily for 2 weeks after recovery."
+     },
+     "rationale": {
+      "ar": "تعويض النمو.",
+      "en": "Catch-up growth."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "الوزن يوميًا.",
+      "en": "Daily weight."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مضاد للقيء (أوندانسيترون) حسب الأمر عند القيء المستمر.",
+      "en": "Antiemetic (ondansetron) as ordered for persistent vomiting."
+     },
+     "rationale": {
+      "ar": "يسمح بالإرواء الفموي.",
+      "en": "Allows oral rehydration."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إعطاء الأكل بعد هدوء القيء بـ 10 دقائق وبكميات صغيرة.",
+      "en": "Offer food 10 minutes after vomiting settles, in small amounts."
+     },
+     "rationale": {
+      "ar": "يقلل القيء.",
+      "en": "Reduces vomiting."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يأكل أرز وزبادي يوم 2 — تحقق.",
+      "en": "Eating rice and yogurt on day 2 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التغذية",
+      "en": "Nutrition"
+     },
+     "actions": {
+      "ar": [
+       "الاستمرار في الرضاعة وإعادة الأكل خلال 4 ساعات من الإرواء.",
+       "وجبات صغيرة متكررة سهلة الهضم (أرز، بطاطس، زبادي، موز).",
+       "وجبة إضافية يوميًا لمدة أسبوعين بعد الشفاء.",
+       "الوزن يوميًا.",
+       "مضاد للقيء (أوندانسيترون) حسب الأمر عند القيء المستمر.",
+       "إعطاء الأكل بعد هدوء القيء بـ 10 دقائق وبكميات صغيرة."
+      ],
+      "en": [
+       "Continue breastfeeding; reintroduce food within 4 h of rehydration.",
+       "Small frequent easily digested meals (rice, potato, yogurt, banana).",
+       "An extra meal daily for 2 weeks after recovery.",
+       "Daily weight.",
+       "Antiemetic (ondansetron) as ordered for persistent vomiting.",
+       "Offer food 10 minutes after vomiting settles, in small amounts."
+      ]
+     },
+     "outcome": {
+      "ar": "أكل كافٍ.",
+      "en": "Adequate intake."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-gastro-child",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (الإسهال والجفاف عند الأطفال)",
+    "en": "Deficient Knowledge (Childhood diarrhea and dehydration)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "الأم لأول مرة"
+    ],
+    "en": [
+     "First-time mother"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الأم: \"أعمل المحلول إزاي؟ وإمتى أرجع المستشفى؟\""
+     ],
+     "en": [
+      "Mother: \"How do I make the solution? When should I come back?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الأم كانت تعطي عصير."
+     ],
+     "en": [
+      "Mother was giving juice."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تحضير محلول الإرواء: كيس في الكمية المكتوبة من الماء النظيف (عادة لتر) وعدم إضافة سكر، واستخدامه خلال 24 ساعة.",
+      "en": "Prepare ORS: one sachet in the stated volume of clean water (usually 1 L), no added sugar, use within 24 h."
+     },
+     "rationale": {
+      "ar": "التركيز الصحيح آمن.",
+      "en": "Correct concentration is safe."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "علامات العودة فورًا: عدم الشرب، قيء كل شيء، دم في البراز، نعاس شديد، عدم التبول 6–8 ساعات، تشنجات.",
+      "en": "Return immediately if: unable to drink, vomits everything, blood in stool, very drowsy, no urine for 6–8 h, seizures."
+     },
+     "rationale": {
+      "ar": "جفاف شديد أو مضاعفات.",
+      "en": "Severe dehydration or complications."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "غسل الأيدي بالماء والصابون بعد الحمام وتغيير الحفاض وقبل تحضير الأكل.",
+      "en": "Handwashing with soap after toilet/nappy and before food preparation."
+     },
+     "rationale": {
+      "ar": "يمنع العدوى.",
+      "en": "Prevents infection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "سلامة الماء والأكل وتطعيم الروتا.",
+      "en": "Safe water and food; rotavirus vaccine."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "إكمال الزنك 10–14 يومًا.",
+      "en": "Complete zinc for 10–14 days."
+     },
+     "rationale": {
+      "ar": "يقلل الإسهال في الأشهر التالية.",
+      "en": "Reduces future episodes."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف صحي",
+      "en": "Health teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "تحضير محلول الإرواء: كيس في الكمية المكتوبة من الماء النظيف (عادة لتر) وعدم إضافة سكر، واستخدامه خلال 24 ساعة.",
+       "علامات العودة فورًا: عدم الشرب، قيء كل شيء، دم في البراز، نعاس شديد، عدم التبول 6–8 ساعات، تشنجات.",
+       "غسل الأيدي بالماء والصابون بعد الحمام وتغيير الحفاض وقبل تحضير الأكل.",
+       "سلامة الماء والأكل وتطعيم الروتا.",
+       "إكمال الزنك 10–14 يومًا.",
+       "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Prepare ORS: one sachet in the stated volume of clean water (usually 1 L), no added sugar, use within 24 h.",
+       "Return immediately if: unable to drink, vomits everything, blood in stool, very drowsy, no urine for 6–8 h, seizures.",
+       "Handwashing with soap after toilet/nappy and before food preparation.",
+       "Safe water and food; rotavirus vaccine.",
+       "Complete zinc for 10–14 days.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -309,13 +1150,10 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "WHO — The Treatment of Diarrhoea: a manual for physicians and other senior health workers (2005)"
   },
   {
-   "title": "WHO — The Treatment of Diarrhoea: A manual for physicians and other senior health workers"
-  },
-  {
-   "title": "WHO/UNICEF — Integrated Management of Childhood Illness (IMCI)"
+   "title": "NICE CG84 — Diarrhoea and vomiting caused by gastroenteritis in under 5s (2009)"
   }
  ]
 }
