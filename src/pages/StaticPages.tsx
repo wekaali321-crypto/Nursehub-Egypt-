@@ -124,17 +124,17 @@ export function FAQ() {
     ["هل المحتوى مجاني؟", "نعم، معظم المقالات والملخصات مجانية. بعض الكتب والكورسات المتقدمة متاحة في المتجر بأسعار رمزية."],
     ["كيف أحمّل ملفات PDF؟", "اذهب لقسم الكتب وملفات PDF، اختر الملف ثم اضغط زر التحميل."],
     ["هل يمكنني المساهمة بمحتوى؟", "نعم! تواصل معنا عبر صفحة اتصل بنا لتصبح كاتباً معتمداً."],
-    ["هل المحتوى موثوق علمياً؟", "كل المحتوى يراجعه مختصون في مجال التمريض قبل النشر."],
+    ["هل المحتوى موثوق علمياً؟", "نكتب المحتوى من مراجع وإرشادات معتمدة ونراجعه ونحدّثه باستمرار، ونرحّب بأي تصحيح. المحتوى تعليمي ولا يغني عن بروتوكولات المستشفى وتعليمات الطبيب."],
     ["كيف أستخدم الأدوات الحسابية؟", "اذهب لصفحة الأدوات، اختر الحاسبة المناسبة وأدخل القيم المطلوبة."],
-    ["هل يوجد تطبيق للموبايل؟", "الموقع متجاوب بالكامل ويعمل بسلاسة على جميع الأجهزة، وقريباً تطبيق مخصص."],
+    ["هل يوجد تطبيق للموبايل؟", "الموقع متجاوب بالكامل ويعمل على جميع الأجهزة، ويمكن تثبيته على الشاشة الرئيسية للموبايل."],
   ];
   const faqsEn: [string, string][] = [
     ["Is the content free?", "Yes, most articles and summaries are free. Some advanced books and courses are available in the store at nominal prices."],
     ["How do I download PDF files?", "Go to the Books & PDFs section, choose the file, then click the download button."],
     ["Can I contribute content?", "Yes! Contact us via the Contact Us page to become a verified writer."],
-    ["Is the content scientifically reliable?", "All content is reviewed by nursing specialists before publishing."],
+    ["Is the content scientifically reliable?", "We write from established references and guidelines, review and update content continuously, and welcome corrections. The content is educational and does not replace hospital protocols or medical advice."],
     ["How do I use the calculators?", "Go to the Tools page, choose the appropriate calculator, and enter the required values."],
-    ["Is there a mobile app?", "The site is fully responsive and works smoothly on all devices, with a dedicated app coming soon."],
+    ["Is there a mobile app?", "The site is fully responsive and can be installed on your phone's home screen."],
   ];
   const faqs = isEn ? faqsEn : faqsAr;
   const [open, setOpen] = useState<number | null>(0);
@@ -263,26 +263,38 @@ export function Terms() {
       {isEn ? (
         <>
           <p>By using the NurseHub Egypt platform, you agree to the following terms.</p>
-          <h2>Use of Content</h2>
-          <p>The content is for educational purposes only and does not replace consulting specialists. Republishing content without permission is prohibited.</p>
-          <h2>Liability</h2>
-          <p>The medical information is for guidance only, and the platform is not responsible for any misuse of the information.</p>
-          <h2>Intellectual Property Rights</h2>
-          <p>All content is protected by the platform's intellectual property rights.</p>
+          <h2>Nature of the content and medical disclaimer</h2>
+          <p>The content is educational only. It is not medical advice and does not replace specialists or hospital protocols. Always verify doses and procedures against your institution's approved guidelines. The platform is not responsible for any misuse of the information.</p>
+          <h2>Use of content and intellectual property</h2>
+          <p>All content is protected by the platform's intellectual property rights. Personal and educational use and printing for study are allowed; republishing or selling the content without written permission is prohibited.</p>
+          <h2>Accounts</h2>
+          <p>You are responsible for keeping your sign-in details confidential and for activity under your account. We may suspend accounts that misuse the service.</p>
+          <h2>Store and purchases</h2>
+          <p>Digital products are delivered after payment is confirmed. For any problem with an order, contact us within 7 days of purchase.</p>
+          <h2>Comments and user contributions</h2>
+          <p>Offensive, unlawful or promotional content is not allowed; comments are moderated before publishing.</p>
+          <h2>External links and advertising</h2>
+          <p>The site may contain third-party links and ads; we are not responsible for their content or policies.</p>
           <h2>Amendments</h2>
-          <p>We reserve the right to amend these terms at any time with notice to users.</p>
+          <p>We may change these terms at any time; changes take effect when published on this page.</p>
         </>
       ) : (
         <>
           <p>باستخدامك لمنصة NurseHub Egypt فإنك توافق على الشروط التالية.</p>
-          <h2>استخدام المحتوى</h2>
-          <p>المحتوى لأغراض تعليمية فقط ولا يغني عن استشارة المختصين. يُمنع إعادة نشر المحتوى دون إذن.</p>
-          <h2>المسؤولية</h2>
-          <p>المعلومات الطبية إرشادية، والمنصة غير مسؤولة عن أي استخدام خاطئ للمعلومات.</p>
-          <h2>حقوق الملكية الفكرية</h2>
-          <p>جميع المحتويات محمية بحقوق الملكية الفكرية الخاصة بالمنصة.</p>
+          <h2>طبيعة المحتوى وإخلاء المسؤولية الطبية</h2>
+          <p>المحتوى تعليمي فقط، وليس نصيحة طبية أو بديلًا عن استشارة المختصين أو بروتوكولات المستشفى. تأكّد دائمًا من الجرعات والإجراءات وفق الإرشادات المعتمدة في مؤسستك. المنصة غير مسؤولة عن أي استخدام خاطئ للمعلومات.</p>
+          <h2>استخدام المحتوى والملكية الفكرية</h2>
+          <p>المحتوى محمي بحقوق الملكية الفكرية للمنصة. يُسمح بالاستخدام الشخصي والتعليمي والطباعة للمذاكرة، ويُمنع إعادة نشر المحتوى أو بيعه دون إذن مكتوب.</p>
+          <h2>الحسابات</h2>
+          <p>أنت مسؤول عن سرية بيانات دخولك وعن النشاط الذي يتم من خلال حسابك، ويحق لنا إيقاف أي حساب يسيء الاستخدام.</p>
+          <h2>المتجر والمشتريات</h2>
+          <p>المنتجات الرقمية تُسلَّم بعد تأكيد الدفع. لأي مشكلة في طلب تواصل معنا خلال 7 أيام من الشراء.</p>
+          <h2>التعليقات ومشاركات المستخدمين</h2>
+          <p>يُمنع نشر محتوى مسيء أو مخالف أو إعلاني، وتخضع التعليقات للمراجعة قبل النشر.</p>
+          <h2>الروابط الخارجية والإعلانات</h2>
+          <p>قد يحتوي الموقع على روابط وإعلانات لجهات خارجية، ولسنا مسؤولين عن محتواها أو سياساتها.</p>
           <h2>التعديلات</h2>
-          <p>نحتفظ بحق تعديل هذه الشروط في أي وقت مع إشعار المستخدمين.</p>
+          <p>نحتفظ بحق تعديل هذه الشروط في أي وقت، ويسري التعديل من تاريخ نشره على هذه الصفحة.</p>
         </>
       )}
     </Wrap>
