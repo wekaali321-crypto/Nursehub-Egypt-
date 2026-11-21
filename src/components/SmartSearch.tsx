@@ -10,6 +10,7 @@ import { logSearch } from "../lib/analytics";
 import { useExtraSearchIndex } from "../lib/searchIndex";
 import { drugPhoneticKeys, phoneticKey, phoneticScore } from "../lib/phonetic";
 import { loadDrugNames, type Row } from "../lib/drugMatch";
+import { fetchCarePlanIndex, type CarePlanIndexItem } from "../lib/carePlansApi";
 
 interface Suggestion {
   label: string;
@@ -24,6 +25,8 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
   const [drugRows, setDrugRows] = useState<Row[]>([]);
   const [searchActive, setSearchActive] = useState(false);
   useEffect(() => { if (searchActive) { ensureLoaded(); void loadDrugNames().then(setDrugRows); } }, [searchActive]); // eslint-disable-line react-hooks/exhaustive-deps
+  const [carePlans, setCarePlans] = useState<CarePlanIndexItem[]>([]);
+  useEffect(() => { if (searchActive) void fetchCarePlanIndex().then(setCarePlans); }, [searchActive]); // tiny static index (public/careplans), no database
   const { icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters } = useExtraSearchIndex(searchActive);
   const { t, lang } = useI18n();
   const [q, setQ] = useState("");
@@ -113,7 +116,11 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
       .filter((c) => [c.title_ar, c.title_en].filter(Boolean).join(" ").toLowerCase().includes(lower))
       .slice(0, 3)
       .map((c) => ({ label: bilingual(c.title_ar, c.title_en, lang).text, sub: t("search.coursesHeading"), to: `/courses/${c.course_id}/chapter/${c.id}`, icon: c.icon || "🎓" }));
-    const results = [...fromDrugs, ...fromIcu, ...fromDialysis, ...fromRadiology, ...fromNicu, ...fromPharmacology, ...fromTerminology, ...fromFirstAid, ...fromERReception, ...fromPediatrics, ...fromAnatomy, ...fromFundamentals, ...fromOperatingRoom, ...fromObgyn, ...fromProtocols, ...fromTravel, ...fromCourses, ...fromArticles].slice(0, 8);
+    const fromCarePlans: Suggestion[] = carePlans
+      .filter((c) => `${c.title.ar} ${c.title.en} care plan خطة رعاية`.toLowerCase().includes(lower))
+      .slice(0, 3)
+      .map((c) => ({ label: bilingual(c.title.ar, c.title.en, lang).text, sub: lang === "ar" ? "خطة رعاية تمريضية" : "Nursing care plan", to: `/care-plans/${c.id}`, icon: c.icon || "📋" }));
+    const results = [...fromDrugs, ...fromCarePlans, ...fromIcu, ...fromDialysis, ...fromRadiology, ...fromNicu, ...fromPharmacology, ...fromTerminology, ...fromFirstAid, ...fromERReception, ...fromPediatrics, ...fromAnatomy, ...fromFundamentals, ...fromOperatingRoom, ...fromObgyn, ...fromProtocols, ...fromTravel, ...fromCourses, ...fromArticles].slice(0, 8);
 
     // Log real search analytics once per distinct query (debounced by ref, not per keystroke render).
     if (q.trim().length >= 3 && searchLogged.current !== lower) {
@@ -121,7 +128,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
       logSearch(q.trim(), results.length, "instant", lang);
     }
     return results;
-  }, [q, articles, drugRows, icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters, lang]);
+  }, [q, articles, drugRows, icuTopics, dialysisTopics, radiologyTopics, nicuTopics, pharmacologyTopics, terminologyTopics, firstAidTopics, erReceptionTopics, pediatricTopics, anatomyTopics, fundamentalsTopics, operatingRoomTopics, obgynTopics, protocols, travelQuestions, courseChapters, carePlans, lang]);
 
   const go = (to: string) => {
     setQ(""); setOpen(false); onNavigate?.();

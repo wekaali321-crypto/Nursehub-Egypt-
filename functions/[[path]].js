@@ -206,6 +206,28 @@ async function pageFor(path, env, request) {
     const body = `<article><h1>${esc(c.title.ar)}</h1><p>${esc(c.teaser?.ar || '')}</p>${part('القصة', c.story)}${part('الفحص', c.exam)}${part('الفحوصات', c.investigations)}${part('التشخيص', c.diagnosis)}${part('الشرح', c.answer)}</article>`;
     return { title: `${c.title.ar} — حالة سريرية | ${SITE_NAME}`, description: clip(strip(c.teaser?.ar || c.story?.ar || ''), 300), body, type: 'Article' };
   }
+  if (p === '/care-plans') {
+    const idx = await getJSON(env, request, '/careplans/index.json');
+    if (!idx) return null;
+    return {
+      title: `خطط الرعاية التمريضية جاهزة | ${SITE_NAME}`,
+      description: 'خطط رعاية تمريضية جاهزة بالعربي والإنجليزي لأشهر الأمراض: خطة الطلاب (Assessment، Nursing Diagnosis، Goals، Interventions & Rationale، Evaluation) وخطة المستشفى.',
+      body: `<h1>خطط الرعاية التمريضية</h1>${list((idx.plans || []).map((c) => [`/care-plans/${c.id}`, c.title.ar, c.summary?.ar || '']))}`,
+      type: 'CollectionPage',
+    };
+  }
+  if ((m = /^\/care-plans\/([a-z0-9-]+)$/.exec(p))) {
+    const c = await getJSON(env, request, `/careplans/plans/${m[1]}.json`);
+    if (!c) return null;
+    const li = (a) => `<ul>${(a || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
+    const student = (c.student || []).map((d) =>
+      `<section><h3>${esc(d.diagnosis.ar)}</h3><h4>التقييم</h4>${li(d.assessment?.subjective?.ar)}${li(d.assessment?.objective?.ar)}<h4>الأهداف</h4>${li(d.goals?.ar)}` +
+      `<h4>التدخلات التمريضية والمبررات</h4><ol>${(d.interventions || []).map((x) => `<li>${esc(x.action.ar)} — ${esc(x.rationale.ar)}</li>`).join('')}</ol><h4>التقييم النهائي</h4>${li(d.evaluation?.ar)}</section>`).join('');
+    const hospital = (c.hospital || []).map((r) => `<li>${esc(r.diagnosis.ar)}: ${esc(r.need.ar)} — ${esc(r.outcome.ar)} (${esc(r.timeframe.ar)})</li>`).join('');
+    const body = `<article><h1>خطة رعاية تمريضية: ${esc(c.title.ar)}</h1><p lang="en">${esc(c.title.en)} Nursing Care Plan</p><p>${esc(c.summary?.ar || '')}</p>` +
+      `<h2>خطة الطلاب</h2>${student}<h2>خطة المستشفى</h2><ul>${hospital}</ul></article>`;
+    return { title: `خطة رعاية تمريضية ${c.title.ar} (${c.title.en} Nursing Care Plan) | ${SITE_NAME}`, description: clip(strip(c.summary?.ar || ''), 300), body, type: 'MedicalWebPage' };
+  }
   if ((m = /^\/article\/([^/]+)$/.exec(p))) {
     const slug = dec(m[1]).replace(/[^\w\u0600-\u06FF-]/g, '');
     const r = await sb(env, 'articles', `select=title,excerpt,content,meta_title,meta_description,cover&slug=eq.${encodeURIComponent(slug)}&status=eq.published&limit=1`);
@@ -410,6 +432,10 @@ async function classify(path, env, request) {
   if ((m = /^\/cases\/([^/]+)$/.exec(p))) {
     const id = dec(m[1]);
     return SAFE_ID.test(id) && (await assetExists(env, request, `/clinical-cases/cases/${id}.json`)) ? 'ok' : 'missing';
+  }
+  if ((m = /^\/care-plans\/([^/]+)$/.exec(p))) {
+    const id = dec(m[1]);
+    return SAFE_ID.test(id) && (await assetExists(env, request, `/careplans/plans/${id}.json`)) ? 'ok' : 'missing';
   }
   if ((m = /^\/section\/([^/]+)$/.exec(p))) {
     if (!sectionSlugs) {

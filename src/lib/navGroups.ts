@@ -17,7 +17,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { to: "/fundamentals", ar: "أسس التمريض", en: "Fundamentals" },
       { to: "/diseases", ar: "الأمراض للتمريض", en: "Diseases" },
       { to: "/cases", ar: "الحالات السريرية", en: "Clinical cases" },
-      { to: "/category/careplans", ar: "خطط الرعاية", en: "Care plans", feature: "carePlans" },
+      { to: "/care-plans", ar: "خطط الرعاية التمريضية", en: "Nursing care plans", feature: "carePlans" },
       { to: "/category/summaries", ar: "الملخصات", en: "Summaries" },
       { to: "/anatomy", ar: "التشريح", en: "Anatomy" },
       { to: "/terminology", ar: "المصطلحات الطبية", en: "Medical terminology" },
