@@ -774,56 +774,54 @@
    "system": "neurology",
    "folder": "disease",
    "title": {
-    "ar": "الصرع ونوبات التشنج",
-    "en": "Seizure Disorders (Epilepsy)"
+    "ar": "الصرع والنوبات التشنجية",
+    "en": "Epilepsy & Seizure Disorders"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض صرع: الأمان أثناء النوبة، الحفاظ على مجرى الهواء، والالتزام بالعلاج.",
-    "en": "Care plan for epilepsy: safety during seizures, airway protection and medication adherence."
+    "ar": "خطة رعاية الصرع: الحماية أثناء النوبة والحالة الصرعية، مجرى الهواء، الالتزام بالأدوية والسلامة، القلق، السقوط، والتثقيف.",
+    "en": "Epilepsy care plan: seizure safety and status epilepticus, airway, drug adherence and safety, anxiety, falls and teaching."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "risk-injury-seizure",
      "title": {
-      "ar": "خطر الإصابة",
-      "en": "Risk for injury"
+      "ar": "خطر الإصابة أثناء النوبة",
+      "en": "Risk for Injury (During Seizure)"
      }
     },
     {
-     "id": "dx-2",
+     "id": "risk-ineffective-airway-seizure",
      "title": {
-      "ar": "عدم فعالية إدارة الصحة الذاتية",
-      "en": "Ineffective health self-management"
-     }
-    }
-   ]
-  },
-  {
-   "id": "stroke",
-   "icon": "🧠",
-   "system": "neurology",
-   "folder": "disease",
-   "title": {
-    "ar": "السكتة الدماغية (جلطة المخ)",
-    "en": "Stroke (Cerebrovascular Accident)"
-   },
-   "summary": {
-    "ar": "خطة رعاية لمريض سكتة دماغية: تروية المخ، الوقاية من الشرقة، والحركة والوقاية من قرح الفراش.",
-    "en": "Care plan for stroke: cerebral perfusion, aspiration prevention, mobility and pressure-injury prevention."
-   },
-   "diagnoses": [
-    {
-     "id": "dx-1",
-     "title": {
-      "ar": "خطر الشرقة",
-      "en": "Risk for aspiration"
+      "ar": "خطر عدم فعالية تنظيف مجرى الهواء",
+      "en": "Risk for Ineffective Airway Clearance"
      }
     },
     {
-     "id": "dx-2",
+     "id": "ineffective-health-management-epilepsy",
      "title": {
-      "ar": "ضعف الحركة الجسدية",
-      "en": "Impaired physical mobility"
+      "ar": "عدم فعالية إدارة الصحة (الالتزام بمضادات الصرع)",
+      "en": "Ineffective Health Self-Management (Antiepileptic Adherence)"
+     }
+    },
+    {
+     "id": "anxiety-seizure",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "risk-falls-seizure",
+     "title": {
+      "ar": "خطر السقوط (أدوية الصرع وما بعد النوبة)",
+      "en": "Risk for Falls (Antiepileptics and Post-ictal State)"
+     }
+    },
+    {
+     "id": "deficient-knowledge-epilepsy",
+     "title": {
+      "ar": "نقص المعرفة (الصرع)",
+      "en": "Deficient Knowledge (Epilepsy)"
      }
     }
    ]
@@ -834,26 +832,119 @@
    "system": "neurology",
    "folder": "disease",
    "title": {
-    "ar": "إصابات الرأس (ارتجاج ونزيف المخ)",
-    "en": "Traumatic Brain Injury"
+    "ar": "إصابات الرأس",
+    "en": "Head Injury"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض إصابة رأس: متابعة الوعي وضغط المخ، الحفاظ على مجرى الهواء، والوقاية من الإصابة.",
-    "en": "Care plan for traumatic brain injury: neuro observation and intracranial pressure, airway protection and injury prevention."
+    "ar": "خطة رعاية إصابات الرأس: ارتفاع الضغط داخل الجمجمة وجلاسكو، مجرى الهواء والفقرات العنقية، الصداع، التشوش، تسريب السائل النخاعي، والتثقيف عند الخروج.",
+    "en": "Head injury care plan: raised ICP and GCS, airway and C-spine, headache, confusion, CSF leak and discharge teaching."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "risk-increased-icp",
      "title": {
-      "ar": "خطر ضعف تروية المخ",
-      "en": "Risk for ineffective cerebral tissue perfusion"
+      "ar": "خطر عدم فعالية تروية المخ (ارتفاع الضغط داخل الجمجمة)",
+      "en": "Risk for Ineffective Cerebral Perfusion (Raised ICP)"
      }
     },
     {
-     "id": "dx-2",
+     "id": "risk-ineffective-airway-head",
      "title": {
-      "ar": "خطر الإصابة/السقوط",
-      "en": "Risk for injury/falls"
+      "ar": "خطر عدم فعالية تنظيف مجرى الهواء",
+      "en": "Risk for Ineffective Airway Clearance"
+     }
+    },
+    {
+     "id": "acute-pain-head",
+     "title": {
+      "ar": "ألم حاد (صداع)",
+      "en": "Acute Pain (Headache)"
+     }
+    },
+    {
+     "id": "risk-acute-confusion-head",
+     "title": {
+      "ar": "خطر التشوش الحاد",
+      "en": "Risk for Acute Confusion"
+     }
+    },
+    {
+     "id": "risk-infection-csf-leak",
+     "title": {
+      "ar": "خطر العدوى (تسريب السائل النخاعي / جروح الرأس)",
+      "en": "Risk for Infection (CSF Leak / Scalp Wounds)"
+     }
+    },
+    {
+     "id": "deficient-knowledge-head-injury",
+     "title": {
+      "ar": "نقص المعرفة (إصابة الرأس والارتجاج)",
+      "en": "Deficient Knowledge (Head injury and concussion)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "stroke",
+   "icon": "🧠",
+   "system": "neurology",
+   "folder": "disease",
+   "title": {
+    "ar": "السكتة الدماغية",
+    "en": "Stroke (CVA)"
+   },
+   "summary": {
+    "ar": "خطة رعاية السكتة الدماغية: تروية المخ والمذيب، البلع، الحركة والشلل النصفي، التواصل والحبسة، العناية الذاتية، الأمان، والوقاية من التكرار.",
+    "en": "Stroke care plan: cerebral perfusion and thrombolysis, swallowing, hemiplegia and mobility, aphasia, self-care, safety and secondary prevention."
+   },
+   "diagnoses": [
+    {
+     "id": "ineffective-cerebral-perfusion-stroke",
+     "title": {
+      "ar": "عدم فعالية تروية أنسجة المخ",
+      "en": "Ineffective Cerebral Tissue Perfusion"
+     }
+    },
+    {
+     "id": "impaired-swallowing-stroke",
+     "title": {
+      "ar": "ضعف البلع",
+      "en": "Impaired Swallowing"
+     }
+    },
+    {
+     "id": "impaired-physical-mobility-stroke",
+     "title": {
+      "ar": "ضعف الحركة الجسدية (الشلل النصفي)",
+      "en": "Impaired Physical Mobility (Hemiplegia)"
+     }
+    },
+    {
+     "id": "impaired-verbal-communication-stroke",
+     "title": {
+      "ar": "ضعف التواصل اللفظي (الحبسة)",
+      "en": "Impaired Verbal Communication (Aphasia)"
+     }
+    },
+    {
+     "id": "self-care-deficit-stroke",
+     "title": {
+      "ar": "نقص العناية الذاتية (الاستحمام، اللبس، الأكل)",
+      "en": "Self-Care Deficit (Bathing, Dressing, Feeding)"
+     }
+    },
+    {
+     "id": "risk-aspiration-falls-stroke",
+     "title": {
+      "ar": "خطر الإصابة (السقوط والشفط والقرح)",
+      "en": "Risk for Injury (Falls, Aspiration, Pressure Injury)"
+     }
+    },
+    {
+     "id": "deficient-knowledge-stroke",
+     "title": {
+      "ar": "نقص المعرفة (الوقاية من تكرار السكتة)",
+      "en": "Deficient Knowledge (Secondary stroke prevention)"
      }
     }
    ]

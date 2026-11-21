@@ -2,284 +2,1102 @@
  "id": "head-injury",
  "icon": "🤕",
  "system": "neurology",
+ "folder": "disease",
  "title": {
-  "ar": "إصابات الرأس (ارتجاج ونزيف المخ)",
-  "en": "Traumatic Brain Injury"
+  "ar": "إصابات الرأس",
+  "en": "Head Injury"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض إصابة رأس: متابعة الوعي وضغط المخ، الحفاظ على مجرى الهواء، والوقاية من الإصابة.",
-  "en": "Care plan for traumatic brain injury: neuro observation and intracranial pressure, airway protection and injury prevention."
+  "ar": "خطة رعاية إصابات الرأس: ارتفاع الضغط داخل الجمجمة وجلاسكو، مجرى الهواء والفقرات العنقية، الصداع، التشوش، تسريب السائل النخاعي، والتثقيف عند الخروج.",
+  "en": "Head injury care plan: raised ICP and GCS, airway and C-spine, headache, confusion, CSF leak and discharge teaching."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "خطر ضعف تروية المخ (Risk for ineffective cerebral tissue perfusion) مرتبط بارتفاع الضغط داخل الجمجمة (ICP) بسبب ورم المخ أو النزيف.",
-    "en": "Risk for ineffective cerebral tissue perfusion related to raised intracranial pressure from cerebral edema or hemorrhage."
+   "id": "risk-increased-icp",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدم فعالية تروية المخ (ارتفاع الضغط داخل الجمجمة)",
+    "en": "Risk for Ineffective Cerebral Perfusion (Raised ICP)"
+   },
+   "definition": {
+    "ar": "قابلية لنقص تروية المخ بسبب ارتفاع الضغط داخل الجمجمة.",
+    "en": "Susceptibility to decreased cerebral perfusion from raised intracranial pressure."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "نزيف أو تورم بالمخ",
+     "نقص الأكسجين وارتفاع CO₂",
+     "هبوط الضغط"
+    ],
+    "en": [
+     "Intracranial bleed or edema",
+     "Hypoxia and hypercapnia",
+     "Hypotension"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "الأسرة: \"وقع من على السقالة وتاه شوية وبعدين رجع يتكلم.\""
+      "الأم: \"ابني وقع من الموتوسيكل ومش بيرد كويس.\""
      ],
      "en": [
-      "Family: \"He fell from scaffolding, was confused for a while, then started talking again.\""
+      "Mother: \"My son fell off a motorbike and isn't responding well.\""
      ]
     },
     "objective": {
      "ar": [
-      "مقياس جلاسكو GCS ‏12/15 (E3 V4 M5).",
-      "أشعة مقطعية: كدمة بالمخ في الفص الجبهي.",
-      "صداع وقيء مرتين."
+      "جلاسكو 11، الحدقتان متساويتان وتستجيبان.",
+      "أشعة: كدمة بالفص الجبهي.",
+      "الضغط 130/80."
      ],
      "en": [
-      "GCS 12/15 (E3 V4 M5).",
-      "CT: frontal cerebral contusion.",
-      "Headache and two episodes of vomiting."
+      "GCS 11; pupils equal and reactive.",
+      "CT: frontal contusion.",
+      "BP 130/80."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء أول 48 ساعة: GCS ثابت أو يتحسن، الحدقتان متساويتان وتستجيبان للضوء، ولا علامات ارتفاع ضغط المخ دون اكتشاف فوري."
-    ],
-    "en": [
-     "During the first 48 hours: stable or improving GCS, equal reactive pupils, and no raised ICP sign left undetected."
-    ]
+    "short": {
+     "ar": [
+      "كل ساعة: جلاسكو ثابت أو يتحسن وحدقتان متساويتان."
+     ],
+     "en": [
+      "Hourly: stable or improving GCS, equal pupils."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا تدهور عصبي ثانوي."
+     ],
+     "en": [
+      "No secondary neurological deterioration."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "تقييم GCS والحدقتين وحركة الأطراف كل ساعة (أو حسب الأمر).",
-      "en": "Assess GCS, pupils and limb movement hourly (or as ordered)."
+      "ar": "جلاسكو والحدقتين والأطراف والعلامات الحيوية كل ساعة (أو أقل حسب الحالة).",
+      "en": "GCS, pupils, limbs and vitals hourly (or more often)."
      },
      "rationale": {
-      "ar": "نقص درجتين في GCS أو اتساع حدقة إنذار عاجل.",
-      "en": "A 2-point GCS fall or a dilating pupil is an urgent warning."
+      "ar": "كشف التدهور.",
+      "en": "Detects deterioration."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "رفع رأس السرير 30° مع الرأس في الوضع المستقيم وعدم ثني الرقبة.",
-      "en": "Head of bed 30° with the head midline and neck not flexed."
+      "ar": "ملاحظة علامات ارتفاع الضغط: صداع يزيد، قيء، نقص جلاسكو ≥ 2، اتساع حدقة، وثلاثية كوشينج (ارتفاع الضغط، بطء النبض، اضطراب التنفس).",
+      "en": "Watch for raised ICP: worsening headache, vomiting, GCS drop ≥ 2, dilated pupil, Cushing's triad (hypertension, bradycardia, irregular breathing)."
      },
      "rationale": {
-      "ar": "يساعد رجوع الدم الوريدي من المخ ويقلل ضغطه.",
-      "en": "Promotes cerebral venous drainage and lowers ICP."
+      "ar": "علامات متأخرة تحتاج تدخلًا فوريًا.",
+      "en": "Late signs needing urgent action."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "ملاحظة ثالوث كوشينج: ارتفاع الضغط الانقباضي، بطء النبض، اضطراب التنفس.",
-      "en": "Watch for Cushing's triad: rising systolic BP, bradycardia, irregular respiration."
+      "ar": "رفع الرأس 30 درجة مع استقامة الرقبة وعدم ثنيها أو ربط ضاغط حولها.",
+      "en": "HOB 30°, neck midline, no flexion or tight ties."
      },
      "rationale": {
-      "ar": "علامة متأخرة على ارتفاع خطير في ضغط المخ.",
-      "en": "A late sign of dangerously raised ICP."
+      "ar": "يحسن رجوع الدم الوريدي من المخ.",
+      "en": "Improves venous drainage."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "تجنب ما يرفع ضغط المخ: الكحة الشديدة، الإمساك والحزق، الشفط الطويل، الحرارة.",
-      "en": "Avoid ICP triggers: vigorous coughing, straining/constipation, prolonged suctioning, fever."
+      "ar": "الحفاظ على التشبع > 94% وCO₂ طبيعي والضغط الانقباضي ≥ 110 حسب الأمر.",
+      "en": "Keep SpO₂ > 94%, normal CO₂, SBP ≥ 110 as ordered."
      },
      "rationale": {
-      "ar": "كلها تزيد الضغط داخل الجمجمة.",
-      "en": "All raise intracranial pressure."
+      "ar": "منع الإصابة الثانوية.",
+      "en": "Prevents secondary injury."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "الحفاظ على الأكسجين والضغط في المدى المطلوب حسب الأمر.",
-      "en": "Maintain oxygenation and blood pressure within ordered targets."
+      "ar": "تجنب ما يرفع الضغط: الكحة الشديدة، الحزق، الشفط الطويل، الألم، الحرارة.",
+      "en": "Avoid ICP spikes: vigorous coughing, straining, prolonged suction, pain, fever."
      },
      "rationale": {
-      "ar": "نقص الأكسجين أو الضغط يسبب إصابة ثانوية للمخ.",
-      "en": "Hypoxia or hypotension causes secondary brain injury."
+      "ar": "تحمي المخ.",
+      "en": "Protect the brain."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المانيتول أو المحلول الملحي المركز حسب الأمر ومتابعة الصوديوم والبول.",
+      "en": "Give mannitol or hypertonic saline as ordered; monitor sodium and urine."
+     },
+     "rationale": {
+      "ar": "يقلل تورم المخ.",
+      "en": "Reduces cerebral edema."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ جراح المخ فورًا عند أي تدهور.",
+      "en": "Notify the neurosurgeon immediately of any deterioration."
+     },
+     "rationale": {
+      "ar": "قد يحتاج جراحة عاجلة.",
+      "en": "May need urgent surgery."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "GCS تحسن إلى 14/15، الحدقتان طبيعيتان، والعلامات مستقرة. — تحقق الهدف."
-    ],
-    "en": [
-     "GCS improved to 14/15, pupils normal, vitals stable. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "جلاسكو تحسن إلى 14 خلال 24 ساعة — تحقق.",
+      "en": "GCS improved to 14 within 24 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "المتابعة العصبية",
+      "en": "Neuro monitoring"
+     },
+     "actions": {
+      "ar": [
+       "جلاسكو والحدقتين والأطراف والعلامات الحيوية كل ساعة (أو أقل حسب الحالة).",
+       "ملاحظة علامات ارتفاع الضغط: صداع يزيد، قيء، نقص جلاسكو ≥ 2، اتساع حدقة، وثلاثية كوشينج (ارتفاع الضغط، بطء النبض، اضطراب التنفس).",
+       "إبلاغ جراح المخ فورًا عند أي تدهور."
+      ],
+      "en": [
+       "GCS, pupils, limbs and vitals hourly (or more often).",
+       "Watch for raised ICP: worsening headache, vomiting, GCS drop ≥ 2, dilated pupil, Cushing's triad (hypertension, bradycardia, irregular breathing).",
+       "Notify the neurosurgeon immediately of any deterioration."
+      ]
+     },
+     "outcome": {
+      "ar": "لا تدهور.",
+      "en": "No deterioration."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    },
+    {
+     "need": {
+      "ar": "خفض الضغط داخل الجمجمة",
+      "en": "Control ICP"
+     },
+     "actions": {
+      "ar": [
+       "رفع الرأس 30 درجة مع استقامة الرقبة وعدم ثنيها أو ربط ضاغط حولها.",
+       "الحفاظ على التشبع > 94% وCO₂ طبيعي والضغط الانقباضي ≥ 110 حسب الأمر.",
+       "تجنب ما يرفع الضغط: الكحة الشديدة، الحزق، الشفط الطويل، الألم، الحرارة.",
+       "إعطاء المانيتول أو المحلول الملحي المركز حسب الأمر ومتابعة الصوديوم والبول."
+      ],
+      "en": [
+       "HOB 30°, neck midline, no flexion or tight ties.",
+       "Keep SpO₂ > 94%, normal CO₂, SBP ≥ 110 as ordered.",
+       "Avoid ICP spikes: vigorous coughing, straining, prolonged suction, pain, fever.",
+       "Give mannitol or hypertonic saline as ordered; monitor sodium and urine."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات ضغط غائبة.",
+      "en": "No ICP signs."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر الإصابة/السقوط (Risk for injury/falls) مرتبط بالتشوش والهياج والدوخة.",
-    "en": "Risk for injury/falls related to confusion, agitation and dizziness."
+   "id": "risk-ineffective-airway-head",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدم فعالية تنظيف مجرى الهواء",
+    "en": "Risk for Ineffective Airway Clearance"
+   },
+   "definition": {
+    "ar": "قابلية لانسداد مجرى الهواء مع نقص الوعي.",
+    "en": "Susceptibility to airway obstruction with reduced consciousness."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "نقص الوعي",
+     "القيء",
+     "إصابات الوجه"
+    ],
+    "en": [
+     "Reduced consciousness",
+     "Vomiting",
+     "Facial injuries"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"عايز أروّح... أنا فين؟\""
+      "لا يتكلم بوضوح."
      ],
      "en": [
-      "\"I want to go home... where am I?\""
+      "Speech unclear."
      ]
     },
     "objective": {
      "ar": [
-      "تشوش في الزمان والمكان، ويحاول النزول من السرير."
+      "جلاسكو 11، قيء مرة."
      ],
      "en": [
-      "Disoriented to time and place; tries to climb out of bed."
+      "GCS 11, vomited once."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء الإقامة لا يحدث سقوط أو خلع للقساطر."
-    ],
-    "en": [
-     "No falls or dislodged lines during the stay."
-    ]
+    "short": {
+     "ar": [
+      "مجرى هواء مفتوح وتشبع > 94%."
+     ],
+     "en": [
+      "Patent airway, SpO₂ > 94%."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا شفط أو التهاب رئوي."
+     ],
+     "en": [
+      "No aspiration or pneumonia."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "independent",
      "action": {
-      "ar": "سرير منخفض، جرس قريب، إضاءة خافتة، ومراقبة متكررة.",
-      "en": "Low bed, call bell within reach, dim lighting and frequent observation."
+      "ar": "حماية الفقرات العنقية حتى استبعاد إصابتها.",
+      "en": "Cervical spine protection until cleared."
      },
      "rationale": {
-      "ar": "تقلل خطر السقوط.",
-      "en": "Reduce fall risk."
+      "ar": "إصابة الرقبة شائعة مع إصابة الرأس.",
+      "en": "Neck injury is common with head injury."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "إعادة توجيه المريض بهدوء (التاريخ، المكان، سبب وجوده).",
-      "en": "Reorient calmly (date, place, reason for admission)."
+      "ar": "فتح مجرى الهواء بدفع الفك (بدون إمالة الرأس) والشفط.",
+      "en": "Jaw thrust (no head tilt) and suction."
      },
      "rationale": {
-      "ar": "يقلل القلق والهياج.",
-      "en": "Reduces anxiety and agitation."
+      "ar": "يحمي الرقبة.",
+      "en": "Protects the spine."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "السماح بوجود مرافق من الأسرة.",
-      "en": "Encourage a family member to stay."
+      "ar": "أكسجين للحفاظ على التشبع > 94%.",
+      "en": "Oxygen to keep SpO₂ > 94%."
      },
      "rationale": {
-      "ar": "الوجوه المألوفة تهدئ المريض.",
-      "en": "Familiar faces calm the patient."
+      "ar": "نقص الأكسجين يضاعف تلف المخ.",
+      "en": "Hypoxia worsens brain injury."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "تجنب المهدئات والقيود إلا بأمر وحسب السياسة.",
-      "en": "Avoid sedatives and restraints unless ordered and per policy."
+      "ar": "التجهيز لأنبوبة حنجرية إذا جلاسكو ≤ 8.",
+      "en": "Prepare for intubation if GCS ≤ 8."
      },
      "rationale": {
-      "ar": "المهدئات تخفي تغير الوعي، والقيود تزيد الهياج.",
-      "en": "Sedatives mask neurological change; restraints increase agitation."
+      "ar": "حماية مجرى الهواء.",
+      "en": "Airway protection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع جانبي إذا سمحت الرقبة عند القيء.",
+      "en": "Lateral position if the spine allows when vomiting."
+     },
+     "rationale": {
+      "ar": "يمنع الشفط.",
+      "en": "Prevents aspiration."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "لا شيء بالفم حتى تقييم البلع والوعي.",
+      "en": "Nil by mouth until swallow and alertness assessed."
+     },
+     "rationale": {
+      "ar": "سلامة.",
+      "en": "Safety."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "لم يحدث سقوط، والمريض أهدأ مع وجود الأسرة. — تحقق الهدف."
-    ],
-    "en": [
-     "No falls; patient calmer with family present. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "خطر ضعف تروية المخ",
-    "en": "Risk for ineffective cerebral perfusion"
-   },
-   "need": {
-    "ar": "متابعة عصبية",
-    "en": "Neurological monitoring"
-   },
-   "actions": {
-    "ar": [
-     "GCS والحدقة كل ساعة",
-     "رأس السرير 30°",
-     "تجنب الحزق والشفط الطويل"
-    ],
-    "en": [
-     "Hourly GCS and pupils",
-     "Head of bed 30°",
-     "Avoid straining and long suction"
-    ]
-   },
-   "outcome": {
-    "ar": "GCS ثابت أو يتحسن",
-    "en": "Stable or improving GCS"
-   },
-   "timeframe": {
-    "ar": "كل ساعة لمدة 48 ساعة",
-    "en": "Hourly for 48 hours"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 97% بدون شفط — تحقق.",
+      "en": "SpO₂ 97%, no aspiration — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية مجرى الهواء",
+      "en": "Airway protection"
+     },
+     "actions": {
+      "ar": [
+       "حماية الفقرات العنقية حتى استبعاد إصابتها.",
+       "فتح مجرى الهواء بدفع الفك (بدون إمالة الرأس) والشفط.",
+       "أكسجين للحفاظ على التشبع > 94%.",
+       "التجهيز لأنبوبة حنجرية إذا جلاسكو ≤ 8.",
+       "وضع جانبي إذا سمحت الرقبة عند القيء.",
+       "لا شيء بالفم حتى تقييم البلع والوعي."
+      ],
+      "en": [
+       "Cervical spine protection until cleared.",
+       "Jaw thrust (no head tilt) and suction.",
+       "Oxygen to keep SpO₂ > 94%.",
+       "Prepare for intubation if GCS ≤ 8.",
+       "Lateral position if the spine allows when vomiting.",
+       "Nil by mouth until swallow and alertness assessed."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع > 94%.",
+      "en": "SpO₂ > 94%."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر عدم فعالية مجرى الهواء",
-    "en": "Risk for ineffective airway"
+   "id": "acute-pain-head",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (صداع)",
+    "en": "Acute Pain (Headache)"
    },
-   "need": {
-    "ar": "مجرى هواء مفتوح",
-    "en": "Patent airway"
+   "definition": {
+    "ar": "تجربة حسية غير مريحة مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory experience lasting < 3 months."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "وضع الجانب عند القيء",
-     "شفط جاهز",
-     "أكسجين حسب الأمر"
+     "إصابة الرأس"
     ],
     "en": [
-     "Side position if vomiting",
-     "Suction ready",
-     "Oxygen as ordered"
+     "Head trauma"
     ]
    },
-   "outcome": {
-    "ar": "تشبع ≥ 94%",
-    "en": "SpO₂ ≥ 94%"
+   "evidencedBy": {
+    "ar": [
+     "صداع 6/10"
+    ],
+    "en": [
+     "Headache 6/10"
+    ]
    },
-   "timeframe": {
-    "ar": "كل وردية",
-    "en": "Every shift"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"راسي بتوجعني جامد.\""
+     ],
+     "en": [
+      "\"My head hurts badly.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يمسك رأسه، ضوء يزعجه."
+     ],
+     "en": [
+      "Holds his head; photophobia."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: صداع ≤ 3/10 بدون تأثير على التقييم العصبي."
+     ],
+     "en": [
+      "Within 1 h: headache ≤ 3/10 without masking neuro assessment."
+     ]
+    },
+    "long": {
+     "ar": [
+      "اختفاء الصداع تدريجيًا."
+     ],
+     "en": [
+      "Gradual resolution."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الصداع وأي زيادة مفاجئة (علامة ارتفاع الضغط).",
+      "en": "Assess headache and sudden worsening (raised ICP sign)."
+     },
+     "rationale": {
+      "ar": "التمييز بين العادي والخطير.",
+      "en": "Distinguish benign from dangerous."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "باراسيتامول حسب الأمر وتجنب الأفيونات القوية والمهدئات.",
+      "en": "Paracetamol as ordered; avoid strong opioids and sedatives."
+     },
+     "rationale": {
+      "ar": "لا تخفي التدهور العصبي.",
+      "en": "Do not mask neuro decline."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غرفة هادئة بإضاءة خافتة.",
+      "en": "Quiet dim room."
+     },
+     "rationale": {
+      "ar": "يقلل المنبهات.",
+      "en": "Reduces stimuli."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "كمادات باردة على الجبهة.",
+      "en": "Cool forehead compress."
+     },
+     "rationale": {
+      "ar": "راحة.",
+      "en": "Comfort."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تجميع الرعاية للراحة.",
+      "en": "Cluster care for rest."
+     },
+     "rationale": {
+      "ar": "راحة المخ.",
+      "en": "Brain rest."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح أن الصداع قد يستمر أيامًا بعد الارتجاج.",
+      "en": "Explain headache may persist days after concussion."
+     },
+     "rationale": {
+      "ar": "طمأنة.",
+      "en": "Reassurance."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الصداع 2/10 — تحقق.",
+      "en": "Headache 2/10 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الصداع",
+      "en": "Relieve headache"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الصداع وأي زيادة مفاجئة (علامة ارتفاع الضغط).",
+       "باراسيتامول حسب الأمر وتجنب الأفيونات القوية والمهدئات.",
+       "غرفة هادئة بإضاءة خافتة.",
+       "كمادات باردة على الجبهة.",
+       "تجميع الرعاية للراحة.",
+       "شرح أن الصداع قد يستمر أيامًا بعد الارتجاج."
+      ],
+      "en": [
+       "Assess headache and sudden worsening (raised ICP sign).",
+       "Paracetamol as ordered; avoid strong opioids and sedatives.",
+       "Quiet dim room.",
+       "Cool forehead compress.",
+       "Cluster care for rest.",
+       "Explain headache may persist days after concussion."
+      ]
+     },
+     "outcome": {
+      "ar": "صداع ≤ 3/10.",
+      "en": "Headache ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر السقوط",
-    "en": "Risk for falls"
+   "id": "risk-acute-confusion-head",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر التشوش الحاد",
+    "en": "Risk for Acute Confusion"
    },
-   "need": {
-    "ar": "الأمان",
-    "en": "Safety"
+   "definition": {
+    "ar": "قابلية لاضطراب مفاجئ في الوعي والإدراك.",
+    "en": "Susceptibility to sudden disturbance of consciousness and cognition."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "سرير منخفض",
-     "إعادة التوجيه",
-     "مرافق من الأسرة"
+     "إصابة المخ",
+     "اضطراب النوم",
+     "خلل الأملاح (الصوديوم)"
     ],
     "en": [
-     "Low bed",
-     "Reorientation",
-     "Family companion"
+     "Brain injury",
+     "Sleep disruption",
+     "Electrolyte imbalance (sodium)"
     ]
    },
-   "outcome": {
-    "ar": "لا سقوط",
-    "en": "No falls"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أنا فين؟\""
+     ],
+     "en": [
+      "\"Where am I?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يسأل نفس السؤال كثيرًا."
+     ],
+     "en": [
+      "Repeats the same question."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "طوال الإقامة",
-    "en": "Throughout stay"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: يعرف المكان والزمان أو يتقبل التوجيه."
+     ],
+     "en": [
+      "Every shift: oriented or accepts reorientation."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا إصابة بسبب التشوش."
+     ],
+     "en": [
+      "No injury from confusion."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم التوجه والانتباه كل وردية.",
+      "en": "Assess orientation and attention every shift."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التوجيه المتكرر بهدوء.",
+      "en": "Calm frequent reorientation."
+     },
+     "rationale": {
+      "ar": "يقلل التشوش.",
+      "en": "Reduces confusion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وجود الأسرة وأشياء مألوفة.",
+      "en": "Family presence and familiar items."
+     },
+     "rationale": {
+      "ar": "طمأنة.",
+      "en": "Reassurance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "بيئة آمنة وتجنب القيود إلا للضرورة القصوى.",
+      "en": "Safe environment; avoid restraints unless essential."
+     },
+     "rationale": {
+      "ar": "القيود تزيد الهياج.",
+      "en": "Restraints increase agitation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الصوديوم والسكر.",
+      "en": "Monitor sodium and glucose."
+     },
+     "rationale": {
+      "ar": "خللها يسبب التشوش.",
+      "en": "Imbalance causes confusion."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "التفريق بين التشوش وتدهور الوعي (جلاسكو).",
+      "en": "Differentiate confusion from falling GCS."
+     },
+     "rationale": {
+      "ar": "قد يكون تدهورًا خطيرًا.",
+      "en": "May be serious deterioration."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "متوجه يوم 2 — تحقق.",
+      "en": "Oriented on day 2 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التوجيه والأمان",
+      "en": "Orientation and safety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم التوجه والانتباه كل وردية.",
+       "التوجيه المتكرر بهدوء.",
+       "وجود الأسرة وأشياء مألوفة.",
+       "بيئة آمنة وتجنب القيود إلا للضرورة القصوى.",
+       "متابعة الصوديوم والسكر.",
+       "التفريق بين التشوش وتدهور الوعي (جلاسكو)."
+      ],
+      "en": [
+       "Assess orientation and attention every shift.",
+       "Calm frequent reorientation.",
+       "Family presence and familiar items.",
+       "Safe environment; avoid restraints unless essential.",
+       "Monitor sodium and glucose.",
+       "Differentiate confusion from falling GCS."
+      ]
+     },
+     "outcome": {
+      "ar": "توجه وأمان.",
+      "en": "Oriented and safe."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-infection-csf-leak",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى (تسريب السائل النخاعي / جروح الرأس)",
+    "en": "Risk for Infection (CSF Leak / Scalp Wounds)"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة للمخ أو الجروح.",
+    "en": "Susceptibility to CNS or wound infection."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "كسر قاع الجمجمة",
+     "جروح فروة الرأس"
+    ],
+    "en": [
+     "Basal skull fracture",
+     "Scalp lacerations"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"في مية بتنزل من مناخيري.\""
+     ],
+     "en": [
+      "\"Clear fluid is dripping from my nose.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "إفراز شفاف من الأنف، كدمة خلف الأذن."
+     ],
+     "en": [
+      "Clear rhinorrhea; bruising behind the ear."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا حمى أو تيبس رقبة."
+     ],
+     "en": [
+      "During the stay: no fever or neck stiffness."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا التهاب سحائي."
+     ],
+     "en": [
+      "No meningitis."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "اختبار الإفراز (علامة الهالة على الشاش أو الجلوكوز) وإبلاغ الطبيب.",
+      "en": "Test drainage (halo sign or glucose) and inform the physician."
+     },
+     "rationale": {
+      "ar": "تأكيد تسريب السائل النخاعي.",
+      "en": "Confirms CSF leak."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عدم وضع أي شيء في الأنف أو الأذن وعدم الشفط أو إدخال أنبوبة من الأنف.",
+      "en": "Nothing into nose/ear; no nasal suction or nasogastric tube."
+     },
+     "rationale": {
+      "ar": "خطر دخول للمخ.",
+      "en": "Risk of intracranial passage."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "عدم التمخط أو العطس بفم مغلق أو الحزق.",
+      "en": "No nose blowing, closed-mouth sneezing or straining."
+     },
+     "rationale": {
+      "ar": "يزيد التسريب ويدخل البكتيريا.",
+      "en": "Increases leak and bacterial entry."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع شاش معقم خفيف تحت الأنف أو على الأذن بدون سد.",
+      "en": "Loose sterile pad under nose/over ear, not packing."
+     },
+     "rationale": {
+      "ar": "يجمع الإفراز.",
+      "en": "Collects drainage."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الحرارة وتيبس الرقبة والصداع.",
+      "en": "Monitor temperature, neck stiffness and headache."
+     },
+     "rationale": {
+      "ar": "علامات الالتهاب السحائي.",
+      "en": "Meningitis signs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيف وتغطية جروح الرأس بتقنية معقمة.",
+      "en": "Clean and dress scalp wounds aseptically."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "توقف التسريب يوم 4 بدون حمى — تحقق.",
+      "en": "Leak stopped day 4, afebrile — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من العدوى",
+      "en": "Infection prevention"
+     },
+     "actions": {
+      "ar": [
+       "اختبار الإفراز (علامة الهالة على الشاش أو الجلوكوز) وإبلاغ الطبيب.",
+       "عدم وضع أي شيء في الأنف أو الأذن وعدم الشفط أو إدخال أنبوبة من الأنف.",
+       "عدم التمخط أو العطس بفم مغلق أو الحزق.",
+       "وضع شاش معقم خفيف تحت الأنف أو على الأذن بدون سد.",
+       "متابعة الحرارة وتيبس الرقبة والصداع.",
+       "تنظيف وتغطية جروح الرأس بتقنية معقمة."
+      ],
+      "en": [
+       "Test drainage (halo sign or glucose) and inform the physician.",
+       "Nothing into nose/ear; no nasal suction or nasogastric tube.",
+       "No nose blowing, closed-mouth sneezing or straining.",
+       "Loose sterile pad under nose/over ear, not packing.",
+       "Monitor temperature, neck stiffness and headache.",
+       "Clean and dress scalp wounds aseptically."
+      ]
+     },
+     "outcome": {
+      "ar": "لا التهاب سحائي.",
+      "en": "No meningitis."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-head-injury",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (إصابة الرأس والارتجاج)",
+    "en": "Deficient Knowledge (Head injury and concussion)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "خروج بعد إصابة خفيفة"
+    ],
+    "en": [
+     "Discharge after mild injury"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الأم: \"نراقبه إزاي في البيت؟\""
+     ],
+     "en": [
+      "Mother: \"How do we watch him at home?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "جلاسكو 15 عند الخروج."
+     ],
+     "en": [
+      "GCS 15 at discharge."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "وجود شخص بالغ معه أول 24–48 ساعة.",
+      "en": "A responsible adult with him for 24–48 h."
+     },
+     "rationale": {
+      "ar": "ملاحظة التدهور.",
+      "en": "Observe for deterioration."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "علامات العودة فورًا: نعاس شديد، قيء متكرر، صداع يزيد، تشنجات، ضعف طرف، إفراز من الأنف أو الأذن، تشوش.",
+      "en": "Return immediately for: marked drowsiness, repeated vomiting, worsening headache, seizures, limb weakness, nose/ear discharge, confusion."
+     },
+     "rationale": {
+      "ar": "علامات نزيف متأخر.",
+      "en": "Signs of delayed bleed."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "راحة ذهنية وجسدية وتجنب الشاشات والرياضة حتى يسمح الطبيب، وعدم القيادة.",
+      "en": "Physical and cognitive rest; limit screens and sport until cleared; no driving."
+     },
+     "rationale": {
+      "ar": "التعافي من الارتجاج.",
+      "en": "Concussion recovery."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تجنب الكحول والمهدئات والمسكنات القوية.",
+      "en": "Avoid alcohol, sedatives and strong painkillers."
+     },
+     "rationale": {
+      "ar": "تخفي الأعراض.",
+      "en": "Mask symptoms."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف صحي",
+      "en": "Health teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "وجود شخص بالغ معه أول 24–48 ساعة.",
+       "علامات العودة فورًا: نعاس شديد، قيء متكرر، صداع يزيد، تشنجات، ضعف طرف، إفراز من الأنف أو الأذن، تشوش.",
+       "راحة ذهنية وجسدية وتجنب الشاشات والرياضة حتى يسمح الطبيب، وعدم القيادة.",
+       "تجنب الكحول والمهدئات والمسكنات القوية.",
+       "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "A responsible adult with him for 24–48 h.",
+       "Return immediately for: marked drowsiness, repeated vomiting, worsening headache, seizures, limb weakness, nose/ear discharge, confusion.",
+       "Physical and cognitive rest; limit screens and sport until cleared; no driving.",
+       "Avoid alcohol, sedatives and strong painkillers.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -287,13 +1105,10 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "Brain Trauma Foundation — Guidelines for the Management of Severe TBI, 4th ed. (2016)"
   },
   {
-   "title": "Brain Trauma Foundation Guidelines for the Management of Severe TBI (4th ed.)"
-  },
-  {
-   "title": "NICE NG232: Head injury assessment and early management (2023)"
+   "title": "NICE NG232 — Head injury: assessment and early management (2023)"
   }
  ]
 }

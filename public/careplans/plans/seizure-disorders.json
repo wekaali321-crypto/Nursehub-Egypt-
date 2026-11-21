@@ -2,294 +2,1170 @@
  "id": "seizure-disorders",
  "icon": "⚡",
  "system": "neurology",
+ "folder": "disease",
  "title": {
-  "ar": "الصرع ونوبات التشنج",
-  "en": "Seizure Disorders (Epilepsy)"
+  "ar": "الصرع والنوبات التشنجية",
+  "en": "Epilepsy & Seizure Disorders"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض صرع: الأمان أثناء النوبة، الحفاظ على مجرى الهواء، والالتزام بالعلاج.",
-  "en": "Care plan for epilepsy: safety during seizures, airway protection and medication adherence."
+  "ar": "خطة رعاية الصرع: الحماية أثناء النوبة والحالة الصرعية، مجرى الهواء، الالتزام بالأدوية والسلامة، القلق، السقوط، والتثقيف.",
+  "en": "Epilepsy care plan: seizure safety and status epilepticus, airway, drug adherence and safety, anxiety, falls and teaching."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "خطر الإصابة (Risk for injury) مرتبط بنوبات التشنج وفقدان الوعي.",
-    "en": "Risk for injury related to seizure activity and loss of consciousness."
+   "id": "risk-injury-seizure",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الإصابة أثناء النوبة",
+    "en": "Risk for Injury (During Seizure)"
+   },
+   "definition": {
+    "ar": "قابلية لإصابة جسدية أثناء النوبة التشنجية.",
+    "en": "Susceptibility to physical injury during a seizure."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "تشنجات وفقد الوعي",
+     "السقوط المفاجئ"
+    ],
+    "en": [
+     "Convulsions and loss of consciousness",
+     "Sudden fall"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"النوبة بتيجي فجأة ومبفتكرش حاجة بعدها.\""
+      "\"بفوق ألاقي لساني مقطوع وجسمي متكسر.\""
      ],
      "en": [
-      "\"The fits come suddenly and I remember nothing afterwards.\""
+      "\"I wake up with a bitten tongue and aching body.\""
      ]
     },
     "objective": {
      "ar": [
-      "نوبتين تشنج عام (Tonic-clonic) خلال 24 ساعة.",
-      "عضة في اللسان وكدمة في الجبهة.",
-      "مستوى دواء الصرع في الدم منخفض."
+      "نوبتان تشنجيتان عامتان خلال 24 ساعة."
      ],
      "en": [
-      "Two generalized tonic-clonic seizures in 24 hours.",
-      "Tongue bite and forehead bruise.",
-      "Low antiepileptic drug level."
+      "Two generalized tonic-clonic seizures in 24 h."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء الإقامة لا تحدث إصابة أثناء أي نوبة، ويُعطى العلاج الطارئ إذا استمرت النوبة أكثر من 5 دقائق."
-    ],
-    "en": [
-     "During the stay no injury occurs during seizures, and emergency treatment is given if a seizure lasts over 5 minutes."
-    ]
+    "short": {
+     "ar": [
+      "أثناء أي نوبة: لا إصابة."
+     ],
+     "en": [
+      "During any seizure: no injury."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال الإقامة: لا إصابات مرتبطة بالنوبات."
+     ],
+     "en": [
+      "Throughout the stay: no seizure-related injuries."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "independent",
      "action": {
-      "ar": "احتياطات النوبات: سرير منخفض، جوانب مبطنة، وجهاز شفط وأكسجين جاهزين.",
-      "en": "Seizure precautions: low bed, padded side rails, suction and oxygen ready."
+      "ar": "احتياطات النوبات: سرير منخفض بحواجز مبطنة، وجهاز الشفط والأكسجين جاهز بجانب السرير.",
+      "en": "Seizure precautions: low bed with padded rails; suction and oxygen ready."
      },
      "rationale": {
-      "ar": "تقلل الإصابة وتسمح بالتدخل الفوري.",
-      "en": "Reduce injury and allow immediate action."
+      "ar": "جاهزية وحماية.",
+      "en": "Readiness and protection."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "أثناء النوبة: البقاء مع المريض، إبعاد الأشياء الخطرة، وضع شيء ناعم تحت الرأس، وعدم تقييده أو وضع أي شيء في فمه.",
-      "en": "During a seizure: stay with the patient, remove hazards, cushion the head; never restrain or put anything in the mouth."
+      "ar": "أثناء النوبة: البقاء مع المريض، إبعاد الأشياء الصلبة، حماية الرأس، وفك الملابس الضيقة.",
+      "en": "During a seizure: stay, clear hard objects, protect the head, loosen tight clothing."
      },
      "rationale": {
-      "ar": "التقييد أو الأشياء في الفم تسبب كسور وإصابات بالأسنان والمجرى الهوائي.",
-      "en": "Restraint or objects in the mouth cause fractures and airway/teeth injury."
+      "ar": "يمنع الإصابة.",
+      "en": "Prevents injury."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "بعد النوبة: وضع المريض على جنبه (Recovery position) وشفط الإفرازات.",
-      "en": "After the seizure: place in the recovery (lateral) position and suction secretions."
+      "ar": "عدم تقييد حركة المريض وعدم وضع أي شيء في فمه.",
+      "en": "Do not restrain or put anything in the mouth."
      },
      "rationale": {
-      "ar": "يحافظ على مجرى الهواء ويمنع الشرقة.",
-      "en": "Protects the airway and prevents aspiration."
+      "ar": "يسبب كسورًا وإصابة الأسنان ومجرى الهواء.",
+      "en": "Causes fractures, dental and airway injury."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "تسجيل وقت بداية النوبة ومدتها وشكلها وما بعدها.",
-      "en": "Record onset time, duration, type and post-ictal state."
+      "ar": "بعد التشنج: وضع المريض على جانبه (وضع الإفاقة) وشفط الإفرازات.",
+      "en": "After convulsions: recovery position and suction."
      },
      "rationale": {
-      "ar": "يساعد في التشخيص واختيار العلاج.",
-      "en": "Supports diagnosis and treatment choice."
+      "ar": "يحمي مجرى الهواء.",
+      "en": "Protects the airway."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "إعطاء البنزوديازيبين (Lorazepam / Diazepam / Midazolam) حسب الأمر إذا استمرت النوبة 5 دقائق.",
-      "en": "Give a benzodiazepine (lorazepam / diazepam / midazolam) as ordered if the seizure lasts 5 minutes."
+      "ar": "تسجيل النوبة: الوقت، المدة، نوع الحركة، البداية، العينين، فقد التحكم في البول، وحالة ما بعد النوبة.",
+      "en": "Document: time, duration, movements, onset, eyes, incontinence and post-ictal state."
      },
      "rationale": {
-      "ar": "النوبة المستمرة (Status epilepticus) حالة طارئة تهدد الحياة.",
-      "en": "Status epilepticus is a life-threatening emergency."
+      "ar": "يساعد التشخيص والعلاج.",
+      "en": "Aids diagnosis and treatment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إذا استمرت النوبة > 5 دقائق: إعطاء البنزوديازيبين (لورازيبام/ميدازولام) حسب البروتوكول وطلب الطبيب — حالة صرعية.",
+      "en": "If seizure > 5 minutes: benzodiazepine (lorazepam/midazolam) per protocol and call the doctor — status epilepticus."
+     },
+     "rationale": {
+      "ar": "طوارئ تهدد الحياة.",
+      "en": "Life-threatening emergency."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "بعد النوبة: متابعة الوعي والتنفس والتشبع والإصابات.",
+      "en": "Post-ictal: monitor consciousness, breathing, SpO₂ and injuries."
+     },
+     "rationale": {
+      "ar": "كشف المضاعفات.",
+      "en": "Detects complications."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "حدثت نوبة واحدة دقيقتين دون إصابة، والمريض وُضع على جنبه. — تحقق الهدف."
-    ],
-    "en": [
-     "One 2-minute seizure occurred without injury; patient placed in recovery position. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "حدثت نوبة واحدة بدون إصابة وتم تسجيلها — تحقق.",
+      "en": "One seizure without injury, documented — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "احتياطات النوبات",
+      "en": "Seizure precautions"
+     },
+     "actions": {
+      "ar": [
+       "احتياطات النوبات: سرير منخفض بحواجز مبطنة، وجهاز الشفط والأكسجين جاهز بجانب السرير."
+      ],
+      "en": [
+       "Seizure precautions: low bed with padded rails; suction and oxygen ready."
+      ]
+     },
+     "outcome": {
+      "ar": "سرير آمن وأدوات جاهزة.",
+      "en": "Safe bed, equipment ready."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    },
+    {
+     "need": {
+      "ar": "التعامل مع النوبة",
+      "en": "Seizure management"
+     },
+     "actions": {
+      "ar": [
+       "أثناء النوبة: البقاء مع المريض، إبعاد الأشياء الصلبة، حماية الرأس، وفك الملابس الضيقة.",
+       "عدم تقييد حركة المريض وعدم وضع أي شيء في فمه.",
+       "بعد التشنج: وضع المريض على جانبه (وضع الإفاقة) وشفط الإفرازات.",
+       "تسجيل النوبة: الوقت، المدة، نوع الحركة، البداية، العينين، فقد التحكم في البول، وحالة ما بعد النوبة.",
+       "بعد النوبة: متابعة الوعي والتنفس والتشبع والإصابات."
+      ],
+      "en": [
+       "During a seizure: stay, clear hard objects, protect the head, loosen tight clothing.",
+       "Do not restrain or put anything in the mouth.",
+       "After convulsions: recovery position and suction.",
+       "Document: time, duration, movements, onset, eyes, incontinence and post-ictal state.",
+       "Post-ictal: monitor consciousness, breathing, SpO₂ and injuries."
+      ]
+     },
+     "outcome": {
+      "ar": "لا إصابة.",
+      "en": "No injury."
+     },
+     "timeframe": {
+      "ar": "أثناء وبعد النوبة",
+      "en": "During and after"
+     }
+    },
+    {
+     "need": {
+      "ar": "الحالة الصرعية",
+      "en": "Status epilepticus"
+     },
+     "actions": {
+      "ar": [
+       "إذا استمرت النوبة > 5 دقائق: إعطاء البنزوديازيبين (لورازيبام/ميدازولام) حسب البروتوكول وطلب الطبيب — حالة صرعية."
+      ],
+      "en": [
+       "If seizure > 5 minutes: benzodiazepine (lorazepam/midazolam) per protocol and call the doctor — status epilepticus."
+      ]
+     },
+     "outcome": {
+      "ar": "توقف النوبة.",
+      "en": "Seizure terminated."
+     },
+     "timeframe": {
+      "ar": "خلال 5 دقائق",
+      "en": "Within 5 min"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "عدم فعالية إدارة الصحة الذاتية (Ineffective health self-management) مرتبطة بعدم الانتظام في دواء الصرع ويظهر في انخفاض مستواه في الدم.",
-    "en": "Ineffective health self-management related to irregular antiepileptic use as evidenced by a low drug level."
+   "id": "risk-ineffective-airway-seizure",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدم فعالية تنظيف مجرى الهواء",
+    "en": "Risk for Ineffective Airway Clearance"
+   },
+   "definition": {
+    "ar": "قابلية لانسداد مجرى الهواء أثناء أو بعد النوبة.",
+    "en": "Susceptibility to airway obstruction during or after a seizure."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "سقوط اللسان",
+     "زيادة اللعاب",
+     "الشفط"
+    ],
+    "en": [
+     "Tongue obstruction",
+     "Hypersalivation",
+     "Aspiration"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"بنسى الجرعة كتير، وكنت سهران كذا يوم.\""
+      "لا يتذكر ما حدث."
      ],
      "en": [
-      "\"I often miss doses, and I've had several sleepless nights.\""
+      "No recall of events."
      ]
     },
     "objective": {
      "ar": [
-      "مستوى الدواء أقل من المدى العلاجي."
+      "زبد في الفم بعد النوبة، التشبع 89%."
      ],
      "en": [
-      "Drug level below therapeutic range."
+      "Frothing post-seizure; SpO₂ 89%."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "قبل الخروج يذكر المريض أهمية الانتظام، و3 محفزات للنوبات، وقيود السلامة (القيادة والسباحة)."
-    ],
-    "en": [
-     "Before discharge the patient states the importance of adherence, 3 seizure triggers and safety restrictions (driving, swimming)."
-    ]
+    "short": {
+     "ar": [
+      "بعد النوبة: تشبع ≥ 94% خلال 10 دقائق."
+     ],
+     "en": [
+      "After a seizure: SpO₂ ≥ 94% within 10 minutes."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا التهاب رئوي من الشفط."
+     ],
+     "en": [
+      "No aspiration pneumonia."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "independent",
      "action": {
-      "ar": "شرح أن الدواء يُؤخذ يوميًا في مواعيد ثابتة ولا يُوقف فجأة.",
-      "en": "Explain daily fixed-time dosing and never stopping suddenly."
+      "ar": "وضع الإفاقة على الجانب بعد التشنج.",
+      "en": "Recovery position after convulsions."
      },
      "rationale": {
-      "ar": "الإيقاف المفاجئ قد يسبب نوبات متكررة مستمرة.",
-      "en": "Abrupt withdrawal can cause status epilepticus."
+      "ar": "يصرف الإفرازات.",
+      "en": "Drains secretions."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "استخدام منبه أو علبة أدوية أسبوعية.",
-      "en": "Use alarms or a weekly pill organizer."
+      "ar": "شفط الفم.",
+      "en": "Oral suction."
      },
      "rationale": {
-      "ar": "يقلل نسيان الجرعات.",
+      "ar": "يفتح مجرى الهواء.",
+      "en": "Clears the airway."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "أكسجين بالقناع.",
+      "en": "Oxygen by mask."
+     },
+     "rationale": {
+      "ar": "يعالج نقص الأكسجين.",
+      "en": "Treats hypoxia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة التنفس والتشبع حتى الإفاقة الكاملة.",
+      "en": "Monitor breathing and SpO₂ until fully awake."
+     },
+     "rationale": {
+      "ar": "المهدئات تثبط التنفس.",
+      "en": "Sedatives depress breathing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عدم إعطاء أي شيء بالفم حتى الإفاقة الكاملة.",
+      "en": "Nothing by mouth until fully alert."
+     },
+     "rationale": {
+      "ar": "يمنع الشفط.",
+      "en": "Prevents aspiration."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "سماع الصدر بعد النوبة.",
+      "en": "Auscultate after the seizure."
+     },
+     "rationale": {
+      "ar": "كشف الشفط.",
+      "en": "Detects aspiration."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 96% بعد 5 دقائق — تحقق.",
+      "en": "SpO₂ 96% at 5 minutes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية مجرى الهواء",
+      "en": "Protect the airway"
+     },
+     "actions": {
+      "ar": [
+       "وضع الإفاقة على الجانب بعد التشنج.",
+       "شفط الفم.",
+       "أكسجين بالقناع.",
+       "متابعة التنفس والتشبع حتى الإفاقة الكاملة.",
+       "عدم إعطاء أي شيء بالفم حتى الإفاقة الكاملة.",
+       "سماع الصدر بعد النوبة."
+      ],
+      "en": [
+       "Recovery position after convulsions.",
+       "Oral suction.",
+       "Oxygen by mask.",
+       "Monitor breathing and SpO₂ until fully awake.",
+       "Nothing by mouth until fully alert.",
+       "Auscultate after the seizure."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع ≥ 94%.",
+      "en": "SpO₂ ≥ 94%."
+     },
+     "timeframe": {
+      "ar": "بعد كل نوبة",
+      "en": "After each seizure"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ineffective-health-management-epilepsy",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية إدارة الصحة (الالتزام بمضادات الصرع)",
+    "en": "Ineffective Health Self-Management (Antiepileptic Adherence)"
+   },
+   "definition": {
+    "ar": "صعوبة في تنظيم علاج الصرع.",
+    "en": "Difficulty managing epilepsy treatment."
+   },
+   "relatedTo": {
+    "ar": [
+     "نسيان الجرعات",
+     "الأعراض الجانبية"
+    ],
+    "en": [
+     "Missed doses",
+     "Side effects"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "نوبات بسبب عدم الانتظام",
+     "مستوى دواء منخفض"
+    ],
+    "en": [
+     "Breakthrough seizures from non-adherence",
+     "Low drug level"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بنسى الدوا ساعات.\""
+     ],
+     "en": [
+      "\"Sometimes I forget my pills.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مستوى الفينيتوين منخفض."
+     ],
+     "en": [
+      "Low phenytoin level."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يذكر جرعات ومواعيد أدويته ومحفزات النوبات."
+     ],
+     "en": [
+      "Before discharge: states doses, times and triggers."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 6 أشهر: لا نوبات بسبب عدم الالتزام."
+     ],
+     "en": [
+      "Within 6 months: no breakthrough seizures."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "teach",
+     "action": {
+      "ar": "أخذ الدواء في نفس الوقت يوميًا وعدم إيقافه فجأة.",
+      "en": "Take at the same time daily; never stop abruptly."
+     },
+     "rationale": {
+      "ar": "الإيقاف المفاجئ يسبب حالة صرعية.",
+      "en": "Abrupt withdrawal causes status epilepticus."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "منبه الموبايل وعلبة الأدوية الأسبوعية.",
+      "en": "Phone alarm and weekly pill box."
+     },
+     "rationale": {
+      "ar": "يقلل النسيان.",
       "en": "Reduces missed doses."
      }
     },
     {
+     "type": "teach",
      "action": {
-      "ar": "تعليم المحفزات: السهر، الضغط النفسي، الكحول، الحرارة، الأضواء الوامضة لبعض المرضى.",
-      "en": "Teach triggers: sleep deprivation, stress, alcohol, fever, flashing lights for some patients."
+      "ar": "المحفزات: قلة النوم، الضغط النفسي، الكحول، الأضواء المتقطعة، الحمى، نسيان الدواء.",
+      "en": "Triggers: sleep deprivation, stress, alcohol, flashing lights, fever, missed doses."
      },
      "rationale": {
-      "ar": "تجنبها يقلل عدد النوبات.",
+      "ar": "تجنبها يقلل النوبات.",
       "en": "Avoidance reduces seizures."
      }
     },
     {
+     "type": "teach",
      "action": {
-      "ar": "مناقشة السلامة: عدم القيادة حسب القانون، عدم السباحة وحده، الاستحمام بالدش.",
-      "en": "Discuss safety: no driving per local law, never swim alone, prefer showers."
+      "ar": "الأعراض الجانبية (تضخم اللثة مع الفينيتوين، النعاس) وتحاليل المستوى الدوري.",
+      "en": "Side effects (gum hyperplasia with phenytoin, drowsiness) and regular level checks."
      },
      "rationale": {
-      "ar": "النوبة أثناء هذه الأنشطة قد تكون قاتلة.",
-      "en": "A seizure during these activities can be fatal."
+      "ar": "متابعة آمنة.",
+      "en": "Safe monitoring."
      }
     },
     {
+     "type": "teach",
      "action": {
-      "ar": "تعليم الأسرة الإسعافات الأولية للنوبة.",
-      "en": "Teach the family seizure first aid."
+      "ar": "السلامة: عدم القيادة حسب القانون حتى فترة خالية من النوبات، الاستحمام بالدش لا البانيو، عدم السباحة منفردًا.",
+      "en": "Safety: no driving per law until seizure-free; shower not bath; never swim alone."
      },
      "rationale": {
-      "ar": "تصرف صحيح يمنع الإصابات.",
-      "en": "Correct response prevents injury."
+      "ar": "يمنع الإصابات الخطيرة.",
+      "en": "Prevents serious injury."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "للسيدات: التخطيط للحمل مع الطبيب (بعض الأدوية تضر الجنين) وتأثير الأدوية على حبوب منع الحمل.",
+      "en": "Women: plan pregnancy with the doctor (some drugs are teratogenic); interactions with contraceptives."
+     },
+     "rationale": {
+      "ar": "سلامة الأم والجنين.",
+      "en": "Maternal and fetal safety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأسرة الإسعافات الأولية للنوبة ومتى تطلب الإسعاف (> 5 دقائق أو إصابة).",
+      "en": "Teach family seizure first aid and when to call an ambulance (> 5 min or injury)."
+     },
+     "rationale": {
+      "ar": "تصرف آمن.",
+      "en": "Safe response."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "حمل بطاقة أو سوار طبي.",
+      "en": "Carry a medical ID."
+     },
+     "rationale": {
+      "ar": "مساعدة سريعة.",
+      "en": "Rapid help."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "المريض ذكر المحفزات وقيود السلامة، والأسرة شرحت الإسعافات بشكل صحيح. — تحقق الهدف."
-    ],
-    "en": [
-     "Patient named triggers and restrictions; family explained first aid correctly. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "خطر الإصابة أثناء النوبة",
-    "en": "Risk for injury during seizures"
-   },
-   "need": {
-    "ar": "الأمان",
-    "en": "Safety"
-   },
-   "actions": {
-    "ar": [
-     "سرير منخفض وجوانب مبطنة",
-     "شفط وأكسجين جاهز",
-     "وضع الجانب بعد النوبة"
-    ],
-    "en": [
-     "Low bed, padded rails",
-     "Suction and oxygen ready",
-     "Recovery position after seizure"
-    ]
-   },
-   "outcome": {
-    "ar": "لا إصابة",
-    "en": "No injury"
-   },
-   "timeframe": {
-    "ar": "طوال الإقامة",
-    "en": "Throughout stay"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يذكر أدويته ومحفزاته والأسرة تعرف الإسعافات — تحقق.",
+      "en": "States drugs and triggers; family knows first aid — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الالتزام بالعلاج",
+      "en": "Treatment adherence"
+     },
+     "actions": {
+      "ar": [
+       "أخذ الدواء في نفس الوقت يوميًا وعدم إيقافه فجأة.",
+       "منبه الموبايل وعلبة الأدوية الأسبوعية.",
+       "الأعراض الجانبية (تضخم اللثة مع الفينيتوين، النعاس) وتحاليل المستوى الدوري."
+      ],
+      "en": [
+       "Take at the same time daily; never stop abruptly.",
+       "Phone alarm and weekly pill box.",
+       "Side effects (gum hyperplasia with phenytoin, drowsiness) and regular level checks."
+      ]
+     },
+     "outcome": {
+      "ar": "أخذ منتظم.",
+      "en": "Regular intake."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    },
+    {
+     "need": {
+      "ar": "السلامة والتثقيف",
+      "en": "Safety and teaching"
+     },
+     "actions": {
+      "ar": [
+       "المحفزات: قلة النوم، الضغط النفسي، الكحول، الأضواء المتقطعة، الحمى، نسيان الدواء.",
+       "السلامة: عدم القيادة حسب القانون حتى فترة خالية من النوبات، الاستحمام بالدش لا البانيو، عدم السباحة منفردًا.",
+       "للسيدات: التخطيط للحمل مع الطبيب (بعض الأدوية تضر الجنين) وتأثير الأدوية على حبوب منع الحمل.",
+       "تعليم الأسرة الإسعافات الأولية للنوبة ومتى تطلب الإسعاف (> 5 دقائق أو إصابة).",
+       "حمل بطاقة أو سوار طبي."
+      ],
+      "en": [
+       "Triggers: sleep deprivation, stress, alcohol, flashing lights, fever, missed doses.",
+       "Safety: no driving per law until seizure-free; shower not bath; never swim alone.",
+       "Women: plan pregnancy with the doctor (some drugs are teratogenic); interactions with contraceptives.",
+       "Teach family seizure first aid and when to call an ambulance (> 5 min or injury).",
+       "Carry a medical ID."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض والأسرة يعرفون الاحتياطات.",
+      "en": "Patient and family know precautions."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر عدم فعالية مجرى الهواء",
-    "en": "Risk for ineffective airway"
+   "id": "anxiety-seizure",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
    },
-   "need": {
-    "ar": "مجرى هواء آمن",
-    "en": "Airway protection"
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "لا شيء في الفم",
-     "شفط الإفرازات",
-     "تسجيل مدة النوبة"
+     "عدم توقع النوبات والوصمة"
     ],
     "en": [
-     "Nothing in the mouth",
-     "Suction secretions",
-     "Time the seizure"
+     "Unpredictable seizures and stigma"
     ]
    },
-   "outcome": {
-    "ar": "تشبع طبيعي بعد النوبة",
-    "en": "Normal SpO₂ after seizure"
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
    },
-   "timeframe": {
-    "ar": "أثناء وبعد كل نوبة",
-    "en": "During and after each seizure"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"خايف تجيلي نوبة قدام الناس في الشغل.\""
+     ],
+     "en": [
+      "\"I'm afraid of having a seizure in front of people at work.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قلق، يسأل عن العمل والزواج."
+     ],
+     "en": [
+      "Anxious; asks about work and marriage."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواجد مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق والاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+       "التواجد مع المريض والتحدث بهدوء وثقة.",
+       "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "تعليم التنفس البطيء العميق والاسترخاء.",
+       "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "عدم الالتزام بالعلاج",
-    "en": "Non-adherence"
+   "id": "risk-falls-seizure",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر السقوط (أدوية الصرع وما بعد النوبة)",
+    "en": "Risk for Falls (Antiepileptics and Post-ictal State)"
    },
-   "need": {
-    "ar": "تثقيف المريض والأسرة",
-    "en": "Teach patient and family"
+   "definition": {
+    "ar": "قابلية متزايدة للسقوط.",
+    "en": "Increased susceptibility to falling."
    },
-   "actions": {
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
     "ar": [
-     "مواعيد ثابتة للدواء",
-     "تجنب المحفزات",
-     "إسعافات النوبة للأسرة"
+     "نعاس ودوخة من الأدوية",
+     "تشوش ما بعد النوبة"
     ],
     "en": [
-     "Fixed dosing times",
-     "Avoid triggers",
-     "Seizure first aid for family"
+     "Drowsiness and dizziness from drugs",
+     "Post-ictal confusion"
     ]
    },
-   "outcome": {
-    "ar": "المريض والأسرة يشرحوا الخطة",
-    "en": "Patient and family explain the plan"
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بحس بدوخة من الدوا الجديد.\""
+     ],
+     "en": [
+      "\"The new drug makes me dizzy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بدأ ليفيتيراسيتام، ترنح بسيط."
+     ],
+     "en": [
+      "Started levetiracetam; mild unsteadiness."
+     ]
+    }
    },
-   "timeframe": {
-    "ar": "قبل الخروج",
-    "en": "Before discharge"
-   }
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا سقوط."
+     ],
+     "en": [
+      "During the stay: no falls."
+     ]
+    },
+    "long": {
+     "ar": [
+      "في البيت: لا سقوط."
+     ],
+     "en": [
+      "At home: no falls."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم خطر السقوط بعد بدء أو زيادة الدواء.",
+      "en": "Assess fall risk after starting or increasing drugs."
+     },
+     "rationale": {
+      "ar": "التغيرات الدوائية تزيد الخطر.",
+      "en": "Drug changes raise risk."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "مساعدة المريض في الحركة أثناء فترة ما بعد النوبة.",
+      "en": "Assist mobility during the post-ictal period."
+     },
+     "rationale": {
+      "ar": "التشوش يسبب السقوط.",
+      "en": "Confusion causes falls."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "سرير منخفض وجرس قريب.",
+      "en": "Low bed, bell in reach."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "القيام ببطء.",
+      "en": "Rise slowly."
+     },
+     "rationale": {
+      "ar": "يقلل الدوخة.",
+      "en": "Reduces dizziness."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عن الدوخة المستمرة لتعديل الجرعة.",
+      "en": "Report persistent dizziness for dose review."
+     },
+     "rationale": {
+      "ar": "تعديل العلاج.",
+      "en": "Adjust therapy."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "بيئة البيت الآمنة (حواف مبطنة، أرضية غير زلقة).",
+      "en": "Safe home (padded edges, non-slip floor)."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا سقوط — تحقق.",
+      "en": "No falls — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من السقوط",
+      "en": "Fall prevention"
+     },
+     "actions": {
+      "ar": [
+       "تقييم خطر السقوط بعد بدء أو زيادة الدواء.",
+       "مساعدة المريض في الحركة أثناء فترة ما بعد النوبة.",
+       "سرير منخفض وجرس قريب.",
+       "القيام ببطء.",
+       "إبلاغ الطبيب عن الدوخة المستمرة لتعديل الجرعة.",
+       "بيئة البيت الآمنة (حواف مبطنة، أرضية غير زلقة)."
+      ],
+      "en": [
+       "Assess fall risk after starting or increasing drugs.",
+       "Assist mobility during the post-ictal period.",
+       "Low bed, bell in reach.",
+       "Rise slowly.",
+       "Report persistent dizziness for dose review.",
+       "Safe home (padded edges, non-slip floor)."
+      ]
+     },
+     "outcome": {
+      "ar": "لا سقوط.",
+      "en": "No falls."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-epilepsy",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (الصرع)",
+    "en": "Deficient Knowledge (Epilepsy)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "تشخيص جديد"
+    ],
+    "en": [
+     "New diagnosis"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هل الصرع ده جنان؟ هقدر أشتغل وأتجوز؟\""
+     ],
+     "en": [
+      "\"Is epilepsy madness? Can I work and marry?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "معلومات خاطئة عن المرض."
+     ],
+     "en": [
+      "Misconceptions about the disease."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح أن الصرع اضطراب كهربي في المخ، وأن معظم المرضى تتحكم الأدوية في نوباتهم ويعيشون حياة طبيعية.",
+      "en": "Epilepsy is an electrical brain disorder; most patients are controlled by drugs and live normally."
+     },
+     "rationale": {
+      "ar": "يصحح المفاهيم.",
+      "en": "Corrects misconceptions."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تسجيل النوبات في مفكرة (التاريخ، المدة، المحفز).",
+      "en": "Keep a seizure diary (date, duration, trigger)."
+     },
+     "rationale": {
+      "ar": "يساعد الطبيب.",
+      "en": "Helps the physician."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "نمط حياة منتظم: نوم كافٍ وأكل منتظم وتقليل التوتر.",
+      "en": "Regular lifestyle: adequate sleep, meals and stress control."
+     },
+     "rationale": {
+      "ar": "يقلل النوبات.",
+      "en": "Reduces seizures."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "الحق في التعليم والعمل والزواج، وإخبار المقربين وزملاء العمل بالإسعافات الأولية للنوبة.",
+      "en": "Right to education, work and marriage; tell close people and colleagues seizure first aid."
+     },
+     "rationale": {
+      "ar": "يقلل الوصمة ويزيد الأمان.",
+      "en": "Reduces stigma; improves safety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف صحي",
+      "en": "Health teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "شرح أن الصرع اضطراب كهربي في المخ، وأن معظم المرضى تتحكم الأدوية في نوباتهم ويعيشون حياة طبيعية.",
+       "تسجيل النوبات في مفكرة (التاريخ، المدة، المحفز).",
+       "نمط حياة منتظم: نوم كافٍ وأكل منتظم وتقليل التوتر.",
+       "الحق في التعليم والعمل والزواج، وإخبار المقربين وزملاء العمل بالإسعافات الأولية للنوبة.",
+       "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Epilepsy is an electrical brain disorder; most patients are controlled by drugs and live normally.",
+       "Keep a seizure diary (date, duration, trigger).",
+       "Regular lifestyle: adequate sleep, meals and stress control.",
+       "Right to education, work and marriage; tell close people and colleagues seizure first aid.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -297,10 +1173,10 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "NICE NG217 — Epilepsies in children, young people and adults (2022)"
   },
   {
-   "title": "NICE NG217: Epilepsies in children, young people and adults (2022)"
+   "title": "AES Guideline — Treatment of Convulsive Status Epilepticus (2016)"
   }
  ]
 }

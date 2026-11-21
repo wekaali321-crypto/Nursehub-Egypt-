@@ -2,286 +2,1372 @@
  "id": "stroke",
  "icon": "🧠",
  "system": "neurology",
+ "folder": "disease",
  "title": {
-  "ar": "السكتة الدماغية (جلطة المخ)",
-  "en": "Stroke (Cerebrovascular Accident)"
+  "ar": "السكتة الدماغية",
+  "en": "Stroke (CVA)"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض سكتة دماغية: تروية المخ، الوقاية من الشرقة، والحركة والوقاية من قرح الفراش.",
-  "en": "Care plan for stroke: cerebral perfusion, aspiration prevention, mobility and pressure-injury prevention."
+  "ar": "خطة رعاية السكتة الدماغية: تروية المخ والمذيب، البلع، الحركة والشلل النصفي، التواصل والحبسة، العناية الذاتية، الأمان، والوقاية من التكرار.",
+  "en": "Stroke care plan: cerebral perfusion and thrombolysis, swallowing, hemiplegia and mobility, aphasia, self-care, safety and secondary prevention."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "خطر الشرقة (Risk for aspiration) مرتبط بضعف البلع (Dysphagia) ونقص مستوى الوعي.",
-    "en": "Risk for aspiration related to dysphagia and decreased level of consciousness."
+   "id": "ineffective-cerebral-perfusion-stroke",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية تروية أنسجة المخ",
+    "en": "Ineffective Cerebral Tissue Perfusion"
+   },
+   "definition": {
+    "ar": "نقص الدورة الدموية في المخ قد يؤثر على الصحة.",
+    "en": "Decreased cerebral circulation that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [
+     "انسداد شريان بالمخ بجلطة أو نزيف"
+    ],
+    "en": [
+     "Cerebral artery occlusion or haemorrhage"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ضعف نصفي وميل الوجه",
+     "صعوبة الكلام",
+     "تغير مستوى الوعي"
+    ],
+    "en": [
+     "Hemiparesis and facial droop",
+     "Speech difficulty",
+     "Altered consciousness"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "الأسرة: \"بيكح كتير وهو بيشرب.\""
+      "الابن: \"أبويا صحي مش قادر يحرك إيده اليمين وكلامه تقيل.\""
      ],
      "en": [
-      "Family: \"He coughs a lot when drinking.\""
+      "Son: \"Dad woke up unable to move his right arm and his speech is slurred.\""
      ]
     },
     "objective": {
      "ar": [
-      "ارتخاء في الجانب الأيمن من الوجه وسيلان اللعاب.",
-      "فشل اختبار البلع بالماء عند السرير (Bedside swallow screen).",
-      "مقياس جلاسكو GCS ‏13/15."
+      "مقياس NIHSS = 9، جلاسكو 14.",
+      "الضغط 186/100.",
+      "أشعة مقطعية: لا نزيف."
      ],
      "en": [
-      "Right facial droop and drooling.",
-      "Failed bedside water-swallow screen.",
-      "GCS 13/15."
+      "NIHSS 9, GCS 14.",
+      "BP 186/100.",
+      "CT: no haemorrhage."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء الإقامة لا يحدث شرقة أو التهاب رئوي بسبب الشرقة (رئة سليمة، حرارة طبيعية)."
-    ],
-    "en": [
-     "During the stay no aspiration or aspiration pneumonia occurs (clear lungs, normal temperature)."
-    ]
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: لا تدهور في مقياس NIHSS أو الوعي."
+     ],
+     "en": [
+      "Within 24 h: no worsening in NIHSS or consciousness."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تحسن الوظائف العصبية قبل الخروج."
+     ],
+     "en": [
+      "Improving neurological function before discharge."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "منع الأكل والشرب بالفم (NPO) حتى يتم تقييم البلع من المختص.",
-      "en": "Keep NPO until a formal swallowing assessment is done."
+      "ar": "تقييم عصبي (الوعي بجلاسكو، الحدقتين، قوة الأطراف، الكلام، NIHSS) كل ساعة أول 24 ساعة.",
+      "en": "Neuro checks (GCS, pupils, limb power, speech, NIHSS) hourly for 24 h."
      },
      "rationale": {
-      "ar": "البلع غير الآمن يدخل الطعام للرئة.",
-      "en": "Unsafe swallowing lets food enter the lungs."
+      "ar": "يكشف امتداد الجلطة أو النزيف.",
+      "en": "Detects extension or haemorrhagic transformation."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "رفع رأس السرير 30–45° أثناء الأكل وبعده بـ 30 دقيقة.",
-      "en": "Elevate the head of bed 30–45° during and 30 minutes after meals."
+      "ar": "تسجيل وقت بداية الأعراض والتحضير لمذيب الجلطة أو القسطرة خلال النافذة الزمنية.",
+      "en": "Record symptom onset and prepare for thrombolysis or thrombectomy within the window."
      },
      "rationale": {
-      "ar": "الجاذبية تقلل رجوع الطعام والشرقة.",
-      "en": "Gravity reduces reflux and aspiration."
+      "ar": "الوقت = المخ.",
+      "en": "Time is brain."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "عند السماح بالأكل: قوام مُعدّل (مهروس/سوائل مُكثّفة) وإطعام من الجانب السليم ببطء.",
-      "en": "When allowed: modified texture (puréed/thickened fluids), feed slowly on the unaffected side."
+      "ar": "ضبط الضغط حسب البروتوكول (< 185/110 قبل المذيب و< 180/105 بعده؛ عدم خفضه بقوة إذا لم يُعطَ مذيب).",
+      "en": "Manage BP per protocol (< 185/110 before lysis, < 180/105 after; avoid aggressive lowering without lysis)."
      },
      "rationale": {
-      "ar": "القوام المناسب والجانب السليم يحسنان التحكم في البلع.",
-      "en": "Appropriate texture and the unaffected side improve swallow control."
+      "ar": "الضغط يحافظ على تروية المنطقة المهددة.",
+      "en": "BP maintains penumbral perfusion."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "تجهيز جهاز الشفط بجوار السرير.",
-      "en": "Keep suction ready at the bedside."
+      "ar": "رفع رأس السرير 30 درجة مع استقامة الرقبة (أو حسب أمر الطبيب).",
+      "en": "HOB 30° with neck midline (or as ordered)."
      },
      "rationale": {
-      "ar": "لإزالة الإفرازات أو الطعام فورًا عند الشرقة.",
-      "en": "To clear secretions or food immediately if aspiration occurs."
+      "ar": "يحسن الرجوع الوريدي من المخ.",
+      "en": "Improves cerebral venous drainage."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "عناية بالفم مرتين يوميًا على الأقل.",
-      "en": "Provide oral care at least twice daily."
+      "ar": "الحفاظ على التشبع > 94% والسكر 140–180 والحرارة طبيعية.",
+      "en": "Keep SpO₂ > 94%, glucose 140–180, normothermia."
      },
      "rationale": {
-      "ar": "تقلل البكتيريا في الفم وخطر الالتهاب الرئوي.",
-      "en": "Reduces oral bacteria and pneumonia risk."
+      "ar": "نقص الأكسجين وارتفاع السكر والحرارة يزيدون التلف.",
+      "en": "Hypoxia, hyperglycemia and fever worsen injury."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "بعد المذيب: فحص عصبي كل 15 دقيقة لساعتين وملاحظة النزيف والصداع.",
+      "en": "After lysis: neuro checks every 15 minutes for 2 h; watch for bleeding and headache."
+     },
+     "rationale": {
+      "ar": "كشف النزيف بالمخ.",
+      "en": "Detects intracranial bleeding."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء مضاد الصفائح أو مضاد التجلط حسب نوع السكتة وتوقيت الطبيب.",
+      "en": "Give antiplatelet or anticoagulant per stroke type and timing."
+     },
+     "rationale": {
+      "ar": "يمنع التكرار.",
+      "en": "Prevents recurrence."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "لم يحدث شرقة، الرئة سليمة، والحرارة طبيعية طوال الإقامة. — تحقق الهدف."
-    ],
-    "en": [
-     "No aspiration, clear lungs and normal temperature throughout the stay. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "NIHSS تحسن من 9 إلى 6 خلال 24 ساعة — تحقق.",
+      "en": "NIHSS improved from 9 to 6 in 24 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التقييم العصبي",
+      "en": "Neuro assessment"
+     },
+     "actions": {
+      "ar": [
+       "تقييم عصبي (الوعي بجلاسكو، الحدقتين، قوة الأطراف، الكلام، NIHSS) كل ساعة أول 24 ساعة.",
+       "بعد المذيب: فحص عصبي كل 15 دقيقة لساعتين وملاحظة النزيف والصداع."
+      ],
+      "en": [
+       "Neuro checks (GCS, pupils, limb power, speech, NIHSS) hourly for 24 h.",
+       "After lysis: neuro checks every 15 minutes for 2 h; watch for bleeding and headache."
+      ]
+     },
+     "outcome": {
+      "ar": "لا تدهور.",
+      "en": "No deterioration."
+     },
+     "timeframe": {
+      "ar": "كل ساعة / كل 15 دقيقة",
+      "en": "Hourly / every 15 min"
+     }
+    },
+    {
+     "need": {
+      "ar": "حماية المخ",
+      "en": "Brain protection"
+     },
+     "actions": {
+      "ar": [
+       "تسجيل وقت بداية الأعراض والتحضير لمذيب الجلطة أو القسطرة خلال النافذة الزمنية.",
+       "ضبط الضغط حسب البروتوكول (< 185/110 قبل المذيب و< 180/105 بعده؛ عدم خفضه بقوة إذا لم يُعطَ مذيب).",
+       "رفع رأس السرير 30 درجة مع استقامة الرقبة (أو حسب أمر الطبيب).",
+       "الحفاظ على التشبع > 94% والسكر 140–180 والحرارة طبيعية.",
+       "إعطاء مضاد الصفائح أو مضاد التجلط حسب نوع السكتة وتوقيت الطبيب."
+      ],
+      "en": [
+       "Record symptom onset and prepare for thrombolysis or thrombectomy within the window.",
+       "Manage BP per protocol (< 185/110 before lysis, < 180/105 after; avoid aggressive lowering without lysis).",
+       "HOB 30° with neck midline (or as ordered).",
+       "Keep SpO₂ > 94%, glucose 140–180, normothermia.",
+       "Give antiplatelet or anticoagulant per stroke type and timing."
+      ]
+     },
+     "outcome": {
+      "ar": "تروية محفوظة.",
+      "en": "Perfusion preserved."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "ضعف الحركة الجسدية (Impaired physical mobility) مرتبط بشلل نصفي أيمن ويظهر في عدم القدرة على تحريك الذراع والرجل اليمنى.",
-    "en": "Impaired physical mobility related to right hemiparesis as evidenced by inability to move the right arm and leg."
+   "id": "impaired-swallowing-stroke",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف البلع",
+    "en": "Impaired Swallowing"
+   },
+   "definition": {
+    "ar": "خلل في آلية البلع مع ضعف في وظيفة الفم أو البلعوم أو المريء.",
+    "en": "Abnormal swallowing function with oral, pharyngeal or esophageal deficits."
+   },
+   "relatedTo": {
+    "ar": [
+     "ضعف عضلات الفم والبلعوم"
+    ],
+    "en": [
+     "Oropharyngeal muscle weakness"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "كحة أو شرقة مع الشرب",
+     "صوت مبلول بعد البلع",
+     "تجمع الأكل في الفم"
+    ],
+    "en": [
+     "Coughing or choking with drinks",
+     "Wet voice after swallowing",
+     "Pocketing of food"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"مش قادر أحرك إيدي ورجلي اليمين.\""
+      "\"بشرق لما أشرب مية.\""
      ],
      "en": [
-      "\"I can't move my right arm and leg.\""
+      "\"I choke when I drink water.\""
      ]
     },
     "objective": {
      "ar": [
-      "قوة العضلات في الجانب الأيمن 1/5.",
-      "يحتاج مساعدة كاملة في تغيير الوضع."
+      "فشل اختبار البلع بالماء.",
+      "ميل الفم لليمين."
      ],
      "en": [
-      "Muscle power on the right side 1/5.",
-      "Needs full assistance to change position."
+      "Failed bedside water swallow test.",
+      "Right facial droop."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "أثناء الإقامة: لا تحدث قرح فراش ولا تيبس مفاصل، وخلال أسبوع يشارك المريض في تمارين الحركة ويجلس على حافة السرير بمساعدة."
-    ],
-    "en": [
-     "During the stay: no pressure injury or contractures; within a week the patient joins range-of-motion exercises and sits at the bedside with help."
-    ]
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا شرقة أو التهاب رئوي من الشفط."
+     ],
+     "en": [
+      "During the stay: no choking or aspiration pneumonia."
+     ]
+    },
+    "long": {
+     "ar": [
+      "عودة البلع الآمن بأكل معدل."
+     ],
+     "en": [
+      "Safe swallow with modified diet."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "تغيير الوضع كل ساعتين واستخدام مرتبة هوائية.",
-      "en": "Reposition every 2 hours and use a pressure-relieving mattress."
+      "ar": "اختبار البلع قبل أي أكل أو شرب أو دواء بالفم.",
+      "en": "Swallow screen before any oral food, fluid or medication."
      },
      "rationale": {
-      "ar": "يمنع الضغط المستمر على البروزات العظمية وقرح الفراش.",
-      "en": "Prevents sustained pressure on bony prominences and pressure injuries."
+      "ar": "يمنع الشفط.",
+      "en": "Prevents aspiration."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "تمارين المدى الحركي (ROM) للأطراف المصابة 3 مرات يوميًا.",
-      "en": "Range-of-motion exercises to affected limbs three times daily."
+      "ar": "منع الأكل والشرب بالفم حتى تقييم أخصائي التخاطب والبلع عند الفشل.",
+      "en": "Nil by mouth until speech-language assessment if failed."
      },
      "rationale": {
-      "ar": "تحافظ على مرونة المفاصل وتمنع التيبس.",
-      "en": "Maintains joint flexibility and prevents contractures."
+      "ar": "سلامة.",
+      "en": "Safety."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "وضع الأطراف المصابة في وضع وظيفي باستخدام الوسائد ودعامة القدم.",
-      "en": "Position affected limbs functionally with pillows and a foot support."
+      "ar": "الجلوس 90 درجة أثناء الأكل و30 دقيقة بعده.",
+      "en": "Sit upright 90° during meals and 30 minutes after."
      },
      "rationale": {
-      "ar": "يمنع سقوط القدم وخلع الكتف.",
-      "en": "Prevents foot drop and shoulder subluxation."
+      "ar": "يقلل الشفط.",
+      "en": "Reduces aspiration."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "التنسيق مع العلاج الطبيعي وتشجيع استخدام الجانب السليم.",
-      "en": "Coordinate with physiotherapy and encourage use of the unaffected side."
+      "ar": "أكل بقوام مناسب (مهروس) وسوائل مكثفة حسب التوصية، ولقيمات صغيرة على الجانب السليم.",
+      "en": "Texture-modified food and thickened fluids as advised; small bites on the unaffected side."
      },
      "rationale": {
-      "ar": "يسرّع استعادة الوظيفة والاستقلالية.",
-      "en": "Speeds recovery of function and independence."
+      "ar": "أسهل في التحكم.",
+      "en": "Easier to control."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ثني الذقن للأسفل أثناء البلع.",
+      "en": "Chin tuck while swallowing."
+     },
+     "rationale": {
+      "ar": "يحمي مجرى الهواء.",
+      "en": "Protects the airway."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "فحص الفم بعد الأكل لبقايا الطعام والعناية بالفم.",
+      "en": "Check the mouth for residue after meals; oral care."
+     },
+     "rationale": {
+      "ar": "يمنع الشفط والعدوى.",
+      "en": "Prevents aspiration and infection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تغذية بالأنبوبة الأنفية إذا لم يستطع البلع الآمن خلال 24–48 ساعة.",
+      "en": "NG feeding if unsafe to swallow within 24–48 h."
+     },
+     "rationale": {
+      "ar": "تغذية آمنة.",
+      "en": "Safe nutrition."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "الجلد سليم، لا تيبس، والمريض جلس على حافة السرير بمساعدة في اليوم السادس. — تحقق الهدف."
-    ],
-    "en": [
-     "Skin intact, no contractures, patient sat at the bedside with help on day 6. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "خطر ضعف تروية المخ",
-    "en": "Risk for ineffective cerebral perfusion"
-   },
-   "need": {
-    "ar": "متابعة الحالة العصبية",
-    "en": "Neurological monitoring"
-   },
-   "actions": {
-    "ar": [
-     "جلاسكو وحدقة العين كل ساعة",
-     "ضبط الضغط حسب الأمر",
-     "رأس السرير 30°"
-    ],
-    "en": [
-     "Hourly GCS and pupils",
-     "Maintain BP as ordered",
-     "Head of bed 30°"
-    ]
-   },
-   "outcome": {
-    "ar": "وعي مستقر أو متحسن",
-    "en": "Stable or improving consciousness"
-   },
-   "timeframe": {
-    "ar": "كل ساعة لمدة 24 ساعة",
-    "en": "Hourly for 24 hours"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يأكل مهروس بدون شرقة — تحقق.",
+      "en": "Eating purée without choking — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم البلع",
+      "en": "Swallow assessment"
+     },
+     "actions": {
+      "ar": [
+       "اختبار البلع قبل أي أكل أو شرب أو دواء بالفم.",
+       "منع الأكل والشرب بالفم حتى تقييم أخصائي التخاطب والبلع عند الفشل."
+      ],
+      "en": [
+       "Swallow screen before any oral food, fluid or medication.",
+       "Nil by mouth until speech-language assessment if failed."
+      ]
+     },
+     "outcome": {
+      "ar": "لا أكل قبل التقييم.",
+      "en": "No oral intake before screen."
+     },
+     "timeframe": {
+      "ar": "قبل كل أكل",
+      "en": "Before every meal"
+     }
+    },
+    {
+     "need": {
+      "ar": "أكل آمن",
+      "en": "Safe feeding"
+     },
+     "actions": {
+      "ar": [
+       "الجلوس 90 درجة أثناء الأكل و30 دقيقة بعده.",
+       "أكل بقوام مناسب (مهروس) وسوائل مكثفة حسب التوصية، ولقيمات صغيرة على الجانب السليم.",
+       "ثني الذقن للأسفل أثناء البلع.",
+       "فحص الفم بعد الأكل لبقايا الطعام والعناية بالفم.",
+       "تغذية بالأنبوبة الأنفية إذا لم يستطع البلع الآمن خلال 24–48 ساعة."
+      ],
+      "en": [
+       "Sit upright 90° during meals and 30 minutes after.",
+       "Texture-modified food and thickened fluids as advised; small bites on the unaffected side.",
+       "Chin tuck while swallowing.",
+       "Check the mouth for residue after meals; oral care.",
+       "NG feeding if unsafe to swallow within 24–48 h."
+      ]
+     },
+     "outcome": {
+      "ar": "لا شفط.",
+      "en": "No aspiration."
+     },
+     "timeframe": {
+      "ar": "كل وجبة",
+      "en": "Each meal"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "خطر الشرقة",
-    "en": "Risk for aspiration"
+   "id": "impaired-physical-mobility-stroke",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف الحركة الجسدية (الشلل النصفي)",
+    "en": "Impaired Physical Mobility (Hemiplegia)"
    },
-   "need": {
-    "ar": "بلع آمن",
-    "en": "Safe swallowing"
+   "definition": {
+    "ar": "محدودية الحركة المستقلة الهادفة.",
+    "en": "Limitation in independent purposeful movement."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "منع الأكل حتى تقييم البلع",
-     "رفع الرأس أثناء الأكل",
-     "جهاز شفط جاهز"
+     "ضعف أو شلل نصفي"
     ],
     "en": [
-     "NPO until swallow assessment",
-     "Head up during meals",
-     "Suction ready"
+     "Hemiparesis/hemiplegia"
     ]
    },
-   "outcome": {
-    "ar": "لا شرقة ولا التهاب رئوي",
-    "en": "No aspiration or pneumonia"
+   "evidencedBy": {
+    "ar": [
+     "قوة الطرفين الأيمنين 2/5",
+     "عدم القدرة على الانتقال بمفرده"
+    ],
+    "en": [
+     "Right limbs power 2/5",
+     "Unable to transfer alone"
+    ]
    },
-   "timeframe": {
-    "ar": "طوال الإقامة",
-    "en": "Throughout stay"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"إيدي ورجلي اليمين تقيلة.\""
+     ],
+     "en": [
+      "\"My right arm and leg feel heavy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ضعف أيمن 2/5، يحتاج شخصين للانتقال."
+     ],
+     "en": [
+      "Right weakness 2/5; two-person transfer."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوع: يجلس على الكرسي وينتقل بمساعدة شخص."
+     ],
+     "en": [
+      "Within a week: sits out and transfers with one assist."
+     ]
+    },
+    "long": {
+     "ar": [
+      "أقصى استقلالية ممكنة بدون مضاعفات عدم الحركة."
+     ],
+     "en": [
+      "Maximum independence without immobility complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم القوة والتوازن والقدرة على الانتقال يوميًا.",
+      "en": "Daily assessment of power, balance and transfers."
+     },
+     "rationale": {
+      "ar": "خطة تأهيل.",
+      "en": "Rehab planning."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضعيات صحيحة للطرف المصاب ودعم الكتف لمنع الخلع والألم.",
+      "en": "Correct positioning of affected limbs; support the shoulder to prevent subluxation."
+     },
+     "rationale": {
+      "ar": "الكتف المشلول يتعرض للخلع.",
+      "en": "The hemiplegic shoulder is prone to subluxation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير الوضع كل ساعتين بما في ذلك النوم على الجانب المصاب لفترات قصيرة.",
+      "en": "Reposition every 2 h, including short periods on the affected side."
+     },
+     "rationale": {
+      "ar": "يمنع قرح الفراش ويحسن الإحساس.",
+      "en": "Prevents pressure injury; improves awareness."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تمارين المدى الحركي للطرف المصاب 3 مرات يوميًا.",
+      "en": "ROM exercises for affected limbs 3 times daily."
+     },
+     "rationale": {
+      "ar": "يمنع التيبس.",
+      "en": "Prevents contractures."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تأهيل مبكر مع العلاج الطبيعي والوظيفي خلال 24–48 ساعة حسب الحالة.",
+      "en": "Early physio and occupational therapy within 24–48 h as appropriate."
+     },
+     "rationale": {
+      "ar": "يحسن النتيجة.",
+      "en": "Improves outcome."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الوقاية من الجلطات (ضغط هوائي متقطع).",
+      "en": "VTE prevention (intermittent pneumatic compression)."
+     },
+     "rationale": {
+      "ar": "خطر عالٍ.",
+      "en": "High risk."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إجراءات الوقاية من السقوط.",
+      "en": "Fall precautions."
+     },
+     "rationale": {
+      "ar": "خطر سقوط عالٍ.",
+      "en": "High fall risk."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "يجلس على الكرسي بمساعدة شخصين — تحقق جزئيًا.",
+      "en": "Sits out with two assist — partially met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوضعيات والتمارين",
+      "en": "Positioning and exercises"
+     },
+     "actions": {
+      "ar": [
+       "تقييم القوة والتوازن والقدرة على الانتقال يوميًا.",
+       "وضعيات صحيحة للطرف المصاب ودعم الكتف لمنع الخلع والألم.",
+       "تغيير الوضع كل ساعتين بما في ذلك النوم على الجانب المصاب لفترات قصيرة.",
+       "تمارين المدى الحركي للطرف المصاب 3 مرات يوميًا.",
+       "إجراءات الوقاية من السقوط."
+      ],
+      "en": [
+       "Daily assessment of power, balance and transfers.",
+       "Correct positioning of affected limbs; support the shoulder to prevent subluxation.",
+       "Reposition every 2 h, including short periods on the affected side.",
+       "ROM exercises for affected limbs 3 times daily.",
+       "Fall precautions."
+      ]
+     },
+     "outcome": {
+      "ar": "لا مضاعفات.",
+      "en": "No complications."
+     },
+     "timeframe": {
+      "ar": "كل ساعتين",
+      "en": "Every 2 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "التأهيل",
+      "en": "Rehabilitation"
+     },
+     "actions": {
+      "ar": [
+       "تأهيل مبكر مع العلاج الطبيعي والوظيفي خلال 24–48 ساعة حسب الحالة.",
+       "الوقاية من الجلطات (ضغط هوائي متقطع)."
+      ],
+      "en": [
+       "Early physio and occupational therapy within 24–48 h as appropriate.",
+       "VTE prevention (intermittent pneumatic compression)."
+      ]
+     },
+     "outcome": {
+      "ar": "تقدم في الحركة.",
+      "en": "Mobility progress."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "ضعف الحركة",
-    "en": "Impaired mobility"
+   "id": "impaired-verbal-communication-stroke",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف التواصل اللفظي (الحبسة)",
+    "en": "Impaired Verbal Communication (Aphasia)"
    },
-   "need": {
-    "ar": "الوقاية من مضاعفات عدم الحركة",
-    "en": "Prevent immobility complications"
+   "definition": {
+    "ar": "نقص القدرة على فهم أو استخدام اللغة.",
+    "en": "Decreased ability to understand or use language."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "تغيير الوضع كل ساعتين",
-     "تمارين المدى الحركي",
-     "العلاج الطبيعي"
+     "إصابة مراكز اللغة في المخ"
     ],
     "en": [
-     "Turn every 2 hours",
-     "ROM exercises",
-     "Physiotherapy"
+     "Damage to language centres"
     ]
    },
-   "outcome": {
-    "ar": "جلد سليم بدون قرح",
-    "en": "Intact skin, no pressure injury"
+   "evidencedBy": {
+    "ar": [
+     "صعوبة إيجاد الكلمات أو الفهم",
+     "تلعثم"
+    ],
+    "en": [
+     "Word-finding or comprehension difficulty",
+     "Dysarthria"
+    ]
    },
-   "timeframe": {
-    "ar": "يوميًا",
-    "en": "Daily"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "يحاول الكلام ويتضايق."
+     ],
+     "en": [
+      "Tries to speak and becomes frustrated."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "حبسة تعبيرية، يفهم الأوامر البسيطة."
+     ],
+     "en": [
+      "Expressive aphasia; follows simple commands."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر عن احتياجاته الأساسية بطريقة ما."
+     ],
+     "en": [
+      "Within the shift: communicates basic needs somehow."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تحسن الكلام مع التأهيل."
+     ],
+     "en": [
+      "Improved speech with therapy."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التحدث ببطء وبجمل قصيرة ووجهًا لوجه.",
+      "en": "Speak slowly in short sentences, face to face."
+     },
+     "rationale": {
+      "ar": "يسهل الفهم.",
+      "en": "Aids comprehension."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إعطاء وقت كافٍ للرد وعدم إكمال الجمل عنه.",
+      "en": "Allow time to respond; do not finish his sentences."
+     },
+     "rationale": {
+      "ar": "يحترم المريض ويشجعه.",
+      "en": "Respects and encourages."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام الإشارات والصور ولوحة الاحتياجات.",
+      "en": "Use gestures, pictures and a needs board."
+     },
+     "rationale": {
+      "ar": "وسائل بديلة.",
+      "en": "Alternative means."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "أسئلة نعم/لا.",
+      "en": "Yes/no questions."
+     },
+     "rationale": {
+      "ar": "تواصل سهل.",
+      "en": "Easy communication."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إحالة لأخصائي التخاطب.",
+      "en": "Refer to speech-language therapy."
+     },
+     "rationale": {
+      "ar": "تأهيل الكلام.",
+      "en": "Speech rehabilitation."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأسرة طرق التواصل.",
+      "en": "Teach family communication strategies."
+     },
+     "rationale": {
+      "ar": "دعم مستمر.",
+      "en": "Ongoing support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يستخدم لوحة الصور للتعبير — تحقق.",
+      "en": "Uses the picture board — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تواصل",
+      "en": "Communication"
+     },
+     "actions": {
+      "ar": [
+       "التحدث ببطء وبجمل قصيرة ووجهًا لوجه.",
+       "إعطاء وقت كافٍ للرد وعدم إكمال الجمل عنه.",
+       "استخدام الإشارات والصور ولوحة الاحتياجات.",
+       "أسئلة نعم/لا.",
+       "إحالة لأخصائي التخاطب.",
+       "تعليم الأسرة طرق التواصل."
+      ],
+      "en": [
+       "Speak slowly in short sentences, face to face.",
+       "Allow time to respond; do not finish his sentences.",
+       "Use gestures, pictures and a needs board.",
+       "Yes/no questions.",
+       "Refer to speech-language therapy.",
+       "Teach family communication strategies."
+      ]
+     },
+     "outcome": {
+      "ar": "يعبر عن احتياجاته.",
+      "en": "Expresses needs."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "self-care-deficit-stroke",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص العناية الذاتية (الاستحمام، اللبس، الأكل)",
+    "en": "Self-Care Deficit (Bathing, Dressing, Feeding)"
+   },
+   "definition": {
+    "ar": "عدم القدرة على أداء أنشطة العناية الذاتية بشكل مستقل.",
+    "en": "Inability to independently perform self-care activities."
+   },
+   "relatedTo": {
+    "ar": [
+     "الشلل النصفي وإهمال الجانب المصاب"
+    ],
+    "en": [
+     "Hemiplegia and neglect"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "يحتاج مساعدة في اللبس والاستحمام"
+    ],
+    "en": [
+     "Needs help dressing and bathing"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش عارف ألبس لوحدي.\""
+     ],
+     "en": [
+      "\"I can't dress myself.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مؤشر بارثل 35."
+     ],
+     "en": [
+      "Barthel index 35."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوع: يأكل بمفرده باليد السليمة."
+     ],
+     "en": [
+      "Within a week: feeds himself with the unaffected hand."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يلبس بمساعدة بسيطة."
+     ],
+     "en": [
+      "Before discharge: dresses with minimal help."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم القدرة على العناية الذاتية (بارثل).",
+      "en": "Assess self-care ability (Barthel)."
+     },
+     "rationale": {
+      "ar": "تحديد الاحتياج.",
+      "en": "Defines needs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على عمل ما يستطيعه وإعطاء وقت كافٍ.",
+      "en": "Encourage him to do what he can; allow time."
+     },
+     "rationale": {
+      "ar": "يعزز الاستقلالية.",
+      "en": "Promotes independence."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "لبس الجانب المصاب أولًا وخلعه أخيرًا.",
+      "en": "Dress the affected side first, undress it last."
+     },
+     "rationale": {
+      "ar": "أسهل.",
+      "en": "Easier."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "أدوات مساعدة (ملعقة بمقبض سميك، ملابس بسوستة أو لاصق).",
+      "en": "Adaptive aids (thick-handled spoon, velcro clothing)."
+     },
+     "rationale": {
+      "ar": "تسهل الاستقلالية.",
+      "en": "Facilitate independence."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع الأشياء في مجال الرؤية السليم عند وجود إهمال لجانب، مع تدريبه على الالتفات للجانب المصاب.",
+      "en": "Place items in the intact visual field with neglect, while training him to scan the affected side."
+     },
+     "rationale": {
+      "ar": "تعويض وتأهيل.",
+      "en": "Compensation and rehab."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "العلاج الوظيفي.",
+      "en": "Occupational therapy."
+     },
+     "rationale": {
+      "ar": "تدريب متخصص.",
+      "en": "Specialist training."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يأكل بمفرده ويلبس القميص بمساعدة — تحقق.",
+      "en": "Feeds himself; dresses shirt with help — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "العناية الذاتية",
+      "en": "Self-care"
+     },
+     "actions": {
+      "ar": [
+       "تقييم القدرة على العناية الذاتية (بارثل).",
+       "تشجيع المريض على عمل ما يستطيعه وإعطاء وقت كافٍ.",
+       "لبس الجانب المصاب أولًا وخلعه أخيرًا.",
+       "أدوات مساعدة (ملعقة بمقبض سميك، ملابس بسوستة أو لاصق).",
+       "وضع الأشياء في مجال الرؤية السليم عند وجود إهمال لجانب، مع تدريبه على الالتفات للجانب المصاب.",
+       "العلاج الوظيفي."
+      ],
+      "en": [
+       "Assess self-care ability (Barthel).",
+       "Encourage him to do what he can; allow time.",
+       "Dress the affected side first, undress it last.",
+       "Adaptive aids (thick-handled spoon, velcro clothing).",
+       "Place items in the intact visual field with neglect, while training him to scan the affected side.",
+       "Occupational therapy."
+      ]
+     },
+     "outcome": {
+      "ar": "استقلالية أكبر.",
+      "en": "Greater independence."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-aspiration-falls-stroke",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الإصابة (السقوط والشفط والقرح)",
+    "en": "Risk for Injury (Falls, Aspiration, Pressure Injury)"
+   },
+   "definition": {
+    "ar": "قابلية لإصابة جسدية نتيجة ضعف الحركة والإحساس والبلع.",
+    "en": "Susceptibility to physical harm from impaired mobility, sensation and swallowing."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "شلل نصفي ونقص الإحساس",
+     "ضعف البلع",
+     "اندفاع أو إهمال الجانب المصاب"
+    ],
+    "en": [
+     "Hemiplegia and sensory loss",
+     "Dysphagia",
+     "Impulsivity or neglect"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عايز أقوم لوحدي.\""
+     ],
+     "en": [
+      "\"I want to get up on my own.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يحاول القيام بمفرده، برادن 13."
+     ],
+     "en": [
+      "Tries to get up alone; Braden 13."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا سقوط أو قرح أو التهاب رئوي."
+     ],
+     "en": [
+      "During the stay: no falls, pressure injury or pneumonia."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خروج بدون إصابات."
+     ],
+     "en": [
+      "Discharge without injury."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "سرير منخفض، جرس على الجانب السليم، وإجراءات السقوط.",
+      "en": "Low bed, bell on the unaffected side, fall precautions."
+     },
+     "rationale": {
+      "ar": "يقلل السقوط.",
+      "en": "Reduces falls."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تقليب كل ساعتين وفحص الجلد وحماية الطرف الفاقد للإحساس من الحرارة والضغط.",
+      "en": "Turn every 2 h; inspect skin; protect the insensate limb from heat and pressure."
+     },
+     "rationale": {
+      "ar": "منع القرح والحروق.",
+      "en": "Prevents ulcers and burns."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "احتياطات الشفط ورفع الرأس.",
+      "en": "Aspiration precautions; HOB raised."
+     },
+     "rationale": {
+      "ar": "منع الالتهاب الرئوي.",
+      "en": "Prevents pneumonia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الحرارة والصدر.",
+      "en": "Monitor temperature and chest."
+     },
+     "rationale": {
+      "ar": "كشف الشفط.",
+      "en": "Detects aspiration."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الاحتباس البولي وتجنب القسطرة الدائمة.",
+      "en": "Watch for urinary retention; avoid indwelling catheters."
+     },
+     "rationale": {
+      "ar": "تقليل العدوى.",
+      "en": "Reduces infection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأسرة الانتقال الآمن.",
+      "en": "Teach family safe transfers."
+     },
+     "rationale": {
+      "ar": "أمان في البيت.",
+      "en": "Home safety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا سقوط أو قرح خلال الإقامة — تحقق.",
+      "en": "No falls or pressure injury — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الأمان",
+      "en": "Safety"
+     },
+     "actions": {
+      "ar": [
+       "سرير منخفض، جرس على الجانب السليم، وإجراءات السقوط.",
+       "تقليب كل ساعتين وفحص الجلد وحماية الطرف الفاقد للإحساس من الحرارة والضغط.",
+       "احتياطات الشفط ورفع الرأس.",
+       "متابعة الحرارة والصدر.",
+       "متابعة الاحتباس البولي وتجنب القسطرة الدائمة.",
+       "تعليم الأسرة الانتقال الآمن."
+      ],
+      "en": [
+       "Low bed, bell on the unaffected side, fall precautions.",
+       "Turn every 2 h; inspect skin; protect the insensate limb from heat and pressure.",
+       "Aspiration precautions; HOB raised.",
+       "Monitor temperature and chest.",
+       "Watch for urinary retention; avoid indwelling catheters.",
+       "Teach family safe transfers."
+      ]
+     },
+     "outcome": {
+      "ar": "لا إصابات.",
+      "en": "No injuries."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-stroke",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (الوقاية من تكرار السكتة)",
+    "en": "Deficient Knowledge (Secondary stroke prevention)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "أول سكتة"
+    ],
+    "en": [
+     "First stroke"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الابن: \"إزاي نمنع إنها تتكرر؟\""
+     ],
+     "en": [
+      "Son: \"How do we prevent another one?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ضغط وسكر غير منضبطين."
+     ],
+     "en": [
+      "Uncontrolled BP and diabetes."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "علامات FAST وطلب الإسعاف فورًا.",
+      "en": "FAST signs and calling an ambulance immediately."
+     },
+     "rationale": {
+      "ar": "سرعة العلاج.",
+      "en": "Rapid treatment."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "الالتزام بأدوية الضغط والسكر والكوليسترول ومضاد الصفائح.",
+      "en": "Adherence to BP, diabetes, statin and antiplatelet drugs."
+     },
+     "rationale": {
+      "ar": "تقلل التكرار.",
+      "en": "Reduce recurrence."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "الإقلاع عن التدخين وقليل الملح ونشاط حسب القدرة.",
+      "en": "Stop smoking, low salt, activity as able."
+     },
+     "rationale": {
+      "ar": "عوامل خطر.",
+      "en": "Risk factors."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "برنامج التأهيل في البيت ومتابعة العلاج الطبيعي.",
+      "en": "Home rehabilitation and physiotherapy follow-up."
+     },
+     "rationale": {
+      "ar": "استمرار التحسن.",
+      "en": "Ongoing recovery."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "ملاحظة الاكتئاب بعد السكتة وطلب المساعدة.",
+      "en": "Watch for post-stroke depression and seek help."
+     },
+     "rationale": {
+      "ar": "شائع ويؤثر على التأهيل.",
+      "en": "Common and affects recovery."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف صحي",
+      "en": "Health teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "علامات FAST وطلب الإسعاف فورًا.",
+       "الالتزام بأدوية الضغط والسكر والكوليسترول ومضاد الصفائح.",
+       "الإقلاع عن التدخين وقليل الملح ونشاط حسب القدرة.",
+       "برنامج التأهيل في البيت ومتابعة العلاج الطبيعي.",
+       "ملاحظة الاكتئاب بعد السكتة وطلب المساعدة.",
+       "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "FAST signs and calling an ambulance immediately.",
+       "Adherence to BP, diabetes, statin and antiplatelet drugs.",
+       "Stop smoking, low salt, activity as able.",
+       "Home rehabilitation and physiotherapy follow-up.",
+       "Watch for post-stroke depression and seek help.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -289,10 +1375,10 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "AHA/ASA Guidelines for the Early Management of Patients With Acute Ischemic Stroke (2019 update)"
   },
   {
-   "title": "AHA/ASA Guidelines for the Early Management of Patients With Acute Ischemic Stroke"
+   "title": "NICE NG128 — Stroke and TIA in over 16s (2019, updated 2022)"
   }
  ]
 }
