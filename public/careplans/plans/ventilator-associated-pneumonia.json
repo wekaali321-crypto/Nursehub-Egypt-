@@ -1,0 +1,924 @@
+{
+ "id": "ventilator-associated-pneumonia",
+ "icon": "🫧",
+ "system": "respiratory",
+ "folder": "general",
+ "title": {
+  "ar": "الالتهاب الرئوي المرتبط بجهاز التنفس الصناعي (VAP)",
+  "en": "Ventilator-Associated Pneumonia (VAP)"
+ },
+ "summary": {
+  "ar": "من مضاعفات الرعاية المركزة: عدوى في الرئة تحدث للمرضى على جهاز التنفس الصناعي. الوقاية بحزمة (Bundle) والرعاية التمريضية للمريض المصاب.",
+  "en": "An ICU complication: lung infection in mechanically ventilated patients. Prevention bundle and nursing care of the affected patient."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-for-infection-vap",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى (الالتهاب الرئوي المرتبط بجهاز التنفس – VAP)",
+    "en": "Risk for Infection (Ventilator-Associated Pneumonia)"
+   },
+   "definition": {
+    "ar": "قابلية لدخول وتكاثر الميكروبات في الرئة بسبب التنفس الصناعي، مما قد يضر بالصحة.",
+    "en": "Susceptible to invasion and multiplication of organisms in the lungs due to mechanical ventilation, which may compromise health."
+   },
+   "relatedTo": {
+    "ar": [
+     "وجود أنبوبة حنجرية تتجاوز دفاعات مجرى الهواء",
+     "تجمع الإفرازات فوق بالونة الأنبوبة",
+     "تلوث دائرة جهاز التنفس"
+    ],
+    "en": [
+     "Endotracheal tube bypassing airway defenses",
+     "Pooling of secretions above the cuff",
+     "Contamination of the ventilator circuit"
+    ]
+   },
+   "riskFactors": {
+    "ar": [
+     "على جهاز التنفس الصناعي أكثر من 48 ساعة",
+     "مهدئات وضعف الكحة",
+     "أنبوبة معدية وتغذية أنبوبية",
+     "الاستلقاء بشكل مسطح",
+     "مضادات الحموضة بكثرة"
+    ],
+    "en": [
+     "Mechanically ventilated > 48 hours",
+     "Sedation and weak cough",
+     "Nasogastric tube and enteral feeding",
+     "Supine flat positioning",
+     "Heavy use of acid suppressants"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "المريض على مهدئ ولا يتكلم؛ الأسرة: \"بقاله 4 أيام على الجهاز.\""
+     ],
+     "en": [
+      "Patient sedated and non-verbal; family: \"He has been on the machine for 4 days.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "على التنفس الصناعي منذ 4 أيام بأنبوبة عن طريق الفم.",
+      "الحرارة 37.2°، الإفرازات بيضاء قليلة.",
+      "أنبوبة معدية وتغذية مستمرة.",
+      "درجة التهدئة RASS ‏−3."
+     ],
+     "en": [
+      "Ventilated for 4 days via an oral endotracheal tube.",
+      "Temperature 37.2 °C; scant white secretions.",
+      "Nasogastric tube with continuous feeding.",
+      "Sedation score RASS −3."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "طوال فترة التنفس الصناعي: لا علامات التهاب رئوي جديد (حمى أو انخفاض حرارة، بلغم صديدي جديد، نقص أكسجة، ارتشاح جديد بالأشعة).",
+      "تطبيق كل بنود حزمة الوقاية (VAP bundle) يوميًا بنسبة 100%."
+     ],
+     "en": [
+      "Throughout ventilation: no new pneumonia (fever or hypothermia, new purulent sputum, hypoxemia, new infiltrate).",
+      "All VAP-bundle elements applied daily (100% compliance)."
+     ]
+    },
+    "long": {
+     "ar": [
+      "فصل المريض عن الجهاز في أقرب وقت آمن دون حدوث VAP."
+     ],
+     "en": [
+      "Liberation from the ventilator as early as safe, without VAP."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الحرارة ولون وكمية وقوام الإفرازات وتشبع الأكسجين كل وردية.",
+      "en": "Monitor temperature, secretion colour/amount/consistency and SpO₂ every shift."
+     },
+     "rationale": {
+      "ar": "الحمى والبلغم الصديدي ونقص الأكسجة أهم علامات VAP.",
+      "en": "Fever, purulent sputum and hypoxemia are the key signs of VAP."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع رأس السرير 30–45° طوال الوقت إذا لم توجد موانع طبية.",
+      "en": "Keep the head of bed at 30–45° at all times unless contraindicated."
+     },
+     "rationale": {
+      "ar": "يقلل رجوع محتويات المعدة واستنشاقها للرئة.",
+      "en": "Reduces gastric reflux and aspiration."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم والأسنان (فرشاة + محلول ملح معقم أو مطهر مناسب للفم واللثة) حسب البروتوكول.",
+      "en": "Oral and dental care (toothbrushing + sterile saline or suitable oral antiseptic) per protocol."
+     },
+     "rationale": {
+      "ar": "يقلل البكتيريا في الفم التي تنزل للرئة.",
+      "en": "Reduces oral bacteria that migrate to the lungs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الحفاظ على ضغط البالونة 20–30 سم ماء وشفط الإفرازات فوق البالونة (Subglottic suction) إن وُجدت الأنبوبة المخصصة.",
+      "en": "Keep cuff pressure 20–30 cmH₂O and use subglottic suction if the tube allows."
+     },
+     "rationale": {
+      "ar": "يمنع تسرب الإفرازات المتجمعة للرئة.",
+      "en": "Prevents pooled secretions leaking into the lungs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تجنب امتلاء المعدة الزائد ومتابعة البقايا المعدية حسب البروتوكول.",
+      "en": "Avoid gastric over-distension and check residuals per protocol."
+     },
+     "rationale": {
+      "ar": "الامتلاء يزيد القيء والاستنشاق.",
+      "en": "Distension increases vomiting and aspiration."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الحفاظ على دائرة الجهاز مغلقة، وعدم تغيير الوصلات روتينيًا إلا إذا اتسخت، وتفريغ الماء المتكثف بعيدًا عن المريض.",
+      "en": "Keep the circuit closed; change tubing only when soiled; drain condensate away from the patient."
+     },
+     "rationale": {
+      "ar": "فتح الدائرة والماء المتكثف مصدران للتلوث.",
+      "en": "Circuit breaks and condensate are sources of contamination."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تثبيت فلتر بكتيري/فيروسي بين الأنبوبة والدائرة واستخدام ماء معقم في المرطِّب.",
+      "en": "Use a bacterial/viral filter between tube and circuit and sterile water in the humidifier."
+     },
+     "rationale": {
+      "ar": "يمنع انتقال الميكروبات من الجهاز للمريض.",
+      "en": "Prevents transfer of organisms from the machine."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل اليدين ولبس القفازات قبل التعامل مع مجرى الهواء والشفط المعقم.",
+      "en": "Hand hygiene and gloves before airway contact; aseptic suctioning."
+     },
+     "rationale": {
+      "ar": "الأيدي أشهر وسيلة لنقل العدوى.",
+      "en": "Hands are the commonest route of transmission."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الإيقاف اليومي للمهدئات (Sedation vacation) وتقييم إمكانية الفصل عن الجهاز (SBT) يوميًا حسب الأمر.",
+      "en": "Daily sedation interruption and spontaneous breathing trial as ordered."
+     },
+     "rationale": {
+      "ar": "كل يوم أقل على الجهاز يقلل خطر VAP.",
+      "en": "Each day less on the ventilator lowers VAP risk."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الوقاية من قرحة المعدة والجلطات حسب الأمر، مع تجنب الإفراط في مضادات الحموضة.",
+      "en": "Stress-ulcer and DVT prophylaxis as ordered, avoiding excessive acid suppression."
+     },
+     "rationale": {
+      "ar": "جزء من حزمة الوقاية؛ الإفراط في مضادات الحموضة يزيد استعمار الميكروبات.",
+      "en": "Part of the bundle; excess acid suppression increases bacterial colonization."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تفضيل الأنبوبة عن طريق الفم بدلًا من الأنف عند التركيب.",
+      "en": "Prefer oral over nasal intubation."
+     },
+     "rationale": {
+      "ar": "الأنبوبة الأنفية تزيد التهاب الجيوب الأنفية وVAP.",
+      "en": "Nasal tubes increase sinusitis and VAP."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "بدء العلاج الطبيعي التنفسي والحركة المبكرة متى سمحت الحالة.",
+      "en": "Start chest physiotherapy and early mobility when the condition allows."
+     },
+     "rationale": {
+      "ar": "يساعد تصريف الإفرازات ويقصر مدة التنفس الصناعي.",
+      "en": "Aids secretion clearance and shortens ventilation."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "بعد 7 أيام على الجهاز: لا حرارة ولا بلغم صديدي والأشعة بدون ارتشاح جديد — تحقق.",
+      "en": "After 7 ventilator days: no fever, no purulent sputum, no new infiltrate — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "قائمة حزمة الوقاية مكتملة يوميًا — تحقق.",
+      "en": "Bundle checklist completed daily — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "تم فصل الجهاز يوم 8 بدون VAP — تحقق.",
+      "en": "Extubated on day 8 without VAP — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تطبيق حزمة الوقاية من VAP",
+      "en": "Apply the VAP prevention bundle"
+     },
+     "actions": {
+      "ar": [
+       "رفع رأس السرير 30–45° طوال الوقت إذا لم توجد موانع طبية.",
+       "العناية بالفم والأسنان (فرشاة + محلول ملح معقم أو مطهر مناسب للفم واللثة) حسب البروتوكول.",
+       "الإيقاف اليومي للمهدئات (Sedation vacation) وتقييم إمكانية الفصل عن الجهاز (SBT) يوميًا حسب الأمر.",
+       "الوقاية من قرحة المعدة والجلطات حسب الأمر، مع تجنب الإفراط في مضادات الحموضة."
+      ],
+      "en": [
+       "Keep the head of bed at 30–45° at all times unless contraindicated.",
+       "Oral and dental care (toothbrushing + sterile saline or suitable oral antiseptic) per protocol.",
+       "Daily sedation interruption and spontaneous breathing trial as ordered.",
+       "Stress-ulcer and DVT prophylaxis as ordered, avoiding excessive acid suppression."
+      ]
+     },
+     "outcome": {
+      "ar": "تطبيق كل بنود الحزمة يوميًا بنسبة 100%: رأس السرير 30–45°، عناية بالفم، إيقاف المهدئ وتقييم الفصل يوميًا، والوقاية من قرحة المعدة والجلطات.",
+      "en": "100% daily bundle compliance: head of bed 30–45°, oral care, daily sedation hold and weaning assessment, stress-ulcer and DVT prophylaxis."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "منع استنشاق الإفرازات ومحتوى المعدة",
+      "en": "Prevent aspiration of secretions and gastric content"
+     },
+     "actions": {
+      "ar": [
+       "الحفاظ على ضغط البالونة 20–30 سم ماء وشفط الإفرازات فوق البالونة (Subglottic suction) إن وُجدت الأنبوبة المخصصة.",
+       "تجنب امتلاء المعدة الزائد ومتابعة البقايا المعدية حسب البروتوكول.",
+       "تفضيل الأنبوبة عن طريق الفم بدلًا من الأنف عند التركيب."
+      ],
+      "en": [
+       "Keep cuff pressure 20–30 cmH₂O and use subglottic suction if the tube allows.",
+       "Avoid gastric over-distension and check residuals per protocol.",
+       "Prefer oral over nasal intubation."
+      ]
+     },
+     "outcome": {
+      "ar": "ضغط البالونة 20–30 سم ماء في كل قياس، وشفط فوق البالونة، وبقايا معدية في الحدود، ولا علامات استنشاق.",
+      "en": "Cuff pressure 20–30 cmH₂O at every check, subglottic suction done, gastric residuals within limits and no signs of aspiration."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "منع تلوث دائرة الجهاز والأيدي",
+      "en": "Prevent circuit and hand contamination"
+     },
+     "actions": {
+      "ar": [
+       "الحفاظ على دائرة الجهاز مغلقة، وعدم تغيير الوصلات روتينيًا إلا إذا اتسخت، وتفريغ الماء المتكثف بعيدًا عن المريض.",
+       "تثبيت فلتر بكتيري/فيروسي بين الأنبوبة والدائرة واستخدام ماء معقم في المرطِّب.",
+       "غسل اليدين ولبس القفازات قبل التعامل مع مجرى الهواء والشفط المعقم."
+      ],
+      "en": [
+       "Keep the circuit closed; change tubing only when soiled; drain condensate away from the patient.",
+       "Use a bacterial/viral filter between tube and circuit and sterile water in the humidifier.",
+       "Hand hygiene and gloves before airway contact; aseptic suctioning."
+      ]
+     },
+     "outcome": {
+      "ar": "دائرة مغلقة ونظيفة بفلتر وماء معقم، والوصلات لا تتغير إلا عند اتساخها، والتزام كامل بغسل اليدين والشفط المعقم.",
+      "en": "Closed, clean circuit with filter and sterile water; tubing changed only when soiled; full hand-hygiene and aseptic-suction compliance."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    },
+    {
+     "need": {
+      "ar": "اكتشاف VAP مبكرًا وتقصير مدة الجهاز",
+      "en": "Early detection of VAP and shorter ventilation"
+     },
+     "actions": {
+      "ar": [
+       "متابعة الحرارة ولون وكمية وقوام الإفرازات وتشبع الأكسجين كل وردية.",
+       "بدء العلاج الطبيعي التنفسي والحركة المبكرة متى سمحت الحالة."
+      ],
+      "en": [
+       "Monitor temperature, secretion colour/amount/consistency and SpO₂ every shift.",
+       "Start chest physiotherapy and early mobility when the condition allows."
+      ]
+     },
+     "outcome": {
+      "ar": "لا حرارة أو بلغم صديدي جديد أو نقص أكسجة أو ارتشاح جديد بالأشعة، وبدء الحركة والعلاج الطبيعي التنفسي، وفصل الجهاز في أقرب وقت آمن.",
+      "en": "No fever, new purulent sputum, hypoxemia or new infiltrate; chest physiotherapy and mobility started; extubation as early as safe."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ineffective-airway-clearance-vap",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية تنظيف مجرى الهواء",
+    "en": "Ineffective Airway Clearance"
+   },
+   "definition": {
+    "ar": "عدم القدرة على إزالة الإفرازات أو العوائق من مجرى الهواء للحفاظ عليه مفتوحًا.",
+    "en": "Inability to clear secretions or obstructions from the airway to maintain patency."
+   },
+   "relatedTo": {
+    "ar": [
+     "وجود الأنبوبة الحنجرية وضعف الكحة",
+     "زيادة الإفرازات وسماكتها بسبب العدوى"
+    ],
+    "en": [
+     "Endotracheal tube and impaired cough",
+     "Excess, thick secretions from infection"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "إفرازات صديدية كثيرة",
+     "خرخرة خشنة (Coarse crackles)",
+     "إنذار ارتفاع الضغط على الجهاز",
+     "هبوط التشبع"
+    ],
+    "en": [
+     "Copious purulent secretions",
+     "Coarse crackles",
+     "High-pressure ventilator alarms",
+     "Falling SpO₂"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "المريض على الجهاز ولا يتكلم؛ يتململ قبل الشفط."
+     ],
+     "en": [
+      "Ventilated, non-verbal; restless before suctioning."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "إفرازات صفراء/خضراء كثيفة.",
+      "خرخرة خشنة في الفص السفلي الأيمن.",
+      "ضغط الذروة (Peak pressure) ارتفع من 22 إلى 32 سم ماء.",
+      "التشبع 90% على FiO₂ ‏50%."
+     ],
+     "en": [
+      "Thick yellow-green secretions.",
+      "Coarse crackles in the right lower lobe.",
+      "Peak airway pressure rose from 22 to 32 cmH₂O.",
+      "SpO₂ 90% on FiO₂ 50%."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: مجرى هواء مفتوح، ضغط الذروة < 25، والتشبع ≥ 94% (أو حسب هدف الطبيب)."
+     ],
+     "en": [
+      "Within the shift: patent airway, peak pressure < 25 and SpO₂ ≥ 94% (or physician target)."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 72 ساعة: إفرازات أقل وأفتح لونًا وسماع صدر أوضح."
+     ],
+     "en": [
+      "Within 72 hours: fewer, lighter secretions and clearer breath sounds."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "سماع الصدر ومتابعة ضغط المجرى الهوائي والتشبع قبل وبعد الشفط.",
+      "en": "Auscultate and monitor airway pressures and SpO₂ before and after suctioning."
+     },
+     "rationale": {
+      "ar": "يحدد الحاجة للشفط ويقيس فعاليته.",
+      "en": "Identifies the need for suction and its effect."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل لون وكمية وقوام الإفرازات.",
+      "en": "Record secretion colour, amount and consistency."
+     },
+     "rationale": {
+      "ar": "يتابع العدوى والاستجابة للعلاج.",
+      "en": "Tracks infection and treatment response."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الشفط عند الحاجة فقط بطريقة معقمة، مع أكسجين 100% قبلها، ومدة ≤ 10–15 ثانية، والضغط 80–120 مم زئبق.",
+      "en": "Suction only as needed, aseptically, with pre-oxygenation, ≤ 10–15 seconds, at 80–120 mmHg."
+     },
+     "rationale": {
+      "ar": "يزيل الإفرازات مع تقليل نقص الأكسجين وإصابة الأغشية.",
+      "en": "Clears secretions while limiting hypoxemia and mucosal injury."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير وضع المريض حسب الجزء المصاب من الرئة طبقًا لأشعة الصدر (تصريف وضعي).",
+      "en": "Reposition according to the affected lobe on chest X-ray (postural drainage)."
+     },
+     "rationale": {
+      "ar": "الجاذبية تساعد خروج الإفرازات من الجزء المصاب.",
+      "en": "Gravity helps drain the affected segment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ترطيب الهواء المستنشق جيدًا.",
+      "en": "Ensure adequate humidification."
+     },
+     "rationale": {
+      "ar": "يمنع جفاف وسماكة الإفرازات.",
+      "en": "Prevents thick, dry secretions."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير الوضع كل ساعتين والتنسيق مع العلاج الطبيعي التنفسي (Percussion/Vibration).",
+      "en": "Turn every 2 hours and coordinate chest physiotherapy (percussion/vibration)."
+     },
+     "rationale": {
+      "ar": "يحرك الإفرازات نحو الشعب الكبيرة.",
+      "en": "Moves secretions toward larger airways."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "جلسات موسع الشعب بالتبادل مع جلسات المحلول الملحي حسب الأمر.",
+      "en": "Bronchodilator nebulization alternating with saline nebulization as ordered."
+     },
+     "rationale": {
+      "ar": "يوسع الشعب ويخفف لزوجة الإفرازات.",
+      "en": "Opens airways and thins secretions."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "أخذ عينة إفرازات للمزرعة قبل بدء المضاد الحيوي.",
+      "en": "Send a tracheal aspirate for culture before antibiotics."
+     },
+     "rationale": {
+      "ar": "تحدد الميكروب والمضاد المناسب.",
+      "en": "Identifies the organism and appropriate antibiotic."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المضاد الحيوي في مواعيده الدقيقة حسب الأمر.",
+      "en": "Give antibiotics exactly on schedule as ordered."
+     },
+     "rationale": {
+      "ar": "علاج سبب زيادة الإفرازات.",
+      "en": "Treats the cause of excess secretions."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التأكد من مكان الأنبوبة وتثبيتها وعدم ثنيها أو عض المريض عليها.",
+      "en": "Check tube position, security and that it is not kinked or bitten."
+     },
+     "rationale": {
+      "ar": "الانثناء أو العض يسد مجرى الهواء.",
+      "en": "Kinking or biting obstructs the airway."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "بعد الشفط والتصريف الوضعي: ضغط الذروة 23 والتشبع 95% — تحقق.",
+      "en": "After suctioning and postural drainage: peak pressure 23, SpO₂ 95% — met."
+     }
+    },
+    {
+     "status": "partial",
+     "text": {
+      "ar": "الإفرازات أقل لكن ما زالت صفراء يوم 3 — تحقق جزئيًا؛ متابعة المزرعة وتعديل المضاد.",
+      "en": "Fewer but still yellow secretions on day 3 — partially met; review culture and antibiotic."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "مجرى هواء مفتوح وخالٍ من الإفرازات",
+      "en": "Patent airway free of secretions"
+     },
+     "actions": {
+      "ar": [
+       "سماع الصدر ومتابعة ضغط المجرى الهوائي والتشبع قبل وبعد الشفط.",
+       "الشفط عند الحاجة فقط بطريقة معقمة، مع أكسجين 100% قبلها، ومدة ≤ 10–15 ثانية، والضغط 80–120 مم زئبق.",
+       "التأكد من مكان الأنبوبة وتثبيتها وعدم ثنيها أو عض المريض عليها."
+      ],
+      "en": [
+       "Auscultate and monitor airway pressures and SpO₂ before and after suctioning.",
+       "Suction only as needed, aseptically, with pre-oxygenation, ≤ 10–15 seconds, at 80–120 mmHg.",
+       "Check tube position, security and that it is not kinked or bitten."
+      ]
+     },
+     "outcome": {
+      "ar": "ضغط الذروة < 25 سم ماء، والتشبع ≥ 94% بعد الشفط، والأنبوبة مثبتة في مكانها بدون ثني.",
+      "en": "Peak pressure < 25 cmH₂O, SpO₂ ≥ 94% after suction, tube secure and unkinked."
+     },
+     "timeframe": {
+      "ar": "كل ساعة وعند الحاجة",
+      "en": "Hourly and as needed"
+     }
+    },
+    {
+     "need": {
+      "ar": "تسهيل خروج الإفرازات",
+      "en": "Mobilize secretions"
+     },
+     "actions": {
+      "ar": [
+       "تغيير وضع المريض حسب الجزء المصاب من الرئة طبقًا لأشعة الصدر (تصريف وضعي).",
+       "ترطيب الهواء المستنشق جيدًا.",
+       "تغيير الوضع كل ساعتين والتنسيق مع العلاج الطبيعي التنفسي (Percussion/Vibration).",
+       "جلسات موسع الشعب بالتبادل مع جلسات المحلول الملحي حسب الأمر."
+      ],
+      "en": [
+       "Reposition according to the affected lobe on chest X-ray (postural drainage).",
+       "Ensure adequate humidification.",
+       "Turn every 2 hours and coordinate chest physiotherapy (percussion/vibration).",
+       "Bronchodilator nebulization alternating with saline nebulization as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "الإفرازات أقل وأخف قوامًا، وصوت الصدر أوضح بعد التصريف الوضعي والعلاج الطبيعي وجلسات البخار.",
+      "en": "Fewer, thinner secretions and clearer breath sounds after postural drainage, physiotherapy and nebulization."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات؛ الهدف خلال 72 ساعة",
+      "en": "Every 4 h; target within 72 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "علاج العدوى المسببة",
+      "en": "Treat the underlying infection"
+     },
+     "actions": {
+      "ar": [
+       "تسجيل لون وكمية وقوام الإفرازات.",
+       "أخذ عينة إفرازات للمزرعة قبل بدء المضاد الحيوي.",
+       "إعطاء المضاد الحيوي في مواعيده الدقيقة حسب الأمر."
+      ],
+      "en": [
+       "Record secretion colour, amount and consistency.",
+       "Send a tracheal aspirate for culture before antibiotics.",
+       "Give antibiotics exactly on schedule as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "أخذ المزرعة قبل المضاد، وإعطاء المضاد في مواعيده بدقة، والإفرازات تتحول من صفراء/خضراء إلى بيضاء.",
+      "en": "Culture taken before antibiotics, doses given on time, and secretions change from yellow-green to white."
+     },
+     "timeframe": {
+      "ar": "72 ساعة",
+      "en": "72 hours"
+     }
+    }
+   ]
+  },
+  {
+   "id": "hyperthermia-vap",
+   "kind": "actual",
+   "title": {
+    "ar": "ارتفاع درجة الحرارة",
+    "en": "Hyperthermia"
+   },
+   "definition": {
+    "ar": "ارتفاع درجة حرارة الجسم الداخلية فوق المعدل الطبيعي بسبب فشل التنظيم الحراري.",
+    "en": "Core body temperature above the normal range due to failure of thermoregulation."
+   },
+   "relatedTo": {
+    "ar": [
+     "العدوى (الالتهاب الرئوي المرتبط بالجهاز)",
+     "زيادة معدل الأيض"
+    ],
+    "en": [
+     "Infection (ventilator-associated pneumonia)",
+     "Increased metabolic rate"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "حرارة 39° مئوية",
+     "سرعة النبض والتنفس",
+     "جلد ساخن ومحمر"
+    ],
+    "en": [
+     "Temperature 39 °C",
+     "Tachycardia and tachypnea",
+     "Warm, flushed skin"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "المريض على مهدئ؛ الممرضة السابقة: \"سخن من الفجر ومش بيهدى بالكمادات.\""
+     ],
+     "en": [
+      "Patient sedated; previous nurse: \"He has been febrile since dawn and sponging is not helping.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الحرارة 39°، النبض 118، التنفس على الجهاز 26.",
+      "كرات الدم البيضاء 17,000 والبروكالسيتونين مرتفع.",
+      "الجلد ساخن ومحمر وعرق."
+     ],
+     "en": [
+      "Temperature 39 °C, pulse 118, ventilator RR 26.",
+      "WBC 17,000/mm³; raised procalcitonin.",
+      "Hot, flushed, sweaty skin."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: الحرارة < 38° والنبض < 100."
+     ],
+     "en": [
+      "Within 24 hours: temperature < 38 °C and pulse < 100."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 72 ساعة من المضاد المناسب: حرارة طبيعية وانخفاض علامات الالتهاب."
+     ],
+     "en": [
+      "Within 72 hours of appropriate antibiotics: normal temperature and falling inflammatory markers."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الحرارة كل 2–4 ساعات وبعد 30–60 دقيقة من خافض الحرارة.",
+      "en": "Check temperature every 2–4 hours and 30–60 minutes after antipyretics."
+     },
+     "rationale": {
+      "ar": "يقيس الاستجابة ويكشف استمرار العدوى.",
+      "en": "Measures response and detects ongoing infection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة العلامات الحيوية وعلامات تسمم الدم (هبوط الضغط، قلة البول، ارتفاع اللاكتات).",
+      "en": "Monitor vitals and sepsis signs (hypotension, oliguria, rising lactate)."
+     },
+     "rationale": {
+      "ar": "الالتهاب الرئوي قد يتطور لتسمم الدم.",
+      "en": "Pneumonia can progress to sepsis."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "أخذ مزارع الدم والإفرازات قبل المضاد الحيوي ثم إعطاؤه في أقرب وقت.",
+      "en": "Draw blood and sputum cultures before antibiotics, then give them promptly."
+     },
+     "rationale": {
+      "ar": "المزرعة الصحيحة والعلاج المبكر يحسنان النتيجة.",
+      "en": "Correct cultures and early treatment improve outcome."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء خافض الحرارة حسب الأمر.",
+      "en": "Give antipyretics as ordered."
+     },
+     "rationale": {
+      "ar": "يقلل الحرارة واستهلاك الأكسجين.",
+      "en": "Lowers temperature and oxygen consumption."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التبريد الخارجي: كمادات فاترة، ملابس وأغطية خفيفة، تهوية الغرفة.",
+      "en": "External cooling: tepid sponging, light covers, ventilated room."
+     },
+     "rationale": {
+      "ar": "يزيد فقد الحرارة بالتبخر والتوصيل.",
+      "en": "Increases heat loss by evaporation and conduction."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تجنب الماء المثلج والرعشة.",
+      "en": "Avoid iced water and shivering."
+     },
+     "rationale": {
+      "ar": "الرعشة ترفع الحرارة واستهلاك الأكسجين.",
+      "en": "Shivering raises heat production and oxygen use."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تعويض السوائل حسب الأمر وتسجيل الداخل والخارج.",
+      "en": "Replace fluids as ordered and record intake/output."
+     },
+     "rationale": {
+      "ar": "الحرارة تزيد فقد السوائل غير المحسوس.",
+      "en": "Fever increases insensible losses."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عناية بالجلد وتغيير الملاءات المبللة بالعرق.",
+      "en": "Skin care and change sweat-soaked linen."
+     },
+     "rationale": {
+      "ar": "يمنع تهيج الجلد ويحسن الراحة.",
+      "en": "Prevents skin breakdown and improves comfort."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحرارة 37.6° والنبض 96 بعد 24 ساعة — تحقق.",
+      "en": "Temperature 37.6 °C, pulse 96 after 24 hours — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "حرارة طبيعية يوم 3 وكرات بيضاء 11,000 — تحقق.",
+      "en": "Normal temperature on day 3, WBC 11,000 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "خفض درجة الحرارة",
+      "en": "Reduce body temperature"
+     },
+     "actions": {
+      "ar": [
+       "قياس الحرارة كل 2–4 ساعات وبعد 30–60 دقيقة من خافض الحرارة.",
+       "إعطاء خافض الحرارة حسب الأمر.",
+       "التبريد الخارجي: كمادات فاترة، ملابس وأغطية خفيفة، تهوية الغرفة.",
+       "تجنب الماء المثلج والرعشة."
+      ],
+      "en": [
+       "Check temperature every 2–4 hours and 30–60 minutes after antipyretics.",
+       "Give antipyretics as ordered.",
+       "External cooling: tepid sponging, light covers, ventilated room.",
+       "Avoid iced water and shivering."
+      ]
+     },
+     "outcome": {
+      "ar": "الحرارة < 38° والنبض < 100 خلال 24 ساعة، بدون رعشة.",
+      "en": "Temperature < 38 °C and pulse < 100 within 24 h, without shivering."
+     },
+     "timeframe": {
+      "ar": "كل 2–4 ساعات لمدة 24 ساعة",
+      "en": "Every 2–4 h for 24 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "علاج العدوى واكتشاف تسمم الدم",
+      "en": "Treat infection and detect sepsis"
+     },
+     "actions": {
+      "ar": [
+       "متابعة العلامات الحيوية وعلامات تسمم الدم (هبوط الضغط، قلة البول، ارتفاع اللاكتات).",
+       "أخذ مزارع الدم والإفرازات قبل المضاد الحيوي ثم إعطاؤه في أقرب وقت."
+      ],
+      "en": [
+       "Monitor vitals and sepsis signs (hypotension, oliguria, rising lactate).",
+       "Draw blood and sputum cultures before antibiotics, then give them promptly."
+      ]
+     },
+     "outcome": {
+      "ar": "المزارع مأخوذة والمضاد مُعطى مبكرًا، ولا علامات صدمة (ضغط طبيعي، بول كافٍ، لاكتات طبيعي)، وانخفاض علامات الالتهاب خلال 72 ساعة.",
+      "en": "Cultures taken and antibiotics started early; no shock (normal BP, adequate urine, normal lactate); inflammatory markers falling within 72 h."
+     },
+     "timeframe": {
+      "ar": "كل ساعة للعلامات؛ 72 ساعة للهدف",
+      "en": "Hourly vitals; 72 h for target"
+     }
+    },
+    {
+     "need": {
+      "ar": "تعويض السوائل وراحة المريض",
+      "en": "Fluid replacement and comfort"
+     },
+     "actions": {
+      "ar": [
+       "تعويض السوائل حسب الأمر وتسجيل الداخل والخارج.",
+       "عناية بالجلد وتغيير الملاءات المبللة بالعرق."
+      ],
+      "en": [
+       "Replace fluids as ordered and record intake/output.",
+       "Skin care and change sweat-soaked linen."
+      ]
+     },
+     "outcome": {
+      "ar": "توازن سوائل مناسب، وجلد نظيف وجاف، وملاءات جافة.",
+      "en": "Adequate fluid balance, clean dry skin and dry linen."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "SHEA/IDSA/APIC — Strategies to prevent ventilator-associated pneumonia and events in acute-care hospitals (2022 update)"
+  },
+  {
+   "title": "ATS/IDSA — Management of adults with hospital-acquired and ventilator-associated pneumonia"
+  },
+  {
+   "title": "دليل الرعاية التمريضية للمضاعفات المحتمل حدوثها لمرضى الرعاية المركزة (NurseHub Egypt)"
+  }
+ ],
+ "group": "icu"
+}

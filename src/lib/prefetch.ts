@@ -141,6 +141,7 @@ const ROUTES: Array<[string, () => Promise<unknown>]> = [
   ["/travel-questions/:categoryId", L.TravelQuestionsPage],
   ["/care-plans", L.CarePlansPage],
   ["/care-plans/:id", L.CarePlansPage],
+  ["/care-plans/:id/:dx", L.CarePlansPage],
   ["/cases", L.CasesPage],
   ["/cases/guide/:id", L.CasesPage],
   ["/cases/:id", L.CasesPage],

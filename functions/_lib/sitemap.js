@@ -89,7 +89,10 @@ export async function sitemapResponse({ request, env }) {
       const r = await fetch(`${site}/careplans/index.json`);
       const j = r.ok ? await r.json() : { plans: [] };
       urls.push(['/care-plans', 0.8]);
-      (j.plans || []).forEach((c) => urls.push([`/care-plans/${enc(c.id)}`, 0.7]));
+      (j.plans || []).forEach((c) => {
+        urls.push([`/care-plans/${enc(c.id)}`, 0.7]);
+        (c.diagnoses || []).forEach((d) => urls.push([`/care-plans/${enc(c.id)}/${enc(d.id)}`, 0.6]));
+      });
     } catch {
       /* optional */
     }

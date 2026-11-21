@@ -1,0 +1,729 @@
+{
+ "id": "dyspnea",
+ "icon": "😮‍💨",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "ضيق التنفس (مثل أزمة الربو)",
+  "en": "Dyspnea (e.g. Asthma Attack)"
+ },
+ "summary": {
+  "ar": "خطة رعاية للمريض الذي يعاني من ضيق التنفس: الوضع المريح، الأكسجين، جلسات الاستنشاق، ومتابعة التنفس والتشبع.",
+  "en": "Care plan for a breathless patient: positioning, oxygen, nebulizers, and monitoring breathing and saturation."
+ },
+ "diagnoses": [
+  {
+   "id": "ineffective-breathing-pattern",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية نمط التنفس",
+    "en": "Ineffective Breathing Pattern"
+   },
+   "definition": {
+    "ar": "شهيق و/أو زفير لا يوفر تهوية كافية.",
+    "en": "Inspiration and/or expiration that does not provide adequate ventilation."
+   },
+   "relatedTo": {
+    "ar": [
+     "تقلص الشعب الهوائية (أزمة ربو)",
+     "إجهاد عضلات التنفس",
+     "القلق"
+    ],
+    "en": [
+     "Bronchospasm (asthma attack)",
+     "Respiratory muscle fatigue",
+     "Anxiety"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "سرعة التنفس > 24/دقيقة",
+     "استخدام العضلات المساعدة",
+     "صفير وزفير طويل",
+     "صعوبة الكلام بجمل كاملة"
+    ],
+    "en": [
+     "Respiratory rate > 24/min",
+     "Accessory-muscle use",
+     "Wheeze and prolonged expiration",
+     "Unable to speak in full sentences"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش قادر آخد نفسي وصدري مقفول.\""
+     ],
+     "en": [
+      "\"I can't catch my breath; my chest is tight.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "التنفس 30/دقيقة، النبض 116.",
+      "صفير منتشر واستخدام العضلات المساعدة.",
+      "التشبع 90% على هواء الغرفة."
+     ],
+     "en": [
+      "RR 30/min, pulse 116.",
+      "Widespread wheeze and accessory-muscle use.",
+      "SpO₂ 90% on room air."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: التنفس ≤ 24/دقيقة ويتكلم بجمل كاملة."
+     ],
+     "en": [
+      "Within an hour: RR ≤ 24/min and speaks in full sentences."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يعرف المريض محفزات الأزمة ويستخدم البخاخة صحيحًا."
+     ],
+     "en": [
+      "Before discharge: knows attack triggers and uses the inhaler correctly."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة خصائص التنفس: المعدل، العمق، الانتظام، واستخدام العضلات المساعدة.",
+      "en": "Observe breathing: rate, depth, rhythm and accessory-muscle use."
+     },
+     "rationale": {
+      "ar": "يقيس شدة الضيق والاستجابة.",
+      "en": "Measures severity and response."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة العلامات الحيوية ولون المريض (زرقة الشفايف والأطراف).",
+      "en": "Monitor vital signs and colour (cyanosis of lips and extremities)."
+     },
+     "rationale": {
+      "ar": "الزرقة علامة متأخرة لنقص الأكسجين.",
+      "en": "Cyanosis is a late sign of hypoxia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع المريض في وضع مريح (شبه جالس) والراحة التامة في الفراش.",
+      "en": "Position semi-sitting and keep on bed rest."
+     },
+     "rationale": {
+      "ar": "يحسن تمدد الرئة ويقلل المجهود.",
+      "en": "Improves lung expansion and reduces effort."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التهوية الجيدة للمكان.",
+      "en": "Ensure good room ventilation."
+     },
+     "rationale": {
+      "ar": "تقلل الإحساس بالاختناق.",
+      "en": "Reduces the sense of suffocation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعليم التنفس البطيء بالشفاه المزمومة أثناء الضيق.",
+      "en": "Coach slow pursed-lip breathing during distress."
+     },
+     "rationale": {
+      "ar": "يقلل احتباس الهواء ويهدئ التنفس.",
+      "en": "Reduces air trapping and slows breathing."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء جلسة بجهاز الاستنشاق (البخار) حسب إرشادات الطبيب.",
+      "en": "Give inhaler/nebulizer therapy as directed by the physician."
+     },
+     "rationale": {
+      "ar": "يوسع الشعب الهوائية بسرعة.",
+      "en": "Rapidly opens airways."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء العلاج المناسب (الكورتيزون وغيره) حسب إرشادات الطبيب.",
+      "en": "Give other prescribed treatment (corticosteroids etc.)."
+     },
+     "rationale": {
+      "ar": "يقلل الالتهاب ويمنع رجوع الأزمة.",
+      "en": "Reduces inflammation and relapse."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب فورًا عند أي تدهور (صدر صامت، نعاس، تعب شديد).",
+      "en": "Report any deterioration immediately (silent chest, drowsiness, exhaustion)."
+     },
+     "rationale": {
+      "ar": "علامات أزمة مهددة للحياة.",
+      "en": "Signs of life-threatening attack."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم استخدام البخاخة وتجنب المحفزات (تراب، دخان، برد).",
+      "en": "Teach inhaler technique and trigger avoidance (dust, smoke, cold)."
+     },
+     "rationale": {
+      "ar": "يمنع تكرار الأزمات.",
+      "en": "Prevents recurrence."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التنفس 22 والمريض يتكلم بجمل كاملة بعد جلستين — تحقق.",
+      "en": "RR 22, speaking full sentences after two nebulizers — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "طبق البخاخة صحيحًا وذكر 3 محفزات — تحقق.",
+      "en": "Correct inhaler use and named 3 triggers — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة التنفس",
+      "en": "Monitor breathing"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة خصائص التنفس: المعدل، العمق، الانتظام، واستخدام العضلات المساعدة.",
+       "ملاحظة العلامات الحيوية ولون المريض (زرقة الشفايف والأطراف)."
+      ],
+      "en": [
+       "Observe breathing: rate, depth, rhythm and accessory-muscle use.",
+       "Monitor vital signs and colour (cyanosis of lips and extremities)."
+      ]
+     },
+     "outcome": {
+      "ar": "معدل وعمق التنفس ولون المريض مسجلين ومتابعين.",
+      "en": "Respiratory rate, depth and colour documented and followed."
+     },
+     "timeframe": {
+      "ar": "كل 15–30 دقيقة أثناء الأزمة",
+      "en": "Every 15–30 min during the attack"
+     }
+    },
+    {
+     "need": {
+      "ar": "تسهيل التنفس",
+      "en": "Ease breathing"
+     },
+     "actions": {
+      "ar": [
+       "وضع المريض في وضع مريح (شبه جالس) والراحة التامة في الفراش.",
+       "التهوية الجيدة للمكان.",
+       "تعليم التنفس البطيء بالشفاه المزمومة أثناء الضيق.",
+       "إعطاء جلسة بجهاز الاستنشاق (البخار) حسب إرشادات الطبيب.",
+       "إعطاء العلاج المناسب (الكورتيزون وغيره) حسب إرشادات الطبيب.",
+       "إبلاغ الطبيب فورًا عند أي تدهور (صدر صامت، نعاس، تعب شديد)."
+      ],
+      "en": [
+       "Position semi-sitting and keep on bed rest.",
+       "Ensure good room ventilation.",
+       "Coach slow pursed-lip breathing during distress.",
+       "Give inhaler/nebulizer therapy as directed by the physician.",
+       "Give other prescribed treatment (corticosteroids etc.).",
+       "Report any deterioration immediately (silent chest, drowsiness, exhaustion)."
+      ]
+     },
+     "outcome": {
+      "ar": "التنفس ≤ 24 والمريض يتكلم بجمل كاملة.",
+      "en": "RR ≤ 24 and full sentences."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 hour"
+     }
+    },
+    {
+     "need": {
+      "ar": "التثقيف",
+      "en": "Teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم استخدام البخاخة وتجنب المحفزات (تراب، دخان، برد)."
+      ],
+      "en": [
+       "Teach inhaler technique and trigger avoidance (dust, smoke, cold)."
+      ]
+     },
+     "outcome": {
+      "ar": "يستخدم البخاخة صحيحًا ويعرف المحفزات.",
+      "en": "Correct inhaler use; knows triggers."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-gas-exchange",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف تبادل الغازات",
+    "en": "Impaired Gas Exchange"
+   },
+   "definition": {
+    "ar": "زيادة أو نقص في الأكسجة أو التخلص من ثاني أكسيد الكربون عند الغشاء الحويصلي الشعيري.",
+    "en": "Excess or deficit in oxygenation and/or carbon dioxide elimination at the alveolar–capillary membrane."
+   },
+   "relatedTo": {
+    "ar": [
+     "عدم توازن التهوية والتروية",
+     "تقلص الشعب واحتباس الهواء"
+    ],
+    "en": [
+     "Ventilation–perfusion imbalance",
+     "Bronchospasm and air trapping"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تشبع < 92%",
+     "غازات دم غير طبيعية",
+     "زرقة أو قلق أو تشوش"
+    ],
+    "en": [
+     "SpO₂ < 92%",
+     "Abnormal ABGs",
+     "Cyanosis, restlessness or confusion"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس بدوخة ومش مركز.\""
+     ],
+     "en": [
+      "\"I feel dizzy and can't concentrate.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "التشبع 89%.",
+      "غازات الدم: PaO₂ ‏60.",
+      "قلق وتململ."
+     ],
+     "en": [
+      "SpO₂ 89%.",
+      "ABG: PaO₂ 60.",
+      "Restless and anxious."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: تشبع ≥ 94% (أو 88–92% لمرضى السدة الرئوية)."
+     ],
+     "en": [
+      "Within an hour: SpO₂ ≥ 94% (or 88–92% in COPD)."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: غازات دم طبيعية وتشبع مستقر على هواء الغرفة."
+     ],
+     "en": [
+      "Before discharge: normal ABGs and stable SpO₂ on room air."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة معدل الأكسجين في الدم (التشبع) باستمرار حسب أوامر الطبيب.",
+      "en": "Monitor oxygen saturation continuously as ordered."
+     },
+     "rationale": {
+      "ar": "يكشف نقص الأكسجين فورًا.",
+      "en": "Detects hypoxemia at once."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة درجة الوعي وصوت الصدر.",
+      "en": "Observe level of consciousness and breath sounds."
+     },
+     "rationale": {
+      "ar": "تغير الوعي من علامات نقص الأكسجين.",
+      "en": "Altered consciousness signals hypoxia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأكسجين حسب أوامر الطبيب بالتركيز المحدد.",
+      "en": "Give oxygen at the ordered concentration."
+     },
+     "rationale": {
+      "ar": "يعالج نقص الأكسجة.",
+      "en": "Corrects hypoxemia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عمل تحليل غازات الدم حسب أوامر الطبيب.",
+      "en": "Obtain arterial blood gases as ordered."
+     },
+     "rationale": {
+      "ar": "يقيس الأكسجين وثاني أكسيد الكربون وحموضة الدم بدقة.",
+      "en": "Precisely measures O₂, CO₂ and pH."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع شبه جالس وتجميع الرعاية لتقليل استهلاك الأكسجين.",
+      "en": "Semi-sitting position; cluster care to reduce oxygen use."
+     },
+     "rationale": {
+      "ar": "يحسن التهوية ويقلل الاستهلاك.",
+      "en": "Improves ventilation and lowers demand."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "في حالة وجود إفرازات: ملاحظة كمية ولون ورائحة البصاق وتشجيع الكحة.",
+      "en": "If secretions: note sputum amount, colour and odour; encourage coughing."
+     },
+     "rationale": {
+      "ar": "الإفرازات تعوق تبادل الغازات.",
+      "en": "Secretions impair gas exchange."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عند أي تغير في حالة المريض.",
+      "en": "Report any change in condition to the physician."
+     },
+     "rationale": {
+      "ar": "التدخل المبكر.",
+      "en": "Early intervention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 95% على 2 لتر أكسجين خلال 30 دقيقة — تحقق.",
+      "en": "SpO₂ 95% on 2 L oxygen within 30 minutes — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "غازات الدم طبيعية يوم الخروج — تحقق.",
+      "en": "Normal ABGs on discharge day — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تحسين الأكسجين",
+      "en": "Improve oxygenation"
+     },
+     "actions": {
+      "ar": [
+       "متابعة معدل الأكسجين في الدم (التشبع) باستمرار حسب أوامر الطبيب.",
+       "إعطاء الأكسجين حسب أوامر الطبيب بالتركيز المحدد.",
+       "عمل تحليل غازات الدم حسب أوامر الطبيب."
+      ],
+      "en": [
+       "Monitor oxygen saturation continuously as ordered.",
+       "Give oxygen at the ordered concentration.",
+       "Obtain arterial blood gases as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع ≥ 94% وغازات دم متحسنة.",
+      "en": "SpO₂ ≥ 94% and improving ABGs."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    },
+    {
+     "need": {
+      "ar": "تقليل الاستهلاك وتنظيف المجرى",
+      "en": "Reduce demand and clear airway"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة درجة الوعي وصوت الصدر.",
+       "وضع شبه جالس وتجميع الرعاية لتقليل استهلاك الأكسجين.",
+       "في حالة وجود إفرازات: ملاحظة كمية ولون ورائحة البصاق وتشجيع الكحة.",
+       "إبلاغ الطبيب عند أي تغير في حالة المريض."
+      ],
+      "en": [
+       "Observe level of consciousness and breath sounds.",
+       "Semi-sitting position; cluster care to reduce oxygen use.",
+       "If secretions: note sputum amount, colour and odour; encourage coughing.",
+       "Report any change in condition to the physician."
+      ]
+     },
+     "outcome": {
+      "ar": "مريض واعٍ وصدر أوضح وأي تغير مُبلَّغ.",
+      "en": "Alert patient, clearer chest, changes reported."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-dyspnea",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "شعور غامض بعدم الارتياح أو الخوف مصحوب باستجابة جسدية، ناتج عن توقع خطر.",
+    "en": "Vague feeling of unease or dread with an autonomic response, from anticipation of danger."
+   },
+   "relatedTo": {
+    "ar": [
+     "صعوبة التنفس والخوف من الاختناق"
+    ],
+    "en": [
+     "Breathlessness and fear of suffocation"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وتململ",
+     "سرعة النبض",
+     "التعبير عن الخوف"
+    ],
+    "en": [
+     "Tension and restlessness",
+     "Tachycardia",
+     "Expressed fear"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"خايف أتخنق.\""
+     ],
+     "en": [
+      "\"I'm afraid I'll suffocate.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "المريض متوتر وممسك بجانب السرير.",
+      "النبض 116."
+     ],
+     "en": [
+      "Patient tense, gripping the bed rail.",
+      "Pulse 116."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 30 دقيقة: المريض أهدأ ويتبع تعليمات التنفس."
+     ],
+     "en": [
+      "Within 30 minutes: calmer and following breathing instructions."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يعرف خطة التصرف عند الضيق بالبيت."
+     ],
+     "en": [
+      "Before discharge: knows the home plan for breathlessness."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تهدئة المريض والاستماع الجيد له والبقاء معه أثناء الأزمة.",
+      "en": "Calm the patient, listen well and stay during the attack."
+     },
+     "rationale": {
+      "ar": "وجود الممرض يقلل الخوف ويهدئ التنفس.",
+      "en": "Presence reduces fear and slows breathing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شرح الإجراءات بكلام بسيط وصوت هادئ.",
+      "en": "Explain procedures simply in a calm voice."
+     },
+     "rationale": {
+      "ar": "يقلل الخوف من المجهول.",
+      "en": "Reduces fear of the unknown."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التنفس مع المريض ببطء (Coaching).",
+      "en": "Breathe slowly together (coaching)."
+     },
+     "rationale": {
+      "ar": "يساعده يستعيد التحكم.",
+      "en": "Helps regain control."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "توفير الراحة الجسمانية والنفسية وتقليل المنبهات.",
+      "en": "Provide physical and psychological comfort; reduce stimuli."
+     },
+     "rationale": {
+      "ar": "بيئة هادئة تقلل القلق.",
+      "en": "Calm surroundings reduce anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم خطة التصرف عند الضيق: الجلوس، البخاخة، التنفس البطيء، طلب المساعدة.",
+      "en": "Teach the breathlessness plan: sit up, inhaler, slow breathing, call for help."
+     },
+     "rationale": {
+      "ar": "المعرفة تقلل الذعر.",
+      "en": "Knowledge reduces panic."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التحويل للدعم النفسي عند تكرار نوبات الذعر.",
+      "en": "Refer for psychological support if panic recurs."
+     },
+     "rationale": {
+      "ar": "القلق المزمن يزيد الأزمات.",
+      "en": "Chronic anxiety worsens attacks."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ والنبض 98 بعد 20 دقيقة — تحقق.",
+      "en": "Calmer, pulse 98 after 20 minutes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف القلق",
+      "en": "Relieve anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تهدئة المريض والاستماع الجيد له والبقاء معه أثناء الأزمة.",
+       "شرح الإجراءات بكلام بسيط وصوت هادئ.",
+       "التنفس مع المريض ببطء (Coaching).",
+       "توفير الراحة الجسمانية والنفسية وتقليل المنبهات."
+      ],
+      "en": [
+       "Calm the patient, listen well and stay during the attack.",
+       "Explain procedures simply in a calm voice.",
+       "Breathe slowly together (coaching).",
+       "Provide physical and psychological comfort; reduce stimuli."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض هادئ ويتبع تعليمات التنفس.",
+      "en": "Calm and following breathing instructions."
+     },
+     "timeframe": {
+      "ar": "30 دقيقة",
+      "en": "30 minutes"
+     }
+    },
+    {
+     "need": {
+      "ar": "خطة للبيت",
+      "en": "Home plan"
+     },
+     "actions": {
+      "ar": [
+       "تعليم خطة التصرف عند الضيق: الجلوس، البخاخة، التنفس البطيء، طلب المساعدة.",
+       "التحويل للدعم النفسي عند تكرار نوبات الذعر."
+      ],
+      "en": [
+       "Teach the breathlessness plan: sit up, inhaler, slow breathing, call for help.",
+       "Refer for psychological support if panic recurs."
+      ]
+     },
+     "outcome": {
+      "ar": "يشرح خطة التصرف عند الضيق.",
+      "en": "Explains the breathlessness plan."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "GINA — Global Strategy for Asthma Management and Prevention 2024"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "symptoms"
+}

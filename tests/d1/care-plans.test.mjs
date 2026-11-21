@@ -17,15 +17,22 @@ test('index builds and every plan passes the bilingual / column checks', () => {
   assert.ok(ids.length >= 12);
 });
 
-test('student plan order: assessment (S/O) → diagnosis → goals → interventions with rationale → evaluation', () => {
+test('format 2: one form per nursing diagnosis, columns in order, every intervention has its rationale', () => {
+  let v2 = 0;
   for (const id of ids) {
     const p = JSON.parse(readFileSync(join(DIR, 'plans', `${id}.json`), 'utf8'));
-    for (const d of p.student) {
-      assert.deepEqual(Object.keys(d), ['diagnosis', 'assessment', 'goals', 'interventions', 'evaluation'], id);
-      assert.ok(d.interventions.every((x) => x.rationale.ar && x.rationale.en), `${id}: every intervention has its rationale`);
+    if (!Array.isArray(p.diagnoses)) continue; // older format, still accepted until rewritten
+    v2++;
+    for (const d of p.diagnoses) {
+      for (const k of ['title', 'definition', 'relatedTo', d.kind === 'risk' ? 'riskFactors' : 'evidencedBy', 'assessment', 'goals', 'interventions', 'evaluation', 'hospital']) assert.ok(d[k], `${id}/${d.id}: ${k}`);
+      assert.ok(d.goals.short.ar.length && d.goals.long.ar.length, `${id}/${d.id}: short and long goals`);
+      assert.ok(d.interventions.length >= 6 && d.interventions.every((x) => x.rationale.ar && x.rationale.en), `${id}/${d.id}: interventions with rationale`);
+      assert.ok(d.evaluation.every((e) => ['met', 'partial', 'not'].includes(e.status)), `${id}/${d.id}: evaluation status`);
     }
-    for (const r of p.hospital) assert.deepEqual(Object.keys(r), ['diagnosis', 'need', 'actions', 'outcome', 'timeframe'], id);
   }
+  assert.ok(v2 >= 2, 'heart failure and VAP use format 2');
+  const hf = JSON.parse(readFileSync(join(DIR, 'plans', 'heart-failure.json'), 'utf8'));
+  assert.ok(hf.diagnoses.length >= 6, 'heart failure has 6–8 diagnoses');
 });
 
 const { onRequest } = await import(pathToFileURL(join(ROOT, 'functions/[[path]].js')).href);
@@ -44,17 +51,20 @@ globalThis.caches = { default: { async match(r) { return store.get(r.url)?.clone
 const BOT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
 const get = (path) => onRequest({ request: new Request(`https://nursehubegypt.com${path}`, { headers: { 'user-agent': BOT, accept: 'text/html' } }), env, next: async () => new Response(SHELL, { headers: { 'content-type': 'text/html' } }) });
 
-test('crawlers get the list and each plan with its own title and canonical; unknown plan is a 404', async () => {
+test('crawlers: list, each diagnosis as its own page with title and canonical; unknown plan or diagnosis is a 404', async () => {
   const list = await get('/care-plans');
   assert.equal(list.status, 200);
   const lh = await list.text();
   assert.match(lh, /<title>خطط الرعاية التمريضية/);
-  assert.ok(lh.includes('/care-plans/diabetes-type2'));
-  const r = await get('/care-plans/diabetes-type2');
+  assert.ok(lh.includes('/care-plans/heart-failure/excess-fluid-volume'));
+  const r = await get('/care-plans/heart-failure/excess-fluid-volume');
   const h = await r.text();
   assert.equal(r.status, 200);
-  assert.match(h, /<title>خطة رعاية تمريضية السكري من النوع الثاني/);
-  assert.ok(h.includes('<link rel="canonical" href="https://nursehubegypt.com/care-plans/diabetes-type2" />'));
-  assert.ok(h.includes('التدخلات التمريضية والمبررات'));
+  assert.match(h, /<title>زيادة حجم السوائل — خطة رعاية تمريضية هبوط القلب/);
+  assert.ok(h.includes('<link rel="canonical" href="https://nursehubegypt.com/care-plans/heart-failure/excess-fluid-volume" />'));
+  assert.ok(h.includes('التدخلات التمريضية والمبررات') && h.includes('مرتبط بـ'));
+  assert.equal((await get('/care-plans/heart-failure')).status, 200, 'plan page = first diagnosis');
+  assert.equal((await get('/care-plans/hypertension/dx-1')).status, 200, 'older plans get diagnosis pages too');
   assert.equal((await get('/care-plans/not-a-plan')).status, 404);
+  assert.equal((await get('/care-plans/heart-failure/not-a-diagnosis')).status, 404);
 });

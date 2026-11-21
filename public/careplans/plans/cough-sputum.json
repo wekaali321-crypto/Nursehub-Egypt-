@@ -1,0 +1,514 @@
+{
+ "id": "cough-sputum",
+ "icon": "🤧",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "الكحة والبلغم",
+  "en": "Cough & Sputum"
+ },
+ "summary": {
+  "ar": "خطة رعاية للمريض الذي يعاني من الكحة ووجود بلغم بالصدر: تسهيل خروج الإفرازات، تمرينات التنفس، والعلاج.",
+  "en": "Care plan for cough and sputum: mobilizing secretions, breathing exercises and treatment."
+ },
+ "diagnoses": [
+  {
+   "id": "ineffective-airway-clearance",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية تنظيف مجرى الهواء",
+    "en": "Ineffective Airway Clearance"
+   },
+   "definition": {
+    "ar": "عدم القدرة على إزالة الإفرازات أو العوائق من مجرى الهواء للحفاظ عليه مفتوحًا.",
+    "en": "Inability to clear secretions or obstructions from the airway to maintain patency."
+   },
+   "relatedTo": {
+    "ar": [
+     "زيادة الإفرازات وسماكتها",
+     "ضعف الكحة أو التعب",
+     "العدوى"
+    ],
+    "en": [
+     "Excessive, thick secretions",
+     "Weak cough or fatigue",
+     "Infection"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "كحة ببلغم",
+     "خرخرة أو صوت صدر غير طبيعي",
+     "صعوبة إخراج البلغم",
+     "تغير معدل التنفس"
+    ],
+    "en": [
+     "Productive cough",
+     "Crackles or abnormal breath sounds",
+     "Difficulty expectorating",
+     "Altered respiratory rate"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عندي بلغم تقيل ومش عارف أطلعه.\""
+     ],
+     "en": [
+      "\"I have thick phlegm I can't bring up.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بلغم أصفر لزج.",
+      "خرخرة في القاعدتين، التنفس 24/دقيقة.",
+      "التشبع 93%."
+     ],
+     "en": [
+      "Thick yellow sputum.",
+      "Bibasal crackles, RR 24/min.",
+      "SpO₂ 93%."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: يخرج المريض البلغم بكحة فعالة ويقل صوت الخرخرة."
+     ],
+     "en": [
+      "Within 24 hours: expectorates effectively and crackles decrease."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 72 ساعة: صدر أوضح، والبلغم أقل وفاتح اللون، والتنفس 12–20/دقيقة."
+     ],
+     "en": [
+      "Within 72 hours: clearer chest, less and lighter sputum, RR 12–20/min."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة معدل التنفس والعلامات الحيوية بصفة مستمرة.",
+      "en": "Monitor respiratory rate and vital signs continuously."
+     },
+     "rationale": {
+      "ar": "يكشف التدهور مبكرًا.",
+      "en": "Detects deterioration early."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة البصاق: اللون، الكمية، الرائحة، ولون المريض.",
+      "en": "Observe sputum colour, amount, odour and the patient's colour."
+     },
+     "rationale": {
+      "ar": "يدل على نوع العدوى وتطورها.",
+      "en": "Indicates type and course of infection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع المريض في الفراش في وضع مريح (شبه جالس).",
+      "en": "Position comfortably in bed (semi-sitting)."
+     },
+     "rationale": {
+      "ar": "يسهل التنفس وخروج الإفرازات.",
+      "en": "Eases breathing and drainage."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عمل تمرينات التنفس العميق.",
+      "en": "Perform deep-breathing exercises."
+     },
+     "rationale": {
+      "ar": "يفتح الحويصلات ويحرك الإفرازات.",
+      "en": "Opens alveoli and mobilizes secretions."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على السعال لطرد الإفرازات.",
+      "en": "Encourage coughing to expel secretions."
+     },
+     "rationale": {
+      "ar": "الكحة الفعالة تنظف مجرى الهواء.",
+      "en": "Effective cough clears the airway."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إعطاء السوائل الدافئة ما لم تُمنع.",
+      "en": "Give warm fluids unless restricted."
+     },
+     "rationale": {
+      "ar": "تخفف لزوجة البلغم.",
+      "en": "Thin secretions."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم والجلد والنظافة العامة للمريض باستمرار.",
+      "en": "Provide regular mouth, skin and general hygiene."
+     },
+     "rationale": {
+      "ar": "البلغم يسبب طعمًا سيئًا ويزيد البكتيريا في الفم.",
+      "en": "Sputum leaves a bad taste and increases oral bacteria."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء الأكسجين حسب أمر الطبيب.",
+      "en": "Give oxygen as ordered."
+     },
+     "rationale": {
+      "ar": "يعوض نقص الأكسجين الناتج عن الإفرازات.",
+      "en": "Corrects hypoxemia from secretions."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء العلاج (موسعات الشعب، طاردات البلغم، المضاد الحيوي) حسب أمر الطبيب.",
+      "en": "Give treatment (bronchodilators, mucolytics, antibiotics) as ordered."
+     },
+     "rationale": {
+      "ar": "يعالج السبب ويسهل خروج البلغم.",
+      "en": "Treats the cause and eases expectoration."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عمل مزرعة بصاق حسب أوامر الطبيب، خاصة إذا كان لونه غير طبيعي أو له رائحة كريهة.",
+      "en": "Send sputum culture as ordered, especially if discoloured or foul-smelling."
+     },
+     "rationale": {
+      "ar": "يحدد الميكروب والمضاد المناسب.",
+      "en": "Identifies organism and right antibiotic."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض يخرج البلغم بسهولة والخرخرة أقل بعد 24 ساعة — تحقق.",
+      "en": "Expectorating easily with fewer crackles at 24 hours — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "البلغم أبيض قليل والتنفس 18 يوم 3 — تحقق.",
+      "en": "Scant white sputum and RR 18 on day 3 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة التنفس والإفرازات",
+      "en": "Monitor breathing and secretions"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة معدل التنفس والعلامات الحيوية بصفة مستمرة.",
+       "ملاحظة البصاق: اللون، الكمية، الرائحة، ولون المريض."
+      ],
+      "en": [
+       "Monitor respiratory rate and vital signs continuously.",
+       "Observe sputum colour, amount, odour and the patient's colour."
+      ]
+     },
+     "outcome": {
+      "ar": "معدل التنفس ولون وكمية ورائحة الإفرازات ولون المريض موثقة.",
+      "en": "Respiratory rate, sputum colour/amount/odour and patient colour documented."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تسهيل خروج البلغم",
+      "en": "Mobilize secretions"
+     },
+     "actions": {
+      "ar": [
+       "وضع المريض في الفراش في وضع مريح (شبه جالس).",
+       "عمل تمرينات التنفس العميق.",
+       "تشجيع المريض على السعال لطرد الإفرازات.",
+       "إعطاء السوائل الدافئة ما لم تُمنع.",
+       "العناية بالفم والجلد والنظافة العامة للمريض باستمرار."
+      ],
+      "en": [
+       "Position comfortably in bed (semi-sitting).",
+       "Perform deep-breathing exercises.",
+       "Encourage coughing to expel secretions.",
+       "Give warm fluids unless restricted.",
+       "Provide regular mouth, skin and general hygiene."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يكح بفعالية ويخرج البلغم، والفم نظيف.",
+      "en": "Coughs effectively and expectorates; mouth clean."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "العلاج والأكسجين",
+      "en": "Treatment and oxygen"
+     },
+     "actions": {
+      "ar": [
+       "إعطاء الأكسجين حسب أمر الطبيب.",
+       "إعطاء العلاج (موسعات الشعب، طاردات البلغم، المضاد الحيوي) حسب أمر الطبيب.",
+       "عمل مزرعة بصاق حسب أوامر الطبيب، خاصة إذا كان لونه غير طبيعي أو له رائحة كريهة."
+      ],
+      "en": [
+       "Give oxygen as ordered.",
+       "Give treatment (bronchodilators, mucolytics, antibiotics) as ordered.",
+       "Send sputum culture as ordered, especially if discoloured or foul-smelling."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع ≥ 94% والمزرعة مأخوذة والعلاج في موعده.",
+      "en": "SpO₂ ≥ 94%, culture sent, treatment on time."
+     },
+     "timeframe": {
+      "ar": "72 ساعة",
+      "en": "72 hours"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-comfort-cough",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم الراحة بسبب الكحة",
+    "en": "Impaired Comfort (Cough)"
+   },
+   "definition": {
+    "ar": "الإحساس بنقص الراحة الجسدية بسبب الكحة المستمرة.",
+    "en": "Perceived lack of physical ease due to persistent cough."
+   },
+   "relatedTo": {
+    "ar": [
+     "تهيج مجرى الهواء",
+     "الكحة المتكررة"
+    ],
+    "en": [
+     "Airway irritation",
+     "Frequent coughing"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "كحة متكررة تمنع النوم والراحة",
+     "ألم في الصدر أو البطن مع الكحة"
+    ],
+    "en": [
+     "Frequent cough disturbing sleep and rest",
+     "Chest or abdominal ache with coughing"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الكحة مش مخلياني أنام وصدري واجعني منها.\""
+     ],
+     "en": [
+      "\"The cough keeps me awake and my chest hurts from it.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "نوبات كحة متكررة ليلًا.",
+      "ألم صدر 4/10 مع الكحة."
+     ],
+     "en": [
+      "Frequent coughing fits at night.",
+      "Chest ache 4/10 with coughing."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: تقل نوبات الكحة الليلية وينام 5 ساعات."
+     ],
+     "en": [
+      "Within 24 hours: fewer night fits; sleeps 5 hours."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يعرف المريض ما يهدئ الكحة وما يثيرها."
+     ],
+     "en": [
+      "Before discharge: knows what soothes and what triggers the cough."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تهدئة المريض والاستماع الجيد له.",
+      "en": "Reassure the patient and listen well."
+     },
+     "rationale": {
+      "ar": "القلق يزيد الكحة.",
+      "en": "Anxiety worsens cough."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إعطاء السوائل الدافئة (ينسون، عسل بالليمون للبالغين).",
+      "en": "Give warm drinks (anise, honey with lemon for adults)."
+     },
+     "rationale": {
+      "ar": "تلطف الحلق وتقلل التهيج.",
+      "en": "Soothe the throat and reduce irritation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع رأس السرير أثناء النوم.",
+      "en": "Raise the head of the bed for sleep."
+     },
+     "rationale": {
+      "ar": "يقلل الكحة الليلية والارتجاع.",
+      "en": "Reduces night cough and reflux."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ترطيب الجو وتجنب الدخان والروائح النفاذة.",
+      "en": "Humidify the air; avoid smoke and strong odours."
+     },
+     "rationale": {
+      "ar": "المهيجات تزيد الكحة.",
+      "en": "Irritants worsen cough."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء مهدئ الكحة حسب أمر الطبيب (للكحة الجافة غالبًا).",
+      "en": "Give a cough suppressant as ordered (usually for dry cough)."
+     },
+     "rationale": {
+      "ar": "الكحة المنتجة يجب ألا تُكتم.",
+      "en": "Productive cough should not be suppressed."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم تمرينات التنفس وسند الصدر بوسادة أثناء الكحة.",
+      "en": "Teach breathing exercises and splinting the chest with a pillow."
+     },
+     "rationale": {
+      "ar": "يقلل الألم مع الكحة.",
+      "en": "Reduces pain on coughing."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "قلت نوبات الكحة ونام 6 ساعات — تحقق.",
+      "en": "Fewer fits; slept 6 hours — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تهدئة الكحة",
+      "en": "Soothe the cough"
+     },
+     "actions": {
+      "ar": [
+       "تهدئة المريض والاستماع الجيد له.",
+       "إعطاء السوائل الدافئة (ينسون، عسل بالليمون للبالغين).",
+       "رفع رأس السرير أثناء النوم.",
+       "ترطيب الجو وتجنب الدخان والروائح النفاذة.",
+       "إعطاء مهدئ الكحة حسب أمر الطبيب (للكحة الجافة غالبًا)."
+      ],
+      "en": [
+       "Reassure the patient and listen well.",
+       "Give warm drinks (anise, honey with lemon for adults).",
+       "Raise the head of the bed for sleep.",
+       "Humidify the air; avoid smoke and strong odours.",
+       "Give a cough suppressant as ordered (usually for dry cough)."
+      ]
+     },
+     "outcome": {
+      "ar": "نوبات أقل ونوم أفضل.",
+      "en": "Fewer fits and better sleep."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "التثقيف",
+      "en": "Teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم تمرينات التنفس وسند الصدر بوسادة أثناء الكحة."
+      ],
+      "en": [
+       "Teach breathing exercises and splinting the chest with a pillow."
+      ]
+     },
+     "outcome": {
+      "ar": "يطبق تمرينات التنفس وسند الصدر.",
+      "en": "Uses breathing exercises and splinting."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "symptoms"
+}

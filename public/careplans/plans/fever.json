@@ -1,0 +1,746 @@
+{
+ "id": "fever",
+ "icon": "🌡️",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "ارتفاع درجة الحرارة (الحمى)",
+  "en": "Fever"
+ },
+ "summary": {
+  "ar": "خطة رعاية للمريض الذي يعاني من ارتفاع الحرارة: خفض الحرارة بأمان، تعويض السوائل، والراحة.",
+  "en": "Care plan for a febrile patient: safe temperature reduction, fluid replacement and comfort."
+ },
+ "diagnoses": [
+  {
+   "id": "hyperthermia",
+   "kind": "actual",
+   "title": {
+    "ar": "ارتفاع درجة حرارة الجسم",
+    "en": "Hyperthermia"
+   },
+   "definition": {
+    "ar": "ارتفاع درجة حرارة الجسم الداخلية فوق المعدل الطبيعي بسبب فشل التنظيم الحراري.",
+    "en": "Core body temperature above the normal diurnal range due to failure of thermoregulation."
+   },
+   "relatedTo": {
+    "ar": [
+     "العدوى أو الالتهاب",
+     "الجفاف",
+     "زيادة معدل الأيض"
+    ],
+    "en": [
+     "Infection or inflammation",
+     "Dehydration",
+     "Increased metabolic rate"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "حرارة ≥ 38.3° مئوية",
+     "جلد ساخن ومحمر",
+     "سرعة النبض والتنفس",
+     "رعشة أو عرق"
+    ],
+    "en": [
+     "Temperature ≥ 38.3 °C",
+     "Warm, flushed skin",
+     "Tachycardia and tachypnea",
+     "Shivering or sweating"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس بسخونية ورعشة وصداع.\"",
+      "\"جسمي مكسر.\""
+     ],
+     "en": [
+      "\"I feel hot and shivery with a headache.\"",
+      "\"My whole body aches.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الحرارة 39.2° مئوية.",
+      "النبض 112، التنفس 24، الضغط 110/70.",
+      "الجلد ساخن ومحمر ومبلل بالعرق.",
+      "كرات الدم البيضاء 15,000."
+     ],
+     "en": [
+      "Temperature 39.2 °C.",
+      "Pulse 112, RR 24, BP 110/70.",
+      "Hot, flushed, sweaty skin.",
+      "WBC 15,000/mm³."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة من التدخل: تبدأ الحرارة في الانخفاض.",
+      "خلال 24 ساعة: الحرارة < 38° والنبض < 100."
+     ],
+     "en": [
+      "Within an hour of intervention: temperature starts to fall.",
+      "Within 24 hours: temperature < 38 °C and pulse < 100."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 72 ساعة من علاج السبب: حرارة طبيعية مستقرة ويشرح المريض/الأسرة طرق خفض الحرارة بالبيت."
+     ],
+     "en": [
+      "Within 72 hours of treating the cause: stable normal temperature; patient/family explain home fever measures."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس العلامات الحيوية، والحرارة كل نصف ساعة في الارتفاع الشديد ثم كل 2–4 ساعات.",
+      "en": "Measure vital signs; temperature every 30 minutes when very high, then every 2–4 hours."
+     },
+     "rationale": {
+      "ar": "يتابع شدة الحرارة واستجابتها.",
+      "en": "Tracks severity and response."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الحرارة بعد نصف ساعة من خافض الحرارة وبعد 45 دقيقة من المضاد الحيوي.",
+      "en": "Recheck temperature 30 minutes after an antipyretic and 45 minutes after an antibiotic."
+     },
+     "rationale": {
+      "ar": "يقيس فعالية العلاج ويكشف التفاعلات.",
+      "en": "Measures effect and detects reactions."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات الجفاف وعلامات تسمم الدم (هبوط الضغط، تشوش، قلة البول).",
+      "en": "Watch for dehydration and sepsis (hypotension, confusion, oliguria)."
+     },
+     "rationale": {
+      "ar": "الحرارة قد تكون بداية تسمم دم.",
+      "en": "Fever may herald sepsis."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب بارتفاع الحرارة وأخذ المزارع المطلوبة قبل المضاد الحيوي.",
+      "en": "Inform the physician and take ordered cultures before antibiotics."
+     },
+     "rationale": {
+      "ar": "تحديد السبب وعلاجه.",
+      "en": "Identifies and treats the cause."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء خافض الحرارة حسب أوامر الطبيب.",
+      "en": "Give antipyretics as ordered."
+     },
+     "rationale": {
+      "ar": "يخفض الحرارة ويقلل استهلاك الأكسجين.",
+      "en": "Lowers temperature and oxygen use."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عمل كمادات فاترة (باردة) على أماكن النبض: الجبهة، الإبطين، أعلى الفخذين.",
+      "en": "Apply tepid compresses to pulse points: forehead, axillae, groins."
+     },
+     "rationale": {
+      "ar": "يزيد فقد الحرارة بالتوصيل والتبخر.",
+      "en": "Increases heat loss by conduction and evaporation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تخفيف الملابس والأغطية وتهوية المكان.",
+      "en": "Lighten clothing and covers; ventilate the room."
+     },
+     "rationale": {
+      "ar": "يسهل خروج الحرارة من الجسم.",
+      "en": "Facilitates heat loss."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع شرب السوائل بكثرة ما لم يُمنع.",
+      "en": "Encourage plenty of fluids unless restricted."
+     },
+     "rationale": {
+      "ar": "يعوض الفقد مع العرق والتنفس.",
+      "en": "Replaces losses from sweating and breathing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير الملابس والملاءات المبللة بالعرق والعناية بالفم.",
+      "en": "Change sweat-soaked clothes and linen; mouth care."
+     },
+     "rationale": {
+      "ar": "الراحة ومنع تهيج الجلد.",
+      "en": "Comfort and skin protection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "إرشاد المريض/الأسرة: شرب سوائل، تخفيف الملابس، حمام كلي أو جزئي بماء فاتر، تهوية المكان، وتجنب الماء المثلج.",
+      "en": "Teach: drink fluids, light clothing, full or partial tepid bath, ventilation, avoid iced water."
+     },
+     "rationale": {
+      "ar": "خفض الحرارة بأمان في البيت.",
+      "en": "Safe home fever control."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحرارة 37.8° بعد ساعتين من خافض الحرارة والكمادات — تحقق.",
+      "en": "Temperature 37.8 °C two hours after antipyretic and compresses — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحرارة 37.2° والنبض 88 بعد 24 ساعة — تحقق.",
+      "en": "Temperature 37.2 °C, pulse 88 after 24 hours — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "الأم شرحت طرق خفض الحرارة بالبيت — تحقق.",
+      "en": "Mother explained home fever measures — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة الحرارة والعلامات الحيوية",
+      "en": "Monitor temperature and vital signs"
+     },
+     "actions": {
+      "ar": [
+       "قياس العلامات الحيوية، والحرارة كل نصف ساعة في الارتفاع الشديد ثم كل 2–4 ساعات.",
+       "قياس الحرارة بعد نصف ساعة من خافض الحرارة وبعد 45 دقيقة من المضاد الحيوي.",
+       "ملاحظة علامات الجفاف وعلامات تسمم الدم (هبوط الضغط، تشوش، قلة البول)."
+      ],
+      "en": [
+       "Measure vital signs; temperature every 30 minutes when very high, then every 2–4 hours.",
+       "Recheck temperature 30 minutes after an antipyretic and 45 minutes after an antibiotic.",
+       "Watch for dehydration and sepsis (hypotension, confusion, oliguria)."
+      ]
+     },
+     "outcome": {
+      "ar": "الحرارة مسجلة كل نصف ساعة ثم كل 2–4 ساعات، واستجابة العلاج موثقة، ولا علامات جفاف أو تسمم دم.",
+      "en": "Temperature charted every 30 minutes then every 2–4 h, response documented, no dehydration or sepsis."
+     },
+     "timeframe": {
+      "ar": "كل نصف ساعة ثم كل 4 ساعات",
+      "en": "Every 30 min, then every 4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "خفض الحرارة",
+      "en": "Reduce temperature"
+     },
+     "actions": {
+      "ar": [
+       "إبلاغ الطبيب بارتفاع الحرارة وأخذ المزارع المطلوبة قبل المضاد الحيوي.",
+       "إعطاء خافض الحرارة حسب أوامر الطبيب.",
+       "عمل كمادات فاترة (باردة) على أماكن النبض: الجبهة، الإبطين، أعلى الفخذين.",
+       "تخفيف الملابس والأغطية وتهوية المكان."
+      ],
+      "en": [
+       "Inform the physician and take ordered cultures before antibiotics.",
+       "Give antipyretics as ordered.",
+       "Apply tepid compresses to pulse points: forehead, axillae, groins.",
+       "Lighten clothing and covers; ventilate the room."
+      ]
+     },
+     "outcome": {
+      "ar": "الحرارة < 38° والنبض < 100 خلال 24 ساعة.",
+      "en": "Temperature < 38 °C and pulse < 100 within 24 h."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "راحة المريض وتعويض السوائل",
+      "en": "Comfort and fluids"
+     },
+     "actions": {
+      "ar": [
+       "تشجيع شرب السوائل بكثرة ما لم يُمنع.",
+       "تغيير الملابس والملاءات المبللة بالعرق والعناية بالفم."
+      ],
+      "en": [
+       "Encourage plenty of fluids unless restricted.",
+       "Change sweat-soaked clothes and linen; mouth care."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض مرتاح وجلده جاف وفمه رطب.",
+      "en": "Patient comfortable, dry skin, moist mouth."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف المريض والأسرة",
+      "en": "Patient and family teaching"
+     },
+     "actions": {
+      "ar": [
+       "إرشاد المريض/الأسرة: شرب سوائل، تخفيف الملابس، حمام كلي أو جزئي بماء فاتر، تهوية المكان، وتجنب الماء المثلج."
+      ],
+      "en": [
+       "Teach: drink fluids, light clothing, full or partial tepid bath, ventilation, avoid iced water."
+      ]
+     },
+     "outcome": {
+      "ar": "الأسرة تشرح طرق خفض الحرارة ومتى ترجع للمستشفى.",
+      "en": "Family explains fever measures and when to return."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-deficient-fluid-volume-fever",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص حجم السوائل",
+    "en": "Risk for Deficient Fluid Volume"
+   },
+   "definition": {
+    "ar": "قابلية لنقص السوائل داخل الأوعية والخلايا مما قد يضر بالصحة.",
+    "en": "Susceptible to decreased intravascular, interstitial and/or intracellular fluid volume, which may compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "زيادة الفقد غير المحسوس مع العرق وسرعة التنفس",
+     "قلة الشرب بسبب التعب وفقد الشهية",
+     "القيء أو الإسهال المصاحب"
+    ],
+    "en": [
+     "Increased insensible loss through sweating and tachypnea",
+     "Reduced intake from fatigue and anorexia",
+     "Associated vomiting or diarrhea"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مليش نفس آكل أو أشرب.\""
+     ],
+     "en": [
+      "\"I have no appetite to eat or drink.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "عرق غزير، والشفايف جافة بسيطة.",
+      "البول أغمق من الطبيعي."
+     ],
+     "en": [
+      "Profuse sweating; slightly dry lips.",
+      "Darker urine than usual."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: أغشية مخاطية رطبة وبول ≥ 0.5 مل/كجم/ساعة فاتح اللون."
+     ],
+     "en": [
+      "Within 24 hours: moist mucous membranes and pale urine ≥ 0.5 mL/kg/h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "أثناء الإقامة: توازن سوائل مناسب دون علامات جفاف."
+     ],
+     "en": [
+      "During the stay: adequate fluid balance without dehydration."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "عمل خريطة السوائل (الداخل والخارج) ومتابعة الوزن.",
+      "en": "Keep a fluid chart (intake and output) and monitor weight."
+     },
+     "rationale": {
+      "ar": "يكشف الفقد مبكرًا.",
+      "en": "Detects losses early."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات الجفاف: عدم مرونة الجلد، جفاف الأغشية المخاطية، ضعف النبض، العطش الشديد، هبوط الضغط، قلة البول.",
+      "en": "Watch for dehydration: poor skin turgor, dry mucosa, weak pulse, severe thirst, hypotension, low urine."
+     },
+     "rationale": {
+      "ar": "تحدد شدة الجفاف.",
+      "en": "Grade dehydration."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع السوائل بكميات صغيرة متكررة (ماء، عصائر طبيعية، شوربة).",
+      "en": "Encourage small frequent fluids (water, natural juices, soup)."
+     },
+     "rationale": {
+      "ar": "أسهل في التحمل مع فقد الشهية.",
+      "en": "Better tolerated with anorexia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع الماء قريبًا من المريض وتذكيره بالشرب.",
+      "en": "Keep water within reach and remind the patient to drink."
+     },
+     "rationale": {
+      "ar": "يزيد الكمية المشروبة.",
+      "en": "Increases intake."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المحاليل الوريدية حسب الأمر في الحالات الشديدة.",
+      "en": "Give IV fluids as ordered in severe cases."
+     },
+     "rationale": {
+      "ar": "تعويض سريع.",
+      "en": "Rapid replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الأملاح ووظائف الكلى حسب الأمر.",
+      "en": "Monitor electrolytes and renal function as ordered."
+     },
+     "rationale": {
+      "ar": "الجفاف يؤثر على الكلى والأملاح.",
+      "en": "Dehydration affects kidneys and electrolytes."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الفم رطب والبول فاتح 60 مل/ساعة خلال 24 ساعة — تحقق.",
+      "en": "Moist mouth, pale urine 60 mL/h within 24 hours — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة السوائل",
+      "en": "Fluid monitoring"
+     },
+     "actions": {
+      "ar": [
+       "عمل خريطة السوائل (الداخل والخارج) ومتابعة الوزن.",
+       "ملاحظة علامات الجفاف: عدم مرونة الجلد، جفاف الأغشية المخاطية، ضعف النبض، العطش الشديد، هبوط الضغط، قلة البول."
+      ],
+      "en": [
+       "Keep a fluid chart (intake and output) and monitor weight.",
+       "Watch for dehydration: poor skin turgor, dry mucosa, weak pulse, severe thirst, hypotension, low urine."
+      ]
+     },
+     "outcome": {
+      "ar": "خريطة سوائل كاملة ولا علامات جفاف.",
+      "en": "Complete fluid chart and no dehydration signs."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "تعويض السوائل",
+      "en": "Fluid replacement"
+     },
+     "actions": {
+      "ar": [
+       "تشجيع السوائل بكميات صغيرة متكررة (ماء، عصائر طبيعية، شوربة).",
+       "وضع الماء قريبًا من المريض وتذكيره بالشرب.",
+       "إعطاء المحاليل الوريدية حسب الأمر في الحالات الشديدة.",
+       "متابعة الأملاح ووظائف الكلى حسب الأمر."
+      ],
+      "en": [
+       "Encourage small frequent fluids (water, natural juices, soup).",
+       "Keep water within reach and remind the patient to drink.",
+       "Give IV fluids as ordered in severe cases.",
+       "Monitor electrolytes and renal function as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "أغشية رطبة وبول ≥ 0.5 مل/كجم/ساعة وأملاح طبيعية.",
+      "en": "Moist mucosa, urine ≥ 0.5 mL/kg/h, normal electrolytes."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 hours"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-comfort-fever",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم الراحة",
+    "en": "Impaired Comfort"
+   },
+   "definition": {
+    "ar": "الإحساس بنقص الراحة والارتياح الجسدي أو النفسي.",
+    "en": "Perceived lack of ease, relief and transcendence in physical and psychological dimensions."
+   },
+   "relatedTo": {
+    "ar": [
+     "الحرارة والرعشة",
+     "آلام العضلات والصداع"
+    ],
+    "en": [
+     "Fever and chills",
+     "Myalgia and headache"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "شكوى من آلام الجسم والصداع",
+     "عدم القدرة على الراحة أو النوم",
+     "تململ"
+    ],
+    "en": [
+     "Complaints of body aches and headache",
+     "Inability to rest or sleep",
+     "Restlessness"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش عارف أنام من الوجع والسخونية.\""
+     ],
+     "en": [
+      "\"I can't sleep from the aches and fever.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "صداع 5/10 وآلام عضلات.",
+      "المريض متململ ونومه متقطع."
+     ],
+     "en": [
+      "Headache 5/10 and myalgia.",
+      "Restless, broken sleep."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 4 ساعات: الصداع ≤ 2/10 والمريض مرتاح."
+     ],
+     "en": [
+      "Within 4 hours: headache ≤ 2/10 and the patient comfortable."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 24 ساعة: ينام 6 ساعات متواصلة."
+     ],
+     "en": [
+      "Within 24 hours: sleeps 6 uninterrupted hours."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم شدة الألم والصداع بمقياس الألم.",
+      "en": "Assess aches and headache with a pain scale."
+     },
+     "rationale": {
+      "ar": "يحدد الاحتياج للمسكن.",
+      "en": "Defines analgesic need."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المسكن/خافض الحرارة حسب الأمر.",
+      "en": "Give analgesic/antipyretic as ordered."
+     },
+     "rationale": {
+      "ar": "يخفف الألم والحرارة معًا.",
+      "en": "Relieves pain and fever."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "بيئة هادئة بإضاءة خافتة وتهوية جيدة.",
+      "en": "Quiet, dim, well-ventilated room."
+     },
+     "rationale": {
+      "ar": "تساعد الراحة والنوم.",
+      "en": "Promotes rest and sleep."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع مريح وتغطية خفيفة أثناء الرعشة ثم تخفيفها بعدها.",
+      "en": "Comfortable position; light cover during chills, removed afterwards."
+     },
+     "rationale": {
+      "ar": "راحة دون رفع الحرارة.",
+      "en": "Comfort without raising temperature."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تجميع الرعاية لتوفير فترات راحة متواصلة.",
+      "en": "Cluster care to allow uninterrupted rest."
+     },
+     "rationale": {
+      "ar": "نوم أفضل.",
+      "en": "Better sleep."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم والجلد.",
+      "en": "Mouth and skin care."
+     },
+     "rationale": {
+      "ar": "الحرارة تجفف الفم وتسبب العرق.",
+      "en": "Fever dries the mouth and causes sweating."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الصداع 2/10 بعد 3 ساعات ونام 6 ساعات ليلًا — تحقق.",
+      "en": "Headache 2/10 after 3 hours; slept 6 hours at night — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الألم والصداع",
+      "en": "Relieve aches and headache"
+     },
+     "actions": {
+      "ar": [
+       "تقييم شدة الألم والصداع بمقياس الألم.",
+       "إعطاء المسكن/خافض الحرارة حسب الأمر."
+      ],
+      "en": [
+       "Assess aches and headache with a pain scale.",
+       "Give analgesic/antipyretic as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "الألم ≤ 2/10.",
+      "en": "Pain ≤ 2/10."
+     },
+     "timeframe": {
+      "ar": "4 ساعات",
+      "en": "4 hours"
+     }
+    },
+    {
+     "need": {
+      "ar": "الراحة والنوم",
+      "en": "Rest and sleep"
+     },
+     "actions": {
+      "ar": [
+       "بيئة هادئة بإضاءة خافتة وتهوية جيدة.",
+       "وضع مريح وتغطية خفيفة أثناء الرعشة ثم تخفيفها بعدها.",
+       "تجميع الرعاية لتوفير فترات راحة متواصلة.",
+       "العناية بالفم والجلد."
+      ],
+      "en": [
+       "Quiet, dim, well-ventilated room.",
+       "Comfortable position; light cover during chills, removed afterwards.",
+       "Cluster care to allow uninterrupted rest.",
+       "Mouth and skin care."
+      ]
+     },
+     "outcome": {
+      "ar": "نوم 6 ساعات ومريض مرتاح.",
+      "en": "Sleeps 6 hours, comfortable."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 hours"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "vitals"
+}

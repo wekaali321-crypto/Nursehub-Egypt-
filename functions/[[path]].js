@@ -1,3 +1,4 @@
+import { normalizePlan, diagnosisHtml } from './_lib/careplans.js';
 import { internalRows, isD1QuotaError } from './_lib/sb.js';
 import { ROUTE_PATTERNS } from './_lib/routes.js';
 // Server-side SEO injection (Cloudflare Pages Function).
@@ -212,21 +213,23 @@ async function pageFor(path, env, request) {
     return {
       title: `خطط الرعاية التمريضية جاهزة | ${SITE_NAME}`,
       description: 'خطط رعاية تمريضية جاهزة بالعربي والإنجليزي لأشهر الأمراض: خطة الطلاب (Assessment، Nursing Diagnosis، Goals، Interventions & Rationale، Evaluation) وخطة المستشفى.',
-      body: `<h1>خطط الرعاية التمريضية</h1>${list((idx.plans || []).map((c) => [`/care-plans/${c.id}`, c.title.ar, c.summary?.ar || '']))}`,
+      body: `<h1>خطط الرعاية التمريضية</h1>${list((idx.plans || []).map((c) => [`/care-plans/${c.id}`, c.title.ar, c.summary?.ar || '']))}${list((idx.plans || []).flatMap((c) => (c.diagnoses || []).map((d) => [`/care-plans/${c.id}/${d.id}`, `${d.title.ar} — ${c.title.ar}`, d.title.en])))}`,
       type: 'CollectionPage',
     };
   }
-  if ((m = /^\/care-plans\/([a-z0-9-]+)$/.exec(p))) {
-    const c = await getJSON(env, request, `/careplans/plans/${m[1]}.json`);
-    if (!c) return null;
-    const li = (a) => `<ul>${(a || []).map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
-    const student = (c.student || []).map((d) =>
-      `<section><h3>${esc(d.diagnosis.ar)}</h3><h4>التقييم</h4>${li(d.assessment?.subjective?.ar)}${li(d.assessment?.objective?.ar)}<h4>الأهداف</h4>${li(d.goals?.ar)}` +
-      `<h4>التدخلات التمريضية والمبررات</h4><ol>${(d.interventions || []).map((x) => `<li>${esc(x.action.ar)} — ${esc(x.rationale.ar)}</li>`).join('')}</ol><h4>التقييم النهائي</h4>${li(d.evaluation?.ar)}</section>`).join('');
-    const hospital = (c.hospital || []).map((r) => `<li>${esc(r.diagnosis.ar)}: ${esc(r.need.ar)} — ${esc(r.outcome.ar)} (${esc(r.timeframe.ar)})</li>`).join('');
-    const body = `<article><h1>خطة رعاية تمريضية: ${esc(c.title.ar)}</h1><p lang="en">${esc(c.title.en)} Nursing Care Plan</p><p>${esc(c.summary?.ar || '')}</p>` +
-      `<h2>خطة الطلاب</h2>${student}<h2>خطة المستشفى</h2><ul>${hospital}</ul></article>`;
-    return { title: `خطة رعاية تمريضية ${c.title.ar} (${c.title.en} Nursing Care Plan) | ${SITE_NAME}`, description: clip(strip(c.summary?.ar || ''), 300), body, type: 'MedicalWebPage' };
+  if ((m = /^\/care-plans\/([a-z0-9-]+)(?:\/([a-z0-9-]+))?$/.exec(p))) {
+    const raw = await getJSON(env, request, `/careplans/plans/${m[1]}.json`);
+    if (!raw) return null;
+    const c = normalizePlan(raw);
+    const d = m[2] ? c.diagnoses.find((x) => x.id === m[2]) : c.diagnoses[0];
+    if (!d) return null;
+    const links = `<nav><h2>التشخيصات التمريضية</h2>${list(c.diagnoses.map((x) => [`/care-plans/${c.id}/${x.id}`, x.title.ar, x.title.en]))}</nav>`;
+    return {
+      title: `${d.title.ar} — خطة رعاية تمريضية ${c.title.ar} (${d.title.en} Nursing Care Plan) | ${SITE_NAME}`,
+      description: clip(strip((d.definition || d.statement)?.ar || c.summary?.ar || ''), 300),
+      body: diagnosisHtml(c, d, esc) + links,
+      type: 'MedicalWebPage',
+    };
   }
   if ((m = /^\/article\/([^/]+)$/.exec(p))) {
     const slug = dec(m[1]).replace(/[^\w\u0600-\u06FF-]/g, '');
@@ -433,9 +436,12 @@ async function classify(path, env, request) {
     const id = dec(m[1]);
     return SAFE_ID.test(id) && (await assetExists(env, request, `/clinical-cases/cases/${id}.json`)) ? 'ok' : 'missing';
   }
-  if ((m = /^\/care-plans\/([^/]+)$/.exec(p))) {
+  if ((m = /^\/care-plans\/([^/]+)(?:\/([^/]+))?$/.exec(p))) {
     const id = dec(m[1]);
-    return SAFE_ID.test(id) && (await assetExists(env, request, `/careplans/plans/${id}.json`)) ? 'ok' : 'missing';
+    if (!SAFE_ID.test(id)) return 'missing';
+    if (!m[2]) return (await assetExists(env, request, `/careplans/plans/${id}.json`)) ? 'ok' : 'missing';
+    const raw = await getJSON(env, request, `/careplans/plans/${id}.json`);
+    return raw && normalizePlan(raw).diagnoses.some((x) => x.id === dec(m[2])) ? 'ok' : 'missing';
   }
   if ((m = /^\/section\/([^/]+)$/.exec(p))) {
     if (!sectionSlugs) {
