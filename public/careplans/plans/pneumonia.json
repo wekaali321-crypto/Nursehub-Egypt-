@@ -2,288 +2,1153 @@
  "id": "pneumonia",
  "icon": "🫁",
  "system": "respiratory",
+ "folder": "disease",
  "title": {
   "ar": "الالتهاب الرئوي",
   "en": "Pneumonia"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض التهاب رئوي: تنظيف مجرى الهواء، تحسين الأكسجين، وخفض الحرارة.",
-  "en": "Care plan for pneumonia: airway clearance, oxygenation and fever control."
+  "ar": "خطة رعاية الالتهاب الرئوي: تنظيف مجرى الهواء، تبادل الغازات، الحمى، الألم الجنبي، عدم تحمل النشاط، والسوائل.",
+  "en": "Pneumonia care plan: airway clearance, gas exchange, fever, pleuritic pain, activity intolerance and fluids."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "عدم فعالية تنظيف مجرى الهواء (Ineffective airway clearance) مرتبطة بزيادة الإفرازات وسماكتها وضعف الكحة وتظهر في كحة ببلغم أصفر وخرخرة.",
-    "en": "Ineffective airway clearance related to excessive, thick secretions and weak cough as evidenced by productive yellow sputum and crackles."
-   },
-   "assessment": {
-    "subjective": {
-     "ar": [
-      "\"عندي كحة ببلغم تقيل ومش عارف أطلعه.\""
-     ],
-     "en": [
-      "\"I have a cough with thick phlegm I can't bring up.\""
-     ]
-    },
-    "objective": {
-     "ar": [
-      "بلغم أصفر لزج.",
-      "خرخرة في قاعدة الرئة اليمنى وأشعة تظهر ارتشاح بالفص السفلي الأيمن.",
-      "سرعة التنفس 26/دقيقة."
-     ],
-     "en": [
-      "Thick yellow sputum.",
-      "Crackles at the right base; chest X-ray shows right lower-lobe consolidation.",
-      "Respiratory rate 26/min."
-     ]
-    }
-   },
-   "goals": {
-    "ar": [
-     "خلال 48 ساعة يُخرج المريض البلغم بكحة فعالة، ويقل صوت الخرخرة، وسرعة التنفس 12–20/دقيقة."
-    ],
-    "en": [
-     "Within 48 hours the patient expectorates with an effective cough, crackles decrease and RR is 12–20/min."
-    ]
-   },
-   "interventions": [
-    {
-     "action": {
-      "ar": "تعليم الكحة الفعالة والتنفس العميق كل ساعتين.",
-      "en": "Teach effective coughing and deep breathing every 2 hours."
-     },
-     "rationale": {
-      "ar": "يحرك الإفرازات ويفتح الحويصلات المغلقة.",
-      "en": "Mobilizes secretions and re-expands collapsed alveoli."
-     }
-    },
-    {
-     "action": {
-      "ar": "تشجيع شرب 2–3 لتر سوائل يوميًا ما لم يُمنع.",
-      "en": "Encourage 2–3 L of fluids daily unless restricted."
-     },
-     "rationale": {
-      "ar": "السوائل تخفف لزوجة البلغم فيسهل خروجه.",
-      "en": "Hydration thins secretions so they are easier to clear."
-     }
-    },
-    {
-     "action": {
-      "ar": "تغيير الوضع كل ساعتين والجلوس في وضع نصف جالس.",
-      "en": "Reposition every 2 hours and sit semi-Fowler's."
-     },
-     "rationale": {
-      "ar": "يحسن تهوية الرئة وتصريف الإفرازات.",
-      "en": "Improves ventilation and drainage of secretions."
-     }
-    },
-    {
-     "action": {
-      "ar": "إعطاء البخار/موسعات الشعب حسب الأمر وشفط الإفرازات عند العجز عن إخراجها.",
-      "en": "Give nebulizers/bronchodilators as ordered and suction if the patient cannot clear secretions."
-     },
-     "rationale": {
-      "ar": "يوسع الشعب ويزيل الإفرازات التي تسد مجرى الهواء.",
-      "en": "Opens airways and removes obstructing secretions."
-     }
-    },
-    {
-     "action": {
-      "ar": "أخذ عينة بلغم للمزرعة قبل أول جرعة مضاد حيوي.",
-      "en": "Collect a sputum culture before the first antibiotic dose."
-     },
-     "rationale": {
-      "ar": "تحدد الميكروب والمضاد المناسب دون تأثير العلاج على النتيجة.",
-      "en": "Identifies the organism and the right antibiotic without treatment affecting the result."
-     }
-    }
-   ],
-   "evaluation": {
-    "ar": [
-     "المريض أخرج البلغم بسهولة، الخرخرة قلّت، وسرعة التنفس 20/دقيقة. — تحقق الهدف."
-    ],
-    "en": [
-     "Patient clears sputum easily, crackles reduced, RR 20/min. — Goal met."
-    ]
-   }
-  },
-  {
-   "diagnosis": {
-    "ar": "ارتفاع درجة الحرارة (Hyperthermia) مرتبط بالعدوى ويظهر في حرارة 39.2° وسخونة الجلد وسرعة النبض.",
-    "en": "Hyperthermia related to infectious process as evidenced by temperature 39.2 °C, warm flushed skin and tachycardia."
-   },
-   "assessment": {
-    "subjective": {
-     "ar": [
-      "\"حاسس برعشة وسخونية.\""
-     ],
-     "en": [
-      "\"I feel shivery and hot.\""
-     ]
-    },
-    "objective": {
-     "ar": [
-      "درجة الحرارة 39.2° مئوية.",
-      "النبض 112/دقيقة، الجلد ساخن ومحمر.",
-      "ارتفاع كرات الدم البيضاء 16,000."
-     ],
-     "en": [
-      "Temperature 39.2 °C.",
-      "Pulse 112/min; skin hot and flushed.",
-      "WBC 16,000/mm³."
-     ]
-    }
-   },
-   "goals": {
-    "ar": [
-     "خلال 24 ساعة تنخفض الحرارة إلى أقل من 37.8° ويقل النبض لأقل من 100."
-    ],
-    "en": [
-     "Within 24 hours temperature falls below 37.8 °C and pulse below 100."
-    ]
-   },
-   "interventions": [
-    {
-     "action": {
-      "ar": "قياس الحرارة كل 4 ساعات وبعد 30–60 دقيقة من خافض الحرارة.",
-      "en": "Check temperature every 4 hours and 30–60 minutes after antipyretics."
-     },
-     "rationale": {
-      "ar": "يقيس فعالية العلاج ويكشف استمرار العدوى.",
-      "en": "Evaluates treatment and detects ongoing infection."
-     }
-    },
-    {
-     "action": {
-      "ar": "إعطاء خافض الحرارة (Paracetamol) والمضاد الحيوي في مواعيدهم بالضبط.",
-      "en": "Give antipyretics (paracetamol) and antibiotics exactly on time."
-     },
-     "rationale": {
-      "ar": "المضاد يعالج السبب، والمواعيد المنتظمة تحافظ على تركيزه في الدم.",
-      "en": "Antibiotics treat the cause; punctual doses keep therapeutic blood levels."
-     }
-    },
-    {
-     "action": {
-      "ar": "كمادات ماء فاتر وملابس خفيفة وتهوية الغرفة.",
-      "en": "Tepid sponging, light clothing and a ventilated room."
-     },
-     "rationale": {
-      "ar": "يزيد فقد الحرارة بالتبخر والتوصيل.",
-      "en": "Increases heat loss by evaporation and conduction."
-     }
-    },
-    {
-     "action": {
-      "ar": "تشجيع السوائل ومتابعة الداخل والخارج.",
-      "en": "Encourage fluids and monitor intake and output."
-     },
-     "rationale": {
-      "ar": "الحرارة تزيد فقد السوائل غير المحسوس.",
-      "en": "Fever increases insensible fluid loss."
-     }
-    }
-   ],
-   "evaluation": {
-    "ar": [
-     "الحرارة 37.4° والنبض 92 بعد 24 ساعة. — تحقق الهدف."
-    ],
-    "en": [
-     "Temperature 37.4 °C and pulse 92 after 24 hours. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
+   "id": "ineffective-airway-clearance-pneumonia",
+   "kind": "actual",
+   "title": {
     "ar": "عدم فعالية تنظيف مجرى الهواء",
-    "en": "Ineffective airway clearance"
+    "en": "Ineffective Airway Clearance"
    },
-   "need": {
-    "ar": "مجرى هواء مفتوح",
-    "en": "Clear airway"
+   "definition": {
+    "ar": "عدم القدرة على إزالة الإفرازات أو الانسداد من مجرى الهواء للحفاظ عليه مفتوحًا.",
+    "en": "Inability to clear secretions or obstructions from the airway to maintain patency."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "كحة فعالة وتنفس عميق",
-     "سوائل 2–3 لتر",
-     "بخار وشفط عند الحاجة"
+     "التهاب وزيادة الإفرازات في الحويصلات",
+     "ضعف الكحة بسبب الألم والتعب"
     ],
     "en": [
-     "Effective cough and deep breathing",
-     "Fluids 2–3 L",
-     "Nebulizer and suction as needed"
+     "Alveolar inflammation and exudate",
+     "Weak cough from pain and fatigue"
     ]
    },
-   "outcome": {
-    "ar": "خروج البلغم وقلة الخرخرة",
-    "en": "Sputum cleared, fewer crackles"
+   "evidencedBy": {
+    "ar": [
+     "كحة غير فعالة",
+     "أصوات تنفس غير طبيعية (خرخرة، صفير)",
+     "بلغم كثير"
+    ],
+    "en": [
+     "Ineffective cough",
+     "Adventitious breath sounds (crackles, wheeze)",
+     "Excess sputum"
+    ]
    },
-   "timeframe": {
-    "ar": "48 ساعة",
-    "en": "48 hours"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بكح بلغم أصفر تقيل ومش عارف أطلعه.\""
+     ],
+     "en": [
+      "\"I'm coughing thick yellow phlegm and can't bring it up.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "خرخرة في القاعدة اليمنى.",
+      "بلغم أصفر مخضر.",
+      "التنفس 28."
+     ],
+     "en": [
+      "Right basal crackles.",
+      "Yellow-green sputum.",
+      "RR 28."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24–48 ساعة: كحة فعالة وصدر أوضح وتنفس 12–20."
+     ],
+     "en": [
+      "Within 24–48 h: effective cough, clearer chest, RR 12–20."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: مجرى هواء مفتوح وإخراج الإفرازات بسهولة."
+     ],
+     "en": [
+      "Before discharge: patent airway and easy secretion clearance."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة سرعة التنفس وعمقه واستخدام العضلات المساعدة ولون المريض (زرقة الشفاه).",
+      "en": "Assess respiratory rate, depth, accessory muscle use and colour (lip cyanosis)."
+     },
+     "rationale": {
+      "ar": "يقيم شدة الضيق.",
+      "en": "Assesses severity."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "سماع الصدر قبل وبعد التدخلات.",
+      "en": "Auscultate before and after interventions."
+     },
+     "rationale": {
+      "ar": "يقيس الفعالية.",
+      "en": "Measures effect."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة الكحة والبلغم: اللون والكمية والقوام والرائحة، وعمل مزرعة بلغم إذا كان غير طبيعي حسب الأمر.",
+      "en": "Observe cough and sputum: colour, amount, consistency, odour; send culture if abnormal as ordered."
+     },
+     "rationale": {
+      "ar": "يكشف العدوى ويوجه العلاج.",
+      "en": "Detects infection and guides therapy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع شبه جالس أو جالس (45–90 درجة).",
+      "en": "Semi-Fowler or high-Fowler position (45–90°)."
+     },
+     "rationale": {
+      "ar": "يحسن تمدد الرئة.",
+      "en": "Improves lung expansion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تمارين التنفس العميق والكحة الفعالة كل 2 ساعة.",
+      "en": "Deep breathing and effective coughing every 2 h."
+     },
+     "rationale": {
+      "ar": "تخرج الإفرازات.",
+      "en": "Mobilizes secretions."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "سوائل دافئة 2–3 لتر يوميًا إلا إذا مُنعت.",
+      "en": "Warm fluids 2–3 L/day unless restricted."
+     },
+     "rationale": {
+      "ar": "تخفف الإفرازات.",
+      "en": "Thins secretions."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "جلسات البخار وموسعات الشعب وطاردات البلغم حسب الأمر.",
+      "en": "Nebulized bronchodilators and mucolytics as ordered."
+     },
+     "rationale": {
+      "ar": "توسع الشعب وتسهل الإخراج.",
+      "en": "Dilate airways and ease clearance."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المضاد الحيوي في موعده بعد أخذ مزرعة البلغم والدم.",
+      "en": "Give antibiotics on time after sputum and blood cultures."
+     },
+     "rationale": {
+      "ar": "يعالج السبب؛ التأخير يزيد الوفيات.",
+      "en": "Treats the cause; delay increases mortality."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الكحة فعالة، الخرخرة أقل، التنفس 20 — تحقق.",
+      "en": "Effective cough, fewer crackles, RR 20 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم التنفس والإفرازات",
+      "en": "Assess breathing and secretions"
+     },
+     "actions": {
+      "ar": [
+       "متابعة سرعة التنفس وعمقه واستخدام العضلات المساعدة ولون المريض (زرقة الشفاه).",
+       "سماع الصدر قبل وبعد التدخلات.",
+       "ملاحظة الكحة والبلغم: اللون والكمية والقوام والرائحة، وعمل مزرعة بلغم إذا كان غير طبيعي حسب الأمر."
+      ],
+      "en": [
+       "Assess respiratory rate, depth, accessory muscle use and colour (lip cyanosis).",
+       "Auscultate before and after interventions.",
+       "Observe cough and sputum: colour, amount, consistency, odour; send culture if abnormal as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "تنفس أهدأ وإفرازات موثقة.",
+      "en": "Calmer breathing, secretions documented."
+     },
+     "timeframe": {
+      "ar": "كل 2–4 ساعات",
+      "en": "Every 2–4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تنظيف مجرى الهواء",
+      "en": "Clear the airway"
+     },
+     "actions": {
+      "ar": [
+       "وضع شبه جالس أو جالس (45–90 درجة).",
+       "تمارين التنفس العميق والكحة الفعالة كل 2 ساعة.",
+       "سوائل دافئة 2–3 لتر يوميًا إلا إذا مُنعت.",
+       "جلسات البخار وموسعات الشعب وطاردات البلغم حسب الأمر.",
+       "إعطاء المضاد الحيوي في موعده بعد أخذ مزرعة البلغم والدم."
+      ],
+      "en": [
+       "Semi-Fowler or high-Fowler position (45–90°).",
+       "Deep breathing and effective coughing every 2 h.",
+       "Warm fluids 2–3 L/day unless restricted.",
+       "Nebulized bronchodilators and mucolytics as ordered.",
+       "Give antibiotics on time after sputum and blood cultures."
+      ]
+     },
+     "outcome": {
+      "ar": "صدر أوضح.",
+      "en": "Clearer chest."
+     },
+     "timeframe": {
+      "ar": "24–48 ساعة",
+      "en": "24–48 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
+   "id": "impaired-gas-exchange-pneumonia",
+   "kind": "actual",
+   "title": {
     "ar": "ضعف تبادل الغازات",
-    "en": "Impaired gas exchange"
+    "en": "Impaired Gas Exchange"
    },
-   "need": {
-    "ar": "أكسجين كافٍ",
-    "en": "Adequate oxygenation"
+   "definition": {
+    "ar": "زيادة أو نقص في الأكسجة أو التخلص من ثاني أكسيد الكربون.",
+    "en": "Excess or deficit in oxygenation and/or CO₂ elimination."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "أكسجين حسب الأمر",
-     "متابعة التشبع",
-     "وضع نصف جالس"
+     "امتلاء الحويصلات بالالتهاب"
     ],
     "en": [
-     "Oxygen as ordered",
-     "Monitor SpO₂",
-     "Semi-Fowler's"
+     "Alveolar consolidation"
     ]
    },
-   "outcome": {
-    "ar": "تشبع ≥ 94%",
-    "en": "SpO₂ ≥ 94%"
+   "evidencedBy": {
+    "ar": [
+     "هبوط التشبع",
+     "تشوش أو قلق"
+    ],
+    "en": [
+     "Low SpO₂",
+     "Confusion or restlessness"
+    ]
    },
-   "timeframe": {
-    "ar": "24 ساعة",
-    "en": "24 hours"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"نفسي مقطوع.\""
+     ],
+     "en": [
+      "\"I'm out of breath.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "التشبع 89% على هواء الغرفة.",
+      "أشعة: التهاب الفص السفلي الأيمن."
+     ],
+     "en": [
+      "SpO₂ 89% on room air.",
+      "X-ray: right lower lobe consolidation."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: تشبع 94–98% بالأكسجين."
+     ],
+     "en": [
+      "Within 1 h: SpO₂ 94–98% on oxygen."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: تشبع ≥ 94% على هواء الغرفة."
+     ],
+     "en": [
+      "Before discharge: SpO₂ ≥ 94% on room air."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة التشبع والوعي ولون المريض كل 2–4 ساعات.",
+      "en": "Monitor SpO₂, consciousness and colour every 2–4 h."
+     },
+     "rationale": {
+      "ar": "التشوش علامة نقص أكسجين.",
+      "en": "Confusion signals hypoxemia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "أكسجين مرطب بالوسيلة والمعدل المحدد للوصول للتشبع المستهدف.",
+      "en": "Humidified oxygen by the ordered device and flow to target SpO₂."
+     },
+     "rationale": {
+      "ar": "يعالج نقص الأكسجين.",
+      "en": "Treats hypoxemia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع المريض على الجانب السليم لأسفل (\"الرئة السليمة لتحت\") عند الإصابة في جانب واحد.",
+      "en": "Position \"good lung down\" in unilateral pneumonia."
+     },
+     "rationale": {
+      "ar": "يحسن التوافق بين التهوية والتروية.",
+      "en": "Improves V/Q matching."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عمل غازات الدم حسب الأمر.",
+      "en": "Obtain ABGs as ordered."
+     },
+     "rationale": {
+      "ar": "تقييم دقيق.",
+      "en": "Accurate assessment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تجميع الرعاية وفترات راحة.",
+      "en": "Cluster care; rest periods."
+     },
+     "rationale": {
+      "ar": "يقلل استهلاك الأكسجين.",
+      "en": "Reduces O₂ demand."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عن تشبع < 92% رغم الأكسجين أو تنفس > 30 أو تشوش (مقياس CURB-65).",
+      "en": "Report SpO₂ < 92% on oxygen, RR > 30 or confusion (CURB-65)."
+     },
+     "rationale": {
+      "ar": "قد يحتاج رعاية مركزة.",
+      "en": "May need ICU."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 95% على 2 لتر — تحقق.",
+      "en": "SpO₂ 95% on 2 L — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تحسين الأكسجة",
+      "en": "Improve oxygenation"
+     },
+     "actions": {
+      "ar": [
+       "متابعة التشبع والوعي ولون المريض كل 2–4 ساعات.",
+       "أكسجين مرطب بالوسيلة والمعدل المحدد للوصول للتشبع المستهدف.",
+       "وضع المريض على الجانب السليم لأسفل (\"الرئة السليمة لتحت\") عند الإصابة في جانب واحد.",
+       "عمل غازات الدم حسب الأمر.",
+       "تجميع الرعاية وفترات راحة.",
+       "إبلاغ الطبيب عن تشبع < 92% رغم الأكسجين أو تنفس > 30 أو تشوش (مقياس CURB-65)."
+      ],
+      "en": [
+       "Monitor SpO₂, consciousness and colour every 2–4 h.",
+       "Humidified oxygen by the ordered device and flow to target SpO₂.",
+       "Position \"good lung down\" in unilateral pneumonia.",
+       "Obtain ABGs as ordered.",
+       "Cluster care; rest periods.",
+       "Report SpO₂ < 92% on oxygen, RR > 30 or confusion (CURB-65)."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع في المدى.",
+      "en": "SpO₂ in range."
+     },
+     "timeframe": {
+      "ar": "كل 2–4 ساعات",
+      "en": "Every 2–4 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "ارتفاع الحرارة",
+   "id": "hyperthermia-pneumonia",
+   "kind": "actual",
+   "title": {
+    "ar": "ارتفاع درجة الحرارة",
     "en": "Hyperthermia"
    },
-   "need": {
-    "ar": "خفض الحرارة",
-    "en": "Reduce fever"
+   "definition": {
+    "ar": "ارتفاع حرارة الجسم عن المعدل الطبيعي بسبب فشل التنظيم الحراري.",
+    "en": "Core temperature above normal range due to failure of thermoregulation."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "قياس الحرارة كل 4 ساعات",
-     "خافض حرارة ومضاد حيوي في الموعد",
-     "كمادات فاترة"
+     "العدوى البكتيرية"
     ],
     "en": [
-     "Temperature every 4 h",
-     "Antipyretic and antibiotic on time",
-     "Tepid sponging"
+     "Bacterial infection"
     ]
    },
-   "outcome": {
-    "ar": "حرارة أقل من 37.8°",
-    "en": "Temperature below 37.8 °C"
+   "evidencedBy": {
+    "ar": [
+     "حرارة 39.2",
+     "رعشة وعرق",
+     "سرعة النبض"
+    ],
+    "en": [
+     "T 39.2 °C",
+     "Rigors and sweating",
+     "Tachycardia"
+    ]
    },
-   "timeframe": {
-    "ar": "24 ساعة",
-    "en": "24 hours"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"جسمي بيترعش وسخن.\""
+     ],
+     "en": [
+      "\"I'm shivering and burning up.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الحرارة 39.2، النبض 112."
+     ],
+     "en": [
+      "T 39.2, HR 112."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعتين: حرارة < 38.3."
+     ],
+     "en": [
+      "Within 2 h: T < 38.3 °C."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 72 ساعة من المضاد: لا حمى."
+     ],
+     "en": [
+      "Within 72 h of antibiotics: afebrile."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الحرارة كل 4 ساعات وبعد خافض الحرارة بساعة.",
+      "en": "T every 4 h and 1 h after antipyretic."
+     },
+     "rationale": {
+      "ar": "يقيس الاستجابة.",
+      "en": "Measures response."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء خافض الحرارة (باراسيتامول) حسب الأمر.",
+      "en": "Give antipyretic (paracetamol) as ordered."
+     },
+     "rationale": {
+      "ar": "يخفض الحرارة.",
+      "en": "Lowers temperature."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "كمادات فاترة (ليست باردة) وملابس خفيفة وتهوية الغرفة.",
+      "en": "Tepid (not cold) sponging, light clothing, ventilated room."
+     },
+     "rationale": {
+      "ar": "تزيد فقد الحرارة بدون رعشة.",
+      "en": "Increase heat loss without shivering."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "زيادة السوائل الفموية.",
+      "en": "Increase oral fluids."
+     },
+     "rationale": {
+      "ar": "تعوض الفقد بالعرق.",
+      "en": "Replace sweat losses."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير الملابس والمفارش المبللة بالعرق.",
+      "en": "Change sweat-soaked clothes and linen."
+     },
+     "rationale": {
+      "ar": "راحة ومنع البرد.",
+      "en": "Comfort; prevents chill."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الاستمرار في المضاد الحيوي ومتابعة كرات الدم البيضاء.",
+      "en": "Continue antibiotics; monitor WBC."
+     },
+     "rationale": {
+      "ar": "يعالج السبب.",
+      "en": "Treats the cause."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحرارة 37.8 بعد ساعة ونصف — تحقق.",
+      "en": "T 37.8 after 90 minutes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "خفض الحرارة",
+      "en": "Reduce temperature"
+     },
+     "actions": {
+      "ar": [
+       "قياس الحرارة كل 4 ساعات وبعد خافض الحرارة بساعة.",
+       "إعطاء خافض الحرارة (باراسيتامول) حسب الأمر.",
+       "كمادات فاترة (ليست باردة) وملابس خفيفة وتهوية الغرفة.",
+       "زيادة السوائل الفموية.",
+       "تغيير الملابس والمفارش المبللة بالعرق.",
+       "الاستمرار في المضاد الحيوي ومتابعة كرات الدم البيضاء."
+      ],
+      "en": [
+       "T every 4 h and 1 h after antipyretic.",
+       "Give antipyretic (paracetamol) as ordered.",
+       "Tepid (not cold) sponging, light clothing, ventilated room.",
+       "Increase oral fluids.",
+       "Change sweat-soaked clothes and linen.",
+       "Continue antibiotics; monitor WBC."
+      ]
+     },
+     "outcome": {
+      "ar": "حرارة < 38.3.",
+      "en": "T < 38.3 °C."
+     },
+     "timeframe": {
+      "ar": "ساعتين",
+      "en": "2 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-pleuritic-pneumonia",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (ألم الصدر مع التنفس)",
+    "en": "Acute Pain (Pleuritic Chest Pain)"
+   },
+   "definition": {
+    "ar": "تجربة حسية غير مريحة مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory experience lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "التهاب البلورا والكحة المستمرة"
+    ],
+    "en": [
+     "Pleural inflammation and persistent cough"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم يزيد مع الكحة والتنفس 6/10",
+     "تنفس سطحي"
+    ],
+    "en": [
+     "Pain worse with cough and breathing 6/10",
+     "Shallow breathing"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"جنبي اليمين بيوجعني مع كل كحة.\""
+     ],
+     "en": [
+      "\"My right side hurts with every cough.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يمسك جنبه عند الكحة."
+     ],
+     "en": [
+      "Splints his side when coughing."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10 ويكح ويتنفس بعمق."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10; coughs and breathes deeply."
+     ]
+    },
+    "long": {
+     "ar": [
+      "اختفاء الألم مع علاج الالتهاب."
+     ],
+     "en": [
+      "Pain resolves with treatment."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الألم 0–10.",
+      "en": "Assess pain 0–10."
+     },
+     "rationale": {
+      "ar": "يوجه العلاج.",
+      "en": "Guides treatment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مسكن حسب الأمر قبل جلسات العلاج التنفسي.",
+      "en": "Analgesia as ordered before chest physiotherapy."
+     },
+     "rationale": {
+      "ar": "يسمح بالكحة الفعالة.",
+      "en": "Allows effective coughing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "سند الصدر بوسادة عند الكحة.",
+      "en": "Splint the chest with a pillow when coughing."
+     },
+     "rationale": {
+      "ar": "يقلل الألم.",
+      "en": "Reduces pain."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مهدئ للكحة الجافة المرهقة فقط حسب الأمر.",
+      "en": "Cough suppressant only for exhausting dry cough as ordered."
+     },
+     "rationale": {
+      "ar": "لا يُمنع الكحة المنتجة.",
+      "en": "Do not suppress productive cough."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع مريح وتمارين استرخاء.",
+      "en": "Comfortable position and relaxation."
+     },
+     "rationale": {
+      "ar": "تقلل الإحساس بالألم.",
+      "en": "Reduce pain perception."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "التفريق بين الألم الجنبي والألم القلبي.",
+      "en": "Differentiate pleuritic from cardiac pain."
+     },
+     "rationale": {
+      "ar": "تختلف الخطورة.",
+      "en": "Different urgency."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 ويكح بالوسادة — تحقق.",
+      "en": "Pain 3/10, coughs with pillow — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الألم",
+      "en": "Relieve pain"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الألم 0–10.",
+       "مسكن حسب الأمر قبل جلسات العلاج التنفسي.",
+       "سند الصدر بوسادة عند الكحة.",
+       "مهدئ للكحة الجافة المرهقة فقط حسب الأمر.",
+       "وضع مريح وتمارين استرخاء.",
+       "التفريق بين الألم الجنبي والألم القلبي."
+      ],
+      "en": [
+       "Assess pain 0–10.",
+       "Analgesia as ordered before chest physiotherapy.",
+       "Splint the chest with a pillow when coughing.",
+       "Cough suppressant only for exhausting dry cough as ordered.",
+       "Comfortable position and relaxation.",
+       "Differentiate pleuritic from cardiac pain."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "activity-intolerance-pneumonia",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم تحمل النشاط",
+    "en": "Activity Intolerance"
+   },
+   "definition": {
+    "ar": "نقص الطاقة الجسدية أو النفسية لتحمل أو إكمال الأنشطة اليومية المطلوبة.",
+    "en": "Insufficient physiological or psychological energy to endure or complete required daily activities."
+   },
+   "relatedTo": {
+    "ar": [
+     "نقص الأكسجين والتعب من العدوى"
+    ],
+    "en": [
+     "Hypoxemia and infection-related fatigue"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تعب وضيق نفس عند المجهود",
+     "تغير غير طبيعي في النبض أو الضغط مع النشاط"
+    ],
+    "en": [
+     "Fatigue and exertional dyspnea",
+     "Abnormal HR or BP response to activity"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش قادر أقوم من السرير.\""
+     ],
+     "en": [
+      "\"I can't get out of bed.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "التشبع يهبط لـ 88% مع المشي."
+     ],
+     "en": [
+      "SpO₂ drops to 88% walking."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 3 أيام: يؤدي المريض العناية الذاتية مع بقاء النبض والضغط في الحدود المقبولة."
+     ],
+     "en": [
+      "Within 3 days: performs self-care with HR and BP within acceptable limits."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يمشي في الممر بدون أعراض ويعرف خطة النشاط في البيت."
+     ],
+     "en": [
+      "Before discharge: walks the corridor without symptoms and knows the home activity plan."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+      "en": "Check pulse, BP and SpO₂ before, during and 3 minutes after activity."
+     },
+     "rationale": {
+      "ar": "يحدد تحمل المريض.",
+      "en": "Determines tolerance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة.",
+      "en": "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+     },
+     "rationale": {
+      "ar": "علامات عدم التحمل.",
+      "en": "Signs of intolerance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+      "en": "Progress activity: sitting in bed, chair, walking in room then corridor."
+     },
+     "rationale": {
+      "ar": "التدرج يبني التحمل بأمان.",
+      "en": "Gradual progression builds tolerance safely."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+      "en": "Plan rest between activities; cluster care."
+     },
+     "rationale": {
+      "ar": "يحافظ على الطاقة.",
+      "en": "Conserves energy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+      "en": "Assist with ADLs as needed while encouraging independence."
+     },
+     "rationale": {
+      "ar": "يوازن بين الراحة والنشاط.",
+      "en": "Balances rest and activity."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود).",
+      "en": "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+     },
+     "rationale": {
+      "ar": "يقلل الحمل على القلب.",
+      "en": "Reduces cardiac workload."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "مشى في الممر 50 مترًا، زاد النبض 12 فقط بدون ضيق نفس — تحقق.",
+      "en": "Walked 50 m; HR rose by only 12, no dyspnea — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم التحمل",
+      "en": "Assess tolerance"
+     },
+     "actions": {
+      "ar": [
+       "قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+       "إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة."
+      ],
+      "en": [
+       "Check pulse, BP and SpO₂ before, during and 3 minutes after activity.",
+       "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مقبولة مع النشاط.",
+      "en": "Acceptable vitals with activity."
+     },
+     "timeframe": {
+      "ar": "مع كل نشاط",
+      "en": "With each activity"
+     }
+    },
+    {
+     "need": {
+      "ar": "زيادة النشاط تدريجيًا",
+      "en": "Progress activity"
+     },
+     "actions": {
+      "ar": [
+       "التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+       "تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+       "المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+       "تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود)."
+      ],
+      "en": [
+       "Progress activity: sitting in bed, chair, walking in room then corridor.",
+       "Plan rest between activities; cluster care.",
+       "Assist with ADLs as needed while encouraging independence.",
+       "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+      ]
+     },
+     "outcome": {
+      "ar": "عناية ذاتية ومشي بدون أعراض.",
+      "en": "Self-care and walking without symptoms."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-deficient-fluid-pneumonia",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص حجم السوائل",
+    "en": "Risk for Deficient Fluid Volume"
+   },
+   "definition": {
+    "ar": "قابلية لنقص السوائل داخل الجسم.",
+    "en": "Susceptibility to decreased body fluid."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "الحمى والعرق",
+     "سرعة التنفس",
+     "قلة الأكل والشرب"
+    ],
+    "en": [
+     "Fever and sweating",
+     "Tachypnea",
+     "Poor intake"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"ماليش نفس آكل ولا أشرب.\""
+     ],
+     "en": [
+      "\"I have no appetite for food or drink.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "لسان جاف، بول مركز."
+     ],
+     "en": [
+      "Dry tongue, concentrated urine."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: بول ≥ 0.5 مل/كجم/ساعة وأغشية رطبة."
+     ],
+     "en": [
+      "Within 24 h: urine ≥ 0.5 mL/kg/h, moist mucosa."
+     ]
+    },
+    "long": {
+     "ar": [
+      "توازن سوائل طبيعي طوال الإقامة."
+     ],
+     "en": [
+      "Normal fluid balance during the stay."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل السوائل الداخلة والخارجة والوزن يوميًا.",
+      "en": "Record intake/output and daily weight."
+     },
+     "rationale": {
+      "ar": "يقيس التوازن.",
+      "en": "Measures balance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات الجفاف: جفاف الفم، قلة البول، سرعة النبض، هبوط الضغط.",
+      "en": "Watch for dehydration: dry mouth, low urine, tachycardia, hypotension."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع شرب 2–3 لتر يوميًا (إلا مع هبوط القلب).",
+      "en": "Encourage 2–3 L/day (unless heart failure)."
+     },
+     "rationale": {
+      "ar": "يعوض الفقد.",
+      "en": "Replaces losses."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "سوائل وريدية حسب الأمر.",
+      "en": "IV fluids as ordered."
+     },
+     "rationale": {
+      "ar": "تعويض سريع.",
+      "en": "Rapid replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الأملاح ووظائف الكلى.",
+      "en": "Monitor electrolytes and renal function."
+     },
+     "rationale": {
+      "ar": "الجفاف يؤثر على الكلى.",
+      "en": "Dehydration affects kidneys."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وجبات صغيرة متكررة غنية بالسعرات.",
+      "en": "Small frequent high-calorie meals."
+     },
+     "rationale": {
+      "ar": "تعوض الطاقة.",
+      "en": "Restores energy."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "البول 60 مل/ساعة والفم رطب — تحقق.",
+      "en": "Urine 60 mL/h, moist mouth — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "توازن السوائل",
+      "en": "Fluid balance"
+     },
+     "actions": {
+      "ar": [
+       "تسجيل السوائل الداخلة والخارجة والوزن يوميًا.",
+       "ملاحظة علامات الجفاف: جفاف الفم، قلة البول، سرعة النبض، هبوط الضغط.",
+       "تشجيع شرب 2–3 لتر يوميًا (إلا مع هبوط القلب).",
+       "سوائل وريدية حسب الأمر.",
+       "متابعة الأملاح ووظائف الكلى.",
+       "وجبات صغيرة متكررة غنية بالسعرات."
+      ],
+      "en": [
+       "Record intake/output and daily weight.",
+       "Watch for dehydration: dry mouth, low urine, tachycardia, hypotension.",
+       "Encourage 2–3 L/day (unless heart failure).",
+       "IV fluids as ordered.",
+       "Monitor electrolytes and renal function.",
+       "Small frequent high-calorie meals."
+      ]
+     },
+     "outcome": {
+      "ar": "بول كافٍ.",
+      "en": "Adequate urine."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 h"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -291,10 +1156,13 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "BTS Guidelines for the management of community acquired pneumonia in adults"
   },
   {
-   "title": "IDSA/ATS Guideline: Diagnosis and Treatment of Adults with Community-acquired Pneumonia"
+   "title": "ATS/IDSA — Diagnosis and Treatment of Adults with Community-acquired Pneumonia (2019)"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
   }
  ]
 }

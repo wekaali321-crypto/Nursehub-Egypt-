@@ -422,30 +422,58 @@
   },
   {
    "id": "asthma",
-   "icon": "🌬️",
+   "icon": "💨",
    "system": "respiratory",
    "folder": "disease",
    "title": {
-    "ar": "أزمة الربو الشعبي",
-    "en": "Acute Asthma Exacerbation"
+    "ar": "الربو الشعبي",
+    "en": "Bronchial Asthma"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض في أزمة ربو: فتح الشعب الهوائية، الأكسجين، وتعليم البخاخة وتجنب المحفزات.",
-    "en": "Care plan for an asthma attack: bronchodilation, oxygen, inhaler technique and trigger avoidance."
+    "ar": "خطة رعاية الربو: نوبة الربو وعلاماتها الخطرة، تبادل الغازات، القلق، النشاط، التحكم في الربو وخطة العمل، والسوائل.",
+    "en": "Asthma care plan: acute attack and danger signs, gas exchange, anxiety, activity, asthma control and action plan, and fluids."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "ineffective-airway-clearance-asthma",
      "title": {
-      "ar": "عدم فعالية تنظيف مجرى الهواء",
-      "en": "Ineffective airway clearance"
+      "ar": "عدم فعالية نمط التنفس / تنظيف مجرى الهواء",
+      "en": "Ineffective Airway Clearance / Breathing Pattern"
      }
     },
     {
-     "id": "dx-2",
+     "id": "impaired-gas-exchange-asthma",
      "title": {
-      "ar": "عدم فعالية إدارة الصحة الذاتية",
-      "en": "Ineffective health self-management"
+      "ar": "ضعف تبادل الغازات",
+      "en": "Impaired Gas Exchange"
+     }
+    },
+    {
+     "id": "anxiety-asthma",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "activity-intolerance-asthma",
+     "title": {
+      "ar": "عدم تحمل النشاط",
+      "en": "Activity Intolerance"
+     }
+    },
+    {
+     "id": "ineffective-health-management-asthma",
+     "title": {
+      "ar": "عدم فعالية إدارة الصحة (التحكم في الربو)",
+      "en": "Ineffective Health Self-Management (Asthma Control)"
+     }
+    },
+    {
+     "id": "risk-deficient-fluid-asthma",
+     "title": {
+      "ar": "خطر نقص حجم السوائل",
+      "en": "Risk for Deficient Fluid Volume"
      }
     }
    ]
@@ -456,26 +484,54 @@
    "system": "respiratory",
    "folder": "disease",
    "title": {
-    "ar": "السدة الرئوية المزمنة",
-    "en": "Chronic Obstructive Pulmonary Disease (COPD)"
+    "ar": "السدة الرئوية المزمنة (COPD)",
+    "en": "COPD"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض سدة رئوية في نوبة تفاقم: تبادل الغازات، أكسجين محسوب، وتمارين التنفس.",
-    "en": "Care plan for a COPD exacerbation: gas exchange, controlled oxygen and breathing exercises."
+    "ar": "خطة رعاية السدة الرئوية المزمنة: تنظيف مجرى الهواء، الأكسجين المضبوط واحتباس CO₂، عدم تحمل النشاط، التغذية، القلق، والتثقيف.",
+    "en": "COPD care plan: airway clearance, controlled oxygen and CO₂ retention, activity intolerance, nutrition, anxiety and teaching."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "ineffective-airway-clearance-copd",
      "title": {
-      "ar": "ضعف تبادل الغازات",
-      "en": "Impaired gas exchange"
+      "ar": "عدم فعالية تنظيف مجرى الهواء",
+      "en": "Ineffective Airway Clearance"
      }
     },
     {
-     "id": "dx-2",
+     "id": "impaired-gas-exchange-copd",
      "title": {
-      "ar": "عدم فعالية نمط التنفس",
-      "en": "Ineffective breathing pattern"
+      "ar": "ضعف تبادل الغازات",
+      "en": "Impaired Gas Exchange"
+     }
+    },
+    {
+     "id": "activity-intolerance-copd",
+     "title": {
+      "ar": "عدم تحمل النشاط",
+      "en": "Activity Intolerance"
+     }
+    },
+    {
+     "id": "imbalanced-nutrition-copd",
+     "title": {
+      "ar": "تغذية أقل من احتياج الجسم",
+      "en": "Imbalanced Nutrition: Less Than Body Requirements"
+     }
+    },
+    {
+     "id": "anxiety-copd",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "deficient-knowledge-copd",
+     "title": {
+      "ar": "نقص المعرفة (السدة الرئوية المزمنة)",
+      "en": "Deficient Knowledge (COPD)"
      }
     }
    ]
@@ -520,22 +576,50 @@
     "en": "Pneumonia"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض التهاب رئوي: تنظيف مجرى الهواء، تحسين الأكسجين، وخفض الحرارة.",
-    "en": "Care plan for pneumonia: airway clearance, oxygenation and fever control."
+    "ar": "خطة رعاية الالتهاب الرئوي: تنظيف مجرى الهواء، تبادل الغازات، الحمى، الألم الجنبي، عدم تحمل النشاط، والسوائل.",
+    "en": "Pneumonia care plan: airway clearance, gas exchange, fever, pleuritic pain, activity intolerance and fluids."
    },
    "diagnoses": [
     {
-     "id": "dx-1",
+     "id": "ineffective-airway-clearance-pneumonia",
      "title": {
       "ar": "عدم فعالية تنظيف مجرى الهواء",
-      "en": "Ineffective airway clearance"
+      "en": "Ineffective Airway Clearance"
      }
     },
     {
-     "id": "dx-2",
+     "id": "impaired-gas-exchange-pneumonia",
+     "title": {
+      "ar": "ضعف تبادل الغازات",
+      "en": "Impaired Gas Exchange"
+     }
+    },
+    {
+     "id": "hyperthermia-pneumonia",
      "title": {
       "ar": "ارتفاع درجة الحرارة",
       "en": "Hyperthermia"
+     }
+    },
+    {
+     "id": "acute-pain-pleuritic-pneumonia",
+     "title": {
+      "ar": "ألم حاد (ألم الصدر مع التنفس)",
+      "en": "Acute Pain (Pleuritic Chest Pain)"
+     }
+    },
+    {
+     "id": "activity-intolerance-pneumonia",
+     "title": {
+      "ar": "عدم تحمل النشاط",
+      "en": "Activity Intolerance"
+     }
+    },
+    {
+     "id": "risk-deficient-fluid-pneumonia",
+     "title": {
+      "ar": "خطر نقص حجم السوائل",
+      "en": "Risk for Deficient Fluid Volume"
      }
     }
    ]

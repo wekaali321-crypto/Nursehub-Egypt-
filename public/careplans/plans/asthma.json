@@ -1,289 +1,1227 @@
 {
  "id": "asthma",
- "icon": "🌬️",
+ "icon": "💨",
  "system": "respiratory",
+ "folder": "disease",
  "title": {
-  "ar": "أزمة الربو الشعبي",
-  "en": "Acute Asthma Exacerbation"
+  "ar": "الربو الشعبي",
+  "en": "Bronchial Asthma"
  },
  "summary": {
-  "ar": "خطة رعاية لمريض في أزمة ربو: فتح الشعب الهوائية، الأكسجين، وتعليم البخاخة وتجنب المحفزات.",
-  "en": "Care plan for an asthma attack: bronchodilation, oxygen, inhaler technique and trigger avoidance."
+  "ar": "خطة رعاية الربو: نوبة الربو وعلاماتها الخطرة، تبادل الغازات، القلق، النشاط، التحكم في الربو وخطة العمل، والسوائل.",
+  "en": "Asthma care plan: acute attack and danger signs, gas exchange, anxiety, activity, asthma control and action plan, and fluids."
  },
- "student": [
+ "diagnoses": [
   {
-   "diagnosis": {
-    "ar": "عدم فعالية تنظيف مجرى الهواء (Ineffective airway clearance) مرتبطة بتقلص الشعب الهوائية وزيادة الإفرازات وتظهر في صفير (Wheeze) وكحة وضيق نفس.",
-    "en": "Ineffective airway clearance related to bronchospasm and increased secretions as evidenced by wheeze, cough and dyspnea."
+   "id": "ineffective-airway-clearance-asthma",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية نمط التنفس / تنظيف مجرى الهواء",
+    "en": "Ineffective Airway Clearance / Breathing Pattern"
+   },
+   "definition": {
+    "ar": "عدم القدرة على إزالة الإفرازات أو الانسداد من مجرى الهواء للحفاظ عليه مفتوحًا.",
+    "en": "Inability to clear secretions or obstructions from the airway to maintain patency."
+   },
+   "relatedTo": {
+    "ar": [
+     "تشنج الشعب وتورم الغشاء وزيادة المخاط"
+    ],
+    "en": [
+     "Bronchospasm, mucosal edema and mucus"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "كحة غير فعالة",
+     "أصوات تنفس غير طبيعية (خرخرة، صفير)",
+     "بلغم كثير"
+    ],
+    "en": [
+     "Ineffective cough",
+     "Adventitious breath sounds (crackles, wheeze)",
+     "Excess sputum"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"صدري مقفول ومش عارف آخد نفسي، والبخاخة مبقتش بتنفع.\""
+      "\"صدري مقفول ومش عارف أتنفس.\""
      ],
      "en": [
-      "\"My chest is tight, I can't breathe and my inhaler isn't working.\""
+      "\"My chest is tight and I can't breathe.\""
      ]
     },
     "objective": {
      "ar": [
-      "صفير منتشر في الصدر وزفير طويل.",
-      "التنفس 30/دقيقة، النبض 118، التشبع 91%.",
-      "بيتكلم بجمل قصيرة ويستخدم العضلات المساعدة.",
-      "ذروة التدفق (PEF) ‏45% من المتوقع."
+      "صفير منتشر، استخدام العضلات المساعدة.",
+      "ذروة التدفق 45% من المتوقع."
      ],
      "en": [
-      "Widespread expiratory wheeze with prolonged expiration.",
-      "RR 30/min, pulse 118, SpO₂ 91%.",
-      "Speaks in short phrases; uses accessory muscles.",
-      "Peak expiratory flow 45% of predicted."
+      "Diffuse wheeze, accessory muscle use.",
+      "Peak flow 45% predicted."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "خلال ساعة: يقل الصفير، التشبع 94–98%، ويتكلم بجمل كاملة، وذروة التدفق > 60%."
-    ],
-    "en": [
-     "Within an hour: less wheeze, SpO₂ 94–98%, full sentences and PEF > 60%."
-    ]
+    "short": {
+     "ar": [
+      "خلال 24–48 ساعة: كحة فعالة وصدر أوضح وتنفس 12–20."
+     ],
+     "en": [
+      "Within 24–48 h: effective cough, clearer chest, RR 12–20."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: مجرى هواء مفتوح وإخراج الإفرازات بسهولة."
+     ],
+     "en": [
+      "Before discharge: patent airway and easy secretion clearance."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "assess",
      "action": {
-      "ar": "وضع المريض جالسًا وإعطاء أكسجين لهدف تشبع 94–98%.",
-      "en": "Sit the patient upright and give oxygen to target SpO₂ 94–98%."
+      "ar": "متابعة سرعة التنفس وعمقه واستخدام العضلات المساعدة ولون المريض (زرقة الشفاه).",
+      "en": "Assess respiratory rate, depth, accessory muscle use and colour (lip cyanosis)."
      },
      "rationale": {
-      "ar": "الجلوس يحسن التهوية، والأكسجين يعالج نقص الأكسجة.",
-      "en": "Upright posture aids ventilation; oxygen corrects hypoxemia."
+      "ar": "يقيم شدة الضيق.",
+      "en": "Assesses severity."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "إعطاء البخار بموسع الشعب سريع المفعول (Salbutamol) ± Ipratropium حسب الأمر وتكراره حسب الاستجابة.",
-      "en": "Give short-acting bronchodilator nebulizers (salbutamol) ± ipratropium as ordered, repeated per response."
+      "ar": "سماع الصدر قبل وبعد التدخلات.",
+      "en": "Auscultate before and after interventions."
      },
      "rationale": {
-      "ar": "يرخي عضلات الشعب بسرعة ويفتح مجرى الهواء.",
-      "en": "Rapidly relaxes bronchial smooth muscle."
+      "ar": "يقيس الفعالية.",
+      "en": "Measures effect."
      }
     },
     {
+     "type": "assess",
      "action": {
-      "ar": "إعطاء الكورتيزون (بالفم أو بالوريد) حسب الأمر.",
-      "en": "Give corticosteroids (oral or IV) as ordered."
+      "ar": "ملاحظة الكحة والبلغم: اللون والكمية والقوام والرائحة، وعمل مزرعة بلغم إذا كان غير طبيعي حسب الأمر.",
+      "en": "Observe cough and sputum: colour, amount, consistency, odour; send culture if abnormal as ordered."
      },
      "rationale": {
-      "ar": "يقلل التهاب الشعب ويمنع رجوع الأزمة؛ مفعوله يبدأ بعد ساعات.",
-      "en": "Reduces airway inflammation and relapse; acts over hours."
+      "ar": "يكشف العدوى ويوجه العلاج.",
+      "en": "Detects infection and guides therapy."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "قياس ذروة التدفق والتشبع والنبض قبل وبعد كل جلسة بخار.",
-      "en": "Measure PEF, SpO₂ and pulse before and after each nebulizer."
+      "ar": "وضع شبه جالس أو جالس (45–90 درجة).",
+      "en": "Semi-Fowler or high-Fowler position (45–90°)."
      },
      "rationale": {
-      "ar": "يقيس الاستجابة ويكشف الأزمة الخطيرة.",
-      "en": "Measures response and detects life-threatening asthma."
+      "ar": "يحسن تمدد الرئة.",
+      "en": "Improves lung expansion."
      }
     },
     {
+     "type": "independent",
      "action": {
-      "ar": "إبلاغ الطبيب فورًا عند صدر صامت (Silent chest)، أو نعاس، أو تعب شديد.",
-      "en": "Report immediately a silent chest, drowsiness or exhaustion."
+      "ar": "تمارين التنفس العميق والكحة الفعالة كل 2 ساعة.",
+      "en": "Deep breathing and effective coughing every 2 h."
      },
      "rationale": {
-      "ar": "علامات أزمة مهددة للحياة قد تحتاج عناية مركزة.",
-      "en": "Signs of life-threatening asthma that may need ICU."
+      "ar": "تخرج الإفرازات.",
+      "en": "Mobilizes secretions."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "سوائل دافئة 2–3 لتر يوميًا إلا إذا مُنعت.",
+      "en": "Warm fluids 2–3 L/day unless restricted."
+     },
+     "rationale": {
+      "ar": "تخفف الإفرازات.",
+      "en": "Thins secretions."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "جلسات البخار وموسعات الشعب وطاردات البلغم حسب الأمر.",
+      "en": "Nebulized bronchodilators and mucolytics as ordered."
+     },
+     "rationale": {
+      "ar": "توسع الشعب وتسهل الإخراج.",
+      "en": "Dilate airways and ease clearance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس ذروة التدفق (Peak flow) قبل وبعد البخار.",
+      "en": "Measure peak flow before and after nebulization."
+     },
+     "rationale": {
+      "ar": "يقيس الاستجابة.",
+      "en": "Measures response."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات الخطر: صدر صامت، عدم القدرة على الكلام، زرقة، نعاس، تشبع < 92%.",
+      "en": "Watch for life-threatening signs: silent chest, unable to talk, cyanosis, drowsiness, SpO₂ < 92%."
+     },
+     "rationale": {
+      "ar": "تحتاج تدخلًا عاجلًا.",
+      "en": "Need urgent escalation."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "بعد ساعة: صفير خفيف، التشبع 96%، يتكلم بجمل كاملة، وذروة التدفق 70%. — تحقق الهدف."
-    ],
-    "en": [
-     "After an hour: mild wheeze, SpO₂ 96%, full sentences, PEF 70%. — Goal met."
-    ]
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الكحة فعالة، الخرخرة أقل، التنفس 20 — تحقق.",
+      "en": "Effective cough, fewer crackles, RR 20 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم التنفس والإفرازات",
+      "en": "Assess breathing and secretions"
+     },
+     "actions": {
+      "ar": [
+       "متابعة سرعة التنفس وعمقه واستخدام العضلات المساعدة ولون المريض (زرقة الشفاه).",
+       "سماع الصدر قبل وبعد التدخلات.",
+       "ملاحظة الكحة والبلغم: اللون والكمية والقوام والرائحة، وعمل مزرعة بلغم إذا كان غير طبيعي حسب الأمر."
+      ],
+      "en": [
+       "Assess respiratory rate, depth, accessory muscle use and colour (lip cyanosis).",
+       "Auscultate before and after interventions.",
+       "Observe cough and sputum: colour, amount, consistency, odour; send culture if abnormal as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "تنفس أهدأ وإفرازات موثقة.",
+      "en": "Calmer breathing, secretions documented."
+     },
+     "timeframe": {
+      "ar": "كل 2–4 ساعات",
+      "en": "Every 2–4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تنظيف مجرى الهواء",
+      "en": "Clear the airway"
+     },
+     "actions": {
+      "ar": [
+       "وضع شبه جالس أو جالس (45–90 درجة).",
+       "تمارين التنفس العميق والكحة الفعالة كل 2 ساعة.",
+       "سوائل دافئة 2–3 لتر يوميًا إلا إذا مُنعت.",
+       "جلسات البخار وموسعات الشعب وطاردات البلغم حسب الأمر.",
+       "قياس ذروة التدفق (Peak flow) قبل وبعد البخار.",
+       "ملاحظة علامات الخطر: صدر صامت، عدم القدرة على الكلام، زرقة، نعاس، تشبع < 92%."
+      ],
+      "en": [
+       "Semi-Fowler or high-Fowler position (45–90°).",
+       "Deep breathing and effective coughing every 2 h.",
+       "Warm fluids 2–3 L/day unless restricted.",
+       "Nebulized bronchodilators and mucolytics as ordered.",
+       "Measure peak flow before and after nebulization.",
+       "Watch for life-threatening signs: silent chest, unable to talk, cyanosis, drowsiness, SpO₂ < 92%."
+      ]
+     },
+     "outcome": {
+      "ar": "صدر أوضح.",
+      "en": "Clearer chest."
+     },
+     "timeframe": {
+      "ar": "24–48 ساعة",
+      "en": "24–48 h"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "عدم فعالية إدارة الصحة الذاتية (Ineffective health self-management) مرتبطة بعدم معرفة طريقة استخدام البخاخة الوقائية وتظهر في أزمات متكررة.",
-    "en": "Ineffective health self-management related to insufficient knowledge of controller inhaler use as evidenced by repeated attacks."
+   "id": "impaired-gas-exchange-asthma",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف تبادل الغازات",
+    "en": "Impaired Gas Exchange"
+   },
+   "definition": {
+    "ar": "نقص الأكسجة أو احتباس CO₂ أثناء النوبة.",
+    "en": "Hypoxemia or CO₂ retention during an attack."
+   },
+   "relatedTo": {
+    "ar": [
+     "ضيق الشعب واحتباس الهواء"
+    ],
+    "en": [
+     "Airway narrowing and air trapping"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تشبع منخفض",
+     "CO₂ طبيعي أو مرتفع (علامة خطر)"
+    ],
+    "en": [
+     "Low SpO₂",
+     "Normal or high CO₂ (danger sign)"
+    ]
    },
    "assessment": {
     "subjective": {
      "ar": [
-      "\"بستخدم البخاخة الزرقا بس لما أتعب، والتانية مبحبهاش.\""
+      "\"مش قادر أكمل جملة.\""
      ],
      "en": [
-      "\"I only use the blue inhaler when I'm bad; I don't like the other one.\""
+      "\"I can't finish a sentence.\""
      ]
     },
     "objective": {
      "ar": [
-      "3 زيارات طوارئ في 6 شهور.",
-      "طريقة البخاخة غلط (لا ينتظر بعد الكبسة، لا يحبس النفس)."
+      "التشبع 91%، PaCO₂ 42 (طبيعي مع تنفس سريع = إرهاق)."
      ],
      "en": [
-      "Three emergency visits in 6 months.",
-      "Poor inhaler technique (no breath-hold, no pause)."
+      "SpO₂ 91%, PaCO₂ 42 (normal despite tachypnea = tiring)."
      ]
     }
    },
    "goals": {
-    "ar": [
-     "قبل الخروج يطبق المريض طريقة البخاخة صحيحًا، ويفرّق بين بخاخة العلاج السريع والوقائية، ويذكر محفزاته."
-    ],
-    "en": [
-     "Before discharge the patient uses the inhaler correctly, distinguishes reliever from controller, and names his triggers."
-    ]
+    "short": {
+     "ar": [
+      "خلال ساعة: تشبع 94–98%."
+     ],
+     "en": [
+      "Within 1 h: SpO₂ 94–98%."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 24 ساعة: لا حاجة للأكسجين."
+     ],
+     "en": [
+      "Within 24 h: off oxygen."
+     ]
+    }
    },
    "interventions": [
     {
+     "type": "collab",
      "action": {
-      "ar": "تعليم وتطبيق طريقة البخاخة مع الفاصل (Spacer) ثم مراجعتها بالشرح العكسي.",
-      "en": "Teach and demonstrate inhaler use with a spacer, then check by teach-back."
+      "ar": "أكسجين للوصول لتشبع 94–98%.",
+      "en": "Oxygen to SpO₂ 94–98%."
      },
      "rationale": {
-      "ar": "الطريقة الصحيحة توصل الدواء للرئة.",
-      "en": "Correct technique delivers the drug to the lungs."
+      "ar": "يعالج نقص الأكسجين.",
+      "en": "Treats hypoxemia."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "شرح الفرق بين البخاخة الوقائية (كورتيزون) اليومية وبخاخة الإنقاذ.",
-      "en": "Explain daily controller (inhaled steroid) versus rescue inhaler."
+      "ar": "سالبيوتامول وإبراتروبيوم بالبخار المتكرر حسب البروتوكول.",
+      "en": "Repeated nebulized salbutamol and ipratropium per protocol."
      },
      "rationale": {
-      "ar": "الوقائية تمنع الالتهاب وتقلل الأزمات.",
-      "en": "Controllers prevent inflammation and reduce attacks."
+      "ar": "يوسع الشعب بسرعة.",
+      "en": "Rapid bronchodilation."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "تعليم المضمضة بعد بخاخة الكورتيزون.",
-      "en": "Teach rinsing the mouth after inhaled steroids."
+      "ar": "كورتيزون فموي أو وريدي خلال ساعة.",
+      "en": "Oral or IV steroids within 1 hour."
      },
      "rationale": {
-      "ar": "يمنع فطريات الفم وبحة الصوت.",
-      "en": "Prevents oral thrush and hoarseness."
+      "ar": "يقلل الالتهاب ويمنع التدهور.",
+      "en": "Reduces inflammation and relapse."
      }
     },
     {
+     "type": "collab",
      "action": {
-      "ar": "عمل خطة مكتوبة للأزمة وتحديد المحفزات (تراب، دخان، برد، عدوى).",
-      "en": "Provide a written action plan and identify triggers (dust, smoke, cold, infection)."
+      "ar": "سلفات الماغنسيوم الوريدي في النوبة الشديدة حسب الأمر.",
+      "en": "IV magnesium sulphate in severe attacks as ordered."
      },
      "rationale": {
-      "ar": "يساعد المريض يتصرف مبكرًا ويتجنب الأزمات.",
-      "en": "Helps early self-action and trigger avoidance."
+      "ar": "موسع إضافي.",
+      "en": "Additional bronchodilator."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة غازات الدم؛ CO₂ الطبيعي أو المرتفع مع ضيق شديد علامة إرهاق.",
+      "en": "Monitor ABG; normal/high CO₂ in severe distress indicates exhaustion."
+     },
+     "rationale": {
+      "ar": "قد يحتاج رعاية مركزة.",
+      "en": "May need ICU."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة النبض والبوتاسيوم مع السالبيوتامول المتكرر.",
+      "en": "Monitor HR and potassium with repeated salbutamol."
+     },
+     "rationale": {
+      "ar": "يسبب سرعة النبض ونقص البوتاسيوم.",
+      "en": "Causes tachycardia and hypokalemia."
      }
     }
    ],
-   "evaluation": {
-    "ar": [
-     "المريض طبق البخاخة بالفاصل صحيحًا، وشرح الفرق بين النوعين، وذكر 4 محفزات. — تحقق الهدف."
-    ],
-    "en": [
-     "Patient used the inhaler with spacer correctly, explained both types and named 4 triggers. — Goal met."
-    ]
-   }
-  }
- ],
- "hospital": [
-  {
-   "diagnosis": {
-    "ar": "عدم فعالية تنظيف مجرى الهواء",
-    "en": "Ineffective airway clearance"
-   },
-   "need": {
-    "ar": "فتح الشعب الهوائية",
-    "en": "Bronchodilation"
-   },
-   "actions": {
-    "ar": [
-     "جلوس وأكسجين 94–98%",
-     "بخار موسع شعب حسب الأمر",
-     "كورتيزون حسب الأمر"
-    ],
-    "en": [
-     "Upright, oxygen 94–98%",
-     "Bronchodilator nebulizers as ordered",
-     "Steroids as ordered"
-    ]
-   },
-   "outcome": {
-    "ar": "صفير أقل وتشبع ≥ 94%",
-    "en": "Less wheeze, SpO₂ ≥ 94%"
-   },
-   "timeframe": {
-    "ar": "ساعة",
-    "en": "1 hour"
-   }
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 96% وذروة التدفق 70% بعد ساعة — تحقق.",
+      "en": "SpO₂ 96%, peak flow 70% at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "علاج النوبة",
+      "en": "Treat the attack"
+     },
+     "actions": {
+      "ar": [
+       "أكسجين للوصول لتشبع 94–98%.",
+       "سالبيوتامول وإبراتروبيوم بالبخار المتكرر حسب البروتوكول.",
+       "كورتيزون فموي أو وريدي خلال ساعة.",
+       "سلفات الماغنسيوم الوريدي في النوبة الشديدة حسب الأمر."
+      ],
+      "en": [
+       "Oxygen to SpO₂ 94–98%.",
+       "Repeated nebulized salbutamol and ipratropium per protocol.",
+       "Oral or IV steroids within 1 hour.",
+       "IV magnesium sulphate in severe attacks as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع 94–98%.",
+      "en": "SpO₂ 94–98%."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "متابعة الخطورة",
+      "en": "Monitor severity"
+     },
+     "actions": {
+      "ar": [
+       "متابعة غازات الدم؛ CO₂ الطبيعي أو المرتفع مع ضيق شديد علامة إرهاق.",
+       "متابعة النبض والبوتاسيوم مع السالبيوتامول المتكرر."
+      ],
+      "en": [
+       "Monitor ABG; normal/high CO₂ in severe distress indicates exhaustion.",
+       "Monitor HR and potassium with repeated salbutamol."
+      ]
+     },
+     "outcome": {
+      "ar": "لا إرهاق تنفسي.",
+      "en": "No respiratory exhaustion."
+     },
+     "timeframe": {
+      "ar": "كل 15–30 دقيقة",
+      "en": "Every 15–30 min"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
+   "id": "anxiety-asthma",
+   "kind": "actual",
+   "title": {
     "ar": "القلق",
     "en": "Anxiety"
    },
-   "need": {
-    "ar": "تهدئة المريض",
-    "en": "Reduce anxiety"
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "البقاء بجانب المريض",
-     "التنفس ببطء معه",
-     "شرح ما يحدث"
+     "ضيق النفس الشديد"
     ],
     "en": [
-     "Stay with the patient",
-     "Pace breathing with him",
-     "Explain what is happening"
+     "Severe breathlessness"
     ]
    },
-   "outcome": {
-    "ar": "المريض أهدأ",
-    "en": "Patient calmer"
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
    },
-   "timeframe": {
-    "ar": "أثناء الأزمة",
-    "en": "During the attack"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"خايف أموت مخنوق.\""
+     ],
+     "en": [
+      "\"I'm afraid I'll suffocate.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قلق، جالس مائل للأمام."
+     ],
+     "en": [
+      "Anxious, sitting forward."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواجد مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق والاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تجنب المهدئات أثناء النوبة.",
+      "en": "Avoid sedatives during the attack."
+     },
+     "rationale": {
+      "ar": "تثبط التنفس.",
+      "en": "Depress breathing."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+       "التواجد مع المريض والتحدث بهدوء وثقة.",
+       "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "تعليم التنفس البطيء العميق والاسترخاء.",
+       "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+       "تجنب المهدئات أثناء النوبة."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy.",
+       "Avoid sedatives during the attack."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
   },
   {
-   "diagnosis": {
-    "ar": "عدم فعالية إدارة الصحة الذاتية",
-    "en": "Ineffective health self-management"
+   "id": "activity-intolerance-asthma",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم تحمل النشاط",
+    "en": "Activity Intolerance"
    },
-   "need": {
-    "ar": "تثقيف عن البخاخات",
-    "en": "Inhaler teaching"
+   "definition": {
+    "ar": "نقص الطاقة الجسدية أو النفسية لتحمل أو إكمال الأنشطة اليومية المطلوبة.",
+    "en": "Insufficient physiological or psychological energy to endure or complete required daily activities."
    },
-   "actions": {
+   "relatedTo": {
     "ar": [
-     "طريقة البخاخة بالفاصل",
-     "وقائي مقابل إنقاذ",
-     "خطة الأزمة المكتوبة"
+     "ضيق الشعب ومجهود التنفس"
     ],
     "en": [
-     "Inhaler with spacer",
-     "Controller vs reliever",
-     "Written action plan"
+     "Bronchospasm and work of breathing"
     ]
    },
-   "outcome": {
-    "ar": "يستخدم البخاخة صح",
-    "en": "Correct inhaler use"
+   "evidencedBy": {
+    "ar": [
+     "تعب وضيق نفس عند المجهود",
+     "تغير غير طبيعي في النبض أو الضغط مع النشاط"
+    ],
+    "en": [
+     "Fatigue and exertional dyspnea",
+     "Abnormal HR or BP response to activity"
+    ]
    },
-   "timeframe": {
-    "ar": "قبل الخروج",
-    "en": "Before discharge"
-   }
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بتعب بسرعة.\""
+     ],
+     "en": [
+      "\"I tire quickly.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "صفير مع المشي."
+     ],
+     "en": [
+      "Wheeze on walking."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 3 أيام: يؤدي المريض العناية الذاتية مع بقاء النبض والضغط في الحدود المقبولة."
+     ],
+     "en": [
+      "Within 3 days: performs self-care with HR and BP within acceptable limits."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يمشي في الممر بدون أعراض ويعرف خطة النشاط في البيت."
+     ],
+     "en": [
+      "Before discharge: walks the corridor without symptoms and knows the home activity plan."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+      "en": "Check pulse, BP and SpO₂ before, during and 3 minutes after activity."
+     },
+     "rationale": {
+      "ar": "يحدد تحمل المريض.",
+      "en": "Determines tolerance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة.",
+      "en": "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+     },
+     "rationale": {
+      "ar": "علامات عدم التحمل.",
+      "en": "Signs of intolerance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+      "en": "Progress activity: sitting in bed, chair, walking in room then corridor."
+     },
+     "rationale": {
+      "ar": "التدرج يبني التحمل بأمان.",
+      "en": "Gradual progression builds tolerance safely."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+      "en": "Plan rest between activities; cluster care."
+     },
+     "rationale": {
+      "ar": "يحافظ على الطاقة.",
+      "en": "Conserves energy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+      "en": "Assist with ADLs as needed while encouraging independence."
+     },
+     "rationale": {
+      "ar": "يوازن بين الراحة والنشاط.",
+      "en": "Balances rest and activity."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود).",
+      "en": "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+     },
+     "rationale": {
+      "ar": "يقلل الحمل على القلب.",
+      "en": "Reduces cardiac workload."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "مشى في الممر 50 مترًا، زاد النبض 12 فقط بدون ضيق نفس — تحقق.",
+      "en": "Walked 50 m; HR rose by only 12, no dyspnea — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم التحمل",
+      "en": "Assess tolerance"
+     },
+     "actions": {
+      "ar": [
+       "قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+       "إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة."
+      ],
+      "en": [
+       "Check pulse, BP and SpO₂ before, during and 3 minutes after activity.",
+       "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مقبولة مع النشاط.",
+      "en": "Acceptable vitals with activity."
+     },
+     "timeframe": {
+      "ar": "مع كل نشاط",
+      "en": "With each activity"
+     }
+    },
+    {
+     "need": {
+      "ar": "زيادة النشاط تدريجيًا",
+      "en": "Progress activity"
+     },
+     "actions": {
+      "ar": [
+       "التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+       "تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+       "المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+       "تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود)."
+      ],
+      "en": [
+       "Progress activity: sitting in bed, chair, walking in room then corridor.",
+       "Plan rest between activities; cluster care.",
+       "Assist with ADLs as needed while encouraging independence.",
+       "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+      ]
+     },
+     "outcome": {
+      "ar": "عناية ذاتية ومشي بدون أعراض.",
+      "en": "Self-care and walking without symptoms."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ineffective-health-management-asthma",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم فعالية إدارة الصحة (التحكم في الربو)",
+    "en": "Ineffective Health Self-Management (Asthma Control)"
+   },
+   "definition": {
+    "ar": "صعوبة في تنظيم علاج الربو ودمجه في الحياة اليومية.",
+    "en": "Difficulty managing asthma treatment in daily life."
+   },
+   "relatedTo": {
+    "ar": [
+     "الاعتماد على بخاخة الإنقاذ فقط",
+     "عدم معرفة المحفزات"
+    ],
+    "en": [
+     "Reliance on reliever only",
+     "Unaware of triggers"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "نوبات متكررة ودخول الطوارئ",
+     "استخدام بخاخة الإنقاذ > مرتين أسبوعيًا"
+    ],
+    "en": [
+     "Frequent attacks and ED visits",
+     "Reliever use > twice weekly"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بستخدم البخاخة الزرقا بس لما أتعب.\""
+     ],
+     "en": [
+      "\"I only use the blue inhaler when I'm bad.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "3 زيارات للطوارئ هذا العام."
+     ],
+     "en": [
+      "3 ED visits this year."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يستخدم البخاخة بطريقة صحيحة ويشرح خطة العمل المكتوبة."
+     ],
+     "en": [
+      "Before discharge: correct inhaler technique and explains the written action plan."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 3 أشهر: ربو تحت السيطرة بدون زيارات طوارئ."
+     ],
+     "en": [
+      "Within 3 months: controlled asthma, no ED visits."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم طريقة استخدام البخاخة ومستوى التحكم.",
+      "en": "Assess inhaler technique and control level."
+     },
+     "rationale": {
+      "ar": "أكثر سبب لفشل العلاج.",
+      "en": "Commonest cause of failure."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "الفرق بين البخاخة الوقائية (الكورتيزون يوميًا) وبخاخة الإنقاذ.",
+      "en": "Difference between preventer (daily steroid) and reliever."
+     },
+     "rationale": {
+      "ar": "الوقاية تمنع النوبات.",
+      "en": "Prevention stops attacks."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "استخدام الفاصل (Spacer) والمضمضة بعد الكورتيزون.",
+      "en": "Use a spacer; rinse after steroid inhaler."
+     },
+     "rationale": {
+      "ar": "وصول أفضل ومنع الفطريات.",
+      "en": "Better delivery; prevents thrush."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تجنب المحفزات: الدخان، التراب، الحيوانات، العطور، البرد، والعدوى.",
+      "en": "Avoid triggers: smoke, dust, pets, perfumes, cold air, infections."
+     },
+     "rationale": {
+      "ar": "تقلل النوبات.",
+      "en": "Reduce attacks."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "خطة عمل مكتوبة بناءً على ذروة التدفق (أخضر/أصفر/أحمر).",
+      "en": "Written action plan by peak flow zones (green/yellow/red)."
+     },
+     "rationale": {
+      "ar": "تصرف صحيح مبكر.",
+      "en": "Early correct action."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة في عيادة الصدر خلال أسبوعين من الخروج.",
+      "en": "Chest clinic follow-up within 2 weeks."
+     },
+     "rationale": {
+      "ar": "تعديل العلاج.",
+      "en": "Treatment adjustment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التأكد من الفهم بطريقة Teach-back.",
+      "en": "Confirm with teach-back."
+     },
+     "rationale": {
+      "ar": "يضمن الفهم.",
+      "en": "Ensures understanding."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "استخدم البخاخة بالفاصل بشكل صحيح وشرح المناطق الثلاث — تحقق.",
+      "en": "Used spacer correctly and explained the 3 zones — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف وخطة عمل",
+      "en": "Teaching and action plan"
+     },
+     "actions": {
+      "ar": [
+       "تقييم طريقة استخدام البخاخة ومستوى التحكم.",
+       "الفرق بين البخاخة الوقائية (الكورتيزون يوميًا) وبخاخة الإنقاذ.",
+       "استخدام الفاصل (Spacer) والمضمضة بعد الكورتيزون.",
+       "تجنب المحفزات: الدخان، التراب، الحيوانات، العطور، البرد، والعدوى.",
+       "خطة عمل مكتوبة بناءً على ذروة التدفق (أخضر/أصفر/أحمر).",
+       "التأكد من الفهم بطريقة Teach-back."
+      ],
+      "en": [
+       "Assess inhaler technique and control level.",
+       "Difference between preventer (daily steroid) and reliever.",
+       "Use a spacer; rinse after steroid inhaler.",
+       "Avoid triggers: smoke, dust, pets, perfumes, cold air, infections.",
+       "Written action plan by peak flow zones (green/yellow/red).",
+       "Confirm with teach-back."
+      ]
+     },
+     "outcome": {
+      "ar": "طريقة صحيحة وخطة مكتوبة.",
+      "en": "Correct technique, written plan."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    },
+    {
+     "need": {
+      "ar": "المتابعة",
+      "en": "Follow-up"
+     },
+     "actions": {
+      "ar": [
+       "متابعة في عيادة الصدر خلال أسبوعين من الخروج."
+      ],
+      "en": [
+       "Chest clinic follow-up within 2 weeks."
+      ]
+     },
+     "outcome": {
+      "ar": "ربو تحت السيطرة.",
+      "en": "Controlled asthma."
+     },
+     "timeframe": {
+      "ar": "أسبوعين",
+      "en": "2 weeks"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-deficient-fluid-asthma",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص حجم السوائل",
+    "en": "Risk for Deficient Fluid Volume"
+   },
+   "definition": {
+    "ar": "قابلية لنقص السوائل.",
+    "en": "Susceptibility to fluid deficit."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "سرعة التنفس والعرق",
+     "قلة الشرب أثناء النوبة"
+    ],
+    "en": [
+     "Tachypnea and sweating",
+     "Poor intake during the attack"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بقى لي يوم مش قادر أشرب.\""
+     ],
+     "en": [
+      "\"I haven't been able to drink for a day.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "أغشية جافة."
+     ],
+     "en": [
+      "Dry mucosa."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: أغشية رطبة وبول كافٍ."
+     ],
+     "en": [
+      "Within 24 h: moist mucosa, adequate urine."
+     ]
+    },
+    "long": {
+     "ar": [
+      "توازن سوائل طوال الإقامة."
+     ],
+     "en": [
+      "Fluid balance during the stay."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل السوائل والبول.",
+      "en": "Record fluids and urine."
+     },
+     "rationale": {
+      "ar": "يقيس التوازن.",
+      "en": "Measures balance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع السوائل الدافئة بعد تحسن التنفس.",
+      "en": "Encourage warm fluids once breathing improves."
+     },
+     "rationale": {
+      "ar": "تعوض وتخفف المخاط.",
+      "en": "Replace and thin mucus."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "سوائل وريدية حسب الأمر.",
+      "en": "IV fluids as ordered."
+     },
+     "rationale": {
+      "ar": "تعويض.",
+      "en": "Replacement."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة البوتاسيوم والسكر مع الكورتيزون والسالبيوتامول.",
+      "en": "Monitor K⁺ and glucose with steroids and salbutamol."
+     },
+     "rationale": {
+      "ar": "تتأثر بالأدوية.",
+      "en": "Drug effects."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تجنب السوائل الباردة جدًا.",
+      "en": "Avoid very cold drinks."
+     },
+     "rationale": {
+      "ar": "قد تحفز التشنج.",
+      "en": "May trigger spasm."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة جفاف الفم وسرعة النبض.",
+      "en": "Watch dry mouth and tachycardia."
+     },
+     "rationale": {
+      "ar": "علامات جفاف.",
+      "en": "Dehydration signs."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الفم رطب والبول كافٍ — تحقق.",
+      "en": "Moist mouth, adequate urine — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "السوائل",
+      "en": "Hydration"
+     },
+     "actions": {
+      "ar": [
+       "تسجيل السوائل والبول.",
+       "تشجيع السوائل الدافئة بعد تحسن التنفس.",
+       "سوائل وريدية حسب الأمر.",
+       "متابعة البوتاسيوم والسكر مع الكورتيزون والسالبيوتامول.",
+       "تجنب السوائل الباردة جدًا.",
+       "ملاحظة جفاف الفم وسرعة النبض."
+      ],
+      "en": [
+       "Record fluids and urine.",
+       "Encourage warm fluids once breathing improves.",
+       "IV fluids as ordered.",
+       "Monitor K⁺ and glucose with steroids and salbutamol.",
+       "Avoid very cold drinks.",
+       "Watch dry mouth and tachycardia."
+      ]
+     },
+     "outcome": {
+      "ar": "توازن طبيعي.",
+      "en": "Normal balance."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 h"
+     }
+    }
+   ]
   }
  ],
  "refs": [
@@ -291,10 +1229,10 @@
    "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
   },
   {
-   "title": "Ackley, Ladwig & Makic — Nursing Diagnosis Handbook: An Evidence-Based Guide to Planning Care"
+   "title": "GINA — Global Strategy for Asthma Management and Prevention (2024)"
   },
   {
-   "title": "GINA — Global Strategy for Asthma Management and Prevention 2024"
+   "title": "BTS/SIGN/NICE — Asthma: diagnosis, monitoring and chronic asthma management (2024)"
   }
  ]
 }
