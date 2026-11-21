@@ -1,4 +1,5 @@
 import { normalizePlan, diagnosisHtml } from './_lib/careplans.js';
+import { TRUST_PAGES, NO_CONTENT_RE } from './_lib/trustPages.js';
 import { internalRows, isD1QuotaError } from './_lib/sb.js';
 import { ROUTE_PATTERNS } from './_lib/routes.js';
 // Server-side SEO injection (Cloudflare Pages Function).
@@ -324,6 +325,33 @@ async function pageFor(path, env, request) {
       crumbs: [['الرئيسية', '/'], [d.hub[1], d.hub[0]], [name, p]],
     };
   }
+  if (TRUST_PAGES[p]) {
+    const t = TRUST_PAGES[p];
+    return { title: `${t.title} | ${SITE_NAME}`, description: t.description, body: t.body + list(HOME_LINKS), type: 'WebPage', crumbs: [['الرئيسية', '/'], [t.title, p]] };
+  }
+  if (p === '/courses') {
+    const rows = (await sb(env, 'courses', 'select=id,title_ar,description_ar&order=order_num.asc&limit=200')) || [];
+    if (!rows.length) return null;
+    return { title: `الكورسات التعليمية للتمريض | ${SITE_NAME}`, description: clip(`كورسات تمريض منظمة بالفصول والأسئلة: ${rows.slice(0, 8).map((r) => r.title_ar).join('، ')}.`, 300), body: `<h1>الكورسات</h1>${list(rows.map((r) => [`/courses/${r.id}`, r.title_ar, clip(strip(r.description_ar || ''), 200)]))}`, type: 'CollectionPage' };
+  }
+  if ((m = /^\/category\/([a-z0-9-]+)$/.exec(p))) {
+    const rows = (await sb(env, 'articles', `select=slug,title,excerpt&category=eq.${encodeURIComponent(m[1])}&status=eq.published&order=publish_date.desc&limit=200`)) || [];
+    if (!rows.length) return null;
+    const name = { articles: 'المقالات', summaries: 'الملخصات', skills: 'المهارات التمريضية', careplans: 'خطط الرعاية', drugs: 'الأدوية', books: 'الكتب', 'infection-control': 'مكافحة العدوى' }[m[1]] || 'المقالات';
+    return { title: `${name} | ${SITE_NAME}`, description: clip(`${name}: ${rows.slice(0, 6).map((r) => r.title).join('، ')}.`, 300), body: `<h1>${esc(name)}</h1>${list(rows.map((r) => [`/article/${r.slug}`, r.title, clip(strip(r.excerpt || ''), 200)]))}`, type: 'CollectionPage' };
+  }
+  if (p === '/store') {
+    const rows = (await sb(env, 'products', 'select=id,title,description,type&limit=100')) || [];
+    return { title: `متجر NurseHub — كتب وملفات وكورسات تمريض | ${SITE_NAME}`, description: 'كتب وملخصات وملفات مذاكرة وكورسات تمريض بأسعار رمزية، تُسلَّم إلكترونيًا بعد تأكيد الدفع.', body: `<h1>المتجر</h1><p>كتب وملخصات وملفات مذاكرة وكورسات تمريض بأسعار رمزية، تُسلَّم إلكترونيًا بعد تأكيد الدفع. لأي مشكلة في طلب تواصل معنا خلال 7 أيام من الشراء.</p>${list(rows.map((r) => [`/product/${r.id}`, r.title, clip(strip(r.description || ''), 200)]))}${list(HOME_LINKS)}`, type: 'CollectionPage' };
+  }
+  if (p === '/drugs/all') {
+    const rows = (await sb(env, 'drugs', 'select=slug,name,generic_name,drug_class&order=name.asc&limit=1500')) || [];
+    if (!rows.length) return null;
+    return { title: `كل الأدوية — دليل الأدوية للتمريض | ${SITE_NAME}`, description: clip(`دليل ${rows.length} دواء للممرضين بالجرعات والاعتبارات التمريضية: ${rows.slice(0, 10).map((r) => r.name).join('، ')}.`, 300), body: `<h1>كل الأدوية</h1>${list(rows.filter((r) => r.slug).map((r) => [`/drug/${r.slug}`, r.name, [r.generic_name, r.drug_class].filter(Boolean).join(' — ')]))}`, type: 'CollectionPage' };
+  }
+  if (p === '/quizzes') {
+    return { title: `اختبارات التمريض التدريبية | ${SITE_NAME}`, description: 'اختبارات تدريبية في التمريض بأسئلة اختيار من متعدد وشرح الإجابة: الأساسيات، الأدوية، الطوارئ، العناية المركزة والتخصصات.', body: `<h1>الاختبارات التدريبية</h1><p>اختبارات تدريبية في التمريض بأسئلة اختيار من متعدد وشرح لكل إجابة، مع تحليل نقاط الضعف ومراجعة الأخطاء. تشمل الأساسيات والأدوية والطوارئ والعناية المركزة والتخصصات، بالإضافة لامتحانات الترخيص والسفر.</p>${list(HOME_LINKS)}`, type: 'WebPage' };
+  }
   if (STATIC_PAGES[p]) {
     const [t, d] = STATIC_PAGES[p];
     return { title: `${t} | ${SITE_NAME}`, description: d, body: `<h1>${esc(t)}</h1><p>${esc(d)}</p>${list(HOME_LINKS)}`, type: 'WebPage' };
@@ -485,7 +513,9 @@ async function shell(request, env, status) {
   const headers = { 'cache-control': 'public, max-age=60', 'x-robots-tag': 'noindex' };
   if (!wantsHtml) return new Response(request.method === 'HEAD' ? null : 'Not found', { status, headers: { ...headers, 'content-type': 'text/plain; charset=utf-8' } });
   const res = await env.ASSETS.fetch(new Request(new URL('/', request.url), { method: 'GET' }));
-  return new Response(request.method === 'HEAD' ? null : res.body, { status, headers: { ...headers, 'content-type': 'text/html; charset=utf-8' } });
+  // error pages have no publisher content: no ad code on them
+  const html = request.method === 'HEAD' ? null : (await res.text()).replace(/<script[^>]*adsbygoogle\.js[^>]*><\/script>/i, '');
+  return new Response(html, { status, headers: { ...headers, 'content-type': 'text/html; charset=utf-8' } });
 }
 
 export async function onRequest({ request, env, next }) {
@@ -515,6 +545,12 @@ export async function onRequest({ request, env, next }) {
     const accept = request.headers.get('accept') || '';
     if (request.method !== 'GET' || (!accept.includes('text/html') && !accept.includes('*/*'))) return next();
     if (!BOT_RE.test(request.headers.get('user-agent') || '')) return next();
+    // Account / form screens have no publisher content: crawlers (and the AdSense reviewer) get them without ad code and noindex.
+    if (NO_CONTENT_RE.test(url.pathname)) {
+      const res = await env.ASSETS.fetch(new URL('/', request.url));
+      const html = (await res.text()).replace(/<script[^>]*adsbygoogle\.js[^>]*><\/script>/i, '');
+      return new Response(html, { status: 200, headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'public, max-age=300', 'x-robots-tag': 'noindex' } });
+    }
     // Crawlers fetch the same pages again and again: keep the rendered page at the edge for 6 h (no D1 read on a hit).
     // per deployment: the cached page embeds this deployment's index.html (asset file names), so a new deploy never serves
     // crawlers an old copy pointing at JS files that no longer exist
