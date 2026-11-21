@@ -1,0 +1,500 @@
+{
+ "id": "hypoglycemia",
+ "icon": "🍬",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "انخفاض سكر الدم",
+  "en": "Hypoglycemia"
+ },
+ "summary": {
+  "ar": "خطة رعاية لمريض انخفاض السكر: العلاج الفوري بقاعدة 15/15 أو الجلوكوز الوريدي، منع التكرار، والأمان.",
+  "en": "Care plan for hypoglycemia: immediate 15-15 or IV glucose treatment, preventing recurrence, and safety."
+ },
+ "diagnoses": [
+  {
+   "id": "hypoglycemia",
+   "kind": "actual",
+   "title": {
+    "ar": "انخفاض سكر الدم (غيبوبة نقص السكر)",
+    "en": "Hypoglycemia"
+   },
+   "definition": {
+    "ar": "انخفاض جلوكوز الدم أقل من 70 مجم/دل مع أعراض، وقد يصل لفقدان الوعي.",
+    "en": "Blood glucose below 70 mg/dL with symptoms, which may progress to loss of consciousness."
+   },
+   "relatedTo": {
+    "ar": [
+     "جرعة أنسولين أو أقراص سكر زائدة",
+     "تأخير أو ترك الوجبة بعد الدواء",
+     "مجهود زائد"
+    ],
+    "en": [
+     "Excess insulin or oral hypoglycemic",
+     "Delayed or missed meal after medication",
+     "Unplanned exertion"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "سكر الدم < 70 مجم/دل",
+     "دوخة سريعة وعدم تركيز",
+     "صداع ورعشة وعرق غزير وجلد مرطب",
+     "سرعة ضربات القلب وجوع وزغللة",
+     "تشنجات أو فقدان وعي في الحالات الشديدة"
+    ],
+    "en": [
+     "Glucose < 70 mg/dL",
+     "Sudden dizziness and poor concentration",
+     "Headache, tremor, profuse sweating, clammy skin",
+     "Tachycardia, hunger, blurred vision",
+     "Seizures or unconsciousness when severe"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس برعشة وعرق وجوع ومش شايف كويس.\""
+     ],
+     "en": [
+      "\"I'm shaky, sweaty, hungry and my vision is blurred.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "سكر الدم 52 مجم/دل.",
+      "عرق غزير وجلد بارد مرطب، النبض 112.",
+      "أخذ الأنسولين ولم يأكل."
+     ],
+     "en": [
+      "Glucose 52 mg/dL.",
+      "Profuse sweating, cold clammy skin, pulse 112.",
+      "Took insulin and did not eat."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 15 دقيقة: سكر الدم ≥ 70 مجم/دل وزوال الأعراض.",
+      "خلال ساعة: سكر مستقر بعد وجبة خفيفة."
+     ],
+     "en": [
+      "Within 15 minutes: glucose ≥ 70 mg/dL and symptoms resolved.",
+      "Within an hour: stable glucose after a snack."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يذكر المريض أعراض الهبوط وطريقة علاجه وسبب حدوثه."
+     ],
+     "en": [
+      "Before discharge: names hypoglycemia symptoms, treatment and cause."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس سكر الدم فورًا عند أي أعراض، وإعادة القياس بعد 15 دقيقة من العلاج.",
+      "en": "Check glucose at once with symptoms and 15 minutes after treatment."
+     },
+     "rationale": {
+      "ar": "يؤكد الهبوط ويقيس الاستجابة.",
+      "en": "Confirms and evaluates."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة العلامات الحيوية والعرق ومستوى الوعي.",
+      "en": "Monitor vital signs, sweating and consciousness."
+     },
+     "rationale": {
+      "ar": "تحدد الشدة.",
+      "en": "Grade severity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إذا كان واعيًا: إعطاء 15 جم سكر سريع (نصف كوب عصير، 3 معالق سكر في ماء) ثم القياس بعد 15 دقيقة (قاعدة 15/15).",
+      "en": "If conscious: give 15 g fast sugar (½ cup juice, 3 spoons of sugar in water), recheck in 15 minutes (15-15 rule)."
+     },
+     "rationale": {
+      "ar": "يرفع السكر بسرعة وأمان.",
+      "en": "Raises glucose quickly and safely."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إذا كان غير واعٍ: عدم إعطاء أي شيء بالفم، وإعطاء جلوكوز وريدي أو جلوكاجون حسب الأمر/البروتوكول ووضعه على جنبه.",
+      "en": "If unconscious: nothing by mouth; give IV glucose or glucagon per order/protocol and place in recovery position."
+     },
+     "rationale": {
+      "ar": "منع الشرقة وعلاج الحالة الطارئة.",
+      "en": "Prevents aspiration and treats the emergency."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "بعد التحسن: وجبة خفيفة فيها نشويات وبروتين.",
+      "en": "After recovery: a snack with starch and protein."
+     },
+     "rationale": {
+      "ar": "يمنع رجوع الهبوط.",
+      "en": "Prevents recurrence."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مراجعة جرعة الأنسولين/الدواء ونوعه وتعديلها حسب أوامر الطبيب.",
+      "en": "Review insulin/drug type and dose and adjust per physician."
+     },
+     "rationale": {
+      "ar": "علاج السبب.",
+      "en": "Addresses the cause."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "إرشاد المريض عن أعراض الانخفاض: دوخة، صداع، رعشة، سرعة القلب، عرق، زغللة، جوع، تشنجات.",
+      "en": "Teach hypoglycemia symptoms: dizziness, headache, tremor, palpitations, sweating, blurred vision, hunger, seizures."
+     },
+     "rationale": {
+      "ar": "التعرف المبكر.",
+      "en": "Early recognition."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تناول أي مادة سكرية فور الشعور بالأعراض وحملها دائمًا.",
+      "en": "Take sugar at the first symptoms and always carry some."
+     },
+     "rationale": {
+      "ar": "علاج ذاتي سريع.",
+      "en": "Prompt self-treatment."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تقسيم الوجبات إلى وجبات صغيرة متعددة، وتناول الطعام بعد الأنسولين مباشرة حسب نوعه.",
+      "en": "Split food into small frequent meals; eat right after insulin according to its type."
+     },
+     "rationale": {
+      "ar": "يمنع الهبوط.",
+      "en": "Prevents hypoglycemia."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "السكر 98 بعد 15 دقيقة والأعراض زالت — تحقق.",
+      "en": "Glucose 98 after 15 minutes; symptoms gone — met."
+     }
+    },
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض قاعدة 15/15 وسبب الهبوط — تحقق.",
+      "en": "Patient explained the 15-15 rule and the cause — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "علاج الهبوط فورًا",
+      "en": "Treat hypoglycemia immediately"
+     },
+     "actions": {
+      "ar": [
+       "قياس سكر الدم فورًا عند أي أعراض، وإعادة القياس بعد 15 دقيقة من العلاج.",
+       "ملاحظة العلامات الحيوية والعرق ومستوى الوعي.",
+       "إذا كان واعيًا: إعطاء 15 جم سكر سريع (نصف كوب عصير، 3 معالق سكر في ماء) ثم القياس بعد 15 دقيقة (قاعدة 15/15).",
+       "إذا كان غير واعٍ: عدم إعطاء أي شيء بالفم، وإعطاء جلوكوز وريدي أو جلوكاجون حسب الأمر/البروتوكول ووضعه على جنبه."
+      ],
+      "en": [
+       "Check glucose at once with symptoms and 15 minutes after treatment.",
+       "Monitor vital signs, sweating and consciousness.",
+       "If conscious: give 15 g fast sugar (½ cup juice, 3 spoons of sugar in water), recheck in 15 minutes (15-15 rule).",
+       "If unconscious: nothing by mouth; give IV glucose or glucagon per order/protocol and place in recovery position."
+      ]
+     },
+     "outcome": {
+      "ar": "سكر ≥ 70 خلال 15 دقيقة والمريض واعٍ.",
+      "en": "Glucose ≥ 70 within 15 min; patient alert."
+     },
+     "timeframe": {
+      "ar": "فورًا وكل 15 دقيقة",
+      "en": "Immediately, then every 15 min"
+     }
+    },
+    {
+     "need": {
+      "ar": "منع التكرار",
+      "en": "Prevent recurrence"
+     },
+     "actions": {
+      "ar": [
+       "بعد التحسن: وجبة خفيفة فيها نشويات وبروتين.",
+       "مراجعة جرعة الأنسولين/الدواء ونوعه وتعديلها حسب أوامر الطبيب."
+      ],
+      "en": [
+       "After recovery: a snack with starch and protein.",
+       "Review insulin/drug type and dose and adjust per physician."
+      ]
+     },
+     "outcome": {
+      "ar": "وجبة بعد التحسن وجرعة مراجعة.",
+      "en": "Snack after recovery; dose reviewed."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 hour"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف المريض",
+      "en": "Patient teaching"
+     },
+     "actions": {
+      "ar": [
+       "إرشاد المريض عن أعراض الانخفاض: دوخة، صداع، رعشة، سرعة القلب، عرق، زغللة، جوع، تشنجات.",
+       "تناول أي مادة سكرية فور الشعور بالأعراض وحملها دائمًا.",
+       "تقسيم الوجبات إلى وجبات صغيرة متعددة، وتناول الطعام بعد الأنسولين مباشرة حسب نوعه."
+      ],
+      "en": [
+       "Teach hypoglycemia symptoms: dizziness, headache, tremor, palpitations, sweating, blurred vision, hunger, seizures.",
+       "Take sugar at the first symptoms and always carry some.",
+       "Split food into small frequent meals; eat right after insulin according to its type."
+      ]
+     },
+     "outcome": {
+      "ar": "يعرف الأعراض والعلاج ويحمل سكرًا.",
+      "en": "Knows symptoms and treatment; carries sugar."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-for-injury-hypoglycemia",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الإصابة",
+    "en": "Risk for Injury"
+   },
+   "definition": {
+    "ar": "قابلية لحدوث ضرر جسدي بسبب الدوخة أو فقدان الوعي أو التشنجات.",
+    "en": "Susceptible to physical harm from dizziness, unconsciousness or seizures."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "انخفاض السكر وتغير الوعي",
+     "احتمال التشنجات"
+    ],
+    "en": [
+     "Hypoglycemia with altered consciousness",
+     "Possible seizures"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"اتلخبطت ومكنتش عارف أنا فين.\""
+     ],
+     "en": [
+      "\"I got confused and didn't know where I was.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "تشوش مؤقت أثناء الهبوط."
+     ],
+     "en": [
+      "Transient confusion during the episode."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء الإقامة: لا سقوط أو إصابة أثناء أي نوبة هبوط."
+     ],
+     "en": [
+      "During the stay: no falls or injury during any episode."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: الأسرة تعرف التصرف عند فقدان الوعي."
+     ],
+     "en": [
+      "Before discharge: family knows what to do if unconscious."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "سرير منخفض وجوانب مرفوعة عند تغير الوعي.",
+      "en": "Low bed with raised rails when consciousness is altered."
+     },
+     "rationale": {
+      "ar": "يمنع السقوط.",
+      "en": "Prevents falls."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "البقاء مع المريض حتى يستقر.",
+      "en": "Stay with the patient until stable."
+     },
+     "rationale": {
+      "ar": "أمان.",
+      "en": "Safety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع الجانب وتجهيز الشفط عند فقدان الوعي أو التشنج.",
+      "en": "Recovery position and suction ready if unconscious or seizing."
+     },
+     "rationale": {
+      "ar": "يحمي مجرى الهواء.",
+      "en": "Protects the airway."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم الأسرة: لا شيء بالفم للمريض غير الواعي، ووضعه على جنبه وطلب الإسعاف أو حقن الجلوكاجون إن توفر.",
+      "en": "Teach family: nothing by mouth if unconscious, recovery position, call emergency or give glucagon if available."
+     },
+     "rationale": {
+      "ar": "تصرف صحيح يمنع الضرر.",
+      "en": "Correct action prevents harm."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "عدم القيادة إذا كان السكر منخفضًا أو عند الأعراض.",
+      "en": "No driving with low glucose or symptoms."
+     },
+     "rationale": {
+      "ar": "يمنع الحوادث.",
+      "en": "Prevents accidents."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "لبس سوار أو بطاقة تعريف بمرض السكر.",
+      "en": "Wear a diabetes ID bracelet or card."
+     },
+     "rationale": {
+      "ar": "يساعد المسعفين.",
+      "en": "Helps responders."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا إصابة، والأسرة شرحت التصرف — تحقق.",
+      "en": "No injury; family explained the response — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الأمان أثناء الهبوط",
+      "en": "Safety during hypoglycemia"
+     },
+     "actions": {
+      "ar": [
+       "سرير منخفض وجوانب مرفوعة عند تغير الوعي.",
+       "البقاء مع المريض حتى يستقر.",
+       "وضع الجانب وتجهيز الشفط عند فقدان الوعي أو التشنج."
+      ],
+      "en": [
+       "Low bed with raised rails when consciousness is altered.",
+       "Stay with the patient until stable.",
+       "Recovery position and suction ready if unconscious or seizing."
+      ]
+     },
+     "outcome": {
+      "ar": "لا سقوط أو إصابة.",
+      "en": "No falls or injury."
+     },
+     "timeframe": {
+      "ar": "أثناء أي نوبة",
+      "en": "During any episode"
+     }
+    },
+    {
+     "need": {
+      "ar": "تثقيف الأسرة",
+      "en": "Family teaching"
+     },
+     "actions": {
+      "ar": [
+       "تعليم الأسرة: لا شيء بالفم للمريض غير الواعي، ووضعه على جنبه وطلب الإسعاف أو حقن الجلوكاجون إن توفر.",
+       "عدم القيادة إذا كان السكر منخفضًا أو عند الأعراض.",
+       "لبس سوار أو بطاقة تعريف بمرض السكر."
+      ],
+      "en": [
+       "Teach family: nothing by mouth if unconscious, recovery position, call emergency or give glucagon if available.",
+       "No driving with low glucose or symptoms.",
+       "Wear a diabetes ID bracelet or card."
+      ]
+     },
+     "outcome": {
+      "ar": "الأسرة تعرف الإسعاف الأولي للهبوط.",
+      "en": "Family knows hypoglycemia first aid."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "American Diabetes Association — Standards of Care in Diabetes 2025 (Hypoglycemia)"
+  },
+  {
+   "title": "دليل خطة العناية التمريضية — NurseHub Egypt (ملف المؤسس)"
+  }
+ ],
+ "group": "metabolic"
+}

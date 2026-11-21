@@ -55,6 +55,7 @@ export const SYSTEMS: Record<string, { ar: string; en: string }> = {
 export const GROUPS: Record<string, { ar: string; en: string }> = {
   symptoms: { ar: "الأعراض الشائعة", en: "Common symptoms" },
   vitals: { ar: "العلامات الحيوية", en: "Vital signs" },
+  metabolic: { ar: "السكر والكلى", en: "Diabetes & kidney" },
   devices: { ar: "الأجهزة والإجراءات", en: "Devices & procedures" },
   maternal: { ar: "الأم والوليد", en: "Mother & newborn" },
   icu: { ar: "مضاعفات الرعاية المركزة", en: "ICU complications" },
