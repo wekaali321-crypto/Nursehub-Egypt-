@@ -1,0 +1,1099 @@
+{
+ "id": "acute-kidney-injury",
+ "icon": "🫘",
+ "system": "renal",
+ "folder": "disease",
+ "title": {
+  "ar": "إصابة الكلى الحادة (الفشل الكلوي الحاد)",
+  "en": "Acute Kidney Injury"
+ },
+ "summary": {
+  "ar": "خطة رعاية إصابة الكلى الحادة: زيادة السوائل، ارتفاع البوتاسيوم والحموضة، منع التدهور والأدوية الضارة، العدوى، التشوش، والتثقيف.",
+  "en": "AKI care plan: fluid overload, hyperkalemia and acidosis, preventing progression and nephrotoxins, infection, confusion and teaching."
+ },
+ "diagnoses": [
+  {
+   "id": "excess-fluid-volume-aki",
+   "kind": "actual",
+   "title": {
+    "ar": "زيادة حجم السوائل",
+    "en": "Excess Fluid Volume"
+   },
+   "definition": {
+    "ar": "زيادة احتباس السوائل.",
+    "en": "Increased fluid retention."
+   },
+   "relatedTo": {
+    "ar": [
+     "قلة البول بسبب إصابة الكلى"
+    ],
+    "en": [
+     "Oliguria from kidney injury"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "بول < 0.5 مل/كجم/ساعة",
+     "تورم وزيادة وزن",
+     "خرخرة بالرئة"
+    ],
+    "en": [
+     "Urine < 0.5 mL/kg/h",
+     "Edema and weight gain",
+     "Lung crackles"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"البول قليل جدًا من امبارح.\""
+     ],
+     "en": [
+      "\"Very little urine since yesterday.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "البول 300 مل/24 ساعة، كرياتينين 3.2 (كان 1.0).",
+      "زيادة 2 كجم."
+     ],
+     "en": [
+      "Urine 300 mL/24 h; creatinine 3.2 (baseline 1.0).",
+      "+2 kg."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: ثبات الوزن وعدم ضيق النفس."
+     ],
+     "en": [
+      "Within 48 h: stable weight, no dyspnea."
+     ]
+    },
+    "long": {
+     "ar": [
+      "عودة البول ووظائف الكلى."
+     ],
+     "en": [
+      "Recovery of urine output and renal function."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "البول كل ساعة والوزن يوميًا والسوائل الداخلة والخارجة.",
+      "en": "Hourly urine, daily weight, intake/output."
+     },
+     "rationale": {
+      "ar": "متابعة دقيقة.",
+      "en": "Precise monitoring."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "سماع الصدر ومتابعة ضيق النفس والتورم.",
+      "en": "Auscultate lungs; watch dyspnea and edema."
+     },
+     "rationale": {
+      "ar": "كشف وذمة الرئة.",
+      "en": "Detects pulmonary edema."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تقييد السوائل حسب الأمر (بول اليوم السابق + 500 مل).",
+      "en": "Fluid restriction as ordered (previous urine + 500 mL)."
+     },
+     "rationale": {
+      "ar": "يمنع التحميل.",
+      "en": "Prevents overload."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مدر البول حسب الأمر عند زيادة السوائل.",
+      "en": "Diuretic as ordered for overload."
+     },
+     "rationale": {
+      "ar": "يزيد الإخراج.",
+      "en": "Increases output."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التحضير للغسيل الكلوي الطارئ عند وذمة الرئة غير المستجيبة.",
+      "en": "Prepare for urgent dialysis for refractory pulmonary edema."
+     },
+     "rationale": {
+      "ar": "إنقاذ.",
+      "en": "Rescue therapy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم لتخفيف العطش.",
+      "en": "Mouth care to relieve thirst."
+     },
+     "rationale": {
+      "ar": "يساعد الالتزام.",
+      "en": "Aids adherence."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الوزن ثابت والصدر واضح — تحقق.",
+      "en": "Stable weight, clear chest — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة السوائل",
+      "en": "Fluid monitoring"
+     },
+     "actions": {
+      "ar": [
+       "البول كل ساعة والوزن يوميًا والسوائل الداخلة والخارجة.",
+       "سماع الصدر ومتابعة ضيق النفس والتورم."
+      ],
+      "en": [
+       "Hourly urine, daily weight, intake/output.",
+       "Auscultate lungs; watch dyspnea and edema."
+      ]
+     },
+     "outcome": {
+      "ar": "لا وذمة رئة.",
+      "en": "No pulmonary edema."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    },
+    {
+     "need": {
+      "ar": "تقليل السوائل",
+      "en": "Reduce fluid"
+     },
+     "actions": {
+      "ar": [
+       "تقييد السوائل حسب الأمر (بول اليوم السابق + 500 مل).",
+       "مدر البول حسب الأمر عند زيادة السوائل.",
+       "التحضير للغسيل الكلوي الطارئ عند وذمة الرئة غير المستجيبة.",
+       "العناية بالفم لتخفيف العطش."
+      ],
+      "en": [
+       "Fluid restriction as ordered (previous urine + 500 mL).",
+       "Diuretic as ordered for overload.",
+       "Prepare for urgent dialysis for refractory pulmonary edema.",
+       "Mouth care to relieve thirst."
+      ]
+     },
+     "outcome": {
+      "ar": "وزن ثابت.",
+      "en": "Stable weight."
+     },
+     "timeframe": {
+      "ar": "48 ساعة",
+      "en": "48 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-hyperkalemia-aki",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر اختلال الأملاح (ارتفاع البوتاسيوم والحموضة)",
+    "en": "Risk for Electrolyte Imbalance (Hyperkalemia, Acidosis)"
+   },
+   "definition": {
+    "ar": "قابلية لتغير الأملاح وحموضة الدم.",
+    "en": "Susceptibility to electrolyte and acid-base changes."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ضعف إخراج الكلى",
+     "تكسير الأنسجة"
+    ],
+    "en": [
+     "Reduced renal excretion",
+     "Tissue breakdown"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عضلاتي ضعيفة.\""
+     ],
+     "en": [
+      "\"My muscles feel weak.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بوتاسيوم 6.1، بيكربونات 16."
+     ],
+     "en": [
+      "K⁺ 6.1, HCO₃ 16."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعتين: بوتاسيوم < 6 بدون تغيرات في رسم القلب."
+     ],
+     "en": [
+      "Within 2 h: K⁺ < 6 without ECG changes."
+     ]
+    },
+    "long": {
+     "ar": [
+      "أملاح طبيعية."
+     ],
+     "en": [
+      "Normal electrolytes."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "رسم قلب ومونيتور عند البوتاسيوم ≥ 6.",
+      "en": "ECG and monitor for K⁺ ≥ 6."
+     },
+     "rationale": {
+      "ar": "حماية القلب.",
+      "en": "Cardiac protection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "كالسيوم جلوكونات وأنسولين مع جلوكوز وسالبيوتامول حسب البروتوكول.",
+      "en": "Calcium gluconate, insulin-glucose and salbutamol per protocol."
+     },
+     "rationale": {
+      "ar": "علاج ارتفاع البوتاسيوم.",
+      "en": "Treats hyperkalemia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة السكر بعد الأنسولين.",
+      "en": "Monitor glucose after insulin."
+     },
+     "rationale": {
+      "ar": "منع الهبوط.",
+      "en": "Prevents hypoglycemia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إيقاف مصادر البوتاسيوم (محاليل وأكل وأدوية).",
+      "en": "Stop potassium sources (fluids, food, drugs)."
+     },
+     "rationale": {
+      "ar": "منع الزيادة.",
+      "en": "Prevents rise."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الأملاح وغازات الدم.",
+      "en": "Monitor electrolytes and ABG."
+     },
+     "rationale": {
+      "ar": "تقييم.",
+      "en": "Assessment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الغسيل الكلوي إذا لم يستجب.",
+      "en": "Dialysis if refractory."
+     },
+     "rationale": {
+      "ar": "علاج نهائي.",
+      "en": "Definitive therapy."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "البوتاسيوم 5.2 بعد ساعتين — تحقق.",
+      "en": "K⁺ 5.2 at 2 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "علاج الأملاح",
+      "en": "Electrolyte management"
+     },
+     "actions": {
+      "ar": [
+       "رسم قلب ومونيتور عند البوتاسيوم ≥ 6.",
+       "كالسيوم جلوكونات وأنسولين مع جلوكوز وسالبيوتامول حسب البروتوكول.",
+       "متابعة السكر بعد الأنسولين.",
+       "إيقاف مصادر البوتاسيوم (محاليل وأكل وأدوية).",
+       "متابعة الأملاح وغازات الدم.",
+       "الغسيل الكلوي إذا لم يستجب."
+      ],
+      "en": [
+       "ECG and monitor for K⁺ ≥ 6.",
+       "Calcium gluconate, insulin-glucose and salbutamol per protocol.",
+       "Monitor glucose after insulin.",
+       "Stop potassium sources (fluids, food, drugs).",
+       "Monitor electrolytes and ABG.",
+       "Dialysis if refractory."
+      ]
+     },
+     "outcome": {
+      "ar": "بوتاسيوم < 6.",
+      "en": "K⁺ < 6."
+     },
+     "timeframe": {
+      "ar": "ساعتين",
+      "en": "2 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-acute-kidney-progression",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر تدهور وظائف الكلى",
+    "en": "Risk for Worsening Renal Function"
+   },
+   "definition": {
+    "ar": "قابلية لاستمرار أو زيادة إصابة الكلى.",
+    "en": "Susceptibility to ongoing or worsening kidney injury."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "نقص التروية",
+     "أدوية ضارة بالكلى والصبغة",
+     "انسداد مجرى البول"
+    ],
+    "en": [
+     "Hypoperfusion",
+     "Nephrotoxins and contrast",
+     "Urinary obstruction"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"باخد مسكنات كتير.\""
+     ],
+     "en": [
+      "\"I take a lot of painkillers.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "على إيبوبروفين ومدر."
+     ],
+     "en": [
+      "On ibuprofen and a diuretic."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 72 ساعة: ثبات أو تحسن الكرياتينين."
+     ],
+     "en": [
+      "Within 72 h: stable or improving creatinine."
+     ]
+    },
+    "long": {
+     "ar": [
+      "عودة الكرياتينين لمستواه."
+     ],
+     "en": [
+      "Return to baseline creatinine."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إيقاف الأدوية الضارة بالكلى (المسكنات المضادة للالتهاب، بعض المضادات) ومراجعة الجرعات.",
+      "en": "Stop nephrotoxins (NSAIDs, some antibiotics) and adjust doses."
+     },
+     "rationale": {
+      "ar": "يمنع التدهور.",
+      "en": "Prevents decline."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الحفاظ على الضغط والتروية.",
+      "en": "Maintain BP and perfusion."
+     },
+     "rationale": {
+      "ar": "تروية الكلى.",
+      "en": "Renal perfusion."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص المثانة (جهاز قياس حجم البول) لاستبعاد الاحتباس.",
+      "en": "Bladder scan to exclude retention."
+     },
+     "rationale": {
+      "ar": "سبب قابل للعلاج.",
+      "en": "Reversible cause."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الكرياتينين يوميًا.",
+      "en": "Daily creatinine."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تجنب الصبغة إلا للضرورة مع الترطيب.",
+      "en": "Avoid contrast unless essential, with hydration."
+     },
+     "rationale": {
+      "ar": "حماية الكلى.",
+      "en": "Renal protection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض تجنب المسكنات بدون وصفة.",
+      "en": "Teach avoiding OTC NSAIDs."
+     },
+     "rationale": {
+      "ar": "منع التكرار.",
+      "en": "Prevents recurrence."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الكرياتينين 2.1 يوم 3 — تحقق.",
+      "en": "Creatinine 2.1 on day 3 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية الكلى",
+      "en": "Kidney protection"
+     },
+     "actions": {
+      "ar": [
+       "إيقاف الأدوية الضارة بالكلى (المسكنات المضادة للالتهاب، بعض المضادات) ومراجعة الجرعات.",
+       "الحفاظ على الضغط والتروية.",
+       "فحص المثانة (جهاز قياس حجم البول) لاستبعاد الاحتباس.",
+       "متابعة الكرياتينين يوميًا.",
+       "تجنب الصبغة إلا للضرورة مع الترطيب.",
+       "تعليم المريض تجنب المسكنات بدون وصفة."
+      ],
+      "en": [
+       "Stop nephrotoxins (NSAIDs, some antibiotics) and adjust doses.",
+       "Maintain BP and perfusion.",
+       "Bladder scan to exclude retention.",
+       "Daily creatinine.",
+       "Avoid contrast unless essential, with hydration.",
+       "Teach avoiding OTC NSAIDs."
+      ]
+     },
+     "outcome": {
+      "ar": "كرياتينين يتحسن.",
+      "en": "Improving creatinine."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-infection-aki",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى",
+    "en": "Risk for Infection"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة.",
+    "en": "Susceptibility to infection."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "اليوريا تضعف المناعة",
+     "قسطرة بولية أو قسطرة غسيل"
+    ],
+    "en": [
+     "Uremia impairs immunity",
+     "Urinary or dialysis catheter"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"المكان ده بيوجعني.\""
+     ],
+     "en": [
+      "\"This site hurts.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قسطرة غسيل في الوريد الوداجي."
+     ],
+     "en": [
+      "Jugular dialysis catheter."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "لا علامات عدوى."
+     ],
+     "en": [
+      "No infection signs."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا عدوى طوال الإقامة."
+     ],
+     "en": [
+      "No infection during the stay."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل الأيدي وتقنية معقمة مع القسطرة.",
+      "en": "Hand hygiene; aseptic line care."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص أماكن القسطرة والحرارة يوميًا.",
+      "en": "Daily site checks and temperature."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إزالة القسطرة البولية بمجرد عدم الحاجة.",
+      "en": "Remove urinary catheter when not needed."
+     },
+     "rationale": {
+      "ar": "تقليل العدوى.",
+      "en": "Reduces infection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تعديل جرعات المضادات حسب الكلى.",
+      "en": "Renally adjust antibiotic doses."
+     },
+     "rationale": {
+      "ar": "فعالية بدون سمية.",
+      "en": "Efficacy without toxicity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم والجلد.",
+      "en": "Oral and skin care."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض عدم لمس القسطرة.",
+      "en": "Teach not to touch the catheter."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا عدوى — تحقق.",
+      "en": "No infection — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية",
+      "en": "Prevention"
+     },
+     "actions": {
+      "ar": [
+       "غسل الأيدي وتقنية معقمة مع القسطرة.",
+       "فحص أماكن القسطرة والحرارة يوميًا.",
+       "إزالة القسطرة البولية بمجرد عدم الحاجة.",
+       "تعديل جرعات المضادات حسب الكلى.",
+       "العناية بالفم والجلد.",
+       "تعليم المريض عدم لمس القسطرة."
+      ],
+      "en": [
+       "Hand hygiene; aseptic line care.",
+       "Daily site checks and temperature.",
+       "Remove urinary catheter when not needed.",
+       "Renally adjust antibiotic doses.",
+       "Oral and skin care.",
+       "Teach not to touch the catheter."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عدوى.",
+      "en": "No infection."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-acute-confusion-aki",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر التشوش (ارتفاع اليوريا)",
+    "en": "Risk for Acute Confusion (Uremia)"
+   },
+   "definition": {
+    "ar": "قابلية لاضطراب الوعي بسبب تراكم السموم.",
+    "en": "Susceptibility to altered consciousness from toxin accumulation."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ارتفاع اليوريا",
+     "خلل الصوديوم"
+    ],
+    "en": [
+     "Uremia",
+     "Sodium imbalance"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الابن: \"أبويا بقى ينسى.\""
+     ],
+     "en": [
+      "Son: \"Dad has become forgetful.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يوريا 180."
+     ],
+     "en": [
+      "Urea 180."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: متوجه."
+     ],
+     "en": [
+      "Every shift: oriented."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا تشوش."
+     ],
+     "en": [
+      "No confusion."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الوعي والتوجه كل وردية.",
+      "en": "Assess consciousness and orientation every shift."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "بيئة آمنة واحتياطات السقوط.",
+      "en": "Safe environment; fall precautions."
+     },
+     "rationale": {
+      "ar": "منع الإصابة.",
+      "en": "Prevents injury."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التوجيه المتكرر.",
+      "en": "Frequent reorientation."
+     },
+     "rationale": {
+      "ar": "يقلل التشوش.",
+      "en": "Reduces confusion."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مراجعة الأدوية المتراكمة في الكلى (مثل المهدئات).",
+      "en": "Review renally cleared drugs (e.g. sedatives)."
+     },
+     "rationale": {
+      "ar": "تتراكم وتسبب تشوشًا.",
+      "en": "Accumulate and confuse."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الغسيل عند أعراض اليوريا الشديدة.",
+      "en": "Dialysis for severe uremic symptoms."
+     },
+     "rationale": {
+      "ar": "علاج.",
+      "en": "Treatment."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة الرعشة والتشنجات.",
+      "en": "Watch for asterixis and seizures."
+     },
+     "rationale": {
+      "ar": "علامات متقدمة.",
+      "en": "Advanced signs."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "متوجه — تحقق.",
+      "en": "Oriented — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من التشوش",
+      "en": "Confusion prevention"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الوعي والتوجه كل وردية.",
+       "بيئة آمنة واحتياطات السقوط.",
+       "التوجيه المتكرر.",
+       "مراجعة الأدوية المتراكمة في الكلى (مثل المهدئات).",
+       "الغسيل عند أعراض اليوريا الشديدة.",
+       "ملاحظة الرعشة والتشنجات."
+      ],
+      "en": [
+       "Assess consciousness and orientation every shift.",
+       "Safe environment; fall precautions.",
+       "Frequent reorientation.",
+       "Review renally cleared drugs (e.g. sedatives).",
+       "Dialysis for severe uremic symptoms.",
+       "Watch for asterixis and seizures."
+      ]
+     },
+     "outcome": {
+      "ar": "وعي طبيعي.",
+      "en": "Normal mentation."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-aki",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (إصابة الكلى الحادة)",
+    "en": "Deficient Knowledge (Acute kidney injury)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "تشخيص جديد"
+    ],
+    "en": [
+     "New diagnosis"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الكلى هترجع تشتغل؟\""
+     ],
+     "en": [
+      "\"Will my kidneys recover?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "سبب الإصابة: جفاف ومسكنات."
+     ],
+     "en": [
+      "Cause: dehydration and NSAIDs."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "أغلب حالات إصابة الكلى الحادة تتحسن إذا عولج السبب، وتحتاج متابعة الكرياتينين بعد الخروج.",
+      "en": "Most AKI recovers if the cause is treated; creatinine needs follow-up after discharge."
+     },
+     "rationale": {
+      "ar": "طمأنة ومتابعة.",
+      "en": "Reassurance and follow-up."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرب سوائل كافية خاصة مع الإسهال أو الحر، والاتصال بالطبيب عند الجفاف.",
+      "en": "Adequate fluids, especially with diarrhea or heat; seek help when dehydrated."
+     },
+     "rationale": {
+      "ar": "الوقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تجنب المسكنات المضادة للالتهاب وسؤال الطبيب قبل أي دواء.",
+      "en": "Avoid NSAIDs; ask before any medicine."
+     },
+     "rationale": {
+      "ar": "حماية الكلى.",
+      "en": "Protect kidneys."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "إيقاف بعض أدوية الضغط والسكر مؤقتًا في أيام المرض حسب تعليمات الطبيب (Sick-day rules).",
+      "en": "Sick-day rules: pause some BP and diabetes drugs during illness as advised."
+     },
+     "rationale": {
+      "ar": "تقليل الخطر.",
+      "en": "Reduces risk."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف صحي",
+      "en": "Health teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "أغلب حالات إصابة الكلى الحادة تتحسن إذا عولج السبب، وتحتاج متابعة الكرياتينين بعد الخروج.",
+       "شرب سوائل كافية خاصة مع الإسهال أو الحر، والاتصال بالطبيب عند الجفاف.",
+       "تجنب المسكنات المضادة للالتهاب وسؤال الطبيب قبل أي دواء.",
+       "إيقاف بعض أدوية الضغط والسكر مؤقتًا في أيام المرض حسب تعليمات الطبيب (Sick-day rules).",
+       "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Most AKI recovers if the cause is treated; creatinine needs follow-up after discharge.",
+       "Adequate fluids, especially with diarrhea or heat; seek help when dehydrated.",
+       "Avoid NSAIDs; ask before any medicine.",
+       "Sick-day rules: pause some BP and diabetes drugs during illness as advised.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "KDIGO Clinical Practice Guideline for Acute Kidney Injury (2012)"
+  },
+  {
+   "title": "NICE NG148 — Acute kidney injury: prevention, detection and management (2019)"
+  }
+ ]
+}
