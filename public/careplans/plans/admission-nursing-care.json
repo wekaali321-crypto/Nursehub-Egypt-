@@ -1,0 +1,426 @@
+{
+ "id": "admission-nursing-care",
+ "icon": "🛎️",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "الرعاية التمريضية عند الدخول",
+  "en": "Nursing Care on Admission"
+ },
+ "summary": {
+  "ar": "خطة رعاية استقبال المريض الجديد: تجهيز السرير، سوار التعريف، العلامات الحيوية والوزن، تقييم الدخول، والتعريف بالقسم والحقوق.",
+  "en": "Admission care plan: bed preparation, ID band, vitals and weight, admission assessment, and orientation to the ward and patient rights."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-injury-identification",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الإصابة (أخطاء التعرف على المريض عند الدخول)",
+    "en": "Risk for Injury (Patient Identification Errors on Admission)"
+   },
+   "definition": {
+    "ar": "قابلية لحدوث ضرر بسبب أخطاء في التعرف على المريض أو نقص المعلومات عند الدخول.",
+    "en": "Susceptibility to harm from patient-identification errors or missing information on admission."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "دخول جديد وبيئة غير مألوفة",
+     "نقص البيانات أو الفحوصات السابقة",
+     "تعدد الفريق المعالج"
+    ],
+    "en": [
+     "New admission, unfamiliar environment",
+     "Missing data or previous results",
+     "Multiple caregivers"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أنا جاي من الطوارئ ومعايا تحاليل قديمة.\""
+     ],
+     "en": [
+      "\"I came from the ED and have old test results with me.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مريض جديد وصل للقسم الساعة 10 صباحًا.",
+      "لا يوجد سوار تعريف بعد."
+     ],
+     "en": [
+      "New patient arrived on the ward at 10 am.",
+      "No ID band yet."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة من الدخول: سوار تعريف صحيح، علامات حيوية ووزن موثقان، وتقييم دخول كامل."
+     ],
+     "en": [
+      "Within 1 hour of admission: correct ID band, vitals and weight documented, full admission assessment."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال الإقامة: لا أخطاء في التعرف على المريض."
+     ],
+     "en": [
+      "Throughout the stay: no identification errors."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التأكد من جاهزية الغرفة وفرش السرير قبل وصول المريض.",
+      "en": "Ensure the room and bed are ready before arrival."
+     },
+     "rationale": {
+      "ar": "استقبال آمن ومريح.",
+      "en": "Safe, comfortable reception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استلام الملف الطبي والتعرف على المريض والترحيب به.",
+      "en": "Receive the medical file; identify and welcome the patient."
+     },
+     "rationale": {
+      "ar": "بداية علاقة ثقة.",
+      "en": "Starts a trusting relationship."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع سوار تعريف بالاسم الرباعي والرقم الموحد مع سؤال المريض عن اسمه أثناء لبسه.",
+      "en": "Apply an ID band with full name and unique number, asking the patient to state his name."
+     },
+     "rationale": {
+      "ar": "تحديد هوية المريض أول أهداف سلامة المرضى.",
+      "en": "Correct identification is the first patient-safety goal."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس العلامات الحيوية والوزن والتوثيق.",
+      "en": "Measure and document vital signs and weight."
+     },
+     "rationale": {
+      "ar": "قيم أساسية للمقارنة وحساب الجرعات.",
+      "en": "Baseline values and dose calculation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "سؤال المريض عن أي فحوصات طبية أو معملية سابقة وأخذ نسخة منها للملف.",
+      "en": "Ask about previous investigations and file a copy."
+     },
+     "rationale": {
+      "ar": "يكمل الصورة ويمنع التكرار.",
+      "en": "Completes the picture; avoids repetition."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "أخذ التاريخ المرضي والمشكلة الرئيسية للدخول وتقييم المريض بنموذج التقييم التمريضي عند الدخول (بما فيه السقوط والجلد والألم).",
+      "en": "Take the history and main complaint; complete the admission nursing assessment (including falls, skin and pain)."
+     },
+     "rationale": {
+      "ar": "تحديد المشاكل والاحتياجات.",
+      "en": "Identifies problems and needs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تسكين المريض بالسرير وتعريفه بمحتويات الغرفة ووحدة السرير وجرس الاستدعاء.",
+      "en": "Settle the patient and orient him to the room, bed unit and call bell."
+     },
+     "rationale": {
+      "ar": "يقلل القلق ويمنع السقوط.",
+      "en": "Reduces anxiety; prevents falls."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تم تقييم المريض كاملًا خلال 45 دقيقة وسوار التعريف صحيح — تحقق.",
+      "en": "Full assessment within 45 minutes; correct ID band — met."
+     }
+    },
+    {
+     "status": "partial",
+     "text": {
+      "ar": "يحتاج المريض إعادة تقييم لاستكمال البيانات.",
+      "en": "Patient needs reassessment to complete data."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الاستقبال والتعريف",
+      "en": "Reception and identification"
+     },
+     "actions": {
+      "ar": [
+       "التأكد من جاهزية الغرفة وفرش السرير قبل وصول المريض.",
+       "استلام الملف الطبي والتعرف على المريض والترحيب به.",
+       "وضع سوار تعريف بالاسم الرباعي والرقم الموحد مع سؤال المريض عن اسمه أثناء لبسه.",
+       "تسكين المريض بالسرير وتعريفه بمحتويات الغرفة ووحدة السرير وجرس الاستدعاء."
+      ],
+      "en": [
+       "Ensure the room and bed are ready before arrival.",
+       "Receive the medical file; identify and welcome the patient.",
+       "Apply an ID band with full name and unique number, asking the patient to state his name.",
+       "Settle the patient and orient him to the room, bed unit and call bell."
+      ]
+     },
+     "outcome": {
+      "ar": "هوية صحيحة ومريض مستقر بالسرير.",
+      "en": "Correct identity; patient settled."
+     },
+     "timeframe": {
+      "ar": "عند الدخول",
+      "en": "On admission"
+     }
+    },
+    {
+     "need": {
+      "ar": "التقييم عند الدخول",
+      "en": "Admission assessment"
+     },
+     "actions": {
+      "ar": [
+       "قياس العلامات الحيوية والوزن والتوثيق.",
+       "سؤال المريض عن أي فحوصات طبية أو معملية سابقة وأخذ نسخة منها للملف.",
+       "أخذ التاريخ المرضي والمشكلة الرئيسية للدخول وتقييم المريض بنموذج التقييم التمريضي عند الدخول (بما فيه السقوط والجلد والألم)."
+      ],
+      "en": [
+       "Measure and document vital signs and weight.",
+       "Ask about previous investigations and file a copy.",
+       "Take the history and main complaint; complete the admission nursing assessment (including falls, skin and pain)."
+      ]
+     },
+     "outcome": {
+      "ar": "مشاكل واحتياجات محددة وموثقة.",
+      "en": "Problems and needs identified and documented."
+     },
+     "timeframe": {
+      "ar": "خلال ساعة",
+      "en": "Within 1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-admission",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق (دخول المستشفى)",
+    "en": "Anxiety (Hospital Admission)"
+   },
+   "definition": {
+    "ar": "إحساس بعدم الارتياح والخوف مرتبط بدخول المستشفى والبيئة الجديدة.",
+    "en": "Uneasy feeling and apprehension related to hospital admission and a new environment."
+   },
+   "relatedTo": {
+    "ar": [
+     "بيئة غير مألوفة",
+     "عدم معرفة الحقوق والإجراءات",
+     "الانفصال عن الأسرة"
+    ],
+    "en": [
+     "Unfamiliar environment",
+     "Unaware of rights and procedures",
+     "Separation from family"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة متكررة",
+     "توتر"
+    ],
+    "en": [
+     "Repeated questions",
+     "Tension"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هقعد هنا قد إيه؟ ومين الدكتور بتاعي؟\""
+     ],
+     "en": [
+      "\"How long will I stay? Who is my doctor?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "متوتر، النبض 98."
+     ],
+     "en": [
+      "Tense, HR 98."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية الأولى: يعرف المريض الفريق المعالج وروتين القسم وحقوقه وواجباته."
+     ],
+     "en": [
+      "Within the first shift: knows the care team, ward routine, rights and responsibilities."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال الإقامة: تعاون وقلق أقل."
+     ],
+     "en": [
+      "Throughout the stay: cooperation and less anxiety."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعريف المريض بنفسك وبالفريق وروتين القسم (الزيارة، الوجبات، المرور).",
+      "en": "Introduce yourself, the team and ward routine (visiting, meals, rounds)."
+     },
+     "rationale": {
+      "ar": "المعرفة تقلل القلق.",
+      "en": "Knowledge reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعريف المريض بحقوقه وواجباته (الخصوصية، الموافقة المستنيرة، تقديم الشكوى).",
+      "en": "Explain patient rights and responsibilities (privacy, informed consent, complaints)."
+     },
+     "rationale": {
+      "ar": "مشاركة واحترام.",
+      "en": "Participation and respect."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الاستماع لمخاوف المريض والإجابة على أسئلته.",
+      "en": "Listen to concerns and answer questions."
+     },
+     "rationale": {
+      "ar": "يبني الثقة.",
+      "en": "Builds trust."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "حفظ متعلقات المريض حسب سياسة المستشفى.",
+      "en": "Secure belongings per hospital policy."
+     },
+     "rationale": {
+      "ar": "يطمئن المريض.",
+      "en": "Reassures the patient."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "إعطاء تثقيف صحي حسب احتياجات المريض.",
+      "en": "Give health teaching according to needs."
+     },
+     "rationale": {
+      "ar": "يجهز المريض لخطة العلاج.",
+      "en": "Prepares him for the care plan."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إشراك الأسرة وإعلامها بمواعيد الزيارة ووسيلة التواصل.",
+      "en": "Involve family; inform them of visiting times and contact."
+     },
+     "rationale": {
+      "ar": "دعم.",
+      "en": "Support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يعرف ممرضته وطبيبه وروتين القسم ويبدو أهدأ — تحقق.",
+      "en": "Knows his nurse, doctor and routine; calmer — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التهيئة والدعم",
+      "en": "Orientation and support"
+     },
+     "actions": {
+      "ar": [
+       "تعريف المريض بنفسك وبالفريق وروتين القسم (الزيارة، الوجبات، المرور).",
+       "تعريف المريض بحقوقه وواجباته (الخصوصية، الموافقة المستنيرة، تقديم الشكوى).",
+       "الاستماع لمخاوف المريض والإجابة على أسئلته.",
+       "حفظ متعلقات المريض حسب سياسة المستشفى.",
+       "إعطاء تثقيف صحي حسب احتياجات المريض.",
+       "إشراك الأسرة وإعلامها بمواعيد الزيارة ووسيلة التواصل."
+      ],
+      "en": [
+       "Introduce yourself, the team and ward routine (visiting, meals, rounds).",
+       "Explain patient rights and responsibilities (privacy, informed consent, complaints).",
+       "Listen to concerns and answer questions.",
+       "Secure belongings per hospital policy.",
+       "Give health teaching according to needs.",
+       "Involve family; inform them of visiting times and contact."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وتعاون.",
+      "en": "Less anxiety, cooperation."
+     },
+     "timeframe": {
+      "ar": "الوردية الأولى",
+      "en": "First shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "WHO — Patient Safety Solutions: Patient Identification (2007)"
+  },
+  {
+   "title": "نماذج خطط الرعاية التمريضية بالمستشفى — NurseHub Egypt (ملفات المؤسس)"
+  }
+ ],
+ "group": "other"
+}

@@ -1,0 +1,590 @@
+{
+ "id": "preparation-for-delivery",
+ "icon": "🤰",
+ "system": "obstetrics",
+ "folder": "general",
+ "title": {
+  "ar": "تحضير الأم للولادة (الرعاية قبل الولادة)",
+  "en": "Preparing the Mother for Delivery"
+ },
+ "summary": {
+  "ar": "خطة رعاية الأم قبل الولادة: العلامات الحيوية ونبض الجنين، كشف التحضير والإقرارات، الكانيولا والمضاد الحيوي، التسليم للعمليات، ألم المخاض، والقلق.",
+  "en": "Pre-delivery care plan: maternal vitals and fetal heart, checklist and consents, cannula and antibiotic, theatre handover, labour pain and anxiety."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-maternal-fetal-injury-delivery",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر إصابة الأم والجنين (التحضير للولادة)",
+    "en": "Risk for Maternal–Fetal Injury (Preparation for Delivery)"
+   },
+   "definition": {
+    "ar": "قابلية لحدوث ضرر للأم أو الجنين بسبب نقص التحضير أو المتابعة قبل الولادة.",
+    "en": "Susceptibility to maternal or fetal harm from incomplete preparation or monitoring before delivery."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ولادة قيصرية أو ولادة قريبة",
+     "ضيق الجنين",
+     "نقص الإقرارات أو التحضير"
+    ],
+    "en": [
+     "Cesarean or imminent delivery",
+     "Fetal distress",
+     "Missing consents or preparation"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"البيبي بيتحرك كويس؟\""
+     ],
+     "en": [
+      "\"Is the baby moving well?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "حامل 39 أسبوعًا، قيصرية مجدولة.",
+      "نبض الجنين 140."
+     ],
+     "en": [
+      "39 weeks, scheduled cesarean.",
+      "FHR 140."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الإرسال: علامات الأم ونبض الجنين طبيعية والتحضير مكتمل."
+     ],
+     "en": [
+      "Before transfer: normal maternal vitals and FHR; preparation complete."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ولادة آمنة للأم والطفل."
+     ],
+     "en": [
+      "Safe birth for mother and baby."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس العلامات الحيوية للأم والألم والتسجيل بالملف.",
+      "en": "Measure maternal vitals and pain; document."
+     },
+     "rationale": {
+      "ar": "قيم أساسية.",
+      "en": "Baseline values."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "إرسال الأم لغرفة الفحص لقياس نبض الجنين (أو تخطيط CTG).",
+      "en": "Send the mother for fetal heart assessment (or CTG)."
+     },
+     "rationale": {
+      "ar": "التأكد من سلامة الجنين.",
+      "en": "Confirms fetal well-being."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التأكد من تحضير الأم طبقًا لبنود كشف التحضير وأوامر الطبيب (الصيام، الفحوصات، الفصيلة).",
+      "en": "Ensure preparation per checklist and orders (fasting, labs, blood group)."
+     },
+     "rationale": {
+      "ar": "سلامة العملية.",
+      "en": "Surgical safety."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تركيب كانيولا وإعطاء المضاد الحيوي بعد اختبار الحساسية وحسب الأمر.",
+      "en": "Insert a cannula; give antibiotic after sensitivity testing as ordered."
+     },
+     "rationale": {
+      "ar": "وقاية من العدوى وجاهزية للطوارئ.",
+      "en": "Infection prevention and emergency access."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التأكد من توقيع الأم والطبيب على إقرار الولادة (العملية، التخدير، نقل الدم حسب الأمر).",
+      "en": "Ensure mother and doctor have signed delivery consents (surgery, anesthesia, transfusion as ordered)."
+     },
+     "rationale": {
+      "ar": "متطلب قانوني.",
+      "en": "Legal requirement."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "مرافقة الأم للعمليات بعد التأكد من جاهزيتها ولبسها الجاون، وتسليم الملف لممرضة العمليات.",
+      "en": "Escort the mother to theatre once ready and gowned; hand over the file to the theatre nurse."
+     },
+     "rationale": {
+      "ar": "تسليم آمن.",
+      "en": "Safe handover."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الأم جاهزة ونبض الجنين 142 وأرسلت للعمليات — تحقق.",
+      "en": "Mother ready, FHR 142, sent to theatre — met."
+     }
+    },
+    {
+     "status": "partial",
+     "text": {
+      "ar": "الأم غير جاهزة بسبب نقص التحاليل — أُبلغ الطبيب.",
+      "en": "Not ready (missing labs) — physician informed."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة الأم والجنين",
+      "en": "Maternal and fetal monitoring"
+     },
+     "actions": {
+      "ar": [
+       "قياس العلامات الحيوية للأم والألم والتسجيل بالملف.",
+       "إرسال الأم لغرفة الفحص لقياس نبض الجنين (أو تخطيط CTG)."
+      ],
+      "en": [
+       "Measure maternal vitals and pain; document.",
+       "Send the mother for fetal heart assessment (or CTG)."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات ونبض جنين طبيعيان.",
+      "en": "Normal vitals and FHR."
+     },
+     "timeframe": {
+      "ar": "قبل الإرسال",
+      "en": "Before transfer"
+     }
+    },
+    {
+     "need": {
+      "ar": "التحضير والتسليم",
+      "en": "Preparation and handover"
+     },
+     "actions": {
+      "ar": [
+       "التأكد من تحضير الأم طبقًا لبنود كشف التحضير وأوامر الطبيب (الصيام، الفحوصات، الفصيلة).",
+       "تركيب كانيولا وإعطاء المضاد الحيوي بعد اختبار الحساسية وحسب الأمر.",
+       "التأكد من توقيع الأم والطبيب على إقرار الولادة (العملية، التخدير، نقل الدم حسب الأمر).",
+       "مرافقة الأم للعمليات بعد التأكد من جاهزيتها ولبسها الجاون، وتسليم الملف لممرضة العمليات."
+      ],
+      "en": [
+       "Ensure preparation per checklist and orders (fasting, labs, blood group).",
+       "Insert a cannula; give antibiotic after sensitivity testing as ordered.",
+       "Ensure mother and doctor have signed delivery consents (surgery, anesthesia, transfusion as ordered).",
+       "Escort the mother to theatre once ready and gowned; hand over the file to the theatre nurse."
+      ]
+     },
+     "outcome": {
+      "ar": "تحضير مكتمل.",
+      "en": "Preparation complete."
+     },
+     "timeframe": {
+      "ar": "قبل الولادة",
+      "en": "Before delivery"
+     }
+    }
+   ]
+  },
+  {
+   "id": "labour-pain",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم المخاض",
+    "en": "Labour Pain"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية تختلف من سيدة لأخرى مرتبطة بالطلق والولادة.",
+    "en": "Sensory and emotional experience, varying between women, associated with labour and childbirth."
+   },
+   "relatedTo": {
+    "ar": [
+     "انقباضات الرحم وتوسع عنق الرحم"
+    ],
+    "en": [
+     "Uterine contractions and cervical dilatation"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم مع الانقباضات 8/10",
+     "تململ"
+    ],
+    "en": [
+     "Pain with contractions 8/10",
+     "Restlessness"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الطلق جامد ومش قادرة.\""
+     ],
+     "en": [
+      "\"The contractions are strong and I can't cope.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "انقباضات كل 3 دقائق، تتنفس بسرعة."
+     ],
+     "en": [
+      "Contractions every 3 minutes; rapid breathing."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: تستخدم الأم وسائل التعامل مع الألم وتشعر بتحسن."
+     ],
+     "en": [
+      "Within 1 h: uses coping methods and reports relief."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ولادة بخبرة إيجابية."
+     ],
+     "en": [
+      "A positive birth experience."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الألم وطبيعة الانقباضات (المدة، التكرار، الشدة).",
+      "en": "Assess pain and contraction pattern (duration, frequency, intensity)."
+     },
+     "rationale": {
+      "ar": "متابعة المخاض.",
+      "en": "Monitors labour."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تعليم التنفس البطيء أثناء الانقباض والاسترخاء بينها.",
+      "en": "Teach slow breathing during contractions and relaxation between."
+     },
+     "rationale": {
+      "ar": "يقلل الإحساس بالألم.",
+      "en": "Reduces pain perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير الوضع والمشي والتدليك أسفل الظهر.",
+      "en": "Position changes, walking and lower-back massage."
+     },
+     "rationale": {
+      "ar": "تخفيف غير دوائي.",
+      "en": "Non-drug relief."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وجود مرافق داعم وتوفير الخصوصية.",
+      "en": "Supportive companion and privacy."
+     },
+     "rationale": {
+      "ar": "دعم نفسي.",
+      "en": "Emotional support."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "المسكنات أو التخدير النصفي حسب رغبة الأم وأوامر الطبيب.",
+      "en": "Analgesia or epidural as the mother wishes and as ordered."
+     },
+     "rationale": {
+      "ar": "تسكين فعال.",
+      "en": "Effective analgesia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إفراغ المثانة بانتظام.",
+      "en": "Regular bladder emptying."
+     },
+     "rationale": {
+      "ar": "المثانة الممتلئة تزيد الألم وتعيق النزول.",
+      "en": "A full bladder increases pain and impedes descent."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الأم تستخدم التنفس وتقول إن الألم محتمل — تحقق.",
+      "en": "Uses breathing and finds pain tolerable — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التعامل مع ألم المخاض",
+      "en": "Labour pain coping"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الألم وطبيعة الانقباضات (المدة، التكرار، الشدة).",
+       "تعليم التنفس البطيء أثناء الانقباض والاسترخاء بينها.",
+       "تغيير الوضع والمشي والتدليك أسفل الظهر.",
+       "وجود مرافق داعم وتوفير الخصوصية.",
+       "المسكنات أو التخدير النصفي حسب رغبة الأم وأوامر الطبيب.",
+       "إفراغ المثانة بانتظام."
+      ],
+      "en": [
+       "Assess pain and contraction pattern (duration, frequency, intensity).",
+       "Teach slow breathing during contractions and relaxation between.",
+       "Position changes, walking and lower-back massage.",
+       "Supportive companion and privacy.",
+       "Analgesia or epidural as the mother wishes and as ordered.",
+       "Regular bladder emptying."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم محتمل.",
+      "en": "Tolerable pain."
+     },
+     "timeframe": {
+      "ar": "أثناء المخاض",
+      "en": "During labour"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-delivery",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "الخوف من الولادة والعملية",
+     "القلق على الجنين"
+    ],
+    "en": [
+     "Fear of birth and surgery",
+     "Concern for the baby"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"خايفة من العملية وعلى البيبي.\""
+     ],
+     "en": [
+      "\"I'm scared of the operation and for the baby.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "تبكي، النبض 104."
+     ],
+     "en": [
+      "Tearful, HR 104."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواجد مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق والاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+       "التواجد مع المريض والتحدث بهدوء وثقة.",
+       "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "تعليم التنفس البطيء العميق والاسترخاء.",
+       "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "WHO recommendations: intrapartum care for a positive childbirth experience (2018)"
+  },
+  {
+   "title": "نماذج خطط الرعاية التمريضية بالمستشفى — NurseHub Egypt (ملفات المؤسس)"
+  }
+ ],
+ "group": "maternal"
+}
