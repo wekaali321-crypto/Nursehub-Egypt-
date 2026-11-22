@@ -1,0 +1,1095 @@
+{
+ "id": "bph-turp",
+ "icon": "🚹",
+ "system": "renal",
+ "folder": "disease",
+ "title": {
+  "ar": "تضخم البروستاتا واستئصالها بالمنظار",
+  "en": "BPH & Transurethral Resection (TURP)"
+ },
+ "summary": {
+  "ar": "خطة رعاية تضخم البروستاتا: احتباس البول والقسطرة، النزيف والغسيل المستمر، متلازمة ما بعد الاستئصال، تقلصات المثانة، السلس، والتثقيف.",
+  "en": "BPH/TURP care plan: urinary retention and catheter, bleeding and irrigation, TURP syndrome, bladder spasms, incontinence and teaching."
+ },
+ "diagnoses": [
+  {
+   "id": "urinary-retention-bph",
+   "kind": "actual",
+   "title": {
+    "ar": "احتباس البول",
+    "en": "Urinary Retention"
+   },
+   "definition": {
+    "ar": "عدم القدرة على إفراغ المثانة تمامًا.",
+    "en": "Incomplete emptying of the bladder."
+   },
+   "relatedTo": {
+    "ar": [
+     "تضخم البروستاتا وانسداد مخرج المثانة"
+    ],
+    "en": [
+     "Prostatic enlargement and outlet obstruction"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "صعوبة بدء التبول وضعف التيار",
+     "امتلاء المثانة",
+     "بول متبقٍّ > 300 مل"
+    ],
+    "en": [
+     "Hesitancy and weak stream",
+     "Bladder distension",
+     "Residual > 300 mL"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش قادر أعمل حمام من الصبح وبطني من تحت وجعاني.\""
+     ],
+     "en": [
+      "\"I haven't passed urine since morning and my lower belly hurts.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مثانة منتفخة، قياس بالأشعة 750 مل."
+     ],
+     "en": [
+      "Distended bladder; scan 750 mL."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: تفريغ المثانة وزوال الألم."
+     ],
+     "en": [
+      "Within 1 h: bladder emptied, pain relieved."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تبول تلقائي بعد العلاج."
+     ],
+     "en": [
+      "Spontaneous voiding after treatment."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "جس المثانة وقياس حجم البول بالأشعة.",
+      "en": "Palpate and bladder-scan."
+     },
+     "rationale": {
+      "ar": "تأكيد الاحتباس.",
+      "en": "Confirms retention."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تركيب قسطرة بولية بتقنية معقمة حسب الأمر.",
+      "en": "Aseptic urinary catheterization as ordered."
+     },
+     "rationale": {
+      "ar": "تفريغ المثانة.",
+      "en": "Drains bladder."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة كمية البول ولونه بعد التفريغ وملاحظة البول الغزير بعد الانسداد.",
+      "en": "Monitor volume and colour after drainage; watch for post-obstructive diuresis."
+     },
+     "rationale": {
+      "ar": "خطر الجفاف.",
+      "en": "Dehydration risk."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "أدوية البروستاتا (تامسولوسين، فيناسترايد) حسب الأمر.",
+      "en": "Prostate drugs (tamsulosin, finasteride) as ordered."
+     },
+     "rationale": {
+      "ar": "تحسين التدفق.",
+      "en": "Improve flow."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تجنب أدوية البرد المحتوية على مضادات الاحتقان ومضادات الهيستامين.",
+      "en": "Avoid cold remedies with decongestants and antihistamines."
+     },
+     "rationale": {
+      "ar": "تسبب الاحتباس.",
+      "en": "Cause retention."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "محاولة إزالة القسطرة وتجربة التبول حسب الخطة.",
+      "en": "Trial without catheter as planned."
+     },
+     "rationale": {
+      "ar": "تقييم.",
+      "en": "Assessment."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تفريغ 750 مل وزال الألم — تحقق.",
+      "en": "Drained 750 mL; pain relieved — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تفريغ المثانة",
+      "en": "Bladder drainage"
+     },
+     "actions": {
+      "ar": [
+       "جس المثانة وقياس حجم البول بالأشعة.",
+       "تركيب قسطرة بولية بتقنية معقمة حسب الأمر.",
+       "متابعة كمية البول ولونه بعد التفريغ وملاحظة البول الغزير بعد الانسداد."
+      ],
+      "en": [
+       "Palpate and bladder-scan.",
+       "Aseptic urinary catheterization as ordered.",
+       "Monitor volume and colour after drainage; watch for post-obstructive diuresis."
+      ]
+     },
+     "outcome": {
+      "ar": "مثانة فارغة.",
+      "en": "Empty bladder."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "العلاج والوقاية",
+      "en": "Treatment and prevention"
+     },
+     "actions": {
+      "ar": [
+       "أدوية البروستاتا (تامسولوسين، فيناسترايد) حسب الأمر.",
+       "تجنب أدوية البرد المحتوية على مضادات الاحتقان ومضادات الهيستامين.",
+       "محاولة إزالة القسطرة وتجربة التبول حسب الخطة."
+      ],
+      "en": [
+       "Prostate drugs (tamsulosin, finasteride) as ordered.",
+       "Avoid cold remedies with decongestants and antihistamines.",
+       "Trial without catheter as planned."
+      ]
+     },
+     "outcome": {
+      "ar": "تبول تلقائي.",
+      "en": "Spontaneous voiding."
+     },
+     "timeframe": {
+      "ar": "حسب الخطة",
+      "en": "Per plan"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-bleeding-turp",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر النزيف بعد استئصال البروستاتا بالمنظار (TURP)",
+    "en": "Risk for Bleeding (After TURP)"
+   },
+   "definition": {
+    "ar": "قابلية لنزيف من مكان البروستاتا.",
+    "en": "Susceptibility to bleeding from the prostatic bed."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "الجراحة",
+     "مضادات التجلط"
+    ],
+    "en": [
+     "Surgery",
+     "Anticoagulants"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"البول لونه أحمر.\""
+     ],
+     "en": [
+      "\"My urine is red.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قسطرة ثلاثية مع غسيل مستمر، البول وردي."
+     ],
+     "en": [
+      "Three-way catheter with continuous irrigation; pink urine."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24–48 ساعة: بول فاتح وردي أو أصفر بدون جلطات."
+     ],
+     "en": [
+      "Within 24–48 h: light pink/yellow urine without clots."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا نزيف يحتاج تدخلًا."
+     ],
+     "en": [
+      "No bleeding needing intervention."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة لون البول (من الأحمر الداكن إلى الوردي) والجلطات كل ساعة.",
+      "en": "Hourly urine colour (dark red to pink) and clots."
+     },
+     "rationale": {
+      "ar": "كشف النزيف.",
+      "en": "Detects bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ضبط سرعة الغسيل المستمر للحفاظ على لون وردي فاتح.",
+      "en": "Titrate continuous bladder irrigation to keep urine light pink."
+     },
+     "rationale": {
+      "ar": "يمنع الجلطات.",
+      "en": "Prevents clots."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "حساب البول الحقيقي = الخارج − سائل الغسيل.",
+      "en": "True urine = output − irrigant."
+     },
+     "rationale": {
+      "ar": "دقة التوازن.",
+      "en": "Accurate balance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة انسداد القسطرة (ألم، تقلصات، توقف الخروج) وغسلها حسب الأمر.",
+      "en": "Watch for blockage (pain, spasm, no output); flush as ordered."
+     },
+     "rationale": {
+      "ar": "منع الاحتباس.",
+      "en": "Prevents retention."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "العلامات الحيوية والهيموجلوبين.",
+      "en": "Vitals and Hb."
+     },
+     "rationale": {
+      "ar": "تقييم الفقد.",
+      "en": "Assess loss."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تجنب الحزق ورفع الأثقال 4–6 أسابيع.",
+      "en": "Avoid straining and lifting for 4–6 weeks."
+     },
+     "rationale": {
+      "ar": "منع النزيف المتأخر.",
+      "en": "Prevents secondary bleeding."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "بول وردي فاتح بدون جلطات يوم 1 — تحقق.",
+      "en": "Light pink urine without clots on day 1 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة النزيف والغسيل",
+      "en": "Bleeding and irrigation"
+     },
+     "actions": {
+      "ar": [
+       "متابعة لون البول (من الأحمر الداكن إلى الوردي) والجلطات كل ساعة.",
+       "ضبط سرعة الغسيل المستمر للحفاظ على لون وردي فاتح.",
+       "حساب البول الحقيقي = الخارج − سائل الغسيل.",
+       "ملاحظة انسداد القسطرة (ألم، تقلصات، توقف الخروج) وغسلها حسب الأمر.",
+       "العلامات الحيوية والهيموجلوبين.",
+       "تجنب الحزق ورفع الأثقال 4–6 أسابيع."
+      ],
+      "en": [
+       "Hourly urine colour (dark red to pink) and clots.",
+       "Titrate continuous bladder irrigation to keep urine light pink.",
+       "True urine = output − irrigant.",
+       "Watch for blockage (pain, spasm, no output); flush as ordered.",
+       "Vitals and Hb.",
+       "Avoid straining and lifting for 4–6 weeks."
+      ]
+     },
+     "outcome": {
+      "ar": "بول فاتح.",
+      "en": "Light urine."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-turp-syndrome",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر متلازمة ما بعد استئصال البروستاتا (نقص الصوديوم)",
+    "en": "Risk for TURP Syndrome (Hyponatremia)"
+   },
+   "definition": {
+    "ar": "قابلية لامتصاص سائل الغسيل ونقص الصوديوم.",
+    "en": "Susceptibility to irrigant absorption and hyponatremia."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "امتصاص سائل الغسيل أثناء الجراحة",
+     "جراحة طويلة"
+    ],
+    "en": [
+     "Intra-operative irrigant absorption",
+     "Long procedure"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس بلخبطة وغثيان.\""
+     ],
+     "en": [
+      "\"I feel confused and sick.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "صوديوم 128."
+     ],
+     "en": [
+      "Na 128."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "صوديوم ≥ 135 بدون أعراض."
+     ],
+     "en": [
+      "Na ≥ 135 without symptoms."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا مضاعفات عصبية."
+     ],
+     "en": [
+      "No neurological complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة التشوش والغثيان والصداع وبطء النبض وارتفاع الضغط.",
+      "en": "Watch for confusion, nausea, headache, bradycardia and hypertension."
+     },
+     "rationale": {
+      "ar": "علامات المتلازمة.",
+      "en": "Syndrome signs."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الصوديوم بعد العملية.",
+      "en": "Post-op sodium."
+     },
+     "rationale": {
+      "ar": "كشف.",
+      "en": "Detection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب وتقييد السوائل أو العلاج حسب الأمر.",
+      "en": "Report; restrict fluids or treat as ordered."
+     },
+     "rationale": {
+      "ar": "علاج.",
+      "en": "Treatment."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الوعي كل 4 ساعات.",
+      "en": "Consciousness every 4 h."
+     },
+     "rationale": {
+      "ar": "كشف.",
+      "en": "Detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "احتياطات السقوط عند التشوش.",
+      "en": "Fall precautions if confused."
+     },
+     "rationale": {
+      "ar": "أمان.",
+      "en": "Safety."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "التوازن الدقيق للسوائل.",
+      "en": "Accurate fluid balance."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الصوديوم 136 — تحقق.",
+      "en": "Na 136 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "كشف المتلازمة",
+      "en": "Detect TURP syndrome"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة التشوش والغثيان والصداع وبطء النبض وارتفاع الضغط.",
+       "متابعة الصوديوم بعد العملية.",
+       "إبلاغ الطبيب وتقييد السوائل أو العلاج حسب الأمر.",
+       "متابعة الوعي كل 4 ساعات.",
+       "احتياطات السقوط عند التشوش.",
+       "التوازن الدقيق للسوائل."
+      ],
+      "en": [
+       "Watch for confusion, nausea, headache, bradycardia and hypertension.",
+       "Post-op sodium.",
+       "Report; restrict fluids or treat as ordered.",
+       "Consciousness every 4 h.",
+       "Fall precautions if confused.",
+       "Accurate fluid balance."
+      ]
+     },
+     "outcome": {
+      "ar": "صوديوم طبيعي.",
+      "en": "Normal sodium."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-bladder-spasm",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (تقلصات المثانة)",
+    "en": "Acute Pain (Bladder Spasms)"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف فعلي أو محتمل في الأنسجة، مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory and emotional experience associated with actual or potential tissue damage, lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "القسطرة والبالونة وتهيج المثانة"
+    ],
+    "en": [
+     "Catheter balloon and bladder irritation"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم متقطع فوق العانة ورغبة في التبول"
+    ],
+    "en": [
+     "Intermittent suprapubic pain and urge"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بحس إني عايز أعمل حمام والقسطرة موجودة.\""
+     ],
+     "en": [
+      "\"I feel I need to pee although I have a catheter.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "تقلصات متكررة."
+     ],
+     "en": [
+      "Recurrent spasms."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ألم محتمل يسمح بالراحة والحركة."
+     ],
+     "en": [
+      "Tolerable pain allowing rest and movement."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+      "en": "Assess pain (site, 0–10, character, radiation) before and after analgesia."
+     },
+     "rationale": {
+      "ar": "يوجه العلاج ويقيس فعاليته.",
+      "en": "Guides treatment and measures effect."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المسكنات حسب الأمر في مواعيدها.",
+      "en": "Give analgesia as ordered, on schedule."
+     },
+     "rationale": {
+      "ar": "التسكين المنتظم يمنع اشتداد الألم.",
+      "en": "Regular analgesia prevents peaks."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع مريح وبيئة هادئة.",
+      "en": "Comfortable position; calm environment."
+     },
+     "rationale": {
+      "ar": "يقلل الإحساس بالألم.",
+      "en": "Reduces pain perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+      "en": "Non-drug measures: deep breathing, relaxation, distraction."
+     },
+     "rationale": {
+      "ar": "تكمل المسكن.",
+      "en": "Complement analgesia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "التأكد من عدم انسداد القسطرة أولًا.",
+      "en": "First exclude catheter blockage."
+     },
+     "rationale": {
+      "ar": "سبب شائع.",
+      "en": "Common cause."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مضادات تقلص المثانة حسب الأمر.",
+      "en": "Antispasmodics as ordered."
+     },
+     "rationale": {
+      "ar": "تخفيف.",
+      "en": "Relief."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 بعد ساعة — تحقق.",
+      "en": "Pain 3/10 at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تسكين الألم",
+      "en": "Pain relief"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+       "إعطاء المسكنات حسب الأمر في مواعيدها.",
+       "وضع مريح وبيئة هادئة.",
+       "وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+       "التأكد من عدم انسداد القسطرة أولًا.",
+       "مضادات تقلص المثانة حسب الأمر."
+      ],
+      "en": [
+       "Assess pain (site, 0–10, character, radiation) before and after analgesia.",
+       "Give analgesia as ordered, on schedule.",
+       "Comfortable position; calm environment.",
+       "Non-drug measures: deep breathing, relaxation, distraction.",
+       "First exclude catheter blockage.",
+       "Antispasmodics as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-incontinence-turp",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر سلس البول بعد إزالة القسطرة",
+    "en": "Risk for Urinary Incontinence (After Catheter Removal)"
+   },
+   "definition": {
+    "ar": "قابلية لتسرب البول المؤقت.",
+    "en": "Susceptibility to temporary leakage."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ضعف عضلات الحوض بعد الجراحة"
+    ],
+    "en": [
+     "Pelvic-floor weakness after surgery"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"خايف أنقط بعد ما يشيلوا القسطرة.\""
+     ],
+     "en": [
+      "\"I'm afraid I'll leak after the catheter comes out.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بعد إزالة القسطرة."
+     ],
+     "en": [
+      "Post catheter removal."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "تبول تلقائي خلال 6 ساعات من الإزالة."
+     ],
+     "en": [
+      "Spontaneous voiding within 6 h of removal."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تحكم كامل خلال أسابيع."
+     ],
+     "en": [
+      "Full continence within weeks."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة أول تبول وكميته والبول المتبقي.",
+      "en": "Monitor first void, volume and residual."
+     },
+     "rationale": {
+      "ar": "كشف الاحتباس.",
+      "en": "Detects retention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تمارين عضلات الحوض (كيجل) 3 مرات يوميًا.",
+      "en": "Pelvic-floor (Kegel) exercises three times daily."
+     },
+     "rationale": {
+      "ar": "تقوية.",
+      "en": "Strengthening."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "التبول المنتظم كل 2–3 ساعات.",
+      "en": "Timed voiding every 2–3 h."
+     },
+     "rationale": {
+      "ar": "تدريب المثانة.",
+      "en": "Bladder training."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تقليل الكافيين والسوائل مساءً.",
+      "en": "Limit caffeine and evening fluids."
+     },
+     "rationale": {
+      "ar": "تقليل الإلحاح.",
+      "en": "Less urgency."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالجلد وفوط عند الحاجة.",
+      "en": "Skin care and pads as needed."
+     },
+     "rationale": {
+      "ar": "راحة.",
+      "en": "Comfort."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "طمأنة أن التنقيط غالبًا مؤقت.",
+      "en": "Reassure leakage is usually temporary."
+     },
+     "rationale": {
+      "ar": "تقليل القلق.",
+      "en": "Reduces anxiety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تبول تلقائي بعد 4 ساعات — تحقق.",
+      "en": "Voided at 4 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الاستمرارية البولية",
+      "en": "Continence"
+     },
+     "actions": {
+      "ar": [
+       "متابعة أول تبول وكميته والبول المتبقي.",
+       "تمارين عضلات الحوض (كيجل) 3 مرات يوميًا.",
+       "التبول المنتظم كل 2–3 ساعات.",
+       "تقليل الكافيين والسوائل مساءً.",
+       "العناية بالجلد وفوط عند الحاجة.",
+       "طمأنة أن التنقيط غالبًا مؤقت."
+      ],
+      "en": [
+       "Monitor first void, volume and residual.",
+       "Pelvic-floor (Kegel) exercises three times daily.",
+       "Timed voiding every 2–3 h.",
+       "Limit caffeine and evening fluids.",
+       "Skin care and pads as needed.",
+       "Reassure leakage is usually temporary."
+      ]
+     },
+     "outcome": {
+      "ar": "تحكم.",
+      "en": "Continence."
+     },
+     "timeframe": {
+      "ar": "بعد الإزالة",
+      "en": "After removal"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-bph",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (تضخم البروستاتا والعملية)",
+    "en": "Deficient Knowledge (BPH and surgery)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "جراحة جديدة"
+    ],
+    "en": [
+     "New surgery"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"إمتى البول يرجع طبيعي؟\""
+     ],
+     "en": [
+      "\"When will urination return to normal?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "خروج بعد 2–3 أيام."
+     ],
+     "en": [
+      "Discharge in 2–3 days."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "بعض الدم والحرقان طبيعي لأسابيع، وشرب 2–3 لتر ماء يوميًا.",
+      "en": "Some blood and burning is normal for weeks; drink 2–3 L daily."
+     },
+     "rationale": {
+      "ar": "توقعات.",
+      "en": "Expectations."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تجنب الحزق (ملين عند الحاجة) ورفع الأثقال والعلاقة الزوجية 4–6 أسابيع.",
+      "en": "Avoid straining (laxative if needed), lifting and intercourse for 4–6 weeks."
+     },
+     "rationale": {
+      "ar": "منع النزيف.",
+      "en": "Prevents bleeding."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "علامات الخطر: جلطات، عدم القدرة على التبول، حرارة.",
+      "en": "Danger signs: clots, inability to void, fever."
+     },
+     "rationale": {
+      "ar": "مضاعفات.",
+      "en": "Complications."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "القذف الارتجاعي شائع بعد العملية وغير ضار.",
+      "en": "Retrograde ejaculation is common and harmless."
+     },
+     "rationale": {
+      "ar": "طمأنة.",
+      "en": "Reassurance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تثقيف صحي",
+      "en": "Health teaching"
+     },
+     "actions": {
+      "ar": [
+       "تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "بعض الدم والحرقان طبيعي لأسابيع، وشرب 2–3 لتر ماء يوميًا.",
+       "تجنب الحزق (ملين عند الحاجة) ورفع الأثقال والعلاقة الزوجية 4–6 أسابيع.",
+       "علامات الخطر: جلطات، عدم القدرة على التبول، حرارة.",
+       "القذف الارتجاعي شائع بعد العملية وغير ضار.",
+       "استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Some blood and burning is normal for weeks; drink 2–3 L daily.",
+       "Avoid straining (laxative if needed), lifting and intercourse for 4–6 weeks.",
+       "Danger signs: clots, inability to void, fever.",
+       "Retrograde ejaculation is common and harmless.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "EAU Guidelines on Management of Non-neurogenic Male LUTS incl. BPO (2024)"
+  },
+  {
+   "title": "AUA Guideline: Management of Lower Urinary Tract Symptoms Attributed to BPH (2023)"
+  }
+ ]
+}
