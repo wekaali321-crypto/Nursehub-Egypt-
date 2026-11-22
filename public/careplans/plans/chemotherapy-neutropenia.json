@@ -1,0 +1,1199 @@
+{
+ "id": "chemotherapy-neutropenia",
+ "icon": "🎗️",
+ "system": "hematology",
+ "folder": "disease",
+ "title": {
+  "ar": "العلاج الكيماوي ونقص المناعة",
+  "en": "Chemotherapy & Neutropenia"
+ },
+ "summary": {
+  "ar": "خطة رعاية مريض الكيماوي: العدوى مع نقص الخلايا المتعادلة والحمى، التهاب الفم، الغثيان والقيء، النزيف مع نقص الصفائح، التعب، والقلق.",
+  "en": "Chemotherapy care plan: neutropenic infection and fever, mucositis, nausea and vomiting, thrombocytopenic bleeding, fatigue and anxiety."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-infection-neutropenia",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى (نقص كرات الدم البيضاء)",
+    "en": "Risk for Infection (Neutropenia)"
+   },
+   "definition": {
+    "ar": "قابلية لعدوى خطيرة بسبب نقص الخلايا المتعادلة.",
+    "en": "Susceptibility to serious infection from low neutrophils."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "العلاج الكيماوي",
+     "خلايا متعادلة < 500",
+     "قسطرة مركزية والتهاب الأغشية"
+    ],
+    "en": [
+     "Chemotherapy",
+     "ANC < 500",
+     "Central line and mucositis"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أخدت الكيماوي من 10 أيام.\""
+     ],
+     "en": [
+      "\"I had chemo 10 days ago.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ANC 300، الحرارة 37.6.",
+      "مريض لوكيميا على كيماوي."
+     ],
+     "en": [
+      "ANC 300, T 37.6.",
+      "Leukemia patient on chemotherapy."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "طوال فترة النقص: لا عدوى، وأي حمى تُعالج خلال ساعة."
+     ],
+     "en": [
+      "Throughout neutropenia: no infection; any fever treated within 1 h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تعافي الكرات بدون عدوى خطيرة."
+     ],
+     "en": [
+      "Count recovery without serious infection."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الحرارة كل 4 ساعات؛ حرارة ≥ 38 مع نقص المتعادلة طوارئ (Neutropenic sepsis).",
+      "en": "T every 4 h; ≥ 38 °C with neutropenia is an emergency (neutropenic sepsis)."
+     },
+     "rationale": {
+      "ar": "العدوى تتطور بسرعة بدون علامات واضحة.",
+      "en": "Infection progresses rapidly with few signs."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عند الحمى: مزارع ومضاد حيوي وريدي واسع المجال خلال ساعة.",
+      "en": "For fever: cultures and IV broad-spectrum antibiotics within 1 hour."
+     },
+     "rationale": {
+      "ar": "ينقذ الحياة.",
+      "en": "Life-saving."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غرفة فردية وغسل الأيدي الصارم لكل من يدخل.",
+      "en": "Single room; strict hand hygiene for everyone."
+     },
+     "rationale": {
+      "ar": "منع العدوى.",
+      "en": "Prevents infection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "منع الزوار المصابين بالبرد والزهور والنباتات.",
+      "en": "No visitors with colds; no flowers or plants."
+     },
+     "rationale": {
+      "ar": "مصادر ميكروبات.",
+      "en": "Microbial sources."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تجنب قياس الحرارة من الشرج والحقن العضلي والقسطرة غير الضرورية.",
+      "en": "No rectal temperatures, IM injections or unnecessary catheters."
+     },
+     "rationale": {
+      "ar": "منع الجروح والعدوى.",
+      "en": "Prevents breaches."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم بغسول غير كحولي وفرشاة ناعمة.",
+      "en": "Oral care with alcohol-free rinse and soft brush."
+     },
+     "rationale": {
+      "ar": "منع التهاب الفم والعدوى.",
+      "en": "Prevents mucositis and infection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "أكل مطهو جيدًا وتجنب الأكل النيء والخضار غير المغسولة.",
+      "en": "Well-cooked food; avoid raw or unwashed produce."
+     },
+     "rationale": {
+      "ar": "منع العدوى الغذائية.",
+      "en": "Prevents food-borne infection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عامل النمو (G-CSF) حسب الأمر.",
+      "en": "Growth factor (G-CSF) as ordered."
+     },
+     "rationale": {
+      "ar": "يسرع تعافي الكرات.",
+      "en": "Speeds count recovery."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا حمى ولا عدوى حتى تعافي الكرات — تحقق.",
+      "en": "No fever or infection until recovery — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "المتابعة والتصرف عند الحمى",
+      "en": "Monitoring and fever response"
+     },
+     "actions": {
+      "ar": [
+       "قياس الحرارة كل 4 ساعات؛ حرارة ≥ 38 مع نقص المتعادلة طوارئ (Neutropenic sepsis).",
+       "عند الحمى: مزارع ومضاد حيوي وريدي واسع المجال خلال ساعة."
+      ],
+      "en": [
+       "T every 4 h; ≥ 38 °C with neutropenia is an emergency (neutropenic sepsis).",
+       "For fever: cultures and IV broad-spectrum antibiotics within 1 hour."
+      ]
+     },
+     "outcome": {
+      "ar": "مضاد حيوي خلال ساعة.",
+      "en": "Antibiotics within 1 h."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات / فوري",
+      "en": "Every 4 h / immediate"
+     }
+    },
+    {
+     "need": {
+      "ar": "الاحتياطات الوقائية",
+      "en": "Protective precautions"
+     },
+     "actions": {
+      "ar": [
+       "غرفة فردية وغسل الأيدي الصارم لكل من يدخل.",
+       "منع الزوار المصابين بالبرد والزهور والنباتات.",
+       "تجنب قياس الحرارة من الشرج والحقن العضلي والقسطرة غير الضرورية.",
+       "العناية بالفم بغسول غير كحولي وفرشاة ناعمة.",
+       "أكل مطهو جيدًا وتجنب الأكل النيء والخضار غير المغسولة.",
+       "عامل النمو (G-CSF) حسب الأمر."
+      ],
+      "en": [
+       "Single room; strict hand hygiene for everyone.",
+       "No visitors with colds; no flowers or plants.",
+       "No rectal temperatures, IM injections or unnecessary catheters.",
+       "Oral care with alcohol-free rinse and soft brush.",
+       "Well-cooked food; avoid raw or unwashed produce.",
+       "Growth factor (G-CSF) as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عدوى.",
+      "en": "No infection."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-oral-mucosa-chemo",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف سلامة الغشاء المخاطي للفم (التهاب الفم)",
+    "en": "Impaired Oral Mucous Membrane (Mucositis)"
+   },
+   "definition": {
+    "ar": "تلف الأغشية المخاطية للفم.",
+    "en": "Injury to the oral mucosa."
+   },
+   "relatedTo": {
+    "ar": [
+     "العلاج الكيماوي"
+    ],
+    "en": [
+     "Chemotherapy"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "قرح مؤلمة بالفم",
+     "صعوبة البلع"
+    ],
+    "en": [
+     "Painful oral ulcers",
+     "Difficulty swallowing"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بقي بيحرقني ومش قادر آكل.\""
+     ],
+     "en": [
+      "\"My mouth burns and I can't eat.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قرح متعددة بالفم، درجة 2."
+     ],
+     "en": [
+      "Multiple oral ulcers, grade 2."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 3 أيام: ألم الفم ≤ 3/10 ويأكل أكلًا لينًا."
+     ],
+     "en": [
+      "Within 3 days: mouth pain ≤ 3/10; eating soft food."
+     ]
+    },
+    "long": {
+     "ar": [
+      "التئام القرح."
+     ],
+     "en": [
+      "Ulcers heal."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "فحص الفم يوميًا وتقييم الدرجة.",
+      "en": "Daily oral assessment and grading."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "مضمضة بمحلول ملح أو بيكربونات كل 2–4 ساعات.",
+      "en": "Saline or bicarbonate rinses every 2–4 h."
+     },
+     "rationale": {
+      "ar": "تنظيف وتهدئة.",
+      "en": "Cleansing and soothing."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مسكن موضعي أو عام حسب الأمر قبل الأكل.",
+      "en": "Topical or systemic analgesia before meals as ordered."
+     },
+     "rationale": {
+      "ar": "يسهل الأكل.",
+      "en": "Eases eating."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "أكل لين بارد وتجنب الحار والحمضي والخشن.",
+      "en": "Soft cool food; avoid spicy, acidic, rough foods."
+     },
+     "rationale": {
+      "ar": "يقلل التهيج.",
+      "en": "Reduces irritation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "علاج الفطريات أو الهربس إن وُجدت.",
+      "en": "Treat candida or herpes if present."
+     },
+     "rationale": {
+      "ar": "عدوى ثانوية.",
+      "en": "Secondary infection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ترطيب الشفاه.",
+      "en": "Lip moisturizer."
+     },
+     "rationale": {
+      "ar": "منع التشقق.",
+      "en": "Prevents cracking."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "ألم 3/10 ويأكل زبادي وشوربة — تحقق.",
+      "en": "Pain 3/10; eating yogurt and soup — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "العناية بالفم",
+      "en": "Oral care"
+     },
+     "actions": {
+      "ar": [
+       "فحص الفم يوميًا وتقييم الدرجة.",
+       "مضمضة بمحلول ملح أو بيكربونات كل 2–4 ساعات.",
+       "مسكن موضعي أو عام حسب الأمر قبل الأكل.",
+       "أكل لين بارد وتجنب الحار والحمضي والخشن.",
+       "علاج الفطريات أو الهربس إن وُجدت.",
+       "ترطيب الشفاه."
+      ],
+      "en": [
+       "Daily oral assessment and grading.",
+       "Saline or bicarbonate rinses every 2–4 h.",
+       "Topical or systemic analgesia before meals as ordered.",
+       "Soft cool food; avoid spicy, acidic, rough foods.",
+       "Treat candida or herpes if present.",
+       "Lip moisturizer."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم أقل وأكل لين.",
+      "en": "Less pain; soft diet."
+     },
+     "timeframe": {
+      "ar": "كل 2–4 ساعات",
+      "en": "Every 2–4 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "nausea-chemo",
+   "kind": "actual",
+   "title": {
+    "ar": "الغثيان والقيء (بسبب الكيماوي)",
+    "en": "Nausea and Vomiting (Chemotherapy-induced)"
+   },
+   "definition": {
+    "ar": "إحساس غير مريح بالرغبة في القيء.",
+    "en": "Unpleasant sensation of the urge to vomit."
+   },
+   "relatedTo": {
+    "ar": [
+     "تأثير الكيماوي على مركز القيء"
+    ],
+    "en": [
+     "Chemotherapy effect on the vomiting centre"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "قيء 4 مرات",
+     "رفض الأكل"
+    ],
+    "en": [
+     "Vomited 4 times",
+     "Food refusal"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"كل ما أشم أكل أرجّع.\""
+     ],
+     "en": [
+      "\"I vomit whenever I smell food.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قيء 4 مرات في 24 ساعة."
+     ],
+     "en": [
+      "4 vomits in 24 h."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: ≤ 1 قيء وتحمل السوائل."
+     ],
+     "en": [
+      "Within 24 h: ≤ 1 vomit; tolerating fluids."
+     ]
+    },
+    "long": {
+     "ar": [
+      "التحكم في الغثيان مع كل دورة."
+     ],
+     "en": [
+      "Nausea controlled with each cycle."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مضادات القيء قبل الكيماوي بـ 30–60 دقيقة وبانتظام بعده حسب البروتوكول.",
+      "en": "Antiemetics 30–60 minutes before chemo and regularly after per protocol."
+     },
+     "rationale": {
+      "ar": "الوقاية أفضل من العلاج.",
+      "en": "Prevention beats treatment."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تسجيل عدد مرات القيء والكمية والسوائل.",
+      "en": "Record vomiting episodes, volume and fluids."
+     },
+     "rationale": {
+      "ar": "تقييم.",
+      "en": "Assessment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وجبات صغيرة باردة جافة وتجنب الروائح القوية.",
+      "en": "Small cold dry meals; avoid strong smells."
+     },
+     "rationale": {
+      "ar": "تقلل الغثيان.",
+      "en": "Reduce nausea."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم بعد القيء.",
+      "en": "Mouth care after vomiting."
+     },
+     "rationale": {
+      "ar": "راحة.",
+      "en": "Comfort."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الاسترخاء والإلهاء.",
+      "en": "Relaxation and distraction."
+     },
+     "rationale": {
+      "ar": "تقلل الغثيان التوقعي.",
+      "en": "Reduce anticipatory nausea."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "سوائل وريدية ومتابعة الأملاح عند القيء المستمر.",
+      "en": "IV fluids and electrolytes for persistent vomiting."
+     },
+     "rationale": {
+      "ar": "منع الجفاف.",
+      "en": "Prevents dehydration."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "قيء مرة واحدة ويشرب سوائل — تحقق.",
+      "en": "One vomit; drinking fluids — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التحكم في الغثيان",
+      "en": "Nausea control"
+     },
+     "actions": {
+      "ar": [
+       "مضادات القيء قبل الكيماوي بـ 30–60 دقيقة وبانتظام بعده حسب البروتوكول.",
+       "تسجيل عدد مرات القيء والكمية والسوائل.",
+       "وجبات صغيرة باردة جافة وتجنب الروائح القوية.",
+       "العناية بالفم بعد القيء.",
+       "الاسترخاء والإلهاء.",
+       "سوائل وريدية ومتابعة الأملاح عند القيء المستمر."
+      ],
+      "en": [
+       "Antiemetics 30–60 minutes before chemo and regularly after per protocol.",
+       "Record vomiting episodes, volume and fluids.",
+       "Small cold dry meals; avoid strong smells.",
+       "Mouth care after vomiting.",
+       "Relaxation and distraction.",
+       "IV fluids and electrolytes for persistent vomiting."
+      ]
+     },
+     "outcome": {
+      "ar": "قيء أقل.",
+      "en": "Less vomiting."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-bleeding-chemo",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر النزيف",
+    "en": "Risk for Bleeding"
+   },
+   "definition": {
+    "ar": "قابلية لنقص حجم الدم قد يؤثر على الصحة.",
+    "en": "Susceptibility to a decrease in blood volume that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "العلاج بـ نقص الصفائح بعد الكيماوي",
+     "صفائح < 20,000"
+    ],
+    "en": [
+     "chemotherapy-induced thrombocytopenia therapy",
+     "Platelets < 20,000"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"اللثة بتنزف شوية لما أغسل سناني.\""
+     ],
+     "en": [
+      "\"My gums bleed a little when I brush.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "صفائح 18,000، كدمات صغيرة."
+     ],
+     "en": [
+      "Platelets 18,000; petechiae."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: لا علامات نزيف وتحاليل التجلط في المدى المطلوب."
+     ],
+     "en": [
+      "Every shift: no bleeding signs; coagulation within target."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طوال العلاج: لا نزيف كبير، ويعرف المريض الاحتياطات."
+     ],
+     "en": [
+      "Throughout therapy: no major bleeding; patient knows precautions."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة علامات النزيف: اللثة، الأنف، البول، البراز الأسود، القيء الدموي، الكدمات، مكان الكانيولا.",
+      "en": "Watch for bleeding: gums, nose, urine, black stools, hematemesis, bruises, cannula site."
+     },
+     "rationale": {
+      "ar": "اكتشاف النزيف مبكرًا.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة تحاليل التجلط والهيموجلوبين والصفائح حسب الأمر.",
+      "en": "Monitor coagulation tests, hemoglobin and platelets as ordered."
+     },
+     "rationale": {
+      "ar": "ضبط الجرعة وكشف النزيف الخفي.",
+      "en": "Dose titration and occult bleeding detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة صداع شديد مفاجئ أو تغير الوعي.",
+      "en": "Watch for sudden severe headache or altered consciousness."
+     },
+     "rationale": {
+      "ar": "قد يدل على نزيف بالمخ.",
+      "en": "May indicate intracranial bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الضغط على أماكن الحقن والسحب 5–10 دقائق، وتقليل الحقن العضلي.",
+      "en": "Apply pressure to puncture sites 5–10 minutes; minimize IM injections."
+     },
+     "rationale": {
+      "ar": "يمنع النزيف من الأماكن.",
+      "en": "Prevents site bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "فرشاة أسنان ناعمة وماكينة حلاقة كهربائية.",
+      "en": "Soft toothbrush and electric razor."
+     },
+     "rationale": {
+      "ar": "يمنع الجروح.",
+      "en": "Prevents injury."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم المريض عن نقص الصفائح بعد الكيماوي: الالتزام بالجرعة، التحاليل الدورية، تجنب المسكنات مثل الأسبرين والإيبوبروفين بدون استشارة، وإبلاغ أي طبيب أو طبيب أسنان.",
+      "en": "Teach about chemotherapy-induced thrombocytopenia: exact dosing, regular tests, avoid NSAIDs/aspirin unless prescribed, inform any doctor or dentist."
+     },
+     "rationale": {
+      "ar": "الاستخدام الآمن للدواء.",
+      "en": "Safe drug use."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "نقل الصفائح حسب الأمر والبروتوكول.",
+      "en": "Platelet transfusion as ordered per protocol."
+     },
+     "rationale": {
+      "ar": "منع النزيف الخطير.",
+      "en": "Prevents serious bleeding."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات نزيف والتحاليل في المدى — تحقق.",
+      "en": "No bleeding; labs in range — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "متابعة النزيف",
+      "en": "Monitor bleeding"
+     },
+     "actions": {
+      "ar": [
+       "ملاحظة علامات النزيف: اللثة، الأنف، البول، البراز الأسود، القيء الدموي، الكدمات، مكان الكانيولا.",
+       "متابعة تحاليل التجلط والهيموجلوبين والصفائح حسب الأمر.",
+       "ملاحظة صداع شديد مفاجئ أو تغير الوعي."
+      ],
+      "en": [
+       "Watch for bleeding: gums, nose, urine, black stools, hematemesis, bruises, cannula site.",
+       "Monitor coagulation tests, hemoglobin and platelets as ordered.",
+       "Watch for sudden severe headache or altered consciousness."
+      ]
+     },
+     "outcome": {
+      "ar": "لا نزيف.",
+      "en": "No bleeding."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    },
+    {
+     "need": {
+      "ar": "الوقاية والتثقيف",
+      "en": "Prevention and teaching"
+     },
+     "actions": {
+      "ar": [
+       "الضغط على أماكن الحقن والسحب 5–10 دقائق، وتقليل الحقن العضلي.",
+       "فرشاة أسنان ناعمة وماكينة حلاقة كهربائية.",
+       "تعليم المريض عن نقص الصفائح بعد الكيماوي: الالتزام بالجرعة، التحاليل الدورية، تجنب المسكنات مثل الأسبرين والإيبوبروفين بدون استشارة، وإبلاغ أي طبيب أو طبيب أسنان.",
+       "نقل الصفائح حسب الأمر والبروتوكول."
+      ],
+      "en": [
+       "Apply pressure to puncture sites 5–10 minutes; minimize IM injections.",
+       "Soft toothbrush and electric razor.",
+       "Teach about chemotherapy-induced thrombocytopenia: exact dosing, regular tests, avoid NSAIDs/aspirin unless prescribed, inform any doctor or dentist.",
+       "Platelet transfusion as ordered per protocol."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يعرف الاحتياطات.",
+      "en": "Patient knows precautions."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  },
+  {
+   "id": "activity-intolerance-chemo",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم تحمل النشاط",
+    "en": "Activity Intolerance"
+   },
+   "definition": {
+    "ar": "نقص الطاقة الجسدية أو النفسية لتحمل أو إكمال الأنشطة اليومية المطلوبة.",
+    "en": "Insufficient physiological or psychological energy to endure or complete required daily activities."
+   },
+   "relatedTo": {
+    "ar": [
+     "الأنيميا وتعب الكيماوي"
+    ],
+    "en": [
+     "Anemia and chemotherapy fatigue"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تعب وضيق نفس عند المجهود",
+     "تغير غير طبيعي في النبض أو الضغط مع النشاط"
+    ],
+    "en": [
+     "Fatigue and exertional dyspnea",
+     "Abnormal HR or BP response to activity"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش قادر أعمل أي حاجة.\""
+     ],
+     "en": [
+      "\"I can't do anything.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "هيموجلوبين 7.9."
+     ],
+     "en": [
+      "Hb 7.9."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 3 أيام: يؤدي المريض العناية الذاتية مع بقاء النبض والضغط في الحدود المقبولة."
+     ],
+     "en": [
+      "Within 3 days: performs self-care with HR and BP within acceptable limits."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يمشي في الممر بدون أعراض ويعرف خطة النشاط في البيت."
+     ],
+     "en": [
+      "Before discharge: walks the corridor without symptoms and knows the home activity plan."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+      "en": "Check pulse, BP and SpO₂ before, during and 3 minutes after activity."
+     },
+     "rationale": {
+      "ar": "يحدد تحمل المريض.",
+      "en": "Determines tolerance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة.",
+      "en": "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+     },
+     "rationale": {
+      "ar": "علامات عدم التحمل.",
+      "en": "Signs of intolerance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+      "en": "Progress activity: sitting in bed, chair, walking in room then corridor."
+     },
+     "rationale": {
+      "ar": "التدرج يبني التحمل بأمان.",
+      "en": "Gradual progression builds tolerance safely."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+      "en": "Plan rest between activities; cluster care."
+     },
+     "rationale": {
+      "ar": "يحافظ على الطاقة.",
+      "en": "Conserves energy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+      "en": "Assist with ADLs as needed while encouraging independence."
+     },
+     "rationale": {
+      "ar": "يوازن بين الراحة والنشاط.",
+      "en": "Balances rest and activity."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود).",
+      "en": "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+     },
+     "rationale": {
+      "ar": "يقلل الحمل على القلب.",
+      "en": "Reduces cardiac workload."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "مشى في الممر 50 مترًا، زاد النبض 12 فقط بدون ضيق نفس — تحقق.",
+      "en": "Walked 50 m; HR rose by only 12, no dyspnea — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقييم التحمل",
+      "en": "Assess tolerance"
+     },
+     "actions": {
+      "ar": [
+       "قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+       "إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة."
+      ],
+      "en": [
+       "Check pulse, BP and SpO₂ before, during and 3 minutes after activity.",
+       "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مقبولة مع النشاط.",
+      "en": "Acceptable vitals with activity."
+     },
+     "timeframe": {
+      "ar": "مع كل نشاط",
+      "en": "With each activity"
+     }
+    },
+    {
+     "need": {
+      "ar": "زيادة النشاط تدريجيًا",
+      "en": "Progress activity"
+     },
+     "actions": {
+      "ar": [
+       "التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+       "تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+       "المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+       "تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود)."
+      ],
+      "en": [
+       "Progress activity: sitting in bed, chair, walking in room then corridor.",
+       "Plan rest between activities; cluster care.",
+       "Assist with ADLs as needed while encouraging independence.",
+       "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+      ]
+     },
+     "outcome": {
+      "ar": "عناية ذاتية ومشي بدون أعراض.",
+      "en": "Self-care and walking without symptoms."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-chemo",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "تشخيص السرطان والعلاج"
+    ],
+    "en": [
+     "Cancer diagnosis and treatment"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"خايف الكيماوي ما ينفعش.\""
+     ],
+     "en": [
+      "\"I'm afraid the chemo won't work.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قلق ويبكي أحيانًا."
+     ],
+     "en": [
+      "Anxious; sometimes tearful."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواجد مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق والاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إحالة للدعم النفسي والاجتماعي.",
+      "en": "Refer for psychosocial support."
+     },
+     "rationale": {
+      "ar": "دعم متخصص.",
+      "en": "Specialist support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+       "التواجد مع المريض والتحدث بهدوء وثقة.",
+       "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "تعليم التنفس البطيء العميق والاسترخاء.",
+       "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+       "إحالة للدعم النفسي والاجتماعي."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy.",
+       "Refer for psychosocial support."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "NICE CG151 — Neutropenic sepsis: prevention and management in people with cancer (2012)"
+  },
+  {
+   "title": "MASCC/ESMO Antiemetic Guidelines (2023)"
+  }
+ ]
+}
