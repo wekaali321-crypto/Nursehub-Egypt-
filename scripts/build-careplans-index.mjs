@@ -75,7 +75,7 @@ const plans = readdirSync(join(DIR, 'plans')).filter((f) => f.endsWith('.json'))
   return item;
 });
 
-const ORDER = ['cardiology', 'respiratory', 'neurology', 'endocrine', 'gastro', 'renal', 'hematology', 'surgery', 'orthopedics', 'obstetrics', 'pediatrics', 'integumentary', 'infection', 'general'];
+const ORDER = ['surgery', 'cardiology', 'endocrine', 'gastro', 'renal', 'hematology', 'infection', 'integumentary', 'obstetrics', 'mental', 'orthopedics', 'neurology', 'ophthalmic', 'pediatrics', 'respiratory', 'general'];
 const rank = (s) => (ORDER.includes(s) ? ORDER.indexOf(s) : ORDER.length);
 plans.sort((a, b) => (a.folder === b.folder ? 0 : a.folder === 'disease' ? -1 : 1) || rank(a.system) - rank(b.system) || a.title.en.localeCompare(b.title.en));
 

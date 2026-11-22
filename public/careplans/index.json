@@ -1,6 +1,64 @@
 {
  "plans": [
   {
+   "id": "post-operative-care",
+   "icon": "🏥",
+   "system": "surgery",
+   "folder": "disease",
+   "title": {
+    "ar": "الرعاية بعد العمليات الجراحية",
+    "en": "Post-operative Care"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض ما بعد العملية: الألم، مجرى الهواء بعد التخدير، عدوى الجرح، النزيف والسوائل، الجلطات، وحركة الأمعاء.",
+    "en": "Post-operative care plan: pain, post-anesthesia airway, wound infection, bleeding and fluids, VTE, and bowel motility."
+   },
+   "diagnoses": [
+    {
+     "id": "acute-pain-postop",
+     "title": {
+      "ar": "ألم حاد بعد العملية",
+      "en": "Acute Pain (Post-operative)"
+     }
+    },
+    {
+     "id": "ineffective-airway-clearance-postop",
+     "title": {
+      "ar": "خطر عدم فعالية تنظيف مجرى الهواء بعد التخدير",
+      "en": "Risk for Ineffective Airway Clearance (Post-anesthesia)"
+     }
+    },
+    {
+     "id": "risk-surgical-site-infection",
+     "title": {
+      "ar": "خطر عدوى الجرح الجراحي",
+      "en": "Risk for Surgical Site Infection"
+     }
+    },
+    {
+     "id": "risk-deficient-fluid-volume-postop",
+     "title": {
+      "ar": "خطر نقص حجم السوائل (نزيف / فقد سوائل)",
+      "en": "Risk for Deficient Fluid Volume (Bleeding / Fluid Loss)"
+     }
+    },
+    {
+     "id": "risk-dvt-postop",
+     "title": {
+      "ar": "خطر الجلطات الوريدية العميقة",
+      "en": "Risk for Venous Thromboembolism"
+     }
+    },
+    {
+     "id": "risk-dysfunctional-gi-motility-postop",
+     "title": {
+      "ar": "خطر اضطراب حركة الجهاز الهضمي (شلل الأمعاء بعد العملية)",
+      "en": "Risk for Dysfunctional Gastrointestinal Motility (Post-operative Ileus)"
+     }
+    }
+   ]
+  },
+  {
    "id": "angina-acs",
    "icon": "💓",
    "system": "cardiology",
@@ -421,6 +479,825 @@
    ]
   },
   {
+   "id": "diabetes-type2",
+   "icon": "🩸",
+   "system": "endocrine",
+   "folder": "disease",
+   "title": {
+    "ar": "السكري من النوع الثاني",
+    "en": "Type 2 Diabetes Mellitus"
+   },
+   "summary": {
+    "ar": "خطط رعاية لمريض السكري من النوع الثاني: 6 تشخيصات تمريضية، كل تشخيص في نموذج مستقل للطالب والمستشفى.",
+    "en": "Type 2 diabetes care plans: 6 nursing diagnoses, each in its own student and hospital form."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-unstable-blood-glucose",
+     "title": {
+      "ar": "خطر عدم استقرار مستوى سكر الدم",
+      "en": "Risk for Unstable Blood Glucose Level"
+     }
+    },
+    {
+     "id": "risk-deficient-fluid-volume",
+     "title": {
+      "ar": "خطر نقص حجم السوائل",
+      "en": "Risk for Deficient Fluid Volume"
+     }
+    },
+    {
+     "id": "obesity",
+     "title": {
+      "ar": "السمنة (زيادة الوزن عن احتياج الجسم)",
+      "en": "Obesity"
+     }
+    },
+    {
+     "id": "risk-impaired-skin-integrity-foot",
+     "title": {
+      "ar": "خطر تلف سلامة الجلد (القدم السكري)",
+      "en": "Risk for Impaired Skin Integrity (Diabetic Foot)"
+     }
+    },
+    {
+     "id": "risk-for-infection",
+     "title": {
+      "ar": "خطر العدوى",
+      "en": "Risk for Infection"
+     }
+    },
+    {
+     "id": "ineffective-health-self-management",
+     "title": {
+      "ar": "عدم فعالية إدارة الصحة الذاتية",
+      "en": "Ineffective Health Self-Management"
+     }
+    }
+   ]
+  },
+  {
+   "id": "liver-cirrhosis",
+   "icon": "🟤",
+   "system": "gastro",
+   "folder": "disease",
+   "title": {
+    "ar": "تليف الكبد",
+    "en": "Liver Cirrhosis"
+   },
+   "summary": {
+    "ar": "خطة رعاية تليف الكبد: الاستسقاء والبذل، غيبوبة الكبد، نزيف الدوالي، التغذية، الجلد والحكة، والتثقيف.",
+    "en": "Cirrhosis care plan: ascites and paracentesis, hepatic encephalopathy, variceal bleeding, nutrition, skin and pruritus, and teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "excess-fluid-volume-cirrhosis",
+     "title": {
+      "ar": "زيادة حجم السوائل (الاستسقاء)",
+      "en": "Excess Fluid Volume (Ascites)"
+     }
+    },
+    {
+     "id": "risk-acute-confusion-hepatic",
+     "title": {
+      "ar": "خطر التشوش الحاد (غيبوبة الكبد)",
+      "en": "Risk for Acute Confusion (Hepatic Encephalopathy)"
+     }
+    },
+    {
+     "id": "risk-bleeding-varices",
+     "title": {
+      "ar": "خطر النزيف (دوالي المريء واضطراب التجلط)",
+      "en": "Risk for Bleeding (Varices and Coagulopathy)"
+     }
+    },
+    {
+     "id": "imbalanced-nutrition-cirrhosis",
+     "title": {
+      "ar": "تغذية أقل من احتياج الجسم",
+      "en": "Imbalanced Nutrition: Less Than Body Requirements"
+     }
+    },
+    {
+     "id": "risk-impaired-skin-cirrhosis",
+     "title": {
+      "ar": "خطر تلف الجلد (الصفراء والحكة والتورم)",
+      "en": "Risk for Impaired Skin Integrity (Jaundice, Pruritus, Edema)"
+     }
+    },
+    {
+     "id": "deficient-knowledge-cirrhosis",
+     "title": {
+      "ar": "نقص المعرفة (تليف الكبد)",
+      "en": "Deficient Knowledge (Liver cirrhosis)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "chronic-kidney-disease",
+   "icon": "🫘",
+   "system": "renal",
+   "folder": "disease",
+   "title": {
+    "ar": "الفشل الكلوي المزمن",
+    "en": "Chronic Kidney Disease"
+   },
+   "summary": {
+    "ar": "خطة رعاية الفشل الكلوي المزمن: زيادة السوائل، البوتاسيوم والفوسفور، التغذية، الأنيميا والتعب، الحكة والجلد، والتثقيف والتحضير للغسيل.",
+    "en": "CKD care plan: fluid overload, potassium and phosphate, nutrition, anemia and fatigue, pruritus and skin, teaching and dialysis preparation."
+   },
+   "diagnoses": [
+    {
+     "id": "excess-fluid-volume-ckd",
+     "title": {
+      "ar": "زيادة حجم السوائل",
+      "en": "Excess Fluid Volume"
+     }
+    },
+    {
+     "id": "risk-electrolyte-imbalance-ckd",
+     "title": {
+      "ar": "خطر اختلال الأملاح (ارتفاع البوتاسيوم والفوسفور)",
+      "en": "Risk for Electrolyte Imbalance (Hyperkalemia, Hyperphosphatemia)"
+     }
+    },
+    {
+     "id": "imbalanced-nutrition-ckd",
+     "title": {
+      "ar": "تغذية أقل من احتياج الجسم",
+      "en": "Imbalanced Nutrition: Less Than Body Requirements"
+     }
+    },
+    {
+     "id": "activity-intolerance-ckd",
+     "title": {
+      "ar": "عدم تحمل النشاط",
+      "en": "Activity Intolerance"
+     }
+    },
+    {
+     "id": "risk-impaired-skin-ckd",
+     "title": {
+      "ar": "خطر تلف الجلد (الحكة)",
+      "en": "Risk for Impaired Skin Integrity (Uremic Pruritus)"
+     }
+    },
+    {
+     "id": "deficient-knowledge-ckd",
+     "title": {
+      "ar": "نقص المعرفة (الفشل الكلوي المزمن)",
+      "en": "Deficient Knowledge (Chronic kidney disease)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "sickle-cell-crisis",
+   "icon": "🩸",
+   "system": "hematology",
+   "folder": "disease",
+   "title": {
+    "ar": "نوبة الأنيميا المنجلية",
+    "en": "Sickle Cell Crisis"
+   },
+   "summary": {
+    "ar": "خطة رعاية نوبة الأنيميا المنجلية: تسكين الألم السريع، التروية والترطيب، متلازمة الصدر الحادة، العدوى، التعب، والوقاية من النوبات.",
+    "en": "Sickle cell crisis care plan: rapid analgesia, perfusion and hydration, acute chest syndrome, infection, fatigue and crisis prevention."
+   },
+   "diagnoses": [
+    {
+     "id": "acute-pain-sickle",
+     "title": {
+      "ar": "ألم حاد (نوبة الأنيميا المنجلية)",
+      "en": "Acute Pain (Vaso-occlusive Crisis)"
+     }
+    },
+    {
+     "id": "ineffective-peripheral-perfusion-sickle",
+     "title": {
+      "ar": "عدم فعالية تروية الأنسجة",
+      "en": "Ineffective Tissue Perfusion"
+     }
+    },
+    {
+     "id": "risk-acute-chest-syndrome",
+     "title": {
+      "ar": "خطر ضعف تبادل الغازات (متلازمة الصدر الحادة)",
+      "en": "Risk for Impaired Gas Exchange (Acute Chest Syndrome)"
+     }
+    },
+    {
+     "id": "risk-infection-sickle",
+     "title": {
+      "ar": "خطر العدوى",
+      "en": "Risk for Infection"
+     }
+    },
+    {
+     "id": "activity-intolerance-sickle",
+     "title": {
+      "ar": "عدم تحمل النشاط",
+      "en": "Activity Intolerance"
+     }
+    },
+    {
+     "id": "deficient-knowledge-sickle",
+     "title": {
+      "ar": "نقص المعرفة (الوقاية من النوبات)",
+      "en": "Deficient Knowledge (Crisis prevention)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "sepsis",
+   "icon": "🦠",
+   "system": "infection",
+   "folder": "disease",
+   "title": {
+    "ar": "تسمم الدم (الإنتان)",
+    "en": "Sepsis & Septic Shock"
+   },
+   "summary": {
+    "ar": "خطة رعاية تسمم الدم: التعرف المبكر وحزمة الساعة الأولى، الحمى، حماية الكلى، الهذيان، قلق الأسرة، ومنع انتشار العدوى.",
+    "en": "Sepsis care plan: early recognition and hour-1 bundle, fever, kidney protection, delirium, family anxiety and infection control."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-shock-sepsis",
+     "title": {
+      "ar": "خطر الصدمة (تسمم الدم)",
+      "en": "Risk for Shock (Sepsis)"
+     }
+    },
+    {
+     "id": "hyperthermia-sepsis",
+     "title": {
+      "ar": "ارتفاع درجة الحرارة",
+      "en": "Hyperthermia"
+     }
+    },
+    {
+     "id": "risk-acute-kidney-injury-sepsis",
+     "title": {
+      "ar": "خطر إصابة الكلى الحادة",
+      "en": "Risk for Acute Kidney Injury"
+     }
+    },
+    {
+     "id": "risk-acute-confusion-sepsis",
+     "title": {
+      "ar": "خطر التشوش الحاد",
+      "en": "Risk for Acute Confusion"
+     }
+    },
+    {
+     "id": "anxiety-sepsis",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "risk-infection-spread-sepsis",
+     "title": {
+      "ar": "خطر انتشار العدوى",
+      "en": "Risk for Infection Spread"
+     }
+    }
+   ]
+  },
+  {
+   "id": "burns",
+   "icon": "🔥",
+   "system": "integumentary",
+   "folder": "disease",
+   "title": {
+    "ar": "الحروق",
+    "en": "Burns"
+   },
+   "summary": {
+    "ar": "خطة رعاية الحروق: صدمة الحروق ومعادلة باركلاند، إصابة الاستنشاق، الألم والغيارات، العدوى، التغذية، وصورة الجسم.",
+    "en": "Burns care plan: burn shock and Parkland formula, inhalation injury, pain and dressings, infection, nutrition and body image."
+   },
+   "diagnoses": [
+    {
+     "id": "deficient-fluid-volume-burns",
+     "title": {
+      "ar": "نقص حجم السوائل (صدمة الحروق)",
+      "en": "Deficient Fluid Volume (Burn Shock)"
+     }
+    },
+    {
+     "id": "risk-ineffective-airway-burns",
+     "title": {
+      "ar": "خطر انسداد مجرى الهواء (إصابة الاستنشاق)",
+      "en": "Risk for Ineffective Airway (Inhalation Injury)"
+     }
+    },
+    {
+     "id": "acute-pain-burns",
+     "title": {
+      "ar": "ألم حاد (الحروق)",
+      "en": "Acute Pain (Burns)"
+     }
+    },
+    {
+     "id": "risk-infection-burns",
+     "title": {
+      "ar": "خطر العدوى",
+      "en": "Risk for Infection"
+     }
+    },
+    {
+     "id": "imbalanced-nutrition-burns",
+     "title": {
+      "ar": "تغذية أقل من احتياج الجسم",
+      "en": "Imbalanced Nutrition: Less Than Body Requirements"
+     }
+    },
+    {
+     "id": "disturbed-body-image-burns",
+     "title": {
+      "ar": "اضطراب صورة الجسم",
+      "en": "Disturbed Body Image"
+     }
+    }
+   ]
+  },
+  {
+   "id": "preeclampsia",
+   "icon": "🤰",
+   "system": "obstetrics",
+   "folder": "disease",
+   "title": {
+    "ar": "تسمم الحمل (ما قبل وأثناء التشنجات)",
+    "en": "Pre-eclampsia & Eclampsia"
+   },
+   "summary": {
+    "ar": "خطة رعاية تسمم الحمل: ارتفاع الضغط الشديد والماغنسيوم، التشنجات وبيئة المريضة، حالة الجنين، السوائل والتورم، القلق، والتثقيف.",
+    "en": "Pre-eclampsia/eclampsia care plan: severe hypertension and magnesium, seizures and environment, fetal well-being, fluids and edema, anxiety and teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-maternal-injury-preeclampsia",
+     "title": {
+      "ar": "خطر إصابة الأم (ارتفاع الضغط الحاد وتسمم الحمل)",
+      "en": "Risk for Maternal Injury (Severe Hypertension / Eclampsia)"
+     }
+    },
+    {
+     "id": "risk-injury-eclampsia",
+     "title": {
+      "ar": "خطر الإصابة أثناء التشنجات (تسمم الحمل)",
+      "en": "Risk for Injury (Eclamptic Seizure)"
+     }
+    },
+    {
+     "id": "risk-disturbed-fetal-wellbeing",
+     "title": {
+      "ar": "خطر اضطراب حالة الجنين",
+      "en": "Risk for Disturbed Maternal–Fetal Dyad"
+     }
+    },
+    {
+     "id": "excess-fluid-volume-preeclampsia",
+     "title": {
+      "ar": "زيادة حجم السوائل في الأنسجة (التورم)",
+      "en": "Excess Fluid Volume (Edema)"
+     }
+    },
+    {
+     "id": "anxiety-preeclampsia",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "deficient-knowledge-preeclampsia",
+     "title": {
+      "ar": "نقص المعرفة (تسمم الحمل)",
+      "en": "Deficient Knowledge (Pre-eclampsia)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "depression",
+   "icon": "🧠",
+   "system": "mental",
+   "folder": "disease",
+   "title": {
+    "ar": "الاكتئاب",
+    "en": "Major Depression"
+   },
+   "summary": {
+    "ar": "خطة رعاية الاكتئاب: خطر الانتحار والبيئة الآمنة، اليأس، العناية الذاتية، النوم، العزلة الاجتماعية، والتثقيف عن مضادات الاكتئاب.",
+    "en": "Depression care plan: suicide risk and safe environment, hopelessness, self-care, sleep, social isolation and antidepressant teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-suicide",
+     "title": {
+      "ar": "خطر الانتحار",
+      "en": "Risk for Suicide"
+     }
+    },
+    {
+     "id": "hopelessness-depression",
+     "title": {
+      "ar": "اليأس",
+      "en": "Hopelessness"
+     }
+    },
+    {
+     "id": "self-care-deficit-depression",
+     "title": {
+      "ar": "نقص العناية الذاتية",
+      "en": "Self-Care Deficit"
+     }
+    },
+    {
+     "id": "disturbed-sleep-depression",
+     "title": {
+      "ar": "اضطراب نمط النوم",
+      "en": "Disturbed Sleep Pattern"
+     }
+    },
+    {
+     "id": "social-isolation-depression",
+     "title": {
+      "ar": "العزلة الاجتماعية",
+      "en": "Social Isolation"
+     }
+    },
+    {
+     "id": "deficient-knowledge-depression",
+     "title": {
+      "ar": "نقص المعرفة (الاكتئاب ومضادات الاكتئاب)",
+      "en": "Deficient Knowledge (Depression and antidepressants)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "hip-fracture-arthroplasty",
+   "icon": "🦴",
+   "system": "orthopedics",
+   "folder": "disease",
+   "title": {
+    "ar": "كسر عنق الفخذ وتغيير مفصل الفخذ",
+    "en": "Hip Fracture & Hip Arthroplasty"
+   },
+   "summary": {
+    "ar": "خطة رعاية كسر عنق الفخذ وتغيير المفصل: الألم وحقن العصب، احتياطات الورك ومنع الخلع، الجلطات، الحركة والتأهيل، الهذيان، والتثقيف والوقاية من السقوط.",
+    "en": "Hip fracture/arthroplasty care plan: pain and nerve block, hip precautions, VTE, mobility and rehab, delirium, teaching and fall prevention."
+   },
+   "diagnoses": [
+    {
+     "id": "acute-pain-hip",
+     "title": {
+      "ar": "ألم حاد (كسر عنق الفخذ / تغيير المفصل)",
+      "en": "Acute Pain (Hip Fracture / Arthroplasty)"
+     }
+    },
+    {
+     "id": "risk-dislocation-hip",
+     "title": {
+      "ar": "خطر الإصابة (خلع المفصل الصناعي)",
+      "en": "Risk for Injury (Prosthetic Hip Dislocation)"
+     }
+    },
+    {
+     "id": "risk-vte-hip",
+     "title": {
+      "ar": "خطر الجلطات الوريدية",
+      "en": "Risk for Venous Thromboembolism"
+     }
+    },
+    {
+     "id": "impaired-physical-mobility-hip",
+     "title": {
+      "ar": "ضعف الحركة الجسدية",
+      "en": "Impaired Physical Mobility"
+     }
+    },
+    {
+     "id": "risk-acute-confusion-hip",
+     "title": {
+      "ar": "خطر التشوش الحاد (الهذيان)",
+      "en": "Risk for Acute Confusion (Delirium)"
+     }
+    },
+    {
+     "id": "deficient-knowledge-hip",
+     "title": {
+      "ar": "نقص المعرفة (بعد كسر الفخذ وتغيير المفصل)",
+      "en": "Deficient Knowledge (After hip fracture and replacement)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "seizure-disorders",
+   "icon": "⚡",
+   "system": "neurology",
+   "folder": "disease",
+   "title": {
+    "ar": "الصرع والنوبات التشنجية",
+    "en": "Epilepsy & Seizure Disorders"
+   },
+   "summary": {
+    "ar": "خطة رعاية الصرع: الحماية أثناء النوبة والحالة الصرعية، مجرى الهواء، الالتزام بالأدوية والسلامة، القلق، السقوط، والتثقيف.",
+    "en": "Epilepsy care plan: seizure safety and status epilepticus, airway, drug adherence and safety, anxiety, falls and teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-injury-seizure",
+     "title": {
+      "ar": "خطر الإصابة أثناء النوبة",
+      "en": "Risk for Injury (During Seizure)"
+     }
+    },
+    {
+     "id": "risk-ineffective-airway-seizure",
+     "title": {
+      "ar": "خطر عدم فعالية تنظيف مجرى الهواء",
+      "en": "Risk for Ineffective Airway Clearance"
+     }
+    },
+    {
+     "id": "ineffective-health-management-epilepsy",
+     "title": {
+      "ar": "عدم فعالية إدارة الصحة (الالتزام بمضادات الصرع)",
+      "en": "Ineffective Health Self-Management (Antiepileptic Adherence)"
+     }
+    },
+    {
+     "id": "anxiety-seizure",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "risk-falls-seizure",
+     "title": {
+      "ar": "خطر السقوط (أدوية الصرع وما بعد النوبة)",
+      "en": "Risk for Falls (Antiepileptics and Post-ictal State)"
+     }
+    },
+    {
+     "id": "deficient-knowledge-epilepsy",
+     "title": {
+      "ar": "نقص المعرفة (الصرع)",
+      "en": "Deficient Knowledge (Epilepsy)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "head-injury",
+   "icon": "🤕",
+   "system": "neurology",
+   "folder": "disease",
+   "title": {
+    "ar": "إصابات الرأس",
+    "en": "Head Injury"
+   },
+   "summary": {
+    "ar": "خطة رعاية إصابات الرأس: ارتفاع الضغط داخل الجمجمة وجلاسكو، مجرى الهواء والفقرات العنقية، الصداع، التشوش، تسريب السائل النخاعي، والتثقيف عند الخروج.",
+    "en": "Head injury care plan: raised ICP and GCS, airway and C-spine, headache, confusion, CSF leak and discharge teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-increased-icp",
+     "title": {
+      "ar": "خطر عدم فعالية تروية المخ (ارتفاع الضغط داخل الجمجمة)",
+      "en": "Risk for Ineffective Cerebral Perfusion (Raised ICP)"
+     }
+    },
+    {
+     "id": "risk-ineffective-airway-head",
+     "title": {
+      "ar": "خطر عدم فعالية تنظيف مجرى الهواء",
+      "en": "Risk for Ineffective Airway Clearance"
+     }
+    },
+    {
+     "id": "acute-pain-head",
+     "title": {
+      "ar": "ألم حاد (صداع)",
+      "en": "Acute Pain (Headache)"
+     }
+    },
+    {
+     "id": "risk-acute-confusion-head",
+     "title": {
+      "ar": "خطر التشوش الحاد",
+      "en": "Risk for Acute Confusion"
+     }
+    },
+    {
+     "id": "risk-infection-csf-leak",
+     "title": {
+      "ar": "خطر العدوى (تسريب السائل النخاعي / جروح الرأس)",
+      "en": "Risk for Infection (CSF Leak / Scalp Wounds)"
+     }
+    },
+    {
+     "id": "deficient-knowledge-head-injury",
+     "title": {
+      "ar": "نقص المعرفة (إصابة الرأس والارتجاج)",
+      "en": "Deficient Knowledge (Head injury and concussion)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "stroke",
+   "icon": "🧠",
+   "system": "neurology",
+   "folder": "disease",
+   "title": {
+    "ar": "السكتة الدماغية",
+    "en": "Stroke (CVA)"
+   },
+   "summary": {
+    "ar": "خطة رعاية السكتة الدماغية: تروية المخ والمذيب، البلع، الحركة والشلل النصفي، التواصل والحبسة، العناية الذاتية، الأمان، والوقاية من التكرار.",
+    "en": "Stroke care plan: cerebral perfusion and thrombolysis, swallowing, hemiplegia and mobility, aphasia, self-care, safety and secondary prevention."
+   },
+   "diagnoses": [
+    {
+     "id": "ineffective-cerebral-perfusion-stroke",
+     "title": {
+      "ar": "عدم فعالية تروية أنسجة المخ",
+      "en": "Ineffective Cerebral Tissue Perfusion"
+     }
+    },
+    {
+     "id": "impaired-swallowing-stroke",
+     "title": {
+      "ar": "ضعف البلع",
+      "en": "Impaired Swallowing"
+     }
+    },
+    {
+     "id": "impaired-physical-mobility-stroke",
+     "title": {
+      "ar": "ضعف الحركة الجسدية (الشلل النصفي)",
+      "en": "Impaired Physical Mobility (Hemiplegia)"
+     }
+    },
+    {
+     "id": "impaired-verbal-communication-stroke",
+     "title": {
+      "ar": "ضعف التواصل اللفظي (الحبسة)",
+      "en": "Impaired Verbal Communication (Aphasia)"
+     }
+    },
+    {
+     "id": "self-care-deficit-stroke",
+     "title": {
+      "ar": "نقص العناية الذاتية (الاستحمام، اللبس، الأكل)",
+      "en": "Self-Care Deficit (Bathing, Dressing, Feeding)"
+     }
+    },
+    {
+     "id": "risk-aspiration-falls-stroke",
+     "title": {
+      "ar": "خطر الإصابة (السقوط والشفط والقرح)",
+      "en": "Risk for Injury (Falls, Aspiration, Pressure Injury)"
+     }
+    },
+    {
+     "id": "deficient-knowledge-stroke",
+     "title": {
+      "ar": "نقص المعرفة (الوقاية من تكرار السكتة)",
+      "en": "Deficient Knowledge (Secondary stroke prevention)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "cataract-surgery",
+   "icon": "👁️",
+   "system": "ophthalmic",
+   "folder": "disease",
+   "title": {
+    "ar": "المياه البيضاء وعملية إزالتها",
+    "en": "Cataract & Cataract Surgery"
+   },
+   "summary": {
+    "ar": "خطة رعاية المياه البيضاء: الأمان وضعف النظر، الوقاية من العدوى والقطرات، الألم، القلق، العناية الذاتية، وارتفاع ضغط العين.",
+    "en": "Cataract care plan: safety with impaired vision, infection prevention and eye drops, pain, anxiety, self-care and raised intraocular pressure."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-injury-cataract",
+     "title": {
+      "ar": "خطر الإصابة (ضعف النظر وما بعد العملية)",
+      "en": "Risk for Injury (Visual Impairment and Post-op)"
+     }
+    },
+    {
+     "id": "risk-infection-endophthalmitis",
+     "title": {
+      "ar": "خطر العدوى (التهاب داخل العين)",
+      "en": "Risk for Infection (Endophthalmitis)"
+     }
+    },
+    {
+     "id": "acute-pain-eye",
+     "title": {
+      "ar": "ألم حاد (ما بعد عملية العين)",
+      "en": "Acute Pain (Post Eye Surgery)"
+     }
+    },
+    {
+     "id": "anxiety-cataract",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "self-care-deficit-cataract",
+     "title": {
+      "ar": "نقص العناية الذاتية المؤقت",
+      "en": "Temporary Self-Care Deficit"
+     }
+    },
+    {
+     "id": "risk-increased-iop",
+     "title": {
+      "ar": "خطر ارتفاع ضغط العين",
+      "en": "Risk for Increased Intraocular Pressure"
+     }
+    }
+   ]
+  },
+  {
+   "id": "gastroenteritis-dehydration-child",
+   "icon": "🧒",
+   "system": "pediatrics",
+   "folder": "disease",
+   "title": {
+    "ar": "النزلة المعوية والجفاف عند الأطفال",
+    "en": "Gastroenteritis & Dehydration in Children"
+   },
+   "summary": {
+    "ar": "خطة رعاية النزلة المعوية عند الأطفال: تقييم الجفاف ومحلول الإرواء، الإسهال، التهاب الحفاض، الحمى، التغذية، وتثقيف الأم.",
+    "en": "Pediatric gastroenteritis care plan: dehydration assessment and ORS, diarrhea, diaper dermatitis, fever, nutrition and mother teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "deficient-fluid-volume-gastro-child",
+     "title": {
+      "ar": "نقص حجم السوائل (الجفاف)",
+      "en": "Deficient Fluid Volume (Dehydration)"
+     }
+    },
+    {
+     "id": "diarrhea-child",
+     "title": {
+      "ar": "الإسهال",
+      "en": "Diarrhea"
+     }
+    },
+    {
+     "id": "impaired-skin-diaper",
+     "title": {
+      "ar": "خطر تلف الجلد (التهاب منطقة الحفاض)",
+      "en": "Risk for Impaired Skin Integrity (Diaper Dermatitis)"
+     }
+    },
+    {
+     "id": "hyperthermia-child",
+     "title": {
+      "ar": "ارتفاع درجة الحرارة",
+      "en": "Hyperthermia"
+     }
+    },
+    {
+     "id": "risk-imbalanced-nutrition-child",
+     "title": {
+      "ar": "خطر نقص التغذية",
+      "en": "Risk for Imbalanced Nutrition: Less Than Body Requirements"
+     }
+    },
+    {
+     "id": "deficient-knowledge-gastro-child",
+     "title": {
+      "ar": "نقص المعرفة (الإسهال والجفاف عند الأطفال)",
+      "en": "Deficient Knowledge (Childhood diarrhea and dehydration)"
+     }
+    }
+   ]
+  },
+  {
    "id": "asthma",
    "icon": "💨",
    "system": "respiratory",
@@ -769,594 +1646,6 @@
    ]
   },
   {
-   "id": "seizure-disorders",
-   "icon": "⚡",
-   "system": "neurology",
-   "folder": "disease",
-   "title": {
-    "ar": "الصرع والنوبات التشنجية",
-    "en": "Epilepsy & Seizure Disorders"
-   },
-   "summary": {
-    "ar": "خطة رعاية الصرع: الحماية أثناء النوبة والحالة الصرعية، مجرى الهواء، الالتزام بالأدوية والسلامة، القلق، السقوط، والتثقيف.",
-    "en": "Epilepsy care plan: seizure safety and status epilepticus, airway, drug adherence and safety, anxiety, falls and teaching."
-   },
-   "diagnoses": [
-    {
-     "id": "risk-injury-seizure",
-     "title": {
-      "ar": "خطر الإصابة أثناء النوبة",
-      "en": "Risk for Injury (During Seizure)"
-     }
-    },
-    {
-     "id": "risk-ineffective-airway-seizure",
-     "title": {
-      "ar": "خطر عدم فعالية تنظيف مجرى الهواء",
-      "en": "Risk for Ineffective Airway Clearance"
-     }
-    },
-    {
-     "id": "ineffective-health-management-epilepsy",
-     "title": {
-      "ar": "عدم فعالية إدارة الصحة (الالتزام بمضادات الصرع)",
-      "en": "Ineffective Health Self-Management (Antiepileptic Adherence)"
-     }
-    },
-    {
-     "id": "anxiety-seizure",
-     "title": {
-      "ar": "القلق",
-      "en": "Anxiety"
-     }
-    },
-    {
-     "id": "risk-falls-seizure",
-     "title": {
-      "ar": "خطر السقوط (أدوية الصرع وما بعد النوبة)",
-      "en": "Risk for Falls (Antiepileptics and Post-ictal State)"
-     }
-    },
-    {
-     "id": "deficient-knowledge-epilepsy",
-     "title": {
-      "ar": "نقص المعرفة (الصرع)",
-      "en": "Deficient Knowledge (Epilepsy)"
-     }
-    }
-   ]
-  },
-  {
-   "id": "head-injury",
-   "icon": "🤕",
-   "system": "neurology",
-   "folder": "disease",
-   "title": {
-    "ar": "إصابات الرأس",
-    "en": "Head Injury"
-   },
-   "summary": {
-    "ar": "خطة رعاية إصابات الرأس: ارتفاع الضغط داخل الجمجمة وجلاسكو، مجرى الهواء والفقرات العنقية، الصداع، التشوش، تسريب السائل النخاعي، والتثقيف عند الخروج.",
-    "en": "Head injury care plan: raised ICP and GCS, airway and C-spine, headache, confusion, CSF leak and discharge teaching."
-   },
-   "diagnoses": [
-    {
-     "id": "risk-increased-icp",
-     "title": {
-      "ar": "خطر عدم فعالية تروية المخ (ارتفاع الضغط داخل الجمجمة)",
-      "en": "Risk for Ineffective Cerebral Perfusion (Raised ICP)"
-     }
-    },
-    {
-     "id": "risk-ineffective-airway-head",
-     "title": {
-      "ar": "خطر عدم فعالية تنظيف مجرى الهواء",
-      "en": "Risk for Ineffective Airway Clearance"
-     }
-    },
-    {
-     "id": "acute-pain-head",
-     "title": {
-      "ar": "ألم حاد (صداع)",
-      "en": "Acute Pain (Headache)"
-     }
-    },
-    {
-     "id": "risk-acute-confusion-head",
-     "title": {
-      "ar": "خطر التشوش الحاد",
-      "en": "Risk for Acute Confusion"
-     }
-    },
-    {
-     "id": "risk-infection-csf-leak",
-     "title": {
-      "ar": "خطر العدوى (تسريب السائل النخاعي / جروح الرأس)",
-      "en": "Risk for Infection (CSF Leak / Scalp Wounds)"
-     }
-    },
-    {
-     "id": "deficient-knowledge-head-injury",
-     "title": {
-      "ar": "نقص المعرفة (إصابة الرأس والارتجاج)",
-      "en": "Deficient Knowledge (Head injury and concussion)"
-     }
-    }
-   ]
-  },
-  {
-   "id": "stroke",
-   "icon": "🧠",
-   "system": "neurology",
-   "folder": "disease",
-   "title": {
-    "ar": "السكتة الدماغية",
-    "en": "Stroke (CVA)"
-   },
-   "summary": {
-    "ar": "خطة رعاية السكتة الدماغية: تروية المخ والمذيب، البلع، الحركة والشلل النصفي، التواصل والحبسة، العناية الذاتية، الأمان، والوقاية من التكرار.",
-    "en": "Stroke care plan: cerebral perfusion and thrombolysis, swallowing, hemiplegia and mobility, aphasia, self-care, safety and secondary prevention."
-   },
-   "diagnoses": [
-    {
-     "id": "ineffective-cerebral-perfusion-stroke",
-     "title": {
-      "ar": "عدم فعالية تروية أنسجة المخ",
-      "en": "Ineffective Cerebral Tissue Perfusion"
-     }
-    },
-    {
-     "id": "impaired-swallowing-stroke",
-     "title": {
-      "ar": "ضعف البلع",
-      "en": "Impaired Swallowing"
-     }
-    },
-    {
-     "id": "impaired-physical-mobility-stroke",
-     "title": {
-      "ar": "ضعف الحركة الجسدية (الشلل النصفي)",
-      "en": "Impaired Physical Mobility (Hemiplegia)"
-     }
-    },
-    {
-     "id": "impaired-verbal-communication-stroke",
-     "title": {
-      "ar": "ضعف التواصل اللفظي (الحبسة)",
-      "en": "Impaired Verbal Communication (Aphasia)"
-     }
-    },
-    {
-     "id": "self-care-deficit-stroke",
-     "title": {
-      "ar": "نقص العناية الذاتية (الاستحمام، اللبس، الأكل)",
-      "en": "Self-Care Deficit (Bathing, Dressing, Feeding)"
-     }
-    },
-    {
-     "id": "risk-aspiration-falls-stroke",
-     "title": {
-      "ar": "خطر الإصابة (السقوط والشفط والقرح)",
-      "en": "Risk for Injury (Falls, Aspiration, Pressure Injury)"
-     }
-    },
-    {
-     "id": "deficient-knowledge-stroke",
-     "title": {
-      "ar": "نقص المعرفة (الوقاية من تكرار السكتة)",
-      "en": "Deficient Knowledge (Secondary stroke prevention)"
-     }
-    }
-   ]
-  },
-  {
-   "id": "diabetes-type2",
-   "icon": "🩸",
-   "system": "endocrine",
-   "folder": "disease",
-   "title": {
-    "ar": "السكري من النوع الثاني",
-    "en": "Type 2 Diabetes Mellitus"
-   },
-   "summary": {
-    "ar": "خطط رعاية لمريض السكري من النوع الثاني: 6 تشخيصات تمريضية، كل تشخيص في نموذج مستقل للطالب والمستشفى.",
-    "en": "Type 2 diabetes care plans: 6 nursing diagnoses, each in its own student and hospital form."
-   },
-   "diagnoses": [
-    {
-     "id": "risk-unstable-blood-glucose",
-     "title": {
-      "ar": "خطر عدم استقرار مستوى سكر الدم",
-      "en": "Risk for Unstable Blood Glucose Level"
-     }
-    },
-    {
-     "id": "risk-deficient-fluid-volume",
-     "title": {
-      "ar": "خطر نقص حجم السوائل",
-      "en": "Risk for Deficient Fluid Volume"
-     }
-    },
-    {
-     "id": "obesity",
-     "title": {
-      "ar": "السمنة (زيادة الوزن عن احتياج الجسم)",
-      "en": "Obesity"
-     }
-    },
-    {
-     "id": "risk-impaired-skin-integrity-foot",
-     "title": {
-      "ar": "خطر تلف سلامة الجلد (القدم السكري)",
-      "en": "Risk for Impaired Skin Integrity (Diabetic Foot)"
-     }
-    },
-    {
-     "id": "risk-for-infection",
-     "title": {
-      "ar": "خطر العدوى",
-      "en": "Risk for Infection"
-     }
-    },
-    {
-     "id": "ineffective-health-self-management",
-     "title": {
-      "ar": "عدم فعالية إدارة الصحة الذاتية",
-      "en": "Ineffective Health Self-Management"
-     }
-    }
-   ]
-  },
-  {
-   "id": "liver-cirrhosis",
-   "icon": "🟤",
-   "system": "gastro",
-   "folder": "disease",
-   "title": {
-    "ar": "تليف الكبد",
-    "en": "Liver Cirrhosis"
-   },
-   "summary": {
-    "ar": "خطة رعاية تليف الكبد: الاستسقاء والبذل، غيبوبة الكبد، نزيف الدوالي، التغذية، الجلد والحكة، والتثقيف.",
-    "en": "Cirrhosis care plan: ascites and paracentesis, hepatic encephalopathy, variceal bleeding, nutrition, skin and pruritus, and teaching."
-   },
-   "diagnoses": [
-    {
-     "id": "excess-fluid-volume-cirrhosis",
-     "title": {
-      "ar": "زيادة حجم السوائل (الاستسقاء)",
-      "en": "Excess Fluid Volume (Ascites)"
-     }
-    },
-    {
-     "id": "risk-acute-confusion-hepatic",
-     "title": {
-      "ar": "خطر التشوش الحاد (غيبوبة الكبد)",
-      "en": "Risk for Acute Confusion (Hepatic Encephalopathy)"
-     }
-    },
-    {
-     "id": "risk-bleeding-varices",
-     "title": {
-      "ar": "خطر النزيف (دوالي المريء واضطراب التجلط)",
-      "en": "Risk for Bleeding (Varices and Coagulopathy)"
-     }
-    },
-    {
-     "id": "imbalanced-nutrition-cirrhosis",
-     "title": {
-      "ar": "تغذية أقل من احتياج الجسم",
-      "en": "Imbalanced Nutrition: Less Than Body Requirements"
-     }
-    },
-    {
-     "id": "risk-impaired-skin-cirrhosis",
-     "title": {
-      "ar": "خطر تلف الجلد (الصفراء والحكة والتورم)",
-      "en": "Risk for Impaired Skin Integrity (Jaundice, Pruritus, Edema)"
-     }
-    },
-    {
-     "id": "deficient-knowledge-cirrhosis",
-     "title": {
-      "ar": "نقص المعرفة (تليف الكبد)",
-      "en": "Deficient Knowledge (Liver cirrhosis)"
-     }
-    }
-   ]
-  },
-  {
-   "id": "chronic-kidney-disease",
-   "icon": "🫘",
-   "system": "renal",
-   "folder": "disease",
-   "title": {
-    "ar": "الفشل الكلوي المزمن",
-    "en": "Chronic Kidney Disease"
-   },
-   "summary": {
-    "ar": "خطة رعاية الفشل الكلوي المزمن: زيادة السوائل، البوتاسيوم والفوسفور، التغذية، الأنيميا والتعب، الحكة والجلد، والتثقيف والتحضير للغسيل.",
-    "en": "CKD care plan: fluid overload, potassium and phosphate, nutrition, anemia and fatigue, pruritus and skin, teaching and dialysis preparation."
-   },
-   "diagnoses": [
-    {
-     "id": "excess-fluid-volume-ckd",
-     "title": {
-      "ar": "زيادة حجم السوائل",
-      "en": "Excess Fluid Volume"
-     }
-    },
-    {
-     "id": "risk-electrolyte-imbalance-ckd",
-     "title": {
-      "ar": "خطر اختلال الأملاح (ارتفاع البوتاسيوم والفوسفور)",
-      "en": "Risk for Electrolyte Imbalance (Hyperkalemia, Hyperphosphatemia)"
-     }
-    },
-    {
-     "id": "imbalanced-nutrition-ckd",
-     "title": {
-      "ar": "تغذية أقل من احتياج الجسم",
-      "en": "Imbalanced Nutrition: Less Than Body Requirements"
-     }
-    },
-    {
-     "id": "activity-intolerance-ckd",
-     "title": {
-      "ar": "عدم تحمل النشاط",
-      "en": "Activity Intolerance"
-     }
-    },
-    {
-     "id": "risk-impaired-skin-ckd",
-     "title": {
-      "ar": "خطر تلف الجلد (الحكة)",
-      "en": "Risk for Impaired Skin Integrity (Uremic Pruritus)"
-     }
-    },
-    {
-     "id": "deficient-knowledge-ckd",
-     "title": {
-      "ar": "نقص المعرفة (الفشل الكلوي المزمن)",
-      "en": "Deficient Knowledge (Chronic kidney disease)"
-     }
-    }
-   ]
-  },
-  {
-   "id": "post-operative-care",
-   "icon": "🏥",
-   "system": "surgery",
-   "folder": "disease",
-   "title": {
-    "ar": "الرعاية بعد العمليات الجراحية",
-    "en": "Post-operative Care"
-   },
-   "summary": {
-    "ar": "خطة رعاية لمريض ما بعد العملية: الألم، مجرى الهواء بعد التخدير، عدوى الجرح، النزيف والسوائل، الجلطات، وحركة الأمعاء.",
-    "en": "Post-operative care plan: pain, post-anesthesia airway, wound infection, bleeding and fluids, VTE, and bowel motility."
-   },
-   "diagnoses": [
-    {
-     "id": "acute-pain-postop",
-     "title": {
-      "ar": "ألم حاد بعد العملية",
-      "en": "Acute Pain (Post-operative)"
-     }
-    },
-    {
-     "id": "ineffective-airway-clearance-postop",
-     "title": {
-      "ar": "خطر عدم فعالية تنظيف مجرى الهواء بعد التخدير",
-      "en": "Risk for Ineffective Airway Clearance (Post-anesthesia)"
-     }
-    },
-    {
-     "id": "risk-surgical-site-infection",
-     "title": {
-      "ar": "خطر عدوى الجرح الجراحي",
-      "en": "Risk for Surgical Site Infection"
-     }
-    },
-    {
-     "id": "risk-deficient-fluid-volume-postop",
-     "title": {
-      "ar": "خطر نقص حجم السوائل (نزيف / فقد سوائل)",
-      "en": "Risk for Deficient Fluid Volume (Bleeding / Fluid Loss)"
-     }
-    },
-    {
-     "id": "risk-dvt-postop",
-     "title": {
-      "ar": "خطر الجلطات الوريدية العميقة",
-      "en": "Risk for Venous Thromboembolism"
-     }
-    },
-    {
-     "id": "risk-dysfunctional-gi-motility-postop",
-     "title": {
-      "ar": "خطر اضطراب حركة الجهاز الهضمي (شلل الأمعاء بعد العملية)",
-      "en": "Risk for Dysfunctional Gastrointestinal Motility (Post-operative Ileus)"
-     }
-    }
-   ]
-  },
-  {
-   "id": "preeclampsia",
-   "icon": "🤰",
-   "system": "obstetrics",
-   "folder": "disease",
-   "title": {
-    "ar": "تسمم الحمل (ما قبل وأثناء التشنجات)",
-    "en": "Pre-eclampsia & Eclampsia"
-   },
-   "summary": {
-    "ar": "خطة رعاية تسمم الحمل: ارتفاع الضغط الشديد والماغنسيوم، التشنجات وبيئة المريضة، حالة الجنين، السوائل والتورم، القلق، والتثقيف.",
-    "en": "Pre-eclampsia/eclampsia care plan: severe hypertension and magnesium, seizures and environment, fetal well-being, fluids and edema, anxiety and teaching."
-   },
-   "diagnoses": [
-    {
-     "id": "risk-maternal-injury-preeclampsia",
-     "title": {
-      "ar": "خطر إصابة الأم (ارتفاع الضغط الحاد وتسمم الحمل)",
-      "en": "Risk for Maternal Injury (Severe Hypertension / Eclampsia)"
-     }
-    },
-    {
-     "id": "risk-injury-eclampsia",
-     "title": {
-      "ar": "خطر الإصابة أثناء التشنجات (تسمم الحمل)",
-      "en": "Risk for Injury (Eclamptic Seizure)"
-     }
-    },
-    {
-     "id": "risk-disturbed-fetal-wellbeing",
-     "title": {
-      "ar": "خطر اضطراب حالة الجنين",
-      "en": "Risk for Disturbed Maternal–Fetal Dyad"
-     }
-    },
-    {
-     "id": "excess-fluid-volume-preeclampsia",
-     "title": {
-      "ar": "زيادة حجم السوائل في الأنسجة (التورم)",
-      "en": "Excess Fluid Volume (Edema)"
-     }
-    },
-    {
-     "id": "anxiety-preeclampsia",
-     "title": {
-      "ar": "القلق",
-      "en": "Anxiety"
-     }
-    },
-    {
-     "id": "deficient-knowledge-preeclampsia",
-     "title": {
-      "ar": "نقص المعرفة (تسمم الحمل)",
-      "en": "Deficient Knowledge (Pre-eclampsia)"
-     }
-    }
-   ]
-  },
-  {
-   "id": "gastroenteritis-dehydration-child",
-   "icon": "🧒",
-   "system": "pediatrics",
-   "folder": "disease",
-   "title": {
-    "ar": "النزلة المعوية والجفاف عند الأطفال",
-    "en": "Gastroenteritis & Dehydration in Children"
-   },
-   "summary": {
-    "ar": "خطة رعاية النزلة المعوية عند الأطفال: تقييم الجفاف ومحلول الإرواء، الإسهال، التهاب الحفاض، الحمى، التغذية، وتثقيف الأم.",
-    "en": "Pediatric gastroenteritis care plan: dehydration assessment and ORS, diarrhea, diaper dermatitis, fever, nutrition and mother teaching."
-   },
-   "diagnoses": [
-    {
-     "id": "deficient-fluid-volume-gastro-child",
-     "title": {
-      "ar": "نقص حجم السوائل (الجفاف)",
-      "en": "Deficient Fluid Volume (Dehydration)"
-     }
-    },
-    {
-     "id": "diarrhea-child",
-     "title": {
-      "ar": "الإسهال",
-      "en": "Diarrhea"
-     }
-    },
-    {
-     "id": "impaired-skin-diaper",
-     "title": {
-      "ar": "خطر تلف الجلد (التهاب منطقة الحفاض)",
-      "en": "Risk for Impaired Skin Integrity (Diaper Dermatitis)"
-     }
-    },
-    {
-     "id": "hyperthermia-child",
-     "title": {
-      "ar": "ارتفاع درجة الحرارة",
-      "en": "Hyperthermia"
-     }
-    },
-    {
-     "id": "risk-imbalanced-nutrition-child",
-     "title": {
-      "ar": "خطر نقص التغذية",
-      "en": "Risk for Imbalanced Nutrition: Less Than Body Requirements"
-     }
-    },
-    {
-     "id": "deficient-knowledge-gastro-child",
-     "title": {
-      "ar": "نقص المعرفة (الإسهال والجفاف عند الأطفال)",
-      "en": "Deficient Knowledge (Childhood diarrhea and dehydration)"
-     }
-    }
-   ]
-  },
-  {
-   "id": "ventilator-associated-pneumonia",
-   "icon": "🫧",
-   "system": "respiratory",
-   "folder": "general",
-   "title": {
-    "ar": "الالتهاب الرئوي المرتبط بجهاز التنفس الصناعي (VAP)",
-    "en": "Ventilator-Associated Pneumonia (VAP)"
-   },
-   "summary": {
-    "ar": "من مضاعفات الرعاية المركزة: عدوى في الرئة تحدث للمرضى على جهاز التنفس الصناعي. الوقاية بحزمة (Bundle) والرعاية التمريضية للمريض المصاب.",
-    "en": "An ICU complication: lung infection in mechanically ventilated patients. Prevention bundle and nursing care of the affected patient."
-   },
-   "diagnoses": [
-    {
-     "id": "risk-for-infection-vap",
-     "title": {
-      "ar": "خطر العدوى (الالتهاب الرئوي المرتبط بجهاز التنفس – VAP)",
-      "en": "Risk for Infection (Ventilator-Associated Pneumonia)"
-     }
-    },
-    {
-     "id": "ineffective-airway-clearance-vap",
-     "title": {
-      "ar": "عدم فعالية تنظيف مجرى الهواء",
-      "en": "Ineffective Airway Clearance"
-     }
-    },
-    {
-     "id": "hyperthermia-vap",
-     "title": {
-      "ar": "ارتفاع درجة الحرارة",
-      "en": "Hyperthermia"
-     }
-    },
-    {
-     "id": "impaired-gas-exchange-vap",
-     "title": {
-      "ar": "ضعف تبادل الغازات",
-      "en": "Impaired Gas Exchange"
-     }
-    },
-    {
-     "id": "risk-aspiration-vap",
-     "title": {
-      "ar": "خطر الشفط (دخول الإفرازات للرئة)",
-      "en": "Risk for Aspiration"
-     }
-    },
-    {
-     "id": "impaired-oral-mucous-membrane-vap",
-     "title": {
-      "ar": "ضعف سلامة الغشاء المخاطي للفم",
-      "en": "Impaired Oral Mucous Membrane Integrity"
-     }
-    }
-   ],
-   "group": "icu"
-  },
-  {
    "id": "pre-operative-care",
    "icon": "🩺",
    "system": "surgery",
@@ -1393,6 +1682,68 @@
     }
    ],
    "group": "devices"
+  },
+  {
+   "id": "central-line-clabsi",
+   "icon": "💉",
+   "system": "infection",
+   "folder": "general",
+   "title": {
+    "ar": "القسطرة الوريدية المركزية وعدوى الدم (CLABSI)",
+    "en": "Central Line & CLABSI Prevention"
+   },
+   "summary": {
+    "ar": "خطة رعاية لمريض بقسطرة وريدية مركزية: حزمة الوقاية من عدوى الدم، والوقاية من الانسداد والجلطة والهواء.",
+    "en": "Care plan for a central venous catheter: CLABSI prevention bundle and prevention of occlusion, thrombosis and air embolism."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-infection-clabsi",
+     "title": {
+      "ar": "خطر عدوى الدم المرتبطة بالقسطرة الوريدية المركزية (CLABSI)",
+      "en": "Risk for Infection (Central Line-Associated Bloodstream Infection)"
+     }
+    },
+    {
+     "id": "risk-vascular-trauma-cvc",
+     "title": {
+      "ar": "خطر مضاعفات القسطرة المركزية (انسداد، جلطة، هواء في الدم)",
+      "en": "Risk for Central Line Complications (Occlusion, Thrombosis, Air Embolism)"
+     }
+    }
+   ],
+   "group": "icu"
+  },
+  {
+   "id": "mrsa-isolation",
+   "icon": "🦠",
+   "system": "infection",
+   "folder": "general",
+   "title": {
+    "ar": "عدوى MRSA واحتياطات العزل",
+    "en": "MRSA & Contact Isolation"
+   },
+   "summary": {
+    "ar": "خطة رعاية مريض MRSA: احتياطات التلامس، تنظيف البيئة، إزالة الاستعمار، والدعم النفسي أثناء العزل.",
+    "en": "MRSA care plan: contact precautions, environmental cleaning, decolonization and psychosocial support in isolation."
+   },
+   "diagnoses": [
+    {
+     "id": "risk-infection-transmission-mrsa",
+     "title": {
+      "ar": "خطر انتقال العدوى (MRSA)",
+      "en": "Risk for Infection Transmission (MRSA)"
+     }
+    },
+    {
+     "id": "social-isolation-contact-precautions",
+     "title": {
+      "ar": "العزلة الاجتماعية (العزل الطبي)",
+      "en": "Social Isolation (Contact Precautions)"
+     }
+    }
+   ],
+   "group": "icu"
   },
   {
    "id": "postpartum-haemorrhage",
@@ -1605,62 +1956,59 @@
    "group": "maternal"
   },
   {
-   "id": "central-line-clabsi",
-   "icon": "💉",
-   "system": "infection",
+   "id": "ventilator-associated-pneumonia",
+   "icon": "🫧",
+   "system": "respiratory",
    "folder": "general",
    "title": {
-    "ar": "القسطرة الوريدية المركزية وعدوى الدم (CLABSI)",
-    "en": "Central Line & CLABSI Prevention"
+    "ar": "الالتهاب الرئوي المرتبط بجهاز التنفس الصناعي (VAP)",
+    "en": "Ventilator-Associated Pneumonia (VAP)"
    },
    "summary": {
-    "ar": "خطة رعاية لمريض بقسطرة وريدية مركزية: حزمة الوقاية من عدوى الدم، والوقاية من الانسداد والجلطة والهواء.",
-    "en": "Care plan for a central venous catheter: CLABSI prevention bundle and prevention of occlusion, thrombosis and air embolism."
+    "ar": "من مضاعفات الرعاية المركزة: عدوى في الرئة تحدث للمرضى على جهاز التنفس الصناعي. الوقاية بحزمة (Bundle) والرعاية التمريضية للمريض المصاب.",
+    "en": "An ICU complication: lung infection in mechanically ventilated patients. Prevention bundle and nursing care of the affected patient."
    },
    "diagnoses": [
     {
-     "id": "risk-infection-clabsi",
+     "id": "risk-for-infection-vap",
      "title": {
-      "ar": "خطر عدوى الدم المرتبطة بالقسطرة الوريدية المركزية (CLABSI)",
-      "en": "Risk for Infection (Central Line-Associated Bloodstream Infection)"
+      "ar": "خطر العدوى (الالتهاب الرئوي المرتبط بجهاز التنفس – VAP)",
+      "en": "Risk for Infection (Ventilator-Associated Pneumonia)"
      }
     },
     {
-     "id": "risk-vascular-trauma-cvc",
+     "id": "ineffective-airway-clearance-vap",
      "title": {
-      "ar": "خطر مضاعفات القسطرة المركزية (انسداد، جلطة، هواء في الدم)",
-      "en": "Risk for Central Line Complications (Occlusion, Thrombosis, Air Embolism)"
-     }
-    }
-   ],
-   "group": "icu"
-  },
-  {
-   "id": "mrsa-isolation",
-   "icon": "🦠",
-   "system": "infection",
-   "folder": "general",
-   "title": {
-    "ar": "عدوى MRSA واحتياطات العزل",
-    "en": "MRSA & Contact Isolation"
-   },
-   "summary": {
-    "ar": "خطة رعاية مريض MRSA: احتياطات التلامس، تنظيف البيئة، إزالة الاستعمار، والدعم النفسي أثناء العزل.",
-    "en": "MRSA care plan: contact precautions, environmental cleaning, decolonization and psychosocial support in isolation."
-   },
-   "diagnoses": [
-    {
-     "id": "risk-infection-transmission-mrsa",
-     "title": {
-      "ar": "خطر انتقال العدوى (MRSA)",
-      "en": "Risk for Infection Transmission (MRSA)"
+      "ar": "عدم فعالية تنظيف مجرى الهواء",
+      "en": "Ineffective Airway Clearance"
      }
     },
     {
-     "id": "social-isolation-contact-precautions",
+     "id": "hyperthermia-vap",
      "title": {
-      "ar": "العزلة الاجتماعية (العزل الطبي)",
-      "en": "Social Isolation (Contact Precautions)"
+      "ar": "ارتفاع درجة الحرارة",
+      "en": "Hyperthermia"
+     }
+    },
+    {
+     "id": "impaired-gas-exchange-vap",
+     "title": {
+      "ar": "ضعف تبادل الغازات",
+      "en": "Impaired Gas Exchange"
+     }
+    },
+    {
+     "id": "risk-aspiration-vap",
+     "title": {
+      "ar": "خطر الشفط (دخول الإفرازات للرئة)",
+      "en": "Risk for Aspiration"
+     }
+    },
+    {
+     "id": "impaired-oral-mucous-membrane-vap",
+     "title": {
+      "ar": "ضعف سلامة الغشاء المخاطي للفم",
+      "en": "Impaired Oral Mucous Membrane Integrity"
      }
     }
    ],

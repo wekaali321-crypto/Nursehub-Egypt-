@@ -1,0 +1,1107 @@
+{
+ "id": "burns",
+ "icon": "🔥",
+ "system": "integumentary",
+ "folder": "disease",
+ "title": {
+  "ar": "الحروق",
+  "en": "Burns"
+ },
+ "summary": {
+  "ar": "خطة رعاية الحروق: صدمة الحروق ومعادلة باركلاند، إصابة الاستنشاق، الألم والغيارات، العدوى، التغذية، وصورة الجسم.",
+  "en": "Burns care plan: burn shock and Parkland formula, inhalation injury, pain and dressings, infection, nutrition and body image."
+ },
+ "diagnoses": [
+  {
+   "id": "deficient-fluid-volume-burns",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص حجم السوائل (صدمة الحروق)",
+    "en": "Deficient Fluid Volume (Burn Shock)"
+   },
+   "definition": {
+    "ar": "فقد السوائل من الأوعية بعد الحروق الواسعة.",
+    "en": "Intravascular fluid loss after extensive burns."
+   },
+   "relatedTo": {
+    "ar": [
+     "تسرب السوائل من الشعيرات وفقدها من سطح الحرق"
+    ],
+    "en": [
+     "Capillary leak and evaporative loss from the burn"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "هبوط الضغط وسرعة النبض",
+     "قلة البول"
+    ],
+    "en": [
+     "Hypotension and tachycardia",
+     "Low urine output"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عطشان جدًا.\""
+     ],
+     "en": [
+      "\"I'm very thirsty.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "حروق 35% من مساحة الجسم (درجة ثانية وثالثة)، وزن 70 كجم.",
+      "النبض 122، البول 20 مل/ساعة."
+     ],
+     "en": [
+      "35% TBSA partial/full thickness, 70 kg.",
+      "HR 122, urine 20 mL/h."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: بول 0.5–1 مل/كجم/ساعة."
+     ],
+     "en": [
+      "Within 24 h: urine 0.5–1 mL/kg/h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "دورة مستقرة بعد 48 ساعة."
+     ],
+     "en": [
+      "Stable circulation after 48 h."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "حساب مساحة الحرق (قاعدة التسعات) لتحديد السوائل.",
+      "en": "Calculate TBSA (rule of nines) to guide fluids."
+     },
+     "rationale": {
+      "ar": "أساس معادلة السوائل.",
+      "en": "Basis of fluid formula."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "محاليل رينجر حسب معادلة باركلاند (4 مل × الوزن × نسبة الحرق؛ نصفها في أول 8 ساعات من وقت الحرق) وتعديلها حسب البول.",
+      "en": "Ringer's lactate per Parkland (4 mL × kg × %TBSA; half in the first 8 h from injury), titrated to urine."
+     },
+     "rationale": {
+      "ar": "تعويض الفقد الكبير.",
+      "en": "Replaces large losses."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "البول كل ساعة بقسطرة.",
+      "en": "Hourly urine via catheter."
+     },
+     "rationale": {
+      "ar": "أفضل مؤشر للتعويض.",
+      "en": "Best resuscitation marker."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "العلامات الحيوية والوعي ورجوع الدم كل ساعة.",
+      "en": "Vitals, consciousness and capillary refill hourly."
+     },
+     "rationale": {
+      "ar": "كشف الصدمة.",
+      "en": "Detects shock."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة زيادة السوائل (وذمة، ضيق نفس) وكثرة البول بعد 48 ساعة.",
+      "en": "Watch for overload (edema, dyspnea) and diuresis after 48 h."
+     },
+     "rationale": {
+      "ar": "مرحلة إعادة الامتصاص.",
+      "en": "Remobilization phase."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة الأملاح والهيموجلوبين والألبومين.",
+      "en": "Monitor electrolytes, Hb and albumin."
+     },
+     "rationale": {
+      "ar": "خلل شائع.",
+      "en": "Common disturbances."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "البول 50 مل/ساعة بعد 12 ساعة — تحقق.",
+      "en": "Urine 50 mL/h at 12 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التعويض",
+      "en": "Resuscitation"
+     },
+     "actions": {
+      "ar": [
+       "حساب مساحة الحرق (قاعدة التسعات) لتحديد السوائل.",
+       "محاليل رينجر حسب معادلة باركلاند (4 مل × الوزن × نسبة الحرق؛ نصفها في أول 8 ساعات من وقت الحرق) وتعديلها حسب البول.",
+       "البول كل ساعة بقسطرة."
+      ],
+      "en": [
+       "Calculate TBSA (rule of nines) to guide fluids.",
+       "Ringer's lactate per Parkland (4 mL × kg × %TBSA; half in the first 8 h from injury), titrated to urine.",
+       "Hourly urine via catheter."
+      ]
+     },
+     "outcome": {
+      "ar": "بول 0.5–1 مل/كجم/ساعة.",
+      "en": "Urine 0.5–1 mL/kg/h."
+     },
+     "timeframe": {
+      "ar": "24 ساعة",
+      "en": "24 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "المتابعة",
+      "en": "Monitoring"
+     },
+     "actions": {
+      "ar": [
+       "العلامات الحيوية والوعي ورجوع الدم كل ساعة.",
+       "ملاحظة زيادة السوائل (وذمة، ضيق نفس) وكثرة البول بعد 48 ساعة.",
+       "متابعة الأملاح والهيموجلوبين والألبومين."
+      ],
+      "en": [
+       "Vitals, consciousness and capillary refill hourly.",
+       "Watch for overload (edema, dyspnea) and diuresis after 48 h.",
+       "Monitor electrolytes, Hb and albumin."
+      ]
+     },
+     "outcome": {
+      "ar": "دورة مستقرة.",
+      "en": "Stable circulation."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-ineffective-airway-burns",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر انسداد مجرى الهواء (إصابة الاستنشاق)",
+    "en": "Risk for Ineffective Airway (Inhalation Injury)"
+   },
+   "definition": {
+    "ar": "قابلية لتورم مجرى الهواء بسبب استنشاق الدخان أو الحرارة.",
+    "en": "Susceptibility to airway edema from smoke or heat inhalation."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "حريق في مكان مغلق",
+     "حروق الوجه والرقبة",
+     "شعر أنف محروق وسخام في الفم"
+    ],
+    "en": [
+     "Fire in an enclosed space",
+     "Facial and neck burns",
+     "Singed nasal hair, soot in mouth"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"صوتي بقى مبحوح.\""
+     ],
+     "en": [
+      "\"My voice is hoarse.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "حروق بالوجه، سخام في البلغم، بحة."
+     ],
+     "en": [
+      "Facial burns, carbonaceous sputum, hoarseness."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "مجرى هواء مفتوح وتشبع ≥ 94%."
+     ],
+     "en": [
+      "Patent airway, SpO₂ ≥ 94%."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا فشل تنفسي."
+     ],
+     "en": [
+      "No respiratory failure."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة البحة والصرير وضيق النفس والتشبع باستمرار.",
+      "en": "Continuous monitoring of hoarseness, stridor, dyspnea and SpO₂."
+     },
+     "rationale": {
+      "ar": "التورم يتطور خلال ساعات.",
+      "en": "Edema develops over hours."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "أكسجين 100% بقناع حسب الأمر (تسمم أول أكسيد الكربون).",
+      "en": "100% oxygen by mask as ordered (CO poisoning)."
+     },
+     "rationale": {
+      "ar": "يطرد أول أكسيد الكربون.",
+      "en": "Clears carbon monoxide."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التجهيز لأنبوبة حنجرية مبكرة عند علامات الخطر.",
+      "en": "Prepare for early intubation if danger signs."
+     },
+     "rationale": {
+      "ar": "التأخير يجعلها مستحيلة.",
+      "en": "Delay makes it impossible."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع رأس السرير 30 درجة.",
+      "en": "HOB 30°."
+     },
+     "rationale": {
+      "ar": "يقلل التورم.",
+      "en": "Reduces edema."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "غازات الدم ونسبة كربوكسي هيموجلوبين.",
+      "en": "ABG and carboxyhemoglobin."
+     },
+     "rationale": {
+      "ar": "تقييم التسمم.",
+      "en": "Assess poisoning."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "شفط الإفرازات وتشجيع الكحة.",
+      "en": "Suction and encourage coughing."
+     },
+     "rationale": {
+      "ar": "تنظيف مجرى الهواء.",
+      "en": "Airway clearance."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا صرير والتشبع 97% — تحقق.",
+      "en": "No stridor; SpO₂ 97% — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية مجرى الهواء",
+      "en": "Airway protection"
+     },
+     "actions": {
+      "ar": [
+       "متابعة البحة والصرير وضيق النفس والتشبع باستمرار.",
+       "أكسجين 100% بقناع حسب الأمر (تسمم أول أكسيد الكربون).",
+       "التجهيز لأنبوبة حنجرية مبكرة عند علامات الخطر.",
+       "رفع رأس السرير 30 درجة.",
+       "غازات الدم ونسبة كربوكسي هيموجلوبين.",
+       "شفط الإفرازات وتشجيع الكحة."
+      ],
+      "en": [
+       "Continuous monitoring of hoarseness, stridor, dyspnea and SpO₂.",
+       "100% oxygen by mask as ordered (CO poisoning).",
+       "Prepare for early intubation if danger signs.",
+       "HOB 30°.",
+       "ABG and carboxyhemoglobin.",
+       "Suction and encourage coughing."
+      ]
+     },
+     "outcome": {
+      "ar": "مجرى هواء مفتوح.",
+      "en": "Patent airway."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-burns",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (الحروق)",
+    "en": "Acute Pain (Burns)"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف الأنسجة.",
+    "en": "Unpleasant experience associated with tissue damage."
+   },
+   "relatedTo": {
+    "ar": [
+     "تلف الجلد وتعرض أطراف الأعصاب والغيارات"
+    ],
+    "en": [
+     "Skin damage, exposed nerve endings and dressings"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم 9/10",
+     "بكاء ورفض الغيار"
+    ],
+    "en": [
+     "Pain 9/10",
+     "Crying, refusing dressings"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش قادر أستحمل الغيار.\""
+     ],
+     "en": [
+      "\"I can't bear the dressing.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ألم 9/10."
+     ],
+     "en": [
+      "Pain 9/10."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "ألم ≤ 4/10 أثناء الراحة."
+     ],
+     "en": [
+      "Pain ≤ 4/10 at rest."
+     ]
+    },
+    "long": {
+     "ar": [
+      "غيارات محتملة الألم."
+     ],
+     "en": [
+      "Tolerable dressings."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الألم قبل وأثناء وبعد الغيار.",
+      "en": "Assess pain before, during and after dressing."
+     },
+     "rationale": {
+      "ar": "تسكين مخطط.",
+      "en": "Planned analgesia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مسكن أفيوني وريدي منتظم ومسكن إضافي قبل الغيار بـ 30 دقيقة.",
+      "en": "Regular IV opioid and a pre-dressing dose 30 minutes before."
+     },
+     "rationale": {
+      "ar": "الغيار أشد ألم.",
+      "en": "Dressings are most painful."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغطية الحروق بغيار مناسب يقلل تعرضها للهواء.",
+      "en": "Cover burns to reduce air exposure."
+     },
+     "rationale": {
+      "ar": "الهواء يزيد الألم.",
+      "en": "Air increases pain."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تدفئة الغرفة.",
+      "en": "Warm room."
+     },
+     "rationale": {
+      "ar": "المريض يفقد الحرارة.",
+      "en": "Patients lose heat."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إعطاء المريض اختيارًا في توقيت الغيار ووسائل إلهاء.",
+      "en": "Give choice in dressing timing; distraction."
+     },
+     "rationale": {
+      "ar": "إحساس بالتحكم.",
+      "en": "Sense of control."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة التنفس مع الأفيونات.",
+      "en": "Monitor breathing on opioids."
+     },
+     "rationale": {
+      "ar": "سلامة.",
+      "en": "Safety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 4/10 أثناء الراحة — تحقق.",
+      "en": "Pain 4/10 at rest — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تسكين الألم",
+      "en": "Pain control"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الألم قبل وأثناء وبعد الغيار.",
+       "مسكن أفيوني وريدي منتظم ومسكن إضافي قبل الغيار بـ 30 دقيقة.",
+       "تغطية الحروق بغيار مناسب يقلل تعرضها للهواء.",
+       "تدفئة الغرفة.",
+       "إعطاء المريض اختيارًا في توقيت الغيار ووسائل إلهاء.",
+       "متابعة التنفس مع الأفيونات."
+      ],
+      "en": [
+       "Assess pain before, during and after dressing.",
+       "Regular IV opioid and a pre-dressing dose 30 minutes before.",
+       "Cover burns to reduce air exposure.",
+       "Warm room.",
+       "Give choice in dressing timing; distraction.",
+       "Monitor breathing on opioids."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم محتمل.",
+      "en": "Tolerable pain."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-infection-burns",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى",
+    "en": "Risk for Infection"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة لجرح الحرق.",
+    "en": "Susceptibility to burn wound infection."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "فقد حاجز الجلد",
+     "ضعف المناعة",
+     "الأجهزة"
+    ],
+    "en": [
+     "Loss of skin barrier",
+     "Immunosuppression",
+     "Invasive devices"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الجرح ريحته وحشة؟\""
+     ],
+     "en": [
+      "\"Does the wound smell bad?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "حروق 35%، يوم 3."
+     ],
+     "en": [
+      "35% burns, day 3."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "جرح نظيف بدون علامات عدوى."
+     ],
+     "en": [
+      "Clean wound, no infection signs."
+     ]
+    },
+    "long": {
+     "ar": [
+      "التئام أو نجاح الترقيع بدون عدوى."
+     ],
+     "en": [
+      "Healing or graft take without infection."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تقنية معقمة في الغيار وارتداء الجاون والقفازات.",
+      "en": "Aseptic dressing technique with gown and gloves."
+     },
+     "rationale": {
+      "ar": "منع العدوى.",
+      "en": "Prevents infection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة تغير لون الجرح أو رائحته أو إفرازاته أو تحول الحرق لدرجة أعمق.",
+      "en": "Watch for wound colour change, odour, discharge or conversion to deeper burn."
+     },
+     "rationale": {
+      "ar": "علامات عدوى الحرق.",
+      "en": "Burn infection signs."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "كريم سلفاديازين الفضة أو الغيار الموصوف.",
+      "en": "Silver sulfadiazine or prescribed dressing."
+     },
+     "rationale": {
+      "ar": "مضاد للميكروبات.",
+      "en": "Antimicrobial."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تطعيم التيتانوس حسب الحالة.",
+      "en": "Tetanus prophylaxis as indicated."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "عزل وقائي وتقليل الزوار.",
+      "en": "Protective isolation; limit visitors."
+     },
+     "rationale": {
+      "ar": "تقليل التعرض.",
+      "en": "Less exposure."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الحرارة والوعي (علامات تسمم الدم).",
+      "en": "Monitor temperature and consciousness (sepsis signs)."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الجرح نظيف يوم 5 — تحقق.",
+      "en": "Clean wound on day 5 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من العدوى",
+      "en": "Infection prevention"
+     },
+     "actions": {
+      "ar": [
+       "تقنية معقمة في الغيار وارتداء الجاون والقفازات.",
+       "ملاحظة تغير لون الجرح أو رائحته أو إفرازاته أو تحول الحرق لدرجة أعمق.",
+       "كريم سلفاديازين الفضة أو الغيار الموصوف.",
+       "تطعيم التيتانوس حسب الحالة.",
+       "عزل وقائي وتقليل الزوار.",
+       "متابعة الحرارة والوعي (علامات تسمم الدم)."
+      ],
+      "en": [
+       "Aseptic dressing technique with gown and gloves.",
+       "Watch for wound colour change, odour, discharge or conversion to deeper burn.",
+       "Silver sulfadiazine or prescribed dressing.",
+       "Tetanus prophylaxis as indicated.",
+       "Protective isolation; limit visitors.",
+       "Monitor temperature and consciousness (sepsis signs)."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عدوى.",
+      "en": "No infection."
+     },
+     "timeframe": {
+      "ar": "كل غيار",
+      "en": "Each dressing"
+     }
+    }
+   ]
+  },
+  {
+   "id": "imbalanced-nutrition-burns",
+   "kind": "actual",
+   "title": {
+    "ar": "تغذية أقل من احتياج الجسم",
+    "en": "Imbalanced Nutrition: Less Than Body Requirements"
+   },
+   "definition": {
+    "ar": "تناول غذاء غير كافٍ للاحتياج المرتفع.",
+    "en": "Intake insufficient for increased demand."
+   },
+   "relatedTo": {
+    "ar": [
+     "زيادة الحرق الأيضي بعد الحروق"
+    ],
+    "en": [
+     "Hypermetabolism after burns"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "نقص الوزن",
+     "ضعف التئام"
+    ],
+    "en": [
+     "Weight loss",
+     "Poor healing"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مليش نفس.\""
+     ],
+     "en": [
+      "\"No appetite.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الاحتياج المقدر 3200 سعر."
+     ],
+     "en": [
+      "Estimated need 3200 kcal."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوع: الوصول لـ 90% من الاحتياج."
+     ],
+     "en": [
+      "Within a week: 90% of requirements."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ثبات الوزن والتئام الجروح."
+     ],
+     "en": [
+      "Stable weight; wound healing."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تغذية مبكرة خلال 24 ساعة (بالأنبوبة عند الحاجة).",
+      "en": "Early feeding within 24 h (tube if needed)."
+     },
+     "rationale": {
+      "ar": "تقلل الهدم والعدوى.",
+      "en": "Reduces catabolism and infection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "أكل عالي السعرات والبروتين وفيتامينات حسب أخصائي التغذية.",
+      "en": "High-calorie, high-protein diet and vitamins per dietitian."
+     },
+     "rationale": {
+      "ar": "لبناء الأنسجة.",
+      "en": "Tissue building."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "وزن مرتين أسبوعيًا وتسجيل السعرات.",
+      "en": "Weigh twice weekly; calorie count."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة السكر.",
+      "en": "Monitor glucose."
+     },
+     "rationale": {
+      "ar": "ارتفاع السكر شائع.",
+      "en": "Hyperglycemia is common."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وجبات صغيرة متكررة والمسكن قبل الأكل.",
+      "en": "Small frequent meals; analgesia before meals."
+     },
+     "rationale": {
+      "ar": "تحسن الأكل.",
+      "en": "Improves intake."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مكملات غذائية.",
+      "en": "Nutritional supplements."
+     },
+     "rationale": {
+      "ar": "تعويض.",
+      "en": "Supplementation."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "يصل لـ 75% من الاحتياج — تحقق جزئيًا.",
+      "en": "Reaching 75% — partially met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التغذية",
+      "en": "Nutrition"
+     },
+     "actions": {
+      "ar": [
+       "تغذية مبكرة خلال 24 ساعة (بالأنبوبة عند الحاجة).",
+       "أكل عالي السعرات والبروتين وفيتامينات حسب أخصائي التغذية.",
+       "وزن مرتين أسبوعيًا وتسجيل السعرات.",
+       "متابعة السكر.",
+       "وجبات صغيرة متكررة والمسكن قبل الأكل.",
+       "مكملات غذائية."
+      ],
+      "en": [
+       "Early feeding within 24 h (tube if needed).",
+       "High-calorie, high-protein diet and vitamins per dietitian.",
+       "Weigh twice weekly; calorie count.",
+       "Monitor glucose.",
+       "Small frequent meals; analgesia before meals.",
+       "Nutritional supplements."
+      ]
+     },
+     "outcome": {
+      "ar": "90% من الاحتياج.",
+      "en": "90% of needs."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "disturbed-body-image-burns",
+   "kind": "actual",
+   "title": {
+    "ar": "اضطراب صورة الجسم",
+    "en": "Disturbed Body Image"
+   },
+   "definition": {
+    "ar": "اضطراب في نظرة الشخص لجسمه.",
+    "en": "Confusion in the mental picture of one's physical self."
+   },
+   "relatedTo": {
+    "ar": [
+     "تشوهات وندبات الحروق"
+    ],
+    "en": [
+     "Burn disfigurement and scarring"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "رفض النظر للجروح",
+     "انسحاب"
+    ],
+    "en": [
+     "Refusing to look at wounds",
+     "Withdrawal"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش عايز حد يشوفني كده.\""
+     ],
+     "en": [
+      "\"I don't want anyone to see me like this.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يغطي وجهه عند دخول الزوار."
+     ],
+     "en": [
+      "Covers his face when visitors come."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوعين: يعبر عن مشاعره وينظر للجروح."
+     ],
+     "en": [
+      "Within 2 weeks: expresses feelings and looks at wounds."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تقبل تدريجي وعودة للحياة الاجتماعية."
+     ],
+     "en": [
+      "Gradual acceptance and social reintegration."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "الاستماع وتشجيع التعبير عن المشاعر.",
+      "en": "Listen; encourage expression of feelings."
+     },
+     "rationale": {
+      "ar": "المشاعر جزء طبيعي من التعافي.",
+      "en": "Feelings are part of recovery."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح مراحل الالتئام والعلاج التجميلي والضاغط المتاح.",
+      "en": "Explain healing stages, reconstructive and pressure-garment options."
+     },
+     "rationale": {
+      "ar": "أمل واقعي.",
+      "en": "Realistic hope."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المشاركة في العناية بالجروح تدريجيًا.",
+      "en": "Encourage gradual participation in wound care."
+     },
+     "rationale": {
+      "ar": "تقبل.",
+      "en": "Acceptance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إشراك الأسرة في الدعم.",
+      "en": "Involve family in support."
+     },
+     "rationale": {
+      "ar": "دعم.",
+      "en": "Support."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إحالة للدعم النفسي ومجموعات الدعم.",
+      "en": "Refer to psychological support and peer groups."
+     },
+     "rationale": {
+      "ar": "دعم متخصص.",
+      "en": "Specialist support."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "العلاج الطبيعي والوظيفي للوقاية من الانكماش.",
+      "en": "Physio/OT to prevent contractures."
+     },
+     "rationale": {
+      "ar": "وظيفة وشكل أفضل.",
+      "en": "Better function and appearance."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "بدأ ينظر للجروح ويتحدث مع أخيه — تحقق جزئيًا.",
+      "en": "Started looking at wounds; talking with his brother — partially met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "دعم نفسي",
+      "en": "Psychosocial support"
+     },
+     "actions": {
+      "ar": [
+       "الاستماع وتشجيع التعبير عن المشاعر.",
+       "شرح مراحل الالتئام والعلاج التجميلي والضاغط المتاح.",
+       "تشجيع المشاركة في العناية بالجروح تدريجيًا.",
+       "إشراك الأسرة في الدعم.",
+       "إحالة للدعم النفسي ومجموعات الدعم.",
+       "العلاج الطبيعي والوظيفي للوقاية من الانكماش."
+      ],
+      "en": [
+       "Listen; encourage expression of feelings.",
+       "Explain healing stages, reconstructive and pressure-garment options.",
+       "Encourage gradual participation in wound care.",
+       "Involve family in support.",
+       "Refer to psychological support and peer groups.",
+       "Physio/OT to prevent contractures."
+      ]
+     },
+     "outcome": {
+      "ar": "تقبل تدريجي.",
+      "en": "Gradual acceptance."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "ISBI Practice Guidelines for Burn Care (2016, Part 2 2018)"
+  },
+  {
+   "title": "ABA — Advanced Burn Life Support Course Provider Manual (2018)"
+  }
+ ]
+}

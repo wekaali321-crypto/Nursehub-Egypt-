@@ -35,20 +35,23 @@ export interface CarePlanIndexItem {
 }
 export interface CarePlan { id: string; icon: string; system: string; folder: "disease" | "general"; group?: string; title: Bi; summary: Bi; diagnoses: Diagnosis[]; refs?: { title: string; url?: string }[] }
 
+/** Disease categories, in display order (mirrors scripts/build-careplans-index.mjs ORDER). */
 export const SYSTEMS: Record<string, { ar: string; en: string }> = {
-  cardiology: { ar: "القلب", en: "Cardiology" },
-  respiratory: { ar: "الصدر", en: "Respiratory" },
-  endocrine: { ar: "الغدد والسكر", en: "Endocrine" },
-  neurology: { ar: "المخ والأعصاب", en: "Neurology" },
-  renal: { ar: "الكلى", en: "Renal" },
-  gastro: { ar: "الجهاز الهضمي والكبد", en: "GI & Liver" },
-  hematology: { ar: "الدم", en: "Hematology" },
-  surgery: { ar: "الجراحة", en: "Surgery" },
-  orthopedics: { ar: "العظام", en: "Orthopedics" },
-  obstetrics: { ar: "النساء والتوليد", en: "Obstetrics" },
-  pediatrics: { ar: "الأطفال", en: "Pediatrics" },
-  integumentary: { ar: "الجلد والحروق", en: "Skin & Burns" },
-  infection: { ar: "العدوى", en: "Infection" },
+  surgery: { ar: "الجراحة وما حول العمليات", en: "Surgery & Perioperative" },
+  cardiology: { ar: "القلب والأوعية الدموية", en: "Cardiovascular" },
+  endocrine: { ar: "الغدد الصماء والتمثيل الغذائي", en: "Endocrine & Metabolic" },
+  gastro: { ar: "الجهاز الهضمي والكبد", en: "Gastrointestinal & Digestive" },
+  renal: { ar: "الكلى والمسالك البولية", en: "Genitourinary" },
+  hematology: { ar: "الدم والجهاز الليمفاوي", en: "Hematologic & Lymphatic" },
+  infection: { ar: "الأمراض المعدية", en: "Infectious Diseases" },
+  integumentary: { ar: "الجلد والحروق", en: "Integumentary" },
+  obstetrics: { ar: "الأم والوليد", en: "Maternity & Newborn" },
+  mental: { ar: "الصحة النفسية", en: "Mental Health & Psychiatric" },
+  orthopedics: { ar: "العظام والعضلات", en: "Musculoskeletal" },
+  neurology: { ar: "المخ والأعصاب", en: "Neurological" },
+  ophthalmic: { ar: "العيون", en: "Ophthalmic" },
+  pediatrics: { ar: "تمريض الأطفال", en: "Pediatric Nursing" },
+  respiratory: { ar: "الجهاز التنفسي", en: "Respiratory" },
   general: { ar: "عام", en: "General" },
 };
 /** Groups of the "general" folder. */

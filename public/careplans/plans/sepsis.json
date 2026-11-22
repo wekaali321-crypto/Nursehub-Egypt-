@@ -1,0 +1,1123 @@
+{
+ "id": "sepsis",
+ "icon": "🦠",
+ "system": "infection",
+ "folder": "disease",
+ "title": {
+  "ar": "تسمم الدم (الإنتان)",
+  "en": "Sepsis & Septic Shock"
+ },
+ "summary": {
+  "ar": "خطة رعاية تسمم الدم: التعرف المبكر وحزمة الساعة الأولى، الحمى، حماية الكلى، الهذيان، قلق الأسرة، ومنع انتشار العدوى.",
+  "en": "Sepsis care plan: early recognition and hour-1 bundle, fever, kidney protection, delirium, family anxiety and infection control."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-shock-sepsis",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الصدمة (تسمم الدم)",
+    "en": "Risk for Shock (Sepsis)"
+   },
+   "definition": {
+    "ar": "قابلية لنقص تروية الأنسجة يؤدي لخلل الخلايا وفشل الأعضاء.",
+    "en": "Susceptibility to inadequate tissue perfusion leading to cellular dysfunction and organ failure."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "عدوى مع استجابة جسم مضطربة",
+     "توسع الأوعية وتسرب السوائل"
+    ],
+    "en": [
+     "Infection with dysregulated host response",
+     "Vasodilation and capillary leak"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس إني تعبان جدًا ودايخ.\""
+     ],
+     "en": [
+      "\"I feel very unwell and dizzy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الحرارة 39.1، النبض 124، الضغط 88/50، التنفس 26.",
+      "لاكتات 4.1، تشوش."
+     ],
+     "en": [
+      "T 39.1, HR 124, BP 88/50, RR 26.",
+      "Lactate 4.1; confused."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: تنفيذ حزمة الساعة الأولى ومتوسط ضغط ≥ 65."
+     ],
+     "en": [
+      "Within 1 h: hour-1 bundle done; MAP ≥ 65."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 6 ساعات: لاكتات تنخفض وبول ≥ 0.5 مل/كجم/ساعة."
+     ],
+     "en": [
+      "Within 6 h: falling lactate, urine ≥ 0.5 mL/kg/h."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "التعرف المبكر بالعلامات الحيوية ومقياس الإنذار المبكر (NEWS2/qSOFA) وإبلاغ الطبيب فورًا.",
+      "en": "Early recognition with vitals and early-warning scores (NEWS2/qSOFA); alert the physician at once."
+     },
+     "rationale": {
+      "ar": "كل ساعة تأخير تزيد الوفيات.",
+      "en": "Each hour of delay increases mortality."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "سحب اللاكتات ومزارع الدم قبل المضاد الحيوي.",
+      "en": "Draw lactate and blood cultures before antibiotics."
+     },
+     "rationale": {
+      "ar": "تحديد الشدة والميكروب.",
+      "en": "Defines severity and organism."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء المضاد الحيوي واسع المجال خلال ساعة.",
+      "en": "Give broad-spectrum antibiotics within 1 hour."
+     },
+     "rationale": {
+      "ar": "أهم تدخل ينقذ الحياة.",
+      "en": "The key life-saving intervention."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "سوائل وريدية 30 مل/كجم عند هبوط الضغط أو لاكتات ≥ 4 حسب الأمر مع متابعة علامات زيادة السوائل.",
+      "en": "IV crystalloid 30 mL/kg for hypotension or lactate ≥ 4 as ordered; watch for overload."
+     },
+     "rationale": {
+      "ar": "يعيد الحجم والتروية.",
+      "en": "Restores volume and perfusion."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الأدوية الرافعة للضغط (نورأدرينالين) إذا استمر الهبوط بعد السوائل.",
+      "en": "Vasopressors (norepinephrine) if hypotension persists after fluids."
+     },
+     "rationale": {
+      "ar": "متوسط ضغط ≥ 65.",
+      "en": "MAP ≥ 65."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "البول كل ساعة بقسطرة، والوعي، ورجوع الدم، وتكرار اللاكتات.",
+      "en": "Hourly urine via catheter, consciousness, capillary refill, repeat lactate."
+     },
+     "rationale": {
+      "ar": "مؤشرات التروية.",
+      "en": "Perfusion markers."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "البحث عن مصدر العدوى والسيطرة عليه (خراج، قسطرة، جرح).",
+      "en": "Identify and control the source (abscess, line, wound)."
+     },
+     "rationale": {
+      "ar": "علاج السبب.",
+      "en": "Treats the cause."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "متوسط الضغط 70 بعد السوائل، اللاكتات 2.2 بعد 6 ساعات — تحقق.",
+      "en": "MAP 70 after fluids; lactate 2.2 at 6 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حزمة الساعة الأولى",
+      "en": "Hour-1 bundle"
+     },
+     "actions": {
+      "ar": [
+       "التعرف المبكر بالعلامات الحيوية ومقياس الإنذار المبكر (NEWS2/qSOFA) وإبلاغ الطبيب فورًا.",
+       "سحب اللاكتات ومزارع الدم قبل المضاد الحيوي.",
+       "إعطاء المضاد الحيوي واسع المجال خلال ساعة.",
+       "سوائل وريدية 30 مل/كجم عند هبوط الضغط أو لاكتات ≥ 4 حسب الأمر مع متابعة علامات زيادة السوائل."
+      ],
+      "en": [
+       "Early recognition with vitals and early-warning scores (NEWS2/qSOFA); alert the physician at once.",
+       "Draw lactate and blood cultures before antibiotics.",
+       "Give broad-spectrum antibiotics within 1 hour.",
+       "IV crystalloid 30 mL/kg for hypotension or lactate ≥ 4 as ordered; watch for overload."
+      ]
+     },
+     "outcome": {
+      "ar": "مضاد حيوي خلال ساعة.",
+      "en": "Antibiotics within 1 h."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "دعم الدورة والمصدر",
+      "en": "Circulatory support and source control"
+     },
+     "actions": {
+      "ar": [
+       "الأدوية الرافعة للضغط (نورأدرينالين) إذا استمر الهبوط بعد السوائل.",
+       "البول كل ساعة بقسطرة، والوعي، ورجوع الدم، وتكرار اللاكتات.",
+       "البحث عن مصدر العدوى والسيطرة عليه (خراج، قسطرة، جرح)."
+      ],
+      "en": [
+       "Vasopressors (norepinephrine) if hypotension persists after fluids.",
+       "Hourly urine via catheter, consciousness, capillary refill, repeat lactate.",
+       "Identify and control the source (abscess, line, wound)."
+      ]
+     },
+     "outcome": {
+      "ar": "تروية كافية.",
+      "en": "Adequate perfusion."
+     },
+     "timeframe": {
+      "ar": "6 ساعات",
+      "en": "6 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "hyperthermia-sepsis",
+   "kind": "actual",
+   "title": {
+    "ar": "ارتفاع درجة الحرارة",
+    "en": "Hyperthermia"
+   },
+   "definition": {
+    "ar": "ارتفاع حرارة الجسم بسبب العدوى.",
+    "en": "Raised temperature due to infection."
+   },
+   "relatedTo": {
+    "ar": [
+     "العدوى الشديدة"
+    ],
+    "en": [
+     "Severe infection"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "حرارة 39.1",
+     "رعشة"
+    ],
+    "en": [
+     "T 39.1",
+     "Rigors"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بترعش.\""
+     ],
+     "en": [
+      "\"I'm shivering.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الحرارة 39.1."
+     ],
+     "en": [
+      "T 39.1."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعتين: حرارة < 38.5."
+     ],
+     "en": [
+      "Within 2 h: T < 38.5."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا حمى بعد 72 ساعة من العلاج."
+     ],
+     "en": [
+      "Afebrile within 72 h of therapy."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "الحرارة كل ساعة إلى 4 ساعات.",
+      "en": "T every 1–4 h."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "خافض حرارة حسب الأمر.",
+      "en": "Antipyretic as ordered."
+     },
+     "rationale": {
+      "ar": "يقلل الاستهلاك.",
+      "en": "Reduces demand."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "ملابس خفيفة وكمادات فاترة.",
+      "en": "Light clothing; tepid sponging."
+     },
+     "rationale": {
+      "ar": "تبريد.",
+      "en": "Cooling."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "سوائل فموية إن أمكن.",
+      "en": "Oral fluids if possible."
+     },
+     "rationale": {
+      "ar": "تعويض.",
+      "en": "Replacement."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تغيير الملابس المبللة.",
+      "en": "Change damp linen."
+     },
+     "rationale": {
+      "ar": "راحة.",
+      "en": "Comfort."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "ملاحظة انخفاض الحرارة < 36 (علامة سيئة).",
+      "en": "Watch for T < 36 (poor sign)."
+     },
+     "rationale": {
+      "ar": "تدهور.",
+      "en": "Deterioration."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحرارة 38.1 بعد ساعتين — تحقق.",
+      "en": "T 38.1 at 2 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "خفض الحرارة",
+      "en": "Reduce fever"
+     },
+     "actions": {
+      "ar": [
+       "الحرارة كل ساعة إلى 4 ساعات.",
+       "خافض حرارة حسب الأمر.",
+       "ملابس خفيفة وكمادات فاترة.",
+       "سوائل فموية إن أمكن.",
+       "تغيير الملابس المبللة.",
+       "ملاحظة انخفاض الحرارة < 36 (علامة سيئة)."
+      ],
+      "en": [
+       "T every 1–4 h.",
+       "Antipyretic as ordered.",
+       "Light clothing; tepid sponging.",
+       "Oral fluids if possible.",
+       "Change damp linen.",
+       "Watch for T < 36 (poor sign)."
+      ]
+     },
+     "outcome": {
+      "ar": "حرارة < 38.5.",
+      "en": "T < 38.5."
+     },
+     "timeframe": {
+      "ar": "ساعتين",
+      "en": "2 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-acute-kidney-injury-sepsis",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر إصابة الكلى الحادة",
+    "en": "Risk for Acute Kidney Injury"
+   },
+   "definition": {
+    "ar": "قابلية لنقص مفاجئ في وظائف الكلى.",
+    "en": "Susceptibility to sudden decline in renal function."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "نقص التروية",
+     "أدوية ضارة بالكلى"
+    ],
+    "en": [
+     "Hypoperfusion",
+     "Nephrotoxic drugs"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "لا يشعر بالحاجة للتبول."
+     ],
+     "en": [
+      "No urge to void."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "البول 20 مل/ساعة، كرياتينين 1.8."
+     ],
+     "en": [
+      "Urine 20 mL/h, creatinine 1.8."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 6 ساعات: بول ≥ 0.5 مل/كجم/ساعة."
+     ],
+     "en": [
+      "Within 6 h: urine ≥ 0.5 mL/kg/h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "عودة الكرياتينين لمستواه."
+     ],
+     "en": [
+      "Creatinine returns to baseline."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "البول كل ساعة.",
+      "en": "Hourly urine."
+     },
+     "rationale": {
+      "ar": "أول علامة.",
+      "en": "Earliest sign."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة الكرياتينين والبوتاسيوم يوميًا.",
+      "en": "Daily creatinine and potassium."
+     },
+     "rationale": {
+      "ar": "تقييم الكلى.",
+      "en": "Renal assessment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "الحفاظ على الضغط والتروية.",
+      "en": "Maintain BP and perfusion."
+     },
+     "rationale": {
+      "ar": "تروية الكلى.",
+      "en": "Renal perfusion."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "مراجعة جرعات الأدوية حسب وظائف الكلى ومستوى المضادات (فانكومايسين، أمينوجليكوزيد).",
+      "en": "Adjust doses to renal function; monitor drug levels (vancomycin, aminoglycosides)."
+     },
+     "rationale": {
+      "ar": "تجنب السمية.",
+      "en": "Avoid toxicity."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تجنب الصبغة والمسكنات المضادة للالتهاب.",
+      "en": "Avoid contrast and NSAIDs."
+     },
+     "rationale": {
+      "ar": "تحمي الكلى.",
+      "en": "Protect kidneys."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عند بول < 0.5 مل/كجم/ساعة لساعتين.",
+      "en": "Report urine < 0.5 mL/kg/h for 2 h."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early intervention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "البول 45 مل/ساعة بعد 6 ساعات — تحقق.",
+      "en": "Urine 45 mL/h at 6 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية الكلى",
+      "en": "Renal protection"
+     },
+     "actions": {
+      "ar": [
+       "البول كل ساعة.",
+       "متابعة الكرياتينين والبوتاسيوم يوميًا.",
+       "الحفاظ على الضغط والتروية.",
+       "مراجعة جرعات الأدوية حسب وظائف الكلى ومستوى المضادات (فانكومايسين، أمينوجليكوزيد).",
+       "تجنب الصبغة والمسكنات المضادة للالتهاب.",
+       "إبلاغ الطبيب عند بول < 0.5 مل/كجم/ساعة لساعتين."
+      ],
+      "en": [
+       "Hourly urine.",
+       "Daily creatinine and potassium.",
+       "Maintain BP and perfusion.",
+       "Adjust doses to renal function; monitor drug levels (vancomycin, aminoglycosides).",
+       "Avoid contrast and NSAIDs.",
+       "Report urine < 0.5 mL/kg/h for 2 h."
+      ]
+     },
+     "outcome": {
+      "ar": "بول كافٍ.",
+      "en": "Adequate urine."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-acute-confusion-sepsis",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر التشوش الحاد",
+    "en": "Risk for Acute Confusion"
+   },
+   "definition": {
+    "ar": "قابلية لاضطراب مفاجئ في الوعي.",
+    "en": "Susceptibility to sudden altered consciousness."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "نقص تروية المخ والسموم",
+     "كبر السن"
+    ],
+    "en": [
+     "Cerebral hypoperfusion and toxins",
+     "Old age"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الابنة: \"مش عارفنا.\""
+     ],
+     "en": [
+      "Daughter: \"He doesn't recognize us.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "تشوش، CAM إيجابي."
+     ],
+     "en": [
+      "Confused; CAM positive."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: تحسن التوجه."
+     ],
+     "en": [
+      "Every shift: improving orientation."
+     ]
+    },
+    "long": {
+     "ar": [
+      "عودة الوعي الطبيعي."
+     ],
+     "en": [
+      "Normal mentation restored."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم الوعي بالجلاسكو وCAM كل وردية.",
+      "en": "GCS and CAM every shift."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التوجيه المتكرر ووجود الأسرة.",
+      "en": "Frequent reorientation; family presence."
+     },
+     "rationale": {
+      "ar": "يقلل التشوش.",
+      "en": "Reduces confusion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "بيئة آمنة واحتياطات السقوط.",
+      "en": "Safe environment; fall precautions."
+     },
+     "rationale": {
+      "ar": "منع الإصابة.",
+      "en": "Prevents injury."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تصحيح نقص الأكسجين والسكر والأملاح.",
+      "en": "Correct hypoxia, glucose and electrolytes."
+     },
+     "rationale": {
+      "ar": "أسباب قابلة للعلاج.",
+      "en": "Reversible causes."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تجنب المهدئات غير الضرورية.",
+      "en": "Avoid unnecessary sedatives."
+     },
+     "rationale": {
+      "ar": "تزيد الهذيان.",
+      "en": "Worsen delirium."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "حماية النوم ليلًا.",
+      "en": "Protect night sleep."
+     },
+     "rationale": {
+      "ar": "يقلل الهذيان.",
+      "en": "Reduces delirium."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "متوجه يوم 3 — تحقق.",
+      "en": "Oriented on day 3 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من الهذيان",
+      "en": "Delirium prevention"
+     },
+     "actions": {
+      "ar": [
+       "تقييم الوعي بالجلاسكو وCAM كل وردية.",
+       "التوجيه المتكرر ووجود الأسرة.",
+       "بيئة آمنة واحتياطات السقوط.",
+       "تصحيح نقص الأكسجين والسكر والأملاح.",
+       "تجنب المهدئات غير الضرورية.",
+       "حماية النوم ليلًا."
+      ],
+      "en": [
+       "GCS and CAM every shift.",
+       "Frequent reorientation; family presence.",
+       "Safe environment; fall precautions.",
+       "Correct hypoxia, glucose and electrolytes.",
+       "Avoid unnecessary sedatives.",
+       "Protect night sleep."
+      ]
+     },
+     "outcome": {
+      "ar": "وعي طبيعي.",
+      "en": "Normal mentation."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-sepsis",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "شدة المرض ودخول الرعاية المركزة"
+    ],
+    "en": [
+     "Severity of illness and ICU admission"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "الزوجة: \"هو هيعيش؟\""
+     ],
+     "en": [
+      "Wife: \"Will he survive?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الأسرة قلقة."
+     ],
+     "en": [
+      "Family anxious."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواجد مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق والاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إطلاع الأسرة على الحالة بانتظام بالتنسيق مع الطبيب.",
+      "en": "Regular family updates coordinated with the physician."
+     },
+     "rationale": {
+      "ar": "يقلل قلق الأسرة.",
+      "en": "Reduces family anxiety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+       "التواجد مع المريض والتحدث بهدوء وثقة.",
+       "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "تعليم التنفس البطيء العميق والاسترخاء.",
+       "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+       "إطلاع الأسرة على الحالة بانتظام بالتنسيق مع الطبيب."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy.",
+       "Regular family updates coordinated with the physician."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-infection-spread-sepsis",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر انتشار العدوى",
+    "en": "Risk for Infection Spread"
+   },
+   "definition": {
+    "ar": "قابلية لانتقال العدوى أو حدوث عدوى جديدة.",
+    "en": "Susceptibility to transmission or new infection."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "أجهزة متعددة",
+     "ميكروب مقاوم محتمل"
+    ],
+    "en": [
+     "Multiple devices",
+     "Possible resistant organism"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "لا يتكلم بوضوح."
+     ],
+     "en": [
+      "Not speaking clearly."
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قسطرة مركزية وبولية."
+     ],
+     "en": [
+      "Central line and urinary catheter."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "تطبيق احتياطات العدوى كل وردية."
+     ],
+     "en": [
+      "Infection precautions every shift."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا عدوى جديدة."
+     ],
+     "en": [
+      "No new infection."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "غسل الأيدي واللحظات الخمس.",
+      "en": "Hand hygiene (5 moments)."
+     },
+     "rationale": {
+      "ar": "أساس الوقاية.",
+      "en": "Basis of prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "حزم الوقاية للقسطرة المركزية والبولية.",
+      "en": "Central line and catheter bundles."
+     },
+     "rationale": {
+      "ar": "تمنع عدوى الأجهزة.",
+      "en": "Prevent device infections."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "احتياطات العزل حسب نتيجة المزرعة.",
+      "en": "Isolation precautions per culture result."
+     },
+     "rationale": {
+      "ar": "منع الانتقال.",
+      "en": "Prevents spread."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تعديل المضاد الحيوي حسب المزرعة ومراجعته يوميًا.",
+      "en": "De-escalate antibiotics per culture; review daily."
+     },
+     "rationale": {
+      "ar": "يقلل المقاومة.",
+      "en": "Reduces resistance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "إزالة الأجهزة غير الضرورية.",
+      "en": "Remove unnecessary devices."
+     },
+     "rationale": {
+      "ar": "تقلل المصادر.",
+      "en": "Fewer sources."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "العناية بالفم والجلد.",
+      "en": "Oral and skin care."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا عدوى جديدة — تحقق.",
+      "en": "No new infection — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "مكافحة العدوى",
+      "en": "Infection control"
+     },
+     "actions": {
+      "ar": [
+       "غسل الأيدي واللحظات الخمس.",
+       "حزم الوقاية للقسطرة المركزية والبولية.",
+       "احتياطات العزل حسب نتيجة المزرعة.",
+       "تعديل المضاد الحيوي حسب المزرعة ومراجعته يوميًا.",
+       "إزالة الأجهزة غير الضرورية.",
+       "العناية بالفم والجلد."
+      ],
+      "en": [
+       "Hand hygiene (5 moments).",
+       "Central line and catheter bundles.",
+       "Isolation precautions per culture result.",
+       "De-escalate antibiotics per culture; review daily.",
+       "Remove unnecessary devices.",
+       "Oral and skin care."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عدوى جديدة.",
+      "en": "No new infection."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock (2021)"
+  },
+  {
+   "title": "NICE NG51 — Suspected sepsis (2016, updated 2024)"
+  }
+ ]
+}
