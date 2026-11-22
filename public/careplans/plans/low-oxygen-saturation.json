@@ -1,0 +1,434 @@
+{
+ "id": "low-oxygen-saturation",
+ "icon": "📉",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "انخفاض مستوى الأكسجين بالدم",
+  "en": "Low Oxygen Saturation (Hypoxemia)"
+ },
+ "summary": {
+  "ar": "خطة رعاية انخفاض نسبة الأكسجين: القياس والمونيتور، الأكسجين ووضع الجلوس، جلسات النيبولايزر، التصعيد، والتعامل مع القلق.",
+  "en": "Hypoxemia care plan: measurement and monitoring, oxygen and upright positioning, nebulizers, escalation and anxiety."
+ },
+ "diagnoses": [
+  {
+   "id": "impaired-gas-exchange-hypoxemia",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف تبادل الغازات (انخفاض الأكسجين بالدم)",
+    "en": "Impaired Gas Exchange (Hypoxemia)"
+   },
+   "definition": {
+    "ar": "نقص الأكسجين في الدم الشرياني.",
+    "en": "Decreased oxygen in arterial blood."
+   },
+   "relatedTo": {
+    "ar": [
+     "مرض رئوي أو قلبي",
+     "ضعف التهوية"
+    ],
+    "en": [
+     "Pulmonary or cardiac disease",
+     "Hypoventilation"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تشبع < 92%",
+     "ضيق نفس وزرقة",
+     "تململ وتشوش"
+    ],
+    "en": [
+     "SpO₂ < 92%",
+     "Dyspnea and cyanosis",
+     "Restlessness and confusion"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"مش قادر أتنفس.\""
+     ],
+     "en": [
+      "\"I can't breathe.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "التشبع 86%، التنفس 30، زرقة الشفاه."
+     ],
+     "en": [
+      "SpO₂ 86%, RR 30, lip cyanosis."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 30 دقيقة: التشبع في المدى المستهدف والقدرة على التنفس براحة."
+     ],
+     "en": [
+      "Within 30 minutes: SpO₂ at target; breathing comfortably."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ارتفاع نسبة الأكسجين للمعدل الطبيعي واستقرار الحالة."
+     ],
+     "en": [
+      "Oxygen back to normal; stable condition."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس نسبة الأكسجين بالدم وإبلاغ الطبيب.",
+      "en": "Measure SpO₂ and report to the physician."
+     },
+     "rationale": {
+      "ar": "تحديد الشدة.",
+      "en": "Defines severity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "وضع المريض على المونيتور.",
+      "en": "Place the patient on a monitor."
+     },
+     "rationale": {
+      "ar": "متابعة مستمرة.",
+      "en": "Continuous monitoring."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "رفع مستوى الأكسجين بالدم حسب تعليمات الطبيب (الوسيلة والمعدل المحددان).",
+      "en": "Give oxygen per orders (device and flow) to raise SpO₂."
+     },
+     "rationale": {
+      "ar": "يعالج نقص الأكسجين.",
+      "en": "Treats hypoxemia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "رفع مستوى السرير إلى 45 درجة أو أكثر.",
+      "en": "Raise the head of bed to 45° or more."
+     },
+     "rationale": {
+      "ar": "يحسن التهوية.",
+      "en": "Improves ventilation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التنفس بالشكل الصحيح (عميق وبطيء).",
+      "en": "Encourage correct breathing (slow and deep)."
+     },
+     "rationale": {
+      "ar": "يحسن الأكسجة.",
+      "en": "Improves oxygenation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "عمل جلسات نيبولايزر حسب تعليمات الطبيب.",
+      "en": "Nebulizer sessions as ordered."
+     },
+     "rationale": {
+      "ar": "يفتح الشعب.",
+      "en": "Opens airways."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إعطاء العلاج وعمل غازات الدم حسب تعليمات الطبيب.",
+      "en": "Give treatment and obtain ABG as ordered."
+     },
+     "rationale": {
+      "ar": "تقييم وعلاج السبب.",
+      "en": "Assess and treat the cause."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التصعيد للتنفس غير التدخلي أو الرعاية المركزة إذا لم يتحسن.",
+      "en": "Escalate to NIV or ICU if no improvement."
+     },
+     "rationale": {
+      "ar": "منع الفشل التنفسي.",
+      "en": "Prevents respiratory failure."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 95% على قناع 6 لتر خلال 20 دقيقة — تحقق.",
+      "en": "SpO₂ 95% on 6 L mask within 20 minutes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "قياس ومتابعة",
+      "en": "Measure and monitor"
+     },
+     "actions": {
+      "ar": [
+       "قياس نسبة الأكسجين بالدم وإبلاغ الطبيب.",
+       "وضع المريض على المونيتور."
+      ],
+      "en": [
+       "Measure SpO₂ and report to the physician.",
+       "Place the patient on a monitor."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع موثق.",
+      "en": "SpO₂ documented."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    },
+    {
+     "need": {
+      "ar": "رفع الأكسجين",
+      "en": "Raise oxygen"
+     },
+     "actions": {
+      "ar": [
+       "رفع مستوى الأكسجين بالدم حسب تعليمات الطبيب (الوسيلة والمعدل المحددان).",
+       "رفع مستوى السرير إلى 45 درجة أو أكثر.",
+       "تشجيع المريض على التنفس بالشكل الصحيح (عميق وبطيء).",
+       "عمل جلسات نيبولايزر حسب تعليمات الطبيب.",
+       "إعطاء العلاج وعمل غازات الدم حسب تعليمات الطبيب.",
+       "التصعيد للتنفس غير التدخلي أو الرعاية المركزة إذا لم يتحسن."
+      ],
+      "en": [
+       "Give oxygen per orders (device and flow) to raise SpO₂.",
+       "Raise the head of bed to 45° or more.",
+       "Encourage correct breathing (slow and deep).",
+       "Nebulizer sessions as ordered.",
+       "Give treatment and obtain ABG as ordered.",
+       "Escalate to NIV or ICU if no improvement."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع في المدى المستهدف.",
+      "en": "SpO₂ at target."
+     },
+     "timeframe": {
+      "ar": "لحين تحسن الحالة",
+      "en": "Until improved"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-hypoxemia",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "ضيق النفس وإحساس الاختناق"
+    ],
+    "en": [
+     "Breathlessness and suffocation"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس إني بتخنق.\""
+     ],
+     "en": [
+      "\"I feel like I'm suffocating.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قلق، يحاول خلع القناع."
+     ],
+     "en": [
+      "Anxious, trying to remove the mask."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "التواجد مع المريض والتحدث بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "تعليم التنفس البطيء العميق والاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تقليل القلق",
+      "en": "Reduce anxiety"
+     },
+     "actions": {
+      "ar": [
+       "تقييم مستوى القلق (خفيف/متوسط/شديد) ومصادره.",
+       "التواجد مع المريض والتحدث بهدوء وثقة.",
+       "شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "تعليم التنفس البطيء العميق والاسترخاء.",
+       "السماح بوجود أحد أفراد الأسرة حسب سياسة القسم."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "BTS Guideline for oxygen use in healthcare and emergency settings (2017)"
+  },
+  {
+   "title": "جداول خطط الرعاية التمريضية بالمستشفى — NurseHub Egypt (ملفات المؤسس)"
+  }
+ ],
+ "group": "vitals"
+}

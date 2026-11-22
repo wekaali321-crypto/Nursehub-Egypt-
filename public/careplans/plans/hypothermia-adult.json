@@ -1,0 +1,421 @@
+{
+ "id": "hypothermia-adult",
+ "icon": "🥶",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "انخفاض درجة حرارة الجسم (الكبار)",
+  "en": "Hypothermia (Adults)"
+ },
+ "summary": {
+  "ar": "خطة رعاية انخفاض الحرارة عند الكبار: التدفئة التدريجية الآمنة، مراقبة القلب، والبحث عن السبب والوقاية.",
+  "en": "Adult hypothermia care plan: safe gradual rewarming, cardiac monitoring, finding the cause and prevention."
+ },
+ "diagnoses": [
+  {
+   "id": "hypothermia-adult",
+   "kind": "actual",
+   "title": {
+    "ar": "انخفاض درجة حرارة الجسم",
+    "en": "Hypothermia"
+   },
+   "definition": {
+    "ar": "حرارة الجسم الداخلية أقل من 35 درجة.",
+    "en": "Core body temperature below 35 °C."
+   },
+   "relatedTo": {
+    "ar": [
+     "التعرض للبرد",
+     "كبر السن وقلة الحركة",
+     "العدوى الشديدة أو قصور الغدة الدرقية",
+     "بعد العمليات"
+    ],
+    "en": [
+     "Cold exposure",
+     "Old age and immobility",
+     "Severe sepsis or hypothyroidism",
+     "Post-operative"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "حرارة 34.6",
+     "رعشة وبرودة الأطراف",
+     "بطء النبض والتنفس أو تشوش"
+    ],
+    "en": [
+     "T 34.6 °C",
+     "Shivering and cold extremities",
+     "Bradycardia, slow breathing or confusion"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بردان جدًا.\""
+     ],
+     "en": [
+      "\"I'm very cold.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "حرارة 34.6، النبض 54، رعشة.",
+      "مسن عمره 80 وُجد في غرفة باردة."
+     ],
+     "en": [
+      "T 34.6, HR 54, shivering.",
+      "80-year-old found in a cold room."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعتين: ارتفاع الحرارة 0.5–1 درجة في الساعة."
+     ],
+     "en": [
+      "Within 2 h: T rising 0.5–1 °C per hour."
+     ]
+    },
+    "long": {
+     "ar": [
+      "حرارة 36.5–37.5 بدون مضاعفات."
+     ],
+     "en": [
+      "T 36.5–37.5 °C without complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "متابعة درجة الحرارة كل 30 دقيقة أثناء التدفئة والعلامات الحيوية والمونيتور.",
+      "en": "Temperature every 30 minutes during rewarming; vitals and ECG monitor."
+     },
+     "rationale": {
+      "ar": "البرودة تسبب اضطرابات نظم.",
+      "en": "Hypothermia causes dysrhythmias."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "نزع الملابس المبللة ولبس المريض ملابس كافية للتدفئة وأغطية دافئة وتغطية الرأس.",
+      "en": "Remove wet clothing; dress warmly with blankets and head cover."
+     },
+     "rationale": {
+      "ar": "يمنع فقد الحرارة.",
+      "en": "Prevents heat loss."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "التدفئة النشطة حسب الأمر (بطانية هوائية دافئة، محاليل وريدية دافئة).",
+      "en": "Active rewarming as ordered (forced-air blanket, warmed IV fluids)."
+     },
+     "rationale": {
+      "ar": "تدفئة فعالة آمنة.",
+      "en": "Effective, safe rewarming."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تدفئة الغرفة وغلق التيارات.",
+      "en": "Warm the room; close drafts."
+     },
+     "rationale": {
+      "ar": "بيئة دافئة.",
+      "en": "Warm environment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تحريك المريض بلطف.",
+      "en": "Handle the patient gently."
+     },
+     "rationale": {
+      "ar": "الحركة العنيفة قد تسبب رجفانًا بطينيًا.",
+      "en": "Rough handling can trigger VF."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة السكر والأملاح والبحث عن السبب (عدوى، غدة).",
+      "en": "Monitor glucose and electrolytes; seek the cause (sepsis, thyroid)."
+     },
+     "rationale": {
+      "ar": "علاج السبب.",
+      "en": "Treats the cause."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "إعطاء المريض والأسرة تثقيفًا صحيًا عن الوقاية من البرد خاصة لكبار السن.",
+      "en": "Health teaching on cold prevention, especially for the elderly."
+     },
+     "rationale": {
+      "ar": "منع التكرار.",
+      "en": "Prevents recurrence."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحرارة 36.6 بعد 3 ساعات، النبض 72 — تحقق.",
+      "en": "T 36.6 after 3 h; HR 72 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "المتابعة",
+      "en": "Monitoring"
+     },
+     "actions": {
+      "ar": [
+       "متابعة درجة الحرارة كل 30 دقيقة أثناء التدفئة والعلامات الحيوية والمونيتور.",
+       "متابعة السكر والأملاح والبحث عن السبب (عدوى، غدة)."
+      ],
+      "en": [
+       "Temperature every 30 minutes during rewarming; vitals and ECG monitor.",
+       "Monitor glucose and electrolytes; seek the cause (sepsis, thyroid)."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مستقرة.",
+      "en": "Stable vitals."
+     },
+     "timeframe": {
+      "ar": "كل 30 دقيقة",
+      "en": "Every 30 min"
+     }
+    },
+    {
+     "need": {
+      "ar": "التدفئة",
+      "en": "Rewarming"
+     },
+     "actions": {
+      "ar": [
+       "نزع الملابس المبللة ولبس المريض ملابس كافية للتدفئة وأغطية دافئة وتغطية الرأس.",
+       "التدفئة النشطة حسب الأمر (بطانية هوائية دافئة، محاليل وريدية دافئة).",
+       "تدفئة الغرفة وغلق التيارات.",
+       "تحريك المريض بلطف.",
+       "إعطاء المريض والأسرة تثقيفًا صحيًا عن الوقاية من البرد خاصة لكبار السن."
+      ],
+      "en": [
+       "Remove wet clothing; dress warmly with blankets and head cover.",
+       "Active rewarming as ordered (forced-air blanket, warmed IV fluids).",
+       "Warm the room; close drafts.",
+       "Handle the patient gently.",
+       "Health teaching on cold prevention, especially for the elderly."
+      ]
+     },
+     "outcome": {
+      "ar": "حرارة طبيعية.",
+      "en": "Normal temperature."
+     },
+     "timeframe": {
+      "ar": "لحين زوال انخفاض الحرارة",
+      "en": "Until normothermic"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-decreased-cardiac-output-hypothermia",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص النتاج القلبي واضطرابات النظم",
+    "en": "Risk for Decreased Cardiac Output and Dysrhythmias"
+   },
+   "definition": {
+    "ar": "قابلية لعدم كفاية ضخ القلب بسبب البرودة.",
+    "en": "Susceptibility to inadequate cardiac output from cold."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "البرودة تبطئ القلب",
+     "خلل البوتاسيوم أثناء التدفئة"
+    ],
+    "en": [
+     "Cold slows the heart",
+     "Potassium shifts during rewarming"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حاسس بدوخة.\""
+     ],
+     "en": [
+      "\"I feel dizzy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "النبض 54، الضغط 96/58."
+     ],
+     "en": [
+      "HR 54, BP 96/58."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أثناء التدفئة: نظم مستقر وضغط ≥ 90."
+     ],
+     "en": [
+      "During rewarming: stable rhythm and SBP ≥ 90."
+     ]
+    },
+    "long": {
+     "ar": [
+      "دورة مستقرة."
+     ],
+     "en": [
+      "Stable circulation."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "مراقبة المونيتور باستمرار.",
+      "en": "Continuous ECG monitoring."
+     },
+     "rationale": {
+      "ar": "كشف الاضطرابات.",
+      "en": "Detects dysrhythmias."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "قياس الضغط كل 15–30 دقيقة.",
+      "en": "BP every 15–30 minutes."
+     },
+     "rationale": {
+      "ar": "هبوط الضغط مع التدفئة.",
+      "en": "Rewarming hypotension."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "محاليل وريدية دافئة حسب الأمر.",
+      "en": "Warmed IV fluids as ordered."
+     },
+     "rationale": {
+      "ar": "تعويض الحجم.",
+      "en": "Volume replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "متابعة البوتاسيوم.",
+      "en": "Monitor potassium."
+     },
+     "rationale": {
+      "ar": "يتغير أثناء التدفئة.",
+      "en": "Shifts during rewarming."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "جهاز الصدمات جاهز.",
+      "en": "Defibrillator ready."
+     },
+     "rationale": {
+      "ar": "جاهزية للرجفان.",
+      "en": "Ready for VF."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "إبلاغ الطبيب عن أي اضطراب نظم.",
+      "en": "Report any dysrhythmia."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early intervention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "نظم جيبي والضغط 112/70 — تحقق.",
+      "en": "Sinus rhythm; BP 112/70 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "مراقبة القلب",
+      "en": "Cardiac monitoring"
+     },
+     "actions": {
+      "ar": [
+       "مراقبة المونيتور باستمرار.",
+       "قياس الضغط كل 15–30 دقيقة.",
+       "محاليل وريدية دافئة حسب الأمر.",
+       "متابعة البوتاسيوم.",
+       "جهاز الصدمات جاهز.",
+       "إبلاغ الطبيب عن أي اضطراب نظم."
+      ],
+      "en": [
+       "Continuous ECG monitoring.",
+       "BP every 15–30 minutes.",
+       "Warmed IV fluids as ordered.",
+       "Monitor potassium.",
+       "Defibrillator ready.",
+       "Report any dysrhythmia."
+      ]
+     },
+     "outcome": {
+      "ar": "نظم وضغط مستقران.",
+      "en": "Stable rhythm and BP."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "ERC Guidelines 2021: Cardiac arrest in special circumstances (accidental hypothermia)"
+  },
+  {
+   "title": "جداول خطط الرعاية التمريضية بالمستشفى — NurseHub Egypt (ملفات المؤسس)"
+  }
+ ],
+ "group": "vitals"
+}
