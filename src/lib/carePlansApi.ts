@@ -130,3 +130,30 @@ export function fetchCarePlan(id: string): Promise<CarePlan | null> {
   }
   return p;
 }
+
+/* ---------- guides: /care-plans/guide/:slug (public/careplans/guides/<slug>.json) ---------- */
+export interface GuideSection {
+  heading: Bi; paragraphs?: BiList; bullets?: BiList; example?: Bi;
+  table?: { head: Bi[]; rows: Bi[][] };
+}
+export interface CarePlanGuide { slug: string; icon: string; title: Bi; summary: Bi; sections: GuideSection[]; related?: { path: string }[] }
+/** The "Start here" guides, in reading order. */
+export const GUIDES: { slug: string; title: Bi; hint: Bi }[] = [
+  { slug: "care-plan", title: { ar: "دليل كتابة خطة الرعاية", en: "Nursing Care Plan Guide" }, hint: { ar: "نموذج الطلاب والمستشفى ومثال كامل", en: "Student and hospital forms, full example" } },
+  { slug: "nursing-diagnosis", title: { ar: "دليل التشخيص التمريضي", en: "Nursing Diagnosis Guide" }, hint: { ar: "NANDA وصيغة PES وتشخيصات الخطر", en: "NANDA, PES format, risk diagnoses" } },
+  { slug: "nursing-process", title: { ar: "دليل العملية التمريضية", en: "Nursing Process Guide" }, hint: { ar: "الخطوات الخمس ADPIE بأمثلة", en: "The five ADPIE steps with examples" } },
+];
+const guideCache = new Map<string, Promise<CarePlanGuide | null>>();
+export function fetchGuide(slug: string): Promise<CarePlanGuide | null> {
+  if (!GUIDES.some((g) => g.slug === slug)) return Promise.resolve(null);
+  let p = guideCache.get(slug);
+  if (!p) {
+    p = fetch(`/careplans/guides/${slug}.json`, { cache: "no-cache" }).then((r) => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json() as Promise<CarePlanGuide>;
+    });
+    p.catch(() => guideCache.delete(slug));
+    guideCache.set(slug, p);
+  }
+  return p;
+}

@@ -214,8 +214,25 @@ async function pageFor(path, env, request) {
     return {
       title: `خطط الرعاية التمريضية جاهزة | ${SITE_NAME}`,
       description: 'خطط رعاية تمريضية جاهزة بالعربي والإنجليزي لأشهر الأمراض: خطة الطلاب (Assessment، Nursing Diagnosis، Goals، Interventions & Rationale، Evaluation) وخطة المستشفى.',
-      body: `<h1>خطط الرعاية التمريضية</h1>${list((idx.plans || []).map((c) => [`/care-plans/${c.id}`, c.title.ar, c.summary?.ar || '']))}${list((idx.plans || []).flatMap((c) => (c.diagnoses || []).map((d) => [`/care-plans/${c.id}/${d.id}`, `${d.title.ar} — ${c.title.ar}`, d.title.en])))}`,
+      body: `<h1>خطط الرعاية التمريضية</h1><h2>ابدأ هنا</h2>${list([['/care-plans/guide/care-plan', 'دليل كتابة خطة الرعاية التمريضية', 'Nursing Care Plan Guide'], ['/care-plans/guide/nursing-diagnosis', 'دليل التشخيص التمريضي', 'Nursing Diagnosis Guide'], ['/care-plans/guide/nursing-process', 'دليل العملية التمريضية', 'Nursing Process Guide']])}${list((idx.plans || []).map((c) => [`/care-plans/${c.id}`, c.title.ar, c.summary?.ar || '']))}${list((idx.plans || []).flatMap((c) => (c.diagnoses || []).map((d) => [`/care-plans/${c.id}/${d.id}`, `${d.title.ar} — ${c.title.ar}`, d.title.en])))}`,
       type: 'CollectionPage',
+    };
+  }
+  if ((m = /^\/care-plans\/guide\/([a-z0-9-]+)$/.exec(p))) {
+    const g = await getJSON(env, request, `/careplans/guides/${m[1]}.json`);
+    if (!g) return null;
+    const sec = (x) => {
+      const paras = (x.paragraphs?.ar || []).map((t) => `<p>${esc(t)}</p>`).join('');
+      const bullets = x.bullets?.ar?.length ? `<ul>${x.bullets.ar.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : '';
+      const table = x.table ? `<table><tr>${x.table.head.map((h) => `<th>${esc(h.ar)}</th>`).join('')}</tr>${x.table.rows.map((r) => `<tr>${r.map((c) => `<td>${esc(c.ar)}</td>`).join('')}</tr>`).join('')}</table>` : '';
+      const ex = x.example?.ar ? `<p><strong>مثال:</strong> ${esc(x.example.ar)}</p>` : '';
+      return `<section><h2>${esc(x.heading.ar)}</h2>${paras}${bullets}${table}${ex}</section>`;
+    };
+    return {
+      title: `${g.title.ar} (${g.title.en}) | ${SITE_NAME}`,
+      description: clip(strip(g.summary?.ar || ''), 300),
+      body: `<article><h1>${esc(g.title.ar)}</h1><p>${esc(g.summary?.ar || '')}</p>${(g.sections || []).map(sec).join('')}</article>`,
+      type: 'Article',
     };
   }
   if ((m = /^\/care-plans\/([a-z0-9-]+)(?:\/([a-z0-9-]+))?$/.exec(p))) {
@@ -463,6 +480,10 @@ async function classify(path, env, request) {
   if ((m = /^\/cases\/([^/]+)$/.exec(p))) {
     const id = dec(m[1]);
     return SAFE_ID.test(id) && (await assetExists(env, request, `/clinical-cases/cases/${id}.json`)) ? 'ok' : 'missing';
+  }
+  if ((m = /^\/care-plans\/guide\/([^/]+)$/.exec(p))) {
+    const slug = dec(m[1]);
+    return SAFE_ID.test(slug) && (await assetExists(env, request, `/careplans/guides/${slug}.json`)) ? 'ok' : 'missing';
   }
   if ((m = /^\/care-plans\/([^/]+)(?:\/([^/]+))?$/.exec(p))) {
     const id = dec(m[1]);

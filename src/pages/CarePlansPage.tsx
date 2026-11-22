@@ -10,7 +10,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import {
-  Activity, BedDouble, BriefcaseMedical, CircleCheck, ClipboardCheck, ClipboardList, Clock, FolderHeart, FolderOpen, GraduationCap, HeartPulse, Hospital, Lightbulb,
+  Activity, BedDouble, BookOpenCheck, BriefcaseMedical, CircleCheck, ClipboardCheck, ClipboardList, Clock, FolderHeart, FolderOpen, GraduationCap, HeartPulse, Hospital, Lightbulb,
   PenLine, Printer, Search, Settings, Stethoscope, Syringe, Target, TrendingUp, TriangleAlert, Trophy, UserRound,
 } from "lucide-react";
 import { useI18n } from "../lib/i18n";
@@ -21,7 +21,7 @@ import HubGrid from "../components/HubGrid";
 import { LogoMark } from "../components/Logo";
 import { LOAD_FAILED } from "../lib/loadFailed";
 import {
-  GROUPS, SYSTEMS, fetchCarePlan, fetchCarePlanIndex, pick, pickList,
+  GROUPS, GUIDES, SYSTEMS, fetchCarePlan, fetchCarePlanIndex, pick, pickList,
   type CarePlan, type CarePlanIndexItem, type Diagnosis, type EvalStatus, type InterventionType,
 } from "../lib/carePlansApi";
 
@@ -130,7 +130,23 @@ export function CarePlansHome() {
         </div>
       </div>
 
-      <div role="tablist" className="mt-6 grid gap-3 sm:grid-cols-2">
+      <section aria-labelledby="cp-start" className="mt-6">
+        <h2 id="cp-start" className="mb-2 text-xs font-black uppercase tracking-wider text-teal-700 dark:text-teal-300">{ar ? "ابدأ هنا" : "Start here"}</h2>
+        <div className="grid gap-3 sm:grid-cols-3">
+          {GUIDES.map((g) => (
+            <Link key={g.slug} to={`/care-plans/guide/${g.slug}`} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4 transition hover:border-[#168C91] dark:border-slate-700 dark:bg-slate-900">
+              <BookOpenCheck className="mt-0.5 h-6 w-6 shrink-0 text-[#168C91]" />
+              <span>
+                <span className="block font-black text-slate-800 dark:text-white">{pick(g.title, ar)}</span>
+                <span className="mt-0.5 block text-xs leading-5 text-slate-500 dark:text-slate-400">{pick(g.hint, ar)}</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <h2 className="mb-2 mt-6 text-xs font-black uppercase tracking-wider text-teal-700 dark:text-teal-300">{ar ? "تصفح حسب القسم" : "Browse by category"}</h2>
+      <div role="tablist" className="grid gap-3 sm:grid-cols-2">
         {([["disease", FolderHeart, "byDisease", "byDiseaseHint"], ["general", FolderOpen, "general", "generalHint"]] as const).map(([f, Icon, label, hint]) => (
           <button key={f} role="tab" aria-selected={folder === f} onClick={() => setFolder(f)} className={`flex items-start gap-3 rounded-2xl border p-4 text-start transition ${folder === f ? "border-[#168C91] bg-[#153448] text-white shadow" : "border-slate-200 bg-white text-slate-700 hover:border-[#168C91] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"}`}>
             <Icon className={`mt-0.5 h-7 w-7 shrink-0 ${folder === f ? "text-[#7fdde1]" : "text-[#168C91]"}`} />

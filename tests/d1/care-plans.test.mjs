@@ -67,6 +67,13 @@ test('crawlers: list, each diagnosis as its own page with title and canonical; u
   const old = await get('/care-plans/hypertension/dx-3');
   assert.equal(old.status, 301, 'numbered pages of rewritten plans move to the plan');
   assert.match(old.headers.get('location') || '', /\/care-plans\/hypertension$/);
+  const g = await get('/care-plans/guide/nursing-process');
+  assert.equal(g.status, 200);
+  const gh = await g.text();
+  assert.match(gh, /<title>دليل العملية التمريضية/);
+  assert.ok(gh.includes('ADPIE') && gh.includes('<table>'), 'guide content is in the HTML for crawlers');
+  assert.equal((await get('/care-plans/guide/not-a-guide')).status, 404);
+  assert.ok(lh.includes('/care-plans/guide/care-plan'), 'hub links the guides');
   assert.equal((await get('/care-plans/not-a-plan')).status, 404);
   assert.equal((await get('/care-plans/heart-failure/not-a-diagnosis')).status, 404);
 });
