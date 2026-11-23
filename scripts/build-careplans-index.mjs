@@ -1,6 +1,7 @@
 // Builds public/careplans/index.json from public/careplans/plans/*.json and checks every plan.
 //  - format 2 (diagnoses[]): every diagnosis has Arabic + English for title, definition, related to, evidenced by / risk factors,
-//    subjective + objective data, short + long goals, typed interventions each with a rationale, evaluation with a status,
+//    subjective + objective data, short + long goals, typed interventions each with a rationale (Arabic action = full sentence
+//    starting with يتم / تتم / يُـ), evaluation with a status,
 //    and hospital rows (need / actions / outcome / timeframe).
 //  - format 1 (student[] + hospital[]): older plans, still accepted until they are rewritten.
 // Run: node scripts/build-careplans-index.mjs   (also run by `npm run build`)
@@ -42,6 +43,10 @@ function checkV2(p, w) {
     (d.interventions || []).forEach((x, j) => {
       if (!TYPES.includes(x.type)) errors.push(`${k} intervention ${j}: type`);
       bi(x.action, `${k} intervention ${j}`); bi(x.rationale, `${k} rationale ${j}`);
+      // house style: every Arabic action is a full sentence that starts with a passive verb (يتم / تتم / يُـ)
+      const a = x.action?.ar?.trim() || '';
+      if (a && !/^(يتم|تتم|يُ)/.test(a)) errors.push(`${k} intervention ${j}: Arabic action must start with يتم / تتم / يُـ`);
+      if (a && a.split(/\s+/).length < 6) errors.push(`${k} intervention ${j}: Arabic action is too short (write a full sentence)`);
     });
     if (!d.evaluation?.length) errors.push(`${k}: no evaluation`);
     (d.evaluation || []).forEach((e, j) => { if (!STATUS.includes(e.status)) errors.push(`${k} evaluation ${j}: status`); bi(e.text, `${k} evaluation ${j}`); });
