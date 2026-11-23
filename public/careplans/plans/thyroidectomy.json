@@ -1,0 +1,1068 @@
+{
+ "id": "thyroidectomy",
+ "icon": "🦋",
+ "system": "surgery",
+ "folder": "disease",
+ "title": {
+  "ar": "استئصال الغدة الدرقية",
+  "en": "Thyroidectomy"
+ },
+ "summary": {
+  "ar": "خطة رعاية بعد استئصال الغدة الدرقية: مجرى الهواء والتجمع الدموي، نقص الكالسيوم، الألم، الصوت والتواصل، العاصفة الدرقية، والتثقيف عن العلاج الهرموني.",
+  "en": "Thyroidectomy care plan: airway and haematoma, hypocalcaemia, pain, voice, thyroid storm and hormone-therapy teaching."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-airway-thyroidectomy",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر انسداد مجرى الهواء",
+    "en": "Risk for Ineffective Airway"
+   },
+   "definition": {
+    "ar": "قابلية لانسداد مجرى الهواء.",
+    "en": "Susceptibility to airway obstruction."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "نزيف أو تورم تحت الجرح يضغط على القصبة",
+     "إصابة العصب الحنجري الراجع"
+    ],
+    "en": [
+     "Neck haematoma compressing the trachea",
+     "Recurrent laryngeal nerve injury"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بضيق بسيط في رقبتي.\""
+     ],
+     "en": [
+      "\"My neck feels a little tight.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بعد 4 ساعات من استئصال الغدة الدرقية الكلي."
+     ],
+     "en": [
+      "4 h after total thyroidectomy."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: مجرى هواء مفتوح وتنفس طبيعي."
+     ],
+     "en": [
+      "Within 24 h: patent airway, normal breathing."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا مضاعفات تنفسية."
+     ],
+     "en": [
+      "No respiratory complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس التنفس والتشبع وملاحظة الصوت والصرير كل 15 دقيقة في الساعة الأولى ثم كل ساعة.",
+      "en": "Check breathing, SpO₂, voice and stridor every 15 min for the first hour, then hourly."
+     },
+     "rationale": {
+      "ar": "اكتشاف الانسداد مبكرًا.",
+      "en": "Early obstruction detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص الضماد وخلف الرقبة لملاحظة النزيف وقياس محيط الرقبة عند الحاجة.",
+      "en": "Inspect the dressing and back of the neck for bleeding; measure neck girth if needed."
+     },
+     "rationale": {
+      "ar": "الدم يتجمع للخلف.",
+      "en": "Blood pools posteriorly."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع نصف الجلوس مع سند الرأس والرقبة بوسادة.",
+      "en": "Position semi-Fowler's with head and neck supported."
+     },
+     "rationale": {
+      "ar": "يقلل التورم ويسهل التنفس.",
+      "en": "Reduces swelling; eases breathing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تجهيز جهاز الشفط والأكسجين وطقم فك الغرز بجوار السرير.",
+      "en": "Keep suction, oxygen and a suture/clip-removal kit at the bedside."
+     },
+     "rationale": {
+      "ar": "لفتح الجرح فورًا عند التجمع الدموي الضاغط.",
+      "en": "For immediate wound opening if haematoma compresses."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الجراح فورًا عند ظهور صرير أو تورم سريع بالرقبة أو صعوبة بالتنفس.",
+      "en": "Call the surgeon immediately for stridor, rapid neck swelling or respiratory distress."
+     },
+     "rationale": {
+      "ar": "حالة طارئة.",
+      "en": "Emergency."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الصوت بطلب الكلام من المريض وتسجيل أي بحة.",
+      "en": "Assess voice by asking the patient to speak; record hoarseness."
+     },
+     "rationale": {
+      "ar": "إصابة العصب الحنجري.",
+      "en": "Laryngeal nerve injury."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تنفس طبيعي وتشبع 98% — تحقق.",
+      "en": "Normal breathing, SpO₂ 98% — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على مجرى هواء مفتوح وتنفس آمن",
+      "en": "Maintaining a patent airway and safe breathing"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس التنفس والتشبع وملاحظة الصوت والصرير كل 15 دقيقة في الساعة الأولى ثم كل ساعة.",
+       "يتم فحص الضماد وخلف الرقبة لملاحظة النزيف وقياس محيط الرقبة عند الحاجة.",
+       "يتم وضع المريض في وضع نصف الجلوس مع سند الرأس والرقبة بوسادة.",
+       "يتم تجهيز جهاز الشفط والأكسجين وطقم فك الغرز بجوار السرير.",
+       "يتم إبلاغ الجراح فورًا عند ظهور صرير أو تورم سريع بالرقبة أو صعوبة بالتنفس.",
+       "يتم تقييم الصوت بطلب الكلام من المريض وتسجيل أي بحة."
+      ],
+      "en": [
+       "Check breathing, SpO₂, voice and stridor every 15 min for the first hour, then hourly.",
+       "Inspect the dressing and back of the neck for bleeding; measure neck girth if needed.",
+       "Position semi-Fowler's with head and neck supported.",
+       "Keep suction, oxygen and a suture/clip-removal kit at the bedside.",
+       "Call the surgeon immediately for stridor, rapid neck swelling or respiratory distress.",
+       "Assess voice by asking the patient to speak; record hoarseness."
+      ]
+     },
+     "outcome": {
+      "ar": "تنفس طبيعي.",
+      "en": "Normal breathing."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-hypocalcaemia-thyroidectomy",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص الكالسيوم",
+    "en": "Risk for Hypocalcaemia"
+   },
+   "definition": {
+    "ar": "قابلية لنقص الكالسيوم في الدم.",
+    "en": "Susceptibility to low serum calcium."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "إصابة أو استئصال الغدد جارات الدرقية"
+    ],
+    "en": [
+     "Parathyroid injury or removal"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بتنميل حول فمي وفي أطراف أصابعي.\""
+     ],
+     "en": [
+      "\"I have tingling around my mouth and fingertips.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "كالسيوم 7.9 مجم/دل في اليوم الأول."
+     ],
+     "en": [
+      "Calcium 7.9 mg/dL on day 1."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: كالسيوم في المعدل الطبيعي."
+     ],
+     "en": [
+      "Within 48 h: normal calcium."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا تكزز."
+     ],
+     "en": [
+      "No tetany."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم متابعة الكالسيوم في الدم حسب الأمر عادة كل 12 ساعة في أول يومين.",
+      "en": "Monitor serum calcium as ordered, usually 12-hourly for 2 days."
+     },
+     "rationale": {
+      "ar": "اكتشاف النقص.",
+      "en": "Detects deficiency."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة التنميل حول الفم والأطراف والتقلصات العضلية وعلامتي شفوستك وتروسو.",
+      "en": "Watch for perioral and peripheral tingling, cramps, Chvostek's and Trousseau's signs."
+     },
+     "rationale": {
+      "ar": "علامات نقص الكالسيوم.",
+      "en": "Signs of hypocalcaemia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الكالسيوم بالفم أو جلوكونات الكالسيوم الوريدي ببطء حسب أمر الطبيب.",
+      "en": "Give oral calcium or slow IV calcium gluconate as ordered."
+     },
+     "rationale": {
+      "ar": "تعويض النقص.",
+      "en": "Corrects deficiency."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تجهيز جلوكونات الكالسيوم بجوار السرير.",
+      "en": "Keep calcium gluconate at the bedside."
+     },
+     "rationale": {
+      "ar": "استجابة سريعة للتكزز.",
+      "en": "Rapid response to tetany."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم مراقبة مكان الحقن الوريدي أثناء إعطاء الكالسيوم.",
+      "en": "Monitor the IV site during calcium infusion."
+     },
+     "rationale": {
+      "ar": "التسرب يسبب تلف الأنسجة.",
+      "en": "Extravasation causes necrosis."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض الإبلاغ فورًا عن أي تنميل أو تقلصات بعد الخروج.",
+      "en": "Teach reporting any tingling or cramps after discharge."
+     },
+     "rationale": {
+      "ar": "قد يتأخر النقص.",
+      "en": "Hypocalcaemia may be delayed."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الكالسيوم 8.7 ولا أعراض — تحقق.",
+      "en": "Calcium 8.7; asymptomatic — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على مستوى الكالسيوم في المعدل الطبيعي",
+      "en": "Keeping calcium within normal range"
+     },
+     "actions": {
+      "ar": [
+       "يتم متابعة الكالسيوم في الدم حسب الأمر عادة كل 12 ساعة في أول يومين.",
+       "تتم ملاحظة التنميل حول الفم والأطراف والتقلصات العضلية وعلامتي شفوستك وتروسو.",
+       "يتم إعطاء الكالسيوم بالفم أو جلوكونات الكالسيوم الوريدي ببطء حسب أمر الطبيب.",
+       "يتم تجهيز جلوكونات الكالسيوم بجوار السرير.",
+       "يتم مراقبة مكان الحقن الوريدي أثناء إعطاء الكالسيوم.",
+       "يتم تعليم المريض الإبلاغ فورًا عن أي تنميل أو تقلصات بعد الخروج."
+      ],
+      "en": [
+       "Monitor serum calcium as ordered, usually 12-hourly for 2 days.",
+       "Watch for perioral and peripheral tingling, cramps, Chvostek's and Trousseau's signs.",
+       "Give oral calcium or slow IV calcium gluconate as ordered.",
+       "Keep calcium gluconate at the bedside.",
+       "Monitor the IV site during calcium infusion.",
+       "Teach reporting any tingling or cramps after discharge."
+      ]
+     },
+     "outcome": {
+      "ar": "لا تنميل أو تقلصات.",
+      "en": "No tingling or cramps."
+     },
+     "timeframe": {
+      "ar": "كل 12 ساعة",
+      "en": "12-hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-thyroidectomy",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد بعد استئصال الغدة الدرقية",
+    "en": "Acute Pain after Thyroidectomy"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف فعلي أو محتمل في الأنسجة، مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory and emotional experience associated with actual or potential tissue damage, lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "الجرح الجراحي بالرقبة والأنبوبة الحنجرية"
+    ],
+    "en": [
+     "Neck incision and intubation"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم في الرقبة والحلق 5/10",
+     "ألم عند البلع"
+    ],
+    "en": [
+     "Neck and throat pain 5/10",
+     "Pain on swallowing"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"حلقي يؤلمني عندما أبلع.\""
+     ],
+     "en": [
+      "\"My throat hurts when I swallow.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ألم 5/10."
+     ],
+     "en": [
+      "Pain 5/10."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ألم محتمل يسمح بالراحة والحركة."
+     ],
+     "en": [
+      "Tolerable pain allowing rest and movement."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+      "en": "Assess pain (site, 0–10, character, radiation) before and after analgesia."
+     },
+     "rationale": {
+      "ar": "يوجه العلاج ويقيس فعاليته.",
+      "en": "Guides treatment and measures effect."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+      "en": "Give analgesia as ordered, on schedule."
+     },
+     "rationale": {
+      "ar": "التسكين المنتظم يمنع اشتداد الألم.",
+      "en": "Regular analgesia prevents peaks."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+      "en": "Comfortable position; calm environment."
+     },
+     "rationale": {
+      "ar": "يقلل الإحساس بالألم.",
+      "en": "Reduces pain perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+      "en": "Non-drug measures: deep breathing, relaxation, distraction."
+     },
+     "rationale": {
+      "ar": "تكمل المسكن.",
+      "en": "Complement analgesia."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض سند الرأس بكلتا اليدين خلف الرقبة عند الحركة والقيام.",
+      "en": "Teach supporting the head with both hands behind the neck when moving."
+     },
+     "rationale": {
+      "ar": "يقلل الشد على الجرح.",
+      "en": "Reduces strain on the incision."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تقديم سوائل باردة وأطعمة لينة عند السماح بالأكل.",
+      "en": "Offer cool fluids and soft foods when allowed."
+     },
+     "rationale": {
+      "ar": "تخفيف ألم البلع.",
+      "en": "Eases painful swallowing."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 بعد ساعة — تحقق.",
+      "en": "Pain 3/10 at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الألم إلى مستوى يتحمله المريض",
+      "en": "Relief of pain to a tolerable level"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+       "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+       "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+       "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+       "يتم تعليم المريض سند الرأس بكلتا اليدين خلف الرقبة عند الحركة والقيام.",
+       "يتم تقديم سوائل باردة وأطعمة لينة عند السماح بالأكل."
+      ],
+      "en": [
+       "Assess pain (site, 0–10, character, radiation) before and after analgesia.",
+       "Give analgesia as ordered, on schedule.",
+       "Comfortable position; calm environment.",
+       "Non-drug measures: deep breathing, relaxation, distraction.",
+       "Teach supporting the head with both hands behind the neck when moving.",
+       "Offer cool fluids and soft foods when allowed."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-verbal-thyroidectomy",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر ضعف التواصل اللفظي",
+    "en": "Risk for Impaired Verbal Communication"
+   },
+   "definition": {
+    "ar": "قابلية لصعوبة الكلام.",
+    "en": "Susceptibility to difficulty speaking."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "بحة بعد العملية",
+     "تورم الحنجرة"
+    ],
+    "en": [
+     "Post-operative hoarseness",
+     "Laryngeal oedema"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"صوتي ضعيف ومبحوح.\""
+     ],
+     "en": [
+      "\"My voice is weak and hoarse.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بحة خفيفة."
+     ],
+     "en": [
+      "Mild hoarseness."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: يتواصل المريض باحتياجاته بفعالية."
+     ],
+     "en": [
+      "During stay: communicates needs effectively."
+     ]
+    },
+    "long": {
+     "ar": [
+      "عودة الصوت الطبيعي."
+     ],
+     "en": [
+      "Normal voice returns."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير ورقة وقلم أو لوحة صور ووضع جرس النداء في متناول المريض.",
+      "en": "Provide paper, pen or picture board and keep the call bell in reach."
+     },
+     "rationale": {
+      "ar": "تواصل بديل.",
+      "en": "Alternative communication."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم توجيه المريض إلى إراحة الصوت وتجنب الهمس والكلام الطويل في الأيام الأولى.",
+      "en": "Advise voice rest; avoid whispering and prolonged talking initially."
+     },
+     "rationale": {
+      "ar": "تقليل إجهاد الحنجرة.",
+      "en": "Reduces laryngeal strain."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم طرح أسئلة يمكن الإجابة عنها بنعم أو لا أو بالإشارة.",
+      "en": "Ask yes/no questions or use gestures."
+     },
+     "rationale": {
+      "ar": "تقليل الجهد.",
+      "en": "Less effort."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الصوت يوميًا وتسجيل التحسن أو الزيادة في البحة.",
+      "en": "Assess voice daily and record progress."
+     },
+     "rationale": {
+      "ar": "متابعة إصابة العصب.",
+      "en": "Monitors nerve injury."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم طمأنة المريض أن البحة غالبًا مؤقتة وتتحسن خلال أيام إلى أسابيع.",
+      "en": "Reassure that hoarseness is usually temporary."
+     },
+     "rationale": {
+      "ar": "تقليل القلق.",
+      "en": "Reduces anxiety."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب عند استمرار البحة أو حدوث شرقة مع السوائل لتقييم الأحبال الصوتية.",
+      "en": "Inform the physician of persistent hoarseness or choking on fluids for vocal cord review."
+     },
+     "rationale": {
+      "ar": "تقييم متخصص.",
+      "en": "Specialist assessment."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يتواصل بالكتابة والصوت يتحسن — تحقق.",
+      "en": "Communicates in writing; voice improving — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "التواصل الفعال وحماية الصوت",
+      "en": "Effective communication and voice protection"
+     },
+     "actions": {
+      "ar": [
+       "يتم توفير ورقة وقلم أو لوحة صور ووضع جرس النداء في متناول المريض.",
+       "يتم توجيه المريض إلى إراحة الصوت وتجنب الهمس والكلام الطويل في الأيام الأولى.",
+       "يتم طرح أسئلة يمكن الإجابة عنها بنعم أو لا أو بالإشارة.",
+       "يتم تقييم الصوت يوميًا وتسجيل التحسن أو الزيادة في البحة.",
+       "يتم طمأنة المريض أن البحة غالبًا مؤقتة وتتحسن خلال أيام إلى أسابيع.",
+       "يتم إبلاغ الطبيب عند استمرار البحة أو حدوث شرقة مع السوائل لتقييم الأحبال الصوتية."
+      ],
+      "en": [
+       "Provide paper, pen or picture board and keep the call bell in reach.",
+       "Advise voice rest; avoid whispering and prolonged talking initially.",
+       "Ask yes/no questions or use gestures.",
+       "Assess voice daily and record progress.",
+       "Reassure that hoarseness is usually temporary.",
+       "Inform the physician of persistent hoarseness or choking on fluids for vocal cord review."
+      ]
+     },
+     "outcome": {
+      "ar": "تواصل فعال.",
+      "en": "Effective communication."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-thyroid-storm",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العاصفة الدرقية",
+    "en": "Risk for Thyroid Storm"
+   },
+   "definition": {
+    "ar": "قابلية لزيادة حادة في هرمون الغدة.",
+    "en": "Susceptibility to acute thyrotoxic crisis."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "فرط نشاط الغدة قبل العملية",
+     "الإجهاد الجراحي"
+    ],
+    "en": [
+     "Pre-operative hyperthyroidism",
+     "Surgical stress"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"كنت أتناول دواء الغدة قبل العملية.\""
+     ],
+     "en": [
+      "\"I was on thyroid tablets before surgery.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "تاريخ مرض جريفز."
+     ],
+     "en": [
+      "History of Graves' disease."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: حرارة ونبض طبيعيان."
+     ],
+     "en": [
+      "Within 48 h: normal temperature and pulse."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا عاصفة درقية."
+     ],
+     "en": [
+      "No thyroid storm."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس الحرارة والنبض والضغط كل ساعة في أول 12 ساعة.",
+      "en": "Measure temperature, pulse and BP hourly for the first 12 h."
+     },
+     "rationale": {
+      "ar": "اكتشاف الأزمة مبكرًا.",
+      "en": "Early crisis detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة الحمى العالية والنبض السريع جدًا والهياج والعرق الغزير.",
+      "en": "Watch for high fever, marked tachycardia, agitation and sweating."
+     },
+     "rationale": {
+      "ar": "علامات العاصفة.",
+      "en": "Storm signs."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء حاصرات بيتا وأدوية الغدة حسب أمر الطبيب.",
+      "en": "Give beta-blockers and antithyroid drugs as ordered."
+     },
+     "rationale": {
+      "ar": "السيطرة على الأعراض.",
+      "en": "Symptom control."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير بيئة هادئة وباردة وتقليل الزيارات والمنبهات حول المريض.",
+      "en": "Provide a calm, cool environment."
+     },
+     "rationale": {
+      "ar": "تقليل الأيض.",
+      "en": "Reduces metabolic demand."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب فورًا عند ارتفاع الحرارة فوق 38.5 مع نبض أعلى من 120.",
+      "en": "Report T > 38.5 with HR > 120 immediately."
+     },
+     "rationale": {
+      "ar": "حالة طارئة.",
+      "en": "Emergency."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء خافضات الحرارة مثل الباراسيتامول وتجنب الأسبرين حسب أمر الطبيب.",
+      "en": "Give paracetamol; avoid aspirin, as ordered."
+     },
+     "rationale": {
+      "ar": "الأسبرين يزيد الهرمون الحر.",
+      "en": "Aspirin raises free hormone."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "علامات حيوية مستقرة — تحقق.",
+      "en": "Stable vitals — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "اكتشاف ومنع العاصفة الدرقية",
+      "en": "Detecting and preventing thyroid storm"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس الحرارة والنبض والضغط كل ساعة في أول 12 ساعة.",
+       "تتم ملاحظة الحمى العالية والنبض السريع جدًا والهياج والعرق الغزير.",
+       "يتم إعطاء حاصرات بيتا وأدوية الغدة حسب أمر الطبيب.",
+       "يتم توفير بيئة هادئة وباردة وتقليل الزيارات والمنبهات حول المريض.",
+       "يتم إبلاغ الطبيب فورًا عند ارتفاع الحرارة فوق 38.5 مع نبض أعلى من 120.",
+       "يتم إعطاء خافضات الحرارة مثل الباراسيتامول وتجنب الأسبرين حسب أمر الطبيب."
+      ],
+      "en": [
+       "Measure temperature, pulse and BP hourly for the first 12 h.",
+       "Watch for high fever, marked tachycardia, agitation and sweating.",
+       "Give beta-blockers and antithyroid drugs as ordered.",
+       "Provide a calm, cool environment.",
+       "Report T > 38.5 with HR > 120 immediately.",
+       "Give paracetamol; avoid aspirin, as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مستقرة.",
+      "en": "Stable vitals."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-thyroidectomy",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (الرعاية بعد استئصال الغدة الدرقية)",
+    "en": "Deficient Knowledge (Care after Thyroidectomy)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "عملية جديدة وعلاج هرموني مدى الحياة"
+    ],
+    "en": [
+     "New surgery and lifelong hormone therapy"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هل سآخذ دواء الغدة طوال حياتي؟\""
+     ],
+     "en": [
+      "\"Will I take thyroid medicine for life?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بدأ ليفوثيروكسين."
+     ],
+     "en": [
+      "Started levothyroxine."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض أخذ الليفوثيروكسين صباحًا على معدة فارغة قبل الإفطار بنصف ساعة يوميًا.",
+      "en": "Teach levothyroxine daily on an empty stomach 30 min before breakfast."
+     },
+     "rationale": {
+      "ar": "امتصاص أفضل.",
+      "en": "Better absorption."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم توضيح ضرورة تحليل وظائف الغدة الدوري لضبط الجرعة.",
+      "en": "Explain regular thyroid tests to adjust the dose."
+     },
+     "rationale": {
+      "ar": "ضبط الجرعة.",
+      "en": "Dose titration."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض علامات نقص وزيادة الهرمون التي تستدعي المراجعة.",
+      "en": "Teach signs of under- and over-replacement."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early action."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض العناية بالجرح وتمارين الرقبة الخفيفة بعد التئامه.",
+      "en": "Teach wound care and gentle neck exercises after healing."
+     },
+     "rationale": {
+      "ar": "منع التيبس.",
+      "en": "Prevents stiffness."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "معرفة طبيعة المرض والعلاج وعلامات الخطر",
+      "en": "Understanding the disease, treatment and danger signs"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "يتم تعليم المريض أخذ الليفوثيروكسين صباحًا على معدة فارغة قبل الإفطار بنصف ساعة يوميًا.",
+       "يتم توضيح ضرورة تحليل وظائف الغدة الدوري لضبط الجرعة.",
+       "يتم تعليم المريض علامات نقص وزيادة الهرمون التي تستدعي المراجعة.",
+       "يتم تعليم المريض العناية بالجرح وتمارين الرقبة الخفيفة بعد التئامه.",
+       "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Teach levothyroxine daily on an empty stomach 30 min before breakfast.",
+       "Explain regular thyroid tests to adjust the dose.",
+       "Teach signs of under- and over-replacement.",
+       "Teach wound care and gentle neck exercises after healing.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "British Thyroid Association / ATA guidance on post-thyroidectomy care"
+  }
+ ]
+}
