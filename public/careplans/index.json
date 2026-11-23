@@ -1,6 +1,64 @@
 {
  "plans": [
   {
+   "id": "appendicitis-appendectomy",
+   "icon": "🩺",
+   "system": "surgery",
+   "folder": "disease",
+   "title": {
+    "ar": "التهاب الزائدة الدودية واستئصالها",
+    "en": "Acute Appendicitis & Appendectomy"
+   },
+   "summary": {
+    "ar": "خطة رعاية التهاب الزائدة الدودية: الألم، الوقاية من الانفجار والعدوى، السوائل، التنفس بعد العملية، القلق، والتثقيف عند الخروج.",
+    "en": "Appendicitis care plan: pain, perforation and infection prevention, fluids, post-op breathing, anxiety and discharge teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "acute-pain-appendicitis",
+     "title": {
+      "ar": "ألم حاد (التهاب الزائدة الدودية)",
+      "en": "Acute Pain (Appendicitis)"
+     }
+    },
+    {
+     "id": "risk-infection-perforation",
+     "title": {
+      "ar": "خطر العدوى (انفجار الزائدة والتهاب البريتون)",
+      "en": "Risk for Infection (Perforation and Peritonitis)"
+     }
+    },
+    {
+     "id": "deficient-fluid-volume-appendicitis",
+     "title": {
+      "ar": "نقص حجم السوائل",
+      "en": "Deficient Fluid Volume"
+     }
+    },
+    {
+     "id": "risk-ineffective-breathing-appendectomy",
+     "title": {
+      "ar": "خطر عدم فعالية نمط التنفس بعد العملية",
+      "en": "Risk for Ineffective Breathing Pattern (Post-op)"
+     }
+    },
+    {
+     "id": "anxiety-appendectomy",
+     "title": {
+      "ar": "القلق",
+      "en": "Anxiety"
+     }
+    },
+    {
+     "id": "deficient-knowledge-appendectomy",
+     "title": {
+      "ar": "نقص المعرفة (التعافي بعد استئصال الزائدة)",
+      "en": "Deficient Knowledge (Recovery after Appendectomy)"
+     }
+    }
+   ]
+  },
+  {
    "id": "colostomy-bowel-surgery",
    "icon": "🩹",
    "system": "surgery",
@@ -827,6 +885,64 @@
    ]
   },
   {
+   "id": "inflammatory-bowel-disease",
+   "icon": "🩺",
+   "system": "gastro",
+   "folder": "disease",
+   "title": {
+    "ar": "التهاب الأمعاء المزمن (كرون والقولون التقرحي)",
+    "en": "Inflammatory Bowel Disease (Crohn's and Ulcerative Colitis)"
+   },
+   "summary": {
+    "ar": "خطة رعاية التهاب الأمعاء المزمن أثناء النوبة: الإسهال وعلامات تضخم القولون السام، الألم، السوائل والأملاح، التغذية، التكيف النفسي، والتثقيف عن العلاج المستمر.",
+    "en": "IBD flare care plan: diarrhoea and toxic megacolon signs, pain, fluids and electrolytes, nutrition, coping, and maintenance-therapy teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "diarrhoea-ibd",
+     "title": {
+      "ar": "الإسهال",
+      "en": "Diarrhoea"
+     }
+    },
+    {
+     "id": "acute-pain-ibd",
+     "title": {
+      "ar": "ألم حاد (مغص البطن)",
+      "en": "Acute Pain (Abdominal Cramps)"
+     }
+    },
+    {
+     "id": "deficient-fluid-volume-ibd",
+     "title": {
+      "ar": "نقص حجم السوائل",
+      "en": "Deficient Fluid Volume"
+     }
+    },
+    {
+     "id": "imbalanced-nutrition-ibd",
+     "title": {
+      "ar": "اختلال التغذية: أقل من احتياجات الجسم",
+      "en": "Imbalanced Nutrition: Less Than Body Requirements"
+     }
+    },
+    {
+     "id": "ineffective-coping-ibd",
+     "title": {
+      "ar": "عدم فعالية التكيف",
+      "en": "Ineffective Coping"
+     }
+    },
+    {
+     "id": "deficient-knowledge-ibd",
+     "title": {
+      "ar": "نقص المعرفة (التهاب الأمعاء المزمن والعلاج)",
+      "en": "Deficient Knowledge (IBD and Treatment)"
+     }
+    }
+   ]
+  },
+  {
    "id": "liver-cirrhosis",
    "icon": "🟤",
    "system": "gastro",
@@ -1344,6 +1460,64 @@
      "title": {
       "ar": "نقص المعرفة (الوقاية من النوبات)",
       "en": "Deficient Knowledge (Crisis prevention)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "covid-19",
+   "icon": "🦠",
+   "system": "infection",
+   "folder": "disease",
+   "title": {
+    "ar": "كوفيد-19",
+    "en": "COVID-19"
+   },
+   "summary": {
+    "ar": "خطة رعاية مريض كوفيد-19: تبادل الغازات والأكسجين والنوم على البطن، العزل ومنع العدوى، الحرارة، الجلطات، النشاط، والدعم النفسي أثناء العزل.",
+    "en": "COVID-19 care plan: gas exchange, oxygen and awake proning, isolation, fever, VTE, activity, and psychological support in isolation."
+   },
+   "diagnoses": [
+    {
+     "id": "impaired-gas-exchange-covid",
+     "title": {
+      "ar": "ضعف تبادل الغازات (الالتهاب الرئوي الفيروسي)",
+      "en": "Impaired Gas Exchange (Viral Pneumonia)"
+     }
+    },
+    {
+     "id": "risk-infection-transmission-covid",
+     "title": {
+      "ar": "خطر انتقال العدوى (كوفيد-19)",
+      "en": "Risk for Infection Transmission (COVID-19)"
+     }
+    },
+    {
+     "id": "hyperthermia-covid",
+     "title": {
+      "ar": "ارتفاع درجة الحرارة",
+      "en": "Hyperthermia"
+     }
+    },
+    {
+     "id": "risk-vte-covid",
+     "title": {
+      "ar": "خطر الجلطات الوريدية",
+      "en": "Risk for Venous Thromboembolism"
+     }
+    },
+    {
+     "id": "activity-intolerance-covid",
+     "title": {
+      "ar": "عدم تحمل النشاط",
+      "en": "Activity Intolerance"
+     }
+    },
+    {
+     "id": "social-isolation-covid",
+     "title": {
+      "ar": "العزلة الاجتماعية والقلق (العزل الطبي)",
+      "en": "Social Isolation and Anxiety (Medical Isolation)"
      }
     }
    ]
@@ -2393,6 +2567,64 @@
    ]
   },
   {
+   "id": "multiple-sclerosis",
+   "icon": "🧠",
+   "system": "neurology",
+   "folder": "disease",
+   "title": {
+    "ar": "التصلب المتعدد",
+    "en": "Multiple Sclerosis"
+   },
+   "summary": {
+    "ar": "خطة رعاية التصلب المتعدد: الإرهاق، الحركة والتيبس، المثانة العصبية، الأمان مع ضعف الإحساس والرؤية، التكيف النفسي، والتثقيف عن العلاج والانتكاسات.",
+    "en": "MS care plan: fatigue, mobility and spasticity, neurogenic bladder, safety with sensory/visual deficits, coping, and treatment and relapse teaching."
+   },
+   "diagnoses": [
+    {
+     "id": "fatigue-ms",
+     "title": {
+      "ar": "الإرهاق",
+      "en": "Fatigue"
+     }
+    },
+    {
+     "id": "impaired-mobility-ms",
+     "title": {
+      "ar": "ضعف الحركة الجسدية",
+      "en": "Impaired Physical Mobility"
+     }
+    },
+    {
+     "id": "impaired-urinary-elimination-ms",
+     "title": {
+      "ar": "اضطراب الإخراج البولي (المثانة العصبية)",
+      "en": "Impaired Urinary Elimination (Neurogenic Bladder)"
+     }
+    },
+    {
+     "id": "risk-injury-ms",
+     "title": {
+      "ar": "خطر الإصابة (ضعف الإحساس والرؤية)",
+      "en": "Risk for Injury (Sensory and Visual Deficits)"
+     }
+    },
+    {
+     "id": "ineffective-coping-ms",
+     "title": {
+      "ar": "عدم فعالية التكيف مع مرض مزمن متقلب",
+      "en": "Ineffective Coping with a Chronic Relapsing Illness"
+     }
+    },
+    {
+     "id": "deficient-knowledge-ms",
+     "title": {
+      "ar": "نقص المعرفة (التصلب المتعدد والعلاج)",
+      "en": "Deficient Knowledge (MS and Treatment)"
+     }
+    }
+   ]
+  },
+  {
    "id": "parkinsons-disease",
    "icon": "🧠",
    "system": "neurology",
@@ -2859,6 +3091,64 @@
      "title": {
       "ar": "نقص المعرفة (الإسهال والجفاف عند الأطفال)",
       "en": "Deficient Knowledge (Childhood diarrhea and dehydration)"
+     }
+    }
+   ]
+  },
+  {
+   "id": "nephrotic-syndrome-child",
+   "icon": "🧒",
+   "system": "pediatrics",
+   "folder": "disease",
+   "title": {
+    "ar": "متلازمة الكلى عند الأطفال",
+    "en": "Nephrotic Syndrome in Children"
+   },
+   "summary": {
+    "ar": "خطة رعاية الطفل المصاب بالمتلازمة الكلوية: الأوديما والوزن، الوقاية من العدوى والجلطات، التغذية، العناية بالجلد، وتعليم الأسرة فحص البول وعلاج الكورتيزون.",
+    "en": "Nephrotic syndrome care plan: oedema and weight, infection and thrombosis prevention, nutrition, skin care, and teaching urine testing and steroid therapy."
+   },
+   "diagnoses": [
+    {
+     "id": "excess-fluid-nephrotic",
+     "title": {
+      "ar": "زيادة حجم السوائل (الأوديما)",
+      "en": "Excess Fluid Volume (Oedema)"
+     }
+    },
+    {
+     "id": "risk-infection-nephrotic",
+     "title": {
+      "ar": "خطر العدوى",
+      "en": "Risk for Infection"
+     }
+    },
+    {
+     "id": "imbalanced-nutrition-nephrotic",
+     "title": {
+      "ar": "اختلال التغذية: أقل من احتياجات الجسم",
+      "en": "Imbalanced Nutrition: Less Than Body Requirements"
+     }
+    },
+    {
+     "id": "risk-skin-nephrotic",
+     "title": {
+      "ar": "خطر تلف سلامة الجلد",
+      "en": "Risk for Impaired Skin Integrity"
+     }
+    },
+    {
+     "id": "risk-thrombosis-nephrotic",
+     "title": {
+      "ar": "خطر الجلطات",
+      "en": "Risk for Thrombosis"
+     }
+    },
+    {
+     "id": "deficient-knowledge-nephrotic",
+     "title": {
+      "ar": "نقص المعرفة (متلازمة الكلى وعلاج الكورتيزون)",
+      "en": "Deficient Knowledge (Nephrotic Syndrome and Steroid Therapy)"
      }
     }
    ]

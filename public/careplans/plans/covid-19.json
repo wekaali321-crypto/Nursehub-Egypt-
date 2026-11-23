@@ -1,0 +1,1101 @@
+{
+ "id": "covid-19",
+ "icon": "🦠",
+ "system": "infection",
+ "folder": "disease",
+ "title": {
+  "ar": "كوفيد-19",
+  "en": "COVID-19"
+ },
+ "summary": {
+  "ar": "خطة رعاية مريض كوفيد-19: تبادل الغازات والأكسجين والنوم على البطن، العزل ومنع العدوى، الحرارة، الجلطات، النشاط، والدعم النفسي أثناء العزل.",
+  "en": "COVID-19 care plan: gas exchange, oxygen and awake proning, isolation, fever, VTE, activity, and psychological support in isolation."
+ },
+ "diagnoses": [
+  {
+   "id": "impaired-gas-exchange-covid",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف تبادل الغازات (الالتهاب الرئوي الفيروسي)",
+    "en": "Impaired Gas Exchange (Viral Pneumonia)"
+   },
+   "definition": {
+    "ar": "نقص الأكسجة بسبب التهاب الحويصلات الهوائية.",
+    "en": "Hypoxemia from alveolar inflammation."
+   },
+   "relatedTo": {
+    "ar": [
+     "التهاب الرئة الفيروسي"
+    ],
+    "en": [
+     "Viral pneumonitis"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تشبع أقل من 92%",
+     "ضيق نفس وسرعة تنفس"
+    ],
+    "en": [
+     "SpO₂ < 92%",
+     "Dyspnea and tachypnea"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بضيق في التنفس مع أقل حركة.\""
+     ],
+     "en": [
+      "\"I get short of breath with the slightest movement.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "التشبع 89% على هواء الغرفة، التنفس 28، ارتشاح زجاجي بالأشعة."
+     ],
+     "en": [
+      "SpO₂ 89% on room air, RR 28, ground-glass infiltrates."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: تشبع 92–96% بالأكسجين."
+     ],
+     "en": [
+      "Within 1 h: SpO₂ 92–96% on oxygen."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: تشبع 94% أو أكثر على هواء الغرفة."
+     ],
+     "en": [
+      "Before discharge: SpO₂ ≥ 94% on room air."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم متابعة نسبة التشبع ومعدل التنفس باستمرار، وملاحظة نقص الأكسجين الصامت دون شعور المريض بضيق.",
+      "en": "Continuous SpO₂ and RR; watch for silent hypoxemia."
+     },
+     "rationale": {
+      "ar": "قد يهبط الأكسجين دون أعراض واضحة.",
+      "en": "Oxygen may fall without obvious distress."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الأكسجين حسب أمر الطبيب للوصول إلى تشبع 92–96%، والتصعيد للأكسجين عالي التدفق عند الحاجة.",
+      "en": "Give oxygen to SpO₂ 92–96%; escalate to high-flow as needed."
+     },
+     "rationale": {
+      "ar": "يعالج نقص الأكسجين.",
+      "en": "Treats hypoxemia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض الواعي على النوم على البطن لفترات (Awake proning) إذا سمحت حالته.",
+      "en": "Encourage awake prone positioning if tolerated."
+     },
+     "rationale": {
+      "ar": "يحسن توزيع التهوية والأكسجة.",
+      "en": "Improves ventilation distribution."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الكورتيزون (ديكساميثازون) ومضادات التجلط الوقائية حسب البروتوكول.",
+      "en": "Give dexamethasone and prophylactic anticoagulation per protocol."
+     },
+     "rationale": {
+      "ar": "يقلل الالتهاب والجلطات.",
+      "en": "Reduces inflammation and clotting."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تجميع الرعاية التمريضية لتقليل المجهود واستهلاك الأكسجين.",
+      "en": "Cluster care to reduce exertion and oxygen demand."
+     },
+     "rationale": {
+      "ar": "يقلل الاستهلاك.",
+      "en": "Lowers demand."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب فورًا عند هبوط التشبع رغم الأكسجين أو ارتفاع معدل التنفس عن 30.",
+      "en": "Report desaturation despite oxygen or RR > 30 immediately."
+     },
+     "rationale": {
+      "ar": "قد يحتاج رعاية مركزة.",
+      "en": "May need ICU."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "التشبع 94% على 4 لتر بعد ساعة — تحقق.",
+      "en": "SpO₂ 94% on 4 L at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "رفع نسبة الأكسجين في الدم إلى المعدل المستهدف",
+      "en": "Raising blood oxygen to the target range"
+     },
+     "actions": {
+      "ar": [
+       "تتم متابعة نسبة التشبع ومعدل التنفس باستمرار، وملاحظة نقص الأكسجين الصامت دون شعور المريض بضيق.",
+       "يتم إعطاء الأكسجين حسب أمر الطبيب للوصول إلى تشبع 92–96%، والتصعيد للأكسجين عالي التدفق عند الحاجة.",
+       "يتم تشجيع المريض الواعي على النوم على البطن لفترات (Awake proning) إذا سمحت حالته.",
+       "يتم إعطاء الكورتيزون (ديكساميثازون) ومضادات التجلط الوقائية حسب البروتوكول.",
+       "يتم تجميع الرعاية التمريضية لتقليل المجهود واستهلاك الأكسجين.",
+       "يتم إبلاغ الطبيب فورًا عند هبوط التشبع رغم الأكسجين أو ارتفاع معدل التنفس عن 30."
+      ],
+      "en": [
+       "Continuous SpO₂ and RR; watch for silent hypoxemia.",
+       "Give oxygen to SpO₂ 92–96%; escalate to high-flow as needed.",
+       "Encourage awake prone positioning if tolerated.",
+       "Give dexamethasone and prophylactic anticoagulation per protocol.",
+       "Cluster care to reduce exertion and oxygen demand.",
+       "Report desaturation despite oxygen or RR > 30 immediately."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع 92–96%.",
+      "en": "SpO₂ 92–96%."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-infection-transmission-covid",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر انتقال العدوى (كوفيد-19)",
+    "en": "Risk for Infection Transmission (COVID-19)"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة قد يؤثر على الصحة.",
+    "en": "Susceptibility to invasion by pathogenic organisms that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "فيروس ينتقل بالرذاذ والهواء",
+     "الإجراءات المولدة للرذاذ"
+    ],
+    "en": [
+     "Droplet and airborne-transmitted virus",
+     "Aerosol-generating procedures"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هل يمكن أن تنتقل العدوى إلى أسرتي؟\""
+     ],
+     "en": [
+      "\"Could my family catch it?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مسحة PCR إيجابية."
+     ],
+     "en": [
+      "Positive PCR."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "يوميًا: لا علامات عدوى والحرارة < 38."
+     ],
+     "en": [
+      "Daily: no infection signs; T < 38."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا عدوى طوال فترة العلاج."
+     ],
+     "en": [
+      "No infection during treatment."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+      "en": "Monitor temperature and local/systemic infection signs."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+      "en": "Hand hygiene before and after patient contact."
+     },
+     "rationale": {
+      "ar": "أهم وسيلة وقاية.",
+      "en": "Key prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+      "en": "Aseptic technique with wounds and devices."
+     },
+     "rationale": {
+      "ar": "منع دخول الميكروب.",
+      "en": "Prevents entry of organisms."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+      "en": "Antibiotics on time as ordered."
+     },
+     "rationale": {
+      "ar": "مستوى فعال.",
+      "en": "Effective levels."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم عزل المريض في غرفة فردية وارتداء الفريق الكمامة N95 والجاون والقفازات وواقي العين.",
+      "en": "Isolate in a single room; staff wear N95, gown, gloves and eye protection."
+     },
+     "rationale": {
+      "ar": "منع الانتقال.",
+      "en": "Prevents transmission."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم الأسرة غسل الأيدي وارتداء الكمامة والعزل المنزلي حسب التعليمات الصحية.",
+      "en": "Teach family hand hygiene, masks and home isolation per guidance."
+     },
+     "rationale": {
+      "ar": "حماية المخالطين.",
+      "en": "Protects contacts."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات عدوى — تحقق.",
+      "en": "No infection signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية المريض من العدوى",
+      "en": "Protecting the patient from infection"
+     },
+     "actions": {
+      "ar": [
+       "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+       "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+       "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+       "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+       "يتم عزل المريض في غرفة فردية وارتداء الفريق الكمامة N95 والجاون والقفازات وواقي العين.",
+       "يتم تعليم الأسرة غسل الأيدي وارتداء الكمامة والعزل المنزلي حسب التعليمات الصحية."
+      ],
+      "en": [
+       "Monitor temperature and local/systemic infection signs.",
+       "Hand hygiene before and after patient contact.",
+       "Aseptic technique with wounds and devices.",
+       "Antibiotics on time as ordered.",
+       "Isolate in a single room; staff wear N95, gown, gloves and eye protection.",
+       "Teach family hand hygiene, masks and home isolation per guidance."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عدوى.",
+      "en": "No infection."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "hyperthermia-covid",
+   "kind": "actual",
+   "title": {
+    "ar": "ارتفاع درجة الحرارة",
+    "en": "Hyperthermia"
+   },
+   "definition": {
+    "ar": "ارتفاع حرارة الجسم عن المعدل الطبيعي.",
+    "en": "Body temperature above normal."
+   },
+   "relatedTo": {
+    "ar": [
+     "العدوى الفيروسية"
+    ],
+    "en": [
+     "Viral infection"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "حرارة ≥ 38",
+     "سخونة الجلد ورعشة"
+    ],
+    "en": [
+     "T ≥ 38 °C",
+     "Warm skin and chills"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"جسمي ساخن وأرتعش.\""
+     ],
+     "en": [
+      "\"I'm hot and shivering.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الحرارة 38.7."
+     ],
+     "en": [
+      "T 38.7."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعتين: حرارة < 38."
+     ],
+     "en": [
+      "Within 2 h: T < 38 °C."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا حمى خلال 72 ساعة من العلاج."
+     ],
+     "en": [
+      "Afebrile within 72 h of treatment."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس درجة الحرارة كل 2–4 ساعات، وبعد إعطاء خافض الحرارة بساعة.",
+      "en": "T every 2–4 h and after antipyretic."
+     },
+     "rationale": {
+      "ar": "يقيس الاستجابة.",
+      "en": "Measures response."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء خافض الحرارة حسب أمر الطبيب، وإعادة قياس الحرارة بعد ساعة.",
+      "en": "Antipyretic as ordered."
+     },
+     "rationale": {
+      "ar": "خفض الحرارة.",
+      "en": "Lowers temperature."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم إلباس المريض ملابس خفيفة، وعمل كمادات فاترة، وتهوية الغرفة جيدًا.",
+      "en": "Light clothing, tepid sponging, ventilation."
+     },
+     "rationale": {
+      "ar": "زيادة فقد الحرارة.",
+      "en": "Increases heat loss."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على زيادة تناول السوائل ما لم تكن ممنوعة.",
+      "en": "Increase fluids unless restricted."
+     },
+     "rationale": {
+      "ar": "تعويض الفقد.",
+      "en": "Replaces losses."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تغيير ملابس المريض المبللة بالعرق.",
+      "en": "Change sweat-soaked clothing."
+     },
+     "rationale": {
+      "ar": "راحة.",
+      "en": "Comfort."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم الاستمرار في علاج السبب ومتابعة نتائج التحاليل.",
+      "en": "Continue treating the cause; follow labs."
+     },
+     "rationale": {
+      "ar": "علاج السبب.",
+      "en": "Treats the cause."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الحرارة 37.6 بعد ساعتين — تحقق.",
+      "en": "T 37.6 at 2 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "خفض درجة الحرارة إلى المعدل الطبيعي وتوفير الراحة",
+      "en": "Lowering temperature to normal and providing comfort"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس درجة الحرارة كل 2–4 ساعات، وبعد إعطاء خافض الحرارة بساعة.",
+       "يتم إعطاء خافض الحرارة حسب أمر الطبيب، وإعادة قياس الحرارة بعد ساعة.",
+       "يتم إلباس المريض ملابس خفيفة، وعمل كمادات فاترة، وتهوية الغرفة جيدًا.",
+       "يتم تشجيع المريض على زيادة تناول السوائل ما لم تكن ممنوعة.",
+       "يتم تغيير ملابس المريض المبللة بالعرق.",
+       "يتم الاستمرار في علاج السبب ومتابعة نتائج التحاليل."
+      ],
+      "en": [
+       "T every 2–4 h and after antipyretic.",
+       "Antipyretic as ordered.",
+       "Light clothing, tepid sponging, ventilation.",
+       "Increase fluids unless restricted.",
+       "Change sweat-soaked clothing.",
+       "Continue treating the cause; follow labs."
+      ]
+     },
+     "outcome": {
+      "ar": "حرارة < 38.",
+      "en": "T < 38."
+     },
+     "timeframe": {
+      "ar": "ساعتين",
+      "en": "2 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-vte-covid",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الجلطات الوريدية",
+    "en": "Risk for Venous Thromboembolism"
+   },
+   "definition": {
+    "ar": "قابلية لتكون الجلطات.",
+    "en": "Susceptibility to thrombosis."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "الالتهاب وفرط التجلط المصاحب للفيروس",
+     "قلة الحركة"
+    ],
+    "en": [
+     "Virus-associated inflammation and hypercoagulability",
+     "Immobility"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بثقل في ساقي.\""
+     ],
+     "en": [
+      "\"My leg feels heavy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "دي-دايمر مرتفع."
+     ],
+     "en": [
+      "Raised D-dimer."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "تطبيق الوقاية يوميًا."
+     ],
+     "en": [
+      "Daily prophylaxis."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا جلطات."
+     ],
+     "en": [
+      "No thrombosis."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الهيبارين الوقائي حسب البروتوكول وأمر الطبيب.",
+      "en": "Give prophylactic heparin per protocol."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على تمارين الساقين والحركة داخل الغرفة حسب قدرته.",
+      "en": "Encourage leg exercises and in-room mobility as tolerated."
+     },
+     "rationale": {
+      "ar": "تنشيط الدورة.",
+      "en": "Circulation."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص الساقين يوميًا لملاحظة التورم أو الألم.",
+      "en": "Check legs daily for swelling or pain."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة ضيق النفس المفاجئ أو ألم الصدر أو هبوط التشبع المفاجئ.",
+      "en": "Watch for sudden dyspnea, chest pain or desaturation."
+     },
+     "rationale": {
+      "ar": "علامات جلطة الرئة.",
+      "en": "PE signs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على شرب سوائل كافية ما لم تكن ممنوعة.",
+      "en": "Encourage adequate fluids unless restricted."
+     },
+     "rationale": {
+      "ar": "منع اللزوجة.",
+      "en": "Prevents hemoconcentration."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تتم متابعة الصفائح وتحاليل التجلط أثناء العلاج بالهيبارين.",
+      "en": "Monitor platelets and clotting during heparin."
+     },
+     "rationale": {
+      "ar": "سلامة.",
+      "en": "Safety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات جلطة — تحقق.",
+      "en": "No VTE signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من الجلطات الوريدية",
+      "en": "Prevention of venous thromboembolism"
+     },
+     "actions": {
+      "ar": [
+       "يتم إعطاء الهيبارين الوقائي حسب البروتوكول وأمر الطبيب.",
+       "يتم تشجيع المريض على تمارين الساقين والحركة داخل الغرفة حسب قدرته.",
+       "يتم فحص الساقين يوميًا لملاحظة التورم أو الألم.",
+       "تتم ملاحظة ضيق النفس المفاجئ أو ألم الصدر أو هبوط التشبع المفاجئ.",
+       "يتم تشجيع المريض على شرب سوائل كافية ما لم تكن ممنوعة.",
+       "تتم متابعة الصفائح وتحاليل التجلط أثناء العلاج بالهيبارين."
+      ],
+      "en": [
+       "Give prophylactic heparin per protocol.",
+       "Encourage leg exercises and in-room mobility as tolerated.",
+       "Check legs daily for swelling or pain.",
+       "Watch for sudden dyspnea, chest pain or desaturation.",
+       "Encourage adequate fluids unless restricted.",
+       "Monitor platelets and clotting during heparin."
+      ]
+     },
+     "outcome": {
+      "ar": "لا جلطات.",
+      "en": "No VTE."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "activity-intolerance-covid",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم تحمل النشاط",
+    "en": "Activity Intolerance"
+   },
+   "definition": {
+    "ar": "نقص الطاقة الجسدية أو النفسية لتحمل أو إكمال الأنشطة اليومية المطلوبة.",
+    "en": "Insufficient physiological or psychological energy to endure or complete required daily activities."
+   },
+   "relatedTo": {
+    "ar": [
+     "نقص الأكسجين والتعب الفيروسي"
+    ],
+    "en": [
+     "Hypoxemia and viral fatigue"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تعب وضيق نفس عند المجهود",
+     "تغير غير طبيعي في النبض أو الضغط مع النشاط"
+    ],
+    "en": [
+     "Fatigue and exertional dyspnea",
+     "Abnormal HR or BP response to activity"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أتعب بسرعة كبيرة.\""
+     ],
+     "en": [
+      "\"I get tired very quickly.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "التشبع يهبط إلى 88% مع المشي."
+     ],
+     "en": [
+      "SpO₂ drops to 88% walking."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 3 أيام: يؤدي المريض العناية الذاتية مع بقاء النبض والضغط في الحدود المقبولة."
+     ],
+     "en": [
+      "Within 3 days: performs self-care with HR and BP within acceptable limits."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يمشي في الممر بدون أعراض ويعرف خطة النشاط في البيت."
+     ],
+     "en": [
+      "Before discharge: walks the corridor without symptoms and knows the home activity plan."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+      "en": "Check pulse, BP and SpO₂ before, during and 3 minutes after activity."
+     },
+     "rationale": {
+      "ar": "يحدد تحمل المريض.",
+      "en": "Determines tolerance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة.",
+      "en": "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+     },
+     "rationale": {
+      "ar": "علامات عدم التحمل.",
+      "en": "Signs of intolerance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+      "en": "Progress activity: sitting in bed, chair, walking in room then corridor."
+     },
+     "rationale": {
+      "ar": "التدرج يبني التحمل بأمان.",
+      "en": "Gradual progression builds tolerance safely."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+      "en": "Plan rest between activities; cluster care."
+     },
+     "rationale": {
+      "ar": "يحافظ على الطاقة.",
+      "en": "Conserves energy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "تتم المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+      "en": "Assist with ADLs as needed while encouraging independence."
+     },
+     "rationale": {
+      "ar": "يوازن بين الراحة والنشاط.",
+      "en": "Balances rest and activity."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود).",
+      "en": "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+     },
+     "rationale": {
+      "ar": "يقلل الحمل على القلب.",
+      "en": "Reduces cardiac workload."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "مشى في الممر 50 مترًا، زاد النبض 12 فقط بدون ضيق نفس — تحقق.",
+      "en": "Walked 50 m; HR rose by only 12, no dyspnea — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تحديد قدرة المريض على تحمل النشاط بأمان",
+      "en": "Determining safe activity tolerance"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس النبض والضغط والتشبع قبل وأثناء و3 دقائق بعد النشاط.",
+       "يتم إيقاف النشاط عند: ألم صدر، ضيق نفس، زيادة النبض > 20 عن الراحة، هبوط التشبع < 90%، أو دوخة."
+      ],
+      "en": [
+       "Check pulse, BP and SpO₂ before, during and 3 minutes after activity.",
+       "Stop activity for chest pain, dyspnea, HR rise > 20 above rest, SpO₂ < 90%, or dizziness."
+      ]
+     },
+     "outcome": {
+      "ar": "علامات حيوية مقبولة مع النشاط.",
+      "en": "Acceptable vitals with activity."
+     },
+     "timeframe": {
+      "ar": "مع كل نشاط",
+      "en": "With each activity"
+     }
+    },
+    {
+     "need": {
+      "ar": "زيادة النشاط تدريجيًا حتى أداء العناية الذاتية دون أعراض",
+      "en": "Gradual increase in activity to symptom-free self-care"
+     },
+     "actions": {
+      "ar": [
+       "يتم التدرج في النشاط: الجلوس في السرير، ثم الكرسي، ثم المشي داخل الغرفة ثم الممر.",
+       "يتم تنظيم فترات راحة بين الأنشطة وتجميع الرعاية.",
+       "تتم المساعدة في الأنشطة اليومية حسب الحاجة مع تشجيع الاستقلالية.",
+       "يتم تعليم طرق توفير الطاقة (الجلوس أثناء الاستحمام واللبس، عدم حبس النفس عند المجهود)."
+      ],
+      "en": [
+       "Progress activity: sitting in bed, chair, walking in room then corridor.",
+       "Plan rest between activities; cluster care.",
+       "Assist with ADLs as needed while encouraging independence.",
+       "Teach energy conservation (sit to bathe and dress, avoid breath-holding with effort)."
+      ]
+     },
+     "outcome": {
+      "ar": "عناية ذاتية ومشي بدون أعراض.",
+      "en": "Self-care and walking without symptoms."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "social-isolation-covid",
+   "kind": "actual",
+   "title": {
+    "ar": "العزلة الاجتماعية والقلق (العزل الطبي)",
+    "en": "Social Isolation and Anxiety (Medical Isolation)"
+   },
+   "definition": {
+    "ar": "وحدة وقلق مرتبطان بالعزل ومنع الزيارات.",
+    "en": "Loneliness and anxiety from isolation and no visitors."
+   },
+   "relatedTo": {
+    "ar": [
+     "العزل الطبي والخوف من المرض"
+    ],
+    "en": [
+     "Medical isolation and fear of the illness"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "حزن وقلق",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Sadness and anxiety",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بالوحدة، ولا أحد يستطيع زيارتي.\""
+     ],
+     "en": [
+      "\"I feel lonely and no one can visit me.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قلق، يسأل كثيرًا عن أسرته."
+     ],
+     "en": [
+      "Anxious, asks often about his family."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال يومين: يعبر المريض عن مشاعره ويتواصل مع أسرته يوميًا."
+     ],
+     "en": [
+      "Within 2 days: expresses feelings and contacts family daily."
+     ]
+    },
+    "long": {
+     "ar": [
+      "حالة نفسية مستقرة طوال العزل."
+     ],
+     "en": [
+      "Stable mood throughout isolation."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم مستوى القلق ومزاج المريض يوميًا.",
+      "en": "Assess anxiety and mood daily."
+     },
+     "rationale": {
+      "ar": "كشف الاكتئاب.",
+      "en": "Detects depression."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم ترتيب مكالمات هاتفية أو مرئية يومية مع الأسرة.",
+      "en": "Arrange daily phone or video calls with family."
+     },
+     "rationale": {
+      "ar": "يقلل العزلة.",
+      "en": "Reduces isolation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم التحدث مع المريض عند كل دخول للغرفة وتعريفه بالنفس رغم الملابس الواقية.",
+      "en": "Talk with the patient at each entry; introduce yourself despite PPE."
+     },
+     "rationale": {
+      "ar": "تواصل إنساني.",
+      "en": "Human contact."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح سبب العزل ومدته المتوقعة للمريض.",
+      "en": "Explain the reason and expected length of isolation."
+     },
+     "rationale": {
+      "ar": "الفهم يقلل القلق.",
+      "en": "Understanding reduces anxiety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير وسائل تسلية مثل الراديو والقراءة.",
+      "en": "Provide diversion such as radio and reading."
+     },
+     "rationale": {
+      "ar": "يشغل الوقت.",
+      "en": "Occupies time."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تحويل المريض للدعم النفسي عند الحاجة.",
+      "en": "Refer for psychological support as needed."
+     },
+     "rationale": {
+      "ar": "دعم متخصص.",
+      "en": "Specialist support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يتواصل مع أسرته يوميًا ويبدو أهدأ — تحقق.",
+      "en": "Daily family contact; calmer — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الدعم النفسي وتقليل الإحساس بالوحدة أثناء العزل",
+      "en": "Psychological support and less loneliness in isolation"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم مستوى القلق ومزاج المريض يوميًا.",
+       "يتم ترتيب مكالمات هاتفية أو مرئية يومية مع الأسرة.",
+       "يتم التحدث مع المريض عند كل دخول للغرفة وتعريفه بالنفس رغم الملابس الواقية.",
+       "يتم شرح سبب العزل ومدته المتوقعة للمريض.",
+       "يتم توفير وسائل تسلية مثل الراديو والقراءة.",
+       "يتم تحويل المريض للدعم النفسي عند الحاجة."
+      ],
+      "en": [
+       "Assess anxiety and mood daily.",
+       "Arrange daily phone or video calls with family.",
+       "Talk with the patient at each entry; introduce yourself despite PPE.",
+       "Explain the reason and expected length of isolation.",
+       "Provide diversion such as radio and reading.",
+       "Refer for psychological support as needed."
+      ]
+     },
+     "outcome": {
+      "ar": "إحساس أقل بالوحدة.",
+      "en": "Less loneliness."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "WHO Clinical management of COVID-19: living guideline (2023)"
+  },
+  {
+   "title": "NICE NG191 — COVID-19 rapid guideline: managing COVID-19 (2021, updated 2024)"
+  }
+ ]
+}
