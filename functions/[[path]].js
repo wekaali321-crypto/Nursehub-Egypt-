@@ -214,7 +214,7 @@ async function pageFor(path, env, request) {
     return {
       title: `خطط الرعاية التمريضية جاهزة | ${SITE_NAME}`,
       description: 'خطط رعاية تمريضية جاهزة بالعربي والإنجليزي لأشهر الأمراض: خطة الطلاب (Assessment، Nursing Diagnosis، Goals، Interventions & Rationale، Evaluation) وخطة المستشفى.',
-      body: `<h1>خطط الرعاية التمريضية</h1><h2>ابدأ هنا</h2>${list([['/care-plans/guide/care-plan', 'دليل كتابة خطة الرعاية التمريضية', 'Nursing Care Plan Guide'], ['/care-plans/guide/nursing-diagnosis', 'دليل التشخيص التمريضي', 'Nursing Diagnosis Guide'], ['/care-plans/guide/nursing-process', 'دليل العملية التمريضية', 'Nursing Process Guide']])}${list((idx.plans || []).map((c) => [`/care-plans/${c.id}`, c.title.ar, c.summary?.ar || '']))}${list((idx.plans || []).flatMap((c) => (c.diagnoses || []).map((d) => [`/care-plans/${c.id}/${d.id}`, `${d.title.ar} — ${c.title.ar}`, d.title.en])))}`,
+      body: `<h1>خطط الرعاية التمريضية</h1><h2>ابدأ هنا</h2>${list([['/care-plans/guide/care-plan', 'دليل كتابة خطة الرعاية التمريضية', 'Nursing Care Plan Guide'], ['/care-plans/guide/nursing-diagnosis', 'دليل التشخيص التمريضي', 'Nursing Diagnosis Guide'], ['/care-plans/guide/nursing-process', 'دليل العملية التمريضية', 'Nursing Process Guide']])}${list((idx.plans || []).map((c) => [`/care-plans/${c.id}`, c.title.ar, c.summary?.ar || '']))}${list((idx.plans || []).flatMap((c) => (c.diagnoses || []).slice(1).map((d) => [`/care-plans/${c.id}/${d.id}`, `${d.title.ar} — ${c.title.ar}`, d.title.en])))}`,
       type: 'CollectionPage',
     };
   }
@@ -241,7 +241,7 @@ async function pageFor(path, env, request) {
     const c = normalizePlan(raw);
     const d = m[2] ? c.diagnoses.find((x) => x.id === m[2]) : c.diagnoses[0];
     if (!d) return null;
-    const links = `<nav><h2>التشخيصات التمريضية</h2>${list(c.diagnoses.map((x) => [`/care-plans/${c.id}/${x.id}`, x.title.ar, x.title.en]))}</nav>`;
+    const links = `<nav><h2>التشخيصات التمريضية</h2>${list(c.diagnoses.map((x, i) => [i ? `/care-plans/${c.id}/${x.id}` : `/care-plans/${c.id}`, x.title.ar, x.title.en]))}</nav>`;
     return {
       title: `${d.title.ar} — خطة رعاية تمريضية ${c.title.ar} (${d.title.en} Nursing Care Plan) | ${SITE_NAME}`,
       description: clip(strip((d.definition || d.statement)?.ar || c.summary?.ar || ''), 300),
@@ -549,12 +549,17 @@ export async function onRequest({ request, env, next }) {
     if (a.status >= 300 && a.status < 400) return a;
     return shell(request, env, 404); // unknown file (the SPA fallback would otherwise answer 200 with index.html)
   }
-  // Plans rewritten into the new format lost their old numbered diagnosis pages (/care-plans/<id>/dx-2): send those to the plan.
-  const legacyDx = /^\/care-plans\/([a-z0-9-]+)\/dx-\d+$/.exec(url.pathname);
-  if (legacyDx && (request.method === 'GET' || request.method === 'HEAD')) {
-    const raw = await getJSON(env, request, `/careplans/plans/${legacyDx[1]}.json`).catch(() => null);
-    if (raw && Array.isArray(raw.diagnoses) && !raw.diagnoses.some((x) => `/care-plans/${legacyDx[1]}/${x.id}` === url.pathname)) {
-      return Response.redirect(`${url.origin}/care-plans/${legacyDx[1]}`, 301);
+  // Send to the plan page (301): old numbered diagnosis pages (/care-plans/<id>/dx-2) that no longer exist, and the plan's
+  // FIRST diagnosis, which the plan page already shows (Google reported the two URLs as duplicates and picked its own canonical).
+  const planDx = /^\/care-plans\/([a-z0-9-]+)\/([a-z0-9-]+)$/.exec(url.pathname);
+  if (planDx && planDx[1] !== 'guide' && (request.method === 'GET' || request.method === 'HEAD')) {
+    const raw = await getJSON(env, request, `/careplans/plans/${planDx[1]}.json`).catch(() => null);
+    if (raw && Array.isArray(raw.diagnoses)) {
+      const ids = raw.diagnoses.map((x) => x.id);
+      const legacy = /^dx-\d+$/.test(planDx[2]) && !ids.includes(planDx[2]);
+      if (legacy || (ids.length && planDx[2] === ids[0])) {
+        return Response.redirect(`${url.origin}/care-plans/${planDx[1]}${url.search}`, 301);
+      }
     }
   }
   if (request.method === 'GET' || request.method === 'HEAD') {

@@ -238,7 +238,7 @@ export function CarePlanPage() {
   if (plan === undefined || !dx) return <div className="mx-auto max-w-6xl px-4 py-8"><div className="h-96 animate-pulse rounded-3xl bg-slate-100 dark:bg-slate-800" /></div>;
 
   const setKind = (k: Kind) => { const p = new URLSearchParams(params); if (k === "student") p.delete("type"); else p.set("type", k); setParams(p, { replace: true }); };
-  const goDx = (d: Diagnosis) => nav(`/care-plans/${plan.id}/${d.id}${kind === "hospital" ? "?type=hospital" : ""}`);
+  const goDx = (d: Diagnosis) => nav(`/care-plans/${plan.id}${d.id === plan.diagnoses[0]?.id ? "" : `/${d.id}`}${kind === "hospital" ? "?type=hospital" : ""}`); // first diagnosis = the plan page (one URL)
   const folderLink = plan.folder === "general" ? "/care-plans?folder=general" : "/care-plans";
 
   return (

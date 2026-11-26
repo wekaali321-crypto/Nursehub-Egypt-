@@ -64,6 +64,10 @@ test('crawlers: list, each diagnosis as its own page with title and canonical; u
   assert.ok(h.includes('<link rel="canonical" href="https://nursehubegypt.com/care-plans/heart-failure/excess-fluid-volume" />'));
   assert.ok(h.includes('التدخلات التمريضية والمبررات') && h.includes('مرتبط بـ'));
   assert.equal((await get('/care-plans/heart-failure')).status, 200, 'plan page = first diagnosis');
+  const first = await get('/care-plans/heart-failure/decreased-cardiac-output?type=hospital');
+  assert.equal(first.status, 301, 'the first diagnosis has one URL: the plan page');
+  assert.match(first.headers.get('location') || '', /\/care-plans\/heart-failure\?type=hospital$/);
+  assert.ok(!lh.includes('/care-plans/heart-failure/decreased-cardiac-output'), 'hub does not link the duplicate URL');
   const old = await get('/care-plans/hypertension/dx-3');
   assert.equal(old.status, 301, 'numbered pages of rewritten plans move to the plan');
   assert.match(old.headers.get('location') || '', /\/care-plans\/hypertension$/);

@@ -122,7 +122,7 @@ export default function SmartSearch({ onNavigate, variant = "compact" }: { onNav
         .map((c) => ({ label: bilingual(c.title.ar, c.title.en, lang).text, sub: lang === "ar" ? "خطة رعاية تمريضية" : "Nursing care plan", to: `/care-plans/${c.id}`, icon: c.icon || "📋" })),
       ...carePlans.flatMap((c) => (c.diagnoses ?? [])
         .filter((d) => `${d.title.ar} ${d.title.en}`.toLowerCase().includes(lower))
-        .map((d) => ({ label: bilingual(d.title.ar, d.title.en, lang).text, sub: `${lang === "ar" ? "تشخيص تمريضي ·" : "Nursing diagnosis ·"} ${bilingual(c.title.ar, c.title.en, lang).text}`, to: `/care-plans/${c.id}/${d.id}`, icon: c.icon || "📋" }))),
+        .map((d, i) => ({ label: bilingual(d.title.ar, d.title.en, lang).text, sub: `${lang === "ar" ? "تشخيص تمريضي ·" : "Nursing diagnosis ·"} ${bilingual(c.title.ar, c.title.en, lang).text}`, to: i ? `/care-plans/${c.id}/${d.id}` : `/care-plans/${c.id}`, icon: c.icon || "📋" }))),
     ].slice(0, 3);
     const results = [...fromDrugs, ...fromCarePlans, ...fromIcu, ...fromDialysis, ...fromRadiology, ...fromNicu, ...fromPharmacology, ...fromTerminology, ...fromFirstAid, ...fromERReception, ...fromPediatrics, ...fromAnatomy, ...fromFundamentals, ...fromOperatingRoom, ...fromObgyn, ...fromProtocols, ...fromTravel, ...fromCourses, ...fromArticles].slice(0, 8);
 

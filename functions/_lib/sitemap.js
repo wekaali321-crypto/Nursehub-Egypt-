@@ -92,7 +92,7 @@ export async function sitemapResponse({ request, env }) {
       ['care-plan', 'nursing-diagnosis', 'nursing-process'].forEach((g) => urls.push([`/care-plans/guide/${g}`, 0.7]));
       (j.plans || []).forEach((c) => {
         urls.push([`/care-plans/${enc(c.id)}`, 0.7]);
-        (c.diagnoses || []).forEach((d) => urls.push([`/care-plans/${enc(c.id)}/${enc(d.id)}`, 0.6]));
+        (c.diagnoses || []).slice(1).forEach((d) => urls.push([`/care-plans/${enc(c.id)}/${enc(d.id)}`, 0.6]));
       });
     } catch {
       /* optional */
