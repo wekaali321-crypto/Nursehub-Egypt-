@@ -48,11 +48,15 @@ export default function DrugPage() {
       ? [
           {
             "@context": "https://schema.org",
-            "@type": "Drug",
+            // MedicalWebPage, not "Drug": Google reads schema.org Drug as a Product and
+            // then demands offers/review/aggregateRating (Search Console "Product snippets").
+            "@type": "MedicalWebPage",
             name: drug.name,
-            activeIngredient: drug.genericName,
-            drugClass: drug.drugClass,
             description: drug.indications,
+            url: window.location.href,
+            inLanguage: lang,
+            about: { "@type": "MedicalEntity", name: drug.name, alternateName: drug.genericName },
+            publisher: { "@type": "Organization", name: "NurseHub Egypt" },
           },
           breadcrumbSchema([
             { name: lang === "en" ? "Home" : "الرئيسية", url: window.location.origin },
