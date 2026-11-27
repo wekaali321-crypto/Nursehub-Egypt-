@@ -1,0 +1,1083 @@
+{
+ "id": "acute-leukaemia",
+ "icon": "🩸",
+ "system": "hematology",
+ "folder": "disease",
+ "title": {
+  "ar": "سرطان الدم الحاد (اللوكيميا)",
+  "en": "Acute Leukaemia"
+ },
+ "summary": {
+  "ar": "خطة رعاية اللوكيميا الحادة: العدوى ونقص العدلات، النزيف ونقص الصفائح، الإرهاق، التهاب الفم، متلازمة تحلل الورم، والقلق.",
+  "en": "Acute leukaemia care plan: neutropenic infection, bleeding, fatigue, mucositis, tumour lysis syndrome and anxiety."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-infection-leuk",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى (نقص العدلات)",
+    "en": "Risk for Infection (Neutropenia)"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة قد يؤثر على الصحة.",
+    "en": "Susceptibility to invasion by pathogenic organisms that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "نقص كرات الدم البيضاء الطبيعية",
+     "العلاج الكيميائي"
+    ],
+    "en": [
+     "Neutropenia",
+     "Chemotherapy"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هل يمكن أن أصاب بعدوى بسهولة؟\""
+     ],
+     "en": [
+      "\"Can I catch infections easily?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "عدلات 0.4 × 10⁹/لتر."
+     ],
+     "en": [
+      "ANC 0.4 × 10⁹/L."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "يوميًا: لا علامات عدوى والحرارة < 38."
+     ],
+     "en": [
+      "Daily: no infection signs; T < 38."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا عدوى طوال فترة العلاج."
+     ],
+     "en": [
+      "No infection during treatment."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+      "en": "Monitor temperature and local/systemic infection signs."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+      "en": "Hand hygiene before and after patient contact."
+     },
+     "rationale": {
+      "ar": "أهم وسيلة وقاية.",
+      "en": "Key prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+      "en": "Aseptic technique with wounds and devices."
+     },
+     "rationale": {
+      "ar": "منع دخول الميكروب.",
+      "en": "Prevents entry of organisms."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+      "en": "Antibiotics on time as ordered."
+     },
+     "rationale": {
+      "ar": "مستوى فعال.",
+      "en": "Effective levels."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المضاد الحيوي الوريدي خلال ساعة من ظهور حمى مع نقص العدلات حسب البروتوكول.",
+      "en": "Give IV antibiotics within 1 h of neutropenic fever per protocol."
+     },
+     "rationale": {
+      "ar": "الحمى مع نقص العدلات طارئة.",
+      "en": "Neutropenic fever is an emergency."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في غرفة منفردة مع غسل اليدين الصارم ومنع الزوار المرضى.",
+      "en": "Use a single room, strict hand hygiene and no unwell visitors."
+     },
+     "rationale": {
+      "ar": "تقليل التعرض.",
+      "en": "Reduces exposure."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات عدوى — تحقق.",
+      "en": "No infection signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية المريض من العدوى",
+      "en": "Protecting the patient from infection"
+     },
+     "actions": {
+      "ar": [
+       "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+       "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+       "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+       "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+       "يتم إعطاء المضاد الحيوي الوريدي خلال ساعة من ظهور حمى مع نقص العدلات حسب البروتوكول.",
+       "يتم وضع المريض في غرفة منفردة مع غسل اليدين الصارم ومنع الزوار المرضى."
+      ],
+      "en": [
+       "Monitor temperature and local/systemic infection signs.",
+       "Hand hygiene before and after patient contact.",
+       "Aseptic technique with wounds and devices.",
+       "Antibiotics on time as ordered.",
+       "Give IV antibiotics within 1 h of neutropenic fever per protocol.",
+       "Use a single room, strict hand hygiene and no unwell visitors."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عدوى.",
+      "en": "No infection."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-bleeding-leuk",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر النزيف",
+    "en": "Risk for Bleeding"
+   },
+   "definition": {
+    "ar": "قابلية للنزيف بسبب نقص الصفائح.",
+    "en": "Susceptibility to bleeding from thrombocytopenia."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "صفائح 15 ألف",
+     "العلاج الكيميائي"
+    ],
+    "en": [
+     "Platelets 15k",
+     "Chemotherapy"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"تظهر كدمات على جسمي بسهولة.\""
+     ],
+     "en": [
+      "\"I bruise very easily.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "نمشات على الساقين."
+     ],
+     "en": [
+      "Petechiae on the legs."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: لا نزيف كبير."
+     ],
+     "en": [
+      "Each shift: no major bleeding."
+     ]
+    },
+    "long": {
+     "ar": [
+      "صفائح آمنة."
+     ],
+     "en": [
+      "Safe platelet count."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص الجلد والفم والأنف والبول والبراز لملاحظة النزيف كل وردية.",
+      "en": "Inspect skin, mouth, nose, urine and stool for bleeding each shift."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم نقل الصفائح حسب الأمر عند انخفاضها الشديد أو النزيف.",
+      "en": "Transfuse platelets as ordered for severe thrombocytopenia or bleeding."
+     },
+     "rationale": {
+      "ar": "منع النزيف.",
+      "en": "Prevents bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تجنب الحقن العضلي وقياس الحرارة بالمستقيم والحقن الشرجية.",
+      "en": "Avoid IM injections, rectal temperatures and enemas."
+     },
+     "rationale": {
+      "ar": "منع الإصابة.",
+      "en": "Prevents trauma."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام فرشاة أسنان ناعمة جدًا وماكينة حلاقة كهربائية.",
+      "en": "Use a very soft toothbrush and an electric razor."
+     },
+     "rationale": {
+      "ar": "منع الجروح.",
+      "en": "Prevents cuts."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الوعي والصداع لاكتشاف نزيف المخ.",
+      "en": "Assess consciousness and headache for intracranial bleeding."
+     },
+     "rationale": {
+      "ar": "مضاعفة خطيرة.",
+      "en": "Serious complication."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم الضغط على أماكن السحب 5–10 دقائق على الأقل.",
+      "en": "Apply pressure to puncture sites for at least 5–10 min."
+     },
+     "rationale": {
+      "ar": "إيقاف النزيف.",
+      "en": "Stops bleeding."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا نزيف — تحقق.",
+      "en": "No bleeding — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من النزيف مع نقص الصفائح",
+      "en": "Bleeding prevention in thrombocytopenia"
+     },
+     "actions": {
+      "ar": [
+       "يتم فحص الجلد والفم والأنف والبول والبراز لملاحظة النزيف كل وردية.",
+       "يتم نقل الصفائح حسب الأمر عند انخفاضها الشديد أو النزيف.",
+       "يتم تجنب الحقن العضلي وقياس الحرارة بالمستقيم والحقن الشرجية.",
+       "يتم استخدام فرشاة أسنان ناعمة جدًا وماكينة حلاقة كهربائية.",
+       "يتم تقييم الوعي والصداع لاكتشاف نزيف المخ.",
+       "يتم الضغط على أماكن السحب 5–10 دقائق على الأقل."
+      ],
+      "en": [
+       "Inspect skin, mouth, nose, urine and stool for bleeding each shift.",
+       "Transfuse platelets as ordered for severe thrombocytopenia or bleeding.",
+       "Avoid IM injections, rectal temperatures and enemas.",
+       "Use a very soft toothbrush and an electric razor.",
+       "Assess consciousness and headache for intracranial bleeding.",
+       "Apply pressure to puncture sites for at least 5–10 min."
+      ]
+     },
+     "outcome": {
+      "ar": "صفائح آمنة.",
+      "en": "Safe platelet count."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "fatigue-leuk",
+   "kind": "actual",
+   "title": {
+    "ar": "الإرهاق",
+    "en": "Fatigue"
+   },
+   "definition": {
+    "ar": "تعب شديد.",
+    "en": "Severe fatigue."
+   },
+   "relatedTo": {
+    "ar": [
+     "الأنيميا والعلاج الكيميائي"
+    ],
+    "en": [
+     "Anaemia and chemotherapy"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "تعب مستمر"
+    ],
+    "en": [
+     "Persistent tiredness"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بتعب شديد حتى وأنا مستلقٍ.\""
+     ],
+     "en": [
+      "\"I'm exhausted even lying down.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "هيموجلوبين 7.2."
+     ],
+     "en": [
+      "Hb 7.2."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوع: يؤدي العناية الذاتية مع فترات راحة."
+     ],
+     "en": [
+      "Within a week: self-care with rest periods."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طاقة أفضل."
+     ],
+     "en": [
+      "Better energy."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم نقل كرات الدم الحمراء حسب الأمر عند الأنيميا الشديدة.",
+      "en": "Transfuse red cells as ordered for severe anaemia."
+     },
+     "rationale": {
+      "ar": "تحسين الأكسجة.",
+      "en": "Improves oxygenation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تجميع الرعاية التمريضية لإعطاء فترات راحة متصلة.",
+      "en": "Cluster care to allow uninterrupted rest."
+     },
+     "rationale": {
+      "ar": "حفظ الطاقة.",
+      "en": "Energy conservation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المشي الخفيف حسب التحمل.",
+      "en": "Encourage light walking as tolerated."
+     },
+     "rationale": {
+      "ar": "تقليل الإرهاق.",
+      "en": "Reduces fatigue."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الإرهاق ونمط النوم يوميًا.",
+      "en": "Assess fatigue and sleep daily."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم مساعدة المريض في الأنشطة اليومية عند الحاجة.",
+      "en": "Assist with daily activities as needed."
+     },
+     "rationale": {
+      "ar": "دعم.",
+      "en": "Support."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم التنسيق مع أخصائي التغذية لتوفير غذاء كافٍ.",
+      "en": "Coordinate adequate nutrition with the dietitian."
+     },
+     "rationale": {
+      "ar": "طاقة.",
+      "en": "Energy."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "تعب أقل بعد النقل — تحقق جزئيًا.",
+      "en": "Less tired after transfusion — partially met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على الطاقة أثناء العلاج",
+      "en": "Conserving energy during treatment"
+     },
+     "actions": {
+      "ar": [
+       "يتم نقل كرات الدم الحمراء حسب الأمر عند الأنيميا الشديدة.",
+       "يتم تجميع الرعاية التمريضية لإعطاء فترات راحة متصلة.",
+       "يتم تشجيع المشي الخفيف حسب التحمل.",
+       "يتم تقييم الإرهاق ونمط النوم يوميًا.",
+       "يتم مساعدة المريض في الأنشطة اليومية عند الحاجة.",
+       "يتم التنسيق مع أخصائي التغذية لتوفير غذاء كافٍ."
+      ],
+      "en": [
+       "Transfuse red cells as ordered for severe anaemia.",
+       "Cluster care to allow uninterrupted rest.",
+       "Encourage light walking as tolerated.",
+       "Assess fatigue and sleep daily.",
+       "Assist with daily activities as needed.",
+       "Coordinate adequate nutrition with the dietitian."
+      ]
+     },
+     "outcome": {
+      "ar": "طاقة أفضل.",
+      "en": "Better energy."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "mucositis-leuk",
+   "kind": "actual",
+   "title": {
+    "ar": "تلف الغشاء المخاطي للفم",
+    "en": "Impaired Oral Mucous Membrane"
+   },
+   "definition": {
+    "ar": "قرح والتهاب بالفم.",
+    "en": "Oral ulceration and inflammation."
+   },
+   "relatedTo": {
+    "ar": [
+     "العلاج الكيميائي"
+    ],
+    "en": [
+     "Chemotherapy"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "قرح مؤلمة"
+    ],
+    "en": [
+     "Painful ulcers"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لا أستطيع البلع من ألم فمي.\""
+     ],
+     "en": [
+      "\"I can't swallow because my mouth hurts.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قرح متعددة بالفم."
+     ],
+     "en": [
+      "Multiple oral ulcers."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوع: تحسن القرح والبلع."
+     ],
+     "en": [
+      "Within a week: ulcers and swallowing improve."
+     ]
+    },
+    "long": {
+     "ar": [
+      "فم سليم."
+     ],
+     "en": [
+      "Healthy mouth."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تنظيف الفم بفرشاة ناعمة ومضمضة بمحلول ملح أو بيكربونات كل 4 ساعات.",
+      "en": "Clean with a soft brush and saline/bicarbonate rinses every 4 h."
+     },
+     "rationale": {
+      "ar": "منع العدوى وتخفيف الألم.",
+      "en": "Prevents infection; eases pain."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكن الموضعي أو العام قبل الوجبات حسب الأمر.",
+      "en": "Give topical or systemic analgesia before meals as ordered."
+     },
+     "rationale": {
+      "ar": "تسهيل الأكل.",
+      "en": "Eases eating."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص الفم يوميًا لملاحظة القرح والفطريات.",
+      "en": "Inspect the mouth daily for ulcers and thrush."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تجنب غسول الفم المحتوي على الكحول والأطعمة الحارة والحمضية.",
+      "en": "Avoid alcohol mouthwash and spicy or acidic foods."
+     },
+     "rationale": {
+      "ar": "تقليل التهيج.",
+      "en": "Less irritation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تقديم أطعمة لينة باردة وسوائل كافية.",
+      "en": "Offer soft cool foods and adequate fluids."
+     },
+     "rationale": {
+      "ar": "تغذية.",
+      "en": "Nutrition."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم علاج فطريات الفم بالدواء المناسب حسب الأمر.",
+      "en": "Treat candidiasis as ordered."
+     },
+     "rationale": {
+      "ar": "علاج العدوى.",
+      "en": "Treats infection."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "قرح أقل — تحقق جزئيًا.",
+      "en": "Fewer ulcers — partially met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "سلامة الفم والقدرة على الأكل",
+      "en": "Oral integrity and ability to eat"
+     },
+     "actions": {
+      "ar": [
+       "يتم تنظيف الفم بفرشاة ناعمة ومضمضة بمحلول ملح أو بيكربونات كل 4 ساعات.",
+       "يتم إعطاء المسكن الموضعي أو العام قبل الوجبات حسب الأمر.",
+       "يتم فحص الفم يوميًا لملاحظة القرح والفطريات.",
+       "يتم تجنب غسول الفم المحتوي على الكحول والأطعمة الحارة والحمضية.",
+       "يتم تقديم أطعمة لينة باردة وسوائل كافية.",
+       "يتم علاج فطريات الفم بالدواء المناسب حسب الأمر."
+      ],
+      "en": [
+       "Clean with a soft brush and saline/bicarbonate rinses every 4 h.",
+       "Give topical or systemic analgesia before meals as ordered.",
+       "Inspect the mouth daily for ulcers and thrush.",
+       "Avoid alcohol mouthwash and spicy or acidic foods.",
+       "Offer soft cool foods and adequate fluids.",
+       "Treat candidiasis as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "فم سليم.",
+      "en": "Healthy mouth."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-tls-leuk",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر متلازمة تحلل الورم",
+    "en": "Risk for Tumour Lysis Syndrome"
+   },
+   "definition": {
+    "ar": "قابلية لخلل الأملاح والفشل الكلوي بعد بدء العلاج.",
+    "en": "Susceptibility to electrolyte derangement and AKI after treatment starts."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "عدد خلايا كبير وبدء العلاج الكيميائي"
+    ],
+    "en": [
+     "High tumour burden and starting chemotherapy"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "—"
+     ],
+     "en": [
+      "—"
+     ]
+    },
+    "objective": {
+     "ar": [
+      "كرات بيضاء 120 ألف."
+     ],
+     "en": [
+      "WBC 120k."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أول 72 ساعة من العلاج: أملاح ووظائف كلى مستقرة."
+     ],
+     "en": [
+      "First 72 h: stable electrolytes and renal function."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا فشل كلوي."
+     ],
+     "en": [
+      "No AKI."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء السوائل الوريدية الكثيرة والألوبيورينول أو الراسبوريكاز حسب الأمر قبل العلاج.",
+      "en": "Give IV hydration and allopurinol or rasburicase as ordered before chemotherapy."
+     },
+     "rationale": {
+      "ar": "الوقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم متابعة البوتاسيوم والفوسفات والكالسيوم وحمض اليوريك والكرياتينين كل 6–12 ساعة.",
+      "en": "Monitor K, phosphate, calcium, uric acid and creatinine 6–12-hourly."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل كمية البول كل ساعة.",
+      "en": "Record hourly urine output."
+     },
+     "rationale": {
+      "ar": "وظائف الكلى.",
+      "en": "Renal function."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم توصيل المريض بمراقبة القلب عند ارتفاع البوتاسيوم.",
+      "en": "Start cardiac monitoring if potassium rises."
+     },
+     "rationale": {
+      "ar": "اضطراب النظم.",
+      "en": "Arrhythmia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب فورًا عند قلة البول أو خلل الأملاح.",
+      "en": "Report oliguria or electrolyte derangement immediately."
+     },
+     "rationale": {
+      "ar": "تدخل.",
+      "en": "Intervention."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة التنميل والتقلصات لنقص الكالسيوم.",
+      "en": "Watch for tingling and cramps of hypocalcaemia."
+     },
+     "rationale": {
+      "ar": "علامات النقص.",
+      "en": "Deficit signs."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "أملاح مستقرة — تحقق.",
+      "en": "Stable electrolytes — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من متلازمة تحلل الورم",
+      "en": "Preventing tumour lysis syndrome"
+     },
+     "actions": {
+      "ar": [
+       "يتم إعطاء السوائل الوريدية الكثيرة والألوبيورينول أو الراسبوريكاز حسب الأمر قبل العلاج.",
+       "يتم متابعة البوتاسيوم والفوسفات والكالسيوم وحمض اليوريك والكرياتينين كل 6–12 ساعة.",
+       "يتم تسجيل كمية البول كل ساعة.",
+       "يتم توصيل المريض بمراقبة القلب عند ارتفاع البوتاسيوم.",
+       "يتم إبلاغ الطبيب فورًا عند قلة البول أو خلل الأملاح.",
+       "تتم ملاحظة التنميل والتقلصات لنقص الكالسيوم."
+      ],
+      "en": [
+       "Give IV hydration and allopurinol or rasburicase as ordered before chemotherapy.",
+       "Monitor K, phosphate, calcium, uric acid and creatinine 6–12-hourly.",
+       "Record hourly urine output.",
+       "Start cardiac monitoring if potassium rises.",
+       "Report oliguria or electrolyte derangement immediately.",
+       "Watch for tingling and cramps of hypocalcaemia."
+      ]
+     },
+     "outcome": {
+      "ar": "لا فشل كلوي.",
+      "en": "No AKI."
+     },
+     "timeframe": {
+      "ar": "كل 6 ساعات",
+      "en": "Every 6 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-leuk",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "تشخيص سرطان الدم والعلاج الطويل"
+    ],
+    "en": [
+     "Leukaemia diagnosis and long treatment"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هل سأشفى؟\""
+     ],
+     "en": [
+      "\"Will I be cured?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "خائف."
+     ],
+     "en": [
+      "Frightened."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إشراك فريق الأورام والدعم النفسي في شرح الخطة العلاجية.",
+      "en": "Involve oncology and psychological support in explaining the plan."
+     },
+     "rationale": {
+      "ar": "معلومات صحيحة.",
+      "en": "Accurate information."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف القلق والشعور بالهدوء والأمان",
+      "en": "Relief of anxiety and a sense of calm and safety"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+       "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+       "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+       "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+       "يتم إشراك فريق الأورام والدعم النفسي في شرح الخطة العلاجية."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy.",
+       "Involve oncology and psychological support in explaining the plan."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "ESMO / NCCN — Acute leukaemia supportive care guidance"
+  }
+ ]
+}
