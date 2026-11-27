@@ -1,0 +1,1101 @@
+{
+ "id": "chest-trauma",
+ "icon": "💥",
+ "system": "respiratory",
+ "folder": "disease",
+ "title": {
+  "ar": "إصابات الصدر (كسور الضلوع والصدر السائب والنزيف الصدري)",
+  "en": "Chest Trauma (Rib Fractures, Flail Chest, Haemothorax)"
+ },
+ "summary": {
+  "ar": "خطة رعاية إصابات الصدر: تبادل الغازات والأنبوبة الصدرية، ألم الضلوع، الاندحاس القلبي، النزيف الصدري، العدوى، والقلق.",
+  "en": "Chest trauma care plan: gas exchange and chest drain, rib pain, cardiac tamponade, haemothorax, infection and anxiety."
+ },
+ "diagnoses": [
+  {
+   "id": "impaired-gas-exchange-chest-trauma",
+   "kind": "actual",
+   "title": {
+    "ar": "ضعف تبادل الغازات",
+    "en": "Impaired Gas Exchange"
+   },
+   "definition": {
+    "ar": "خلل في الأكسجة أو التخلص من ثاني أكسيد الكربون.",
+    "en": "Impaired oxygenation or CO₂ elimination."
+   },
+   "relatedTo": {
+    "ar": [
+     "كدمة الرئة والصدر السائب والنزيف الصدري"
+    ],
+    "en": [
+     "Pulmonary contusion, flail chest and haemothorax"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ضيق تنفس",
+     "حركة صدر متناقضة"
+    ],
+    "en": [
+     "Dyspnoea",
+     "Paradoxical chest movement"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لا أستطيع التنفس وصدري يؤلمني بشدة.\""
+     ],
+     "en": [
+      "\"I can't breathe and my chest hurts badly.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "كسور 4 ضلوع متتالية، تشبع 88%."
+     ],
+     "en": [
+      "Four consecutive rib fractures; SpO₂ 88%."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: تشبع ≥ 94%."
+     ],
+     "en": [
+      "Within 1 h: SpO₂ ≥ 94%."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تهوية كافية دون فشل تنفسي."
+     ],
+     "en": [
+      "Adequate ventilation without respiratory failure."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص الصدر لملاحظة الحركة المتناقضة وعدم التماثل وانحراف القصبة وغياب أصوات التنفس.",
+      "en": "Examine for paradoxical movement, asymmetry, tracheal deviation and absent breath sounds."
+     },
+     "rationale": {
+      "ar": "كشف الإصابات المهددة للحياة.",
+      "en": "Detects life-threatening injuries."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الأكسجين بتركيز عالٍ والمساعدة في التهوية أو التنبيب حسب الحالة.",
+      "en": "Give high-flow oxygen; assist ventilation or intubation as needed."
+     },
+     "rationale": {
+      "ar": "منع نقص الأكسجين.",
+      "en": "Prevents hypoxia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تجهيز أدوات الأنبوبة الصدرية والمساعدة في تركيبها للاسترواح أو النزيف الصدري.",
+      "en": "Prepare and assist chest-drain insertion for pneumo/haemothorax."
+     },
+     "rationale": {
+      "ar": "تمدد الرئة.",
+      "en": "Re-expands the lung."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس التنفس والتشبع وغازات الدم حسب الأمر.",
+      "en": "Monitor RR, SpO₂ and blood gases as ordered."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع نصف الجلوس بعد استبعاد إصابة الفقرات.",
+      "en": "Position semi-upright once the spine is cleared."
+     },
+     "rationale": {
+      "ar": "تحسين التهوية.",
+      "en": "Better ventilation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تقييد السوائل بحذر في كدمة الرئة حسب الأمر.",
+      "en": "Give fluids judiciously in pulmonary contusion as ordered."
+     },
+     "rationale": {
+      "ar": "السوائل الزائدة تزيد الوذمة.",
+      "en": "Excess fluid worsens oedema."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تشبع 95% — تحقق.",
+      "en": "SpO₂ 95% — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تحسين الأكسجة ومعالجة إصابات الصدر",
+      "en": "Improving oxygenation and treating chest injuries"
+     },
+     "actions": {
+      "ar": [
+       "يتم فحص الصدر لملاحظة الحركة المتناقضة وعدم التماثل وانحراف القصبة وغياب أصوات التنفس.",
+       "يتم إعطاء الأكسجين بتركيز عالٍ والمساعدة في التهوية أو التنبيب حسب الحالة.",
+       "يتم تجهيز أدوات الأنبوبة الصدرية والمساعدة في تركيبها للاسترواح أو النزيف الصدري.",
+       "يتم قياس التنفس والتشبع وغازات الدم حسب الأمر.",
+       "يتم وضع المريض في وضع نصف الجلوس بعد استبعاد إصابة الفقرات.",
+       "يتم تقييد السوائل بحذر في كدمة الرئة حسب الأمر."
+      ],
+      "en": [
+       "Examine for paradoxical movement, asymmetry, tracheal deviation and absent breath sounds.",
+       "Give high-flow oxygen; assist ventilation or intubation as needed.",
+       "Prepare and assist chest-drain insertion for pneumo/haemothorax.",
+       "Monitor RR, SpO₂ and blood gases as ordered.",
+       "Position semi-upright once the spine is cleared.",
+       "Give fluids judiciously in pulmonary contusion as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "تشبع جيد.",
+      "en": "Good SpO₂."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-chest-trauma",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (كسور الضلوع)",
+    "en": "Acute Pain (Rib Fractures)"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف فعلي أو محتمل في الأنسجة، مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory and emotional experience associated with actual or potential tissue damage, lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "كسور الضلوع وكدمات الصدر"
+    ],
+    "en": [
+     "Rib fractures and chest contusion"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم 9/10 مع التنفس"
+    ],
+    "en": [
+     "Pain 9/10 on breathing"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"كل نفس يؤلمني.\""
+     ],
+     "en": [
+      "\"Every breath hurts.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ألم 9/10."
+     ],
+     "en": [
+      "Pain 9/10."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ألم محتمل يسمح بالراحة والحركة."
+     ],
+     "en": [
+      "Tolerable pain allowing rest and movement."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+      "en": "Assess pain (site, 0–10, character, radiation) before and after analgesia."
+     },
+     "rationale": {
+      "ar": "يوجه العلاج ويقيس فعاليته.",
+      "en": "Guides treatment and measures effect."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+      "en": "Give analgesia as ordered, on schedule."
+     },
+     "rationale": {
+      "ar": "التسكين المنتظم يمنع اشتداد الألم.",
+      "en": "Regular analgesia prevents peaks."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+      "en": "Comfortable position; calm environment."
+     },
+     "rationale": {
+      "ar": "يقلل الإحساس بالألم.",
+      "en": "Reduces pain perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+      "en": "Non-drug measures: deep breathing, relaxation, distraction."
+     },
+     "rationale": {
+      "ar": "تكمل المسكن.",
+      "en": "Complement analgesia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تطبيق التسكين الفعال المتعدد مثل التخدير الموضعي للأعصاب أو فوق الجافية حسب الأمر.",
+      "en": "Provide effective multimodal analgesia such as nerve or epidural block as ordered."
+     },
+     "rationale": {
+      "ar": "يسمح بالتنفس العميق والسعال.",
+      "en": "Enables deep breathing and coughing."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض سند الصدر بوسادة أثناء السعال والتنفس العميق كل ساعة.",
+      "en": "Teach splinting with a pillow and hourly deep breathing."
+     },
+     "rationale": {
+      "ar": "منع الالتهاب الرئوي.",
+      "en": "Prevents pneumonia."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 بعد ساعة — تحقق.",
+      "en": "Pain 3/10 at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الألم إلى مستوى يتحمله المريض",
+      "en": "Relief of pain to a tolerable level"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+       "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+       "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+       "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+       "يتم تطبيق التسكين الفعال المتعدد مثل التخدير الموضعي للأعصاب أو فوق الجافية حسب الأمر.",
+       "يتم تعليم المريض سند الصدر بوسادة أثناء السعال والتنفس العميق كل ساعة."
+      ],
+      "en": [
+       "Assess pain (site, 0–10, character, radiation) before and after analgesia.",
+       "Give analgesia as ordered, on schedule.",
+       "Comfortable position; calm environment.",
+       "Non-drug measures: deep breathing, relaxation, distraction.",
+       "Provide effective multimodal analgesia such as nerve or epidural block as ordered.",
+       "Teach splinting with a pillow and hourly deep breathing."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-tamponade-chest-trauma",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص النتاج القلبي (الاندحاس القلبي)",
+    "en": "Risk for Decreased Cardiac Output (Cardiac Tamponade)"
+   },
+   "definition": {
+    "ar": "قابلية لضغط الدم على القلب.",
+    "en": "Susceptibility to pericardial compression."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "إصابة نافذة أو رضية للصدر"
+    ],
+    "en": [
+     "Penetrating or blunt chest injury"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بضيق ودوخة.\""
+     ],
+     "en": [
+      "\"I feel tight and dizzy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ضغط 85/60، أوردة رقبة منتفخة."
+     ],
+     "en": [
+      "BP 85/60; distended neck veins."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل 15 دقيقة: اكتشاف علامات الاندحاس."
+     ],
+     "en": [
+      "Every 15 min: detect tamponade signs."
+     ]
+    },
+    "long": {
+     "ar": [
+      "دورة مستقرة."
+     ],
+     "en": [
+      "Stable circulation."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة ثلاثية بيك: هبوط الضغط وانتفاخ أوردة الرقبة وخفوت أصوات القلب.",
+      "en": "Watch for Beck's triad: hypotension, distended neck veins, muffled heart sounds."
+     },
+     "rationale": {
+      "ar": "علامات الاندحاس.",
+      "en": "Tamponade signs."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس الضغط والنبض كل 15 دقيقة ومراقبة القلب المستمرة.",
+      "en": "Check BP and HR every 15 min with continuous monitoring."
+     },
+     "rationale": {
+      "ar": "كشف التدهور.",
+      "en": "Detects deterioration."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تجهيز أدوات بزل التامور أو الجراحة العاجلة حسب قرار الطبيب.",
+      "en": "Prepare for pericardiocentesis or emergency surgery as decided."
+     },
+     "rationale": {
+      "ar": "إنقاذ الحياة.",
+      "en": "Life-saving."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تركيب كانيولتين كبيرتين وإعطاء السوائل حسب الأمر.",
+      "en": "Insert two large-bore cannulas; give fluids as ordered."
+     },
+     "rationale": {
+      "ar": "دعم الحمل القلبي.",
+      "en": "Supports preload."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تجهيز المريض لفحص الموجات الصوتية السريع (FAST).",
+      "en": "Prepare for a FAST scan."
+     },
+     "rationale": {
+      "ar": "تشخيص سريع.",
+      "en": "Rapid diagnosis."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب فورًا عند أي علامة اندحاس.",
+      "en": "Report any tamponade sign immediately."
+     },
+     "rationale": {
+      "ar": "تدخل عاجل.",
+      "en": "Urgent action."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات اندحاس — تحقق.",
+      "en": "No tamponade — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "اكتشاف الاندحاس القلبي وعلاجه فورًا",
+      "en": "Immediate recognition of cardiac tamponade"
+     },
+     "actions": {
+      "ar": [
+       "تتم ملاحظة ثلاثية بيك: هبوط الضغط وانتفاخ أوردة الرقبة وخفوت أصوات القلب.",
+       "يتم قياس الضغط والنبض كل 15 دقيقة ومراقبة القلب المستمرة.",
+       "يتم تجهيز أدوات بزل التامور أو الجراحة العاجلة حسب قرار الطبيب.",
+       "يتم تركيب كانيولتين كبيرتين وإعطاء السوائل حسب الأمر.",
+       "يتم تجهيز المريض لفحص الموجات الصوتية السريع (FAST).",
+       "يتم إبلاغ الطبيب فورًا عند أي علامة اندحاس."
+      ],
+      "en": [
+       "Watch for Beck's triad: hypotension, distended neck veins, muffled heart sounds.",
+       "Check BP and HR every 15 min with continuous monitoring.",
+       "Prepare for pericardiocentesis or emergency surgery as decided.",
+       "Insert two large-bore cannulas; give fluids as ordered.",
+       "Prepare for a FAST scan.",
+       "Report any tamponade sign immediately."
+      ]
+     },
+     "outcome": {
+      "ar": "دورة مستقرة.",
+      "en": "Stable circulation."
+     },
+     "timeframe": {
+      "ar": "كل 15 دقيقة",
+      "en": "Every 15 min"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-fluid-volume-chest-trauma",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص حجم السوائل",
+    "en": "Deficient Fluid Volume"
+   },
+   "definition": {
+    "ar": "نقص السوائل داخل الأوعية أو الأنسجة أو الخلايا.",
+    "en": "Decreased intravascular, interstitial or intracellular fluid."
+   },
+   "relatedTo": {
+    "ar": [
+     "النزيف الصدري (الهيموثوراكس)"
+    ],
+    "en": [
+     "Haemothorax"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "سرعة النبض وهبوط الضغط",
+     "قلة البول",
+     "جفاف الأغشية"
+    ],
+    "en": [
+     "Tachycardia and hypotension",
+     "Reduced urine output",
+     "Dry mucosa"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بالبرد والعطش.\""
+     ],
+     "en": [
+      "\"I feel cold and thirsty.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "خرج 900 مل دم من الأنبوبة."
+     ],
+     "en": [
+      "900 mL blood from the drain."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 6 ساعات: ضغط انقباضي ≥ 90 ونبض < 100 وبول ≥ 0.5 مل/كجم/ساعة."
+     ],
+     "en": [
+      "Within 6 h: SBP ≥ 90, HR < 100, urine ≥ 0.5 mL/kg/h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 48 ساعة: توازن سوائل طبيعي."
+     ],
+     "en": [
+      "Within 48 h: normal fluid balance."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس العلامات الحيوية كل 1–4 ساعات حسب الحالة، مع تقييم رجوع الدم ومستوى الوعي.",
+      "en": "Vitals every 1–4 h as indicated; capillary refill; consciousness."
+     },
+     "rationale": {
+      "ar": "كشف نقص الحجم والصدمة.",
+      "en": "Detects hypovolemia and shock."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل دقيق للسوائل الداخلة والخارجة والبول كل ساعة عند الحاجة.",
+      "en": "Accurate intake/output; hourly urine when indicated."
+     },
+     "rationale": {
+      "ar": "البول أفضل مؤشر للتروية.",
+      "en": "Urine reflects perfusion."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تركيب كانيولا كبيرة وإعطاء المحاليل الوريدية حسب الأمر.",
+      "en": "Large-bore cannula; IV fluids as ordered."
+     },
+     "rationale": {
+      "ar": "تعويض الحجم.",
+      "en": "Volume replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تتم متابعة الهيموجلوبين والأملاح ووظائف الكلى حسب أمر الطبيب لتوجيه تعويض السوائل.",
+      "en": "Monitor Hb, electrolytes and renal function."
+     },
+     "rationale": {
+      "ar": "يوجه التعويض.",
+      "en": "Guides replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب عند ضغط انقباضي < 90 أو نبض > 120 أو بول < 0.5 مل/كجم/ساعة.",
+      "en": "Report SBP < 90, HR > 120 or urine < 0.5 mL/kg/h."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early intervention."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الجراح فورًا إذا خرج أكثر من 1500 مل دم عند التركيب أو أكثر من 200 مل/ساعة لعدة ساعات.",
+      "en": "Inform the surgeon if > 1500 mL on insertion or > 200 mL/h for several hours."
+     },
+     "rationale": {
+      "ar": "قد يحتاج فتح الصدر.",
+      "en": "May need thoracotomy."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الضغط 112/70، النبض 92، البول 50 مل/ساعة — تحقق.",
+      "en": "BP 112/70, HR 92, urine 50 mL/h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على استقرار الدورة الدموية والتروية الكافية",
+      "en": "Maintaining stable circulation and perfusion"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس العلامات الحيوية كل 1–4 ساعات حسب الحالة، مع تقييم رجوع الدم ومستوى الوعي.",
+       "يتم تسجيل دقيق للسوائل الداخلة والخارجة والبول كل ساعة عند الحاجة.",
+       "تتم متابعة الهيموجلوبين والأملاح ووظائف الكلى حسب أمر الطبيب لتوجيه تعويض السوائل."
+      ],
+      "en": [
+       "Vitals every 1–4 h as indicated; capillary refill; consciousness.",
+       "Accurate intake/output; hourly urine when indicated.",
+       "Monitor Hb, electrolytes and renal function."
+      ]
+     },
+     "outcome": {
+      "ar": "دورة مستقرة.",
+      "en": "Stable circulation."
+     },
+     "timeframe": {
+      "ar": "كل 1–4 ساعات",
+      "en": "Every 1–4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تعويض السوائل المفقودة واستعادة حجم الدم",
+      "en": "Replacing lost fluid and restoring blood volume"
+     },
+     "actions": {
+      "ar": [
+       "يتم تركيب كانيولا كبيرة وإعطاء المحاليل الوريدية حسب الأمر.",
+       "يتم إبلاغ الطبيب عند ضغط انقباضي < 90 أو نبض > 120 أو بول < 0.5 مل/كجم/ساعة.",
+       "يتم إبلاغ الجراح فورًا إذا خرج أكثر من 1500 مل دم عند التركيب أو أكثر من 200 مل/ساعة لعدة ساعات."
+      ],
+      "en": [
+       "Large-bore cannula; IV fluids as ordered.",
+       "Report SBP < 90, HR > 120 or urine < 0.5 mL/kg/h.",
+       "Inform the surgeon if > 1500 mL on insertion or > 200 mL/h for several hours."
+      ]
+     },
+     "outcome": {
+      "ar": "حجم كافٍ.",
+      "en": "Adequate volume."
+     },
+     "timeframe": {
+      "ar": "6 ساعات",
+      "en": "6 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-infection-chest-trauma",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى (الالتهاب الرئوي والأنبوبة)",
+    "en": "Risk for Infection (Pneumonia and Drain)"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة قد يؤثر على الصحة.",
+    "en": "Susceptibility to invasion by pathogenic organisms that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ضعف السعال",
+     "أنبوبة صدرية"
+    ],
+    "en": [
+     "Poor cough",
+     "Chest drain"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لا أستطيع إخراج البلغم.\""
+     ],
+     "en": [
+      "\"I can't cough up the phlegm.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "خراخر قاعدية."
+     ],
+     "en": [
+      "Basal crackles."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "يوميًا: لا علامات عدوى والحرارة < 38."
+     ],
+     "en": [
+      "Daily: no infection signs; T < 38."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا عدوى طوال فترة العلاج."
+     ],
+     "en": [
+      "No infection during treatment."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+      "en": "Monitor temperature and local/systemic infection signs."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+      "en": "Hand hygiene before and after patient contact."
+     },
+     "rationale": {
+      "ar": "أهم وسيلة وقاية.",
+      "en": "Key prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+      "en": "Aseptic technique with wounds and devices."
+     },
+     "rationale": {
+      "ar": "منع دخول الميكروب.",
+      "en": "Prevents entry of organisms."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+      "en": "Antibiotics on time as ordered."
+     },
+     "rationale": {
+      "ar": "مستوى فعال.",
+      "en": "Effective levels."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على التنفس العميق والسعال وجهاز تحفيز التنفس كل ساعة.",
+      "en": "Encourage hourly deep breathing, coughing and incentive spirometry."
+     },
+     "rationale": {
+      "ar": "منع الالتهاب الرئوي.",
+      "en": "Prevents pneumonia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص مكان الأنبوبة وتغيير الضماد بتقنية معقمة.",
+      "en": "Inspect the drain site and change dressings aseptically."
+     },
+     "rationale": {
+      "ar": "منع العدوى.",
+      "en": "Prevents infection."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات عدوى — تحقق.",
+      "en": "No infection signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية المريض من العدوى",
+      "en": "Protecting the patient from infection"
+     },
+     "actions": {
+      "ar": [
+       "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+       "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+       "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+       "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+       "يتم تشجيع المريض على التنفس العميق والسعال وجهاز تحفيز التنفس كل ساعة.",
+       "يتم فحص مكان الأنبوبة وتغيير الضماد بتقنية معقمة."
+      ],
+      "en": [
+       "Monitor temperature and local/systemic infection signs.",
+       "Hand hygiene before and after patient contact.",
+       "Aseptic technique with wounds and devices.",
+       "Antibiotics on time as ordered.",
+       "Encourage hourly deep breathing, coughing and incentive spirometry.",
+       "Inspect the drain site and change dressings aseptically."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عدوى.",
+      "en": "No infection."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-chest-trauma",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "صعوبة التنفس والحادث"
+    ],
+    "en": [
+     "Breathlessness and the accident"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر أنني سأختنق.\""
+     ],
+     "en": [
+      "\"I feel like I'm suffocating.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "خائف."
+     ],
+     "en": [
+      "Frightened."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف القلق والشعور بالهدوء والأمان",
+      "en": "Relief of anxiety and a sense of calm and safety"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+       "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+       "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+       "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "ATLS 11th edition — Thoracic trauma"
+  },
+  {
+   "title": "محاضرات طب الطوارئ — تدبير مرضى الرضوض (ملف المؤسس)"
+  }
+ ]
+}

@@ -1,0 +1,1080 @@
+{
+ "id": "ecmo",
+ "icon": "🫁",
+ "system": "respiratory",
+ "folder": "disease",
+ "title": {
+  "ar": "الأكسجة الغشائية خارج الجسم (ECMO)",
+  "en": "Extracorporeal Membrane Oxygenation (ECMO)"
+ },
+ "summary": {
+  "ar": "خطة رعاية مريض الإكمو: النزيف والهيبارين، سلامة الدائرة، تروية الطرف، العدوى، الجلد، ودعم الأسرة.",
+  "en": "ECMO care plan: bleeding and heparin, circuit safety, limb perfusion, infection, skin and family support."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-bleeding-ecmo",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر النزيف",
+    "en": "Risk for Bleeding"
+   },
+   "definition": {
+    "ar": "قابلية للنزيف بسبب الهيبارين والدائرة.",
+    "en": "Susceptibility to bleeding from heparin and the circuit."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "هيبارين مستمر",
+     "استهلاك الصفائح"
+    ],
+    "en": [
+     "Continuous heparin",
+     "Platelet consumption"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لاحظت دمًا في اللثة.\""
+     ],
+     "en": [
+      "\"I noticed blood on my gums.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "aPTT 70، صفائح 90 ألف."
+     ],
+     "en": [
+      "aPTT 70; platelets 90k."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل وردية: لا نزيف كبير."
+     ],
+     "en": [
+      "Each shift: no major bleeding."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تجلط متوازن."
+     ],
+     "en": [
+      "Balanced anticoagulation."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص أماكن القنيات والجروح والفم والأنف والبول والبراز لملاحظة النزيف كل ساعة.",
+      "en": "Inspect cannula sites, wounds, mouth, nose, urine and stool for bleeding hourly."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم متابعة aPTT أو anti-Xa والصفائح والفيبرينوجين حسب البروتوكول وتعديل الهيبارين حسب الأمر.",
+      "en": "Monitor aPTT/anti-Xa, platelets and fibrinogen per protocol; adjust heparin as ordered."
+     },
+     "rationale": {
+      "ar": "توازن التجلط.",
+      "en": "Balanced anticoagulation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تجنب الحقن العضلي والشفط العنيف والإجراءات غير الضرورية.",
+      "en": "Avoid IM injections, aggressive suction and unnecessary procedures."
+     },
+     "rationale": {
+      "ar": "تقليل النزيف.",
+      "en": "Reduces bleeding."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الوعي والحدقتين كل ساعة.",
+      "en": "Assess consciousness and pupils hourly."
+     },
+     "rationale": {
+      "ar": "كشف نزيف المخ.",
+      "en": "Detects intracranial bleeding."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء مشتقات الدم حسب الأمر عند النزيف.",
+      "en": "Give blood products as ordered for bleeding."
+     },
+     "rationale": {
+      "ar": "تعويض.",
+      "en": "Replacement."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تثبيت القنيات جيدًا لمنع الحركة والنزيف.",
+      "en": "Secure cannulas firmly to prevent movement."
+     },
+     "rationale": {
+      "ar": "منع النزيف والانخلاع.",
+      "en": "Prevents bleeding and dislodgement."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا نزيف كبير — تحقق.",
+      "en": "No major bleeding — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "منع النزيف أثناء علاج الإكمو",
+      "en": "Preventing bleeding during ECMO"
+     },
+     "actions": {
+      "ar": [
+       "يتم فحص أماكن القنيات والجروح والفم والأنف والبول والبراز لملاحظة النزيف كل ساعة.",
+       "يتم متابعة aPTT أو anti-Xa والصفائح والفيبرينوجين حسب البروتوكول وتعديل الهيبارين حسب الأمر.",
+       "يتم تجنب الحقن العضلي والشفط العنيف والإجراءات غير الضرورية.",
+       "يتم تقييم الوعي والحدقتين كل ساعة.",
+       "يتم إعطاء مشتقات الدم حسب الأمر عند النزيف.",
+       "يتم تثبيت القنيات جيدًا لمنع الحركة والنزيف."
+      ],
+      "en": [
+       "Inspect cannula sites, wounds, mouth, nose, urine and stool for bleeding hourly.",
+       "Monitor aPTT/anti-Xa, platelets and fibrinogen per protocol; adjust heparin as ordered.",
+       "Avoid IM injections, aggressive suction and unnecessary procedures.",
+       "Assess consciousness and pupils hourly.",
+       "Give blood products as ordered for bleeding.",
+       "Secure cannulas firmly to prevent movement."
+      ]
+     },
+     "outcome": {
+      "ar": "لا نزيف.",
+      "en": "No bleeding."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-circuit-ecmo",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدم فعالية التروية (خلل دائرة الإكمو)",
+    "en": "Risk for Ineffective Perfusion (Circuit Failure)"
+   },
+   "definition": {
+    "ar": "قابلية لتوقف أو خلل الدائرة.",
+    "en": "Susceptibility to circuit malfunction."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "جلطات في المؤكسج",
+     "انخلاع القنية"
+    ],
+    "en": [
+     "Oxygenator clots",
+     "Cannula dislodgement"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "—"
+     ],
+     "en": [
+      "—"
+     ]
+    },
+    "objective": {
+     "ar": [
+      "VV-ECMO، تدفق 4.5 لتر/دقيقة."
+     ],
+     "en": [
+      "VV-ECMO, flow 4.5 L/min."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل ساعة: تدفق وضغوط ثابتة."
+     ],
+     "en": [
+      "Hourly: stable flow and pressures."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا توقف للدائرة."
+     ],
+     "en": [
+      "No circuit failure."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل سرعة المضخة والتدفق والضغوط وتدفق الغاز كل ساعة.",
+      "en": "Record pump speed, flow, pressures and sweep gas hourly."
+     },
+     "rationale": {
+      "ar": "اكتشاف الخلل مبكرًا.",
+      "en": "Early fault detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص الدائرة والمؤكسج بالكشاف لملاحظة الجلطات والفقاعات كل وردية.",
+      "en": "Inspect the circuit and oxygenator with a torch for clots and air each shift."
+     },
+     "rationale": {
+      "ar": "منع الانسداد والانصمام.",
+      "en": "Prevents obstruction and embolism."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم إبقاء ملقطات الطوارئ ومضخة يدوية بجوار السرير.",
+      "en": "Keep emergency clamps and a hand crank at the bedside."
+     },
+     "rationale": {
+      "ar": "استعداد لتوقف المضخة.",
+      "en": "Preparedness for pump failure."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تحريك المريض بفريق كافٍ مع تأمين الأنابيب.",
+      "en": "Move the patient with enough staff, securing tubing."
+     },
+     "rationale": {
+      "ar": "منع الانخلاع.",
+      "en": "Prevents dislodgement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ فريق الإكمو فورًا عند انخفاض التدفق أو اهتزاز الأنابيب.",
+      "en": "Inform the ECMO team immediately for falling flow or line chatter."
+     },
+     "rationale": {
+      "ar": "تدخل عاجل.",
+      "en": "Urgent action."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم متابعة غازات الدم قبل وبعد المؤكسج حسب البروتوكول.",
+      "en": "Monitor pre/post-oxygenator gases per protocol."
+     },
+     "rationale": {
+      "ar": "تقييم كفاءة المؤكسج.",
+      "en": "Oxygenator performance."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الدائرة مستقرة — تحقق.",
+      "en": "Circuit stable — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على عمل دائرة الإكمو بأمان",
+      "en": "Safe ECMO circuit function"
+     },
+     "actions": {
+      "ar": [
+       "يتم تسجيل سرعة المضخة والتدفق والضغوط وتدفق الغاز كل ساعة.",
+       "يتم فحص الدائرة والمؤكسج بالكشاف لملاحظة الجلطات والفقاعات كل وردية.",
+       "يتم إبقاء ملقطات الطوارئ ومضخة يدوية بجوار السرير.",
+       "يتم تحريك المريض بفريق كافٍ مع تأمين الأنابيب.",
+       "يتم إبلاغ فريق الإكمو فورًا عند انخفاض التدفق أو اهتزاز الأنابيب.",
+       "يتم متابعة غازات الدم قبل وبعد المؤكسج حسب البروتوكول."
+      ],
+      "en": [
+       "Record pump speed, flow, pressures and sweep gas hourly.",
+       "Inspect the circuit and oxygenator with a torch for clots and air each shift.",
+       "Keep emergency clamps and a hand crank at the bedside.",
+       "Move the patient with enough staff, securing tubing.",
+       "Inform the ECMO team immediately for falling flow or line chatter.",
+       "Monitor pre/post-oxygenator gases per protocol."
+      ]
+     },
+     "outcome": {
+      "ar": "دائرة مستقرة.",
+      "en": "Stable circuit."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-limb-ischaemia-ecmo",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص تروية الطرف",
+    "en": "Risk for Limb Ischaemia"
+   },
+   "definition": {
+    "ar": "قابلية لنقص الدم في الساق.",
+    "en": "Susceptibility to leg ischaemia."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "قنية شريانية فخذية"
+    ],
+    "en": [
+     "Femoral arterial cannula"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "—"
+     ],
+     "en": [
+      "—"
+     ]
+    },
+    "objective": {
+     "ar": [
+      "VA-ECMO فخذي."
+     ],
+     "en": [
+      "Femoral VA-ECMO."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل ساعة: نبض ولون ودفء طبيعي."
+     ],
+     "en": [
+      "Hourly: normal pulse, colour, warmth."
+     ]
+    },
+    "long": {
+     "ar": [
+      "طرف سليم."
+     ],
+     "en": [
+      "Healthy limb."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص النبض بالدوبلر واللون والحرارة ورجوع الدم في الساق كل ساعة.",
+      "en": "Check Doppler pulses, colour, temperature and refill hourly."
+     },
+     "rationale": {
+      "ar": "اكتشاف نقص التروية.",
+      "en": "Detects ischaemia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم التأكد من عمل قنية تروية الطرف البعيدة إن وُجدت.",
+      "en": "Confirm the distal perfusion cannula is working."
+     },
+     "rationale": {
+      "ar": "تروية الساق.",
+      "en": "Leg perfusion."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس تشبع الأنسجة في الساق بجهاز NIRS إن توفر.",
+      "en": "Use NIRS on the leg if available."
+     },
+     "rationale": {
+      "ar": "مراقبة مستمرة.",
+      "en": "Continuous monitoring."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب فورًا عند برودة أو شحوب الطرف.",
+      "en": "Report a cold or pale limb immediately."
+     },
+     "rationale": {
+      "ar": "تدخل عاجل.",
+      "en": "Urgent action."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة تورم الساق وتوتر العضلات.",
+      "en": "Watch for leg swelling and tense compartments."
+     },
+     "rationale": {
+      "ar": "متلازمة الحيز.",
+      "en": "Compartment syndrome."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توثيق التقييم في ورقة متابعة الطرف.",
+      "en": "Document on a limb-observation chart."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "طرف دافئ ونبض دوبلر — تحقق.",
+      "en": "Warm limb, Doppler pulse — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية تروية الطرف أثناء الإكمو",
+      "en": "Protecting limb perfusion"
+     },
+     "actions": {
+      "ar": [
+       "يتم فحص النبض بالدوبلر واللون والحرارة ورجوع الدم في الساق كل ساعة.",
+       "يتم التأكد من عمل قنية تروية الطرف البعيدة إن وُجدت.",
+       "يتم قياس تشبع الأنسجة في الساق بجهاز NIRS إن توفر.",
+       "يتم إبلاغ الطبيب فورًا عند برودة أو شحوب الطرف.",
+       "تتم ملاحظة تورم الساق وتوتر العضلات.",
+       "يتم توثيق التقييم في ورقة متابعة الطرف."
+      ],
+      "en": [
+       "Check Doppler pulses, colour, temperature and refill hourly.",
+       "Confirm the distal perfusion cannula is working.",
+       "Use NIRS on the leg if available.",
+       "Report a cold or pale limb immediately.",
+       "Watch for leg swelling and tense compartments.",
+       "Document on a limb-observation chart."
+      ]
+     },
+     "outcome": {
+      "ar": "طرف سليم.",
+      "en": "Healthy limb."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-infection-ecmo",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى",
+    "en": "Risk for Infection"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة قد يؤثر على الصحة.",
+    "en": "Susceptibility to invasion by pathogenic organisms that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "قنيات كبيرة",
+     "إقامة طويلة"
+    ],
+    "en": [
+     "Large-bore cannulas",
+     "Prolonged stay"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "—"
+     ],
+     "en": [
+      "—"
+     ]
+    },
+    "objective": {
+     "ar": [
+      "اليوم السابع على الإكمو."
+     ],
+     "en": [
+      "ECMO day 7."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "يوميًا: لا علامات عدوى والحرارة < 38."
+     ],
+     "en": [
+      "Daily: no infection signs; T < 38."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا عدوى طوال فترة العلاج."
+     ],
+     "en": [
+      "No infection during treatment."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+      "en": "Monitor temperature and local/systemic infection signs."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+      "en": "Hand hygiene before and after patient contact."
+     },
+     "rationale": {
+      "ar": "أهم وسيلة وقاية.",
+      "en": "Key prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+      "en": "Aseptic technique with wounds and devices."
+     },
+     "rationale": {
+      "ar": "منع دخول الميكروب.",
+      "en": "Prevents entry of organisms."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+      "en": "Antibiotics on time as ordered."
+     },
+     "rationale": {
+      "ar": "مستوى فعال.",
+      "en": "Effective levels."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تغيير ضماد القنيات بتقنية معقمة حسب البروتوكول.",
+      "en": "Change cannula dressings aseptically per protocol."
+     },
+     "rationale": {
+      "ar": "منع العدوى.",
+      "en": "Prevents infection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم سحب مزرعة الدم عند الحمى أو ارتفاع مؤشرات الالتهاب مع العلم أن المبادل الحراري قد يخفي الحمى.",
+      "en": "Take cultures for fever or rising markers; the heater may mask fever."
+     },
+     "rationale": {
+      "ar": "اكتشاف العدوى.",
+      "en": "Detects infection."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات عدوى — تحقق.",
+      "en": "No infection signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية المريض من العدوى",
+      "en": "Protecting the patient from infection"
+     },
+     "actions": {
+      "ar": [
+       "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+       "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+       "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+       "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+       "يتم تغيير ضماد القنيات بتقنية معقمة حسب البروتوكول.",
+       "يتم سحب مزرعة الدم عند الحمى أو ارتفاع مؤشرات الالتهاب مع العلم أن المبادل الحراري قد يخفي الحمى."
+      ],
+      "en": [
+       "Monitor temperature and local/systemic infection signs.",
+       "Hand hygiene before and after patient contact.",
+       "Aseptic technique with wounds and devices.",
+       "Antibiotics on time as ordered.",
+       "Change cannula dressings aseptically per protocol.",
+       "Take cultures for fever or rising markers; the heater may mask fever."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عدوى.",
+      "en": "No infection."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "impaired-skin-ecmo",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر تلف سلامة الجلد",
+    "en": "Risk for Impaired Skin Integrity"
+   },
+   "definition": {
+    "ar": "قابلية لقرح الفراش.",
+    "en": "Susceptibility to pressure injury."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "قلة الحركة والتهدئة"
+    ],
+    "en": [
+     "Immobility and sedation"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "—"
+     ],
+     "en": [
+      "—"
+     ]
+    },
+    "objective": {
+     "ar": [
+      "برادن 10."
+     ],
+     "en": [
+      "Braden 10."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا قرح."
+     ],
+     "en": [
+      "During stay: no ulcers."
+     ]
+    },
+    "long": {
+     "ar": [
+      "جلد سليم."
+     ],
+     "en": [
+      "Intact skin."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تغيير الوضع بحذر كل ساعتين بفريق كافٍ مع حماية القنيات.",
+      "en": "Reposition carefully 2-hourly with enough staff, protecting cannulas."
+     },
+     "rationale": {
+      "ar": "تقليل الضغط.",
+      "en": "Relieves pressure."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام مرتبة هوائية وتبطين نقاط الضغط.",
+      "en": "Use an air mattress and pad pressure points."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص الجلد والكعبين والقفا يوميًا.",
+      "en": "Inspect skin, heels and occiput daily."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم رفع الكعبين عن السرير ووضع ضمادات وقائية.",
+      "en": "Offload heels and apply prophylactic dressings."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم توفير التغذية المعوية الكافية حسب أخصائي التغذية.",
+      "en": "Ensure adequate enteral nutrition with the dietitian."
+     },
+     "rationale": {
+      "ar": "التئام.",
+      "en": "Healing."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم خطر قرح الفراش بمقياس برادن يوميًا.",
+      "en": "Score Braden daily."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "جلد سليم — تحقق.",
+      "en": "Intact skin — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على سلامة الجلد",
+      "en": "Maintaining skin integrity"
+     },
+     "actions": {
+      "ar": [
+       "يتم تغيير الوضع بحذر كل ساعتين بفريق كافٍ مع حماية القنيات.",
+       "يتم استخدام مرتبة هوائية وتبطين نقاط الضغط.",
+       "يتم فحص الجلد والكعبين والقفا يوميًا.",
+       "يتم رفع الكعبين عن السرير ووضع ضمادات وقائية.",
+       "يتم توفير التغذية المعوية الكافية حسب أخصائي التغذية.",
+       "يتم تقييم خطر قرح الفراش بمقياس برادن يوميًا."
+      ],
+      "en": [
+       "Reposition carefully 2-hourly with enough staff, protecting cannulas.",
+       "Use an air mattress and pad pressure points.",
+       "Inspect skin, heels and occiput daily.",
+       "Offload heels and apply prophylactic dressings.",
+       "Ensure adequate enteral nutrition with the dietitian.",
+       "Score Braden daily."
+      ]
+     },
+     "outcome": {
+      "ar": "جلد سليم.",
+      "en": "Intact skin."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-ecmo",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "مرض حرج وأجهزة معقدة"
+    ],
+    "en": [
+     "Critical illness and complex equipment"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "تقول الزوجة: \"ما هذا الجهاز؟ هل سيعيش؟\""
+     ],
+     "en": [
+      "Wife: \"What is this machine? Will he live?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "الأسرة خائفة."
+     ],
+     "en": [
+      "Family frightened."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح وظيفة جهاز الإكمو للأسرة بلغة بسيطة وأنه يقوم بعمل الرئة أو القلب مؤقتًا.",
+      "en": "Explain ECMO simply: it temporarily does the work of the lungs or heart."
+     },
+     "rationale": {
+      "ar": "تقليل الخوف.",
+      "en": "Reduces fear."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف القلق والشعور بالهدوء والأمان",
+      "en": "Relief of anxiety and a sense of calm and safety"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+       "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+       "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+       "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+       "يتم شرح وظيفة جهاز الإكمو للأسرة بلغة بسيطة وأنه يقوم بعمل الرئة أو القلب مؤقتًا."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy.",
+       "Explain ECMO simply: it temporarily does the work of the lungs or heart."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "ELSO Guidelines for Adult Respiratory and Cardiac Failure (2021–2024)"
+  },
+  {
+   "title": "أدلة الرعاية التمريضية بوحدة الرعاية المركزة — وزارة الصحة والسكان المصرية ونقابة التمريض (2024/2025)"
+  }
+ ]
+}

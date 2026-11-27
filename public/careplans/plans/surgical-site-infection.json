@@ -1,0 +1,1081 @@
+{
+ "id": "surgical-site-infection",
+ "icon": "🩹",
+ "system": "surgery",
+ "folder": "disease",
+ "title": {
+  "ar": "عدوى الجرح الجراحي (SSI)",
+  "en": "Surgical Site Infection (SSI)"
+ },
+ "summary": {
+  "ar": "خطة رعاية عدوى الجرح الجراحي: تقييم الجرح والمزرعة والمضاد الحيوي، الوقاية من الإنتان، الألم، التغذية وضبط السكر، القلق، والتثقيف.",
+  "en": "SSI care plan: wound assessment, culture and antibiotics, sepsis prevention, pain, nutrition and glucose, anxiety and teaching."
+ },
+ "diagnoses": [
+  {
+   "id": "infection-ssi",
+   "kind": "actual",
+   "title": {
+    "ar": "عدوى الجرح الجراحي",
+    "en": "Surgical Site Infection"
+   },
+   "definition": {
+    "ar": "عدوى في مكان العملية خلال 30 يومًا (أو 90 يومًا مع الزرع).",
+    "en": "Infection at the operative site within 30 days (90 with implants)."
+   },
+   "relatedTo": {
+    "ar": [
+     "تلوث الجرح",
+     "سكري وسمنة"
+    ],
+    "en": [
+     "Wound contamination",
+     "Diabetes and obesity"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "احمرار وتورم وصديد",
+     "حمى"
+    ],
+    "en": [
+     "Redness, swelling and pus",
+     "Fever"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الجرح أحمر ويخرج منه صديد ورائحته كريهة.\""
+     ],
+     "en": [
+      "\"The wound is red and leaking smelly pus.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "اليوم الخامس بعد العملية، حرارة 38.4، صديد."
+     ],
+     "en": [
+      "Post-op day 5; T 38.4; purulent discharge."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 72 ساعة: تحسن الاحمرار والحرارة."
+     ],
+     "en": [
+      "Within 72 h: less redness, afebrile."
+     ]
+    },
+    "long": {
+     "ar": [
+      "التئام الجرح دون مضاعفات."
+     ],
+     "en": [
+      "Healing without complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الجرح يوميًا: الحجم والاحمرار والتورم والإفرازات والرائحة، وتوثيقها.",
+      "en": "Assess the wound daily: size, redness, swelling, exudate and odour; document."
+     },
+     "rationale": {
+      "ar": "متابعة الاستجابة.",
+      "en": "Tracks response."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم أخذ مسحة أو عينة صديد للمزرعة قبل بدء المضاد الحيوي حسب الأمر.",
+      "en": "Take a swab/pus sample for culture before antibiotics as ordered."
+     },
+     "rationale": {
+      "ar": "اختيار المضاد المناسب.",
+      "en": "Guides therapy."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المضاد الحيوي في مواعيده الدقيقة حسب الأمر.",
+      "en": "Give antibiotics on time as ordered."
+     },
+     "rationale": {
+      "ar": "علاج العدوى.",
+      "en": "Treats infection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تغيير الضماد بتقنية معقمة مع غسل اليدين قبل وبعد.",
+      "en": "Change dressings aseptically with hand hygiene before and after."
+     },
+     "rationale": {
+      "ar": "منع انتقال العدوى.",
+      "en": "Prevents cross-infection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم مساعدة الجراح في فتح الجرح وتصريف الصديد عند الحاجة.",
+      "en": "Assist the surgeon with wound opening and drainage as needed."
+     },
+     "rationale": {
+      "ar": "إزالة مصدر العدوى.",
+      "en": "Source control."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس الحرارة كل 4 ساعات ومتابعة كرات الدم البيضاء.",
+      "en": "Check temperature 4-hourly and white cell count."
+     },
+     "rationale": {
+      "ar": "متابعة الالتهاب.",
+      "en": "Monitors inflammation."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "قل الاحمرار والحرارة طبيعية — تحقق جزئيًا.",
+      "en": "Less redness; afebrile — partially met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "السيطرة على عدوى الجرح والتئامه",
+      "en": "Controlling wound infection and healing"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم الجرح يوميًا: الحجم والاحمرار والتورم والإفرازات والرائحة، وتوثيقها.",
+       "يتم أخذ مسحة أو عينة صديد للمزرعة قبل بدء المضاد الحيوي حسب الأمر.",
+       "يتم إعطاء المضاد الحيوي في مواعيده الدقيقة حسب الأمر.",
+       "يتم تغيير الضماد بتقنية معقمة مع غسل اليدين قبل وبعد.",
+       "يتم مساعدة الجراح في فتح الجرح وتصريف الصديد عند الحاجة.",
+       "يتم قياس الحرارة كل 4 ساعات ومتابعة كرات الدم البيضاء."
+      ],
+      "en": [
+       "Assess the wound daily: size, redness, swelling, exudate and odour; document.",
+       "Take a swab/pus sample for culture before antibiotics as ordered.",
+       "Give antibiotics on time as ordered.",
+       "Change dressings aseptically with hand hygiene before and after.",
+       "Assist the surgeon with wound opening and drainage as needed.",
+       "Check temperature 4-hourly and white cell count."
+      ]
+     },
+     "outcome": {
+      "ar": "جرح يتحسن.",
+      "en": "Improving wound."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-sepsis-ssi",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الإنتان",
+    "en": "Risk for Sepsis"
+   },
+   "definition": {
+    "ar": "قابلية لانتشار العدوى في الجسم.",
+    "en": "Susceptibility to systemic infection."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "عدوى جرح عميقة"
+    ],
+    "en": [
+     "Deep wound infection"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر برعشة وتعب شديد.\""
+     ],
+     "en": [
+      "\"I feel shivery and very tired.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "نبض 110."
+     ],
+     "en": [
+      "HR 110."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل 4 ساعات: علامات حيوية مستقرة."
+     ],
+     "en": [
+      "4-hourly: stable vitals."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا إنتان."
+     ],
+     "en": [
+      "No sepsis."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس العلامات الحيوية كل 4 ساعات وحساب مقياس الإنذار المبكر.",
+      "en": "Check vitals 4-hourly and calculate an early-warning score."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة الرعشة وتسارع النبض والتنفس وانخفاض الضغط والتشوش وقلة البول.",
+      "en": "Watch for rigors, tachycardia, tachypnoea, hypotension, confusion and oliguria."
+     },
+     "rationale": {
+      "ar": "علامات الإنتان.",
+      "en": "Sepsis signs."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تفعيل حزمة الإنتان خلال الساعة الأولى عند الاشتباه حسب البروتوكول.",
+      "en": "Activate the sepsis bundle within the first hour per protocol."
+     },
+     "rationale": {
+      "ar": "تقليل الوفيات.",
+      "en": "Reduces mortality."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل كمية البول كل ساعة عند التدهور.",
+      "en": "Record hourly urine output if deteriorating."
+     },
+     "rationale": {
+      "ar": "مؤشر التروية.",
+      "en": "Perfusion marker."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم سحب مزرعة الدم واللاكتات حسب الأمر.",
+      "en": "Take blood cultures and lactate as ordered."
+     },
+     "rationale": {
+      "ar": "تقييم الخطورة.",
+      "en": "Severity assessment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب فورًا عند تدهور العلامات.",
+      "en": "Report deteriorating signs immediately."
+     },
+     "rationale": {
+      "ar": "تدخل سريع.",
+      "en": "Rapid action."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "علامات مستقرة — تحقق.",
+      "en": "Stable vitals — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "اكتشاف الإنتان مبكرًا",
+      "en": "Early sepsis detection"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس العلامات الحيوية كل 4 ساعات وحساب مقياس الإنذار المبكر.",
+       "تتم ملاحظة الرعشة وتسارع النبض والتنفس وانخفاض الضغط والتشوش وقلة البول.",
+       "يتم تفعيل حزمة الإنتان خلال الساعة الأولى عند الاشتباه حسب البروتوكول.",
+       "يتم تسجيل كمية البول كل ساعة عند التدهور.",
+       "يتم سحب مزرعة الدم واللاكتات حسب الأمر.",
+       "يتم إبلاغ الطبيب فورًا عند تدهور العلامات."
+      ],
+      "en": [
+       "Check vitals 4-hourly and calculate an early-warning score.",
+       "Watch for rigors, tachycardia, tachypnoea, hypotension, confusion and oliguria.",
+       "Activate the sepsis bundle within the first hour per protocol.",
+       "Record hourly urine output if deteriorating.",
+       "Take blood cultures and lactate as ordered.",
+       "Report deteriorating signs immediately."
+      ]
+     },
+     "outcome": {
+      "ar": "مريض مستقر.",
+      "en": "Stable patient."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-ssi",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد في الجرح",
+    "en": "Acute Wound Pain"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف فعلي أو محتمل في الأنسجة، مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory and emotional experience associated with actual or potential tissue damage, lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "التهاب الجرح"
+    ],
+    "en": [
+     "Wound inflammation"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم 6/10 حول الجرح"
+    ],
+    "en": [
+     "Pain 6/10 around the wound"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"الجرح ينبض بالألم.\""
+     ],
+     "en": [
+      "\"The wound throbs.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "ألم 6/10."
+     ],
+     "en": [
+      "Pain 6/10."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ألم محتمل يسمح بالراحة والحركة."
+     ],
+     "en": [
+      "Tolerable pain allowing rest and movement."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+      "en": "Assess pain (site, 0–10, character, radiation) before and after analgesia."
+     },
+     "rationale": {
+      "ar": "يوجه العلاج ويقيس فعاليته.",
+      "en": "Guides treatment and measures effect."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+      "en": "Give analgesia as ordered, on schedule."
+     },
+     "rationale": {
+      "ar": "التسكين المنتظم يمنع اشتداد الألم.",
+      "en": "Regular analgesia prevents peaks."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+      "en": "Comfortable position; calm environment."
+     },
+     "rationale": {
+      "ar": "يقلل الإحساس بالألم.",
+      "en": "Reduces pain perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+      "en": "Non-drug measures: deep breathing, relaxation, distraction."
+     },
+     "rationale": {
+      "ar": "تكمل المسكن.",
+      "en": "Complement analgesia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكن قبل تغيير الضماد بنصف ساعة حسب الأمر.",
+      "en": "Give analgesia 30 min before dressing changes."
+     },
+     "rationale": {
+      "ar": "تقليل ألم الغيار.",
+      "en": "Reduces dressing pain."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم ترطيب الضماد الملتصق قبل نزعه بمحلول ملح.",
+      "en": "Moisten adherent dressings with saline before removal."
+     },
+     "rationale": {
+      "ar": "يقلل الألم والتلف.",
+      "en": "Less pain and trauma."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 بعد ساعة — تحقق.",
+      "en": "Pain 3/10 at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الألم إلى مستوى يتحمله المريض",
+      "en": "Relief of pain to a tolerable level"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+       "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+       "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+       "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+       "يتم إعطاء المسكن قبل تغيير الضماد بنصف ساعة حسب الأمر.",
+       "يتم ترطيب الضماد الملتصق قبل نزعه بمحلول ملح."
+      ],
+      "en": [
+       "Assess pain (site, 0–10, character, radiation) before and after analgesia.",
+       "Give analgesia as ordered, on schedule.",
+       "Comfortable position; calm environment.",
+       "Non-drug measures: deep breathing, relaxation, distraction.",
+       "Give analgesia 30 min before dressing changes.",
+       "Moisten adherent dressings with saline before removal."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "imbalanced-nutrition-ssi",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر ضعف التئام الجرح (التغذية والسكر)",
+    "en": "Risk for Delayed Healing (Nutrition and Glucose)"
+   },
+   "definition": {
+    "ar": "قابلية لتأخر الالتئام.",
+    "en": "Susceptibility to delayed healing."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "سكر غير منضبط",
+     "نقص البروتين"
+    ],
+    "en": [
+     "Poor glycaemic control",
+     "Low protein intake"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لا آكل جيدًا منذ العملية.\""
+     ],
+     "en": [
+      "\"I haven't eaten well since the operation.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "سكر 260، ألبومين 3.0."
+     ],
+     "en": [
+      "Glucose 260; albumin 3.0."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال أسبوع: سكر أقل من 180."
+     ],
+     "en": [
+      "Within a week: glucose < 180."
+     ]
+    },
+    "long": {
+     "ar": [
+      "التئام جيد."
+     ],
+     "en": [
+      "Good healing."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس السكر قبل الوجبات وإعطاء الأنسولين حسب البروتوكول.",
+      "en": "Check glucose before meals; insulin per protocol."
+     },
+     "rationale": {
+      "ar": "السكر المرتفع يعيق الالتئام.",
+      "en": "Hyperglycaemia impairs healing."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم توفير غذاء غني بالبروتين وفيتامين C والزنك بالتنسيق مع التغذية.",
+      "en": "Provide protein, vitamin C and zinc-rich diet with the dietitian."
+     },
+     "rationale": {
+      "ar": "دعم الالتئام.",
+      "en": "Supports healing."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل كمية الطعام المتناولة يوميًا.",
+      "en": "Record daily food intake."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تشجيع المريض على الإقلاع عن التدخين.",
+      "en": "Encourage smoking cessation."
+     },
+     "rationale": {
+      "ar": "التدخين يعيق الالتئام.",
+      "en": "Smoking delays healing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع شرب سوائل كافية ما لم يوجد مانع.",
+      "en": "Encourage adequate fluids unless restricted."
+     },
+     "rationale": {
+      "ar": "الترطيب يدعم الالتئام.",
+      "en": "Hydration supports healing."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم وزن المريض أسبوعيًا ومتابعة فقد الوزن.",
+      "en": "Weigh weekly."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "partial",
+     "text": {
+      "ar": "سكر 190 — تحقق جزئيًا.",
+      "en": "Glucose 190 — partially met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "دعم التئام الجرح بالتغذية وضبط السكر",
+      "en": "Supporting healing through nutrition and glucose control"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس السكر قبل الوجبات وإعطاء الأنسولين حسب البروتوكول.",
+       "يتم توفير غذاء غني بالبروتين وفيتامين C والزنك بالتنسيق مع التغذية.",
+       "يتم تسجيل كمية الطعام المتناولة يوميًا.",
+       "يتم تشجيع المريض على الإقلاع عن التدخين.",
+       "يتم تشجيع شرب سوائل كافية ما لم يوجد مانع.",
+       "يتم وزن المريض أسبوعيًا ومتابعة فقد الوزن."
+      ],
+      "en": [
+       "Check glucose before meals; insulin per protocol.",
+       "Provide protein, vitamin C and zinc-rich diet with the dietitian.",
+       "Record daily food intake.",
+       "Encourage smoking cessation.",
+       "Encourage adequate fluids unless restricted.",
+       "Weigh weekly."
+      ]
+     },
+     "outcome": {
+      "ar": "التئام أفضل.",
+      "en": "Better healing."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-ssi",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "تأخر الشفاء والخوف من عملية أخرى"
+    ],
+    "en": [
+     "Delayed recovery; fear of further surgery"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هل سأحتاج عملية أخرى؟\""
+     ],
+     "en": [
+      "\"Will I need another operation?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قلق."
+     ],
+     "en": [
+      "Anxious."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف القلق والشعور بالهدوء والأمان",
+      "en": "Relief of anxiety and a sense of calm and safety"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+       "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+       "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+       "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-ssi",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (العناية بالجرح والوقاية من العدوى)",
+    "en": "Deficient Knowledge (Wound Care and Infection Prevention)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "عدوى جرح"
+    ],
+    "en": [
+     "Wound infection"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"كيف أهتم بالجرح في المنزل؟\""
+     ],
+     "en": [
+      "\"How do I care for the wound at home?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يستعد للخروج."
+     ],
+     "en": [
+      "Preparing for discharge."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض غسل اليدين قبل لمس الجرح أو تغيير الضماد.",
+      "en": "Teach hand hygiene before touching the wound."
+     },
+     "rationale": {
+      "ar": "منع العدوى.",
+      "en": "Prevents infection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض علامات العدوى: احمرار متزايد، صديد، حرارة، ألم متزايد.",
+      "en": "Teach infection signs: spreading redness, pus, fever, increasing pain."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early action."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم التأكيد على إكمال المضاد الحيوي كاملًا.",
+      "en": "Emphasise completing the antibiotic course."
+     },
+     "rationale": {
+      "ar": "منع المقاومة.",
+      "en": "Prevents resistance."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم توجيه مريض السكري إلى ضبط السكر لأنه يسرع الالتئام.",
+      "en": "Advise diabetic patients to control glucose for healing."
+     },
+     "rationale": {
+      "ar": "التئام.",
+      "en": "Healing."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "معرفة طبيعة المرض والعلاج وعلامات الخطر",
+      "en": "Understanding the disease, treatment and danger signs"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "يتم تعليم المريض غسل اليدين قبل لمس الجرح أو تغيير الضماد.",
+       "يتم تعليم المريض علامات العدوى: احمرار متزايد، صديد، حرارة، ألم متزايد.",
+       "يتم التأكيد على إكمال المضاد الحيوي كاملًا.",
+       "يتم توجيه مريض السكري إلى ضبط السكر لأنه يسرع الالتئام.",
+       "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Teach hand hygiene before touching the wound.",
+       "Teach infection signs: spreading redness, pus, fever, increasing pain.",
+       "Emphasise completing the antibiotic course.",
+       "Advise diabetic patients to control glucose for healing.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "WHO 2018 — Global guidelines for the prevention of surgical site infection"
+  },
+  {
+   "title": "أدلة الرعاية التمريضية بوحدة الرعاية المركزة — وزارة الصحة والسكان المصرية ونقابة التمريض (2024/2025)"
+  }
+ ]
+}
