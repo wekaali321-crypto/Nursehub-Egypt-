@@ -203,7 +203,7 @@ export function TravelQuestionsAdmin() {
       return;
     }
     setLoading(true);
-    fetchTravelQuestions(categoryId)
+    fetchTravelQuestions(categoryId, false)
       .then(setItems)
       .finally(() => setLoading(false));
   }

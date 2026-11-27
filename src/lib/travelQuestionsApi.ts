@@ -121,10 +121,51 @@ async function fetchAllPages<T>(columns: string, categoryId?: string): Promise<T
   return out;
 }
 
-export async function fetchTravelQuestions(categoryId?: string): Promise<TravelQuestion[]> {
+// ---------- Static extra questions (public/travel-extra/) ----------
+// Newer questions are shipped as static JSON on Cloudflare (no Supabase egress) and merged with the table rows.
+// counts.json: { category_id: n }, <category_id>.json: TravelQuestion[], lite.json: TravelQuestionLite[].
+async function fetchStaticJson<T>(path: string, fallback: T): Promise<T> {
+  try {
+    const r = await fetch(path);
+    if (!r.ok || !(r.headers.get('content-type') ?? '').includes('json')) return fallback;
+    return (await r.json()) as T;
+  } catch {
+    return fallback;
+  }
+}
+
+let extraCountsPromise: Promise<Record<string, number>> | null = null;
+export function fetchExtraTravelCounts(): Promise<Record<string, number>> {
+  extraCountsPromise ??= fetchStaticJson<Record<string, number>>('/travel-extra/counts.json', {});
+  return extraCountsPromise;
+}
+
+export async function fetchExtraTravelQuestions(categoryId: string): Promise<TravelQuestion[]> {
+  const counts = await fetchExtraTravelCounts();
+  if (!counts[categoryId]) return [];
+  return fetchStaticJson<TravelQuestion[]>(`/travel-extra/${encodeURIComponent(categoryId)}.json`, []);
+}
+
+/** Merge table rows with static extras (a table row with the same id wins, so an admin edit overrides the file). */
+function mergeExtras(rows: TravelQuestion[], extras: TravelQuestion[]): TravelQuestion[] {
+  if (!extras.length) return rows;
+  const ids = new Set(rows.map((r) => r.id));
+  return [...rows, ...extras.filter((e) => !ids.has(e.id))];
+}
+
+/**
+ * Questions of one category (or the whole table). `withStatic` adds the static extras; the admin screen passes
+ * false so it lists only the editable table rows.
+ */
+export async function fetchTravelQuestions(categoryId?: string, withStatic = true): Promise<TravelQuestion[]> {
   // public category pages are cached on the client (signed-in admin sessions always read live)
-  if (categoryId) return cachedQuery(`travel_q_v1_${categoryId}`, TTL.content, () => fetchAllPages<TravelQuestion>('*', categoryId));
-  return fetchAllPages<TravelQuestion>('*', categoryId);
+  if (!categoryId) return fetchAllPages<TravelQuestion>('*');
+  const remote = withStatic
+    ? cachedQuery(`travel_q_v1_${categoryId}`, TTL.content, () => fetchAllPages<TravelQuestion>('*', categoryId))
+    : fetchAllPages<TravelQuestion>('*', categoryId);
+  if (!withStatic) return remote;
+  const [rows, extras] = await Promise.all([remote.catch(() => [] as TravelQuestion[]), fetchExtraTravelQuestions(categoryId)]);
+  return mergeExtras(rows, extras);
 }
 
 export type TravelQuestionLite = Pick<TravelQuestion, 'id' | 'category_id' | 'question_en' | 'question_ar'>;
@@ -136,8 +177,11 @@ export type TravelQuestionLite = Pick<TravelQuestion, 'id' | 'category_id' | 'qu
  */
 export async function fetchTravelQuestionsLite(): Promise<TravelQuestionLite[]> {
   try {
-    const r = await fetch('/data/travel_questions_lite.json');
-    return r.ok ? ((await r.json()) as TravelQuestionLite[]) : [];
+    const [base, extra] = await Promise.all([
+      fetchStaticJson<TravelQuestionLite[]>('/data/travel_questions_lite.json', []),
+      fetchStaticJson<TravelQuestionLite[]>('/travel-extra/lite.json', []),
+    ]);
+    return [...base, ...extra];
   } catch {
     return [];
   }
@@ -145,6 +189,13 @@ export async function fetchTravelQuestionsLite(): Promise<TravelQuestionLite[]> 
 
 /** Per-category question counts: one grouped RPC (index-covered) with a static fallback; cached on the client. */
 export async function fetchTravelQuestionCounts(): Promise<Record<string, number>> {
+  const [base, extra] = await Promise.all([fetchTableQuestionCounts(), fetchExtraTravelCounts()]);
+  const out: Record<string, number> = { ...base };
+  for (const [k, n] of Object.entries(extra)) out[k] = (out[k] ?? 0) + n;
+  return out;
+}
+
+async function fetchTableQuestionCounts(): Promise<Record<string, number>> {
   return cachedQuery('travel_counts_v1', TTL.content, async () => {
     const stat = async () => {
       try { const r = await fetch('/data/travel_counts.json'); return r.ok ? ((await r.json()) as Record<string, number>) : {}; } catch { return {}; }
