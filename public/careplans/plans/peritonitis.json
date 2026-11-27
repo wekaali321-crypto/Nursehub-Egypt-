@@ -1,0 +1,1094 @@
+{
+ "id": "peritonitis",
+ "icon": "🔥",
+ "system": "gastro",
+ "folder": "disease",
+ "title": {
+  "ar": "التهاب البريتون (الغشاء البريتوني)",
+  "en": "Peritonitis"
+ },
+ "summary": {
+  "ar": "خطة رعاية التهاب البريتون: الألم، الصدمة الإنتانية وحزمة الإنتان، السوائل، شلل الأمعاء، عدوى الجرح والخراج، والقلق.",
+  "en": "Peritonitis care plan: pain, septic shock and sepsis bundle, fluids, ileus, wound infection/abscess and anxiety."
+ },
+ "diagnoses": [
+  {
+   "id": "acute-pain-peritonitis",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (التهاب البريتون)",
+    "en": "Acute Pain (Peritonitis)"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف فعلي أو محتمل في الأنسجة، مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory and emotional experience associated with actual or potential tissue damage, lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "التهاب الغشاء البريتوني"
+    ],
+    "en": [
+     "Peritoneal inflammation"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم بطن منتشر 9/10 مع تصلب البطن"
+    ],
+    "en": [
+     "Generalised abdominal pain 9/10 with rigidity"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بطني كلها تؤلمني ولا أستطيع الحركة.\""
+     ],
+     "en": [
+      "\"My whole belly hurts and I can't move.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بطن متصلب كاللوح، ألم عند رفع اليد."
+     ],
+     "en": [
+      "Board-like abdomen; rebound tenderness."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ألم محتمل يسمح بالراحة والحركة."
+     ],
+     "en": [
+      "Tolerable pain allowing rest and movement."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+      "en": "Assess pain (site, 0–10, character, radiation) before and after analgesia."
+     },
+     "rationale": {
+      "ar": "يوجه العلاج ويقيس فعاليته.",
+      "en": "Guides treatment and measures effect."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+      "en": "Give analgesia as ordered, on schedule."
+     },
+     "rationale": {
+      "ar": "التسكين المنتظم يمنع اشتداد الألم.",
+      "en": "Regular analgesia prevents peaks."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+      "en": "Comfortable position; calm environment."
+     },
+     "rationale": {
+      "ar": "يقلل الإحساس بالألم.",
+      "en": "Reduces pain perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+      "en": "Non-drug measures: deep breathing, relaxation, distraction."
+     },
+     "rationale": {
+      "ar": "تكمل المسكن.",
+      "en": "Complement analgesia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع نصف الجلوس مع ثني الركبتين.",
+      "en": "Position semi-Fowler's with knees flexed."
+     },
+     "rationale": {
+      "ar": "يقلل الشد ويحصر الالتهاب.",
+      "en": "Reduces tension; localises infection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكنات الوريدية حسب الأمر دون تأخير بحجة إخفاء التشخيص.",
+      "en": "Give IV analgesia as ordered without delaying for diagnosis."
+     },
+     "rationale": {
+      "ar": "التسكين لا يخفي التشخيص.",
+      "en": "Analgesia does not mask diagnosis."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 بعد ساعة — تحقق.",
+      "en": "Pain 3/10 at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الألم إلى مستوى يتحمله المريض",
+      "en": "Relief of pain to a tolerable level"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+       "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+       "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+       "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+       "يتم وضع المريض في وضع نصف الجلوس مع ثني الركبتين.",
+       "يتم إعطاء المسكنات الوريدية حسب الأمر دون تأخير بحجة إخفاء التشخيص."
+      ],
+      "en": [
+       "Assess pain (site, 0–10, character, radiation) before and after analgesia.",
+       "Give analgesia as ordered, on schedule.",
+       "Comfortable position; calm environment.",
+       "Non-drug measures: deep breathing, relaxation, distraction.",
+       "Position semi-Fowler's with knees flexed.",
+       "Give IV analgesia as ordered without delaying for diagnosis."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-septic-shock-peritonitis",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الصدمة الإنتانية",
+    "en": "Risk for Septic Shock"
+   },
+   "definition": {
+    "ar": "قابلية لهبوط الدورة بسبب العدوى.",
+    "en": "Susceptibility to septic shock."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "انثقاب عضو مجوف"
+    ],
+    "en": [
+     "Perforated viscus"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بالبرد والرعشة.\""
+     ],
+     "en": [
+      "\"I feel cold and shivery.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "نبض 120، ضغط 95/60، لاكتات 3."
+     ],
+     "en": [
+      "HR 120; BP 95/60; lactate 3."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الساعة الأولى: بدء حزمة الإنتان."
+     ],
+     "en": [
+      "Within 1 h: sepsis bundle started."
+     ]
+    },
+    "long": {
+     "ar": [
+      "دورة مستقرة."
+     ],
+     "en": [
+      "Stable circulation."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس العلامات الحيوية كل 15–30 دقيقة وحساب مقياس الإنذار المبكر.",
+      "en": "Check vitals every 15–30 min and score early warning."
+     },
+     "rationale": {
+      "ar": "اكتشاف التدهور.",
+      "en": "Detects deterioration."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم سحب مزرعة الدم واللاكتات قبل المضاد الحيوي ثم إعطاؤه خلال ساعة حسب البروتوكول.",
+      "en": "Take cultures and lactate, then give antibiotics within 1 h per protocol."
+     },
+     "rationale": {
+      "ar": "تقليل الوفيات.",
+      "en": "Reduces mortality."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء السوائل الوريدية 30 مل/كجم عند هبوط الضغط حسب الأمر.",
+      "en": "Give 30 mL/kg IV fluids for hypotension as ordered."
+     },
+     "rationale": {
+      "ar": "دعم الدورة.",
+      "en": "Circulatory support."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل البول كل ساعة بقسطرة بولية.",
+      "en": "Record hourly urine via catheter."
+     },
+     "rationale": {
+      "ar": "مؤشر التروية.",
+      "en": "Perfusion marker."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تجهيز المريض للجراحة العاجلة حسب قرار الجراح.",
+      "en": "Prepare for emergency surgery as decided."
+     },
+     "rationale": {
+      "ar": "السيطرة على المصدر.",
+      "en": "Source control."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب فورًا عند هبوط الضغط أو ارتفاع اللاكتات.",
+      "en": "Report hypotension or rising lactate immediately."
+     },
+     "rationale": {
+      "ar": "تدخل.",
+      "en": "Intervention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "ضغط 110/70 بعد السوائل — تحقق.",
+      "en": "BP 110/70 after fluids — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "اكتشاف الصدمة الإنتانية وعلاجها مبكرًا",
+      "en": "Early recognition and treatment of septic shock"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس العلامات الحيوية كل 15–30 دقيقة وحساب مقياس الإنذار المبكر.",
+       "يتم سحب مزرعة الدم واللاكتات قبل المضاد الحيوي ثم إعطاؤه خلال ساعة حسب البروتوكول.",
+       "يتم إعطاء السوائل الوريدية 30 مل/كجم عند هبوط الضغط حسب الأمر.",
+       "يتم تسجيل البول كل ساعة بقسطرة بولية.",
+       "يتم تجهيز المريض للجراحة العاجلة حسب قرار الجراح.",
+       "يتم إبلاغ الطبيب فورًا عند هبوط الضغط أو ارتفاع اللاكتات."
+      ],
+      "en": [
+       "Check vitals every 15–30 min and score early warning.",
+       "Take cultures and lactate, then give antibiotics within 1 h per protocol.",
+       "Give 30 mL/kg IV fluids for hypotension as ordered.",
+       "Record hourly urine via catheter.",
+       "Prepare for emergency surgery as decided.",
+       "Report hypotension or rising lactate immediately."
+      ]
+     },
+     "outcome": {
+      "ar": "دورة مستقرة.",
+      "en": "Stable circulation."
+     },
+     "timeframe": {
+      "ar": "كل 15–30 دقيقة",
+      "en": "Every 15–30 min"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-fluid-volume-peritonitis",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص حجم السوائل",
+    "en": "Deficient Fluid Volume"
+   },
+   "definition": {
+    "ar": "نقص السوائل داخل الأوعية أو الأنسجة أو الخلايا.",
+    "en": "Decreased intravascular, interstitial or intracellular fluid."
+   },
+   "relatedTo": {
+    "ar": [
+     "تسرب السوائل للبطن والقيء والحمى"
+    ],
+    "en": [
+     "Third-spacing, vomiting and fever"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "سرعة النبض وهبوط الضغط",
+     "قلة البول",
+     "جفاف الأغشية"
+    ],
+    "en": [
+     "Tachycardia and hypotension",
+     "Reduced urine output",
+     "Dry mucosa"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بعطش شديد.\""
+     ],
+     "en": [
+      "\"Very thirsty.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بول 20 مل/ساعة."
+     ],
+     "en": [
+      "Urine 20 mL/h."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 6 ساعات: ضغط انقباضي ≥ 90 ونبض < 100 وبول ≥ 0.5 مل/كجم/ساعة."
+     ],
+     "en": [
+      "Within 6 h: SBP ≥ 90, HR < 100, urine ≥ 0.5 mL/kg/h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 48 ساعة: توازن سوائل طبيعي."
+     ],
+     "en": [
+      "Within 48 h: normal fluid balance."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس العلامات الحيوية كل 1–4 ساعات حسب الحالة، مع تقييم رجوع الدم ومستوى الوعي.",
+      "en": "Vitals every 1–4 h as indicated; capillary refill; consciousness."
+     },
+     "rationale": {
+      "ar": "كشف نقص الحجم والصدمة.",
+      "en": "Detects hypovolemia and shock."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل دقيق للسوائل الداخلة والخارجة والبول كل ساعة عند الحاجة.",
+      "en": "Accurate intake/output; hourly urine when indicated."
+     },
+     "rationale": {
+      "ar": "البول أفضل مؤشر للتروية.",
+      "en": "Urine reflects perfusion."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تركيب كانيولا كبيرة وإعطاء المحاليل الوريدية حسب الأمر.",
+      "en": "Large-bore cannula; IV fluids as ordered."
+     },
+     "rationale": {
+      "ar": "تعويض الحجم.",
+      "en": "Volume replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تتم متابعة الهيموجلوبين والأملاح ووظائف الكلى حسب أمر الطبيب لتوجيه تعويض السوائل.",
+      "en": "Monitor Hb, electrolytes and renal function."
+     },
+     "rationale": {
+      "ar": "يوجه التعويض.",
+      "en": "Guides replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب عند ضغط انقباضي < 90 أو نبض > 120 أو بول < 0.5 مل/كجم/ساعة.",
+      "en": "Report SBP < 90, HR > 120 or urine < 0.5 mL/kg/h."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early intervention."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس كمية الشفط من الأنبوبة الأنفية المعدية وإضافتها إلى حساب السوائل الخارجة.",
+      "en": "Measure NG aspirate and add it to output."
+     },
+     "rationale": {
+      "ar": "حساب دقيق للفقد.",
+      "en": "Accurate loss calculation."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الضغط 112/70، النبض 92، البول 50 مل/ساعة — تحقق.",
+      "en": "BP 112/70, HR 92, urine 50 mL/h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على استقرار الدورة الدموية والتروية الكافية",
+      "en": "Maintaining stable circulation and perfusion"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس العلامات الحيوية كل 1–4 ساعات حسب الحالة، مع تقييم رجوع الدم ومستوى الوعي.",
+       "يتم تسجيل دقيق للسوائل الداخلة والخارجة والبول كل ساعة عند الحاجة.",
+       "تتم متابعة الهيموجلوبين والأملاح ووظائف الكلى حسب أمر الطبيب لتوجيه تعويض السوائل."
+      ],
+      "en": [
+       "Vitals every 1–4 h as indicated; capillary refill; consciousness.",
+       "Accurate intake/output; hourly urine when indicated.",
+       "Monitor Hb, electrolytes and renal function."
+      ]
+     },
+     "outcome": {
+      "ar": "دورة مستقرة.",
+      "en": "Stable circulation."
+     },
+     "timeframe": {
+      "ar": "كل 1–4 ساعات",
+      "en": "Every 1–4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تعويض السوائل المفقودة واستعادة حجم الدم",
+      "en": "Replacing lost fluid and restoring blood volume"
+     },
+     "actions": {
+      "ar": [
+       "يتم تركيب كانيولا كبيرة وإعطاء المحاليل الوريدية حسب الأمر.",
+       "يتم إبلاغ الطبيب عند ضغط انقباضي < 90 أو نبض > 120 أو بول < 0.5 مل/كجم/ساعة.",
+       "يتم قياس كمية الشفط من الأنبوبة الأنفية المعدية وإضافتها إلى حساب السوائل الخارجة."
+      ],
+      "en": [
+       "Large-bore cannula; IV fluids as ordered.",
+       "Report SBP < 90, HR > 120 or urine < 0.5 mL/kg/h.",
+       "Measure NG aspirate and add it to output."
+      ]
+     },
+     "outcome": {
+      "ar": "حجم كافٍ.",
+      "en": "Adequate volume."
+     },
+     "timeframe": {
+      "ar": "6 ساعات",
+      "en": "6 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "dysfunctional-gi-peritonitis",
+   "kind": "actual",
+   "title": {
+    "ar": "اضطراب حركة الجهاز الهضمي (شلل الأمعاء)",
+    "en": "Dysfunctional GI Motility (Ileus)"
+   },
+   "definition": {
+    "ar": "توقف حركة الأمعاء.",
+    "en": "Absent bowel motility."
+   },
+   "relatedTo": {
+    "ar": [
+     "التهاب البريتون"
+    ],
+    "en": [
+     "Peritonitis"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "انتفاخ وغياب أصوات الأمعاء"
+    ],
+    "en": [
+     "Distension and absent bowel sounds"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بطني منتفخة ولا تخرج غازات.\""
+     ],
+     "en": [
+      "\"My belly is swollen and no wind passes.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "أصوات أمعاء غائبة."
+     ],
+     "en": [
+      "Absent bowel sounds."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 72 ساعة بعد العلاج: عودة الحركة."
+     ],
+     "en": [
+      "Within 72 h post-treatment: motility returns."
+     ]
+    },
+    "long": {
+     "ar": [
+      "أكل طبيعي."
+     ],
+     "en": [
+      "Normal diet."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم الحفاظ على صيام المريض التام حتى يسمح الطبيب.",
+      "en": "Keep nil by mouth until allowed."
+     },
+     "rationale": {
+      "ar": "إراحة الأمعاء.",
+      "en": "Bowel rest."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تركيب أنبوبة أنفية معدية على الشفط حسب الأمر.",
+      "en": "Insert an NG tube on suction as ordered."
+     },
+     "rationale": {
+      "ar": "تخفيف الانتفاخ.",
+      "en": "Decompression."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم سماع أصوات الأمعاء وقياس محيط البطن كل 4 ساعات.",
+      "en": "Auscultate and measure girth every 4 h."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس كمية الشفط ولونه وتسجيلها.",
+      "en": "Measure and record NG aspirate."
+     },
+     "rationale": {
+      "ar": "توازن السوائل.",
+      "en": "Fluid balance."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم العناية بالفم والأنف كل 4 ساعات.",
+      "en": "Provide oral and nasal care 4-hourly."
+     },
+     "rationale": {
+      "ar": "راحة.",
+      "en": "Comfort."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم البدء بالسوائل ثم الطعام تدريجيًا عند عودة الحركة حسب الأمر.",
+      "en": "Reintroduce fluids then diet gradually as ordered."
+     },
+     "rationale": {
+      "ar": "تجنب القيء.",
+      "en": "Avoids vomiting."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "غازات في اليوم الثالث — تحقق.",
+      "en": "Flatus day 3 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "عودة حركة الأمعاء",
+      "en": "Return of bowel function"
+     },
+     "actions": {
+      "ar": [
+       "يتم الحفاظ على صيام المريض التام حتى يسمح الطبيب.",
+       "يتم تركيب أنبوبة أنفية معدية على الشفط حسب الأمر.",
+       "يتم سماع أصوات الأمعاء وقياس محيط البطن كل 4 ساعات.",
+       "يتم قياس كمية الشفط ولونه وتسجيلها.",
+       "يتم العناية بالفم والأنف كل 4 ساعات.",
+       "يتم البدء بالسوائل ثم الطعام تدريجيًا عند عودة الحركة حسب الأمر."
+      ],
+      "en": [
+       "Keep nil by mouth until allowed.",
+       "Insert an NG tube on suction as ordered.",
+       "Auscultate and measure girth every 4 h.",
+       "Measure and record NG aspirate.",
+       "Provide oral and nasal care 4-hourly.",
+       "Reintroduce fluids then diet gradually as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "أكل طبيعي.",
+      "en": "Normal diet."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-infection-peritonitis",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدوى الجرح والخراج داخل البطن",
+    "en": "Risk for Wound Infection and Intra-abdominal Abscess"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة قد يؤثر على الصحة.",
+    "en": "Susceptibility to invasion by pathogenic organisms that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "عملية بطن ملوثة"
+    ],
+    "en": [
+     "Contaminated laparotomy"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هل الجرح سيلتئم؟\""
+     ],
+     "en": [
+      "\"Will the wound heal?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "درنقتان بالبطن."
+     ],
+     "en": [
+      "Two abdominal drains."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "يوميًا: لا علامات عدوى والحرارة < 38."
+     ],
+     "en": [
+      "Daily: no infection signs; T < 38."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا عدوى طوال فترة العلاج."
+     ],
+     "en": [
+      "No infection during treatment."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+      "en": "Monitor temperature and local/systemic infection signs."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+      "en": "Hand hygiene before and after patient contact."
+     },
+     "rationale": {
+      "ar": "أهم وسيلة وقاية.",
+      "en": "Key prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+      "en": "Aseptic technique with wounds and devices."
+     },
+     "rationale": {
+      "ar": "منع دخول الميكروب.",
+      "en": "Prevents entry of organisms."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+      "en": "Antibiotics on time as ordered."
+     },
+     "rationale": {
+      "ar": "مستوى فعال.",
+      "en": "Effective levels."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس وتسجيل إفرازات الدرنقات ولونها ورائحتها كل وردية.",
+      "en": "Record drain volume, colour and odour each shift."
+     },
+     "rationale": {
+      "ar": "كشف الخراج أو التسريب.",
+      "en": "Detects abscess or leak."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة الحمى المتكررة بعد الأيام الأولى كعلامة على خراج.",
+      "en": "Watch for recurrent fever after the first days suggesting abscess."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات عدوى — تحقق.",
+      "en": "No infection signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية المريض من العدوى",
+      "en": "Protecting the patient from infection"
+     },
+     "actions": {
+      "ar": [
+       "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+       "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+       "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+       "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+       "يتم قياس وتسجيل إفرازات الدرنقات ولونها ورائحتها كل وردية.",
+       "تتم ملاحظة الحمى المتكررة بعد الأيام الأولى كعلامة على خراج."
+      ],
+      "en": [
+       "Monitor temperature and local/systemic infection signs.",
+       "Hand hygiene before and after patient contact.",
+       "Aseptic technique with wounds and devices.",
+       "Antibiotics on time as ordered.",
+       "Record drain volume, colour and odour each shift.",
+       "Watch for recurrent fever after the first days suggesting abscess."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عدوى.",
+      "en": "No infection."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-peritonitis",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "الألم الشديد والجراحة العاجلة"
+    ],
+    "en": [
+     "Severe pain and emergency surgery"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هل سأحتاج عملية الآن؟\""
+     ],
+     "en": [
+      "\"Do I need surgery now?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قلق."
+     ],
+     "en": [
+      "Anxious."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف القلق والشعور بالهدوء والأمان",
+      "en": "Relief of anxiety and a sense of calm and safety"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+       "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+       "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+       "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "Surviving Sepsis Campaign 2021 / WSES guidelines for intra-abdominal infections"
+  }
+ ]
+}
