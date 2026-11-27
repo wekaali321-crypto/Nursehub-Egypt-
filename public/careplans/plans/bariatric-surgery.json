@@ -1,0 +1,1060 @@
+{
+ "id": "bariatric-surgery",
+ "icon": "⚖️",
+ "system": "surgery",
+ "folder": "disease",
+ "title": {
+  "ar": "جراحات السمنة (التكميم وتحويل المسار)",
+  "en": "Bariatric Surgery (Sleeve and Bypass)"
+ },
+ "summary": {
+  "ar": "خطة رعاية بعد جراحة السمنة: تسريب التوصيل، التنفس وانقطاع النفس النومي، الجلطات، التغذية والسوائل، الألم، والتثقيف.",
+  "en": "Bariatric surgery care plan: anastomotic leak, breathing and sleep apnoea, VTE, nutrition and fluids, pain and teaching."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-leak-bariatric",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر تسريب مكان التوصيل",
+    "en": "Risk for Anastomotic Leak"
+   },
+   "definition": {
+    "ar": "قابلية لتسرب محتويات المعدة.",
+    "en": "Susceptibility to staple-line or anastomotic leak."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "تكميم أو تحويل مسار المعدة"
+    ],
+    "en": [
+     "Sleeve gastrectomy or gastric bypass"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بألم في كتفي الأيسر وضيق.\""
+     ],
+     "en": [
+      "\"I have pain in my left shoulder and feel tight.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "نبض 122، حرارة 38.2 في اليوم الثاني."
+     ],
+     "en": [
+      "HR 122, T 38.2 on day 2."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أول 72 ساعة: اكتشاف التسريب مبكرًا."
+     ],
+     "en": [
+      "First 72 h: early leak detection."
+     ]
+    },
+    "long": {
+     "ar": [
+      "التئام دون تسريب."
+     ],
+     "en": [
+      "Healing without leak."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس النبض كل ساعتين في أول 48 ساعة لأن تسارعه أعلى من 120 قد يكون أول علامة للتسريب.",
+      "en": "Check HR 2-hourly for 48 h; HR > 120 may be the first leak sign."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة الحمى وألم البطن أو الكتف الأيسر وضيق التنفس.",
+      "en": "Watch for fever, abdominal or left shoulder pain and dyspnoea."
+     },
+     "rationale": {
+      "ar": "علامات التسريب.",
+      "en": "Leak signs."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الجراح فورًا عند ظهور أي علامة تسريب.",
+      "en": "Report any leak sign to the surgeon immediately."
+     },
+     "rationale": {
+      "ar": "تدخل عاجل.",
+      "en": "Urgent action."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم الالتزام بالسوائل الصافية بكميات صغيرة حسب البروتوكول.",
+      "en": "Follow small-volume clear fluids per protocol."
+     },
+     "rationale": {
+      "ar": "حماية التوصيل.",
+      "en": "Protects the anastomosis."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص الدرنقة وكمية ولون إفرازاتها كل وردية.",
+      "en": "Check the drain and its output."
+     },
+     "rationale": {
+      "ar": "كشف التسريب.",
+      "en": "Detects leak."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم عدم تركيب أنبوبة أنفية معدية إلا بأمر الجراح.",
+      "en": "Never pass an NG tube without the surgeon's order."
+     },
+     "rationale": {
+      "ar": "قد يثقب التوصيل.",
+      "en": "May perforate the anastomosis."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات تسريب — تحقق.",
+      "en": "No leak — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "اكتشاف تسريب التوصيل مبكرًا",
+      "en": "Early detection of anastomotic leak"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس النبض كل ساعتين في أول 48 ساعة لأن تسارعه أعلى من 120 قد يكون أول علامة للتسريب.",
+       "تتم ملاحظة الحمى وألم البطن أو الكتف الأيسر وضيق التنفس.",
+       "يتم إبلاغ الجراح فورًا عند ظهور أي علامة تسريب.",
+       "يتم الالتزام بالسوائل الصافية بكميات صغيرة حسب البروتوكول.",
+       "يتم فحص الدرنقة وكمية ولون إفرازاتها كل وردية.",
+       "يتم عدم تركيب أنبوبة أنفية معدية إلا بأمر الجراح."
+      ],
+      "en": [
+       "Check HR 2-hourly for 48 h; HR > 120 may be the first leak sign.",
+       "Watch for fever, abdominal or left shoulder pain and dyspnoea.",
+       "Report any leak sign to the surgeon immediately.",
+       "Follow small-volume clear fluids per protocol.",
+       "Check the drain and its output.",
+       "Never pass an NG tube without the surgeon's order."
+      ]
+     },
+     "outcome": {
+      "ar": "التئام دون تسريب.",
+      "en": "Healing without leak."
+     },
+     "timeframe": {
+      "ar": "كل ساعتين",
+      "en": "Every 2 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ineffective-breathing-bariatric",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدم فعالية نمط التنفس",
+    "en": "Risk for Ineffective Breathing Pattern"
+   },
+   "definition": {
+    "ar": "قابلية لنقص التهوية.",
+    "en": "Susceptibility to hypoventilation."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "السمنة وتوقف التنفس أثناء النوم"
+    ],
+    "en": [
+     "Obesity and obstructive sleep apnoea"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أستخدم جهاز تنفس في النوم.\""
+     ],
+     "en": [
+      "\"I use a breathing machine at night.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مؤشر كتلة 48، يستخدم CPAP."
+     ],
+     "en": [
+      "BMI 48; uses CPAP."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "أول 24 ساعة: تشبع ≥ 94%."
+     ],
+     "en": [
+      "First 24 h: SpO₂ ≥ 94%."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا مضاعفات تنفسية."
+     ],
+     "en": [
+      "No respiratory complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع نصف الجلوس أو الجلوس.",
+      "en": "Position semi-upright or sitting."
+     },
+     "rationale": {
+      "ar": "تحسين التهوية.",
+      "en": "Better ventilation."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام جهاز CPAP الخاص بالمريض أثناء النوم.",
+      "en": "Use the patient's own CPAP during sleep."
+     },
+     "rationale": {
+      "ar": "منع انقطاع النفس.",
+      "en": "Prevents apnoea."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم مراقبة التشبع المستمر خاصة مع المسكنات الأفيونية.",
+      "en": "Use continuous SpO₂ monitoring, especially on opioids."
+     },
+     "rationale": {
+      "ar": "خطر تثبيط التنفس.",
+      "en": "Respiratory depression risk."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تشجيع التنفس العميق وجهاز تحفيز التنفس كل ساعة.",
+      "en": "Encourage hourly deep breathing and incentive spirometry."
+     },
+     "rationale": {
+      "ar": "منع الانخماص.",
+      "en": "Prevents atelectasis."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم البدء بالمشي خلال ساعات من العملية.",
+      "en": "Mobilise within hours of surgery."
+     },
+     "rationale": {
+      "ar": "تحسين التهوية والدورة.",
+      "en": "Improves ventilation and circulation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تقليل المسكنات الأفيونية واستخدام بدائلها حسب الأمر.",
+      "en": "Minimise opioids with alternatives as ordered."
+     },
+     "rationale": {
+      "ar": "أمان.",
+      "en": "Safety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تشبع 96% — تحقق.",
+      "en": "SpO₂ 96% — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على تنفس آمن",
+      "en": "Maintaining safe breathing"
+     },
+     "actions": {
+      "ar": [
+       "يتم وضع المريض في وضع نصف الجلوس أو الجلوس.",
+       "يتم استخدام جهاز CPAP الخاص بالمريض أثناء النوم.",
+       "يتم مراقبة التشبع المستمر خاصة مع المسكنات الأفيونية.",
+       "يتم تشجيع التنفس العميق وجهاز تحفيز التنفس كل ساعة.",
+       "يتم البدء بالمشي خلال ساعات من العملية.",
+       "يتم تقليل المسكنات الأفيونية واستخدام بدائلها حسب الأمر."
+      ],
+      "en": [
+       "Position semi-upright or sitting.",
+       "Use the patient's own CPAP during sleep.",
+       "Use continuous SpO₂ monitoring, especially on opioids.",
+       "Encourage hourly deep breathing and incentive spirometry.",
+       "Mobilise within hours of surgery.",
+       "Minimise opioids with alternatives as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "لا مضاعفات تنفسية.",
+      "en": "No respiratory complications."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-vte-bariatric",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الجلطات الوريدية",
+    "en": "Risk for Venous Thromboembolism"
+   },
+   "definition": {
+    "ar": "قابلية للجلطات.",
+    "en": "Susceptibility to VTE."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "السمنة والجراحة"
+    ],
+    "en": [
+     "Obesity and surgery"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "—"
+     ],
+     "en": [
+      "—"
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مؤشر كتلة 48."
+     ],
+     "en": [
+      "BMI 48."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا جلطات."
+     ],
+     "en": [
+      "During stay: no VTE."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا مضاعفات."
+     ],
+     "en": [
+      "No complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الهيبارين الوقائي بجرعة مناسبة للوزن حسب الأمر.",
+      "en": "Give weight-adjusted prophylactic heparin as ordered."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام أجهزة الضغط الهوائي المتقطع على الساقين.",
+      "en": "Use intermittent pneumatic compression."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المشي المبكر عدة مرات يوميًا.",
+      "en": "Encourage early walking several times daily."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة تورم الساق وضيق التنفس المفاجئ.",
+      "en": "Watch for leg swelling and sudden dyspnoea."
+     },
+     "rationale": {
+      "ar": "علامات الجلطة.",
+      "en": "VTE signs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير سرير وأدوات مناسبة لوزن المريض.",
+      "en": "Provide bariatric-rated bed and equipment."
+     },
+     "rationale": {
+      "ar": "أمان.",
+      "en": "Safety."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب بأي علامة جلطة.",
+      "en": "Report any VTE sign."
+     },
+     "rationale": {
+      "ar": "علاج سريع.",
+      "en": "Prompt treatment."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا جلطات — تحقق.",
+      "en": "No VTE — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من الجلطات الوريدية",
+      "en": "Prevention of venous thromboembolism"
+     },
+     "actions": {
+      "ar": [
+       "يتم إعطاء الهيبارين الوقائي بجرعة مناسبة للوزن حسب الأمر.",
+       "يتم استخدام أجهزة الضغط الهوائي المتقطع على الساقين.",
+       "يتم تشجيع المشي المبكر عدة مرات يوميًا.",
+       "تتم ملاحظة تورم الساق وضيق التنفس المفاجئ.",
+       "يتم توفير سرير وأدوات مناسبة لوزن المريض.",
+       "يتم إبلاغ الطبيب بأي علامة جلطة."
+      ],
+      "en": [
+       "Give weight-adjusted prophylactic heparin as ordered.",
+       "Use intermittent pneumatic compression.",
+       "Encourage early walking several times daily.",
+       "Watch for leg swelling and sudden dyspnoea.",
+       "Provide bariatric-rated bed and equipment.",
+       "Report any VTE sign."
+      ]
+     },
+     "outcome": {
+      "ar": "لا مضاعفات.",
+      "en": "No complications."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "nutrition-bariatric",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص التغذية والجفاف بعد الجراحة",
+    "en": "Risk for Nutritional Deficiency and Dehydration"
+   },
+   "definition": {
+    "ar": "قابلية لنقص الفيتامينات والبروتين والسوائل.",
+    "en": "Susceptibility to vitamin, protein and fluid deficits."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "صغر حجم المعدة وسوء الامتصاص"
+    ],
+    "en": [
+     "Small stomach and malabsorption"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشبع بسرعة ولا أستطيع شرب كمية كبيرة.\""
+     ],
+     "en": [
+      "\"I fill up fast and can't drink much.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يشرب 800 مل يوميًا."
+     ],
+     "en": [
+      "Drinks 800 mL/day."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرب 1.5 لتر على رشفات."
+     ],
+     "en": [
+      "Before discharge: 1.5 L in sips."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تغذية متوازنة دون نقص."
+     ],
+     "en": [
+      "Balanced nutrition without deficiency."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض شرب الماء على رشفات صغيرة طوال اليوم وعدم الشرب مع الأكل.",
+      "en": "Teach sipping water all day and not drinking with meals."
+     },
+     "rationale": {
+      "ar": "منع الجفاف والقيء.",
+      "en": "Prevents dehydration and vomiting."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض البدء بالبروتين في كل وجبة.",
+      "en": "Teach eating protein first at each meal."
+     },
+     "rationale": {
+      "ar": "منع نقص البروتين.",
+      "en": "Prevents protein deficiency."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم التأكيد على الفيتامينات والمعادن مدى الحياة مثل B12 والحديد والكالسيوم وفيتامين د.",
+      "en": "Emphasise lifelong supplements: B12, iron, calcium, vitamin D."
+     },
+     "rationale": {
+      "ar": "منع النقص.",
+      "en": "Prevents deficiency."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح متلازمة الإغراق وتجنب السكريات البسيطة بعد تحويل المسار.",
+      "en": "Explain dumping syndrome; avoid simple sugars after bypass."
+     },
+     "rationale": {
+      "ar": "تجنب الأعراض.",
+      "en": "Avoids symptoms."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل السوائل الداخلة والخارجة يوميًا.",
+      "en": "Record daily intake and output."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم المتابعة مع أخصائي التغذية للتدرج في مراحل الأكل.",
+      "en": "Follow the dietitian's staged diet progression."
+     },
+     "rationale": {
+      "ar": "خطة آمنة.",
+      "en": "Safe progression."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "يشرب 1.5 لتر — تحقق.",
+      "en": "Drinks 1.5 L — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تغذية وترطيب كافيان بعد الجراحة",
+      "en": "Adequate nutrition and hydration after surgery"
+     },
+     "actions": {
+      "ar": [
+       "يتم تعليم المريض شرب الماء على رشفات صغيرة طوال اليوم وعدم الشرب مع الأكل.",
+       "يتم تعليم المريض البدء بالبروتين في كل وجبة.",
+       "يتم التأكيد على الفيتامينات والمعادن مدى الحياة مثل B12 والحديد والكالسيوم وفيتامين د.",
+       "يتم شرح متلازمة الإغراق وتجنب السكريات البسيطة بعد تحويل المسار.",
+       "يتم تسجيل السوائل الداخلة والخارجة يوميًا.",
+       "يتم المتابعة مع أخصائي التغذية للتدرج في مراحل الأكل."
+      ],
+      "en": [
+       "Teach sipping water all day and not drinking with meals.",
+       "Teach eating protein first at each meal.",
+       "Emphasise lifelong supplements: B12, iron, calcium, vitamin D.",
+       "Explain dumping syndrome; avoid simple sugars after bypass.",
+       "Record daily intake and output.",
+       "Follow the dietitian's staged diet progression."
+      ]
+     },
+     "outcome": {
+      "ar": "تغذية متوازنة دون نقص.",
+      "en": "Balanced nutrition without deficiency."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-bariatric",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد بعد جراحة السمنة",
+    "en": "Acute Pain after Bariatric Surgery"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف فعلي أو محتمل في الأنسجة، مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory and emotional experience associated with actual or potential tissue damage, lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "جروح المنظار وغاز البطن"
+    ],
+    "en": [
+     "Port sites and residual gas"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم 5/10 وألم بالكتف"
+    ],
+    "en": [
+     "Pain 5/10 and shoulder-tip pain"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بألم في كتفي من الغاز.\""
+     ],
+     "en": [
+      "\"I have shoulder pain from the gas.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بعد تكميم بالمنظار."
+     ],
+     "en": [
+      "After laparoscopic sleeve."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ألم محتمل يسمح بالراحة والحركة."
+     ],
+     "en": [
+      "Tolerable pain allowing rest and movement."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+      "en": "Assess pain (site, 0–10, character, radiation) before and after analgesia."
+     },
+     "rationale": {
+      "ar": "يوجه العلاج ويقيس فعاليته.",
+      "en": "Guides treatment and measures effect."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+      "en": "Give analgesia as ordered, on schedule."
+     },
+     "rationale": {
+      "ar": "التسكين المنتظم يمنع اشتداد الألم.",
+      "en": "Regular analgesia prevents peaks."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+      "en": "Comfortable position; calm environment."
+     },
+     "rationale": {
+      "ar": "يقلل الإحساس بالألم.",
+      "en": "Reduces pain perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+      "en": "Non-drug measures: deep breathing, relaxation, distraction."
+     },
+     "rationale": {
+      "ar": "تكمل المسكن.",
+      "en": "Complement analgesia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المشي لتخفيف ألم الغاز.",
+      "en": "Encourage walking to relieve gas pain."
+     },
+     "rationale": {
+      "ar": "فعال.",
+      "en": "Effective."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء مسكنات سائلة أو مطحونة حسب الأمر وتجنب مضادات الالتهاب غير الستيرويدية.",
+      "en": "Give liquid/crushed analgesics as ordered; avoid NSAIDs."
+     },
+     "rationale": {
+      "ar": "تجنب قرحة التوصيل.",
+      "en": "Avoids marginal ulcer."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 بعد ساعة — تحقق.",
+      "en": "Pain 3/10 at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الألم إلى مستوى يتحمله المريض",
+      "en": "Relief of pain to a tolerable level"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+       "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+       "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+       "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+       "يتم تشجيع المشي لتخفيف ألم الغاز.",
+       "يتم إعطاء مسكنات سائلة أو مطحونة حسب الأمر وتجنب مضادات الالتهاب غير الستيرويدية."
+      ],
+      "en": [
+       "Assess pain (site, 0–10, character, radiation) before and after analgesia.",
+       "Give analgesia as ordered, on schedule.",
+       "Comfortable position; calm environment.",
+       "Non-drug measures: deep breathing, relaxation, distraction.",
+       "Encourage walking to relieve gas pain.",
+       "Give liquid/crushed analgesics as ordered; avoid NSAIDs."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-bariatric",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (الحياة بعد جراحة السمنة)",
+    "en": "Deficient Knowledge (Life after Bariatric Surgery)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "تغيير نمط الحياة"
+    ],
+    "en": [
+     "Lifestyle change"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هل سأنقص وزني بدون مجهود؟\""
+     ],
+     "en": [
+      "\"Will I lose weight without effort?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يستعد للخروج."
+     ],
+     "en": [
+      "Preparing for discharge."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح أن الجراحة أداة تحتاج التزامًا بالغذاء والرياضة مدى الحياة.",
+      "en": "Explain surgery is a tool needing lifelong diet and exercise."
+     },
+     "rationale": {
+      "ar": "توقعات واقعية.",
+      "en": "Realistic expectations."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض مراحل الأكل: سوائل صافية، سوائل كاملة، مهروس، لين، ثم عادي.",
+      "en": "Teach diet stages: clear, full liquids, puree, soft, regular."
+     },
+     "rationale": {
+      "ar": "أمان.",
+      "en": "Safety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم توجيه السيدات إلى تأجيل الحمل 12–18 شهرًا بعد العملية.",
+      "en": "Advise women to delay pregnancy 12–18 months."
+     },
+     "rationale": {
+      "ar": "سلامة الأم والجنين.",
+      "en": "Maternal-fetal safety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض المراجعة عند القيء المستمر أو ألم البطن الشديد أو عدم القدرة على الشرب.",
+      "en": "Seek review for persistent vomiting, severe pain or inability to drink."
+     },
+     "rationale": {
+      "ar": "مضاعفات.",
+      "en": "Complications."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "معرفة طبيعة المرض والعلاج وعلامات الخطر",
+      "en": "Understanding the disease, treatment and danger signs"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "يتم شرح أن الجراحة أداة تحتاج التزامًا بالغذاء والرياضة مدى الحياة.",
+       "يتم تعليم المريض مراحل الأكل: سوائل صافية، سوائل كاملة، مهروس، لين، ثم عادي.",
+       "يتم توجيه السيدات إلى تأجيل الحمل 12–18 شهرًا بعد العملية.",
+       "يتم تعليم المريض المراجعة عند القيء المستمر أو ألم البطن الشديد أو عدم القدرة على الشرب.",
+       "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Explain surgery is a tool needing lifelong diet and exercise.",
+       "Teach diet stages: clear, full liquids, puree, soft, regular.",
+       "Advise women to delay pregnancy 12–18 months.",
+       "Seek review for persistent vomiting, severe pain or inability to drink.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "ASMBS / IFSO — Perioperative care of the bariatric patient; ERAS Society bariatric guideline (2021)"
+  }
+ ]
+}
