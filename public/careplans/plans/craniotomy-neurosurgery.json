@@ -1,0 +1,1062 @@
+{
+ "id": "craniotomy-neurosurgery",
+ "icon": "🧑‍⚕️",
+ "system": "neurology",
+ "folder": "disease",
+ "title": {
+  "ar": "جراحات المخ والأعصاب (فتح الجمجمة)",
+  "en": "Neurosurgery (Craniotomy)"
+ },
+ "summary": {
+  "ar": "خطة رعاية مريض جراحات المخ والأعصاب: مراقبة الضغط داخل الجمجمة، الألم، العدوى وتسرب السائل النخاعي، الصوديوم والسوائل، التشنجات، والتثقيف.",
+  "en": "Craniotomy care plan: ICP monitoring, pain, infection and CSF leak, sodium and fluids, seizures and teaching."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-icp-craniotomy",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدم فعالية التروية الدماغية (زيادة الضغط داخل الجمجمة)",
+    "en": "Risk for Ineffective Cerebral Perfusion (Raised ICP)"
+   },
+   "definition": {
+    "ar": "قابلية لنقص تدفق الدم للمخ.",
+    "en": "Susceptibility to reduced cerebral blood flow."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "وذمة أو نزيف بعد جراحة المخ"
+    ],
+    "en": [
+     "Post-operative cerebral oedema or bleeding"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عندي صداع مكان العملية.\""
+     ],
+     "en": [
+      "\"I have a headache at the operation site.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بعد استئصال ورم بالمخ، GCS 14."
+     ],
+     "en": [
+      "After brain tumour resection; GCS 14."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل ساعة: وعي وحدقتان مستقرتان."
+     ],
+     "en": [
+      "Hourly: stable GCS and pupils."
+     ]
+    },
+    "long": {
+     "ar": [
+      "عدم تدهور الحالة العصبية."
+     ],
+     "en": [
+      "No neurological deterioration."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم مستوى الوعي بمقياس جلاسكو وحجم الحدقتين واستجابتهما كل ساعة.",
+      "en": "Assess GCS and pupils hourly."
+     },
+     "rationale": {
+      "ar": "أول علامة على زيادة الضغط داخل الجمجمة.",
+      "en": "Earliest sign of raised ICP."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم رفع رأس السرير 30 درجة مع الحفاظ على الرأس والرقبة في خط مستقيم.",
+      "en": "Elevate head 30° with head and neck midline."
+     },
+     "rationale": {
+      "ar": "يحسن التصريف الوريدي من المخ.",
+      "en": "Improves cerebral venous drainage."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة الصداع الشديد والقيء وبطء النبض مع ارتفاع الضغط واضطراب التنفس وإبلاغ الطبيب فورًا.",
+      "en": "Report severe headache, vomiting, bradycardia with hypertension and irregular breathing immediately."
+     },
+     "rationale": {
+      "ar": "علامات زيادة الضغط وثلاثية كوشينج.",
+      "en": "Raised ICP and Cushing triad."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تجنب ثني الرقبة والفخذين والسعال الشديد والإمساك والشفط المطول.",
+      "en": "Avoid neck/hip flexion, straining, constipation and prolonged suction."
+     },
+     "rationale": {
+      "ar": "كلها ترفع الضغط داخل الجمجمة.",
+      "en": "All raise ICP."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم الحفاظ على الأكسجين والتشبع وثاني أكسيد الكربون في المدى المطلوب حسب الأمر.",
+      "en": "Maintain oxygenation, SpO₂ and CO₂ within target as ordered."
+     },
+     "rationale": {
+      "ar": "نقص الأكسجين وارتفاع CO₂ يزيدان الوذمة.",
+      "en": "Hypoxia and hypercapnia worsen oedema."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الكورتيزون (ديكساميثازون) ومضادات التشنج حسب أمر الجراح.",
+      "en": "Give dexamethasone and anticonvulsants as ordered by the surgeon."
+     },
+     "rationale": {
+      "ar": "تقليل الوذمة ومنع التشنجات.",
+      "en": "Reduces oedema; prevents seizures."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "GCS مستقر وحدقتان متساويتان — تحقق.",
+      "en": "Stable GCS, equal pupils — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على تروية المخ ومنع زيادة الضغط داخل الجمجمة",
+      "en": "Maintaining cerebral perfusion and preventing raised ICP"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم مستوى الوعي بمقياس جلاسكو وحجم الحدقتين واستجابتهما كل ساعة.",
+       "يتم رفع رأس السرير 30 درجة مع الحفاظ على الرأس والرقبة في خط مستقيم.",
+       "تتم ملاحظة الصداع الشديد والقيء وبطء النبض مع ارتفاع الضغط واضطراب التنفس وإبلاغ الطبيب فورًا.",
+       "يتم تجنب ثني الرقبة والفخذين والسعال الشديد والإمساك والشفط المطول.",
+       "يتم الحفاظ على الأكسجين والتشبع وثاني أكسيد الكربون في المدى المطلوب حسب الأمر.",
+       "يتم إعطاء الكورتيزون (ديكساميثازون) ومضادات التشنج حسب أمر الجراح."
+      ],
+      "en": [
+       "Assess GCS and pupils hourly.",
+       "Elevate head 30° with head and neck midline.",
+       "Report severe headache, vomiting, bradycardia with hypertension and irregular breathing immediately.",
+       "Avoid neck/hip flexion, straining, constipation and prolonged suction.",
+       "Maintain oxygenation, SpO₂ and CO₂ within target as ordered.",
+       "Give dexamethasone and anticonvulsants as ordered by the surgeon."
+      ]
+     },
+     "outcome": {
+      "ar": "حالة عصبية مستقرة.",
+      "en": "Stable neurology."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-craniotomy",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد بعد جراحة المخ",
+    "en": "Acute Pain after Craniotomy"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف فعلي أو محتمل في الأنسجة، مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory and emotional experience associated with actual or potential tissue damage, lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "الجرح الجراحي بفروة الرأس"
+    ],
+    "en": [
+     "Scalp incision"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "صداع 6/10"
+    ],
+    "en": [
+     "Headache 6/10"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"رأسي يؤلمني.\""
+     ],
+     "en": [
+      "\"My head hurts.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "اليوم الأول بعد العملية."
+     ],
+     "en": [
+      "Post-op day 1."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ألم محتمل يسمح بالراحة والحركة."
+     ],
+     "en": [
+      "Tolerable pain allowing rest and movement."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+      "en": "Assess pain (site, 0–10, character, radiation) before and after analgesia."
+     },
+     "rationale": {
+      "ar": "يوجه العلاج ويقيس فعاليته.",
+      "en": "Guides treatment and measures effect."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+      "en": "Give analgesia as ordered, on schedule."
+     },
+     "rationale": {
+      "ar": "التسكين المنتظم يمنع اشتداد الألم.",
+      "en": "Regular analgesia prevents peaks."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+      "en": "Comfortable position; calm environment."
+     },
+     "rationale": {
+      "ar": "يقلل الإحساس بالألم.",
+      "en": "Reduces pain perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+      "en": "Non-drug measures: deep breathing, relaxation, distraction."
+     },
+     "rationale": {
+      "ar": "تكمل المسكن.",
+      "en": "Complement analgesia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء مسكنات لا تخفي الحالة العصبية مثل الباراسيتامول وتجنب المهدئات الثقيلة إلا بأمر.",
+      "en": "Give analgesics that do not mask neurology such as paracetamol; avoid heavy sedation unless ordered."
+     },
+     "rationale": {
+      "ar": "الحفاظ على التقييم العصبي.",
+      "en": "Preserves neuro assessment."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تقليل الإضاءة والضوضاء في الغرفة.",
+      "en": "Dim lights and reduce noise in the room."
+     },
+     "rationale": {
+      "ar": "يخفف الصداع.",
+      "en": "Eases headache."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 بعد ساعة — تحقق.",
+      "en": "Pain 3/10 at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الألم إلى مستوى يتحمله المريض",
+      "en": "Relief of pain to a tolerable level"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+       "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+       "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+       "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+       "يتم إعطاء مسكنات لا تخفي الحالة العصبية مثل الباراسيتامول وتجنب المهدئات الثقيلة إلا بأمر.",
+       "يتم تقليل الإضاءة والضوضاء في الغرفة."
+      ],
+      "en": [
+       "Assess pain (site, 0–10, character, radiation) before and after analgesia.",
+       "Give analgesia as ordered, on schedule.",
+       "Comfortable position; calm environment.",
+       "Non-drug measures: deep breathing, relaxation, distraction.",
+       "Give analgesics that do not mask neurology such as paracetamol; avoid heavy sedation unless ordered.",
+       "Dim lights and reduce noise in the room."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-infection-craniotomy",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر العدوى (الجرح والسحايا)",
+    "en": "Risk for Infection (Wound and Meninges)"
+   },
+   "definition": {
+    "ar": "قابلية لغزو الكائنات الممرضة قد يؤثر على الصحة.",
+    "en": "Susceptibility to invasion by pathogenic organisms that may compromise health."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "جرح جراحي بالمخ",
+     "درنقة"
+    ],
+    "en": [
+     "Cranial wound",
+     "Drain"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"هل الجرح نظيف؟\""
+     ],
+     "en": [
+      "\"Is the wound clean?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "درنقة تحت فروة الرأس."
+     ],
+     "en": [
+      "Subgaleal drain."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "يوميًا: لا علامات عدوى والحرارة < 38."
+     ],
+     "en": [
+      "Daily: no infection signs; T < 38."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا عدوى طوال فترة العلاج."
+     ],
+     "en": [
+      "No infection during treatment."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+      "en": "Monitor temperature and local/systemic infection signs."
+     },
+     "rationale": {
+      "ar": "كشف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+      "en": "Hand hygiene before and after patient contact."
+     },
+     "rationale": {
+      "ar": "أهم وسيلة وقاية.",
+      "en": "Key prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+      "en": "Aseptic technique with wounds and devices."
+     },
+     "rationale": {
+      "ar": "منع دخول الميكروب.",
+      "en": "Prevents entry of organisms."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+      "en": "Antibiotics on time as ordered."
+     },
+     "rationale": {
+      "ar": "مستوى فعال.",
+      "en": "Effective levels."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة تسرب سائل شفاف من الجرح أو الأنف أو الأذن وإبلاغ الجراح فورًا.",
+      "en": "Report clear fluid leaking from the wound, nose or ear immediately."
+     },
+     "rationale": {
+      "ar": "قد يكون تسرب السائل النخاعي.",
+      "en": "May be CSF leak."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة تيبس الرقبة والحمى والصداع المتزايد.",
+      "en": "Watch for neck stiffness, fever and worsening headache."
+     },
+     "rationale": {
+      "ar": "علامات التهاب السحايا.",
+      "en": "Signs of meningitis."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات عدوى — تحقق.",
+      "en": "No infection signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية المريض من العدوى",
+      "en": "Protecting the patient from infection"
+     },
+     "actions": {
+      "ar": [
+       "تتم متابعة درجة الحرارة وعلامات العدوى الموضعية والعامة بانتظام.",
+       "يتم غسل الأيدي قبل وبعد أي تعامل مع المريض.",
+       "يتم اتباع الأسلوب المعقم عند التعامل مع الجروح والأجهزة الطبية.",
+       "يتم إعطاء المضاد الحيوي في مواعيده المحددة حسب أمر الطبيب.",
+       "تتم ملاحظة تسرب سائل شفاف من الجرح أو الأنف أو الأذن وإبلاغ الجراح فورًا.",
+       "تتم ملاحظة تيبس الرقبة والحمى والصداع المتزايد."
+      ],
+      "en": [
+       "Monitor temperature and local/systemic infection signs.",
+       "Hand hygiene before and after patient contact.",
+       "Aseptic technique with wounds and devices.",
+       "Antibiotics on time as ordered.",
+       "Report clear fluid leaking from the wound, nose or ear immediately.",
+       "Watch for neck stiffness, fever and worsening headache."
+      ]
+     },
+     "outcome": {
+      "ar": "لا عدوى.",
+      "en": "No infection."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-fluid-sodium-craniotomy",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر اختلال الصوديوم والسوائل",
+    "en": "Risk for Sodium and Fluid Imbalance"
+   },
+   "definition": {
+    "ar": "قابلية لخلل الصوديوم بعد جراحة المخ.",
+    "en": "Susceptibility to sodium disorders after neurosurgery."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "بول سكري كاذب أو إفراز غير مناسب للهرمون المضاد لإدرار البول"
+    ],
+    "en": [
+     "Diabetes insipidus or SIADH"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بعطش شديد.\""
+     ],
+     "en": [
+      "\"I'm very thirsty.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "بول 300 مل/ساعة، صوديوم 148."
+     ],
+     "en": [
+      "Urine 300 mL/h; Na 148."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل 4 ساعات: صوديوم وسوائل متابعة."
+     ],
+     "en": [
+      "4-hourly: sodium and fluids tracked."
+     ]
+    },
+    "long": {
+     "ar": [
+      "توازن طبيعي."
+     ],
+     "en": [
+      "Normal balance."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل السوائل الداخلة والخارجة كل ساعة بدقة.",
+      "en": "Record intake/output hourly."
+     },
+     "rationale": {
+      "ar": "كشف البول السكري الكاذب.",
+      "en": "Detects DI."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم متابعة الصوديوم والكثافة النوعية للبول حسب الأمر.",
+      "en": "Monitor sodium and urine specific gravity as ordered."
+     },
+     "rationale": {
+      "ar": "تحديد نوع الخلل.",
+      "en": "Defines the disorder."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب عند البول أكثر من 200 مل/ساعة لساعتين متتاليتين.",
+      "en": "Report urine > 200 mL/h for 2 consecutive hours."
+     },
+     "rationale": {
+      "ar": "علامة البول السكري الكاذب.",
+      "en": "DI sign."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الديسموبريسين أو تقييد السوائل حسب نوع الخلل وأمر الطبيب.",
+      "en": "Give desmopressin or restrict fluids per disorder and order."
+     },
+     "rationale": {
+      "ar": "علاج نوعي.",
+      "en": "Specific treatment."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم وزن المريض يوميًا في نفس الوقت وبنفس الميزان.",
+      "en": "Weigh daily."
+     },
+     "rationale": {
+      "ar": "متابعة التوازن.",
+      "en": "Tracks balance."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة التشوش والتشنجات المرتبطة بتغير الصوديوم.",
+      "en": "Watch for confusion and seizures from sodium changes."
+     },
+     "rationale": {
+      "ar": "مضاعفات عصبية.",
+      "en": "Neurological effects."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "صوديوم 141 — تحقق.",
+      "en": "Na 141 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على توازن الصوديوم والسوائل",
+      "en": "Maintaining sodium and fluid balance"
+     },
+     "actions": {
+      "ar": [
+       "يتم تسجيل السوائل الداخلة والخارجة كل ساعة بدقة.",
+       "يتم متابعة الصوديوم والكثافة النوعية للبول حسب الأمر.",
+       "يتم إبلاغ الطبيب عند البول أكثر من 200 مل/ساعة لساعتين متتاليتين.",
+       "يتم إعطاء الديسموبريسين أو تقييد السوائل حسب نوع الخلل وأمر الطبيب.",
+       "يتم وزن المريض يوميًا في نفس الوقت وبنفس الميزان.",
+       "تتم ملاحظة التشوش والتشنجات المرتبطة بتغير الصوديوم."
+      ],
+      "en": [
+       "Record intake/output hourly.",
+       "Monitor sodium and urine specific gravity as ordered.",
+       "Report urine > 200 mL/h for 2 consecutive hours.",
+       "Give desmopressin or restrict fluids per disorder and order.",
+       "Weigh daily.",
+       "Watch for confusion and seizures from sodium changes."
+      ]
+     },
+     "outcome": {
+      "ar": "صوديوم طبيعي.",
+      "en": "Normal sodium."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-seizure-craniotomy",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الإصابة (التشنجات)",
+    "en": "Risk for Injury (Seizures)"
+   },
+   "definition": {
+    "ar": "قابلية للتشنجات بعد الجراحة.",
+    "en": "Susceptibility to post-operative seizures."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "تهيج قشرة المخ"
+    ],
+    "en": [
+     "Cortical irritation"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"شعرت برعشة في يدي.\""
+     ],
+     "en": [
+      "\"My hand twitched.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "على ليفيتيراسيتام."
+     ],
+     "en": [
+      "On levetiracetam."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا إصابة."
+     ],
+     "en": [
+      "During stay: no injury."
+     ]
+    },
+    "long": {
+     "ar": [
+      "السيطرة على التشنجات."
+     ],
+     "en": [
+      "Seizure control."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء مضادات التشنج في مواعيدها الدقيقة حسب الأمر.",
+      "en": "Give anticonvulsants exactly on time as ordered."
+     },
+     "rationale": {
+      "ar": "الحفاظ على المستوى.",
+      "en": "Maintains levels."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تبطين جوانب السرير وتجهيز الشفط والأكسجين.",
+      "en": "Pad rails; keep suction and oxygen ready."
+     },
+     "rationale": {
+      "ar": "استعداد.",
+      "en": "Preparedness."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض على جانبه أثناء التشنج وعدم وضع شيء في فمه.",
+      "en": "Turn to the side during a seizure; put nothing in the mouth."
+     },
+     "rationale": {
+      "ar": "حماية المجرى الهوائي.",
+      "en": "Airway protection."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم توثيق وقت التشنج ومدته وشكله.",
+      "en": "Document seizure time, duration and type."
+     },
+     "rationale": {
+      "ar": "توجيه العلاج.",
+      "en": "Guides treatment."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء البنزوديازيبين عند التشنج أكثر من 5 دقائق حسب البروتوكول.",
+      "en": "Give benzodiazepine for seizures > 5 min per protocol."
+     },
+     "rationale": {
+      "ar": "منع الحالة الصرعية.",
+      "en": "Prevents status epilepticus."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض عدم القيادة حتى يسمح الطبيب.",
+      "en": "Teach no driving until cleared."
+     },
+     "rationale": {
+      "ar": "سلامة.",
+      "en": "Safety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا تشنجات — تحقق.",
+      "en": "No seizures — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من التشنجات والإصابة",
+      "en": "Preventing seizures and injury"
+     },
+     "actions": {
+      "ar": [
+       "يتم إعطاء مضادات التشنج في مواعيدها الدقيقة حسب الأمر.",
+       "يتم تبطين جوانب السرير وتجهيز الشفط والأكسجين.",
+       "يتم وضع المريض على جانبه أثناء التشنج وعدم وضع شيء في فمه.",
+       "يتم توثيق وقت التشنج ومدته وشكله.",
+       "يتم إعطاء البنزوديازيبين عند التشنج أكثر من 5 دقائق حسب البروتوكول.",
+       "يتم تعليم المريض عدم القيادة حتى يسمح الطبيب."
+      ],
+      "en": [
+       "Give anticonvulsants exactly on time as ordered.",
+       "Pad rails; keep suction and oxygen ready.",
+       "Turn to the side during a seizure; put nothing in the mouth.",
+       "Document seizure time, duration and type.",
+       "Give benzodiazepine for seizures > 5 min per protocol.",
+       "Teach no driving until cleared."
+      ]
+     },
+     "outcome": {
+      "ar": "لا إصابة.",
+      "en": "No injury."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-craniotomy",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (الرعاية بعد جراحة المخ)",
+    "en": "Deficient Knowledge (Care after Craniotomy)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "جراحة كبيرة"
+    ],
+    "en": [
+     "Major surgery"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"متى أستطيع غسل شعري والعودة للعمل؟\""
+     ],
+     "en": [
+      "\"When can I wash my hair and return to work?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "يستعد للخروج."
+     ],
+     "en": [
+      "Preparing for discharge."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض العناية بالجرح وموعد غسل الشعر حسب تعليمات الجراح.",
+      "en": "Teach wound care and when to wash hair per the surgeon."
+     },
+     "rationale": {
+      "ar": "منع العدوى.",
+      "en": "Prevents infection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم توضيح أهمية الالتزام بمضادات التشنج وعدم إيقافها فجأة.",
+      "en": "Explain adherence to anticonvulsants; never stop suddenly."
+     },
+     "rationale": {
+      "ar": "منع التشنجات.",
+      "en": "Prevents seizures."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم الأسرة علامات الخطر: صداع شديد، قيء، تشنج، نعاس، ضعف جديد، تسرب سائل.",
+      "en": "Teach danger signs: severe headache, vomiting, seizure, drowsiness, new weakness, fluid leak."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early action."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم توجيه المريض إلى تجنب الانحناء وحمل الأثقال في الأسابيع الأولى.",
+      "en": "Avoid bending and heavy lifting initially."
+     },
+     "rationale": {
+      "ar": "تجنب رفع الضغط.",
+      "en": "Avoids raised pressure."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "معرفة طبيعة المرض والعلاج وعلامات الخطر",
+      "en": "Understanding the disease, treatment and danger signs"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "يتم تعليم المريض العناية بالجرح وموعد غسل الشعر حسب تعليمات الجراح.",
+       "يتم توضيح أهمية الالتزام بمضادات التشنج وعدم إيقافها فجأة.",
+       "يتم تعليم الأسرة علامات الخطر: صداع شديد، قيء، تشنج، نعاس، ضعف جديد، تسرب سائل.",
+       "يتم توجيه المريض إلى تجنب الانحناء وحمل الأثقال في الأسابيع الأولى.",
+       "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Teach wound care and when to wash hair per the surgeon.",
+       "Explain adherence to anticonvulsants; never stop suddenly.",
+       "Teach danger signs: severe headache, vomiting, seizure, drowsiness, new weakness, fluid leak.",
+       "Avoid bending and heavy lifting initially.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "أدلة الرعاية التمريضية بوحدة الرعاية المركزة — وزارة الصحة والسكان المصرية ونقابة التمريض (2024/2025)"
+  }
+ ]
+}

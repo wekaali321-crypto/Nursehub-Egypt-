@@ -1,0 +1,1091 @@
+{
+ "id": "hypokalaemia",
+ "icon": "🔋",
+ "system": "general",
+ "folder": "general",
+ "title": {
+  "ar": "نقص البوتاسيوم في الدم",
+  "en": "Hypokalaemia"
+ },
+ "summary": {
+  "ar": "خطة رعاية نقص البوتاسيوم: مراقبة القلب والتعويض الوريدي الآمن، حركة الأمعاء، السقوط، السوائل، سمية الديجوكسين، والتثقيف.",
+  "en": "Hypokalaemia care plan: cardiac monitoring and safe IV replacement, bowel motility, falls, fluids, digoxin toxicity and teaching."
+ },
+ "diagnoses": [
+  {
+   "id": "risk-decreased-co-hypok",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر نقص النتاج القلبي (اضطراب النظم)",
+    "en": "Risk for Decreased Cardiac Output (Arrhythmia)"
+   },
+   "definition": {
+    "ar": "قابلية لاضطراب النظم بسبب نقص البوتاسيوم.",
+    "en": "Susceptibility to arrhythmia from low potassium."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "بوتاسيوم 2.8",
+     "ديجوكسين"
+    ],
+    "en": [
+     "K 2.8 mmol/L",
+     "Digoxin"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"قلبي يدق بشكل غير منتظم.\""
+     ],
+     "en": [
+      "\"My heart beats irregularly.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "رسم القلب: موجة U وانخفاض ST، ضربات بطينية مبكرة."
+     ],
+     "en": [
+      "ECG: U waves, ST depression, ectopics."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: بوتاسيوم > 3.5."
+     ],
+     "en": [
+      "Within 24 h: K > 3.5."
+     ]
+    },
+    "long": {
+     "ar": [
+      "نظم مستقر."
+     ],
+     "en": [
+      "Stable rhythm."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم توصيل المريض بمراقبة القلب المستمرة عند البوتاسيوم أقل من 3 أو وجود تغيرات بالرسم.",
+      "en": "Use continuous cardiac monitoring if K < 3 or ECG changes."
+     },
+     "rationale": {
+      "ar": "كشف اضطراب النظم.",
+      "en": "Detects arrhythmia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء البوتاسيوم الوريدي مخففًا بمضخة بمعدل لا يتجاوز 10 مللي مول/ساعة في الوريد الطرفي إلا بأمر وبروتوكول.",
+      "en": "Give IV potassium diluted by pump, max 10 mmol/h peripherally unless ordered per protocol."
+     },
+     "rationale": {
+      "ar": "البوتاسيوم المركز السريع قاتل.",
+      "en": "Rapid concentrated K is lethal."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم عدم إعطاء البوتاسيوم المركز دفعة واحدة في الوريد مطلقًا.",
+      "en": "Never give concentrated potassium as an IV push."
+     },
+     "rationale": {
+      "ar": "دواء عالي الخطورة.",
+      "en": "High-alert medicine."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم مراقبة مكان الكانيولا لملاحظة الألم والالتهاب أثناء التسريب.",
+      "en": "Monitor the cannula site for pain and phlebitis."
+     },
+     "rationale": {
+      "ar": "البوتاسيوم مهيج للوريد.",
+      "en": "K irritates veins."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم متابعة المغنيسيوم وتعويضه حسب الأمر.",
+      "en": "Check and replace magnesium as ordered."
+     },
+     "rationale": {
+      "ar": "نقص المغنيسيوم يمنع تصحيح البوتاسيوم.",
+      "en": "Low Mg prevents K correction."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم إعادة قياس البوتاسيوم حسب الأمر ومتابعة البول قبل التعويض.",
+      "en": "Recheck K as ordered; confirm urine output before replacement."
+     },
+     "rationale": {
+      "ar": "تجنب الارتفاع مع ضعف الكلى.",
+      "en": "Avoids overshoot with poor renal function."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "بوتاسيوم 3.8 ونظم منتظم — تحقق.",
+      "en": "K 3.8; regular rhythm — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تصحيح البوتاسيوم بأمان وحماية القلب",
+      "en": "Safe potassium correction and cardiac protection"
+     },
+     "actions": {
+      "ar": [
+       "يتم توصيل المريض بمراقبة القلب المستمرة عند البوتاسيوم أقل من 3 أو وجود تغيرات بالرسم.",
+       "يتم إعطاء البوتاسيوم الوريدي مخففًا بمضخة بمعدل لا يتجاوز 10 مللي مول/ساعة في الوريد الطرفي إلا بأمر وبروتوكول.",
+       "يتم عدم إعطاء البوتاسيوم المركز دفعة واحدة في الوريد مطلقًا.",
+       "يتم مراقبة مكان الكانيولا لملاحظة الألم والالتهاب أثناء التسريب.",
+       "يتم متابعة المغنيسيوم وتعويضه حسب الأمر.",
+       "يتم إعادة قياس البوتاسيوم حسب الأمر ومتابعة البول قبل التعويض."
+      ],
+      "en": [
+       "Use continuous cardiac monitoring if K < 3 or ECG changes.",
+       "Give IV potassium diluted by pump, max 10 mmol/h peripherally unless ordered per protocol.",
+       "Never give concentrated potassium as an IV push.",
+       "Monitor the cannula site for pain and phlebitis.",
+       "Check and replace magnesium as ordered.",
+       "Recheck K as ordered; confirm urine output before replacement."
+      ]
+     },
+     "outcome": {
+      "ar": "نظم مستقر.",
+      "en": "Stable rhythm."
+     },
+     "timeframe": {
+      "ar": "كل 4 ساعات",
+      "en": "Every 4 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "dysfunctional-gi-hypok",
+   "kind": "actual",
+   "title": {
+    "ar": "اضطراب حركة الجهاز الهضمي",
+    "en": "Dysfunctional Gastrointestinal Motility"
+   },
+   "definition": {
+    "ar": "بطء حركة الأمعاء.",
+    "en": "Slowed bowel motility."
+   },
+   "relatedTo": {
+    "ar": [
+     "نقص البوتاسيوم"
+    ],
+    "en": [
+     "Hypokalaemia"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "انتفاخ وإمساك"
+    ],
+    "en": [
+     "Distension and constipation"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"بطني منتفخة ولم أتبرز منذ 3 أيام.\""
+     ],
+     "en": [
+      "\"My belly is bloated; no stool for 3 days.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "أصوات أمعاء ضعيفة."
+     ],
+     "en": [
+      "Reduced bowel sounds."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: عودة الإخراج."
+     ],
+     "en": [
+      "Within 48 h: bowels open."
+     ]
+    },
+    "long": {
+     "ar": [
+      "حركة أمعاء طبيعية."
+     ],
+     "en": [
+      "Normal bowel function."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم سماع أصوات الأمعاء وملاحظة الانتفاخ يوميًا.",
+      "en": "Assess bowel sounds and distension daily."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على الحركة حسب تحمله.",
+      "en": "Encourage mobility as tolerated."
+     },
+     "rationale": {
+      "ar": "تحفيز الأمعاء.",
+      "en": "Stimulates bowel."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تعويض البوتاسيوم بالفم حسب الأمر عند القدرة على البلع.",
+      "en": "Give oral potassium as ordered when able."
+     },
+     "rationale": {
+      "ar": "أكثر أمانًا.",
+      "en": "Safer route."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم توجيه المريض إلى أخذ أقراص البوتاسيوم مع الطعام وكمية كافية من الماء.",
+      "en": "Take potassium tablets with food and water."
+     },
+     "rationale": {
+      "ar": "تقليل تهيج المعدة.",
+      "en": "Less gastric irritation."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل عدد مرات الإخراج وشكل البراز يوميًا في ورقة المتابعة.",
+      "en": "Record bowel movements daily."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب عند القيء أو الانتفاخ الشديد.",
+      "en": "Report vomiting or marked distension."
+     },
+     "rationale": {
+      "ar": "شلل الأمعاء.",
+      "en": "Ileus."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تبرز في اليوم الثاني — تحقق.",
+      "en": "Bowels open day 2 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "عودة حركة الأمعاء الطبيعية",
+      "en": "Return of normal bowel function"
+     },
+     "actions": {
+      "ar": [
+       "يتم سماع أصوات الأمعاء وملاحظة الانتفاخ يوميًا.",
+       "يتم تشجيع المريض على الحركة حسب تحمله.",
+       "يتم تعويض البوتاسيوم بالفم حسب الأمر عند القدرة على البلع.",
+       "يتم توجيه المريض إلى أخذ أقراص البوتاسيوم مع الطعام وكمية كافية من الماء.",
+       "يتم تسجيل عدد مرات الإخراج وشكل البراز يوميًا في ورقة المتابعة.",
+       "يتم إبلاغ الطبيب عند القيء أو الانتفاخ الشديد."
+      ],
+      "en": [
+       "Assess bowel sounds and distension daily.",
+       "Encourage mobility as tolerated.",
+       "Give oral potassium as ordered when able.",
+       "Take potassium tablets with food and water.",
+       "Record bowel movements daily.",
+       "Report vomiting or marked distension."
+      ]
+     },
+     "outcome": {
+      "ar": "إخراج طبيعي.",
+      "en": "Normal stool."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-falls-hypok",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر السقوط",
+    "en": "Risk for Falls"
+   },
+   "definition": {
+    "ar": "قابلية للسقوط.",
+    "en": "Susceptibility to falls."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "ضعف العضلات والتقلصات"
+    ],
+    "en": [
+     "Muscle weakness and cramps"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عندي تقلصات وضعف في ساقي.\""
+     ],
+     "en": [
+      "\"I have cramps and weak legs.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "قوة 4/5."
+     ],
+     "en": [
+      "Power 4/5."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا سقوط."
+     ],
+     "en": [
+      "During stay: no falls."
+     ]
+    },
+    "long": {
+     "ar": [
+      "حركة آمنة."
+     ],
+     "en": [
+      "Safe mobility."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم قوة العضلات وخطر السقوط يوميًا.",
+      "en": "Assess power and fall risk daily."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم مساعدة المريض في الحركة والذهاب للحمام.",
+      "en": "Assist with mobility and toileting."
+     },
+     "rationale": {
+      "ar": "أمان.",
+      "en": "Safety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم خفض السرير ووضع جرس النداء في متناول اليد.",
+      "en": "Lower the bed; keep the call bell in reach."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة ضعف عضلات التنفس وصعوبة السعال وإبلاغ الطبيب فورًا.",
+      "en": "Watch for respiratory muscle weakness."
+     },
+     "rationale": {
+      "ar": "مضاعفة خطيرة.",
+      "en": "Serious complication."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير حذاء مانع للانزلاق وإضاءة كافية حول السرير ليلًا.",
+      "en": "Provide non-slip footwear."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض طلب المساعدة قبل القيام.",
+      "en": "Teach calling for help before getting up."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا سقوط — تحقق.",
+      "en": "No falls — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحماية من السقوط أثناء الضعف",
+      "en": "Fall protection during weakness"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم قوة العضلات وخطر السقوط يوميًا.",
+       "يتم مساعدة المريض في الحركة والذهاب للحمام.",
+       "يتم خفض السرير ووضع جرس النداء في متناول اليد.",
+       "تتم ملاحظة ضعف عضلات التنفس وصعوبة السعال وإبلاغ الطبيب فورًا.",
+       "يتم توفير حذاء مانع للانزلاق وإضاءة كافية حول السرير ليلًا.",
+       "يتم تعليم المريض طلب المساعدة قبل القيام."
+      ],
+      "en": [
+       "Assess power and fall risk daily.",
+       "Assist with mobility and toileting.",
+       "Lower the bed; keep the call bell in reach.",
+       "Watch for respiratory muscle weakness.",
+       "Provide non-slip footwear.",
+       "Teach calling for help before getting up."
+      ]
+     },
+     "outcome": {
+      "ar": "لا سقوط.",
+      "en": "No falls."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-fluid-volume-hypok",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص حجم السوائل",
+    "en": "Deficient Fluid Volume"
+   },
+   "definition": {
+    "ar": "نقص السوائل داخل الأوعية أو الأنسجة أو الخلايا.",
+    "en": "Decreased intravascular, interstitial or intracellular fluid."
+   },
+   "relatedTo": {
+    "ar": [
+     "القيء والإسهال المسببان لنقص البوتاسيوم"
+    ],
+    "en": [
+     "Vomiting and diarrhoea causing K loss"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "سرعة النبض وهبوط الضغط",
+     "قلة البول",
+     "جفاف الأغشية"
+    ],
+    "en": [
+     "Tachycardia and hypotension",
+     "Reduced urine output",
+     "Dry mucosa"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"عندي إسهال منذ 4 أيام.\""
+     ],
+     "en": [
+      "\"I've had diarrhoea for 4 days.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "جفاف متوسط."
+     ],
+     "en": [
+      "Moderate dehydration."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 6 ساعات: ضغط انقباضي ≥ 90 ونبض < 100 وبول ≥ 0.5 مل/كجم/ساعة."
+     ],
+     "en": [
+      "Within 6 h: SBP ≥ 90, HR < 100, urine ≥ 0.5 mL/kg/h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 48 ساعة: توازن سوائل طبيعي."
+     ],
+     "en": [
+      "Within 48 h: normal fluid balance."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس العلامات الحيوية كل 1–4 ساعات حسب الحالة، مع تقييم رجوع الدم ومستوى الوعي.",
+      "en": "Vitals every 1–4 h as indicated; capillary refill; consciousness."
+     },
+     "rationale": {
+      "ar": "كشف نقص الحجم والصدمة.",
+      "en": "Detects hypovolemia and shock."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل دقيق للسوائل الداخلة والخارجة والبول كل ساعة عند الحاجة.",
+      "en": "Accurate intake/output; hourly urine when indicated."
+     },
+     "rationale": {
+      "ar": "البول أفضل مؤشر للتروية.",
+      "en": "Urine reflects perfusion."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تركيب كانيولا كبيرة وإعطاء المحاليل الوريدية حسب الأمر.",
+      "en": "Large-bore cannula; IV fluids as ordered."
+     },
+     "rationale": {
+      "ar": "تعويض الحجم.",
+      "en": "Volume replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تتم متابعة الهيموجلوبين والأملاح ووظائف الكلى حسب أمر الطبيب لتوجيه تعويض السوائل.",
+      "en": "Monitor Hb, electrolytes and renal function."
+     },
+     "rationale": {
+      "ar": "يوجه التعويض.",
+      "en": "Guides replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب عند ضغط انقباضي < 90 أو نبض > 120 أو بول < 0.5 مل/كجم/ساعة.",
+      "en": "Report SBP < 90, HR > 120 or urine < 0.5 mL/kg/h."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early intervention."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المحاليل المحتوية على البوتاسيوم الجاهزة حسب أمر الطبيب.",
+      "en": "Give pre-mixed potassium-containing fluids as ordered."
+     },
+     "rationale": {
+      "ar": "تعويض آمن.",
+      "en": "Safe replacement."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الضغط 112/70، النبض 92، البول 50 مل/ساعة — تحقق.",
+      "en": "BP 112/70, HR 92, urine 50 mL/h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على استقرار الدورة الدموية والتروية الكافية",
+      "en": "Maintaining stable circulation and perfusion"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس العلامات الحيوية كل 1–4 ساعات حسب الحالة، مع تقييم رجوع الدم ومستوى الوعي.",
+       "يتم تسجيل دقيق للسوائل الداخلة والخارجة والبول كل ساعة عند الحاجة.",
+       "تتم متابعة الهيموجلوبين والأملاح ووظائف الكلى حسب أمر الطبيب لتوجيه تعويض السوائل."
+      ],
+      "en": [
+       "Vitals every 1–4 h as indicated; capillary refill; consciousness.",
+       "Accurate intake/output; hourly urine when indicated.",
+       "Monitor Hb, electrolytes and renal function."
+      ]
+     },
+     "outcome": {
+      "ar": "دورة مستقرة.",
+      "en": "Stable circulation."
+     },
+     "timeframe": {
+      "ar": "كل 1–4 ساعات",
+      "en": "Every 1–4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تعويض السوائل المفقودة واستعادة حجم الدم",
+      "en": "Replacing lost fluid and restoring blood volume"
+     },
+     "actions": {
+      "ar": [
+       "يتم تركيب كانيولا كبيرة وإعطاء المحاليل الوريدية حسب الأمر.",
+       "يتم إبلاغ الطبيب عند ضغط انقباضي < 90 أو نبض > 120 أو بول < 0.5 مل/كجم/ساعة.",
+       "يتم إعطاء المحاليل المحتوية على البوتاسيوم الجاهزة حسب أمر الطبيب."
+      ],
+      "en": [
+       "Large-bore cannula; IV fluids as ordered.",
+       "Report SBP < 90, HR > 120 or urine < 0.5 mL/kg/h.",
+       "Give pre-mixed potassium-containing fluids as ordered."
+      ]
+     },
+     "outcome": {
+      "ar": "حجم كافٍ.",
+      "en": "Adequate volume."
+     },
+     "timeframe": {
+      "ar": "6 ساعات",
+      "en": "6 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-digoxin-toxicity-hypok",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر التسمم بالديجوكسين",
+    "en": "Risk for Digoxin Toxicity"
+   },
+   "definition": {
+    "ar": "قابلية لزيادة سمية الديجوكسين.",
+    "en": "Susceptibility to digoxin toxicity."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "نقص البوتاسيوم يزيد تأثير الديجوكسين"
+    ],
+    "en": [
+     "Hypokalaemia potentiates digoxin"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أرى ألوانًا صفراء وأشعر بغثيان.\""
+     ],
+     "en": [
+      "\"I see yellow tints and feel sick.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "على ديجوكسين ونبض 52."
+     ],
+     "en": [
+      "On digoxin; HR 52."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا علامات تسمم."
+     ],
+     "en": [
+      "During stay: no toxicity."
+     ]
+    },
+    "long": {
+     "ar": [
+      "استخدام آمن للديجوكسين."
+     ],
+     "en": [
+      "Safe digoxin use."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس النبض القمي دقيقة كاملة قبل إعطاء الديجوكسين.",
+      "en": "Check apical pulse for a full minute before digoxin."
+     },
+     "rationale": {
+      "ar": "كشف البطء.",
+      "en": "Detects bradycardia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم حجب الجرعة عند النبض أقل من 60 وإبلاغ الطبيب.",
+      "en": "Withhold if HR < 60; inform the physician."
+     },
+     "rationale": {
+      "ar": "منع التسمم.",
+      "en": "Prevents toxicity."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة الغثيان واضطراب الرؤية واضطراب النظم.",
+      "en": "Watch for nausea, visual disturbance and arrhythmia."
+     },
+     "rationale": {
+      "ar": "علامات التسمم.",
+      "en": "Toxicity signs."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم قياس مستوى الديجوكسين حسب الأمر.",
+      "en": "Measure digoxin level as ordered."
+     },
+     "rationale": {
+      "ar": "تأكيد.",
+      "en": "Confirmation."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تصحيح البوتاسيوم والمغنيسيوم أولًا حسب الأمر.",
+      "en": "Correct potassium and magnesium first as ordered."
+     },
+     "rationale": {
+      "ar": "يقلل الخطر.",
+      "en": "Reduces risk."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض قياس النبض قبل الدواء في المنزل.",
+      "en": "Teach checking pulse before the dose at home."
+     },
+     "rationale": {
+      "ar": "أمان.",
+      "en": "Safety."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا علامات تسمم — تحقق.",
+      "en": "No toxicity — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الاستخدام الآمن للديجوكسين مع نقص البوتاسيوم",
+      "en": "Safe digoxin use with hypokalaemia"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس النبض القمي دقيقة كاملة قبل إعطاء الديجوكسين.",
+       "يتم حجب الجرعة عند النبض أقل من 60 وإبلاغ الطبيب.",
+       "تتم ملاحظة الغثيان واضطراب الرؤية واضطراب النظم.",
+       "يتم قياس مستوى الديجوكسين حسب الأمر.",
+       "يتم تصحيح البوتاسيوم والمغنيسيوم أولًا حسب الأمر.",
+       "يتم تعليم المريض قياس النبض قبل الدواء في المنزل."
+      ],
+      "en": [
+       "Check apical pulse for a full minute before digoxin.",
+       "Withhold if HR < 60; inform the physician.",
+       "Watch for nausea, visual disturbance and arrhythmia.",
+       "Measure digoxin level as ordered.",
+       "Correct potassium and magnesium first as ordered.",
+       "Teach checking pulse before the dose at home."
+      ]
+     },
+     "outcome": {
+      "ar": "لا تسمم.",
+      "en": "No toxicity."
+     },
+     "timeframe": {
+      "ar": "قبل كل جرعة",
+      "en": "Before each dose"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-hypok",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (نقص البوتاسيوم والوقاية)",
+    "en": "Deficient Knowledge (Hypokalaemia Prevention)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "مدرات البول"
+    ],
+    "en": [
+     "Diuretic use"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لماذا نقص البوتاسيوم عندي؟\""
+     ],
+     "en": [
+      "\"Why is my potassium low?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "على فوروسيميد."
+     ],
+     "en": [
+      "On furosemide."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح أن بعض مدرات البول والإسهال والقيء تسبب فقد البوتاسيوم.",
+      "en": "Explain diuretics, diarrhoea and vomiting cause potassium loss."
+     },
+     "rationale": {
+      "ar": "فهم السبب.",
+      "en": "Understanding the cause."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض تناول الأطعمة الغنية بالبوتاسيوم مثل الموز والبرتقال والتمر حسب توجيه الطبيب.",
+      "en": "Teach potassium-rich foods such as bananas, oranges and dates as advised."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم توجيه المريض إلى تحليل البوتاسيوم الدوري أثناء أخذ مدرات البول.",
+      "en": "Advise regular potassium checks on diuretics."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض علامات النقص مثل الضعف والتقلصات والخفقان.",
+      "en": "Teach signs: weakness, cramps, palpitations."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early action."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "معرفة طبيعة المرض والعلاج وعلامات الخطر",
+      "en": "Understanding the disease, treatment and danger signs"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "يتم شرح أن بعض مدرات البول والإسهال والقيء تسبب فقد البوتاسيوم.",
+       "يتم تعليم المريض تناول الأطعمة الغنية بالبوتاسيوم مثل الموز والبرتقال والتمر حسب توجيه الطبيب.",
+       "يتم توجيه المريض إلى تحليل البوتاسيوم الدوري أثناء أخذ مدرات البول.",
+       "يتم تعليم المريض علامات النقص مثل الضعف والتقلصات والخفقان.",
+       "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Explain diuretics, diarrhoea and vomiting cause potassium loss.",
+       "Teach potassium-rich foods such as bananas, oranges and dates as advised.",
+       "Advise regular potassium checks on diuretics.",
+       "Teach signs: weakness, cramps, palpitations.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "أدلة الرعاية التمريضية بوحدة الرعاية المركزة — وزارة الصحة والسكان المصرية ونقابة التمريض (2024/2025)"
+  }
+ ],
+ "group": "metabolic"
+}

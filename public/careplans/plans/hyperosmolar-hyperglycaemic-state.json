@@ -1,0 +1,1110 @@
+{
+ "id": "hyperosmolar-hyperglycaemic-state",
+ "icon": "🍯",
+ "system": "endocrine",
+ "folder": "disease",
+ "title": {
+  "ar": "غيبوبة ارتفاع السكر الأسموزية (HHS)",
+  "en": "Hyperosmolar Hyperglycaemic State (HHS)"
+ },
+ "summary": {
+  "ar": "خطة رعاية غيبوبة ارتفاع السكر الأسموزية: تعويض السوائل التدريجي، خفض السكر بأمان، الوعي ووذمة المخ، الجلطات، الجلد، والتثقيف.",
+  "en": "HHS care plan: gradual fluid replacement, safe glucose reduction, consciousness and cerebral oedema, thrombosis, skin and teaching."
+ },
+ "diagnoses": [
+  {
+   "id": "deficient-fluid-volume-hhs",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص حجم السوائل",
+    "en": "Deficient Fluid Volume"
+   },
+   "definition": {
+    "ar": "نقص السوائل داخل الأوعية أو الأنسجة أو الخلايا.",
+    "en": "Decreased intravascular, interstitial or intracellular fluid."
+   },
+   "relatedTo": {
+    "ar": [
+     "إدرار البول الأسموزي الشديد"
+    ],
+    "en": [
+     "Severe osmotic diuresis"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "سرعة النبض وهبوط الضغط",
+     "قلة البول",
+     "جفاف الأغشية"
+    ],
+    "en": [
+     "Tachycardia and hypotension",
+     "Reduced urine output",
+     "Dry mucosa"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "تقول الابنة: \"كان يشرب ويتبول كثيرًا منذ أيام ثم أصبح نائمًا.\""
+     ],
+     "en": [
+      "Daughter: \"He was drinking and urinating a lot for days, then became drowsy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "سكر 850، أسمولية 340، جفاف شديد."
+     ],
+     "en": [
+      "Glucose 850; osmolality 340; severe dehydration."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 6 ساعات: ضغط انقباضي ≥ 90 ونبض < 100 وبول ≥ 0.5 مل/كجم/ساعة."
+     ],
+     "en": [
+      "Within 6 h: SBP ≥ 90, HR < 100, urine ≥ 0.5 mL/kg/h."
+     ]
+    },
+    "long": {
+     "ar": [
+      "خلال 48 ساعة: توازن سوائل طبيعي."
+     ],
+     "en": [
+      "Within 48 h: normal fluid balance."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس العلامات الحيوية كل 1–4 ساعات حسب الحالة، مع تقييم رجوع الدم ومستوى الوعي.",
+      "en": "Vitals every 1–4 h as indicated; capillary refill; consciousness."
+     },
+     "rationale": {
+      "ar": "كشف نقص الحجم والصدمة.",
+      "en": "Detects hypovolemia and shock."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تسجيل دقيق للسوائل الداخلة والخارجة والبول كل ساعة عند الحاجة.",
+      "en": "Accurate intake/output; hourly urine when indicated."
+     },
+     "rationale": {
+      "ar": "البول أفضل مؤشر للتروية.",
+      "en": "Urine reflects perfusion."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تركيب كانيولا كبيرة وإعطاء المحاليل الوريدية حسب الأمر.",
+      "en": "Large-bore cannula; IV fluids as ordered."
+     },
+     "rationale": {
+      "ar": "تعويض الحجم.",
+      "en": "Volume replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "تتم متابعة الهيموجلوبين والأملاح ووظائف الكلى حسب أمر الطبيب لتوجيه تعويض السوائل.",
+      "en": "Monitor Hb, electrolytes and renal function."
+     },
+     "rationale": {
+      "ar": "يوجه التعويض.",
+      "en": "Guides replacement."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب عند ضغط انقباضي < 90 أو نبض > 120 أو بول < 0.5 مل/كجم/ساعة.",
+      "en": "Report SBP < 90, HR > 120 or urine < 0.5 mL/kg/h."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early intervention."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء محلول ملح 0.9% وريديًا حسب البروتوكول وتعويض نحو نصف العجز في أول 12 ساعة حسب الأمر.",
+      "en": "Give IV 0.9% saline per protocol, replacing about half the deficit in 12 h as ordered."
+     },
+     "rationale": {
+      "ar": "التصحيح التدريجي يمنع وذمة المخ.",
+      "en": "Gradual correction prevents cerebral oedema."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم حساب الأسمولية ومتابعتها بحيث لا تنخفض أكثر من 3–8 مللي أسمول/كجم/ساعة.",
+      "en": "Monitor osmolality; fall should not exceed 3–8 mOsm/kg/h."
+     },
+     "rationale": {
+      "ar": "الهبوط السريع خطير.",
+      "en": "Rapid fall is dangerous."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الضغط 112/70، النبض 92، البول 50 مل/ساعة — تحقق.",
+      "en": "BP 112/70, HR 92, urine 50 mL/h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على استقرار الدورة الدموية والتروية الكافية",
+      "en": "Maintaining stable circulation and perfusion"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس العلامات الحيوية كل 1–4 ساعات حسب الحالة، مع تقييم رجوع الدم ومستوى الوعي.",
+       "يتم تسجيل دقيق للسوائل الداخلة والخارجة والبول كل ساعة عند الحاجة.",
+       "تتم متابعة الهيموجلوبين والأملاح ووظائف الكلى حسب أمر الطبيب لتوجيه تعويض السوائل."
+      ],
+      "en": [
+       "Vitals every 1–4 h as indicated; capillary refill; consciousness.",
+       "Accurate intake/output; hourly urine when indicated.",
+       "Monitor Hb, electrolytes and renal function."
+      ]
+     },
+     "outcome": {
+      "ar": "دورة مستقرة.",
+      "en": "Stable circulation."
+     },
+     "timeframe": {
+      "ar": "كل 1–4 ساعات",
+      "en": "Every 1–4 h"
+     }
+    },
+    {
+     "need": {
+      "ar": "تعويض السوائل المفقودة واستعادة حجم الدم",
+      "en": "Replacing lost fluid and restoring blood volume"
+     },
+     "actions": {
+      "ar": [
+       "يتم تركيب كانيولا كبيرة وإعطاء المحاليل الوريدية حسب الأمر.",
+       "يتم إبلاغ الطبيب عند ضغط انقباضي < 90 أو نبض > 120 أو بول < 0.5 مل/كجم/ساعة.",
+       "يتم إعطاء محلول ملح 0.9% وريديًا حسب البروتوكول وتعويض نحو نصف العجز في أول 12 ساعة حسب الأمر.",
+       "يتم حساب الأسمولية ومتابعتها بحيث لا تنخفض أكثر من 3–8 مللي أسمول/كجم/ساعة."
+      ],
+      "en": [
+       "Large-bore cannula; IV fluids as ordered.",
+       "Report SBP < 90, HR > 120 or urine < 0.5 mL/kg/h.",
+       "Give IV 0.9% saline per protocol, replacing about half the deficit in 12 h as ordered.",
+       "Monitor osmolality; fall should not exceed 3–8 mOsm/kg/h."
+      ]
+     },
+     "outcome": {
+      "ar": "حجم كافٍ.",
+      "en": "Adequate volume."
+     },
+     "timeframe": {
+      "ar": "6 ساعات",
+      "en": "6 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "unstable-glucose-hhs",
+   "kind": "actual",
+   "title": {
+    "ar": "عدم استقرار سكر الدم",
+    "en": "Unstable Blood Glucose"
+   },
+   "definition": {
+    "ar": "ارتفاع شديد في السكر بدون حموضة كيتونية.",
+    "en": "Severe hyperglycaemia without significant ketoacidosis."
+   },
+   "relatedTo": {
+    "ar": [
+     "سكري النوع الثاني وعدوى"
+    ],
+    "en": [
+     "Type 2 diabetes with infection"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "سكر 850"
+    ],
+    "en": [
+     "Glucose 850"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"توقفت عن أخذ الأقراص.\""
+     ],
+     "en": [
+      "\"I stopped my tablets.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "كيتونات قليلة، pH 7.33."
+     ],
+     "en": [
+      "Minimal ketones; pH 7.33."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 24 ساعة: سكر 180–250."
+     ],
+     "en": [
+      "Within 24 h: glucose 180–250."
+     ]
+    },
+    "long": {
+     "ar": [
+      "سكر مستقر وخطة علاج."
+     ],
+     "en": [
+      "Stable glucose and treatment plan."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس السكر في الدم كل ساعة وتسجيله في ورقة المتابعة.",
+      "en": "Check glucose hourly."
+     },
+     "rationale": {
+      "ar": "متابعة دقيقة.",
+      "en": "Close monitoring."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم البدء بالأنسولين الوريدي بجرعة منخفضة فقط عند توقف هبوط السكر مع السوائل حسب البروتوكول.",
+      "en": "Start low-dose IV insulin only when glucose stops falling with fluids, per protocol."
+     },
+     "rationale": {
+      "ar": "السوائل وحدها تخفض السكر في البداية.",
+      "en": "Fluids alone lower glucose initially."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم التأكد من أن السكر لا ينخفض أكثر من 90 مجم/دل في الساعة.",
+      "en": "Ensure glucose falls no faster than ~90 mg/dL/h."
+     },
+     "rationale": {
+      "ar": "تجنب وذمة المخ.",
+      "en": "Avoids cerebral oedema."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إضافة الجلوكوز للمحاليل عند وصول السكر إلى 250 حسب الأمر.",
+      "en": "Add dextrose when glucose reaches 250 as ordered."
+     },
+     "rationale": {
+      "ar": "منع النقص.",
+      "en": "Prevents hypoglycaemia."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم البحث عن السبب مثل العدوى وعلاجه حسب الأمر.",
+      "en": "Identify and treat the precipitant such as infection."
+     },
+     "rationale": {
+      "ar": "علاج السبب.",
+      "en": "Treats the cause."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم متابعة البوتاسيوم وتعويضه حسب البروتوكول.",
+      "en": "Monitor and replace potassium per protocol."
+     },
+     "rationale": {
+      "ar": "الأنسولين يخفض البوتاسيوم.",
+      "en": "Insulin lowers K."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "سكر 220 — تحقق.",
+      "en": "Glucose 220 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "خفض السكر تدريجيًا وبأمان",
+      "en": "Gradual, safe glucose reduction"
+     },
+     "actions": {
+      "ar": [
+       "يتم قياس السكر في الدم كل ساعة وتسجيله في ورقة المتابعة.",
+       "يتم البدء بالأنسولين الوريدي بجرعة منخفضة فقط عند توقف هبوط السكر مع السوائل حسب البروتوكول.",
+       "يتم التأكد من أن السكر لا ينخفض أكثر من 90 مجم/دل في الساعة.",
+       "يتم إضافة الجلوكوز للمحاليل عند وصول السكر إلى 250 حسب الأمر.",
+       "يتم البحث عن السبب مثل العدوى وعلاجه حسب الأمر.",
+       "يتم متابعة البوتاسيوم وتعويضه حسب البروتوكول."
+      ],
+      "en": [
+       "Check glucose hourly.",
+       "Start low-dose IV insulin only when glucose stops falling with fluids, per protocol.",
+       "Ensure glucose falls no faster than ~90 mg/dL/h.",
+       "Add dextrose when glucose reaches 250 as ordered.",
+       "Identify and treat the precipitant such as infection.",
+       "Monitor and replace potassium per protocol."
+      ]
+     },
+     "outcome": {
+      "ar": "سكر مستقر.",
+      "en": "Stable glucose."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-confusion-hhs",
+   "kind": "actual",
+   "title": {
+    "ar": "التشوش الذهني الحاد",
+    "en": "Acute Confusion"
+   },
+   "definition": {
+    "ar": "اضطراب الوعي بسبب ارتفاع الأسمولية.",
+    "en": "Altered consciousness from hyperosmolality."
+   },
+   "relatedTo": {
+    "ar": [
+     "الجفاف وارتفاع الأسمولية"
+    ],
+    "en": [
+     "Dehydration and hyperosmolality"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "نعاس وتشوش"
+    ],
+    "en": [
+     "Drowsiness and confusion"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "تقول الابنة: \"لا يعرفنا.\""
+     ],
+     "en": [
+      "Daughter: \"He doesn't recognise us.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "GCS 12."
+     ],
+     "en": [
+      "GCS 12."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال 48 ساعة: عودة الوعي."
+     ],
+     "en": [
+      "Within 48 h: consciousness restored."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا مضاعفات عصبية."
+     ],
+     "en": [
+      "No neurological complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم مستوى الوعي بمقياس جلاسكو كل ساعة في البداية.",
+      "en": "Assess GCS hourly initially."
+     },
+     "rationale": {
+      "ar": "كشف وذمة المخ.",
+      "en": "Detects cerebral oedema."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة الصداع والقيء وتدهور الوعي أثناء العلاج.",
+      "en": "Watch for headache, vomiting and falling GCS during treatment."
+     },
+     "rationale": {
+      "ar": "علامات وذمة المخ.",
+      "en": "Cerebral oedema signs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تطبيق إجراءات منع السقوط مثل رفع جوانب السرير وخفض ارتفاعه.",
+      "en": "Apply fall precautions."
+     },
+     "rationale": {
+      "ar": "سلامة.",
+      "en": "Safety."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم حماية مجرى الهواء ووضع المريض على جانبه عند انخفاض الوعي.",
+      "en": "Protect the airway; lateral position if GCS low."
+     },
+     "rationale": {
+      "ar": "منع الاستنشاق.",
+      "en": "Prevents aspiration."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الوقاية من الجلطات حسب الأمر.",
+      "en": "Give VTE prophylaxis as ordered."
+     },
+     "rationale": {
+      "ar": "خطر جلطات مرتفع.",
+      "en": "High VTE risk."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توجيه المريض بهدوء عند تحسن الوعي.",
+      "en": "Reorient calmly as consciousness improves."
+     },
+     "rationale": {
+      "ar": "دعم.",
+      "en": "Support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "GCS 15 — تحقق.",
+      "en": "GCS 15 — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "استعادة الوعي ومنع وذمة المخ",
+      "en": "Restoring consciousness and preventing cerebral oedema"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم مستوى الوعي بمقياس جلاسكو كل ساعة في البداية.",
+       "تتم ملاحظة الصداع والقيء وتدهور الوعي أثناء العلاج.",
+       "يتم تطبيق إجراءات منع السقوط مثل رفع جوانب السرير وخفض ارتفاعه.",
+       "يتم حماية مجرى الهواء ووضع المريض على جانبه عند انخفاض الوعي.",
+       "يتم إعطاء الوقاية من الجلطات حسب الأمر.",
+       "يتم توجيه المريض بهدوء عند تحسن الوعي."
+      ],
+      "en": [
+       "Assess GCS hourly initially.",
+       "Watch for headache, vomiting and falling GCS during treatment.",
+       "Apply fall precautions.",
+       "Protect the airway; lateral position if GCS low.",
+       "Give VTE prophylaxis as ordered.",
+       "Reorient calmly as consciousness improves."
+      ]
+     },
+     "outcome": {
+      "ar": "وعي طبيعي.",
+      "en": "Normal consciousness."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-thrombosis-hhs",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الجلطات",
+    "en": "Risk for Thrombosis"
+   },
+   "definition": {
+    "ar": "قابلية للجلطات.",
+    "en": "Susceptibility to thrombosis."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "لزوجة الدم العالية",
+     "قلة الحركة"
+    ],
+    "en": [
+     "Hyperviscosity",
+     "Immobility"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"ساقي اليسرى متورمة قليلًا.\""
+     ],
+     "en": [
+      "\"My left leg is a bit swollen.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "مسن، طريح الفراش."
+     ],
+     "en": [
+      "Elderly, bed-bound."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: لا جلطات."
+     ],
+     "en": [
+      "During stay: no thrombosis."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا مضاعفات."
+     ],
+     "en": [
+      "No complications."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الهيبارين الوقائي حسب الأمر.",
+      "en": "Give prophylactic heparin as ordered."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة تورم وألم الساق وضيق التنفس المفاجئ.",
+      "en": "Watch for leg swelling/pain and sudden dyspnoea."
+     },
+     "rationale": {
+      "ar": "علامات الجلطة.",
+      "en": "Thrombosis signs."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع الحركة المبكرة وتمارين القدمين والكاحلين عدة مرات يوميًا.",
+      "en": "Encourage mobility and foot exercises."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم ضمان الترطيب الكافي حسب الخطة.",
+      "en": "Ensure adequate hydration per plan."
+     },
+     "rationale": {
+      "ar": "تقليل اللزوجة.",
+      "en": "Reduces viscosity."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص أطراف القدمين والنبض الطرفي.",
+      "en": "Check feet and peripheral pulses."
+     },
+     "rationale": {
+      "ar": "جلطات شريانية.",
+      "en": "Arterial thrombosis."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب بأي علامة جلطة.",
+      "en": "Report any thrombosis sign."
+     },
+     "rationale": {
+      "ar": "علاج سريع.",
+      "en": "Prompt treatment."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "لا جلطات — تحقق.",
+      "en": "No thrombosis — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الوقاية من الجلطات",
+      "en": "Preventing thrombosis"
+     },
+     "actions": {
+      "ar": [
+       "يتم إعطاء الهيبارين الوقائي حسب الأمر.",
+       "تتم ملاحظة تورم وألم الساق وضيق التنفس المفاجئ.",
+       "يتم تشجيع الحركة المبكرة وتمارين القدمين والكاحلين عدة مرات يوميًا.",
+       "يتم ضمان الترطيب الكافي حسب الخطة.",
+       "يتم فحص أطراف القدمين والنبض الطرفي.",
+       "يتم إبلاغ الطبيب بأي علامة جلطة."
+      ],
+      "en": [
+       "Give prophylactic heparin as ordered.",
+       "Watch for leg swelling/pain and sudden dyspnoea.",
+       "Encourage mobility and foot exercises.",
+       "Ensure adequate hydration per plan.",
+       "Check feet and peripheral pulses.",
+       "Report any thrombosis sign."
+      ]
+     },
+     "outcome": {
+      "ar": "لا جلطات.",
+      "en": "No thrombosis."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-skin-hhs",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر تلف سلامة الجلد",
+    "en": "Risk for Impaired Skin Integrity"
+   },
+   "definition": {
+    "ar": "قابلية لقرح الفراش.",
+    "en": "Susceptibility to pressure injury."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "الجفاف وقلة الحركة والسكري"
+    ],
+    "en": [
+     "Dehydration, immobility and diabetes"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لا أستطيع التحرك.\""
+     ],
+     "en": [
+      "\"I can't move.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "برادن 12."
+     ],
+     "en": [
+      "Braden 12."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الإقامة: جلد سليم."
+     ],
+     "en": [
+      "During stay: intact skin."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا قرح."
+     ],
+     "en": [
+      "No ulcers."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تغيير وضع المريض في السرير كل ساعتين وتوثيق ذلك.",
+      "en": "Turn every 2 h."
+     },
+     "rationale": {
+      "ar": "تقليل الضغط.",
+      "en": "Relieves pressure."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص الجلد ونقاط الضغط والكعبين يوميًا لاكتشاف الاحمرار مبكرًا.",
+      "en": "Inspect skin and heels daily."
+     },
+     "rationale": {
+      "ar": "اكتشاف مبكر.",
+      "en": "Early detection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام مرتبة هوائية أو مرتبة لتوزيع الضغط على السرير.",
+      "en": "Use a pressure-relieving mattress."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم ترطيب الجلد والحفاظ على جفاف الثنايا.",
+      "en": "Moisturise skin; keep folds dry."
+     },
+     "rationale": {
+      "ar": "حماية الجلد.",
+      "en": "Skin protection."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم رفع الكعبين عن السرير بوسادة.",
+      "en": "Offload heels with a pillow."
+     },
+     "rationale": {
+      "ar": "الكعب معرض للقرح.",
+      "en": "Heels are vulnerable."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم خطر قرح الفراش بمقياس برادن يوميًا وتسجيل النتيجة.",
+      "en": "Score Braden daily."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "جلد سليم — تحقق.",
+      "en": "Skin intact — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على سلامة الجلد",
+      "en": "Maintaining skin integrity"
+     },
+     "actions": {
+      "ar": [
+       "يتم تغيير وضع المريض في السرير كل ساعتين وتوثيق ذلك.",
+       "يتم فحص الجلد ونقاط الضغط والكعبين يوميًا لاكتشاف الاحمرار مبكرًا.",
+       "يتم استخدام مرتبة هوائية أو مرتبة لتوزيع الضغط على السرير.",
+       "يتم ترطيب الجلد والحفاظ على جفاف الثنايا.",
+       "يتم رفع الكعبين عن السرير بوسادة.",
+       "يتم تقييم خطر قرح الفراش بمقياس برادن يوميًا وتسجيل النتيجة."
+      ],
+      "en": [
+       "Turn every 2 h.",
+       "Inspect skin and heels daily.",
+       "Use a pressure-relieving mattress.",
+       "Moisturise skin; keep folds dry.",
+       "Offload heels with a pillow.",
+       "Score Braden daily."
+      ]
+     },
+     "outcome": {
+      "ar": "جلد سليم.",
+      "en": "Intact skin."
+     },
+     "timeframe": {
+      "ar": "يوميًا",
+      "en": "Daily"
+     }
+    }
+   ]
+  },
+  {
+   "id": "deficient-knowledge-hhs",
+   "kind": "actual",
+   "title": {
+    "ar": "نقص المعرفة (السكري والوقاية من غيبوبة ارتفاع السكر)",
+    "en": "Deficient Knowledge (Diabetes and HHS Prevention)"
+   },
+   "definition": {
+    "ar": "غياب أو نقص المعلومات المعرفية المتعلقة بموضوع معين.",
+    "en": "Absence or deficiency of cognitive information related to a specific topic."
+   },
+   "relatedTo": {
+    "ar": [
+     "إيقاف العلاج"
+    ],
+    "en": [
+     "Stopping treatment"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "أسئلة عن المرض والعلاج",
+     "معلومات خاطئة أو عدم الالتزام"
+    ],
+    "en": [
+     "Questions about the disease and treatment",
+     "Misconceptions or non-adherence"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لم أكن أعرف أن السكر قد يسبب غيبوبة.\""
+     ],
+     "en": [
+      "\"I didn't know sugar could cause a coma.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "سكري غير منتظم."
+     ],
+     "en": [
+      "Poorly controlled diabetes."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "قبل الخروج: يشرح المريض المرض والعلاج وعلامات الخطر بأسلوبه."
+     ],
+     "en": [
+      "Before discharge: explains the disease, treatment and danger signs in own words."
+     ]
+    },
+    "long": {
+     "ar": [
+      "بعد الخروج: التزام بالعلاج وعدم دخول المستشفى بسبب مضاعفات يمكن تجنبها."
+     ],
+     "en": [
+      "After discharge: adherence and no avoidable readmission."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+      "en": "Assess patient/family knowledge, readiness to learn and literacy."
+     },
+     "rationale": {
+      "ar": "التعليم يبدأ من مستوى المتعلم.",
+      "en": "Teaching starts at the learner's level."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض والأسرة عدم إيقاف أدوية السكر دون استشارة.",
+      "en": "Do not stop diabetes medicines without advice."
+     },
+     "rationale": {
+      "ar": "السبب الأساسي.",
+      "en": "Main cause."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم قواعد أيام المرض: قياس السكر أكثر وشرب الماء والتواصل مع الطبيب.",
+      "en": "Teach sick-day rules: test more, drink water, contact the doctor."
+     },
+     "rationale": {
+      "ar": "وقاية.",
+      "en": "Prevention."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم الأسرة علامات الخطر مثل العطش الشديد وكثرة التبول والنعاس.",
+      "en": "Teach warning signs: thirst, polyuria, drowsiness."
+     },
+     "rationale": {
+      "ar": "تدخل مبكر.",
+      "en": "Early action."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم توجيه المسن إلى شرب الماء بانتظام حتى بدون عطش.",
+      "en": "Advise the elderly to drink regularly even without thirst."
+     },
+     "rationale": {
+      "ar": "منع الجفاف.",
+      "en": "Prevents dehydration."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة.",
+      "en": "Use teach-back and provide written material."
+     },
+     "rationale": {
+      "ar": "يتأكد من الفهم ويساعد التذكر.",
+      "en": "Confirms understanding and aids recall."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "شرح المريض العلاج وعلامات الخطر بشكل صحيح — تحقق.",
+      "en": "Correctly explained treatment and danger signs — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "معرفة طبيعة المرض والعلاج وعلامات الخطر",
+      "en": "Understanding the disease, treatment and danger signs"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم معرفة المريض والأسرة واستعدادهم للتعلم ومستوى القراءة.",
+       "يتم تعليم المريض والأسرة عدم إيقاف أدوية السكر دون استشارة.",
+       "يتم تعليم قواعد أيام المرض: قياس السكر أكثر وشرب الماء والتواصل مع الطبيب.",
+       "يتم تعليم الأسرة علامات الخطر مثل العطش الشديد وكثرة التبول والنعاس.",
+       "يتم توجيه المسن إلى شرب الماء بانتظام حتى بدون عطش.",
+       "يتم استخدام طريقة \"اشرح لي بأسلوبك\" (Teach-back) وإعطاء ورقة مكتوبة."
+      ],
+      "en": [
+       "Assess patient/family knowledge, readiness to learn and literacy.",
+       "Do not stop diabetes medicines without advice.",
+       "Teach sick-day rules: test more, drink water, contact the doctor.",
+       "Teach warning signs: thirst, polyuria, drowsiness.",
+       "Advise the elderly to drink regularly even without thirst.",
+       "Use teach-back and provide written material."
+      ]
+     },
+     "outcome": {
+      "ar": "المريض يشرح ما تعلمه.",
+      "en": "Patient explains what he learned."
+     },
+     "timeframe": {
+      "ar": "قبل الخروج",
+      "en": "Before discharge"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "Joint British Diabetes Societies (JBDS) 2023 — Management of HHS in adults"
+  },
+  {
+   "title": "أدلة الرعاية التمريضية بوحدة الرعاية المركزة — وزارة الصحة والسكان المصرية ونقابة التمريض (2024/2025)"
+  }
+ ]
+}

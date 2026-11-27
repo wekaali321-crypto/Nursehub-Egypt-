@@ -1,0 +1,1078 @@
+{
+ "id": "polytrauma",
+ "icon": "🚑",
+ "system": "surgery",
+ "folder": "disease",
+ "title": {
+  "ar": "الإصابات المتعددة (Polytrauma)",
+  "en": "Polytrauma (Multiple Injuries)"
+ },
+ "summary": {
+  "ar": "خطة رعاية مريض الإصابات المتعددة: الفحص الأولي ومجرى الهواء وحماية الفقرات، الصدمة النزفية، إصابة الرأس، الألم، تروية الأطراف ومتلازمة الحيز، والقلق.",
+  "en": "Polytrauma care plan: primary survey, airway and spinal protection, haemorrhagic shock, head injury, pain, limb perfusion and compartment syndrome, anxiety."
+ },
+ "diagnoses": [
+  {
+   "id": "ineffective-airway-polytrauma",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدم فعالية مجرى الهواء والتنفس",
+    "en": "Risk for Ineffective Airway and Breathing"
+   },
+   "definition": {
+    "ar": "قابلية لانسداد المجرى الهوائي أو ضعف التنفس.",
+    "en": "Susceptibility to airway or breathing compromise."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "إصابة الوجه والصدر والرأس"
+    ],
+    "en": [
+     "Facial, chest and head injury"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"لا أستطيع التنفس جيدًا وصدري يؤلمني.\""
+     ],
+     "en": [
+      "\"I can't breathe well and my chest hurts.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "كسور ضلوع، تشبع 90%، GCS 13."
+     ],
+     "en": [
+      "Rib fractures; SpO₂ 90%; GCS 13."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "فورًا: مجرى هواء مفتوح وتشبع ≥ 94%."
+     ],
+     "en": [
+      "Immediately: patent airway, SpO₂ ≥ 94%."
+     ]
+    },
+    "long": {
+     "ar": [
+      "تنفس كافٍ."
+     ],
+     "en": [
+      "Adequate breathing."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم المريض بنظام الفحص الأولي ABCDE مع حماية الفقرات العنقية.",
+      "en": "Perform the ABCDE primary survey with cervical spine protection."
+     },
+     "rationale": {
+      "ar": "الأولويات المنقذة للحياة.",
+      "en": "Life-saving priorities."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تثبيت الرقبة بالطوق وتحريك المريض ككتلة واحدة حتى استبعاد إصابة الفقرات.",
+      "en": "Keep a cervical collar and log-roll until spinal injury is excluded."
+     },
+     "rationale": {
+      "ar": "منع إصابة الحبل الشوكي.",
+      "en": "Prevents spinal cord injury."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء الأكسجين بتركيز عالٍ والمساعدة في التنبيب عند الحاجة.",
+      "en": "Give high-flow oxygen and assist intubation if needed."
+     },
+     "rationale": {
+      "ar": "منع نقص الأكسجين.",
+      "en": "Prevents hypoxia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم فحص الصدر لملاحظة عدم تماثل الحركة وانحراف القصبة وغياب أصوات التنفس.",
+      "en": "Examine for asymmetric movement, tracheal deviation and absent breath sounds."
+     },
+     "rationale": {
+      "ar": "كشف الاسترواح الصدري التوتري.",
+      "en": "Detects tension pneumothorax."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تجهيز أدوات تركيب الأنبوبة الصدرية حسب قرار الطبيب.",
+      "en": "Prepare chest drain equipment as decided."
+     },
+     "rationale": {
+      "ar": "علاج الاسترواح والنزيف الصدري.",
+      "en": "Treats pneumo/haemothorax."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تسكين ألم الضلوع بشكل كافٍ حسب الأمر لتمكين التنفس العميق.",
+      "en": "Provide adequate rib-fracture analgesia to allow deep breathing."
+     },
+     "rationale": {
+      "ar": "منع الالتهاب الرئوي.",
+      "en": "Prevents pneumonia."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "تشبع 96% بعد الأنبوبة الصدرية — تحقق.",
+      "en": "SpO₂ 96% after chest drain — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تأمين مجرى الهواء والتنفس مع حماية الفقرات",
+      "en": "Securing airway and breathing with spinal protection"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم المريض بنظام الفحص الأولي ABCDE مع حماية الفقرات العنقية.",
+       "يتم تثبيت الرقبة بالطوق وتحريك المريض ككتلة واحدة حتى استبعاد إصابة الفقرات.",
+       "يتم إعطاء الأكسجين بتركيز عالٍ والمساعدة في التنبيب عند الحاجة.",
+       "يتم فحص الصدر لملاحظة عدم تماثل الحركة وانحراف القصبة وغياب أصوات التنفس.",
+       "يتم تجهيز أدوات تركيب الأنبوبة الصدرية حسب قرار الطبيب.",
+       "يتم تسكين ألم الضلوع بشكل كافٍ حسب الأمر لتمكين التنفس العميق."
+      ],
+      "en": [
+       "Perform the ABCDE primary survey with cervical spine protection.",
+       "Keep a cervical collar and log-roll until spinal injury is excluded.",
+       "Give high-flow oxygen and assist intubation if needed.",
+       "Examine for asymmetric movement, tracheal deviation and absent breath sounds.",
+       "Prepare chest drain equipment as decided.",
+       "Provide adequate rib-fracture analgesia to allow deep breathing."
+      ]
+     },
+     "outcome": {
+      "ar": "تنفس آمن.",
+      "en": "Safe breathing."
+     },
+     "timeframe": {
+      "ar": "مستمر",
+      "en": "Continuous"
+     }
+    }
+   ]
+  },
+  {
+   "id": "haemorrhagic-shock-polytrauma",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر الصدمة النزفية",
+    "en": "Risk for Haemorrhagic Shock"
+   },
+   "definition": {
+    "ar": "قابلية لفقد دم يهدد الحياة.",
+    "en": "Susceptibility to life-threatening blood loss."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "كسر الحوض والفخذ وإصابات البطن"
+    ],
+    "en": [
+     "Pelvic, femoral and abdominal injuries"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"أشعر بالبرودة والدوخة.\""
+     ],
+     "en": [
+      "\"I feel cold and dizzy.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "نبض 128، ضغط 88/56، شحوب."
+     ],
+     "en": [
+      "HR 128; BP 88/56; pallor."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الساعة الأولى: إيقاف النزيف واستقرار الدورة."
+     ],
+     "en": [
+      "Within 1 h: bleeding controlled, circulation stable."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا فشل أعضاء."
+     ],
+     "en": [
+      "No organ failure."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم الضغط المباشر على النزيف الخارجي ووضع الرباط الضاغط للأطراف عند الحاجة.",
+      "en": "Apply direct pressure and a tourniquet for limb haemorrhage if needed."
+     },
+     "rationale": {
+      "ar": "إيقاف النزيف.",
+      "en": "Stops bleeding."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تركيب كانيولتين كبيرتين وسحب عينة فصيلة الدم وتوافقها فورًا.",
+      "en": "Insert two large-bore cannulas and send group and crossmatch."
+     },
+     "rationale": {
+      "ar": "استعداد للنقل.",
+      "en": "Ready for transfusion."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تفعيل بروتوكول نقل الدم الكثيف وإعطاء الدم والبلازما والصفائح بنسب متوازنة حسب الأمر.",
+      "en": "Activate the major haemorrhage protocol with balanced blood, plasma and platelets as ordered."
+     },
+     "rationale": {
+      "ar": "علاج الصدمة النزفية.",
+      "en": "Treats haemorrhagic shock."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء حمض الترانيكساميك خلال 3 ساعات من الإصابة حسب الأمر.",
+      "en": "Give tranexamic acid within 3 h of injury as ordered."
+     },
+     "rationale": {
+      "ar": "يقلل الوفيات من النزيف.",
+      "en": "Reduces bleeding deaths."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تثبيت الحوض بحزام الحوض عند الاشتباه في كسره.",
+      "en": "Apply a pelvic binder for suspected pelvic fracture."
+     },
+     "rationale": {
+      "ar": "يقلل النزيف.",
+      "en": "Reduces bleeding."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تدفئة المريض والمحاليل لمنع انخفاض الحرارة.",
+      "en": "Warm the patient and fluids to prevent hypothermia."
+     },
+     "rationale": {
+      "ar": "البرودة تزيد النزيف.",
+      "en": "Hypothermia worsens bleeding."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "ضغط 112/70 بعد النقل — تحقق.",
+      "en": "BP 112/70 after transfusion — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "إيقاف النزيف ودعم الدورة الدموية",
+      "en": "Controlling bleeding and supporting circulation"
+     },
+     "actions": {
+      "ar": [
+       "يتم الضغط المباشر على النزيف الخارجي ووضع الرباط الضاغط للأطراف عند الحاجة.",
+       "يتم تركيب كانيولتين كبيرتين وسحب عينة فصيلة الدم وتوافقها فورًا.",
+       "يتم تفعيل بروتوكول نقل الدم الكثيف وإعطاء الدم والبلازما والصفائح بنسب متوازنة حسب الأمر.",
+       "يتم إعطاء حمض الترانيكساميك خلال 3 ساعات من الإصابة حسب الأمر.",
+       "يتم تثبيت الحوض بحزام الحوض عند الاشتباه في كسره.",
+       "يتم تدفئة المريض والمحاليل لمنع انخفاض الحرارة."
+      ],
+      "en": [
+       "Apply direct pressure and a tourniquet for limb haemorrhage if needed.",
+       "Insert two large-bore cannulas and send group and crossmatch.",
+       "Activate the major haemorrhage protocol with balanced blood, plasma and platelets as ordered.",
+       "Give tranexamic acid within 3 h of injury as ordered.",
+       "Apply a pelvic binder for suspected pelvic fracture.",
+       "Warm the patient and fluids to prevent hypothermia."
+      ]
+     },
+     "outcome": {
+      "ar": "دورة مستقرة.",
+      "en": "Stable circulation."
+     },
+     "timeframe": {
+      "ar": "كل 15 دقيقة",
+      "en": "Every 15 min"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-cerebral-polytrauma",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر عدم فعالية التروية الدماغية",
+    "en": "Risk for Ineffective Cerebral Perfusion"
+   },
+   "definition": {
+    "ar": "قابلية لنقص تروية المخ.",
+    "en": "Susceptibility to reduced cerebral perfusion."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "إصابة الرأس"
+    ],
+    "en": [
+     "Head injury"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"رأسي يؤلمني.\""
+     ],
+     "en": [
+      "\"My head hurts.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "GCS 13، كدمة بالرأس."
+     ],
+     "en": [
+      "GCS 13; scalp contusion."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل ساعة: وعي مستقر."
+     ],
+     "en": [
+      "Hourly: stable GCS."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا إصابة ثانوية للمخ."
+     ],
+     "en": [
+      "No secondary brain injury."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الوعي والحدقتين كل ساعة.",
+      "en": "Assess GCS and pupils hourly."
+     },
+     "rationale": {
+      "ar": "كشف التدهور.",
+      "en": "Detects deterioration."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم الحفاظ على الضغط الانقباضي والتشبع في المستوى المطلوب لمنع الإصابة الثانوية.",
+      "en": "Maintain systolic BP and SpO₂ targets to prevent secondary injury."
+     },
+     "rationale": {
+      "ar": "نقص الضغط والأكسجين يضر المخ.",
+      "en": "Hypotension and hypoxia harm the brain."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم رفع رأس السرير 30 درجة بعد استبعاد إصابة الفقرات.",
+      "en": "Elevate head 30° once spine cleared."
+     },
+     "rationale": {
+      "ar": "تقليل الضغط.",
+      "en": "Lowers ICP."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم قياس السكر وتجنب ارتفاعه أو انخفاضه.",
+      "en": "Check glucose; avoid hyper- and hypoglycaemia."
+     },
+     "rationale": {
+      "ar": "حماية المخ.",
+      "en": "Brain protection."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم تجهيز المريض للأشعة المقطعية فور الاستقرار.",
+      "en": "Prepare for CT once stable."
+     },
+     "rationale": {
+      "ar": "تشخيص.",
+      "en": "Diagnosis."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الطبيب عند انخفاض GCS نقطتين أو أكثر أو اختلاف الحدقتين.",
+      "en": "Report a GCS fall ≥ 2 or unequal pupils."
+     },
+     "rationale": {
+      "ar": "تدخل جراحي عاجل.",
+      "en": "Urgent surgery."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "GCS 14 مستقر — تحقق.",
+      "en": "GCS 14 stable — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "حماية المخ من الإصابة الثانوية",
+      "en": "Protecting the brain from secondary injury"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم الوعي والحدقتين كل ساعة.",
+       "يتم الحفاظ على الضغط الانقباضي والتشبع في المستوى المطلوب لمنع الإصابة الثانوية.",
+       "يتم رفع رأس السرير 30 درجة بعد استبعاد إصابة الفقرات.",
+       "يتم قياس السكر وتجنب ارتفاعه أو انخفاضه.",
+       "يتم تجهيز المريض للأشعة المقطعية فور الاستقرار.",
+       "يتم إبلاغ الطبيب عند انخفاض GCS نقطتين أو أكثر أو اختلاف الحدقتين."
+      ],
+      "en": [
+       "Assess GCS and pupils hourly.",
+       "Maintain systolic BP and SpO₂ targets to prevent secondary injury.",
+       "Elevate head 30° once spine cleared.",
+       "Check glucose; avoid hyper- and hypoglycaemia.",
+       "Prepare for CT once stable.",
+       "Report a GCS fall ≥ 2 or unequal pupils."
+      ]
+     },
+     "outcome": {
+      "ar": "وعي مستقر.",
+      "en": "Stable GCS."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "acute-pain-polytrauma",
+   "kind": "actual",
+   "title": {
+    "ar": "ألم حاد (إصابات متعددة)",
+    "en": "Acute Pain (Multiple Injuries)"
+   },
+   "definition": {
+    "ar": "تجربة حسية وعاطفية غير مريحة مرتبطة بتلف فعلي أو محتمل في الأنسجة، مدتها أقل من 3 أشهر.",
+    "en": "Unpleasant sensory and emotional experience associated with actual or potential tissue damage, lasting < 3 months."
+   },
+   "relatedTo": {
+    "ar": [
+     "الكسور والكدمات والجروح"
+    ],
+    "en": [
+     "Fractures, contusions and wounds"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "ألم 9/10"
+    ],
+    "en": [
+     "Pain 9/10"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"كل جسمي يؤلمني.\""
+     ],
+     "en": [
+      "\"My whole body hurts.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "كسر الفخذ وكسور الضلوع."
+     ],
+     "en": [
+      "Femur and rib fractures."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال ساعة: ألم ≤ 3/10."
+     ],
+     "en": [
+      "Within 1 h: pain ≤ 3/10."
+     ]
+    },
+    "long": {
+     "ar": [
+      "ألم محتمل يسمح بالراحة والحركة."
+     ],
+     "en": [
+      "Tolerable pain allowing rest and movement."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+      "en": "Assess pain (site, 0–10, character, radiation) before and after analgesia."
+     },
+     "rationale": {
+      "ar": "يوجه العلاج ويقيس فعاليته.",
+      "en": "Guides treatment and measures effect."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+      "en": "Give analgesia as ordered, on schedule."
+     },
+     "rationale": {
+      "ar": "التسكين المنتظم يمنع اشتداد الألم.",
+      "en": "Regular analgesia prevents peaks."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+      "en": "Comfortable position; calm environment."
+     },
+     "rationale": {
+      "ar": "يقلل الإحساس بالألم.",
+      "en": "Reduces pain perception."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+      "en": "Non-drug measures: deep breathing, relaxation, distraction."
+     },
+     "rationale": {
+      "ar": "تكمل المسكن.",
+      "en": "Complement analgesia."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تثبيت الكسور بالجبائر ورفع الأطراف المصابة.",
+      "en": "Splint fractures and elevate injured limbs."
+     },
+     "rationale": {
+      "ar": "يقلل الألم والنزيف.",
+      "en": "Reduces pain and bleeding."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إعطاء المسكنات الوريدية المعايرة حسب الأمر مع مراقبة التنفس والوعي.",
+      "en": "Give titrated IV analgesia as ordered, monitoring breathing and consciousness."
+     },
+     "rationale": {
+      "ar": "تسكين آمن.",
+      "en": "Safe analgesia."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "الألم 3/10 بعد ساعة — تحقق.",
+      "en": "Pain 3/10 at 1 h — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف الألم إلى مستوى يتحمله المريض",
+      "en": "Relief of pain to a tolerable level"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم الألم (المكان، الشدة 0–10، النوع، الانتشار) قبل وبعد المسكن.",
+       "يتم إعطاء المسكنات في مواعيدها المحددة حسب أمر الطبيب، وتقييم الألم بعدها.",
+       "يتم وضع المريض في وضع مريح وتوفير بيئة هادئة تساعده على الراحة.",
+       "يتم توفير وسائل غير دوائية: التنفس العميق والاسترخاء والإلهاء.",
+       "يتم تثبيت الكسور بالجبائر ورفع الأطراف المصابة.",
+       "يتم إعطاء المسكنات الوريدية المعايرة حسب الأمر مع مراقبة التنفس والوعي."
+      ],
+      "en": [
+       "Assess pain (site, 0–10, character, radiation) before and after analgesia.",
+       "Give analgesia as ordered, on schedule.",
+       "Comfortable position; calm environment.",
+       "Non-drug measures: deep breathing, relaxation, distraction.",
+       "Splint fractures and elevate injured limbs.",
+       "Give titrated IV analgesia as ordered, monitoring breathing and consciousness."
+      ]
+     },
+     "outcome": {
+      "ar": "ألم ≤ 3/10.",
+      "en": "Pain ≤ 3/10."
+     },
+     "timeframe": {
+      "ar": "ساعة",
+      "en": "1 h"
+     }
+    }
+   ]
+  },
+  {
+   "id": "risk-neurovascular-polytrauma",
+   "kind": "risk",
+   "title": {
+    "ar": "خطر خلل الدورة الدموية والأعصاب الطرفية",
+    "en": "Risk for Peripheral Neurovascular Dysfunction"
+   },
+   "definition": {
+    "ar": "قابلية لضعف التروية أو الإحساس في الطرف المصاب.",
+    "en": "Susceptibility to impaired limb circulation or sensation."
+   },
+   "relatedTo": {
+    "ar": [],
+    "en": []
+   },
+   "riskFactors": {
+    "ar": [
+     "كسور الأطراف والتورم"
+    ],
+    "en": [
+     "Limb fractures and swelling"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"ساقي تؤلمني بشدة مع التنميل.\""
+     ],
+     "en": [
+      "\"My leg hurts badly and feels numb.\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "كسر الساق، تورم شديد."
+     ],
+     "en": [
+      "Tibial fracture; marked swelling."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "كل ساعة: نبض وإحساس طبيعيان."
+     ],
+     "en": [
+      "Hourly: normal pulses and sensation."
+     ]
+    },
+    "long": {
+     "ar": [
+      "لا متلازمة الحيز."
+     ],
+     "en": [
+      "No compartment syndrome."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم اللون والحرارة والنبض والإحساس والحركة ورجوع الدم في الطرف كل ساعة.",
+      "en": "Check colour, warmth, pulse, sensation, movement and capillary refill hourly."
+     },
+     "rationale": {
+      "ar": "كشف نقص التروية.",
+      "en": "Detects ischaemia."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "تتم ملاحظة الألم غير المتناسب مع الإصابة والألم مع تحريك الأصابع سلبيًا.",
+      "en": "Watch for pain out of proportion and pain on passive stretch."
+     },
+     "rationale": {
+      "ar": "أول علامات متلازمة الحيز.",
+      "en": "Early compartment syndrome signs."
+     }
+    },
+    {
+     "type": "collab",
+     "action": {
+      "ar": "يتم إبلاغ الجراح فورًا عند الاشتباه في متلازمة الحيز.",
+      "en": "Inform the surgeon immediately if compartment syndrome is suspected."
+     },
+     "rationale": {
+      "ar": "تحتاج فتحًا جراحيًا عاجلًا.",
+      "en": "Needs urgent fasciotomy."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم رفع الطرف لمستوى القلب وليس أعلى عند الاشتباه في متلازمة الحيز.",
+      "en": "Keep the limb at heart level, not higher, if compartment syndrome suspected."
+     },
+     "rationale": {
+      "ar": "الرفع الزائد يقلل التروية.",
+      "en": "Over-elevation reduces perfusion."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم فك الأربطة أو الجبائر الضاغطة حسب التعليمات.",
+      "en": "Loosen tight dressings or casts as directed."
+     },
+     "rationale": {
+      "ar": "تقليل الضغط.",
+      "en": "Relieves pressure."
+     }
+    },
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم توثيق التقييم العصبي الوعائي بشكل منتظم.",
+      "en": "Document neurovascular checks regularly."
+     },
+     "rationale": {
+      "ar": "متابعة.",
+      "en": "Monitoring."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "نبض وإحساس طبيعيان — تحقق.",
+      "en": "Normal pulses and sensation — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "الحفاظ على تروية الأطراف المصابة",
+      "en": "Maintaining perfusion of injured limbs"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم اللون والحرارة والنبض والإحساس والحركة ورجوع الدم في الطرف كل ساعة.",
+       "تتم ملاحظة الألم غير المتناسب مع الإصابة والألم مع تحريك الأصابع سلبيًا.",
+       "يتم إبلاغ الجراح فورًا عند الاشتباه في متلازمة الحيز.",
+       "يتم رفع الطرف لمستوى القلب وليس أعلى عند الاشتباه في متلازمة الحيز.",
+       "يتم فك الأربطة أو الجبائر الضاغطة حسب التعليمات.",
+       "يتم توثيق التقييم العصبي الوعائي بشكل منتظم."
+      ],
+      "en": [
+       "Check colour, warmth, pulse, sensation, movement and capillary refill hourly.",
+       "Watch for pain out of proportion and pain on passive stretch.",
+       "Inform the surgeon immediately if compartment syndrome is suspected.",
+       "Keep the limb at heart level, not higher, if compartment syndrome suspected.",
+       "Loosen tight dressings or casts as directed.",
+       "Document neurovascular checks regularly."
+      ]
+     },
+     "outcome": {
+      "ar": "أطراف سليمة.",
+      "en": "Healthy limbs."
+     },
+     "timeframe": {
+      "ar": "كل ساعة",
+      "en": "Hourly"
+     }
+    }
+   ]
+  },
+  {
+   "id": "anxiety-polytrauma",
+   "kind": "actual",
+   "title": {
+    "ar": "القلق",
+    "en": "Anxiety"
+   },
+   "definition": {
+    "ar": "إحساس غامض بعدم الارتياح أو الخوف مصحوب باستجابة عصبية لتهديد متوقع.",
+    "en": "Vague uneasy feeling of discomfort or dread with an autonomic response to an anticipated threat."
+   },
+   "relatedTo": {
+    "ar": [
+     "الحادث المفاجئ والإصابات"
+    ],
+    "en": [
+     "Sudden accident and injuries"
+    ]
+   },
+   "evidencedBy": {
+    "ar": [
+     "توتر وأسئلة متكررة",
+     "زيادة النبض والتنفس",
+     "صعوبة النوم"
+    ],
+    "en": [
+     "Tension and repeated questions",
+     "Increased pulse and breathing",
+     "Difficulty sleeping"
+    ]
+   },
+   "assessment": {
+    "subjective": {
+     "ar": [
+      "\"ماذا حدث لي؟ وأين أسرتي؟\""
+     ],
+     "en": [
+      "\"What happened to me? Where is my family?\""
+     ]
+    },
+    "objective": {
+     "ar": [
+      "خائف ومضطرب."
+     ],
+     "en": [
+      "Frightened and distressed."
+     ]
+    }
+   },
+   "goals": {
+    "short": {
+     "ar": [
+      "خلال الوردية: يعبر المريض عن قلق أقل ويستخدم وسيلة استرخاء."
+     ],
+     "en": [
+      "Within the shift: reports less anxiety and uses a relaxation technique."
+     ]
+    },
+    "long": {
+     "ar": [
+      "قبل الخروج: يتعامل المريض مع مرضه بهدوء ويعرف مصادر الدعم."
+     ],
+     "en": [
+      "Before discharge: copes calmly and knows support resources."
+     ]
+    }
+   },
+   "interventions": [
+    {
+     "type": "assess",
+     "action": {
+      "ar": "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+      "en": "Assess anxiety level (mild/moderate/severe) and its sources."
+     },
+     "rationale": {
+      "ar": "يحدد نوع التدخل.",
+      "en": "Guides the intervention."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+      "en": "Stay with the patient; speak calmly and confidently."
+     },
+     "rationale": {
+      "ar": "الإحساس بالأمان يقلل القلق.",
+      "en": "Feeling safe reduces anxiety."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+      "en": "Explain procedures and equipment beforehand in simple words."
+     },
+     "rationale": {
+      "ar": "المجهول يزيد الخوف.",
+      "en": "The unknown increases fear."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+      "en": "Encourage expression of fears; answer honestly."
+     },
+     "rationale": {
+      "ar": "يخفف التوتر ويبني الثقة.",
+      "en": "Relieves tension and builds trust."
+     }
+    },
+    {
+     "type": "teach",
+     "action": {
+      "ar": "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+      "en": "Teach slow deep breathing and relaxation."
+     },
+     "rationale": {
+      "ar": "يقلل النشاط العصبي السمبثاوي.",
+      "en": "Reduces sympathetic activity."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+      "en": "Allow a family member to stay per unit policy."
+     },
+     "rationale": {
+      "ar": "دعم اجتماعي.",
+      "en": "Social support."
+     }
+    },
+    {
+     "type": "independent",
+     "action": {
+      "ar": "يتم إبلاغ الأسرة وتنظيم تواصلها مع المريض حسب حالته.",
+      "en": "Contact the family and arrange contact as condition allows."
+     },
+     "rationale": {
+      "ar": "دعم.",
+      "en": "Support."
+     }
+    }
+   ],
+   "evaluation": [
+    {
+     "status": "met",
+     "text": {
+      "ar": "المريض أهدأ، النبض أقل، ويمارس التنفس العميق — تحقق.",
+      "en": "Calmer, lower pulse, practising deep breathing — met."
+     }
+    }
+   ],
+   "hospital": [
+    {
+     "need": {
+      "ar": "تخفيف القلق والشعور بالهدوء والأمان",
+      "en": "Relief of anxiety and a sense of calm and safety"
+     },
+     "actions": {
+      "ar": [
+       "يتم تقييم مستوى القلق (خفيف، متوسط، شديد) وتحديد مصادره.",
+       "يتم التواجد مع المريض والتحدث معه بهدوء وثقة.",
+       "يتم شرح الإجراءات والأجهزة قبل استخدامها بلغة بسيطة.",
+       "يتم تشجيع المريض على التعبير عن مخاوفه والإجابة على أسئلته بصدق.",
+       "يتم تعليم المريض التنفس البطيء العميق وتمارين الاسترخاء.",
+       "يتم السماح بوجود أحد أفراد الأسرة حسب سياسة القسم.",
+       "يتم إبلاغ الأسرة وتنظيم تواصلها مع المريض حسب حالته."
+      ],
+      "en": [
+       "Assess anxiety level (mild/moderate/severe) and its sources.",
+       "Stay with the patient; speak calmly and confidently.",
+       "Explain procedures and equipment beforehand in simple words.",
+       "Encourage expression of fears; answer honestly.",
+       "Teach slow deep breathing and relaxation.",
+       "Allow a family member to stay per unit policy.",
+       "Contact the family and arrange contact as condition allows."
+      ]
+     },
+     "outcome": {
+      "ar": "قلق أقل وعلامات حيوية أهدأ.",
+      "en": "Less anxiety, calmer vitals."
+     },
+     "timeframe": {
+      "ar": "كل وردية",
+      "en": "Every shift"
+     }
+    }
+   ]
+  }
+ ],
+ "refs": [
+  {
+   "title": "NANDA International Nursing Diagnoses: Definitions & Classification 2024–2026"
+  },
+  {
+   "title": "ATLS 11th edition (2025) — Advanced Trauma Life Support"
+  },
+  {
+   "title": "أدلة الرعاية التمريضية بوحدة الرعاية المركزة — وزارة الصحة والسكان المصرية ونقابة التمريض (2024/2025)"
+  }
+ ]
+}
