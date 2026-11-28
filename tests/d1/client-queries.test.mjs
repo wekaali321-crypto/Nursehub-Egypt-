@@ -6,6 +6,8 @@ import { readFileSync } from 'node:fs';
 import { ROOT, loadTs } from './helpers.mjs';
 
 const FAKE = join(ROOT, 'tests/d1/fake-supabase.mjs');
+const EXTRA_COUNTS = JSON.parse(readFileSync(join(ROOT, 'public/travel-extra/counts.json'), 'utf8'));
+const EXTRA_TOTAL = Object.values(EXTRA_COUNTS).reduce((a, b) => a + b, 0);
 function storage() { const m = new Map(); return { get length() { return m.size; }, key: (i) => [...m.keys()][i] ?? null, getItem: (k) => (m.has(k) ? m.get(k) : null), setItem: (k, v) => m.set(k, String(v)), removeItem: (k) => m.delete(k) }; }
 function fakeIndexedDB() {
   const kv = new Map();
@@ -47,33 +49,35 @@ test('every section API exposes the primary-key reader', async () => {
 test('travel counts: one RPC, cached; static counts file when the RPC fails', async () => {
   const { mod, sup, fetched } = await env('src/lib/travelQuestionsApi.ts');
   sup.rpcAnswers.set('travel_question_counts', { data: { medsurg: 3, saudi: 2 }, error: null });
-  assert.deepEqual(await mod.fetchTravelQuestionCounts(), { medsurg: 3, saudi: 2 });
+  const merged = { saudi: 2, ...EXTRA_COUNTS, medsurg: 3 + EXTRA_COUNTS.medsurg };
+  assert.deepEqual(await mod.fetchTravelQuestionCounts(), merged);
   await settle();
-  assert.deepEqual(await mod.fetchTravelQuestionCounts(), { medsurg: 3, saudi: 2 });
+  assert.deepEqual(await mod.fetchTravelQuestionCounts(), merged);
   assert.equal(sup.calls.filter((c) => c.rpc).length, 1, 'second read came from the client cache');
   assert.equal(sup.calls.filter((c) => c.table).length, 0, 'no per-category COUNT queries any more');
 
   const e2 = await env('src/lib/travelQuestionsApi.ts');
   e2.sup.rpcAnswers.set('travel_question_counts', { data: null, error: { message: 'boom' } });
   const stat = await e2.mod.fetchTravelQuestionCounts();
-  assert.equal(stat.medsurg, 1752);
+  assert.equal(stat.medsurg, 1752 + EXTRA_COUNTS.medsurg, 'table counts plus the static extras');
   assert.ok(e2.fetched.includes('/data/travel_counts.json'));
 });
 
 test('global search index: travel questions come from the static file, never from the database', async () => {
   const { mod, sup, fetched } = await env('src/lib/travelQuestionsApi.ts');
   const lite = await mod.fetchTravelQuestionsLite();
-  assert.equal(lite.length, 9307);
+  assert.equal(lite.length, 9307 + EXTRA_TOTAL);
   assert.deepEqual(Object.keys(lite[0]).sort(), ['category_id', 'id', 'question_ar', 'question_en']);
+  assert.deepEqual(Object.keys(lite[lite.length - 1]).sort(), ['category_id', 'id', 'question_ar', 'question_en']);
   assert.equal(sup.calls.length, 0);
-  assert.deepEqual(fetched, ['/data/travel_questions_lite.json']);
+  assert.deepEqual(fetched.sort(), ['/data/travel_questions_lite.json', '/travel-extra/lite.json']);
 });
 
 test('travel category page: one query for the whole category, cached afterwards', async () => {
   const { mod, sup } = await env('src/lib/travelQuestionsApi.ts');
   sup.answers.set('travel_questions', (steps) => ({ data: Array.from({ length: 1752 }, (_, i) => ({ id: `q${i}`, category_id: 'medsurg' })), error: null }));
   const rows = await mod.fetchTravelQuestions('medsurg');
-  assert.equal(rows.length, 1752);
+  assert.equal(rows.length, 1752 + EXTRA_COUNTS.medsurg, 'table rows plus the static extras (served from Cloudflare, not Supabase)');
   const q = sup.calls.filter((c) => c.table === 'travel_questions');
   assert.equal(q.length, 1, 'was 2 sorted 1,000-row pages');
   assert.deepEqual(q[0].steps.find((s) => s[0] === 'range'), ['range', 0, 4999]);
@@ -107,9 +111,11 @@ test('static lite search file keeps the database order (ORDER BY order_num, id) 
   const lite = await mod.fetchTravelQuestionsLite();
   const full = JSON.parse(readFileSync(join(ROOT, 'public/data/travel_questions.json'), 'utf8'));
   const order = new Map(full.map((r) => [r.id, r.order_num]));
-  for (let i = 1; i < lite.length; i++) {
-    const a = order.get(lite[i - 1].id), b = order.get(lite[i].id);
-    assert.ok(a < b || (a === b && lite[i - 1].id < lite[i].id), `row ${i}`);
+  const base = lite.filter((r) => order.has(r.id)); // the static extras follow the table rows
+  assert.equal(base.length, full.length);
+  for (let i = 1; i < base.length; i++) {
+    const a = order.get(base[i - 1].id), b = order.get(base[i].id);
+    assert.ok(a < b || (a === b && base[i - 1].id < base[i].id), `row ${i}`);
   }
 });
 
@@ -133,4 +139,25 @@ test('articles: visitors get light rows (no text); a light row is never written 
   const full = await mod.loadArticleFull('s');
   assert.equal(full.content, '<p>full</p>'); assert.equal(full.partial, undefined);
   assert.deepEqual(sup.calls[0].steps.map((s) => s[0]), ['select', 'eq', 'eq', 'maybeSingle']);
+});
+
+test('static extra travel questions: valid shape, unique ids, never stored in Supabase', async () => {
+  const counts = EXTRA_COUNTS;
+  const ids = new Set(JSON.parse(readFileSync(join(ROOT, 'public/data/travel_questions.json'), 'utf8')).map((q) => q.id));
+  for (const [cat, n] of Object.entries(counts)) {
+    const list = JSON.parse(readFileSync(join(ROOT, `public/travel-extra/${cat}.json`), 'utf8'));
+    assert.equal(list.length, n);
+    for (const q of list) {
+      assert.ok(!ids.has(q.id), `duplicate id ${q.id}`);
+      ids.add(q.id);
+      assert.equal(q.category_id, cat);
+      assert.ok(q.question_ar && q.rationale_ar && q.rationale_en);
+      assert.equal(q.choices.length, q.choices_ar.length);
+      assert.ok(q.choices.some((c) => c.letter === q.correct_letter));
+    }
+  }
+  const { mod, sup } = await env('src/lib/travelQuestionsApi.ts');
+  sup.answers.set('travel_questions', { data: [], error: null });
+  const admin = await mod.fetchTravelQuestions('maternity', false);
+  assert.equal(admin.length, 0, 'the admin screen lists only editable table rows');
 });

@@ -127,7 +127,8 @@ async function fetchAllPages<T>(columns: string, categoryId?: string): Promise<T
 async function fetchStaticJson<T>(path: string, fallback: T): Promise<T> {
   try {
     const r = await fetch(path);
-    if (!r.ok || !(r.headers.get('content-type') ?? '').includes('json')) return fallback;
+    // a missing file falls through to the SPA shell (HTML, status 200) on Cloudflare Pages
+    if (!r.ok || (r.headers.get('content-type') ?? '').includes('text/html')) return fallback;
     return (await r.json()) as T;
   } catch {
     return fallback;
